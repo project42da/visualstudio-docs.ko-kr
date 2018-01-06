@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3b12ef6fa6da9338346aa997ba16cb023548f138
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f4721ee818c4dc75d883c7accd2faa162521de13
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionputloadaddress"></a>IDiaSession::put_loadAddress
 이 기호 저장소의 기호에 해당 하는 실행 파일에 대 한 부하 주소를 설정 합니다.  

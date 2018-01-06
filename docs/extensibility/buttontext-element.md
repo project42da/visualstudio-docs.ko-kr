@@ -15,11 +15,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b17492b0cc8531ac892bf8ead1c309f403d1da48
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c9f2374af403c37f18d1aa91700e51bd038a71c6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="buttontext-element"></a>ButtonText 요소
 이 필드를 사용 하면 다양 한 메뉴에 표시 되는 텍스트를 지정할 수 있습니다. 기본적으로는 `ButtonText` 요소 메뉴 컨트롤러에 나타납니다. `ButtonText` 다른 텍스트 필드가 비어 있으면도 요소의 기본값이 됩니다. `ButtonText` 다른 텍스트 필드가 지정 된 경우에 요소를 비워 둘 수 없습니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  

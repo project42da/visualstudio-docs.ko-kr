@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 87ae8076faae34ae55c227f0b9306cc7eacad848
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d4dd41975d65fe44f0fbe1f2ad361ceab71277b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idialinenumbergetcompiland"></a>IDiaLineNumber::get_compiland
 이미지 텍스트의 바이트를 관련 된 컴파일 대상에 대 한 기호에 대 한 참조를 검색 합니다.  

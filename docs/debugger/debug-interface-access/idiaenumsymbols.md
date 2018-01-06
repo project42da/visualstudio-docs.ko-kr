@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 372279d82f9f316edf0d1aed203be1ce4e48e236
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 66d972ad65bd6ff3f4f9f5d7dd71893d9fe09c2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 데이터 원본에 포함 된 다양 한 기호를 열거 합니다.  
@@ -54,7 +55,7 @@ IDiaEnumSymbols : IUnknown
   
 -   [IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  가져오는 방법을 보여 주는이 예제는 `IDiaEnumSymbols` 인터페이스 한 다음 목록으로 사용자 정의 형식 (Udt)에 해당 열거형을 사용 합니다.  
   
 > [!NOTE]

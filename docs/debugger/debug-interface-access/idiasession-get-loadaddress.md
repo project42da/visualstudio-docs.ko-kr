@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 131ad3ffdcaae554f6892119755de840023de154
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ff72da3cd9c39dd12e2fc07d6851a4bee98fd48c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessiongetloadaddress"></a>IDiaSession::get_loadAddress
 이 기호 저장소의 기호에 해당 하는 실행 파일에 대 한 부하 주소를 검색 합니다.  

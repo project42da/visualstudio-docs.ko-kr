@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.error.kernel_dbg_enabled
 dev_langs:
 - CSharp
@@ -14,16 +14,16 @@ dev_langs:
 - FSharp
 - C++
 helpviewer_keywords: kernel debugger
-ms.assetid: 630a7abd-3303-4aaa-888a-6de3de14bc01
 caps.latest.revision: "23"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 448dbc486d58bc46e531b92de9f78272e4304d27
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0841b6e6d592a8b09b85e744d693f0b356fcbf9d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>큰 &#39; 오류: 디버깅 가능한 때문에 커널 디버거가 t는 시스템에서 활성화 되어
 관리 코드를 디버깅할 때 다음 오류 메시지가 나타날 수 있습니다.  
@@ -66,7 +66,7 @@ Debugging isn't possible because a kernel debugger is enabled on the system
   
 #### <a name="to-disable-kernel-debugging-for-all-sessions-windows-vista-and-windows-7"></a>모든 세션에 대해 커널 디버깅을 비활성화하려면(Windows Vista 및 Windows 7)  
   
-1.  명령 프롬프트에 다음과 같이 입력합니다.  
+1.  명령 프롬프트에서 다음을 입력합니다.  
   
     ```  
     bcdedit /debug off   

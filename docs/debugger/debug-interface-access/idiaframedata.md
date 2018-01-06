@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 19581f25a9f75bd1a791c9f2f7b23998218e5f27
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9ecbc6d6bd94c3b6ed58b1afe8f1c090aca82e36
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaframedata"></a>IDiaFrameData
 스택 프레임의 세부 정보를 노출합니다.  
@@ -59,7 +60,7 @@ IDiaFrameData : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenumframedata:: Next](../../debugger/debug-interface-access/idiaenumframedata-next.md) 또는 [idiaenumframedata:: Item](../../debugger/debug-interface-access/idiaenumframedata-item.md) 메서드. 참조는 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) 세부 정보에 대 한 인터페이스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 속성을 출력 한 `IDiaFrameData` 개체입니다. 참조는 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) 방법의 예에 대 한 인터페이스 `IDiaFrameData` 인터페이스를 가져옵니다.  
   
 ```C++  

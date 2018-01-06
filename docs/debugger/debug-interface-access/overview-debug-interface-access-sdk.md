@@ -24,11 +24,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d4cd0206e402600cbe9002c931adb7ff6a2cc680
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cb13b9a77bcd34b22a7a82182a63440cb02a4e76
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overview-debug-interface-access-sdk"></a>개요(디버그 인터페이스 액세스 SDK)
 DIA SDK를 사용 하 여 Microsoft 디버그 정보에 액세스할 수 있습니다. DIA SDK는 COM 기반 Microsoft 디버그 정보의 형식 변경 될 때마다 코드를 다시 작성 하지 않아도 API 집합을 제공 합니다. DIA SDK에서는 이전 버전에서 생성 한.pdb 및.dbg 파일에 있는 디버그 정보의 선택 집합을 읽을 수 있습니다 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 버전 5.0 이상.  

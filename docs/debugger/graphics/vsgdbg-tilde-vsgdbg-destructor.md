@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e8d34fc9ac09f944fea44baff3ceea4a121a8009
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 16fce161dc1c01797a67fe8d104c26ce603a4b76
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsgdbgvsgdbg-destructor"></a>VsgDbg::~VsgDbg(소멸자)
 인스턴스를 제거는 `VsgDbg` 클래스입니다. 그래픽 정보를 적극적으로 기록 하 고 그래픽 로그 파일을 종료 하 고 닫은 및 적극적으로 그래픽 정보를 캡처하는 동안 사용 된 리소스를 해제 합니다.  

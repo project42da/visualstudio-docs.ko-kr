@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 12bc8e73457c1afc4b1799549ad43974d5771252
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0464b871cda03b507d0127f5deeb97b94167b21a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasegment"></a>IDiaSegment
 지도 데이터는 섹션 번호 주소 공간의 세그먼트입니다.  
@@ -50,7 +51,7 @@ IDiaSegment : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenumsegments:: Item](../../debugger/debug-interface-access/idiaenumsegments-item.md) 또는 [idiaenumsegments:: Next](../../debugger/debug-interface-access/idiaenumsegments-next.md) 메서드. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 함수는 테이블을 가장 가까운 기호 모든 세그먼트의 주소를 표시 합니다.  
   
 ```C++  

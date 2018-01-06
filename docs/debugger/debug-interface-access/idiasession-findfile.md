@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ef230d1b82992f769011e0cb1d9d4ff11145b82d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 99f3d58b444f2bf360c76dcd5f95b03ac50f7e32
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindfile"></a>IDiaSession::findFile
 컴파일 대상와 이름으로 소스 파일을 검색 합니다.  
@@ -50,7 +51,7 @@ HRESULT findFile (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 IDiaEnumSourceFiles* pEnum;  

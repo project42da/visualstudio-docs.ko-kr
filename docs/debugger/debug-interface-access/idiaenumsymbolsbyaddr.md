@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4efdd5297b1a4b995ba7d3e45edc9b2c982f6ecd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c76c61f79b0a76d923f92084a1e1ccdca82b60c4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumsymbolsbyaddr"></a>IDiaEnumSymbolsByAddr
 데이터 원본에 포함 된 다양 한 기호 주소로 열거 합니다.  
@@ -47,7 +48,7 @@ IDiaEnumSymbolsByAddr : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiasession:: Getsymbolsbyaddr](../../debugger/debug-interface-access/idiasession-getsymbolsbyaddr.md) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 함수는 이름 및 상대 가상 주소로 정렬 하는 모든 기호는 주소를 표시 합니다.  
   
 ```C++  

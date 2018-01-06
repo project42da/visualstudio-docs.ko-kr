@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1b2ce34773540a09f8120e6ce705b0a244dce2b9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1c45caedaac6cd162240955aa233160c61bf3e61
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetaddresstaken"></a>IDiaSymbol::get_addressTaken
 다른 기호가이 기호이 주소를 참조 하는지 여부를 나타내는 플래그를 검색 합니다.  
@@ -41,7 +42,7 @@ HRESULT get_addressTaken (
 > [!NOTE]
 >  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서 `B` 참조 `A`합니다. 따라서 기호 `A`의 `get_addressTaken` 메서드 반환 `TRUE`합니다.  
   
 ```C++  

@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 26acf7b8f9ad54a1ef1ed25497cd408c51c745c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fd0049e15f17d5dff58d35d4279bb0ab0673091e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumtablesitem"></a>IDiaEnumTables::Item
 인덱스 또는 이름을 사용 하 여 테이블을 검색합니다.  
@@ -45,7 +46,7 @@ HRESULT Item (
 ## <a name="remarks"></a>설명  
  문자열 variant를 지정 하는 경우 문자열 이름을 특정 테이블입니다. 이름에 정의 된 테이블 이름 중 하나 여야 합니다 [상수 (디버그 인터페이스 액세스 SDK)](../../debugger/debug-interface-access/constants-debug-interface-access-sdk.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 VARIANT var;  

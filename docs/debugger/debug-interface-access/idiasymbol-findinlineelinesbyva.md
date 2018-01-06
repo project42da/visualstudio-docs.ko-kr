@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 442dd8fce97c30cfce792f825d8212e6558bf4cb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 912beca94c2575564bfa6634c8fc3c44ffb54456
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolfindinlineelinesbyva"></a>IDiaSymbol::findInlineeLinesByVA
 클라이언트가 없는 인라인 직접 또는 간접적으로 지정된 된 가상 주소 (VA) 내에서이 기호에 모든 함수의 줄 번호 정보를 반복 하는 데 사용 하는 열거형을 검색 합니다.  

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 70139b7bf3286e7c4527bd71cf78b4ba86aeac1e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c6792f3271f09742d40b92691dee06854deea8f2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionsymbolbyid"></a>IDiaSession::symbolById
 고유 식별자로 기호를 검색합니다.  
@@ -47,7 +48,7 @@ HRESULT symbolById (
   
  이 방법을 사용할 수, 예를 들어 다른 기호 형식을 나타내는 기호를 검색할 수 (예제 참조).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 검색 된 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 다른 기호 형식을 나타내는입니다. 사용 하는 방법을 보여 주는이 예제는 `symbolById` 세션에서 메서드. 호출 하는 것 보다 간단한 방법은 [idiasymbol:: Get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md) 형식 기호를 직접 검색 하는 메서드입니다.  
   
 ```C++  

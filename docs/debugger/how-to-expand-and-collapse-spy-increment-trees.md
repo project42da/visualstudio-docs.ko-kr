@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6628ad8decf04fdb4a031c62c2dc3c4af5b179d2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e419adef776c3973ae3d470e97c88483f0d7d0ea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>방법: Spy++ 트리 확장명 및 축소
 확장 및 두 가지 방법으로 창, 프로세스 및 스레드 뷰를 축소할 수 있습니다: 창이 나 사용 하 여 아이콘을 클릭 하 여는 **트리** 메뉴. + 및-트리에서 아이콘 Visual c + + 프로젝트 창에서와 마찬가지로 작동 합니다.  

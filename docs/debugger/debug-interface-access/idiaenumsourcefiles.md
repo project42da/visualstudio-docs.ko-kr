@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: dbcd3e50e1b53a56342b5ab344ec54180001fa80
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2e549a4c7dffe565ef311bb75ff5706afb5c65cd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
 데이터 원본에 포함 된 다양 한 소스 파일을 열거 합니다.  
@@ -47,7 +48,7 @@ IDiaEnumSourceFiles : IUknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  호출 하 여이 인터페이스를 가져옵니다는 `QueryInterface` 에서 메서드는 [IDiaTable](../../debugger/debug-interface-access/idiatable.md) 개체입니다. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  가져오는 방법을 보여 주는이 예제는 `IDiaEnumSourceFiles` DIA 세션 개체에는 테이블 목록에서 인터페이스입니다. 소스 파일 정보에 액세스 하는 예제를 보려면는 [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) 인터페이스입니다.  
   
 ```C++  

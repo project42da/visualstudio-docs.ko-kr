@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c455791f2e10f64850a28a205fb67571822ef069
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 00f7ddef98d64bb09c1c010f4f120e11180e48e5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
 지정 된 상대 가상 주소 (RVA)를 포함 하는 지정 된 컴파일 대상에 줄을 검색 합니다.  
@@ -46,7 +47,7 @@ HRESULT findLinesByRVA (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 함수의 상대 가상 주소 및 길이 사용 하 여 지정된 된 함수에 포함 된 모든 줄 번호를 가져오는 함수를 보여 줍니다.  
   
 ```C++  

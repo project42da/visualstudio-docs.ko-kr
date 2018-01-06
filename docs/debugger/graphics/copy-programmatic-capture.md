@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a0b8cb397afd4f1ba58dca30b4314471b4647576
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7f8fce1893363ac6df0e6d22320f718833a1114e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="copy-programmatic-capture"></a>복사(프로그램 방식 캡처)
 활성 그래픽 로그(.vsglog) 파일 내용을 새 파일에 복사합니다.  

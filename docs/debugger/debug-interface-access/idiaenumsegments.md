@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d0f30e266389a3abfa3c0af1275cada34c9cfe11
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 98043b7160caaa32ac341ad4aa5065d5cdbe8a59
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumsegments"></a>IDiaEnumSegments
 데이터 원본에 포함 된 다양 한 세그먼트를 열거 합니다.  
@@ -47,7 +48,7 @@ IDiaEnumSegments : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  호출 하 여이 인터페이스를 가져옵니다는 `QueryInterface` 에서 메서드는 [IDiaTable](../../debugger/debug-interface-access/idiatable.md) 개체입니다. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  가져오는 방법을 보여 주는이 예제는 `IDiaEnumSections` 테이블에서 인터페이스입니다. 세그먼트를 사용 하 여의 자세한 예제에 대 한 참조는 [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) 인터페이스입니다.  
   
 ```C++  

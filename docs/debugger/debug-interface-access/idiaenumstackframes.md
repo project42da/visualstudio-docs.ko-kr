@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3cbfea7394a2720ed4341e883fefe90556c86e57
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f9c4c81fcecb76cc094297cb8fa5c733a677a831
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
 사용할 수 있는 다양 한 스택 프레임을 열거 합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) 또는 [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다운로드 하 고 사용 하는 방법을 보여 주는이 예제는 `IDiaEnumStackFrames` 인터페이스입니다. 참조는 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) 의 구현에 대 한 인터페이스는 `PrintStackFrame` 함수입니다.  
   
 ```C++  

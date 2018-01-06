@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e95fd6c096ae94c8322f06493c926e237274f1ad
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3c849f733bc0bd404923412d9730bbff6e2ba3f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgethfafloat"></a>IDiaSymbol::get_hfaFloat
 사용자 정의 형식 (UDT) 부동 소수점 부동 소수점 형식의 집계 동종 (HFA) 데이터를 포함 하는지 여부를 지정 하는 플래그를 검색 합니다.  

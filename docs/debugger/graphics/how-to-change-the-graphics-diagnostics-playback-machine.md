@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 35b8eb174ea8e0ca238bafe5a05dfbba54855cda
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c2279fa20766180371834e3f3425d8e75e98d430
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-change-the-graphics-diagnostics-playback-machine"></a>방법: 그래픽 진단 재생 컴퓨터 변경
 재생할 수 있습니다 그래픽 정보는 원격 컴퓨터 또는 장치를 사용 하 여 또는 로컬 컴퓨터를 사용 하 여 합니다.  

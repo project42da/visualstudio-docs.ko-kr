@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3d95043be0c44ddfd5e05054e72e0370a60e84a9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3aab08637099ea10da5357cbbba2d8c20ee21a0e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindsymbolbyrvaex"></a>IDiaSession::findSymbolByRVAEx
 포함 된 단어나 가장 가까운 지정 된 상대 가상 주소 (RVA) 및 오프셋을 지정 된 기호 형식을 검색 합니다.  
@@ -50,7 +51,7 @@ HRESULT findSymbolByRVAEx (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 IDiaSymbol* pFunc;  

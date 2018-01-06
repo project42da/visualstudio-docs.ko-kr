@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e57e1fddaabe0346987a7ed27b4f3cd682055d5d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f3939ab86cd9f0948a2be44756b9ed94d143ecc8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasession"></a>IDiaSession
 디버그 기호에 대 한 쿼리 컨텍스트를 제공합니다.  
@@ -74,7 +75,7 @@ IDiaSession : IUnknown
 ## <a name="remarks"></a>설명  
  호출 해야는 [idiasession:: Put_loadaddress](../../debugger/debug-interface-access/idiasession-put-loadaddress.md) 만든 후 메서드는 `IDiaSession` 개체-에 전달 된 값과는 `put_loadAddress` 메서드가 0이 아닌 값 이어야 합니다.-기호가 됩니다의 가상 주소 VA 속성에 대 한 액세스할 수 있습니다. 부하 주소 프로그램 디버깅 중인 실행 파일을 로드에서 제공 됩니다. Win32 함수를 호출할 수는 예를 들어 `GetModuleInformation` 주소를 검색 부하는 실행 파일에 대 한 실행 파일에 대 한 핸들을 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  가져오는 방법을 보여 주는이 예제는 `IDiaSession` DIA SDK의 일반 초기화의 일부로 인터페이스입니다.  
   
 ```C++  

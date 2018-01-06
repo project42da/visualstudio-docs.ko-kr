@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ba8c06066c78505d915834f2ffcc1d8c634a1c73
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8ca66de1d51d308439012068876063ffc59c21b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindlinesbyva"></a>IDiaSession::findLinesByVA
 지정 된 가상 주소 VA 범위에 포함 된 선에 대 한 줄 번호 정보를 검색 합니다.  
@@ -43,7 +44,7 @@ HRESULT findLinesByVA (
  `ppResult`  
  [out] 반환 된 [IDiaEnumLineNumbers](../../debugger/debug-interface-access/idiaenumlinenumbers.md) 모든 줄의 목록을 포함 하는 개체 번호는 커버 지정 된 주소 범위입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 함수의 가상 주소 및 길이 사용 하는 함수에 포함 된 모든 줄 번호를 가져오는 함수를 보여 줍니다.  
   
 ```C++  

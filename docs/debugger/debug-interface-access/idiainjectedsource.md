@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7beda305bbe0673b6e1b47f0e11eb641ab8aa0d5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cfcb19170221ea7e37a25cb93c7bf77fc769fd1a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 액세스는 DIA 데이터 원본에 저장 하는 소스 코드를 삽입 합니다.  
@@ -48,7 +49,7 @@ IDiaInjectedSource : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenuminjectedsources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) 또는 [idiaenuminjectedsources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) 메서드. 참조는 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) 인터페이스 가져오기에 대 한 예제는 `IDiaInjectedSource` 인터페이스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  사용할 수 있는 데이터를 표시 하는이 예제는 `IDiaInjectedSource` 인터페이스입니다. 사용 하 여 다른 방법에 대 한는 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) 인터페이스에서 예제를 참조 하십시오.는 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) 인터페이스입니다.  
   
 ```C++  

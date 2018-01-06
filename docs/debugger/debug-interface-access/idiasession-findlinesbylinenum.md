@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: bb1538aedd1846e164301238262cfb9378973dfc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5d9d3bb5f84c57c72434a693beaf2d935963f73f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasessionfindlinesbylinenum"></a>IDiaSession::findLinesByLinenum
 컴파일 내에서 위 또는 주변 소스 파일에서 지정 된 줄 수 있는 대상의 줄 번호를 결정 합니다.  
@@ -57,7 +58,7 @@ HRESULT findLinesByLinenum (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제를 소스 파일을 열고이 파일에서 제공한 컴파일 대상 열거, 각 컴파일 대상 하기 시작 하는 소스 파일의 줄 번호를 찾습니다는 방법을 보여 줍니다.  
   
 ```C++  

@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30b3ca5d68731fccf874b250741a6e67697539fb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2fb7e886940cf26341a6f0f0fd46bb1fc594cc7f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackframe"></a>IDiaStackFrame
 스택 프레임의 속성을 표시 합니다.  
@@ -57,7 +58,7 @@ IDiaStackFrame : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenumstackframes:: Next](../../debugger/debug-interface-access/idiaenumstackframes-next.md) 메서드. 참조는 [IDiaEnumStackFrames](../../debugger/debug-interface-access/idiaenumstackframes.md) 인터페이스를 얻는 방법에 예는 `IDiaStackFrame` 인터페이스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 스택 프레임의 다양 한 특성을 표시 합니다.  
   
 ```C++  

@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 05cb3f85fe2f1ea82622a4537b89895a44eebf63
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8659123c09482537aadc3baedb597f5c7030708d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idialinenumbergetstatement"></a>IDiaLineNumber::get_statement
 프로그램 소스에 식을 보다는 문의 시작 부분이 줄 정보를 설명 한다는 사실을 나타내는 플래그를 검색 합니다.  

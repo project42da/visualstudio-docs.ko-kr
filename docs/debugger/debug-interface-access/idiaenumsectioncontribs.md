@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 38c73680435816d044c363f55193fba64b33ee44
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c1e1497092e94a176ab3024da65e068f5c982fc2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 데이터 소스에 포함 된 다양 한 섹션 기여를 열거 합니다.  
@@ -47,7 +48,7 @@ IDiaEnumSectionContribs : IUnknown
 ## <a name="note-for-callers"></a>호출자에 대 한 참고  
  이 인터페이스를 가져옵니다는 [idiasession:: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md) 메서드. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에 가져오는 방법을 보여 줍니다 (는 `GetEnumSectionContribs` 함수) 및 사용 (의 `ShowSectionContribs` 함수)는 `IDiaEnumSectionContribs` 인터페이스. 섹션 기여를 사용 하 여의 자세한 예제에 대 한 참조는 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) 인터페이스입니다.  
   
 ```C++  
