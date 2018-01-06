@@ -22,11 +22,12 @@ caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ec31ea837c78fc1d47c3df02d129ac3c5f4f3657
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 23985c56ba61e5a788232523611a48cfde902335
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-custom-visualizers-of-data"></a>데이터의 사용자 지정 시각화 도우미 만들기
  시각화 도우미는의 구성 요소는 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 디버거 사용자 인터페이스입니다. A *시각화 도우미* 대화 상자나 다른 인터페이스의 데이터 형식에 적합 한 방식으로 변수나 개체를 표시 하려면를 만듭니다. 예를 들어 HTML 시각화 도우미는 HTML 문자열을 해석하고 브라우저 창에서와 마찬가지로 그 결과를 표시합니다. 비트맵 시각화 도우미는 비트맵 구조를 해석하고 그 구조가 표현하는 그래픽을 표시합니다. 일부 시각화 도우미에서는 데이터를 볼 수 있을 뿐만 아니라 수정할 수도 있습니다.
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  시각화 도우미에서 데이터 개체를 표시할 뿐만 아니라 편집할 수도 있도록 하려면 `TransferData`에서 `CreateReplacementObject` 또는 <xref:Microsoft.VisualStudio.DebuggerVisualizers.VisualizerObjectSource> 메서드를 재정의해야 합니다.   
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
   
  [연습: C#에서 시각화 도우미 작성](../debugger/walkthrough-writing-a-visualizer-in-csharp.md)  
 

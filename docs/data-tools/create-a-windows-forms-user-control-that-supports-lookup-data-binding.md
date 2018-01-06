@@ -19,11 +19,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: f4eed84197589229940d0e18e261156128f37c63
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: data-storage
+ms.openlocfilehash: c3ecb38b4f208eac3a49cc2f0e21fb98ef81ea68
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-lookup-data-binding"></a>조회 데이터 바인딩을 지 원하는 Windows Forms 사용자 정의 컨트롤 만들기
 Windows Forms에서 데이터를 표시할 때의 기존 컨트롤을 선택할 수 있습니다는 **도구 상자**, 하거나 응용 프로그램에 표준 컨트롤에서 사용할 수 없는 기능이 필요한 경우 사용자 지정 컨트롤을 제작할 수 있습니다. 이 연습에서는 <xref:System.ComponentModel.LookupBindingPropertiesAttribute>를 구현하는 컨트롤을 만드는 방법을 보여줍니다. <xref:System.ComponentModel.LookupBindingPropertiesAttribute>를 구현하는 컨트롤은 데이터에 바인딩할 수 있는 속성 3개를 포함할 수 있습니다. 이러한 컨트롤은 <xref:System.Windows.Forms.ComboBox>와 비슷합니다.  

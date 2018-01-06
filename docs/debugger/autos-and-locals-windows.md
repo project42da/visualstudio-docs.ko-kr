@@ -18,11 +18,12 @@ caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2504807bd4717ec7f42ed059e7ef4d962c7441e4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 77dd01333941e897628a40a5a5dc1749917dcb89
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>Visual Studio에서 자동에서 변수 및 지역 변수 검사
 **자동** 창 (디버깅 하는 동안 **CTRL + ALT + V, A**, 또는 **디버그 > Windows > 자동**) 및 **지역** 창 (디버깅 중 **CTRL + ALT + V, L**, 또는 **디버그 > Windows > 지역**)는 디버깅 하는 동안 변수 값을 확인 하려는 경우 매우 유용 합니다. **지역** 창에는 로컬 범위에 정의되는 변수가 표시되며, 일반적으로 현재 실행되고 있는 함수 또는 메서드입니다. **자동** 창에는 현재 줄(디버거가 중지되어 있는 위치)에 사용된 변수가 표시됩니다. 이 창에는 변수 표시 되는 정확 하 게 하는 것은 다른 언어에서는 다릅니다. 아래에서 [What variables appear in the Autos Window?](#bkmk_whatvariables) 참조하세요.  

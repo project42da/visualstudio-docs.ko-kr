@@ -14,11 +14,12 @@ caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9bfbb1e05dadb18e9357e38d6ed660c248dccec4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cc892cbdf49ab883c2bd45f4ef13ddda21b23d83
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="compilanddetails"></a>CompilandDetails
 컴파일 대상 정보도 기호 분할는 `SymTagCompiland` 태그 (낮은 세부 정보)와 `SymTagCompilandDetails` 태그 (높은 세부 정보). `SymTagCompilandDetails`추가 기호를 로드 해야 합니다. 그러나 다양 한으로 사용할 수 없으면 컴파일 대상에 대 한 정보를 제공는 `SymTagCompiland` 기호입니다.  

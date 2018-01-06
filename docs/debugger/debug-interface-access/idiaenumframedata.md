@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1850fd8eab4151dfb24bdc30dafe2e110406c37a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1f9cd36f6ea56b8defb3197abc66055616aa5d21
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumframedata"></a>IDiaEnumFrameData
 데이터 소스에 포함 된 다양 한 프레임 데이터 요소를 열거 합니다.  
@@ -49,7 +50,7 @@ IDiaEnumFrameData : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 가져옵니다는 [idiasession:: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md) 메서드. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에 가져오는 방법을 보여 줍니다 (는 `GetEnumFrameData` 함수) 및 사용 (의 `ShowFrameData` 함수)는 `IDiaEnumFrameData` 인터페이스. 참조는 [IDiaFrameData](../../debugger/debug-interface-access/idiaframedata.md) 인터페이스의 예는 `PrintFrameData` 함수입니다.  
   
 ```C++  

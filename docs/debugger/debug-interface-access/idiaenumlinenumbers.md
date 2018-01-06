@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 92d257749e12605fb02c4c25a57b1862880d9a5c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 69b8be7dc136cc871effa0c74f2f69481e114bb7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumlinenumbers"></a>IDiaEnumLineNumbers
 데이터 소스에 포함 된 다양 한 줄 번호를 열거 합니다.  
@@ -57,7 +58,7 @@ IDiaEnumLineNumbers : IUnknown
   
 -   [IDiaSession::findLinesByLinenum](../../debugger/debug-interface-access/idiasession-findlinesbylinenum.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  가져오는 방법을 보여 주는이 예제는 `IDiaEnumLineNumbers` 세션에서 인터페이스입니다. 이 경우,이 예제에서는 표시를 함수에 대 한 줄 번호 열거형을 가져오는 방법을 (나타내는 `pSymbol`). 줄 번호를 사용 하 여의 자세한 예제에 대 한 참조는 [IDiaLineNumber](../../debugger/debug-interface-access/idialinenumber.md) 인터페이스입니다.  
   
 ```C++  

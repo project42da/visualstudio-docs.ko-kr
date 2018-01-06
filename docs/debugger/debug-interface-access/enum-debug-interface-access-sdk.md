@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5b52a97fb549414c0f743c208f37530bc40c8a7c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ce0b4df4d8df6ad3e5d2db0b41459ecbeed2a751
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enum-debug-interface-access-sdk"></a>열거형(디버그 인터페이스 액세스 SDK)
 열거형으로 식별 됩니다 `SymTagEnum` 기호입니다. 각 열거형 값을 가진 클래스 자식으로 표시는 `SymTagConstant` 태그입니다.  

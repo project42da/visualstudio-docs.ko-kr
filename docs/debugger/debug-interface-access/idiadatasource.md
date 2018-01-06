@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9b6ddb2ba2cc568b8f07e6643dcaeb93c0dec8ff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 51a277d9ff1bf190aa87d7c4e9d8d852f8c38323
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiadatasource"></a>IDiaDataSource
 디버깅 기호가의 원본에 대 한 액세스를 시작 합니다.  
@@ -47,7 +48,7 @@ IDiaDataSource : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져온는 `CoCreateInstance` 클래스 식별자와 함수 `CLSID_DiaSource` 인터페이스 id의 `IID_IDiaDataSource`합니다. 이 인터페이스는 가져오는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
   

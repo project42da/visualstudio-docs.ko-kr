@@ -20,11 +20,12 @@ caps.latest.revision: "32"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7866b0edf372dd7801d68e3f71212e9989b65ff0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5c3840cc7d43c3e30dda0317674ffb8cd664a262
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-64-bit-applications"></a>64비트 응용 프로그램 디버그
 로컬 컴퓨터나 원격 컴퓨터에서 실행되는 64비트 응용 프로그램을 디버깅할 수 있습니다.  

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 47c5ad392d031eabcfe51c74de48084144f9e8a0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b88f68ac87b50eac9637985d7d40bd901232d777
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dia2dumpcpp-source-file"></a>Dia2dump.cpp 소스 파일
 다음 Dia2dump.cpp 소스 코드에는.pdb 파일의 내용을 표시합니다. 이 소스 코드를 사용 하 여 [Dia2dump 샘플](../../debugger/debug-interface-access/dia2dump-sample.md)합니다.  

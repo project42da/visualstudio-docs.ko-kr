@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 023cb5f92abb9c67a94eeaf0f7202c95f097248d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e90f20f1f2653c516c455fcfabf06fcf502544fe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumdebugstreams"></a>IDiaEnumDebugStreams
 데이터 소스에 포함 된 다양 한 디버그 스트림을 열거 합니다.  
@@ -48,7 +49,7 @@ IDiaEnumDebugStreams : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  호출 된 [idiasession:: Getenumdebugstreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md) 를 얻는 메서드를 프로그램 `IDiaEnumDebugStreams` 개체입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는이 인터페이스에서 사용할 수 있는 데이터 스트림 액세스 하는 방법을 보여 줍니다. 참조는 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) 의 구현에 대 한 인터페이스는 `PrintStreamData` 함수입니다.  
   
 ```C++  

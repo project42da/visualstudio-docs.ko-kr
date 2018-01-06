@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5866bdeb4073872f0abfeb03a05756eee85b14c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7354b4c0f5d00c1d3cbb7b5a7443263eb722d164
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 지정된 된 수의 기호 열거형 시퀀스를 검색합니다.  
@@ -46,7 +47,7 @@ HRESULT Next (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 더 많은 기호가 없는 경우. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 IDiaEnumSymbols* pEnum  

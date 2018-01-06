@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: efc5773f3cadaaf2c2a4a57c3fd8b381ca3f5d43
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c9a4d4bff0cfc7d1e51e04e2b75d8e64a40ce3cd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaenuminjectedsources"></a>IDiaEnumInjectedSources
 데이터 소스에 포함 된 다양 한 삽입 된 소스를 열거 합니다.  
@@ -47,7 +48,7 @@ IDiaEnumInjectedSources : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져온는 [idiasession:: Findinjectedsource](../../debugger/debug-interface-access/idiasession-findinjectedsource.md) 메서드를 호출 하거나 특정 원본 파일의 이름으로는 [idiasession:: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md) 의 GUID로 메서드는 `IDiaEnumInjectedSources` 인터페이스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에 가져오는 방법을 보여 줍니다 (는 `GetEnumInjectedSources` 함수) 및 사용 (의 `DumpAllInjectedSources` 함수)는 `IDiaEnumInjectedSources` 인터페이스. 참조는 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) 의 구현에 대 한 인터페이스는 `PrintPropertyStorage` 함수입니다. 대체 출력에 대 한 참조는 [IDiaInjectedSource](../../debugger/debug-interface-access/idiainjectedsource.md) 인터페이스입니다.  
   
 ```C++  

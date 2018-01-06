@@ -20,11 +20,12 @@ caps.latest.revision: "30"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b45252d9495a4ca6f15430c86d4f468f2434bceb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 401ee40e2d296cbef041cb56568b639d05835f04
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="client-side-script-debugging"></a>클라이언트 쪽 스크립트 디버깅
 Visual Studio 디버거는 ASP.NET 페이지의 클라이언트 쪽 스크립트에서 오류를 찾아 수정하기 위한 포괄적인 디버깅 환경을 제공합니다.  
