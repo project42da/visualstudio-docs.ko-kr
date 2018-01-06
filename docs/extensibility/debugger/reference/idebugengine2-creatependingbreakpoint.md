@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fdc73a2245390ec04cc3adc2b3a4ac4f5ced3f51
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 63a6f400f62f61e94b7b43e781f739dfa5f78d29
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine2creatependingbreakpoint"></a>IDebugEngine2::CreatePendingBreakpoint
 디버그 엔진 (DE)에 보류 중인 중단점을 만듭니다.  
@@ -56,7 +57,7 @@ int CreatePendingBreakpoint(
   
  사용자 코드의 줄에 중단점을 설정한 경우 때는 DE는이 코드에 해당 하는 문서에는 가장 가까운 줄에 중단점을 바인딩할 수 있습니다. 따라서 사용자는 여러 줄 문의 첫 번째 줄에 중단점을 설정 하지만 마지막 줄 (여기서 모든 코드 특성 사용에 디버그 정보)에 바인딩할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CProgram` 개체입니다. DE 구현의 `IDebugEngine2::CreatePendingBreakpoint` 다음 각 프로그램의 메서드의이 구현에 대 한 모든 호출을 전달할 수 없습니다.  
   
 ```  

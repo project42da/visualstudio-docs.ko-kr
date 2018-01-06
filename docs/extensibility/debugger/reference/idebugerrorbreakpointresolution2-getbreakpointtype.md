@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cc2585fb9943a3c882ce14a15adf183c1d303f3a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c2ddc100514bf2489d13cb03302734b5dbb66266
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugerrorbreakpointresolution2getbreakpointtype"></a>IDebugErrorBreakpointResolution2::GetBreakpointType
 중단점 유형을 가져옵니다.  
@@ -47,7 +48,7 @@ int GetBreakpointType(
 ## <a name="remarks"></a>설명  
  이 메서드 백업은 오류 중단점 이벤트에 바인딩하려는 경우 실패 한 중단점의 형식을 반환 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CDebugErrorBreakpointResolution` 공개 하는 개체는 [IDebugErrorBreakpointResolution2](../../../extensibility/debugger/reference/idebugerrorbreakpointresolution2.md) 인터페이스입니다.  
   
 ```  

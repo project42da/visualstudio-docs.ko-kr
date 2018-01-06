@@ -15,11 +15,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: 2727f17665d845029fcf32dbcd12dd7603dad519
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: data-storage
+ms.openlocfilehash: e4edcc21986ae0fd033228971697057932e63670
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes"></a>연습: 사용자 지정 삽입, 업데이트 하 고 엔터티 클래스의 동작을 삭제
 [LINQ to SQL 도구 Visual Studio에서](../data-tools/linq-to-sql-tools-in-visual-studio2.md) 만들고 편집 하기 위한 시각적 디자인 화면을 제공 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 데이터베이스의 개체를 기반으로 하는 클래스 (엔터티 클래스). 사용 하 여 [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index), SQL 데이터베이스에 액세스 하려면 LINQ 기술에 사용할 수 있습니다. 자세한 내용은 [LINQ(Language-Integrated Query)](/dotnet/csharp/linq/)를 참조하세요.  
@@ -264,7 +265,7 @@ ms.lasthandoff: 12/12/2017
   
 -   업데이트 동안 동시성 검사를 구현합니다. 자세한 내용은 참조 [낙관적 동시성: 개요](/dotnet/framework/data/adonet/sql/linq/optimistic-concurrency-overview)합니다.  
   
--   LINQ 쿼리를 추가하여 데이터를 필터링합니다. 자세한 내용은 참조 [LINQ 쿼리 (C#) 소개](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries.md)합니다.  
+-   LINQ 쿼리를 추가하여 데이터를 필터링합니다. 자세한 내용은 참조 [LINQ 쿼리 (C#) 소개](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)합니다.  
   
 ## <a name="see-also"></a>참고 항목
 [LINQ to SQL 도구 Visual Studio에서](../data-tools/linq-to-sql-tools-in-visual-studio2.md)     
