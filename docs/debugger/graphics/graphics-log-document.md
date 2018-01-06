@@ -16,11 +16,12 @@ caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8429e7175ca6ab9a537952fb4a605f2281da69c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 30abe64fa54e7b63e1552ab2e4c5ce95ac11befc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-log-document"></a>그래픽 로그 문서
 그래픽 로그 문서는 그래픽 진단 세션에서 앱을 실행하는 동안 발생한 그래픽 이벤트의 레코드입니다. 기록된 후에는 Visual Studio Graphics Analyzer에서 이 로그를 검토하여 렌더링 및 성능 문제를 진단할 수 있습니다.  
@@ -72,7 +73,7 @@ ms.lasthandoff: 10/31/2017
 |**메모리 표시**|그래픽 어댑터에 설치된 메모리의 양입니다.|  
 |**드라이버 이름**|그래픽 어댑터 드라이버의 이름입니다.|  
 |**드라이버 버전**|그래픽 어댑터 드라이버의 버전입니다.|  
-|**Name**|그래픽 어댑터의 이름입니다.|  
+|**이름**|그래픽 어댑터의 이름입니다.|  
   
  **실험 파일**  
  캡처 세션과 연관된 실험 파일에 대한 정보를 나열합니다.  

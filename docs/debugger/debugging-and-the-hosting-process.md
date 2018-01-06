@@ -20,11 +20,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 02cdf8b50415a238c2af2735a20fea4ed8c23668
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 01d4ebaada2c8ac65c1f44a5c80525f1b9e66a5d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-and-the-hosting-process"></a>디버깅 및 호스팅 프로세스
 Visual Studio 호스팅 프로세스를 사용하면 디버거 성능을 향상시킬 수 있고 부분 신뢰 디버깅 및 디자인 타임 식 계산 등과 같은 새로운 디버거 기능을 사용할 수 있습니다. 필요한 경우 호스팅 프로세스를 비활성화할 수 있습니다. 자세한 내용은 [How to: Disable the Hosting Process](../ide/how-to-disable-the-hosting-process.md)을 참조하세요. 다음 섹션에서는 호스팅 프로세스를 사용하는 경우와 사용하지 않는 경우의 몇 가지 디버깅 차이점에 대해 설명합니다.  
@@ -42,6 +43,6 @@ Visual Studio 호스팅 프로세스를 사용하면 디버거 성능을 향상�
  `Assembly.GetCallingAssembly().FullName` 은 호스팅 프로세스가 활성화되어 있는지 여부에 따라 서로 다른 결과를 반환합니다. 호스팅 프로세스를 사용할 수 있는 상태에서 `Assembly.GetCallingAssembly().FullName` 을 호출하면 `mscorlib`가 반환됩니다. 호스팅 프로세스를 사용할 수 없는 상태에서 `Assembly.GetCallingAssembly().FullName` 을 호출하면 응용 프로그램 이름이 반환됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [호스팅 프로세스 (vshost.exe)](../ide/hosting-process-vshost-exe.md)   
+ [호스팅 프로세스(vshost.exe)](../ide/hosting-process-vshost-exe.md)   
  [방법: 부분 신뢰 응용 프로그램 디버깅](../debugger/how-to-debug-a-partial-trust-application.md)   
  [방법: 호스팅 프로세스 비활성화](../ide/how-to-disable-the-hosting-process.md)

@@ -13,18 +13,19 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6ce3e623a2d1787aa67f8a6e4dcfcf9530e8766c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6ec084c0d985ce5cc3cb0a886bd1fdcaf6cc3e54
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-descriptions"></a>이벤트 설명
 이벤트의 각 형식은 특정 목적을 갖습니다.  
   
 ## <a name="events-and-the-reasons-for-their-use"></a>이벤트 및 사용 하는 이유  
   
-|이벤트|설명|  
+|이벤트(event)|설명|  
 |-----------|-----------------|  
 |문서 이벤트를 활성화 합니다.|이 경우 디버그 엔진 (DE)를 열거나 문서를 포그라운드로 전환 IDE가 때 발생 합니다.|  
 |바인딩된 중단점 또는 오류 이벤트 중단점|중단점 또는 때 중단점을 바인딩할 수 없습니다 바인딩되며 오류가 반환 됩니다 때 보냅니다.|  

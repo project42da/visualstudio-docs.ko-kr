@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: be24edc89328f08199316df8bdedf2ab6391907b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8f596d2c51c5d5e543ed67212662c5096ea2e4eb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiatable"></a>IDiaTable
 DIA 데이터 소스 테이블을 열거합니다.  
@@ -63,7 +64,7 @@ IDiaTable : IEnumUnknown
   
 -   [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  첫 번째 함수 `ShowTableNames`, 세션에 모든 테이블의 이름을 표시 합니다. 두 번째 함수 `GetTable`, 지정된 된 인터페이스를 구현 하는 테이블에 대 한 테이블의 모든 검색 합니다. 세 번째 함수 `UseTable`를 사용 하는 방법을 보여 줍니다.는 `GetTable` 함수입니다.  
   
 > [!NOTE]

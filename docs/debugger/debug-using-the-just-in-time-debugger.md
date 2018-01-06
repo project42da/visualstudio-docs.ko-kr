@@ -15,11 +15,12 @@ caps.latest.revision: "48"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 470e4c728d246570e6f7e38ff3b71772de5b05fd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4bcdd28247b767321d3d5fed9681082538ba2b12
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Just-In-Time 디버거를 사용 하 여 Visual Studio에서 디버깅
 Just-in-time 디버깅 시작 Visual Studio 자동으로 외부 Visual Studio를 실행 하는 응용 프로그램에서 예외 또는 충돌이 발생 합니다. 그러면 Visual Studio 실행 중이지 않을 때 응용 프로그램을 테스트 하 고 문제가 발생 한 경우 Visual Studio와 함께 디버깅을 시작할 수 있습니다.
@@ -96,7 +97,7 @@ Just In Time Visual Studio에서 디버깅을 사용 하지 않도록 설정 하
     [assembly:System::Diagnostics::DebuggableAttribute(true, true)];   
     ```  
   
-     자세한 내용은 <xref:System.Diagnostics.DebuggableAttribute>을 참조하십시오.  
+     자세한 내용은 <xref:System.Diagnostics.DebuggableAttribute>을 참조하세요.  
   
 ## <a name="a-namebkmkusingjituse-just-in-time-debugging"></a><a name="BKMK_Using_JIT">Just-in-time 디버깅 사용  
  이 섹션에는 실행 파일 예외를 throw 하는 경우 표시 됩니다.  
@@ -122,7 +123,7 @@ static void Main(string[] args)
 > [!IMPORTANT]
 >  이 절차에서 작동 하도록 하려면는 [릴리스 구성](../debugger/how-to-set-debug-and-release-configurations.md)를 해제 해야 할 [내 코드만](../debugger/just-my-code.md)합니다. Visual Studio에서 클릭 **도구 > 옵션**합니다. 에 **옵션** 대화 상자에서 **디버깅**합니다. 확인 제거 **내 코드만 사용**합니다.  
   
- 솔루션을 빌드합니다 (Visual Studio에서 선택 **빌드 > 솔루션 다시 빌드**). 디버그 또는 릴리스 구성 중 하나를 선택할 수 있습니다 (선택 **디버그** 전체 디버깅 경험). 빌드 구성에 대 한 자세한 내용은 참조 [빌드 구성 이해](../ide/understanding-build-configurations.md)합니다.  
+ 솔루션을 빌드합니다 (Visual Studio에서 선택 **빌드 > 솔루션 다시 빌드**). 디버그 또는 릴리스 구성 중 하나를 선택할 수 있습니다 (선택 **디버그** 전체 디버깅 경험). 빌드 구성에 대한 자세한 내용은 [빌드 구성 이해](../ide/understanding-build-configurations.md)를 참조하세요.  
   
  빌드 프로세스는 실행 가능한 ThrowsNullException.exe를 만듭니다. C# 프로젝트를 만들 위치 폴더에서 찾을 수 있습니다: **...\ThrowsNullException\ThrowsNullException\bin\Debug** 또는 **...\ThrowsNullException\ThrowsNullException\bin\Release**합니다.  
   

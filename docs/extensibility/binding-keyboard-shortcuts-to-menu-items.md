@@ -18,11 +18,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1fe1c0bb9c3028c70e1be9df9af1de3b0804844e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ceae0f2ea69ce0340565abb85bb002713010407d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="binding-keyboard-shortcuts-to-menu-items"></a>메뉴 항목에 바인딩 바로 가기 키
 바로 가기 키 사용자 지정 메뉴 명령에 바인딩할 방금.vsct 파일 패키지에 대 한 항목을 추가 합니다. 이 기본 편집기에서 키보드 매핑을 적용 하거나 사용자 지정 편집기를 제한 하는 방법과 사용자 지정 단추, 메뉴 항목 또는 도구 모음 명령에 바로 가기 키를 매핑하는 방법을 설명 합니다.  
@@ -84,7 +85,7 @@ ms.lasthandoff: 10/31/2017
   
  명령을 사용자 지정 편집기 에서만 사용할 수 있게 하려면 설정는 `editor` 특성에서 생성 된 사용자 지정 편집기의 이름으로는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage를 만들 때 패키지 템플릿을 사용자 지정 편집기를 포함 합니다. 이름 값을 찾으려면 찾는 위치는 `<Symbols>` 섹션는 `<GuidSymbol>` 노드 인 `name` 특성으로 끝나는 "`editorfactory`." 사용자 지정 편집기의 이름입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 명명 된 명령에 바로 가기 키 CTRL + ALT + C를 바인딩합니다 `cmdidMyCommand` 라는 패키지에서 `MyPackage`합니다.  
   
 ```  
@@ -101,7 +102,7 @@ ms.lasthandoff: 10/31/2017
 </CommandTable>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 명명 된 명령에 바로 가기 키 CTL + B를 바인딩합니다 `cmdidBold` 라는 프로젝트에서 `TestEditor`합니다. 다른 편집기 아니라 사용자 지정 편집기에만 명령을 ´ ù.  
   
 ```xml  

@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d52dbe2dd362f657db4f974d81f418b4d26fd4f2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 94aae2c271b0b9030d63597fe8100e8c8f2bccbe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="windows-view"></a>창 뷰
 를 처음 연 Spy + + 창 뷰 시스템의 모든 창 및 컨트롤의 트리를 표시 합니다. 창 핸들 및 클래스 이름이 표시 됩니다. 트리의 맨 위에 있는 현재 데스크톱 창이입니다. 다른 모든 windows 데스크톱의 자식 이며 표준 창 계층 구조에 따라 나열 됩니다. 해당 부모의 아래 expansible 목록에 형제 창이 나타납니다.  
@@ -32,7 +33,7 @@ Spy++ 창 뷰
   
  창 뷰 포커스가 있을 때의 찾기 도구를 사용할 수 있습니다는 [창 경로 대화 상자](../debugger/window-search-dialog-box.md) 시스템에 열려 있는 모든 창의 정보를 표시 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 찾기 도구 사용](../debugger/how-to-use-the-finder-tool.md)  
  이 도구 속성이 나 메시지에 대 한 기간을 검색 하는 방법을 보여 줍니다.  
   

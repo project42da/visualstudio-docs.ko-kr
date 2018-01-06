@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5104bff319f4a6517ddccde1da1407156797928e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec5cedcec1d79cbc3a71410a1048f5014c8aa9e3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="capability-flags"></a>기능 플래그
 SCC_CAP_*xxx* 플래그는 비트 플래그를 소스 제어 플러그 인의 기능을 나타내는 데 사용 합니다. SCC_EXCAP_*xxx* 플래그는 확장된 기능을 나타내는 정수 값을 확인 하는 플래그를 증분 합니다.  
@@ -74,8 +75,8 @@ SCC_CAP_*xxx* 플래그는 비트 플래그를 소스 제어 플러그 인의 �
 |`SCC_EXCAP_QUERYCHANGES`|5|파일 변경 내용 열거를 지원 합니다.|  
 |`SCC_EXCAP_ADD_FILES_FROM_SCC`|6|지원 된 [SccAddFilesFromSCC](../extensibility/sccaddfilesfromscc-function.md)합니다.|  
 |`SCC_EXCAP_GET_USER_OPTIONS`|7|지원 된 [SccGetUserOption](../extensibility/sccgetuseroption-function.md)합니다.|  
-|`SCC_EXCAP_THREADSAFE_QUERY_INFO`|9|여러 스레드에서 SccQueryInfo 호출을 지원 합니다.|  
-|`SCC_EXCAP_REMOVE_DIR`|9|SccRemoveDir 함수를 지원합니다.|  
+|`SCC_EXCAP_THREADSAFE_QUERY_INFO`|8|여러 스레드에서 SccQueryInfo 호출을 지원 합니다.|  
+|`SCC_EXCAP_REMOVE_DIR`|10|SccRemoveDir 함수를 지원합니다.|  
 |`SCC_EXCAP_DELETE_CHECKEDOUT`|10|체크 아웃 된 파일을 삭제할 수 있습니다.|  
 |`SCC_EXCAP_RENAME_CHECKEDOUT`|11|체크 아웃 된 파일 이름을 바꿀 수 있습니다.|  
   

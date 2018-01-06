@@ -18,11 +18,12 @@ caps.latest.revision: "11"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 90def1bc4d824c6fdfd597ec8beb4b1f18f9e008
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c19312b005a1f8dfeefa766ed3a5e6a8ab1c566c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblygt-element-clickonce-deployment"></a>&lt;어셈블리&gt; 요소 (ClickOnce 배포)
 배포 매니페스트에 대 한 최상위 요소입니다.  
@@ -43,9 +44,9 @@ ms.lasthandoff: 10/27/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`manifestVersion`|필수 요소. 이 특성으로 설정 되어 있어야 `1.0`합니다.|  
+|`manifestVersion`|필수. 이 특성으로 설정 되어 있어야 `1.0`합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 `assembly` 요소를 사용 하 여 배포 된 응용 프로그램에 대 한 배포 매니페스트의 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]합니다. 이 코드 예제는에 대해 제공 된 큰 예제의 일부는 [ClickOnce 배포 매니페스트](../deployment/clickonce-deployment-manifest.md) 항목입니다.  
   
 ```  

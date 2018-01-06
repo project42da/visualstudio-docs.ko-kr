@@ -27,11 +27,12 @@ caps.latest.revision: "21"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 603ff665e2c01abe62954e4e65e49a095d358b29
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 53f9c0114573c6f08a2d9219e4dd2028ffe9ac7c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-versioning-and-manifest-issues-in-clickonce-deployments"></a>ClickOnce 배포의 보안, 버전 관리 및 매니페스트 문제
 문제에 대해 여러 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 보안, 응용 프로그램 버전 관리 및 매니페스트 구문 및 의미 체계를 일으킬 수 있는 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포에 성공할 합니다.  

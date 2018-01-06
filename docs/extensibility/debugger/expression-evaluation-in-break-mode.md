@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 766f00475971da1ca009737f9360952422177814
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cd28633fcb4b8186dae154428e489d51041aa8b2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluation-in-break-mode"></a>중단 모드에 있는 식 계산
 다음 디버거가 중단 모드에 있는 식 평가 수행 해야 하는 경우 발생 하는 프로세스를 설명 합니다.  

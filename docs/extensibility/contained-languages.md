@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c8adf63eed436b5724fcdb32d86ffc7bfb2c1a40
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bfdbc3d1c0e7bbc0b3dc712d9434ca1b49c6feca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contained-languages"></a>포함 된 언어
 *언어에 포함 된* 는 다른 언어에 포함 되는 언어입니다. 예를 들어 HTML [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 포함할 수도 있습니다 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 또는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 스크립트입니다. 이중 언어 아키텍처는 HTML 및 스크립트 언어를 모두에 대 한 IntelliSense, 색 지정, 및 기타 편집 기능을 제공 하는.aspx 파일 편집기 필요 합니다.  

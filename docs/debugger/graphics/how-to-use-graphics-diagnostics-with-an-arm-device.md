@@ -12,11 +12,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 60898b7ea37c7e732453fd03f9c557b2494f66c5
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: eedc7e454c6523c1ab29e4ae685b14954c8e6d98
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-graphics-diagnostics-with-an-arm-device"></a>방법: ARM 장치의 그래픽 진단 사용
 그래픽 진단은 Windows RT 8.1 또는 Windows Phone 8.1을 실행하는 ARM 기반 장치에서 Direct3D 앱의 원격 디버깅을 제공합니다. 이 장치에서 Direct3D 앱을 실행 중에는 Direct3D 앱에서 그래픽 정보를 캡처하거나 해당 장치를 이전에 캡처된 그래픽 정보를 위한 재생 컴퓨터로 사용할 수 있습니다.  

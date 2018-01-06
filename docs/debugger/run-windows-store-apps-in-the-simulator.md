@@ -17,11 +17,12 @@ caps.latest.revision: "42"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cf4c5d1e71a4d0e0d8ac74ba02bff29ddc1c7477
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: d4a64f9463650941fe8d645a1a6b92376277f0b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-uwp-and-windows-81-apps-in-the-simulator"></a>시뮬레이터에서 UWP 및 Windows 8.1 앱을 실행 합니다.
 UWP 및 Windows 8.1 앱에 대 한 Visual Studio 시뮬레이터는 UWP 또는 Windows 8.1 앱을 시뮬레이션 하는 데스크톱 응용 프로그램입니다. 실행할 수는 실제 화면 크기와 해상도 에뮬레이트 하려면 응용 프로그램을 선택 합니다. 일반적인 터치 및 회전 이벤트를 시뮬레이션 하 고 네트워크 연결 속성을 시뮬레이트할 수도 있습니다.
@@ -147,7 +148,7 @@ UWP 및 Windows 8.1 앱에 대 한 Visual Studio 시뮬레이터는 UWP 또는 W
   
  [백그라운드 작업과 함께 시스템 이벤트에 응답하는 방법](http://msdn.microsoft.com/en-us/f7c86e86-a7ae-4abb-a923-76b03337a80a)  
   
- [트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트를 UWP 앱에서](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
+ [UWP 앱에서 일시 중단, 다시 시작 및 백그라운드 이벤트를 트리거하는 방법](http://msdn.microsoft.com/library/windows/apps/hh974425.aspx)  
   
 ##  <a name="BKMK_Navigate_the_simulator_with_the_keyboard"></a> 키보드로 시뮬레이터 탐색  
  눌러 시뮬레이터 도구 모음을 이동할 수 있습니다 **CTRL + ALT + 위쪽 화살표** 으로 포커스를 전환 시뮬레이터 창에서 시뮬레이터 도구 모음입니다. **위쪽 화살표** 및 **아래쪽 화살표** 를 사용하여 도구 모음 단추 간에 이동합니다.  

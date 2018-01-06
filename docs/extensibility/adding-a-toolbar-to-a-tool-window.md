@@ -15,11 +15,12 @@ caps.latest.revision: "48"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4cdcd1fd772505ff4536968290ca87a85a501f6a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 07b5eea4fe6d5f58ec4b05563af253aeef0c5f6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-toolbar-to-a-tool-window"></a>도구 창에는 도구 모음 추가
 이 연습에서는 도구 창으로 도구 모음을 추가 하는 방법을 보여 줍니다.  

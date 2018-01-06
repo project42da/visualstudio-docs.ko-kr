@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b2ca6d0d7f875e376af37fcdcfa5d4156b8f4038
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d2dc97cbe5c6bc178e4b14c89287a3f1c3794dca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="processes-view"></a>프로세스 뷰
 프로세스 뷰에 시스템에서 모든 활성 프로세스의 트리를 표시합니다. 프로세스 ID 및 모듈 이름이 표시 됩니다. 프로세스 뷰를 사용 하 여 실행 중인 프로그램에 해당 하는 일반적으로 특정 시스템 프로세스를 검사 하려는 경우. 프로세스는 모듈 이름으로 식별 되거나 "시스템 프로세스입니다."로 지정 됩니다.  
@@ -38,7 +39,7 @@ Spy++ 프로세스 뷰
   
  위의 그림 확장 프로세스 및 스레드 노드와 프로세스 뷰를 보여 줍니다.  
   
-### <a name="in-this-section"></a>단원 내용  
+### <a name="in-this-section"></a>섹션 내용  
  [프로세스 뷰에서 프로세스 검색](../debugger/how-to-search-for-a-process-in-processes-view.md)  
  프로세스 뷰에서 특정 프로세스를 확인 하는 방법에 설명 합니다.  
   

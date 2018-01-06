@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c76a173f137ede589b870f5119153a4233bcd730
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d85ef4eeb3d0836c1da8b12bf3413e11699d1af1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
 모듈 또는 이미지의 기본 위치와 메모리 오프셋의 세부 정보를 노출합니다.  
@@ -44,7 +45,7 @@ IDiaImageData : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올 `QueryInterface` 에 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) 개체입니다. 디버그 일부는 지원 스트리밍하는 `IDiaImageData` 인터페이스입니다. 예를 들어, 현재 XDATA 및 PDATA 스트림을 지원는 `IDiaImageData` 인터페이스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  모든 지 원하는 모든 스트림에 대 한 디버그 스트림을 검색 하는이 예제는 `IDiaImageData` 인터페이스입니다. 이러한 스트림을 발견 되 면 그에 대 한 일부 정보가 표시 됩니다.  
   
 ```C++  

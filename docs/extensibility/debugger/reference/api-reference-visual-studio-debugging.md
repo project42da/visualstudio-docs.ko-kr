@@ -13,18 +13,19 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8ead1571856fa04e10103fbf2274dc0e22295154
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9f6e3110ca4988fcc12e547f3bcd82c1026f3aeb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API 참조 (Visual Studio 디버깅)
 API, 구문 및 모든 API 요소에 대 한 사용법을 보여 주는 가이드의 개념 개요와 다양 한 코드 예제 참조 섹션에 포함 되어 있습니다. 모든 참조 범주별으로 나열 됩니다.  
   
  다음 표에서 일반적인 `HRESULT` 메서드에 의해 반환 되는 값입니다.  
   
-|이름|설명|값|  
+|name|설명|값|  
 |----------|-----------------|-----------|  
 |S_OK|명령 실행 성공|0x00000000|  
 |E_UNEXPECTED|예기치 않은 오류가 발생 했습니다.|0x8000FFFF|  

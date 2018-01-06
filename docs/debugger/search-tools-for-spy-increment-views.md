@@ -15,16 +15,17 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4fe030aef4ba755b9a147bcc1430d2e6046c9dbf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 1d0e6e71dacef98cfaf38581d6638998509ab922
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="search-tools-for-spy-views"></a>Spy++ 뷰의 검색 도구
 Spy + + 뷰 창에 표시 되는 데이터를 지정 하려면 이러한 대화 상자를 사용 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [창 찾기 대화 상자](../debugger/find-window-dialog-box.md)  
  속성이 나 특정 창에서 메시지를 확인 하는 데 사용 합니다.  
   

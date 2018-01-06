@@ -25,11 +25,12 @@ caps.latest.revision: "67"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3672d2448c2b8872605db4a72c06d18c12e18886
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: f2ad259a116b1679f1e619dc9d281c114fa086cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intellitrace-features"></a>IntelliTrace 기능
 IntelliTrace를 사용하여 응용 프로그램의 이벤트 및 메서드 호출을 기록하고 실행 중 다양한 지점에서 상태(호출 스택 및 지역 변수 값)를 검사할 수 있습니다. -평소와 같이 디버깅을 시작 하 고, 기본적으로 IntelliTrace가 켜져 하 고, 새에서 IntelliTrace가 기록 정보를 볼 수 **진단 도구** 창의 **이벤트** 탭 합니다. 이벤트를 선택 하 고 클릭 **기록 디버깅 활성화** 호출 스택 및이 이벤트에 대해 기록 된 지역 변수를 볼 수 있습니다.  

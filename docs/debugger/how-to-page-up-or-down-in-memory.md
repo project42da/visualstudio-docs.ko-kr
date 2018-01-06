@@ -23,11 +23,12 @@ caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 90e55a7a16731d6e4e501282d7b96293d0bc9acd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0499fbf29e9bb16d0f5ff99c42f031d06e4fb4de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-page-up-or-down-in-memory"></a>방법: 메모리에서 위 또는 아래로 한 페이지 이동
 메모리 내용을 볼 때는 **메모리** 창 또는 **디스어셈블리** 창, 메모리 공간에서 위로 또는 아래로 이동 하려면 세로 스크롤 막대를 사용할 수 있습니다.  

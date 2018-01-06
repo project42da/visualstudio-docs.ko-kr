@@ -12,11 +12,12 @@ ms.assetid: 1e639182-1301-4e28-9c1e-b5df732f3f1b
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9312ad8a96c5829aae21c87e78a0d5f2f0db1b35
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d349222b138a8d5c359d174849faf7641befc482
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-frame-validation"></a>그래픽 프레임 유효성 검사
 <!-- VERSIONLESS -->
@@ -32,7 +33,7 @@ Visual Studio 2017 및 보다 폭넓게 지원은 **프레임 유효성 검사**
 심각도 | 손상, 오류, 경고, 정보 또는 메시지입니다.
 범주 | 정의 된, 기타 응용 프로그램, 초기화, 정리, 컴파일, 상태 만들기, 상태 설정, 상태를 가져오는, 실행, 리소스 조작, 셰이더를 중복 하 고 사용 하지 않는 합니다.
 메시지 | 이벤트와 연결 된 메시지입니다.
-이벤트 | 오류 또는 경고와 관련 된 이벤트입니다.
+이벤트(event) | 오류 또는 경고와 관련 된 이벤트입니다.
 
 ## <a name="see-also"></a>참고 항목  
 [그래픽 진단 (DirectX 그래픽 디버그)](visual-studio-graphics-diagnostics.md)   

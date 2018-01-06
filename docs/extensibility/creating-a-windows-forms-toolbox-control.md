@@ -16,11 +16,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ca8795ba56833282bac600db79ba33da70aa6c3a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4229d9045dfe64fcb320eca7cf004de56e7f8f0d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-windows-forms-toolbox-control"></a>Windows Forms 도구 상자 컨트롤 만들기
 Visual Studio 확장성 도구 (VS SDK)에 포함 된 Windows Forms 도구 상자 컨트롤 항목 템플릿에 자동으로 추가 하는 컨트롤을 만들 수 있습니다는 **도구 상자** 확장 기능이 설치 됩니다. 이 항목에는 다른 사용자에 게 배포할 수 있는 간단한 카운터 컨트롤을 만드는 템플릿을 사용 하는 방법을 보여 줍니다.  
@@ -54,10 +55,10 @@ Visual Studio 확장성 도구 (VS SDK)에 포함 된 Windows Forms 도구 상�
   
 5.  에 **속성** 창 디자인 화면에 컨트롤에 대 한 다음 값을 설정 합니다.  
   
-    |컨트롤|속성|값|  
+    |Control|속성|값|  
     |-------------|--------------|-----------|  
     |`Label1`|**텍스트**|""|  
-    |`Button1`|**Name**|btnReset|  
+    |`Button1`|**이름**|btnReset|  
     |`Button1`|**텍스트**|다시 설정|  
   
 ### <a name="coding-the-user-control"></a>사용자 정의 컨트롤 코딩  

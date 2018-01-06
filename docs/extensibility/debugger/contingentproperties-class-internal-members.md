@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3d5d929f41a40d986aafa8150e68fadcb46f3469
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e1bd9c94b99b4881167d7ae434691ffd08666ced
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contingentproperties-class---internal-members"></a>ContingentProperties 클래스-내부 멤버
 에 대 한 추가 속성을 포함 한 <xref:System.Threading.Tasks.Task> 개체입니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="fields"></a>필드  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[m_children](../../extensibility/debugger/m-children-field.md)|이 작업을 통해 등록 된 자식 작업의 목록입니다.|  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6805b97da8e8f742b1b6c0bb3298e9324bb1f72e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3ccfca52bb4fe2190837202342915e248dbd6167
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="expression-evaluator-architecture"></a>식 계산기 아키텍처
 > [!IMPORTANT]
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
   
  참조 [표시 지역](../../extensibility/debugger/displaying-locals.md) 변수 값을 표시 하는이 과정에 대 한 자세한 내용은 합니다. 참조 [로컬 값을 변경](../../extensibility/debugger/changing-the-value-of-a-local.md) 변수의 값이 변경 되는 방법에 대 한 자세한 내용은 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [평가 컨텍스트](../../extensibility/debugger/evaluation-context.md)  
  DE EE를 호출할 때 전달 되는 인수를 제공 합니다.  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 264f67eb9a1fc7f8af739d7eea329de05230c7a8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5a98081aa73d11d9a2edea9293804d6c83a211d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dontsavevsglogtotemp"></a>DONT_SAVE_VSGLOG_TO_TEMP
 그래픽 로그 파일이 사용자의 임시 파일 디렉터리에 저장되는지 여부를 존재로 정의합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
   
  그래픽 로그 파일을 임시 파일 디렉터리에 저장 되지 않도록 방지 하려면 정의 해야 `DONT_SAVE_VSGLOG_TO_TEMP` 포함 하기 전에 `vsgcapture.h`합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에는 호스트 컴퓨터에 절대 경로에 그래픽 로그 파일을 저장 하는 방법을 보여 줍니다.  
   
 ```  

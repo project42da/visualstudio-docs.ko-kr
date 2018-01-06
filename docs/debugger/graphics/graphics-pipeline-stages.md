@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: aabfa9551b591b87631100326e328db0511a3ca4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 393661fba27341ec858aa5c099ea9d131e42273a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-pipeline-stages"></a>그래픽 파이프라인 단계
 그래픽 파이프라인 단계 창에서는 개별 그리기 호출이 Direct3D 그래픽 파이프라인의 각 단계에서 변형되는 방식을 이해할 수 있습니다.  

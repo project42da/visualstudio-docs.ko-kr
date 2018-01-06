@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: a460110c56775723a3ab1a2933868e4508c18562
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7f94aa50908097b161929e51f260d3bcc058bd5a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsgnodefaultinstance"></a>VSG_NODEFAULT_INSTANCE
 기본 인스턴스에 있는지 여부를 존재로 정의 된 [VsgDbg 클래스](vsgdbg-class.md) 클래스-프로그래밍 캡처 인터페이스를 제공 하는-제공 됩니다.  
@@ -39,11 +40,11 @@ VsgDbg *g_pVsgDbg;
 ## <a name="remarks"></a>설명  
  기본 인스턴스는 대개 충분하지만 D3D 장치가 DLL 외부에서 생성되었을 때 DLL 내부에 프로그래밍 캡처 인터페이스를 사용하려면 `VsgDbg` 클래스의 자체 인스턴스를 만들고 관리해야 합니다. 이러한 방식으로 프로그래밍 캡처 API에 대한 자체 인터페이스를 관리하는 경우 오버헤드가 발생하지 않도록 `VSG_NODEFAULT_INSTANCE`를 정의하여 기본 인스턴스를 사용하지 않도록 설정합니다.  
   
- 기본 인스턴스를 사용하지 않도록 설정된 경우 프로그램이 실행되기 전에 자동으로 초기화되고 프로그램이 끝나면 자동으로 삭제됩니다. 이 인스턴스를 명시적으로 초기화하거나 초기화를 취소하지 않아도 됩니다.  
+ 기본 인스턴스를 사용하지 않도록 설정된 경우 프로그램이 실행되기 전에 자동으로 초기화되고 프로그램이 끝나면 자동으로 제거됩니다. 이 인스턴스를 명시적으로 초기화하거나 초기화를 취소하지 않아도 됩니다.  
   
  기본 인스턴스를 사용 하지 않으려면 정의 해야 `VSG_NODEFAULT_INSTANCE` 포함 하기 전에 `vsgcapture.h` 프로그램에서 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 기본 인스턴스를 사용하지 않도록 설정하는 방법을 보여줍니다.  
   
 ```  

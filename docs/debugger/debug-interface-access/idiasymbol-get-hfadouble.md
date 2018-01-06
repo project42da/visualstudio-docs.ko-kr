@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 599f83a4b6813cf18addcd9e860b7b8e9ec7f776
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e7fc5bf3b148df8e84e85439626dcd7ac20539aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgethfadouble"></a>IDiaSymbol::get_hfaDouble
 사용자 정의 형식 (UDT) 부동 소수점 double 형식의 집계 동종 (HFA) 데이터를 포함 하는지 여부를 지정 하는 플래그를 검색 합니다.  

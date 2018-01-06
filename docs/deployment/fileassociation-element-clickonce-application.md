@@ -19,11 +19,12 @@ caps.latest.revision: "8"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 1b5040f6de578a6436f16c1a1c81d9cef4f789ee
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: bd5d7ed1a37923cefc4a6b7975610b6016fd0ae6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt; 요소 (ClickOnce 응용 프로그램)
 응용 프로그램에 연결할 파일 확장명을 식별 합니다.  
@@ -45,17 +46,17 @@ ms.lasthandoff: 10/27/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`extension`|필수 요소. 응용 프로그램에 연결할 파일 확장명입니다.|  
-|`description`|필수 요소. 셸에서 사용 하기 위해 파일 형식을 설명 합니다.|  
-|`progid`|필수 요소. 파일 형식을 고유 하 게 식별 하는 이름입니다.|  
-|`defaultIcon`|필수 요소. 이 확장을 사용 하 여 파일에 대해 사용할 아이콘을 지정 합니다. 아이콘 파일을 사용 하 여 지정 해야 합니다는 [ \<파일 > 요소](../deployment/file-element-clickonce-application.md) 내에서 [ \<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md) 이 요소를 포함 하 합니다.|  
+|`extension`|필수. 응용 프로그램에 연결할 파일 확장명입니다.|  
+|`description`|필수. 셸에서 사용 하기 위해 파일 형식을 설명 합니다.|  
+|`progid`|필수. 파일 형식을 고유 하 게 식별 하는 이름입니다.|  
+|`defaultIcon`|필수. 이 확장을 사용 하 여 파일에 대해 사용할 아이콘을 지정 합니다. 아이콘 파일을 사용 하 여 지정 해야 합니다는 [ \<파일 > 요소](../deployment/file-element-clickonce-application.md) 내에서 [ \<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md) 이 요소를 포함 하 합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 요소에 대 한 XML 네임 스페이스 참조를 포함 해야 합니다 ":-microsoft-com:clickonce.v1"입니다. 경우는 `<fileAssociation>` 요소는 사용, 뒤에 야는 `<application>` 부모에서 요소 [ \<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md)합니다.  
   
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]기존 파일 연결을 덮어쓰지 않습니다. 그러나 ClickOnce 응용 프로그램은 현재 사용자에 대 한 파일 확장명을 재정의할 수 있습니다. ClickOnce 응용 프로그램을 제거한 후 ClickOnce 사용자에 대 한 파일 연결을 삭제 하 고 컴퓨터 연결이 다시 활성입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 `fileAssociation` 응용 프로그램의 요소를 사용 하 여 배포 하는 텍스트 편집기 응용 프로그램에 대 한 매니페스트 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]합니다. 이 코드 예제도 포함 되어는 [ \<파일 > 요소](../deployment/file-element-clickonce-application.md) 에 필요한는 `defaultIcon` 특성입니다.  
   
 ```  

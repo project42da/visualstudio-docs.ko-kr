@@ -21,11 +21,12 @@ caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 23bb4ee4550f70681152fc14cc66a642597125ad
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b4782a1650034424d2616e47f46e07cec4d01ae5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-gpu-threads-window"></a>방법: GPU 스레드 창 사용
 GPU 스레드 창에서 디버깅 중인 응용 프로그램의 GPU에서 실행되는 스레드를 검사하고 관련 작업을 수행할 수 있습니다. GPU에서 실행 되는 응용 프로그램에 대 한 자세한 내용은 참조 [c + + AMP 개요](/cpp/parallel/amp/cpp-amp-overview)합니다.  
@@ -64,7 +65,7 @@ GPU 스레드 창에서 디버깅 중인 응용 프로그램의 GPU에서 실행
   
 5.  GPU 코드에서 중단점을 설정합니다.  
   
-6.  메뉴 모음에서 **디버그**, **디버깅 시작**합니다. 응용 프로그램이 중단점에 도달할 때까지 기다립니다.  
+6.  메뉴 모음에서 **디버그**, **디버깅 시작**을 차례로 선택합니다. 응용 프로그램이 중단점에 도달할 때까지 기다립니다.  
   
 7.  메뉴 모음을 하나 선택 **디버그**, **Windows**, **GPU 스레드**합니다.  
   

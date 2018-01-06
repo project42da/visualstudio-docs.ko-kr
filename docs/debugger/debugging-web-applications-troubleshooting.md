@@ -21,16 +21,17 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 364da0cdee3f063bc982f2731969c1be98cf386c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: e68040d1cdfbac6c1127a280c3d1e1773c2794ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-web-applications-troubleshooting"></a>웹 응용 프로그램 디버깅: 문제 해결
 이 단원에는 오류를 해결하는 데 사용할 수 있는 일반적인 절차가 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: IIS 속성 설정 확인](../debugger/how-to-verify-iis-property-settings.md)  
  디버깅을 사용할 수 있도록 IIS의 속성을 올바르게 설정하는 방법을 설명합니다.  
   

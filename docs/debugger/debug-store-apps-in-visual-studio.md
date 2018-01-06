@@ -17,11 +17,12 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3920bfbd5b1ddbddc3166118ead0c7d0fefff8d8
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: 8684a1220b871e2c77f8c0229cddd807a6031cd3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-uwp-apps-in-visual-studio"></a>Visual Studio에서 UWP 앱 디버깅
 Visual Studio 디버거를 사용하면 프로그램의 실행을 제어하고 프로그램의 상태를 검사할 수 있습니다. 앱 작동 방법을 정확 하 게 이해 하 고 UWP 앱에서 결함의 원인을 찾기 위해 디버거를 사용할 수 있습니다. 디버거에서 실행을 일시 중단(중단)하면 Visual Studio에는 실행 코드가 포함된 소스 파일이 표시되고 실행 문이 강조 표시됩니다. 변수 값, 실행 함수의 호출 스택과 그 외 프로그램 상태에 관한 측면을 볼 수 있습니다. 한 번에 프로그램 문을 하나씩 계속 실행(단계별 실행)하면 문에서 프로그램 값을 변경하는 방법을 확인할 수 있습니다. JavaScript로 작성된 앱에서 페이지의 DOM을 검사 및 조작할 수 있습니다.  

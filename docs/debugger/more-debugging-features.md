@@ -17,14 +17,15 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 873bebaf7c457ec798c60ab2150e40fee7214eac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: b9e249ed95e0860c0dc781c4c0a0c9e7e86acc95
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="more-debugging-features"></a>추가 디버그 기능
-이 섹션에는 Visual Studio 디버거와 함께 사용할 수 있는 추가 기능이 포함되어있습니다.  
+이 섹션에는 Visual Studio 디버거와 함께 사용할 수 있는 추가 기능이 포함되어 있습니다.  
   
  디버그를 더 빠르고 쉽게 해주는 팁과 요령 목록이 필요하면 [디버그 팁과 요령](http://blogs.msdn.com/b/visualstudio/archive/2015/05/22/debugging-tips-and-tricks.aspx)을 참조하세요.  
   

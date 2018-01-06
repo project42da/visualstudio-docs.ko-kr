@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 94cdb52f21a5dd8a6bc41eaf21092013abffdc3e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c2a1d879b2460b4b09ea47bcb892f760a912e7b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgetlength"></a>IDiaSymbol::get_length
 이 기호를 나타내는 개체에 의해 사용 되는 메모리의 바이트 또는 비트 수를 검색 합니다.  
@@ -44,7 +45,7 @@ HRESULT get_length (
 ## <a name="remarks"></a>설명  
  경우는 [LocationType 열거형](../../debugger/debug-interface-access/locationtype.md) 기호는 `LocIsBitField`,이 메서드에 의해 반환 된 길이 비트에서 이며 그렇지 않은 경우 길이 다른 모든 위치 형식에 대 한 바이트 단위입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 IDiaSymbol* pSymbol;  

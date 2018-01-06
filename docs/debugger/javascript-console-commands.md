@@ -21,11 +21,12 @@ caps.latest.revision: "47"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d9808c664e5e3d06558faf8f9b44a6a2bb6e9b83
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 32aa07920c496249271e6c337952129292a3d2aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio의 JavaScript 콘솔 명령
 ![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -45,7 +46,7 @@ ms.lasthandoff: 11/11/2017
 > [!TIP]
 >  이전 버전의 Visual Studio는 전체 명령 집합을 지원하지 않습니다. 지원되는 명령에 대한 정보를 신속하게 얻으려면 콘솔 개체에서 IntelliSense를 사용하세요.  
   
-|명령|설명|예제|  
+|명령|설명|예|  
 |-------------|-----------------|-------------|  
 |`assert(expression, message)`|`expression` 이 **false**가 되면 메시지를 보냅니다.|`console.assert((x == 1), "assert message: x != 1");`|  
 |`clear()`|콘솔 창에서 스크립트 오류 메시지를 비롯한 메시지를 지우고 콘솔 창에 나타나는 스크립트도 지웁니다. 콘솔 입력 프롬프트에 입력한 스크립트는 지우지 않습니다.|`console.clear();`|  
@@ -71,7 +72,7 @@ ms.lasthandoff: 11/11/2017
 ## <a name="miscellaneous-commands"></a>기타 명령  
  다음 명령은 JavaScript 콘솔 창에서도 사용할 수 있습니다(코드에서는 사용할 수 없음).  
   
-|명령|설명|예제|  
+|명령|설명|예|  
 |-------------|-----------------|-------------|  
 |`$0`, `$1`, `$2`, `$3`, `$4`|콘솔 창에 지정된 요소를 반환합니다. `$0`은 DOM 탐색기에서 현재 선택한 요소를 반환하고 `$1`은 DOM 탐색기에서 이전에 선택한 요소를 반환하며 이전에 선택한 네 번째 요소까지 이런 식으로 반환됩니다.|$3|  
 |`$(id)`|ID별로 요소를 반환합니다. `document.getElementById(id)`에 대한 바로 가기 명령입니다. 여기서 `id` 는 요소 ID를 나타내는 문자열입니다.|`$("contenthost")`|  

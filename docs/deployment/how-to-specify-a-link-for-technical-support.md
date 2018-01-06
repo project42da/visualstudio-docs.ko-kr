@@ -24,11 +24,12 @@ caps.latest.revision: "15"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 1c7a60993666ac485f72099fef9df930aacdaa25
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3953148355321f4ed17d5d4f539c6f31c1a5872c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-a-link-for-technical-support"></a>방법: 기술 지원을 위한 링크 지정
 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에는 **지원 URL** 웹 페이지 또는 사용자가 응용 프로그램에 대 한 정보를 가져오려면 이동할 파일 공유 속성을 식별 합니다. 이 속성은 선택 사항입니다. 응용 프로그램의 항목에 URL은 표시를 제공 하면 **프로그램 추가 / 제거** 대화 상자.  

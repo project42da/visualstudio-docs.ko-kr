@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d3a5fc067ac65cea13181632c562a635599f0d7e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: fc458bddfe354f43afd15176d0283cad4875234d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-windows-phone-81-apps-in-the-emulator"></a>에뮬레이터에서 Windows Phone 8.1 앱을 실행 합니다.
 Windows Phone 에뮬레이터는 실제 장치 없이 컴퓨터에서 Windows Phone 앱을 디버그하고 테스트할 수 있는 가상화된 환경을 제공합니다. 일반적인 터치 및 회전 이벤트를 시뮬레이트하고 에뮬레이트하려는 실제 화면 크기와 해상도를 선택할 수 있습니다. 일반적으로 사용되는 여러 기능(예: 위치, 네트워킹, 알림, 센서, 가속도계 및 선택적 SD 카드)을 테스트할 수도 있습니다.  

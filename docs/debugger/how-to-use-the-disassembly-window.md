@@ -24,11 +24,12 @@ caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2c72de947262cd87e4920d87c2d4d54664e02cc0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c53f5404eb127f2f5eb9ec844024beafaad22e86
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-disassembly-code-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 디스어셈블리 코드 보기
 이 기능은 주소 수준 디버깅을 설정한 경우에 사용할 수는 **옵션** 대화 상자, **디버깅** 노드. 스크립트 또는 SQL 디버깅에는 사용할 수 없습니다.  

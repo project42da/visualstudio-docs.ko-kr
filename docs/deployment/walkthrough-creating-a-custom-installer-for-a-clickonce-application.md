@@ -22,11 +22,12 @@ caps.latest.revision: "34"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 3b6a7069b520c1c4834ee3ca1a5824660803a665
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 06c048db48173913a2e1102d1e70f07369316439
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-custom-installer-for-a-clickonce-application"></a>연습: ClickOnce 응용 프로그램용 사용자 지정 설치 관리자 만들기
 ClickOnce 응용 프로그램은.exe 파일에 따라 자동으로 설치 및 사용자 지정 설치 관리자에 의해 업데이트 수입니다. 사용자 지정 설치 관리자는 보안 및 유지 관리 작업에 대 한 사용자 지정 대화 상자를 포함 하 여 설치 하는 동안 사용자 지정 고객 환경을 구현할 수 있습니다. 사용자 지정 설치 관리자 설치 작업을 수행 하려면 사용 하 여는 <xref:System.Deployment.Application.InPlaceHostingManager> 클래스입니다. 이 연습에는 ClickOnce 응용 프로그램을 설치 하는 사용자 지정 설치 관리자를 만드는 방법을 보여 줍니다.  
@@ -76,7 +77,7 @@ ClickOnce 응용 프로그램은.exe 파일에 따라 자동으로 설치 및 �
     ```  
   
 ## <a name="next-steps"></a>다음 단계  
- ClickOnce 응용 프로그램 업데이트 과정에서 표시 하기 위한 사용자 지정 사용자 인터페이스를 포함 하 여 사용자 지정 업데이트 논리를 추가할 수도 있습니다. 자세한 내용은 <xref:System.Deployment.Application.UpdateCheckInfo>을 참조하십시오. ClickOnce 응용 프로그램 에서도 표시 하지 않을 수 시작 메뉴 항목, 바로 가기를 마우스 항목 프로그램 추가 / 제거를 사용 하 여 한 `<customUX>` 요소입니다. 자세한 내용은 참조 [ \<entryPoint > 요소](../deployment/entrypoint-element-clickonce-application.md) 및 <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A>합니다.  
+ ClickOnce 응용 프로그램 업데이트 과정에서 표시 하기 위한 사용자 지정 사용자 인터페이스를 포함 하 여 사용자 지정 업데이트 논리를 추가할 수도 있습니다. 자세한 내용은 <xref:System.Deployment.Application.UpdateCheckInfo>을 참조하세요. ClickOnce 응용 프로그램 에서도 표시 하지 않을 수 시작 메뉴 항목, 바로 가기를 마우스 항목 프로그램 추가 / 제거를 사용 하 여 한 `<customUX>` 요소입니다. 자세한 내용은 참조 [ \<entryPoint > 요소](../deployment/entrypoint-element-clickonce-application.md) 및 <xref:System.Deployment.Application.DownloadApplicationCompletedEventArgs.ShortcutAppId%2A>합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ClickOnce 응용 프로그램 매니페스트](../deployment/clickonce-application-manifest.md)   

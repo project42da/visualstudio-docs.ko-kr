@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 78affeb358200599d925b9b70df3ae945759054c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 03e6acb4ee9756d0bbb14a6e3667375d32cafba9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="changing-the-value-of-a-local"></a>로컬 값 변경
 > [!IMPORTANT]
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
  변수 값을 변경 하려면이 절차는 또한는 **조사식** 창을 제외 하는 `IDebugProperty2` 대신 사용 되는 지역 변수의 값과 관련 된 개체는 `IDebugProperty2` 로컬와 연결 된 개체 자체입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [값 변경 샘플 구현](../../extensibility/debugger/sample-implementation-of-changing-values.md)  
  MyCEE 샘플링을 사용 하 여 값을 변경 하는 과정을 단계별로 실행 되도록 합니다.  
   

@@ -22,32 +22,33 @@ caps.latest.revision: "81"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 2a08c56ae60822e6d4183e5789c68cbe383b4dd5
-ms.sourcegitcommit: 2c7f48ad6073a81fa927568793633f26cc1f0b15
+ms.workload: multiple
+ms.openlocfilehash: 8df1dcde73496f6ec8c25eb33cb4b6986a721f33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="whats-new-for-the-debugger-in-includevsdev15miscincludesvsdev15mdmd"></a>디버거의 새로운 기능[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
 디버거는 이러한 새 기능에 포함 됩니다.
 
-- 15.5의 새로운는 **스냅숏 디버거** 에 관심이 있는 코드가 실행 되 면 프로덕션에서 응용 프로그램의 스냅숏을 수행 합니다. 에 대 한 스냅숏을 만들려면 디버거 명령, snappoints 및 logpoints에서에서 설정한 코드 합니다. 디버거를 사용 하면 정확 하 게 무엇이 잘못 되었는지, 프로덕션 응용 프로그램의 트래픽에 영향을 주지 않고 확인할 수 있습니다. 스냅숏 디버거를 프로덕션 환경에서 발생 하는 문제를 해결 하는 데 걸리는 시간을 상당히 줄일 수 있습니다.
+- 15.5의 새로운는 **스냅숏 디버거** 에 관심이 있는 코드가 실행 되 면 프로덕션에서 응용 프로그램의 스냅숏을 수행 합니다. 디버거가 스냅숏을 생성하도록 명령하려면 코드에서 snappoint와 logpoint를 설정합니다. 디버거를 통해 프로덕션 응용 프로그램의 트래픽에 영향을 미치지 않으면서 정확히 무엇이 잘못되었는지를 볼 수 있습니다. 스냅샷 디버거를 사용하면 프로덕션 환경에서 발생하는 문제를 해결하는 데 걸리는 시간을 상당히 줄일 수 있습니다.
 
-    스냅숏 컬렉션은 Azure 앱 서비스에서 실행 되는 다음 웹 앱에 사용할 수 있습니다.
+    스냅숏 컬렉션은 Azure App Service에서 실행되는 다음 웹앱에서 사용할 수 있습니다.
 
-    * .NET Framework 4.6.1에서 실행 되는 ASP.NET 응용 프로그램 이상.
-    * .NET Core 2.0 또는 나중에 Windows에서 실행 되는 ASP.NET Core 응용 프로그램
+    * .NET Framework 4.6.1 이상에서 실행되는 ASP.NET 응용 프로그램
+    * Windows의 .NET Core 2.0 이상에서 실행되는 ASP.NET Core 응용 프로그램
 
     자세한 내용은 참조 [스냅숏 디버거를 사용 하 여 라이브 ASP.NET 응용 프로그램을 디버깅](../debugger/debug-live-azure-applications.md)합니다.
 
-- Visual Studio Enterprise에서 15.5만의 새로운 **IntelliTrace 단계 다시** 자동으로 단계 이벤트는 모든 중단점 및 디버거에서의 응용 프로그램의 스냅숏을 만듭니다. 기록된 스냅숏을 사용 하 여 이전 중단점 또는 단계도 이동 하 고 과거에 포함 되어 응용 프로그램의 상태를 볼 수 있습니다. IntelliTrace 단계 백 시간을 절약할 수 이전 응용 프로그램 상태를 보려면 있지만 디버깅을 다시 시작 하거나 원하는 응용 프로그램 상태를 다시 만들지 않을 수 있습니다.
+- Visual Studio Enterprise에서 15.5만의 새로운 **IntelliTrace 단계 다시** 자동으로 단계 이벤트는 모든 중단점 및 디버거에서의 응용 프로그램의 스냅숏을 만듭니다. 기록된 스냅숏을 통해 이전 중단점 또는 단계로 돌아가서 응용 프로그램의 과거 상태를 볼 수 있습니다. IntelliTrace 뒤로 이동을 사용하면 이전 응용 프로그램 상태를 보고 싶지만 디버깅을 다시 시작하거나 원하는 앱 상태를 다시 만들지 않으려는 경우에 시간을 절약할 수 있습니다.
 
-    탐색 하 고 스냅숏을 사용 하 여 볼 수 있는 **이전 단계** 및 **단계** 디버그 도구 모음 단추입니다. 에 나타나는 이벤트를 탐색 하는이 단추는 **이벤트** 탭에 **진단 도구** 창.
+    디버그 도구 모음의 **뒤로 가기**와 **앞으로 가기** 단추를 사용하여 이동하고 스냅숏을 볼 수 있습니다. 이 단추를 사용하여 **진단 도구** 창의 **이벤트** 탭에 나타나는 이벤트를 탐색할 수 있습니다.
 
     ![뒤로 및 앞으로 단추 단계](../debugger/media/intellitrace-step-back-icons-description.png  "단계 뒤로 및 앞으로 단추")
 
-    자세한 내용은 참조는 [IntelliTrace 단계 백을 사용 하 여 스냅숏 보기](../debugger/how-to-use-intellitrace-step-back.md) 페이지.
+    자세한 내용은 [IntelliTrace 뒤로 이동을 사용하여 스냅숏 보기](../debugger/how-to-use-intellitrace-step-back.md) 페이지를 참조하세요.
 
 - **예외 도우미** 예외 도우미를 대체 하 고 오류가 발생 하는 비 모달 대화 상자에 나타납니다. **예외 도우미** 모든 내부 예외, 디버거에서 (있는 경우), 추가 분석에 대 한 빠른 액세스를 제공 하는에 즉시 액세스할 수는 **예외 설정** 예외에 대 한 합니다. 차단 하 고 않은지 확인 해야 할 경우 예외 도우미 부동 뷰로 끌어 수도 있습니다.
 

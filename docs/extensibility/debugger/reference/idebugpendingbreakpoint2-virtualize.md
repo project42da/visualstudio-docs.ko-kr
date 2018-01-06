@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 93c9b09b7a9356687707837d818b9a603f8961b4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 98a4184813f424357dcc6fdecf87289351022dc0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugpendingbreakpoint2virtualize"></a>IDebugPendingBreakpoint2::Virtualize
 이 중단점이 보류 중인 가상화 된 상태를 토글합니다. 보류 중인 중단점 가상화 되는 새 코드를 프로그램에 로드 될 때마다 바인딩할 디버그 엔진 시도 합니다.  
@@ -49,7 +50,7 @@ int Virtualize(
 ## <a name="remarks"></a>설명  
  가상화 된 중단점은 코드가 로드 될 때마다 바인딩되어 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CPendingBreakpoint` 공개 하는 개체는 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 인터페이스입니다.  
   
 ```cpp  

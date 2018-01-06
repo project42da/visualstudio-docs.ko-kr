@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dcd2b8457854817f84272420a42872a1b947e6c2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fd6acee81b2202500c9d84f5920cd4f1019a3b2d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="event-sources-visual-studio-sdk"></a>이벤트 원본 (Visual Studio SDK)
 두 가지 이벤트 소스가: 디버그 엔진 (DE) 및 세션 (SDM) 관리자를 디버그 합니다. DE에서 전송 되는 이벤트는 NULL이 아닌 엔진 있고은 SDM에서 전송 되는 이벤트는 NULL 엔진입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 보내는 방법을 보여 줍니다.는 **IDebugProgramCreateEvent2** 은 SDM에 DE에서 합니다.  
   
 ```  

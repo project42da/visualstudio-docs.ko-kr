@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4a958e6f6aa815b7d5726c2c441876331fba56b8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f0b00c31280b9471da99aea55118e25dd551ad96
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-code-windows-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 코드 창을 사용자 지정
 코드 창에는 지 원하는 하나 이상의 텍스트 뷰 문서 창 개체입니다. 코드 창의 기능 관련 된 언어 서비스에 따라 달라 집니다. (Mdi 다중) 다중 문서 인터페이스 모드로 코드 MDI 자식 프레임입니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
   
  언어 서비스는 코드 창 관리자를 구현 하 고 드롭 다운 모음과 같은 장식을 관리 합니다. 코드 창 호출은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsCodeWindowManager.AddAdornments%2A> 코드 창 초기화 하는 동안 메서드. 이 호출을 수행 하는 경우 언어 서비스 드롭 다운 모음 또는 단추 모음 추가할 수 (<xref:Microsoft.VisualStudio.TextManager.Interop.IVsButtonBarClient>)의 코드 창.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  `Customizing Code Windows by Using the Legacy API`  
  레거시 API를 사용 하 여 코드 창을 사용자 지정 하는 방법에 설명 합니다.  
   

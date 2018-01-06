@@ -15,13 +15,14 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e8ec523147f439e2ffd45d635e9ed873bbb1e8ff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e14010492b0fd086bef2bd79232a32beb54dbd84
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="process-debug-manager"></a>디버그 프로세스 관리자
+# <a name="process-debug-manager"></a>프로세스 디버그 관리자
 프로세스 디버그 관리자 (PDM)는 프로그램을 관리 하는 Visual Studio의 구성 요소 및 관리자 및 디버그 엔진 세션에 사용할 수 있도록 프로세스를 디버깅 합니다.  
   
  PDM 디버깅할 수 있는 모든 프로세스를 관리 합니다. 디버그 해야 하는 PDM에 프로그램을 등록 해야 합니다. 이 프로그램이 실행 되는 포트 또는 디버그 엔진에 의해 한 번에 수행 됩니다.  

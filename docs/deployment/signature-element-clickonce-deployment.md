@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: a60156c77dfc33475d3913c3fed2e30159f03959
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ffcc04808916d8ef31fb77cab72f54c1e22e924c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltsignaturegt-element-clickonce-deployment"></a>&lt;서명&gt; 요소 (ClickOnce 배포)
 이 배포 매니페스트에 디지털 방식으로 서명하는 데 필요한 정보를 포함합니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/27/2017
   
  매니페스트에 서명 하려는 경우 모든 파일에 대 한 해시를 제공 합니다. 사용자가 해시 되지 않은 파일의 내용을 확인할 수 없으므로 해시 되지 않은 파일을 사용 하 여 매니페스트를 서명할 수 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 `Signature` 에 사용 되는 배포 매니페스트의 요소에에서는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 합니다.  
   
 ```  

@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 33dd97cf627ae10e71a2aa2213a9763e86818b70
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5774161bdeb33ee954965262532406834a5c5eb1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="entering-break-mode"></a>중단 모드
 다음 함수를 한 단계씩 실행, 커서, 된 소스 코드의 줄에 실행 또는 중단점까지 실행 한 후 중단점 도달할 때 발생 하는 프로세스에 설명 합니다.  

@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f7effcc96286fc548b42c810789d1cb902bb3c18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7f8bfec567897a3d5ce6b69e9d4aeae77872de95
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 섹션 기여도 설명 하는 데이터를 검색, 즉, 연속 된 메모리 블록을 제공한 이미지에는 컴파일 대상입니다.  
@@ -64,7 +65,7 @@ IDiaSectionContrib : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져온는 [idiaenumsectioncontribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) 및 [idiaenumsectioncontribs:: Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) 메서드. 참조는 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) 인터페이스 가져오기에 대 한 예제는 `IDiaSectionContrib` 인터페이스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 기능은 연결 된 모든 기호 함께 각 섹션의 주소를 표시합니다. 참조는 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) 인터페이스를 방법을 `IDiaSectionContrib` 인터페이스를 가져옵니다.  
   
 ```C++  

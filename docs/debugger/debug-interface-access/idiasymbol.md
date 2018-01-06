@@ -14,11 +14,12 @@ caps.latest.revision: "30"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8e4954c691795f71704aab7493ef8df3dbb3f958
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c35accc7ca75a987dae615c06df68b4f85bba4a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbol"></a>IDiaSymbol
 기호 인스턴스의 속성을 설명합니다.  
@@ -258,7 +259,7 @@ IDiaSymbol : IUnknown
   
 -   [IDiaSymbol::get_types](../../debugger/debug-interface-access/idiasymbol-get-types.md)  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예에서는 지정된 된 상대 가상 주소에는 함수에 대 한 지역 변수를 표시 하는 방법을 보여 줍니다. 또한 다양 한 종류의 기호가 서로 어떻게 관련 되어 있는지 보여 줍니다.  
   
 > [!NOTE]

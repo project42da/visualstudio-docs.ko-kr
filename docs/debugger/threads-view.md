@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0cc9abe486055d5bb9794021e28b786b9afe9b54
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f98170313b72394b5b295769a77d8770cd1cb0e6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="threads-view"></a>스레드 뷰
 스레드 뷰는 시스템에는 windows와 관련 된 모든 스레드의 플랫 목록입니다. 스레드 ID 및 각 스레드에 대 한 모듈 이름이 표시 됩니다. 프로세스 포함 되지 않으며 선택한 스레드에서 소유 하는 프로세스를 쉽게 찾을 수 있습니다.  
@@ -34,7 +35,7 @@ Spy++ 스레드 뷰
   
  위의 그림에서는 스레드 뷰를 보여 줍니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [스레드 뷰에서 스레드 검색](../debugger/how-to-search-for-a-thread-in-threads-view.md)  
  스레드 뷰에서 특정 스레드를 확인 하는 방법에 설명 합니다.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9099d652012fb8b45b7b79f9c620f4102e7af602
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e406bc0cd5d7e4cb082e1f5e34fa6645538d02ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="best-practices-for-implementing-a-source-control-plug-in"></a>소스 제어 플러그 인을 구현 하기 위한 모범 사례
 다음 기술 세부 정보 수 안정적으로 구현할 수는 소스 제어 플러그 인에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  

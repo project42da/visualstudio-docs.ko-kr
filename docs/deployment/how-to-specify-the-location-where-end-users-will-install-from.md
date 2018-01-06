@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 41a601febff80b002512a3783d8405dc42e5d766
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a3a2770933f4a9f600b12a2d601deca855de3a94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>방법: 최종 사용자의 설치 원본 위치 지정
 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 다운로드 하 고 응용 프로그램을 설치 하려면 사용자가 이동 하지 일 필요는 처음 응용 프로그램을 게시할 위치입니다. 예를 들어 일부 조직에서는 개발자 응용 프로그램을 스테이징 서버에 게시 될 수로 이동한 다음 관리자는 웹 서버에 응용 프로그램입니다.  
@@ -45,6 +46,6 @@ ms.lasthandoff: 10/27/2017
 3.  설치 URL 필드에 서식 http://www.microsoft.com/ApplicationName 또는 형식을 사용 하 여 UNC 경로 사용 하 여 정규화 된 URL을 사용 하 여 설치 위치를 입력 \\\Server\ApplicationName 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: Visual Studio에서 파일을 복사 하는 위치를 지정 합니다.](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
+ [방법: Visual Studio의 파일 복사 위치 지정](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   
  [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)   
  [방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

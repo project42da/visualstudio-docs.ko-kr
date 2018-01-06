@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9aec1465334a4399136d47c29faa8cccbb99c3a2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e913a26d35d7207193d5086b68c785f737f8bfee
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugportnotify2"></a>IDebugPortNotify2
 이 인터페이스를 등록 하거나에서 실행 되는 포트와 디버깅할 수 있는 프로그램의 등록을 취소 합니다.  

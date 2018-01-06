@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 81a7edd908da5953e04e68a1a903ed585f1ec6b1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 89e426c24f1f32161307d573c1ab06cdf459b1d6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-event-call-stack"></a>그래픽 이벤트 호출 스택
 Visual Studio Graphics Analyzer의 그래픽 이벤트 호출 스택을 사용하면 문제가 있는 그래픽 이벤트와 앱의 소스 코드 사이의 관계를 매핑할 수 있습니다.  
@@ -36,7 +37,7 @@ Visual Studio Graphics Analyzer의 그래픽 이벤트 호출 스택을 사용�
   
 |Column|설명|  
 |------------|-----------------|  
-|**Name**|호출 사이트가 포함된 함수를 고유하게 식별하는 기호입니다. 사용 가능한 경우 함수의 디버그 기호가 표시되고 그렇지 않으면 함수 오프셋이 표시됩니다.|  
+|**이름**|호출 사이트가 포함된 함수를 고유하게 식별하는 기호입니다. 사용 가능한 경우 함수의 디버그 기호가 표시되고 그렇지 않으면 함수 오프셋이 표시됩니다.|  
 |**파일**|호출 사이트가 포함된 소스 코드 파일 또는 라이브러리 파일의 파일 이름입니다.|  
 |**위치**|호출 사이트의 줄 번호입니다.|  
   

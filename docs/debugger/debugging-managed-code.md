@@ -21,16 +21,17 @@ caps.latest.revision: "34"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 42018230262e17bc99905833da1b15e30a7d62aa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: fc083adc600b7de2538abf1ada468f3d626b7ba6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-managed-code"></a>관리 코드 디버깅
 이 단원에서는 Visual Basic, C# 및 C++ 등 공용 언어 런타임을 대상으로 하는 언어로 작성된 관리되는 응용 프로그램의 일반적인 디버깅 문제와 기술에 대해 설명합니다. 이 단원에서 설명하는 기술은 높은 수준의 기술입니다. 자세한 내용은 참조 [디버거를 사용 하 여](../debugger/debugger-basics.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [출력 창에 표시되는 진단 메시지](../debugger/diagnostic-messages-in-the-output-window.md)  
  설명의 <xref:System.Diagnostics.Debug> 및 <xref:System.Diagnostics.Trace> 클래스는 런타임에 메시지를 작성할 수 있습니다는 **출력** 창. 이러한 클래스에는 실행을 중단하지 않고 정보를 출력하는 출력 메서드와 지정된 조건이 실패할 경우 실행을 중단하고 정보를 출력하는 출력 메서드가 포함되어 있습니다.  
   
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/31/2017
  [혼합 모드 디버깅](../debugger/debugging-mixed-mode-applications.md)  
  혼합 모드 응용 프로그램을 디버깅하는 방법에 대해 설명합니다. 혼합 모드 응용 프로그램은 네이티브 코드와 관리 코드가 결합된 응용 프로그램입니다.  
   
- [오류: 디버깅을 할 수 없습니다 시스템에 커널 디버거가 사용 중 이므로](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
+ [오류: 시스템에 커널 디버거가 사용 중이므로 디버깅을 할 수 없습니다.](../debugger/error-debugging-isn-t-possible-because-a-kernel-debugger-is-enabled-on-the-system.md)  
  관리 되는 코드를 디버깅 하려고 할 경우에 발생 하는 오류 메시지에 설명 된 [!INCLUDE[win7](../debugger/includes/win7_md.md)], [!INCLUDE[wiprlhext](../debugger/includes/wiprlhext_md.md)], [!INCLUDE[winxp](../code-quality/includes/winxp_md.md)], [!INCLUDE[Win2kFamily](../code-quality/includes/win2kfamily_md.md)], 또는 디버그 모드에서 시작 된 Windows NT 시스템입니다.  
   
  [JIT 최적화 및 디버깅](../debugger/jit-optimization-and-debugging.md)  

@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9442d6685d27a9270c1e71e3a79e9f810b6f40f0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 20613722410bbe57231177eefafec79184d7741f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-between-shared-and-versioned-vspackages"></a>공유 및 버전 지정 Vspackage 중에서 선택
 다른 버전의 Visual Studio는 동일한 컴퓨터에 사용할 수 있습니다. Vspackage의 혼합을 지원할 수 있는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 버전입니다.  

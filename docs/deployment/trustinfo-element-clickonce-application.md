@@ -26,11 +26,12 @@ caps.latest.revision: "16"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 645d4252dd13f4e4629d1ab636ad8b85142242c2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 51247e86535ed9c8da04fadd5993b973f3a5f694
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt; 요소 (ClickOnce 응용 프로그램)
 응용 프로그램을 클라이언트 컴퓨터에서 실행하는 데 필요한 최소 보안 권한을 설명합니다.  
@@ -73,13 +74,13 @@ ms.lasthandoff: 10/27/2017
  `trustInfo` 요소는 필수이며 `asm.v2` 네임스페이스에 있습니다. 특성이 없으며 다음 요소를 포함합니다.  
   
 ## <a name="security"></a>보안  
- 필수 요소. 이 요소는 `trustInfo` 요소의 자식입니다. `applicationRequestMinimum` 요소를 포함하며 특성이 없습니다.  
+ 필수. 이 요소는 `trustInfo` 요소의 자식입니다. `applicationRequestMinimum` 요소를 포함하며 특성이 없습니다.  
   
 ## <a name="applicationrequestminimum"></a>applicationRequestMinimum  
- 필수 요소. 이 요소는 `security` 요소의 자식이며 `PermissionSet`, `assemblyRequest`및 `defaultAssemblyRequest`요소를 포함합니다. 이 요소에는 특성이 없습니다.  
+ 필수. 이 요소는 `security` 요소의 자식이며 `PermissionSet`, `assemblyRequest`및 `defaultAssemblyRequest`요소를 포함합니다. 이 요소에는 특성이 없습니다.  
   
 ## <a name="permissionset"></a>PermissionSet  
- 필수 요소. 이 요소는 `applicationRequestMinimum` 요소의 자식이며 `IPermission` 요소를 포함합니다. 이 요소에는 다음 특성이 있습니다.  
+ 필수. 이 요소는 `applicationRequestMinimum` 요소의 자식이며 `IPermission` 요소를 포함합니다. 이 요소에는 다음 특성이 있습니다.  
   
 -   `ID`  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 10/27/2017
   
 -   `version`  
   
-     필수 요소. 권한의 버전을 알려 줍니다. 일반적으로 이 값은 `1`입니다.  
+     필수. 권한의 버전을 알려 줍니다. 일반적으로 이 값은 `1`입니다.  
   
 ## <a name="ipermission"></a>IPermission  
  선택 사항입니다. 이 요소는 `PermissionSet` 요소의 자식입니다. `IPermission` 요소는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]의 권한 클래스를 완전히 알려 줍니다. `IPermission` 요소에는 다음 특성이 있지만 권한 클래스의 속성에 해당하는 추가 특성이 있을 수 있습니다. 특정 권한에 대한 구문을 확인하려면 Security.config 파일에 나열된 예제를 참조하세요.  
@@ -100,11 +101,11 @@ ms.lasthandoff: 10/27/2017
   
 -   `version`  
   
-     필수 요소. 권한의 버전을 알려 줍니다. 일반적으로 이 값은 `1`입니다.  
+     필수. 권한의 버전을 알려 줍니다. 일반적으로 이 값은 `1`입니다.  
   
 -   `Unrestricted`  
   
-     필수 요소. 응용 프로그램에 이 권한을 무제한으로 부여할 필요가 있는지 식별합니다. `true`인 경우 권한 부여에 조건이 없습니다. `false`또는 이 특성이 정의되지 않은 경우에는 `IPermission` 태그에 정의된 권한별 특성에 따라 제한됩니다. 다음 권한을 사용합니다.  
+     필수. 응용 프로그램에 이 권한을 무제한으로 부여할 필요가 있는지 식별합니다. `true`인 경우 권한 부여에 조건이 없습니다. `false`또는 이 특성이 정의되지 않은 경우에는 `IPermission` 태그에 정의된 권한별 특성에 따라 제한됩니다. 다음 권한을 사용합니다.  
   
     ```  
     <IPermission  
@@ -135,7 +136,7 @@ ms.lasthandoff: 10/27/2017
   
 -   `permissionSetReference`  
   
-     필수 요소. 이 어셈블리에서 필요로 하는 권한 집합의 ID를 식별합니다. 권한 집합은 `PermissionSet` 요소에서 선언됩니다.  
+     필수. 이 어셈블리에서 필요로 하는 권한 집합의 ID를 식별합니다. 권한 집합은 `PermissionSet` 요소에서 선언됩니다.  
   
 ## <a name="requestedprivileges"></a>requestedPrivileges  
  선택 사항입니다. 이 요소는 `security` 요소의 자식이며 `requestedExecutionLevel` 요소를 포함합니다. 이 요소에는 특성이 없습니다.  
@@ -145,7 +146,7 @@ ms.lasthandoff: 10/27/2017
   
 -   `Level`  
   
-     필수 요소. 응용 프로그램이 요청하는 보안 수준을 나타냅니다. 가능한 값은 다음과 같습니다.  
+     필수. 응용 프로그램이 요청하는 보안 수준을 나타냅니다. 가능한 값은 다음과 같습니다.  
   
      `asInvoker`, 추가 권한을 요청하지 않습니다. 이 수준에서는 추가 신뢰 프롬프트를 요구하지 않습니다.  
   

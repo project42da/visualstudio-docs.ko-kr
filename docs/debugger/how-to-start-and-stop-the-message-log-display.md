@@ -16,11 +16,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b45f7246df2fc757f5e2a4a46e215cd25d45b1b6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6057ca5e8bd6d81a72c4578a0ee8b776da46fdc8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-start-and-stop-the-message-log-display"></a>방법: 메시지 로그 표시 시작 및 중지
 경우는 [메시지 뷰](../debugger/messages-view.md) 창이 활성화 되는 **로깅 시작** 또는 **로깅 중지** Spy + +에 선택 표시 **메시지** 메뉴 및 해당 **로깅 시작** 또는 **로깅 중지** 도구 모음 단추가 활성화 됩니다.  

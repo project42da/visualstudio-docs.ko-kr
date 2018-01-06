@@ -15,16 +15,17 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4f2f76f97111f24a7b6b4ea1a7a22004d6867fcd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f5ebc9d78f50454a0b0576c4d339102b08cb3e26
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="execution-control-and-state-evaluation"></a>실행 제어 및 상태 평가
 응용 프로그램을 디버깅 해야 함수를 한 단계씩 실행, 중단점에서 중지 하 고 실행을 계속 등 실행 제어 기능을 구현 합니다. 자료를 디버깅 하는 visual Studio 디버거 구성 요소 사이 전송 하는 이벤트에 해당 실행 제어  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [프로그램 제어](../../extensibility/debugger/program-control.md)  
  프로그램 수준에서 발생 하는 다음 루틴은 나열: 다음 문 설정, 실행, 단계별 실행, 계속, 일시 중단 및 다시 시작 합니다.  
   

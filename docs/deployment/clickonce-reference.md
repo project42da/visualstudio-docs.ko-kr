@@ -19,16 +19,17 @@ caps.latest.revision: "8"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 4cfe5caa65246773759c4de7512fd41aa9e88023
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 898acac30776a4b189433440c9bb713a00561029
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="clickonce-reference"></a>ClickOnce 참조
 다음 페이지는 ClickOnce 응용 프로그램을 나타내는 데 사용 되는 XML 파일의 구조를 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [ClickOnce 응용 프로그램 매니페스트](../deployment/clickonce-application-manifest.md)  
  나열 하 고 요소와 응용 프로그램 매니페스트를 구성 하는 특성을 설명 합니다.  
   

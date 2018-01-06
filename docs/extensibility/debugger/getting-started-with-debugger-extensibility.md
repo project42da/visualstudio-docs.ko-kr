@@ -16,11 +16,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1419f4e45aefed59aa36b249568a53a47ad3c459
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 964b6bcc18e74174aa59e7a1bb4441e24d3918d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-debugger-extensibility"></a>디버거 확장성 시작
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 만들고 프로그램 내에서 디버그 하는 데 사용 되는 디버거 구성 요소를 사용자 지정 하는 데 필요한 정보를 제공는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 환경입니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
 -   ATL COM  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [디버거 확장 로드맵](../../extensibility/debugger/roadmap-for-extending-the-debugger.md)  
  컴파일러 및 출력에 따라 제품에서 디버깅을 구현 하는 과정에 간략하게 설명 합니다.  
   

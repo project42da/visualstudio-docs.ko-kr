@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 67548053c45d48fa240fa836f5e59fa43edd1453
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8c5d890674f8430bcb48771bfc13dc44be6025be
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgettype"></a>IDiaSymbol::get_type
 이 기호에 대 한 형식을 나타내는 기호를 검색 합니다.  
@@ -44,7 +45,7 @@ HRESULT get_type (
 ## <a name="remarks"></a>설명  
  를 기호는 형식을 확인 하려면이 메서드를 호출 하 고 결과 검사 해야 [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md) 개체입니다. 에 형식이 없는 기호에 대 한 수 있다는 것을 참고 합니다. 예를 들어 구조의 이름에는 형식이 없습니다 되지만 자식 기호를 가질 수 있습니다 (사용 하 여는 [idiasymbol:: Findchildren](../../debugger/debug-interface-access/idiasymbol-findchildren.md) 이러한 자식도 검사 하는 메서드).  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```C++  
 IDiaSymbol*         pType;  

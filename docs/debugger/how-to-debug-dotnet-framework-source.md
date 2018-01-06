@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9da2cd7b8a99d750692a69be406c9c8f82c461d1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 46c030a3c81f4b49fc66a06ee55d797dfe9119dc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-net-framework-source"></a>방법: .NET Framework 소스 디버깅
 최신 버전의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에 대 한 새로운 기능을 제공 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 디버깅 합니다. 디버깅 하려면 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 소스, 디버깅 코드에 대 한 기호에 대 한 액세스 권한이 있어야 합니다. 한 단계씩 실행 해야 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 소스입니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
      지금 기호를 다운로드하도록 선택하지 않으면 다음 번 프로그램 디버깅을 시작할 때 기호가 자동으로 다운로드됩니다.  
   
-7.  클릭 **확인** 를 닫으려면는 **옵션** 대화 상자.  
+7.  **확인**을 클릭하여 **옵션** 대화 상자를 닫습니다.  
   
 ### <a name="to-load-framework-symbols-using-the-modules-window"></a>모듈 창을 사용하여 Framework 기호를 로드하려면  
   

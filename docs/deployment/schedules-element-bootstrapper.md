@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 104c187d373113e8e5dafe589af3995bef5c8cdc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: b7924515dbb661a4281397817be4b1b68487a6ea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltschedulesgt-element-bootstrapper"></a>&lt;일정&gt; 요소 (부트스트래퍼)
 `Schedules` 요소에 포함 되어 `Schedule` 특정 시간에 의해 정의 되는 명령 정의 하는 요소는 `Command` 요소를 실행 해야 합니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/27/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수 요소. 일정 항목의 이름입니다. 이에 해당는 `ScheduleName` 의 속성은 `Command` 요소입니다. 경우는 `Command` 명명 된 일정을 참조 하 여 지정 된 시간에 실행만 됩니다 `Schedule` 요소입니다. 일정와 연결 될 수도 `FailIf` 및 `BypassIf` 지정 된 일정에서 실행에 이러한 조건부 검사를 제한 하는 요소입니다. 자세한 내용은 참조 [ \<명령 > 요소](../deployment/commands-element-bootstrapper.md)합니다.|  
+|`Name`|필수. 일정 항목의 이름입니다. 이에 해당는 `ScheduleName` 의 속성은 `Command` 요소입니다. 경우는 `Command` 명명 된 일정을 참조 하 여 지정 된 시간에 실행만 됩니다 `Schedule` 요소입니다. 일정와 연결 될 수도 `FailIf` 및 `BypassIf` 지정 된 일정에서 실행에 이러한 조건부 검사를 제한 하는 요소입니다. 자세한 내용은 참조 [ \<명령 > 요소](../deployment/commands-element-bootstrapper.md)합니다.|  
   
  지정 된 `Schedule` 요소는 다음과 같은 자식이 하나만 있을 수 있습니다.  
   

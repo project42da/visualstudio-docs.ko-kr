@@ -22,11 +22,12 @@ caps.latest.revision: "30"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 371c48282b2f775833287046ed9810f0cbc8f69e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f50c41a18f6d018ca717fbfd0cd926da8e6dcf65
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-from-a-dll-project-in-visual-studio"></a>방법: Visual Studio에서 DLL 프로젝트에서 디버깅
 DLL 프로젝트를 디버깅 하는 한 가지 방법은 DLL 프로젝트의 프로젝트 속성에서 호출 응용 프로그램을 지정 하는 것을 자체 DLL 프로젝트에서 디버깅을 시작할 수 있습니다. 이 방법을 사용 하려면 응용 프로그램이 DLL을 호출 해야 하며 DLL 응용 프로그램에서 찾을 수 있는 위치에 있어야 합니다. (그렇지 않은 경우 응용 프로그램이 서로 다른 버전의 DLL 찾아서 로드 하는 대신, 및 중단점을 적중지 않습니다). 다른 Dll 디버깅 방법에 대 한 참조 [DLL 프로젝트 디버깅](../debugger/debugging-dll-projects.md)합니다.
@@ -85,6 +86,6 @@ C++ 속성 페이지의 레이아웃과 콘텐츠는 C# 및 Visual Basic 속성 
   
 ## <a name="see-also"></a>참고 항목  
  [DLL 프로젝트 디버깅](../debugger/debugging-dll-projects.md)   
- [C#에 대 한 프로젝트 설정 디버그 구성](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [디버그 구성에 대 한 Visual Basic 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [C# 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
  [C++ 디버그 구성에 대한 프로젝트 설정](../debugger/project-settings-for-a-cpp-debug-configuration.md)

@@ -26,11 +26,12 @@ caps.latest.revision: "44"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 64d9eccdf57388428bfcd7ba5e43f75087bcf0bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: bde9f1c8aa09f8e5961bd228a5f1947c2fc30f82
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-threads-in-the-debugger-in-visual-studio-using-the-threads-window"></a>스레드 창을 사용 하 여 Visual Studio의 디버거에서 스레드 뷰
 에 **스레드** 창을 검토 하 고 수 디버깅 중인 응용 프로그램의에서 스레드를 사용 합니다. 사용 하는 방법에 대 한 단계별 지침에 대 한는 **스레드** 창 참조 [연습: 스레드 창 사용 하 여 디버깅](../debugger/how-to-use-the-threads-window.md)합니다.

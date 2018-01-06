@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: d7449cef9dca41aee61a3f15162252298db04e71
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: eb03ab88ca3d1d50b559cef87bfdf045a0a81319
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graphics-object-table"></a>그래픽 개체 테이블
 Visual Studio Graphics Analysis의 그래픽 개체 테이블은 게임이나 앱의 프레임을 지원하는 Direct3D 개체를 이해하는 데 도움이 됩니다.  
@@ -42,7 +43,7 @@ Visual Studio Graphics Analysis의 그래픽 개체 테이블은 게임이나 �
 |Column|설명|  
 |------------|-----------------|  
 |**식별자**|개체 ID입니다.|  
-|**Name**|보통 개체에 대한 추가 식별 정보를 제공하기 위해 Direct3D 함수 `SetPrivateData`를 사용하여 개체에 대해 설정된 응용 프로그램 관련 정보입니다.|  
+|**이름**|보통 개체에 대한 추가 식별 정보를 제공하기 위해 Direct3D 함수 `SetPrivateData`를 사용하여 개체에 대해 설정된 응용 프로그램 관련 정보입니다.|  
 |**Type**|개체 형식입니다.|  
 |**활성**|캡처된 프레임 중에 D3D10Device 또는 D3D11DeviceContext에서 설정된 개체의 경우 "*"가 표시됩니다.<br /><br /> 이러한 개체는 회색 텍스트로 표시되는 개체에 해당합니다. 그러나 개체 테이블을 정렬할 수 있도록 열 항목이 제공됩니다.|  
 |**Size**|개체의 크기(바이트)입니다.|  

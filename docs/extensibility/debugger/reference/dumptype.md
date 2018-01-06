@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 26e2836215ac5563a6ebaefb9d31d682348c7e89
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 722e08ba5328a07c8b6272d95b5a8ae756d2405d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dumptype"></a>DUMPTYPE
 마찬가지로 덤프 하려면 프로그램의 상태 (예: 실행 중인 스레드, 스택 프레임 및 현재 명령의 주소)의 크기를 지정 합니다.  

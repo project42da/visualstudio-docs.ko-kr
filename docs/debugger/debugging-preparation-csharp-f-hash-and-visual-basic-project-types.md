@@ -24,18 +24,19 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 281d71670e19ba4df274716201c6c4181158309e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 5ca8bb777369054d7d83e75bcdcf8055aa083660
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-preparation-c-f-and-visual-basic-project-types"></a>디버깅 준비: C#, F# 및 Visual Basic 프로젝트 형식
 이 단원의 항목에서는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 프로젝트 템플릿으로 만든 C#, F# 및 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 형식을 디버깅하는 방법에 대해 설명합니다.  
   
  참고로 그룹화 된 출력으로 Dll을 생성 하는 이러한 프로젝트 형식을 [DLL 프로젝트 디버깅](../debugger/debugging-dll-projects.md) 는 공통적인 특징 때문입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [권장 속성 설정](../debugger/managed-debugging-recommended-property-settings.md)  
  이 단원에서는 C#, F# 및 Visual Basic 프로젝트에 권장되는 디버깅 관련 속성 설정에 대해 설명합니다.  
   

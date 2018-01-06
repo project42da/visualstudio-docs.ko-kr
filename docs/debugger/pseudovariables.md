@@ -21,16 +21,17 @@ caps.latest.revision: "35"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b92b070641e4eed47b0094e1611f78cd799e6952
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: e2e5e716bd63170554537ec77895055de1fd83a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pseudovariables-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 의사 변수
 의사 변수는 변수 창에서 특정 정보를 표시 하는 데 사용 되는 용어 또는 **간략 한 조사식** 대화 상자. 일반적인 변수와 같은 방식으로 의사 변수를 입력할 수 있습니다. 하지만 의사 변수는 변수가 아니며 프로그램에서 변수 이름에 해당되지 않습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  네이티브 코드 응용 프로그램을 작성 중이며 응용 프로그램에 할당된 핸들 수를 표시하려고 한다고 가정합니다. 에 **조사식** 창에 다음 의사 변수를 입력할 수 있습니다는 **이름** 열에 있으면 반환 계산을 누르면:  
   
 ```  

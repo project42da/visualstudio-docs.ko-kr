@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2074e5abe688ecb8f796099cf23309ec0cfe954d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d2882ebf3a1b21a4921f863496a42ac50ac1b2fa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="doccontextcompare"></a>DOCCONTEXT_COMPARE
 두 문서 컨텍스트를 비교 하기 위한 조건을 지정 합니다.  

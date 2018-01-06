@@ -20,14 +20,15 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 90b4f5e1081d7c02fc3b2018057b5e663acf0737
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 3c4b9ce1ec91315889133e77e86ecc1a417b1b4c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugging-wcf-services"></a>WCF 서비스 디버깅
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [WCF 디버깅의 제한 사항](../debugger/limitations-on-wcf-debugging.md)  
  WCF 디버깅의 사용 제한에 대해 설명합니다.  
   

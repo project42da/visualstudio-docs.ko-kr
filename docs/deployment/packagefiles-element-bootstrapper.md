@@ -18,11 +18,12 @@ caps.latest.revision: "16"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: a85b06bfc5c82e7d4bd08bef8f768ad2e28a2ab0
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 25ba72b511782c450b882826a3e3af94a14f6e20
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltpackagefilesgt-element-bootstrapper"></a>&lt;PackageFiles&gt; 요소 (부트스트래퍼)
 `PackageFiles` 요소에 포함 되어 `PackageFile` 의 결과로 실행 설치 패키지를 정의 하는 요소는 `Command` 요소입니다.  
@@ -57,13 +58,13 @@ ms.lasthandoff: 10/27/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수 요소. 패키지 파일의 이름입니다. 이 이름은 하는 `Command` 요소는 패키지를 설치 하는 조건을 정의 될 때 참조 합니다. 이 값은 키로 사용은 `Strings` 와 같은 도구는 지역화 된 이름을 검색 하는 테이블 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 패키지를 설명 하기 위해 사용 됩니다.|  
+|`Name`|필수. 패키지 파일의 이름입니다. 이 이름은 하는 `Command` 요소는 패키지를 설치 하는 조건을 정의 될 때 참조 합니다. 이 값은 키로 사용은 `Strings` 와 같은 도구는 지역화 된 이름을 검색 하는 테이블 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 패키지를 설명 하기 위해 사용 됩니다.|  
 |`HomeSite`|선택 사항입니다. 설치 관리자에 포함 되지 않은 경우 원격 서버에서 패키지의 위치입니다.|  
 |`CopyOnBuild`|선택 사항입니다. 부트스트래퍼 빌드 시 디스크에 패키지 파일을 복사 해야 하는지 여부를 지정 합니다. 기본값은 true입니다.|  
 |`PublicKey`|패키지의 인증서 서명자의 공개 키 암호화입니다. 필요한 경우 `HomeSite` 사용 그렇지 않으면 선택 사항입니다.|  
 |`Hash`|선택 사항입니다. 패키지 파일의 SHA1 해시 합니다. 설치 중에 파일의 무결성을 확인 하는이 사용 됩니다. 패키지 파일에서 동일한 해시를 계산할 수 없으면, 패키지가 설치 되지 않습니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 패키지에 대 한 정의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 재배포 가능 패키지 및 해당 종속성 Windows Installer 등입니다.  
   
 ```  

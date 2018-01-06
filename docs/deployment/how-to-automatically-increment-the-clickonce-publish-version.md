@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 71665ea5053a4d3ddbdb933d2ecdf4ea20ba83c8
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2e1399795400d52543b92cb13635a8485b160f22
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-automatically-increment-the-clickonce-publish-version"></a>방법: ClickOnce 게시 버전 자동 증가
 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 변경 하는 응용 프로그램의 `Publish Version` 속성으로 인해 응용 프로그램이 업데이트로 게시 합니다. 기본적으로 Visual Studio 자동 증가 `Revision` 의 숫자는 `Publish Version` 응용 프로그램을 게시할 때마다 합니다.  
@@ -44,6 +45,6 @@ ms.lasthandoff: 10/27/2017
 3.  에 **게시 버전** 섹션을 선택 취소는 **자동 수정 번호 각 릴리스마다 증가** 확인란 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [방법: ClickOnce 집합 버전을 게시](../deployment/how-to-set-the-clickonce-publish-version.md)   
+ [방법: ClickOnce 게시 버전 설정](../deployment/how-to-set-the-clickonce-publish-version.md)   
  [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)   
  [방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)

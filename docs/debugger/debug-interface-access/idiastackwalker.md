@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e651c8ba8bee152121b96b14613144768a56cc2f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 68cf4cf206d243762247b36161f349cc2a1387cc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiastackwalker"></a>IDiaStackWalker
 방법으로는 스택 워크.pdb 파일에 정보를 사용 하 여 제공 합니다.  
@@ -43,7 +44,7 @@ IDiaStackWalker: IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져온는 `CoCreateInstance` 메서드 클래스 식별자와 `CLSID_DiaStackWalker` 인터페이스 id의 `IID_IDiaStackWalker`합니다. 이 인터페이스는 가져오는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  가져오는 방법을 보여 주는이 예제는 `IDiaStackWalker` 인터페이스입니다.  
   
 ```C++  

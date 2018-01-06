@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 6f4f6c95cea5a0ff6231f57d6297384dee6ba847
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 31bb71fb491fd5bd03f2346f93edb4c3ba45af1f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idiasymbolgethaslongjump"></a>IDiaSymbol::get_hasLongJump
 사용 하는 함수에 포함 되어 있는지 여부를 지정 하는 플래그를 검색는 [longjmp](/cpp/c-runtime-library/reference/longjmp) 명령 (이루는 [setjmp](/cpp/c-runtime-library/reference/setjmp) 명령, 예외 처리의 C 스타일 메서드를 형성 하는 이러한).  

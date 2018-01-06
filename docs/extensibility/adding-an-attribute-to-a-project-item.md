@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fce6b9770703afda8e8c1af6e17c10287625f647
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 011c6dbf74f12921b0458db9990b9f1e0e807c48
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-an-attribute-to-a-project-item"></a>프로젝트 항목에 특성 추가
 메서드 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.GetItemAttribute%2A> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage.SetItemAttribute%2A> 가져오고 프로젝트 항목의 특성 값을 설정 합니다. SetItemAttribute 특성을 만듭니다는 이미 존재 하지 않는 경우 프로젝트의 항목 메타 데이터에 추가 합니다.  

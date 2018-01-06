@@ -15,16 +15,17 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7710b7953f3335155ce8c04ffbaa42b537225095
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: d2cfbfb7c7e129075ea21b255fa5629ce95fa180
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="spy-reference"></a>Spy++ 참조
 각 Spy + + 메뉴 및 대화 상자에 대 한 설명은 아래에 나열 된 섹션을 참조 하십시오.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [메뉴 명령](../debugger/menu-commands.md)  
  각 Spy + + 메뉴에서 사용할 수 있는 명령을 설명합니다.  
   

@@ -17,11 +17,12 @@ caps.latest.revision: "43"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8e1b298f8088adf05992f7ebf8b5afbb743ec995
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: ebae0886db71b0b06f346d6bd174951b1c5d4752
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-uwp-apps-on-a-remote-machine"></a>UWP 앱을 원격 컴퓨터에서 실행
 ![Windows에만 적용](../debugger/media/windows_only_content.png "windows_only_content")  
@@ -36,7 +37,7 @@ UWP 앱에서 원격 컴퓨터를 실행 하려면 Visual Studio 원격 도구�
 
 Windows 8.1 Pc 및 Windows 10 Pc의 Windows 사전-작성자의 업데이트 버전을 실행 하면 수동으로 설치 해야 원격 도구 원격 컴퓨터에 디버그할 수 있습니다. 이 항목의 지침을 따릅니다.
   
-##  <a name="BKMK_Prerequisites"></a> 필수 조건  
+##  <a name="BKMK_Prerequisites"></a> 필수 구성 요소  
  원격 장치에서 디버깅하려면  
   
 -   원격 장치와 Visual Studio 컴퓨터는 네트워크를 통해 연결되거나 이더넷 케이블을 통해 직접 연결되어야 합니다. 인터넷을 통한 디버깅은 지원되지 않습니다.  
@@ -105,5 +106,5 @@ Windows 8.1 Pc 및 Windows 10 Pc의 Windows 사전-작성자의 업데이트 버
  그런 다음 **디버그** 메뉴에서 **디버깅 시작** 을 선택합니다(키보드: F5). 프로젝트가 다시 컴파일된 다음 원격 장치에 배포되어 시작됩니다. 디버거는 중단점에서 실행을 일시 중단하며 사용자는 한 단계씩 코드를 실행하거나, 프로시저 단위로 실행하거나 코드를 종료하여 한 번에 한 줄씩 실행할 수 있습니다. **디버깅 중지** 를 선택하여 디버그 세션을 끝내고 원격 응용 프로그램을 종료할 수 있습니다. 자세한 내용은 참조 [Visual Studio에서 앱 디버깅](../debugger/debug-store-apps-in-visual-studio.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Studio 사용 하 여 UWP 앱 테스트](../test/testing-store-apps-with-visual-studio.md)   
+ [Visual Studio로 UWP 앱 테스트](../test/testing-store-apps-with-visual-studio.md)   
  [Visual Studio에서 앱 디버깅](../debugger/debug-store-apps-in-visual-studio.md)

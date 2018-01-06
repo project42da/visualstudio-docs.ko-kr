@@ -24,11 +24,12 @@ caps.latest.revision: "135"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 1f009abffb1c956a0f7c57315181234fbea2fc1c
-ms.sourcegitcommit: fb751e41929f031d1a9247bc7c8727312539ad35
+ms.workload: multiple
+ms.openlocfilehash: bb0018e97cdbacc5e16e9591a0d480d509e1a9f5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intellitrace"></a>IntelliTrace
 IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하면 응용 프로그램 디버깅에 사용되는 시간을 줄일 수 있습니다. IntelliTrace를 사용하면 다음이 가능하므로 손쉽게 버그를 찾을 수 있습니다.  
@@ -141,7 +142,7 @@ IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하�
   
     -   [IntelliTrace 독립 실행형 수집기 사용](../debugger/using-the-intellitrace-stand-alone-collector.md)  
   
-    -   [사용 하 여 IntelliTrace 데이터를 저장 합니다.](../debugger/using-saved-intellitrace-data.md)  
+    -   [저장된 IntelliTrace 데이터 사용](../debugger/using-saved-intellitrace-data.md)  
   
     -   [연습: IntelliTrace를 사용하여 SharePoint 응용 프로그램 디버깅](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)  
  
@@ -184,7 +185,7 @@ IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하�
   
  [배포 후 문제 진단](../debugger/diagnose-problems-after-deployment.md)  
   
- [사용 하 여 IntelliTrace 데이터를 저장 합니다.](../debugger/using-saved-intellitrace-data.md)  
+ [저장된 IntelliTrace 데이터 사용](../debugger/using-saved-intellitrace-data.md)  
   
 ### <a name="blogs"></a>블로그  
  [Visual Studio ALM + Team Foundation Server](http://go.microsoft.com/fwlink/?LinkID=201340)  

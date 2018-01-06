@@ -15,16 +15,17 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 78e786b27ebe2847bc9327f673d2cbd780179efa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8319db245e0cef0f23cf699e3345f783a2d02f59
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="other-dialog-boxes"></a>기타 대화 상자
 이러한 대화 상자는 Spy + + 프로그램에 대 한 정보를 표시 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Microsoft Spy++ 정보](../debugger/about-microsoft-spy-increment.md)  
  Spy + + 프로그램의 소유권에 정보입니다.  
   

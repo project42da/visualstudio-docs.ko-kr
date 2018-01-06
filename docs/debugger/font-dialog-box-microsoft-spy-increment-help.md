@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8eee6cf523fe7c327c5be0e5e34d805da80177b0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a080d6cff410c09b2efa685703e1195e7d31594
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>글꼴 대화 상자(Microsoft Spy++ 도움말)
 이 대화 상자를 사용 하 여 사용 되는 문자 글꼴을 구성 하는 [Spy + + 뷰](../debugger/spy-increment-views.md) 창. 이 대화 상자를 표시 하려면 확장 된 **보기** 메뉴 선택 **글꼴**합니다.  

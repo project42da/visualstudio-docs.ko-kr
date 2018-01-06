@@ -16,11 +16,12 @@ caps.latest.revision: "2"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 26993da79249d1706dc8609cfcd5b0ceb66e1ec4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: dacce06dc59724b7f8feba8f84d2b781ba56ed9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="learn-productivity-tips-and-tricks-for-the-debugger-in-visual-studio"></a>Visual Studio의 디버거 용 생산성 팁과 요령에 알아보기
 
@@ -159,7 +160,7 @@ UWP 앱에서 사용 하 여 수행 하는 네트워크 작업을 분석할 수 
 
 디버거가 사용자 코드와 코드를 분류 하는 방법을 알아보려면, 참조 [내 코드만](../debugger/just-my-code.md)합니다. 기호 파일에 대 한 자세한 참조 [Visual Studio 디버거에서 기호 (.pdb) 및 소스 파일 지정](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)합니다.
 
-## <a name="learn-more"></a>자세히
+## <a name="learn-more"></a>자세한 정보
 
 추가 팁 및 요령 및 자세한 내용은 다음 블로그 게시물을 참조 하십시오.
 

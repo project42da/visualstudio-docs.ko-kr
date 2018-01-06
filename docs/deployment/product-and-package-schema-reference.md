@@ -29,11 +29,12 @@ caps.latest.revision: "7"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: ad3f3df67fe2545aadc8da71b89e600895cea780
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 149dd62b38bdcb0863d30f4280b35950361f58cb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="product-and-package-schema-reference"></a>제품 및 패키지 스키마 참조
 A *제품 파일* 는 외부 종속성에 필요한 모든에 대해 설명 하는 XML 매니페스트는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다. 외부 종속성의 예로 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 및 Microsoft 데이터 액세스 구성 요소 (MDAC). 패키지 파일을 제품 파일과 유사 하지만 지역화 된 어셈블리, 사용권 계약 및 설명서 등의 종속성을의 culture에 종속 된 구성 요소를 설치 하는 데 사용 됩니다.  
@@ -55,7 +56,7 @@ A *제품 파일* 는 외부 종속성에 필요한 모든에 대해 설명 하�
   
  `InstallChecks`테스트는 setup.exe는 지정된 된 패키지의 존재 여부에 대 한 수행 해야 합니다. `PackageFiles`모든 지정된 된 테스트 실패 설치 프로세스를 설치 해야 할 수 있는 패키지를 나열 합니다. 명령에서 각 명령 항목에서 설명 하는 테스트 중 하나를 실행 합니다. `InstallChecks`, 지정 `PackageFile` 실행 되도록 테스트 실패 합니다. 사용할 수는 `Strings` 개수에 관계 없이 언어에 대 한 응용 프로그램을 설치할 단일 설치 이진을 사용할 수 있도록 제품 이름과 오류 메시지를 지역화 하는 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제를 설치 하기 위한 완전 한 제품 파일을 보여 줍니다.는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.  
   
 ```  

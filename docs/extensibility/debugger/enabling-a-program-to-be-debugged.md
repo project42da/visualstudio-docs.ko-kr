@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f1c38c110e9499936a24c33432180adf18209bf7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a581c5a9ae56f52727c011db1de2ad35a5ba3592
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="enabling-a-program-to-be-debugged"></a>디버깅할 프로그램을 사용 하도록 설정
 디버그 엔진 (DE)을 통해 프로그램을 디버그할 수는 DE 시작 하거나 해야 기존 프로그램에 연결 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [포트 가져오기](../../extensibility/debugger/getting-a-port.md)  
  디버깅할 프로그램을 사용 하도록 설정 하는 첫 번째 단계로 포트를 가져오는 방법을 설명 합니다.  
   

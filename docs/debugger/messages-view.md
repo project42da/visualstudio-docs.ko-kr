@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 538cd0cd023b8861d6adb88c19b42aac59c9f4dd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c421b7c22bed32e6c60d30098b2c19e0d71a0af3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messages-view"></a>메시지 뷰
 각 창에는 관련된 메시지 스트림을 합니다. 메시지 보기 창에는이 메시지 스트림을 표시 됩니다. 창 핸들, 메시지 코드 및 메시지 표시 됩니다. 스레드 또는 프로세스에 대 한 메시지 보기를 만들 수 있습니다. 이 옵션을 사용 하면 특정 프로세스 또는 스레드는 창 초기화 메시지를 캡처하는 데 특히 유용가 소유 하는 모든 창에 보낸 메시지를 볼 수 있습니다.  
@@ -48,7 +49,7 @@ Spy++ 메시지 뷰
   
 6.  충분 한 메시지를 사용 하는 경우 선택 **로깅 중지** 에서 **메시지** 메뉴.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [메시지 뷰 제어](../debugger/how-to-control-messages-view.md)  
  메시지 보기를 관리 하는 방법에 설명 합니다.  
   

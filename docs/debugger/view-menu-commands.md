@@ -13,11 +13,12 @@ caps.latest.revision: "3"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 7eba9358efbbf5321b485bffa5c4b77f94d7abde
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 702ca7caec0417cc60f81fafb3733dd1d5c3abff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-menu-commands"></a>보기 메뉴 명령
 **보기** 메뉴 명령을 Spy + +를 제어 하기 위한 사용자 인터페이스를 제공 합니다.  

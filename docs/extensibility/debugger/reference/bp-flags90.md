@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: dddedfcbfe48f6ef6ceaedcdcfb1d7089307bcd3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: af59e06ad31b56c04127ca89b43a903db36d3615
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bpflags90"></a>BP_FLAGS90
 선택적 플래그에 대 한 유효한 값을 열거합니다. 중단점을 설정할 때 추가 정보를 지정 하는 선택적 플래그를 사용할 수 있습니다. 이 열거형 확장는 [BP_FLAGS](../../../extensibility/debugger/reference/bp-flags.md) 열거 합니다.  

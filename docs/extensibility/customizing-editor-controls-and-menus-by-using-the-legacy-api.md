@@ -13,16 +13,17 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9d72671a9c9e470dafae2b36c8cf5ec34b43e750
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d63827110dab8b8028e27fa6d544f5dd1bcfc23b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-editor-controls-and-menus-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 편집기 컨트롤 및 메뉴를 사용자 지정
 언어 서비스 또는 텍스트 보기 상황에 맞는 메뉴 및 편집기에서 컨트롤을 제어할 수 있습니다. 이 섹션의 페이지에는 이러한 기능을 사용 하는 방법을 자세히 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [드롭다운 표시줄](../extensibility/drop-down-bar.md)  
  드롭다운 표시줄에 설명 하 고 구현에 대 한 지침을 제공 합니다.  
   

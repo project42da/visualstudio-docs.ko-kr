@@ -28,11 +28,14 @@ caps.latest.revision: "26"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 724851fcd78050d3502cdec4369c7c6a79c9419f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload:
+- dotnet
+- cplusplus
+ms.openlocfilehash: 1c00546b983c9bbb0fd6c01717bd0a09c993e11b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>방법: 활성화 및 편집을 사용 하지 않도록 설정 하 고, (C#, VB, + +)를 계속 합니다.
 편집 하며 계속 하기에서 사용 하거나 사용 하지 않도록 설정할 수는 **옵션** 디자인 타임에 대화 상자. 디버깅 중에는 이 설정을 변경할 수 없습니다.  

@@ -12,22 +12,25 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04f3f90f6b3ee8aac2ddf1907569043c9d4b56ea
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload:
+- aspnet
+- azure
+ms.openlocfilehash: 32d58ec27d54b1b9c731747b01ad1f59d1d222b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>스냅숏 디버거를 사용 하 여 라이브 Azure ASP.NET 응용 프로그램을 디버깅
 
-스냅숏 디버거는 관심이 코드가 실행 되 면 프로덕션에서 응용 프로그램의 스냅숏을 만듭니다. 에 대 한 스냅숏을 만들려면 디버거 명령, snappoints 및 logpoints에서에서 설정한 코드 합니다. 디버거를 사용 하면 정확 하 게 무엇이 잘못 되었는지, 프로덕션 응용 프로그램의 트래픽에 영향을 주지 않고 확인할 수 있습니다. 스냅숏 디버거를 프로덕션 환경에서 발생 하는 문제를 해결 하는 데 걸리는 시간을 상당히 줄일 수 있습니다.
+스냅숏 디버거는 관심이 코드가 실행 되 면 프로덕션에서 응용 프로그램의 스냅숏을 만듭니다. 디버거가 스냅숏을 생성하도록 명령하려면 코드에서 snappoint와 logpoint를 설정합니다. 디버거를 통해 프로덕션 응용 프로그램의 트래픽에 영향을 미치지 않으면서 정확히 무엇이 잘못되었는지를 볼 수 있습니다. 스냅샷 디버거를 사용하면 프로덕션 환경에서 발생하는 문제를 해결하는 데 걸리는 시간을 상당히 줄일 수 있습니다.
 
 Snappoints 및 logpoints 중단점 비슷합니다. 중단점, 달리 snappoints 응용 프로그램이 중단 되지는 않습니다 적중 될 때입니다. 일반적으로 snappoint에서 스냅숏을 캡처하 게 10-20 밀리초를 사용 합니다. 
 
-스냅숏 컬렉션은 Azure 앱 서비스에서 실행 되는 다음 웹 앱에 사용할 수 있습니다.
+스냅숏 컬렉션은 Azure App Service에서 실행되는 다음 웹앱에서 사용할 수 있습니다.
 
-- .NET Framework 4.6.1에서 실행 되는 ASP.NET 응용 프로그램 이상.
-- .NET Core 2.0 또는 나중에 Windows에서 실행 되는 ASP.NET Core 응용 프로그램
+- .NET Framework 4.6.1 이상에서 실행되는 ASP.NET 응용 프로그램
+- Windows의 .NET Core 2.0 이상에서 실행되는 ASP.NET Core 응용 프로그램
 
 또한 스냅숏 디버거는 Visual Studio 2017 Enterprise 버전 15.5 이상이 및 기본 이상의 앱 서비스 계획에 사용할 수만 있습니다. 
 

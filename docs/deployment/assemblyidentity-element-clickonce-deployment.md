@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 26debb7d29458ab6452a2063e8e5c7e2f43fa7d0
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 51643b8db91c9f8c2961b319d47cdfb7789f6a4d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-deployment"></a>&lt;assemblyIdentity&gt; 요소 (ClickOnce 배포)
 주 어셈블리를 식별 하는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다.  
@@ -45,15 +46,15 @@ ms.lasthandoff: 10/27/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`name`|필수 요소. 정보 제공 목적으로 배포의 이해 하기 쉬운 이름을 식별합니다.<br /><br /> 경우 `name` 특수 문자가 포함 된 작은따옴표 또는 큰따옴표와 같은 응용 프로그램 활성화에 실패할 수 있습니다.|  
-|`version`|필수 요소. 다음과 같은 형식의 어셈블리의 버전 번호를 지정: `major.minor.build.revision`합니다.<br /><br /> 응용 프로그램 업데이트에 업데이트 된 매니페스트에서이 값을 증가 해야 합니다.|  
-|`publicKeyToken`|필수 요소. 배포 매니페스트 서명에 사용 된 공개 키의 sha-1 해시 값의 마지막 8 바이트를 나타내는 16 자리의 16 진수 문자열을 지정 합니다. 서명에 사용 되는 공개 키에 2048 비트 이어야 합니다. 큰 합니다.<br /><br /> 어셈블리 서명 하는 것이 좋지만 선택 사항,이 특성은 필요 합니다. 어셈블리 서명 되지 않은 경우에 자체 서명 된 어셈블리에서 값을 복사 하거나 "dummy" 모두 0 값을 사용 해야 합니다.|  
-|`processorArchitecture`|필수 요소. 프로세서를 지정합니다. 유효한 값은 `msil` 모든 프로세서에 대해 `x86` 32 비트 Windows에 대 한 `IA64` 64 비트 Windows에 대 한 및 `Itanium` Intel 64 비트 Itanium 프로세서에 대 한 합니다.|  
-|`type`|필수 요소. Windows-나란히 설치 기술을 비교 합니다. 허용 되는 유일한 값은 `win32`합니다.|  
+|`name`|필수. 정보 제공 목적으로 배포의 이해 하기 쉬운 이름을 식별합니다.<br /><br /> 경우 `name` 특수 문자가 포함 된 작은따옴표 또는 큰따옴표와 같은 응용 프로그램 활성화에 실패할 수 있습니다.|  
+|`version`|필수. 다음과 같은 형식의 어셈블리의 버전 번호를 지정: `major.minor.build.revision`합니다.<br /><br /> 응용 프로그램 업데이트에 업데이트 된 매니페스트에서이 값을 증가 해야 합니다.|  
+|`publicKeyToken`|필수. 배포 매니페스트 서명에 사용 된 공개 키의 sha-1 해시 값의 마지막 8 바이트를 나타내는 16 자리의 16 진수 문자열을 지정 합니다. 서명에 사용 되는 공개 키에 2048 비트 이어야 합니다. 큰 합니다.<br /><br /> 어셈블리 서명 하는 것이 좋지만 선택 사항,이 특성은 필요 합니다. 어셈블리 서명 되지 않은 경우에 자체 서명 된 어셈블리에서 값을 복사 하거나 "dummy" 모두 0 값을 사용 해야 합니다.|  
+|`processorArchitecture`|필수. 프로세서를 지정합니다. 유효한 값은 `msil` 모든 프로세서에 대해 `x86` 32 비트 Windows에 대 한 `IA64` 64 비트 Windows에 대 한 및 `Itanium` Intel 64 비트 Itanium 프로세서에 대 한 합니다.|  
+|`type`|필수. Windows-나란히 설치 기술을 비교 합니다. 허용 되는 유일한 값은 `win32`합니다.|  
   
 ## <a name="remarks"></a>설명  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 `assemblyIdentity` 요소에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트 합니다. 이 코드 예제는에 대해 제공 된 큰 예제의 일부는 [ClickOnce 배포 매니페스트](../deployment/clickonce-deployment-manifest.md) 항목입니다.  
   
 ```  

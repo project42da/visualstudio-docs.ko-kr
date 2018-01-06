@@ -16,11 +16,12 @@ caps.latest.revision: "47"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 263a6628154a5c36326c7fbdbd7a522cde28c40a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5221ba5a395e1cfbbe624b3d65e6762bedb8d2e1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 특성 사용
 [DebuggerDisplayAttribute 클래스](/dotnet/api/system.diagnostics.debuggerdisplayattribute) 개체, 속성 또는 필드가 디버거 변수 창에 표시 되는 방식을 제어 합니다. 이 특성은 형식, 대리자, 속성, 필드 및 어셈블리에 적용할 수 있습니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
 |특성|값 열에 표시 되는 출력|  
 |---------------|------------------------------------------------|  
-|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> `x` 및 `y` 필드가 있는 형식에서 사용됩니다.|`x = 5 y = 18`|  
+|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> `x` 및 `y`필드가 있는 형식에서 사용됩니다.|`x = 5 y = 18`|  
 |`[DebuggerDisplay("String value is {getString()}")]`매개 변수 구문은 언어에 따라 다를 수 있으므로 주의하여 사용하십시오.|`String value is [5, 6, 6]`|  
   
  `DebuggerDisplay` 는 명명된 매개 변수도 받아들일 수 있습니다.  
@@ -90,12 +91,12 @@ public sealed class MyClass
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 `DebuggerDisplay`와 `DebuggerBrowseable` 및 `DebuggerTypeProxy`를 함께 사용하는 방법을 보여 줍니다. **조사식** 창과 같은 디버거 변수 창에 이 코드가 표시될 때는 다음과 같은 확장이 생성됩니다.  
   
-|**Name**|**값**|**Type**|  
+|**이름**|**값**|**Type**|  
 |--------------|---------------|--------------|  
-|키|"three"|object {string}|  
+|Key|"three"|object {string}|  
 |값|3|object {int}|  
   
 ```CSharp  

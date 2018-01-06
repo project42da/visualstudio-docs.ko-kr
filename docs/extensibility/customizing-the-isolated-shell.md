@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 35aab40dbacd814dcec281ff1f3dd529b29d4424
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e02d93e966f676e0933b866cc8e74bfdd011231f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-isolated-shell"></a>격리 셸 사용자 지정
 Visual Studio 사용자 인터페이스의 다양 한 측면을 변경 하 고 명령 및 특수화 된 응용 프로그램에 포함 된 기능을 제한 하 여 Visual Studio 격리 셸 응용 프로그램을 사용자 지정할 수 있습니다.  

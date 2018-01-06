@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cd601307ce635a4f4477f3d3ef3ea133f3981a3b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ed1306d8bca70cd80f50c2980f76c5efc3588279
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="point-bilinear-trilinear-and-anisotropic-texture-filtering-variants"></a>Point, Bilinear, Trilinear 및 Anisotropic 텍스처 필터링 변형
 적절한 질감 샘플러에 대한 필터링 모드를 재정의합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="restrictions-and-limitations"></a>제한 사항  
  Direct3D에서 기능 수준 9.1은 최대 2배의 이방성을 지정합니다. 때문에 **이방성 질감 필터링** 변형은 16 배 이방성 사용만을 시도, 프레임 분석이 기능 수준 9.1 장치에서 실행 되 면 재생에 실패 합니다. 이러한 제한에 영향을 받는 현대식 장치에는 ARM 기반 Surface RT 및 Surface 2 Windows 태블릿이 포함됩니다. 일부 컴퓨터에서 아직도 찾아볼 수 있는 이전 GPU에도 적용될 수 있지만 이러한 GPU는 사용되지 않으며 점점 사라져 간다고 널리 간주되고 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **점 질감 필터링** 변형은 다음과 같은 코드를 사용 하 여 재현할 수 있습니다.  
   
 ```  
@@ -78,7 +79,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **쌍선형 질감 필터링** 변형은 다음과 같은 코드를 사용 하 여 재현할 수 있습니다.  
   
 ```  
@@ -92,7 +93,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **3 중 선형 질감 필터링** 변형은 다음과 같은 코드를 사용 하 여 재현할 수 있습니다.  
   
 ```  
@@ -106,7 +107,7 @@ d3d_device->CreateSamplerState(&sampler_desc, &sampler);
 d3d_context->PSSetSamplers(0, 1, &sampler  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  **이방성 질감 필터링** 변형은 다음과 같은 코드를 사용 하 여 재현할 수 있습니다.  
   
 ```  

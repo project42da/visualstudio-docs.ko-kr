@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e48fd86555a2bd110f2945063b23f03d0ce64e16
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8930726d4f45164842a41fdf87ea3a8f55397278
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-finder-tool"></a>방법: 찾기 도구 사용
 찾기 도구를 사용할 수는 **창 찾기** 대화 상자를 창 속성이 나 메시지를 표시 합니다. 찾기 도구 사용 안 함된 자식 창을 찾을 수 있고 구분 하는 경우를 강조 표시 하는 창을 비활성화 자식 기간이 겹칩니다.  

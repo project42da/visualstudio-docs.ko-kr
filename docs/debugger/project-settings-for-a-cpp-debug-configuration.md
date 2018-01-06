@@ -115,11 +115,12 @@ caps.latest.revision: "49"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e32547d66d1bf4de73b209ac0174598da9bbb731
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: cplusplus
+ms.openlocfilehash: cbb7e773c3c2cbb21ae4ac8d93f695601e8a3663
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C + + 디버그 구성에 대 한 프로젝트 설정
 C 또는 Visual c + + 디버그 구성에 대 한 프로젝트 설정을 변경할 수 있습니다는 **속성 페이지** 대화 상자에 설명 된 대로 [하는 방법: 디버그 설정 및 릴리스 구성](../debugger/how-to-set-debug-and-release-configurations.md)합니다. 다음 표에에서 디버거 관련 설정을 확인할 수 있는 위치는 **속성 페이지** 대화 상자.  
@@ -179,7 +180,7 @@ C 또는 Visual c + + 디버그 구성에 대 한 프로젝트 설정을 변경�
 |**맵 내보내기** ([/MAPINFO:EXPORTS](/cpp/build/reference/mapinfo-include-information-in-mapfile))|내보낸 함수를 맵 파일에 포함합니다. 기본 설정은 아니요입니다. 자세한 내용은 참조 [/MAPINFO (맵파일에 정보 포함)](/cpp/build/reference/mapinfo-include-information-in-mapfile)합니다.|  
 |**디버깅 가능한 어셈블리** ([/ASSEMBLYDEBUG](/cpp/build/reference/mapinfo-include-information-in-mapfile))|링커 /ASSEMBLYDEBUG 옵션의 설정을 지정합니다. 다음과 같은 값을 사용할 수 있습니다.<br /><br /> -   **내보낸 디버깅 가능한 특성이 없습니다**합니다.<br />-   **런타임 추적 사용 하 고 최적화 (/ ASSEMBLYDEBUG)**합니다. 이것이 기본 설정입니다.<br />-   **없음 런타임 추적은**합니다.<br />-   **\<부모 또는 프로젝트 기본값에서 상속 >**합니다.<br />-자세한 내용은 참조 [/ASSEMBLYDEBUG (DebuggableAttribute 추가)](/cpp/build/reference/assemblydebug-add-debuggableattribute)합니다.|  
   
- Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings 인터페이스를 사용하여 프로그래밍 방식으로 구성 속성 폴더(디버그 범주)에 있는 이러한 설정을 변경할 수 있습니다. 자세한 내용은 <xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings>을 참조하십시오.
+ Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings 인터페이스를 사용하여 프로그래밍 방식으로 구성 속성 폴더(디버그 범주)에 있는 이러한 설정을 변경할 수 있습니다. 자세한 내용은 <xref:Microsoft.VisualStudio.VCProjectEngine.VCDebugSettings>을 참조하세요.
 
 ## <a name="other-project-settings"></a>다른 프로젝트 설정
 
@@ -190,6 +191,6 @@ C 또는 Visual c + + 디버그 구성에 대 한 프로젝트 설정을 변경�
 ## <a name="see-also"></a>참고 항목  
  [네이티브 코드 디버그](../debugger/debugging-native-code.md)   
  [디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)   
- [Visual c + + 프로젝트 만들기 및 관리](/cpp/ide/creating-and-managing-visual-cpp-projects)   
+ [Visual C++ 프로젝트 만들기 및 관리](/cpp/ide/creating-and-managing-visual-cpp-projects)   
  [/ASSEMBLYDEBUG (DebuggableAttribute 추가)](/cpp/build/reference/assemblydebug-add-debuggableattribute)   
  [빌드 명령 및 속성에 대한 일반 매크로](/cpp/ide/common-macros-for-build-commands-and-properties)

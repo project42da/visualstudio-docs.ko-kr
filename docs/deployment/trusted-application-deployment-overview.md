@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 63377b7edde2204d30802361aa5628d3aa473652
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 34e83d6b035ba6ea91190fa89b9e1a63366e7907
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="trusted-application-deployment-overview"></a>신뢰할 수 있는 응용 프로그램 배포 개요
 이 항목에서는 신뢰할 수 있는 응용 프로그램 배포 기술을 사용하여, 관리자 권한이 있는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 배포하는 방법에 대한 개요를 제공합니다.  

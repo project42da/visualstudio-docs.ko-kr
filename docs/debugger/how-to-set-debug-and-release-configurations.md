@@ -34,11 +34,12 @@ caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4dc53ebb4a61d6d4740effa7b17b4d0a26d46a68
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: cc63ca48f7c35c382b668d9b7c794a4905b9dac9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-set-debug-and-release-configurations-in-visual-studio"></a>방법: 디버그 및 릴리스 Visual Studio의 구성 설정
 Visual Studio 프로젝트에는 사용하는 프로그램에 대한 별도의 릴리스 및 디버그 구성이 있습니다. 이름이 의미하는 것처럼 디버그 버전은 디버깅용으로 빌드하고 릴리스 버전은 최종 릴리스 배포용으로 빌드합니다.  
@@ -47,7 +48,7 @@ Visual Studio 프로젝트에는 사용하는 프로그램에 대한 별도의 �
   
 프로그램의 릴리스 구성은 완전히 최적화되고, 기호화된 디버그 정보를 포함하지 않습니다. 디버그 정보가.pdb 파일에서 생성 될 수 있습니다 [컴파일러 옵션에 따라](#BKMK_symbols_release) 사용 되는 합니다. .Pdb 파일을 만드는 나중에 릴리스 버전을 디버깅 해야 하는 경우에 매우 유용할 수 있습니다.  
   
-빌드 구성에 대 한 자세한 내용은 참조 [빌드 구성 이해](../ide/understanding-build-configurations.md)합니다.  
+빌드 구성에 대한 자세한 내용은 [빌드 구성 이해](../ide/understanding-build-configurations.md)를 참조하세요.  
   
 빌드 구성을 변경할 수는 **빌드** 메뉴, 도구 모음에서 또는 프로젝트의 속성 페이지에 있습니다. 프로젝트 속성 페이지는 언어마다 다릅니다. 다음 절차는 메뉴 및 도구 모음에서 빌드 구성을 변경하는 방법을 보여 줍니다. 다른 언어로 된 프로젝트의 빌드 구성을 변경 하는 방법에 대 한 자세한 내용은 아래 참고 항목 섹션을 참조 하세요.  
   
@@ -116,7 +117,7 @@ C# 디버그 구성에 대 한 프로젝트 설정에 대 한 자세한 내용�
  [Visua Studio 디버거에서 기호 (.pdb) 파일 및 소스 파일 지정](../debugger/debugger-settings-and-preparation.md)  
  [디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)   
  [C + + 디버그 구성에 대 한 프로젝트 설정](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
- [C#에 대 한 프로젝트 설정 디버그 구성](../debugger/project-settings-for-csharp-debug-configurations.md)   
- [디버그 구성에 대 한 Visual Basic 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
+ [C# 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-csharp-debug-configurations.md)   
+ [Visual Basic 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
  [방법: 구성 만들기 및 편집](../ide/how-to-create-and-edit-configurations.md)   
  [프로젝트 구성 디버그 및 릴리스](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)

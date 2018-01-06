@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 347ea483fda44d43d73b147a41a55f0945e515e9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c3e51d02171455cd5b0b6051ed3b05c6d95278ce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="symbols-and-symbol-tags"></a>기호 및 기호 태그
 컴파일된 프로그램에 대 한 디버그 정보 기호 디버그 인터페이스 액세스 (DIA) SDK Api를 사용 하 여 액세스할 수 있는 프로그램 데이터베이스 (.pdb) 파일에 저장 됩니다. 모든 기호는 [idiasymbol:: Get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) 및 [idiasymbol:: Get_symindexid](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) 속성입니다. `symTag` 속성에 정의 된 대로 기호의 종류를 나타내는 [SymTagEnum 열거형](../../debugger/debug-interface-access/symtagenum.md) 열거 합니다. `symIndexId` 속성은 한 `DWORD` 기호의 모든 인스턴스에 대해 고유 식별자를 포함 하는 값입니다.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/31/2017
   
  오류가 발생 하지 않으면 기호 속성에 값을 할당 하는 경우의 속성을 액세스를 시도할 때 속성의 "get" 메서드 반환 `S_OK`합니다. 반환 값이 `S_FALSE` 속성이 현재 기호에 유효 하지 않음을 나타냅니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기호 위치](../../debugger/debug-interface-access/symbol-locations.md)  
  다양 한 종류의 기호를 가질 수 있습니다 위치를 설명 합니다.  
   

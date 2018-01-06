@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73cdce5415dd50059dcd443f67424203430aba87
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dfdf86124bdaf9160121b7d93263dc1d60425515
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hitting-a-breakpoint"></a>중단점
 다음 설명 디버그 엔진 (DE)을 실행 하거나 단계별로 실행 하는 동안 중단점에 도달 하면 프로세스.  

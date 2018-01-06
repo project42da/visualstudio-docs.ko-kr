@@ -24,11 +24,12 @@ caps.latest.revision: "22"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 35d642256a199c8ee5bf5e67a6a0bfb414b9fccc
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 02b5f2477a18f3432bc255b9bd17a2ac11fbc030
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publishing-clickonce-applications"></a>ClickOnce 응용 프로그램 게시
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 처음으로 게시할 때는 게시 마법사를 사용하여 게시 속성을 설정할 수 있습니다. 마법사에서는 일부 속성만 사용 가능하며 기타 모든 설정은 기본값으로 설정됩니다.  

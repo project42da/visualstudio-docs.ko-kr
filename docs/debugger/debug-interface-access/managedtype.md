@@ -17,11 +17,12 @@ caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e7453ec94f2a5daa160559d17fe1c4502191d366
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 4ba534199433390adfd12babf5bd28449e838ffa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managedtype"></a>ManagedType
 관리 되는 형식 (메타 데이터 또는 네이티브 C#과 같은 언어의 메모리 및 리소스 관리 기능에 의해 정의 된 모든 기호)으로 식별 되는 `SymTagManagedType` 기호입니다.  

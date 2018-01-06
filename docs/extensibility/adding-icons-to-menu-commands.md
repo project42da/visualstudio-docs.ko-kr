@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1cdf521228a1878fa94343418bd6a182f9707a2b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 06d90b5174cc9ff2d09d7ccba8b2f39bc1d2a077
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-icons-to-menu-commands"></a>메뉴 명령에 아이콘 추가
 명령 메뉴 및 도구 모음을 둘 다에 나타날 수 있습니다. 이 도구 모음에서 일반적으로 아이콘 및 텍스트와 함께 표시 되며 명령 아이콘만 (공간을 절약 하려면) 하는 동안 메뉴에 함께 표시 되도록 하려면 명령에 대 한 일반적입니다.  

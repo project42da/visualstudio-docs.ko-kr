@@ -13,11 +13,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: eccd258476f82871732ef7b16f0282d2f945b9ee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a2cbb124dcb2d2d7a0bbcba1bc57eb3c704dd770
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-package"></a>패키지를 디버그 합니다.
 디버그 패키지가 Visual Studio shell에서 실행 되 고 모든 UI를 처리 합니다. 디버깅 인터페이스는 Visual Studio를 사용 하 고 세션 디버그 관리자 (SDM)와 통신 합니다.  

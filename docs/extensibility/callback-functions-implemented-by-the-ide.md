@@ -15,18 +15,19 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fbc71942a87685a4011b13d1054c4855a5e18012
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3c1845a82947286800145ff898f8f49f8c3c2477
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="callback-functions-implemented-by-the-ide"></a>IDE에 의해 구현 되는 콜백 함수
 와 통합으로 최대한와 통합 된 최종 사용자 환경을 제공 하기 위해 완벽 한 통합된 개발 환경 (IDE) 소스 제어 플러그 인 사용할 수는 IDE에 의해 구현 되는 콜백 함수입니다. 플러그 인 이러한 함수는 소스 제어 작업; IDE에 정보를 전달 하는 동안 적절 한 시간에 호출할 수 있습니다. 그런 다음 IDE 해당 네이티브 UI에 포함 된 요소와이 정보를 표시할 수 있습니다. 사용자에 게이 시나리오는 플러그 인 사용 자체 UI 경우 보다 덜 조각난된 경험 합니다.  
   
  필수 헤더 파일이 scc.h입니다. 기본 위치는 \Program Files\VSIP 8.0\EnvSDK\common\inc\\합니다. 소스 제어 플러그 인 샘플 \Program Files\VSIP 8.0\MSSCCI에가지고 있는 VSIP 폴더에 이기도\\합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)  
  사용 되는 콜백 함수에 설명 [SccOpenProject](../extensibility/sccopenproject-function.md) IDE를 통해 플러그 인 소스 제어에서 메시지를 표시 합니다.  
   

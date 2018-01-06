@@ -22,11 +22,12 @@ caps.latest.revision: "12"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 92182b9b6c6b2b2759b77e7b14d71dfd40379fc7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 463286eb8360b728b3b7e3ce9396c9f4b7e11305
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-package-manifest"></a>방법: 패키지 매니페스트 만들기
 응용 프로그램에 대 한 필수 구성 요소를 배포 하려면 부트스트래퍼 패키지를 사용할 수 있습니다. 부트스트래퍼 패키지는 각 로캘에 대 한 패키지 매니페스트를 제외한 단일 제품 매니페스트 파일을 포함합니다. 다양 한 지역화 된 버전에서 공유 되는 기능은 제품 매니페스트도 이동 해야 합니다.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/27/2017
   
 7.  Visual Studio 부트스트래퍼 디렉터리로 C:\package 폴더를 복사 합니다. Visual Studio 2010 files\microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages 디렉터리입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  패키지 매니페스트는 오류 메시지, 소프트웨어 사용 조건 및 언어 팩 같은 로캘 관련 정보를 포함 합니다.  
   
 ```  

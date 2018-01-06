@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 54a981a57605ccb93062ac0678b1e8b5673c6d1a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8a5f7a80e8d594f3c9e62ecd2047cc1116948d2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-text-layers-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 텍스트 계층에 액세스
 일반적으로 텍스트 레이어 텍스트 레이아웃의 일부 측면을 캡슐화합니다. 예를 들어 "함수에서-한 번" 레이어 캐럿 (텍스트 삽입 지점)이 포함 된 함수 앞뒤 텍스트를 숨깁니다.  

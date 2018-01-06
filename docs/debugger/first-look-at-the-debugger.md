@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 68eb471f1db42b60114c2a14745ba4771b640c0d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a969a75a7c0cda89d040b8829fc8313974646c07
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="get-started-with-the-visual-studio-debugger"></a>Visual Studio 디버거 시작
 Visual Studio 디버거는 모든 언어에서 쉽게 사용할 수 있습니다. 간단한 C# 프로그램을 디버깅 하는 방법을 보여 주 겠지만 여기 하지만 c + + 및 JavaScript와 같은 다른 언어의 코드에 동일한 단계를 적용할 수 있습니다.

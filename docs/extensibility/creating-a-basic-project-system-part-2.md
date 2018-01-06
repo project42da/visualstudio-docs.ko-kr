@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0cef54d281555f49806ed59ad1627460a7752954
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9b3f46a0e4fb87e6064fb3e975cd6b7313270c13
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-basic-project-system-part-2"></a>기본 프로젝트 시스템 만들기, 2 부
 이 시리즈의 첫 번째 연습 [기본 프로젝트 시스템, 1 부 만드는](../extensibility/creating-a-basic-project-system-part-1.md), 기본 프로젝트 시스템을 만드는 방법을 보여 줍니다. 이 연습에서는 Visual Studio 템플릿, 속성 페이지 및 기타 기능을 추가 하 여 기본 프로젝트 시스템에 구축 합니다. 이 시작 하기 전에 첫 번째 연습을 완료 해야 합니다.  
@@ -267,7 +268,7 @@ ZipProjects:
   
 4.  확장 된 **SimpleProject** 노드. **콘솔** 자식 노드가 표시 됩니다. **SimpleProject 응용 프로그램** 서식 파일에 계속 표시는 **템플릿** 창.  
   
-5.  입니다. 클릭 **취소** 디버깅을 중지 하 고  
+5.  이어야 합니다. 클릭 **취소** 디버깅을 중지 하 고  
   
  ![](../extensibility/media/simpproj2_rollup.png "SimpProj2_Rollup")  
   
@@ -282,7 +283,7 @@ ZipProjects:
   
 -   $safeprojectname $는 사용자에 의해 제공 된 이름이 고 **새 프로젝트** 대화 상자에서 안전 하지 않은 문자와 공백을 제거 하도록 수정 합니다.  
   
- 템플릿 매개 변수 목록은 전체 참조 [템플릿 매개 변수](../ide/template-parameters.md)합니다.  사용자 고유의 사용자 지정 템플릿 매개 변수를 만들려는 경우 참조 [NIB: 방법: 사용자 지정 매개 변수를 템플릿에 전달](http://msdn.microsoft.com/en-us/5bc2ad11-84c7-4683-a276-e5e00d85d8fb)합니다.  
+ 템플릿 매개 변수의 전체 목록은 [템플릿 매개 변수](../ide/template-parameters.md)를 참조하세요.  사용자 고유의 사용자 지정 템플릿 매개 변수를 만들려는 경우 참조 [NIB: 방법: 사용자 지정 매개 변수를 템플릿에 전달](http://msdn.microsoft.com/en-us/5bc2ad11-84c7-4683-a276-e5e00d85d8fb)합니다.  
   
 #### <a name="to-substitute-project-template-parameters"></a>프로젝트 템플릿 매개 변수를 대체  
   
