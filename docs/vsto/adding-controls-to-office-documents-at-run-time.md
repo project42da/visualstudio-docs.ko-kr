@@ -27,11 +27,12 @@ caps.latest.revision: "102"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: db8a4fad73bb710662ce63bd299751c725e0c6ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d29fd74ee92344ac8b2eedbe4a5b8838171d7d96
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-controls-to-office-documents-at-run-time"></a>런타임에 Office 문서에 컨트롤 추가
   런타임에 Microsoft Office Word 문서 및 Microsoft Office Excel 통합 문서에 컨트롤을 추가할 수 있습니다. 런타임에 제거할 수도 있습니다. 런타임에 추가하거나 제거하는 컨트롤을 *동적 컨트롤*이라고 합니다.  

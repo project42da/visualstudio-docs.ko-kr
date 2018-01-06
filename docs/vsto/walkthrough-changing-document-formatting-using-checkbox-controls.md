@@ -21,11 +21,12 @@ caps.latest.revision: "70"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cf214f2ffc55cf0846373fcaa226253f276e3d69
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a0c8d44c32c03f98a0d2621eff3899ded101b7d3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>연습: CheckBox 컨트롤을 사용하여 문서 서식 변경
   이 연습에서는 Microsoft Office Word 용 문서 수준 사용자 지정에서 Windows Forms 컨트롤을 사용 하 여 텍스트 서식을 변경 하는 방법을 보여 줍니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**applyBoldFont**|  
+    |**이름**|**applyBoldFont**|  
     |**텍스트**|**굵게**|  
   
 4.  키를 눌러 **Enter** 삽입 지점을 첫 번째 확인란이 아래로 이동 합니다.  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**applyItalicFont**|  
+    |**이름**|**applyItalicFont**|  
     |**텍스트**|**기울임꼴**|  
   
 6.  키를 눌러 **Enter** 두 번째 확인란 아래 삽입 지점을 이동 합니다.  
@@ -91,7 +92,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**applyUnderlineFont**|  
+    |**이름**|**applyUnderlineFont**|  
     |**텍스트**|**밑줄**|  
   
 #### <a name="to-add-text-and-a-bookmark-control"></a>텍스트 및 책갈피 컨트롤 추가 하려면  

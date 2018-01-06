@@ -19,11 +19,12 @@ caps.latest.revision: "17"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: cbb7b09e5c36980ceeedd99f69241996bd25bfa3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 61d58b172c185a908a6314664ccd4cfe2172dc8c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-applications-with-the-workflow-designer"></a>워크플로 디자이너로 응용 프로그램 개발
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]는 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 개발 환경에 호스트되는 [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]에서 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 응용 프로그램을 디버깅하고 그래픽을 생성하는 비주얼 디자이너 겸 디버거입니다. 여기서 템플릿 및 활동 디자이너를 사용하여 복합 워크플로 응용 프로그램, 활동 라이브러리 또는 [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 서비스를 생성할 수 있습니다. [!INCLUDE[crabout](../test/includes/crabout_md.md)]워크플로, 참조는 [Windows Workflow Foundation &#91;. .NET Framework 4 &#93; ](http://msdn.microsoft.com/Library/9a23ea6b-d600-483e-89cd-8889cfec5f66).  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/27/2017
   
 -   **서비스 참조 추가...**  기능을 사용 하면 웹 서비스에 액세스 하는 자동으로 작업을 생성할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [워크플로 디자이너 사용](../workflow-designer/using-the-workflow-designer.md)  
  기본 제공 디자이너를 사용하여 새 활동 및 워크플로 프로젝트를 만드는 방법과 디자이너에서 제공하는 다른 도구를 사용하여 인수, 변수, 식, 가져오기 및 이동 경로 탐색을 처리하는 방법을 보여 줍니다.  
   
@@ -69,5 +70,5 @@ ms.lasthandoff: 10/27/2017
  [디자이너 재호스팅 &#91; WF 샘플 &#93;](http://msdn.microsoft.com/Library/b676ad31-5f64-4d84-9a36-b4d7113a2f4d)  
  이를 위해 디자이너를 포함하도록 적절한 WPF 레이아웃을 만드는 방법을 보여줍니다.  
   
- [사용자 지정 활동 디자이너](/dotnet/framework/windows-workflow-foundation/samples/custom-activity-designers)  
+ [사용자 지정 작업 디자이너](/dotnet/framework/windows-workflow-foundation/samples/custom-activity-designers)  
  이 단원에는 워크플로 디자이너에 표시할 사용자 지정 디자이너를 사용하는 활동 샘플이 포함되어 있습니다.

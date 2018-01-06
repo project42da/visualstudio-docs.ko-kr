@@ -35,11 +35,12 @@ caps.latest.revision: "67"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b9650014deb748607598b470d7eb797193213f39
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d994f3b8b6612313ec689947c1da4c5b423fe362
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항
   각 호스트 항목 및 호스트 컨트롤은 추가 기능을 통해 해당 네이티브 Microsoft Office Word 또는 Microsoft Office Excel 개체처럼 동작하도록 설계되었습니다. 그러나 런타임에 호스트 항목과 호스트 컨트롤의 동작과 네이티브 Office 개체 간에는 몇 가지 근본적인 차이가 있습니다.  

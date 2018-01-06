@@ -11,11 +11,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 51b20275f63b47d607679e04ff061cf77b0d9f90
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: fdc27d34efef818dae30d1f54f5f3a67e7408d7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>방법: Windows Communication Foundation 계약 작업 호출(레거시)
 이 항목에서는 [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 또는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]를 대상으로 하는 레거시 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]를 사용하여 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] 계약 작업을 호출하는 방법에 대해 설명합니다.  

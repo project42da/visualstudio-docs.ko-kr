@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8d892b48f5cd22e1175f6cb046f627efb398e044
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: be74604bfabde34f2046af98ac976abd37068022
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin 인터페이스
   VSTO 추가 기능 관리 하는 로드 하는 구성 요소를 만드는 IManagedAddin 인터페이스를 구현 합니다. 이 인터페이스는 2007 Microsoft Office 시스템에서 추가되었습니다.  
@@ -46,7 +47,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>메서드  
  다음 표에서 IManagedAddin 인터페이스에서 정의한 메서드를 보여 줍니다.  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Microsoft Office 응용 프로그램에서 관리되는 VSTO 추가 기능을 로드할 때 호출됩니다.|  
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Microsoft Office 응용 프로그램에서 관리되는 VSTO 추가 기능을 언로드하기 직전에 호출됩니다.|  

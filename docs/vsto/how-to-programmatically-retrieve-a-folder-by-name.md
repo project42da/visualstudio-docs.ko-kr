@@ -16,18 +16,19 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 32db5d1ae316b571b71a8015bd6ea5dc7fe7a110
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 542340605407450c1cedaf9077faa90b05cdfa28
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-retrieve-a-folder-by-name"></a>방법: 프로그래밍 방식으로 이름으로 폴더 검색
   이 예제에서는 명명 된 사용자 지정 폴더에 대 한 참조를 가져오고 폴더의 내용을 표시 합니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[Trin_OL_GetFolderName#1](../vsto/codesnippet/CSharp/Trin_OL_GetFolderName/thisaddin.cs#1)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  

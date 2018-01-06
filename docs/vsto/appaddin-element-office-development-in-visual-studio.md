@@ -16,11 +16,12 @@ caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c5637a449ea40f6e4f910e061c7e2e324c91ae70
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c099f73e98542c29718efc4158593da35d333abd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin&gt; 요소 (Visual Studio에서 Office 개발)
   `appAddin` 네임스페이스의 `vstov4` 요소는 VSTO 추가 기능에 대한 사용자 지정 관련 정보를 저장합니다.  
@@ -46,8 +47,8 @@ ms.lasthandoff: 10/31/2017
 |특성|설명|  
 |---------------|-----------------|  
 |`application`|필수 요소. Microsoft Office 응용 프로그램을 식별합니다. 값은 Excel, InfoPath, Outlook, PowerPoint, Project, Visio 또는 Word 중 하나입니다.|  
-|`loadBehavior`|선택적 요소. 기본적으로 이 값이 다음으로 설정되어 `loadBehavior` 가 사용됩니다. 디버깅을 위해서는 이 값을 2로 설정하여 VSTO 추가 기능을 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md)에서 LoadBehavior 값 표를 참조하세요.|  
-|`keyName`|필수 요소. 이 값은 응용 프로그램에서 VSTO 추가 기능을 로드할 때 사용할 레지스트리 키 이름입니다. 자세한 내용은 [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md)을 참조하세요.|  
+|`loadBehavior`|선택 사항입니다. 기본적으로 이 값이 다음으로 설정되어 `loadBehavior` 가 사용됩니다. 디버깅을 위해서는 이 값을 2로 설정하여 VSTO 추가 기능을 사용하지 않도록 설정할 수 있습니다. 자세한 내용은 [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md)에서 LoadBehavior 값 표를 참조하세요.|  
+|`keyName`|필수. 이 값은 응용 프로그램에서 VSTO 추가 기능을 로드할 때 사용할 레지스트리 키 이름입니다. 자세한 내용은 [Registry Entries for VSTO Add-ins](../vsto/registry-entries-for-vsto-add-ins.md)을 참조하세요.|  
   
  `appAddin` 요소에는 다음 자식 요소가 있습니다.  
   

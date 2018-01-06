@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 422dd91a5b8e22bb9859d8ffa10160bdbe77a021
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 1071db6a7a8205ef337737473a18d1a6c31af43c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debugger-user-interface-xslt"></a>디버거 사용자 인터페이스(XSLT)
 이 항목에서는 디버거 창과 대화 상자에 대해 설명합니다. XSLT 관련 디버깅 동작이 있는 사용자 인터페이스 부분에 대해서만 설명합니다.  
@@ -26,10 +27,10 @@ ms.lasthandoff: 11/02/2017
 ## <a name="locals-window"></a>지역 창  
  지역 창에는 스타일시트에 정의되어 있는 변수에 대한 정보가 표시됩니다. 지역 창에는 다음 세 개의 정보 열이 있습니다.  
   
- **Name**  
+ **이름**  
  이 열에는 현재 범위에 있는 모든 지역 변수의 이름이 포함됩니다. 노드 집합에는 트리 컨트롤이 있으며 이 컨트롤을 드릴다운하여 하위 폴더를 볼 수 있습니다.  
   
- **Value**  
+ **값**  
  이 열에는 각 변수가 포함하는 값이 표시됩니다. 특성, 처리 명령, 주석, 텍스트 및 CData 노드는 노드의 텍스트 값을 표시합니다. 네임스페이스 노드는 네임스페이스 URI를 표시합니다.  
   
  **Type**  

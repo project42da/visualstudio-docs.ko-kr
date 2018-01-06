@@ -10,16 +10,17 @@ ms.assetid: 97f0bff5-7e48-4914-8f04-8015a1c6bfae
 caps.latest.revision: "5"
 ms.author: sdanie
 manager: erikre
-ms.openlocfilehash: ad07ac5eba9e8579ae08f5ba1b242f3bc5483a5f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0d4c8dbac90e3d1e3ec10314debf0a288ad48053
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="state-machine-activity-designers"></a>상태 시스템 활동 디자이너
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에는 워크플로를 생성할 때 사용할 수 있는 여러 가지 활동 디자이너가 포함되어 있습니다. 이 단원에서는 상태 시스템 워크플로를 만들고 관리하는 데 사용되는 시스템 제공 활동 디자이너에 대해 다룹니다. 다음 항목을 통해 이러한 디자이너에 대해 설명하고 사용 방법에 대한 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [상태 시스템](../workflow-designer/statemachine-activity-designer.md)  
  익숙한 상태 시스템 패러다임을 사용하여 상태와 모델 워크플로의 컬렉션이 포함되어 있습니다.  
   

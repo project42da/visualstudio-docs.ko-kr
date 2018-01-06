@@ -11,23 +11,24 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: d8f4c4763d40583f02aa97eaea066db5de2a7479
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7c691e4dc60afca2d56a63af8572d75b02e970e6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="primitives-activity-designers"></a>기본 형식 활동 디자이너
 기본 활동 디자이너는 Assign 및 Delay 등 <xref:System.Activities.Statements> 네임스페이스에서 다양한 활동을 만들고 구성하는 데 사용됩니다. 이 단원의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 및 템플릿 디자이너의 사용 방법에 대한 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [할당](../workflow-designer/assign-activity-designer.md)  
  <xref:System.Activities.Statements.Assign> 활동을 만들고 구성하는 데 사용됩니다.  
   
  [지연](../workflow-designer/delay-activity-designer.md)  
  <xref:System.Activities.Statements.Delay> 활동을 만들고 구성하는 데 사용됩니다.  
   
- [메서드 호출](../workflow-designer/invokemethod-activity-designer.md)  
+ [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)  
  <xref:System.Activities.Statements.InvokeMethod> 활동을 만들고 구성하는 데 사용됩니다.  
   
  [WriteLine](../workflow-designer/writeline-activity-designer.md)  

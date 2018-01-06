@@ -11,16 +11,17 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 45ffc19d3ede7af9d32e4599f17ecde9bd097bb7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7453a61f599b8d3e051fea1c016d914814ec7fd0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="control-flow-activity-designers"></a>제어 흐름 활동 디자이너
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에는 워크플로를 생성할 때 사용할 수 있는 여러 가지 시스템 제공 활동이 포함되어 있습니다. 이 단원에서는 워크플로 내의 흐름 제어에 사용되는 시스템 제공 활동에 대해 다룹니다. 다음 항목을 통해 이러한 활동에 대해 설명하고 사용 방법에 대한 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [DoWhile](../workflow-designer/dowhile-activity-designer.md)  
  에 지정된 된 조건이 평가 될 때까지 해당 본문에 한 번 이상 포함 활동을 실행 **true**합니다.  
   

@@ -16,18 +16,19 @@ caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 97776e667333d00ecbd10feeb12620b16f2d3ac9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6397f6e90423640697aa57d7fdf2a1c85303d0f9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-search-within-a-specific-folder"></a>방법: 프로그래밍 방식으로 특정 폴더 내용 검색
   사용 하 여이 코드 예제는 `Find` 및 `FindNext` 에 있는 전자 메일 메시지의 제목 필드에 텍스트를 검색 하는 메서드는 **받은 편지함**합니다. 이 메서드는 문자열 필터를 사용 하 여의 시작 문자가 문자 T에 대 한 확인은 `Subject` 텍스트입니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  [!code-csharp[Trin_OL_SearchFolder#1](../vsto/codesnippet/CSharp/Trin_OL_SearchFolder/thisaddin.cs#1)]  
   
 ## <a name="see-also"></a>참고 항목  

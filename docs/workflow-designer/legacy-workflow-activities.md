@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8a5c35fb036c1d9a94bd42c5ceabe17ae65e7b7c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 756fa86cf892120b0062e2816f146425ac1b4fa3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-workflow-activities"></a>레거시 워크플로 활동
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]에는 제어 흐름, 조건, 이벤트 처리, 상태 관리, 응용 프로그램 및 서비스와의 통신을 위한 기능을 제공하는 일련의 기본 활동이 포함되어 있습니다. 워크플로를 디자인할 때 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에서 제공한 시스템 제공 활동을 사용하거나 사용자가 직접 사용자 지정 활동을 만들 수 있습니다.  
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/27/2017
   
  [!INCLUDE[crabout](../test/includes/crabout_md.md)]사용자 지정 활동을 만들를 참조 하는 방법 [사용자 지정 활동 개발](http://go.microsoft.com/fwlink?LinkID=65023) 및 [레거시 활동 디자이너를 사용 하 여](../workflow-designer/using-the-legacy-activity-designer.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [활동 뷰(레거시)](../workflow-designer/activity-views-legacy.md)  
  다양한 활동의 디자인 뷰에 대해 설명합니다.  
   

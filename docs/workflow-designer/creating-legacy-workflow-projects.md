@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 02f3d66b7d519546f1da89bb323ec9ab740628f6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 44b938467454d73c460cc9276b46bc165d36bcee
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-legacy-workflow-projects"></a>레거시 워크플로 프로젝트 만들기
 이 단원에서는 vs2010에서 제공되는 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]를 사용하여 워크플로 프로젝트를 만드는 방법에 대해 설명합니다. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 합니다. 그 일부로서 다음 표에서는 워크플로 프로젝트 템플릿 사용 방법을 보여 줍니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/27/2017
 |상태 시스템 워크플로 라이브러리|상태 시스템 워크플로 라이브러리를 만드는 프로젝트입니다.|  
 |빈 워크플로 프로젝트|워크플로 응용 프로그램을 만들기 위한 빈 프로젝트입니다.|  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 워크플로 프로젝트 만들기(레거시)](../workflow-designer/how-to-create-workflow-projects-legacy.md)  
   
  [방법: 순차 워크플로 콘솔 응용 프로그램 만들기(레거시)](../workflow-designer/how-to-create-sequential-workflow-console-applications-legacy.md)  

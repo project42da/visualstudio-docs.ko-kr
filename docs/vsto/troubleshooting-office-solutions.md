@@ -19,16 +19,17 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d4e93509595dc9bd576bc1f3f427ef222df11abd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1e335f4c8215499eedd93590455911c3ec234051
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-office-solutions"></a>Office 솔루션 문제 해결
   이 섹션에는 Visual Studio의 Office 개발 도구를 사용하여 솔루션을 만들 때 발생할 수 있는 일반적인 문제를 해결하기 위한 팁이 들어 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Office 솔루션에서 런타임 오류 문제 해결](../vsto/troubleshooting-errors-in-office-solutions.md)  
  Visual Studio에서 Office 솔루션을 디자인하고 실행하고 테스트하는 동안 발생할 수 있는 일반적인 문제에 대해 설명합니다.  
   

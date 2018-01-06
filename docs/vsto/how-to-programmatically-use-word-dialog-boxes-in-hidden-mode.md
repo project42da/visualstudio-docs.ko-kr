@@ -19,11 +19,12 @@ caps.latest.revision: "48"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: daf5cfb79c16a26b871e2c4d07ec304c17cb6a33
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3d36bb9342c1db3fcf0fe007b87831b8c921af6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>방법: 프로그래밍 방식으로 숨김 모드에서 Word 대화 상자 사용
   사용자에 게 표시 하지 않고 Microsoft Office Word의 기본 제공 대화 상자를 호출 하 여 호출 하 여 복잡 한 작업을 수행할 수 있습니다. 사용 하 여이 작업을 수행할 수는 <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> 의 메서드는 <xref:Microsoft.Office.Interop.Word.Dialog> 호출 하지 않고 개체는 <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> 메서드.  

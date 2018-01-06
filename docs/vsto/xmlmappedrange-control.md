@@ -19,11 +19,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 391964152c48601b11b10ce6d8001d2d303a9a01
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 27cd0f62c7670d56143180d24074e5c6002051f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xmlmappedrange-control"></a>XmlMappedRange 컨트롤
   <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤은 반복 되지 않는 스키마 요소는 Microsoft Office Excel에서 셀에 매핑될 때에 생성 되는 범위입니다. 예를 들어는 `maxOccurs` 스키마 요소의 특성은 1입니다. Visual Studio에서 매핑된 XML 범위를 만든 후 Excel 개체 모델을 트래버스 하지 않고 직접 프로그래밍할 수 있습니다. 삭제할 수 있습니다는 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 요소 매핑을 제거 될 때 Excel 내에서 제어 합니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "79"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 32fd9fe36f029296d52127cf1f3be9e3c205d82b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: bcc3b19bc84d418798f296f15b36a367223c21fd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registry-entries-for-vsto-add-ins"></a>VSTO 추가 기능에 대한 레지스트리 항목
   Visual Studio를 사용하여 만든 VSTO 추가 기능을 배포할 때에는 특정 레지스트리 항목 집합을 만들어야 합니다. 이러한 레지스트리 항목은 Microsoft Office 응용 프로그램에서 VSTO 추가 기능을 찾아 로드할 수 있는 정보를 제공합니다.  
@@ -77,9 +78,9 @@ ms.lasthandoff: 10/31/2017
   
 |입력|형식|값|  
 |-----------|----------|-----------|  
-|**설명**|REG_SZ|필수 요소. VSTO 추가 기능에 대한 간략한 설명입니다.<br /><br /> 이 설명은 사용자가 Microsoft Office 응용 프로그램의 **옵션** 대화 상자에 있는 **추가 기능** 창의 VSTO 추가 기능을 선택했을 때 표시됩니다.|  
-|**FriendlyName**|REG_SZ|필수 요소. Microsoft Office 응용 프로그램의 **COM 추가 기능** 대화 상자에 표시되는 VSTO 추가 기능에 대한 설명이 포함된 이름입니다. 기본값은 VSTO 추가 기능 ID입니다.|  
-|**LoadBehavior**|REG_DWORD|필수 요소. 응용 프로그램에서 VSTO 추가 기능 및 VSTO 추가 기능의 현재 상태(로드 또는 언로드)를 로드하려고 할 때 지정하는 값입니다.<br /><br /> 기본적으로 이 항목은 시작 시 VSTO 추가 기능을 로드하도록 지정하는 3으로 설정됩니다. 자세한 내용은 [LoadBehavior 값](#LoadBehavior)을 참조하세요. **참고:** 사용자는 VSTO 추가 기능을 해제 하면, 해당 수정 **LoadBehavior** HKEY_CURRENT_USER 레지스트리 하이브의 값입니다. 각 사용자에 대해 HKEY_CURRENT_USER 하이브의 **LoadBehavior** 값이 HKEY_LOCAL_MACHINE 하이브에 정의된 기본값 **LoadBehavior** 를 재정의합니다.|  
+|**설명**|REG_SZ|필수. VSTO 추가 기능에 대한 간략한 설명입니다.<br /><br /> 이 설명은 사용자가 Microsoft Office 응용 프로그램의 **옵션** 대화 상자에 있는 **추가 기능** 창의 VSTO 추가 기능을 선택했을 때 표시됩니다.|  
+|**FriendlyName**|REG_SZ|필수. Microsoft Office 응용 프로그램의 **COM 추가 기능** 대화 상자에 표시되는 VSTO 추가 기능에 대한 설명이 포함된 이름입니다. 기본값은 VSTO 추가 기능 ID입니다.|  
+|**LoadBehavior**|REG_DWORD|필수. 응용 프로그램에서 VSTO 추가 기능 및 VSTO 추가 기능의 현재 상태(로드 또는 언로드)를 로드하려고 할 때 지정하는 값입니다.<br /><br /> 기본적으로 이 항목은 시작 시 VSTO 추가 기능을 로드하도록 지정하는 3으로 설정됩니다. 자세한 내용은 [LoadBehavior 값](#LoadBehavior)을 참조하세요. **참고:** 사용자는 VSTO 추가 기능을 해제 하면, 해당 수정 **LoadBehavior** HKEY_CURRENT_USER 레지스트리 하이브의 값입니다. 각 사용자에 대해 HKEY_CURRENT_USER 하이브의 **LoadBehavior** 값이 HKEY_LOCAL_MACHINE 하이브에 정의된 기본값 **LoadBehavior** 를 재정의합니다.|  
 |**Manifest**|REG_SZ|필수 요소. VSTO 추가 기능에 대한 배포 매니페스트의 전체 경로입니다. 경로는 로컬 컴퓨터, 네트워크 공유(UNC) 또는 웹 서버(HTTP)의 위치일 수 있습니다.<br /><br /> Windows Installer를 사용하여 솔루션을 배포하는 경우 **매니페스트** 경로에 접두사 **file:///** 을 추가해야 합니다. 문자열도 추가 해야 **&#124; vstolocal** (즉, 파이프 문자 **&#124;** 이어서 **vstolocal**)이 경로의 끝에 있습니다. 그러면 솔루션이 ClickOnce 캐시가 아니라 설치 폴더에서 로드됩니다. 자세한 내용은 [Deploying an Office Solution by Using Windows Installer](../vsto/deploying-an-office-solution-by-using-windows-installer.md)을 참조하십시오. **참고:** 개발 컴퓨터에서 VSTO 추가 기능을 빌드할 때 Visual Studio 자동으로 추가 하는 **&#124; vstolocal** 문자열을이 레지스트리 항목입니다.|  
   
 ###  <a name="OutlookEntries"></a> Outlook 양식 영역에 대한 레지스트리 항목  

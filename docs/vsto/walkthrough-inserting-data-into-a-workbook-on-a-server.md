@@ -21,11 +21,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ca768bd681c20826ffbdeeec94706b8b37c129f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ea64eaa32d43369ad264c8ddfce49d5a070a311a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-inserting-data-into-a-workbook-on-a-server"></a>연습: 서버의 통합 문서에 데이터 삽입
   이 연습에서는 Microsoft Office Excel 통합 문서에 사용 하 여 Excel을 시작 하지 않고 캐시 된 데이터 집합에 데이터를 삽입 하는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스입니다.  

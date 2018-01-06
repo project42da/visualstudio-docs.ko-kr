@@ -30,11 +30,12 @@ caps.latest.revision: "79"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 941ca002d2f840805253624e7e0004fb560c4167
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2655cd8f8c75f9c10063a1b85d2390b153782d85
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ribbon-designer"></a>리본 디자이너
   리본 디자이너는 시각적 디자인 캔버스입니다. 리본 디자이너를 사용 하 여 Microsoft Office 응용 프로그램의 리본에 사용자 지정 탭, 그룹 및 컨트롤을 추가 합니다.  
@@ -141,7 +142,7 @@ ms.lasthandoff: 10/31/2017
 ###  <a name="AddControlsToGroups"></a>그룹에 컨트롤 추가  
  그룹에 하나 이상의 컨트롤을 추가 합니다. 다음 표에서 각 컨트롤에 설명 합니다.  
   
-|컨트롤|설명|  
+|Control|설명|  
 |-------------|-----------------|  
 |**상자**|그룹의 컨트롤을 구성 하는 컨테이너입니다. 구분 기호, 그룹 또는 탭을 제외 하 고 상자에 컨트롤을 추가할 수 있습니다. 수평 또는 수직 일 수 있습니다.|  
 |**Button**|액션을 시작 하는 단추입니다. 그룹, 단추 그룹, 드롭 다운 목록, 갤러리, 메뉴 또는 분할 단추는 단추를 추가할 수 있습니다.|  
@@ -185,7 +186,7 @@ ms.lasthandoff: 10/31/2017
 |목록에서 이전 컨트롤로 전에 컨트롤을 이동 합니다.|CTRL + 위쪽<br /><br /> CTRL + 왼쪽 화살표|  
 |컨트롤 목록에서 다음 컨트롤 뒤로 이동 합니다.|CTRL + 아래쪽<br /><br /> CTRL + 오른쪽 화살표|  
 |같은 그룹에서 다른 한 컨트롤에서 선택 영역을 이동 합니다. 드롭다운 패널에 대 한 부모 컨트롤 드롭다운 패널의 컨트롤이 간을 이동 합니다.|위로<br /><br /> 아래로|  
-|모든 컨트롤을 정방향으로 반복 합니다.|Tab 키|  
+|모든 컨트롤을 정방향으로 반복 합니다.|Tab|  
 |모든 컨트롤 역방향으로 반복 합니다.|Shift+Tab|  
 |선택한 컨트롤 또는 컨트롤 집합을 삭제 합니다.|Delete|  
 |선택한 컨트롤을 복사 합니다.|Ctrl+C|  
@@ -202,7 +203,7 @@ ms.lasthandoff: 10/31/2017
 |드롭다운 패널 열려 있고 부모 컨트롤을 선택할 경우 드롭다운 패널을 닫습니다.|LEFT|  
 |드롭다운 패널을 엽니다.|RIGHT|  
 |드롭다운 패널 열려 있으면 드롭다운 패널에서 첫 번째 컨트롤을 선택 합니다.|RIGHT|  
-|드롭다운 패널을 닫습니다.|Esc|  
+|드롭다운 패널을 닫습니다.|Esc 키|  
   
 ## <a name="see-also"></a>참고 항목  
  [리본 개요](../vsto/ribbon-overview.md)   

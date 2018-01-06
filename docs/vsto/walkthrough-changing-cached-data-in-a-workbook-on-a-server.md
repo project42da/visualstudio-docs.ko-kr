@@ -21,11 +21,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a438e34fa6c5a74d648772fd4a5d4580b5f547d6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9d6f3032a2c09b176b8fb1df7443cd07ef0ab1e8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-changing-cached-data-in-a-workbook-on-a-server"></a>연습: 서버의 통합 문서에서 캐시된 데이터 변경
   이 연습에서는 Microsoft Office Excel 통합 문서에 사용 하 여 Excel을 시작 하지 않고 캐시 된 데이터 집합을 수정 하는 방법의 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스입니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 913ccb36c54914387cd6ca8a50a350ada1b14ce7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 42aa28637bc513865f96c0b88d2ca7c4dd726c5c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>방법: SharePoint 명령 만들기
   사용자 지정 SharePoint 도구 확장에서 서버 개체 모델을 사용 하려는 경우 만들어야 *SharePoint 명령* API를 호출 합니다. SharePoint 명령 서버 개체 모델을 직접 호출할 수 있는 어셈블리를 정의 합니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
   
      SharePoint 도구 확장에서 명령을 호출 하면 동일한 고유 식별자를 지정 해야 합니다. 자세한 내용은 참조 [하는 방법: SharePoint 명령 실행](../sharepoint/how-to-execute-a-sharepoint-command.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 식별자를 가진 SharePoint 명령을 `Contoso.Commands.UpgradeSolution`합니다. 이 명령은 서버 개체 모델에서 Api를 사용 하 여 배포 된 솔루션으로 업그레이드 합니다.  
   
  [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]

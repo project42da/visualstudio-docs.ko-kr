@@ -22,11 +22,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 584f98e9fbe6a8883039cad03e6b0782d225b8bb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e824576ca8692fec6856d3b80eda7b8a2126561e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-solutions"></a>프로젝트 솔루션
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 에서는 Microsoft Office Project용 VSTO 추가 기능을 만드는 데 사용할 수 있는 프로젝트 템플릿을 제공합니다. VSTO 추가 기능을 사용하여 Project를 자동화하거나 Project 기능을 확장하거나 Project UI(사용자 인터페이스)를 사용자 지정할 수 있습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="automating-project-by-using-the-project-object-model"></a>프로젝트 개체 모델을 사용하여 프로젝트 자동화  
  Project 개체 모델은 Project 자동화에 사용할 수 있는 다양한 형식을 노출합니다. 이러한 형식을 사용하면 프로젝트에서 프로그래밍 방식으로 작업을 만들고 수정하는 등의 일반 작업을 수행하도록 코드를 작성할 수 있습니다.  
   
- VSTO 추가 기능에서 Project 개체 모델에 액세스하려면 프로젝트에서 `Application` 클래스의 `ThisAddIn` 필드를 사용합니다. `Application` 필드는 Project의 현재 인스턴스를 나타내는 Microsoft.Office.Interop.MsProject.Application 개체를 반환 합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+ VSTO 추가 기능에서 Project 개체 모델에 액세스하려면 프로젝트에서 `Application` 클래스의 `ThisAddIn` 필드를 사용합니다. `Application` 필드는 Project의 현재 인스턴스를 나타내는 Microsoft.Office.Interop.MsProject.Application 개체를 반환 합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
  Project 개체 모델을 호출할 때 Project의 주 Interop 어셈블리에서 제공되는 형식을 사용합니다. 주 interop 어셈블리는 VSTO 추가 기능의 관리 코드와 Project의 COM 개체 모델 간의 다리 역할을 합니다. Project 주 interop 어셈블리의 모든 형식 Microsoft.Office.Interop.MSProject 네임 스페이스에 정의 됩니다. 주 interop 어셈블리에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md)합니다.  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ea195b8b3af284858253e6300b9a4484eb30f757
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: b6952cfdebb38030d154ad022a799c07fcb9721b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-editor"></a>XML 편집기
 XML 편집기는 [!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)] Visual Studio 텍스트 편집기를 기반으로 하며 XML 언어를 추가 지원합니다. XML 편집기에는 다음 기능이 있습니다.  
@@ -54,7 +55,7 @@ XML 편집기는 .xml, .xsd, .xsl, .config 등의 잘 알려진 파일 확장명
   
 -   XML 스키마 탐색기  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XML 문서 유효성 검사](../xml-tools/xml-document-validation.md)  
  구문 검사 및 유효성 검사 기능에 대해 설명합니다.  
   

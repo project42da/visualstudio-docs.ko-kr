@@ -22,11 +22,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 732a270564c40c4ca20952d86abb8618f9a060f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 0ba481206e24870e0772290beba129d373c30862
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visio-object-model-overview"></a>Visio 개체 모델 개요
   Microsoft Office Visio용 Office 솔루션을 개발하기 위해 Visio 개체 모델을 조작할 수 있습니다. 이 개체 모델은 Visio 용 주 interop 어셈블리에서 제공 되 고 Microsoft.Office.Interop.Visio 네임 스페이스에 정의 되어 있는 클래스와 인터페이스의 구성 합니다.  
@@ -50,10 +51,10 @@ ms.lasthandoff: 10/31/2017
   
 -   Page 개체  
   
-### <a name="application-object"></a>Application 개체  
+### <a name="application-object"></a>응용 프로그램 개체입니다.  
  Microsoft.Office.Interop.Visio.Application 개체는 Visio 응용 프로그램을 나타내며 모든 다른 개체의 부모인 합니다. 멤버는 일반적으로 전체 Visio에 적용됩니다. Visio 환경을 제어할 수는 Microsoft.Office.Interop.Visio.Application 및 Microsoft.Office.Interop.Visio.ApplicationSettings 개체의 메서드와 속성을 사용할 수 있습니다.  
   
- VSTO 추가 기능 프로젝트에서 사용 하 여 Microsoft.Office.Interop.Visio.Application 개체에 액세스할 수 있습니다는 `Application` 필드는 `ThisAddIn` 클래스입니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+ VSTO 추가 기능 프로젝트에서 사용 하 여 Microsoft.Office.Interop.Visio.Application 개체에 액세스할 수 있습니다는 `Application` 필드는 `ThisAddIn` 클래스입니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
 ### <a name="document-object"></a>Document 개체  
  Microsoft.Office.Interop.Visio.Document 개체는 Visio 프로그래밍의 핵심입니다. 드로잉, 스텐실 또는 템플릿 파일을 나타냅니다. Microsoft.Office.Interop.Visio.Application 개체의 Microsoft.Office.Interop.Visio.Documents 컬렉션에 추가 된 새 Microsoft.Office.Interop.Visio.Document 개체를 만든 Visio 문서를 열거나 새 문서를 만들 때 .  

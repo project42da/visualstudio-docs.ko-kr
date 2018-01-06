@@ -26,16 +26,17 @@ caps.latest.revision: "88"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 236bd457f478d21ed27d31b0a28871e1102a1547
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: db8c6e3363cf1a67dfef5f3dd606dd65ed6f7a94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio에서 Office/SharePoint 개발
   사용자가 [Office 스토어](https://store.office.com/) 또는 조직 카탈로그에서 다운로드하는 간단한 앱 또는 추가 기능이나 컴퓨터에 설치하는 .NET Framework 기반 솔루션을 만들어 Microsoft Office 및 SharePoint를 확장할 수 있습니다.  
   
- 항목 내용  
+ 항목 내용:  
   
 -   [Office 및 SharePoint용 추가 기능 만들기](#Apps)  
   

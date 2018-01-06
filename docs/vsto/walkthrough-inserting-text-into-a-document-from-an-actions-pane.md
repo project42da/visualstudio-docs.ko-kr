@@ -20,11 +20,12 @@ caps.latest.revision: "70"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5ca062823968153d7c8979cb13c0e3d403237be1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 789ad22524a5c0128320bfb833b8ad97e294a86f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-inserting-text-into-a-document-from-an-actions-pane"></a>연습: 작업 창에서 문서로 텍스트 삽입
   이 연습에서는 Microsoft Office Word 문서에서 작업 창을 만드는 방법을 보여 줍니다. 작업 창에는 입력을 수집 하 고 다음 텍스트 문서를 보냅니다는 두 개의 컨트롤이 포함 됩니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
   
      **2008 년 3 월 21 일**  
   
-     **Name**  
+     **이름**  
   
      **주소**  
   
@@ -115,7 +116,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**getName**|  
+    |**이름**|**getName**|  
     |**Size**|**130, 20**|  
   
 5.  두 번째 추가 **레이블** 작업 창 컨트롤을 제어 하 고 변경 된 **텍스트** 속성을 **주소**합니다.  
@@ -124,7 +125,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**getAddress**|  
+    |**이름**|**getAddress**|  
     |**반환 허용**|**True**|  
     |**Multiline**|**True**|  
     |**Size**|**130, 40**|  
@@ -133,7 +134,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**addText**|  
+    |**이름**|**addText**|  
     |**텍스트**|**삽입**|  
   
 ## <a name="adding-code-to-insert-text-into-the-document"></a>문서에 텍스트를 삽입 하는 코드를 추가 합니다.  

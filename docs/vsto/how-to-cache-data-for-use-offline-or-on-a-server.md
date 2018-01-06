@@ -22,11 +22,12 @@ caps.latest.revision: "49"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7a8da60aa9d9dc3ab7becb56b3b4c7701494daef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 07d467d67c78f6779a8be2d21b266f8328e30ff7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>방법: 오프라인이나 서버에서 사용할 데이터 캐싱
   표시할 수 있습니다는 문서에 캐시 되어야 데이터 항목을 사용할 수 있도록 오프 라인입니다. 이 쉽게 처리할 수는 데이터에 대 한 문서에서 문서를 서버에 저장 될 때 다른 코드에 의해 조작 될를 합니다.  

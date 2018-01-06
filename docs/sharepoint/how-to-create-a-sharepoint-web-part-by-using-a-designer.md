@@ -21,11 +21,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4f329b1402917bc7c129bcdc9f504dfe99bcccbf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1b993512350e6bd27d0dce8ef359bc33fccde5ff
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-a-sharepoint-web-part-by-using-a-designer"></a>방법: 디자이너를 사용하여 SharePoint 웹 파트 만들기
   추가 하 여 웹 파트를 만들 수는 **비주얼 웹 파트** 을 SharePoint 프로젝트 항목입니다. Visual Web Developer 디자이너를 웹 파트 컨트롤 및 코드를 추가할 수는 Visual Studio에서 열립니다. 비주얼 웹 파트는 웹 파트와 동일한 방식으로 작동 합니다. 유일한 차이점은 Visual Web Developer 디자이너의 비주얼 웹 파트를 디자인 합니다.  

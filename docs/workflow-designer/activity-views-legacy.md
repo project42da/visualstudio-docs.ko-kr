@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 50f57684db32f601bd4cbf870456da458aa5ce7c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0a6658bdf0f1df76e585236497ba4ba19525b199
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="activity-views-legacy"></a>활동 뷰(레거시)
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]에서 제공하는 많은 활동은 워크플로를 구성하는 데 사용되며 이러한 활동에는 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에서 사용할 수 있는 몇 가지 디자인 뷰가 있습니다. 활동 디자이너를 끌어 올 때는 **도구 상자** 디자인 화면으로 이동 하 고 그 이후에 활동을 선택할 때마다 중 하나를 사용 하 여 여러 디자인 뷰 간에 전환할 수 있습니다는 **워크플로**메뉴 또는 선택 된 활동을 마우스 오른쪽 단추로 클릭 합니다. 또한 선택된 항목의 이름 위로 포인터를 옮기면 드롭다운 탭 집합이 나타나 여러 뷰 사이를 전환할 때 사용할 수 있습니다.  

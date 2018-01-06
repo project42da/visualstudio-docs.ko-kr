@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6cdc8fb745fb78ff2b5d3ce9a478005eee2737c3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 00f8c4c7acec790d9982c786abe8f51be383770c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-a-workflow-project"></a>워크플로 프로젝트 만들기
 워크플로, [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 워크플로 서비스, 사용자 지정 활동 및 사용자 지정 활동 디자이너는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 템플릿을 사용하여 만들 수 있습니다. 이 단원에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 제공되는 프로젝트 템플릿을 사용하여 라이브러리 및 응용 프로그램을 만드는 방법에 대해 설명합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/27/2017
   
  마지막 항목에서는 워크플로 활동, 디자이너, 서비스 또는 그 밖의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 항목을 기존 워크플로 프로젝트 또는 다른 프로젝트에 추가하는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [방법: 워크플로 콘솔 응용 프로그램 만들기](../workflow-designer/how-to-create-a-workflow-console-application.md)  
  워크플로 콘솔 응용 프로그램을 만드는 방법에 대해 설명합니다.  
   

@@ -20,11 +20,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 655aea7bed7e61bd37f30240d02a8214b9ff23ca
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3d0f0a2162c4144c6a9fd67650d467b9828a3add
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-your-first-vsto-add-in-for-powerpoint"></a>연습: PowerPoint용 첫 VSTO 추가 기능 만들기
   이 연습에서는 Microsoft Office PowerPoint용 VSTO 추가 기능을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 열려 있는 프레젠테이션에 관계없이 응용 프로그램 자체에서 사용할 수 있습니다. 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
 -   PowerPoint의 개체 모델을 사용하여 각각의 새 슬라이드에 텍스트 상자를 추가하는 코드 작성  
   
--   프로젝트를 빌드 및 실행하여 테스트  
+-   테스트를 위해 프로젝트 빌드 및 실행  
   
 -   VSTO 추가 기능이 개발 컴퓨터에서 더 이상 자동으로 실행되지 않도록 하기 위해 프로젝트 정리  
   
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="writing-code-that-adds-text-to-each-new-slide"></a>각각의 새 슬라이드에 텍스트를 추가하는 코드 작성  
  다음 작업으로, ThisAddIn 코드 파일에 코드를 추가합니다. 새 코드는 PowerPoint의 개체 모델을 사용하여 각각의 새 슬라이드에 텍스트 상자를 추가합니다. 기본적으로 ThisAddIn 코드 파일에는 다음과 같은 생성된 코드가 포함되어 있습니다.  
   
--   `ThisAddIn` 클래스의 부분 정의. 이 클래스는 코드의 진입점을 제공하고 PowerPoint의 개체 모델에 대한 액세스를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요. `ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
+-   `ThisAddIn` 클래스의 부분 정의. 이 클래스는 코드의 진입점을 제공하고 PowerPoint의 개체 모델에 대한 액세스를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다. `ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
   
 -   `ThisAddIn_Startup` 및 `ThisAddIn_Shutdown` 이벤트 처리기. 이러한 이벤트 처리기는 PowerPoint에서 VSTO 추가 기능을 로드하고 언로드할 때 호출됩니다. 이러한 이벤트 처리기를 사용하여 VSTO 추가 기능이 로드될 때 VSTO 추가 기능을 초기화하고 VSTO 추가 기능이 언로드될 때 VSTO 추가 기능에서 사용하는 리소스를 정리할 수 있습니다. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요.  
   
@@ -92,7 +93,7 @@ ms.lasthandoff: 10/31/2017
   
  각각의 새 슬라이드를 수정하기 위해 이전 코드 예제에서는 다음 개체를 사용합니다.  
   
--   `ThisAddIn` 클래스의 `Application` 필드. `Application` 필드는 PowerPoint의 현재 인스턴스를 나타내는 <xref:Microsoft.Office.Interop.PowerPoint.Application> 개체를 반환합니다.  
+-   `Application` 클래스의 `ThisAddIn` 필드. `Application` 필드는 PowerPoint의 현재 인스턴스를 나타내는 <xref:Microsoft.Office.Interop.PowerPoint.Application> 개체를 반환합니다.  
   
 -   <xref:Microsoft.Office.Interop.PowerPoint.EApplication_Event.PresentationNewSlide> 이벤트에 대한 이벤트 처리기의 `Sld` 매개 변수입니다. `Sld` 매개 변수는 새 슬라이드를 나타내는 <xref:Microsoft.Office.Interop.PowerPoint.Slide> 개체입니다. 자세한 내용은 참조 [PowerPoint 솔루션](../vsto/powerpoint-solutions.md)합니다.  
   
@@ -123,7 +124,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="next-steps"></a>다음 단계  
  기본적인 PowerPoint용 VSTO 추가 기능을 만들었으므로 다음 항목에서 VSTO 추가 기능을 개발하는 방법에 대해 자세히 알아볼 수 있습니다.  
   
--   PowerPoint용 VSTO 추가 기능에서 수행할 수 있는 일반적인 프로그래밍 작업. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+-   PowerPoint용 VSTO 추가 기능에서 수행할 수 있는 일반적인 프로그래밍 작업. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
 -   PowerPoint 개체 모델 사용. 자세한 내용은 참조 [PowerPoint 솔루션](../vsto/powerpoint-solutions.md)합니다.  
   

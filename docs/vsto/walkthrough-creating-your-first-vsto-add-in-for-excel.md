@@ -20,11 +20,12 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3d22d5b80186bf3117980cd8059ac9431bac5522
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a0009e47f068cbc6b1bfead6fabee1d95a63422d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-your-first-vsto-add-in-for-excel"></a>연습: Excel용 첫 VSTO 추가 기능 만들기
   이 소개용 연습에서는 Microsoft Office Excel의 응용 프로그램 수준 추가 기능을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 열려 있는 통합 문서에 관계없이 응용 프로그램 자체에서 사용할 수 있습니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="writing-code-to-add-text-to-the-saved-workbook"></a>저장된 통합 문서에 텍스트를 추가하기 위한 코드 작성  
  다음 작업으로, ThisAddIn 코드 파일에 코드를 추가합니다. 새 코드에서는 Excel의 개체 모델을 사용하여 현재 워크시트의 첫 행에 상용구 텍스트를 삽입합니다. 현재 워크시트는 사용자가 통합 문서를 저장할 때 열려 있는 워크시트입니다. 기본적으로 ThisAddIn 코드 파일에는 다음과 같은 생성된 코드가 포함되어 있습니다.  
   
--   `ThisAddIn` 클래스의 부분 정의. 이 클래스는 코드의 진입점을 제공하고 Excel의 개체 모델에 대한 액세스를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요. `ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
+-   `ThisAddIn` 클래스의 부분 정의. 이 클래스는 코드의 진입점을 제공하고 Excel의 개체 모델에 대한 액세스를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다. `ThisAddIn` 클래스의 나머지 부분은 수정해서는 안 되는 숨김 코드 파일에서 정의됩니다.  
   
 -   `ThisAddIn_Startup` 및 `ThisAddIn_Shutdown` 이벤트 처리기. 이러한 이벤트 처리기는 Excel에서 VSTO 추가 기능을 로드하고 언로드할 때 호출됩니다. 이러한 이벤트 처리기를 사용하여 VSTO 추가 기능이 로드될 때 VSTO 추가 기능을 초기화하고 추가 기능이 언로드될 때 추가 기능에서 사용하는 리소스를 정리할 수 있습니다. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요.  
   

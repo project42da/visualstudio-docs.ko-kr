@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa74884edc5f0dea16d95fc5f177323da1fab6ab
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 3cf5c9d448d7e637344ee3dd5741871f5c177fdb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-xml-data"></a>XML 데이터 사용
 XML 및 관련 기술은 [!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)] Visual Studio에서 데이터가 처리되는 방식에 중요한 역할을 합니다. Visual Studio에 포함된 도구와 기능을 사용하면 보다 쉽게 XML, XSLT 및 XML 스키마에 대한 작업을 수행할 수 있습니다.  
@@ -47,7 +48,7 @@ XML 및 관련 기술은 [!INCLUDE[msCoName](../xml-tools/includes/msconame_md.m
 > [!NOTE]
 >  Professional 및 Team Edition에서 XSLT를 디버깅할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XML 편집기](../xml-tools/xml-editor.md)  
  XML 편집기를 소개합니다.  
   

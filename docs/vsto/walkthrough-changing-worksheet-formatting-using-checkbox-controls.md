@@ -19,11 +19,12 @@ caps.latest.revision: "70"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f10b0ed77dc9d5f97b6fc2fc4f218c86dafee41
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e1729a7921f72df07439261cb054fe30770b24d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-changing-worksheet-formatting-using-checkbox-controls"></a>연습: CheckBox 컨트롤을 사용하여 워크시트 서식 변경
   이 연습에서는 Microsoft Office Excel 워크시트에서 확인란을 사용 하 여 서식을 변경 하는 기본적인 보여 줍니다. 만들고 프로젝트에 코드 추가 Visual Studio에서 Office 개발 도구를 사용 합니다. 결과 전체 샘플을 보려면 Excel 컨트롤 샘플을 참조 [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)합니다.  
@@ -72,21 +73,21 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**applyBoldFont**|  
+    |**이름**|**applyBoldFont**|  
     |**텍스트**|**굵게**|  
   
 5.  두 번째 확인란을 위 또는 주변 셀에 끌어 놓고 **B4** 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**applyItalicFont**|  
+    |**이름**|**applyItalicFont**|  
     |**텍스트**|**기울임꼴**|  
   
 6.  세 번째 확인란을 위 또는 주변 셀에 끌어 놓고 **B6** 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**applyUnderlineFont**|  
+    |**이름**|**applyUnderlineFont**|  
     |**텍스트**|**밑줄**|  
   
 7.  CTRL 키를 누른 채 모든 세 확인란 컨트롤을 선택 합니다.  
@@ -116,7 +117,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**텍스트 글꼴**|  
+    |**이름**|**텍스트 글꼴**|  
     |**Value2**|**이 텍스트의 서식을 변경 하려면이 확인란을 클릭 합니다.**|  
   
  그런 다음 옵션을 선택할 때 텍스트의 서식을 지정 하려면 코드를 작성 합니다.  

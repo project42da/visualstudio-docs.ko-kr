@@ -24,11 +24,12 @@ caps.latest.revision: "53"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 13da2a068348478be8511e1c5624059b0d063bac
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6a0f2e0b87e791618477ff6e11c9e180793d5495
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="features-available-by-office-application-and-project-type"></a>Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능
   Visual Studio에는 다음과 같은 형식을 비롯하여 Microsoft Office 응용 프로그램에 대한 다양한 비즈니스 시나리오를 지원하는 몇 가지 프로젝트 템플릿 형식이 있습니다.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
 |프로젝트 형식|Microsoft Office 응용 프로그램|  
 |-------------------|----------------------------------|  
 |문서 수준 사용자 지정|Excel<br /><br /> Word|  
-|VSTO 추가 기능|Excel<br /><br /> InfoPath(InfoPath 2013 및 InfoPath 2010만 해당)<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 프로젝트<br /><br /> Visio<br /><br /> Word<br /><br /> Excel|  
+|VSTO 추가 기능|Excel<br /><br /> InfoPath(InfoPath 2013 및 InfoPath 2010만 해당)<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 프로젝트<br /><br /> Visio<br /><br /> 단어<br /><br /> Excel|  
   
 ## <a name="features-available-in-different-project-types"></a>다양한 프로젝트 형식에서 사용할 수 있는 기능  
  다음 표에서는 각 기능을 제공하는 프로젝트 형식을 보여 줍니다.  

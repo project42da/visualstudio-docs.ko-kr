@@ -11,11 +11,12 @@ ms.assetid: c11888e0-31b1-44cc-9037-98d3f8b3623b
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2dd0ef0db74a0ee723c7cd09bd8118e646b8ba3f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8e23dfa2b482a16d70ef71614ba35f9b20523aeb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-a-field-property-or-local-in-visual-basic"></a>Visual Basic의 필드, 속성 또는 로컬 생성
 **:** 즉시 이전에 선언 되지 않은 필드, 속성 또는 로컬에 대 한 코드를 생성할 수 있습니다. 

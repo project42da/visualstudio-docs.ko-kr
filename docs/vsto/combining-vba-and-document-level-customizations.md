@@ -29,11 +29,12 @@ caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b7dd65878844e5c903b18c08e6dd5455f3dccb91
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e8c9a3e0abdf478d6280795cd17b9b9a0bea0a13
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="combining-vba-and-document-level-customizations"></a>VBA 및 문서 수준 사용자 지정 결합
   Microsoft Office Word 또는 Microsoft Office Excel의 문서 수준 사용자 지정의 일부인 문서에서 VBA(Visual Basic for Applications) 코드를 사용할 수 있습니다. 사용자 지정 어셈블리에서 문서의 VBA 코드를 호출하거나, 문서의 VBA 코드에서 사용자 지정 어셈블리의 코드를 호출할 수 있도록 프로젝트를 구성할 수 있습니다.  
@@ -246,7 +247,7 @@ GetManagedClass(pdispInteropObject Object) As Object
 ## <a name="troubleshooting"></a>문제 해결  
  다음 표에는 몇 가지 일반적인 오류와 해당 오류를 해결하기 위한 제안 사항이 나와 있습니다.  
   
-|오류|제안 해결 방법|  
+|Error|제안 해결 방법|  
 |-----------|----------------|  
 |**EnableVbaCallers** 또는 **ReferenceAssemblyFromVbaProject** 속성을 설정한 후 문서에 VBA 프로젝트가 포함되어 있지 않다는 오류 메시지가 표시되거나 문서에서 VBA 프로젝트에 액세스할 수 있는 권한이 없습니다.|프로젝트의 문서에 VBA 매크로가 하나 이상 포함되어 있고, VBA 프로젝트를 실행하는 데 충분한 신뢰가 있으며, VBA 프로젝트가 암호로 보호되지 않는지 확인합니다.|  
 |설정한 후의 **EnableVbaCallers** 또는 **ReferenceAssemblyFromVbaProject** 없다는 오류 메시지가 속성은 <xref:System.Runtime.InteropServices.GuidAttribute> 선언이 없거나 손상 되었습니다.|<xref:System.Runtime.InteropServices.GuidAttribute> 선언이 프로젝트의 AssemblyInfo.cs 또는 AssemblyInfo.vb 파일에 있으며 이 특성이 유효한 GUID로 설정되어 있는지 확인합니다.|  

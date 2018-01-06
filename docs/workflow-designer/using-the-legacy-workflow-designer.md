@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: eda078bdfc0eae8861ac4e70b0f1f73a399f994c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7faec3b7a6bf33886928034e1f68ab31c7a60b03
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-legacy-workflow-designer"></a>레거시 워크플로 디자이너 사용
 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 또는 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]를 대상으로 하려는 경우 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]에서 제공하는 레거시 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 사용할 수 있습니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/27/2017
 |자동 스크롤|워크플로가 큰 경우 디자인 화면의 가시 영역을 바깥으로 활동을 배치할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 활동을 배치할 위치와 가장 가까운 디자인 화면의 가장자리 쪽으로 활동을 끌 수 있습니다. 그러면 디자인 화면 뷰가 자동으로 그 방향으로 이동합니다.|  
 |스마트 태그|완전히 구성되지 않거나 올바르지 않게 구성된 활동은 느낌표 아이콘으로 표시됩니다. 이 아이콘을 클릭하면 해당 활동에 대한 구성 요구 사항 보여 주는 드롭다운 목록이 나타납니다. 그런 다음 사용할 수는 **속성** 창에서 작업을 적절 하 게 구성할 수 있습니다. 활동의 모든 속성이 올바르게 구성되면 느낌표 아이콘이 사라집니다.|  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Visual Studio 워크플로 창(레거시)](../workflow-designer/visual-studio-workflow-windows-legacy.md)  
   
  [레거시 워크플로 프로젝트 만들기](../workflow-designer/creating-legacy-workflow-projects.md)  

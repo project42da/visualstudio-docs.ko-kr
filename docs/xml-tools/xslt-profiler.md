@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7f4dc0ee25ec338c93a9fd4bfcecb96126477f9d
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 7523043e6d8f4acdff983de5d95fd9fd55d49504
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xslt-profiler"></a>XSLT 프로파일러
 XSLT 프로파일러는 XSLT 문서를 개발하고 디버깅하는 데 도움이 되는 성능 분석 프로파일러 도구입니다. 개발자는 XSLT 프로파일러를 사용하여 자세한 XSLT 성능 보고서를 만들어 XSLT 코드의 성능 관련 문제를 측정 및 평가할 수 있습니다. XSLT 프로파일러에는 최대 성능을 요구하는 XSLT 기반 응용 프로그램에 필수적인 XSL 및 XSLT 스타일시트 최적화에 대한 유용한 힌트가 포함되어 있습니다.  

@@ -14,16 +14,17 @@ caps.latest.revision: "9"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 91ce5811be2aae3744afb7444ab35a9a3da54a20
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 5e82bde3e7d30fd0516deb4f79ff89bb77d19709
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-activity-designers"></a>활동 디자이너 사용
 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에는 활동 및 워크플로를 생성할 때 사용할 수 있는 여러 가지 시스템 제공 활동이 포함되어 있습니다. 이 단원에서는 사용할 수 있는 시스템 제공 활동 및 디자이너의 범주에 대해 설명합니다. 이러한 각 범주의 개별 활동 및 개별 디자이너에 대한 항목에서는 해당 활동의 역할과 사용 방법에 대한 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [제어 흐름](../workflow-designer/control-flow-activity-designers.md)  
  워크플로 내에서 흐름을 제어하는 데 사용되는 활동 디자이너  
   

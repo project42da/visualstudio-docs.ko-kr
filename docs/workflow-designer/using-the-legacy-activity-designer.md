@@ -18,11 +18,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 65510d727fdf0640ca8efa646a14d0814951cd4b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d8288db6ddca4041a409b435ccd730d0b15b013b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-legacy-activity-designer"></a>레거시 활동 디자이너 사용
 이 항목에서는 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에서 활동 디자이너를 사용하는 방법에 대해 설명합니다. 레거시 디자이너는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 하는 경우에 사용합니다.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 10/27/2017
   
 |속성|설명|  
 |--------------|--------------|  
-|**Name**|활동 이름입니다.|  
+|**이름**|활동 이름입니다.|  
 |**기본 클래스**|활동이 파생되는 기본 클래스입니다. 기본 클래스는 [SequenceActivity](http://go.microsoft.com/fwlink?LinkID=65020)합니다. 에 **속성** 창 클릭는 **기본 클래스** 줄임표 **[...]**  에서 다른 기본 클래스를 선택 하 고 [찾아.NET 유형 선택 대화 상자 (레거시)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md)합니다.|  
 |**설명**|활동의 사용자 정의 설명입니다.|  
 |**사용**|로 설정 **True** 활동 실행 및 유효성 검사 가능 하도록 기본적으로 합니다. 로 설정 **False** 를 활동 실행 및 유효성 검사를 사용 하지 않도록 설정 합니다. 활동 실행 및 유효성 검사에 대 한 정보를 참조 하십시오. [워크플로 활동 개발](http://go.microsoft.com/fwlink?LinkID=65024)합니다.|  

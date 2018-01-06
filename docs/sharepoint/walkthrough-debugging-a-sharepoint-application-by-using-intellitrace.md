@@ -21,11 +21,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a020b82dccd1491e0381bee8ff104b944d5cf7b0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 34ee1ca7d62a661f915edba1adc22c18f90256b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-debugging-a-sharepoint-application-by-using-intellitrace"></a>연습: IntelliTrace를 사용하여 SharePoint 응용 프로그램 디버깅
   IntelliTrace를 사용 하 여 SharePoint 솔루션을 보다 쉽게 디버깅할 수 있습니다. 기존 디버거는 현재 시점에서 스냅숏을 솔루션을 제공합니다. 그러나 솔루션에서 발생 한 이전 이벤트와 발생 했으며 코드를 탐색 하는 컨텍스트를 검토 하려면 IntelliTrace를 사용할 수 있습니다.  

@@ -18,11 +18,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 46891daa7a91ddc842c9fe37022075dfce092861
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 645bb6329b818b961475bdbfbcc4234c9b2586c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharepoint-development-walkthroughs"></a>SharePoint 개발 연습
   다음 연습에는 개발 및 사용 하 여 SharePoint 솔루션을 배포 하는 방법을 보여 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  

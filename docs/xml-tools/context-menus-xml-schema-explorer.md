@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a2839b44af2156ab237bd2b88c0b4c77e41f4b82
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 739dff217b59bd9424594c4049c765ad5145d634
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="context-menus-xml-schema-explorer"></a>상황에 맞는 메뉴(XML 스키마 탐색기)
 다음의 상황에 맞는 메뉴 항목을 사용하여 스키마 관련 검색 및 기타 작업을 수행할 수 있습니다.  

@@ -20,11 +20,12 @@ caps.latest.revision: "31"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5ce726d9d86bd57e5cf245010212545f0055c8ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 508557ab96747327e090bfa12b118a1a39ad9bbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>게시 페이지, 프로젝트 디자이너(Visual Studio에서는 Office 개발)
   **프로젝트 디자이너** 의 **게시** 페이지를 통해 배포를 위한 속성을 구성합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="uielement-list"></a>UI 요소 목록  
  **폴더 위치 게시(웹 사이트, ftp 서버 또는 파일 경로)**  
- 필수 요소.  
+ 필수.  
   
  게시 폴더 위치는 Visual Studio가 빌드에서 매니페스트, 어셈블리 및 기타 파일과 같은 솔루션 파일을 복사하는 디렉터리입니다. 이 디렉터리에 쓰기 권한이 있어야 합니다.  
   
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
  기본적으로 게시 위치는 IIS를 설치한 경우 *http://localhost/projectname/* 이고, IIS를 설치하지 않은 경우 publish\ 디렉터리입니다.  
   
  **설치 폴더 URL**  
- 선택적 요소.  
+ 선택 사항입니다.  
   
  설치 폴더 URL은 최종 사용자가 사용자 지정을 설치하는 디렉터리입니다. 또한 솔루션에서 업데이트를 확인하는 데 사용하는 경로이기도 합니다. 경로는 게시 폴더 위치와 동일할 수 있지만 이것이 요구 사항은 아닙니다.  
   
@@ -106,7 +107,7 @@ ms.lasthandoff: 10/31/2017
  사용자 지정에 버전 번호를 설정합니다. 버전 번호가 변경되면 응용 프로그램이 업데이트로 게시됩니다. 이전에 게시된 버전을 덮어쓰지 않도록 빌드 프로세스 동안 각 버전에 대해 새 폴더가 만들어집니다. 게시 버전의 각 부분(**주**, **부**, **빌드**, **수정**)에는 최대 5개의 숫자가 포함될 수 있습니다.  
   
  **릴리스할 때마다 자동으로 수정 번호 증가**  
- 선택적 요소. 선택된 경우(기본값), 버전 번호의 **수정** 부분이 사용자 지정을 게시할 때마다 1씩 증가합니다. 그러면 사용자 지정이 업데이트로 게시됩니다.  
+ 선택 사항입니다. 선택된 경우(기본값), 버전 번호의 **수정** 부분이 사용자 지정을 게시할 때마다 1씩 증가합니다. 그러면 사용자 지정이 업데이트로 게시됩니다.  
   
  **지금 게시**  
  현재 설정을 사용하여 응용 프로그램을 게시합니다. **게시 마법사** 의 **마침**단추와 동일합니다.  

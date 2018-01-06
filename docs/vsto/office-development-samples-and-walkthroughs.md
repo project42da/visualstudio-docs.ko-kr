@@ -25,11 +25,12 @@ caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: cd90fbaf4e8f16d1975cbc540bedf2c1e26c018c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6e8af98ecf48c01a7c81afad54398afdfdc8456b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-development-samples-and-walkthroughs"></a>Office 개발 샘플 및 연습
   이 섹션에는 샘플 응용 프로그램, 예제 코드 및 구문, 구조 및 Microsoft Office 솔루션을 빌드하는 데 사용 하는 기술을 설명 하는 단계별 연습이 포함 되어 있습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]  
 >  Office 환경을 확장 하는 솔루션을 개발에 관심이 [여러 플랫폼](https://dev.office.com/add-in-availability)? 체크 아웃 새 [Office 추가 기능 모델](https://dev.office.com/docs/add-ins/overview/office-add-ins)합니다. Office 추가 기능에서 VSTO 추가 기능 및 솔루션에 비해 적을 있고 거의 모든 웹 프로그래밍 HTML5, JavaScript, CSS3 및 XML 등의 기술을 사용 하 여 빌드할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

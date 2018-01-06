@@ -14,11 +14,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: be208d526fdc9f1d6f434425e3931b0f0a6510f5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 314ff5252b426610b9a50327fe6754b2a953908c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sendandreceivereply-template-designer"></a>SendAndReceiveReply 템플릿 디자이너
 **SendAndReceiveReply** 서식 파일의 쌍을 만드는 데 사용 되 미리 구성 된 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 내에서 활동을 <xref:System.Activities.Statements.Sequence> 요청/응답 메시지 교환의 일환으로 상관 관계에 있는 활동 클라이언트에서 패턴입니다.  

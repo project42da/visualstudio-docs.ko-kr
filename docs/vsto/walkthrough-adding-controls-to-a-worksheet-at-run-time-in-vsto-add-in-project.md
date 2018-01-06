@@ -20,11 +20,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bae6ff23763300a4baa748479c609217123c765c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 37da15cce48bd16e022db42fa8a08a2b9633b5fc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project"></a>연습: 런타임에 VSTO 추가 기능 프로젝트에서 워크시트에 컨트롤 추가
   Excel VSTO 추가 기능을 사용하여 열려 있는 워크시트에 컨트롤을 추가할 수 있습니다. 이 연습에서는 리본 메뉴를 사용하여 사용자가 <xref:Microsoft.Office.Tools.Excel.Controls.Button>, <xref:Microsoft.Office.Tools.Excel.NamedRange> 및 <xref:Microsoft.Office.Tools.Excel.ListObject>를 워크시트에 추가할 수 있도록 하는 방법을 보여 줍니다. 자세한 내용은 참조 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)합니다.  
@@ -76,21 +77,21 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**Button**|  
+    |**이름**|**Button**|  
     |**레이블**|**Button**|  
   
 6.  **group1**에 두 번째 확인란을 추가하고 다음 속성을 변경합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**NamedRange**|  
+    |**이름**|**NamedRange**|  
     |**레이블**|**NamedRange**|  
   
 7.  에 세 번째 확인란 추가 **group1**, 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**ListObject**|  
+    |**이름**|**ListObject**|  
     |**레이블**|**ListObject**|  
   
 ## <a name="adding-controls-to-the-worksheet"></a>워크시트에 컨트롤 추가  

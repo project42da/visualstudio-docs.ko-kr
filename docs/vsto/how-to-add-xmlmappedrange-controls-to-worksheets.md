@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0d83241e265db0e0ef0165cbc1615f23ea2ec5a2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 59c82cd16da614229cedd01bccd7a5057246299c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-xmlmappedrange-controls-to-worksheets"></a>방법: 워크시트에 XMLMappedRange 컨트롤 추가
   Microsoft Office Excel의 셀에는 XML 요소를 매핑할 때 자동으로 추가 된 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 컨트롤을 워크시트입니다.  

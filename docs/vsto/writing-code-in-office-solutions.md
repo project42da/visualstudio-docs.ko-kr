@@ -37,11 +37,12 @@ caps.latest.revision: "37"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2147076bd4aa90230d1216af19459efe71209d50
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5d6a400f5c1ee523e2bb3fd95be215af0e5ba371
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-code-in-office-solutions"></a>Office 솔루션에서 코드 작성
   Visual Studio의 Office 프로젝트에는 기타 유형의 프로젝트와 다른 코드 작성의 몇 가지 측면이 있습니다. 이러한 차이점 중 상당수는 Office 개체 모델이 관리 코드에 노출되는 방식과 관련되어 있으며, 다른 차이점은 Office 프로젝트의 디자인과 관련되어 있습니다.  
@@ -76,7 +77,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="understanding-the-generated-classes"></a>생성된 클래스 이해  
  Excel 및 Word의 문서 수준 프로젝트에서 생성된 클래스는 응용 프로그램 개체 모델의 최상위 개체와 유사합니다. 예를 들어 Word 문서 프로젝트의 생성된 `ThisDocument` 클래스는 Word 개체 모델의 <xref:Microsoft.Office.Interop.Word.Document> 클래스와 동일한 멤버를 제공합니다. 문서 수준 프로젝트에서 생성된 클래스에 대한 자세한 내용은 [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)을 참조하세요.  
   
- VSTO 추가 기능 프로젝트는 `ThisAddIn`이라는 생성된 클래스를 제공합니다. 이 클래스는 호스트 응용 프로그램의 개체 모델에 있는 클래스와 유사하지 않습니다. 대신 이 클래스는 VSTO 추가 기능 자체를 나타내며, 호스트 응용 프로그램의 개체 모델과 VSTO 추가 기능에 사용 가능한 다른 기능에 액세스하는 데 사용할 수 있는 멤버를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+ VSTO 추가 기능 프로젝트는 `ThisAddIn`이라는 생성된 클래스를 제공합니다. 이 클래스는 호스트 응용 프로그램의 개체 모델에 있는 클래스와 유사하지 않습니다. 대신 이 클래스는 VSTO 추가 기능 자체를 나타내며, 호스트 응용 프로그램의 개체 모델과 VSTO 추가 기능에 사용 가능한 다른 기능에 액세스하는 데 사용할 수 있는 멤버를 제공합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
  Office 프로젝트의 모든 생성된 클래스에는 `Startup` 및 `Shutdown` 이벤트 처리기가 포함되어 있습니다. 코드 작성을 시작하려면 일반적으로 이러한 이벤트 처리기에 코드를 추가합니다. VSTO 추가 기능을 초기화하기 위해 `Startup` 이벤트 처리기에 코드를 추가할 수 있습니다. VSTO 추가 기능에서 사용하는 리소스를 정리하기 위해 `Shutdown` 이벤트 처리기에 코드를 추가할 수 있습니다. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요.  
   

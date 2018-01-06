@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d549afb96465590a21e516f649d860f23f4056f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8a0072df206fcdfc27966632e3801316bcfb7274
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-evaluate-an-xpath-expression"></a>방법: XPath 식 계산
 된 XPath 식을 계산할 수 있습니다는 **간략 한 조사식** 대화 상자. XPath 식은 W3C XPath 1.0 권장 사항에 따라 유효한 식이어야 합니다. 현재 XSLT 컨텍스트-즉,는 `self::node()` 에서 노드는 **지역** 창-XPath 식에 대 한 계산 컨텍스트를 제공 합니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: fa0276e284f84eb6514fc407c9ce9be9cf24d8c4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c87180f1f1c0b2c578977021b6a9511e629d10bd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-definition-dialog-box"></a>콘텐츠 정의 대화 상자
 **콘텐츠 정의** 에 대화 상자를 사용 하는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 구성 하는 **콘텐츠** 의 속성은 <xref:System.ServiceModel.Activities.Send>, <xref:System.ServiceModel.Activities.Receive>, <xref:System.ServiceModel.Activities.SendReply>, 및 <xref:System.ServiceModel.Activities.ReceiveReply> 작업을 합니다. [!INCLUDE[crabout](../test/includes/crabout_md.md)]이 상자를 사용 하는 activity designer 참조는 [보낼](../workflow-designer/send-activity-designer.md), [수신](../workflow-designer/receive-activity-designer.md), [ReceiveAndSendReply](../workflow-designer/receiveandsendreply-template-designer.md), 및 [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) 항목입니다.  

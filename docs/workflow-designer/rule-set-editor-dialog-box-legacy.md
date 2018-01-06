@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 6ac342921696cb2a88426e2fd1f1ddee79e9341c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 1c0b55f1539526e9386df2d6de050c14fb8f59cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>규칙 집합 편집기 대화 상자(레거시)
 이 항목에서는 설명 사용 하는 방법을 **규칙 집합 편집기** 대화 상자에서 레거시 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]합니다. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/27/2017
 |**규칙 추가**|규칙 집합에 새 규칙 정의를 추가합니다.|  
 |**삭제**|선택한 규칙을 규칙 집합에서 삭제합니다.|  
 |**체인**|규칙 집합에 사용할 전방 연결의 형식을 지정합니다. 사용 가능한 옵션은 다음과 같습니다.<br /><br /> -   **전체 연결**, 모든 전방 연결 메커니즘을 사용 하도록 지정: 암시적, 메서드 특성 지정 및 사용 하 여 명시적는 **업데이트** 함수입니다.<br />-   **순차적**, 전방 연결을 사용 하지 않도록 지정 합니다.<br />-   **명시적 업데이트만**, 전방 연결에 수행 하도록 지정 **업데이트** 동작 합니다.<br /><br /> 전방 연결 하는 방법에 대 한 자세한 내용은 참조 [PolicyActivity 활동 사용](http://go.microsoft.com/fwlink?LinkID=65004)합니다.|  
-|**Name**|규칙 집합 목록 열 머리글입니다. 규칙 목록을 이름별로 정렬하려면 클릭합니다.|  
+|**이름**|규칙 집합 목록 열 머리글입니다. 규칙 목록을 이름별로 정렬하려면 클릭합니다.|  
 |**우선 순위**|규칙 집합 목록 열 머리글입니다. 규칙 목록을 우선 순위별로 정렬하려면 클릭합니다.|  
 |**재평가**|규칙 집합 목록 열 머리글입니다. 규칙 목록을 재계산 형식별로 정렬하려면 클릭합니다.|  
 |**규칙 미리 보기**|규칙 집합 목록 열 머리글입니다. 규칙 목록을 규칙의 조건 및 작업 미리 보기별로 정렬하려면 클릭합니다.|  

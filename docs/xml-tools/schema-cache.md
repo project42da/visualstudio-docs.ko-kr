@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e1b8a1e19d69b1cfd2f88551556820f94e64c06a
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 77e0557e57831348d0736ca8d8d25189c631e010
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="schema-cache"></a>스키마 캐시
 XML 편집기에서는 %InstallRoot%\Xml\Schemas 디렉터리에 있는 스키마 캐시를 제공합니다. 스키마 캐시는 컴퓨터의 모든 사용자에 전체적으로 적용되며 IntelliSense 및 XML 문서 유효성 검사에 사용되는 표준 XML 스키마를 포함합니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 478bd6d27d6e4ef0fe75891d95cdc4b3258a74e8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b15c9fbf2815132ac4ad84e3b321bb22db199ed2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-office-solutions"></a>Office 솔루션 개발
   Visual Studio에서 Office 개발자 도구를 사용하여 프로젝트를 디자인하고 프로젝트 파일을 설정한 후 코드와 사용자 지정 UI(사용자 인터페이스)의 구현에 집중하기 시작할 수 있습니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
 |[Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)|문서 수준 사용자 지정 및 관련된 프로그래밍 작업의 프로그래밍 모델에 대해 개괄적으로 설명합니다.|  
 |[Office UI 사용자 지정](../vsto/office-ui-customization.md)|VSTO 추가 기능과 문서 수준 사용자 지정을 사용하여 Office 응용 프로그램의 UI를 사용자 지정할 수 있는 다양한 방법에 대해 설명합니다.|  
 |[Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)|문서 수준 사용자 지정에서 데이터를 컨트롤에 바인딩하거나 데이터를 캐싱하는 것과 같이 Office 솔루션에서 데이터로 작업할 수 있는 다양한 방법에 대해 설명합니다.|  
-|[자동 저장 Office 솔루션에 미치는 영향](./how-autosave-impacts-office-solutions.md)|자동 저장을 사용 하는 경우 Office 솔루션에 수행 해야 하는 조정에 설명 합니다.|
+|[자동 저장이 Office 솔루션에 미치는 영향](./how-autosave-impacts-office-solutions.md)|자동 저장을 사용 하는 경우 Office 솔루션에 수행 해야 하는 조정에 설명 합니다.|
 |[Office 솔루션 문제 해결](../vsto/troubleshooting-office-solutions.md)|Office 솔루션을 만들 때 발생할 수 있는 일반적인 문제의 해결에 대한 팁을 제공합니다.|  
 |[Office의 스레딩 지원](../vsto/threading-support-in-office.md)|Office 솔루션에서 여러 스레드로 작업하는 방법에 대해 개괄적으로 설명합니다.|  
 |[Office 프로젝트의 접근성](../vsto/accessibility-in-office-projects.md)|Office 솔루션에서 사용할 수 있는 내게 필요한 옵션 기능에 대해 설명합니다.|  

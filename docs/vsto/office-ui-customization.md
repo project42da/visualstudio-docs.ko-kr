@@ -21,11 +21,12 @@ caps.latest.revision: "74"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7af3c33ed45a5e0b9678a41900280b1e665766ed
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c169edc949f195d416194ae3c3ee1111977f649b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-ui-customization"></a>Office UI 사용자 지정
   Visual Studio에서 Office 개발자 도구를 사용하여 Microsoft Office 응용 프로그램의 UI(사용자 인터페이스)를 사용자 지정할 수 있습니다. 이 항목에서는 다음 섹션에서 사용자 지정할 수 있는 UI 기능에 대해 설명합니다.  
@@ -49,13 +50,13 @@ ms.lasthandoff: 10/31/2017
   
 |기능|지원되는 프로젝트 형식|지원되는 Microsoft Office 응용 프로그램|  
 |-------------|-----------------------------|---------------------------------------------|  
-|작업창|문서 수준 사용자 지정|Excel<br /><br /> Word|  
-|사용자 지정 작업창|VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> Word<br /><br /> Excel|  
-|사용자 지정 리본 UI|문서 수준 사용자 지정<br /><br /> VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> Powerpoint<br /><br /> 프로젝트<br /><br /> Word<br /><br /> Visio|  
-|Backstage 보기|문서 수준 사용자 지정<br /><br /> VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)].<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 프로젝트<br /><br /> Word<br /><br /> Visio|  
+|작업창|문서 수준 사용자 지정|Excel<br /><br /> 단어|  
+|사용자 지정 작업창|VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 단어<br /><br /> Excel|  
+|사용자 지정 리본 UI|문서 수준 사용자 지정<br /><br /> VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> Powerpoint<br /><br /> 프로젝트<br /><br /> 단어<br /><br /> Visio|  
+|Backstage 보기|문서 수준 사용자 지정<br /><br /> VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)].<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 프로젝트<br /><br /> 단어<br /><br /> Visio|  
 |Outlook 양식 영역|VSTO 추가 기능|Outlook|  
 |문서의 컨트롤|문서 수준 사용자 지정<br /><br /> VSTO 추가 기능|Excel<br /><br /> Word|  
-|바로 가기 메뉴|문서 수준 사용자 지정<br /><br /> VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 프로젝트<br /><br /> Word<br /><br /> Visio<br /><br /> Excel|  
+|바로 가기 메뉴|문서 수준 사용자 지정<br /><br /> VSTO 추가 기능|Excel<br /><br /> [!INCLUDE[InfoPath_15_short](../vsto/includes/infopath-15-short-md.md)]<br /><br /> [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)]<br /><br /> Outlook<br /><br /> PowerPoint<br /><br /> 프로젝트<br /><br /> 단어<br /><br /> Visio<br /><br /> Excel|  
   
 ##  <a name="Actions"></a>작업창 및 사용자 지정 작업 창  
  작업창은 일반적으로 Microsoft Office 응용 프로그램에서 창의 한쪽에 도킹된 사용자 인터페이스 패널입니다. 거의 모든 Microsoft Office 응용 프로그램에는 기본 제공 작업창이 포함되어 있습니다. 작업창의 예는 Word의 도움말 작업창입니다.  

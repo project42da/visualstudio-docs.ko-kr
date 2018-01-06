@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 606924d197dc88b5dd5e400e1df8523e83e58259
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 5ee2965fab52915ec3f9651edd3dc51b2ed1c491
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="graph-view"></a>그래프 뷰
 그래프 뷰에서는 전역 스키마 노드 및 노드 간 관계를 그래픽으로 표현합니다. 그래프 뷰에서는 디자인 화면에서 스키마 집합의 레이아웃을 변경할 수 없습니다. 그래프 뷰에는 XML 스키마 디자이너 도구 모음과 이동 경로 탐색 막대도 들어 있습니다.  

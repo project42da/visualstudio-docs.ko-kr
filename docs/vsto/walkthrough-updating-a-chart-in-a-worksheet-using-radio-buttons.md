@@ -19,11 +19,12 @@ caps.latest.revision: "58"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 74bd005514fa2fe72450a95d84f38dd17a7b639f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 90427051f2dd3ca7a906e7b6716a33ddd538f726
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-updating-a-chart-in-a-worksheet-using-radio-buttons"></a>연습: 워크시트에서 라디오 단추를 사용하여 차트 업데이트
   이 연습에서는 Microsoft Office Excel 워크시트에서 라디오 단추를 사용 하 여 신속 하 게 옵션 간에 전환 하는 방법을 사용자에 게 부여의 기본 사항을 보여 줍니다. 이 경우 옵션은 차트의 스타일을 변경합니다.  
@@ -114,7 +115,7 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**dataChart**|  
+    |**이름**|**dataChart**|  
     |**HasLegend**|**false**|  
   
 ## <a name="adding-controls"></a>컨트롤 추가  
@@ -138,28 +139,28 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**columnChart**|  
+    |**이름**|**columnChart**|  
     |**텍스트**|**세로 막대형 차트**|  
   
 3.  사용자 정의 컨트롤을 두 번째 라디오 단추를 추가 하 고 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**barChart**|  
+    |**이름**|**barChart**|  
     |**텍스트**|**가로 막대형 차트**|  
   
 4.  사용자 정의 컨트롤에 세 번째 라디오 단추를 추가 하 고 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**lineChart**|  
+    |**이름**|**lineChart**|  
     |**텍스트**|**꺾은선형 차트**|  
   
 5.  사용자 정의 컨트롤에 네 번째 라디오 단추를 추가 하 고 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**areaBlockChart**|  
+    |**이름**|**areaBlockChart**|  
     |**텍스트**|**영역 블록 차트**|  
   
  다음으로, 라디오 단추를 클릭 하면 차트를 업데이트 하는 코드를 작성 합니다.  

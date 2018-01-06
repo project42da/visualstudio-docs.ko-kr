@@ -23,11 +23,12 @@ caps.latest.revision: "64"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 52583bdbf6edf4f2a698bc8662a0faf659841926
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: fcf026af4877ee2aefe17551763752d385b63493
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ribbon-overview"></a>리본 개요
   리본은 쉽게 찾을 수 있도록 관련된 명령을 구성하는 방법입니다. 명령은 리본 메뉴에 컨트롤로 표시됩니다. 컨트롤으로 구성 됩니다 *그룹* 응용 프로그램 창의 위쪽 가장자리에 있는 가로 스트립을 따라 합니다. 관련 그룹은 탭에서 구성됩니다.  

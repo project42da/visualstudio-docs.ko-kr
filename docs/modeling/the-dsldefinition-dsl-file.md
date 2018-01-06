@@ -12,11 +12,12 @@ caps.latest.revision: "22"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: e20d37d0e1162b49ca0fc92f92056b3541698454
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3e1f9bc81c0d13acd1fb9ac1a22f33262e4644f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 파일
 이 항목의 Dsl 프로젝트에 DslDefinition.dsl 파일의 구조를 설명 합니다.는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 솔루션을 정의 하는 *도메인 특정 언어*합니다. DslDefinition.dsl 파일 클래스와 함께 다이어그램, 도형, 커넥터, 직렬화 형식 도메인 특정 언어에서의 관계를 설명 하 고 **도구 상자** 도메인 특정 언어의 및 해당 편집 도구입니다. DSL 솔루션에서 이러한 도구를 정의하는 코드는 DslDefinition.dsl 파일의 정보에 따라 생성됩니다.  

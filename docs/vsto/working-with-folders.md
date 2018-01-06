@@ -21,11 +21,12 @@ caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6ffe3d79a9b7bd7e15d9281fe1500b256d4c649a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2336dbec82ac6ec7b78d1c1154f9686078bb4bc2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-folders"></a>폴더 사용
   <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> 클래스에는 폴더를 액세스, 작성 및 사용자 지정할 때 사용하는 메서드 및 속성이 포함되어 있습니다.  

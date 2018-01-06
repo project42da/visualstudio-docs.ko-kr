@@ -18,11 +18,12 @@ caps.latest.revision: "69"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1c35be3e79aea37b82e9ae46463582a0874e51a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3b3d731fd0c38eab376e99e0f143287507042652
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Office 솔루션 개발 개요(VSTO)
   Microsoft Office를 솔루션의 프런트 엔드로 사용하여 Word의 워드 프로세싱 기능, Excel의 데이터 분석 기능 및 Outlook의 전자 메일 관리 기능과 같은 익숙한 Microsoft Office 사용자 인터페이스 및 도구를 활용할 수 있습니다. Visual Studio에서 솔루션을 개발하여 Office 응용 프로그램을 사용자 지정하고 비즈니스 프로세스에 필요한 특정 기능을 추가할 수 있습니다. 예를 들어 편집 가능하거나 편집 가능하지 않게 만들 수 있는 기존 부분에서 계약을 구성하는 계약 생성기로 Word를 전환할 수 있습니다. Excel을 사용하여 다양한 프로젝트에 대해 사용자 지정된 자동화된 예산 워크시트를 만들 수 있습니다. 또한 사용자가 Office 솔루션을 오프라인으로 전환하여 복잡한 솔루션을 웹 기반 아키텍처를 사용하는 경우보다 실용적으로 만들 수도 있습니다.  
@@ -73,7 +74,7 @@ ms.lasthandoff: 10/31/2017
   
  VSTO Office 솔루션에서 PIA를 사용하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
--   [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)  
+-   [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   
 -   [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md)  
   

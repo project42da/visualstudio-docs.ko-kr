@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 387b5420614fed3f4d5f956f5a91fe2ece70d53a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 83abd9f76f68ec4131840fb0ea58e9aeb93f30d4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation 활동 디자이너
 **InitializeCorrelation** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.ServiceModel.Activities.InitializeCorrelation> 보내거나 받기 전에 메시지 간의 상관 관계를 설정 하는 데 사용 되는 활동입니다.  

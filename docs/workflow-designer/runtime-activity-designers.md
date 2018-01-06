@@ -11,16 +11,17 @@ caps.latest.revision: "3"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: da5d71a36b39f47dc0a068e9aa25950687143f29
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a90e858a8eed0c6d1c92423b1f074bf51c01eb63
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="runtime-activity-designers"></a>런타임 활동 디자이너
 Runtime 활동 디자이너는 워크플로 활동을 지속하고 종료하는 데 사용됩니다. 이 단원의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 디자이너의 사용 방법에 대한 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [유지](../workflow-designer/persist-activity-designer.md)  
  <xref:System.Activities.Statements.Persist> 활동을 만들고 구성하는 데 사용됩니다.  
   

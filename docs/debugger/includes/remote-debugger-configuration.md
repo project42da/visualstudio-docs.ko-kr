@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 05a288a2d8dff776d8a5d3faea47b06d101f2ea3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: cfb41cf6274238fef2de9b74496a33fba110e04f
+ms.sourcegitcommit: fb73b56d45ebc0386cd4de1a706ba9e20c59daf1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 01/03/2018
 ---
 원격 컴퓨터에 관리 권한이 있어야 합니다.  
   
@@ -43,4 +43,4 @@ ms.lasthandoff: 10/27/2017
   
  디버깅 및 원격 디버거를 중지 해야 할 완료 되 면 클릭 **파일 > 종료** 창에 있습니다. 다시 시작할 수 있습니다는 **시작** 메뉴 또는 명령줄에서:  
   
- **\<Visual Studio 설치 디렉터리 > \Common7\IDE\Remote 디버거\\< x86, x64 또는 Appx\msvsmon.exe**합니다.  
+ **\<Visual Studio 설치 디렉터리 > \Common7\IDE\Remote 디버거\\< x86, x64 또는 Appx > \msvsmon.exe**합니다.  

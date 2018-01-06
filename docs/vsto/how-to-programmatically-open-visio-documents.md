@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4aa949d1ff2a8d9954c29314a85363d04d09b1a8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1b2a6c395ed6dbfb8265ac131dd4318b590bf92e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>방법: 프로그래밍 방식으로 Visio 문서 열기
   기존 Microsoft Office Visio 문서를 여는 방법은 두 가지가: Open 및 OpenEx 합니다. 인수는 호출자에 게 문서가 하는 방법을 지정할 수 있다는 점을 제외 하 고 OpenEx 방법은 Open 메서드와 동일 합니다.  

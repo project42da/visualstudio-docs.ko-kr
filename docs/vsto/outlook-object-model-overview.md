@@ -22,11 +22,12 @@ caps.latest.revision: "59"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0e8102cf760020b5584458ebd77052684a1b4af2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cffce10e443b2605e29d800cb271c4a96dc70359
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="outlook-object-model-overview"></a>Outlook 개체 모델 개요
   Microsoft Office Outlook용 VSTO 추가 기능을 개발하기 위해 Outlook 개체 모델에서 제공하는 개체를 조작할 수 있습니다. Outlook 개체 모델은 사용자 인터페이스의 항목을 나타내는 클래스 및 인터페이스를 제공합니다. 예를 들어 <xref:Microsoft.Office.Interop.Outlook.Application> 개체는 전체 응용 프로그램을 나타내고, <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> 개체는 메일 메시지 또는 기타 항목이 포함된 폴더를 나타내고, <xref:Microsoft.Office.Interop.Outlook.MailItem> 개체는 메일 메시지를 나타냅니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
   
 -   메일 메시지 또는 모임 요청과 같은 단일 항목의 내용을 표시하는 창에 액세스하는 데 사용할 수 있는 <xref:Microsoft.Office.Interop.Outlook._Application.Inspectors%2A> 속성  
   
- 인스턴스를 가져오려면는 <xref:Microsoft.Office.Interop.Outlook.Application> 개체의 응용 프로그램 필드를 사용 하는 `ThisAddIn` 프로젝트의에서 클래스. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+ 인스턴스를 가져오려면는 <xref:Microsoft.Office.Interop.Outlook.Application> 개체의 응용 프로그램 필드를 사용 하는 `ThisAddIn` 프로젝트의에서 클래스. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
 > [!NOTE]  
 >  Outlook 개체 모델 보호에 의해 차단 되는 메서드와 속성을 사용 하는 경우 보안 경고를 방지 하려면의 응용 프로그램 필드에서 Outlook 개체를 가져오기는 `ThisAddIn` 클래스입니다. 자세한 내용은 [Specific Security Considerations for Office Solutions](../vsto/specific-security-considerations-for-office-solutions.md)을 참조하십시오.  
@@ -95,7 +96,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="mapifolder-object"></a>MAPIFolder 개체  
  <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> 개체는 메일 메시지, 연락처, 작업 및 기타 항목을 포함하는 폴더를 나타냅니다. Outlook에서는 16개의 기본 제공 <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> 개체를 제공합니다.  
   
- 기본 <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> 개체는 <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> 열거형 값으로 정의됩니다. 예를 들면 다음과 같습니다.  
+ 기본 <xref:Microsoft.Office.Interop.Outlook.MAPIFolder> 개체는 <xref:Microsoft.Office.Interop.Outlook.OlDefaultFolders> 열거형 값으로 정의됩니다. 예를 들어 개체에 적용된  
   
  에 해당 하는 Microsoft.Office.Interop.Outlook.OlDefaultFolders.olFolderInbox는 **받은 편지함** Outlook의 폴더입니다.  
   

@@ -16,16 +16,17 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 413054698d241a1580a850c271e8710334c020f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f45aed7a9d49bb3803137aac3420a6a61c5de3aa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="user-interface-reference-office-development-in-visual-studio"></a>사용자 인터페이스 참조(Visual Studio에서 Office 개발)
   다음 사용자 인터페이스 요소는 Visual Studio의 Office 프로젝트 중 일부입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Visual Studio &#41;의 페이지, 프로젝트 디자이너 &#40; Office 개발을 게시](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)  
  Office 솔루션을 배포하기 위한 속성을 구성하기 위해 사용하는 속성 페이지에 대해 설명합니다.  
   

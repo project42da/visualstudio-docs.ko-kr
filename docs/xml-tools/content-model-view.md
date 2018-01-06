@@ -12,11 +12,12 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2991b31c387e959b055d30d37dd01cf79652adf7
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: 582082504b713988039af609d59150715f75ecfe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="content-model-view"></a>콘텐츠 모델 뷰
 콘텐츠 모델 뷰에서는 단순/복합 형식, 요소, 모델 그룹, 특성 및 특성 그룹을 포함하여 로컬 스키마 노드와 전역 스키마 노드는 물론 해당 구성 요소를 그래픽으로 표현할 수 있습니다. XML 주석과 처리 명령은 콘텐츠 모델 뷰에서 볼 수 없습니다. 콘텐츠 모델 뷰에 두 개의 패널:는 **작업 영역** 패널에 있는 노드의 목록을 포함 하는 [XML 스키마 디자이너 작업 영역](../xml-tools/xml-schema-designer-workspace.md), 및 스키마의 콘텐츠 모델을 볼 수 있는 디자인 화면 선택 된 노드는 **작업 영역** 패널입니다. 콘텐츠 모델 뷰에는 XML 스키마 디자이너 도구 모음과 이동 경로 탐색 막대도 들어 있습니다.  

@@ -13,11 +13,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 dev_langs: CSharp
-ms.openlocfilehash: 087d51eee11597b1e637ce860faecdd3a21ce7af
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: e635306deb8d26a41ddce1c59bf885cf96c4555b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-start-debugging-xslt"></a>방법: XSLT 디버깅 시작
 XSLT 디버거를 사용하여 XSLT 스타일시트 또는 XSLT 응용 프로그램을 디버깅할 수 있습니다. 디버깅할 때 코드를 한 단계씩 실행, 프로시저 단위로 실행 또는 코드를 종료하여 한 번에 한 줄씩 코드를 실행할 수 있습니다. XSLT 디버거와 다른 Visual Studio 디버거에서 코드를 단계별로 실행하는 기능을 사용하는 명령은 같습니다. 디버깅을 시작하면 XSLT 디버거에서 입력 문서와 XSLT 출력을 창에 표시합니다.  

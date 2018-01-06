@@ -25,11 +25,12 @@ caps.latest.revision: "56"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6f8842bd80832211f02532ca706416416325663b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d7fbbad8433df7dd36d8f09a13305da3e15430c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Limitations of Windows Forms Controls on Office Documents
   Microsoft Office Word 문서 또는 Microsoft Office Excel 워크시트에 추가 된 Windows Forms 컨트롤 및 Windows Forms에 추가 하는 Windows Forms 컨트롤 간의 차이가 있습니다. 추가한 경우에 예를 들어 한 <xref:Microsoft.Office.Tools.Word.Controls.Button> 등의 속성을 문서에 컨트롤 <xref:Microsoft.Office.Tools.Word.Controls.Button.Dock%2A>, <xref:Microsoft.Office.Tools.Word.Controls.Button.Anchor%2A>, 및 <xref:Microsoft.Office.Tools.Word.Controls.Button.TabIndex%2A> 예상 대로 작동 하지 않습니다.  

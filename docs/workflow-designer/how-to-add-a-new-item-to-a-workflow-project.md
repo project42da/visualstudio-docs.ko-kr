@@ -11,11 +11,12 @@ caps.latest.revision: "14"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: f748ce8ad7469d88ad2b50eb1704a8b979c1c636
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e2031f084b11f9879fd94f5d2e454e0966ed3787
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project"></a>방법: 워크플로 프로젝트에 새 항목 추가
 워크플로 프로젝트를 만든 후에는 워크플로 활동, 디자이너 및 다른 친숙한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 항목을 프로젝트에 추가할 수 있습니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a10bcadbffef1f67086263762f292765c932a986
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c2e405c988f07a373538e723b44acccc9838d853
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editing-xslt-style-sheets"></a>XSLT 스타일시트 편집
 XML 편집기를 사용하여 XSLT 스타일시트를 편집할 수 있습니다. 이 편집기에서는 IntelliSense, 개요, XML 조각 등의 기본 편집기 기능을 사용할 수 있습니다. 또한 XSLT에서 쉽게 개발할 수 있게 하는 새 기능도 있습니다.  

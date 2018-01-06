@@ -14,16 +14,17 @@ caps.latest.revision: "13"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5fd5d11d45ba4abdcc4f79e0369f47bfdbce0fd5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0ea166c2770e78482aa47c3fe903339e8e2501a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-the-workflow-designer"></a>워크플로 디자이너 사용
 이 단원에서는 기본 제공 디자이너와 몇몇 활동 디자이너에서 호스트되는 식 편집기를 사용하여 새로운 활동 및 워크플로 프로젝트를 만드는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [워크플로 프로젝트 만들기](../workflow-designer/creating-a-workflow-project.md)  
  이러한 템플릿을 사용하여 라이브러리를 만드는 방법에 대해 설명하는 항목입니다.  
   

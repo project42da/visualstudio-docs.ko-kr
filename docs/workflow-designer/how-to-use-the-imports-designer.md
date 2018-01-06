@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 8d6e530a82c1edfa221203b6c99f06151fe901af
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3873e444f3d9c68b632d52ab98bee07bf14af679
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-imports-designer"></a>방법: 가져오기 디자이너 사용
 가져오기 디자이너를 사용하여 식에서 사용할 형식의 네임스페이스를 입력할 수 있습니다. 과 거의 동일한는 **가져옵니다** 또는 **를 사용 하 여** Visual Basic.NET 및 C#, 가져오기 디자이너에 네임 스페이스 지정 키워드를 사용 하 간단히 식 대신에 정규화 된 형식 이름을 입력할 수 있습니다 버전 형식 이름입니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: babe684c0fd4eeec1a00e4f44868bfc0a67e5f9d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 07e028a3ac5018c8a9866a6aee061d679cff74a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="correlateson-definition-dialog-box"></a>CorrelatesOn 정의 대화 상자
 **CorrelatesOn** 에 대화 상자를 사용 하는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 편집 하는 <xref:System.ServiceModel.Activities.Receive.CorrelatesOn%2A> 속성의는 <xref:System.ServiceModel.Activities.Receive> 활동입니다. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][수신](../workflow-designer/receive-activity-designer.md) 항목입니다.  

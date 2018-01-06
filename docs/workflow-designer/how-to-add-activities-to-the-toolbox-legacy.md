@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 9b0dce8c2600d125a84044bef60957bd1bfa8b44
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: b7bc489c000cf2d5fa875859208aa631a839168d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-activities-to-the-toolbox-legacy"></a>방법: 도구 상자에 활동 추가(레거시)
 사용 하 여 워크플로 솔루션을 빌드할 때 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 를 대상으로 하는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)], 사용자 지정 활동을 워크플로 프로젝트에 추가할 수 있습니다 및 해당 디자이너에 배치는 **도구 상자** 에 대 한 쉬운 액세스 합니다. 작업을 직접 추가할 수도 수는 **도구 상자** 동적 연결 라이브러리 (DLL)입니다.  

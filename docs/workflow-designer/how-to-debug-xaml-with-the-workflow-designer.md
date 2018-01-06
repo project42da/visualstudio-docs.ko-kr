@@ -11,11 +11,12 @@ caps.latest.revision: "8"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: c73e053cc3e3dc53101595f00dcd8fd45da8abd7
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: uwp
+ms.openlocfilehash: 32144a651fe9178da8bc87a10377e2c4d086d398
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-debug-xaml-with-the-workflow-designer"></a>방법: 워크플로 디자이너로 XAML 디버그
 워크플로는 XAML로 정의됩니다. 워크플로의 UI 표현은 해당 워크플로를 정의하는 XAML 트리의 맨 위에 빌드됩니다. 디버깅 환경은 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]의 워크플로 디버깅과 비슷합니다. 예를 들어 XAML을 디버깅할 때 로컬, 조사식 및 스레드 창은 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 디버깅에서와 동일한 방식으로 작동합니다. 또한 XAML 디버깅 중의 호출 스택 보기는 워크플로에 대한 실행 흐름의 줄 기반 계층 보기입니다.  

@@ -11,16 +11,17 @@ caps.latest.revision: "7"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 2aa2383326682dcedbb0888f5b55d34e3894327c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 481d9e577989b1bd75cea22e0faab6d8a1cc64cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="messaging-activity-designers"></a>메시징 활동 디자이너
 메시징 활동 디자이너는 [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 응용 프로그램에서 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 메시지를 보내고 받는 메시징 활동을 만들고 구성하는 데 사용됩니다. [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]에는 다섯 가지 메시징 활동이 도입되었으며, [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]에는 두 가지 새로운 템플릿 디자이너가 있어 워크플로 내의 메시징을 관리할 수 있습니다. 이 단원의 항목 및 아래 표의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 및 템플릿 디자이너의 사용 방법에 대한 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |메시지 활동|설명|  
 |----------------------|-----------------|  

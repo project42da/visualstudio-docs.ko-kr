@@ -12,16 +12,17 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9091298155a0c8223df954c0c7b9ca17a3cf7f72
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: c770de8513d5e04c9c30654216382a0650363818
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-editor-tasks"></a>XML 편집기 작업
 이 단원에서는 XML 편집기를 사용하여 일반적인 작업을 수행하는 방법에 대해 설명합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [연습: XML 편집기 기능 사용](../xml-tools/walkthrough-using-xml-editor-features.md)  
  몇 가지 XML 편집기 기능을 사용하는 방법을 설명합니다.  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: b70e0c66813c474d5711538843da93a669df88d1
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f232d8e6c4a1dab9000b8f0e0f3037d083acbbef
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="while-activity-designer"></a>While 활동 디자이너
 <xref:System.Activities.Statements.While> 활동에 포함 된 활동을 실행 합니다. 해당 <xref:System.Activities.Statements.While.Body%2A> 동안 지정 된 <xref:System.Activities.Statements.While.Condition%2A> 계산 **true**합니다. 포함된 활동이 실행되지 않을 수도 있습니다. 포함된 활동이 적어도 한 번은 실행되도록 하려면 그 대신 <xref:System.Activities.Statements.DoWhile> 활동을 사용하세요.  

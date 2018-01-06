@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d4a51f3c0491f35f10d8266b4cb06d3de686e021
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 7a3da032000d5d286e8476673b3c53b993b18303
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-schema-designer-workspace"></a>XML 스키마 디자이너 작업 영역
 XML 스키마 디자이너(XSD 디자이너)는 XML 스키마를 탐색하는 데 사용되는 그래픽 도구입니다. 이외에 [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md), 찾아보기 및 XML 스키마 트리를 탐색 및 검색을 수행할 수 있습니다, XSD 디자이너에서는 XSD 스키마를 보다 자세히 탐색할 수 있는 세 가지 뷰를 제공 합니다. 시작 뷰는 XSD 디자이너의 시작 지점입니다. 시작 뷰에서 XSD 디자이너의 다른 뷰로 탐색하고 스키마 집합의 세부 정보를 확인할 수 있습니다. 그래프 뷰를 통해 스키마 집합 및 스키마 노드 간 관계를 간략하게 볼 수 있습니다. 콘텐츠 모델 뷰에서는 단순/복합 형식, 요소, 그룹, 특성 및 특성 그룹을 포함하여 로컬 스키마 노드와 전역 스키마 노드의 세부 정보를 그래픽으로 표현할 수 있습니다.  
@@ -45,7 +46,7 @@ XML 스키마 디자이너(XSD 디자이너)는 XML 스키마를 탐색하는 �
   
 -   바로 가기 키: 시작 뷰의 경우 Ctrl+1, 그래프 뷰의 경우 Ctrl+2, 콘텐츠 모델 뷰의 경우 Ctrl+3  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 -   [시작 뷰](../xml-tools/start-view.md)  
   

@@ -22,11 +22,12 @@ caps.latest.revision: "78"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: bd89a4cd713e4cdff22ffbbd570ee2e0bf60ef37
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3b01307811930ec865e2b38e899318dfdd99c74a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="word-object-model-overview"></a>Word 개체 모델 개요
   Visual Studio에서 Word 솔루션을 개발하는 경우 Word 개체 모델을 조작합니다. 이 개체 모델은 Word용 주 interop 어셈블리에 제공되고 <xref:Microsoft.Office.Interop.Word> 네임스페이스에서 제공되는 클래스 및 인터페이스로 구성됩니다.  
@@ -66,10 +67,10 @@ ms.lasthandoff: 10/31/2017
   
  Word 개체 모델 외에도 Visual Studio의 Office 프로젝트는 Word 개체 모델에서 일부 개체를 확장하는 *호스트 항목* 및 *호스트 컨트롤* 을 제공합니다. 호스트 항목 및 호스트 컨트롤은 확장되는 Word 개체처럼 동작하지만 데이터 바인딩 기능과 같은 추가 기능 및 추가 이벤트도 제공합니다. 자세한 내용은 [Automating Word by Using Extended Objects](../vsto/automating-word-by-using-extended-objects.md) 및 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)를 참조하세요.  
   
-### <a name="application-object"></a>Application 개체  
+### <a name="application-object"></a>응용 프로그램 개체입니다.  
  <xref:Microsoft.Office.Interop.Word.Application> 개체는 Word 응용 프로그램을 나타내며 다른 모든 개체의 부모입니다. 멤버는 일반적으로 전체 Word에 적용됩니다. 속성 및 메서드를 사용하여 Word 환경을 제어할 수 있습니다.  
   
- VSTO 추가 기능 프로젝트에서 <xref:Microsoft.Office.Interop.Word.Application> 클래스의 `Application` 필드를 사용하여 `ThisAddIn` 개체에 액세스할 수 있습니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+ VSTO 추가 기능 프로젝트에서 <xref:Microsoft.Office.Interop.Word.Application> 클래스의 `Application` 필드를 사용하여 `ThisAddIn` 개체에 액세스할 수 있습니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
  문서 수준 프로젝트에서 <xref:Microsoft.Office.Interop.Word.Application> 클래스의 <xref:Microsoft.Office.Tools.Word.Document.Application%2A> 속성을 사용하여 `ThisDocument` 개체에 액세스할 수 있습니다.  
   

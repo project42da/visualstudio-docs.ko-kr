@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9366e3439ed636a2c856ef26c858a7383002a0e6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a5ef93ab759f4e64607685d3d44fddfbf6c2c2dc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltentrypointgt-element-office-development-in-visual-studio"></a>&lt;entryPoint&gt; 요소 (Visual Studio에서 Office 개발)
   `entryPoint` 네임스페이스의 각 `vstav3` 요소는 이 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 응용 프로그램이 설치될 때 실행되어야 하는 사용자 지정 어셈블리를 식별합니다.  
@@ -45,12 +46,12 @@ ms.lasthandoff: 10/31/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`class`|필수 요소. 실행할 사용자 지정 어셈블리를 식별합니다. 이 특성의 구문은 *NamespaceName.ClassName*입니다.|  
+|`class`|필수. 실행할 사용자 지정 어셈블리를 식별합니다. 이 특성의 구문은 *NamespaceName.ClassName*입니다.|  
   
  `entryPoint` 에는 다음 요소가 있습니다.  
   
 ### <a name="assemblyidentity"></a>assemblyIdentity  
- 필수 요소. `assemblyIdentity` 네임스페이스의 `vstav3` 요소는 `assemblyIdentity` 응용 프로그램 매니페스트의 기존 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 요소를 참조합니다.  
+ 필수. `assemblyIdentity` 네임스페이스의 `vstav3` 요소는 `assemblyIdentity` 응용 프로그램 매니페스트의 기존 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 요소를 참조합니다.  
   
  역할 `assemblyIdentity` 및 해당 특성에 정의 되었는지 [&#60; assemblyIdentity &#62; 요소 &#40; ClickOnce 응용 프로그램 &#41; ](/visualstudio/deployment/assemblyidentity-element-clickonce-application).  
   

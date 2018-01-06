@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d8cc1bf4871ef91c5b08cb77963a70e422ee3cdc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ec34a6f93625fdb2cb8a1e5fcc5fb5c95d17653b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>방법: 모델에 엔터티 추가
   엔터티를 만들려면 Visual Studio에서 엔터티 컨트롤을 추가 **도구 상자** BDC 비즈니스 데이터 연결 () 디자이너에 끌어 합니다.  

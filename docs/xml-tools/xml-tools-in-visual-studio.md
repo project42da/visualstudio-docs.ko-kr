@@ -35,11 +35,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3786e74f9913400e7a95d962c8512d2263d6ae39
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 29407d3f8d95f815b588fff30a4e1268904eb54d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-tools-in-visual-studio"></a>Visual Studio의 XML 도구
 *Extensible Markup Language (XML)* 는 데이터를 설명 하는 형식을 제공 하는 태그 언어입니다. 이 언어를 사용하면 콘텐츠를 보다 정확하게 선언하고 여러 플랫폼 간에 보다 의미 있는 검색 결과를 얻을 수 있습니다. 또한 XML을 사용하는 경우 표시를 데이터 자체와 구분할 수 있습니다. 예를 들어 HTML에서는 태그를 사용하여 데이터를 굵게, 기울임꼴 등으로 표시하도록 브라우저에 명령하지만 XML에서는 태그를 사용하여 구/군/시 이름, 기온, 기압 등의 데이터만을 설명합니다. XML에서는 XSL(Extensible Stylesheet Language) 및 CSS(CSS 스타일시트)와 같은 스타일시트를 사용하여 브라우저에 데이터를 표시합니다. XML에서는 데이터가 표시 및 프로세스와 구분되므로 여러 스타일시트 및 응용 프로그램을 적용하여 데이터를 원하는 방식으로 표시 및 처리할 수 있습니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
   
  자세한 내용은 참조는 [XML 개발자 센터](http://go.microsoft.com/fwlink/?LinkID=100176), XML 개발자를 위한 최신 설명서, 기술 정보, 다운로드, 뉴스 그룹 및 기타 리소스를 제공 하는 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XML 데이터 작업](../xml-tools/working-with-xml-data.md)  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 데이터가 처리되는 방식과 관련하여 XML의 역할에 대해 설명합니다.  
   
@@ -71,7 +72,7 @@ ms.lasthandoff: 10/31/2017
  <xref:System.Xml.Serialization> 네임스페이스를 구성하는 클래스 및 기타 요소에 대해 설명하고 각 항목에 대해 보다 자세한 정보를 확인할 수 있는 링크를 제공합니다.  
   
 ## <a name="related-sections"></a>관련 단원  
- [XML 문서 개체 모델 (DOM)](/dotnet/standard/data/xml/xml-document-object-model-dom)  
+ [XML DOM(문서 개체 모델)](/dotnet/standard/data/xml/xml-document-object-model-dom)  
  <xref:System.Xml.XmlDocument> 관련 클래스가 W3C 문서 개체 모델(Core) 수준 1 및 수준 2 네임스페이스 지원 사양을 준수하는 방식에 대해 설명합니다.  
   
  [XmlReader 사용 하 여 XML 읽기](http://msdn.microsoft.com/en-us/3029834c-a27e-4331-b7aa-711924062182)  

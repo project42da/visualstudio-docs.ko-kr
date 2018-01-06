@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 64bac205a64eaf321bb0144d9f81edfa065b9029
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3d585c6019455fae5305a848ef62c74cfedf6b6e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="working-with-ranges"></a>범위 작업
   <xref:Microsoft.Office.Tools.Excel.NamedRange> 및 <xref:Microsoft.Office.Interop.Excel.Range> 클래스에는 범위가 있는 작업을 수행하는 데 사용하는 메서드 및 속성이 포함됩니다.  

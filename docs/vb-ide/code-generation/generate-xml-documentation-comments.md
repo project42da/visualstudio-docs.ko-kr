@@ -11,11 +11,12 @@ ms.assetid: d2025bd2-5984-4486-a61c-0a0933a735ea
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1291667c7acb47abe543d275549179abea0c8467
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: f975fa077fe64052b54875b07d029ece71e83372
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="generate-xml-documentation-comments-in-visual-basic"></a>Visual Basic의 XML 문서 주석 생성
 **:** 즉시 기본 선택된 된 요소를 문서화 하는 데 필요한 XML을 생성할 수 있습니다. 

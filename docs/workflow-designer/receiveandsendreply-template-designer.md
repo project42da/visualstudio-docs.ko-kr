@@ -14,11 +14,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: ef7b027eb82b149f3cffcd54c976e1be608c2190
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 932f4bb7718b77103bc85f4555a9be20f330667b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="receiveandsendreply-template-designer"></a>ReceiveAndSendReply 템플릿 디자이너
 **ReceiveAndSendReply** 서식 파일의 쌍을 만드는 데 사용 되 미리 구성 된 <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 내에서 활동을 <xref:System.Activities.Statements.Sequence> 요청/응답 메시지 교환의 일환으로 상관 관계에 있는 활동 서버에서 패턴입니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/27/2017
 |<xref:System.ServiceModel.Activities.SendReply.Content%2A>|False|받을 메시지 또는 매개 변수 콘텐츠를 지정합니다. <xref:System.ServiceModel.Activities.ReceiveMessageContent> 활동이거나 <xref:System.ServiceModel.Activities.ReceiveParametersContent> 활동일 수 있습니다. 옆에 있는 줄임표 단추를 클릭 하 여이 속성을 편집는 **콘텐츠** 필드에 속성 표 또는 클릭 하 고 **정의...**  옆에 있는 단추는 **콘텐츠** 에 레이블는 **수신** 활동 디자이너 화면입니다. 둘 다 표시는 **콘텐츠 정의** 대화 상자. [!INCLUDE[crabout](../test/includes/crabout_md.md)]이 상자를 사용 하 여 [콘텐츠 정의 대화 상자](../workflow-designer/content-definition-dialog-box.md) 항목입니다.|  
 |<xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A>|False|워크플로 내에서 이 <xref:System.ServiceModel.Activities.CorrelationInitializer> 활동을 구성하는 <xref:System.ServiceModel.Activities.CorrelationHandle> 개체를 여러 개 초기화하는 <xref:System.ServiceModel.Activities.Receive> 개체 컬렉션을 지정합니다. 옆에 있는 줄임표 단추를 클릭는 <xref:System.ServiceModel.Activities.SendReply.CorrelationInitializers%2A> 열려는 속성 표에서 속성에에서는 **상관 관계 이니셜라이저 추가** 대화 상자. [!INCLUDE[crabout](../test/includes/crabout_md.md)]이 상자를 사용 하 여 참조는 [CorrelationInitializers 추가 대화 상자](../workflow-designer/add-correlationinitializers-dialog-box.md) 항목입니다.|  
 |<xref:System.ServiceModel.Activities.SendReply.Action%2A>|False|메시지의 동작 헤더를 지정합니다. 동작 헤더가 명시적으로 설정되어 있지 않으면 기본값인<br /><br /> **https://tempuri.org/ {서비스 계약 네임 스페이스} / {서비스 계약 이름} / {/{operation name}**|  
-|<xref:System.ServiceModel.Activities.SendReply.PersistBeforeSend%2A>|False|회신 메시지를 보내기 전에 워크플로 인스턴스를 유지할지 여부를 지정합니다. 기본값은 **false**합니다.|  
+|<xref:System.ServiceModel.Activities.SendReply.PersistBeforeSend%2A>|False|회신 메시지를 보내기 전에 워크플로 인스턴스를 유지할지 여부를 지정합니다. 기본값은 **false**입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)   

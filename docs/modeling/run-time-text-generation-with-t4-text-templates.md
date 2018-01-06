@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 9dfcba23b9c8df3bbd62a0ef4dd0c4d98f578514
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 32d2fa502a5eca166ccca9fbc87ceb632d7617ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성
 사용 하 여 런타임 시 응용 프로그램에서 텍스트 문자열을 생성할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 런타임 텍스트 템플릿. 응용 프로그램을 실행 하는 컴퓨터 게 필요 하지 않습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 런타임 템플릿은 때때로 이라고 "전처리 된 텍스트 템플릿을" 템플릿은 컴파일 타임에 런타임 시 실행 되는 코드를 생성 합니다.  

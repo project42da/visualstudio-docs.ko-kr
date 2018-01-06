@@ -21,11 +21,12 @@ caps.latest.revision: "70"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9813add14da26049e5e32b9e060a146db4ce9afb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a4dbe8611da0814bfaa148b2d9c4caf7f7858d9d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO 추가 기능의 아키텍처
   Visual Studio에서 Office 개발자 도구를 사용하여 만든 VSTO 추가 기능에는 안정성과 보안을 강조하고 Microsoft Office와 긴밀하게 작업할 수 있도록 하는 아키텍처 기능이 있습니다. 이 항목에서는 다음과 같은 VSTO 추가 기능의 측면에 대해 설명합니다.  

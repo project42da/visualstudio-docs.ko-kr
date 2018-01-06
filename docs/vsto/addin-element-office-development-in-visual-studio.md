@@ -19,11 +19,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d083ff3a6c39b0d399b641db7e3a33d4f200e7bc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b4f455ad27966f5ac3c5dba6c3ac276670f74b26
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;addin&gt; 요소 (Visual Studio에서 Office 개발)
   `addin` 네임스페이스의 `vstav3` 요소에는 Microsoft Office VSTO 추가 기능과 관련된 정보 및 Visual Studio를 사용하여 개발된 문서 수준 사용자 지정이 있습니다.  
@@ -60,16 +61,16 @@ ms.lasthandoff: 10/31/2017
  `addin` 요소에는 다음 자식 요소가 있습니다.  
   
 ### <a name="entrypoints"></a>entryPoints  
- 필수 요소. `entryPoints` 요소에 설명 된 [&#60; 진입점 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
+ 필수. `entryPoints` 요소에 설명 된 [&#60; 진입점 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
   
 ### <a name="update"></a>업데이트  
- 필수 요소. `update` 요소에 설명 된 [&#60; update&#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/update-element-office-development-in-visual-studio.md).  
+ 필수. `update` 요소에 설명 된 [&#60; update&#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/update-element-office-development-in-visual-studio.md).  
   
 ### <a name="postactions"></a>postActions  
  선택 사항입니다. `postActions` 요소에 설명 된 [&#60; postActions &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/postactions-element-office-development-in-visual-studio.md).  
   
 ### <a name="application"></a>응용 프로그램  
- 필수 요소. `application` 요소에 설명 된 [&#60; 응용 프로그램 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/application-element-office-development-in-visual-studio.md).  
+ 필수. `application` 요소에 설명 된 [&#60; 응용 프로그램 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/application-element-office-development-in-visual-studio.md).  
   
 ## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
   

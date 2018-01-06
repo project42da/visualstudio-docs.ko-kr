@@ -23,11 +23,12 @@ caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8eeb0a002e2d62b9066165a99ce474cf7a01a88f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1f74bdf7b740fbf8d30df78f1433196d21c0ebbf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>게시 마법사(Visual Studio에서는 Office 개발)
   사용 하 여는 **게시 마법사** 솔루션 파일을 지정 된 위치에 복사 하려면 매니페스트 파일을 만들고 설치 프로그램을 만듭니다.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
   
 ## <a name="where-do-you-want-to-publish-the-application"></a>여기서 응용 프로그램을 게시 하 시겠습니까?  
  **이 응용 프로그램을 게시할 위치를 지정 합니다.**  
- 필수 요소. 게시 위치는 디렉터리 위치는 **게시 마법사** 빌드에서 매니페스트, 어셈블리, 임시 인증서 및 기타 파일과 같은 솔루션 파일을 복사 합니다. 이 디렉터리에 쓰기 권한이 있어야 합니다.  
+ 필수. 게시 위치는 디렉터리 위치는 **게시 마법사** 빌드에서 매니페스트, 어셈블리, 임시 인증서 및 기타 파일과 같은 솔루션 파일을 복사 합니다. 이 디렉터리에 쓰기 권한이 있어야 합니다.  
   
  디스크 경로, 파일 공유, FTP 사이트 또는 웹 사이트 URL로 위치를 입력 하거나 클릭 하 고 **찾아보기** 위치를 검색 하는 단추입니다. 이러한 형식의 경로일 수 있습니다.  
   

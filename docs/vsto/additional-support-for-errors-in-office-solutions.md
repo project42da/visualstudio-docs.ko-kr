@@ -61,11 +61,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6d57dab19820436dd9c7e3fb07607b5506c180a5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: e0da4387056e68046294a2f82c9db7bbc798de07
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-support-for-errors-in-office-solutions"></a>Office 솔루션 오류에 대한 추가 지원
   Visual Studio에서 Office 솔루션을 만들 때 발생 한 문제에 대 한 답을 찾는 데 도움이 되는 다음 리소스를 사용할 수 있습니다.  

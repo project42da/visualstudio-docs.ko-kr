@@ -16,11 +16,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: af9a13a72aed42f46a755520802f8688bc962161
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 70329c058146dde9b94713b66dfbd29319250f45
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsoft-office-is-not-installed-on-this-computer"></a>이 컴퓨터에 Microsoft Office가 설치되어 있지 않습니다.
   Visual Studio에서는 프로젝트 형식에 해당하는 Microsoft Office 응용 프로그램을 찾을 수 없습니다. VSTO 추가 기능 프로젝트를 개발하고 있는 경우 프로젝트를 디버그하거나 실행할 수 없다는 의미입니다. 문서 수준 프로젝트를 만들려고 하는 경우 프로젝트를 만들 수 없다는 의미입니다.  

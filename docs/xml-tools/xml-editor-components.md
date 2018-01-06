@@ -12,16 +12,17 @@ caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f3f1e9fca25f29bd7e649816a0529a58c7ec2f7b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 38d37d1c7805e98d8cf90fbb2e96e1d3c444313c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-editor-components"></a>XML 편집기 구성 요소
 이 단원에서는 XML 편집기 창 및 대화 상자에 대해 설명합니다. XML 편집기는 텍스트 편집기를 기반으로 하기 때문에 일부 IDE(통합 개발 환경)는 일반 텍스트 편집기 설정을 사용하여 구성됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [옵션 대화 상자, 텍스트 편집기, XML, 기타](../xml-tools/miscellaneous-xml-text-editor-options-dialog-box.md)  
  XML 편집기의 자동 완성 기능 및 스키마 설정에 대해 설명합니다.  
   

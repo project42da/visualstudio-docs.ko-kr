@@ -16,11 +16,12 @@ f1_keywords:
 - vs.csharp.refactoring.remove
 - vs.csharp.refactoring.reorder
 dev_langs: VB
-ms.openlocfilehash: 83d1329706f53b1e5474a0a2cc4c859f0e982096
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ac0b8394f71f2f7949cf21b4ea34eba733bf4d34
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="change-a-method-signature-in-visual-basic"></a>Visual Basic의 메서드 시그니처 변경
 **:** 메서드의 매개 변수의 순서를 변경 하거나 제거할 수 있습니다.

@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3690f3e8459821e0a927a351ee28f901b318deab
-ms.sourcegitcommit: c0422a3d594ea5ae8fc03f1aee684b04f417522e
+ms.workload: multiple
+ms.openlocfilehash: f98f11cf9f4aef491951e1968105a30a679e687a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/02/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="xml-editor-intellisense-features"></a>XML 편집기 IntelliSense 기능
 XML 편집기에서는 Visual Studio에서 제공하는 다른 언어 편집기에 버금가는 완전한 IntelliSense 기능을 제공합니다. 이 단원에서는 XSD(XML 스키마 정의 언어) 및 XSLT 문서와 함께 IntelliSense를 사용하는 방법에 대해 설명합니다.  
@@ -104,7 +105,7 @@ IntelliSense 목록에서 정규화된 네임스페이스 요소 또는 특성�
   
  **자동 삽입** 의 섹션은 **기타** 다음과 같은 동작을 제어 하는 페이지:  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |닫기 태그|새 요소에 대해 닫기 태그를 삽입합니다.|  
 |특성 따옴표|새 특성 이름을 입력할 때 특성 값 따옴표를 삽입합니다.|  

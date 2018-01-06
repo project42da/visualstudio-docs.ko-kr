@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 307e32587a7aac6e2595f35488ad057995c04f4b
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: d007bdf5d2029e896167a2fd7b32359c661aa7fa
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>스냅숏 Visual Studio의 디버깅에 대 한 문제 해결 및 알려진 문제
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 11/22/2017
 - 동일한 응용 프로그램 서비스에 대해 여러 Visual Studio 클라이언트를 사용 하 여 스냅숏 디버깅 현재 지원 되지 않습니다.
 - Roslyn IL 최적화 ASP.NET Core 프로젝트에서 완전히 지원 되지 않습니다. 일부 ASP.NET Core 프로젝트에 대 한 일부 변수를 보거나 조건문에서 몇 가지 변수를 사용 하려면 못할 수 있습니다. 
 - 특별 한 변수와 같은 *$FUNCTION* 또는 *$CALLER*, ASP.NET Core 프로젝트에 대 한 logpoints 또는 조건문에서 계산할 수 없습니다.
-- 스냅숏 디버깅 된 응용 프로그램 서비스에서 작동 하지 않을 [로컬 캐싱](https://docs.microsoft.com/en-us/azure/app-service/app-service-local-cache) 켜져 있습니다.
+- 스냅숏 디버깅 된 응용 프로그램 서비스에서 작동 하지 않을 [로컬 캐싱](/azure/app-service/app-service-local-cache) 켜져 있습니다.
 - API 앱을 디버깅 하는 스냅숏 현재 지원 되지 않습니다.
 
 ## <a name="see-also"></a>참고 항목

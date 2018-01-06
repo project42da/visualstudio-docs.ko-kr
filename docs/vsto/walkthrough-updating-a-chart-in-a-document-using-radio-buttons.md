@@ -18,11 +18,12 @@ caps.latest.revision: "60"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 2d6fa02174a8b334b404a0a4ea84ee0e8089c584
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 35f5a865faafc730a13f5d0cd3a432a724434dde
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-updating-a-chart-in-a-document-using-radio-buttons"></a>연습: 문서에서 라디오 단추를 사용하여 차트 업데이트
   이 연습에서는 Microsoft Office Word의 문서 수준 사용자 지정에서 라디오 단추를 사용하여 문서에서 차트 스타일 선택 옵션을 사용자에게 제공하는 방법을 보여줍니다.  
@@ -96,28 +97,28 @@ ms.lasthandoff: 10/31/2017
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**columnChart**|  
+    |**이름**|**columnChart**|  
     |**텍스트**|**세로 막대형 차트**|  
   
 3.  두 번째 추가 **라디오 단추** 사용자에 게 컨트롤을 선택한 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**barChart**|  
+    |**이름**|**barChart**|  
     |**텍스트**|**가로 막대형 차트**|  
   
 4.  세 번째 추가 **라디오 단추** 사용자에 게 컨트롤을 선택한 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**lineChart**|  
+    |**이름**|**lineChart**|  
     |**텍스트**|**꺾은선형 차트**|  
   
 5.  네 번째 추가 **라디오 단추** 사용자에 게 컨트롤을 선택한 다음 속성을 변경 합니다.  
   
     |속성|값|  
     |--------------|-----------|  
-    |**Name**|**areaBlockChart**|  
+    |**이름**|**areaBlockChart**|  
     |**텍스트**|**영역 블록 차트**|  
   
 ## <a name="adding-references"></a>참조 추가  

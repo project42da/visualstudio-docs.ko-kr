@@ -26,11 +26,12 @@ caps.latest.revision: "96"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f97cac11c943b75f5bc74e5cb67c9810b9ba7032
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: aca002dc7f9793dc379fb4e1a325342704e4d6c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>방법: Visual Studio에서 Office 프로젝트 만들기
   사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 만들고 VSTO 추가 기능을 문서 수준 사용자 지정 Microsoft Office 응용 프로그램에 대 한 합니다. 이러한 유형의 프로젝트에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  

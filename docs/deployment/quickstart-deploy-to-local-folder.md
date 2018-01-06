@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4c8696e7ffb4120bae12538a03b77d62c0d091a7
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.workload: multiple
+ms.openlocfilehash: 3b97ca67c9e8d8a4cfb7d99a6c518c8e49a8c426
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Visual Studio 게시 도구를 사용 하 여 로컬 폴더에 웹 앱 또는.NET Core 응용 프로그램 배포
 
@@ -65,6 +66,6 @@ ms.lasthandoff: 12/15/2017
 
 ## <a name="next-steps"></a>다음 단계
 
-- [.NET Core 응용 프로그램 게시 도구와 함께 배포](https://docs.microsoft.com/en-us/dotnet/core/deploying/deploy-with-vs)
-- [Microsoft 스토어 (데스크톱 브리지)에 대 한 데스크톱 응용 프로그램 패키지](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
-- (.NET) [.NET Framework 및 응용 프로그램 배포](https://docs.microsoft.com/en-us/dotnet/framework/deployment/)
+- [게시 도구를 사용하여 .NET Core 응용 프로그램 배포](/dotnet/core/deploying/deploy-with-vs)
+- [Microsoft Store(데스크톱 브리지)의 데스크톱 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+- (.NET) [.NET Framework 및 응용 프로그램 배포](/dotnet/framework/deployment/)

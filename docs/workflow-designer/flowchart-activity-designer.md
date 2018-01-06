@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 738568db51cce97ee0b110220aa195b4ded2adba
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d8bcdcc42ada14f808c165e9e06b269817f79575
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="flowchart-activity-designer"></a>순서도 활동 디자이너
 <xref:System.Activities.Statements.Flowchart> 활동은 복잡한 흐름 제어를 정의하고 관리하는 워크플로를 만드는 데 사용됩니다. 코드 또는 <xref:System.Activities.Statements.Flowchart>를 사용하여 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]를 작성할 수 있습니다. 이 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 환경에 대해 설명합니다. 개발자는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)] 워크플로 활동 디자이너를 사용하여 워크플로를 자연스럽게 작성할 수 있습니다.  

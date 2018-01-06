@@ -12,11 +12,12 @@ caps.latest.revision: "10"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 9a77adbe5e2663ef11242d162b6ac718d88daea5
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d583c662de31b990982b78d876bc0046e89089d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pickbranch-activity-designer"></a>PickBranch 활동 디자이너
 <xref:System.Activities.Statements.PickBranch>는 들어오는 이벤트에 의해 트리거되는 <xref:System.Activities.Statements.Pick> 활동 내에서 이벤트 기반의 실행 경로를 제공합니다.  
@@ -59,4 +60,4 @@ ms.lasthandoff: 10/27/2017
 ## <a name="see-also"></a>참고 항목  
  [제어 흐름](../workflow-designer/control-flow-activity-designers.md)   
  [선택 활동](/dotnet/framework/windows-workflow-foundation/pick-activity)   
- [Pick 활동 사용](/dotnet/framework/windows-workflow-foundation/samples/using-the-pick-activity)
+ [Pick 작업 사용](/dotnet/framework/windows-workflow-foundation/samples/using-the-pick-activity)

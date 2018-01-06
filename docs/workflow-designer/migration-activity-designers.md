@@ -11,16 +11,17 @@ caps.latest.revision: "5"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: bad24eb3693988c8d4f51f347a8473856dd1d224
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 6310971ee43067e23a1d893924ecba4e717f5553
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="migration-activity-designers"></a>마이그레이션 활동 디자이너
 마이그레이션 활동 디자이너는 [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]을 대상으로 하는 워크플로에서 워크플로 3.0/3.5 활동을 호출하는 데 사용됩니다. 이 단원의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 디자이너의 사용 방법에 대한 지침을 제공합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Interop](../workflow-designer/interop-activity-designer.md)  
  <xref:System.Activities.Statements.Interop> 활동을 만들고 구성하는 데 사용됩니다.  
   

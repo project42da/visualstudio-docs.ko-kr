@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c77d5fb404be8dda323720c1e0c1ab2c1887c88f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: cace0c9826a76a4a8341c6b85e1219dcf287e80a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="secure-deployment"></a>보안 배포
   Office 솔루션을 만들 때 개발 컴퓨터를 실행 하려면 프로젝트에 코드를 허용 하도록 자동 업데이트 됩니다. 그러나 솔루션을 배포할 때 인증서를 사용 하 여 솔루션을 서명 하거나 사용 하 여 신뢰 결정을 기반으로 사용할 증명 정보 제공 해야는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 신뢰 프롬프트 키입니다. 자세한 내용은 참조 [Office 솔루션에 신뢰 부여](../vsto/granting-trust-to-office-solutions.md)합니다.  

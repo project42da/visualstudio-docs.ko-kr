@@ -19,11 +19,12 @@ caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: fa48a6d46035cd0c631882065b7c9b9ab2e2b8ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 38eb32ac983d81d3ef94431d6275da643f632ae9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-office-functionality-inside-of-visual-studio"></a>Visual Studio 내에서 Office 기능 사용
   문서 수준 프로젝트를 만들면 문서와 연결된 된 응용 프로그램 내에 호스팅됩니다 Visual Studio 디자인 하 고 문서와 직접 협업할 수 있도록 합니다. Microsoft Office 응용 프로그램 Visual Studio에서 열을 사용 하는 경우 일반적으로 예상 대로 작동 합니다. 그러나 응용 프로그램의 기능 중 일부를 다른 있거나 액세스할 수 있습니다.  
