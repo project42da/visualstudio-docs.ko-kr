@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c24765450d0bf8ffdab479bb28c822602892b595
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a4ab4bd29c753fc03787fbbadbe106d2d8862b10
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="word-completion-in-a-legacy-language-service"></a>레거시 언어 서비스에서 단어 완성
 단어 완성 부분적으로 형식화 된 단어에 문자가 없는 채웁니다. 하나의 가능한 완료 하는 경우 단어 완성 문자를 입력할 때 완료 됩니다. 둘 이상의 가능성 일치 하는 부분 단어 가능한 완료의 목록이 표시 됩니다. 완료 문자는 식별자에 대 한 사용 되지 않는 모든 문자를 사용할 수 있습니다.  

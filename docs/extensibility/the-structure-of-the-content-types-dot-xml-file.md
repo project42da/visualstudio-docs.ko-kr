@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f399cb0c88e044224d554cf8e17cc4d217498e87
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 08f1bb76f27f7ae0923eed43339f656c90f4856f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-structure-of-the-contenttypesxml-file"></a>[Content_types].xml 파일의 구조
 VSIX 패키지의 콘텐츠 종류에 대 한 정보를 포함합니다. Visual Studio에서 [Content_Types].xml 파일을 사용 하 여 패키지를 설치 하지만 파일 자체를 설치 하지 않습니다.  
@@ -84,7 +85,7 @@ VSIX 패키지의 콘텐츠 종류에 대 한 정보를 포함합니다. Visual 
 |dll|application/octet-stream|  
 |다른 모든 파일 형식|application/octet-stream|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ### <a name="description"></a>설명  
  다음 [Content_Types].xml 파일 일반적인 VSIX 패키지를 설명합니다.  

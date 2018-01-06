@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: eae3a0ffd77fa4b399b2d62d3139e7bd8a405d48
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 850cb58f6763b521da9cdb1779b0960c0607ef88
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>파일 저장소 및 XML Serialization 사용자 지정
 사용자 인스턴스를 저장할 때 또는 *모델*, (DSL)에 도메인 특정 언어의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], XML 파일로 생성 되거나 업데이트 됩니다. 파일을 저장소에서 모델을 다시 다시 로드할 수 있습니다.  
@@ -278,7 +279,7 @@ ms.lasthandoff: 10/27/2017
 |모니커 형식 이름|이 클래스의 요소에는 모니커에 대해 생성 된 xsd 유형의 이름입니다. XSD 중인 **Dsl\Generated 코드\\\*Schema.xsd**|  
 |Id를 serialize 합니다.|True 이면 요소 GUID 파일에 포함 됩니다. 표시 된 속성이 있는 경우 true 이어야 합니다 **모니커 Is Key** DSL이이 클래스에 참조 관계를 정의 합니다.|  
 |형식 이름|지정 된 도메인 클래스에서 xsd에서 생성 된 xml 형식의 이름입니다.|  
-|참고|이 요소와 연결 된 비공식 메모|  
+|노트|이 요소와 연결 된 비공식 메모|  
   
 ### <a name="xml-property-data"></a>Xml 속성 데이터  
  Xml 속성 노드 클래스; 노드에 있습니다.  
@@ -291,7 +292,7 @@ ms.lasthandoff: 10/27/2017
 |모니커 한정자는|True 이면 속성이 모니커에 한정자를 만드는 데 사용 됩니다. False 인 경우 및이 도메인 클래스에 대 한 다음과 같은 사실이 아닙니다 모니커 포함 트리에서 부모 요소의 모니커가 정규화 됩니다.|  
 |표현|특성을 속성이; xml 특성으로 serialize 되는 경우 요소인 경우; 요소로 serialize Ignore 없는 경우 직렬화 합니다.|  
 |Xml 이름|Xml 특성 또는 속성을 나타내는 요소에 사용 되는 이름입니다. 기본적으로 도메인 속성 이름의 소문자 버전입니다.|  
-|참고|이 요소와 연결 된 비공식 메모|  
+|노트|이 요소와 연결 된 비공식 메모|  
   
 ### <a name="xml-role-data"></a>Xml 역할 데이터  
  데이터 노드 역할은 원본 클래스 노드가 있습니다.  

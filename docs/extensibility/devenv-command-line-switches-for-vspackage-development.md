@@ -21,11 +21,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ca93d63236eb1b50663eff4c86a6ae3603600802
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 18c531bb849793de184f3797067dceff4bd10199
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage 개발에 대 한 Devenv 명령줄 스위치
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]devenv.exe를 Visual Studio 통합된 개발 환경 (IDE)를 시작 하는 파일을 실행할 때 명령줄에서 작업을 자동화 하는 개발자가 있습니다.  

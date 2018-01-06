@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bf74110cf42daa51521cc7ea706c1b951b23deb8
-ms.sourcegitcommit: ee42a8771f0248db93fd2e017a22e2506e0f9404
+ms.workload: vssdk
+ms.openlocfilehash: 543f107081a5cc29ac14f1c2ba2e05924b72e353
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/09/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shipping-visual-studio-extensions"></a>Visual Studio 확장 전달
 확장 프로그램 개발을 완료 한 후 다른 컴퓨터에 설치할 친구와 동료와 공유 하거나 Visual Studio 마켓플레이스에 게시할 수 있습니다. 게시 하 고 확장 프로그램을 유지 하기 위해 수행 해야 하는 모든 것이이 섹션의 설명:.vsix 파일을 게시 하 고 지역화, 업데이트를 사용 합니다.  
@@ -33,12 +34,12 @@ ms.lasthandoff: 11/09/2017
  VSIX 형식 코드 조각의 설치를 지원 하지 않습니다. 전역 어셈블리 캐시 (GAC)에 또는 시스템 레지스트리에 쓰기와 같은 다른 특정 시나리오 지원 하지 않습니다. GAC 또는 설치의 레지스트리를 작성 해야 하는 경우에 Windows Installer를 사용 해야 합니다. 자세한 내용은 참조 [준비 하 고 확장에 대 한 Windows Installer-배포](../extensibility/preparing-extensions-for-windows-installer-deployment.md)합니다.  
   
 ## <a name="publishing-your-extension-to-the-visual-studio-marketplace"></a>Visual Studio 마켓플레이스로 확장 프로그램을 게시  
- .Vsix 파일을 응답률이 메일 또는 서버에 배치 하 여 다른 사용자에 게 확장을 배포할 수 있습니다. 하지만 코드 많은 사람들이 광범위 한 가장 좋은 방법은에 배치 하는 것은 [Visual Studio 마켓플레이스](https://marketplace.visualstudio.com/vs)합니다. Visual Studio 마켓플레이스 확장을 통해 Visual Studio 사용자에 게 사용할 수 **확장명 및 업데이트**합니다. 자세한 내용은 참조 [찾기 및 사용 하 여 Visual Studio 확장명](../ide/finding-and-using-visual-studio-extensions.md)합니다.  
+ .Vsix 파일을 응답률이 메일 또는 서버에 배치 하 여 다른 사용자에 게 확장을 배포할 수 있습니다. 하지만 코드 많은 사람들이 광범위 한 가장 좋은 방법은에 배치 하는 것은 [Visual Studio 마켓플레이스](https://marketplace.visualstudio.com/vs)합니다. Visual Studio 마켓플레이스 확장을 통해 Visual Studio 사용자에 게 사용할 수 **확장명 및 업데이트**합니다. 자세한 내용은 [Visual Studio 확장명 찾기 및 사용](../ide/finding-and-using-visual-studio-extensions.md)을 참조하세요.  
   
  확장 하면 Visual Studio 마켓플레이스로 업로드 하는 방법을 보여 주는 전체 예제를 보려면 [연습: Visual Studio Extension 게시](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)합니다.  
   
 ## <a name="private-galleries"></a>Private Galleries  
- 컨트롤, 템플릿 및 도구를 개발할 때 공유할 수 귀하의 조직 사용자 인트라넷의 개인 갤러리에 게시 합니다. 자세한 내용은 참조 [전용 갤러리](../extensibility/private-galleries.md)합니다.  
+ 컨트롤, 템플릿 및 도구를 개발할 때 공유할 수 귀하의 조직 사용자 인트라넷의 개인 갤러리에 게시 합니다. 자세한 내용은 [Private Galleries](../extensibility/private-galleries.md)를 참조하세요.  
   
 ## <a name="localizing-your-extension"></a>확장 프로그램을 지역화  
  다른 로캘에서 확장 프로그램 해제 하려는 경우 지역화 하는 것이 좋습니다. 에 대 한 설명은 관련 작업을 참조 하세요. [VSIX 패키지 지역화](../extensibility/localizing-vsix-packages.md)합니다.  

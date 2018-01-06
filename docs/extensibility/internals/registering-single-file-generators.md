@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 29cbc142be40d4c4e2e8780304767bd17d1d94fe
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: 22261c7485f1779eb3613c7ef5af693feeb51fbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-single-file-generators"></a>단일 파일 생성기를 등록 하는 중
 사용자 지정 도구에서 사용할 수 있도록 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 따라서에 등록 해야 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 인스턴스화할 수는 특정 프로젝트 형식에 연결 합니다.  
@@ -47,11 +48,11 @@ ms.lasthandoff: 12/14/2017
   
     -   CLSID  
   
-         필수 요소. 구현 하는 COM 구성 요소의 클래스 라이브러리의 식별자를 지정 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>합니다.  
+         필수. 구현 하는 COM 구성 요소의 클래스 라이브러리의 식별자를 지정 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSingleFileGenerator>합니다.  
   
     -   GeneratesDesignTimeSource  
   
-         필수 요소. 있는지 여부를 사용자 지정이 도구에서 생성 된 파일에서 형식을 사용할 수 있는 비주얼 디자이너를 나타냅니다. 이 매개 변수 값 비주얼 디자이너를 사용할 수 없는 형식에 대 한 0 0 또는 비주얼 디자이너에서 사용할 수 있는 형식에 대 한 (1) 1 개 있어야 합니다.  
+         필수. 있는지 여부를 사용자 지정이 도구에서 생성 된 파일에서 형식을 사용할 수 있는 비주얼 디자이너를 나타냅니다. 이 매개 변수 값 비주얼 디자이너를 사용할 수 없는 형식에 대 한 0 0 또는 비주얼 디자이너에서 사용할 수 있는 형식에 대 한 (1) 1 개 있어야 합니다.  
   
     > [!NOTE]
     >  사용자 지정 도구 사용 가능 하도록 사용자 지정 도구 원하는 각 언어에 대해 별도로 등록 해야 합니다.  

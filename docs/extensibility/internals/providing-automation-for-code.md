@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aa1c2fa5d0da738057e59cdac007c499a834bc0a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e59f3826cbb2ed83510cd98209b4c83f9278397d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="providing-automation-for-code"></a>코드에 대 한 자동화를 제공합니다.
 코드에 대 한 자동화 모델을 만들 필요는 없습니다. 환경 SDK 작업에 대 한 예제를 제공 하지 않습니다. 코드 모델에 대 한 정보를 참조 하십시오.는 <xref:EnvDTE.CodeModel> 개체입니다.  

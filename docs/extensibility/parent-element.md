@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fc66e193b13ac6baf9d6089483a1281c2d6a59ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f2209ce2a2f6b1263bb52d550ca303f2525047d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="parent-element"></a>부모 요소
 단추 또는 콤보 상자의 부모 그룹 수만 있습니다. 메뉴 또는 그룹의 부모는 다른 메뉴 또는 그룹 수 있습니다. 에 [CommandPlacement 요소](../extensibility/commandplacement-element.md),이 요소는 필수 이며, 다른 모든 경우에 선택 사항입니다. 이 요소를 생략 하면의 부모 `Group_Undefined:0` 암시 됩니다.  
@@ -31,14 +32,14 @@ ms.lasthandoff: 10/31/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|guid|필수 요소. GUID의 GUID/ID 명령 식별자입니다.|  
-|ID|필수 요소. ID의 GUID/ID 명령 식별자입니다.|  
+|guid|필수. GUID의 GUID/ID 명령 식별자입니다.|  
+|ID|필수. ID의 GUID/ID 명령 식별자입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
  없음  

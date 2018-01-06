@@ -19,11 +19,12 @@ caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3a41e7580e7c6c169554bb50c4d0c9af29a992b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 1733ac8333675975bb5d4b42dce9df3c01e5ac0f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltupdategt-element-office-development-in-visual-studio"></a>&lt;업데이트&gt; 요소 (Visual Studio에서 Office 개발)
   `update` 요소 업데이트에 대 한 솔루션은 확인 간격을 지정 합니다.  
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`enabled`|필수 요소. 다음 값 중 하나를 사용을 설정 합니다.<br /><br /> -   **true 이면** 업데이트를 확인 합니다.<br />-   **false** 를 업데이트를 확인 하지 않습니다.|  
+|`enabled`|필수. 다음 값 중 하나를 사용을 설정 합니다.<br /><br /> -   **true 이면** 업데이트를 확인 합니다.<br />-   **false** 를 업데이트를 확인 하지 않습니다.|  
   
  `update` 요소에는 다음 자식 요소가 있습니다.  
   
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
 |특성|설명|  
 |---------------|-----------------|  
 |`maximumAge`|-필요합니다. 이 값은 정수로 설정 합니다.|  
-|`unit`|필수 요소. 설정 `unit` 를 다음 값 중 하나:<br /><br /> -   **시간**<br />-   **(일)**<br />-   **주**|  
+|`unit`|필수. 설정 `unit` 를 다음 값 중 하나:<br /><br /> -   **시간**<br />-   **(일)**<br />-   **주**|  
   
 ## <a name="example-of-always-checking-for-updates"></a>업데이트를 항상 확인의 예  
   

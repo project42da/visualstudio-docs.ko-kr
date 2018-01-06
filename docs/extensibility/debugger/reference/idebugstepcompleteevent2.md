@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b0b96a1156d736332bdc8110ae2244fdfc9aad1b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d9b077f4bcfd0f4344c29659791accee36da60c5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugstepcompleteevent2"></a>IDebugStepCompleteEvent2
 이 인터페이스는 디버깅 중인 프로그램에는 한 단계씩 코드 실행, 단계 또는 문이나 명령 또는 소스 코드의 줄을 넘어서 단계 완료 될 때 세션 디버그 관리자 (SDM)에 디버그 엔진 (DE)에 의해 전송 됩니다.  

@@ -21,11 +21,12 @@ caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9048f965ad2f04b4eed8fe3a753f6fddc280dbfa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: aspnet
+ms.openlocfilehash: e3c6dffbd99dbdd91753ce8d06ab139006692089
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="debug-aspnet-applications-in-visual-studio"></a>Visual Studio에서 ASP.NET 응용 프로그램 디버그
 
@@ -87,7 +88,7 @@ Web.config 파일은 다음 예제와 같아야 합니다.
 > [!NOTE]
 > 이 예제에서는 부분 web.config 파일입니다. 추가 XML 섹션 구성 요소와 system.web 요소 사이 일반적으로 제공 됩니다. 컴파일 요소는 다른 특성 및 요소를 포함할 수도 있습니다.
   
-#### <a name="example"></a>예제  
+#### <a name="example"></a>예  
   
 ```  
 <configuration>  
@@ -124,7 +125,7 @@ Web.config 파일은 다음 예제와 같아야 합니다.
 
 2. 외부 (사용자 지정) 서버를 선택한 경우에 올바른 URL을 입력 합니다.는 **프로젝트 URL** (또는 **기준 URL**) 필드입니다.
 
-    외부 서버가 로컬 IIS 경우 IIS는 설치 하 고 올바르게 구성 해야 합니다. 예를 들어 IIS에서 올바른 버전의 ASP.NET 구성 되어야 합니다. 자세한 내용은 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다. 디버깅 뿐만 아니라 배포를 테스트 하려는 경우 참조 [테스트 배포](https://docs.microsoft.com/en-us/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)합니다.
+    외부 서버가 로컬 IIS 경우 IIS는 설치 하 고 올바르게 구성 해야 합니다. 예를 들어 IIS에서 올바른 버전의 ASP.NET 구성 되어야 합니다. 자세한 내용은 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다. 디버깅 뿐만 아니라 배포를 테스트 하려는 경우 참조 [테스트 배포](/aspnet/web-forms/overview/deployment/visual-studio-web-deployment/deploying-to-iis)합니다.
 
     외부 서버가 경우 [원격](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)대신, 프로세스에 연결 하 고 디버깅을 위해 이러한 프로젝트 설정은 사용 되지 않습니다.
 
@@ -134,7 +135,7 @@ IIS express 웹 서버를 구성할 필요가 없습니다 (이 섹션 생략). 
 
 로컬 IIS 웹 서버를 사용 하는 경우 다음이 단계를 수행 합니다.
 
-1. IIS가 올바르게 설치 되었는지 확인 합니다. 자세한 내용은 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](https://docs.microsoft.com/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
+1. IIS가 올바르게 설치 되었는지 확인 합니다. 자세한 내용은 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
 
     * 서버에 올바른 버전의 ASP.NET 설치 하 고 있는지 확인 합니다. 웹 플랫폼 설치 관리자 (WebPI)를 사용 하 여 ASP.NET 4.5를 설치 하려면 (Windows Server 2012 r 2의 서버 노드에서 선택 **새 웹 플랫폼 구성 요소 가져오기** ASP.NET 검색할). ASP.NET Core를 설치 하려면 [를 IIS에 게시](https://docs.asp.net/en/latest/publishing/iis.html#iis-configuration)합니다.
 
@@ -230,5 +231,5 @@ IIS express 웹 앱은 자동으로 배포 디버깅을 시작할 때 (이 섹�
 [배포 된 웹 응용 프로그램 디버그](debugging-deployed-web-applications.md)   
 [연습: Web Form 디버깅](walkthrough-debugging-a-web-form.md)   
 [방법: ASP.NET 예외 디버깅](how-to-debug-aspnet-exceptions.md)   
-[웹 응용 프로그램 디버깅: 오류 및 문제 해결](debugging-web-applications-errors-and-troubleshooting.md)
+[웹 응용 프로그램 디버그: 오류 및 문제 해결](debugging-web-applications-errors-and-troubleshooting.md)
   

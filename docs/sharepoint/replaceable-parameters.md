@@ -22,11 +22,12 @@ caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 80f9770fe0e6a0294ec43e450acc75f55b8ddbe2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ed085a38b77f7c323451e8209902bece3747ddb1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="replaceable-parameters"></a>대체 가능 매개 변수
   대체 가능 매개 변수 또는 *토큰*, 실제 값을 갖는 디자인 타임에 알 수 없는 SharePoint 솔루션 항목에 대 한 값을 제공 합니다. 프로젝트 파일 내 사용할 수 있습니다. 이러한 매개 변수는 기능적으로 표준 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 템플릿 토큰과 유사합니다. 자세한 내용은 참조 [템플릿 매개 변수](/visualstudio/ide/template-parameters)합니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="tokens-list"></a>토큰 목록  
  다음 표에서 사용 가능한 토큰을 나열합니다.  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |$SharePoint.Project.FileName$|"NewProj.csproj"와 같은 포함 된 프로젝트 파일의 이름입니다.|  
 |$SharePoint.Project.FileNameWithoutExtension$|파일 이름 확장명 없이 포함 하는 프로젝트 파일의 이름입니다. 예를 들어 "NewProj"가 있습니다.|  

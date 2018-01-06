@@ -15,16 +15,17 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2d580d3d74d8648b7181ac1ca384d3232fa8225b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 119e6dc088c6f6e80d79ab096d97b7404c530611
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-vspackages"></a>Vspackage를 등록 하는 중
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)].pkgdef 파일을 설정 하 고 VSPackage를 찾는에 의존 합니다. .Pkgdef 파일 시스템 레지스트리에 추가 됩니다 모든 등록 정보를 포함 합니다. 소스 코드에 특성을 추가 하 고 다음을 실행 하 여 관리 되는 Vspackage 등록는 [CreatePkgDef 유틸리티](../../extensibility/internals/createpkgdef-utility.md) 결과 어셈블리.pkgdef 파일을 생성 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [VSPackage 파일 위치를 VS Shell 지정](../../extensibility/internals/specifying-vspackage-file-location-to-the-vs-shell.md)  
  Vspackage에 대 한 로드 경로 설명합니다.  
   

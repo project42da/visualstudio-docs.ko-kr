@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e4598b100572bb47fd537e8edad927d78b4f1550
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2dcf8040217a13688dc1ff33183f237f0f58bbcf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sandboxed-solution-considerations"></a>Sandboxed Solution Considerations
   *샌드박스 솔루션* 사이트 컬렉션 사용자가 자신의 사용자 지정 코드 솔루션을 업로드할 수 있는 Microsoft SharePoint 2010의 기능입니다. 일반적인 샌드박스 솔루션은 사용자가 자신의 웹 파트를 업로드 합니다.  

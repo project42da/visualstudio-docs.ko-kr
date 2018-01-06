@@ -13,16 +13,17 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a93dbdff19d0a0feaafb549b00968e095690fd78
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f5dd2a98ec84b656dc70a00236775710266c54ba
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-source-control"></a>소스 제어를 지원합니다.
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]파일 체크 아웃, 체크 인 및 프로젝트 또는 편집기에 대해 다른 소스 제어 작업을 지원합니다. 소스 제어 클라이언트도 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 와 같은 원본 제어 패키지와 상호 작용 하도록 설계 되었습니다 [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)], 보관, 버전 관리 및 동적으로 정의 된 파일 집합에 대 한 제어 기능도 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [소스 제어 패키지 모델](../../extensibility/internals/model-for-source-control-packages.md)  
  프로젝트 형식을 구현 해야 하는 인터페이스를 설명 합니다. 소스 제어를 지원 하도록 합니다.  
   

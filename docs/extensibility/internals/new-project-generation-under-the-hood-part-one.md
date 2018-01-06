@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: efe08d9e23f1a77fd68df2bdba4389e7b7955b11
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 158340ad82829338bb39709573ce9e025332341a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="new-project-generation-under-the-hood-part-one"></a>새 프로젝트 생성: 내부적으로 1 부
 사용자 고유의 프로젝트 형식을 만드는 방법에 대 한 것? 새 프로젝트를 만들 때 실제로 일어나 궁금해? 기본적인 이해 보아 하 고 실제로 실행 중인 참조 살펴보겠습니다.  
@@ -91,7 +92,7 @@ devenv /installvstemplates
  우선 순위 번호가 작을수록 트리에 높을수록 위치입니다.  
   
 ##### <a name="developeractivity"></a>DeveloperActivity  
- 이 하위 키가 있는 경우 루트 노드의 위치 개발자 설정 대화 상자에 의해 제어 됩니다. 예를 들면 다음과 같습니다.  
+ 이 하위 키가 있는 경우 루트 노드의 위치 개발자 설정 대화 상자에 의해 제어 됩니다. 예를 들어 개체에 적용된  
   
  DeveloperActivity REG_SZ VC #  
   

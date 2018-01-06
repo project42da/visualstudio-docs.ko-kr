@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 962023733d2d746e0acb584e3dcbdc1a5e369012
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec424f5e85f5bff9be5b276b3978b25dc3239fe5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-roslyn-analyzers"></a>Roslyn 분석기를 시작 하기
 Visual Studio에서 라이브, 프로젝트 기반 코드 분석기, API 작성자 NuGet 패키지의 일부로 도메인 관련 코드 분석을 제공할 수 있습니다.  .NET 컴파일러 플랫폼 (코드 이름된 "Roslyn"), 이러한 분석기 기반의 때문에 (더 이상 대기 중 문제를 발견 하 여 코드를 빌드하려면) 줄 모두 읽었으면 전에 입력할 때 코드에서 경고가 생성 될 수 있습니다.  분석기 수 있도록 코드를 정리 즉시 Visual Studio 전구 프롬프트를 통해 자동 코드 수정 프로그램 표면도 수 있습니다.  

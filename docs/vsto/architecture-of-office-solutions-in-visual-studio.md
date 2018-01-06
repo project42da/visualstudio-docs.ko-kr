@@ -19,11 +19,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 71b9feb3368b8c8bbec6ad7c38962056caeea32f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ced5c9948a94295490126bef68ff1b316c87e964
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="architecture-of-office-solutions-in-visual-studio"></a>Visual Studio의 Office 솔루션 아키텍처
   이 섹션의 항목에서는 Visual Studio에서 Office 개발자 도구를 사용하여 만든 솔루션의 작동 방식에 대한 정보를 제공합니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]  
 >  Office 환경을 확장 하는 솔루션을 개발에 관심이 [여러 플랫폼](https://dev.office.com/add-in-availability)? 체크 아웃 새 [Office 추가 기능 모델](https://dev.office.com/docs/add-ins/overview/office-add-ins)합니다. Office 추가 기능에서 VSTO 추가 기능 및 솔루션에 비해 적을 있고 거의 모든 웹 프로그래밍 HTML5, JavaScript, CSS3 및 XML 등의 기술을 사용 하 여 빌드할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)  
  문서 수준 사용자 지정의 작동 방식 및 개발자와 최종 사용자에게 어떻게 다르게 인식되는지에 대해 설명합니다.  
   

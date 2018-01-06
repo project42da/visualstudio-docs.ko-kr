@@ -19,11 +19,12 @@ caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5e90143904c8d628e4288e24602907a75ae4bc59
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 9d807c38af14249b265c411de31f6cde03855c60
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-local-database-files-in-office-solutions-overview"></a>Office 솔루션에서 로컬 데이터베이스 파일 사용 개요
   Office 솔루션에서 SQL Server Express (.mdf) 파일 또는 Microsoft Office Access (.mdb) 파일 등의 데이터베이스 파일을 포함할 수 있습니다. 그러면 최종 사용자가에서 중앙 집중식된 데이터베이스 유지 관리에 단일 컴퓨터에만 사용 되는 로컬 재고 관리 솔루션의 예를 들어 필요 없는 경우 로컬 데이터베이스를 유지할 수 있습니다.  

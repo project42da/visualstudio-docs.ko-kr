@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a4dd37d33230be758bd5a5adf6f5e10d5a978800
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1f238cceb189723e3ec10fbf8db4abbd9675ae21
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-window-fields-and-interfaces"></a>Properties Window Fields and Interfaces
 에 표시 되는 정보를 확인 하려면 선택 영역에 대 한 모델은 **속성** 창이 IDE에서 포커스가 있는 창에 기반 합니다. 모든 창 및 개체 선택된 창 내에서 전역 선택 컨텍스트에 푸시 해당 선택 항목 컨텍스트 개체를 가질 수 있습니다. 환경 해당 창에 포커스가 있을 때 창 프레임의 값으로 글로벌 선택 항목 컨텍스트를 업데이트 합니다. 포커스가 변경 될 때 선택 항목 컨텍스트를 사라지면 합니다.  

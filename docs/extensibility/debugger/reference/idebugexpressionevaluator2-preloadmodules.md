@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: eaceac744b06a44e3ef73de6cc9eda7255e59cb8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2721d47950f1e04172c97b12d01db08b3ad636cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpressionevaluator2preloadmodules"></a>IDebugExpressionEvaluator2::PreloadModules
 지정한 기호 공급자가 지정 된 모듈을 미리 로드 합니다.  
@@ -48,7 +49,7 @@ int PreloadModules (
 ## <a name="remarks"></a>설명  
  이 선택적 메서드 호스팅 프로세스 연결 작업을 수행할 때 사용 됩니다. ' 준비 ' 연결의 일부로 기회는 EE 제공 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **ExpressionEvaluatorPackage** 공개 하는 개체는 [IDebugExpressionEvaluator2](../../../extensibility/debugger/reference/idebugexpressionevaluator2.md) 인터페이스입니다.  
   
 ```cpp  

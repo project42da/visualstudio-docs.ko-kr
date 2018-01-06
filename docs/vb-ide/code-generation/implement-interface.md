@@ -11,11 +11,12 @@ ms.assetid: bebff2ad-25b6-4adc-8762-60d23bdd639a
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 932cfb092d4106d9afa323aa3689a813ec2dde03
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 4a8a6c2e5edf0acc7382a5099afbbe953ceae2a6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implement-an-interface-in-visual-basic"></a>Visual Basic의 인터페이스를 구현 합니다.
 **:** 즉시 인터페이스를 구현 하는 데 필요한 코드를 생성할 수 있습니다. 

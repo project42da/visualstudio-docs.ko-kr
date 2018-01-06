@@ -12,11 +12,12 @@ caps.latest.revision: "24"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: effe18c4b4d363bd7fa4cbed29ddf254c85aac31
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 0487d834f9f33f059523933d87e3e2392111fc46
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="domain-property-value-change-handlers"></a>도메인 속성 값 변경 처리기
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL(Domain-Specific Language)에서는 도메인 속성 값이 변경되면 도메인 속성 처리기에서 `OnValueChanging()` 및 `OnValueChanged()` 메서드가 호출됩니다. 변경에 응답하려면 이러한 메서드를 재정의하면 됩니다.  

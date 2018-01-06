@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.stringviewer
 dev_langs:
 - CSharp
@@ -23,11 +23,12 @@ caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4a14b9f68eb2f77ed248c82b81ce7063547e58bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 801618c900f11a562b42e610c56dfa7855dfaf39
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Visual Studio에서 문자열 시각화 도우미에 문자열을 봅니다.
 디버깅 하는 동안 너무 길어 데이터 팁 또는 디버거 창에서 볼 수 있는 보기 문자열을 문자열 시각화 도우미를 열 수 있습니다. 대부분의 시나리오에서 시각화 도우미 하는 데 도움이 잘못 된 형식의 문자열을 식별 합니다.

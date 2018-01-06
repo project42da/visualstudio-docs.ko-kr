@@ -13,11 +13,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 303ce6608ee17b99995d871c5da1536a08fef335
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9cd3e9d5e10e6946b4cae8ce02a5a39511e4baaf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-displaying-quickinfo-tooltips"></a>연습: QuickInfo 도구 설명 표시
 QuickInfo 메서드 시그니처를 표시 하는 IntelliSense 기능이 이며 사용자 설명을 메서드 이름 위로 포인터를 이동 합니다. QuickInfo 설명을 제공 하려는 식별자를 정의 하 고 다음에 콘텐츠를 표시할 도구 설명을 만들어 QuickInfo 등의 언어 기반 기능을 구현할 수 있습니다. 언어 서비스의 컨텍스트에서 QuickInfo를 정의할 수 있습니다 또는 고유한 파일 이름 확장명 및 콘텐츠 형식을 정의 하 고 해당 형식만 대 한 QuickInfo를 표시할 수 또는 기존 콘텐츠 형식 (예: "text")에 대 한 QuickInfo를 표시할 수 있습니다. 이 연습에서는 QuickInfo "text" 콘텐츠 형식에 대 한 표시 하는 방법을 보여 줍니다.  

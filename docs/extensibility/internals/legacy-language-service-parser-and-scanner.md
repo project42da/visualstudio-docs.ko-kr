@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 30453237dcd95607a4f3524f115d16bc1cf4859a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 755516fb9d341193005ad39e419e708b6d28867c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>레거시 언어 서비스 파서 및 스캐너
 파서가 언어 서비스의 핵심입니다. 관리 되는 패키지 프레임 워크 (MPF) 언어 클래스에는 표시 되 고 코드에 대 한 정보를 선택할 언어 파서를 필요 합니다. 파서는 텍스트 어휘 토큰으로 분리 하 고 유형과 기능으로 이러한 토큰을 식별 합니다.  

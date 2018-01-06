@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e482be9105670297e10dd392c4d32e9ee19d7ee9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2dbe02c569b8830f57c0d8cb68d41b362bd1d516
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugbinder3getmemorycontext64"></a>IDebugBinder3::GetMemoryContext64
 메모리 내 컨텍스트에 개체 위치 또는 64 비트 메모리 주소를 변환합니다.  
@@ -55,7 +56,7 @@ int GetMemoryContext64 (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는 구현 하는 개체를 만듭니다는 [IDebugBinder3](../../../extensibility/debugger/reference/idebugbinder3.md) 인터페이스를이 메서드를 사용 하 여 메모리 컨텍스트를 검색 합니다.  
   
 ```cpp  

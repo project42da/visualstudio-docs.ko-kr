@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 79f58bf66e5d0a137738d0a2cc90f67a287246dc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4dbee7d2998170277369f48c3b912307d2c7e414
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="providing-a-language-service-context-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 언어 서비스 컨텍스트를 제공 합니다.
 사용 하 여 사용자 컨텍스트를 제공 하는 언어 서비스에 대 한 다음과 같은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 코어 편집기: 텍스트 표식 컨텍스트를 제공 하거나 모든 사용자 컨텍스트를 제공 합니다. 각각의 차이점 여기에서 설명 합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="provide-all-user-context-to-the-editor"></a>편집기에 모든 사용자 컨텍스트를 제공 합니다.  
  언어 서비스를 만들 하 고 사용 하는 경우는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 편집기를 구현할 수 있습니다 다음 핵심는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider> 언어 서비스에 대 한 컨텍스트를 제공 하는 인터페이스입니다.  
   
- 구현에 대 한 `IVsLanguageContextProvider`, 컨텍스트 모음 (컬렉션) 컨텍스트 모음 업데이트를 편집기에 연결 됩니다. 경우는 **동적 도움말** 창 호출은 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.Update%2A> 인터페이스 컨텍스트 모음 유휴 시간에이 컨텍스트 모음에 대 한 업데이트에 대 한 편집기를 쿼리 합니다. 편집기는 편집기를 업데이트 해야 컨텍스트 모음에 대 한 포인터를 전달 하는 언어 서비스 다음에 알립니다. 호출 하 여 이렇게는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider.UpdateLanguageContext%2A> 메서드를 편집기에서 언어 서비스를 합니다. 포인터를 사용 하 여 컨텍스트 모음에, 언어 서비스 이제 추가 및 제거할 수 특성과 키워드가 있습니다. 자세한 내용은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>을 참조하십시오.  
+ 구현에 대 한 `IVsLanguageContextProvider`, 컨텍스트 모음 (컬렉션) 컨텍스트 모음 업데이트를 편집기에 연결 됩니다. 경우는 **동적 도움말** 창 호출은 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUserContext.Update%2A> 인터페이스 컨텍스트 모음 유휴 시간에이 컨텍스트 모음에 대 한 업데이트에 대 한 편집기를 쿼리 합니다. 편집기는 편집기를 업데이트 해야 컨텍스트 모음에 대 한 포인터를 전달 하는 언어 서비스 다음에 알립니다. 호출 하 여 이렇게는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider.UpdateLanguageContext%2A> 메서드를 편집기에서 언어 서비스를 합니다. 포인터를 사용 하 여 컨텍스트 모음에, 언어 서비스 이제 추가 및 제거할 수 특성과 키워드가 있습니다. 자세한 내용은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageContextProvider>을 참조하세요.  
   
  구현 하는 방법에 두 가지가 `IVsLanguageContextProvider`:  
   

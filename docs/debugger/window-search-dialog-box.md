@@ -6,18 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords: Window Search
 ms.assetid: 9c30390d-dc3c-4c27-ae1a-9d92dc076d2b
 caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: abc4ea7ee1445c0d1846fadb5319f17d98d3afcd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0f3b7b20b6ae96904b88ad97bbf87bf066f941d6
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="window-search-dialog-box"></a>창 경로 대화 상자
 특정 창에 대 한 노드를 선택 합니다.를이 대화 상자를 사용 하 여 [창 뷰](../debugger/windows-view.md)합니다. 이 대화 상자를 표시 하려면 창 뷰 창에 포커스를 이동 합니다. 그런 다음 선택 **창 찾기** 에서 **검색** 메뉴.  

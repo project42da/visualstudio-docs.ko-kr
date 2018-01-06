@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7b392ac841a50d835186e79a383e404e7fba190
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 74a9ff54d14b6212d0fc484acd2bd25fad18bb87
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-events-in-the-visual-studio-sdk"></a>Visual Studio SDK에에서는 이벤트를 노출
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]있습니다 자동화를 사용 하 여 이벤트 소스입니다. 프로젝트 및 프로젝트 항목에 대 한 이벤트 소스는 것이 좋습니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
   
  "AutomationProjectItemsEvents 개체를 반환 AutomationProjectItemEvents"=""  
   
-|이름|형식|범위|설명|  
+|name|형식|범위|설명|  
 |----------|----------|-----------|-----------------|  
 |기본 (@)|REG_SZ|사용 하지 않는|사용되지 않습니다. 설명서에 대 한 데이터 필드를 사용할 수 있습니다.|  
 |AutomationProjectsEvents|REG_SZ|이벤트 개체의 이름입니다.|키 이름에만 관련이 있습니다. 설명서에 대 한 데이터 필드를 사용할 수 있습니다.<br /><br /> 이 예제에서는 기본 프로젝트 샘플에서 제공 됩니다.|  

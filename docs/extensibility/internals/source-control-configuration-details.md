@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 17e14d4f8d3d62297ae1d2f3e62a9ed0574fef9f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2f8a2cc2f1c13c46b3ac4838d95ce588d0461347
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-configuration-details"></a>소스 제어에 대 한 구성 세부 정보
 소스 제어를 구현 하려면 프로젝트 시스템 또는 다음을 수행 하는 편집기를 올바르게 구성 하려면 필요 합니다.  

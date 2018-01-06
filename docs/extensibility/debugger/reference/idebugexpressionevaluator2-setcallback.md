@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1e2ee116f7ed858121c41628515991ed4903cb15
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a4860418edf2c0dcd4e9d0f6c98ea44db425034e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpressionevaluator2setcallback"></a>IDebugExpressionEvaluator2::SetCallback
 식 계산기를 (EE) 디버거 엔진 (DE) 메트릭 설정 읽기를 사용 하 여 콜백 인터페이스를 지정할 수 있습니다.  
@@ -48,7 +49,7 @@ int SetCallback (
 ## <a name="remarks"></a>설명  
  이 메서드는 식 계산기 메트릭 설정은 읽는 데 사용할 수 있는 세션 디버그 관리자에 인터페이스를 제공 합니다. 메트릭을 읽을 원격 디버깅에 도움이 될 수는 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 컴퓨터입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예에서는이 메서드를 구현 하는 방법을 보여 줍니다는 **CEE** 공개 하는 개체는 [IDebugSettingsCallback2](../../../extensibility/debugger/reference/idebugsettingscallback2.md) 인터페이스입니다.  
   
 ```cpp  

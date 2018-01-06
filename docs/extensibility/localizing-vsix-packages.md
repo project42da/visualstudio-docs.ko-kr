@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6a8bb9332b30e5dbc410bdacea3800713b25b10f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6b95047348f549073a05060b81874f65d7781918
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localizing-vsix-packages"></a>VSIX 패키지 지역화
 
@@ -58,7 +59,7 @@ Vsixlangpack 파일을 만들 때 설정 해야는 `Include in Vsix` 속성을 `
 
 2.  속성 그리드에서 클릭 **Vsix에 포함**, 해당 값을 설정 하 고 `true`합니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
 ### <a name="description"></a>설명
 

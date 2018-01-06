@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9a8617c4d6c5ac4a224a97f6a6311a5526151599
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bce4fe32dc53904dec901736d7d02e3f7ac21b69
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-other-parts-of-visual-studio"></a>Visual Studio의 다른 부분을 확장합니다.
 확장할 수 있는 Visual Studio UI의 더 많은 부분이 있습니다. 여기 보여줍니다 일부에 불과합니다.  

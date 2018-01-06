@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7191d31d4ec53fb26f4ab20114201836f1b58fc5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 757968aabfc256cda37a103d48c8d12f1fc16fa5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wizard-support-for-nested-projects"></a>중첩 된 프로젝트에 대 한 마법사 지원
 중첩 된 프로젝트에 대 한 부모 프로젝트 구현할 수 있는 두 가지 마법사를 실행 하는 IDE:는 **새 프로젝트** 마법사 및 **항목 추가** 마법사.  

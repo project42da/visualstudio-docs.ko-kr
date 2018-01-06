@@ -18,11 +18,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b8f78a12aa70c3c7042a821a737485da963f7a56
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a6917a8909bed30319d104f45398409b4ba367f6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-sharepoint-features"></a>SharePoint 기능 만들기
   쉽게 배포를 위한 관련된 SharePoint 프로젝트 항목을 그룹화 하는 SharePoint 기능을 사용할 수 있습니다. 기능을 만드는, 범위를 설정 하 고 SharePoint 기능 디자이너를 사용 하 여 다른 기능 종속성으로 표시할 수 있습니다. 또한이 디자이너는 각 기능을 설명 하는 XML 파일 매니페스트를 생성 합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 |--------------|-----------------|  
 |제목|선택 사항입니다. 로 설정 되는 기능의 기본 제목 *SolutionName**FeatureName*합니다.|  
 |설명|선택 사항입니다. SharePoint의 기능 설명입니다.|  
-|범위|필수 요소. 기능을 사용 하 여 만들면 **솔루션 탐색기**, 범위는 웹에 기본적으로 설정 됩니다.<br /><br /> -팜: 전체 서버 팜에 대 한 기능을 활성화 합니다.<br /><br /> 간: 사이트 사이트 모음에서 모든 웹 사이트에 대 한 기능을 활성화 합니다.<br /><br /> -웹: 특정 웹 사이트에 대 한 기능을 활성화 합니다.<br /><br /> -웹 응용 프로그램: 웹 응용 프로그램에서 모든 웹 사이트에 대 한 기능을 활성화 합니다.|  
+|범위|필수. 기능을 사용 하 여 만들면 **솔루션 탐색기**, 범위는 웹에 기본적으로 설정 됩니다.<br /><br /> -팜: 전체 서버 팜에 대 한 기능을 활성화 합니다.<br /><br /> 간: 사이트 사이트 모음에서 모든 웹 사이트에 대 한 기능을 활성화 합니다.<br /><br /> -웹: 특정 웹 사이트에 대 한 기능을 활성화 합니다.<br /><br /> -웹 응용 프로그램: 웹 응용 프로그램에서 모든 웹 사이트에 대 한 기능을 활성화 합니다.|  
 |솔루션에서 항목|기능에 추가할 수 있는 모든 SharePoint 항목입니다.|  
 |기능에 있는 항목|기능에 추가 된 SharePoint 프로젝트 항목입니다.|  
   

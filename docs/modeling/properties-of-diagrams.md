@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: fcd30a30bdae896be5aceb9dc685a5fb762ee4af
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4c1a259be5b9c8f572339279734b60ac2afd93ad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-diagrams"></a>다이어그램의 속성
 생성 된 디자이너에서 다이어그램 모양을 지정 하는 속성을 설정할 수 있습니다. 예를 들어 다이어그램에 텍스트에 대 한 기본 색을 지정할 수 있습니다.  
@@ -30,16 +31,16 @@ ms.lasthandoff: 10/27/2017
 |--------------|-----------------|-------------|  
 |채우기 색|다이어그램에 대 한 채우기 색입니다.|하얀|  
 |텍스트 색|다이어그램에 표시 되는 텍스트의 색입니다.|검정|  
-|액세스 한정자|클래스 (공용 또는 내부)의 액세스 한정자입니다.|공용|  
+|액세스 한정자|클래스 (공용 또는 내부)의 액세스 한정자입니다.|Public|  
 |사용자 지정 특성|생성 된 코드 클래스에 특성을 추가 하는 데 사용 합니다.|\<없음 >|  
 |Double 생성 파생|경우 `True`, 기본 클래스 및 (재정의 통해 사용자 지정은 지원) 하는 partial 클래스를 모두 생성 됩니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)합니다.|False|  
 |사용자 지정 생성자|경우 `True`, 사용자 지정 생성자의 소스 코드에서 제공 됩니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)...|False|  
 |상속 한정자|다이어그램에서 생성 되는 소스 코드 클래스의 상속의 종류를 설명 (`none`, `abstract` 또는 `sealed`).|없음|  
 |기본 다이어그램|이 다이어그램의 기본 클래스입니다.|(없음)|  
-|이름|이 다이어그램의 이름입니다.|현재 이름|  
+|name|이 다이어그램의 이름입니다.|현재 이름|  
 |네임스페이스|이 다이어그램와 연결 되어 있는 네임 스페이스입니다.|현재 네임 스페이스|  
 |클래스 표시|이 다이어그램을 나타내는 루트 도메인 클래스입니다.|해당 하는 경우 현재 루트 클래스|  
-|참고|이 요소와 연결 된 비공식 정보입니다.|\<없음 >|  
+|노트|이 요소와 연결 된 비공식 정보입니다.|\<없음 >|  
 |속성으로 노출 채우기 색|경우 `True`, 생성 된 디자이너의 다이어그램의 채우기 색을 설정할 수 있습니다. 이 설정 하려면 다이어그램 셰이프를 마우스 오른쪽 단추로 클릭 하 고 클릭 **추가 Explosed**합니다.|False|  
 |텍스트 색 속성으로 노출|경우 `True`, 사용자 생성 된 디자이너에서 다이어그램의 텍스트 색을 설정할 수 있습니다. 이 설정 하려면 다이어그램 셰이프를 마우스 오른쪽 단추로 클릭 하 고 클릭 **추가 Explosed**합니다.|False|  
 |설명|생성 된 디자이너를 문서화 하는 데 사용 되는 설명입니다.|\<없음 >|  

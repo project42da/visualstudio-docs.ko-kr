@@ -13,16 +13,17 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8204cd6fe59c87dd7ac2b6ca838d1c08b4ff25c5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c16fde6cb9dcb29428ad2d52a08b53cffb9f9850
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-vspackage-features"></a>소스 제어 VSPackage 기능
 이 섹션에서는 소스 제어 VSPackage의 다양 한 기능을 설명 합니다. 등록에 간략하게 설명 하 고 선택 및 이러한 VSPackage에 대 한 세부 정보를 설명 하는 세 가지 기본 소스 제어와 관련 된 기능: 소스 제어에 대 한 사용자 지정 사용자 인터페이스 (UI), 문자 모양 대체 및 쿼리 편집 쿼리 저장 (QEQS) 이벤트 처리 함수입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [등록 및 선택](../../extensibility/internals/registration-and-selection-source-control-vspackage.md)  
  패키지 선택 및 등록 메커니즘에 설명 합니다.  
   

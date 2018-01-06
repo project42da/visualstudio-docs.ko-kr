@@ -25,11 +25,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 256eaf2b451f91abdcc90c2beeedb7f689e95db6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 97283921205eaf70c77c054b269ee56f0e1adcd7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-sharepoint-workflow-solutions"></a>SharePoint 워크플로 솔루션 만들기
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]문서 및 SharePoint 웹 사이트에서 목록 항목의 수명 주기를 관리 하는 사용자 지정 워크플로 만드는 데 도움이 되는 도구를 제공 합니다. 제공되는 항목에는 디자이너, 작업 컨트롤 집합 및 필수 어셈블리 참조가 있습니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]도 포함 되어는 **SharePoint 사용자 지정 마법사**를 만들고 워크플로 구성 합니다.  
@@ -106,7 +107,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="collecting-information-during-the-workflow"></a>워크플로 중에 정보를 수집합니다.  
  사용자 로부터 정보를 수집 하려는 경우에 미리 정의 된 워크플로에서 시간입니다. 양식 또는 항목 속성을 사용 하 여 정보를 수집할 수 있습니다.  
   
-### <a name="forms"></a>폼  
+### <a name="forms"></a>양식  
  양식의 질문을 포함 하 고 사용자가 대답에 대 한 방법으로 제공 하는 대화 상자와 비슷합니다.  
   
  네 가지 종류의 워크플로에서 사용할 수 있는 양식이 있습니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fa8a3bb56b9391b8b668394e0a01cb21e2da44ea
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c49bf8f1598f2229345f7a87673b639f6cdfc76a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcustomattributequerygetcustomattributebyname"></a>IDebugCustomAttributeQuery::GetCustomAttributeByName
 이름이 지정 된 사용자 지정 특성을 검색 합니다.  
@@ -55,7 +56,7 @@ int GetCustomAttributeByName(
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`합니다. 사용자 지정 특성이 없는 경우 반환 `S_FALSE`합니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugClassFieldSymbol** 공개 하는 개체는 [IDebugCustomAttributeQuery](../../../extensibility/debugger/reference/idebugcustomattributequery.md) 인터페이스입니다.  
   
 ```cpp  

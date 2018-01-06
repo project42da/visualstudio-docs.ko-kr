@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 72ebaf6fa64a35982714da67f98c20a287f6caff
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 53d0a4fc5abc43bc446b3523cc7e8075eb7d4aa9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-getting-a-list-of-installed-code-snippets-legacy-implementation"></a>연습: 설치 된 코드 조각 (레거시 구현) 목록 가져오기
 코드 조각으로 또는 (설치 된 코드 조각 중에서 선택할 수 있음)는 메뉴 명령을 사용 하 여 소스 버퍼에 삽입할 수 있는 코드의 일부는 조각 바로 가기를 IntelliSense 완성 목록에서 선택 합니다.  

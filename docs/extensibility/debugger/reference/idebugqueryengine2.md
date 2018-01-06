@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b5545d49776e31b60719a49e4dbdca14d7dfdda3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a54b6f6ab5667993553074f1ca2511a544a0eaea
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugqueryengine2"></a>IDebugQueryEngine2
 이 인터페이스에는 디버그 관리자 (SDM) 디버그 엔진 (DE)을 나타내는 인터페이스를 검색 하는 세션 수 있습니다.  

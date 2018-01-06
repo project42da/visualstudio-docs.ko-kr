@@ -15,11 +15,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4f8422e4333c1f1ccffc928ce9a43e4afa53cc7a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 168aa0f7b93d20afaa30924dc17f05e0cac465bb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vspackage-structure-source-control-vspackage"></a>VSPackage 구조 (소스 제어 VSPackage)
 원본 제어 패키지 SDK는 자신의 소스 제어 기능을 통합 하는 소스 제어 구현자를 허용 하는 VSPackage를 만들기 위한 지침을 제공 된 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 환경입니다. VSPackage는 COM 구성 요소에 의해 요청 시 일반적으로 로드 되는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 레지스트리 항목에서 패키지를 통해 보급 된 서비스를 기반으로 한 통합된 개발 환경 (IDE). 모든 VSPackage를 구현 해야 합니다는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage>합니다. 제공 하는 서비스를 일반적으로 사용 하는 VSPackage는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE proffers 자체의 일부 서비스 및 합니다.  

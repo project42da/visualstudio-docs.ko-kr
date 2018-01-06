@@ -18,17 +18,18 @@ caps.latest.revision: "26"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 14432de4519ed49292810af5f96399bbf87e43cd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0710bad95484ada62faa042edabf5b76ac459558
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-switch-to-another-thread-while-debugging-in-visual-studio"></a>방법: Visual Studio에서 디버깅 하는 동안 다른 스레드로 전환
 다중 스레드 응용 프로그램을 디버깅할 때는 다른 스레드에 있는 작업 한 스레드에서 전환 하려면 여러 가지 방법 중 하나를 사용할 수 있습니다.
 
 > [!NOTE]
-> 스레드 실행 순서를 제어 하려는 경우 해야 [고정 및 스레드를 고정 해제](/debugger/get-started-debugging-multithreaded-apps.md)합니다.
+> 스레드 실행 순서를 제어 하려는 경우 해야 [고정 및 스레드를 고정 해제](../debugger/get-started-debugging-multithreaded-apps.md)합니다.
 
 코드 편집기와 여러 가지 다중 스레드 디버깅 창에서 스레드를 검사 하는 경우 노란색 화살표는 현재 스레드를 나타냅니다. 끝이 굽은 녹색 화살표가 비현재 스레드가 현재 디버거 컨텍스트에 있음을 나타냅니다.
   

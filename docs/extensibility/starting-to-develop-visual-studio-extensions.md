@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2d788121e81af48cb972631d0845ad7b4317818b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7bc03568465efa022981ade059b0de68019a5978
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 확장 개발 하기 시작
 하기 전에 Visual Studio 확장을 작성해 본 경험이 있는 경우 몇 가지 질문 있을 수도 있습니다. 여기에 가장 일반적인 것 중 일부 나열한 했습니다. 피드백 단추를 사용 하 여 원하는 정보 보이지 않으면 (**이 페이지가 도움이 되었나요?** 화면 맨 아래에) 대상에 게 요청 합니다.  
@@ -89,4 +90,4 @@ ms.lasthandoff: 10/31/2017
 ## <a name="how-can-i-distribute-my-extension"></a>My 확장을 배포할 수는 방법  
  다른 컴퓨터에 확장을 설치 하거나 두 번 클릭 하 여 설치 하는.vsix 파일로 친구 들에 게 보낼 수 있습니다. VSIX 패키지에 대 한 자세한 내용을 확인할 수 [Visual Studio 확장명 전달](../extensibility/shipping-visual-studio-extensions.md)합니다.  
   
- Visual Studio 고객의 많은 정보를 볼 수 있도록 Visual Studio 마켓플레이스에 확장 프로그램을 게시할 수도 있습니다. 마켓플레이스 확장 패키지의 예제를 보려면 [연습: Visual Studio Extension 게시](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)합니다. 마켓플레이스에서 게시 하기 위해 수행 해야 하는 방법에 대 한 자세한 내용은 참조 [제품 및 Visual Studio 용 확장명](https://docs.microsoft.com/en-us/vsts/integrate/ide/extensions/overview)합니다.
+ Visual Studio 고객의 많은 정보를 볼 수 있도록 Visual Studio 마켓플레이스에 확장 프로그램을 게시할 수도 있습니다. 마켓플레이스 확장 패키지의 예제를 보려면 [연습: Visual Studio Extension 게시](../extensibility/walkthrough-publishing-a-visual-studio-extension.md)합니다. 마켓플레이스에서 게시 하기 위해 수행 해야 하는 방법에 대 한 자세한 내용은 참조 [제품 및 Visual Studio 용 확장명](/vsts/integrate/ide/extensions/overview)합니다.

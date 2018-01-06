@@ -26,11 +26,12 @@ caps.latest.revision: "58"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: cc4455d507265376b9f208d8f351472ee6968c45
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3f4a6e3ba2eafa281fda8557f48c0886aff89105
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-models-for-your-app"></a>앱용 모델 만들기
 모델링 다이어그램을 통해 코드에 대한 아이디어 및 소프트웨어 시스템에서 지원해야 하는 사용자 요구 사항을 이해하고 분명히 설명하고 전달할 수 있습니다.

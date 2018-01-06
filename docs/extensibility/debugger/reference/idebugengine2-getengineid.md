@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 008c3cb2f2c4f8e12eedbae347515099524da2c0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 98331e1d81b310d5b3a8da94d9ca78ea48205f3d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine2getengineid"></a>IDebugEngine2::GetEngineID
 디버그 엔진 (DE)의 GUID를 가져옵니다.  
@@ -47,7 +48,7 @@ int GetEngineID(
 ## <a name="remarks"></a>설명  
  일반적인 Guid의 몇 가지 예는 `guidScriptEng`, `guidNativeEng`, 또는 `guidSQLEng`합니다. 새 디버그 엔진 id에 대 한 고유 GUID를 만듭니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CEngine` 구현 하는 개체는 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) 인터페이스입니다.  
   
 ```cpp  

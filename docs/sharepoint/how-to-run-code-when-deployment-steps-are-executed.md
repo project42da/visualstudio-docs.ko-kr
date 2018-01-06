@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: e1aed7e4fe7ee30450b3ec37ce36616648e830fa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a147b9f6def49565334004bda1f8c4c80b0e7bfa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-run-code-when-deployment-steps-are-executed"></a>방법: 배포 단계가 진행될 때 코드 실행
   SharePoint 프로젝트의 배포 단계에 대 한 추가 작업을 수행 하려는 경우 Visual Studio는 각 배포 단계를 실행 한 후 및 하기 전에 SharePoint 프로젝트 항목에 의해 발생 한 이벤트를 처리할 수 있습니다. 자세한 내용은 참조 [확장 SharePoint 패키징 및 배포](../sharepoint/extending-sharepoint-packaging-and-deployment.md)합니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  이벤트 처리기를 사용 하 여는 <xref:Microsoft.VisualStudio.SharePoint.DeploymentStepStartedEventArgs> 및 <xref:Microsoft.VisualStudio.SharePoint.DeploymentStepCompletedEventArgs> 배포 단계에 대 한 정보를 얻으려면 매개 변수입니다. 예를 들어 배포 단계를 실행 되 고 솔루션 되 고 있는지 여부를 확인할 수 있습니다 배포 되거나 취소 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 처리 하는 방법을 보여 줍니다.는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepStarted> 및 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.DeploymentStepCompleted> 목록 인스턴스 프로젝트 항목에 대 한 확장에는 이벤트입니다. 이 확장 프로그램에는 추가 메시지에 기록 된 **출력** 배포 및 솔루션을 제거 하는 동안 응용 프로그램 풀을 재생 하는 Visual Studio 창.  
   
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#4](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/handledeploymentstepevents.vb#4)]

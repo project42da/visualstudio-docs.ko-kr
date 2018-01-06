@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 484d53315f836117b69270a2f43b6b780733b9f7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cedf021321b66c47690450823a7da92cd19888eb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="property-pages"></a>속성 페이지
 사용자가 볼 수 있고 속성 페이지를 사용 하 여 프로젝트 구성에 종속 된 매개 변수와-독립적인 속성을 변경 합니다. A **속성 페이지** 에서 단추를 사용할 수는 **속성** 창 또는 선택된 된 개체의 속성 페이지 보기를 제공 하는 개체에 대 한 솔루션 탐색기 도구 모음입니다. 속성 페이지에는 솔루션 및 프로젝트에 사용할 수 있는 및 환경에 의해 만들어집니다. 그러나도 사용할 수는 구성에 종속 된 속성을 사용 하는 프로젝트 항목에 대 한 사용 가능 합니다. 프로젝트 내에서 파일을 다른 컴파일러 스위치 설정을 올바르게 빌드되려면 필요로 할 때이 기능을 사용할 수도 있습니다.  

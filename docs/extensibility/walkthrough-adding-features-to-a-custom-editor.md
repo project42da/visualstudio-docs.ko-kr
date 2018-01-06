@@ -13,11 +13,12 @@ caps.latest.revision: "38"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: df3621d87ae80c0eee105183edbc97a4e7ade62f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f3c207b80686a66d9a06b8c50321b4dce2257ada
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-adding-features-to-a-custom-editor"></a>연습: 추가 기능 사용자 지정 편집기
 사용자 지정 편집기를 만든 후에 더 많은 기능을 추가할 수 있습니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
         > [!NOTE]
         >  호출 `QueryService` 에 <xref:Microsoft.VisualStudio.Shell.Interop.SVsFileChangeEx> 에 대 한 포인터를 얻으려고 `IVsFileChangeEx`합니다.  
   
-7.  소스 코드 제어와 문서 편집 이벤트를 조정 합니다. 이렇게 하려면 다음을 수행합니다.  
+7.  소스 코드 제어와 문서 편집 이벤트를 조정 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면  
   
     1.  에 대 한 포인터를 가져올 `IVsQueryEditQuerySave2` 호출 하 여 `QueryService` 에 <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave>합니다.  
   
@@ -65,13 +66,13 @@ ms.lasthandoff: 10/31/2017
   
          이 메서드 저장 하지 않은 경우 또는 마지막 저장 후 변경 된 경우 파일을 저장 하 라는 메시지 표시 합니다.  
   
-8.  활성화는 **속성** 창 편집기에서 선택한 텍스트에 대 한 속성을 표시 합니다. 이렇게 하려면 다음을 수행합니다.  
+8.  활성화는 **속성** 창 편집기에서 선택한 텍스트에 대 한 속성을 표시 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면  
   
     1.  호출 <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection.OnSelectChange%2A> 각 시간 텍스트 선택이 변경 전달의 구현에서 <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>합니다.  
   
     2.  호출 `QueryService` 에 <xref:Microsoft.VisualStudio.Shell.Interop.STrackSelection> 에 대 한 포인터를 사용 하려면이 서비스 <xref:Microsoft.VisualStudio.Shell.Interop.ITrackSelection>합니다.  
   
-9. 사용자가 편집기 사이 항목을 끌어다 및 **도구 상자**, 간이나 외부 편집기 (예: Microsoft Word) 및 **도구 상자**합니다. 이렇게 하려면 다음을 수행합니다.  
+9. 사용자가 편집기 사이 항목을 끌어다 및 **도구 상자**, 간이나 외부 편집기 (예: Microsoft Word) 및 **도구 상자**합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면  
   
     1.  구현 `IDropTarget` 편집기 놓기 대상인 IDE를 경고 하 여 편집기에서.  
   

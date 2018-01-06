@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ce5ecc4cead8ba8c5673f5ba15f8dda78a90e6be
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7f9272f034e8f8679fe832ecd628e64ab64af515
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="what39s-new-in-the-source-control-plug-in-api-version-12"></a>기능 &#39; 소스 제어 플러그 인 API 버전 1.2의 새로운 s
 이 섹션은 소스 제어 플러그 인 API 버전 1.2에서에서 고급 소스 코드 제어 기능을 강조 표시합니다. 다음은 버전 1.2의에서 새로운 기능에 대 한 설명입니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0fad2e8d63b0005addab20756501d18fe872b4c3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 139b51fbf0ede7ea439d2308a0d03afe7ba617ec
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-patterns-for-visual-studio"></a>Visual Studio에 대 한 응용 프로그램 패턴
 ##  <a name="BKMK_WindowInteractions"></a>창 상호 작용  
@@ -400,7 +401,7 @@ Visual Studio에서 같은 작업을 수행 하는 기존 컨트롤 구성으로
   
 | 단추 이름 | 바로 가기 키 |  
 | --- | --- |  
-| 확인 | 입력 |  
+| 확인 | Enter 키 |  
 | 취소 | Esc |  
 | 도움말 | F1 |  
   

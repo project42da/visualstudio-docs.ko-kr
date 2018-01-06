@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3c8bdc3930e09dce6607df10f9d8db004f9a3f2a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: de32c5de84bf915bf3e9de21171ec3ab1ad7aee7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection&gt; 요소 (Visual Studio에서 Office 개발)
   `entryPointsCollection` 네임스페이스의 `vstav3` 요소에는 Office 솔루션과 관련된 모든 `entryPoints` 요소가 포함됩니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
  `entryPointsCollection` 에는 다음 요소가 있습니다.  
   
 ### <a name="entrypoints"></a>entryPoints  
- 필수 요소. 역할은 `entryPoints` 요소에는 `vstav3` 네임 스페이스에 정의 된 [&#60; 진입점 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
+ 필수. 역할은 `entryPoints` 요소에는 `vstav3` 네임 스페이스에 정의 된 [&#60; 진입점 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
   
 ## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
   

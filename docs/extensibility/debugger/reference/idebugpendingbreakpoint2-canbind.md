@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c1e64de7048f071437b6166b8cc9a6cc5cd920b2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5cd81f18e67418bdc3bf15dae46d1751b76c8584
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugpendingbreakpoint2canbind"></a>IDebugPendingBreakpoint2::CanBind
 이 보류 중인 중단점 코드 위치에 바인딩할 수 있는지 여부를 결정 합니다.  
@@ -49,7 +50,7 @@ int CanBind (
 ## <a name="remarks"></a>설명  
  수행 된 작업을 확인 하려면이 메서드는 중단점 보류 중인이 바인딩된 경우입니다. 호출 된 [바인딩할](../../../extensibility/debugger/reference/idebugpendingbreakpoint2-bind.md) 실제로 보류 중단점을 바인딩할 메서드를 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CPendingBreakpoint` 공개 하는 개체는 [IDebugPendingBreakpoint2](../../../extensibility/debugger/reference/idebugpendingbreakpoint2.md) 인터페이스입니다.  
   
 ```cpp  

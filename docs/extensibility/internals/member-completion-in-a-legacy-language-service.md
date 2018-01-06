@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4ee8dd14674a1157eefda60e2e7536d7ade90f79
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e77511bdaaa96dc75f5be75c175b63fcd3cc3253
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="member-completion-in-a-legacy-language-service"></a>레거시 언어 서비스에서 멤버 완성
 IntelliSense 멤버 완성 클래스, 구조체, 열거형 또는 네임 스페이스와 같은 특정 범위의 가능한 멤버 목록을 표시 하는 도구 설명입니다. 예를 들어 C#에서 "this" 뒤에 마침표, 사용자가 현재 범위에서 구조체 또는 클래스의 모든 구성원의 목록이 표시 됩니다 선택할 수 있는 목록에서.  
@@ -59,7 +60,7 @@ IntelliSense 멤버 완성 클래스, 구조체, 열거형 또는 네임 스페�
 ## <a name="supporting-member-completion-in-the-scanner"></a>스캐너에서 관련 멤버 완성  
  스캐너 멤버 완료 문자를 검색 하 고 토큰의 트리거를 설정 하는 작업을 할 수 있어야 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 문자가 구문 분석 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음은 간단한 예제 멤버 완성 문자를 검색 하 고 적절 한 설정 <xref:Microsoft.VisualStudio.Package.TokenTriggers> 플래그입니다. 이 예제는 설명 목적 으로만. 스캐너는 메서드가 포함 되어 있음을 가정 `GetNextToken` 식별 하 고 텍스트 줄에서 토큰을 반환 합니다. 예제 코드는 단순히 적합 한 종류의 문자가 발견 될 때마다 트리거를 설정 합니다.  
   
 ```csharp  
@@ -100,7 +101,7 @@ namespace TestLanguagePackage
   
  멤버 문자를 선택 하기 전에이 범위 식별자의 형식에 기반 합니다. 예를 들어 C#에서 멤버 변수를 지정 `languageService` 의 형식을 가진를 `LanguageService`입력 **languageService 합니다.** 모든 멤버 목록이 생성 된 `LanguageService` 클래스입니다. 또한 C#에서 입력 **이 있습니다.** 현재 범위에 있는 클래스의 모든 멤버 목록을 생성합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예에서는를 채우는 한 가지 방법은 <xref:Microsoft.VisualStudio.Package.Declarations> 목록입니다. 이 코드에서는 파서에서 선언을 생성 하 고 호출 하 여 목록에 추가 가정는 `AddDeclaration` 에서 메서드는 `TestAuthoringScope` 클래스입니다.  
   
 ```csharp  

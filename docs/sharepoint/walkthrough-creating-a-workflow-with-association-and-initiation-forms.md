@@ -24,11 +24,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: aa95c519ab24ba042b6a1adfa71c64499b18d4c9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: b3178c330d34570d1406a1b63368537bc7f66887
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>연습: 연결 및 초기화 폼이 있는 워크플로 만들기
   이 연습에는 연결 및 초기화 폼의 사용을 통합 하는 기본적인 순차 워크플로 만드는 방법을 보여 줍니다. 이들은 (연결 양식) SharePoint 관리자가 처음 연결할 때 및 워크플로 (시작 양식) 사용자가 시작 될 때 워크플로에 추가할 매개 변수를 사용 하도록 설정 하는 ASPX 폼입니다.  
@@ -96,7 +97,7 @@ ms.lasthandoff: 10/31/2017
   
      **SharePoint 사용자 지정 마법사** 나타납니다.  
   
-10. 에 **디버깅에 대 한 워크플로 이름을 지정** 페이지에서 기본 이름을 적용 (**경비 보고서-Workflow1**). 기본 워크플로 템플릿 형식 값을 유지 (**목록 워크플로)**합니다. 선택 된 **다음** 단추입니다.  
+10. 에 **디버깅에 대 한 워크플로 이름을 지정** 페이지에서 기본 이름을 적용 (**경비 보고서-Workflow1**). 기본 워크플로 템플릿 형식 값을 유지 (**목록 워크플로)**합니다. **다음** 단추를 선택합니다.  
   
 11. 에 **Visual Studio 디버그 세션에서 워크플로 자동으로 연결 하 시겠습니까?** 페이지에서 선택 하는 경우 워크플로 템플릿을 자동으로 연결 하는 확인란의 선택을 취소 합니다.  
   

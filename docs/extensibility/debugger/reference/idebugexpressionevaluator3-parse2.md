@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f8b170a0031374bcd9ecb2a63d72586797bfdbce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c4c5e2a62cfbe44fe6a68da703df6ff81a89d07e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
 기호 공급자 및 평가 프레임의 주소를 제공 하는 구문 분석 된 식에는 식 문자열을 변환 합니다.  
@@ -81,7 +82,7 @@ HRESULT Parse2 (
 ## <a name="remarks"></a>설명  
  이 메서드는 구문 분석 된 식, 실제 값을 생성합니다. 구문 분석 된 식 준비가 되었습니다 평가할 수, 즉, 값으로 변환 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CEE** 공개 하는 개체는 [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) 인터페이스입니다.  
   
 ```cpp  

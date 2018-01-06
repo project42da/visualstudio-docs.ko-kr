@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8ce42039759128ac8b41556b94714da8cd43197d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d4fe70f9d0ef5273f30f16e99524247a2e45843c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugportsupplierdescription2"></a>IDebugPortSupplierDescription2
 수 있도록는 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 안의 텍스트를 표시 하는 UI는 **전송 정보** 의 섹션은 **프로세스에 연결** 대화 상자.  

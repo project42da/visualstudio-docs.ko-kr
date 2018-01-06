@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5937d37cfed89ee7f10779f764b8d78d370eb362
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b92a622b6b898c917710ac748b9205079d71ea5e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="task-class---internal-members"></a>작업 클래스-내부 멤버
 이 항목의 내부 멤버를 설명 합니다.는 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 사용자 지정 디버거를 구현 하는 데 도움이 되는 클래스입니다. 이 클래스에 대 한 일반 정보에 대 한 참조는 <xref:System.Threading.Tasks.Task> 참조 항목입니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="fields"></a>필드  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[m_action](../../extensibility/debugger/m-action-field.md)|실행할 코드를 나타내는 대리자는 <xref:System.Threading.Tasks.Task> 개체입니다.|  
 |[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|추가 속성을 저장는 <xref:System.Threading.Tasks.Task> 개체입니다.|  

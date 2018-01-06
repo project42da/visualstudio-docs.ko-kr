@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a8dacc0a3dfc230085c7575960238711d16d1ef8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1960b5fe7b7c507b5b3275315ea6ae1715c27f76
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="model-for-source-control-packages"></a>소스 제어 패키지에 대 한 모델
 다음과 같은 모델의 소스 제어 구현 예를 나타냅니다. 모델에 구현 해야 하는 인터페이스 및 환경 서비스 호출 해야 하는 것이 표시 됩니다. 모든 서비스와 마찬가지로 실제로 서비스를 통해 얻을 특정 인터페이스의 메서드를 호출 합니다. 클래스의 이름은 쉽게 소스 제어 수행 방법을 볼 수 있도록 식별 됩니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="interfaces"></a>인터페이스  
  다음 표에 표시 된 인터페이스의 목록을 사용 하 여 Visual Studio에서 새 프로젝트 형식에 대 한 소스 제어를 구현할 수 있습니다.  
   
-|인터페이스|기능|  
+|인터페이스|사용|  
 |---------------|---------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2>|프로젝트 및 변경 (더티) 파일 하거나 저장 하기 전에 편집기에서 호출 됩니다. 이 인터페이스를 사용 하 여 액세스 되는 <xref:Microsoft.VisualStudio.Shell.Interop.SVsQueryEditQuerySave> 서비스입니다.|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsTrackProjectDocuments2>|프로젝트를 추가, 제거 또는 파일 또는 디렉터리의 이름을 바꿀 수 있는 권한 요청에 의해 호출 됩니다. 승인 된 추가, 제거 또는 작업의 이름을 바꿀 때 환경 완료 상태임을 알릴 프로젝트에서이 인터페이스를 사용 하는 것이 라고도 합니다. 사용 하 여 액세스 하는 데는 것은 <xref:Microsoft.VisualStudio.Shell.Interop.SVsTrackProjectDocuments> 서비스입니다.|  

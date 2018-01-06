@@ -26,18 +26,19 @@ caps.latest.revision: "91"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 026353ff6a59b0dbf3ef1bb817210f2e835963de
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2870f057f34299a41dcb090f97bb13316cb28387
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="browse-and-rearrange-code-maps"></a>코드 맵 찾아보기 및 다시 정렬
 코드 맵의 항목을 다시 정렬하여 읽기 쉽게 만들고 해당 성능을 향상시킵니다.  
   
  솔루션의 기본 코드에 영향을 주지 않고 코드 맵을 사용자 지정할 수 있습니다. 이 기능은 주요 코드 요소에 중점을 두거나 코드에 대한 아이디어를 전달하려는 경우에 유용합니다. 예를 들어 관심 있는 영역을 강조 표시하기 위해 맵에서 코드 요소를 선택하고 필터링한 다음 코드 요소와 링크의 스타일을 변경하고 코드 요소를 숨기거나 삭제하고 속성, 범주 또는 그룹을 사용하여 코드 요소를 구성할 수 있습니다.  
   
- **Requirements**  
+ **요구 사항**  
   
 -   코드 맵을 만들려면 Visual Studio Enterprise가 있어야 합니다.  
   

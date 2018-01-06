@@ -27,11 +27,12 @@ caps.latest.revision: "41"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 513b2216a99f37ba3aff1174965470b20921072f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: dc29b307f6459e3a5841ae1dd1c60ae9ab9ed152
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint 프로젝트 및 프로젝트 항목 템플릿
   다음 섹션에서는 사용할 수 있는 SharePoint 프로젝트에 설명 하 고 프로젝트 항목 템플릿 및 사용 방법. 
@@ -111,7 +112,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="list"></a>목록  
  목록에는 재사용 가능한 기본 SharePoint 목록 정의 달력 작업 목록 등의 인스턴스입니다. 목록을 솔루션을 추가한 후 목록 디자이너를 사용 하면 사이트 열 목록에 추가 하 고 사용자 지정 목록 열을 만들 수 있습니다. 이 콘텐츠 형식에서 사이트 열을 포함합니다. 지정할 수는 *보기* 목록에 표시 될 열을 결정 하는 목록에 대 한 합니다. 자세한 내용은 참조 [연습: 사이트 열, 콘텐츠 형식 및 SharePoint에 대 한 목록 만들기](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md) 및 [문서 블록: 목록 및 문서 라이브러리](http://go.microsoft.com/fwlink/?LinkId=179421)합니다.  
   
-### <a name="module"></a>모듈  
+### <a name="module"></a>Module  
  *모듈* (으로 다름 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] 모듈) 이미지 또는 메모와 같은 SharePoint 서버에 배포 하려는 파일을 포함 합니다. 모듈 프로젝트 항목에 포함 된 **모듈** 노드. 두 프로젝트 항목 템플릿을 포함 하는 모듈 노드: 매니페스트 모듈에 대 한 역할을 하는 XML 정의 파일을와 sample.txt 파일, 자리 표시자 파일입니다. 자세한 내용은 참조 [솔루션에 파일 포함을 사용 하 여 모듈](../sharepoint/using-modules-to-include-files-in-the-solution.md) 및 [모듈](http://go.microsoft.com/fwlink/?LinkId=179425)합니다.  
   
 ### <a name="sequential-workflow-farm-solution-only"></a>순차 워크플로 (팜 솔루션에만 해당)  

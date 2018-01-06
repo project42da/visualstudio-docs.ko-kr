@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b290253538181a34dd419a331e3bff464e3775ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e6d193a9ebc8fdc69200645242f6f1ad3b7500df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="package-guids-of-visual-studio-features"></a>Visual Studio의 기능 패키지 Guid
 격리 셸 응용 프로그램의.pkgundef 파일에서 응용 프로그램에서 특정 패키지를 제외 하려면 다음 Guid를 사용할 수 있습니다.  

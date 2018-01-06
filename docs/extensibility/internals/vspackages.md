@@ -13,16 +13,17 @@ caps.latest.revision: "45"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7ccd78a87f4c3d2d7ef178c939a22afb24e42d75
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fe656b22537276f15a1b3cebaaa6890ed4a87735
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vspackages"></a>VSPackages
 Vspackage는을 확장 하는 소프트웨어 모듈의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] UI 요소, 서비스, 프로젝트, 편집기 및 디자이너를 제공 하 여 통합된 개발 환경 (IDE).  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [VSPackage 파일 위치를 VS Shell 지정](../../extensibility/internals/specifying-vspackage-file-location-to-the-vs-shell.md)  
  Visual Studio 셸 VSPackage 위치를 지정 하는 방법에 설명 합니다.  
   

@@ -13,16 +13,17 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 42c1c573554ee6d92b3967517bdcdf0f3106ce61
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 457f9e5303c71d73467815b581c091dc239c1b63
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-file-name-extensions-for-side-by-side-deployments"></a>병렬 배포를 위한 파일 이름 확장명을 등록 하는 중입니다.
 병렬 환경에 배포 된, Vspackage에 대 한 올바른 버전의 파일 연관 시킬 파일 이름 확장명을 등록 해야 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 프로젝트를 열고 프로젝트에 적절 한 버전의 파일 항목을 사용 하면 등록 버전별 파일 이름 확장명을 사용 하지 않는 한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [파일 확장명 정보](../extensibility/about-file-name-extensions.md)  
  파일 이름 확장명은 등록 하는 방법을 설명 합니다.  
   

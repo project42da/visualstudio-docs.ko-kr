@@ -13,16 +13,17 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 121544050a4bc17bbf616b1a2c7b9a90f98f9c9d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 13951a42b5a0fe6874c713bea3025e232b259b6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="interfaces-visual-studio-debugging"></a>인터페이스 (Visual Studio 디버깅)
 메서드는 내용의 고 Vtable 순서의 인터페이스 페이지에는 테이블의 각 인터페이스에서 사전순으로 나열 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Core 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)  
  디버그 엔진에서 사용 되는 인터페이스에 설명 합니다.  
   

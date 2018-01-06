@@ -13,16 +13,17 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e7c42521915574952649776894ddc660e8e49c11
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c79183861539849a04e4936ed9b0f16092963496
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="objects"></a>개체
 다음 참조 정보는 핵심 텍스트 편집기의 인스턴스를 만드는 데 사용 되는 개체를 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [VSCodeWindow 개체](../extensibility/vscodewindow-object.md)  
  코드 창 개체 하나 이상의 텍스트 보기 묶을 수 있는 특별 한 문서 창에 설명 합니다.  
   

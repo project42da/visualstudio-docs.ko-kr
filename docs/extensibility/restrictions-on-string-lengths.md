@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 302d36a968561f9823a5d36177e21c9698fc9e2b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 99144288a4da2a27956a9dc065ba5f5fba03fdcb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="restrictions-on-string-lengths"></a>문자열 길이에 대 한 제한
 소스 제어 플러그 인 API는 다양 한 기능에 사용 되는 문자열의 길이 제한 합니다.  

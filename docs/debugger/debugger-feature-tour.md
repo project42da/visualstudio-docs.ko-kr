@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b7edb1428d3dedbbe6341427e28964559d9750b1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 91b7ff9ea0b5caae46715894016469fadecaa098
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="feature-tour-of-the-visual-studio-debugger"></a>Visual Studio 디버거 기능 둘러보기
 
@@ -192,6 +193,26 @@ F5 키를 누른 채 선택한 코드 줄에 도달할 때까지 **커서까지 
 > 예외 도우미 대체 예외 도우미 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]합니다.
 
 확장 된 **예외 설정** 수 있지만이 예외 형식을 처리 하는 방법에 대 한 다른 옵션을 보려면 노드를이 둘러보기는에 아무 것도 변경할 필요가 없습니다!
+
+## <a name="debug-live-aspnet-apps-in-azure-app-service"></a>Azure 앱 서비스에서 라이브 ASP.NET 앱 디버깅
+
+**스냅숏 디버거** 에 관심이 있는 코드가 실행 되 면 프로덕션에서 응용 프로그램의 스냅숏을 수행 합니다. 디버거가 스냅숏을 생성하도록 명령하려면 코드에서 snappoint와 logpoint를 설정합니다. 디버거를 통해 프로덕션 응용 프로그램의 트래픽에 영향을 미치지 않으면서 정확히 무엇이 잘못되었는지를 볼 수 있습니다. 스냅샷 디버거를 사용하면 프로덕션 환경에서 발생하는 문제를 해결하는 데 걸리는 시간을 상당히 줄일 수 있습니다.
+
+![스냅숏 디버거를 시작할](../debugger/media/snapshot-launch.png "스냅숏 디버거 시작")
+
+Azure 앱 서비스에서 실행 되는 ASP.NET 응용 프로그램에 대 한 스냅숏 컬렉션 ´ ù. .NET Framework 4.6.1에서 ASP.NET 응용 프로그램을 실행 해야 이상에서 ASP.NET Core 응용 프로그램을.NET Core 2.0 또는 나중에 Windows에서 실행 해야 합니다.
+
+자세한 내용은 참조 [스냅숏 디버거를 사용 하 여 라이브 ASP.NET 응용 프로그램을 디버깅](../debugger/debug-live-azure-applications.md)합니다.
+
+## <a name="view-snapshots-with-intellitrace-step-back-visual-studio-enterprise"></a>IntelliTrace 단계 저장 (Visual Studio Enterprise)를 사용 하 여 보기 스냅숏
+
+**IntelliTrace 단계 다시** 자동으로 단계 이벤트는 모든 중단점 및 디버거에서의 응용 프로그램의 스냅숏을 만듭니다. 기록된 스냅숏을 통해 이전 중단점 또는 단계로 돌아가서 응용 프로그램의 과거 상태를 볼 수 있습니다. IntelliTrace 뒤로 이동을 사용하면 이전 응용 프로그램 상태를 보고 싶지만 디버깅을 다시 시작하거나 원하는 앱 상태를 다시 만들지 않으려는 경우에 시간을 절약할 수 있습니다.
+
+디버그 도구 모음의 **뒤로 가기**와 **앞으로 가기** 단추를 사용하여 이동하고 스냅숏을 볼 수 있습니다. 이 단추를 사용하여 **진단 도구** 창의 **이벤트** 탭에 나타나는 이벤트를 탐색할 수 있습니다.
+
+![뒤로 및 앞으로 단추 단계](../debugger/media/intellitrace-step-back-icons-description.png  "단계 뒤로 및 앞으로 단추")  
+
+자세한 내용은 [IntelliTrace 뒤로 이동을 사용하여 스냅숏 보기](../debugger/how-to-use-intellitrace-step-back.md) 페이지를 참조하세요.
 
 ## <a name="more-features-to-look-at"></a>더 많은 기능을 확인
 

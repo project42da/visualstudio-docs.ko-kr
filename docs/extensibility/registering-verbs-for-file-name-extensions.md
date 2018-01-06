@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8f430486c613e6281404110d4441d2a3d2100534
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ff1902689524dd980c8223ca83863238254df448
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-verbs-for-file-name-extensions"></a>파일 이름 확장명에 대 한 동사를 등록 하는 중
 응용 프로그램 파일 이름 확장명의 연결에는 일반적으로 사용자 파일을 두 번 클릭할 때 발생 하는 기본 작업을 있습니다. 이 기본 동작 동사, 예를 들어 열기 작업에 해당 하는에 연결 됩니다.  

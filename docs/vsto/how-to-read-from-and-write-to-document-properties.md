@@ -20,11 +20,12 @@ caps.latest.revision: "54"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ca687f9482d65621ad848c2ca6459c6fe782f8ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: a484fdc9686e4454db801c2b6d503ae786b921f2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-read-from-and-write-to-document-properties"></a>방법: 문서 속성에서 읽기 및 문서 속성에 쓰기
   문서와 함께 문서 속성을 저장할 수 있습니다. Office 응용 프로그램은 작성자, 제목 및 주제와 같은 다양한 기본 제공 속성을 제공합니다. 이 항목에서는 Microsoft Office Excel 및 Microsoft Office Word에서 문서 속성을 설정하는 방법을 보여 줍니다.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
   
 -   VSTO 추가 기능 프로젝트에서는 <xref:Microsoft.Office.Interop.Excel._Workbook.BuiltinDocumentProperties%2A> 개체의 <xref:Microsoft.Office.Interop.Excel.Workbook> 속성을 사용합니다.  
   
- 이러한 속성은 <xref:Microsoft.Office.Core.DocumentProperties> 개체 컬렉션인 <xref:Microsoft.Office.Core.DocumentProperty> 개체를 반환합니다. 컬렉션의 `Item` 속성을 사용하여 이름 또는 컬렉션 내의 인덱스로 특정 속성을 검색할 수 있습니다.  
+ 이러한 속성은 <xref:Microsoft.Office.Core.DocumentProperty> 개체 컬렉션인 <xref:Microsoft.Office.Core.DocumentProperties> 개체를 반환합니다. 컬렉션의 `Item` 속성을 사용하여 이름 또는 컬렉션 내의 인덱스로 특정 속성을 검색할 수 있습니다.  
   
  다음 코드 예제에서는 문서 수준 프로젝트에서 기본 제공 **Revision Number** 속성을 변경하는 방법을 보여 줍니다.  
   
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
   
 -   VSTO 추가 기능 프로젝트에서는 <xref:Microsoft.Office.Interop.Word._Document.BuiltInDocumentProperties%2A> 개체의 <xref:Microsoft.Office.Interop.Word.Document> 속성을 사용합니다.  
   
- 이러한 속성은 <xref:Microsoft.Office.Core.DocumentProperties> 개체 컬렉션인 <xref:Microsoft.Office.Core.DocumentProperty> 개체를 반환합니다. 컬렉션의 `Item` 속성을 사용하여 이름 또는 컬렉션 내의 인덱스로 특정 속성을 검색할 수 있습니다.  
+ 이러한 속성은 <xref:Microsoft.Office.Core.DocumentProperty> 개체 컬렉션인 <xref:Microsoft.Office.Core.DocumentProperties> 개체를 반환합니다. 컬렉션의 `Item` 속성을 사용하여 이름 또는 컬렉션 내의 인덱스로 특정 속성을 검색할 수 있습니다.  
   
  다음 코드 예제에서는 문서 수준 프로젝트에서 기본 제공 **Subject** 속성을 변경하는 방법을 보여 줍니다.  
   

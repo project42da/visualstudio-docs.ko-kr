@@ -14,11 +14,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5ddc090e827b0a94a6534a0c4e625299cbc2ef5a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2d17e31f3282727386654b0d1913fd00424c3c0a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugexpression2evaluatesync"></a>IDebugExpression2::EvaluateSync
 이 메서드는 동기적으로 식을 계산 합니다.  
@@ -59,7 +60,7 @@ int EvaluateSync(
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`; 그렇지 않으면 오류 코드가 반환 됩니다. 몇 가지 일반적인 오류 코드:  
   
-|오류|설명|  
+|Error|설명|  
 |-----------|-----------------|  
 |E_EVALUATE_BUSY_WITH_EVALUATION|다른 식을 평가 되 고 현재 및 동시 식 계산이 지원 되지 않습니다.|  
 |E_EVALUATE_TIMEOUT|평가 제한 시간이 초과 되었습니다.|  
@@ -67,7 +68,7 @@ int EvaluateSync(
 ## <a name="remarks"></a>설명  
  동기 평가 대 한 이벤트 평가 완료 되 면 Visual Studio로 다시 보내는 필요 없는 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CExpression` 구현 하는 개체는 [IDebugExpression2](../../../extensibility/debugger/reference/idebugexpression2.md) 인터페이스입니다.  
   
 ```cpp  

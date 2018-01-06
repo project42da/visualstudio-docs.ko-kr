@@ -15,16 +15,17 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 79a2d2f1e9dc130fc280ce61ec282f30e55024ae
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 908a850b1e86ffc2e8337096266849efeaf04a51
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-a-tool-window"></a>도구 창을 등록 하는 중
 도구 창을 사용 하 여 등록할 수 있는 <xref:Microsoft.VisualStudio.Shell.ProvideToolWindowAttribute> 및<xref:Microsoft.VisualStudio.Shell.ProvideToolWindowVisibilityAttribute>  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```csharp  
   

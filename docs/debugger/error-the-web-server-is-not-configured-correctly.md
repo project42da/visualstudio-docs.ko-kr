@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.remote.projnotconfigured
 dev_langs:
 - CSharp
@@ -14,16 +14,16 @@ dev_langs:
 - FSharp
 - C++
 helpviewer_keywords: debugger, Web application errors
-ms.assetid: 875ba87f-c372-4126-8fe3-e33931cf26c0
 caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e0538693a815cf9749b3cd9df007486de1af3637
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 6f1e206cc9327ef933f52f35960f628170e02c38
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>오류: 웹 서버가 제대로 구성되어 있지 않습니다.
 
@@ -45,9 +45,9 @@ ms.lasthandoff: 10/31/2017
 
 4. (IIS) 올바른 버전의 ASP.NET 서버에 설치 되어 있는지 확인 합니다.
 
-    일치 하지 않는 버전의 Visual Studio 프로젝트와 IIS에 ASP.NET이이 문제가 발생할 수 있습니다. Web.config의 프레임 워크 버전을 설정 해야 합니다. IIS에서 ASP.NET을 설치 하려면 사용 된 [웹 플랫폼 설치 관리자 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)합니다. 참고: [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 또는 ASP.NET Core [Windows iis에서 호스트](https://docs.asp.net/en/latest/publishing/iis.html)합니다.
+    일치 하지 않는 버전의 Visual Studio 프로젝트와 IIS에 ASP.NET이이 문제가 발생할 수 있습니다. Web.config의 프레임 워크 버전을 설정 해야 합니다. IIS에서 ASP.NET을 설치 하려면 사용 된 [웹 플랫폼 설치 관리자 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)합니다. 참고: [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 또는 ASP.NET Core [Windows iis에서 호스트](https://docs.asp.net/en/latest/publishing/iis.html)합니다.
   
-4. 경우는 `maxConnection` 있고 IIS에서의 제한은 너무 낮기를 너무 많은 연결이 있는 경우 해야 할 수 있습니다 [연결 제한을 늘리려면](https://docs.microsoft.com/en-us/iis/configuration/system.applicationhost/sites/sitedefaults/limits)합니다.
+4. 경우는 `maxConnection` 있고 IIS에서의 제한은 너무 낮기를 너무 많은 연결이 있는 경우 해야 할 수 있습니다 [연결 제한을 늘리려면](/iis/configuration/system.applicationhost/sites/sitedefaults/limits)합니다.
   
 ## <a name="see-also"></a>참고 항목  
  [원격 IIS 컴퓨터의 원격 디버깅 ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)   

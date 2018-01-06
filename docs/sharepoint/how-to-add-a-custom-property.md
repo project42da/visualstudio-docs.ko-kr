@@ -23,11 +23,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b087ae9f767ed762b6d9269f60f2612127bdc705
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 813063a2cd32374171c37e770e033959d7b7d3d1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-a-custom-property"></a>방법: 사용자 지정 속성 추가
   사용 하 여 모델에 사용자 지정 속성을 추가할 수 있습니다는 **속성 편집기**합니다. 예: 연결 문자열 정보 및 기타 데이터에서 런타임에 검색 하는 코드에서 이러한 속성에 액세스할 수 있습니다.  

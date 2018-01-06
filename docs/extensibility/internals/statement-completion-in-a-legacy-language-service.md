@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c694295c3456accc8d2c1cd3b0a1ec20f59343c3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7208d38966e2caa9f9510c48c34952742d06c1b3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="statement-completion-in-a-legacy-language-service"></a>레거시 언어 서비스에서 문 완성
 문 완성은 언어 서비스는 기준인 언어 키워드 또는 코어 편집기에 입력 시작 요소를 완료 하는 사용자가 사용 하면 프로세스입니다. 이 항목에서는 문 완성이 작동 방식 및 언어 서비스에서 구현 하는 방법을 설명 합니다.  

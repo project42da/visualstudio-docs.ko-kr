@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 80153e271fed6a7fab49e00c8124f1ede7613bfa
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 002dea54b63a78975d56464319614d369a9b2318
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control-vspackage-architecture"></a>소스 제어 VSPackage 아키텍처
 소스 제어 패키지 되는 서비스를 사용 하는 VSPackage는는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE를 제공 합니다. 소스 제어 패키지는 원본 제어 서비스와 해당 기능을 제공합니다. 또한, 소스 제어 패키지는 원본 제어 플러그 인에 소스 제어 통합을 보다 더 융통성 대체 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6a554a52fc5ef42f81d1531dbe63bf320e1cd72e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a45fd22cce46cb9e43a649fb969980f42b395db2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio에 대 한 애니메이션
 ## <a name="animation-fundamentals"></a>애니메이션 기본 사항  
@@ -121,7 +122,7 @@ Visual Studio UI에서 애니메이션 통신 도구로 작동합니다.  다양
   
 -   하나의 요소가 다른 테더 링 된
   
-##### <a name="state"></a>상태  
+##### <a name="state"></a>시스템 상태  
   
 -   콘텐츠 업데이트
   
@@ -330,7 +331,7 @@ UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메
   
 -   스타일 감속/가속: 사인 InOut  
   
-##### <a name="example"></a>예제  
+##### <a name="example"></a>예  
 탭 순서 변경  
   
 #### <a name="rotate"></a>회전  
@@ -349,7 +350,7 @@ UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메
   
 -   Duration: 연속  
   
-##### <a name="example"></a>예제  
+##### <a name="example"></a>예  
 비활성화 상태의 진행률 표시기 (회전)  
   
 ### <a name="common-shell-ui-actions-and-recommended-animations"></a>일반적인 셸 UI 작업 및 권장된 애니메이션  

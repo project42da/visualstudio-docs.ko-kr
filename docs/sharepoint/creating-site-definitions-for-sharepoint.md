@@ -20,11 +20,12 @@ caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a4a7c002bd17da5f693955a82ab2e74bf65dc0cd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 98be671e456c75c4be79994c84bf1ed6ae5114de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-site-definitions-for-sharepoint"></a>SharePoint에 대한 사이트 정의 만들기
   SharePoint 사이트 정의 프로젝트에 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 만들 수 있습니다는 *사이트 정의*를 새 SharePoint 사이트에 대 한 기반으로 제공 되 합니다. 이러한 정의 모양 및 동작의 SharePoint 사이트에 있지만 해당 기본 콘텐츠 및 기능 뿐만 아니라 결정합니다. 정의에 미리 구성 된 목록, 콘텐츠 형식, 이벤트 수신기, 이미지 및 기타 항목을 넣을 수 있습니다. SharePoint에는 블로그 등의 사이트 정의가 포함되어 있습니다. 블로그 사이트 정의에 따라 사이트를 만들 때 해당 사이트 목록, 웹 파트 및 블로그 사이트에 필요한 기타 항목을 포함 합니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 063a569ff047b3febd2608cb3c1e0003f40f7785
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 04257a6ea4bfb3dbe788ba48ee3077b1847b000d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-isolated-shell"></a>격리 셸 확장
 격리 셸 응용 프로그램에 VSPackage, 관리 되는 MEF (Extensibility Framework) 구성 요소 부분 또는 일반 VSIX 프로젝트를 추가 하 여 Visual Studio 격리 셸을 확장할 수 있습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  Visual Studio 패키지 프로젝트 라는 추가 `MenuCommandsPackage`합니다.  
   
-2.  에 **기본 VSPackage 정보** 마법사의 페이지 설정 **회사 이름** 를 `Fabrikam` 및 **VSPackage 이름** 를 `FabrikamMenuCommands`합니다. 선택 된 **다음** 단추입니다.  
+2.  에 **기본 VSPackage 정보** 마법사의 페이지 설정 **회사 이름** 를 `Fabrikam` 및 **VSPackage 이름** 를 `FabrikamMenuCommands`합니다. **다음** 단추를 선택합니다.  
   
 3.  다음 페이지에서 선택 **메뉴 명령을** 선택한 후 **다음**합니다.  
   

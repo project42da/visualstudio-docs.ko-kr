@@ -12,11 +12,12 @@ caps.latest.revision: "33"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c4c676c28b955fac29db5a961f3b566600bcf318
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: vssdk
+ms.openlocfilehash: 7c15956bc861f9eb20267dc97446cf5ea49cae31
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="microsoft-help-viewer-sdk"></a>Microsoft 도움말 뷰어 SDK
 이 문서는 Visual Studio 도움말 뷰어가 통합자 하는 다음 작업이 포함 되어 있습니다.  
@@ -439,17 +440,17 @@ Vsp 브랜딩 사용자 지정 패키지를 구현에 대 한 (VSP 콘텐츠를 
 |-|-|  
 |기능:|**CollapsibleArea**|  
 |사용:|텍스트 축소 콘텐츠 컨트롤을 확장 합니다.|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |ExpandText|Expand|  
 |CollapseText|축소|  
 |기능:|**CodeSnippet**|  
 |사용:|코드 조각 컨트롤 텍스트입니다.  참고: "아님" 공간이 있는 코드 조각 콘텐츠 공간으로 변경 됩니다.|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |CopyToClipboard|클립보드에 복사|  
 |ViewColorizedText|색이 지정 된 보기|  
 |CombinedVBTabDisplayLanguage|Visual Basic (샘플)|  
 |VBDeclaration|선언|  
-|VBUsage|용도|  
+|VBUsage|사용법|  
 |기능:|**피드백, 바닥글 및 로고**|  
 |사용:|전자 메일을 통해 현재 항목에 대 한 피드백을 제공 하는 고객에 대 한 피드백 컨트롤을 제공 합니다.  콘텐츠에 대 한 저작권 텍스트입니다.  로고 정의입니다.|  
 |**요소**|**값 (콘텐츠 adopter 요구를 충족 하도록 이러한 문자열을 수정할 수 있습니다.)**|  
@@ -461,7 +462,7 @@ Vsp 브랜딩 사용자 지정 패키지를 구현에 대 한 (VSP 콘텐츠를 
 |LogoFileNameHC|vs_logo_wh.gif|  
 |기능:|**고 지 사항**|  
 |사용:|컴퓨터에 대 한 특정 한계 사례 집합 콘텐츠를 변환 합니다.|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |MT_Editable|이 문서는 기계 번역 되었습니다. 인터넷 연결이 있는 경우이 페이지를 보려면 편집 가능 모드에서 원본 영문 콘텐츠와 함께 동시에 "온라인에서이 항목 보기"를 선택 합니다.|  
 |MT_NonEditable|이 문서는 기계 번역 되었습니다. 인터넷 연결이 있는 경우이 페이지를 보려면 편집 가능 모드에서 원본 영문 콘텐츠와 함께 동시에 "온라인에서이 항목 보기"를 선택 합니다.|  
 |MT_QualityEditable|이 문서는 수동으로 번역 되었습니다. 인터넷 연결이 있는 경우이 페이지를 보려면 편집 가능 모드에서 원본 영문 콘텐츠와 함께 동시에 "온라인에서이 항목 보기"를 선택 합니다.|  
@@ -470,14 +471,14 @@ Vsp 브랜딩 사용자 지정 패키지를 구현에 대 한 (VSP 콘텐츠를 
 |MT_BetaRecycledContents|이 문서는 예비 릴리스용으로 수동으로 번역 되었습니다. 인터넷 연결이 있는 경우이 페이지를 보려면 편집 가능 모드에서 원본 영문 콘텐츠와 함께 동시에 "온라인에서이 항목 보기"를 선택 합니다.|  
 |기능:|**LinkTable**|  
 |사용:|온라인 항목 링크에 대 한 지원|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |LinkTableTitle|링크 테이블|  
 |TopicEnuLinkText|영어 버전 보기 \< /a > 컴퓨터에서 사용할 수 있는이 항목의 합니다.|  
 |TopicOnlineLinkText|이 항목 보기 \<는 href = "{"이 (0} {1 \} > 온라인 \< /a >|  
 |OnlineText|Online|  
 |기능:|**비디오 오디오 컨트롤**|  
 |사용:|요소 및 비디오 콘텐츠에 대 한 텍스트를 표시 합니다.|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |MultiMediaNotSupported|{0} 콘텐츠를 지원 하도록 Internet Explorer 9 이상이 설치 되어야 합니다.|  
 |VideoText|비디오를 표시합니다.|  
 |AudioText|스트리밍 오디오|  
@@ -485,25 +486,25 @@ Vsp 브랜딩 사용자 지정 패키지를 구현에 대 한 (VSP 콘텐츠를 
 |OnlineAudioLinkText|\<p >이 항목과 연결 된 오디오를 들으려면 클릭 {0}\<는 href = "\ {1 \\}" > {2}here\</a >.\< / p >|  
 |기능:|**콘텐츠 설치 되어 있지 컨트롤**|  
 |사용:|Contentnotinstalled.htm 렌더링에 사용 되는 텍스트 요소 (문자열)|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |ContentNotInstalledTitle|콘텐츠는 컴퓨터에서 발견 되었습니다.|  
 |ContentNotInstalledDownloadContentText|\<p > 콘텐츠를 다운로드 하 여 컴퓨터로 \<는 href = "{"이 (0} {1 \} > 관리 탭을 클릭\</a >.\< / p >|  
 |ContentNotInstalledText|\<p > 컴퓨터에 없는 콘텐츠를 설치 합니다. 로컬 도움말 콘텐츠 설치에 대 한 관리자를 참조 하십시오.  \< /p >|  
 |기능:|**항목 컨트롤 찾을 수 없음**|  
 |사용:|Topicnotfound.htm 렌더링에 사용 되는 텍스트 요소 (문자열)|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |TopicNotFoundTitle|컴퓨터에서 요청한 항목을 찾을 수 없습니다.|  
 |TopicNotFoundViewOnlineText|\<p > 요청한 항목을 사용자 컴퓨터에 없습니다. 하지만 할 수 있습니다 \<는 href = "{"이 (0} {1 \} > 온라인 항목 보기\</a >.\< / p >|  
 |TopicNotFoundDownloadContentText|\<p > 탐색 창에 유사한 항목의 링크를 참조 하십시오. 또는 \<는 href = "{"이 (0} {1 \} > 관리 탭을 클릭\</a >를 컴퓨터에 콘텐츠를 다운로드 합니다.\< / p >|  
 |TopicNotFoundText|\<p > 컴퓨터에서 요청한 항목을 찾을 수 없습니다.  \< /p >|  
 |기능:|**항목 컨트롤 손상**|  
 |사용:|Topiccorrupted.htm 렌더링에 사용 되는 텍스트 요소 (문자열)|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |TopicCorruptedTitle|요청한 항목을 표시할 수 없습니다.|  
 |TopicCorruptedViewOnlineText|\<p > 도움말 뷰어는 요청된 된 항목을 표시할 수 없습니다. 항목의 콘텐츠나는 기본 시스템 종속성에 오류가 있을 수 있습니다.  \< /p >|  
 |기능:|**홈 페이지 컨트롤**|  
 |사용:|도움말 뷰어 최상위 수준 노드입니다 콘텐츠 표시를 지 원하는 텍스트입니다.|  
-|**요소**|**Value**|  
+|**요소**|**값**|  
 |HomePageTitle|도움말 뷰어 홈|  
 |HomePageIntroduction|\<p > Microsoft 도움말 뷰어, Microsoft 도구, 제품, 기술 및 서비스를 사용 하는 모든 사용자에 대 한 정보는 필수 소스입니다. 도움말 뷰어 사용 방법 및 참조 정보, 샘플 코드, 기술 문서에 액세스할 수 있습니다. 찾으려면 목차 찾아보기 원하는 내용을 전체 텍스트 검색을 사용 하거나 키워드 색인을 사용 하 여 콘텐츠를 탐색 합니다.  \< /p >|  
 |HomePageContentInstallText|\<p >\<b r / > 사용은 \<는 href = "{"이 (0} {1 \} > 콘텐츠 관리\</a > 다음을 수행 하는 탭:\<ul >\<li > 컴퓨터에 콘텐츠를 추가 합니다.\< l i >\<l i > 로컬 콘텐츠에 업데이트를 확인 합니다.\< l i >\<l i > 컴퓨터에서 콘텐츠를 제거 합니다.\< l i >\</ul > \< /p >|  
@@ -691,7 +692,7 @@ MSHA이이 primer, 위해 이름이 HelpContentSetup.msha (파일의 이름 수 
   
 이 연습에서는 Visual Studio 셸 응용 프로그램에 도움말 콘텐츠를 통합 한 다음 배포 하는 방법을 보여 줍니다.  
   
-**Requirements**  
+**요구 사항**  
   
 1.  [!INCLUDE[vs_dev12](../../extensibility/includes/vs_dev12_md.md)]  
   

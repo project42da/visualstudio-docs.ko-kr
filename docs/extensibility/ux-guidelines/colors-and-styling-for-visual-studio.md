@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b6d287e7e85ef908f9504f8e1f66e0c221042553
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: vssdk
+ms.openlocfilehash: 40e795238e46885707cfd6eff715a27a5f53f85c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="colors-and-styling-for-visual-studio"></a>색 및 Visual Studio에 대 한 스타일 지정
 ## <a name="using-color-in-visual-studio"></a>Visual Studio에서 색을 사용 하 여  
@@ -289,11 +290,11 @@ UI, 색 집합을 제한이 적용 될 때 *"일반" 테마에 있던 것 미묘
 ### <a name="usage-patterns"></a>사용 패턴
 많은 일반적인 UI 요소에 이미 정의 된 고대비 색입니다. 참조할 수 있습니다 이러한 사용 패턴 색 이름이 시스템을 직접 선택할 때 UI 요소는 비슷한 구성 요소와 일치 합니다.  
   
-| 시스템 색 | 용도 |
+| 시스템 색 | 사용법 |
 | --- | --- |
 | ActiveCaption | -활성 IDE와 rafted 창 가리키기 및 키를 눌러에 있는 문자 모양의 단추<br />-IDE 및 rafted windows 제목 표시줄 배경<br />기본 상태 표시줄 배경 |
 | ActiveCaptionText | -활성 IDE 및 rafted 창의 제목 표시줄 전경 (텍스트 및 문자 모양)<br />-배경색 및 테두리의 단추 가리키기와 해당 키를 눌러 활성 창 |
-| 컨트롤 | -기본값을 제어 하 고 배경, 드롭다운 단추를 포함 하 여 사용 하지 않도록 설정 콤보 상자, 드롭 다운 목록 및 검색<br />--대상 단추 배경을 도킹 하는 중<br />명령 모음 배경<br />도구 창 배경 |
+| Control | -기본값을 제어 하 고 배경, 드롭다운 단추를 포함 하 여 사용 하지 않도록 설정 콤보 상자, 드롭 다운 목록 및 검색<br />--대상 단추 배경을 도킹 하는 중<br />명령 모음 배경<br />도구 창 배경 |
 | ControlDark | -IDE 배경<br />메뉴 및 명령 모음 구분 기호<br />명령 모음 테두리<br />메뉴 그림자<br />-도구 창 탭 기본값 및 가리킨 항목 테두리 및 구분 기호<br />-문서 오버플로 단추 배경 잘<br />-도킹 대상 문자 모양의 테두리 |
 | ControlDarkDark |-포커스가 없는 선택한 문서 탭 창 |
 | ControlLight |-자동 숨기기 탭 테두리<br />-콤보 상자 및 드롭다운 목록 테두리<br />-대상 배경색 및 테두리를 도킹 |
@@ -337,7 +338,7 @@ VSPackage는 글꼴 및 색 사용자 지정 범주를 통해 제어 하 고 글
   
 두 값을 사용 하 여 레지스트리를 채웁니다.  
 
-| 이름 | 형식 | 데이터 | 설명 |
+| name | 형식 | 데이터 | 설명 |
 | --- | --- | --- | --- |
 | 범주 | REG_SZ | GUID | 범주를 식별 하기 위해 만든 GUID |
 | 패키지 | REG_SZ | GUID | 범주를 지 원하는 VSPackage 서비스의 GUID |
@@ -349,7 +350,7 @@ VSPackage는 글꼴 및 색 사용자 지정 범주를 통해 제어 하 고 글
   
 두 값을 사용 하 여 레지스트리를 채웁니다.
 
-| 이름 | 형식 | 데이터 | 설명 |
+| name | 형식 | 데이터 | 설명 |
 |--- | --- | --- | --- |
 | 범주 | REG_SZ | GUID | 범주를 식별 하기 위해 만든 GUID |
 | 패키지 | REG_SZ | GUID | 범주를 지 원하는 VSPackage 서비스의 GUID |

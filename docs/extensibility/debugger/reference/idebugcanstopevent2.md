@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 585e1c8760152c9c42e1950c45d3e3821bbe93df
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 59e601e828fd3dad1487925c649972efc7b019a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugcanstopevent2"></a>IDebugCanStopEvent2
 이 인터페이스는 세션 디버그 관리자 (SDM) 현재 코드 위치에서 중지를 요청 하 사용 됩니다.  

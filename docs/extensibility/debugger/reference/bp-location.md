@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4af879fba6dacb30e7e20913a2b155ec7a7c040c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6e268d809442b0101d5d520ca7bdd5f5c37fb62b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bplocation"></a>BP_LOCATION
 중단점의 위치를 설명 하는 데 사용 하는 구조체의 형식을 지정 합니다.  
@@ -103,7 +104,7 @@ public struct BP_LOCATION {
 |`BPLT_DATA_STRING`|[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)|`string`(컨텍스트)|`string`(데이터 식)|`uint`(요소 수)|  
 |`BPLT_RESOLUTION`|[IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)|-|-|-|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  해석 하는 방법을 보여 주는이 예제는 `BP_LOCATION` 구조에 대 한 C#에서 `BPLT_DATA_STRING` 유형입니다. 이 특정 형식에 모든 4를 해석 하는 방법을 보여 줍니다 `unionmemberX` 모든 가능한 형식이 (개체, 문자열 및 숫자)의 멤버입니다.  
   
 ```csharp  

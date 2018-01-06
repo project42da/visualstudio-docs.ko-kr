@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: db041f839e9b7e8ad3268175829ecfee9380e736
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 627e5abad07ef0566d23f010ea120df33173fb0e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visibilityitem-element"></a>VisibilityItem 요소
 `VisibilityItem` 요소 명령 및 도구 모음 정적 표시 여부를 결정 합니다. 명령 또는 메뉴 및 관련된 명령 UI 컨텍스트는 모든 항목을 식별합니다. Visual Studio 명령, 메뉴 및 도구 모음 및 표시 여부를 정의 하는 Vspackage를 로드 하지 않고 검색 합니다. 사용 하 여 IDE는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection.IsCmdUIContextActive%2A> 명령 UI 컨텍스트 활성 상태 인지 확인 하는 메서드.  
@@ -40,15 +41,15 @@ ms.lasthandoff: 10/31/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|guid|필수 요소. GUID/ID 명령 식별자의 GUID입니다.|  
-|ID|필수 요소. ID는 GUID/ID 명령 식별자입니다.|  
-|컨텍스트(context)|필수 요소. 이 명령은 표시 되는 UI 컨텍스트.|  
+|guid|필수. GUID/ID 명령 식별자의 GUID입니다.|  
+|ID|필수. ID는 GUID/ID 명령 식별자입니다.|  
+|컨텍스트(context)|필수. 이 명령은 표시 되는 UI 컨텍스트.|  
 |조건|선택 사항입니다. 참조 [조건부 특성](../extensibility/vsct-xml-schema-conditional-attributes.md)합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
@@ -63,7 +64,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>설명  
  에 정의 된 표준 Visual Studio UI 컨텍스트는 *Visual Studio SDK 설치 경로*\VisualStudioIntegration\Common\Inc\vsshlids.h 파일에서와 같이 <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids> 및 <xref:Microsoft.VisualStudio.Shell.Interop.UIContextGuids80> 클래스입니다. UI 컨텍스트 자세한 집합에 정의 된는 <xref:Microsoft.VisualStudio.VSConstants> 클래스입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 <VisibilityConstraints>  

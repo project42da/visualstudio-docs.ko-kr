@@ -20,18 +20,19 @@ caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 86ffd65cf0ebe19a9f3c1f42c24fc365536be661
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 9b3fd00e849a54fc926054e1f7e0d97b2907cf02
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Visual Studio에서 다중 스레드 응용 프로그램 디버깅을 시작.
 Visual Studio는 여러 가지 도구와 다중 스레드 응용 프로그램을 디버그할 수 있도록 사용자 인터페이스 요소를 제공 합니다. 스레드 마커를 사용 하는 방법을 보여 주는이 자습서는 **병렬 스택** 창 고 **병렬 조사식** 창과 조건부 중단점, 중단점 필터입니다. 이 자습서에서는 몇 분 정도 걸리지만 완료에 익숙해질 수 다중 스레드 응용 프로그램 디버깅을 위한 기능입니다.
 
 |         |         |
 |---------|---------|
-| ![비디오 보기](../install/media/video-icon.png "WatchVideo") | [비디오 보기](#video) 유사한 단계를 보여 주는 다중 스레드 디버깅 합니다. |
+|  ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기")  |    [비디오 보기](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171) 유사한 단계를 보여 주는 다중 스레드 디버깅 합니다. |
 
 다른 항목에 다른 다중 스레드 디버깅 도구를 사용 하 여 추가 정보를 제공 합니다.
 
@@ -372,12 +373,6 @@ Visual Studio는 여러 가지 도구와 다중 스레드 응용 프로그램을
 #### <a name="to-switch-to-another-thread"></a>다른 스레드로 전환 하려면 
 
 - 다른 스레드로 전환 하려면 참조 [하는 방법: 다른 스레드가 디버그 하는 동안로 전환](../debugger/how-to-switch-to-another-thread-while-debugging.md) 
-
-## <a name="video"></a>다중 스레드 디버깅에 대 한 비디오를 보기
-
-<div style="padding-top: 56.25%; position: relative; width: 100%;">
-<iframe style="position: absolute;top: 0;left: 0;right: 0;bottom: 0;" width="100%" height="100%" src="https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugging-Multi-threaded-Apps-in-Visual-Studio-2017-MoZPKMD6D_111787171" frameborder="0" allowfullscreen></iframe>
-</div>
 
 #### <a name="to-learn-more-about-the-parallel-stack-and-parallel-watch-windows"></a>병렬 스택 및 병렬 조사식 창에 대 한 자세한 내용을 보려면  
   

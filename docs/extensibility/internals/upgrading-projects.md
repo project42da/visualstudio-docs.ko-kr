@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ed049293c50fc59c7f6541a3b4a4cc58c6bd5a7b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 060823a04127480ef8de387200425a34c6ef1178
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="upgrading-projects"></a>프로젝트 업그레이드
 프로젝트 모델에의 한 버전에서 변경 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다음 해야 최신 버전에서 실행 될 수 있도록 프로젝트 및 솔루션 업그레이드할 수 있습니다. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 사용자의 프로젝트에 업그레이드 지원을 구현 하는 데 사용할 수 있는 인터페이스를 제공 합니다.  

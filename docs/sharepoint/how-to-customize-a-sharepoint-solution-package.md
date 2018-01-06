@@ -23,11 +23,12 @@ caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: d07f03c1aed1c2e85e65bd10a89bd62138d571c7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 5351165320dd0ff2d8c130c64adeff7be45de6fb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package"></a>방법: SharePoint 솔루션 패키지 사용자 지정
   패키지 디자이너를 사용 하 여를 만들고 패키지 (.wsp)를 사용자 지정할 수 있습니다. 예를 들어 웹 서버의 솔루션이 배포 될 때 다시 설정 및 배포 서버 유형을 설정 하는 경우 지정할에 SharePoint 프로젝트 항목 및 기능을 추가할 수 있습니다.  
@@ -79,7 +80,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  에 **패키지 디자이너**, 선택는 **매니페스트** 탭 합니다.  
   
-2.  입니다.  
+2.  이어야 합니다.  
   
 3.  확장의 **옵션 편집** 노드를 선택는 **덮어쓰기 생성 된 XML과 편집 편집기에서 매니페스트 XML** 링크를 선택한 후는 **예** 단추입니다.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3a60ac9de727e8542df7455ee331737403f6bef3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f60cf3fc8b4db7d33523e4583ab3da4f4596b1af
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-a-project-type"></a>프로젝트 형식 등록
 새 프로젝트 형식을 만들 수 있도록 하는 레지스트리 항목 만들어야 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 인식 하 고 프로젝트 유형으로 동작 합니다. 일반적으로 레지스트리 스크립트 (.rgs) 파일을 사용 하 여 이러한 레지스트리 항목을 만듭니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
   
  다음 예제에서 HKEY_CLASSES_ROOT입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 \.figp  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
    @="devenv.exe \"%1\""  
 ```  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`FigPrjFile`|프로젝트의 이름 및 설명을 확장.figp 있는 파일을 입력 합니다.|  
 |`Content Type`|REG_SZ|`Text/plain`|프로젝트 파일에 대 한 콘텐츠 형식입니다.|  
@@ -61,7 +62,7 @@ ms.lasthandoff: 10/31/2017
   
  다음 예에서는 HKEY_LOCAL_MACHINE에서 또는 레지스트리 키 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\99.0Exp\Packages] 아래에 있는 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 \{ACEF4EB2-57CF-11D2-96F4-000000000000} (The CLSID for the VSPackage)  
@@ -82,7 +83,7 @@ ms.lasthandoff: 10/31/2017
    "FigProjectItemsEvents"="Returns the FigProjectItemsEvents Object"  
 ```  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |`@`(기본값)|REG_SZ|`FigPrj Project VSPackage`|지역화 가능한 이름이 등록 VSPackage (프로젝트 유형).|  
 |`InprocServer32`|REG_SZ|`%MODULE%`|프로젝트 형식 DLL의 경로입니다. 이 DLL을 로드 하 고 VSPackage CLSID를 전달 하는 IDE `DllGetClassObject` 가져오려는 <xref:Microsoft.VisualStudio.OLE.Interop.IClassFactory> 생성 하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPackage> 개체입니다.|  
@@ -98,7 +99,7 @@ ms.lasthandoff: 10/31/2017
   
  다음 예에서는 모든 레지스트리 키 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 아래에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 \{C061DB26-5833-11D2-96F5-000000000000} (The CLSID for projects of this type)  
@@ -133,7 +134,7 @@ ms.lasthandoff: 10/31/2017
    "SortPriority"=dword:00000064  
 ```  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`FigPrj Project`|이러한 종류의 프로젝트의 기본 이름입니다.|  
 |`DisplayName`|REG_SZ|`#%IDS_PROJECT_TYPE%`|패키지에서 등록 하는 위성 DLL에서에서 검색 해야 하는 이름의 리소스 ID입니다.|  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/31/2017
   
  다음 예에서는 모든 레지스트리 키 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 아래에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 {FE3BBBB6-72D5-11d2-9ACE-00C04F79A2A4} (The CLSID for Enterprise Projects)  
@@ -173,7 +174,7 @@ ms.lasthandoff: 10/31/2017
    "NewProjectDialogOnly"=dword:00000000  
 ```  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`#%IDS_NEWPROJ_ TEMPLATES_ENTRY%`|새 프로젝트 템플릿에 대 한 리소스 ID입니다.|  
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|기본 등록 된 프로젝트 형식을 프로젝트에 대 한 경로입니다.|  
@@ -182,7 +183,7 @@ ms.lasthandoff: 10/31/2017
   
  다음 예에서는 모든 레지스트리 키 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Projects] 아래에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 \{A2FE74E1-B743-11d0-AE1A-00A0C90FFFC3} (CLSID for Miscellaneous Files projects)  
@@ -194,7 +195,7 @@ ms.lasthandoff: 10/31/2017
    "SortPriority"=dword:00000064  
 ```  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|없음|기타 파일 프로젝트 항목에 대 한 다음과 같은 항목 인지 여부를 나타내는 기본 값입니다.|  
 |`@`|REG_SZ|`#%IDS_ADDITEM_TEMPLATES_ENTRY%`|새 항목 추가 템플릿 파일에 대 한 리소스 ID 값입니다.|  
@@ -203,7 +204,7 @@ ms.lasthandoff: 10/31/2017
   
  다음 예제는 레지스트리 키 [HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\9.0Exp\Menus] 아래에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 "{ACEF4EB2-57CF-11D2-96F4-000000000000}"=",1000,1"  
@@ -223,7 +224,7 @@ ms.lasthandoff: 10/31/2017
   
  마지막 필드 CTMENU 리소스에 대 한 버전 번호를 식별합니다. 버전 번호를 변경 하 여 메뉴를 다시 병합할 수 있습니다.  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |% CLSID_Package %|REG_SZ|`,1000,1`|메뉴 정보를 검색할 리소스입니다.|  
   
@@ -237,7 +238,7 @@ ms.lasthandoff: 10/31/2017
    "NewProjectDialogOnly"=dword:00000000  
 ```  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |`@`|REG_SZ|`#%IDS_NEWPROJ_TEMPLATES_ENTRY%`|그림 프로젝트 새 프로젝트 템플릿에 대 한 리소스 ID 값입니다.|  
 |`TemplatesDir`|REG_SZ|`%TEMPLATE_PATH%\FigPrjProjects`|새 프로젝트 디렉터리의 기본 경로입니다. 이 디렉터리의 항목에 표시 됩니다는 **새 프로젝트 마법사** 대화 상자.|  
@@ -252,7 +253,7 @@ ms.lasthandoff: 10/31/2017
    "UseInterface"=dword:00000001  
 ```  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |`Package`|REG_SZ|`%CLSID_Package%`|등록 된 VSPackage의 클래스 ID입니다.|  
 |`UseInterface`|REG_DWORD|`1`|1이이 프로젝트와 상호 작용 하는 UI 사용될지를 나타냅니다. 0 UI 인터페이스가 없는 임을 나타냅니다.|  

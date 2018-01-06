@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f21356c34a94540d20be2bb9fa092bff270f1a70
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: fe7822382443e6c1e9bc1a77eb0cd64844504172
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-sharepoint-solution-packages"></a>SharePoint 솔루션 패키지 만들기
   패키지 디자이너를 사용 하 여 만들 수 있으며 배포 패키지를 사용자 지정 키를 누릅니다. 예를 들어 SharePoint 프로젝트 항목 및 기능을 IIS 서버를 다시 설정, 기능 활성화 범위를 설정 하 고 기능 종속성을 식별할를 추가할 수 있습니다. 또한이 디자이너는 각 패키지를 설명 하는 XML 파일인 매니페스트를 생성 합니다.  
@@ -39,9 +40,9 @@ ms.lasthandoff: 10/31/2017
   
 |패키지 디자이너 속성|기본 설정 설명|  
 |-------------------------------|------------------------------------|  
-|이름|필수 요소. 패키지의 기본 이름은 설정은 *ProjectName*합니다.|  
+|이름|필수. 패키지의 기본 이름은 설정은 *ProjectName*합니다.|  
 |웹 서버를 다시 설정|선택 사항입니다. .Wsp 파일은 SharePoint 서버에 설치 된 후에 웹 서버를 다시 시작 하려는 경우 선택 합니다.|  
-|배포 서버 유형|필수 요소. 기본적으로 범위 ApplicationServer로 설정 됩니다.<br /><br /> ApplicationServer: 서비스를 호스팅하는 서버에 설명 합니다.<br /><br /> WebFrontEnd: 웹 사이트를 호스팅하는 서버에 설명 합니다.|  
+|배포 서버 유형|필수. 기본적으로 범위 ApplicationServer로 설정 됩니다.<br /><br /> ApplicationServer: 서비스를 호스팅하는 서버에 설명 합니다.<br /><br /> WebFrontEnd: 웹 사이트를 호스팅하는 서버에 설명 합니다.|  
 |솔루션에서 항목|모든 SharePoint 프로젝트 항목 및 패키지에 추가할 수 있는 기능입니다.|  
 |패키지의 항목|선택 사항입니다. 모든 SharePoint 항목 및 패키지에 배포 하려는 하는 기능입니다.|  
   

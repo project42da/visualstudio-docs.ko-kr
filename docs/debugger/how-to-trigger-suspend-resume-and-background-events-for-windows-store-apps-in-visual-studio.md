@@ -18,18 +18,19 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4380299fd37b456dd3be6da7cf37981ad89b1caf
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: uwp
+ms.openlocfilehash: 70e0ab429f6359e8bb50a83307e9e042e0bfa4b0
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트를 Visual Studio에서 UWP 앱을 디버깅 하는 동안
 디버깅하고 있지 않을 때는 Windows PLM( **프로세스 수명 관리** )에서 응용 프로그램의 실행 상태(장치 상태 및 사용자 작업에 응답하여 응용 프로그램 시작, 일시 중단, 다시 시작 및 종료)를 제어합니다. 디버깅하는 중에는 Windows가 이러한 활성화 이벤트를 사용하지 않도록 설정합니다. 이 항목에서는 디버거에서 이러한 이벤트를 발생시키는 방법에 대해 설명합니다.  
   
  이 항목에서는 **백그라운드 작업**을 디버깅하는 방법에 대해서도 설명합니다. 백그라운드 작업을 사용하면 응용 프로그램을 실행하고 있지 않은 경우에도 백그라운드 프로세스에서 특정 작업을 수행할 수 있습니다. 디버거를 사용하여 응용 프로그램을 디버그 모드에 둔 다음 UI를 시작하지 않고 백그라운드 작업을 시작하고 디버깅할 수 있습니다.  
   
- 프로세스 수명 관리 및 백그라운드 작업에 대 한 자세한 내용은 참조 [시작, 재개 및 멀티태스킹을](https://docs.microsoft.com/en-us/windows/uwp/launch-resume/index)합니다.  
+ 프로세스 수명 관리 및 백그라운드 작업에 대 한 자세한 내용은 참조 [시작, 재개 및 멀티태스킹을](/windows/uwp/launch-resume/index)합니다.  
   
 ##  <a name="BKMK_In_this_topic"></a> 항목 내용  
  [프로세스 수명 관리 이벤트 트리거](#BKMK_Trigger_Process_Lifecycle_Management_events)  
@@ -124,7 +125,7 @@ ms.lasthandoff: 11/11/2017
 4.  **진단** 로그를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Studio 사용 하 여 UWP 앱 테스트](../test/testing-store-apps-with-visual-studio.md)   
+ [Visual Studio로 UWP 앱 테스트](../test/testing-store-apps-with-visual-studio.md)   
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
  [응용 프로그램 수명 주기](http://msdn.microsoft.com/en-us/53cdc987-c547-49d1-a5a4-fd3f96b2259d)   
  [시작, 재개 및 멀티태스킹](http://msdn.microsoft.com/en-us/04307b1b-05af-46a6-b639-3f35e297f71b)

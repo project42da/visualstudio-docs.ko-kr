@@ -6,18 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords: Process Search
 ms.assetid: 518e8153-eec2-4db9-a6f7-416ec11d8e09
 caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 9bd048bc80ce9747ca6bced7611827e23fa521ab
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a50dfd2eab4077b8a81c1671a9cdad1ca2878020
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="process-search-dialog-box"></a>프로세스 검색 대화 상자
 이 대화 상자를 사용 하 여 특정 프로세스에 대 한 노드를 선택 합니다.를 [프로세스 뷰](../debugger/processes-view.md)합니다. 이 대화 상자를 표시 하려면 포커스를 이동 하는 **프로세스** 뷰 창. 그런 다음 선택 **프로세스 찾기** 에서 **검색** 메뉴.  

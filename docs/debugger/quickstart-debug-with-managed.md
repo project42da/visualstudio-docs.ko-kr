@@ -13,11 +13,12 @@ caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 545241d254d8ea2d2532ee8590e8e1867d635592
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.workload: dotnet
+ms.openlocfilehash: aa992c0cdcf5c50208aacc8e16d954f4ee35da13
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="debug-with-managed-code-using-the-visual-studio-debugger"></a>Visual Studio 디버거를 사용 하 여 관리 되는 코드를 사용 하 여 디버그
 
@@ -29,7 +30,7 @@ Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 �
 
 2. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 **콘솔 응용 프로그램 (.NET Core)**합니다.
 
-     표시 되지 않으면는 **콘솔 응용 프로그램 (.NET Core)** 서식 파일 프로젝트를 클릭 하 여는 **Open Visual Studio 설치 관리자** 의 왼쪽된 창에서 링크는 **새 프로젝트** 대화 상자. Visual Studio 설치 관리자가 시작됩니다. 선택 된 **.NET 데스크톱 개발** 및 **.NET Core** 작업을 선택 합니다 **수정**합니다.
+     **콘솔 앱(.NET Core)** 템플릿 프로젝트가 표시되지 않으면 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Open Visual Studio 설치 관리자** 링크를 클릭합니다. Visual Studio 설치 관리자가 시작됩니다. 선택 된 **.NET 데스크톱 개발** 및 **.NET Core** 작업을 선택 합니다 **수정**합니다.
 
 3. 같은 이름을 입력 **MyDbgApp** 클릭 **확인**합니다.
 

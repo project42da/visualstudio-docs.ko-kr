@@ -25,11 +25,12 @@ caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 30261fea83870b5bdfce11a25969207aad260ee4
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+ms.workload: multiple
+ms.openlocfilehash: e6d4c01043bde59822175b20f36cd576c3a9c3a3
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="deployment-overview-in-visual-studio"></a>Visual Studio에서 배포 개요
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/15/2017
 
     ![선택 게시](../deployment/media/quickstart-publish.png)
 
-- **Visual c + + 런타임**: 로컬 배포 또는 정적 링크를 사용 하 여 Visual c + + 런타임을 배포할 수 있습니다. 자세한 내용은 참조 [네이티브 데스크톱 응용 프로그램 배포 (Visual c + +)](/cpp/ide/deploying-native-desktop-applications-visual-cpp.md)합니다. 
+- **Visual c + + 런타임**: 로컬 배포 또는 정적 링크를 사용 하 여 Visual c + + 런타임을 배포할 수 있습니다. 자세한 내용은 참조 [네이티브 데스크톱 응용 프로그램 배포 (Visual c + +)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)합니다. 
 
 ### <a name="publish-to-web-or-deploy-to-network-share"></a>네트워크 공유에 배포 또는 웹에 게시
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 12/15/2017
 
     ASP.NET 응용 프로그램 및 서비스는 여러 가지 다른 방법으로 배포할 수 있습니다. 자세한 내용은 참조 [배포 ASP.NET 웹 응용 프로그램 및 서비스](http://www.asp.net/aspnet/overview/deployment)합니다.
 
-- **Visual c + + 런타임**: 중앙 배포를 사용 하 여 Visual c + + 런타임을 배포할 수 있습니다. 자세한 내용은 참조 [네이티브 데스크톱 응용 프로그램 배포 (Visual c + +)](/cpp/ide/deploying-native-desktop-applications-visual-cpp.md)합니다. 
+- **Visual c + + 런타임**: 중앙 배포를 사용 하 여 Visual c + + 런타임을 배포할 수 있습니다. 자세한 내용은 참조 [네이티브 데스크톱 응용 프로그램 배포 (Visual c + +)](/cpp/ide/deploying-native-desktop-applications-visual-cpp)합니다. 
 
 - **Windows 바탕 화면** 웹 서버 또는 ClickOnce 배포를 사용 하 여 네트워크 파일 공유에는 Windows 데스크톱 응용 프로그램을 게시할 수 있습니다. 이렇게 하면 사용자가 클릭 한 번으로 응용 프로그램을 설치할 수 있습니다. 자세한 내용은 참조 [ClickOnce를 사용 하 여 데스크톱 응용 프로그램 배포](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) 및 [ClickOnce를 사용 하는 네이티브 앱을 배포할](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)합니다.
 
@@ -72,7 +73,7 @@ ms.lasthandoff: 12/15/2017
     > [!NOTE]
     > Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등록](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)합니다.
 
-- 다른 **Azure 서비스**: 특정 참조 [Azure 서비스](https://docs.microsoft.com/azure/#pivot=products) Visual Studio에서 지원 될 수 있는 다양 한 배포 옵션에 대 한 설명서입니다.
+- 다른 **Azure 서비스**: 특정 참조 [Azure 서비스](/azure/#pivot=products) Visual Studio에서 지원 될 수 있는 다양 한 배포 옵션에 대 한 설명서입니다.
 
 ### <a name="publish-to-microsoft-store"></a>Microsoft 스토어에 게시
 

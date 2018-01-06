@@ -12,11 +12,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ccc530a741aaefd7e1faf1bd5f8974e27d9c7fb5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 45bbff985a45ba4d04945ec95587c4c6c9cc448c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio에 대 한 공유 색
 경우 일반적인 Visual Studio 셸 요소를 사용 하는 UI를 디자인 하 고 원하는 하거나 인터페이스 요소를 유사한 기능과 일치 사용 하 여 기존 토큰 이름을 패키지 정의 파일에서 선택 하 고 색을 할당 합니다. 이렇게 하면 UI가 전체 Visual Studio 환경과 일관성 있게 유지되며 테마를 추가하거나 업데이트할 경우 자동으로 업데이트됩니다.  
@@ -1523,7 +1524,7 @@ ms.lasthandoff: 10/31/2017
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
-| 배경 | 해당 없음 |
+| 배경 | N/A |
 | 전경(문자 모양) | `Environment.DropDownDisabledGlyph` |
 
 #### <a name="command-bar-split-buttons"></a>명령 모음 분할 단추
@@ -1916,7 +1917,7 @@ Visual Studio는 사용자가 추적을 위해 검색 가능한 키워드를 선
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |  
-| 배경 | 해당 없음 |
+| 배경 | N/A |
 | 전경(문자 모양) | `Tag.TagHoverGlyph` |
 
 **닫기 (&times;) 태그 문자 모양: 상태 마우스를 가져가고**
@@ -1945,7 +1946,7 @@ Visual Studio는 사용자가 추적을 위해 검색 가능한 키워드를 선
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
-| 배경 | 해당 없음 |
+| 배경 | N/A |
 | 전경(문자 모양) | `Tag.TagSelectedGlyph` |
 
 **Close로 태그를 선택 (&times;) 문자 모양: 상태 마우스를 가져가고**  
@@ -2118,7 +2119,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
-| 배경 | 해당 없음 |
+| 배경 | N/A |
 | 전경(문자 모양) | `Environment.ToolWindowButtonActiveGlyph` |
 | 테두리 | N/A |
 
@@ -2128,7 +2129,7 @@ Visual Studio의 도구 창은 다양한 작업에 사용되며 여러 상태 �
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
-| 배경 | 해당 없음 |
+| 배경 | N/A |
 | 전경(문자 모양) | `Environment.ToolWindowButtonInactiveGlyph` |
 | 테두리 | N/A |
 

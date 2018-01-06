@@ -20,11 +20,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 848fc50b8886cc736c5a7a856beec238c084d879
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3dca463352d5e698b74ecc6bda2a1579e3290513
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>방법: 모듈을 사용하여 파일 포함
   *모듈* (으로 다름 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] 모듈)은 SharePoint에 ASPX 마스터 페이지 파일, 텍스트 파일 또는 이미지를 배포할 수 있도록 하는 컨테이너입니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
   
      파일을 프로젝트에 추가 하면에 대 한 항목이 자동으로 모듈의 Elements.xml 파일에 추가 됩니다. 프로젝트가 배포 되는 파일이에 의해 지정 되는 프로젝트의 루트 디렉터리에 상대적인 SharePoint 서버에 복사 됩니다는 **파일** 요소의 **Url** 와 같은 특성 `Url="Module1/New Folder/SomeFile.doc`합니다. 파일에 대 한 배포 위치를 변경 하려는 경우 하나을 다른 폴더로 이동에 **솔루션 탐색기** 변경 하거나 해당 **Url** 설정 합니다.  
   
-8.  문서 라이브러리에 표시 하려는 모든 파일에 대 한 추가 `Type="GhostableInLibrary"` Elements.xml에 입력 되는 특성입니다. 예를 들면 다음과 같습니다.  
+8.  문서 라이브러리에 표시 하려는 모든 파일에 대 한 추가 `Type="GhostableInLibrary"` Elements.xml에 입력 되는 특성입니다. 예를 들어 개체에 적용된  
   
     ```  
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />  

@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 36d8f6afebf09d4efd176ba204dcc6f485a56124
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8d967cec28a50948a9577336b886376b9cfe0040
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-property-user-interface"></a>프로젝트 속성 사용자 인터페이스
 프로젝트 하위 형식 프로젝트에 항목을 사용할 수 **속성 페이지** 대화 상자 기본 프로젝트에서 제공 하는 대로 숨기기 읽기 전용 컨트롤 및 전체 페이지도 제공 또는 프로젝트 하위 형식의 특정 페이지는 를추가할**속성 페이지** 대화 상자.  

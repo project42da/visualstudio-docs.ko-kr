@@ -21,11 +21,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 55da85b9740216cefe55911d79dab2c16b035695
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 602515daedec99bbcfa3efd58469de5d8ba3df7b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer"></a>연습: 디자이너를 사용하여 SharePoint를 위한 웹 파트 만들기
   SharePoint 사이트에 대 한 웹 파트를 만드는 경우 사용자가 직접 수정할 수 콘텐츠, 모양 및 동작 해당 사이트의 페이지는 브라우저를 사용 하 여 합니다. 이 연습에서는 SharePoint를 사용 하 여 웹 파트를 시각적으로 만드는 방법을 보여 줍니다. **비주얼 웹 파트** 프로젝트 템플릿을 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  

@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 0d6ac2393a5cfd27b2909fb5a5d63ff0260941e4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 13f5517e0bde4d5881acaf89640b01509cf19eb8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltvstoruntimegt-element-office-development-in-visual-studio"></a>&lt;vstoRuntime&gt; 요소 (Visual Studio에서 Office 개발)
   `vstoRuntime` 네임스페이스의 `vstav3` 요소에는 특정 Office 솔루션에 대해 지원되는 Visual Studio Tools for Office Runtime 버전이 포함됩니다.  
@@ -44,13 +45,13 @@ ms.lasthandoff: 10/31/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`release`|필수 요소. Visual Studio Tools for Office Runtime의 릴리스 버전입니다.|  
-|`version`|필수 요소. Visual Studio Tools for Office Runtime 버전 번호입니다.|  
-|`supportUrl`|선택적 요소. Visual Studio Tools for Office Runtime의 설치 위치에 연결합니다.|  
+|`release`|필수. Visual Studio Tools for Office Runtime의 릴리스 버전입니다.|  
+|`version`|필수. Visual Studio Tools for Office Runtime 버전 번호입니다.|  
+|`supportUrl`|선택 사항입니다. Visual Studio Tools for Office Runtime의 설치 위치에 연결합니다.|  
   
  `vstoRuntime` 에는 요소가 없습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 `vstoRuntime` 을 사용하여 배포된 Office 솔루션에 대한 응용 프로그램 매니페스트의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
   
 ```  

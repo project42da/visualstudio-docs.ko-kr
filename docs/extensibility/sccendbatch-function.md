@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e45d3ea8fefad30875ee91775412e7dcf40cb28e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 96932ae56b734582d011369ee50a67e933bf9be4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccendbatch-function"></a>SccEndBatch 함수
 이 함수는 일괄 처리의 소스 제어 작업을 완료 했습니다. 이러한 일괄 처리를 중첩할 수 있습니다.  

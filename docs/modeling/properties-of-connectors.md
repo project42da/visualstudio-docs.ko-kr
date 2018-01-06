@@ -12,11 +12,12 @@ caps.latest.revision: "21"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 503f171b2af5e06fd3c890caf07525ba880d0658
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e974c768f9bf73b92cb974875654846a267bb893
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-connectors"></a>연결선의 속성
 커넥터 생성 된 디자이너에서 도메인 관계를 나타냅니다.  
@@ -33,16 +34,16 @@ ms.lasthandoff: 10/27/2017
 |대상 끝 스타일|이 커넥터 (HollowArrow, EmptyArrow, FilledArrow, EmptyDiamond, FilledDiamond, 또는 없음)에 대 한 대상 끝 스타일입니다.|없음|  
 |텍스트 색|이 커넥터와 관련 된 텍스트 데코레이터에 사용 되는 색입니다.|검정|  
 |Thickness|이 커넥터에 대 한 선의 두께 인치 단위로 지정 합니다.|0.03125|  
-|액세스 한정자|클래스의 액세스 수준 (`public` 또는 `internal`).|공용|  
+|액세스 한정자|클래스의 액세스 수준 (`public` 또는 `internal`).|Public|  
 |사용자 지정 특성|이 커넥터에서 생성 되는 소스 코드 클래스에 특성을 추가 하는 데 사용 합니다.|\<없음 >|  
 |Double 생성 파생|경우 `True`, 기본 클래스 및 (재정의 통해 사용자 지정은 지원) 하는 partial 클래스를 모두 생성 됩니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)합니다.|False|  
 |사용자 지정 생성자|경우 `True`, 사용자 지정 생성자의 소스 코드에서 제공 됩니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)합니다.|False|  
 |상속 한정자|커넥터에서 생성 되는 소스 코드 클래스의 상속의 종류를 설명 (`none`, `abstract` 또는 `sealed`).|없음|  
 |기본 커넥터|이 커넥터의 기본 클래스입니다.|(없음)|  
-|이름|이 커넥터의 이름입니다.|현재 이름|  
+|name|이 커넥터의 이름입니다.|현재 이름|  
 |네임스페이스|이 커넥터와 연결 되어 있는 네임 스페이스입니다.|현재 네임 스페이스|  
 |도구 설명 형식|도구 설명 (고정, 변수 또는 없음) 정의 되는 방식입니다. 다음의 값을 고정 하는 경우는 `Fixed Tooltip Text` 변수인 경우 다음 도구 설명에에서 정의 되어 사용자 지정 코드; 속성은 도구 설명으로 사용 합니다.|\<없음 >|  
-|참고|이 커넥터와 관련 된 비공식 정보입니다.|\<없음 >|  
+|노트|이 커넥터와 관련 된 비공식 정보입니다.|\<없음 >|  
 |경로 스타일|커넥터를 라우팅에 사용 되는 스타일입니다. A `Rectilinear` 직각 turns; 필요에 따라 커넥터를 사용 하면 한 `Straight` 커넥터는 그렇지 않습니다.|직선|  
 |속성으로 노출 된 색<br /><br /> 속성으로 노출 된 대시 스타일<br /><br /> 속성으로 노출 된 두께<br /><br /> 텍스트 색을 노출합니다.|경우 `True`, 사용자는 도형의 명시 된 속성을 설정할 수 있습니다. 이 설정 하려면 셰이프 정의 마우스 오른쪽 단추로 클릭 하 고 클릭 **노출 추가**합니다.|False|  
 |설명|생성 된 디자이너를 문서화 하는 데 사용 합니다.|\<없음 >|  

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5dc77aa5b633c4160fc34717c0b9382d89d9f0e9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0d6888d2680cffbde132885d730cd35f6e509c2e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="typeinfo"></a>TYPE_INFO
 이 구조는 다양 한 종류의 필드의 형식에 대 한 정보를 지정합니다.  
@@ -80,7 +81,7 @@ public struct TYPE_INFO {
 |`TYPE_KIND_PDB`|[PDB_TYPE](../../../extensibility/debugger/reference/pdb-type.md)|  
 |`TYPE_KIND_BUILT`|[BUILT_TYPE](../../../extensibility/debugger/reference/built-type.md)|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  해석 하는 방법을 보여 주는이 예제는 `unionmember` 의 멤버는 `TYPE_INFO` C#의 구조입니다. 이 예에서는 한 가지 형식만 해석 (`TYPE_KIND_METADATA`) 하지만 다른 동일한 방식으로 해석 됩니다.  
   
 ```csharp  

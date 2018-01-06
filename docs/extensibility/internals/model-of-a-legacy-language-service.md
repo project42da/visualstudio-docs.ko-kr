@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: afc15ea50921b1feca34a8b305c5028979a0d1ca
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dc652f9eb4428e1d4d7297ed8b588c7f81a07b2d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="model-of-a-legacy-language-service"></a>레거시 언어 서비스의 모델
 언어 서비스는 요소와는 특정 언어에 대 한 기능을 정의 하 고 해당 언어에 관련 정보 편집기를 제공 하는 데 사용 됩니다. 예를 들어 편집기 구문 색 지정을 지원 하기 위해 요소 및 언어의 키워드를 알고 있어야 합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
  다음 표에서 모델의 개체에 대 한 개요를 제공합니다.  
   
-|구성 요소|개체|함수|  
+|구성 요소|Object|함수|  
 |---------------|------------|--------------|  
 |텍스트 버퍼|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>|유니코드 읽기/쓰기 텍스트 스트림입니다. 다른 인코딩을 사용 하는 텍스트에 대 한 것 같습니다.|  
 |코드 창|<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>|하나 이상의 텍스트 뷰를 포함 하는 문서 창입니다. 때 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 는 코드 창 (MDI) 다중 문서 인터페이스 모드로 MDI 자식입니다.|  

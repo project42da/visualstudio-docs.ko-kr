@@ -16,11 +16,12 @@ caps.latest.revision: "46"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d622bd917548666e12eff6d29639f62d3ef4bc1f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 087faaae07c4c240b53830ee238cee4f9065d21f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-a-most-recently-used-list-to-a-submenu"></a>하위 메뉴에는 목록에 사용 되는 가장 최근에 추가
 이 연습에서 데모에 빌드 [하위 메뉴는 메뉴에 추가](../extensibility/adding-a-submenu-to-a-menu.md), 동적 목록을 하위 메뉴에 추가 하는 방법을 보여 줍니다. 동적 목록 mru (가장 최근에 사용 됨) 목록이 만들기 위한 기본을 형성 합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/31/2017
   
  메뉴 및.vsct 파일에 대 한 자세한 내용은 참조 [명령, 메뉴 및 도구 모음](../extensibility/internals/commands-menus-and-toolbars.md)합니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>필수 구성 요소  
  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-an-extension"></a>확장 만들기  

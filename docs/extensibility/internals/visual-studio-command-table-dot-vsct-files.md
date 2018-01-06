@@ -15,18 +15,19 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ace754b9d6ddb220b3647b281011d3763810987c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 71a202bdb71469e4d6b46eb537147092b1ea9013
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-command-table-vsct-files"></a>Visual Studio 명령 테이블 (합니다. Vsct) 파일
 명령 테이블 구성 파일은 VSPackage를 포함 하는 명령 집합을 설명 하는 텍스트 파일. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 명령 테이블 (VSCT) 컴파일러 binary 명령 테이블 (.cto) 출력 파일에 XML 기반 구성 파일 (.vsct 파일)를 컴파일합니다. 결과.cto 파일.ctc 구성 파일을 컴파일하는 데 명령 테이블 (CTC) 컴파일러를 사용 하 여 생성 하는 것과 동일 합니다. 그러나 XML 기반.vsct 파일에 XML 편집기 및 XML IntelliSense와 같은 몇 가지 이점이 있습니다.  
   
  구문 및.vsct 파일의 의미에 대 한 자세한 참조 [XML 명령 테이블 디자인 (합니다. Vsct) 파일](../../extensibility/internals/designing-xml-command-table-dot-vsct-files.md)  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [XML 명령 테이블(.Vsct) 파일 디자인](../../extensibility/internals/designing-xml-command-table-dot-vsct-files.md)  
  .Vsct 파일을 디자인 하는 방법에 설명 합니다.  
   

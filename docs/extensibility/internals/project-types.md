@@ -15,16 +15,17 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7a3c41646fa7424197325c48b4cd40bc7a9eb8ee
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5b04ebb2fd28c808c742897bbf4ceb94505641e4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-types"></a>프로젝트 형식
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]와 같은 언어에 대 한 몇 가지 프로젝트 형식에 포함 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 및 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]사용자 고유의 프로젝트 형식을 만들 수도 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Essentials](../../extensibility/internals/project-type-essentials.md)  
  프로젝트 형식으로 작업을 시작 해야 하는 중요 한 정보를 표시 합니다.  
   

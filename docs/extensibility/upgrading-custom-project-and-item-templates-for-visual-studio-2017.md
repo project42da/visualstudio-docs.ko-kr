@@ -12,26 +12,29 @@ caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bdd1238eee39b902adf581092a90f7d84c1b0a98
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: 0c0843c8bfb899dc23bcb1ce31eb3f8b9eaffd54
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="upgrading-custom-project-and-item-templates-for-visual-studio-2017"></a>사용자 지정 프로젝트 및 Visual Studio 2017에 대 한 항목 템플릿 업그레이드
-Visual Studio는 Visual Studio 2017 년부터.vsix 또는.msi 설치 된 프로젝트 및 항목 템플릿을 검색 하는 방식을 변경 됩니다. 사용자 지정 프로젝트 또는 항목 템플릿을 사용 하는 확장을 소유 하는 경우 확장 프로그램을 업데이트 해야 합니다. 이 항목에서는 해야 할 사항을 설명 합니다.  
-  
- 이 변경 내용은 Visual Studio 2017을 결정 합니다. 이전 버전의 Visual Studio에는 영향을 주지 않습니다.  
-  
- 프로젝트 또는 항목 템플릿을 VSIX 확장의 일환으로 만들려는 경우 참조 [만드는 사용자 지정 프로젝트 및 항목 템플릿](../extensibility/creating-custom-project-and-item-templates.md)합니다.  
-  
-## <a name="template-scanning"></a>서식 파일 검색  
- 이전에 **devenv /setup** 또는 **devenv /installvstemplates** 프로젝트 템플릿과 항목 템플릿 찾기를 로컬 디스크를 검색 합니다. 미리 보기 4 년부터 검색 됩니다 대해서만 수행할 수 없도록 위치 (**%USERPROFILE%\Documents\\< Visual Studio 버전\>\My 내보낸 템플릿\\**)에 사용 되는 에 의해 생성 된 서식 파일은 **파일 > 템플릿 내보내기** 명령입니다.  
-  
- (비 사용자)의 다른 위치에 대 한 위치 및 서식 파일의 다른 특성을 지정 하는 manifest(.vstman) 파일을 포함 해야 합니다. .Vstman 파일이.vstemplate 파일 서식 파일에 사용 되는 함께 생성 됩니다. .vsix를 사용 하 여 확장을 설치 하는 경우 Visual Studio 2017에서 확장을 다시 컴파일하여이 수행할 수 있습니다. 그러나 수동으로 변경 해야 하는.msi를 사용 하는 경우. 이러한 변경을 수행 하기 위해 수행 해야 할 작업 목록, 참조 **업그레이드와 함께 설치 된 확장에 대 한 프로그램입니다. MSI** 이 항목의 뒷부분에 나오는 합니다.  
+
+Visual Studio 2017 년부터 Visual Studio은 Visual Studio의 이전 버전을 다른 방식으로.vsix 또는.msi 설치 된 프로젝트 및 항목 템플릿을 검색 합니다. 사용자 지정 프로젝트 또는 항목 템플릿을 사용 하는 확장을 소유 하는 경우 확장 프로그램을 업데이트 해야 합니다. 이 항목에서는 해야 할 사항을 설명 합니다.
+
+이 변경 내용은 Visual Studio 2017을 결정 합니다. 이전 버전의 Visual Studio에는 영향을 주지 않습니다.
+
+프로젝트 또는 항목 템플릿을 VSIX 확장의 일환으로 만들려는 경우 참조 [만드는 사용자 지정 프로젝트 및 항목 템플릿](../extensibility/creating-custom-project-and-item-templates.md)합니다.
+
+## <a name="template-scanning"></a>서식 파일 검색
+
+이전 버전의 Visual Studio에서 **devenv /setup** 또는 **devenv /installvstemplates** 프로젝트 템플릿과 항목 템플릿 찾기를 로컬 디스크를 검색 합니다. Visual Studio 2017 년부터 검색 없도록 위치에 대해서만 수행 됩니다. 기본 사용자 수준의 위치는 **%USERPROFILE%\Documents\\< Visual Studio 버전\>\Templates\\**합니다. 이 위치에 의해 생성 된 서식 파일에 사용 되는 **프로젝트** > **템플릿 내보내기...**  경우 명령에서 **템플릿을 Visual Studio로 자동으로 가져옵니다** 마법사에서 옵션을 선택 합니다.
+
+(비 사용자)의 다른 위치에 대 한 위치 및 서식 파일의 다른 특성을 지정 하는 manifest(.vstman) 파일을 포함 해야 합니다. .Vstman 파일이.vstemplate 파일 서식 파일에 사용 되는 함께 생성 됩니다. .vsix를 사용 하 여 확장을 설치 하는 경우 Visual Studio 2017에서 확장을 다시 컴파일하여이 수행할 수 있습니다. 그러나 수동으로 변경 해야 하는.msi를 사용 하는 경우. 이러한 변경을 수행 하기 위해 수행 해야 할 작업 목록, 참조 **업그레이드와 함께 설치 된 확장에 대 한 프로그램입니다. MSI** 이 항목의 뒷부분에 나오는 합니다.  
   
 ## <a name="how-to-update-a-vsix-extension-with-project-or-item-templates"></a>프로젝트 또는 항목 템플릿을 VSIX 확장을 업데이트 하는 방법  
- 이 절차에서는 Visual Studio 2017 하는 방법에 설명
+
 1.  Visual Studio 2017에서 솔루션을 엽니다. 코드를 업그레이드 하 라는 메시지가 표시 됩니다. **확인**을 클릭합니다.  
   
 2.  업그레이드 완료 후 설치 대상의 버전을 변경 해야 합니다. VSIX 프로젝트에서 source.extension.vsixmanifest 파일을 열고 선택 된 **설치 대상** 탭 합니다. 경우는 **버전 범위** 필드는 **[14.0]**, 클릭 **편집** Visual Studio 2017을 포함 하도록 변경 합니다. 예를 들어, 설정할 수 **[14.0,15.0]** 또는 Visual Studio 2015 또는 Visual Studio 2017 년 중 하나에 확장을 설치 하 **[15.0]** 방금 Visual Studio 2017에 설치 합니다.  
@@ -176,41 +179,19 @@ Visual Studio는 Visual Studio 2017 년부터.vsix 또는.msi 설치 된 프로�
   
  .Vstman 파일의 다양 한 요소에 대 한 자세한 내용은 참조 [Visual Studio 템플릿 매니페스트 스키마 참조](../extensibility/visual-studio-template-manifest-schema-reference.md)합니다.  
   
-## <a name="upgrades-for-extensions-installed-with-an-msi"></a>확장에 대 한 업그레이드와 함께 설치 된 프로그램입니다. MSI  
- 다음과 같은 일반적인 템플릿 위치에 템플릿을 배포 하는 일부 MSI 기반 확장:  
-  
--   **\<Visual Studio 설치 디렉터리 > \Common7\IDE\\< ProjectTemplates/ItemTemplates >**  
-  
--   **\<Visual Studio 설치 디렉터리 > \Common7\IDE\Extensions\\< ExtensionName\>\\< 프로젝트/ItemTemplates >**  
-  
- 확장 프로그램에서 MSI 기반 배포를 수행 하는 경우 템플릿 매니페스트를 수동으로 생성 및 확장 설치에 포함 되어 있는지 확인 해야 합니다. 위에 나열 된.vstman 예제를 비교 해야 및 [Visual Studio 템플릿 매니페스트 스키마 참조](../extensibility/visual-studio-template-manifest-schema-reference.md)합니다. 포함 하는 데 필요한 사항  
-  
- 프로젝트 및 항목 템플릿에 대 한 별도 매니페스트를 만들어야 하 고 루트 템플릿 지정 된 대로 위의 디렉터리를 가리켜야 합니다. 확장 및 로캘 당 한 매니페스트를 만들어야 합니다.  
-  
-## <a name="troubleshooting-template-installation"></a>템플릿을 설치 문제 해결  
- 프로젝트 또는 항목 템플릿 배포 문제를 실행 하는 경우 진단 로깅을 사용할 수 있습니다.  
-  
-1.  다음과 같은 내용으로 Common7\IDE\CommonExtensions 폴더에 설치 (예: C:\Program Files (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\CommonExtensions\EnablePkgDefLogging.pkgdef)에 대 한 pkgdef 파일을 만듭니다.  
-  
-     ```
-     [$RootKey$\VsTemplate]
-     "EnableTemplateDiscoveryLog"=dword:00000001
-     ```
+## <a name="upgrades-for-extensions-installed-with-an-msi"></a>확장에 대 한 업그레이드와 함께 설치 된 프로그램입니다. MSI
 
-2. "개발자 명령 프롬프트를" 설치를 위한 Windows 검색에서 검색 하 여 열고 실행 `devenv /updateConfiguration`합니다.
+다음과 같은 일반적인 템플릿 위치에 템플릿을 배포 하는 일부 MSI 기반 확장:
 
-3.  Visual Studio를 시작 하 고 두 템플릿 트리를 초기화 하 여 새 프로젝트와 새 항목 대화 상자를 시작 합니다. 서식 파일 로그에 나타납니다 **%LOCALAPPDATA%\Microsoft\VisualStudio\15.0_[instanceid]\VsTemplateDiagnosticsList.csv** (instanceid는 Visual Studio 인스턴스를 설치 ID에 해당). 각 서식 파일 트리 초기화가이 로그에 항목을 추가 합니다.  
-  
- 로그 파일에는 다음과 같은 열을 포함 되어 있습니다.  
-  
--   **FullPathToTemplate**에 다음 값입니다.  
-  
-    -   매니페스트 기반 배포에 대 한 1  
-  
-    -   디스크 기반 배포에 대 한 0  
-  
--   **TemplateFileName**  
-  
--   다른 템플릿 속성
+- **\<Visual Studio 설치 디렉터리 > \Common7\IDE\\< ProjectTemplates/ItemTemplates >**
 
-참고: 로깅을 사용 하지 않으려면, pkgdef 파일을 제거 하거나 변경의 값 `EnableTemplateDiscoveryLog` 를 `dword:00000000` 실행 `devenv /updateConfiguration` 다시 합니다.
+- **\<Visual Studio 설치 디렉터리 > \Common7\IDE\Extensions\\< ExtensionName\>\\< 프로젝트/ItemTemplates >**
+
+확장 프로그램에서 MSI 기반 배포를 수행 하는 경우 템플릿 매니페스트를 수동으로 생성 및 확장 설치에 포함 되어 있는지 확인 해야 합니다. 위에 나열 된.vstman 예제 비교 및 [Visual Studio 템플릿 매니페스트 스키마 참조](../extensibility/visual-studio-template-manifest-schema-reference.md)합니다.
+
+프로젝트 및 항목 템플릿에 대 한 별도 매니페스트를 만들어야 하 고 루트 템플릿 지정 된 대로 위의 디렉터리를 가리켜야 합니다. 확장 및 로캘 당 한 매니페스트를 만듭니다.
+
+## <a name="see-also"></a>참고 항목
+
+[템플릿 검색 문제 해결](troubleshooting-template-discovery.md)  
+[사용자 지정 프로젝트 및 항목 템플릿 만들기](creating-custom-project-and-item-templates.md)

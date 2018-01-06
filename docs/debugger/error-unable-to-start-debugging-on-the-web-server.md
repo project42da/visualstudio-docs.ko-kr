@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - vs.debug.error.http
 - vwd.nonadmin.error.
@@ -26,16 +26,16 @@ helpviewer_keywords:
 - errors [debugger], unable to start debugging
 - debugging ASP.NET Web applications, unable to start debugging error
 - remote debugging, errors
-ms.assetid: f62e378a-3a99-4f78-9d97-8bb63a4da181
 caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 5332933bf1452ca730b5c49716e10f49851fd749
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: a7d09deda1aa2b24fba90f9d9d417917c5b284ad
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>오류: 웹 서버에서 디버깅을 시작할 수 없습니다.
 
@@ -119,7 +119,7 @@ ms.lasthandoff: 10/31/2017
 
 * 응용 프로그램 풀 구성을 확인 하 고, 필요한 경우 해결 한 후 다시 시도 하십시오.
 
-    버전의 Visual Studio 프로젝트와 일치 하지 않는 ASP.NET에 대 한 응용 프로그램 풀을 구성할 수 있습니다. 응용 프로그램 풀에서 ASP.NET 버전을 업데이트 하 고 다시 시작 합니다. 자세한 내용은 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
+    버전의 Visual Studio 프로젝트와 일치 하지 않는 ASP.NET에 대 한 응용 프로그램 풀을 구성할 수 있습니다. 응용 프로그램 풀에서 ASP.NET 버전을 업데이트 하 고 다시 시작 합니다. 자세한 내용은 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
 
     또한 암호 자격 증명 변경 되 면 응용 프로그램 풀 또는 웹 사이트에서이 정보도 업데이트 해야 합니다.  응용 프로그램 풀에서에서 자격 증명을 업데이트 **고급 설정 > 프로세스 모델 > Identity**합니다. 웹 사이트에서 자격 증명을 업데이트 **기본 설정 >로 연결 중...** . 응용 프로그램 풀을 다시 시작 합니다.
     
@@ -129,7 +129,7 @@ ms.lasthandoff: 10/31/2017
 
 * 올바른 버전의 ASP.NET IIS에 설치 되어 있는지 확인 합니다.
 
-    일치 하지 않는 버전의 Visual Studio 프로젝트와 IIS에 ASP.NET이이 문제가 발생할 수 있습니다. Web.config의 프레임 워크 버전을 설정 해야 합니다. IIS에서 ASP.NET을 설치 하려면 사용 된 [웹 플랫폼 설치 관리자 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)합니다. 참고: [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 또는 ASP.NET Core [Windows iis에서 호스트](https://docs.asp.net/en/latest/publishing/iis.html)합니다.
+    일치 하지 않는 버전의 Visual Studio 프로젝트와 IIS에 ASP.NET이이 문제가 발생할 수 있습니다. Web.config의 프레임 워크 버전을 설정 해야 합니다. IIS에서 ASP.NET을 설치 하려면 사용 된 [웹 플랫폼 설치 관리자 (WebPI)](https://www.microsoft.com/web/downloads/platform.aspx)합니다. 참고: [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 또는 ASP.NET Core [Windows iis에서 호스트](https://docs.asp.net/en/latest/publishing/iis.html)합니다.
   
 * IP 주소만 사용하는 경우의 인증 오류 해결
 
@@ -155,7 +155,7 @@ IIS 구성 문제를 유발 하지 않는지, 다음이 단계를 시도 합니�
 
      IIS가 올바르게 설치되어 있지 않은 경우 브라우저에 `http://localhost` 를 입력하면 오류가 발생합니다.
      
-     IIS에 배포 하는 방법에 대 한 자세한 내용은 참조 하십시오. [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](https://docs.microsoft.com/en-us/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 및 ASP.NET Core [Windows iis에서 호스트](https://docs.asp.net/en/latest/publishing/iis.html)합니다.
+     IIS에 배포 하는 방법에 대 한 자세한 내용은 참조 하십시오. [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 및 ASP.NET Core [Windows iis에서 호스트](https://docs.asp.net/en/latest/publishing/iis.html)합니다.
 
 * 서버에서 기본 ASP.NET 응용 프로그램을 만듭니다 (또는 기본 web.config 파일을 사용 하 여).
 

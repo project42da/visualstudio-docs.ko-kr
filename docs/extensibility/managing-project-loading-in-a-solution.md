@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b28db42e17e95ea7c354f5ba4d7b0c231c2d2fe5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a2be2c75704646bab50f89377d960d44f6fa14f1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="managing-project-loading-in-a-solution"></a>솔루션에서 관리 프로젝트 로드
 Visual Studio 솔루션에는 다 수의 프로젝트 포함 될 수 있습니다. 기본 Visual Studio 동작은 솔루션을 열 때에는 솔루션의 모든 프로젝트를 로드 하 고 사용자 모두 로드 작업이 완료 될 때까지 프로젝트 액세스를 사용할 수 없도록 합니다. 프로젝트 로드 프로세스가 2 분 이상 소요 시간:, 프로젝트의 총 수와 로드 되는 프로젝트 수를 보여 주는 진행률 표시줄이 표시 됩니다. 사용자는 여러 프로젝트를 포함 하는 솔루션에서 작업할 때 프로젝트를 언로드할 수 있지만이 프로시저에는 몇 가지 단점이: 언로드된 프로젝트에는 솔루션 다시 빌드 명령의 일환으로 빌드하지 않은 및 닫힘의 멤버 및 형식 설명을 IntelliSense 프로젝트는 표시 되지 않습니다.  
@@ -114,4 +115,4 @@ pSLMgrSupport.SetProjectLoadPriority(guidProjectID, (uint)_VSProjectLoadPriority
 -   <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution4.EnsureProjectsAreLoaded%2A>:이 메서드를 호출에서 프로젝트를 강제로 `guidProjectID` 메서드가 반환 되기 전에 로드 합니다.  
   
 > [!NOTE]
->  입니다. 기본적으로 요청에 있는 프로젝트만 로드 및 이지만 배경 부하 우선 순위 로드 되는 <xref:Microsoft.VisualStudio.Shell.Interop.__VSBSLFLAGS> 플래그는 메서드에 전달 된, 명시적으로 로드 하는 것으로 표시 된 것을 제외한 모든 프로젝트를 로드 됩니다.
+>  이어야 합니다. 기본적으로 요청에 있는 프로젝트만 로드 및 이지만 배경 부하 우선 순위 로드 되는 <xref:Microsoft.VisualStudio.Shell.Interop.__VSBSLFLAGS> 플래그는 메서드에 전달 된, 명시적으로 로드 하는 것으로 표시 된 것을 제외한 모든 프로젝트를 로드 됩니다.

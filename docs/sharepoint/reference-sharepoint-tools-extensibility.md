@@ -16,16 +16,17 @@ caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 83800ece50304d578c5662ca6794af83021d9156
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8b1782d5efa47fffb09d2e54413be1d5e35f89d6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference-sharepoint-tools-extensibility"></a>참조(SharePoint 도구 확장성)
   이 섹션에서는 Visual Studio에서 SharePoint 도구 확장에 대 한 참조 설명서 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SharePoint 프로젝트 항목 스키마 참조](../sharepoint/sharepoint-project-item-schema-reference.md)  
  .Spdata 파일 스키마에 대 한 참조 설명서를 포함합니다.  
   

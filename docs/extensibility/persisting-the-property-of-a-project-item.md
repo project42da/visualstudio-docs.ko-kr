@@ -15,11 +15,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 61a477fa760a2ef9026b06facc8bc592706c5dd3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e732821cf1ea14497038a65d49f2a10ce22c28a5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="persisting-the-property-of-a-project-item"></a>프로젝트 항목의 속성이 유지
 소스 파일의 작성자와 같은 프로젝트 항목에 추가 하는 속성을 유지 하려는 경우. 이렇게 하려면 프로젝트 파일에 속성을 저장 합니다.  

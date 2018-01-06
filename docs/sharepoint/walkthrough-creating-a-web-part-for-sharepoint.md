@@ -21,11 +21,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 3293382ffc0c36fb78bb115d0f38c311278a7151
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3a580d662c09e0f8a73deca2c4e0cea7cea6650c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>연습: SharePoint를 위한 웹 파트 만들기
   웹 파트를 사용 하면 직접 브라우저를 사용 하 여 콘텐츠, 모양 및 SharePoint 사이트 페이지의 동작을 수정할 수 있도록 합니다. 이 연습을 사용 하 여 웹 파트를 만드는 방법을 보여 줍니다.는 **웹 파트** Visual Studio 2010에서 항목 템플릿을 합니다.  

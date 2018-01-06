@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7768465f46e5344b88da9006a7de2396e3b75ba6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 150c8794fb35ca017be7e0873dc0d1b84ebfc38c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport 인터페이스
   Office 용 앱의 디버깅을 용이 하 게 하려면 Visual Studio와 같은 디버깅 환경에서 구현 합니다. Word 또는 Excel과 같은 Office 응용 프로그램 Visual Studio에서이 인터페이스를 가져오고 디버깅 세션 중 특정 시점에서 인터페이스의 메서드를 호출 합니다.  
@@ -43,7 +44,7 @@ interface IWefDebuggingSupport : IUnknown
 ## <a name="methods"></a>메서드  
  다음 표에서 IWefDebuggingSupport 인터페이스를 정의 하는 메서드를 보여 줍니다.  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |[GetAutoInsertExtensions 메서드](../vsto/getautoinsertextensions-method.md)|디버깅 하는 동안 자동으로 삽입 될 Office 용 앱에 대 한 정보를 가져옵니다.|  
 |[SetWefProcessId 메서드](../vsto/setwefprocessid-method.md)|웹 확장 프레임 워크 (WEF) 콘텐츠를 실행 하는 프로세스 식별자를 제공 합니다.|  

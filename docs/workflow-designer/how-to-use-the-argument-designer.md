@@ -14,11 +14,12 @@ caps.latest.revision: "16"
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.openlocfilehash: 5093e5561140a0ebff57da1f7c21a8954ee58bb3
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: aa1cdd0dd563a5f87d4e32f779985afd63319032
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-the-argument-designer"></a>방법: 인수 디자이너 사용
 이전 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전과 비교할 때 인수 디자이너에서 데이터를 활동에서/으로 전달하기가 쉬워졌습니다. 클릭 하 여 액세스 하는 디자이너는 **인수** 디자인 캔버스의 왼쪽 아래 모퉁이의 단추입니다. 제외 하 고 각각의 열 머리글을 하 여 정렬할 수 있고 테이블 형식으로 표시 되는 인수 목록이 있는 **기본값** 열입니다. 각 인수에는 이름, in/out/in-out/속성 방향, 형식 및 기본 식 값(있는 경우)이 포함됩니다. 이름 및 기본 식 값은 편집할 수 있는 텍스트 필드이며, 형식과 방향은 드롭다운입니다. [! 포함[crabout](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)합니다.  

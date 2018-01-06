@@ -16,16 +16,17 @@ caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f6d6f3ae5608d8092fbeb065867ae04db4e04c95
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 7030893cfb108a497ec167586fb90f5e88e61003
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="programming-concepts-and-features-for-sharepoint-tools-extensions"></a>SharePoint 도구 확장의 프로그래밍 개념 및 기능
   몇 가지 중요 한 프로그래밍 개념 및 Visual Studio에서 SharePoint 도구에 관련 된 기능을 있습니다. 이러한 개념 및 기능 대부분 SharePoint 도구 확장에서 중요 한 역할을 수행 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)  
  SharePoint 클라이언트와 SharePoint 도구 확장에서 SharePoint 서버 개체 모델을 사용 하 여 비교 하 고 만드는 방법에 대 한 정보를 제공 *SharePoint 명령* 를 SharePoint 서버 개체 모델을 호출 합니다.  
   

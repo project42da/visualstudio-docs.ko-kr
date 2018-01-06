@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 838b7cac850b8e7eb3401065cf13202d3a3a40ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6d9d468997d0e0f4cc913db1b9ac316f4e698f99
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="wizards"></a>마법사
 일반적으로에 추가 하려면 마법사를 만든 후의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다른 사용자가 사용할 수 있도록 통합 개발 환경 (IDE). 그러면 추가 마법사에 표시 된 **새 프로젝트 추가** 또는 **새 항목 추가** 대화 상자. 참조 하는 **새 프로젝트 추가** 또는 **새 항목 추가** 대화 상자에서 열린 솔루션을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기**, 가리킨 **추가**, 및 클릭 **새 프로젝트** 또는 **새 항목**합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
  이 섹션의 항목을 구현 하는 파일에 설명 된 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **새 프로젝트 추가** 및 **새 항목 추가** 마법사를 사용할 수 있는 마법사 및 서식 파일을 나열 하려면 대화 상자 및 IDE에서 제대로 작동 하도록 마법사를 충족 해야 하는 요구 사항입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [템플릿 디렉터리 설명(.Vsdir) 파일](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)  
  디렉터리 설명 파일 어떤 서식 파일의 개요를 제공 하 고 폴더, 마법사.vsz 파일 및 대화 상자에서 프로젝트와 연결 된 템플릿 파일을 표시 하려면 IDE에서 작동 방식을 설명 합니다.  
   

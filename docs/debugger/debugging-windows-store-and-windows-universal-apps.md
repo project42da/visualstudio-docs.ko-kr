@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 258389c08971089c523e2881a455411ea767801a
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 3bc498bf0a2a0293421ba680eab608cff4a85437
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="debug-universal-windows-apps-uwp"></a>유니버설 Windows 앱 (UWP) 디버깅
 Visual Studio 디버거는 UWP 앱 디버깅에 대 한 완전히 지원 합니다.  
@@ -30,13 +31,11 @@ Visual Studio 디버거는 UWP 앱 디버깅에 대 한 완전히 지원 합니�
   
 Windows Phone 8 앱을 디버깅 하려면 참조 [Windows Phone 8 용 앱을 디버깅](https://msdn.microsoft.com/en-us/library/windows/apps/ff402572(v=vs.105).aspx)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
-  
 |||  
 |-|-|  
 |[Visual Studio에서 앱 실행](../debugger/run-store-apps-from-visual-studio.md)|UWP 앱에서 로컬 컴퓨터, 앱 시뮬레이터 또는 에뮬레이터 나 원격 장치에서 실행 합니다.|  
 |[Visual Studio에서 앱 디버깅](../debugger/debug-store-apps-in-visual-studio.md)|찾아 UWP 앱에서 Visual Studio 디버거를 사용 하 여 버그를 수정 합니다.|  
-|[설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)|로컬 및 원격 배포 된 응용 프로그램을 디버깅 합니다.|
+|[설치된 앱 패키지 디버그](../debugger/debug-installed-app-package.md)|로컬 및 원격 배포 된 응용 프로그램을 디버깅 합니다.|
 |[UWP 앱 용 콘텐츠 프리페치](../debugger/prefetch-content-for-windows-store-apps.md)|UWP 앱에 대 한 ContentPrefetcher 클래스의 효과 분석 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  

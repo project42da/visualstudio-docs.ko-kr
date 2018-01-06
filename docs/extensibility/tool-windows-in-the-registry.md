@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 38b4415a24a7440a2d3725fb1183863e7a337bbb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8d3277a4e24b12d409654548b5670a4d47fa9539
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tool-windows-in-the-registry"></a>레지스트리에서 도구 창
 도구 창을 제공 하는 Vspackage를 등록 해야 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 마찬가지로 도구 창 공급자입니다. Visual Studio 패키지 템플릿을 사용 하 여 만든 도구 창은 기본적으로이 작업을 수행 합니다. 도구 창 공급자는 기본 도구 창 크기 및 위치, 도구 창 및 도킹 스타일으로 사용 되는 창의 GUID와 같은 표시 유형 특성을 지정 하는 시스템 레지스트리 키 있습니다.  

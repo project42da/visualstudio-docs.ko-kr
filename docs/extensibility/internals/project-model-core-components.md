@@ -15,11 +15,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c7759a2394f2cda19f875a85a22c4a674fee8964
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d2de7b73238589786c1e8a4ba42389201123c2b1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-model-core-components"></a>프로젝트 모델에 대 한 핵심 구성 요소
 다음 표에서 프로젝트 모델에서 확장 됩니다. 테이블에는 인터페이스 및 모델, 인터페이스 및 특정 개체와 연결 된 서비스에서 식별 된 서비스에 대 한 간략 한 설명이 제공 합니다. 또한 테이블에는 다른 인터페이스는 프로젝트 생성 및 특정 프로젝트 형식이 요구 사항에 따라 유지 관리에서 선택적 요소를 자세히 설명 합니다.  

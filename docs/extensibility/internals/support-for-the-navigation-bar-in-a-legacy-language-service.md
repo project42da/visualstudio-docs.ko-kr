@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 935ea7d9fde2872c952f79afaa95058e9f18d0a7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5e2d7ddfd4904923cbdea415fa5a0d2086cc071f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-the-navigation-bar-in-a-legacy-language-service"></a>레거시 언어 서비스의 탐색 모음에 대 한 지원
 편집기 보기의 위쪽 탐색 모음 파일의 형식 및 멤버를 표시 합니다. 형식은 왼쪽된 드롭다운 목록에서 확인할 및 멤버 드롭 다운 오른쪽에 표시 됩니다. 사용자가 형식을 선택, 캐럿 형식의 첫 번째 줄에 배치 됩니다. 사용자가 구성원을 선택 하면 멤버의 정의에 캐럿 배치 됩니다. 드롭다운 목록 상자는 캐럿의 현재 위치를 반영 하도록 업데이트 됩니다.  

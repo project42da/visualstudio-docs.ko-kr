@@ -18,11 +18,12 @@ caps.latest.revision: "35"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6f4056e778e7d8f6aa62e84b03897c810160fa41
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e80b947b2d4d20692e0abceae0ffa36e64f2b0df
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-isolated-shell"></a>Visual Studio 격리 셸
 Visual Studio 격리 셸을 사용 하 여 병렬 실행할 수 있는 독립 실행형 응용 프로그램을 만들 수 있습니다 다른 버전의 Visual Studio입니다. Visual Studio 서비스를 사용할 수 있지만 사용자 지정 된 모양이 있는 특수 도구를 호스트 하는 데 주로 사용 되는 및 브랜딩 않습니다. Visual Studio 기능 및 메뉴 명령 그룹 수 쉽게 설정 및 해제 합니다. 응용 프로그램 타이틀, 응용 프로그램 아이콘 및 시작 화면은 완전히 사용자 지정할 수 있습니다. 목록이 지정이 가능한 기능에 대 한 참조 [격리 셸 사용자 지정](customizing-the-isolated-shell.md)합니다.  

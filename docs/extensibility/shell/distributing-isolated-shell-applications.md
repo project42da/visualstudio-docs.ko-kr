@@ -12,18 +12,19 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d7e2a85a7e94ad9a700b197c9c4e0f75e78b4ec2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6e9b7ded8d24e4d252d29338d89bd176648511a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="distributing-isolated-shell-applications"></a>격리 셸 응용 프로그램 배포
 격리 셸 응용 프로그램을 만들기 위해 Visual Studio 및 Visual Studio SDK를 설치 해야 합니다. 다른 사용자 또는 고객의 컴퓨터에 응용 프로그램을 배포 하려면 격리 셸에 대 한 특별 한 재배포 가능 패키지를 포함 해야 합니다.  
   
 ## <a name="prerequisites-for-distributing-isolated-shell-applications"></a>격리 셸 응용 프로그램을 배포 하기 위한 필수 구성 요소  
   
-|이름|설명|  
+|name|설명|  
 |----------|-----------------|  
 |Visual Studio SDK|개발 하 고 확장을 테스트할 경우 SDK [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. 또한 Visual Studio 격리 셸의 고유한 인스턴스를 만드는 SDK를 사용할 수 있습니다.<br /><br /> Visual Studio는 SDK에 대 한 필수 구성 요소입니다.|  
 |Microsoft Visual Studio 격리 셸 재배포 가능 패키지|셸을 격리 재배포 가능한 Visual studio 도구 환경을 구축 하는 경우 설치 프로그램에 포함 해야 합니다. 격리 셸 재배포 가능 패키지는.NET Framework 4.5를 포함합니다.|  

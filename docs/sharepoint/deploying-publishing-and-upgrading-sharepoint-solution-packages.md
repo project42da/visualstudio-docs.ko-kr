@@ -23,11 +23,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5ae973b0a1fc30f0592f6cb2702df645708ab43f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c1c8757de9b63c3fed75ec7e2ef7f61c89e18226
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-publishing-and-upgrading-sharepoint-solution-packages"></a>SharePoint 솔루션 패키지 배포, 게시 및 업그레이드
   Visual Studio에서 SharePoint 솔루션을 개발한 후 로컬 SharePoint 서버에 해당 패키지 (.wsp) 파일을 배포 하거나 원격 또는 로컬 SharePoint 서버에 게시할 수 있습니다. 파일을 배포 하는 경우 패키지 파일 (.wsp) 배포 되는 방식을 사용자 지정할 수 있습니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
 |배포 구성|설명|  
 |------------------------------|-----------------|  
-|기본값|기본 배포 구성입니다. 다음과 같은 배포 단계가 수행 됩니다.<br /><br /> 1.  배포 전 명령을 실행 합니다.<br />2.  IIS 응용 프로그램 풀을 재활용 합니다.<br />3.  솔루션을 취소 합니다.<br />4.  솔루션을 추가 합니다.<br />5.  기능을 활성화 합니다.<br />6.  배포 후 명령을 실행 합니다.<br /><br /> 패키지를 제거 하면 다음 제거 단계가 수행 됩니다.<br /><br /> 1.  IIS 응용 프로그램 풀을 재활용 합니다.<br />2.  솔루션을 취소 합니다.|  
+|기본|기본 배포 구성입니다. 다음과 같은 배포 단계가 수행 됩니다.<br /><br /> 1.  배포 전 명령을 실행 합니다.<br />2.  IIS 응용 프로그램 풀을 재활용 합니다.<br />3.  솔루션을 취소 합니다.<br />4.  솔루션을 추가 합니다.<br />5.  기능을 활성화 합니다.<br />6.  배포 후 명령을 실행 합니다.<br /><br /> 패키지를 제거 하면 다음 제거 단계가 수행 됩니다.<br /><br /> 1.  IIS 응용 프로그램 풀을 재활용 합니다.<br />2.  솔루션을 취소 합니다.|  
 |정품 인증 없음|이 배포 구성을 기본 구성으로 동일한 단계를 실행 하지만 정품 인증 단계를 건너뜁니다.|  
   
  단일 단계를 완료 하거나 배포 프로세스의 단계 순서를 변경 하려면 고유한 배포 구성을 만들 수 있습니다. 자세한 내용은 참조 [하는 방법: SharePoint 배포 구성 편집](../sharepoint/how-to-edit-a-sharepoint-deployment-configuration.md)합니다.  

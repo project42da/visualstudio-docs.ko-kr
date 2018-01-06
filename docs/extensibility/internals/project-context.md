@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 368f6ecb67bc8b01df975da6e68e95b553a0e31d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 99f073e7f27fc98c1c751ae8153adfeea0018e2c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-context"></a>프로젝트 컨텍스트
 사용자를 추가 하거나 프로젝트 및 프로젝트 항목 사용 때 IDE에서는 프로젝트 컨텍스트의 개념 다양 한 연산을 수행 하는 결정 됩니다.  

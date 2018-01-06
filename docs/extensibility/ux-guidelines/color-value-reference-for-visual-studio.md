@@ -13,11 +13,12 @@ ms.suite:
 ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 manager: ghogen
-ms.openlocfilehash: be4b63e767463b7b801ab5ed98d8482e94aacd1d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: v-brickg
+ms.openlocfilehash: 001e9db65209f8ae60cd070d5d68b9f72ef62672
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Visual Studio에 대 한 색 값 참조
 이 항목은 새 색 토큰을 만들기에 대 한 참조입니다. 새 UI를 만들 때 각 주제에 대 한 색 및 고대비 테마의 해당 요소에 대 한 시스템 색 이름을 선택 하려면 기존 UI에서 유사한 색을 사용할 수 있습니다. 
@@ -201,7 +202,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 > **높은 대비 견본 비교만 표시 됩니다.** 높은 대비 UI에 대 한 시스템 색 이름을 사용 하 고이 견본에서 스 포 이트 또는 색상 선택기를 사용 하지 마십시오. 이 항목의 높은 대비 견본 windows에서 고대비 #1 테마를 반영합니다. 색의 모양이 다른 고대비 테마의 달라 집니다.
 
-### <a name="body"></a>Body
+### <a name="body"></a>본문
 
 | | 밝은 테마 | 어두운 테마 | 파란색 테마 | 고대비 | 
 | --- | :---: | :---: | :---: | :---: |
@@ -226,7 +227,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 > **높은 대비 견본 비교만 표시 됩니다.** 높은 대비 UI에 대 한 시스템 색 이름을 사용 하 고이 견본에서 스 포 이트 또는 색상 선택기를 사용 하지 마십시오. 이 항목의 높은 대비 견본 windows에서 고대비 #1 테마를 반영합니다. 색의 모양이 다른 고대비 테마의 달라 집니다.
 
-### <a name="body"></a>Body
+### <a name="body"></a>본문
 
 | | 밝은 테마 | 어두운 테마 | 파란색 테마 | 고대비 | 
 | --- | :---: | :---: | :---: | :---: |
@@ -255,7 +256,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 > **높은 대비 견본 비교만 표시 됩니다.** 높은 대비 UI에 대 한 시스템 색 이름을 사용 하 고이 견본에서 스 포 이트 또는 색상 선택기를 사용 하지 마십시오. 이 항목의 높은 대비 견본 windows에서 고대비 #1 테마를 반영합니다. 색의 모양이 다른 고대비 테마의 달라 집니다.
 
-### <a name="body"></a>Body
+### <a name="body"></a>본문
 
 | | 밝은 테마 | 어두운 테마 | 파란색 테마 | 고대비 | 
 | --- | :---: | :---: | :---: | :---: |

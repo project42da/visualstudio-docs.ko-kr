@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 7a8fc0474f624785a47a4ba9f970b5a1ca54dd9c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 289c95ebbbd294050b1e5c7cc95656e7ab5eadc0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-a-dsl-definition"></a>DSL 정의의 속성
 DslDefinition 속성 정의 *도메인 특정 언어* 버전 번호와 같은 정의 속성입니다. DslDefinition 속성에 표시 된 **속성** 창에서 다이어그램의 빈 영역을 클릭할 때는 *도메인 특정 언어 디자이너*합니다.  
@@ -30,12 +31,12 @@ DslDefinition 속성 정의 *도메인 특정 언어* 버전 번호와 같은 �
 |액세스 한정자|도메인 클래스에 대 한 액세스 한정자 공용 또는 내부 인지 여부를 확인 합니다.|public|  
 |사용자 지정 특성|사용자 지정 도메인 클래스에 대 한 특성을 정의 합니다.<br /><br /> **참고** 특성을 추가 하려면 찾아보기 단추를 사용 합니다.|\<없음 >|  
 |회사 이름|시스템 레지스트리에 현재 회사 이름의 이름입니다.|현재 회사 이름|  
-|이름|이 도메인 클래스의 이름입니다.|현재 이름|  
+|name|이 도메인 클래스의 이름입니다.|현재 이름|  
 |네임스페이스|네임 스페이스 정보이 도메인 클래스를 등록 합니다.|현재 네임 스페이스|  
 |패키지 Guid|에 대 한 guid의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 이 DSL이에 대해 생성 된 패키지입니다.|\<없음 >|  
 |패키지 Namespace|에 대 한 네임 스페이스는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 이 DSL이에 대해 생성 된 패키지입니다.|\<없음 >|  
 |제품 이름|에 등록 되는 제품 이름에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 이 DSL이에 대해 생성 된 패키지입니다.|\<없음 >|  
-|참고|이 도메인 클래스와 관련 된 정보입니다.|\<없음 >|  
+|노트|이 도메인 클래스와 관련 된 정보입니다.|\<없음 >|  
 |설명|이 도메인 클래스에 대 한 설명입니다.|\<없음 >|  
 |표시 이름|이 도메인 클래스에 대 한 생성 된 디자이너에 표시 되는 이름입니다.|\<없음 >|  
 |Help Keyword|이 도메인 클래스와 관련 된 도움말 키워드입니다.|\<없음 >|  

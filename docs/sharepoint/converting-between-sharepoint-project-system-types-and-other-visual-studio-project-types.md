@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 198cb9b2b00b1e09c21ba672999cca557bcd5b48
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 81573598dc4c23f161298aee800b5dfabe7608f7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>SharePoint 프로젝트 시스템 형식과 기타 Visual Studio 프로젝트 형식 간의 변환
   일부 경우에는 SharePoint 프로젝트 시스템에서 개체를 할 수 있고 Visual Studio 자동화 개체 모델 또는 통합 개체 모델에 있는 해당 개체의 기능을 사용 하려는 또는 그 반대의 경우도 마찬가지입니다. 이러한 경우에 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> 다른 개체 모델에는 개체를 변환 하 여 SharePoint 프로젝트 서비스의 메서드.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 |<xref:Microsoft.VisualStudio.SharePoint.ISharePointProject>|<xref:EnvDTE.Project><br /><br /> 또는<br /><br /> 프로젝트에 대 한 기본 COM 개체에서 구현 되는 Visual Studio 통합 개체 모델에서 모든 인터페이스입니다. 이러한 인터페이스 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>, <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> (또는 파생 된 인터페이스) 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>합니다. 목록이 프로젝트에서 구현 되는 주요 인터페이스에 대 한 참조 [프로젝트 모델에 대 한 핵심 구성 요소](/visualstudio/extensibility/internals/project-model-core-components)합니다.|  
 |<xref:Microsoft.VisualStudio.SharePoint.IMappedFolder><br /><br /> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem><br /><br /> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFile><br /><br /> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeature><br /><br /> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectFeatureResourceFile><br /><br /> <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectPackage>|<xref:EnvDTE.ProjectItem><br /><br /> 또는<br /><br /> A<xref:System.UInt32> 프로젝트 멤버를 식별 하는 값 (한 VSITEMID 라고도 함)는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 해당 항목을 포함 합니다. 이 값에 전달할 수는 *itemid* 일부 매개 변수 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 메서드.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 사용 하는 방법을 보여 줍니다.는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> 변환 하는 메서드는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> 개체는 <xref:EnvDTE.Project>합니다.  
   
  [!code-csharp[SPExtensibility.ProjectService.FromDTE#2](../sharepoint/codesnippet/CSharp/spprojectserviceaddin/connect.cs#2)]

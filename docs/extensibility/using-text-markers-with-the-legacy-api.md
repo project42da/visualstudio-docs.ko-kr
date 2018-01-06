@@ -13,11 +13,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 64f4d7f7e4a71c1d304bfa5045175fd613bcb539
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 98c889bc1bc128a941f726348781a633799475de
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="using-text-markers-with-the-legacy-api"></a>텍스트 표식 레거시 API 사용
 텍스트 표식은 부동 광범위 한 표시에 영향을 줄 수 있는 버퍼에서 텍스트 및 텍스트 영역의 동작입니다. 표식은 중단점, 책갈피, 물결 무늬 밑줄로 및 읽기 전용 영역을 포함 합니다. 텍스트 표식 구문 색 지정 기본적으로 다릅니다. 텍스트의 영역과 관련 된 언어 구문 통신할 구문 색 지정을 사용 합니다. 구문 색 지정은 속도가 중요 한 Windows 화면은 연결 될 때 일반적으로 요청 됩니다. 구문 색 지정 텍스트 색을 변경합니다. 텍스트 표식 다른 여러 텍스트 속성을 변경할 수 있습니다. 텍스트 표식 "부동"를 업데이트 하 고 특별 한 동작을 적용할 수의 색을 지정 합니다.  

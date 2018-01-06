@@ -26,11 +26,12 @@ caps.latest.revision: "38"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: babb8456593ba953982390f048960449069ca6fc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 8ecc80a3c26b97b9754f998bd0903471d00cd1d7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data"></a>연습: 비즈니스 데이터를 사용하여 SharePoint에 외부 목록 만들기
   BDC 비즈니스 데이터 연결 () 서비스는 SharePoint을 백 엔드 서버 응용 프로그램, 웹 서비스 및 데이터베이스의 비즈니스 데이터를 표시할 수 있습니다.  
@@ -199,11 +200,11 @@ ms.lasthandoff: 10/31/2017
   
 10. 다음 각 필드에 대 한 형식 설명자를 만들려면 6 단계를 반복 합니다.  
   
-    |이름|형식 이름|  
+    |name|형식 이름|  
     |----------|---------------|  
     |FirstName|System.String|  
     |LastName|System.String|  
-    |전화|System.String|  
+    |전화 번호|System.String|  
     |전자 메일 주소|System.String|  
     |EmailPromotion|System.Int32|  
     |NameStyle|System.Boolean|  
@@ -263,7 +264,7 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="to-test-the-project"></a>프로젝트를 테스트하려면  
   
-1.  선택 된 **F5** 키입니다.  
+1.  **F5** 키를 선택합니다.  
   
      SharePoint 사이트가 열립니다.  
   

@@ -18,11 +18,12 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5c1cb9e31384822dddcdd3668bfb3a54bc2782d6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c064a6632741eba69a553be87fb8f829063b266b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-project-and-item-templates"></a>프로젝트 및 항목 템플릿 등록
 프로젝트 형식 프로젝트 및 프로젝트 항목 템플릿이 있는 디렉터리에 등록 해야 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]프로젝트 형식에 연결 된 등록 정보를 사용 하 여에 표시할 작업을 결정 하는 **새 프로젝트 추가** 및 **새 항목 추가** 대화 상자.  
@@ -40,7 +41,7 @@ ms.lasthandoff: 10/31/2017
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"  
 ```  
   
-|이름|형식|설명|  
+|name|형식|설명|  
 |----------|----------|-----------------|  
 |@|REG_SZ|이러한 종류의 프로젝트의 기본 이름입니다.|  
 |DisplayName|REG_SZ|패키지에서 등록 하는 위성 DLL에서에서 검색 해야 하는 이름의 리소스 ID입니다.|  
@@ -58,7 +59,7 @@ ms.lasthandoff: 10/31/2017
 "SortPriority"=dword:00000064  
 ```  
   
-|이름|형식|설명|  
+|name|형식|설명|  
 |----------|----------|-----------------|  
 |@|REG_SZ|항목 추가 템플릿에 대 한 리소스 ID입니다.|  
 |TemplatesDir|REG_SZ|에 대 한 대화 상자에 표시 되는 프로젝트 항목의 경로 **새 항목 추가** 마법사.|  
@@ -85,7 +86,7 @@ ms.lasthandoff: 10/31/2017
 "SortPriority"=dword:00000064  
 ```  
   
-|이름|형식|설명|  
+|name|형식|설명|  
 |----------|----------|-----------------|  
 |CommonFindFilesFilter|REG_DWORD|공통 필터 중 하나에 있는 필터를 사용 하면는 **파일에서 찾기** 대화 상자. 공통 필터는 일반적으로 표시 되어 있지 필터 보다 먼저 필터 목록에 나열 됩니다.|  
 |CommonOpenFilesFilter|REG_DWORD|공통 필터 중 하나에 있는 필터를 사용 하면는 **열려 있는 파일** 대화 상자. 공통 필터는 일반적으로 표시 되어 있지 필터 보다 먼저 필터 목록에 나열 됩니다.|  

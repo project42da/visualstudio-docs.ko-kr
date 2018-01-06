@@ -19,11 +19,12 @@ caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: eb1dd096b08525cd03f65ed46def81979bfaf272
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: ecc4913d9d508d95347945b8f4aaa816bc3d510c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>방법: 암호로 보호된 문서의 데이터 캐시
   문서 또는 통합 문서는 암호로 보호 되는 데이터 캐시에 데이터를 추가 하는 경우 캐시 된 데이터의 변경 내용은 자동으로 저장 되지 않습니다. 프로젝트에서 두 개의 메서드를 재정의 하 여 캐시 된 데이터 변경 내용을 저장할 수 있습니다.  
@@ -44,7 +45,7 @@ ms.lasthandoff: 10/31/2017
   
      문서를 저장 한 후의 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 문서에 보호를 적용할 수 있는 옵션을 제공 하려면이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제는 암호로 보호 되는 Word 문서에서 데이터를 캐시 하는 방법을 보여 줍니다. 코드에서 보호를 제거 하기 전에 <xref:Microsoft.Office.Tools.Word.DocumentBase.UnprotectDocument%2A> 메서드를 현재 저장 <xref:Microsoft.Office.Tools.Word.Document.ProtectionType%2A> 값을 동일한 형식의 보호에 다시 적용할 수 있도록는 <xref:Microsoft.Office.Tools.Word.DocumentBase.ProtectDocument%2A> 메서드.  
   
  [!code-csharp[Trin_CachedDataProtectedDocument#1](../vsto/codesnippet/CSharp/Trin_CachedDataProtectedDocument/ThisDocument.cs#1)]
@@ -68,7 +69,7 @@ ms.lasthandoff: 10/31/2017
   
      통합 문서를 저장 한 후의 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 통합 문서에 대 한 보호를 적용할 수 있는 옵션을 제공 하려면이 메서드를 호출 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 예제는 암호로 보호 되는 Excel 통합 문서의 데이터를 캐시 하는 방법을 보여 줍니다. 코드에서 보호를 제거 하기 전에 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.UnprotectDocument%2A> 메서드를 현재 저장 <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectStructure%2A> 및 <xref:Microsoft.Office.Tools.Excel.Workbook.ProtectWindows%2A> 값에 다시 같은 보호 유형을 적용할 수 있도록는 <xref:Microsoft.Office.Tools.Excel.WorkbookBase.ProtectDocument%2A> 메서드.  
   
  [!code-vb[Trin_CachedDataProtectedWorkbook#1](../vsto/codesnippet/VisualBasic/Trin_CachedDataProtectedWorkbook/ThisWorkbook.vb#1)]

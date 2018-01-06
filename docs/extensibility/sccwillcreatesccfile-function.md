@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8b6aa6ead6811f50cc186f46561b214ba4cd0905
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6a0344177d50d7121b1116e80983db80233dac90
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccwillcreatesccfile-function"></a>SccWillCreateSccFile 함수
 이 함수는 소스 제어 플러그 인은 MSSCCPRJ 만들기를 지원 하는지 여부를 결정 합니다. 지정 된 파일의 파일을 SCC입니다.  

@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.assertions
 dev_langs:
 - CSharp
@@ -23,16 +23,17 @@ caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 4ca228390193dfb4408b0ccb43d864509e46d89d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 0899e9ab0c01a25dcb0fa3a1f991e9dfa9726d40
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="assertion-failed-dialog-box"></a>어설션 오류 대화 상자
 어설션 문은 프로그램의 특정 지점에서 true를 유지하도록 조건을 지정합니다. 조건이 true를 유지하지 않으면 어설션 오류가 발생하고 프로그램 실행이 중단되며 이 대화 상자가 나타납니다.  
   
-|클릭|후|  
+|클릭|대상|  
 |-----------|--------|  
 |다시 시도|어설션을 디버깅하거나 어설션에 대한 도움말을 봅니다.|  
 |무시|어설션을 무시하고 프로그램을 계속 실행합니다.|  

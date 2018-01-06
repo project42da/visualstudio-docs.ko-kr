@@ -19,11 +19,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 90268fed6f70f97c87bc1a09376aa93c1fda3106
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 6d26ede37f64a95e62ff15152ff69be22ccb1ce4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="ltcustomizationsgt-element-office-development-in-visual-studio"></a>&lt;사용자 지정&gt; 요소 (Visual Studio에서 Office 개발)
   `customizations` 네임스페이스의 `vstov4` 요소에는 각 Office 솔루션 설치 및 로드에 대한 모든 정보가 포함됩니다.  
@@ -66,7 +67,7 @@ ms.lasthandoff: 10/31/2017
  `customizations` 요소에는 다음 자식 요소가 있습니다.  
   
 ### <a name="customization"></a>사용자 지정  
- 필수 요소. `customization` 요소에는 `vstov4` 네임 스페이스에 정의 된 [&#60; 사용자 지정 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/customization-element-office-development-in-visual-studio.md).  
+ 필수. `customization` 요소에는 `vstov4` 네임 스페이스에 정의 된 [&#60; 사용자 지정 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/customization-element-office-development-in-visual-studio.md).  
   
 ## <a name="example-of-a-document-level-customization"></a>문서 수준 사용자 지정 예제  
   

@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f6ce0fccf3a957edfdf732ce3ea462bef26c5a0c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a751bcc54fe53f9c9582dab71e2f393e885d1480
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio에 대 한 복합 패턴
 복합 패턴 고유 구성 요소 상호 작용 및 디자인 결합 요소로 결합 합니다. 일관성을 고려 하 여 Visual Studio에서 가장 중요 한 복합 패턴 중 일부는 다음과 같습니다.  
@@ -351,7 +352,7 @@ ms.lasthandoff: 10/31/2017
 |Ctrl + Alt + 빼기 기호|한 수준으로 확대/축소 비율을 줄입니다.|  
 |Ctrl + Alt + 더하기 기호|한 수준으로 확대/축소 비율을 늘립니다.|  
 |Shift 또는 Ctrl|선택 영역 그룹에 개체를 추가합니다. 또한 Ctrl을 사용 하면 선택 그룹에서 개체를 개별적으로 제거 수 있습니다.|  
-|입력|개체에 대 한 기본 명령을 수행 (일반적으로 열어 또는 편집).|  
+|Enter 키|개체에 대 한 기본 명령을 수행 (일반적으로 열어 또는 편집).|  
 |F2|개체에 대 한 내부 편집을 활성화 합니다.|  
 |화살표 키|화살표 키를 누르면, 조금씩 (예를 들어, 한 번에 1 픽셀)의 방향으로 선택된 된 개체를 이동|  
 |Ctrl + 화살표 키|화살표 키를 누르면, 단위 이동 (예를 들어, 한 번에 10 픽셀)의 방향으로 선택된 된 개체를 이동|  
@@ -396,7 +397,7 @@ ms.lasthandoff: 10/31/2017
 ####  <a name="BKMK_GraphicalObjectSelectionAppearance"></a>그래픽 개체 선택 모양  
  선택 핸들은 사각형 개체의 경계 상자 주위의 사각형 패턴으로 그려집니다. 아래 차트 핸들, 크기 조정, 내부 편집 모양을와 그래픽 개체를 가질 수 있는 다양 한 상태 예를 보여 줍니다. 핸들의 크기와 연결 해야 창 테두리 및 가장자리 메트릭을 사용 하 여 **GetSystemMetrics** API입니다.  
   
-|상태|모양|Visual 세부 정보|  
+|시스템 상태|모양|Visual 세부 정보|  
 |-----------|----------------|--------------------|  
 |**선택 되지 않음**|기본|![기본 단추 상태](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713 10_DefaultState")||  
 |**기본 선택**|크기를 조정할 수|![크기 조정 핸들을 사용한 기본 선택](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 11_PrimaryResize")|![크기를 조정 핸들 &#40; 확대/축소 됨을 사용한 기본 선택 &#41; ] (../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713 12_PrimaryResizeZoom")|  
@@ -438,7 +439,7 @@ ms.lasthandoff: 10/31/2017
   
  인접 한,이 목록에서 선택 될 수 있습니다 또는 지역입니다. 경우 여러 선택 항목은 허용, 연속을 비연속 선택 해야 항상 지원 될 지역 (상자) 선택 항목에 대 한 지원 하는 동안에 선택 사항입니다. 지역 선택 항목의 목록 본문의 빈 공간으로 끌어 열의 시작 됩니다.  
   
-|개체|선택|  
+|Object|선택|  
 |------------|---------------|  
 |목록|연속|(다중 선택을 사용할 수 있음) 하는 경우 항상 지원 됩니다.|  
 |목록|서로 분리 된|(다중 선택을 사용할 수 있음) 하는 경우 항상 지원 됩니다.|  
@@ -479,7 +480,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="overview"></a>개요  
  Visual Studio의 각 소프트웨어 구성 요소는 일반적으로 자체 상태 및 지 속성에 대 한 책임을 이지만 Visual Studio 자동으로 설정을 저장 일부의 경우에서와 같은 한 창 크기와 위치 합니다. 다음 표에서 자동으로 저장 하는 설정과 명시적 사용자 해야 하거나 수행할 동작을 프로그래밍 하는 설정의 조합입니다.  
   
-|개체|저장 대상|저장 하는 경우|저장 위치|  
+|Object|저장 대상|저장 하는 경우|저장 위치|  
 |------------|------------------|------------------|-------------------|  
 |선택 가능한 개체 (예를 들어 코드 줄)|코드의 줄에 중단점을 설정<br /><br /> 코드 줄과 연결 된 사용자 바로 가기|프로젝트 저장 될 때|**사용자 옵션 (.suo)** 프로젝트 파일|  
 |대화 상자|에 이동 된 경우 대화 상자에서의 위치<br /><br /> 대화 상자에서 마지막으로 사용 된 사용자 보기|대화 상자를 닫을 때<br /><br /> Visual Studio 세션이 끝나면|메모리에<br /><br /> 레지스트리를 **HKEY_Current_User**|  

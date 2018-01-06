@@ -15,11 +15,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 74fa1e1d23725af1041d9c635a768b7667b3b888
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f2159e0be2f54929e28a45215588515a522b542e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-shell-integrated"></a>Visual Studio Shell (통합)
 통합 하는 Visual Studio shell에 통합된 개발 환경 (IDE), 디버거 및 소스 제어 통합에 포함 됩니다. 프로그래밍 언어가 포함 됩니다. 하지만 integrated shell에 프로그래밍 언어를 추가할 수 있습니다 하는 프레임 워크를 제공 합니다.  
@@ -48,7 +49,7 @@ ms.lasthandoff: 10/31/2017
 |소스 코드 제어 (SCC)|-기본 SCC 통합 합니다. 참고 3을 참조하세요.<br />-도구 옵션 확인|  
 |확장성|--Vspackage 및 MEF 구성 요소를 사용 하는 중|  
   
-## <a name="notes"></a>참고  
+## <a name="notes"></a>노트  
   
 #### <a name="1-data-tools"></a>1. 데이터 도구  
  데이터 확장성 지원 및 단순한와 같은 데이터베이스 개발 도구를 포함 하는 통합된 셸 **솔루션 탐색기**합니다. 그러나 SQL Server Express, SQL 보고 및 Crystal Reports integrated shell에 제외 됩니다.  

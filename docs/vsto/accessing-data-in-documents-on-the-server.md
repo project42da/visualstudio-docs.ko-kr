@@ -18,11 +18,12 @@ caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 8345f7d197f44455ae990c159550587bbc79de24
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: d81c8b10f5ace634cc58bd3135af9b2e69f1c519
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="accessing-data-in-documents-on-the-server"></a>서버에 있는 문서의 데이터 액세스
   Microsoft Office Word 또는 Microsoft Office Excel의 개체 모델을 사용 하지 않고도 문서 수준 사용자 지정에서 데이터에 대해 프로그래밍할 수 있습니다. 즉, 단어를 사용 하지 않은 서버에 문서에 포함 된 데이터에 액세스할 수 있습니다 또는 Excel이 설치 되어 있습니다. 예를 들어 서버에서 코드 (예를 들어,는 [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] 페이지) 문서에서 데이터를 사용자 지정 하 고 최종 사용자에 게 사용자 지정된 문서를 보낼 수 있습니다. 최종 사용자가 문서를 열면 솔루션 어셈블리에 데이터 바인딩 코드를 문서에 사용자 지정된 된 데이터를 바인딩합니다. 문서에서 데이터는 사용자 인터페이스에서 분리 되어 있으므로 이러한 작업이 가능 합니다. 자세한 내용은 참조 [문서 수준 사용자 지정의 캐시 된 데이터](../vsto/cached-data-in-document-level-customizations.md)합니다.  

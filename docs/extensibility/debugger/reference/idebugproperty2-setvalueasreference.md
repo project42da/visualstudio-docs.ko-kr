@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d27a087c67401e90e8a3f4629c27d1255d0ade75
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7bd9e42ae6be1cbd5afe1cbe2ae1b06da7f9937f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty2setvalueasreference"></a>IDebugProperty2::SetValueAsReference
 지정한 참조의 값으로이 속성의 값을 설정합니다.  
@@ -59,7 +60,7 @@ int SetValueAsReference(
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`;에서 오류를 그렇지 않으면 반환 코드, 일반적으로 다음 중 하나:  
   
-|오류|설명|  
+|Error|설명|  
 |-----------|-----------------|  
 |`E_SETVALUEASREFERENCE_NOTSUPPORTED`|참조에서 값을 설정 하는 것은 지원 되지 않습니다.|  
 |`E_SETVALUE_VALUE_CANNOT_BE_SET`|이 속성은 메서드를 참조 하는 대로 값을 설정할 수 없습니다.|  

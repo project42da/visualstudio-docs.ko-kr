@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9e688d30d2367236cfcf5b2d14b36eb602832fc0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6bf217218dcc1830cc2acf2833aa7e31e85745d9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccinitialize-function"></a>SccInitialize 함수
 이 함수 소스 제어 플러그 인을 초기화 하 고 기능 및 통합된 개발 환경 (IDE)에 대 한 제한을 제공 합니다.  

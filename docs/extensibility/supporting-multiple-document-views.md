@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 79b9224a16388dabbe2b68553e5c0d9bfff29519
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4efd76830356996bdf75c923f457d19d2381763c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-multiple-document-views"></a>여러 문서 보기를 지원합니다.
 편집기에 대 한 별도 문서 데이터 및 문서 보기 개체를 만들어 문서의 둘 이상의 보기를 제공할 수 있습니다. 추가 문서 보기는 유용할 수 있는 몇 가지 경우가 있습니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f7dc04752b034f666dfcb1d72b500f2c12f54fba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 91707d75ca71ae7e035322c8a9c25ab6e4befe43
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>새 프로젝트 생성: 내부적으로 2 부
 [새 프로젝트 생성: 고급, 1 부](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) 살펴본 방법을 **새 프로젝트** 대화 상자가 채워집니다. 선택한를 가정해 보겠습니다는 **Visual C# Windows 응용 프로그램**, 입력 한는 **이름** 및 **위치** 텍스트 상자 및 확인을 클릭된 합니다.  
@@ -64,7 +65,7 @@ namespace Simple
 }  
 ```  
   
- 템플릿 매개 변수 목록은 전체 참조 [템플릿 매개 변수](../../ide/template-parameters.md)합니다.  
+ 템플릿 매개 변수의 전체 목록은 [템플릿 매개 변수](../../ide/template-parameters.md)를 참조하세요.  
   
 ## <a name="a-look-inside-a-vstemplate-file"></a>내 보기는 합니다. VSTemplate 파일  
  기본.vstemplate 파일에 있는이 형식  

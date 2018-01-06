@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 25dd140a13856d5fd20288d8740cfcb331f52cd6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 096de389b7e62f70f8aad275e4fe098b399ee615
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprogramprovider2watchforproviderevents"></a>IDebugProgramProvider2::WatchForProviderEvents
 프로세스를를 포트 이벤트 알림을 받을 수 있습니다.  
@@ -79,7 +80,7 @@ int WatchForProviderEvents(
 ## <a name="remarks"></a>설명  
  해제 되지만 처음으로 호출자에 게 동일한 매개 변수를 전달 호출자를이 메서드에 대 한 이전 호출으로 설정 된 이벤트 처리기를 제거 하려는 경우는 `PFLAG_REASON_WATCH` 플래그입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugEngine** 공개 하는 개체는 [IDebugProgramProvider2](../../../extensibility/debugger/reference/idebugprogramprovider2.md) 인터페이스입니다.  
   
 ```cpp  

@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 88af397feba9b06eabd73ec23dcf1204ebe755e6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fd740c437fc7e5f3d355e883d4023bc6edfcde1c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="syntax-coloring-in-a-legacy-language-service"></a>구문 색에 레거시 언어 서비스
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]언어 요소를 식별 하는 편집기에서 지정 된 색으로 표시할 색 지정 서비스를 사용 합니다.  
@@ -65,7 +66,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  언어 서비스 색 지정 기를 사용 하는 것 외에도 VSPackage ´ ï ´는 범용 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 텍스트 색 지정 메커니즘입니다. 이 메커니즘에 대 한 자세한 내용은 참조 [를 사용 하 여 글꼴 및 색](../../extensibility/using-fonts-and-colors.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [구문 색 지정 구현](../../extensibility/internals/implementing-syntax-coloring.md)  
  편집기에서 언어 서비스의 구문 색 지정 및 언어 서비스 해야 구문을 지원 하려면 구현 색 지정을 액세스 하는 방법을 설명 합니다.  
   

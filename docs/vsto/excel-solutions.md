@@ -31,11 +31,12 @@ caps.latest.revision: "34"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 46f484bc9dc597bc43ea4e7e2474d5b7efcb1f3c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: f12823ecb3fdc8d90d9f7c3651c6e04e6b0f6635
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="excel-solutions"></a>Excel 솔루션
   Visual Studio에서는 Microsoft Office Excel용 VSTO 추가 기능 및 문서 수준 사용자 지정을 만드는 데 사용할 수 있는 프로젝트 템플릿을 제공합니다. 이러한 솔루션을 사용하여 Excel을 자동화하고, Excel 기능을 확장한 다음 Excel UI(사용자 인터페이스)를 사용자 지정할 수 있습니다. 문서 수준 사용자 지정과 VSTO 추가 기능 간의 차이점에 대 한 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
@@ -123,7 +124,7 @@ ms.lasthandoff: 10/31/2017
 |[연습: Excel용 첫 문서 수준 사용자 지정 만들기](../vsto/walkthrough-creating-your-first-document-level-customization-for-excel.md)|Excel용 기본 문서 수준 사용자 지정을 만드는 방법을 보여 줍니다.|  
 |[연습: Excel용 첫 VSTO 추가 기능 만들기](../vsto/walkthrough-creating-your-first-vsto-add-in-for-excel.md)|Excel용 기본 VSTO 추가 기능을 만드는 방법을 보여 줍니다.|  
 |[연습: 런타임에 VSTO 추가 기능 프로젝트에서 워크시트에 컨트롤 추가](../vsto/walkthrough-adding-controls-to-a-worksheet-at-run-time-in-vsto-add-in-project.md)|VSTO 추가 기능을 사용하여 런타임에 Windows Forms 단추, <xref:Microsoft.Office.Tools.Excel.NamedRange>및 <xref:Microsoft.Office.Tools.Excel.ListObject> 를 워크시트에 추가하는 방법을 설명합니다.|
-|[공동 이해 및 추가 기능](./understanding-coauthoring-and-addins.md)|조정 솔루션 공동 수용할 수 있도록 할 수에 대해 설명 합니다.|  
+|[공동 작성 및 추가 기능 이해](./understanding-coauthoring-and-addins.md)|조정 솔루션 공동 수용할 수 있도록 할 수에 대해 설명 합니다.|  
 |[Office 개발에서 Excel 2010](http://go.microsoft.com/fwlink/?LinkId=199011)|Excel 솔루션 개발에 대한 문서 및 참조 설명서의 링크를 제공합니다. Visual Studio를 사용한 Office 개발과는 관련이 없습니다.|  
   
   

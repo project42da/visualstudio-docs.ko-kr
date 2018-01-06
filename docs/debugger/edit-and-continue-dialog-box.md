@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 f1_keywords: vs.debug.ENC.welcome
 dev_langs:
 - CSharp
@@ -19,11 +19,12 @@ caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 04b5bdb609c6c4914e8eb1e5abcd0bd0270946cb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 50de847fd1c7c030513237b724a15e72cbb65cd9
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="edit-and-continue-dialog-box"></a>편집하며 계속하기 대화 상자
 (네이티브 전용) 디버깅 하는 동안 코드를 편집 하는 경우이 대화 상자가 나타납니다 및 **편집 하며 계속 하기** 코드 변경 내용을 적용할 수 있다고 인식 합니다. 자세한 내용은 참조 [편집 하며 계속 하기](../debugger/edit-and-continue.md)합니다.  

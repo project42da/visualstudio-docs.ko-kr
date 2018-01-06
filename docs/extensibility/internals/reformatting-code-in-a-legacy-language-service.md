@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b981430e9ce8f6bebf35d49fe1193f1d2097a715
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a2ff6152d5c9b5108dff00d9b17cb4fb2471ac4b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reformatting-code-in-a-legacy-language-service"></a>레거시 언어 서비스의 코드를 다시 포맷
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
 
 다시 포맷을 구현 하려면에서 클래스를 파생 해야 합니다는 <xref:Microsoft.VisualStudio.Package.Source> 클래스 및 재정의 <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> 메서드. <xref:Microsoft.VisualStudio.TextManager.Interop.TextSpan> 서식을 지정 하는 범위를 설명 하는 개체 및 <xref:Microsoft.VisualStudio.Package.EditArray> 개체는 범위에서 수행 된 편집을 보유 합니다. 이 범위는 전체 문서 수 있는지 확인 합니다. 그러나 여러를 범위로 변경 될 가능성이 있을 경우 모든 변경 내용을 한 번의 작업에 해독 가능한 이어야 합니다. 이렇게 하려면 모든 변경 내용을 래핑하는 <xref:Microsoft.VisualStudio.Package.CompoundAction> 개체 (이 항목의 "CompoundAction 클래스를 사용 하 여" 섹션 참조).
 
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
 
 다음 예제에서는 있는지 확인할 공백 하나로 모든 쉽표 뒤 선택 항목에서 쉼표 다음에 탭 또는 줄의 끝에 하지 않는 한 합니다. 후행 공백 줄에는 마지막 쉼표를 삭제 한 후 이 메서드는 호출 하는 방법을 보려면이 항목의 "CompoundAction 클래스를 사용 하 여" 섹션을 참조는 <xref:Microsoft.VisualStudio.Package.Source.ReformatSpan%2A> 메서드.  
 
@@ -159,7 +160,7 @@ namespace MyLanguagePackage
  
 모든에서 다시 작업을 코드의 한 섹션에서 수행할에서는 단일 작업에서 복구할 수 있어야 합니다. 이 사용 하 여 수행할 수는 <xref:Microsoft.VisualStudio.Package.CompoundAction> 클래스입니다. 이 클래스는 집합이 단일 편집 작업으로 텍스트 버퍼에 대 한 편집 작업을 래핑합니다.  
   
-### <a name="example"></a>예제
+### <a name="example"></a>예
 
 사용 하는 방법의 예로 <xref:Microsoft.VisualStudio.Package.CompoundAction> 클래스입니다. 예제를 보려면이 항목의 "구현 지원에 대 한 형식 지정" 섹션의 예제를 참조는 `DoFormatting` 메서드.  
   

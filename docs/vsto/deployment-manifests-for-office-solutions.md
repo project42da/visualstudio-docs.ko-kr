@@ -20,11 +20,12 @@ caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f6569c8c4a2420949862b8d09532c217606073d8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3b0d1f6c7b660520263f4444fa4583338e720c88
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office 솔루션의 배포 매니페스트
   배포 매니페스트는 Office 솔루션의 배포 설정에 설명 하 고 현재 응용 프로그램 버전을 식별 하는 XML 파일입니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="file-name-syntax"></a>파일 이름 구문  
  배포 매니페스트 파일의 이름은.vsto 확장명으로 끝나야 합니다. 이것은 표준 있지만 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 배포 매니페스트는 Visual Studio Tools for Office runtime 파일을 처리할 수 있도록 확장 달라 집니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 Office 솔루션에 대 한 Visual Studio Tools에 대 한 배포 매니페스트를 보여 줍니다.  
   
 ```  

@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 55b3a2cbaf98eeacb78f55bea23d638cd4a1ab6d
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: office
+ms.openlocfilehash: 8985b3bb6e20b24b86174286104158c8830de971
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>Office에서 COM, VSTO 및 VBA 추가 기능에 대 한 개발 모범 사례
   Office에 대 한 COM 이거나 VBA VSTO 추가 기능을 개발 하는 경우에이 문서에 설명 된 개발 모범 사례를 준수 합니다.   이렇게 하면 확인 하는 데 도움이 됩니다.
@@ -27,13 +28,13 @@ ms.lasthandoff: 11/11/2017
 -  사용자 및 IT 관리자에 대 한 추가 기능을 배포의 복잡성이 감소 합니다.
 -  추가 기능에서 의도 하지 않은 설치 또는 런타임 오류가 발생 하지 않습니다.
 
->참고:를 사용 하 여 [데스크톱 브리지](https://docs.microsoft.com/en-us/windows/uwp/porting/desktop-to-uwp-root) 사용자 COM를 준비 하려면 VBA 또는 VSTO 추가 기능을 Windows 스토어는 지원 되지 않습니다. Office 스토어 또는 Windows 스토어에서 COM, VSTO 및 VBA 추가 기능을 배포할 수 없습니다. 
+>참고:를 사용 하 여 [데스크톱 브리지](/windows/uwp/porting/desktop-to-uwp-root) 사용자 COM를 준비 하려면 VBA 또는 VSTO 추가 기능을 Windows 스토어는 지원 되지 않습니다. Office 스토어 또는 Windows 스토어에서 COM, VSTO 및 VBA 추가 기능을 배포할 수 없습니다. 
   
 ## <a name="do-not-check-for-office-during-installation"></a>설치 하는 동안 Office에 대 한 검사 안 함  
  Office 추가 기능 설치 프로세스 중 설치 여부 검색 추가 기능에 필요 하지 않는 것이 좋습니다. Office 설치 되어 있지 않으면에서 추가 기능을 설치할 수 있습니다 및 사용자는 Office가 설치 된 후에 액세스할 수 있습니다. 
   
 ## <a name="use-embedded-interop-types-nopia"></a>포함 된 Interop 형식 (NoPIA)를 사용 하 여  
-솔루션.NET 4.0을 사용 하거나 나중에 사용 하는 경우 포함 된 interop 형식 (NoPIA) 대신에 따라는 Office 주 Interop 어셈블리 (PIA) 재배포 가능 합니다. 포함 하는 형식을 사용 하 여 솔루션의 설치 크기를 줄이는 및 이후 버전과 호환성을 보장 합니다. Office 2010의 Office PIA 재배포 가능 패키지를 함께 제공 되는 마지막 버전 이었습니다. 자세한 내용은 참조 [연습: Microsoft Office 어셈블리의 형식 정보 포함](https://msdn.microsoft.com/en-us/library/ee317478.aspx) 및 [동일 형식 및 포함 된 Interop 형식](https://docs.microsoft.com/en-us/dotnet/framework/interop/type-equivalence-and-embedded-interop-types)합니다. 
+솔루션.NET 4.0을 사용 하거나 나중에 사용 하는 경우 포함 된 interop 형식 (NoPIA) 대신에 따라는 Office 주 Interop 어셈블리 (PIA) 재배포 가능 합니다. 포함 하는 형식을 사용 하 여 솔루션의 설치 크기를 줄이는 및 이후 버전과 호환성을 보장 합니다. Office 2010의 Office PIA 재배포 가능 패키지를 함께 제공 되는 마지막 버전 이었습니다. 자세한 내용은 참조 [연습: Microsoft Office 어셈블리의 형식 정보 포함](https://msdn.microsoft.com/en-us/library/ee317478.aspx) 및 [동일 형식 및 포함 된 Interop 형식](/windows/uwp/porting/desktop-to-uwp-root)합니다.
 
 솔루션에는 이전 버전의.NET을 사용 하는 경우.NET 4.0 이상을 사용 하 여 솔루션을 업데이트 하는 것이 좋습니다. .NET 4.0 이상을 사용 하 여 최신 버전의 Windows에 런타임 필수 구성 요소를 줄입니다.
   
@@ -66,4 +67,4 @@ Office 클라이언트 응용 프로그램 (예를 들어 Word 또는 Excel)에 
 >중요: Microsoft 준비 보고서 및 ISV 연락처 정보에 대 한 지원 되는 추가 기능 목록을 유지 관리 합니다. 참조 추가 기능에 나열 된 가져오려는 [https://aka.ms/readyforwindows](https://aka.ms/readyforwindows)합니다.
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>프로세스 모니터를 사용 하 여 설치 또는 로드 하는 문제를 디버깅 하는 데
-추가 기능을 설치 또는 로드 하는 동안에 호환성 문제가, 파일 또는 레지스트리 액세스 문제를 관련 수 있습니다. 사용 하 여 [프로세스 모니터](https://docs.microsoft.com/en-us/sysinternals/downloads/procmon) 또는 유사한 디버깅 도구 로그인 하 여 문제를 식별할 수 있도록 작업 환경에 대 한 동작을 비교 합니다. 
+추가 기능을 설치 또는 로드 하는 동안에 호환성 문제가, 파일 또는 레지스트리 액세스 문제를 관련 수 있습니다. 사용 하 여 [프로세스 모니터](/sysinternals/downloads/procmon) 또는 유사한 디버깅 도구 로그인 하 여 문제를 식별할 수 있도록 작업 환경에 대 한 동작을 비교 합니다.

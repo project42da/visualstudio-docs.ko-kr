@@ -12,11 +12,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b8b1fa4647cd5b145d19e2264381b186394be814
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1008e1c81c6d99bc9fa0615263cf023a56101435
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="what39s-new-in-the-visual-studio-2015-sdk"></a>기능 &#39;의 새로운 Visual Studio 2015 SDK
 Visual Studio SDK는 Visual Studio 2015, Visual Studio 2015 업데이트 및 Visual Studio 2017에 대 한 다음과 같은 새로운 기능과 업데이트 된 기능에 있습니다.  
@@ -53,7 +54,7 @@ Visual Studio SDK는 Visual Studio 2015, Visual Studio 2015 업데이트 및 Vis
  C + +에서 VSPackage 마법사 메뉴 명령, 도구 창 및 사용자 지정 편집기를 지원 합니다. 찾도록는 **새 프로젝트** 대화 상자에 **Visual c + + / 확장성**합니다.  
   
 ## <a name="vs-sdk-reference-assemblies-via-nuget"></a>NuGet 통해 VS SDK 참조 어셈블리  
- 향상 된 이식성 및 확장성 프로젝트의 공유에 대 한 NuGet 버전의 VS SDK 참조 어셈블리를 사용할 수 있습니다.  다운로드할 수 [nuget.org](http://www.nuget.org) 공개한 [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) 프로젝트 또는 Visual Studio를 통해 솔루션에 쉽게 추가할 수 있습니다 및 **참조 / 관리 NuGet 패키지** 대화 상자. 특정 확장 어셈블리에 대 한 개별 참조를 추가 하거나 한 번에 VS SDK를 사용 하 여 어셈블리를 참조 하는 모든 VS SDK를 추가할 수 있습니다 [메타 패키지](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)합니다. NuGet에 대 한 자세한 내용은 참조는 [NuGet 설명서](http://docs.microsoft.com/NuGet) 및 [패키지 관리자 UI](http://docs.microsoft.com/NuGet/Tools/Package-Manager-UI) 항목입니다.  
+ 향상 된 이식성 및 확장성 프로젝트의 공유에 대 한 NuGet 버전의 VS SDK 참조 어셈블리를 사용할 수 있습니다.  다운로드할 수 [nuget.org](http://www.nuget.org) 공개한 [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility) 프로젝트 또는 Visual Studio를 통해 솔루션에 쉽게 추가할 수 있습니다 및 **참조 / 관리 NuGet 패키지** 대화 상자. 특정 확장 어셈블리에 대 한 개별 참조를 추가 하거나 한 번에 VS SDK를 사용 하 여 어셈블리를 참조 하는 모든 VS SDK를 추가할 수 있습니다 [메타 패키지](http://www.nuget.org/packages/VSSDK_Reference_Assemblies)합니다. NuGet에 대 한 자세한 내용은 참조는 [NuGet 설명서](/NuGet) 및 [패키지 관리자 UI](/NuGet/Tools/Package-Manager-UI) 항목입니다.  
   
  NuGet 버전의 VS SDK 참조 어셈블리를 사용 하면 다른 사용자를 열고 프로젝트를 빌드해야 VS SDK를 설치할 필요가 없습니다.  NuGet 참조 어셈블리 및 VS SDK 빌드 도구는 해당 프로젝트에 대 한 컴퓨터에 자동으로 설치 됩니다.  
   

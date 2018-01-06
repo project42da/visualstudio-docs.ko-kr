@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cb28083d62ad200152cac0b49f99a06a693f34dd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 527611e97d05ae1a600678eba69e3afc19ebf925
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugengine2continuefromsynchronousevent"></a>IDebugEngine2::ContinueFromSynchronousEvent
 세션 디버그 관리자 (SDM) 디버그 엔진 (DE)은 SDM 이전에 보낸 동기 디버그 이벤트를 수신 되어 처리를 나타내기 위해 호출 됩니다.  
@@ -47,7 +48,7 @@ HRESULT ContinueFromSynchronousEvent(
 ## <a name="remarks"></a>설명  
  DE가 나타내는 이벤트의 소스 했는지 확인 해야 합니다는 `pEvent` 매개 변수입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 간단한에이 메서드를 구현 하는 방법을 보여 줍니다 `CEngine` 구현 하는 개체는 [IDebugEngine2](../../../extensibility/debugger/reference/idebugengine2.md) 인터페이스입니다.  
   
 ```cpp  

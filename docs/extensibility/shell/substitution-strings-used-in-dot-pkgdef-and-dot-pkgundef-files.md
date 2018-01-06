@@ -13,11 +13,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6144c0200c03776ead9e7dc7f46b5e9e707b6e82
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0405e18419baf8bc152331a2bcfc7254ec602d1b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="substitution-strings-used-in-pkgdef-and-pkgundef-files"></a>사용 되는 대체 문자열입니다. Pkgdef 및 합니다. Pkgundef 파일
 .pkgdef에서 아래 나열 된 대체 문자열을 사용 하 여.pkgundef 파일에서 Visual Studio에 대해 정의한 격리 셸 응용 프로그램 및입니다.  

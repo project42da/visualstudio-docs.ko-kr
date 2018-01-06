@@ -12,11 +12,12 @@ caps.latest.revision: "24"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 58402e1030516e6f587ec428bd98179ff82ec43a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 17168b43056870dc259965c31902c36450876702
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-domain-properties"></a>도메인 속성의 속성
 A *도메인 속성* 의 모델 요소 값을 보유할 수 있는 기능입니다. 예를 들어 `Person` 도메인 클래스는 `Name` 및 `BirthDate` 속성을 포함할 수 있습니다. DSL 정의에서 도메인 속성은 다이어그램의 도메인 클래스 상자와 DSL 탐색기의 도메인 클래스 아래에 나열됩니다. 자세한 내용은 참조 [도메인 특정 언어를 정의 하는 방법을](../modeling/how-to-define-a-domain-specific-language.md)합니다.  
@@ -45,7 +46,7 @@ A *도메인 속성* 의 모델 요소 값을 보유할 수 있는 기능입니�
 |**요소 이름**|`True`인 경우 이 도메인 속성은 DSL 탐색기에서 모델 요소의 이름으로 표시됩니다.<br /><br /> 새 모델 요소는 이 속성의 고유한 기본값을 받게 됩니다. 이러한 값이 생성 되는 방식을 제어 하려는 경우 설정 **요소 이름 공급자**합니다.|`False`|  
 |**UI 읽기 전용**|`True`이면 UI를 사용하여 도메인 속성 값을 변경할 수 없습니다. 그러나 프로그램에서는 값을 계속 설정할 수 있으며 설정된 값은 속성 창에 표시됩니다.<br /><br /> 사용자에 게 서 도메인 속성 숨기려는 경우 설정 **는 검색 가능한**합니다. 프로그램에서 액세스를 제어 하려면 설정 **Setter 액세스 한정자**합니다.|`False`|  
 |**종류**|도메인 속성의 종류입니다(`Normal`, `Calculated`, `CustomStorage`). 자세한 내용은 참조 [계산 및 저장소 속성을 사용자 지정](../modeling/calculated-and-custom-storage-properties.md)합니다.|`Normal`|  
-|**Name**|이 도메인 속성의 이름입니다. 예를 들어 유효한 식별자 여야 합니다 **SongTitle**합니다.|\<없음 >|  
+|**이름**|이 도메인 속성의 이름입니다. 예를 들어 유효한 식별자 여야 합니다 **SongTitle**합니다.|\<없음 >|  
 |**참고**|이 도메인 속성과 관련된 비공식적인 참고 사항입니다.|\<없음 >|  
 |**Setter 액세스 한정자**|setter의 액세스 한정자입니다. 이 속성은 프로그램 코드가 속성을 설정할 수 있는 범위를 제어합니다.|`public`|  
 |**Type**|속성의 형식입니다. 사용 가능한 유형 목록에 추가할 DSL 탐색기에서 DSL의 루트를 마우스 오른쪽 단추로 클릭 하 고 클릭 **외부 형식 추가**합니다.|`String`|  

@@ -14,11 +14,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0e18eedcab133329f10064ef3dd6486beb2e1596
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d6415953a350321cb13f2705fa2bb182c278faa3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccbeginbatch-function"></a>SccBeginBatch 함수
 이 함수는 소스 제어 작업의 일괄 처리 순서를 시작합니다. [SccEndBatch](../extensibility/sccendbatch-function.md) 일괄 처리를 종료 하려면 호출 됩니다. 이러한 일괄 처리를 중첩할 수 있습니다.  

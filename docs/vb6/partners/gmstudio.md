@@ -9,15 +9,16 @@ dev_langs: visual-basic
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.openlocfilehash: e1d86e5a4f363a39283d32778144a1c0a7c50f23
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: dotnet
+ms.openlocfilehash: 8478f4f7cd3bc342f19b84a085b1889405ca6676
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="great-migrations-studio-gmstudio"></a>훌륭한 마이그레이션 Studio (gmStudio)
 
-gmStudio은 확장성, 사용자 지정 VB6/ASP/COM.NET 업그레이드 솔루션을 개발 하기 위한 환경 혁신 고유한 시스템. 다시 플랫폼 엔지니어링 포괄적인 소프트웨어로, gmStudio를 사용 하면 계획, 사용자 지정, 개선를 확인 하 고 업그레이드 프로세스를 추적 및 소스 코드 및.NET 표준 사용자의 요구 사항을 충족 합니다.  보존 하 고 향상 VB6/ASP/COM 자산의 값을 찾고 경우 gmStudio는 사용할 수 있는 가장 고급 하 고 비용 효율적인 솔루션입니다. 
+gmStudio는 .NET 업그레이드 솔루션에 대한 확장성 있는 사용자 지정 VB6/ASP/COM을 개발하기 위한 고유한 시스템 리엔지니어링 환경입니다. 포괄적인 소프트웨어 리엔지니어링 플랫폼인 gmStudio를 사용하면 업그레이드 프로세스를 계획, 사용자 지정, 향상, 확인 및 추적하고 소스 코드와 .NET 표준에 대한 고유한 요구 사항을 충족할 수 있습니다.  보존 하 고 향상 VB6/ASP/COM 자산의 값을 찾고 경우 gmStudio는 사용할 수 있는 가장 고급 하 고 비용 효율적인 솔루션입니다. 
 
 ## <a name="the-tool-assisted-rewrite"></a>도구를 이용 다시 쓰기
 

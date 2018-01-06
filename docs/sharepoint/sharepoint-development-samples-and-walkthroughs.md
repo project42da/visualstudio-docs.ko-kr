@@ -20,18 +20,19 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 4a68df6ecfbf4c511922ae89f67e9323a245432d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 986cf8cd6051a08948fb633168792d127cddc5b7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sharepoint-development-samples-and-walkthroughs"></a>SharePoint 개발 샘플 및 연습
   이 섹션에는 샘플 응용 프로그램, 예제 코드 및 구문, 구조 및 SharePoint 솔루션을 빌드하는 데 사용 하는 기술을 설명 하는 단계별 연습이 포함 되어 있습니다.  
   
  예제 코드는 지침을 제공 하기 위한와 수정 하지 않고 배포 된 솔루션에서 사용할 수 없습니다. 특히 보안 더욱 주의를 기울여야 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
   
 |항목|설명|  
 |-----------|-----------------|  

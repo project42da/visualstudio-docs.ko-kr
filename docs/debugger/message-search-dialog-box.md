@@ -6,18 +6,19 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords: message options, Search
 ms.assetid: 44fb43b7-b006-46cc-a70c-036aac3cceec
 caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 29ecab1decd896bad824bffe8d0eb78051e87917
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ec48c0a0c07fd7ab9ec2606c110667cc9bb12f69
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="message-search-dialog-box"></a>메시지 검색 대화 상자
 이 대화 상자를 사용 하 여 특정 메시지에 대 한 노드를 선택 합니다.를 [메시지 뷰](../debugger/messages-view.md)합니다. 이 대화 상자를 표시 하려면 메시지 보기 창에 포커스를 이동 합니다. 그런 다음 선택 **메시지 찾기** 에서 **검색** 메뉴.  

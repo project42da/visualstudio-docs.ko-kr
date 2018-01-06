@@ -12,11 +12,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 46a20e68874db1bc94dda4227c062174e0b72b01
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 97ab32d4bfe0772d7b50ea1ca5a0b0ec143ed536
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>연습: 전구 제안 표시
 전구는 일련의 작업을 표시 하도록 확장, 예를 들어 기본 제공 코드 분석기 또는 코드 리팩터링에 의해 식별 된 문제를 해결 하는 Visual Studio 편집기에서 사용 되는 아이콘입니다.  

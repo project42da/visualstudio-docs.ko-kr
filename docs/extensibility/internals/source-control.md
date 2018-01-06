@@ -13,16 +13,17 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 985a174955ac96c37cc4f50e4550f7186d3f80c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 672ce7f47dc8478343f336ed06757af109a5ecce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="source-control"></a>소스 제어
 이 섹션에서는의 통합된 기능으로 소스 제어를 구현 하기 위한 옵션을 설명 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 소스 제어 VSPackage 또는 소스 제어 플러그 인을 통해.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Essentials](../../extensibility/internals/source-control-integration-essentials.md)  
  소스 제어 작업을 시작 해야 하는 중요 한 정보를 표시 합니다.  
   

@@ -16,11 +16,12 @@ caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8d25243c82cbb1facc4029e1a770113a7b1fca57
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: de3fc9b6edb3b916162a1beb34fb716d5c2adaa4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-user-settings"></a>사용자 설정에 대 한 지원
 VSPackage는 상태 변수를 사용자가 유지 되는 그룹인 하나 이상 설정 범주를 정의할 수는 **설정 가져오기/내보내기** 명령을 **도구** 메뉴. 이 지 속성을 설정 하려면 설정을 Api 사용에 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]합니다.  
@@ -53,7 +54,7 @@ VSPackage는 상태 변수를 사용자가 유지 되는 그룹인 하나 이상
   
  AlternateParent CategoryName =  
   
-|이름|형식|데이터|설명|  
+|name|형식|데이터|설명|  
 |----------|----------|----------|-----------------|  
 |(기본값)|REG_SZ|사용자 지정 설정 지점의 이름|키의 이름, `<CSPName`>, 사용자 지정 설정 지점의 지역화 되지 않은 이름입니다.<br /><br /> MPF 기반 구현에서는 키의 이름을 결합 하 여 가져온는 `categoryName` 및 `objectName` 의 인수는 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> 생성자에 `categoryName_objectName`합니다.<br /><br /> 키는 비워 둘 수 있습니다 또는 위성 DLL에서에서 지역화 된 문자열에 참조 ID를 포함할 수 있습니다. 이 값에서 가져온는 `objectNameResourceID` 인수에는 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> 생성자입니다.|  
 |패키지|REG_SZ|GUID|사용자 지정 설정 지점을 구현 하는 VSPackage의 GUID입니다.<br /><br /> 구현 MPF를 사용 하 여 기반는 <xref:Microsoft.VisualStudio.Shell.ProvideProfileAttribute> 클래스, 생성자의를 사용 하 여 `objectType` VSPackage의 포함 하는 인수 <xref:System.Type> 및이 값을 얻는 리플렉션 합니다.|  

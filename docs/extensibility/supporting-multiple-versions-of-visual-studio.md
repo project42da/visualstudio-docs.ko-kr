@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cc9c13ecf6a5cc6e62caa897adce16830026261a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0c03df6edc54948060fa3b1f8eee264646a80f38
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supporting-multiple-versions-of-visual-studio"></a>여러 버전의 Visual Studio 지원
 용어 *-나란히* 설치 하 고 동일한 컴퓨터에 있는 제품의 여러 버전을 유지 관리할 수 있는 것을 의미 합니다. 즉, Vspackage에 대 한 사용자는 동일한 컴퓨터에 설치 된 여러 Visual Studio 버전을 가질 수 있습니다. 그러나 단일 버전의 Visual Studio에 로드 하 여 Vspackage의 병렬-버전을 사용할 수 없습니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
     > [!NOTE]
     >  해당 버전의 설치도 Visual Studio의 버전을 설치는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다. 예를 들어 버전 4.0 및 4.5의 설치도 동일한 컴퓨터에 Visual Studio 2010 및 Visual Studio 2012 설치는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]각각.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [공유 및 버전 관리 VSPackage 중에서 선택](../extensibility/choosing-between-shared-and-versioned-vspackages.md)  
  VSPackage에서 side-by-side-문제를 해결 하는 방법에 설명 합니다.  
   

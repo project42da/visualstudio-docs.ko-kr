@@ -14,11 +14,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b98b21e3e3220da2a42609c9344e24867ab11828
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5a49af7e9cec830ae3ecfb94ac07dfba68fe8344
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugenginecreateevent2"></a>IDebugEngineCreateEvent2
 디버그 엔진 (DE)는 DE의 인스턴스를 만들 때 세션 디버그 관리자 (SDM)에이 인터페이스를 보냅니다.  

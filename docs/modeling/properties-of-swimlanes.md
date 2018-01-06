@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 1b8eacf8fdd74fc9fe0703dc50beb46a2442e939
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f43af2ef4a3a13952fb04c594db336afcb97afbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="properties-of-swimlanes"></a>스윔 레인의 속성
 스윔 레인은 다이어그램에 추가할 수 있습니다. 스윔 레인을 수직 또는 수평 영역으로 다이어그램을 나눕니다. 다른 셰이프 스윔 레인 내에 표시를 정의할 수 있습니다. 자세한 내용은 참조 [도메인 특정 언어를 정의 하는 방법을](../modeling/how-to-define-a-domain-specific-language.md)합니다. 이러한 속성을 사용 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 및 도메인 특정 언어 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)합니다.  
@@ -32,16 +33,16 @@ ms.lasthandoff: 10/27/2017
 |구분 기호 선 스타일|구분 기호 선 스타일 (`Solid`, `Dash`, `Dot`, `DashDot`, `DashDotDot`, 또는 `Custom`).|`Dash`|  
 |구분 기호 두께|인치 단위 구분 기호 선 두께입니다.|0.03125|  
 |텍스트 색|이 스윔 레인에 연관 된 텍스트 데코레이터에 사용 되는 색입니다.|검정|  
-|액세스 한정자|클래스의 액세스 수준 (`public` 또는 `internal`).|공용|  
+|액세스 한정자|클래스의 액세스 수준 (`public` 또는 `internal`).|Public|  
 |사용자 지정 특성|이 스윔 레인에서 생성 되는 코드 클래스에 특성을 추가 하는 데 사용 합니다.|\<없음 >|  
 |Double 생성 파생|경우 `True`, 기본 클래스 및 (재정의 통해 사용자 지정은 지원) 하는 partial 클래스를 모두 생성 됩니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)합니다.|False|  
 |사용자 지정 생성자|경우 `True`, 사용자 지정 생성자의 소스 코드에서 제공 됩니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)합니다.|False|  
 |상속 한정자|스윔 레인에서 생성 되는 소스 코드 클래스의 상속의 종류를 설명 (`none`, `abstract` 또는 `sealed`).|없음|  
 |기본 스윔 레인|이 스윔 레인의 기본 클래스입니다.|(없음)|  
-|이름|이 스윔 레인의 이름입니다.|현재 이름|  
+|name|이 스윔 레인의 이름입니다.|현재 이름|  
 |네임스페이스|이 스윔 레인와 연결 되어 있는 네임 스페이스입니다.|현재 네임 스페이스|  
 |도구 설명 형식|도구 설명을 정의 되는 방식 (`fixed`, `variable`, 또는 `none`). 경우 `fixed`의 값은 `Fixed Tooltip Text` 속성은 사용할; `variable`, 도구 설명 사용자 지정 코드에 정의 된 다음 합니다.|\<없음 >|  
-|참고|이 스윔 레인에 연관 된 비공식 정보입니다.|\<없음 >|  
+|노트|이 스윔 레인에 연관 된 비공식 정보입니다.|\<없음 >|  
 |맞춤|가로 또는 세로 맞춤입니다.|세로|  
 |초기 높이|인치에서이 스윔 레인의 초기 높이입니다. 가로 스윔 레인에만 적용 가능 합니다.|0|  
 |초기 너비|인치에서이 스윔 레인의 초기 너비입니다. 세로 스윔 레인에만 적용 가능 합니다.|0|  

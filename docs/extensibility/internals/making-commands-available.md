@@ -17,11 +17,12 @@ caps.latest.revision: "35"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6e9644353430fa70d6876ab3210ad340ac30312d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0c3a9edc754070c7bb0aabdc76b2d52efd32a453
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="making-commands-available"></a>명령을 사용 가능
 Visual Studio에 여러 Vspackage를 추가 하는 경우 사용자 인터페이스 (UI) 명령을 사용 하 여 들어오지 될 수 있습니다. 다음과 같이이 문제를 줄이기 위해 패키지를 프로그래밍할 수 있습니다.  
@@ -104,7 +105,7 @@ Visual Studio에 여러 Vspackage를 추가 하는 경우 사용자 인터페이
     > [!CAUTION]
     >  다른 Vspackage에 종속 될 수 있으므로 VSPackage가 모든 기존 컨텍스트 GUID의 상태를 영향을 주지 않는지 확인 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  VSPackage 명령의 다음 예제에서 VSPackage를 로드 하지 않고 명령 컨텍스트에서 관리 되는 명령의 동적 표시 유형입니다.  
   
  이 명령은 설정 되 고 솔루션이 있습니다; 때마다 표시로 설정 되어 즉, 다음 명령 컨텍스트부터 Guid 중 하나가 활성화 될 때마다:  

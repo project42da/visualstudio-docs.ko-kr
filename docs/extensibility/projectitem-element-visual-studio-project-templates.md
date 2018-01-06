@@ -16,11 +16,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3a9685d00f2df0f6819058106771a278b8494520
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ca5143a3e5eaff488fee89b643a40adb60473bd8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="projectitem-element-visual-studio-project-templates"></a>ProjectItem 요소(Visual Studio 프로젝트 템플릿)
 프로젝트 템플릿에 포함 되어 있는 파일을 지정 합니다.  
@@ -112,7 +113,7 @@ ms.lasthandoff: 10/31/2017
   
      파일 이름은에 입력 한 사용자 이름에 기반 합니다이 템플릿에서 프로젝트를 만들면는 **새 프로젝트** 대화 상자에서 모든 안전 하지 않은 문자 및 공백을 제거 합니다. 자세한 내용은 참조 [템플릿 매개 변수](../ide/template-parameters.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램입니다.  
   
 ```  

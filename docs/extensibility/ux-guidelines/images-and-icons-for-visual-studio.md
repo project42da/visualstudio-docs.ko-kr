@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7856f8fac7e986f3e5383fa91261de39fe815a28
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 164a450ca346fe2bd7b267d951ce522d27f14160
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="images-and-icons-for-visual-studio"></a>이미지와 Visual Studio에 대 한 아이콘
 ##  <a name="BKMK_ImageUseInVisualStudio"></a>Visual Studio에서 이미지 사용  
@@ -271,7 +272,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="base-palette"></a>기본 색상표  
  모든 표준 아이콘 세 가지 기본 색을 포함합니다. 아이콘 없음 그라데이션 포함 또는 3D 도구 아이콘에 대 한 하나 또는 두 개의 예외 그림자 됩니다.  
   
-|용도|이름|값 (밝은 테마)|견본|예제|  
+|사용법|name|값 (밝은 테마)|견본|예|  
 |-----------|----------|---------------------------|------------|-------------|  
 |배경/어두운|VS BG|424242 / 66,66,66|![견본 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![기본 색상표 예](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405 02_BasePaletteExample")|  
 |전경/사용 요구가 적음|VS FG|F0EFF1 240,239,241 /|![견본 F0EFF1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||  
@@ -284,11 +285,11 @@ ms.lasthandoff: 10/31/2017
 #### <a name="action-modifiers"></a>작업 한정자  
  아래 표시 된 네 개의 색 작업 한정자에 필요한 동작의 유형을 나타냅니다.  
   
-|용도|이름|값 (모든 테마)|견본|  
+|사용법|name|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
 |양수|VS 작업 녹색|388A34 56,138,52 /|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |음수|VS 작업 빨간색|A1260D 161,38,13 /|![견본 A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|  
-|Neutral|VS 작업 Blue|00539 C 0,83,156 /|![견본 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
+|중립|VS 작업 Blue|00539 C 0,83,156 /|![견본 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
 |/ 새로 만들기|VS 작업 주황색|C27D1A 194,156,26 /|![견본 C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
   
 ##### <a name="examples"></a>예제  
@@ -327,14 +328,14 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="folder"></a>폴더  
   
-|용도|이름|값 (모든 테마)|견본|예제|  
+|사용법|name|값 (모든 테마)|견본|예|  
 |-----------|----------|--------------------------|------------|-------------|  
 |폴더|폴더|DCB67A 220,182,122 /|![견본 DCB67A](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![폴더 색 아이콘](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405 23_FolderColor")|  
   
 #### <a name="visual-studio-languages"></a>Visual Studio 언어  
  각 공용 언어 또는 Visual Studio에서 사용할 수 있는 플랫폼에 연결 된 색입니다. 이러한 색은 기본 아이콘 또는 복합 아이콘의 오른쪽 위 모서리에 표시 되는 언어 한정자에 사용 됩니다.  
   
-|용도|이름|값 (모든 테마)|견본|  
+|사용법|name|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
 |ASP, HTML, WPF|ASP HTML WPF Blue|0095D 7 0,149,215 /|![견본 0095d7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|  
 |C++|CPP 자주색|9B4F96 155,79,150 /|![견본 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
@@ -356,12 +357,12 @@ ms.lasthandoff: 10/31/2017
 #### <a name="intellisense"></a>IntelliSense  
  IntelliSense 아이콘 단독 색 색상표를 사용합니다. 이러한 색 IntelliSense는 팝업 목록에서 다른 항목을 신속 하 게 구분할 수 있도록 하는 데 사용 됩니다.  
   
-|용도|이름|값 (모든 테마)|견본|  
+|사용법|name|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
 |이벤트 클래스|VS 작업 주황색|C27D1A 194,125,26 /|![견본 C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
 |확장 메서드를 대리자 메서드를 모듈|VS 작업 자주색|652 D 90 101,45,144 /|![견본 652d90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|  
 |필드, 열거형 항목, 매크로, 구조체, 공용 구조체 값 형식, 연산자, 인터페이스|VS 작업 Blue|00539 C 0,83,156 /|![견본 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|개체|VS 작업 녹색|388A34 56,138,52 /|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|Object|VS 작업 녹색|388A34 56,138,52 /|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |상수, 예외, 열거형 항목, 지도, 지도 항목, Namespace, 템플릿, 형식 정의|배경 (VS BG)|424242 / 66,66,66|![견본 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|  
   
 ##### <a name="examples-of-intellisense-icons"></a>IntelliSense 아이콘의 예  
@@ -369,12 +370,12 @@ ms.lasthandoff: 10/31/2017
 ||||||  
 |-|-|-|-|-|  
 |![IntelliSense 클래스 아이콘](../../extensibility/ux-guidelines/media/0405-36_intellisenseclass.png "0405 36_IntelliSenseClass")<br />클래스|![IntelliSense private 이벤트 아이콘](../../extensibility/ux-guidelines/media/0405-37_intellisenseprivateevent.png "0405 37_IntelliSensePrivateEvent")<br />Private 이벤트|![IntelliSense 대리자 아이콘](../../extensibility/ux-guidelines/media/0405-38_intellisensedelegate.png "0405 38_IntelliSenseDelegate")<br />대리자|![IntelliSense 메서드 친구 아이콘](../../extensibility/ux-guidelines/media/0405-39_intellisensemethodfriend.png "0405 39_IntelliSenseMethodFriend")<br />Friend 메서드|![필드 아이콘](../../extensibility/ux-guidelines/media/0405-40_field.png "0405 40_Field")<br />필드|  
-|![IntelliSense 보호 열거형 항목 아이콘](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405 41_IntelliSenseProtectedEnumItem")<br />보호 된 열거형 항목|![IntelliSense 개체 아이콘](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405 42_IntelliSenseObject")<br />개체|![IntelliSense 템플릿 아이콘](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405 43_IntelliSenseTemplate")<br />템플릿|![IntelliSense 예외 바로 가기 아이콘](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405 44_IntelliSenseExceptionShortcut")<br />예외 바로 가기||  
+|![IntelliSense 보호 열거형 항목 아이콘](../../extensibility/ux-guidelines/media/0405-41_intellisenseprotectedenumitem.png "0405 41_IntelliSenseProtectedEnumItem")<br />보호 된 열거형 항목|![IntelliSense 개체 아이콘](../../extensibility/ux-guidelines/media/0405-42_intellisenseobject.png "0405 42_IntelliSenseObject")<br />Object|![IntelliSense 템플릿 아이콘](../../extensibility/ux-guidelines/media/0405-43_intellisensetemplate.png "0405 43_IntelliSenseTemplate")<br />템플릿|![IntelliSense 예외 바로 가기 아이콘](../../extensibility/ux-guidelines/media/0405-44_intellisenseexceptionshortcut.png "0405 44_IntelliSenseExceptionShortcut")<br />예외 바로 가기||  
   
 ### <a name="notifications"></a>알림  
  Visual Studio에서 알림 상태를 나타내는 데 사용 됩니다. 알림 팔레트 검정색 또는 흰색 전경 채우기 옵션 뿐만 아니라 다음과 같은 네 가지 색을 사용 하 여 다음과 같은 상태 수준 사용 하 여 알림을 정의 합니다.  
   
-|용도|이름|값 (모든 테마)|견본|  
+|사용법|name|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
 |상태: 중립|알림 파랑 (VS 파랑)|1BA1E2 27,161,226 /|![견본 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|  
 |상태: 양수|알림 녹색 (VS 녹색)|339933 / 51,153,51|![견본 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|  
@@ -392,7 +393,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="visual-studio-online"></a>Visual Studio Online  
  일반적으로 Visual Studio Online 이루어져 브라우저에서 호스트 하는 기능이 있습니다. 서로 다른 환경에서 색 다르지만 스타일 동일 하 게 유지 합니다.  
   
-|그룹화|용도|이름|값 (모든 테마)|견본|  
+|그룹화|사용법|name|값 (모든 테마)|견본|  
 |-----------|-----------|----------|--------------------------|------------|  
 |TFS|배경|TFSO BG|656565/ 101, 101, 101|![견본 656565](../../extensibility/ux-guidelines/media/0405_656565.png "0405_656565")|  
 |TFS|윤곽선|TFSO 아웃|FFFFFF / 255, 255, 255|![견본 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  

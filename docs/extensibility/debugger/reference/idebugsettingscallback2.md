@@ -13,11 +13,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e7488b937c2390000ce4ac3ef4d8ff04555f1b16
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 779550509dd6d30b16f30a47c1b9a2879d5034ab
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugsettingscallback2"></a>IDebugSettingsCallback2
 디버그 엔진 메트릭 설정의 읽을을 원격으로 합니다.  
@@ -53,7 +54,7 @@ IDebugSettingsCallback2D : IUnknown
   
  어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 사용 하는 함수는 **IDebugSettingsCallback2** 개체를 매개 변수로 합니다.  
   
 ```cpp  

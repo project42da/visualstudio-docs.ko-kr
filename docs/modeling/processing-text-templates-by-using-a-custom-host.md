@@ -14,11 +14,12 @@ caps.latest.revision: "33"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: ea51f2b4b11680c07d9e7344d097b954a57d3f4d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 5f4456899b724d8a7cd2dba6039b28eee29bfafd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="processing-text-templates-by-using-a-custom-host"></a>사용자 지정 호스트를 사용하여 텍스트 템플릿 처리
 *텍스트 템플릿 변환* 하나를 처리는 *텍스트 템플릿* 파일 입력 및 출력으로 하는 텍스트 파일을 생성 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서나 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]가 설치된 컴퓨터에서 실행되는 독립 실행형 응용 프로그램에서 텍스트 변환 엔진을 호출할 수 있습니다. 그러나 제공 해야는 *텍스트 템플릿 호스트*합니다. 이 클래스는 템플릿을 환경에 연결하여 어셈블리, 포함 파일 등의 리소스를 찾고 출력 및 오류 메시지를 처리합니다.  
@@ -27,7 +28,7 @@ ms.lasthandoff: 10/27/2017
 >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 실행될 패키지나 확장을 작성하는 경우 고유 호스트를 작성하는 대신 텍스트 템플릿 서비스를 사용하십시오. 자세한 내용은 참조 [VS 확장에서 텍스트 변환 호출](../modeling/invoking-text-transformation-in-a-vs-extension.md)합니다.  
   
 > [!NOTE]
->  서버 응용 프로그램에서는 텍스트 템플릿 변형을 사용하지 않는 것이 좋으며, 단일 스레드에서만 텍스트 템플릿 변환을 사용하는 것이 좋습니다. 텍스트 템플릿 엔진에서는 단일 AppDomain을 사용하여 템플릿을 변환하고 컴파일하고 실행하기 때문입니다. 변환된 코드는 스레드로부터 안전하도록 설계되지 않았습니다. 텍스트 템플릿 엔진은 디자인 타임에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에 있는 파일을 연속으로 처리하도록 설계되었습니다.  
+>  서버 응용 프로그램에서는 텍스트 템플릿 변형을 사용하지 않는 것이 좋으며, 단일 스레드에서만 텍스트 템플릿 변형을 사용하는 것이 좋습니다. 텍스트 템플릿 엔진에서는 단일 AppDomain을 사용하여 템플릿을 변환하고 컴파일하고 실행하기 때문입니다. 변환된 코드는 스레드로부터 안전하도록 설계되지 않았습니다. 텍스트 템플릿 엔진은 디자인 타임에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에 있는 파일을 연속으로 처리하도록 설계되었습니다.  
 >   
 >  런타임에 응용 프로그램에 전처리 된 텍스트 템플릿을 사용 하는 것이 좋습니다: 참조 [T4 텍스트 템플릿을 사용 하는 런타임 텍스트 생성](../modeling/run-time-text-generation-with-t4-text-templates.md)합니다.  
   
@@ -51,7 +52,7 @@ string output = engine.ProcessTemplate(templateString, host);
   
  <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>에 정의 된 **Microsoft.VisualStudio.TextTemplating.\*합니다. 0 dll**, 및 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> 에 정의 된 **Microsoft.VisualStudio.TextTemplating.Interfaces.\*합니다. 0 dll**합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [연습: 사용자 지정 텍스트 템플릿 호스트 만들기](../modeling/walkthrough-creating-a-custom-text-template-host.md)  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 외부에서 텍스트 템플릿 기능을 사용할 수 있도록 하는 사용자 지정 텍스트 템플릿 호스트를 만드는 방법을 보여 줍니다.  
   

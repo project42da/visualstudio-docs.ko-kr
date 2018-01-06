@@ -15,11 +15,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c30c374756578fd71dd344393b58f38cacadeb19
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6951881e915b44c0cb0c85685280f2b770647f3a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="services-provided-source-control-vspackage"></a>서비스 제공 (소스 제어 VSPackage)
 서비스는 있는 기능 및 Visual Studio 통합된 개발 환경 (IDE)와 해당 설치 된 Vspackage Vspackage 간에 공유 되는 기본 메커니즘입니다. 서비스 및 Visual Studio IDE에서 중요도 자세한 설명을 참조 하십시오.[사용 및 서비스 제공](../../extensibility/using-and-providing-services.md)합니다.  

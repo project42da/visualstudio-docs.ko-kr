@@ -22,11 +22,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 1d5ab02ea2eb2d34a82607b8f7fd4fbf3f02dd76
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2f3ff7f7bb76962e22705fc5c0d42fdf7568ff97
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-permit-code-to-run-behind-documents-with-restricted-permissions"></a>방법: 제한된 권한이 부여된 문서의 숨겨진 코드 실행 허용
   문서 또는 통합 문서에 사용 권한을 제한 하도록 Microsoft Office의 IRM 정보 권한 관리 () 기능을 사용할 수 있습니다. 코드 숨김 제한 된 Microsoft Office Word 문서 또는 Microsoft Office Excel 통합 문서는 기본적으로 실행 되도록 허용 되지 않습니다. 해당 솔루션은 작동 하 고 관리 코드 확장명 개체 모델에 액세스할 수 있도록 기본값을 변경할 수 있습니다.  

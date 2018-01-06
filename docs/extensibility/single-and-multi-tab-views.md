@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6c90f7cec454cc6562e2cd20e2da64cfe86e243f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f20e5d251d8d6ef31289fb1b9ee8b9420ff9146a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="single-and-multi-tab-views"></a>단일 및 다중 탭 뷰
 편집기는 여러 유형의 보기를 만들 수 있습니다. 한 가지 예는 코드 편집기 창, 양식 디자이너입니다.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
   
  종료, Visual Studio 편집기 팩터리 및 해당 창과 연결 된 문서를 솔루션 다시 열릴 때 문서 창을 다시 열에 사용할 수 있도록 물리적 보기 문자열의 GUID를 유지 합니다. 솔루션을 닫으면 열려 있는 창은 솔루션 (.suo) 파일에서 유지 됩니다. 이러한 값에 해당는 `VSFPROPID_guidEditorType` 및 `VSFPROPID_pszPhysicalView` 전달 된 값의 `propid` 에서 매개 변수는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 코드 조각에서는 방법을 <xref:Microsoft.VisualStudio.Shell.Interop.LogicalViewID.TextView> 개체를 구현 하는 보기에 액세스 하는 데 사용 됩니다 `IVsCodeWindow`합니다. 이 경우에 <xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShellOpenDocument> 서비스를 사용 하 여를 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIShellOpenDocument.OpenDocumentViaProject%2A> 및 요청 `LOGVIEWID_TextView`, 창 프레임에 대 한 포인터를 가져오는 합니다. 문서 보기 개체에 대 한 포인터를 호출 하 여 가져온 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 값을 지정 하 고 `VSFPROPID_DocView`합니다. 문서 보기 개체에서 `QueryInterface` 에 대해 호출 `IVsCodeWindow`합니다. 예상 텍스트 편집기가 반환 되 고, 문서 보기 개체에 반환 되므로 경우에는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 메서드 코드 창입니다.  
   
 ```cpp  

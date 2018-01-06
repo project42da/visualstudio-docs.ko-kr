@@ -15,11 +15,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 6f359c8bcad7bdc32b481fa6fc30a96a8669129f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a25f8adc91efe9d9e8b96079b4fe2e35145abf25
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-interop-assembly-command-handlers"></a>Interop 어셈블리 명령 처리기를 등록 하는 중
 VSPackage를 등록 해야 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE)은 명령을 올바르게 라우트 되도록 합니다.  
@@ -59,7 +60,7 @@ HKEY_LOCAL_MACHINE\Software\VisualStudio\<Version>\
 |\<*메뉴 리소스 ID*>|리소스 id는 `CTMENU` 에서 컴파일된 VSPackage에 대 한 모든 UI 요소를 포함 하는 리소스는 [.vsct](../../extensibility/internals/visual-studio-command-table-dot-vsct-files.md) 파일입니다.|  
 |\<*메뉴 버전*>|이에 대 한 버전으로 사용 되는 숫자는 `CTMENU` 리소스입니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]이 값을 사용 하 여의 내용을 수정한 다시 병합 해야 하는지를 결정 하는 `CTMENU` 모든 캐시를 사용 하 여 리소스 `CTMENU` 리소스입니다. 수정한 다시 병합 devenv 설치 명령을 실행 하 여 트리거됩니다.<br /><br /> 이 값을 1로 설정 및에서 변경할 때마다 증가 처음 해야는 `CTMENU` 리소스 발생 하 여 수정한 다시 병합 하기 전에 및 합니다.|  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  두 리소스 항목의 예는 다음과 같습니다.  
   
 ```  

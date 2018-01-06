@@ -14,11 +14,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 60f22174ac217a66f860415de898240d41d9a631
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 474bb834d36661c7cd85b98db78c13f619d7cba6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sccpopulatelist-function"></a>SccPopulateList 함수
 이 함수는 특정 소스 제어 명령에 대 한 파일의 목록을 업데이트 하 고 지정 된 모든 파일에 소스 제어 상태를 제공 합니다.  
@@ -74,7 +75,7 @@ SCCRTN SccPopulateList (
 ## <a name="remarks"></a>설명  
  이 함수는 현재 상태에 대 한 파일 목록을 검사합니다. 사용 하 여는 `pfnPopulate` 파일에 대 한 조건을 일치 하지 않는 경우 호출자에 게 알리기 위해 콜백 함수는 `nCommand`합니다. 예를 들어, 명령이 실행 되 면 `SCC_COMMAND_CHECKIN` 목록의 파일 체크 아웃을 포함 하지 않은 힙이고 콜백을 호출자를 알리는 데 사용 됩니다. 때때로, 소스 제어 플러그 인에 추가 하 고 명령 수 있는 다른 파일을 찾을 수 있습니다. 이 사용 하면 예를 들어 Visual Basic 사용자가 자신의 프로젝트에 사용 되는 Visual Basic 프로젝트 파일에 나타나지 않으면.bmp 파일을 체크 아웃 합니다. 사용자가 선택 하는 **가져오기** IDE에 명령 합니다. IDE는 사용자를 가져올 수 있어야 할 모든 파일의 목록을 표시 되었으나의 목록이 표시 됩니다는 `SccPopulateList` 함수 표시 되는 목록을 최신 상태 인지 확인 하기 위해 호출 됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  IDE는 사용자를 가져올 수 있어야 할 파일의 목록을 작성 합니다. 이 목록을 표시 하기 전에 호출 된 `SccPopulateList` 함수를 추가 하 고 목록에서 파일을 삭제 합니다. 소스 제어 플러그 인 기회를 제공 합니다. 지정된 된 콜백 함수를 호출 하 여 플러그 인 목록을 수정 (참조 [POPLISTFUNC](../extensibility/poplistfunc.md) 자세한 세부 정보에 대 한).  
   
  플러그 인을 계속 호출 하는 `pfnPopulate` 추가 하 고가 완료 되 고 다음에서 반환 될 때까지 파일을 삭제 하는 함수는 `SccPopulateList` 함수입니다. IDE의 목록 그런 다음 표시할 수 있습니다. `lpStatus` 배열은 IDE에 의해 전달 된 원래 목록에 있는 모든 파일을 나타냅니다. 콜백 함수의 시키기 위한 뿐만 아니라 파일 이러한 모든 상태에서 플러그 인 채우기를 사용 합니다.  

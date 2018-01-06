@@ -17,11 +17,12 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ea32fcb78986d527959b8ef602161e5336395bfc
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 1d40167e8d7510e719fa55c534feb44ac877182a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>바로 가기 키(HTML 및 JavaScript)
 ![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
@@ -43,7 +44,7 @@ ms.lasthandoff: 11/11/2017
   
 |작업|바로 가기|  
 |------------|--------------|  
-|콘솔 명령 실행|입력|  
+|콘솔 명령 실행|Enter 키|  
 |콘솔 지우기|Esc|  
 |한 줄 모드와 여러 줄 모드 간의 전환|Ctrl+Alt+M|  
   

@@ -21,11 +21,12 @@ caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 775f342463e32d73cfaee6e492c1417753ec159f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 3773364467ba79cb17e71feb4c1c17feded750f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-add-or-remove-sharepoint-connections"></a>방법: SharePoint 연결 추가 또는 제거
   서버 탐색기를 사용 하면 SharePoint 사이트 뿐만 아니라 데이터 연결을 찾아볼 수 있습니다. 그러나 SharePoint 사이트의 내용을 찾아볼 수 있습니다 추가 해야 하는 **SharePoint 연결** 노드.  

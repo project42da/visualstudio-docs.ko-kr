@@ -22,11 +22,12 @@ caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b09e0a43f4a9dbb77a983a1f7e87f0b2886b1697
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 77c4b8e13071486bf483fc5b281bf86ae13aa965
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visio-solutions"></a>Visio 솔루션
   Visual Studio에서는 Microsoft Office Visio용 VSTO 추가 기능을 만드는 데 사용할 수 있는 프로젝트 템플릿을 제공합니다. VSTO 추가 기능을 사용하여 Visio를 자동화하거나, Visio 기능을 확장하거나, Visio UI(사용자 인터페이스)를 사용자 지정할 수 있습니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
  [Working with Visio Documents](../vsto/working-with-visio-documents.md) 및 [Working with Visio Shapes](../vsto/working-with-visio-shapes.md)에서 Visio 개체 모델을 사용하여 문서 및 셰이프 작업을 수행하는 방법에 대한 단계별 절차 및 코드 예제를 볼 수 있습니다.  
   
- VSTO 추가 기능에서 Visio 개체 모델에 액세스하려면 프로젝트에서 `Application` 클래스의 `ThisAddIn` 필드를 사용합니다. `Application` 필드는 Visio의 현재 인스턴스를 나타내는 Microsoft.Office.Interop.Visio.Application 개체를 반환 합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+ VSTO 추가 기능에서 Visio 개체 모델에 액세스하려면 프로젝트에서 `Application` 클래스의 `ThisAddIn` 필드를 사용합니다. `Application` 필드는 Visio의 현재 인스턴스를 나타내는 Microsoft.Office.Interop.Visio.Application 개체를 반환 합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
  Visio 개체 모델을 호출할 때 Visio용 PIA(주 Interop 어셈블리)에서 제공되는 형식을 사용합니다. PIA는 VSTO 추가 기능의 관리 코드와 Visio의 COM 개체 모델 간의 다리 역할을 합니다. Visio PIA의 모든 형식은 Microsoft.Office.Interop.Visio 네임 스페이스에 정의 됩니다. 주 interop 어셈블리에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md)합니다.  
   

@@ -7,11 +7,7 @@ ms.suite:
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+dev_langs: CSharp
 helpviewer_keywords:
 - visualizers, writing
 - walkthroughs [Visual Studio], visualizers
@@ -20,11 +16,12 @@ caps.latest.revision: "33"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fd63f183d42111cfb8381b5fee86debbca6cd04e
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: dotnet
+ms.openlocfilehash: 6e161b3c914d0a87a720f1217b52a571b85f5ff9
+ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>연습: C#에서 시각화 도우미 작성 #
 이 연습에서는 C#을 사용 하 여 간단한 시각화 도우미를 작성 하는 방법을 보여 줍니다. 이 연습에서 만들 시각화 도우미는 Windows forms 메시지 상자를 사용 하 여 문자열의 내용을 표시 합니다. 이 간단한 문자열 시각화 도우미 자체에서 특히 유용 하지 않습니다. 하지만 다른 데이터 형식에 대 한 보다 유용한 시각화 도우미를 만들기 위해 수행 해야 하는 기본 단계를 보여 줍니다.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 11/11/2017
   
 6.  DebuggerSide.cs에서 다음 문을 `using` 문에 추가합니다.  
   
-    ```  
+    ```csharp  
     using Microsoft.VisualStudio.DebuggerVisualizers;  
     ```  
   
@@ -79,13 +76,13 @@ ms.lasthandoff: 11/11/2017
   
 1.  DebuggerSide.cs에서 다음 코드 줄으로 이동 합니다.  
   
-    ```  
+    ```csharp  
     public class DebuggerSide  
     ```  
   
 2.  코드를 변경 합니다.  
   
-    ```  
+    ```csharp  
     public class DebuggerSide : DialogDebuggerVisualizer  
     ```  
   
@@ -95,8 +92,8 @@ ms.lasthandoff: 11/11/2017
   
 -   `public class DebuggerSide`, 다음 추가 **메서드:**  
   
-    ```  
-    override protected void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider)  
+    ```csharp  
+    protected override void Show(IDialogVisualizerService windowService, IVisualizerObjectProvider objectProvider)  
     {  
     }  
     ```  
@@ -113,7 +110,7 @@ ms.lasthandoff: 11/11/2017
   
 4.  DebuggerSide.cs에서 다음 문을 `using` 문에 추가합니다.  
   
-    ```  
+    ```csharp  
     using System.Windows.Forms;  
     ```  
   
@@ -123,7 +120,7 @@ ms.lasthandoff: 11/11/2017
   
 1.  `Show` 메서드에 다음 코드 줄을 추가합니다.  
   
-    ```  
+    ```csharp  
     MessageBox.Show(objectProvider.GetObject().ToString());  
     ```  
   
@@ -137,12 +134,12 @@ ms.lasthandoff: 11/11/2017
   
 1.  DebuggerSide.cs에 다음 특성 코드 뒤에 추가 된 `using` 문의 하기 전에 `namespace MyFirstVisualizer`:  
   
-    ```  
+    ```csharp  
     [assembly:System.Diagnostics.DebuggerVisualizer(  
     typeof(MyFirstVisualizer.DebuggerSide),  
     typeof(VisualizerObjectSource),  
-    Target  = typeof(System.String),  
-    Description  = "My First Visualizer")]  
+    Target = typeof(System.String),  
+    Description = "My First Visualizer")]  
     ```  
   
 2.  에 **빌드** 메뉴 선택 **MyFirstVisualizer 빌드**합니다. 프로젝트가 성공적으로 빌드되어야 합니다. 빌드 오류가 발생하면 계속 진행하기 전에 이를 수정합니다.  
@@ -153,7 +150,7 @@ ms.lasthandoff: 11/11/2017
   
 1.  `public DebuggerSide` 클래스에 다음 메서드를 추가합니다.  
   
-    ```  
+    ```csharp  
     public static void TestShowVisualizer(object objectToVisualize)  
     {  
        VisualizerDevelopmentHost visualizerHost = new VisualizerDevelopmentHost(objectToVisualize, typeof(DebuggerSide));  
@@ -203,13 +200,13 @@ ms.lasthandoff: 11/11/2017
   
 3.  TestConsole.cs, 다음 코드를 추가 `using` 문:  
   
-    ```  
+    ```csharp  
     using MyFirstVisualizer;  
     ```  
   
 4.  `Main` 메서드에 다음 코드를 추가합니다.  
   
-    ```  
+    ```csharp  
     String myString = "Hello, World";  
     DebuggerSide.TestShowVisualizer(myString);  
     ```  

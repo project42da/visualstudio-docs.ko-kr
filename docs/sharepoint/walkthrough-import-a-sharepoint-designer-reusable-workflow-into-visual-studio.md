@@ -21,11 +21,12 @@ caps.latest.revision: "35"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: da498bd8b6b19670b98c2e0a8f84c1a0bff4b40d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c97b6a1b130cfc59a77e794f831bebfebff1daa0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio"></a>연습: Visual Studio에 SharePoint Designer의 다시 사용 가능한 워크플로 가져오기
   이 연습에 SharePoint Designer 2010에서 만든 다시 사용할 수 있는 워크플로 가져오는 방법을 보여 줍니다.는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 워크플로 프로젝트입니다.  
@@ -191,7 +192,7 @@ ms.lasthandoff: 10/31/2017
   
      프로젝트를 디버깅할 때 바로 목록이 표시 됩니다.  
   
-11. 때문에 **다시 사용할 수 있는 SharePoint 2010 워크플로 가져오기** 템플릿이 가져온된 워크플로에 대 한 연결 속성 값을 가져오지 않기에 입력 해야 합니다. 이렇게 하려면 다음을 수행합니다.  
+11. 때문에 **다시 사용할 수 있는 SharePoint 2010 워크플로 가져오기** 템플릿이 가져온된 워크플로에 대 한 연결 속성 값을 가져오지 않기에 입력 해야 합니다. 가상 하드 디스크 파일에 대한 중요 정보를 제공하려면  
   
     1.  **솔루션 탐색기**, 선택는 **SPD_Workflow_TestFT** 노드.  
   

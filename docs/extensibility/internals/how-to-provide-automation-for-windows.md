@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 945eeb8b81ecb26d43da9528db154d133c4f868c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 17cf60573b6feb9fd317116eec4639dbf88f6089
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-provide-automation-for-windows"></a>방법: Windows에 대 한 자동화를 제공 합니다.
 문서 창과 도구 창에 대 한 자동화를 제공할 수 있습니다. 제공 하는 자동화 개체를 사용 하는 창에 사용할 수 있도록 하 고 환경에 이미 있지 때마다 자동화 좋습니다 작업 목록에서와 마찬가지로 이미 만들어진 자동화 개체를 제공 합니다.  

@@ -20,11 +20,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 787cebc77d0ca3d06fd88be8ab6f42c6bae3ee38
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bbb14818cebb35f703ec6f5ade084d96ac383d6a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guids-and-ids-of-visual-studio-toolbars"></a>Guid 및 Id를 Visual Studio 도구 모음
 이 항목의 도구 모음을 Visual Studio 통합된 개발 환경 (IDE)에 포함 된 GUID 및 ID 값을 열거 하며 그룹 포함. 이러한 값은 Visual Studio SDK의 일부로 설치 되는.vsct 파일에서 정의 됩니다. 자세한 내용은 참조 [IDE-Defined 명령, 메뉴 및 그룹](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)합니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 10/31/2017
 |Toolbar|ID|  
 |-------------|--------|  
 |명령 추가|IDM_VS_TOOL_ADDCOMMAND|  
-|정의 되지 않은|IDM_VS_TOOL_UNDEFINED|  
+|Undefined|IDM_VS_TOOL_UNDEFINED|  
 |XML 스키마|IDM_VS_TOOL_SCHEMA|  
 |XML 데이터|IDM_VS_TOOL_DATA|  
   
@@ -64,7 +65,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="standard-toolbar-groups"></a>표준 도구 모음 그룹  
   
-|이름|ID|  
+|name|ID|  
 |----------|--------|  
 |저장/열기|IDG_VS_TOOLSB_SAVEOPEN|  
 |잘라내기/복사|IDG_VS_TOOLSB_CUTCOPY|  
@@ -78,14 +79,14 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="build-toolbar-groups"></a>빌드 도구 모음 그룹  
   
-|이름|ID|  
+|name|ID|  
 |----------|--------|  
 |빌드 표시줄|IDG_VS_BUILDBAR|  
 |취소|IDG_VS_BUILD_CANCEL|  
   
 ### <a name="text-editor-toolbar-groups"></a>텍스트 편집기 도구 모음 그룹  
   
-|이름|ID|  
+|name|ID|  
 |----------|--------|  
 |완료|IDM_VS_TOOL_TEXTEDITOR|  
 |Indent|IDG_VS_EDITTOOLBAR_INDENT|  
@@ -94,7 +95,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="debug-toolbar-groups"></a>디버그 도구 모음 그룹  
   
-|이름|ID|  
+|name|ID|  
 |----------|--------|  
 |실행|IDM_DEBUG_TOOLBAR|  
 |단계별 실행|IDG_DEBUG_TOOLBAR_STEPPING|  
@@ -103,7 +104,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="debug-location-toolbar-groups"></a>디버그 위치 도구 모음 그룹  
   
-|이름|ID|  
+|name|ID|  
 |----------|--------|  
 |디버그 위치|IDG_DEBUG_CONTEXT_TOOLBAR|  
   

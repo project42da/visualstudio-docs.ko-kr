@@ -15,16 +15,17 @@ caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 40c900b2f266be4ea88921b5f7cd0db02991a091
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6f84f92b4d940bc7141f8c53730a128651b27a8f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-sdk-reference"></a>Visual Studio SDK 참조
 이 섹션에는 Visual Studio SDK를 사용 하는 개발자에 대 한 Visual Studio 네임 스페이스, 관련된 네임 스페이스 및 관심 있는 다른 영역에 대 한 정보가 포함 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  <xref:Microsoft.VisualStudio.TextManager.Interop>  
  레거시 interop 인터페이스 편집기와 언어 서비스에 사용 합니다.  
   

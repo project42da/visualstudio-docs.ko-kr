@@ -18,11 +18,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a71f3e14c6a8c87290de2a6204fa28f99a8cabe8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0bca2eef930b871d5728ff1c85742a28f4b51a7e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="solution-user-options-suo-file"></a>솔루션 사용자 옵션 (합니다. Suo) 파일
 솔루션 사용자 옵션 (.suo) 파일에는 사용자 단위 솔루션 옵션 포함 되어 있습니다. 이 파일 소스 코드 제어에 체크 하지 않아야 합니다.  

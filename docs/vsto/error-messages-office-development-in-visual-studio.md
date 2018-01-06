@@ -16,11 +16,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 58e0e5cd58a29a674f556f83e84e1f8063296dcd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: c8edebe902332145351bb85a274b8e17ef4db14c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-messages-office-development-in-visual-studio"></a>오류 메시지(Visual Studio에서 Office 개발)
   각 오류 메시지 항목은 오류의 가능한 원인 및 잠재적인 해결책 또는 문제를 해결하기 위한 해결 방법에 대한 정보를 제공합니다.  

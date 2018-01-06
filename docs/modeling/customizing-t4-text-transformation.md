@@ -14,16 +14,17 @@ caps.latest.revision: "28"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 4909edabd71686948632f390dfeed5f49cb6fca0
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 98d7efc90a07de02f255afe1a75d10fef749e88a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-t4-text-transformation"></a>T4 텍스트 변형 사용자 지정
 텍스트 템플릿은의 기능 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로그램 코드나 변환 프로세스를 통해 기타 텍스트 파일을 생성할 수 있도록 하는 합니다. 사용 하 여 [!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)], 텍스트 템플릿 지시문 프로세서 또는 텍스트 템플릿 호스트를 사용자 지정 하 여 기본 템플릿 변환 프로세스를 확장할 수 있습니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [텍스트 템플릿 변환 프로세스](../modeling/the-text-template-transformation-process.md)  
  텍스트 변환의 작동 방법을 설명 하 고 템플릿 호스트와의 지시문 프로세서의 역할을 설명 합니다.  
   

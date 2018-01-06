@@ -11,11 +11,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 7987d2b6d22893e82893755ed76fa5253aeb600c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: aa699e0c6d4d23ec6e5cdc347627a98efb623672
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsix-color-editor"></a>VSIX 색 편집기
 Visual Studio 확장 색 편집기 도구를 만들고 Visual Studio에 대 한 사용자 지정 색을 편집할 수 있습니다. 또한 도구는 코드에서 색을 사용할 수 있도록 테마 리소스 키를 생성 해야 합니다. 이 도구는 Visual Studio 확장을 지 원하는 테마 설정에 대 한 색을 만드는 데 유용 합니다. 이 도구는.pkgdef 및.xml 파일을 열 수 있습니다. Visual Studio 테마 (.vstheme 파일)를.xml으로 파일 확장명을 변경 하 여 Visual Studio 확장 색 편집기와 사용할 수 있습니다. 또한 현재.xml 파일로.vstheme 파일을 가져올 수 있습니다.  
@@ -189,7 +190,7 @@ namespace MyCustomColors
   
  변경 내용을 영구적, 다시 작성 한.pkgdef 파일에 새 색을 추가 하 고 해당 색을 사용 하는 코드를 작성 한 후 Visual Studio 확장을 다시 배포 합니다. Visual Studio 확장을 다시 작성은 테마의 나머지 부분에 새 색에 대 한 레지스트리 값을 병합 합니다. 그런 다음 Visual Studio를 다시 시작 하 고 UI를 볼 새 색 예상 대로 나타나는지 확인 합니다.  
   
-## <a name="notes"></a>참고  
+## <a name="notes"></a>노트  
  이 도구는 기존 Visual Studio 테마에 대 한 또는 사용자 지정 Visual Studio 테마 색 편집을 위해 사용자 지정 색을 만드는 데 사용 하는 데 사용 됩니다. 사용자 지정 전체 Visual Studio 테마를 만들려면 다운로드는 [Visual Studio 색 테마 편집기 확장](http://visualstudiogallery.msdn.microsoft.com/6f4b51b6-5c6b-4a81-9cb5-f2daa560430b) Visual Studio 확장 갤러리에서 합니다.  
   
 ## <a name="sample-output"></a>샘플 출력  

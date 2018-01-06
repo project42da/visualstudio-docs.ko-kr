@@ -24,11 +24,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: b8186110b04e3ff56b3c6b0cad03890f3233c03d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 2339ee60e66bca7578c2d5d1e89c7bb649b15b03
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="localizing-sharepoint-solutions"></a>SharePoint 솔루션 지역화
   전 세계적으로 사용 될 수 있도록 응용 프로그램을 준비 하는 과정을 지역화 라고 합니다. 지역화를 특정 문화권 리소스를 번역 됩니다. 자세한 내용은 참조 [전역화 및 지역화 응용 프로그램](/visualstudio/ide/globalizing-and-localizing-applications)합니다. 이 항목 SharePoint 솔루션 지역화 하는 방법에 대 한 개요를 제공 합니다.  
@@ -43,7 +44,7 @@ ms.lasthandoff: 10/31/2017
   
 |리소스 파일 형식|설명|  
 |------------------------|-----------------|  
-|기본값|라고도 대체 (fallback) 리소스에 기본 리소스 파일 영어와 같이 기본 문화권에 대 한 지역화 된 문자열을 포함 합니다. 지정된 된 언어에 대 한 지역화 된 리소스 파일을 찾을 수 있는 경우 사용 됩니다. 기본 리소스 별도 파일 필요는 없으며, 주 응용 프로그램 어셈블리에 저장 됩니다.|  
+|기본|라고도 대체 (fallback) 리소스에 기본 리소스 파일 영어와 같이 기본 문화권에 대 한 지역화 된 문자열을 포함 합니다. 지정된 된 언어에 대 한 지역화 된 리소스 파일을 찾을 수 있는 경우 사용 됩니다. 기본 리소스 별도 파일 필요는 없으며, 주 응용 프로그램 어셈블리에 저장 됩니다.|  
 |중립 언어|언어만 하지 특정 문화권에 대 한 지역화 된 문자열을 포함 하는 리소스 파일입니다. 예를 들어 프랑스어 "fr"입니다.|  
 |언어별|언어와 문화권에 대 한 지역화 된 문자열을 포함 하는 리소스 파일입니다. 예를 들어, "fr CA" 프랑스어 캐나다에 대 한 합니다.|  
   

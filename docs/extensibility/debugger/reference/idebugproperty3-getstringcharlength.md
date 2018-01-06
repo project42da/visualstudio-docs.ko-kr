@@ -14,11 +14,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 139cb6deac5afc3f4b174673d623c56d3929071a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1f692d490b50b22a1e43567045dd7359cccde081
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty3getstringcharlength"></a>IDebugProperty3::GetStringCharLength
 연결된 된 속성의 문자열에서 문자 수를 반환합니다.  
@@ -49,7 +50,7 @@ int GetStringCharLength(
 ## <a name="remarks"></a>설명  
  에 대 한 호출에 대 한 버퍼를 할당에 대해 궁금할이 메서드는 일반적으로 [GetStringChars](../../../extensibility/debugger/reference/idebugproperty3-getstringchars.md) 메서드.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CProperty** 공개 하는 개체는 [IDebugProperty3](../../../extensibility/debugger/reference/idebugproperty3.md) 인터페이스입니다.  
   
 ```cpp  

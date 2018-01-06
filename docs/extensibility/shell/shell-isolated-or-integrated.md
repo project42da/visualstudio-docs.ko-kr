@@ -18,11 +18,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 92462699141f9d0a1af2d9eb461caadf4ee467ef
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 562cff752e38cfcfa224f54b4350317b76db4bec
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="shell-isolated-or-integrated"></a>Shell (격리 또는 통합)
 통합 또는 격리 모드에서 Visual Studio 기반 응용 프로그램을 만들 수 있습니다. 통합된 모드의 경우 대부분 Visual Studio 기능을 응용 프로그램 외에도 사용할 수 있습니다. 격리 모드에서 사용자 고유의 확장과 함께 배포 하고자 하는 Visual Studio 기능 하위 집합을 선택 합니다.  

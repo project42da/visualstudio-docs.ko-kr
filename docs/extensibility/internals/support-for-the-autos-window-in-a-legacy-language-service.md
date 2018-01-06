@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c824845d4cbdb58241c088c1cb30259d3c298f72
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: db6be625c671a508be3c2fd2f1697282af282bdd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="support-for-the-autos-window-in-a-legacy-language-service"></a>레거시 언어 서비스에서 자동 창에 대 한 지원
 **자동** 디버깅 중인 프로그램 (중 하나 중단점 또는 예외 발생) 일시 중지 되 면 범위에 있는 매개 변수 및 변수와 같은 식 창에 표시 됩니다. 식은 변수, 지역 또는 전역 및 로컬 범위에서 변경 된 매개 변수를 포함할 수 있습니다. **자동** 창 클래스, 구조체 또는 일부 다른 형식이의 인스턴스화를 포함할 수도 있습니다. 식 계산기를 평가할 수 있는 모든 항목에 잠재적으로 표시할 수는 **자동** 창.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 10/31/2017
   
  반환 된 실제 식을 변수 또는 코드에서 해당 위치에 표시 되는 매개 변수의 이름입니다. 이러한 이름은 다음에 표시 되는 형식 및 값을 식 계산기에 전달 되는 **자동** 창.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 예제에서는의 구현을 보여 줍니다.는 <xref:Microsoft.VisualStudio.Package.LanguageService.GetProximityExpressions%2A> 에서 식의 목록을 가져오는 메서드를는 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A> 구문 분석 하는 이유를 사용 하 여 메서드 <xref:Microsoft.VisualStudio.Package.ParseReason>합니다. 로 래핑된 식 각각는 `TestVsEnumBSTR` 구현 하는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsEnumBSTR> 인터페이스입니다.  
   
  `GetAutoExpressionsCount` 및 `GetAutoExpression` 메서드에 사용자 지정 메서드는는 `TestAuthoringSink` 개체 및이 예제를 지원 하기 위해 추가 되었습니다. 에 추가 하는 식에는 한 가지 방법은 나타내는 `TestAuthoringSink` 파서에서 개체 (호출 하 여는 <xref:Microsoft.VisualStudio.Package.AuthoringSink.AutoExpression%2A> 메서드) 파서가 외부에서 액세스할 수 있습니다.  

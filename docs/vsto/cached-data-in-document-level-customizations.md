@@ -23,11 +23,12 @@ caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: f90aeb03dd62d76064124e9870a5a4dbcd250621
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: deb63265b65a382132d3ef957ad67ddd1bccb438
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="cached-data-in-document-level-customizations"></a>문서 수준 사용자 지정의 캐시된 데이터
   문서 수준 사용자 지정의 기본 목적은 Office 문서에서 보기에서 데이터를 분리 하는 것입니다. 데이터는 숫자와 텍스트를 포함 하는 문서에 저장 된 정보를 나타냅니다. 보기는 사용자 인터페이스 및 Microsoft Office Word 및 Microsoft Office Excel의 개체 모델을 가리킵니다.  

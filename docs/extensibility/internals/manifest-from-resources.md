@@ -11,11 +11,12 @@ caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 297d9535a8e9655ed87230d4f947faeb29e08487
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bbf234d18c48ed501987f160bd2b98ec9f768b6e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="manifest-from-resources"></a>리소스에서 매니페스트
 리소스 도구 매니페스트입니다 목록이 며 이미지 리소스 (.png 또는.xaml 파일) 및 Visual Studio 이미지 서비스를 사용 하는 이러한 이미지를 허용 하는.imagemanifest 파일을 생성 하는 콘솔 응용 프로그램. 또한 기존.imagemanifest에 이미지를 추가 하려면이 도구를 사용할 수 있습니다. 이 도구는 Visual Studio 확장에는 이미지에 대 한 높은 DPI 및 테마 설정 지원 추가 하는 데 유용 합니다. 생성 된.imagemanifest 파일에 포함 하 고 Visual Studio 확장 (.vsix)의 일부분으로 배포 해야 합니다.  
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
   
 -   ManifestFromResources /resources:D:\Images\Image1.png;D:\Images\Image1.xaml /assembly:My.Assembly.Name /guidName:MyImages /newGuids /newIds  
   
-## <a name="notes"></a>참고  
+## <a name="notes"></a>노트  
   
 -   이 도구는만.png.xaml 파일을 지원합니다. 다른 이미지 또는 파일 형식은 무시 됩니다. 리소스를 구문 분석 하는 동안 발생 하는 모든 지원 되지 않는 형식에 대해 경고가 생성 됩니다. 지원 하지 않는 경우 이미지 도구 완료 되 면 발견 되는 리소스를 구문 분석에서 오류가 생성 됩니다  
   

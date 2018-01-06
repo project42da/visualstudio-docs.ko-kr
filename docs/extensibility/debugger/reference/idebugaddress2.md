@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 13161c2be23d2eec6f1d91fd59fc465cbc59a510
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 43c112da892fadf95eb5a27880d82ec9d29419c7
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugaddress2"></a>IDebugAddress2
 이 인터페이스를 제공 주소가 개체를 소유 하는 프로세스의 ID에 대 한 액세스는이 인터페이스에서 표시 됩니다.  

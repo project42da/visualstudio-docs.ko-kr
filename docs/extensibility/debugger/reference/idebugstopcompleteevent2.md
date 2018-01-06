@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2e92138f969189a33e1a5aad5a083c8ac57852dc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5d59de29078db46f716fe9d01a3f3fa076139ddf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugstopcompleteevent2"></a>IDebugStopCompleteEvent2
 디버그 엔진 (DE) 프로그램이 중지 될 때이 선택적 이벤트 (SDM)의 세션 디버그 관리자에 게 보낼 수 있습니다.  

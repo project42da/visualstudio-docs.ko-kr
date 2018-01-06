@@ -17,11 +17,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 307344a9027e629f08350b77adf99d22d0c127a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e46c18f424130a29085aaccad19328c9f86682f6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="selection-and-currency-in-the-ide"></a>선택 및 IDE에서 통화
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) 선택을 사용 하 여 현재 선택한 개체에 대 한 사용자의 정보를 유지 관리 *컨텍스트*합니다. 선택 항목 컨텍스트 Vspackage 두 가지 방법으로 추적 하는 통화의 일부를 사용할 수 있습니다.  
@@ -56,7 +57,7 @@ ms.lasthandoff: 10/31/2017
   
  가장 일반적인 프로젝트 형식 IDE를 제어 하는 솔루션 탐색기입니다. 현재 계층을 결정 하는 사용자가 선택한 의존 하는 창 및 프로젝트 형식 창 글로벌 계층 및 ItemID의 전역 선택 항목 컨텍스트를 추적 합니다. 환경을 프로젝트 형식 창에 대 한 글로벌 서비스를 제공 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection>을 통해 어떤 Vspackage 열려 요소에 대 한 현재 값을 모니터링할 수 있습니다. 환경에서 검색 속성이 글로벌 서비스에 의해 이루어집니다.  
   
- 반면에를 눌러 선택 영역 컨텍스트 값 (계층 구조/ItemID/SelectionContainer 세) 프레임 창 프레임 창 내에서 DocObject를 사용 합니다. 입니다. 서비스를 사용 하 여 프레임 창 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> 이 목적을 위해 합니다. DocObject 푸시할 수 있는 선택 컨테이너에 대 한 값만 계층 구조에 대 한 값은 로컬 및 MDI 자식 문서에 대 한 일반적인 경우 처럼에 ItemID 변경 되지 않습니다.  
+ 반면에를 눌러 선택 영역 컨텍스트 값 (계층 구조/ItemID/SelectionContainer 세) 프레임 창 프레임 창 내에서 DocObject를 사용 합니다. 이어야 합니다. 서비스를 사용 하 여 프레임 창 <xref:Microsoft.VisualStudio.Shell.Interop.SVsShellMonitorSelection> 이 목적을 위해 합니다. DocObject 푸시할 수 있는 선택 컨테이너에 대 한 값만 계층 구조에 대 한 값은 로컬 및 MDI 자식 문서에 대 한 일반적인 경우 처럼에 ItemID 변경 되지 않습니다.  
   
 ### <a name="events-and-currency"></a>이벤트 및 통화  
  두 가지 유형의 이벤트는 통화의 환경의 개념에 영향을 주는 발생할 수 있습니다.  

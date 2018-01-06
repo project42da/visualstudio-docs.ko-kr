@@ -14,11 +14,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fed5f54c843732b45339d7cc37d7d0820a58d8a7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fba3718052b708b5c5d88306c022ed9c397a99cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugprocess3disableenc"></a>IDebugProcess3::DisableENC
 이 메서드가 명시적으로 편집 하며 계속 하기가 비활성화가이 프로세스에 (및 모든 프로그램 포함). 사용자 지정 포트 공급자는 항상 반환 `E_NOTIMPL`합니다.  

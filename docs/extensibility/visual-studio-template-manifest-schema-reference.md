@@ -11,11 +11,12 @@ caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f714120c6f5dced4760bb14cad1e53a794030a19
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 87f676ef30da7c667c4ce2b688520a49ed1931c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-template-manifest-schema-reference"></a>Visual Studio 템플릿 매니페스트 스키마 참조
 이 스키마는 Visual Studio 프로젝트 또는 항목 템플릿에서 생성 하는 Visual Studio 템플릿 매니페스트 (.vstman) 파일의 형식을 설명 하 고 위치 및 서식 파일에 대 한 기타 관련 정보를 설명 합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="attributes"></a>특성  
   
--   **버전**: 템플릿 매니페스트의 버전을 나타내는 문자열입니다. 필수 요소.  
+-   **버전**: 템플릿 매니페스트의 버전을 나타내는 문자열입니다. 필수.  
   
 -   **로캘**: 로캘 또는 로캘의 템플릿 매니페스트를 나타내는 문자열입니다. 로캘 값 각 로캘에 대 한 별도 매니페스트를 사용 해야 하므로 모든 서식 파일에 적용 됩니다. 선택 사항입니다.  
   

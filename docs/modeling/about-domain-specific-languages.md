@@ -12,11 +12,12 @@ caps.latest.revision: "26"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 3bab0e785dfccddb7d182864a01146fe697b4247
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7bdd5f6f9561e3479d173a1e182ffa07649bc776
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="about-domain-specific-languages"></a>도메인별 언어 정보
 C# 등 UML 한 범용 언어와 달리 도메인 특정 언어 DSL ()는 특정 문제 영역 또는 도메인의 문을 express 하도록 설계 되었습니다.  

@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e8a7f722ea92e20bbceb7ed1bfe9eed31d23c32e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a85c6c097867aea17be4b4aeca1431a05c74903a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="bpresolutionlocation"></a>BP_RESOLUTION_LOCATION
 중단점 해상도 위치의 구조를 지정합니다.  
@@ -81,7 +82,7 @@ public struct BP_RESOLUTION_LOCATION {
 |`BPT_CODE`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|  
 |`BPT_DATA`|`string`(데이터 식)|`string`함수 이름|`string`(이미지 이름)|`enum_BP_RES_DATA_FLAGS`|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  해석 하는 방법을 보여 주는이 예제는 `BP_RESOLUTION_LOCATION` C#의 구조입니다.  
   
 ```csharp  

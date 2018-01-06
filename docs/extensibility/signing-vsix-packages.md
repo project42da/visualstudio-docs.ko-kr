@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d5a27b4e76e0cd8f986441778ed39c7fbb5a2211
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec875e6877b1c3ff1edf38b29c5e72b757021085
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="signing-vsix-packages"></a>VSIX 패키지 서명
 확장 프로그램 어셈블리는 Visual Studio에서 실행할 수 있지만 이렇게 하는 것이 좋습니다 전에 서명할 필요가 없습니다.  
@@ -39,7 +40,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  프로그램 VSIX 프로젝트에 추가 합니다.  
   
-2.  솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭을 선택 하면 **추가 &#124; NuGet 패키지 관리**합니다.  NuGet 및 NuGet 패키지 참조 추가 대 한 자세한 내용은 참조는 [NuGet 설명서](http://docs.microsoft.com/NuGet) 및 [패키지 관리자 UI](http://docs.microsoft.com/NuGet/Tools/Package-Manager-UI) 항목입니다.  
+2.  솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭을 선택 하면 **추가 &#124; NuGet 패키지 관리**합니다.  NuGet 및 NuGet 패키지 참조 추가 대 한 자세한 내용은 참조는 [NuGet 설명서](/NuGet) 및 [패키지 관리자 UI](/NuGet/Tools/Package-Manager-UI) 항목입니다.  
   
 3.  VSIXSignTool VisualStudioExtensibility에서 검색 하 고 NuGet 패키지를 설치 합니다.  
   

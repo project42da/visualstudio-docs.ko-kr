@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 29e05c7cef8b7bc8644ccbf7ea542e2f043547a6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5762b59a52cce2bf918c50630bbf82e176d9e82f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="launching-a-program"></a>프로그램을 시작
 프로그램을 디버깅 하려는 사용자는 IDE에서 디버거를 실행 하려면 f5 수 있습니다. 이 일련의 IDE의 다시 연결 하거나 연결, 프로그램에 다음과 같이 디버그 엔진 (DE)에 연결 하면 결국 이벤트가 시작 됩니다.  
@@ -52,7 +53,7 @@ ms.lasthandoff: 10/31/2017
   
  경우 `GUID_NULL` 전달 되는 포트는 프로그램을 시작 합니다. 프로그램이 실행 되 면 런타임 환경 만듭니다는 `IDebugProgramNode2` 전달 하는 프로그램을 설명 하기 위해 인터페이스 `IDebugPortNotify2::AddProgramNode`합니다. 이 프로그램이 실행 되는 포트를 알립니다. 다음은 SDM 실행 중인 프로그램에 디버그 엔진을 연결합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [포트에 알림](../../extensibility/debugger/notifying-the-port.md)  
  프로그램 시작 되 고 포트 알립니다 후의 상황에 대해 설명 합니다.  
   

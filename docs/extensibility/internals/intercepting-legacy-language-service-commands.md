@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73524ce47dfea2d30e44e51e97bf584a95a86482
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ad7870fcec07db3d4d529b856bc0e2f18006e819
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="intercepting-legacy-language-service-commands"></a>가로채 레거시 언어 서비스 명령
 와 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 텍스트 보기는 그렇지 않은 경우 처리 하는 언어 서비스 절편 명령이 있을 수 있습니다. 텍스트 보기 관리 하지 않는 언어 관련 동작에 유용 합니다. 언어 서비스에서 텍스트 보기에 하나 이상의 명령 필터를 추가 하 여 이러한 명령을 가로챌 수 있습니다.  

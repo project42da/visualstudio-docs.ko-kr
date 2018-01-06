@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 72460f39cf63346106c2ccd81dc9ab16f8af78b9
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 51735bf0f46e5a1ead6f989a8e75745ebc8e6e35
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="template-policy-and-the-properties-window"></a>정책 템플릿 및 속성 창
 프로젝트는 엔터프라이즈 템플릿 프로젝트 내에 포함 되 면 하는 경우 해당 엔터프라이즈 템플릿 프로젝트 정책을 적용할 수 있습니다. 템플릿 정책을 속성에 대 한 기본값 설정, 속성 숨기기, 속성을 추가 및 등을 사용할 수 있는 제약 시스템 됩니다.  

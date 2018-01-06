@@ -24,11 +24,12 @@ caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3f8798616d9a39d46150f039ffe4340302439f31
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 8b32134abff19965edac150ac5f69db25640ee08
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="debug-multithreaded-applications-in-visual-studio"></a>Visual Studio에서 다중 스레드 응용 프로그램 디버깅
 스레드는 운영 체제에서 프로세서 시간을 할당받는 명령 시퀀스입니다. 운영 체제에서 실행되는 모든 프로세스는 최소한 하나의 스레드로 구성됩니다. 프로세스에 스레드가 둘 이상인 경우를 다중 스레드라고 합니다.  
@@ -41,7 +42,7 @@ Visual Studio 다중 스레드 응용 프로그램 디버깅에 사용 하기 �
 
 - 스레드 디버깅을 위한 기본 도구는 스레드는 **스레드** 창, 소스 창의 스레드 마커 **병렬 스택** 창 **병렬 조사식** 창 및 **디버그 위치** 도구 모음입니다. 에 대 한 자세한 내용은 **스레드** 창 및 **디버그 위치** 도구 모음에서 참조 [연습: 스레드 창 사용 하 여 디버깅](../debugger/how-to-use-the-threads-window.md)합니다. 사용 하는 방법에 알아보려면는 **병렬 스택** 및 **병렬 조사식** 창 참조 [다중 스레드 응용 프로그램 디버깅을 시작 하려면](../debugger/get-started-debugging-multithreaded-apps.md)합니다. 두 항목에는 스레드 마커를 사용 하는 방법을 보여 줍니다.
   
-- 사용 하는 코드는 [라이브러리 TPL (작업 병렬)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) 또는 [동시성 런타임](/cpp/parallel/concrt/concurrency-runtime/), 디버깅을 위한 기본 도구는 **병렬 스택** 창는 **병렬 조사식** 창 및 **작업** 창 (의 **작업** 창에서 JavaScript 지원). 시작 하려면 참조 [연습: 병렬 응용 프로그램 디버깅](../debugger/walkthrough-debugging-a-parallel-application.md) 및 [연습: c + + AMP 응용 프로그램 디버깅](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application.md)합니다. 
+- 사용 하는 코드는 [라이브러리 TPL (작업 병렬)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) 또는 [동시성 런타임](/cpp/parallel/concrt/concurrency-runtime/), 디버깅을 위한 기본 도구는 **병렬 스택** 창는 **병렬 조사식** 창 및 **작업** 창 (의 **작업** 창에서 JavaScript 지원). 시작 하려면 참조 [연습: 병렬 응용 프로그램 디버깅](../debugger/walkthrough-debugging-a-parallel-application.md) 및 [연습: c + + AMP 응용 프로그램 디버깅](/cpp/parallel/amp/walkthrough-debugging-a-cpp-amp-application)합니다. 
 
 - 스레드는 GPU에서 디버깅을 위한 기본 도구는는 **GPU 스레드** 창. 참조 [하는 방법: GPU 스레드 창 사용](../debugger/how-to-use-the-gpu-threads-window.md)합니다.  
 
@@ -51,7 +52,7 @@ Visual Studio에서 제공하는 강력한 중단점 및 추적점은 다중 스
   
 사용자 인터페이스가 있는 다중 스레드 응용 프로그램은 특히 디버깅하기 어려울 수 있습니다. 이러한 경우 응용 프로그램을 다른 컴퓨터에서 실행하면서 원격 디버깅을 사용하는 것이 좋습니다. 자세한 내용은 참조 [원격 디버깅](../debugger/remote-debugging.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
  [다중 스레드 응용 프로그램 디버깅을 시작 하려면](../debugger/get-started-debugging-multithreaded-apps.md)합니다.  
  다양 한 스레드 디버깅 기능에 기능을 중점적으로 안내는 **병렬 스택** 창 및 **병렬 조사식** 창.
 

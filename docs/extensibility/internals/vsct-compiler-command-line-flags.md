@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fd18d04adfbf3acd0ca50c1e75bd2a1694b28721
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d33c0e1bc54ee0c1abab736ba24ce76fbf710fdc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT 컴파일러 명령줄 플래그
 Visual Studio 명령 테이블 (VSCT) 컴파일러.vsct 파일의 컴파일 되도록 명령줄 스위치를 제공 합니다.  
@@ -57,7 +58,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
   
  허용 가능한 플래그와 의미는 다음과 같습니다.  
   
-|스위치|설명|  
+|전환|설명|  
 |------------|-----------------|  
 |차원|모든 추가 정의 된 기호를 지정 합니다.|  
 |-I|추가 포함 파일 참조를 확인할 때 사용 해야 하는 경로 나타냅니다.|  

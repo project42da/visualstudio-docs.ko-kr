@@ -18,11 +18,12 @@ caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7a4b2c9bb828fb8c8b55829a4a6a295bb8324361
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 20a56a2f6582a08270292cd86cf62a9344d8565f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions"></a>방법: SharePoint 솔루션에 대한 사용자 지정 기능 및 패키지 유효성 검사 규칙 만들기
   Visual Studio에서 생성 하는 솔루션 패키지를 확인 하기 위한 사용자 지정 유효성 검사 규칙을 만들 수 있습니다. 선택 하 여 전체 기능 또는 패키지에서 전체 유효성 검사를 수행할 수 있습니다 **유효성 검사** 패키지 또는 기능에의 상황에 맞는 메뉴는 **PackagingExplorer**합니다. 부분 유효성 검사는 경우 패키지 또는 기능 것에 유효한 상태를 확인 하는 프로젝트에 새 SharePonit 프로젝트 항목 또는 기능을 추가할 때 수행 됩니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 4.  추가 된 <xref:System.ComponentModel.Composition.ExportAttribute> 클래스에 있습니다. 이 특성을 사용 하면 Visual Studio를 검색 하 고 유효성 검사 규칙을 로드 합니다. 전달 된 <xref:Microsoft.VisualStudio.SharePoint.Validation.IPackageValidationRule> 또는 <xref:Microsoft.VisualStudio.SharePoint.Validation.IFeatureValidationRule> 형식을 특성 생성자에 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 사용자 지정 기능 유효성 검사 규칙을 만드는 방법을 보여 줍니다.  
   
  [!code-vb[SPExtensibility.FeatureValidation#1](../sharepoint/codesnippet/VisualBasic/featurevalidation/extension/customvalidationrule.vb#1)]

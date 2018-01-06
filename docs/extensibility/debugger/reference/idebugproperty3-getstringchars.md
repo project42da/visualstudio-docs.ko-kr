@@ -14,11 +14,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2bf3dbc9e7c2696e51dfb86b8aa1c62b5f940655
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6af447a8d22881ebb0b970863aaa5ede7a7ddf26
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
 이 속성과 연결 된 문자열을 검색 하 고 사용자가 제공한 버퍼에 저장 합니다.  
@@ -62,7 +63,7 @@ int GetStringChars(
 > [!NOTE]
 >  C + +에서는 반환 된 문자열에는 null 종결 문자 포함 되지 않습니다. 를 지정 하는 경우 `pceltFetched` 문자열의 문자 수를 지정 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  
 ```cpp  
 CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)  

@@ -18,11 +18,12 @@ caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 7032f3663be7df1a06fa4dc16d4f4473e4666cfc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: office
+ms.openlocfilehash: 09ea283b17a980ff9be1fae54ecc8b24912b70ad
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-configure-inclusion-list-security"></a>방법: 포함 목록 보안 구성
   관리자 권한이 있는 경우 구성할 수 있습니다는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 신뢰 프롬프트 컨트롤에 최종 사용자가 신뢰 결정 포함 목록에 저장 하 여 Office 솔루션을 설치할 수 제공할지 여부를 합니다. 포함 목록에 대 한 정보를 참조 하십시오. [포함 목록을 사용 하 여 Office 솔루션 신뢰](../vsto/trusting-office-solutions-by-using-inclusion-lists.md)합니다.  
@@ -59,7 +60,7 @@ ms.lasthandoff: 10/31/2017
     |문자열 값 하위 키|값|  
     |-------------------------|-----------|  
     |**인터넷**|**AuthenticodeRequired**|  
-    |**UntrustedSites**|**사용 안 함**|  
+    |**UntrustedSites**|**Disabled**|  
     |**내 컴퓨터**|**사용**|  
     |**LocalIntranet**|**사용**|  
     |**TrustedSites**|**사용**|  
@@ -117,7 +118,7 @@ ms.lasthandoff: 10/31/2017
   
     |문자열 값 하위 키|값|  
     |-------------------------|-----------|  
-    |**UntrustedSites**|**사용 안 함**|  
+    |**UntrustedSites**|**Disabled**|  
     |**인터넷**|**AuthenticodeRequired**|  
     |**내 컴퓨터**|**AuthenticodeRequired**|  
     |**LocalIntranet**|**AuthenticodeRequired**|  
@@ -174,11 +175,11 @@ ms.lasthandoff: 10/31/2017
   
     |문자열 값 하위 키|값|  
     |-------------------------|-----------|  
-    |**UntrustedSites**|**사용 안 함**|  
-    |**인터넷**|**사용 안 함**|  
-    |**내 컴퓨터**|**사용 안 함**|  
-    |**LocalIntranet**|**사용 안 함**|  
-    |**TrustedSites**|**사용 안 함**|  
+    |**UntrustedSites**|**Disabled**|  
+    |**인터넷**|**Disabled**|  
+    |**내 컴퓨터**|**Disabled**|  
+    |**LocalIntranet**|**Disabled**|  
+    |**TrustedSites**|**Disabled**|  
   
 #### <a name="to-disable-the-inclusion-list-programmatically"></a>포함 목록을 프로그래밍 방식으로 사용 하지 않도록 설정 하려면  
   

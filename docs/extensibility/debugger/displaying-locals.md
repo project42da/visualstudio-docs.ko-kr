@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a00d57b8af1c32c2f94334e2930e8f92b166c89b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8566baec58e2dd95b42be8916b7d48131370e65e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-locals"></a>지역 변수를 표시합니다.
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  **간략 한 조사식** 및 **조사식** 창에서는 변수 이름, 값 및 형식 같은 형식으로도 표시 합니다. 호출 하 여 해당 값을 가져오는 반면 [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) 대신 `IDebugProperty2::EnumChildren`합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [로컬 항목의 샘플 구현](../../extensibility/debugger/sample-implementation-of-locals.md)  
  예제를 사용 하 여 지역 변수를 구현 하는 과정을 단계별로 실행 되도록 합니다.  
   

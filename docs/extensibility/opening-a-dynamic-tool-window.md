@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 588badc75a604df65949c99fa16f84ad4e9c9175
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c96250c79ea283117254a96875c3a1f03f4cb30b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opening-a-dynamic-tool-window"></a>동적 도구 창 열기
 도구 창은 일반적으로 메뉴나 해당 바로 가기 명령에서 열립니다. 하지만 때때로 특정 UI 컨텍스트 적용 되며 UI 컨텍스트가 더 이상 적용 될 때 닫힙니다 때마다 열리는 도구 창을 할 수 없습니다. 이러한 도구 창을 호출 *동적* 또는 *자동 표시*합니다.  

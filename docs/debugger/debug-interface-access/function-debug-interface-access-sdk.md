@@ -14,11 +14,12 @@ caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 39d3871fcfbd3702e2ad198f2061be41dc51ac18
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5989a2c03c5a6e3f829c0183c797204e3311f5d2
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="function-debug-interface-access-sdk"></a>함수(디버그 인터페이스 액세스 SDK)
 각 함수로 식별 되는 `SymTagFunction` 기호입니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 |[IDiaSymbol::get_hasSetJump](../../debugger/debug-interface-access/idiasymbol-get-hassetjump.md)|`BOOL`|`TRUE`함수를 포함 하는 경우는 [setjmp](/cpp/c-runtime-library/reference/setjmp) (DIA SDK v 8.0에만 또는 이상)를 호출 합니다.|  
 |[IDiaSymbol::get_interruptReturn](../../debugger/debug-interface-access/idiasymbol-get-interruptreturn.md)|`BOOL`|`TRUE`함수에 있는 경우 인터럽트 (DIA SDK v 8.0 이상 에서만에서)에서 반환 합니다.|  
 |[IDiaSymbol::get_intro](../../debugger/debug-interface-access/idiasymbol-get-intro.md)|`BOOL`|`TRUE`함수가 경우 가상 소개 합니다.|  
-|[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|`BOOL`|`TRUE`함수 중으로 표시 하는 경우는 [인라인, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp.md) 특성입니다.|  
+|[IDiaSymbol::get_InlSpec](../../debugger/debug-interface-access/idiasymbol-get-inlspec.md)|`BOOL`|`TRUE`함수 중으로 표시 하는 경우는 [인라인, __inline, \__forceinline](/cpp/cpp/inline-functions-cpp) 특성입니다.|  
 |[IDiaSymbol::get_isNaked](../../debugger/debug-interface-access/idiasymbol-get-isnaked.md)|`BOOL`|`TRUE`으로 표시 되는 함수는 [naked](/cpp/cpp/naked-cpp) 특성 (DIA SDK v 8.0 이상 에서만에서).|  
 |[IDiaSymbol::get_isStatic](../../debugger/debug-interface-access/idiasymbol-get-isstatic.md)|`BOOL`|`TRUE`함수가 경우 정적 (DIA SDK v 8.0 이상 에서만에서).|  
 |[IDiaSymbol::get_length](../../debugger/debug-interface-access/idiasymbol-get-length.md)|`ULONGLONG`|위치에서 시작 하는 함수 코드의 바이트 수입니다.|  

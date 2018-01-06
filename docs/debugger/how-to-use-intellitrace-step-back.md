@@ -12,14 +12,15 @@ caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c05905e8ffeec3aa699aac9dfa46c4b017b86be5
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: multiple
+ms.openlocfilehash: 9ee45132e4acf45bccffd3e05808defd3c7ced6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 단계 백을 사용 하 여 스냅숏을 볼
-IntelliTrace 단계 다시 자동으로 스냅숏을에서 모든 중단점 및 디버거 응용 프로그램의 단계 이벤트입니다. 기록된 스냅숏을 사용 하 여 이전 중단점 또는 단계도 이동 하 고 과거에 포함 되어 응용 프로그램의 상태를 볼 수 있습니다. IntelliTrace 단계 백 시간을 절약할 수 이전 응용 프로그램 상태를 보려면 있지만 디버깅을 다시 시작 하거나 원하는 응용 프로그램 상태를 다시 만들지 않을 수 있습니다.
+IntelliTrace 단계 다시 자동으로 스냅숏을에서 모든 중단점 및 디버거 응용 프로그램의 단계 이벤트입니다. 기록된 스냅숏을 통해 이전 중단점 또는 단계로 돌아가서 응용 프로그램의 과거 상태를 볼 수 있습니다. IntelliTrace 뒤로 이동을 사용하면 이전 응용 프로그램 상태를 보고 싶지만 디버깅을 다시 시작하거나 원하는 앱 상태를 다시 만들지 않으려는 경우에 시간을 절약할 수 있습니다.
 
 IntelliTrace 단계 저장은 Visual Studio Enterprise 2017 15.5 이상 버전에서에서 시작 가능 하 고 Windows 10 Anniversary 업데이트 필요 이상. 기능은 현재 ASP.NET, WinForms, WPF, 관리 되는 콘솔 응용 프로그램 및 관리 되는 클래스 라이브러리를 디버깅을 위해 지원 됩니다. ASP.NET Core,.NET Core 또는 UWP 응용 프로그램 디버깅 현재 지원 되지 않습니다. 
   
@@ -38,7 +39,7 @@ IntelliTrace 스냅숏을 응용 프로그램의 프로세스의 각 디버거�
 
 ## <a name="navigate-and-view-snapshots"></a>이동 하 고 스냅숏 보기
 
-사용 하 여 이벤트 간을 탐색할 수 있습니다는 **이전 (Alt + [)** 및 **단계 (Alt +])** 디버그 도구 모음 단추입니다. 에 나타나는 이벤트를 탐색 하는이 단추는 **이벤트** 탭에 **진단 도구 창을**합니다. 단계별 실행 뒤로 또는 앞으로 이벤트에 자동으로 선택된 된 이벤트에 기록 디버깅 활성화 합니다.
+사용 하 여 이벤트 간을 탐색할 수 있습니다는 **이전 (Alt + [)** 및 **단계 (Alt +])** 디버그 도구 모음 단추입니다. 에 나타나는 이벤트를 탐색 하는이 단추는 **이벤트** 탭에 **진단 도구 창을**합니다. 이벤트의 앞이나 뒤로 이동하면 선택한 이벤트에 대한 기록 디버깅이 자동으로 활성화됩니다.
 
 ![뒤로 및 앞으로 단추](../debugger/media/intellitrace-step-back-icons-description.png "단계 뒤로 및 앞으로 단계 단추")
 
@@ -85,7 +86,7 @@ IntelliTrace는 이벤트 및 스냅숏 모드에서 복잡 한 개체를 포함
         1. Visual Studio 설치 관리자에서 데스크톱(x86, x64) 구성 요소용 VC++ 2015.3 v140 도구 집합을 설치합니다.
         2. 대상 응용 프로그램을 빌드합니다.
         3. 명령줄에서 editbin 도구 설정를 사용 하는 `Largeaddressaware` 대상 실행 파일에 대 한 플래그입니다. 예를 들어 (경로 업데이트) 한 후이 명령을 사용할 수 있습니다: "C:\Program Files (x86) \Microsoft Visual Studio\Preview\Enterprise\VC\Tools\MSVC\14.12.25718\bin\Hostx86\x86\editbin.exe" /Largeaddressaware "C:\Path\To\Application\app.exe"입니다.
-        4. 키를 눌러 디버깅을 시작 하려면 **F5**합니다. 이제 스냅숏은 디버거 단계와 중단점에 수행 됩니다.
+        4. 디버깅을 시작하려면 **F5** 키를 누릅니다. 이제 스냅숏은 디버거 단계와 중단점에 수행 됩니다.
 
         > [!Note]
         > `Largeaddressaware` 플래그는 실행 파일 변경 내용으로 다시 빌드될 때마다 설정 되어야 합니다.

@@ -16,11 +16,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4e79ec644426ed5068f79bb914b1202a800982cd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a85648a95a6651ff62f50b2361b07feba9a58b47
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="exposing-types-to-visual-designers"></a>비주얼 디자이너 형식을 노출합니다.
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]비주얼 디자이너를 표시 하기 위해 디자인 타임에 클래스 및 형식 정의에 액세스할 수 있어야 합니다. 클래스는 미리 정의 된 집합이 (참조 및 해당 종속성)은 현재 프로젝트의 전체 종속성 집합을 포함 하는 어셈블리에서 로드 됩니다. 또한 액세스 클래스 및 사용자 지정 도구에서 생성 된 파일에 정의 된 형식에 대 한 비주얼 디자이너에 필요한 수 있습니다.  

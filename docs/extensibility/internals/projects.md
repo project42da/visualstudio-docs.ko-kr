@@ -18,16 +18,17 @@ caps.latest.revision: "43"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c175d85b55734df841f30d131639c3bfeed40361
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ff9f1a9d22511fe6a4c388d6d84ec1992a185ec5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="projects"></a>프로젝트
 Visual Studio에서 프로젝트는 개발자가 사용할 소스 코드 파일 및에 표시 되는 기타 리소스를 구성 하는 컨테이너 **솔루션 탐색기**합니다. 일반적으로 프로젝트는 소스 코드 파일 및 비트맵 파일 등의 리소스에 대 한 참조를 저장 하는 파일 (예를 들어 C# 프로젝트의.csproj 파일). 프로젝트를 통해 구성, 빌드, 디버깅 및 소스 코드를 배포, 웹 서비스 및 데이터베이스를 다른 리소스에 대 한 참조입니다. Vspackage는 세 가지 주요 방법으로 Visual Studio 프로젝트 시스템을 확장할 수: *프로젝트 형식*, *프로젝트 하위 형식*, 및 *사용자 지정 도구*합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [프로젝트 형식](../../extensibility/internals/project-types.md)  
  *프로젝트 형식* 새로운 종류의 프로그래밍 언어와 같은 프로젝트에 대 한 지원을 추가 합니다. 예를 들어 Visual Studio에서는 각 언어에는 고유한 프로젝트 형식이 및 IronPython 통합 예제 IronPython 언어에 대 한 프로젝트 형식에 포함 되어 있습니다. C# 또는 Visual Basic 방법 항목은 빌드, 디버깅, 배포 및에 표시를 사용자 지정 하려면 외의 언어에 대 한 프로젝트 유형을 만들어야 **솔루션 탐색기**합니다. 자세한 내용은 참조 [프로젝트 형식](../../extensibility/internals/project-types.md)합니다.  
   

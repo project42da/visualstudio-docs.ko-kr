@@ -13,11 +13,12 @@ caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 70d16c90ad8ef4837ad9d131e46ed2027dd6c543
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 126bee146d1f53233db3c14672f80da4c0d60e9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-subtypes-design"></a>프로젝트 하위 형식 디자인
 Microsoft Build Engine (MSBuild)에 따라 프로젝트를 확장 하는 Vspackage를 사용 하는 프로젝트 하위 형식입니다. 집계 사용 하면 대량의에서 구현 되는 핵심 관리 되는 프로젝트 시스템을 다시 사용할 수 있습니다 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 하면서도 여전히 특정 시나리오에 대 한 동작을 사용자 지정 합니다.  

@@ -13,16 +13,17 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cc29529c7ba499cdc7291078774b9f546a3a08ca
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 12acd0690c11e61baedf358dec193e4f6da601e8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-language-service-features"></a>레거시 언어 서비스 기능
 관리 되는 패키지 프레임 워크 (MPF) 언어 서비스는 하나 이상의 지원할 수 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 구문 강조, IntelliSense 및 중단점 유효성 검사 등의 기능입니다. 각 기능 독립적으로 구현할 수 있지만 파서와 스캐너만 필요로 하는 구문 강조 표시를 제외 하 고 스캐너 모두 필요 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [레거시 언어 서비스의 중괄호 일치](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)  
  언어 쌍의 중괄호 짝 맞추기 라고 일치를 지원 하기 위해 필요한 것을 설명 합니다.  
   

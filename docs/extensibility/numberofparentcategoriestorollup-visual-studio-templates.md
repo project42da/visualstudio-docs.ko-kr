@@ -16,11 +16,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c35a29ada0b2fe2aa23d61426868ee00bd5cfaeb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fdf100745a9dd6a388a9a29d52100aacb6c1b76b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="numberofparentcategoriestorollup-visual-studio-templates"></a>NumberOfParentCategoriesToRollUp(Visual Studio 템플릿)
 서식 파일을 표시 하는 부모 범주 수를 지정 된 **새 프로젝트** 대화 상자.  
@@ -38,7 +39,7 @@ ms.lasthandoff: 10/31/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -60,7 +61,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="remarks"></a>설명  
  `NumberOfParentCategoriesToRollUp`는 선택적 요소입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다. 이 메타 데이터와 서식 파일은 두 수준 폴더를 최상위 수준 아래에 배치 됩니다 경우 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 노드를 서식 파일에서 최상위 노드에 표시 됩니다는 **새 프로젝트** 대화 상자. 경우는 `NumberOfParentCategoriesToRollUp` 템플릿을 노드에 표시 하에서는 물리적 위치를 설정 하지 않으면 합니다.  
   
 ```  

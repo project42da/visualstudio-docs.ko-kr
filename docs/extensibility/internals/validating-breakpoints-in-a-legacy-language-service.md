@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f8d2f56c29121a4be06f00198edd235007fc1cd0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 85d9add1e66fdde2fcdbfd5c83bf99b6180a4642
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="validating-breakpoints-in-a-legacy-language-service"></a>유효성을 검사 하는 레거시 언어 서비스의 중단점
 중단점은 디버거에 실행 되는 동안 특정 지점에서 프로그램 실행을 중지 해야 함을 나타냅니다. 사용자는 편집기에는 중단점에 대 한 올바른 위치를 구성 하는 항목에 대해 알지 못합니다 소스 파일에서 줄 중단점을 배치할 수 있습니다. 디버거를 시작할 때 실행 중인 프로그램에서 적절 한 위치에는의 모든 표시 된 중단점 (보류 중단점 라고 함)이 바인딩됩니다. 중단점 되도록 유효성을 검사 하는 동시에 유효한 코드 위치 표시 합니다. 예를 들어 메모에 중단점 올바르지 소스 코드의 위치에 있는 코드가 없는 있기 때문에 합니다. 디버거가 잘못 된 중단점을 해제 합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
 -   중단점이 유효 하지 않을 경우 상태 표시줄에 오류 메시지가 나타납니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  구현을 보여 주는이 예제는 <xref:Microsoft.VisualStudio.Package.LanguageService.ValidateBreakpointLocation%2A> 메서드를 지정된 된 위치에 (해당 되는 경우) 코드의 범위를 가져오려면 파서를 호출 합니다.  
   
  이 예에서는 추가 했다고 가정는 `GetCodeSpan` 메서드는 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 확인 하는 텍스트 범위를 반환 하는 클래스 `true` 중단점이 올바르면 위치인 경우.  

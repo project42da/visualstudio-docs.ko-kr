@@ -16,11 +16,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4ff2e2167daa0cb22abac7d8c1a545d17b2faa36
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: be21f7d98a897df6f44208c6224c1db5c56b70e2
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supportslanguagedropdown-element-visual-studio-templates"></a>SupportsLanguageDropDown 요소(Visual Studio 템플릿)
 웹 항목 템플릿에 여러 언어에 대해 동일 여부 및 여부를 지정 된 **언어** 옵션이 설정 되었는지는 **새 항목 추가** 대화 상자.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
   
  이 요소에 대 한 값으로 설정 되 면 `true`, 항목 템플릿에 모든 프로그래밍 언어에 대해 동일 및 **언어** 에서 옵션을 사용할 수는 **새 항목 추가** 대화 상자. 이 옵션을 사용 하는 서식 파일에서 만들려는 새 항목의 프로그래밍 언어를 선택할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 표시 하도록 지정 된 **언어** 옵션 드롭다운입니다.  
   
 ```  

@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2f620d895defbeeb3317f4a977db454a14ce3adc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2019a34e55148007cd75df12212bd4b0a897159c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="keybinding-element"></a>KeyBinding 요소
 키 바인딩 요소는 명령에 대 한 바로 가기 키를 지정합니다.  
@@ -33,16 +34,16 @@ ms.lasthandoff: 10/31/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|guid|필수 요소.|  
-|ID|필수 요소.|  
-|편집기|필수 요소. GUID 편집기는이 바로 가기 키 활성화 될 편집 컨텍스트를 나타냅니다. 전역 바인딩 범위 값은 "guidVSStd97"입니다.|  
-|key1|필수 요소. 유효한 값은 모두 입력할 수 영숫자 및 두 자리 16 진수 값 0x로 시작 하 고 [VK_constants](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731.aspx)합니다.|  
+|guid|필수.|  
+|ID|필수.|  
+|편집기|필수. GUID 편집기는이 바로 가기 키 활성화 될 편집 컨텍스트를 나타냅니다. 전역 바인딩 범위 값은 "guidVSStd97"입니다.|  
+|key1|필수. 유효한 값은 모두 입력할 수 영숫자 및 두 자리 16 진수 값 0x로 시작 하 고 [VK_constants](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731.aspx)합니다.|  
 |mod1|선택 사항입니다. 어떠한 조합의 CTRL, ALT 및 SHIFT 공백으로 구분 합니다.|  
 |key2|선택 사항입니다. 유효한 값은 모두 입력할 수 영숫자 및 두 자리 16 진수 값 0x로 시작 하 고 [VK_constants](https://msdn.microsoft.com/en-us/library/windows/desktop/dd375731.aspx)합니다.|  
 |mod2|선택 사항입니다. 어떠한 조합의 CTRL, ALT 및 SHIFT 공백으로 구분 합니다.|  
@@ -62,7 +63,7 @@ ms.lasthandoff: 10/31/2017
 |-------------|-----------------|  
 |[KeyBindings 요소](../extensibility/keybindings-element.md)|그룹 키 바인딩 요소와 다른 KeyBindings 그룹화 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 <KeyBindings>  

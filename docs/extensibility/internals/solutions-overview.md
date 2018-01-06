@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a6a1afea2357fb0c0ef1bcf8152f8a3785a55786
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 539ceb45cce6c317ed3723c5006e6d2a77029335
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="solutions-overview"></a>솔루션 개요
 솔루션은 응용 프로그램을 만드는 함께 작동 하는 하나 이상의 프로젝트를 그룹화 합니다. 솔루션에 대 한 프로젝트 및 상태 정보는 두 개의 서로 다른 솔루션 파일에 저장 됩니다. 솔루션 (.sln) 파일은 텍스트 기반 소스 코드 제어에서 사용 중인 및 사용자 간에 공유 될 수 있습니다. 솔루션 사용자 옵션 (.suo) 파일은 binary입니다. 결과적으로,.suo 파일 소스 코드 제어에서 사용할 수 없습니다 및 사용자 관련 정보를 포함 합니다.  
