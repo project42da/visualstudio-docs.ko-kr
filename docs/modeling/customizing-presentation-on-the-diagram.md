@@ -12,11 +12,12 @@ caps.latest.revision: "31"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 6f171bdffd8fb76801156331f7016d061c8333a1
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 68d9f4fefb1a092b90431bce335d8abcba6b6bbb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-presentation-on-the-diagram"></a>다이어그램의 프레젠테이션 사용자 지정
 DSL 언어 디자이너의 주 표시 영역은 다이어그램입니다. 사용자는 일반적으로 다이어그램을 사용해 모델을 생성합니다. 다음 항목의 설명에 따라 다이어그램을 사용자 지정할 수 있습니다.  

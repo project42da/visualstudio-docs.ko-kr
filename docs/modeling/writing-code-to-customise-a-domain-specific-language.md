@@ -12,11 +12,12 @@ caps.latest.revision: "29"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 2d456f84078e54694deb11fda0082ac40d278dd2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: e7b5fc639e93061a4abd0acbfc1425223d673282
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-code-to-customise-a-domain-specific-language"></a>도메인별 언어를 사용자 지정하는 코드 작성
 이 섹션을 액세스, 수정 또는 도메인 특정 언어에 모델을 만들 사용자 지정 코드를 사용 하는 방법을 보여 줍니다.  

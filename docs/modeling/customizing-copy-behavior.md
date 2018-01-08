@@ -11,11 +11,12 @@ caps.latest.revision: "16"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 532fd69bea467403047a7151584b7cf918ad602d
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: acac1aad651817ba351604b67af7f0440c82dabb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-copy-behavior"></a>복사 동작 사용자 지정
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 사용하여 만든 DSL(Domain-Specific Language)에서는 사용자가 요소를 복사하고 붙여넣을 때 수행되는 작업을 변경할 수 있습니다.  

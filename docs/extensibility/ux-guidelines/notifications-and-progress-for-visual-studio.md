@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0d16ed0f58929a6559812261c3443b3561375205
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0721d0080ec135a8e969cc420dfbb51e81ac4454
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>알림 및 Visual Studio에 대 한 진행률
 ##  <a name="BKMK_NotificationSystems"></a>알림 시스템  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/31/2017
 ### <a name="choosing-the-right-method"></a>적합 한 방법 선택  
  이 표를 사용 하 여 메시지의 사용자에 게 적합 한 방법 선택 하는 데 도움이 됩니다.  
   
-|메서드|기능|사용 하지 마십시오|  
+|메서드|사용|사용 하지 마십시오|  
 |------------|---------|----------------|  
 |[모달 오류 메시지 대화 상자](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ModalErrorMessageDialogs)|계속 하기 전에 사용자 응답을 요청할 때 사용 합니다.|사용자를 차단 하 고의 흐름을 중단할 필요가 없을 때 사용 하지 마십시오. 개입 수준이 낮습니다 다른 방법으로 메시지를 표시 하려면 가능한 경우 모달 대화 상자를 사용 하지 마십시오.|  
 |[IDE 상태 표시줄](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_IDEStatusBar)|프로세스의 상태와 관련 된 앰비언트 텍스트 정보 경우 사용 합니다.|단독 사용 하지 마십시오. 다른 의견 보내기 메커니즘와 함께에서 가장 적합합니다.|  
@@ -152,7 +153,7 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="determinate-progress"></a>활성화 상태의 진행률  
   
-|진행률 유형|시기 및 사용 하는 방법|참고|  
+|진행률 유형|시기 및 사용 하는 방법|노트|  
 |-------------------|-------------------------|-----------|  
 |진행률 표시줄 (비활성화 상태)|예상 기간의 > 5 초입니다.<br /><br /> 프로세스 정보에 대 한 텍스트 설명을 포함 될 수 있습니다.|**안 함** 애니메이션에 텍스트를 포함 합니다.|  
 |정보 표시줄|메시징 상황별 UI와 연결 합니다. 참조 [정보 표시줄](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars)합니다.<br /><br /> 프로세스 정보에 대 한 텍스트 설명을 포함 될 수 있습니다.|**안 함** 여러 프로세스를 표시 해야 할 때 여러 정보 표시줄을 사용 합니다. 누적된 진행률 표시줄을 대신 사용 합니다.|  
@@ -162,7 +163,7 @@ ms.lasthandoff: 10/31/2017
   
 #### <a name="indeterminate-progress"></a>비활성화 상태의 진행률  
   
-|진행률 유형|시기 및 사용 하는 방법|참고|  
+|진행률 유형|시기 및 사용 하는 방법|노트|  
 |-------------------|-------------------------|-----------|  
 |진행률 표시줄 (비활성화 상태)|예상 기간의 > 5 초입니다.<br /><br /> 프로세스 정보에 대 한 텍스트 설명을 포함 될 수 있습니다.|**안 함** 애니메이션에 텍스트를 포함 합니다.|  
 |개미 (애니메이션된 가로 점)|서버에 왕복 합니다.<br /><br /> 컨텍스트의 near 지점 부모 컨테이너의 위쪽에 배치합니다.|**안 함** 전체 컨테이너의 자식이 있는 경우 사용 합니다.|  

@@ -12,11 +12,12 @@ caps.latest.revision: "20"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 962b4a8eac0d548d2c7a337207644bdc717fe3cf
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 2c11cf4d8fb8d913c1d288b5daeb110b9003f7b6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="customizing-the-properties-window"></a>속성 창 사용자 지정
 사용자 지정할 수 있습니다 모양 및 동작의 속성 창에서 도메인 특정 언어 (DSL)에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. DSL 정의에서 각 도메인 클래스에서 도메인 속성을 정의합니다. 기본적으로 모델 탐색기 또는 다이어그램에서 클래스의 인스턴스를 선택 하면 속성 창에서 모든 도메인 속성이 나열 됩니다. 이렇게 하면 참조 하 고 도메인 속성의 값을 편집할 다이어그램에서 셰이프 필드에 매핑되어 있지 있을 경우에 합니다.  
@@ -141,7 +142,7 @@ ms.lasthandoff: 10/27/2017
   
  사용 하 여 특성 속성에 설정할 수 있습니다는 **사용자 지정 특성이** 속성 창에서 원하는 항목입니다.  
   
- 유형의 `AnEditor` 두 번째 매개 변수에서 지정 된 형식에서 파생 되어야 합니다. 두 번째 매개 변수를 사용 해야 하거나 <xref:System.Drawing.Design.UITypeEditor> 또는 <xref:System.ComponentModel.ComponentEditor>합니다. 자세한 내용은 <xref:System.ComponentModel.EditorAttribute>을 참조하십시오.  
+ 유형의 `AnEditor` 두 번째 매개 변수에서 지정 된 형식에서 파생 되어야 합니다. 두 번째 매개 변수를 사용 해야 하거나 <xref:System.Drawing.Design.UITypeEditor> 또는 <xref:System.ComponentModel.ComponentEditor>합니다. 자세한 내용은 <xref:System.ComponentModel.EditorAttribute>을 참조하세요.  
   
  사용자 고유의 편집기 또는에 제공 된 편집기 중 하나를 지정할 수 있습니다는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]와 같은 <xref:System.Windows.Forms.Design.FileNameEditor> 또는 <xref:System.Drawing.Design.ImageEditor>합니다. 예를 들어 다음 절차를 사용 하 여 사용자 파일 이름을 입력할 수 있는 속성이 있어야 합니다.  
   
@@ -177,7 +178,7 @@ ms.lasthandoff: 10/27/2017
   
 -   <xref:System.Drawing.Design.UITypeEditor.GetEditStyle%2A>를 편집기 드롭다운 메뉴를 제공 합니다.는 대화 상자를 열고 여부를 지정할 수 있습니다.  
   
- 또한 속성 표에 표시 되는 속성의 값을 그래픽으로 제공할 수 있습니다. 이 작업을 수행 하려면 재정의 `GetPaintValueSupported`, 및 `PaintValue`합니다.  자세한 내용은 <xref:System.Drawing.Design.UITypeEditor>을 참조하십시오.  
+ 또한 속성 표에 표시 되는 속성의 값을 그래픽으로 제공할 수 있습니다. 이 작업을 수행 하려면 재정의 `GetPaintValueSupported`, 및 `PaintValue`합니다.  자세한 내용은 <xref:System.Drawing.Design.UITypeEditor>을 참조하세요.  
   
 > [!NOTE]
 >  에 있는 별도 코드 파일에 코드를 추가 **Dsl** 프로젝트.  
@@ -206,7 +207,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- 자세한 내용은 <xref:System.Drawing.Design.UITypeEditor>을 참조하십시오.  
+ 자세한 내용은 <xref:System.Drawing.Design.UITypeEditor>을 참조하세요.  
   
 ## <a name="providing-a-drop-down-list-of-values"></a>값의 드롭다운 목록을 제공 하  
  선택 해야할 사용자에 대 한 값 목록을 제공할 수 있습니다.  

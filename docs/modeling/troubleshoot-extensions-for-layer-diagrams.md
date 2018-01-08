@@ -14,11 +14,12 @@ caps.latest.revision: "25"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: fae53e45b231292df8b7a6ae8bf4f2babc5d9e88
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f5cb41ab9a68e567d7c6b64243c6cec017835088
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshoot-extensions-for-dependency-diagrams"></a>종속성 다이어그램의 확장 문제 해결
 이 항목에서는 레이어 모델 확장을 만들 때 발생할 수 있는 몇 가지 문제를 해결합니다.  

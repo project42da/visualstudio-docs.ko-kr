@@ -12,11 +12,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3db7dea958fb3d80a109c021ffb20260f0748bba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c7b59afc8d32cefd8877d18d91556230aef9a284
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>연습: 보기 장식, 명령 및 설정 (열 안내선) 만들기
 명령 및 효과 보기와 Visual Studio 텍스트/코드 편집기를 확장할 수 있습니다.  이 항목에서는 확장 인기 있는 기능을 사용 하면 열 안내선 시작 하는 방법을 보여 줍니다.  열 안내선 코드 특정 열 너비를 관리할 수 있도록 텍스트 편집기의 보기에 그려진 시각적으로 밝은 회선이 합니다.  구체적으로 서식이 지정 된 코드에 대 한 문서, 블로그 게시물을 포함 하거나 버그 보고서 예제 중요할 수 있습니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c1c81a34a290b34207f505d6b1ab46fa8b11cd8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4f0ac6fdedb5d65f40f718c568297dc0196c4537
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vsix-extension-schema-20-reference"></a>VSIX 확장 2.0 스키마 참조
 VSIX 배포 매니페스트 파일에는 VSIX 패키지의 내용을 설명합니다. 스키마 파일 형식이 적용 됩니다. 이 스키마의 버전 2.0에 추가 하는 사용자 지정 형식 및 특성을 지원 합니다.  매니페스트 스키마가 확장 가능 합니다. 매니페스트 로더 이해 하지 못하는 XML 요소 및 특성을 무시 합니다.  

@@ -16,11 +16,12 @@ caps.latest.revision: "47"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 0abc0bff93da0944ce7e413a83dafc47e375a8a2
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 50904fd36dc3a4f009b87b9daa5c603fdee702ce
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visualize-code"></a>코드 시각화
 Visual Studio의 시각화 및 모델링 도구를 사용하여 기존 코드를 이해하고 응용 프로그램을 설명할 수 있습니다. 이렇게 하면 변경 내용이 코드에 미치는 영향을 시각적으로 알아보고 작업 및 해당 변경 내용으로 인한 위험을 평가할 수 있습니다. 예:  

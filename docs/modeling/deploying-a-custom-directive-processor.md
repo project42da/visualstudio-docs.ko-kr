@@ -12,11 +12,12 @@ caps.latest.revision: "18"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: f020dbd8aef022acaafe0561fba11343e9272ff6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 7c7881c20412ab5ffc3f1c4486958f4b5ca68a1c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-a-custom-directive-processor"></a>사용자 지정 지시문 처리기 배포
 임의의 컴퓨터의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 사용자 지정 지시문 프로세서를 사용하려면 이 항목에서 설명하는 방법 중 하나로 해당 프로세서를 등록해야 합니다.  
@@ -184,7 +185,7 @@ ms.lasthandoff: 10/27/2017
   
  사용자 지정 지시문 프로세서가 GAC에 없는 경우 레지스트리 하위 키는 다음 표와 같습니다.  
   
-|이름|형식|데이터|  
+|name|형식|데이터|  
 |----------|----------|----------|  
 |(기본값)|REG_SZ|(값 설정 안 됨)|  
 |클래스|REG_SZ|**\<Namespace 이름 >. \<클래스 이름 >**|  
@@ -192,7 +193,7 @@ ms.lasthandoff: 10/27/2017
   
  어셈블리가 GAC에 있는 경우 레지스트리 하위 키는 다음 표와 같습니다.  
   
-|이름|형식|데이터|  
+|name|형식|데이터|  
 |----------|----------|----------|  
 |(기본값)|REG_SZ|(값 설정 안 됨)|  
 |클래스|REG_SZ|\<**정규화 된 클래스 이름**>|  

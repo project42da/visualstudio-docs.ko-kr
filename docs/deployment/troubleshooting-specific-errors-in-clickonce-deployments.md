@@ -23,11 +23,12 @@ caps.latest.revision: "13"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.openlocfilehash: 40c679811f137e77909395042d91d0458c874d90
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: ffa7449347fe5e898f2984237dfc8908e3bb2003
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 배포 관련 오류 문제 해결
 이 항목에서는 배포할 때 발생할 수 있는 다음과 같은 일반적인 오류는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 각 문제를 해결 하는 단계를 제공 합니다.  
@@ -91,7 +92,7 @@ ms.lasthandoff: 10/27/2017
 #### <a name="privatepath-settings-in-application-config-file-are-not-honored"></a>응용 프로그램 구성 파일에서 PrivatePath 설정이 적용 되지 않습니다.  
  PrivatePath (Fusion 검색 경로)를 사용 하려면 응용 프로그램이 완전 신뢰 권한을 요청 해야 합니다. 완전 신뢰를 요청 하 한 후 다시 시도 하도록 응용 프로그램 매니페스트를 변경해 보십시오.  
   
-#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>제거 하는 동안 ֲ¸ 을 "응용 프로그램을 제거 하지 못했습니다."  
+#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>제거하는 동안 "응용 프로그램 제거 실패"메시지가 나타납니다.  
  이 메시지는 일반적으로 응용 프로그램이 이미 제거 또는 저장소가 손상 되었음을 나타냅니다. 클릭 한 후 **확인**, **프로그램 추가/제거** 항목이 제거 됩니다.  
   
 #### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>플랫폼 종속성이 설치 되지 않았다 하는 메시지가 나타나면을 설치 하는 동안  

@@ -11,11 +11,12 @@ caps.latest.revision: "7"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: c9cf2ed906cd35f201c13cc2f82f8142f598b901
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 14e0252b4bf9a34c219db09d621bd5b12f7fbb78
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-user-commands-and-actions"></a>사용자 명령 및 작업 작성
 다이어그램에 명령을 추가하고 끌어서 놓기, 클릭, 두 번 클릭 이벤트와 같은 제스처에 응답하여 DSL을 사용자 지정할 수 있습니다.  

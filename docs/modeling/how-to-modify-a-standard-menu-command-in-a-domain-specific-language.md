@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 6e5d17a1a84eb71252956e921522e6eebfd67925
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: f79852eae4b7dfae7345dbf6033a0e1cc0444250
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>방법: 도메인별 언어에서 표준 메뉴 명령 수정
 DSL에서 자동으로 정의되는 일부 표준 명령의 동작을 수정할 수 있습니다. 수정할 수는 예를 들어 **잘라내기** 를 중요 한 정보는 제외 됩니다. 이렇게 하려면 명령 집합 클래스에서 메서드를 재정의합니다. 이러한 클래스는 DslPackage 프로젝트의 CommandSet.cs 파일에서 정의되며 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>에서 파생됩니다.  

@@ -35,11 +35,12 @@ caps.latest.revision: "127"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 57d04543cf604ced1b94632c2f2c3bc566267f85
-ms.sourcegitcommit: ec1c7e7e3349d2f3a4dc027e7cfca840c029367d
+ms.workload: multiple
+ms.openlocfilehash: bc06788e8308a56cb0e38dbca6e9ddb60ce12cd1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="analyze-and-model-your-architecture"></a>아키텍처 분석 및 모델링
 응용 프로그램 모델링 도구를 디자인 및 모델링 앱 및 Visual Studio 아키텍처를 사용 하 여 아키텍처 요구를 충족 하는지 확인 합니다. 

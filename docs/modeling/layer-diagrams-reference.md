@@ -24,11 +24,12 @@ caps.latest.revision: "33"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: ce4a203fd0843fd6b15bfbf85019e85032defbd6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 43901987c9f6f37e7082200f675549021fb63f83
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="dependency-diagrams-reference"></a>종속성 다이어그램: 참조
 Visual Studio에서 사용할 수 있습니다는 *종속성 다이어그램* 시스템의 상위 수준, 논리적 아키텍처를 시각화 합니다. 종속성 다이어그램은 라는 논리적, 추상 그룹으로 시스템의 물리적 아티팩트를 구성 *레이어*합니다. 이들 레이어는 아티팩트가 수행하는 주요 작업 또는 시스템의 주요 구성 요소를 설명합니다. 각 레이어에는 더 세부적인 작업을 설명하는 중첩된 레이어가 포함될 수도 있습니다.  

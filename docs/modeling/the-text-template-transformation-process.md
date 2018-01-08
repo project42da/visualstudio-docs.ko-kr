@@ -12,11 +12,12 @@ caps.latest.revision: "30"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: cc7794959f36134b85fe7d05acf07998312f9361
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 69f0285746709bd34914362912332d46731179c9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="the-text-template-transformation-process"></a>텍스트 템플릿 변형 프로세스
 텍스트 템플릿 변환 프로세스의 입력으로는 텍스트 템플릿 파일을 새 텍스트 파일 출력을 생성 합니다. 예를 들어 텍스트 템플릿을 사용 하 여 Visual Basic 또는 C# 코드를 생성 하거나 HTML 보고서를 생성할 수 있습니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/27/2017
 |구성 요소|설명|사용자 지정 가능한 (Yes/No)|  
 |---------------|-----------------|------------------------------|  
 |엔진|텍스트 템플릿 변환 프로세스를 제어 하는 엔진 구성 요소|아니요.|  
-|Host|호스트는 엔진은 사용자 환경 간의 인터페이스입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]텍스트 변환 프로세스의 호스트가입니다.|예. 사용자 지정 호스트를 작성할 수 있습니다.|  
+|호스트|호스트는 엔진은 사용자 환경 간의 인터페이스입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]텍스트 변환 프로세스의 호스트가입니다.|예. 사용자 지정 호스트를 작성할 수 있습니다.|  
 |지시문 프로세서|지시문 프로세서는 텍스트 템플릿에서 지시문을 처리 하는 클래스입니다. 텍스트 서식 파일에 입력된 원본에서 데이터를 제공 하도록 지시문을 사용할 수 있습니다.|예. 사용자 지정 지시문 프로세서를 작성할 수 있습니다.|  
   
 ## <a name="the-engine"></a>엔진  

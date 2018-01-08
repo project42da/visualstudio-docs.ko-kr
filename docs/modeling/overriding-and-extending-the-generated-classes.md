@@ -12,11 +12,12 @@ caps.latest.revision: "15"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 81f218f9c0d9cd5d9c6abf8f4f9f0fb78181f4f9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: d794edbb4f554e71e5d65a3e48e5393be61896a9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>생성된 클래스 재정의 및 확장
 DSL 정의 플랫폼 도구 도메인 특정 언어를 기반으로 하는 강력한 집합을 작성할 수 있습니다. 재정의 하 고 DSL 정의에서 생성 되는 클래스를 확장 하 여 확장 하 고 조정 작업을 만들 수 있습니다. 이러한 클래스 DSL 정의 다이어그램에 명시적으로 정의 된 도메인 클래스 뿐 아니라 뿐만 아니라 도구 상자, 탐색기, serialization 및 등을 정의 하는 다른 클래스를 포함 합니다.  

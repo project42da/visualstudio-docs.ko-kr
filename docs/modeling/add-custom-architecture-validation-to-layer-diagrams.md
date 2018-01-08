@@ -12,11 +12,12 @@ caps.latest.revision: "42"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: fe3f64cf11542d0b8098bb9a47c02a2a47647253
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 130d53cb0e32add0251306c261cf456459f2192a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가
 Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델에 대 한 프로젝트의 소스 코드를 소스 코드 종속성 다이어그램의 종속성을 준수 하는지 확인할 수 있습니다. 표준 유효성 검사 알고리즘이 있지만 고유한 유효성 검사 확장을 정의할 수 있습니다.  

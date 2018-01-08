@@ -19,11 +19,12 @@ caps.latest.revision: "82"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 60840f3d47b43ea84bec66ea7957f613d2379901
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 3ca05f93fd4753c8a00eb1a5dee4c4bc9a2f4efc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="code-generation-and-t4-text-templates"></a>코드 생성 및 T4 텍스트 템플릿
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 *T4 텍스트 템플릿* 은 텍스트 파일을 생성할 수 있는 제어 논리 및 텍스트 블록이 혼합된 것입니다. 제어 논리는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 또는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서 프로그램 코드 조각으로 작성되었습니다. Visual Studio 2015 업데이트 2 이상에서는 T4 템플릿 지시문에 C# 버전 6.0 기능을 사용할 수 있습니다. 생성된 파일은 웹 페이지, 리소스 파일 또는 임의 언어로 작성된 프로그램 소스 코드와 같은 임의 종류의 텍스트일 수 있습니다.  
@@ -96,7 +97,7 @@ namespace Fabrikam.FirstJob
   
  텍스트 템플릿 변환 기능을 *T4*라고 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성](../modeling/run-time-text-generation-with-t4-text-templates.md)  
  텍스트 파일을 생성하는 응용 프로그램에서 미리 컴파일된 텍스트 템플릿을 사용하면 안정적으로 쉽게 텍스트를 정의할 수 있습니다. 그러나 런타임에 변경되는 텍스트 템플릿에는 이 방법을 사용할 수 없습니다.  
   

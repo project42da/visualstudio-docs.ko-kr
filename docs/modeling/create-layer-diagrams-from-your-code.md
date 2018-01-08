@@ -16,11 +16,12 @@ caps.latest.revision: "64"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 2e98b690fb8ba87dabb7fd8aa76a9aa44c613a38
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: c0a13a32347b7150818fc80b82d0c03dc3fc4f69
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>코드에서 종속성 다이어그램 만들기
 소프트웨어 시스템의 상위 수준, 논리적 아키텍처를 시각화 하려면 만듭니다는 *종속성 다이어그램* Visual Studio에서. 코드가 디자인의 일관성이 유지 되는지을 하려면 종속성 다이어그램을 사용 하 여 코드의 유효성을 검사 합니다. Visual C#.NET 및 Visual Basic.NET 프로젝트에 대 한 종속성 다이어그램을 만들 수 있습니다. 이 기능을 지 원하는 Visual Studio의 버전을 보려면 참조 [아키텍처 및 모델링 도구에 대 한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  

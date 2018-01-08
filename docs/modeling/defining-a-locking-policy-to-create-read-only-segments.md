@@ -11,11 +11,12 @@ caps.latest.revision: "12"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 0ac8ba75920c4b3b8964d473258c162c256139ca
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 93e4393a7b6731a10a00dc309353dba5870c269f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>잠금 정책을 정의하여 읽기 전용 세그먼트 만들기
 불변성 API는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK 프로그램 잠금 일부 또는 전체 도메인 특정 언어 (DSL) 모델을 읽을 있지만 변경 되지 않습니다 수 있도록 허용 합니다. 이 읽기 전용 옵션이 사용할 수, 예를 들어 사용자가 동료 들이 주석 달기 및 DSL 모델 검토를 요청할 수 있지만가 원래 변경할 거부할 수 있도록 합니다.  

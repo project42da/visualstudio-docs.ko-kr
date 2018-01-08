@@ -11,11 +11,12 @@ caps.latest.revision: "4"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 458fc4b2f96480c1f41efd8b80050fd0911b3e85
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: a9d475a535d40af9a254a3f82839a8b733c2343d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="t4-assembly-directive"></a>T4 Assembly 지시문
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디자인 타임 텍스트 템플릿에서는 템플릿 코드에 해당 형식이 사용될 수 있도록 `assembly` 지시문이 어셈블리를 로드합니다. 그 효과는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에 어셈블리 참조를 추가하는 것과 비슷합니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/27/2017
   
  어셈블리 이름은 다음 중 하나여야 합니다.  
   
--   GAC 어셈블리의 강력한 이름(예: `System.Xml.dll`). `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`와 같은 긴 형식도 사용할 수 있습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName>을 참조하십시오.  
+-   GAC 어셈블리의 강력한 이름(예: `System.Xml.dll`). `name="System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"`와 같은 긴 형식도 사용할 수 있습니다. 자세한 내용은 <xref:System.Reflection.AssemblyName>을 참조하세요.  
   
 -   어셈블리의 절대 경로  
   

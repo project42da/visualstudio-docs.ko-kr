@@ -15,11 +15,12 @@ caps.latest.revision: "77"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 48cb7e5a274092a3ed82d2e41137633d12c3be01
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 4bc85e0b5d03af1a34676030144f36457c1366ae
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio용 모델링 SDK - 도메인별 언어
 에 대 한 Modeling SDK를 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 통합할 수 있는 모델을 기반으로 강력한 개발 도구를 만들 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 동일한 방식으로 하나 이상의 모델 정의를 만들고 도구 집합으로 통합할 수 있습니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/27/2017
   
  고급 기술 및 문제 해결에 대 한 지침을 참조 하세요. [Visual Studio DSL 및 도구 확장성 모델링 포럼](http://go.microsoft.com/fwlink/?LinkID=186074)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [도메인별 언어 시작](../modeling/getting-started-with-domain-specific-languages.md)  
   
  [모델, 클래스 및 관계 이해](../modeling/understanding-models-classes-and-relationships.md)  

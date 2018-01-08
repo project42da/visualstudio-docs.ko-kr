@@ -12,11 +12,12 @@ caps.latest.revision: "14"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 870a8d1c08a8ca0fa72cabf47c8e1087a39e70f9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 6cfc93f3e0423f57cd0df5e919854cc1a46a1b3f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>방법: 현재 선택 항목 액세스 및 제약
 도메인 특정 언어에 대 한 명령 또는 제스처 처리기를 작성 하는 경우 사용자 마우스 오른쪽 단추로 클릭 하는 요소를 확인할 수 있습니다. 또한 일부 셰이프나 필드를 선택할 방지할 수 있습니다. 예를 들어 아이콘 데코레이터를 클릭할 때 포함 된 셰이프 대신 선택 되도록 정렬할 수 있습니다. 이런이 방식으로 선택 영역을 제한 하면를 작성 해야 하는 처리기가 줄어듭니다. 또한 하면 손쉽게 decorator를 방지 하기 위해 필요 없이 도형에서 아무 곳 이나 클릭 수 있는 사용자에 대 한 합니다.  
@@ -105,7 +106,7 @@ ms.lasthandoff: 10/27/2017
   
      기본 구현에서 <xref:Microsoft.VisualStudio.Modeling.Diagrams.Diagram.SelectionRules%2A> 속성 선택 영역을 수정 하지 않는 선택 규칙 개체를 가져옵니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음 코드 파일에는 기본적으로 선택 되어 도메인 도형의의 모든 인스턴스를 포함 하려면 선택 영역을 확장 하는 선택 규칙을 만듭니다.  
   
 ```csharp  

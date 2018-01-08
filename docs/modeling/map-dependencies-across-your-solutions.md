@@ -31,11 +31,12 @@ caps.latest.revision: "243"
 author: alexhomer1
 ms.author: ahomer
 manager: douge
-ms.openlocfilehash: 0e0f33505754eb5047a6f8a9ce174c5c07466654
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: fc8d9774c69216136eb2b4c99b379ef1c714997f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="map-dependencies-across-your-solutions"></a>솔루션 전체의 종속성 매핑
 코드 간의 종속성을 파악하려는 경우 코드 맵을 만들어 해당 코드를 시각화합니다. 그러면 전체 파일과 코드 줄을 확인하지 않고도 여러 코드가 서로 맞는지 파악할 수 있습니다.  

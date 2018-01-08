@@ -11,11 +11,12 @@ caps.latest.revision: "9"
 author: alancameronwills
 ms.author: awills
 manager: douge
-ms.openlocfilehash: 44b3ea3d3997ac781b02220316810f00826f2beb
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.workload: multiple
+ms.openlocfilehash: 9eaa07b0fdf0055ea4ba2849f6438882a22cf85e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>방법: 도메인별 언어 디자이너 확장
 사용 하 여 DSL 정의 편집 하는 디자이너 확장을 만들 수 있습니다. 형식의 확장명과 적용할 수 있는 메뉴 명령을 추가 끌어서 제스처 및 특정 유형의 값 또는 관계를 변경할 때 트리거되는 규칙을 두 번 클릭에 대 한 처리기를 추가 합니다. 확장으로는 VSIX Visual Studio Integration Extension ()를 패키지 하 고 다른 사용자에 게 배포할 수 있습니다.  
