@@ -12,16 +12,17 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.openlocfilehash: eb4ca4445af3970828f4212c69c11d9d173d5650
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: data-storage
+ms.openlocfilehash: f288d794040c533f2d00e95d628f7d04e55e96e4
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio에서 entity Framework 도구
-Entity Framework는.NET 개발자가 도메인별 개체를 사용 하 여 관계형 데이터에 사용할 수 있는 개체-관계형 매핑 기술. 대부분의 개발자는 일반적으로 작성 해야 하는 데이터 액세스 코드에 대 한 필요가 없습니다. Entity Framework는 새로운.NET 응용 프로그램에 대 한 기술 모델링 권장된 개체-관계형 매핑을 (ORM).  
+Entity Framework는.NET 개발자가 도메인별 개체를 사용 하 여 관계형 데이터에 사용할 수 있는 개체-관계형 매핑 기술. 개발자들이 보통 작성해야 하는 데이터 액세스 코드가 대부분 필요하지 않게 됩니다. Entity Framework는 새로운.NET 응용 프로그램에 대 한 기술 모델링 권장된 개체-관계형 매핑을 (ORM).  
   
-Entity Framework 도구는 Entity Framework (EF) 응용 프로그램을 빌드할 수 있도록 설계 되었습니다. Entity Framework에 대 한 전체 설명서는 여기: [EF 코어 및 EF 6](https://docs.microsoft.com/ef/)합니다.  
+Entity Framework 도구는 Entity Framework (EF) 응용 프로그램을 빌드할 수 있도록 설계 되었습니다. Entity Framework에 대 한 전체 설명서는 여기: [EF 코어 및 EF 6](/ef/)합니다.  
   
 Entity Framework 도구를 만들 수 있습니다는 *개념적 모델* 기존 데이터베이스 및 다음 그래픽으로 시각화 하 고 개념적 모델을 편집 합니다. 또는 먼저 개념적 모델을 그래픽으로 만든 후 모델을 지원하는 데이터베이스를 생성할 수 있습니다. 이 두 경우 모두 기본 데이터베이스가 변경될 때 모델을 자동으로 업데이트하고 응용 프로그램에 대한 개체 계층 코드를 자동으로 생성할 수 있습니다. 데이터베이스 생성 및 개체 계층 코드 생성 작업은 사용자 지정할 수 있습니다.  
   
