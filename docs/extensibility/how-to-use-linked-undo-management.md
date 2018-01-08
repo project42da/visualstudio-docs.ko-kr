@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 05e10305f7e4c243f799cfe33d4d9b86418eed86
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7a025cdfc14eb39dad7ea2bc72a69f1f260fb583
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-use-linked-undo-management"></a>방법: 연결 된 실행 취소 관리 사용
 연결 된 실행 취소를 동시에 여러 파일에 같은 편집 작업을 취소할 수 있습니다. 예를 들어 헤더 파일 및 Visual c + + 파일을 같은 여러 프로그램 파일에 걸쳐 동시 텍스트가 변경 되는 연결 된 실행 취소가 트랜잭션입니다. 환경의 구현의 실행 취소 관리자에 연결 된 실행 취소 기능이 내장 되어 및 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLinkedUndoTransactionManager> 이 기능을 조작할 수 있습니다. 연결 된 실행은 별도 실행 취소 스택에 실행 취소 단일 단위로 취급 되어야 하는 함께 연결할 수 있는 부모 실행 취소 단위를 통해 구현 됩니다. 연결 된 실행을 사용 하는 절차는 다음 섹션에 자세히 설명 되어 있습니다.  

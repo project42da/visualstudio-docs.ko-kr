@@ -16,11 +16,12 @@ caps.latest.revision: "60"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8ba153c6ec1d9944e889919d1d49817dcd97c9a4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fa1513bcd61ac63fb9d2a59f69a8b2ce22cf5114
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commands-menus-and-toolbars"></a>명령, 메뉴 및 도구 모음
 메뉴와 도구 모음 방식으로 사용자가 VSPackage의 명령에 액세스 합니다. 명령은 문서 인쇄, 보기 새로 고침 또는 새 파일 만들기 등의 작업을 수행하는 함수입니다. 메뉴 및 도구 모음은 사용자에게 명령을 제공하는 편리한 그래픽 방법입니다. 일반적으로 관련 명령은 동일한 메뉴 또는 도구 모음에 함께 클러스터됩니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  이 섹션의 항목에서는 Vspackage에서 명령, 메뉴 및 도구 모음 작동 하는 방법을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [VSPackage에서 사용자 인터페이스 요소를 추가하는 방법](../../extensibility/internals/how-vspackages-add-user-interface-elements.md)  
  명령 테이블 형식 지정 자세히 설명 합니다.  
   

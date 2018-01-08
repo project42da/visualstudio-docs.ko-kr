@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e85ad4c4027a27b33f2f96284df80f852ffe3b85
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e1463fe22d4b08933112ca1ad0cf28f38a4e102c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-routing-algorithm"></a>명령 라우팅 알고리즘
 Visual Studio에서 명령은 여러 가지 서로 다른 구성 요소에 의해 처리 됩니다. 명령 (global 라고도 함)은 가장 바깥쪽 컨텍스트를 현재 선택 영역을 기반으로 하는 가장 안쪽의 컨텍스트에서 라우팅됩니다. 자세한 내용은 참조 [가용성](../../extensibility/internals/command-availability.md)합니다.  

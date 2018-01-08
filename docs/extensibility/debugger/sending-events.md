@@ -13,11 +13,12 @@ caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bf4c3b0f494a5825820b8f794ccaf5dc727786e3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2bfdefc3202a026516edb3f9221e0626e1a83b4b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sending-events"></a>이벤트 전송
 디버거와 디버그 엔진 (DE) 간의 통신에 대 한 메커니즘은 DCOM을 기반으로 하는 이벤트 모델. 이벤트는 COM 개체로 전송 되 고, 각 이벤트에 다음을 지정 하는 매개 변수:  
@@ -32,7 +33,7 @@ ms.lasthandoff: 10/31/2017
   
  메서드를 사용 하 여 모든 디버그 이벤트는 전송 [IDebugEventCallback2::Event](../../extensibility/debugger/reference/idebugeventcallback2-event.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [이벤트 소스](../../extensibility/debugger/event-sources-visual-studio-sdk.md)  
  이벤트의 두 원본에 설명: 디버그 엔진 (DE) 및 세션 (SDM) 관리자를 디버그 합니다.  
   

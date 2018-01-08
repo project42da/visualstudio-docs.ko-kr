@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 50db39e9a6b864df8876054b455b169531260a9a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e4612f5779d6177d58cef7f087ef6e11bbe4ebd9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="inside-the-core-editor"></a>코어 편집기 내
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 코어 편집기는 집합을 수정 하 고 텍스트 정보를 쿼리할 수 있는 몇 가지 구성 요소입니다. 코어 편집기 레거시 API를 사용 하 여 사용자 지정, 편집기 어댑터를 통해 라우팅되는 이러한 사용자 지정을 사용 하려면 계속 수 있습니다. 그러나 것, 사용자 지정 항목을 새 편집기 API 조정 합니다.  
@@ -36,7 +37,7 @@ ms.lasthandoff: 10/31/2017
   
 -   언어 서비스와의 통합  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [코어 편집기 레거시 API를 사용 하 여 인스턴스화](../extensibility/instantiating-the-core-editor-by-using-the-legacy-api.md)  
  사용 하는 방법에 대 한 단계별 지침을 제공 <xref:Microsoft.VisualStudio.Shell.Interop.IVsEditorFactory.CreateEditorInstance%2A> 편집기 코어의 인스턴스를 만들려고 합니다.  
   

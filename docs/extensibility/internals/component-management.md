@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 73a3100252dd5ddfcebd791588a4041c8d588e8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 398986499732a36819808b07f05f7d6b46787a94
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="component-management"></a>구성 요소 관리
 Windows Installer에서 작업의 단위는 Windows Installer 구성 요소가 (WICs 또는 정당한 구성 요소 라고도 함) 라고 합니다. GUID는 설치 및 Windows Installer를 사용 하 여 설치를 사용한 참조의 기본 단위를 각 WIC를 식별 합니다.  

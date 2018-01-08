@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8952612c9502704f79410461d29ca8ab87fa3ee4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e6dfeb31ab062d5182b56ba450450d41a6dab807
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commenting-code-in-a-legacy-language-service"></a>레거시 언어 서비스의 코드를 주석 달기
 프로그래밍 언어에는 일반적으로 코드를 주석 처리 하거나 주석을 달 수 있는 방법을 제공 합니다. 주석을 코드에 대 한 추가 정보를 제공 하지만 컴파일 또는 해석 하는 동안 무시 하는 텍스트의 섹션입니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 10/31/2017
   
  도 재정의 해야 합니다는 <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> 반환 하는 메서드는 <xref:Microsoft.VisualStudio.Package.CommentInfo> 주석 문자 언어에 대 한 포함 된 구조입니다. C#-스타일 줄 주석 문자는 기본값입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음의 예제 구현은는 <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> 메서드.  
   
 ```csharp  

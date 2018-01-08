@@ -15,16 +15,17 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f7c0bba9b80e4e874f222ce00834f44a2d93e3e7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1ab4f9f41fc2e98fcc9b2f7a9aeec6885e3b3005
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="creating-project-types"></a>프로젝트 형식 만들기
 확장할 수 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 새 프로젝트 형식을 만들어 합니다. 새 프로젝트 형식을 만들려는 몇 가지 개념을 이해 하 고 몇 가지 단계를 완료 해야 합니다. 다음 항목 프로젝트 유형을 만드는 방법에 대 한 개요를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [프로젝트 형식 디자인 결정](../../extensibility/internals/project-type-design-decisions.md)  
  항목, 프로젝트 파일 지 속성 및 새 프로젝트 형식을 만들기 전에 수행 해야 하는 약속 정비 디자인 결정에 설명 합니다.  
   

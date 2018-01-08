@@ -17,11 +17,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 32e9c8ffa2a9ca2bba889436f37cc4f5c3d188bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 47316f6bd47d5d528dc6e36dfe3a4bcb67e00909
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createpkgdef-utility"></a>CreatePkgDef 유틸리티
 매개 변수로 Visual Studio 확장에 대해.dll 파일을 사용 하 고.dll 함께.pkgdef 파일을 만듭니다. 그렇지 않으면 작성 될 수 있는 시스템 레지스트리에 확장이 설치 될 때 모든 정보를 포함 하는.pkgdef 파일.  
@@ -37,7 +38,7 @@ CreatePkgDef /out=FileName [/codebase] [/assembly] AssemblyPath
   
 ## <a name="arguments"></a>인수  
  /out =`FileName`  
- 필수 요소. .Pkgdef 출력 파일의 이름을 설정`FileName`합니다.  
+ 필수. .Pkgdef 출력 파일의 이름을 설정`FileName`합니다.  
   
  /codebase  
  선택 사항입니다. 코드 베이스 유틸리티에 강제로 등록 합니다.  

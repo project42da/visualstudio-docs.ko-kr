@@ -18,11 +18,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 81cacbcc3f7573b9386fb2816650d8c96508b613
-ms.sourcegitcommit: f36eb7f989efbdbed0d0a087afea8ffe27d8ca15
+ms.workload: vssdk
+ms.openlocfilehash: 6e76a8880e488177f12cfb949ec46e95fd825986
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/14/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-use-wizards-with-project-templates"></a>방법: 프로젝트 템플릿에 마법사 사용
 Visual Studio에서는 사용자가 템플릿을 사용하여 프로젝트를 만들 때 사용자 지정 코드를 실행할 수 있도록 설정하여 구현 시 <xref:Microsoft.VisualStudio.TemplateWizard.IWizard> 인터페이스를 제공합니다.  
@@ -310,6 +311,8 @@ namespace $safeprojectname$
      다음에 유의 `$custommessage$` 마법사 사용자 입력된 폼에 입력 된 텍스트도 대체 되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualStudio.TemplateWizard.IWizard>   
- [템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)   
- [WizardExtension 요소(Visual Studio 템플릿)](../extensibility/wizardextension-element-visual-studio-templates.md)
+
+<xref:Microsoft.VisualStudio.TemplateWizard.IWizard>   
+[템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)  
+[WizardExtension 요소(Visual Studio 템플릿)](../extensibility/wizardextension-element-visual-studio-templates.md)  
+[Visual Studio 템플릿에서 NuGet 패키지](/nuget/visual-studio-extensibility/visual-studio-templates)

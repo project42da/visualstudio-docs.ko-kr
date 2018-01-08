@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: bb60f482edeea1271c0f864fd5b907138e83d103
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 66ac0837649b42dc238eac57829c713b2bf83e3a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-open-project-specific-editors"></a>방법: 프로젝트 관련 편집기 열기
 프로젝트에서 열리는 항목 파일에는 기본적으로 해당 프로젝트에 대 한 특정 편집기에 바인딩되어 있는 경우 프로젝트 프로젝트 관련 편집기를 사용 하 여 파일을 열어야 합니다. 편집기를 선택 하기 위한에서 IDE의 메커니즘으로 파일을 위임할 수 없습니다. 예를 들어 표준 비트맵 편집기를 사용 하는 대신 프로젝트에 고유한 파일의 정보를 인식 하는 특정 비트맵 편집기를 지정 하려면이 프로젝트 관련 편집기 옵션을 사용할 수 있습니다.  

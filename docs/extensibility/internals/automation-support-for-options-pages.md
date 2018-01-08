@@ -15,11 +15,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8ca9031e623ec7009d4f489931871f093f4c05d5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ffc56e4b36814a8bed7a0f93d66cc87c0b6fc466
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automation-support-for-options-pages"></a>옵션 페이지에 대 한 자동화 지원
 Vspackage는 사용자 지정을 제공할 수 **옵션** 대화 상자에 **도구** 메뉴 (도구 옵션 페이지)에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 있습니다 사용할 수 있도록 자동화 모델을 합니다.  

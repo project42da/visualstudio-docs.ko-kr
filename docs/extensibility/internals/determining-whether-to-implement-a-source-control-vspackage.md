@@ -13,11 +13,12 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 808f2fda26046962eada377f8a204351adef19bf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 88281496c2e8350f910feda7934e2b55a494243b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-whether-to-implement-a-source-control-vspackage"></a>소스 제어 VSPackage 구현 여부를 결정
 이 섹션 소스 제어 통합 적절 한 경로 선택 하는 방법에 대 한 솔루션 및 제공 광범위 한 지침을 확장 하기 위한 소스 제어 플러그 인 및 소스 제어 Vspackage의 선택 항목에서는 합니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d926a498549e868e478d83b7930f5e569f49ce20
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d41c1bf063ea074df217934a00f73291a10e051d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-implement-error-markers"></a>방법: 오류 마커를 구현 합니다.
 오류 표식 (또는 빨간색 물결 무늬 밑줄로)은 가장 어려운 텍스트 편집기 사용자 지정을 구현 합니다. 그러나 VSPackage의 사용자에 게 이점을 제공 하는 데 드는 비용이 훨씬 보다 클 수 있습니다. 오류 표식 언어 파서 따라 빨간색 구불구불한 또는 물결 모양의 선으로 잘못 된 경우 텍스트를 미세 하 게 표시 합니다. 잘못 된 코드를 시각적으로 표시 하 여 프로그래머에 도움이 됩니다.  

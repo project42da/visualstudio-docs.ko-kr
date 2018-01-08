@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8061c419f81493e56a58df8fefbe4d3362d43e46
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 753f916d148675afd7313afc8673232f22280b7d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="security-issues"></a>보안 문제
 Visual Studio를 사용 하는 프로그램을 디버깅 하려면 권한만 필요한 프로그램을 실행 하는 개발자가 알아야 하는 것과 같은 됩니다. 대부분의 경우 (인터넷 정보 서비스 같은 다른 서비스와 관련 된 경우가 더 높은 수준의 권한 요구할 수 있음)에 대 한 원격 디버깅 포함 됩니다.  

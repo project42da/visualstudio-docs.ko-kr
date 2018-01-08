@@ -14,11 +14,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 909385cbf2b5fceb8d55ebe24aba763ccdf7e98a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: dae98128d6f56399a2228fd00ec5a5402cd07f33
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pendingbpstateinfo"></a>PENDING_BP_STATE_INFO
 코드 위치에 바인딩할 준비가 된 중단점의 상태에 대 한 정보를 포함 합니다.  

@@ -15,16 +15,17 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0201d2f282365a028b6251324b07276c995621ba
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 1d0c9e684312468011f63bdfbb72d1cdadba6b08
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-project-and-project-item-templates"></a>프로젝트 및 프로젝트 항목 템플릿 추가
 표준을 사용 하 여 새 프로젝트 및 프로젝트 항목을 추가 하는 것에 대 한 지원을 제공 해야 사용자 고유의 프로젝트 형식을 만들 때 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합 개발 환경 (IDE) 대화 상자. 다음 항목에는 프로젝트와 프로젝트 항목을 추가 하기 위한 다양 한 기술을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [프로젝트 컨텍스트](../../extensibility/internals/project-context.md)  
  프로젝트는 대부분의 환경에서 다소 기능에 대 한 컨텍스트 정보를 제공 하는지 설명 합니다.  
   

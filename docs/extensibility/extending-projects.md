@@ -15,11 +15,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 051043583b4be3ce795fab544156c7a1f94d88c8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5e22bbdbbf297fd6eb4580bd53d55c96f2faac17
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-projects"></a>프로젝트 확장
 프로젝트 및 솔루션에는 Visual Studio는 컴파일 및 배포 단위로 코드 및 리소스 파일을 구분 하는 방법입니다. 프로젝트에 대 한 자세한 정보를 찾을 수 [프로젝트 (Visual Studio SDK)](../extensibility/extending-projects.md)합니다.  
@@ -28,7 +29,7 @@ ms.lasthandoff: 10/31/2017
   
  이 단원의 항목에서는 사용자 지정 프로젝트를 만드는 방법 및 다양 한 유형의 Visual Studio 솔루션을 관리 하는 방법에 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [기본 프로젝트 시스템 만들기, 1부](../extensibility/creating-a-basic-project-system-part-1.md)  
  사용자 지정 프로젝트 시스템을 만드는 방법을 설명 합니다.  
   

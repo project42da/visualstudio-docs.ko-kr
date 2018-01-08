@@ -13,11 +13,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 2e590d6fff715aae33ee757460f2b0ba3df31e6e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5f7b7440ff2f42eba1d138872071d4e51d2402c1
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-language-service-and-editor-extensions"></a>언어 서비스 및 편집기 확장 시작
 언어 서비스 기능 개요, 중괄호 일치, IntelliSense, 전구 등 선택한 프로그래밍 언어에 어떤 콘텐츠 형식 추가 하려면 편집기 확장을 사용할 수 있습니다. 모양 및 동작의 예를 들어 텍스트 색 지정, 여백, 장식, 및 기타 시각적 요소 Visual Studio 편집기에서 사용자 지정할 수도 있습니다. 사용자 고유의 유형의 콘텐츠를 정의 하 고 모양 및 동작 콘텐츠에 표시 되는 텍스트 뷰를 지정할 수도 있습니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="managing-extensions"></a>확장 관리  
  Visual studio 확장에 나열 됩니다 **확장명 및 업데이트** (에 **도구** 메뉴). 실험적 인스턴스에서 확장을 테스트 하는 경우에 표시 됩니다 **확장명 및 업데이트** 실험적 인스턴스에서 하지만 개발 인스턴스에 나타나지 않습니다.  
   
- 자세한 내용은 참조 [찾기 및 사용 하 여 Visual Studio 확장명](../ide/finding-and-using-visual-studio-extensions.md)합니다.  
+ 자세한 내용은 [Visual Studio 확장명 찾기 및 사용](../ide/finding-and-using-visual-studio-extensions.md)을 참조하세요.  
   
 ## <a name="using-templates-to-create-editor-extensions"></a>편집기 확장을 만드는 템플릿을 사용 하 여  
  분류자, 장식 및 여백을 사용자 지정 하는 MEF 확장을 만드는 편집기 서식 파일을 사용할 수 있습니다. C# 및 Visual Basic 프로젝트에 대 한 템플릿이 있습니다. 자세한 내용은 참조 [편집기 항목 템플릿을 사용 하 여 확장을 만드는](../extensibility/creating-an-extension-with-an-editor-item-template.md)합니다.  

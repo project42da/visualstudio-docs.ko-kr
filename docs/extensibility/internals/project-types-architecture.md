@@ -13,16 +13,17 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 86ff1ed0b616eb52d57755e7537642e4f086c1f5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 34402ae0b998d4ae534507e23ffa31e0d7cef9bb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-types-architecture"></a>프로젝트 형식 아키텍처
 이 섹션에서는 프로젝트 형식에서의 아키텍처에 대 한 자세한 정보 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [프로젝트 모델의 요소](../../extensibility/internals/elements-of-a-project-model.md)  
  프로젝트 형식을 사용할 수 있는 서비스 및 구현 해야 하는 인터페이스를 나열 합니다.  
   

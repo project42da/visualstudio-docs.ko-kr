@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 93db7526e7d6ba3eccf86e8c9769a1d9e9af3519
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 622c0d4a75289e5025051b339b959a6b0b56442d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-turn-off-compatibility-warnings-for-source-control-plug-ins"></a>방법: 소스 제어 플러그 인에 대 한 호환성 경고를 해제
 사용자의 소스 제어를 적용 하는 경우 몇 가지 호환성 경고를 표시 될 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 제공 경고 소스 제어 플러그 인의 기능에 좌우 되며 자세한 다음과 같이 비활성화할 수 있습니다.  

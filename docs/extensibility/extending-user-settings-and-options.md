@@ -17,11 +17,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e8378114348e2cb384ab88c83e36bafc7294d871
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7cfc8b86a7a92c075d83c5693ddd6c49ddf5c9c3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-user-settings-and-options"></a>확장 사용자 설정 및 옵션
 Visual Studio에서 사용자 기본 설정을 유지 하기 위해 다음 두 가지가 있습니다. **도구 / 옵션** 다양 한 종류의 일반 및 언어 관련 설정에 대 한 고유한 값을 설정 하려면 사용자가 페이지를 사용 합니다. 사용자 설정 일반 Visual Studio 구성 속성을 지정할 수 있게 합니다. 옵션 페이지에 대 한 자세한 내용은 참조 [옵션 및 옵션 페이지](../extensibility/internals/options-and-options-pages.md)합니다. 사용자 설정에 대 한 자세한 내용은 참조 [사용자 설정에 대 한 지원을](../extensibility/internals/support-for-user-settings.md)합니다.  

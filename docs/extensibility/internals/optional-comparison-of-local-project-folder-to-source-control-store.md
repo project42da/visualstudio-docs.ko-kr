@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cde0a7c34fe81c86d9f500bb1800006e5291ee92
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: cbf4e9f2ccbe895db79115949818345c62245f71
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optional-comparison-of-local-project-folder-to-source-control-store"></a>소스 제어 저장소를 로컬 프로젝트 폴더의 선택적 비교
 소스 제어 플러그 인 API 1.2 로컬 프로젝트 폴더와 소스 제어 간의 비교는 함수를 사용 하 여 수행 됩니다 [SccDirQueryInfo](../../extensibility/sccdirqueryinfo-function.md) 및 [SccDirDiff](../../extensibility/sccdirdiff-function.md)합니다.  

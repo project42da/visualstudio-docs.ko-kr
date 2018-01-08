@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5dcad9882b1c72c15837529d736eeabff58f3826
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d5089d87156bd5eb191176fe73ab19a01d497b90
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guidsymbol-element"></a>GuidSymbol 요소
 `GuidSymbol` 요소 메뉴, 그룹 또는 명령 나타내는 guid: id 쌍의 GUID를 포함 합니다. 제공 되는 ID는 `IDSymbol` 요소에는 `GuidSymbol` 요소입니다. `GuidSymbol` 요소에는 `name` 특성에 포함 된 GUID에 대 한 알기 쉬운 이름을 지정 하는 `value` 특성입니다.  
@@ -34,14 +35,14 @@ ms.lasthandoff: 10/31/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|name|필수 요소. GUID 기호와의 이름입니다.|  
-|값|필수 요소. GUID 기호와의 GUID입니다.|  
+|name|필수. GUID 기호와의 이름입니다.|  
+|값|필수. GUID 기호와의 GUID입니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

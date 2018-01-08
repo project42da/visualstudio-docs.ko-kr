@@ -15,11 +15,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: cf34a3fe708a6ecab200262224da395b9fa37ecb
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: fd45ebf8be2732cded5c84f18338f104b76840cf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="considerations-for-unloading-and-reloading-nested-projects"></a>중첩 된 프로젝트 언로드 및 다시 로드에 대 한 고려 사항
 중첩 된 프로젝트 형식을 구현할 때 언로드되고 프로젝트 다시 로드 하는 경우 추가 단계를 수행 해야 합니다. 수신기 솔루션 이벤트를 알릴 올바르게를 올바르게 올려야는 `OnBeforeUnloadProject` 및 `OnAfterLoadProject` 이벤트입니다.  

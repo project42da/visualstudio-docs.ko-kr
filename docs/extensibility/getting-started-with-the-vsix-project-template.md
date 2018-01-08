@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 33f29ebabbb40e747b2b321fcb1b3b5598284a28
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c87fd485a0d682dc21de21dfe32b83cfc29b520a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="getting-started-with-the-vsix-project-template"></a>VSIX 프로젝트 템플릿을 사용 하 여 시작 하기
 확장 프로그램을 만들려면 또는 기존 배포에 대 한 확장을 패키지 하려면 VSIX 프로젝트 템플릿을 사용할 수 있습니다. VSIX 프로젝트 템플릿을는 버전, Visual Basic 및 Visual C# 및 Visual Studio SDK의 일부로 설치 됩니다.  

@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e0b0c883293cd01e21facfcc2e4483d2c5bbf164
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: eb61257b80e3f8b4a09819b2b037f342e2ecbee0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-the-program"></a>프로그램을 등록합니다.
 디버그 엔진에는 포트를 가져온 후 나타내는 [IDebugPort2](../../extensibility/debugger/reference/idebugport2.md) 인터페이스는 프로그램을 디버깅할 수 있도록 다음 단계는 포트에 등록 합니다. 등록 되 면 프로그램은 다음과 같은 방법 중 하나를 통해 디버깅을 위해 제공 됩니다.  

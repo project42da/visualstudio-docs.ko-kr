@@ -19,11 +19,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8100c43578c11ae73f26764df74aa17caccc3611
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 7d7acd147fd8d2b73b2172900baf7e1f49808e9a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="session-debug-manager"></a>세션 디버그 관리자
 세션 디버그 관리자 (SDM)는 개수에 관계 없이 원하는 수의 여러 컴퓨터에서 여러 프로세스에서 프로그램을 디버깅 디버그 엔진 (DE)을 관리 합니다. 멀티플렉서 디버그 엔진에 뿐은 SDM IDE에 디버그 세션의 통합된 뷰를 제공 합니다.  

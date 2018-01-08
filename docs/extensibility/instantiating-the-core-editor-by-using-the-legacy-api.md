@@ -13,11 +13,12 @@ caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a82f420203b88bb94531401d061493621f3eba93
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e508bda0b22c798246b0f6abf4dfb03c41a92d6d
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="instantiating-the-core-editor-by-using-the-legacy-api"></a>코어 편집기 레거시 API를 사용 하 여 인스턴스화
 편집기는 텍스트 삽입, 삭제, 복사 및 붙여넣기 등의 기능을 편집 합니다. 텍스트 색 지정, 들여쓰기 및 IntelliSense 문 완성 등의 언어 서비스에서 제공 하는 설정과 이러한 함수를 결합 합니다.  

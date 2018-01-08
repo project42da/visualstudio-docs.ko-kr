@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e4f74912dc5233cd62a4d35465d34c70e376c1df
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ee9d108e7a7a6a5bd971b20c12858edf28ac0cf3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="resources-in-vspackages"></a>Vspackage의 리소스
 자체 관리 되는 VSPackage 또는 네이티브 위성 UI Dll에 관리 되는 위성 Dll에서에서 지역화 된 리소스를 포함할 수 있습니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 10/31/2017
   
  설정 <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> 이런이 방식으로 나타내는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 검색 되는 경우 리소스에 대 한 예를 들어를 사용 하 여 관리 되지 않는 위성 Dll을 무시 해야 <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>합니다. 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 동일한 리소스 ID를 포함 하는 둘 이상의 리소스가 발견 찾은 첫 번째 리소스를 사용 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제는 도구 창 아이콘의 관리 되는 표현입니다.  
   
 ```  

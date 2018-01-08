@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: c167c0a0f0a9dd0c14b92f27c0d9d862b5157072
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3e8157d6ecede516ca1dcb2900cf081c11a2b790
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="sample-implementation-of-locals"></a>지역 변수의 샘플 구현
 > [!IMPORTANT]
@@ -47,7 +48,7 @@ ms.lasthandoff: 10/31/2017
   
 10. Visual Studio 호출 [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) 에 대 한 각 지역 변수의 이름, 값 및 형식을 가져올 수 있습니다. 이에 표시 되는 정보는 **지역** 창.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [GetMethodProperty 구현](../../extensibility/debugger/implementing-getmethodproperty.md)  
  구현을 설명 [GetMethodProperty](../../extensibility/debugger/reference/idebugexpressionevaluator-getmethodproperty.md)합니다.  
   

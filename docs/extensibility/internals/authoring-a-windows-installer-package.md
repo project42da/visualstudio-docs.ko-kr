@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5f646e2234adf0eb0117f154838b15d7b3aa200e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2055f57e78c348f3f8e53187126588f382f0b944
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="authoring-a-windows-installer-package"></a>Windows Installer 패키지를 작성합니다.
 데이터 드라이브는 Windows Installer 모델. 레지스트리 항목을 쓰고 파일을 복사 하는 절차적 스크립트를 작성 하는 대신 예를 들어 작성 파일 및 레지스트리 데이터를 포함 하는 데이터베이스 테이블의 행과 열입니다.  

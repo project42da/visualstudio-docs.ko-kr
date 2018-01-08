@@ -17,11 +17,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 577010320dc4aa0a726e7c0befba8173245681e7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3323d317ac8b04731d1573d5c1a05150e012cbfa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-language-service-essentials"></a>레거시 언어 서비스 Essentials
 Visual Studio에는 프로그래밍 언어를 통합 하는 언어 서비스를 제공 해야 합니다. 이 항목에서는 레거시 언어 서비스에서 사용할 수 있는 기능을 설명 합니다.  
@@ -36,7 +37,7 @@ Visual Studio에는 프로그래밍 언어를 통합 하는 언어 서비스를 
 |기능|설명|  
 |-------------|-----------------|  
 |구문 색 지정|서로 다른 색 및 언어의 다양 한 요소에 대 한 글꼴 스타일을 표시 하려면 편집기 보기를 하면 됩니다. 이러한 구분을 읽고 편집할 파일을 쉽게 만들 수 있습니다.<br /><br /> 일반 정보를 참조 하십시오. [레거시 언어 서비스의 구문 색 지정](../../extensibility/internals/syntax-coloring-in-a-legacy-language-service.md)합니다.<br /><br /> MPF ()는 관리 패키지 프레임 워크에서이 기능에 대 한 정보를 참조 하십시오. [레거시 언어 서비스의 구문 색 지정](../../extensibility/internals/syntax-colorizing-in-a-legacy-language-service.md)합니다.|  
-|문 완성 |문 또는 키워드를 입력 하는 사용자가 시작을 완료 합니다. 문 완성 사용자가 입력 및 오류에 대 한 더 적은 가능성 어려운 문을 더 쉽게 입력할 수 있습니다.<br /><br /> 일반 정보를 참조 하십시오. [레거시 언어 서비스에서 문 완성](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)합니다.<br /><br /> MPF에서이 기능에 대 한 정보를 참조 하십시오. [레거시 언어 서비스에서 단어 완성](../../extensibility/internals/word-completion-in-a-legacy-language-service.md)합니다.|  
+|문 완성|문 또는 키워드를 입력 하는 사용자가 시작을 완료 합니다. 문 완성 사용자가 입력 및 오류에 대 한 더 적은 가능성 어려운 문을 더 쉽게 입력할 수 있습니다.<br /><br /> 일반 정보를 참조 하십시오. [레거시 언어 서비스에서 문 완성](../../extensibility/internals/statement-completion-in-a-legacy-language-service.md)합니다.<br /><br /> MPF에서이 기능에 대 한 정보를 참조 하십시오. [레거시 언어 서비스에서 단어 완성](../../extensibility/internals/word-completion-in-a-legacy-language-service.md)합니다.|  
 |중괄호 일치|중괄호 등의 문자 쌍이 강조 표시 합니다. 때 사용자 등의 형식은 닫는 문자 "을 (를)", 중괄호 일치와 같은 여는 문자가, 해당 강조 표시 "{"입니다. 문자를 포함 하는 여러 수준의 경우이 기능은 사용자가 바깥쪽 문자 쌍이 올바른지 확인 합니다.<br /><br /> MPF에서이 기능에 대 한 정보를 참조 하십시오. [레거시 언어 서비스에서 중괄호 일치](../../extensibility/internals/brace-matching-in-a-legacy-language-service.md)합니다.|  
 |매개 변수 정보 도구 설명|현재 사용자가 입력 하는 오버 로드 된 메서드에 대 한 가능한 서명 목록에 표시 됩니다.<br /><br /> 일반 정보를 참조 하십시오. [레거시 언어 서비스에 대 한 매개 변수 정보](../../extensibility/internals/parameter-info-in-a-legacy-language-service1.md)합니다.<br /><br /> MPF에서이 기능에 대 한 정보를 참조 하십시오. [레거시 언어 서비스에 대 한 매개 변수 정보](../../extensibility/internals/parameter-info-in-a-legacy-language-service2.md)합니다.|  
 |오류 표식|빨강 물결선 밑줄, 라고도 구불구불한, 구문이 잘못 된 텍스트 아래에 표시 됩니다. 사용자가의 철자가 잘못 된 키워드, 닫히지 않은 괄호가, 잘못 된 문자 및 유사한 오류가 인식 하 게 하는 일반적으로 오류 표식이 사용 됩니다.<br /><br /> MPF 클래스 오류 표식에는 자동으로 처리 됩니다는 <xref:Microsoft.VisualStudio.Package.AuthoringSink.AddError%2A> 의 메서드는 <xref:Microsoft.VisualStudio.Package.AuthoringSink> 클래스입니다.|  

@@ -15,11 +15,12 @@ caps.latest.revision: "42"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a5072aef90e08d645bff2a1bb6800e409e7d2104
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0cc4913141350b0e0efa65ec0b4db913b578460b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="legacy-language-service-extensibility"></a>레거시 언어 서비스 확장성
 IDE에서 소스 코드를 편집 하기 위한 언어별 지원을 제공 하는 언어 서비스 합니다.  
@@ -28,7 +29,7 @@ IDE에서 소스 코드를 편집 하기 위한 언어별 지원을 제공 하�
   
  이 섹션에서는 구조와 레거시 언어 서비스의 구현을 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [레거시 언어 서비스 마이그레이션](../../extensibility/internals/migrating-a-legacy-language-service.md)  
  최신 버전으로 Visual Studio 2008에서 언어 서비스를 업데이트 하는 방법에 설명 합니다.  
   

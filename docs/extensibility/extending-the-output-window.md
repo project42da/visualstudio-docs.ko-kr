@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8e183413446bbca2ffed0642619ab63538fae0f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8fa99e2c741d11c79cb41226e3958b04d0265621
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-output-window"></a>출력 창 확장
 **출력** 창은 텍스트 창 읽기/쓰기의 집합입니다. Visual Studio에는 이러한 기본 제공 창이: **빌드**, 프로젝트에서 빌드에 대 한 메시지를 통신 및 **일반**는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE에 대 한 메시지를 통신 합니다. 프로젝트 가져오기에 대 한 참조는 **빌드** 창을 통해 자동으로 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> 인터페이스 메서드 및 Visual Studio에 대 한 직접 액세스를 제공는 **일반** 통해 창은 <xref:Microsoft.VisualStudio.Shell.Interop.SVsGeneralOutputWindowPane> 서비스입니다. 기본 제공 창과 수 만들고 사용자 고유의 사용자 지정 작업창을 관리 합니다.  

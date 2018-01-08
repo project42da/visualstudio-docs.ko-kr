@@ -18,16 +18,17 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 08502ab2e1161d753323642589ed00b00ed94ad2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f95675f420284b9d67a6d36ac30b3e71f085e565
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="optimizing-menu-and-toolbar-commands"></a>메뉴 및 도구 모음 명령 최적화
 Vspackage 및 해당 입력 한 명령에 추가 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 꽉된 UI 발생할 수 있습니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]UI 명령을 혼동을 최소화 하기 위해 방법을 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [명령을 사용 가능하게 지정](../../extensibility/internals/making-commands-available.md)  
  가 중 시키는 최소화 하기 위한 일반적인 지침을 제공 된 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] Vspackage를 추가 하면 UI입니다.  
   

@@ -13,11 +13,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 51ed8cd351a306c3992b4b6c9fcc2231a90085f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ae692249ea952970b096825c8f6968158eb2f17f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-priority"></a>프로젝트 우선 순위
 프로젝트 항목에는 일반적으로 솔루션에 프로젝트를 하나만의 구성원은 합니다. 따라서 IDE 쉽게 확인할 수 있는 프로젝트 항목을 열려면 사용 됩니다. 그러나 항목이 둘 이상의 프로젝트의 멤버인 경우 IDE는 항목을 열에 대 한 최상의 프로젝트를 확인할 우선 순위 체계를 사용 합니다.  

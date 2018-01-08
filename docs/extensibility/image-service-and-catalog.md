@@ -11,11 +11,12 @@ caps.latest.revision: "37"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f5813788834a7a5a99c10fe6dafc35a300bac007
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 6f5d31e28c47dbcd4f17f7f1e1bc0ac6a8755d5b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="image-service-and-catalog"></a>이미지 서비스 및 카탈로그
 이 cookbook 지침과 Visual Studio 이미지 서비스 및 Visual Studio 2015에 도입 된 이미지 카탈로그에 대 한 유용한 정보를 포함 합니다.  
@@ -108,7 +109,7 @@ ms.lasthandoff: 10/31/2017
 |-|-|  
 |**하위 요소**|**정의**|  
 |가져오기|현재 매니페스트에서 사용 하기 위해 지정 된 매니페스트 파일의 기호를 가져옵니다.|  
-|Guid|GUID를 나타내는 기호와 GUID 서식 지정 일치 해야 합니다.|  
+|GUID|GUID를 나타내는 기호와 GUID 서식 지정 일치 해야 합니다.|  
 |ID|ID를 나타내는 기호와 음수가 아닌 정수 여야 합니다.|  
 |문자열|기호는 임의의 문자열 값을 나타냅니다.|  
   
@@ -149,7 +150,7 @@ ms.lasthandoff: 10/31/2017
 |||  
 |-|-|  
 |**특성**|**정의**|  
-|Guid|[필수] 이미지 모니커의 GUID 부분|  
+|GUID|[필수] 이미지 모니커의 GUID 부분|  
 |ID|[필수] 이미지 모니커 ID 부분|  
 |AllowColorInversion|[선택 사항 기본 true] 이미지에 프로그래밍 방식으로 어두운 배경을 사용 하는 경우 반전 된 색을 가질 수 있는지 여부를 나타냅니다.|  
   
@@ -206,7 +207,7 @@ ms.lasthandoff: 10/31/2017
 |||  
 |-|-|  
 |**특성**|**정의**|  
-|Guid|[필수] 이미지 모니커의 GUID 부분|  
+|GUID|[필수] 이미지 모니커의 GUID 부분|  
 |ID|[필수] 이미지 모니커 ID 부분|  
 |외부|[선택 사항 기본값: false] 이미지 모니커 이미지는 현재 매니페스트를 참조 하는지 여부를 나타냅니다.|  
   

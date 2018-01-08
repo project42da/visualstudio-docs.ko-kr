@@ -15,11 +15,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 13a2a8b584af507f8937fd6abb46c85f329de0b6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 09597130864ae0c1e79ef7470c58b25dde8a9263
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="font-and-color-overview"></a>글꼴 및 색 개요
 이 항목의 텍스트 글꼴 및 색 설정에 설명 된 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE). 또한 범주 및 표시 항목의 개념을 소개 하 고 Vspackage 및 코어 편집기 텍스트 특성을 사용 방법에 대해 설명 합니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
   
      하나의 **범주** 이 메커니즘을 즉 지원, **텍스트 편집기**합니다.  
   
--   다른 모든는 보다 일반적인 좋은 지원 **범주** 및 텍스트를 표시할 때 소스 편집기 이외의 사용자 인터페이스 구성 요소입니다. 자세한 내용은 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>을 참조하십시오.  
+-   다른 모든는 보다 일반적인 좋은 지원 **범주** 및 텍스트를 표시할 때 소스 편집기 이외의 사용자 인터페이스 구성 요소입니다. 자세한 내용은 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFontAndColorDefaultsProvider>을 참조하세요.  
   
 ## <a name="core-editor-text-settings"></a>코어 편집기 텍스트 설정  
  언어 서비스 개체의 핵심 편집기에 대 한 글꼴 및 색 설정에 따라 관리 됩니다는 **텍스트 EditorCategory** 에 **설정에 대 한 표시** 의 드롭다운 목록 상자는 **글꼴 및 색** 속성 페이지.  
@@ -70,7 +71,7 @@ ms.lasthandoff: 10/31/2017
   
 -   잘 정의 하 고 최적화 된 색 지정 메커니즘입니다.  
   
-     자세한 내용은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>을 참조하십시오.  
+     자세한 내용은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsColorizer>을 참조하세요.  
   
 -   기본 제공 표시 항목을 사용 하는 둘 다 수의 **텍스트 EditorCategory** 및 확장 하 고 있습니다.  
   

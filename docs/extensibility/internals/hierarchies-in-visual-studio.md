@@ -15,11 +15,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4a651267ed279fa5efaf14efb4f1f866794c5cc3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e4b0bc2e7c60a4b474f54fd32fd522712326c157
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchies-in-visual-studio"></a>Visual Studio에서 계층 구조
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 으로 프로젝트를 표시 하는 통합된 개발 환경 (IDE)는 *계층*합니다. IDE에서 계층은 각 노드에 연결 된 속성 집합에 있는 노드의 트리입니다. A *프로젝트 계층* 프로젝트의 항목, 항목의 관계 및 항목의 관련된 속성 및 명령을 저장 하는 컨테이너입니다.  

@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5a16698863e92e5bbae4e888502788dd76b04f56
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f7058d097ab3eb6faeb8acf96b98ae6346887361
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-items-to-the-add-new-item-dialog-boxes"></a>항목에 추가 된 새 항목 추가 대화 상자
 항목을 추가 하기 위한 프로세스는 **새 항목 추가** 레지스트리 키를 가진 대화 상자를 시작 합니다. 경로 이름에서 사용할 수 있게 하는 항목에 있는 디렉터리의 AddItemTemplates 섹션에 포함 되어 다음 레지스트리 항목에 나와 있는 것 처럼는 **새 항목 추가** 대화 상자에 배치 됩니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 10/31/2017
   
  "SortPriority" dword:00000064 =  
   
-|이름|형식|데이터 (.rgs 파일)|설명|  
+|name|형식|데이터 (.rgs 파일)|설명|  
 |----------|----------|-----------------------------|-----------------|  
 |@ (기본값)|REG_SZ|#% IDS_ADDITEM_TEMPLATES_ENTRY %|에 대 한 리소스 ID **항목 추가** 템플릿.|  
 |Val TemplatesDir|REG_SZ|%TEMPLATE_PATH%\ SomeProjectItems|에 대 한 대화 상자에 표시 되는 프로젝트 항목의 경로 **새 항목 추가** 마법사.|  

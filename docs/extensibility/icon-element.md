@@ -15,11 +15,12 @@ caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 20e8309e0052f6aa92a0069f0c2138880a7742de
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2787798afe9554601d44a965ae3f12d5ebeab8bb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="icon-element"></a>Icon 요소
 아이콘 태그의 guid 특성은 정의 된 비트맵의 guid입니다.  Id 특성 비트맵 스트립의 슬롯을 선택합니다. 이 요소는 선택적입니다.  이 요소를 생략 하면 값 **guidOfficeIcon:msotcidNoIcon** 암시 됩니다.  
@@ -31,14 +32,14 @@ ms.lasthandoff: 10/31/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|guid|필수 요소. 정의 된 비트맵의 guid입니다.|  
-|ID|필수 요소. 비트맵 스트립의 슬롯을 선택합니다.|  
+|guid|필수. 정의 된 비트맵의 guid입니다.|  
+|ID|필수. 비트맵 스트립의 슬롯을 선택합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   

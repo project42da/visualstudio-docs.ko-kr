@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f03dbae8b320161705c50da06d605cfc335074cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2dedd54aa1db26e38b6f212c616bd38c09018961
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-custom-categories-and-display-items"></a>사용자 지정 범주를 구현 하는 항목 표시
 글꼴의 제어 및 해당 텍스트의 색 VSPackage를 제공할 수는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 사용자 지정 범주 및 표시 항목을 통해 통합된 개발 환경 (IDE).  
@@ -54,7 +55,7 @@ ms.lasthandoff: 10/31/2017
   
 -   두 값을 사용 하 여 레지스트리를 채웁니다.  
   
-    |이름|형식|데이터|설명|  
+    |name|형식|데이터|설명|  
     |----------|----------|----------|-----------------|  
     |범주|REG_SZ|GUID|만든 범주를 식별 하는 GUID입니다.|  
     |패키지|REG_SZ|GUID|범주를 지 원하는 VSPackage 서비스의 GUID입니다.|  
@@ -69,7 +70,7 @@ ms.lasthandoff: 10/31/2017
   
 -   두 값을 사용 하 여 레지스트리를 채웁니다.  
   
-    |이름|형식|데이터|설명|  
+    |name|형식|데이터|설명|  
     |----------|----------|----------|-----------------|  
     |범주|REG_SZ|GUID|그룹을 식별 하기 위해 생성 하는 GUID입니다.|  
     |패키지|REG_SZ|GUID|범주를 지 원하는 서비스의 GUID입니다.|  

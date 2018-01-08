@@ -8,14 +8,15 @@
 ## [CPU 사용량 분석(ASP.NET)](quickstart-cpu-usage-aspnet.md)
 # 자습서
 ## [Visual Studio에서 응용 프로그램 성능 프로파일링](beginners-guide-to-performance-profiling.md)
+## [Visual Studio에서 프로필 메모리 사용량](memory-usage.md)
 # 개념
 ## [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](running-profiling-tools-with-or-without-the-debugger.md)
 # 방법 가이드
-## [메모리 사용 분석](memory-usage.md)
-### [사용자 지정 네이티브 ETW 힙 이벤트](custom-native-etw-heap-events.md)
-### [디버거 없이 메모리 사용](memory-usage-without-debugging2.md)
 ## [CPU 사용 분석](cpu-usage.md)
 ### [UWP(유니버설 Windows 앱)에서 CPU 사용량 분석](analyze-cpu-usage-in-a-windows-universal-app.md)
+## [메모리 사용 분석](analyze-memory-usage.md)
+### [사용자 지정 네이티브 ETW 힙 이벤트](custom-native-etw-heap-events.md)
+### [디버거 없이 메모리 사용](memory-usage-without-debugging2.md)
 ## [GPU 사용량 분석](gpu-usage.md)
 ## [리소스 사용 분석](application-timeline.md)
 ## [PerfTips 사용](perftips.md)
@@ -292,7 +293,7 @@
 #### [연습: 프로파일러 API 사용](walkthrough-using-profiler-apis.md)
 ### [ASP.NET 부하 테스트 프로파일링](profiling-aspnet-load-tests.md)
 ### [성능 도구 문제 해결](troubleshooting-performance-tools-issues.md)
-## [Concurrency 시각화](concurrency-visualizer.md)
+## [동시성 시각화 도우미](concurrency-visualizer.md)
 ### [잘못 동작하는 다중 스레드 응용 프로그램의 일반 패턴](common-patterns-for-poorly-behaved-multithreaded-applications.md)
 ### [사용률 탐색기](utilization-navigator.md)
 ### [사용률 뷰](utilization-view.md)

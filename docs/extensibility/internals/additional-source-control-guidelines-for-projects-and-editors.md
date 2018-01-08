@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4ed84b4b1bf6c974f22682dcb8d899208c653ebc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 308de182e604f06fff9ad25cb65428b2d48ff257
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>프로젝트 및 편집기에 대 한 추가 소스 제어 지침
 프로젝트 및 편집기를 소스 제어를 지원 하기 위해 준수 해야 하는 지침의 여러 가지가 있습니다.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="guidelines"></a>지침  
  프로젝트 또는 편집기 소스 제어를 지원 하려면 다음을 수행 해야 합니다.  
   
-|영역|프로젝트|편집기|세부 정보|  
+|영역|프로젝트|편집기|설명|  
 |----------|-------------|------------|-------------|  
 |파일의 개인 복사본이|X||환경에서 파일의 개인 복사본이 지원 합니다. 즉, 프로젝트에 참여 하는 각 사용자에 해당 프로젝트에 있는 파일의 직접 자신의 개인 복사본입니다.|  
 |ANSI/유니코드 지 속성|X|X|지 속성 코드를 작성 하는 경우 대부분의 소스 제어 프로그램은 현재 유니코드를 지원 하지 않으므로 ANSI 형식으로 파일을 유지 합니다.|  

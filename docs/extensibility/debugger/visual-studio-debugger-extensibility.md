@@ -15,11 +15,12 @@ caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b9a14f95fbed47670b3c5b5db19e4e0e6b8ba074
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c5b5943dc8087a22e1bdfb94ae6d0d10335c174a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio 디버거 확장성
 Visual Studio에는 프로그램에서 버그를 추적 하기 위한 강력 하 고 사용 하기 쉬운 도구를 제공 하는 완전 한 대화형 소스 코드 디버거 포함 되어 있습니다. 디버거는 완전히 지원 Visual Basic, C#, C/c + + 및 JavaScript에 있습니다. 그러나는 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], 즉에서 사용할 수는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=214453), 같은 다양 한 기능으로는 디버거에서 다른 프로그래밍 언어를 지원할 수 있습니다.  
@@ -32,7 +33,7 @@ Visual Studio에는 프로그램에서 버그를 추적 하기 위한 강력 하
   
  다음 섹션에서는 디버거를 사용 하 여 확장 하는 방법에 설명 된 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [시작](../../extensibility/debugger/getting-started-with-debugger-extensibility.md)  
  에서는 작업을 설명 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅 SDK를 설치 하는 방법 및을 제공 합니다.  
   

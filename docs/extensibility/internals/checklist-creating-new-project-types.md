@@ -15,11 +15,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 06b6dc2fab4158f36126b6509909dd0db6fd7125
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ea9c2ebd295fe463192c50da402240e0b1df1304
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="checklist-creating-new-project-types"></a>검사 목록: 새 프로젝트 형식 만들기
 새 프로젝트 형식을 생성 하기 위한 몇 가지 작업을 완료 해야 합니다. 다음 검사 목록을 해당 작업에 대 한 지침을 제공합니다.  

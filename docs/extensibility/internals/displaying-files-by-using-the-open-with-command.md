@@ -16,11 +16,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ed8a19ce0cfb6a7936d61ff7a5855498d2010359
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a1631632a2ceb66380d1d0c41e54b5a4244a31a3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-files-by-using-the-open-with-command"></a>파일 열기 명령을 사용 하 여 표시
 프로젝트를 표시 하려면 IDE를 요청할 수는 **프로그램** 대화 상자. 이 요청 라는 표준 편집기는 선택 항목에 있는 파일을 열 수입니다. 다음 단계는이 프로세스를 설명 합니다.  

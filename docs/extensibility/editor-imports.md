@@ -13,11 +13,12 @@ caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 81e0a131ef35202581ffb78a75a6b48239a7d81f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 937bf977090699f5d3bf52414f57f6066dd55a17
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editor-imports"></a>편집기 가져오기
 다양 한 편집기 서비스, 팩터리, 및 다른 종류의 액세스 확장 코어 편집기를 제공 하는 브로커를 가져올 수 있습니다. 예를 들어 가져올 수 있습니다는 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigatorSelectorService> 를 제공 하는 <xref:Microsoft.VisualStudio.Text.Operations.ITextStructureNavigator> 지정된 된 콘텐츠 형식에 대 한 합니다. (이 탐색기 가능 텍스트 버퍼에서 다른 유형의 검색을 수행 합니다.)  

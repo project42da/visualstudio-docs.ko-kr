@@ -13,11 +13,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 58f58a1a6ec80331fd5cf6f735098c16c35db82e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 50903d9b45828725da03c0fcb0db0f08d7f884eb
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-a-custom-debug-engine"></a>사용자 지정 디버그 엔진을 등록 하는 중
 디버그 엔진 해야 COM 규칙을 따르는 클래스 팩터리로 자신을 등록할 뿐만 아니라 Visual Studio 레지스트리 하위 키를 통해 Visual Studio와 함께 등록 합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
  [디버깅에 대 한 SDK 도우미](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 위치를 설명 뿐만 아니라 레지스트리 디버그 엔진;을 등록 하는 데 필요한 다양 한 유용한 함수가 및 구성 하는 c + + 개발자에 대 한 선언을 포함 하는 dbgmetric.lib 라이브러리에 대해서도 설명 보다 쉽게 레지스트리를 조작 합니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  다음은 사용 하는 방법을 보여 주는 (TextInterpreter 샘플)에서 일반적인 예로 `SetMetric` Visual Studio와 함께 디버그 엔진을 등록 하려면 (dbgmetric.lib)에서 작동 합니다. 전달 되는 메트릭은 dbgmetric.lib에도 정의 합니다.  
   
 > [!NOTE]

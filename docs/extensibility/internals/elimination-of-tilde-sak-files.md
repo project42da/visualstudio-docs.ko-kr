@@ -16,11 +16,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e487acefcb06c4fa0cd2070bfcf20bd065d500ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8d72a42c89cc775b9312d301a052ee102d977728
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="elimination-of-sak-files"></a>제거로 인해 ~ SAK 파일
 소스 제어 플러그 인 API 1.2에는 ~ SAK 파일 기능 플래그 및 MSSCCPRJ 파일 및 공유 체크 아웃 원본 제어 플러그 인을 지원 하는지 여부를 검색 하는 새로운 기능으로 대체 되었습니다.  

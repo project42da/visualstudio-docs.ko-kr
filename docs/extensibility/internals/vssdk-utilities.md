@@ -13,16 +13,17 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: d74f0a7978ab0e06cfc7289c827c458487aa630c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 03336b99b8b49c190a292ca9257aa24d4366f28c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="vssdk-utilities"></a>VSSDK 유틸리티
 이 섹션의 항목 VSSDK와 함께 제공 되는 도구에 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [RegPkg 유틸리티](../../extensibility/internals/regpkg-utility.md)  
   [CreatePkgDef 유틸리티](../../extensibility/internals/createpkgdef-utility.md)  
   [CreateExpInstance 유틸리티](../../extensibility/internals/createexpinstance-utility.md)  

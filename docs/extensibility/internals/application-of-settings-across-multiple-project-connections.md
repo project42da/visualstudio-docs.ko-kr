@@ -13,11 +13,12 @@ caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9750d946a941e86a6c0a6973661f00f8f44cf9b5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a5d66bf7670d5ba9b6423461bdb5e5482819592f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="application-of-settings-across-multiple-project-connections"></a>여러 프로젝트 연결을 통해 설정의 적용
 소스 제어 플러그 인 여러 프로젝트 또는 여러 연결 컨텍스트 같은 소스 제어 작업을 실행 하려면 일괄 처리 작업을 사용할 수 소스 제어 플러그 인 API 1.2를 사용 하 여 작성. 일괄 처리에서 중복 제거, 프로젝트 대화 상자에서 사용자 환경 데 사용할 수 있습니다.  

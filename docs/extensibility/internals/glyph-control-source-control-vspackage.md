@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ac7839d4d7456f28d7e4b5b8ecd4096904dce38e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e41fc2a7d09f50d70caca939e3fdd691b1d05c9e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="glyph-control-source-control-vspackage"></a>문자 모양 제어 (소스 제어 VSPackage)
 소스 제어 Vspackage에 사용할 수 있는 완벽 한 통합 부분은 소스 제어에서 항목의 상태를 나타내는 고유 문자 모양을 표시 하는 기능입니다.  

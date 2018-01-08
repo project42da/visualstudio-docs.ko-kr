@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: fabdf30480666ee3bc24bf3d68af4cc0dcc1ccb6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 94f2e781c316f3891fdef0c324d54fa2f9742222
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-register-for-text-buffer-events-with-the-legacy-api"></a>방법: 레거시 API 사용 하 여 텍스트 버퍼 이벤트 등록
 텍스트 버퍼에 레거시 API를 사용 하 여 액세스 하는 경우에 다음 절차에 표시 된 대로 텍스트 버퍼 이벤트에 등록 해야 합니다.  

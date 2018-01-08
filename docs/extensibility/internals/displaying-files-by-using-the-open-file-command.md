@@ -16,11 +16,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f2cbcb6e6239552ae32c817601634587a2fe3a41
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 75d714399f851aa479f398064e576790c793fffa
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="displaying-files-by-using-the-open-file-command"></a>파일 열기 명령을 사용 하 여 파일을 표시 합니다.
 다음 단계는 IDE에서 처리 하는 방법을 설명는 **열려 있는 파일** 명령에서 제공 되는 **파일** 의 메뉴 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. 또한이 단계는 프로젝트가이 명령에서 발생 하는 호출에 응답 해야 방법을 나타냅니다.  

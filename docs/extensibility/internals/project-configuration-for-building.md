@@ -15,11 +15,12 @@ caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f89736c448570157711c15d2d86091d91e1f30d6
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2d8f37068d197d133ba8798703c8f82093261aca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-configuration-for-building"></a>만들기에 대 한 프로젝트 구성
 지정된 된 솔루션에 대 한 솔루션 구성 목록에는 솔루션 구성 대화 상자에서 관리 됩니다.  

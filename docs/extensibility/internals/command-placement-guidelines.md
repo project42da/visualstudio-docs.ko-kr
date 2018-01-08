@@ -16,11 +16,12 @@ caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e74bda24459bedeef007b451c7fabe3922e7ab37
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5c79d58530a7f6afc5779fab1bc0b5a1626cb595
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-placement-guidelines"></a>명령 배치 지침
 Visual Studio 통합된 개발 환경 (IDE)에서 명령을 위치 지정에 대 한 유용한 명령 집합의 크기에 따라 달라 집니다. 명령 정의 되 고.vsct 파일의 정보에 따라 배치 됩니다.  

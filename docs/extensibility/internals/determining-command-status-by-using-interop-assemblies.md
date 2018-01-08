@@ -15,11 +15,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3cde6ae841271622e0d538d679991288c111095e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 5b7b695288bec904e1e576f9f566944613c97f31
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="determining-command-status-by-using-interop-assemblies"></a>Interop 어셈블리를 사용 하 여 명령 상태 확인
 VSPackage 해야 한 추적을 처리할 수 있는 명령 상태입니다. VSPackage 내에서 처리 명령을 활성화 또는 비활성화 하는 경우 환경이 확인할 수 없습니다. 명령 상태에 대 한 환경 알리기 위해 VSPackage의 책임 이면 예를 들어 일반 상태 명령과 **잘라내기**, **복사**, 및 **붙여넣기**합니다.  

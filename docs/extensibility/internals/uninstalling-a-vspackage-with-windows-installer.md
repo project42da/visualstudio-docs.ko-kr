@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 9b71c977fcc616c6d9cf30b78c9fd7610f11bcd4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ee8ad89e02dfa8aebbb39a9d7ebe523ad01bb7e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Windows Installer VSPackage를 제거합니다.
 대부분의 경우 Windows Installer를 제거할 수 VSPackage에서 방금 수행한 VSPackage를 설치 하려면 "취소"입니다. 설명 하는 사용자 지정 동작 [명령을 해야 수를 실행 한 후 설치](../../extensibility/internals/commands-that-must-be-run-after-installation.md) 도 제거 후 실행 해야 합니다. Devenv.exe에 대 한 호출 모두 설치 및 제거에 대 한 InstallFinalize 표준 작업 바로 전에 발생 하기 때문에 두 경우 모두 사용자 지정 및 InstallExecuteSequence 테이블 항목에 사용 됩니다.  

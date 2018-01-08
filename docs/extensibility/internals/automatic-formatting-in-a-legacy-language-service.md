@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: f09ab8a948011cdc53516ec21f0d213852166956
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 43d9c59beaddfc6992e7b9e16e0e778be2a6d30f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="automatic-formatting-in-a-legacy-language-service"></a>자동 레거시 언어 서비스에서 형식 지정
 자동 서식을 사용 하 여 언어 서비스는 자동으로 코드 조각을 삽입 코드의 사용자가 알려진된 코드 구문을 입력 하기 시작할 때입니다.  

@@ -12,11 +12,12 @@ caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 794eccaf59b65044840d459bbde2e17eab8684a8
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e69ee994f434e122894989d82b97ea79e4bd995c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="delayed-document-loading"></a>문서 로드를 지연합니다.
 사용자가 Visual Studio 솔루션을 대부분의 관련된 문서 즉시 로드 되지 않습니다. 문서 창 프레임 초기화 보류 중 상태에 만들어지고 (스텁 프레임 라고 함) 자리 표시자 문서에는 실행 중인 문서 테이블 (RDT)에 배치 됩니다.  

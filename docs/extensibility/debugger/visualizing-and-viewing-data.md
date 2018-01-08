@@ -15,11 +15,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 8e493cdbccf12019584bb08b82503d6a8c6ebeea
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 14e5b641dc5bc51ac066f32332f3fdb2b01d1810
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visualizing-and-viewing-data"></a>시각화 및 데이터 보기
 신속 하 게 개발자에 게 의미 있는 방식으로 시각화 도우미 및 데이터를 표시 하는 사용자 지정 뷰어를 입력 합니다. 식 계산기 (EE) 수 제 3 자 형식 시각화 도우미를 지원 뿐만 아니라 자체 사용자 지정 뷰어를 제공 합니다.  

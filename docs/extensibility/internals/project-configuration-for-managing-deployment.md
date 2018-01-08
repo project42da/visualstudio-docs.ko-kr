@@ -15,11 +15,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 87098c362e5b37690e2ab3116ffca431d58f129d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 4859e47f8a7ade34a920e4d8e2fac3be58508de3
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="project-configuration-for-managing-deployment"></a>배포를 관리 하기 위한 프로젝트 구성
 배포는 실제로 디버깅 및 설치에 대 한 예상된 위치를 빌드 프로세스에서 출력 항목을 이동 하는 작업입니다. 예를 들어 웹 응용 프로그램 로컬 컴퓨터에서 구축 되며 다음 서버에 배치 될 수 있습니다.  

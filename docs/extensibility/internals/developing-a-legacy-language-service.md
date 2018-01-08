@@ -19,11 +19,12 @@ caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: e05fb3f0a33c0f033733c40b17d636243c18ee22
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: b7a88c00e980cb86764958886d737d5113dfe1fc
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="developing-a-legacy-language-service"></a>레거시 언어 서비스 개발
 이 섹션 항목의 링크를 하는 데 도움이 되는 레거시 언어 서비스를 만듭니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 10/31/2017
 > [!NOTE]
 >  편집기를 사용 하 여 새 API 가능한 한 빨리 시작 하는 것이 좋습니다. 언어 서비스의 성능이 향상 되 고 새 편집기 기능을 이용할 수 있도록 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [레거시 언어 서비스 모델](../../extensibility/internals/model-of-a-legacy-language-service.md)  
  에 대 한 최소한의 언어 서비스의 모델을 제공 된 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 코어 편집기입니다. 사용자 고유의 언어 서비스를 만들기 위한 지침으로이 모델을 사용할 수 있습니다.  
   

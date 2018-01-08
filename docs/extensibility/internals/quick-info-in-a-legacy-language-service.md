@@ -16,11 +16,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 692884d31e55921489aad0fbbea32ca1c094c6c3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 8e0fa4a65960d0324a4be19db61648be48b08349
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>레거시 언어 서비스에 대 한 요약 정보
 사용자 중 하나는 식별자에 캐럿 배치를 선택 하는 경우 IntelliSense 요약 정보 원본에는 식별자에 대 한 정보를 표시 **요약 정보** 에서 **IntelliSense** 메뉴 또는 마우스를 보유 합니다. 커서 식별자입니다. 이렇게 하면 식별자에 대 한 정보에 표시 될 도구 설명 됩니다. 이 정보는 식별자 형식을 일반적으로 구성 됩니다. 디버그 엔진 활성화 되 면 현재 값이이 정보에 포함 될 수 있습니다. 디버그 엔진은 언어 서비스 식별자만 처리 하는 동안 식 값을 제공 합니다.  

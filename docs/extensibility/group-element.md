@@ -15,11 +15,12 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: acdc524b00baaf0de52ad30ea7abad82dc57651b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec5ff5f5bafec14099e5b10b9861be5936b75009
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="group-element"></a>Group 요소
 VSPackage 명령 그룹을 정의합니다.  
@@ -33,14 +34,14 @@ VSPackage 명령 그룹을 정의합니다.
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|guid|필수 요소. GUID/ID 명령 식별자의 GUID입니다.|  
-|ID|필수 요소. ID는 GUID/ID 명령 식별자입니다.|  
+|guid|필수. GUID/ID 명령 식별자의 GUID입니다.|  
+|ID|필수. ID는 GUID/ID 명령 식별자입니다.|  
 |priority|선택 사항입니다. 우선 순위를 지정 하는 숫자 값입니다.|  
 |조건|선택 사항입니다. 참조 [조건부 특성](../extensibility/vsct-xml-schema-conditional-attributes.md)합니다.|  
   
@@ -57,7 +58,7 @@ VSPackage 명령 그룹을 정의합니다.
 |-------------|-----------------|  
 |[Groups 요소](../extensibility/groups-element.md)|VSPackage의 명령 그룹을 정의 하는 항목을 포함 합니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
   
 ```  
 <Group guid="cmdSetGuidWidgetCommands" id="groupIDFileEdit">  

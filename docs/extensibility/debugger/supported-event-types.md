@@ -13,11 +13,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b05ff310a2e0c478b6f9be766f27731ca9f8f9ca
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d161b078e4001ea7f02311bbcefe4c7f1eb6b7b5
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="supported-event-types"></a>지원 되는 이벤트 유형
 Visual Studio 디버깅 현재는 다음 이벤트 유형을 지원합니다.  
@@ -55,7 +56,7 @@ Visual Studio 디버깅 현재는 다음 이벤트 유형을 지원합니다.
 > [!NOTE]
 >  [IDebugEngine2](../../extensibility/debugger/reference/idebugengine2.md) 인터페이스는 모든 이벤트에 필요 합니다.  
   
-|이벤트|IDebugProgram2|IDebugThread2|중지 이벤트|  
+|이벤트(event)|IDebugProgram2|IDebugThread2|중지 이벤트|  
 |-----------|--------------------|-------------------|---------------------|  
 |[IDebugActivateDocumentEvent2](../../extensibility/debugger/reference/idebugactivatedocumentevent2.md)|사용할 수 있지만 필요 하지 않음|사용할 수 있지만 필요 하지 않음|아니요|  
 |[IDebugBreakEvent2](../../extensibility/debugger/reference/idebugbreakevent2.md)|필수|필수|예|  

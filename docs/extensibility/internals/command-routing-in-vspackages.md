@@ -15,16 +15,17 @@ caps.latest.revision: "24"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ffbfb131eedb316c321bbf955ec7cc2951c71b8c
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 90f3d2347f8bf37173f3eb257293b71d706eb0a0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="command-routing-in-vspackages"></a>Vspackage의 명령 라우팅
 명령에 라우팅됩니다 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 실행 되는 컨텍스트를 기반 합니다. 전역 컨텍스트를 바깥쪽으로 초기 컨텍스트를 라우팅됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [라우팅 알고리즘이](../../extensibility/internals/command-routing-algorithm.md)  
  명령 라우팅 확인 순서에 설명합니다.  
   

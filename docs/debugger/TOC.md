@@ -7,6 +7,8 @@
 ## [ASP.NET 앱 디버그](quickstart-debug-aspnet.md)
 # 자습서
 ## [Visual Studio를 사용하여 디버깅하는 자세한 내용](getting-started-with-the-debugger.md)
+## [라이브 Azure 앱 디버그](debug-live-azure-applications.md)
+## [IIS 또는 IIS Express에서 ASP.NET 디버그](how-to-enable-debugging-for-aspnet-applications.md)
 ## [C# 프로젝트 원격 디버그](remote-debugging-csharp.md)
 ## [C++ 프로젝트 원격 디버그](remote-debugging-cpp.md)
 ## [IIS 컴퓨터의 원격 디버그 ASP.NET Core](remote-debugging-aspnet-on-a-remote-iis-computer.md)
@@ -61,7 +63,6 @@
 ### [Just-In-Time 디버거를 사용하여 디버그](debug-using-the-just-in-time-debugger.md)
 #### [방법: Just-In-Time 디버거에 응답](just-in-time-debugging-in-visual-studio.md)
 ## 디버깅 구성
-### [사용자 코드 디버그](just-my-code.md)
 ### [디버거를 사용한 예외 관리](managing-exceptions-with-the-debugger.md)
 #### [예외 후 실행 계속](continuing-execution-after-an-exception.md)
 #### [방법: 예외 발생 후 시스템 코드 검사](how-to-examine-system-code-after-an-exception.md)
@@ -70,6 +71,7 @@
 ##### [방법: 런타임 오류 보고 함수 작성](how-to-write-a-run-time-error-reporting-function.md)
 ##### [C 런타임 라이브러리 없이 런타임 검사 사용](using-run-time-checks-without-the-c-run-time-library.md)
 ### [Visual Studio 디버거에서 기호 파일(.pdb) 및 원본 파일 지정](specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)
+### [사용자 코드 디버그](just-my-code.md)
 ### [디버거 설정 및 준비](debugger-settings-and-preparation.md)
 #### [디버거 프로젝트 설정](debugger-project-settings.md)
 ##### [방법: 디버거 설정 지정](how-to-specify-debugger-settings.md)

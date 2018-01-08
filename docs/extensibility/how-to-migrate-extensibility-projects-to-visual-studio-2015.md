@@ -13,11 +13,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 016e609acb7ad837580b4cabb6055169ac7357c2
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ec87a48e61ee69e01032c3b702ae21d6944eee92
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-migrate-extensibility-projects-to-visual-studio-2015"></a>방법: Visual Studio 2015로 확장성 프로젝트 마이그레이션
 확장 프로그램을 업그레이드 하는 방법은 다음과 같습니다.  
@@ -45,7 +46,7 @@ ms.lasthandoff: 10/31/2017
   
 2.  프로젝트에서 선택 하 여 VS SDK 참조 어셈블리를 제거, 마우스 오른쪽 단추로 클릭 하 고 **제거**합니다.  
   
-3.  NuGet 버전의 VS SDK 참조 어셈블리를 추가 합니다.  상태에서 **솔루션 탐색기 참조** 노드를 열고는 **NuGet 패키지 관리...**  대화 상자.  이 경우이 대화 상자에 대 한 자세한 참조 [패키지 관리자 UI](http://docs.microsoft.com/NuGet/Tools/Package-Manager-UI)합니다. VS SDK 참조 어셈블리에 게시 된 [nuget.org](http://www.nuget.org) 여 [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)합니다.  
+3.  NuGet 버전의 VS SDK 참조 어셈블리를 추가 합니다.  상태에서 **솔루션 탐색기 참조** 노드를 열고는 **NuGet 패키지 관리...**  대화 상자.  이 경우이 대화 상자에 대 한 자세한 참조 [패키지 관리자 UI](/NuGet/Tools/Package-Manager-UI)합니다. VS SDK 참조 어셈블리에 게시 된 [nuget.org](http://www.nuget.org) 여 [VisualStudioExtensibility](http://www.nuget.org/profiles/VisualStudioExtensibility)합니다.  
   
 4.  사용 하 여 **nuget.org** 으로 프로그램 **패키지 소스**, 원하는 참조 어셈블리에 일치 하는 NuGet 패키지 이름에 대해 (예: Microsoft.VisualStudio.Shell.14.0)에서 설치 프로그램 프로젝트입니다.  NuGet 초기 어셈블리의 종속성을 충족 하기 위해 여러 명의 참조 어셈블리를 추가할 수 있습니다.  
   

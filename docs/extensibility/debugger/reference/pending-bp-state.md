@@ -14,11 +14,12 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: de7ac105f7dea0c57297c29a4bdb8d5c85f62321
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: f98396b7ed1066cacce91ebd08d3cd414042f84e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="pendingbpstate"></a>PENDING_BP_STATE
 (아직 바인딩되지 않은 중단점) 보류 중인 중단점의 상태를 지정 합니다.  

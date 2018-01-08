@@ -13,11 +13,12 @@ caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 5907f540e5f81e26b7d184352e3c38531ec5da66
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: bb69380913f188031c97b46530ea2659fc05fe30
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="contributing-to-the-automation-model"></a>Contributing to the Automation Model
 Visual Studio 환경 사용자 지정에 대 한 자동화 인터페이스의 집합을 제공 합니다. 자동화 모델은 최종 사용자가 Visual Studio 추가 기능 및 확장을 만들 수 있는 개체 모델입니다.  
@@ -26,7 +27,7 @@ Visual Studio 환경 사용자 지정에 대 한 자동화 인터페이스의 �
   
  발생 하는 최종 사용자가 일관 되 게 하려면 다음과 수를 VSPackage에 대 한 자동화 모델에 대 한 아이디어를 뒤에 오도록 VSPackage를 디자인할 때 일련의 지침을 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [자동화 모델 개요](../../extensibility/internals/automation-model-overview.md)  
  일반적인 환경의 주요 측면을 제어 하는 개체 등의 관련된 그룹으로 자동화 모델을 정의 합니다. 이 개체 집합이 자동화 모델의 다이어그램에 나와 있습니다.  
   

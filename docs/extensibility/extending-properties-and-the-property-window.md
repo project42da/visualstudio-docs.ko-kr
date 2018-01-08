@@ -18,18 +18,19 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ba36f0279c8401e49b30a4f1f61b3e857cb20b5b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 0a0775a8476d7fc4842ade5f4ac7b96271d06a8b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-properties-and-the-property-window"></a>확장 속성 및 속성 창
 **속성** 창은 보고 디자인 타임 속성 및 선택한 개체의 이벤트를 편집 하는 데 사용 됩니다.  
   
  개체를 선택할 때 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 해당 개체의 공용 속성에 표시 된 **속성** 창. 자세한 내용은 참조 [속성 창 개요](../extensibility/internals/properties-window-overview.md)합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [속성 창에 속성 노출](../extensibility/exposing-properties-to-the-properties-window.md)  
  방식 속성 창에 표시 하는 사용자 지정 속성을 사용할 수 있습니다에 대해 설명 합니다.  
   

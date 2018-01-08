@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0f7481531c910ddf668ce911ae37215545b77903
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: d52a9dbed6cec64426247a0b92bff2b8ec98ec97
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="writing-a-common-language-runtime-expression-evaluator"></a>공용 언어 런타임 식 계산기를 작성합니다.
 > [!IMPORTANT]
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
  Visual Studio 디버그 패키지의 일부 측면 프로그래밍 언어의 컨텍스트에서 코드를 해석 해야 합니다. 예를 들어 경우 실행에서 중단에 사용자가 입력 한 모든 식 중단점을 한 **조사식** 창을 평가 하 고 표시 합니다. 사용자가에 식을 입력 하 여 지역 변수 값을 변경할 수는 또한는 **조사식** 창에는 **직접 실행** 창.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [공용 언어 런타임 및 식 계산](../../extensibility/debugger/common-language-runtime-and-expression-evaluation.md)  
  Visual Studio IDE에 소유 프로그래밍 언어를 통합 하는 경우는 EE 작성 독점 언어의 컨텍스트 내에서 식을 평가할 수 있는 허용 하는지 Microsoft intermediate language MSIL로 컴파일할 수에 대해 설명 디버그 엔진 작성 하지 않고.  
   

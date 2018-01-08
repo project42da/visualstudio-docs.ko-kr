@@ -16,16 +16,17 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a30589591a7cef60ecfb19945366f8fcf539da02
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a270811cc13d4b0e9af027ec2b4b5d2032582a3e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="opening-and-saving-project-items"></a>열기 및 프로젝트 항목 저장
 새 프로젝트 형식을 추가 하면 열고 저장 하 여 프로젝트 파일에서 관리 해야는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE). 다음 항목 파일 열기 및 저장 하는 다른 방법에 설명 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [파일 열기 명령을 사용하여 파일 표시](../../extensibility/internals/displaying-files-by-using-the-open-file-command.md)  
  IDE에서 처리 하는 방법을 단계별로 설명는 **열려 있는 파일** 명령 및이 명령에 응답에 있는 프로젝트의 역할입니다.  
   

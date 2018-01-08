@@ -18,11 +18,12 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a90a5cfdc521de0716d81b07529822f69289b605
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c1104ebfbd066ad438262fcca0186acfb3854dbd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="createexpinstance-utility"></a>CreateExpInstance 유틸리티
 다시 설정, 만들려는 CreateExpInstance 유틸리티를 사용 하거나 Visual Studio의 실험적 인스턴스를 삭제 합니다. 디버깅 하 고 기본 제품을 변경 하지 않고 Visual Studio 확장을 테스트 실험적 인스턴스를 사용할 수 있습니다.  

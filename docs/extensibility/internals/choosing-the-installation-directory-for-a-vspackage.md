@@ -13,11 +13,12 @@ caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 3462104e100ab672373f30dcd8228bc064746f2d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 085c3bea9b9edc726fa09dd5d7658aff4a55e568
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage에 대 한 설치 디렉터리를 선택합니다.
 VSPackage 및 해당 지원 파일 사용자의 파일 시스템에 있어야 합니다. 위치는 VSPackage는 관리 하거나 관리 되지 않는,-side-by-side 버전 관리 체계 및 사용자 선택에 따라 달라 집니다.  

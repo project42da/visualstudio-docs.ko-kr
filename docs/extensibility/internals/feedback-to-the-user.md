@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ffc6ecc620f57f0cc1e4dd8baf02f1bd1b17d53b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 3a5e31eb2acb50d9803bedd77e48d0821cbaea61
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="feedback-to-the-user"></a>사용자에 게 피드백
 에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) 시각적 피드백을 사용할 수 있는 기능에 대 한 사용자의 현재 선택 영역 및 글로벌 선택 항목 컨텍스트 기반입니다. 다음 표에서 다른 선택 컨텍스트에서 사용할 수 있는 기능을 나열 합니다.  

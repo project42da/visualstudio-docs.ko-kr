@@ -15,11 +15,12 @@ caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b2217b77116ea561c32e96fcb7b92b520e680025
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c52a71ebb521f84f96bead09502389f6b395e90c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="deploying-custom-start-pages"></a>사용자 지정 시작 페이지를 배포합니다.
 VSIX 배포를 사용 하 여 또는 대상 컴퓨터의 올바른 위치에 파일을 복사 하 여 사용자 지정 시작 페이지를 배포할 수 있습니다.  
@@ -93,7 +94,7 @@ VSIX 배포를 사용 하 여 또는 대상 컴퓨터의 올바른 위치에 파
   
 2.  시작 페이지에서는 어셈블리가 어셈블리를 복사 및 붙여 넣을에... \\ *Visual Studio 설치 폴더*\Common7\IDE\PrivateAssemblies\\합니다.  
   
-3.  에 **시작 페이지 사용자 지정** 목록에 **시작** 옵션 페이지에서 새 시작 페이지를 선택 합니다. 자세한 내용은 참조 [시작 페이지 사용자 지정](../ide/customizing-the-start-page-for-visual-studio.md)합니다.  
+3.  에 **시작 페이지 사용자 지정** 목록에 **시작** 옵션 페이지에서 새 시작 페이지를 선택 합니다. 자세한 내용은 [시작 페이지 사용자 지정](../ide/customizing-the-start-page-for-visual-studio.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [시작 페이지 사용자 지정](../ide/customizing-the-start-page-for-visual-studio.md)   

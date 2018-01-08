@@ -16,18 +16,19 @@ caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 492b86581f567aa6bcca7f782e588ca82f1878f3
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 30b81a0926ebb984aab852b53c081742ea44f391
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="reference-visual-studio-debugging-apis"></a>참조 (Visual Studio 디버깅 Api)
 Visual Studio Debugging SDK 참조의 런타임 아키텍처 및 디버거 및 해당 구성 요소 기능에 대 한 기본 모델에 간략하게 설명 합니다. 설명서에서는 인터페이스를 통해 정의 하는 동작 외에도 설명 구성 요소 및 인터페이스에 대해 최대한 적은 가정 합니다.  
   
  참조 섹션의 목표와 다양 한 지원을 최대한 언어, 실행된 시간 및 운영 체제의 집합을 제공 하는 것입니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [API 참조](../../../extensibility/debugger/reference/api-reference-visual-studio-debugging.md)  
  인터페이스, 열거자 및 Visual Studio 디버깅 API의 구조에 대 한 설명서를 포함합니다.  
   

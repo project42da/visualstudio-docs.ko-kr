@@ -13,11 +13,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 591cc9ef1693f2a910eb42a2be3ff5db02ed5c8d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 878c06e1965b5a96510df0e1b28175972546e227
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="adding-directories-to-the-add-new-item-dialog-box"></a>디렉터리에 추가 된 새 항목 추가 대화 상자
 다음 코드 예제에서는 새로운 집합이 대 한 디렉터리를 등록 하는 방법을 보여 줍니다는 **새 항목 추가** 대화 상자. 에 대 한 디렉터리는 **새 항목 추가** 대화 상자에서 각 프로젝트에 대 한 서로 다릅니다. 디렉터리에서 발견 하는 프로젝트 하위 키 아래에 등록 되며 따라서 \<HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio\8.0Exp\Projects >:  

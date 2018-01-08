@@ -16,11 +16,12 @@ caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: b3a197bb5dd12c1d8404ddf63976f9dbf4b63823
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: a1c9aa444860de2e20f51247ac53d16ceaad2b48
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="error-handling-and-return-values"></a>오류 처리 및 반환 값
 Vspackage 및 COM 오류에 대 한 동일한 아키텍처를 사용합니다. `SetErrorInfo` 및 `GetErrorInfo` 함수는 Win32 응용 프로그래밍 인터페이스 (API)의 일부입니다. 모든 VSPackage 통합된 개발 환경 (IDE)에서 호출할 수 있습니다 이러한 정보를 기록 하 풍부한 오류 전역 Win32 Api 오류 알림의 받을 때. [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] 오류 정보를 관리 하는 interop 어셈블리를 제공 합니다.  

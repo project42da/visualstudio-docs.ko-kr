@@ -15,11 +15,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: aa0d368a68dcbacc2d8b137011efb5942429b7cc
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 9a8aa71d6c529aa4d06acf1d887f10a58cd8367e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="registering-an-expression-evaluator"></a>식 계산기를 등록 하는 중
 > [!IMPORTANT]
@@ -34,7 +35,7 @@ ms.lasthandoff: 10/31/2017
   
  EE; 비관리 코드로 작성 된 경우와 동일한 레지스트리 항목 내용이 유일한 차이점은 한지 도우미 함수가 같은 `SetEEMetric` 있습니다에 대 한 작업을 수행 하도록 합니다. 이 등록/등록 취소 프로세스의 예는 다음과 같습니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 함수는 EE 관리 되는 코드를 등록 하 고 Visual Studio와 함께 자체 등록을 취소 하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -126,7 +127,7 @@ namespace EEMC
   
 3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio 아래에 있는 키를 만들어 Visual Studio와 함께 등록\\*X.Y*여기서 *X.Y* 를 등록 하려면 Visual Studio의 버전입니다.  
   
-### <a name="example"></a>예제  
+### <a name="example"></a>예  
  이 함수는 비관리 코드 (c + +) EE 등록 하 고 Visual Studio와 함께 자체 등록을 취소 하는 방법을 보여 줍니다.  
   
 ```cpp  

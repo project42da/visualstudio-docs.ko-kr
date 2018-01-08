@@ -11,11 +11,12 @@ caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 294767688039369cb651609cee630ae80dd47abf
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: ac4154ef3fd275d89bd8858717a5850fe34c1f38
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extensibility-in-visual-studio"></a>Visual Studio의 확장성
 Visual Studio에서는 다양한 확장성 옵션이 제공됩니다. 사용자 고유의 Sdk를 만들 지정, Windows, Windows Phone 및 (Visual Studio의 일부로 설치 되어 있음)는 Azure Sdk를 사용 하 여 및 자체는 Visual Studio를 확장 합니다.  

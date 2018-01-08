@@ -13,11 +13,12 @@ caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4fef2c76364c1ca1398aef3b94226e7a9a365cf1
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 2ff4b1e572fd1e0c5c500fbd756d01063665bd1f
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>설치 후 실행 해야 하는 명령
 .Msi 파일을 통해 확장 프로그램을 배포 하는 경우 실행 해야 `devenv /setup` Visual Studio 확장을 검색 하는 순서로 설치의 일부로 합니다.  
@@ -30,7 +31,7 @@ ms.lasthandoff: 10/31/2017
   
 ### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>서로 다른 버전의 Visual Studio의 devenv.exe를 찾으려고 RegLocator 테이블 행  
   
-|Signature_|루트|Key|이름|형식|  
+|Signature_|루트|Key|name|형식|  
 |-----------------|----------|---------|----------|----------|  
 |RL_DevenvExe_2002|2|SOFTWARE\Microsoft\VisualStudio\7.0\Setup\VS|EnvironmentPath|2|  
 |RL_DevenvExe_2003|2|SOFTWARE\Microsoft\VisualStudio\7.1\Setup\VS|EnvironmentPath|2|  

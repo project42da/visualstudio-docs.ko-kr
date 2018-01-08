@@ -16,11 +16,12 @@ caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: ae5c64d0272b998d27a9eb5753c04ae764c3af8f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: c5d8af96857fa3e3c02ce8ea29711eaffbb532e9
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-access-the-built-in-fonts-and-color-scheme"></a>방법: 기본 제공 글꼴 및 색 구성표에 액세스
 Visual Studio 통합된 개발 환경 (IDE)에 편집기 창에 연결 되는 글꼴 및 색 구성표가 있습니다. 이 체계를 통해 액세스할 수 있습니다는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 인터페이스입니다.  
@@ -58,7 +59,7 @@ Visual Studio 통합된 개발 환경 (IDE)에 편집기 창에 연결 되는 �
   
 2.  4 개의 값이 포함 된 스톡 글꼴 및 색 구성표를 사용 하도록 레지스트리를를 채웁니다.  
   
-    |이름|형식|데이터|설명|  
+    |name|형식|데이터|설명|  
     |----------|----------|----------|-----------------|  
     |범주|REG_SZ|GUID|스톡 글꼴 및 색 구성표를 포함 하는 범주를 식별 하는 임의의 GUID입니다.|  
     |패키지|REG_SZ|GUID|{F5E7E71D-1401-11D1-883B-0000F87579D2}<br /><br /> 이 GUID는 기본 글꼴 및 색 구성을 사용 하는 모든 Vspackage에서 사용 됩니다.|  
@@ -81,7 +82,7 @@ Visual Studio 통합된 개발 환경 (IDE)에 편집기 창에 연결 되는 �
   
      설정 하 고 기본 글꼴 및 색 서비스 창의 속성으로 노출 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 기본 제공 글꼴 및 색의 사용을 시작합니다.  
   
 ```  

@@ -13,11 +13,12 @@ caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 0bfef7e641bc8f7e041242ce28110845855c2a65
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e0fb464d3eb9d7b39b853593c9458fe800296321
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editor-factories"></a>편집기 팩터리
 편집기 팩터리 편집기 개체를 만들고 물리적 뷰 라고 하는 창 프레임에 저장 합니다. 문서 데이터와 편집기 및 디자이너를 만드는 데 필요한 문서 뷰 개체를 만듭니다. 편집기 팩터리 Visual Studio 코어 편집기 및 모든 표준 편집기를 만드는 데 필요 합니다. 사용자 지정 편집기 편집기 팩터리와 선택적으로 만들 수 있습니다.  

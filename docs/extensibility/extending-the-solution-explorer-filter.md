@@ -15,11 +15,12 @@ caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 4f34f19d41f3d624c57cc6c92d51b5c19ddb2137
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: afcaef724b5fc5f8270e5126e91d421f2e15b946
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="extending-the-solution-explorer-filter"></a>솔루션 탐색기 필터를 확장합니다.
 확장할 수 **솔루션 탐색기** 필터링 기능을 표시 하거나 서로 다른 파일을 숨깁니다. 예를 들어 C# 클래스 팩터리의 파일만 표시 하는 필터를 만들 수 있습니다는 **솔루션 탐색기**이 연습에서 보여 주듯이, 합니다.  

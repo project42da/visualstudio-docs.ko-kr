@@ -15,16 +15,17 @@ caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 1334ec7b2fb5b1d11c5aee5a4febb50e63cece4a
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 631ffac458cd5f7d29051cdd53431bf7f7e4ccb8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="guids-and-constants-in-the-visual-studio-sdk"></a>Guid 및 Visual Studio SDK의 상수
 <xref:Microsoft.VisualStudio.VSConstants> 클래스는 다양 한 환경 Guid 및 상수에 대 한 액세스를 제공 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [IDE GUID](../extensibility/ide-guids.md)  
  제공 하는 Guid 나열 <xref:Microsoft.VisualStudio.VSConstants>합니다.  
   

@@ -16,18 +16,19 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 568f5b98cd652e872e7bcc7d63e85de7f134546d
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 98349042fe66748ed4eb72a1604893e3f4e67d80
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="catids-for-objects-that-are-typically-used-to-extend-projects"></a>일반적으로 프로젝트를 확장 하는 데 사용 되는 개체에 대 한 Catid
 다음 표를 확장 하는 데 사용 되는 Catid `Project` 및 `ProjectItem` 자동화 개체에 대 한 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)], [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)], 및 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 프로젝트. 이러한 Catid VSLangProj.olb에 정의 됩니다.  
   
 ## <a name="listing-of-catids"></a>Catid의 목록  
   
-|이름|GUID|  
+|name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjCATID.prjCATIDProject>|{610D4614-D0D5-11D2-8599-006097C68E81}|  
 |<xref:VSLangProj.PrjCATID.prjCATIDProjectItem>|{610D4615-D0D5-11D2-8599-006097C68E81}|  
@@ -35,7 +36,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="visual-basic-catids"></a>Visual Basic Catid  
  다음 표를 확장 하는 데 사용 되는 Catid [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 개체를 검색 합니다. 모든 정의 된 VSLangProj.olb에 있습니다.  
   
-|이름|GUID|  
+|name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectBrowseObject>|{E0FDC879-C32A-4751-A3D3-0B3824BD575F}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDVBProjectConfigBrowseObject>|{67F8DD11-14EB-489b-87F0-F01C52AF3870}|  
@@ -46,7 +47,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="visual-c-catids"></a>Visual C# Catid  
  다음 Catid를 사용 하 여을 확장할 수 있습니다 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 개체를 검색 합니다. 모든 정의 된 VSLangProj.olb에 있습니다.  
   
-|이름|GUID|  
+|name|GUID|  
 |----------|----------|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectBrowseObject>|{4EF9F003-DE95-4d60-96B0-212979F2A857}|  
 |<xref:VSLangProj.PrjBrowseObjectCATID.prjCATIDCSharpProjectConfigBrowseObject>|{A12CE10A-227F-4963-ADB6-3A43388513CA}|  
@@ -57,7 +58,7 @@ ms.lasthandoff: 10/31/2017
 ## <a name="c-catids"></a>C + + Catid  
  다음 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 프로젝트 Catid에 형식 라이브러리에서 노출 되지 않는 시스템 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .NET 2003 및 이러한 프로젝트 개체를 확장 하려는 경우 코드에 포함 되어 있어야 합니다. 이러한 Catid의 이후 릴리스에서 형식 라이브러리에 포함 될 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다.  
   
-|이름|GUID|  
+|name|GUID|  
 |----------|----------|  
 |`CVCProjectNode`|{EE8299CB-19B6-4f20-ABEA-E1FD9A33B683}|  
 |`CVCFolderNode`|{EE8299CA-19B6-4f20-ABEA-E1FD9A33B683}|  
@@ -73,7 +74,7 @@ const LPOLESTR CVCFileNode::s_wszCATID = L"{EE8299C9-19B6-4f20-ABEA-E1FD9A33B683
   
  다음 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 프로젝트 시스템에 있는 형식 라이브러리에 Catid 나타나지 않기도 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .NET 2003 및 이러한 프로젝트 개체를 확장 하려는 경우 코드에 포함 되어 있어야 합니다. 이러한 Catid 에서만 사용할 수 있는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] .NET 2003의 이후 릴리스에서 사용할 수 없게 됩니다 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다.  
   
-|이름|GUID|  
+|name|GUID|  
 |----------|----------|  
 |`CVCAssemblyReferenceNode` **:**|{FE8299C9-19B6-4f20-ABEA-E1FD9A33B683}|  
 |`CVCProjectReferenceNode`|{593DCFCE-20A7-48e4-ACA1-49ADE9049887}|  

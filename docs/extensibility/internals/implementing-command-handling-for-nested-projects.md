@@ -13,11 +13,12 @@ caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: a71da10ee4473f3fb542e0ce0e03891d60b75d34
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: e4ed9efab34a51bdfaacea1773a33637437b2ced
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="implementing-command-handling-for-nested-projects"></a>중첩 된 프로젝트에 대 한 처리 명령 구현
 IDE를 통해 전달 되는 명령에 전달할 수는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy> 및 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스 부모 프로젝트 또는 중첩 된 프로젝트를 필터링 하거나 명령을 재정의할 수 있습니다.  

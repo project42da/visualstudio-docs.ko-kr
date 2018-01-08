@@ -15,11 +15,12 @@ caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 12ed4c42335590b7e48d0f6f0fed716a7f149bd0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 61624d9926f4d984386f1a8b3fe8a575ce465331
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="designer-initialization-and-metadata-configuration"></a>디자이너 초기화 및 메타 데이터 구성
 응용 프로그램이 서로 다른 처리 하 되는 도구는 특정 디자이너에서 사용 되는 정의 하기 위한 메커니즘을 제공 하는 디자이너 또는 디자이너 구성 요소와 연관 된 메타 데이터 및 필터 특성의 조작을 <xref:System.Type> 개체 (예: 데이터 구조 클래스 또는 그래픽 엔터티) 경우 디자이너를 사용할 수는 디자이너를 지원 하도록 Visual Studio IDE가 구성 하는 방법 (인스턴스는 **도구 상자** 범주 또는 탭을 사용).  

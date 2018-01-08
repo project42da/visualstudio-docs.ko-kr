@@ -16,16 +16,17 @@ caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.openlocfilehash: 002d9f2bb9a70d3f223b13d505639089005a09ce
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: vssdk
+ms.openlocfilehash: 846f0bff11c557164ff101d0b5beb1950fded62e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="hierarchies-and-selection"></a>계층 및 선택
 사용자 지정할 때 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 이해 해야 어떻게 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 프로젝트와 사용자에 게 표시 되는 내용을 확인 하려면 선택 항목 컨텍스트를 사용 하는 방식 같은 계층 구조를 처리 합니다. 이 섹션에서는의 개념과 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 계층 및 선택 합니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [Visual Studio의 계층 구조](../../extensibility/internals/hierarchies-in-visual-studio.md)  
  프로젝트 계층 구조 및 계층의 일반적인 개념을 설명합니다.  
   
