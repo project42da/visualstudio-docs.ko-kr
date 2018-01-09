@@ -95,6 +95,7 @@
 ## [솔루션의 프로젝트 로드 관리](managing-project-loading-in-a-solution.md)
 # [사용자 지정 프로젝트 및 항목 템플릿 만들기](creating-custom-project-and-item-templates.md)
 ## [Visual Studio 2017용 사용자 지정 프로젝트 및 항목 템플릿 업그레이드](upgrading-custom-project-and-item-templates-for-visual-studio-2017.md)
+## [템플릿 검색 문제 해결](troubleshooting-template-discovery.md)
 ## [방법: 프로젝트 템플릿에 마법사 사용](how-to-use-wizards-with-project-templates.md)
 ## [Visual Studio 템플릿 스키마 참조](visual-studio-template-schema-reference.md)
 ### [AppliesTo 요소(Visual Studio 템플릿)](appliesto-element-visual-studio-templates.md)

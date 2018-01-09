@@ -39,7 +39,7 @@
 ### 참조
 #### [Visual Studio 작업 및 구성 요소 ID](install/workload-and-component-ids.md)
 #### [Visual Studio 빌드 번호 및 릴리스 날짜](install/visual-studio-build-numbers-and-release-dates.md)
-## [빌드 도구를 컨테이너에 설치](install/build-tools-container.md)
+## [Build Tools를 컨테이너에 설치](install/build-tools-container.md)
 ### [컨테이너의 고급 예](install/advanced-build-tools-container.md)
 ### [알려진 컨테이너 관련 문제](install/build-tools-container-issues.md)
 # 빠른 시작
@@ -256,21 +256,21 @@
 ### [양방향 언어용 응용 프로그램 만들기](ide/creating-applications-in-bi-directional-languages.md)
 # 참조
 ## [새로운 기능](ide/whats-new-in-visual-studio.md)
-## Visual Studio 템플릿 참조
-### [템플릿 스키마 참조...](extensibility/visual-studio-template-schema-reference.md)
-### [템플릿 매개 변수](ide/template-parameters.md)
-### [프로젝트 템플릿 및 항목 템플릿 만들기](ide/creating-project-and-item-templates.md)
+## [프로젝트 및 항목 템플릿](ide/creating-project-and-item-templates.md)
+### [프로젝트 템플릿과 항목 템플릿 찾기 및 구성](ide/how-to-locate-and-organize-project-and-item-templates.md)
+### [프로젝트 및 항목 템플릿 사용자 지정](ide/customizing-project-and-item-templates.md)
+#### [기존 템플릿 업데이트](ide/how-to-update-existing-templates.md)
+#### [템플릿 매개 변수 대체](ide/how-to-substitute-parameters-in-a-template.md)
+### 새 프로젝트 및 항목 템플릿 만들기
 #### [프로젝트 템플릿 만들기](ide/how-to-create-project-templates.md)
 #### [다중 프로젝트 템플릿 만들기](ide/how-to-create-multi-project-templates.md)
 #### [항목 템플릿 만들기](ide/how-to-create-item-templates.md)
 #### [다중 파일 항목 템플릿 만들기](ide/how-to-create-multi-file-item-templates.md)
-#### [수동으로 웹 템플릿 만들기](ide/how-to-manually-create-web-templates.md)
+#### [웹 템플릿 만들기](ide/how-to-manually-create-web-templates.md)
 #### [시작 키트 만들기](ide/how-to-create-starter-kits.md)
-#### [프로젝트 템플릿과 항목 템플릿 찾기 및 구성](ide/how-to-locate-and-organize-project-and-item-templates.md)
-#### [프로젝트 템플릿 및 항목 템플릿 사용자 지정](ide/customizing-project-and-item-templates.md)
-##### [기존 템플릿 업데이트](ide/how-to-update-existing-templates.md)
-##### [템플릿 매개 변수 대체](ide/how-to-substitute-parameters-in-a-template.md)
-#### [템플릿 문제 해결](ide/how-to-troubleshoot-templates.md)
+### [템플릿 매개 변수](ide/template-parameters.md)
+### [템플릿 스키마 참조(확장성)](extensibility/visual-studio-template-schema-reference.md)
+### [템플릿 문제 해결](ide/how-to-troubleshoot-templates.md)
 ## 일반 사용자 인터페이스 요소
 ### [호출 계층 구조](ide/reference/call-hierarchy.md)
 ### [도구 상자 항목 선택, WPF 구성 요소](ide/reference/choose-toolbox-items-wpf-components.md)
