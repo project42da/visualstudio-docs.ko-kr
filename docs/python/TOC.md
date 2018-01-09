@@ -20,7 +20,7 @@
 ### [Django 웹 프로젝트 템플릿](template-django.md)
 ### [Azure 클라우드 서비스 템플릿](template-azure-cloud-service.md)
 ## [Python용 Azure SDK](azure-sdk-for-python.md)
-# 방법
+# 방법 가이드
 ## [코드 편집](code-editing.md)
 ### [코드 서식 지정](code-formatting.md)
 ### [코드 리팩터링](code-refactoring.md)
