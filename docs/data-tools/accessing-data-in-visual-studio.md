@@ -18,11 +18,11 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: 3e147307514656a693d47d24a8017b1b4ebbf182
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c3777249948ba4be917de4ec6c139e7a15bce0a7
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio에서 데이터 액세스
 
@@ -140,7 +140,7 @@ ADO.NET 아키텍처 및 응용 프로그램 데이터를 관리 하 고 데이�
 [WCF Data Services 4.5](/dotnet/framework/data/wcf/index)  
 사용 하는 방법에 설명 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 구현 하는 웹 또는 인트라넷에 데이터 서비스를 배포 하는 [개방형 데이터 프로토콜 (OData)](http://go.microsoft.com/fwlink/?LinkID=182204)합니다.
 
-[Office 솔루션의 데이터](/office-dev/office-dev/data-in-office-solutions)  
+[Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)  
 Office 솔루션에서 데이터가 작동 하는 방법을 설명 하는 항목에 대 한 링크를 포함 합니다. 스키마 지향 프로그래밍, 데이터 캐싱 및 서버 쪽 데이터 액세스에 대 한 정보가 포함 됩니다.
 
 [LINQ(Language-Integrated Query)](/dotnet/csharp/linq/)  

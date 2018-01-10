@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 05962d6806631bdfa9b873038ec85cdf9969d55c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 376719363bd97970bdfa333d9aab0e57a8484c73
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="how-to-create-xml-snippets"></a>방법: XML 조각 만들기
 XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편집기에는 새 XML 조각을 만들기 위한 상용구 조각인 "Snippet"이라는 XML 조각이 들어 있습니다.  
@@ -54,7 +54,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
   <SnippetType>SurroundsWith</SnippetType>  
   <SnippetType>Expansion</SnippetType>  
 </SnippetTypes>  
-```  
+```
   
  `Expansion` 형식을 호출할 때 조각이 나타나는지 여부를 결정은 **조각 삽입** 명령입니다. `SurroundsWith` 형식을 호출할 때 조각이 나타나는지 여부를 결정은 **포함** 명령입니다.  
   
@@ -72,7 +72,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
   <name>$name$</name>  
   $selected$ $end$</test>]]>  
 </Code>  
-```  
+```
   
  `Code` 요소에는 변수 3개가 포함됩니다.  
   
@@ -88,7 +88,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
 <test>  
   <name>name</name>  
 </test>  
-```  
+```
   
  name 요소 값은 편집 가능한 영역으로 표시됩니다.  
   
@@ -100,7 +100,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
   <ID>name</ID>  
   <Default>name</Default>  
 </Literal  
-```  
+```
   
  리터럴은 함수를 참조할 수도 있습니다. 명명 된 함수를 포함 하는 XML 편집기 **LookupPrefix**합니다. **LookupPrefix** 함수가 코드이 조각에서 호출 되 고 있는 경우 해당 네임 스페이스에 대해 정의 된 네임 스페이스 접두사를 반환 및 콜론 (:)을 포함 하는 XML 문서에 대 한 위치에서 지정된 된 네임 스페이스 URI 조회 합니다. 에 해당 이름입니다. 다음은의 예는 `Literal` 요소를 사용 하는 **LookupPrefix** 함수입니다.  
   
@@ -109,7 +109,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
    <ID>prefix</ID>  
    <Function>LookupPrefix("namespaceURI")</Function>  
 </Literal>  
-```  
+```
   
  그런 다음 XML 조각에서 $prefix$ 변수를 사용할 수 있습니다.  
   

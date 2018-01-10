@@ -19,11 +19,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 6c04b27acbd94172083c6efd41d55eaca13fd5e7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 37c4c82dc3edb1abcad9dc212040864155deb1a6
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-saved-intellitrace-data"></a>저장된 IntelliTrace 데이터 사용
 IntelliTrace 로그(.iTrace) 파일에서 디버깅을 시작할 때 응용 프로그램 실행의 특정 지점으로 이동합니다. 이 파일에는 응용 프로그램이 실행되는 동안 IntelliTrace가 기록하는 성능 이벤트, 예외, 스레드, 테스트 단계 및 기타 시스템 정보가 포함될 수 있습니다.  
@@ -39,7 +39,7 @@ IntelliTrace 로그(.iTrace) 파일에서 디버깅을 시작할 때 응용 프�
     |**소스**|**참조**|  
     |----------------|-------------|  
     |Visual Studio Enterprise(Professional 또는 Community Edition 아님)의 IntelliTrace 세션|[IntelliTrace 기능](../debugger/intellitrace-features.md)|  
-    |Microsoft Test Manager의 테스트 세션. 이는 Team Foundation Server 작업 항목에 .iTrace 파일을 연결합니다.|[수동 테스트에서 추가 진단 데이터 수집](/devops-test-docs/test/collect-more-diagnostic-data-in-manual-tests)|  
+    |Microsoft Test Manager의 테스트 세션. 이는 Team Foundation Server 작업 항목에 .iTrace 파일을 연결합니다.|[수동 테스트에서 추가 진단 데이터 수집](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)|  
     |배포에서 실행 중인 ASP.NET 웹앱 및 SharePoint 응용 프로그램에 대해 Microsoft Monitoring Agent 단독으로 또는 System Center 2012 R2 Operations Manager와 함께 사용|-   [배포 후 문제 진단](../debugger/diagnose-problems-after-deployment.md)<br />-   [System Center 2012 R2 Operations Manager의 새로운 기능](http://technet.microsoft.com/library/dn249700.aspx)|  
   
 ##  <a name="GetStarted"></a> 원하는 작업을 선택하세요.  
@@ -266,7 +266,7 @@ IntelliTrace 로그(.iTrace) 파일에서 디버깅을 시작할 때 응용 프�
   
  [IntelliTrace 기능](../debugger/intellitrace-features.md)  
   
- [수동 테스트에서 추가 진단 데이터 수집](/devops-test-docs/test/collect-more-diagnostic-data-in-manual-tests)  
+ [수동 테스트에서 추가 진단 데이터 수집](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)  
   
  [IntelliTrace](../debugger/intellitrace.md)  
   

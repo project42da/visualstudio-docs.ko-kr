@@ -25,11 +25,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: bb0018e97cdbacc5e16e9591a0d480d509e1a9f5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7a6a1a17768c1f52bec0f98ed9f9f86754856419
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="intellitrace"></a>IntelliTrace
 IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하면 응용 프로그램 디버깅에 사용되는 시간을 줄일 수 있습니다. IntelliTrace를 사용하면 다음이 가능하므로 손쉽게 버그를 찾을 수 있습니다.  
@@ -47,7 +47,7 @@ IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하�
 |||  
 |-|-|  
 |**IntelliTrace로 응용 프로그램을 디버그 합니다.**<br /><br /> -이전 이벤트 표시 합니다.<br />호출 정보 이전 이벤트를 표시 합니다.<br />-내 IntelliTrace 세션을 저장 합니다.<br />-IntelliTrace가 수집 하는 데이터를 제어 합니다.|-   [연습: IntelliTrace 사용](../debugger/walkthrough-using-intellitrace.md)<br />- [IntelliTrace 기능](../debugger/intellitrace-features.md)<br />-   [기록 디버깅](../debugger/historical-debugging.md)<br />-   [IntelliTrace 단계 백을 사용 하 여 스냅숏을 볼](../debugger/how-to-use-intellitrace-step-back.md)|  
-|**테스트 관리자에서 테스트 세션 동안 IntelliTrace 데이터 수집**|-   [수동 테스트에서 추가 진단 데이터 수집](/devops-test-docs/test/collect-more-diagnostic-data-in-manual-tests)|  
+|**테스트 관리자에서 테스트 세션 동안 IntelliTrace 데이터 수집**|-   [수동 테스트에서 추가 진단 데이터 수집](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests)|  
 |**배포 된 응용 프로그램에서 IntelliTrace 데이터 수집**|-   [IntelliTrace 독립 실행형 수집기 사용](../debugger/using-the-intellitrace-stand-alone-collector.md)|  
 |**IntelliTrace 로그 파일 (.iTrace 파일)에서 디버깅을 시작 합니다.**|-   [저장 된 IntelliTrace 데이터를 사용 하 여](../debugger/using-saved-intellitrace-data.md)|  
   
@@ -89,7 +89,7 @@ IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하�
   
 -   응용 프로그램이 테스트 컴퓨터에서 충돌하더라도 개발 컴퓨터에서는 성공적으로 실행됩니다.  
   
-     Microsoft Test Manager에서 IntelliTrace 데이터를 수집하고 데이터를 .iTrace 파일에 저장하며 이 파일을 향후 조사를 위해 Team Foundation Server 작업 항목에 첨부할 수 있습니다. 참조 [수동 테스트에서 추가 진단 데이터 수집](/devops-test-docs/test/collect-more-diagnostic-data-in-manual-tests) 및 [저장 된 IntelliTrace 데이터 사용](../debugger/using-saved-intellitrace-data.md)합니다.  
+     Microsoft Test Manager에서 IntelliTrace 데이터를 수집하고 데이터를 .iTrace 파일에 저장하며 이 파일을 향후 조사를 위해 Team Foundation Server 작업 항목에 첨부할 수 있습니다. 참조 [수동 테스트에서 추가 진단 데이터 수집](/vsts/manual-test/mtm/collect-more-diagnostic-data-in-manual-tests) 및 [저장 된 IntelliTrace 데이터 사용](../debugger/using-saved-intellitrace-data.md)합니다.  
   
 -   배포된 응용 프로그램에서 버그 또는 충돌이 발생합니다.  
   
@@ -180,8 +180,6 @@ IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하�
   
 ## <a name="in-this-section"></a>단원 내용  
  [IntelliTrace 기능](../debugger/intellitrace-features.md)  
-  
- [재현 하기 어려운 버그에 진단 추적 데이터를 포함 합니다.](/devops-test-docs/test_notintoc/including-diagnostic-trace-data-with-bugs-that-are-difficult-to-reproduce)  
   
  [배포 후 문제 진단](../debugger/diagnose-problems-after-deployment.md)  
   

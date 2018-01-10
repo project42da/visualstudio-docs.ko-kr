@@ -13,11 +13,11 @@ author: willbrown
 ms.author: willbrown
 manager: justinclareburt
 ms.workload: willbrown
-ms.openlocfilehash: e6ce654e158fbfbdaa3692d37f638e72085f8c4c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b51673daa7a8c3526ad7de7f7cfdeac6a91d3b4b
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>방법: 확장을 Visual Studio 2017 및 Visual Studio 2015와 호환 되도록
 
@@ -169,7 +169,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 예:
 
 ```xml
-<Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201… Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…/>
+<Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
 ```
 
 * 에 추가 조건부 문을 추가 하는 `<import>` 는 Microsoft.VisualStudio.Sdk.BuildTasks.14.0 있는 태그입니다.  삽입 하 여이 작업을 수행 `'$(VisualStudioVersion)' == '14.0' And` 조건 문으로 앞에 있습니다. 이러한 문은 머리글 및 csproj 파일의 바닥글에 표시 됩니다.
@@ -177,7 +177,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 예:
 
 ```xml
-<Import Project="packages\ Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0… Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…/>
+<Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
 ```
 
 * 에 추가 조건부 문을 추가 하는 `<Error>` Microsoft.VSSDK.BuildTools 참조 하는 태그입니다.  삽입 하 여이 작업을 수행 `'$(VisualStudioVersion)' != '14.0' And` 조건 문으로 앞에 있습니다. 이러한 문은 csproj 파일의 바닥글에 표시 됩니다.
@@ -185,7 +185,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 예:
 
 ```xml
-<Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…/>
+<Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
 ```
 
 * 에 추가 조건부 문을 추가 하는 `<Error>` 는 Microsoft.VisualStudio.Sdk.BuildTasks.14.0 있는 태그입니다.  삽입 하 여이 작업을 수행 `'$(VisualStudioVersion)' == '14.0' And` 조건 문으로 앞에 있습니다. 이러한 문은 csproj 파일의 바닥글에 표시 됩니다.
@@ -193,7 +193,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 예:
 
 ```xml
-<Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\ Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…/>
+<Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />
 ```
 
 * Csproj 파일을 저장 하 고 닫습니다.
