@@ -13,16 +13,15 @@ helpviewer_keywords:
 - unit tests, generating
 - unit tests, running
 - unit tests, authoring
-ms.assetid: 2b018b18-b412-4e0e-b0ee-b580a2f3ba9c
-caps.latest.revision: "83"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: ebdac762d3dcc4079ed6e8247b394da685b1013a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 6320f9730be9c47da11a43b57b64c86e46a42bf4
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="walkthrough-creating-and-running-unit-tests-for-managed-code"></a>연습: 관리 코드에 대한 단위 테스트 만들기 및 실행
 이 연습에서는 관리 코드에 대한 Microsoft 단위 테스트 프레임워크 및 Visual Studio 테스트 탐색기를 사용하여 일련의 단위 테스트를 생성, 실행 및 사용자 지정하는 방법을 안내합니다. 개발 중인 C# 프로젝트로 시작하여 해당 코드를 실행해 보는 테스트를 만들어 테스트를 실행하고 결과를 검사합니다. 그런 다음 프로젝트 코드를 변경하고 테스트를 다시 실행할 수 있습니다.  

@@ -1,7 +1,7 @@
 ---
 title: "빠른 시작: Visual Studio의 기존 코드에서 Python 프로젝트 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/25/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -13,22 +13,22 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 5f8f5b3baa26bf9c17b016c2a480443af3990256
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6e26a67c8333b343fa00e25540933223b92172dd
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>빠른 시작: 기존 코드에서 Python 프로젝트를 만들려면
 
-[Visual Studio 2017에 Python 지원을 설치](installation.md)하면 Visual Studio 프로젝트에 기존 Python 코드를 쉽게 가져올 수 있습니다. 
+[Visual Studio 2017에 Python 지원을 설치](installation.md)하면 Visual Studio 프로젝트에 기존 Python 코드를 쉽게 가져올 수 있습니다.
 
 > [!Important]
 > 여기에 설명된 프로세스는 원래 원본 파일을 이동하거나 복사하지 않습니다. 복사본으로 작업하려면 먼저 폴더를 복제합니다.
 
 [!INCLUDE[project-from-existing](includes/project-from-existing.md)]
 
-8. 원하는 경우 Ctrl+F5 키를 누르거나 **디버그 > 디버깅하지 않고 시작**을 선택하여 프로그램을 실행합니다. 
+8. 원하는 경우 Ctrl+F5 키를 누르거나 **디버그 > 디버깅하지 않고 시작**을 선택하여 프로그램을 실행합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

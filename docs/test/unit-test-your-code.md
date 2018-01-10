@@ -11,16 +11,15 @@ helpviewer_keywords:
 - Visual Studio, unit tests
 - unit tests, verifying code with
 - testing code, automated tests
-ms.assetid: c191de3e-3f3b-471e-b828-29ec24e80e2c
-caps.latest.revision: "62"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: a60e3236769cbaf35a9b232629834a8b8d52a852
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: a70433a811ad8cf45bb44b12c2971c90c8f82ff2
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="unit-test-your-code"></a>코드 단위 테스트
 개발자와 테스터는 단위 테스트를 통해 [!INCLUDE[csharp_current_short](../misc/includes/csharp_current_short_md.md)], [!INCLUDE[vb_current_short](../debugger/includes/vb_current_short_md.md)] 및 [!INCLUDE[cpp_current_short](../misc/includes/cpp_current_short_md.md)] 프로젝트에서 클래스의 메서드에 있는 논리 오류를 빠르게 찾을 수 있습니다.  
@@ -55,15 +54,6 @@ ms.lasthandoff: 12/22/2017
 |**단위 테스트 형식 확장:** 단위 테스트 프레임워크에 없을 수도 있는 테스트에 기능을 추가할 수 있습니다. 예를 들어 테스트를 일반 사용자로 실행할지 여부를 지정하는 테스트 속성을 추가할 수 있습니다. 또는 프레임워크를 확장하여 메서드에 행 특성을 추가하고 테스트에서 이 행의 데이터를 사용할 수 있습니다.|단위 테스트 프레임워크를 확장하는 방법에 대한 예제 코드는 다음 [Microsoft 웹 사이트](http://go.microsoft.com/fwlink/?LinkId=185591)를 참조하세요.|  
 |**테스트 옵션 설정:** 예를 들면 테스트 결과가 저장되는 위치를 지정할 수 있습니다.|[.runsettings 파일을 사용하여 단위 테스트 구성](../test/configure-unit-tests-by-using-a-dot-runsettings-file.md)|  
   
-## <a name="related-tasks"></a>관련 작업  
- [Microsoft Test Manager에서 테스트 결과 검토](http://msdn.microsoft.com/en-us/9fb3e429-78df-4fe2-89ed-0ad1db0738f4)  
-  
- 테스트 결과에 대해 설명하고, 테스트 결과 보기, 저장 및 삭제 방법을 비롯하여 테스트 결과의 사용 방법에 대해 설명합니다.  
-  
- [Microsoft Visual Studio를 사용하여 시스템 테스트 실행](/devops-test-docs/test/running-automated-tests-using-microsoft-visual-studio).  
-  
- Visual Studio를 사용하여 자동화된 테스트를 실행하는 방법을 [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]를 사용할 경우와 비교하여 설명하는 항목에 대한 링크를 제공합니다.  
-  
 ## <a name="reference"></a>참조  
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting>  
  유닛 테스트를 지원하는 특성, 예외, 어설션 및 기타 클래스를 제공하는 UnitTesting 네임스페이스에 대해 설명합니다.  
@@ -85,6 +75,6 @@ ms.lasthandoff: 12/22/2017
 ### <a name="reference"></a>참조  
  [단위 테스트에 대한 콘텐츠 인덱스](http://go.microsoft.com/fwlink/?LinkID=254719)  
   
-## <a name="see-also"></a>참고 항목  
- [코드 품질 향상](/visualstudio/test/improve-code-quality)   
- [응용 프로그램 테스트](/devops-test-docs/test/test-apps-early-and-often)
+## <a name="see-also"></a>참고 항목
+
+[코드 품질 향상](/visualstudio/test/improve-code-quality)

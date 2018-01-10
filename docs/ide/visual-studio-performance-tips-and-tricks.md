@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 519bb7b70737e4c3e2d6e80f19a056b4cd385980
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b703fd45732e3fd083a5c95b68647f67dce57b3a
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 성능 팁과 요령
 
@@ -71,7 +71,7 @@ Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 �
 
     진단 도구를 해제하려면 디버그 세션을 시작하고 **도구 > 옵션 > 디버그하는 동안 진단 도구 사용**을 선택한 후 옵션을 선택 취소합니다.
 
-    자세한 내용은 [프로파일링 도구](https://docs.microsoft.com/en-us/visualstudio/profiling/profiling-tools)를 참조하세요.
+    자세한 내용은 [프로파일링 도구](../profiling/profiling-tools.md)를 참조하세요.
 
 ## <a name="disable-tools-and-extensions"></a>도구 및 확장 기능 사용 안 함
 일부 도구 또는 확장 기능을 해제하여 성능을 높일 수 있습니다.

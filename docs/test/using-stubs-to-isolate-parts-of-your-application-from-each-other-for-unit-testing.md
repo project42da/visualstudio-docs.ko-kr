@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 73519dd9-f3d5-49b6-a634-38881b459ea4
-caps.latest.revision: "17"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: dd75aab44b2859aa2200dcfff97b80947f6f6b5c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: eb7e66bd7cae362411783fb3e2063115f1f3769c
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>스텁을 사용하여 유닛 테스트를 위한 응용 프로그램의 여러 부분을 서로 격리
 *스텁 유형*은 테스트하는 구성 요소를 이러한 구성 요소가 호출하는 다른 구성 요소에서 쉽게 격리할 수 있도록 Microsoft Fakes 프레임워크에서 제공하는 두 가지 기술 중 하나입니다. 스텁은 테스트 중 다른 구성 요소의 자리를 차지하는 작은 코드입니다. 스텁을 사용하는 이점은 일관적 결과를 반환하기 때문에 테스트를 더 쉽게 작성할 수 있다는 점입니다. 또한 아직 다른 구성 요소가 작동하지 않을 경우에도 테스트를 실행할 수 있습니다.  

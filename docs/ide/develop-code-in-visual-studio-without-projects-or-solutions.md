@@ -30,11 +30,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 2d1d3c327101e535c037dba30ed19af3dcf7faaa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 78b59ff3d8d6c54465ce29334c1dbe041b7a71be
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발  
 Visual Studio 2017에서는 솔루션이나 프로젝트 파일 없이 거의 모든 유형의 디렉터리 기반 프로젝트에서 Visual Studio로 코드를 열 수 있습니다. 예를 들어 Git에서 코드 프로젝트를 찾고 복제한 다음 Visual Studio로 직접 열고, 솔루션이나 프로젝트를 만들지 않고도 개발을 시작할 수 있습니다.  
@@ -172,7 +172,7 @@ Visual Studio는 여러 다른 언어를 실행하는 방법을 알고 있지만
 
   ![사용자 지정 빌드 작업 명령](./media/VSIDE_Code_Tasks_CustTask1.png)
 
-1. tasks.vs.json에 다음 빌드 작업을 추가합니다. 이 예제에서는 두 가지 작업, 즉 nMake 명령을 사용하여 프로젝트를 빌드하는 "makefile-build" 작업과 "clean" 인수로 nMake 명령을 호출하는 "makefile-clean" 작업을 추가합니다. 이러한 작업은 기존 "작업" 배열 내에 추가되어야 합니다. (이는 예제 빌드 작업일 뿐입니다. 실제로 작동하려면 시스템에 [nNake](https://docs.microsoft.com/en-us/cpp/build/nmake-reference)가 설치되어 있는 작업이 있어야 합니다.)  
+1. tasks.vs.json에 다음 빌드 작업을 추가합니다. 이 예제에서는 두 가지 작업, 즉 nMake 명령을 사용하여 프로젝트를 빌드하는 "makefile-build" 작업과 "clean" 인수로 nMake 명령을 호출하는 "makefile-clean" 작업을 추가합니다. 이러한 작업은 기존 "작업" 배열 내에 추가되어야 합니다. (이는 예제 빌드 작업일 뿐입니다. 실제로 작동하려면 시스템에 [nNake](/cpp/build/nmake-reference)가 설치되어 있는 작업이 있어야 합니다.)
 
   ```xml
   {

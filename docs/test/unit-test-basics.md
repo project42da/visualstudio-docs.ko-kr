@@ -8,16 +8,15 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: vs.UnitTest.CreateUnitTest
-ms.assetid: a80ba9cd-4575-483c-b957-af7ed8dc7e20
-caps.latest.revision: "27"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: b71e1797b7ba5378b7a8396f56f97cc9a0c63b2c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 492aaa5190bb0b24e7077d3523197ff4eff6ba49
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="unit-test-basics"></a>단위 테스트 기본 사항
 단위 테스트를 만들고 실행하여 코드가 예상대로 작동하는지 확인합니다. 프로그램의 기능을 개별적인 *단위*로 테스트할 수 있는 고유한 테스트 가능 동작으로 구분하므로 이를 유닛 테스트라고 합니다. Visual Studio 테스트 탐색기는 Visual Studio에서 단위 테스트를 실행하고 결과를 볼 수 있는 유연하고 효율적인 방법을 제공합니다. Visual Studio에는 관리 코드 및 네이티브 코드에 대한 Microsoft 단위 테스트 프레임워크가 설치됩니다. *단위 테스트 프레임워크* 를 사용하여 단위 테스트를 만들고, 실행하고, 이러한 테스트 결과를 보고합니다. 변경 시 단위 테스트를 다시 실행하여 코드가 여전히 제대로 작동하는지 테스트합니다. Visual Studio Enterprise에서는 [Live Unit Testing](live-unit-testing-intro.md)을 사용하여 이 작업을 자동으로 수행할 수 있습니다. 이 테스트는 코드 변경의 영향을 받는 테스트를 검색하고 사용자가 입력할 때 백그라운드에서 실행됩니다.

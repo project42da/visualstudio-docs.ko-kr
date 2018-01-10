@@ -14,11 +14,11 @@ dev_langs:
 - CSharp
 - VB
 ms.workload: multiple
-ms.openlocfilehash: 5d60fa62ee23ef942a6ef3ec20b7840374a33149
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7e70e4366ca91e00beeb4fff49ec30d4618bde81
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="quick-actions"></a>빠른 작업
 
@@ -592,7 +592,7 @@ Dim s As String = $"My string with {num} in the middle"
 | ------- | -------------------- | ----------------  |
 | IDE0017 | C# 및 Visual Basic | Visual Studio 2017 RTW |
 
-이 빠른 작업을 사용하면 생성자를 호출하고 대입문의 줄을 추가하는 대신 [개체 이니셜라이저](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 사용할 수 있습니다.
+이 빠른 작업을 사용하면 생성자를 호출하고 대입문의 줄을 추가하는 대신 [개체 이니셜라이저](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers)를 사용할 수 있습니다.
 
 ```csharp
 // Before
@@ -622,7 +622,7 @@ Dim c = New Customer() With {.Age = 21}
 | ------- | -------------------- | ----------------  |
 | IDE0028 | C# 및 Visual Basic | Visual Studio 2017 RTW |
 
-이 빠른 작업을 사용하면 클래스의 `Add` 메서드를 여러 번 호출하는 대신 [컬렉션 이니셜라이저](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers.md)를 사용할 수 있습니다.
+이 빠른 작업을 사용하면 클래스의 `Add` 메서드를 여러 번 호출하는 대신 [컬렉션 이니셜라이저](/dotnet/csharp/programming-guide/classes-and-structs/object-and-collection-initializers)를 사용할 수 있습니다.
 
 ```csharp
 // Before

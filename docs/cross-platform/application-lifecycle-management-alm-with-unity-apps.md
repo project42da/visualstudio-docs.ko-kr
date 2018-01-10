@@ -13,11 +13,11 @@ author: conceptdev
 ms.author: crdun
 manager: crdun
 ms.workload: unity
-ms.openlocfilehash: c6c22a04348266b4db83984ff194ad1cef2ac668
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4e68024333084b6166305266dd061ef32bc0e14a
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="application-lifecycle-management-alm-with-unity-apps"></a>ALM(Application Lifecycle Management) 및 Unity 앱
 최신 플랫폼용 앱을 개발하려면 코드 작성 이외에도 많은 작업을 수행해야 합니다. DevOps(개발+운영)라는 이러한 활동은 앱의 전체 수명 주기에 걸쳐 있으며 민첩한 작업 계획 및 추적, 코드 디자인 및 구현, 소스 코드 리포지토리 관리, 빌드 실행, 연속 통합 및 배포 관리, 테스트(단위 테스트 및 UI 테스트 포함), 개발 및 프로덕션 환경에서 다양한 형태의 진단 실행, 원격 분석 및 분석을 통해 실시간으로 앱 성능과 사용자 동작 모니터링을 포함합니다.  
@@ -84,8 +84,7 @@ ms.lasthandoff: 12/22/2017
 |사전 및 사후 스크립트로 정의 작성|예|사전 및 사후 빌드 스크립트에 대해 Unity 명령줄을 사용하여 빌드를 실행하는 사용자 지정 빌드 정의를 구성할 수도 있습니다.|  
 |제어된 체크 인을 포함하는 연속 통합|예|Git는 체크 인이 아니라 끌어오기 요청 모델로 작동하므로 TFVC에 대한 제어된 체크 인에만 해당|  
 
-## <a name="testing"></a>테스트  
- 참조 링크: **[응용 프로그램 테스트](/devops-test-docs/test/test-apps-early-and-often)**  
+## <a name="testing"></a>테스트
 
 |기능|Unity에서 지원 여부|추가 설명|  
 |-------------|--------------------------|-------------------------|  
@@ -96,8 +95,9 @@ ms.lasthandoff: 12/22/2017
 |[코드 단위 테스트](../test/unit-test-your-code.md)|Visual Studio가 아니라 Unity 내에서 발생|Unity는 [Unity 테스트 도구](https://www.assetstore.unity3d.com/en/#!/content/13802)(Unity 자산 스토어)의 일부로 자체 단위 테스트 프레임워크를 제공합니다. 단위 테스트 결과는 Unity 내에서 보고되고 Visual Studio 내에 표시되지 않습니다.|  
 |[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)|아니요|코딩된 UI 테스트는 앱 UI의 읽을 수 있는 컨트롤을 사용합니다. Unity 앱은 본질적으로 그래픽이므로 코딩된 UI 테스트 도구에서 콘텐츠를 읽을 수 없습니다.|  
 
-## <a name="improve-code-quality"></a>코드 품질 향상  
- 참조 링크: **[코드 품질 향상](/visualstudio/test/improve-code-quality)**  
+## <a name="improve-code-quality"></a>코드 품질 향상
+
+참조 링크: **[코드 품질 향상](/visualstudio/test/improve-code-quality)**  
 
 |기능|Unity에서 지원 여부|추가 설명|  
 |-------------|--------------------------|-------------------------|  

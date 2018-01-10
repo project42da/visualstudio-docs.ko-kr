@@ -13,11 +13,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f6e8eb7d7349bc88a54707c68a4e505d3f6720b8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e12acc12559b4295958906fd182c381933bb5d45
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio에서 플랫폼 간 모바일 개발
 Visual Studio를 사용하여 Android, iOS 및 Windows 장치용 앱을 빌드할 수 있습니다.  앱을 디자인할 때 Visual Studio의 도구를 사용하여 Office 365, Azure App Service 및 Application Insights와 같은 연결된 서비스를 쉽게 추가할 수 있습니다.
@@ -118,7 +118,7 @@ Visual Studio를 사용하여 Android, iOS 및 Windows 장치용 앱을 빌드�
 |**자세히**|
 |--------------------|
 |[Visual Studio 설치](http://www.visualstudio.com/products/visual-studio-community-vs)(VisualStudio.com)|
-|[Visual Studio Tools for Apache Cordova 시작](https://docs.microsoft.com/visualstudio/cross-platform/tools-for-cordova/)(docs.microsoft.com)|
+|[Visual Studio Tools for Apache Cordova 시작](/visualstudio/cross-platform/tools-for-cordova/)(docs.microsoft.com)|
 |[Android 용 Visual Studio 에뮬레이터에 대해 알아보기](http://www.visualstudio.com/explore/msft-android-emulator-vs)(VisualStudio.com)|
 
 ##  <a name="CPP"></a> Android 및 Windows용 앱 빌드(C++)

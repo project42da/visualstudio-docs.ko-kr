@@ -28,11 +28,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c40be53bb72d0d61b0455c2f42afcb128e0d511f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c958958ca3b0621a4e348ebcbc4cffaf35d3cce9
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
@@ -51,7 +51,7 @@ TypeScript는 여러 소스를 사용하여 이 정보를 구성합니다.
 
 - [형식 유추 기반 IntelliSense](#TypeInference)
 - [JSDoc 기반 IntelliSense](#JsDoc)
-- [TypeScript 선언 파일 기반 IntelliSense](#TSDeclFiles)
+- [TypeScript 선언 파일 기반 IntelliSense](#TsDeclFiles)
 - [형식 정의의 자동 획득](#Auto)
 
 ### <a name="TypeInference"></a>형식 유추 기반 IntelliSense

@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a859595f-6517-43f2-9d61-c706cb55a388
-caps.latest.revision: "23"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 009ae62acc9685ee0d004976ce86b751cc0d1852
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: ca381d794569ebae4da2d46225d800dbfe4cf480
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>코딩된 UI 테스트에 다른 웹 브라우저 사용
 코딩된 UI 테스트는 Internet Explorer로 테스트를 기록하여 웹 응용 프로그램 테스트를 자동화합니다. 그런 다음 이러한 웹 응용 프로그램에 대해 Internet Explorer 또는 기타 브라우저를 사용하여 테스트를 사용자 지정하고 재생할 수 있습니다.  

@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6e45410a-1819-4d54-ac21-7280152f7e3a
-caps.latest.revision: "9"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e216205ef2e7dfb22524ca3fb83a40958d31fd6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 3603746325be5feff231d5e2538282f7bf6d6893
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sample-excel-extension-extensionpackage-class"></a>샘플 Excel 확장: ExtensionPackage 클래스
 이 클래스는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage> 클래스를 확장하며 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 워크시트를 테스트하는 코딩된 UI 테스트의 진입점을 제공합니다.  

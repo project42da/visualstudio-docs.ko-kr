@@ -18,11 +18,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 88d34f29593af6e15a30c45f44793c60794ebb24
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: eab9e96906e5d6bd31ef0f84bebf635c4c104b3d
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="toolbox-html-tab"></a>도구 상자, HTML 탭
 도구 상자의 **HTML** 탭에서는 웹 페이지와 Web Forms에서 유용한 구성 요소를 제공합니다. 이 탭을 보려면 먼저 HTML 디자이너에서 편집할 문서를 엽니다. **보기** 메뉴에서 **도구 상자**를 클릭하고 도구 상자의 **HTML** 탭을 클릭합니다.  
@@ -86,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 ```  
 
 > [!IMPORTANT]
->  모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
+>  모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
 
  **Input (File)**  
  ![HTML 페이지 파일 필드](../../ide/reference/media/vxfilefield.gif "vxFilefield")  
@@ -100,7 +100,7 @@ ms.lasthandoff: 12/22/2017
 ```  
 
 > [!IMPORTANT]
->  모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
+>  모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
 
  **Input (Password)**  
  ![Visual Studio 암호 필드](../../ide/reference/media/vxpassword.gif "vxPassword")  
@@ -114,7 +114,7 @@ ms.lasthandoff: 12/22/2017
 ```  
 
 > [!IMPORTANT]
->  응용 프로그램에서 사용자 이름과 암호를 전송할 경우 SSL(Secure Sockets Layer)을 사용하여 전송을 암호화하도록 웹 사이트를 구성해야 합니다. 자세한 내용은 [IIS Operations Guide](http://go.microsoft.com/fwlink/?linkid=47856)(IIS 작업 가이드)에서 "Securing Connections with SSL(SSL을 사용하여 연결 보호)"을 참조하세요. 또한 모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
+>  응용 프로그램에서 사용자 이름과 암호를 전송할 경우 SSL(Secure Sockets Layer)을 사용하여 전송을 암호화하도록 웹 사이트를 구성해야 합니다. 자세한 내용은 [IIS Operations Guide](http://go.microsoft.com/fwlink/?linkid=47856)(IIS 작업 가이드)에서 "Securing Connections with SSL(SSL을 사용하여 연결 보호)"을 참조하세요. 또한 모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
 
  **Input (Check box)**  
  ![HTML 웹 페이지 도구 상자 확인란 옵션](../../ide/reference/media/vxcheckbox.gif "vxCheckbox")  
@@ -161,7 +161,7 @@ ms.lasthandoff: 12/22/2017
 ```  
 
 > [!IMPORTANT]
->  모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](https://docs.microsoft.com/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
+>  모든 사용자 입력의 유효성을 검사하는 것이 좋습니다. 자세한 내용은 [Validating User Input in ASP.NET Web Pages (Razor) Sites](/aspnet/web-pages/overview/ui-layouts-and-themes/validating-user-input-in-aspnet-web-pages-sites)(ASP.NET 웹 페이지(Razor) 사이트에서 사용자 입력 유효성 검사)를 참조하세요.  
 
  **Table**  
  ![HTMLpageToolbarTable 스크린샷](../../ide/reference/media/vxtable.gif "vxTable")  

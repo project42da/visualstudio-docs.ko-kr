@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 7b866776-f2d5-4823-8d15-919f889db26f
-caps.latest.revision: "28"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 8aa1bac1a98d8121dcba30dace22483e4a80e1d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 2af4471fd816746f19c06a7769fec6eb4ae5f425
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="test-windows-uwp-and-81-phone-apps-with-coded-ui-tests"></a>코딩된 UI 테스트를 사용하여 Windows UWP 및 8.1 Phone 앱 테스트
 
@@ -376,7 +375,7 @@ public void DataDrivingDemo_MyTestMethod(int x, int y)
   
 |기능|UWP 앱|Windows Phone 앱|  
 |-------------|------------------------|------------------------|  
-|테스트 실행 대상|로컬 또는 원격 컴퓨터. 자동화된 테스트 사례를 사용하여 테스트를 실행하는 경우 원격 컴퓨터를 지정할 수 있습니다. [Microsoft Test Manager에서 테스트 사례 자동화](/devops-test-docs/test/automate-a-test-case-in-microsoft-test-manager)를 참조하세요.|에뮬레이터 또는 장치. 이 항목의 [Q: 테스트는 에뮬레이터에서만 실행할 수 있나요? 아니면 실제 장치에서도 할 수 있나요?](#TestingPhoneAppsCodedUI_EmulatorDevice) 를 참조하세요.|  
+|테스트 실행 대상|로컬 또는 원격 컴퓨터. 자동화된 테스트 사례를 사용하여 테스트를 실행하는 경우 원격 컴퓨터를 지정할 수 있습니다.|에뮬레이터 또는 장치. 이 항목의 [Q: 테스트는 에뮬레이터에서만 실행할 수 있나요? 아니면 실제 장치에서도 할 수 있나요?](#TestingPhoneAppsCodedUI_EmulatorDevice) 를 참조하세요.|  
 |명령줄에서 실행|대상을 지정하는 데 Settings 파일이 필요 없습니다.|대상을 지정하는 데에는 Runsettings 파일이 필요합니다.|  
 |셸 컨트롤의 특수화 클래스|<xref:Microsoft.VisualStudio.TestTools.UITesting.DirectUIControls.DirectUIControl>|<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>|  
 |XAML 앱의 WebView 컨트롤|Html* 특수화 클래스를 사용하여 HTML 요소와 상호 작용하는 경우 지원됩니다. <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>을 참조하세요.|지원되지 않습니다.|  

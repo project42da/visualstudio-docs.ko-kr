@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: d2a34de2-6527-4c21-8b93-2f268ee894b7
-caps.latest.revision: "12"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 8ddd21dde8057475c1169cf4ef3d43df84a1c96d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 3a0d2932e4fc14070759906ad27c36f63132559b
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing"></a>shim을 사용하여 유닛 테스트를 위한 다른 어셈블리에서 응용 프로그램 격리
 **shim 형식**은 Microsoft Fakes 프레임워크가 환경에서 테스트 대상 구성 요소를 쉽게 격리시킬 수 있도록 하기 위해 사용하는 두 기술 중 하나입니다. shim은 특정 메서드 호출을 테스트의 일부로 작성하는 코드로 우회합니다. 대부분의 메서드는 외부 조건에 따라 다른 결과를 반환하지만 shim은 테스트에 의해 제어되며 모든 호출에서 일관된 결과를 반환할 수 있습니다. 이렇게 하면 테스트를 훨씬 쉽게 작성할 수 있습니다.  

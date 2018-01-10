@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: b681164c-c87a-4bd7-be48-ed77e1578471
-caps.latest.revision: "15"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 68999863abbf539bf1d83456d0630820249adb77
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 7595df2e8d57ae21d134aa68d156e87b883e8500
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리
 Microsoft.SharePoint.Emulators 패키지는 Microsoft SharePoint 2010 응용 프로그램에 대한 격리된 단위 테스트를 만들도록 도와주는 라이브러리 집합을 제공합니다. 에뮬레이터는 [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 격리 프레임워크의 [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)을 사용하여 SharePoint API의 가장 일반적인 개체 및 메서드를 가장하는 간단한 메모리 내 개체를 만듭니다. SharePoint 메서드가 에뮬레이트되지 않는 경우가 에뮬레이터의 기본 동작을 변경하려면 Fakes shim을 만들어서 원하는 결과를 제공할 수 있습니다.  
@@ -589,7 +588,7 @@ namspace MySPAppTests
  [항목 내용](#BKMK_In_this_topic)  
   
 ## <a name="see-also"></a>참고 항목  
- [코드 단위 테스트](../test/unit-test-your-code.md)   
- [코딩된 UI 테스트를 사용하여 SharePoint 2010 응용 프로그램 테스트](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)   
- [SharePoint 2010 및 2013 응용 프로그램 웹 성능 및 부하 테스트](/devops-test-docs/test/web-performance-and-load-testing-sharepoint-2010-and-2013-applications)   
- [SharePoint 솔루션 개발](/office-dev/office-dev/developing-sharepoint-solutions)
+
+[코드 단위 테스트](../test/unit-test-your-code.md)  
+[코딩된 UI 테스트를 사용하여 SharePoint 2010 응용 프로그램 테스트](../test/testing-sharepoint-2010-applications-with-coded-ui-tests.md)  
+[SharePoint 솔루션 개발](/office-dev/office-dev/developing-sharepoint-solutions)

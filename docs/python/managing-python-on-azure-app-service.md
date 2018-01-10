@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - azure
-ms.openlocfilehash: 5ebbded093da4b3a6bb5b829628de481d43355dd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 50a2da5a92276b5ace29bdc2b0a35eaae516a3c9
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
 
@@ -47,20 +47,19 @@ ms.lasthandoff: 12/22/2017
 1. 확장을 선택하고, 법률 조항에 동의한 다음, **확인**을 선택합니다.
 1. 설치가 완료되면 포털에서 알림이 나타납니다.
 
-
 ## <a name="choosing-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager를 통해 Python 버전 선택
 
 Azure Resource Manager 템플릿을 사용하여 App Service를 배포하는 경우 사이트 확장을 리소스로 추가합니다. 확장은 `siteextensions` 형식과 [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22)의 이름을 사용하여 중첩된 리소스로 표시됩니다.
 
 예를 들어 `python361x64`(Python 3.6.1 x64)에 참조를 추가한 후 템플릿이 다음과 같이 표시될 수 있습니다(일부 속성 생략됨).
 
-```
+```json
 "resources": [
   {
     "apiVersion": "2015-08-01",
     "name": "[parameters('siteName')]",
     "type": "Microsoft.Web/sites",
-    
+
     // ...
 
     "resources": [
@@ -99,8 +98,8 @@ App Service에서 특정 경로를 보려면 App Service 페이지에서 **확�
 확장에 대한 경로를 보는 데 문제가 있는 경우 콘솔을 사용하여 수동으로 찾을 수 있습니다.
 
 1. App Service 페이지에서 **개발 도구 > 콘솔**을 선택합니다.
-2. `ls ../home` 또는 `dir ..\home` 명령을 입력하여 `Python361x64`와 같은 최상위 확장 폴더를 확인합니다.
-3. `ls ../home/python361x64` 또는 `dir ..\home\python361x64`와 같은 명령을 입력하여 `python.exe` 및 기타 인터프리터 파일이 포함되어 있는지 확인합니다.
+1. `ls ../home` 또는 `dir ..\home` 명령을 입력하여 `Python361x64`와 같은 최상위 확장 폴더를 확인합니다.
+1. `ls ../home/python361x64` 또는 `dir ..\home\python361x64`와 같은 명령을 입력하여 `python.exe` 및 기타 인터프리터 파일이 포함되어 있는지 확인합니다.
 
 ### <a name="configuring-the-fastcgi-handler"></a>FastCGI 처리기 구성
 
@@ -126,6 +125,7 @@ FastCGI는 요청 수준에서 작동하는 인터페이스입니다. IIS는 들
 ```
 
 여기서 정의된 `<appSettings>`는 앱에서 환경 변수로 사용할 수 있습니다.
+
 - `PYTHONPATH`의 값은 자유롭게 확장될 수 있지만 해당 앱의 루트를 포함해야 합니다.
 - `WSGI_HANDLER`는 해당 앱에서 가져올 수 있는 WSGI 앱을 가리켜야 합니다.
 - `WSGI_LOG`는 선택 사항이지만 앱 디버깅을 위해 권장됩니다. 
@@ -172,33 +172,32 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
 | 앱을 사용한 번들 | 패키지를 프로젝트에 직접 설치한 다음, 앱의 일부인 경우처럼 App Service에 배포합니다. 보유한 종속성 수와 업데이트 빈도에 따라 이 방법은 배포 작업을 진행하는 가장 쉬운 방법일 수 있습니다. 주의 사항은 이러한 라이브러리가 서버의 Python 버전과 정확하게 일치해야 한다는 것입니다. 일치하지 않으면 배포 후에 모호한 오류가 표시됩니다. 그러나 App Service 사이트 확장의 Python 버전은 python.org에 릴리스된 버전과 정확히 동일하기 때문에 로컬 개발에 사용할 호환되는 버전을 쉽게 얻을 수 있습니다. |
 | 가상 환경 | 지원되지 않습니다. 대신, 번들을 사용하고 `PYTHONPATH` 환경 변수를 패키지의 위치를 가리키도록 설정합니다. |
 
-
 ### <a name="azure-app-service-kudu-console"></a>Azure App Service Kudu 콘솔
 
 [Kudu 콘솔](https://github.com/projectkudu/kudu/wiki/Kudu-console)은 App Service 서버와 해당 파일 시스템에 대한 직접적인 관리자 권한 명령줄 액세스를 제공합니다. 이는 모두 유용한 디버깅 도구이며 패키지를 설치하는 등의 CLI 작업을 허용합니다.
 
 1. **개발 도구 > 고급 도구**를 선택한 다음, **이동**을 선택하여 Azure Portal의 App Service 페이지에서 Kudu를 엽니다. 이 작업을 통해 `.scm`이 삽입된 것 외에는 기본 App Service URL과 동일한 URL로 이동합니다. 예를 들어 기본 URL이 `https://vspython-test.azurewebsites.net/`이면 Kudu는 `https://vspython-test.scm.azurewebsites.net/`에 있습니다(책갈피 사용 가능).
 
-    ![Azure App Service용 Kudu 콘솔](media/python-on-azure-console01.png)    
+    ![Azure App Service용 Kudu 콘솔](media/python-on-azure-console01.png)
 
-2. **디버그 콘솔 > CMD**를 선택하여 콘솔을 엽니다. 여기서 Python 설치로 이동하여 어떤 라이브러리가 있는지 확인할 수 있습니다.
+1. **디버그 콘솔 > CMD**를 선택하여 콘솔을 엽니다. 여기서 Python 설치로 이동하여 어떤 라이브러리가 있는지 확인할 수 있습니다.
 
-3. 단일 패키지를 설치하려면
+1. 단일 패키지를 설치하려면
 
     a. 패키지를 설치하려는 Python 설치 폴더(예: `d:\home\python361x64`)로 이동합니다.
-     
+
     b. `python.exe -m pip install <package_name>`를 사용하여 패키지를 설치합니다.
-    
+
     ![Azure App Service용 Kudu 콘솔을 통한 bottle 설치의 예](media/python-on-azure-console02.png)
-    
-4. 앱용 `requirements.txt`를 서버에 이미 배포한 경우 다음과 같이 해당 요구 사항을 모두 설치합니다.
+
+1. 앱용 `requirements.txt`를 서버에 이미 배포한 경우 다음과 같이 해당 요구 사항을 모두 설치합니다.
 
     a. 패키지를 설치하려는 Python 설치 폴더(예: `d:\home\python361x64`)로 이동합니다.
-    
+
     b. `python.exe -m pip install --upgrade -r d:\home\site\wwwroot\requirements.txt` 명령을 실행합니다.
-    
+
     로컬 및 서버 모두에서 정확한 패키지 집합을 쉽게 재현할 수 있기 때문에 `requirements.txt`를 사용하는 것이 좋습니다. `requirements.txt`에 대한 변경 사항을 배포한 후 콘솔을 방문하여 명령을 다시 실행해야 합니다.
-    
+
 > [!Note]
 > App Service에는 C 컴파일러가 없으므로 기본 확장 모듈이 있는 모든 패키지에 대해 휠을 설치해야 합니다. 인기 있는 많은 패키지가 자체 휠을 제공합니다. 자체 휠을 제공하지 않는 패키지의 경우 로컬 개발 컴퓨터의 `pip wheel <package_name>`을 사용한 다음 휠을 사이트에 업로드합니다. 예를 들어 [필수 패키지 관리](python-environments.md#managing-required-packages)를 참조하세요.
 
@@ -213,7 +212,6 @@ Azure Portal을 통해 Kudu 콘솔을 사용하는 대신 `https://yoursite.scm.
 }
 ```
 
-명령 및 인증에 대한 자세한 내용은 [Kudu 설명서](https://github.com/projectkudu/kudu/wiki/REST-API)를 참조하세요. 
+명령 및 인증에 대한 자세한 내용은 [Kudu 설명서](https://github.com/projectkudu/kudu/wiki/REST-API)를 참조하세요.
 
-`az webapp deployment list-publishing-profiles` 명령을 사용하여 Azure CLI를 통해 자격 증명을 볼 수 있습니다([az webapp 배포](https://docs.microsoft.com/cli/azure/webapp/deployment#list-publishing-profiles) 참조). Kudu 명령을 게시하는 도우미 라이브러리도 [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)에서 사용할 수 있습니다.
-
+`az webapp deployment list-publishing-profiles` 명령을 사용하여 Azure CLI를 통해 자격 증명을 볼 수 있습니다([az webapp 배포](/cli/azure/webapp/deployment?view=azure-cli-latest#az_webapp_deployment_list_publishing_profiles) 참조). Kudu 명령을 게시하는 도우미 라이브러리도 [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)에서 사용할 수 있습니다.

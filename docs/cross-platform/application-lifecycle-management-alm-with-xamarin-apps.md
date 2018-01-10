@@ -13,11 +13,11 @@ author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload: xamarin
-ms.openlocfilehash: f744bd9535a4946570267de027e7096b41d274e7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b72c0a0df85c4c37745faaec4e9d2da269e6c9cd
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="application-lifecycle-management-alm-with-xamarin-apps"></a>ALM(Application Lifecycle Management) 및 Xamarin 앱
 Xamarin을 통해 C#, .NET 및 Visual Studio를 사용하여 Android, iOS 및 Windows를 대상으로 하는 플랫폼 간 모바일 앱을 빌드할 수 있습니다. Xamarin을 통해 많은 양의 코드를 플랫폼 간에 공유할 수 있으므로 일부 코드만 플랫폼별로 작성하면 됩니다. Xamarin 자체에 대한 자세한 내용은 [Visual Studio 및 Xamarin](../cross-platform/visual-studio-and-xamarin.md)을 참조하세요.  
@@ -80,9 +80,8 @@ Xamarin을 통해 C#, .NET 및 Visual Studio를 사용하여 Android, iOS 및 Wi
 |사전 및 사후 스크립트로 정의 작성|예||  
 |제어된 체크 인을 포함하는 연속 통합|예|Git는 체크 인이 아니라 끌어오기 요청 모델로 작동하므로 TFVC에 대한 제어된 체크 인에만 해당|  
   
-## <a name="testing"></a>테스트  
- 참조 링크: **[응용 프로그램 테스트](/devops-test-docs/test/test-apps-early-and-often)**  
-  
+## <a name="testing"></a>테스트
+
 |기능|Xamarin에서 지원 여부|추가 설명|  
 |-------------|----------------------------|-------------------------|  
 |테스트 계획, 테스트 사례 만들기 및 테스트 도구 모음 구성|예||  

@@ -14,16 +14,15 @@ helpviewer_keywords:
 - unit tests, running
 - unit tests, data-driven
 - data-driven unit tests
-ms.assetid: a0322bc5-02c8-4f9f-af43-100a60b1bd28
-caps.latest.revision: "33"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f0d0250e2810adc8fd79239aa8e0807b04bbf0a3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: a582796e7436df49a719d758896ee8dcea43b068
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>방법: 데이터 기반 단위 테스트 만들기
 관리 코드에 Microsoft 단위 테스트 프레임워크를 사용하면 데이터 소스에서 테스트 메서드에 사용된 값을 검색하도록 단위 테스트 메서드를 설정할 수 있습니다. 이 메서드는 데이터 소스의 각 행을 대상으로 연속 실행되므로 단일 메서드를 사용하여 다양한 입력을 쉽게 테스트할 수 있습니다.  

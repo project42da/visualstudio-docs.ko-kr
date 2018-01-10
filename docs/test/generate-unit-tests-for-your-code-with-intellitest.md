@@ -8,16 +8,15 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: vs.UnitTest.CreateIntelliTest
-ms.assetid: cd9ff940-e948-4d28-a72c-b291ef5c1e90
-caps.latest.revision: "33"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: bf6bdf29541b721839bbdef42a2bc018d4a9c424
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 4ec391c698a53caa93796634ccf6fd8bf6bdcb41
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="generate-unit-tests-for-your-code-with-intellitest"></a>IntelliTest를 사용하여 코드에 대한 단위 테스트 생성
 IntelliTest는 .NET 코드를 탐색하여 테스트 데이터 및 단위 테스트 도구 모음을 생성합니다. 코드의 모든 문에 대해 해당 문을 실행할 테스트 입력이 생성됩니다. 코드의 모든 조건부 분기에 대해 사례 분석이 수행됩니다. 예를 들어 `if` 문, 어설션 및 예외를 throw할 수 있는 모든 작업이 분석됩니다. 이 분석은 각 메서드에 대해 매개 변수가 있는 단위 테스트용 테스트 데이터를 생성하는 데 사용됩니다(높은 코드 검사가 포함된 단위 테스트 생성).  

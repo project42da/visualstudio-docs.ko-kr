@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 46048b135dc0023e2a7b918b72ec226af3ed22b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ce432a20aa451807058fc83432705e5b32440b63
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="step-6-working-with-git"></a>6단계: Git 작업
 
@@ -47,7 +47,7 @@ Visual Studio는 로컬 Git 리포지토리 및 GitHub 및 Visual Studio Team Se
 
 ## <a name="going-deeper"></a>자세히 알아보기
 
-Git 작업에 대한 보다 광범위한 자습서는 [Visual Studio 2017 및 VSTS Git와 코드 공유](https://docs.microsoft.com/vsts/git/share-your-code-in-git-vs-2017)를 참조하세요.
+Git 작업에 대한 보다 광범위한 자습서는 [Visual Studio 2017 및 VSTS Git와 코드 공유](/vsts/git/share-your-code-in-git-vs-2017)를 참조하세요.
 
 ## <a name="tutorial-review"></a>자습서 검토
 

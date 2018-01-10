@@ -16,11 +16,11 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 011c86caae5eaa00577dcc9a5d9c372849eb28f0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 28f0715665fb032ac2cf78dd58be65005b1065d0
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
 #### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 릴리스](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)용으로 업데이트
@@ -224,7 +224,7 @@ Visual Studio 2017 버전 15.5는 Windows 10 Fall Creators Update SDK(10.0.16299
 * **UWP와 Win32의 장점** <br/>
 Windows 10 플랫폼은 [데스크톱 브리지](https://docs.microsoft.com/windows/uwp/porting/desktop-to-uwp-root)를 통해 개발자가 중점을 두는 것이 UWP, WPF, Windows Forms 또는 Xamarin 중 무엇이든 모든 .NET 개발자가 Windows 10을 더 잘 활용할 수 있도록 향상되었습니다. Visual Studio 2017 버전 15.5의 새로운 앱 패키징 프로젝트 형식을 사용하면 UWP 프로젝트에서 하듯이 WPF 또는 Windows Forms 프로젝트용 Windows 앱 패키지를 만들 수 있습니다. 앱을 패키지하면 Windows 10 앱 배포의 모든 이점과 Microsoft Store(소비자 앱) 또는 비즈니스 및 교육용 Microsoft Store를 통해 배포할 수 있는 옵션이 제공됩니다. 패키지된 앱은 데스크톱의 전체 UWP API 표면과 Win32 API 모두에 액세스할 수 있기 때문에 UWP API 및 Windows 10 기능을 사용하여 WPF 및 Windows Forms 응용 프로그램을 점진적으로 현대화할 수 있습니다. 또한 모든 Win32 기능을 갖춘 데스크톱에서 실행되는 UWP 응용 프로그램에 Win32 구성 요소를 포함할 수 있습니다. 
 
-UWP에 대한 자세한 내용은 [UWP(유니버설 Windows 플랫폼)용 앱 개발](https://docs.microsoft.com/visualstudio/cross-platform/develop-apps-for-the-universal-windows-platform-uwp) 페이지를 참조하세요.
+UWP에 대한 자세한 내용은 [UWP(유니버설 Windows 플랫폼)용 앱 개발](../cross-platform/develop-apps-for-the-universal-windows-platform-uwp.md) 페이지를 참조하세요.
 
 ## <a name="mobile-app-development"></a>모바일 앱 개발
 ### <a name="xamarin"></a>Xamarin
@@ -271,7 +271,7 @@ Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
 
 **15.3의 새로운 기능**: Visual Studio 2017 버전 15.3은 .NET Core 2.0 개발을 지원합니다. .NET Core 2.0을 사용하려면 .NET Core 2.0 SDK를 별도로 다운로드하여 설치해야 합니다.  
 
-자세한 내용은 [.NET Core 가이드](https://docs.microsoft.com/dotnet/core/index) 페이지를 참조하세요.
+자세한 내용은 [.NET Core 가이드](/dotnet/core/index) 페이지를 참조하세요.
 
 ## <a name="games-development"></a>게임 개발
 ### <a name="visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity

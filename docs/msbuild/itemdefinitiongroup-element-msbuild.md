@@ -22,11 +22,11 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 431171316ba98cfb6195c6cf26d6530147733e51
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1a8444c63d7c025c04f212901e82cce6d5cf24da
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="itemdefinitiongroup-element-msbuild"></a>ItemDefinitionGroup 요소(MSBuild)
 `ItemDefinitionGroup` 요소를 사용하면 기본적으로 프로젝트의 모든 항목에 적용되는 메타데이터 값인 항목 정의 집합을 정의할 수 있습니다. ItemDefinitionGroup을 사용하면 [CreateItem 작업](../msbuild/createitem-task.md) 및 [CreateProperty 작업](../msbuild/createproperty-task.md)을 사용할 필요가 없습니다. 자세한 내용은 [항목 정의](../msbuild/item-definitions.md)를 참조하세요.  
@@ -37,10 +37,10 @@ ms.lasthandoff: 12/22/2017
 ## <a name="syntax"></a>구문  
 
 ```  
-<ItemGroup Condition="'String A' == 'String B'">  
+<ItemDefinitionGroup Condition="'String A' == 'String B'">  
     <Item1>... </Item1>  
     <Item2>... </Item2>  
-</ItemGroup>  
+</ItemDefinitionGroup>  
 ```  
 
 ## <a name="attributes-and-elements"></a>특성 및 요소  

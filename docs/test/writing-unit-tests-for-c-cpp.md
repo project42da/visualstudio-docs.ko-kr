@@ -7,16 +7,15 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 4f4b5f10-7314-4725-8c6e-e72f52eff918
-caps.latest.revision: "14"
 ms.author: mblome
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: dd663d17dc7d0dc66af7cdd27f0da3cf9a253523
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: mikeblome
+ms.openlocfilehash: d926e28dc918900715090d32f929b6b7ff5cb482
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio에서 C/C++에 대한 단위 테스트 작성
 다른 언어처럼 **테스트 탐색기** 창을 사용하여 C++ 단위 테스트를 작성하여 실행할 수 있습니다. **테스트 탐색기**에 대한 자세한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)을 참조하세요. 
@@ -38,7 +37,7 @@ Visual Studio에는 다음 C++ 테스트 기능이 포함되어 있으며 추가
 
 2) **Boost.Test**는 **C++를 통합 데스크톱 개발** 워크로드의 기본 구성 요소로 포함되어 있습니다. **테스트 탐색기**와 통합되지만 현재는 프로젝트 템플릿을 갖지 않으므로 수동으로 구성해야 합니다. 자세한 내용은 [방법: Visual Studio에서 Boost.Test 사용](how-to-use-boost-test-for-cpp.md)을 참조하세요. 
 
-3) **CTest** 지원은 **C++를 통한 데스크톱 개발** 워크로드의 일부인 [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp.md) 구성 요소에 포함되어 있습니다. 그러나 CTest는 아직 **테스트 탐색기**에 완전히 통합되지는 않았습니다. 자세한 내용은 [방법: Visual Studio에서 CTest 사용](how-to-use-ctest-for-cpp.md)을 참조하세요.
+3) **CTest** 지원은 **C++를 통한 데스크톱 개발** 워크로드의 일부인 [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp) 구성 요소에 포함되어 있습니다. 그러나 CTest는 아직 **테스트 탐색기**에 완전히 통합되지는 않았습니다. 자세한 내용은 [방법: Visual Studio에서 CTest 사용](how-to-use-ctest-for-cpp.md)을 참조하세요.
 
 
 **Visual Studio 2015 및 이전 버전**

@@ -8,16 +8,15 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: coded UI tests, extensions for Excel
-ms.assetid: 451e4d14-7fac-42f9-af56-2bdc8414c6c7
-caps.latest.revision: "13"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 11a1c2a09b1a41f0f60879bdaabdf79696a0199e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 4986d833807f5566b74d0879b13f74e3e9e68b07
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="sample-coded-ui-test-extension-for-excel"></a>Excel용 샘플 코딩된 UI 테스트 확장명
 샘플의 확장 구성 요소는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 코딩된 UI 테스트 프로세스에서 실행되며, 기본 수준에 `ExtensionPackage` 클래스가 있는 다소 계층적인 구조입니다. 다음 수준에는 `TechnologyManager`, `ActionFilter` 및 `PropertyProvider` 클래스가 있고 최상위 수준에는 컨트롤 요소가 있습니다.  

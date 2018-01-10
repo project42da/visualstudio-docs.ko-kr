@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 8cd00fe33cf463227dd09f93047350a96cee3b92
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f91fcfa7e0ea7247eb91a3512f7abd64d8684809
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio에서 Python 작업
 
@@ -55,7 +55,7 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 
 **질문: Mac용 Visual Studio에서 Python 지원을 사용할 수 있나요?**
 
-대답: [UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac/suggestions/18670291-python-tools-for-visual-studio-mac)에서 요청되었지만 지금은 사용할 수 없습니다. [Mac용 Visual Studio](https://docs.microsoft.com/visualstudio/mac/) 설명서에서는 지원되는 현재 개발 유형을 식별합니다. 한편, Windows, Mac 및 Linux의 Visual Studio Code는 [사용 가능한 확장을 통해 Python에서 잘 작동](https://code.visualstudio.com/docs/languages/python)합니다.
+대답: [UserVoice](https://visualstudio.uservoice.com/forums/563332-visual-studio-for-mac/suggestions/18670291-python-tools-for-visual-studio-mac)에서 요청되었지만 지금은 사용할 수 없습니다. [Mac용 Visual Studio](/visualstudio/mac/) 설명서에서는 지원되는 현재 개발 유형을 식별합니다. 한편, Windows, Mac 및 Linux의 Visual Studio Code는 [사용 가능한 확장을 통해 Python에서 잘 작동](https://code.visualstudio.com/docs/languages/python)합니다.
 
 **질문: UI를 빌드하는 데 Python과 함께 무엇을 사용할 수 있나요?**
 

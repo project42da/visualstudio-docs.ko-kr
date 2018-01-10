@@ -9,16 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords: vs.codedUItest.testeditor
 helpviewer_keywords: coded UI test, Coded UI Test Editor
-ms.assetid: 76435c4b-593e-43a3-a9fe-709a7f9f5e0f
-caps.latest.revision: "40"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 2bce8aa82b1076860f9c9b96e39e7a13955b9444
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 2302c2bbfbd38ff307335b525aa319afb5f07e25
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집
 코딩된 UI 테스트 편집기에서는 코딩된 UI 테스트를 쉽게 수정할 수 있습니다. 코딩된 UI 테스트 편집기를 사용하여 테스트 메서드 및 UI 작업의 속성을 찾고 보고 편집할 수 있습니다. 또한 UI 컨트롤 맵을 사용하여 해당 컨트롤을 보고 편집할 수 있습니다.  
@@ -214,9 +213,9 @@ UI 작업 속성 편집
 ### <a name="forum"></a>포럼  
  [Visual Studio UI 자동화 테스트(CodedUI 포함)](http://go.microsoft.com/fwlink/?LinkID=224497)  
   
-## <a name="see-also"></a>참고 항목  
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [데이터 기반의 코딩된 UI 테스트 만들기](../test/creating-a-data-driven-coded-ui-test.md)   
- [기존 작업 기록에서 코딩된 UI 테스트 생성](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)   
- [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
+## <a name="see-also"></a>참고 항목
+
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)  
+[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)  
+[데이터 기반의 코딩된 UI 테스트 만들기](../test/creating-a-data-driven-coded-ui-test.md)  
+[연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
