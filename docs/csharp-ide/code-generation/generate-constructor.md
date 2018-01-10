@@ -12,11 +12,11 @@ author: kuhlenh
 ms.author: kaseyu
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: 9ffa85d768939522935199edde6d0f19b3f2b7a2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dd5e1012c37660917d77e2643922d8a90a8e2ffe
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="generate-a-constructor-in-c"></a>C#에 생성자를 생성 합니다. #
 **:** 즉시 클래스에 새로운 생성자에 대 한 코드를 생성할 수 있습니다. 
@@ -93,7 +93,7 @@ ms.lasthandoff: 12/22/2017
 
    ![생성자 결과 생성 합니다.](media/constructor_result.png)
 
-## <a id="selection"></a>기존 생성자에 매개 변수를 추가 합니다.
+## <a id="addparameter"></a>기존 생성자에 매개 변수를 추가 합니다.
 1. 기존 개체 인스턴스화 매개 변수를 추가 합니다.
 
 1. 줄에 커서를 놓고 아직 존재 하지 않는 생성자를 사용한 나타내는 빨간색 물결 기호는 합니다.
