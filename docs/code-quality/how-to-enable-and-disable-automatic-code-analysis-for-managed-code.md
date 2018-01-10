@@ -13,14 +13,14 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: 198047196ba6f58c69736ef67352267845047b52
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2c6dc55e2acee733538121bf5aac51b935e2d86d
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="how-to-enable-and-disable-automatic-code-analysis-for-managed-code"></a>방법: 관리 코드에 대한 자동 코드 분석 활성화 및 비활성화
-관리 코드 프로젝트의 각 빌드 하기 전에 실행할 코드 분석을 구성할 수 있습니다. 각각에 대해 서로 다른 코드 분석 속성을 설정할 수 있습니다 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 구성 합니다.  
+관리 되는 코드 프로젝트의 각 빌드 후 실행할 코드 분석을 구성할 수 있습니다. 각각에 대해 서로 다른 코드 분석 속성을 설정할 수 있습니다 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 구성 합니다.  
   
 ### <a name="to-enable-or-disable-automatic-code-analysis"></a>자동 코드 분석을 사용 하지 않도록 설정 하거나 설정 하려면  
   

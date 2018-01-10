@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 77e0557e57831348d0736ca8d8d25189c631e010
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9315fdeeb336ac262f59df31b941c05ca3101b3b
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="schema-cache"></a>스키마 캐시
 XML 편집기에서는 %InstallRoot%\Xml\Schemas 디렉터리에 있는 스키마 캐시를 제공합니다. 스키마 캐시는 컴퓨터의 모든 사용자에 전체적으로 적용되며 IntelliSense 및 XML 문서 유효성 검사에 사용되는 표준 XML 스키마를 포함합니다.  
@@ -54,13 +54,13 @@ XML 편집기에서는 %InstallRoot%\Xml\Schemas 디렉터리에 있는 스키�
   
  또한 XML 편집기에서는 스키마 캐시 디렉터리의 스키마 카탈로그 파일 수를 제한하지 않습니다. 스키마 카탈로그는 편집기에서 항상 알아야 할 스키마에 대해 다른 위치를 가리킬 수 있습니다. catalog.xsd 파일은 카탈로그 파일 형식을 정의하며 스키마 캐시 디렉터리에 포함됩니다. catalog.xml 파일은 기본 카탈로그이며 %InstallDir%에 있는 다른 스키마에 대한 링크를 포함합니다. 다음은 catalog.xml 파일의 샘플링입니다.  
   
-```  
+```xml
 <SchemaCatalog xmlns="http://schemas.microsoft.com/xsd/catalog">  
   <Schema href="%InstallDir%/help/schemas/Favorites.xsd" targetNamespace="urn:Favorites-Schema"/>  
   <Schema href="%InstallDir%/help/schemas/Links.xsd" targetNamespace="urn:Links-Schema"/>  
   <Schema href="%InstallDir%/help/schemas/MyHelp.xsd" targetNamespace="urn:VSHelp-Schema"/>  
 </SchemaCatalog>  
-```  
+```
   
  `href` 특성은 임의의 파일 경로이거나 스키마를 가리키는 http URL일 수 있습니다. 파일 경로는 카탈로그 문서에 상대적일 수 있습니다. %%로 구분된 다음 변수는 편집기에서 인식되며 경로에서 확장됩니다.  
   
@@ -82,25 +82,25 @@ XML 편집기에서는 %InstallRoot%\Xml\Schemas 디렉터리에 있는 스키�
   
 카탈로그 문서에 다른 카탈로그를 가리키는 `Catalog` 요소를 포함할 수 있습니다. `Catalog` 요소를 사용하여 팀이나 회사에서 공유하는 중앙 카탈로그 또는 비즈니스 파트너와 공유하는 온라인 카탈로그를 가리킬 수 있습니다. `href` 특성은 파일 경로이거나 다른 카탈로그에 대한 http URL입니다. 다음은 `Catalog` 요소의 예제입니다.  
   
-```  
+```xml
 <Catalog href="file://c:/xcbl/xcblCatalog.xml"/>  
-```  
+```
   
  카탈로그는 특수 `Association` 요소를 사용하여 XML 문서와 스키마를 연결하는 방법을 제어할 수도 있습니다. 이 요소는 대상 네임스페이스가 없는 스키마와 특정 파일 확장명을 연결합니다. XML 편집기에서는 `targetNamespace` 특성이 없는 스키마를 자동으로 연결하지 않기 때문에 이 요소는 매우 유용할 수 있습니다. 다음 예제에서 `Association` 요소는 dotNetConfig 스키마를 파일 확장명이 "config"인 모든 파일과 연결합니다.  
   
-```  
+```xml
 <Association extension="config" schema="%InstallDir%/xml/schemas/dotNetConfig.xsd"/>  
-```  
+```
   
 ## <a name="localized-schemas"></a>지역화된 스키마  
  대부분의 경우 catalog.xml 파일에는 지역화된 스키마 항목이 들어 있지 않지만 지역화된 스키마 디렉터리를 가리키는 catalog.xml 파일에 항목을 추가할 수 있습니다.  
   
  다음 예제에서는 %LCID% 변수를 사용하여 지역화된 스키마를 가리키는 새로운 `Schema` 요소가 만들어졌습니다.  
   
-```  
+```xml
 <Schema href="%InstallRoot%/Common7/IDE/Policy/Schemas/%LCID%/TDLSchema.xsd"  
   targetNamespace="http://www.microsoft.com/schema/EnterpriseTemplates/TDLSchema"/>  
-```  
+```
   
 ## <a name="changing-the-location-of-the-schema-cache"></a>스키마 캐시 위치 변경  
  사용 하 여 스키마 캐시 위치를 사용자 지정할 수는 **기타** 옵션 페이지입니다. 즐겨 찾는 스키마 디렉터리가 있을 경우 대신 이 스키마를 사용하도록 편집기를 구성할 수 있습니다.  

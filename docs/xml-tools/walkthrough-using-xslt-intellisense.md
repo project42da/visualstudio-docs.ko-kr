@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 97950a9d5d6f76505e93153dccd14cfce7be15a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7a26ca0228a869d36daf427f4ba90fd1b17abeaf
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>연습: XSLT IntelliSense 사용
 이 연습에서는 XSLT IntelliSense를 사용하여 일부 특성 값을 자동 완성하는 방법을 보여 줍니다.  
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  새 XSLT 파일을 만들고 다음 코드에 복사합니다.  
   
-    ```  
+    ```xml
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
     <!-- These 2 elements effectively assign  
          $messages = resources/en.xml/<messages>,  
@@ -46,22 +46,22 @@ ms.lasthandoff: 12/22/2017
       </xsl:message>  
     </xsl:template>  
     </xsl:stylesheet>  
-    ```  
+    ```
   
 2.  커서를 `<xsl:template name="msg23" match="msg23">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:call-template` 요소 입력을 시작합니다.  
   
-    ```  
+    ```xml
     <xsl:call-template name="localized-message">  
     </xsl:call-template>  
-    ```  
+    ```
   
      입력할 때 템플릿 이름의 목록이 `name=""` 요소의 `xsl:call-template` 특성에 나타납니다.  
   
 3.  커서를 `<xsl:call-template name="localized-message">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:with-param` 요소 입력을 시작합니다.  
   
-    ```  
+    ```xml
     <xsl:with-param name="msgcode">msg23</xsl:with-param>  
-    ```  
+    ```
   
      매개 변수 이름의 목록이 `name=""` 요소의 `xsl:with-param` 특성에 나타납니다.  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  새 XSLT 파일을 만들고 다음 코드에 복사합니다.  
   
-    ```  
+    ```xml
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">  
       <xsl:template match="/">  
         <HTML>  
@@ -112,13 +112,13 @@ ms.lasthandoff: 12/22/2017
         </TD>  
       </xsl:template>  
     </xsl:stylesheet>  
-    ```  
+    ```
   
 2.  커서를 `<xsl:apply-templates select="phone" />` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl: apply-templates` 요소 입력을 시작합니다.  
   
-    ```  
+    ```xml
     <xsl:apply-templates select="phone"  mode="accountNumber">  
-    ```  
+    ```
   
      템플릿 모드의 목록이 `mode=""` 요소의 `xsl:apply-templates` 특성에 나타납니다.  
   
@@ -126,7 +126,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  새 XSLT 파일을 만들고 다음 코드에 복사합니다.  
   
-    ```  
+    ```xml
     <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate"  
     version="1.0">  
       <xsl:param name="browser" select="'InternetExplorer'"/>  
@@ -153,15 +153,16 @@ ms.lasthandoff: 12/22/2017
         </alt:stylesheet>  
       </xsl:template>  
     </xsl:stylesheet>  
-    ```  
+    ```
   
 2.  커서를 `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:namespace-alias` 요소 입력을 시작합니다.  
   
-    ```  
+    ```xml
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>  
-    ```  
+    ```
   
      `stylesheet-prefix` 요소의 `result-prefix` 및 `xsl:namespace-alias` 특성에 접미사 목록이 표시되는 방법에 유의해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [XML 편집기 IntelliSense 기능](../xml-tools/xml-editor-intellisense-features.md)
+## <a name="see-also"></a>참고 항목
+
+[XML 편집기 IntelliSense 기능](../xml-tools/xml-editor-intellisense-features.md)
