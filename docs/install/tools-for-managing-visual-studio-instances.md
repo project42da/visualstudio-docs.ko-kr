@@ -14,11 +14,12 @@ ms.assetid: 85686707-14C0-4860-9B7A-66485D43D241
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: 28027f4e68231dfe413065e8ef3bf8f4abb2c487
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: ad0dfcdaf353d94b7d0ea255def0839069b0a39e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="tools-for-detecting-and-managing-visual-studio-instances"></a>Visual Studio 인스턴스 검색 및 관리 도구
 
@@ -50,7 +51,7 @@ Visual Studio 2017에서 레지스트리 설정은 전용 위치에 저장되므
 1. Visual Studio 2017의 열린 인스턴스가 있으면 인스턴스를 닫으세요.
 2. `regedit.exe`를 시작합니다.
 3. `HKEY_LOCAL_MACHINE` 노드를 선택합니다.
-4. Regedit 주 메뉴에서 **파일 -> 하이브 로드...**를 선택하고 **AppData\Local** 폴더에 저장된 전용 레지스트리 파일을 선택합니다. 예를 들면 다음과 같습니다.
+4. Regedit 주 메뉴에서 **파일 -> 하이브 로드...**를 선택하고 **AppData\Local** 폴더에 저장된 전용 레지스트리 파일을 선택합니다. 예:
    ```
    %localappdata%\Microsoft\VisualStudio\<config>\privateregistry.bin
    ```

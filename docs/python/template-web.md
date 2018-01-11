@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio에서 Python 웹 프로젝트 템플릿 | Microsoft Docs"
+title: "Visual Studio의 Python용 웹 프로젝트 템플릿 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/13/2017
 ms.reviewer: 
@@ -12,15 +12,16 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: ba0106ad8a820556ed4c8f7aaed915f532f8c824
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 1215c075c1c38bb742f799948929d2f301750555
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="python-web-project-templates"></a>Python 웹 프로젝트 템플릿
 
-Visual Studio의 Python은 다양한 프레임워크를 처리하도록 구성할 수 있는 디버그 시작 관리자 및 프로젝트 템플릿을 통해 Bottle, Flask 및 Django 프레임워크에서 웹 프로젝트 개발을 지원합니다. Pyramid와 같은 다른 프레임워크에 대한 일반 “웹 프로젝트” 템플릿을 사용할 수도 있습니다.
+Visual Studio의 Python은 다양한 프레임워크를 처리하도록 구성할 수 있는 디버그 시작 관리자 및 프로젝트 템플릿을 통해 Bottle, Flask 및 Django 프레임워크에서 웹 프로젝트 개발을 지원합니다. Pyramid와 같은 다른 프레임워크에 대한 일반 **웹 프로젝트** 템플릿을 사용할 수도 있습니다.
 
 Visual Studio는 자체 프레임워크를 포함하지 않습니다. 프레임워크는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Python > 프레임워크 설치/업그레이드...**를 선택하여 별도로 설치해야 합니다.
 
@@ -36,7 +37,7 @@ Bottle, Flask 및 Django의 각 템플릿은 몇 가지 페이지 및 정적 파
 
 Microsoft Azure App Service에 배포할 때는 [사이트 확장](https://aka.ms/PythonOnAppService)으로 Python 버전을 선택하고 패키지를 수동으로 설치합니다. 또한 Azure App Service는 Visual Studio에서 배포할 때 `requirements.txt` 파일에서 패키지를 자동으로 설치하지 **않으므로** [aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService)의 구성 세부 정보를 따릅니다.
 
-Microsoft Azure 클라우드 서비스는 `requirements.txt` 파일을 *지원합니다*. 자세한 내용은 [Azure Cloud Service 프로젝트](template-azure-cloud-service.md)를 참조하세요.
+Microsoft Azure Cloud Services는 `requirements.txt` 파일을 *지원합니다*. 자세한 내용은 [Azure Cloud Service 프로젝트](template-azure-cloud-service.md)를 참조하세요.
 
 ## <a name="debugging"></a>디버깅
 
@@ -62,12 +63,12 @@ MSBuild 구문으로 모든 프로젝트 속성 또는 환경 변수를 지정�
 > [!Note]
 > **서버 실행 명령**의 값은 **디버그 > 서버 시작** 명령이나 Ctrl-F5에 사용되며 **서버 디버그 명령** 그룹의 값은 **디버그 > 서버 디버그 시작** 명령이나 F5에 사용됩니다.
 
-
 ### <a name="sample-bottle-configuration"></a>샘플 Bottle 구성
 
-Bottle 웹 프로젝트 템플릿은 필요한 구성을 수행하는 상용구 코드를 포함합니다. 그러나 가져온 bottle 앱에는 이 코드가 포함되어 있지 않을 수 있으며 이 경우 다음 설정으로 설치된 `bottle` 모듈을 사용하여 앱을 시작합니다.
+**Bottle 웹 프로젝트** 템플릿은 필요한 구성을 수행하는 상용구 코드를 포함합니다. 그러나 가져온 bottle 앱에는 이 코드가 포함되어 있지 않을 수 있으며 이 경우 다음 설정으로 설치된 `bottle` 모듈을 사용하여 앱을 시작합니다.
 
 - **서버 실행 명령** 그룹:
+
     - **명령**: `bottle`(모듈)
     - **인수**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
@@ -82,6 +83,7 @@ Bottle 웹 프로젝트 템플릿은 필요한 구성을 수행하는 상용구 
 Pyramid 앱은 현재 `pcreate` 명령줄 도구를 사용하여 최적으로 만들어집니다. 앱을 만들었으면 [기존 Python 코드에서](python-projects.md#creating-a-project-from-existing-files) 템플릿을 사용하여 가져올 수 있습니다. 그런 다음 **일반 웹 프로젝트** 사용자 지정을 선택하여 옵션을 구성합니다. 이러한 설정은 가상 환경의 `..\env`에 Pyramid가 설치되어 있다고 가정합니다.
 
 - **디버그** 그룹:
+
     - **서버 포트**: 6543(또는.ini 파일에 구성된 모든 항목)
 
 - **서버 실행 명령** 그룹:
@@ -94,7 +96,6 @@ Pyramid 앱은 현재 `pcreate` 명령줄 도구를 사용하여 최적으로 �
 
 > [!Tip]
 > 일반적으로 Pyramid 앱은 소스 트리의 최상위 디렉터리보다 한 수준 더 깊기 때문에 프로젝트의 **작업 디렉터리** 속성을 구성해야 합니다.
-
 
 ### <a name="other-configurations"></a>기타 구성
 
@@ -168,6 +169,6 @@ Azure App Service에 배포하면 사이트가 Microsoft IIS 뒤에서 실행됩
 
 ![게시 구성 변경](media/template-web-publish-config.png)
 
-**Microsoft Azure 클라우드 서비스 프로젝트로 변환** 명령(아래 이미지)은 클라우드 서비스 프로젝트를 솔루션에 추가합니다. 이 프로젝트에는 사용되는 가상 컴퓨터 및 서비스에 대한 배포 설정 및 구성이 포함됩니다. 클라우드 서비스에 배포하려면 클라우드 프로젝트에서 **게시** 명령을 사용합니다. Python 프로젝트에서 **게시** 명령을 사용하면 여전히 웹 사이트에 배포됩니다. 자세한 내용은 [Azure Cloud Service 프로젝트](template-azure-cloud-service.md)를 참조하세요.
+**Microsoft Azure 클라우드 서비스 프로젝트로 변환** 명령(아래 이미지)은 클라우드 서비스 프로젝트를 솔루션에 추가합니다. 이 프로젝트에는 사용되는 가상 컴퓨터 및 서비스에 대한 배포 설정 및 구성이 포함됩니다. 클라우드 서비스에 배포하려면 클라우드 프로젝트에서 **Publish** 명령을 사용합니다. Python 프로젝트에서 **Publish** 명령을 사용하면 여전히 웹 사이트에 배포됩니다. 자세한 내용은 [Azure Cloud Service 프로젝트](template-azure-cloud-service.md)를 참조하세요.
 
 ![Microsoft Azure Cloud Service 프로젝트 명령으로 변환](media/template-web-convert-menu.png)

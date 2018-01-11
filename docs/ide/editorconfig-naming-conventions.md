@@ -13,11 +13,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-general
-ms.openlocfilehash: 8751bdb2d2dfb364f19f62e03edd1527fa3deb7d
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: multiple
+ms.openlocfilehash: 5b6d7f0dc43ca11b6fee4b97d5422b863a7b89f4
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="naming-conventions-for-editorconfig"></a>EditorConfig에 대한 명명 규칙
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/01/2017
 
 `dotnet_naming_symbols.<symbolTitle>.applicable_kinds = <values>`
 
-허용될 수 있는 값은 아래와 같습니다. 해당 값을 쉼표로 구분하여 여러 값을 지정할 수 있습니다.
+허용 가능한 값은 아래와 같으며, 이러한 값을 쉼표로 구분하여 여러 값을 지정할 수 있습니다.
 
 - \*(모든 기호를 지정하려면 이 값을 사용합니다.)
 - 클래스
@@ -63,7 +64,7 @@ ms.lasthandoff: 12/01/2017
 
 `dotnet_naming_symbols.<symbolTitle>.applicable_accessibilities = <values>`
 
-허용될 수 있는 값은 아래와 같습니다. 해당 값을 쉼표로 구분하여 여러 값을 지정할 수 있습니다.
+허용 가능한 값은 아래와 같으며, 이러한 값을 쉼표로 구분하여 여러 값을 지정할 수 있습니다.
 
 - \*(모든 액세스 가능성 수준을 지정하려면 이 값을 사용합니다.)
 - public
@@ -81,16 +82,15 @@ ms.lasthandoff: 12/01/2017
 
 `dotnet_naming_symbols.<symbolTitle>.required_modifiers = <values>`
 
-허용될 수 있는 값은 아래와 같습니다. 해당 값을 쉼표로 구분하여 여러 값을 지정할 수 있습니다.
+허용 가능한 값은 아래와 같으며, 이러한 값을 쉼표로 구분하여 여러 값을 지정할 수 있습니다.
 
-- \*(모든 한정자를 지정하려면 이 값을 사용합니다.)
 - abstract or must_inherit
 - async
 - const
 - readonly
 - static or shared
 
-이 속성을 생략하는 경우 명명 규칙이 모든 한정자에 적용됩니다.
+`required_modifiers`는 선택적 속성입니다. 이 속성을 생략하는 경우 명명 규칙이 모든 한정자에 적용됩니다.
 
 ## <a name="style"></a>스타일
 
@@ -153,9 +153,9 @@ suggestion | 이 스타일을 따르지 않을 경우 처음 두 문자에 점�
 > [!NOTE]
 > 명명 규칙 위반을 확인하기 위해 프로젝트를 빌드하지 않아도 됩니다. 코드가 편집되면 오류 목록 또는 제안 중 하나로 표시됩니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-해당 공용 속성, 메서드, 필드, 이벤트 및 대리자를 대문자로 시작하도록 지정하는 명명 규칙이 포함된 예제 .editorconfig 파일은 아래와 같습니다. 이 명명 규칙은 값을 구분하기 위해 쉼표를 사용하여 규칙을 적용하는 여러 종류의 기호를 지정합니다.
+다음 .editorconfig 파일은 공용 속성, 메서드, 필드, 이벤트 및 대리자를 대문자로 시작하도록 지정하는 명명 규칙을 포함하고 있습니다. 이 명명 규칙은 값을 구분하기 위해 쉼표를 사용하여 규칙을 적용하는 여러 종류의 기호를 지정합니다.
 
 ```
 # Public members must be capitalized (public_members_must_be_capitalized)

@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: d417ac531331b62b0f711fe155a94f1ac0954310
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 964ed265f4e2587a1bef4812797987c47d52fa80
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="step-2-writing-and-running-code"></a>2단계 - 코드 작성 및 실행
 
@@ -41,14 +42,14 @@ ms.lasthandoff: 12/01/2017
     ```
 
 1. 구문 색 지정은 `print` 문을 `"Hello Visual Studio"` 인수와 구분합니다. 또한 문자열에서 마지막 `"`를 일시적으로 삭제하면 Visual Studio가 구문 오류가 포함된 코드를 빨간색 밑줄로 표시하는지 알 수 있습니다. 그런 다음 `"`를 다시 입력하여 코드를 수정합니다.
- 
+
     ![IntelliSense 구문 색 지정 및 오류 강조 표시](media/vs-getting-started-python-06-IntelliSense3b.png)
- 
+
     > [!Tip]
     > 개발 환경은 매우 개인적인 문제이기 때문에 Visual Studio는 사용자가 Visual Studio의 모양 및 동작을 완벽히 제어할 수 있는 기능을 제공합니다. **도구 > 옵션** 메뉴 명령을 선택하고 **환경** 및 **텍스트 편집기** 탭 아래에 있는 설정을 탐색합니다. 기본적으로 제한된 옵션 수만 표시됩니다. 모든 프로그래밍 언어에 대한 옵션을 모두 보려면 대화 상자의 맨 아래에 있는 **모든 설정 표시**를 선택합니다. 
 
 1. Ctrl + F5를 누르거나 **디버그 > 디버깅하지 않고 시작** 메뉴 항목을 선택하여 이 지점에 작성한 코드를 실행합니다. 코드에 여전히 오류가 있는 경우 Visual Studio에서 경고 메시지를 표시합니다.
- 
+
 1. 프로그램을 실행하면 명령줄에서 `PythonApplication1.py`를 사용하여 Python 인터프리터를 실행했을 때와 마찬가지로 결과가 표시된 콘솔 창이 나타납니다. 아무 키나 눌러서 창을 닫고 Visual Studio 편집기로 돌아갑니다.
 
     ![프로그램의 첫 번째 실행에 대한 출력](media/vs-getting-started-python-07-output.png)
@@ -70,8 +71,8 @@ ms.lasthandoff: 12/01/2017
 1. `sin`, `cos` 및 `radians` 멤버를 가져오고 각각에 사용 가능한 자동 완성을 확인하여 완료합니다. 완료되면 코드가 다음과 같이 표시됩니다.
 
     ```python
-    import sys  
-    from math import sin, cos, radians          
+    import sys
+    from math import sin, cos, radians
     ```
 
     > [!Tip]
@@ -80,18 +81,16 @@ ms.lasthandoff: 12/01/2017
 1. 360도 코사인 값을 인쇄하려면 코드를 조금 더 추가합니다.
 
     ```python 
-    for i in range(360):        
+    for i in range(360):
         print(cos(radians(i)))
     ```
 
 1. Ctrl + F5 또는 **디버그 > 디버깅하지 않고 시작**을 사용하여 프로그램을 다시 실행합니다. 완료되면 출력 창을 닫습니다.
 
-
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [대화형 REPL 창 사용](vs-tutorial-01-03.md)
-
 
 ## <a name="going-deeper"></a>자세히 알아보기
 

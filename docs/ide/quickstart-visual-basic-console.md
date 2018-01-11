@@ -1,7 +1,7 @@
 ---
-title: "빠른 시작: Visual Studio에서 Visual Basic을 사용하여 콘솔 앱 만들기 | Microsoft Docs"
+title: "빠른 시작: Visual Studio에서 Visual Basic을 사용하여 첫 번째 콘솔 앱 만들기 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/05/2017
+ms.date: 12/10/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-acquisition
@@ -12,16 +12,17 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 dev_langs: vb
-ms.openlocfilehash: 57441895ccff8bf32b59d6306ca4ae618382d356
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.workload: multiple
+ms.openlocfilehash: 46557b646db37b3f04420ca5b91ab71c4f5b088a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="quickstart-create-a-console-app-in-visual-studio-with-visual-basic"></a>빠른 시작: Visual Studio에서 Visual Basic을 사용하여 콘솔 앱 만들기
+# <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>빠른 시작: Visual Studio에서 Visual Basic을 사용하여 첫 번째 콘솔 앱 만들기
 Visual Studio IDE(통합 개발 환경)에 대한 소개는 이 5~10분 분량으로 여기서 콘솔에서 실행되는 간단한 Visual Basic 응용 프로그램을 만듭니다.
 
-아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 평가판을 설치합니다.
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 먼저 Visual Basic 응용 프로그램 프로젝트를 만들어야 합니다. 아무 것도 추가하지 않아도 필요한 모든 템플릿 파일과 함께 프로젝트 형식이 제공됩니다.
@@ -32,11 +33,11 @@ Visual Studio IDE(통합 개발 환경)에 대한 소개는 이 5~10분 분량�
 
 3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual Basic**을 확장한 후 **.NET Core**를 선택합니다. 가운데 창에서 **콘솔 앱(.NET Core)**을 선택합니다. 프로젝트의 이름을 *HelloWorld*로 지정합니다.
 
-   ![Visual Studio 설치 관리자의 .NET Core 플랫폼 간 개발 워크로드](../ide/media/new-project-vb-dotnet-helloworld-console-app.png)
+   ![Visual Studio IDE의 새 프로젝트 대화 상자의 콘솔 앱(.NET Core) 프로젝트 템플릿](../ide/media/new-project-vb-dotnetcore-helloworld-console-app.png)
 
      **콘솔 앱(.NET Core)** 템플릿 프로젝트가 표시되지 않으면 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Open Visual Studio 설치 관리자** 링크를 클릭합니다.
 
-   ![새 프로젝트 대화 상자에서 Visual Studio 설치 관리자 열기 링크를 클릭합니다.](../ide/media/vb-open-visual-studio-installer.png)
+   ![새 프로젝트 대화 상자에서 Visual Studio 설치 관리자 열기 링크를 클릭합니다.](../ide/media/vb-open-visual-studio-installer-hello-world.png)
 
      Visual Studio 설치 관리자가 시작됩니다. **.NET Core 플랫폼 간 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.
 
@@ -81,4 +82,5 @@ IDE에서 **HelloWorld** 단추를 클릭하면 디버그 모드에서 프로그
 
 ## <a name="see-also"></a>참고 항목
 * [빠른 시작: Visual Studio에서 Visual Basic을 사용하여 "Hello World" Windows Forms 앱 만들기](quickstart-visual-basic-winforms.md)
-* [Visual Basic IntelliSense에 대한 자세한 내용](visual-basic-specific-intellisense.md)
+* [자습서: Visual Studio에서 Visual Basic 시작](tutorial-visual-basic-console.md)
+* [Visual Basic 코드 파일에 대한 IntelliSense](visual-basic-specific-intellisense.md)

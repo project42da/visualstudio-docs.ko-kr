@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 50f2577436eeb102424a968416f43e58cb0febd1
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: e8ab260780c7cd2841d0ffe88f4eb0cc817592c4
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="refactoring-python-code"></a>Python 코드 리팩터링
 
@@ -25,9 +26,10 @@ Visual Studio는 Python 소스 코드를 자동으로 변환하고 정리하는 
 - [이름 바꾸기](#rename)는 선택한 클래스, 메서드 또는 변수의 이름을 바꿉니다.
 - [메서드 추출](#extract-method)은 선택한 코드에서 새 메서드를 만듭니다.
 - [가져오기 추가](#add-import)는 누락된 가져오기를 추가하는 스마트 태그를 제공합니다
-- [사용하지 않는 가져오기 제거](#remove-imports)는 사용하지 않는 가져오기를 제거합니다.
+- [사용하지 않는 가져오기 제거](#remove-unused-imports)는 사용하지 않는 가져오기를 제거합니다.
 
 <a name="rename-variable"</a>
+
 ## <a name="rename"></a>이름 바꾸기
 
 1. 이름을 바꿀 식별자를 마우스 오른쪽 단추로 클릭하여 **이름 바꾸기**를 선택하거나, 해당 식별자에 캐럿을 배치하여 **편집 > 리팩터링 > 이름 바꾸기...** 메뉴 명령(F2)을 선택합니다.
@@ -70,6 +72,7 @@ Visual Studio는 모듈에서 실제로 정의되지 않은 멤버(예: 다른 �
 마지막으로, 일반적으로 제외되는 모듈에 포함될 다른 값이 있는 경우(예: 모듈에서 이름에 값이 할당되었기 때문에) Visual Studio에서 여전히 가져오기를 제외합니다. 이 동작은 값이 다른 모듈에 정의되어 있으므로 해당 값을 내보내지 않아야 한다고 가정합니다. 따라서 추가 할당은 내보낼 수 없는 더미 값이 될 수도 있습니다.
 
 <a name="remove-imports"</a>
+
 ## <a name="remove-unused-imports"></a>사용하지 않는 가져오기 제거
 
 코드를 작성할 때 전혀 사용되지 않는 모듈에 대해 `import` 문으로 끝나는 것은 쉽습니다. Visual Studio는 코드를 분석하므로 문이 나타나는 위치 아래의 범위 내에서 가져온 이름을 사용하는지 확인하여 `import` 문이 필요한지를 자동으로 결정할 수 있습니다.

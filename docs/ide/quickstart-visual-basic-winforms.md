@@ -12,11 +12,12 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 dev_langs: vb
-ms.openlocfilehash: 388784b53018c30357f496cfbeb533c0a07a3053
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.workload: multiple
+ms.openlocfilehash: ecab13523c5d2ae362a58527f8c15ce1f26dd225
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>빠른 시작: Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱 만들기
 Visual Studio IDE(통합 개발 환경)에 대한 소개는 이 5~10분 분량으로 여기서 Windows 기반 UI(사용자 인터페이스)가 있는 간단한 Visual Basic 응용 프로그램을 만듭니다.
@@ -95,5 +96,5 @@ Visual Basic 프로젝트 템플릿을 선택하고 파일 이름을 지정한 �
 이 빠른 시작을 완료한 것을 축하 드립니다! Visual Basic 및 Visual Studio IDE를 이해하는 데 도움이 되었기를 바랍니다. 보다 자세히 알아보려면 목차에서 **자습서** 섹션에 있는 자습서를 읽어보세요.  
 
 ## <a name="see-also"></a>참고 항목   
-* [빠른 시작: Visual Basic을 사용하여 Visual Studio에서 콘솔 앱 만들기](quickstart-visual-basic-console.md)](https://docs.microsoft.com/dotnet/core/tutorials/vb-with-visual-studio)
+* [빠른 시작: Visual Studio에서 Visual Basic을 사용하여 콘솔 앱 만들기](quickstart-visual-basic-console.md)
 * [Visual Basic IntelliSense에 대한 자세한 내용](visual-basic-specific-intellisense.md)  

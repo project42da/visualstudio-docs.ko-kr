@@ -11,11 +11,12 @@ ms.assetid: d5c038e2-e70d-411e-950c-8a54917b578a
 author: heaths
 ms.author: heaths
 manager: ghogen
-ms.openlocfilehash: f7a85581023e100f5b69d1250711d0746540fe5c
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 95f9c69ebca7dbdc7e576279b4e1ad3f17d2be25
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="install-build-tools-into-a-container"></a>Build Tools를 컨테이너에 설치
 
@@ -195,3 +196,4 @@ Visual Studio Build Tools(및 상위 수준의 Visual Studio)에서 설치하는
 
 * [고급 컨테이너 예제](advanced-build-tools-container.md)
 * [알려진 컨테이너 관련 문제](build-tools-container-issues.md)
+* [Visual Studio Build Tools 2017 워크로드 및 구성 요소 ID](workload-component-id-vs-build-tools.md)

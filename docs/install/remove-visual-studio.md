@@ -21,11 +21,12 @@ ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
 author: heaths
 ms.author: heaths
 manager: erickn
-ms.openlocfilehash: 3c859b0023c9ea282afde837b17b7c93f3f4fbd7
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: a08a24be4f3f9e915a93c9beac7cf5e5c28eb7ca
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="remove-visual-studio"></a>Visual Studio 제거
 
@@ -33,7 +34,7 @@ ms.lasthandoff: 11/22/2017
 
 아래 지침에서는 다음과 같은 동작의 다른 명령줄 스위치로 도구를 실행할 수 있습니다.
 
-| 스위치 | 동작 |
+| 전환 | 동작 |
 | ------ | -------- |
 | `-i`   | 이 스위치는 전달된 다른 스위치가 없을 경우 기본값이며 기본 설치 디렉터리 및 제품 정보만 제거합니다. 이 동작은 `InstallCleanup.exe` 도구를 실행한 후 동일한 버전을 다시 설치하려는 경우 사용하는 것이 좋습니다. |
 | `-f`   | 이 스위치를 지정하면 기본 설치 디렉터리, 제품 정보는 물론, 다른 Visual Studio 설치 또는 기타 제품과 공유할 수 있는 설치 디렉터리 외부에 설치된 대부분 기타 기능이 제거됩니다. 이 동작은 나중에 다시 설치하지 않고 Visual Studio를 제거하려는 경우에 사용하는 것이 좋습니다. |

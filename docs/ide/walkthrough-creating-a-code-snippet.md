@@ -20,11 +20,12 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 dev_langs: VB
-ms.openlocfilehash: 0ad7cdb245aa43deab22593fbbb5a5b10105f5af
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 2ac4cef411bb6304e4033de1850e6c428e34285e
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>연습: 코드 조각 만들기
 몇 가지 단계로 코드 조각을 만들 수 있습니다. XML 파일을 만들고, 적절한 요소를 입력하고, 코드를 추가하기만 하면 됩니다. 또한 코드에 참조 및 대체 매개 변수를 추가할 수 있습니다. 코드 조각 관리자(**도구**, **코드 조각 관리자...**)에서 가져오기 단추를 사용하여 Visual Studio 설치에 코드 조각을 추가할 수 있습니다.  
@@ -53,7 +54,7 @@ ms.lasthandoff: 10/31/2017
   
 1.  Visual Studio에서 새 XML 파일을 만들고 위에 표시된 템플릿을 추가합니다.  
   
-2.  Title 요소에 코드 조각의 제목(예: "Hello World VB")을 입력합니다.   
+2.  코드 조각의 제목을 입력합니다. 예를 들어 Title 요소에 "Hello World VB"를 입력합니다.  
   
 3.  Code 요소의 언어 특성에 코드 조각의 언어를 입력합니다. 예를 들어 "VB"를 사용합니다.  
   

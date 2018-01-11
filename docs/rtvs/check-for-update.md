@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio용 R 도구의 현재 버전 | Microsoft Docs"
+title: "Visual Studio용 R 도구 최신 버전 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/04/2017
+ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-r
@@ -12,17 +12,18 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 835a854e4b5540910b5d6a6bae2e3bf89748c860
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 11bad9be7d64d0760b1e7a3d138b8770f0459899
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="rtvs-current-version"></a>RTVS 현재 버전
+# <a name="rtvs-current-version"></a>RTVS 최신 버전
 
-이 페이지의 마지막 업데이트를 기준으로 RTVS(Visual Studio용 R Tools)의 가장 최근 버전은 **1.3.31108.1213**이었습니다. 미리 보기 채널 사용 여부 및 Visual Studio 버전에 따라 버전이 달라질 수 있습니다.
+이 페이지의 마지막 업데이트를 기준으로 RTVS(Visual Studio용 R Tools)의 최신 버전은 **1.0.31108.1213**이었습니다. 미리 보기 채널 사용 여부 및 Visual Studio 버전에 따라 버전이 달라질 수 있습니다.
 
-Visual Studio에서 **도움말 > 정보**로 이동하고 **Visual Studio용 R 도구** 항목까지 아래로 스크롤하여 버전을 확인할 수 있습니다. 
+Visual Studio에서 **도움말 > 정보**로 이동하고 **Visual Studio용 R 도구** 항목까지 아래로 스크롤하여 버전을 확인할 수 있습니다.
 
 ![Visual Studio(VS2017)에서 RTVS 버전 검사](media/current-version.png)
 

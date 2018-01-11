@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio IDE 개요 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/03/2017
+ms.date: 11/09/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -9,11 +9,12 @@ ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c20e36f91ecd7f5ef03785d42d33010796d105c0
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: multiple
+ms.openlocfilehash: 5b289868d0cc27da76becf62a2bac51f02fa55c2
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE 개요
 
@@ -35,19 +36,41 @@ Azure 앱 서비스를 만들어 모바일 앱에서 클라우드의 강력한 �
 
 ### <a name="create-cloud-apps-for-azure"></a>Azure용 클라우드 앱 만들기
 
-Visual Studio는 Microsoft Azure에서 구동하는 클라우드 지원 응용 프로그램을 쉽게 만들 수 있는 도구 모음을 제공합니다. IDE에서 직접 Microsoft Azure의 응용 프로그램과 서비스를 구성, 빌드, 디버그, 패키징 및 배포할 수 있습니다. 연결된 서비스를 통해 앱에 대한 Azure 서비스를 활용합니다. .NET용 Azure 도구를 얻으려면 Visual Studio를 설치할 때 **Azure 개발** 작업을 선택합니다. 자세한 내용은 [Visual Studio Tools for Azure](https://www.visualstudio.com/vs/azure-tools/)를 참조하세요.
+Visual Studio는 Microsoft Azure에서 구동하는 클라우드 지원 응용 프로그램을 쉽게 만들 수 있는 도구 모음을 제공합니다. IDE에서 직접 Microsoft Azure의 응용 프로그램과 서비스를 구성, 빌드, 디버그, 패키징 및 배포할 수 있습니다. .NET용 Azure 도구를 얻으려면 Visual Studio를 설치할 때 **Azure 개발** 작업을 선택합니다. 자세한 내용은 [Visual Studio Tools for Azure](https://www.visualstudio.com/vs/azure-tools/)를 참조하세요.
+
+다음과 같이 연결된 서비스를 통해 앱에 대한 Azure 서비스를 활용할 수 있습니다.
+
+- [Azure 모바일 서비스](http://azure.microsoft.com/documentation/services/mobile-services/)
+
+- [Azure 저장소](http://azure.microsoft.com/documentation/services/storage/)
+
+[HockeyApp](https://www.visualstudio.com/hockey-app/)을 통해 베타 버전을 배포하고, 실시간 충돌 보고서를 수집하고, 실제 사용자의 의견을 얻으세요. 또한 Office 365 REST API를 자신의 앱에 통합하여 클라우드에 저장된 데이터에 연결할 수 있습니다. 자세한 내용은 [이 GitHub 샘플](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)을 참조하세요.
+
+[Application Insights](https://marketplace.visualstudio.com/items?itemName=VisualStudioOnlineApplicationInsights.application-insights)는 앱 및 웹 서비스의 품질 문제를 확인 및 진단하는 데 도움이 됩니다. Application Insights를 통해 사용자가 실제로 앱을 통해 무엇을 하는지 이해하고 사용자 환경을 최적화할 수도 있습니다.
 
 ### <a name="create-apps-for-the-web"></a>웹앱 만들기
 
-웹은 현대 세계를 이끌고 있고, Visual Studio에서 이를 위한 앱을 작성할 수 있습니다. ASP.NET, Node.js, Python, JavaScript 및 TypeScript를 사용하여 웹앱을 만들 수 있습니다. Visual Studio는 Angular, jQuery, Express 등과 같은 웹 프레임워크를 이해합니다. ASP.NET Core 및 .NET Core는 Windows, Mac 및 Linux 운영 체제에서 실행됩니다. 자세한 내용은 [최신 웹 도구](https://www.visualstudio.com/vs/modern-web-tooling/)를 참조하세요.
+웹은 현대 세계를 이끌고 있고, Visual Studio에서 이를 위한 앱을 작성할 수 있습니다. ASP.NET, Node.js, Python, JavaScript 및 TypeScript를 사용하여 웹앱을 만들 수 있습니다. Visual Studio는 Angular, jQuery, Express 등과 같은 웹 프레임워크를 이해합니다. ASP.NET Core 및 .NET Core는 Windows, Mac 및 Linux 운영 체제에서 실행됩니다. [ASP.NET Core](http://www.asp.net/core/overview)는 MVC, WebAPI 및 SignalR에 대한 주요 업데이트이며 Windows, Mac 및 Linux에서 실행됩니다.  ASP.NET Core는 최신 클라우드 기반 웹앱 및 서비스를 빌드하기 위한 간결하고 구성 가능한 .NET 스택을 제공하도록 처음부터 다시 설계되었습니다.
 
-### <a name="write-code-in-a-world-class-editing-environment"></a>세계적 수준의 편집 환경에서 코드 작성
+자세한 내용은 [최신 웹 도구](https://www.visualstudio.com/vs/modern-web-tooling/)를 참조하세요.
 
-Visual Studio를 사용하면 구문 색 지정, 문 완성, IntelliSense(선택한 코드 요소의 팝업 설명), 코드 개요, 디버깅을 위한 중단점 설정 등과 같은 기능을 통해 코드를 쉽고 빠르게 작성할 수 있습니다.
+### <a name="build-cross-platform-apps-and-games"></a>플랫폼 간 앱 및 게임 제작
 
-![JavaScript 코드 예제](../ide/media/vside_tour_javascript_example.gif)
+Visual Studio를 사용하여 Android, iOS, Linux, Windows 및 기타 장치용 앱과 게임을 빌드할 수 있습니다. [플랫폼 간 모바일 개발](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)에서 자세한 내용을 알아보세요. 유니버설 Windows 앱을 통해 여러 플랫폼 간에 코드를 활용할 수 있습니다. 자세한 내용은 [유니버설 Windows 앱](https://dev.windows.com/en-us/windows-apps)을 참조하세요.
 
-자세한 내용은 [코드 및 텍스트 편집기에서 코드 작성](https://docs.microsoft.com/visualstudio/ide/writing-code-in-the-code-and-text-editor)을 참조하세요.
+앱 요구 사항과 사용하려는 언어에 따라 필요한 도구를 선택합니다.
+
+- [Xamarin for Visual Studio](../cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): C#을 사용하는 모든 장치용 공용 코드베이스
+
+- [Visual Studio Tools for Apache Cordova](../cross-platform/visual-studio-tools-for-apache-cordova.md): HTML, CSS 및 JavaScript 또는 Typescript용 공용 코드베이스
+
+- [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md): C#을 사용하는 2D/3D 게임 개발
+
+- [플랫폼 간 개발용 C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md): C++를 사용하는 공유 코드 라이브러리 및 앱
+
+- [Visual Studio Emulator for Android](../cross-platform/visual-studio-emulator-for-android.md): IDE에 관계없이 Android 앱 디버그 및 테스트
+
+DirectX, Unity, Unreal, Cocos 등의 게임 개발 도구를 통해 [Visual Studio를 사용하여 게임 만들기](https://www.visualstudio.com/vs/game-development/)를 수행할 수 있습니다.
 
 Visual Studio는 더 많은 작업을 수행하는 데 도움을 줄 수 있습니다. 자세한 전체 목록은 [Visual Studio IDE](https://www.visualstudio.com/vs/)를 참조하세요.
 
@@ -63,7 +86,7 @@ Visual Studio는 더 많은 작업을 수행하는 데 도움을 줄 수 있습�
 
 향상된 설치 성능 이외에도 Visual Studio 2017은 더 짧은 IDE 시작 및 솔루션 로드 시간을 갖습니다.
 
-시스템에 Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 2017 설치](https://docs.microsoft.com/visualstudio/install/install-visual-studio)를 참조하세요.  
+시스템에 Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 2017 설치](../install/install-visual-studio.md)를 참조하세요.
 
 ## <a name="sign-in"></a>로그인
 
@@ -129,7 +152,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 1. 프로그램 실행이 완료되면 도구 모음에서 [중지](![중지 단추](../ide/media/VSIDE_StopButton.png))를 선택하여 중지합니다.
 
-지금까지 수행한 작업을 정리해 보겠습니다. Visual Studio에서 새로운 C# Windows 유니버설 프로젝트를 만들고, 코드를 보고, 컨트롤을 디자이너에 추가하고, 일부 XAML 코드를 변경한 다음, 프로젝트를 실행했습니다. 여기서는 이 예제의 프로세스가 간소화되었지만, 자신의 앱을 개발할 때 사용할 Visual Studio IDE의 몇 가지 일반적인 부분을 보여 주었습니다. 이 예제에 대한 자세한 내용은 ["Hello, world" 앱 만들기(XAML)](https://docs.microsoft.com/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)을 참조하세요.
+지금까지 수행한 작업을 정리해 보겠습니다. Visual Studio에서 새로운 C# Windows 유니버설 프로젝트를 만들고, 코드를 보고, 컨트롤을 디자이너에 추가하고, 일부 XAML 코드를 변경한 다음, 프로젝트를 실행했습니다. 여기서는 이 예제의 프로세스가 간소화되었지만, 자신의 앱을 개발할 때 사용할 Visual Studio IDE의 몇 가지 일반적인 부분을 보여 주었습니다. 이 예제에 대한 자세한 내용은 ["Hello, world" 앱 만들기(XAML)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)을 참조하세요.
 
 ## <a name="debug-test-and-improve-your-code"></a>코드 디버그, 테스트 및 향상
 
@@ -153,7 +176,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 - [출력](../ide/reference/output-window.md) 창에는 디버깅 및 오류 메시지, 컴파일러 경고, 게시 상태 메시지 등의 Visual Studio 알림이 표시됩니다. 각 메시지 원본에 해당하는 탭이 있습니다.
 
-- [팀 탐색기](/vsts/user-guide/work-team-explorer) - [Git](https://git-scm.com/) 및 [TFVC(Team Foundation 버전 제어)](/vsts/tfvc/overview) 등의 버전 제어 기술을 통해 작업 항목을 추적하고 다른 사용자와 코드를 공유할 수 있습니다.
+- [팀 탐색기(VSTS)](/vsts/user-guide/work-team-explorer) - [Git](https://git-scm.com/), [TFVC(Team Foundation 버전 제어)](/vsts/tfvc/overview) 등의 버전 제어 기술을 통해 작업 항목을 추적하고 다른 사용자와 코드를 공유할 수 있습니다.
 
 - [클라우드 탐색기](/azure/vs-azure-tools-resources-managing-with-cloud-explorer) - 가상 컴퓨터, 테이블, SQL 데이터베이스 등의 Azure 리소스를 보고 관리할 수 있습니다. 특정 작업에 Azure Portal이 필요한 경우 클라우드 탐색기에 이동해야 하는 Azure Portal 내 위치로 이동하는 링크가 제공됩니다.
 
@@ -161,7 +184,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 다음은 Visual Studio의 다른 일반적인 생산성 기능입니다.
 
-- [빠른 실행](https://docs.microsoft.com/en-us/visualstudio/ide/reference/quick-launch-environment-options-dialog-box) 검색 상자는 Visual Studio에서 필요한 항목을 빠르게 찾을 수 있는 좋은 방법입니다. 찾으려는 항목의 이름을 입력하기만 하면 Visual Studio는 원하는 곳으로 정확하게 안내하는 결과를 나열합니다. 빠른 실행은 작업 또는 개별 구성 요소에 대한 Visual Studio 설치 관리자를 시작하는 링크도 표시합니다.
+- [빠른 실행](../ide/reference/quick-launch-environment-options-dialog-box.md) 검색 상자는 Visual Studio에서 필요한 항목을 빠르게 찾을 수 있는 좋은 방법입니다. 찾으려는 항목의 이름을 입력하기만 하면 Visual Studio는 원하는 곳으로 정확하게 안내하는 결과를 나열합니다. 빠른 실행은 작업 또는 개별 구성 요소에 대한 Visual Studio 설치 관리자를 시작하는 링크도 표시합니다.
 
   ![빠른 실행 검색 상자](../ide/media/VSIDE_Tour_QuickLaunch.png)
 
@@ -173,7 +196,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
   ![Visual Studio 멤버 목록](../ide/media/vs2017_Intellisense.png)
 
-- **오류 표시선**은 물결 모양의 빨간색 밑줄이며, 입력할 때 코드의 오류 또는 잠재적인 문제를 실시간으로 알려줍니다. 이렇게 하면 컴파일 또는 런타임 중에 오류를 발견할 때까지 기다리지 않고 바로 수정할 수 있습니다. 오류 표시선 위로 마우스를 가져가면 오류에 대한 추가 정보가 표시됩니다. 오류를 수정하는 방법에 대한 제안 사항과 함께 전구가 왼쪽 여백에 나타날 수도 있습니다. 자세한 내용은 [Perform quick actions with light bulbs](../ide/perform-quick-actions-with-light-bulbs.md)을 참조하세요.
+- **오류 표시선**은 물결 모양의 빨간색 밑줄이며, 입력할 때 코드의 오류 또는 잠재적인 문제를 실시간으로 알려줍니다. 이렇게 하면 컴파일 또는 런타임 중에 오류를 발견할 때까지 기다리지 않고 바로 수정할 수 있습니다. 오류 표시선 위로 마우스를 가져가면 오류에 대한 추가 정보가 표시됩니다. 오류를 수정하는 방법에 대한 제안 사항과 함께 전구가 왼쪽 여백에 나타날 수도 있습니다. 자세한 내용은 [빠른 작업](../ide/quick-actions.md)을 참조하세요.
 
  ![오류 표시선](../ide/media/vs2017_squiggle.png)
 
@@ -199,7 +222,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 ## <a name="manage-your-source-code-and-collaborate-with-others"></a>소스 코드 관리 및 다른 사용자와 공동 작업
 
-GitHub를 포함한 모든 공급자가 호스팅하는 Git 리포지토리에서 원본 코드를 관리할 수 있습니다. 또는 [VSTS(Visual Studio Team Services)](/vsts/index)를 사용하여 전체 프로젝트의 버그 및 작업 항목과 함께 코드를 관리합니다. Visual Studio에서 팀 탐색기를 사용하여 Git 리포지토리를 관리하는 방법에 대해 알아보려면 [Git 및 Team Services 시작하기](/vsts/git/gitquickstart?tabs=visual-studio)를 참조하세요. Visual Studio에는 기본 제공된 다른 소스 제어 기능이 있습니다. 이에 대한 자세한 내용은 [Visual Studio 2017의 새로운 Git 기능(블로그)](https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/06/new-git-features-in-visual-studio-2017/)을 참조하세요.
+GitHub를 포함한 모든 공급자가 호스팅하는 Git 리포지토리에서 원본 코드를 관리할 수 있습니다. 또는 [VSTS(Visual Studio Team Services)](/vsts/index)를 사용하여 전체 프로젝트의 버그 및 작업 항목과 함께 코드를 관리합니다. Visual Studio에서 팀 탐색기를 사용하여 Git 리포지토리를 관리하는 방법에 대해 알아보려면 [Git 및 Team Services 시작하기(VSTS)](/vsts/git/gitquickstart?tabs=visual-studio)를 참조하세요. Visual Studio에는 기본 제공된 다른 소스 제어 기능이 있습니다. 이에 대한 자세한 내용은 [Visual Studio 2017의 새로운 Git 기능(블로그)](https://blogs.msdn.microsoft.com/visualstudioalm/2017/03/06/new-git-features-in-visual-studio-2017/)을 참조하세요.
 
 VSTS는 소프트웨어 프로젝트를 호스팅하고 팀 공동 작업을 수행할 수 있는 클라우드 기반 서비스입니다. VSTS는 Git 및 Team Foundation 소스 제어 시스템과 Scrum, CMMI 및 Agile 개발 방법론을 지원합니다. TFVC(Team Foundation 버전 제어)는 하나의 중앙 집중식 서버 리포지토리를 사용하여 파일을 추적하고 버전을 관리합니다. 다른 개발자가 최신 변경 내용을 가져올 수 있는 중앙 서버에 로컬 변경 내용이 항상 체크 인됩니다.
 
@@ -211,7 +234,7 @@ TFS(Team Foundation Server)는 Visual Studio용 응용 프로그램 수명 주�
 
 ![Visual Studio 팀 탐색기](../ide/media/vs2017_teamexplorer.png)
 
-Visual Studio Team Services 및 Team Foundation Server에 대한 설명서는 [Visual Studio Team Services](/vsts/index)를 참조하세요.
+팀의 개발자들이 버전 제어에 체크 인한 코드를 빌드하도록 빌드 프로세스를 자동화할 수도 있습니다. 예를 들어 밤마다 또는 코드를 체크 인할 때마다 하나 이상의 프로젝트를 빌드할 수 있습니다. 자세한 내용은 [모든 플랫폼에서 연속 통합](https://www.visualstudio.com/en-us/docs/build/overview)을 참조하세요.
 
 ## <a name="connect-to-services-databases-and-cloud-based-resources"></a>서비스, 데이터베이스 및 클라우드 기반 리소스에 연결
 
@@ -225,17 +248,22 @@ Visual Studio Team Services 및 Team Foundation Server에 대한 설명서는 [V
 
 ![클라우드 탐색기](../ide/media/VSIDE_CloudExplorer.png)
 
-**서버 탐색기**를 사용하면 원격으로, 로컬로, Azure, Salesforce.com, Office 365 및 웹 사이트에서 SQL Server 인스턴스와 자산을 찾아보고 관리할 수 있습니다. [서버 탐색기]를 열려면 주 메뉴에서 **보기**, **서버 탐색기**를 차례로 선택합니다. 서버 탐색기 사용에 대한 자세한 내용은 [새 연결 추가](https://docs.microsoft.com/visualstudio/data-tools/add-new-connections)를 참조하세요.
+**서버 탐색기**를 사용하면 원격으로, 로컬로, Azure, Salesforce.com, Office 365 및 웹 사이트에서 SQL Server 인스턴스와 자산을 찾아보고 관리할 수 있습니다. [서버 탐색기]를 열려면 주 메뉴에서 **보기**, **서버 탐색기**를 차례로 선택합니다. 서버 탐색기 사용에 대한 자세한 내용은 [새 연결 추가](../data-tools/add-new-connections.md)를 참조하세요.
 
-[SSDT(SQL Server Data Tools)](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)는 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse를 위한 강력한 개발 환경입니다. 이 도구를 사용하면 데이터베이스를 빌드, 디버그, 유지 관리 및 리팩터링할 수 있습니다. 데이터베이스 프로젝트에 대해 작업하거나, 온-프레미스 또는 오프-프레미스로 연결된 데이터베이스 인스턴스에 대해 직접 작업할 수 있습니다.
+[SSDT(SQL Server Data Tools)](/sql/ssdt/download-sql-server-data-tools-ssdt)는 SQL Server, Azure SQL Database 및 Azure SQL Data Warehouse를 위한 강력한 개발 환경입니다. 이 도구를 사용하면 데이터베이스를 빌드, 디버그, 유지 관리 및 리팩터링할 수 있습니다. 데이터베이스 프로젝트에 대해 작업하거나, 온-프레미스 또는 오프-프레미스로 연결된 데이터베이스 인스턴스에 대해 직접 작업할 수 있습니다.
 
 Visual Studio의 **SQL Server 개체 탐색기**는 SQL Server Management Studio와 비슷한 데이터베이스 개체 보기를 제공합니다. SQL Server 개체 탐색기를 사용하면, SQL Server 개체 탐색기의 바로 상황에 맞는 메뉴를 통해 테이블 데이터 편집, 스키마 비교 및 쿼리 실행 등을 포함하여 간단한 데이터베이스 관리 및 디자인 작업을 수행할 수 있습니다.
 
 ![SQL Server 개체 탐색기](../ide/media/vs2015_sqlobjectexplorer.png)
 
 ## <a name="extend-visual-studio"></a>Visual Studio 확장
+요구되는 적절한 기능이 Visual Studio에 없으면 추가할 수 있습니다! 워크플로와 스타일에 따라 IDE를 개인 설정하고, Visual Studio와 아직 통합되지 않은 외부 도구에 대한 지원을 추가하고, 기존 기능을 수정하여 생산성을 높일 수 있습니다. 최신 버전의 Visual Studio 확장성 도구(VS SDK)를 찾으려면 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)를 참조하세요.
 
-요구되는 적절한 기능이 Visual Studio에 없으면 추가할 수 있습니다! 워크플로와 스타일에 따라 IDE를 개인 설정하고, Visual Studio와 아직 통합되지 않은 외부 도구에 대한 지원을 추가하고, 기존 기능을 수정하여 생산성을 높일 수 있습니다. Visual Studio는 Microsoft, 파트너 및 커뮤니티로부터 도구, 컨트롤 및 템플릿을 제공합니다. Visual Studio 확장에 대한 자세한 내용은 [Visual Studio IDE 확장](https://www.visualstudio.com/vs/extend/)을 참조하세요.
+.NET 컴파일러 플랫폼(Roslyn)을 사용하여 사용자 고유의 코드 분석기 및 코드 생성기를 작성할 수 있습니다. [Roslyn](https://github.com/dotnet/Roslyn)(영문)에서 필요한 모든 항목을 찾으세요.
+
+Microsoft 개발자와 개발 커뮤니티에서 만든 [기존 Visual Studio용 확장](https://marketplace.visualstudio.com/vs)을 찾아 보세요.
+
+Visual Studio 확장에 대한 자세한 내용은 [Visual Studio IDE 확장](https://www.visualstudio.com/vs/extend/)을 참조하세요.
 
 ## <a name="learn-more-and-find-out-whats-new"></a>새로운 기능에 대한 자세한 정보 확인
 

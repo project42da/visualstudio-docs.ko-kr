@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 18cd58899819e49943e009da898705cfa328ffb5
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: cdbbebc65eb004c11b4c36b78bd8e0089db3234e
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>3단계: 대화형 REPL 창 사용
 
@@ -31,7 +32,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
     ![Python 대화형 창 및 크기를 조정하도록 끌기](media/vs-getting-started-python-11-interactive1b.png)
 
     > [!Tip]
-    > 경계 구분 기호를 끌어 Visual Studio에서 모든 창의 크기를 조정할 수 있습니다. 창을 Visual Studio 프레임 밖으로 독립적으로 끌 수 있으며 프레임 내에서 원하는 대로 다시 배치할 수도 있습니다. 자세한 내용은 <a href="https://docs.microsoft.com/visualstudio/ide/customizing-window-layouts-in-visual-studio" target="_blank">창 레이아웃 사용자 지정</a>을 참조하세요.
+    > 경계 구분 기호를 끌어 Visual Studio에서 모든 창의 크기를 조정할 수 있습니다. 창을 Visual Studio 프레임 밖으로 독립적으로 끌 수 있으며 프레임 내에서 원하는 대로 다시 배치할 수도 있습니다. 자세한 내용은 [창 레이아웃 사용자 지정](../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.
 
 1. 몇 가지 문(예: `print("Hello, Visual Studio")`) 및 식(예: `123/456`)을 입력하여 즉각적인 결과를 확인하세요.
 
@@ -47,7 +48,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
     ```python
     # Create a string with spaces proportional to a cosine of x in degrees
-    def make_dot_string(x):  
+    def make_dot_string(x):
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
@@ -62,8 +63,8 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
     ```python
     for i in range(360):
-        s = make_dot_string(i)  
-        print(s) 
+        s = make_dot_string(i)
+        print(s)
     ```
 
     ![Interactive로 보내기를 사용하여 여러 줄의 코드 붙여넣기](media/vs-getting-started-python-15-interactive5.png)
@@ -82,14 +83,13 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
     ```python
     for i in range(0, 1800, 12):
-        s = make_dot_string(i)  
-        print(s) 
+        s = make_dot_string(i)
+        print(s)
     ```
 
     프롬프트 및 출력을 포함하여 대화형 창의 정확한 내용을 복사하려는 경우 표준 **복사** 명령을 사용합니다.
 
 1. 방금 수행한 것은 대화형 창의 신속한 REPL 환경을 사용하여 코드의 작은 부분에 대한 세부 정보를 파악한 다음 프로젝트의 원본 파일에 해당 코드를 편리하게 추가한 것입니다. 이제 Ctrl+F5(또는 **디버그 > 디버깅하지 않고 시작**) 키를 사용하여 코드를 다시 실행하면 원하는 정확한 결과가 표시됩니다.
-
 
 ## <a name="next-steps"></a>다음 단계
 

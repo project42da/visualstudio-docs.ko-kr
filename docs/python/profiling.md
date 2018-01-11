@@ -12,13 +12,14 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 1f873ab7b8954f9ac8ebf089a3719e34be8e03ba
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 525ff73c70b092ca97a9c53759ffa93d55d12c88
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="profiling-python-code"></a>Python Code 프로파일링
+# <a name="profiling-python-code"></a>Python 코드 프로파일링
 
 CPython 기반 인터프리터를 사용하는 경우 Visual Studio는 Python 응용 프로그램을 프로파일링하도록 지원합니다.
 

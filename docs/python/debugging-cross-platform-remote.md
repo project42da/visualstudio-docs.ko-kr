@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 9da504c9af3f0ff30f62f0d4581c4061cc22b4ec
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 1f682cd15f96cf4ea5c12e52d3471580129279f6
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux에서 Python 코드 원격 디버깅
 
@@ -35,9 +36,9 @@ ptvsd를 사용하는 경우 디버그되는 Python 코드는 Visual Studio에�
 - Mac OSX 또는 Linux와 같은 운영 체제에서 Python을 실행하는 원격 컴퓨터.
 - 원격 디버깅의 기본값으로 해당 컴퓨터의 방화벽에서 열려 있는 포트 5678(인바운드).
 
-쉽게 [Azure에서 Linux 가상 컴퓨터](https://docs.microsoft.com/azure/virtual-machines/linux/creation-choices)를 만들고 Windows에서 [원격 데스크톱을 사용하여 Linux 가상 컴퓨터에 액세스](https://docs.microsoft.com/azure/virtual-machines/linux/use-remote-desktop)할 수 있습니다. Python이 기본적으로 설치되어 있으므로 VM에 Ubuntu를 사용하면 편리합니다. 그렇지 않은 경우 추가 Python 다운로드 위치는 [원하는 Python 인터프리터 설치](python-environments.md#selecting-and-installing-python-interpreters)를 참조하세요.
+쉽게 [Azure에서 Linux 가상 컴퓨터](/azure/virtual-machines/linux/creation-choices)를 만들고 Windows에서 [원격 데스크톱을 사용하여 Linux 가상 컴퓨터에 액세스](/azure/virtual-machines/linux/use-remote-desktop)할 수 있습니다. Python이 기본적으로 설치되어 있으므로 VM에 Ubuntu를 사용하면 편리합니다. 그렇지 않은 경우 추가 Python 다운로드 위치는 [원하는 Python 인터프리터 설치](python-environments.md#selecting-and-installing-python-interpreters)를 참조하세요.
 
-Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내용은 [Azure Portal을 사용하여 Azure에서 VM으로 포트 열기](https://docs.microsoft.com/azure/virtual-machines/windows/nsg-quickstart-portal)를 참조하세요.
+Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내용은 [Azure Portal을 사용하여 Azure에서 VM으로 포트 열기](/azure/virtual-machines/windows/nsg-quickstart-portal)를 참조하세요.
 
 ## <a name="preparing-the-script-for-debugging"></a>디버그할 스크립트 준비
 
@@ -131,14 +132,13 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
     | 2013 | 2.2.2 |
     | 2012, 2010 | 2.1 |
 
-
 ## <a name="securing-the-debugger-connection-with-ssl"></a>SSL로 디버거 연결 보안
 
 기본적으로 ptvsd 원격 디버그 서버에 대한 연결은 암호로만 보호되고 모든 데이터는 일반 텍스트로 전달됩니다. 더 안전한 연결을 위해 ptvsd는 다음과 같이 설정하는 SSL을 지원합니다.
 
 1. 원격 컴퓨터에서 다음과 같이 openssl을 사용하여 별도의 자체 서명된 인증서 및 키 파일을 생성합니다.
-    
-    ```bash
+
+    ```command
     openssl req -new -x509 -days 365 -nodes -out cert.cer -keyout cert.key
     ```
 
@@ -151,8 +151,8 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
     ```python
     ptvsd.enable_attach(secret='my_secret', certfile='cert.cer', keyfile='cert.key')
     ```
-    
-    로컬 컴퓨터의 코드 파일에서도 같은 변경을 수행할 수 있지만, 이 코드는 실제로 실행되지 않으므로 필요 없습니다.    
+
+    로컬 컴퓨터의 코드 파일에서도 같은 변경을 수행할 수 있지만, 이 코드는 실제로 실행되지 않으므로 필요 없습니다.
 
 1. 원격 컴퓨터에서 Python 프로그램을 다시 시작하여 디버깅을 준비합니다.
 

@@ -12,11 +12,12 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 44065522229a1661efc41e79905d9650f7949ac3
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: b9762a3ce0a448fdf2b9e2d2b6127e7565187f70
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="python-projects"></a>Python 프로젝트
 
@@ -144,6 +145,6 @@ IronPython의 참조는 `clr.AddReference('AssemblyName')` 호출이 발생할 �
 
 ### <a name="webpi-projects"></a>WebPI 프로젝트
 
-WebPI 피드를 통해 추가 구성 요소를 설치할 수 있는 Microsoft Azure Cloud Service에 배포할 WebPI 제품 항목에 대한 참조를 추가할 수 있습니다. 기본적으로 표시된 피드는 Python에 국한되며 Django, CPython 및 기타 핵심 구성 요소를 포함합니다. 아래 표시된 것처럼 사용자 고유의 피드를 선택할 수도 있습니다. Microsoft Azure에 게시할 때 설치 작업은 참조된 모든 제품을 설치합니다.
+WebPI 피드를 통해 추가 구성 요소를 설치할 수 있는 Microsoft Azure Cloud Services에 배포할 WebPI 제품 항목에 대한 참조를 추가할 수 있습니다. 기본적으로 표시된 피드는 Python에 국한되며 Django, CPython 및 기타 핵심 구성 요소를 포함합니다. 아래 표시된 것처럼 사용자 고유의 피드를 선택할 수도 있습니다. Microsoft Azure에 게시할 때 설치 작업은 참조된 모든 제품을 설치합니다.
 
 ![WebPI 참조](media/projects-webPI-components.png)

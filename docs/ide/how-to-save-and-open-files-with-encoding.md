@@ -17,11 +17,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: c9dca526f53c59b8db35b50378e4bf280d5e0a1e
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 25ec36e6b124f47c4bb13be8f7affd9b7ee54553
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>방법: 인코딩을 사용하여 파일 저장 및 열기
 양방향 언어를 지원하기 위해 특정 문자 인코딩을 사용하여 파일을 저장할 수 있습니다. Visual Studio에 파일이 제대로 표시되도록 파일을 열 때 인코딩을 지정할 수 있습니다.  
@@ -58,6 +59,7 @@ ms.lasthandoff: 10/31/2017
   
 3.  이전 절차에서 2단계 및 3단계를 수행합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [인코딩 및 Windows Forms 전역화](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)   
- [응용 프로그램 전역화 및 지역화](../ide/globalizing-and-localizing-applications.md)
+## <a name="see-also"></a>참고 항목
+[인코딩 및 줄 바꿈](encodings-and-line-breaks.md)  
+[인코딩 및 Windows Forms 전역화](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)   
+[응용 프로그램 전역화 및 지역화](../ide/globalizing-and-localizing-applications.md)

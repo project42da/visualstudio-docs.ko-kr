@@ -26,11 +26,12 @@ caps.latest.revision: "10"
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.openlocfilehash: 73e4544ab00142929bbd8d8dbdb154355c48c609
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 5398f3eb1aa140ed53d6734734528d5c89a104c8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="rc-task"></a>RC 작업
 Microsoft Windows 리소스 컴파일러 도구, rc.exe를 래핑합니다. **RC** 작업은 커서, 아이콘, 비트맵, 대화 상자 및 글꼴과 같은 리소스를 리소스(.res) 파일로 컴파일합니다. 자세한 내용은 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 웹 사이트에서 "리소스 컴파일러"를 참조하세요.  
@@ -49,7 +50,7 @@ Microsoft Windows 리소스 컴파일러 도구, rc.exe를 래핑합니다. **RC
 |**ResourceOutputFileName**|선택적 **문자열** 매개 변수입니다.<br /><br /> 리소스 파일 이름을 지정합니다. 리소스 파일 이름을 지정합니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/fo** 옵션을 참조하세요.|  
 |**ShowProgress**|선택적 **Boolean** 매개 변수입니다.<br /><br /> `true`인 경우 컴파일러의 진행 상황을 보고하는 메시지가 표시됩니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/v** 옵션을 참조하세요.|  
 |**소스**|필수 `ITaskItem[]` 매개 변수입니다.<br /><br /> 작업에서 사용하고 내보낼 수 있는 MSBuild 소스 파일 항목의 배열을 정의합니다.|  
-|**SuppressStartupBanner**|선택적 **Boolean** 매개 변수입니다.<br /><br /> `true`인 경우 작업을 시작할 때 저작권과 버전 번호 메시지가 표시되지 않도록 합니다.<br /><br /> 자세한 내용은 **/?** 명령줄 옵션을 입력한 다음 **/nologo** 옵션을 참조하세요.|  
+|**SuppressStartupBanner**|선택적 **Boolean** 매개 변수입니다.<br /><br /> `true`인 경우 작업을 시작할 때 저작권과 버전 번호 메시지가 표시되지 않도록 합니다.<br /><br /> 자세한 내용은 **/?** 명령줄 옵션을 입력하고 **/nologo** 옵션을 참조하세요.|  
 |**TrackerLogDirectory**|선택적 **문자열** 매개 변수입니다.<br /><br /> 추적기 로그 디렉터리를 지정합니다.|  
 |**UndefinePreprocessorDefinitions**|전처리기 기호의 정의를 해제합니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/u** 옵션을 참조하세요. 이 표의 **PreprocessorDefinitions**도 참조하세요.|  
   

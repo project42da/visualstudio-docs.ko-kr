@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 876fdbd4507fd7ed55e7b29834d4a3bc5e68dfad
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: d0b21c78ab31c093ef48300ac746c3c2fd7d6778
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>빠른 시작: Cookiecutter 템플릿에서 프로젝트 만들기
 
@@ -42,7 +43,6 @@ ms.lasthandoff: 12/01/2017
 
     ![python-sklearn-classifier-cookiecutter 템플릿 프로젝트의 출력](media/projects-from-cookiecutter4.png)
 
-
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
@@ -53,4 +53,4 @@ ms.lasthandoff: 12/01/2017
 - [Cookiecutter 확장 사용](cookiecutter.md)
 - [기존 Python 인터프리터에 대한 환경 만들기](python-environments.md#creating-an-environment-for-an-existing-interpreter)
 - [Visual Studio 2015 이하 버전에서 Python 지원 설치](installation.md)
-- [설치 위치](installation.md#install-locations)
+- [설치 위치](installation.md#install-locations).

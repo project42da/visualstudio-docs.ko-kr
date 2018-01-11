@@ -12,11 +12,14 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: b8ddcb234d43407c256145245b4cbdac308ed9ea
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload:
+- python
+- azure
+ms.openlocfilehash: e5bde434f3a5097f51f461aad5b02ae183e2204c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python용 Azure Cloud Service 프로젝트
 
@@ -46,7 +49,6 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
     ![작업자 역할 지원 파일](media/template-azure-cloud-service-worker-role-support-files.png)
 
     이러한 구성 스크립트를 새 프로젝트에 추가하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택하고 **웹 역할 지원 파일** 또는 **작업자 역할 지원 파일**을 선택합니다.
-   
 
 ## <a name="configuring-role-deployment"></a>역할 배포 구성
 
@@ -72,7 +74,6 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
 
 에뮬레이터의 제한으로 인해 Python 코드를 디버그할 수 없습니다. 따라서 독립적으로 실행하여 역할을 디버깅한 후 게시하기 전에 통합 테스트에 대해 에뮬레이터를 사용하는 것이 좋습니다.
 
-
 ## <a name="deploying-a-role"></a>역할 배포
 
 **게시** 마법사를 열려면 솔루션 탐색기에서 역할 프로젝트를 선택하고 주 메뉴에서 **빌드 > 게시**를 선택하거나 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
@@ -83,12 +84,11 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
 
 마지막으로 작업자 역할은 Python 스크립트 실행을 시작하는 `LaunchWorker.ps1`을 실행하고 웹 역할은 IIS를 시작하고 웹 요청 처리를 시작합니다.
 
-
 ## <a name="dependencies"></a>종속성
 
-Cloud Service의 경우 `ConfigureCloudService.ps1` 스크립트는 `pip`를 사용하여 Python 종속성 집합을 설치합니다. 종속성은 `requirements.txt` 파일에 지정되어야 합니다(`ConfigureCloudService.ps1`을 수정하여 사용자 지정 가능). 파일은 초기화의 일부로 `pip install -r requirements.txt`에서 실행됩니다.
+클라우드 서비스의 경우 `ConfigureCloudService.ps1` 스크립트는 `pip`를 사용하여 Python 종속성 집합을 설치합니다. 종속성은 `requirements.txt` 파일에 지정되어야 합니다(`ConfigureCloudService.ps1`을 수정하여 사용자 지정 가능). 파일은 초기화의 일부로 `pip install -r requirements.txt`에서 실행됩니다.
 
-Cloud Service 인스턴스는 C 컴파일러를 포함하지 않으므로 C 확장명이 있는 모든 라이브러리는 사전 컴파일된 이진 파일을 제공해야 합니다.
+클라우드 서비스 인스턴스는 C 컴파일러를 포함하지 않으므로 C 확장명이 있는 모든 라이브러리는 사전 컴파일된 이진 파일을 제공해야 합니다.
 
 pip 및 해당 종속성과 `requirements.txt`의 패키지는 자동으로 다운로드되며 청구 가능한 대역폭 사용량으로 계산할 수 있습니다. `requirements.txt` 파일 관리에 대한 자세한 내용은 [필수 패키지 관리](python-environments.md#managing-required-packages)를 참조하세요.
 
@@ -97,12 +97,13 @@ pip 및 해당 종속성과 `requirements.txt`의 패키지는 자동으로 다�
 배포 후 웹 또는 작업자 역할이 올바르게 동작하지 않으면 다음을 확인하세요.
 
 - Python 프로젝트는 다음 이상을 포함하는 bin\ 폴더를 포함합니다.
+
     - `ConfigureCloudService.ps1`
     - `LaunchWorker.ps1`(작업자 역할)
     - `ps.cmd`
 
 - Python 프로젝트는 모든 종속성(또는 휠 파일의 컬렉션)이 나열된 `requirements.txt` 파일을 포함합니다.
-- Cloud Service에서 원격 데스크톱을 사용하고 로그 파일을 조사합니다.
+- 클라우드 서비스에서 원격 데스크톱을 사용하고 로그 파일을 조사합니다.
 - `ConfigureCloudService.ps1` 및 `LaunchWorker.ps1`에 대한 로그는 원격 컴퓨터의 `C:\Resources\Directory\%RoleId%.DiagnosticStore\LogFiles` 폴더에 저장됩니다.
 - 웹 역할은 `web.config`에 구성된 경로 즉, `WSGI_LOG` appSetting의 경로에 대해 추가 로그를 작성할 수 있습니다. 대부분의 일반 IIS 또는 FastCGI 로깅도 작동합니다.
 - 현재는 `LaunchWorker.ps1.log` 파일이 Python 작업자 역할로 표시된 출력이나 오류를 볼 수 있는 유일한 방법입니다.

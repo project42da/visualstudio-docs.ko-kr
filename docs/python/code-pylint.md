@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: dbb4c3d0a2d9077572a80c43d9d49d9c7e898dce
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: cf97be0c7a7b5bb9d6a9d43ceeb5cd9e9334025d
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="using-pylint-to-check-python-code"></a>PyLint를 사용하여 Python 코드 검사
 
@@ -39,13 +40,13 @@ Python 코드의 오류를 검사하고 적절한 Python 코딩 패턴을 권장
 
 ## <a name="setting-pylint-command-line-options"></a>PyLint 명령줄 옵션 설정
 
-PyLint 설명서의 [명령줄 옵션](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) 섹션에서는 `.pylintrc` 구성 파일을 통해 PyLint의 동작을 제어하는 방법에 대해 설명합니다. 이러한 파일은 Visual Studio 또는 해당 설정을 적용하려는 범위에 따라 다른 곳에 있는 Python 프로젝트의 루트에 배치할 수 있습니다.
+PyLint 설명서의 [명령줄 옵션](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) 섹션에서는 `.pylintrc` 구성 파일을 통해 PyLint의 동작을 제어하는 방법에 대해 설명합니다. 이러한 파일은 Visual Studio 또는 해당 설정을 적용하려는 범위에 따라 다른 곳에 있는 Python 프로젝트의 루트에 배치할 수 있습니다(자세한 내용은 [명령줄 옵션](https://pylint.readthedocs.io/en/latest/user_guide/run.html#command-line-options) 참조).
 
 예를 들어 프로젝트에서 `.pylintrc` 파일을 사용하여 이전 이미지에 표시된 “docstring이 없습니다”라는 경고를 표시하지 않으려면 다음 단계를 수행합니다.
 
 1. 명령줄에서 프로젝트 루트(`.pyproj` 파일이 포함된 위치)로 이동하고 다음 명령을 실행하여 주석으로 처리된 구성 파일을 생성합니다.
 
-   ```bash
+   ```command
    pylint --generate-rcfile > .pylintrc
    ```
 
@@ -54,3 +55,6 @@ PyLint 설명서의 [명령줄 옵션](https://pylint.readthedocs.io/en/latest/u
 1. 편집을 위해 작업할 수 있는 다양한 설정이 포함된 파일을 엽니다. 경고를 사용하지 않도록 설정하려면 `[MESSAGES CONTROL]` 섹션을 찾은 다음 해당 섹션에서 `disable` 설정을 찾습니다. 특정 메시지의 긴 문자열이 표시되며, 원하는 경고를 추가할 수 있습니다. 이 예제에서는 `,missing-docstring`을 추가합니다(쉼표로 구분된 기호 포함).
 
 1. `.pylintrc` 파일을 저장하고 PyLint를 다시 실행하여 해당 경고가 표시되지 않는지 확인합니다.
+
+> [!Tip]
+> 네트워크 공유에서 `.pylintrc` 파일을 사용하려면 UNC 경로나 매핑된 드라이브 문자를 사용하여 네트워크 공유의 파일 이름의 값을 통해 이름이 `PYLINTRC`인 환경 변수를 만듭니다. 예를 들어, `PYLINTRC=\\myshare\python\.pylintrc`을 입력합니다.

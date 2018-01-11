@@ -14,11 +14,12 @@ helpviewer_keywords:
 ms.service: 
 ms.technology: vs-acquisition
 ms.assetid: a3c0cc76-e3ce-435c-a1af-a6318b5a4dbe
-ms.openlocfilehash: 124a40e4e8f4b713e17aa05f95efccc5fcec3589
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: multiple
+ms.openlocfilehash: a628d2af0ccfaf66c936b391a977a0869139c98b
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="visual-studio-desktop-express-2017-workload-and-component-ids"></a>Visual Studio Desktop Express 2017 워크로드 및 구성 요소 ID
 
@@ -42,7 +43,7 @@ VSIX 매니페스트에 종속성을 설정하는 경우 구성 요소 ID만 지
 
 ### <a name="components-included-by-this-workload"></a>이 작업에 포함되는 구성 요소
 
-구성 요소 ID | 이름 | 버전 | 종속성 유형
+구성 요소 ID | name | 버전 | 종속성 유형
 --- | --- | --- | ---
 Microsoft.Component.ClickOnce | ClickOnce 게시 도구 | 15.0.27019.1 | 필수
 Microsoft.Component.HelpViewer | 도움말 뷰어 | 15.0.27005.2 | 필수
@@ -86,9 +87,9 @@ Microsoft.VisualStudio.Component.Windows10SDK.16299.UWP.Native | UWP용 Windows 
 
 이러한 구성 요소는 작업에 포함되지 않지만 개별 구성 요소로 선택할 수 있습니다.
 
-구성 요소 ID | 이름 | 버전
+구성 요소 ID | name | 버전
 --- | --- | ---
-해당 없음 | 해당 없음 | 해당 없음
+N/A | N/A | N/A
 
 ## <a name="get-support"></a>지원 받기
 때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지를 참조하세요. 문제 해결 단계가 도움이 되지 않는 경우 라이브 채팅을 통해 Microsoft에 설치 지원을 문의할 수 있습니다(영어만 가능). 자세한 내용은 [Visual Studio 지원 페이지](https://www.visualstudio.com/vs/support/#talktous)를 참조하세요.

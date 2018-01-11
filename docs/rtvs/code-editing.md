@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: c36afd0483a49537eac67e5fa219699f2366750e
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 013c32cb1567b3a4830a5c63059b14ea23df5427
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editing-r-code-in-visual-studio"></a>Visual Studio에서 R 코드 편집
 
@@ -34,7 +35,7 @@ RTVS(Visual Studio용 R 도구)에서는 모든 기능과 확장 사용 기능�
 
 [IntelliSense](code-intellisense.md), [linting](code-linting.md), [코드 조각](code-snippets.md) 및 [R Markdown](rmarkdown.md)에 대한 항목도 참조하세요.
 
-## <a name="syntax-highlighting"></a>구문 강조 
+## <a name="syntax-highlighting"></a>구문 강조
 
 문자열, 주석 및 키워드 등 코드의 여러 부분을 색 지정할 뿐 아니라 RTVS는 주석에서 링크를 강조하고 사용하도록 설정합니다.
 
@@ -67,7 +68,7 @@ Visual Studio에서는 편집기에 있는 구문 오류에 밑줄을 추가합�
 고유한 영역을 만들려면 원하는 코드를 `---`로 끝나는 주석으로 둘러쌉니다. 코드 왼쪽의 작은 +/- 컨트롤을 통해 영역을 펼치거나 접을 수 있습니다.
 
 ![주석으로 접을 수 있는 영역 만들기](media/editing-collapsible-regions.gif)
- 
+
 Tab 키를 누르면 Visual Studio에서는 기본적으로 공백을 삽입합니다. [옵션, 텍스트 편집기, 탭](../ide/reference/options-text-editor-all-languages.md)의 설명대로 이 동작을 다시 변경할 수 있습니다.
 
 ## <a name="code-navigation"></a>코드 탐색

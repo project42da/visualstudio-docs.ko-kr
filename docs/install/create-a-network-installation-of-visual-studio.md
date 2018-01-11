@@ -14,18 +14,19 @@ ms.assetid: 4CABFD20-962E-482C-8A76-E4012052F701
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: fa4aec5f164e188ff9832d06a4b3c8dad46ae63d
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: f5e6c5a94ac4c875922d2da09e9171f4929035f8
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-a-network-installation-of-visual-studio-2017"></a>Visual Studio 2017의 네트워크 설치 만들기
 
 일반적으로 엔터프라이즈 관리자는 클라이언트 워크스테이션에 배포하기 위한 네트워크 설치 지점을 만듭니다. Visual Studio 2017은 초기 설치에 대한 파일과 모든 제품 업데이트를 단일 폴더에 캐시할 수 있도록 구성되어 있으므로(이 프로세스를 _레이아웃 만들기_라고도 함), 클라이언트 워크스테이션에서는 최신 제공 업데이트로 업데이트되지 않은 경우에도 설치를 관리하는 데 같은 네트워크 위치를 사용할 수 있습니다.
 
-> [!NOTE]
-> 엔터프라이즈 내에서 여러 버전의 Visual Studio를 사용 중인 경우(예: Visual Studio Professional과 Visual Studio Enterprise 모두 사용) 각 버전에 대한 별도의 네트워크 설치 공유를 만들어야 합니다.
+ > [!NOTE]
+ > 엔터프라이즈 내에서 여러 버전의 Visual Studio를 사용 중인 경우(예: Visual Studio Professional과 Visual Studio Enterprise 모두 사용) 각 버전에 대한 별도의 네트워크 설치 공유를 만들어야 합니다.
 
 ## <a name="download-the-visual-studio-bootstrapper"></a>Visual Studio 부트스트래퍼 다운로드
 
@@ -127,7 +128,7 @@ response.json을 수정하여 설치 프로그램이 실행될 때 사용되는 
 
 `--wait` 매개 변수를 사용한 경우 작업 결과에 따라 `%ERRORLEVEL%` 환경 변수는 다음 값 중 하나로 설정됩니다.
 
-  | **Value** | **결과** |
+  | **값** | **결과** |
   | --------- | ---------- |
   | 0 | 작업이 완료되었습니다. |
   | 3010 | 작업이 완료되었지만, 사용하려면 다시 부팅해야 합니다. |

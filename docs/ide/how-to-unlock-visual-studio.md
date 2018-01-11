@@ -12,11 +12,12 @@ caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 230362695dd9f099c15eb1113e1eb121418b0c41
-ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
+ms.workload: multiple
+ms.openlocfilehash: 87d937c456b875afa5234b61b57edb21ba32baf6
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-unlock-visual-studio"></a>Visual Studio 잠금을 해제하는 방법
 
@@ -72,5 +73,5 @@ Microsoft 계정이나 회사 또는 학교 계정과 연결된 MSDN 또는 Visu
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio에 로그인](../ide/signing-in-to-visual-studio.md)  
-[Visual Studio에 사용되는 인터넷 리소스](../ide/connected-environment.md)
+* [Visual Studio에 로그인](../ide/signing-in-to-visual-studio.md)
+ 

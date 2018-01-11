@@ -12,15 +12,16 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 29d11f04fb1fc7b0942a98b47dd5638c0572c23b
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 6dda33b14a96d7d866413ea26dc267f9aa8b772c
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="django-web-project-template"></a>Django 웹 프로젝트 템플릿
 
-[Django](https://www.djangoproject.com/)는 신속하고 안전하며 확장성 있는 웹 개발을 위해 고안된 상위 수준 Python 프레임워크입니다. Visual Studio의 Python 지원은 Django 기반 웹 응용 프로그램의 구조를 설정하기 위한 프로젝트 템플릿을 제공합니다. Visual Studio에서 템플릿을 사용하려면 **파일 > 새로 만들기 > 프로젝트**를 선택하고 "Django"를 검색하고 "Django 웹 프로젝트" 템플릿을 선택합니다. 결과 프로젝트에는 기본 SQLite 데이터베이스와 상용구 코드가 포함됩니다. "빈 Django 웹 프로젝트" 템플릿도 이와 유사하지만 데이터베이스를 포함하지 않습니다.
+[Django](https://www.djangoproject.com/)는 신속하고 안전하며 확장성 있는 웹 개발을 위해 고안된 상위 수준 Python 프레임워크입니다. Visual Studio의 Python 지원은 Django 기반 웹 응용 프로그램의 구조를 설정하기 위한 프로젝트 템플릿을 제공합니다. Visual Studio에서 템플릿을 사용하려면 **파일 > 새로 만들기 > 프로젝트**를 선택하고 "Django"를 검색하고 **Django 웹 프로젝트** 템플릿을 선택합니다. 결과 프로젝트에는 기본 SQLite 데이터베이스와 상용구 코드가 포함됩니다. **빈 Django 웹 프로젝트** 템플릿도 이와 유사하지만 데이터베이스를 포함하지 않습니다.
 
 Visual Studio는 Django 프로젝트용 전체 IntelliSense를 제공합니다.
 
@@ -38,13 +39,11 @@ Visual Studio는 Django 프로젝트용 전체 IntelliSense를 제공합니다.
 
     ![JavaScript IntelliSense](media/template-django-intellisense-js.png)
 
-
 Visual Studio에서는 Django 프로젝트에 대해 전체 [디버깅 지원](debugging.md)도 제공합니다. 
 
 ![중단점](media/template-django-debugging.png)
 
 `manage.py` 파일을 통해 Django 프로젝트를 관리하는 것이 일반적이며, Visual Studio는 이 가정을 따릅니다. 해당 파일을 진입점으로 사용하지 않으면 기본적으로 프로젝트 파일이 손상됩니다. 이 경우 Django 프로젝트로 표시하지 않고 [기존 파일에서 프로젝트를 다시 만들어야](python-projects.md#creating-a-project-from-existing-files) 합니다.
-
 
 ## <a name="django-management-console"></a>Django 관리 콘솔
 

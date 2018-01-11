@@ -13,11 +13,12 @@ caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 9d9c163063cfa4e2a78f8a07ab74efbecb355448
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: ef4179c5bc0fb80e2fb65d54885c342ca49bce3b
+ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="synchronize-your-settings-in-visual-studio"></a>Visual Studio에서 설정 동기화
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 10/31/2017
 
 ## <a name="turn-off-synchronized-settings-on-a-particular-computer"></a>특정 컴퓨터에서 동기화된 설정 끄기
 
-Visual Studio의 동기화된 설정이 기본적으로 켜져 있습니다. **도구 &#124; 옵션 &#124; 환경 &#124; 동기화된 설정** 페이지로 이동하고 확인란의 선택을 취소하면 컴퓨터에서 동기화된 설정을 끌 수 있습니다.  예를 들어 컴퓨터 A에서 Visual Studio의 설정을 동기화하지 않기로 하면 컴퓨터 A에서 수행한 변경 사항이 컴퓨터 B나 컴퓨터 C에 나타나지 않습니다. 컴퓨터 B와 C는 계속 서로 동기화되지만 컴퓨터 A와는 동기화되지 않습니다.
+Visual Studio의 동기화된 설정이 기본적으로 켜져 있습니다. **도구 &#124; 옵션 &#124; 환경 &#124; 계정** 페이지로 이동하고 확인란의 선택을 취소하면 컴퓨터에서 동기화된 설정을 끌 수 있습니다.  예를 들어 컴퓨터 A에서 Visual Studio의 설정을 동기화하지 않기로 하면 컴퓨터 A에서 수행한 변경 사항이 컴퓨터 B나 컴퓨터 C에 나타나지 않습니다. 컴퓨터 B와 C는 계속 서로 동기화되지만 컴퓨터 A와는 동기화되지 않습니다.
 
 ## <a name="synchronize-settings-across-visual-studio-family-products-and-editions"></a>Visual Studio 제품군 제품 및 버전 간에 설정 동기화
 

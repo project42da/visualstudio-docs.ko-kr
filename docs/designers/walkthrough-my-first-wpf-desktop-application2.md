@@ -15,11 +15,12 @@ manager: ghogen
 dev_langs:
 - csharp
 - vb
-ms.openlocfilehash: fb4da07f2ee8d4c30717209ee07221285a8275ee
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: e3f3002dc40c0bdae3aad6cdbacb4b9b70422157
+ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 01/02/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
 이 연습에서는 WPF(Windows Presentation Foundation) 개발에 대해 소개합니다. XAML 태그, 코드 숨김, 응용 프로그램 정의, 컨트롤, 레이아웃, 데이터 바인딩, 스타일 등 대부분의 WPF 데스크톱 응용 프로그램에 공통된 요소를 포함하는 기본 응용 프로그램을 만듭니다.  
@@ -266,12 +267,12 @@ ms.lasthandoff: 12/12/2017
   
 #### <a name="to-add-a-background-image"></a>배경 이미지를 추가하려면  
   
-1.  다음 이미지를 선택하여 `watermark.png`로 저장합니다.  
+1.  다음 이미지를 선택하고 `watermark.png`를 차례로 선택합니다.  
   
-     ![연습용 워터마크 이미지](../designers/media/wpf_watermark.png "WPF_watermark")  
+     ![연습을 위한 워터마크 이미지](../designers/media/wpf_watermark.png "워터마크")  
   
     > [!NOTE]
-    >  이미지를 직접 만들어 `watermark.png`로 저장할 수도 있습니다.  
+    >  또는 사용자 고유의 이미지를 만들고 `watermark.png`를 차례로 선택합니다.  
   
 2.  **솔루션 탐색기**에서 **ExpenseIt** 노드의 바로 가기 메뉴를 열고 **추가**, **기존 항목**을 선택합니다.  
   

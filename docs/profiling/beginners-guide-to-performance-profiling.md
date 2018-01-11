@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 성능 프로파일링 초보자를 위한 지침 | Microsoft Docs"
+title: "Visual Studio에서 응용 프로그램 성능 프로파일링 | Microsoft Docs"
 ms.custom: H1Hack27Feb2017
 ms.date: 02/27/2017
 ms.reviewer: 
@@ -18,13 +18,14 @@ caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: cdb7339c902c94dc0052b1bd4d0570247069dc01
-ms.sourcegitcommit: 1aa9282b1f0bc2795df3264cbd1e331cc44c23f3
+ms.workload: multiple
+ms.openlocfilehash: 5ff8e6fe4814d9f049a816997252dac032e631ed
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/08/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="beginners-guide-to-performance-profiling"></a>초보자를 위한 성능 프로파일링 지침
+# <a name="profile-application-performance-in-visual-studio"></a>Visual Studio에서 응용 프로그램 성능 프로파일링
 Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성능 문제를 분석할 수 있습니다. 이 절차에서는 진단 도구의 **CPU 사용량** 탭을 사용하여 앱의 성능 데이터를 가져오는 방법을 보여 줍니다. 진단 도구는 ASP.NET을 포함한 Visual Studio의 .NET 개발 및 네이티브/C++ 개발에 사용할 수 있습니다.
   
 디버거가 일시 중지되면 **CPU 사용량** 도구는 응용 프로그램에서 실행되는 함수에 대한 정보를 지정된 간격으로 수집합니다. 또한 이 도구에는 작업을 수행하는 함수가 표시되고 샘플링 세션의 특정 세그먼트를 집중적으로 확인할 수 있는 타임라인 그래프도 표시됩니다.
@@ -68,7 +69,7 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
      ![진단 도구에서 CPU 프로파일링을 사용하도록 설정](../profiling/media/DiagToolsEnableCPUProfiling.png "DiagToolsEnableCPUProfiling")
 
-     **CPU 프로파일링 사용**을 선택하면 Visual Studio는 함수 및 함수 실행에 걸리는 시간의 기록을 시작합니다. 응용 프로그램이 중단점에서 멈추면 이렇게 수집된 데이터만 볼 수 있습니다.
+     **CPU 프로파일 기록**을 선택하면 Visual Studio는 함수 및 함수 실행에 걸리는 시간의 기록을 시작합니다. 응용 프로그램이 중단점에서 멈추면 이렇게 수집된 데이터만 볼 수 있습니다.
 
 8.  두 번째 중단점까지 앱을 실행하려면 F5 키를 누릅니다.
 
@@ -156,7 +157,7 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
 </div>
   
 ## <a name="see-also"></a>참고 항목  
- [메모리 사용](../profiling/memory-usage.md)  
+ [메모리 사용량](../profiling/memory-usage.md)  
  [CPU 사용량](../profiling/cpu-usage.md)  
  [Visual Studio의 프로파일링](../profiling/index.md)  
  [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)

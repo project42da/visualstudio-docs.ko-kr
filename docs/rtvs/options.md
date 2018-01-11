@@ -17,13 +17,18 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: dd21ba3c54ed274f181c036ed0121d8d3c5a180e
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.workload: data-science
+ms.openlocfilehash: a7680ff2613051cb795d2ca9cb509f725e92dd23
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="r-tools-for-visual-studio-options"></a>Visual Studio용 R 도구 옵션
+
+설정은 **R 도구 > 옵션** 메뉴를 통해 액세스하거나 **도구 > 옵션**을 통해 **R 도구**로 스크롤하여 액세스합니다.
+
+  ![R 도구의 [옵션] 대화 상자](media/options-dialog.png)
 
 아래 방법을 사용하여 R에 관련된 옵션 및 설정에 액세스합니다. 이러한 섹션을 모두 표시하려면 **옵션** 대화 상자의 맨 아래에 있는 **모든 설정 표시** 상자를 선택해야 합니다.
 

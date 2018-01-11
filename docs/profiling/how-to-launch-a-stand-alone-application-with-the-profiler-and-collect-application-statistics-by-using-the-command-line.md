@@ -12,11 +12,12 @@ caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 17a5d01ed0ceb139362c28168d430f19ea0fef55
-ms.sourcegitcommit: 26419ab0cccdc30d279c32d6a841758cfa903806
+ms.workload: multiple
+ms.openlocfilehash: 7840b2a28d5d2aff350af7c86f19332c7b8dd087
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/11/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-launch-a-stand-alone-application-with-the-profiler-and-collect-application-statistics-by-using-the-command-line"></a>방법: 명령줄을 통해 프로파일러와 함께 독립 실행형 응용 프로그램을 시작하여 응용 프로그램 통계 수집
 이 항목은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 독립 실행형 응용 프로그램을 시작하고 샘플링 방법을 사용하여 성능 통계를 수집하는 방법을 설명합니다.  
@@ -42,7 +43,7 @@ ms.lasthandoff: 11/11/2017
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  프로파일러를 시작합니다. 형식:  
+2.  프로파일러를 시작합니다. 유형:  
   
      **VSPerfCmd /start:sample /output:** `OutputFile` [`Options`]  
   
@@ -102,7 +103,7 @@ ms.lasthandoff: 11/11/2017
   
     -   **VSPerfCmd /detach** 입력  
   
-2.  프로파일러를 종료합니다. 형식:  
+2.  프로파일러를 종료합니다. 유형:  
   
      **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)  
   

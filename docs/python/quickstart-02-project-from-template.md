@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 745e6abe6aa9e1637d7ab79c0f76fb8874e8f6af
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: ee329df0bda8869215969941024deba6d94743fe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>빠른 시작: Visual Studio의 템플릿에서 Python 프로젝트 만들기
 
@@ -24,7 +25,7 @@ ms.lasthandoff: 12/01/2017
 
 1. Visual Studio를 실행합니다.
 
-1. **파일 > 새로 만들기 > 프로젝트**(Ctrl+Shift+N)를 선택합니다. **새 프로젝트** 대화 상자에서 "Python"을 검색하고, 원하는 템플릿을 선택합니다. 템플릿을 선택하면 템플릿이 제공하는 것의 간단한 설명이 표시됩니다. ([Python 프로젝트](python-projects.md#project-templates)도 참조하세요.)
+1. **파일 > 새로 만들기 > 프로젝트**(Ctrl+Shift+N)를 선택합니다. **새 프로젝트** 대화 상자에서 "Python"을 검색하고, 원하는 템플릿을 선택합니다. 템플릿을 선택하면 템플릿이 제공하는 것의 간단한 설명이 표시됩니다. ([Python 프로젝트](python-projects.md#project-templates)도 참조)
 
     ![Python 템플릿이 있는 VS2017 새 프로젝트 대화 상자](media/projects-new-project-dialog2.png)
 
@@ -90,4 +91,4 @@ ms.lasthandoff: 12/01/2017
 
 - [기존 Python 인터프리터에 대한 환경 만들기](python-environments.md#creating-an-environment-for-an-existing-interpreter)
 - [Visual Studio 2015 이하 버전에서 Python 지원 설치](installation.md)
-- [설치 위치](installation.md#install-locations)
+- [설치 위치](installation.md#install-locations).

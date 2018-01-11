@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 7cd4f3e19b6cae5adabd54593fee560c56454f07
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: f534a4116cd3955146642ba32d5da31c090b9d6a
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="r-tools-for-visual-studio-sample-projects"></a>Visual Studio용 R 도구 샘플 프로젝트
 
@@ -40,7 +41,6 @@ ms.lasthandoff: 12/04/2017
 
     ![2-Introduction to ggplot2.R 샘플의 예제 출력](media/samples-ggplot-output.png)
 
-
 ## <a name="microsoft-r-server-and-machine-learning"></a>Microsoft R Server 및 Machine Learning
 
 이 예제 컬렉션에서는 R을 사용하여 기계 학습 모델을 만드는 방법과 [MRS(Microsoft R Server)](http://aka.ms/rtvs-msft-r)를 활용하는 방법을 보여 줍니다. 제목에 `MRS`가 있는 스크립트를 명시된 위치에서 실행하려면 MRS를 설치합니다.
@@ -53,12 +53,13 @@ ms.lasthandoff: 12/04/2017
 
 - `Bike_Rental_Estimation_with_MRS`에서는 Microsoft R Server를 사용하여 기록 데이터 집합을 기반으로 자전거 대여에 대한 수요 예측 모델을 만듭니다. 
 
-- `Data_Exploration`에는 다음 세 개의 스크립트가 포함됩니다.  
-    - `Import Data from URL.R`에서는 URL로 식별되는 데이터 파일을 R에 로드하는 방법을 보여 줍니다.
-    - `Import Data from URL to xdf.R`에서는 URL로 식별되는 데이터 파일을 Microsoft R Server에 xdf로 로드하는 방법을 보여 줍니다. MRS가 필요합니다.
-    - `Using ggplot2.R`는 대화형 3차원 그리기를 포함하여 ggplot2 기능의 더 다양한 둘러보기를 제공하는 `A First Look at R/2-Introduction to ggplot2.R` 샘플의 확장입니다.
+- `Data_Exploration`에는 다음 세 개의 스크립트가 포함됩니다.
 
-        ![ggplot2.R 사용 예제 출력](media/samples-3d-interactive.png)
+  - `Import Data from URL.R`에서는 URL로 식별되는 데이터 파일을 R에 로드하는 방법을 보여 줍니다.
+  - `Import Data from URL to xdf.R`에서는 URL로 식별되는 데이터 파일을 Microsoft R Server에 xdf로 로드하는 방법을 보여 줍니다. MRS가 필요합니다.
+  - `Using ggplot2.R`는 대화형 3차원 그리기를 포함하여 ggplot2 기능의 더 다양한 둘러보기를 제공하는 `A First Look at R/2-Introduction to ggplot2.R` 샘플의 확장입니다.
+
+      ![ggplot2.R 사용 예제 출력](media/samples-3d-interactive.png)
 
 - `Datasets`에는 다른 샘플에서 사용되는 세 개의 `.csv` 파일이 포함됩니다.
 - `Flight_Delays_Prediction_with_R` 및 `Flight_Delays_Prediction_with_MRS`는 R, 기계 학습 및 기록 정시 성능/날씨 데이터를 사용하여 항공 지연을 예측하는 방법을 보여 줍니다. 

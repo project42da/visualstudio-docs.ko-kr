@@ -1,5 +1,5 @@
 ---
-title: "프록시 권한 필요 오류 | Microsoft Docs"
+title: "프록시 권한 부여가 필요한 오류 수정 | Microsoft Docs"
 ms.custom: 
 ms.date: 09/22/2017
 ms.reviewer: 
@@ -12,11 +12,12 @@ caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 6544edb62bac07f5ab787e4a3b2f8abaebafa777
-ms.sourcegitcommit: cc288456329aefca1fdaa7ce74751ce195985c14
+ms.workload: multiple
+ms.openlocfilehash: e33e0e2896ccb3a5f7fe6d6da57f509af30d77fe
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/17/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="proxy-authorization-required"></a>프록시 권한 필요
 
@@ -59,7 +60,3 @@ ms.lasthandoff: 11/17/2017
     또는
 
 - [이 게시물](http://blogs.msdn.com/b/rido/archive/2010/05/06/how-to-connect-to-tfs-through-authenticated-web-proxy.aspx) 의 지침에 따라 프록시를 사용할 수 있는 코드를 추가할 수도 있습니다.
-
-## <a name="see-also"></a>참고 항목
-
-[Visual Studio에 사용되는 인터넷 리소스](../connected-environment.md)

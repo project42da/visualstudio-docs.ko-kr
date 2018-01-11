@@ -12,11 +12,12 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: d36f49a9b2865c89bd1551ded0d23cf541ff7840
-ms.sourcegitcommit: ae9450e81c4167b3fbc9ee5d1992fc693628eafa
+ms.workload: data-science
+ms.openlocfilehash: 74978a3ef43a1e98202d32ed418008071c8794be
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/04/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="setting-up-remote-workspaces"></a>원격 작업 영역 설정
 
@@ -105,8 +106,8 @@ SSL 인증서를 Windows에서 수동으로 설치해야 합니다. 다음 지�
 자체 서명된 인증서를 사용하는 장점 및 위험에 대해서는 Windows 설명을 참조하세요. `rtvs-daemon` 패키지는 설치하는 동안 자체 서명된 인증서를 생성 및 구성합니다. 자동 생성된 자체 서명된 인증서를 바꾸려는 경우 이 작업만 수행하면 됩니다.
 
 자체 서명된 인증서를 자체적으로 발급하려면 다음을 수행합니다.
-1. Linux 컴퓨터에 SSH 또는 로그인합니다.
 
+1. Linux 컴퓨터에 SSH 또는 로그인합니다.
 1. `ssl-cert` 패키지를 설치합니다.
     ```sh
     sudo apt-get install ssl-cert

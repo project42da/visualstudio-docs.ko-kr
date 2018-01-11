@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 EditorConfig 설정 사용 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/27/2017
+ms.date: 12/13/2017
 ms.reviewer: 
 ms.suite: 
 ms.tgt_pltfrm: 
@@ -11,15 +11,18 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-general
-ms.openlocfilehash: 39b3228e64257552c8b629e421c9b5aa4f0e0931
-ms.sourcegitcommit: 5f5587a1bcf4aae995c80d54a67b4b461f8695f3
+ms.workload: multiple
+ms.openlocfilehash: 0219ff704e22ab1c27d47e312825a66cb3a15166
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/29/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig를 사용하여 휴대용, 사용자 지정 편집기 설정 만들기
 
-Visual Studio의 텍스트 편집기 설정은 지정된 형식의 모든 프로젝트에 적용됩니다. 따라서 예를 들어 C# 텍스트 편집기 설정을 변경하는 경우 해당 설정이 Visual Studio의 *모든* C# 프로젝트에 적용됩니다. 그러나 고유한 개인 편집기 기본 설정과 다른 규칙을 사용해야 하는 경우도 있습니다. [EditorConfig](http://editorconfig.org/) 파일을 사용하면 프로젝트 단위로 들여 쓰기 크기와 같은 공통 텍스트 편집기 옵션을 설명하여 이런 작업을 수행할 수 있습니다. 코드 및 프로젝트 파일과 함께 있는 .editorconfig 파일에 포함되어 있는 EditorConfig 설정은 전역 Visual Studio 텍스트 편집기 설정보다 우선합니다. 따라서 해당 프로젝트와 관련된 텍스트 편집기 설정을 사용하도록 각 코드베이스를 조정할 수 있습니다. Visual Studio에서 이 기능을 사용하기 위해 플러그 인이 필요하지는 않습니다.
+Visual Studio 2017에서는 프로젝트 또는 코드베이스에 [EditorConfig](http://editorconfig.org/) 파일을 추가하여 코드베이스에서 작업하는 모든 사람들의 코딩 스타일을 일관적으로 유지할 수 있습니다. EditorConfig 설정은 전역 Visual Studio 텍스트 편집기 설정에 우선합니다. 따라서 해당 프로젝트와 관련된 텍스트 편집기 설정을 사용하도록 각 코드베이스를 조정할 수 있습니다. Visual Studio **옵션** 대화 상자에서 사용자 고유의 개인 편집기 기본 설정을 지정할 수 있습니다. 사용자가 .editorconfig 파일 없이 코드베이스에서 작업을 수행하거나 .editorconfig 파일이 특정 설정을 재정의하지 않은 경우 이러한 설정이 적용됩니다. 이러한 기본 설정의 예로 들여쓰기 스타일(탭 또는 공백)을 들 수 있습니다.
+
+Visual Studio를 포함하여 다양한 코드 편집기와 IDE에서 EditorConfig 설정이 지원됩니다. 코드를 이용하여 휴대할 수 있는 구성 요소이며 Visual Studio 외부에서도 코딩 스타일을 적용할 수 있습니다.
 
 ## <a name="coding-consistency"></a>코딩 일관성
 
@@ -57,7 +60,7 @@ EditorConfig 편집기 설정은 XML을 제외하고 Visual Studio가 지원하�
 
 ## <a name="editing-editorconfig-files"></a>EditorConfig 파일 편집
 
-Visual Studio는 .editorconfig 파일을 편집할 수 있는 몇 가지 IntelliSense를 제공합니다. 많은 .editorconfig 파일을 편집하는 경우 [EditorConfig Language Service](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig) 확장이 유용할 수 있습니다.
+Visual Studio는 .editorconfig 파일을 편집할 수 있는 몇 가지 IntelliSense를 제공합니다. 수많은 .editorconfig 파일을 편집하는 경우 [EditorConfig Language Service](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig) 확장이 유용할 수 있습니다.
 
 EditorConfig 파일을 편집한 후 새 설정을 적용하려면 코드 파일을 다시 로드해야 합니다.
 
@@ -67,9 +70,9 @@ EditorConfig 파일을 프로젝트나 코드베이스에 추가해도 기존 �
 
 프로젝트나 코드베이스에서 EditorConfig 파일을 제거하면 열려있는 코드 파일을 닫았다가 다시 열어야 새로운 코드 줄에 대해 전역 편집기 설정으로 돌아갑니다.
 
-## <a name="example"></a>예제
+## <a name="example"></a>예
 
-다음은 .editorconfig 파일을 프로젝트에 추가하기 전과 후에 C# 코드 조각의 들여쓰기 상태를 보여주는 예입니다. Visual Studio 텍스트 편집기에 대한 **옵션** 대화 상자의 **탭** 설정은 **Tab** 키를 누를 때 공백 문자를 생성하도록 설정되어 있습니다.
+다음은 .editorconfig 파일을 프로젝트에 추가하기 전과 후의 C# 코드 조각 들여쓰기 상태를 보여주는 예입니다. Visual Studio 텍스트 편집기에 대한 **옵션** 대화 상자의 **탭** 설정은 **Tab** 키를 누를 때 공백 문자를 생성하도록 설정되어 있습니다.
 
 ![텍스트 편집기 탭 설정](../ide/media/vside_editorconfig_tabsetting.png)
 
@@ -108,7 +111,7 @@ indent_style = tab
 dir .editorconfig /s
 ```
 
-리포지토리의 루트 또는 프로젝트가 상주하는 디렉터리의 .editorconfig 파일에서 ```root=true``` 속성을 설정하여 EditorConfig 규칙의 범위를 제어할 수 있습니다. Visual Studio는 열린 파일의 디렉터리와 모든 부모 디렉터리에서 .editorconfig라는 파일을 찾습니다. Visual Studio는 루트 파일 경로에 도달하거나 ```root=true``` 포함 .editorconfig 파일을 찾은 경우 검색을 중지합니다.
+리포지토리의 루트 또는 프로젝트가 상주하는 디렉터리의 .editorconfig 파일에서 ```root=true``` 속성을 설정하여 EditorConfig 규칙의 범위를 제어할 수 있습니다. Visual Studio는 열린 파일의 디렉터리와 모든 부모 디렉터리에서 .editorconfig라는 파일을 찾습니다. 루트 파일 경로에 도달하거나 ```root=true```인 .editorconfig 파일이 발견되면 검색이 종료됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

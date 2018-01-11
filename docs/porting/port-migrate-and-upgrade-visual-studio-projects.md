@@ -21,11 +21,12 @@ ms.assetid: bee759bd-6ff5-4c2e-913a-ea7d3c906c29
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: b508aadfb44792374c323854ee5333905827f23e
-ms.sourcegitcommit: f0ddee934713ea9126fa107018a57a94a05eafd3
+ms.workload: multiple
+ms.openlocfilehash: e786abe316d60ad0d6cc8a0fd5de356f8d2332c0
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/12/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드
 
@@ -43,7 +44,7 @@ ms.lasthandoff: 12/12/2017
 
 다음 목록에서는 이전 버전에서 만든 프로젝트에 대한 Visual Studio 2017의 지원에 대해 설명합니다.
 
-여기에 나열된 프로젝트 또는 파일 형식이 표시되지 않는 경우 [이 항목의 Visual Studio 2015 버전](port-migrate-and-upgrade-visual-studio-projects.md)을 참조하고 아래 설명에 유의하세요.
+여기에 나열된 프로젝트 또는 파일 형식이 표시되지 않는 경우 [이 항목의 Visual Studio 2015 버전](https://msdn.microsoft.com/library/hh266747.aspx)과 프로젝트 형식의 세부 정보와 함께 [문제를 제출하세요](https://github.com/MicrosoftDocs/visualstudio-docs/issues/).
 
 | 프로젝트 형식 | Support(지원) |
 | --- | --- |

@@ -12,17 +12,18 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.openlocfilehash: 99859fc5b9e48078b037f6d68ad3d3847658a1d0
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.workload: python
+ms.openlocfilehash: 7f74c03d081084356682630d234d6db81e64b4bf
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="editing-python-code"></a>Python 코드 편집
 
 개발자는 코드 편집기에서 많은 시간을 보내므로 [Visual Studio의 Python 지원](installation.md)에서 생산성 향상에 도움이 되는 기능을 제공합니다. 이러한 기능에는 IntelliSense 구문 강조 표시, 자동 완성, 시그니처 도움말, 메서드 재정의/검색 및 탐색이 포함됩니다. 
 
-항목 내용
+항목 내용:
 
 - [IntelliSense](#intellisense)(완성, 서명 도움말, 요약 정보 및 코드 색 지정 등을 포함)
 - [코드 조각](#code-snippets)
@@ -142,13 +143,13 @@ Visual Studio의 Python 지원에서는 소스 코드를 사용할 수 있는 �
 
 ![정의로 이동](media/code-editing-go-to-definition.png)
 
-### <a name="navigate-to"></a>다음 탐색
+### <a name="navigate-to"></a>탐색
 
 **편집 > 다음 탐색...** 명령(Ctrl+,)은 문자열을 입력하고 해당 문자열을 포함하는 함수, 클래스 또는 변수를 정의하는 코드에서 가능한 일치 항목을 볼 수 있는 검색 상자를 편집기에 표시합니다. 이 기능은 **정의로 이동**과 비슷한 기능을 제공하지만 식별자를 사용하여 찾을 필요가 없습니다.
 
 이름을 두 번 클릭하거나 화살표 키로 선택하고 Enter 키를 누르면 해당 식별자의 정의로 이동합니다.
 
-![다음 탐색](media/code-editing-navigate-to.png)
+![탐색](media/code-editing-navigate-to.png)
 
 ### <a name="find-all-references"></a>모든 참조 찾기
 

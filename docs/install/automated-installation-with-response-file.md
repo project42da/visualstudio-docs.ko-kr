@@ -15,11 +15,12 @@ helpviewer_keywords:
 author: timsneath
 ms.author: tglee
 manager: ghogen
-ms.openlocfilehash: b17091a46e694256b95fd5799f8d5f165bb976a8
-ms.sourcegitcommit: eb954434c34b4df6fd2264266381b23ce9e6204a
+ms.workload: multiple
+ms.openlocfilehash: 8bb0cfca6efe913b38a94daf0ed846699f0266cd
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 11/22/2017
+ms.lasthandoff: 12/22/2017
 ---
 # <a name="how-to-define-settings-in-a-response-file"></a>지시 파일에서 설정을 정의하는 방법
 Visual Studio를 배포하는 관리자는 다음 예제와 같이 `--in` 매개 변수를 사용하여 지시 파일을 지정할 수 있습니다.

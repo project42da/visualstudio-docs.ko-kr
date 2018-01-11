@@ -11,52 +11,49 @@ helpviewer_keywords:
 - application properties [Visual Studio]
 - Project Designer, Application page
 - Application page in Project Designer
-ms.assetid: 0ad4926f-636e-41f8-a5b1-faf9d9b0a254
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: a4c5753d12f8926653bcc655e403be20910472fd
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.workload: multiple
+ms.openlocfilehash: 203b8dad25cd7d6128cff54ac0f2c24c78fba680
+ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 12/22/2017
 ---
-# <a name="application-properties"></a>Application Properties
-**프로젝트 디자이너**의 **응용 프로그램** 창에서 응용 프로그램 종류, 시작 개체 및 어셈블리 정보와 같은 Visual Basic, C# 및 F # 응용 프로그램에 대한 일반 응용 프로그램 속성을 설정할 수 있습니다.  
-  
- **응용 프로그램** 창에서 다음 작업을 수행할 수 있습니다.  
-  
+# <a name="application-properties"></a>응용 프로그램 속성
+
+**프로젝트 디자이너**의 **응용 프로그램** 창에서 응용 프로그램 종류, 시작 개체 및 어셈블리 정보와 같은 Visual Basic, C# 및 F # 응용 프로그램에 대한 일반 응용 프로그램 속성을 설정할 수 있습니다.
+
+**응용 프로그램** 창에서 다음 작업을 수행할 수 있습니다.
+
 -   어셈블리 정보 지정  
-  
+
 -   응용 프로그램에 대한 시작 화면 지정  
-  
+
 -   응용 프로그램 수준 이벤트 지정  
-  
+
 -   어셈블리 이름 변경  
-  
+
 -   응용 프로그램에 대한 네임스페이스 변경  
-  
+
 -   응용 프로그램 종류 변경  
-  
+
 -   응용 프로그램에 대한 시작 개체 변경  
-  
+
 -   응용 프로그램 아이콘 지정  
-  
+
 -   Windows XP 시각적 스타일 사용  
-  
+
 -   응용 프로그램에 대한 인스턴스 만들기 동작 지정  
-  
+
 -   사용자 지정 사용자 인증 사용  
-  
--   응용 프로그램에 대한 종료 동작 지정  
-  
- 응용 프로그램에 사용할 수 있는 작업은 사용되는 개발 언어에 따라 달라집니다.  
-  
-## <a name="in-this-section"></a>단원 내용  
+
+-   응용 프로그램에 대한 종료 동작 지정
+
+## <a name="see-also"></a>참고 항목
+
  [방법: 응용 프로그램 아이콘 지정(Visual Basic, C#)](../ide/how-to-specify-an-application-icon-visual-basic-csharp.md)  
-  
-## <a name="see-also"></a>참고 항목  
  [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)   
  [프로젝트 디자이너, 응용 프로그램 페이지(C#)](../ide/reference/application-page-project-designer-csharp.md)   
  [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)   
