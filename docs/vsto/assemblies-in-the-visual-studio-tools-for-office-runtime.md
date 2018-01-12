@@ -11,17 +11,15 @@ dev_langs:
 - VB
 - CSharp
 helpviewer_keywords: Visual Studio Tools for Office runtime, assemblies
-ms.assetid: d2b7f8f4-0f41-4943-bca5-48c520748b7e
-caps.latest.revision: "29"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: dff032c3f43c662b75f4d0b757f16e70095efc33
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 22750553e714c0aa02577ee95753e7d5b2bf13f4
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="assemblies-in-the-visual-studio-tools-for-office-runtime"></a>Visual Studio Tools for Office 런타임의 어셈블리
   Office 프로젝트를 만들면 Visual Studio에서 프로젝트 형식 및 프로젝트의 대상 .NET Framework에 사용되는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 어셈블리에 자동으로 참조를 추가합니다. .NET Framework 3.5, [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]및 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]용 Office 확장에는 각각 다른 어셈블리가 있습니다. Office 확장에 대한 자세한 내용은 [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)를 참조하세요.  

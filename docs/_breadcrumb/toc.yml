@@ -4,7 +4,7 @@
   items:
     - name: Visual Studio
       tocHref: /visualstudio/
-      topicHref: /visualstudio/index
+      topicHref: /visualstudio/ide/
       items:
         - name: 코드 품질
           tocHref: /visualstudio/code-quality/
