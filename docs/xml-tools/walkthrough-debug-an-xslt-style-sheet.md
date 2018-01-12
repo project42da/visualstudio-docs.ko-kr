@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 21018eb6e1a3ff282a7ec9fb856c431f894dafca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa4604ae256fdd4a3f935cc05ff7aec0fda4e842
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="walkthrough-debug-an-xslt-style-sheet"></a>연습: XSLT 스타일시트 디버깅
 이 연습 단계에서는 XSLT 디버거를 사용하는 방법을 보여 줍니다. 이 단계에는 변수 보기, 중단점 설정 및 단계별로 코드 실행이 포함됩니다. 스타일시트는 평균 책 가격보다 가격이 낮은 책을 모두 찾습니다.  
@@ -81,19 +81,19 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-step-through-the-code"></a>단계별로 코드를 실행하려면  
   
-1.  키를 눌러 **F5** 를 계속 합니다.  
+1.  **F5**를 눌러 계속합니다.  
   
      첫 번째 book 노드가 `xsl:if` 조건을 만족하기 때문에 book 노드가 XSL 출력 창에 추가됩니다. 디버거는 스타일시트의 `xsl:if` 요소에 다시 배치될 때까지 계속 실행됩니다. 이제 디버거가 books.xml 파일의 두 번째 book 노드에 배치됩니다.  
   
      조사식 1 창에서 `self::node()` 값이 두 번째 book 노드로 변경됩니다. 가격 요소 값을 검사하여 가격이 평균을 초과하는 것을 확인할 수 있으므로 `xsl:if` 조건은 실패해야 합니다.  
   
-2.  키를 눌러 **F5** 를 계속 합니다.  
+2.  **F5**를 눌러 계속합니다.  
   
      두 번째 book 노드는 `xsl:if` 조건을 충족하지 않으므로 이 XSL 출력 창에 추가되지 않습니다. 디버거는 스타일시트의 `xsl:if` 요소에 다시 배치될 때까지 계속 실행됩니다. 이제 디버거가 books.xml 파일의 세 번째 `book` 노드에 배치됩니다.  
   
      조사식 1 창에서 `self::node()` 값이 세 번째 book 노드로 변경됩니다. `price` 요소의 값을 확인하면 가격이 평균보다 낮으므로 `xsl:if` 조건이 충족됨을 알 수 있습니다.  
   
-3.  키를 눌러 **F5** 를 계속 합니다.  
+3.  **F5**를 눌러 계속합니다.  
   
      `xsl:if` 조건을 만족했기 때문에 세 번째 book이 XSL 출력 창에 추가됩니다. XML 문서에 있는 모든 book이 처리되었으므로 디버거가 중지됩니다.  
   
@@ -121,7 +121,7 @@ ms.lasthandoff: 12/22/2017
     </books>  
   </xsl:template>  
 </xsl:stylesheet>  
-```  
+```
   
 ### <a name="booksxml"></a>books.xml  
   
@@ -153,7 +153,7 @@ ms.lasthandoff: 12/22/2017
     <price>9.99</price>  
   </book>  
 </bookstore>  
-```  
+```
   
 ## <a name="see-also"></a>참고 항목  
  [XSLT 디버그](../xml-tools/debugging-xslt.md)

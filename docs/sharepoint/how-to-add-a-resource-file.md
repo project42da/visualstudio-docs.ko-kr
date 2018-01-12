@@ -15,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - resource files [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, resource files
-ms.assetid: 2b4ac232-992e-4070-8e98-6f11eb88e1a8
-caps.latest.revision: "16"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 9ba7e2fa9b9e4991ac969347791b5231ee37bbd6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 47cae5fac3ddbcbc34535176701d0293ae4f66ba
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-add-a-resource-file"></a>방법: 리소스 파일 추가
   리소스 파일을 추가 하기 위한 명령을 솔루션 노드와 솔루션 탐색기에서 기능 노드의 바로 가기 메뉴입니다. 자세한 내용은 참조 [SharePoint 솔루션 지역화](../sharepoint/localizing-sharepoint-solutions.md)합니다.  

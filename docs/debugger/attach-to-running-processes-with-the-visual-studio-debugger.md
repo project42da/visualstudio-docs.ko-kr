@@ -32,11 +32,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 6ca076ef20ad8751619a715721c6423b5211bc3f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 28126f9c832f55d63bd1b477599cf83ac8a57d59
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="attach-to-running-processes-with-the-visual-studio-debugger"></a>Visual Studio 디버거에서 실행 중인 프로세스에 연결
 로컬 또는 원격 컴퓨터에서 실행 중인 프로세스에 Visual Studio 디버거를 연결할 수 있습니다. 프로세스를 실행 한 후 클릭 **디버그 > 프로세스에 연결** (하거나 키를 눌러 **CTRL + ALT + P**)를 열려면는 **프로세스에 연결** 대화 상자.
@@ -147,10 +147,7 @@ ms.lasthandoff: 12/22/2017
 |서버 프로세스에서 다른 지원 되는 응용 프로그램 형식을 디버그합니다|(원격 서버 경우) 원격 도구를 사용 하 고 프로세스에 연결|iexplore.exe 또는 다른 프로세스|필요한 경우 작업 관리자를 사용 하 여 프로세스를 식별할 수 있도록 합니다. 참조 [원격 디버깅](../debugger/remote-debugging.md) 및이 항목의 뒷부분에 나오는 섹션|
 |Windows 데스크톱 응용 프로그램 원격 디버그|원격 도구와 F5|N/A| 참조 [원격 디버깅](../debugger/remote-debugging.md)|
 |UWP (유니버설), OneCore 및 HoloLens, IoT 응용 프로그램을 디버깅 하는 원격|설치 된 응용 프로그램 패키지 디버그|N/A|참조 [설치 된 응용 프로그램 패키지 디버그](debug-installed-app-package.md) 사용 하는 대신 **프로세스에 연결**|
-|Visual Studio에서 시작 하지 않은 앱 UWP (유니버설 Windows), OneCore 및 HoloLens, IoT 앱을 디버그|설치 된 응용 프로그램 패키지 디버그|N/A|참조 [설치 된 응용 프로그램 패키지 디버그](debug-installed-app-package.md) 사용 하는 대신 **프로세스에 연결**|
-  
-> [!WARNING]
->  JavaScript로 작성 된 UWP를 연결 하려면 먼저 응용 프로그램을 디버깅할 활성화 해야 합니다. 참조 [디버거 연결](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Attach_the_debugger) Windows 개발자 센터에서.  
+|Visual Studio에서 시작 하지 않은 앱 UWP (유니버설 Windows), OneCore 및 HoloLens, IoT 앱을 디버그|설치 된 응용 프로그램 패키지 디버그|N/A|참조 [설치 된 응용 프로그램 패키지 디버그](debug-installed-app-package.md) 사용 하는 대신 **프로세스에 연결**|  
   
 > [!NOTE]
 >  디버거에서 C++로 작성된 코드에 연결하려면 코드에 `DebuggableAttribute`가 있어야 합니다. 이 특성은 [/ASSEMBLYDEBUG](/cpp/build/reference/assemblydebug-add-debuggableattribute) 링커 옵션으로 링크하여 자동으로 코드에 추가할 수 있습니다.

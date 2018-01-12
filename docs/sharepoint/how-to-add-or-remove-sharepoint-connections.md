@@ -16,17 +16,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, browsing SharePoint sites
 - SharePoint development in Visual Studio, SharePoint Connections
 - SharePoint Connections [SharePoint development in Visual Studio]
-ms.assetid: 4d551be0-2124-4481-b398-481ded9b5d46
-caps.latest.revision: "14"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3773364467ba79cb17e71feb4c1c17feded750f8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b7144f5f8c7c4d2ca42543abe236479ac364d7f8
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-add-or-remove-sharepoint-connections"></a>방법: SharePoint 연결 추가 또는 제거
   서버 탐색기를 사용 하면 SharePoint 사이트 뿐만 아니라 데이터 연결을 찾아볼 수 있습니다. 그러나 SharePoint 사이트의 내용을 찾아볼 수 있습니다 추가 해야 하는 **SharePoint 연결** 노드.  

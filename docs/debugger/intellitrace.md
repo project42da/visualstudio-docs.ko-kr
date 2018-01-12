@@ -25,11 +25,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7a6a1a17768c1f52bec0f98ed9f9f86754856419
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 789c2317fcb1bc46b5708f1810563b20fe8895ed
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="intellitrace"></a>IntelliTrace
 IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하면 응용 프로그램 디버깅에 사용되는 시간을 줄일 수 있습니다. IntelliTrace를 사용하면 다음이 가능하므로 손쉽게 버그를 찾을 수 있습니다.  
@@ -56,7 +56,7 @@ IntelliTrace를 사용하여 코드의 실행 내역을 기록하고 추적하�
 |||  
 |-|-|  
 |**지원됨**|-.NET Framework 2.0 또는 더 높은 버전을 사용 하는 Visual Basic 및 Visual C# 응용 프로그램<br />     ASP.NET, Microsoft Azure, Windows Forms, WCF, WPF, Windows Workflow, SharePoint 2010, SharePoint 2013 및 64비트 앱을 포함한 대부분의 응용 프로그램을 디버깅할 수 있습니다.<br />     IntelliTrace로 SharePoint 응용 프로그램을 디버깅 하려면 참조 [연습: IntelliTrace를 사용 하 여 SharePoint 응용 프로그램 디버깅](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)합니다.<br />     IntelliTrace 사용 하 여 Microsoft Azure 앱을 디버깅 하려면 참조 [IntelliTrace 및 Visual Studio는 게시 된 클라우드 서비스 디버깅](/azure/vs-azure-tools-intellitrace-debug-published-cloud-services)합니다.|  
-|**제한 된 지원**|-.NET core 및 ASP.NET Core 응용 프로그램 이벤트에 대해서만 지원 합니다.<br />-시험 차원의 F # 응용 프로그램<br />이벤트에 대해서만 지원 되는 Windows 스토어 앱|  
+|**제한 된 지원**|-.NET core 및 ASP.NET Core 응용 프로그램 이벤트에 대해서만 지원 합니다.<br />-시험 차원의 F # 응용 프로그램<br />-이벤트에 대해서만 지원 UWP 앱|  
 |**지원 안 함**|-C + +, 다른 언어 및 스크립트<br />Windows 서비스, Silverlight, Xbox, 또는 [!INCLUDE[winmobile](../debugger/includes/winmobile_md.md)] 앱|  
   
 > [!NOTE]

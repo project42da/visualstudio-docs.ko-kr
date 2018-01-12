@@ -11,17 +11,15 @@ dev_langs:
 - VB
 - CSharp
 helpviewer_keywords: Office development in Visual Studio, samples
-ms.assetid: 9ebc7de2-59dd-414c-888b-7549d3c3543c
-caps.latest.revision: "28"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 89311ac792a5dfd55497ccdadea89289dca11ff5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 33f9d5ebea74ca17693959a20ba568e42d824128
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="office-development-samples"></a>Office 개발 샘플
   Visual Studio에는 Microsoft Office 개발자 도구를 사용하여 Office 솔루션을 만드는 방법을 보여 주는 샘플 응용 프로그램이 포함되어 있습니다. 이러한 샘플의 코드는 Office 솔루션을 빌드하는 데 사용되는 구문, 구조 및 기술을 보여 줍니다.  

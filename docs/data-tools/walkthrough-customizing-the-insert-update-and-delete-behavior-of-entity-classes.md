@@ -16,19 +16,20 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: e4edcc21986ae0fd033228971697057932e63670
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: c5be469cd93ce0b920e9100b43d642fd96427a79
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="walkthrough-customizing-the-insert-update-and-delete-behavior-of-entity-classes"></a>연습: 사용자 지정 삽입, 업데이트 하 고 엔터티 클래스의 동작을 삭제
+
 [LINQ to SQL 도구 Visual Studio에서](../data-tools/linq-to-sql-tools-in-visual-studio2.md) 만들고 편집 하기 위한 시각적 디자인 화면을 제공 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 데이터베이스의 개체를 기반으로 하는 클래스 (엔터티 클래스). 사용 하 여 [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index), SQL 데이터베이스에 액세스 하려면 LINQ 기술에 사용할 수 있습니다. 자세한 내용은 [LINQ(Language-Integrated Query)](/dotnet/csharp/linq/)를 참조하세요.  
   
 기본적으로 업데이트를 수행하는 논리는 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 런타임에서 제공합니다. 런타임에서는 열 정의 및 기본 키 정보와 같은 테이블 스키마를 기반으로 기본 Insert, Update 및 Delete 문을 만듭니다. 기본 동작을 사용하지 않으려면 업데이트 동작을 구성하고 데이터베이스의 데이터 작업에 필요한 삽입, 업데이트 및 삭제를 수행하기 위한 특정 저장 프로시저를 지정할 수 있습니다. 엔터티 클래스가 뷰에 매핑되는 때와 같이 기본 동작이 생성되지 않은 경우에도 이렇게 할 수 있습니다. 또한 저장 프로시저를 통해 데이터베이스의 테이블에 액세스해야 하는 경우에 기본 업데이트 동작을 재정의할 수 있습니다. 자세한 내용은 참조 [사용자 지정 작업에서 사용 하 여 저장 프로시저](/dotnet/framework/data/adonet/sql/linq/customizing-operations-by-using-stored-procedures)합니다.  
   
 > [!NOTE]
->  이 연습을 수행 하려면의 **InsertCustomer**, **UpdateCustomer**, 및 **DeleteCustomer** Northwind 데이터베이스에 대 한 프로시저를 저장 합니다.  
+> 이 연습을 수행 하려면의 **InsertCustomer**, **UpdateCustomer**, 및 **DeleteCustomer** Northwind 데이터베이스에 대 한 프로시저를 저장 합니다.  
   
 이 연습에서는 저장 프로시저를 사용하여 데이터를 데이터베이스에 다시 저장하기 위한 기본 LINQ to SQL 런타임 동작을 재정의하는 단계에 대해 설명합니다.  
   
@@ -48,7 +49,8 @@ ms.lasthandoff: 01/05/2018
   
 -   저장 프로시저를 사용하여 삽입, 업데이트 및 삭제를 수행하도록 Customer 클래스를 구성합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>필수 구성 요소
+
 이 연습에서는 Northwind 샘플 데이터베이스 및 SQL Server Express LocalDB를 사용 합니다.  
   
 1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server 버전의 다운로드 페이지](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **데이터 저장 및 처리** 작업 또는 개별 구성 요소입니다.  
@@ -65,12 +67,13 @@ ms.lasthandoff: 01/05/2018
 
        짧은 시간 후 쿼리 실행이 완료 되 하 고 Northwind 데이터베이스 생성 됩니다.  
   
-## <a name="creating-an-application-and-adding-linq-to-sql-classes"></a>응용 프로그램 만들기 및 LINQ to SQL 클래스 추가  
+## <a name="creating-an-application-and-adding-linq-to-sql-classes"></a>응용 프로그램 만들기 및 LINQ to SQL 클래스 추가
+
 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 클래스로 작업하고 데이터를 Windows Form에 표시하므로 새 Windows Forms 응용 프로그램을 만들고 LINQ to SQL 클래스 파일을 추가합니다.  
   
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-#### <a name="to-create-a-new-windows-forms-application-project-that-contains-linq-to-sql-classes"></a>LINQ to SQL 클래스에 포함 된 새 Windows Forms 응용 프로그램 프로젝트를 만들려면  
+### <a name="to-create-a-new-windows-forms-application-project-that-contains-linq-to-sql-classes"></a>LINQ to SQL 클래스에 포함 된 새 Windows Forms 응용 프로그램 프로젝트를 만들려면
   
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .  
   
@@ -90,10 +93,11 @@ ms.lasthandoff: 01/05/2018
   
      빈 LINQ to SQL 클래스 파일(Northwind.dbml)이 프로젝트에 추가되고 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]가 열립니다.  
   
-## <a name="creating-the-customer-entity-class-and-object-data-source"></a>Customer 엔터티 클래스 및 개체 데이터 소스 만들기  
- 만들 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 매핑되는 데이터베이스 테이블에서 테이블을 끌어 클래스 **서버 탐색기**/**데이터베이스 탐색기** 에 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]합니다. 그러면 데이터베이스의 테이블에 매핑되는 LINQ to SQL 엔터티 클래스가 생성됩니다. 엔터티 클래스를 만든 후 이 클래스를 공용 속성이 있는 다른 클래스처럼 개체 데이터 소스로 사용할 수 있습니다.  
+## <a name="creating-the-customer-entity-class-and-object-data-source"></a>Customer 엔터티 클래스 및 개체 데이터 소스 만들기
+
+만들 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 매핑되는 데이터베이스 테이블에서 테이블을 끌어 클래스 **서버 탐색기**/**데이터베이스 탐색기** 에 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]합니다. 그러면 데이터베이스의 테이블에 매핑되는 LINQ to SQL 엔터티 클래스가 생성됩니다. 엔터티 클래스를 만든 후 이 클래스를 공용 속성이 있는 다른 클래스처럼 개체 데이터 소스로 사용할 수 있습니다.  
   
-#### <a name="to-create-a-customer-entity-class-and-configure-a-data-source-with-it"></a>Customer 엔터티 클래스를 만들고 이 클래스를 사용하여 데이터 소스를 구성하려면  
+### <a name="to-create-a-customer-entity-class-and-configure-a-data-source-with-it"></a>Customer 엔터티 클래스를 만들고 이 클래스를 사용하여 데이터 소스를 구성하려면
   
 1.  **서버 탐색기**/**데이터베이스 탐색기**, Northwind 샘플 데이터베이스의 SQL Server 버전에서 고객 테이블을 찾습니다. 
   
@@ -118,17 +122,18 @@ ms.lasthandoff: 01/05/2018
     >  경우는 **고객** 클래스를 사용할 수 없는 경우, 마법사를 취소 합니다. 프로젝트를 빌드할 및 마법사를 다시 실행 합니다.  
 8.  클릭 **마침** 데이터 소스를 만들고 추가 하는 **고객** 엔터티 클래스를는 **데이터 소스** 창.  
   
-## <a name="creating-a-datagridview-to-display-the-customer-data-on-a-windows-form"></a>Windows Form에 고객 데이터를 표시하기 위해 DataGridView 만들기  
- 끌어와 서 엔터티 클래스에 바인딩된 컨트롤을 만들 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 데이터 소스 항목의 **데이터 소스** 창에서 Windows Form으로 합니다.  
+## <a name="creating-a-datagridview-to-display-the-customer-data-on-a-windows-form"></a>Windows Form에 고객 데이터를 표시하기 위해 DataGridView 만들기
+
+끌어와 서 엔터티 클래스에 바인딩된 컨트롤을 만들 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 데이터 소스 항목의 **데이터 소스** 창에서 Windows Form으로 합니다.  
   
-#### <a name="to-add-controls-that-are-bound-to-the-entity-classes"></a>엔터티 클래스에 바인딩된 컨트롤을 추가하려면  
+### <a name="to-add-controls-that-are-bound-to-the-entity-classes"></a>엔터티 클래스에 바인딩된 컨트롤을 추가하려면
   
 1.  디자인 뷰에서 Form1을 엽니다.  
   
 2.  **데이터 원본** 끌어 창에서 **고객** Form1으로 노드.  
   
     > [!NOTE]
-    >  표시 하는 **데이터 원본** 창 클릭 **데이터 소스 표시** 에 **데이터** 메뉴.  
+    > 표시 하는 **데이터 원본** 창 클릭 **데이터 소스 표시** 에 **데이터** 메뉴.  
   
 3.  코드 편집기에서 Form1을 엽니다.  
   
@@ -154,10 +159,11 @@ ms.lasthandoff: 01/05/2018
         = northwindDataContext1.Customers;    
     ```  
   
-## <a name="implementing-save-functionality"></a>저장 기능 구현  
- 기본적으로 저장 단추를 사용할 수 없으며 저장 기능이 구현되지 않습니다. 또한 개체 데이터 소스에 대해 데이터 바인딩된 컨트롤을 만들 때 변경된 데이터를 데이터베이스에 저장하는 코드가 자동으로 추가되지 않습니다. 이 단원에서는 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 개체에서 저장 단추를 사용하고 저장 기능을 구현하는 방법에 대해 설명합니다.  
+## <a name="implementing-save-functionality"></a>저장 기능 구현
+
+기본적으로 저장 단추를 사용할 수 없으며 저장 기능이 구현되지 않습니다. 또한 개체 데이터 소스에 대해 데이터 바인딩된 컨트롤을 만들 때 변경된 데이터를 데이터베이스에 저장하는 코드가 자동으로 추가되지 않습니다. 이 단원에서는 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 개체에서 저장 단추를 사용하고 저장 기능을 구현하는 방법에 대해 설명합니다.  
   
-#### <a name="to-implement-save-functionality"></a>저장 기능을 구현하려면  
+### <a name="to-implement-save-functionality"></a>저장 기능을 구현하려면
   
 1.  디자인 뷰에서 Form1을 엽니다.  
   
@@ -177,9 +183,9 @@ ms.lasthandoff: 01/05/2018
     northwindDataContext1.SubmitChanges();  
     ```  
   
-## <a name="overriding-the-default-behavior-for-performing-updates-inserts-updates-and-deletes"></a>업데이트(삽입, 업데이트 및 삭제)를 수행하기 위한 기본 동작 재정의  
+## <a name="overriding-the-default-behavior-for-performing-updates-inserts-updates-and-deletes"></a>업데이트(삽입, 업데이트 및 삭제)를 수행하기 위한 기본 동작 재정의
   
-#### <a name="to-override-the-default-update-behavior"></a>기본 업데이트 동작을 재정의하려면  
+### <a name="to-override-the-default-update-behavior"></a>기본 업데이트 동작을 재정의하려면
   
 1.  [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 LINQ to SQL 파일을 엽니다. (두 번 클릭 하 고 **Northwind.dbml** 파일을 **솔루션 탐색기**.)  
   
@@ -230,13 +236,14 @@ ms.lasthandoff: 01/05/2018
 19. **확인**을 클릭합니다.  
   
 > [!NOTE]
->  이 연습에서는 문제가 되지 않지만 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]은 삽입 및 업데이트 과정에서 identity(자동 증분), rowguidcol(데이터베이스에서 생성된 GUID) 및 timestamp 열에 대해 데이터베이스에서 생성된 값을 자동으로 처리한다는 점을 기억할 필요가 있습니다. 데이터베이스에서 생성된 값이 다른 형식의 열에 있으면 null 값이라는 예기치 않은 결과가 발생합니다. 데이터베이스에서 생성된 값을 반환하려면 수동으로 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>를 `true`로 설정하고 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>를 <xref:System.Data.Linq.Mapping.AutoSync>, <xref:System.Data.Linq.Mapping.AutoSync> 또는 <xref:System.Data.Linq.Mapping.AutoSync> 중 하나로 설정해야 합니다.  
+> 이 연습에서는 문제가 되지 않지만 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)]은 삽입 및 업데이트 과정에서 identity(자동 증분), rowguidcol(데이터베이스에서 생성된 GUID) 및 timestamp 열에 대해 데이터베이스에서 생성된 값을 자동으로 처리한다는 점을 기억할 필요가 있습니다. 데이터베이스에서 생성된 값이 다른 형식의 열에 있으면 null 값이라는 예기치 않은 결과가 발생합니다. 데이터베이스에서 생성된 값을 반환하려면 수동으로 <xref:System.Data.Linq.Mapping.ColumnAttribute.IsDbGenerated%2A>를 `true`로 설정하고 <xref:System.Data.Linq.Mapping.ColumnAttribute.AutoSync%2A>를 <xref:System.Data.Linq.Mapping.AutoSync>, <xref:System.Data.Linq.Mapping.AutoSync> 또는 <xref:System.Data.Linq.Mapping.AutoSync> 중 하나로 설정해야 합니다.  
   
-## <a name="testing-the-application"></a>응용 프로그램 테스트  
- 다시 확인 하려면 응용 프로그램을 실행는 **UpdateCustomers** 저장된 프로시저는 데이터베이스의 고객 레코드를 제대로 업데이트 합니다.  
-  
-#### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  
-  
+## <a name="testing-the-application"></a>응용 프로그램 테스트
+
+다시 확인 하려면 응용 프로그램을 실행는 **UpdateCustomers** 저장된 프로시저는 데이터베이스의 고객 레코드를 제대로 업데이트 합니다.
+
+### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면
+
 1.  F5 키를 누릅니다.  
   
 2.  표에서 레코드를 수정하여 업데이트 동작을 테스트합니다.  
@@ -258,19 +265,20 @@ ms.lasthandoff: 01/05/2018
 10. F5 키를 눌러 삭제한 레코드가 데이터베이스에서 제거되었는지 확인합니다.  
   
     > [!NOTE]
-    >  응용 프로그램에서의 값에 따라 SQL Server Express Edition을 사용 하는 경우는 **출력 디렉터리로 복사** 데이터베이스 파일의 속성을 10 단계에서 f5 키를 눌러 변경 내용이 표시 되지 않을 수 있습니다. 
-  
-## <a name="next-steps"></a>다음 단계  
-응용 프로그램 요구 사항에 따라 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 엔터티 클래스를 만든 후 몇 단계를 더 수행할 수도 있습니다. 이 응용 프로그램에서 개선할 수 있는 몇 가지 사항은 다음과 같습니다.  
-  
--   업데이트 동안 동시성 검사를 구현합니다. 자세한 내용은 참조 [낙관적 동시성: 개요](/dotnet/framework/data/adonet/sql/linq/optimistic-concurrency-overview)합니다.  
-  
--   LINQ 쿼리를 추가하여 데이터를 필터링합니다. 자세한 내용은 참조 [LINQ 쿼리 (C#) 소개](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)합니다.  
-  
+    > 응용 프로그램에서의 값에 따라 SQL Server Express Edition을 사용 하는 경우는 **출력 디렉터리로 복사** 데이터베이스 파일의 속성을 10 단계에서 f5 키를 눌러 변경 내용이 표시 되지 않을 수 있습니다.
+
+## <a name="next-steps"></a>다음 단계
+
+응용 프로그램 요구 사항에 따라 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 엔터티 클래스를 만든 후 몇 단계를 더 수행할 수도 있습니다. 이 응용 프로그램에서 개선할 수 있는 몇 가지 사항은 다음과 같습니다.
+
+- 업데이트 동안 동시성 검사를 구현합니다. 자세한 내용은 참조 [낙관적 동시성: 개요](/dotnet/framework/data/adonet/sql/linq/optimistic-concurrency-overview)합니다.
+
+- LINQ 쿼리를 추가하여 데이터를 필터링합니다. 자세한 내용은 참조 [LINQ 쿼리 (C#) 소개](/dotnet/csharp/programming-guide/concepts/linq/introduction-to-linq-queries)합니다.
+
 ## <a name="see-also"></a>참고 항목
-[LINQ to SQL 도구 Visual Studio에서](../data-tools/linq-to-sql-tools-in-visual-studio2.md)     
-[DataContext 메서드](../data-tools/datacontext-methods-o-r-designer.md)   
+
+[LINQ to SQL Tools in Visual Studio](../data-tools/linq-to-sql-tools-in-visual-studio2.md)(Visual Studio의 LINQ to SQL 도구)  
+[DataContext 메서드](../data-tools/datacontext-methods-o-r-designer.md)  
 [방법: 저장된 프로시저를 할당 업데이트, 삽입 및 삭제를 수행 합니다.](../data-tools/how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-o-r-designer.md)  
 [LINQ to SQL](/dotnet/framework/data/adonet/sql/linq/index)  
-[LINQ to SQL 쿼리](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)  
- 
+[LINQ to SQL 쿼리](/dotnet/framework/data/adonet/sql/linq/linq-to-sql-queries)

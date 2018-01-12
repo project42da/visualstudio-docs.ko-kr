@@ -14,11 +14,11 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 2e354145fa47e243c3dea1641086626e9bcc2c5c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ebb3acfb9fcd49a682e888058b71adbd4119429a
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C + + 용 visual Studio data tools
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
 SQL 데이터베이스에 연결할 네이티브 c + + 응용 프로그램 ODBC 및 OLE DB 드라이버 및 Windows와 함께 제공 되 고 ADO 공급자를 사용할 수 있습니다. 이러한 옵션은 이러한 인터페이스를 지 원하는 모든 데이터베이스에 연결할 수 있습니다. ODBC 드라이버는 표준입니다. OLE DB는 이전 버전과 호환성을 위해 제공 됩니다. 이러한 데이터 기술에 대 한 자세한 내용은 참조 하십시오. [Windows Data Access Components](https://msdn.microsoft.com/en-us/library/windows/desktop/aa968814.aspx)합니다.  
   
-SQL Server 2005에서 사용자 지정 기능을 활용 하 고 나중에 사용 하 여 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)합니다. 네이티브 클라이언트는 SQL Server ODBC 드라이버와 한 네이티브 동적 연결 라이브러리 (DLL)에서 SQL Server OLE DB 공급자를 포함합니다. Microsoft SQL Server에 네이티브 코드 Api (ODBC, OLE DB 및 ADO)를 사용 하 여 응용 프로그램도 지원 합니다.  SQL Server Data Tools와 SQL Server Native Client를 설치합니다. 프로그래밍 가이드는 여기: [SQL Server Native Client 프로그래밍](/sql/sql-docs/docs/relational-databases/native-client/sql-server-native-client-programming)합니다.  
+SQL Server 2005에서 사용자 지정 기능을 활용 하 고 나중에 사용 하 여 [SQL Server Native Client](/sql/relational-databases/native-client/sql-server-native-client)합니다. 네이티브 클라이언트는 SQL Server ODBC 드라이버와 한 네이티브 동적 연결 라이브러리 (DLL)에서 SQL Server OLE DB 공급자를 포함합니다. Microsoft SQL Server에 네이티브 코드 Api (ODBC, OLE DB 및 ADO)를 사용 하 여 응용 프로그램도 지원 합니다.  SQL Server Data Tools와 SQL Server Native Client를 설치합니다. 프로그래밍 가이드는 여기: [SQL Server Native Client 프로그래밍](/sql/relational-databases/native-client/sql-server-native-client-programming)합니다.  
   
 ## <a name="to-connect-to-localdb-through-odbc-and-sql-native-client-from-a-c-application"></a>C + + 응용 프로그램에서 ODBC 및 SQL Native Client를 통해 localDB에 연결 하려면  
   

@@ -14,17 +14,15 @@ helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], extending
 - SharePoint project items, extending
 - SharePoint development in Visual Studio, extending project items
-ms.assetid: f09f6664-196d-46d6-819f-3c6500f23536
-caps.latest.revision: "22"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: ffbacd5748ae2a5284ed628dce974b20e25bcab3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e990896720916048ab449c7ccb5a927577861256
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="extending-sharepoint-project-items"></a>SharePoint 프로젝트 항목 확장
   Visual Studio에서 이미 설치 되어 있는 SharePoint 프로젝트 항목의 형식에 기능을 추가 하려는 경우 프로젝트 항목 확장을 만듭니다. 예를 들어 기본 제공에 대 한 확장을 만들 수 있습니다 **이벤트 수신기** 또는 **목록 정의** Visual Studio에서 프로젝트 항목 또는 사용자 지정 프로젝트 항목 형식에 대 한 확장을 만들 수 있습니다. 모든 SharePoint 프로젝트 항목 형식에 대 한 확장을 만들 수도 있습니다.  

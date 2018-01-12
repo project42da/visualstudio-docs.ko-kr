@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 dev_langs: VB
 ms.workload: multiple
-ms.openlocfilehash: 5eea45aafebe8c20431de5b2d3bd299789bf7285
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cda22612959e083cb1f0179d65554d38fab9cf03
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="how-to-use-the-xml-schema-designer-with-xml-literals"></a>방법: XML 리터럴과 함께 XML 스키마 디자이너 사용
 이 항목에서는 Visual Basic 프로젝트에서 XML 리터럴과 연결된 스키마를 보는 방법에 대해 설명합니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
        End Sub  
    End Module  
-   ```  
+   ```
   
 2.  XML 리터럴 또는 XML 네임 스페이스 가져오기에서 XML 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **스키마 탐색기에 표시**합니다.  
   

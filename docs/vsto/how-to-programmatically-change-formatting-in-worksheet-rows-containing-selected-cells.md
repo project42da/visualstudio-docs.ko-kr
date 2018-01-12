@@ -14,17 +14,15 @@ helpviewer_keywords:
 - rows [Office development in Visual Studio]
 - formatting [Office development in Visual Studio]
 - worksheets, changing formatting
-ms.assetid: c55cd488-98d1-46c6-9715-0e9212d178de
-caps.latest.revision: "38"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 882431cc99d61563ec2abf0d885224b7851eab97
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 441adcf3b8f803d1473cd36a6d73474b06cf6efe
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells"></a>방법: 프로그래밍 방식으로 선택한 셀이 포함된 워크시트 행의 서식 변경
   글꼴의 텍스트를 굵게 표시 된 선택한 셀이 포함 된 전체 행을 변경할 수 있습니다.  

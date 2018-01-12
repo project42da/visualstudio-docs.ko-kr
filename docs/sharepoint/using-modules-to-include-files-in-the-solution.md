@@ -14,17 +14,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deployment modules
 - SharePoint development in Visual Studio, modules
 - modules [SharePoint development in Visual Studio]
-ms.assetid: 74d1d69f-5cd9-452f-8d35-e1f4d8a084fd
-caps.latest.revision: "16"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: f340d0a8c713aedc6ee74aa598c7170495ac8c01
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c7f0fff081215e1bf1a9e2c5320668f2c698b2e6
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="using-modules-to-include-files-in-the-solution"></a>모듈을 사용하여 솔루션에 파일 포함
   파일을 새 마스터 페이지 등의 파일 형식에 관계 없이 SharePoint 서버에 배포 하려는 경우가 있을 수 있습니다. 이 위해 사용할 수 있습니다 *모듈* (으로 다름 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] 코드 모듈). 모듈은 파일을 SharePoint 솔루션에 대 한 컨테이너입니다. 솔루션을 배포할 때 모듈에 있는 파일에는 SharePoint 서버에 지정 된 폴더에 복사 됩니다.  

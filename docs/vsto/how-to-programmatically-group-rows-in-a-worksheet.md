@@ -20,17 +20,15 @@ helpviewer_keywords:
 - worksheets, ungrouping rows and columns
 - rows [Office development in Visual Studio], ungrouping
 - columns [Office development in Visual Studio], ungrouping
-ms.assetid: 48037dca-35a2-4df2-918b-6a9f568fae91
-caps.latest.revision: "46"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: f17c90fb5f10dfdc0658f9176e0e15cedcc6f1d5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: eeea3e917d79bd9838bbaf3ec3338129b70354ff
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-group-rows-in-a-worksheet"></a>방법: 프로그래밍 방식으로 워크시트에서 행 그룹화
   하나 이상의 전체 행을 그룹화 할 수 있습니다. 워크시트에 그룹을 만들려면 사용는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤 또는 네이티브 Excel 범위 개체입니다.  

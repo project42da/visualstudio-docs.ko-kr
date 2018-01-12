@@ -21,17 +21,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], properties
 - Business Data Connectivity service [SharePoint development in Visual Studio], resource file
 - BDC [SharePoint development in Visual Studio], resource strings
-ms.assetid: 72bb744d-818b-4e5a-9da2-295412025680
-caps.latest.revision: "16"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3fc67e84ab9519e41c2c8eb8da29025da510bc6c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 144d81b2835479ee8cfdff0657814070cff813db
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions"></a>방법: 리소스 파일을 사용하여 지역화된 이름, 속성 및 사용 권한 지정
   리소스 파일을 사용하여 지역화된 이름을 제공하고, 속성을 정의하고, BDC(비즈니스 데이터 연결) 모델에 정의된 개체에 대한 사용 권한을 적용할 수 있습니다. 이 정보를 지정 하려면 추가 **비즈니스 데이터 연결 리소스** 항목을 포함 하는 프로젝트는 **비즈니스 데이터 연결 모델** 항목입니다. 그런 다음 리소스 파일의 XML을 편집하여 이름, 속성 및 사용 권한을 지정합니다.  

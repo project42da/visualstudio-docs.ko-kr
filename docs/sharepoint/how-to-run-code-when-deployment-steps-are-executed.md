@@ -11,17 +11,15 @@ dev_langs:
 - VB
 - CSharp
 helpviewer_keywords: SharePoint development in Visual Studio, extending deployment
-ms.assetid: 6b0a52e5-e0ba-41bc-9e8a-1013e51fd3ba
-caps.latest.revision: "21"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: a147b9f6def49565334004bda1f8c4c80b0e7bfa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ad603c9f303cd5bf2b3dc317efddd2694e10a867
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-run-code-when-deployment-steps-are-executed"></a>방법: 배포 단계가 진행될 때 코드 실행
   SharePoint 프로젝트의 배포 단계에 대 한 추가 작업을 수행 하려는 경우 Visual Studio는 각 배포 단계를 실행 한 후 및 하기 전에 SharePoint 프로젝트 항목에 의해 발생 한 이벤트를 처리할 수 있습니다. 자세한 내용은 참조 [확장 SharePoint 패키징 및 배포](../sharepoint/extending-sharepoint-packaging-and-deployment.md)합니다.  
