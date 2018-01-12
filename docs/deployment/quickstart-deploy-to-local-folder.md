@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology: vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: quickstart
 helpviewer_keywords: deployment, local folder
@@ -14,11 +14,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 3b97ca67c9e8d8a4cfb7d99a6c518c8e49a8c426
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 4e575a6d885b079c1c5afd0af6cbdadcd1d38d96
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Visual Studio 게시 도구를 사용 하 여 로컬 폴더에 웹 앱 또는.NET Core 응용 프로그램 배포
 
@@ -28,17 +28,17 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 
-1. Visual Studio에서 선택 **파일 > 새 프로젝트**합니다.
+1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
 1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 **콘솔 응용 프로그램 (.NET Core)**합니다.
 
 1. 같은 이름을 입력 **MyLocalApp** 클릭 **확인**합니다.
 
-    Visual Studio 프로젝트를 만듭니다.
+    Visual Studio가 프로젝트를 만듭니다.
 
 ## <a name="deploy-to-a-local-folder"></a>로컬 폴더에 배포
 
-1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다.
+1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
 
     ![선택 게시](../deployment/media/quickstart-publish.png "선택 게시")
 

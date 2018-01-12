@@ -19,17 +19,15 @@ helpviewer_keywords:
 - association forms [SharePoint development in Visual Studio]
 - initiation forms [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, workflow initiation forms
-ms.assetid: c8666d8c-b173-4245-8014-9c1cd6acb071
-caps.latest.revision: "38"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: b3178c330d34570d1406a1b63368537bc7f66887
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4b6eed3807b4031a7ab41c16f532442fb0968601
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>연습: 연결 및 초기화 폼이 있는 워크플로 만들기
   이 연습에는 연결 및 초기화 폼의 사용을 통합 하는 기본적인 순차 워크플로 만드는 방법을 보여 줍니다. 이들은 (연결 양식) SharePoint 관리자가 처음 연결할 때 및 워크플로 (시작 양식) 사용자가 시작 될 때 워크플로에 추가할 매개 변수를 사용 하도록 설정 하는 ASPX 폼입니다.  

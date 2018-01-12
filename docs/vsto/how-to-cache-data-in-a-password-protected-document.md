@@ -14,17 +14,15 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio], protected documents
 - datasets [Office development in Visual Studio], caching
 - data [Office development in Visual Studio], caching
-ms.assetid: 91b865fc-bd01-438f-ac63-2fe3175bc2e8
-caps.latest.revision: "23"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: ecc4913d9d508d95347945b8f4aaa816bc3d510c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 240debad9945c397290375f1931f4bce9ffa1f34
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-cache-data-in-a-password-protected-document"></a>방법: 암호로 보호된 문서의 데이터 캐시
   문서 또는 통합 문서는 암호로 보호 되는 데이터 캐시에 데이터를 추가 하는 경우 캐시 된 데이터의 변경 내용은 자동으로 저장 되지 않습니다. 프로젝트에서 두 개의 메서드를 재정의 하 여 캐시 된 데이터 변경 내용을 저장할 수 있습니다.  

@@ -23,17 +23,15 @@ helpviewer_keywords:
 - Office solutions [Office development in Visual Studio], deploying
 - deploying applications [Office development in Visual Studio], troubleshooting
 - solutions [Office development in Visual Studio], deploying Office solutions (2007 system)
-ms.assetid: 4cdf4bc6-72c5-4166-8019-d5fd61281079
-caps.latest.revision: "78"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 8c22db51700a711bed0edd2d5a8431d6dc64c281
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4cb4c4b2e5154293279e0993daabdbc8f74165b3
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="deploying-an-office-solution"></a>Office 솔루션 배포
   ClickOnce 또는 Windows Installer를 사용하여 Office 솔루션을 배포할 수 있습니다. ClickOnce를 사용하면 솔루션의 배포 및 업데이트에 필요한 단계 수를 줄일 수 있습니다. Windows Installer를 사용하는 경우, 솔루션이 설치되는 방법과 사용자가 솔루션을 설치할 때 설치 프로그램에서 표시되는 페이지를 제어할 수 있습니다.  

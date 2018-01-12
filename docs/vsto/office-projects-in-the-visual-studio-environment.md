@@ -41,17 +41,15 @@ helpviewer_keywords:
 - Visual Studio, Office documents in
 - worksheets [Office development in Visual Studio]
 - VST.Designer.ExcelVST.Designer.Word
-ms.assetid: 4bff36c9-4edd-4b28-89e6-0ea9f6caca02
-caps.latest.revision: "58"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 8cf489d5a1c4246adf4f5c4220229acb05ac67d5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a937f98a11ab9c8cb9723637be902808dce86563
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Visual Studio 환경의 Office 프로젝트
   Microsoft Office 프로젝트에는 Windows Forms 프로젝트를 비롯하여 Visual Studio의 다른 프로젝트 형식과 비슷한 개발 환경이 있습니다. Office 프로젝트를 만들거나 열 경우 **솔루션 탐색기**에 프로젝트 항목이 나타납니다. 문서 수준 프로젝트의 경우 문서(Word 문서 또는 Excel 통합 문서)가 Visual Studio에서 열리고 이 문서가 비주얼 디자이너와 같은 기능을 수행합니다.  

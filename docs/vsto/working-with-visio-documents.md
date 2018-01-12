@@ -14,17 +14,15 @@ helpviewer_keywords:
 - Visio [Office development in Visual Studio], document common tasks
 - Office documents [Office development in Visual Studio, common tasks in Visio
 - documents [Office development in Visual Studio], common tasks in Visio
-ms.assetid: 0e9aa441-5bce-4a72-bc8b-7311e3235b9a
-caps.latest.revision: "13"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 6ecabb2b917c2d0f54085f7fe54dea2a3767f07c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c34703e2897475a168215194c0dfb30000551021
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="working-with-visio-documents"></a>Visio 문서 작업
   이 섹션의 항목의 Microsoft Office Visio 개체 모델을 사용 하 여 Office 프로젝트의 문서 작업에 대 한 단계별 절차 및 코드 예제를 제공 합니다.  

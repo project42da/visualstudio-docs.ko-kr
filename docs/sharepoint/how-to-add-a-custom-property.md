@@ -18,17 +18,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], properties
 - Business Data Connectivity service [SharePoint development in Visual Studio], custom properties
 - BDC [SharePoint development in Visual Studio], custom properties
-ms.assetid: 670c7fff-a8fb-499f-8694-d5aecc432c16
-caps.latest.revision: "10"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 813063a2cd32374171c37e770e033959d7b7d3d1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d616a18850e9635dc580a3a09845640a793ac284
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-add-a-custom-property"></a>방법: 사용자 지정 속성 추가
   사용 하 여 모델에 사용자 지정 속성을 추가할 수 있습니다는 **속성 편집기**합니다. 예: 연결 문자열 정보 및 기타 데이터에서 런타임에 검색 하는 코드에서 이러한 속성에 액세스할 수 있습니다.  

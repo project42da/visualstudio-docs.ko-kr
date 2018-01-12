@@ -11,17 +11,15 @@ dev_langs:
 - VB
 - CSharp
 helpviewer_keywords: Outlook folders [Office development in Visual Studio], searching
-ms.assetid: 8f2cdc8b-f757-412c-aa2b-ebd5bc52f697
-caps.latest.revision: "30"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 6397f6e90423640697aa57d7fdf2a1c85303d0f9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 71b9da77857bb82a27f6bd6ae057a1df1fca8a1d
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-search-within-a-specific-folder"></a>방법: 프로그래밍 방식으로 특정 폴더 내용 검색
   사용 하 여이 코드 예제는 `Find` 및 `FindNext` 에 있는 전자 메일 메시지의 제목 필드에 텍스트를 검색 하는 메서드는 **받은 편지함**합니다. 이 메서드는 문자열 필터를 사용 하 여의 시작 문자가 문자 T에 대 한 확인은 `Subject` 텍스트입니다.  

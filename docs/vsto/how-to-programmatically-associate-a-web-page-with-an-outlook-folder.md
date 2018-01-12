@@ -14,17 +14,15 @@ helpviewer_keywords:
 - folders [Office development in Visual Studio], Web pages and
 - Outlook [Office development in Visual Studio], Web pages attached to folders
 - Web pages [Office development in Visual Studio], Outlook folders
-ms.assetid: b211b1b2-11e4-4316-87b7-98a3d10f95d1
-caps.latest.revision: "16"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: d2ce7291b992c4d2952853c502ade8fcd70f3791
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0fa0ccb3035bc4be8e316c96bd5da8c166dcb4b8
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-associate-a-web-page-with-an-outlook-folder"></a>방법: 프로그래밍 방식으로 Outlook 폴더에 웹 페이지 연결
   이 예제에서는 명명 된 폴더에 대 한 검사 `HtmlView` Microsoft Office Outlook에서. 폴더가 없는 경우 코드는 폴더를 만들고 웹 페이지를 할당 합니다. 폴더가 있으면 코드 폴더의 내용을 표시 합니다.  

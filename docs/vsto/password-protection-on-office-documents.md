@@ -16,17 +16,15 @@ helpviewer_keywords:
 - passwords [Office development in Visual Studio], document protections
 - documents [Office development in Visual Studio], restricted permissions
 - Office documents [Office development in Visual Studio, restricted permissions
-ms.assetid: 9cee99c8-73c6-4f89-9d5e-7912c876ff96
-caps.latest.revision: "21"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: f24c0493a66651a5d95925fd6777ba3e1cdd1658
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 52cadcec85580a9214da844bf887323227490f22
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="password-protection-on-office-documents"></a>Office 문서의 암호 보호
   암호를 아는 하지 않는 사용자가 열 수 없습니다 있도록 Microsoft Office Word 문서 및 Microsoft Office Excel 통합 문서에 대 한 암호를 설정 하는 것이 불가능 합니다. 이 옵션을 라고 **열기 암호**합니다.  

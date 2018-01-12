@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - solutions [Office development in Visual Studio], configuration files
 - configuration files [Office development in Visual Studio]
-ms.assetid: f123838f-957a-4cf5-acc0-0cc0f4c2aea2
-caps.latest.revision: "33"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: d7b8c8c9ca6dd964a58aa65b901d9219732179f3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6f604fa40a9816d5e46593bc50fcb91f82d13325
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>방법: Office 솔루션의 구성 정보 설정
   Office 솔루션에 관련 된 설정을 구성 하려면 구성 파일을 사용할 수 있습니다. 어셈블리 바인딩 정책, 원격 개체, debug 및 추적 설정 등 설정을 지정할 수 있습니다.  

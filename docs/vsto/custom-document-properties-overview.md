@@ -17,17 +17,15 @@ helpviewer_keywords:
 - Office documents [Office development in Visual Studio], custom properties
 - _AssemblyLocation property
 - _AssemblyName property
-ms.assetid: 9a215904-b760-4a49-93e8-a1a708ce0526
-caps.latest.revision: "36"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 0a670510a7898b38ec7f61a22f8258015b112151
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4f6dfae83f09398ba9a8d1377c16756487193ee2
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="custom-document-properties-overview"></a>Custom Document Properties Overview
   문서 수준 프로젝트를 빌드할 때 Visual Studio 프로젝트의 문서에 추가 두 개의 사용자 지정 속성: _AssemblyLocation 및 _AssemblyName 합니다. 사용자가 문서를 Microsoft Office 응용 프로그램 이러한 사용자 지정 문서 속성을 확인 합니다. 문서에 있는 경우 로드 하 고는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], 시작 되는 사용자 지정 합니다. 자세한 내용은 참조 [Visual Studio 아키텍처의 Office 솔루션](../vsto/architecture-of-office-solutions-in-visual-studio.md)합니다.  

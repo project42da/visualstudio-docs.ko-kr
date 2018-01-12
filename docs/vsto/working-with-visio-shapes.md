@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Visio [Office development in Visual Studio], common tasks with Visio shapes
 - shapes [Office development in Visual Studio], common tasks with Visio shapes
-ms.assetid: 53af87f7-b174-49f7-87d0-7dfe4bb9e1e2
-caps.latest.revision: "11"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 94f736eb4681b0ac28f391668254c9d9a2f97577
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 559566753740cc07715ecad6ad4da0b4faf6b0ac
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="working-with-visio-shapes"></a>Visio 셰이프 작업
   이 섹션의 항목의 Microsoft Office Visio 개체 모델을 사용 하 여 Office 프로젝트에서 셰이프 사용에 대 한 단계별 절차 및 코드 예제를 제공 합니다.  

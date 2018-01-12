@@ -16,17 +16,15 @@ helpviewer_keywords:
 - vstoee.dll
 - application-level add-ins [Office development in Visual Studio], architecture
 - add-ins [Office development in Visual Studio], architecture
-ms.assetid: 978f102f-15c6-44e4-84e8-80b161408324
-caps.latest.revision: "70"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: a4dbe8611da0814bfaa148b2d9c4caf7f7858d9d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a8abb77978731a9fa5cd43acdcb4928944c605b1
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO 추가 기능의 아키텍처
   Visual Studio에서 Office 개발자 도구를 사용하여 만든 VSTO 추가 기능에는 안정성과 보안을 강조하고 Microsoft Office와 긴밀하게 작업할 수 있도록 하는 아키텍처 기능이 있습니다. 이 항목에서는 다음과 같은 VSTO 추가 기능의 측면에 대해 설명합니다.  

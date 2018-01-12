@@ -14,17 +14,15 @@ helpviewer_keywords:
 - projects [SharePoint development in Visual Studio], extending
 - SharePoint development in Visual Studio, extending projects
 - SharePoint projects, extending
-ms.assetid: bb251fe9-f1bf-4ddd-9359-4b7f78fbd50f
-caps.latest.revision: "9"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 9427d2307a9d9726c2df1032410168c3b5cf1cc8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c8cf3a3705fd389f16ac02d5739eeb754df99ac9
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-sharepoint-projects"></a>방법: SharePoint 프로젝트에 바로 가기 메뉴 항목 추가
   모든 SharePoint 프로젝트에 바로 가기 메뉴 항목을 추가할 수 있습니다. 프로젝트 노드를 클릭할 때 메뉴 항목이 표시 **솔루션 탐색기**합니다.  

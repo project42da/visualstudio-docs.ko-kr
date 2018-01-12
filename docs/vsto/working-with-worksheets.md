@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Excel [Office development in Visual Studio], worksheets
 - worksheets [Office development in Visual Studio], common tasks
-ms.assetid: d9204916-6471-4cf0-89a1-d46dae0e2599
-caps.latest.revision: "13"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 979f3aa0d138d1e66248ffc51b4f4cc72d62adf4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 61dd449c4e495f5bf70f14f4295526d4a2dc3fec
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="working-with-worksheets"></a>워크시트 작업
   <xref:Microsoft.Office.Tools.Excel.Worksheet> 및 <xref:Microsoft.Office.Interop.Excel.Worksheet> 클래스에는 워크시트가 있는 작업을 수행하는 데 사용하는 메서드 및 속성이 포함됩니다.  

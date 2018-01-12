@@ -14,17 +14,15 @@ helpviewer_keywords:
 - workbooks, opening text files as
 - text [Office development in Visual Studio], text files
 - text files, opening as workbooks
-ms.assetid: 056ae3d0-7fe7-4c28-a2a5-5a948baee0e6
-caps.latest.revision: "47"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: dbd39969fba90613594bbbc0b2ea4d2c12825af7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 45d2b85ea8c005d56ddc076d0b758a0c9e4a2d67
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-open-text-files-as-workbooks"></a>방법: 프로그래밍 방식으로 통합 문서로 텍스트 파일 열기
   통합 문서로 텍스트 파일을 열 수 있습니다. 열 텍스트 파일 이름을 전달 해야 합니다. 시작에 대해 구문 분석 및 열에 대 한 형식의 데이터 파일에 있는 행 번호 등 여러 가지 선택적 매개 변수를 지정할 수 있습니다.  

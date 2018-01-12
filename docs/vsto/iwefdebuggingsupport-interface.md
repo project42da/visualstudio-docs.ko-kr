@@ -10,17 +10,15 @@ ms.topic: article
 dev_langs:
 - VB
 - CSharp
-ms.assetid: 0bd1c6a6-67a5-4478-b942-8b937b28f723
-caps.latest.revision: "12"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 150c8794fb35ca017be7e0873dc0d1b84ebfc38c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7b132c51e12d553bcd6e722e87c8aeee96be5e5c
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="iwefdebuggingsupport-interface"></a>IWefDebuggingSupport 인터페이스
   Office 용 앱의 디버깅을 용이 하 게 하려면 Visual Studio와 같은 디버깅 환경에서 구현 합니다. Word 또는 Excel과 같은 Office 응용 프로그램 Visual Studio에서이 인터페이스를 가져오고 디버깅 세션 중 특정 시점에서 인터페이스의 메서드를 호출 합니다.  

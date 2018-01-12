@@ -14,17 +14,15 @@ helpviewer_keywords:
 - calendars [Office development in Visual Studio], deleting appointments
 - deleting appointments
 - appointments [Office development in Visual Studio]
-ms.assetid: 34bd2d5e-a075-4fbe-809f-479c72fc735a
-caps.latest.revision: "16"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 620b0643280adebad55adcfacb6883b644e42227
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 29847c3a88c04d4d74db88008c97004ab9d648df
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-delete-appointments"></a>방법: 프로그래밍 방식으로 약속 삭제
   이 예제에서는 되풀이되는 약속의 인스턴스 하나를 삭제합니다. 이 예제에서는 되풀이되는 약속의 인스턴스가 2006년 6월 28일 08시에 발생한다고 가정합니다.  

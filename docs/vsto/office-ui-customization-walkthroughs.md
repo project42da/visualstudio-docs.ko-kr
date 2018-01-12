@@ -15,17 +15,15 @@ helpviewer_keywords:
 - smart documents, walkthroughs
 - walkthroughs [Office development in Visual Studio], smart tags
 - walkthroughs [Office development in Visual Studio], action panes
-ms.assetid: 7d47536b-742d-4643-9d98-4f1d85cf8786
-caps.latest.revision: "25"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 4ae3cc188c08088321ede661cef36cd8102e8fb8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2ae30b9b157cfcd26e709d39c05af4cc0605a5a1
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="office-ui-customization-walkthroughs"></a>Office UI 사용자 지정 연습
   다음 연습에서는 문서 수준 사용자 지정 및 VSTO 추가 기능을 사용하여 Microsoft Office 응용 프로그램의 UI(사용자 인터페이스)를 사용자 지정할 수 있는 방법을 보여 줍니다.  

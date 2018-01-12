@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Word [Office development in Visual Studio], dialog boxes
 - dialog boxes, Word
-ms.assetid: 0c7e4338-dead-4444-868b-3b0212368455
-caps.latest.revision: "54"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 25353b95a997380ea682059a43494cc2a977f943
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 961f6ac2aa9852170ecce35aa18ce4c39d7a9983
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-use-built-in-dialog-boxes-in-word"></a>방법: 프로그래밍 방식으로 Word의 기본 제공 대화 상자 사용
   Microsoft Office Word를 사용할 때 사용자 입력에 대 한 대화 상자를 표시 하는 경우가 있습니다. 만들 수 있지만 사용자 고유의 수도 있습니다에 노출 되는 word에서 기본 제공 대화 상자를 사용 하 여 접근 방식을 <xref:Microsoft.Office.Interop.Word.Dialogs> 의 컬렉션은 <xref:Microsoft.Office.Interop.Word.Application> 개체입니다. 이 열거형으로 표시 되는 기본 제공 대화 상자에서는 200 이상의 액세스할 수 있습니다.  

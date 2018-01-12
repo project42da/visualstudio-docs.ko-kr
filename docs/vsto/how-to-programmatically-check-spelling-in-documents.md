@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - documents [Office development in Visual Studio], checking spelling
 - spelling checker, documents
-ms.assetid: 5bbe3a8d-fc65-4f57-bd63-5bb549dbc4bd
-caps.latest.revision: "24"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: b61a995eb6c658477a34feba45b6cf5e24fa864d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 357e92235f474392c3bdbe1ac1f19af8c9c1538a
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-check-spelling-in-documents"></a>방법: 프로그래밍 방식으로 문서에서 맞춤법 검사
   사용 하 여 문서에서 맞춤법을 검사 하려면는 <xref:Microsoft.Office.Interop.Word._Application.CheckSpelling%2A> 메서드. 이 메서드는 제공 된 매개 변수 철자가 있는지 여부를 나타내는 부울 값을 반환 합니다.  

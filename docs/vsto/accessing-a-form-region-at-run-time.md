@@ -14,17 +14,15 @@ helpviewer_keywords:
 - Inspectors [Office development in Visual Studio]
 - Explorers [Office development in Visual Studio]
 - form regions [Office development in Visual Studio], accessing at run time
-ms.assetid: 58eaa9e0-acba-4a13-a6dd-b7e37a38156e
-caps.latest.revision: "23"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: bb77519c096c7c49f28de3fc98f24757373827c4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 70e9a970251aa5b95cff5983f5e2ce5e0c804a61
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="accessing-a-form-region-at-run-time"></a>런타임에 양식 영역 액세스
   
@@ -74,7 +72,7 @@ ms.lasthandoff: 12/22/2017
   
  양식 영역 코드 파일 외부에서 컨트롤에 액세스할 수 있게 하려면 양식 영역 코드 파일 내에서 해당 컨트롤을 반환하도록 속성을 만듭니다.  
   
- C#에서 속성을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 선언 하 고 사용 하 여 읽기/쓰기 속성 &#40; &#35; 프로그래밍 가이드 &#41; ](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties).  
+ C#에서 속성을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 선언 하 고 사용 하 여 읽기/쓰기 속성 & #40; & #35; 프로그래밍 가이드 & #41; ](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties).  
   
  Visual Basic에서 속성을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 속성 (Visual Basic) 만들기](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property)합니다.  
   

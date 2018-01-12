@@ -14,17 +14,15 @@ helpviewer_keywords:
 - e-mail [Office development in Visual Studio], creating
 - Outlook [Office development in Visual Studio], creating e-mail
 - mail items [Office development in Visual Studio], creating
-ms.assetid: f8fe3f2b-36ba-4f71-abdb-d30ce7fecb30
-caps.latest.revision: "27"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: a0a90ac7f39c35686ba1c945b2bd1bb46421d11d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 213fe5c13e4882eac450335b672731df2072c69f
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-create-an-e-mail-item"></a>방법: 프로그래밍 방식으로 전자 메일 항목 만들기
   이 예제에서는 Microsoft Office Outlook의 메일 메시지를 만듭니다.  

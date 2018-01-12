@@ -9,17 +9,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 dev_langs: 
 helpviewer_keywords: 
-ms.assetid: 810a6648-fece-4b43-9eb6-948d28ed2158
-caps.latest.revision: "33"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 8985b3bb6e20b24b86174286104158c8830de971
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 2a1b6b9270207b3d0f8d415655231af4456e61b4
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>Office에서 COM, VSTO 및 VBA 추가 기능에 대 한 개발 모범 사례
   Office에 대 한 COM 이거나 VBA VSTO 추가 기능을 개발 하는 경우에이 문서에 설명 된 개발 모범 사례를 준수 합니다.   이렇게 하면 확인 하는 데 도움이 됩니다.

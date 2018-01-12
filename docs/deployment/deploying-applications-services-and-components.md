@@ -6,7 +6,7 @@ ms.reviewer:
 ms.suite: 
 ms.technology: vs-ide-deployment
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: get-started-article
 dev_langs:
 - FSharp
 - VB
@@ -26,11 +26,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e6d4c01043bde59822175b20f36cd576c3a9c3a3
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: e05bf361515b45f3ebc7683fa0c83ec6116d9419
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="deployment-overview-in-visual-studio"></a>Visual Studio에서 배포 개요
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 01/05/2018
 
 - **ASP.NET**, **ASP.NET Core**, **Node.js**, **Python**, 및 **.NET Core**: 게시 도구를 사용 하 여를 배포 하는 FTP 나 Web Deploy를 사용 하 여 웹 사이트입니다. 자세한 내용은 참조 [웹 사이트로 배포](quickstart-deploy-to-a-web-site.md)합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다. 게시 도구에는 구성 단계에 따라 원하는 옵션을 선택 합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다. 게시 도구에는 구성 단계에 따라 원하는 옵션을 선택 합니다.
 
     ![IIS, FTP 등을 선택 합니다.](../deployment/media/quickstart-publish-iis-ftp.png)
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 01/05/2018
 
 ### <a name="publish-to-azure"></a>Azure에 게시
 
-- **ASP.NET, ASP.NET Core, Python, Node.js, 및.NET Core** 웹 응용 프로그램: Azure 앱 서비스 또는 Azure 가상 컴퓨터를 신속 하 게 앱을 배포 하려면 게시 도구를 사용할 수 있습니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다. 게시 대화 상자에서 선택 하거나 **Microsoft Azure 앱 서비스** 또는 **Microsoft Azure 가상 컴퓨터**, 한 다음 구성 단계를 따릅니다.
+- **ASP.NET, ASP.NET Core, Python, Node.js, 및.NET Core** 웹 응용 프로그램: Azure 앱 서비스 또는 Azure 가상 컴퓨터를 신속 하 게 앱을 배포 하려면 게시 도구를 사용할 수 있습니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다. 게시 대화 상자에서 선택 하거나 **Microsoft Azure 앱 서비스** 또는 **Microsoft Azure 가상 컴퓨터**, 한 다음 구성 단계를 따릅니다.
 
     ![Azure 앱 서비스 선택](../deployment/media/quickstart-publish-azure.png "Azure 앱 서비스 선택")
 

@@ -17,17 +17,15 @@ helpviewer_keywords:
 - sandboxed solutions [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, farm solutions
 - farm solutions [SharePoint development in Visual Studio]
-ms.assetid: 43beb7e7-0cd9-4a8f-bb72-6b1e0cba5be8
-caps.latest.revision: "12"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 6c13d27f8c79f1bc638741d8877ac95a0dff4885
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c9123f028bab5319f47e4bdc0ada0dbbee49bc2c
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="differences-between-sandboxed-and-farm-solutions"></a>샌드박스 솔루션과 팜 솔루션의 차이점
   SharePoint 솔루션을 컴파일하면, SharePoint 서버에 배포 및 디버깅 하려면 디버거가 연결 합니다. 솔루션을 디버깅 하는 프로세스는 샌드박스 솔루션 속성의 설정에 따라: 샌드박스 솔루션 또는 팜 솔루션입니다.  

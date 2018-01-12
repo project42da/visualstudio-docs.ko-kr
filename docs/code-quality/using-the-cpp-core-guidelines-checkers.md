@@ -12,12 +12,11 @@ author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.technology: vs-ide-code-analysis
-ms.workload: cplusplus
-ms.openlocfilehash: cadee7d9cae0c59333a034e6f0ea12049bf3853f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0dba021b25a63a057f882aeb5c49a560992c2c2b
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C + + 코어 지침 검사기를 사용 하 여
 C + + 코어 지침은 휴대용 집합이 지침, 규칙 및 c + +의 c + + 전문가 디자이너에서 만든 코딩 하는 방법에 대 한 모범 사례입니다. 현재 visual Studio c + +에 대 한 코드 분석 도구는의 일부로 이러한 규칙의 하위 집합을 지원합니다. 코어 지침 검사기는 Visual Studio 2017에 기본적으로 설치 및는 [Visual Studio 2015 용 NuGet 패키지로 사용할 수 있는](#vs2015_corecheck)합니다.
@@ -86,7 +85,7 @@ C + + 코어 지침 검사기에 새 규칙 추가 되 면 기존 코드에 대 
 Visual Studio 2017 15.3 버전을 기준으로 지원 되는 규칙 집합은 됩니다. 
   - **소유자 포인터 규칙** 적용 [리소스 관리 소유자에 게 관련 확인<T> c + + 코어 지침에서](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)합니다.
 
-  - **Const 규칙** 적용 [c + + 코어 지침에서 const 관련 검사](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)합니다.
+  - **Const 규칙** 적용 [c + + 코어 지침에서 const 관련 검사](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#con-constants-and-immutability)합니다.  
 
   - **원시 포인터 규칙** 적용 [리소스 관리는 c + + 코어 지침에서 원시 관련이 포인터 검사](http://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#r-resource-management)합니다.
 
@@ -98,11 +97,14 @@ Visual Studio 2017 15.3 버전을 기준으로 지원 되는 규칙 집합은 �
 
   **Visual Studio 2017 버전 15.5**:
   - **규칙 클래스** 특별 한 메서드 및 가상 사양의 적절 한 사용에 초점을 맞춘 몇 가지 규칙이 있습니다. 이 검사에 대 한 권장의 하위 집합 [클래스 및 클래스 계층 구조](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-class)합니다. 
-  - **동시성 규칙** 가드 badlyly 선언 된 개체를 catch 하는 단일 규칙입니다. 자세한 내용은 참조 [동시 성과 관련 지침](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency)합니다. 
+  - **동시성 규칙** 가드 잘못 선언 된 개체를 catch 하는 단일 규칙입니다. 자세한 내용은 참조 [동시 성과 관련 지침](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-concurrency)합니다. 
   - **선언 규칙** 몇 가지 규칙에서는 [지침 인터페이스](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-interfaces) 중점을 어떻게 전역 변수는 선언 됩니다.  
   - **규칙 함수** 단기간에 사용 되는 두 가지 검사는 `noexcept` 지정자입니다. 이 대 한 지침의 일부인 [함수 디자인 및 구현 지우기](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-functions)합니다. 
   - **공유 포인터 규칙** 의 일부로 [리소스 관리](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#S-resource) 몇 가지 규칙 어떻게 공유 포인터에 대 한 특정 함수에 전달 된 또는 로컬로 사용 되는 추가 지침이 적용 합니다.  
-  - **스타일 규칙** 의 사용을 금지 하는 하나의 간단 하지만 중요 한 확인 [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto)합니다. 이 코딩 스타일과 식과 c + +에서 문을 사용 하 여의 개선을 첫 번째 단계입니다. 
+  - **스타일 규칙** 하나의 간단 하지만 중요 한 검사를 사용 하 여 금지 [goto](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-goto)합니다. 이 코딩 스타일과 식과 c + +에서 문을 사용 하 여의 개선을 첫 번째 단계입니다.  
+  
+  **Visual Studio 2017 버전 15.6**:
+  - **산술 규칙** 산술을 검색 하는 규칙 [오버플로](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-overflow), [작업 서명 unsigned](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-unsigned) 및 [조작 비트](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Res-nonnegative)합니다.
 
 
  하나 또는 몇 가지 그룹으로 경고를 제한할 수 있습니다. **네이티브 최소** 및 **네이티브 권장** 규칙 집합 다른 PREfast 확인 뿐 아니라 c + + 코어 확인 규칙을 포함 합니다. 사용 가능한 프로젝트 속성 대화 상자를 열고, 규칙 집합을 보려면 선택 **코드 Analysis\General**, 열에 있는 드롭다운에서 **규칙 집합** 콤보 상자 및 선택 **여러 규칙 집합 선택** . Visual Studio에서 규칙 집합을 사용 하는 방법에 대 한 자세한 내용은 참조 [코드 분석 규칙 그룹화를 사용 하 여 규칙 집합](using-rule-sets-to-group-code-analysis-rules.md)합니다.
@@ -120,7 +122,7 @@ CPPCORECHECK_UNIQUE_POINTER_WARNINGS
 CPPCORECHECK_BOUNDS_WARNINGS
 ```
 
-이러한 매크로 규칙 집합에 해당 하 고 경고 번호를 공백으로 구분 된 목록으로 확장 합니다. 적절 한 pragma 구문을 사용 하 여 코드 섹션 또는 프로젝트에 대 한 흥미로운 유효한 규칙 집합을 구성할 수 있습니다. 다음 예제에서는 상수 한정자 누락에 대 한 코드 분석 경고:
+이러한 매크로 규칙 집합에 해당 하 고 경고 번호를 공백으로 구분 된 목록으로 확장 합니다. 적절 한 pragma 구문을 사용 하 여 코드 섹션 또는 프로젝트에 대 한 흥미로운 유효한 규칙 집합을 구성할 수 있습니다. 다음 예제에서는 상수 한정자 누락에 대 한 코드 분석 경고 합니다.
 
 ```cpp
 #include <CppCoreCheck\Warnings.h>
@@ -129,8 +131,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 ```
 
 ## <a name="attributes"></a>특성
- Microsoft Visual c + + 컴파일러는 특성을 표시 하지 않는 GSL에 대 한 제한 된 지원 합니다.
-식 및 블록 문에서 함수 내부에서 경고를 표시 하지 않는 데 사용할 수 있습니다.
+ Microsoft Visual c + + 컴파일러는 특성을 표시 하지 않는 GSL에 대 한 제한 된 지원 합니다. 식 및 블록 문에서 함수 내부에서 경고를 표시 하지 않는 데 사용할 수 있습니다.
 
 ```cpp
 // Supress only warnings from the 'r.11' rule in expression.
@@ -164,10 +165,10 @@ CPPCORECHECK_BOUNDS_WARNINGS
  명령줄 옵션을 사용 하 여 일시적으로 파일에 대 한 모든 코드 분석을 사용 하지 않도록 지정 하 여 `/analyze-`합니다. 경고가 생성 *D9025 재정의 '/analyze'와 ' /analyze-'*는 다시 나중에 코드 분석을 사용 하도록 사용자에 게 알립니다.
 
  ## <a name="corecheck_per_file"></a>특정 프로젝트 파일에 대해 c + + 코어 지침 검사기를 사용 하도록 설정
-경우에 따라 수행 초점을 맞춘 코드 분석 하 고 여전히 Visual Studio IDE 활용 하는 방법에 유용할 수 있습니다. 다음은 빌드 시간을 저장 하 고 필터 결과를 쉽게 수행할 수 있도록 대형 프로젝트에 대해 사용할 수 있는 샘플 시나리오:
+경우에 따라 수행 초점을 맞춘 코드 분석 하 고 여전히 Visual Studio IDE를 사용 하 여에 유용할 수 있습니다. 빌드 시간을 저장 하 고 필터 결과를 보다 쉽게 대규모 프로젝트의 다음 샘플 시나리오를 사용할 수 있습니다.
 
 1.  명령 셸에서 설정는 `esp.extension` 및 `esp.annotationbuildlevel` 환경 변수입니다.
-2.  이러한 변수를 상속 하도록 명령 셸에서 Visual Studio를 시작 합니다.
+2.  이러한 변수를 상속 하도록 명령 셸에서 Visual Studio를 시작 합니다. 
 3.  프로젝트를 로드 하 고 해당 속성을 엽니다.
 4.  코드 분석을 활성화 하 고 적절 한 규칙 집합 선택 하지만 코드 분석 확장을 사용 하지 마십시오.
 5.  C + + 코어 지침 검사기와 함께 분석 하 고 해당 속성을 엽니다 하려는 파일이 있는 위치로 이동 합니다.
@@ -212,13 +213,13 @@ msbuild /p:EnableCppCoreCheck=true /p:RunCodeAnalysis=true /p:CodeAnalysisRuleSe
 ```
 
 ### <a name="non-msbuild-projects"></a>비 MSBuild 프로젝트
-MSBuild에 의존 하지 않고 빌드 시스템을 사용 하는 경우, 검사를 계속 실행할 수 있습니다 하지만 코드 분석 엔진 구성의 일부 내부에 친숙 해지기 필요 합니다. 이러한 내부 없는 보증 나중에 지원 됩니다.
+MSBuild에 의존 하지 않고 빌드 시스템을 사용 하는 경우, 검사를 계속 실행할 수 있습니다 하지만 코드 분석 엔진 구성의 일부 내부에 친숙 해지기 필요 합니다. 나중에 지원 되는 데 이러한 내부 보장 되지 않습니다.
 
-몇 가지 환경 변수를 설정 하 고 컴파일러에 대 한 적절 한 명령줄 옵션을 사용 하려면 해야 합니다. 컴파일러에 대 한 특정 경로 대 한 검색, 디렉터리 등을 포함 하지 않아도 되도록 "네이티브 도구 명령 프롬프트" 환경에서 작동 하는 것이 좋습니다.
+몇 가지 환경 변수를 설정 하 고 컴파일러에 대 한 적절 한 명령줄 옵션을 사용 해야 합니다. 컴파일러에 대 한 특정 경로 대 한 검색, 디렉터리 등을 포함 하지 않아도 되도록 "네이티브 도구 명령 프롬프트" 환경에서 작동 하는 것이 좋습니다.
 
 1.  **환경 변수**
   - `set esp.extensions=cppcorecheck.dll`C + + 코어 지침 모듈을 로드 하려면 엔진을 인지를 나타냅니다.
-  - `set esp.annotationbuildlevel=ignore`SAL 주석 처리 하는 논리를 해제 합니다. 주석은 c + + 코어 지침 검사에서 코드 분석에 영향을 주지 아직 자신의 처리 때마다 (경우에 따라 많은 시간). 이 설정은 선택 사항 이지만 권장 사항임입니다.
+  - `set esp.annotationbuildlevel=ignore`SAL 주석 처리 하는 논리를 해제 합니다. 주석은 c + + 코어 지침 검사에서 코드 분석에 영향을 주지 아직 처리 시간이 (경우에 따라 자세한 시간). 이 설정은 선택 사항 이지만 권장 사항임입니다.
   - `set caexcludepath=%include%`표준 헤더에 대해 발생 하는 경고를 해제 하는 것이 좋습니다. 경로 예를 들어 프로젝트에서 일반적인 헤더를 여기에 경로 더 추가할 수 있습니다.
 2.  **명령줄 옵션**
   - `/analyze`코드 분석을 활성화 (/analyze 함께 사용 하는 것이 좋습니다:만 및 /analyze: quiet).

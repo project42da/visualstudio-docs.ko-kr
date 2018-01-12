@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Outlook [Office development in Visual Studio], unread mail
 - unread e-mail
 - mail items [Office development in Visual Studio], unread mail
-ms.assetid: 4ccfb146-4579-47b4-ab55-b49b02cdc726
-caps.latest.revision: "17"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 00d91f47b33a36e95a82f8b483483ed4da733db8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 50952f10c22ed7b71f0a1d74af874f1ec52d3905
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-retrieve-unread-messages-from-the-inbox"></a>방법: 프로그래밍 방식으로 받은 편지함에서 읽지 않은 메시지 검색
   이 예제에서는 Outlook **받은 편지함** 의 읽지 않은 메일 메시지를 검색하고 항목 수를 표시합니다.  

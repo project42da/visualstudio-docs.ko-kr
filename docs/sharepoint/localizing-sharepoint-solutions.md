@@ -19,17 +19,15 @@ helpviewer_keywords:
 - globalizing [SharePoint development in Visual Studio]
 - localizing [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, localizing
-ms.assetid: 0d4cfa2b-8b48-45c7-bbee-ece9b0baffaf
-caps.latest.revision: "18"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 2339ee60e66bca7578c2d5d1e89c7bb649b15b03
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7a1ca2b08bda0a3336b573da7df910872e13470b
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="localizing-sharepoint-solutions"></a>SharePoint 솔루션 지역화
   전 세계적으로 사용 될 수 있도록 응용 프로그램을 준비 하는 과정을 지역화 라고 합니다. 지역화를 특정 문화권 리소스를 번역 됩니다. 자세한 내용은 참조 [전역화 및 지역화 응용 프로그램](/visualstudio/ide/globalizing-and-localizing-applications)합니다. 이 항목 SharePoint 솔루션 지역화 하는 방법에 대 한 개요를 제공 합니다.  

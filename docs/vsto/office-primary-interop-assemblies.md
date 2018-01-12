@@ -14,17 +14,15 @@ helpviewer_keywords:
 - primary interop assemblies
 - assemblies [Office development in Visual Studio], primary interop assemblies
 - Office primary interop assemblies
-ms.assetid: aa29d12c-185f-4558-a7cd-3d85f924203d
-caps.latest.revision: "44"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: faef08b559a2e792630c03bcd09acf5122b9ddac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 906100a572170f218a23b1887ab7fddee37251b9
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="office-primary-interop-assemblies"></a>Office 주 Interop 어셈블리
   Office 프로젝트에서 Microsoft Office 응용 프로그램의 기능을 사용하려면 응용 프로그램용 PIA(주 interop 어셈블리)를 사용해야 합니다. PIA를 사용하면 관리 코드가 Microsoft Office 응용 프로그램의 COM 기반 개체 모델과 상호 작용할 수 있습니다.  

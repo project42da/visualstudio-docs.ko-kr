@@ -16,17 +16,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, advanced packaging tools
 - SharePoint development in Visual Studio, event receivers
 - SharePoint development in Visual Studio, feature event receivers
-ms.assetid: fbd44c33-2c27-4d57-abca-21cddc16fbc3
-caps.latest.revision: "24"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 6250673ae2fa262fbe932aea79e36aeb6b0d0915
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e028eb4d95495e92718769979f43012319596960
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-add-feature-event-receivers"></a>연습: 기능 이벤트 수신자 추가
   기능 이벤트 수신기는 SharePoint에서 다음과 같은 기능 관련 이벤트 중 하나가 발생할 때 실행 하는 메서드:  

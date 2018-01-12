@@ -14,17 +14,15 @@ helpviewer_keywords:
 - hidden dialog boxes
 - Word [Office development in Visual Studio], dialog boxes
 - dialog boxes, hidden mode in Word
-ms.assetid: a5619325-8b54-41f1-becb-3f6eae7e4a6b
-caps.latest.revision: "48"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3d36bb9342c1db3fcf0fe007b87831b8c921af6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 08427d6310421135032bb3517cda1eefc1122358
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-use-word-dialog-boxes-in-hidden-mode"></a>방법: 프로그래밍 방식으로 숨김 모드에서 Word 대화 상자 사용
   사용자에 게 표시 하지 않고 Microsoft Office Word의 기본 제공 대화 상자를 호출 하 여 호출 하 여 복잡 한 작업을 수행할 수 있습니다. 사용 하 여이 작업을 수행할 수는 <xref:Microsoft.Office.Interop.Word.Dialog.Execute%2A> 의 메서드는 <xref:Microsoft.Office.Interop.Word.Dialog> 호출 하지 않고 개체는 <xref:Microsoft.Office.Interop.Word.Dialog.Display%2A> 메서드.  

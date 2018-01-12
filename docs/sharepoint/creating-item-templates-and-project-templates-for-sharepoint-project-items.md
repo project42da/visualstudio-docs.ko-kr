@@ -17,17 +17,15 @@ helpviewer_keywords:
 - SharePoint projects, creating custom templates
 - SharePoint development in Visual Studio, creating custom project and item templates
 - project items [SharePoint development in Visual Studio], creating custom templates
-ms.assetid: c95b5e35-76c4-4f0a-b645-0467ae683659
-caps.latest.revision: "27"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 1946d31d1e0f508267300c14551b0a8efff81587
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7f64abf2327d4e7702020a53c88d0d2c640e0756
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="creating-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint 프로젝트 항목에 대한 항목 템플릿 및 프로젝트 템플릿 만들기
   사용자 지정 SharePoint 프로젝트 항목 형식을 정의한 경우 다른 개발자가 Visual Studio에서 프로젝트 항목을 사용할 수 있도록 항목 템플릿을 또는 프로젝트 템플릿에 연결할 수 있습니다. 템플릿에 대해 마법사를 만들 수 있습니다.  

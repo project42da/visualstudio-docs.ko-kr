@@ -15,17 +15,15 @@ helpviewer_keywords:
 - calculations, running in Excel
 - Excel [Office development in Visual Studio], running calculations programmatically
 - workbooks, running calculations
-ms.assetid: 0bf30d93-8620-43ad-bfb8-f45bf3b5461f
-caps.latest.revision: "38"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 7fb059d9f1cebe5bef827b1e221ac525360c3a38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d1b18b9de3c79385885c23fdbf0cac99a14c3e27
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-run-excel-calculations"></a>방법: 프로그래밍 방식으로 Excel 계산 실행  
   비슷한 프로세스를 사용 하 여 계산을 실행 하는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤 또는 네이티브 Excel 범위 개체입니다.  

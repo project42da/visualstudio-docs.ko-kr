@@ -17,17 +17,15 @@ helpviewer_keywords:
 - projects [Office development in Visual Studio], PowerPoint
 - PowerPoint [Office development in Visual Studio]
 - Office projects [Office development in Visual Studio], PowerPoint
-ms.assetid: 02ebad64-9fd3-495f-ab27-4f6206b3d6d2
-caps.latest.revision: "46"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: dd03b3e14599535c99f8a8ddd17314ce7f0cc719
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9dfa41bdecc7e47a0bf367409aac79d354daaad3
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="powerpoint-solutions"></a>PowerPoint 솔루션
   Visual Studio에서는 Microsoft Office PowerPoint용 VSTO 추가 기능을 만드는 데 사용할 수 있는 프로젝트 템플릿을 제공합니다. VSTO 추가 기능을 사용하여 PowerPoint를 자동화하거나, PowerPoint 기능을 확장하거나, PowerPoint UI(사용자 인터페이스)를 사용자 지정할 수 있습니다.  

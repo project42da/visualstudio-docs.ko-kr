@@ -18,17 +18,15 @@ dev_langs:
 helpviewer_keywords:
 - deploying [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, deploying
-ms.assetid: 5efc1d99-2bd2-4f1a-a7b0-86c3b8f533f0
-caps.latest.revision: "23"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: c1c8757de9b63c3fed75ec7e2ef7f61c89e18226
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5990ab0f6ff6ec02131921f54197dd28e7f4e6ff
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="deploying-publishing-and-upgrading-sharepoint-solution-packages"></a>SharePoint 솔루션 패키지 배포, 게시 및 업그레이드
   Visual Studio에서 SharePoint 솔루션을 개발한 후 로컬 SharePoint 서버에 해당 패키지 (.wsp) 파일을 배포 하거나 원격 또는 로컬 SharePoint 서버에 게시할 수 있습니다. 파일을 배포 하는 경우 패키지 파일 (.wsp) 배포 되는 방식을 사용자 지정할 수 있습니다.  

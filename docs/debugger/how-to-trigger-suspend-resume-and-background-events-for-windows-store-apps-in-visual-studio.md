@@ -19,11 +19,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 70e0ab429f6359e8bb50a83307e9e042e0bfa4b0
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 4a62f02d98ed06df4a3eea1b3f253f5e91ff7115
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트를 Visual Studio에서 UWP 앱을 디버깅 하는 동안
 디버깅하고 있지 않을 때는 Windows PLM( **프로세스 수명 관리** )에서 응용 프로그램의 실행 상태(장치 상태 및 사용자 작업에 응답하여 응용 프로그램 시작, 일시 중단, 다시 시작 및 종료)를 제어합니다. 디버깅하는 중에는 Windows가 이러한 활성화 이벤트를 사용하지 않도록 설정합니다. 이 항목에서는 디버거에서 이러한 이벤트를 발생시키는 방법에 대해 설명합니다.  
@@ -109,7 +109,7 @@ ms.lasthandoff: 01/05/2018
      ![일시 중단, 다시 시작, 종료 및 백그라운드 작업](../debugger/media/dbg_suspendresumebackground.png "DBG_SuspendResumeBackground")  
   
 ##  <a name="BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app"></a> 설치된 응용 프로그램에서 프로세스 수명 관리 이벤트 및 백그라운드 작업 트리거  
- 설치된 응용 프로그램 디버그 대화 상자를 사용하여 이미 설치된 응용 프로그램을 디버거에 로드할 수 있습니다. 예를 들어 Microsoft 스토어에서 설치 된 앱을 디버깅 하거나 응용 프로그램에 대 한 소스 파일이 하지만 응용 프로그램에 대 한 Visual Studio 프로젝트가 아니라 있으면 응용 프로그램을 디버깅 수 있습니다. 설치된 응용 프로그램 디버그 대화 상자에서는 Visual Studio 컴퓨터나 원격 장치에서 디버그 모드로 응용 프로그램을 시작하거나 디버그 모드에서 실행되도록 응용 프로그램을 설정하고 응용 프로그램을 시작하지 않을 수 있습니다. 자세한 내용은 **JavaScript** 또는 [Visual C++, Visual C# 및 Visual Basic](../debugger/start-a-debugging-session-for-store-apps-in-visual-studio-javascript.md#BKMK_Start_an_installed_app_in_the_debugger) 버전의 [디버깅 세션을 시작하는 방법](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger) 에서 **디버거에서 설치된 응용 프로그램 시작** 단원을 참조하십시오.  
+ 설치된 응용 프로그램 디버그 대화 상자를 사용하여 이미 설치된 응용 프로그램을 디버거에 로드할 수 있습니다. 예를 들어 Microsoft 스토어에서 설치 된 앱을 디버깅 하거나 응용 프로그램에 대 한 소스 파일이 하지만 응용 프로그램에 대 한 Visual Studio 프로젝트가 아니라 있으면 응용 프로그램을 디버깅 수 있습니다. 설치된 응용 프로그램 디버그 대화 상자에서는 Visual Studio 컴퓨터나 원격 장치에서 디버그 모드로 응용 프로그램을 시작하거나 디버그 모드에서 실행되도록 응용 프로그램을 설정하고 응용 프로그램을 시작하지 않을 수 있습니다. 참조는 **디버거에서 설치 된 응용 프로그램 시작** 섹션 [UWP 앱에서 디버깅 세션을 시작](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger)합니다.
   
  응용 프로그램이 디버거에 로드되면 위에서 설명한 절차를 사용할 수 있습니다.  
   

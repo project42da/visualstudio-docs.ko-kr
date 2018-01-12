@@ -15,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - localizing XML [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, localizing
-ms.assetid: 9559a1d1-6558-4c24-a51e-c6ee79432778
-caps.latest.revision: "16"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: e936404d285fe5845ae364c3b5960e2fb335d2d2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 99683e590a2bc6638a809bd3d14486c951a2ad02
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-localize-aspx-markup"></a>방법: ASPX 태그 지역화
   [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)](.aspx) 페이지는 일반적으로 하드 코드 된 문자열 값을 사용합니다. 이러한 문자열을 지역화 하려면 지역화 된 리소스를 참조 하는 식으로 대체 합니다.  

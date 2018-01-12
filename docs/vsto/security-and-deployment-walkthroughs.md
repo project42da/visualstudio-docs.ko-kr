@@ -15,17 +15,15 @@ helpviewer_keywords:
 - walkthroughs [Office development in Visual Studio], security
 - deployment manifests [Office development in Visual Studio], walkthroughs
 - walkthroughs [Office development in Visual Studio], deployment
-ms.assetid: 0a74f24e-abb0-49ba-ad12-0e6a5b78b85d
-caps.latest.revision: "29"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: c1d9008dc88640adee8db3f02b43cad314a47b32
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1a4b8fa57868e0631e528fd73e199b5c6a017c08
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="security-and-deployment-walkthroughs"></a>보안 및 배포 연습
   다음 항목에서는 Office 솔루션을 배포 하는 방법 및를 실행 하려면 솔루션을 허용 하도록 보안 정책을 설정 하는 방법을 설명 합니다.  

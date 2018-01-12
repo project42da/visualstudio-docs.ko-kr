@@ -24,16 +24,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: bf9049907d1648b1950f8d66e0fd183c82699e92
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 59ec4b4a7b0f8c924c09608b8cda34473820c1f5
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="debug-html-and-css-in-uwp-and-windows-81-apps"></a>HTML 및 CSS UWP 및 Windows 8.1 앱의 디버깅
 ![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- JavaScript 앱의 경우 Visual Studio에서 Internet Explorer 및 Visual Studio 개발자에게 익숙한 기능이 포함된 포괄적인 디버깅 환경을 제공합니다. 이러한 기능에 대해 지원 됩니다 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], Windows Phone 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱입니다.  
+ JavaScript 앱의 경우 Visual Studio에서 Internet Explorer 및 Visual Studio 개발자에게 익숙한 기능이 포함된 포괄적인 디버깅 환경을 제공합니다. 이러한 기능은 UWP 앱에 대 한 지원지 않습니다 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], Windows Phone 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱입니다.  
   
  DOM 검사 도구에서 제공된 대화형 디버깅 모델을 사용하여 렌더링된 HTML 및 CSS 코드를 보고 수정할 수 있습니다. 디버거를 중지했다 다시 시작하지 않고도 이 모든 작업을 수행할 수 있습니다.
   
@@ -268,9 +268,9 @@ ms.lasthandoff: 12/22/2017
  사용 하 여 요소를 선택 하는 방법을 보여 주는 예제는 **Select 요소** 단추, 참조 [DOM 탐색기를 사용 하 여 디버그 하는 CSS 스타일](../debugger/debug-css-styles-using-dom-explorer.md)합니다.  
   
 ##  <a name="BrowserSupport"></a> 브라우저 및 플랫폼 지원  
- JavaScript용 Visual Studio 도구인 DOM 탐색기와 JavaScript 콘솔 창이 다음 플랫폼에서 지원됩니다.  
+ DOM 탐색기와 JavaScript 콘솔 창이 다음 플랫폼에서 지원 됩니다.  
   
--   [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)]및 Windows Phone 앱을 JavaScript 및 HTML을 사용 하 여  
+-   UWP 앱 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 및 JavaScript 및 HTML을 사용 하 여 Windows Phone 앱  
   
 -   [!INCLUDE[win81](../debugger/includes/win81_md.md)]  
   

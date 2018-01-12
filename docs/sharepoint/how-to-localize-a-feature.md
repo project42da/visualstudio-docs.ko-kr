@@ -15,17 +15,15 @@ dev_langs:
 helpviewer_keywords:
 - features [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, localizing
-ms.assetid: 66a0b389-1f71-421f-9817-a19840765d83
-caps.latest.revision: "17"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 03adaa74feacc82c5f63c1930f7dad63cc931433
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1ddb5e705fd581ce2717539ac6daf3e9a2081f6d
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-localize-a-feature"></a>방법: 기능 지역화
   기본적으로 기능 제목 및 설명 하드 코드 된 문자열 값을 사용 합니다. 기능 제목 및 설명 필드를 지역화, 지역화 된 리소스를 참조 하는 식으로 문자열을 대체 합니다.  

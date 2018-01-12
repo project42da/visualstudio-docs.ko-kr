@@ -15,17 +15,15 @@ helpviewer_keywords:
 - e-mail [Office development in Visual Studio], current item
 - SelectionChange event
 - Outlook [Office development in Visual Studio], current item
-ms.assetid: b4fb5ccd-b297-463e-9208-1fec42482531
-caps.latest.revision: "28"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 112a2c1273b0087eea98736a4e47ac5de8787149
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: de17e299e98a46a82547bc38dfecd17a9f5aea58
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-determine-the-current-outlook-item"></a>방법: 프로그래밍 방식으로 현재 Outlook 항목 확인
   이 예제에서는 선택한 항목에 대 한 정보 및 현재 폴더의 이름을 표시 하려면 Explorer.SelectionChange 이벤트를 사용 합니다. 그런 다음 선택한 항목을 표시 합니다.  

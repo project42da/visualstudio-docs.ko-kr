@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Office development in Visual Studio, reference
 - Office development in Visual Studio, unmanaged API reference
-ms.assetid: cdbc70b1-1f98-43dc-a619-07d805e53dce
-caps.latest.revision: "12"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3a48af1199b041ef59c3e31e4e9496d78d21aec1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 640e292719f8d466ba21cc449ea624527b50bcf0
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="unmanaged-api-reference-office-development-in-visual-studio"></a>관리되지 않는 API 참조(Visual Studio에서 Office 개발)
   2007 Microsoft Office 시스템부터 Office 응용 프로그램 사용은 [IManagedAddin 인터페이스](../vsto/imanagedaddin-interface.md) 인터페이스와 함께 포함 되는 VSTO 추가 기능 로더 구성 요소로 호출 하는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다. 이 구성 요소를 사용하여 관리되는 VSTO 추가 기능을 로드할 수 있습니다. 이 인터페이스를 구현하여 사용자 고유의 VSTO 추가 기능 로더 구성 요소를 만들 수 있습니다.  

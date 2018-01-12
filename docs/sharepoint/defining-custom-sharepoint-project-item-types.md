@@ -14,17 +14,15 @@ helpviewer_keywords:
 - SharePoint project items, defining your own types
 - project items [SharePoint development in Visual Studio], defining your own types
 - SharePoint development in Visual Studio, defining new project item types
-ms.assetid: be300c24-fd1b-4fc7-a4e9-a5df1d81d3fc
-caps.latest.revision: "22"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: e627d78e5c040614c29e7503cd7efab728b02bfa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 271cc2227e7bfca38f98a7424a18b314d01c92c6
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="defining-custom-sharepoint-project-item-types"></a>사용자 지정 SharePoint 프로젝트 항목 형식 정의
   새로운 종류의 SharePoint 프로젝트 항목을 만들려고 할 때 새 SharePoint 프로젝트 항목 형식을 정의 합니다. 예를 들어 Visual Studio는 SharePoint 프로젝트 항목 필드 추가 또는 SharePoint 사이트에 사용자 지정 작업에 대 한 포함 되지 않습니다. 고유한 필드, 사용자 지정 작업 또는 다른 종류의 SharePoint 구성 요소를 만들기 위한 SharePoint 프로젝트 항목 형식을 정의할 수 있습니다.  

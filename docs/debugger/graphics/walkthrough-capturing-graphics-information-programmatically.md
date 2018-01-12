@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 2bf34eda9c9957b8a989244da3f2fce03a5d151e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c84239c2f70a32558f64a299791db917926a8c44
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>연습: 프로그래밍 방식으로 그래픽 정보 캡처
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 그래픽 진단을 사용하여 Direct3D 앱에서 그래픽 정보를 프로그래밍 방식으로 캡처할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 -   그래픽 정보 캡처  
   
 > [!NOTE]
->  프로그래밍 방식 캡처의 이전 구현에서는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 용 원격 도구를 사용하여 캡처 기능을 제공했으나 Windows 8.1에서는 Direct3D 11.2를 통해 캡처 기능을 직접 지원합니다. 따라서 Windows 8.1에서는 더 이상 프로그래밍 캡처를 위해 원격 도구를 설치할 필요가 없습니다.  
+>  에 대 한 Visual Studio 용 원격 도구에 의존 하는 프로그래밍 방식 캡처의 이전 구현에서는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 캡처 기능을 제공 하려면 Windows 8.1 Direct3D 11.2를 통해 직접 캡처를 지원 합니다. 따라서 더 이상 해야 Windows 8.1 프로그래밍 캡처를 위해 Visual Studio 용 원격 도구를 설치 합니다.  
   
 ### <a name="preparing-your-app-to-use-programmatic-capture"></a>프로그래밍 캡처를 사용하도록 앱 준비  
  앱에서 프로그래밍 방식 캡처를 사용하려면 필요한 헤더를 포함해야 합니다. 이러한 헤더는 Windows 8.1 SDK의 일부입니다.  
@@ -183,10 +183,10 @@ ms.lasthandoff: 12/22/2017
   
      이 단계를 수행하지 않으면 파일 이름은 default.vsglog가 됩니다. `DONT_SAVE_VSGLOG_TO_TEMP`를 정의하지 않으면 로그 파일의 위치는 임시 디렉터리에 대해 상대적입니다. 그렇지 않은 경우에는 작업 디렉터리에 대해 상대적이고 절대 파일 이름을 지정한 경우에는 다른 위치에 있습니다.  
   
- 에 대 한 [!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)] 앱의 임시 디렉터리의 위치는 각 사용자 및 응용 프로그램에 해당 및 C:\users 같은 위치에 일반적으로 발견\\*username*\AppData\Local\Packages\\ *패키지 패밀리 이름*\TempState\\합니다. 데스크톱 응용 프로그램에 대 한 임시 디렉터리의 위치는 각 사용자에 국한 되며 일반적으로 C:\Users 같은 위치에 있습니다\\*username*\AppData\Local\Temp\\합니다.  
+ 에 대 한 UWP 및 [!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)] 앱의 임시 디렉터리의 위치는 각 사용자 및 응용 프로그램에 해당 및 C:\users 같은 위치에 일반적으로 발견\\*username*\AppData\Local\Packages\\ *패키지 패밀리 이름*\TempState\\합니다. 데스크톱 응용 프로그램에 대 한 임시 디렉터리의 위치는 각 사용자에 국한 되며 일반적으로 C:\Users 같은 위치에 있습니다\\*username*\AppData\Local\Temp\\합니다.  
   
 > [!NOTE]
->  특정 위치에 기록하려면 해당 위치에 대한 쓰기 권한이 있어야 합니다. 그렇지 않으면 오류가 발생합니다. [!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)] 앱은 데이터를 쓸 수 있는 위치에 대해 데스크톱 앱보다 더욱 제한적입니다. 그러므로 특정 위치에 쓰려면 추가 구성이 필요할 수 있습니다.  
+>  특정 위치에 기록하려면 해당 위치에 대한 쓰기 권한이 있어야 합니다. 그렇지 않으면 오류가 발생합니다. 해당 UWP 염두에서에 둬야 및 [!INCLUDE[win8_appname_long](../includes/win8_appname_long_md.md)] 앱은 데스크톱 앱 및 데이터를 쓸 수 있는 특정 위치에 쓰려면 추가 구성이 필요할 수에 대 한 보다 더욱 제한적입니다.  
   
 ### <a name="capturing-the-graphics-information"></a>그래픽 정보 캡처  
  프로그래밍 캡처를 위해 앱을 준비하고 그래픽 로그 파일의 위치 및 이름을 선택적으로 구성한 후 앱을 빌드한 다음 실행하거나 디버그하여 데이터를 캡처합니다. 그러나 프로그래밍 캡처 API를 사용하는 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 에서 그래픽 진단을 시작하지 마세요. 그래픽 로그는 지정한 위치에 기록됩니다. 이 로그 버전을 보관하려면 다른 위치로 이동합니다. 그렇지 않으면 앱을 다시 시작할 때 덮어씁니다.  

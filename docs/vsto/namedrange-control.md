@@ -16,17 +16,15 @@ helpviewer_keywords:
 - NamedRange control, events
 - NamedRange control, data binding
 - NamedRange control
-ms.assetid: 07878c7c-cb5a-4f98-95c4-e828de25dae5
-caps.latest.revision: "56"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 6e2904a812f00e58e1ae5b4a56cd1ce742fc9357
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 22adc003c10e95de0e701eb3f382d9e530b28acf
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="namedrange-control"></a>NamedRange 컨트롤
   <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤은 고유 이름이 있고, 이벤트를 노출하고, 데이터에 바인딩될 수 있는 범위입니다. 자세한 내용은 [Excel Object Model Overview](../vsto/excel-object-model-overview.md)을 참조하세요.  

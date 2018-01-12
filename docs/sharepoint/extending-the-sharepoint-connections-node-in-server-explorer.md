@@ -14,17 +14,15 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], extending a node
 - SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
-ms.assetid: 8bfa5950-0ef4-4417-9538-cc8a5a1c35e2
-caps.latest.revision: "27"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: fe9fb4a12d45cf5d713fb76fe3fe04e1346a8355
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 879d34828e4619ac9a538f9db7cf1acef7b830b0
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="extending-the-sharepoint-connections-node-in-server-explorer"></a>서버 탐색기에서 SharePoint 연결 노드 확장
   Visual Studio에서 연결할 수 있습니다는 개발 컴퓨터에 로컬 SharePoint 사이트를 사용 하 여는 **SharePoint 연결** 에서 노드는**서버 탐색기** 창. 이 노드는 많은 로컬 SharePoint 사이트의 구성 요소를 계층적 트리 뷰에 표시 됩니다. 예를 들어, 목록, 문서 라이브러리 및 콘텐츠 형식 로컬 사이트에서 볼 수 있습니다. 사용에 대 한 자세한 내용은 **서버 탐색기** 참조를 로컬 SharePoint 사이트에 연결 하려면 [SharePoint 연결 서버를 사용 하 여 탐색기 검색](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)합니다.  

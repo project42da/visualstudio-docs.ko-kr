@@ -21,20 +21,18 @@ helpviewer_keywords:
 - projects [Office development in Visual Studio], creating
 - document-level customizations [Office development in Visual Studio], creating
 - application-level add-ins [Office development in Visual Studio], creating projects
-ms.assetid: 0037dbd8-0d2a-4766-90ea-81c819379582
-caps.latest.revision: "96"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: aca002dc7f9793dc379fb4e1a325342704e4d6c8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 60addb19ba78734237e6ccf888cdb69f2629f98c
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>방법: Visual Studio에서 Office 프로젝트 만들기
-  사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 만들고 VSTO 추가 기능을 문서 수준 사용자 지정 Microsoft Office 응용 프로그램에 대 한 합니다. 이러한 유형의 프로젝트에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
+  사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 만들고 VSTO 추가 기능을 문서 수준 사용자 지정 Microsoft Office 응용 프로그램에 대 한 합니다. 이러한 유형의 프로젝트에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션 개발 개요 & #40; VSTO & #41; ](../vsto/office-solutions-development-overview-vsto.md).  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   

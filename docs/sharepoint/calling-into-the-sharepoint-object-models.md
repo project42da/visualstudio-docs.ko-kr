@@ -15,17 +15,15 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, server object model
 - SharePoint commands [SharePoint development in Visual Studio]
 - SharePoint development in Visual Studio, extensibility features
-ms.assetid: 99934f9e-901e-464e-ac8c-22c6c86440f4
-caps.latest.revision: "38"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: b1a0f4175dc884283dcf92b7f6268a518cdaf0ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cbb1b8f573c6dd28280e30fd5602dff2dc30ae02
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="calling-into-the-sharepoint-object-models"></a>SharePoint 개체 모델 호출
   Visual Studio에서 SharePoint 도구의 확장을 만들 때 특정 작업을 수행 하는 SharePoint Api를 호출 해야 할 수 있습니다. 예를 들어 SharePoint 프로젝트용 사용자 지정 배포 단계를 만드는 경우 SharePoint 솔루션을 배포 하기 위해 작업 중 일부를 수행 하는 Api를 호출 해야 할 수 있습니다.  

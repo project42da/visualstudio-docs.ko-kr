@@ -15,17 +15,15 @@ helpviewer_keywords:
 - SharePoint commands
 - SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
-ms.assetid: 5b1f104a-0eaf-4929-9f1f-d7afcfc8b707
-caps.latest.revision: "54"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 8fea089340c0d51fb5b88bf20d5521defc5dcc71
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e8b613f19a23bdb60452b50cf927af08b399d180
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>연습: 서버 탐색기를 확장하여 웹 파트 표시
   Visual Studio에서 사용할 수 있습니다는 **SharePoint 연결** 의 노드 **서버 탐색기** SharePoint 사이트에서 구성 요소를 확인 합니다. 그러나 **서버 탐색기** 기본적으로 일부 구성 요소를 표시 하지 않습니다. 이 연습에서는 연장 됩니다 **서버 탐색기** SharePoint 사이트 각각 연결 된 웹 파트 갤러리에 표시 되도록 합니다.  

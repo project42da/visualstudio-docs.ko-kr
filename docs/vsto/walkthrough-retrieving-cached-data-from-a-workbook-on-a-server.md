@@ -16,17 +16,15 @@ helpviewer_keywords:
 - server-side data access [Office development in Visual Studio]
 - data [Office development in Visual Studio], accessing on server
 - documents [Office development in Visual Studio], server-side data access
-ms.assetid: ef6d61e5-a498-4b38-8e2e-2e80706d854b
-caps.latest.revision: "35"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 31a895bfc4892959eedba846f226bccba3435bb6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 080cbf3d8985f9bcbf1affebfc988a7be61f7818
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-retrieving-cached-data-from-a-workbook-on-a-server"></a>연습: 서버의 통합 문서에서 캐시된 데이터 검색
   이 연습에서는 Microsoft Office Excel 통합 문서에 사용 하 여 Excel을 시작 하지 않고 캐시 된 데이터 집합에서 데이터를 검색 하는 방법을 보여 줍니다.는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스입니다.  

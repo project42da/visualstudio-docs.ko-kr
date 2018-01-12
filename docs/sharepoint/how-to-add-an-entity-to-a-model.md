@@ -18,17 +18,15 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], adding an entity
 - Business Data Connectivity service [SharePoint development in Visual Studio], entity
 - BDC [SharePoint development in Visual Studio], adding an entity
-ms.assetid: 139a6639-dabe-4e14-bb64-e5f4efb6f2fb
-caps.latest.revision: "23"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: ec34a6f93625fdb2cb8a1e5fcc5fb5c95d17653b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2ef3885f2a290fd1d4193daf9436a08ae5588a0d
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-add-an-entity-to-a-model"></a>방법: 모델에 엔터티 추가
   엔터티를 만들려면 Visual Studio에서 엔터티 컨트롤을 추가 **도구 상자** BDC 비즈니스 데이터 연결 () 디자이너에 끌어 합니다.  

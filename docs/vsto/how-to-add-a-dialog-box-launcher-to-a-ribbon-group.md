@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - dialog box launcher [Office development in Visual Studio]
 - Ribbon [Office development in Visual Studio], dialog box launcher
-ms.assetid: 5972664f-4e37-4dc6-90d0-69cedd057e60
-caps.latest.revision: "19"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: f9b9b3500b833b8ecf56d66d036f8284484b6600
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 49dee3d090e2b7f985fd85a6061dea3a2c204e4a
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>방법: 리본 그룹에 대화 상자 시작 관리자 추가
   대화 상자 표시 아이콘은 리본 메뉴의 그룹에 추가할 수 있습니다. 대화 상자 표시 아이콘은 그룹에 표시 되는 작은 아이콘입니다. 사용자 그룹에 관련 된 추가 옵션을 제공 하는 작업 창 또는 관련된 대화 상자를 열려면이 아이콘을 클릭 합니다.  

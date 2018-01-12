@@ -22,17 +22,15 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], Windows Forms controls
 - controls [Office development in Visual Studio], adding at run time
 - helper methods [Office development in Visual Studio]
-ms.assetid: 4f43b3eb-f0ec-44e2-9885-6ede327c6913
-caps.latest.revision: "102"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: d29fd74ee92344ac8b2eedbe4a5b8838171d7d96
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8e956e84cd7b3984473d2e30232ea117e51ddcb6
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="adding-controls-to-office-documents-at-run-time"></a>런타임에 Office 문서에 컨트롤 추가
   런타임에 Microsoft Office Word 문서 및 Microsoft Office Excel 통합 문서에 컨트롤을 추가할 수 있습니다. 런타임에 제거할 수도 있습니다. 런타임에 추가하거나 제거하는 컨트롤을 *동적 컨트롤*이라고 합니다.  

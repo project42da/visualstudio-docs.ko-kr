@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Word solutions in Visual Studio
 - Word projects [Office development in Visual Studio], getting started
-ms.assetid: 30593c47-1658-4fca-b9a9-36fbdf73c901
-caps.latest.revision: "44"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 12265c725480324c396d59d848e5269432bb5d6e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8ad9195a0ef0274400b4c7c69d23a7f1f94d838d
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="getting-started-programming-document-level-customizations-for-word"></a>Word용 문서 수준 사용자 지정 프로그래밍 시작
   바로 시작 하는 Visual Studio를 사용 하 여 Microsoft Office Word 용 문서 수준 사용자 지정 만들기를 경우 알아야 할 다음과 같습니다.  

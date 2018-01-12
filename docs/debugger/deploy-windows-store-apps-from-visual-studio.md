@@ -18,11 +18,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 359431356bb06a04857b93e10996a2123c80f129
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 95f009ca761d4d978fb5e5a9323722e5dfc34cb8
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio에서 UWP 앱 배포
 ![Windows에만 적용](../debugger/media/windows_only_content.png "windows_only_content")  
@@ -59,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 원격 Windows 10 장치에서 활성화 해야 [개발자 모드](/windows/uwp/get-started/enable-your-device-for-development)합니다. 작성자의 업데이트를 실행 하는 Windows 10 장치에서 이상이, 원격 도구는 자동으로 설치 되어 응용 프로그램을 배포할 때. 자세한 내용은 참조 [설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)합니다.
 
 > [!NOTE]
-> Windows 8.1 및 이전 버전-작성자의 업데이트 버전의 Windows 10에서는 Visual Studio 원격 도구가 원격 장치에 설치 해야 하 고 원격 디버거를 실행 해야 합니다. Windows 8.1 개발자 라이선스를 설치 해야 합니다.
+> Windows 8.1 및 이전 버전-작성자의 업데이트 버전의 Windows 10에서는 Visual Studio 용 원격 도구가 원격 장치에 설치 해야 하 고 원격 디버거를 실행 해야 합니다. Windows 8.1 개발자 라이선스를 설치 해야 합니다.
   
 배포 시 원격 디버거 네트워크 채널을 사용하여 원격 장치로 앱 파일을 보냅니다.  
   
@@ -101,7 +101,7 @@ ms.lasthandoff: 12/22/2017
  시작 프로젝트의 디버그 속성 페이지에서 다음 배포 옵션을 설정할 수 있습니다.  
   
  **네트워크 루프백 허용**  
- 보안상의 이유로 일반적인 방식으로 설치된 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱은 앱이 설치된 장치에 대한 네트워크 호출을 수행할 수 없습니다. 기본적으로 Visual Studio를 배포하면 배포된 응용 프로그램에 대한 이 규칙의 예외가 만들어 집니다. 이 예외로 인해 사용자는 단일 컴퓨터에서 통신 프로시저를 테스트할 수 있습니다. 앱을 [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]에 제출하기 전에 이 예외 없이 앱을 테스트해야 합니다.  
+ 보안상의 이유로 UWP 또는 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 일반적인 방식으로 설치 된 앱은 설치 된 장치에 대 한 네트워크 호출을 수행할 수 없습니다. 기본적으로 Visual Studio를 배포하면 배포된 응용 프로그램에 대한 이 규칙의 예외가 만들어 집니다. 이 예외로 인해 사용자는 단일 컴퓨터에서 통신 프로시저를 테스트할 수 있습니다. 앱을 [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]에 제출하기 전에 이 예외 없이 앱을 테스트해야 합니다.  
   
  앱에서 네트워크 루프백 예외를 제거하려면  
   

@@ -16,17 +16,15 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], developing
 - Web Parts [SharePoint development in Visual Studio], creating
 - Web Parts [SharePoint development in Visual Studio], designing
-ms.assetid: 51fb5bdd-b99c-4716-83bc-e66a5da15169
-caps.latest.revision: "34"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 3a580d662c09e0f8a73deca2c4e0cea7cea6650c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c4701cf7509b368c1264436d97d9fc95722e4aff
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="walkthrough-creating-a-web-part-for-sharepoint"></a>연습: SharePoint를 위한 웹 파트 만들기
   웹 파트를 사용 하면 직접 브라우저를 사용 하 여 콘텐츠, 모양 및 SharePoint 사이트 페이지의 동작을 수정할 수 있도록 합니다. 이 연습을 사용 하 여 웹 파트를 만드는 방법을 보여 줍니다.는 **웹 파트** Visual Studio 2010에서 항목 템플릿을 합니다.  

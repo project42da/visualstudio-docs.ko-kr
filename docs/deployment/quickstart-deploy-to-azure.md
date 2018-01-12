@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology: vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: quickstart
 helpviewer_keywords: deployment, website
@@ -14,11 +14,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: azure
-ms.openlocfilehash: 7008ac8ea30e704403542b7b9786cffb1c5da158
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 52da1a2e618d9ececa1c8fd0d90a86e651cd7fde
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio를 사용 하 여 Azure 응용 프로그램 서비스에 ASP.NET 또는 ASP.NET Core 응용 프로그램 게시
 
@@ -28,7 +28,7 @@ Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등�
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 
-1. Visual Studio에서 선택 **파일 > 새 프로젝트**합니다.
+1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
 1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **웹**, 한 다음 가운데 창에서 하나를 선택 하 고 **ASP.NET 웹 응용 프로그램 (.NET Framework)**또는 (C#만) **ASP.NET Core 웹 응용 프로그램**, 클릭 하 고 **확인**합니다.
 
@@ -36,13 +36,13 @@ Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등�
 
 1. 같은 이름을 입력 **MyWebApp** 클릭 **확인**합니다.
 
-    Visual Studio 프로젝트를 만듭니다.
+    Visual Studio가 프로젝트를 만듭니다.
 
 1. 선택 **빌드 > 솔루션 빌드** 프로젝트를 빌드합니다.
 
 ## <a name="publish-to-azure-app-service"></a>Azure App Service에 게시
 
-1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다.
+1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
 
     ![선택 게시](../deployment/media/quickstart-publish-aspnet.png "선택 게시")
 

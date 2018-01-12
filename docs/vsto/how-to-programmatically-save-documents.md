@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - documents [Office development in Visual Studio], saving
 - Word [Office development in Visual Studio], saving documents
-ms.assetid: a6225ae9-94f5-421a-9860-5299002d543d
-caps.latest.revision: "44"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 251522a745ee7b8dc9894a403f09d1a6d3f32793
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 68bf8450906dae3faf5f62acd2d057718938b520
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="how-to-programmatically-save-documents"></a>방법: 프로그래밍 방식으로 문서 저장
   Microsoft Office Word 문서를 저장 하는 방법은 여러 가지가 있습니다. 문서 이름을 변경 하지 않고 문서를 저장할 수 또는 새 이름으로 문서를 저장할 수 있습니다.  

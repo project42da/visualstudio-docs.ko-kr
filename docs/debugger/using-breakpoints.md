@@ -38,11 +38,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 20f1b517d271bd50cdb96c595f2e8ab9be7c5e65
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 30eafe77ef4e115650f0871139e009e07fd6729b
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 중단점을 사용 합니다.
 예를 들어 코드 변수의 상태를 확인하거나 호출 스택을 검토하기 위해 디버거 실행을 중지하려는 경우 중단점을 설정할 수 있습니다. 개발자 도구 상자에 가장 중요한 디버깅 기술 중 하나가 있습니다.  
@@ -232,7 +232,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="export-and-import-breakpoints"></a>중단점 내보내기 및 가져오기  
  중단점을 마우스 오른쪽 단추로 클릭하고 **내보내기**를 선택하여 중단점을 XML 파일로 내보낼 수 있습니다. 파일은 기본적으로 솔루션 디렉터리에 저장됩니다. 중단점을 가져오려면 **중단점** 창을 열고(**CTRL + ALT + B**) 도구 모음에서 오른쪽 화살표(도구 설명: **파일에서 중단점 가져오기**)를 클릭합니다.  
   
-## <a name="troubleshoot-breakpoints"></a>중단점 문제 해결  
+## <a name="troubleshoot"></a>중단점 문제 해결 
   
 ### <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>중단점을 삭제했지만 다시 디버그하기 시작하면 계속 중단점이 적중되는 경우  
  디버그하는 동안 중단점을 삭제한 후에 다음에 디버깅을 시작하면 중단점이 다시 적중되는 경우가 있습니다. 이 중단점이 적중되는 것을 중지하려면 **중단점** 창에서 모든 중단점 인스턴스가 제거되었는지 확인합니다.  

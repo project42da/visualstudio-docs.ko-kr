@@ -13,17 +13,15 @@ dev_langs:
 helpviewer_keywords:
 - Excel solutions in Visual Studio
 - Excel projects [Office development in Visual Studio], getting started
-ms.assetid: 8b73cf08-a173-4b49-b20f-2d2456dbe925
-caps.latest.revision: "41"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload: office
-ms.openlocfilehash: 0c2f8d0a8360153b81d54b5d1867af452e6aaf9d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fdf4afeb260d94b9e121628163c760244ac5f6e1
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="getting-started-programming-document-level-customizations-for-excel"></a>Excel용 문서 수준 사용자 지정 프로그래밍 시작
   바로 시작 하는 Visual Studio를 사용 하 여 Microsoft Office Excel 용 문서 수준 사용자 지정 만들기를 경우 알아야 할 다음과 같습니다.  
