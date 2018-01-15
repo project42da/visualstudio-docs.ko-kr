@@ -8,17 +8,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords: vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords: Domain-Specific Language, serialization
-ms.assetid: 76c53ef1-e3b9-45da-b425-1bddb3c01395
-caps.latest.revision: "17"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 850cb58f6763b521da9cdb1779b0960c0607ef88
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ca481ef5f0994b88cc1eafd37815c07977b007cf
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>파일 저장소 및 XML Serialization 사용자 지정
 사용자 인스턴스를 저장할 때 또는 *모델*, (DSL)에 도메인 특정 언어의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], XML 파일로 생성 되거나 업데이트 됩니다. 파일을 저장소에서 모델을 다시 다시 로드할 수 있습니다.  
@@ -139,7 +137,7 @@ ms.lasthandoff: 12/22/2017
   
 -   설정 **모니커 Is Key** 기존 도메인 클래스의 domain 속성에 대 한 합니다. 속성의 형식 이어야 합니다 `string`합니다.  
   
-    1.  DSL 탐색기에서 확장 **Xml Serialization Behavior\Class 데이터\\***\<도메인 클래스 >***\Element 데이터**를 선택한 후는 도메인 속성입니다.  
+    1.  DSL 탐색기에서 확장 **Xml Serialization Behavior\Class 데이터\\***\<도메인 클래스 >***\Element 데이터**, 한 다음 도메인 속성을 선택 합니다.  
   
     2.  속성 창에서 설정 **모니커 Is Key** 를 `true`합니다.  
   

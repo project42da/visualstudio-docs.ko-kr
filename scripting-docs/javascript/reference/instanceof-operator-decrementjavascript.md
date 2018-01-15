@@ -19,11 +19,11 @@ caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 672047cb066a812d16edc693638c3d6d8295798b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: b2124fe815c89c3c157be3ea729fa7edb9d96b39
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="instanceof-operator-javascript"></a>instanceof 연산자(JavaScript)
 개체가 특정 클래스의 인스턴스인지 여부를 나타내는 부울 값을 반환합니다.  
@@ -37,18 +37,18 @@ result = object instanceof class
   
 ## <a name="parameters"></a>매개 변수  
  `result`  
- 필수 요소. 모든 변수입니다.  
+ 필수. 모든 변수입니다.  
   
  `object`  
- 필수 요소. 모든 개체 식입니다.  
+ 필수. 모든 개체 식입니다.  
   
  `class`  
- 필수 요소. 정의된 모든 개체 클래스입니다.  
+ 필수. 정의된 모든 개체 클래스입니다.  
   
 ## <a name="remarks"></a>설명  
- `instanceof`가 `true`의 인스턴스인 경우 `object` 연산자가 `class`를 반환합니다. `true`가 개체의 프로토타입 체인에 있는 경우 `true` 경우 `class`를 반환합니다. `false`가 `object`의 인스턴스가 아니거나 `class`가 `object`인 경우에는 `null`를 반환합니다.  
+ `instanceof`가 `true`의 인스턴스인 경우 `object` 연산자가 `class`를 반환합니다. 반환 `true` 경우 `class` 개체의 프로토타입 체인에 있습니다. `false`가 `object`의 인스턴스가 아니거나 `class`가 `object`인 경우에는 `null`를 반환합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `instanceof` 연산자를 사용하는 방법을 보여 줍니다.  
   
 ```JavaScript  

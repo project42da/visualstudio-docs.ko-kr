@@ -15,11 +15,11 @@ author: alexhomer1
 ms.author: ahomer
 manager: douge
 ms.workload: multiple
-ms.openlocfilehash: f03b460c3e37bb6299047cb0e35e80895f08cfb3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
-ms.translationtype: MT
+ms.openlocfilehash: af3df828a2abc441ce2efb3998b10fb1991e3127
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>종속성 다이어그램에 명령 및 제스처 추가
 상황에 맞는 메뉴 명령을 정의 하 고 제스처 처리기를 Visual Studio에서 종속성 다이어그램 수 있습니다. 이러한 확장을 다른 Visual Studio 사용자에게 배포할 수 있는 VSIX(Visual Studio Integration Extension)로 패키지할 수 있습니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  확장을 테스트하려면 **Ctrl+F5** 또는 **F5**키를 누릅니다.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스가 시작됩니다. 이 인스턴스에서 종속성 다이어그램을 만듭니다. 이 다이어그램에서 명령 또는 제스처 확장이 작동해야 합니다.  
+     Visual Studio의 실험적 인스턴스가 시작 됩니다. 이 인스턴스에서 종속성 다이어그램을 만듭니다. 이 다이어그램에서 명령 또는 제스처 확장이 작동해야 합니다.  
   
 4.  실험적 인스턴스를 닫고 샘플 코드를 수정합니다. 자세한 내용은 참조 [탐색 및 업데이트 프로그램 코드에서 모델을 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
   
@@ -55,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
      [제스처 처리기 정의](#gesture)  
   
-6.  기본 인스턴스에서 확장을 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 찾을 **.vsix** 파일 **bin\\\***합니다. 설치할 컴퓨터로 파일을 복사하고 파일을 두 번 클릭합니다. 파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
+6.  찾기의 Visual Studio 또는 다른 컴퓨터에 기본 인스턴스에서 확장을 설치 하는 **.vsix** 파일 **bin\\\***합니다. 설치할 컴퓨터로 파일을 복사하고 파일을 두 번 클릭합니다. 파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
   
 ## <a name="adding-a-command-or-gesture-to-a-separate-vsix"></a>별도 VSIX에 명령 또는 제스처 추가  
  명령, 레이어 유효성 검사기 및 기타 확장이 포함된 하나의 VSIX를 만들려면 VSIX를 정의하는 프로젝트 하나와 처리기에 대한 개별 프로젝트를 만드는 것이 좋습니다.
@@ -104,9 +104,9 @@ ms.lasthandoff: 12/22/2017
   
      참고 항목 [탐색 및 업데이트 프로그램 코드에서 모델을 계층](../modeling/navigate-and-update-layer-models-in-program-code.md)합니다.  
   
-2.  기능을 테스트하려면 Ctrl+F5 또는 F5 키를 누릅니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스가 열립니다. 이 경우에 생성 하거나 종속성 다이어그램을 엽니다.  
+2.  기능을 테스트하려면 Ctrl+F5 또는 F5 키를 누릅니다. Visual Studio의 실험적 인스턴스가 열립니다. 이 경우에 생성 하거나 종속성 다이어그램을 엽니다.  
   
-3.  기본 인스턴스에서 VSIX를 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 찾을 **.vsix** 파일에 **bin** VSIX 프로젝트의 디렉터리입니다. VSIX를 설치할 컴퓨터에 파일을 복사합니다. Windows 탐색기(Windows 8에서는 파일 탐색기)에서 VSIX 파일을 두 번 클릭합니다.  
+3.  기본 인스턴스에서 Visual Studio 또는 다른 컴퓨터에 VSIX를 설치 하려면 찾을 **.vsix** 파일에 **bin** VSIX 프로젝트의 디렉터리입니다. VSIX를 설치할 컴퓨터에 파일을 복사합니다. Windows 탐색기에서 VSIX 파일을 두 번 클릭합니다.  
   
      파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
   

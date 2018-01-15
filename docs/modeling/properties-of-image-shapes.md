@@ -10,17 +10,15 @@ f1_keywords:
 - vs.dsltools.dsldesigner.selectimagedialog
 - vs.dsltools.dsldesigner.imageshape
 helpviewer_keywords: Domain-Specific Language, image shape
-ms.assetid: 9ce00ccd-07f2-4640-ac96-2a60481d0d72
-caps.latest.revision: "25"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 72e64d9a0e254ce34cea76eca8617dee71573dd9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e3ab33282c89617a74cc80623040ffc9176b761a
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="properties-of-image-shapes"></a>이미지 모양의 속성
 도메인 클래스는 생성 된 디자이너에 표시 되는 방식을 지정 하려면 이미지 셰이프를 사용할 수 있습니다. 설정 하 여 이미지 셰이프를 정의 고 `Image` 미리 정의 된 이미지 파일에 클래스의 속성입니다. 다음과 같은 형식이 지원 됩니다.  

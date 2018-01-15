@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: fce6b398-935e-4241-bdf4-875d09ff57c7
-caps.latest.revision: "10"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: dcedff359d3f602096508c2123988cd31453e471
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d45bc500004c0014e2d2d27a427198eef888ecaa
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio 아키텍처 도구 사용 지침
 이 아키텍처 도구 설명서는 Visual Studio 2010의 모델링 도구의 사용에 대 한 실무 지침의 다운로드 가능한 패키지. 통합 방식에서 모든 모델링 도구를 사용 하는 방법 간략하게 소개 하며 도구 사용 되는 가장 일반적인 시나리오에 설명 합니다.  

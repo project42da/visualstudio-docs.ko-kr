@@ -10,17 +10,15 @@ helpviewer_keywords:
 - modeling diagrams, saving
 - diagrams - modeling, saving modeling diagrams
 - UML diagrams, saving
-ms.assetid: 0df68943-4c60-4f00-b1e8-b1cdee13762e
-caps.latest.revision: "15"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 253f6292331bd3a67a5f57ab6a0936928dedcf77
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bbb21a2f8d126feb90e3c19eded6496949b992bd
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="export-diagrams-as-images"></a>다이어그램을 이미지로 내보내기
 Visual Studio에서 이해 관계자에 게, 사용자 또는 같은 버전의 Visual Studio를 사용 하지 않는 프로젝트 팀 멤버와 공유할 수 있도록 모델링 읽기 전용 형식에서 다이어그램을 저장할 수 있습니다.  

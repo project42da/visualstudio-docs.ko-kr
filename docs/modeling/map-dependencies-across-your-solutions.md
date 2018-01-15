@@ -26,33 +26,33 @@ helpviewer_keywords:
 - dependency graphs
 - graph documents, exporting
 - code exploration, visualizing
-ms.assetid: e04850a2-17c5-459b-93ec-6c74143b3292
-caps.latest.revision: "243"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: fc8d9774c69216136eb2b4c99b379ef1c714997f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 135e0e9d5b6b2d4e0f75804a98c8f40f17d0b736
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="map-dependencies-across-your-solutions"></a>솔루션 전체의 종속성 매핑
-코드 간의 종속성을 파악하려는 경우 코드 맵을 만들어 해당 코드를 시각화합니다. 그러면 전체 파일과 코드 줄을 확인하지 않고도 여러 코드가 서로 맞는지 파악할 수 있습니다.  
-  
- ![솔루션 전체의 종속성 보기](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")  
-  
- **아래에는 이와 관련한 몇 가지 비디오가 나와 있습니다**.  
-  
--   [시각화를 통해 코드 종속성 이해](http://go.microsoft.com/fwlink/?LinkID=252065)  
-  
--   [변경 영향 시각화](http://go.microsoft.com/fwlink/?LinkID=252068)  
-  
--   [코드 맵으로 복잡한 코드 이해하기](http://go.microsoft.com/fwlink/?LinkID=259869)  
-  
-##  <a name="GetStarted"></a> 코드 맵 시작  
- **코드 맵을 사용 하려면 다음이 필요 합니다**:  
+
+코드 간의 종속성을 파악하려는 경우 코드 맵을 만들어 해당 코드를 시각화합니다. 그러면 전체 파일과 코드 줄을 확인하지 않고도 여러 코드가 서로 맞는지 파악할 수 있습니다.
+
+![솔루션 전체의 종속성 보기](../modeling/media/codemapsmainintro.png "CodeMapsMainIntro")
+
+**아래에는 이와 관련한 몇 가지 비디오가 나와 있습니다**.
+
+- [시각화를 통해 코드 종속성 이해](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understand-your-code-dependencies-through-visualization)
+
+- [변경 영향 시각화](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Visualize-the-impact-of-a-change)
+
+- [코드 맵으로 복잡 한 코드 이해](https://channel9.msdn.com/Series/Visual-Studio-2012-Premium-and-Ultimate-Overview/Visual-Studio-Ultimate-2012-Understanding-complex-code-with-Code-Map-ENU)
+
+## <a name="GetStarted"></a> 코드 맵 시작
+
+**코드 맵을 사용 하려면 다음이 필요 합니다**:
   
 -   Visual Studio Enterprise: 코드 편집기, 솔루션 탐색기, 클래스 뷰 또는 개체 브라우저에서 코드 맵을 만듭니다.  
   
@@ -171,7 +171,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 복잡한 솔루션 맵에서 포커스를 지정하는  또 다른 방법은 기존 맵을 기반을 선택한 항목이 포함된 새 맵을 생성하는 것입니다. **CTRL** 키를 누른 채 포커스를 지정할 항목을 선택하고, 바로 가기 메뉴를 열고, **선택 영역의 새 그래프**를 선택합니다.  
   
-     ![선택한 항목을 새 코드 맵에 표시](../ide/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
+     ![선택한 항목을 새 코드 맵에 표시](../modeling/media/codemapsshowonnewmap.png "CodeMapsShowOnNewMap")  
   
 11. 포함하는 컨텍스트가 새 맵에 전달됩니다. 솔루션 폴더와 사용 하 여 표시 하지 않으려면 다른 컨테이너를 숨기는 **필터** 창.  
   

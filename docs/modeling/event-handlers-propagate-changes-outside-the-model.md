@@ -9,17 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, events
-ms.assetid: 0ac8d1e4-239f-4370-ba1d-3769bb38b8a5
-caps.latest.revision: "18"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: b1ef5efcce853f55ad518f1cdba35d2363f5504e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 717f61f440414370f3e9a2180e1c1cade7436aeb
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>이벤트 처리기로 모델 외부의 변경 내용 전파
 Visualization and Modeling SDK에서와 같은 비 저장소 변수, 파일, 다른 저장소 또는 다른 모델 저장소의 외부 리소스에 대 한 변경 내용을 전파 하는 저장소 이벤트 처리기를 정의할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장 합니다. 이벤트 처리기를 트리거하는 이벤트가 발생 한 트랜잭션의 끝 다음에 실행을 저장 합니다. 또한 실행 취소 또는 다시 실행 작업에서 실행 됩니다. 따라서 저장소 규칙과 달리 저장소 이벤트는 외부 저장소에 있는 값을 업데이트 하는 데 가장 유용 합니다. 저장소 이벤트 처리기는 클래스를 수신 하도록 등록 된.NET 이벤트와 달리: 각 인스턴스에 대해 별도 처리기를 등록할 필요가 없습니다. 변경 처리를 위해 다양 한 방법 중 하나를 선택 하는 방법에 대 한 자세한 내용은 참조 [에 대응 하 고 변경 내용을 전파](../modeling/responding-to-and-propagating-changes.md)합니다.  
@@ -38,7 +36,7 @@ Visualization and Modeling SDK에서와 같은 비 저장소 변수, 파일, 다
   
     -   `ElementDeleted`-모델 요소 뒤 트리거된 관계, 셰이프 또는 연결선 삭제 되었습니다. 속성 값은 요소의 계속 액세스할 수 있습니다 하지만 다른 요소에 관계가 없음을 의미 합니다.  
   
-2.  Partial 클래스 정의 대 한 추가 *YourDsl***DocData** 별도 코드 파일에 **DslPackage** 프로젝트.  
+2.  Partial 클래스 정의 대 한 추가 *YourDsl * * * DocData** 별도 코드 파일에 **DslPackage** 프로젝트.  
   
 3.  다음 예제와 같이 메서드로 이벤트의 코드를 작성 합니다. 것이 `static`액세스 하려는 경우가 아니면 `DocData`합니다.  
   

@@ -21,11 +21,11 @@ caps.latest.revision: "41"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 3d66aee32a191c8cc1879c9436788c196c05e7bd
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 519fc733fd42a194fbd7335127ddf9bcf0bdc220
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="jsonparse-function-javascript"></a>JSON.parse 함수(JavaScript)
 JSON(JavaScript Object Notation) 문자열을 개체로 변환합니다.  
@@ -43,7 +43,7 @@ JSON.parse(text [, reviver])
  `reviver`  
  선택적 요소. 결과를 변환하는 함수입니다. 이 함수는 개체의 각 멤버에 대해 호출됩니다. 멤버에 중첩된 개체가 포함되어 있으면 중첩된 개체가 부모 개체보다 먼저 변환됩니다. 멤버 각각에 대해 다음이 발생합니다.  
   
--   `reviver`에서 유효한 값을 반환하면 멤버 값은 변환된 값으로 바뀝니다.  
+-   `reviver` 에서 유효한 값을 반환하면 멤버 값은 변환된 값으로 바뀝니다.  
   
 -   `reviver`에서 수신한 값과 동일한 값을 반환하면 멤버 값은 수정되지 않습니다.  
   
@@ -66,10 +66,10 @@ JSON.parse(text [, reviver])
   
 -   `text` 인수가 `JSON.stringify`와 같은 JSON 규격 구현으로 serialize되는지 확인합니다.  
   
--   구문 오류 확인에 유용한 `text` JSLint [와 같은 JSON 유효성 검사기에서](http://www.jslint.com/) 인수를 실행합니다.  
+-   실행는 `text` 와 같은 JSON 유효성 검사기의 인수 [JSLint](http://www.jslint.com/) 또는 [CSV로 JSON](https://json-csv.com) 구문 오류를 식별할 수 있습니다.  
   
-## <a name="example"></a>예제  
- 다음 예제에서는 `JSON.parse`를 사용하여 JSON 문자열을 개체로 변환합니다.  
+## <a name="example"></a>예  
+ 다음 예제에서는 `JSON.parse` 를 사용하여 JSON 문자열을 개체로 변환합니다.  
   
 ```JavaScript  
 var jsontext = '{"firstname":"Jesper","surname":"Aaberg","phone":["555-0100","555-0120"]}';  
@@ -81,7 +81,7 @@ document.write(contact.phone[1]);
 // 555-0100  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `JSON.stringify`를 사용하여 배열을 JSON 문자열로 변환한 다음 `JSON.parse`를 사용하여 문자열을 다시 배열로 변환합니다.  
   
 ```JavaScript  
@@ -103,7 +103,7 @@ while (newArr.length > 0) {
 // a  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  `reviver` 함수는 ISO(International Organization for Standardization) 날짜 문자열의 JSON 표현을 UTC(협정 세계시) 형식 `Date` 개체로 변환하는 경우에 사용됩니다. 이 예제에서는 `JSON.parse`를 사용하여 ISO 형식의 날짜 문자열을 deserialize합니다. `dateReviver` 함수는 ISO 날짜 문자열처럼 형식이 지정된 멤버의 `Date` 개체를 반환합니다.  
   
 ```JavaScript  

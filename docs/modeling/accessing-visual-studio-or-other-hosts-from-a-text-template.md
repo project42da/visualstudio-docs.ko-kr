@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a68886da-7416-4785-8145-3796bb382cba
-caps.latest.revision: "5"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: cc0f756637921b9f470e744ec8875ba3a2b54012
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa3f2c0a259afdb09f5565872c9c43c72f38e1c2
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="accessing-visual-studio-or-other-hosts-from-a-text-template"></a>텍스트 템플릿에서 Visual Studio 또는 다른 호스트 액세스
 텍스트 템플릿에서 같은 서식 파일을 실행 하는 호스트에 의해 노출 되는 속성과 메서드를 사용할 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  

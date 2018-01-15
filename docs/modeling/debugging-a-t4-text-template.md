@@ -9,17 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - text templates, troubleshooting
 - text templates, debugging
-ms.assetid: 0877fdf2-20bf-42da-b3cc-4c5856b80821
-caps.latest.revision: "28"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0338425d1812f7638feac01a3e804435cd0ae278
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: da101fa60d897a56c42b52ebbb8e0cc21a6d7a9f
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="debugging-a-t4-text-template"></a>T4 텍스트 템플릿 디버깅
 텍스트 서식 파일에서 중단점을 설정할 수 있습니다. 디자인 타임 텍스트 서식 파일을 디버깅 하려면 텍스트 템플릿 파일을 저장 한 다음 선택 **T4 템플릿 디버깅** 솔루션 탐색기에서 파일의 바로 가기 메뉴. 런타임 텍스트 서식 파일을 디버깅 하려면 단순히 속해 있는 응용 프로그램을 디버깅 합니다.  

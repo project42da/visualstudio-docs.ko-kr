@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 024392a2-2c04-404f-a27b-7273553c3b60
-caps.latest.revision: "16"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 5703410772945a95ed0efea95a665b2a106e0ce7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b3e0d6ec6eb1449defcc49102a97e69a7105a838
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>도메인별 언어 시작
 이 항목에서는 정의 하 고 Visual Studio에 대 한 Modeling SDK를 사용 하 여 만든 도메인 특정 언어 DSL ()를 사용 하 여 기본 개념을 설명 합니다.  
@@ -143,7 +141,7 @@ ms.lasthandoff: 12/22/2017
  ![](../modeling/media/dsl_min.png "DSL_min")  
   
 ### <a name="the-content-of-a-model"></a>모델의 콘텐츠  
- DSL의 인스턴스는 파일의 내용을 라고는 *모델*합니다. 모델에 포함 된 *모델**요소* 및 *링크* 않은 요소 사이 있습니다. DSL 정의 어떤 유형의 모델 요소를 지정 하 고 링크 된 모델에 존재할 수 있습니다. 예를 들어 최소 언어 서식 파일을 생성 하는 DSL의 한 가지 유형의 모델 요소 및가 한 가지 유형의 링크  
+ DSL의 인스턴스는 파일의 내용을 라고는 *모델*합니다. 모델에 포함 된 *모델 * * 요소* 및 *링크* 않은 요소 사이 있습니다. DSL 정의 어떤 유형의 모델 요소를 지정 하 고 링크 된 모델에 존재할 수 있습니다. 예를 들어 최소 언어 서식 파일을 생성 하는 DSL의 한 가지 유형의 모델 요소 및가 한 가지 유형의 링크  
   
  DSL 정의 다이어그램에는 모델을 표시 하는 방법을 지정할 수 있습니다. 다양 한 셰이프 및 연결선의 스타일에서에서 선택할 수 있습니다. 다른 셰이프 안에 일부 셰이프에 나타나도록 지정할 수 있습니다.  
   

@@ -9,17 +9,15 @@ ms.topic: article
 helpviewer_keywords:
 - text templates, custom directive processors
 - walkthroughs [text templates], directive processor
-ms.assetid: b8f35a36-14e1-4467-8f5f-e01402af14d5
-caps.latest.revision: "74"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0eb95bdd83780aa000ea6e3c696c24e319dcd4fa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e50e433ea3f954efd085a02a3e29a0eff958da0c
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="walkthrough-creating-a-custom-directive-processor"></a>연습: 사용자 지정 지시문 프로세서 만들기
 *지시문 프로세서* 코드를 추가 하 여 작동는 *생성 된 변환 클래스*합니다. 호출 하는 경우는 *지시문* 에서 *텍스트 템플릿*, 텍스트 템플릿을 작성 하는 코드의 나머지 부분에서 지시문이 제공 하는 기능을 사용할 수 있습니다.  

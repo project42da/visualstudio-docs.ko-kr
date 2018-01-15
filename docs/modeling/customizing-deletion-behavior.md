@@ -8,17 +8,15 @@ ms.tgt_pltfrm:
 ms.topic: article
 f1_keywords: vs.dsltools.dsldesigner.deletebehavior
 helpviewer_keywords: Domain-Specific Language, deletion
-ms.assetid: c6bf088d-52c6-4817-af45-ddae745bb5a9
-caps.latest.revision: "23"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0eb1878df437e1767d5bfe49ce4794b5b2c243d5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c51c44d47f24994e75ca91b4f4d8d7f2c9a805a6
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="customizing-deletion-behavior"></a>삭제 동작 사용자 지정
 일반적으로 요소를 삭제하면 관련 요소도 삭제됩니다. 해당 요소에 연결된 모든 관계와 모든 자식 요소도 삭제됩니다. 이 동작은 라는 *삭제 전파*합니다. 예를 들어 삭제 전파를 사용자 지정하여 추가 관련 요소도 삭제되도록 지정할 수 있습니다. 프로그램 코드를 작성하면 모델 상태에 따라 삭제 전파가 수행되도록 지정할 수 있습니다. 또한 삭제에 응답하여 다른 변경도 수행되도록 할 수 있습니다.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 >  DSL 정의 프로그램 코드를 추가 하려면에 별도 코드 파일을 만듭니다는 **Dsl** 프로젝트 및 코드 생성 폴더에 있는 클래스를 확장할 수 있는 부분 정의 작성 합니다. 자세한 내용은 참조 [도메인 특정 언어를 사용자 지정 하는 작성 코드](../modeling/writing-code-to-customise-a-domain-specific-language.md)합니다.  
   
 ##  <a name="closure"></a>Delete 클로저를 정의합니다.  
- 삭제 작업의 클래스를 사용 하 여 *YourModel***DeleteClosure** 요소 지정 된 초기 선택 삭제를 확인 하려면. 이 클래스는 `ShouldVisitRelationship()` 및 `ShouldVisitRolePlayer()`를 반복적으로 호출하여 관계 그래프를 단계별로 이동합니다. 이러한 메서드를 재정의할 수 있습니다. ShouldVisitRolePlayer id 링크와 링크의 역할 중 하나에 있는 요소를 함께 제공 됩니다. 다음 값 중 하나를 반환해야 합니다.  
+ 삭제 작업의 클래스를 사용 하 여 *YourModel * * * DeleteClosure** 지정 된 초기 선택을 삭제 하려면 요소를 확인 하 합니다. 이 클래스는 `ShouldVisitRelationship()` 및 `ShouldVisitRolePlayer()`를 반복적으로 호출하여 관계 그래프를 단계별로 이동합니다. 이러한 메서드를 재정의할 수 있습니다. ShouldVisitRolePlayer id 링크와 링크의 역할 중 하나에 있는 요소를 함께 제공 됩니다. 다음 값 중 하나를 반환해야 합니다.  
   
 -   **VisitorFilterResult.Yes**-요소를 삭제 해야 하 고는 워커 진행 시도 하도록 요소의 다른 링크 합니다.  
   

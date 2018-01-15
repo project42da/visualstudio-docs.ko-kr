@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 6a1ae073-443e-45ca-8bc9-9b944362b449
-caps.latest.revision: "14"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: a1b7a8b2abafa4c63192c207ad73d00e508bddfa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e15efdb40b21b187dfc8bec543fc48c91f9efcf6
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>방법: 도메인별 언어를 새 버전으로 마이그레이션
 정의 하 고 도메인 특정 언어를 사용 하는 프로젝트를 마이그레이션할 수 있습니다 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 버전의 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 하는 배포 된 [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)]합니다.  
@@ -63,9 +61,9 @@ ms.lasthandoff: 12/22/2017
   
     1.  클릭 **변환**합니다.  
   
-         복사본을 각 프로젝트 파일 변환 전에 *프로젝트***.csproj** 로 저장 *프로젝트***. vs2008.csproj**  
+         복사본을 각 프로젝트 파일 변환 전에 *프로젝트 * * *.csproj**로 저장 *프로젝트 * * *.vs2008.csproj**  
   
-         각 복사본 *솔루션***.sln** 로 저장 *솔루션***. vs2008.sln**  
+         각 복사본 *솔루션 * * *.sln**로 저장 *솔루션 * * *.vs2008.sln**  
   
     2.  보고 된 모든 실패 한 변환을 조사 합니다.  
   

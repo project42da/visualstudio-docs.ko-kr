@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 7e668620-6217-4e87-aea7-e9036776c8e4
-caps.latest.revision: "3"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 911cc5e7959e5a392ff4ff53945ca5277605f7b2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f3c024fc6be841f5329f133ece35ed0ef7517eb3
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="multiple-dsls-in-one-solution"></a>하나의 솔루션에 여러 DSL 포함
 여러 DSL이 함께 설치되도록 단일 솔루션의 일부분으로 패키지할 수 있습니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  DSL의 VSIX 매니페스트를 결합합니다.  
   
-    1.  열기 *YourVsixProject***\source.extension.manifest**합니다.  
+    1.  열기 * YourVsixProject ***\source.extension.manifest**합니다.  
   
     2.  각 DSL 선택 **콘텐츠 추가** 추가:  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  솔루션을 빌드합니다.  
   
- 그러면 생성되는 VSIX가 두 DSL을 모두 설치합니다. F5 키를 사용 하 여이 테스트 하거나 배포 수 *YourVsixProject***\bin\Debug\\\*.vsix**합니다.  
+ 그러면 생성되는 VSIX가 두 DSL을 모두 설치합니다. F5 키를 사용 하 여이 테스트 하거나 배포 수 * YourVsixProject ***\bin\Debug\\\*.vsix**합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio Modelbus를 사용 하 여 모델을 통합](../modeling/integrating-models-by-using-visual-studio-modelbus.md)   

@@ -15,17 +15,15 @@ helpviewer_keywords:
 - Domain-Specific Language, external types
 - Domain-Specific Language, relationships
 - Domain-Specific Language, domain properties
-ms.assetid: d1772463-0eb1-40a5-b7c0-9a008bc76760
-caps.latest.revision: "43"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 320e244c17f8e21330aa3925030650126a0ba5a6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: becfedc10f054c006709c3095f924b58c1ba5062
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>도메인별 언어 정의 방법
 DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션을 만듭니다. 이 솔루션의 중요한 요소는 DslDefinition.dsl에 저장되는 DSL 정의 다이어그램입니다. DSL 정의는 DSL의 클래스와 모양을 정의합니다. 이러한 요소를 수정하고 필요한 내용을 추가한 후에 프로그램 코드를 추가하여 DSL을 보다 자세하게 사용자 지정할 수 있습니다.  
@@ -122,7 +120,7 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
   
 -   루트 클래스 아래 DSL 정의 다이어그램의 왼쪽 위에 나타납니다 **클래스 및 관계**합니다. 해당 클래스의 이름을 DSL과 다르게 바꿉니다. 예를 들어 라는 DSL **MusicLibrary** 라는 루트 클래스에 있을 수 **음악**합니다.  
   
--   다이어그램 클래스가에 DSL 정의 다이어그램의 오른쪽 아래에 표시 되는 **다이어그램 요소** 열입니다. 해당 열을 보려면 오른쪽으로 스크롤해야 할 수 있습니다. 이름은 일반적으로 *YourDsl***다이어그램**합니다.  
+-   다이어그램 클래스가에 DSL 정의 다이어그램의 오른쪽 아래에 표시 되는 **다이어그램 요소** 열입니다. 해당 열을 보려면 오른쪽으로 스크롤해야 할 수 있습니다. 이름은 일반적으로 * YourDsl ***다이어그램**합니다.  
   
 -   사용 하는 경우는 **작업 흐름** 템플릿 하려면 스윔 레인으로 다이어그램을 만들고 보관 하며 행위자 도메인 클래스 및 ActorSwimlane 셰이프 이름을 바꿀 합니다.  
   
@@ -223,11 +221,11 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
   
 2.  **빌드하고 DSL를 실행 합니다.** 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 눌러 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험적 모드에 있습니다. 실험적 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스에서 DSL의 파일 이름 확장명이 지정된 파일을 열거나 만듭니다.  
   
-3.  **탐색기를 엽니다.** 에 다이어그램의 측면은 일반적으로 이름으로 지정 된 언어 탐색기 창 *YourLanguage* 탐색기. 이 창이 표시되지 않으면 솔루션 탐색기 아래쪽의 탭에 있을 수 있습니다. 이 찾을 수 없는 경우는 **보기** 메뉴에서 **다른 창**, 클릭 하 고 *YourLanguage***탐색기**합니다.  
+3.  **탐색기를 엽니다.** 에 다이어그램의 측면은 일반적으로 이름으로 지정 된 언어 탐색기 창 *YourLanguage* 탐색기. 이 창이 표시되지 않으면 솔루션 탐색기 아래쪽의 탭에 있을 수 있습니다. 이 찾을 수 없는 경우는 **보기** 메뉴에서 **다른 창**, 클릭 하 고 * YourLanguage ***탐색기**합니다.  
   
      탐색기에 모델의 트리 뷰가 표시됩니다.  
   
-4.  **새 요소를 만듭니다.** 맨 위에 있는 루트 노드를 마우스 오른쪽 단추로 누른 **새로 추가***YourClass*합니다.  
+4.  **새 요소를 만듭니다.** 맨 위에 있는 루트 노드를 마우스 오른쪽 단추로 클릭 하 고 클릭 **새로 추가 * * * YourClass*합니다.  
   
      새 클래스 인스턴스가 언어 탐색기에 표시됩니다.  
   
@@ -623,7 +621,7 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
 |DSL 탐색기에서 컬렉션에 항목을 추가할 수 없습니다. 예를 들어 도구를 마우스 오른쪽 단추로 클릭해도 메뉴에 "도구 추가" 명령이 표시되지 않습니다.<br /><br /> DSL 탐색기에서 목록에 요소를 추가할 수 없습니다.|요소를 추가하려는 노드 위의 항목을 마우스 오른쪽 단추로 클릭합니다. 목록에 항목을 추가하려는 경우 추가 명령은 목록 노드가 아닌 해당 소유자에 있습니다.|  
 |도메인 클래스를 만들었는데 언어 탐색기에서 인스턴스를 만들 수 없습니다.|루트를 제외한 모든 도메인 클래스는 포함 관계의 대상이어야 합니다.|  
 |DSL 탐색기에는 요소와 형식 이름만 표시됩니다.|DSL 정의에서 클래스의 도메인 속성을 선택 하 고 속성 창의 설정 **은 요소 이름** true로 합니다.|  
-|DSL이 항상 XML 편집기에서 열립니다.|파일을 읽는 동안 오류가 발생하면 이러한 현상이 발생할 수 있습니다. 그러나 해당 오류를 해결한 후에도 명시적으로 편집기를 DSL 디자이너로 다시 설정해야 합니다.<br /><br /> 프로젝트 항목을 마우스 오른쪽 단추로 클릭 하 여, **프로그램** 선택 *YourLanguage***디자이너 (기본값)**합니다.|  
+|DSL이 항상 XML 편집기에서 열립니다.|파일을 읽는 동안 오류가 발생하면 이러한 현상이 발생할 수 있습니다. 그러나 해당 오류를 해결한 후에도 명시적으로 편집기를 DSL 디자이너로 다시 설정해야 합니다.<br /><br /> 프로젝트 항목을 마우스 오른쪽 단추로 클릭 하 여, **프로그램** 선택 * YourLanguage ***디자이너 (기본값)**합니다.|  
 |어셈블리 이름을 변경한 후 DSL의 도구 상자가 표시되지 않습니다.|검사 하 고 업데이트 **DslPackage\GeneratedCode\Package.tt** 자세한 내용은 참조 [하는 방법: 도메인 특정 언어의 Namespace 변경](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)합니다.|  
 |어셈블리 이름을 변경하지 않았는데 DSL의 도구 상자가 표시되지 않습니다.<br /><br /> 또는 확장을 로드하지 못했음을 보고하는 메시지 상자가 표시됩니다.|실험적 인스턴스를 다시 설정하고 솔루션을 다시 빌드합니다.<br /><br /> 1.  Windows 시작 메뉴, 아래에서 **모든 프로그램**를 확장 하 고 [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)], 다음 **도구**, 클릭 하 고 **Microsoft Visual Studio 실험적 인스턴스를 다시 설정**합니다.<br />2.  에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **빌드** 메뉴를 클릭 하 여 **솔루션 다시 빌드**합니다.|  
   

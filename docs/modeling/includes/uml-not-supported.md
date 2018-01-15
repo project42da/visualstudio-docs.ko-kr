@@ -1,24 +1,6 @@
 ---
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: de5e62d83e40c685457970306d66e48bbb9516e9
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
-ms.translationtype: MT
-ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
 ---
+
 Visual Studio 2017 부터는 UML 디자이너에서 Visual Studio에서 제거 되었습니다. 자세한 내용은 참조 [이 블로그 게시물](https://blogs.msdn.microsoft.com/visualstudioalm/2016/10/14/uml-designers-have-been-removed-layer-designer-now-supports-live-architectural-analysis/)합니다. 
 
 UML 사용 하려면 여전히 필요 하면 이후 버전의 Visual Studio와 함께 호환 되는 시각적 Sudio Enterprise 2015, 사용할 수 있습니다.

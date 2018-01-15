@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: models, versions of Visual Studio
-ms.assetid: 46eee279-a9e4-4742-a024-5bd2cf032b86
-caps.latest.revision: "20"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f42cccacee8b46b5bc3d637ad8f7153d704f8441
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1483fe7d62baf5d81865897308fb9d25947213c3
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>다른 Visual Studio 버전에서 모델 및 다이어그램 읽기
 모델 생성을 지원하지 않는 Visual Studio 버전에서 모델을 열면 읽기 전용 모드로 모델이 열립니다. 이 모드에서는 다이어그램의 레이아웃을 변경할 수 있지만 모델을 변경할 수는 없습니다.  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 -   두 개의 다이어그램 읽으려 한다고, 예를 들어 다이어그램에 대 한 파일 **MyDiagram.classdiagram 및 MyDiagram.classdiagram.layout**합니다.  
   
     > [!NOTE]
-    >  종속성 다이어그램에 대 한 또한 있어야 라는 파일이 *MyDiagram***. layerdiagram.suppressions**합니다.  
+    >  종속성 다이어그램에 대 한 또한 있어야 라는 파일 * MyDiagram ***. layerdiagram.suppressions**합니다.  
   
 -   모델링 프로젝트 파일 (**MyModel.modelproj**)  
   

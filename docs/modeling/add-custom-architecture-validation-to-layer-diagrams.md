@@ -7,17 +7,15 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: dependency diagrams, adding custom validation
-ms.assetid: fed7bc08-295a-46d6-9fd8-fb537f1f75f1
-caps.latest.revision: "42"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 130d53cb0e32add0251306c261cf456459f2192a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 82d65618dd510c90fa2aea95b43727787e9e727b
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="add-custom-architecture-validation-to-dependency-diagrams"></a>종속성 다이어그램에 사용자 지정 아키텍처 유효성 검사 추가
 Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델에 대 한 프로젝트의 소스 코드를 소스 코드 종속성 다이어그램의 종속성을 준수 하는지 확인할 수 있습니다. 표준 유효성 검사 알고리즘이 있지만 고유한 유효성 검사 확장을 정의할 수 있습니다.  
@@ -59,7 +57,7 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
     > [!NOTE]
     >  메서드는 특정 상황에서만 호출되고 중단점은 자동으로 작동하지 않습니다. 자세한 내용은 [레이어 유효성 검사 디버그](#debugging)를 참조하세요.  
   
-5.  기본 인스턴스에서 확장을 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 찾을 **.vsix** 파일 **bin\\\***합니다. 설치할 컴퓨터로 파일을 복사하고 파일을 두 번 클릭합니다. 파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
+5.  찾기의 Visual Studio 또는 다른 컴퓨터에 기본 인스턴스에서 확장을 설치 하는 **.vsix** 파일 **bin\\\***합니다. 설치할 컴퓨터로 파일을 복사하고 파일을 두 번 클릭합니다. 파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
   
 ## <a name="adding-a-layer-validator-to-a-separate-vsix"></a>개별 VSIX에 레이어 유효성 검사기 추가  
  레이어 유효성 검사기, 명령 및 기타 확장이 포함된 하나의 VSIX를 만들려면 VSIX를 정의하는 프로젝트 하나와 처리기에 대한 개별 프로젝트를 만드는 것이 좋습니다. 
@@ -116,7 +114,7 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
     > [!NOTE]
     >  메서드는 특정 상황에서만 호출되고 중단점은 자동으로 작동하지 않습니다. 자세한 내용은 [레이어 유효성 검사 디버그](#debugging)를 참조하세요.  
   
-8.  기본 인스턴스에서 VSIX를 설치 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 또는 다른 컴퓨터에서 찾을 **.vsix** 파일에 **bin** VSIX 프로젝트의 디렉터리입니다. VSIX를 설치할 컴퓨터에 파일을 복사합니다. Windows 탐색기에서 VSIX 파일을 두 번 클릭합니다. (Windows 8의 파일 탐색기.)  
+8.  기본 인스턴스에서 Visual Studio 또는 다른 컴퓨터에 VSIX를 설치 하려면 찾을 **.vsix** 파일에 **bin** VSIX 프로젝트의 디렉터리입니다. VSIX를 설치할 컴퓨터에 파일을 복사합니다. Windows 탐색기에서 VSIX 파일을 두 번 클릭합니다.
   
      파일을 제거하려면 **도구** 메뉴에서 **확장 및 업데이트** 를 사용합니다.  
   
@@ -150,7 +148,7 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
   
  사용자가 **아키텍처 유효성 검사** 메뉴 명령을 호출하면 레이어 런타임 시스템에서는 레이어 및 해당 아티팩트를 분석하여 그래프를 생성합니다. 그래프는 다음 네 파트로 구성됩니다.  
   
--   그래프에서 노드 및 링크로 표시되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션의 레이어 모델.  
+-   그래프에서 노드 및 링크로로 표현 되는 Visual Studio 솔루션의 레이어 모델.  
   
 -   솔루션에 정의되고 노드로 표시되는 코드, 프로젝트 항목 및 기타 아티팩트와 분석 프로세스에서 검색되는 종속성을 나타내는 링크.  
   
@@ -190,7 +188,7 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
  코드에서 레이어에서 요소로 연결된 링크에는 “Represents” 범주가 있습니다.  
   
 ##  <a name="debugging"></a> 유효성 검사 디버그  
- 레이어 유효성 검사 확장을 디버그하려면 Ctrl+F5를 누릅니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스가 열립니다. 이 인스턴스에서 레이어 모델을 열거나 만듭니다. 이 모델은 코드와 연결되어야 하고 종속성을 하나 이상 포함해야 합니다.  
+ 레이어 유효성 검사 확장을 디버그하려면 Ctrl+F5를 누릅니다. Visual Studio의 실험적 인스턴스가 열립니다. 이 인스턴스에서 레이어 모델을 열거나 만듭니다. 이 모델은 코드와 연결되어야 하고 종속성을 하나 이상 포함해야 합니다.  
   
 ### <a name="test-with-a-solution-that-contains-dependencies"></a>종속성이 포함된 솔루션으로 테스트  
  다음 특징이 있어야 유효성 검사가 실행됩니다.  
@@ -199,7 +197,7 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
   
 -   모델에 코드 요소와 연결된 레이어가 있습니다.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스를 처음으로 시작하여 유효성 검사 확장을 테스트할 경우 이러한 특징이 포함된 솔루션을 열거나 만듭니다.  
+ 유효성 검사 확장을 테스트 하려면 Visual Studio의 실험적 인스턴스를 시작 하면 처음으로 열거나 이러한 특징이 포함 하는 솔루션을 만듭니다.  
   
 ### <a name="run-clean-solution-before-validate-architecture"></a>아키텍처 유효성 검사 전에 솔루션 정리 실행  
  유효성 검사 코드를 업데이트할 때마다 유효성 검사 명령을 테스트하기 전에 실험적 솔루션에서 **빌드** 메뉴의 **솔루션 정리** 를 사용합니다. 유효성 검사의 결과가 캐시되므로 이 작업이 필요합니다. 테스트 종속성 다이어그램 또는 해당 코드를 업데이트 하지 않은 경우 유효성 검사 메서드가 실행 되지 않습니다.  
@@ -207,9 +205,9 @@ Visual Studio에서 사용자가 유효성을 검사할 수는 레이어 모델�
 ### <a name="launch-the-debugger-explicitly"></a>명시적으로 디버거 시작  
  유효성 검사는 개별 프로세스로 실행됩니다. 따라서 유효성 검사 메서드의 중단점이 트리거되지 않습니다. 유효성 검사가 시작되었을 때 디버거를 프로세스에 명시적으로 연결해야 합니다.  
   
- 유효성 검사 프로세스에 디버거를 연결하려면 유효성 검사 메서드의 시작 부분에 `System.Diagnostics.Debugger.Launch()` 에 대한 호출을 삽입합니다. 디버깅 대화 상자가 나타나면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 주 인스턴스를 선택합니다.  
+ 유효성 검사 프로세스에 디버거를 연결하려면 유효성 검사 메서드의 시작 부분에 `System.Diagnostics.Debugger.Launch()` 에 대한 호출을 삽입합니다. 디버깅 대화 상자가 표시 되 면 Visual Studio의 주 인스턴스를 선택 합니다.  
   
- 또는 `System.Windows.Forms.MessageBox.Show()`에 대한 호출을 삽입할 수 있습니다. 메시지 상자가 나타나면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 주 인스턴스로 이동하고 **디버그** 메뉴에서 **프로세스에 연결**을 클릭합니다. 이름이 **Graphcmd.exe**인 프로세스를 선택합니다.  
+ 또는 `System.Windows.Forms.MessageBox.Show()`에 대한 호출을 삽입할 수 있습니다. 및 Visual Studio의 주 인스턴스로 이동 하는 메시지 상자가 나타나면는 **디버그** 메뉴 클릭 **프로세스에 연결**합니다. 이름이 **Graphcmd.exe**인 프로세스를 선택합니다.  
   
  항상 Crtl+F5(**디버깅하지 않고 시작**)를 눌러서 실험적 인스턴스를 시작합니다.  
   

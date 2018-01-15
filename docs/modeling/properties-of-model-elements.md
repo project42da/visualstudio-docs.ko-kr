@@ -6,17 +6,15 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 884d66aa-cb2d-4be0-ae45-8360a01f1c7d
-caps.latest.revision: "6"
-author: alancameronwills
-ms.author: awills
-manager: douge
+author: gewarren
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: ef494d68ba8ce8134483f910bc7e6d984e4717c8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f43414aa2cddd7c992f49f9d75f9bee6399c2883
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="properties-of-model-elements"></a>모델 요소의 속성
 이 섹션에서에서 DSL 정의 다이어그램 또는 DSL 탐색기에서 요소를 선택 하면 속성 창에서 표시 되는 속성을 나열 합니다.  
