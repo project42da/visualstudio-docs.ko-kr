@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio의 Python 옵션 | Microsoft Docs"
 ms.custom: 
-ms.date: 07/13/2017
+ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -19,11 +19,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: b80164e4b41bf164e9235858f51d8a211dd70caa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6776eee4436e54ca1b0215b307eeb5fa098802c3
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio의 Python 옵션
 
@@ -40,6 +40,8 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 - [진단 옵션](#diagnostics-options)
 - [대화형 Windows 옵션](#interactive-windows-options)
 - [고급 Python 편집기 옵션](#advanced-python-editor-options)
+
+**실험적** 그룹은 아직 개발 중인 기능에 대한 옵션을 포함하며 여기서는 설명하지 않습니다. 종종 [Microsoft 블로그의 Python 엔지니어링](https://blogs.msdn.microsoft.com/pythonengineering/)의 포스트에 논의됩니다.
 
 ## <a name="general-options"></a>일반 옵션
 
@@ -69,7 +71,6 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 | Python 표준 라이브러리 디버깅 사용 | 끄기 | 디버깅하는 동안 표준 라이브러리 소스 코드를 한 단계씩 실행할 수 있지만 디버거를 시작하는 데 걸리는 시간이 증가합니다.|
 
 ![Python 옵션 대화 상자, 디버깅 탭](media/options-debugging.png)
-
 
 ## <a name="diagnostics-options"></a>진단 옵션
 
