@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: cd1ce1ce47705e5e8b63fb3ef7cc36c401503886
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a8136bd3e694ae544b176b8da6bfc2b721eb0c89
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
 
@@ -27,7 +27,7 @@ Visual Studio용 Python 지원을 설치하려면 Visual Studio 버전과 일치
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 및 이전 버전](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터도 별도로 설치해야 합니다(Python 3.5 이전, 3.6은 지원되지 않음). 자세한 내용은 [Python 환경](python-environments.md)을 참조하세요. 같은 페이지는 Visual Studio 2017에 기존 Python 인터프리터 추가를 위한 지침도 포함합니다.
+Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터도 별도로 설치해야 합니다(Python 3.5 및 이전, 3.6은 지원되지 않으며 “지원되지 않는 Python 버전 3.6”이란 메시지가 표시됨). 자세한 내용은 [Python 환경](python-environments.md)을 참조하세요. 같은 페이지는 Visual Studio 2017에 기존 Python 인터프리터 추가를 위한 지침도 포함합니다.
 
 설치 단계를 따른 후 Python 지원을 신속하게 테스트하려면 Alt+I를 누르고 `2+2`를 입력하여 Python 대화형 창을 엽니다. `4`의 출력이 표시되지 않으면 수행한 단계를 다시 확인합니다.
 
@@ -60,10 +60,10 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
     ![Visual Studio 설치 관리자의 Python 개발 옵션](media/installation-python-options.png)
 
-    | 옵션 | 설명 | 
+    | 옵션 | 설명 |
     | --- | --- |
     | Python 배포 | 작업하려는 Python 2, Python 3, Anaconda2 및 Anaconda3의 32비트 및 64비트 변형의 조합을 선택합니다. 각각은 배포의 인터프리터, 런타임 및 라이브러리를 포함합니다. 특히 Anaconda는 다양한 패키지를 포함하는 개방형 데이터 과학 플랫폼입니다. (배포를 추가하거나 제거하기 위해 언제든지 Visual Studio 설치 관리자로 돌아갈 수 있습니다.) |
-    | Cookiecutter 템플릿 지원 | Cookiecutter 그래픽 UI를 설치하여 템플릿을 검색하고, 템플릿 옵션을 입력하고, 프로젝트 및 파일을 만듭니다. [Cookiecutter 확장 사용](cookiecutter.md)을 참조하세요. |
+    | Cookiecutter 템플릿 지원 | Cookiecutter 그래픽 UI를 설치하여 템플릿을 검색하고, 템플릿 옵션을 입력하고, 프로젝트 및 파일을 만듭니다. [Cookiecutter 확장 사용](cookiecutter.md)을 선택합니다. |
     | Python 웹 지원 | Bottle, Flask 및 Django 프레임워크를 사용하는 프로젝트에 대한 템플릿과 함께 HTML, CSS 및 JavaScript 편집 지원을 포함하는 웹 개발용 도구를 설치합니다. [Python 웹 프로젝트 템플릿](template-web.md)을 참조하세요. |
     | Python IoT 지원 | Python을 사용하여 Windows IoT Core 개발을 지원합니다. |
     | Python 네이티브 개발 도구 | C++ 컴파일러 및 Python에 대한 기본 확장을 개발하는 데 필요한 기타 구성 요소를 설치합니다. [Python용 C++ 확장 만들기](cpp-and-python.md)를 참조하세요. |
@@ -83,7 +83,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 1. **프로그래밍 언어 > Visual Studio용 Python 도구**를 선택한 후 **다음**을 선택합니다.
 
-    ![Visual Studio 2015 설치 관리자의 PTVS 옵션](media/installation-vs2015.png)    
+    ![Visual Studio 2015 설치 관리자의 PTVS 옵션](media/installation-vs2015.png)
 
 1. Visual Studio 설치가 완료되면 [원하는 Python 인터프리터를 설치](python-environments.md#selecting-and-installing-python-interpreters)합니다. 인터프리터가 이미 설치되어 있는 경우 [기존 인터프리터에 대한 환경 만들기](python-environments.md#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
 
@@ -114,11 +114,11 @@ Visual Studio 2015 및 이전 버전에서 설치 경로는 다음과 같습니�
 
 다음은 각 문자에 대한 설명입니다.
 
-- &lt;VS_ver&gt;는 다음과 같습니다.    
-    - Visual Studio 2015의 경우 14.0
-    - Visual Studio 2013의 경우 12.0
-    - Visual Studio 2012의 경우 11.0
-    - Visual Studio 2010의 경우 10.0
+- &lt;VS_ver&gt;는 다음과 같습니다.
+  - Visual Studio 2015의 경우 14.0
+  - Visual Studio 2013의 경우 12.0
+  - Visual Studio 2012의 경우 11.0
+  - Visual Studio 2010의 경우 10.0
 - &lt;PTVS_ver&gt;는 2.2, 2.1, 2.0, 1.5, 1.1 또는 1.0과 같은 버전 번호입니다.
 
 ### <a name="user-specific-installations-15-and-earlier"></a>사용자 고유의 설치(1.5 및 이전 버전)

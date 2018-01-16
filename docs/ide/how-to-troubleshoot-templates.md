@@ -1,7 +1,7 @@
 ---
-title: "방법: Visual Studio에서 템플릿 문제 해결 | Microsoft Docs"
+title: "Visual Studio 프로젝트 템플릿 및 항목 템플릿의 로드 문제 해결 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/02/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -11,60 +11,64 @@ helpviewer_keywords: templates [Visual Studio], troubleshooting
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1d78554f39be1fdf21c5bbcb4d0abf5cf691fce9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ba6d9a73cd45a0e497fb2ecc0f4b4697071e3b37
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-troubleshoot-templates"></a>방법: 템플릿 문제 해결
 
 개발 환경에서 템플릿을 로드할 수 없는 경우 여러 가지 방법으로 문제를 찾을 수 있습니다.
 
-## <a name="validating-the-vstemplate-file"></a>.vstemplate 파일의 유효성 검사
+## <a name="validate-the-vstemplate-file"></a>.vstemplate 파일 유효성 검사
 
-템플릿에서 .vstemplate 파일이 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 템플릿 스키마를 따르지 않으면 해당 템플릿은 **새 프로젝트** 대화 상자에 표시되지 않을 수 있습니다.
+템플릿에서 .vstemplate 파일이 Visual Studio 템플릿 스키마를 따르지 않으면 해당 템플릿은 **새 프로젝트** 대화 상자에 표시되지 않을 수 있습니다.
 
 ### <a name="to-validate-the-vstemplate-file"></a>.vstemplate 파일의 유효성을 검사하려면
 
-1.  템플릿을 포함하는 .zip 파일을 찾습니다.  
+1. 템플릿을 포함하는 .zip 파일을 찾습니다.
 
-2.  .zip 파일의 압축을 풉니다.  
+1. .zip 파일의 압축을 풉니다.
 
-3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 **파일** 메뉴에서 **열기**를 클릭하고 **파일**을 클릭합니다.
+1. Visual Studio의 **파일** 메뉴에서 **열기** > **파일**을 선택합니다.
 
-4.  템플릿의 .vstemplate 파일을 선택하고 **열기**를 클릭합니다.  
-  
-5.  .vstemplate 파일의 XML이 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 템플릿 스키마에 부합하는지 확인합니다. .vstemplate 스키마에 대한 자세한 내용은 [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)를 참조하세요.  
+1. 템플릿에 .vstemplate 파일을 선택하고 **열기**를 선택합니다.
+
+1. .vstemplate 파일의 XML이 템플릿 스키마에 부합하는지 확인합니다. .vstemplate 스키마에 대한 자세한 내용은 [템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)를 참조하세요.
 
     > [!NOTE]
     > .vstemplate 파일을 제작하는 동안 IntelliSense 지원을 가져오려면 `xmlns` 특성을 `VSTemplate` 요소에 추가하고 http://schemas.microsoft.com/developer/vstemplate/2005의 값을 할당합니다.
 
-6.  .vstemplate 파일을 저장한 다음 닫습니다.  
-  
-7.  템플릿에 포함된 파일을 선택하고, 마우스 오른쪽 단추로 클릭하고, **보내기**를 선택하고, **압축(ZIP) 폴더**를 클릭합니다. 선택한 파일이 .zip 파일로 압축됩니다.  
-  
-8.  새 .zip 파일을 이전 .zip 파일과 같은 디렉터리에 배치합니다.  
-  
-9. 추출된 템플릿 파일과 이전 템플릿 .zip 파일을 삭제합니다.
+1. .vstemplate 파일을 저장한 다음 닫습니다.
 
-## <a name="monitoring-the-event-log"></a>이벤트 로그 모니터링
+1. 템플릿에 포함되어 있는 파일을 선택하고 마우스 오른쪽 단추를 클릭한 다음 **보내기** > **압축(ZIP) 폴더**를 선택합니다. 선택한 파일이 .zip 파일로 압축됩니다.
 
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]는 .zip 템플릿 파일을 처리할 때 발생한 오류를 기록합니다. 템플릿에 예상 대로 **새 프로젝트** 대화 상자가 표시되지 않는 경우 **이벤트 뷰어**를 사용하여 문제를 해결할 수 있습니다.
+1. 새 .zip 파일을 이전 .zip 파일과 같은 디렉터리에 배치합니다.
+
+1. 추출된 템플릿 파일과 이전 템플릿 .zip 파일을 삭제합니다.
+
+## <a name="monitor-the-event-log"></a>이벤트 로그 모니터링
+
+Visual Studio는 .zip 템플릿 파일을 처리할 때 발생한 오류를 기록합니다. 템플릿에 예상 대로 **새 프로젝트** 대화 상자에 표시되지 않는 경우 **이벤트 뷰어**를 사용하여 문제를 해결할 수 있습니다.
 
 ### <a name="to-locate-template-errors-in-event-viewer"></a>이벤트 뷰어에서 템플릿 오류를 찾으려면
 
-1.  Windows에서 **시작**, **제어판**을 차례로 클릭한 다음 **관리 도구**, **이벤트 뷰어**를 차례로 두 번 클릭합니다.  
-  
-2.  왼쪽 창에서 **응용 프로그램**을 클릭합니다.  
-  
-3.  `Visual Studio - VsTemplate`이라는 **원본** 값을 포함하는 이벤트를 검색합니다.  
-  
-4.  오류를 보려면 템플릿 이벤트를 두 번 클릭합니다.
+1. Windows의 **시작** 메뉴에서 **Windows 관리 도구** > **이벤트 뷰어**를 선택합니다.
+
+1. 왼쪽 창에서 **Windows 로그** > **응용 프로그램**을 선택합니다.
+
+1. `Visual Studio - VsTemplate`이라는 **원본** 값을 포함하는 이벤트를 검색합니다.
+
+1. 오류를 보려면 템플릿 이벤트를 두 번 클릭합니다.
+
+## <a name="enable-diagnostic-logging"></a>진단 로깅 사용
+
+[템플릿 검색 문제 해결(확장성)](../extensibility/troubleshooting-template-discovery.md)의 단계를 수행하여 템플릿 검색에 대한 진단 로그를 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)   
-[프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)   
-[Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)
+[템플릿 검색 문제 해결(확장성)](../extensibility/troubleshooting-template-discovery.md)  
+[템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)  
+[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
+[템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)

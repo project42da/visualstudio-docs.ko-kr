@@ -11,11 +11,11 @@ helpviewer_keywords:
 author: rpetrusha
 ms.author: ronpet
 ms.workload: dotnet
-ms.openlocfilehash: b0d4726bc29ebbb6f90fde5e7817ec2fb596177c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9034fbbffee2b3883f15be0d724f00cafad8126a
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="get-started-with-live-unit-testing-in-visual-studio"></a>Visual Studio에서 Live Unit Testing 시작
 
@@ -56,7 +56,7 @@ Visual Studio 솔루션에서 Live Unit Testing을 사용하도록 설정하면 
 1. **새 프로젝트 추가** 대화 상자에서 C# 노드를 선택한 후 **.NET Standard**를 선택합니다. 
 
    > [!NOTE]
-   > 라이브러리는 특정 .NET 구현보다는 .NET Standard를 대상으로 하므로 해당 버전의 .NET Standard를 지원하는 모든 .NET 구현에서 호출할 수 있습니다. 자세한 내용은 [.NET 표준](https://docs.microsoft.com/dotnet/standard/net-standard)을 참조하세요.
+   > 라이브러리는 특정 .NET 구현보다는 .NET Standard를 대상으로 하므로 해당 버전의 .NET Standard를 지원하는 모든 .NET 구현에서 호출할 수 있습니다. 자세한 내용은 [.NET 표준](/dotnet/standard/net-standard)을 참조하세요.
 
 1. 오른쪽 창의 **클래스 라이브러리(.NET Standard)** 템플릿을 선택하고 다음 그림과 같이 **이름** 텍스트 상자에 `StringLibrary`를 입력합니다.
 
@@ -84,7 +84,7 @@ Visual Studio 솔루션에서 Live Unit Testing을 사용하도록 설정하면 
 1. **새 프로젝트 추가** 대화 상자에서 Visual Basic 노드를 선택한 후 **.NET Standard**를 선택합니다. 
 
    > [!NOTE]
-   > 라이브러리는 특정 .NET 구현보다는 .NET Standard를 대상으로 하므로 해당 버전의 .NET Standard를 지원하는 모든 .NET 구현에서 호출할 수 있습니다. 자세한 내용은 [.NET 표준](https://docs.microsoft.com/dotnet/standard/net-standard)을 참조하세요.
+   > 라이브러리는 특정 .NET 구현보다는 .NET Standard를 대상으로 하므로 해당 버전의 .NET Standard를 지원하는 모든 .NET 구현에서 호출할 수 있습니다. 자세한 내용은 [.NET 표준](/dotnet/standard/net-standard)을 참조하세요.
 
 1. 오른쪽 창의 **클래스 라이브러리(.NET Standard)** 템플릿을 선택하고 다음 그림과 같이 **이름** 텍스트 상자에 `StringLibrary`를 입력합니다.
 
@@ -104,7 +104,7 @@ Visual Studio 솔루션에서 Live Unit Testing을 사용하도록 설정하면 
      
       - `HasEmbeddedSpaces`는 문자열에 포함된 공백 문자가 있는 경우 `true`를 반환하고 그렇지 않은 경우 `false`를 반환합니다.
     
-1. **솔루션 탐색기**에서 StringLibrary 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **응용 프로그램** 탭에서 다음 그림과 같이 **루트 네임 스페이스** 텍스트 상자에 있는 텍스트를 삭제합니다. 루트 네임 스페이스는 소스 코드의 [Namespace 문](https://docs.microsoft.com/dotnet/visual-basic/language-reference/statements/namespace-statement)으로 정의됩니다.
+1. **솔루션 탐색기**에서 StringLibrary 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. **응용 프로그램** 탭에서 다음 그림과 같이 **루트 네임 스페이스** 텍스트 상자에 있는 텍스트를 삭제합니다. 루트 네임 스페이스는 소스 코드의 [Namespace 문](/dotnet/visual-basic/language-reference/statements/namespace-statement)으로 정의됩니다.
 
    ![Visual Basic 프로젝트에 대한 [프로젝트 속성] 대화 상자](./media/lut-start/vb-properties.png)
  
@@ -205,7 +205,7 @@ Visual Studio 솔루션에서 Live Unit Testing을 사용하도록 설정하면 
  
 1. Visual Studio에서 Live Unit Test를 시작하며 이에 따라 모든 테스트가 자동으로 실행됩니다. 
  
-테스트 실행이 완료되면 **테스트 탐색기**에 전반적인 결과와 개별 테스트 결과가 모두 표시됩니다. 또한 코드 창에는 테스트 코드 검사와 테스트 결과가 그래픽 방식으로 모두 표시됩니다. 다음 그림에서 볼 수 있듯이 세 테스트가 모두 성공적으로 실행됩니다. 또한 테스트가 `StartsWithUpper` 메서드의 모든 코드 경로를 포함하고 해당 테스트가 모두 성공적으로 실행되었음을 보여 줍니다(녹색 확인 표시 "✓"로 표시됨). 마지막으로 `StringLibrary`의 다른 메서드 중 어느 것도 코드 검사를 포함하지 않음을 보여줍니다(파란색 선 ""로 표시됨). 
+테스트 실행이 완료되면 **테스트 탐색기**에 전반적인 결과와 개별 테스트 결과가 모두 표시됩니다. 또한 코드 창에는 테스트 코드 검사와 테스트 결과가 그래픽 방식으로 모두 표시됩니다. 다음 그림에서 볼 수 있듯이 세 테스트가 모두 성공적으로 실행됩니다. 또한 테스트가 `StartsWithUpper` 메서드의 모든 코드 경로를 포함하고 해당 테스트가 모두 성공적으로 실행되었음을 보여 줍니다(녹색 확인 표시 "✓"로 표시됨). 마지막으로 `StringLibrary`의 다른 메서드 중 어느 것도 코드 검사를 포함하지 않음을 보여 줍니다(파란색 선 “➖”로 표시됨). 
 
 # <a name="ctabcsharp"></a>[C#](#tab/csharp)
 ![Live Unit testing을 시작한 후 테스트 탐색기 및 코드 창](media/lut-start/lut-results-cs.png) 
@@ -250,7 +250,7 @@ Live Unit Testing에서 확인해야 할 주요 문제점은 불완전한 코드
 
     [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#1)]
 
-1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) 메서드 호출 바로 다음에 아래 코드를 추가하여 `DirectCallWithNullOrEmpty` 메서드를 수정합니다.
+1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) 메서드 호출 바로 다음에 아래 코드를 추가하여 `DirectCallWithNullOrEmpty` 메서드를 수정합니다.
 
     [!code-csharp[StringLibraryTest source code](samples/snippets/csharp/lut-start/unittest2.cs#2)]
 
@@ -267,7 +267,7 @@ Live Unit Testing에서 확인해야 할 주요 문제점은 불완전한 코드
 
     [!code-vb[StringLibraryTest source code](samples/snippets/visual-basic/lut-start/unittest2.vb#1)]
 
-1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) 메서드 호출 바로 다음에 아래 코드를 추가하여 `DirectCallWithNullOrEmpty` 메서드를 수정합니다.
+1. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsFalse`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.isfalse) 메서드 호출 바로 다음에 아래 코드를 추가하여 `DirectCallWithNullOrEmpty` 메서드를 수정합니다.
 
     [!code-vb[StringLibraryTest source code](samples/snippets/visual-basic/lut-start/unittest2.vb#2)]
 
@@ -308,7 +308,7 @@ Live Unit Testing에서 확인해야 할 주요 문제점은 불완전한 코드
     
 1. **Debug Selected(디버그 선택됨)**를 선택하여 실패한 테스트를 디버깅합니다. 
  
-1. Visual Studio는 디버그 모드에서 테스트를 실행합니다. 테스트에서는 배열의 각 문자열을 `phrase`라는 변수에 할당하고 이를 `HasEmbeddedSpaces` 메서드에 전달합니다. 어설션 문이 처음으로 `false`일 때 프로그램 실행이 일시 중지되고 디버거를 호출합니다. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) 메서드 호출의 예기치 않은 값으로 생성되는 예외 대화 상자가 다음 그림에 표시됩니다.  
+1. Visual Studio는 디버그 모드에서 테스트를 실행합니다. 테스트에서는 배열의 각 문자열을 `phrase`라는 변수에 할당하고 이를 `HasEmbeddedSpaces` 메서드에 전달합니다. 어설션 문이 처음으로 `false`일 때 프로그램 실행이 일시 중지되고 디버거를 호출합니다. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) 메서드 호출의 예기치 않은 값으로 생성되는 예외 대화 상자가 다음 그림에 표시됩니다.  
 
    ![Live Unit Testing 예외 대화 상자.](media/lut-start/exception-dialog-cs.png) 
  
@@ -341,7 +341,7 @@ Live Unit Testing에서 확인해야 할 주요 문제점은 불완전한 코드
     
 1. **Debug Selected(디버그 선택됨)**를 선택하여 실패한 테스트를 디버깅합니다. 
  
-1. Visual Studio는 디버그 모드에서 테스트를 실행합니다. 테스트에서는 배열의 각 문자열을 `phrase`라는 변수에 할당하고 이를 `HasEmbeddedSpaces` 메서드에 전달합니다. 어설션 문이 처음으로 `false`일 때 프로그램 실행이 일시 중지되고 디버거를 호출합니다. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](https://docs.microsoft.com/en-us/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) 메서드 호출의 예기치 않은 값으로 생성되는 예외 대화 상자가 다음 그림에 표시됩니다.  
+1. Visual Studio는 디버그 모드에서 테스트를 실행합니다. 테스트에서는 배열의 각 문자열을 `phrase`라는 변수에 할당하고 이를 `HasEmbeddedSpaces` 메서드에 전달합니다. 어설션 문이 처음으로 `false`일 때 프로그램 실행이 일시 중지되고 디버거를 호출합니다. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) 메서드 호출의 예기치 않은 값으로 생성되는 예외 대화 상자가 다음 그림에 표시됩니다.  
 
    ![Live Unit Testing 예외 대화 상자.](media/lut-start/exception-dialog-vb.png) 
  

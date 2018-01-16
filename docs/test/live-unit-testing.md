@@ -8,15 +8,14 @@ ms.topic: article
 helpviewer_keywords:
 - Visual Studio ALM
 - Live Unit Testing
-ms.assetid: 5b51fb96-94f4-4926-92b9-262156c05b85
 author: rpetrusha
 ms.author: ronpet
 ms.workload: dotnet
-ms.openlocfilehash: 45ab3f266a46cd08d269f0c463fb6cc26f494a91
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 725b9e31e725106dcd9e461a8f5d3749230fd5c9
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017을 사용한 Live Unit Testing
 
@@ -104,7 +103,7 @@ Live Unit Testing을 사용하면(다음 섹션 [Live Unit Testing 시작 일시
  
 ##  <a name="viewing-coverage-visualization-in-the-editor-as-you-type"></a>입력할 때 편집기에서 검사 시각화 보기
 
-Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드 줄 각각을 업데이트하여 작성한 코드에 단위 테스트가 적용되는지 및 적용된 테스트에 통과하는지 여부를 표시합니다.  다음 그림에서는 테스트를 통과하거나 실패한 코드 줄뿐만 아니라 테스트가 적용되지 않은 코드 줄을 보여 줍니다. 녹색 “✓” 표시가 있는 줄은 테스트를 통과한 경우에만 적용됩니다. 빨간색 “x”로 표시된 줄은 하나 이상의 테스트에 실패한 경우 적용됩니다. 파란색 “”로 표시된 줄은 테스트되지 않은 경우에 적용됩니다.
+Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드 줄 각각을 업데이트하여 작성한 코드에 단위 테스트가 적용되는지 및 적용된 테스트에 통과하는지 여부를 표시합니다.  다음 그림에서는 테스트를 통과하거나 실패한 코드 줄뿐만 아니라 테스트가 적용되지 않은 코드 줄을 보여 줍니다. 녹색 “✓” 표시가 있는 줄은 테스트를 통과한 경우에만 적용됩니다. 빨간색 “x”로 표시된 줄은 하나 이상의 테스트에 실패한 경우 적용됩니다. 파란색 “➖”로 표시된 줄은 테스트되지 않은 경우에 적용됩니다.
 
   ![이미지](./media/lut-codewindow.png)
 
@@ -118,13 +117,13 @@ Live Unit Testing은 일단 활성화되면 Visual Studio 편집기에서 코드
  
   ![이미지](./media/lut-failedinfo.png) 
 
-이름 및 테스트 결과를 제공하는 것 외에도, 도구 설명을 통해 일련의 테스트를 다시 실행하고 디버거를 사용하여 일련의 테스트를 실행할 수 있습니다. 도구 설명에서 테스트를 하나 이상 선택하면 해당 테스트만 실행하거나 디버깅할 수도 있습니다. 따라서 코드 창을 벗어나지 않고도 테스트를 디버깅할 수 있습니다. 디버깅할 때는 이미 설정된 중단점을 관찰하는 것 외에도, 디버거가 예기치 않은 결과를 반환하는 [`Assert`](https://docs.microsoft.com/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert) 메서드를 실행할 때 프로그램 실행을 일시 중지합니다. 
+이름 및 테스트 결과를 제공하는 것 외에도, 도구 설명을 통해 일련의 테스트를 다시 실행하고 디버거를 사용하여 일련의 테스트를 실행할 수 있습니다. 도구 설명에서 테스트를 하나 이상 선택하면 해당 테스트만 실행하거나 디버깅할 수도 있습니다. 따라서 코드 창을 벗어나지 않고도 테스트를 디버깅할 수 있습니다. 디버깅할 때는 이미 설정된 중단점을 관찰하는 것 외에도, 디버거가 예기치 않은 결과를 반환하는 [`Assert`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert) 메서드를 실행할 때 프로그램 실행을 일시 중지합니다. 
 
 도구 설명에서 실패한 테스트를 마우스로 가리키면 다음 이미지에 표시된 대로 확장되어 오류에 대한 추가 정보를 제공합니다. 도구 설명에서 실패한 테스트를 두 번 클릭하면 해당 테스트로 이동할 수 있습니다.
 
   ![이미지](./media/lut-failedmsg.png) 
 
-실패한 테스트로 이동하면 Live Unit Testing은 메서드 시그니처에 통과한 테스트(녹색 “✓”와 함께 반쯤 채워진 비커로 표시), 실패한 테스트(빨간색 “🞩”와 함께 반쯤 채워진 비커) 또는 Live Unit Testing에 포함되지 않은 테스트(파란색 “”와 함께 반쯤 채워진 비커)를 시각적으로 표시합니다. 테스트 이외의 메서드는 기호로 데코레이팅되지 않습니다. 다음 그림에서는 네 가지 형식의 모든 메서드를 보여 줍니다.
+실패한 테스트로 이동하면 Live Unit Testing은 메서드 시그니처에 통과한 테스트(녹색 “✓”와 함께 반쯤 채워진 비커로 표시), 실패한 테스트(빨간색 “🞩”와 함께 반쯤 채워진 비커) 또는 Live Unit Testing에 포함되지 않은 테스트(파란색 “➖”와 함께 반쯤 채워진 비커)를 시각적으로 표시합니다. 테스트 이외의 메서드는 기호로 데코레이팅되지 않습니다. 다음 그림에서는 네 가지 형식의 모든 메서드를 보여 줍니다.
  
   ![이미지](media/lut-testsource.png)
  

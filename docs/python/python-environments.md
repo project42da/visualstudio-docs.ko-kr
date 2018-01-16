@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: bd871b1e78878c8ae05cb69e1ac97d50197a18b4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4f190d02850f1effc9e1597d14fecf323de68356
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="python-environments"></a>Python 환경
 
@@ -53,7 +53,7 @@ Visual Studio 2017을 제외하고, Python 지원에는 Python 인터프리터�
 | 인터프리터 | 설명 |
 | --- | --- |
 | [CPython](https://www.python.org/) | 가장 널리 사용되는 “기본” 인터프리터로, 32비트 및 64비트 버전으로 사용 가능합니다(32비트 권장). 최신 언어 기능, 최대 Python 패키지 호환성, 완전한 디버깅 지원 및 [IPython](http://ipython.org/)과 상호 interop을 포함합니다. [Python 2 또는 Python 3을 사용해야 하나요?](http://wiki.python.org/moin/Python2orPython3)도 참조하세요. Visual Studio 2015 및 이전 버전은 Python 3.6을 지원하지 않으며 “Python 버전 3.6 지원되지 않음” 오류가 표시될 수 있습니다. 대신 Python 3.5 또는 이전을 사용합니다. |
-| [IronPython](https://github.com/IronLanguages/main) | Python의 .NET 구현으로, 32비트 및 64비트 버전으로 사용 가능하며 C#/F#/Visual Basic interop, .NET API에 대한 액세스, 표준 Python 디버깅(그러나 C++ 혼합 모드 디버깅은 제외) 및 혼합 IronPython/C# 디버깅을 제공합니다. 하지만 IronPython에서는 가상 환경을 지원하지 않습니다. | 
+| [IronPython](https://github.com/IronLanguages/ironpython2) | Python의 .NET 구현으로, 32비트 및 64비트 버전으로 사용 가능하며 C#/F#/Visual Basic interop, .NET API에 대한 액세스, 표준 Python 디버깅(그러나 C++ 혼합 모드 디버깅은 제외) 및 혼합 IronPython/C# 디버깅을 제공합니다. 하지만 IronPython에서는 가상 환경을 지원하지 않습니다. |
 | [Anaconda](https://www.continuum.io) | Python에서 제공하는 개방형 데이터 과학 플랫폼으로, 최신 버전의 CPython과 설치하기 어려운 대부분의 패키지를 포함합니다. 달리 결정할 수 없는 경우 권장됩니다. |
 | [PyPy](http://www.pypy.org/) | Python의 고성능 추적 JIT 구현으로, 장기적으로 실행되는 프로그램과 성능 문제를 확인했으나 다른 해결 방법을 찾을 수 없는 상황에 적절합니다. Visual Studio에서 작동하지만 고급 디버깅 기능은 제한적으로 지원됩니다. |
 | [Jython](http://www.jython.org/) | JVM(Java Virtual Machine)에서 Python 구현. IronPython과 마찬가지로, Jython에서 실행되는 코드는 Java 클래스 및 라이브러리와 상호 작용할 수 있지만 CPython용으로 작성된 많은 라이브러리는 사용할 수 없습니다. Visual Studio에서 작동하지만 고급 디버깅 기능은 제한적으로 지원됩니다. |
@@ -73,7 +73,7 @@ Python 환경 창을 열려면 다음 중 하나를 수행합니다.
 
 ![Python 환경 창](media/environments-default-view.png)
 
-위의 예제에서는 Python 3.4(32비트 CPython)가 IronPython 2.7 32비트 및 64비트 버전과 함께 설치되어 있습니다. 이 경우 굵게 표시된 기본 환경은 Python 3.4이며 모든 새로운 프로젝트에 사용됩니다. 목록에 환경이 표시되지 않는 경우 Visual Studio 2015 또는 이전 버전에 Visual Studio용 Python 도구를 설치했으나 Python 인터프리터를 설치하지 않은 것입니다(위의 [Python 인터프리터 선택 및 설치](#selecting-and-installing-python-interpreters) 참조). 
+위의 예제에서는 Python 3.4(32비트 CPython)가 IronPython 2.7 32비트 및 64비트 버전과 함께 설치되어 있습니다. 이 경우 굵게 표시된 기본 환경은 Python 3.4이며 모든 새로운 프로젝트에 사용됩니다. 목록에 환경이 표시되지 않는 경우 Visual Studio 2015 또는 이전 버전에 Visual Studio용 Python 도구를 설치했으나 Python 인터프리터를 설치하지 않은 것입니다(위의 [Python 인터프리터 선택 및 설치](#selecting-and-installing-python-interpreters) 참조).
 
 > [!Tip]
 > 위에 표시된 것처럼 **Python 환경** 창이 좁으면 환경이 맨 위에 나열되고 아래에 다양한 탭이 표시됩니다. 하지만 창을 충분히 확장하면 넓은 보기로 변경되어 작업하기가 더 편리할 수 있습니다.
@@ -161,7 +161,7 @@ Visual Studio는 레지스트리를 확인하여 정상적으로 설치된 Pytho
 
 **지금 권한 상승**은 단일 작업에 대한 관리 권한을 pip에 부여하며, 사용 권한에 대한 운영 체제 프롬프트에도 적용됩니다. **관리자 권한 없이 계속**을 선택하면 패키지 설치가 시도되지만, pip에서 폴더를 만들려고 할 때 실패하고 “오류: ‘C:\Program Files\Anaconda3\Lib\site-packages\png.py’를 만들 수 없습니다. 사용 권한이 거부되었습니다.” 등의 출력이 표시됩니다.
 
-**패키지를 설치하거나 제거할 때 항상 권한 상승**을 선택하면 해당 환경에 대해 대화 상자가 표시되지 않습니다. 대화 상자를 다시 표시하려면 **도구 > 옵션 > Python 도구 > 일반**으로 이동한 다음 **영구적으로 숨겨진 모든 대화 상자 다시 설정** 단추를 선택합니다. 
+**패키지를 설치하거나 제거할 때 항상 권한 상승**을 선택하면 해당 환경에 대해 대화 상자가 표시되지 않습니다. 대화 상자를 다시 표시하려면 **도구 > 옵션 > Python 도구 > 일반**으로 이동한 다음 **영구적으로 숨겨진 모든 대화 상자 다시 설정** 단추를 선택합니다.
 
 동일한 옵션 탭에서 **항상 관리자로 pip 실행**을 선택하여 모든 환경에 대해 대화 상자를 표시하지 않을 수도 있습니다. [옵션 - 일반 탭](options.md#general-options)을 참조하세요.
 
@@ -247,13 +247,13 @@ Visual Studio는 실행, 디버깅, 구문 검사, 가져오기 및 멤버 완�
 
     ![requirements.txt 옵션 업데이트](media/environments-requirements-txt-replace.png)
 
-    - **전체 파일 바꾸기**는 존재하는 모든 항목, 주석 및 옵션이 제거됩니다.
-    - **기존 항목 새로 고침**은 패키지 요구 사항을 검색하고 버전 지정자를 현재 설치된 버전에 맞게 업데이트합니다.
-    - **항목 업데이트 및 추가**는 확인된 요구 사항을 새로 고치고 모든 다른 패키지를 파일 끝에 추가합니다.
+  - **전체 파일 바꾸기**는 존재하는 모든 항목, 주석 및 옵션이 제거됩니다.
+  - **기존 항목 새로 고침**은 패키지 요구 사항을 검색하고 버전 지정자를 현재 설치된 버전에 맞게 업데이트합니다.
+  - **항목 업데이트 및 추가**는 확인된 요구 사항을 새로 고치고 모든 다른 패키지를 파일 끝에 추가합니다.
 
 `requirements.txt` 파일은 프로젝트의 요구 사항을 동결하기 위해 작성된 것이므로 모든 설치된 패키지가 정확한 버전으로 작성됩니다. 정확한 버전을 사용하면 다른 컴퓨터에서 사용자 환경을 쉽게 재현할 수 있습니다. 패키지는 다른 패키지의 종속성으로 버전 범위로 되거나 pip 이외의 설치 관리자로 설치된 경우에도 포함됩니다.
 
-새 가상 환경을 추가할 때 ` requirements.txt` 파일이 존재하면 **가상 환경 추가** 대화 상자에 패키지를 자동으로 설치하는 옵션이 표시되어 다른 컴퓨터에서 환경을 쉽게 다시 만들 수 있습니다.
+새 가상 환경을 추가할 때 `requirements.txt` 파일이 존재하면 **가상 환경 추가** 대화 상자에 패키지를 자동으로 설치하는 옵션이 표시되어 다른 컴퓨터에서 환경을 쉽게 다시 만들 수 있습니다.
 
 ![requirements.txt로 가상 환경 만들기](media/environments-requirements-txt.png)
 

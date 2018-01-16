@@ -1,7 +1,7 @@
 ---
-title: "방법: 프로젝트 템플릿과 항목 템플릿 찾기 및 구성 | Microsoft Docs"
+title: "방법: Visual Studio에서 템플릿 구성 | Microsoft Docs"
 ms.custom: 
-ms.date: 06/02/2017
+ms.date: 01/02/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -9,173 +9,135 @@ ms.tgt_pltfrm:
 ms.topic: article
 helpviewer_keywords:
 - project templates [Visual Studio], locations
-- custom template locations [Visual Studio]
-- item templates, locations
-- Visual Studio templates, locations
-- project templates [Visual Studio], displaying
-- templates [Visual Studio], locations
-ms.assetid: 71f9ed52-c9c9-4818-9bce-c279ffaa0438
-caps.latest.revision: "25"
+- item templates [Visual Studio], locations
+- template locations [Visual Studio]
+- Visual Studio templates, organizing
+- templates [Visual Studio], organizing
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e4f3388d7484021bd4c12e4a7273b312190bd6dd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 167ffa269ea8051a4791000d96a86cb5788af60d
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>방법: 프로젝트 템플릿과 항목 템플릿 찾기 및 구성
-Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 템플릿이 나타납니다. 템플릿에 대한 사용자 지정 하위 범주를 만들어 이러한 하위 범주가 사용자 인터페이스에 나타나도록 할 수도 있습니다.  
 
-## <a name="locating-templates"></a>템플릿 찾기  
- 기본적으로 Visual Studio에서는 프로젝트 템플릿과 항목 템플릿을 찾기 위해 두 위치를 검색합니다. .vstemplate 파일을 포함하는 압축된 파일이 이러한 위치에 있는 경우 템플릿은 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 나타납니다.  
+Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 템플릿이 나타납니다. 템플릿에 대한 사용자 지정 하위 범주를 만들어 이러한 하위 범주가 대화 상자에 나타나도록 할 수도 있습니다.
 
-### <a name="installed-templates"></a>설치된 템플릿  
- 기본적으로 제품과 함께 설치된 템플릿은 다음 위치에 있습니다.  
+## <a name="locating-templates"></a>템플릿 찾기
 
--   \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\\*Language*\\*Locale*\  
+설치된 템플릿과 사용자 템플릿은 서로 다른 두 위치에 저장됩니다. .vstemplate 파일을 포함하는 압축된 파일이 이러한 위치에 있는 경우 템플릿은 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 나타납니다.
 
--   \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\\*Language*\\*Locale\\*  
+> [!TIP]
+> **도구** > **옵션** > **프로젝트 및 솔루션** > **위치**에서 사용자 템플릿의 위치를 설정할 수 있습니다.
 
- 예를 들어 다음 디렉터리에는 영어용 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 템플릿이 포함되어 있습니다.  
+### <a name="installed-templates"></a>설치된 템플릿
 
- C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\  
+기본적으로 Visual Studio와 함께 설치되는 템플릿은 다음 위치에 있습니다.
 
-### <a name="custom-templates"></a>사용자 지정 템플릿  
- 기본적으로 사용자 지정 템플릿은 다음 위치에 있습니다.  
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\\*프로그래밍 언어*\\*로캘 ID*
 
--   \My Documents\Visual Studio *Version*\Templates\ProjectTemplates\\*Language*\  
+- \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\\*프로그래밍 언어*\\*로캘 ID*
 
--   \My Documents\Visual Studio *Version*\Templates\ItemTemplates\\*Language*\  
+예를 들어 다음 디렉터리에는 영어용 Visual Basic 프로젝트 템플릿(LCID 1033)이 포함되어 있습니다.
 
- 예를 들어 다음 디렉터리에는 사용자 지정 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트 템플릿이 포함되어 있습니다.  
+   C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\
 
- C:\Documents and Settings\UserName\My Documents\Visual Studio *Version*\Templates\ProjectTemplates\Visual C#\  
+### <a name="user-templates"></a>사용자 템플릿
 
- 사용자 지정 템플릿은 지역화된 템플릿에 대한 하위 디렉터리를 포함하지 않습니다. **환경\프로젝트 및 솔루션**의 **옵션** 대화 상자에서 사용자 지정 템플릿의 기본 디렉터리를 변경할 수 있습니다.  
+기본적으로 사용자 템플릿은 다음 위치에 있습니다.
 
-## <a name="organizing-templates"></a>템플릿 구성  
- **새 프로젝트** 및 **새 항목 추가** 대화 상자의 범주는 설치된 템플릿과 사용자 지정 템플릿 위치에 있는 디렉터리 구조를 반영합니다. 이러한 디렉터리 구조를 수정하여 이해할 수 있는 방식으로 템플릿을 구성할 수 있습니다.  
+- %USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ProjectTemplates
+
+- %USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ItemTemplates
+
+예를 들어 다음 디렉터리에는 C#용 사용자 프로젝트 템플릿이 포함되어 있습니다.
+
+   C:\Users\UserName\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#\
 
 > [!NOTE]
->  프로그래밍 언어 수준에서 새 범주를 만들 수 없습니다. 새 범주는 각 언어 내에서만 만들어질 수 있습니다.  
+> 사용자 템플릿 위치에는 지역화된 템플릿에 대한 로캘 하위 디렉터리가 포함되지 않습니다.
 
- 특정 언어의 설치된 템플릿과 사용자 지정 템플릿의 디렉터리 구조가 서로 같지 않은 경우(즉, 한 폴더에는 없는 디렉터리가 다른 폴더에 있는 경우) **새 프로젝트** 대화 상자에는 모든 범주가 병합되어 나타납니다.  
+**프로젝트 및 솔루션** > **위치**의 **옵션** 대화 상자에서 사용자 템플릿의 기본 디렉터리를 변경할 수 있습니다.
 
-### <a name="organizing-installed-templates"></a>설치된 템플릿 구성  
- 프로그래밍 언어 폴더에 하위 디렉터리를 만들어 설치된 템플릿을 구성할 수 있습니다. 이러한 하위 디렉터리는 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 각 언어 내의 가상 폴더로 나타납니다.  
+## <a name="organizing-templates"></a>템플릿 구성
 
-##### <a name="to-create-new-installed-project-template-categories"></a>설치된 프로젝트 템플릿 범주를 새로 만들려면  
+**새 프로젝트** 및 **새 항목 추가** 대화 상자의 범주는 설치된 템플릿과 사용자 템플릿 위치에 있는 디렉터리 구조를 반영합니다. 이러한 디렉터리 구조를 수정하여 이해할 수 있는 방식으로 템플릿을 구성할 수 있습니다.
 
-1.  설치된 템플릿 디렉터리의 언어 폴더에 폴더를 만듭니다. 예를 들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 템플릿에 대해 Office 범주를 만들려면 다음 디렉터리를 만듭니다  
+> [!NOTE]
+> 프로그래밍 언어 수준에서 새 범주를 만들 수 없습니다. 새 범주는 각 언어 내에서만 만들어질 수 있습니다.
 
-     \\*VisualStudioInstallationDirectory*\Common7\IDE\ProjectTemplates\VisualBasic\1033\Office\  
+> [!NOTE]
+> 특정 언어의 설치된 템플릿과 사용자 템플릿의 디렉터리 구조가 동일하지 않을 경우(즉, 한 폴더에는 디렉터리가 있지만 다른 폴더에는 없는 경우) 모든 범주가 **새 프로젝트** 대화 상자에 표시됩니다.
 
-2.  이 범주의 모든 템플릿을 새 폴더에 넣습니다.  
+### <a name="organizing-user-templates"></a>사용자 템플릿 구성
 
-3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 모든 인스턴스를 닫습니다.  
+사용자 템플릿 위치에 새 폴더를 추가하여 사용자 템플릿을 독자적인 범주로 구성할 수 있습니다. **새 프로젝트** 대화 상자는 템플릿 범주에 수행된 모든 변경 내용을 반영합니다.
 
-4.  **시작** 메뉴에서 **실행**을 클릭한 다음 **cmd**를 입력하고 **확인**을 클릭합니다.  
+#### <a name="to-create-new-user-project-template-categories"></a>사용자 프로젝트 템플릿 범주를 새로 만들려면
 
-5.  명령 프롬프트에서 devenv.exe가 있는 디렉터리를 찾고 **devenv /installvstemplates**를 입력합니다.  
+1. 사용자 프로젝트 템플릿 디렉터리의 프로그래밍 언어 폴더에 폴더를 만듭니다. 예를 들어 C# 프로젝트 템플릿에 대해 **HelloWorld** 범주를 만들려면 다음 디렉터리를 만듭니다.
 
-6.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 실행합니다.  
+    \%USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ProjectTemplates\Visual C#\HelloWorld\
 
-7.  **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
+1. 이 범주의 모든 템플릿을 새 폴더에 넣습니다.
 
-8.  Office 범주가 **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 아래에 나타나는지 확인합니다.  
+1. **파일** 메뉴에서 **새로 만들기** > **프로젝트**를 차례로 선택합니다.
 
- 프로젝트 항목 템플릿의 일부를 사용자 지정 폴더로 그룹화할 수도 있습니다.  
+   **HelloWorld** 범주가 **새 프로젝트** 대화 상자의 **설치됨** > **Visual C#** 아래에 나타납니다.
 
-##### <a name="to-create-new-installed-item-template-categories"></a>설치된 항목 템플릿 범주를 새로 만들려면  
+#### <a name="to-create-new-user-item-template-categories"></a>사용자 항목 템플릿 범주를 새로 만들려면
 
-1.  설치된 템플릿 디렉터리의 언어 폴더에 폴더를 만듭니다. 예를 들어, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 항목 템플릿에 대해 Web 범주를 만들려면 다음 디렉터리를 만듭니다.  
+1. 사용자 항목 템플릿 디렉터리의 프로그래밍 언어 폴더에 폴더를 만듭니다. 예를 들어 C# 항목 템플릿에 대해 **HelloWorld** 범주를 만들려면 다음 디렉터리를 만듭니다.
 
-     \\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\CSharp\1033\Web\  
+    \%USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ItemTemplates\Visual C#\HelloWorld\
 
-2.  이 범주의 모든 템플릿을 새 폴더에 넣습니다.  
+1. 이 범주의 모든 템플릿을 새 폴더에 넣습니다.
 
-3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 모든 인스턴스를 닫습니다.  
+1. 프로젝트를 만들거나 기존 프로젝트를 엽니다. 그런 다음 **프로젝트** 메뉴에서 **새 항목 추가**를 선택합니다.
 
-4.  **시작** 메뉴에서 **실행**을 클릭한 다음 **cmd**를 입력하고 **확인**을 클릭합니다.  
+   **HelloWorld** 범주가 **새 항목 추가** 대화 상자의 **설치됨** > **Visual C# 항목** 아래에 나타납니다.
 
-5.  명령 프롬프트에서 devenv.exe가 있는 디렉터리를 찾고 **devenv /setup**를 입력합니다.  
+### <a name="displaying-templates-in-parent-categories"></a>부모 범주에 템플릿 표시
 
-6.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 실행합니다.  
+.vstemplate 파일에서 `NumberOfParentCategoriesToRollUp` 요소를 사용하여 하위 범주의 템플릿이 부모 범주에 표시되도록 할 수 있습니다. 이 단계는 프로젝트 템플릿과 항목 템플릿에 대해 동일합니다.
 
-7.  프로젝트를 만들거나 기존 프로젝트를 엽니다.  
+#### <a name="to-display-templates-in-parent-categories"></a>템플릿을 부모 범주에 표시하려면
 
-8.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
+1. 템플릿을 포함하는 .zip 파일을 찾습니다.
 
-9. 웹 범주가 **새 항목 추가** 대화 상자의 **프로젝트 형식** 창에 나타나는지 확인합니다.  
+1. .zip 파일의 압축을 풉니다.
 
-### <a name="organizing-custom-templates"></a>사용자 지정 템플릿 구성  
- 사용자 지정 템플릿 위치에 새 폴더를 추가하여 사용자 지정 템플릿을 독자적인 범주로 구성할 수 있습니다. **새 프로젝트** 대화 상자는 템플릿 범주에 수행된 모든 변경 내용을 반영합니다.  
+1. Visual Studio에서 .vstemplate 파일을 엽니다.
 
-##### <a name="to-create-new-custom-project-template-categories"></a>사용자 지정 프로젝트 템플릿 범주를 새로 만들려면  
+1. `TemplateData` 요소에서 `NumberOfParentCategoriesToRollUp` 요소를 추가합니다. 예를 들어 다음 코드에서는 템플릿이 부모 범주에 표시되고 더 높은 범주에는 표시되지 않도록 합니다.
 
-1.  사용자 지정 프로젝트 템플릿 디렉터리의 언어 폴더에 폴더를 만듭니다. 예를 들어 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿에 대해 HelloWorld 범주를 만들려면 다음 디렉터리를 만듭니다.  
+    ```xml
+    <TemplateData>
+        ...
+        <NumberOfParentCategoriesToRollUp>
+            1
+        </NumberOfParentCategoriesToRollUp>
+        ...
+    </TemplateData>
+    ```
 
-     \My Documents\Visual Studio *Version*\Templates\ProjectTemplates\CSharp\HelloWorld\  
+1. .vstemplate 파일을 저장한 다음 닫습니다.
 
-2.  이 범주의 모든 템플릿을 새 폴더에 넣습니다.  
+1. 템플릿에 있는 파일을 선택하고 마우스 오른쪽 단추를 클릭한 다음 **보내기** > **압축(ZIP) 폴더**를 선택합니다.
 
-3.  **파일** 메뉴에서 **새로 만들기**를 클릭한 다음 **프로젝트**를 클릭합니다.  
+   파일이 .zip 파일로 압축됩니다.
 
-4.  HelloWorld 범주가 **새 프로젝트** 대화 상자의 **프로젝트 형식** 창에서 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 아래에 나타나는지 확인합니다.  
+1. 추출된 템플릿 파일과 이전 템플릿 .zip 파일을 삭제합니다.
 
- 사용자 지정 항목 템플릿의 일부를 사용자 지정 폴더로 그룹화할 수도 있습니다.  
+1. 새 .zip 파일을 삭제된 .zip 파일이 있던 디렉터리에 넣습니다.
 
-##### <a name="to-create-new-custom-item-template-categories"></a>사용자 지정 항목 템플릿 범주를 새로 만들려면  
+## <a name="see-also"></a>참고 항목
 
-1.  사용자 지정 항목 템플릿 디렉터리의 언어 폴더에 폴더를 만듭니다. 예를 들어 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿에 대해 HelloWorld 범주를 만들려면 다음 디렉터리를 만듭니다.  
-
-     \My Documents\Visual Studio *Version*\Templates\ItemTemplates\CSharp\HelloWorld\  
-
-2.  이 범주의 모든 템플릿을 새 폴더에 넣습니다.  
-
-3.  프로젝트를 만들거나 기존 프로젝트를 엽니다.  
-
-4.  **프로젝트** 메뉴에서 **새 항목 추가**를 클릭합니다.  
-
-5.  HelloWorld 범주가 **새 항목 추가** 대화 상자의 **프로젝트 형식** 창에 나타나는지 확인합니다.  
-
-### <a name="displaying-templates-in-parent-categories"></a>부모 범주에 템플릿 표시  
- .vstemplate 파일에서 `NumberOfParentCategoriesToRollUp` 요소를 사용하여 하위 범주의 템플릿이 부모 범주에 표시되도록 할 수 있습니다. 이 단계는 프로젝트 템플릿과 항목 템플릿 모두에 대해 동일합니다.  
-
-##### <a name="to-display-templates-in-parent-categories"></a>템플릿을 부모 범주에 표시하려면  
-
-1.  템플릿을 포함하는 .zip 파일을 찾습니다.  
-
-2.  .zip 파일의 압축을 풉니다.  
-
-3.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 .vstemplate 파일을 엽니다.  
-
-4.  `TemplateData` 요소에서 `NumberOfParentCategoriesToRollUp` 요소를 추가합니다. 예를 들어 다음 코드에서는 템플릿이 부모 범주에 표시되고 더 높은 범주에는 표시되지 않도록 합니다.  
-
-    ```  
-    <TemplateData>  
-        ...  
-        <NumberOfParentCategoriesToRollUp>  
-            1  
-        </NumberOfParentCategoriesToRollUp>  
-        ...  
-    </TemplateData>  
-    ```  
-
-5.  .vstemplate 파일을 저장한 다음 닫습니다.  
-
-6.  템플릿에 있는 파일을 선택하고 선택 영역을 마우스 오른쪽 단추로 클릭한 다음 **보내기**를 클릭하고 **압축(ZIP) 폴더**를 클릭합니다. 파일이 .zip 파일로 압축됩니다.  
-
-7.  추출된 템플릿 파일과 이전 템플릿 .zip 파일을 삭제합니다.  
-
-8.  새 .zip 파일을 삭제된 .zip 파일이 있던 디렉터리에 넣습니다.  
-
-## <a name="see-also"></a>참고 항목  
- [템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)   
- [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)   
- [NumberOfParentCategoriesToRollUp(Visual Studio 템플릿)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)   
- [방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)   
- [방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)
+[템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)  
+[Visual Studio 템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)  
+[NumberOfParentCategoriesToRollUp(Visual Studio 템플릿)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)  
+[방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)  
+[방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)

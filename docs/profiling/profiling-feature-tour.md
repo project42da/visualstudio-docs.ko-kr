@@ -14,11 +14,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 25e4397ac3f3b2a8191dc9d9850f643e0be3d539
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2542ce19d51dd3aa3031c71da3c23f7ec73ac240
+ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/04/2018
 ---
 # <a name="profiling-feature-tour"></a>프로파일링 기능 둘러보기
 
@@ -147,7 +147,8 @@ CPU 사용량 또는 메모리 사용량 도구에 현재 표시되지 않는 �
 
 ![성능 탐색기 도구](../profiling/media/prof-tour-performance-explorer.png "성능 탐색기")
 
-## <a name="which-tool-should-i-use"></a>사용해야 하는 도구  
+## <a name="tool_support_info"></a>어떤 도구를 사용해야 합니까?  
+
 다음 테이블에는 Visual Studio가 제안하는 다양한 도구 및 그와 함께 사용할 수 있는 다양한 프로젝트 형식이 나열되어 있습니다.
   
 |성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET/ASP.NET Core|  
@@ -158,7 +159,7 @@ CPU 사용량 또는 메모리 사용량 도구에 현재 표시되지 않는 �
 |[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|아니요|  
 |[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|  
 |[성능 탐색기](../profiling/performance-explorer.md)|예|아니요|예(ASP.NET Core의 경우 아니요)|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET Enterprise만 해당|.NET Enterprise만 해당|.NET Enterprise만 해당|
+|[IntelliTrace](../debugger/intellitrace.md)|.NET 및 Visual Studio Enterprise만 해당|.NET 및 Visual Studio Enterprise만 해당|.NET 및 Visual Studio Enterprise만 해당|
 |[네트워크 사용량](../profiling/network-usage.md)|아니요|예|아니요| 
 |[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|아니요|HTML은 예, XAML은 no|아니요|  
 |[JavaScript 메모리](../profiling/javascript-memory.md)|아니요|HTML은 예, XAML은 no|아니요|  

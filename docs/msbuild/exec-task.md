@@ -22,11 +22,11 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 46bbd3bf979ef1406c1edbf89e9152ba439d3ef1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0eadf1b5d94a136861d45275ebc5b94b6707cf14
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="exec-task"></a>Exec 작업
 지정된 인수를 사용하여 지정한 프로그램 또는 명령을 실행합니다.  
@@ -37,8 +37,11 @@ ms.lasthandoff: 12/22/2017
 |매개 변수|설명|  
 |---------------|-----------------|  
 |`Command`|필수 `String` 매개 변수입니다.<br /><br /> 실행할 명령입니다. Attrib와 같은 시스템 명령이나 program.exe, runprogram.bat 또는 setup.msi와 같은 실행 파일일 수 있습니다.<br /><br /> 이 매개 변수는 여러 줄의 명령을 포함할 수 있습니다. 또는 여러 개의 명령을 하나의 배치 파일에 추가하고 이 매개 변수를 사용하여 실행할 수 있습니다.|  
+|`ConsoleOutput`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 각 항목 출력은 도구에서 생성하는 표준 출력 또는 표준 오류 스트림의 줄입니다. 이는 `ConsoleToMsBuild`가 `true`로 설정된 경우에만 캡처됩니다.|
+|`ConsoleToMsBuild`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`일 경우 작업이 도구의 표준 오류 및 표준 출력을 캡처하고, `ConsoleOutput` 출력 매개 변수에서 사용할 수 있게 합니다. 기본값은 `false`입니다.|
 |`CustomErrorRegularExpression`|선택적 `String` 매개 변수입니다.<br /><br /> 도구 출력에서 오류 줄을 찾는 데 사용되는 정규식을 지정합니다. 예외적으로 형식이 지정된 출력을 생성하는 도구에 유용합니다.|  
 |`CustomWarningRegularExpression`|선택적 `String` 매개 변수입니다.<br /><br /> 도구 출력에서 경고 줄을 찾는 데 사용되는 정규식을 지정합니다. 예외적으로 형식이 지정된 출력을 생성하는 도구에 유용합니다.|  
+|`EchoOff`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`일 경우 작업이 `Command`의 확장된 양식을 MSBuild 로그로 내보내지 않습니다. 기본값은 `false`입니다.|
 |`ExitCode`|선택적 `Int32` 읽기 전용 출력 매개 변수입니다.<br /><br /> 실행한 명령에서 제공하는 종료 코드를 지정합니다.|  
 |`IgnoreExitCode`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`이면 이 작업은 실행한 명령에서 제공하는 종료 코드를 무시합니다. 그렇지 않고 실행된 명령이 0이 아닌 종료 코드를 반환하는 경우 이 작업은 `false`를 반환합니다.|  
 |`IgnoreStandardErrorWarningFormat`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `false`이면 표준 오류/경고 형식과 일치하는 줄을 출력에서 선택하고 오류/경고로 로깅합니다. `true`이면 이 동작을 사용하지 않도록 설정하세요. 기본값은 `false`입니다.|  

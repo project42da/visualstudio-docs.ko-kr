@@ -19,14 +19,14 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 931ccda0fd42a01c9afe272ef985380bc3276e6a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 772134090da6db5152ad855c1c5620f9e267b29f
+ms.sourcegitcommit: fb73b56d45ebc0386cd4de1a706ba9e20c59daf1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/03/2018
 ---
 # <a name="common-msbuild-project-items"></a>일반적인 MSBuild 프로젝트 항목
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 항목은 하나 이상의 파일에 대한 명명된 참조입니다. 항목에는 파일 이름, 경로 및 버전 번호와 같은 메타데이터가 포함됩니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 모든 프로젝트 형식에는 공통된 여러 항목이 있습니다. 이러한 항목은 파일 microsoft.build.commontypes.xsd에 정의되어 있습니다.  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 항목은 하나 이상의 파일에 대한 명명된 참조입니다. 항목에는 파일 이름, 경로 및 버전 번호와 같은 메타데이터가 포함됩니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 모든 프로젝트 형식에는 공통된 여러 항목이 있습니다. 이러한 항목은 Microsoft.Build.CommonTypes.xsd 파일에 정의되어 있습니다.  
   
 ## <a name="common-items"></a>공통 항목  
  다음은 모든 공통 프로젝트 항목의 목록입니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="reference"></a>참조  
  프로젝트의 어셈블리(관리) 참조를 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |HintPath|선택적 문자열입니다. 어셈블리의 상대 또는 절대 경로입니다.|  
 |name|선택적 문자열입니다. 어셈블리의 표시 이름(예: "System.Windows.Forms")입니다.|  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="comreference"></a>COMReference  
  프로젝트의 COM(비관리) 구성 요소 참조를 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |name|선택적 문자열입니다. 구성 요소의 표시 이름입니다.|  
 |GUID|선택적 문자열입니다. 구성 요소의 GUID로, {12345678-1234-1234-1234-1234567891234} 형식을 갖습니다.|  
@@ -59,14 +59,14 @@ ms.lasthandoff: 12/22/2017
 ### <a name="comfilereference"></a>COMFileReference  
  ResolvedComreference 대상에 공급되는 형식 라이브러리 목록을 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |WrapperTool|선택적 문자열입니다. 구성 요소에 사용되는 래퍼 도구의 이름(예: "tlbimp")입니다.|  
   
 ### <a name="nativereference"></a>NativeReference  
  네이티브 매니페스트 파일 또는 이러한 파일에 대한 참조를 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |name|필수 문자열입니다. 매니페스트 파일의 기본 이름입니다.|  
 |HintPath|필수 문자열입니다. 매니페스트 파일의 상대 경로입니다.|  
@@ -74,7 +74,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="projectreference"></a>ProjectReference  
  다른 프로젝트에 대한 참조를 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |name|선택적 문자열입니다. 참조의 표시 이름입니다.|  
 |프로젝트|선택적 문자열입니다. 참조의 GUID로, {12345678-1234-1234-1234-1234567891234} 형식을 갖습니다.|  
@@ -83,7 +83,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="compile"></a>Compile  
  컴파일러에 대한 소스 파일을 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |DependentUpon|선택적 문자열입니다. 올바르게 컴파일하기 위해 이 파일이 의존하는 파일을 지정합니다.|  
 |AutoGen|선택적 부울입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE(통합 개발 환경)에서 프로젝트를 위해 해당 파일이 생성되었는지 여부를 나타냅니다.|  
@@ -94,7 +94,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="embeddedresource"></a>EmbeddedResource  
  생성된 어셈블리에 포함될 리소스를 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |DependentUpon|선택적 문자열입니다. 올바르게 컴파일하기 위해 이 파일이 종속되는 파일을 지정합니다.|  
 |Generator|필수 문자열입니다. 이 항목에서 실행되는 파일 생성기의 이름입니다.|  
@@ -108,7 +108,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="content"></a>콘텐츠  
  프로젝트로 컴파일되지 않지만 프로젝트에 포함되거나 함께 게시될 수 있는 파일을 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |DependentUpon|선택적 문자열입니다. 올바르게 컴파일하기 위해 이 파일이 의존하는 파일을 지정합니다.|  
 |Generator|필수 문자열입니다. 이 항목에서 실행되는 파일 생성기의 이름입니다.|  
@@ -123,7 +123,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="none"></a>없음  
  빌드 프로세스에서 역할이 없는 파일을 나타냅니다.  
   
-|항목 이름|설명|  
+|항목 메타데이터 이름|설명|  
 |---------------|-----------------|  
 |DependentUpon|선택적 문자열입니다. 올바르게 컴파일하기 위해 이 파일이 의존하는 파일을 지정합니다.|  
 |Generator|필수 문자열입니다. 이 항목에서 실행되는 파일 생성기의 이름입니다.|  

@@ -11,12 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-general
-ms.workload: multiple
-ms.openlocfilehash: 0219ff704e22ab1c27d47e312825a66cb3a15166
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 516bd2de626fa7a5ffcbf4234c849e81860b9e08
+ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/08/2018
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig를 사용하여 휴대용, 사용자 지정 편집기 설정 만들기
 
@@ -32,43 +31,86 @@ EditorConfig 파일의 설정을 사용하면 사용하는 편집기나 IDE에 �
 
 설정은 코드베이스의 파일에 포함되므로 해당 코드베이스와 함께 전송됩니다. EditorConfig 규격 편집기에서 코드 파일을 열기만 하면 텍스트 편집기 설정이 구현됩니다. EditorConfig 파일에 대한 자세한 내용은 [EditorConfig.org](http://editorconfig.org/) 웹 사이트를 참조하세요.
 
-## <a name="override-editorconfig-settings"></a>EditorConfig 설정 재정의
-
-파일 계층 구조의 폴더에 .editorconfig 파일을 추가하는 경우 해당 설정이 이 수준과 그 아래에 있는 모든 파일에 적용됩니다. 최상위 EditorConfig 파일과 다른 규칙을 사용하는 특정 프로젝트 또는 코드베이스에 대해 EditorConfig 설정을 재정의하려면 .editorconfig 파일을 코드베이스의 리포지토리 또는 프로젝트 디렉터리의 루트에 추가하기만 하면 됩니다. Visual Studio가 디렉터리 구조에서 .editorconfig 파일을 더 찾지 않도록 파일에 ```root=true``` 속성을 넣어야 합니다. 새 EditorConfig 파일 설정은 동일한 수준 및 모든 하위 디렉터리의 파일에 적용됩니다.
-
-```
-# top-most EditorConfig file
-root = true
-```
-
-![EditorConfig 계층 구조](../ide/media/vside_editorconfig_hierarchy.png)
-
-EditorConfig 파일은 위쪽에서 아래쪽으로 읽으며 가장 가까운 EditorConfig 파일을 마지막으로 읽습니다. 일치하는 EditorConfig 섹션의 규칙이 읽는 순서로 적용되므로, 가까운 파일의 규칙이 우선 적용됩니다.
-
 ## <a name="supported-settings"></a>지원되는 설정
 
-Visual Studio의 편집기는 [EditorConfig properties](http://editorconfig.org/#supported-properties)의 핵심 집합에서 다음 값을 지원합니다.
+Visual Studio의 편집기는 다음과 같은 [EditorConfig 속성](http://editorconfig.org/#supported-properties)의 핵심 집합을 지원합니다.
 
 - indent_style
 - indent_size
 - tab_width
 - end\_of_line
 - 문자 집합
+- trim\_trailing_whitespace
+- insert\_final_newline
 - 루트
 
 EditorConfig 편집기 설정은 XML을 제외하고 Visual Studio가 지원하는 모든 언어에서 지원됩니다. 또한 EditorConfig는 C# 및 Visual Basic에 대해 [코드 스타일](../ide/editorconfig-code-style-settings-reference.md) 및 [명명](../ide/editorconfig-naming-conventions.md) 규칙을 지원합니다.
-
-## <a name="editing-editorconfig-files"></a>EditorConfig 파일 편집
-
-Visual Studio는 .editorconfig 파일을 편집할 수 있는 몇 가지 IntelliSense를 제공합니다. 수많은 .editorconfig 파일을 편집하는 경우 [EditorConfig Language Service](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig) 확장이 유용할 수 있습니다.
-
-EditorConfig 파일을 편집한 후 새 설정을 적용하려면 코드 파일을 다시 로드해야 합니다.
 
 ## <a name="adding-and-removing-editorconfig-files"></a>EditorConfig 파일 추가 및 제거
 
 EditorConfig 파일을 프로젝트나 코드베이스에 추가해도 기존 스타일이 새로운 스타일로 변환되지 않습니다. 예를 들어 파일에 탭으로 서식이 지정된 들여쓰기가 있는 경우 공백으로 들여쓰기가 적용되는 EditorConfig 파일을 추가해도 들여쓰기 문자가 공백으로 변환되지 않습니다. 하지만, 새로운 코드 줄은 EditorConfig 파일에 따라 서식이 지정됩니다.
 
 프로젝트나 코드베이스에서 EditorConfig 파일을 제거하면 열려있는 코드 파일을 닫았다가 다시 열어야 새로운 코드 줄에 대해 전역 편집기 설정으로 돌아갑니다.
+
+### <a name="to-add-an-editorconfig-file-to-a-project-or-solution"></a>프로젝트 또는 솔루션에 EditorConfig 파일을 추가하려면 다음을 수행합니다.
+
+1. Visual Studio에서 프로젝트 또는 솔루션을 엽니다. .editorconfig 설정을 솔루션의 모든 프로젝트에 적용할지 아니면 하나에만 적용할지에 따라 프로젝트 또는 솔루션 노드 중 하나를 선택합니다. 프로젝트 또는 솔루션에서 폴더를 선택하여 .editorconfig 파일을 추가합니다.
+
+1. 메뉴 모음에서 **프로젝트** > **새 항목 추가...**를 선택하거나 **Ctrl**+**Shift**+**A**를 누릅니다.
+
+   **새 항목 추가** 대화 상자가 열립니다.
+
+1. 왼쪽의 범주에서 **일반**을 선택한 다음, **텍스트 파일** 템플릿을 선택합니다. **이름** 텍스트 상자에 `.editorconfig`를 입력한 다음 **추가**를 선택합니다.
+
+   .editorconfig 파일이 솔루션 탐색기에 표시되고 편집기에서 열립니다.
+
+   ![솔루션 탐색기의 .editorconfig 파일](media/editorconfig-in-solution-explorer.png)
+
+1. 다음과 같이 원하는 대로 파일을 편집합니다.
+
+```EditorConfig
+root = true
+
+[*.{cs,vb}]
+indent_size = 4
+trim_trailing_whitespace = true
+
+[*.cs]
+csharp_new_line_before_open_brace = methods
+```
+
+또는 [EditorConfig 언어 서비스 확장](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)을 설치할 수 있습니다. 이 확장을 설치한 후, 마우스 오른쪽 단추를 클릭하거나 솔루션 탐색기의 솔루션 노드, 프로젝트 노드 또는 폴더의 바로 가기 메뉴에서 **추가** > **.editorconfig 파일**을 선택하면 됩니다.
+
+![확장을 사용하여 .editorconfig 파일 추가](media/editorconfig-extension-add.png)
+
+## <a name="override-editorconfig-settings"></a>EditorConfig 설정 재정의
+
+파일 계층 구조의 폴더에 .editorconfig 파일을 추가하는 경우 해당 설정이 이 수준과 그 아래에 있는 모든 파일에 적용됩니다. 코드베이스의 다른 부분과는 다른 규칙을 사용하는, 특정 프로젝트, 코드베이스 또는 코드베이스 일부에 대한 EditorConfig 설정을 재정의할 수 있습니다. 이는 다른 위치에서 코드를 통합하면서 해당 규칙을 변경하지 않으려는 경우에 유용할 수 있습니다.
+
+EditorConfig 설정의 일부 또는 전부를 재정의하려면 이러한 재정의된 설정을 적용할 파일 계층 구조 수준에서 .editorconfig 파일을 추가합니다. 새 EditorConfig 파일 설정은 동일한 수준 및 모든 하위 디렉터리의 파일에 적용됩니다.
+
+![EditorConfig 계층 구조](../ide/media/vside_editorconfig_hierarchy.png)
+
+설정의 전부가 아닌 일부를 재정의하려는 경우 .editorconfig 파일에서 해당 설정을 지정하기만 하면 됩니다. 하위 수준 파일에 명시적으로 나열된 해당 속성만 재정의됩니다. 상위 수준 .editorconfig 파일의 다른 설정은 계속 적용됩니다. _모든_ 상위 수준에서 이 코드베이스 부분에 적용된 설정이 _없음_을 확인하려면 ```root=true``` 속성을 하위 수준 .editorconfig 파일에 추가합니다.
+
+```EditorConfig
+# top-most EditorConfig file
+root = true
+```
+
+EditorConfig 파일은 위쪽에서 아래쪽으로 읽으며 가장 가까운 EditorConfig 파일을 마지막으로 읽습니다. 일치하는 EditorConfig 섹션의 규칙이 읽는 순서로 적용되므로, 가까운 파일의 규칙이 우선 적용됩니다.
+
+## <a name="editing-editorconfig-files"></a>EditorConfig 파일 편집
+
+Visual Studio는 .editorconfig 파일을 편집할 수 있는 몇 가지 IntelliSense를 제공합니다.
+
+![.editorconfig 파일의 IntelliSense](media/editorconfig-intellisense-no-extension.png)
+
+EditorConfig 파일을 편집한 후 새 설정을 적용하려면 코드 파일을 다시 로드해야 합니다.
+
+수많은 .editorconfig 파일을 편집하는 경우 [EditorConfig 언어 서비스 확장](https://marketplace.visualstudio.com/items?itemName=MadsKristensen.EditorConfig)이 유용할 수 있습니다. 이 확장의 기능 중 일부에는 구문 강조 표시, 향상된 IntelliSense, 유효성 검사 및 코드 서식 지정이 포함되어 있습니다.
+
+![EditorConfig 언어 서비스 확장을 사용한 IntelliSense](media/editorconfig-intellisense.png)
 
 ## <a name="example"></a>예
 
@@ -82,7 +124,7 @@ EditorConfig 파일을 프로젝트나 코드베이스에 추가해도 기존 �
 
 .editorconfig라는 새 파일을 다음 콘텐츠를 포함하여 프로젝트에 추가합니다. `[*.cs]` 설정은 이 변경 내용이 이 프로젝트의 C# 코드 파일에만 적용된다는 것을 의미합니다.
 
-```
+```EditorConfig
 # Top-most EditorConfig file
 root = true
 
@@ -107,7 +149,7 @@ indent_style = tab
 
 명령 프롬프트를 열고 사용자의 프로젝트가 포함된 디스크의 루트에서 다음 명령을 실행하여 부모 디렉터리에서 .editorconfig 파일을 찾을 수 있습니다.
 
-```
+```Shell
 dir .editorconfig /s
 ```
 

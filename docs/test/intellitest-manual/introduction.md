@@ -8,16 +8,15 @@ ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords: IntelliTest, Visual Studio IntelliTest developer testing tool
-ms.assetid: A7B98509-7ACA-4E25-BD1B-BBC98742F028
-caps.latest.revision: "56"
-ms.author: douge
-manager: douge
+ms.author: gewarren
+manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: a7dac076dabaf0d44a1eda9c267e5c9b2eafe5a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.openlocfilehash: 65f14d96bd495a1b3f8ca138176fbf805fdfeb67
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="overview-of-microsoft-intellitest"></a>Microsoft IntelliTest 개요
 
@@ -56,7 +55,7 @@ IntelliTest는 테스트된 프로그램과 관련된 입력을 찾습니다. �
 
 아래 예제에서는 IntelliTest가 필요한 문자열을 생성하도록 **value** 매개 변수에 대한 두 가지 제약 조건을 만듭니다.
 
-```
+```csharp
 using System;
 using Microsoft.Pex.Framework; 
 using Microsoft.VisualStudio.TestTools.UnitTesting; 
@@ -84,10 +83,9 @@ public partial class HelloWorldTest {
 7. "Hello\0World!"
 8. "Hello World!"
 
-[여기](https://docs.microsoft.com/en-gb/visualstudio/test/generate-unit-tests-for-your-code-with-intellitest#Anchor_0)로 이동하여 생성된 테스트가 저장되는 위치를 알아보세요.
-생성된 테스트 코드에는 다음과 같은 테스트가 포함되어야 합니다.
+[IntelliTest를 사용하여 단위 테스트 생성](../../test/generate-unit-tests-for-your-code-with-intellitest.md)을 읽고 생성된 테스트가 어디에 저장되는지 이해합니다. 생성된 테스트 코드에는 다음과 같은 테스트가 포함되어야 합니다.
 
-```
+```csharp
 [TestMethod]
 [PexGeneratedBy(typeof(global::HelloWorldTest))]
 [PexRaisedException(typeof(Exception))]
@@ -99,8 +97,7 @@ public void HelloWorldThrowsException167()
 
 너무나 쉽습니다!
 
-<a name="limitations"></a>
-## <a name="limitations"></a>제한 사항
+## <a name="limitations"></a> 제한 사항
 
 이 섹션에서는 IntelliTest의 제한 사항을 설명합니다.
 
@@ -165,7 +162,7 @@ IntelliTest는 각 계측된 메서드에서 예외를 catch하고 “rethrow”
 ## <a name="further-reading"></a>추가 정보
 
 * MSDN의 [소개 블로그 게시물](https://blogs.msdn.microsoft.com/visualstudioalm/2014/11/19/introducing-smart-unit-tests/).
-* [IntelliTest를 사용하여 코드에 대한 단위 테스트 생성](https://docs.microsoft.com/en-gb/visualstudio/test/generate-unit-tests-for-your-code-with-intellitest)
+* [IntelliTest를 사용하여 코드에 대한 단위 테스트 생성](../../test/generate-unit-tests-for-your-code-with-intellitest.md)
 
 ## <a name="got-feedback"></a>피드백이 있으신가요?
 

@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: python
-ms.openlocfilehash: 9770a484c6949695641234a96d8b5a6cdb3c645b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 71ab9d5c58ebb76ad158b9f9e66b35b4732c1d4e
+ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/05/2018
 ---
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
@@ -31,7 +31,7 @@ Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및
 
 - [기본적인 디버깅](#basic-debugging)
 - [프로젝트 디버깅 옵션](#project-debugging-options)
-- [대화형 디버그 창](#the-debug-interactive-window)
+- [직접 실행 창 및 대화형 창](#immediate-and-interactive-windows)
 
 또한 다음 시나리오별 디버깅 항목을 참조하세요.
 
@@ -163,6 +163,7 @@ HTML, XML 및 JSON 시각화는 구문 강조 표시 및 트리 보기가 있는
 | 환경 변수 | 이 여러 줄 텍스트 상자에 `NAME=VALUE` 형식의 항목을 추가합니다. 이 설정은 검색 경로 설정에 따라 `PYTHONPATH`가 설정된 후에 마지막으로 기존 전역 환경 변수의 맨 위에 적용되므로 다른 변수를 수동으로 재정의하는 데 사용될 수 있습니다. |
 
 <a name="the-debug-interactive-window"</a>
+
 ## <a name="immediate-and-interactive-windows"></a>직접 실행 창 및 대화형 창
 
 디버깅 세션 중에 사용할 수 있는 두 개의 대화형 창, 즉 표준 Visual Studio 직접 실행 창과 Python 대화형 디버그 창이 있습니다.
