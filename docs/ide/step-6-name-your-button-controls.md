@@ -13,11 +13,11 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: eed8f03eefb15b982f297b78f7503c947df8d712
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 12065875980d114d6ea8b9912009701afb5cf9a0
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="step-6-name-your-button-controls"></a>6단계: 단추 컨트롤 이름 지정
 폼에 **pictureBox1**이라는 PictureBox와 **checkBox1**이라는 CheckBox가 각각 하나씩만 있습니다. 이러한 이름은 해당 컨트롤이 추가될 때 IDE에 의해 자동으로 지정되었습니다. 이제 CheckBox 및 PictureBox를 참조하는 코드를 작성하면 이러한 컨트롤은 하나씩만 있기 때문에 코드에서 **pictureBox1** 또는 **checkBox1** 이 무엇을 의미하는지 알 수 있습니다.  
@@ -74,7 +74,7 @@ Visual C# 코드가 사용된 Form1.cs 탭
   
      컨트롤에 대한 이벤트 처리기를 추가한 후에는 언제든지 컨트롤을 두 번 클릭하거나 메뉴 모음에서 **보기**, **코드**를 선택하여 Windows Forms 디자이너에서 이벤트 처리기로 돌아갈 수 있습니다.  
   
-     프로그램을 빌드할 때는 이름이 중요하므로 이벤트 처리기를 비롯한 메서드에 원하는 이름을 지정할 수 있습니다. IDE를 사용하여 이벤트 처리기를 추가하면 컨트롤 이름과 처리 중인 이벤트를 기반으로 이름이 만들어집니다. 예를 들어 **showButton** 이라는 단추에 대한 Click 이벤트의 이름은 `showButton_Click()` 이벤트 처리기 메서드로 지정됩니다. 또한 일반적으로 메서드 이름 뒤에는 메서드임을 나타내기 위해 여는 괄호와 닫는 괄호 ()가 추가됩니다. 코드 변수 이름을 변경하려고 결정한 경우 코드에서 변수를 마우스 오른쪽 단추로 클릭한 다음 **리팩터링**, **이름 바꾸기**를 선택합니다. 코드에서 해당 변수의 인스턴스 이름이 모두 바뀝니다. 자세한 내용은 [이름 바꾸기 리팩터링(C#)](../csharp-ide/refactoring/rename.md) 또는 [이름 바꾸기 리팩터링(Visual Basic)](../vb-ide/refactoring/rename.md)을 참조하세요.
+     프로그램을 빌드할 때는 이름이 중요하므로 이벤트 처리기를 비롯한 메서드에 원하는 이름을 지정할 수 있습니다. IDE를 사용하여 이벤트 처리기를 추가하면 컨트롤 이름과 처리 중인 이벤트를 기반으로 이름이 만들어집니다. 예를 들어 **showButton** 이라는 단추에 대한 Click 이벤트의 이름은 `showButton_Click()` 이벤트 처리기 메서드로 지정됩니다. 또한 일반적으로 메서드 이름 뒤에는 메서드임을 나타내기 위해 여는 괄호와 닫는 괄호 ()가 추가됩니다. 코드 변수 이름을 변경하려고 결정한 경우 코드에서 변수를 마우스 오른쪽 단추로 클릭한 다음 **리팩터링**, **이름 바꾸기**를 선택합니다. 코드에서 해당 변수의 인스턴스 이름이 모두 바뀝니다. 자세한 내용은 [이름 바꾸기 리팩터링(C#)](../ide/reference/rename-csharp.md) 또는 [이름 바꾸기 리팩터링(Visual Basic)](../ide/reference/rename-vb.md)을 참조하세요.
   
 ### <a name="to-continue-or-review"></a>계속하거나 검토하려면  
   

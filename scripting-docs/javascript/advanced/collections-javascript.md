@@ -17,11 +17,11 @@ caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: aa14730fffbf7c2747f15243590be89dc01a7ceb
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: fab554f50f6d2fcdac92c562333e625dc0eb32f6
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="collections-javascript"></a>컬렉션(JavaScript)
 [Map](../../javascript/reference/map-object-javascript.md), [Set](../../javascript/reference/set-object-javascript.md) 및 [WeakMap](../../javascript/reference/weakmap-object-javascript.md)의 컬렉션 개체를 사용하여 값과 개체를 저장할 수 있습니다. 이러한 개체는 인덱스 대신 키 또는 값을 사용하여 멤버를 추가 및 검색하기 위한 편리한 메서드를 제공합니다. 인덱스를 사용하여 컬렉션의 멤버에 액세스하려면 `Array` 개체를 사용합니다. 자세한 내용은 [배열 사용](../../javascript/advanced/using-arrays-javascript.md)을 참조하세요.  
@@ -47,7 +47,7 @@ document.write(m.get(2));
 document.write("<br />");  
   
 m.forEach(function (value, key, mapObj) {  
-    document.write(item.toString() + "<br />");  
+    document.write(value.toString() + "<br />");  
 });  
   
 // Output:  
@@ -71,7 +71,7 @@ s.add(1776);
 s.add("founding father");  
   
 s.forEach(function (value) {  
-    document.write(item.toString() + ", ");  
+    document.write(value.toString() + ", ");  
 });  
   
 // Output:  

@@ -21,11 +21,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c865fd1d01f7bf0137c68010bcb850a7a8450680
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2006f565edbca8a859cd2c155645e47e083b5528
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-application-resources-net"></a>응용 프로그램 리소스 관리(.NET)
 
@@ -48,7 +48,6 @@ ms.lasthandoff: 12/22/2017
 .NET 프로젝트의 리소스는 다른 프로젝트 형식과 다른 방식으로 관리됩니다. 리소스에 대한 자세한 내용은 다음을 참조하세요.
 
 - UWP(유니버설 Windows 플랫폼) 앱은 [앱 리소스 및 리소스 관리 시스템](/windows/uwp/app-resources/) 참조
-- Windows 8.x 앱은 [앱 리소스(HTML) 정의](https://msdn.microsoft.com/en-us/library/windows/apps/hh465228.aspx) 참조
 - C++ 프로젝트는 [리소스 파일에 대한 작업](/cpp/windows/working-with-resource-files) 및 [방법: 리소스 파일 만들기](/cpp/windows/how-to-create-a-resource) 참조
 
 ## <a name="see-also"></a>참고 항목

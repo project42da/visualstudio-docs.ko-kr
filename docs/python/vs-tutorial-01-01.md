@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 Python 사용, 1단계 | Microsoft Docs"
 ms.custom: 
-ms.date: 09/26/2017
+ms.date: 01/08/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -12,12 +12,14 @@ caps.latest.revision: "1"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: python
-ms.openlocfilehash: adb49bb6070fee611a2ba67913943e68ee938d29
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- python
+- data-science
+ms.openlocfilehash: aec013574365c3e7fb3f7aea723df754b284e1b0
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio에서 Python 작업
 
@@ -51,7 +53,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 
     Visual Studio에서 Python을 지원하는 방법에는 Bottle, Flask 및 Django 프레임워크를 사용하는 웹 응용 프로그램을 비롯한 많은 프로젝트 템플릿이 포함되어 있습니다. 그러나 이 연습에서는 빈 프로젝트로 시작하겠습니다.
 
-1. **Python 응용 프로그램** 템플릿을 선택하고, 프로젝트 이름을 지정하고, **확인**을 선택합니다. 
+1. **Python 응용 프로그램** 템플릿을 선택하고, 프로젝트 이름을 지정하고, **확인**을 선택합니다.
 
 1. 몇 분 후에 Visual Studio는 **솔루션 탐색기** 창(1)에 프로젝트 구조를 표시합니다. 기본 코드 파일은 편집기(2)에 열립니다. 디스크에서의 정확한 위치를 포함하여 솔루션 탐색기에서 선택한 모든 항목에 대한 추가 정보를 보여 주는 속성 창(3)도 표시됩니다.
 

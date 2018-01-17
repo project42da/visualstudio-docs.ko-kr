@@ -11,11 +11,11 @@ helpviewer_keywords: templates [Visual Studio], troubleshooting
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: ba6d9a73cd45a0e497fb2ecc0f4b4697071e3b37
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: d9242d053044fa66e6eb3d506382cf7cfb5d0295
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-troubleshoot-templates"></a>방법: 템플릿 문제 해결
 
@@ -47,20 +47,6 @@ ms.lasthandoff: 01/05/2018
 1. 새 .zip 파일을 이전 .zip 파일과 같은 디렉터리에 배치합니다.
 
 1. 추출된 템플릿 파일과 이전 템플릿 .zip 파일을 삭제합니다.
-
-## <a name="monitor-the-event-log"></a>이벤트 로그 모니터링
-
-Visual Studio는 .zip 템플릿 파일을 처리할 때 발생한 오류를 기록합니다. 템플릿에 예상 대로 **새 프로젝트** 대화 상자에 표시되지 않는 경우 **이벤트 뷰어**를 사용하여 문제를 해결할 수 있습니다.
-
-### <a name="to-locate-template-errors-in-event-viewer"></a>이벤트 뷰어에서 템플릿 오류를 찾으려면
-
-1. Windows의 **시작** 메뉴에서 **Windows 관리 도구** > **이벤트 뷰어**를 선택합니다.
-
-1. 왼쪽 창에서 **Windows 로그** > **응용 프로그램**을 선택합니다.
-
-1. `Visual Studio - VsTemplate`이라는 **원본** 값을 포함하는 이벤트를 검색합니다.
-
-1. 오류를 보려면 템플릿 이벤트를 두 번 클릭합니다.
 
 ## <a name="enable-diagnostic-logging"></a>진단 로깅 사용
 

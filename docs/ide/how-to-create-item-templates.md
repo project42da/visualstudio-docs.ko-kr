@@ -11,11 +11,11 @@ helpviewer_keywords: item templates [Visual Studio], creating
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 5145263ce84cf9e1f6a5ef970701ace660ecb73d
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 8fd5d7fba092df5accfaad9d26cfc05f196981ba
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="how-to-create-item-templates"></a>방법: 항목 템플릿 만들기
 
@@ -62,8 +62,6 @@ ms.lasthandoff: 01/05/2018
    ```xml
    <TemplateID>Microsoft.CSharp.Class</TemplateID>
    ```
-
-   Windows 8.1 C# 프로젝트의 경우 .vstemplate 파일에 다음 XML을 열고 닫는 `<TemplateData>` 태그(`<TemplateGroupID>WinRT-Managed</TemplateGroupID>`)로 묶어 추가합니다. Windows 8.1 C++ 프로젝트의 경우 `WinRT-Native-6.3` 값을 사용합니다. Windows 10 및 기타 프로젝트 유형의 경우 [TemplateGroupID 요소(확장성)](../extensibility/templategroupid-element-visual-studio-templates.md)를 참조하세요. 전체 .vstemplate 참조는 [템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)를 참조하세요.
 
 1. Visual Studio에서 .vstemplate 파일을 저장한 다음 닫습니다.
 

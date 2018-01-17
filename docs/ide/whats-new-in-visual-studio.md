@@ -16,11 +16,11 @@ author: TerryGLee
 ms.author: tglee
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 28f0715665fb032ac2cf78dd58be65005b1065d0
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: a41d683701b4d8e0ca9cb973486a1e07216ea894
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
 #### <a name="updated-for-the-155-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.5 릴리스](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)용으로 업데이트
@@ -127,7 +127,7 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 *   if-to-switch 변환
 *   사용하지 않는 변수 제거
 
-자세한 내용은 [빠른 작업](../ide/quick-actions.md#common-quick-actions)을 참조하세요.
+자세한 내용은 [빠른 작업](../ide/common-quick-actions.md)을 참조하세요.
 
 #### <a name="interact-with-git"></a>Git과 상호 작용
 Visual Studio에서 프로젝트를 작업할 때 코드를 설정하고 빠르게 커밋하여 Git 서비스에 게시할 수 있습니다. 또한 IDE의 오른쪽 아래 모서리에 있는 단추의 메뉴 클릭을 사용하여 Git 리포지토리를 관리할 수도 있습니다.

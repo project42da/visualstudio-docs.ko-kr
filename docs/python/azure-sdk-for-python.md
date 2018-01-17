@@ -1,7 +1,7 @@
 ---
 title: "Python용 Azure SDK | Microsoft Docs"
 ms.custom: 
-ms.date: 3/7/2017
+ms.date: 03/07/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: devlang-python
@@ -14,12 +14,13 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
+- data-science
 - azure
-ms.openlocfilehash: 43fbcc0c5c1674d127755a61ef3e15523e792a21
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa18c4a0b29b9f9dc05dae3093b4432e38635154
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="azure-sdk-for-python"></a>Python용 Azure SDK
 
@@ -31,7 +32,7 @@ Azure SDK는 [Python 패키지 인덱스](https://pypi.python.org/pypi/azure)에
 
 다음과 같이 **안정적인 최신 버전**(Python 2.7 및 3.3+ 지원)을 설치합니다.
 
-```bash
+```command
 pip install azure
 ```
 
@@ -43,14 +44,14 @@ pip install azure
 
 [Python용 Azure SDK 개발자 센터](http://azure.microsoft.com/develop/python/)에는 다음과 같은 여러 가지 자습서를 포함하여 유용한 리소스도 많이 있습니다.
 
-  - [Django](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-django-app) [Flask](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-flask-app) 및 [Bottle](https://docs.microsoft.com/azure/app-service-web/web-sites-python-create-deploy-bottle-app)을 사용하여 웹앱 만들기
-  - [Blob 저장소](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-blob-storage)
-  - [테이블 저장소](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-table-storage)
-  - [큐 저장소](https://docs.microsoft.com/azure/storage/storage-python-how-to-use-queue-storage)
-  - [DocumentDB](https://docs.microsoft.com/azure/documentdb/documentdb-python-application)
-  - [Service Bus 큐](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
-  - [Service Bus 토픽/구독](https://docs.microsoft.com/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
-  - [Python에서 서비스 관리를 사용하는 방법](https://docs.microsoft.com/azure/cloud-services/cloud-services-python-how-to-use-service-management)
+- [Django](/azure/app-service-web/web-sites-python-create-deploy-django-app) [Flask](/azure/app-service-web/web-sites-python-create-deploy-flask-app) 및 [Bottle](/azure/app-service-web/web-sites-python-create-deploy-bottle-app)을 사용하여 웹앱 만들기
+- [Blob 저장소](/azure/storage/storage-python-how-to-use-blob-storage)
+- [테이블 저장소](/azure/storage/storage-python-how-to-use-table-storage)
+- [큐 저장소](/azure/storage/storage-python-how-to-use-queue-storage)
+- [DocumentDB](/azure/documentdb/documentdb-python-application)
+- [Service Bus 큐](/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
+- [Service Bus 토픽/구독](/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
+- [Python에서 서비스 관리를 사용하는 방법](/azure/cloud-services/cloud-services-python-how-to-use-service-management)
 
 설명서가 없는 공용 API의 경우 [SDK의 GitHub 리포지토리](https://github.com/Azure/azure-sdk-for-python)에 있는 단위 테스트가 좋은 정보 자료가 됩니다.
 

@@ -12,12 +12,14 @@ caps.latest.revision: "11"
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: python
-ms.openlocfilehash: 1215c075c1c38bb742f799948929d2f301750555
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- python
+- data-science
+ms.openlocfilehash: b04bf8fcb72b9ea4578516dcd58fde35a6d4e347
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="python-web-project-templates"></a>Python 웹 프로젝트 템플릿
 
@@ -31,7 +33,7 @@ Visual Studio는 자체 프레임워크를 포함하지 않습니다. 프레임�
 
 Bottle, Flask 및 Django의 각 템플릿은 몇 가지 페이지 및 정적 파일이 있는 시작 사이트를 포함합니다. 이 코드를 통해 서버를 로컬(일부 설정을 해당 환경에서 가져와야 함)에서 충분히 실행하고 디버깅하며 Microsoft Azure에 배포([WSGI 앱](http://www.python.org/dev/peps/pep-3333/) 개체에 제공해야 함)할 수 있습니다.
 
-프레임워크별 템플릿에서 프로젝트를 만들 때 pip를 사용하여 필요한 패키지를 설치할 수 있는 대화 상자가 나타납니다. 웹 프로젝트에 대해 [가상 환경](python-environments.md#virtual-environments)을 사용하여 웹 사이트를 게시할 때 올바른 종속성이 포함되도록 하는 것이 좋습니다.
+프레임워크별 템플릿에서 프로젝트를 만들 때 pip를 사용하여 필요한 패키지를 설치할 수 있는 대화 상자가 나타납니다. 웹 프로젝트에 대해 [가상 환경](python-environments.md#global-and-virtual-environments)을 사용하여 웹 사이트를 게시할 때 올바른 종속성이 포함되도록 하는 것이 좋습니다.
 
 ![프로젝트 템플릿에 대해 필요한 패키지를 설치하는 대화 상자](media/template-web-requirements-txt-wizard.png)
 
@@ -68,13 +70,12 @@ MSBuild 구문으로 모든 프로젝트 속성 또는 환경 변수를 지정�
 **Bottle 웹 프로젝트** 템플릿은 필요한 구성을 수행하는 상용구 코드를 포함합니다. 그러나 가져온 bottle 앱에는 이 코드가 포함되어 있지 않을 수 있으며 이 경우 다음 설정으로 설치된 `bottle` 모듈을 사용하여 앱을 시작합니다.
 
 - **서버 실행 명령** 그룹:
-
-    - **명령**: `bottle`(모듈)
-    - **인수**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+  - **명령**: `bottle`(모듈)
+  - **인수**: `--bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
 - **서버 디버그 명령** 그룹:
-    - **명령**: `bottle`(모듈)
-    - **인수** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
+  - **명령**: `bottle`(모듈)
+  - **인수** `--debug --bind=%SERVER_HOST%:%SERVER_PORT% {StartupModule}:app`
 
 `--reload` 옵션은 디버깅에 Visual Studio를 사용할 때는 권장되지 않습니다.
 
@@ -83,12 +84,11 @@ MSBuild 구문으로 모든 프로젝트 속성 또는 환경 변수를 지정�
 Pyramid 앱은 현재 `pcreate` 명령줄 도구를 사용하여 최적으로 만들어집니다. 앱을 만들었으면 [기존 Python 코드에서](python-projects.md#creating-a-project-from-existing-files) 템플릿을 사용하여 가져올 수 있습니다. 그런 다음 **일반 웹 프로젝트** 사용자 지정을 선택하여 옵션을 구성합니다. 이러한 설정은 가상 환경의 `..\env`에 Pyramid가 설치되어 있다고 가정합니다.
 
 - **디버그** 그룹:
-
-    - **서버 포트**: 6543(또는.ini 파일에 구성된 모든 항목)
+  - **서버 포트**: 6543(또는.ini 파일에 구성된 모든 항목)
 
 - **서버 실행 명령** 그룹:
-    - 명령: `..\env\scripts\pserve-script.py`(스크립트)
-    - 인수: `Production.ini`
+  - 명령: `..\env\scripts\pserve-script.py`(스크립트)
+  - 인수: `Production.ini`
 
 - **서버 디버그 명령** 그룹:
     - 명령: `..\env\scripts\pserve-script.py`(스크립트)
@@ -146,7 +146,7 @@ JSON 배포 템플릿을 사용하는 경우 사이트 리소스로 사이트 �
 
 현재, 패키지 설치에 권장되는 방법은 사이트 확장을 설치하고 pip를 직접 실행한 후 배포 콘솔을 사용하는 것입니다. Python의 전체 경로를 사용하는 것이 중요하며, 그렇지 않으면 잘못된 경로를 실행할 수 있으며 일반적으로 가상 환경을 사용할 필요가 없습니다. 예:
 
-```
+```command
 c:\Python35\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
 
 c:\Python27\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt

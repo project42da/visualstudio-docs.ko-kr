@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: data-science
-ms.openlocfilehash: 74978a3ef43a1e98202d32ed418008071c8794be
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 45b12e0e6d9c26cd6fa13c1398e983087ee375e1
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="setting-up-remote-workspaces"></a>원격 작업 영역 설정
 
@@ -125,18 +125,18 @@ SSL 인증서를 Windows에서 수동으로 설치해야 합니다. 다음 지�
 
 SSL 인증서 파일 경로(PFX 경로)는 `/etc/rtvs/rtvsd.config.json`에 설정되어야 합니다. `X509CertificateFile` 및 `X509CertificatePassword`를 각각 파일 경로 및 암호로 업데이트합니다.
 
-    ```json
-    {
-      "logging": { "logFolder": "/tmp" },
-      "security": {
-        "allowedGroup": "",
-        "X509CertificateFile": "/etc/rtvs/ssl-cert-snakeoil.pfx",
-        "X509CertificatePassword": "SnakeOil"
-      },
-      "startup": { "name": "rtvsd" },
-      "urls": "https://0.0.0.0:5444"
-    }
-    ```
+```json
+{
+  "logging": { "logFolder": "/tmp" },
+  "security": {
+    "allowedGroup": "",
+    "X509CertificateFile": "/etc/rtvs/ssl-cert-snakeoil.pfx",
+    "X509CertificatePassword": "SnakeOil"
+  },
+  "startup": { "name": "rtvsd" },
+  "urls": "https://0.0.0.0:5444"
+}
+```
 
 파일을 저장하고, `sudo systemctl restart rtvsd`로 디먼을 다시 시작합니다.
 

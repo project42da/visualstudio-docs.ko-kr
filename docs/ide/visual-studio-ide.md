@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 5b289868d0cc27da76becf62a2bac51f02fa55c2
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+ms.openlocfilehash: d95cbaff8545e67bfadb0c86a256353b3fa23191
+ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 01/10/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE 개요
 
@@ -76,7 +76,7 @@ Visual Studio는 더 많은 작업을 수행하는 데 도움을 줄 수 있습�
 
 ## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE 설치
 
-시작하려면 Visual Studio를 다운로드하여 시스템에 설치합니다. [Visual Studio 2017](https://www.visualstudio.com/vs/visual-studio-2017/)에서 다운로드할 수 있습니다.
+시작하려면 Visual Studio를 다운로드하여 시스템에 설치합니다. [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)에서 다운로드할 수 있습니다.
 
 이제 Visual Studio는 그 어느 때보다도 가벼워졌습니다! 모듈식 설치 관리자를 사용하면 선호하는 프로그래밍 언어 또는 플랫폼에 필요한 기능 그룹인 *워크로드*를 선택하여 설치할 수 있습니다. 이 전략을 통해 Visual Studio 설치에 필요한 공간을 이전보다 더 작게 유지할 수 있습니다. 즉 Visual Studio를 설치하고 업데이트하는 속도가 매우 빨라집니다.
 

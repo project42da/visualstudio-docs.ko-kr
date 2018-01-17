@@ -18,11 +18,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: data-science
-ms.openlocfilehash: a7680ff2613051cb795d2ca9cb509f725e92dd23
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7bab332a66784dd473a0cf2b841b617aecda9e9f
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="r-tools-for-visual-studio-options"></a>Visual Studio용 R 도구 옵션
 
@@ -34,8 +34,8 @@ ms.lasthandoff: 12/22/2017
 
 - 코드 서식 지정 옵션([편집기 옵션](code-editing.md#editor-options) 참조): **도구 > 옵션** 메뉴에서 **텍스트 편집기 > R > 서식 지정**을 선택합니다.
 - Linting 옵션([Linting](code-linting.md) 참조): **도구 > 옵션** 메뉴에서 **텍스트 편집기 > R > Lint**를 선택합니다.
-- 고급 편집기 옵션([이 항목에 설명](#text-editor-r-advanced-options)): **도구 > 옵션** 메뉴에서 **텍스트 편집기 > R > 고급**을 선택합니다.
-- 동작 옵션([이 항목에 설명](#r-tools-advanced-options)): **R 도구 > 옵션** 메뉴 또는 **도구 > 옵션**에서 **R 도구**까지 스크롤합니다.
+- 고급 편집기 옵션([이 항목에 설명](#text-editor-r--advanced-options)): **도구 > 옵션** 메뉴에서 **텍스트 편집기 > R > 고급**을 선택합니다.
+- 동작 옵션([이 항목에 설명](#r-tools--advanced-options)): **R 도구 > 옵션** 메뉴 또는 **도구 > 옵션**에서 **R 도구**까지 스크롤합니다.
 
 **R 도구 > 데이터 과학 설정** 명령은 전체 Visual Studio에서 다양한 다른 설정에도 영향을 미칩니다. 이 명령에 대해서는 다음 섹션에서 설명합니다.
 
