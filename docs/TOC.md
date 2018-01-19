@@ -84,6 +84,13 @@
 #### [특정 .NET Framework 버전 대상 지정](ide/targeting-a-specific-dotnet-framework-version.md)
 ##### [멀티 타기팅 개요](ide/visual-studio-multi-targeting-overview.md)
 ##### [한 버전의 .NET Framework를 대상으로 지정](ide/how-to-target-a-version-of-the-dotnet-framework.md)
+#### 프로젝트 및 항목 템플릿 만들기
+##### [프로젝트 템플릿 만들기](ide/how-to-create-project-templates.md)
+##### [다중 프로젝트 템플릿 만들기](ide/how-to-create-multi-project-templates.md)
+##### [항목 템플릿 만들기](ide/how-to-create-item-templates.md)
+##### [다중 파일 항목 템플릿 만들기](ide/how-to-create-multi-file-item-templates.md)
+##### [웹 템플릿 만들기](ide/how-to-manually-create-web-templates.md)
+##### [템플릿 문제 해결](ide/how-to-troubleshoot-templates.md)
 #### [Visual Studio IDE 64비트 지원](ide/visual-studio-ide-64-bit-support.md)
 ### [프로젝트 또는 솔루션 없이 개발("폴더 열기")](ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 ### [편집기에서 코드 작성](ide/writing-code-in-the-code-and-text-editor.md)
@@ -95,7 +102,7 @@
 #### [인코딩 및 줄 바꿈](ide/encodings-and-line-breaks.md)
 ##### [인코딩을 사용하여 파일 저장 및 열기](ide/how-to-save-and-open-files-with-encoding.md)
 #### [개요](ide/outlining.md)
-#### [자동 코드 생성](ide/code-generation-in-visual-studio.md)
+#### [코드 생성 및 수정](ide/code-generation-in-visual-studio.md)
 ##### [코드 조각](ide/code-snippets.md)
 ###### 코드 조각 사용
 ####### [Visual C# 코드 조각](ide/visual-csharp-code-snippets.md)
@@ -305,15 +312,9 @@
 ### [프로젝트 및 항목 템플릿 사용자 지정](ide/customizing-project-and-item-templates.md)
 #### [기존 템플릿 업데이트](ide/how-to-update-existing-templates.md)
 #### [템플릿 매개 변수 대체](ide/how-to-substitute-parameters-in-a-template.md)
-### 새 프로젝트 및 항목 템플릿 만들기
-#### [프로젝트 템플릿 만들기](ide/how-to-create-project-templates.md)
-#### [다중 프로젝트 템플릿 만들기](ide/how-to-create-multi-project-templates.md)
-#### [항목 템플릿 만들기](ide/how-to-create-item-templates.md)
-#### [다중 파일 항목 템플릿 만들기](ide/how-to-create-multi-file-item-templates.md)
-#### [웹 템플릿 만들기](ide/how-to-manually-create-web-templates.md)
+### 프로젝트 및 항목 템플릿
 ### [템플릿 매개 변수](ide/template-parameters.md)
-### [템플릿 스키마 참조(확장성)](extensibility/visual-studio-template-schema-reference.md)
-### [템플릿 문제 해결](ide/how-to-troubleshoot-templates.md)
+### [템플릿 스키마 참조(확장성)](extensibility/visual-studio-template-schema-reference.md?toc=/visualstudio/toc.json)
 ## 일반 사용자 인터페이스 요소
 ### [호출 계층 구조](ide/reference/call-hierarchy.md)
 ### [변경 내용 미리 보기](ide/preview-changes.md)
