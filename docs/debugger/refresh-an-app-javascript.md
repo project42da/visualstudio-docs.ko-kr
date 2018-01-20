@@ -1,5 +1,5 @@
 ---
-title: "UWP 또는 Windows 8.1 앱 새로 고침 | Microsoft Docs"
+title: "UWP 앱 새로 고침 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -23,16 +23,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 636f88313d53625e5bb778ffe7bebc8f891ed4bd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ef42c0208b973707294a842376ef737216e13774
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="refresh-a-uwp-or-windows-81-app"></a>UWP 또는 Windows 8.1 앱 새로 고침
-![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="refresh-a-uwp-app-in-visual-studio"></a>Visual Studio에서 UWP 앱 새로 고침
   
- 디버그 중이면 디버깅을 다음 선택 하 여 JavaScript를 사용 하는 UWP 앱 새로 고침 하는 동안 코드에는 변경할 수는 **Windows 앱 새로 고침** 단추는 **디버그** 도구 모음입니다. 이 단추를 선택하면 디버거를 중지하여 다시 시작하지 않고 응용 프로그램을 다시 로드합니다. 새로 고침 기능을 사용하면 HTML, CSS 및 JavaScript 코드를 수정하고 결과를 빠르게 확인할 수 있습니다. 이 기능은 UWP 및 Windows 8.1 앱에 대 한 지원 됩니다.  
+ 디버그 중이면 디버깅을 다음 선택 하 여 JavaScript를 사용 하는 UWP 앱 새로 고침 하는 동안 코드에는 변경할 수는 **Windows 앱 새로 고침** 단추는 **디버그** 도구 모음입니다. 이 단추를 선택하면 디버거를 중지하여 다시 시작하지 않고 응용 프로그램을 다시 로드합니다. 새로 고침 기능을 사용하면 HTML, CSS 및 JavaScript 코드를 수정하고 결과를 빠르게 확인할 수 있습니다. 이 기능은 UWP 앱에 대 한 지원 됩니다.  
   
  새로 고침을 수행하면 응용 프로그램 상태가 유지되지 않으며 응용 프로그램에 다음 변경 사항이 반영됩니다.  
   
@@ -51,37 +50,19 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-refresh-an-app"></a>응용 프로그램을 새로 고치려면  
   
-1.  Visual Studio에서 탐색 응용 프로그램 프로젝트 템플릿을 사용하여 새 프로젝트를 만듭니다.  
-  
-     이 UWP 앱 또는 Windows 8.1 앱 수 있습니다.  
-  
-2.  Visual Studio에서 템플릿을 열어 둔 채 디버그 대상을 선택합니다.  
-  
-     Windows Phone 프로젝트가 현재 시작 프로젝트인 경우 디버그 대상으로 Windows Phone 에뮬레이터를 선택합니다. 그렇지 않은 경우 선택 **시뮬레이터** 또는 **로컬 컴퓨터**합니다.  
+1.  UWP 프로젝트를 Visual Studio에서 열고, 선택 **로컬 컴퓨터** 디버그 대상으로 합니다.
   
      ![디버그 대상 목록 선택](../debugger/media/js_select_target.png "JS_Select_Target")  
   
 3.  F5 키를 눌러 디버그 모드에서 응용 프로그램을 실행합니다.  
   
-4.  Visual Studio로 전환합니다(F12 키 누름).  
+4.  Visual Studio로 
   
-5.  **솔루션 탐색기**에 **페이지** > **홈** 폴더의 home.html을 엽니다.  
-  
-6.  다음에서  
-  
-    ```html  
-    Welcome to yourAppName!  
-    ```  
-  
-     다음과 같은 다른 제목 텍스트로 변경  
-  
-    ```html  
-    Hello!  
-    ```  
+5.  UWP 앱의 홈 페이지의 HTML 중 일부를 편집 합니다.
   
 7.  클릭는 **Windows 앱 새로 고침** 다음과 같은 단추: ![새로 고침 Windows 응용 프로그램 단추](../debugger/media/js_refresh.png "JS_Refresh")합니다. 또는 F4 키를 누릅니다.  
   
-8.  응용 프로그램으로 전환합니다. 디버거를 다시 시작하지 않아도 응용 프로그램이 다시 로드되고 새 페이지 제목이 표시됩니다.  
+8.  응용 프로그램으로 전환합니다. 응용 프로그램을 다시 로드 하 고 업데이트 된 HTML 응용 프로그램을 렌더링에 사용 됩니다.
   
 ## <a name="see-also"></a>참고 항목  
  [빠른 시작: HTML 및 CSS 디버그](../debugger/quickstart-debug-html-and-css.md)

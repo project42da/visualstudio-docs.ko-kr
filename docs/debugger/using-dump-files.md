@@ -25,11 +25,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: de774e323c1580c2a4d7c925f9c9297c392b2794
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 179d66b80676cf47bb12e82fcd8e4ac00503a492
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="use-dump-files-with-visual-studio"></a>Visual Studio와 함께 사용 하 여 덤프 파일
 또는 힙을; 포함 하지 않는 덤프 파일 덤프 파일; 만들기 덤프 파일; 열기 이진 파일, pdb의 및 덤프 파일에 대 한 소스 파일을 찾습니다.
@@ -56,11 +56,11 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Studio에서는 ARM 장치에서 네이티브 응용 프로그램의 덤프 파일을 디버깅할 수 있습니다. 또한 Visual Studio에서는 ARM 장치에서 관리되는 응용 프로그램의 응용 프로그램 덤프 파일을 디버깅할 수 있지만 이는 네이티브 디버거에서만 가능합니다.  
   
--   디버깅 하려면 [커널 모드](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx) 덤프 Visual Studio 2013의 파일을 다운로드 하 고 [Windows 8.1 버전의 Windows 용 디버깅 도구](http://msdn.microsoft.com/windows/hardware/gg463009)합니다. 참조 [Visual Studio에서 커널 디버깅](http://msdn.microsoft.com/library/windows/hardware/jj149675.aspx)합니다.  
+-   디버깅 하려면 [커널 모드](http://msdn.microsoft.com/library/windows/hardware/ff551880.aspx) 덤프 파일을의 일부인 Windows 용 디버깅 도구를 다운로드 하는 [키트 WDK (Windows 드라이버)](/windows/hardware/windows-driver-kit)합니다. 
   
 -   Visual Studio로 알려진 이전 덤프 형식으로 저장 된 덤프 파일을 디버깅할 수 없습니다는 [전체 사용자 모드 덤프](http://msdn.microsoft.com/library/windows/hardware/ff545506.aspx)합니다. 전체 사용자 모드 덤프는 힙을 포함하는 덤프와 동일하지 않습니다.  
   
--   사용 하 여 디버그 하는 [SOS.dll (SOS 디버깅 확장)](/dotnet/framework/tools/sos-dll-sos-debugging-extension) Visual Studio에서 Debugging Tools for Windows Windows 드라이버 키트 (WDK)의 일부인 설치 해야 합니다. 참조 [Windows 8.1 Preview: 키트, 비트 및 도구 다운로드](http://msdn.microsoft.com/library/windows/hardware/bg127147.aspx)합니다.  
+-   사용 하 여 디버그 하는 [SOS.dll (SOS 디버깅 확장)](/dotnet/framework/tools/sos-dll-sos-debugging-extension) Visual Studio에서의 일부인 Windows 용 디버깅 도구를 설치 해야는 [키트 WDK (Windows 드라이버)](/windows/hardware/windows-driver-kit) 
   
 ##  <a name="BKMK_Create_a_dump_file"></a>덤프 파일 만들기  
  Visual Studio에서 덤프 파일을 만들려면  

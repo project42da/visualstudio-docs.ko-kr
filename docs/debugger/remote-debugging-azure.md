@@ -16,14 +16,14 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 52acd997d1f6dd9f019a6495cfbeab4e459d661b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ba54912b61e624861bbaec56d9e5bab68d7f5d78
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="remote-debug-aspnet-core-on-iis-and-azure-in-visual-studio-2017"></a>IIS 및 Visual Studio 2017에는 Azure에서 ASP.NET Core 원격 디버그
-Iis에서 Windows Server 컴퓨터에 ASP.NET 웹 응용 프로그램을 배포 하 고 원격 디버깅에 대해 설정할 수 있습니다. 이 설정 및 Visual Studio 2017 ASP.NET Core 응용 프로그램을 구성 하 고 Azure를 사용 하 여 IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다.
+Azure 앱 서비스에 대 한 사용 하 여 디버깅 하는 권장는 [스냅숏 디버거](../debugger/debug-live-azure-applications.md) 있고 Visual Studio에서 디버거를 연결 하려면이 항목의 지침에 따라 수 있습니다. 를 실행 하는 Windows Server IIS와 Azure VM의 경우 원격 디버깅에 대해 설정할 수도 있습니다. 이 설정 및 Visual Studio 2017 ASP.NET Core 응용 프로그램을 구성 하 고 Azure를 사용 하 여 IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다.
 
 > [!WARNING]
 > 이 자습서의 단계를 완료 했을 때 만드는 Azure 리소스를 삭제 해야 합니다. 불필요 한 비용이 발생 하지 않아도 해당 방법입니다.
@@ -184,7 +184,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 2. Visual Studio에서 클릭 **디버그 > 프로세스에 연결** (Ctrl + Alt + P).
 
     > [!TIP]
-    > Visual Studio 2017에 다시 연결할 수는 동일한 프로세스를 이전에 사용 하 여 연결할 **디버그 > 프로세스에 다시 연결 중...** (Shift + Alt + P)입니다. 
+    > Visual Studio 2017에 다시 연결할 수는 동일한 프로세스를 이전에 사용 하 여 연결할 **디버그 > 프로세스에 다시 연결 중...** (Shift+Alt+P). 
 
 3. 한정자 필드를 설정  **\<원격 컴퓨터 이름 >: 4022**합니다.
 4. 클릭 **새로 고침**합니다.

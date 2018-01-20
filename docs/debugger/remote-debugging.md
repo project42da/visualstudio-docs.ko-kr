@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: a0eb590549578ac9aea824f52c8192c97dce94f2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 94ce04f63870bb6ce9a40658c670c5b277cc675e
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 다른 컴퓨터에 배포된 Visual Studio 응용 프로그램을 디버그할 수 있습니다. 이렇게 하려면 Visual Studio 원격 디버거를 사용합니다.
@@ -34,12 +34,11 @@ ms.lasthandoff: 01/10/2018
 
 |시나리오|링크|
 |-|-|-|
+|Azure|[Azure 앱 서비스 (스냅숏 디버거)에서 ASP.NET 디버깅](../debugger/debug-live-azure-applications.md), [원격 Azure에서 ASP.NET 디버깅](../debugger/remote-debugging-azure.md), 또는 [Azure 서비스 패브릭 응용 프로그램 디버깅](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)|
 |ASP.NET|[원격 디버깅 ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) 또는 [원격 디버깅 ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|C# 또는 Visual Basic|[원격 디버깅을 C# 또는 Visual Basic 프로젝트](../debugger/remote-debugging-csharp.md)|
+|C# 또는 Visual Basic|[C# 또는 Visual Basic 프로젝트 원격 디버그](../debugger/remote-debugging-csharp.md)|
 |C++|[C++ 프로젝트 원격 디버그](../debugger/remote-debugging-cpp.md)|
 |유니버설 Windows 앱 (UWP)|[UWP 앱을 원격 컴퓨터에서 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md) 및 [설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)|
-|Azure|[Azure에서 원격 디버깅 ASP.NET](remote-debugging-azure.md)|
-|Azure 서비스 패브릭|[원격 서비스 패브릭 응용 프로그램을 디버깅](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)합니다.|
 
 방금 다운로드 하 고 원격 디버거를 설치 하 고 시나리오에 대 한 추가 지침에 필요 하지 않습니다,이 문서의 단계를 수행 합니다.
   
@@ -51,11 +50,11 @@ ms.lasthandoff: 01/10/2018
 
 원격 디버거를 찾을 수 있습니다 (**msvsmon.exe**) Visual Studio Community, Professional 또는 Enterprise를 이미 설치 된 컴퓨터에 있습니다. 일부 시나리오에 대 한 원격 디버깅을 설정 하는 가장 쉬운 방법은 파일 공유에서 원격 디버거 (msvsmon.exe)를 실행 하는 합니다. 사용 제한 사항에 대 한 원격 디버거의 도움말 페이지를 참조 (**도움말 > 사용량** 원격 디버거에서).
 
-1. 찾을 **msvsmon.exe** Visual Studio 버전에 일치 하는 디렉터리에 있습니다. Visual Studio Enterprise 2017에 대 한:
+1. 찾을 **msvsmon.exe** Visual Studio 버전에 일치 하는 디렉터리에 있습니다. For Visual Studio Enterprise 2017:
 
-      **프로그램 파일 (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe**
+      **Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe**
       
-      **프로그램 파일 (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe**
+      **Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe**
 
 2. 공유는 **원격 디버거** Visual Studio 컴퓨터의 폴더에 있습니다.
 

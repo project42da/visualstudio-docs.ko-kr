@@ -22,11 +22,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: e2e2d380bf90ae2cb0140c508f7cb3b9842c7bf8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c9b820dceefbb84dc9c0b9b9efff75afdb38b30f
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="edit-and-continue-visual-c"></a>편집하며 계속하기(Visual C#)
  C#에서 편집하며 계속하기를 사용하면 디버깅하는 동안 중단 모드에서 코드를 변경할 수 있습니다. 디버깅 세션을 중지하고 다시 시작하지 않고도 변경 내용을 적용할 수 있습니다. 실행 모드에서 소스 편집기는 읽기 전용입니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 12/22/2017
  편집 하며 계속 하기는.NET Framework 4.6을 대상으로 하는 x86 및 x64 응용 프로그램 및 Windows 10에서 UWP에서 지원 됩니다 (.NET Framework는 데스크톱 버전은)는 데스크톱 또는 이후 버전입니다.
 
  > [!NOTE]
- > 지원 되지 않는 앱 및 플랫폼에는 ASP.NET 5, Silverlight 5, Windows Phone 및 Windows Phone 에뮬레이터 및 Windows 8.1 포함 됩니다.
+ > 지원 되지 않는 앱 및 플랫폼에는 ASP.NET 5, Silverlight 5 및 Windows 8.1 포함 됩니다.
   
  경우 편집 하며 계속 하기를 활성화와 같은 디버거 실행 명령을 사용 하는 경우 지원 되는 변경 내용이 자동으로 적용 **계속**, **단계**, **다음 문 설정**, 하거나 디버거 창에서 함수를 실행 합니다.  
   

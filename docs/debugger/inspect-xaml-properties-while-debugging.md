@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 70ca76a3b611b0490def98b1a24936f71ca42e0c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 40ff41cc6728244d11e93541057af1cb525c7af3
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="inspect-xaml-properties-while-debugging"></a>디버그하는 동안 XAML 속성 검사
 사용 하 여 실행 중인 XAML 코드의 실시간 보기를 얻을 수는 **라이브 시각적 트리** 및 **라이브 속성 탐색기**합니다. 이러한 도구는 실행 중인 XAML 응용 프로그램의 UI 요소에 대한 트리 뷰를 제공하고 선택한 UI 요소의 런타임 속성을 보여 줍니다.  
@@ -27,7 +27,6 @@ ms.lasthandoff: 12/22/2017
 |앱 유형|운영 체제 및 도구|  
 |-----------------|--------------------------------|  
 |Windows Presentation Foundation(4.0 이상) 응용 프로그램|Windows 7 이상|  
-|Windows 8.1 및 Windows Phone 8.1 앱|Windows 10 이상와 [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
 |유니버설 Windows 앱|Windows 10 이상와 [Windows 10 SDK](https://dev.windows.com/en-us/downloads/windows-10-sdk)|  
   
 ## <a name="looking-at-elements-in-the-live-visual-tree"></a>라이브 시각적 트리의 요소 보기  

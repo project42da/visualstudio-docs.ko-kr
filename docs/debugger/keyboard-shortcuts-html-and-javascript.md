@@ -18,14 +18,13 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 1d40167e8d7510e719fa55c534feb44ac877182a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5e87e51e1e2969a8256ae805d60f5b53663b446e
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="keyboard-shortcuts-html-and-javascript"></a>바로 가기 키(HTML 및 JavaScript)
-![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  HTML 및 JavaScript를 사용 하 여 UWP 앱 디버깅을 위해 Visual Studio에서 바로 가기 키입니다.  
   

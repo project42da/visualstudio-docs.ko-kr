@@ -18,16 +18,15 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 40c3a112d77e7e00d95aaa92a77a3b6739c96293
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8c463bc443540e136b2cffd1a4abdda2cc543d05
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debug-a-webview-control-in-a-uwp-app"></a>UWP 앱의 WebView 컨트롤 디버깅
-![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
- Windows 런타임 앱에서 `WebView` 컨트롤을 조사 및 디버깅하려면 앱 시작 시 스크립트 디버거를 연결하도록 Visual Studio를 구성하면 됩니다. Visual Studio 2013 업데이트 2부터 디버거를 사용하여 다음의 두 가지 방법으로 `WebView` 컨트롤과 상호 작용할 수 있습니다.  
+ Windows 런타임 앱에서 `WebView` 컨트롤을 조사 및 디버깅하려면 앱 시작 시 스크립트 디버거를 연결하도록 Visual Studio를 구성하면 됩니다. 와 상호 작용할 수 다음의 두 가지 `WebView` 디버거를 사용 하 여 제어 합니다.  
   
 -   열기는 [DOM 탐색기](../debugger/quickstart-debug-html-and-css.md) 에 대 한는 `WebView` , 인스턴스 및 DOM 요소, CSS 스타일 문제를 조사 및 스타일을 동적으로 렌더링 된 변경 내용을 테스트 합니다.  
   

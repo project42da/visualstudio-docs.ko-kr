@@ -24,11 +24,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 36cdf6538a1a9f258eef0c251d14884b64ca70c2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 82ec43b02895c2067b04f52f893184a82dd0f36b
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="edit-and-continue-visual-basic"></a>편집하며 계속하기(Visual Basic)
 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 디버깅의 편집하며 계속하기 기능을 사용하면 코드가 중단 모드에서 실행되는 동안 코드를 변경할 수 있습니다. 코드 편집을 적용한 후에 새 편집 내용이 적용된 상태로 코드 실행을 다시 시작하고 그 결과를 확인할 수 있습니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
  편집 하며 계속 하기는 Windows 10 용 UWP 앱 및.NET Framework 4.6을 대상으로 하는 x86 및 x64 응용 프로그램에서 지원 됩니다 (.NET Framework는 데스크톱 버전은)는 데스크톱 또는 이후 버전입니다.
 
  > [!NOTE]
- > 지원 되지 않는 앱 및 플랫폼에는 ASP.NET 5, Silverlight 5, Windows Phone 및 Windows Phone 에뮬레이터 및 Windows 8.1 포함 됩니다.
+ > 지원 되지 않는 앱 및 플랫폼에는 ASP.NET 5, Silverlight 5 및 Windows 8.1 포함 됩니다.
   
  편집 하며 계속 하기를 사용 하 여 디버깅을 시작할 때 지원 되지 않습니다 **프로세스에 연결**합니다. 편집 하며 계속 하기가 지원 되지 않는 최적화 된 코드 또는 혼합 관리 / 네이티브 코드입니다. 자세한 내용은 참조 [지원 되는 코드 변경 (C# 및 Visual Basic](../debugger/supported-code-changes-csharp.md)합니다.
   

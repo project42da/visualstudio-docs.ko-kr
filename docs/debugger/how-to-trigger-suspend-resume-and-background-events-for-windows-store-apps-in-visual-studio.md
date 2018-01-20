@@ -1,7 +1,7 @@
 ---
 title: "트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트를 UWP 앱을 디버깅 하는 동안 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-debug
@@ -13,17 +13,16 @@ dev_langs:
 - VB
 - FSharp
 - C++
-ms.assetid: 824ff3ca-fedf-4cf5-b3e2-ac8dc82d40ac
 caps.latest.revision: "17"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 4a62f02d98ed06df4a3eea1b3f253f5e91ff7115
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 036362ec392e6deba9bed1ef185c602d508d4da4
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="how-to-trigger-suspend-resume-and-background-events-while-debugging-uwp-apps-in-visual-studio"></a>트리거하는 방법 일시 중단, 다시 시작 및 백그라운드 이벤트를 Visual Studio에서 UWP 앱을 디버깅 하는 동안
 디버깅하고 있지 않을 때는 Windows PLM( **프로세스 수명 관리** )에서 응용 프로그램의 실행 상태(장치 상태 및 사용자 작업에 응답하여 응용 프로그램 시작, 일시 중단, 다시 시작 및 종료)를 제어합니다. 디버깅하는 중에는 Windows가 이러한 활성화 이벤트를 사용하지 않도록 설정합니다. 이 항목에서는 디버거에서 이러한 이벤트를 발생시키는 방법에 대해 설명합니다.  
@@ -31,19 +30,6 @@ ms.lasthandoff: 01/10/2018
  이 항목에서는 **백그라운드 작업**을 디버깅하는 방법에 대해서도 설명합니다. 백그라운드 작업을 사용하면 응용 프로그램을 실행하고 있지 않은 경우에도 백그라운드 프로세스에서 특정 작업을 수행할 수 있습니다. 디버거를 사용하여 응용 프로그램을 디버그 모드에 둔 다음 UI를 시작하지 않고 백그라운드 작업을 시작하고 디버깅할 수 있습니다.  
   
  프로세스 수명 관리 및 백그라운드 작업에 대 한 자세한 내용은 참조 [시작, 재개 및 멀티태스킹을](/windows/uwp/launch-resume/index)합니다.  
-  
-##  <a name="BKMK_In_this_topic"></a> 항목 내용  
- [프로세스 수명 관리 이벤트 트리거](#BKMK_Trigger_Process_Lifecycle_Management_events)  
-  
- [백그라운드 작업 트리거](#BKMK_Trigger_background_tasks)  
-  
--   [표준 디버그 세션에서 백그라운드 작업 이벤트 트리거](#BKMK_Trigger_a_background_task_event_from_a_standard_debug_session)  
-  
--   [응용 프로그램이 실행 중이지 않을 때 백그라운드 작업 트리거](#BKMK_Trigger_a_background_task_when_the_app_is_not_running)  
-  
- [설치된 응용 프로그램에서 프로세스 수명 관리 이벤트 및 백그라운드 작업 트리거](#BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app)  
-  
- [백그라운드 작업 활성화 오류 진단](#BKMK_Diagnosing_background_task_activation_errors)  
   
 ##  <a name="BKMK_Trigger_Process_Lifecycle_Management_events"></a> 프로세스 수명 관리 이벤트 트리거  
  사용자가 응용 프로그램에서 벗어나거나 Windows가 절전 상태로 들어갈 때 응용 프로그램이 일시 중단될 수 있습니다. `Suspending` 이벤트에 응답하여 관련 응용 프로그램 및 사용자 데이터를 영구 저장소에 저장하고 리소스를 해제할 수 있습니다. 응용 프로그램은 **일시 중단됨** 상태에서 다시 시작되는 경우 **실행 중** 상태가 되고 일시 중단되었을 때의 위치에서 계속됩니다. `Resuming` 이벤트에 응답하여 응용 프로그램 상태를 복원하거나 새로 고치고 리소스를 회수할 수 있습니다.  
@@ -88,7 +74,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  시작 프로젝트에 대한 디버그 속성 페이지를 엽니다. 솔루션 탐색기에서 프로젝트를 선택합니다. **디버그** 메뉴에서 **속성**을 선택합니다.  
   
-     C++ 프로젝트의 경우 **구성 속성** 을 확장한 다음 **디버깅**을 선택할 수 있습니다.  
+     C + + 및 JavaScript 프로젝트에 대 한 확장 **구성 속성** 선택한 후 **디버깅**합니다.  
   
 3.  다음 작업 중 하나를 수행합니다.  
   
@@ -109,12 +95,12 @@ ms.lasthandoff: 01/10/2018
      ![일시 중단, 다시 시작, 종료 및 백그라운드 작업](../debugger/media/dbg_suspendresumebackground.png "DBG_SuspendResumeBackground")  
   
 ##  <a name="BKMK_Trigger_Process_Lifetime_Management_events_and_background_tasks_from_an_installed_app"></a> 설치된 응용 프로그램에서 프로세스 수명 관리 이벤트 및 백그라운드 작업 트리거  
- 설치된 응용 프로그램 디버그 대화 상자를 사용하여 이미 설치된 응용 프로그램을 디버거에 로드할 수 있습니다. 예를 들어 Microsoft 스토어에서 설치 된 앱을 디버깅 하거나 응용 프로그램에 대 한 소스 파일이 하지만 응용 프로그램에 대 한 Visual Studio 프로젝트가 아니라 있으면 응용 프로그램을 디버깅 수 있습니다. 설치된 응용 프로그램 디버그 대화 상자에서는 Visual Studio 컴퓨터나 원격 장치에서 디버그 모드로 응용 프로그램을 시작하거나 디버그 모드에서 실행되도록 응용 프로그램을 설정하고 응용 프로그램을 시작하지 않을 수 있습니다. 참조는 **디버거에서 설치 된 응용 프로그램 시작** 섹션 [UWP 앱에서 디버깅 세션을 시작](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md#BKMK_Start_an_installed_app_in_the_debugger)합니다.
+ 사용 하 여는 **설치 된 응용 프로그램 패키지 디버그** 대화 상자는 디버거를 이미 설치 되어 있는 응용 프로그램 로드할 수 있습니다. 예를 들어 Microsoft 스토어에서 설치 된 앱을 디버깅 하거나 응용 프로그램에 대 한 소스 파일이 하지만 응용 프로그램에 대 한 Visual Studio 프로젝트가 아니라 있으면 응용 프로그램을 디버깅 수 있습니다. **설치 된 응용 프로그램 패키지 디버그** 대화 상자를 사용 하면 Visual Studio 컴퓨터에서 또는 원격 장치 또는 앱이 시작 되지 않지만 디버그 모드에서 실행 되도록 설정 하려면 디버그 모드에서 응용 프로그램을 시작 합니다. 자세한 내용은 참조 [설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)합니다.
   
  응용 프로그램이 디버거에 로드되면 위에서 설명한 절차를 사용할 수 있습니다.  
   
 ##  <a name="BKMK_Diagnosing_background_task_activation_errors"></a> 백그라운드 작업 활성화 오류 진단  
- Windows 이벤트 뷰어의 백그라운드 인프라에 대한 진단 로그에는 백그라운드 작업 오류를 진단하고 문제를 해결하는 데 사용할 수 있는 자세한 정보가 포함되어 있습니다. 로그를 보려면 다음을 수행합니다.  
+ Windows 이벤트 뷰어의 백그라운드 인프라에 대 한 진단 로그는 진단 하 고 백그라운드 작업 오류를 해결 하는 데 사용할 수 있는 자세한 정보를 포함 합니다. 로그를 보려면 다음을 수행합니다.  
   
 1.  이벤트 뷰어 응용 프로그램을 엽니다.  
   
@@ -127,5 +113,5 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio로 UWP 앱 테스트](../test/testing-store-apps-with-visual-studio.md)   
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [응용 프로그램 수명 주기](http://msdn.microsoft.com/en-us/53cdc987-c547-49d1-a5a4-fd3f96b2259d)   
- [시작, 재개 및 멀티태스킹](http://msdn.microsoft.com/en-us/04307b1b-05af-46a6-b639-3f35e297f71b)
+ [응용 프로그램 수명 주기](/windows/uwp/launch-resume/app-lifecycle)   
+ [시작, 재개 및 멀티태스킹](/windows/uwp/launch-resume/index)

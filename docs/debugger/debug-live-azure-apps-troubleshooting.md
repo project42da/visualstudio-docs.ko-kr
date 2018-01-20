@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: d007bdf5d2029e896167a2fd7b32359c661aa7fa
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 7792e22398afd476703407e8ae2159e0f1afd931
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>스냅숏 Visual Studio의 디버깅에 대 한 문제 해결 및 알려진 문제
 
@@ -71,6 +71,17 @@ ms.lasthandoff: 01/05/2018
 - 특별 한 변수와 같은 *$FUNCTION* 또는 *$CALLER*, ASP.NET Core 프로젝트에 대 한 logpoints 또는 조건문에서 계산할 수 없습니다.
 - 스냅숏 디버깅 된 응용 프로그램 서비스에서 작동 하지 않을 [로컬 캐싱](/azure/app-service/app-service-local-cache) 켜져 있습니다.
 - API 앱을 디버깅 하는 스냅숏 현재 지원 되지 않습니다.
+
+## <a name="site-extension-upgrade"></a>사이트 확장 업그레이드
+
+스냅숏 디버깅 및 Application Insights 사이트 프로세스를 로드 하 고 업그레이드 하는 동안 파일 잠금 문제가 발생 하는 ICorProfiler에 따라 다릅니다. 프로덕션 사이트에 없는 가동 중지 시간이 있도록 하기 위해이 프로세스를 사용 하는 것이 좋습니다.
+
+- 만들기는 [배포 슬롯](/azure/app-service/web-sites-staged-publishing) 응용 프로그램 서비스 내에서 슬롯에 사이트를 배포 합니다.
+- Azure 포털에서 나 Visual Studio 클라우드 탐색기에서 프로덕션으로 슬롯의 교환 합니다.
+- 슬롯 사이트를 중지 합니다. 모든 인스턴스에서 사이트 w3wp.exe 프로세스를 중지 하려면 몇 초 정도 걸립니다.
+- Kudu 사이트 또는 Azure 포털에서 슬롯 사이트 확장을 업그레이드 (*앱 서비스 블레이드 > 개발 도구 > 확장 > 업데이트*).
+- 슬롯 사이트를 시작 합니다. 다시 준비 사이트를 방문 하는 것이 좋습니다.
+- 프로덕션으로 슬롯의 교환 합니다.
 
 ## <a name="see-also"></a>참고 항목
 

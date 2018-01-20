@@ -1,5 +1,5 @@
 ---
-title: "퀵 스타트: 콘솔을 사용한 JavaScript 디버깅 | Microsoft Docs"
+title: "콘솔을 사용한 JavaScript 디버그 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,31 +8,25 @@ ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.WebClient.JavaScriptConsole
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+dev_langs: JavaScript
 helpviewer_keywords:
 - JavaScript Console
 - JavaScript debugging
 - debugging, JavaScript
-ms.assetid: ea7adb71-52b6-4a5a-9346-98ca94b06bd7
 caps.latest.revision: "7"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 93deb8c5a8d4d17597db0fa2f93f097b4839e88b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a3069f0528d346a2168bbb37535089d00e23aa15
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="quickstart-debug-javascript-using-the-console"></a>퀵 스타트: 콘솔을 사용하여 Debug JavaScript 디버그
-![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="debug-javascript-using-the-console-in-visual-studio"></a>Visual Studio에서 콘솔을 사용한 JavaScript 디버그
   
- JavaScript로 작성 된 UWP 앱을 디버그와 상호 작용 하는 JavaScript 콘솔 창을 사용할 수 있습니다. 이러한 기능은 UWP 앱에 대 한 지원지 않습니다 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱, Windows Phone 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱입니다. 콘솔 명령 참조는 [JavaScript Console commands](../debugger/javascript-console-commands.md)을 참조하세요.  
+ JavaScript로 작성 된 UWP 앱을 디버그와 상호 작용 하는 JavaScript 콘솔 창을 사용할 수 있습니다. 이러한 기능은 UWP 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱에 대해 지원 됩니다. 콘솔 명령 참조는 [JavaScript Console commands](../debugger/javascript-console-commands.md)을 참조하세요.  
   
  JavaScript 콘솔 창에서는 다음 작업을 수행할 수 있습니다.  
   
@@ -48,36 +42,26 @@ ms.lasthandoff: 01/10/2018
   
 -   화면을 지우는 등의 다른 작업을 수행합니다. 전체 명령 목록을 보려면 [JavaScript Console commands](../debugger/javascript-console-commands.md) 을 참조하세요.  
   
- 항목 내용:  
-  
--   [JavaScript 콘솔 창을 사용하여 디버깅](#InteractiveConsole)  
-  
--   [대화형 디버깅 및 중단 모드](#InteractiveDebuggingBreakMode)  
-  
--   [JavaScript 콘솔 창의 한 줄 모드 및 여러 줄 모드](#SinglelineMultilineMode)  
-  
--   [스크립트 실행 컨텍스트 전환](#Switching)  
-  
 > [!TIP]
->  JavaScript 콘솔 창이 닫힌 경우 **디버그**>**창** > **JavaScript 콘솔** 을 사용하여 다시 엽니다. 창은 스크립트 디버깅 세션 중에만 표시됩니다.  
+>  JavaScript 콘솔 창이 닫힌 **디버그**> **Windows** > **JavaScript 콘솔** 다시 엽니다. 창은 스크립트 디버깅 세션 중에만 표시됩니다.  
   
  JavaScript 콘솔 창에서는 디버거를 중지 및 다시 시작하지 않고 앱과 상호 작용할 수 있습니다. 자세한 내용은 참조 하십시오. [(JavaScript) 앱 새로 고침](../debugger/refresh-an-app-javascript.md)합니다. 다른 JavaScript 디버깅 예: DOM 탐색기 사용 및 중단점 설정, 기능에 대 한 정보 참조 [퀵 스타트: HTML 및 CSS 디버깅](../debugger/quickstart-debug-html-and-css.md) 및 [Visual Studio에서 앱 디버깅](../debugger/debug-store-apps-in-visual-studio.md)합니다.  
   
 ##  <a name="InteractiveConsole"></a> JavaScript 콘솔 창을 사용하여 디버깅  
  다음 단계를 수행하면 `FlipView` 앱이 생성되고, 대화식으로 JavaScript 코딩 오류를 디버그하는 방법이 표시됩니다.  
   
-> [!CAUTION]
+> [!NOTE]
 >  여기서 샘플 앱은 UWP 앱입니다. 그러나 여기에 설명된 콘솔 기능은 Visual Studio Tools for Apache Cordova를 사용하여 만든 앱에도 적용됩니다.  
   
 #### <a name="to-debug-javascript-code-in-the-flipview-app"></a>FlipView 앱에서 JavaScript 코드를 디버그하려면  
   
 1.  선택 하 여 Visual Studio에서 새 솔루션을 만들어 **파일** > **새 프로젝트**합니다.  
   
-2.  선택 **JavaScript** > **스토어 앱**, 선택 **Windows 앱** 또는 **Windows Phone 앱**, 선택 **비어 있는 앱**합니다.  
+2.  선택 **JavaScript** > **Windows 유니버설**를 선택한 후 **WinJS 앱**합니다.  
   
 3.  프로젝트의 이름(예: `FlipViewApp`)을 입력하고 **확인** 을 클릭하여 앱을 만듭니다.  
   
-4.  default.html의 BODY 요소에서 기존 HTML 코드를 다음 코드로 바꿉니다.  
+4.  Index.html의 BODY 요소에서 기존 HTML 코드를이 코드로 바꿉니다.  
   
     ```html  
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
@@ -133,9 +117,9 @@ ms.lasthandoff: 01/10/2018
   
         function updateImages() {  
   
-            pages.push(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-            pages.push(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-            pages.push(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+            pages.push(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+            pages.push(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+            pages.push(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
   
         };  
   
@@ -153,7 +137,7 @@ ms.lasthandoff: 01/10/2018
     })();  
     ```  
   
-7.  디버깅 대상이 아직 선택되지 않은 경우 **디버그** 도구 모음의 **장치** 단추 옆에 있는 드롭다운 목록에서 **시뮬레이터** 또는 **에뮬레이터 8.1 WVGA 4인치 512MB** (Windows Phone의 경우)를 선택합니다.  
+7.  디버깅 대상이 아직 선택 되지 않은, 선택 **로컬 컴퓨터** 옆에 있는 드롭다운 목록에서 **장치** 단추는 **디버그** 도구 모음:  
   
      ![디버그 대상 목록 선택](../debugger/media/js_select_target.png "JS_Select_Target")  
   
@@ -161,7 +145,7 @@ ms.lasthandoff: 01/10/2018
   
      앱이 실행되지만 이미지가 누락되었습니다. JavaScript 콘솔 창의 APPHOST 오류는 이미지가 없음을 나타냅니다.  
   
-9. 와 `FlipView` 시뮬레이터 또는 Phone 에뮬레이터, 형식에서 실행 중인 앱 `Data.items` 콘솔 창 입력 프롬프트에에서 (옆에 ">>" 기호) Enter 키를 누릅니다.  
+9. 와 `FlipView` 앱이 실행 되 고 형식 `Data.items` 콘솔 창 입력 프롬프트에에서 (옆에 ">>" 기호) Enter 키를 누릅니다.  
   
      `items` 개체의 시각화 도우미가 콘솔 창에 표시됩니다. 즉, `items` 개체가 인스턴스화되어, 현재 스크립트 컨텍스트에서 사용할 수 있음을 나타냅니다. 콘솔 창에서, 개체의 노드를 클릭하여 속성 값을 볼 수 있습니다(또는 화살표 키 사용). `items._data` 개체로 클릭해 내려가면 이 그림에서와 같이 이미지 소스 참조가 예상대로 올바르지 않음을 알게 됩니다. 아직 개체에 기본 이미지(logo.png)가 있고 누락된 이미지가 예상 이미지와 섞여 있습니다.  
   
@@ -174,9 +158,9 @@ ms.lasthandoff: 01/10/2018
 11. 디버깅 세션을 중지하지 않고 이 문제를 대화식으로 수정하려면, default.js를 열고 `updateImages` 함수에서 이 코드를 선택합니다.  
   
     ```javascript  
-    pages.push(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-    pages.push(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-    pages.push(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+    pages.push(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+    pages.push(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+    pages.push(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
     ```  
   
      이 코드를 복사하여 JavaScript 콘솔 입력 프롬프트에 붙여 넣습니다.  
@@ -187,9 +171,9 @@ ms.lasthandoff: 01/10/2018
 12. 프롬프트에서 `push` 함수 호출을 수정하여 `pages.push` 를 `Data.items.setAt`으로 바꿉니다. 수정된 코드는 다음과 같습니다.  
   
     ```javascript  
-    Data.items.setAt(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-    Data.items.setAt(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-    Data.items.setAt(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+    Data.items.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+    Data.items.setAt(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+    Data.items.setAt(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
     ```  
   
     > [!TIP]
@@ -201,7 +185,7 @@ ms.lasthandoff: 01/10/2018
   
 15. 프롬프트에서 `Data.items.length = 3` 를 입력하고 Enter 키를 누릅니다. 그러면 데이터에서 불필요한 요소가 제거됩니다.  
   
-16. 시뮬레이터 또는 Phone 에뮬레이터를 다시 확인해 보면, 올바른 이미지가 올바른 `FlipView` 페이지에 표시되는 것을 확인할 수 있습니다.  
+16. 응용 프로그램을 다시 확인 하 고 올바른 이미지가 있는 올바른에 표시 됩니다 `FlipView` 페이지입니다.  
   
 17. DOM 탐색기에서 업데이트된 DIV 요소가 표시되고, 예상된 IMG 요소를 찾기 위해 하위 트리로 이동할 수 있습니다.  
   
@@ -218,7 +202,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  이전에 만든 `FlipView` 앱의 default.html 파일에서, `updateImages()` 함수의 바로 가기 메뉴를 열고 **중단점** > **중단점 삽입**을 참조하세요.  
   
-2.  **디버그** 도구 모음의 **디버깅 시작** 단추 옆에 있는 드롭다운 목록에서 **로컬 컴퓨터** 또는 **에뮬레이터 8.1 WVGA 4인치 512MB** 를 선택합니다.  
+2.  선택 **로컬 컴퓨터** 옆에 있는 드롭다운 목록에서 **디버깅 시작** 단추는 **디버그** 도구 모음입니다.  
   
 3.  **디버그** > **Start 디버그ging**을 선택하거나 F5를 선택합니다.  
   
@@ -239,7 +223,7 @@ ms.lasthandoff: 01/10/2018
 6.  함수의 한 줄을 프롬프트 창에서 입력 프롬프트로 복사하고 인덱스 값을 3으로 변경합니다.  
   
     ```javascript  
-    pages.setAt(3, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+    pages.setAt(3, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
     ```  
   
 7.  Enter를 눌러 코드 줄을 실행합니다.  
@@ -264,16 +248,7 @@ ms.lasthandoff: 01/10/2018
   
  ![JavaScript 콘솔 창에서 선택한 항목을 대상](../debugger/media/js_console_target.png "JS_Console_Target")  
   
- 또한 `cd` 명령을 사용하여 실행 컨텍스트를 전환할 수도 있지만, 다른 실행 컨텍스트의 이름을 알아야 하고 사용하는 참조가 범위 내에 있어야 합니다. **대상** 목록에서 다른 실행 컨텍스트에 액세스하기가 더 쉽습니다.  
-  
-##  <a name="BrowserSupport"></a> 브라우저 및 플랫폼 지원  
- JavaScript 콘솔 창은 다음 플랫폼에서 지원됩니다.  
-  
--   UWP 앱 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], 및 JavaScript 및 HTML을 사용 하 여 Windows Phone 앱  
-  
--   [!INCLUDE[win81](../debugger/includes/win81_md.md)]  
-  
--   [!INCLUDE[win8](../debugger/includes/win8_md.md)]  
+ 또한 `cd` 명령을 사용하여 실행 컨텍스트를 전환할 수도 있지만, 다른 실행 컨텍스트의 이름을 알아야 하고 사용하는 참조가 범위 내에 있어야 합니다. **대상** 목록에서 다른 실행 컨텍스트에 액세스하기가 더 쉽습니다.   
   
 ## <a name="see-also"></a>참고 항목  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   

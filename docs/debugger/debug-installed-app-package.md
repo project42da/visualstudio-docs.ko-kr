@@ -23,11 +23,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: e21d29c3a95de4e5174a9966665f3e4e6781f726
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 16f4b69fa25861d893471a161fdb7c1a6bba34e5
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debug-an-installed-app-package-in-visual-studio-uwp"></a>Visual Studio (UWP) 설치 된 앱 패키지를 디버그 합니다.
 
@@ -91,9 +91,6 @@ Visual Studio를 처음으로 원격 컴퓨터에 설치 된 응용 프로그램
 
      > [!NOTE]
 > 제공 하 고, XBox 또는 HoloLens 장치 디버거가 이미 실행 중인 경우 연결 된 응용 프로그램 다시 시작 됩니다.
-
-> [!NOTE]
-> UWP 앱 개발 될 수 있습니다 및 Windows 8.1 이상에서 컴파일되지만 Windows 10을 실행 하려면 필요 합니다. Windows 8.1 PC에서 UWP 앱을 개발 하는 경우 호스트와 대상 컴퓨터는 동일한 LAN에 있는 다른 Windows 10 장치에서 실행 중인 UWP 앱을 원격으로 디버깅할 수 있습니다. 이 작업을 수행 하려면 다운로드 하 여 두 컴퓨터에서 Visual Studio 용 원격 도구를 설치 합니다. 설치 된 버전의 Visual Studio, 설치 된 기존 버전과 일치 해야 하 고 아키텍처 (x86, x64)를 선택할 때는 일치 해야 하며 대상 응용 프로그램의 키를 누릅니다.
 
 UWP 앱의 원격 배포에 대 한 고급 옵션에 대 한 자세한 내용은 참조 [배포 및 디버깅 UWP 앱](/windows/uwp/debug-test-perf/deploying-and-debugging-uwp-apps.md#advanced-remote-deployment-options)합니다. 
   

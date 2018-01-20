@@ -7,29 +7,24 @@ ms.suite:
 ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
 helpviewer_keywords:
 - JavaScript Console commands [UWP apps]
 - JavaScript debugging, console [UWP apps]
 - debugging JavaScript, console [UWP apps]
-ms.assetid: 359e2b24-6bb7-48e7-8b55-b570df0cb774
 caps.latest.revision: "47"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 32aa07920c496249271e6c337952129292a3d2aa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- uwp
+- cordova
+ms.openlocfilehash: 1f2d6f356d4e886488f4b6558c6cfb92d7b9c974
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio의 JavaScript 콘솔 명령
-![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
   
  명령을 사용하여 Visual Studio의 JavaScript 콘솔 창에서 메시지를 보내고 다른 작업을 수행할 수 있습니다. 해당 창을 사용 하는 방법을 보여 주는 예제를 보려면 [퀵 스타트: JavaScript 디버그](../debugger/quickstart-debug-javascript-using-the-console.md)합니다. 이 항목의 정보는 UWP 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱에 적용 됩니다. Cordova 앱에서 지원 되는 콘솔 명령에 대 한 정보를 참조 하십시오. [응용 프로그램 디버그](https://taco.visualstudio.com/en-us/docs/debug-using-visual-studio/)합니다. Internet Explorer F12 도구에서 콘솔을 사용하는 방법에 대한 자세한 내용은 [이 항목](http://msdn.microsoft.com/library/ie/dn255006.aspx)을 참조하세요.  
   

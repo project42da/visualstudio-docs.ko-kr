@@ -1,5 +1,5 @@
 ---
-title: "HTML 및 CSS (UWP 및 Windows 8.1 앱) 디버그 | Microsoft Docs"
+title: "UWP 앱에서 HTML 및 CSS 디버그 | Microsoft Docs"
 ms.custom: 
 ms.date: 07/17/2017
 ms.reviewer: 
@@ -8,32 +8,26 @@ ms.technology: vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords: VS.WebClient.DomExplorer
-dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+dev_langs: JavaScript
 helpviewer_keywords:
 - debugging, CSS
 - debugging, HTML
 - debugging, JavaScript [UWP apps]
 - DOM Explorer [UWP apps]
-ms.assetid: 6d156cff-36c6-425a-acf8-e1f02d4f7869
 caps.latest.revision: "101"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 59ec4b4a7b0f8c924c09608b8cda34473820c1f5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: bb410c6279b2910dfcb1af98ff75293d60a7e3e7
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="debug-html-and-css-in-uwp-and-windows-81-apps"></a>HTML 및 CSS UWP 및 Windows 8.1 앱의 디버깅
-![Windows 및 Windows Phone에 적용됨](../debugger/media/windows_and_phone_content.png "windows_and_phone_content")  
+# <a name="debug-html-and-css-in-uwp-apps-in-visual-studio"></a>Visual Studio에서 UWP 앱에서 HTML 및 CSS 디버그
   
- JavaScript 앱의 경우 Visual Studio에서 Internet Explorer 및 Visual Studio 개발자에게 익숙한 기능이 포함된 포괄적인 디버깅 환경을 제공합니다. 이러한 기능은 UWP 앱에 대 한 지원지 않습니다 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)], Windows Phone 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱입니다.  
+ JavaScript 앱의 경우 Visual Studio에서 Internet Explorer 및 Visual Studio 개발자에게 익숙한 기능이 포함된 포괄적인 디버깅 환경을 제공합니다. 이러한 기능은 UWP 앱 및 Apache Cordova 용 도구 Visual Studio를 사용 하 여 만든 앱에 대 한 지원 됩니다.  
   
  DOM 검사 도구에서 제공된 대화형 디버깅 모델을 사용하여 렌더링된 HTML 및 CSS 코드를 보고 수정할 수 있습니다. 디버거를 중지했다 다시 시작하지 않고도 이 모든 작업을 수행할 수 있습니다.
   
@@ -67,11 +61,11 @@ ms.lasthandoff: 01/10/2018
   
 1.  선택 하 여 Visual Studio에서 새 솔루션을 만들어 **파일** > **새 프로젝트**합니다.  
   
-2.  선택 **JavaScript** > **저장소**, 선택 **Windows 앱** 또는 **Windows Phone 앱**, 선택 **비어 있는 앱**합니다.  
+2.  선택 **JavaScript** > **Windows 유니버설**를 선택한 후 **WinJS 앱**합니다.  
   
 3.  프로젝트의 이름(예: `FlipViewApp`)을 입력하고 **확인** 을 클릭하여 앱을 만듭니다.  
   
-4.  default.html의 BODY 요소에 이 코드를 추가합니다.  
+4.  Index.html의 BODY 요소에서이 코드를 추가 합니다.  
   
     ```html  
     <div id="flipTemplate" data-win-control="WinJS.Binding.Template"  
@@ -129,9 +123,9 @@ ms.lasthandoff: 01/10/2018
   
         function updateImages() {  
   
-            pages.setAt(0, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223195" });  
-            pages.setAt(1, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223196" });  
-            pages.setAt(2, { flipImg: "http://go.microsoft.com/fwlink/?LinkID=223197" });  
+            pages.setAt(0, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-76.jpg" });  
+            pages.setAt(1, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-77.jpg" });  
+            pages.setAt(2, { flipImg: "http://public-domain-photos.com/free-stock-photos-1/flowers/cactus-78.jpg" });  
         };  
   
         app.oncheckpoint = function (args) {  
@@ -148,19 +142,17 @@ ms.lasthandoff: 01/10/2018
     })();  
     ```  
   
-     다음 그림에는 Phone 에뮬레이터에서 이 응용 프로그램을 실행할 때 화면에서 확인하려는 내용이 나와 있습니다(시뮬레이터에서도 비슷하게 보임). 하지만 응용 프로그램을 이 상태로 만들려면 먼저 여러 가지 버그를 수정해야 합니다.  
+     다음은이 응용 프로그램을 실행 하는 경우 참조 하려는 작업입니다. 하지만 응용 프로그램을 이 상태로 만들려면 먼저 여러 가지 버그를 수정해야 합니다.  
   
      ![FlipView 앱 예상된 결과 보여 주는](../debugger/media/js_dom_appfixed.png "JS_DOM_AppFixed")  
   
-7.  **디버그** 도구 모음의 **디버깅 시작** 옆에 있는 드롭다운 목록에서 **시뮬레이터** 또는 **에뮬레이터 8.1 WVGA 4인치 512MB** 를 선택합니다.  
+7.  선택 **로컬 컴퓨터** 옆에 있는 드롭다운 목록에서 **디버깅 시작** 단추는 **디버그** 도구 모음:  
   
      ![디버그 대상 목록 선택](../debugger/media/js_select_target.png "JS_Select_Target")  
   
 8.  **디버그** > **Start 디버그ging**을 선택하거나 F5 키를 눌러 디버그 모드에서 앱을 실행합니다.  
   
-     그러면 시뮬레이터 또는 Phone 에뮬레이터에서 응용 프로그램이 실행되지만 스타일 지정에 몇 가지 버그가 있으므로 대부분 빈 화면이 표시됩니다. 첫 번째 `FlipView` 이미지가 화면 가운데에 작은 사각형 안에 나타납니다.  
-  
-9. 시뮬레이터에서 응용 프로그램을 실행하는 경우 시뮬레이터 오른쪽의 **해상도 변경** 도구 모음 명령을 선택하여 1280 x 800의 화면 해상도를 구성합니다. 이렇게 하면 다음 단계에 표시된 값과 시뮬레이터에 나타나는 값이 일치합니다.  
+     그러면 앱을 실행 되지만 스타일 지정에 몇 가지 버그가 있으므로 대부분 빈 화면이 표시 됩니다. 첫 번째 `FlipView` 이미지가 화면 가운데에 작은 사각형 안에 나타납니다.  
   
 10. Visual Studio로 전환하고 **DOM 탐색기** 탭을 다시 선택합니다.  
   
@@ -169,7 +161,7 @@ ms.lasthandoff: 01/10/2018
   
 11. DOM 탐색기 창에서 `"fView"`의 ID가 있는 섹션에 대한 DIV 요소를 선택합니다. 화살표 키를 사용하여 올바른 DIV 요소를 보고 선택합니다. (오른쪽 화살표 키 통해 요소의 자식을 볼 수 있습니다.)  
   
-     ![DOM 탐색기](../debugger/media/js_dom_explorer.png "JS_DOM_Explorer")  
+     ![DOM Explorer](../debugger/media/js_dom_explorer.png "JS_DOM_Explorer")  
   
     > [!TIP]
     >  >> 입력 프롬프트에서 `select(fView)`를 입력한 다음 Enter 키를 눌러 JavaScript 콘솔 창 왼쪽 아래에서 DIV 요소를 선택할 수도 있습니다.  
@@ -188,16 +180,16 @@ ms.lasthandoff: 01/10/2018
   
 14. 주 DOM 탐색기 창에서 `fView` DIV 요소의 높이와 너비에 대한 인라인 스타일을 두 번 클릭합니다. 이제 여기에서 값을 편집할 수 있습니다. 이 시나리오에서는 값을 완전히 제거하고자 합니다.  
   
-15. `width: 100px;height: 100px;`를 선택하고 Delete 키와 Enter 키를 차례로 누릅니다. Enter 키를 누르면 디버깅 세션을 중지하지 않았더라도 새 값이 시뮬레이터 또는 Phone 에뮬레이터에 바로 반영됩니다.  
+15. 주 창에서 두 번 클릭 `width: 100px;height: 100px;`를 눌러는 **삭제** 키를 누릅니다 **Enter**합니다. Enter를 누르면 디버깅 세션을 중지 하지 않았더라도 새 값 앱에서 다음을 즉시 반영 됩니다.  
   
     > [!IMPORTANT]
     >  DOM 탐색기 창에서 특성을 업데이트할 수 있듯이 **스타일**, **계산됨**및 **레이아웃** 탭에 표시되는 값도 업데이트할 수 있습니다. 자세한 내용은 참조 하십시오. [DOM 탐색기를 사용 하 여 디버그 하는 CSS 스타일](../debugger/debug-css-styles-using-dom-explorer.md) 및 [DOM 탐색기를 사용 하 여 디버그 레이아웃](../debugger/debug-layout-using-dom-explorer.md)합니다.  
   
-16. 시뮬레이터 또는 Phone 에뮬레이터를 선택하거나 Alt+Tab을 사용하여 앱을 전환합니다.  
+16. 선택 하거나 Alt + Tab을 사용 하 여 앱을 전환 합니다.  
   
      이제 `FlipView` 컨트롤이 시뮬레이터 또는 Phone 에뮬레이터의 화면 크기보다 크게 보입니다. 그러나 이러한 결과를 의도한 것이 아닙니다. 확인하려면 Visual Studio로 다시 전환합니다.  
   
-17. DOM 탐색기에서 **계산됨** 탭을 다시 선택하고 높이 규칙을 엽니다. CSS에서 예상했듯이 fView 요소에 여전히 100% 값이 표시되지만 계산된 값은 시뮬레이터의 화면 높이(예: 00px 또는 667.67px)와 같지만 이 응용 프로그램에는 적용되지 않습니다. 확인하려면 `fView` DIV 요소의 높이와 너비를 제거하면 됩니다.  
+17. DOM 탐색기에서 **계산됨** 탭을 다시 선택하고 높이 규칙을 엽니다. CSS에서 예상 대로 fView 요소 100% 값이 여전히 표시 되지만 계산 된 값은 응용 프로그램의 화면 높이 (예를 들어 800px 667.67px, 또는 기타 다른 값), 즉,이 응용 프로그램에 원하는 대로 되지 않습니다. 다음 단계에서 확인 하려면 주소에 대 한 너비와 높이 제거는 `fView` DIV 요소입니다.  
   
 18. **스타일** 탭에서 `#fView` CSS 선택기의 높이 및 너비 속성의 선택을 취소합니다.  
   
@@ -209,13 +201,11 @@ ms.lasthandoff: 01/10/2018
   
 20. 를 조사 하려면 Visual Studio로 전환 하 고 선택 된 **레이아웃** 탭 요소의 상자 모델을 확인 합니다.  
   
-     **레이아웃** 탭에 다음 값이 표시됩니다.  
+     에 **레이아웃** 탭을 다음에 표시 됩니다.  
   
-    -   시뮬레이터: 320px(오프셋) 및 320px(여백)  
+    -   255px (오프셋) 및 255px (여백) 또는 장치 해상도 따라 유사한 값입니다. 
   
-    -   Phone 에뮬레이터: 100px(오프셋) 및 100px(여백)  
-  
-     다음 그림에는 Phone 에뮬레이터를 사용할 때 **레이아웃** 탭의 모양이 나와 있습니다(오프셋, 여백 100px).  
+     다음 그림에서는 방법을 **레이아웃** 오프셋, 여백 100px와 에뮬레이터를 사용 하는 탭의 모양이).  
   
      ![DOM 탐색기의 레이아웃 탭](../debugger/media/js_dom_explorer_layout.png "JS_DOM_Explorer_Layout")  
   
@@ -265,24 +255,8 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]
 >  요소를 마우스로 가리키면 강조 표시되는 기능은 Windows Phone 에뮬레이터에서만 일부 지원됩니다.  
   
- 사용 하 여 요소를 선택 하는 방법을 보여 주는 예제는 **Select 요소** 단추, 참조 [DOM 탐색기를 사용 하 여 디버그 하는 CSS 스타일](../debugger/debug-css-styles-using-dom-explorer.md)합니다.  
-  
-##  <a name="BrowserSupport"></a> 브라우저 및 플랫폼 지원  
- DOM 탐색기와 JavaScript 콘솔 창이 다음 플랫폼에서 지원 됩니다.  
-  
--   UWP 앱 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 및 JavaScript 및 HTML을 사용 하 여 Windows Phone 앱  
-  
--   [!INCLUDE[win81](../debugger/includes/win81_md.md)]  
-  
--   [!INCLUDE[win8](../debugger/includes/win8_md.md)]  
-  
- [및 Visual Studio를 다운로드하려면](http://go.microsoft.com/fwlink/?LinkID=232448) 여기 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 로 이동합니다.  
-  
 ## <a name="see-also"></a>참고 항목  
  [Debug apps in Visual Studio](../debugger/debug-store-apps-in-visual-studio.md)   
- [DOM 탐색기를 사용 하 여 CSS 스타일 디버그](../debugger/debug-css-styles-using-dom-explorer.md)   
- [DOM 탐색기를 사용 하 여 레이아웃 디버깅](../debugger/debug-layout-using-dom-explorer.md)   
- [DOM 이벤트 수신기 보기](../debugger/view-dom-event-listeners.md)   
  [(JavaScript) 앱 새로 고침](../debugger/refresh-an-app-javascript.md)   
  [WebView 컨트롤 디버깅](../debugger/debug-a-webview-control.md)   
  [바로 가기 키](../debugger/keyboard-shortcuts-html-and-javascript.md)   

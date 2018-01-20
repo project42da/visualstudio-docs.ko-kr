@@ -18,11 +18,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: efd4ca5457a1175b19deddfd4194091dbcb2864e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cb0ed99e341e89aaaa295d2fc4a4cf25f726e2f5
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debugging-applications"></a>응용 프로그램 디버깅
 다음 섹션에서는 특정 유형의 응용 프로그램에 대한 디버그를 설명합니다. 다른 응용 프로그램 종류와 다른 언어는 다른 설정과 기술을 필요로 하며, 디버그해야 하는 다양한 문제를 발생시킵니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 |||  
 |-|-|  
-|[UWP 및 Windows 8.1 앱 디버깅](../debugger/debugging-windows-store-and-windows-universal-apps.md)|UWP 앱을 디버깅 하는 방법에 설명 합니다.|  
+|[UWP 앱 디버그](../debugger/debugging-windows-store-and-windows-universal-apps.md)|UWP 앱을 디버깅 하는 방법에 설명 합니다.|  
 |[관리 코드 디버그](../debugger/debugging-managed-code.md)|관리 코드(Visual C#, Visual Basic 및 F3)를 디버그하는 방법을 설명합니다.|  
 |[네이티브 코드 디버그](../debugger/debugging-native-code.md)|다른 종류의 기본 C++ 응용 프로그램을 디버그하는 방법을 설명합니다.|  
 |[GPU 코드 디버그](../debugger/debugging-gpu-code.md)|GPU(그래픽 처리 장치)에서 실행되는 C++ 코드를 디버그하는 방법을 설명합니다.|  

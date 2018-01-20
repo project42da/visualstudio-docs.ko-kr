@@ -12,22 +12,20 @@ dev_langs:
 - VB
 - FSharp
 - C++
-ms.assetid: b4481fef-3ebf-4f7d-9748-d43821a0ebac
 caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: f98867a5420755ca2eb4e2fb5e75070759a1a91b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6a0555e2a3ea600a1f5b11eaf95a48f4cfd7df3e
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="debug-uwp-apps-using-prefetched-content-in-visual-studio"></a>Visual Studio에서 프리페치된 콘텐츠를 사용 하 여 UWP 앱 디버그
-![Windows에만 적용](../debugger/media/windows_only_content.png "windows_only_content")  
   
- UWP 앱 응답성을 요청할 수 있습니다는 응용 프로그램에 웹 페이지 또는 이미지 같은 일부 웹 콘텐츠를 미리 로드 하는 Windows [WinINet](http://msdn.microsoft.com/en-us/0a06f2af-957a-4dff-a8cc-187370181b5c)[WinINet](http://msdn.microsoft.com/library/aa383630.aspx)캐시 합니다. 이 기능을 프리페치라고 합니다. 시작 시 사용 되는 콘텐츠에 특히 효과적 이지만 자주 사용 되는 다른 콘텐츠를 콘텐츠도 프리페치 할 수 있습니다. 메서드는 [Windows.Networking.BackgroundTransfer.ContentPrefetcher](http://msdn.microsoft.com/library/windows/apps/windows.networking.backgroundtransfer.contentprefetcher.aspx) 클래스를 사용 하면 미리 로드 하려는 콘텐츠의 Uri를 지정할 수 있습니다. Windows SDK 참조 [콘텐츠 프리페치 샘플](http://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309) 앱에 ContentPrefetcher 기능을 추가 하는 방법에 대 한 예제입니다.  
+ UWP 앱 응답성을 요청할 수 있습니다는 응용 프로그램에 웹 페이지 또는 이미지 같은 일부 웹 콘텐츠를 미리 로드 하는 Windows [WinINet](http://msdn.microsoft.com/library/0a06f2af-957a-4dff-a8cc-187370181b5c) 캐시 합니다. 이 기능을 프리페치라고 합니다. 시작 시 사용 되는 콘텐츠에 특히 효과적 이지만 자주 사용 되는 다른 콘텐츠를 콘텐츠도 프리페치 할 수 있습니다. 메서드는 [Windows.Networking.BackgroundTransfer.ContentPrefetcher](/uwp/api/Windows.Networking.BackgroundTransfer.ContentPrefetcher) 클래스를 사용 하면 미리 로드 하려는 콘텐츠의 Uri를 지정할 수 있습니다. Windows SDK 참조 [콘텐츠 프리페치 샘플](http://code.msdn.microsoft.com/windowsapps/ContentPrefetcher-Sample-432c8309) 앱에 ContentPrefetcher 기능을 추가 하는 방법에 대 한 예제입니다.  
   
  Windows는 휴리스틱을 사용하여 프리페치를 수행하는 시기와 필요성 및 어떤 리소스를 다운로드할지 결정합니다. 휴리스틱은 시스템 네트워크 및 전력 조건, 사용자 응용 프로그램 사용 내용, 이전 프리페치 시도 결과를 고려합니다. Visual Studio에서 사용할 수 있습니다는 **Windows 스토어 응용 프로그램 프리페치 트리거** Windows의 ContentPrefetcher 휴리스틱 무시 및 지정된 된 웹 콘텐츠를 미리 로드를 강제로 명령입니다. 이것은 알려진 상태(로드 여부와 관계없음)로 프리페치할 콘텐츠로 응용 프로그램의 동작 또는 성능을 테스트할 때 유용할 수 있습니다.  
   

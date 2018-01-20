@@ -1,5 +1,5 @@
 ---
-title: "시뮬레이터에서 앱을 UWP 및 Windows 8.1 실행 | Microsoft Docs"
+title: "UWP 앱은 시뮬레이터에 있는 실행 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -18,26 +18,24 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: a3fbe1b7c138f24167e587109fbb5f524b6b9019
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 40cdfaf430483d68744e4ec9535c2546e75d4470
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/19/2018
 ---
-# <a name="run-uwp-and-windows-81-apps-in-the-simulator"></a>시뮬레이터에서 UWP 및 Windows 8.1 앱을 실행 합니다.
-UWP 및 Windows 8.1 앱에 대 한 Visual Studio 시뮬레이터는 UWP 또는 Windows 8.1 앱을 시뮬레이션 하는 데스크톱 응용 프로그램입니다. 실행할 수는 실제 화면 크기와 해상도 에뮬레이트 하려면 응용 프로그램을 선택 합니다. 일반적인 터치 및 회전 이벤트를 시뮬레이션 하 고 네트워크 연결 속성을 시뮬레이트할 수도 있습니다.
+# <a name="run-uwp-apps-in-the-simulator"></a>시뮬레이터에서 UWP 앱을 실행 합니다.
+UWP 앱 용 Visual Studio 시뮬레이터는 UWP 앱을 시뮬레이션 하는 데스크톱 응용 프로그램입니다. 일반적으로 로컬 시스템, 연결된 된 장치 또는 원격 컴퓨터에서 디버깅 합니다. 그러나 일부 시나리오에서는 서로 다른 실제 화면 크기와 해상도 에뮬레이션 하기 위해 Visual Studio 시뮬레이터를 사용 하 여 수 있습니다. 일반적인 터치 및 회전 이벤트를 시뮬레이션 하 고 네트워크 연결 속성을 시뮬레이트할 수도 있습니다.
   
  시뮬레이터를 있습니다 수 설계, 개발, 디버그 및 UWP 앱을 테스트 환경을 제공 합니다. 그러나 Microsoft 스토어에 앱을 게시 하기 전에 실제 장치에서 앱을 테스트 해야 합니다.  
   
  UWP 앱 용 Visual Studio 시뮬레이터는 로컬 컴퓨터의 격리 된 환경에서 실행 되지 않습니다. 따라서 복구할 수 없는 시스템 차원의 오류처럼 시뮬레이터에서 발생하는 오류가 전체 컴퓨터에 영향을 줄 수 있습니다.  
   
- Windows Phone 정보는 [Run Windows Phone apps in the emulator](../debugger/run-windows-phone-apps-in-the-emulator.md) 을 참조하세요.  
-  
 > [!IMPORTANT]
->  Visual Studio 2015 시뮬레이터에는 지리적 위치 단추가 없습니다. 이는 Windows 10 시뮬레이터에 지리적 위치 시뮬레이션이 없기 때문입니다. 이와 같은 시뮬레이션을 수행해야 하면 Windows 8.1 이하 운영 체제에서 Visual Studio 2013 시뮬레이터를 사용할 수 있습니다.  
+>  Visual Studio 2015 시뮬레이터에는 지리적 위치 단추가 없습니다. 이는 Windows 10 시뮬레이터에 지리적 위치 시뮬레이션이 없기 때문입니다.
   
 ##  <a name="BKMK_Set_the_simulator_as_the_target"></a> 시뮬레이터를 대상으로 설정  
- 시뮬레이터에서 UWP 앱을 실행 하려면 선택 **시뮬레이터** 옆에 있는 드롭다운 목록에서 **디버깅 시작** 디버거 단추 **표준** 도구 모음입니다.  
+ 시뮬레이터에서 UWP 앱을 실행 하려면 선택 **시뮬레이터** 옆에 있는 드롭다운 목록에서 **디버깅 시작** 디버거 단추 **표준** 도구 모음입니다. 이 옵션은 사용할 수만 하는 경우 앱의 **대상 플랫폼 최소 합니다. 버전** 하려면 개발 컴퓨터에 운영 체제 보다 이전입니다. 
   
  ![시뮬레이터에서 실행](../debugger/media/vsrun_f5_simulator.png "VSRUN_F5_Simulator")  
   
