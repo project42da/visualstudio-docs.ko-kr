@@ -33,11 +33,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: cplusplus
-ms.openlocfilehash: 46ea417ccd8b4dbecd0c6584699e9f2e98330d69
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a53c03f1ab2c8680329f17bfa36a49b12062bff5
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="cc-assertions"></a>C/C++ 어설션
 어설션 문은 프로그램의 한 지점에서 true가 될 조건을 지정 합니다. 조건이 true가 아닐 경우 어설션이 실패, 프로그램의 실행이 중단 되 고 [어설션 오류 대화 상자](../debugger/assertion-failed-dialog-box.md) 나타납니다.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
 -   MFC 프로그램에 대 한 MFC 어설션입니다.  
   
--   [ATLASSERT](http://msdn.microsoft.com/Library/98e3e0fc-77e2-499b-a6f6-b17a21c6fbd3) ATL.를 사용 하는 프로그램  
+-   [ATLASSERT](/cpp/atl/reference/debugging-and-error-reporting-macros#atlassert) ATL.를 사용 하는 프로그램  
   
 -   C 런타임 라이브러리를 사용 하는 프로그램에 대 한 CRT 어설션 합니다.  
   
@@ -95,7 +95,7 @@ ASSERT(nM++ > 0); // Don't do this!
   
 ```  
   
- 때문에 `ASSERT` 프로그램의 릴리스 버전에서 식은 계산 되지 않습니다 `nM` 디버그 및 릴리스 버전에 서로 다른 값을 갖습니다. MFC에서이 문제를 방지 하려면 사용할 수 있습니다는 [확인](http://msdn.microsoft.com/Library/3e1ab4ee-cbc7-4290-a777-c92f42ce7b96) 매크로 대신 `ASSERT`합니다.  `VERIFY`모든 버전의 식을 계산 하지만 릴리스 버전에서 결과 확인 하지 않습니다.  
+ 때문에 `ASSERT` 프로그램의 릴리스 버전에서 식은 계산 되지 않습니다 `nM` 디버그 및 릴리스 버전에 서로 다른 값을 갖습니다. MFC에서이 문제를 방지 하려면 사용할 수 있습니다는 [확인](/cpp/mfc/reference/diagnostic-services#verify) 매크로 대신 `ASSERT`합니다.  `VERIFY`모든 버전의 식을 계산 하지만 릴리스 버전에서 결과 확인 하지 않습니다.  
   
  함수를 가질 수 있으므로 어설션 문에서 함수 호출을 사용 하는 방법에 대 한 특히 주의 해야 예기치 않은 부작용입니다.  
   
@@ -165,7 +165,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
   
  경우 MFC의 인수 `ASSERT` 매크로 계산 결과가 0 또는 false 이면 매크로 프로그램 실행을 중지 한 사용자에 게 알립니다; 그리고 그렇지 않은 경우 실행이 계속 됩니다.  
   
- 어설션이 실패 한 경우, 메시지 대화 상자에서 어설션의 줄 번호 및 소스 파일의 이름을 표시 합니다. 대화 상자에서 다시 시도 선택 하면 상자에 대 한 호출 [AfxDebugBreak](http://msdn.microsoft.com/Library/c4cd79b9-9327-4db5-a9d6-c4004a92aa30) 으로 중단 하 고 디버거 실행이 넘어갑니다. 해당 시점에 호출 스택을 검토 하 고 어설션이 실패 한 이유를 확인 하려면 다른 디버거 기능을 사용 하 여 수입니다. 사용 하도록 설정한 경우 [Just in time 디버깅](../debugger/just-in-time-debugging-in-visual-studio.md), 및 디버거 아직 실행 되지 않는, 대화 상자에서 디버거를 시작할 수 있습니다.  
+ 어설션이 실패 한 경우, 메시지 대화 상자에서 어설션의 줄 번호 및 소스 파일의 이름을 표시 합니다. 대화 상자에서 다시 시도 선택 하면 상자에 대 한 호출 [AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak) 으로 중단 하 고 디버거 실행이 넘어갑니다. 해당 시점에 호출 스택을 검토 하 고 어설션이 실패 한 이유를 확인 하려면 다른 디버거 기능을 사용 하 여 수입니다. 사용 하도록 설정한 경우 [Just in time 디버깅](../debugger/just-in-time-debugging-in-visual-studio.md), 및 디버거 아직 실행 되지 않는, 대화 상자에서 디버거를 시작할 수 있습니다.  
   
  다음 예제에서는 사용 하는 방법을 보여 줍니다. `ASSERT` 함수의 반환 값을 확인 하려면:  
   
@@ -180,7 +180,7 @@ ASSERT(x >= 0);   //  Assertion fails if x is negative
 ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );  
 ```  
   
- `ASSERT` 매크로 릴리스 버전에 없는 코드를 생성 합니다. 식을 계산 하 고 릴리스 버전에 필요한 경우 사용 된 [확인](http://msdn.microsoft.com/Library/3e1ab4ee-cbc7-4290-a777-c92f42ce7b96) 매크로 ASSERT 대신 합니다.  
+ `ASSERT` 매크로 릴리스 버전에 없는 코드를 생성 합니다. 식을 계산 하 고 릴리스 버전에 필요한 경우 사용 된 [확인](/cpp/mfc/reference/diagnostic-services#verify) 매크로 ASSERT 대신 합니다.  
   
 ###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID 및 CObject::AssertValid  
  [CObject::AssertValid](/cpp/mfc/reference/cobject-class.md#CObject__AssertValid) 메서드는 개체의 내부 상태에 대 한 런타임 검사를 제공 합니다. 재정의 필요 하지 않지만 `AssertValid` 에서 클래스를 파생 시키는 경우 `CObject`, 클래스 만들 수 있습니다 프로그램 안정적이 됩니다. `AssertValid`모든 유효한 값이 들어 있는지 확인 하는 개체의 멤버 변수에서 어설션을 수행 해야 합니다. 예를 들어 포인터 멤버 변수가 NULL이 아닌지 확인 해야 합니다.  

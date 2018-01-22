@@ -22,11 +22,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 02c983fb7cd797be377f8821c46b2d7dc38450f9
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: c3f457e46c1f9f0d7b3ed2f862a411245caf72e7
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>종속성 다이어그램으로 코드 유효성 검사
 
@@ -218,7 +218,7 @@ ms.lasthandoff: 01/13/2018
   
  유효성 검사 오류에 대 한 자세한 내용은 참조 [레이어 유효성 검사 오류 이해 및 해결](#UnderstandingValidationErrors)합니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]에 대한 자세한 내용은 다음을 참조하십시오.  
   
--   [응용 프로그램 빌드](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692)  
+-   [빌드 및 릴리스](/vsts/build-release/index)  
   
 -   [빌드 프로세스에 대 한 기본 템플릿 사용](http://msdn.microsoft.com/Library/43930b12-c21b-4599-a980-2995e3d16e31)  
   

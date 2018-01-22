@@ -18,11 +18,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: ce1de0467e7e662fd0def096ef6adb042578f8b7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a6649bd45aba299514b40e74b5683368bfd92b41
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="project-type-design-decisions"></a>프로젝트 형식에 대 한 디자인 관련 결정
 새 프로젝트 형식을 만들기 전에 프로젝트 형식에 대 한 몇 가지 디자인 결정 해야 합니다. 사용할 항목을 프로젝트에 포함 됩니다, 프로젝트 파일은 지속 방법, 및 어떤 약정 모델의 유형을 결정 해야 합니다.  
@@ -32,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  프로젝트에서 항목에는 파일을 지정할 수 있습니다 하거나 인터넷을 통해 더 추상적인 개체 예: 데이터베이스 저장소 또는 데이터 연결의 개체 수 있습니다. 항목은 파일을 프로젝트 참조 기반 또는 디렉터리 기반 프로젝트 가능 합니다.  
   
- 프로젝트 기반 참조에에서 항목이 둘 이상의 프로젝트에 나타날 수 있습니다. 그러나 항목 표시 하는 실제 파일은 디렉터리 하나에 있습니다. 디렉터리 기반 프로젝트에서 모든 프로젝트 항목의 디렉터리 구조에 존재 합니다. 자세한 내용은 참조 [프로젝트의 NIB: 항목 관리](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)합니다.  
+ 프로젝트 기반 참조에에서 항목이 둘 이상의 프로젝트에 나타날 수 있습니다. 그러나 항목 표시 하는 실제 파일은 디렉터리 하나에 있습니다. 디렉터리 기반 프로젝트에서 모든 프로젝트 항목의 디렉터리 구조에 존재 합니다.  
   
  로컬 항목은 응용 프로그램이 설치 되어 있는 동일한 컴퓨터에 저장 됩니다. 로컬 네트워크에 별도 서버 또는 다른 위치에서 인터넷에서 원격 항목을 저장할 수 있습니다.  
   
@@ -62,7 +62,6 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [검사 목록: 새 프로젝트 형식 만들기](../../extensibility/internals/checklist-creating-new-project-types.md)   
- [프로젝트의 NIB: 항목 관리](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)   
  [열기 및 프로젝트 항목 저장](../../extensibility/internals/opening-and-saving-project-items.md)   
  [프로젝트 지 속성](../../extensibility/internals/project-persistence.md)   
  [프로젝트 모델의 요소](../../extensibility/internals/elements-of-a-project-model.md)   

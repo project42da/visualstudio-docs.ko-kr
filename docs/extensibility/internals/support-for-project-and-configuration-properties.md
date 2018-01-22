@@ -16,11 +16,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 5ea7b08c95aa2844a65a9a6783774fe32c9e8c50
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e31f4feda55469d2740b32b0eac5d9cfba286d0c
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="support-for-project-and-configuration-properties"></a>프로젝트 및 구성 속성에 대 한 지원
 **속성** 창에는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) 프로젝트 및 구성 속성을 표시할 수 있습니다. 사용자 응용 프로그램에 대 한 속성을 설정할 수 있도록 고유한 프로젝트 형식에 대 한 속성 페이지를 제공할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
  프로젝트 (MPFProj)에 대 한 관리 되는 패키지 프레임 워크는 만들고 새 프로젝트 시스템을 관리 하기 위한 도우미 클래스를 제공 합니다. 코드 및 컴파일 지침에는 소스를 찾을 수 [프로젝트-Visual Studio 2013에 대 한 MPF](http://mpfproj12.codeplex.com/)합니다.  
   
 ## <a name="persistence-of-project-and-configuration-properties"></a>프로젝트 및 구성 속성의 지 속성  
- 프로젝트 및 구성 속성은 예를 들어 프로젝트 형식과 연결 된 파일 이름 확장명,.csproj,.vbproj, 및.myproj 있는 프로젝트 파일에서 유지 됩니다. 언어 프로젝트는 일반적으로 프로젝트 파일을 생성 하려면 서식 파일을 사용 합니다. 그러나 실제로 여러 가지 방법으로 프로젝트 형식 및 서식 파일을 연결할 수 있습니다. 자세한 내용은 참조 [NIB: Visual Studio 템플릿](http://msdn.microsoft.com/en-us/141fccaa-d68f-4155-822b-27f35dd94041) 및 [템플릿 디렉터리 설명 (합니다. Vsdir) 파일](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)합니다.  
+ 프로젝트 및 구성 속성은 예를 들어 프로젝트 형식과 연결 된 파일 이름 확장명,.csproj,.vbproj, 및.myproj 있는 프로젝트 파일에서 유지 됩니다. 언어 프로젝트는 일반적으로 프로젝트 파일을 생성 하려면 서식 파일을 사용 합니다. 그러나 실제로 여러 가지 방법으로 프로젝트 형식 및 서식 파일을 연결할 수 있습니다. 자세한 내용은 참조 [템플릿 디렉터리 설명 (합니다. Vsdir) 파일](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)합니다.  
   
  프로젝트 및 구성 속성은 템플릿 파일에 항목을 추가 하 여 생성 됩니다. 이러한 속성은 다음이 템플릿을 사용 하는 프로젝트 형식을 사용 하 여 만든 모든 프로젝트에 사용할 수 있습니다. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]프로젝트 및 둘 다 사용 MPFProj는 [빌드에 없음: MSBuild 개요](http://msdn.microsoft.com/en-us/b588fd73-a45b-4706-908f-cc131bccfbde) 템플릿 파일에 대 한 스키마입니다. 이러한 파일 각각의 구성에 대 한 소스 파일 섹션에 있습니다. 프로젝트의 속성 구성 인수가 null 문자열로 설정 하는 첫 번째 소스 파일 섹션에서 일반적으로 유지 됩니다.  
   

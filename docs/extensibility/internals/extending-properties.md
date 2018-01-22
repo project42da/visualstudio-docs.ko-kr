@@ -14,16 +14,16 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 5c47295c1906c6517638bdf8e9c3a55897f38aa1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 26cf161259736dbd2b2e26279842571d62f69352
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="extending-properties"></a>속성 확장
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **속성** 창은 COM 및 COM + 구성 요소에 대 한 유니버설 속성 브라우저 이며 모든 지원 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 제품입니다. **속성** 창이 연동 `ITypeInfo` 정보 및 COM + 통합된 개발 환경 (IDE)에서 다른 창에 현재 선택 된 개체에 대 한 디자인 타임 속성을 나열할 메타 데이터를 입력 합니다.  
   
- **속성** F4 키를 눌러 키보드에서 또는 선택 하 여 열 수 있는 창을 **속성 창** 에 **보기** 메뉴는 보기 및 편집 하는 데 사용 됩니다 구성에 관계 없이, 디자인 타임 속성 및 선택한 개체의 이벤트입니다. 솔루션 및 프로젝트와 관련 된 구성에 종속 된 속성에 표시 됩니다 [속성 페이지](../../extensibility/internals/property-pages.md)합니다. 자세한 내용은 참조 [NIB: 프로젝트 속성](http://msdn.microsoft.com/en-us/fb126574-24ad-4c96-9b2b-6e1f3879ba50), [구성 옵션 관리](../../extensibility/internals/managing-configuration-options.md), 및 [프로젝트의 NIB: 항목 관리](http://msdn.microsoft.com/en-us/762e606b-7f44-4b66-97a1-e30a703654a0)합니다.  
+ **속성** F4 키를 눌러 키보드에서 또는 선택 하 여 열 수 있는 창을 **속성 창** 에 **보기** 메뉴는 보기 및 편집 하는 데 사용 됩니다 구성에 관계 없이, 디자인 타임 속성 및 선택한 개체의 이벤트입니다. 솔루션 및 프로젝트와 관련 된 구성에 종속 된 속성에 표시 됩니다 [속성 페이지](../../extensibility/internals/property-pages.md)합니다. 자세한 내용은 [구성 옵션 관리](../../extensibility/internals/managing-configuration-options.md)합니다.  
   
  ![속성 창 개요](../../extensibility/internals/media/vspropertieswindow.png "vsPropertiesWindow")  
 속성 창  

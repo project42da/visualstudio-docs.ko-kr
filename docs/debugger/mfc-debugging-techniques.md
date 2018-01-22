@@ -29,11 +29,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 4efe2cfeb769cfaa339c96d5b315718e6697b088
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1c4acfcd6cf289eae8f8abc58f589b2743b56a40
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="mfc-debugging-techniques"></a>MFC 디버깅 기술
 다음은 MFC 프로그램을 디버깅하는 데 유용한 디버깅 기술입니다.  
@@ -64,7 +64,7 @@ ms.lasthandoff: 12/22/2017
     -   [선택한 모듈의 디버그 정보를 사용하여 MFC 응용 프로그램 빌드](#BKMK_Building_an_MFC_app_with_debug_information_for_selected_modules)  
   
 ##  <a name="BKMK_AfxDebugBreak"></a> AfxDebugBreak  
- MFC를 사용하면 소스 코드의 하드 코드 중단점에 특별한 [AfxDebugBreak](http://msdn.microsoft.com/Library/c4cd79b9-9327-4db5-a9d6-c4004a92aa30) 함수를 사용할 수 있습니다.  
+ MFC는 특별 한 [AfxDebugBreak](/cpp/mfc/reference/diagnostic-services#afxdebugbreak) 소스 코드에 하드 코드 중단점에 대 한 함수:  
   
 ```  
 AfxDebugBreak( );  
@@ -149,7 +149,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
     |-----------|-----------------|  
     |**allocMemDF**|진단 메모리 할당자를 사용합니다(기본값).|  
     |**delayFreeMemDF**|`delete` 또는 `free` 를 호출할 경우 프로그램이 종료될 때까지 메모리 해제를 지연시킵니다. 이렇게 하면 프로그램이 가능한 최대 메모리를 할당하게 됩니다.|  
-    |**checkAlwaysMemDF**|메모리를 할당하거나 해제할 때마다 [AfxCheckMemory](http://msdn.microsoft.com/Library/4644da71-7d14-41dc-adc0-ee9558fd7a28) 를 호출합니다.|  
+    |**checkAlwaysMemDF**|호출 [AfxCheckMemory](/cpp/mfc/reference/diagnostic-services#afxcheckmemory) 될 때마다 메모리를 할당 하거나 해제 합니다.|  
   
      논리적 OR 연산을 수행하면 다음과 같이 이 값들을 조합하여 사용할 수 있습니다.  
   

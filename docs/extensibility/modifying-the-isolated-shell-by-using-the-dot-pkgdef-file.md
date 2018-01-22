@@ -1,4 +1,5 @@
 ---
+redirect_url: shell/modifying-the-isolated-shell-by-using-the-dot-pkgdef-file
 title: "격리 셸 사용 하 여 수정 된 합니다. Pkgdef 파일 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
@@ -13,8 +14,7 @@ caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 37c517792055c1d4a2026eef5171325622fec661
+ms.openlocfilehash: addeeaa294a81acce6558feb5257fee1344532f8
 ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
@@ -49,7 +49,7 @@ ms.lasthandoff: 01/22/2018
   
  .Pkgdef 파일에 주석을 추가할 수 있습니다. 한 줄 주석의 처음 두 글자와 두 개의 슬래시 합니다.  
   
- 목록이 대체 문자열에 대 한 참조 [대체 문자열이에 사용 합니다. Pkgdef 및 합니다. Pkgundef 파일](substitution-strings-used-in-dot-pkgdef-and-dot-pkgundef-files.md)합니다.  
+ 목록이 대체 문자열에 대 한 참조 [대체 문자열이에 사용 합니다. Pkgdef 및 합니다. Pkgundef 파일](../extensibility/substitution-strings-used-in-dot-pkgdef-and-dot-pkgundef-files.md)합니다.  
   
  다음 섹션에서는 Visual Studio shell 격리 모드에서의 동작에 영향을 주는 특정 레지스트리 값에 설명 합니다. 이 파일에서 응용 프로그램에 대 한 추가 레지스트리 값을 정의할 수도 있습니다.  
   
@@ -68,12 +68,12 @@ ms.lasthandoff: 01/22/2018
 |AppName|string|응용 프로그램의 이름입니다. 응용 프로그램 창의 제목 표시줄에 이름이 나타납니다.<br /><br /> 기본값은 응용 프로그램 솔루션 파일의 이름입니다.|  
 |CommandLineLogo|string|콘솔 창에는 응용 프로그램이 실행 될 때 배너 텍스트입니다. 이 설정은 명령줄 빌드 작업을 지 원하는 응용 프로그램만 적용 됩니다.<br /><br /> 기본값은 "*companyName * * solutionName* 버전 1.0입니다.", 여기서 *companyName* Windows를 설치할 때 제공 되는 회사의 이름 및 *solutionName*응용 프로그램 솔루션 파일의 이름입니다.|  
 |DefaultDebugEngine|string|기본값의 GUID는 응용 프로그램에 사용할 엔진을 디버깅 합니다.<br /><br /> 참고: 빈 GUID (모두 0) 응용 프로그램에서 기본 디버그 엔진을 지정 하지 않았는지 나타냅니다. 이렇게 하면 디버거를 사용 하려면 디버그 엔진을 선택 합니다.<br /><br /> 기본값은 "{00000000-0000-0000-0000-000000000000}"입니다.|  
-|DefaultHomePage|string|내부 웹 브라우저 창에 대 한 기본 홈 페이지 URL입니다.<br /><br /> 경우는 **홈 페이지** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다. 자세한 내용은 참조 [웹 브라우저, 환경, 옵션 대화 상자](../../ide/reference/web-browser-environment-options-dialog-box.md)합니다.<br /><br /> 기본값은 Windows를 설치할 때 제공 되는 회사의 URL입니다.|  
+|DefaultHomePage|string|내부 웹 브라우저 창에 대 한 기본 홈 페이지 URL입니다.<br /><br /> 경우는 **홈 페이지** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다. 자세한 내용은 참조 [웹 브라우저, 환경, 옵션 대화 상자](../ide/reference/web-browser-environment-options-dialog-box.md)합니다.<br /><br /> 기본값은 Windows를 설치할 때 제공 되는 회사의 URL입니다.|  
 |DefaultProjectsLocation|string|기본 프로젝트 폴더의 전체 경로입니다. 예를 들어 개체에 적용된<br /><br /> `"DefaultProjectsLocation"="$MyDocuments$\MyVSShellStub\Projects"`<br /><br /> 경우는 **Visual Studio 프로젝트 위치** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다. <br /><br /> 기본값은 "$MyDocuments$\\*solutionName*" 여기서 *solutionName* 응용 프로그램 솔루션 파일의 이름입니다.|  
-|DefaultSearchPage|string|내부 웹 브라우저 창에 대 한 기본 검색 페이지 URL입니다.<br /><br /> 경우는 **검색 페이지** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다. 자세한 내용은 참조 [웹 브라우저, 환경, 옵션 대화 상자](../../ide/reference/web-browser-environment-options-dialog-box.md)합니다.<br /><br /> 기본값은 "http://search.live.com"입니다.|  
+|DefaultSearchPage|string|내부 웹 브라우저 창에 대 한 기본 검색 페이지 URL입니다.<br /><br /> 경우는 **검색 페이지** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다. 자세한 내용은 참조 [웹 브라우저, 환경, 옵션 대화 상자](../ide/reference/web-browser-environment-options-dialog-box.md)합니다.<br /><br /> 기본값은 "http://search.live.com"입니다.|  
 |DefaultUserFilesFolderRoot|string|내 문서 폴더를 사용자 폴더를 기준으로 현재 사용자의 이름입니다.<br /><br /> 기본값은 응용 프로그램 솔루션 파일의 이름입니다.|  
 |DisableOutputWindow|dword|사용 안 함으로 격리 셸 출력 창에 처리 해야 하는지 여부를 나타냅니다.<br /><br /> 이 값은로 설정 하는 경우 true이 고, Visual Studio 솔루션 빌드 관리자 출력에 표시 되지 않습니다는 **출력** 창과 숨기는 **빌드를 시작할 때 출력 표시 창** 확인란에는  **프로젝트 및 솔루션** 범주에는 **옵션** 대화 상자.<br /><br /> 기본값은 false입니다.|  
-|HideMiscellaneousFilesByDefault|dword|숨기기 true 이면는 **기타 파일** 폴더에 기본적으로 **솔루션 탐색기**, 그러지 않으면 false입니다.<br /><br /> 경우는 **솔루션 탐색기에 기타 파일 표시** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다. 자세한 내용은 참조 [옵션 대화 상자, 환경, 문서](../../ide/reference/documents-environment-options-dialog-box.md)합니다.<br /><br /> 기본값은 false입니다.|  
+|HideMiscellaneousFilesByDefault|dword|숨기기 true 이면는 **기타 파일** 폴더에 기본적으로 **솔루션 탐색기**, 그러지 않으면 false입니다.<br /><br /> 경우는 **솔루션 탐색기에 기타 파일 표시** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다. 자세한 내용은 참조 [옵션 대화 상자, 환경, 문서](../ide/reference/documents-environment-options-dialog-box.md)합니다.<br /><br /> 기본값은 false입니다.|  
 |HideSolutionConcept|dword|모든 프로젝트 독립적으로 프로젝트를 만들고 기본적으로 솔루션 및 프로젝트의 독립 실행형 솔루션 관련 명령을 숨기 true 그렇지 않으면 false입니다.<br /><br /> 경우는 **솔루션 항상 표시** 옵션은 응용 프로그램에서 사용할 수 있는 다음이 설정은 옵션의 기본 상태에도 영향을 줍니다.<br /><br /> 기본값은 false입니다.|  
 |NewProjDlgInstalledTemplatesHdr|string|Visual Studio nstalled 템플릿 헤더에 대 한 이름은 **템플릿** 목록에 **새 프로젝트** 대화 상자. 이 이름은 문자열 또는 응용 프로그램 UI 패키지에서 로드 되는 지역화할 수 있는 리소스 식별자입니다.<br /><br /> 기본값은 "*solutionName* 설치 되어 있는 템플릿" 여기서 *solutionName* 응용 프로그램 솔루션 파일의 이름입니다.|  
 |NewProjDlgSlnTreeNodeTitle|string|에 대 한 이름은 **Visual Studio 솔루션** 에서 노드는 **프로젝트 형식** 트리는 **새 프로젝트** 대화 상자. 이 이름은 문자열 또는 응용 프로그램 UI 패키지에서 로드 되는 지역화할 수 있는 리소스 식별자입니다.<br /><br /> 기본값은 "*solutionName* 설치 되어 있는 템플릿" 여기서 *solutionName* 응용 프로그램 솔루션 파일의 이름입니다.|  
@@ -122,12 +122,12 @@ ms.lasthandoff: 01/22/2018
 ## <a name="package-menu-item-settings"></a>패키지 메뉴 항목 설정  
  [$RootKey$ \Menus] 레지스트리 키는 응용 프로그램에 대 한 UI 리소스 파일을 정의합니다.  
   
- 메뉴 항목 값 형식으로 되어 "{*vsUiPackageGuid*}"=" *resourceId*, *versionNumber*" 여기서 *vsUiPackageGuid* 의 GUID 이며 응용 프로그램 UI 패키지 *resourceId* 는 UI 요소를 포함 하는 CTMENU 리소스의 리소스 식별자 및 *versionNumber* 가상 버전 번호는 CTMENU입니다 리소스입니다. 자세한 내용은 참조 [Interop 어셈블리 명령 처리기 등록](../internals/registering-interop-assembly-command-handlers.md)합니다.  
+ 메뉴 항목 값 형식으로 되어 "{*vsUiPackageGuid*}"=" *resourceId*, *versionNumber*" 여기서 *vsUiPackageGuid* 의 GUID 이며 응용 프로그램 UI 패키지 *resourceId* 는 UI 요소를 포함 하는 CTMENU 리소스의 리소스 식별자 및 *versionNumber* 가상 버전 번호는 CTMENU입니다 리소스입니다. 자세한 내용은 참조 [Interop 어셈블리 명령 처리기 등록](../extensibility/internals/registering-interop-assembly-command-handlers.md)합니다.  
   
  기본적으로 메뉴 항목 항목은 응용 프로그램 UI 패키지.pkgdef 파일에 만들어집니다.  
   
  메뉴 항목을 제공 하 고 응용 프로그램의 일부로 배포 되는 각 패키지에 대 한 패키지에 대 한 메뉴 항목을 추가 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [격리 셸 사용자 지정](customizing-the-isolated-shell.md)   
- [. Pkgundef 파일](modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md)
+ [격리 셸 사용자 지정](../extensibility/customizing-the-isolated-shell.md)   
+ [. Pkgundef 파일](../extensibility/modifying-the-isolated-shell-by-using-the-dot-pkgundef-file.md)

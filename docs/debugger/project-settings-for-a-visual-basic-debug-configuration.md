@@ -26,11 +26,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 47047758d237bb652d5b8e447f8fc7b6e608148e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a9d9b9c5cee3dc69698320af77a7cc909b344a2d
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="project-settings-for-a-visual-basic-debug-configuration"></a>Project Settings for a Visual Basic Debug Configuration
 에 대 한 프로젝트 설정을 변경할 수 있습니다는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 디버그 구성에는 **속성 페이지** 창에 설명 된 대로 [디버그 및 릴리스 구성](../debugger/how-to-set-debug-and-release-configurations.md)합니다. 다음 표에에서 디버거 관련 설정을 확인할 수 있는 위치는 **속성 페이지** 창.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 |설정|설명|  
 |-------------|-----------------|  
 |**구성**|응용 프로그램의 컴파일 모드를 설정합니다. 중에서 선택 **활성 (Debug)**, **디버그**, **릴리스**, **모든 구성**합니다.|  
-|**시작 작업**|이 컨트롤 그룹은 디버그 메뉴에서 시작을 선택할 때 수행되는 작업을 지정합니다.<br /><br /> -   **시작 프로젝트** 기본값을 디버깅 하는 것에 대 한 시작 프로젝트를 실행 합니다. 자세한 내용은 참조 [NIB 방법: 시작 프로젝트 설정](http://msdn.microsoft.com/en-us/31465836-0911-48db-a5d9-e456b635e970)합니다.<br />-   **시작 외부 프로그램** 시작 되지 않은 프로그램에 연결 하 여 수의 일부로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트. 자세한 내용은 참조 [실행 중인 프로세스에 연결할](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)합니다.<br />-   **URL로 브라우저 시작** 웹 응용 프로그램을 디버깅할 수 있도록 합니다.|  
+|**시작 작업**|이 컨트롤 그룹은 디버그 메뉴에서 시작을 선택할 때 수행되는 작업을 지정합니다.<br /><br /> -   **시작 프로젝트** 기본값을 디버깅 하는 것에 대 한 시작 프로젝트를 실행 합니다. <br />-   **시작 외부 프로그램** 시작 되지 않은 프로그램에 연결 하 여 수의 일부로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트. 자세한 내용은 참조 [실행 중인 프로세스에 연결할](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)합니다.<br />-   **URL로 브라우저 시작** 웹 응용 프로그램을 디버깅할 수 있도록 합니다.|  
 |**명령줄 인수**|디버깅할 프로그램에 대한 명령줄 인수를 지정합니다. 명령 이름은 시작 외부 프로그램에 지정된 프로그램 이름입니다. 시작 작업이 시작 URL로 설정되면 명령줄 인수가 무시됩니다.|  
 |**작업 디렉터리**|디버깅 중인 프로그램의 작업 디렉터리를 지정합니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서는 응용 프로그램이 시작된 디렉터리가 작업 디렉터리입니다. 기본 작업 디렉터리에는 \bin\Debug 또는 \bin\Release 현재 구성에 따라입니다.|  
 |**원격 컴퓨터 사용**|이 확인란을 선택하면 원격 디버깅이 활성화됩니다. 텍스트 상자에 디버깅을 위해 응용 프로그램을 실행할 원격를 컴퓨터의 이름을 입력할 수 있습니다 또는 [Msvsmon 서버 이름](../debugger/remote-debugging.md)합니다. 원격 컴퓨터에 있는 EXE의 위치는 빌드 탭에 있는 출력 경로 속성으로 지정됩니다. 이 위치는 원격 컴퓨터의 공유할 수 있는 디렉터리여야 합니다.|  

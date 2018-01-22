@@ -17,11 +17,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: e350b3dfcf6b36cc93450affa34ae7bf5ac26330
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2cb6db61048765ec577a0d14ff4079f78e013219
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="idebugmessageevent2getmessage"></a>IDebugMessageEvent2::GetMessage
 표시할 메시지를 가져옵니다.  
@@ -56,7 +56,7 @@ int GetMessage(
  [out] 메시지를 반환합니다.  
   
  `pdwType`  
- [out] Win32 규칙을 사용 하는 메시지의 형식을 반환 `MessageBox` 함수입니다. 참조는 [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) 세부 정보에 대 한 함수입니다.  
+ [out] Win32 규칙을 사용 하는 메시지의 형식을 반환 `MessageBox` 함수입니다. 참조는 [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) 세부 정보에 대 한 함수입니다.  
   
  `pbstrHelpFileName`  
  [out에서] 도움말 파일의 이름을 반환합니다. 도움말 파일이 없는 경우 null (c + +) 또는 빈 값 (C#)를 수 있습니다.  
@@ -70,4 +70,4 @@ int GetMessage(
 ## <a name="see-also"></a>참고 항목  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   
  [MESSAGETYPE](../../../extensibility/debugger/reference/messagetype.md)   
- [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8)
+ [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)

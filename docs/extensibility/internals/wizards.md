@@ -14,11 +14,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 6d9d468997d0e0f4cc913db1b9ac316f4e698f99
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 96d91fa687c914f0c3f98c4ddca64a93a5d70d02
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="wizards"></a>마법사
 일반적으로에 추가 하려면 마법사를 만든 후의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다른 사용자가 사용할 수 있도록 통합 개발 환경 (IDE). 그러면 추가 마법사에 표시 된 **새 프로젝트 추가** 또는 **새 항목 추가** 대화 상자. 참조 하는 **새 프로젝트 추가** 또는 **새 항목 추가** 대화 상자에서 열린 솔루션을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기**, 가리킨 **추가**, 및 클릭 **새 프로젝트** 또는 **새 항목**합니다.  
@@ -50,9 +50,6 @@ ms.lasthandoff: 12/22/2017
 ## <a name="related-sections"></a>관련 단원  
  [프로젝트 형식](../../extensibility/internals/project-types.md)  
  새 프로젝트 형식을 디자인 하는 방법에 대 한 정보를 제공 하는 추가 항목 링크를 제공 합니다.  
-  
- [연습: 만들기 마법사](http://msdn.microsoft.com/Library/adb41fe9-fcca-4e87-bf4f-bf2fa68e8b06)  
- 마법사를 만드는 방법을 보여 줍니다.  
   
  [프로젝트 확장](../../extensibility/extending-projects.md)  
  사용 하는 방법에 설명 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 프로젝트 및 솔루션 코드 파일 및 리소스 파일 및 소스 제어를 구현 하는 방법을 구성할 수 있습니다.

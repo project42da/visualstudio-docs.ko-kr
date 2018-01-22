@@ -17,11 +17,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 9b3f46a0e4fb87e6064fb3e975cd6b7313270c13
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 699f9176fd39cacaf2bb4f433cd9d2ceb8e326b5
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="creating-a-basic-project-system-part-2"></a>기본 프로젝트 시스템 만들기, 2 부
 이 시리즈의 첫 번째 연습 [기본 프로젝트 시스템, 1 부 만드는](../extensibility/creating-a-basic-project-system-part-1.md), 기본 프로젝트 시스템을 만드는 방법을 보여 줍니다. 이 연습에서는 Visual Studio 템플릿, 속성 페이지 및 기타 기능을 추가 하 여 기본 프로젝트 시스템에 구축 합니다. 이 시작 하기 전에 첫 번째 연습을 완료 해야 합니다.  
@@ -283,7 +283,7 @@ ZipProjects:
   
 -   $safeprojectname $는 사용자에 의해 제공 된 이름이 고 **새 프로젝트** 대화 상자에서 안전 하지 않은 문자와 공백을 제거 하도록 수정 합니다.  
   
- 템플릿 매개 변수의 전체 목록은 [템플릿 매개 변수](../ide/template-parameters.md)를 참조하세요.  사용자 고유의 사용자 지정 템플릿 매개 변수를 만들려는 경우 참조 [NIB: 방법: 사용자 지정 매개 변수를 템플릿에 전달](http://msdn.microsoft.com/en-us/5bc2ad11-84c7-4683-a276-e5e00d85d8fb)합니다.  
+ 템플릿 매개 변수의 전체 목록은 [템플릿 매개 변수](../ide/template-parameters.md)를 참조하세요.  
   
 #### <a name="to-substitute-project-template-parameters"></a>프로젝트 템플릿 매개 변수를 대체  
   
@@ -354,7 +354,7 @@ ZipProjects:
   
 -   OutputType  
   
--   RootNamespace 합니다.  
+-   RootNamespace.  
   
 1.  SimpleProjectPackage.cs 파일에서이 추가 `ProvideObject` 특성을 `SimpleProjectPackage` 클래스:  
   

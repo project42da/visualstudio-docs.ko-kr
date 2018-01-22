@@ -13,11 +13,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 79022af292161d30440a01749ecc929ce7f3b511
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 269c19410207e47f233eadfa984a84a7c8445743
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="language-server-protocol"></a>언어 서버 프로토콜
 
@@ -39,11 +39,11 @@ LSP가 발전 하 고 시간이 지남에 따라 되며 오늘 버전 3.0에 있
 
 같은 시간대 Microsoft TypeScript Emacs 및 Sublime 텍스트와 같은 편집기에서 지 원하는 아이디어는 TypeScript 언어 서버에서 작업을 시작 합니다. 이 구현에서 편집기 stdin/stdout TypeScript 서버 프로세스를 통해 통신 하 고 V8 디버거 프로토콜와 같은 형식의 JSON 페이로드를 사용 하 여 요청 및 응답에 대 한 합니다. TypeScript 서버 TypeScript 다양 한 기능의 편집에 대 한 TypeScript Sublime 플러그 인 및 VS Code에 통합 되어 있습니다.
 
-되 고 나면 두 명의 서로 다른 언어의 통합된 서버에서 VS Code 팀 탐색을 시작한 공용 언어 서버 프로토콜 편집기 및 Ide. 일반 프로토콜에는 여러 Ide에서 사용 될 수 있는 단일 언어 서버를 만들려면 언어 공급자를 수 있습니다. 언어 서버 소비자 프로토콜의 클라이언트 쪽을 한 번 구현 하는 있습니다. 이 언어 공급자 및 언어 소비자 모두에 대 한 win win 상황에서 발생합니다.
+두 명의 서로 다른 언어 서버와 통합 한 후 VS Code 팀 탐색을 시작한 공용 언어 서버 프로토콜 편집기 및 Ide. 일반 프로토콜에는 여러 Ide에서 사용 될 수 있는 단일 언어 서버를 만들려면 언어 공급자를 수 있습니다. 언어 서버 소비자 프로토콜의 클라이언트 쪽을 한 번 구현 하는 있습니다. 이 언어 공급자 및 언어 소비자 모두에 대 한 win win 상황에서 발생합니다.
 
-더 많은 일반 및 언어 독립적 된 TypeScript 서버에서 사용 되는 언어 프로토콜을 시작 합니다. 프로토콜 영감 VS Code 언어 API를 사용 하 여 많은 언어 기능이 포함 되었습니다. 프로토콜 자체는 여러 프로그래밍 언어에 대 한 해당 간단 명료 하 게 지원 라이브러리로 인 한 원격 호출에 대 한 JSON RPC로 지원 됩니다.
+VS Code 언어 API와 같은 형식의 언어 기능이 더 많은 확장 TypeScript 서버에 의해 사용 되는 프로토콜 언어 서버 프로토콜 시작 하세요. 프로토콜은 간단 하 고 기존 라이브러리 인해 원격 호출에 대 한 JSON RPC로 지원 됩니다.
 
-VS Code 팀 dogfooded 여러 linter 언어 서버를 구현 하 여 프로토콜입니다. Linter 언어 서버 보풀 (검색) 파일에 대 한 요청에 응답 하 고 검색 된 경고 및 오류 집합을 반환 합니다. 이 목표가 였습니다 보풀 파일 것 많은 linting 요청 편집기 세션 중는 문서에 사용자 편집 내용을으로 합니다. 이 기를 서버와 새 linting 프로세스 하지 않은 각 사용자 편집에 대 한 시작 해야 할 수 있도록 실행을 유지 하는 것입니다. VS Code를 포함 하 여 여러 linter 서버 구현 된 ESLint 및 TSLint 확장 합니다. 이러한 두 linter 서버가 모두 TypeScript/javascript에서 구현 및 Node.js에서 실행 합니다. 프로토콜의 클라이언트 및 서버 일부를 구현 하는 라이브러리 공유.
+VS 코드는 파일을 팀 프로토타입화 보풀 (검색)에 응답 하는 여러 linter 언어 서버를 구현 하 여 프로토콜을 요청 하 고 일련의 검색 된 경고를 오류를 반환 합니다. 이 목표가 였습니다 보풀 파일 것 많은 linting 요청 편집기 세션 중는 문서에 사용자 편집 내용을으로 합니다. 이 기를 서버와 새 linting 프로세스 하지 않아도 각 사용자 편집을 시작할 수 있도록 실행을 유지 하는 것입니다. VS Code를 포함 하 여 여러 linter 서버 구현 된 ESLint 및 TSLint 확장 합니다. 이러한 두 linter 서버가 모두 TypeScript/javascript에서 구현 및 Node.js에서 실행 합니다. 프로토콜의 클라이언트 및 서버 일부를 구현 하는 라이브러리 공유.
 
 ## <a name="how-the-lsp-works"></a>LSP 작동 방식
 

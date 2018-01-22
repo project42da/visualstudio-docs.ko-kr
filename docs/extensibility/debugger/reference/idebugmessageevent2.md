@@ -15,11 +15,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 5e14e8ea2df83520724b9f6663c9624d54cf772c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e61b6bae37b9e37dc9e448122f4595f3cba20f7f
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="idebugmessageevent2"></a>IDebugMessageEvent2
 이 인터페이스는 메시지를 보내는 사용자의 응답을 필요로 하는 Visual studio 디버그 엔진 (DE)에 의해 사용 됩니다.  
@@ -49,7 +49,7 @@ IDebugMessageEvent2 : IUnknown
 ## <a name="remarks"></a>설명  
  DE 특정 메시지에 대 한 사용자에 게 서 특정 응답 해야 하는 경우이 인터페이스를 사용 합니다. 예를 들어는 DE 프로그램에 원격으로 연결 하려고 시도한 후 "액세스 거부" 메시지를 가져오는 경우는 DE이 특정 메시지를 보냅니다에서 Visual Studio는 `IDebugMessageEvent2` 메시지 상자 스타일을 사용 하 여 이벤트 `MB_RETRYCANCEL`합니다. 이렇게 하면 사용자를 다시 시도 하거나 연결 작업을 취소 합니다.  
   
- DE이이 메시지의 Win32 함수 규칙에 따라 처리 되는 방법을 지정 `MessageBox` (참조 [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) 세부 정보에 대 한).  
+ DE이이 메시지의 Win32 함수 규칙에 따라 처리 되는 방법을 지정 `MessageBox` (참조 [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) 세부 정보에 대 한).  
   
  사용 하 여는 [IDebugErrorEvent2](../../../extensibility/debugger/reference/idebugerrorevent2.md) 사용자 로부터 응답을 필요로 하지 않는 Visual Studio에 메시지를 보낼 인터페이스입니다.  
   
@@ -58,7 +58,7 @@ IDebugMessageEvent2 : IUnknown
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

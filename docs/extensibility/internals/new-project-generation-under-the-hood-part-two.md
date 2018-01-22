@@ -16,11 +16,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 91707d75ca71ae7e035322c8a9c25ab6e4befe43
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a35010af9ee0b0d7ad885f607b8fc1e2d54a19ba
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="new-project-generation-under-the-hood-part-two"></a>새 프로젝트 생성: 내부적으로 2 부
 [새 프로젝트 생성: 고급, 1 부](../../extensibility/internals/new-project-generation-under-the-hood-part-one.md) 살펴본 방법을 **새 프로젝트** 대화 상자가 채워집니다. 선택한를 가정해 보겠습니다는 **Visual C# Windows 응용 프로그램**, 입력 한는 **이름** 및 **위치** 텍스트 상자 및 확인을 클릭된 합니다.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="generating-the-solution-files"></a>솔루션 파일을 생성  
  응용 프로그램 템플릿을 선택 하도록 지시 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 풀고 해당.vstemplate 파일을 엽니다 하 고이 파일에 XML 명령을 해석 하는 템플릿을 시작할 수 있습니다. 이러한 명령은 새로운 또는 기존 솔루션에 프로젝트와 프로젝트 항목을 만듭니다.  
   
- 템플릿의는.vstemplate 파일을 보유 하는 동일한.zip 폴더에서 항목 템플릿 라는 소스 파일, 압축을 풉니다. 서식 파일을 그에 따라 사용자 지정 새 프로젝트에 이러한 파일을 복사 합니다. 프로젝트 및 항목 템플릿 개요를 참조 하십시오. [NIB: Visual Studio 템플릿](http://msdn.microsoft.com/en-us/141fccaa-d68f-4155-822b-27f35dd94041)합니다.  
+ 템플릿의는.vstemplate 파일을 보유 하는 동일한.zip 폴더에서 항목 템플릿 라는 소스 파일, 압축을 풉니다. 서식 파일을 그에 따라 사용자 지정 새 프로젝트에 이러한 파일을 복사 합니다.  
   
 ### <a name="template-parameter-replacement"></a>템플릿 매개 변수를 대체  
  서식 파일을 새 프로젝트 항목 템플릿의 복사할 때 템플릿 매개 변수를 파일을 사용자 지정 하는 문자열로 바꿉니다. 템플릿 매개 변수는이 앞과 뒤에 예를 들어 달러 기호는 특수 토큰, $date $는 합니다.  

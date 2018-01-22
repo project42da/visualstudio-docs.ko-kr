@@ -17,11 +17,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 3e10d353d3f2b89d9c8697a8748b820bef73df03
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2ea8e766561261b4860f973002d302ac99caa8dd
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="idebugmessageevent2setresponse"></a>IDebugMessageEvent2::SetResponse
 있는 경우 messagebox에서 응답을 설정 합니다.  
@@ -42,11 +42,11 @@ int SetResponse(
   
 #### <a name="parameters"></a>매개 변수  
  `dwResponse`  
- [in] Win32의 규칙을 사용 하 여 응답을 지정 `MessageBox` 함수입니다. 참조는 [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8) 세부 정보에 대 한 함수입니다.  
+ [in] Win32의 규칙을 사용 하 여 응답을 지정 `MessageBox` 함수입니다. 참조는 [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox) 세부 정보에 대 한 함수입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [IDebugMessageEvent2](../../../extensibility/debugger/reference/idebugmessageevent2.md)   
- [AfxMessageBox](http://msdn.microsoft.com/Library/d66d0328-cdcc-48f6-96a4-badf089099c8)
+ [AfxMessageBox](/cpp/mfc/reference/cstring-formatting-and-message-box-display#afxmessagebox)
