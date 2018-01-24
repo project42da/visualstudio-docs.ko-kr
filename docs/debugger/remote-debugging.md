@@ -21,11 +21,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 94ce04f63870bb6ce9a40658c670c5b277cc675e
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 21867feae0d313c3ac5f93e51cf85ebe14bbba0b
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 다른 컴퓨터에 배포된 Visual Studio 응용 프로그램을 디버그할 수 있습니다. 이렇게 하려면 Visual Studio 원격 디버거를 사용합니다.
@@ -34,11 +34,13 @@ ms.lasthandoff: 01/19/2018
 
 |시나리오|링크|
 |-|-|-|
-|Azure|[Azure 앱 서비스 (스냅숏 디버거)에서 ASP.NET 디버깅](../debugger/debug-live-azure-applications.md), [원격 Azure에서 ASP.NET 디버깅](../debugger/remote-debugging-azure.md), 또는 [Azure 서비스 패브릭 응용 프로그램 디버깅](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)|
+|Azure App Service|[디버거를 스냅숏](../debugger/debug-live-azure-applications.md) 또는 [원격 Azure에서 ASP.NET 디버깅](../debugger/remote-debugging-azure.md)|
+|Azure VM|[Azure의 원격 디버그 ASP.NET](../debugger/remote-debugging-azure.md)|
+|Azure Service Fabric|[Azure 서비스 패브릭 응용 프로그램 디버깅](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)|
 |ASP.NET|[원격 디버깅 ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md) 또는 [원격 디버깅 ASP.NET](../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)|
-|C# 또는 Visual Basic|[C# 또는 Visual Basic 프로젝트 원격 디버그](../debugger/remote-debugging-csharp.md)|
+|C# 또는 Visual Basic|[C# 또는 Visual Basic 프로젝트](../debugger/remote-debugging-csharp.md) 원격 디버그|
 |C++|[C++ 프로젝트 원격 디버그](../debugger/remote-debugging-cpp.md)|
-|유니버설 Windows 앱 (UWP)|[UWP 앱을 원격 컴퓨터에서 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md) 및 [설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)|
+|유니버설 Windows 앱 (UWP)|[UWP 앱을 원격 컴퓨터에서 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md) 또는 [설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)|
 
 방금 다운로드 하 고 원격 디버거를 설치 하 고 시나리오에 대 한 추가 지침에 필요 하지 않습니다,이 문서의 단계를 수행 합니다.
   

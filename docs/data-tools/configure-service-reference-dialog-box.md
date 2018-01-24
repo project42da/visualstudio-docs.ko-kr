@@ -18,20 +18,21 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: ce1419882422ddc12fdb380601e908eed7e5c7ba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b3b9ae8406845de886009da981eaf7f63e68972b
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="configure-service-reference-dialog-box"></a>서비스 참조 구성 대화 상자
-**서비스 참조 구성** 대화 상자를 사용 하면 동작을 구성할 수 있습니다 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 서비스입니다.  
-  
+
+**서비스 참조 구성** 대화 상자에서는 Windows Communication Foundation (WCF) 서비스의 동작을 구성할 수 있습니다.
+
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 도구 메뉴에서 설정 가져오기 및 내보내기를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
-  
- 액세스는 **서비스 참조 구성** 에서 참조 하는 대화 상자에서 마우스 오른쪽 단추로 서비스 **솔루션 탐색기** 선택 **서비스 참조 구성**합니다. 클릭 하 여 대화 상자에 액세스할 수도 있습니다는 **고급** 단추는 **서비스 참조 추가 대화 상자**합니다.  
-  
+> 표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 도구 메뉴에서 설정 가져오기 및 내보내기를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.
+
+액세스는 **서비스 참조 구성** 에서 참조 하는 대화 상자에서 마우스 오른쪽 단추로 서비스 **솔루션 탐색기** 선택 **서비스 참조 구성**합니다. 클릭 하 여 대화 상자에 액세스할 수도 있습니다는 **고급** 단추는 **서비스 참조 추가 대화 상자**합니다.
+
 ## <a name="task-list"></a>작업 목록  
   
 -   WCF 서비스가 호스팅되는 주소를 변경 하려면 입력에서 새 주소는 **주소** 필드입니다.  
@@ -86,16 +87,15 @@ ms.lasthandoff: 12/22/2017
  **참조 된 어셈블리 목록**  
  프로젝트 또는 웹 사이트의 참조된 어셈블리 목록을 포함합니다. 때 **지정된 된 어셈블리의 형식 재사용** 을 선택 하면 개별 어셈블리를 선택 하거나 선택을 취소 해야 합니다.  
   
- **웹 참조 추가**  
- 표시는 [웹 참조 추가 대화 상자](https://msdn.microsoft.com/en-us/library/8dcbc50t(v=vs.100).aspx)합니다.  
-  
-> [!NOTE]
->  이 옵션은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 버전을 대상으로 하는 프로젝트에만 사용해야 합니다.  
-  
-> [!NOTE]
->  **웹 참조 추가** 단추는 경우에만 사용할 수는 **서비스 참조 구성** 에서 대화 상자가 표시 됩니다는 **서비스 참조 추가 대화 상자**합니다.  
-  
-## <a name="see-also"></a>참고 항목  
+ **웹 참조 추가** 웹 참조 추가 대화 상자를 표시 합니다.
 
- [방법: 웹 서비스에 대 한 참조를 추가 합니다.](how-to-add-update-or-remove-a-wcf-data-service-reference.md)   
- [Windows Communication Foundation 서비스 및 WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)
+> [!NOTE]
+> 이 옵션은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 2.0 버전을 대상으로 하는 프로젝트에만 사용해야 합니다.
+
+> [!NOTE]
+> **웹 참조 추가** 단추는 경우에만 사용할 수는 **서비스 참조 구성** 에서 대화 상자가 표시 됩니다는 **서비스 참조 추가 대화 상자**합니다.
+
+## <a name="see-also"></a>참고 항목
+
+[방법: 웹 서비스에 대 한 참조를 추가 합니다.](how-to-add-update-or-remove-a-wcf-data-service-reference.md)  
+[Windows Communication Foundation 서비스 및 WCF Data Services](../data-tools/configure-service-reference-dialog-box.md)

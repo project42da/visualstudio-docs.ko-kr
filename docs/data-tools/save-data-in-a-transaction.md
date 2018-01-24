@@ -22,11 +22,11 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: 303caa59af4cbcbafa9ec14fb6ffb3559d6b1bab
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 160cf1021e6b95dcfc6cf8ee97b20c4502f9099e
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>연습: 트랜잭션에 데이터 저장
 이 연습에서는 사용 하 여 트랜잭션에서 데이터를 저장 하는 방법을 보여 줍니다.는 <xref:System.Transactions> 네임 스페이스입니다. 이 연습에서는 Windows Forms 응용 프로그램을 만들어야 합니다. Northwind 샘플 데이터베이스의 두 테이블에 대 한 데이터 집합을 만들려면 데이터 소스 구성 마법사를 사용 합니다. 데이터 바인딩된 컨트롤을 Windows form 및 수정 하면서 간단한 BindingNavigator의 저장 단추는 TransactionScope 내에서 데이터베이스를 업데이트 하려면에 대 한 코드를 추가 합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="prerequisites"></a>필수 구성 요소  
 이 연습에서는 Northwind 샘플 데이터베이스 및 SQL Server Express LocalDB를 사용 합니다.  
   
-1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server 버전의 다운로드 페이지](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **.NET 데스크톱 개발** 작업 또는 개별 구성 요소입니다.  
+1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/sql-server/sql-server-editions-express), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **.NET 데스크톱 개발** 작업 또는 개별 구성 요소입니다.  
   
 2.  다음 단계를 수행 하 여 Northwind 샘플 데이터베이스를 설치 합니다.  
 

@@ -7,28 +7,28 @@ ms.suite:
 ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: 418cc9cb-68ad-47e9-a6c8-a48b9c35db45
-caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 92fa57068a760fc8168fa46cf32a5660293b2e9b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d46b1c9e87b0bf5b8c0b12cfe10ac4cd85a4741c
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="ca2153-avoid-handling-corrupted-state-exceptions"></a>CA2153: 손상된 상태 예외 처리 방지
+
 |||  
 |-|-|  
 |TypeName|AvoidHandlingCorruptedStateExceptions|  
 |CheckId|CA2153|  
 |범주|Microsoft.Security|  
 |변경 수준|주요 변경 아님|  
-  
-## <a name="cause"></a>원인  
- [CSE(손상된 상태 예외)](https://msdn.microsoft.com/en-us/magazine/dd419661.aspx) 는 프로세스에 메모리 손상이 있음을 나타냅니다. 프로세스 충돌을 허용하는 대신 catch하면 공격자가 손상된 메모리 영역에 익스플로잇을 배치할 수 있는 경우 보안 취약점이 발생할 수 있습니다.  
+
+## <a name="cause"></a>원인
+
+[CSE 손상 된 상태 예외 ()](https://msdn.microsoft.com/magazine/dd419661.aspx) 해당 메모리를 나타낼 손상 프로세스에 존재 합니다. 프로세스 충돌을 허용하는 대신 catch하면 공격자가 손상된 메모리 영역에 익스플로잇을 배치할 수 있는 경우 보안 취약점이 발생할 수 있습니다.
   
 ## <a name="rule-description"></a>규칙 설명  
  CSE는 프로세스의 상태가 손상되었으며 시스템에 의해 catch되지 않았음을 나타냅니다. 손상된 상태 시나리오에서 일반 처리기는 적절한 `HandleProcessCorruptedStateExceptions` 특성으로 메서드를 표시하는 경우에만 예외를 catch합니다. 기본적으로는 [공용 언어 런타임 (CLR)](/dotnet/standard/clr) Cse에 대 한 catch 처리기를 호출 하지 것입니다.  

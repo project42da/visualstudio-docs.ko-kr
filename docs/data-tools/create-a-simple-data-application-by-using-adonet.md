@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: b1f6e8ed06f9f2355ac3a740319bb75924bf3d6b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1525a858885bb7b824967712186f81e060f63519
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기
 데이터베이스의 데이터를 조작 하는 응용 프로그램을 만들 때 연결 문자열 정의 데이터를 삽입 및 저장된 프로시저를 실행 하는 등의 기본 작업을 수행 합니다. 이 항목에 따라 Visual C# 또는 Visual Basic 및 ADO.NET을 사용 하 여 간단한 Windows Forms "데이터 폼" 응용 프로그램 내에서 데이터베이스와 상호 작용 하는 방법을 확인할 수 있습니다.  모든.NET 데이터 기술-데이터 집합, LINQ to SQL 및 Entity Framework를 포함 하 여-궁극적으로이 문서에 표시 된 것과 매우 유사한 단계를 수행 합니다.  
@@ -45,9 +45,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="prerequisites"></a>필수 구성 요소  
  응용 프로그램을 만들려면 다음이 필요 합니다.  
   
--   Visual Studio Community Edition입니다.  
+-   Visual Studio Community Edition.  
   
--   SQL Server Express LocalDB SQL Server Express LocalDB가 없는 경우에서 설치할 수 있습니다는 [SQL Server 버전의 다운로드 페이지](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)합니다.  
+-   SQL Server Express LocalDB SQL Server Express LocalDB가 없는 경우에서 설치할 수 있습니다는 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/sql-server/sql-server-editions-express)합니다.
 
 이 항목 Visual Studio IDE의 기본 기능에 익숙한 및 수는 Windows Forms 응용 프로그램을 만들 하 컨트롤 및 간단한 이벤트 코드의 속성을 설정 하는 단추 및 다른 컨트롤을 폼에 배치 하는 프로젝트에 폼 추가 가정 합니다. 이러한 작업에 익숙하지 경우 완료 하는 것이 좋습니다는 [Visual C# 및 Visual Basic 시작](../ide/getting-started-with-visual-csharp-and-visual-basic.md) 이 연습을 시작 하기 전에 항목입니다.  
   

@@ -7,29 +7,29 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs: CSharp
-ms.assetid: 65929fab-5d78-4e04-af1e-cf4957f230f6
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: c4dd77680fb529575140dc718a4f1c0a58090029
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 394dbf9aba422f8fbf16857d6980a53b353e931a
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF 및 Entity Framework 6 간단한 데이터 응용 프로그램 만들기
+
 이 연습에서는 Visual Studio에서 SQL Server LocalDB, Northwind 데이터베이스, Entity Framework 6 및 Windows Presentation Foundation으로 기본 "데이터 폼" 응용 프로그램을 만드는 방법을 보여 줍니다. 마스터-세부 정보 보기를 기본 데이터 바인딩 작업을 수행 하는 방법을 보여 줍니다과 함께 사용자 지정 "바인딩 탐색기" "다음 이동"에 대 한 단추를 "이전으로 이동," ", 처음으로 이동" 이동 "을 종료 하려면"에 "업데이트" 및 "삭제" 합니다.  
   
  이 문서는 데이터 도구를 사용 하 여 Visual Studio에서 중점적 하 고 모든 수준에서의 기본 기술에 설명 하려고 하지 않습니다. XAML, Entity Framework 및 SQL에 대 한 기본 지식이 있다고 가정 합니다. 또한이 예제에서는 WPF 응용 프로그램에 대 한 표준 모델-뷰-보기 MVVM (Model) 아키텍처를 보여 주지 않습니다. 그러나 매우 약간만 수정 하 여 MVVM 응용 프로그램에이 코드를 복사할 수 있습니다.  
   
-## <a name="install-and-connect-to-northwind"></a>설치 하 고 Northwind로 연결  
+## <a name="install-and-connect-to-northwind"></a>설치 하 고 Northwind로 연결
+
 이 예제에서는 Northwind 샘플 데이터베이스 및 SQL Server Express LocalDB를 사용 합니다. 작동 해야 다른 SQL 데이터베이스 제품과 해당 제품에 대 한 ADO.NET 데이터 공급자는 Entity Framework를 지원 하는 경우.  
-  
-1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server 버전의 다운로드 페이지](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **.NET 데스크톱 개발** 작업 또는 개별 구성 요소입니다.  
-  
+
+1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/sql-server/sql-server-editions-express), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **.NET 데스크톱 개발** 작업 또는 개별 구성 요소입니다.
+
 2.  다음 단계를 수행 하 여 Northwind 샘플 데이터베이스를 설치 합니다.  
 
     1. Visual Studio에서 열고는 **SQL Server 개체 탐색기** 창. (SQL Server 개체 탐색기의 일부로 설치 되는 **데이터 저장 및 처리** Visual Studio 설치 관리자에서 작업 합니다.) 확장 된 **SQL Server** 노드. LocalDB 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **새 쿼리 중...** .  
@@ -44,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  [새 연결 추가](../data-tools/add-new-connections.md) Northwind에 대 한 합니다.  
   
-## <a name="configure-the-project"></a>프로젝트 구성  
+## <a name="configure-the-project"></a>프로젝트 구성
   
 1.  Visual Studio에서 선택 **파일**, **새로**, **프로젝트...**  한 다음 새 C# WPF 응용 프로그램을 만듭니다.  
   
@@ -58,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  이제 Northwind 데이터베이스 기반 모델을 만들려면 Visual Studio를 사용할 수 있습니다.  
   
-## <a name="create-the-model"></a>모델 만들기  
+## <a name="create-the-model"></a>모델 만들기
   
 1.  솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가**, **새 항목...** . C# 노드를 아래 왼쪽된 창에서 선택 **데이터** 가운데 창에서 선택 하 고 **ADO.NET 엔터티 데이터 모델**합니다.  
   
@@ -92,8 +92,9 @@ ms.lasthandoff: 12/22/2017
   
 이제 보고, 탐색 및 데이터를 수정할 수 있습니다 수 있도록이 모델을 XAML 페이지로 연결 준비가 되었습니다.  
   
-## <a name="databind-the-model-to-the-xaml-page"></a>Databind을 XAML 페이지로 모델  
- 사용자 고유의 데이터 바인딩 코드를 작성할 수 있지만 Visual Studio을 대신할 수 있도록 훨씬 쉽습니다.  
+## <a name="databind-the-model-to-the-xaml-page"></a>Databind을 XAML 페이지로 모델
+
+사용자 고유의 데이터 바인딩 코드를 작성할 수 있지만 Visual Studio을 대신할 수 있도록 훨씬 쉽습니다.  
   
 1.  주 메뉴에서 선택 **프로젝트 > 새 데이터 원본 추가** 불러오는 **데이터 소스 구성 마법사**합니다. 선택 **개체** 모델 클래스에서 데이터베이스로 바인딩하는 것 때문에:  
   
@@ -144,8 +145,9 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Window_Loaded#2](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#2)]  
 
 8.  **F5**키를 누릅니다. 내용을 CollectionViewSource로 검색 된 첫 번째 고객에 대 한 세부 정보가 표시 됩니다. 또한 고객 주문 데이터 표에 나타납니다. 서식 지정 하겠습니다를 수정 하는 좋은 아닙니다. 또한 다른 레코드를 볼 한 기본적인 CRUD 작업을 수행 하는 방법을 만들어 보겠습니다.  
-  
-## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>페이지 디자인을 조정 하 고 새로운 고객 및 주문에 대 한 표 추가  
+
+## <a name="adjust-the-page-design-and-add-grids-for-new-customers-and-orders"></a>페이지 디자인을 조정 하 고 새로운 고객 및 주문에 대 한 표 추가
+
 Visual Studio에서 생성 된 기본 배열을 사용 하면이 응용 프로그램에 적합 하지 않으므로 XAML에 몇 가지 변경을 수동으로 수행 합니다. 또한 일부 "forms" (임 실제로 표) 새 고객 또는 주문과 추가할 사용자를 사용 하도록 설정 해야 합니다. 텍스트 상자에 데이터 바인딩된 되지 않는 별도 집합이 새 고객 및 주문 추가할 수 있도록 필요는 `CollectionViewSource`합니다. 처리기 메서드에서 Visible 속성을 설정 하 여 언제 든 지 사용자에 게는 표를 제어 합니다 우리 합니다. 마지막으로, 개별 주문을 삭제 하려면 사용자 수 있도록 Orders 눈금에서 각 행에 삭제 단추를 추가 합니다.  
   
 먼저, MainWindow.xaml의 Windows.Resources 요소에 이러한 스타일을 추가 합니다.  
@@ -350,11 +352,12 @@ Visual Studio에서 생성 된 기본 배열을 사용 하면이 응용 프로�
 ```  
   
 ## <a name="add-buttons-to-navigate-add-update-and-delete"></a>단추를 이동, 추가, 업데이트, 삭제 및 추가  
- Windows Forms 응용 프로그램에서 데이터베이스의 행을 탐색 및 한 기본적인 CRUD 작업을 수행 하는 데 단추가 포함 된 BindingNavigator 개체를 가져옵니다. WPF는 BindingNavigator 제공 하지는 않지만 쉽게 하나 만듭니다. 에서는 이러한 작업을 수행 가로 StackPanel 내부의 단추와 하 고 뒤에 있는 코드의 메서드에 바인딩되는 명령 단추 연결 합니다.  
+
+Windows Forms 응용 프로그램에서 데이터베이스의 행을 탐색 및 한 기본적인 CRUD 작업을 수행 하는 데 단추가 포함 된 BindingNavigator 개체를 가져옵니다. WPF는 BindingNavigator 제공 하지는 않지만 쉽게 하나 만듭니다. 에서는 이러한 작업을 수행 가로 StackPanel 내부의 단추와 하 고 뒤에 있는 코드의 메서드에 바인딩되는 명령 단추 연결 합니다.  
   
- Fours 명령 논리 부분이 있습니다: (1) 명령, (2)는 바인딩, (3)는 단추 및 (4) 명령 처리기 코드 숨김에서 합니다.  
+Fours 명령 논리 부분이 있습니다: (1) 명령, (2)는 바인딩, (3)는 단추 및 (4) 명령 처리기 코드 숨김에서 합니다.  
   
-#### <a name="add-commands-bindings-and-buttons-in-xaml"></a>XAML에서 명령, 바인딩 및 단추 추가  
+### <a name="add-commands-bindings-and-buttons-in-xaml"></a>XAML에서 명령, 바인딩 및 단추 추가
   
 1.  첫째, Windows.Resources 요소 내에서 MainWindow.xaml 파일에서 명령을 추가 해 보겠습니다.  
   
@@ -414,7 +417,7 @@ Visual Studio에서 생성 된 기본 배열을 사용 하면이 응용 프로�
     </StackPanel>  
     ```  
   
-#### <a name="add-command-handlers-to-the-mainwindow-class"></a>MainWindow 클래스에 명령 처리기를 추가 합니다.  
+### <a name="add-command-handlers-to-the-mainwindow-class"></a>MainWindow 클래스에 명령 처리기를 추가 합니다.  
   
 코드 숨김을 추가 및 삭제 방법을 제외 하 고 최소화 됩니다. 탐색 뷰 속성을 CollectionViewSource에 메서드를 호출 하 여 수행 됩니다. DeleteOrderCommandHandler 한 주문의 하위 삭제를 수행 하는 방법을 보여 줍니다. 그와 관련 된 Order_Details를 먼저 삭제 해야 합니다. UpdateCommandHandler 새 고객 또는 주문과 컬렉션에 추가 합니다. 그렇지 않으면 방금 변경한 사용자 텍스트 상자에는 기존 고객 또는 순서를 업데이트 합니다.  
   
@@ -423,8 +426,10 @@ MainWindow.xaml.cs의 MainWindow 클래스에이 처리기 메서드를 추가 �
 [!code-csharp[CommandHandlers#3](../data-tools/codesnippet/CSharp/CreateWPFDataApp/MainWindow.xaml.cs#3)]  
   
 ## <a name="run-the-application"></a>응용 프로그램 실행
+
 디버깅을 시작하려면 **F5** 키를 누릅니다. 고객 및 주문 데이터가 표에서 채워진 표시 되어야 하 고 탐색 단추의 예상 대로 작동 해야 합니다. "커밋" 데이터를 입력 한 후 모델에 새 고객 또는 주문과 추가 하려면 클릭 합니다. 새 고객 또는 새 주문 양식 데이터를 저장 하지 않고 취소 하려면 "취소"를 클릭 합니다. 기존 고객과 텍스트 상자에 직접 주문을 편집할 수 하 고 해당 변경 내용이 모델에 자동으로 기록 됩니다.  
   
 ## <a name="see-also"></a>참고 항목
+
 [.NET용 Visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)  
-[Entity Framework 설명서](https://msdn.microsoft.com/en-us/data/ee712907.aspx)
+[Entity Framework 설명서](/ef/)

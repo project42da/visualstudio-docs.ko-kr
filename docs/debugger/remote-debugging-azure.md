@@ -16,34 +16,36 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: ba54912b61e624861bbaec56d9e5bab68d7f5d78
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 22b7724a6eee2c31de1bf64f12a040e042972e96
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 01/23/2018
 ---
-# <a name="remote-debug-aspnet-core-on-iis-and-azure-in-visual-studio-2017"></a>IIS 및 Visual Studio 2017에는 Azure에서 ASP.NET Core 원격 디버그
-Azure 앱 서비스에 대 한 사용 하 여 디버깅 하는 권장는 [스냅숏 디버거](../debugger/debug-live-azure-applications.md) 있고 Visual Studio에서 디버거를 연결 하려면이 항목의 지침에 따라 수 있습니다. 를 실행 하는 Windows Server IIS와 Azure VM의 경우 원격 디버깅에 대해 설정할 수도 있습니다. 이 설정 및 Visual Studio 2017 ASP.NET Core 응용 프로그램을 구성 하 고 Azure를 사용 하 여 IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다.
+# <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017에는 Azure에서 IIS에서 ASP.NET Core 원격 디버그
+
+이 설정 및 Visual Studio 2017 ASP.NET Core 응용 프로그램을 구성 하 고 Azure를 사용 하 여 IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다.
+
+Azure에서 원격 디버그 하는 권장된 방법은 각 시나리오에 따라 달라 집니다.
+
+* Azure 앱 서비스에서 ASP.NET Core를 디버깅 하려면 참조 [스냅숏 디버거를 사용 하 여 Azure 디버그 앱](../debugger/debug-live-azure-applications.md)합니다. 이것이 권장된 방법입니다.
+* 보다 일반적인 디버깅 기능을 사용 하 여 Azure 앱 서비스에서 ASP.NET Core를 디버깅 하려면이 항목의 단계를 수행 합니다. (섹션을 참조 [Azure 앱 서비스에서 원격 디버깅](#remote_debug_azure_app_service)).
+
+    이 시나리오에서는 Visual Studio에서 Azure에 응용 프로그램을 배포 해야 하지만를 수동으로 설치 하거나 다음 그림에 나와 있는 것 처럼 IIS 또는 (이러한 구성 요소는 점선으로 표시 됩니다.) 원격 디버거를 구성할 필요는 없습니다.
+
+    ![원격 디버거 구성 요소](../debugger/media/remote-debugger-azure-app-service.png "Remote_debugger_components")
+
+* Azure VM에서 IIS를 디버깅 하려면이 항목의 단계를 수행 합니다. (섹션을 참조 [Azure VM에서 원격 디버깅](#remote_debug_azure_vm)). Iis 사용자 지정된 구성을 사용할 수 있습니다 하지만 설치 및 배포 단계는 더 복잡 합니다.
+
+    Azure VM에 대 한 Visual Studio에서 Azure에 응용 프로그램을 배포 해야 하 고 또한 해야 IIS 역할 및 원격 디버거를 수동으로 설치 하려면 다음 그림에 나와 있는 것 처럼 합니다.
+
+    ![원격 디버거 구성 요소](../debugger/media/remote-debugger-azure-vm.png "Remote_debugger_components")
+
+* Azure 서비스 패브릭에서 ASP.NET Core를 디버깅 하려면 참조 [원격 서비스 패브릭 응용 프로그램을 디버깅](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)합니다.
 
 > [!WARNING]
 > 이 자습서의 단계를 완료 했을 때 만드는 Azure 리소스를 삭제 해야 합니다. 불필요 한 비용이 발생 하지 않아도 해당 방법입니다.
 
-이 항목에서는 설명 하는 방법:
-
-* Azure 앱 서비스에서 ASP.NET Core 원격 디버그
-
-* Azure VM에서 ASP.NET Core 원격 디버그
-
-Azure 앱 서비스에 대 한 Visual Studio에서 Azure에 응용 프로그램을 배포 해야 하지만를 수동으로 설치 하거나 다음 그림에 나와 있는 것 처럼 IIS 또는 (이러한 구성 요소는 점선으로 표시 됩니다.) 원격 디버거를 구성할 필요는 없습니다.
-
-![원격 디버거 구성 요소](../debugger/media/remote-debugger-azure-app-service.png "Remote_debugger_components")
-
-Azure VM에 대 한 Visual Studio에서 Azure에 응용 프로그램을 배포 해야 하 고 또한 해야 IIS 역할 및 원격 디버거를 수동으로 설치 하려면 다음 그림에 나와 있는 것 처럼 합니다.
-
-![원격 디버거 구성 요소](../debugger/media/remote-debugger-azure-vm.png "Remote_debugger_components")
-
-> [!NOTE]
-> Azure 서비스 패브릭에서 ASP.NET Core를 디버깅 하려면 참조 [원격 서비스 패브릭 응용 프로그램을 디버깅](/azure/service-fabric/service-fabric-debugging-your-application#debug-a-remote-service-fabric-application)합니다.
 
 ### <a name="requirements"></a>요구 사항
 
@@ -61,11 +63,11 @@ Azure VM에 대 한 Visual Studio에서 Azure에 응용 프로그램을 배포 �
 
 4. About.cshtml.cs 파일을 열고에 중단점을 설정는 `OnGet` 메서드 (에 중단점을 설정 하 고 이전 템플릿은 HomeController.cs를 대신 엽니다는 `About()` 메서드).
 
-## <a name="remote-debug-aspnet-core-on-an-azure-app-service"></a>Azure 앱 서비스에서 ASP.NET Core 원격 디버그
+## <a name="remote_debug_azure_app_service"></a>Azure 앱 서비스에서 ASP.NET Core 원격 디버그
 
 Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응용 프로그램을 디버깅할 신속 하 게 있습니다. 그러나 IIS 구성 사전 설정 되어 있으며 사용자 지정할 수 없습니다. 자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다. (IIS 사용자 지정 하는 기능, 필요한 경우 디버깅에서 시도 [Azure VM](#BKMK_azure_vm).) 
 
-#### <a name="to-deploy-the-app-and-remote-debug"></a>배포 응용 프로그램 및 원격 디버그 하려면
+#### <a name="to-deploy-the-app-and-remote-debug-using-server-explorer"></a>배포 응용 프로그램 및 서버 탐색기를 사용 하 여 원격 디버깅 하려면
 
 1. Visual Studio에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다.
 
@@ -73,7 +75,7 @@ Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응
 
     자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다.
 
-3. **서버 탐색기**앱 서비스 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **디버거 연결**합니다.
+3. 열기 **서버 탐색기** (**보기** > **서버 탐색기**) 응용 프로그램 서비스 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **디버거연결**.
 
 4. 실행 중인 ASP.NET 응용 프로그램에서 링크를 클릭 하 여 **에 대 한** 페이지.
 
@@ -81,7 +83,7 @@ Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응
 
     정말 간단하죠. 이 항목의 단계 나머지는 Azure VM에 원격 디버깅에 적용 됩니다.
 
-## <a name="BKMK_azure_vm"></a>Azure VM에서 ASP.NET Core 원격 디버그
+## <a name="remote_debug_azure_vm"></a>Azure VM에서 ASP.NET Core 원격 디버그
 
 Windows 서버에 대 한 Azure VM 만들 지정 하 고 설치 및 IIS 및 기타 필수 소프트웨어 구성 요소를 구성 합니다. 이 Azure 응용 프로그램 서비스를 배포 하는 보다 많은 시간이 소요 되며이 자습서의 나머지 단계를 수행 해야 합니다.
 

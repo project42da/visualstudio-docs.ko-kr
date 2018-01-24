@@ -13,18 +13,18 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: aspnet
-ms.openlocfilehash: 35b8cd394881ba5bf075044d30aee17ab6a321c4
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 6f11ec81c740a6930ce4eaef16d4e4e389aaca47
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>원격 IIS 컴퓨터에 ASP.NET 원격 디버그
 IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 응용 프로그램을 배포한 컴퓨터에서 원격 도구를 실행 하 고 Visual Studio에서 실행 중인 앱에 연결 합니다.
 
 ![원격 디버거 구성 요소](../debugger/media/remote-debugger-aspnet.png "Remote_debugger_components")
 
-이 설정 및 Visual Studio 2017 ASP.NET MVC 4.5.2 응용 프로그램을 구성 하 고, IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다. 원격 디버깅 ASP.NET Core, 참조 [IIS 컴퓨터에 있는 원격 디버깅 ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)합니다. 배포 하 고 Azure를 사용 하 여 IIS에서 디버깅할 수도 있습니다. 자세한 내용은 참조 [Azure에서 원격 디버깅](../debugger/remote-debugging-azure.md)합니다.
+이 설정 및 Visual Studio 2017 ASP.NET MVC 4.5.2 응용 프로그램을 구성 하 고, IIS에 배포 하 고 Visual Studio에서 원격 디버거를 연결 하는 방법을 설명 합니다. 원격 디버깅 ASP.NET Core, 참조 [IIS 컴퓨터에 있는 원격 디버깅 ASP.NET Core](../debugger/remote-debugging-aspnet-on-a-remote-iis-computer.md)합니다. Azure 앱 서비스에 대 한 쉽게 배포 하 고 디버그할 수 중 하나를 사용 하 여 IIS의 미리 구성 된 인스턴스에서 [스냅숏 디버거](../debugger/debug-live-azure-applications.md) (.NET 4.6.1 필수) 또는 [서버 탐색기에서 디버거를 연결](../debugger/remote-debugging-azure.md)합니다.
 
 이러한 절차 이러한 서버 구성에서 테스트 되었으며:
 * Windows Server 2012 R2 및 IIS 8 (Windows Server 2008 R2에 대 한 서버 단계는 다른)
@@ -70,7 +70,7 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
     > [!NOTE]
     > Windows Server 2008 r 2를 사용 하는 경우이 명령을 사용 하는 ASP.NET 4를 설치 합니다.
 
-     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe ir**
+     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
 
 2. 시스템을 다시 시작 (실행 또는 **net stop가 /y** 뒤 **net 시작 w3svc** 시스템 경로에 대 한 변경을 선택 하기 위해 명령 프롬프트에서).
 
@@ -147,7 +147,7 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
 2. Visual Studio에서 클릭 **디버그 > 프로세스에 연결** (Ctrl + Alt + P).
 
     > [!TIP]
-    > Visual Studio 2017에 다시 연결할 수 있습니다 이전에 사용 하 여 연결할 동일한 프로세스에 **디버그 > 프로세스에 다시 연결 중...** (Shift + Alt + P)입니다. 
+    > Visual Studio 2017에 다시 연결할 수 있습니다 이전에 사용 하 여 연결할 동일한 프로세스에 **디버그 > 프로세스에 다시 연결 중...** (Shift+Alt+P). 
 
 3. 한정자 필드를 설정  **\<원격 컴퓨터 이름 >: 4022**합니다.
 4. 클릭 **새로 고침**합니다.

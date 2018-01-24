@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
 ms.workload: data-storage
-ms.openlocfilehash: af76fad7d6288aff08de22b076d27cafbb5c3cff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8fbe818e233c8bbdaf4431c70b8962baf43a2ed2
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio에 대 한 호환 데이터베이스 시스템
 
@@ -29,13 +29,13 @@ Visual Studio에서 데이터에 연결 된 응용 프로그램을 개발 하려
 
 .NET 응용 프로그램에서 액세스할 수 있도록 하 고 Visual Studio 데이터 도구 창에 표시 될 데이터베이스 시스템의 경우 ADO.NET 데이터 공급자가 있어야 합니다. 구체적으로 공급자는.NET 응용 프로그램에서 엔터티 데이터 모델을 사용 하려면 Entity Framework을 지원 해야 합니다. 대부분의 공급자는 NuGet 패키지 관리자를 통해 또는 Visual Studio 마켓플레이스를 통해 제공 됩니다.
 
-Azure 저장소 Api를 사용 하는 경우 설치 하 여 Azure 저장소 에뮬레이터 로컬 컴퓨터에서 개발 하는 동안 프로덕션에 배포할 준비가 될 때까지 요금을 방지 하기 위해 합니다. 자세한 내용은 참조 [개발 및 테스트에 Azure 저장소 에뮬레이터를 사용 하 여](https://azure.microsoft.com/en-us/documentation/articles/storage-use-emulator/)합니다.
+Azure 저장소 Api를 사용 하는 경우 설치 하 여 Azure 저장소 에뮬레이터 로컬 컴퓨터에서 개발 하는 동안 프로덕션에 배포할 준비가 될 때까지 요금을 방지 하기 위해 합니다. 자세한 내용은 참조 [개발 및 테스트에 Azure 저장소 에뮬레이터를 사용 하 여](/azure/storage/common/storage-use-emulator)합니다.
 
 다음 목록에는 Visual Studio 프로젝트에 사용할 수 있는 더 인기가 데이터베이스 시스템의 일부를 포함 합니다. 이 목록은 완전 한 목록이 없습니다. 목록이 Visual Studio 도구와 완벽 한 통합을 사용 하도록 설정 하는 ADO.NET 데이터 공급자를 제공 하는 공급 업체에 대 한 참조 [ADO.NET 데이터 공급자](/dotnet/framework/data/adonet/data-providers)합니다.
 
 ## <a name="microsoft-sql-server"></a>Microsoft SQL Server
 
-SQL Server는 Microsoft 주력 데이터베이스 제공 합니다. SQL Server 2016 획기적인 성능, 고급 보안 및 풍부한 통합 보고 및 분석을 제공합니다. 서로 다른 용도로 설계 된 다양 한 버전에 제공 되며:에서 확장성과 성능이 뛰어난 비즈니스 analytics, 단일 컴퓨터에서 사용할 수 있습니다. SQL Server Express는 기록할 재배포 및 포함 하는 SQL Server의 완전 한 기능의 버전입니다.  LocalDB는 구성이 필요 하지 않습니다 하 고 응용 프로그램의 프로세스에서 실행 하는 SQL Server Express의 단순화 된 버전입니다. 제품 중 하나 또는 모두를 다운로드할 수 있습니다 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/en-us/server-cloud/Products/sql-server-editions/sql-server-express.aspx)합니다. 이 섹션의 SQL 예의 여러 SQL Server LocalDB를 사용합니다. SQL Server Management Studio (SSMS)는 Visual Studio SQL Server 개체 탐색기에서 제공 하는 것 보다 더 많은 기능을 가진는 독립 실행형 데이터베이스 관리 응용 프로그램. SSMS는 이전 링크에서 가져올 수 있습니다.
+SQL Server는 Microsoft 주력 데이터베이스 제공 합니다. SQL Server 2016 획기적인 성능, 고급 보안 및 풍부한 통합 보고 및 분석을 제공합니다. 서로 다른 용도로 설계 된 다양 한 버전에 제공 되며:에서 확장성과 성능이 뛰어난 비즈니스 analytics, 단일 컴퓨터에서 사용할 수 있습니다. SQL Server Express는 기록할 재배포 및 포함 하는 SQL Server의 완전 한 기능의 버전입니다.  LocalDB는 구성이 필요 하지 않습니다 하 고 응용 프로그램의 프로세스에서 실행 하는 SQL Server Express의 단순화 된 버전입니다. 제품 중 하나 또는 모두를 다운로드할 수 있습니다는 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/sql-server/sql-server-editions-express)합니다. 이 섹션의 SQL 예의 여러 SQL Server LocalDB를 사용합니다. SQL Server Management Studio (SSMS)는 Visual Studio SQL Server 개체 탐색기에서 제공 하는 것 보다 더 많은 기능을 가진는 독립 실행형 데이터베이스 관리 응용 프로그램. SSMS는 이전 링크에서 가져올 수 있습니다.
 
 ## <a name="oracle"></a>Oracle
 

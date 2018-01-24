@@ -19,11 +19,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f54a6dc2f47d10a47635a600d97decf3846e9d3f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f2c72525b6101f14e9aac4365cc6af75b3083545
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="security-warnings"></a>보안 경고
 보안 경고는 더 안전한 라이브러리 및 응용 프로그램을 지원합니다. 이들 경고는 프로그램의 보안 결함을 방지하는 데 도움이 됩니다. 이들 경고를 비활성화하는 경우 코드에 그 이유를 명확하게 표시하고 개발 프로젝트의 지정된 보안 담당자에게 이 사실을 알려야 합니다.  
@@ -81,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 |[CA2149: 투명한 메서드는 네이티브 코드를 호출해서는 안 됩니다.](../code-quality/ca2149-transparent-methods-must-not-call-into-native-code.md)|이 규칙은 P/Invoke를 통해 네이티브 코드를 직접 호출하는 모든 투명 메서드에 적용됩니다. 이 규칙이 위반되면 수준 2 투명성 모델에서 MethodAccessException이 발생하고 수준 1 투명성 모델에서 UnmanagedCode에 대한 완전 요청이 발생합니다.|  
 |[CA2151: 중요한 형식이 포함된 필드는 보안에 중요한 필드여야 함](../code-quality/ca2151-fields-with-critical-types-should-be-security-critical.md)|보안 중요 형식을 사용하려면 이 형식을 참조하는 코드가 보안 중요 또는 보안 안전 중요여야 합니다. 참조가 간접적인 경우에도 마찬가지입니다. 따라서 투명 코드는 필드에 액세스할 수 없으므로 보안 투명 또는 보안 안전 중요 필드가 있을 경우 잘못 해석됩니다.|  
 |[CA5122 P/Invoke 선언은 안전 하 게 보호 되지 않아야 중요](../code-quality/ca5122-p-invoke-declarations-should-not-be-safe-critical.md)|메서드는 보안에 중요한 작업을 수행할 때 SecuritySafeCritical로 표시되지만, 투명 코드에서도 안전하게 사용할 수 있습니다. 투명 코드는 P/Invoke를 통해 절대 네이티브 코드를 직접 호출할 수 없습니다. 따라서 P/Invoke를 SecuritySafeCritical로 표시할 경우 투명 코드가 P/Invoke를 호출할 수 없으며, 보안 분석에서 잘못 해석하는 원인이 됩니다.|  
-|[CA2153: 손상된 상태 예외 처리 방지](../code-quality/ca2153-avoid-handling-corrupted-state-exceptions.md)|[CSE(손상된 상태 예외)](https://msdn.microsoft.com/en-us/magazine/dd419661.aspx) 는 프로세스에 메모리 손상이 있음을 나타냅니다. 프로세스 충돌을 허용하는 대신 catch하면 공격자가 손상된 메모리 영역에 익스플로잇을 배치할 수 있는 경우 보안 취약점이 발생할 수 있습니다.|  
+|[CA2153: 손상된 상태 예외 처리 방지](../code-quality/ca2153-avoid-handling-corrupted-state-exceptions.md)|[CSE 손상 된 상태 예외 ()](https://msdn.microsoft.com/magazine/dd419661.aspx) 해당 메모리를 나타낼 손상 프로세스에 존재 합니다. 프로세스 충돌을 허용하는 대신 catch하면 공격자가 손상된 메모리 영역에 익스플로잇을 배치할 수 있는 경우 보안 취약점이 발생할 수 있습니다.|  
 |[CA3075: 안전하지 않은 DTD 처리](../code-quality/ca3075-insecure-dtd-processing.md)|안전하지 않은 DTDProcessing 인스턴스를 사용하거나 외부 엔터티 소스를 참조하면 파서는 신뢰할 수 없는 입력을 허용하고 공격자에게 중요 한 정보를 공개할 수 있습니다.|  
 |[CA3076: 안전하지 않은 XSLT 스크립트 실행](../code-quality/ca3076-insecure-xslt-script-execution.md)|.NET 응용 프로그램에서 비보안 방식으로 XSLT(Extensible Stylesheets Language Transformations)를 실행하는 경우 프로세서는 공격자에게 중요한 정보를 노출하여 서비스 거부 및 사이트 간 공격을 유발할 수 있는 신뢰할 수 없는 URI 참조를 확인할 수 있습니다.|  
 |[CA3077: API 디자인, XML 문서 및 XML 텍스트 판독기의 안전하지 않은 처리](../code-quality/ca3077-insecure-processing-in-api-design-xml-document-and-xml-text-reader.md)|XMLDocument 및 XMLTextReader에서 파생된 API를 디자인할 경우 DtdProcessing에 주의해야 합니다.  외부 엔터티 소스를 참조하거나 확인할 때 안전하지 않은 DTDProcessing 인스턴스를 사용하거나 XML에서 안전하지 않은 값을 설정하면 정보가 공개될 수 있습니다.|

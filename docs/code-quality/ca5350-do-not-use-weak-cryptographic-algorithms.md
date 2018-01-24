@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 4847cd5a1721376e0ca9222be0390e3c7aad2926
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6672922343ef6c0b56dd91eb358cf2fcd7ac6090
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="ca5350-do-not-use-weak-cryptographic-algorithms"></a>CA5350: 취약한 암호화 알고리즘 사용 안 함
 |||  
@@ -45,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 -   TripleDES 암호화의 경우 <xref:System.Security.Cryptography.Aes> 암호화를 사용합니다.  
   
--   SHA1 또는 RIPEMD160 해시 함수의 경우 [SHA-2](https://msdn.microsoft.com/en-us/library/windows/desktop/aa382459.aspx) 제품군의 암호화(예: <xref:System.Security.Cryptography.SHA512>, <xref:System.Security.Cryptography.SHA384>, <xref:System.Security.Cryptography.SHA256>)를 사용합니다.  
+-   SHA1 또는 RIPEMD160 해시 함수에서 사용 된 [s h A-2](https://msdn.microsoft.com/library/windows/desktop/aa382459.aspx) 제품군 (예: <xref:System.Security.Cryptography.SHA512>, <xref:System.Security.Cryptography.SHA384>, <xref:System.Security.Cryptography.SHA256>).  
   
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  데이터에 필요한 보호 수준이 보안 보장을 요구하지 않는 경우 이 규칙에서 실행되는 경고를 표시하지 않도록 설정합니다.  
