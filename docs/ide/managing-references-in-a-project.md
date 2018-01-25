@@ -25,11 +25,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c1e994edfac648652876cc0b58b4b6f5ede1cccf
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: c941b196897b7d3f7a815c50fc1e0a4817d3ed74
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-references-in-a-project"></a>프로젝트의 참조 관리
 
@@ -61,13 +61,13 @@ Windows 8.1 프로젝트의 대상을 Windows 10으로 다시 지정하도록 �
 
 ### <a name="extension-sdk-references"></a>확장 SDK 참조
 
-확장 SDK가 Windows 10에서 더 이상 사용되지 않는 API를 사용하지 않으면 Visual Basic, C#, C++, JavaScript UWP(유니버설 Windows 플랫폼) 앱은 [!INCLUDE[win81](../debugger/includes/win81_md.md)]을 대상으로 하는 이러한 확장 SDK를 참조할 수 있습니다. UWP 앱에서 확장 SDK를 참조할 수 있는지 확인하려면 해당 확장 SDK의 공급업체 사이트를 참조하세요.
+확장 SDK가 Windows 10에서 더 이상 사용되지 않는 API를 사용하지 않으면 Visual Basic, C#, C++, JavaScript UWP(유니버설 Windows 플랫폼) 앱은 Windows 8.1을 대상으로 하는 이러한 확장 SDK를 참조할 수 있습니다. UWP 앱에서 확장 SDK를 참조할 수 있는지 확인하려면 해당 확장 SDK의 공급업체 사이트를 참조하세요.
 
 앱에서 참조하는 확장 SDK가 지원되지 않는 경우 다음 단계를 수행해야 합니다.
 
-1. 오류를 일으키는 프로젝트의 이름을 확인합니다. 프로젝트의 대상 플랫폼이 프로젝트 이름 옆의 괄호 안에 표시됩니다. 예를 들어 **MyProjectName (Windows 8.1)** 은 **MyProjectName** 프로젝트가 플랫폼 버전 [!INCLUDE[win81](../debugger/includes/win81_md.md)]을 대상으로 한다는 것을 의미합니다.
+1. 오류를 일으키는 프로젝트의 이름을 확인합니다. 프로젝트의 대상 플랫폼이 프로젝트 이름 옆의 괄호 안에 표시됩니다. 예를 들어 **MyProjectName (Windows 8.1)** 은 **MyProjectName** 프로젝트가 플랫폼 버전 Windows 8.1을 대상으로 한다는 것을 의미합니다.
 
-2. 지원되지 않는 확장 SDK를 소유한 공급업체의 사이트로 이동하여 프로젝트의 대상 플랫폼 버전과 호환되는 종속성으로 확장 SDK 버전을 설치합니다.
+1. 지원되지 않는 확장 SDK를 소유한 공급업체의 사이트로 이동하여 프로젝트의 대상 플랫폼 버전과 호환되는 종속성으로 확장 SDK 버전을 설치합니다.
 
     > [!NOTE]
     > 기존 SDK가 다른 확장 SDK에 종속되어 있는지 확인하는 한 가지 방법은 **참조 관리자**를 살펴보는 것입니다. Visual Studio를 다시 시작하고, 새 C# UWP 앱 프로젝트를 만들고, 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다. **Windows** 탭, **확장** 하위 탭으로 이동하여 확장 SDK를 선택합니다. **참조 관리자**에서 오른쪽 창을 살펴봅니다. 종속성이 있는 경우 나열됩니다.
@@ -75,13 +75,13 @@ Windows 8.1 프로젝트의 대상을 Windows 10으로 다시 지정하도록 �
     > [!IMPORTANT]
     > 프로젝트가 Windows 10을 대상으로 하고 이전에 설치된 확장 SDK가 Microsoft Visual C++ 런타임 패키지에 종속된 경우 Windows 10과 호환되는 Microsoft Visual C++ 런타임 패키지의 버전은 v14.0이고 Visual Studio와 함께 설치됩니다.
 
-3. 이전에 설치한 확장 SDK가 다른 확장 SDK에 종속된 경우 종속성을 소유한 공급업체의 사이트로 이동하여 프로젝트의 대상 플랫폼 버전과 호환되는 종속성 버전을 설치합니다.
+1. 이전에 설치한 확장 SDK가 다른 확장 SDK에 종속된 경우 종속성을 소유한 공급업체의 사이트로 이동하여 프로젝트의 대상 플랫폼 버전과 호환되는 종속성 버전을 설치합니다.
 
-4. Visual Studio를 다시 시작하고 앱을 엽니다.
+1. Visual Studio를 다시 시작하고 앱을 엽니다.
 
-5. 오류가 발생한 프로젝트에서 **참조** 노드를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
+1. 오류가 발생한 프로젝트에서 **참조** 노드를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
 
-6. **Windows** 탭과 **확장** 하위 탭을 차례로 클릭한 다음 이전 확장 SDK에 대한 확인란의 선택을 취소하고 새 확장 SDK에 대한 확인란을 선택합니다. **확인**을 클릭합니다.
+1. **Windows** 탭과 **확장** 하위 탭을 차례로 클릭한 다음 이전 확장 SDK에 대한 확인란의 선택을 취소하고 새 확장 SDK에 대한 확인란을 선택합니다. **확인**을 클릭합니다.
 
 ## <a name="adding-a-reference-at-design-time"></a>디자인 타임에 참조 추가
 

@@ -14,18 +14,19 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
+- data-science
 - azure
-ms.openlocfilehash: 50a2da5a92276b5ace29bdc2b0a35eaae516a3c9
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: 50b306a3332678a4ab648e0e79730b0ef3ac996e
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/)는 브라우저를 통해 액세스한 사이트, 고유한 클라이언트에서 사용된 REST API, 이벤트 트리거된 처리 등 웹앱용 Platform-as-a-Service 제품입니다. App Service는 Python을 사용한 앱 구현을 완벽하게 지원합니다.
 
-사용자 지정이 가능한 Azure App Service의 Python 지원은 각각 특정 버전의 Python 런타임이 포함된 App Service *사이트 확장* 집합으로 제공됩니다. 이 항목에 설명된 대로 원하는 모든 패키지를 해당 환경에 직접 설치할 수 있습니다. App Service 자체에서 환경을 사용자 지정하면 웹 앱 프로젝트에서 패키지를 유지 관리하거나 앱 코드로 업로드할 필요가 없습니다. 
+사용자 지정이 가능한 Azure App Service의 Python 지원은 각각 특정 버전의 Python 런타임이 포함된 App Service *사이트 확장* 집합으로 제공됩니다. 이 항목에 설명된 대로 원하는 모든 패키지를 해당 환경에 직접 설치할 수 있습니다. App Service 자체에서 환경을 사용자 지정하면 웹 앱 프로젝트에서 패키지를 유지 관리하거나 앱 코드로 업로드할 필요가 없습니다.
 
 > [!Tip]
 > 기본적으로 App Service는 서버의 루트 폴더에 Python 2.7 및 Python 3.4가 설치되어 있지만, 이러한 환경에서 패키지를 사용자 지정하거나 설치할 수도 없고, 현재 상태에 의존할 수도 없습니다. 대신 이 항목에 설명된 대로 사용자가 제어하는 사이트 확장을 사용해야 합니다.
@@ -87,7 +88,7 @@ Azure Resource Manager 템플릿을 사용하여 App Service를 배포하는 경
 
 Python 사이트 확장이 Python 버전 및 아키텍처에 적절한 폴더의 `d:\home` 아래에 있는 서버에 설치됩니다(일부 이전 버전의 경우 제외). 예를 들어 Python 3.6.1 x64는 `d:\home\python361x64`에 설치됩니다. Python 인터프리터의 전체 경로는 `d:\home\python361x64\python.exe`입니다.
 
-App Service에서 특정 경로를 보려면 App Service 페이지에서 **확장**을 선택한 다음, 목록에서 확장을 선택합니다. 
+App Service에서 특정 경로를 보려면 App Service 페이지에서 **확장**을 선택한 다음, 목록에서 확장을 선택합니다.
 
 ![Azure App Service의 확장 목록](media/python-on-azure-extension-list.png)
 
@@ -165,7 +166,7 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
 
 서버 환경에서 직접 패키지를 설치하려면 다음 방법 중 하나를 사용합니다.
 
-| 메서드 | 사용법 | 
+| 메서드 | 사용법 |
 | --- | --- |
 | [Azure App Service Kudu 콘솔](#azure-app-service-kudu-console) | 대화형으로 패키지를 설치합니다. 패키지는 순수한 Python이거나 휠을 게시해야 합니다. |
 | [Kudu REST API](#kudu-rest-api) | 패키지 설치를 자동화하는 데 사용할 수 있습니다.  패키지는 순수한 Python이거나 휠을 게시해야 합니다. |
@@ -199,7 +200,7 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
     로컬 및 서버 모두에서 정확한 패키지 집합을 쉽게 재현할 수 있기 때문에 `requirements.txt`를 사용하는 것이 좋습니다. `requirements.txt`에 대한 변경 사항을 배포한 후 콘솔을 방문하여 명령을 다시 실행해야 합니다.
 
 > [!Note]
-> App Service에는 C 컴파일러가 없으므로 기본 확장 모듈이 있는 모든 패키지에 대해 휠을 설치해야 합니다. 인기 있는 많은 패키지가 자체 휠을 제공합니다. 자체 휠을 제공하지 않는 패키지의 경우 로컬 개발 컴퓨터의 `pip wheel <package_name>`을 사용한 다음 휠을 사이트에 업로드합니다. 예를 들어 [필수 패키지 관리](python-environments.md#managing-required-packages)를 참조하세요.
+> App Service에는 C 컴파일러가 없으므로 기본 확장 모듈이 있는 모든 패키지에 대해 휠을 설치해야 합니다. 인기 있는 많은 패키지가 자체 휠을 제공합니다. 자체 휠을 제공하지 않는 패키지의 경우 로컬 개발 컴퓨터의 `pip wheel <package_name>`을 사용한 다음 휠을 사이트에 업로드합니다. 예를 들어 [필수 패키지 관리](python-environments.md#managing-required-packages-requirementstxt)를 참조하세요.
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 

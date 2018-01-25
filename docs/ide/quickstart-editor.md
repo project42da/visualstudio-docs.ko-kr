@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 dev_langs: CSharp
 ms.workload: multiple
-ms.openlocfilehash: 614e8856fa8d4c674e40703448399265f2adc456
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 67927715cc88373040d1820f70faaf70198388c1
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="quickstart-coding-in-the-editor"></a>빠른 시작: 편집기에서 코딩
 
@@ -135,7 +135,7 @@ Visual Studio 편집기를 사용하면 형식, 메서드 등 정의를 쉽게 �
 
 ## <a name="refactoring-a-name"></a>이름 리팩터링
 
-누구도 처음부터 제대로 코딩할 수 없습니다. 변경할 수 있는 작업 중 하나는 변수 또는 메서드의 이름입니다. Visual Studio의 [리팩터링](../ide/refactoring-code-generation-quick-actions.md#refactoring) 기능을 사용하여 `_words` 변수 이름을 `words`로 변경해 보겠습니다.
+누구도 처음부터 제대로 코딩할 수 없습니다. 변경할 수 있는 작업 중 하나는 변수 또는 메서드의 이름입니다. Visual Studio의 [리팩터링](../ide/refactoring-in-visual-studio.md) 기능을 사용하여 `_words` 변수 이름을 `words`로 변경해 보겠습니다.
 
 1. `words` 변수의 정의 위에 커서를 두거나, 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **이름 바꾸기...**를 선택하거나, **Ctrl**+**R**, **Ctrl**+**R** 키를 누릅니다.
 
@@ -161,5 +161,5 @@ Visual Studio 편집기에 대한 이 빠른 시작을 완료했습니다. 다�
 [코드 조각](../ide/code-snippets.md)  
 [개요](../ide/outlining.md)  
 [정의로 이동 및 정의 피킹(Peeking)](../ide/go-to-and-peek-definition.md)  
-[리팩터링](../ide/refactoring-code-generation-quick-actions.md#refactoring)  
-[IntelliSense 사용](../ide/using-intellisense.md)  
+[리팩터링](../ide/refactoring-in-visual-studio.md)  
+[IntelliSense 사용](../ide/using-intellisense.md)

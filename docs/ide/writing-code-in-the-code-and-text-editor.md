@@ -63,11 +63,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 4f26fcfb6b12266dd980fb8c38075e1937fcc022
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bde177cb8f9ec8e72a331c785addfa7fead64dc7
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="write-code-in-the-code-editor"></a>코드 편집기에서 코드 작성
 Visual Studio 편집기에서는 코드 및 텍스트를 더 쉽게 작성 및 관리할 수 있는 다양한 기능을 제공합니다. 개요를 사용하여 여러 코드 블록을 확장 및 축소할 수 있습니다. IntelliSense, **개체 브라우저**및 호출 계층 구조를 사용하여 코드에 대해 자세히 알아볼 수 있습니다. **이동**, **정의로 이동**, 및 **모든 참조 찾기** 등의 기능을 사용하여 코드를 찾을 수 있습니다. 코드 조각이 있는 코드 블록을 삽입할 수 있고 **사용법에서 생성**과 같은 기능을 사용하여 코드를 생성할 수 있습니다. 이전에 Visual Studio 편집기를 사용한 적이 없을 경우 빠른 개요를 보려면 [코드 편집](https://www.visualstudio.com/features/ide-vs) 을 참조하세요.  
@@ -130,9 +130,10 @@ Visual Studio 편집기에서는 코드 및 텍스트를 더 쉽게 작성 및 �
 ## <a name="customize-the-editor"></a>편집기 사용자 지정  
 **도구** 메뉴에서 **설정 가져오기 및 내보내기 마법사** 명령을 사용하여 Visual Studio 설정을 다른 개발자와 공유하거나, 설정이 표준을 준수하도록 하거나, Visual Studio 기본 설정으로 돌아갈 수 있습니다. **설정 가져오기 및 내보내기 마법사**에서 선택한 일반 설정 또는 언어 및 프로젝트 관련 설정을 변경할 수 있습니다.
 
-새 바로 가기 키를 정의하거나 기존 바로 가기 키를 다시 정의하려면 **도구**, **옵션**, **환경**, **키보드**로 이동합니다. 바로 가기 키에 대한 자세한 내용은 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.  
+새 바로 가기 키를 정의하거나 기존 바로 가기 키를 다시 정의하려면 **도구**, **옵션**, **환경**, **키보드**로 이동합니다. 바로 가기 키에 대한 자세한 내용은 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
 
-편집기를 사용자 지정하는 방법에 대한 자세한 내용은 [편집기 사용자 지정](../ide/customizing-the-editor.md)을 참조하세요. 언어별 편집기 옵션에 대한 자세한 내용은 [C#에 대한 Visual Studio 개발 환경 사용](../csharp-ide/using-the-visual-studio-development-environment-for-csharp.md) 및 [옵션, 텍스트 편집기, JavaScript, 서식](../ide/reference/options-text-editor-javascript-formatting.md)을 참조하세요.
+편집기를 사용자 지정하는 방법에 대한 자세한 내용은 [편집기 사용자 지정](../ide/customizing-the-editor.md)을 참조하세요. JavaScript 관련 편집기 옵션은 [옵션, 텍스트 편집기, JavaScript, 서식 지정](../ide/reference/options-text-editor-javascript-formatting.md)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목  
- [Visual Studio IDE](../ide/visual-studio-ide.md)
+## <a name="see-also"></a>참고 항목
+
+[Visual Studio IDE](../ide/visual-studio-ide.md)

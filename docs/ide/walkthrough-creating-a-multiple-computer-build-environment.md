@@ -16,11 +16,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 9db6306126c64b0f2d5243ce443659f910be299c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 76b88d48b78ebab2058a2fa13feef327908f2b24
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>연습: 여러 컴퓨터 빌드 환경 만들기
 
@@ -29,7 +29,6 @@ ms.lasthandoff: 12/22/2017
 이 문서에서는 외부에 소프트웨어를 재배포하거나 타사에 빌드 환경을 제공하기 위한 권한에 대해 설명하지 않습니다.  
   
 > 고지 사항<br /><br /> 이 문서는 “있는 그대로” 제공됩니다. 개괄된 단계는 테스트를 거친 것이지만 모든 구성을 완전히 테스트할 수는 없습니다. Microsoft는 습득하는 추가 정보가 있을 경우 해당 정보로 이 문서를 최신 상태로 유지할 계획입니다. URL 및 기타 인터넷 웹 사이트 참조를 포함하여 이 설명서에 제공된 정보와 견해는 예고 없이 변경될 수 있습니다. Microsoft는 여기에 제공된 정보에 대해 어떠한 명시적 또는 묵시적 보증도 하지 않습니다. 정보의 사용으로 발생하는 위험은 귀하의 책임입니다.<br /><br /> 이 문서는 귀하에게 Microsoft 제품의 어떠한 지적 재산에 대한 법적 권리도 부여하지 않습니다. 귀하는 참조를 위해 내부적으로 이 문서를 복사하고 사용할 수 있습니다.<br /><br /> 귀하에게는 이 문서와 관련하여 Microsoft에 제안, 의견 또는 기타 피드백("피드백")을 제공해야 할 의무가 없습니다. 그러나 귀하가 자발적으로 제공하는 피드백은 Microsoft 제품 및 관련 사양이나 기타 설명서("Microsoft 제공 사항"으로 통칭)에 사용될 수 있으며, 이러한 제공 사항은 다른 타사가 자체 제품을 개발하는 데 사용할 수 있습니다. 이에 따라 귀하가 이 문서의 임의 버전이나 이 문서가 적용되는 Microsoft 제공 사항에 대한 피드백을 Microsoft에 제공할 경우 귀하는 (a) Microsoft가 귀하의 피드백을 임의의 Microsoft 제공 사항에서 자유롭게 사용, 재현, 사용 허가, 배포 및 기타 방식으로 상품화할 수 있다는 사실에 동의하게 됩니다. (b) 또한 귀하는 다른 제품이 귀하의 피드백을 포함하는 Microsoft 제품의 특정 부분을 사용하거나 해당 부분과 상호 작용하는 데 필요한 특허권만 요금 없이 타사에 부여하며, (c) (i) 특허권, 저작권 또는 타사의 기타 지적 재산권 청구/권리가 적용된다고 믿을 근거가 있거나 (ii) 피드백을 포함하거나 피드백에서 파생되는 MS 제공 사항 또는 기타 Microsoft 지적 재산을 타사에 사용 허가하거나 기타 방식으로 타사와 공유하게 만드는 사용 약관이 적용되는 피드백을 Microsoft에 제공하지 않습니다.
-
 
 이 연습은 명령줄에서 MSBuild를 실행하고 Team Foundation Build를 사용하여 다음 운영 체제에 대해 검증되었습니다.  
   
@@ -47,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
  다중 컴퓨터 환경을 사용하여 다음 종류의 앱을 빌드할 수는 없습니다.  
   
--   [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱. [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱을 빌드하려면 빌드 컴퓨터에 Visual Studio를 설치해야 합니다.  
+-   UWP 앱. UWP 앱을 빌드하려면 빌드 컴퓨터에 Visual Studio를 설치해야 합니다.  
   
 -   .NET Framework 4 또는 그 이전 버전을 대상으로 하는 데스크톱 앱. 이러한 종류의 앱을 빌드하려면 빌드 컴퓨터에 Visual Studio나 .NET 참조 어셈블리 및 도구(Windows 7.1 SDK)를 설치해야 합니다.  
   

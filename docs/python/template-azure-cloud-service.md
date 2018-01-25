@@ -14,18 +14,19 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
+- data-science
 - azure
-ms.openlocfilehash: e5bde434f3a5097f51f461aad5b02ae183e2204c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d14263c228cdbedc0f74acc20d81cfe58380812f
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python용 Azure Cloud Service 프로젝트
 
 Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작하는 데 도움이 되는 템플릿을 제공합니다.
 
-[Cloud Service](http://go.microsoft.com/fwlink/?LinkId=306052)는 각각 개념적으로 별개의 작업을 수행하지만 크기 조정 필요에 따라 가상 컴퓨터 간에 별도로 복제할 수 있는 여러 개의 *작업자 역할* 및 *웹 역할*로 구성됩니다. 웹 역할은 프런트 엔드 웹 응용 프로그램의 호스팅을 제공합니다. Python에 관해서는 WSGI를 지원하는 웹 프레임워크를 사용하여 이러한 응용 프로그램([웹 프로젝트 템플릿](template-web.md)에서 지원하는)을 작성할 수 있습니다. 작업자 역할은 사용자와 직접 상호 작용하지 않는 장기적으로 실행되는 프로세스 용도로 사용됩니다. 일반적으로 [데이터](http://go.microsoft.com/fwlink/?LinkId=401571) 및 [앱 서비스](http://go.microsoft.com/fwlink/?LinkId=401572) 라이브러리를 활용하며 `pip install`&nbsp;[`azure`](http://pypi.org/project/azure)와 함께 설치할 수 있습니다.
+[Cloud Service](http://go.microsoft.com/fwlink/?LinkId=306052)는 각각 개념적으로 별개의 작업을 수행하지만 크기 조정 필요에 따라 가상 컴퓨터 간에 별도로 복제할 수 있는 여러 개의 *작업자 역할* 및 *웹 역할*로 구성됩니다. 웹 역할은 프런트 엔드 웹 응용 프로그램의 호스팅을 제공합니다. Python에 관해서는 WSGI를 지원하는 웹 프레임워크를 사용하여 이러한 응용 프로그램([웹 프로젝트 템플릿](template-web.md)에서 지원하는)을 작성할 수 있습니다. 작업자 역할은 사용자와 직접 상호 작용하지 않는 장기적으로 실행되는 프로세스 용도로 사용됩니다. 일반적으로 [데이터](http://go.microsoft.com/fwlink/?LinkId=401571) 및 [앱 서비스](http://go.microsoft.com/fwlink/?LinkId=401572) 라이브러리를 활용하며 [`pip install azure`](http://pypi.org/project/azure)와 함께 설치할 수 있습니다.
 
 이 항목에서는 Visual Studio 2017(이전 버전과 유사하지만 몇 가지 차이점이 있음)에서 프로젝트 템플릿 및 기타 지원에 대해 자세히 알아봅니다. Python에서 Azure로 작업하는 방법에 대한 자세한 내용은 [Azure Python 개발자 센터](http://go.microsoft.com/fwlink/?linkid=254360)(영문)를 참조하세요.
 
@@ -80,7 +81,7 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
 
 게시 프로세스는 두 단계로 구성됩니다. 먼저, Visual Studio에서 클라우드 서비스에 대한 모든 역할이 들어 있는 단일 패키지를 만듭니다. 이 패키지는 Azure에 배포된 것이며 각 역할에 대해 하나 이상의 가상 컴퓨터를 초기화하고 소스를 배포합니다.
 
-각 가상 컴퓨터가 활성화되면 `ConfigureCloudService.ps1` 스크립트를 실행하고 모든 종속성을 설치합니다. 기본적으로 이 스크립트는 [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22)에서 최신 버전의 Python과 `requirements.txt` 파일에 지정된 패키지를 설치합니다. 
+각 가상 컴퓨터가 활성화되면 `ConfigureCloudService.ps1` 스크립트를 실행하고 모든 종속성을 설치합니다. 기본적으로 이 스크립트는 [NuGet](https://www.nuget.org/packages?q=Tags%3A%22python%22+Authors%3A%22Python+Software+Foundation%22)에서 최신 버전의 Python과 `requirements.txt` 파일에 지정된 패키지를 설치합니다.
 
 마지막으로 작업자 역할은 Python 스크립트 실행을 시작하는 `LaunchWorker.ps1`을 실행하고 웹 역할은 IIS를 시작하고 웹 요청 처리를 시작합니다.
 
@@ -90,7 +91,7 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
 
 클라우드 서비스 인스턴스는 C 컴파일러를 포함하지 않으므로 C 확장명이 있는 모든 라이브러리는 사전 컴파일된 이진 파일을 제공해야 합니다.
 
-pip 및 해당 종속성과 `requirements.txt`의 패키지는 자동으로 다운로드되며 청구 가능한 대역폭 사용량으로 계산할 수 있습니다. `requirements.txt` 파일 관리에 대한 자세한 내용은 [필수 패키지 관리](python-environments.md#managing-required-packages)를 참조하세요.
+pip 및 해당 종속성과 `requirements.txt`의 패키지는 자동으로 다운로드되며 청구 가능한 대역폭 사용량으로 계산할 수 있습니다. `requirements.txt` 파일 관리에 대한 자세한 내용은 [필수 패키지 관리](python-environments.md#managing-required-packages-requirementstxt)를 참조하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
 
@@ -98,9 +99,9 @@ pip 및 해당 종속성과 `requirements.txt`의 패키지는 자동으로 다�
 
 - Python 프로젝트는 다음 이상을 포함하는 bin\ 폴더를 포함합니다.
 
-    - `ConfigureCloudService.ps1`
-    - `LaunchWorker.ps1`(작업자 역할)
-    - `ps.cmd`
+  - `ConfigureCloudService.ps1`
+  - `LaunchWorker.ps1`(작업자 역할)
+  - `ps.cmd`
 
 - Python 프로젝트는 모든 종속성(또는 휠 파일의 컬렉션)이 나열된 `requirements.txt` 파일을 포함합니다.
 - 클라우드 서비스에서 원격 데스크톱을 사용하고 로그 파일을 조사합니다.

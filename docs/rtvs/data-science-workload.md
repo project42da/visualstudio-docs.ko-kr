@@ -15,19 +15,19 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: data-science
-ms.openlocfilehash: 97debeab6349fefee48d6c550c39c18c3e516b75
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c83a24cbcbe13047ef103f86c8bd81fee1506c2d
+ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/12/2018
 ---
 # <a name="data-science-and-analytical-applications-workload"></a>데이터 과학 및 분석 응용 프로그램 워크로드
 
-Visual Studio의 데이터 과학 및 분석 응용 프로그램 워크로드는 세 언어 및 해당 런타임 분포와 함께 나타납니다.
+Visual Studio 설치 관리자에 표시된 데이터 과학 및 분석 응용 프로그램 워크로드는 세 언어 및 해당 런타임 분포와 함께 나타납니다.
 
 - [R 및 Microsoft R Client](../rtvs/index.md)
 - [Python 및 Anaconda](../python/python-in-visual-studio.md)
-- [.NET 프레임워크로 F#](https://docs.microsoft.com/dotnet/fsharp/)
+- [.NET 프레임워크로 F#](/dotnet/fsharp/)
 
 ![Visual Studio 설치 관리자의 데이터 과학 및 분석 응용 프로그램 워크로드](media/data-science-workload.png)
 

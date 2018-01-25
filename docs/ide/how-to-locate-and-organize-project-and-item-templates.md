@@ -16,19 +16,31 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 167ffa269ea8051a4791000d96a86cb5788af60d
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: c58bda5570be9cdb7fba7a8f90a282df7b7167a2
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>방법: 프로젝트 템플릿과 항목 템플릿 찾기 및 구성
 
-Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 템플릿이 나타납니다. 템플릿에 대한 사용자 지정 하위 범주를 만들어 이러한 하위 범주가 대화 상자에 나타나도록 할 수도 있습니다.
+Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 템플릿이 나타납니다. 사용자 템플릿 위치에서 사용자 지정 하위 범주를 만들 수 있으며 범주는 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 표시됩니다.
 
-## <a name="locating-templates"></a>템플릿 찾기
+## <a name="locate-templates"></a>템플릿 찾기
 
-설치된 템플릿과 사용자 템플릿은 서로 다른 두 위치에 저장됩니다. .vstemplate 파일을 포함하는 압축된 파일이 이러한 위치에 있는 경우 템플릿은 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 나타납니다.
+설치된 템플릿과 사용자 템플릿은 서로 다른 두 위치에 저장됩니다.
+
+### <a name="user-templates"></a>사용자 템플릿
+
+사용자 템플릿 디렉터리에 .vstemplate 파일을 포함하는 압축된(.zip) 파일을 추가하는 경우 템플릿이 **새 프로젝트** 또는 **새 항목 추가** 대화 상자에 표시됩니다. 기본적으로 사용자 템플릿은 다음 위치에 있습니다.
+
+- %USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ProjectTemplates
+
+- %USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ItemTemplates
+
+예를 들어 다음 디렉터리에는 C#용 사용자 프로젝트 템플릿이 포함되어 있습니다.
+
+   C:\Users\UserName\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#\
 
 > [!TIP]
 > **도구** > **옵션** > **프로젝트 및 솔루션** > **위치**에서 사용자 템플릿의 위치를 설정할 수 있습니다.
@@ -45,38 +57,14 @@ Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야
 
    C:\\*VisualStudioInstallationDirectory*\Common7\IDE\ItemTemplates\VisualBasic\1033\
 
-### <a name="user-templates"></a>사용자 템플릿
+## <a name="organize-templates"></a>템플릿 구성
 
-기본적으로 사용자 템플릿은 다음 위치에 있습니다.
-
-- %USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ProjectTemplates
-
-- %USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ItemTemplates
-
-예를 들어 다음 디렉터리에는 C#용 사용자 프로젝트 템플릿이 포함되어 있습니다.
-
-   C:\Users\UserName\Documents\Visual Studio 2017\Templates\ProjectTemplates\Visual C#\
-
-> [!NOTE]
-> 사용자 템플릿 위치에는 지역화된 템플릿에 대한 로캘 하위 디렉터리가 포함되지 않습니다.
-
-**프로젝트 및 솔루션** > **위치**의 **옵션** 대화 상자에서 사용자 템플릿의 기본 디렉터리를 변경할 수 있습니다.
-
-## <a name="organizing-templates"></a>템플릿 구성
-
-**새 프로젝트** 및 **새 항목 추가** 대화 상자의 범주는 설치된 템플릿과 사용자 템플릿 위치에 있는 디렉터리 구조를 반영합니다. 이러한 디렉터리 구조를 수정하여 이해할 수 있는 방식으로 템플릿을 구성할 수 있습니다.
+**새 프로젝트** 및 **새 항목 추가** 대화 상자의 범주는 설치된 템플릿과 사용자 템플릿 위치에 있는 디렉터리 구조를 반영합니다. 사용자 템플릿 디렉터리에 새 폴더를 추가하여 사용자 템플릿을 독자적인 범주로 구성할 수 있습니다. **새 프로젝트** 및 **새 항목 추가** 대화 상자는 사용자 템플릿 범주에 수행된 모든 변경 내용을 반영합니다.
 
 > [!NOTE]
 > 프로그래밍 언어 수준에서 새 범주를 만들 수 없습니다. 새 범주는 각 언어 내에서만 만들어질 수 있습니다.
 
-> [!NOTE]
-> 특정 언어의 설치된 템플릿과 사용자 템플릿의 디렉터리 구조가 동일하지 않을 경우(즉, 한 폴더에는 디렉터리가 있지만 다른 폴더에는 없는 경우) 모든 범주가 **새 프로젝트** 대화 상자에 표시됩니다.
-
-### <a name="organizing-user-templates"></a>사용자 템플릿 구성
-
-사용자 템플릿 위치에 새 폴더를 추가하여 사용자 템플릿을 독자적인 범주로 구성할 수 있습니다. **새 프로젝트** 대화 상자는 템플릿 범주에 수행된 모든 변경 내용을 반영합니다.
-
-#### <a name="to-create-new-user-project-template-categories"></a>사용자 프로젝트 템플릿 범주를 새로 만들려면
+### <a name="to-create-new-user-project-template-categories"></a>사용자 프로젝트 템플릿 범주를 새로 만들려면
 
 1. 사용자 프로젝트 템플릿 디렉터리의 프로그래밍 언어 폴더에 폴더를 만듭니다. 예를 들어 C# 프로젝트 템플릿에 대해 **HelloWorld** 범주를 만들려면 다음 디렉터리를 만듭니다.
 
@@ -88,7 +76,7 @@ Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야
 
    **HelloWorld** 범주가 **새 프로젝트** 대화 상자의 **설치됨** > **Visual C#** 아래에 나타납니다.
 
-#### <a name="to-create-new-user-item-template-categories"></a>사용자 항목 템플릿 범주를 새로 만들려면
+### <a name="to-create-new-user-item-template-categories"></a>사용자 항목 템플릿 범주를 새로 만들려면
 
 1. 사용자 항목 템플릿 디렉터리의 프로그래밍 언어 폴더에 폴더를 만듭니다. 예를 들어 C# 항목 템플릿에 대해 **HelloWorld** 범주를 만들려면 다음 디렉터리를 만듭니다.
 
@@ -100,7 +88,7 @@ Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야
 
    **HelloWorld** 범주가 **새 항목 추가** 대화 상자의 **설치됨** > **Visual C# 항목** 아래에 나타납니다.
 
-### <a name="displaying-templates-in-parent-categories"></a>부모 범주에 템플릿 표시
+### <a name="display-templates-in-parent-categories"></a>템플릿을 부모 범주에 표시
 
 .vstemplate 파일에서 `NumberOfParentCategoriesToRollUp` 요소를 사용하여 하위 범주의 템플릿이 부모 범주에 표시되도록 할 수 있습니다. 이 단계는 프로젝트 템플릿과 항목 템플릿에 대해 동일합니다.
 

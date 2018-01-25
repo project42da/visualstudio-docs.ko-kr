@@ -1,7 +1,7 @@
 ---
 title: "연습: 관례에서 생성 기능을 통한 테스트 우선 개발 | Microsoft Docs"
 ms.custom: 
-ms.date: 10/9/2017
+ms.date: 10/09/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -13,19 +13,18 @@ ms.topic: article
 helpviewer_keywords:
 - Generate From Usage
 - Test-First Development
-ms.assetid: 764c17a4-cd95-4c23-bf63-d92d9c5adfb2
-caps.latest.revision: "63"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 1906e55add4dfb4663e3c7da5e84d7538409db17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 696396260d96e25541cbbef6bac3b4a1be93ea13
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>연습: 관례에서 생성 기능을 통한 테스트 우선 개발
+
 이 항목에서는 테스트 우선 개발을 지원하는 [관례에서 생성](../ide/visual-csharp-intellisense.md#generate-from-usage) 기능을 사용하는 방법을 보여 줍니다.  
   
  *테스트 우선 개발* 은 먼저 제품 사양에 따라 단위 테스트를 작성한 다음 테스트에 성공하는 데 필요한 소스 코드를 작성하는 소프트웨어 디자인 방식입니다. Visual Studio는 정의하기 전에 테스트 사례에서 처음 참조할 때 소스 코드에서 새 형식과 멤버를 생성하여 테스트 우선 개발을 지원합니다.  

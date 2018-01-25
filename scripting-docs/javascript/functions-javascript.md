@@ -18,11 +18,11 @@ caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: fd5626af6417b5f0010545874bd15c86b30a303a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 7275985d07f9f564dac98ba39e5ec31618dcaac4
+ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 01/13/2018
 ---
 # <a name="functions-javascript"></a>함수(JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] 함수는 작업을 수행하고 값을 반환할 수도 있습니다. 경우에 따라 이들 값은 계산 또는 비교 결과입니다. 함수를 "전역 메서드"라고도 합니다.  
@@ -232,7 +232,7 @@ console.log(f(3, 3, 3));
   
 <a name="Rest"></a>   
 ## <a name="rest-parameters"></a>Rest 매개 변수  
- spread 연산자 ()로 지정되는 Rest 매개 변수를 사용하여 함수 호출의 연속된 인수를 배열로 전환할 수 있습니다.  
+ spread 연산자 `...`로 지정되는 Rest 매개 변수를 사용하여 함수 호출의 연속된 인수를 배열로 전환할 수 있습니다.  
   
  Rest 매개 변수를 사용하면 `arguments` 개체를 사용할 필요가 없습니다. Rest 매개 변수는 다음과 같은 여러 측면에서 `arguments` 개체와 다릅니다.  
   

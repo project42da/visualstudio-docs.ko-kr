@@ -1,5 +1,6 @@
 ---
 title: "빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기 | Microsoft Docs"
+description: "Visual Studio에서 Python을 사용하여 Falcon 프레임워크를 통해 간단한 웹앱을 빌드하는 방법을 간략하게 소개합니다."
 ms.custom: 
 ms.date: 01/08/2018
 ms.reviewer: 
@@ -12,12 +13,14 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 dev_langs: python
-ms.workload: python
-ms.openlocfilehash: 226f673dbd305f9dabf759cb11c6537a2f3ba637
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- python
+- data-science
+ms.openlocfilehash: 756419ce7390ba727bc5847d95c86399838d972a
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기
 
@@ -67,7 +70,7 @@ Python의 웹앱은 다수의 사용 가능한 Python 라이브러리 중 하나
 
 Falcon에 대한 자세한 내용은 [falconframework.org](https://falconframework.org/)를 방문하세요.
 
-일반적으로 개발자는 전역 환경에 라이브러리를 설치하는 대신 특정 프로젝트에 대한 라이브러리를 설치하는 "가상 환경"을 만듭니다. Visual Studio의 여러 Python 프로젝트 템플릿에는 템플릿이 의존하는 라이브러리가 나열된 `requirements.txt` 파일이 있습니다. 이러한 템플릿 중 하나에서 프로젝트를 생성하면 라이브러리가 설치될 가상 환경 만들기가 트리거됩니다. 자세한 내용은 [Python 환경 - 가상 환경](../python/python-environments.md#virtual-environments)을 참조하세요.
+일반적으로 개발자는 전역 환경에 라이브러리를 설치하는 대신 특정 프로젝트에 대한 라이브러리를 설치하는 "가상 환경"을 만듭니다. Visual Studio의 여러 Python 프로젝트 템플릿에는 템플릿이 의존하는 라이브러리가 나열된 `requirements.txt` 파일이 있습니다. 이러한 템플릿 중 하나에서 프로젝트를 생성하면 라이브러리가 설치될 가상 환경 만들기가 트리거됩니다. 자세한 내용은 [Python 환경 - 가상 환경](../python/managing-python-environments-in-visual-studio.md#creating-virtual-environments)을 참조하세요.
 
 ## <a name="add-a-code-file"></a>코드 파일 추가
 
@@ -141,7 +144,7 @@ Falcon에 대한 자세한 내용은 [Falcon 빠른 시작](https://falcon.readt
 빠른 시작을 완료하셨습니다. 지금까지 Python과 Visual Studio IDE에 대해 살펴보았습니다. 대화형 창 사용, 디버깅, 데이터 시각화 및 Git 작업을 포함하여, Visual Studio의 Python에 대한 자습서를 계속 진행하려면 아래 단추를 선택하십시오.
 
 > [!div class="nextstepaction"]
-> [자습서: Visual Studio에서 Python 시작](../python/vs-tutorial-01-01.md).
+> [자습서: Visual Studio에서 Python 시작](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md).
 
 - [Visual Studio의 Python 웹앱 템플릿](../python/template-web.md)에 대해 알아보기
 - [Python 디버깅](../python/debugging.md)에 대해 자세히 알아보기
