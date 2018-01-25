@@ -13,11 +13,11 @@ ms.author: tglee
 manager: ghogen
 dev_langs: vb
 ms.workload: multiple
-ms.openlocfilehash: 1ceda9e53426255331c85996b54378a91324a3fa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b1de10c76d6a974280bfe016490a7567d0807675
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="getting-started-with-visual-basic-in-visual-studio"></a>Visual Studio에서 Visual Basic 시작
 Visual Basic(VB)에 대한 이 자습서에서는 Visual Studio를 사용하여 몇 가지 콘솔 앱을 만들어 실행하고, 그 과정에서 Visual Studio [IDE(통합 개발 환경)](visual-studio-ide.md)의 일부 기능을 살펴봅니다.
@@ -82,11 +82,11 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
      Console.ReadKey(True)
     ```
 
-    이 코드는 그존 [Console.WriteLine](/dotnet/api/system.console.writeline?view=netframework-4.7.1), [Console.Write](/dotnet/api/system.console.write?view=netframework-4.7.1) 및 [Console.ReadKey]() 문을 바꿉니다.
+    이 코드는 기존 <xref:System.Console.WriteLine%2A>, <xref:System.Console.Write%2A> 및 <xref:System.Console.ReadKey%2A> 문을 대체합니다.
 
  ![What Is Your Name 코드를 표시하는 코드 창](../ide/media/vb-codewindow-what-name.png)
 
-3. 콘솔 창이 열리면 자신의 이름을 입력합니다. 콘솔 창이 다음 스크린샷과 유사하게 표시될 것입니다.       
+3. 콘솔 창이 열리면 자신의 이름을 입력합니다. 콘솔 창이 다음 스크린샷과 유사하게 표시될 것입니다.
 
    ![What Is Your Name, 날짜 및 시간, Press any key to continue message를 표시하는 콘솔 창](../ide/media/vb-console-what-name.png)
 

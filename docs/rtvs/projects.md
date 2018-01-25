@@ -13,11 +13,11 @@ author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload: data-science
-ms.openlocfilehash: 9ee06a96eeb0d7fd0cec7c0f2e22159741767e01
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3f77630af8cf31e1e5b18cdf06fd5642c83a17a9
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="creating-r-projects-in-visual-studio"></a>Visual Studio에서 R 프로젝트 만들기
 
@@ -119,6 +119,6 @@ Visual Studio 솔루션은 관련 프로젝트를 하나의 논리적 위치에�
 굵게 강조 표시된 프로젝트는 솔루션에 대한 “시작” 프로젝트입니다. 변경하려면 다른 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
 > [!Note]
-> 현재 명시적인 R과 C#/C++의 언어 통합이 제공되지 않습니다. 제공되는 Python 언어 통합에 대해서는 [Python용 C++ 확장 만들기](../python/cpp-and-python.md)를 참조하세요.  하지만 R에 대한 C# 및 C++ 브리지를 제공하는 라이브러리를 사용할 수 있습니다.
+> 현재 명시적인 R과 C#/C++의 언어 통합이 제공되지 않습니다. 제공되는 Python 언어 통합에 대해서는 [Python용 C++ 확장 만들기](../python/working-with-c-cpp-python-in-visual-studio.md)를 참조하세요.  하지만 R에 대한 C# 및 C++ 브리지를 제공하는 라이브러리를 사용할 수 있습니다.
 
 일반적인 프로젝트 및 솔루션 관리에 대한 자세한 내용은 [Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)를 참조하세요.

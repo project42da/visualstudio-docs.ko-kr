@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 753c3d78ff3da45213ea7cb9625d765e564a88e1
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: b9a6c3240075107edfc5109fa6c62aaf6c23d92b
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="django-web-project-template"></a>Django 웹 프로젝트 템플릿
 
@@ -45,7 +45,7 @@ Visual Studio에서는 Django 프로젝트에 대해 전체 [디버깅 지원](d
 
 ![중단점](media/template-django-debugging.png)
 
-`manage.py` 파일을 통해 Django 프로젝트를 관리하는 것이 일반적이며, Visual Studio는 이 가정을 따릅니다. 해당 파일을 진입점으로 사용하지 않으면 기본적으로 프로젝트 파일이 손상됩니다. 이 경우 Django 프로젝트로 표시하지 않고 [기존 파일에서 프로젝트를 다시 만들어야](python-projects.md#creating-a-project-from-existing-files) 합니다.
+`manage.py` 파일을 통해 Django 프로젝트를 관리하는 것이 일반적이며, Visual Studio는 이 가정을 따릅니다. 해당 파일을 진입점으로 사용하지 않으면 기본적으로 프로젝트 파일이 손상됩니다. 이 경우 Django 프로젝트로 표시하지 않고 [기존 파일에서 프로젝트를 다시 만들어야](managing-python-projects-in-visual-studio.md#creating-a-project-from-existing-files) 합니다.
 
 ## <a name="django-management-console"></a>Django 관리 콘솔
 

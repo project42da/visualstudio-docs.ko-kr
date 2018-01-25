@@ -13,16 +13,16 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: eabbb315d03a6ba69d80d46276b0b6dff5846693
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cfe16da805ec8a43af8bed0c7e112e589d060bc4
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-cpu-usage"></a>CPU 사용 분석
 앱 성능 문제를 검토해야 하는 경우 앱에서 CPU를 사용하는 방식을 파악하는 것부터 시작하는 것이 좋습니다. **CPU 사용량** 도구는 CPU에서 Visual C++, Visual C#/Visual Basic 및 JavaScript 코드 실행에 시간을 소모하는 상황을 보여 줍니다. Visual Studio 2015 업데이트 1부터 디버거를 종료하지 않고 CPU 사용의 기능별 분석 결과를 볼 수 있습니다. 디버그하는 동안 CPU 프로파일링을 켜고 끌 수 있으며, 실행이 중지되면(예: 중단점에서) 결과를 볼 수 있습니다.  
   
-진단 세션을 실행 및 관리하기 위한 다양한 옵션이 있습니다. 예를 들어 로컬이나 원격 컴퓨터에서 또는 시뮬레이터나 에뮬레이터에서 **CPU 사용량** 도구를 실행할 수 있습니다. 실행 중인 앱에 연결되고 Visual Studio에서 열려 있는 프로젝트의 성능을 분석하거나 Microsoft Store에서 설치한 앱을 시작할 수 있습니다. 자세한 내용은 [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요. UWP 앱의 성능을 분석하는 연습은 [UWP(유니버설 Windows 앱)에서 CPU 사용량 분석](analyze-cpu-usage-in-a-windows-universal-app.md)을 참조하세요. 
+진단 세션을 실행 및 관리하기 위한 다양한 옵션이 있습니다. 예를 들어 로컬이나 원격 컴퓨터에서 또는 시뮬레이터나 에뮬레이터에서 **CPU 사용량** 도구를 실행할 수 있습니다. 실행 중인 앱에 연결되고 Visual Studio에서 열려 있는 프로젝트의 성능을 분석하거나 Microsoft Store에서 설치한 앱을 시작할 수 있습니다. 자세한 내용은 [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요.
 
 여기서는 릴리스 빌드를 사용하여 CPU 사용량을 수집 및 분석하는 방법을 보여 줍니다. 디버그하는 동안 CPU 사용량을 분석하려면 [초보자를 위한 성능 프로파일링 지침](../profiling/beginners-guide-to-performance-profiling.md)을 참조하세요. 
   

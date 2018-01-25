@@ -15,19 +15,19 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 87fdca001430acc1ecef7e69b9afc2123dedafd0
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 4cc18515fd0fa2c24eb38e78f7be315e865f94d0
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>빠른 시작: Visual Studio의 템플릿에서 Python 프로젝트 만들기
 
-[Visual Studio 2017에 Python 지원을 설치](installation.md)하면 다양한 템플릿을 사용하여 새 Python 프로젝트를 쉽게 만들 수 있습니다.
+[Visual Studio 2017에 Python 지원을 설치](installing-python-support-in-visual-studio.md)하면 다양한 템플릿을 사용하여 새 Python 프로젝트를 쉽게 만들 수 있습니다.
 
 1. Visual Studio를 실행합니다.
 
-1. **파일 > 새로 만들기 > 프로젝트**(Ctrl+Shift+N)를 선택합니다. **새 프로젝트** 대화 상자에서 "Python"을 검색하고, 원하는 템플릿을 선택합니다. 템플릿을 선택하면 템플릿이 제공하는 것의 간단한 설명이 표시됩니다. ([Python 프로젝트](python-projects.md#project-templates)도 참조)
+1. **파일 > 새로 만들기 > 프로젝트**(Ctrl+Shift+N)를 선택합니다. **새 프로젝트** 대화 상자에서 "Python"을 검색하고, 원하는 템플릿을 선택합니다. 템플릿을 선택하면 템플릿이 제공하는 것의 간단한 설명이 표시됩니다. ([Python 프로젝트](managing-python-projects-in-visual-studio.md#project-templates)도 참조)
 
     ![Python 템플릿이 있는 VS2017 새 프로젝트 대화 상자](media/projects-new-project-dialog2.png)
 
@@ -87,10 +87,10 @@ ms.lasthandoff: 01/12/2018
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [자습서: Visual Studio에서 Python 작업](vs-tutorial-01-01.md)
+> [자습서: Visual Studio에서 Python 작업](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>참고 항목
 
-- [기존 Python 인터프리터에 대한 환경 만들기](python-environments.md#creating-an-environment-for-an-existing-interpreter)
-- [Visual Studio 2015 이하 버전에서 Python 지원 설치](installation.md)
-- [설치 위치](installation.md#install-locations).
+- [기존 Python 인터프리터에 대한 환경 만들기](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [Visual Studio 2015 이하 버전에서 Python 지원 설치](installing-python-support-in-visual-studio.md)
+- [설치 위치](installing-python-support-in-visual-studio.md#install-locations).

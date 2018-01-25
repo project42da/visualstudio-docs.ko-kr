@@ -15,15 +15,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 16f0e7d406e042d16fff4fbe257b62bac97253c3
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 518f952f4b983acbcd3d2f508126f5298e16d579
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="editing-python-code"></a>Python 코드 편집
 
-개발자는 코드 편집기에서 많은 시간을 보내므로 [Visual Studio의 Python 지원](installation.md)에서 생산성 향상에 도움이 되는 기능을 제공합니다. 이러한 기능에는 IntelliSense 구문 강조 표시, 자동 완성, 시그니처 도움말, 메서드 재정의/검색 및 탐색이 포함됩니다. 
+개발자는 코드 편집기에서 많은 시간을 보내므로 [Visual Studio의 Python 지원](installing-python-support-in-visual-studio.md)에서 생산성 향상에 도움이 되는 기능을 제공합니다. 이러한 기능에는 IntelliSense 구문 강조 표시, 자동 완성, 시그니처 도움말, 메서드 재정의/검색 및 탐색이 포함됩니다. 
 
 항목 내용:
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 01/12/2018
 
 Visual Studio에서 코드 편집에 대한 일반적 설명서는 [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요. 또한 코드의 특정 섹션에 집중하는 데 도움이 되는 [Visual Studio 개요](../ide/outlining.md)도 참조하세요. Python 지원은 각 모듈에 정의된 클래스와 해당 클래스에 정의된 함수를 검사하기 위해 Visual Studio 개체 브라우저(**보기 > 다른 창 > 개체 브라우저** 또는 Ctrl+W, J) 사용을 포함합니다. 
 
-또한 편집기는 Visual Studio의 대화형 창과 통합되므로 편집기와 창 간에 코드를 쉽게 교환할 수 있습니다. 자세한 내용은 [자습서 3단계: 대화형 REPL 창 사용](vs-tutorial-01-03.md) 및 [대화형 창 - 대화형 명령에 코드 보내기](interactive-repl.md#send-code-to-interactive-command)를 참조하세요.
+또한 편집기는 Visual Studio의 대화형 창과 통합되므로 편집기와 창 간에 코드를 쉽게 교환할 수 있습니다. 자세한 내용은 [자습서 3단계: 대화형 REPL 창 사용](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md) 및 [대화형 창 - 대화형 명령에 코드 보내기](interactive-repl.md#send-code-to-interactive-command)를 참조하세요.
 
 Python 코드 편집에 대한 소개는 [Python 코드 편집](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=r2iQH5LWE_4605918567)(Microsoft Virtual Academy, 2분 30초)을 참조하세요.
 
@@ -41,7 +41,7 @@ Python 코드 편집에 대한 소개는 [Python 코드 편집](https://mva.micr
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [요약 정보](#quick-info) 및 [코드 색 지정](#code-coloring)을 제공합니다. IntelliSense는 프로젝트의 각 Python 환경에 대해 생성된 완성 데이터베이스를 통해 성능을 향상시킵니다. 패키지를 추가, 제거 또는 업데이트할 경우 데이터베이스를 새로 고쳐야 할 수 있습니다. 데이터베이스 상태는 **Python 환경** 창(솔루션 탐색기의 형제)의 **IntelliSense** 탭에 표시됩니다([Python 환경](python-environments.md) 참조). 
+IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [요약 정보](#quick-info) 및 [코드 색 지정](#code-coloring)을 제공합니다. IntelliSense는 프로젝트의 각 Python 환경에 대해 생성된 완성 데이터베이스를 통해 성능을 향상시킵니다. 패키지를 추가, 제거 또는 업데이트할 경우 데이터베이스를 새로 고쳐야 할 수 있습니다. 데이터베이스 상태는 **Python 환경** 창(솔루션 탐색기의 형제)의 **IntelliSense** 탭에 표시됩니다([Python 환경](managing-python-environments-in-visual-studio.md) 참조). 
 
 ### <a name="completions"></a>완성
 

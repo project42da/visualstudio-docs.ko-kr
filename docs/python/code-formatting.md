@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8aa91005774baf1a3154418a5e0b7780d0238b69
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 96ef5d340a961671b199e521b2d6ee5d05794160
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="formatting-python-code"></a>Python 코드 서식 지정
 
@@ -30,7 +30,7 @@ Visual Studio에서는 미리 구성된 서식 옵션과 일치하도록 빠르�
 
 옵션은 **도구 > 옵션 > 텍스트 편집기 > Python > 서식** 및 해당 중첩된 탭을 통해 설정되며, 기본적으로 [PEP 8 스타일 가이드](http://www.python.org/dev/peps/pep-0008/)의 상위 집합과 일치하도록 설정됩니다. **일반** 탭은 서식을 적용할 시기를 결정하며, 다른 세 개의 탭에 대한 설정은 이 항목에서 설명합니다.
 
-[Visual Studio의 Python 지원](installation.md)에는 다음에 설명하는 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph-command) 명령도 추가되어 있습니다.
+[Visual Studio의 Python 지원](installing-python-support-in-visual-studio.md)에는 다음에 설명하는 대로 **편집 > 고급** 메뉴에 유용한 [주석 단락 채우기](#fill-comment-paragraph-command) 명령도 추가되어 있습니다.
 
 ## <a name="spacing"></a>간격
 

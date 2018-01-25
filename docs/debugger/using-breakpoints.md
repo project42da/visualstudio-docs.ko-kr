@@ -38,11 +38,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 30eafe77ef4e115650f0871139e009e07fd6729b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: e5873276795477778e4c358d59788248230bb4b5
+ms.sourcegitcommit: 062795f922e7b59fe00d3d95a01a9a8a28840017
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/24/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 중단점을 사용 합니다.
 예를 들어 코드 변수의 상태를 확인하거나 호출 스택을 검토하기 위해 디버거 실행을 중지하려는 경우 중단점을 설정할 수 있습니다. 개발자 도구 상자에 가장 중요한 디버깅 기술 중 하나가 있습니다.  
@@ -160,6 +160,9 @@ ms.lasthandoff: 01/10/2018
  잘못된 구문을 사용하여 중단점 조건을 설정하면 경고 메시지가 나타납니다. 올바르지만 의미가 잘못된 구문을 사용하여 중단점 조건을 지정하면 중단점이 처음 적중될 때 경고 메시지가 나타납니다. 두 경우 모두 잘못된 중단점이 적중되면 디버거에서 실행을 중단합니다. 조건이 올바르고 `false`가 되는 경우에만 중단점을 건너뜁니다.  
   
  디버거에서 인식하는 모든 유효한 식은 조건이 될 수 있습니다. 유효한 식에 대한 자세한 내용은 [Expressions in the Debugger](../debugger/expressions-in-the-debugger.md)을 참조하세요.  
+
+> [!NOTE]
+> 사용할 수 있습니다 **CTRL + Enter** 를 닫으려면는 **중단점 설정** 창.
   
 ## <a name="using-object-ids-in-breakpoint-conditions-c-and-f"></a>중단점 조건에서 개체 ID 사용(C# 및 F#)  
  특정 개체의 동작을 관찰하려는 경우가 있습니다. 예를 들어 개체가 컬렉션에 두 번 이상 삽입된 이유를 확인할 수 있습니다. C# 및 F#에서 [참조 형식](/dotnet/csharp/language-reference/keywords/reference-types) 의 특정 인스턴스에 대한 개체 ID를 만들고 중단점 조건에서 사용할 수 있습니다. 개체 ID는 CLR(공용 언어 런타임) 디버깅 서비스에 의해 생성되고 개체와 연결됩니다.  개체 ID를 만들려면 다음을 수행합니다.  
@@ -232,20 +235,6 @@ ms.lasthandoff: 01/10/2018
 ## <a name="export-and-import-breakpoints"></a>중단점 내보내기 및 가져오기  
  중단점을 마우스 오른쪽 단추로 클릭하고 **내보내기**를 선택하여 중단점을 XML 파일로 내보낼 수 있습니다. 파일은 기본적으로 솔루션 디렉터리에 저장됩니다. 중단점을 가져오려면 **중단점** 창을 열고(**CTRL + ALT + B**) 도구 모음에서 오른쪽 화살표(도구 설명: **파일에서 중단점 가져오기**)를 클릭합니다.  
   
-## <a name="troubleshoot"></a>중단점 문제 해결 
-  
-### <a name="i-deleted-a-breakpoint-but-i-continue-to-hit-it-when-i-start-debugging-again"></a>중단점을 삭제했지만 다시 디버그하기 시작하면 계속 중단점이 적중되는 경우  
- 디버그하는 동안 중단점을 삭제한 후에 다음에 디버깅을 시작하면 중단점이 다시 적중되는 경우가 있습니다. 이 중단점이 적중되는 것을 중지하려면 **중단점** 창에서 모든 중단점 인스턴스가 제거되었는지 확인합니다.  
-  
-### <a name="the-debugger-cant-locate-the-correct-version-of-the-source-file-for-a-breakpoint"></a>디버거가 중단점의 올바른 소스 파일 버전을 찾을 수 없는 경우  
- 소스 파일이 변경되었고 소스가 디버깅 중인 코드와 더 이상 일치하지 않는 경우 디버거는 소스 파일이 있더라도 중단점에 해당하는 소스 파일을 찾을 수 있습니다.  
-  
-1.  디버깅 하는 Visual studio 버전과 일치 하지 않는 소스 코드를 표시 하는 경우, 선택 **디버그 > 옵션 및 설정**합니다. **디버깅/일반** 페이지에서 **소스 파일이 원래 버전과 정확하게 일치해야 함** 옵션을 선택 취소합니다.  
-  
-2.  소스 파일에 중단점을 바인딩할 수도 있습니다. 중단점을 선택하고 상황에 맞는 메뉴에서 **조건** 을 선택합니다. **중단점 설정** 창에서 **소스 코드가 원래 코드와 일치하지 않아도 됨** 을 클릭합니다.  
-  
-### <a name="breakpoints-dont-work-in-a-dll"></a>중단점이 DLL에서 작동하지 않는 경우  
- 코드가 속한 모듈에 대한 디버그 정보가 디버거에 로드되지 않았으면 소스 파일에서 중단점을 설정할 수 없습니다. 이러한 문제의 증상으로 **중단점을 설정하지 않습니다**와 같은 메시지가 나타날 수 있습니다. 중단점 위치에 경고 중단점 문자 모양이 표시됩니다. 하지만 이러한 경고 중단점은 코드가 로드될 때 실제 중단점이 됩니다. 기호를 로드 하는 방법에 대 한 자세한 내용은 참조 [지정 기호 (.pdb) 및 소스 파일](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)합니다.  
-  
 ## <a name="see-also"></a>참고 항목  
- [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)
+[Visual Studio 디버거에서 중단점 문제 해결](../debugger/troubleshooting-breakpoints.md)  
+[디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)

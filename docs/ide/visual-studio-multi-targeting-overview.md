@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 .NET Framework 대상 지정 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
@@ -17,11 +17,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: dotnet
-ms.openlocfilehash: c3d388238b443fcb717502a893a674f99a315f38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e4b68e5d7b7e63e76a2291eba6d81eb581756845
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio 멀티 타기팅 개요
 
@@ -70,9 +70,6 @@ Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework�
 ## <a name="resolving-system-and-user-assembly-references"></a>시스템 및 사용자 어셈블리 참조 확인
 
 .NET Framework 버전을 대상으로 지정하려면 먼저 적절한 어셈블리 참조를 설치해야 합니다. [.NET 다운로드](https://www.microsoft.com/net/download/windows) 페이지에서 다양한 버전의 .NET Framework 개발자 팩을 다운로드할 수 있습니다.
-
-> [!NOTE]
-> .NET Framework 4 또는 3.5를 대상으로 하면서 Client Profile에 대한 자세한 내용과 사용 시기에 대해 알아보려면 .NET Framework 4 설명서의 [.NET Framework Client Profile](http://msdn.microsoft.com/library/cc656912\(v=vs.100\).aspx)(.NET Framework 클라이언트 프로필)을 참조하세요.
 
 **참조 추가** 대화 상자에서는 실수로 프로젝트에 추가될 수 없도록 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 관련이 없는 시스템 어셈블리가 사용되지 않습니다. 시스템 어셈블리는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 포함된 .dll 파일입니다. 대상 버전 이후의 프레임워크 버전에 속한 참조는 확인되지 않고 이런 참조에 따라 결정되는 컨트롤을 추가할 수 없습니다. 해당 참조를 사용하도록 설정하려면 프로젝트의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 대상을 참조가 포함된 대상으로 다시 설정합니다.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.
 

@@ -21,11 +21,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 6665452bd074c083216120732cff8a3f18a74dca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4e4f01a74a3246a326c1695371a303472901c9ea
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="property-pages-javascript"></a>속성 페이지, JavaScript
 **속성 페이지**에서 프로젝트 설정에 액세스할 수 있습니다. **속성 페이지**에 표시되는 페이지를 사용하여 프로젝트 속성을 변경할 수 있습니다.  
@@ -68,11 +68,11 @@ ms.lasthandoff: 12/22/2017
  **실행할 디버거**  
  디버거에 대한 기본 호스트를 지정합니다.  
 
--   Visual Studio 호스트 컴퓨터에서 응용 프로그램을 시작하려면 **로컬 컴퓨터**를 선택합니다. 자세한 내용은 [로컬 컴퓨터에서 Windows 스토어 앱 실행](http://go.microsoft.com/fwlink/?LinkId=234912)을 참조하세요.  
+-   Visual Studio 호스트 컴퓨터에서 응용 프로그램을 시작하려면 **로컬 컴퓨터**를 선택합니다. 자세한 내용은 [로컬 컴퓨터에서 Windows 스토어 앱 실행](../../debugger/run-windows-store-apps-on-the-local-machine.md)을 참조하세요.  
 
--   시뮬레이터에서 응용 프로그램을 시작하려면 **시뮬레이터**를 선택합니다. 자세한 내용은 [시뮬레이터에서 Windows 스토어 앱 실행](http://go.microsoft.com/fwlink/?LinkId=234913)을 참조하세요.  
+-   시뮬레이터에서 응용 프로그램을 시작하려면 **시뮬레이터**를 선택합니다. 자세한 내용은 [시뮬레이터에서 Windows 스토어 앱 실행](../../debugger/run-windows-store-apps-in-the-simulator.md)을 참조하세요.  
 
--   원격 컴퓨터에서 응용 프로그램을 시작하려면 **원격 컴퓨터**를 선택합니다. 원격 디버깅에 대한 자세한 내용은 [원격 컴퓨터에서 Windows 스토어 앱 실행](http://go.microsoft.com/fwlink/?LinkId=234914)을 참조하세요.  
+-   원격 컴퓨터에서 응용 프로그램을 시작하려면 **원격 컴퓨터**를 선택합니다. 원격 디버깅에 대한 자세한 내용은 [원격 컴퓨터에서 Windows 스토어 앱 실행](../../debugger/run-windows-store-apps-on-a-remote-machine.md)을 참조하세요.  
 
 **응용 프로그램 시작**  
 F5 키를 누르거나 **디버그**, **디버깅 시작**을 클릭하면 응용 프로그램을 시작하는지 여부를 지정합니다. 응용 프로그램을 시작하려면 **예**를 선택하고, 그렇지 않은 경우 **아니요**를 선택합니다. **아니요**를 선택하더라도 응용 프로그램을 시작하는 다른 방법을 사용하는 경우 응용 프로그램을 디버그할 수 있습니다.  

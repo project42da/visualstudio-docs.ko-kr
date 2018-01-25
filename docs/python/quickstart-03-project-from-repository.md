@@ -15,15 +15,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 66f99665fc9d580a3c0c366fa2922ea6a15e0e7c
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 74be5c65cbb4b2498f9904c6e021c774400bfbf8
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>빠른 시작: Visual Studio에서 Python 코드의 리포지토리 복제
 
-[Visual Studio 2017에 Python 지원을 설치](installation.md)하면 Python 코드의 리포지토리를 쉽게 복제하고 여기에서 프로젝트를 만들 수 있습니다.
+[Visual Studio 2017에 Python 지원을 설치](installing-python-support-in-visual-studio.md)하면 Python 코드의 리포지토리를 쉽게 복제하고 여기에서 프로젝트를 만들 수 있습니다.
 
 [!INCLUDE[install-github-extension](includes/install-github-extension.md)]
 
@@ -71,15 +71,15 @@ ms.lasthandoff: 01/12/2018
 14. 프로그램을 다시 실행하여 첫 번째 검사가 통과하고 프로그램이 다음 koan에서 중단하는지 확인합니다. 계속해서 오류를 수정하고 원하는 프로그램을 다시 실행합니다.
 
 > [!Important]
-> 이 빠른 시작에서는 GitHub에서 *python_koans* 리포지토리의 복제본을 직접 만들었습니다. 이러한 리포지토리는 직접 변경된 내용에서 해당 작성자에 의해 보호되므로 리포지토리에 대한 변경 내용을 커밋하려는 시도는 실패합니다. 실제로, 고유한 GitHub 계정에 대한 이러한 리포지토리 대신 개발자는 거기에서 변경한 다음 끌어오기 요청을 만들어 해당 변경 내용을 원래 리포지토리에 제출합니다. 이러한 단계는 [자습서 6단계 - Git 작업](vs-tutorial-01-06.md)에 설명되어 있습니다.
+> 이 빠른 시작에서는 GitHub에서 *python_koans* 리포지토리의 복제본을 직접 만들었습니다. 이러한 리포지토리는 직접 변경된 내용에서 해당 작성자에 의해 보호되므로 리포지토리에 대한 변경 내용을 커밋하려는 시도는 실패합니다. 실제로, 고유한 GitHub 계정에 대한 이러한 리포지토리 대신 개발자는 거기에서 변경한 다음 끌어오기 요청을 만들어 해당 변경 내용을 원래 리포지토리에 제출합니다. 이러한 단계는 [자습서 6단계 - Git 작업](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)에 설명되어 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
 
 > [!div class="nextstepaction"]
-> [자습서: Visual Studio에서 Python 작업](vs-tutorial-01-01.md)
+> [자습서: Visual Studio에서 Python 작업](tutorial-working-with-python-in-visual-studio-step-01-create-project.md)
 
 ## <a name="see-also"></a>참고 항목
 
-- [기존 Python 인터프리터에 대한 환경 만들기](python-environments.md#creating-an-environment-for-an-existing-interpreter)
-- [Visual Studio 2015 이하 버전에서 Python 지원 설치](installation.md)
-- [설치 위치](installation.md#install-locations).
+- [기존 Python 인터프리터에 대한 환경 만들기](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [Visual Studio 2015 이하 버전에서 Python 지원 설치](installing-python-support-in-visual-studio.md)
+- [설치 위치](installing-python-support-in-visual-studio.md#install-locations).

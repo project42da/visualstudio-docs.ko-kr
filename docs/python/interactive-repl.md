@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 01e3e0d3969b483a77b524cb6fd2713c6653678e
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: bf04cbfaff76747c952f9cf86e93fea47be2e91f
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="working-with-the-python-interactive-window"></a>Python 대화형 창 사용
 
@@ -38,7 +38,7 @@ Visual Studio에는 선택 가능한 다양한 Python REPL 모드가 있습니�
 
 이 항목에서는 **표준** 및 **디버그** REPL 모드를 설명합니다. IPython 모드에 대한 자세한 내용은 [IPython REPL 사용](interactive-repl-ipython.md)을 참조하세요.
 
-Ctrl+Enter 등의 편집기 조작을 포함하여 예제를 사용한 자세한 연습을 보려면 [자습서 3단계: 대화형 REPL 창 사용](vs-tutorial-01-03.md)을 참조하세요. 비디오 소개의 경우 [Python 대화형 창](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=gJYKY5LWE_4605918567)(Microsoft Virtual Academy, 2분 22초)을 참조하세요.
+Ctrl+Enter 등의 편집기 조작을 포함하여 예제를 사용한 자세한 연습을 보려면 [자습서 3단계: 대화형 REPL 창 사용](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)을 참조하세요. 비디오 소개의 경우 [Python 대화형 창](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=gJYKY5LWE_4605918567)(Microsoft Virtual Academy, 2분 22초)을 참조하세요.
 
 > [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Python-Interactive-Window-gJYKY5LWE_4605918567]
 

@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 620e847b9da1e8becf2df66d070a290071248d84
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 509d8b001ff00f754df8cec0cc08194dbfc2ff3d
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="setting-up-unit-testing-for-python-code"></a>Python 코드에 대해 단위 테스트 설정
 
@@ -35,7 +35,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 규칙에 따라 Visual Studio는 이름이 `test`로 시작하는 메서드로 테스트를 식별합니다. 이 동작을 확인하려면 다음을 수행합니다.
 
-1. Visual Studio에 로드된 [Python 프로젝트](python-projects.md)를 열고 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택한 후 **Python 단위 테스트**, **추가**를 선택합니다.
+1. Visual Studio에 로드된 [Python 프로젝트](managing-python-projects-in-visual-studio.md)를 열고 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택한 후 **Python 단위 테스트**, **추가**를 선택합니다.
 
 1. 이 작업은 표준 `unittest` 모듈을 가져오고 `unittest.TestCase`에서 테스트 클래스를 파생하며 스크립트를 직접 실행하는 경우 `unittest.main()`을 호출하는 코드가 있는 `test1.py` 파일을 만듭니다.
 
@@ -92,7 +92,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 ![테스트 디버깅](media/unit-test-debugging.png)
 
-Visual Studio 버전에 따라 **선택한 테스트에 대한 코드 검사 분석** 및 **테스트 프로파일링** 명령도 사용할 수 있습니다([기능 매트릭스](python-in-visual-studio.md#features-matrix) 참조).
+Visual Studio 버전에 따라 **선택한 테스트에 대한 코드 검사 분석** 및 **테스트 프로파일링** 명령도 사용할 수 있습니다([기능 매트릭스](overview-of-python-tools-for-visual-studio.md#features-matrix) 참조).
 
 ### <a name="known-issues"></a>알려진 문제
 

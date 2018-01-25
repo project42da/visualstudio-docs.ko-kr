@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: df8e23f0544571aa07e8b013c62922e1a69868d2
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 0d7c6644dc3f52629ff91d2f6b5dd44dbdba6b3d
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux에서 Python 코드 원격 디버깅
 
@@ -38,7 +38,7 @@ ptvsd를 사용하는 경우 디버그되는 Python 코드는 Visual Studio에�
 - Mac OSX 또는 Linux와 같은 운영 체제에서 Python을 실행하는 원격 컴퓨터.
 - 원격 디버깅의 기본값으로 해당 컴퓨터의 방화벽에서 열려 있는 포트 5678(인바운드).
 
-쉽게 [Azure에서 Linux 가상 컴퓨터](/azure/virtual-machines/linux/creation-choices)를 만들고 Windows에서 [원격 데스크톱을 사용하여 Linux 가상 컴퓨터에 액세스](/azure/virtual-machines/linux/use-remote-desktop)할 수 있습니다. Python이 기본적으로 설치되어 있으므로 VM에 Ubuntu를 사용하면 편리합니다. 그렇지 않은 경우 추가 Python 다운로드 위치는 [원하는 Python 인터프리터 설치](python-environments.md#selecting-and-installing-python-interpreters)를 참조하세요.
+쉽게 [Azure에서 Linux 가상 컴퓨터](/azure/virtual-machines/linux/creation-choices)를 만들고 Windows에서 [원격 데스크톱을 사용하여 Linux 가상 컴퓨터에 액세스](/azure/virtual-machines/linux/use-remote-desktop)할 수 있습니다. Python이 기본적으로 설치되어 있으므로 VM에 Ubuntu를 사용하면 편리합니다. 그렇지 않은 경우 추가 Python 다운로드 위치는 [원하는 Python 인터프리터 설치](managing-python-environments-in-visual-studio.md#selecting-and-installing-python-interpreters)를 참조하세요.
 
 Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내용은 [Azure Portal을 사용하여 Azure에서 VM으로 포트 열기](/azure/virtual-machines/windows/nsg-quickstart-portal)를 참조하세요.
 

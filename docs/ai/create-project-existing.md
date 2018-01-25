@@ -24,7 +24,7 @@
 8. 원하는 경우 Ctrl+F5 키를 누르거나 **디버그 > 디버깅하지 않고 시작**을 선택하여 프로그램을 실행합니다. 
 
 > [!div class="nextstepaction"]
-> [자습서: Visual Studio에서 Python 작업](https://docs.microsoft.com/visualstudio/python/vs-tutorial-01-00)
+> [자습서: Visual Studio에서 Python 작업](../python/tutorial-working-with-python-in-visual-studio-step-00-installation.md)
 
 ## <a name="see-also"></a>참고 항목
 

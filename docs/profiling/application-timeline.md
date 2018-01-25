@@ -13,11 +13,11 @@ author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload: uwp
-ms.openlocfilehash: 3109f33c24b3ff217f6e48c6458a4c6514b0b151
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 340ef03d7b9449f6fc9ee50a4c24afff03120e6f
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>리소스 소비량 및 UI 스레드 활동 분석(XAML)
 **응용 프로그램 타임라인** 프로파일러를 사용하여 XAML 응용 프로그램에서 응용 프로그램 상호 작용 관련 성능 문제를 찾으세요. 이 도구를 사용하면 응용 프로그램의 리소스 소비에 대해 자세히 알 수 있어서 XAML 응용 프로그램의 성능을 개선하는 데 도움이 됩니다. 응용 프로그램 UI 프레임(레이아웃 및 렌더링)을 준비하고, 네트워크 및 디스크 요청을 처리하여, 응용 프로그램 시작, 페이지 로드 및 창 크기 조정과 같은 시나리오에서 응용 프로그램이 보낸 시간을 분석할 수 있습니다.  
@@ -31,8 +31,6 @@ ms.lasthandoff: 12/22/2017
 1.  유니버설 Windows 앱(Windows 10에서)  
   
 2.  Windows 8.1  
-  
-3.  Windows Phone 8.1(공통 XAML 플랫폼)  
   
 4.  Windows Presentation Foundation(.NET 4.0 이상)  
   

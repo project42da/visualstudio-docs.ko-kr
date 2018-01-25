@@ -15,11 +15,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9a260001e661c9d6d0f9a1b472caa07c25637ff7
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 5cd67d031cd41a1f36de68d7372fdfcfd6f8e476
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
@@ -45,9 +45,9 @@ Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및
 <a name="debugging-without-a-project"></a>
 
 > [!Tip]
-> Visual Studio의 Python은 프로젝트 없이 디버깅을 지원합니다. 편집기에서 마우스 오른쪽 단추를 클릭하여 독립 실행형 Python 파일을 열고 **디버깅 시작**을 선택하면 Visual Studio가 전역 기본 환경([Python 환경](python-environments.md) 참조)에서 인수 없이 스크립트를 실행합니다. 하지만 이때부터 디버깅을 전적으로 지원합니다.
+> Visual Studio의 Python은 프로젝트 없이 디버깅을 지원합니다. 편집기에서 마우스 오른쪽 단추를 클릭하여 독립 실행형 Python 파일을 열고 **디버깅 시작**을 선택하면 Visual Studio가 전역 기본 환경([Python 환경](managing-python-environments-in-visual-studio.md) 참조)에서 인수 없이 스크립트를 실행합니다. 하지만 이때부터 디버깅을 전적으로 지원합니다.
 >
-> 환경 및 인수를 제어하려면 코드에 대한 프로젝트를 만듭니다. 이 작업은 [기존 Python 코드에서](python-projects.md#creating-a-project-from-existing-files) 프로젝트 템플릿으로 쉽게 수행할 수 있습니다.
+> 환경 및 인수를 제어하려면 코드에 대한 프로젝트를 만듭니다. 이 작업은 [기존 Python 코드에서](managing-python-projects-in-visual-studio.md#creating-a-project-from-existing-files) 프로젝트 템플릿으로 쉽게 수행할 수 있습니다.
 
 <a name="debugging-with-a-project"></a>
 
@@ -58,7 +58,7 @@ Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및
 디버깅 세션은 **디버그 > 디버깅 시작** 명령, 도구 모음의 **시작** 단추 또는 F5 키로 시작됩니다. 이러한 작업은 프로젝트의 활성 환경 및 프로젝트 속성([프로젝트 디버깅 옵션](#project-debugging-options) 참조)에 지정된 명령줄 인수 또는 검색 경로가 포함된 프로젝트의 시작 파일(솔루션 탐색기에서 굵게 표시됨)을 실행합니다. 그러나 몇 가지 이유로 시작 파일을 설정하지 않은 경우 Python 출력 창이 잠깐 나타났다가 사라집니다. 이 경우 해당 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
 
 > [!Note]
-> 디버거는 프로젝트에 대해 항상 활성 Python 환경으로 시작합니다. 환경을 변경하려면 [Python 환경](python-environments.md)에서 설명한 대로 다른 환경을 사용하도록 설정합니다.
+> 디버거는 프로젝트에 대해 항상 활성 Python 환경으로 시작합니다. 환경을 변경하려면 [Python 환경](managing-python-environments-in-visual-studio.md)에서 설명한 대로 다른 환경을 사용하도록 설정합니다.
 
 ### <a name="breakpoints"></a>중단점
 

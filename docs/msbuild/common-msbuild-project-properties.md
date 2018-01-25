@@ -1,7 +1,7 @@
 ---
 title: "일반적인 MSBuild 프로젝트 속성 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-sdk
@@ -23,11 +23,11 @@ author: kempb
 ms.author: kempb
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: b78c2c1276f04a53a4f7a01e70a7d98efdba0514
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c70427c2dd1e2c7ceb071867b876750121445dde
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="common-msbuild-project-properties"></a>일반적인 MSBuild 프로젝트 속성
 다음 표에서는 Visual Studio 프로젝트 파일에 정의되거나 MSBuild가 제공하는 .targets 파일에 포함된 자주 사용하는 속성을 보여 줍니다.  
@@ -75,12 +75,11 @@ ms.lasthandoff: 12/22/2017
 |IntermediateOutputPath|경로가 지정되지 않은 경우 `BaseIntermediateOutputPath`에서 파생된 것과 같은 전체 중간 출력 경로입니다. 예를 들어 \obj\debug\\입니다. 이 속성이 재정의되면 `BaseIntermediateOutputPath`를 설정해도 아무런 효과가 없습니다.|  
 |KeyContainerName|강력한 이름 키 컨테이너의 이름입니다.|  
 |KeyOriginatorFile|강력한 이름 키 파일의 이름입니다.|  
-|NoWin32Manifest|컴파일러에서 출력 어셈블리에 기본 Win32 매니페스트를 생성하는지 여부를 결정합니다. 기본값인 `false`를 설정하면 기본 Win32 매니페스트가 모든 응용 프로그램에 대해 생성됩니다. 이 속성은 vbc.exe의 `/nowin32manifest` 컴파일러 스위치와 동일합니다.|  
 |ModuleAssemblyName|컴파일된 모듈이 통합되어야 하는 어셈블리의 이름입니다. 이 속성은 `/moduleassemblyname` 컴파일러 스위치와 동일합니다.|  
 |NoLogo|컴파일러 로고를 해제할지 여부를 나타내는 부울 값입니다. 이 속성은 `/nologo` 컴파일러 스위치와 동일합니다.|  
 |NoStdLib|표준 라이브러리(mscorlib.dll)를 참조하지 않을지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.|  
 |NoVBRuntimeReference|[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 런타임(Microsoft.VisualBasic.dll)이 프로젝트에 참조로 포함되어야 하는지 여부를 나타내는 부울 값입니다.|  
-|NoWin32Manifest|응용 프로그램의 실행 파일에 UAC(사용자 계정 컨트롤) 매니페스트 정보를 포함할지 여부를 나타내는 부울 값입니다. [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)]를 대상으로 하는 Visual Studio 프로젝트에만 적용됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 및 등록이 필요 없는 COM을 사용하여 배포된 프로젝트에서는 이 요소가 무시됩니다. `False`(기본값)는 응용 프로그램의 실행 파일에 UAC(사용자 계정 컨트롤) 매니페스트 정보를 포함할지 여부를 지정합니다. `True`는 UAC 매니페스트 정보가 포함되지 않음을 지정합니다.<br /><br /> 이 속성은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 대상으로 하는 [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)] 프로젝트에만 적용됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 및 등록이 필요 없는 COM을 사용하여 배포된 프로젝트에서는 이 속성이 무시됩니다.<br /><br /> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 응용 프로그램의 실행 파일에 매니페스트 정보를 포함하지 않으려는 경우에만 NoWin32Manifest를 추가해야 합니다. 이 프로세스를 *가상화*라고 합니다. 가상화를 사용하려면 다음과 같이 `<ApplicationManifest>`와 `<NoWin32Manifest>`를 함께 설정합니다.<br /><br /> -   [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 프로젝트의 경우 `<ApplicationManifest>` 노드를 제거합니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 프로젝트에서는 `<ApplicationManifest>` 노드가 있으면 `<NoWin32Manifest>`가 무시됩니다.<br />-   [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트의 경우 `<ApplicationManifest>`를 `False`로, `<NoWin32Manifest>`를 `True`로 설정합니다. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트에서는 `<ApplicationManifest>`가 `<NoWin32Manifest>`를 재정의합니다.|  
+|NoWin32Manifest|응용 프로그램의 실행 파일에 UAC(사용자 계정 컨트롤) 매니페스트 정보를 포함할지 여부를 나타내는 부울 값입니다. [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)]를 대상으로 하는 Visual Studio 프로젝트에만 적용됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 및 등록이 필요 없는 COM을 사용하여 배포된 프로젝트에서는 이 요소가 무시됩니다. `False`(기본값)는 응용 프로그램의 실행 파일에 UAC(사용자 계정 컨트롤) 매니페스트 정보를 포함할지 여부를 지정합니다. `True`는 UAC 매니페스트 정보가 포함되지 않음을 지정합니다.<br /><br /> 이 속성은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 대상으로 하는 [!INCLUDE[windowsver](../deployment/includes/windowsver_md.md)] 프로젝트에만 적용됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 및 등록이 필요 없는 COM을 사용하여 배포된 프로젝트에서는 이 속성이 무시됩니다.<br /><br /> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 응용 프로그램의 실행 파일에 매니페스트 정보를 포함하지 않으려는 경우에만 NoWin32Manifest를 추가해야 합니다. 이 프로세스를 *가상화*라고 합니다. 가상화를 사용하려면 다음과 같이 `<ApplicationManifest>`와 `<NoWin32Manifest>`를 함께 설정합니다.<br /><br /> -   [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 프로젝트의 경우 `<ApplicationManifest>` 노드를 제거합니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 프로젝트에서는 `<ApplicationManifest>` 노드가 있으면 `<NoWin32Manifest>`가 무시됩니다.<br />-   [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트의 경우 `<ApplicationManifest>`를 `False`로, `<NoWin32Manifest>`를 `True`로 설정합니다. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트에서는 `<ApplicationManifest>`가 `<NoWin32Manifest>`를 재정의합니다.<br /> 이 속성은 vbc.exe의 `/nowin32manifest` 컴파일러 스위치와 동일합니다.|  
 |Optimize|`true`로 설정하면 컴파일러 최적화를 사용으로 설정하는 부울 값입니다. 이 속성은 `/optimize` 컴파일러 스위치와 동일합니다.|  
 |OptionCompare|문자열 비교 방법을 지정합니다. 유효한 값은 "binary" 또는 "text"입니다. 이 속성은 vbc.exe의 `/optioncompare` 컴파일러 스위치와 동일합니다.|  
 |OptionExplicit|`true`로 설정하면 소스 코드에서 변수를 명시적으로 선언해야 하는 부울 값입니다. 이 속성은 `/optionexplicit` 컴파일러 스위치와 동일합니다.|  
