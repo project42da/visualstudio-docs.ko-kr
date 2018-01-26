@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 5d489f41069f478abfba32a65690a5adc9c2272c
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 4dabfb345d9a98228afae5e20b63e6ded760800d
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>도메인별 언어 도구 사용자 인터페이스 개요
 에 도메인 특정 언어 도구 (DSL 도구) 솔루션을 처음 열 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 사용자 인터페이스는 다음 그림과 유사 합니다.  
@@ -39,7 +39,7 @@ ms.lasthandoff: 01/13/2018
   
  다음 표에서 도메인 모델 다이어그램의 요소 중 일부를 설명 합니다.  
   
-|**용어**|**정의**|  
+|**Term**|**정의**|  
 |--------------|--------------------|  
 |도메인 클래스|도메인 클래스는 모델에 있는 요소의 형식입니다.<br /><br /> 도메인 클래스는 둘 이상의 관계의 대상 이라면 다이어그램에서 두 번 이상 나타날 수 있습니다.<br /><br /> 도메인 클래스를 추가 하려면 끌어에서 도메인 클래스 도구는 **도구 상자** 에 **클래스 및 관계** 다이어그램의 측면입니다.|  
 |도메인 관계|도메인 관계는 모델에 있는 요소 간의 링크 형식입니다.<br /><br /> *포함 관계* 대상 요소가 소유 되거나 소스 요소에 포함 된 나타내고 실선으로 나타납니다. 모델의 모든 요소는 하나의 포함 관계의 대상 해야 하므로 모델 트리를 형성 합니다. A *참조 관계* 모델 요소 사이 일반 링크를 나타내고 파선으로 나타납니다. 모든 요소는 개수에 관계 없이 참조 링크를 가질 수 있습니다.<br /><br /> 이 도구를 클릭 하 여 관계를 만들는 **도구 상자**원본 도메인 클래스를 클릭 하 고 대상 클래스를 클릭 한 다음, 합니다.|  
@@ -48,5 +48,5 @@ ms.lasthandoff: 01/13/2018
   
 ## <a name="see-also"></a>참고 항목  
  [도메인 특정 언어 도구 개요](../modeling/overview-of-domain-specific-language-tools.md)   
- [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)   
+ [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)   
  [도메인별 언어 사용자 지정 및 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)

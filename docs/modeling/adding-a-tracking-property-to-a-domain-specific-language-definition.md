@@ -14,11 +14,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 8250f21bd95816bf0d9424dc4a3fbb45302919d7
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 21e31bd582fda7884f0f246bd6eda39e5e89a375
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="adding-a-tracking-property-to-a-domain-specific-language-definition"></a>도메인별 언어 정의에 추적 속성 추가
 이 도메인 모델에 추적 속성을 추가 하는 방법을 보여 줍니다.  
@@ -27,7 +27,7 @@ ms.lasthandoff: 01/13/2018
   
  예를 들어 도메인 특정 언어 도구 (DSL 도구)에서 도메인 클래스의 속성에는 도메인 클래스 아니라 사용자의 이름을 사용 하 여 계산 된 기본값이 표시 이름 디자인 타임에 값을 변경할 수 있습니다 또는 계산된 된 값으로 다시 설정 합니다.  
   
- 이 연습에서는 모델의 기본 Namespace 속성에 따라 기본값을 가진 속성을 추적 하는 Namespace를 가진 도메인 특정 언어 DSL ()를 만듭니다. 속성을 추적 하는 방법에 대 한 자세한 내용은 참조 [추적 속성 정의](http://msdn.microsoft.com/en-us/0538b0e4-6221-4e7d-911a-b92cd622f0be)합니다.  
+ 이 연습에서는 모델의 기본 Namespace 속성에 따라 기본값을 가진 속성을 추적 하는 Namespace를 가진 도메인 특정 언어 DSL ()를 만듭니다. 속성을 추적 하는 방법에 대 한 자세한 내용은 참조 [추적 속성 정의](http://msdn.microsoft.com/0538b0e4-6221-4e7d-911a-b92cd622f0be)합니다.  
   
 -   추적 속성 설명자 DSL 도구 지원입니다. 그러나 언어로 추적 속성을 추가 하려면 DSL 디자이너를 사용할 수 없습니다. 따라서 정의 하 고 추적 속성을 구현 하는 사용자 지정 코드를 추가 해야 합니다.  
   
@@ -253,7 +253,7 @@ ms.lasthandoff: 01/13/2018
 #### <a name="to-modify-the-type-descriptor-for-the-examplemodel-domain-class"></a>ExampleModel 도메인 클래스에 대 한 형식 설명자를 수정 하려면  
   
 1.  TypeDescriptor.cs 파일에 다음 코드를 추가 합니다.  
-  
+
     ```csharp  
     using System;  
     using System.ComponentModel;  

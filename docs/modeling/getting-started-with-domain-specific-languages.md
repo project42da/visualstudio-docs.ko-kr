@@ -10,25 +10,24 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: b3e0d6ec6eb1449defcc49102a97e69a7105a838
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 92db1c4d27eec5a9ac18d51644dfb0141c2fef34
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>도메인별 언어 시작
-이 항목에서는 정의 하 고 Visual Studio에 대 한 Modeling SDK를 사용 하 여 만든 도메인 특정 언어 DSL ()를 사용 하 여 기본 개념을 설명 합니다.  
+이 항목에서는 정의 하 고 Visual Studio에 대 한 Modeling SDK를 사용 하 여 만든 도메인 특정 언어 DSL ()를 사용 하 여 기본 개념을 설명 합니다.
 
+> [!NOTE]
+> Visual Studio의 특정 기능을 설치할 때에 Visual Studio 2017에 텍스트 템플릿 변환 SDK 및 Visual Studio 모델링 SDK 자동으로 설치 됩니다. 자세한 내용은 참조 하십시오. [이 블로그 게시물](https://blogs.msdn.microsoft.com/visualstudioalm/2016/12/12/the-visual-studio-modeling-sdk-is-now-available-with-visual-studio-2017/)합니다.
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-
-  
- Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL Tools 랩**,이 사이트에서 찾을 수 있는: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)  
+Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL Tools 랩**,이 사이트에서 찾을 수 있는: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)  
   
 ## <a name="what-can-you-do-with-a-domain-specific-language"></a>도메인 특정 언어와 합니까?  
  도메인 특정 언어는는 표기법, 일반적으로 그래픽입니다 특정 목적에 사용할 수 있도록 디자인 되었습니다. 반면, UML 같은 언어는 범용입니다. 를 사용 하는 DSL에는 유형의 모델 요소 및 해당 관계 및 화면에 표시 되는 방식을 정의할 수 있습니다.  
   
- DSL를 디자인 하는 경우에 VSIX Visual Studio Integration Extension () 패키지의 일부로 배포할 수 있습니다. 사용자 작업에서 DSL을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]:  
+ DSL를 디자인 하는 경우에 VSIX Visual Studio Integration Extension () 패키지의 일부로 배포할 수 있습니다. Visual Studio에서 DSL을 사용 하는 사용자.  
   
  ![패밀리 트리 다이어그램, 도구 상자 및 탐색기](../modeling/media/familyt_instance.png "FamilyT_Instance")  
   
@@ -36,14 +35,14 @@ ms.lasthandoff: 01/13/2018
   
  Dsl의 주 응용 프로그램 중 하나 프로그램 코드, 구성 파일 및 기타 아티팩트를 생성 하는 것입니다. 특히 대규모 프로젝트 및 제품 라인, 제품의 여러 변형을 생성 될에서 Dsl에서 생성 하는 다양 한 가변 측면에서 제공할 수 크게 증가 안정성과 요구 사항 변경에 대 한 매우 빠른 응답.  
   
- 이 개요의 나머지 부분은 만들기 및 사용에 도메인 특정 언어의 기본 작업을 소개 하는 연습 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
+ 이 개요의 나머지 부분을 만들고 도메인 특정 언어를 사용 하 여 Visual Studio에서의 기본 작업을 소개 하는 연습입니다.  
   
 ## <a name="prerequisites"></a>필수 구성 요소  
  DSL을 정의하려면 다음 구성 요소를 설치해야 합니다.  
   
 |||  
 |-|-|  
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
+|Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
 |[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|  
 |Visual Studio 용 SDK 모델링||  
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/13/2018
 
   
 ## <a name="creating-a-dsl-solution"></a>DSL 솔루션 만들기  
- 새 도메인 특정 언어를 만들려면 새 만들면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 도메인 특정 언어 프로젝트 템플릿을 사용 하 여 솔루션입니다.  
+ 새 도메인 특정 언어를 만들려면 도메인 특정 언어 프로젝트 템플릿을 사용 하 여 새 Visual Studio 솔루션을 만듭니다.  
   
 #### <a name="to-create-a-dsl-solution"></a>DSL 솔루션을 만들려면  
   
@@ -100,7 +99,7 @@ ms.lasthandoff: 01/13/2018
   
 -   **Dsl 프로젝트** 이 프로젝트에는 도메인 특정 언어를 정의 하는 코드가 포함 되어 있습니다.  
   
--   **DslPackage 프로젝트** 이 프로젝트를 열고 편집할 수 DSL의 인스턴스를 허용 하는 코드가 들어 있는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
+-   **DslPackage 프로젝트** 이 프로젝트를 열고 Visual Studio에서 편집 DSL의 인스턴스를 허용 하는 코드를 포함 합니다.  
   
 ##  <a name="Debugging"></a>DSL 실행  
  만든 즉시 DSL 솔루션을 실행할 수 있습니다. 이상에서는 수정할 수 있습니다 DSL 정의 점차적으로 각 변경 후에 다시 솔루션을 실행 합니다.  
@@ -110,15 +109,15 @@ ms.lasthandoff: 01/13/2018
 1.  클릭 **모든 템플릿 변형** 솔루션 탐색기 도구 모음에서입니다. 이 다시 DslDefinition.dsl에서 소스 코드의 대부분을 생성합니다.  
   
     > [!NOTE]
-    >  클릭 해야 DslDefinition.dsl를 변경할 때마다 **모든 템플릿 변형** 솔루션을 다시 작성 하기 전에. 이 단계는 자동화할 수 있습니다. 자세한 내용은 참조 [모든 템플릿 변형를 자동화 하는 방법을](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)합니다.  
+    >  클릭 해야 DslDefinition.dsl를 변경할 때마다 **모든 템플릿 변형** 솔루션을 다시 작성 하기 전에. 이 단계는 자동화할 수 있습니다. 자세한 내용은 참조 [모든 템플릿 변형를 자동화 하는 방법을](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)합니다.
   
 2.  F5 키를 누르거나는 **디버그** 메뉴에서 클릭 **디버깅 시작**합니다.  
   
-     DSL은 빌드되고의 실험적 인스턴스에 설치 되어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
+     DSL 빌드되고은 Visual Studio의 실험적 인스턴스에서에 설치 됩니다.
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 의 실험적 인스턴스가 시작됩니다. 실험적 인스턴스 사용에서 레지스트리를 별도 하위 트리 설정을 여기서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장 디버깅 목적으로 등록 됩니다. 기본 인스턴스 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 그곳에 등록 된 확장에 대 한 액세스 권한이 없습니다.  
+     Visual Studio의 실험적 인스턴스가 시작 됩니다. 실험적 인스턴스는 별도 디버깅을 위해 Visual Studio 확장 등록 여기서 레지스트리 하위 트리에서 해당 설정을 사용 합니다. Visual Studio의 기본 인스턴스 그곳에 등록 된 확장에 액세스할을 수 없습니다.  
   
-3.  실험적 인스턴스에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 모델 파일을 열 **테스트** 에서 **솔루션 탐색기**합니다.  
+3.  Visual Studio의 실험적 인스턴스에서 라는 모델 파일을 열고 **테스트** 에서 **솔루션 탐색기**합니다.  
   
      \- 또는 -  
   
@@ -136,7 +135,7 @@ ms.lasthandoff: 01/13/2018
   
 5.  자격 증명을 변경할 셰이프 변수의 여러 레이블을 클릭 합니다.  
   
- 실험적 프로그램 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 다음 예와 비슷하게 표시 됩니다.  
+ Visual Studio 실험적 다음 예와 비슷하게 표시 됩니다.  
   
  ![](../modeling/media/dsl_min.png "DSL_min")  
   
@@ -147,7 +146,7 @@ ms.lasthandoff: 01/13/2018
   
  에 트리 모델을 볼 수는 **탐색기** 모델을 편집 하는 동안 확인 합니다. 다이어그램에 셰이프를 추가 하면 모델 요소 또한 탐색기에 나타납니다. 다이어그램이 없는 경우에 탐색기를 사용할 수 있습니다.  
   
- 디버깅 인스턴스에서 탐색기를 볼 수 없는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 **보기** 메뉴 **다른 창**, 클릭 하 고  *\<Your 언어 >* **탐색기**합니다.  
+ Visual Studio의 디버깅 인스턴스에서 탐색기에 표시 되지 않으면는 **보기** 메뉴 **다른 창**, 클릭 하 고  *\<Your 언어 >* **탐색기**합니다.  
   
 ### <a name="the-api-of-your-dsl"></a>DSL의 API  
  DSL을 읽고 된 DSL의 인스턴스 모델을 업데이트할 수 있는 API를 생성 합니다. API의 응용 프로그램 모델에서 텍스트 파일을 생성 하는 것입니다. 자세한 내용은 참조 [T4 텍스트 템플릿을 사용 하 여 디자인 타임 코드 생성](../modeling/design-time-code-generation-by-using-t4-text-templates.md)합니다.  
@@ -164,7 +163,7 @@ ms.lasthandoff: 01/13/2018
   
 ##### <a name="to-regenerate-text-files-after-you-change-the-model-file"></a>모델 파일을 변경한 후 텍스트 파일을 다시 생성 하려면  
   
-1.  실험적 인스턴스에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 모델 파일을 저장 합니다.  
+1.  Visual Studio의 실험적 인스턴스에서 모델 파일을 저장 합니다.  
   
 2.  실험에는 사용 하는 모델 파일에 각.tt 파일의 파일 이름 매개 변수를 참조 하 고 있는지 확인 합니다. .Tt 파일을 저장 합니다.  
   
@@ -182,7 +181,7 @@ ms.lasthandoff: 01/13/2018
  자세한 내용은 참조 [도메인 특정 언어에서 코드 생성](../modeling/generating-code-from-a-domain-specific-language.md) 및 [도메인 특정 언어를 사용자 지정 하는 작성 코드](../modeling/writing-code-to-customise-a-domain-specific-language.md)합니다.  
   
 ## <a name="customizing-the-dsl"></a>DSL 사용자 지정  
- DSL 정의 수정 하려는 경우 실험적 인스턴스를 닫고 기본에서 정의 업데이트 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스.  
+ DSL 정의 수정 하려는 경우 실험적 인스턴스를 닫고 Visual Studio 기본 인스턴스에서 정의 업데이트 합니다.  
   
 > [!NOTE]
 >  DSL 정의 수정한 후에 이전 버전을 사용 하 여 만든 테스트 모델에서 정보를 손실 될 수 있습니다.  예를 들어 디버깅 솔루션 일부 셰이프 및 연결선이 포함 된 샘플 라는 파일을 있습니다. DSL 정의 개발을 시작한 후에 표시 됩니다 하 고 파일을 저장할 때 손실 됩니다.  
@@ -222,9 +221,9 @@ ms.lasthandoff: 01/13/2018
   
     2.  클릭 **모든 템플릿 변형** 솔루션 탐색기의 도구 모음  
   
-    3.  F5 키를 누릅니다. 실험적 인스턴스가 될 때까지 기다렸다가 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 나타납니다.  
+    3.  F5 키를 누릅니다. Visual Studio의 실험적 인스턴스가 나타날 때까지 대기 합니다.  
   
-4.  실험적 인스턴스에서 디버깅 솔루션에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 테스트 모델 파일을 엽니다. 도구 상자에서 놓아서 요소를 끕니다. 도구 캡션 및 DSL 탐색기에서 유형 이름 변경 확인 합니다.  
+4.  Visual Studio의 실험적 인스턴스에서 디버깅 솔루션에서는 테스트 모델 파일을 엽니다. 도구 상자에서 놓아서 요소를 끕니다. 도구 캡션 및 DSL 탐색기에서 유형 이름 변경 확인 합니다.  
   
 5.  모델 파일을 저장 합니다.  
   
@@ -348,7 +347,7 @@ ms.lasthandoff: 01/13/2018
   
 8.  DSL 정의 저장, 클릭 **모든 템플릿 변형**, 누릅니다 **F5**합니다.  
   
-9. 실험적 인스턴스에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 테스트 모델 파일을 엽니다. 도심지 및 도시와 사람 간의 링크를 만드는 새로운 도구를 사용 합니다. 올바른 유형의 요소 간에 링크를 만들만 수를 확인 합니다.  
+9. Visual Studio의 실험적 인스턴스에서 테스트 모델 파일을 엽니다. 도심지 및 도시와 사람 간의 링크를 만드는 새로운 도구를 사용 합니다. 올바른 유형의 요소 간에 링크를 만들만 수를 확인 합니다.  
   
 10. 각 사용자 거주 하는 동을 나열 하는 코드를 만듭니다. 텍스트 템플릿은 해당 코드를 실행할 수 있는 위치 중 하나입니다. 예를 들어 다음 코드를 포함 하 고 디버깅 솔루션의 기존 Sample.tt 파일을 수정할 수 있습니다.  
   
@@ -380,33 +379,32 @@ ms.lasthandoff: 01/13/2018
 ## <a name="validation-and-commands"></a>유효성 검사 및 명령  
  유효성 검사 제약 조건을 추가 하 여이 DSL 추가로 개발할 수 있습니다. 이러한 제약 조건은 모델 올바른 상태에서 인지 확인 하는 메서드를 정의할 수 있습니다. 예를 들어 정의할 수 있습니다 있는지 확인 하는 제약 조건을 자식의 생년월일 부모 보다 최신인입니다. 유효성 검사 기능이 DSL 사용자는 제약 조건 중 하나를 중단 하는 모델을 저장 하려고 하는 경우 경고를 표시 합니다. 자세한 내용은 참조 [도메인 특정 언어의 유효성 검사](../modeling/validation-in-a-domain-specific-language.md)합니다.  
   
- 또한 사용자가 호출할 수 있는 메뉴 명령을 정의할 수 있습니다. 명령 모델을 수정할 수 있습니다. 다른 모델에서는 상호 작용할 수도 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 와 외부 리소스입니다. 자세한 내용은 참조 [하는 방법: 표준 메뉴 명령 수정](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)합니다.  
+ 또한 사용자가 호출할 수 있는 메뉴 명령을 정의할 수 있습니다. 명령 모델을 수정할 수 있습니다. Visual Studio에서 다른 모델 및 외부 리소스 상호 작용할 수도 있습니다. 자세한 내용은 참조 [하는 방법: 표준 메뉴 명령 수정](../modeling/how-to-modify-a-standard-menu-command-in-a-domain-specific-language.md)합니다.  
   
 ## <a name="deploying-the-dsl"></a>DSL 배포  
- 도메인 특정 언어를 사용 하도록 다른 사용자가 허용 하려면 배포는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장 (VSIX) 파일입니다. DSL 솔루션을 빌드할 때 만들어집니다.  
+ 다른 사용자가 도메인 특정 언어를 사용할 수 있도록 확장 VSIX (Visual Studio) 파일을 배포할 수 있습니다. DSL 솔루션을 빌드할 때 만들어집니다.  
   
- 솔루션의 bin 폴더에서.vsix 파일을 찾습니다. 설치 하려는 컴퓨터에 복사 합니다. 해당 컴퓨터에서 VSIX 파일을 두 번 클릭 합니다. DSL의 모든 인스턴스에서 사용할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 해당 컴퓨터에 있습니다.  
+ 솔루션의 bin 폴더에서.vsix 파일을 찾습니다. 설치 하려는 컴퓨터에 복사 합니다. 해당 컴퓨터에서 VSIX 파일을 두 번 클릭 합니다. DSL 해당 컴퓨터에 Visual Studio의 모든 인스턴스에서 사용할 수 있습니다.  
   
- 실험적 인스턴스를 사용할 필요가 없습니다 되도록 DSL 컴퓨터에 설치 하려면 동일한 절차를 사용할 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
+ Visual Studio의 실험적 인스턴스를 사용할 필요가 없습니다 되도록 DSL 컴퓨터에 설치 하려면 동일한 절차를 사용할 수 있습니다.  
   
  자세한 내용은 참조 [도메인별 언어 솔루션 배포](../modeling/deploying-domain-specific-language-solutions.md)합니다.  
   
 ##  <a name="Reset"></a>이전 실험적 Dsl 제거  
- 만든 경우 실험적 Dsl를 표시 하지 않을, 다시 설정 하 여 컴퓨터에서 제거할 수 없습니다는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험적 인스턴스.  
+ 더 이상 사용 하지 않으려면 실험적 Dsl을 만든 경우 Visual Studio 실험적 인스턴스를 다시 설정 하 여 컴퓨터에서 제거할 수 없습니다.  
   
- 이 모든 실험적 Dsl와 실험적 다른 컴퓨터에서 제거 됩니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장 합니다. 이들은 디버깅 모드에서 실행 된 확장입니다.  
+ 이 값은 모든 실험적 Dsl 및 다른 실험적 Visual Studio 확장 컴퓨터에서 제거 됩니다. 이들은 디버깅 모드에서 실행 된 확장입니다.  
   
- 이 절차가 완료 된 Dsl 또는 기타 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX 파일을 실행 하 여 완벽 하 게 설치 된 확장 합니다.  
+ 이 절차 Dsl 또는 VSIX 파일을 실행 하 여 완벽 하 게 설치 된 다른 Visual Studio 확장을 제거 하지 않습니다.  
   
 #### <a name="to-reset-the-visual-studio-experimental-instance"></a>Visual Studio 실험적 인스턴스를 다시 설정 하려면  
   
 1.  클릭 **시작**, 클릭 **모든 프로그램**, **Microsoft Visual Studio 2010 SDK**, **도구**, 차례로 **Microsoft 다시 설정 Visual Studio 2010 실험적 인스턴스**합니다.  
   
-2.  모든 실험적 Dsl 또는 다른 실험적 다시 작성할 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 사용 하려면 확장 합니다.  
+2.  모든 실험적 Dsl 또는 기타 실험적 Visual Studio 확장을 사용 하려면 다시 작성 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [이해 모델, 클래스 및 관계](../modeling/understanding-models-classes-and-relationships.md)   
- [도메인별 언어 정의 방법](../modeling/how-to-define-a-domain-specific-language.md)   
+## <a name="see-also"></a>참고 항목
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
+[이해 모델, 클래스 및 관계](../modeling/understanding-models-classes-and-relationships.md)   
+[도메인별 언어 정의 방법](../modeling/how-to-define-a-domain-specific-language.md)
 

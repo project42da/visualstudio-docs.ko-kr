@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0f72632ccb56da42da3a9534a9a6d26d87dd6791
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: a8208d41631985fb6027e2827a847bb3e5e1d7ec
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-domain-specific-language-solutions"></a>도메인별 언어 솔루션 작업
 도메인 특정 언어 DSL ()를 사용 하 여 만들어집니다는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션입니다. 설정 하 고 솔루션을 사용자 지정 하는 방법에 대 한이 섹션이입니다.  
@@ -47,5 +47,5 @@ ms.lasthandoff: 01/13/2018
  [방법: 도메인별 언어 디자이너 확장](../modeling/how-to-extend-the-domain-specific-language-designer.md)  
  메뉴 명령 사용 하 여 DSL 디자이너를 사용자 지정할 수 있습니다.  
   
- [자동 변환 방법 모든 서식 파일](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)  
+ [자동 변환 방법 모든 서식 파일](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)  
  모든 템플릿 변형 클릭 하면 사용 하지 않으려면 부분을 만들 수 것는 자동 빌드입니다.

@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: de3c25f54bcfbf89ec5f4482a67741f9834222e0
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: b76309249310afd5bd88c8d8553792512e208220
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>시각화에 대 한 지원 되는 Visual Studio 버전 &amp; SDK 모델링
 다음은 지원 되는 Visual Studio 버전의 목록을 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 제작 및 배포 환경입니다. 이러한 버전에 대 한 자세한 내용은 Microsoft을 참조 하십시오. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [개발자 센터](http://go.microsoft.com/fwlink/?LinkId=75628)합니다.  
@@ -46,4 +46,4 @@ ms.lasthandoff: 01/13/2018
 >  DSL 셸 제품에서 실행할 수 있도록 설정 해야 합니다는 **VS 버전 지원** 확장 매니페스트에 필드입니다. 자세한 내용은 참조 [도메인별 언어 솔루션 배포](../modeling/deploying-domain-specific-language-solutions.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

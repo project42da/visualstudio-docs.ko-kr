@@ -19,11 +19,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 14e03f7a7c5d9200cf1ebc40f9098121f4ddbff9
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 8ad4a4141d27c9250d53a567ac09b1c5ffa05f49
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>시나리오: 시각화 및 모델링을 사용하여 디자인 변경
 Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨어 시스템이 사용자의 요구를 충족하는지 확인합니다.
@@ -485,11 +485,10 @@ Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨�
 |------------------|---------------|  
 |**포럼**|-   [Visual Studio 시각화 및 모델링 도구](http://go.microsoft.com/fwlink/?LinkId=184720)<br />-   [Visual Studio 시각화 및 모델링 SDK(DSL 도구)](http://go.microsoft.com/fwlink/?LinkId=184721)|  
   
-## <a name="see-also"></a>참고 항목  
- [코드 시각화](../modeling/visualize-code.md)   
- [개발 프로세스에서 모델을 사용 하 여](../modeling/use-models-in-your-development-process.md)   
- [Agile 개발에서 모델 사용](http://msdn.microsoft.com/en-us/592ac27c-3d3e-454a-9c38-b76658ed137f)   
- [개발하는 동안 시스템 유효성 검사](../modeling/validate-your-system-during-development.md)   
+## <a name="see-also"></a>참고 항목
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
+[코드 시각화](../modeling/visualize-code.md)   
+[개발 프로세스에서 모델을 사용 하 여](../modeling/use-models-in-your-development-process.md)   
+[Agile 개발에서 모델 사용](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)   
+[개발하는 동안 시스템 유효성 검사](../modeling/validate-your-system-during-development.md)
  

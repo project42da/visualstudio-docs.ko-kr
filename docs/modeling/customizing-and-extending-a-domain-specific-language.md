@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7c0ecd953a0a4cb744f726fc6a62bee564d15579
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 581d4e907185339aa16bacce19a9bf31ff4d121d
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="customizing-and-extending-a-domain-specific-language"></a>도메인별 언어 사용자 지정 및 확장
 Visual Studio 모델링 및 시각화 SDK (VMSDK)을 모델링 도구를 정의할 수 있습니다 하는 여러 개의 수준이 제공 합니다.  
@@ -55,7 +55,7 @@ Visual Studio 모델링 및 시각화 SDK (VMSDK)을 모델링 도구를 정의�
 |삭제, 부모를 재지정 또는 요소가 삭제 된 경우에 관련 된 요소를 다시 연결 합니다.|설정의 **삭제 전파** 값 관계 역할을 합니다. 더 복잡 한 효과 대 한 재정의 `ShouldVisitRelationship` 및 `ShouldVisitRolePlayer` 의 메서드는 `MyDslDeleteClosure` 에 정의 된 클래스 **DomainModel.cs**<br /><br /> 참조 [삭제 동작 사용자 지정](../modeling/customizing-deletion-behavior.md)|  
 |셰이프 레이아웃 및 모양을 복사 및 끌어서 놓기에 유지 합니다.|복사 된에 셰이프 및 연결선 추가 `ElementGroupPrototype`합니다. 재정의할 가장 편리한 방법은`ElementOperations.CreateElementGroupPrototype()`<br /><br /> 참조 [복사 동작 사용자 지정](../modeling/customizing-copy-behavior.md)합니다.|  
 |선택한 위치(예: 현재 커서 위치)에 모양을 붙여넣습니다.|재정의 `ClipboardCommandSet.ProcessOnCopy()` 위치별 버전을 사용 하도록 `ElementOperations.Merge().` 참조 [복사 동작을 사용자 지정](../modeling/customizing-copy-behavior.md)합니다.|  
-|붙여넣기 시 추가 링크를 만들려면|ClipboardCommandSet.ProcessOnPasteCommand() 재정의|  
+|붙여넣기 시 추가 링크를 만들려면|Override ClipboardCommandSet.ProcessOnPasteCommand()|  
 |사용에서에서 끌어서 놓기이 다이어그램에서 다른 Dsl 및 Windows 요소|참조 [하는 방법: 끌어서 놓기 처리기 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)|  
 |부모도 끌어 된 마치 도형 또는 도구는 포트 등의 하위 셰이프를 끌어 놓을 수를 허용 합니다.|대상 개체 클래스를 부모 개체를 전달할 수에 요소 병합 지시어를 정의 합니다. 참조 [요소 만들기 및 이동 사용자 지정](../modeling/customizing-element-creation-and-movement.md)합니다.|  
 |도형 또는 도구가 셰이프를 끌어 놓을 수 있는 추가 링크를 허용 또는 생성 된 개체입니다. 예를 들어 메모를을 연결 하는 항목을 끌어 놓을 수 있도록 합니다.|대상 도메인 클래스에는 요소 병합 지시어를 정의 하 고 생성에 대 한 링크를 정의 합니다. 복잡 한 경우에는 사용자 지정 코드를 추가할 수 있습니다. 참조 [요소 만들기 및 이동 사용자 지정](../modeling/customizing-element-creation-and-movement.md)합니다.|  
@@ -70,10 +70,10 @@ Visual Studio 모델링 및 시각화 SDK (VMSDK)을 모델링 도구를 정의�
 |한 응용 프로그램의 일부로 작동 되도록 여러 Dsl를 통합 합니다.|참조 [Visual Studio Modelbus를 사용 하 여 모델 통합](../modeling/integrating-models-by-using-visual-studio-modelbus.md)합니다.|  
 |제 3 자에서 확장 되어야 DSL 허용 하 고 확장을 제어 합니다.|[MEF를 사용하여 DSL 확장](../modeling/extend-your-dsl-by-using-mef.md)<br /><br /> [DSL 라이브러리를 사용하여 DSL 간에 클래스 공유](../modeling/sharing-classes-between-dsls-by-using-a-dsl-library.md)<br /><br /> [잠금 정책을 정의하여 읽기 전용 세그먼트 만들기](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)|
   
-## <a name="see-also"></a>참고 항목  
- [도메인 특정 언어를 정의 하는 방법](../modeling/how-to-define-a-domain-specific-language.md)   
- [도메인 특정 언어를 사용자 지정 하는 코드 작성](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
- [Visual Studio용 모델링 SDK - 도메인별 언어](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)  
+## <a name="see-also"></a>참고 항목
+
+[도메인 특정 언어를 정의 하는 방법](../modeling/how-to-define-a-domain-specific-language.md)   
+[도메인 특정 언어를 사용자 지정 하는 코드 작성](../modeling/writing-code-to-customise-a-domain-specific-language.md)   
+[Visual Studio용 모델링 SDK - 도메인별 언어](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md)  
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-

@@ -11,27 +11,29 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 16001ed6447f3dcfe649d0fe659c98d97b9e310c
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: be69cc9335480d901824ce8a4981728a34db6395
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="deploying-a-custom-directive-processor"></a>사용자 지정 지시문 처리기 배포
+
 사용자 지정 지시문 프로세서를 Visual Studio의 모든 컴퓨터에서를 사용 하려면이 항목에 설명 된 방법 중 하나에 의해 등록 해야 합니다.  
   
- 이러한 방법은 다음과 같습니다.  
+이러한 방법은 다음과 같습니다.  
   
--   [Visual Studio 확장 (VSIX)](http://msdn.microsoft.com/en-us/64ff1452-f7d5-42d9-98b8-76f769f76832)합니다. 자신이 사용하는 컴퓨터와 다른 컴퓨터 둘 다에 지시문 프로세서를 설치하고 제거하는 방법을 제공합니다. 일반적으로 동일한 VSIX에 다른 기능을 패키지할 수도 있습니다.  
+-   [Visual Studio 확장](../extensibility/shipping-visual-studio-extensions.md)합니다. 자신이 사용하는 컴퓨터와 다른 컴퓨터 둘 다에 지시문 프로세서를 설치하고 제거하는 방법을 제공합니다. 일반적으로 동일한 VSIX에 다른 기능을 패키지할 수도 있습니다.  
   
 -   [VSPackage](../extensibility/internals/vspackages.md)합니다. 지시문 프로세서 외에 다른 기능이 포함된 VSPackage를 정의하는 경우 지시문 프로세서를 등록하는 간편한 방법이 있습니다.  
   
 -   레지스트리 키 설정. 이 방법에서는 지시문 프로세서에 대한 레지스트리 항목을 추가합니다.  
   
- Visual Studio에서 텍스트 템플릿을 변형 하려는 경우에 이러한 방법 중 하나를 사용 해야 하거나 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]합니다. 응용 프로그램에서 사용자 지정 호스트를 사용하는 경우 사용자 지정 호스트는 각 지시문의 지시문 프로세서를 찾는 작업을 담당합니다.  
+Visual Studio 또는 MSBuild에서 텍스트 템플릿을 변형 하려는 경우에 이러한 방법 중 하나를 사용 해야 합니다. 응용 프로그램에서 사용자 지정 호스트를 사용하는 경우 사용자 지정 호스트는 각 지시문의 지시문 프로세서를 찾는 작업을 담당합니다.  
   
-## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX로 지시문 프로세서 배포  
- 사용자 지정 지시문 프로세서를 추가할 수는 [확장 VSIX (Visual Studio)](http://msdn.microsoft.com/en-us/64ff1452-f7d5-42d9-98b8-76f769f76832)합니다.  
+## <a name="deploying-a-directive-processor-in-a-vsix"></a>VSIX로 지시문 프로세서 배포
+
+사용자 지정 지시문 프로세서를 추가할 수는 [확장 VSIX (Visual Studio)](../extensibility/starting-to-develop-visual-studio-extensions.md)합니다.
   
  다음 두 항목이 .vsix 파일에 포함되어 있는지 확인해야 합니다.  
   
@@ -39,10 +41,10 @@ ms.lasthandoff: 01/13/2018
   
 -   지시문 프로세서를 등록하는 .pkgdef 파일. 이 파일의 루트 이름은 어셈블리와 동일해야 합니다. 예를 들어, 파일의 이름을 CDP.dll 및 CDP.pkgdef로 지정할 수 있습니다.  
   
- .vsix 파일의 내용을 검사하거나 변경하려면 파일 확장명을 .zip으로 변경한 다음 파일을 엽니다. 내용을 편집한 후 파일 이름을 다시 .vsix로 변경합니다.  
-  
- 여러 가지 방법으로 .vsix 파일을 만들 수 있습니다. 다음 절차에서는 한 가지 방법을 설명합니다.  
-  
+.vsix 파일의 내용을 검사하거나 변경하려면 파일 확장명을 .zip으로 변경한 다음 파일을 엽니다. 내용을 편집한 후 파일 이름을 다시 .vsix로 변경합니다.  
+
+여러 가지 방법으로 .vsix 파일을 만들 수 있습니다. 다음 절차에서는 한 가지 방법을 설명합니다.  
+
 #### <a name="to-develop-a-custom-directive-processor-in-a-vsix-project"></a>VSIX 프로젝트에서 사용자 지정 지시문 프로세서를 개발하려면  
   
 1.  Visual Studio에서 VSIX 프로젝트를 만듭니다.  
@@ -90,11 +92,11 @@ ms.lasthandoff: 01/13/2018
   
 5.  프로젝트에 다음 참조를 추가합니다.  
   
-    -   **Microsoft.VisualStudio.TextTemplating 합니다. \*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces입니다. \*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.VSHost 합니다. \*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.VSHost.\*.0**  
   
 6.  사용자 지정 지시문 프로세서 클래스를 프로젝트에 추가합니다.  
   
@@ -197,5 +199,6 @@ ms.lasthandoff: 01/13/2018
 |클래스|REG_SZ|\<**정규화 된 클래스 이름**>|  
 |Assembly|REG_SZ|\<**GAC에 어셈블리 이름**>|  
   
-## <a name="see-also"></a>참고 항목  
- [사용자 지정 T4 텍스트 템플릿 지시문 프로세서 만들기](../modeling/creating-custom-t4-text-template-directive-processors.md)
+## <a name="see-also"></a>참고 항목
+
+[사용자 지정 T4 텍스트 템플릿 지시문 프로세서 만들기](../modeling/creating-custom-t4-text-template-directive-processors.md)

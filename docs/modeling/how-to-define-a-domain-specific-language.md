@@ -19,27 +19,23 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: becfedc10f054c006709c3095f924b58c1ba5062
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 972fa76d83c9ecfbe9efb23897a6e0ec5928c35f
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>도메인별 언어 정의 방법
-DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션을 만듭니다. 이 솔루션의 중요한 요소는 DslDefinition.dsl에 저장되는 DSL 정의 다이어그램입니다. DSL 정의는 DSL의 클래스와 모양을 정의합니다. 이러한 요소를 수정하고 필요한 내용을 추가한 후에 프로그램 코드를 추가하여 DSL을 보다 자세하게 사용자 지정할 수 있습니다.  
-  
- Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL Tools 랩**,이 사이트에서 찾을 수 있는: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)  
+도메인 특정 언어 DSL ()를 정의 하려면 서식 파일에서 Visual Studio 솔루션을 만듭니다. 이 솔루션의 중요한 요소는 DslDefinition.dsl에 저장되는 DSL 정의 다이어그램입니다. DSL 정의는 DSL의 클래스와 모양을 정의합니다. 이러한 요소를 수정하고 필요한 내용을 추가한 후에 프로그램 코드를 추가하여 DSL을 보다 자세하게 사용자 지정할 수 있습니다.
 
+Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL Tools 랩**,이 사이트에서 찾을 수 있는: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
 
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
-
-  
 ##  <a name="templates"></a>서식 파일 솔루션 선택  
  DSL을 정의하려면 다음 구성 요소를 설치해야 합니다.  
   
 |||  
 |-|-|  
-|[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
+|Visual Studio|[http://go.microsoft.com/fwlink/?LinkId=185579](http://go.microsoft.com/fwlink/?LinkId=185579)|  
 |[!INCLUDE[vssdk_current_short](../modeling/includes/vssdk_current_short_md.md)]|[http://go.microsoft.com/fwlink/?LinkId=185580](http://go.microsoft.com/fwlink/?LinkId=185580)|  
 |Visual Studio Visualization and Modeling SDK||  
 
@@ -47,7 +43,7 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
   
- 새 DSL(Domain-Specific Language)을 만들려면 DSL 프로젝트 템플릿을 사용하여 새 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션을 만듭니다.  
+ 새 도메인 특정 언어를 만들려면 도메인 특정 언어 프로젝트 템플릿을 사용 하 여 새 Visual Studio 솔루션을 만들 수 있습니다.  
   
 #### <a name="to-create-a-dsl-solution"></a>DSL 솔루션을 만들려면  
   
@@ -98,17 +94,17 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
 ### <a name="test-the-solution"></a>솔루션 테스트  
  템플릿 솔루션에서 제공하는 작업 DSL을 수정하거나 그대로 사용할 수 있습니다.  
   
- 솔루션을 테스트하려면 F5 키나 Ctrl+F5를 누릅니다. 새 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스가 실험적 모드에서 열립니다.  
+ 솔루션을 테스트하려면 F5 키나 Ctrl+F5를 누릅니다. Visual Studio의 새 인스턴스 실험적 모드에서 열립니다.  
   
- 새 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스의 솔루션 탐색기에서 샘플 파일을 엽니다. 샘플 파일은 도구 상자가 포함된 다이어그램으로 열립니다.  
+ 솔루션 탐색기에서 Visual Studio의 새 인스턴스에서 샘플 파일을 엽니다. 샘플 파일은 도구 상자가 포함된 다이어그램으로 열립니다.  
   
- 만들고 있는 솔루션을 실행 하는 경우는 **최소 언어** 서식 파일, 프로그램 실험적 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 다음 예와 비슷하게 표시 됩니다.  
+ 만든 하는 솔루션을 실행 하는 경우는 **최소 언어** 서식 파일을 Visual Studio 실험적 다음 예와 비슷하게 표시 됩니다.  
   
  ![](../modeling/media/dsl_min.png "DSL_min")  
   
  도구를 사용해 보고 요소를 만들어 서로 연결합니다.  
   
- 실험적 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스를 닫습니다.  
+ Visual Studio의 실험적 인스턴스를 닫습니다.  
   
 > [!NOTE]
 >  DSL을 수정하면 샘플 테스트 파일에 모양이 더 이상 표시되지 않습니다. 그러나 새 요소를 만들 수는 있습니다.  
@@ -217,11 +213,11 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
   
 ##### <a name="to-test-the-new-domain-classes"></a>새 도메인 클래스를 테스트하려면  
   
-1.  **모든 템플릿 변형 클릭** DSL 디자이너 코드를 생성 하려면 솔루션 탐색기의 도구 모음에서입니다. 이 단계는 자동화할 수 있습니다. 자세한 내용은 참조 [모든 템플릿 변형를 자동화 하는 방법을](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)합니다.  
+1.  **모든 템플릿 변형 클릭** DSL 디자이너 코드를 생성 하려면 솔루션 탐색기의 도구 모음에서입니다. 이 단계는 자동화할 수 있습니다. 자세한 내용은 참조 [모든 템플릿 변형를 자동화 하는 방법을](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)합니다.
   
-2.  **빌드하고 DSL를 실행 합니다.** 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 눌러 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험적 모드에 있습니다. 실험적 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스에서 DSL의 파일 이름 확장명이 지정된 파일을 열거나 만듭니다.  
+2.  **빌드하고 DSL를 실행 합니다.** 실험적 모드에서 Visual Studio의 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 누릅니다. Visual Studio의 실험적 인스턴스에서 열거나 DSL의 파일 이름 확장명을 가진 파일을 만듭니다.  
   
-3.  **탐색기를 엽니다.** 에 다이어그램의 측면은 일반적으로 이름으로 지정 된 언어 탐색기 창 *YourLanguage* 탐색기. 이 창이 표시되지 않으면 솔루션 탐색기 아래쪽의 탭에 있을 수 있습니다. 이 찾을 수 없는 경우는 **보기** 메뉴에서 **다른 창**, 클릭 하 고 * YourLanguage ***탐색기**합니다.  
+3.  **탐색기를 엽니다.** 에 다이어그램의 측면은 일반적으로 이름으로 지정 된 언어 탐색기 창 *YourLanguage* 탐색기. 이 창이 표시되지 않으면 솔루션 탐색기 아래쪽의 탭에 있을 수 있습니다. 이 찾을 수 없는 경우는 **보기** 메뉴에서 **다른 창**, 클릭 하 고 *YourLanguage* **탐색기**합니다.  
   
      탐색기에 모델의 트리 뷰가 표시됩니다.  
   
@@ -317,7 +313,7 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
   
 1.  **모든 템플릿 변형 클릭** DSL 디자이너 코드를 생성 하려면 솔루션 탐색기의 도구 모음에서입니다.  
   
-2.  **빌드하고 DSL를 실행 합니다.** 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 눌러 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험적 모드에 있습니다. 실험적 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스에서 DSL의 파일 이름 확장명이 지정된 파일을 열거나 만듭니다.  
+2.  **빌드하고 DSL를 실행 합니다.** 실험적 모드에서 Visual Studio의 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 누릅니다. Visual Studio의 실험적 인스턴스에서 열거나 DSL의 파일 이름 확장명을 가진 파일을 만듭니다.  
   
 3.  **요소 도구 도구 상자에 표시 되는지 확인 합니다.**  
   
@@ -393,7 +389,7 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
   
 1.  **모든 템플릿 변형 클릭** DSL 디자이너 코드를 생성 하려면 솔루션 탐색기의 도구 모음에서입니다.  
   
-2.  **빌드하고 DSL를 실행 합니다.** 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 눌러 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험적 모드에 있습니다. 실험적 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스에서 DSL의 파일 이름 확장명이 지정된 파일을 열거나 만듭니다.  
+2.  **빌드하고 DSL를 실행 합니다.** 실험적 모드에서 Visual Studio의 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 누릅니다. Visual Studio의 실험적 인스턴스에서 열거나 DSL의 파일 이름 확장명을 가진 파일을 만듭니다.  
   
 3.  **연결 도구를 도구 상자에 나타나는지 확인 합니다.**  
   
@@ -494,7 +490,7 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
   
 1.  **모든 템플릿 변형 클릭** DSL 디자이너 코드를 생성 하려면 솔루션 탐색기의 도구 모음에서입니다.  
   
-2.  **빌드하고 DSL를 실행 합니다.** 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 눌러 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험적 모드에 있습니다. 실험적 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인스턴스에서 DSL의 파일 이름 확장명이 지정된 파일을 열거나 만듭니다.  
+2.  **빌드하고 DSL를 실행 합니다.** 실험적 모드에서 Visual Studio의 새 인스턴스를 실행 하려면 F5 또는 CTRL + f 5를 누릅니다. Visual Studio의 실험적 인스턴스에서 열거나 DSL의 파일 이름 확장명을 가진 파일을 만듭니다.  
   
 3.  **이 도구를 도구 상자에 나타나는지 확인 합니다.**  
   
@@ -623,12 +619,10 @@ DSL(Domain-Specific Language)을 정의하려면 템플릿에서 [!INCLUDE[vsprv
 |DSL 탐색기에는 요소와 형식 이름만 표시됩니다.|DSL 정의에서 클래스의 도메인 속성을 선택 하 고 속성 창의 설정 **은 요소 이름** true로 합니다.|  
 |DSL이 항상 XML 편집기에서 열립니다.|파일을 읽는 동안 오류가 발생하면 이러한 현상이 발생할 수 있습니다. 그러나 해당 오류를 해결한 후에도 명시적으로 편집기를 DSL 디자이너로 다시 설정해야 합니다.<br /><br /> 프로젝트 항목을 마우스 오른쪽 단추로 클릭 하 여, **프로그램** 선택 * YourLanguage ***디자이너 (기본값)**합니다.|  
 |어셈블리 이름을 변경한 후 DSL의 도구 상자가 표시되지 않습니다.|검사 하 고 업데이트 **DslPackage\GeneratedCode\Package.tt** 자세한 내용은 참조 [하는 방법: 도메인 특정 언어의 Namespace 변경](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)합니다.|  
-|어셈블리 이름을 변경하지 않았는데 DSL의 도구 상자가 표시되지 않습니다.<br /><br /> 또는 확장을 로드하지 못했음을 보고하는 메시지 상자가 표시됩니다.|실험적 인스턴스를 다시 설정하고 솔루션을 다시 빌드합니다.<br /><br /> 1.  Windows 시작 메뉴, 아래에서 **모든 프로그램**를 확장 하 고 [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)], 다음 **도구**, 클릭 하 고 **Microsoft Visual Studio 실험적 인스턴스를 다시 설정**합니다.<br />2.  에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **빌드** 메뉴를 클릭 하 여 **솔루션 다시 빌드**합니다.|  
+|어셈블리 이름을 변경하지 않았는데 DSL의 도구 상자가 표시되지 않습니다.<br /><br /> 또는 확장을 로드하지 못했음을 보고하는 메시지 상자가 표시됩니다.|실험적 인스턴스를 다시 설정하고 솔루션을 다시 빌드합니다.<br /><br /> 1.  Windows 시작 메뉴, 아래에서 **모든 프로그램**를 확장 하 고 [!INCLUDE[vssdk_current_long](../misc/includes/vssdk_current_long_md.md)], 다음 **도구**, 클릭 하 고 **Microsoft Visual Studio 실험적 인스턴스를 다시 설정**합니다.<br />2.  Visual Studio에서**빌드** 메뉴를 클릭 하 여 **솔루션 다시 빌드**합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [도메인 특정 언어를 시작 하기](../modeling/getting-started-with-domain-specific-languages.md)   
  [Windows Forms 기반 도메인 특정 언어 만들기](../modeling/creating-a-windows-forms-based-domain-specific-language.md)   
  [WPF 기반 도메인별 언어 만들기](../modeling/creating-a-wpf-based-domain-specific-language.md)
-
-[!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 

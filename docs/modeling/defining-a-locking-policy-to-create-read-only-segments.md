@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 1b26da119360462c5237977a1b1da8ac5041d84a
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 6848f2c0b6c8d25fe7964fdb5519aa3f075bde57
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>잠금 정책을 정의하여 읽기 전용 세그먼트 만들기
 불변성 API는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK 프로그램 잠금 일부 또는 전체 도메인 특정 언어 (DSL) 모델을 읽을 있지만 변경 되지 않습니다 수 있도록 허용 합니다. 이 읽기 전용 옵션이 사용할 수, 예를 들어 사용자가 동료 들이 주석 달기 및 DSL 모델 검토를 요청할 수 있지만가 원래 변경할 거부할 수 있도록 합니다.  
@@ -24,7 +24,7 @@ ms.lasthandoff: 01/13/2018
 > [!NOTE]
 >  리플렉션을 사용 하 여 잠금 정책을 우회할 수 있습니다. 이 다른 공급 업체의 개발자는 명확한 경계를 제공 하지만 강력한 보안을 제공 하지 않습니다.  
   
- 자세한 내용과 샘플에서 사용할 수 있는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkId=186128) 웹 사이트입니다.  
+ 자세한 내용 및 예제는 Visual Studio에서 사용할 수 있는 [Visualization and Modeling SDK](https://code.msdn.microsoft.com/Visualization-and-Modeling-313535db) 웹 사이트입니다.
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
   
@@ -85,7 +85,7 @@ partition.SetLocks(Locks.Delete);
 |이동|요소 경우 파티션 간에 이동할 수 없습니다 `element.IsLocked(Move)` 가 true 인 경우 `targetPartition.IsLocked(Move)` 가 true입니다.|  
 |삭제|이 잠금은 요소 자체에 설정 되거나 있는 요소 중 하나에서 삭제 전파, 포함 된 요소 및 모양과 같은 요소를 삭제할 수 없습니다.<br /><br /> 사용할 수 있습니다 `element.CanDelete()` 요소를 삭제할 수 있는지 여부를 검색 합니다.|  
 |순서 변경|에 한 roleplayer 링크의 순서를 변경할 수 없습니다.|  
-|한 RolePlayer|이 요소에서 생성 되는 링크의 집합을 변경할 수 없습니다. 예를 들어,이 요소 아래에 새 요소를 포함할 수 없습니다. 이 요소는 대상 링크는 영향을 주지 않습니다.<br /><br /> 이 요소는 링크를 해당 원본과 대상 영향 받지 않습니다.|  
+|RolePlayer|이 요소에서 생성 되는 링크의 집합을 변경할 수 없습니다. 예를 들어,이 요소 아래에 새 요소를 포함할 수 없습니다. 이 요소는 대상 링크는 영향을 주지 않습니다.<br /><br /> 이 요소는 링크를 해당 원본과 대상 영향 받지 않습니다.|  
 |모두|다른 값의 비트 Or입니다.|  
   
 ## <a name="locking-policies"></a>잠금 정책  

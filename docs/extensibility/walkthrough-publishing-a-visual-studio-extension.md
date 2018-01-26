@@ -16,11 +16,11 @@ author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload: vssdk
-ms.openlocfilehash: 9b2823c15309e63262052fd3cc95d914bf1614c4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: be1402da1677388712472d4309c40ce767358f7b
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension"></a>연습: Visual Studio 확장 게시
 
@@ -70,9 +70,7 @@ ms.lasthandoff: 12/22/2017
 
   ![마켓플레이스로 업로드](media/upload-to-marketplace.png)
 
-6. 확장을 업로드 하는 데 사용할 게시자를 선택 합니다.  왼쪽 위 모서리에서 게시자 이름을 클릭 하 여 게시자를 변경할 수 있습니다.
-
-  ![변경 마켓플레이스 게시자](media/change-marketplace-publisher.png)
+6. 확장을 업로드 하는 데 사용할 게시자를 선택 합니다.  왼쪽에 나열 된 게시자 이름을 클릭 하 여 게시자를 변경할 수 있습니다.  클릭 **새 확장** 선택 **Visual Studio**합니다.
 
 7. **1: 확장 업로드**를 자신의 웹 사이트에 링크를 추가 하거나 Visual Studio 마켓플레이스에 직접 VSIX 파일을 업로드 하도록 선택할 수 있습니다. 이 경우 TestPublish.vsix 우리의 확장을 업로드 합니다.  끌어 및 확장 프로그램을 삭제 하거나 사용는 **클릭** 링크는 파일을 찾아봅니다.  확장 프로그램 프로젝트의 \bin\Release 폴더에서 찾을 수 있습니다.  **계속**을 클릭합니다.
 
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/22/2017
     
     * **VSIX ID** 확장 프로그램에 대 한 Visual Studio를 사용 하는 고유 식별자입니다.  자동 업데이트 될 확장 프로그램을 원하는 경우 이것이 필요 합니다.  이 자동으로 채워진에서 source.extension.vsixmanifest 파일입니다.
     
-    * **로고** 확장 프로그램에 대해 사용 되는 합니다.  제공 된 경우 source.extension.vsixmanifest 파일에서 자동으로 채워진 수 있습니다.
+   * **로고** 확장 프로그램에 대해 사용 되는 합니다.  제공 된 경우 source.extension.vsixmanifest 파일에서 자동으로 채워진 수 있습니다.
     
     * **간단한 설명** 확장 프로그램에서 수행 하는 작업입니다.  Source.extension.vsixmanifest 파일에서 자동으로 채워진 수 있습니다.
     
@@ -108,12 +106,32 @@ ms.lasthandoff: 12/22/2017
     
     * **확장 프로그램에 대 한 질문 및 답변 허용** 사용자 확장 항목 페이지에서 질문을 종료할 수 있습니다.
 
-9. 클릭 **저장 후 업로드**합니다. 그러면 게시자에 다시 관리 페이지입니다.  확장 아직 게시 되지 않았습니다.  확장 프로그램 항목을 통해 확장 가리키기 게시에서 클릭 **...**  차례로 **공용으로 설정**합니다.  어떻게 확장 버리면 마켓플레이스에서 선택 하 여 볼 수 있습니다 **세부 정보를 볼**합니다.  인수 번호에 대 한 클릭 **보고서**합니다.  확장 프로그램을 변경 하려면 클릭 **편집*합니다.
+9. 클릭 **저장 후 업로드**합니다. 그러면 게시자에 다시 관리 페이지입니다.  확장 아직 게시 되지 않았습니다.  확장 프로그램을 게시 하려면 단추로 클릭 하 여 확장 고 **공개**합니다.  어떻게 확장 버리면 마켓플레이스에서 선택 하 여 볼 수 있습니다 **보기 확장**합니다.  인수 번호에 대 한 클릭 **보고서**합니다.  확장 프로그램을 변경 하려면 클릭 **편집*합니다.
 
   ![확장 항목 메뉴](media/extension-entry-menu.png)
 
 10. 클릭 한 후 **공개**, 확장 프로그램는 현재 공용입니다.  확장 프로그램에 대 한 Visual Studio 마켓플레이스를 검색 합니다.
 
+## <a name="add-additional-users-to-manage-your-publisher-account"></a>게시자 계정을 관리 하는 추가 사용자를 추가 합니다.
+
+마켓플레이스 추가 사용자에 게 액세스 하 고 게시자 계정 관리에 대 한 권한 부여를 지원 합니다.
+
+1. 사용자가 더 추가 하려면 게시자 계정으로 이동 합니다.
+
+2. 선택 **멤버** 을 클릭할 **추가**
+
+  ![추가 사용자를 추가 합니다.](media/add-users.png)
+
+3. 추가 하 고 적절 한 수준의 액세스를 부여 하려면 사용자의 전자 메일 주소를 지정할 수 있습니다 **역할 선택**합니다.  다음 중에서 선택할 수 있습니다.
+
+  * **Creator**: 사용자 확장을 게시 하지만 없습니다 보거나 관리할 수 있는 다른 사용자가 게시 된 확장이 있습니다.
+  
+  * **판독기**: 사용자 확장 하지만 없습니다 게시 보거나 관리할 수 있는 확장 합니다.
+  
+  * **참가자**: 사용자 수를 게시 및 확장을 관리 하지만 없습니다 게시자 설정을 편집 또는 관리 액세스 합니다.
+  
+  * **소유자**: 사용자 수 게시 및 확장을 관리, 게시자 설정을 편집 및 액세스를 관리 합니다.
+  
 ## <a name="install-the-extension-from-the-visual-studio-marketplace"></a>Visual Studio 마켓플레이스에서 확장을 설치 합니다.
 
 확장을 게시 했으므로 Visual Studio에서 설치 하 고 테스트할 수 있습니다.
@@ -126,7 +144,7 @@ ms.lasthandoff: 12/22/2017
 
 4. 설치를 완료 하려면 Visual Studio의 모든 인스턴스를 닫습니다.
 
-## <a name="removing-the-extension"></a>확장 제거
+## <a name="remove-the-extension"></a>확장 제거
 
 Visual Studio 마켓플레이스 및 컴퓨터에서 확장을 제거할 수 있습니다.
 
@@ -136,7 +154,7 @@ Visual Studio 마켓플레이스 및 컴퓨터에서 확장을 제거할 수 있
 
 2. 오른쪽 상단 모서리에서 클릭 **게시** 확장 합니다.  TestPublish 게시 하는 데 사용 된 게시자를 선택 합니다.  TestPublish 목록이 표시 됩니다.
 
-3. 확장 프로그램 항목 위로 마우스를 가져가고을 클릭할 **...**  및 **제거 중...** 확장을 제거할 것인지 확인 해야 합니다.  **확인**을 클릭합니다.
+3. 확장 프로그램 항목을 마우스 오른쪽 단추로 클릭 하 고 클릭 **제거** 확장을 제거할 것인지 확인 해야 합니다.  **확인**을 클릭합니다.
 
 ### <a name="to-remove-the-extension-from-your-computer"></a>컴퓨터에서 확장을 제거 하려면
 

@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7c1a163e50e2f237430ba13d57a76cfc0d6b1d67
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 1fcba975443deb768a2b3de36bd2744183cdcf40
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>도메인별 언어 도구 개요
 도메인 특정 언어 도구 (DSL 도구)에서 호스팅되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]사용 도메인 특정 언어를 디자인 하 고 다음 사용자의 언어를 기반으로 하는 모델을 만들 수 있어야 하는 모든 항목을 생성 합니다.  
@@ -43,7 +43,7 @@ ms.lasthandoff: 01/13/2018
   
 -   최소한의 WPF  
   
--   최소 Windows.Forms  
+-   Minimal Windows.Forms  
   
 -   DSL 라이브러리  
   
@@ -77,4 +77,4 @@ ms.lasthandoff: 01/13/2018
   
 ## <a name="see-also"></a>참고 항목  
  [실험적 인스턴스](../extensibility/the-experimental-instance.md)   
- [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

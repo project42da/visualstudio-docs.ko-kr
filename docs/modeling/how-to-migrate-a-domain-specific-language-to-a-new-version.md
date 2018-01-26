@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: e15efdb40b21b187dfc8bec543fc48c91f9efcf6
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 7578426058c5e41bb6507c044be411348c42d050
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-migrate-a-domain-specific-language-to-a-new-version"></a>방법: 도메인별 언어를 새 버전으로 마이그레이션
 정의 하 고 도메인 특정 언어를 사용 하는 프로젝트를 마이그레이션할 수 있습니다 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 버전의 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 하는 배포 된 [!INCLUDE[vs_orcas_long](../debugger/includes/vs_orcas_long_md.md)]합니다.  
@@ -23,7 +23,7 @@ ms.lasthandoff: 01/13/2018
   
  마이그레이션 도구를 명시적으로 실행 해야 합니다:에서 솔루션을 열 때 자동으로 시작 되지 않은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 도구 및 자세한 지침 문서가이 경로에서 찾을 수 있습니다.  
   
- **% Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
+ **%Program Files%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
   
 ## <a name="before-you-migrate-your-dsl-projects"></a>DSL 프로젝트를 마이그레이션하기 전에  
  마이그레이션 도구 수정 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 파일 (**.csproj**) 및 솔루션 파일 (**.sln**).  
@@ -42,7 +42,7 @@ ms.lasthandoff: 01/13/2018
   
     -   Windows 탐색기 (또는 파일 탐색기)에 포함 된 도구를 두 번 클릭 하거나 명령 프롬프트에서 도구를 시작할 수 있습니다. 이 도구는이 위치에서:  
   
-         **%ProgramFiles%\Microsoft visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
+         **%ProgramFiles%\Microsoft Visual Studio 2010 SDK\VisualStudioIntegration\Tools\DSLTools\DslProjectsMigrationTool.exe**  
   
 2.  솔루션 및 프로젝트를 변환 하려면 포함 된 폴더를 선택 합니다.  
   
@@ -76,7 +76,7 @@ ms.lasthandoff: 01/13/2018
     2.  클릭는 **모든 템플릿 변형** 솔루션 탐색기의 헤더에는 단추입니다.  
   
         > [!NOTE]
-        >  이 단계는 불필요 한으로 만들 수 있습니다. 자세한 내용은 참조 [모든 템플릿 변형를 자동화 하는 방법을](http://msdn.microsoft.com/en-us/b63cfe20-fe5e-47cc-9506-59b29bca768a)합니다.  
+        >  이 단계는 불필요 한으로 만들 수 있습니다. 자세한 내용은 참조 [모든 템플릿 변형를 자동화 하는 방법을](http://msdn.microsoft.com/b63cfe20-fe5e-47cc-9506-59b29bca768a)합니다.  
   
 6.  변환 된 프로젝트에 사용자 지정 코드를 업데이트 합니다.  
   

@@ -13,13 +13,14 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 0ffbfd6da8abb0063ed16d7956bcec97626c9666
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 495e226a16e94dbe87584c54fa317ccb0ab84482
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="model-user-requirements"></a>사용자 요구 사항 모델링
+
 Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수행하는 작업에 대한 다이어그램을 그려 사용자 요구 사항을 이해, 논의 및 전달할 수 있도록 도와줍니다. 요구 사항 모델은 각각 사용자 요구의 다른 측면에 중점을 두는 다이어그램 집합입니다. 비디오 데모는 [비즈니스 도메인 모델링](http://channel9.msdn.com/posts/clinted/UML-with-VS-2010-Part-3-Modeling-the-Business-Domain/)을 참조하세요.  
   
  각 모델 형식을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)를 참조하세요.  
@@ -43,10 +44,11 @@ Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수�
  요구 사항 모델은 사용자 또는 해당 담당자와 논의에 집중하는 데 사용하고 반복을 시작할 때마다 다시 살펴보는 경우에 가장 큰 혜택을 제공합니다. 코드를 작성하기 전에 자세히 완료할 필요는 없습니다. 일반적으로 훨씬 간소화된 경우에도 부분적으로 작동하는 응용 프로그램이 사용자와 요구 사항을 논의하는 데 가장 효율적인 기초가 됩니다. 모델은 이러한 논의의 결과를 요약하는 효과적인 방법입니다. 자세한 내용은 참조 [개발 프로세스에서 모델을 사용 하 여](../modeling/use-models-in-your-development-process.md)합니다.  
   
 > [!NOTE]
->  이러한 항목 전체에서 "시스템"은 개발 중인 시스템 또는 응용 프로그램을 의미합니다. 다양한 소프트웨어 및 하드웨어 구성 요소의 큰 컬렉션이거나, 단일 응용 프로그램이거나, 큰 시스템 내의 소프트웨어 구성 요소일 수 있습니다. 어떤 경우에든, 요구 사항 모델은 사용자 인터페이스 또는 API를 통해 시스템 외부에서 표시되는 동작을 설명합니다.  
+> 이러한 항목 전체에서 "시스템"은 개발 중인 시스템 또는 응용 프로그램을 의미합니다. 다양한 소프트웨어 및 하드웨어 구성 요소의 큰 컬렉션이거나, 단일 응용 프로그램이거나, 큰 시스템 내의 소프트웨어 구성 요소일 수 있습니다. 어떤 경우에든, 요구 사항 모델은 사용자 인터페이스 또는 API를 통해 시스템 외부에서 표시되는 동작을 설명합니다.  
   
-## <a name="common-tasks"></a>일반 작업  
- 사용자 요구 사항의 여러 가지 뷰를 만들 수 있습니다.  각 뷰는 특정 유형의 정보를 제공합니다.  이러한 뷰를 만들 때는 뷰 간에 자주 이동하는 것이 좋습니다. 임의 뷰에서 시작할 수 있습니다.  
+## <a name="common-tasks"></a>일반 작업
+
+사용자 요구 사항의 여러 가지 뷰를 만들 수 있습니다.  각 뷰는 특정 유형의 정보를 제공합니다.  이러한 뷰를 만들 때는 뷰 간에 자주 이동하는 것이 좋습니다. 임의 뷰에서 시작할 수 있습니다.  
   
 |다이어그램 또는 문서|요구 사항 모델에서 설명하는 항목|단원|  
 |-------------------------|-----------------------------------------------|-------------|  
@@ -56,8 +58,9 @@ Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수�
   
  대부분의 다이어그램 형식은 다른 용도로 사용할 수 있습니다. 다이어그램 유형에 대 한 개요를 참조 하십시오. [앱에 대 한 모델을 만들](../modeling/create-models-for-your-app.md)합니다.
   
-##  <a name="BusinessRules"></a> Showing Business Rules  
- 비즈니스 규칙은 특정 사용 사례와 연결되지 않은 요구 사항이며 시스템 전체에서 관찰되어야 합니다.  
+##  <a name="BusinessRules"></a> Showing Business Rules
+
+비즈니스 규칙은 특정 사용 사례와 연결되지 않은 요구 사항이며 시스템 전체에서 관찰되어야 합니다.  
   
  대부분의 비즈니스 규칙은 개념적 클래스 간의 관계에 대한 제약 조건입니다. 이 작성할 수 있습니다 *정적 * * 비즈니스 규칙* 개념적 클래스 다이어그램에 관련 클래스와 연결 된 주석으로 합니다. 예:  
   
@@ -75,8 +78,9 @@ Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수�
 |--------------------|----------|  
 |비즈니스 규칙을 준수하는 코드를 개발하는 방법|[앱의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md)|  
   
-##  <a name="QoSRequirements"></a> Describing Quality of Service Requirements  
- 여러 범주의 서비스 품질 요구 사항이 있습니다. 이러한 형식은 다음과 같습니다.  
+##  <a name="QoSRequirements"></a> Describing Quality of Service Requirements
+
+여러 범주의 서비스 품질 요구 사항이 있습니다. 이러한 형식은 다음과 같습니다.  
   
 -   성능  
   
@@ -88,17 +92,13 @@ Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수�
   
 -   견고성  
   
- 특정 사용 사례의 설명에 이러한 요구 사항 중 일부를 포함할 수 있습니다. 기타 요구 사항은 사용 사례와 관련이 없으며 별도 문서에 작성하는 것이 가장 효과적입니다. 가능하면 요구 사항 모델에서 정의된 어휘를 준수하는 것이 유용합니다. 다음 예제에서는 요구 사항에 사용된 주요 단어가 위 그림에서 행위자, 사용 사례 및 클래스의 제목입니다.  
-  
- 고객이 음식을 주문하는 동안 식당이 메뉴 항목을 삭제하는 경우 해당 메뉴 항목을 참조하는 주문 항목은 모두 빨간색으로 표시됩니다.  
-  
- 자세한 내용은 다음 항목을 참조하세요.  
-  
-|자세한 정보|읽기|  
-|--------------------|----------|  
-|서비스 품질 요구 사항을 기록하는 방법에 대한 자세한 정보|[서비스 품질 요구 사항 정의 지침](http://msdn.microsoft.com/en-us/9677a437-c2cb-4ac4-8c2d-4e3350005f06)|  
-|서비스 품질 요구 사항을 준수하는 코드를 개발하는 방법|[앱의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md)|  
-  
-## <a name="see-also"></a>참고 항목  
- [개발 프로세스에서 모델을 사용 하 여](../modeling/use-models-in-your-development-process.md)   
- [앱의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md)   
+특정 사용 사례의 설명에 이러한 요구 사항 중 일부를 포함할 수 있습니다. 기타 요구 사항은 사용 사례와 관련이 없으며 별도 문서에 작성하는 것이 가장 효과적입니다. 가능하면 요구 사항 모델에서 정의된 어휘를 준수하는 것이 유용합니다. 다음 예제에서는 요구 사항에 사용된 주요 단어가 위 그림에서 행위자, 사용 사례 및 클래스의 제목입니다.
+
+고객이 음식을 주문하는 동안 식당이 메뉴 항목을 삭제하는 경우 해당 메뉴 항목을 참조하는 주문 항목은 모두 빨간색으로 표시됩니다.
+
+참조 [응용 프로그램의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md) 서비스 품질 요구 사항 준수 하는 코드를 개발 하는 방법을 배울 수 있습니다.
+
+## <a name="see-also"></a>참고 항목
+
+[개발 프로세스에서 모델 사용](../modeling/use-models-in-your-development-process.md)  
+[앱의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md)

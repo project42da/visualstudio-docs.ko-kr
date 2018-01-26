@@ -11,22 +11,24 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: f851f98fca98af8dfc95160f244c59cc0645a805
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 66b4c44a79446aacc56761b6b565d8c979d007f7
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="text-template-utility-methods"></a>텍스트 템플릿 유틸리티 메서드
-코드를 작성할 때 항상 사용할 수 있는 여러 가지가 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 텍스트 템플릿. 에 정의 된 이러한 메서드가 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>합니다.  
-  
+
+Visual Studio 텍스트 템플릿의 코드를 작성할 때 항상 사용할 수 있는 방법은 여러 가지가 있습니다. 에 정의 된 이러한 메서드가 <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation>합니다.
+
 > [!TIP]
->  또한 다른 메서드 및 일반 하지 전처리 된 텍스트 템플릿의 호스트 환경에서 제공 하는 서비스를 사용할 수 있습니다. 예를 들어 파일 경로 확인, 오류를 기록할를 가져올 수 제공한 서비스 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 로드 된 패키지 및 합니다.  자세한 내용은 참조 [텍스트 템플릿에서 Visual Studio에 액세스](http://msdn.microsoft.com/en-us/0556f20c-fef4-41a9-9597-53afab4ab9e4)합니다.  
+> 또한 다른 메서드 및 일반 하지 전처리 된 텍스트 템플릿의 호스트 환경에서 제공 하는 서비스를 사용할 수 있습니다. 예를 들어 파일 경로 확인, 오류를 기록할 수 있고 Visual Studio에서 제공 되는 서비스를 가져올 패키지를 로드 합니다. 자세한 내용은 참조 [텍스트 템플릿에서 Visual Studio에 액세스](http://msdn.microsoft.com/0556f20c-fef4-41a9-9597-53afab4ab9e4)합니다.
   
-## <a name="write-methods"></a>Write 메서드  
- 사용할 수는 `Write()` 및 `WriteLine()` 식 코드 블록을 사용 하는 대신 표준 코드 블록 내에 텍스트를 추가 하는 메서드. 다음 두 코드 블록은 기능적으로 같습니다.  
+## <a name="write-methods"></a>Write 메서드
+
+사용할 수는 `Write()` 및 `WriteLine()` 식 코드 블록을 사용 하는 대신 표준 코드 블록 내에 텍스트를 추가 하는 메서드. 다음 두 코드 블록은 기능적으로 같습니다.  
   
-##### <a name="code-block-with-an-expression-block"></a>식 블록으로 코드 블록  
+### <a name="code-block-with-an-expression-block"></a>식 블록으로 코드 블록  
   
 ```  
 <#  
@@ -38,7 +40,7 @@ while (i-- > 0)
 #>  
 ```  
   
-##### <a name="code-block-using-writeline"></a>WriteLine()를 사용 하 여 코드 블록  
+### <a name="code-block-using-writeline"></a>WriteLine()를 사용 하 여 코드 블록  
   
 ```  
 <#   
@@ -66,7 +68,8 @@ while (i-- > 0)
 #>   
 ```  
   
-## <a name="indentation-methods"></a>들여쓰기 메서드  
+## <a name="indentation-methods"></a>들여쓰기 메서드
+
  텍스트 서식 파일의 출력 형식을 들여쓰기 메서드를 사용할 수 있습니다. <xref:Microsoft.VisualStudio.TextTemplating.TextTransformation> 클래스에는 `CurrentIndent` 문자열 텍스트 템플릿에 현재 들여쓰기를 보여 주는 속성 및 `indentLengths` 필드 추가 된 들여쓰기의 목록입니다. 사용 하 여 들여쓰기를 추가할 수는 `PushIndent()` 메서드를 사용 하 여 들여쓰기 뺍니다는 `PopIndent()` 메서드. 모든 들여쓰기를 제거 하려는 경우 사용 하 여는 `ClearIndent()` 메서드. 다음 코드 블록에서는 이러한 메서드의 사용을 보여 줍니다.  
   
 ```  
@@ -94,7 +97,7 @@ Hello
 ```  
   
 ## <a name="error-and-warning-methods"></a>오류 및 경고 메서드  
- 오류 및 경고 유틸리티 메서드를 사용 하 여 메시지를 추가 하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 오류 목록입니다. 예를 들어 다음 코드는 오류 목록에는 오류 메시지를 추가 합니다.  
+ Visual Studio 오류 목록에 메시지를 추가할 오류 및 경고 유틸리티 메서드를 사용할 수 있습니다. 예를 들어 다음 코드는 오류 목록에는 오류 메시지를 추가 합니다.  
   
 ```  
 <#  
@@ -115,7 +118,7 @@ Hello
   
  `<#@template ... hostspecific="true" #>`  
   
- 유형의 `this.Host` 템플릿이 실행 되는 호스트의 형식에 따라 달라 집니다. 실행 되는 서식 파일에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 캐스팅할 수 있습니다 `this.Host` 를 `IServiceProvider` IDE와 같은 서비스에 대 한 액세스 권한을 얻으려고 합니다. 예:  
+ 유형의 `this.Host` 템플릿이 실행 되는 호스트의 형식에 따라 달라 집니다. Visual Studio에서 실행 되는 서식 파일에서 캐스팅할 수 있습니다 `this.Host` 를 `IServiceProvider` IDE와 같은 서비스에 대 한 액세스 권한을 얻으려고 합니다. 예:  
   
 ```  
 EnvDTE.DTE dte = (EnvDTE.DTE) ((IServiceProvider) this.Host)  

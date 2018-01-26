@@ -13,11 +13,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: fe3d624fdfd187ebec59f43fbde8c750958d6703
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0d610a7410232104428281d90bf7c67992e2a378
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="debugging-xslt"></a>XSLT 디버깅
 Visual Studio 디버거를 사용하여 XSLT를 디버깅할 수 있습니다. 이 디버거에서는 중단점 설정, XSLT 실행 상태 보기 등을 지원합니다. Visual Studio 팀 시스템 및 Professional Edition에서 XSLT를 디버깅할 수 있습니다.  
@@ -57,5 +57,5 @@ Visual Studio 디버거를 사용하여 XSLT를 디버깅할 수 있습니다. �
  [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)  
  Visual Studio 디버거를 소개합니다.  
   
- [XSLT 참조](http://msdn.microsoft.com/en-us/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)  
+ [XSLT 참조](http://msdn.microsoft.com/678bcd68-cbbb-4be5-9dd2-40f94488a1cf)  
  XSLT 요소 및 함수에 대한 참조 자료를 제공합니다.

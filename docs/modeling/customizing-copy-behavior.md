@@ -10,11 +10,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 49a410ef816f2e77713b65b33a2ad8bc59b5b116
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: a9a17cba8e1ff1cca66f82c1d3934ff179b04fd9
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="customizing-copy-behavior"></a>복사 동작 사용자 지정
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 사용하여 만든 DSL(Domain-Specific Language)에서는 사용자가 요소를 복사하고 붙여넣을 때 수행되는 작업을 변경할 수 있습니다.  
@@ -561,11 +561,11 @@ namespace Company.MyDsl
   
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [사용자 지정 요소 만들기 및 이동](../modeling/customizing-element-creation-and-movement.md)   
- [방법: 끌어서 놓기 처리기 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)   
- [삭제 동작 사용자 지정](../modeling/customizing-deletion-behavior.md)   
- [샘플: VMSDK 회로 다이어그램 예제](http://go.microsoft.com/fwlink/?LinkId=213879)
+## <a name="see-also"></a>참고 항목
+
+[사용자 지정 요소 만들기 및 이동](../modeling/customizing-element-creation-and-movement.md)   
+[방법: 끌어서 놓기 처리기 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)   
+[삭제 동작 사용자 지정](../modeling/customizing-deletion-behavior.md)   
+[샘플: VMSDK 회로 다이어그램 예제](http://go.microsoft.com/fwlink/?LinkId=213879)
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
- 

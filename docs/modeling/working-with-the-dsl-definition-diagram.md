@@ -19,11 +19,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 5da1da2b7c74f6c95651eeb0120b213ad1e1d394
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 713d7d3598e56ceb4e5a339facb948d6d222a32d
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL 정의 다이어그램 작업
 다이어그램의는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 정의 도메인 특정 언어를 정의 하기 위한 중요 한 도구입니다. 도메인 모델에 요소를 추가하고 다이어그램에 대해 관계를 정의할 수 있으며 보다 읽기 쉽도록 다이어그램의 레이아웃을 수정할 수 있습니다.  
@@ -73,4 +73,4 @@ ms.lasthandoff: 01/13/2018
  도메인 관계는 관계를 파생 하거나 다른 도메인 관계 포함 및 참조 관계를 설정한 경우 표시할 수 있습니다 관계 클래스로 관계를 마우스 오른쪽 단추로 클릭 한 다음 클릭 하 여 경우 **클래스 표시** . 관계가 표시 됩니다. 한 **도메인 속성** 구획을 상속 및 관계 트리를 표시 됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

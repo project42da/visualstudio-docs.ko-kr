@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: 7f5bd86a9fe8d67111886e7578187747b1ea3ec8
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: b3f1c171f86c9af82e532abf948ee6199a16d0e1
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="properties-of-decorators"></a>데코레이터의 속성
 데코레이터는 아이콘, 텍스트 또는 셰이프 또는 연결선 다이어그램에 표시할 수 있는 확장/축소 펼침 단추입니다. 다음 표에서 세 가지 데코레이터에 대 한 속성을 나타냅니다. 속성의 일부 셰이프 데코레이터에 대해서만 또는 커넥터 데코레이터에 대해서만 표시 됩니다.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/13/2018
 |--------------|-----------------|-------------|  
 |DisplayName|생성 된 디자이너에서 표시 되는 데코레이터의 이름입니다.|확장 축소 Decorator|  
 |name|Decorator의 이름입니다.|ExpandCollapseDecorator|  
-|노트|이 decorator와 관련 된 비공식 정보입니다.|\<없음 >|  
+|노트|이 decorator와 관련 된 비공식 정보입니다.|\<none>|  
 |HorizontalOffset|인치에서는 데코레이터의 기본 위치를 기준으로 가로 오프셋입니다. (셰이프에 합니다.)|0|  
 |VerticalOffset|인치에서는 데코레이터의 기본 위치를 기준으로 세로 오프셋입니다. (셰이프에 합니다.)|0|  
 |OffsetFromLine|인치에서의 기본 위치를 기준으로 줄에서 데코레이터의 오프셋입니다. (On 커넥터만 합니다.)|0|  
@@ -39,10 +39,10 @@ ms.lasthandoff: 01/13/2018
   
 |속성|설명|기본|  
 |--------------|-----------------|-------------|  
-|DefaultIcon|표시할 아이콘 또는 이미지 파일의 경로입니다.|\<없음 >|  
+|DefaultIcon|표시할 아이콘 또는 이미지 파일의 경로입니다.|\<none>|  
 |DisplayName|생성 된 디자이너에 표시할 데코레이터의 이름입니다.|Decorator 아이콘|  
 |name|Decorator의 이름입니다.|IconDecorator|  
-|노트|Decorator와 관련 된 비공식 정보입니다.|\<없음 >|  
+|노트|Decorator와 관련 된 비공식 정보입니다.|\<none>|  
 |HorizontalOffset|인치에서는 데코레이터의 기본 위치를 기준으로 가로 오프셋입니다. (셰이프에 합니다.)|0|  
 |VerticalOffset|인치에서는 데코레이터의 기본 위치를 기준으로 세로 오프셋입니다. (셰이프에 합니다.)|0|  
 |OffsetFromLine|인치에서의 기본 위치를 기준으로 줄에서 데코레이터의 오프셋입니다. (On 커넥터만 합니다.)|0|  
@@ -58,7 +58,7 @@ ms.lasthandoff: 01/13/2018
 |FontSize|Decorator에 표시 되는 텍스트에 대 한 글꼴 크기입니다.|8|  
 |FontStyle|Decorator에 표시 되는 텍스트에 대 한 글꼴 스타일입니다.|기본|  
 |name|Decorator의 이름입니다.|레이블|  
-|노트|Decorator와 관련 된 비공식 정보입니다.|\<없음 >|  
+|노트|Decorator와 관련 된 비공식 정보입니다.|\<none>|  
 |HorizontalOffset|인치에서는 데코레이터의 기본 위치를 기준으로 가로 오프셋입니다. (셰이프에 합니다.)|0|  
 |VerticalOffset|인치에서는 데코레이터의 기본 위치를 기준으로 세로 오프셋입니다. (셰이프에 합니다.)|0|  
 |OffsetFromLine|인치에서의 기본 위치를 기준으로 줄에서 데코레이터의 오프셋입니다. (On 커넥터만 합니다.)|0|  
@@ -66,4 +66,4 @@ ms.lasthandoff: 01/13/2018
 |위치|Decorator의 기본 위치입니다.|TargetBottom|  
   
 ## <a name="see-also"></a>참고 항목  
- [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+ [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

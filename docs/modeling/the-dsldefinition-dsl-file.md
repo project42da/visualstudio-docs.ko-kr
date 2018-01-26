@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c58dc30285257a8292e8ce8dcf81b7b31cfee2c5
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 86955d745e645d2d37e9e33f258a2662bcac59fe
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 파일
 이 항목의 Dsl 프로젝트에 DslDefinition.dsl 파일의 구조를 설명 합니다.는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 솔루션을 정의 하는 *도메인 특정 언어*합니다. DslDefinition.dsl 파일 클래스와 함께 다이어그램, 도형, 커넥터, 직렬화 형식 도메인 특정 언어에서의 관계를 설명 하 고 **도구 상자** 도메인 특정 언어의 및 해당 편집 도구입니다. DSL 솔루션에서 이러한 도구를 정의하는 코드는 DslDefinition.dsl 파일의 정보에 따라 생성됩니다.  
@@ -151,15 +151,15 @@ ms.lasthandoff: 01/13/2018
   
  관계, 모양, 연결선, 다이어그램을 포함한 모든 도메인 클래스는 다음 특성과 자식 노드를 포함할 수 있습니다.  
   
--   **Id입니다.** 이 특성은 GUID입니다. 파일에서 값을 제공하지 않으면 DSL(Domain-Specific Language) Designer에서 값을 만듭니다. 이 문서의 그림에서는 공간을 절약하기 위해 이 특성을 대부분 생략합니다.  
+-   **Id.** 이 특성은 GUID입니다. 파일에서 값을 제공하지 않으면 DSL(Domain-Specific Language) Designer에서 값을 만듭니다. 이 문서의 그림에서는 공간을 절약하기 위해 이 특성을 대부분 생략합니다.  
   
 -   **이름 및 Namespace입니다.** 이러한 특성 생성된 코드에서 이름 및 클래스의 네임 스페이스를 지정합니다. 이 두 특성은 DSL에서 모두 고유해야 합니다.  
   
--   **InheritanceModifier 합니다.** 이 특성에는 "추상", "sealed" 또는 none입니다.  
+-   **InheritanceModifier.** 이 특성에는 "추상", "sealed" 또는 none입니다.  
   
--   **표시 이름입니다.** 이 특성은 이름에 표시 되는 **속성** 창. DisplayName 특성은 공백과 기타 문장 부호를 포함할 수 있습니다.  
+-   **DisplayName.** 이 특성은 이름에 표시 되는 **속성** 창. DisplayName 특성은 공백과 기타 문장 부호를 포함할 수 있습니다.  
   
--   **GeneratesDoubleDerived 합니다.** 이 특성이로 설정 된 경우 true 인 두 개의 클래스가 생성 되 고 하나는 다른 하위 클래스입니다. 생성된 모든 메서드는 기본 클래스에 있으며 생성자는 서브클래스에 있습니다. 이 특성을 설정하면 사용자 지정 코드에서 생성된 메서드를 재정의할 수 있습니다.  
+-   **GeneratesDoubleDerived.** 이 특성이로 설정 된 경우 true 인 두 개의 클래스가 생성 되 고 하나는 다른 하위 클래스입니다. 생성된 모든 메서드는 기본 클래스에 있으며 생성자는 서브클래스에 있습니다. 이 특성을 설정하면 사용자 지정 코드에서 생성된 메서드를 재정의할 수 있습니다.  
   
 -   **HasCustomConstructor**합니다. 이 특성을 true로 설정하면 생성된 코드에서 생성자가 생략되어 원하는 버전을 직접 작성할 수 있습니다.  
   
@@ -190,11 +190,11 @@ ms.lasthandoff: 01/13/2018
   
 -   **IsBrowsable**합니다. 이 특성에 해당 속성이 표시 여부를 결정은 **속성** 부모 클래스의 개체를 클릭할 때 창이 있습니다.  
   
--   **IsUIReadOnly**합니다. 이 특성을 사용자의 속성을 변경할 수 있는지 여부를 결정은 **속성** 창 또는 통해 데코레이터에서 속성이 포함 됩니다.  
+-   **IsUIReadOnly**. 이 특성을 사용자의 속성을 변경할 수 있는지 여부를 결정은 **속성** 창 또는 통해 데코레이터에서 속성이 포함 됩니다.  
   
 -   **종류**합니다. 이 특성은 Normal, Calculated 또는 CustomStorage로 설정해야 합니다. 이 특성을 Calculated로 설정하는 경우 값을 결정하는 사용자 지정 코드를 제공해야 하며 속성은 읽기 전용이 됩니다. 이 특성을 CustomStorage로 설정하는 경우에는 값을 가져오고 설정하는 코드를 제공해야 합니다.  
   
--   **IsElementName**합니다. 이 특성을 true로 설정하면 부모 클래스 인스턴스를 만들 때 해당 값이 고유한 값으로 자동 설정됩니다. 각 클래스에서 문자열 형식이어야 하는 속성 하나에 대해서만 이 특성을 true로 설정할 수 있습니다. 구성 요소 다이어그램 예제에서는 `Name`의 `NamedElement` 속성에서 `IsElementName`이 true로 설정되어 있습니다. 따라서 사용자가 `Component`에서 상속하는 `NamedElement` 요소를 만들 때마다 이름이 "Component6"처럼 자동으로 초기화됩니다.  
+-   **IsElementName**. 이 특성을 true로 설정하면 부모 클래스 인스턴스를 만들 때 해당 값이 고유한 값으로 자동 설정됩니다. 각 클래스에서 문자열 형식이어야 하는 속성 하나에 대해서만 이 특성을 true로 설정할 수 있습니다. 구성 요소 다이어그램 예제에서는 `Name`의 `NamedElement` 속성에서 `IsElementName`이 true로 설정되어 있습니다. 따라서 사용자가 `Component`에서 상속하는 `NamedElement` 요소를 만들 때마다 이름이 "Component6"처럼 자동으로 초기화됩니다.  
   
 -   `DefaultValue`. 이 특성을 지정한 경우 지정한 값이 이 클래스의 새 인스턴스에 대해 이 특성에 할당됩니다. `IsElementName`이 설정되어 있으면 DefaultValue 특성은 새 문자열의 시작 부분을 지정합니다.  
   
@@ -242,9 +242,9 @@ ms.lasthandoff: 01/13/2018
 ### <a name="relationship-attributes"></a>관계 특성  
  모든 클래스에서 사용 가능한 특성 및 자식 노드 외에 각 관계에는 다음 클래스도 포함됩니다.  
   
--   **IsEmbedding**합니다. 이 부울 특성은 관계가 포함 트리의 일부분인지를 지정합니다. 모든 모델은 포함 관계로 트리를 형성해야 합니다. 따라서 모든 도메인 컨트롤러는 모델의 루트가 아니면 포함 관계 하나 이상의 대상이어야 합니다.  
+-   **IsEmbedding**. 이 부울 특성은 관계가 포함 트리의 일부분인지를 지정합니다. 모든 모델은 포함 관계로 트리를 형성해야 합니다. 따라서 모든 도메인 컨트롤러는 모델의 루트가 아니면 포함 관계 하나 이상의 대상이어야 합니다.  
   
--   **AllowsDuplicates**합니다. 기본적으로 false로 설정되는 이 부울 특성은 소스 및 대상 둘 다에서 다중성이 "다"인 관계에만 적용됩니다. 이 특성은 언어 사용자가 같은 관계의 링크 둘 이상을 사용하여 단일 소스 및 대상 요소 쌍을 연결할 수 있는지 여부를 결정합니다.  
+-   **AllowsDuplicates**. 기본적으로 false로 설정되는 이 부울 특성은 소스 및 대상 둘 다에서 다중성이 "다"인 관계에만 적용됩니다. 이 특성은 언어 사용자가 같은 관계의 링크 둘 이상을 사용하여 단일 소스 및 대상 요소 쌍을 연결할 수 있는지 여부를 결정합니다.  
   
 ## <a name="designer-and-toolbox-tabs"></a>Designer 및 ToolboxTab  
  주요 부분은 **디자이너** DslDefinition.dsl 파일의 섹션은 **ToolboxTab** 요소입니다. 디자이너는 한 이러한 요소를 각각 나타내는 생성 된 디자이너에서 헤드 섹션 중 몇 가지 점이 **도구 상자**합니다. 각 **ToolboxTab** 하나 이상의 요소가 포함 될 수 있습니다 **ElementTool** 요소 **ConnectionTool** 요소, 또는 둘 다 합니다.  
@@ -546,6 +546,6 @@ ComponentHasPorts . Component / ! Component /    ComponentModelHasComponents . C
  연결선 맵은 Decorator 맵을 포함할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)   
+ [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)   
  [도메인 특정 언어를 정의 하는 방법](../modeling/how-to-define-a-domain-specific-language.md)   
  [모델, 클래스 및 관계 이해](../modeling/understanding-models-classes-and-relationships.md)

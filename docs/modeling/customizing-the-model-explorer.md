@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: c9c9fbaaed7375cffd581efca34465effd48d33c
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.openlocfilehash: 7380d4bcade2e93b7e9ab7302201b67df629e041
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="customizing-the-model-explorer"></a>모델 탐색기 사용자 지정
 변경할 수 있습니다 모양 및 동작 탐색기의 도메인 특정 언어 디자이너에 대 한 다음과 같습니다.  
@@ -111,5 +111,6 @@ ms.lasthandoff: 01/13/2018
   
      탐색기만 표시 됩니다는 **행위자** 노드를 표시 하지 않아야 하 고는 **주석** 노드.  
   
-## <a name="see-also"></a>참고 항목  
- [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/en-us/ca5e84cb-a315-465c-be24-76aa3df276aa)
+## <a name="see-also"></a>참고 항목
+
+[도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)
