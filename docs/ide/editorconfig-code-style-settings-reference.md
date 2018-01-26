@@ -21,11 +21,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1657a440405533ba188a101ae22c26c2777feff5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 76b7ed58713f61882130c48d808012dc35055f55
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig에 대한 .NET 코딩 규칙 설정
 
@@ -316,7 +316,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 | 값 | 설명 |
 | ----- |:----------- |
-| always | 액세스 가능성 한정자가 지정되는 것을 선호합니다. |
+| always | 액세스 가능성 한정자를 지정하는 것이 좋습니다. |
 | for\_non\_interface_members | 공용 인터페이스 멤버를 제외하고 액세스 가능성 한정자를 선언하는 것을 선호합니다. 이것은 현재 **always**와 다르지 않으며 C#에서 기본 인터페이스 메서드를 추가할 경우 향후 교정으로 작동합니다. |
 | never | 액세스 가능성 한정자를 지정하지 않는 것이 좋습니다. |
 

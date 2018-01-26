@@ -12,17 +12,16 @@ helpviewer_keywords:
 - user permissions
 - administrative privileges
 - permissions
-ms.assetid: 70485ed7-6342-41bf-8250-7a6826e21b98
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8062b6d37c675defeea369ebe8f8bf15fcbdd8ee
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.workload:
+- multiple
+ms.openlocfilehash: 6a19d67530d3cb7ac81ee00e3e65f4cce74c8d07
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="user-permissions-and-visual-studio"></a>사용자 권한 및 Visual Studio
 
@@ -39,7 +38,7 @@ Visual Studio IDE에서는 일반 사용자로 거의 모든 작업을 할 수 �
 ||로컬 도움말 콘텐츠 설치, 업데이트 또는 제거|[로컬 콘텐츠 설치 및 관리](../ide/install-and-manage-local-content.md)|  
 |응용 프로그램 종류|SharePoint용 솔루션 개발|[SharePoint 솔루션 개발 요구 사항](/office-dev/office-dev/requirements-for-developing-sharepoint-solutions)|  
 ||[!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]의 개발자 라이선스 취득|[개발자 라이선스 얻기](http://go.microsoft.com/fwlink/?LinkID=241313)|  
-|도구 상자|**도구 상자**에 클래식 COM 컨트롤 추가.|[도구 상자 사용](../ide/using-the-toolbox.md)|  
+|도구 상자|**도구 상자**에 클래식 COM 컨트롤 추가.|[도구 상자](../ide/reference/toolbox.md)|  
 |추가 기능|IDE에서 기본 COM을 사용하여 작성한 추가 기능 설치 및 사용|[추가 기능 및 마법사 만들기](http://msdn.microsoft.com/Library/c5a47c21-6668-4de3-898d-afa969317e73)|  
 |빌드|구성 요소를 등록하는 빌드 후 이벤트 사용|[사용자 지정 빌드 단계 및 빌드 이벤트 이해](/cpp/ide/understanding-custom-build-steps-and-build-events)|  
 ||C++ 프로젝트를 빌드할 때 등록 단계 포함|[사용자 지정 빌드 단계 및 빌드 이벤트 이해](/cpp/ide/understanding-custom-build-steps-and-build-events)|  
