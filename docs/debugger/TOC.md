@@ -18,6 +18,7 @@
 # 방법 가이드
 ## [디버거로 코드 탐색](navigating-through-code-with-the-debugger.md)
 ## [중단점 사용](using-breakpoints.md)
+### [중단점 문제 해결](troubleshooting-breakpoints.md)
 ## [데이터 검사](debugger-windows.md)
 ### [변수 검사](autos-and-locals-windows.md)
 ### [변수에 조사식 설정](watch-and-quickwatch-windows.md)
