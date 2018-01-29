@@ -165,7 +165,7 @@
 ###### [이름 바꾸기](ide/reference/rename-vb.md)
 ###### [동기화 형식 및 파일 이름](ide/reference/sync-type-and-file-vb.md)
 #### [생산성 팁](ide/productivity-tips-for-visual-studio.md)
-##### [팁과 트릭](ide/tips-and-tricks-for-visual-studio.md)
+##### [키보드 팁](ide/tips-and-tricks-for-visual-studio.md)
 ##### [.NET 개발자를 위한 팁](ide/visual-studio-2017-for-dotnet-developers.md)
 ##### [바로 가기 키 식별 및 사용자 지정](ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md)
 ###### [자주 사용되는 명령의 기본 바로 가기 키](ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)

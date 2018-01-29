@@ -4,7 +4,8 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -12,16 +13,17 @@ dev_langs:
 - VB
 - FSharp
 - C++
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e8f4ae16436143999b0a459ba4b039e796f42111
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.workload:
+- multiple
+ms.openlocfilehash: 1d2f023900735b2e8f3f2235850ab55ec6237efc
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-memory-usage-without-the-visual-studio-debugger"></a>Visual Studio 디버거 없이 메모리 사용 분석
 디버그하지 않고 **메모리 사용량** 도구를 사용하여 다음을 수행할 수 있습니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/04/2018
   
 -   스냅숏을 비교하여 메모리 문제의 근본 원인을 찾습니다.  
   
- 이 항목에서는 메모리 사용량 도구를 사용하여 Windows 유니버설 XAML 앱을 분석하는 방법에 대해 설명합니다. JavaScript 및 HTML을 사용하는 Windows 유니버설 앱에서 메모리 사용을 분석하려는 경우 [메모리 사용 분석(JavaScript)](http://msdn.microsoft.com/library/windows/apps/jj819176.aspx)을 참조하세요.  
+ 이 항목에서는 메모리 사용량 도구를 사용하여 UWP XAML 앱을 분석하는 방법에 대해 설명합니다. JavaScript 및 HTML을 사용하는 UWP 앱에서 메모리 사용을 분석하려는 경우 [메모리 사용 분석(JavaScript)](../profiling/javascript-memory.md)을 참조하세요.  
   
 ##  <a name="BKMK_Start_a_Memory_Usage_diagnostic_session"></a> 메모리 사용량 진단 세션 시작  
   

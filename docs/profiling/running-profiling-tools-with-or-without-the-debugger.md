@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2507ec49129692914ba6d11e4f651d5895b49c8b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 462b164d0a6d3e9cba0f9698b7dba3b01aa5fee5
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행
 Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 중 일부(예: **CPU 사용** 및 **메모리 사용**)는 디버거를 사용하거나 사용하지 않고 실행될 수 있습니다. 디버거가 없는 성능 도구는 릴리스 구성에서 실행될 수 있으며, 디버거 통합 도구는 디버그 구성에서 실행될 수 있습니다.  
@@ -77,7 +79,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
 2.  **디버그** 메뉴에서 **성능 프로파일러...**를 선택합니다(바로 가기 키: Alt+F2).  
   
-3.  진단 시작 페이지에서, 세션에서 실행할 하나 이상의 도구를 선택합니다. 프로젝트 형식, 운영 체제 및 프로그래밍 언어에 적용되는 도구만 표시됩니다. 진단 도구를 선택하면 같은 진단 세션에서 실행할 수 없는 도구 선택을 사용할 수 없게 설정됩니다. C# Windows 유니버설 앱의 경우 선택 항목이 다음과 같이 표시될 수 있습니다.  
+3.  진단 시작 페이지에서, 세션에서 실행할 하나 이상의 도구를 선택합니다. 프로젝트 형식, 운영 체제 및 프로그래밍 언어에 적용되는 도구만 표시됩니다. 진단 도구를 선택하면 같은 진단 세션에서 실행할 수 없는 도구 선택을 사용할 수 없게 설정됩니다. C# UWP 앱의 경우 선택이 다음과 같이 표시될 수 있습니다.  
   
      ![진단 도구 선택](../profiling/media/diag_selecttool.png "DIAG_SelectTool")  
   
@@ -123,7 +125,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
  ![Internet Explorer에 표시할 URL 지정](../profiling/media/pdhub_choosephoneanalysistarget.png "PDHUB_ChoosePhoneAnalysisTarget")  
   
 ## <a name="remote-debugging"></a>Remote Debugging  
- 원격 PC 또는 태블릿에서 진단 세션을 실행하려면 원격 대상에 Visual Studio 원격 도구가 설치되어 있고 실행 중이어야 합니다. 데스크톱 앱의 경우 [원격 디버깅](../debugger/remote-debugging.md)을 참조하세요.  Windows 유니버설 앱의 경우 [원격 컴퓨터에서 UWP 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)을 참조하세요.  
+ 원격 PC 또는 태블릿에서 진단 세션을 실행하려면 원격 대상에 Visual Studio 원격 도구가 설치되어 있고 실행 중이어야 합니다. 데스크톱 앱의 경우 [원격 디버깅](../debugger/remote-debugging.md)을 참조하세요.  UWP 앱의 경우 [원격 컴퓨터에서 UWP 앱 실행](../debugger/run-windows-store-apps-on-a-remote-machine.md)을 참조하세요.  
   
 ## <a name="blog-posts-and-msdn-articles-from-the-diagnostics-development-team"></a>진단 개발팀의 블로그 게시물 및 MSDN 문서  
  [MSDN Magazine: Visual Studio 2015에서 디버그하는 동안 성능 분석](https://msdn.microsoft.com/en-us/magazine/dn973013.aspx)  

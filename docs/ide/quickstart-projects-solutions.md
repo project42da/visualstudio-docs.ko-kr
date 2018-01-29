@@ -10,12 +10,13 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b757178f29439f162df9e8844ae65ed8df642bb5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 74ac22508ea00a59dc4b29806253b4a041994c54
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>빠른 시작: 프로젝트 및 솔루션
 
@@ -62,7 +63,7 @@ ms.lasthandoff: 12/22/2017
    "QuickDate"라는 프로젝트는 **솔루션 탐색기**의 솔루션 아래에 나타납니다. 현재 **App.config**라는 단일 파일이 포함됩니다.
 
    > [!NOTE]
-   > 대화 상자의 왼쪽 창에서 **Visual C#**이 표시되지 않으면 **.NET 데스크톱 개발** 워크로드를 설치해야 합니다. 왼쪽 창의 맨 아래에서 **Visual Studio 설치 관리자 열기** 링크를 클릭하여 이 작업을 쉽게 수행할 수 있습니다. **Visual Studio 설치 관리자**가 열리고 여기에서 올바른 워크로드 및 **수정** 단추를 선택할 수 있습니다.
+   > 대화 상자의 왼쪽 창에서 **Visual C#**이 표시되지 않으면 **.NET 데스크톱 개발** 워크로드를 설치해야 합니다. 이를 수행하는 쉬운 방법은 대화 상자의 왼쪽 아래에 있는 **Visual Studio 설치 관리자 열기** 링크를 선택하는 것입니다. **Visual Studio 설치 관리자**가 실행된 후 **.NET 데스크톱 개발** 워크로드를 선택한 다음, **수정** 단추를 선택합니다.
 
    ![Visual Studio 설치 관리자 열기 링크](media/quickstart-projects-open-installer.png)
 

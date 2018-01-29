@@ -4,14 +4,12 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+- JavaScript
 helpviewer_keywords:
 - dominators, memory analyzer (JavaScript)
 - memory leaks (JavaScript)
@@ -21,17 +19,17 @@ helpviewer_keywords:
 - JavaScript Memory Analyzer
 - analyzing memory, JavaScript
 - memory analyzer, JavaScript
-ms.assetid: 78f8532b-7b4e-4b50-b8b7-68ca0926dd4e
-caps.latest.revision: "49"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: bda996f825c492e323f84ba5444327a49f50aeb1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 00162ab0ad516391b98ee0a17fa9c9f7294c92b3
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP 앱에서 JavaScript 메모리 사용량 분석
 Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 JavaScript를 사용하여 Windows용으로 작성된 UWP 앱의 메모리 사용량을 파악하고 메모리 누수를 찾을 수 있습니다. 지원되는 앱으로는 유니버설 Windows 앱을 위한 앱이 있습니다.
@@ -48,36 +46,14 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 
   
      앱 코드에서 직접 만들지 않은 개체는 자동으로 필터링됩니다. 또한 개체 이름으로 데이터를 필터링할 수 있습니다.  
   
- 작업 중인 앱에서 메모리 누수를 확인하는 과정을 안내하는 자습서는 [연습: 메모리 누수 찾기(JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)를 참조하세요.  
-  
- 항목 내용:  
-  
- [JavaScript 메모리 분석기 실행](#Run)   
- [메모리 사용량 확인](#Check)   
- [Isolate a memory leak](#Isolate)   
- [라이브 메모리 사용 요약 보기](#LiveMemory)   
- [View a snapshot summary](#SnapshotSummary)   
- [스냅숏 정보 보기](#SnapshotDetails)   
- [스냅숏 차이 보기](#SnapshotDiff)   
- [도미네이터별 개체 보기](#FoldObjects)   
- [식별자별 데이터 필터링](#Filter)   
- [개체 트리에서 개체 찾기](#ShowInRootsView)   
- [공유 개체 참조 보기](#References)   
- [기본 제공 개체 표시](#BuiltInValues)   
- [진단 세션 파일 저장](#Save)   
- [Associate source code with memory usage data](#JSConsoleCommands)   
- [메모리 문제 식별 팁](#Tips)  
-  
 ##  <a name="Run"></a> JavaScript 메모리 분석기 실행  
- 작업 중인 UWP 앱이 Visual Studio에서 열려 있거나 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 이상을 실행하는 컴퓨터에 설치된 경우 메모리 분석기를 사용할 수 있습니다.  
+ 작업 중인 UWP 앱이 Visual Studio에서 열려 있는 경우 메모리 분석기를 사용할 수 있습니다.
   
 #### <a name="to-run-the-memory-analyzer"></a>메모리 분석기를 실행하려면  
   
 1.  Visual Studio를 엽니다.  
   
-2.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 Windows Phone 에뮬레이터 또는 UWP 앱 프로젝트에 대한 디버그 대상을 **로컬 컴퓨터**, **시뮬레이터**, **원격 컴퓨터** 중에서 선택합니다.  
-  
-     이러한 옵션에 대한 자세한 내용은 [Run apps from Visual Studio](../debugger/run-store-apps-from-visual-studio.md)을 참조하세요.  
+2.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 프로젝트에 대한 디버그 대상을 **로컬 컴퓨터** 또는 **장치** 중에서 선택합니다.  
   
 3.  메뉴 모음에서 **디버그**, **성능 프로파일러...**를 차례로 선택합니다.  
   
@@ -400,6 +376,3 @@ if (performance && performance.mark) {
          이러한 명령을 사용하면 힙 스냅숏을 직접 만드는 것으로는 격리되지 않는 문제도 격리할 수 있습니다.  
   
     -   테스트 개체를 만들고 형식 뷰 등 JavaScript 메모리 분석기의 뷰에서 추적합니다. 예를 들어, 초대형 개체를 다른 개체에 연결하여 특정 개체나 요소가 가비지 수집되었는지 확인할 수 있습니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [연습: 메모리 누수 찾기(JavaScript)](../profiling/walkthrough-find-a-memory-leak-javascript.md)

@@ -12,13 +12,15 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.technology: vs-ide-general
-ms.workload: multiple
-ms.openlocfilehash: 2719ecd60a68de795c51ec4363a9130e4da9019c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.technology:
+- vs-ide-general
+ms.workload:
+- multiple
+ms.openlocfilehash: d6df33919220852642bac195d47752ec88e467ee
+ms.sourcegitcommit: d922eabedbeaedccecc5ca497ff12eb1f37933f1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 01/17/2018
 ---
 # <a name="naming-conventions-for-editorconfig"></a>EditorConfig에 대한 명명 규칙
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 01/10/2018
 - protected\_internal or protected_friend
 
 > [!NOTE]
-> 액세스 가능성 수준을 명명 규칙의 일부로 지정해야 합니다. 그렇지 않으면 명명 규칙이 무시될 수 있습니다.
+> 대상으로 지정할 기호 종류에 접근성을 적용할 수 없는 경우에는 접근성 수준을 이름 지정 규칙의 일부로 지정하지 마세요. 예를 들어 매개 변수에는 접근성 수준이 없습니다. 매개 변수 이름 지정 규칙의 접근성 수준을 지정하면 이름 지정 규칙이 올바르게 작동하지 않습니다.
 
 ### <a name="symbol-modifiers"></a>기호 한정자
 

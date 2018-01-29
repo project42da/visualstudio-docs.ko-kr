@@ -1,25 +1,26 @@
 ---
 title: "낮은 대역폭 또는 불안정한 네트워크 환경에 설치 | Microsoft Docs"
 description: "불안정한 네트워크 조건에서 Visual Studio 설치 관리자가 어떻게 작동하는지 설명하고 설치를 시작하기 전에 설치 파일을 다운로드하는 방법을 설명합니다."
-ms.date: 08/30/2017
-ms.reviewer: tims
+ms.date: 01/17/2018
+ms.reviewer: 
 ms.suite: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- '{{PLACEHOLDER}}'
-- '{{PLACEHOLDER}}'
-ms.assetid: 44DB1998-68CD-4560-870A-EE5B993DCF6E
-author: timsneath
+- installing Visual Studio
+- no internet connection
+author: tglee
 ms.author: tglee
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1d7b9b7084b91ace1f76d4d411f117df41cfd257
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 8b78f51c3b408d5a8c0723779cdf0b2d165aeec1
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="install-visual-studio-2017-on-low-bandwidth-or-unreliable-network-environments"></a>낮은 대역폭 또는 불안정한 네트워크 환경에 Visual Studio 2017 설치
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 그러나 인터넷 연결을 찾을 수 없거나 안정적이지 않다면 명령줄을 사용하여 오프라인 설치를 완료하기 필요한 파일의 로컬 캐시를 만들 수 있습니다. 방법은 다음과 같습니다.
 
 > [!NOTE]
-> 인터넷에서 방화벽이 사용되는 클라이언트 워크스테이션의 네트워크에 대해 Visual Studio 2017의 배포를 수행하려고 하는 엔터프라이즈 관리자인 경우 [Visual Studio 2017의 네트워크 설치 만들기](../install/create-a-network-installation-of-visual-studio.md) 및 [오프라인 환경에서 Visual Studio 설치에 대한 특별 고려 사항](../install/install-visual-studio-in-offline-environment.md) 페이지를 참조하세요.
+> 인터넷에서 방화벽이 사용되는 클라이언트 워크스테이션의 네트워크에 대해 Visual Studio 2017의 배포를 수행하려고 하는 엔터프라이즈 관리자인 경우 [Visual Studio 2017의 네트워크 설치 만들기](../install/create-a-network-installation-of-visual-studio.md) 및 [Visual Studio 오프라인 설치에 필요한 인증서 설치](../install/install-certificates-for-visual-studio-offline.md) 페이지를 참조하세요.
 
 ## <a name="step-1---download-the-visual-studio-bootstrapper"></a>1단계 - Visual Studio 부트스트래퍼 다운로드
 
@@ -84,8 +85,8 @@ ms.lasthandoff: 12/22/2017
 
 ```c:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.ManagedDesktop --add Microsoft.VisualStudio.Workload.NetWeb --add Component.GitHub.VisualStudio --includeOptional```
 
-  > [!NOTE]
-  > 서명이 올바르지 않다는 오류가 발생하면 업데이트된 인증서를 설치해야 합니다. 오프라인 캐시에서 인증서 폴더를 엽니다. 각 인증서 파일을 두 번 클릭하고 인증서 관리자 마법사를 클릭합니다. 암호를 묻는 메시지가 표시되면 비워 두세요.
+> [!NOTE]
+> 서명이 올바르지 않다는 오류가 발생하면 업데이트된 인증서를 설치해야 합니다. 오프라인 캐시에서 인증서 폴더를 엽니다. 각 인증서 파일을 두 번 클릭하고 인증서 관리자 마법사를 클릭합니다. 암호를 묻는 메시지가 표시되면 비워 두세요.
 
 ## <a name="list-of-language-locales"></a>언어 로캘 목록
 

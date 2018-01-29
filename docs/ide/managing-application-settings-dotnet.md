@@ -4,20 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: msvse_settingsdesigner.err.nameblank
-helpviewer_keywords: application settings [Visual Studio]
+f1_keywords:
+- msvse_settingsdesigner.err.nameblank
+helpviewer_keywords:
+- application settings [Visual Studio]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5a41ed010a4e950bd0fa4d28f63481587b847309
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: fdd95f1890033e90b2679a2c992f3a49ad474851
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="managing-application-settings-net"></a>응용 프로그램 설정 관리(.NET)
 
@@ -99,7 +103,7 @@ Properties.Settings.Default.FirstUserSetting = "abc";
 Properties.Settings.Default.Save();
 ```
 
-`Settings` 클래스를 통해 응용 프로그램 설정에 액세스하는 방법에 대한 일반적인 내용은 [응용 프로그램 설정 개요(.NET Frameword)](/dotnet/framework/winforms/advanced/application-settings-overview)를 참조하세요. 설정 반복에 대한 자세한 내용은 이 [포럼 게시물](http://social.msdn.microsoft.com/Forums/vstudio/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral)을 참조하세요.
+`Settings` 클래스를 통해 응용 프로그램 설정에 액세스하는 방법에 대한 일반적인 내용은 [응용 프로그램 설정 개요(.NET Framework)](/dotnet/framework/winforms/advanced/application-settings-overview)를 참조하세요. 설정 반복에 대한 자세한 내용은 이 [포럼 게시물](http://social.msdn.microsoft.com/Forums/vstudio/40fbb470-f1e8-4a02-a4a0-9f62b54d0fc4/is-this-possible-propertiessettingsdefault?forum=csharpgeneral)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -1,13 +1,15 @@
 ---
 title: "방법: 참조 관리자를 사용하여 참조 추가 또는 제거 | Microsoft 문서"
 ms.custom: 
-ms.date: 06/21/2017
+ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.ReferenceManager
+f1_keywords:
+- VS.ReferenceManager
 helpviewer_keywords:
 - Visual C# projects, references
 - references [Visual Studio], adding
@@ -23,12 +25,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 24c317a641fc178306013d8b75c3254f3d3f7b1c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 34dd559abcbfa6172c52edd2ed5eae2898f0b358
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>방법: 참조 관리자를 사용하여 참조 추가 또는 제거
 
@@ -198,7 +201,7 @@ SDK는 Visual Studio에서 단일 구성 요소로 처리하는 파일의 컬렉
 
 **찾아보기** 단추를 사용하여 파일 시스템의 구성 요소를 찾아볼 수 있습니다.
 
-프로젝트는 다른 버전의 .NET Framework를 대상으로 하는 구성 요소를 참조할 수 있습니다. 예를 들어, .NET Framework 2를 대상으로 하는 구성 요소를 참조하는 .NET Framework 4 Client Profile을 대상으로 하는 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [특정 대상 .NET Framework 버전 지정](../ide/targeting-a-specific-dotnet-framework-version.md)을 참조하세요.
+프로젝트는 다른 버전의 .NET Framework를 대상으로 하는 구성 요소를 참조할 수 있습니다. 예를 들어, .NET Framework 4를 대상으로 하는 구성 요소를 참조하는 .NET Framework 4.7을 대상으로 하는 응용 프로그램을 만들 수 있습니다. 자세한 내용은 [특정 대상 .NET Framework 버전 지정](../ide/targeting-a-specific-dotnet-framework-version.md)을 참조하세요.
 
 동일한 솔루션에 있는 다른 프로젝트의 출력에 대한 파일 참조를 추가하면 컴파일 오류가 발생할 수 있으므로 이 방법은 사용하지 않는 것이 좋습니다. 대신 **참조 관리자** 대화 상자의 **솔루션** 탭을 사용하여 프로젝트 간 참조를 만듭니다. 이렇게 하면 프로젝트에서 만드는 클래스 라이브러리를 보다 효율적으로 관리할 수 있으므로 개발 팀이 작업하기가 간편해집니다. 자세한 내용은 [끊어진 참조 문제 해결](../ide/troubleshooting-broken-references.md)을 참조하세요.
 

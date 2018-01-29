@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 생산성 팁 | Microsoft 문서"
+title: "Visual Studio 생산성 팁 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -10,48 +10,43 @@ ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5e257d8d90d21c4298b92f7bc4b923ed5a720c85
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 0700f1ba19c9c352aeaafe4dd3a3f9f4a12f864f
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
 
-아래의 팁을 사용하면 Visual Studio에서 더욱 신속하고 효과적으로 코드를 작성, 탐색 및 디버깅할 수 있습니다.
+이 항목에는 코드를 더 빠르고 효율적으로 작성, 탐색 및 디버그하는 데 도움이 되는 다양한 팁이 있습니다.
 
-공통된 바로 가기 키에 대한 자세한 내용은 [팁과 요령](../ide/tips-and-tricks-for-visual-studio.md)을 참조하세요. 자세한 목록은 [바로 가기 키 식별 및 사용자 지정](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) 및 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
-
-## <a name="accessing-visual-studio-tools"></a>Visual Studio Tools 액세스
-
-개발자 명령 프롬프트 또는 다른 Visual Studio 도구를 시작 화면이나 작업 표시줄에 고정하여 더욱 신속하게 액세스할 수 있습니다.
-
-1. Windows 탐색기에서 `%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools`로 이동합니다.
-
-1. **개발자 명령 프롬프트**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴를 열고 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 선택합니다.
+일반 바로 가기 키에 대한 자세한 내용은 [키보드 팁](../ide/tips-and-tricks-for-visual-studio.md)을 참조하세요. 전체 키보드 바로 가기 키 목록은 [바로 가기 키 식별 및 사용자 지정](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) 및 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
 
 ## <a name="writing-code"></a>코드 작성
 
 다음 기능을 사용하여 더욱 신속하게 코드를 작성합니다.
 
-- **샘플 응용 프로그램 사용** [Microsoft Developer Network](https://code.msdn.microsoft.com/)에서 응용 프로그램 예제를 다운로드 및 설치하여 응용 프로그램 개발 시간을 단축할 수 있습니다. 해당 영역의 샘플 팩을 다운로드 및 탐색하여 특정한 기술이나 프로그래밍 개념을 익힐 수도 있습니다.
+- **유용한 명령을 사용**합니다. Visual Studio에는 일반적인 편집 작업을 더 빠르게 수행하는 데 도움이 되는 다양한 명령이 있습니다. 예를 들어 **Visual Studio 2017 버전 15.6 미리 보기 2** 이상에서는 코드 줄을 복사하지 않고도 쉽게 복제하여 커서 위치를 변경한 다음, 붙여넣는 명령을 선택할 수 있습니다. **편집** > **복제**를 선택하거나 **Ctrl**+**E**,**V**를 누릅니다. 또한 **편집** > **고급** > **선택 영역 확장** 및 **선택 영역 축소**를 선택하거나 **Ctrl**+**W** 및 **Ctrl**+**Shift**+**W**(**Visual Studio 2017 버전 15.5** 이상에서 사용 가능)를 눌러 선택 영역을 빠르게 확장하거나 축소할 수 있습니다.
 
 - **IntelliSense 사용** 코드 편집기에 코드를 입력하면 멤버 목록, 매개 변수 정보, 요약 정보, 시그니처 도움말 및 단어 자동 완성과 같은 IntelliSense 정보가 나타납니다. 이러한 기능은 텍스트의 퍼지 일치를 지원합니다. 예를 들어, 멤버 목록의 결과 목록에는 사용자가 입력한 문자로 시작하는 항목 뿐만 아니라 이름에 문자 조합이 들어 있는 항목이 포함됩니다. 자세한 내용은 [IntelliSense 사용](../ide/using-intellisense.md)을 참조하세요.
 
 - **코드를 입력할 때 IntelliSense 옵션의 자동 삽입 변경** IntelliSense를 제안 모드로 전환하여 명시적으로 선택할 경우에만 IntelliSense 옵션이 삽입되도록 지정할 수 있습니다.
 
-     제안 모드를 사용하려면 **Ctrl** + **Alt** + **스페이스바**를 선택하거나 메뉴 모음에서 **편집**, **IntelliSense**, **완료 모드 설정/해제**를 선택합니다.
+     제안 모드를 사용하려면 **Ctrl**+**Alt**+**스페이스바**를 선택하거나 메뉴 모음에서 **편집**,  > IntelliSense**,**  > **완료 모드 설정/해제**를 선택합니다.
 
 - **코드 조각 사용** 기본 제공된 코드 조각을 사용하거나 직접 코드 조각을 만들 수 있습니다.
 
-     코드 조각을 삽입하려면 메뉴 모음에서 **편집**, **IntelliSense**, **코드 조각 삽입**을 선택하거나 파일의 바로 가기 메뉴를 열고 **코드 조각 삽입**을 선택합니다. 자세한 내용은 [코드 조각](../ide/code-snippets.md)을 참조하세요.
+     코드 조각을 삽입하려면 메뉴 모음에서 **편집** > **IntelliSense** > **코드 조각 삽입** 또는 **코드 감싸기**를 선택하거나 파일의 바로 가기 메뉴를 열고 **코드 조각** > **코드 조각 삽입** 또는 **코드 감싸기**를 선택합니다. 자세한 내용은 [코드 조각](../ide/code-snippets.md)을 참조하세요.
 
-- **코드 오류를 인라인으로 수정** 빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다. 이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Alt + Enter** 또는 **Ctrl + .**를 눌러 적용할 수 있습니다. 자세한 내용은 [빠른 작업](quick-actions.md)을 참조하세요.
+- **코드 오류를 인라인으로 수정** 빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다. 이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Alt**+**Enter** 또는 **Ctrl**+**.**를 눌러 적용할 수 있습니다. 자세한 내용은 [빠른 작업](quick-actions.md)을 참조하세요.
 
 - **코드 요소의 정의 표시 및 편집** 멤버, 변수 또는 로컬 같은 코드 요소가 정의된 모듈을 신속하게 표시하고 편집할 수 있습니다.
 
-    팝업 창에서 정의를 열려면 요소를 강조 표시하고 **Alt+F12** 키를 선택하거나 요소의 바로 가기 메뉴를 열고 **정의 피킹(Peeking)**을 선택합니다. 별도의 코드 창에서 정의를 열려면 해당 요소의 바로 가기 메뉴를 열고 **정의로 이동**을 선택합니다.
+    팝업 창에서 정의를 열려면 요소를 강조 표시하고 **Alt**+**F12**를 선택하거나 요소의 바로 가기 메뉴를 열고 **정의 피킹(Peeking)**을 선택합니다. 별도의 코드 창에서 정의를 열려면 해당 요소의 바로 가기 메뉴를 열고 **정의로 이동**을 선택합니다.
+
+- **샘플 응용 프로그램 사용** [Microsoft Developer Network](https://code.msdn.microsoft.com/)에서 응용 프로그램 예제를 다운로드 및 설치하여 응용 프로그램 개발 시간을 단축할 수 있습니다. 해당 영역의 샘플 팩을 다운로드 및 탐색하여 특정한 기술이나 프로그래밍 개념을 익힐 수도 있습니다.
 
 ## <a name="navigating-within-your-code"></a>코드 내에서 탐색
 
@@ -59,11 +54,11 @@ ms.lasthandoff: 12/22/2017
 
 - **코드 줄에 책갈피 지정** 책갈피를 사용하여 파일의 특정 코드 줄로 신속하게 이동할 수 있습니다.
 
-    책갈피를 설정하려면 메뉴 모음에서 **편집**, **책갈피**, **책갈피 설정/해제**를 선택합니다. **책갈피** 창에서 솔루션의 모든 책갈피를 볼 수 있습니다. 자세한 내용은 [코드에서 책갈피 설정](../ide/setting-bookmarks-in-code.md)을 참조하세요.
+    책갈피를 설정하려면 메뉴 모음에서 **편집** > **책갈피** > **책갈피 설정/해제**를 선택합니다. **책갈피** 창에서 솔루션의 모든 책갈피를 볼 수 있습니다. 자세한 내용은 [코드에서 책갈피 설정](../ide/setting-bookmarks-in-code.md)을 참조하세요.
 
 - **파일에서 기호 정의 검색** 솔루션 안에서 기호 정의와 파일 이름을 검색할 수 있지만 검색 결과에 네임스페이스나 지역 변수는 포함되지 않습니다.
 
-   이 기능에 액세스하려면 메뉴 모음에서 **편집**, **탐색**을 차례로 선택합니다.
+   이 기능에 액세스하려면 메뉴 모음에서 **편집** > **탐색**을 차례로 선택합니다.
 
 - **코드의 전체 구조 찾아보기** **솔루션 탐색기**에서 프로젝트의 클래스와 해당 형식 및 멤버를 검색하고 찾아볼 수 있습니다. 기호를 검색하고 메서드의 호출 계층 구조를 확인하며 기호 참조를 찾아 다른 작업을 수행할 수도 있습니다. **솔루션 탐색기**에서 코드 요소를 선택할 경우 **미리 보기** 탭에 관련 파일이 열리고 커서가 파일의 요소로 이동합니다. 자세한 내용은 [코드 구조 보기](../ide/viewing-the-structure-of-code.md)를 참조하세요.
 
@@ -81,7 +76,7 @@ ms.lasthandoff: 12/22/2017
 
     **빠른 실행**에는 **새 프로젝트** 대화 상자, **새 항목 추가** 대화 상자 및 **옵션** 대화 상자의 프로젝트 및 솔루션 페이지에 대한 링크가 표시됩니다. 빠른 실행 결과에 프로젝트 파일 및 도구 창이 포함될 수 있습니다.
 
-## <a name="debugging-code"></a>코드 디버깅
+## <a name="debugging-code"></a>코드 디버그
 
 디버깅은 시간이 오래 걸릴 수 있지만 다음 팁을 참고하여 처리 시간을 줄일 수 있습니다.
 
@@ -91,7 +86,7 @@ ms.lasthandoff: 12/22/2017
 
 - **임시 중단점 설정** 코드의 현재 줄에 임시 중단점을 만들고 디버거를 동시에 시작할 수 있습니다. 해당 코드 줄에 도달하면 디버거 중단 모드가 시작됩니다. 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.
 
-    이 기능을 사용하려면 **Ctrl** + **F10** 키를 선택하거나 중단할 코드 줄의 바로 가기 메뉴를 열고 **커서까지 실행**을 선택합니다.
+    이 기능을 사용하려면 **Ctrl**+**F10** 키를 선택하거나 중단할 코드 줄의 바로 가기 메뉴를 열고 **커서까지 실행**을 선택합니다.
 
 - **디버그하는 동안 실행 지점 이동** 현재 실행 지점을 코드의 다른 섹션으로 이동하고 해당 지점에서 디버깅을 다시 시작할 수 있습니다. 이 기술은 해당 섹션에 도달하는 데 필요한 모든 단계를 다시 만들 필요 없이 코드 섹션을 디버깅하려는 경우 유용합니다. 자세한 내용은 [디버거로 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.
 
@@ -105,9 +100,17 @@ ms.lasthandoff: 12/22/2017
 
      추가 명령에 대한 자세한 내용은 [Visual Studio 명령 별칭](../ide/reference/visual-studio-command-aliases.md)을 참조하세요.
 
+## <a name="accessing-visual-studio-tools"></a>Visual Studio Tools 액세스
+
+개발자 명령 프롬프트 또는 다른 Visual Studio 도구를 시작 화면이나 작업 표시줄에 고정하여 더욱 신속하게 액세스할 수 있습니다.
+
+1. Windows 탐색기에서 `%ProgramData%\Microsoft\Windows\Start Menu\Programs\Visual Studio 2017\Visual Studio Tools`로 이동합니다.
+
+1. **개발자 명령 프롬프트**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴를 열고 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 선택합니다.
+
 ## <a name="managing-files-toolbars-and-windows"></a>파일, 도구 모음 및 창 관리
 
- 응용 프로그램을 개발할 때 여러 코드 파일로 작업하면서 여러 도구 창 사이를 이동하는 경우가 있습니다. 다음 팁을 사용하여 구성을 유지할 수 있습니다.
+응용 프로그램을 개발할 때 여러 코드 파일로 작업하면서 여러 도구 창 사이를 이동하는 경우가 있습니다. 다음 팁을 사용하여 구성을 유지할 수 있습니다.
 
 - **자주 사용하는 파일을 편집기에 계속 표시** 편집기에 열린 파일 수에 관계없이 파일이 표시되도록 탭 왼쪽에 고정할 수 있습니다.
 

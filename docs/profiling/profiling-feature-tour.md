@@ -4,21 +4,24 @@ ms.custom: H1HackMay2017
 ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: debugger
+helpviewer_keywords:
+- debugger
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2542ce19d51dd3aa3031c71da3c23f7ec73ac240
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.workload:
+- multiple
+ms.openlocfilehash: 43955eedc5d7149396b3ad6dc7c380298b631d9e
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="profiling-feature-tour"></a>프로파일링 기능 둘러보기
 
@@ -32,7 +35,7 @@ Visual Studio에서는 앱의 유형에 따라 다른 성능 문제를 진단할
 
 ![진단 도구 요약 뷰](../profiling/media/prof-tour-cpu-and-memory-graph.gif "진단 도구 요약")
 
-기본적으로 **진단 도구** 창을 사용하여 앱을 프로파일링하지만 앱에 대한 post-mortem 분석을 대신 수행할 수도 있습니다. 다른 방법에 대한 자세한 내용은 [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요.
+기본적으로 **진단 도구** 창을 사용하여 앱을 프로파일링하지만 릴리스 빌드의 경우 앱에 대한 post-mortem 분석을 대신 수행할 수도 있습니다. 다른 방법에 대한 자세한 내용은 [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요. 다양한 앱 유형에 대한 프로파일링 도구를 보려면 [사용해야 하는 도구](#tool_support_info)를 참조하세요.
 
 ## <a name="analyze-cpu-usage"></a>CPU 사용 분석
 
@@ -119,13 +122,13 @@ Direct3D 앱(Direct3D 구성 요소가 C++에 있어야 함)에서 GPU에 대한
 
 ## <a name="analyze-performance-javascript"></a>성능 분석(JavaScript)
 
-Windows 유니버설 HTML 앱의 경우 JavaScript 메모리 도구 및 HTML UI 응답성 도구를 사용할 수 있습니다.
+UWP 앱의 경우 JavaScript 메모리 도구 및 HTML UI 응답성 도구를 사용할 수 있습니다.
 
 JavaScript 메모리 도구는 다른 앱 유형에 사용할 수 있는 메모리 사용량 도구와 비슷합니다. 이 도구를 사용하여 앱에서 메모리 사용량을 확인하고 메모리 누수를 파악할 수 있습니다. 도구에 대한 자세한 내용은 [JavaScript 메모리](../profiling/javascript-memory.md)를 참조하세요.
 
 ![JavaScript 메모리 프로파일링 도구](../profiling/media/diagjsmemory.png "DiagJSMemory")
 
-Windows 유니버설 HTML 앱에서 UI 응답성, 느린 로드 시간 및 느린 시각적 업데이트를 진단하려면 HTML UI 응답성 도구를 사용합니다. 사용량은 다른 앱 유형의 응용 프로그램 타임라인 도구와 비슷합니다. 자세한 내용은 [HTML UI 응답성](../profiling/html-ui-responsiveness.md)을 참조하세요.
+UWP 앱에서 UI 응답성, 느린 로드 시간 및 느린 시각적 업데이트를 진단하려면 HTML UI 응답성 도구를 사용합니다. 사용량은 다른 앱 유형의 응용 프로그램 타임라인 도구와 비슷합니다. 자세한 내용은 [HTML UI 응답성](../profiling/html-ui-responsiveness.md)을 참조하세요.
 
 ![HTML UI 응답성 프로파일링 도구](../profiling/media/diaghtmlresp.png "DiagHTMLResp")
 
@@ -151,7 +154,7 @@ CPU 사용량 또는 메모리 사용량 도구에 현재 표시되지 않는 �
 
 다음 테이블에는 Visual Studio가 제안하는 다양한 도구 및 그와 함께 사용할 수 있는 다양한 프로젝트 형식이 나열되어 있습니다.
   
-|성능 도구|Windows 바탕 화면|Windows 유니버설/스토어|ASP.NET/ASP.NET Core|  
+|성능 도구|Windows 바탕 화면|UWP|ASP.NET/ASP.NET Core|  
 |----------------------|---------------------|------------------------------|-------------|  
 |[메모리 사용량](../profiling/memory-usage.md)|예|예|예|  
 |[CPU 사용량](../profiling/cpu-usage.md)|예|예|예(.NET Core/ASP.NET Core의 경우 아니요)|  

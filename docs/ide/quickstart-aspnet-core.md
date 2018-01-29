@@ -10,15 +10,16 @@ ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-dev_langs: CSharp
+dev_langs:
+- CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 66c1b3ca7a877c001bc3aeb69c5331fdc828aad8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 66017b65e3d1201e02272447cbd3ec1c33c8a5d6
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 ASP.NET Core 웹앱 만들기
 
@@ -30,11 +31,11 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개
 
 1. Visual Studio 2017을 엽니다.
 
-1. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트...**를 차례로 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.
 
 1. **새 프로젝트** 대화 상자의 왼쪽 차에서 **Visual C#**을 확장한 후 **.NET Core**를 선택합니다. 가운데 창에서 **ASP.NET Core 웹 응용 프로그램**을 선택한 후 **확인**을 선택합니다.
 
-     **.NET Core** 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자를 취소하고 나가 메뉴 모음에서 **도구**, **도구 및 기능 가져오기...**를 선택합니다. Visual Studio 설치 관리자가 시작됩니다. **ASP.NET 및 웹 개발** 워크로드를 선택한 후 **수정**을 선택합니다.
+     **.NET Core** 프로젝트 템플릿 범주가 표시되지 않으면 왼쪽 창에서 **Visual Studio 설치 관리자 열기** 링크를 선택합니다. Visual Studio 설치 관리자가 시작됩니다. **ASP.NET 및 웹 개발** 워크로드를 선택한 후 **수정**을 선택합니다.
 
      ![VS 설치 관리자에서 ASP.NET 워크로드](../ide/media/quickstart-aspnet-workload.png)
 
@@ -64,7 +65,7 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개
  }
  ```
 
-1. 이러한 형식은 범위에 없으므로 두 개의 물결선이 **환경** 및 **문자열** 아래에 나타납니다. **오류 목록** 도구 모음을 열고 같은 오류가 나열되는지 확인합니다. (**오류 목록** 도구 모음이 표시되지 않으면 메뉴 모음에서 **보기**, **오류 목록**을 선택합니다.)
+1. 이러한 형식은 범위에 없으므로 두 개의 물결선이 **환경** 및 **문자열** 아래에 나타납니다. **오류 목록** 도구 모음을 열고 같은 오류가 나열되는지 확인합니다. (**오류 목록** 도구 모음이 표시되지 않으면 메뉴 모음에서 **보기** > **오류 목록**을 선택합니다.)
 
    ![오류 목록](../ide/media/quickstart-aspnet-errorlist.png)
 
@@ -72,7 +73,7 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개
 
 ## <a name="run-the-application"></a>응용 프로그램 실행
 
-1. **Ctrl+F5** 키를 눌러 응용 프로그램을 실행하고 웹 브라우저에서 엽니다.
+1. **Ctrl**+**F5**를 눌러 응용 프로그램을 실행하고 웹 브라우저에서 엽니다.
 
 1. 웹 사이트의 맨 위에서 **정보**를 선택하여 **정보** 페이지에 대한 `OnGet()` 메서드에 추가한 디렉터리 메시지를 표시합니다.
 
@@ -85,5 +86,6 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개
 
 ## <a name="see-also"></a>참고 항목
 
+[Visual Studio에서 C# 및 ASP.NET 시작](tutorial-csharp-aspnet-core.md)  
 [Visual Studio를 사용하여 C# 및 Visual Basic 시작](getting-started-with-visual-csharp-and-visual-basic.md)  
 [ASP.NET Core에서 Razor 페이지 시작](/aspnet/core/tutorials/razor-pages/razor-pages-start)

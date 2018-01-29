@@ -1,10 +1,11 @@
 ---
 title: "명령줄 매개 변수를 사용하여 Visual Studio 설치 | Microsoft 문서"
 ms.custom: 
-ms.date: 09/22/2017
+ms.date: 01/17/2018
 ms.reviewer: tims
 ms.suite: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,12 +16,13 @@ ms.assetid: 480f3cb4-d873-434e-a8bf-82cff7401cf2
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: bfdce6484661354315a4f6b8b4a219f119ec8742
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 41e66e9fabd84bac7ed7e413d51f08e55ef93a6e
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>명령줄 매개 변수를 사용하여 Visual Studio 2017 설치
 명령 프롬프트에서 Visual Studio 2017를 설치할 때 다양한 명령줄 매개 변수를 사용하여 설치를 제어하거나 사용자 지정할 수 있습니다. 명령줄에서 다음 작업을 수행할 수 있습니다.
@@ -40,7 +42,10 @@ ms.lasthandoff: 12/22/2017
 
 > 구문: `vs_enterprise.exe [command] <options>...`
 
-(설치 중인 제품 버전에 적합하게 `vs_enterprise.exe` 바꿉니다. 예를 보려면 [명령줄 매개 변수 예제](command-line-parameter-examples.md) 페이지를 참조하세요.)
+(설치 중인 제품 버전에 적합하게 `vs_enterprise.exe`를 바꿉니다.)
+
+>[!TIP]
+> 명령줄을 사용하여 Visual Studio 2017을 설치하는 방법에 대한 자세한 예제는 [명령줄 매개 변수 예제](command-line-parameter-examples.md) 페이지를 참조하세요.
 
 | **명령** | **설명** |
 | ----------------------- | --------------- |
@@ -143,7 +148,6 @@ Visual Studio 제품별로 정렬된 워크로드 및 구성 요소 ID 목록은
 
 ## <a name="see-also"></a>참고 항목
 
- * [Visual Studio 2017 설치](install-visual-studio.md)
- * [Visual Studio 2017의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
  * [Visual Studio 2017 설치에 대한 명령줄 매개 변수 예](command-line-parameter-examples.md)
+ * [Visual Studio 2017의 오프라인 설치 만들기](create-an-offline-installation-of-visual-studio.md)
  * [지시 파일을 사용하여 Visual Studio 설치 자동화](automated-installation-with-response-file.md)

@@ -20,12 +20,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2d937f36fcf2b76af8f5865ecdf2b137188e15eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: e2b973b00e132973b8569bc5cad8c1f1318317cd
+ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="code-snippets"></a>코드 조각
 
@@ -35,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 
 Visual Studio에는 다음 두 종류의 코드 조각이 있습니다. 확장 조각은 지정된 삽입 지점에 추가되고 조각 바로 가기를 대체할 수 있으며, 코드 감싸기 조각(C# 및 C++만 해당)은 선택한 코드 블록 주위에 추가됩니다.
 
-삽입 조각의 예: C#에서 바로 가기 tryf는 try-finally 블록을 삽입하는 데 사용됩니다.
+확장 조각의 예: C#에서 바로 가기 tryf는 try-finally 블록을 삽입하는 데 사용됩니다.
 
 ```csharp
 try

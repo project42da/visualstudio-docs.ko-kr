@@ -4,31 +4,29 @@ ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
-- CSharp
-- VB
-- FSharp
-- C++
+- JavaScript
 helpviewer_keywords:
 - performance, JavaScript [UWP apps]
 - performance tools, JavaScript [UWP apps]
 - UI Responsiveness Profiler [JavaScript]
 - profiler, UI responsiveness [JavaScript]
 - profiler, JavaScript [UWP apps]
-ms.assetid: da13070a-ba40-47dd-a846-ad72eed70d0b
-caps.latest.revision: "47"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 3c0bc7195fd862d5131a4a70b4e59ecea2afc0bc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- uwp
+ms.openlocfilehash: 71e8c18401b341ef1e1b24c35dc39e80758c31d2
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>유니버설 Windows 앱의 HTML UI 응답성 분석
 이 항목에서는 유니버설 Windows 앱에 사용할 수 있는 성능 도구인 UI 응답성 프로파일러를 사용하여 앱에서 성능 문제를 격리하는 방법에 대해 설명합니다.  
@@ -42,9 +40,9 @@ ms.lasthandoff: 12/22/2017
 -   예상보다 빈도가 낮은 시각적 개체 업데이트. UI 스레드의 사용량이 너무 많아 부드러운 프레임 속도를 유지할 수 없을 경우 발생합니다. 예를 들어, UI 스레드가 사용 중인 경우 프레임이 손실될 수도 있습니다. 또한 네트워크 요청, 이미지 디코딩, 그리기 등의 일부 UI가 아닌 스레드 작업이 시각적 개체 업데이트 빈도를 제한할 수도 있습니다. (모든 그리기가 UI 스레드에서 수행되지는 않습니다.)  
   
 ##  <a name="RunningProfiler"></a> HTML UI 응답성 도구 실행  
- 작업 중인 UWP 또는 Windows 8.1 앱이 Visual Studio에서 열려 있거나 Windows 8 이상을 실행하는 컴퓨터에 설치되어 있는 경우 HTML UI 응답성 도구를 사용할 수 있습니다.  
+ 작업 중인 UWP 앱이 Visual Studio에서 열려 있는 경우 HTML UI 응답성 도구를 사용할 수 있습니다.  
   
-1.  Visual Studio에서 응용 프로그램을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 Windows Phone 에뮬레이터, **로컬 컴퓨터**, **시뮬레이터**또는 **원격 컴퓨터**등의 배포 대상을 선택합니다.  
+1.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 **로컬 컴퓨터** 또는 **장치**와 같은 배포 대상을 선택합니다.  
   
 2.  **디버그** 메뉴에서 **성능 프로파일러...**를 선택합니다.  
   

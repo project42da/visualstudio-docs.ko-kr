@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,16 +14,17 @@ dev_langs:
 - FSharp
 - C++
 ms.assetid: 96d06843-b97e-45a8-8126-07478a40bfc4
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 9ad762745627c2c30378f5017d88e78b00921d4a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- uwp
+ms.openlocfilehash: f6728f940b1d8613587b6b879324bd37a2a35e2d
+ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/19/2018
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP 앱의 에너지 사용 분석
 Visual Studio **에너지 소비** 프로파일러를 사용하면 자체 배터리로 전부 또는 일부의 시간 동안 실행하는 저전력 태블릿 장치에서 UWP 앱의 전력 및 에너지 소비를 분석할 수 있습니다. 배터리로 구동하는 장치에서 앱이 너무 많은 에너지를 사용할 경우 고객 불만족을 일으킬 수 있고, 결과적으로 고객이 설치를 제거할 수도 있습니다. 에너지 사용을 최적화하면 고객이 앱을 채택하고 사용하는 사례가 증가할 수 있습니다.  
@@ -95,7 +97,7 @@ if (performance && performance.mark) {
 2.  **에너지 소비** 를 선택한 다음 **시작**을 선택합니다.  
   
     > [!NOTE]
-    >  **에너지 소비** 프로파일러를 시작하면 VsEtwCollector.exe 실행 권한을 요청하는 **사용자 계정 제어** 창이 나타날 수 있습니다. **예**를 선택합니다.  
+    >  **에너지 소비** 프로파일러를 시작하면 VsEtwCollector.exe 실행 권한을 요청하는 **사용자 계정 컨트롤** 창이 나타날 수 있습니다. **예**를 선택합니다.  
   
 3.  데이터를 수집하려면 앱을 실행합니다.  
   
@@ -106,7 +108,7 @@ if (performance && performance.mark) {
      Visual Studio에서 수집된 데이터를 분석하고 결과를 표시합니다.  
   
 ##  <a name="BKMK_Collect_energy_profile_data_for_an_installed_app"></a> 설치된 에너지 프로파일 데이터 수집  
- 에너지 소비 도구는 Visual Studio 솔루션에서 시작하거나 Windows 스토어에서 설치하는 Windows 스토어 8.1 앱에서만 실행할 수 있습니다. 솔루션을 Visual Studio에서 열 경우 기본 대상은 **시작 프로젝트**입니다. 설치된 앱을 대상으로 하려면  
+ 에너지 소비 도구는 Visual Studio 솔루션에서 시작하거나 Microsoft Store에서 설치하는 UWP 앱에서만 실행할 수 있습니다. 솔루션을 Visual Studio에서 열 경우 기본 대상은 **시작 프로젝트**입니다. 설치된 앱을 대상으로 하려면  
   
 1.  **대상 변경** 을 선택한 다음 **설치된 응용 프로그램**을 선택합니다.  
   

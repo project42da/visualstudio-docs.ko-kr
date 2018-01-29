@@ -7,11 +7,11 @@ ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 22B1F2CD-32AE-464D-80AC-C8AB4786B015
-ms.openlocfilehash: 7f91a28449ffad135058438ec767095818cc8527
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.openlocfilehash: 5de4760b001e82a0c95c593c1308746946b2c630
+ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 01/23/2018
 ---
 # <a name="setup-and-install-visual-studio-for-mac"></a>Mac용 Visual Studio 설정 및 설치
 
@@ -49,6 +49,18 @@ Visual Studio에서 iOS를 사용하는 경우 다음 사항이 필요합니다.
 
   ![항목 선택](media/installer-image5.png)
 
+  일부 플랫폼을 설치하지 않으려는 경우 아래 가이드를 사용하면 설치할 플랫폼을 결정할 수 있습니다.
+
+  * **Xamarin을 사용하는 앱**:
+      - Xamarin.Forms - **Android** 및 **iOS** 플랫폼을 선택합니다.
+      - iOS에만 해당 - **iOS** 플랫폼을 선택합니다([**Xcode**](https://developer.apple.com/xcode/)를 설치해야 함).
+      - Android에만 해당 - **Android** 플랫폼을 선택합니다(관련 종속성도 선택해야 함).
+      - Mac에만 해당 - **macOS** 플랫폼을 선택합니다([**Xcode**](https://developer.apple.com/xcode/)를 설치해야 함).
+      - 완벽한 플랫폼 간 Xamarin 앱 - **Android**, **iOS** 및 **macOS** 플랫폼을 선택합니다.
+  * **.NET Core 응용 프로그램** - **.NET Core** 플랫폼을 선택합니다.
+  * **ASP.NET Core 웹 응용 프로그램** - **.NET Core** 플랫폼을 선택합니다.
+  * **플랫폼 간 Unity 게임 개발** - Mac용 Visual Studio 이외에는 추가 플랫폼을 설치하지 않아도 됩니다. Unity 확장 설치에 대한 자세한 내용은 [Unity 설치 가이드](~/setup-vsmac-tools-unity.md)를 참조하세요.
+
   이 설치 화면에는 각 개별 구성 요소의 버전 및 크기가 표시됩니다. 각 구성 요소를 클릭하여 해당 구성 요소에 대한 종속성 목록을 표시하거나(Android), 다운로드한 추가 패키지를 확인하거나(.NET Core), 필요한 추가 응용 프로그램을 볼 수 있습니다(iOS 및 macOS).
 
   ![Android 추가 종속성](media/installer-image6.png)
@@ -74,17 +86,6 @@ Visual Studio에서 iOS를 사용하는 경우 다음 사항이 필요합니다.
 > [!NOTE]
 원래 설치 중 #6단계에서 선택 취소하여 플랫폼 또는 도구를 설치하지 않도록 선택한 경우 나중에 구성 요소를 추가하려면 [설치 관리자](https://www.visualstudio.com/vs/)를 다시 실행해야 합니다.
 
-## <a name="manual-installation"></a>수동 설치
-
-설치에 실패하거나 설치의 모든 단일 구성 요소가 실패할 경우 수동 설치를 통해 문제를 해결할 수도 있습니다. 필수 구성 요소를 확인하고 각 구성 요소를 다운로드하려면 다음 단계를 따릅니다.
-
-1. Visual Studio 설치 관리자의 두 번째 화면에서 메뉴 모음으로 이동하고 **수동 설치 지침 보기**를 선택합니다.
-
-    ![수동 설치 메뉴 항목을 보여주는 옵션](media/installer-image12.png)
-
-2. 지침에 따라 구성 요소를 수동으로 다운로드하고 설치합니다.
-
-  ![수동 설치 대화 상자](media/installer-image13.png)
 
 ## <a name="install-visual-studio-for-mac-behind-a-firewall-or-proxy-server"></a>방화벽 또는 프록시 서버 뒤에 Mac용 Visual Studio 설치
 
@@ -92,4 +93,24 @@ Visual Studio에서 iOS를 사용하는 경우 다음 사항이 필요합니다.
 
 다음 위치에 액세스할 수 있도록 네트워크를 구성합니다.
 
-* [Visual Studio 끝점](https://docs.microsoft.com/visualstudio/install/install-visual-studio-behind-a-firewall-or-proxy-server)
+* [Visual Studio 끝점](/visualstudio/install/install-visual-studio-behind-a-firewall-or-proxy-server)
+
+## <a name="next-steps"></a>다음 단계
+
+Mac용 Visual Studio를 설치하면 앱 코드 작성을 시작할 수 있습니다. 다음 가이드에서는 프로젝트를 작성 및 배포하는 다음 단계를 안내합니다.
+
+### <a name="ios"></a>iOS
+
+1. [Hello, iOS](https://developer.xamarin.com/guides/ios/getting_started/hello,_iOS/)
+2. [장치 프로비저닝](https://developer.xamarin.com/guides/ios/getting_started/installation/device_provisioning)(장치에서 응용 프로그램을 실행하려면).
+
+
+### <a name="android"></a>Android
+
+1. [Xamarin Android SDK Manager 사용](https://developer.xamarin.com/guides/android/getting_started/installation/android-sdk/?ide=xs)
+2. [Android SDK 에뮬레이터](https://developer.xamarin.com/guides/android/getting_started/installation/android-emulator/)
+4. [개발용 장치 설정](https://developer.xamarin.com/guides/android/getting_started/installation/set_up_device_for_development/)
+
+### <a name="net-core-apps-aspnet-core-web-apps-unity-game-development"></a>.NET Core 앱, ASP.NET Core 웹앱, Unity 게임 개발
+
+다른 워크로드의 경우 [워크로드](~/workloads.md) 페이지를 참조하세요.
