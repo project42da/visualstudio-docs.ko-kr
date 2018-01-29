@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 01/04/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-python
+ms.technology:
+- devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
@@ -21,11 +22,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f4113eda7afc2a5509c4f3f19b74628d7a9eb36e
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: 1c4f90aae0644ec1ff0edad55904360ddddb4be5
+ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 01/22/2018
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio의 Python 옵션
 
@@ -51,10 +52,10 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 | --- | --- | --- |
 | 가상 환경을 만들 때 출력 창 표시| 켜기 | 출력 창이 표시되지 않도록 하려면 선택 취소합니다. |
 | 패키지를 설치하거나 제거할 때 출력 창 표시 | 켜기 |  출력 창이 표시되지 않도록 하려면 선택 취소합니다. |
-| 항상 관리자로 pip 실행 | 끄기 | 항상 모든 환경에 대해 `pip install` 작업 권한을 상승합니다. 패키지를 설치할 때 환경이 `c:\Program Files`와 같은 파일 시스템의 보호된 영역에 있을 경우 Visual Studio에서 관리자 권한을 확인하는 메시지를 표시합니다. 해당 메시지에서 하나의 환경에 대해서만 항상 `pip install` 권한을 상승하도록 선택할 수 있습니다. [Python 환경 - pip 탭](python-environments.md#pip-tab)을 참조하세요. |
+| 항상 관리자로 pip 실행 | 끄기 | 항상 모든 환경에 대해 `pip install` 작업 권한을 상승합니다. 패키지를 설치할 때 환경이 `c:\Program Files`와 같은 파일 시스템의 보호된 영역에 있을 경우 Visual Studio에서 관리자 권한을 확인하는 메시지를 표시합니다. 해당 메시지에서 하나의 환경에 대해서만 항상 `pip install` 권한을 상승하도록 선택할 수 있습니다. [Python 환경 - pip 탭](managing-python-environments-in-visual-studio.md#pip-tab)을 참조하세요. |
 | 처음 사용할 때 완성 DB 자동 생성 | 켜기 | [IntelliSense 완성](code-editing.md#intellisense) 기능이 라이브러리에 대해 작동하려면 Visual Studio에서 해당 라이브러리에 대한 완성 데이터베이스를 생성해야 합니다. 데이터베이스 작성은 라이브러리를 설치할 때 백그라운드에서 수행되지만 코드 작성을 시작할 때 완료되지 않았을 수 있습니다. 이 옵션을 선택하면 데이터베이스를 사용하는 코드를 작성할 때 Visual Studio에서 라이브러리에 대한 데이터베이스 완성에 우선 순위를 지정합니다. |
-| 시스템 전체 PYTHONPATH 변수 무시 | 켜기 | Visual Studio에서 환경 및 프로젝트에 검색 경로를 지정하는 보다 직접적인 수단을 제공하기 때문에 PYTHONPATH는 기본적으로 무시됩니다. 자세한 내용은 [Python 환경 - 검색 경로](python-environments.md#search-paths)를 참조하세요. |
-| 연결된 파일을 추가할 때 검색 경로 업데이트 | 켜기 | 설정된 경우 [연결된 파일](python-projects.md#linked-files)을 프로젝트에 추가하면 IntelliSense가 연결된 파일의 폴더 내용을 완성 데이터베이스에 포함할 수 있도록 [검색 경로](python-environments.md#search-paths)가 업데이트됩니다. 이러한 내용을 완성 데이터베이스에서 제외하려면 이 옵션의 선택을 취소합니다. |
+| 시스템 전체 PYTHONPATH 변수 무시 | 켜기 | Visual Studio에서 환경 및 프로젝트에 검색 경로를 지정하는 보다 직접적인 수단을 제공하기 때문에 PYTHONPATH는 기본적으로 무시됩니다. 자세한 내용은 [Python 환경 - 검색 경로](managing-python-environments-in-visual-studio.md#search-paths)를 참조하세요. |
+| 연결된 파일을 추가할 때 검색 경로 업데이트 | 켜기 | 설정된 경우 [연결된 파일](managing-python-projects-in-visual-studio.md#linked-files)을 프로젝트에 추가하면 IntelliSense가 연결된 파일의 폴더 내용을 완성 데이터베이스에 포함할 수 있도록 [검색 경로](managing-python-environments-in-visual-studio.md#search-paths)가 업데이트됩니다. 이러한 내용을 완성 데이터베이스에서 제외하려면 이 옵션의 선택을 취소합니다. |
 | 가져온 모듈을 찾을 수 없으면 경고 표시 | 켜기 | 가져온 모듈을 현재 사용할 수 없지만 달리 코드 작업에 영향을 주지 않음을 알고 있는 경우 경고를 무시하려면 이 옵션의 선택을 취소합니다. |
 | 일치하지 않는 들여쓰기를 보고할 형식 | 경고 | Python 인터프리터는 적절한 들여쓰기를 사용하여 범위를 확인하기 때문에 Visual Studio는 기본적으로, 코딩 오류를 나타낼 수 있는 일관성 없는 들여쓰기가 검색될 경우 경고를 실행합니다. *오류*로 설정하면 훨씬 더 엄격하게 적용되어, 프로그램이 종료됩니다. 이 동작을 사용하지 않으려면 *사용 안 함*을 선택합니다. |
 | 설문 조사/뉴스 확인 | 한 주에 한 번 | Visual Studio에서 사용 가능한 경우 Python 관련 설문 조사 및 뉴스 항목이 표시된 웹 페이지를 포함하는 창을 열 수 있는 빈도를 설정합니다. 옵션은 *안 함*, *하루에 한 번*, *한 주에 한 번*, *한 달에 한 번*입니다. |
@@ -88,7 +89,7 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 
 | 옵션 | 기본 | 설명 |
 | --- | --- | --- |
-| 스크립트 | N/A | 모든 환경에 대한 대화형 창에 적용할 시작 스크립트에 대한 일반 폴더를 지정합니다. [시작 스크립트](python-environments.md#startup-scripts)를 참조하세요. 그러나 이 기능은 현재 작동하지 않습니다. |
+| 스크립트 | N/A | 모든 환경에 대한 대화형 창에 적용할 시작 스크립트에 대한 일반 폴더를 지정합니다. [시작 스크립트](managing-python-environments-in-visual-studio.md#startup-scripts)를 참조하세요. 그러나 이 기능은 현재 작동하지 않습니다. |
 | 위쪽/아래쪽 화살표로 기록 탐색 | 켜기 | 화살표 키를 사용하여 대화형 창의 기록을 탐색합니다. 화살표 키를 사용하여 대화형 창의 출력 내에서 탐색하려면 이 설정의 선택을 취소합니다. |
 | 완료 모드 | 함수 호출이 없는 식만 평가 | 대화형 창에서 식에 사용 가능한 멤버를 확인하는 프로세스를 수행하려면 현재 완료되지 않은 식을 평가해야 할 수 있으며, 이로 인해 부작용이 발생하거나 함수가 여러 번 호출될 수 있습니다. 기본 설정인 *함수 호출이 없는 식만 평가*는 함수를 호출하는 것으로 보이는 식을 제외하지만 다른 식은 평가합니다. 예를 들어 `a.b`는 평가하지만 `a().b`는 평가하지 않습니다.  *식 평가 안 함*은 일반적인 IntelliSense 엔진만 제안에 사용하여 모든 부작용을 방지합니다. *모든 식 평가*는 부작용과 관계없이 전체 식을 평가하여 제안을 가져옵니다. |
 | 정적 분석 제안 숨기기 | 끄기 | 설정하면 식을 평가하여 얻은 제안만 표시합니다. 완료 모드 *식 평가 안 함*과 함께 사용할 경우 대화형 창에 유용한 완료가 나타나지 않습니다. |
