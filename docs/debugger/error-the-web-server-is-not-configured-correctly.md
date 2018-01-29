@@ -4,26 +4,30 @@ ms.custom:
 ms.date: 09/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: vs.debug.remote.projnotconfigured
+f1_keywords:
+- vs.debug.remote.projnotconfigured
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-helpviewer_keywords: debugger, Web application errors
-caps.latest.revision: "22"
+helpviewer_keywords:
+- debugger, Web application errors
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 6f1e206cc9327ef933f52f35960f628170e02c38
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: bd7ea7deea749831ebf26d3f8a406b1e3ad63fb0
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="error-the-web-server-is-not-configured-correctly"></a>오류: 웹 서버가 제대로 구성되어 있지 않습니다.
 
@@ -39,7 +43,7 @@ ms.lasthandoff: 01/05/2018
 
     실제 경로 올바르지 않을 수 웹 응용 프로그램이 다른 컴퓨터에 복사, 수동으로 이름을 변경 되었거나 이동 합니다. IIS 및 다시 시도 다시 설정 합니다.
 
-3. Visual Studio에서 올바른 서버 속성에서 선택 되어 있는지 확인 합니다. (열기 **속성 > 웹 > 서버** 또는 **속성 > 디버그** 프로젝트 형식에 따라 합니다. Web Forms 프로젝트를 열고 **속성 페이지 > 시작 옵션 > 서버**).
+3. Visual Studio에서 로컬로 디버그 하는 경우 올바른 서버 속성에서 선택 되어 있는지 확인 합니다. (열기 **속성 > 웹 > 서버** 또는 **속성 > 디버그** 프로젝트 형식에 따라 합니다. Web Forms 프로젝트를 열고 **속성 페이지 > 시작 옵션 > 서버**).
 
     IIS와 같은 외부 (사용자 지정) 서버를 사용 하는 URL은 올바른 이어야 합니다. 그렇지 않은 경우 IIS Express 및 다시 시도 선택 합니다.
 

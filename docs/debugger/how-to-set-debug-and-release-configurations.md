@@ -4,10 +4,12 @@ ms.custom: H1HackMay2017
 ms.date: 04/10/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.builds
+f1_keywords:
+- vs.debug.builds
 dev_langs:
 - CSharp
 - VB
@@ -30,16 +32,17 @@ helpviewer_keywords:
 - release builds, switching to debug build
 - Visual Basic projects, debug and release builds
 ms.assetid: 57b6bbb7-f2af-48f7-8773-127d75034ed2
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cc63ca48f7c35c382b668d9b7c794a4905b9dac9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ca61d09bb1d2ab09c6991f0cd50cc302dff7fb77
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-set-debug-and-release-configurations-in-visual-studio"></a>방법: 디버그 및 릴리스 Visual Studio의 구성 설정
 Visual Studio 프로젝트에는 사용하는 프로그램에 대한 별도의 릴리스 및 디버그 구성이 있습니다. 이름이 의미하는 것처럼 디버그 버전은 디버깅용으로 빌드하고 릴리스 버전은 최종 릴리스 배포용으로 빌드합니다.  
@@ -119,5 +122,4 @@ C# 디버그 구성에 대 한 프로젝트 설정에 대 한 자세한 내용�
  [C + + 디버그 구성에 대 한 프로젝트 설정](../debugger/project-settings-for-a-cpp-debug-configuration.md)   
  [C# 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-csharp-debug-configurations.md)   
  [Visual Basic 디버그 구성을 위한 프로젝트 설정](../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [방법: 구성 만들기 및 편집](../ide/how-to-create-and-edit-configurations.md)   
- [프로젝트 구성 디버그 및 릴리스](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)
+ [방법: 구성 만들기 및 편집](../ide/how-to-create-and-edit-configurations.md)

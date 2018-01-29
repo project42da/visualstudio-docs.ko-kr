@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 05/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -26,16 +27,17 @@ helpviewer_keywords:
 - errors [debugger], unable to start debugging
 - debugging ASP.NET Web applications, unable to start debugging error
 - remote debugging, errors
-caps.latest.revision: "29"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a7d09deda1aa2b24fba90f9d9d417917c5b284ad
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: d9c4160726f808a2f456bb52390839c34dc308e2
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>오류: 웹 서버에서 디버깅을 시작할 수 없습니다.
 
@@ -84,8 +86,10 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="server_error"></a>원격 서버 오류를 반환합니다.
 
-문제의 원인을 식별 하려면 메시지에 반환 되는 오류 코드를 확인 합니다. 다음은 몇 가지 일반적인 오류 코드입니다.
-- (403) 사용할 수 없음입니다. 올바른 서버 종류 및 URL에 연결 하 고 있는지 확인 하십시오 (에서 **속성 > 웹 > 서버** 또는 **속성 > 디버그**프로젝트 형식에 따라). 또한 서버의 web.config에 포함 되어 있는지를 확인 `debug=true` 컴파일 요소에 있습니다. 이러한 설정이 올바른 이미 경우 웹 응용 프로그램 폴더는 올바른 폴더 권한이 있는지 확인 합니다. 자세한 내용은 참조 [IIS 구성을 확인](#vxtbshttpservererrorsthingstocheck)합니다.
+확인 프로그램 [IIS 로그 파일](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0) 오류 하위 코드 및 추가 정보와이 IIS 7 [블로그 게시물](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)합니다.
+
+또한 다음은 일반적인 오류 코드 중 일부는 몇 가지 제안 사항입니다.
+- (403) 사용할 수 없음입니다. 이 오류에 대 한 다양 한 원인은, 로그 파일 및 웹 사이트에 대 한 IIS 보안 설정을 확인 합니다. 서버의 web.config 포함 되어 있는지 확인 `debug=true` 컴파일 요소에 있습니다. 웹 응용 프로그램 폴더에 적절 한 권한이 있는지, 그리고 응용 프로그램 풀 구성이 올바른지 (암호 변경 수 있습니다)에 있는지 확인 합니다. 참조 [IIS 구성을 확인](#vxtbshttpservererrorsthingstocheck)합니다. 이러한 설정이 올바른지 이미 로컬로 디버깅 하는 경우의 올바른 서버 종류 및 URL에 연결 하 고 있는지 확인할 수도 (에서 **속성 > 웹 > 서버** 또는 **속성 > 디버그**, 사용자 프로젝트 형식에 따라).
 - (503) 서버를 사용할 수 없습니다. 응용 프로그램 풀 오류 또는 구성 변경으로 인해 중지 있을 수 있습니다. 응용 프로그램 풀을 다시 시작 합니다.
 - (404) 찾을 수 없습니다. 올바른 버전의 ASP.NET에 대 한 응용 프로그램 풀 구성 되어 있는지 확인 합니다.
 
@@ -125,7 +129,7 @@ ms.lasthandoff: 01/05/2018
     
 * 웹 응용 프로그램 폴더에 적절 한 권한이 있는지 확인 합니다.
 
-    IIS_IUSRS, IUSR, 또는 응용 프로그램 풀 읽기와 관련 된 특정 사용자에 부여 하 고 웹 응용 프로그램 폴더에 대 한 권한을 실행 했는지 확인 합니다. 문제를 해결 하 고 응용 프로그램 풀을 다시 시작 합니다.
+    IIS_IUSRS, IUSR, 제공 하거나 특정 사용자와 연결 된는 [응용 프로그램 풀](/iis/manage/configuring-security/application-pool-identities) 읽기 및 웹 응용 프로그램 폴더에 대 한 권한을 실행 합니다. 문제를 해결 하 고 응용 프로그램 풀을 다시 시작 합니다.
 
 * 올바른 버전의 ASP.NET IIS에 설치 되어 있는지 확인 합니다.
 

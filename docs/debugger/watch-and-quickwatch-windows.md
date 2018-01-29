@@ -4,10 +4,12 @@ ms.custom: H1Hack27Feb2017
 ms.date: 04/04/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.watch
+f1_keywords:
+- vs.debug.watch
 helpviewer_keywords:
 - debugging [Visual Studio], Watch window
 - expressions [debugger], evaluating
@@ -15,22 +17,21 @@ helpviewer_keywords:
 - expression evaluation
 - registers, evaluating
 - debugging [Visual Studio], expression evaluation
-ms.assetid: d5c18377-2a0e-4819-a645-407e24ccc58c
-caps.latest.revision: "45"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 086d7b103095f6cbc9d90c962fd0ad31af964f54
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: 0f5c518becd09f6b94fb598975caa913d150ac2a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>조사식 및 간략 한 조사식 창에서 Visual Studio를 사용 하 여 변수에 대 한 조사식을 설정
-디버깅 하는 동안 사용할 수 있습니다는 **조사식** (**디버그 > Windows > 조사식 > 조사식 (1, 2, 3, 4)**) 및 **간략 한 조사식** (변수를 마우스 오른쪽 단추로 클릭 /  **디버그 > 간략 한 조사식**) 변수 및 식을 조사 하려면 windows 합니다.  차이점은 **조사식** 창에는 여러 변수가 표시될 수 있는 반면 **간략한 조사식** 창에는 한 번에 하나의 변수가 표시된다는 것입니다.
+디버깅 하는 동안 사용할 수 있습니다는 **조사식** 및 **간략 한 조사식** 변수 및 식을 조사 하려면 windows 합니다.  차이점은 **조사식** 창에는 여러 변수가 표시될 수 있는 반면 **간략한 조사식** 창에는 한 번에 하나의 변수가 표시된다는 것입니다. 
 
-Windows는 디버깅 세션 중 에서만 사용할 수 있습니다. 
+Windows는 디버깅 세션 중 에서만 사용할 수 있습니다. 열려는 **조사식** 창 선택 **디버그 > Windows > 조사식 > 조사식 (1, 2, 3, 4)**). 열려는 **간략 한 조사식** 창 하거나 변수를 마우스 오른쪽 단추로 클릭 하 고 선택 **간략 한 조사식** 선택 또는 **디버그 > 간략 한 조사식**합니다.
   
 ## <a name="observing-a-single-variable-with-quickwatch"></a>간략한 조사식을 사용하여 단일 변수 관찰  
  **간략한 조사식** 창을 사용하여 단일 변수를 관찰할 수 있습니다. 예를 들어 다음과 같은 코드를 가정해 봅니다.  
@@ -54,7 +55,7 @@ static void Main(string[] args)
   
 2.  디버깅을 시작합니다. 중단점에서 실행이 중지됩니다.  
   
-3.  열기는 **간략 한 조사식** 창 (마우스 오른쪽 단추로 클릭 a를 눌러 **간략 한 조사식**, 또는 **SHIFT + F9**).
+3.  열기는 **간략 한 조사식** 창 (마우스 오른쪽 단추로 클릭 `a`, 선택 **간략 한 조사식**, 선택 또는 `a` 한 키를 누릅니다 **SHIFT + F9**).
 
     변수를 표시 됩니다는 **값** 값이 1 인 창입니다.
 
