@@ -20,6 +20,7 @@
 ## [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)
 ### [단위 테스트를 64비트 프로세스로 실행](run-a-unit-test-as-a-64-bit-process.md)
 ### [연습: UWP 앱에 대한 단위 테스트 만들기 및 실행](walkthrough-creating-and-running-unit-tests-for-windows-store-apps.md)
+### [테스트 탐색기 FAQ](test-explorer-faq.md)
 ## [.runsettings 파일을 사용하여 단위 테스트 구성](configure-unit-tests-by-using-a-dot-runsettings-file.md)
 ## [관리 코드의 단위 테스트 작성](writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
 ### [연습: 관리 코드에 대한 단위 테스트 만들기 및 실행](walkthrough-creating-and-running-unit-tests-for-managed-code.md)
