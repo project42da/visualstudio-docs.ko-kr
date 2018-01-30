@@ -4,25 +4,28 @@ ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.debug.execution
+f1_keywords:
+- vs.debug.execution
 helpviewer_keywords:
 - stepping
 - debugging [Visual Studio], execution control
 - execution, controlling in debugger
 ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
-caps.latest.revision: "42"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2c45f6cfa37ee8593da08d59071d8244b08feac7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: f6b83e1be32eb657555131a934f8c11f9567c5bc
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="navigate-code-with-the-visual-studio-debugger"></a>Visual Studio 디버거를 사용 하 여 코드 탐색
 디버거에서 코드를 탐색 하는 명령 및 바로 가기를을 잘 알고 있으며 있는 빠르고 쉽게 찾아 앱의 문제를 해결 하려면. 디버거에서 코드를 탐색 하는 동안 응용 프로그램의 상태를 검사 또는 실행 흐름에 해당 하는 방법에 대 한 자세한 정보 수 있습니다.  
@@ -32,13 +35,13 @@ ms.lasthandoff: 12/22/2017
   
  녹색 화살표 또한 디버거를 시작 (동일 **F5**).  
   
- ![DBG &#95; 기본 사항 &#95; 디버깅 시작 &#95;](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
+ ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
   
  디버거가 연결 된 앱을 시작할 수는 몇 가지 다른 방법을 포함 **F11** ([코드를 한 단계씩](#BKMK_Step_into__over__or_out_of_the_code)), **F10** ([코드 건너뛰기](#BKMK_Step_over_Step_out)), 또는 사용 하 여 **커서까지 실행**합니다.  이러한 옵션에 수행할 작업에 대 한 정보는이 항목의 다른 섹션을 참조 하십시오.  
   
  을 디버깅할 때는 노란색 줄 다음에 실행 될 코드를 표시 합니다.  
   
- ![DBG &#95; 기본 사항 &#95; 나누기 및 #95; 모드](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
+ ![DBG&#95;Basics&#95;Break&#95;Mode](../debugger/media/dbg_basics_break_mode.png "DBG_Basics_Break_Mode")  
   
  디버깅 하는 동안과 같은 명령을 간을 전환할 수 있습니다 **F5**, **F11** 신속 하 게 검토 하려면 코드 이동 (예: 중단점)이이 항목에서 설명 하는 다른 기능을 사용 합니다.  
   
@@ -56,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
 -   실제로 디버거는 실제 줄이 아닌 코드 문을 단계별로 실행합니다. 예를 들어 한 줄에 `if` 절을 작성할 수 있습니다.  
   
-    ```CSharp  
+    ```csharp  
     int x = 42;  
     string s = "Not answered";  
     if( int x == 42) s = "Answered!";  
@@ -78,7 +81,7 @@ ms.lasthandoff: 12/22/2017
 |키보드 명령|메뉴 명령|설명|  
 |----------------------|------------------|-----------------|  
 |**F10**|**프로시저 단위 실행**|현재 줄에 함수 호출을 포함 하는 경우 **프로시저 단위 실행** 코드를 실행 한 후 호출된 된 함수에서 반환 된 후 코드의 첫 번째 줄에서 실행을 일시 중단 합니다.|  
-|**Shift + f 11**|**프로시저 나가기**|**프로시저 나가기** 계속 코드를 실행 하 고 현재 함수 (현재 함수를 통해 디버거 건너뜁니다)는 반환 될 때 실행을 일시 중단 합니다.|  
+|**Shift+F11**|**프로시저 나가기**|**프로시저 나가기** 계속 코드를 실행 하 고 현재 함수 (현재 함수를 통해 디버거 건너뜁니다)는 반환 될 때 실행을 일시 중단 합니다.|  
   
 > [!TIP]
 >  로 시작 하는 응용 프로그램의 진입점을 찾으려고 해야 할 경우 **F10** 또는 **F11**합니다. 응용 프로그램 상태를 검사 하거나 해당 실행 흐름에 대 한 자세한 내용을 검색 하려고 할 때 유용한 경우가 있습니다.  

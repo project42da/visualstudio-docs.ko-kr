@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 10d3e6b3e5b47fc481a573a365b4423e685625f1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ebc3067ea154c8b9a5f6e180f397c5421f2be470
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio"></a>Visual Studio에서 IntelliTrace로 이벤트 보기
 IntelliTrace를 사용하여 특정 이벤트 또는 이벤트 범주나 이벤트 외에 개별 함수 호출에 대한 정보를 수집할 수 있습니다. 다음 절차에서는 이 작업을 수행하는 방법을 보여 줍니다.  
   
  Visual Studio Enterprise edition, Professional 또는 Community edition 아님에서 IntelliTrace를 사용할 수 있습니다.  
   
-##  <a name="GettingStarted"></a>Intellitrace를 구성 합니다.  
+##  <a name="GettingStarted"></a> Configure Intellitrace  
  IntelliTrace 이벤트로만 디버그를 시도할 수 있습니다. IntelliTrace 이벤트에는 디버거 이벤트, 예외, .NET Framework 이벤트 및 기타 시스템 이벤트가 있습니다. 특정 이벤트를 켜거나 꺼서 디버깅을 시작하기 전에 IntelliTrace에서 기록하는 이벤트를 제어할 수 있습니다. 자세한 내용은 참조 [IntelliTrace 기능](../debugger/intellitrace-features.md)합니다.  
   
  - 파일 액세스에 대한 IntelliTrace 이벤트 켜기 이동 하는 **도구 > 옵션 > IntelliTrace > IntelliTrace 이벤트** 페이지 및 확장 하 고는 **파일** 범주입니다. **파일** 이벤트 범주를 확인합니다. 이렇게 하면 모든 파일 이벤트(액세스, 닫기, 삭제)가 확인됩니다.
@@ -33,13 +35,13 @@ IntelliTrace를 사용하여 특정 이벤트 또는 이벤트 범주나 이벤�
   
 1.  C# 콘솔 응용 프로그램을 만듭니다. Program.cs 파일에서 다음 `using` 문을 추가합니다.  
   
-    ```CSharp  
+    ```csharp  
     using System.IO;  
     ```  
   
 2.  Main 메서드에서 <xref:System.IO.FileStream> 을 만들고 여기에서 읽고 닫고 파일을 삭제합니다. 다른 줄을 추가하여 중단점을 설정할 위치 지정합니다.  
   
-    ```CSharp  
+    ```csharp  
     static void Main(string[] args)  
     {  
         FileStream fs = File.Create("WordSearchInputs.txt");  
@@ -66,13 +68,13 @@ IntelliTrace를 사용하여 특정 이벤트 또는 이벤트 범주나 이벤�
   
      다음 스크린샷은 Visual Studio 2015 업데이트 1에서 시작됩니다.  
   
-     ![IntelliTrace &#45; 업데이트 1](../debugger/media/intellitrace-update1.png "IntelliTrace 업데이트 1")  
+     ![IntelliTrace&#45;Update1](../debugger/media/intellitrace-update1.png "IntelliTrace-Update1")  
   
 3.  이벤트를 선택하여 해당 세부 정보를 확장합니다.  
   
      다음 스크린샷은 Visual Studio 2015 업데이트 1에서 시작됩니다.  
   
-     ![IntelliTraceUpdate1 &#45; SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1 SingleEvent")  
+     ![IntelliTraceUpdate1&#45;SingleEvent](../debugger/media/intellitraceupdate1-singleevent.png "IntelliTraceUpdate1-SingleEvent")  
   
      경로 이름 링크를 선택하여 파일을 열 수 있습니다. 전체 경로 이름을 사용할 수 없는 경우에는 **파일 열기** 대화 상자가 나타납니다.  
   

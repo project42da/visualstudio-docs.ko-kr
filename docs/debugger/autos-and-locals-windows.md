@@ -4,7 +4,8 @@ ms.custom: H1Hack27Feb2017
 ms.date: 04/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - debugger, variable windows
 - debugging [Visual Studio], variable windows
 ms.assetid: bb6291e1-596d-4af0-9f22-5fd713d6b84b
-caps.latest.revision: "24"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 77dd01333941e897628a40a5a5dc1749917dcb89
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 763a079ec8da8c2c1e9e7d7864fc4d0cee6197ed
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>Visual Studio에서 자동에서 변수 및 지역 변수 검사
 **자동** 창 (디버깅 하는 동안 **CTRL + ALT + V, A**, 또는 **디버그 > Windows > 자동**) 및 **지역** 창 (디버깅 중 **CTRL + ALT + V, L**, 또는 **디버그 > Windows > 지역**)는 디버깅 하는 동안 변수 값을 확인 하려는 경우 매우 유용 합니다. **지역** 창에는 로컬 범위에 정의되는 변수가 표시되며, 일반적으로 현재 실행되고 있는 함수 또는 메서드입니다. **자동** 창에는 현재 줄(디버거가 중지되어 있는 위치)에 사용된 변수가 표시됩니다. 이 창에는 변수 표시 되는 정확 하 게 하는 것은 다른 언어에서는 다릅니다. 아래에서 [What variables appear in the Autos Window?](#bkmk_whatvariables) 참조하세요.  
@@ -33,14 +35,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="looking-at-objects-in-the-autos-and-locals-windows"></a>자동 및 지역 창에서 개체 보기  
 배열 및 개체는 트리 컨트롤로 자동 및 지역 창에 표시됩니다. 필드 및 속성을 표시하려면 변수 이름 왼쪽에 있는 화살표를 클릭하여 보기를 확장합니다. 다음은 [지역](http://msdn.microsoft.com/Library/a8737776-e545-4867-91ed-51c7f031fa19) 창에 있는 **FileStream** 개체의 예입니다.  
   
-![지역 &#45; FileStream](../debugger/media/locals-filestream.png "지역 FileStream")  
+![Locals&#45;FileStream](../debugger/media/locals-filestream.png "Locals-FileStream")  
   
 ## <a name="bkmk_whatvariables"></a> 자동 창에 나타나는 변수  
  **자동** 창은 C#, Visual Basic 및 C++ 코드에서 사용할 수 있습니다. **자동** 창은 JavaScript 또는 F#을 지원하지 않습니다.  
   
  C# 및 Visual Basic의 **자동** 창에는 현재 줄이나 이전 줄에 사용된 모든 변수가 표시됩니다. 예를 들어 다음은 네 개의 변수를 선언하고 설정하는 경우입니다.
 
-```CSharp
+```csharp
     public static void Main()
     {
        int a, b, c, d;
@@ -53,7 +55,7 @@ ms.lasthandoff: 12/22/2017
 
  `c = 3`; 줄에 중단점을 설정하고 디버거를 실행하는 경우 실행이 중지되면 **자동** 창이 다음과 같이 표시됩니다.  
 
- ![자동 &#45; CSharp](../debugger/media/autos-csharp.png "자동 CSharp")  
+ ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos-CSharp")  
 
  `c` 줄이 아직 실행되지 않았기 때문에 `c = 3` 의 값이 0입니다.  
 
@@ -84,7 +86,7 @@ ms.lasthandoff: 12/22/2017
   
  다음 C# 코드는 두 함수의 반환 값을 추가합니다.  
 
-```CSharp
+```csharp
 static void Main(string[] args)  
 {  
     int a, b, c, d;  

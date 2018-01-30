@@ -22,8 +22,8 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f5c518becd09f6b94fb598975caa913d150ac2a
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 454dacc7d3b785cf290823b38275a8e441950d8a
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 01/29/2018
@@ -36,7 +36,7 @@ Windows는 디버깅 세션 중 에서만 사용할 수 있습니다. 열려는 
 ## <a name="observing-a-single-variable-with-quickwatch"></a>간략한 조사식을 사용하여 단일 변수 관찰  
  **간략한 조사식** 창을 사용하여 단일 변수를 관찰할 수 있습니다. 예를 들어 다음과 같은 코드를 가정해 봅니다.  
   
-```CSharp
+```csharp
 static void Main(string[] args)  
 {  
     int a, b;  
@@ -125,7 +125,7 @@ int main()
 ##  <a name="bkmk_refreshWatch"></a> 만료된 조사식 값 새로 고침  
  상황에 따라 새로 고침 아이콘 (순환 화살표)을 표시 될 수에서 식을 계산할 때의 **조사식** 창.  예를 들어 속성 확인이 꺼져 있으면 (**도구 > 옵션 > 디버깅 > 속성 확인 및 기타 암시적 함수 호출**), 다음 코드를 있는 및:  
   
-```CSharp  
+```csharp  
 static void Main(string[] args)  
 {  
     List<string> list = new List<string>();  
@@ -177,7 +177,7 @@ var1 = var2
   
  한 가지 방법은 다음 코드를 만듭니다는 `Person` 확인 하려면 지역 변수를 사용 하는 `Person`의 다른 메서드에 있는 이름이:  
   
-```CSharp  
+```csharp  
 class Person  
 {  
     public Person(string name)  

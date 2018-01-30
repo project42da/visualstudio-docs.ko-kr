@@ -4,20 +4,22 @@ ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
 ms.assetid: 0b3138c4-b840-446a-a15c-10ed8e2dd050
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a969a75a7c0cda89d040b8829fc8313974646c07
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 171b07d453c81883354848f70458bab39daa313e
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="get-started-with-the-visual-studio-debugger"></a>Visual Studio 디버거 시작
 Visual Studio 디버거는 모든 언어에서 쉽게 사용할 수 있습니다. 간단한 C# 프로그램을 디버깅 하는 방법을 보여 주 겠지만 여기 하지만 c + + 및 JavaScript와 같은 다른 언어의 코드에 동일한 단계를 적용할 수 있습니다.
@@ -27,7 +29,7 @@ Visual Studio 디버거는 모든 언어에서 쉽게 사용할 수 있습니다
 ##  <a name="BKMK_Start_debugging_a_VS_project"></a>기본 C# 프로젝트 디버깅  
  간단한 C# 콘솔 응용 프로그램으로 시작 하겠습니다 (**파일 > 새로 만들기 > 프로젝트**을 선택한 후 **Visual C#** 차례로 **콘솔 응용 프로그램**). 이전에 Visual Studio 사용한 적, 참조 [연습: 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)합니다. **Main** 메서드 방금 10 회를 정수 변수에 1을 추가 하 고 결과를 콘솔에 출력 합니다.  
   
-```CSharp  
+```csharp  
 static void Main(string[] args)  
 {  
     int testInt = 0;  
@@ -56,7 +58,7 @@ static void Main(string[] args)
   
  가리키면 수는 **testInt** 데이터 팁에서 현재 값을 확인 하는 변수입니다.  
   
- ![DBG &#95; 기본 사항 &#95; 데이터 &#95; 팁](../debugger/media/dbg_basics_data_tips.png "DBG_Basics_Data_Tips")  
+ ![DBG&#95;Basics&#95;Data&#95;Tips](../debugger/media/dbg_basics_data_tips.png "DBG_Basics_Data_Tips")  
   
  코드 창 바로 아래 표시 됩니다는 **자동**, **지역**, 및 **조사식** windows 합니다. 이러한 창에는 실행 당시의 변수에 대한 현재 값이 표시됩니다. 두는 **자동** 및 **지역** windows 표시 **testInt** 값 **10**합니다.  
   
@@ -71,7 +73,7 @@ static void Main(string[] args)
   
  간의 차이 보려면 **한 단계씩 코드 실행** 및 **프로시저 단위 실행**, 다른 메서드에 의해 호출 되는 메서드를 추가 해야 합니다. C# 응용 프로그램에 메서드를 추가하고 Main 메서드에서 호출합니다. 코드는 다음과 비슷합니다.  
   
-```CSharp  
+```csharp  
 static void Main(string[] args)  
 {  
     Method1();  

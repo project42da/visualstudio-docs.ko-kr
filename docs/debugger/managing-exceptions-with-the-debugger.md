@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 04/05/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -32,16 +33,17 @@ helpviewer_keywords:
 - native run-time checks
 - exceptions, debugging
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c04934aed17c6e1b00664d371ff591ebbc3486a3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 978c78ba68460a2f038d85afb92246275acfb9ef
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio에서 디버거를 사용한 예외 관리
 
@@ -77,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 *  다음 C# 콘솔 응용 프로그램에서 Main 메서드는 **try/catch** 블록 내부에서 `try/catch` 예외를 발생시킵니다.  
   
-    ```CSharp  
+    ```csharp  
     static void Main(string[] args)  
     {  
         try  
@@ -128,7 +130,7 @@ ms.lasthandoff: 12/22/2017
   
      콘솔 응용 프로그램의 main () 메서드는 다음과 같습니다.  
   
-    ```CSharp  
+    ```csharp  
     static void Main(string[] args)  
     {  
         Class1 class1 = new Class1();  
@@ -170,7 +172,7 @@ ms.lasthandoff: 12/22/2017
   
  **예외 설정** 창은 C#의 일반적인 예외 형식을 지원하지만 Visual Basic의 일반 예외 형식은 지원하지 않습니다. `MyNamespace.GenericException<T>`와 같은 예외에서 실행을 중단하려면 **MyNamespace.GenericException`1**과 같은 예외를 추가해야 합니다. 즉, 다음과 같은 예외를 만든 경우  
   
-```CSharp  
+```csharp  
 public class GenericException<T> : Exception  
 {  
     public GenericException() : base("This is a generic exception.")  
