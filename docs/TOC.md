@@ -366,6 +366,7 @@
 #### [XAML 디자이너 옵션 대화 상자](ide/reference/xaml-designer.md)
 ### [출력 창](ide/reference/output-window.md)
 ### [프로젝트 속성 참조](ide/reference/project-properties-reference.md)
+#### [응용 프로그램 페이지, 프로젝트 디자이너(UWP)](ide/reference/application-page-project-designer-uwp.md)
 #### [프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](ide/reference/application-page-project-designer-visual-basic.md)
 ##### [어셈블리 정보 대화 상자](ide/reference/assembly-information-dialog-box.md)
 #### [프로젝트 디자이너, 응용 프로그램 페이지(C#)](ide/reference/application-page-project-designer-csharp.md)
