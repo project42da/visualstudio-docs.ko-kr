@@ -7,18 +7,21 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: coded UI tests, data-driven
+helpviewer_keywords:
+- coded UI tests, data-driven
+author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-author: gewarren
-ms.openlocfilehash: 50d4a9d6b300a46ac074989e91d9eb4aecf9a496
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- multiple
+ms.openlocfilehash: 7f88dcf7bf952cf96663e8d42ad9d64e6459cb7d
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="creating-a-data-driven-coded-ui-test"></a>데이터 기반의 코딩된 UI 테스트 만들기
+
 다른 조건을 테스트하려면 각기 다른 매개 변수 값을 사용하여 테스트를 여러 번 실행합니다. 이 경우 데이터 기반의 코딩된 UI 테스트를 사용하면 편리합니다. 데이터 소스에서 매개 변수 값을 정의하면 데이터 소스의 각 행에서 코딩된 UI 테스트가 반복됩니다. 테스트의 전체 결과는 모든 반복의 결과를 기반으로 합니다. 예를 들어 테스트 반복 하나가 실패하면 전체 테스트 결과가 실패로 됩니다.  
   
  **요구 사항**  
@@ -47,17 +50,16 @@ ms.lasthandoff: 01/09/2018
      ![테스트 메서드 생성](../test/media/cuit_datadriven_cuitbuildergencode.png "CUIT_dataDriven_CUITBuilderGenCode")  
   
      테스트 빌더를 닫습니다. 메서드가 테스트에 추가됩니다.  
-  
-    ```csharp  
+
+    ```csharp
     [TestMethod]  
     public void CodedUITestMethod1()  
     {  
         // To generate code for this test, select "Generate Code for Coded UI Test" from the shortcut menu and select one of the menu items.  
-        this.UIMap.AddNumbers();  
-  
-    }  
-    ```  
-  
+        this.UIMap.AddNumbers();
+    }
+    ```
+
 5.  `AddNumbers()` 메서드를 사용하여 테스트가 실행되는지 확인합니다. 위에 나와 있는 테스트 메서드에 커서를 놓고 상황에 맞는 메뉴를 열고 **테스트 실행**을 선택합니다. 선택합니다(바로 가기 키: Ctrl+R, T).  
   
      테스트 성공 여부를 보여 주는 테스트 결과가 테스트 탐색기 창에 표시됩니다. 테스트 탐색기 창을 열려면 **테스트** 메뉴에서 **Windows**와 **테스트 탐색기**를 차례로 선택합니다.  
@@ -78,7 +80,7 @@ ms.lasthandoff: 01/09/2018
   
      `ValidateSum` 메서드는 `AddNumbers` 메서드의 결과 유효성을 검사하므로 코드 블록 아래쪽으로 이동합니다.  
   
-    ```csharp  
+    ```csharp
     public void CodedUITestMethod1()  
     {  
   
@@ -86,8 +88,8 @@ ms.lasthandoff: 01/09/2018
         this.UIMap.AddNumbers();  
         this.UIMap.ValidateSum();  
   
-    }  
-    ```  
+    }
+    ```
   
 9. `ValidateSum()` 메서드를 사용하여 테스트가 실행되는지 확인합니다. 위에 나와 있는 테스트 메서드에 커서를 놓고 상황에 맞는 메뉴를 열고 **테스트 실행**을 선택합니다. 선택합니다(바로 가기 키: Ctrl+R, T).  
   
@@ -123,7 +125,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  데이터 소스를 바인딩하려면 테스트 메서드 바로 위에 있는 기존 `DataSource` 특성 내에 `[TestMethod]` 특성을 추가합니다.  
   
-    ```  
+    ```csharp
     [DataSource("Microsoft.VisualStudio.TestTools.DataSource.CSV", "|DataDirectory|\\data.csv", "data#csv", DataAccessMethod.Sequential), DeploymentItem("data.csv"), TestMethod]  
     public void CodedUITestMethod1()  
     {  
@@ -132,14 +134,13 @@ ms.lasthandoff: 01/09/2018
         this.UIMap.AddNumbers();  
         this.UIMap.ValidateSum();  
   
-    }  
-  
-    ```  
-  
+    }
+    ```
+
      이제 이 테스트 메서드에서 데이터 소스를 사용할 수 있습니다.  
   
     > [!TIP]
-    >  XML, SQL Express, Excel 등의 다른 데이터 소스 형식을 사용하는 샘플은 Q & A 섹션의 [데이터 소스 특성 샘플](#CreateDataDrivenCUIT_QA_DataSourceAttributes)을 참조하세요.  
+    > XML, SQL Express, Excel 등의 다른 데이터 소스 형식을 사용하는 샘플은 Q & A 섹션의 [데이터 소스 특성 샘플](#CreateDataDrivenCUIT_QA_DataSourceAttributes)을 참조하세요.  
   
 2.  테스트를 실행합니다.  
   
@@ -151,7 +152,7 @@ ms.lasthandoff: 01/09/2018
   
 1.  CodedUITest.cs 파일의 맨 위에 `using Microsoft.VisualStudio.TestTools.UITesting.WinControls`를 추가합니다.  
   
-    ```  
+    ```csharp
     using System;  
     using System.Collections.Generic;  
     using System.Text.RegularExpressions;  
@@ -163,11 +164,11 @@ ms.lasthandoff: 01/09/2018
     using Microsoft.VisualStudio.TestTools.UITest.Extension;  
     using Keyboard = Microsoft.VisualStudio.TestTools.UITesting.Keyboard;  
     using Microsoft.VisualStudio.TestTools.UITesting.WinControls;  
-    ```  
+    ```
   
 2.  데이터 소스의 값을 적용하는 `TestContext.DataRow[]`를 `CodedUITestMethod1()` 메서드에 추가합니다. 데이터 소스 값은 `SearchProperties` 컨트롤을 사용하여 UIMap 컨트롤에 할당된 상수를 재정의합니다.  
   
-    ```  
+    ```csharp
     public void CodedUITestMethod1()  
     {  
   
@@ -177,8 +178,8 @@ ms.lasthandoff: 01/09/2018
         this.UIMap.ValidateSumExpectedValues.UIItem2TextDisplayText = TestContext.DataRow["Sum"].ToString();  
         this.UIMap.ValidateSum();  
   
-    }  
-    ```  
+    }
+    ```
   
      데이터를 코딩할 검색 속성을 확인하려면 코딩된 UI 테스트 편집기를 사용합니다.  
   
@@ -235,26 +236,26 @@ ms.lasthandoff: 01/09/2018
   
 ### <a name="q-can-i-use-data-driven-tests-on-my-windows-phone-app"></a>Q: Windows Phone 앱에서 데이터 기반 테스트를 사용할 수 있나요?  
  **A:** 예. Windows Phone용 코딩된 데이터 기반 UI 테스트는 테스트 메서드의 DataRow 특성을 사용하여 정의됩니다. 다음 예에서 x와 y는 첫 번째 반복에는 값 1 및 2를 사용하고 테스트의 두 번째 반복에는 값 -1 및 -2를 사용합니다.  
-  
-```  
+
+```csharp
 [DataRow(1, 2, DisplayName = "Add positive numbers")]  
 [DataRow(-1, -2, DisplayName = "Add negative numbers")]  
 [TestMethod]  
-public void DataDrivingDemo_MyTestMethod(int x, int y)  
-  
-```  
-  
- 자세한 내용은 [Windows Phone 앱에서 데이터 기반의 코딩된 UI 테스트 사용](../test/test-windows-phone-8-1-apps-with-coded-ui-tests.md#TestingPhoneAppsCodedUI_DataDriven)을 참조하세요.  
+public void DataDrivingDemo_MyTestMethod(int x, int y)
+```
+
+자세한 내용은 [Windows Phone 앱에서 데이터 기반의 코딩된 UI 테스트 사용](../test/test-windows-phone-8-1-apps-with-coded-ui-tests.md#TestingPhoneAppsCodedUI_DataDriven)을 참조하세요.
   
 ### <a name="q-why-cant-i-modify-the-code-in-the-uimapdesigner-file"></a>Q: UIMap.Designer 파일에서 코드를 수정할 수 없는 이유는 무엇인가요?  
  **A**: UIMap - 코딩된 UI 테스트 빌더를 사용하여 코드를 생성할 때마다 UIMapDesigner.cs 파일에서 수정된 코드 변경 내용을 덮어씁니다. 이 샘플에서 그리고 대부분의 경우에는 테스트가 데이터 소스를 사용하도록 설정하는 데 필요한 코드 변경을 테스트의 소스 코드 파일(CodedUITest1.cs)에서 수행할 수 있습니다.  
-  
- 기록된 메서드를 수정해야 하는 경우에는 해당 메서드를 UIMap.cs 파일에 복사한 후 이름을 바꾸어야 합니다. UIMap.cs 파일을 사용하여 UIMapDesigner.cs 파일의 메서드와 속성을 재정의할 수 있습니다. 코딩된 UITest.cs 파일에서 원래 메서드에 대한 참조를 제거하고 이름을 바꾼 메서드 이름으로 바꾸어야 합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>   
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [최선의 코딩된 UI 테스트 방법](../test/best-practices-for-coded-ui-tests.md)   
- [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+
+기록된 메서드를 수정해야 하는 경우에는 해당 메서드를 UIMap.cs 파일에 복사한 후 이름을 바꾸어야 합니다. UIMap.cs 파일을 사용하여 UIMapDesigner.cs 파일의 메서드와 속성을 재정의할 수 있습니다. 코딩된 UITest.cs 파일에서 원래 메서드에 대한 참조를 제거하고 이름을 바꾼 메서드 이름으로 바꾸어야 합니다.  
+
+## <a name="see-also"></a>참고 항목
+
+<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>   
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
+[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)   
+[최선의 코딩된 UI 테스트 방법](../test/best-practices-for-coded-ui-tests.md)   
+[코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

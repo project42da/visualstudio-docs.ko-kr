@@ -16,13 +16,14 @@ helpviewer_keywords:
 - data-driven unit tests
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: a582796e7436df49a719d758896ee8dcea43b068
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 74d271b6d1c9124d323b9c1ecbbfe9e716b1c5b8
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>방법: 데이터 기반 단위 테스트 만들기
 관리 코드에 Microsoft 단위 테스트 프레임워크를 사용하면 데이터 소스에서 테스트 메서드에 사용된 값을 검색하도록 단위 테스트 메서드를 설정할 수 있습니다. 이 메서드는 데이터 소스의 각 행을 대상으로 연속 실행되므로 단일 메서드를 사용하여 다양한 입력을 쉽게 테스트할 수 있습니다.  
@@ -182,12 +183,12 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
   
  테스트 중인 메서드가 수정되고 테스트가 다시 실행되면 결과 표시줄이 녹색으로 바뀌고 테스트 메서드가 **통과한 테스트** 그룹으로 이동합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute?displayProperty=fullName>   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>   
- [단위 테스트 만들기 및 실행](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)   
- [코드 단위 테스트](../test/unit-test-your-code.md)   
- [테스트 탐색기를 사용하여 단위 테스트 실행](../test/run-unit-tests-with-test-explorer.md)   
- [관리 코드용 Microsoft 단위 테스트 프레임워크를 사용하여 .NET Framework용 단위 테스트 작성](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)
+## <a name="see-also"></a>참고 항목
+
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute?displayProperty=fullName>  
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext?displayProperty=fullName>  
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestContext.DataRow%2A?displayProperty=fullName>  
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert?displayProperty=fullName>  
+[코드 단위 테스트](../test/unit-test-your-code.md)  
+[테스트 탐색기를 사용하여 단위 테스트 실행](../test/run-unit-tests-with-test-explorer.md)  
+[관리 코드용 Microsoft 단위 테스트 프레임워크를 사용하여 .NET Framework용 단위 테스트 작성](../test/writing-unit-tests-for-the-dotnet-framework-with-the-microsoft-unit-test-framework-for-managed-code.md)

@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 9e89ff364b0b10ee85be6fdd98d3e328f8c337ee
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 1af9c5634770b08b7903033226f44630bdb0e133
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="upgrading-coded-ui-tests-from-visual-studio-2010"></a>Visual Studio 2010에서 코딩된 UI 테스트 업그레이드
 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1에서 만든, 코딩된 UI 테스트를 포함하는 테스트 프로젝트는 Visual Studio 2012 이상에서 열 때 자동으로 복구됩니다. 테스트 프로젝트를 소스 제어로 체크 인하면 프로젝트 파일은 복구를 위해 체크 아웃됩니다. 복구된 다음에는 코딩된 UI 테스트를 포함하는 이러한 테스트 프로젝트를 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] SP1과 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 모두 사용할 수 있습니다.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 01/09/2018
 -   Visual Studio Enterprise  
   
 > [!NOTE]
->  Visual Studio에는 둘 이상의 테스트 프로젝트 형식이 있습니다. 코딩된 UI 테스트를 새로 만드는 경우 코딩된 UI 테스트 프로젝트 형식으로 만들어집니다. 자세한 내용은 [이전 버전의 Visual Studio에서 테스트 업그레이드](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)를 참조하세요.  
+> Visual Studio에는 둘 이상의 테스트 프로젝트 형식이 있습니다. 코딩된 UI 테스트를 새로 만드는 경우 코딩된 UI 테스트 프로젝트 형식으로 만들어집니다.
   
 > [!WARNING]
 >  코딩된 UI 테스트를 포함하는[!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 테스트 프로젝트는 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)] 에서 열거나 [!INCLUDE[vs_dev10_long](../code-quality/includes/vs_dev10_long_md.md)] 와 함께 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]에서 여는 경우 다시 작성해야 합니다.  
@@ -66,6 +67,5 @@ ms.lasthandoff: 01/09/2018
 ## <a name="see-also"></a>참고 항목
 
 [Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드](../porting/port-migrate-and-upgrade-visual-studio-projects.md)  
-[이전 버전의 Visual Studio에서 테스트 업그레이드](http://msdn.microsoft.com/en-us/e9c8b7f6-bd72-448e-8edb-d090dcc5cf52)  
 [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)  
 [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

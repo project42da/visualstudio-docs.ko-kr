@@ -14,13 +14,14 @@ helpviewer_keywords:
 - unit tests, Assert classes
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: f2d0e0020ae26a3a2331643f74f436441612b9fc
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 01d41202f49a61a1ae2ba0f926b5c5b563ab351c
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-the-assert-classes"></a>Assert 클래스 사용
 UnitTestingFramework 네임스페이스의 Assert 클래스를 사용하여 특정 기능을 확인합니다. 단위 테스트 메서드는 개발 코드에서 메서드 코드를 실행하지만, Assert 문을 포함하는 경우에만 코드의 동작이 정확한지 여부를 보고합니다.  
@@ -59,6 +60,7 @@ UnitTestingFramework 네임스페이스의 Assert 클래스를 사용하여 특�
   
  개발 코드의 메서드가 throw할 것으로 예상했던 예외가 실제로 해당 메서드에서 throw됨을 테스트 메서드가 확인하도록 하려는 경우 ExpectedExceptionAttribute 특성으로 테스트 메서드를 데코레이팅합니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting>   
- [기존 코드에 대한 단위 테스트 만들기 및 실행](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)
+## <a name="see-also"></a>참고 항목
+
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting>  
+[코드 단위 테스트](../test/unit-test-your-code.md)

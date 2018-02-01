@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,28 +13,28 @@ helpviewer_keywords:
 - editors, text viewing
 - Code Editor, word wrap
 ms.assetid: 442f33ef-9f52-4515-b55f-fb816d664645
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e813e51511b88397f0accc637e85d9e546b48c47
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 75a82b2c3e3e251dbd53ae8d2fc67edabb33f830
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-manage-word-wrap-in-the-editor"></a>방법: 편집기에서 줄 바꿈 관리
-**자동 줄 바꿈** 옵션을 설정 및 선택 취소할 수 있습니다. 이 옵션을 설정하면 코드 편집기 창의 현재 너비를 벗어나는 긴 줄의 해당 부분이 다음 줄에 표시됩니다. 예를 들어 줄 번호 매기기를 쉽게 사용하기 위해 이 옵션의 선택을 취소한 경우에는 오른쪽으로 스크롤하여 긴 줄의 끝을 확인할 수 있습니다.  
-  
- 자세한 내용은 [방법: 일반 편집기 옵션 설정](http://msdn.microsoft.com/en-us/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)을 참조하세요.  
-  
+
+**자동 줄 바꿈** 옵션을 설정 및 선택 취소할 수 있습니다. 이 옵션을 설정하면 코드 편집기 창의 현재 너비를 벗어나는 긴 줄의 해당 부분이 다음 줄에 표시됩니다. 예를 들어 줄 번호 매기기를 쉽게 사용하기 위해 이 옵션의 선택을 취소한 경우에는 오른쪽으로 스크롤하여 긴 줄의 끝을 확인할 수 있습니다.
+
 > [!NOTE]
->  표시되는 대화 상자와 메뉴 명령은 활성 설정 또는 버전에 따라 **도움말**에 설명된 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
-  
-## <a name="procedure"></a>프로시저  
-  
-#### <a name="to-set-word-wrap-preferences"></a>자동 줄 바꿈 기본 설정을 설정하려면  
+> 표시되는 대화 상자와 메뉴 명령은 활성 설정 또는 버전에 따라 **도움말**에 설명된 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.
+
+## <a name="procedure"></a>프로시저
+
+### <a name="to-set-word-wrap-preferences"></a>자동 줄 바꿈 기본 설정을 설정하려면
   
 1.  **도구** 메뉴에서 **옵션**을 선택합니다.  
   
@@ -52,7 +53,8 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  이러한 미리 알림 화살표는 코드에 추가되지 않고 표시용으로만 사용됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [편집기 사용자 지정](../../ide/customizing-the-editor.md)   
- [옵션 대화 상자, 텍스트 편집기](../../ide/reference/text-editor-options-dialog-box.md)   
- [코드 작성](../../ide/writing-code-in-the-code-and-text-editor.md)
+## <a name="see-also"></a>참고 항목
+
+[편집기 사용자 지정](../../ide/customizing-the-editor.md)  
+[옵션 대화 상자, 텍스트 편집기](../../ide/reference/text-editor-options-dialog-box.md)  
+[코드 작성](../../ide/writing-code-in-the-code-and-text-editor.md)

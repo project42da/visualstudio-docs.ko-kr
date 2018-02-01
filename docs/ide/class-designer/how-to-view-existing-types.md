@@ -4,25 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.classdesigner.CannotShowBaseType
+f1_keywords:
+- vs.classdesigner.CannotShowBaseType
 helpviewer_keywords:
 - types [Visual Studio], visualizing
 - types [Visual Studio], class diagrams
 - class diagrams, types
 ms.assetid: de110a4e-5b51-4a40-9dee-615df4d8f999
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2fa9ab600c4f4be61a80b819fd20104a3639f0a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: f9b5b4aed79dfbfda19020cfda17af68d7ae186c
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-view-existing-types-class-designer"></a>방법: 기존 형식 보기(클래스 디자이너)
 기존 형식 및 해당 멤버를 보려면 클래스 다이어그램에 해당 모양을 추가합니다.  
@@ -50,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 클래스 뷰의 프로젝트 노드에서 클래스 다이어그램으로 하나 이상의 형식을 끌어 놓아 프로젝트에 있는 형식을 볼 수도 있습니다.  
   
 > [!TIP]
->  클래스 뷰가 열려 있지 않으면 **보기** 메뉴에서 클래스 뷰를 엽니다. 클래스 뷰에 대한 자세한 내용은 [클래스 및 해당 멤버 보기](http://msdn.microsoft.com/en-us/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333)를 참조하세요.  
+> 클래스 뷰가 열려 있지 않으면 **보기** 메뉴에서 클래스 뷰를 엽니다.
   
 다이어그램의 기본 위치에 형식을 표시하려면 클래스 뷰에서 하나 이상의 형식을 선택하고 선택한 형식을 마우스 오른쪽 단추로 클릭한 후에 **클래스 다이어그램 보기**를 선택합니다.  
   

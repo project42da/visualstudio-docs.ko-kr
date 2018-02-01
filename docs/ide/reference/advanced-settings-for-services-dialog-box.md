@@ -4,22 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vb.ProjectPropertiesAdvancedServices
-helpviewer_keywords: Advanced Settings for Services dialog box
+f1_keywords:
+- vb.ProjectPropertiesAdvancedServices
+helpviewer_keywords:
+- Advanced Settings for Services dialog box
 ms.assetid: 6dde4a2d-85e1-4275-aa55-24b84111be91
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 77f2f55d142f87e43f2bd3848c8dcd0b352c197e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 264f90329bfbf969f50dbc38073bdda26987fd26
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="advanced-settings-for-services-dialog-box"></a>서비스의 고급 설정 대화 상자
 클라이언트 응용 프로그램 서비스를 통해 Windows Forms 및 WPF(Windows Presentation Foundation) 응용 프로그램에서 [!INCLUDE[ajax_current_short](../../ide/reference/includes/ajax_current_short_md.md)] 로그인, 역할 및 프로필 서비스에 간편하게 액세스할 수 있습니다. **프로젝트 디자이너**에서 **서비스** 페이지를 사용하여 클라이언트 응용 프로그램 서비스를 구성할 수 있습니다. **서비스** 페이지에 대한 자세한 내용은 [프로젝트 디자이너, 서비스 페이지](../../ide/reference/services-page-project-designer.md)를 참조하세요.  
@@ -28,14 +32,14 @@ ms.lasthandoff: 12/22/2017
   
  **서비스의 고급 설정** 대화 상자에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드를 선택하고 **프로젝트** 메뉴에서 **속성**을 클릭합니다. **프로젝트 디자이너**가 나타나면 **서비스** 탭을 클릭하고 **고급** 단추를 클릭합니다. 클라이언트 응용 프로그램 서비스를 사용하도록 설정할 때까지 이 단추를 사용할 수 없습니다.  
   
-## <a name="task-list"></a>작업 목록  
- [방법: 클라이언트 응용 프로그램 서비스 구성](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)  
-  
- [방법: 클라이언트 응용 프로그램 서비스에서 오프라인으로 작업](http://msdn.microsoft.com/en-us/f792cb16-8520-4a0f-9dc9-07bfbc454e38)  
-  
-## <a name="uielement-list"></a>UI 요소 목록  
+## <a name="task-list"></a>작업 목록
+
+- [방법: 클라이언트 응용 프로그램 서비스 구성](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)
+
+## <a name="uielement-list"></a>UI 요소 목록
+
  **오프라인으로 로그인할 수 있도록 로컬에 암호 해시 저장**  
- 응용 프로그램이 오프라인 모드에 있을 때 사용자가 로그인할 수 있도록 암호화된 형식의 사용자 암호를 로컬에서 캐시할지 여부를 지정합니다. 자세한 내용은 [방법: 클라이언트 응용 프로그램 서비스에서 오프라인으로 작업](http://msdn.microsoft.com/en-us/f792cb16-8520-4a0f-9dc9-07bfbc454e38)을 참조하세요. 이 옵션은 기본적으로 선택됩니다.  
+ 응용 프로그램이 오프라인 모드에 있을 때 사용자가 로그인할 수 있도록 암호화된 형식의 사용자 암호를 로컬에서 캐시할지 여부를 지정합니다. 이 옵션은 기본적으로 선택됩니다.
   
  **서버 쿠키가 만료될 때마다 다시 사용자 로그온**  
  응용 프로그램이 역할이나 프로필 서비스에 액세스할 때 서버 인증 쿠키가 만료된 경우 이전에 인증된 사용자를 자동으로 다시 인증할지 여부를 지정합니다. 쿠키가 만료된 후 응용 프로그램 서비스에 대한 액세스를 거부하고 명시적 재인증을 요구하려면 이 옵션을 선택합니다. 공용 위치에 배포된 응용 프로그램에 유용한 이 옵션을 선택하면 사용한 후에도 응용 프로그램을 계속 실행해 두는 사용자의 인증된 상태가 무기한으로 유지되지 않습니다. 기본적으로 이 옵션은 선택 취소되어 있습니다.  
@@ -48,8 +52,8 @@ ms.lasthandoff: 12/22/2017
  **사용자 지정 연결 문자열 사용**  
  클라이언트 서비스 공급자가 로컬 캐시에 대해 사용자 지정 데이터 저장소를 사용할지 여부를 지정합니다. 기본적으로 서비스 공급자는 캐시에 대해 로컬 파일 시스템을 사용합니다. 이 옵션을 선택하면 입력란이 기본 연결 문자열로 자동으로 채워집니다. 기본 연결 문자열을 유지하여 SQL Server Compact Edition 데이터베이스를 자동으로 생성 및 사용하거나, 기존 SQL Server 데이터베이스에 대한 연결 문자열을 지정할 수 있습니다. 자세한 내용은 [방법: 클라이언트 응용 프로그램 서비스 구성](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)을 참조하세요. 기본적으로 이 옵션은 선택 취소되어 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [클라이언트 응용 프로그램 서비스](/dotnet/framework/common-client-technologies/client-application-services)   
- [프로젝트 디자이너, 서비스 페이지](../../ide/reference/services-page-project-designer.md)   
- [방법: 클라이언트 응용 프로그램 서비스 구성](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)   
- [방법: 클라이언트 응용 프로그램 서비스에서 오프라인으로 작업](http://msdn.microsoft.com/en-us/f792cb16-8520-4a0f-9dc9-07bfbc454e38)
+## <a name="see-also"></a>참고 항목
+
+[클라이언트 응용 프로그램 서비스](/dotnet/framework/common-client-technologies/client-application-services)  
+[프로젝트 디자이너, 서비스 페이지](../../ide/reference/services-page-project-designer.md)  
+[방법: 클라이언트 응용 프로그램 서비스 구성](/dotnet/framework/common-client-technologies/how-to-configure-client-application-services)

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,16 +16,17 @@ helpviewer_keywords:
 - diagrams, class structure of projects
 - class structure
 ms.assetid: 37908cb7-f77b-4698-a4f9-3c21e5440fee
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9856a7061bf6fbe70ad39b2b70f052c2bd8c9bd5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 606024fd031814b91cfb97e3e674d9d1240e3efb
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="working-with-class-diagrams-class-designer"></a>클래스 다이어그램 사용(클래스 디자이너)
 클래스 다이어그램을 사용하면 다른 사용자가 작성했거나 자신이 오래 전에 작성한 프로젝트의 클래스 구조를 쉽게 이해할 수 있습니다. 그러면 프로젝트 정보를 사용자 지정하고 다른 사용자와 공유 및 제공할 수 있습니다.  
@@ -39,6 +41,7 @@ ms.lasthandoff: 12/22/2017
 >  클래스 디자이너는 소스 파일 위치를 추적하지 않으므로 프로젝트 구조를 변경하거나 프로젝트에서 소스 파일을 이동하면 클래스 디자이너가 해당 형식을 찾지 못할 수 있습니다(특히 소스 형식이 typedef, 기본 클래스 또는 연결 형식인 경우). **클래스 디자이너에서 이 형식을 표시할 수 없습니다.**와 같은 오류가 발생할 수 있습니다. 이러한 오류가 발생하면 수정되거나 위치가 변경된 소스 코드를 클래스 다이어그램으로 끌어서 다시 표시합니다.
   
 ## <a name="see-also"></a>참고 항목
-[형식 및 관계 보기](viewing-types-and-relationships.md)   
-[방법: 클래스 다이어그램 사용자 지정](how-to-customize-class-diagrams.md)   
-[방법: 클래스 다이어그램에서 형식 모양 제거](http://msdn.microsoft.com/en-us/ae41897d-d066-4b8c-bb9b-05436e12ff39)
+
+[형식 및 관계 보기](viewing-types-and-relationships.md)  
+[방법: 클래스 다이어그램 사용자 지정](how-to-customize-class-diagrams.md)  
+[방법: 클래스 다이어그램에서 형식 모양 제거](http://msdn.microsoft.com/ae41897d-d066-4b8c-bb9b-05436e12ff39)

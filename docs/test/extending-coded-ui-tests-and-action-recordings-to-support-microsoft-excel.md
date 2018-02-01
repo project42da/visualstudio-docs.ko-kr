@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: ae08752c7687844fbe620bf6314496b474b6e915
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 0133db8e1060da48e5938a08ded187fa900b4d30
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel"></a>Microsoft Excel을 지원하도록 코딩된 UI 테스트 및 작업 기록 확장
 코딩된 UI 테스트 및 작업 기록에 대한 테스트 프레임워크는 가능한 사용자 인터페이스를 일부 지원하지 않습니다. 테스트하려는 특정 UI를 지원하지 않을 수 있습니다. 예를 들어 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)] 스프레드시트에 대한 작업 기록 또는 코딩된 UI 테스트는 바로 만들 수 없습니다. 그러나 코딩된 UI 테스트 프레임워크의 확장성을 이용하여 특정 UI를 지원할 코딩된 UI 테스트 프레임워크에 대한 고유한 확장을 만들 수 있습니다. 다음 항목에서는 프레임워크를 확장하여 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)]에 대한 작업 기록 및 코딩된 UI 테스트 생성을 지원하는 방법을 제공합니다. 지원되는 플랫폼에 대한 자세한 내용은 [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)을 참조하세요.  
@@ -68,14 +69,16 @@ ms.lasthandoff: 01/09/2018
   
  정확한 복사 경로를 조정해야 할 수 있지만 추가 설치는 필요하지 않습니다. 64비트 컴퓨터에서 32비트 Visual Studio Enterprise 명령 프롬프트를 사용해 `CopyDrop.bat` 파일을 실행합니다.  
   
-### <a name="testing-excel-with-the-sampletestproject"></a>SampleTestProject를 사용하여 Excel 테스트  
- 가지고 있거나 가지고 있지 않은 특정 버전의 Excel을 사용하는 제공된 테스트 프로젝트에서 테스트를 실행하거나 고유한 테스트 프로젝트를 만들어 자신만의 테스트를 기록할 수 있습니다. 자세한 내용은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>   
- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>   
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>   
- <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>   
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [코딩된 UI 테스트에 대한 모범 사례](../test/best-practices-for-coded-ui-tests.md)   
- [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+### <a name="testing-excel-with-the-sampletestproject"></a>SampleTestProject를 사용하여 Excel 테스트
+
+가지고 있거나 가지고 있지 않은 특정 버전의 Excel을 사용하는 제공된 테스트 프로젝트에서 테스트를 실행하거나 고유한 테스트 프로젝트를 만들어 자신만의 테스트를 기록할 수 있습니다. 자세한 내용은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)를 참조하세요.
+
+## <a name="see-also"></a>참고 항목
+
+<xref:Microsoft.VisualStudio.TestTools.UITesting.UITestPropertyProvider>   
+<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>   
+<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UITestActionFilter>   
+<xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITestExtensionPackage>   
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
+[코딩된 UI 테스트에 대한 모범 사례](../test/best-practices-for-coded-ui-tests.md)   
+[코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

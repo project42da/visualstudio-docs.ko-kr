@@ -15,17 +15,19 @@ helpviewer_keywords:
 - TextMate language grammar
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.technology: vs-ide-general
-ms.workload: multiple
-ms.openlocfilehash: bff7a486bcb72af126dc770542f63e57af0171ba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.technology:
+- vs-ide-general
+ms.workload:
+- multiple
+ms.openlocfilehash: 3dd53222baf58b0c609967bc86e3051c428073e1
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>다른 언어에 대한 Visual Studio 편집기 지원 추가
 Visual Studio 편집기에서 다양한 컴퓨터 언어 읽기 및 탐색을 지원하는 방법과 다른 언어에 대한 Visual Studio 편집기 지원을 추가하는 방법을 알아봅니다.  
@@ -40,7 +42,7 @@ Visual Studio 편집기에서 다양한 컴퓨터 언어 읽기 및 탐색을 �
 |||||||  
 |-|-|-|-|-|-|  
 |Bat|F#|Java|Markdown|Rust|Visual Basic|  
-|Clojure|이동|JavaDoc|Objective-C|ShaderLab|Visual C#|  
+|Clojure|이동|JavaDoc|Objective-C|ShaderLab|C#|  
 |CMake|Groovy|JSON|Perl|ShellScript|Visual C++|  
 |CoffeeScript|HTML|LESS|Python|SQL|VBNet|  
 |CSS|INI|LUA|R|Swift|XML|  
@@ -62,7 +64,7 @@ Visual Studio 편집기에서 다양한 컴퓨터 언어 읽기 및 탐색을 �
   
 -   Visual C++  
   
--   Visual C#  
+-   C#  
   
  지정된 언어에 대한 지원이 아직 설치되지 않은 경우에도 이러한 모든 파일 형식에는 앞에서 설명한 기능이 있습니다. 일부 언어에 대한 특수 지원을 설치하면 IntelliSense 등의 추가 언어 지원이나 전구 등의 기타 고급 언어 기능이 제공됩니다.  
   

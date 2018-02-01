@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
-ms.assetid: 8cec9fea-cd92-47ff-88dd-7c928f0b4a74
-caps.latest.revision: "64"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 13d04bde21f46fd8950e79464beccfe2228633aa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c0683e9c619352c6d3f7d0cb431d3e2c973b6270
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
+
 프로젝트 디자이너의 **응용 프로그램** 페이지를 사용하여 프로젝트의 응용 프로그램 설정과 속성을 지정할 수 있습니다.  
   
 **응용 프로그램** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드(**솔루션** 노드 아님)를 선택합니다. 그런 다음 메뉴 모음에서 **프로젝트**, **속성**을 선택합니다. 프로젝트 디자이너가 나타나면 **응용 프로그램** 탭을 클릭합니다.  
@@ -111,7 +112,7 @@ ms.lasthandoff: 12/22/2017
  다음 설정은 **Windows 응용 프로그램 프레임워크 속성** 섹션에서 사용할 수 있습니다. 이러한 옵션은 **응용 프로그램 프레임워크 사용** 확인란이 선택된 경우에만 사용할 수 있습니다. 다음 섹션에서는 WPF(Windows Presentation Foundation) 응용 프로그램에 대한 **Windows 응용 프로그램 프레임워크 속성** 설정을 설명합니다.  
   
  **XP 비주얼 스타일 사용**  
- *Windows XP 테마*라고도 하는 Windows XP 비주얼 스타일을 사용하거나 사용하지 않습니다. 예를 들어 Windows XP 비주얼 스타일은 둥근 모서리와 동적 색이 지정된 컨트롤을 사용할 수 있게 합니다. 기본값은 사용입니다. Windows XP 비주얼 스타일에 대한 자세한 내용은 [Windows XP 기능 및 Windows Forms 컨트롤](http://msdn.microsoft.com/en-us/bc7fab94-fce9-4bf1-a8ad-a5837c91c3c0)을 참조하세요.  
+ *Windows XP 테마*라고도 하는 Windows XP 비주얼 스타일을 사용하거나 사용하지 않습니다. 예를 들어 Windows XP 비주얼 스타일은 둥근 모서리와 동적 색이 지정된 컨트롤을 사용할 수 있게 합니다. 기본값은 사용입니다.
   
  **단일 인스턴스 응용 프로그램 작성**  
  사용자가 응용 프로그램의 여러 인스턴스를 실행하지 못하도록 하려면 이 확인란을 선택합니다. 이 확인란의 기본 설정은 선택 취소입니다. 이 설정을 사용하면 응용 프로그램의 여러 인스턴스를 실행할 수 있습니다.  
@@ -157,7 +158,4 @@ ms.lasthandoff: 12/22/2017
  **응용 프로그램 이벤트 보기**  
  코드 편집기에서 `Application` partial 클래스 파일(Application.xaml.vb)을 표시하려면 이 단추를 클릭합니다. 파일이 없는 경우 프로젝트 디자이너에서 적절한 클래스 이름과 네임스페이스를 사용하여 새로 만듭니다.  
   
- <xref:System.Windows.Application> 개체는 특정 응용 프로그램 상태가 변경될 때(예: 응용 프로그램 시작 또는 종료 시) 이벤트를 발생시킵니다. 이 클래스가 노출하는 이벤트의 전체 목록은 <xref:System.Windows.Application>을 참조하세요. 이러한 이벤트는 `Application` partial 클래스의 사용자 코드 섹션에서 처리됩니다.  
-  
-## <a name="see-also"></a>참고 항목  
-[응용 프로그램 속성 관리](../../ide/application-properties.md) [Office 솔루션에서 코드 작성](/office-dev/office-dev/writing-code-in-office-solutions)
+ <xref:System.Windows.Application> 개체는 특정 응용 프로그램 상태가 변경될 때(예: 응용 프로그램 시작 또는 종료 시) 이벤트를 발생시킵니다. 이 클래스가 노출하는 이벤트의 전체 목록은 <xref:System.Windows.Application>을 참조하세요. 이러한 이벤트는 `Application` partial 클래스의 사용자 코드 섹션에서 처리됩니다.

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,16 +15,17 @@ helpviewer_keywords:
 - build events [Visual Studio]
 - builds [Visual Studio], events
 ms.assetid: 40dc83bf-a7c5-4a14-816a-fa0980b6e4c3
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 42d412e576ddf9ca53f79b7349d99b87b9ef3238
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 0fe2ab7f174f71933d474aa4737dc713c6540492
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>방법: 빌드 이벤트 지정(Visual Basic)
 Visual Basic의 빌드 이벤트는 스크립트, 매크로 또는 기타 작업을 컴파일 프로세스의 일부로 실행하는 데 사용할 수 있습니다. 컴파일 전에 빌드 전 이벤트가 발생하고 컴파일 후에 빌드 후 이벤트가 발생합니다.  
@@ -165,9 +167,9 @@ Visual Basic의 빌드 이벤트는 스크립트, 매크로 또는 기타 작업
     <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />  
     ```  
   
-## <a name="see-also"></a>참고 항목  
- [컴파일 속성 관리](http://msdn.microsoft.com/en-us/94308881-f10f-4caf-a729-f1028e596a2c)   
- [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
- [프로젝트 디자이너, 게시 페이지](../ide/reference/publish-page-project-designer.md)   
- [빌드 전 이벤트/빌드 후 이벤트 명령줄 대화 상자](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
- [방법: 빌드 이벤트 지정(C#)](../ide/how-to-specify-build-events-csharp.md)
+## <a name="see-also"></a>참고 항목
+
+[프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
+[프로젝트 디자이너, 게시 페이지](../ide/reference/publish-page-project-designer.md)   
+[빌드 전 이벤트/빌드 후 이벤트 명령줄 대화 상자](../ide/reference/pre-build-event-post-build-event-command-line-dialog-box.md)   
+[방법: 빌드 이벤트 지정(C#)](../ide/how-to-specify-build-events-csharp.md)

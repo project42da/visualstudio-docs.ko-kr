@@ -4,27 +4,30 @@ ms.custom:
 ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.Projects.WebProjects
+f1_keywords:
+- VS.ToolsOptionsPages.Projects.WebProjects
 ms.assetid: ea813046-1ae6-4c9f-9784-dc41494101b9
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 75d892c4947ee93521234f9bb2cdb781bd0b09f5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 1cf6798a8870834b97693845c1e39870863a66e4
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="options-dialog-box-projects-and-solutions-web-projects"></a>옵션 대화 상자, 프로젝트 및 솔루션, 웹 프로젝트
 
 웹 프로젝트가 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 내에서 개발에 사용할 웹 서버를 설정합니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **웹 프로젝트**를 선택합니다.
 
-기본적으로 Visual Studio에서 웹 프로젝트를 실행하는 경우 Visual Studio 개발 서버를 사용합니다. 자세한 내용은 [Visual Studio의 ASP.NET 웹 프로젝트에 대한 웹 서버](http://msdn.microsoft.com/en-us/31d4f588-df59-4b7e-b9ea-e1f2dd204328)를 참조하세요.  
+기본적으로 Visual Studio에서 웹 프로젝트를 실행하는 경우 Visual Studio 개발 서버를 사용합니다. 자세한 내용은 [Visual Studio의 ASP.NET 웹 프로젝트에 대한 웹 서버](http://msdn.microsoft.com/31d4f588-df59-4b7e-b9ea-e1f2dd204328)를 참조하세요.
 
 > [!NOTE]
 >  대화 상자에서 사용할 수 있는 옵션과 메뉴 명령의 이름 및 위치는 실제 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 이 도움말 페이지는 **웹 설정**에 따라 작성되었습니다. 설정을 보거나 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기**를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  

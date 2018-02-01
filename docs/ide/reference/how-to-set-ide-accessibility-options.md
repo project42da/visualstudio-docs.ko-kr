@@ -4,20 +4,23 @@ ms.custom:
 ms.date: 08/22/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: accessibility [Visual Studio]
+helpviewer_keywords:
+- accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e7b7623a60f5a6e06739596b02125806205c07b4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6881e90a0035ed7c918acab924832013d9b17088
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>방법: IDE 내게 필요한 옵션 설정
 > [!TIP]
@@ -33,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="editors-dialogs-and-tool-windows"></a>편집기, 대화 상자 및 도구 창  
  기본적으로 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]의 대화 상자와 도구 창에서는 운영 체제와 같은 글꼴 크기 및 색을 사용합니다. IDE, 대화 상자, 도구 모음 및 도구 창의 프레임에 대한 색 설정은 색 테마인 밝은 테마 또는 어두운 테마에 따라 결정됩니다. [옵션 대화 상자, 환경, 일반](../../ide/reference/general-environment-options-dialog-box.md)에서 현재 색 테마를 변경할 수 있습니다.  
 
- 편집기의 코드 보기에서 팝업 창을 표시할 수도 있습니다. 이러한 창에는 현재 개체의 사용 가능한 멤버 함수나 문을 완성하기 위한 매개 변수가 표시될 수 있습니다. 입력이 어려울 경우 이러한 창이 유용할 수 있습니다. 그러나 이러한 창은 코드 편집기에 집중하는 데 방해가 되어 일부 사용자에게 문제가 될 수 있습니다. [옵션] 대화 상자를 열고 **옵션** 대화 상자의 **텍스트 편집기**, **모든 언어**, **일반** 페이지에서 **멤버 목록 자동 표시** 및 **매개 변수 정보**를 선택 취소하여 이러한 창을 끌 수 있습니다. 자세한 내용은 [방법: 일반 편집기 옵션 설정](http://msdn.microsoft.com/en-us/704e4a7b-2162-4bed-8a47-f4f6ffec98c2)을 참조하세요.  
+ 편집기의 코드 보기에서 팝업 창을 표시할 수도 있습니다. 이러한 창에는 현재 개체의 사용 가능한 멤버 함수나 문을 완성하기 위한 매개 변수가 표시될 수 있습니다. 입력이 어려울 경우 이러한 창이 유용할 수 있습니다. 그러나 이러한 창은 코드 편집기에 집중하는 데 방해가 되어 일부 사용자에게 문제가 될 수 있습니다. [옵션] 대화 상자를 열고 **옵션** 대화 상자의 **텍스트 편집기**, **모든 언어**, **일반** 페이지에서 **멤버 목록 자동 표시** 및 **매개 변수 정보**를 선택 취소하여 이러한 창을 끌 수 있습니다.
 
  자신의 작업 방식에 가장 적합하게 IDE(통합 개발 환경)에서 창을 다시 정렬할 수 있습니다. 각 도구 창을 도킹 또는 고정 해제하거나, 숨기거나, 자동으로 숨길 수 있습니다.  
 

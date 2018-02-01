@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -19,16 +20,17 @@ helpviewer_keywords:
 - Project Designer, Signing page
 - Signing page in Project Designer
 ms.assetid: dab3ba13-2f92-4827-92bd-1be3c35bc48b
-caps.latest.revision: "34"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7aa75e814ddd4d8b8c093fd37a366410a279d6ee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 53fe343002de3f89431927c95f36a0c092b36c2c
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="signing-page-project-designer"></a>프로젝트 디자이너, 서명 페이지
 **프로젝트 디자이너**의 **서명** 페이지를 사용하여 응용 프로그램 및 배포 매니페스트에 서명하고 어셈블리에도 서명합니다(강력한 이름 서명).  
@@ -89,11 +91,11 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  어셈블리에 서명할 때 항상 개인 키에 액세스할 수 있는 것은 아닙니다. 예를 들어 조직에 개발자가 일상적으로 액세스할 수 없는 엄격하게 보호된 키 쌍이 있을 수 있습니다. 공개 키를 사용할 수 있지만 개인 키에 대한 액세스는 몇몇 개인으로 제한됩니다. 이 경우 *지연* 또는 *일부 서명*을 통해 공개 키를 제공하여 어셈블리가 전달될 때까지 개인 키 추가를 연기할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [프로젝트 속성 참조](../../ide/reference/project-properties-reference.md)   
- [어셈블리 및 매니페스트 서명 관리](../../ide/managing-assembly-and-manifest-signing.md)   
- [관리되는 응용 프로그램의 강력한 이름 서명](http://msdn.microsoft.com/en-us/5fef3490-c519-4363-94fd-8b1ad260dab5)   
- [방법: 응용 프로그램 및 배포 매니페스트 서명](../../ide/how-to-sign-application-and-deployment-manifests.md)   
- [방법: 어셈블리 서명(Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)   
- [방법: 강력한 이름으로 어셈블리 서명](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)   
- [강력한 이름의 어셈블리](/dotnet/framework/app-domains/strong-named-assemblies)   
+## <a name="see-also"></a>참고 항목
+
+[프로젝트 속성 참조](../../ide/reference/project-properties-reference.md)  
+[어셈블리 및 매니페스트 서명 관리](../../ide/managing-assembly-and-manifest-signing.md)  
+[방법: 응용 프로그램 및 배포 매니페스트 서명](../../ide/how-to-sign-application-and-deployment-manifests.md)  
+[방법: 어셈블리 서명(Visual Studio)](../managing-assembly-and-manifest-signing.md#how-to-sign-an-assembly-in-visual-studio)  
+[방법: 강력한 이름으로 어셈블리 서명](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)  
+[강력한 이름의 어셈블리](/dotnet/framework/app-domains/strong-named-assemblies) 

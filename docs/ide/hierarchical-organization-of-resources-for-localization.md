@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - resources [Visual Studio], fallback system
 - resource files, fallback processes
 ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
-caps.latest.revision: "8"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8235f246a52e3f8f53536abdf1aba2c0dede875d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: cc663c02d3151e6dd55c1c35388ac7b33f049bb1
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>지역화를 위한 리소스의 계층적 구성
 Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 및 이미지와 같은 데이터)는 별도의 파일에 저장되며 UI 문화권 설정에 따라 로드됩니다. 지역화된 리소스가 로드되는 방식을 이해하려면 이러한 리소스를 계층 구조 방식으로 구성된 것으로 생각하는 것이 좋습니다.  
@@ -50,10 +52,9 @@ Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 
   
  ![NeutralSpecificResources 그래픽](../ide/media/vbneutralspecificresources.gif "vbNeutralSpecificResources")  
   
-## <a name="see-also"></a>참고 항목  
- [지역화를 위한 중립 리소스 언어](../ide/neutral-resources-languages-for-localization.md)   
- [보안 및 지역화된 위성 어셈블리](../ide/security-and-localized-satellite-assemblies.md)   
- [응용 프로그램 지역화](../ide/localizing-applications.md)   
- [응용 프로그램 전역화 및 지역화](../ide/globalizing-and-localizing-applications.md)   
- [방법: Windows Forms 전역화를 위한 Culture 및 UI Culture 설정](http://msdn.microsoft.com/en-us/694e049f-0b91-474a-9789-d35124f248f0)   
- [방법: ASP.NET 웹 페이지 세계화를 위한 문화권 및 UI 문화권 설정](http://msdn.microsoft.com/Library/76091f86-f967-4687-a40f-de87bd8cc9a0)
+## <a name="see-also"></a>참고 항목
+
+[지역화를 위한 중립 리소스 언어](../ide/neutral-resources-languages-for-localization.md)  
+[보안 및 지역화된 위성 어셈블리](../ide/security-and-localized-satellite-assemblies.md)  
+[응용 프로그램 지역화](../ide/localizing-applications.md)  
+[응용 프로그램 전역화 및 지역화](../ide/globalizing-and-localizing-applications.md)

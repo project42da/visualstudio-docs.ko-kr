@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - interfaces [Visual Studio], implementing
 - interfaces [Visual Studio]
 ms.assetid: 81d2cf46-7f60-448c-83e3-1d16bb88ca36
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c926da09cb8bbb191d0d307dd9e8ce16cfef3c20
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 819fdb15a436dbdb4059d7ecef3e23d95c0aebe4
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-implement-an-interface-class-designer"></a>방법: 인터페이스 구현(클래스 디자이너)
 클래스 디자이너에서는 인터페이스 메서드의 코드를 제공하는 클래스에 인터페이스를 연결하여 클래스 다이어그램에서 인터페이스를 구현할 수 있습니다. 클래스 디자이너는 인터페이스 구현을 생성하고 인터페이스와 클래스 간의 관계를 상속 관계로 표시합니다. 인터페이스와 클래스 간의 상속 줄을 그리거나 클래스 뷰에서 인터페이스를 끌어와서 인터페이스를 구현할 수 있습니다.  
@@ -45,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 2.  클래스 뷰를 열고 인터페이스를 찾습니다.  
   
     > [!TIP]
-    >  클래스 뷰가 열려 있지 않으면 **보기** 메뉴에서 클래스 뷰를 엽니다. 클래스 뷰에 대한 자세한 내용은 [클래스 및 해당 멤버 보기](http://msdn.microsoft.com/en-us/71e9e8f3-261a-4e0c-87bf-5ec48b8bf333)를 참조하세요.  
+    > 클래스 뷰가 열려 있지 않으면 **보기** 메뉴에서 클래스 뷰를 엽니다.
   
 3.  다이어그램에서 클래스 도형으로 인터페이스 노드를 끌어옵니다.  
   

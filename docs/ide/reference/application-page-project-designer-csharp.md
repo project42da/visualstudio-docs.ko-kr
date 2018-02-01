@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -13,19 +14,19 @@ f1_keywords:
 helpviewer_keywords:
 - Project Designer, Application page
 - Application page in Project Designer
-ms.assetid: f13701a8-4e2e-4474-9d60-bb43decbe0c1
-caps.latest.revision: "56"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: ec48d6a581eb756ee89d9db1a3dfaa78ac1fb3a9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7f9b348ad39b26b22e1678e76a1310e2c3f9b863
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="application-page-project-designer-c"></a>프로젝트 디자이너, 응용 프로그램 페이지(C#)
+
 **프로젝트 디자이너**의 **응용 프로그램** 페이지를 사용하여 프로젝트의 응용 프로그램 설정과 속성을 지정할 수 있습니다.  
   
 **응용 프로그램** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드(**솔루션** 노드 아님)를 선택합니다. 그런 다음 메뉴 모음에서 **프로젝트**, **속성**을 선택합니다. 프로젝트 디자이너가 나타나면 **응용 프로그램** 탭을 클릭합니다.  
@@ -98,8 +99,4 @@ ms.lasthandoff: 12/22/2017
 **리소스 파일**  
 프로젝트에 대한 리소스 파일을 제공하는 경우 이 라디오 단추를 선택합니다. 이 옵션을 선택하면 **아이콘** 및 **매니페스트** 옵션이 사용되지 않습니다.  
   
-경로 이름을 입력하거나 찾아보기 단추(**...**)를 사용하여 Win32 리소스 파일을 프로젝트에 추가합니다.  
-  
-## <a name="see-also"></a>참고 항목  
-[응용 프로그램 속성 관리](../../ide/application-properties.md)  
-[Office 솔루션에서 코드 작성](/office-dev/office-dev/writing-code-in-office-solutions)
+경로 이름을 입력하거나 찾아보기 단추(**...**)를 사용하여 Win32 리소스 파일을 프로젝트에 추가합니다.

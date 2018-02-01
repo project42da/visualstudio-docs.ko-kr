@@ -7,17 +7,16 @@ ms.suite:
 ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: b73c865c-74e0-420e-89cc-43524f4aafd0
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 33f8c8c8068f14d7cdf8bf32c4cff960b98957f0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: def8b9347ec5c74cf369972602416c992dff39c7
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="work-with-multiple-user-accounts"></a>Work with multiple user accounts
 
@@ -52,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 1. 솔루션 탐색기에서 프로젝트 노드를 선택한 다음 **추가, 연결된 서비스**를 선택합니다. **연결된 서비스 추가** 마법사가 나타나고 Visual Studio 로그인 ID와 연관된 Azure 계정의 서비스 목록이 표시됩니다. 별도로 Azure에 로그인할 필요가 없습니다. 그렇지만 지정된 컴퓨터에서 처음으로 해당 리소스에 액세스하려고 할 경우 다른 계정으로 로그인해야 합니다.
 
     > [!WARNING]
-    > 특정 컴퓨터의 Visual Studio에서 UWP 앱을 처음 만드는 경우 컴퓨터의 **설정 &#124; 업데이트 및 보안 &#124; 개발자용**으로 이동하여 장치를 개발 모드에 사용할 수 있게 하라는 메시지가 표시됩니다. 자세한 내용은 [개발에 장치 사용](https://msdn.microsoft.com/en-us/library/windows/apps/dn706236.aspx)을 참조하세요.
+    > 특정 컴퓨터의 Visual Studio에서 UWP 앱을 처음 만드는 경우 컴퓨터의 **설정 &#124; 업데이트 및 보안 &#124; 개발자용**으로 이동하여 장치를 개발 모드에 사용할 수 있게 하라는 메시지가 표시됩니다. 자세한 내용은 [개발에 장치 사용](/windows/uwp/get-started/enable-your-device-for-development)을 참조하세요.
 
 ### <a name="access_azure"></a> 웹 프로젝트에서 Azure Active Directory 액세스
 

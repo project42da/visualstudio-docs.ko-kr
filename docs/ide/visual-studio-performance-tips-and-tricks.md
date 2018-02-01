@@ -3,21 +3,24 @@ title: "Visual Studio 성능 팁과 요령 | Microsoft Docs"
 ms.date: 08/31/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: debugger
+helpviewer_keywords:
+- debugger
 ms.assetid: 2fbcb59e-e981-4b40-8b7a-c1140d31ec4b
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b703fd45732e3fd083a5c95b68647f67dce57b3a
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: f15f9b34a19617986ca64f9b13af1b28d4c9d01a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 성능 팁과 요령
 
@@ -32,7 +35,7 @@ Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 �
 
     Windows 32비트 버전에서 64비트 버전으로 시스템을 업그레이드하면 Visual Studio에서 사용 가능한 가상 메모리가 2GB에서 4GB로 확장됩니다. Visual Studio는 32비트 프로세스이지만, 이렇게 하면 훨씬 더 큰 작업 부하에 대응할 수 ​​있습니다.
 
-    자세한 내용은 [Memory limits](https://msdn.microsoft.com/en-us/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits)(메모리 한도) 및 [Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)(64비트 Windows에서 /LARGEADDRESSAWARE 사용)를 참조하세요.
+    자세한 내용은 [Memory limits](https://msdn.microsoft.com/library/windows/desktop/aa366778(v=vs.85).aspx#memory_limits)(메모리 한도) 및 [Using /LARGEADDRESSAWARE on 64-bit Windows](https://blogs.msdn.microsoft.com/oldnewthing/20050601-24/?p=35483/)(64비트 Windows에서 /LARGEADDRESSAWARE 사용)를 참조하세요.
 
 ## <a name="configure-solution-and-projects"></a>솔루션 및 프로젝트 구성
 
@@ -47,6 +50,7 @@ Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 �
     공통으로 사용하는 프로젝트를 포함하는 솔루션을 여러 개의 작은 솔루션 파일로 나눌 수 있습니다. 이러한 리팩터링은 워크플로의 메모리 사용량을 크게 줄여줍니다. 또한 솔루션이 작을수록 로드 속도가 빨라집니다.
 
 ## <a name="configure-debugging-options"></a>디버깅 옵션 구성
+
 디버깅 세션 중에 메모리가 부족한 상황이 반복되면 하나 이상의 구성을 변경하여 성능을 최적화할 수 있습니다.
 
 - **[내 코드만] 기능 사용**
@@ -74,6 +78,7 @@ Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 �
     자세한 내용은 [프로파일링 도구](../profiling/profiling-tools.md)를 참조하세요.
 
 ## <a name="disable-tools-and-extensions"></a>도구 및 확장 기능 사용 안 함
+
 일부 도구 또는 확장 기능을 해제하여 성능을 높일 수 있습니다.
 
 > [!TIP]
@@ -123,7 +128,8 @@ CLR은 가비지 수집 메모리 관리 시스템을 사용합니다. 이 시�
 
 가비지 수집을 강제 실행해야 시나리오가 안정적으로 작동한다면, 이 동작은 버그일 가능성이 크므로 Visual Studio 피드백 도구를 통해 보고해 주시기 바랍니다.
 
-CLR 가비지 수집기에 대한 자세한 내용은 [Fundamental of Garbage Collection](https://msdn.microsoft.com/en-us/library/ee787088(v=vs.110).aspx)(가비지 수집 기본 사항)을 참조하세요.
+CLR 가비지 수집기에 대한 자세한 내용은 [Fundamental of Garbage Collection](/dotnet/standard/garbage-collection/fundamentals)(가비지 수집 기본 사항)을 참조하세요.
 
-## <a name="see-also"></a>참고 항목  
- [Visual Studio IDE](../ide/index.md)
+## <a name="see-also"></a>참고 항목
+
+[Visual Studio IDE](../ide/visual-studio-ide.md)
