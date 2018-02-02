@@ -39,6 +39,7 @@
 ### 참조
 #### [Visual Studio 작업 및 구성 요소 ID](install/workload-and-component-ids.md)
 #### [Visual Studio 빌드 번호 및 릴리스 날짜](install/visual-studio-build-numbers-and-release-dates.md)
+## [Azure 가상 머신에서 Visual Studio 사용](install/using-visual-studio-vm.md)
 ## [Build Tools를 컨테이너에 설치](install/build-tools-container.md)
 ### [컨테이너의 고급 예](install/advanced-build-tools-container.md)
 ### [알려진 컨테이너 관련 문제](install/build-tools-container-issues.md)
@@ -74,7 +75,6 @@
 ##### [NuGet와 확장 SDK 비교를 사용하여 참조 추가](ide/adding-references-using-nuget-versus-an-extension-sdk.md)
 ##### [가져온 네임스페이스 추가 또는 제거(Visual Basic)](ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)
 ##### [끊어진 참조 문제 해결](ide/troubleshooting-broken-references.md)
-#### [응용 프로그램 속성](ide/application-properties.md)
 #### [응용 프로그램 리소스 관리(.NET)](ide/managing-application-resources-dotnet.md)
 #### [응용 프로그램 설정 관리(.NET)](ide/managing-application-settings-dotnet.md)
 ##### [앱 구성 파일을 C# 프로젝트에 추가](ide/how-to-add-app-config-file.md)
