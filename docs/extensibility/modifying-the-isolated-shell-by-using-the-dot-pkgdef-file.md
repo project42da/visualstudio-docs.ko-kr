@@ -5,20 +5,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Visual Studio shell, isolated mode, .pkgdef file
+helpviewer_keywords:
+- Visual Studio shell, isolated mode, .pkgdef file
 ms.assetid: 69e8f78e-bcf1-46cb-8866-7de37d134997
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.openlocfilehash: addeeaa294a81acce6558feb5257fee1344532f8
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/31/2018
 ---
 # <a name="modifying-the-isolated-shell-by-using-the-pkgdef-file"></a>격리 셸 사용 하 여 수정 된 합니다. Pkgdef 파일
 .Pkgdef 파일에는 격리 셸 응용 프로그램을 사용자 지정 하는 데 사용할 수 있는 설정을 지원 합니다. 응용 프로그램이 컴퓨터에 설치 되어 있고 응용 프로그램을 시작 하는 경우 Visual Studio shell에서 참조 되는 생성 되는 값을 지정 합니다. 설정은 해당 레지스트리 키를 기반으로 하는 파일에 구성 됩니다.  

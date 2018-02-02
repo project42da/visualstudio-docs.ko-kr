@@ -14,30 +14,33 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5b05e295830762939e2142b550863219afaa06ce
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 2b6c1d9b4fa92146b64d075ff4268bc32c0e65c1
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>코드에서 종속성 다이어그램 만들기
-소프트웨어 시스템의 상위 수준, 논리적 아키텍처를 시각화 하려면 만듭니다는 *종속성 다이어그램* Visual Studio에서. 코드가 디자인의 일관성이 유지 되는지을 하려면 종속성 다이어그램을 사용 하 여 코드의 유효성을 검사 합니다. Visual C#.NET 및 Visual Basic.NET 프로젝트에 대 한 종속성 다이어그램을 만들 수 있습니다. 이 기능을 지 원하는 Visual Studio의 버전을 보려면 참조 [아키텍처 및 모델링 도구에 대 한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)  
-  
- ![종속성 다이어그램 만들기](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")  
-  
- 종속성 다이어그램 라는 논리적, 추상 그룹으로 Visual Studio 솔루션 항목을 구성 하면 *레이어*합니다. 레이어를 사용하여 이러한 아티팩트가 수행하는 주요 작업 또는 시스템의 주요 구성 요소를 설명할 수 있습니다. 각 레이어에는 보다 세부적인 작업을 나타내는 다른 레이어가 포함될 수 있습니다. 만들어지지 않았거나 기존을 지정할 수도 있습니다 *종속성* 레이어 간의 합니다. 이와 같이 화살표로 나타내는 종속성은 다른 레이어가 나타내는 기능을 어느 레이어가 사용할 수 있는지 또는 현재 어느 레이어가 사용하고 있는지를 표시합니다. 코드의 아키텍처 제어를 유지하려면 다이어그램에서 의도한 종속성을 표시한 다음 해당 다이어그램에 대해 코드 유효성을 검사합니다.  
-  
- [비디오: 실시간으로 아키텍처 종속성 유효성 검사](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4) 
-  
-##  <a name="CreateDiagram"></a>종속성 다이어그램 만들기  
- 종속성 다이어그램을 만들려면 먼저 솔루션에 모델링 프로젝트가 있는지 확인 합니다. 
-  
+
+소프트웨어 시스템의 상위 수준, 논리적 아키텍처를 시각화 하려면 만듭니다는 *종속성 다이어그램* Visual Studio에서. 코드가 디자인의 일관성이 유지 되는지을 하려면 종속성 다이어그램을 사용 하 여 코드의 유효성을 검사 합니다. Visual C# 및 Visual Basic 프로젝트에 대 한 종속성 다이어그램을 만들 수 있습니다. 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.
+
+![종속성 다이어그램 만들기](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")
+
+종속성 다이어그램 라는 논리적, 추상 그룹으로 Visual Studio 솔루션 항목을 구성 하면 *레이어*합니다. 레이어를 사용하여 이러한 아티팩트가 수행하는 주요 작업 또는 시스템의 주요 구성 요소를 설명할 수 있습니다. 각 레이어에는 보다 세부적인 작업을 나타내는 다른 레이어가 포함될 수 있습니다. 만들어지지 않았거나 기존을 지정할 수도 있습니다 *종속성* 레이어 간의 합니다. 이와 같이 화살표로 나타내는 종속성은 다른 레이어가 나타내는 기능을 어느 레이어가 사용할 수 있는지 또는 현재 어느 레이어가 사용하고 있는지를 표시합니다. 코드의 아키텍처 제어를 유지하려면 다이어그램에서 의도한 종속성을 표시한 다음 해당 다이어그램에 대해 코드 유효성을 검사합니다.
+
+[비디오: 실시간으로 아키텍처 종속성 유효성 검사](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4) 
+
+##  <a name="CreateDiagram"></a>종속성 다이어그램 만들기
+
+종속성 다이어그램을 만들려면 먼저 솔루션에 모델링 프로젝트가 있는지 확인 합니다.
+
 > [!IMPORTANT]
->  추가 하거나 하지 마십시오, 끌어 놓거나 다른 모델링 프로젝트 또는 솔루션의 다른 장소로 모델링 프로젝트에서 기존 종속성 다이어그램을 복사 합니다. 그러면 다이어그램을 변경하더라도 원래 다이어그램의 참조가 유지됩니다. 또한 레이어 유효성 검사가 제대로 작동하지 않고 다이어그램을 열려고 할 때 요소 누락이나 기타 오류 등의 다른 문제가 발생할 수 있습니다.  
->   
->  대신, 모델링 프로젝트에 새 종속성 다이어그램을 추가 합니다. 소스 다이어그램에서 새 다이어그램으로 요소를 복사합니다. 모델링 프로젝트와 종속성에 새 다이어그램을 저장 합니다.  
-  
+> 추가 하거나 하지 마십시오, 끌어 놓거나 다른 모델링 프로젝트 또는 솔루션의 다른 장소로 모델링 프로젝트에서 기존 종속성 다이어그램을 복사 합니다. 그러면 다이어그램을 변경하더라도 원래 다이어그램의 참조가 유지됩니다. 또한 레이어 유효성 검사가 제대로 작동하지 않고 다이어그램을 열려고 할 때 요소 누락이나 기타 오류 등의 다른 문제가 발생할 수 있습니다.
+>
+> 대신, 모델링 프로젝트에 새 종속성 다이어그램을 추가 합니다. 소스 다이어그램에서 새 다이어그램으로 요소를 복사합니다. 모델링 프로젝트와 종속성에 새 다이어그램을 저장 합니다.
+
 #### <a name="to-add-a-new-dependency-diagram-to-a-modeling-project"></a>모델링 프로젝트에 새 종속성 다이어그램을 추가 하려면  
   
 1.  에 **아키텍처** 메뉴 선택 **새 종속성 다이어그램**합니다.  

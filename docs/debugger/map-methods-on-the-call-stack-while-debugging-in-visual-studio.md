@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 05/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-f1_keywords: vs.progression.debugwithcodemaps
+f1_keywords:
+- vs.progression.debugwithcodemaps
 dev_langs:
 - CSharp
 - VB
@@ -28,16 +30,17 @@ helpviewer_keywords:
 - debugging [Visual Studio], tracing the call stack visually
 - debugging [Visual Studio], visualizing the call stack
 ms.assetid: d6a72e5e-f88d-46fc-94a3-1789d34805ef
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: douge
-ms.workload: multiple
-ms.openlocfilehash: 9d1efeee412d98c62b7dc6aa2c92d2bbab4fab6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 99f388fea1d6512760f99615256f71002099e9be
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-a-visual-map-of-the-call-stack-while-debugging-in-visual-studio-enterprise"></a>Visual Studio Enterprise에서 디버깅 하는 동안 호출 스택의 시각적 맵 만들기
 디버깅 하는 동안 호출 스택을 시각적으로 추적 하려면 코드 맵을 만듭니다. 맵을 기록해 두면 코드에서 어떤 작업을 하고 있는지 추적하여 버그를 찾는 데 집중할 수 있습니다.
@@ -46,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [Visual Studio Enterprise](https://www.visualstudio.com/downloads/download-visual-studio-vs)  
   
--   Visual C# .NET, Visual Basic .NET, C++, JavaScript, X++ 등 디버그할 수 있는 코드  
+-   Visual C#, Visual Basic, c + +, JavaScript, 또는 X + + 등 디버그할 수 있는 코드  
 
 코드 맵 개요는 다음과 같습니다.
   
@@ -66,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [지도 사용 하 여 버그 찾기](#FindBugs)  
   
--   [질문 및 답변](#QA)  
+-   [Q & A](#QA)  
   
  명령 및 코드 맵에서 작업할 때 사용할 수 있는 작업의 세부 정보를 참조 하십시오. [찾아보기 및 다시 정렬 코드 맵](../modeling/browse-and-rearrange-code-maps.md)합니다.  
   
@@ -95,7 +98,7 @@ ms.lasthandoff: 12/22/2017
  ![다음 호출 스택으로 코드 맵 업데이트](../debugger/media/debuggermap_addclearcallstack.png "DebuggerMap_AddClearCallStack")  
   
 ##  <a name="AddRelatedCode"></a>맵에 관련된 코드 추가  
- 완성 되었습니다. 맵-어떤 다음? Visual C#.NET 또는 Visual Basic.NET으로 작업할 경우에 필드, 속성 및 코드에서 한 사건을 추적 하는 기타 메서드가, 같은 항목을 추가 합니다.  
+ 완성 되었습니다. 맵-어떤 다음? Visual C# 또는 Visual Basic로 작업할 경우에 필드, 속성 및 코드에서 한 사건을 추적 하는 기타 메서드가, 같은 항목을 추가 합니다.  
   
  메서드를 두 번 클릭하여 코드 정의를 보거나 메서드에 대한 바로 가기 메뉴를 사용합니다. (키보드: 메서드를 맵 및 키를 눌러 선택 **F12**)  
   

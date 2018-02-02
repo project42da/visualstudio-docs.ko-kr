@@ -29,12 +29,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 135e0e9d5b6b2d4e0f75804a98c8f40f17d0b736
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 9b921b3b4c1bad9b68f668ec7589b4a0030052d0
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="map-dependencies-across-your-solutions"></a>솔루션 전체의 종속성 매핑
 
@@ -63,13 +64,13 @@ ms.lasthandoff: 01/13/2018
   
  **다음 언어로 코드에 대한 종속성을 매핑할 수 있습니다**.  
   
--   솔루션이나 어셈블리(.dll 또는 .exe)의 Visual C# .NET 또는 Visual Basic .NET  
+-   Visual C# 또는 Visual Basic에서 솔루션이 나 어셈블리 (.dll 또는.exe)  
   
 -   Visual C++ 프로젝트의 네이티브 또는 관리되는 C/C++ 코드, 헤더 파일(.h 또는 `#include`) 또는 이진 파일  
   
 -   Microsoft Dynamics AX용 .NET 모듈의 X++ 프로젝트 및 어셈블리  
   
- **참고:** C# 또는 Visual Basic .NET이 아닌 다른 프로젝트의 경우 코드 맵을 시작하거나 기존 코드 맵에 항목을 추가하는 옵션이 더 적습니다. 예를 들어 C++ 프로젝트의 텍스트 편집기에서는 개체를 마우스 오른쪽 단추로 클릭하여 코드 맵에 추가할 수 없습니다. 그러나 솔루션 탐색기, 클래스 뷰 및 개체 브라우저에서 개별 코드 요소 또는 파일을 끌어서 놓을 수 있습니다.  
+ **참고:** 이외의 C# 또는 Visual Basic 프로젝트의 경우는 옵션이 더 적습니다 코드 맵을 시작 하거나 기존 코드 맵에 항목을 추가 합니다. 예를 들어 C++ 프로젝트의 텍스트 편집기에서는 개체를 마우스 오른쪽 단추로 클릭하여 코드 맵에 추가할 수 없습니다. 그러나 솔루션 탐색기, 클래스 뷰 및 개체 브라우저에서 개별 코드 요소 또는 파일을 끌어서 놓을 수 있습니다.  
   
 #### <a name="to-see-the-overall-dependencies-across-your-solution"></a>솔루션 전체의 종속성을 확인하려면  
   
@@ -286,7 +287,7 @@ ms.lasthandoff: 01/13/2018
 ##  <a name="SeeSourceHeader"></a> C 및 C++ 소스 파일과 헤더 파일 간 종속성 확인  
  C++ 프로젝트에 대해 보다 완전한 맵을 만들려면 해당 프로젝트에 대해 찾아보기 정보 컴파일러 옵션(**/FR**)을 설정합니다. 그렇지 않으면 메시지가 표시되고 이 옵션을 설정하라는 메시지가 나타납니다. **확인**을 선택하면 현재 맵에 대해서만 옵션이 설정됩니다. 이후 모든 맵에 대해 메시지를 숨기도록 선택할 수 있습니다. 이 메시지를 숨기는 경우 다시 표시되도록 설정할 수 있습니다. 이렇게 하려면 다음 레지스트리 키를 `0` 으로 설정하거나 해당 키를 삭제합니다.  
   
- **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider: AutoEnableSbr**  
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\14.0\NativeProvider : AutoEnableSbr**  
   
  Visual C++ 프로젝트가 포함된 솔루션을 열 때 IntelliSense 데이터베이스를 업데이트하는 데 시간이 걸릴 수 있습니다. 이 동안에는 IntelliSense 데이터베이스가 업데이트를 완료할 때까지 헤더 파일(.h 또는 `#include`)에 관한 코드 맵을 만들 수 없습니다. Visual Studio 상태 표시줄에서 업데이트 진행률을 모니터링할 수 있습니다. 특정 IntelliSense 설정을 사용할 수 없으므로 나타나는 문제 또는 메시지를 해결하려면 [C 및 C++ 코드의 맵 문제 해결](#Troubleshooting)을 참조하세요.  
   

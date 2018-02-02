@@ -21,12 +21,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c3f457e46c1f9f0d7b3ed2f862a411245caf72e7
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- multiple
+ms.openlocfilehash: 7f00144687d2e9bc728cbdd1ef57342d1b19881d
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>종속성 다이어그램으로 코드 유효성 검사
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 01/22/2018
   
 -   Team Foundation Build를 사용하여 자동으로 코드의 유효성을 검사하는 Team Foundation Build 서버의 Visual Studio  
   
--   포함 된 솔루션을 모델링 프로젝트 종속성 다이어그램을 포함 합니다. 이 종속성 다이어그램의 유효성을 검사 하려는 Visual C#.NET 또는 Visual Basic.NET 프로젝트의 아티팩트에 연결 되어야 합니다. 참조 [사용자 코드에서 종속성 다이어그램을 만들](../modeling/create-layer-diagrams-from-your-code.md)합니다.  
+-   포함 된 솔루션을 모델링 프로젝트 종속성 다이어그램을 포함 합니다. 이 종속성 다이어그램의 유효성을 검사 하려는 C# 또는 Visual Basic 프로젝트의 아티팩트에 연결 되어야 합니다. 참조 [사용자 코드에서 종속성 다이어그램을 만들](../modeling/create-layer-diagrams-from-your-code.md)합니다.  
   
  이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
   
@@ -120,7 +121,7 @@ ms.lasthandoff: 01/22/2018
 2.  각 오류의 소스를 보려면 오류를 두 번 클릭 하 고 **오류 목록** 창.  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 오류 소스 대신 코드 맵이 표시될 수도 있습니다. 이 코드에서는 종속성 다이어그램에서 지정 되지 않은 어셈블리에 대 한 종속 또는 코드 종속성 다이어그램으로 지정 된 종속성이 없는 경우 발생 합니다. 이 경우 코드 맵이나 코드를 검토하여 종속성이 있어야 하는지 여부를 확인합니다. 코드 맵에 대 한 자세한 내용은 참조 [솔루션 전체의 종속성 매핑](../modeling/map-dependencies-across-your-solutions.md)합니다.  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 오류 소스 대신 코드 맵에 표시 될 수 있습니다. 이 코드에서는 종속성 다이어그램에서 지정 되지 않은 어셈블리에 대 한 종속 또는 코드 종속성 다이어그램으로 지정 된 종속성이 없는 경우 발생 합니다. 이 경우 코드 맵이나 코드를 검토하여 종속성이 있어야 하는지 여부를 확인합니다. 코드 맵에 대 한 자세한 내용은 참조 [솔루션 전체의 종속성 매핑](../modeling/map-dependencies-across-your-solutions.md)합니다.  
   
 3.  오류를 관리 하려면 참조 [유효성 검사 오류 관리](#ManageErrors)합니다.  
   

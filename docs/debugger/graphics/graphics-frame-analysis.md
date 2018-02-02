@@ -4,21 +4,22 @@ ms.custom:
 ms.date: 02/09/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.graphics.frameanalysis
-ms.assetid: 336c48ba-a1c4-4db9-b2a4-3de4a129cdd6
-caps.latest.revision: "9"
+f1_keywords:
+- vs.graphics.frameanalysis
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d15e781445605eb1e236f177669c2fe8041d90d6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: fd3af414b5d59ec49ed6e042d6a656d322fe8a38
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="graphics-frame-analysis"></a>그래픽 프레임 분석
 Visual Studio Graphics Analyzer의 그래픽 프레임 분석을 사용하여 Direct3D 게임 또는 앱의 렌더링 성능을 분석하고 최적화합니다.  
@@ -147,37 +148,32 @@ Visual Studio Graphics Analyzer의 그래픽 프레임 분석을 사용하여 Di
 ### <a name="gpu-counters"></a>GPU 카운터  
  GPU 하드웨어 카운터에 대한 지원은 하드웨어에 따라 다릅니다.  
   
- Intel, AMD 또는 nVidia에서 현재 제공하는 컴퓨터 GPU는 GPU 하드웨어 카운터를 안정적으로 지원하지 않으므로 프레임 분석은 이들 업체의 카운터를 수집하지 않습니다. 그러나 프레임 분석은 하드웨어 카운터를 안정적으로 지원하는 다음 GPU에서는 하드웨어 카운터를 수집합니다.  
+ Intel, AMD 또는 nVidia에서 현재 제공하는 컴퓨터 GPU는 GPU 하드웨어 카운터를 안정적으로 지원하지 않으므로 프레임 분석은 이들 업체의 카운터를 수집하지 않습니다. 그러나 프레임 분석에서 안정적으로 지 원하는 다음 GPU 하드웨어 카운터를 수집지 않습니다.  
   
--   Qualcomm SOC(Windows Phone을 지원하는 제품 모두)  
-  
--   nVidia T40(Tegra4).  
+-   nVidia T40 (Tegra4)
   
  프레임 분석을 지원하는 다른 플랫폼에서는 GPU 하드웨어 카운터를 수집하지 않습니다.  
   
 > [!NOTE]
 >  GPU 하드웨어 카운터는 하드웨어 리소스이므로 여러 패스에 걸쳐 각 렌더링 변형에 대해 전체 하드웨어 카운터 집합을 수집할 수 있습니다. 따라서 CPU 카운터가 수집되는 순서는 지정되지 않습니다.  
   
-### <a name="windows-phone"></a>Windows Phone  
- 타임 스탬프, 폐색 쿼리 및 GPU 하드웨어 카운터 원래 Windows Phone 8.1 또는 Windows Phone 10과 함께 제공 하는 Windows Phone 송수화기 에서만 지원 됩니다. 그래픽 로그 파일을 재생하려면 프레임 분석에는 이러한 항목이 필요합니다. 원래 Windows Phone 8과 함께 제공 된 Windows Phone 송수화기는 Windows Phone 8.1 또는 Windows Phone 10에 업데이트 된 경우에 프레임 분석을 지원 하지 않습니다.  
-  
 ## <a name="unsupported-scenarios"></a>지원되지 않는 시나리오  
  특정 프레임 분석 사용 방법은 지원되지 않거나 바람직하지 않습니다.  
-  
-### <a name="warp"></a>WARP  
- 프레임 분석은 실제 하드웨어에서 렌더링 성능을 프로파일링 및 향상시키는 데 사용됩니다. Windows Phone Emulator가 WARP에서 실행되고 있는데 WARP 장치에서 프레임 분석을 실행할 수는 있지만 일반적으로는 실행하지 않는 것이 좋습니다. 왜냐하면 하이엔드 CPU에서 실행 중인 WARP는 기능이 가장 떨어지는 최신 GPU보다 더 느려질 수 있고 WARP가 실행되는 특정 CPU에 따라 WARP 성능이 크게 달라질 수 있기 때문입니다.  
   
 ### <a name="playback-of-high-feature-level-captures-on-down-level-devices"></a>하위 수준 장치에서 높은 기능 수준 캡처 재생  
  Graphics Analyzer에서는 재생 컴퓨터에서 지원하는 것보다 더 높은 기능 수준을 사용하는 그래픽 로그 파일을 재생하면 자동으로 WARP로 대체됩니다. 프레임 분석에서는 명시적으로 WARP로 대체되지 않고 오류가 발생합니다. WARP는 Direct3D 앱의 정확성을 검사하는 데 유용하지만 이 앱의 성능을 검사하는 데에는 도움이 되지 않습니다.  
   
 > [!NOTE]
->  기능 수준 문제를 염두에 둬야 하지만 여러 하드웨어 구성 및 장치에서 그래픽 로그 파일을 캡처 및 재생할 수 있습니다. 예를 들어 Windows Phone에서 그래픽 정보를 캡처한 다음 데스크톱 컴퓨터에서 이 정보를 재생할 수 있으며 그 반대도 가능합니다. 두 경우 모두 로그 파일에 API가 없거나 로그 파일이 재생 컴퓨터에서 지원되지 않는 기능 수준을 사용하지 않는 한 그래픽 로그를 재생할 수 있습니다.  
+>  기능 수준 문제를 염두에 둬야 하지만 여러 하드웨어 구성 및 장치에서 그래픽 로그 파일을 캡처 및 재생할 수 있습니다. 그래픽 로그는 로그 파일에서 Api를 포함 하지 않는 또는 재생 컴퓨터에서 지원 되지 않는 기능 수준을 사용 하는 동안 계속 다시 재생할 수 있습니다.  
   
 ### <a name="direct3d-10-and-lower"></a>Direct3D 10 이하  
  앱이 Direct3D 10 API를 호출하면 이러한 API를 다른 Graphics Analyzer 도구에서 인식 및 사용하더라도 프레임 분석에서는 인식 또는 프로파일링하지 않습니다.
   
 > [!NOTE]
 >  이는 기능 수준이 아니라 사용 중인 Direct3D API 호출에만 적용됩니다.
+
+### <a name="warp"></a>WARP  
+ 프레임 분석은 실제 하드웨어에서 렌더링 성능을 프로파일링 및 향상시키는 데 사용됩니다. WARP 장치에서 프레임 분석을 실행 방지할 수 없습니다 것만 일반적으로 있는데 하이엔드 CPU에서 실행 중인 WARP도의 최소 지원 최신 Gpu 보다 느립니다. 고 특정 CPU에 따라 WARP 성능이 크게 달라질 수 있으므로 실행 됩니다.  
   
 ##  <a name="Variants"></a>변형  
  프레임 분석이 재생 중 프레임이 렌더링 되는 방식에 대해 하는 각 변경 라고는 *variant*합니다. 프레임 분석에서 검사한 변형은 앱의 렌더링 성능 또는 시각적 품질을 향상시키기 위해 수행한 일반적이고 상대적으로 쉬운 변경에 해당합니다(예: 질감 크기 줄이기, 질감 압축 사용 또는 다른 종류의 앤티앨리어싱 사용). 변형은 앱의 일반적인 렌더링 컨텍스트와 매개 변수를 재정의합니다. 다음은 요약입니다.  
@@ -185,9 +181,9 @@ Visual Studio Graphics Analyzer의 그래픽 프레임 분석을 사용하여 Di
 |변형|설명|  
 |-------------|-----------------|  
 |**1x1 뷰포트 크기**|모든 렌더링 대상의 뷰포트 크기를 1x1 픽셀로 줄입니다.<br /><br /> 자세한 내용은 참조 [1x1 뷰포트 크기 변형](1x1-viewport-size-variant.md)|  
-|**0 x MSAA**|모든 렌더링 대상에서 MSAA(MultiSample Anti-Aliasing)를 사용하지 않습니다.<br /><br /> 자세한 내용은 참조 [0x / 2 x 4 / x MSAA 변형](0x-2x-4x-msaa-variants.md)|  
-|**2 x MSAA**|모든 렌더링 대상에서 2x MSAA(MultiSample Anti-Aliasing)를 사용합니다.<br /><br /> 자세한 내용은 참조 [0x / 2 x 4 / x MSAA 변형](0x-2x-4x-msaa-variants.md)|  
-|**4 x MSAA**|모든 렌더링 대상에서 4x MSAA(MultiSample Anti-Aliasing)를 사용합니다.<br /><br /> 자세한 내용은 참조 [0x / 2 x 4 / x MSAA 변형](0x-2x-4x-msaa-variants.md)|  
+|**0x MSAA**|모든 렌더링 대상에서 MSAA(MultiSample Anti-Aliasing)를 사용하지 않습니다.<br /><br /> 자세한 내용은 참조 [0x / 2 x 4 / x MSAA 변형](0x-2x-4x-msaa-variants.md)|  
+|**2x MSAA**|모든 렌더링 대상에서 2x MSAA(MultiSample Anti-Aliasing)를 사용합니다.<br /><br /> 자세한 내용은 참조 [0x / 2 x 4 / x MSAA 변형](0x-2x-4x-msaa-variants.md)|  
+|**4x MSAA**|모든 렌더링 대상에서 4x MSAA(MultiSample Anti-Aliasing)를 사용합니다.<br /><br /> 자세한 내용은 참조 [0x / 2 x 4 / x MSAA 변형](0x-2x-4x-msaa-variants.md)|  
 |**점 질감 필터링**|적절한 모든 질감 샘플의 필터링 모드를 `DXD11_FILTER_MIN_MAG_MIP_POINT`(점 질감 필터링)로 설정합니다.<br /><br /> 자세한 내용은 참조 [점, 쌍선형, 3 중 선형 및 이방성 질감 필터링 변형](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)합니다.|  
 |**쌍선형 질감 필터링**|적절한 모든 질감 샘플의 필터링 모드를 `DXD11_FILTER_MIN_MAG_LINEAR_MIP_POINT`(쌍선형 질감 필터링)로 설정합니다.<br /><br /> 자세한 내용은 참조 [점, 쌍선형, 3 중 선형 및 이방성 질감 필터링 변형](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)합니다.|  
 |**3 중 선형 질감 필터링**|적절한 모든 질감 샘플의 필터링 모드를 `DXD11_FILTER_MIN_MAG_MIP_LINEAR`(3중 선형 질감 필터링)로 설정합니다.<br /><br /> 자세한 내용은 참조 [점, 쌍선형, 3 중 선형 및 이방성 질감 필터링 변형](point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md)합니다.|  

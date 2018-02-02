@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
-caps.latest.revision: "6"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0721d0080ec135a8e969cc420dfbb51e81ac4454
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: 00ab0622820777f556eff667e6de5f769196e6b0
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>알림 및 Visual Studio에 대 한 진행률
 ##  <a name="BKMK_NotificationSystems"></a>알림 시스템  
@@ -82,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 ####  <a name="BKMK_EmbeddedInfobar"></a>포함 된 정보 표시줄  
  정보 표시줄과 문서 창이 나 도구 창의 맨 위에 있는 시 / 조건 사용자에 게 알리는 데 사용할 수 있습니다. 또한 사용자를 쉽게 작업을 수행 하는 방법을 가질 수 있습니다 명령을 제공할 수 있습니다. 정보 표시줄 표준 셸 컨트롤입니다. 작동 되며 IDE에서 다른 사용자와 일치 하지 않는 표시를 직접 만들지는 마십시오. 참조 [정보 표시줄](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars) 구현 세부 정보 및 사용 지침에 대 한 합니다.  
   
- ![정보 표시줄 포함](../../extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "0901 03_EmbeddedInfobar")  
+ ![Embedded infobar](../../extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "0901-03_EmbeddedInfobar")  
   
  **기록 디버깅 모드에서 IDE 되 고 편집기에서 표준 디버깅 모드와 같은 방식으로 응답 하지 않을 사용자에 게 알려주는 문서 창에 포함 된 정보 표시줄입니다.**  
   
@@ -238,8 +240,6 @@ ms.lasthandoff: 12/22/2017
   
  ![창 내의 정보 표시줄](../../extensibility/ux-guidelines/media/0903-06_infobarinwindow.png "0903 06_InfoBarInWindow")  
   
- **코드 분석 창 내의 정보 표시줄**  
-  
 ##### <a name="inline"></a>인라인  
  인라인 진행률 표시 진행률 로더 형식으로 나타낼 수 있습니다. 진행률 표시기는 메시징, 이룹니다 일반적으로 있지만 이것이 요구 사항은 없습니다.  
   
@@ -287,12 +287,12 @@ ms.lasthandoff: 12/22/2017
   
  **프로세스 진행 상태와 함께 출력 창 및 메시징 대기**  
   
-##  <a name="BKMK_Infobars"></a>정보 표시줄  
+##  <a name="BKMK_Infobars"></a> Infobars  
   
 ### <a name="overview"></a>개요  
  정보 표시줄 사용자 관심 지점에 가까운 표시기를 제공 하 고 시각적 모양 및 상호 작용의 일관성을 유지 하는 공유 정보 표시줄 컨트롤을 사용 하 여 키를 누릅니다.  
   
- ![정보 표시줄](../../extensibility/ux-guidelines/media/0904-01_infobar.png "0904 01_Infobar")  
+ ![Infobar](../../extensibility/ux-guidelines/media/0904-01_infobar.png "0904-01_Infobar")  
   
  **Visual Studio에서 정보 표시줄**  
   
@@ -522,6 +522,6 @@ public interface IVsInfoBarUIEvents
 #### <a name="watermarks"></a>워터 마크  
  경우에 따라 전체 컨트롤 또는 창 오류 상태에서입니다. 이 경우 워터 마크를 사용 하 여 해당 오류를 나타냅니다.  
   
- ![워터 마크](../../extensibility/ux-guidelines/media/0905-07_watermark.png "0905 07_Watermark")  
+ ![Watermark](../../extensibility/ux-guidelines/media/0905-07_watermark.png "0905-07_Watermark")  
   
  **워터 마크 필드 유효성 검사**

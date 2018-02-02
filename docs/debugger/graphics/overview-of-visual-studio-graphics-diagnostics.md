@@ -4,23 +4,23 @@ ms.custom:
 ms.date: 02/09/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: ddd429d9-ac70-4ac4-9e69-299c6ea2df09
-caps.latest.revision: "29"
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0fdc6c58f791c06d5f9287400d00bbfce2564e3b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 8fb52530cf5a068081ce3af3325675d2167c57a9
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="overview-of-visual-studio-graphics-diagnostics"></a>Visual Studio 그래픽 진단 개요
-Visual Studio *그래픽 진단* 집합 기록한 다음 Direct3D 앱의 렌더링 및 성능 문제를 분석 하기 위한 도구입니다. Windows PC에서 로컬로 실행 중이거나 Windows 장치 에뮬레이터 또는 원격 PC나 장치에서 실행 중인 앱에서 그래픽 진단을 사용할 수 있습니다.  
+Visual Studio *그래픽 진단* 집합 기록한 다음 Direct3D 앱의 렌더링 및 성능 문제를 분석 하기 위한 도구입니다. Windows PC에서 또는 원격 PC 또는 장치에서 로컬로 실행 중인 앱에서 그래픽 진단은 사용할 수 있습니다.  
   
 ## <a name="using-graphics-diagnostics-to-debug-rendering-problems"></a>그래픽 진단을 사용하여 렌더링 문제 디버깅  
  그래픽이 많은 응용 프로그램에서 렌더링 문제를 디버깅하는 것은 디버거를 시작하고 몇몇 코드를 단계적으로 실행하는 것처럼 간단하지가 않습니다. 각 프레임에는 수십만 개의 고유한 픽셀이 생성되어 있고 상태, 데이터, 매개 변수 및 코드의 복잡한 집합에 따라 이러한 픽셀들 중 아마도 수 픽셀에만 진단하려는 문제가 발생할 것입니다. 각 픽셀을 생성하는 코드는 수백 개의 픽셀을 병렬로 처리하는 특수한 하드웨어에서 실행되므로 문제는 더욱 복잡해질 수 있습니다. 가벼운 스레드 코드에서조차 활용하기 어려운 일반적인 디버깅 도구와 기술은 많은 양의 데이터를 처리하는 경우에는 비효율적입니다.  
@@ -33,10 +33,7 @@ Visual Studio *그래픽 진단* 집합 기록한 다음 Direct3D 앱의 렌더�
 ### <a name="windows-10-and-direct3d-12"></a>Windows 10 및 Direct3D 12  
  도입 된 Windows 10 *Direct3D 12*, Direct3D 10과 Direct3D 11과는 것이 다릅니다. 이러한 차이는 DirectX를 최신 그래픽 하드웨어에 맞게 다시 조정하고 모든 잠재력을 발휘할 수 있게 하지만 대규모 API 변경으로 인해 리소스 수명 및 경합을 관리하는 프로그래머의 책임도 커졌습니다. 차이 있지만 Direct3D 12를 사용한 그래픽 진단은 Direct3D 11.2를 사용한 그래픽 진단은와 기능 패리티를 유지 합니다.
   
- Windows 10에서는 이전 버전의 Direct3D와 이러한 버전을 사용하는 게임 및 응용 프로그램에 대한 지원도 유지됩니다. Visual Studio의 그래픽 진단은 Windows 8.1 뿐 아니라 Windows 10에서 Direct3D 10과 Direct3D 11을 지원 하기 위해 계속 합니다.  
-  
-### <a name="windows-81-and-direct3d-112"></a>Windows 8.1 및 Direct3D 11.2  
- [!INCLUDE[win81](../includes/win81_md.md)]에서 DirectX 11.2는 런타임을 통한 그래픽 정보 캡처를 지원하는 새 기능을 도입했습니다. [!INCLUDE[win81](../includes/win81_md.md)]새 런타임 기반 캡처를 사용 하 여-라고 *강력한 캡처*-모든 버전의 DirectX에만 있는 [!INCLUDE[win81](../includes/win81_md.md)] 지원 합니다. 강력한 캡처는 Direct3D 11.2의 새로운 기능이기도 합니다.  
+ Windows 10에서는 이전 버전의 Direct3D와 이러한 버전을 사용하는 게임 및 응용 프로그램에 대한 지원도 유지됩니다. Visual Studio에서 그래픽 진단을 계속 Windows 10에서 Direct3D 10과 Direct3D 11을 지원 합니다.
   
 ### <a name="limited-direct2d-support"></a>제한된 Direct2D 지원  
  Direct2D는 Direct3D를 기반으로 빌드된 사용자 모드 API 이므로 Direct2D를 사용 하는 앱의 렌더링 문제를 디버깅 하는 데 그래픽 진단을 사용할 수 있습니다. 그러나 더 높은 수준의 Direct2D 이벤트 대신 기본 Direct3D 이벤트만 기록되므로 Direct2D 이벤트는 그래픽 이벤트 목록에 나타나지 않습니다. 또한 Direct2D 이벤트 및 결과 Direct3D 이벤트 간의 관계가 항상 명확하지는 않으므로, Direct2D를 사용하는 응용 프로그램의 렌더링 문제를 디버깅하는 데 그래픽 진단을 사용하는 것은 간단하지가 않습니다. 그러나 Direct2D를 사용하는 응용 프로그램에서 낮은 수준의 렌더링 문제에 대한 정보를 가져오는 데 그래픽 진단을 사용할 수 있습니다.  

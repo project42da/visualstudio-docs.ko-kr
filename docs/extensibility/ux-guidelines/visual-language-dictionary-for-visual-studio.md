@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 08/04/2017
 ms.reviewer: Jamie.Young
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d20a30c0-0dcc-4e2c-a809-31c8ea28c7df
-caps.latest.revision: "10"
+caps.latest.revision: 
 ms.author: v-brickg
 manager: ghogen
-ms.workload: v-brickg
-ms.openlocfilehash: 69fad7f5bab020aea442670687e5fc781eee2955
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- v-brickg
+ms.openlocfilehash: eb6ff923bd74b4c6350e8252d59c86cabff11428
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="visual-language-dictionary-for-visual-studio"></a>Visual Studio에 대 한 비주얼 언어 사전
 Visual Studio는 그의 해 및 다른 이미지의 구성 요소는 개념을 설명 하기 위해 공용 시각적 언어를 사용 합니다. 새 아이콘을 디자인할 때 사용자 고유의 이미지에 전달 하려는 개념 식별 하려면이 사전을 사용 합니다.  
@@ -448,7 +450,7 @@ Visual Studio는 그의 해 및 다른 이미지의 구성 요소는 개념을 �
 | **작업 상태: 일시 중지** | ![작업 상태: 일시 중지 됨 아이콘](../../extensibility/ux-guidelines/media/vld_s_actionstatuspaused.png "VLD_S_ActionStatusPaused") | ![서버 일시 중지 됨 아이콘](../../extensibility/ux-guidelines/media/vld_s_actionstatuspaused_serverpaused.png "VLD_S_ActionStatusPaused_ServerPaused")<br />서버가 일시 중지 |
 | **작업 상태: 재생 하 고, 실행** | ![작업 상태: 재생 중, 실행 중 아이콘](../../extensibility/ux-guidelines/media/vld_s_actionstatusplayingrunning.png "VLD_S_ActionStatusPlayingRunning") | ![서버 시작 됨 아이콘](../../extensibility/ux-guidelines/media/vld_s_actionstatusplayingrunning_serverstarted.png "VLD_S_ActionStatusPlayingRunning_ServerStarted")<br />서버 시작 됨<br />![실행 안 함 아이콘](../../extensibility/ux-guidelines/media/vld_s_actionstatusplayingrunning_neverrun.png "VLD_S_ActionStatusPlayingRunning_NeverRun")<br />실행 안 함 |
 | **작업 상태: 중지 됨** | ![작업 상태: 중지 됨 아이콘](../../extensibility/ux-guidelines/media/vld_s_actionstatusstopped.png "VLD_S_ActionStatusStopped") | ![서버 중지 됨 아이콘](../../extensibility/ux-guidelines/media/vld_s_actionstatusstopped_serverstopped.png "VLD_S_ActionStatusStopped_ServerStopped")<br />서버 중지 됨 |
-| **경으십시오** | ![경고 아이콘](../../extensibility/ux-guidelines/media/vld_s_alert.png "VLD_S_Alert") | ![오류 탭 큐 아이콘이 있는 연결 된 테이블](../../extensibility/ux-guidelines/media/vld_s_alert_linkedtablewitherrortabcue.png "VLD_S_Alert_LinkedTableWithErrorTabCue")<br />오류 탭 큐와 연결 된 테이블<br />![코드 분석 창 아이콘](../../extensibility/ux-guidelines/media/vld_s_alert_codeanalysiswindow.png "VLD_S_Alert_CodeAnalysisWindow")<br />코드 분석 창 |
+| **경으십시오** | ![경고 아이콘](../../extensibility/ux-guidelines/media/vld_s_alert.png "VLD_S_Alert") | ![오류 탭 큐 아이콘이 있는 연결 된 테이블](../../extensibility/ux-guidelines/media/vld_s_alert_linkedtablewitherrortabcue.png "VLD_S_Alert_LinkedTableWithErrorTabCue")<br />오류 탭 큐와 연결 된 테이블 |
 | **중단점: 고급 사용 안 함** | ![중단점: 고급 사용 안 함된 아이콘](../../extensibility/ux-guidelines/media/vld_s_breakpointadvanceddisabled.png "VLD_S_BreakpointAdvancedDisabled") ||
 | **중단점: 고급 사용**  |![중단점: 고급 사용된 아이콘](../../extensibility/ux-guidelines/media/vld_s_breakpointadvancedenabled.png "VLD_S_BreakpointAdvancedEnabled") ||
 | **중단점: 바인딩** | ![중단점: 바인딩된 됨 아이콘](../../extensibility/ux-guidelines/media/vld_s_breakpointbound.png "VLD_S_BreakpointBound") ||

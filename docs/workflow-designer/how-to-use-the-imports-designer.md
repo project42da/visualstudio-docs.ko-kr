@@ -6,21 +6,23 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: reference
-f1_keywords: System.Activities.Presentation.View.ImportDesigner.UI
+f1_keywords:
+- System.Activities.Presentation.View.ImportDesigner.UI
 ms.assetid: 61328ab6-9b66-4e12-8630-22e30ee8c9d1
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: ErikRe
 ms.author: erikre
 manager: erikre
-ms.workload: multiple
-ms.openlocfilehash: 3873e444f3d9c68b632d52ab98bee07bf14af679
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: cfa65ee24b99fd81712ec88e45f44bb2ed42c21a
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="how-to-use-the-imports-designer"></a>방법: 가져오기 디자이너 사용
-가져오기 디자이너를 사용하여 식에서 사용할 형식의 네임스페이스를 입력할 수 있습니다. 과 거의 동일한는 **가져옵니다** 또는 **를 사용 하 여** Visual Basic.NET 및 C#, 가져오기 디자이너에 네임 스페이스 지정 키워드를 사용 하 간단히 식 대신에 정규화 된 형식 이름을 입력할 수 있습니다 버전 형식 이름입니다.  
+가져오기 디자이너를 사용하여 식에서 사용할 형식의 네임스페이스를 입력할 수 있습니다. 과 거의 동일한는 **가져옵니다** 또는 **를 사용 하 여** Visual Basic 및 C#, 가져오기 디자이너에 네임 스페이스 지정 키워드를 사용 하 간단히 식 대신에 정규화 된 형식 이름을 입력할 수 있습니다 버전 형식 이름입니다.  
   
  가져오기 디자이너에는 UI의 변경 내용과 워크플로 저장 시 변경 내용이 모두 적용됩니다. 워크플로가 저장되면 가져오기 디자이너에 네임스페이스를 자동으로 추가할 수 있습니다. 이러한 요구 사항은 다음과 같습니다.  
   

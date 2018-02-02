@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - code, analyzing C/C++
 - code analysis tool, walkthroughs
 ms.assetid: eaee55b8-85fe-47c7-a489-9be0c46ae8af
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: c95d03201fe9c84e01e83e7fd55bef83755337e7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: f9b0f8e36cddca227062550775c9f6098aeb1c6f
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-analyzing-cc-code-for-defects"></a>연습: C/C++ 코드의 오류 분석
 이 연습에서는 C/c + + 코드에 대 한 코드 분석 도구를 사용 하 여 C/c + + 코드에 잠재적 코드 오류를 분석 하는 방법을 보여 줍니다.  
@@ -41,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="prerequisites"></a>필수 구성 요소  
   
--   [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] 또는 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]  
+-   [!INCLUDE[vsPreLong](../code-quality/includes/vsprelong_md.md)] 또는 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]합니다.  
   
 -   복사본은 [데모 샘플](../code-quality/demo-sample.md)합니다.  
   
@@ -85,9 +87,9 @@ ms.lasthandoff: 12/22/2017
   
 3.  SUCCEEDED 매크로 사용 하 여이 경고를 해결 합니다. 코드에는 다음 코드와 유사 해야 합니다.  
   
-    ```  
-    if (SUCCEEDED (ReadUserAccount()) )  
-    ```  
+   ```cpp
+   if (SUCCEEDED (ReadUserAccount()) )  
+   ```  
   
 4.  에 **오류 목록**, 다음과 같은 경고를 두 번 클릭 합니다.  
   
@@ -95,17 +97,17 @@ ms.lasthandoff: 12/22/2017
   
 5.  같은지 테스트 하 여이 경고를 해결 합니다. 코드를 다음 코드로 비슷하게 표시 됩니다.  
   
-    ```  
-    if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))  
-    ```  
+   ```cpp
+   if ((len == ACCOUNT_DOMAIN_LEN) || (g_userAccount[len] != '\\'))  
+   ```  
   
 ### <a name="to-treat-warning-as-an-error"></a>경고를 오류로 처리 하려면  
   
 1.  Bug.cpp 파일에 다음 추가 `#pragma` C6001 경고를 오류로 처리 하는 파일의 시작 부분에 문의:  
   
-    ```  
-    #pragma warning (error: 6001)  
-    ```  
+   ```cpp
+   #pragma warning (error: 6001)  
+   ```  
   
 2.  CodeDefects 프로젝트를 다시 작성 합니다.  
   
@@ -141,17 +143,14 @@ ms.lasthandoff: 12/22/2017
   
 8.  이 경고를 해결 하려면 'if' 문을 사용 하 여 반환 값을 테스트 합니다. 코드에는 다음 코드와 유사 해야 합니다.  
   
-     `if (NULL != newNode)`  
-  
-     `{`  
-  
-     `newNode->data = value;`  
-  
-     `newNode->next = 0;`  
-  
-     `node->next = newNode;`  
-  
-     `}`  
+   ```cpp
+   if (NULL != newNode)  
+   {  
+   newNode->data = value;  
+   newNode->next = 0;  
+   node->next = newNode;  
+   }
+   ```
   
 9. 주석 프로젝트를 다시 작성 합니다.  
   
@@ -161,15 +160,13 @@ ms.lasthandoff: 12/22/2017
   
 1.  형식 매개 변수를 주석 달기 및는 함수의 반환 값 `AddTail` 이 예제에 표시 된 대로 Pre 및 Post 조건을 사용 하 여:  
   
-     `[returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail`  
-  
-     `(`  
-  
-     `[SA_Pre(Null=SA_Maybe)] LinkedList* node,`  
-  
-     `int value`  
-  
-     `)`  
+   ```cpp
+   [returnvalue:SA_Post (Null=SA_Maybe)] LinkedList* AddTail
+   (
+   [SA_Pre(Null=SA_Maybe)] LinkedList* node,
+   int value
+   )
+   ```
   
 2.  주석 프로젝트를 다시 작성 합니다.  
   
@@ -181,19 +178,21 @@ ms.lasthandoff: 12/22/2017
   
 4.  이 경고를 해결 하려면 'if' 문을 사용 하 여 반환 값을 테스트 합니다. 코드에는 다음 코드와 유사 해야 합니다.  
   
-    ```  
-    . . .  
-    LinkedList *newNode = NULL;   
-    if (NULL == node)  
-    {  
-         return NULL;  
+   ```cpp
+   . . .  
+   LinkedList *newNode = NULL;   
+   if (NULL == node)  
+   {  
+        return NULL;  
         . . .  
-    }  
-    ```  
+   }  
+   ```  
   
 5.  주석 프로젝트를 다시 작성 합니다.  
   
      경고 또는 오류 없이 프로젝트가 빌드됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- [연습: 관리 코드의 코드 오류 분석](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)
+## <a name="see-also"></a>참고 항목
+
+[연습: 관리 코드의 코드 오류 분석](../code-quality/walkthrough-analyzing-managed-code-for-code-defects.md)  
+[C/c + +에 대 한 코드 분석](../code-quality/code-analysis-for-c-cpp-overview.md)

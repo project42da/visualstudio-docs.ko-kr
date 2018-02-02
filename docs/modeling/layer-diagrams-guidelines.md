@@ -14,12 +14,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ec8c0e9010cefd1e5c6b639edf02d785422800ff
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 06eec90026054bf8081c1cd1727d6cbfc3f30bbe
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="dependency-diagrams-guidelines"></a>종속성 다이어그램: 지침
 만들어 높은 수준의 응용 프로그램의 아키텍처에 설명 *종속성 다이어그램* Visual Studio에서. 코드 종속성 다이어그램을 사용 하 여 코드를 검사 하 여이 디자인의 일관성이 유지 되는지 확인 합니다. 빌드 프로세스에 레이어 유효성 검사를 포함할 수도 있습니다. 참조 [Channel 9 비디오: 디자인 종속성 다이어그램을 사용 하 여 아키텍처 및 유효성 검사](http://go.microsoft.com/fwlink/?LinkID=252073)합니다.  
@@ -62,7 +63,7 @@ ms.lasthandoff: 01/13/2018
  참조 [사용자 코드에서 종속성 다이어그램을 만들](../modeling/create-layer-diagrams-from-your-code.md)합니다.  
   
 ##  <a name="CreateLayers"></a>기능 영역 또는 구성 요소를 나타내는 레이어 정의  
- 레이어 논리 그룹을 나타내는 *아티팩트*, 프로젝트, 코드 파일, 네임 스페이스, 클래스, 메서드 등입니다. Visual C# .NET 및 Visual Basic.NET 프로젝트의 아티팩트에서 레이어를 만들거나 문서(예: Word 파일 또는 PowerPoint 프레젠테이션)를 연결하여 사양 또는 계획을 레이어에 연결할 수 있습니다. 각 레이어는 다이어그램에서 직사각형으로 나타나고 그에 연결된 아티팩트의 수를 보여줍니다. 레이어에는 보다 구체적인 작업을 설명하는 중첩된 레이어가 포함될 수 있습니다.  
+ 레이어 논리 그룹을 나타내는 *아티팩트*, 프로젝트, 코드 파일, 네임 스페이스, 클래스, 메서드 등입니다. Visual C# 및 Visual Basic 프로젝트의 아티팩트에서 레이어를 만들 수 있습니다 또는 있습니다 수 사양 또는 계획을 레이어에 연결할 Word 파일 또는 PowerPoint 프레젠테이션과 같이 문서에 연결 하 여 합니다. 각 레이어는 다이어그램에서 직사각형으로 나타나고 그에 연결된 아티팩트의 수를 보여줍니다. 레이어에는 보다 구체적인 작업을 설명하는 중첩된 레이어가 포함될 수 있습니다.  
   
  일반적인 지침대로 해당 기능에 따라 레이어의 이름을 지정합니다(예: "프레젠테이션" 또는 "서비스"). 아티팩트가 밀접하게 상호 종속되는 경우 동일한 레이어에 배치합니다. 아티팩트를 개별적으로 업데이트하거나 별도 응용 프로그램에서 사용할 수 있는 경우 다른 레이어에 배치합니다. 레이어 링 패턴에 대해 알아보려면 Patterns & Practices 사이트를 방문 [http://go.microsoft.com/fwlink/?LinkId=145794](http://go.microsoft.com/fwlink/?LinkId=145794)합니다.  
   

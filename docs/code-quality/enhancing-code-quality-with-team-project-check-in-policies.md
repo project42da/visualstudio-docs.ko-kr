@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,12 +14,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 36e0ab96c1c0c3deeced62ff9808737c903e682b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c82bc929fa7633719c06569cb3dded5df651a349
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="enhancing-code-quality-with-team-project-check-in-policies"></a>팀 프로젝트 체크 인 정책을 사용하여 코드 품질 향상
 
@@ -48,7 +50,7 @@ TFVC(Team Foundation Version Control)를 사용할 때는 팀 프로젝트에 �
 |작업|지원 내용|
 |----------|------------------------|
 |**개발 프로세스에서 코드 분석 사용:** 팀 멤버는 해당 개발 컴퓨터에서 코드 분석을 실행합니다. Visual Studio에서 개발자는 개별 코드 프로젝트에 대해 코드 분석 실행을 구성 및 실행하고, 해당 실행을 통해 발견된 문제를 확인 및 분석하며, 경고에 대한 작업 항목을 만듭니다.|[응용 프로그램 품질 분석](../code-quality/analyzing-application-quality-by-using-code-analysis-tools.md)|
-|**단위 테스트 만들기 및 실행:** 단위 테스트를 통해 개발자와 테스터는 C#, Visual Basic .NET 및 C++ 프로젝트의 클래스 메서드에서 논리 오류를 신속하게 찾을 수 있습니다. 단위 테스트를 한 번 만든 후 해당 소스 코드가 변경될 때마다 실행하여 버그가 없는지 확인할 수 있습니다.|[코드 단위 테스트](../test/unit-test-your-code.md)|
+|**단위 테스트 만들기 및 실행:** 단위 테스트를 통해 개발자와 테스터 신속 하 게 C#, Visual Basic 및 c + + 프로젝트의 클래스 메서드에서 논리 오류를 찾아보십시오. 단위 테스트를 한 번 만든 후 해당 소스 코드가 변경될 때마다 실행하여 버그가 없는지 확인할 수 있습니다.|[코드 단위 테스트](../test/unit-test-your-code.md)|
 |**작업 항목 및 결함 추적:** 작업 항목을 사용하여 팀 프로젝트에 대한 작업 및 정보 둘 다를 추적 및 관리할 수 있습니다. 작업 항목은 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)] 에서 작업의 할당 및 진행률을 추적하는 데 사용하는 데이터베이스 레코드입니다. 다양한 유형의 작업 항목을 사용하여 고객 요구 사항, 제품 버그 및 개발 작업과 같은 여러 유형의 작업을 추적할 수 있습니다.|[(VSTS) 작업 항목](/vsts/work/work-items/index)|
 
 ## <a name="external-resources"></a>외부 리소스

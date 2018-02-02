@@ -6,17 +6,17 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-ms.assetid: a2098fd9-8334-4e95-9b8d-bc3da689d9e3
-caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
 manager: ghogen
+dev_langs:
+- CPP
 ms.technology: vs-ide-code-analysis
-ms.openlocfilehash: 0dba021b25a63a057f882aeb5c49a560992c2c2b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 97ada4fa2abd8975bd728b48fc24b9e3e9e2af41
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C + + 코어 지침 검사기를 사용 하 여
 C + + 코어 지침은 휴대용 집합이 지침, 규칙 및 c + +의 c + + 전문가 디자이너에서 만든 코딩 하는 방법에 대 한 모범 사례입니다. 현재 visual Studio c + +에 대 한 코드 분석 도구는의 일부로 이러한 규칙의 하위 집합을 지원합니다. 코어 지침 검사기는 Visual Studio 2017에 기본적으로 설치 및는 [Visual Studio 2015 용 NuGet 패키지로 사용할 수 있는](#vs2015_corecheck)합니다.
@@ -191,7 +191,7 @@ CPPCORECHECK_BOUNDS_WARNINGS
 ```
 Microsoft.Cpp.targets 파일을 가져오기 전에 이러한 속성을 추가 하 고 있는지 확인 합니다. 특정 규칙 집합 선택 또는 하거나 다른 PREfast 검사를 포함 하는 기본 규칙 집합을 사용 하 여 사용자 지정 규칙 집합을 만들 수 있습니다.
 
-와 동일한 방식으로 사용 하 여 지정 된 파일에 대해서만 c + + 코어 검사기를 실행할 수 있습니다 [앞에서 설명한](#coreckeck_per_file), 하지만 MSBuild 파일을 사용 합니다. 환경 변수를 사용 하 여 설정할 수 있습니다는 `BuildMacro` 항목:
+와 동일한 방식으로 사용 하 여 지정 된 파일에 대해서만 c + + 코어 검사기를 실행할 수 있습니다 [앞에서 설명한](#corecheck_per_file), 하지만 MSBuild 파일을 사용 합니다. 환경 변수를 사용 하 여 설정할 수 있습니다는 `BuildMacro` 항목:
 
 ```xml
 <ItemGroup>
