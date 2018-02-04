@@ -1,5 +1,6 @@
 # [Visual Studio 설명서](ide/index.md)
 # [개요](ide/visual-studio-ide.md)
+## [새로운 기능](ide/whats-new-in-visual-studio.md)
 # 설치
 ## [Visual Studio 설치](install/install-visual-studio.md)
 ## [Visual Studio에 로그인](ide/signing-in-to-visual-studio.md)
@@ -309,8 +310,7 @@
 #### [전역 Windows Forms 및 Web Forms을 위한 문화권 관련 클래스](ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)
 ### [양방향 언어용 응용 프로그램 만들기](ide/creating-applications-in-bi-directional-languages.md)
 # 참조
-## [새로운 기능](ide/whats-new-in-visual-studio.md)
-### 프로젝트 및 항목 템플릿
+## 프로젝트 및 항목 템플릿
 ### [템플릿 매개 변수](ide/template-parameters.md)
 ### [템플릿 스키마 참조(확장성)](extensibility/visual-studio-template-schema-reference.md?context=visualstudio/default)
 ## 일반 사용자 인터페이스 요소

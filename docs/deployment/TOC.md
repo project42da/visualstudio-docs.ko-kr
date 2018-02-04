@@ -24,7 +24,7 @@
 ## Node.js
 ### [웹 배포를 사용하여 Azure 웹 사이트에 게시](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy)
 ## Python
-### [Azure App Service에 게시](/visualstudio/python/publishing-to-azure)
+### [Azure App Service에 게시](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio)
 # 방법 가이드
 ## [ClickOnce 보안 및 배포](clickonce-security-and-deployment.md)
 ### [ClickOnce 배포 전략 선택](choosing-a-clickonce-deployment-strategy.md)
