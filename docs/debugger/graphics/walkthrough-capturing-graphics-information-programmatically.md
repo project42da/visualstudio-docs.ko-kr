@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a5a8aeec2421b92057ba414b5cf23b1770b1f761
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: bbce760956dda7c9399d25dd241df26ec0e59644
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>연습: 프로그래밍 방식으로 그래픽 정보 캡처
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 그래픽 진단을 사용하여 Direct3D 앱에서 그래픽 정보를 프로그래밍 방식으로 캡처할 수 있습니다.  
@@ -96,7 +96,7 @@ ms.lasthandoff: 02/01/2018
   
 ##### <a name="to-capture-graphics-information"></a>그래픽 정보를 캡처하려면  
   
--   그래픽 정보 캡처를 시작하려면 다음과 같이 `BeginCapture`를 사용합니다.  
+- 그래픽 정보 캡처를 시작하려면 다음과 같이 `BeginCapture`를 사용합니다.  
   
     ```  
     ...  
@@ -111,6 +111,8 @@ ms.lasthandoff: 02/01/2018
     pGraphicsAnalysis->EndCapture();  
     ...  
     ```  
+
+- 호출한 후 `EndCapture`, 그래픽 개체를 해제 합니다. 
   
 ## <a name="next-steps"></a>다음 단계  
  이 연습에서는 그래픽 정보를 프로그래밍 방식으로 캡처하는 방법을 보여주었습니다. 다음 단계로 아래 옵션을 고려해 보세요.  
