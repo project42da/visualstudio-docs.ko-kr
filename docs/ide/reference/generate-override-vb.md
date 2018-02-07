@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/17/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: b3c8cfc4-7c1f-4606-970e-3f7651604bab
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 334f5a79dad1b7d2c14768d0698797a34ad039c5
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/06/2018
 ---
 # <a name="generate-an-override-in-visual-basic"></a>Visual Basic에서 재정의 생성
 **대상:** 기본 클래스에서 재정의할 수 있는 메서드에 대한 코드를 즉시 생성할 수 있습니다. 

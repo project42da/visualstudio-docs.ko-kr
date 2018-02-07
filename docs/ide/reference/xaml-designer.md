@@ -4,23 +4,26 @@ ms.custom:
 ms.date: 03/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
-ms.topic: article
-f1_keywords: VS.ToolsOptionsPages.XAMLDesigner
-ms.assetid: ad3820b2-0d95-4807-a75c-c3467ed973a3
-caps.latest.revision: "1"
+ms.topic: reference
+f1_keywords:
+- VS.ToolsOptionsPages.XAMLDesigner
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 459642fde4d695317a453e223edd54f223569603
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- uwp
+ms.openlocfilehash: bf71bb6f2d52159ab203d14c690a73525af091ae
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="xaml-designer-options-page"></a>XAML 디자이너 옵션 페이지
+
 **XAML 디자이너** 옵션 페이지를 사용하여 XAML 문서에서 요소와 특성의 서식을 설정하는 방법을 지정합니다. 이 페이지를 열려면 **도구** 메뉴를 선택한 다음 **옵션**을 선택합니다. **XAML 디자이너** 속성 페이지에 액세스하려면 **XAML 디자이너** 노드를 선택합니다. XAML 디자이너에 대한 설정은 문서를 열 때 적용됩니다. 따라서 설정을 변경하는 경우 변경 내용을 보려면 Visual Studio를 닫았다가 다시 열어야 합니다.
 
 > [!NOTE]
@@ -100,7 +103,7 @@ ms.lasthandoff: 12/22/2017
 |**효과 렌더링**|Blend를 통해 XAML 디자이너에서 XAML 파일을 편집할 때 효과가 렌더링되는지 여부를 지정합니다.|  
 |**확대/축소 임계값**|**효과 렌더링** 확인란이 선택된 경우 효과가 렌더링되는 확대/축소 비율을 지정합니다. 이 설정을 초과하여 확대/축소하면 XAML 디자이너에서 효과가 더 이상 렌더링되지 않습니다.|  
 
-## <a name="see-also"></a>참고 항목  
- [WPF의 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)   
- [방법: XAML 뷰 설정 변경](http://msdn.microsoft.com/en-us/aee87c79-ca01-4f84-8fb7-a9e47048ee47)   
- [XAML 및 코드 연습](http://msdn.microsoft.com/en-us/b3ff41a0-a2a3-4f61-b698-ac88ec8f799c)
+## <a name="see-also"></a>참고 항목
+
+[WPF의 XAML](/dotnet/framework/wpf/advanced/xaml-in-wpf)  
+[연습: 내 첫 WPF 데스크톱 응용 프로그램](../../designers/walkthrough-my-first-wpf-desktop-application2.md)

@@ -2,7 +2,7 @@
 title: "Visual Studio에서 Python 작업, 3단계, 대화형 REPL 창 | Microsoft Docs"
 description: "Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 3단계입니다."
 ms.custom: 
-ms.date: 10/16/2017
+ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cdfcd81108437e611d7ba58f0a612b19931cc654
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: f251e49847655251de46d44a23ee1d4c1c9f0263
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>3단계: 대화형 REPL 창 사용
 
@@ -102,5 +102,5 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
 ### <a name="going-deeper"></a>자세히 알아보기
 
-- [대화형 창 사용](interactive-repl.md)
+- [대화형 창 사용](python-interactive-repl-in-visual-studio.md)
 - [IPython REPL 사용](interactive-repl-ipython.md)

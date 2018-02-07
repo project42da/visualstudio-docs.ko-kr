@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ef6b3bddfb90c64872de331c988f10595e179eb8
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 6ce191ce01a89b7fc743562eaf430656f6952271
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="step-6-working-with-git"></a>6단계: Git 작업
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 01/22/2018
 
 Visual Studio는 로컬 Git 리포지토리 및 GitHub 및 Visual Studio Team Services와 같은 서비스에 상주하는 것과의 직접 통합을 제공합니다. 통합은 리포지토리 복제, 변경 내용 커밋 및 분기 관리를 포함합니다.
 
-이 항목에서는 기존 프로젝트에 대한 로컬 Git 리포지토리 만들기를 설명합니다. 원격 Git 리포지토리에서 프로젝트를 만드는 연습은 [빠른 시작: Visual Studio에서 Python 코드의 리포지토리 복제](quickstart-03-project-from-repository.md)를 참조하세요.
+이 항목에서는 기존 프로젝트에 대한 로컬 Git 리포지토리 만들기를 설명합니다. 원격 Git 리포지토리에서 프로젝트를 만드는 연습은 [빠른 시작: Visual Studio에서 Python 코드의 리포지토리 복제](quickstart-03-python-in-visual-studio-project-from-repository.md)를 참조하세요.
 
 1. [이전 단계](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)의 프로젝트와 같은 Visual Studio에서 열린 프로젝트를 사용하여 솔루션을 마우스 오른쪽 단추로 클릭하고 **소스 제어에 솔루션 추가**를 선택합니다. Visual Studio는 프로젝트 코드를 포함하는 로컬 Git 리포지토리를 만들고 Visual Studio 창의 아래쪽을 따라 표시되는 Git 관련 컨트롤도 표시합니다. 컨트롤은 보류 중인 커밋, 변경 내용, 리포지토리의 이름 및 분기를 표시합니다. 추가 정보를 보려면 마우스로 컨트롤을 가리킵니다.
 
@@ -67,6 +67,6 @@ Visual Studio의 Python에 대한 이 자습서 완료를 축하합니다. 이 �
 여기에서 다음을 포함하여 개념 및 방법 가이드를 살펴봅니다.
 
 - [Python용 C++ 확장 만들기](working-with-c-cpp-python-in-visual-studio.md)
-- [Azure App Service에 게시](publishing-to-azure.md)
-- [프로파일링](profiling.md)
-- [유닛 테스트](unit-testing.md)
+- [Azure App Service에 게시](publishing-python-web-applications-to-azure-from-visual-studio.md)
+- [프로파일링](profiling-python-code-in-visual-studio.md)
+- [유닛 테스트](unit-testing-python-in-visual-studio.md)

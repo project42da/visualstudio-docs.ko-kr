@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8d0ef17900f515ff69f25c30fc797e4e3c9cc7a6
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: ef58c0eb177238075b0f1cd097f8949272538a75
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python용 C++ 확장 만들기
 
@@ -50,7 +50,7 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 
 1. **파일 > 새로 만들기 > 프로젝트**를 선택하여 Visual Studio에서 새 Python 프로젝트를 만듭니다. “Python”을 검색하고 **Python 응용 프로그램** 템플릿을 선택한 다음 적합한 이름과 위치를 지정하고 **확인**을 선택합니다.
 
-1. 프로젝트의 `.py` 파일에서 쌍곡 탄젠트 계산(더 쉬운 비교를 위해 수학 라이브러리를 사용하지 않고 구현됨)을 벤치마크하는 다음 코드를 붙여넣습니다. 언제든지 코드를 수동으로 입력하여 [Python 편집 기능](code-editing.md)의 일부를 경험해 보세요.
+1. 프로젝트의 `.py` 파일에서 쌍곡 탄젠트 계산(더 쉬운 비교를 위해 수학 라이브러리를 사용하지 않고 구현됨)을 벤치마크하는 다음 코드를 붙여넣습니다. 언제든지 코드를 수동으로 입력하여 [Python 편집 기능](editing-python-code-in-visual-studio.md)의 일부를 경험해 보세요.
 
     ```python
     from itertools import islice
@@ -289,7 +289,7 @@ Visual Studio는 디버깅 Python 및 C++ 코드를 함께 지원합니다.
 
     ![C++ 코드의 중단점에서 중지](media/cpp-debugging.png)
 
-1. 이때 C++ 코드를 단계별로 실행하고 변수를 검사하는 등의 작업을 수행할 수 있습니다. 이러한 기능은 [Python과 C++로 디버깅](debugging-mixed-mode.md)에 자세히 설명되어 있습니다.
+1. 이때 C++ 코드를 단계별로 실행하고 변수를 검사하는 등의 작업을 수행할 수 있습니다. 이러한 기능은 [Python과 C++로 디버깅](debugging-mixed-mode-c-cpp-python-in-visual-studio.md)에 자세히 설명되어 있습니다.
 
 ## <a name="alternative-approaches"></a>대체 방법
 

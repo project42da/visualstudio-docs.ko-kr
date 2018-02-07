@@ -34,7 +34,7 @@
 
     ![Python MNIST 프로그램의 첫 번째 출력](media\create-project-repo\tensorflow-mnist-running.png)
 
-> Anaconda를 사용하고 누락된 numpy에 대한 오류가 발생하는 경우 Python 환경을 변경해야 할 수 있습니다. [Anaconda를 사용하도록 Python 환경을 변경](https://docs.microsoft.com/visualstudio/python/python-environments)해야 할 수 있습니다. 
+> Anaconda를 사용하고 누락된 numpy에 대한 오류가 발생하는 경우 Python 환경을 변경해야 할 수 있습니다. [Anaconda를 사용하도록 Python 환경을 변경](../python/managing-python-environments-in-visual-studio.md)해야 할 수 있습니다.
 
 11. TensorBoard를 사용하여 진행률을 시각화할 수 있습니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **TensorBoard 실행**을 클릭한 다음 출력 TensorBoard 로그의 디렉터리를 선택합니다.
 

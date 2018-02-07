@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 564cc8b2-0084-420e-b560-200cc5621a7e
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9d53460304cee56d39100a82a2e1e975f8129aa6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 690eb875b0b9251dddcb36c4ad7ded17c36b67cb
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="options-page-debugging-node-properties"></a>옵션 페이지, 디버깅 노드 속성
 다음 표에서는 **옵션** 대화 상자의 **디버깅** 범주, `DTE.Properties("Debugging", <Property Page>)`와 연관된 일부 페이지(또는 속성 컬렉션)에 대해 설명합니다.  
@@ -39,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 |ShowAllMembers|Get/Set (Boolean)|사용자가 작성하지 않은 개체의 경우 디버거가 변수 창에 모든 개체 멤버를 표시할지 결정합니다. 내 코드만이 사용될 경우 이 옵션은 아무런 영향이 없습니다.|  
 |WarnIfNoUserCode|Get/Set (Boolean)|사용자가 사용자 코드가 없는 프로세스에 연결하려고 할 때 디버거가 경고를 내보낼지 결정합니다. 내 코드만이 사용될 경우 이 옵션은 아무런 영향이 없습니다.|  
 |EnablePropertyEvaluation|Get/Set (Boolean)|디버거가 관리 코드에서 자동으로 속성 및 암시적 함수 호출을 평가할지 결정합니다.|  
-|CallStringConversion|Get/Set (Boolean)|디버거가 변수 창에서 개체에 대한 문자열 변환 함수를 암시적으로 호출할지 결정합니다. 이 옵션은 C# 및 JScript 코드에만 적용됩니다.|  
+|CallStringConversion|Get/Set (Boolean)|디버거가 변수 창에서 개체에 대한 문자열 변환 함수를 암시적으로 호출할지 결정합니다.|  
 |EnableSourceServer|Get/Set (Boolean)|디버거가 소스 서버에서 코드에 액세스할 수 있는지 결정합니다.|  
 |PrintSourceServerDiagnostics|Get/Set (Boolean)|[출력] 창에 소스 서버에 관련된 진단 메시지를 표시할지 결정합니다. 소스 서버 액세스가 사용하도록 설정되지 않으면 이 옵션은 아무런 영향이 없습니다.|  
 |HighlightEntireLine|Get/Set (Boolean)|디버거가 중단점 및 현재 문의 의 전체 줄을 강조 표시할지 결정합니다.|  

@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 146e3f80de674e6219d1f7c89ea4186b66ee310f
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 0b0195770bde2906ac34f0f4b8a5faf684130899
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="python-environments"></a>Python 환경
 
@@ -123,7 +123,7 @@ Visual Studio에서 인터프리터를 찾지 못하는 경우(예: 비표준 �
 | --- | --- |
 | 이 환경을 새 프로젝트에 대한 기본값으로 설정 | 활성 환경을 설정합니다. 이 경우 IntelliSense 데이터베이스가 로드되는 동안 Visual Studio가 잠시 응답하지 않을 수 있습니다. 많은 패키지가 있는 환경에서는 더 오랫동안 응답하지 않을 수 있습니다. |
 | 배포자 웹 사이트 방문 | Python 배포에서 제공된 URL로 브라우저를 엽니다. 예를 들어 Python 3.x는 python.org로 이동합니다. |
-| 대화형 창 열기 | Visual Studio 내에서 이 환경에 대한 [대화형(REPL) 창](interactive-repl.md)을 열고 [시작 스크립트(아래 참조)](#startup-scripts)를 적용합니다. |
+| 대화형 창 열기 | Visual Studio 내에서 이 환경에 대한 [대화형(REPL) 창](python-interactive-repl-in-visual-studio.md)을 열고 [시작 스크립트(아래 참조)](#startup-scripts)를 적용합니다. |
 | 대화형 스크립트 탐색 | [시작 스크립트](#startup-scripts)를 참조하세요. |
 | IPython 대화형 모드 사용 | 설정하면 기본적으로 IPython을 사용하여 대화형 창을 엽니다. 여기서 인라인 플롯과 확장된 IPython 구문을 사용할 수 있습니다. 예를 들어 도움말을 보려면 `name?`를 사용하고, 셸 명령을 실행하려면 `!command`를 사용합니다. 이 옵션은 추가 패키지를 요구하는 Anaconda 배포를 사용할 때 권장됩니다. 자세한 내용은 [대화형 창에서 IPython 사용](interactive-repl-ipython.md)을 참조하세요. |
 | PowerShell에서 열기 | PowerShell 명령 창에서 인터프리터를 시작합니다. |
@@ -137,7 +137,7 @@ Visual Studio에서 인터프리터를 찾지 못하는 경우(예: 비표준 �
 
 1. 환경을 설치할 때 Visual Studio는 `Documents\Visual Studio 2017\Python Scripts\<environment>` 폴더를 만듭니다. 여기서 &lt;environment&gt'는 환경 이름과 일치합니다. **대화형 스크립트 탐색** 명령을 사용하여 환경 관련 폴더를 쉽게 탐색할 수 있습니다. 해당 환경에 대한 대화형 창을 시작하면 여기서 발견된 `.py` 파일이 사전순으로 로드 및 실행됩니다.
 
-1. **도구 > 옵션 > Python 도구 > 대화형 Windows** 탭([대화형 windows 옵션](options.md#interactive-windows-options) 참조)에 있는 **스크립트** 컨트롤은 모든 환경에서 로드 및 실행되는 시작 스크립트에 대한 추가 폴더를 지정하기 위한 것입니다. 그러나 이 기능은 현재 작동하지 않습니다.
+1. **도구 > 옵션 > Python 도구 > 대화형 Windows** 탭([대화형 windows 옵션](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options) 참조)에 있는 **스크립트** 컨트롤은 모든 환경에서 로드 및 실행되는 시작 스크립트에 대한 추가 폴더를 지정하기 위한 것입니다. 그러나 이 기능은 현재 작동하지 않습니다.
 
 ### <a name="configure-tab"></a>구성 탭
 
@@ -172,7 +172,7 @@ Visual Studio에서 인터프리터를 찾지 못하는 경우(예: 비표준 �
 
 **패키지를 설치하거나 제거할 때 항상 권한 상승**을 선택하면 해당 환경에 대해 대화 상자가 표시되지 않습니다. 대화 상자를 다시 표시하려면 **도구 > 옵션 > Python 도구 > 일반**으로 이동한 다음 **영구적으로 숨겨진 모든 대화 상자 다시 설정** 단추를 선택합니다.
 
-동일한 옵션 탭에서 **항상 관리자로 pip 실행**을 선택하여 모든 환경에 대해 대화 상자를 표시하지 않을 수도 있습니다. [옵션 - 일반 탭](options.md#general-options)을 참조하세요.
+동일한 옵션 탭에서 **항상 관리자로 pip 실행**을 선택하여 모든 환경에 대해 대화 상자를 표시하지 않을 수도 있습니다. [옵션 - 일반 탭](python-support-options-and-settings-in-visual-studio.md#general-options)을 참조하세요.
 
 ### <a name="intellisense-tab"></a>IntelliSense 탭
 
@@ -232,7 +232,7 @@ IntelliSense 완성 데이터베이스의 현재 상태를 보여 줍니다.
 
 ## <a name="managing-required-packages-requirementstxt"></a>필수 패키지(requirements.txt) 관리
 
-빌드 시스템을 사용하여 다른 사람과 프로젝트를 공유하거나 [Microsoft Azure에 게시](template-azure-cloud-service.md)할 계획인 경우 프로젝트에 필요한 외부 패키지를 지정해야 합니다. 권장되는 방법은 필요한 종속 패키지 버전을 설치하는 pip 명령 목록이 들어 있는 [requirements.txt 파일](http://pip.readthedocs.org/en/latest/user_guide.html#requirements-files)(readthedocs.org)을 사용하는 것입니다.
+빌드 시스템을 사용하여 다른 사람과 프로젝트를 공유하거나 [Microsoft Azure에 게시](python-azure-cloud-service-project-template.md)할 계획인 경우 프로젝트에 필요한 외부 패키지를 지정해야 합니다. 권장되는 방법은 필요한 종속 패키지 버전을 설치하는 pip 명령 목록이 들어 있는 [requirements.txt 파일](http://pip.readthedocs.org/en/latest/user_guide.html#requirements-files)(readthedocs.org)을 사용하는 것입니다.
 
 기술적으로, 파일 이름을 사용하여 요구 사항을 추적할 수 있으나(패키지 설치 시 `-r <full path to file>` 사용) Visual Studio에서 `requirements.txt`에 대한 구체적인 지원을 제공합니다.
 

@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/17/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 1490d6ac-ed56-4d03-95db-c23f23cba70d
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: abc0ef3ffdbada86a66bac9823894ee83d04047f
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/06/2018
 ---
 # <a name="introduce-a-local-variable-in-visual-basic"></a>Visual Basic에서 지역 변수 소개
 **대상:** 기존 식을 대체할 지역 변수를 즉시 생성할 수 있습니다.

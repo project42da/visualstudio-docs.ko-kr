@@ -10,12 +10,13 @@ ms.topic: article
 ms.technology: visual studio
 ms.devlang: multiple
 ms.service: multiple
-ms.workload: multiple
-ms.openlocfilehash: 55524900d59bf3631d724e2cb142e649bf82c839
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: db07adc39f807b4dfc938ddf599bd7f83378f475
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installation"></a>설치
 
@@ -117,7 +118,7 @@ Python은 심층 학습 응용 프로그램의 기본 프로그래밍 언어입�
 ### <a name="python-on-visual-studio"></a>Visual Studio의 Python 
 
 Python은 확장을 통해 Visual Studio에서 완전히 지원됩니다.
-자세한 내용은 [Python for Visual Studio Tools](https://docs.microsoft.com/visualstudio/python/installation) 설치를 참조하세요.
+자세한 내용은 [Python for Visual Studio Tools](../python/installing-python-support-in-visual-studio.md) 설치를 참조하세요.
 
 ### <a name="numpy-and-scipy"></a>NumPy 및 SciPy
 

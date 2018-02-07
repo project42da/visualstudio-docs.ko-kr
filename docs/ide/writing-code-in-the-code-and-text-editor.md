@@ -5,12 +5,7 @@ ms.date: 09/27/2017
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs:
-- JScript
-- VB
-- CSharp
 helpviewer_keywords:
 - code, editing [Visual Studio]
 - code editor [Visual Studio]
@@ -19,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: abde071bd67ab3f6a65891d347b9214f6dd5257b
-ms.sourcegitcommit: 94162a6b0440312cd71bc0c512daef9f122550f3
+ms.openlocfilehash: 5847c97f3fddea65b00c35a5a0f4d5665329ae7e
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/18/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="write-code-in-the-code-editor"></a>코드 편집기에서 코드 작성
 
@@ -68,7 +63,6 @@ Visual Studio 편집기에서는 코드 및 텍스트를 더 쉽게 작성 및 �
 |소문자로|선택 영역의 모든 문자를 소문자로 변경하거나, 선택 영역이 없으면 삽입 지점의 문자를 소문자로 변경합니다.|
 |선택한 줄 위로 이동|선택한 줄을 한 줄 위로 이동합니다. 바로 가기: Alt+위쪽 화살표|
 |선택한 줄 아래로 이동|선택한 줄을 한 줄 아래로 이동합니다. 바로 가기: Alt+아래쪽 화살표|
-|문서 유효성 검사|JScript 코드 파일의 유효성을 검사합니다.|
 |가로 공백 삭제|현재 줄의 끝에 있는 탭이나 공백을 삭제합니다.|
 |공백 보기|공백을 두껍게 올라온 점으로 표시하고 탭을 화살표로 표시합니다. 파일 끝은 사각형 문자 모양으로 표시됩니다. **도구/옵션/텍스트 편집기/모든 언어/지동 줄 바꿈/자동 줄 바꿈 시각 문자 모양 표시** 를 선택하면 해당 문자 모양도 표시됩니다.|
 |자동 줄 바꿈|문서의 모든 줄이 코드 창에 표시됩니다. 텍스트 편집기 모든 언어 설정(**도구/옵션/텍스트 편집기/모든 언어**)에서 자동 줄 바꿈을 설정 및 해제할 수 있습니다.|

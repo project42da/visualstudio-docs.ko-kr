@@ -5,7 +5,8 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-javascript
+ms.technology:
+- devlang-javascript
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - bind method [JavaScript]
 - this object [JavaScript]
 ms.assetid: f608f95b-3b9d-437a-a67a-5a4ef8f6c07f
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 8c49f6e8c5606845f41cc947029ac9405f97665f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d185801cc5bba355751147edb79b9c47d21f8eed
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="using-the-bind-method-javascript"></a>bind 메서드 사용(JavaScript)
 JavaScript `bind` 메서드는 여러 가지 용도가 있습니다. 일반적으로 이 메서드는 다른 컨텍스트에서 실행되는 함수에 대한 실행 컨텍스트를 유지하는 데 사용됩니다. `bind`는 원본 함수와 동일한 본문을 갖는 새 함수를 만듭니다. `bind`로 전달되는 첫 번째 인수는 바인딩된 함수에서 `this` 키워드의 값을 지정합니다. 또한, 추가로 선택적 인수를 `bind`로 전달할 수 있습니다. 다른 사용 예는 [bind 메서드(함수)](../../javascript/reference/bind-method-function-javascript.md)를 참조하세요. `bind`를 사용하여 함수를 부분적으로 적용하는 예제는 [Hilo JavaScript(Windows 스토어)의 비동기 프로그래밍 패턴 및 팁](http://msdn.microsoft.com/library/windows/apps/jj649740.aspx)을 참조하세요.  
@@ -59,8 +60,7 @@ function dataReadyHandler() {
 setTimeout(function () {  
     data = [0, 1, 2, 3];  
     document.dispatchEvent(dataReadyEvent);  
-    }, 5000);  
-}  
+    }, 5000);
   
 var dataObj = new DataObject();  
   
@@ -70,7 +70,7 @@ var dataObj = new DataObject();
   
 ```  
   
- `bind`를 사용하는 코드 줄을 주석으로 처리하고 `addEventListener`를 사용하지 않고 `bind`를 호출하는 코드 줄을 주석 처리 제거한 다음 코드를 다시 실행하면, `dataReadyHandler` 함수가 실패합니다. 예를 들어, `dataReadyHander`에서 `this.name`이 정의되지 않고, `this.data()` 개체가 더 이상 데이터 개체를 참조하지 않기 때문에 `this`에서 오류가 발생합니다.  
+ `bind`를 사용하는 코드 줄을 주석으로 처리하고 `addEventListener`를 사용하지 않고 `bind`를 호출하는 코드 줄을 주석 처리 제거한 다음 코드를 다시 실행하면, `dataReadyHandler` 함수가 실패합니다. 예를 들어, `dataReadyHandler`에서 `this.name`이 정의되지 않고, `this.data()` 개체가 더 이상 데이터 개체를 참조하지 않기 때문에 `this`에서 오류가 발생합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [bind 메서드(Function)](../../javascript/reference/bind-method-function-javascript.md)
