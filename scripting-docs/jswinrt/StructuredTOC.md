@@ -1,7 +1,0 @@
-# [JavaScript에서 Windows 런타임 사용](using-the-windows-runtime-in-javascript.md)
-## [Windows 런타임 API를 사용할 때의 고려 사항](considerations-when-using-the-windows-runtime-api.md)
-## [Windows 런타임 비동기 메서드 사용](using-windows-runtime-asynchronous-methods.md)
-### [비동기 Windows 런타임 메서드의 특수한 오류 속성](special-error-properties-from-asynchronous-windows-runtime-methods.md)
-## [JavaScript에서 Windows 런타임 이벤트 처리](handling-windows-runtime-events-in-javascript.md)
-## [Windows 런타임 형식의 JavaScript 표현](javascript-representation-of-windows-runtime-types.md)
-## [Windows 런타임 DateTime 및 TimeSpan 표현](windows-runtime-datetime-and-timespan-representations.md)
