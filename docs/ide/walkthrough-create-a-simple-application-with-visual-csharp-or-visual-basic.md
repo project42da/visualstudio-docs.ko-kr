@@ -1,5 +1,5 @@
 ---
-title: "연습: Visual C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기 | Microsoft 문서"
+title: "연습: C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기 | Microsoft Docs"
 ms.custom: 
 ms.date: 10/03/2017
 ms.reviewer: 
@@ -11,18 +11,19 @@ dev_langs:
 - VB
 - CSharp
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 3490d9d4f88bbcc104132e35c3f86d3fe75622b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: b33816e074cf63826c931bcda0978ebdb5bb8bbe
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="walkthrough-create-a-simple-application-with-visual-c-or-visual-basic"></a>연습: Visual C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기
+# <a name="walkthrough-create-a-simple-application-with-c-or-visual-basic"></a>연습: C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기
 이 연습을 완료하면 Visual Studio를 사용하여 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구, 대화 상자 및 디자이너에 익숙해집니다. IDE(통합 개발 환경)의 작업에 대해 배우면서 간단한 “Hello, World” 응용 프로그램을 만들고, UI를 디자인하고, 코드를 추가하고, 오류를 디버그하게 됩니다.
   
 ##  <a name="BKMK_ConfigureIDE"></a> IDE 구성  

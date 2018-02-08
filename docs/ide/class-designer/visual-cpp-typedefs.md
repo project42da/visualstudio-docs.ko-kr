@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.classdesigner.typedef
 - vs.classdesigner.aliasofline
-helpviewer_keywords: Class Designer [Visual Studio], typedefs
+helpviewer_keywords:
+- Class Designer [Visual Studio], typedefs
 ms.assetid: c1984108-71fc-4d3a-b4d4-3eac2c6b4ebf
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 63bd8657d62a05edb1c9772776ca1216a0eee5ee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 96d7e8cee6ce024040184aca50b5f5cb6facf388
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>클래스 디자이너의 Visual C++ 형식 정의
 Typedef 문은 이름과 기본 형식 간에 하나 이상의 간접 참조 레이어를 만듭니다. 클래스 디자이너는 `typedef` 키워드로 선언된 C++ typedef 형식을 지원합니다. 예:  
@@ -48,10 +51,10 @@ typedef class coord
    unsigned x;  
    unsigned y;  
 };  
-```  
-  
-`typedef` 형식을 사용하는 방법에 대한 자세한 내용은 [typedef 지정자](https://msdn.microsoft.com/en-us/library/05w82thz.aspx)를 참조하세요.  
-  
+```
+
+`typedef` 형식을 사용하는 방법에 대한 자세한 내용은 [Typedefs](/cpp/aliases-and-typedefs-cpp#typedefs)를 참조하세요.
+
 C++ typedef 도형은 typedef에 지정된 형식의 도형입니다. 예를 들어 소스에서 `typedef class`를 선언하는 경우 도형에 둥근 모서리와 **클래스** 레이블이 있습니다. `typedef struct`의 경우 도형에 사각형 모서리와 **구조체** 레이블이 있습니다.  
   
 클래스와 구조체 내부에서 중첩된 typedef가 선언될 수 있으므로 클래스 및 구조체 도형에 중첩된 typedef 선언이 중첩된 도형으로 표시될 수 있습니다.  
@@ -201,5 +204,6 @@ class A {
 -> MyIntVect  
   
 ## <a name="see-also"></a>참고 항목
-[Visual C++ 코드 작업](working-with-visual-cpp-code.md)   
-[typedef 지정자](https://msdn.microsoft.com/en-us/library/05w82thz.aspx)
+
+[Visual C++ 코드 작업](working-with-visual-cpp-code.md)  
+[Typedefs](/cpp/aliases-and-typedefs-cpp#typedefs)

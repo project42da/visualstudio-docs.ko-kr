@@ -10,24 +10,26 @@ ms.topic: article
 helpviewer_keywords:
 - coded UI tests, multiple UI maps
 - coded UI tests, for large applications
+author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-author: gewarren
-ms.openlocfilehash: ca9114dfe601f523878749593a213b36465bd0a7
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- multiple
+ms.openlocfilehash: c2eff9fc8e8aedecb1fd9b99538fa600dbcc5eb1
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="testing-a-large-application-with-multiple-ui-maps"></a>여러 UI 맵이 포함된 대형 응용 프로그램 테스트
+
 이 항목에서는 여러 UI 맵을 사용하여 대규모 응용 프로그램을 테스트하는 경우 코딩된 UI 테스트를 사용하는 방법에 대해 설명합니다.  
   
  **요구 사항**  
   
 -   Visual Studio Enterprise  
   
- 새로 코딩된 UI 테스트를 만들면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 테스트 프레임워크에서는 기본적으로 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스에 테스트 코드를 생성합니다. 코딩된 UI 테스트를 기록하는 방법에 대한 자세한 내용은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) 및 [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)을 참조하세요.  
+ 새로 코딩된 UI 테스트를 만들면 Visual Studio 테스트 프레임워크에서는 기본적으로 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스에 테스트 코드를 생성합니다. 코딩된 UI 테스트를 기록하는 방법에 대한 자세한 내용은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md) 및 [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)을 참조하세요.  
   
  UI 맵에 대해 생성된 코드에는 테스트가 상호 작용하는 각 개체에 대한 클래스가 들어 있습니다. 특히 각각 생성된 메서드의 경우 메서드 매개 변수의 도우미 클래스가 특별히 해당 메서드를 위해 생성됩니다. 응용 프로그램에 개체, 페이지, 폼 및 컨트롤이 매우 많으면 UI 맵이 매우 커질 수 있습니다. 또한 테스트 작업을 하는 사람이 여러 명인 경우 하나의 큰 UI 맵 파일로 응용 프로그램을 통제하기 힘들어집니다.  
   
@@ -67,24 +69,25 @@ ms.lasthandoff: 01/09/2018
   
 4.  **추가**를 선택합니다.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 창이 최소화되고 **코딩된 UI 테스트 빌더** 대화 상자가 표시됩니다.  
+     Visual Studio 창이 최소화되고 **코딩된 UI 테스트 빌더** 대화 상자가 표시됩니다.  
   
 5.  첫 번째 메서드에 대한 작업을 기록하고 **코드 생성**을 선택합니다.  
   
 6.  첫 번째 구성 요소 또는 페이지에 대한 모든 작업 및 어설션을 기록한 다음, 메서드로 그룹화한 후 **코딩된 UI 테스트 빌더** 대화 상자를 닫습니다.  
   
 7.  계속해서 UI 맵을 만듭니다. 작업 및 어설션을 기록한 다음 각 구성 요소의 메서드로 그룹화한 후 코드를 생성합니다.  
-  
- 대부분 모든 마법사, 폼 및 페이지의 경우 응용 프로그램의 최상위 창은 일정하게 남아 있습니다. 각 UI 맵에 최상위 창에 대한 클래스가 있더라도 모든 맵은 아마도 응용 프로그램의 모든 구성 요소가 실행되는 동일한 최상위 창을 참조할 것입니다. 코딩된 UI 테스트는 최상위 창에서 시작하여 위에서 아래로 계층적으로 컨트롤을 검색합니다. 따라서 복잡한 응용 프로그램에서는 실제 최상위 창이 모든 UI 맵에 중복되어 있을 수 있습니다. 실제 최상위 창이 중복된 경우 해당 창이 변경되면 여러 가지 수정 사항이 발생합니다. 이로 인해 UI 맵 간에 전환 시 성능 문제가 발생할 수 있습니다.  
-  
- 이러한 영향을 최소화하려면 `CopyFrom()` 메서드를 사용하여 해당 UI 맵의 새 최상위 창이 주 최상위 창과 동일한지 확인할 수 있습니다.  
-  
-## <a name="example"></a>예  
- 다음 예는 다양한 UI 맵에서 생성된 클래스로 표현되는 각 구성 요소 및 해당 자식 컨트롤에 액세스할 수 있는 유틸리티 클래스의 일부입니다.  
-  
- 이 예제에서는 `Contoso`라는 웹 응용 프로그램에 홈 페이지, 제품 페이지 및 쇼핑 카트 페이지가 있습니다. 이러한 각 페이지는 브라우저 창인 공통 최상위 창을 공유합니다. 각 페이지에 대한 UI 맵이 있으며 유틸리티 클래스에는 다음과 유사한 코드가 있습니다.  
-  
-```  
+
+ 대부분 모든 마법사, 폼 및 페이지의 경우 응용 프로그램의 최상위 창은 일정하게 남아 있습니다. 각 UI 맵에 최상위 창에 대한 클래스가 있더라도 모든 맵은 아마도 응용 프로그램의 모든 구성 요소가 실행되는 동일한 최상위 창을 참조할 것입니다. 코딩된 UI 테스트는 최상위 창에서 시작하여 위에서 아래로 계층적으로 컨트롤을 검색합니다. 따라서 복잡한 응용 프로그램에서는 실제 최상위 창이 모든 UI 맵에 중복되어 있을 수 있습니다. 실제 최상위 창이 중복된 경우 해당 창이 변경되면 여러 가지 수정 사항이 발생합니다. 이로 인해 UI 맵 간에 전환 시 성능 문제가 발생할 수 있습니다.
+
+ 이러한 영향을 최소화하려면 `CopyFrom()` 메서드를 사용하여 해당 UI 맵의 새 최상위 창이 주 최상위 창과 동일한지 확인할 수 있습니다.
+
+## <a name="example"></a>예
+
+다음 예는 다양한 UI 맵에서 생성된 클래스로 표현되는 각 구성 요소 및 해당 자식 컨트롤에 액세스할 수 있는 유틸리티 클래스의 일부입니다.
+
+이 예제에서는 `Contoso`라는 웹 응용 프로그램에 홈페이지, 제품 페이지 및 쇼핑 카트 페이지가 있습니다. 이러한 각 페이지는 브라우저 창인 공통 최상위 창을 공유합니다. 각 페이지에 대한 UI 맵이 있으며 유틸리티 클래스에는 다음과 유사한 코드가 있습니다.
+
+```csharp
 using ContosoProject.UIMaps;  
 using ContosoProject.UIMaps.HomePageClasses;  
 using ContosoProject.UIMaps.ProductPageClasses;  
@@ -135,12 +138,13 @@ namespace ContosoProject
     // Continue to create properties for each page, getting the   
     // page object from the corresponding UI Map and copying the   
     // top level window properties from the Home Page.  
-}  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>   
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)
+}
+```
+
+## <a name="see-also"></a>참고 항목
+
+<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>  
+<xref:Microsoft.VisualStudio.TestTools.UITesting.BrowserWindow.CopyFrom%2A>  
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)  
+[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)  
+[코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)

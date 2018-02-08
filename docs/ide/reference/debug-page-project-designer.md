@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vb.ProjectPropertiesDebug
+f1_keywords:
+- vb.ProjectPropertiesDebug
 helpviewer_keywords:
 - Project Designer, Debug page
 - Debug page in Project Designer
 ms.assetid: ef11eae9-df96-4e20-aabd-2678ba317140
-caps.latest.revision: "32"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a16f39d9f9ba6c3e0790a53c85d0824178083953
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 305f5160ab91fdfa61e9133ab9f867194e4a117f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="debug-page-project-designer"></a>프로젝트 디자이너, 디버그 페이지
 > [!WARNING]
@@ -29,16 +32,16 @@ ms.lasthandoff: 12/22/2017
   
  **프로젝트 디자이너**의 **디버그** 페이지를 사용하여 Visual Basic 또는 C# 프로젝트에서 디버깅 동작의 속성을 설정합니다.  
   
- **디버그** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드를 선택합니다. **프로젝트** 메뉴에서 *ProjectName***속성**을 클릭합니다. **프로젝트 디자이너**가 나타나면 **디버그** 탭을 클릭합니다.  
+ **디버그** 페이지에 액세스하려면 **솔루션 탐색기**에서 프로젝트 노드를 선택합니다. **프로젝트** 메뉴에서 *ProjectName***속성**을 선택합니다. **프로젝트 디자이너**가 나타나면 **디버그** 탭을 클릭합니다.  
   
 ## <a name="configuration-and-platform"></a>구성 및 플랫폼  
  다음 옵션을 사용하면 표시하거나 수정할 구성 및 플랫폼을 선택할 수 있습니다.  
   
  **구성**  
- 표시하거나 수정할 구성 설정을 지정합니다. 설정에는 **디버그**(기본값), **릴리스** 또는 **모든 구성**이 포함됩니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+ 표시하거나 수정할 구성 설정을 지정합니다. 설정에는 **디버그**(기본값), **릴리스** 또는 **모든 구성**이 포함됩니다.
   
  **플랫폼**  
- 표시하거나 수정할 플랫폼 설정을 지정합니다. 선택 항목에는 **CPU**(기본값), **x64** 및 **x86**이 포함됩니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+ 표시하거나 수정할 플랫폼 설정을 지정합니다. 선택 항목에는 **CPU**(기본값), **x64** 및 **x86**이 포함됩니다.
   
 ## <a name="start-action"></a>시작 작업  
  **시작 작업**은. 프로젝트, 사용자 지정 프로그램, URL 등 응용 프로그램을 디버깅할 때 시작할 항목을 나타냅니다. 기본적으로 이 옵션은 **프로젝트 시작**으로 설정되어 있습니다. **디버그** 페이지의 **시작 작업** 설정은 `StartAction` 속성의 값을 결정합니다.  
@@ -74,10 +77,10 @@ ms.lasthandoff: 12/22/2017
   
  보안 영역을 디버그하려면 [고급 보안 설정 대화 상자](../../ide/reference/advanced-security-settings-dialog-box.md)에서 이 옵션 및 **선택한 사용 권한 집합으로 이 응용 프로그램 디버깅**을 사용해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](../../debugger/debugging-in-visual-studio.md)   
- [C# 디버그 구성을 위한 프로젝트 설정](../../debugger/project-settings-for-csharp-debug-configurations.md)   
- [Visual Basic 디버그 구성을 위한 프로젝트 설정](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)   
- [디버깅 속성 관리](http://msdn.microsoft.com/en-us/92474d16-e7fe-4fac-9287-6bd6b3a7eb68)   
- [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)   
- [방법: 구성 만들기 및 편집](../../ide/how-to-create-and-edit-configurations.md)
+## <a name="see-also"></a>참고 항목
+
+[Visual Studio의 디버깅](../../debugger/debugging-in-visual-studio.md)  
+[C# 디버그 구성에 대한 프로젝트 설정](../../debugger/project-settings-for-csharp-debug-configurations.md)  
+[Visual Basic 디버그 구성에 대한 프로젝트 설정](../../debugger/project-settings-for-a-visual-basic-debug-configuration.md)  
+[방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](../../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)  
+[방법: 구성 만들기 및 편집](../../ide/how-to-create-and-edit-configurations.md)

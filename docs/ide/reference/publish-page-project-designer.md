@@ -4,22 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.PropertyPage
+f1_keywords:
+- Microsoft.VisualStudio.Publish.ClickOnceProvider.Dialog.PropertyPage
 helpviewer_keywords:
 - Project Designer, Publish page
 - Publish page in Project Designer
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cbe2be8ec1012295f84fbbec4cc0f614fd86d8d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: a3eee4abda5783707231332022e1f3f24728e7cc
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="publish-page-project-designer"></a>프로젝트 디자이너, 게시 페이지
 **프로젝트 디자이너** 의 **게시** 페이지를 통해 ClickOnce 배포를 위한 속성을 구성합니다.  
@@ -44,16 +47,16 @@ ms.lasthandoff: 12/22/2017
  WPF 웹 브라우저 응용 프로그램의 경우 온라인으로만 사용 가능하므로, **오프라인으로도 응용 프로그램 사용 가능** 옵션을 사용할 수 없습니다.  
   
  **응용 프로그램 파일**  
- 개별 파일을 어디에 어떻게 설치할지를 지정하는 데 사용되는 [Application Files Dialog Box](http://msdn.microsoft.com/en-us/b06dff3a-b87a-4caf-996b-7a4acf8137a8)를 엽니다.  
+ 개별 파일을 어디에 어떻게 설치할지를 지정하는 데 사용되는 [응용 프로그램 파일] 대화 상자를 엽니다.  
   
  **필수 구성 요소**  
- .NET Framework 같은 필수 구성 요소를 응용 프로그램과 함께 설치하도록 지정하는 데 사용되는 [Prerequisites Dialog Box](../../ide/reference/prerequisites-dialog-box.md)를 엽니다.  
+ .NET Framework 같은 필수 구성 요소를 응용 프로그램과 함께 설치하도록 지정하는 데 사용되는 [필수 구성 요소] 대화 상자를 엽니다.  
   
  **Updates**  
- 응용 프로그램의 업데이트 동작을 지정하는 데 사용되는 [Application Updates Dialog Box](http://msdn.microsoft.com/en-us/8eca8743-8e68-4d04-bfd5-4dc0a9b2934f)를 엽니다. **온라인으로만 응용 프로그램 사용 가능** 을 선택한 경우 사용할 수 없습니다.  
+ 응용 프로그램의 업데이트 동작을 지정하는 데 사용되는 [응용 프로그램 업데이트] 대화 상자를 엽니다. **온라인으로만 응용 프로그램 사용 가능** 을 선택한 경우 사용할 수 없습니다.  
   
  **옵션**  
- 추가 고급 게시 옵션을 지정하는 데 사용되는 [Publish Options Dialog Box](http://msdn.microsoft.com/en-us/fd9baa1b-7311-4f9e-8ffb-ae50cf110592)를 엽니다.  
+ 추가 고급 게시 옵션을 지정하는 데 사용되는 [게시 옵션] 대화 상자를 엽니다.  
   
  **게시 버전**  
  응용 프로그램의 게시 버전 번호를 설정합니다. 버전 번호가 변경되면 응용 프로그램이 업데이트로 게시됩니다. 게시 버전의 각 부분(**주**, **부**, **빌드**, **수정**)에 사용할 수 있는 최대 값은 65355입니다(<xref:System.UInt16.MaxValue>). 이는 <xref:System.Version>에서 허용하는 최대 값입니다.  
@@ -64,7 +67,7 @@ ms.lasthandoff: 12/22/2017
  선택 사항입니다. 이 옵션이 선택된 경우(기본값), 응용 프로그램을 게시할 때마다 게시 버전 번호의 **수정** 부분이 1씩 증가합니다. 그러면 응용 프로그램이 업데이트로 게시됩니다.  
   
  **게시 마법사**  
- [Publish Wizard](http://msdn.microsoft.com/en-us/fc6abebd-13d6-48e4-a567-fbc52dad0872)를 엽니다. 게시 마법사를 완료하는 것은 **빌드** 메뉴의 **게시** 명령을 실행하는 것과 효과가 동일합니다.  
+ 게시 마법사를 엽니다. 게시 마법사를 완료하는 것은 **빌드** 메뉴의 **게시** 명령을 실행하는 것과 효과가 동일합니다.  
   
  **지금 게시**  
  현재 설정을 사용하여 응용 프로그램을 게시합니다. **PublishWizard**에서 **마침** 단추와 동일합니다.  

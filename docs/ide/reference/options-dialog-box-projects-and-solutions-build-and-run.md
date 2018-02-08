@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 07/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -15,23 +16,24 @@ helpviewer_keywords:
 - run actions
 - debugger, run options
 ms.assetid: c884976e-c0df-4c6d-8e3a-856ea2bd547c
-caps.latest.revision: "20"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0187b8a70fc012fc6d2564f77ea5a2b2ff7c20d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 88f3ec2d9e8c682511c87cbcf5a5690ae797d8c7
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="options-dialog-box--projects-and-solutions-build-and-run"></a>옵션 대화 상자, 프로젝트 및 솔루션, 빌드 및 실행
 
-이 대화 상자에서 동시에 빌드할 수 있는 Visual C++ 또는 Visual C# 프로젝트의 최대 개수, 특정 기본 빌드 동작 및 일부 빌드 로그 설정을 지정할 수 있습니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **빌드 및 실행**을 선택합니다.
+이 대화 상자에서 동시에 빌드할 수 있는 Visual C++ 또는 C# 프로젝트의 최대 개수, 특정 기본 빌드 동작 및 일부 빌드 로그 설정을 지정할 수 있습니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **빌드 및 실행**을 선택합니다.
   
 **최대 병렬 프로젝트 빌드 수**  
-동시에 빌드할 수 있는 Visual C++ 및 Visual C# 프로젝트의 최대 개수를 지정합니다. 빌드 프로세스를 최적화하기 위해 최대 병렬 프로젝트 빌드 수는 자동으로 컴퓨터의 CPU 수로 설정됩니다. 최대값은 32입니다.  
+동시에 빌드할 수 있는 Visual C++ 및 C# 프로젝트의 최대 개수를 지정합니다. 빌드 프로세스를 최적화하기 위해 최대 병렬 프로젝트 빌드 수는 자동으로 컴퓨터의 CPU 수로 설정됩니다. 최대값은 32입니다.  
 
 **실행할 때 시작 프로젝트와 종속성만 빌드**  
 F5 키를 사용하고 **디버그 > 시작** 메뉴 명령 또는 **빌드** 메뉴의 해당 명령을 선택할 때 시작 프로젝트와 종속성만 빌드합니다. 선택하지 않으면 모든 프로젝트와 종속성이 빌드됩니다. 

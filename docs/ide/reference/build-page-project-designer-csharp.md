@@ -4,24 +4,27 @@ ms.custom:
 ms.date: 06/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: cs.ProjectPropertiesBuild
+f1_keywords:
+- cs.ProjectPropertiesBuild
 helpviewer_keywords:
 - Build options [C#]
 - Project Designer, Build page
 ms.assetid: 77ff1bfc-d633-4634-ba29-9afdb6d7e362
-caps.latest.revision: "43"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: bc470eb36e700f136fec57e208c5bd920ea5e073
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 233bb7516678888a2c7c4e6ec0b1b4f7d21b1393
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="build-page-project-designer-c"></a>프로젝트 디자이너, 빌드 페이지(C#)
 **프로젝트 디자이너**의 **빌드** 페이지를 사용하여 프로젝트의 빌드 구성 속성을 지정합니다. 이 페이지는 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 프로젝트에만 적용됩니다.  
@@ -34,7 +37,7 @@ ms.lasthandoff: 12/22/2017
 다음 옵션을 사용하여 표시하거나 수정할 구성 및 플랫폼을 선택할 수 있습니다.  
 
 > [!NOTE]
->  단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. 따라서 이러한 옵션이 표시되지 않습니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+> 단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. 따라서 이러한 옵션이 표시되지 않습니다. 자세한 내용은 [방법: 디버그 및 릴리스 구성 설정](/debugger/how-to-set-debug-and-release-configurations.md)을 참조하세요.
 
 **구성**  
 표시하거나 수정할 구성 설정을 지정합니다. **활성(디버그)**(기본값), **디버그**, **릴리스** 또는 **모든 구성** 중에서 설정을 선택할 수 있습니다.  
@@ -104,9 +107,9 @@ ms.lasthandoff: 12/22/2017
 다음 설정은 빌드 프로세스에 대한 출력 옵션을 구성하는 데 사용됩니다.  
 
 **출력 경로**  
-프로젝트 구성에 사용할 출력 파일의 위치를 지정합니다. 이 상자에 빌드 출력의 경로를 입력하거나 **찾아보기** 단추를 선택하여 경로를 지정합니다. 경로는 상대 경로입니다. 절대 경로를 입력하면 상대 경로로 저장됩니다. 기본 경로는 bin\Debug 또는 bin\Release\\입니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+프로젝트 구성에 사용할 출력 파일의 위치를 지정합니다. 이 상자에 빌드 출력의 경로를 입력하거나 **찾아보기** 단추를 선택하여 경로를 지정합니다. 경로는 상대 경로입니다. 절대 경로를 입력하면 상대 경로로 저장됩니다. 기본 경로는 bin\Debug 또는 bin\Release\\입니다.
 
-단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. **디버그** 메뉴(F5)의 **빌드** 명령은 지정한 **출력 경로**에 관계없이 빌드를 디버그 위치에 삽입합니다. 그러나 **빌드** 메뉴의 **빌드** 명령은 경로를 지정한 위치에 삽입합니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. **디버그** 메뉴(F5)의 **빌드** 명령은 지정한 **출력 경로**에 관계없이 빌드를 디버그 위치에 삽입합니다. 그러나 **빌드** 메뉴의 **빌드** 명령은 경로를 지정한 위치에 삽입합니다. 자세한 내용은 [빌드 구성 이해](../../ide/understanding-build-configurations.md)를 참조하세요.
 
 **XML 문서 파일**  
 문서 주석을 처리할 대상 파일의 이름을 지정합니다. 자세한 내용은 [/doc(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/doc-compiler-option)를 참조하세요.  

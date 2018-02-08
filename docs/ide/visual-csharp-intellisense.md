@@ -1,5 +1,5 @@
 ---
-title: Visual C# IntelliSense | Microsoft Docs
+title: C# IntelliSense | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -8,25 +8,26 @@ ms.technology: vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- Visual C#, IntelliSense
+- C#, IntelliSense
 - IntelliSense [C#]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 46f56fc6bad74b3144b3dbd4701248598a01883b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 9da494eaf71a02f7b46ce68b1cf9f781fe32e716
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="visual-c-intellisense"></a>Visual C# IntelliSense
+# <a name="c-intellisense"></a>C# IntelliSense
 
-Visual C# IntelliSense는 편집기에서 코딩할 때와 [직접 실행 모드](../ide/reference/immediate-window.md) 명령 창에서 디버그하는 동안 사용할 수 있습니다.
+C# IntelliSense는 편집기에서 코딩할 때와 [직접 실행 모드](../ide/reference/immediate-window.md) 명령 창에서 디버그하는 동안 사용할 수 있습니다.
 
 ## <a name="completion-lists"></a>완성 목록
 
-Visual C#의 IntelliSense 완성 목록에는 멤버 목록, 단어 자동 완성 등의 토큰이 있습니다. 이를 통해 다음 항목에 빠르게 액세스할 수 있습니다.
+C#의 IntelliSense 완성 목록에는 멤버 목록, 단어 자동 완성 등의 토큰이 있습니다. 이를 통해 다음 항목에 빠르게 액세스할 수 있습니다.
 
 - 형식 또는 네임스페이스의 멤버
 
@@ -42,15 +43,15 @@ Visual C#의 IntelliSense 완성 목록에는 멤버 목록, 단어 자동 완�
 
 ## <a name="code-snippets-in-completion-lists"></a>완성 목록의 코드 조각
 
-Visual C#의 완성 목록에는 미리 정의된 코드 본문을 프로그램에 쉽게 삽입하도록 지원하는 코드 조각이 포함되어 있습니다. 코드 조각은 완성 목록에 코드 조각의 [바로 가기 텍스트](../ide/code-snippets-schema-reference.md#shortcut)로 나타납니다. Visual C#에서 기본적으로 사용할 수 있는 코드 조각에 대한 자세한 내용은 [Visual C# 코드 조각](../ide/visual-csharp-code-snippets.md)을 참조하세요.
+C#의 완성 목록에는 미리 정의된 코드 본문을 프로그램에 쉽게 삽입하도록 지원하는 코드 조각이 포함되어 있습니다. 코드 조각은 완성 목록에 코드 조각의 [바로 가기 텍스트](../ide/code-snippets-schema-reference.md#shortcut)로 나타납니다. C#에서 기본적으로 사용할 수 있는 코드 조각에 대한 자세한 내용은 [C# 코드 조각](../ide/visual-csharp-code-snippets.md)을 참조하세요.
 
 ## <a name="language-keywords-in-completion-lists"></a>완성 목록의 언어 키워드
 
-Visual C#의 완성 목록에는 언어 키워드도 포함되어 있습니다. C# 언어 키워드에 대한 자세한 내용은 [C# 키워드](/dotnet/csharp/language-reference/keywords/index)를 참조하세요.
+C#의 완성 목록에는 언어 키워드도 포함되어 있습니다. C# 언어 키워드에 대한 자세한 내용은 [C# 키워드](/dotnet/csharp/language-reference/keywords/index)를 참조하세요.
 
 ## <a name="extension-methods-in-completion-lists"></a>완성 목록의 확장명 메서드
 
-Visual C#의 완성 목록에는 범위에 속한 확장 메서드가 포함되어 있습니다.
+C#의 완성 목록에는 범위에 속한 확장 메서드가 포함되어 있습니다.
 
 > [!NOTE]
 > 완성 목록에 <xref:System.String> 개체의 모든 확장 메서드가 표시되지는 않습니다.
@@ -59,9 +60,9 @@ Visual C#의 완성 목록에는 범위에 속한 확장 메서드가 포함되�
 
 ## <a name="filtered-completion-lists"></a>필터링된 완성 목록
 
-IntelliSense는 필터를 사용하여 완성 목록에서 불필요한 멤버를 제거합니다. Visual C#은 다음 항목에 대해 표시되는 완성 목록을 필터링합니다.
+IntelliSense는 필터를 사용하여 완성 목록에서 불필요한 멤버를 제거합니다. C#은 다음 항목에 대해 표시되는 완성 목록을 필터링합니다.
 
-- **인터페이스 및 기본 클래스**: IntelliSense는 클래스 선언 기본 및 인터페이스 목록과 제약 조건 목록 둘 다의 인터페이스 및 기본 클래스 완성 목록에서 항목을 자동으로 제거합니다. 예를 들어 열거형은 기본 클래스에 사용할 수 없으므로 열거형이 기본 클래스의 완성 목록에 표시되지 않습니다. 기본 클래스의 완성 목록에는 인터페이스와 네임스페이스만 포함되어 있습니다. Visual C#에서 다중 상속을 지원하지 않으므로 목록의 항목을 선택한 후 쉼표를 입력하는 경우 IntelliSense의 완성 목록에서 기본 클래스가 제거됩니다. 제약 조건 절에 대해서도 동일한 동작이 수행됩니다.
+- **인터페이스 및 기본 클래스**: IntelliSense는 클래스 선언 기본 및 인터페이스 목록과 제약 조건 목록 둘 다의 인터페이스 및 기본 클래스 완성 목록에서 항목을 자동으로 제거합니다. 예를 들어 열거형은 기본 클래스에 사용할 수 없으므로 열거형이 기본 클래스의 완성 목록에 표시되지 않습니다. 기본 클래스의 완성 목록에는 인터페이스와 네임스페이스만 포함되어 있습니다. C#에서 다중 상속을 지원하지 않으므로 목록의 항목을 선택한 후 쉼표를 입력하는 경우 IntelliSense의 완성 목록에서 기본 클래스가 제거됩니다. 제약 조건 절에 대해서도 동일한 동작이 수행됩니다.
 
 - **특성**: 형식에 특성을 적용할 경우 완성 목록은 <xref:System.Attribute>와 같이 해당 형식이 포함된 네임스페이스에서 물려받은 형식만 목록에 포함하도록 필터링됩니다.
 

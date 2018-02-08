@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: e3589707f07564bbcd84151b0eedeb1c0029428b
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 093457cf2aea3951db89e6fa677ec03fe55df89a
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>코딩된 UI 테스트에서 HTML5 컨트롤 사용
 코딩된 UI 테스트에는 Internet Explorer 9 및 Internet Explorer 10에 포함된 일부 HTML5 컨트롤에 대한 지원이 포함됩니다.  
@@ -136,12 +137,12 @@ string ValueAsNumber
   
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar  
  **ProgreesBar 컨트롤:** ProgressBar는 상호 작용할 수 없는 컨트롤입니다. 이 컨트롤의 `Value` 및 `Max` 속성에 어설션을 추가할 수 있습니다.  
-  
+
  ![HTML5 ProgressBar 컨트롤](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")  
-  
-## <a name="see-also"></a>참고 항목  
- [HTML 요소](http://go.microsoft.com/fwlink/?LinkID=232441)   
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [코딩된 UI 테스트 사용자 지정](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeCUITModify)   
- [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+
+## <a name="see-also"></a>참고 항목
+
+[HTML 요소](http://go.microsoft.com/fwlink/?LinkID=232441)  
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)  
+[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)  
+[코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

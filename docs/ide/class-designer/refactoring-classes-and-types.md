@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.ClassDesigner.OverrideMembersDialog
+f1_keywords:
+- vs.ClassDesigner.OverrideMembersDialog
 helpviewer_keywords:
 - members, overriding
 - overriding members
@@ -18,23 +20,25 @@ helpviewer_keywords:
 - Class Designer [Visual Studio], refactoring classes
 - refactoring, classes
 ms.assetid: dcf07bb4-fa3b-4224-9dec-566fd924a8ce
-caps.latest.revision: "26"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 63a81fef59104d6731a782575fe1c3b23f48e304
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 3bdf6237fdbfb6e15df0d58835c260252cd8efdb
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="refactoring-classes-and-types-class-designer"></a>클래스 및 형식 리팩터링(클래스 디자이너)
-코드를 리팩터링할 때 외부 동작이 아닌 내부 구조와 개체 설계 방식을 변경하면 코드를 보다 효율적이며 쉽게 이해하고 유지 관리할 수 있습니다. 클래스 디자이너 및 클래스 세부 내용 창을 사용하면 Visual Studio 프로젝트에서 Visual C# .NET, Visual Basic .NET 또는 C++ 코드를 리팩터링할 때 수행해야 하는 작업과 버그 발생 가능성을 줄일 수 있습니다.  
-  
+
+코드를 리팩터링할 때 외부 동작이 아닌 내부 구조와 개체 설계 방식을 변경하면 코드를 보다 효율적이며 쉽게 이해하고 유지 관리할 수 있습니다. 클래스 디자이너 및 클래스 세부 내용 창을 사용하면 Visual Studio 프로젝트에서 C#, Visual Basic 또는 C++ 코드를 리팩터링할 때 수행해야 하는 작업과 버그 발생 가능성을 줄일 수 있습니다.
+
 > [!NOTE]
->  프로젝트가 소스 코드로 제어되며 체크 아웃되지 않은 경우, 참조되는 프로젝트인 경우 또는 해당 파일이 디스크에서 읽기 전용으로 표시된 경우 프로젝트의 파일은 읽기 전용일 수 있습니다. 이러한 상태 중 하나인 프로젝트에서 작업할 때는 프로젝트 상태에 따라 다양한 방식으로 작업을 저장할 수 있습니다. 이 방식은 리팩터링 코드와 직접 편집 등의 다른 방법으로 변경하는 코드에도 적용됩니다. 자세한 내용은 [읽기 전용 정보 표시](http://msdn.microsoft.com/en-us/33e2d3a9-1668-4d10-ae56-fa09b3156e0a)를 참조하세요.  
-  
+> 프로젝트가 소스 코드로 제어되며 체크 아웃되지 않은 경우, 참조되는 프로젝트인 경우 또는 해당 파일이 디스크에서 읽기 전용으로 표시된 경우 프로젝트의 파일은 읽기 전용일 수 있습니다. 이러한 상태 중 하나인 프로젝트에서 작업할 때는 프로젝트 상태에 따라 다양한 방식으로 작업을 저장할 수 있습니다. 이 방식은 리팩터링 코드와 직접 편집 등의 다른 방법으로 변경하는 코드에도 적용됩니다.
+
 ## <a name="common-tasks"></a>일반 작업  
   
 |작업|지원 내용|  

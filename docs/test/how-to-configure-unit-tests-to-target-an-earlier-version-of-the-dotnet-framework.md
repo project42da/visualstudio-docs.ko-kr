@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
+ms.workload:
+- dotnet
 author: gewarren
-ms.openlocfilehash: a71eb54bad089e7d5bad24416604d93da615bd15
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 13780b561ba14cc06269e443265313e3b2e664c6
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>방법: 이전 버전의 .NET Framework를 대상으로 사용하도록 단위 테스트 구성
 Microsoft Visual Studio에서 테스트 프로젝트를 만들 때 .NET Framework의 가장 최근 버전이 기본적으로 대상으로 설정됩니다. 또한 Visual Studio의 이전 버전에서 테스트 프로젝트를 업그레이드할 경우 해당 프로젝트는 .NET Framework의 가장 최근 버전을 대상으로 지정하도록 업그레이드됩니다. 프로젝트 속성을 편집하여 .NET Framework의 이전 버전을 프로젝트 대상으로 명시적으로 지정할 수 있습니다.  
@@ -62,7 +63,7 @@ Microsoft Visual Studio에서 테스트 프로젝트를 만들 때 .NET Framewor
   
      Visual Basic 테스트 프로젝트의 속성이 표시됩니다.  
   
-5.  **컴파일** 탭에서 다음 그림과 같이 **고급 컴파일 옵션**을 선택합니다.  
+5.  **컴파일** 탭에서 다음 그림과 같이 **고급 컴파일 옵션**을 선택합니다.
   
      ![고급 컴파일 옵션](../test/media/howtoconfigureunittest35frameworka.png "HowToConfigureUnitTest35FrameworkA")  
   
@@ -84,7 +85,7 @@ Microsoft Visual Studio에서 테스트 프로젝트를 만들 때 .NET Framewor
   
      Visual C# 테스트 프로젝트의 속성이 표시됩니다.  
   
-5.  **응용 프로그램** 탭에서 **대상 프레임워크**를 선택하고 드롭다운 목록에서 **.NET Framework 3.5** 이상 버전을 선택하여 다음 그림과 같이 대상 프레임워크를 변경합니다. 클라이언트 버전을 지정하면 안 됩니다.  
+5.  **응용 프로그램** 탭에서 **대상 프레임워크**를 선택합니다. 드롭다운 목록에서 다음 그림과 같이 **.NET Framework 3.5** 이상 버전을 선택합니다. 클라이언트 버전을 지정하면 안 됩니다.
   
      ![대상 프레임워크 드롭다운 목록](../test/media/howtoconfigureunittest35frameworkcsharp.png "HowToConfigureUnitTest35FrameworkCSharp")  
   
@@ -125,8 +126,8 @@ Microsoft Visual Studio에서 테스트 프로젝트를 만들 때 .NET Framewor
   
 8.  [솔루션 탐색기]에 있는 새 Visual C++ 테스트 프로젝트의 바로 가기 메뉴에서 **프로젝트 다시 로드**를 선택합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [기존 코드에 대한 단위 테스트 만들기 및 실행](http://msdn.microsoft.com/en-us/e8370b93-085b-41c9-8dec-655bd886f173)   
- [SharePoint 솔루션 만들기](/office-dev/office-dev/create-sharepoint-solutions)   
- [SharePoint 솔루션 빌드 및 디버깅](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)   
- [고급 컴파일러 설정 대화 상자(Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)
+## <a name="see-also"></a>참고 항목
+
+[SharePoint 솔루션 만들기](/office-dev/office-dev/create-sharepoint-solutions)  
+[SharePoint 솔루션 빌드 및 디버깅](/office-dev/office-dev/building-and-debugging-sharepoint-solutions)  
+[고급 컴파일러 설정 대화 상자(Visual Basic)](../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)

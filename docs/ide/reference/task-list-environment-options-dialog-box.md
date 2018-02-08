@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,17 @@ helpviewer_keywords:
 - tokens, and the Task List
 - Task List, comment tasks
 ms.assetid: 88327e04-fa3e-48db-995b-ad89e0dc4ed2
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b6f8adfd3ce7d585cffe3c7506c4fdd56cad4a11
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 475c228dc7031dbb7cb98d9f325fcce89f31223b
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="task-list-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 작업 목록
 이 옵션 페이지에서는 **작업 목록** 미리 알림을 생성하는 주석 토큰을 추가, 삭제 및 변경할 수 있습니다. 이러한 설정을 표시하려면 **도구** 메뉴에서 **옵션**을 선택하고 **환경** 폴더를 확장한 후 **작업 목록**을 선택합니다.  
@@ -51,7 +53,7 @@ ms.lasthandoff: 12/22/2017
  텍스트가 **토큰 목록**에 있는 토큰으로 시작되는 주석을 코드에 삽입하는 경우 해당 파일이 편집용으로 열릴 때마다 **작업 목록**에 주석이 새 항목으로 표시됩니다. 이 **작업 목록** 항목을 클릭하여 코드에서 해당 주석 줄로 바로 이동할 수 있습니다. 자세한 내용은 [작업 목록 사용](../../ide/using-the-task-list.md)을 참조하세요.  
   
  토큰 목록  
- 토큰의 목록을 표시하고 사용자 지정 토큰을 추가하거나 제거할 수 있게 합니다. 주석 토큰은 Visual C# 및 Visual C++에서 대/소문자를 구분하지만 Visual Basic에서는 그렇지 않습니다.  
+ 토큰의 목록을 표시하고 사용자 지정 토큰을 추가하거나 제거할 수 있게 합니다. 주석 토큰은 C# 및 Visual C++에서 대/소문자를 구분하지만 Visual Basic에서는 그렇지 않습니다.  
   
 > [!NOTE]
 >  원하는 토큰을 **토큰 목록**에서 표시된 대로 정확히 입력하지 않으면 **작업 목록**에 주석 작업이 표시되지 않습니다.  

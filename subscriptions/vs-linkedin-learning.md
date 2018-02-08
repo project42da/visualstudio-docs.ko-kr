@@ -1,47 +1,66 @@
 ---
-title: "LinkedIn Learning 혜택"
+title: "Visual Studio 구독의 LinkedIn Learning 혜택 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 11/7/2017
+Ms.date: 1/12/2018
 Ms.topic: Get-Started-Article
-Description: Learn how to activate the LinkedIn Learning benefit included as part of a Premium subscription included in your Visual Studio subscription.
+Description: Learn about the LinkedIn Learning benefit included as part of a LinkedIn Premium subscription included in selected Visual Studio subscriptions.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 62f08913a7fbefe0bd40f3dd752d96194916b0e5
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 8ef318cb7cdefefc079b230f0e44fdeb5f0c2d8f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="activating-the-linkedin-learning-benefit-in-your-visual-studio-subscription"></a>Visual Studio 구독에서 LinkedIn Learning 혜택 활성화
+# <a name="the-linkedin-learning-benefit-in-visual-studio-subscriptions"></a>Visual Studio 구독의 LinkedIn Learning 혜택
 
-LinkedIn의 기능을 잠금 해제하여 경력 개발에 필요한 사람, 통찰력 및 기술에 액세스합니다.  업계 전문가들을 통해 가장 수요 높은 비즈니스, 기술 및 동착적 기술에 대해 알아봅니다.
+## <a name="overview"></a>개요
+LinkedIn의 기능을 잠금 해제하여 경력 개발에 필요한 사람, 통찰력 및 기술에 액세스합니다.  업계 전문가들을 통해 가장 수요 높은 비즈니스, 기술 및 독창적 기술에 대해 알아봅니다.
 
-Visual Studio 구독에는 LinkedIn Learning이 포함된 LinkedIn Premium 구독이 적용됩니다.  Premium 구독 기간은 사용자의 Visual Studio 구독 유형에 따라 결정됩니다.
-
-| 구독                                                     | 이점                      |
-|------------------------------------------------------------------|------------------------------|
-| Visual Studio Enterprise 표준 및 연간 클라우드 구독   | 6개월 Premium 구독 |
-| Visual Studio Professional 표준 및 연간 클라우드 구독 | 3개월 Premium 구독 |
-| Visual Studio Test Professional                                  | 3개월 Premium 구독 |
-| MSDN 플랫폼                                                   | 3개월 Premium 구독 |
-| Visual Studio Dev Essentials                                     | 3개월 Premium 구독 | 
-
+선택한 Visual Studio 구독에는 LinkedIn Learning이 포함된 LinkedIn Premium 구독이 적용됩니다.  Premium 구독 기간은 사용자의 Visual Studio 구독 유형에 따라 결정됩니다.
 LinkedIn 계정이 있어야 LinkedIn Learning 혜택을 활용할 수 있습니다.  아직 없으면 Premium 구독을 활성화하기 전에 만들 수 있습니다.  
 
-Premium 구독 및 LinkedIn Learning 혜택을 활성화하려면
-1. [https://my.visualstudio.com](https://my.visualstudio.com/benefits)에 로그인합니다.
+## <a name="eligibility"></a>자격
+| 구독 수준/프로그램                                                  | 이점               | 갱신 가능?                                                         |
+|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
+| Visual Studio Enterprise Standard                                             | 6개월              |  아니요                                                                |
+| Visual Studio Enterprise 연간                                               | 6개월              |  아니요                                                                |
+| Visual Studio Enterprise 월간                                              | 사용할 수 없음         |                                                                    |
+| Visual Studio Professional Standard                                           | 3개월              |  아니요                                                                |
+| Visual Studio Professional 연간                                             | 3개월              |  아니요                                                                | 
+| Visual Studio Professional 월간                                            | 사용할 수 없음         |                                                                    |
+| Visual Studio Test Pro                                                        | 3개월              |  아니요                                                                |
+| MSDN 플랫폼                                                                | 3개월              |  아니요                                                                |
+| Visual Studio Dev Essentials                                                  | 3개월              |  아니요                                                                |
+| Visual Studio Enterprise - NFR<sup>1</sup>                                               | 6개월              |  아니요                                                                |
+| Visual Studio Enterprise - FTE                                                | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise - Microsoft 파트너 네트워크                          | 사용할 수 없음         |                                                                    |
+| Visual Studio Professional - Microsoft 파트너 네트워크                        | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise – Imagine(Standard)                                 | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise – Imagine(Premium)                                  | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise – BizSpark                                           | 사용할 수 없음         |                                                                    |
+| Microsoft Certified Trainer - 소프트웨어 및 서비스                             | 사용할 수 없음         |                                                                    |
+| Microsoft Certified Trainer - 소프트웨어 및 서비스 개발자                   | 사용할 수 없음         |                                                                    |
 
-2. 교육 범주에서 LinkedIn Learning 타일을 찾아 **코드 가져오기** 링크를 클릭합니다.
+<sup>1</sup> NFR(전매 금지), MVP(Microsoft Valued Partner), RD(Region Director), VSIP(Visual Studio Industry Partner) 포함  
+
+어떤 구독을 사용하고 있는지 확실하지 않나요?  전자 메일 주소에 할당된 모든 구독을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)에 연결하세요. 일부 구독이 표시되지 않으면 하나 이상이 다른 전자 메일 주소에 할당되어 있을 수 있습니다.  해당 구독을 보려면 해당 전자 메일 주소로 로그인해야 합니다. 
+
+## <a name="activation-steps"></a>활성화 단계
+LinkedIn Premium 구독 및 LinkedIn Learning 혜택을 활성화하려면:
+1. [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)에 로그인합니다.
+
+2. 교육 범주에서 LinkedIn Learning 타일을 찾아 **코드 얻기** 링크를 클릭합니다.
 
     ![LinkedIn Learning 혜택 타일](_img\vs-linkedin\vs-linkedin-3-month-tile.png)
 
 
 3. LinkedIn 계정이 있고 자동으로 로그인한 경우 즉시 LinkedIn Learning 혜택 활성화 페이지로 이동하게 됩니다.  LinkedIn 계정이 있으나 자동으로 로그인하지 않은 경우 사용자 이름 및 암호를 입력한 다음 **로그인**을 클릭하기만 하면 됩니다.  제품을 활성화하려면 [이 단계](#activate-your-offer)로 건너뜁니다.
 
-
+### <a name="create-a-linkedin-account"></a>LinkedIn 계정 만들기
 4. 아직 LinkedIn 계정이 없는 경우 **지금 가입**을 클릭합니다.  
 
     ![LinkedIn Learning 지금 가입](_img\vs-linkedin\vs-linkedin-join-now.png)
@@ -84,7 +103,7 @@ Premium 구독 및 LinkedIn Learning 혜택을 활성화하려면
 
     ![LinkedIn Learning 사진 업로드](_img\vs-linkedin\vs-linkedin-app.png)
 
-## <a name="activate-your-offer"></a>제품 활성화
+### <a name="activate-your-offer"></a>제품 활성화
 15. LinkedIn 계정에 로그인했거나 새 계정을 만들었으므로 Premium 구독을 활성화하고 LinkedIn Learning을 활용할 준비가 되었습니다.  **제품 활성화**를 클릭합니다. 
 
     ![LinkedIn Learning 활성화](_img\vs-linkedin\vs-linkedin-Activate1.png)
@@ -97,3 +116,13 @@ Premium 구독 및 LinkedIn Learning 혜택을 활성화하려면
 17. Premium 구독 제품을 활성화했으므로 이제 LinkedIn Learning 사용을 시작하고 모든 다른 Premium 혜택을 누릴 수 있습니다.
 
     ![LinkedIn Learning 학습 홈](_img\vs-linkedin\vs-linkedin-learning-home.png)
+
+## <a name="faq"></a>FAQ
+*여기에서 업데이트를 확인하세요.*
+
+## <a name="support-resources"></a>지원 리소스
+-  LinkedIn Learning과 관련하여 도움이 필요하세요?  다음 리소스를 확인하세요.
+    - [LinkedIn Learning 사용](https://www.linkedin.com/help/learning)에 도움이 됩니다.
+    - 계정 및 프로필 만들기, 네트워크 유지 관리와 같은 [LinkedIn](https://www.linkedin.com/help/linkedin)에 대한 일반적인 질문에 도움이 됩니다.
+-  Visual Studio 구독에 대한 판매, 구독, 계정 및 요금 청구에 대한 지원을 받으려면 Visual Studio [구독 지원](https://www.visualstudio.com/subscriptions/support/)에 문의하세요.
+-  Visual Studio IDE, Visual Studio Team Services 또는 기타 Visual Studio 제품 또는 서비스와 관련하여 궁금한 점이 있나요?  [Visual Studio 지원](https://www.visualstudio.com/support/)을 참조하세요.    

@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 0dce2cfd041b3fe0be3ecd4061e3447190d5e448
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: fb46a6d739e06f980b13cd2b643946b47b6661e3
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="quick-start-test-driven-development-with-test-explorer"></a>퀵 스타트: 테스트 탐색기를 사용한 테스트 기반 개발
 여러 개발 증분 단계를 통해 코드 작업을 올바른 상태로 유지하는 데 도움을 줄 단위 테스트를 작성하는 것이 좋습니다. 타사에서 개발된 것을 비롯하여 단위 테스트를 작성하는 데 사용할 수 있는 프레임워크에는 여러 가지가 있습니다. 일부 테스트 프레임워크는 다른 언어 또는 플랫폼의 테스트로 전문화되어 있습니다. 테스트 탐색기는 이러한 프레임워크 중 하나에서 단위 테스트를 위한 단일 인터페이스를 제공합니다. 어댑터는 일반적으로 사용되는 프레임워크에 사용할 수 있으며, 다른 프레임워크용 고유 어댑터를 작성할 수 있습니다.  
@@ -147,15 +148,15 @@ ms.lasthandoff: 01/09/2018
   
      ![통과한 테스트를 보여 주는 단위 테스트 탐색기.](../test/media/unittestexplorerwalkthrough3.png "UnitTestExplorerWalkthrough3")  
   
-#### <a name="add-tests-to-extend-the-range-of-inputs"></a>테스트를 추가하여 입력 범위 확장  
-  
-1.  코드가 모든 경우에 작동한다는 확신을 높이기 위해 보다 광범위한 입력 값 범위를 시도하는 테스트를 추가합니다.  
-  
+#### <a name="add-tests-to-extend-the-range-of-inputs"></a>테스트를 추가하여 입력 범위 확장
+
+1.  코드가 모든 경우에 작동한다는 확신을 높이기 위해 보다 광범위한 입력 값 범위를 시도하는 테스트를 추가합니다.
+
     > [!TIP]
-    >  통과한 기존 테스트를 변경하지 마십시오. 대신에 새 테스트를 추가합니다. 사용자 요구 사항이 변경될 때만 기존 테스트를 변경합니다. 이 정책을 적용하면 코드를 확장할 때 기존 기능이 손실되지 않습니다.  
-  
-     테스트 클래스에서 입력 값 범위를 시도하는 다음 테스트를 추가합니다.  
-  
+    >  통과한 기존 테스트를 변경하지 마십시오. 대신에 새 테스트를 추가합니다. 사용자 요구 사항이 변경될 때만 기존 테스트를 변경합니다. 이 정책을 적용하면 코드를 확장할 때 기존 기능이 손실되지 않습니다.
+
+     테스트 클래스에서 입력 값 범위를 시도하는 다음 테스트를 추가합니다.
+
     ```csharp  
     [TestMethod]  
     public void RooterValueRange()  

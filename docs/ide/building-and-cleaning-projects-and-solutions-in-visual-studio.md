@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -22,16 +23,17 @@ helpviewer_keywords:
 - solution build configurations, build order
 - builds [Visual Studio], preparing
 ms.assetid: 710891fd-379e-42c2-a84b-44a7af694ca0
-caps.latest.revision: "35"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: faf5978119ef9029db99ae953d5c60876abddabf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 94f2683611dd04555fdd842e96f2c1ee4bb20fb1
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="building-and-cleaning-projects-and-solutions-in-visual-studio"></a>Visual Studio에서 프로젝트 및 솔루션 빌드 및 정리
 이 항목의 절차에 따라 솔루션에 포함된 프로젝트 또는 프로젝트 항목의 전체 또는 일부를 빌드, 다시 빌드 또는 정리할 수 있습니다. 단계별 자습서는 [연습: 응용 프로그램 빌드](../ide/walkthrough-building-an-application.md)를 참조하세요.  
@@ -58,11 +60,11 @@ ms.lasthandoff: 12/22/2017
   
 1.  **솔루션 탐색기**에서 프로젝트를 선택하거나 엽니다.  
   
-2.  메뉴 모음에서 **빌드**를 선택한 다음 *ProjectName* **빌드** 또는 *ProjectName* **다시 빌드**를 선택합니다.  
+2.  메뉴 모음에서 **빌드**를 선택한 다음, *‘***ProjectName 빌드’ 또는 ‘***ProjectName 다시 빌드’를 선택합니다.  
   
-    -   가장 최근 빌드 이후 변경된 프로젝트 구성 요소만 빌드하려면 *ProjectName* **빌드**를 선택합니다.  
+    -   가장 최근 빌드 이후 변경된 프로젝트 구성 요소만 빌드하려면 *‘***ProjectName 빌드’를 선택합니다.  
   
-    -   프로젝트를 "정리"한 다음 프로젝트 파일과 모든 프로젝트 구성 요소를 빌드하려면 *ProjectName* **다시 빌드**를 선택합니다.  
+    -   프로젝트를 “정리”한 후 프로젝트 파일과 모든 프로젝트 구성 요소를 빌드하려면 *‘***ProjectName 다시 빌드’를 선택합니다.  
   
 ### <a name="to-build-only-the-startup-project-and-its-dependencies"></a>시작 프로젝트 및 해당 종속성만 빌드하려면  
   
@@ -111,11 +113,12 @@ ms.lasthandoff: 12/22/2017
     -   Ctrl+Break 키를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목
-[방법: 빌드 로그 파일 보기, 저장 및 구성](../ide/how-to-view-save-and-configure-build-log-files.md)   
-[빌드 로그 가져오기](../msbuild/obtaining-build-logs-with-msbuild.md)   
-[컴파일 및 빌드](../ide/compiling-and-building-in-visual-studio.md)   
-[빌드 구성 이해](../ide/understanding-build-configurations.md)   
-[디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
-[C/C++ 빌드 참조](/cpp/build/reference/c-cpp-building-reference)   
-[Devenv 명령줄 스위치](../ide/reference/devenv-command-line-switches.md)   
+
+[방법: 빌드 로그 파일 보기, 저장 및 구성](../ide/how-to-view-save-and-configure-build-log-files.md)  
+[빌드 로그 가져오기](../msbuild/obtaining-build-logs-with-msbuild.md)  
+[컴파일 및 빌드](../ide/compiling-and-building-in-visual-studio.md)  
+[빌드 구성 이해](../ide/understanding-build-configurations.md)  
+[방법: 디버그 및 릴리스 구성 설정](../debugger/how-to-set-debug-and-release-configurations.md)  
+[C/C++ 빌드 참조](/cpp/build/reference/c-cpp-building-reference)  
+[Devenv 명령줄 스위치](../ide/reference/devenv-command-line-switches.md)  
 [솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)

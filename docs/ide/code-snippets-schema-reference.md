@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 - code snippets [Visual Studio], schema reference
 - IntelliSense Code Snippets, XML Schema
 ms.assetid: 58a60621-725f-4763-93b7-62ea5424ef88
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b3fdf8728e5afd839718e31e4eb6b113b8f9cde2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c267b110b67a69b526bb7efc985bb22bb954b3a1
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="code-snippets-schema-reference"></a>코드 조각 스키마 참조
 IntelliSense 코드 조각은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 응용 프로그램에 삽입되도록 미리 작성된 코드 부분입니다. 코드 조각을 제공함으로써 반복 코드를 입력하거나 샘플 검색에 드는 시간을 줄여 생산성을 높일 수 있습니다. IntelliSense 코드 조각 XML 스키마를 사용하여 사용자 지정 코드 조각을 만들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에 이미 포함되어 있는 코드 조각에 추가할 수 있습니다.  
@@ -240,7 +242,7 @@ $selected$ is a great color. I love $selected$.
  Visual Studio에서 리터럴 또는 개체가 포커스를 받을 때 실행할 함수를 지정합니다.  
   
 > [!NOTE]
->  `Function` 요소는 Visual C# 코드 조각에서만 지원됩니다.  
+>  `Function` 요소는 C# 코드 조각에서만 지원됩니다.  
   
 ```xml  
 <Function>  
@@ -563,7 +565,7 @@ $selected$ is a great color. I love $selected$.
   
 -   `Expansion`: 코드 조각을 커서 위치에 삽입할 수 있습니다.  
   
--   `Refactoring`: Visual C# 리팩터링 동안 코드 조각이 사용되도록 지정합니다. 사용자 지정 코드 조각에서는 `Refactoring`을 사용할 수 없습니다.  
+-   `Refactoring`: C# 리팩터링 동안 코드 조각이 사용되도록 지정합니다. 사용자 지정 코드 조각에서는 `Refactoring`을 사용할 수 없습니다.  
   
 ##  <a name="snippettypes"></a> SnippetTypes 요소  
  개별 `SnippetType` 요소를 그룹화합니다. `SnippetTypes` 요소가 없으면 코드에서 임의의 위치에 코드 조각을 삽입할 수 있습니다.  

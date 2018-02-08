@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d5aca783500b27e6b292b82304eb14d0fba7d32
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: a73226de18ea2003890c2923641ae65318dbfc1f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="keyboard-tips-for-visual-studio"></a>Visual Studio 키보드 팁
 
@@ -125,6 +125,7 @@ ms.lasthandoff: 01/23/2018
 
 ## <a name="see-also"></a>참고 항목
 
+[바로 가기 키(VSTS 및 TFS)](/vsts/collaborate/keyboard-shortcuts)  
 [Visual Studio 블로그](http://blogs.msdn.com/b/visualstudio)  
 [Visual Studio 팁과 요령 블로그](http://blogs.msdn.com/b/zainnab)  
 [Channel 9의 Visual Studio 도구 상자](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)  

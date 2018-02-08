@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 1ca2e83bab05c336f4b4ed37a13271c636b457dc
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 71d7f7e342ecd6d9ca3bff4e04b84352c65c0e17
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리
 이 연습에서는 간단한 WPF(Windows Presentation Foundation) 웹 응용 프로그램을 만들어, 코딩된 UI 테스트를 만들고 편집하고 유지 관리하는 방법을 보여 줍니다. 이 연습에서는 여러 타이밍 문제 및 제어 리팩터링으로 인해 중단된 테스트를 해결하기 위한 방법을 제공합니다.  
@@ -143,7 +144,7 @@ ms.lasthandoff: 01/09/2018
   
      UIMap – 코딩된 UI 테스트 빌더가 나타나고 Visual Studio 창이 최소화됩니다.  
   
-     대화 상자의 옵션에 대한 자세한 내용은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)를 참조하세요.  
+     대화 상자의 옵션에 대한 자세한 내용은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)를 참조하세요.  
   
 8.  UIMap – 코딩된 UI 테스트 빌더에서 **기록 시작**을 선택합니다.  
   
@@ -368,26 +369,20 @@ ms.lasthandoff: 01/09/2018
   
 ## <a name="external-resources"></a>외부 리소스  
   
-### <a name="videos"></a>비디오  
- ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode1-GettingStarted](http://go.microsoft.com/fwlink/?LinkID=230573)  
+### <a name="videos"></a>비디오
+
+![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Getting started with Coded UI tests](http://go.microsoft.com/fwlink/?LinkID=230573)(코딩된 UI 테스트 시작)  
   
- ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode2-MaintainenceAndDebugging](http://go.microsoft.com/fwlink/?LinkID=230574)  
+![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Maintenance And debugging of coded UI tests](http://go.microsoft.com/fwlink/?LinkID=230574)(코딩된 UI 테스트 유지 관리 및 디버깅)  
   
- ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Coded UI Tests-DeepDive-Episode3-HandCoding](http://go.microsoft.com/fwlink/?LinkID=230575)  
+![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo") [Hand coding coded UI tests](http://go.microsoft.com/fwlink/?LinkID=230575)(코딩된 UI 테스트 수동 코딩)
   
-### <a name="hands-on-lab"></a>실습  
- [MSDN 가상 랩: Visual Studio 2010을 사용하여 코딩된 UI 테스트 만들기 소개](http://go.microsoft.com/fwlink/?LinkID=22508)  
+### <a name="faq"></a>FAQ
+
+[코딩된 UI 테스트 FAQ](https://social.msdn.microsoft.com/Forums/en-US/3a74dd2c-cef8-4923-abbf-7a91f489e6c4/faqs?forum=vsautotest)
   
-### <a name="faq"></a>FAQ  
- [코딩된 UI 테스트 FAQ - 1](http://go.microsoft.com/fwlink/?LinkID=230576)  
-  
- [코딩된 UI 테스트 FAQ - 2](http://go.microsoft.com/fwlink/?LinkID=230578)  
-  
-### <a name="forum"></a>포럼  
- [Visual Studio UI 자동화 테스트(CodedUI 포함)](http://go.microsoft.com/fwlink/?LinkID=224497)  
-  
-## <a name="see-also"></a>참고 항목  
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [WPF Designer 시작](http://msdn.microsoft.com/en-us/18e61d03-b96a-4058-a166-8ec6b3f6116b)   
- [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)   
- [코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)
+## <a name="see-also"></a>참고 항목
+
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)  
+[코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)  
+[코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)

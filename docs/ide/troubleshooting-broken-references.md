@@ -4,11 +4,12 @@ ms.custom:
 ms.date: 03/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
-- Visual C# projects, references
+- C# projects, references
 - Visual Basic projects, references
 - troubleshooting references
 - referencing files from projects
@@ -16,12 +17,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d2b7046240f711d640b8143afddb667e2726eb35
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ecca7ee3d9d5ae6a4f347df7438cb38718d702b4
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="troubleshoot-broken-references"></a>끊어진 참조 문제 해결
 
@@ -61,7 +63,7 @@ ms.lasthandoff: 12/22/2017
 
 1. Visual Basic을 사용할 경우 **참조** 페이지를 선택하고 **참조 경로** 단추를 클릭합니다. **참조 경로** 대화 상자에서 참조할 항목이 포함된 폴더의 경로를 **폴더** 필드에 입력하고 **폴더 추가** 단추를 클릭합니다.
 
-    Visual C#을 사용할 경우 **참조 경로** 페이지를 선택합니다. **폴더** 필드에 참조할 항목이 포함된 폴더의 경로를 입력하고 **폴더 추가** 단추를 클릭합니다.
+    C#을 사용할 경우 **참조 경로** 페이지를 선택합니다. **폴더** 필드에 참조할 항목이 포함된 폴더의 경로를 입력하고 **폴더 추가** 단추를 클릭합니다.
 
 ## <a name="referenced-file-has-been-deleted"></a>참조된 파일이 삭제됨
 

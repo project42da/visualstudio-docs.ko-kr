@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Visual Basic code, international applications
 - globalization [Visual Studio], localizing applications
-- Visual C#, international applications
+- C#, international applications
 - applications [Visual Studio], localizing
 - localization [.NET Framework], applications
 ms.assetid: 879c20e0-8301-4f44-b520-97283848c965
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c389f8dd13514d940941bcefc228236b3418e317
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 92a7e56d05d0f9d71d51aa80fcc5d545b3baf061
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="localizing-applications"></a>응용 프로그램 지역화
 *지역화*란 지정된 문화권이나 로캘로 응용 프로그램을 사용자 지정하는 프로세스입니다. 지역화는 주로 사용자 인터페이스 번역으로 구성됩니다.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="related-sections"></a>관련 단원  
  [.NET Framework 기반의 국가별 응용 프로그램 소개](../ide/introduction-to-international-applications-based-on-the-dotnet-framework.md)  
- Visual Basic 또는 Visual C#을 사용하여 국제 시장용 소프트웨어를 개발하는 방법에 대한 개념을 설명합니다.  
+ Visual Basic 또는 C#을 사용하여 국제 시장용 소프트웨어를 개발하는 방법에 대한 개념을 설명합니다.  
   
  [Windows Forms 전역화](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  여러 문화권을 지원하는 Windows 응용 프로그램을 만드는 방법에 대한 페이지의 링크를 제공합니다.  

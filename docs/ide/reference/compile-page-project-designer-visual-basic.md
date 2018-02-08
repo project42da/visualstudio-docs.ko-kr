@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vb.ProjectPropertiesCompile
+f1_keywords:
+- vb.ProjectPropertiesCompile
 helpviewer_keywords:
 - compilation, Visual Basic projects
 - compilation, options [Visual Basic]
@@ -17,16 +19,17 @@ helpviewer_keywords:
 - Project Designer, Compile page
 - Compile page in Project Designer
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
-caps.latest.revision: "60"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3cd68fa71bf201c7a2ac05fd7881b216cbca0938
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 32a883c1a04dc6ab5189cd5b2e5173406c098f6d
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>프로젝트 디자이너, 컴파일 페이지(Visual Basic)
 프로젝트 디자이너의 **컴파일** 페이지를 사용하여 컴파일 지침을 지정합니다. 또한 이 페이지에서 고급 컴파일러 옵션 및 빌드 전 또는 빌드 후 이벤트를 지정할 수 있습니다.  
@@ -39,21 +42,21 @@ ms.lasthandoff: 12/22/2017
  다음 설정을 사용하면 표시하거나 수정할 구성 및 플랫폼을 선택할 수 있습니다.  
   
 > [!NOTE]
->  단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. 따라서 **구성** 및 **플랫폼** 목록이 표시되지 않습니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+> 단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. 따라서 **구성** 및 **플랫폼** 목록이 표시되지 않습니다.
   
  **구성**  
- 표시하거나 수정할 구성 설정을 지정합니다. 설정은 **디버그**(기본값), **릴리스** 또는 **모든 구성**입니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e) 및 [방법: 구성 만들기 및 편집](../../ide/how-to-create-and-edit-configurations.md)을 참조하세요.  
+ 표시하거나 수정할 구성 설정을 지정합니다. 설정은 **디버그**(기본값), **릴리스** 또는 **모든 구성**입니다. 자세한 내용은 [빌드 구성 이해](../../ide/understanding-build-configurations.md) 및 [방법: 구성 만들기 및 편집](../../ide/how-to-create-and-edit-configurations.md)을 참조하세요.
   
  **플랫폼**  
- 표시하거나 수정할 플랫폼 설정을 지정합니다. **모든 CPU**(기본값), **x64** 또는 **x86**을 지정할 수 있습니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+ 표시하거나 수정할 플랫폼 설정을 지정합니다. **모든 CPU**(기본값), **x64** 또는 **x86**을 지정할 수 있습니다.
   
 ## <a name="compiler-configuration-options"></a>컴파일러 구성 옵션  
  다음 설정을 사용하면 컴파일러 구성 옵션을 설정할 수 있습니다.  
   
  **빌드 출력 경로**  
- 프로젝트 구성에 사용할 출력 파일의 위치를 지정합니다. 이 상자에 빌드 출력의 경로를 입력하거나 **찾아보기** 단추를 클릭하여 경로를 선택합니다. 경로는 상대 경로입니다. 절대 경로를 입력하면 상대 경로로 저장됩니다. 기본 경로는 bin\Debug\ 또는 bin\Release\\입니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+ 프로젝트 구성에 사용할 출력 파일의 위치를 지정합니다. 이 상자에 빌드 출력의 경로를 입력하거나 **찾아보기** 단추를 클릭하여 경로를 선택합니다. 경로는 상대 경로입니다. 절대 경로를 입력하면 상대 경로로 저장됩니다. 기본 경로는 bin\Debug\ 또는 bin\Release\\입니다.
   
- 단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. **디버그** 메뉴(F5)의 **빌드** 명령은 지정한 **출력 경로**에 관계없이 빌드를 디버그 위치에 삽입합니다. 그러나 **빌드** 메뉴의 **빌드** 명령은 경로를 지정한 위치에 삽입합니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+ 단순화된 빌드 구성을 사용하면 프로젝트 시스템에서 디버그 버전을 빌드할지 아니면 릴리스 버전을 빌드할지 결정합니다. **디버그** 메뉴(F5)의 **빌드** 명령은 지정한 **출력 경로**에 관계없이 빌드를 디버그 위치에 삽입합니다. 그러나 **빌드** 메뉴의 **빌드** 명령은 경로를 지정한 위치에 삽입합니다.
   
  **Option Explicit**  
  암시적 변수 선언을 허용할지 여부를 지정합니다. 명시적 변수 선언이 필요하면 **On**을 선택합니다. 그러면 변수를 사용하기 전에 선언되지 않은 경우 컴파일러에서 오류를 보고합니다. 암시적 변수 선언을 허용하려면 **Off**를 선택합니다.  
@@ -167,10 +170,9 @@ ms.lasthandoff: 12/22/2017
   
 **고급 컴파일 옵션**  
 **AdvancedCompiler 설정** 대화 상자에 액세스하려면 이 단추를 클릭합니다. **AdvancedCompiler 설정** 대화 상자를 사용하여 프로젝트의 고급 빌드 구성 속성을 지정합니다. 이 대화 상자는 Visual Basic 프로젝트에만 적용됩니다. 자세한 내용은 [고급 컴파일러 설정 대화 상자(Visual Basic)](../../ide/reference/advanced-compiler-settings-dialog-box-visual-basic.md)를 참조하세요.  
-  
-## <a name="see-also"></a>참고 항목  
- [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)   
- [컴파일 속성 관리](http://msdn.microsoft.com/en-us/94308881-f10f-4caf-a729-f1028e596a2c)   
- [방법: 빌드 이벤트 지정(Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)   
- [Visual Basic 명령줄 컴파일러](/dotnet/visual-basic/reference/command-line-compiler/index)   
- [방법: 구성 만들기 및 편집](../../ide/how-to-create-and-edit-configurations.md)
+
+## <a name="see-also"></a>참고 항목
+
+[방법: 빌드 이벤트 지정(Visual Basic)](../../ide/how-to-specify-build-events-visual-basic.md)  
+[Visual Basic 명령줄 컴파일러](/dotnet/visual-basic/reference/command-line-compiler/index)  
+[방법: 구성 만들기 및 편집](../../ide/how-to-create-and-edit-configurations.md)

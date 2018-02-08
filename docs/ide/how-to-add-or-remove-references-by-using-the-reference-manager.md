@@ -11,7 +11,7 @@ ms.topic: article
 f1_keywords:
 - VS.ReferenceManager
 helpviewer_keywords:
-- Visual C# projects, references
+- C# projects, references
 - references [Visual Studio], adding
 - assemblies [Visual Studio], references
 - Visual Basic projects, references
@@ -27,11 +27,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 34dd559abcbfa6172c52edd2ed5eae2898f0b358
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: aefd0227717352e449b51950620d0f0900cf2e60
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-add-or-remove-references-by-using-the-reference-manager"></a>방법: 참조 관리자를 사용하여 참조 추가 또는 제거
 
@@ -164,7 +164,7 @@ Windows 탭은 Windows 운영 체제를 실행하는 플랫폼에 관련된 모�
 
 다음 두 가지 방법으로 Visual Studio의 WinMD 파일을 생성할 수 있습니다.
 
-- **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱 관리 프로젝트**: [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱 프로젝트는 프로젝트 속성 &#124; 출력 형식 = WinMD 파일로 설정하여 WinMD 이진 파일을 출력할 수 있습니다. WinMD 파일 이름은 안에 있는 모든 네임스페이스의 상위 네임스페이스여야 합니다. 예를 들어, 프로젝트가 네임스페이스 A.B 및 A.B.C로 구성된 경우 해당 출력 WinMD의 가능한 이름은 A.winmd 및 A.B.winmd입니다. 사용자가 프로젝트의 네임스페이스 집합과 연결되지 않은 “프로젝트 속성 &#124; 어셈블리 이름” 또는 “프로젝트 속성 &#124; 네임스페이스” 값을 입력하거나, 프로젝트 내에 상위 네임스페이스가 없는 경우, 다음과 같은 빌드 경고가 발생합니다. ‘A.winmd’는 이 어셈블리에 유효한 .winmd 파일 이름이 아닙니다. Windows 메타데이터 파일 내의 모든 형식은 파일 이름의 하위 네임스페이스에 있어야 합니다. 파일 이름의 하위 네임스페이스에 없는 형식은 런타임에 찾을 수 없습니다. 이 어셈블리에서 가장 작은 공통 네임스페이스는 'CSWSClassLibrary1'입니다. Visual Basic 또는 Visual C# 데스크톱 프로젝트는 자사 WinMD로 알려진 [!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK를 사용하여 생성된 WinMD만 사용할 수 있으며, WinMD를 생성할 수 없습니다.
+- **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱 관리 프로젝트**: [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱 프로젝트는 프로젝트 속성 &#124; 출력 형식 = WinMD 파일로 설정하여 WinMD 이진 파일을 출력할 수 있습니다. WinMD 파일 이름은 안에 있는 모든 네임스페이스의 상위 네임스페이스여야 합니다. 예를 들어, 프로젝트가 네임스페이스 A.B 및 A.B.C로 구성된 경우 해당 출력 WinMD의 가능한 이름은 A.winmd 및 A.B.winmd입니다. 사용자가 프로젝트의 네임스페이스 집합과 연결되지 않은 “프로젝트 속성 &#124; 어셈블리 이름” 또는 “프로젝트 속성 &#124; 네임스페이스” 값을 입력하거나, 프로젝트 내에 상위 네임스페이스가 없는 경우, 다음과 같은 빌드 경고가 발생합니다. ‘A.winmd’는 이 어셈블리에 유효한 .winmd 파일 이름이 아닙니다. Windows 메타데이터 파일 내의 모든 형식은 파일 이름의 하위 네임스페이스에 있어야 합니다. 파일 이름의 하위 네임스페이스에 없는 형식은 런타임에 찾을 수 없습니다. 이 어셈블리에서 가장 작은 공통 네임스페이스는 'CSWSClassLibrary1'입니다. Visual Basic 또는 C# 데스크톱 프로젝트는 자사 WinMD로 알려진 [!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK를 사용하여 생성된 WinMD만 사용할 수 있으며, WinMD를 생성할 수 없습니다.
 
 - **[!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱 네이티브 프로젝트**: 네이티브 WinMD 파일은 메타데이터만으로 구성됩니다. 해당 구현은 별도 DLL 파일에 있습니다. **새 프로젝트** 대화 상자의 Windows 런타임 구성 요소 프로젝트 템플릿을 선택하거나, 빈 프로젝트에서 시작해 프로젝트 속성을 수정하여 WinMD 파일을 생성함으로써 네이티브 이진 파일을 만들 수 있습니다. 프로젝트가 연결되지 않은 네임스페이스로 구성된 경우, 빌드 오류로부터 그러한 네임스페이스를 결합하거나 MSMerge 도구를 실행하는 사용자를 확인할 수 있습니다.
 

@@ -4,26 +4,28 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - class diagrams, creating
 - Class Designer [Visual Studio], opening
 ms.assetid: 0eac1b54-2711-4e4b-9654-a0c429c08c8f
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: acd999878d112f236a1ee02f495fc9d10a9a735c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: e4017c5944a6cbc2e8f04980cdd349be92c02717
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-add-class-diagrams-to-projects-class-designer"></a>방법: 프로젝트에 클래스 다이어그램 추가(클래스 디자이너)
-클래스와 기타 형식을 디자인, 편집 및 리팩터링하려면 Visual C# .NET, Visual Basic .NET 또는 C++ 프로젝트에 클래스 다이어그램을 추가합니다. 프로젝트에서 각기 다른 코드 부분을 표시하려면 여러 클래스 다이어그램을 프로젝트에 추가합니다.  
+클래스와 기타 형식을 디자인, 편집 및 리팩터링하려면 C#, Visual Basic 또는 C++ 프로젝트에 클래스 다이어그램을 추가합니다. 프로젝트에서 각기 다른 코드 부분을 표시하려면 여러 클래스 다이어그램을 프로젝트에 추가합니다.  
   
 여러 앱 간에 코드를 공유하는 프로젝트에서는 클래스 다이어그램을 만들 수 없습니다. UML 클래스 다이어그램을 만들려면 [Visual Studio에서 UML 모델링 프로젝트 및 다이어그램 만들기](../../modeling/create-uml-modeling-projects-and-diagrams.md)를 참조하세요.  
   

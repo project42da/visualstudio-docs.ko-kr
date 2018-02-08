@@ -4,33 +4,38 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vb.ProjectPropertiesAdvancedCompile
-helpviewer_keywords: Advanced Compiler Settings dialog box
+f1_keywords:
+- vb.ProjectPropertiesAdvancedCompile
+helpviewer_keywords:
+- Advanced Compiler Settings dialog box
 ms.assetid: 1f81133a-293f-4dba-bc1c-8baafb01d857
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c3dd72236cf23131d510f9d512ea1dcd2a4dd15a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: b2e8661fb7984fd5b04b64211bf209827683ee0a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="advanced-compiler-settings-dialog-box-visual-basic"></a>고급 컴파일러 설정 대화 상자(Visual Basic)
+
 **프로젝트 디자이너**의 **고급 컴파일러 설정** 대화 상자를 사용하여 프로젝트의 고급 빌드 구성 속성을 지정합니다. 이 대화 상자는 Visual Basic 프로젝트에만 적용됩니다.  
   
-### <a name="to-access-this-dialog-box"></a>이 대화 상자에 액세스하려면  
+### <a name="to-access-this-dialog-box"></a>이 대화 상자에 액세스하려면
   
 1.  **솔루션 탐색기**에서 프로젝트 노드(**솔루션** 노드 아님)를 선택합니다.  
   
 2.  **프로젝트** 메뉴에서 **속성**을 클릭합니다. **프로젝트 디자이너**가 나타나면 **컴파일** 탭을 클릭합니다.  
   
-3.  [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)에서 **구성** 및 **플랫폼**을 선택합니다. 단순화된 빌드 구성에서 **구성** 및 **플랫폼** 목록이 표시되지 않습니다. 자세한 내용은 [디버그 및 릴리스 프로젝트 구성](http://msdn.microsoft.com/en-us/0440b300-0614-4511-901a-105b771b236e)을 참조하세요.  
+3.  [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)에서 **구성** 및 **플랫폼**을 선택합니다. 단순화된 빌드 구성에서 **구성** 및 **플랫폼** 목록이 표시되지 않습니다. 자세한 내용은 [방법: 디버그 및 릴리스 구성 설정](../../debugger/how-to-set-debug-and-release-configurations.md)을 참조하세요.
   
 4.  **고급 컴파일 옵션**을 클릭합니다.  
   
@@ -65,9 +70,11 @@ ms.lasthandoff: 12/22/2017
  **사용자 지정 상수**  
  이 텍스트 상자에 응용 프로그램의 사용자 지정 상수를 입력합니다. **Name1="Value1",Name2="Value2",Name3="Value3"** 양식을 사용하여 항목을 쉼표로 구분해야 합니다.  
   
-## <a name="other-settings"></a>기타 설정  
+## <a name="other-settings"></a>기타 설정
+
  **Serialization 어셈블리 생성**  
  이 설정은 컴파일러가 XML serialization 어셈블리를 만드는지를 지정합니다. 코드에서 형식을 직렬화하는 데 <xref:System.Xml.Serialization.XmlSerializer> 클래스를 사용한 경우 serialization 어셈블리가 해당 클래스의 시작 성능을 향상할 수 있습니다. 기본적으로 이 옵션은 **자동**으로 설정됩니다. 이 설정은 코드에서 형식을 XML로 인코딩하는 데 <xref:System.Xml.Serialization.XmlSerializer>를 사용한 경우에만 serialization 어셈블리가 생성되도록 지정합니다. **끄기**는 코드에서 <xref:System.Xml.Serialization.XmlSerializer>를 사용하는지와 관계없이 serialization 어셈블리가 생성되지 않도록 지정합니다. **켜기**는 serialization 어셈블리가 항상 생성되도록 지정합니다. Serialization 어셈블리의 이름은 `TypeName`.XmlSerializers.dll로 지정됩니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)
+
+## <a name="see-also"></a>참고 항목
+
+[프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../../ide/reference/compile-page-project-designer-visual-basic.md)

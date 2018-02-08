@@ -21,11 +21,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: fb9b5119659600b4bfd902e61eda70a85b645efd
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: b92558a7838646ff7cfde88bffd9f709a997137a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="create-solutions-and-projects"></a>솔루션 및 프로젝트 만들기
 
@@ -82,11 +82,11 @@ Visual Studio에서 앱을 개발하는 데 솔루션과 프로젝트는 필요�
 1. 마법사에서 파일의 위치로 이동한 다음 **이름** 상자에 새 프로젝트에 대한 이름을 입력합니다. 완료되면 **마침** 단추를 선택합니다.
 
 > [!NOTE]
-> 이 옵션은 상대적으로 간단한 파일 컬렉션에 적합합니다. 현재, Visual C++, Apache Cordova, Visual Basic 및 Visual C# 프로젝트 형식만 지원됩니다.
+> 이 옵션은 상대적으로 간단한 파일 컬렉션에 적합합니다. 현재, Visual C++, Apache Cordova, Visual Basic 및 C# 프로젝트 형식만 지원됩니다.
 
 ## <a name="add-files-to-a-solution"></a>솔루션에 파일 추가
 
-솔루션의 readme 파일과 같이 여러 프로젝트에 적용되는 파일 또는 특정 프로젝트 아래가 아니라 논리적으로 솔루션 수준에 속하는 기타 파일이 있을 경우 솔루션 자체에 추가할 수 있습니다. 솔루션에 항목을 추가하려면 **솔루션 탐색기**에서 솔루션 노드를 컨텍스트(마우스 오른쪽 단추로 클릭) 메뉴에서 **추가**, **새 항목** 또는 **추가**, **기존 항목**을 선택합니다.
+솔루션의 readme 파일과 같이 여러 프로젝트에 적용되는 파일 또는 특정 프로젝트 아래가 아니라 논리적으로 솔루션 수준에 속하는 기타 파일이 있을 경우 솔루션 자체에 추가할 수 있습니다. 솔루션에 항목을 추가하려면 **솔루션 탐색기**에서 솔루션 노드를 컨텍스트(오른쪽 클릭) 메뉴에서 **추가**, **새 항목** 또는 **추가**, **기존 항목**을 선택합니다.
 
 ## <a name="create-a-net-project-that-targets-a-specific-version-of-the-net-framework"></a>.NET Framework의 특정 버전을 대상으로 하는 .NET 프로젝트 만들기
 

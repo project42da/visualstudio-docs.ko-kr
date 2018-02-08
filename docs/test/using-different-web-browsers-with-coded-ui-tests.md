@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: ca381d794569ebae4da2d46225d800dbfe4cf480
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 4573d87bbb7d5f447bf6d2038cec310132a0c9f7
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-different-web-browsers-with-coded-ui-tests"></a>코딩된 UI 테스트에 다른 웹 브라우저 사용
 코딩된 UI 테스트는 Internet Explorer로 테스트를 기록하여 웹 응용 프로그램 테스트를 자동화합니다. 그런 다음 이러한 웹 응용 프로그램에 대해 Internet Explorer 또는 기타 브라우저를 사용하여 테스트를 사용자 지정하고 재생할 수 있습니다.  
@@ -78,7 +79,7 @@ ms.lasthandoff: 01/09/2018
     > [!TIP]
     >  또한 [여기](http://visualstudiogallery.msdn.microsoft.com/11cfc881-f8c9-4f96-b303-a2780156628d/)에서 코딩된 UI 다중 브라우저 테스트용 Selenium 구성 요소를 다운로드할 수 있습니다.  
   
- 코딩된 UI 테스트를 만들고 사용하는 방법은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)를 참조하세요.  
+ 코딩된 UI 테스트를 만들고 사용하는 방법은 [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)를 참조하세요.  
   
 ### <a name="enable-debugging"></a>디버깅 사용  
  웹 응용 프로그램을 디버깅하려면 다음 구성 옵션을 완료해야 합니다.  

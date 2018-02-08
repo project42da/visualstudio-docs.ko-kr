@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: fbda836ec423d9a86b51b2334a3015589512d816
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 15970f48791078d498fa7a187546c1c7230d3cf0
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="testing-sharepoint-2010-applications-with-coded-ui-tests"></a>코딩된 UI 테스트를 사용하여 SharePoint 2010 응용 프로그램 테스트
 SharePoint 응용 프로그램에 코딩된 UI 테스트를 포함하면 해당 UI 컨트롤을 포함해서 전체 응용 프로그램이 올바르게 작동하는지 확인할 수 있습니다. 코딩된 UI 테스트는 또한 사용자 인터페이스에서 값 및 논리의 유효성을 검사할 수 있습니다.  
@@ -29,12 +30,12 @@ SharePoint 응용 프로그램에 코딩된 UI 테스트를 포함하면 해당 
   
  **참고**  
   
--   ![필수 구성 요소](../test/media/prereq.png "Prereq") SharePoint 응용 프로그램에 대한 코딩된 UI 테스트는 SharePoint 2010에서만 지원됩니다.  
+-   ![필수 조건](../test/media/prereq.png "필수 조건") SharePoint 응용 프로그램에 대한 코딩된 UI 테스트는 SharePoint 2010에서만 지원됩니다.  
   
--   ![필수 구성 요소](../test/media/prereq.png "Prereq") SharePoint 응용 프로그램에서 Visio 및 PowerPoint 2010 컨트롤은 지원되지 않습니다.  
+-   ![필수 조건](../test/media/prereq.png "필수 조건") SharePoint 응용 프로그램에서 Visio 및 PowerPoint 2010 컨트롤은 지원되지 않습니다.  
   
 ## <a name="creating-a-coded-ui-test-for-your-sharepoint-app"></a>SharePoint 응용 프로그램에 대해 코딩된 UI 테스트 만들기  
- SharePoint 2010 응용 프로그램에 대한[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate) 는 다른 유형의 응용 프로그램에 대해 테스트 만들기와 동일합니다. 기록 및 재생은 웹 편집 인터페이스의 모든 컨트롤에 대해 지원됩니다. 범주 및 웹 파트 선택 인터페이스는 모두 표준 웹 컨트롤입니다.  
+ SharePoint 2010 응용 프로그램에 대한[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md) 는 다른 유형의 응용 프로그램에 대해 테스트 만들기와 동일합니다. 기록 및 재생은 웹 편집 인터페이스의 모든 컨트롤에 대해 지원됩니다. 범주 및 웹 파트 선택 인터페이스는 모두 표준 웹 컨트롤입니다.  
   
  ![SharePoint 웹 파트](../test/media/cuit_sharepoint.png "CUIT_SharePoint")  
   

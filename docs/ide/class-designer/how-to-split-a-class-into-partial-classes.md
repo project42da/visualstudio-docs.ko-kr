@@ -4,30 +4,32 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Class Designer, partial classes
 - partial classes, Class Designer
 ms.assetid: 6f6b0b30-3996-4569-9200-20482b3adf90
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4d550b5b6df7b799f00b0043846be387cb6e6322
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 9e9d1b0dca7c8e9d152a84273410e4bd7d768508
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>방법: 클래스를 부분 클래스로 분할(클래스 디자이너)
-Visual Basic의 `Partial` 키워드 또는 Visual C#의 `partial` 키워드를 사용하여 여러 선언에서 클래스 또는 구조체의 선언을 나눌 수 있습니다. 원하는 만큼 다양한 소스 파일 또는 하나의 소스 파일에서 원하는 개수만큼 partial 선언을 사용할 수 있습니다. 그러나 모든 선언이 동일한 어셈블리와 동일한 네임스페이스에 있어야 합니다.  
+Visual Basic의 `Partial` 키워드 또는 C#의 `partial` 키워드를 사용하여 여러 선언에서 클래스 또는 구조체의 선언을 나눌 수 있습니다. 원하는 만큼 다양한 소스 파일 또는 하나의 소스 파일에서 원하는 개수만큼 partial 선언을 사용할 수 있습니다. 그러나 모든 선언이 동일한 어셈블리와 동일한 네임스페이스에 있어야 합니다.  
   
 Partial 클래스는 여러 상황에서 유용합니다. 예를 들어, 대규모 프로젝트에서 작업하는 경우 하나의 클래스를 둘 이상의 파일에 나누면 둘 이상의 프로그래머가 동시에 작업할 수 있습니다. Visual Studio에서 생성된 코드로 작업하는 경우 소스 파일을 다시 만들 필요 없이 클래스를 변경할 수 있습니다. Visual Studio에서 생성된 코드의 예로는 Windows Forms 및 웹 서비스 래퍼 코드가 있습니다. 따라서 Visual Studio에서 만든 파일을 수정하지 않고도 자동 생성된 클래스를 사용하는 코드를 만들 수 있습니다.  
   
-partial 메서드는 두 가지 종류가 있습니다. Visual C#에서는 선언(declaring) 및 구현(implementing), Visual Basic에서는 선언(declaration) 및 구현(implementation)이라고 합니다.  
+partial 메서드는 두 가지 종류가 있습니다. C#에서는 선언(declaring) 및 구현(implementing), Visual Basic에서는 선언(declaration) 및 구현(implementation)이라고 합니다.  
   
 클래스 디자이너에서는 partial 클래스 및 메서드를 지원합니다. 클래스 다이어그램의 형식 도형은 partial 클래스의 단일 선언 위치를 가리킵니다. partial 클래스가 여러 파일에 정의된 경우 **속성** 창에서 **새 멤버 위치** 속성을 설정하여 클래스 디자이너가 사용할 선언 위치를 지정할 수 있습니다. 즉, 클래스 도형을 두 번 클릭하면 클래스 디자이너가 **새 멤버 위치** 속성으로 식별된 클래스 선언이 있는 소스 파일로 이동합니다. 클래스 도형에서 partial 메서드를 두 번 클릭하면 클래스 디자이너가 partial 메서드 선언으로 이동합니다. 또한, **속성** 창의 **파일 이름** 속성이 선언 위치를 가리킵니다. partial 클래스의 경우 **파일 이름**은 해당 클래스의 선언 및 구현 코드가 포함된 파일을 모두 나열합니다. 그러나 partial 메서드의 경우에는 **파일 이름**이 partial 메서드 선언이 포함된 파일만 나열합니다.  
   
@@ -56,7 +58,7 @@ End Class
 ```  
 
 ## <a name="example"></a>예  
-Visual C#에서 클래스 정의를 분할하려면 다음 예제와 같이 `partial` 키워드를 사용합니다.  
+C#에서 클래스 정의를 분할하려면 다음 예제와 같이 `partial` 키워드를 사용합니다.  
   
 ```csharp  
 // First part of class definition.  

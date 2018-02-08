@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d4d302c84322388f96b37aa913e4debd3d331a7
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 5bde32fc86610fa451aa01659401362fe4207f5c
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE 개요
 
@@ -30,7 +30,7 @@ Android 휴대폰용 앱을 만들고 싶은가요? 예, 그렇게 할 수 있�
 
 ### <a name="create-mobile-apps"></a>모바일 앱 만들기
 
-Visual C#과 Xamarin 또는 Visual C++를 사용하여 다양한 플랫폼용 네이티브 모바일 앱을 만들거나 Apache Cordova에서 JavaScript를 사용하는 하이브리드 앱을 만들 수 있습니다. Unity, Unreal, DirectX, Cocos 등을 위한 모바일 게임을 작성할 수 있습니다. Visual Studio에는 Android 앱을 실행하고 디버그하는 데 도움이 되는 Android 에뮬레이터가 포함되어 있습니다.
+C#과 Xamarin 또는 Visual C++를 사용하여 다양한 플랫폼용 네이티브 모바일 앱을 만들거나 Apache Cordova에서 JavaScript를 사용하는 하이브리드 앱을 만들 수 있습니다. Unity, Unreal, DirectX, Cocos 등을 위한 모바일 게임을 작성할 수 있습니다. Visual Studio에는 Android 앱을 실행하고 디버그하는 데 도움이 되는 Android 에뮬레이터가 포함되어 있습니다.
 
 Azure 앱 서비스를 만들어 모바일 앱에서 클라우드의 강력한 기능을 활용할 수 있습니다. Azure 앱 서비스를 사용하면 앱에서 데이터를 클라우드에 저장하고, 사용자를 안전하게 인증하며, 앱과 비즈니스의 요구를 수용할 수 있도록 리소스를 자동으로 강화하거나 축소할 수 있습니다. 자세한 내용은 [모바일 앱 개발](https://www.visualstudio.com/vs/mobile-app-development/)을 참조하세요.
 
@@ -44,7 +44,7 @@ Visual Studio는 Microsoft Azure에서 구동하는 클라우드 지원 응용 �
 
 - [Azure 저장소](http://azure.microsoft.com/documentation/services/storage/)
 
-[HockeyApp](https://www.visualstudio.com/hockey-app/)을 통해 베타 버전을 배포하고, 실시간 충돌 보고서를 수집하고, 실제 사용자의 의견을 얻으세요. 또한 Office 365 REST API를 자신의 앱에 통합하여 클라우드에 저장된 데이터에 연결할 수 있습니다. 자세한 내용은 [이 GitHub 샘플](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)을 참조하세요.
+[HockeyApp](https://www.visualstudio.com/hockey-app/)을 통해 베타 버전을 배포하고, 실시간 크래시 보고서를 수집하고, 실제 사용자의 의견을 얻으세요. 또한 Office 365 REST API를 자신의 앱에 통합하여 클라우드에 저장된 데이터에 연결할 수 있습니다. 자세한 내용은 [이 GitHub 샘플](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)을 참조하세요.
 
 [Application Insights](https://marketplace.visualstudio.com/items?itemName=VisualStudioOnlineApplicationInsights.application-insights)는 앱 및 웹 서비스의 품질 문제를 확인 및 진단하는 데 도움이 됩니다. Application Insights를 통해 사용자가 실제로 앱을 통해 무엇을 하는지 이해하고 사용자 환경을 최적화할 수도 있습니다.
 
@@ -56,7 +56,7 @@ Visual Studio는 Microsoft Azure에서 구동하는 클라우드 지원 응용 �
 
 ### <a name="build-cross-platform-apps-and-games"></a>플랫폼 간 앱 및 게임 제작
 
-Visual Studio를 사용하여 Android, iOS, Linux, Windows 및 기타 장치용 앱과 게임을 빌드할 수 있습니다. [플랫폼 간 모바일 개발](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)에서 자세한 내용을 알아보세요. 유니버설 Windows 앱을 통해 여러 플랫폼 간에 코드를 활용할 수 있습니다. 자세한 내용은 [유니버설 Windows 앱](https://dev.windows.com/en-us/windows-apps)을 참조하세요.
+Visual Studio를 사용하여 Android, iOS, Linux, Windows 및 기타 장치용 앱과 게임을 빌드할 수 있습니다. [플랫폼 간 모바일 개발](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)에서 자세한 내용을 알아보세요. 유니버설 Windows 앱을 통해 여러 플랫폼 간에 코드를 활용할 수 있습니다. 자세한 내용은 [유니버설 Windows 앱](https://dev.windows.com/windows-apps)을 참조하세요.
 
 앱 요구 사항과 사용하려는 언어에 따라 필요한 도구를 선택합니다.
 
@@ -109,7 +109,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
   ![UWP 빈 앱 템플릿](../ide/media/new-uwp-blank-app-template.png)
 
-  이렇게 하면 Visual C# 및 XAML을 프로그래밍 언어로 사용하여 비어 있는 새 유니버설 Windows 앱 프로젝트를 만듭니다. Visual Studio에서 사용자의 프로젝트를 설정하는 동안 잠시 기다려주세요. 정보를 요청하는 메시지가 표시되는 경우 이때는 기본값을 그대로 사용합니다.
+  이렇게 하면 C# 및 XAML을 프로그래밍 언어로 사용하여 비어 있는 새 유니버설 Windows 앱 프로젝트를 만듭니다. Visual Studio에서 사용자의 프로젝트를 설정하는 동안 잠시 기다려주세요. 정보를 요청하는 메시지가 표시되는 경우 이때는 기본값을 그대로 사용합니다.
 
 1. **새 유니버설 Windows 플랫폼 프로젝트** 대화 상자에서 **확인**을 선택하여 기본값을 승인합니다.
 
@@ -195,7 +195,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
  ![리팩터링](../ide/media/VSIDE_refactor.png)
 
-- **IntelliSense** 는 편집기에서 직접 코드에 대한 형식 정보를 표시하고 경우에 따라 약간의 코드를 자동으로 작성하는 인기 있는 기능 집합에 대한 포괄적인 용어입니다. IntelliSense는 별도의 도움말 창에서 형식 정보를 조회할 필요가 없도록 기본 설명서를 편집기에 인라인으로 포함하는 것과 같습니다. IntelliSense 기능은 언어에 따라 달라집니다. 자세한 내용은 [Visual C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md) 및 [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)를 참조하세요. 다음 그림에서는 일부 IntelliSense 기능의 작동을 보여 줍니다.
+- **IntelliSense** 는 편집기에서 직접 코드에 대한 형식 정보를 표시하고 경우에 따라 약간의 코드를 자동으로 작성하는 인기 있는 기능 집합에 대한 포괄적인 용어입니다. IntelliSense는 별도의 도움말 창에서 형식 정보를 조회할 필요가 없도록 기본 설명서를 편집기에 인라인으로 포함하는 것과 같습니다. IntelliSense 기능은 언어에 따라 달라집니다. 자세한 내용은 [C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md) 및 [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)를 참조하세요. 다음 그림에서는 일부 IntelliSense 기능의 작동을 보여 줍니다.
 
   ![Visual Studio 멤버 목록](../ide/media/vs2017_Intellisense.png)
 
@@ -237,7 +237,7 @@ TFS(Team Foundation Server)는 Visual Studio용 응용 프로그램 수명 주�
 
 ![Visual Studio 팀 탐색기](../ide/media/vs2017_teamexplorer.png)
 
-팀의 개발자들이 버전 제어에 체크 인한 코드를 빌드하도록 빌드 프로세스를 자동화할 수도 있습니다. 예를 들어 밤마다 또는 코드를 체크 인할 때마다 하나 이상의 프로젝트를 빌드할 수 있습니다. 자세한 내용은 [모든 플랫폼에서 연속 통합](https://www.visualstudio.com/en-us/docs/build/overview)을 참조하세요.
+팀의 개발자들이 버전 제어에 체크 인한 코드를 빌드하도록 빌드 프로세스를 자동화할 수도 있습니다. 예를 들어 밤마다 또는 코드를 체크 인할 때마다 하나 이상의 프로젝트를 빌드할 수 있습니다. 자세한 내용은 [빌드 및 릴리스(VSTS 및 TFS)](/vsts/build-release/index)를 참조하세요.
 
 ## <a name="connect-to-services-databases-and-cloud-based-resources"></a>서비스, 데이터베이스 및 클라우드 기반 리소스에 연결
 
@@ -280,6 +280,6 @@ Visual Studio IDE 둘러보기를 완료하신 것을 축하합니다! 주요 �
 * [Visual Studio IDE](https://www.visualstudio.com/vs/)
 * [Visual Studio 다운로드](https://www.visualstudio.com/downloads/)
 * [Visual Studio 블로그](https://blogs.msdn.microsoft.com/visualstudio/)
-* [Visual Studio 포럼](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?category=visualstudio%2Cvsarch%2Cvsdbg%2Cvstest%2Cvstfs%2Cvsdata%2Cvsappdev%2Cvisualbasic%2Cvisualcsharp%2Cvisualc)
+* [Visual Studio 포럼](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio%2Cvsarch%2Cvsdbg%2Cvstest%2Cvstfs%2Cvsdata%2Cvsappdev%2Cvisualbasic%2Cvisualcsharp%2Cvisualc)
 * [Microsoft Virtual Academy](https://mva.microsoft.com/)
 * [Channel 9](https://channel9.msdn.com/)

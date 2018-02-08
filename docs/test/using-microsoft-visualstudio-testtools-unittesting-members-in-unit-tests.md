@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 251843d3e5a32ddedfe4f9081bd52330a457fe24
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 3e0be7d788d4471f249b50f8c846343514b1c346
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="using-microsoftvisualstudiotesttoolsunittesting-members-in-unit-tests"></a>단위 테스트에서 Microsoft.VisualStudio.TestTools.UnitTesting 멤버 사용
 단위 테스트 프레임워크는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 단위 테스트를 지원합니다. 단위 테스트를 코딩할 때는 <Microsoft.VisualStudio.TestPlatform.UnitTestFramework> 네임스페이스의 클래스와 멤버를 사용합니다. 단위 테스트를 처음부터 작성했거나 테스트 중인 코드에서 생성된 단위 테스트를 다시 정의하는 경우 이러한 클래스와 멤버를 사용할 수 있습니다.  
@@ -41,9 +42,10 @@ ms.lasthandoff: 01/09/2018
   
 -   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.DataSourceElementCollection  
   
-## <a name="attributes-used-to-establish-a-calling-order"></a>호출 순서를 설정하는 데 사용되는 특성  
- 다음 특성 중 하나를 사용하여 데코레이팅도니 코드 요소는 지정하는 즉시 호출됩니다. 자세한 내용은 [단위 테스트 분석](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)을 참조하세요.  
-  
+## <a name="attributes-used-to-establish-a-calling-order"></a>호출 순서를 설정하는 데 사용되는 특성
+
+다음 특성 중 하나를 사용하여 데코레이팅된 코드 요소는 지정하는 즉시 호출됩니다. 자세한 내용은 [단위 테스트 분석](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)을 참조하세요.
+
 ### <a name="for-assemblies"></a>어셈블리  
  AssemblyInitialize 및 AssemblyCleanup은 어셈블리를 로드한 직후와 어셈블리를 언로드하기 직전에 호출됩니다.  
   
@@ -64,8 +66,9 @@ ms.lasthandoff: 01/09/2018
   
 -   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestCleanupAttribute  
   
-## <a name="attributes-used-to-identify-test-classes-and-methods"></a>테스트 클래스 및 메서드를 식별하는 데 사용되는 특성  
- 모든 테스트 클래스에는 TestClass 특성이 있어야 하며 모든 테스트 메서드에는 TestMethod 특성이 있어야 합니다. 자세한 내용은 [단위 테스트 분석](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)을 참조하세요.  
+## <a name="attributes-used-to-identify-test-classes-and-methods"></a>테스트 클래스 및 메서드를 식별하는 데 사용되는 특성
+
+모든 테스트 클래스에는 TestClass 특성이 있어야 하며 모든 테스트 메서드에는 TestMethod 특성이 있어야 합니다. 자세한 내용은 [단위 테스트 분석](http://msdn.microsoft.com/a03d1ee7-9999-4e7c-85df-7d9073976144)을 참조하세요.
   
 -   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.TestClassAttribute  
   
@@ -120,12 +123,10 @@ ms.lasthandoff: 01/09/2018
   
 -   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.CssProjectStructureAttribute  
   
-## <a name="classes-used-with-private-accessors"></a>전용 접근자와 함께 사용되는 클래스  
- [publicize를 사용하여 전용 접근자 만들기](http://msdn.microsoft.com/en-us/2056c6a7-6672-42a7-8f53-fead33c56deb)에서 설명하는 것처럼 전용 메서드에 대한 단위 테스트를 생성할 수 있습니다. 이러한 단위 테스트 생성에서는 PrivateObject 클래스의 개체를 인스턴스화하는 전용 접근자 클래스가 만들어집니다. PrivateObject 클래스는 전용 접근자 프로세스의 일부분으로 리플렉션을 사용하는 래퍼 클래스입니다. PrivateType 클래스도 이와 유사하지만 전용 인스턴스 메서드를 호출하는 대신 전용 정적 메서드를 호출하는 데 사용됩니다.  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateObject  
-  
--   Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateType  
-  
-## <a name="see-also"></a>참고 항목  
- Microsoft.VisualStudio.TestPlatform.UnitTestFramework
+## <a name="classes-used-with-private-accessors"></a>전용 접근자와 함께 사용되는 클래스
+
+전용 메서드에 대한 단위 테스트를 생성할 수 있습니다. 이러한 단위 테스트 생성에서는 PrivateObject 클래스의 개체를 인스턴스화하는 전용 접근자 클래스가 만들어집니다. PrivateObject 클래스는 전용 접근자 프로세스의 일부분으로 리플렉션을 사용하는 래퍼 클래스입니다. PrivateType 클래스도 이와 유사하지만 전용 인스턴스 메서드를 호출하는 대신 전용 정적 메서드를 호출하는 데 사용됩니다.
+
+- Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateObject
+
+- Microsoft.VisualStudio.TestPlatform.UnitTestFramework.PrivateType

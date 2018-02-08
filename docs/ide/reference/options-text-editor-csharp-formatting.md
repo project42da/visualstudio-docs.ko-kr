@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -24,19 +25,21 @@ helpviewer_keywords:
 - formatting [C#]
 - Text Editor Options dialog box, formatting
 ms.assetid: 5a7bb668-1d0c-4ffe-9508-24592813162e
-caps.latest.revision: "23"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 2032b0b50c9f22396d63b32b1d050eb40ea70a79
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 0c4303cb996094562ed955e58f6b7ec37b38fc2c
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="options-text-editor-c-formatting"></a>옵션, 텍스트 편집기, C#, 서식
-**서식** 속성 페이지 대화 상자를 사용하여 코드 편집기의 서식 코드에 대한 옵션을 설정합니다. 이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기**를 확장하고, **C#**을 확장하고, **서식**을 클릭합니다.  
+
+**서식** 속성 페이지 대화 상자를 사용하여 코드 편집기의 서식 코드에 대한 옵션을 설정합니다. Visual Studio의 **옵션** 대화 상자에 액세스하려면 **도구** > **옵션**을 클릭합니다. 그런 다음, **텍스트 편집기**, **C#**, **코드스타일**을 차례로 확장하고 **서식 지정**을 클릭합니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  

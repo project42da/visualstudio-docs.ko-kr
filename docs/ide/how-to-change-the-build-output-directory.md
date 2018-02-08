@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: output directory, changing
+helpviewer_keywords:
+- output directory, changing
 ms.assetid: a8333c89-afb2-4b1d-b2e2-9146da852402
-caps.latest.revision: "14"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8d1dcd42cf2251a4cd20047eaa3fc67110cf048e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 14aad8b82a3757fecb1d449a671fc07c2582bb5f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-change-the-build-output-directory"></a>방법: 빌드 출력 디렉터리 변경
 프로젝트에서 생성된 구성별로(디버그, 릴리스 또는 둘 다) 출력의 위치를 지정할 수 있습니다.  
@@ -32,7 +35,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  메뉴 모음에서 **프로젝트**, *Appname* **속성**을 선택합니다. **솔루션 탐색기** 에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택할 수도 있습니다.  
   
-2.  Visual Basic 프로젝트의 경우 **컴파일** 탭을 선택합니다. Visual C# 프로젝트의 경우 **빌드** 탭을 선택합니다. C++ 프로젝트 또는 JavaScript 프로젝트의 경우 **일반** 탭을 선택합니다.  
+2.  Visual Basic 프로젝트의 경우 **컴파일** 탭을 선택합니다. C# 프로젝트의 경우 **빌드** 탭을 선택합니다. C++ 프로젝트 또는 JavaScript 프로젝트의 경우 **일반** 탭을 선택합니다.  
   
 3.  맨 위의 구성 드롭다운에서 출력 파일 위치를 변경하려는 구성(디버그, 릴리스 또는 둘 다)을 선택합니다.  
   

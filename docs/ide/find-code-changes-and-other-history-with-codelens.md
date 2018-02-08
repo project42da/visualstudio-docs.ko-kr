@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b454893c2d68b23d130d6ff38be493d988dfb1fe
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: a1123d1c557f6e7f01eb98e668b4f13785ee6893
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens에서 코드 변경 내용 및 기타 기록 찾기
 
@@ -40,9 +42,9 @@ ms.lasthandoff: 12/22/2017
 
 -  Visual Studio Enterprise 또는 Visual Studio Professional
 
--  Visual C# .NET 또는 Visual Basic .NET 코드
+-  C# 또는 Visual Basic 코드
 
-**참조** 지표를 선택합니다(**Alt + 2**). **0 참조**가 표시된 경우 Visual C# 또는 Visual Basic 코드의 참조가 없습니다. 여기에 XAML, ASPX 파일 등 다른 항목의 참조는 포함되지 않습니다.
+**참조** 지표를 선택합니다(**Alt + 2**). **0 참조**가 표시된 경우 C# 또는 Visual Basic 코드의 참조가 없습니다. 여기에 XAML, ASPX 파일 등 다른 항목의 참조는 포함되지 않습니다.
 
 ![CodeLens &#45; 참조 지표 선택](../ide/media/codelensviewreferenceslist.png "CodeLensViewReferencesList")  
 
@@ -66,9 +68,9 @@ ms.lasthandoff: 12/22/2017
 
 - Team Foundation Server 2013 이상, Visual Studio Team Services 또는 Git
 
-- 코드 편집기에서 팀에 연락하려는 경우[Lync 2010 이상 또는 비즈니스용 Skype](http://technet.microsoft.com/en-us/lync)  
+- 코드 편집기에서 팀에 연락하려는 경우[Lync 2010 이상 또는 비즈니스용 Skype](https://technet.microsoft.com/office/dn788773)
 
-TFVC(Team Foundation 버전 제어) 또는 Git로 저장된 Visual C# .NET 또는 Visual Basic .NET 코드의 경우 클래스 및 메서드 수준에서 CodeLens 세부 정보를 가져옵니다(*code-element-level* 지표). Git 리포지토리가 TfGit에서 호스트되는 경우 TFS 작업 항목에 대한 링크도 가져올 수 있습니다.  
+TFVC(Team Foundation 버전 제어) 또는 Git으로 저장된 C# 또는 Visual Basic 코드의 경우 클래스 및 메서드 수준에서 CodeLens 세부 정보를 가져옵니다(*code-element-level* 지표). Git 리포지토리가 TfGit에서 호스트되는 경우 TFS 작업 항목에 대한 링크도 가져올 수 있습니다.  
 
 ![코드 요소 수준 지표](../ide/media/codelenselementlevelindicators.png "CodeLensElementLevelIndicators")  
 
@@ -86,7 +88,7 @@ Visual Studio 편집기에서 열 수 있는 기타 모든 파일 형식의 경�
 
 ![CodeLens: TFVC에서 코드에 대한 변경 기록 가져오기](../ide/media/codelenscodechanges.png "CodeLensCodeChanges")  
 
-기본 기간은 지난 12 개월입니다. 코드가 Team Foundation Server에 저장되는 경우 [TFSConfig 명령](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62) 을 [CodeIndex 명령](../ide/codeindex-command.md) 및 **/indexHistoryPeriod** 플래그와 함께 실행하여 변경할 수 있습니다.  
+기본 기간은 지난 12 개월입니다. 코드가 Team Foundation Server에 저장되는 경우 [TFSConfig 명령](/vsts/tfs-server/command-line/tfsconfig-cmd) 을 [CodeIndex 명령](../ide/codeindex-command.md) 및 **/indexHistoryPeriod** 플래그와 함께 실행하여 변경할 수 있습니다.
 
 1년 이상 전의 변경 내용을 포함하여 모든 변경 내용에 대한 자세한 기록을 보려면 **모든 파일 변경 내용 표시**를 선택합니다.  
 
@@ -193,7 +195,7 @@ Visual Studio 편집기에서 열 수 있는 기타 모든 파일 형식의 경�
 
 -   Visual Studio Enterprise 또는 Visual Studio Professional  
   
--   Visual C# .NET 또는 Visual Basic .NET 코드  
+-   C# 또는 Visual Basic 코드  
   
 -   응용 프로그램 코드에 대한 단위 테스트가 있는 [단위 테스트 프로젝트](../test/unit-test-your-code.md)  
   
@@ -233,15 +235,15 @@ Visual Studio 편집기에서 열 수 있는 기타 모든 파일 형식의 경�
   
 ###  <a name="NoIndicators"></a> Q: CodeLens는 어디에 있나요?
 
-**A:** CodeLens는 메서드, 클래스, 인덱서 및 속성 수준에서 Visual C# .NET 및 Visual Basic .NET 코드에 표시됩니다. CodeLens는 기타 모든 형식의 파일에 대해 파일 수준에서 표시됩니다.
+**A:** CodeLens는 메서드, 클래스, 인덱서 및 속성 수준에서 C# 및 Visual Basic 코드에 표시됩니다. CodeLens는 기타 모든 형식의 파일에 대해 파일 수준에서 표시됩니다.
 
 - CodeLens가 설정되어 있는지 확인합니다. 그렇게 하려면 **도구**, **옵션**, **텍스트 편집기**, **모든 언어**, **CodeLens**로 이동합니다.  
-  
-- 코드가 TFS에 저장되는 경우 [CodeIndex 명령](../ide/codeindex-command.md) 과 [TFS 구성 명령](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)을 함께 사용하여 코드 인덱싱이 설정되어 있는지 확인합니다.  
 
-- TFS 관련 지표는 작업 항목이 코드와 링크되어 있는 경우 및 링크된 작업 항목을 열 권한이 있는 경우에만 나타납니다. [팀 멤버 권한이 있는지 확인합니다.](http://msdn.microsoft.com/en-us/f58805de-ba61-4d09-8f2d-d3ab9662ecfd)  
+- 코드가 TFS에 저장되는 경우 [CodeIndex 명령](../ide/codeindex-command.md) 과 [TFS 구성 명령](/vsts/tfs-server/command-line/tfsconfig-cmd)을 함께 사용하여 코드 인덱싱이 설정되어 있는지 확인합니다.
 
-- 단위 테스트 지표는 응용 프로그램 코드에서 단위 테스트를 하지 않은 경우 나타나지 않습니다. 테스트 상태 지표는 테스트 프로젝트에 자동으로 나타납니다. 응용 프로그램 코드에 단위 테스트가 있지만 테스트 지표가 나타나지 않는 경우 솔루션 빌드를 시도하십시오(**Ctrl + Shift + B**).  
+- TFS 관련 지표는 작업 항목이 코드와 링크되어 있는 경우 및 링크된 작업 항목을 열 권한이 있는 경우에만 나타납니다. [팀 멤버 권한이 있는지 확인합니다.](/vsts/work/scale/multiple-teams)
+
+- 단위 테스트 지표는 응용 프로그램 코드에서 단위 테스트를 하지 않은 경우 나타나지 않습니다. 테스트 상태 지표는 테스트 프로젝트에 자동으로 나타납니다. 응용 프로그램 코드에 단위 테스트가 있지만 테스트 지표가 나타나지 않는 경우 솔루션 빌드를 시도하십시오(**Ctrl + Shift + B**).
 
 ### <a name="q-why-dont-i-see-the-work-item-details-for-a-commit"></a>Q: 커밋에 대한 작업 항목 정보가 나타나지 않습니다.
 
@@ -301,11 +303,11 @@ CodeLens는 다른 버전의 Lync 또는 Skype가 설치되는 것을 지원하�
 
 ###  <a name="LocalVersion"></a> Q: "로컬 버전"이란 무엇인가요?
 
-**A:** **로컬 버전** 화살표는 이 파일의 로컬 버전에 있는 최신 변경 집합을 가리킵니다. 서버에 최신 변경 집합이 있는 경우, 변경 집합을 정렬하는 순서에 따라 **로컬 버전** 화살표의 위 또는 아래에 나타납니다.  
+**A:** **로컬 버전** 화살표는 이 파일의 로컬 버전에 있는 최신 변경 집합을 가리킵니다. 서버에 최신 변경 집합이 있는 경우, 변경 집합을 정렬하는 순서에 따라 **로컬 버전** 화살표의 위 또는 아래에 나타납니다.
 
 ### <a name="q-can-i-manage-how-codelens-processes-code-to-show-history-and-linked-items"></a>Q: CodeLens가 코드를 처리하여 기록 및 연결된 항목을 표시하는 방법을 관리할 수 있나요?
 
-**A:** 예, 코드가 TFS에 있는 경우 [CodeIndex 명령](../ide/codeindex-command.md) 과 [TFS 구성 명령](http://msdn.microsoft.com/en-us/94424190-3b6b-4f33-a6b6-5807f4225b62)을 함께 사용합니다.
+**A:** 예, 코드가 TFS에 있는 경우 [CodeIndex 명령](../ide/codeindex-command.md) 과 [TFS 구성 명령](/vsts/tfs-server/command-line/tfsconfig-cmd)을 함께 사용합니다.
 
 ## <a name="see-also"></a>참고 항목
 

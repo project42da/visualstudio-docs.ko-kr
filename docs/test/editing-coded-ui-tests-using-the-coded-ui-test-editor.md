@@ -7,17 +7,20 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.codedUItest.testeditor
-helpviewer_keywords: coded UI test, Coded UI Test Editor
+f1_keywords:
+- vs.codedUItest.testeditor
+helpviewer_keywords:
+- coded UI test, Coded UI Test Editor
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 2302c2bbfbd38ff307335b525aa319afb5f07e25
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 0cb316475748033bb020a2f3065f9492a5a201ed
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="editing-coded-ui-tests-using-the-coded-ui-test-editor"></a>코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집
 코딩된 UI 테스트 편집기에서는 코딩된 UI 테스트를 쉽게 수정할 수 있습니다. 코딩된 UI 테스트 편집기를 사용하여 테스트 메서드 및 UI 작업의 속성을 찾고 보고 편집할 수 있습니다. 또한 UI 컨트롤 맵을 사용하여 해당 컨트롤을 보고 편집할 수 있습니다.  
@@ -66,7 +69,7 @@ ms.lasthandoff: 01/09/2018
  2012 이전 버전의 Visual Studio Enterprise를 사용하는 중일 수 있습니다. 코딩된 UI 테스트 편집기는 MSDN 구독이 포함된 Visual Studio 2010 Feature Pack 2에서도 사용할 수 있습니다. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Microsoft Visual Studio 2010 Feature Pack 2](http://go.microsoft.com/fwlink/?LinkID=204119)을 참조하세요.  
   
 ##  <a name="CodedUITestEditor_EditActionAndControlProperties"></a> UI 작업 속성 및 해당 컨트롤 속성 수정  
- 코딩된 UI 테스트 편집기를 사용하면 테스트 메서드의 모든 UI 작업을 빠르게 찾고 볼 수 있습니다. 편집기에서 UI 작업을 선택하면 해당 컨트롤리 자동으로 강조 표시됩니다. 마찬가지로, 컨트롤을 선택하면 관련된 UI 작업이 강조 표시됩니다. UI 작업이나 컨트롤을 선택하고 나면 속성 창을 사용하여 해당하는 속성을 쉽게 수정할 수 있습니다.  
+ 코딩된 UI 테스트 편집기를 사용하면 테스트 메서드의 모든 UI 작업을 빠르게 찾고 볼 수 있습니다. 편집기에서 UI 작업을 선택하면 해당 컨트롤이 자동으로 강조 표시됩니다. 마찬가지로, 컨트롤을 선택하면 관련된 UI 작업이 강조 표시됩니다. UI 작업이나 컨트롤을 선택하고 나면 속성 창을 사용하여 해당하는 속성을 쉽게 수정할 수 있습니다.  
   
  ![UI 작업 속성](../test/media/codeduiedituiaction.png "CodedUIEditUIAction")  
 UI 작업 속성 편집  
@@ -194,7 +197,7 @@ UI 작업 속성 편집
  *그 외 무엇을 알아야 하나요?*  
  **참고**  
   
--   ![필수 조건](../test/media/prereq.png "필수 조건") UI 작업 앞에 특정 컨트롤을 사용할 수 있도록 만들어야 하는 경우 테스트 메서드에 사용자 지정 코드를 추가해야 합니다. 이때 적절한 UITestControl.WaitForControlXXX() 메서드를 사용하면 됩니다. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).  
+-   ![필수 조건](../test/media/prereq.png "필수 조건") UI 작업 앞에 특정 컨트롤을 사용할 수 있도록 만들어야 하는 경우 테스트 메서드에 사용자 지정 코드를 추가해야 합니다. 이때 적절한 UITestControl.WaitForControlXXX() 메서드를 사용하면 됩니다. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Making Coded UI Tests Wait For Specific Events During Playback](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)를 선택합니다.  
   
  **팁**  
   
@@ -216,6 +219,6 @@ UI 작업 속성 편집
 ## <a name="see-also"></a>참고 항목
 
 [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)  
-[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)  
+[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)  
 [데이터 기반의 코딩된 UI 테스트 만들기](../test/creating-a-data-driven-coded-ui-test.md)  
 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)

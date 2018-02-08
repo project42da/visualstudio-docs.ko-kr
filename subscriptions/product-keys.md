@@ -1,5 +1,5 @@
 ---
-title: "제품 키 사용"
+title: "제품 키 사용 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -9,13 +9,14 @@ Description: Learn how to obtain and manage your product keys in Visual Studio s
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 6d0da452a205042cee2b2c0b41990da50b303b3f
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 50143579a4bf9033e54385b81ef365228b2b63cf
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 제품 키 사용
+
 ## <a name="product-keys-overview"></a>제품 키 개요
 Visual Studio 구독에서는 응용 프로그램을 설계, 개발, 테스트 및 시연하는 다양한 Microsoft 제품에 대한 액세스 권한을 제공합니다. 이러한 제품 중 일부에는 설치 중에 제품 키가 필요하고, 일부에는 정품 인증이 필요합니다.
 
@@ -45,7 +46,7 @@ MPN, BizSpark, MCT 소프트웨어 및 서비스 및 MCT를 통해 제공되는 
 자체 연구에 따르면 대부분의 구독자는 각 구독에 포함된 제품 키 수만큼 보호됩니다. 추가 키가 필요한 경우 Visual Studio 구독 [고객 서비스](https://www.visualstudio.com/subscriptions/support/)를 통해 요청을 제출할 수 있으며 사례별로 승인됩니다.
 
 ## <a name="locating-and-claiming-product-keys"></a>제품 키 찾기 및 요청
-제품 키를 보려면 Visual Studio 구독에 로그인해야 합니다. 개별 제품 키는 아래 표시된 것처럼 [다운로드](https://my.visualstudio.com/downloads) 페이지에서 특정 제품에 대한 파란색 **키 가져오기** 링크를 선택하여 확인할 수 있습니다.  또한 모든 키는 [제품 키](https://my.visualstudio.com/productkeys) 페이지에서 전체적으로 사용할 수도 있습니다. 단일 제품에 대해 여러 키가 있는 경우 다운로드를 위해 [메모] 열에 해당 정보가 표시되어 사용해야 할 키를 식별하는 데 도움이 됩니다.
+제품 키를 보려면 Visual Studio 구독에 로그인해야 합니다. 개별 제품 키는 아래 표시된 것처럼 [다운로드](https://my.visualstudio.com/downloads) 페이지에서 특정 제품에 대한 파란색 **키 가져오기** 링크를 선택하여 확인할 수 있습니다.  또한 모든 키는 [제품 키](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) 페이지에서 전체적으로 사용할 수도 있습니다. 단일 제품에 대해 여러 키가 있는 경우 다운로드를 위해 [메모] 열에 해당 정보가 표시되어 사용해야 할 키를 식별하는 데 도움이 됩니다.
 
 ![다운로드 페이지에서 키 가져오기](_img/product-keys/download-get-key.png)
 
@@ -79,7 +80,7 @@ MPN, BizSpark, MCT 소프트웨어 및 서비스 및 MCT를 통해 제공되는 
 
 제품 키를 요청하려면
 1.  Visual Studio 구독에 로그인합니다.  제품을 다운로드하거나 제품 키를 요청하려면 로그인해야 합니다. 
-2.  [제품 키](https://my.visualstudio.com/productkeys) 탭을 클릭합니다.
+2.  [제품 키](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) 탭을 클릭합니다.
 3.  제품 키는 제품 이름별 사전순으로 나열됩니다.  원하는 제품의 이름으로 스크롤하거나 페이지 위쪽의 검색 표시줄을 사용하여 검색할 수 있습니다.  
 ![제품 키 검색](_img\product-keys\visio-product-key-cropped.png)
 
@@ -91,7 +92,7 @@ MPN, BizSpark, MCT 소프트웨어 및 서비스 및 MCT를 통해 제공되는 
 
 **중요: 구독이 만료되면 더 이상 새 키를 요청할 수 없거나 요청한 키를 내보낼 수 없습니다.** 
 
-키를 내보내려면 [제품 키] 페이지의 오른쪽 끝에 있는 **모든 키 내보내기** 단추를 클릭하기만 하면 됩니다.  KeysExport.xml이라는 제목의 .xml 파일이 만들어지고, 파일을 열거나 저장할 수 있는 옵션이 표시됩니다.  .xml 파일을 처리할 수 있는 응용 프로그램으로 파일을 열어야 합니다.  예를 들어 Excel에서 파일을 읽기 전용 통합 문서로 열 수 있습니다.  
+키를 내보내려면 [제품 키] 페이지의 오른쪽 끝에 있는 **모든 키 내보내기** 링크를 클릭하기만 하면 됩니다.  KeysExport.xml이라는 제목의 .xml 파일이 만들어지고, 파일을 열거나 저장할 수 있는 옵션이 표시됩니다.  .xml 파일을 처리할 수 있는 응용 프로그램으로 파일을 열어야 합니다.  예를 들어 Excel에서 파일을 읽기 전용 통합 문서로 열 수 있습니다.  
 
 ## <a name="internet-demonstrations-via-terminal-services"></a>터미널 서비스를 통한 인터넷 데모
 Visual Studio 구독을 사용하면 최종 사용자가 터미널 서비스(Windows Server 2003 또는 Windows Server 2008) 또는 원격 데스크톱 서비스(Windows Server 2008 R2 이상)를 통해 프로그램의 인터넷 데모에 액세스할 수 있는 권한을 제공할 수 있습니다. 최대 200명의 익명 사용자가 이러한 방법으로 동시에 데모에 액세스할 수 있습니다. 데모에서 프로덕션 데이터를 사용하면 안됩니다. Visual Studio 구독자에게는 자신의 응용 프로그램을 최종 사용자에게 시연할 수 있는 라이선스가 부여됩니다. TS(터미널 서비스) 또는 RDS(원격 데스크톱 서비스)를 사용한 이 인터넷 데모는 Visual Studio 구독을 통해 소프트웨어에 라이선스가 부여되었을 때 Visual Studio 구독이 없는 최종 사용자가 데모 응용 프로그램과 상호 작용할 수 있는 유일한 시나리오입니다.
@@ -99,8 +100,9 @@ Visual Studio 구독을 사용하면 최종 사용자가 터미널 서비스(Win
 이는 Visual Studio 구독자가 필요한 만큼 많은 수의 RDS 또는 TS 연결을 사용할 수 있는 개발/테스트 권한에 추가되는 권한입니다.
 
 ### <a name="enabling-rds-access"></a>RDS 액세스 사용 
-Visual Studio 구독자는 [구독자 포털](https://my.visualstudio.com)의 [제품 키](https://my.visualstudio.com/productkeys) 탭에서 제공된 제품 키를 입력하여 RDS를 통해 Windows Server에 액세스할 수 있는 사용자 수를 늘릴 수 있습니다. 제품 키를 얻으려면 [제품 키] 페이지에 연결하고 실행 중인 Windows Server 버전까지 스크롤합니다. "Windows Server < 버전 > R2 원격 데스크톱 서비스 < 사용자 또는 장치 > 연결 수"를 찾고 **키 요청** 링크를 클릭합니다. 예를 들어 Windows Server 2012 R2에서 RDS를 사용하고 배포에서 사용자 CAL을 사용하는 경우 "Windows Server 2012 원격 데스크톱 서비스 사용자 연결 수(50)"를 선택합니다.
+Visual Studio 구독자는 [구독자 포털](https://my.visualstudio.com?wt.mc_id=o~msft~docs)의 [제품 키](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) 탭에서 제공된 제품 키를 입력하여 RDS를 통해 Windows Server에 액세스할 수 있는 사용자 수를 늘릴 수 있습니다. 제품 키를 얻으려면 [제품 키] 페이지에 연결하고 실행 중인 Windows Server 버전까지 스크롤합니다. "Windows Server < 버전 > R2 원격 데스크톱 서비스 < 사용자 또는 장치 > 연결 수"를 찾고 **키 요청** 링크를 클릭합니다. 예를 들어 Windows Server 2012 R2에서 RDS를 사용하고 배포에서 사용자 CAL을 사용하는 경우 "Windows Server 2012 원격 데스크톱 서비스 사용자 연결 수(50)"를 선택합니다.
 각 유형의 5개 키는 Windows Server 2008 R2에 대해 사용할 수 있으며, 각 키는 20개의 연결을 지원합니다. Windows Server 2012 R2의 경우 각 유형에 대한 4개의 키가 제공되며 각각 50개의 연결을 지원합니다. 
+
 #### <a name="to-enable-additional-connections-in-windows-server"></a>Windows Server에서 추가 연결을 사용하도록 설정하려면 
 1.  서버 관리자를 엽니다.
 2.  왼쪽 탐색 창에서 [서버] 목록을 엽니다.
@@ -113,4 +115,4 @@ Visual Studio 구독자는 [구독자 포털](https://my.visualstudio.com)의 [�
 - 응용 프로그램 데모를 위해 최대 200명의 동시 사용자 연결을 사용할 수 있습니다. 
 - Visual Studio 구독자는 사용자 연결을 사용하도록 설정하기 위한 제품 키를 얻어야 합니다.
 
-서버에서 RD 라이선싱을 설정하는 방법에 대한 지침이 필요하면 [Windows Server 2012에서 RD 라이선싱 구성](http://blogs.technet.com/b/askperf/archive/2013/09/20/rd-licensing-configuration-on-windows-server-2012.aspx)을 참조하세요. 의문 사항이 있으면 [Microsoft 원격 데스크톱 서비스 포럼](https://social.technet.microsoft.com/Forums/windowsserver/en-US/home?forum=winserverTS)을 방문하세요. 
+서버에서 RD 라이선싱을 설정하는 방법에 대한 지침이 필요하면 [Windows Server 2012에서 RD 라이선싱 구성](http://blogs.technet.com/b/askperf/archive/2013/09/20/rd-licensing-configuration-on-windows-server-2012.aspx)을 참조하세요. 의문 사항이 있으면 [Microsoft 원격 데스크톱 서비스 포럼](https://social.technet.microsoft.com/Forums/windowsserver/home?forum=winserverTS)을 방문하세요. 

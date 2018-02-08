@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 03/09/2017
 ms.reviewer: riande
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: ASP.NET, web applications, deployment, publishing
+helpviewer_keywords:
+- ASP.NET, web applications, deployment, publishing
 ms.assetid: 3A13F685-531C-457D-A98E-631888011E4B
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 10cb0ca2d5190ce73f0fd67da5b1f795d5aa8dd1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 428dc6346fa39b3939b478d0d2c887b99024dc81
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # 내게 적합한 게시 옵션
 
@@ -31,26 +34,22 @@ Visual Studio 내에서 웹 응용 프로그램을 다음 대상에 직접 게�
 
 **게시** 탭에서 기존 게시 프로필을 선택하거나, 기존 게시 프로필을 가져오거나, 여기에 설명된 옵션을 사용하여 새로 만들 수 있습니다.
 
-## Azure App Service
+## Azure App Service Web Apps
 
-[Azure App Service](https://azure.microsoft.com/documentation/articles/app-service-value-prop-what-is/)는 개발자가 인프라를 유지 관리하지 않고 확장 가능한 여러 웹 응용 프로그램과 서비스를 빠르게 만드는 데 도움이 됩니다.
+[Azure App Service Web Apps(또는 Web Apps)](/azure/app-service/app-service-web-overview)는 개발자가 인프라를 유지 관리하지 않고 확장 가능한 여러 웹 응용 프로그램과 서비스를 빠르게 만드는 데 도움이 됩니다.
 
-특히 웹 응용 프로그램에서 App Service는 기존 웹 호스트와 거의 일치하는 [*웹앱*](https://azure.microsoft.com/en-us/documentation/articles/app-service-web-overview/) 컨테이너입니다. 즉, 웹앱은 서버 쪽 코드를 실행하고 인터넷에서 사용할 수 있도록 하기 위해 필요한 계산 리소스를 제공합니다.
-
-포함하는 App Service에 대한 [가격 책정 계층 또는 계획](https://azure.microsoft.com/documentation/articles/azure-web-sites-web-hosting-plans-in-depth-overview/)을 선택하여 웹앱의 컴퓨팅 성능을 확인합니다. 가격 책정 계층을 변경하지 않고 여러 Web Apps(및 기타 앱 유형)에서 동일한 App Service를 공유하도록 할 수도 있습니다. 예를 들어 개발, 스테이징 및 프로덕션 Web Apps를 동일한 App Service에서 함께 호스트할 수 있습니다.
+포함하는 App Service에 대한 [가격 책정 계층 또는 계획](/azure/app-service/azure-web-sites-web-hosting-plans-in-depth-overview)을 선택하여 웹앱의 컴퓨팅 성능을 확인합니다. 가격 책정 계층을 변경하지 않고 여러 Web Apps(및 기타 앱 유형)에서 동일한 App Service를 공유하도록 할 수도 있습니다. 예를 들어 개발, 스테이징 및 프로덕션 Web Apps를 동일한 App Service에서 함께 호스트할 수 있습니다.
 
 App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되지만 이러한 가상 컴퓨터가 자동으로 관리됩니다. App Service의 각 웹앱에는 고유한 \*.azurewebsites.net URL이 할당됩니다. 무료 이외의 모든 가격 책정 계층에서는 사용자 지정 도메인 이름을 사이트에 할당할 수 있습니다.
 
-### Azure App Service를 선택해야 하는 경우
+### Azure App Service Web Apps를 선택해야 하는 경우
 
 - 인터넷을 통해 액세스할 수 있는 웹 응용 프로그램을 배포하려고 합니다.
 - 다시 배포할 필요가 없도록 수요에 따라 웹 응용 프로그램을 자동으로 크기를 조정하려고 합니다.
 - 서버 인프라(소프트웨어 업데이트 포함)를 유지 관리하지 않으려고 합니다.
 - 웹 응용 프로그램을 호스트하는 서버에서 컴퓨터 수준 사용자 지정을 하지 않아도 됩니다.
 
-
 > 사용자 고유의 데이터 센터 또는 다른 온-프레미스 컴퓨터에서 Azure App Service를 사용하려는 경우 [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)을 사용하면 됩니다.
-
 
 ## Azure Virtual Machines
 

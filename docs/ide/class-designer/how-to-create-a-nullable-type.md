@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - nullable types, Class Designer
 - Class Designer [Visual Studio], nullable types
 ms.assetid: 84673a89-3f6d-4668-919e-1c0f56182fe5
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 17b234a774914e998c228dc780b645864420658d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: fcef9fc80bbc55b07cd9dad68e217c9982a3b1f7
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-create-a-nullable-type-class-designer"></a>방법: Nullable 형식 만들기(클래스 디자이너)
 특정 값 형식에 항상 정의된 값이 포함되거나 필요한 것은 아닙니다. 이는 일부 필드에 값이 할당되지 않을 수 있는 데이터베이스에서 일반적인 경우입니다. 예를 들어 데이터베이스 필드에 null 값을 할당하여 아직 값이 할당되지 않았음을 나타낼 수 있습니다.  
@@ -37,7 +39,7 @@ Nullable 형식은 <xref:System.Nullable%601> 구조체의 인스턴스입니다
   
 클래스 디자이너에는 nullable 형식이 기본 형식이 표시되는 것처럼 표시됩니다.  
   
-Visual C#의 nullable 형식에 대한 자세한 내용은 [Nullable 형식](/dotnet/csharp/programming-guide/nullable-types/index)을 참조하세요. Visual Basic의 nullable 형식에 대한 자세한 내용은 [Nullable 값 형식](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)을 참조하세요.  
+C#의 nullable 형식에 대한 자세한 내용은 [Nullable 형식](/dotnet/csharp/programming-guide/nullable-types/index)을 참조하세요. Visual Basic의 nullable 형식에 대한 자세한 내용은 [Nullable 값 형식](/dotnet/visual-basic/programming-guide/language-features/data-types/nullable-value-types)을 참조하세요.  
   
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   

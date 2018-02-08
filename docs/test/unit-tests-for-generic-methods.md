@@ -12,20 +12,23 @@ helpviewer_keywords:
 - unit tests, and generics
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: a0acdea369d19c19c4edf9ca427801ba8df54e0a
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 61c4afb816d5cd0be3628d9c801f578a5210b4a2
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="unit-tests-for-generic-methods"></a>제네릭 메서드의 단위 테스트
-[방법: 유닛 테스트 만들기 및 실행](http://msdn.microsoft.com/en-us/5e0f43cf-5e51-48e2-9c98-0eb9324bdc48)에 설명된 대로, 다른 메서드와 동일한 방식으로 제네릭 메서드의 유닛 테스트를 생성할 수 있습니다. 다음 섹션에서는 제네릭 메서드의 단위 테스트를 만드는 방법에 대한 정보와 예제를 제공합니다.  
-  
-## <a name="type-arguments-and-type-constraints"></a>형식 인수 및 형식 제약 조건  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]는 `MyList<T>`와 같은 제네릭 클래스의 단위 테스트를 생성하는 경우 제네릭 도우미와 테스트 메서드의 두 메서드를 생성합니다. `MyList<T>`에 하나 이상의 형식 제약 조건이 있는 경우 형식 인수가 형식 제약 조건을 모두 충족해야 합니다. 테스트 대상 제네릭 코드가 허용되는 모든 입력에 대해 예상대로 작동하는지 확인하기 위해 테스트 메서드는 테스트하려는 모든 제약 조건을 사용하여 제네릭 도우미 메서드를 호출합니다.  
-  
+
+다른 메서드와 동일한 방식으로 제네릭 메서드의 단위 테스트를 생성할 수 있습니다. 다음 섹션에서는 제네릭 메서드의 단위 테스트를 만드는 방법에 대한 정보와 예제를 제공합니다.
+
+## <a name="type-arguments-and-type-constraints"></a>형식 인수 및 형식 제약 조건
+
+Visual Studio는 `MyList<T>`와 같은 제네릭 클래스의 단위 테스트를 생성하는 경우 제네릭 도우미와 테스트 메서드의 두 메서드를 생성합니다. `MyList<T>`에 하나 이상의 형식 제약 조건이 있는 경우 형식 인수가 형식 제약 조건을 모두 충족해야 합니다. 테스트 대상 제네릭 코드가 허용되는 모든 입력에 대해 예상대로 작동하는지 확인하기 위해 테스트 메서드는 테스트하려는 모든 제약 조건을 사용하여 제네릭 도우미 메서드를 호출합니다.
+
 ## <a name="examples"></a>예제  
  다음 예제에서는 제네릭의 단위 테스트를 보여 줍니다.  
   
@@ -197,6 +200,6 @@ namespace ClassLibrary2
 }  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [단위 테스트 분석](http://msdn.microsoft.com/en-us/a03d1ee7-9999-4e7c-85df-7d9073976144)   
- [코드 단위 테스트](../test/unit-test-your-code.md)
+## <a name="see-also"></a>참고 항목
+
+[코드 단위 테스트](../test/unit-test-your-code.md)

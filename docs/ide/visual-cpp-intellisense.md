@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: fffb892efdbe3ad2731de5b0b81f6e59f237f884
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: d0a00fb9fa52bcba39f4648fc3ffb9800890ac30
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
 
@@ -23,13 +25,13 @@ IntelliSense for C++는 C++ 프로젝트의 일부인 파일의 경우와 마찬
 
 ## <a name="intellisense-features-in-c"></a>C++의 IntelliSense 기능
 
-IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 이름입니다. 사람마다 편리성에 대한 생각이 다르기 때문에 거의 모든 IntelliSense 기능은 **텍스트 편집기, C/C++, 고급** 속성 페이지에서 사용하거나 사용하지 않도록 설정할 수 있습니다.
+IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 이름입니다. 사람마다 편리성에 대한 생각이 다르기 때문에 거의 모든 IntelliSense 기능은 **텍스트 편집기** > **C/C++** > **고급** 아래에 있는 **옵션** 대화 상자에서 사용하거나 사용하지 않도록 설정할 수 있습니다. **옵션** 대화 상자는 메뉴 모음의 **도구** 메뉴에서 사용할 수 있습니다.
 
-![도구, 옵션, 텍스트 편집기, C&#47;C&#43;&#43;, 고급](../ide/media/sintellisensecpptoolsoptions.PNG "sIntelliSenseCppToolsOptions")
+![도구 옵션 대화 상자](../ide/media/sintellisensecpptoolsoptions.PNG)
 
 다음 이미지에 표시된 메뉴 항목 및 바로 가기 키를 사용하여 IntelliSense에 액세스할 수 있습니다.
 
-![Visual C&#43;&#43; IntelliSense 메뉴](../ide/media/vs2015_cpp_intellisense_menu.png "vs2015_cpp_intellisense_menu")
+![IntelliSense 메뉴](../ide/media/vs2015_cpp_intellisense_menu.png)
 
 ### <a name="statement-completion-and-member-list"></a>문 완성 및 멤버 목록
 
@@ -39,19 +41,19 @@ IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 
 
 ![Visual C&#43;&#43; 단어 자동 완성 창](../ide/media/vs2015_cpp_complete_word.png "vs2015_cpp_complete_word")
 
-멤버 목록을 처음 호출하는 경우 현재 컨텍스트에서 액세스할 수 있는 멤버만 표시됩니다. 그 후에 **Ctrl+J**를 사용하면 접근성과 관계없이 모든 멤버가 표시됩니다. 세 번째로 호출하면 보다 광범위한 프로그램 요소 목록이 표시됩니다. **C/C++ 일반 옵션** 페이지에서 문 완성을 끌 수 있습니다.
+멤버 목록을 처음 호출하는 경우 현재 컨텍스트에서 액세스할 수 있는 멤버만 표시됩니다. 그 후에 **Ctrl**+**J**를 사용하면 접근성과 관계없이 모든 멤버가 표시됩니다. 세 번째로 호출하면 보다 광범위한 프로그램 요소 목록이 표시됩니다. **텍스트 편집기** > **C/C++** > **일반** > **자동 목록 멤버** 아래에 있는 **옵션** 대화 상자에서 멤버 목록을 끌 수 있습니다.
 
 ![Visual C&#43;&#43; 멤버 목록](../ide/media/vs2015_cpp_list_members.png "vs2015_cpp_list_members")
 
 ### <a name="parameter-help"></a>매개 변수 도움말
 
-클래스 템플릿 변수 선언에서 함수 호출을 여는 중괄호 또는 꺾쇠 괄호를 입력하면 편집기에서 함수 또는 생성자의 각 오버로드에 대한 매개 변수 형식이 포함된 작은 창을 표시합니다. 커서 위치에 따라 "현재" 매개 변수가 굵게 표시됩니다. **C/C++ 일반 옵션** 페이지에서 문 완성을 끌 수 있습니다.
+클래스 템플릿 변수 선언에서 함수 호출을 여는 중괄호 또는 꺾쇠 괄호를 입력하면 편집기에서 함수 또는 생성자의 각 오버로드에 대한 매개 변수 형식이 포함된 작은 창을 표시합니다. &mdash;커서 위치에 따라&mdash; “현재” 매개 변수가 굵게 표시됩니다. **텍스트 편집기** > **C/C++** > **일반** > **매개 변수 정보** 아래에 있는 **옵션** 대화 상자에서 매개 변수 정보를 끌 수 있습니다.
 
 ![Visual C&#43;&#43; 매개 변수 도움말](../ide/media/vs_2015_cpp_param_help.png "vs_2015_cpp_param_help")
 
 ### <a name="quick-info"></a>요약 정보
 
-변수 위에 마우스 커서를 놓으면 형식 정보 및 형식이 정의된 헤더를 표시하는 작은 창이 인라인으로 나타납니다. 함수 호출을 마우스로 가리키면 함수의 서명이 표시됩니다. **텍스트 편집기, C/C++, 고급** 페이지에서 요약 정보를 끌 수 있습니다.
+변수 위에 마우스 커서를 놓으면 형식 정보 및 형식이 정의된 헤더를 표시하는 작은 창이 인라인으로 나타납니다. 함수 호출을 마우스로 가리키면 함수의 서명이 표시됩니다. **텍스트 편집기** > **C/C++** > **고급** > **자동 빠른 정보** 아래에 있는 **옵션** 대화 상자에서 빠른 정보를 끌 수 있습니다.
 
 ![Visual C&#43;&#43; 요약 정보](../ide/media/vs2015_cpp_quickinfo.png "vs2015_cpp_quickInfo")
 
@@ -63,7 +65,7 @@ IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 
 
 ### <a name="code-colorization-and-fonts"></a>코드 색 지정 및 글꼴
 
-**환경, 글꼴 및 색** 속성 페이지를 사용하여 기본색 및 글꼴을 변경할 수 있습니다. 여기서 편집기뿐 아니라 많은 UI 창의 글꼴을 변경할 수 있습니다. C++와 관련된 설정은 "C++"로 시작하고 다른 설정은 모든 언어에 적용됩니다.
+기본 색 및 글꼴은 **환경** > **글꼴 및 색** 아래에 있는 **옵션** 대화 상자에서 변경할 수 있습니다. 여기서 편집기뿐 아니라 많은 UI 창의 글꼴을 변경할 수 있습니다. C++와 관련된 설정은 "C++"로 시작하고 다른 설정은 모든 언어에 적용됩니다.
 
 ### <a name="cross-platform-intellisense"></a>플랫폼 간 IntelliSense
 
@@ -95,7 +97,7 @@ IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 
 
 ### <a name="intellisense-for-stand-alone-files"></a>독립 실행형 파일의 IntelliSense
 
-프로젝트 외부의 단일 파일을 여는 경우에도 IntelliSense가 작동합니다. **텍스트 편집기, C/C++, 고급**으로 이동하여 IntelliSense 기능을 켜면 특정 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. 프로젝트의 일부가 아닌 단일 파일에 대해 IntelliSense를 구성하려면 **고급** 섹션에서 **프로젝트가 아닌 파일에 대한 IntelliSense 및 검색**을 찾습니다. [Visual C++ 둘러보기](http://msdn.microsoft.com/en-us/499cb66f-7df1-45d6-8b6b-33d94fd1f17c)를 참조하세요.
+프로젝트 외부의 단일 파일을 여는 경우에도 IntelliSense가 작동합니다. **텍스트 편집기** > **C/C++** > **고급** 아래에 있는 **옵션** 대화 상자에서 특정 IntelliSense 기능을 사용하거나 사용하지 않도록 설정할 수 있습니다. 프로젝트의 일부가 아닌 단일 파일에 대해 IntelliSense를 구성하려면 **프로젝트가 아닌 파일에 대한 IntelliSense 및 검색**을 찾습니다.
 
 ![Visual C&#43;&#43; 단일 파일 IntelliSense](../ide/media/vs2015_cpp_single_file_intellisense.png "vs2015_cpp_single_file_intellisense")
 

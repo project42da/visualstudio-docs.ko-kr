@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 12/08/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +14,17 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: f648f07923117b89278ba0e5f44e351b923f7c26
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: da2e236c39cce72670a47212aedabb87afa4d217
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-target-a-version-of-the-net-framework"></a>방법: 한 버전의 .NET Framework를 대상으로 지정
 
-이 문서에서는 프로젝트를 만들 때 특정 버전의 .NET Framework를 대상으로 지정하는 방법 및 기존 Visual Basic, Visual C# 또는 Visual F# 프로젝트에서 대상 버전을 변경하는 방법에 대해 설명합니다.
+이 문서에서는 프로젝트를 만들 때 특정 버전의 .NET Framework를 대상으로 지정하는 방법 및 기존 Visual Basic, C# 또는 Visual F# 프로젝트에서 대상 버전을 변경하는 방법에 대해 설명합니다.
 
 > [!IMPORTANT]
 > C++ 프로젝트의 대상 버전을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)을 참조하세요.
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="changing-the-target-version"></a>대상 버전 변경
 
-이 절차를 수행하여 Visual Basic, Visual C# 또는 Visual F# 프로젝트에서 .NET Framework의 대상 버전을 변경할 수 있습니다.
+이 절차를 수행하여 Visual Basic, C# 또는 Visual F# 프로젝트에서 .NET Framework의 대상 버전을 변경할 수 있습니다.
 
 C++ 프로젝트의 대상 버전을 변경하는 방법에 대한 자세한 내용은 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)을 참조하세요.
 

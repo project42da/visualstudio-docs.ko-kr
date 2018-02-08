@@ -9,11 +9,11 @@ Description: Learn how to get the most out of your Visual Studio subscriptions.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 58dfc6e6cce60e28c15d6b7de80265f6ec37f8f5
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 8059d316912e78bcbcaa9d4f54f86b4e2c2b907f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="managing-subscriptions"></a>구독 관리
 ## <a name="signing-in-to-the-portal"></a>포털에 로그인
@@ -31,7 +31,7 @@ Microsoft Store를 통해 Visual Studio 구독을 구입한 경우 결제 **확�
 #### <a name="workschool-accounts"></a>회사/학교 계정
 회사/학교에서 제공된 구독인 경우 환영 전자 메일을 받게 됩니다.  
 1.  [구독자 포털](https://my.visualstudio.com/)을 방문합니다.
-2.  새 Visual Studio 구독이 할당된 이메일 주소를 입력합니다. 이 주소는 구독자 **시작 편지**에서도 식별됩니다. 시작 편지를 받지 못한 경우 정크 메일 폴더를 확인하세요.
+2.  새 Visual Studio 구독이 할당된 이메일 주소를 입력합니다. 이 주소는 구독자 시작 전자 메일에서도 확인됩니다. 시작 전자 메일을 받지 못한 경우 정크 메일 폴더를 확인하세요.
 3.  **계속**을 클릭합니다.
 4.  회사 로그인 페이지로 리디렉션됩니다.
 5.  암호를 입력합니다.

@@ -7,18 +7,21 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: coded UI tests
+helpviewer_keywords:
+- coded UI tests
+author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-author: gewarren
-ms.openlocfilehash: 928caef1cdad112e794bd7ac9317d8f8dbf03117
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- multiple
+ms.openlocfilehash: c449c0e23fa3effa693059ed6d0b6c4a61b8470c
+ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 01/25/2018
 ---
 # <a name="anatomy-of-a-coded-ui-test"></a>코딩된 UI 테스트 분석
+
 코딩된 UI 테스트 프로젝트에서 코딩된 UI 테스트를 만들 때는 일부 파일이 솔루션에 추가됩니다. 이 항목에서는 코딩된 UI 테스트 예제를 사용하여 이러한 파일을 탐색합니다.  
   
  **요구 사항**  
@@ -62,25 +65,25 @@ using MouseButtons = System.Windows.Forms.MouseButtons;
 ####  <a name="UIMapClass"></a> UIMap 클래스  
  파일의 다음 섹션은 <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스입니다.  
   
-```  
+```csharp
 [GeneratedCode("Coded UITest Builder", "10.0.21221.0")]  
 public partial class UIMap  
-```  
+```
   
- 클래스 코드는 partial 클래스로 선언된 클래스에 적용되는 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>로 시작합니다. 이 파일의 모든 클래스에도 특성이 적용되는 것을 확인할 수 있습니다. 이 클래스에 대한 더 많은 코드를 포함할 수 있는 다른 파일은 뒷부분에 설명하는 `UIMap.cs`입니다.  
-  
- 생성된 `UIMap` 클래스에는 테스트를 기록할 때 지정된 각 메서드에 대한 코드가 포함됩니다.  
-  
-```  
+클래스 코드는 partial 클래스로 선언된 클래스에 적용되는 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>로 시작합니다. 이 파일의 모든 클래스에도 특성이 적용되는 것을 확인할 수 있습니다. 이 클래스에 대한 더 많은 코드를 포함할 수 있는 다른 파일은 뒷부분에 설명하는 `UIMap.cs`입니다.  
+
+생성된 `UIMap` 클래스에는 테스트를 기록할 때 지정된 각 메서드에 대한 코드가 포함됩니다.  
+
+```csharp
 public void LaunchCalculator()  
 public void AddItems()  
 public void VerifyTotal()  
 public void CleanUp()  
-```  
-  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스의 이 부분에는 메서드에 필요한 각 속성에 대해 생성된 코드도 포함됩니다.  
-  
-```  
+```
+
+<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap> 클래스의 이 부분에는 메서드에 필요한 각 속성에 대해 생성된 코드도 포함됩니다.
+
+```csharp
 public virtual LaunchCalculatorParams LaunchCalculatorParams  
 public virtual AddItemsParams AddItemsParams  
 public virtual VerifyTotalExpectedValues VerifyTotalExpectedValues  
@@ -92,12 +95,12 @@ public UIRunWindow UIRunWindow
 public UICalculatorWindow UICalculatorWindow  
 public UIStartWindow UIStartWindow  
 public UIMathApplicationWindow UIMathApplicationWindow  
-```  
+```
   
 #####  <a name="UIMapMethods"></a> UIMap 메서드  
- 각 메서드는 `AddItems()` 메서드와 유사한 구조입니다. 이 내용은 보다 명확하도록 줄 바꿈과 함께 표시되는 코드 아래에서 자세히 설명합니다.  
-  
-```  
+ 각 메서드는 `AddItems()` 메서드와 유사한 구조입니다. 이 내용은 보다 명확하도록 줄 바꿈과 함께 표시되는 코드 아래에서 자세히 설명합니다.
+
+```csharp
 /// <summary>  
 /// AddItems - Use 'AddItemsParams' to pass parameters into this method.  
 /// </summary>  
@@ -119,10 +122,10 @@ public void AddItems()
     Keyboard.SendKeys(uIItemEdit,   
         this.AddItemsParams.UIItemEditSendKeys,   
         ModifierKeys.None);  
-}  
-```  
-  
- 각 메서드 정의에 대한 요약 설명에서는 해당 메서드의 매개 변수 값에 사용할 클래스를 지시합니다. 이 경우 `UIMap.cs` 파일의 뒷부분에서 정의되고 `AddItemsParams` 속성에서 반환되는 값 형식이기도 한 `AddItemsParams` 클래스입니다.  
+}
+```
+
+각 메서드 정의에 대한 요약 설명에서는 해당 메서드의 매개 변수 값에 사용할 클래스를 지시합니다. 이 경우 `UIMap.cs` 파일의 뒷부분에서 정의되고 `AddItemsParams` 속성에서 반환되는 값 형식이기도 한 `AddItemsParams` 클래스입니다.  
   
  메서드 코드 맨 위에는 메서드에서 사용할 UI 개체에 대한 지역 변수를 정의하는 `Variable Declarations` 영역이 있습니다.  
   
@@ -131,20 +134,20 @@ public void AddItems()
  다음은 `AddItemsParams` 개체의 속성을 사용하여 키보드에서 계산기 응용 프로그램으로 텍스트를 보내는 줄입니다.  
   
  `VerifyTotal()` 메서드는 구조가 매우 유사하며 다음과 같은 어설션 코드를 포함합니다.  
-  
-```  
+
+```csharp
 // Verify that 'Unknown Name' text box's property 'Text' equals '9. '  
 Assert.AreEqual(  
     this.VerifyTotalExpectedValues.UIItemEditText,   
     uIItemEdit.Text);  
-```  
-  
+```
+
  Windows 계산기 응용 프로그램의 개발자가 공개적으로 사용할 수 있는 컨트롤 이름을 제공하지 않으므로 텍스트 상자 이름은 알 수 없음으로 나열됩니다. 실제 값이 예상 값과 같지 않은 경우 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName> 메서드가 실패하여 테스트에 실패합니다. 또한 예상 값은 소수점 뒤에 공백을 포함합니다. 이 특정 테스트의 기능을 수정해야 하는 경우 해당 소수점과 공백을 허용해야 합니다.  
   
 #####  <a name="UIMapProperties"></a> UIMap 속성  
  각 속성에 대한 코드도 클래스 전체에서 매우 표준적입니다. `AddItemsParams` 속성에 대한 다음 코드는 `AddItems()` 메서드에서 사용됩니다.  
   
-```  
+```csharp
 public virtual AddItemsParams AddItemsParams  
 {  
     get  
@@ -155,14 +158,14 @@ public virtual AddItemsParams AddItemsParams
         }  
         return this.mAddItemsParams;  
     }  
-}  
-```  
-  
+}
+```
+
  속성은 값을 반환하기 전에 `mAddItemsParams`라는 전용 지역 변수를 사용하여 보유합니다. 반환하는 개체의 속성 이름과 클래스 이름은 같습니다. 클래스는 `UIMap.cs` 파일의 뒷부분에서 정의됩니다.  
   
  속성에서 반환되는 각 클래스는 구조가 유사합니다. 다음은 `AddItemsParams` 클래스입니다.  
-  
-```  
+
+```csharp
 /// <summary>  
 /// Parameters to be passed into 'AddItems'  
 /// </summary>  
@@ -180,11 +183,11 @@ public class AddItemsParams
     /// </summary>  
     public string UIItemEditSendKeys = "{Add}{NumPad2}{Enter}";  
     #endregion  
-}  
-```  
-  
- `UIMap.cs` 파일의 모든 클래스와 마찬가지로, 이 클래스는 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>로 시작합니다. 이 작은 클래스에는 앞에서 설명한 `UIMap.AddItems()` 메서드에서 사용되는 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> 메서드의 매개 변수로 사용할 문자열을 정의하는 `Fields` 영역이 있습니다. 이러한 매개 변수가 사용되는 메서드를 호출하기 전에 해당 문자열 필드의 값을 바꾸는 코드를 작성할 수 있습니다.  
-  
+}
+```
+
+`UIMap.cs` 파일의 모든 클래스와 마찬가지로, 이 클래스는 <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>로 시작합니다. 이 작은 클래스에는 앞에서 설명한 `UIMap.AddItems()` 메서드에서 사용되는 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName> 메서드의 매개 변수로 사용할 문자열을 정의하는 `Fields` 영역이 있습니다. 이러한 매개 변수가 사용되는 메서드를 호출하기 전에 해당 문자열 필드의 값을 바꾸는 코드를 작성할 수 있습니다.  
+
 ###  <a name="UIMapCS"></a> UIMap.cs  
  기본적으로 이 파일은 메서드나 속성이 없는 partial `UIMap` 클래스를 포함합니다.  
   
@@ -196,40 +199,41 @@ public class AddItemsParams
 ###  <a name="CodedUITestCS"></a> CodedUITest1.cs  
  이 파일은 **코딩된 UI 테스트 빌더**에서 생성되지만 테스트를 수정할 때마다 다시 생성되지 않으므로 이 파일의 코드를 수정할 수 있습니다. 파일 이름은 테스트를 만들 때 지정한 테스트 이름에서 생성됩니다.  
   
-#### <a name="codeduitest1-class"></a>CodedUITest1 클래스  
- 기본적으로 이 파일은 하나의 클래스에 대한 정의만 포함합니다.  
-  
-```  
+#### <a name="codeduitest1-class"></a>CodedUITest1 클래스
+
+기본적으로 이 파일은 하나의 클래스에 대한 정의만 포함합니다.
+
+```csharp
 [CodedUITest]  
 public class CodedUITest1  
-```  
-  
- T:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute가 클래스에 자동으로 적용되어 테스트 프레임워크에서 해당 클래스를 테스트 확장으로 인식할 수 있게 합니다. 또한 partial 클래스가 아닙니다. 모든 클래스 코드가 이 파일에 포함됩니다.  
+```
+
+<xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>가 클래스에 자동으로 적용되어 테스트 프레임워크에서 해당 클래스를 테스트 확장으로 인식할 수 있게 합니다. 또한 partial 클래스가 아닙니다. 모든 클래스 코드가 이 파일에 포함됩니다.  
   
 #####  <a name="CodedUITestProperties"></a> CodedUITest1 속성  
  클래스는 파일 맨 아래에 있는 두 개의 기본 속성을 포함합니다. 속성을 수정하면 안 됩니다.  
   
-```  
+```csharp
 /// <summary>  
 /// Gets or sets the test context which provides  
 /// information about and functionality for the current test run.  
 ///</summary>  
 public TestContext TestContext  
 public UIMap UIMap  
-```  
+```
   
 #####  <a name="CodedUITestMethods"></a> CodedUITest1 메서드  
  기본적으로 클래스는 하나의 메서드만 포함합니다.  
-  
-```  
+
+```csharp
 public void CodedUITestMethod1()  
-```  
-  
+```
+
  이 메서드는 테스트를 기록할 때 지정한 각 `UIMap` 메서드를 호출합니다. 해당 메서드는 [UIMap 클래스](#UIMapClass)에 대한 섹션에서 설명합니다.  
   
  주석 처리가 제거된 경우 `Additional test attributes`라는 영역은 두 개의 선택적 메서드를 포함합니다.  
   
-```  
+```csharp
 // Use TestInitialize to run code before running each test   
 [TestInitialize()]  
 public void MyTestInitialize()  
@@ -254,9 +258,9 @@ public void MyTestCleanup()
   
     // You could move this line from the CodedUITestMethod1() method  
     this.UIMap.CloseCalculator();  
-}  
-```  
-  
+}
+```
+
  `MyTestInitialize()` 메서드에는 다른 테스트 메서드보다 먼저 이 메서드를 호출하도록 테스트 프레임워크에 지시하는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>가 적용되어 있습니다. 마찬가지로, `MyTestCleanup()` 메서드에는 다른 테스트 메서드가 모두 호출된 후 이 메서드를 호출하도록 테스트 프레임워크에 지시하는 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>가 적용되어 있습니다. 이러한 메서드 사용은 선택 사항입니다. 이 테스트를 위해 `MyTestInitialize()`에서 `UIMap.LaunchCalculator()` 메서드를 호출할 수 있고, `CodedUITest1Method1()` 대신 `MyTestCleanup()`에서 `UIMap.CloseCalculator()` 메서드를 호출할 수 있습니다.  
   
  <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>를 사용하여 이 클래스에 더 많은 메서드를 추가하는 경우 테스트 프레임워크에서 테스트의 일부로 각 메서드를 호출합니다.  
@@ -266,19 +270,20 @@ public void MyTestCleanup()
   
  `UIMap.uitest` 파일은 직접 편집할 수 없습니다. 그러나 코딩된 UI 빌더를 사용하여 테스트를 수정할 수 있으며, `UIMap.uitest` 파일과 [UIMap.Designer.cs](#UIMapDesignerFile) 파일이 자동으로 수정됩니다.  
   
-## <a name="see-also"></a>참고 항목  
- <xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls>   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>   
- <xref:System.CodeDom.Compiler.GeneratedCodeAttribute>   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName>   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName>   
- <xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>   
- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>   
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md#VerifyingCodeUsingCUITCreate)   
- [최선의 코딩된 UI 테스트 방법](../test/best-practices-for-coded-ui-tests.md)   
- [여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)   
- [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+## <a name="see-also"></a>참고 항목
+
+<xref:Microsoft.VisualStudio.TestTools.UITest.Common.UIMap.UIMap>   
+<xref:Microsoft.VisualStudio.TestTools.UITesting.WinControls>   
+<xref:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls>   
+<xref:Microsoft.VisualStudio.TestTools.UITesting.WpfControls>   
+<xref:System.CodeDom.Compiler.GeneratedCodeAttribute>   
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert.AreEqual%2A?displayProperty=fullName>   
+<xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A?displayProperty=fullName>   
+<xref:Microsoft.VisualStudio.TestTools.UITesting.CodedUITestAttribute>   
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestInitializeAttribute>   
+<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCleanupAttribute>   
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
+[코딩된 UI 테스트 만들기](../test/use-ui-automation-to-test-your-code.md)   
+[최선의 코딩된 UI 테스트 방법](../test/best-practices-for-coded-ui-tests.md)   
+[여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)   
+[코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)

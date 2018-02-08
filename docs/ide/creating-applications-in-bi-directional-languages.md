@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,16 +13,17 @@ helpviewer_keywords:
 - bi-directional language support, about bi-directional language support
 - Arabic language, creating applications
 ms.assetid: b56f9795-ed8d-4452-9d49-8ca0b0145d86
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: db7afbc68ab4e02803959dd0ff0b4de92233fece
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 1b0d0010d9aa4c56fdffef2eceb458776a863d23
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="creating-applications-in-bi-directional-languages"></a>양방향 언어용 응용 프로그램 만들기
 Visual Studio를 사용하여 아랍어 및 히브리어와 같이 오른쪽에서 왼쪽으로 기록되는 언어로 텍스트를 제대로 표시하는 응용 프로그램을 만들 수 있습니다. 일부 기능의 경우 속성만 설정하면 됩니다. 기타 경우에는 기능을 코드로 구현해야 합니다.  
@@ -80,15 +82,16 @@ Visual Studio를 사용하여 아랍어 및 히브리어와 같이 오른쪽에�
 -   코드 및 리터럴 텍스트. 코드 편집기(텍스트 편집기라고도 함)에서 아랍어 또는 히브리어를 사용하여 클래스, 함수, 변수, 속성, 문자열, 리터럴, 특성 등의 이름을 지정할 수 있습니다. 그러나 이 편집기는 오른쪽에서 왼쪽 읽기 순서를 지원하지 않고 텍스트는 항상 왼쪽 여백에서 시작됩니다.  
   
     > [!TIP]
-    >  문자열 리터럴을 프로그램에 하드 코딩하는 대신 리소스 파일에 삽입하는 것이 좋습니다. 자세한 내용은 [연습: Windows Forms 지역화](http://msdn.microsoft.com/en-us/9a96220d-a19b-4de0-9f48-01e5d82679e5)를 참조하세요.  
+    > 문자열 리터럴을 프로그램에 하드 코딩하는 대신 리소스 파일에 삽입하는 것이 좋습니다. 자세한 내용은 [데스크톱 앱의 리소스(.NET Framework)](/dotnet/framework/resources/index)를 참조하세요.
   
     > [!NOTE]
-    >  이러한 언어로 명명된 개체를 참조하는 방법에 일관성이 있어야 합니다. 예를 들어 아랍어 변수 이름을 지정하는 데 Kashida를 사용할 경우 해당 변수를 참조할 때 항상 Kashida를 사용해야 합니다. 그렇지 않으면 오류가 발생합니다.  
+    > 이러한 언어로 명명된 개체를 참조하는 방법에 일관성이 있어야 합니다. 예를 들어 아랍어 변수 이름을 지정하는 데 Kashida를 사용할 경우 해당 변수를 참조할 때 항상 Kashida를 사용해야 합니다. 그렇지 않으면 오류가 발생합니다.  
   
 -   코드 주석입니다. 아랍어 또는 히브리어로 주석을 만들 수 있습니다. 주석 작성기 도구에서도 이러한 언어를 사용할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Windows Forms 응용 프로그램에 대한 양방향 지원](http://msdn.microsoft.com/Library/7b622fa4-f390-4e4d-b624-83a1917cccf2)   
- [ASP.NET 웹 응용 프로그램에 대한 양방향 지원](http://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03)   
- [응용 프로그램 전역화](../ide/globalizing-applications.md)   
- [응용 프로그램 지역화](../ide/localizing-applications.md)
+## <a name="see-also"></a>참고 항목
+
+[Windows Forms 응용 프로그램에 대한 양방향 지원](/dotnet/framework/winforms/advanced/bi-directional-support-for-windows-forms-applications)  
+[ASP.NET 웹 응용 프로그램에 대한 양방향 지원](http://msdn.microsoft.com/Library/5576f9b1-9b86-41ef-8354-092d366bcd03)  
+[응용 프로그램 전역화](../ide/globalizing-applications.md)  
+[응용 프로그램 지역화](../ide/localizing-applications.md)

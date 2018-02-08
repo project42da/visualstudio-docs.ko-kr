@@ -4,10 +4,12 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: VS.Clr.ClrAttributesDialog
+f1_keywords:
+- VS.Clr.ClrAttributesDialog
 helpviewer_keywords:
 - custom attributes, applying
 - class diagrams, creating types
@@ -16,19 +18,20 @@ helpviewer_keywords:
 - types [Visual Studio], class diagrams
 - attributes [Visual Studio], applying custom
 ms.assetid: 94458c31-28bc-40e2-9737-85868788a0e5
-caps.latest.revision: "41"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fe4eaf38f20ed358263bb6cc07d4be5c9632cd5b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: db46a4fa0faa568597deccddb528d8765e048e22
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>방법: 클래스 디자이너를 사용하여 형식 만들기
-새로운 형식의 Visual C# .NET 및 Visual Basic .NET 프로젝트를 디자인하려면 클래스 다이어그램에서 해당 형식을 만듭니다. 기존 형식을 보려면 [방법: 기존 형식 보기](how-to-view-existing-types.md)를 참조하세요.  
+새로운 형식의 C# 및 Visual Basic 프로젝트를 디자인하려면 클래스 다이어그램에서 해당 형식을 만듭니다. 기존 형식을 보려면 [방법: 기존 형식 보기](how-to-view-existing-types.md)를 참조하세요.  
   
 -   [새 형식 만들기](#CreateType)  
   

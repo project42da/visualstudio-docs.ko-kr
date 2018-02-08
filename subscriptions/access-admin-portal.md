@@ -9,15 +9,15 @@ Description: Learn how to access the Administrator Portal
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 3028ea616f6336918e49d49856f62707876772c9
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 41bee30e54411a3b9bcaed6c72be3909f2d1cfab
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="accessing-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 구독 관리자 포털에 액세스
 ## <a name="for-mpsa"></a>MPSA의 경우
-Visual Studio 구독 관리 포털에 액세스하려면 Microsoft 비즈니스 센터 포털 또는 BCP에서 관리자로 설정되어야 합니다. 
+Visual Studio 구독 관리자 포털에 액세스하려면 Microsoft 비즈니스 센터 포털 또는 BCP에서 관리자로 설정되어야 합니다. 
 
 관리자로 설정되는 방법에 대한 정보가 필요한 경우 [사용자 관리 빠른 시작 가이드](https://mvlc.blob.core.windows.net/en-us/MVLC_QS_Manage_Users.pdf)를 참조하세요. 이미 관리자로 설정되어 있으면 Visual Studio 구독 [관리 포털](https://manage.visualstudio.com)로 직접 이동할 수 있습니다.
 
@@ -30,9 +30,9 @@ VLSC에서 구독 관리에 관한 더 자세한 내용은 다음 가이드를 �
 
 조직의 볼륨 라이선스 계약에 대한 기본 또는 알림 연락처는 관리자로 설정하는 몇 가지 단계를 수행해야 합니다. 
 
-관리자를 설정하는 방법에 대한 내용이 필요한 경우 [이 동영상](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)을 시청하고 Visual Studio 구독 관리 포털 [온보딩 및 관리자 관리](https://go.microsoft.com/fwlink/?linkid=839391)의 문서를 참조하세요. 
+관리자를 설정하는 방법에 대한 내용이 필요한 경우 [이 비디오](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)를 시청하고 Visual Studio 구독 관리자 포털 [온보딩 및 관리자 관리](https://go.microsoft.com/fwlink/?linkid=839391)의 문서를 참조하세요. 
 
-이미 관리자로 설정되어 있으면 Visual Studio 구독 [관리 포털](https://manage.visualstudio.com)로 직접 이동할 수 있습니다.
+이미 관리자로 설정되어 있으면 Visual Studio 구독 [관리자 포털](https://manage.visualstudio.com)로 직접 이동할 수 있습니다.
 
 ## <a name="for-cloud-subscriptions"></a>클라우드 구독의 경우
 Visual Studio 클라우드 구독을 구매하는 경우 해당 구독에 대한 관리자로 자동으로 설정됩니다.  이미 구입한 경우 [https://manage.visualstudio.com](https://manage.visualstudio.com)에서 관리할 수 있습니다.

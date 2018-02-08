@@ -8,13 +8,15 @@ ms.topic: get-started-article
 author: corob-msft
 ms.author: tglee
 manager: ghogen
-dev_langs: CPP
-ms.workload: cplusplus
-ms.openlocfilehash: 9c0a7a8e206704e1b7cd694a91f376f4ec531d6c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+dev_langs:
+- CPP
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2e0e0709b8a1737e3f78268ec324d4481dac285a
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="get-started-with-c-in-visual-studio"></a>Visual Studio에서 C++ 시작
 
@@ -152,7 +154,7 @@ HelloApp을 디버그하여 단어 "Hello"가 콘솔 창에 표시되는지 여�
 ## <a name="see-also"></a>참고 항목
 
 [C++ 데스크톱 개발에 Visual Studio IDE 사용](/cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development)  
-[연습: Visual C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
+[연습: C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
 [Visual Studio 생산성 팁](../ide/productivity-tips-for-visual-studio.md)  
 [Visual Studio 샘플](../ide/visual-studio-samples.md)  
 [Visual Studio에서 개발 시작](../ide/get-started-developing-with-visual-studio.md)

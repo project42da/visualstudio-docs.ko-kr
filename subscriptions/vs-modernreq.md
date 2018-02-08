@@ -1,25 +1,55 @@
 ---
-title: "MODERNRequirements 활성화"
+title: "Visual Studio 구독의 MODERNRequirements 혜택 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 10/3/2017
+Ms.date: 1/12/2018
 Ms.topic: Get-Started-Article
-Description: Learn how to download and install the ModernRequirements suite of products included in your Visual Studio Enterprise subscription.
+Description: Learn about the ModernRequirements suite of products included in selected Visual Studio Enterprise subscriptions.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: af4c0f4228995efa6754e618c43e03083e5cf990
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 4ff6c7db66547bc2d4da05bf9aec087113c64cbe
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
-# <a name="activating-the-modernrequirements-benefit-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 MODERNRequirements 혜택 활성화
-Enterprise 구독에는 MODERNRequirements SmartOffice 4TFS 및 ModernRequirements4TFS에 대한 6개월 구독이 포함됩니다.  MODERNRequirements의 SmartOffice4TFS는 Microsoft Word 기반 보고 및 신속하고 간소화된 서식 있는 텍스트 작성 기능을 통해 TFS 또는 Visual Studio Team Services의 기능을 확장합니다.  ModernRequirements4TFS는 작업 항목 기본 및 HTML5 시뮬레이션 기능을 제공합니다.  
+# <a name="the-modernrequirements4tfs-benefit-in-visual-studio-subscriptions"></a>Visual Studio 구독의 MODERNRequirements4TFS 혜택
 
+## <a name="overview"></a>개요
 
-1.  MODERNRequirements 혜택을 사용하려면 혜택 타일의 아래쪽에 있는 **코드 가져오기** 링크를 클릭합니다.   
+선택한 Visual Studio 구독에는 MODERNRequirements SmartOffice 4TFS 및 ModernRequirements4TFS에 대한 6개월 구독이 포함됩니다.  MODERNRequirements의 SmartOffice4TFS는 Microsoft Word 기반 보고 및 신속하고 간소화된 서식 있는 텍스트 작성 기능을 통해 TFS 또는 Visual Studio Team Services의 기능을 확장합니다.  ModernRequirements4TFS는 작업 항목 기본 및 HTML5 시뮬레이션 기능을 제공합니다.  
+
+## <a name="eligibility"></a>자격
+| 구독 수준/프로그램                                                  | 이점               | 갱신 가능?                                                         |
+|-------------------------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
+| Visual Studio Enterprise Standard                                             | 6개월              |  예                                                               |
+| Visual Studio Enterprise 연간                                               | 6개월              |  예                                                               |
+| Visual Studio Enterprise 월간                                              | 사용할 수 없음         |                                                                    |
+| Visual Studio Professional Standard                                           | 사용할 수 없음         |                                                                    |
+| Visual Studio Professional 연간                                             | 사용할 수 없음         |                                                                    | 
+| Visual Studio Professional 월간                                            | 사용할 수 없음         |                                                                    |
+| Visual Studio Test Pro                                                        | 사용할 수 없음         |                                                                    |
+| MSDN 플랫폼                                                                | 사용할 수 없음         |                                                                    |
+| Visual Studio Dev Essentials                                                  | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise - NFR<sup>1</sup>                                               | 6개월              |  예                                                               |
+| Visual Studio Enterprise - FTE                                                | 6개월              |  예                                                               |
+| Visual Studio Enterprise - Microsoft 파트너 네트워크                          | 6개월              |  예                                                               |
+| Visual Studio Professional - Microsoft 파트너 네트워크                        | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise – Imagine(Standard)                                 | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise – Imagine(Premium)                                  | 사용할 수 없음         |                                                                    |
+| Visual Studio Enterprise – BizSpark                                           | 사용할 수 없음         |                                                                    |
+| Microsoft Certified Trainer - 소프트웨어 및 서비스                             | 사용할 수 없음         |                                                                    |
+| Microsoft Certified Trainer - 소프트웨어 및 서비스 개발자                   | 사용할 수 없음         |                                                                    |
+
+<sup>1</sup> NFR(전매 금지), MVP(Microsoft Valued Partner), RD(Region Director), VSIP(Visual Studio Industry Partner) 포함  
+
+어떤 구독을 사용하고 있는지 확실하지 않나요?  전자 메일 주소에 할당된 모든 구독을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)에 연결하세요. 일부 구독이 표시되지 않으면 하나 이상이 다른 전자 메일 주소에 할당되어 있을 수 있습니다.  해당 구독을 보려면 해당 전자 메일 주소로 로그인해야 합니다. 
+
+## <a name="activation-steps"></a>활성화 단계
+1.  MODERNRequirementsTFS 혜택을 사용하려면 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)에 로그인합니다.
+2.  도구 섹션에서 MODERNRequirements4TFS 타일을 찾고 타일 왼쪽 아래에 있는 **코드 얻기** 링크를 클릭합니다.   
 
     ![ModernRequirements 혜택 타일](_img\vs-modernreq\vs-modernreq-tile.png)
 
@@ -48,10 +78,10 @@ Enterprise 구독에는 MODERNRequirements SmartOffice 4TFS 및 ModernRequiremen
 9.  "SmartOffice4TFS_Online" 하위 폴더를 엽니다. 
 
 10. 이 폴더에는 다음 네 가지 설치 관리자 응용 프로그램이 하나씩 포함되어 있습니다.
-- SmartExcel4TFS_Online
-- SmartOutlook4TFS_Online
-- SmartVisio4TFS_Online
-- SmartWord4TFS_Online
+    - SmartExcel4TFS_Online
+    - SmartOutlook4TFS_Online
+    - SmartVisio4TFS_Online
+    - SmartWord4TFS_Online
 
     ![ModernRequirement 다운로드 옵션](_img\vs-modernreq\vs-modernreq-downloaded-cropped.png)
 
@@ -79,3 +109,10 @@ Enterprise 구독에는 MODERNRequirements SmartOffice 4TFS 및 ModernRequiremen
 
 22. Word가 열리면 추가된 SmartWord4TFS 탭이 표시됩니다. 이 탭을 클릭하여 SmartWord4TFS 도구 집합을 표시합니다. 
 
+## <a name="faq"></a>FAQ
+*여기에서 업데이트를 확인하세요.*
+
+## <a name="support-resources"></a>지원 리소스
+-  ModernRequirements 제품과 관련하여 도움이 필요하세요?  https://www.modernrequirements.com/support-2/를 방문하세요.
+-  Visual Studio 구독에 대한 판매, 구독, 계정 및 요금 청구에 대한 지원을 받으려면 Visual Studio [구독 지원](https://www.visualstudio.com/subscriptions/support/)에 문의하세요.
+-  Visual Studio IDE, Visual Studio Team Services 또는 기타 Visual Studio 제품 또는 서비스와 관련하여 궁금한 점이 있나요?  [Visual Studio 지원](https://www.visualstudio.com/support/)을 참조하세요. 

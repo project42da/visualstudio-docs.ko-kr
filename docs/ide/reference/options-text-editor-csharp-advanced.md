@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -18,19 +19,20 @@ helpviewer_keywords:
 - outlining options [C#]
 - XML documentation, creating
 ms.assetid: 947f9d9a-b0f3-408d-9866-d82895bcee31
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 1f7bcff6d2e94944985789db2bf0ac80150a478e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 193b61ab95daa84c5815c251c7d52103c88977e1
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="options-text-editor-c-advanced"></a>옵션, 텍스트 편집기, C#, 고급
-Visual C#의 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대한 설정을 수정하려면 이 대화 상자를 사용합니다. 이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기** 폴더를 확장하고, **C#**을 확장하고, **고급**을 클릭합니다.  
+C#의 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대한 설정을 수정하려면 이 대화 상자를 사용합니다. 이 대화 상자에 액세스하려면 **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기** 폴더를 확장하고, **C#**을 확장하고, **고급**을 클릭합니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
@@ -76,9 +78,9 @@ Visual C#의 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대�
   
 ## <a name="organize-usings"></a>Using 구성  
  using 정렬 시 ‘System’ 지시문 먼저 배치  
- 이 옵션을 선택하면 `System` using 지시문이 다른 using 지시문 앞에 표시됩니다. 자세한 내용은 [Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md#automatic-code-generation)에서 using 구성을 참조하세요.  
+ 이 옵션을 선택하면 `System` using 지시문이 다른 using 지시문 앞에 표시됩니다. 자세한 내용은 [C# IntelliSense](../../ide/visual-csharp-intellisense.md#automatic-code-generation)에서 using 구성을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [XML 문서 주석](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)   
  [언어별 편집기 옵션 설정](../../ide/reference/setting-language-specific-editor-options.md)   
- [Visual C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+ [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

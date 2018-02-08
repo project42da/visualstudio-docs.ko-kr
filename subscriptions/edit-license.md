@@ -1,5 +1,5 @@
 ---
-title: "관리자 포털에서 구독 편집 | Visual Studio Marketplace"
+title: "관리자 포털에서 구독 편집 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -9,11 +9,11 @@ Description: Learn how administrators can edit subscription assignments.
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: c561e7a56f2e70cae1addd32902f68a582b49a02
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 120bf87ddbaf50efa1abe59bac1c2e4616db7737
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="editing-visual-studio-subscription-assignments"></a>Visual Studio 구독 할당 편집
 
@@ -29,13 +29,15 @@ ms.lasthandoff: 12/01/2017
 
    ![구독자 세부 정보 편집](_img\edit-license\edit-subscriber.png)
 
-참고: 구독자의 구독 수준을 변경해야 하는 경우 포털에서 해당 사용자를 삭제하고 다시 추가해야 합니다. 구독 수준은 편집할 수 없습니다.
+> [!NOTE]
+> 구독자의 구독 수준을 변경해야 하는 경우 포털에서 해당 사용자를 삭제하고 다시 추가해야 합니다. 구독 수준은 편집할 수 없습니다.
 
 ## <a name="editing-multiple-subscribers-by-using-bulk-edit"></a>대량 편집을 사용하여 여러 구독자 수정
 
 대량 편집 프로세스를 사용하여 여러 구독자를 한 번에 수정할 수 있습니다. 이 기능은 주로 회사 이메일 주소 변경을 수행하는 조직에서 사용되거나 조직에서 다운로드에 대한 액세스를 제한하도록 결정한 경우에 사용됩니다. 
 
-**중요:** 구독 수준(예: Enterprise, Professional 등) 및 구독 GUID는 변경할 수 없습니다.  이러한 항목이 변경된 상태에서 업로드를 시도하면 업로드가 실패합니다.  
+> [!IMPORTANT]
+> 구독 수준(예: Enterprise, Professional 등) 및 구독 GUID는 변경할 수 없습니다.  이러한 항목이 변경된 상태에서 업로드를 시도하면 업로드가 실패합니다.  
 
 1.  여러 구독자를 한 번에 수정하려면 [구독자] 탭으로 이동합니다. 맨 위에 있는 리본에서 **대량 편집**을 클릭합니다. 
 

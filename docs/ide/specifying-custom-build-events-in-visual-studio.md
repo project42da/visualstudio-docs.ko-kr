@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: build events, customizing
+helpviewer_keywords:
+- build events, customizing
 ms.assetid: 69e935a5-e208-4bcd-865c-3e5f9b047ca8
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8288ce8d049f949120c5631366dbaac2efc792b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ede663f1053f6a3261de542b31b73fc9c8a10bb8
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="specifying-custom-build-events-in-visual-studio"></a>Visual Studio에서 사용자 지정 빌드 이벤트 지정
 사용자 지정 빌드 이벤트를 지정하여 빌드가 시작되기 전이나 완료된 후에 명령을 자동으로 실행할 수 있습니다. 예를 들어 빌드가 시작되기 전에 .bat 파일을 실행하거나 빌드가 완료된 후에 새 파일을 폴더로 복사할 수 있습니다. 빌드가 빌드 프로세스의 해당 지점에 성공적으로 도달하는 경우에만 빌드 이벤트가 실행됩니다.  
@@ -27,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Basic--[방법: 빌드 이벤트 지정(Visual Basic)](../ide/how-to-specify-build-events-visual-basic.md)  
   
--   Visual C# 및 F#--[방법: 빌드 이벤트 지정(C#)](../ide/how-to-specify-build-events-csharp.md)  
+-   C# 및 F# - [방법: 빌드 이벤트 지정(C#)](../ide/how-to-specify-build-events-csharp.md)  
   
 -   Visual C++--[빌드 이벤트 지정](/cpp/ide/specifying-build-events)  
   

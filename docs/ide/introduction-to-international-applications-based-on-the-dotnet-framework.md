@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - resource files, fallback processes
 - user interface, culture setting
 ms.assetid: b0788993-e62d-4f68-8235-5f87b1d48525
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 9acc8f2e015b6ca2ad26881eeb1f53012d96e56d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 20eefe3933767e357d977e2f3a5a0626aa555c39
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework 기반의 국가별 응용 프로그램 소개
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에는 지역화 대비 응용 프로그램을 만드는 두 개의 부분으로, 다양한 문화권에 맞게 조정할 수 있는 응용 프로그램을 디자인하는 프로세스인 전역화 및 특정 문화권에 맞게 리소스를 변환하는 프로세스인 지역화가 있습니다. 전 세계 대상을 위한 응용 프로그램을 디자인하는 방법에 대한 일반 정보는 [지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)을 참조하세요.  
@@ -47,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  Windows Forms 및 Web Forms에 대한 프로젝트 시스템에서는 어셈블리 리소스 파일 템플릿을 사용하여 리소스 파일을 빌드하고, 리소스에 액세스하고, 프로젝트를 빌드할 수 있습니다. 위성 어셈블리는 주 어셈블리와 함께 만들어집니다.  
   
- 지역화된 응용 프로그램이 실행될 때 해당 모양은 두 개의 문화권 값에 따라 결정됩니다. *문화권*은 사용자의 언어, 환경 및 문화 관습에 관련된 사용자 기본 설정 정보 집합입니다. UI 문화권 설정에 따라 로드되는 리소스가 결정됩니다. UI 문화권은 Web.config 파일 및 페이지 지시문에서는 `UICulture`로 설정되고 Visual Basic 또는 Visual C# 코드에서는 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>로 설정됩니다. 문화권 설정에 따라 날짜, 숫자, 통화 등의 값 서식이 결정됩니다. 문화권은 Web.config 파일 및 페이지 지시문에서는 `Culture`로 설정되고 Visual Basic 또는 Visual C# 코드에서는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A>로 설정됩니다.  
+ 지역화된 응용 프로그램이 실행될 때 해당 모양은 두 개의 문화권 값에 따라 결정됩니다. *문화권*은 사용자의 언어, 환경 및 문화 관습에 관련된 사용자 기본 설정 정보 집합입니다. UI 문화권 설정에 따라 로드되는 리소스가 결정됩니다. UI 문화권은 Web.config 파일 및 페이지 지시문에서는 `UICulture`로 설정되고 Visual Basic 또는 C# 코드에서는 <xref:System.Globalization.CultureInfo.CurrentUICulture%2A>로 설정됩니다. 문화권 설정에 따라 날짜, 숫자, 통화 등의 값 서식이 결정됩니다. 문화권은 Web.config 파일 및 페이지 지시문에서는 `Culture`로 설정되고 Visual Basic 또는 C# 코드에서는 <xref:System.Globalization.CultureInfo.CurrentCulture%2A>로 설정됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:System.Globalization>   

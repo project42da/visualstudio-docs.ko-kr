@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -17,19 +18,20 @@ helpviewer_keywords:
 - wavy underlines
 - Text Editor Options dialog box, IntelliSense
 ms.assetid: 3466dedb-e5f4-424c-8dd8-e4941b2f4fc2
-caps.latest.revision: "25"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: b0b69b7eafbfbb1b5c2c582fd0c734a183ea0a78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- dotnet
+ms.openlocfilehash: 322ae48b1ded8dfef7e25a80937da957e50f756f
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="options-text-editor-c-intellisense"></a>옵션, 텍스트 편집기, C#, IntelliSense
-**IntelliSense** 속성 페이지를 사용하여 Visual C#용 IntelliSense의 동작에 영향을 주는 설정을 수정합니다. **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기** 폴더에서 **C#**을 클릭하고 나서, **IntelliSense**를 클릭하여 **IntelliSense** 속성 페이지에 액세스할 수 있습니다.  
+**IntelliSense** 속성 페이지를 사용하여 C#용 IntelliSense의 동작에 영향을 주는 설정을 수정합니다. **도구** 메뉴에서 **옵션**을 클릭하고, **텍스트 편집기** 폴더에서 **C#**을 클릭하고 나서, **IntelliSense**를 클릭하여 **IntelliSense** 속성 페이지에 액세스할 수 있습니다.  
   
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 활성 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경하려면 **도구** 메뉴에서 **설정 가져오기 및 내보내기** 를 선택합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
@@ -44,7 +46,7 @@ ms.lasthandoff: 12/22/2017
  이 옵션을 선택하면 IntelliSense에서는 C# 키워드(예: [class](/dotnet/csharp/language-reference/keywords/class))를 완성 목록에 추가합니다.  
   
  **완성 목록에 코드 조각 배치**  
- 이 옵션을 선택하면 IntelliSense에서는 C# 코드 조각의 별칭을 완성 목록에 추가합니다. 코드 조각 별칭이 키워드(예: [class](/dotnet/csharp/language-reference/keywords/class))와 같은 경우 키워드는 바로 가기로 대체됩니다. 자세한 내용은 [Visual C# 코드 조각](../../ide/visual-csharp-code-snippets.md)을 참조하세요.  
+ 이 옵션을 선택하면 IntelliSense에서는 C# 코드 조각의 별칭을 완성 목록에 추가합니다. 코드 조각 별칭이 키워드(예: [class](/dotnet/csharp/language-reference/keywords/class))와 같은 경우 키워드는 바로 가기로 대체됩니다. 자세한 내용은 [C# 코드 조각](../../ide/visual-csharp-code-snippets.md)을 참조하세요.  
   
 ## <a name="selection-in-completion-lists"></a>완성 목록의 선택  
  **다음 문자를 입력하면 커밋됨:**  

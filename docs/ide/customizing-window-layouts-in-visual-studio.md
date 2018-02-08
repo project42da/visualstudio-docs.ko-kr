@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 01/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,16 +24,17 @@ helpviewer_keywords:
 - debug mode
 - custom layouts
 ms.assetid: 7517ff13-76de-4ecf-9c1b-eb9b7ff4d718
-caps.latest.revision: "27"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 596e9e6dfa5f7fb464430636f696e37748ccb8eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: e26a9fa0daf5c92c81161bdcafd92490f9a05113
+ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 01/29/2018
 ---
 # <a name="customize-window-layouts-in-visual-studio"></a>Visual Studio에서 창 레이아웃 사용자 지정
 Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 다양한 개발 워크플로에 가장 적합한 창 레이아웃을 만들 수 있습니다. 레이아웃을 사용자 지정할 때 IDE에서는 레이아웃을 기억합니다. 예를 들어 **솔루션 탐색기** 의 도킹 위치를 변경한 후 Visual Studio를 닫고 다음에 다시 시작하면 다른 컴퓨터에서 작업하고 있는 경우에도 **솔루션 탐색기** 가 같은 위치에 도킹됩니다. 또한 사용자 지정 레이아웃에 이름을 지정하고 저장한 다음 단일 명령으로 레이아웃 간을 전환할 수 있습니다. 예를 들어 편집용 레이아웃과 디버그용 레이아웃을 만들고 **창 &#124; 창 레이아웃 적용** 메뉴 명령을 사용하여 레이아웃 간에 전환할 수 있습니다.  
@@ -134,7 +136,7 @@ Visual Studio에서 창의 위치, 크기 및 동작을 사용자 지정하여 �
 
 ##### <a name="create-a-ui-project-and-customize-the-layout"></a>UI 프로젝트 만들기 및 레이아웃 사용자 지정  
 
-1.  **새 프로젝트** 대화 상자에서 Visual C# WPF 데스크톱 응용 프로그램을 만들고 원하는 이름을 지정합니다. 이 프로젝트에서 사용자 인터페이스에 대한 작업을 수행한다고 가정하고 디자이너 창의 공간을 최대화하고 다른 도구 창은 방해가 되지 않도록 이동합니다.  
+1.  **새 프로젝트** 대화 상자에서 C# WPF 데스크톱 응용 프로그램을 만들고 원하는 이름을 지정합니다. 이 프로젝트에서 사용자 인터페이스에 대한 작업을 수행한다고 가정하고 디자이너 창의 공간을 최대화하고 다른 도구 창은 방해가 되지 않도록 이동합니다.  
 
 2.  모니터가 여러 개 있는 경우 **솔루션 탐색기** 창 및 **속성** 창을 두 번째 모니터로 가져옵니다. 단일 모니터 시스템의 경우 디자이너를 제외한 모든 창을 닫습니다.  
 
