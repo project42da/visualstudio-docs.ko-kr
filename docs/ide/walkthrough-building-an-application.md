@@ -4,22 +4,18 @@ ms.custom:
 ms.date: 09/25/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-general
 ms.topic: article
-ms.assetid: 4842955d-8959-4e4e-98b8-2358360179b3
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: d24a8b0cfa54b56808e8d283534e03e607fca0c9
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 485c8445f24dbd0aaec501649885df50d173347a
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="walkthrough-building-an-application"></a>연습: 응용 프로그램 빌드
 
@@ -36,30 +32,30 @@ ms.lasthandoff: 01/29/2018
 **구성 관리자** 대화 상자를 사용하여 구성 및 플랫폼 설정을 변경하거나 만들 수 있습니다. 이 절차에서는 테스트용 빌드 구성을 만듭니다.
 
 ### <a name="to-create-a-build-configuration"></a>빌드 구성을 만들려면
-  
+
 1. **구성 관리자** 대화 상자를 엽니다.
-  
-     ![Build menu, Configuration Manager command](../ide/media/buildwalk_configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")  
-  
-2. **활성 솔루션 구성** 목록에서 **\<새로 만들기...\>**를 선택합니다.
-  
-3. **새 솔루션 구성** 대화 상자에서 새 구성의 이름을 `Test`로 지정하고, 기존 디버그 구성에서 설정을 복사하고, **확인** 단추를 선택합니다.
-  
-     ![New Solution Configuration Dialog Box](../ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
-  
-4. **활성 솔루션 플랫폼** 목록에서 **\<새로 만들기...\>**를 선택합니다.
-  
-5. **새 솔루션 플랫폼** 대화 상자에서 **x64**를 선택하지만 x86 플랫폼에서 설정을 복사하지 않습니다.
-  
-     ![New Solution Platform Dialog Box](../ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
-  
-6. **확인** 단추를 선택합니다.
-  
- 활성 솔루션 구성이 Test로 변경되고 활성 솔루션 플랫폼이 x64로 설정되었습니다.
-  
- ![테스트 구성이 있는 구성 관리자](../ide/media/buildwalk_configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")  
-  
-7. **닫기**를 선택합니다.
+
+   ![빌드 메뉴, 구성 관리자 명령](../ide/media/buildwalk_configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")  
+
+1. **활성 솔루션 구성** 목록에서 **\<새로 만들기...\>**를 선택합니다.
+
+1. **새 솔루션 구성** 대화 상자에서 새 구성의 이름을 `Test`로 지정하고, 기존 디버그 구성에서 설정을 복사하고, **확인** 단추를 선택합니다.
+
+   ![새 솔루션 구성 대화 상자](../ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
+
+1. **활성 솔루션 플랫폼** 목록에서 **\<새로 만들기...\>**를 선택합니다.
+
+1. **새 솔루션 플랫폼** 대화 상자에서 **x64**를 선택하지만 x86 플랫폼에서 설정을 복사하지 않습니다.
+
+   ![새 솔루션 플랫폼 대화 상자](../ide/media/buildwalk_newsolutionplatform.png "BuildWalk_NewSolutionPlatform")  
+
+1. **확인** 단추를 선택합니다.
+
+   활성 솔루션 구성이 Test로 변경되고 활성 솔루션 플랫폼이 x64로 설정되었습니다.
+
+   ![테스트 구성이 있는 구성 관리자](../ide/media/buildwalk_configmanagertestconfig.png "BuildWalk_ConfigManagerTestconfig")  
+
+1. **닫기**를 선택합니다.
 
 **표준** 도구 상자에서 **솔루션 구성** 목록을 사용하여 활성 솔루션 구성을 빠르게 확인하거나 변경할 수 있습니다.
   
@@ -71,7 +67,7 @@ ms.lasthandoff: 01/29/2018
   
 ### <a name="to-build-the-solution"></a>솔루션을 빌드하려면
   
--   메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.
+-   메뉴 모음에서 **빌드** > **솔루션 빌드**를 선택합니다.
   
     **출력** 창에는 빌드 결과가 표시됩니다. 빌드에 성공했습니다.
   
@@ -85,55 +81,51 @@ ms.lasthandoff: 01/29/2018
 
     Visual Basic 프로젝트에서 **ExpenseReportPage.xaml.vb** 파일을 엽니다. 사용자 지정 생성자 **Public Sub New...**에서 다음 코드를 추가합니다. `Dim i`
 
-2. 솔루션을 빌드합니다.
+1. 솔루션을 빌드합니다.
 
-**출력** 창에는 빌드 결과가 표시됩니다. 빌드에 성공했지만 경고가 발생했습니다.  
+**출력** 창에는 빌드 결과가 표시됩니다. 빌드에 성공했지만 경고가 발생했습니다.
 
- 그림 1: Visual Basic 경고  
-  
- ![출력 창(Visual Basic)](../ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")  
-  
- 그림 2: C# 경고  
-  
- ![출력 창(Visual C&#35;)](../ide/media/buildwalk_csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")  
-  
+![출력 창(Visual Basic)](../ide/media/buildwalk_vbbuildoutputwnd.png "BuildWalk_VBBuildOutputWnd")
+
+![출력 창(Visual C&#35;)](../ide/media/buildwalk_csharpbuildoutputwnd.png "BuildWalk_CsharpBuildOutputWnd")
+
 빌드 출력을 어지럽히지 않도록 빌드하는 동안 특정 경고 메시지를 일시적으로 숨길 수 있습니다.
 
 ### <a name="to-hide-a-specific-c-warning"></a>특정 C# 경고를 숨기려면
-  
+
 1. **솔루션 탐색기**에서 최상위 프로젝트 노드를 선택합니다.
+
+1. 메뉴 모음에서 **보기**, **속성 페이지**를 선택합니다.
   
-2. 메뉴 모음에서 **보기**, **속성 페이지**를 선택합니다.
+     **프로젝트 디자이너**가 열립니다.
+
+1. **빌드** 페이지를 선택하고 **경고 표시 안 함** 상자에서 경고 번호 **0168**을 지정합니다.
   
-     The **Project Designer** opens.
+     ![프로젝트 디자이너, 빌드 페이지](../ide/media/buildwalk_csharpsupresswarnings.png "BuildWalk_CsharpSupressWarnings")  
   
-3. **빌드** 페이지를 선택하고 **경고 표시 안 함** 상자에서 경고 번호 **0168**을 지정합니다.
+     자세한 내용은 [프로젝트 디자이너, 빌드 페이지(C#)](../ide/reference/build-page-project-designer-csharp.md)를 참조하세요.
+
+1. 솔루션을 빌드합니다.
   
-     ![Build page, Project Designer](../ide/media/buildwalk_csharpsupresswarnings.png "BuildWalk_CsharpSupressWarnings")  
+     **출력** 창에는 빌드에 대한 요약 정보만 표시됩니다.
   
-     For more information, see [Build Page, Project Designer (C#)](../ide/reference/build-page-project-designer-csharp.md).
-  
-4. 솔루션을 빌드합니다.
-  
-     The **Output** window displays only summary information for the build.
-  
-     ![Output Window, Visual C&#35; Build Warnings](../ide/media/buildwalk_visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")  
+     ![출력 창, Visual C&#35; 빌드 경고](../ide/media/buildwalk_visualcsharpbuildwarnings.png "BuildWalk_VisualCsharpBuildWarnings")  
   
 ### <a name="to-suppress-all-visual-basic-build-warnings"></a>모든 Visual Basic 빌드 경고를 표시하지 않으려면
-  
+
 1. **솔루션 탐색기**에서 최상위 프로젝트 노드를 선택합니다.
+
+1. 메뉴 모음에서 **보기**, **속성 페이지**를 선택합니다.
   
-2. 메뉴 모음에서 **보기**, **속성 페이지**를 선택합니다.
+     **프로젝트 디자이너**가 열립니다.
+
+1. **컴파일** 페이지에서 **모든 경고 사용 안 함** 확인란을 선택합니다.
   
-     The **Project Designer** opens.
+     ![프로젝트 디자이너, 컴파일 페이지](../ide/media/buildwalk_vbsupresswarnings.png "BuildWalk_VBSupressWarnings")  
   
-3. **컴파일** 페이지에서 **모든 경고 사용 안 함** 확인란을 선택합니다.
-  
-     ![Compile page, Project Designer](../ide/media/buildwalk_vbsupresswarnings.png "BuildWalk_VBSupressWarnings")  
-  
-     For more information, see [Configuring Warnings in Visual Basic](../ide/configuring-warnings-in-visual-basic.md).
-  
-4. 솔루션을 빌드합니다.
+     자세한 내용은 [Visual Basic에서 경고 구성](../ide/configuring-warnings-in-visual-basic.md)을 참조하세요.
+
+1. 솔루션을 빌드합니다.
   
  **출력** 창에는 빌드에 대한 요약 정보만 표시됩니다.
   
@@ -149,28 +141,28 @@ ms.lasthandoff: 01/29/2018
 >  추가 정보를 표시하면 빌드를 완료하는 데 더 오랜 시간이 걸립니다.
   
 ### <a name="to-change-the-amount-of-information-in-the-output-window"></a>[출력] 창에서 정보의 양을 변경하려면
-  
+
 1. **옵션** 대화 상자를 엽니다.
   
-     ![Options command on the Tools menu](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
+     ![도구 메뉴의 옵션 명령](../ide/media/exploreide-toolsoptionsmenu.png "ExploreIDE-ToolsOptionsmenu")  
+
+1. **프로젝트 및 솔루션** 범주를 선택하고 나서 **빌드 및 실행** 페이지를 선택합니다.
+
+1. **MSBuild 프로젝트 빌드 출력의 자세한 정도** 목록에서 **보통**을 선택하고 나서 **확인** 단추를 선택합니다.
+
+1. 메뉴 모음에서 **빌드**, **솔루션 정리**를 선택합니다.
+
+1. 솔루션을 빌드하고 **출력** 창에서 정보를 검토합니다.
   
-2. **프로젝트 및 솔루션** 범주를 선택하고 나서 **빌드 및 실행** 페이지를 선택합니다.
+     빌드 정보에는 빌드가 시작된 시간(시작 부분에 있음) 및 파일이 처리된 순서가 포함됩니다. 이 정보에는 빌드하는 동안 Visual Studio에서 실행하는 실제 컴파일러 구문도 포함됩니다.
   
-3. **MSBuild 프로젝트 빌드 출력의 자세한 정도** 목록에서 **보통**을 선택하고 나서 **확인** 단추를 선택합니다.
+     예를 들어 C# 빌드에서 [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) 옵션은 이 항목에서 이전에 지정한 경고 코드, 1762를 세 개의 다른 경고와 함께 나열합니다.
   
-4. 메뉴 모음에서 **빌드**, **솔루션 정리**를 선택합니다.
-  
-5. 솔루션을 빌드하고 **출력** 창에서 정보를 검토합니다.
-  
-     The build information includes the time that the build started (located at the beginning) and the order in which files were processed. This information also includes the actual compiler syntax that Visual Studio runs during the build.
-  
-     For example, in the C# build, the [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) option lists the warning code, 1762, that you specified earlier in this topic, along with three other warnings.
-  
-     In the Visual Basic build, [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn) doesn't include specific warnings to exclude, so no warnings appear.
+     Visual Basic 빌드에서 [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)은 제외할 특정 경고를 포함하지 않으므로 경고가 나타나지 않습니다.
   
     > [!TIP]
-    >  You can search the contents of the **Output** window if you display the **Find** dialog box by choosing the Ctrl+F keys.
-  
+    > Ctrl+F 키를 선택하여 **찾기** 대화 상자를 표시하면 **출력** 창의 내용을 검색할 수 있습니다.
+
 자세한 내용은 [방법: 빌드 로그 파일 보기, 저장 및 구성](../ide/how-to-view-save-and-configure-build-log-files.md)을 참조하세요.
   
 ## <a name="create-a-release-build"></a>릴리스 빌드 만들기
@@ -180,55 +172,55 @@ ms.lasthandoff: 01/29/2018
 자세한 내용은 [방법: 빌드 출력 디렉터리 변경](../ide/how-to-change-the-build-output-directory.md) 및 [Visual Studio에서 프로젝트 및 솔루션 빌드 및 정리](../ide/building-and-cleaning-projects-and-solutions-in-visual-studio.md)를 참조하세요.
 
 ### <a name="to-specify-a-release-build-for-visual-basic"></a>Visual Basic에 대한 릴리스 빌드를 지정하려면
-  
-1. **프로젝트 디자이너**를 엽니다.
-  
-     ![View menu, Property Pages command](../ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
-  
-2. **컴파일** 페이지를 선택합니다.
-  
-3. **구성** 목록에서 **릴리스**를 선택합니다.
-  
-4. **플랫폼** 목록에서 **x86**을 선택합니다.
-  
-5. **빌드 출력 경로** 상자에서 네트워크 경로를 지정합니다.
-  
-     For example, you can specify \\\myserver\builds.
-  
-    > [!IMPORTANT]
-    >  A message box might appear, warning you that the network share that you've specified might not be a trusted location. If you trust the location that you've specified, choose the **OK** button in the message box.
-  
-6. 응용 프로그램을 빌드합니다.
-  
-     ![Build Solution command on the Build menu](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
-  
-### <a name="to-specify-a-release-build-for-c"></a>C#에 대한 릴리스 빌드를 지정하려면 #
-  
-1. **프로젝트 디자이너**를 엽니다.
-  
-     ![View menu, Property Pages command](../ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
-  
-2. **빌드** 페이지를 선택합니다.
-  
-3. **구성** 목록에서 **릴리스**를 선택합니다.
-  
-4. **플랫폼** 목록에서 **x86**을 선택합니다.
-  
-5. **출력 경로** 상자에서 네트워크 경로를 지정합니다.
-  
-     For example, you could specify \\\myserver\builds.
-  
-    > [!IMPORTANT]
-    >  A message box might appear, warning you that the network share that you've specified might not be a trusted location. If you trust the location that you've specified, choose the **OK** button in the message box.
-  
-6. **표준 도구 모음**에서 솔루션 구성을 **릴리스**로, 솔루션 플랫폼을 **x86**으로 설정합니다.
 
-7. 응용 프로그램을 빌드합니다.
+1. **프로젝트 디자이너**를 엽니다.
   
-     ![Build Solution command on the Build menu](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+     ![보기 메뉴, 속성 페이지 명령](../ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
+
+1. **컴파일** 페이지를 선택합니다.
+
+1. **구성** 목록에서 **릴리스**를 선택합니다.
+
+1. **플랫폼** 목록에서 **x86**을 선택합니다.
+
+1. **빌드 출력 경로** 상자에서 네트워크 경로를 지정합니다.
+
+     예를 들어 \\\myserver\builds를 지정할 수 있습니다.
+
+    > [!IMPORTANT]
+    > 지정한 네트워크 공유가 신뢰할 수 있는 위치가 아님을 경고하는 메시지 상자가 나타날 수 있습니다. 지정한 위치를 신뢰하는 경우 메시지 상자에서 **확인** 단추를 선택합니다.
+
+1. 응용 프로그램을 빌드합니다.
+
+     ![빌드 메뉴의 솔루션 빌드 명령](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+
+### <a name="to-specify-a-release-build-for-c"></a>C#에 대한 릴리스 빌드를 지정하려면 #
+
+1. **프로젝트 디자이너**를 엽니다.
   
- 실행 파일이 지정한 네트워크 경로에 복사됩니다. 해당 경로는 \\\myserver\builds\\*FileName*.exe입니다.
+     ![보기 메뉴, 속성 페이지 명령](../ide/media/buildwalk_viewpropertypages.png "BuildWalk_ViewPropertyPages")  
+
+1. **빌드** 페이지를 선택합니다.
+
+1. **구성** 목록에서 **릴리스**를 선택합니다.
+
+1. **플랫폼** 목록에서 **x86**을 선택합니다.
+
+1. **출력 경로** 상자에서 네트워크 경로를 지정합니다.
   
+     예를 들어 \\\myserver\builds를 지정할 수 있습니다.
+  
+    > [!IMPORTANT]
+    > 지정한 네트워크 공유가 신뢰할 수 있는 위치가 아님을 경고하는 메시지 상자가 나타날 수 있습니다. 지정한 위치를 신뢰하는 경우 메시지 상자에서 **확인** 단추를 선택합니다.
+
+1. **표준 도구 모음**에서 솔루션 구성을 **릴리스**로, 솔루션 플랫폼을 **x86**으로 설정합니다.
+
+1. 응용 프로그램을 빌드합니다.
+
+     ![빌드 메뉴의 솔루션 빌드 명령](../ide/media/exploreide-buildsolution.png "ExploreIDE-BuildSolution")  
+
+   실행 파일이 지정한 네트워크 경로에 복사됩니다. 해당 경로는 \\\myserver\builds\\*FileName*.exe입니다.
+
 축하합니다. 이 연습을 완료했습니다.
   
 ## <a name="see-also"></a>참고 항목

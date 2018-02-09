@@ -7,7 +7,7 @@ ms.suite:
 ms.technology:
 - vs-ide-general
 ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 helpviewer_keywords:
 - Toolbox, Components tab
 author: gewarren
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: cf0ab13b104422771b117c17ed3ff89b53fa461f
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: aa91db706d7e1236162ef69e6fd31e791ed44dbb
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="toolbox-components-tab"></a>도구 상자, 구성 요소 탭
 
@@ -40,10 +40,10 @@ Visual Basic 및 C# 디자이너에 추가할 수 있는 구성 요소를 표시
  최종 사용자에게 양식의 컨트롤에 관련 오류가 있음을 나타내는 `System.Windows.Forms.ErrorProvider` 구성 요소 인스턴스를 만듭니다.  
   
  **EventLog**  
- 로그에 이벤트 쓰기 및 로그 데이터 읽기와 같이 시스템 및 사용자 지정 이벤트 로그를 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.EventLog> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [EventLog 구성 요소 소개](http://msdn.microsoft.com/en-us/a2ba4f28-4b1a-435e-99ef-51b28e21f805)를 참조하세요.  
+ 로그에 이벤트 쓰기 및 로그 데이터 읽기와 같이 시스템 및 사용자 지정 이벤트 로그를 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.EventLog> 구성 요소 인스턴스를 만듭니다.
   
  **FileSystemWatcher**  
- 액세스 권한을 가진 디렉터리 또는 파일이 변경되었는지 모니터링하는 데 사용할 수 있는 <xref:System.IO.FileSystemWatcher> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [방법: FileSystemWatcher 구성 요소 인스턴스 구성](http://msdn.microsoft.com/en-us/2e628234-4951-4135-8a86-28b924070d50)을 참조하세요.  
+ 액세스 권한을 가진 디렉터리 또는 파일이 변경되었는지 모니터링하는 데 사용할 수 있는 <xref:System.IO.FileSystemWatcher> 구성 요소 인스턴스를 만듭니다.
   
  **HelpProvider**  
  컨트롤에 대한 팝업 또는 온라인 도움말을 제공하는 `System.Windows.Forms.HelpProvider` 구성 요소 인스턴스를 만듭니다.  
@@ -52,19 +52,19 @@ Visual Basic 및 C# 디자이너에 추가할 수 있는 구성 요소를 표시
  `System.Drawing.Image` 개체 컬렉션을 관리하는 메서드를 제공하는 `System.Windows.Forms.ImageList` 구성 요소 인스턴스를 만듭니다.  
   
  **MessageQueue**  
- 큐에서 메시지 읽기, 큐에 메시지 쓰기, 트랜잭션 처리, 큐 관리 작업 수행과 같이 메시지 큐를 조작하는 데 사용할 수 있는 <xref:System.Messaging.MessageQueue> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [메시지 구성 요소 사용](http://msdn.microsoft.com/en-us/922dbac7-26f0-4e39-b666-ccfc184793d7)을 참조하세요.  
-  
+ 큐에서 메시지 읽기, 큐에 메시지 쓰기, 트랜잭션 처리, 큐 관리 작업 수행과 같이 메시지 큐를 조작하는 데 사용할 수 있는 <xref:System.Messaging.MessageQueue> 구성 요소 인스턴스를 만듭니다.
+
  **PerformanceCounter**  
- 새 범주 및 인스턴스 만들기, 카운터에서 값 읽기, 카운터 데이터에 대한 계산 수행과 같이 Windows 성능 카운터를 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.PerformanceCounter> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [성능 임계값 모니터링](http://msdn.microsoft.com/en-us/b8b44a55-31d0-4b45-9517-8c1b1e4fdc91)을 참조하세요.  
+ 새 범주 및 인스턴스 만들기, 카운터에서 값 읽기, 카운터 데이터에 대한 계산 수행과 같이 Windows 성능 카운터를 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.PerformanceCounter> 구성 요소 인스턴스를 만듭니다.
   
  **Process**  
- 시스템의 프로세스와 연결된 데이터를 중지, 시작, 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.Process> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [Windows 프로세스 모니터링 및 관리](http://msdn.microsoft.com/en-us/a86bd4c1-b92c-49a0-8f32-61d67837b45e)를 참조하세요.  
+ 시스템의 프로세스와 연결된 데이터를 중지, 시작, 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.Process> 구성 요소 인스턴스를 만듭니다.
   
  **SerialPort**  
  동기 및 이벤트 구동 I/O, 핀 및 중단 상태에 대한 액세스, 직렬 드라이버 속성에 대한 액세스를 제공하는 `System.IO.Ports.SerialPort` 구성 요소 인스턴스를 만듭니다.  
   
  **ServiceController**  
- 서비스 시작 및 중지, 서비스에 명령 보내기와 같이 기존 서비스를 조작하는 데 사용할 수 있는 <xref:System.ServiceProcess.ServiceController> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [Windows 서비스 모니터링](http://msdn.microsoft.com/en-us/4542ee3f-e052-4cb9-8726-58e9420de222)을 참조하세요.  
+ 서비스 시작 및 중지, 서비스에 명령 보내기와 같이 기존 서비스를 조작하는 데 사용할 수 있는 <xref:System.ServiceProcess.ServiceController> 구성 요소 인스턴스를 만듭니다.
   
  **Timer**  
  Windows 기반 응용 프로그램에 시간 기반 기능을 추가하는 데 사용할 수 있는 <xref:System.Windows.Forms.Timer> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [Timer 구성 요소](/dotnet/framework/winforms/controls/timer-component-windows-forms)를 참조하세요.  
@@ -72,8 +72,8 @@ Visual Basic 및 C# 디자이너에 추가할 수 있는 구성 요소를 표시
 > [!NOTE]
 >  **도구 상자**에 추가할 수 있는 시스템 기반 <xref:System.Timers.Timer>도 있습니다. 이 <xref:System.Timers.Timer>는 서버 응용 프로그램에 최적화되어 있고 Windows Forms <xref:System.Windows.Forms.Timer>는 Windows Forms에 가장 적합합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [구성 요소를 사용한 프로그래밍](http://msdn.microsoft.com/Library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)   
- [구성 요소 프로그래밍 연습](http://msdn.microsoft.com/Library/373cacf7-479e-4b05-991c-5cb18824e913)   
- [도구 상자](../../ide/reference/toolbox.md)   
- [도구 상자 항목 선택 대화 상자(Visual Studio)](http://msdn.microsoft.com/en-us/bd07835f-18a8-433e-bccc-7141f65263bb)
+## <a name="see-also"></a>참고 항목
+
+[구성 요소를 사용한 프로그래밍](http://msdn.microsoft.com/Library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
+[구성 요소 프로그래밍 연습](http://msdn.microsoft.com/Library/373cacf7-479e-4b05-991c-5cb18824e913)  
+[도구 상자](../../ide/reference/toolbox.md)
