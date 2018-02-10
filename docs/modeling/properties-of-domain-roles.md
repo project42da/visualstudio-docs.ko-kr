@@ -4,17 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 6a2ae5a5e017980a6f7a5310ea3c76e49253249d
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 49539aea007a14eab68ad3f28d92d2e960618690
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="properties-of-domain-roles"></a>도메인 역할의 속성
 다음 표에 있는 속성 도메인 역할 연관 됩니다. 도메인 역할에 대 한 정보를 참조 하십시오. [이해 모델, 클래스 및 관계](../modeling/understanding-models-classes-and-relationships.md)합니다. 이러한 속성을 사용 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 및 도메인 특정 언어 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)합니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 01/13/2018
 |범주|생성 된 속성에 표시 되는 범주는 **속성** 생성 된 디자이너의 창. 이 속성이 비어 있으면 생성 된 속성 아래에 표시 된 **기타** 범주|< 없음\>|  
 |설명|코드를 작성 하는 데 사용 되 고 생성 된 디자이너의 UI에 사용 되는 설명입니다.<br /><br /> 설명은 역할 플레이어 클래스에서 생성 된 속성에 대 한 Intellisense 도구 설명에 나타납니다.|`Description for`*역할의 전체 이름*|  
 |표시 이름|도메인 역할에 대 한 생성 된 디자이너에 표시 되는 이름입니다.|Name 속성의 조정 된 값입니다.|  
-|Help Keyword|도메인 역할에 대 한 F1 도움말을 인덱싱하는 데 사용할 optional 키워드|\<없음 >|  
+|Help Keyword|도메인 역할에 대 한 F1 도움말을 인덱싱하는 데 사용할 optional 키워드|\<none>|  
 |속성 표시 이름|생성 된 역할 속성에 대 한 생성 된 디자이너에 표시 되는 이름입니다.|속성 이름 속성의 조정 된 값입니다.|  
   
 > [!NOTE]

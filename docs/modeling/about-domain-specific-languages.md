@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language
+helpviewer_keywords:
+- Domain-Specific Language
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f98b65fbb732b6736c91c605f03b7f2de2325487
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 9357c55b204d521eb5cd77af328636485c490ff4
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="about-domain-specific-languages"></a>도메인별 언어 정보
 
@@ -53,7 +55,7 @@ DSL를 정의한 경우에 자신의 컴퓨터에 설치할 수 있는 다른 �
   
 일반적으로 도메인 특정 언어 개발 팀이 여러 제품에 대 한 유사한 코드를 작성 해야 하는 경우 생성 됩니다. 예를 들어 수하물 처리 시스템 전문으로 하는 회사에는 있는 각 설치에 대 한 코드의 일부를 만들 수 있습니다는 수하물 트랙 DSL 정의할 수 있습니다. DSL 이점은에서 생성 된 코드를 안정적 이며 고객의 요구 사항이 변경 하는 경우 시스템 신속 하 게 업데이트할 수 있습니다 하 여 고객에 게 이해할 수 있습니다.  
   
-[!INCLUDE[dsl](../modeling/includes/dsl_md.md)]그래픽 디자이너를 직접 및 다이어그램 표기법 고유한 도메인 특정 언어를 만들고 다음 언어를 사용 하 여 각 프로젝트에 대 한 적절 한 소스 코드를 생성할 수 있습니다.  
+[!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 그래픽 디자이너를 직접 및 다이어그램 표기법 고유한 도메인 특정 언어를 만들고 다음 언어를 사용 하 여 각 프로젝트에 대 한 적절 한 소스 코드를 생성할 수 있습니다.  
   
 ## <a name="domain-specific-development"></a>도메인 특정 개발
 

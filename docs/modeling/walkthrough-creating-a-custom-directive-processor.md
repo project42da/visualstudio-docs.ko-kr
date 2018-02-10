@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text templates, custom directive processors
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e50e433ea3f954efd085a02a3e29a0eff958da0c
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 94008906dbc38a22e0f27de1a13acbccae8df7a4
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="walkthrough-creating-a-custom-directive-processor"></a>연습: 사용자 지정 지시문 프로세서 만들기
 *지시문 프로세서* 코드를 추가 하 여 작동는 *생성 된 변환 클래스*합니다. 호출 하는 경우는 *지시문* 에서 *텍스트 템플릿*, 텍스트 템플릿을 작성 하는 코드의 나머지 부분에서 지시문이 제공 하는 기능을 사용할 수 있습니다.  
@@ -88,9 +89,9 @@ End Property
   
 2.  다음 어셈블리에 대한 참조를 추가합니다.  
   
-    -   **Microsoft.VisualStudio.TextTemplating 합니다. \*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.\*.0**  
   
-    -   **Microsoft.VisualStudio.TextTemplating.Interfaces입니다. \*.0**  
+    -   **Microsoft.VisualStudio.TextTemplating.Interfaces.\*.0**  
   
 3.  코드 **Class1** 다음 코드를 사용 합니다. 이 코드에서는 <xref:Microsoft.VisualStudio.TextTemplating.DirectiveProcessor> 클래스에서 상속하는 CustomDirectiveProcessor 클래스를 정의하고 필요한 메서드를 구현합니다.  
   

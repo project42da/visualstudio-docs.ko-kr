@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2d8646866794a1a09c3f1e1e1f84011093dfc7c5
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: af086275f641e3237f8d22308c960ad30240b647
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>규칙으로 모델 내부의 변경 내용 전파
 시각화 및 모델링 SDK (VMSDK)에서 다른 요소에서 변경 전파 하는 저장소 규칙을 만들 수 있습니다. 저장소에 있는 모든 요소를 변경 하면 규칙 예정 가장 바깥쪽 트랜잭션이 커밋될 때 일반적으로 실행할 수입니다. 다양 한 유형의 여러 종류의 요소를 추가 또는 삭제와 같은 이벤트에 대 한 규칙 있습니다. 요소, 도형 또는 다이어그램의 특정 형식에 규칙을 연결할 수 있습니다. 규칙에 의해 정의 된 여러 기본 제공 기능: 다이어그램 모델 변경 될 때 업데이트 되도록 규칙을 확인 하는 예를 들어 있습니다. 사용자 고유의 규칙을 추가 하 여 도메인 특정 언어를 사용자 지정할 수 있습니다.  

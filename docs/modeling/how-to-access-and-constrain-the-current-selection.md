@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language, accessing the current selection
+helpviewer_keywords:
+- Domain-Specific Language, accessing the current selection
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9eaf9d13d6c5bc81153d459dc592b99f9e893733
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 81036e04abc9eac2cbed2879839e95cce52166fc
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-access-and-constrain-the-current-selection"></a>방법: 현재 선택 항목 액세스 및 제약
 도메인 특정 언어에 대 한 명령 또는 제스처 처리기를 작성 하는 경우 사용자 마우스 오른쪽 단추로 클릭 하는 요소를 확인할 수 있습니다. 또한 일부 셰이프나 필드를 선택할 방지할 수 있습니다. 예를 들어 아이콘 데코레이터를 클릭할 때 포함 된 셰이프 대신 선택 되도록 정렬할 수 있습니다. 이런이 방식으로 선택 영역을 제한 하면를 작성 해야 하는 처리기가 줄어듭니다. 또한 하면 손쉽게 decorator를 방지 하기 위해 필요 없이 도형에서 아무 곳 이나 클릭 수 있는 사용자에 대 한 합니다.  

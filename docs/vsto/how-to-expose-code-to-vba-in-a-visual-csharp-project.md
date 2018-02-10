@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,12 +19,13 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0be62faf81fc9d7da60a03596c25cc01a9bf0eac
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- office
+ms.openlocfilehash: 1b750137a52d30688f69c825f83f72c7cbeebe45
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>방법: Visual C# 프로젝트에서 VBA로 코드 노출
   두 가지 유형의 서로 상호 작용 하는 코드를 원하는 경우 Visual C# 프로젝트에서 Visual Basic에서 VBA 코드에 대 한 코드를 노출할 수 있습니다.  
@@ -80,7 +82,7 @@ ms.lasthandoff: 01/13/2018
   
      호스트 항목에 대한 자세한 내용은 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)를 참조하세요.  
   
-6.  VBA에 노출할 클래스에서 인터페이스를 추출 합니다. 에 **인터페이스 추출** 대화 상자에서 인터페이스 선언에 포함 하려는 공용 멤버를 선택 합니다. 자세한 내용은 참조 [인터페이스 추출 리팩터링](../ide/reference/extract-interface-csharp.md)합니다.
+6.  VBA에 노출할 클래스에서 인터페이스를 추출 합니다. 에 **인터페이스 추출** 대화 상자에서 인터페이스 선언에 포함 하려는 공용 멤버를 선택 합니다. 자세한 내용은 참조 [인터페이스 추출 리팩터링](../ide/reference/extract-interface.md)합니다.
   
 7.  추가 **공용** 키워드를 인터페이스 선언 합니다.  
   

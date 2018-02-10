@@ -4,22 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dependency diagrams, adding custom commands
 - dependency diagrams, adding custom gestures
-ms.assetid: ac9c417b-0b40-4a90-86f5-ee3cbdce030b
-caps.latest.revision: "38"
-author: alexhomer1
-ms.author: ahomer
-manager: douge
-ms.workload: multiple
-ms.openlocfilehash: af3df828a2abc441ce2efb3998b10fb1991e3127
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
-ms.translationtype: HT
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 5a8f1a2ff8e5ffc95d885b847a17e6cc16965837
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="add-commands-and-gestures-to-dependency-diagrams"></a>종속성 다이어그램에 명령 및 제스처 추가
 상황에 맞는 메뉴 명령을 정의 하 고 제스처 처리기를 Visual Studio에서 종속성 다이어그램 수 있습니다. 이러한 확장을 다른 Visual Studio 사용자에게 배포할 수 있는 VSIX(Visual Studio Integration Extension)로 패키지할 수 있습니다.  

@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language, generated code
+helpviewer_keywords:
+- Domain-Specific Language, generated code
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8a2e7e206e6e8b45580bd6c37b91ad62e67794b9
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 41cf1f19e03c1197c6266b5057af993b677c9c53
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="understanding-the-dsl-code"></a>DSL 코드 이해
 DSL(Domain-Specific Language) 솔루션은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 DSL 인스턴스를 읽고 업데이트하는 데 사용할 수 있는 API를 생성합니다. 이 API는 DSL 정의에서 생성되는 코드에서 정의됩니다. 이 항목에서는 생성되는 API에 대해 설명합니다.  
@@ -57,7 +59,7 @@ DSL(Domain-Specific Language) 솔루션은 [!INCLUDE[vsprvs](../code-quality/inc
 ## <a name="generated-files-in-dsl"></a>DSL의 생성된 파일  
  다음 생성 된 파일에 표시 된 **Dsl** 프로젝트.  
   
- *YourDsl*`Schema.xsd`  
+ *YourDsl* `Schema.xsd`  
   
  DSL 인스턴스를 포함하는 파일의 스키마입니다. 이 파일은 컴파일에 복사 (**bin**) 디렉터리입니다. DSL를 설치할 때이 파일을 복사할 수 있습니다 **files\microsoft Visual Studio 11.0\Xml\Schemas** 모델 파일의 유효성을 검사할 수 있도록 합니다. 자세한 내용은 참조 [도메인별 언어 솔루션 배포](../modeling/deploying-domain-specific-language-solutions.md)합니다.  
   

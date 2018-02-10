@@ -4,17 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b46bc88ba261fa214d306893ee90f6496c8446a8
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 0184e3b543e509d0e523504c0ea07f6fcc36775f
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>텍스트 템플릿에서 Visual Studio ModelBus 사용
 포함 하는 모델을 읽을 하는 텍스트 템플릿을 작성 하는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus 참조, 액세스 대상 모델에 대 한 참조를 확인 하는 것이 좋습니다. 이 경우 텍스트 템플릿 및 참조 도메인 특정 언어 (Dsl)를 적용 해야 할 수도 있습니다.  
@@ -214,7 +215,7 @@ inherits="Microsoft.VisualStudio.TextTemplating.Modeling.ModelBusEnabledTextTran
   
 7.  에 `T4ModelBusAdapter` 프로젝트에 대 한 참조를 추가 합니다: **Microsoft.VisualStudio.TextTemplating.Modeling.11.0**  
   
-8.  T4ModelBusAdapter\AdapterManager.tt를 엽니다.  
+8.  Open T4ModelBusAdapter\AdapterManager.tt:  
   
     1.  AdapterManagerBase의 기본 클래스를 <xref:Microsoft.VisualStudio.TextTemplating.Modeling.VsTextTemplatingModelingAdapterManager>로 변경합니다. 파일의이 부분 다음과 유사 합니다.  
   

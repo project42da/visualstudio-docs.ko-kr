@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: b9a7046930d12ebb940820eb25c4563b0a3213e3
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: b72a86f10c6e864406929fdccfb59bdd9393752e
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>연습: 사용자 지정 규칙 집합 구성 및 사용
 
@@ -106,7 +106,7 @@ ms.lasthandoff: 02/01/2018
   
 2.  오류 목록 창에서 클릭 **경고** 클릭 하 고는 **설명** 경고를 정렬 하려면 열 머리글 사전순으로 합니다.  
   
-     실제 응용 프로그램에서는이 시점에서 수정할 필요가 모든 규칙 위반 문제를 해결 또는 필요에 따라 기능을 해제 하거나 없음을 수정할 필요가 결정 하는 경우 규칙을 표시 하지 않습니다. 자세한 내용은 참조 [표시 하지 않을 경고 사용 하 여 SuppressMessage 특성](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)합니다.  
+     실제 응용 프로그램에서는이 시점에서 수정할 필요가 모든 규칙 위반 문제를 해결 또는 필요에 따라 기능을 해제 하거나 없음을 수정할 필요가 결정 하는 경우 규칙을 표시 하지 않습니다. 자세한 내용은 참조 [경고 표시 안 함](../code-quality/in-source-suppression-overview.md)합니다.
   
 3.  CA1704 경고를 확인 합니다. 이 규칙 위반 나타내는 고려해 야 합니다 "는 매개 변수에 대 한 보다 의미 있는 이름을 제공 합니다." 코드에서 문제를 해결 하거나 다음 절차에 설명 된 대로 해당 규칙을 비활성화할 수 있습니다.  
   

@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dependency diagrams, deploying extensions
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 060cf2551f6c79259c7094d52f35db92f9ebcfef
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 311add860016c914aab232ffad6e3a4efadb15c9
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="deploy-a-layer-model-extension"></a>레이어 모델 확장명 배포
 Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이어 모델링 확장을 설치할 수 있습니다.  
@@ -42,7 +43,7 @@ Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이
 2.  확장의 이름을 클릭 한 다음 클릭 **제거**합니다.  
   
 ## <a name="installing-an-extension-on-a-team-foundation-build-server"></a>Team Foundation Build 서버에 확장 설치  
- [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에는 일반적으로 Visual Studio가 설치되어 있지 않으므로 VSIX를 두 번 클릭하여 설치할 수 없습니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 설치에는 VSIX 확장 실행을 허용하는 일부 구성 요소가 포함되어 있지만 수동으로 확장을 설치해야 합니다.  
+ [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버 일반적으로 Visual Studio가 설치를 갖지 않으며 따라서 두 번 클릭 하 여 VSIX를 설치할 수 없습니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 설치에는 VSIX 확장 실행을 허용하는 일부 구성 요소가 포함되어 있지만 수동으로 확장을 설치해야 합니다.  
   
 #### <a name="to-install-your-layer-extension-on-a-includeesprbuildmiscincludesesprbuildmdmd-server"></a>[!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에 레이어 확장을 설치하려면  
   
@@ -56,11 +57,11 @@ Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이
   
     -   [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]를 실행하는 네트워크 서비스에 대해서만 설치하려면  
   
-         %WinDir%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\VisualStudio\\[version] \Extensions\Microsoft  
+         %WinDir%\ServiceProfiles\NetworkService\AppData\Local\Microsoft\VisualStudio\\[version]\Extensions\Microsoft  
   
     -   특정 사용자로 대화형 모드에서 실행되도록 [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)]를 구성한 경우 해당 사용자에 대해서만 설치할 수 있습니다.  
   
-         %LocalAppData%\Microsoft\VisualStudio\\[version] \Extensions\Microsoft  
+         %LocalAppData%\Microsoft\VisualStudio\\[version]\Extensions\Microsoft  
   
         > [!NOTE]
         >  % LocalAppData %는 일반적으로 *DriveName*: 사용자가*UserName*AppDataLocal 합니다.  

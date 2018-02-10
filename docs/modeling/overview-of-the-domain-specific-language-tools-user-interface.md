@@ -4,19 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.dsltools.dsldesigner.editor
-helpviewer_keywords: Domain-Specific Language Tools, user interface
+f1_keywords:
+- vs.dsltools.dsldesigner.editor
+helpviewer_keywords:
+- Domain-Specific Language Tools, user interface
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4dabfb345d9a98228afae5e20b63e6ded760800d
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 24aad9d934b044ea42a3ad5319c2a10234ca94ef
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-the-domain-specific-language-tools-user-interface"></a>도메인별 언어 도구 사용자 인터페이스 개요
 에 도메인 특정 언어 도구 (DSL 도구) 솔루션을 처음 열 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 사용자 인터페이스는 다음 그림과 유사 합니다.  

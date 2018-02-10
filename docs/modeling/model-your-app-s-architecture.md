@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: UML, modeling architecture
+helpviewer_keywords:
+- UML, modeling architecture
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ce471f2229744c9ee72f16a3b784f9e09823375d
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 3d77abff4595502ab27f56be10cb973361eef413
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="model-your-app39s-architecture"></a>응용 프로그램 &#39; 모델 s 아키텍처
 소프트웨어 시스템 또는 응용 프로그램 사용자가을 충족 하는지 확인 하려면 필요, 전체 구조 설명 및 소프트웨어 시스템 또는 응용 프로그램의 동작의 일부로 Visual Studio에서 모델을 만들 수 있습니다. 모델을 사용하여 디자인 전체에서 사용되는 패턴을 설명할 수도 있습니다. 이러한 모델은 기존 아키텍처를 이해하고, 변경 내용을 논의하고, 의도를 명확하게 전달하는 데 도움이 됩니다.  

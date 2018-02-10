@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - dependency graphs, creating path aliases
@@ -22,12 +21,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3787bea9eccd46104cd48c2bd2cdff27d8aeb872
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: a0000482b34ea3c98ac6467cbebccc83bd8b5a74
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Customize code maps by editing the DGML files
 코드 맵을 사용자 지정하려면 맵의 Directed Graph Markup Language(.dgml) 파일을 편집할 수 있습니다. 예를 들어 요소를 편집하여 사용자 지정 스타일을 지정하거나, 코드 요소와 링크에 속성 및 범주를 할당하거나, 코드 요소 또는 링크에 문서 또는 URL을 연결할 수 있습니다. DGML 요소에 대 한 자세한 내용은 참조 [전송 그래프 DGML Markup Language () 참조](../modeling/directed-graph-markup-language-dgml-reference.md)합니다.  
@@ -255,9 +256,9 @@ ms.lasthandoff: 01/13/2018
   
     -   `TargetType="Node` &#124; `Link | Graph"`  
   
-    -   `GroupLabel="`*NameInLegendBox*`"`  
+    -   `GroupLabel="` *NameInLegendBox* `"`  
   
-    -   `ValueLabel="`*NameInStylePickerBox*`"`  
+    -   `ValueLabel="` *NameInStylePickerBox* `"`  
   
      모든 대상 유형에 사용자 지정 스타일을 적용하려면 조건을 사용하지 않습니다.  
   
@@ -293,7 +294,7 @@ ms.lasthandoff: 01/13/2018
   
      <UnaryExpression> ::= "!" <Expression> &#124; "+" <Expression> &#124; "-" <Expression>  
   
-     <Operator>:: = "<" &#124; "\<=" &#124; "=" &#124; "> =" &#124; ">" &#124; "! =" &#124; "또는" &#124; "및" &#124; "+" &#124; "*" &#124; "/" &#124; "-"  
+     <Operator> ::= "<" &#124; "\<=" &#124; "=" &#124; ">=" &#124; ">" &#124; "!=" &#124; "or" &#124; "and" &#124; "+" &#124; "*" &#124; "/" &#124; "-"  
   
      <MemberBindings> ::= <MemberBindings> &#124; <MemberBinding> "." <MemberBinding>  
   

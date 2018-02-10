@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language, overriding event handlers
+helpviewer_keywords:
+- Domain-Specific Language, overriding event handlers
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e85bcb3545cc35b42723290601aff39b50ba3dc7
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: f874cd26e2c6fd3d4726284ba25454ac7de50d66
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="domain-property-value-change-handlers"></a>도메인 속성 값 변경 처리기
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL(Domain-Specific Language)에서는 도메인 속성 값이 변경되면 도메인 속성 처리기에서 `OnValueChanging()` 및 `OnValueChanged()` 메서드가 호출됩니다. 변경에 응답하려면 이러한 메서드를 재정의하면 됩니다.  

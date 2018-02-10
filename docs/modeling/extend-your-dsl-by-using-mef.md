@@ -4,17 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4a746d3b2c913025bb9fc84b4f3fec34fe2bc7cf
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 735de60d18bc5cbca7dc2ba509372d81622038be
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF를 사용하여 DSL 확장
 프레임 워크 MEF (Managed Extensibility)를 사용 하 여 해당 도메인 특정 언어 DSL ()를 확장할 수 있습니다. 또는 다른 개발자 DSL 정 및 프로그램 코드를 변경 하지 않고 DSL에 대 한 확장을 작성 하는 일을 할 수 있습니다. 이러한 확장 메뉴 명령, 끌어서 놓기 처리기 및 유효성 검사를 포함 합니다. 사용자는 DSL을 설치 하 고 다음에 대 한 필요에 따라 확장을 설치 하는 작업을 할 수 있습니다.  

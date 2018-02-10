@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language Tools, supported Visual Studio editions
+helpviewer_keywords:
+- Domain-Specific Language Tools, supported Visual Studio editions
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b76309249310afd5bd88c8d8553792512e208220
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 359bb9864532f2f3fbeb4fecca28c54ea0a96e17
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="supported-visual-studio-editions-for-visualization-amp-modeling-sdk"></a>시각화에 대 한 지원 되는 Visual Studio 버전 &amp; SDK 모델링
 다음은 지원 되는 Visual Studio 버전의 목록을 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 제작 및 배포 환경입니다. 이러한 버전에 대 한 자세한 내용은 Microsoft을 참조 하십시오. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [개발자 센터](http://go.microsoft.com/fwlink/?LinkId=75628)합니다.  
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/25/2018
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
   
 ## <a name="deployment-editions"></a>배포 버전  
- [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]에서는 작성하는 DSL(Domain-Specific Language)을 배포하기 위한 다음 구성을 지원합니다.  
+ [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 작성 하는 도메인 특정 언어를 배포 하기 위한 다음 구성을 지원 합니다.  
   
 -   Visual Studio Enterprise  
   

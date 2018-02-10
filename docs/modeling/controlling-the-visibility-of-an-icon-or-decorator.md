@@ -4,17 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b090a2f17ad41bb46675f5e170dcbf733b7f8977
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 835d9d356a06c831bb3decf6d0a5a6a4b5620302
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>아이콘 또는 데코레이터의 가시성 제어
 A *decorator* 아이콘이 나 DSL ()는 도메인 특정 언어의 모양에 표시 되는 텍스트의 줄은 합니다. Decorator 표시 하 고 모델의 속성의 상태에 따라 사라질 수 있습니다. 예를 들어 개인을 나타낼 셰이프를 개인의 성별, 자식, 수에 따라 표시 하는 서로 다른 아이콘이 있을 수 있습니다.  
@@ -66,7 +67,7 @@ A *decorator* 아이콘이 나 DSL ()는 도메인 특정 언어의 모양에 �
   
      **이름** 예를 들어 **DecoratorControl**  
   
-     **형식** = `Boolean`  
+     **Type** = `Boolean`  
   
      자세한 내용은 참조 [계산 및 저장소 속성을 사용자 지정](../modeling/calculated-and-custom-storage-properties.md)합니다.  
   

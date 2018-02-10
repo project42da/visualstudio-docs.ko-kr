@@ -7,19 +7,21 @@ ms.suite:
 ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.projectpropertypages.codeanalysis
+f1_keywords:
+- vs.projectpropertypages.codeanalysis
 helpviewer_keywords:
 - code analysis, managed code
 - managed code, code analysis
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 8739c5aafbc8914e3de5f0a51659b40234fa079c
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- dotnet
+ms.openlocfilehash: 5d30f84194ef7a48de106698c9ad4569e947923c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="code-analysis-for-managed-code-overview"></a>관리 코드 개요에 대 한 코드 분석
 
@@ -39,11 +41,11 @@ ms.lasthandoff: 01/22/2018
 
 으로 관리 되는 코드에 대 한 코드 분석 규칙 그룹화 됩니다 *규칙 집합*합니다. Microsoft 표준 규칙 집합 중 하나를 사용하거나, 특정 요구 사항에 맞게 사용자 지정 규칙 집합을 만들 수 있습니다. 자세한 내용은 참조 [코드 분석 규칙 그룹화를 사용 하 여 규칙 집합](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)합니다.
 
-## <a name="in-source-suppression"></a>소스 표시 안 함
+## <a name="suppress-warnings"></a>경고 표시 안 함
 
 경고가 적용되지 않는 것으로 표시하면 유용한 경우가 많습니다. 이렇게 하면 경고를 조사한 다음 이를 표시하지 않거나 무시하도록 설정했다는 것을 개발자와 나중에 이 코드를 검토할 수 있는 다른 사람에게 알릴 수 있습니다.
 
-소스에서 경고 억제 (suppression)는 사용자 지정 특성을 통해 구현 됩니다. 경고를 표시하지 않으려면 다음 예제와 같이 소스 코드에 `SuppressMessage` 특성을 추가합니다.
+경고의 소스에서 억제 (suppression)는 사용자 지정 특성을 통해 구현 됩니다. 경고를 표시하지 않으려면 다음 예제와 같이 소스 코드에 `SuppressMessage` 특성을 추가합니다.
 
 ```csharp
 [System.Diagnosis.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]
@@ -53,7 +55,10 @@ Public class MyClass
 }
 ```
 
-자세한 내용은 참조 [표시 하지 않을 경고 사용 하 여 SuppressMessage 특성](../code-quality/suppress-warnings-by-using-the-suppressmessage-attribute.md)합니다.
+자세한 내용은 참조 [경고 표시 안 함](../code-quality/in-source-suppression-overview.md)합니다.
+
+> [!NOTE]
+> Visual Studio 2017로 프로젝트를 마이그레이션하는 경우 코드 분석 경고 늘고에 직면할 갑자기 수 있습니다. 경고를 해결 하 고 일시적으로 해제 하려면 코드 분석 아닌 경우 프로젝트의 속성 페이지를 엽니다 (**프로젝트** > ***프로젝트* 속성...** )로 이동 하 고는 **코드 분석** 탭 합니다. 선택 취소 **빌드에 코드 분석 사용**, 다음 프로젝트를 다시 빌드합니다. 또는 서로 다른 수의 작은 규칙 집합은 코드에 대해 실행을 선택할 수 있습니다. 코드 분석 되는 경고를 해결 하려면 준비에 다시 설정 해야 합니다.
 
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>체크 인 정책의 일부로 코드 분석 실행
 

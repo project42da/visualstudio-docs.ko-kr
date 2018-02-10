@@ -4,17 +4,18 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a5351c359f708eeb1d2a9aa030f5b82337d38d56
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: de6b219610908503f37658ff977f042363fb8663
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL의 MSI 및 VSIX 배포
 도메인 특정 언어 또는 다른 컴퓨터 사용자의 컴퓨터에 설치할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]대상 컴퓨터에 이미 설치 되어 있어야 합니다.  
@@ -75,7 +76,7 @@ ms.lasthandoff: 01/13/2018
   
 1.  설정 `InstalledByMsi` 확장 매니페스트에 합니다. 이렇게 하면 않습니다는 VSX를 없도록 설치 및 제외 하 고 MSI에서 제거 됩니다. 다른 구성 요소는 MSI에 포함할 경우에 유용 합니다.  
   
-    1.  열기 DslPackage\source.extension.tt  
+    1.  Open DslPackage\source.extension.tt  
   
     2.  앞에 다음 행을 삽입 `<SupportedProducts>`:  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 01/13/2018
   
 5.  추가 **CreateMsiSetupProject.tt** Dsl 프로젝트에 있습니다.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]명명 된 파일을 만들 **CreateMsiSetupProject.vdproj**합니다.  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명명 된 파일을 만들 **CreateMsiSetupProject.vdproj**합니다.  
   
 6.  Windows 탐색기에서 복사 Dsl\\새 폴더로 *.vdproj 라는 설치 합니다.  
   

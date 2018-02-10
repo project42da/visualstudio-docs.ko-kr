@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language, definition file
+helpviewer_keywords:
+- Domain-Specific Language, definition file
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 86955d745e645d2d37e9e33f258a2662bcac59fe
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 92bd27f1590aae455c0d5bba540720421338b63c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 파일
 이 항목의 Dsl 프로젝트에 DslDefinition.dsl 파일의 구조를 설명 합니다.는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 솔루션을 정의 하는 *도메인 특정 언어*합니다. DslDefinition.dsl 파일 클래스와 함께 다이어그램, 도형, 커넥터, 직렬화 형식 도메인 특정 언어에서의 관계를 설명 하 고 **도구 상자** 도메인 특정 언어의 및 해당 편집 도구입니다. DSL 솔루션에서 이러한 도구를 정의하는 코드는 DslDefinition.dsl 파일의 정보에 따라 생성됩니다.  

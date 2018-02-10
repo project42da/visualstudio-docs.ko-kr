@@ -6,23 +6,25 @@ ms.reviewer:
 ms.suite: 
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: "80025080"
+f1_keywords:
+- "80025080"
 helpviewer_keywords:
 - data [Visual Studio]
 - data access [Visual Studio]
 - data [C#]
 - ADO.NET, data access
-caps.latest.revision: "100"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c3777249948ba4be917de4ec6c139e7a15bce0a7
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+ms.workload:
+- data-storage
+ms.openlocfilehash: 7ccee10630a4b5de0aebf361c7acf6cccf8cf49c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio에서 데이터 액세스
 
@@ -86,11 +88,9 @@ ADO.NET에서 사용할 수 있으려면 데이터베이스에 대 한 사용자
 
 .NET, 모델링 및 데이터 원본에서 검색 한 후 메모리에서 데이터를 조작 하기 위한 세 가지 선택 옵션이 있습니다.
 
-[Entity Framework](../data-tools/entity-data-model-tools-in-visual-studio.md)  
-기본 Microsoft ORM 기술입니다. .NET 개체로 나타나므로 관계형 데이터에 대 한 프로그램에 사용할 수 있습니다. 새 응용 프로그램에 대 한 모델은 필요한 경우 첫 번째 기본 선택 이어야 합니다. 기본 ADO.NET 공급자의 사용자 지정 지원이 필요합니다.
+[Entity Framework](../data-tools/entity-data-model-tools-in-visual-studio.md) 쓰이는 Microsoft ORM 기술 합니다. .NET 개체로 나타나므로 관계형 데이터에 대 한 프로그램에 사용할 수 있습니다. 새 응용 프로그램에 대 한 모델은 필요한 경우 첫 번째 기본 선택 이어야 합니다. 기본 ADO.NET 공급자의 사용자 지정 지원이 필요합니다.
 
-[LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md)  
-이전 세대 개체 관계형 매퍼입니다. 이 덜 복잡 한 시나리오에 적합 하지만 더 이상 개발 합니다.
+[LINQ to SQL](../data-tools/linq-to-sql-tools-in-visual-studio2.md) 이전 세대 개체 관계형 매퍼입니다. 이 덜 복잡 한 시나리오에 적합 하지만 더 이상 개발 합니다.
 
 [데이터 집합](../data-tools/dataset-tools-in-visual-studio.md)  
 가장 오래 된 세 가지 모델링 기술 중입니다. "데이터 폼" 응용 프로그램은 하지 많은 양의 데이터를 처리 하거나 없는 복잡 한 쿼리 또는 변환을 수행의 신속한 개발을 위한 주로 설계 되었습니다. 논리적으로 SQL 데이터베이스 개체를.NET 개체 보다 훨씬 더 비슷한 DataTable 및 DataRow 개체의 DataSet 개체로 구성 됩니다. SQL 데이터 원본을 기반으로 비교적 간단한 응용 프로그램, 데이터 집합에 적합 한 선택 중일 수 있습니다.
@@ -115,39 +115,31 @@ C + + 응용 프로그램에서 데이터베이스에 연결 하는 방법에 �
 
 ## <a name="python"></a>Python
 
-설치 [Python Tools for Visual Studio](http://microsoft.github.io/PTVS/) CPython 또는 IronPython (.NET) 응용 프로그램을 만드는 즐겨 찾는 Python 프레임 워크와 함께 합니다. Python Tools for Visual Studio 웹 사이트에 데이터를 포함 하 여 연결에 대 한 몇 가지 자습서 [Django 및 azure SQL 데이터베이스](https://github.com/Microsoft/PTVS/wiki/Django-and-SQL-Database-on-Azure), [Django 및 Azure에서 MySQL](https://github.com/Microsoft/PTVS/wiki/Django-and-MySQL-on-Azure) 및 [Bottle 및 MongoDB에 Azure](https://github.com/Microsoft/PTVS/wiki/Bottle-and-MongoDB-on-Azure)합니다.
+설치 [Visual Studio에서 Python 지원](../python/python-in-visual-studio.md) Python 응용 프로그램을 만드는 합니다. Azure 설명서에서 다음을 포함 하는 데이터에 연결 하는 여러 자습서에 있습니다.
+- [Django 및 Azure에서 SQL 데이터베이스](/azure/app-service/app-service-web-get-started-python)
+- [Django 및 Azure에서 MySQL](/azure/app-service-web/web-sites-python-ptvs-django-mysql)
+- 작업할 [blob](/azure/storage/blobs/storage-quickstart-blobs-python), [파일](/azure/storage/files/storage-python-how-to-use-file-storage), [큐](/azure/storage/queues/storage-python-how-to-use-queue-storage), 및 [테이블 (Cosmo DB)](/azure/cosmos-db/table-storage-how-to-use-python)합니다.
 
 ## <a name="related-topics"></a>관련 항목
 
-[데이터, 장치 및 분석](https://msdn.microsoft.com/data-and-devices)  
-Cortana Analytics Suite 및 사물 인터넷에 대 한 지원을 포함 하 여 Microsoft intelligent cloud에 대 한 소개를 제공 합니다.
+[데이터, 장치 및 분석](https://msdn.microsoft.com/data-and-devices) Cortana Analytics Suite 및 사물 인터넷에 대 한 지원을 포함 하 여 Microsoft intelligent cloud에 대 한 소개를 제공 합니다.
 
-[Microsoft Azure 저장소](https://azure.microCsoft.com/documentation/services/storage/)  
-Azure 저장소 및 Azure blob, 테이블, 큐 및 파일을 사용 하 여 응용 프로그램을 만드는 방법에 설명 합니다.
+[Microsoft Azure 저장소](https://azure.microCsoft.com/documentation/services/storage/) 를 Azure blob, 테이블, 큐 및 파일을 사용 하 여 응용 프로그램을 만드는 방법과 Azure 저장소에 설명 합니다.
 
-[Azure SQL 데이터베이스](https://azure.microsoft.com/documentation/services/sql-database/)  
-Azure SQL 데이터베이스, 서비스는 관계형 데이터베이스에 연결 하는 방법을 설명 합니다.
+[Azure SQL 데이터베이스](https://azure.microsoft.com/documentation/services/sql-database/) 서비스로 관계형 데이터베이스, Azure SQL 데이터베이스에 연결 하는 방법을 설명 합니다.
 
-[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt)  
-디자인, 탐색, 테스트 및 데이터에 연결 된 응용 프로그램 및 데이터베이스의 배포를 단순화 하는 도구에 설명 합니다.
+[SQL Server Data Tools](/sql/ssdt/download-sql-server-data-tools-ssdt) 디자인, 탐색, 테스트 및 데이터에 연결 된 응용 프로그램 및 데이터베이스의 배포를 단순화 하는 도구에 설명 합니다.
 
-[ADO.NET](/dotnet/framework/data/adonet/index)  
-ADO.NET 아키텍처 및 응용 프로그램 데이터를 관리 하 고 데이터 원본 및 XML 상호 작용을 ADO.NET 클래스를 사용 하는 방법을 설명 합니다.
+[ADO.NET](/dotnet/framework/data/adonet/index) ADO.NET 아키텍처 및 응용 프로그램 데이터를 관리 하 고 데이터 원본 및 XML 상호 작용을 ADO.NET 클래스를 사용 하는 방법에 설명 합니다.
 
-[ADO.NET Entity Framework](https://msdn.microsoft.com/data/ef)  
-관계형 데이터베이스에 대해 직접 대신 개념적 모델에 대해 프로그래밍 하는 데 사용할 수 있는 데이터 응용 프로그램을 만드는 방법을 설명 합니다.
+[ADO.NET Entity Framework](https://msdn.microsoft.com/data/ef) 관계형 데이터베이스에 대해 직접 대신 개념적 모델에 대해 프로그래밍 하는 데 사용할 수 있는 데이터 응용 프로그램을 만드는 방법에 설명 합니다.
 
-[WCF Data Services 4.5](/dotnet/framework/data/wcf/index)  
-사용 하는 방법에 설명 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 구현 하는 웹 또는 인트라넷에 데이터 서비스를 배포 하는 [개방형 데이터 프로토콜 (OData)](http://go.microsoft.com/fwlink/?LinkID=182204)합니다.
+[WCF 데이터 서비스 4.5](/dotnet/framework/data/wcf/index) 사용 하는 방법에 설명 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 구현 하는 웹 또는 인트라넷에 데이터 서비스를 배포 하는 [개방형 데이터 프로토콜 (OData)](http://go.microsoft.com/fwlink/?LinkID=182204)합니다.
 
-[Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)  
-Office 솔루션에서 데이터가 작동 하는 방법을 설명 하는 항목에 대 한 링크를 포함 합니다. 스키마 지향 프로그래밍, 데이터 캐싱 및 서버 쪽 데이터 액세스에 대 한 정보가 포함 됩니다.
+[Office 솔루션의 데이터](../vsto/data-in-office-solutions.md) Office 솔루션에서 데이터가 작동 하는 방법을 설명 하는 항목에 대 한 링크를 포함 합니다. 스키마 지향 프로그래밍, 데이터 캐싱 및 서버 쪽 데이터 액세스에 대 한 정보가 포함 됩니다.
 
-[LINQ(Language-Integrated Query)](/dotnet/csharp/linq/)  
-C# 및 Visual Basic 및 관계형 데이터베이스, XML 문서, 데이터 집합 및 메모리 내 컬렉션을 쿼리 하기 위한 일반적인 모델에 내장 된 쿼리 기능을 설명 합니다.
+[LINQ (Language-Integrated Query)](/dotnet/csharp/linq/) C# 및 Visual Basic 및 관계형 데이터베이스, XML 문서, 데이터 집합 및 메모리 내 컬렉션을 쿼리 하기 위한 일반적인 모델에 내장 된 쿼리 기능에 설명 합니다.
 
-[Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)  
-XML 데이터를 디버깅 XSLT,.NET Framework XML 기능을 사용 하는 작업 및 XML 쿼리 아키텍처에 설명합니다.
+[Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md) XML 데이터를 디버깅 XSLT,.NET Framework XML 기능을 사용 하는 작업 및 XML 쿼리의 아키텍처에 설명 합니다.
 
-[XML 문서 및 데이터](/dotnet/standard/data/xml/index)  
-.NET Framework에서 XML 문서 및 데이터로 작업하는 종합적이고 통합된 클래스 집합에 대한 개요를 제공합니다.
+[XML 문서 및 데이터](/dotnet/standard/data/xml/index) 포괄적이 고 통합 집합이 XML 문서 및.NET Framework의 데이터를 사용 하는 클래스에 대해 간략하게 설명 합니다.

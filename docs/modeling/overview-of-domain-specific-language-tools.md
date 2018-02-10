@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: Domain-Specific Language
+helpviewer_keywords:
+- Domain-Specific Language
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1fcba975443deb768a2b3de36bd2744183cdcf40
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 89ff0565bf33936f15c18c0964fc9fb2f64ab9b8
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>도메인별 언어 도구 개요
 도메인 특정 언어 도구 (DSL 도구)에서 호스팅되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]사용 도메인 특정 언어를 디자인 하 고 다음 사용자의 언어를 기반으로 하는 모델을 만들 수 있어야 하는 모든 항목을 생성 합니다.  

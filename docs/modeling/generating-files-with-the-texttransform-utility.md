@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 09/21/2017
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text templates, TextTransform utility
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: de8564aa1743ed22ff4a600d9bf655bbb4adaed4
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: b7816e11c431f17336955f2037d288641b6c3ad5
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="generating-files-with-the-texttransform-utility"></a>TextTransform 유틸리티 사용하여 파일 생성
 TextTransform.exe는 텍스트 템플릿을 변형 하는 데 사용할 수 있는 명령줄 도구입니다. TextTransform.exe를 호출할 때 인수로 텍스트 템플릿 파일의 이름을 지정 합니다. TextTransform.exe는 텍스트 변환 엔진을 호출 하 고 텍스트 서식 파일을 처리 합니다. TextTransform.exe는 일반적으로 스크립트에서 호출 됩니다. 그러나 않습니다 일반적으로 필요 하므로 Visual Studio에서 또는 빌드 프로세스에서 텍스트 변환 작업을 수행할 수 있습니다.  
@@ -27,17 +28,17 @@ TextTransform.exe는 텍스트 템플릿을 변형 하는 데 사용할 수 있�
   
  TextTransform.exe은 다음 디렉터리에 있습니다.  
   
- **\Program 파일 (x86) \Microsoft Visual Studio\2017\Professional\Common7\IDE**  
+ **\Program Files (x86)\Microsoft Visual Studio\2017\Professional\Common7\IDE**  
 
 Professional edition에 대 한 또는
 
- **\Program 파일 (x86) \Microsoft Visual Studio\2017\Enterprise\Common7\IDE**
+ **\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE**
  
  Enterprise edition.
 
 이전 버전의 Visual Studio에서는 파일은 다음 위치에 있습니다.
 
-**\Program 파일 (x86) \Common Files\Microsoft Shared\TextTemplating\{버전}**
+**\Program Files (x86)\Common Files\Microsoft Shared\TextTemplating\{version}**
 
 여기서 {버전}는 설치 된 이전 버전에 따라 다릅니다.
 
@@ -55,13 +56,13 @@ TextTransform [<options>] <templateName>
   
 |**옵션**|**설명**|  
 |----------------|---------------------|  
-|**-out** \<파일 이름 >|변환의 출력을 쓸 파일입니다.|  
-|**-r** \<어셈블리 >|컴파일 및 텍스트 템플릿을 실행에 사용 되는 어셈블리입니다.|  
-|**-u** \<네임 스페이스 >|서식 파일을 컴파일하는 데 사용 되는 네임 스페이스입니다.|  
-|**-I** \<includedirectory >|지정 된 텍스트 서식 파일에 포함 된 텍스트 템플릿을 포함 하는 디렉터리입니다.|  
+|**-out** \<filename>|변환의 출력을 쓸 파일입니다.|  
+|**-r** \<assembly>|컴파일 및 텍스트 템플릿을 실행에 사용 되는 어셈블리입니다.|  
+|**-u** \<namespace>|서식 파일을 컴파일하는 데 사용 되는 네임 스페이스입니다.|  
+|**-I** \<includedirectory>|지정 된 텍스트 서식 파일에 포함 된 텍스트 템플릿을 포함 하는 디렉터리입니다.|  
 |**-P** \<참조 경로 >|텍스트 템플릿 내에 지정 된 어셈블리 또는 사용 하 여 검색 하려면 디렉터리는 **-r** 옵션입니다.<br /><br /> 예를 들어 Visual Studio API에 대 한 사용 되는 어셈블리를 포함 하려면 사용<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|  
-|**-dp** \<processorName >!\< n a m e >! \<assemblyName &#124; s e >|이름, 전체 형식 이름 및 텍스트 템플릿 내에서 사용자 지정 지시문 처리를 사용할 수 있는 지시문 프로세서의 어셈블리입니다.|  
-|**-a** [processorName]! [ directiveName]! \<parameterName >! \<parameterValue >|지시문 프로세서에 대 한 매개 변수 값을 지정 합니다. 매개 변수 이름 및 값을 지정 하면 매개 변수가 모든 지시문 프로세서에 사용할 수 있는 됩니다. 지시문 프로세서를 지정 하면 지정 된 프로세서 수입니다. 지시문 이름을 지정 하면 지정된 된 지시문을 처리 되는 경우에 사용할 수는 매개 변수는.<br /><br /> 매개 변수 값에 지시문 프로세서 또는 텍스트 서식 파일에서 액세스를 사용 하 여 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost.ResolveParameterValue%2A>합니다. 텍스트 템플릿을 포함 `hostspecific` template 지시문에에서 메시지를 호출 하 고 `this.Host`합니다. 예:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`.<br /><br /> 항상 입력의 '!' 옵션 프로세서와 지시문 이름은 생략 한 경우에 표시 합니다. 예:<br /><br /> `-a !!param!value`|  
+|**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|이름, 전체 형식 이름 및 텍스트 템플릿 내에서 사용자 지정 지시문 처리를 사용할 수 있는 지시문 프로세서의 어셈블리입니다.|  
+|**-a** [processorName]![directiveName]!\<parameterName>!\<parameterValue>|지시문 프로세서에 대 한 매개 변수 값을 지정 합니다. 매개 변수 이름 및 값을 지정 하면 매개 변수가 모든 지시문 프로세서에 사용할 수 있는 됩니다. 지시문 프로세서를 지정 하면 지정 된 프로세서 수입니다. 지시문 이름을 지정 하면 지정된 된 지시문을 처리 되는 경우에 사용할 수는 매개 변수는.<br /><br /> 매개 변수 값에 지시문 프로세서 또는 텍스트 서식 파일에서 액세스를 사용 하 여 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost.ResolveParameterValue%2A>합니다. 텍스트 템플릿을 포함 `hostspecific` template 지시문에에서 메시지를 호출 하 고 `this.Host`합니다. 예:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`.<br /><br /> 항상 입력의 '!' 옵션 프로세서와 지시문 이름은 생략 한 경우에 표시 합니다. 예:<br /><br /> `-a !!param!value`|  
 |**-h**|도움말을 제공 합니다.|  
   
 ## <a name="related-topics"></a>관련 항목  

@@ -4,18 +4,19 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-csharp
+ms.technology: vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: editors [Visual Studio SDK], custom - in-place view activation
+helpviewer_keywords:
+- editors [Visual Studio SDK], custom - in-place view activation
 ms.assetid: 7d316945-06e0-4d8e-ba3a-0ef96fc75399
-caps.latest.revision: "26"
+caps.latest.revision: 
 manager: douge
-ms.openlocfilehash: 16c091dc6d5602e4d19b8679794ef2794b29d7ed
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d1fe2c1dfe71923897836f803e3a9712b4dec0f1
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="in-place-activation"></a>내부 활성화
 편집기 뷰에서 ActiveX 또는 기타 활성 컨트롤을 호스트하는 경우 바로 활성화 모델을 사용하여 ActiveX 컨트롤 또는 활성 문서 데이터 개체로 편집기 뷰를 구현해야 합니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/27/2017
   
  바로 활성화 편집기를 만들기 위해 구현되는 모든 인터페이스가 단일 `CYourEditorDocument` 개체에 표시되지만 이 구성에서는 문서 데이터의 단일 보기만 지원합니다. 문서 데이터의 여러 보기를 지원하는 방법에 대한 자세한 내용은 [Supporting Multiple Document Views](../extensibility/supporting-multiple-document-views.md)을 참조하세요.  
   
-|인터페이스|개체 형식|기능|  
+|인터페이스|개체 형식|사용|  
 |---------------|--------------------|---------|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IOleInPlaceComponent>|보기|<xref:Microsoft.VisualStudio.Shell.Interop.SOleComponentUIManager> 서비스를 사용하여 내부 VSPackage 개체가 완전히 통합된 IDE 구성 요소로 작동할 수 있게 합니다. 이 서비스는 개체의 메뉴, 도구 모음 및 명령을 IDE에 통합하고 상태 변경 알림을 실행합니다.|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleObject>|보기|포함 개체가 컨테이너에 기본 기능을 제공하고 통신하는 주요 수단입니다.|  

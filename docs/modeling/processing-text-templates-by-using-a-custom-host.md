@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text templates, in application or VS extension
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d3eabfb846b6b488c99202037ebea90c4f9f04db
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: af3e5b50095b30a912f6de7b67ba8a40f99127f8
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="processing-text-templates-by-using-a-custom-host"></a>사용자 지정 호스트를 사용하여 텍스트 템플릿 처리
 *텍스트 템플릿 변환* 하나를 처리는 *텍스트 템플릿* 파일 입력 및 출력으로 하는 텍스트 파일을 생성 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서나 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]가 설치된 컴퓨터에서 실행되는 독립 실행형 응용 프로그램에서 텍스트 변환 엔진을 호출할 수 있습니다. 그러나 제공 해야는 *텍스트 템플릿 호스트*합니다. 이 클래스는 템플릿을 환경에 연결하여 어셈블리, 포함 파일 등의 리소스를 찾고 출력 및 오류 메시지를 처리합니다.  

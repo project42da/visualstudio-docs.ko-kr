@@ -1,5 +1,5 @@
 ---
-title: "SuppressMessage 특성을 사용 하 여 Visual Studio에서 코드 분석 경고 표시 안 함 | Microsoft Docs"
+title: "Visual Studio에서 코드 분석 경고 표시 안 함 | Microsoft Docs"
 ms.custom: 
 ms.date: 01/29/2018
 ms.reviewer: 
@@ -18,11 +18,11 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cd3800e082673e9478eb32c6ae5627eef4d7e81
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 5862b164c72c8f07c78db8948face95edfde357c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="suppressing-code-analysis-warnings"></a>코드 분석 경고 표시하지 않기
 
@@ -34,6 +34,9 @@ C + + /CLI를 CA 매크로 사용 하 여\_표시 안 함\_메시지 또는 CA\_
 
 > [!NOTE]
 > 소스에서 메타 데이터를 실수로 전달 방지 하기 위해 릴리스 빌드에 소스 비 표시 오류는 사용 하지 있습니다. 또한, 소스에서 처리 비용 때문에 응용 프로그램의 성능이 저하 될 수 있습니다.
+
+> [!NOTE]
+> Visual Studio 2017로 프로젝트를 마이그레이션하는 경우 코드 분석 경고 늘고에 직면할 갑자기 수 있습니다. 경고를 해결 하 고 일시적으로 해제 하려면 코드 분석 아닌 경우 프로젝트의 속성 페이지를 엽니다 (**프로젝트** > ***프로젝트* 속성...** )로 이동 하 고는 **코드 분석** 탭 합니다. 선택 취소 **빌드에 코드 분석 사용**, 다음 프로젝트를 다시 빌드합니다. 또는 서로 다른 수의 작은 규칙 집합은 코드에 대해 실행을 선택할 수 있습니다. 코드 분석 되는 경고를 해결 하려면 준비에 다시 설정 해야 합니다.
 
 ## <a name="suppressmessage-attribute"></a>SuppressMessage 특성
 
@@ -95,7 +98,7 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 비 표시 특성 메서드에 적용할 수 있지만 메서드 본문 내에서 형식을 포함할 수 없습니다. 즉, 특정 규칙의 모든 위반 추가 하는 경우 표시 되지 않습니다는 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 특성을 메서드에 합니다.
 
-경우에 따라 향후 코드를 자동으로 코드 분석 규칙에서 제외 되지 않습니다 수 있도록 예제에 대 한 위반의 특정 인스턴스를 표시 하지 않을 수 있습니다. 특정 코드 분석 규칙을 사용 하면 사용 하 여이 작업을 수행할 수 있도록는 `MessageId` 의 속성은 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 특성입니다. 레거시 규칙 (지역 변수 또는 매개 변수) 특정 기호 관련 위반에 대 한 일반적으로 `MessageId` 속성입니다. [CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md) 은 이러한 규칙의 예입니다. 그러나 실행 코드 (비 기호)에 위반에 대 한 레거시 규칙을 고려 하지 않는 `MessageId` 속성입니다. 또한 Roslyn 분석기 고려 하지 않는 `MessageId` 속성입니다.
+경우에 따라 향후 코드를 자동으로 코드 분석 규칙에서 제외 되지 않습니다 수 있도록 예제에 대 한 위반의 특정 인스턴스를 표시 하지 않을 수 있습니다. 특정 코드 분석 규칙을 사용 하면 사용 하 여이 작업을 수행할 수 있도록는 `MessageId` 의 속성은 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 특성입니다. 레거시 규칙 (지역 변수 또는 매개 변수) 특정 기호 관련 위반에 대 한 일반적으로 `MessageId` 속성입니다. [CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md) 은 이러한 규칙의 예입니다. 그러나 실행 코드 (비 기호)에 위반에 대 한 레거시 규칙을 고려 하지 않는 `MessageId` 속성입니다. 또한.NET 컴파일러 플랫폼 ("Roslyn") 분석기 고려 하지 않는 `MessageId` 속성입니다.
 
 특정 기호는 규칙 위반을 표시 하지 않으려면에 대 한 기호 이름을 지정는 `MessageId` 의 속성은 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 특성입니다. 다음 예제에서는 두 개의 위반을 사용 하 여 코드 [CA1500:VariableNamesShouldNotMatchFieldNames](../code-quality/ca1500-variable-names-should-not-match-field-names.md)&mdash;에 대 한 하나는 `name` 변수 되 고 다른 하나는 `age` 변수입니다. 에 대 한 위반만는 `age` 기호가 표시 되지 않습니다.
 

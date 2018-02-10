@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 717f61f440414370f3e9a2180e1c1cade7436aeb
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 8b5c957fbc3ae5eb3e71f087c57cbf07188de2ff
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="event-handlers-propagate-changes-outside-the-model"></a>이벤트 처리기로 모델 외부의 변경 내용 전파
 Visualization and Modeling SDK에서와 같은 비 저장소 변수, 파일, 다른 저장소 또는 다른 모델 저장소의 외부 리소스에 대 한 변경 내용을 전파 하는 저장소 이벤트 처리기를 정의할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장 합니다. 이벤트 처리기를 트리거하는 이벤트가 발생 한 트랜잭션의 끝 다음에 실행을 저장 합니다. 또한 실행 취소 또는 다시 실행 작업에서 실행 됩니다. 따라서 저장소 규칙과 달리 저장소 이벤트는 외부 저장소에 있는 값을 업데이트 하는 데 가장 유용 합니다. 저장소 이벤트 처리기는 클래스를 수신 하도록 등록 된.NET 이벤트와 달리: 각 인스턴스에 대해 별도 처리기를 등록할 필요가 없습니다. 변경 처리를 위해 다양 한 방법 중 하나를 선택 하는 방법에 대 한 자세한 내용은 참조 [에 대응 하 고 변경 내용을 전파](../modeling/responding-to-and-propagating-changes.md)합니다.  

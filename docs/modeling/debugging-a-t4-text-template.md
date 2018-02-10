@@ -4,7 +4,6 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - text templates, troubleshooting
@@ -12,12 +11,14 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: da101fa60d897a56c42b52ebbb8e0cc21a6d7a9f
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.technology: vs-ide-modeling
+ms.openlocfilehash: 8408cfca0df02a903e4b6394e2b60dcffcfb2904
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="debugging-a-t4-text-template"></a>T4 텍스트 템플릿 디버깅
 텍스트 서식 파일에서 중단점을 설정할 수 있습니다. 디자인 타임 텍스트 서식 파일을 디버깅 하려면 텍스트 템플릿 파일을 저장 한 다음 선택 **T4 템플릿 디버깅** 솔루션 탐색기에서 파일의 바로 가기 메뉴. 런타임 텍스트 서식 파일을 디버깅 하려면 단순히 속해 있는 응용 프로그램을 디버깅 합니다.  
@@ -46,7 +47,7 @@ ms.lasthandoff: 01/13/2018
 |경로 ' {'이 (가)이이 컴퓨터에 로컬 이거나 신뢰할 수 있는의 일부 여야 합니다.|지시문 또는 어셈블리 지시문 참조 하 여 로컬 컴퓨터에 없는 또는 네트워크의 신뢰할 수 있는 영역에는 파일 때 발생 합니다.|지시문 또는 어셈블리 지시문이 있는 디렉터리를 신뢰할 수 있는 영역에 표시 해야 합니다. Internet Explorer를 통해 신뢰할 수 있는 영역에 있는 네트워크 디렉터리를 추가할 수 있습니다.|  
 |"잘못 된 토큰 ' catch'" 또는 "네임 스페이스 멤버를 포함할 직접 수 없습니다"와 같은 여러 구문 오류|템플릿 코드에 닫는 중괄호가 너무 많습니다. 컴파일러는 표준 생성 코드와 혼동 합니다.|닫는 중괄호 및 코드 구분 기호 내 대괄호의 수를 확인 합니다.|  
 |루프 또는 조건부 컴파일 또는 제대로 실행 되지 않습니다. 예: `<#if (i>10)#> Number is: <#= i #>`<br /><br /> 이 코드의 값은 항상 출력 i. 만 "수는:" 하는 데 조건이 있습니다.|C#에서는 항상를 제어문에 포함 된 텍스트 블록을 묶는 중괄호를 사용 합니다.|중괄호 추가: `<#if (i>10) { #>    Number is: <#= i #><# } #>`합니다.|  
-|"너무 복잡 한 식" 때 전처리 된 런타임 템플릿으로 컴파일 또는 디자인 타임 템플릿을 처리 합니다.<br /><br /> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]런타임 템플릿에서 생성 하는 코드를 검사 하려고 할 때 작동을 멈춥니다.|텍스트 블록 너무 깁니다. T4는 텍스트 블록 각 템플릿 줄에 하나의 문자열 리터럴을 포함 하는 문자열 연결 식을 변환합니다. 매우 긴 텍스트 블록에는 컴파일러의 크기 제한을 한도가 있습니다.|와 같은 식 블록으로 긴 텍스트 블록을 중단 합니다.<br /><br /> `<#= "" #>`|  
+|"너무 복잡 한 식" 때 전처리 된 런타임 템플릿으로 컴파일 또는 디자인 타임 템플릿을 처리 합니다.<br /><br /> [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 런타임 템플릿에서 생성 하는 코드를 검사 하려고 할 때 작동을 멈춥니다.|텍스트 블록 너무 깁니다. T4는 텍스트 블록 각 템플릿 줄에 하나의 문자열 리터럴을 포함 하는 문자열 연결 식을 변환합니다. 매우 긴 텍스트 블록에는 컴파일러의 크기 제한을 한도가 있습니다.|와 같은 식 블록으로 긴 텍스트 블록을 중단 합니다.<br /><br /> `<#= "" #>`|  
   
 ## <a name="warning-descriptions-and-fixes"></a>경고 설명 및 수정  
  다음 표에서 사용 가능한 경우 수정 프로그램과 함께 가장 일반적인 경고를 나열 합니다.  
