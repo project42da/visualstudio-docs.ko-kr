@@ -25,6 +25,7 @@
 ### [코드 서식 지정](formatting-python-code.md)
 ### [코드 리팩터링](refactoring-python-code.md)
 ### [PyLint 사용](linting-python-code.md)
+## [사용자 지정 메뉴 명령 정의](defining-custom-python-project-commands.md)
 ## [대화형 Python(REPL)](python-interactive-repl-in-visual-studio.md)
 ### [IPython REPL 사용](interactive-repl-ipython.md)
 ## [디버깅](debugging-python-in-visual-studio.md)
