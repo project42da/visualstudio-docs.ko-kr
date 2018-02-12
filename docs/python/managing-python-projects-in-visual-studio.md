@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio에서 Python 프로젝트 관리 | Microsoft Docs"
+title: "Visual Studio에서 Python 응용 프로그램용 프로젝트 관리 | Microsoft Docs"
 description: "Visual Studio의 프로젝트 용도를 설명하고, Python 코드용 프로젝트를 만들고 관리하는 방법을 보여 주고, Python에 사용할 수 있는 다양한 프로젝트 템플릿을 간략하게 설명합니다."
 ms.custom: 
 ms.date: 01/16/2018
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 90a1c568b5e97afcaa975e1fe77230fa0b65d80d
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: c1909a421cc4f80653438b2dd627aef8559005d6
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="python-projects"></a>Python 프로젝트
 
@@ -73,8 +73,8 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 | --- | --- |
 | [기존 Python 코드에서](#creating-a-project-from-existing-files) | 폴더 구조의 기존 Python 코드에서 Visual Studio 프로젝트를 만듭니다.  |
 | Python 응용 프로그램 | 하나의 비어있는 소스 파일을 포함하는 새로운 Python 응용 프로그램에 대한 기본 프로젝트 구조입니다. 기본적으로 프로젝트는 기본 글로벌 환경의 콘솔 인터프리터에서 실행되며 [서로 다른 환경을 할당](managing-python-environments-in-visual-studio.md#selecting-an-environment-for-a-project)하여 변경할 수 있습니다. |
-| [Azure Cloud Service](template-azure-cloud-service.md) | Python으로 작성된 Azure Cloud Service에 대한 프로젝트입니다. |
-| [웹 프로젝트](template-web.md) | Bottle, Django, Flask 및 Flask/Jade를 비롯한 다양한 프레임워크를 기반으로 한 웹 서버에 대한 프로젝트입니다. |
+| [Azure Cloud Service](python-azure-cloud-service-project-template.md) | Python으로 작성된 Azure Cloud Service에 대한 프로젝트입니다. |
+| [웹 프로젝트](python-web-application-project-templates.md) | Bottle, Django, Flask 및 Flask/Jade를 비롯한 다양한 프레임워크를 기반으로 한 웹 서버에 대한 프로젝트입니다. |
 | IronPython 응용 프로그램 | Python 응용 프로그램 템플릿과 유사하지만 .NET interop 및 .NET 언어로 혼합 모드 디버깅을 기본적으로 사용하는 IronPython을 사용합니다. |
 | IronPython WPF 응용 프로그램 | 응용 프로그램의 사용자 인터페이스에 대한 Windows Presentation Foundation XAML 파일에 IronPython을 사용하는 프로젝트 구조입니다. Visual Studio는 XAML UI 디자이너를 제공하고 코드 숨김은 Python으로 작성할 수 있으며 응용 프로그램은 콘솔을 표시하지 않고 실행됩니다. |
 | IronPython Silverlight 웹 페이지 | Silverlight를 사용하여 브라우저에서 실행되는 IronPython 프로젝트입니다. 응용 프로그램의 Python 코드는 웹 페이지에 스크립트로 포함됩니다. 상용구 스크립트 태그는 Silverlight 내부에서 실행되는 IronPython을 초기화하는 일부 JavaScript 코드를 가져오며, 여기서 Python 코드가 DOM과 상호 작용할 수 있습니다. |

@@ -4,20 +4,23 @@ ms.custom:
 ms.date: 11/30/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-dev_langs: JavaScript
-ms.workload: nodejs
-ms.openlocfilehash: 80822e4f323621a97beb453118d7e0836ae9ea92
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+dev_langs:
+- JavaScript
+ms.workload:
+- nodejs
+ms.openlocfilehash: a8e6c800ef036d0f6e8e5affae745e541a276284
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="getting-started-with-nodejs-in-visual-studio"></a>Visual Studio에서 Node.js 시작
 Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다.  아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.  
@@ -134,6 +137,8 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
 1. 단추를 클릭하면 다른 이미지가 표시됩니다.
 
+    ![브라우저에서 실행 중인 앱](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
+
 1. **보기 > 다른 창 > Node.js 대화형 창**을 선택하여 Node.js 대화형 창을 엽니다.
 
    ![Node.js 대화형 창 열기](../nodejs/media/tutorial-nodejs-interactive-window.png)  
@@ -144,7 +149,7 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
 1. 웹 브라우저를 닫습니다.  
 
-## <a name="publish-to-azure-app-service"></a>Azure App Service에 게시
+## <a name="optional-publish-to-azure-app-service"></a>(선택 사항) Azure App Service에 게시
 
 1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
 

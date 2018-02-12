@@ -1,23 +1,26 @@
 ---
 title: "Visual Studio용 R 도구 시작 | Microsoft Docs"
+description: "Visual Studio용 R 도구를 설치한 개발자에 대한 요약 정보입니다."
 ms.custom: 
-ms.date: 06/29/2017
+ms.date: 01/24/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: 747744ca3a0d01b09cbba53a499902f13f3e8b51
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: 55cadf3d02f6b0713a315c374b7979495b3ab01e
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="welcome-to-r-tools-for-visual-studio"></a>Visual Studio용 R 도구 시작
 
@@ -28,7 +31,7 @@ RTVS(Visual Studio용 R 도구)를 설치해 주셔서 감사합니다. 확인�
 ## <a name="resources"></a>리소스
 
 - [문서](index.md)
-- [설치 단계](installation.md)
+- [설치 단계](installing-r-tools-for-visual-studio.md)
 - [Submit and browse bugs and feature requests on GitHib](https://github.com/Microsoft/RTVS/issues)(GitHub에서 버그 및 기능 제출 및 찾아보기)
 - [Explore and contribute to the source code](https://github.com/Microsoft/RTVS/blob/master/LICENSE)(소스 코드 탐색 및 참여)
 - Github를 사용하지 않고 피드백을 보내려면(권장) Visual Studio에서 **R 도구 > 피드백** 메뉴를 사용하세요.

@@ -1,33 +1,30 @@
 ---
 title: "Visual Studio에서 R 시작 | Microsoft 문서"
+description: "프로젝트 만들기, 대화형 창, 코드 편집 및 디버깅을 포함하여 Visual Studio에서 R을 사용하는 연습입니다."
 ms.custom: 
 ms.date: 06/29/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: d57ff0dcd89a9857f62371f81d65f7929aba18c9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: cf8df86322e10054dee5dbcee95839506f690306
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="getting-started-with-r-tools-for-visual-studio"></a>Visual Studio용 R 도구 시작
 
-RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installation.md) 참조) 해당 도구가 제공하는 환경을 빠르게 경험할 수 있습니다. 다음 섹션에서는 짧은 둘러보기를 안내합니다.
-
-- [R 프로젝트 만들기](#create-an-r-project)
-- [대화형 창 및 IntelliSense 살펴보기](#explore-the-interactive-window-and-intellisense)
-- [코드 기능 편집 경험](#experience-code-editing-features)
-- [코드 디버그](#debugging-your-code)
-- [다음 단계](#next-steps)
+RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installing-r-tools-for-visual-studio.md) 참조) 해당 도구가 제공하는 환경을 빠르게 경험할 수 있습니다. 
 
 ## <a name="create-an-r-project"></a>R 프로젝트 만들기
 
@@ -39,7 +36,7 @@ RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installation.md) 참�
 
 1. 프로젝트가 생성되면 다음 창이 표시됩니다.
 
-    - 오른쪽에 있는 Visual Studio 솔루션 탐색기에서는 포함 *솔루션* 내에서 프로젝트를 확인할 수 있습니다. 솔루션에는 다양한 형식의 프로젝트가 개수 제한 없이 포함될 수 있습니다. 자세한 내용은 [프로젝트](projects.md)를 참조하세요.
+    - 오른쪽에 있는 Visual Studio 솔루션 탐색기에서는 포함 *솔루션* 내에서 프로젝트를 확인할 수 있습니다. 솔루션에는 다양한 형식의 프로젝트가 개수 제한 없이 포함될 수 있습니다. 자세한 내용은 [프로젝트](r-projects-in-visual-studio.md)를 참조하세요.
     - 왼쪽 위에 있는 새 R 파일(`script.R`)에서는 모든 Visual Studio 편집 기능을 사용하여 소스 코드를 편집할 수 있습니다.
     - 왼쪽 아래에 있는 **R 대화형** 창에서는 대화형으로 코드를 개발 및 테스트할 수 있습니다.
 
@@ -74,13 +71,13 @@ RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installation.md) 참�
 
     ![Visual Studio의 플롯 표시](media/getting-started-07-plot-window.png)
 
-대화형 창에서는 기록을 검토하고, 작업 영역을 로드 및 저장하고, 디버거에 연결하고, 복사-붙여넣기를 사용하는 대신 소스 코드 파일을 조작할 수도 있습니다. 자세한 내용은 [R 대화형 창 사용](interactive-repl.md)을 참조하세요.
+대화형 창에서는 기록을 검토하고, 작업 영역을 로드 및 저장하고, 디버거에 연결하고, 복사-붙여넣기를 사용하는 대신 소스 코드 파일을 조작할 수도 있습니다. 자세한 내용은 [R 대화형 창 사용](interactive-repl-for-r-in-visual-studio.md)을 참조하세요.
 
 ## <a name="experience-code-editing-features"></a>코드 기능 편집 경험
 
 대화형 창에서 잠시 작업하면 코드 편집기에서도 작동하는 IntelliSense 등의 기본 편집 기능을 확인할 수 있습니다. 이전과 같은 코드를 입력하면 동일한 자동 완성 및 IntelliSense 프롬프트가 표시되지만 출력은 표시되지 않습니다.
 
-`.R` 파일에 코드를 작성하면 모든 코드를 한 번에 확인할 수 있고, 사소한 변경을 수행한 다음 대화형 창에서 코드를 실행하여 결과를 빠르게 확인하기가 더 쉽습니다. 프로젝트에 원하는 개수만큼 파일을 포함할 수도 있습니다. 코드가 파일에 있으면 디버거에서 코드를 단계별로 실행할 수도 있습니다(이 항목의 뒷부분에서 설명). 이러한 기능은 계산 알고리즘을 개발하고 코드를 작성하여 하나 이상의 데이터 집합을 조작할 경우, 특히 모든 중간 결과를 조사하려는 경우에 유용합니다.
+`.R` 파일에 코드를 작성하면 모든 코드를 한 번에 확인할 수 있고, 사소한 변경을 수행한 다음 대화형 창에서 코드를 실행하여 결과를 빠르게 확인하기가 더 쉽습니다. 프로젝트에 원하는 개수만큼 파일을 포함할 수도 있습니다. 코드가 파일에 있으면 디버거에서 코드를 단계별로 실행할 수도 있습니다(이 문서의 뒷부분에서 설명). 이러한 기능은 계산 알고리즘을 개발하고 코드를 작성하여 하나 이상의 데이터 집합을 조작할 경우, 특히 모든 중간 결과를 조사하려는 경우에 유용합니다.
 
 예제와 같이 다음 단계에서는 간단한 코드를 만들어 [중심 극한 정리](https://en.wikipedia.org/wiki/Central_limit_theorem)(Wikipedia)를 살펴봅니다. 이 예제는 Paul Teetor에 의해 *R Cookbook*에서 변형되었습니다.
 
@@ -109,7 +106,7 @@ RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installation.md) 참�
 
     ```R
     n <- 30
-    samp.means <- rnorm(N, mean = mu, sd = stddev / sqrt(n))    
+    samp.means <- rnorm(N, mean = mu, sd = stddev / sqrt(n))
     lines(density(samp.means))
     ```
 
@@ -139,7 +136,7 @@ RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installation.md) 참�
 
     ![제대로 크기 조정된 Visual Studio의 업데이트된 이중 플롯](media/getting-started-10-plot3.png)
 
-편집기에서 더 많은 작업을 수행할 수 있습니다. 자세한 내용은 [편집 코드](code-editing.md), [IntelliSense](code-intellisense.md) 및 [코드 조각](code-snippets.md)을 참조하세요.
+편집기에서 더 많은 작업을 수행할 수 있습니다. 자세한 내용은 [편집 코드](editing-r-code-in-visual-studio.md), [IntelliSense](r-intellisense.md) 및 [코드 조각](code-snippets-for-r.md)을 참조하세요.
 
 ## <a name="debugging-your-code"></a>코드 디버그
 
@@ -169,14 +166,14 @@ Visual Studio의 키 수준 중 하나는 디버깅 UI입니다. RTVS는 이 강
 
 1. 계속해서 프로그램을 한 줄씩 단계별로 실행하거나 **계속**(F5)을 선택하여 완료될 때까지(또는 다음 중단점까지) 실행할 수 있습니다.
 
-자세한 내용은 [디버깅](debugging.md) 및 [변수 탐색기](variable-explorer.md)를 참조하세요.
+자세한 내용은 [디버깅](debugging-r-in-visual-studio.md) 및 [변수 탐색기](variable-explorer.md)를 참조하세요.
 
 ## <a name="next-steps"></a>다음 단계
 
-이 연습에서는 Visual Studio의 대화형 창, 코드 편집 및 디버깅을 사용하여 R 프로젝트의 기본 사항을 알아보았습니다. 계속해서 더 많은 기능을 살펴보려면 목록에 표시된 항목과 다음 항목을 참조하세요.
+이 연습에서는 Visual Studio의 대화형 창, 코드 편집 및 디버깅을 사용하여 R 프로젝트의 기본 사항을 알아보았습니다. 계속해서 더 많은 기능을 살펴보려면 목차에 표시된 문서와 다음 문서를 참조하세요.
 
 - [샘플 프로젝트](getting-started-samples.md)
-- [코드 편집](code-editing.md)
-- [디버깅](debugging.md)
-- [작업 영역](workspaces.md)
-- [코드 시각화](visualizing-data.md)
+- [코드 편집](editing-r-code-in-visual-studio.md)
+- [디버깅](debugging-r-in-visual-studio.md)
+- [작업 영역](r-workspaces-in-visual-studio.md)
+- [코드 시각화](visualizing-data-with-r-in-visual-studio.md)

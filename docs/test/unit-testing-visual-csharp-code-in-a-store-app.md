@@ -9,58 +9,34 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: uwp
+ms.workload:
+- uwp
 author: gewarren
-ms.openlocfilehash: dc9a2ac6d7267cd94902b7bbf950b49e0d71f815
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 0e0af23cca96238a0ea7bbcde11ac4507e55a9bc
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="unit-testing-visual-c-code-in-a-uwp-app"></a>UWP 앱의 Visual C# 코드 단위 테스트
-이 항목에서는 UWP 앱에서 Visual C# 클래스에 대한 단위 테스트를 만드는 한 가지 방법에 대해 설명합니다. Rooter 클래스는 지정된 숫자의 제곱근 예상 값을 계산하는 함수를 구현하여 미적분법의 극한 이론을 보여 줍니다. Maths 응용 프로그램은 이 함수를 사용하여 수학으로 할 수 있는 재미있는 작업을 사용자에게 보여 줄 수 있습니다.  
-  
- 이 항목에서는 개발의 첫 단계로 단위 테스트를 사용하는 방법을 보여 줍니다. 이 방법에서는 먼저 테스트하고 있는 시스템에서 특정 동작을 확인하는 테스트 메서드를 작성한 다음 테스트를 통과하는 코드를 작성합니다. 다음 절차의 순서를 변경함으로써 이 전략을 반대로 적용하여 먼저 테스트할 코드를 작성한 다음 단위 테스트를 작성할 수 있습니다.  
-  
- 또한 이 항목에서는 단일 Visual Studio 솔루션과 테스트할 DLL 및 단위 테스트에 대한 별도의 프로젝트를 만듭니다. DLL 프로젝트에 직접 단위 테스트를 포함하거나 단위 테스트 및 DLL에 대한 별도의 솔루션을 만들 수도 있습니다.  
-  
-> [!NOTE]
->  Visual Studio Community, Enterprise 및 Professional은 단위 테스트를 위한 추가 기능을 제공합니다.  
->   
->  -   Microsoft 테스트 탐색기에 대한 추가 어댑터를 만든 타사 및 오픈 소스 단위 테스트 프레임워크를 사용합니다. 또한 테스트에 대한 코드 검사 정보를 분석하고 표시할 수도 있습니다.  
-> -   빌드할 때마다 빌드 후 테스트를 실행합니다.  
-> -   VS Enterprise에는 관리 코드에 대한 격리 프레임워크인 Microsoft Fakes도 포함되어 있습니다. Microsoft Fakes는 시스템 및 타사 기능을 테스트 코드로 대체하여 자체 코드에 대한 테스트에 집중하는 데 도움이 됩니다.  
->   
->  자세한 내용은 MSDN 라이브러리의 [단위 테스트를 사용하여 코드 확인](http://msdn.microsoft.com/library/dd264975.aspx)을 참조하세요.  
-  
-##  <a name="BKMK_In_this_topic"></a> 항목 내용  
- [솔루션 및 단위 테스트 프로젝트 만들기](#BKMK_Create_the_solution_and_the_unit_test_project)  
-  
- [테스트 탐색기에서 테스트가 실행되는지 확인](#BKMK_Verify_that_the_tests_run_in_Test_Explorer)  
-  
- [Maths 프로젝트에 Rooter 클래스 추가](#BKMK_Add_the_Rooter_class_to_the_Maths_project)  
-  
- [응용 프로그램 프로젝트에 테스트 프로젝트 연결](#BKMK_Couple_the_test_project_to_the_app_project)  
-  
- [반복적으로 테스트를 확장하고 통과하도록 만들기](#BKMK_Iteratively_augment_the_tests_and_make_them_pass)  
-  
- [실패한 테스트 디버그](#BKMK_Debug_a_failing_test)  
-  
- [코드 리팩터링](#BKMK_Refactor_the_code_)  
-  
+
+이 항목에서는 UWP 앱에서 Visual C# 클래스에 대한 단위 테스트를 만드는 한 가지 방법에 대해 설명합니다. Rooter 클래스는 지정된 숫자의 제곱근 예상 값을 계산하는 함수를 구현하여 미적분법의 극한 이론을 보여 줍니다. Maths 응용 프로그램은 이 함수를 사용하여 수학으로 할 수 있는 재미있는 작업을 사용자에게 보여 줄 수 있습니다.
+
+이 항목에서는 개발의 첫 단계로 단위 테스트를 사용하는 방법을 보여 줍니다. 이 방법에서는 먼저 테스트하고 있는 시스템에서 특정 동작을 확인하는 테스트 메서드를 작성한 다음 테스트를 통과하는 코드를 작성합니다. 다음 절차의 순서를 변경함으로써 이 전략을 반대로 적용하여 먼저 테스트할 코드를 작성한 다음 단위 테스트를 작성할 수 있습니다.
+
+또한 이 항목에서는 단일 Visual Studio 솔루션과 테스트할 DLL 및 단위 테스트에 대한 별도의 프로젝트를 만듭니다. DLL 프로젝트에 직접 단위 테스트를 포함하거나 단위 테스트 및 DLL에 대한 별도의 솔루션을 만들 수도 있습니다.
+
 ##  <a name="BKMK_Create_the_solution_and_the_unit_test_project"></a> 솔루션 및 단위 테스트 프로젝트 만들기  
   
-1.  **파일** 메뉴에서 **새로 만들기**를 선택하고 **새 프로젝트**를 선택합니다.  
+1.  **파일** 메뉴에서 **새로 만들기** > **프로젝트...**를 선택합니다.
   
-2.  **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#**을 확장하고 **Windows Universal**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **새 응용 프로그램**을 선택합니다.  
+2.  **새 프로젝트** 대화 상자에서 **설치됨** > **Visual C#**을 확장하고 **Windows 유니버설**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **새 응용 프로그램**을 선택합니다.
   
 3.  프로젝트의 이름을 `Maths`로 지정하고 **솔루션용 디렉터리 만들기**가 선택되어 있는지 확인합니다.  
   
 4.  솔루션 탐색기에서 솔루션 이름을 선택하고 바로 가기 메뉴에서 **추가**를 선택한 다음 **새 프로젝트**를 선택합니다.  
   
-5.  **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#**을 확장하고 **Windows Universal**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **단위 테스트 라이브러리(범용 Windows)**를 선택합니다.  
-  
-     ![단위 테스트 프로젝트 만들기](../test/media/ute_cs_windows_createunittestproject.png "UTE_Cs_windows_CreateUnitTestProject")  
+5.  **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#**을 확장하고 **Windows Universal**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **유닛 테스트 앱(유니버설 Windows)**을 선택합니다.
   
 6.  Visual Studio 편집기에서 UnitTest1.cs를 엽니다.  
   

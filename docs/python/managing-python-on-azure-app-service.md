@@ -1,14 +1,16 @@
 ---
-title: "Azure App Service에서 Python 관리 | Microsoft Docs"
+title: "Azure App Service에 Python 인터프리터 및 라이브러리 설치 | Microsoft Docs"
+description: "Azure App Service에 Python 인터프리터 및 라이브러리를 설치하고 해당 인터프리터를 제대로 참조하도록 웹 응용 프로그램을 구성하는 방법입니다."
 ms.custom: 
 ms.date: 09/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-python
+ms.technology:
+- devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
@@ -16,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 50b306a3332678a4ab648e0e79730b0ef3ac996e
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: ff8fb49321d12416391edd1463f651ae169b1bee
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
 
@@ -131,7 +133,7 @@ FastCGI는 요청 수준에서 작동하는 인터페이스입니다. IIS는 들
 - `WSGI_HANDLER`는 해당 앱에서 가져올 수 있는 WSGI 앱을 가리켜야 합니다.
 - `WSGI_LOG`는 선택 사항이지만 앱 디버깅을 위해 권장됩니다. 
 
-[Azure에 게시](publishing-to-azure.md)를 참조하여 Bottle, Flask 및 Django 웹앱을 위한 `web.config` 콘텐츠에 대한 추가 정보를 확인하세요.
+[Azure에 게시](publishing-python-web-applications-to-azure-from-visual-studio.md)를 참조하여 Bottle, Flask 및 Django 웹앱을 위한 `web.config` 콘텐츠에 대한 추가 정보를 확인하세요.
 
 ### <a name="configuring-the-httpplatform-handler"></a>HttpPlatform 처리기 구성
 
@@ -200,7 +202,7 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
     로컬 및 서버 모두에서 정확한 패키지 집합을 쉽게 재현할 수 있기 때문에 `requirements.txt`를 사용하는 것이 좋습니다. `requirements.txt`에 대한 변경 사항을 배포한 후 콘솔을 방문하여 명령을 다시 실행해야 합니다.
 
 > [!Note]
-> App Service에는 C 컴파일러가 없으므로 기본 확장 모듈이 있는 모든 패키지에 대해 휠을 설치해야 합니다. 인기 있는 많은 패키지가 자체 휠을 제공합니다. 자체 휠을 제공하지 않는 패키지의 경우 로컬 개발 컴퓨터의 `pip wheel <package_name>`을 사용한 다음 휠을 사이트에 업로드합니다. 예를 들어 [필수 패키지 관리](python-environments.md#managing-required-packages-requirementstxt)를 참조하세요.
+> App Service에는 C 컴파일러가 없으므로 기본 확장 모듈이 있는 모든 패키지에 대해 휠을 설치해야 합니다. 인기 있는 많은 패키지가 자체 휠을 제공합니다. 자체 휠을 제공하지 않는 패키지의 경우 로컬 개발 컴퓨터의 `pip wheel <package_name>`을 사용한 다음 휠을 사이트에 업로드합니다. 예를 들어 [필수 패키지 관리](managing-python-environments-in-visual-studio.md#managing-required-packages-requirementstxt)를 참조하세요.
 
 ### <a name="kudu-rest-api"></a>Kudu REST API
 

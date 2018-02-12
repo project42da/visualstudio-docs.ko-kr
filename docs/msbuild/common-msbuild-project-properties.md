@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 01/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +19,17 @@ helpviewer_keywords:
 - ExcludeDeploymentUrl property
 - project file properties (MSBuild)
 ms.assetid: 9857505d-ae15-42f1-936d-6cd7fb9dd276
-caps.latest.revision: "36"
+caps.latest.revision: 
 author: kempb
 ms.author: kempb
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c70427c2dd1e2c7ceb071867b876750121445dde
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- multiple
+ms.openlocfilehash: e1da05cbbb2415ad6ce701e1330f9e9e60568aeb
+ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/05/2018
 ---
 # <a name="common-msbuild-project-properties"></a>일반적인 MSBuild 프로젝트 속성
 다음 표에서는 Visual Studio 프로젝트 파일에 정의되거나 MSBuild가 제공하는 .targets 파일에 포함된 자주 사용하는 속성을 보여 줍니다.  
@@ -50,7 +52,7 @@ ms.lasthandoff: 01/22/2018
 |BaseOutputPath|출력 파일의 기본 경로를 지정합니다. 설정된 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 `OutputPath = $(BaseOutputPath)\$(Configuration)\`을 사용합니다. 구문 예: `<BaseOutputPath>c:\xyz\bin\</BaseOutputPath>`|  
 |BaseIntermediateOutputPath|모든 구성 관련 중간 출력 폴더가 만들어지는 최상위 폴더입니다. 기본값은 `obj\`입니다. 코드 예: `<BaseIntermediateOutputPath>c:\xyz\obj\</BaseIntermediateOutputPath>`|  
 |BuildInParallel|Multi-Proc [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]가 사용될 때 프로젝트 참조를 병렬로 빌드 또는 정리할지 여부를 나타내는 부울 값입니다. 기본값은 `true`이며, 시스템에 다중 코어 또는 프로세서가 있을 경우 프로젝트가 병렬로 빌드됨을 나타냅니다.|  
-|BuildProjectReferences|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 프로젝트 참조를 빌드할지 여부를 나타내는 부울 값입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE(통합 개발 환경)에서 프로젝트를 빌드하면 `false`로, 그렇지 않으면 `true`로 설정합니다.|  
+|BuildProjectReferences|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에서 프로젝트 참조를 빌드할지 여부를 나타내는 부울 값입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE(통합 개발 환경)에서 프로젝트를 빌드하는 경우 자동으로 `false`로 설정되고, 그러지 않으면 `true`로 설정됩니다. 참조된 프로젝트가 최신 상태인지 확인할 필요가 없도록 명령줄에 `/p:BuildProjectReferences=false`를 지정할 수 있습니다.|  
 |CleanFile|"정리 캐시"로 사용할 파일의 이름입니다. 정리 캐시는 생성 파일 중 정리 작업 시 삭제할 파일의 목록입니다. 이 파일은 빌드 프로세스에 의해 중간 출력 경로에 저장됩니다.<br /><br /> 이 속성은 경로 정보가 없는 파일 이름만 지정합니다.|  
 |CodePage|컴파일할 때 모든 소스 코드 파일에 사용할 코드 페이지를 지정합니다. 이 속성은 `/codepage` 컴파일러 스위치와 동일합니다.|  
 |CompilerResponseFile|컴파일러 작업에 전달할 수 있는 선택적 지시 파일입니다.|  
@@ -71,7 +73,7 @@ ms.lasthandoff: 01/22/2018
 |ExcludeDeploymentUrl|[GenerateDeploymentManifest 작업](../msbuild/generatedeploymentmanifest-task.md)에서는 프로젝트 파일에 다음 요소가 하나라도 포함된 경우 배포 매니페스트에 deploymentProvider 태그를 추가합니다.<br /><br /> -   UpdateUrl<br />-   InstallUrl<br />-   PublishUrl<br /><br /> 그러나 ExcludeDeploymentUrl을 사용하면 위의 URL이 지정되더라도 deploymentProvider 태그가 배포 매니페스트에 추가되지 않습니다. 이렇게 하려면 프로젝트 파일에 다음 속성을 추가합니다.<br /><br /> `<ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>` **참고:** ExcludeDeploymentUrl은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE에 노출되지 않으며 프로젝트 파일을 수동으로만 편집하여 설정할 수 있습니다. 이 속성을 설정해도 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 내의 게시에는 영향을 주지 않습니다. 즉, deploymentProvider 태그는 PublishUrl로 지정된 URL에 계속 추가됩니다.|  
 |FileAlignment|출력 파일의 섹션에 맞출 위치(바이트)를 지정합니다. 올바른 값은 512, 1024, 2048, 4096, 8192입니다. 이 속성은 `/filealignment` 컴파일러 스위치와 동일합니다.|  
 |FrameworkPathOverride|mscorlib.dll 및 microsoft.visualbasic.dll의 위치를 지정합니다. 이 매개 변수는 vbc.exe 컴파일러의 `/sdkpath` 스위치와 동일합니다.|  
-|GenerateDocumentation|(Visual Basic .NET에만 해당) 빌드 시 문서의 생성 여부를 나타내는 부울 매개 변수입니다. `true`이면 빌드 시 문서 정보를 생성하여 이 정보를 빌드 작업에서 만든 실행 파일이나 라이브러리의 이름과 함께 .xml 파일에 배치합니다.|
+|GenerateDocumentation|(Visual Basic만 해당) 빌드 시 문서의 생성 여부를 나타내는 부울 매개 변수입니다. `true`이면 빌드 시 문서 정보를 생성하여 이 정보를 빌드 작업에서 만든 실행 파일이나 라이브러리의 이름과 함께 .xml 파일에 배치합니다.|
 |IntermediateOutputPath|경로가 지정되지 않은 경우 `BaseIntermediateOutputPath`에서 파생된 것과 같은 전체 중간 출력 경로입니다. 예를 들어 \obj\debug\\입니다. 이 속성이 재정의되면 `BaseIntermediateOutputPath`를 설정해도 아무런 효과가 없습니다.|  
 |KeyContainerName|강력한 이름 키 컨테이너의 이름입니다.|  
 |KeyOriginatorFile|강력한 이름 키 파일의 이름입니다.|  

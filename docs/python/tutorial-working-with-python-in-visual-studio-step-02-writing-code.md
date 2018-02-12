@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4616b8df91ce87b8f886deb9143fa1ff55a976d7
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 879b648fa761795efe38e45e1becf0433abf3755
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="step-2-writing-and-running-code"></a>2단계 - 코드 작성 및 실행
 
@@ -45,12 +45,12 @@ ms.lasthandoff: 01/22/2018
     print("Hello, Visual Studio")
     ```
 
-1. 구문 색 지정은 `print` 문을 `"Hello Visual Studio"` 인수와 구분합니다. 또한 문자열에서 마지막 `"`를 일시적으로 삭제하면 Visual Studio가 구문 오류가 포함된 코드를 빨간색 밑줄로 표시하는지 알 수 있습니다. 그런 다음 `"`를 다시 입력하여 코드를 수정합니다.
+1. 구문 색 지정은 `print` 문을 `"Hello Visual Studio"` 인수와 구분합니다. 또한 문자열에서 마지막 `"`를 일시적으로 삭제하여 Visual Studio에서 구문 오류가 포함된 코드에 빨간색 밑줄이 어떻게 표시되는지 확인합니다. 그런 다음 `"`를 다시 입력하여 코드를 수정합니다.
 
     ![IntelliSense 구문 색 지정 및 오류 강조 표시](media/vs-getting-started-python-06-IntelliSense3b.png)
 
     > [!Tip]
-    > 개발 환경은 매우 개인적인 문제이기 때문에 Visual Studio는 사용자가 Visual Studio의 모양 및 동작을 완벽히 제어할 수 있는 기능을 제공합니다. **도구 > 옵션** 메뉴 명령을 선택하고 **환경** 및 **텍스트 편집기** 탭 아래에 있는 설정을 탐색합니다. 기본적으로 제한된 옵션 수만 표시됩니다. 모든 프로그래밍 언어에 대한 옵션을 모두 보려면 대화 상자의 맨 아래에 있는 **모든 설정 표시**를 선택합니다. 
+    > 개발 환경은 매우 개인적인 문제이기 때문에 Visual Studio는 사용자가 Visual Studio의 모양 및 동작을 완벽히 제어할 수 있는 기능을 제공합니다. **도구 > 옵션** 메뉴 명령을 선택하고 **환경** 및 **텍스트 편집기** 탭 아래에 있는 설정을 탐색합니다. 기본적으로 제한된 개수의 옵션만 표시됩니다. 모든 프로그래밍 언어에 대한 옵션을 모두 보려면 대화 상자의 맨 아래에 있는 **모든 설정 표시**를 선택합니다. 
 
 1. Ctrl + F5를 누르거나 **디버그 > 디버깅하지 않고 시작** 메뉴 항목을 선택하여 이 지점에 작성한 코드를 실행합니다. 코드에 여전히 오류가 있는 경우 Visual Studio에서 경고 메시지를 표시합니다.
 
@@ -80,7 +80,7 @@ ms.lasthandoff: 01/22/2018
     ```
 
     > [!Tip]
-    > 완성 기능은 사용자가 입력하는 하위 문자열, 단어와 일치하는 부분, 단어 시작 부분의 글자, 생략된 문자에 작동합니다. 자세한 내용은 [코드 편집 - 완성](code-editing.md#completions)을 참조하세요.
+    > 완성 기능은 사용자가 입력하는 하위 문자열, 단어와 일치하는 부분, 단어 시작 부분의 글자, 생략된 문자에 작동합니다. 자세한 내용은 [코드 편집 - 완성](editing-python-code-in-visual-studio.md#completions)을 참조하세요.
 
 1. 360도 코사인 값을 인쇄하려면 코드를 조금 더 추가합니다.
 
@@ -98,7 +98,7 @@ ms.lasthandoff: 01/22/2018
 
 ## <a name="going-deeper"></a>자세히 알아보기
 
-- [코드 편집](code-editing.md)
-- [코드 서식 지정](code-formatting.md)
-- [코드 리팩터링](code-refactoring.md)
-- [PyLint 사용](code-pylint.md)
+- [코드 편집](editing-python-code-in-visual-studio.md)
+- [코드 서식 지정](formatting-python-code.md)
+- [코드 리팩터링](refactoring-python-code.md)
+- [PyLint 사용](linting-python-code.md)

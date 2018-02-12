@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: tgt-pltfrm-cross-plat
+ms.technology:
+- tgt-pltfrm-cross-plat
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80f0104f-a4db-44dd-bd55-37bb67776c62
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: df3e4def97d8563e3901662ede92e79acd5c5d4c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 3029954623ffbd5324a8a1ab9b67def375b1a486
+ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="visual-studio-emulator-for-android"></a>Android용 Visual Studio 에뮬레이터
 Android용 Visual Studio 에뮬레이터는 Android 장치를 에뮬레이트하는 데스크톱 응용 프로그램입니다. 물리적 장치를 사용하지 않고도 Android 앱을 디버그하고 테스트할 수 있는 가상화된 환경을 제공합니다. 또한 응용 프로그램 프로토타입을 위한 격리된 환경을 제공합니다.  
@@ -27,7 +29,9 @@ Android용 Visual Studio 에뮬레이터는 Android 장치를 에뮬레이트하
  Android 플랫폼, 화면 해상도 및 Android용 Visual Studio 에뮬레이터에서 지원되는 다른 하드웨어 속성 각각에 대해 고유한 장치 프로필에서 앱을 테스트할 수 있습니다.
 
 > [!NOTE]
-> Google Android 에뮬레이터는 Visual Studio Apache Cordova용 도구에서 사용하는 것이 좋습니다. 자세한 내용은 [Android에서 Apache Cordova 앱 실행](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)을 참조하세요.
+> Google Android 에뮬레이터는 다음과 같은 경우에 사용하는 것이 좋습니다.
+> - Apache Cordova용 Visual Studio Tools를 사용하는 경우. 자세한 내용은 [Android에서 Apache Cordova 앱 실행](/visualstudio/cross-platform/tools-for-cordova/run-your-app/run-app-android#a-idgoogle-android-emulatora-run-on-the-google-android-emulator)을 참조하세요.
+> - Android용 Visual Studio 에뮬레이터에 사용하기 위해 Android 이미지 이전 버전 6.0을 게시할 계획이 없으므로 Android 7.0 이상을 포함하는 에뮬레이터 이미지가 필요한 경우.
   
 ##  <a name="Installing"></a> 설치 및 제거  
  설치  
@@ -79,7 +83,7 @@ Android용 Visual Studio 에뮬레이터는 Android 장치를 에뮬레이트하
  대상으로 할 프로필 집합을 설치하고 나면 녹색 **재생** 단추를 눌러 이 새로운 프로필을 관리자에서 바로 시작할 수 있습니다. 이 프로필은 또한 Visual Studio 플랫폼 간 모바일 프로젝트 형식의 디버그 대상 드롭다운 메뉴에도 나타납니다.  
   
 ##  <a name="FeaturesTest"></a> 에뮬레이터에서 테스트할 수 있는 기능  
- 에뮬레이터에서 테스트할 수 있는 기능에 대한 자세한 내용은 이 [설명서](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)를 참조하세요.  
+ 에뮬레이터에서 테스트할 수 있는 기능에 대한 자세한 내용은 이 [블로그 게시물](http://blogs.msdn.com/b/visualstudioalm/archive/2014/11/12/introducing-visual-studio-s-emulator-for-android.aspx)을 참조하세요.  
   
 ##  <a name="FeaturesNonTest"></a> 에뮬레이터에서 테스트할 수 없는 기능  
  다음 목록에서는 에뮬레이터에서 테스트할 수 **없는** Android 플랫폼의 기능에 대해 설명합니다. 물리적 장치에서 다음 기능을 테스트해야 합니다.  

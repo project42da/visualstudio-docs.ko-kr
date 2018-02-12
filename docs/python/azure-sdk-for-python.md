@@ -1,14 +1,16 @@
 ---
 title: "Python용 Azure SDK | Microsoft Docs"
+description: "Python용 Azure SDK를 사용하면 모든 플랫폼에서 실행되는 Python 응용 프로그램을 통해 Microsoft Azure 서비스를 쉽게 이용할 수 있습니다."
 ms.custom: 
-ms.date: 03/07/2017
+ms.date: 01/22/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-python
+ms.technology:
+- devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "11"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
@@ -16,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: fa18c4a0b29b9f9dc05dae3093b4432e38635154
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: f4f42f80bef2548c8caaff84df0d9a0118bfeac7
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="azure-sdk-for-python"></a>Python용 Azure SDK
 
@@ -30,7 +32,7 @@ Python용 Azure SDK를 사용하면 Windows, Mac OSX 및 Linux에서 실행되�
 
 Azure SDK는 [Python 패키지 인덱스](https://pypi.python.org/pypi/azure)에서 설치됩니다.
 
-다음과 같이 **안정적인 최신 버전**(Python 2.7 및 3.3+ 지원)을 설치합니다.
+다음과 같이 **안정적인 최신 버전**(Python 2.7 및 3.x 지원)을 설치합니다.
 
 ```command
 pip install azure

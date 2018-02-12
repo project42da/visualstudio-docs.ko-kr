@@ -7,20 +7,22 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: unit testing, create unit tests
+helpviewer_keywords:
+- unit testing, create unit tests
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: cf851d9fbd32bfdd07c6e1a67517ddf38784799c
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 763a16c4de3d3d087b813322af2fcd8518506863
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="create-unit-test-method-stubs-with-the-create-unit-tests-command"></a>단위 테스트 만들기 명령을 사용하여 단위 테스트 메서드 스텁 만들기
 
-Visual Studio **단위 테스트 만들기** 명령은 단위 테스트 메서드 스텁을 만드는 기능을 제공합니다. 이 기능을 사용하여 테스트 프로젝트, 테스트 클래스 및 클래스 내 테스트 메서드 스텁을 쉽게 구성할 수 있습니다. 
+Visual Studio **단위 테스트 만들기** 명령은 단위 테스트 메서드 스텁을 만드는 기능을 제공합니다. 이 기능을 사용하여 테스트 프로젝트, 테스트 클래스 및 클래스 내 테스트 메서드 스텁을 쉽게 구성할 수 있습니다.
 
 ## <a name="availability-and-extensions"></a>가용성 및 확장
 
@@ -63,8 +65,7 @@ Visual Studio에서는 모든 테스트 프레임워크를 사용하여 필요�
 
 그러나 이 기능은 개발자가 일부 코드를 먼저 작성하고 이 코드를 사용하여 유닛 테스트 분야를 부트스트랩하는 상황에도 똑같이 적용할 수 있습니다. 코딩 흐름 내에서 개발자는 특정 코드 조건에 대한 단위 테스트 메서드 스텁을 빠르게 만들어야 할 수 있습니다(적합한 테스트 클래스 및 적합한 테스트 프로젝트 사용). 
 
-## <a name="more-information"></a>추가 정보
+## <a name="see-also"></a>참고 항목
 
-블로그 게시물 [Creating unit test method stubs with “Create Unit Tests”](https://blogs.msdn.microsoft.com/visualstudioalm/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)(“단위 테스트 만들기”를 사용하여 단위 테스트 메서드 스텁 만들기)를 참조하세요.
-
-유닛 테스트에 대한 더 많은 블로그 게시물은 [여기](https://blogs.msdn.microsoft.com/visualstudioalm/tag/unit-testing/)에서 찾을 수 있습니다.
+[Creating unit test method stubs with “Create Unit Tests”](https://blogs.msdn.microsoft.com/visualstudioalm/2015/03/06/creating-unit-test-method-stubs-with-create-unit-tests/)(“유닛 테스트 만들기”를 사용하여 유닛 테스트 메서드 스텁 만들기)  
+[유닛 테스트 블로그 게시물](https://blogs.msdn.microsoft.com/visualstudioalm/tag/unit-testing/)

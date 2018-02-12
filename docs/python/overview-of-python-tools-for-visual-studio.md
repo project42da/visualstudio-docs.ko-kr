@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 067684c7b5064e096849afe69d2f0db1bcc75ea6
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 4d2033e8912d6010adc8e83108a8b9ece1aa4b0e
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio에서 Python 작업(Windows)
 
@@ -32,7 +32,7 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 시작하려면 다음을 수행합니다.
 
 - [설치 지침](installing-python-support-in-visual-studio.md)에 따라 Python 워크로드를 설치합니다.
-- 빠른 시작을 하나 이상 수행하여 프로젝트를 만듭니다. 확실하지 않은 경우 [템플릿에서 프로젝트 만들기](quickstart-02-project-from-template.md)부터 시작합니다.
+- 빠른 시작을 하나 이상 수행하여 프로젝트를 만듭니다. 확실하지 않은 경우 [템플릿에서 프로젝트 만들기](quickstart-02-python-in-visual-studio-project-from-template.md)부터 시작합니다.
 - 전체 종단 간 환경을 위한 [Visual Studio에서 Python 사용](tutorial-working-with-python-in-visual-studio-step-01-create-project.md) 자습서를 수행합니다.
 - 그런 후 다음 표의 링크를 사용하여 Python 관련 기능 및 Visual Studio 자체의 기능을 탐색합니다.
 
@@ -42,11 +42,11 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 | [프로젝트 템플릿](managing-python-projects-in-visual-studio.md#project-templates) | 콘솔, 웹, Azure, 데이터 과학 및 기타 형식의 프로젝트에 대한 프로젝트 구조를 신속하게 만듭니다. | [Visual Studio 템플릿](../ide/creating-project-and-item-templates.md#visual-studio-templates) |
 | 다양한 인터프리터 지원 | CPython 및 IronPython의 다양한 버전을 지원합니다. | N/A |
 | IPython 지원 | 인라인 플롯, .NET 및 WPF(Windows Presentation Foundation)에 대한 REPL의 IPython/Jupyter에 대한 지원을 포함합니다. | N/A |
-| [다양한 편집 기능, IntelliSense 및 코드 이해](code-editing.md) | 구문 색 지정, 모든 코드 및 라이브러리에 대한 자동 완성, [코드 서식 지정](code-formatting.md), 시그니처 도움말, 클래스 뷰, 정의로 이동, 모든 참조 찾기, 코드 조각, [리팩터링](code-refactoring.md), [PyLint](code-pylint.md) 등을 포함합니다. | [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md) |
-| [대화형 창](interactive-repl.md) | 코드 부분을 간편하게 강조 표시하고 이를 대화형 창으로 보내는 기능을 포함하는 Python에 대한 신속한 REPL 환경을 제공합니다. | N/A |
-| [완전한 기능의 디버깅](debugging.md) | Visual Studio 프로젝트 유무와 관계없이 풍부한 디버깅이 가능하며, 기존 실행 파일 디버그 기능, [Python/C++ 혼합 모드 디버깅](debugging-mixed-mode.md), Windows/Linux/Mac으로 [원격 디버깅](debugging-cross-platform-remote.md), [Azure로 원격 디버깅](debugging-azure-remote.md), 대화형 창 내에서 디버깅 등을 수행할 수 있습니다. | [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md) |
-| [포괄적인 보고를 제공하는 프로파일링 도구](profiling.md) | 서로 다른 프로파일링 실행 간에 성능을 비교하는 기능을 포함하여 응용 프로그램 내에서 시간이 어떻게 소요되는지 살펴봅니다. | [프로파일링 도구](../profiling/profiling-tools.md)(Python에 대해 일부 Visual Studio 프로파일링 기능만 사용할 수 있음) |
-| [단위 테스트 도구](unit-testing.md) | Visual Studio 테스트 탐색기에서 테스트를 검색, 실행 및 관리하고 단위 테스트를 쉽게 디버깅합니다. | [코드 단위 테스트](../test/unit-test-your-code.md) |
+| [다양한 편집 기능, IntelliSense 및 코드 이해](editing-python-code-in-visual-studio.md) | 구문 색 지정, 모든 코드 및 라이브러리에 대한 자동 완성, [코드 서식 지정](formatting-python-code.md), 시그니처 도움말, 클래스 뷰, 정의로 이동, 모든 참조 찾기, 코드 조각, [리팩터링](refactoring-python-code.md), [PyLint](linting-python-code.md) 등을 포함합니다. | [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md) |
+| [대화형 창](python-interactive-repl-in-visual-studio.md) | 코드 부분을 간편하게 강조 표시하고 이를 대화형 창으로 보내는 기능을 포함하는 Python에 대한 신속한 REPL 환경을 제공합니다. | N/A |
+| [완전한 기능의 디버깅](debugging-python-in-visual-studio.md) | Visual Studio 프로젝트 유무와 관계없이 풍부한 디버깅이 가능하며, 기존 실행 파일 디버그 기능, [Python/C++ 혼합 모드 디버깅](debugging-mixed-mode-c-cpp-python-in-visual-studio.md), Windows/Linux/Mac에 대한 [Linux의 원격 디버깅](debugging-python-code-on-remote-linux-machines.md), [Azure의 원격 디버깅](debugging-remote-python-code-on-azure.md), 대화형 창 내에서 디버깅 등을 수행할 수 있습니다. | [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md) |
+| [포괄적인 보고를 제공하는 프로파일링 도구](profiling-python-code-in-visual-studio.md) | 서로 다른 프로파일링 실행 간에 성능을 비교하는 기능을 포함하여 응용 프로그램 내에서 시간이 어떻게 소요되는지 살펴봅니다. | [프로파일링 도구](../profiling/profiling-tools.md)(Python에 대해 일부 Visual Studio 프로파일링 기능만 사용할 수 있음) |
+| [단위 테스트 도구](unit-testing-python-in-visual-studio.md) | Visual Studio 테스트 탐색기에서 테스트를 검색, 실행 및 관리하고 단위 테스트를 쉽게 디버깅합니다. | [코드 단위 테스트](../test/unit-test-your-code.md) |
 
 또한 Python 워크로드는 Windows, Mac OS X, Linux 앱에서 Azure 서비스를 간편하게 사용할 수 있도록 해주는 [Python용 Azure SDK](azure-sdk-for-python.md)도 포함합니다.
 

@@ -1,23 +1,26 @@
 ---
 title: "Visual Studio용 R 도구 FAQ | Microsoft Docs"
+description: "Visual Studio의 R에 대한 질문과 대답"
 ms.custom: 
 ms.date: 12/04/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: 9fe92fb38d1b03b081cb53fc620f60180daf5b24
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: 8abdaa1e156cf2be07f08f6cebcf67031bf91c2f
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -67,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 
 **질문: 이러한 인터프리터는 어디서 다운로드할 수 있나요?**
 
-대답: [설치](installation.md)를 참조하세요.
+대답: [설치](installing-r-tools-for-visual-studio.md)를 참조하세요.
 
 Q **Microsoft R Server가 무엇인가요?**
 
@@ -89,7 +92,7 @@ Q **Microsoft R Server가 무엇인가요?**
 
 질문. **Visual Studio의 원격 서비스가 무엇인가요?**
 
-대답: Visual Studio용 원격 R 서비스를 사용하면 Windows 또는 Linux 컴퓨터를 설정한 다음 RTVS에서 해당 컴퓨터에 연결할 수 있습니다. [원격 작업 영역 설정](workspaces-remote-setup.md)을 참조하세요.
+대답: Visual Studio용 원격 R 서비스를 사용하면 Windows 또는 Linux 컴퓨터를 설정한 다음 RTVS에서 해당 컴퓨터에 연결할 수 있습니다. [원격 작업 영역 설정](setting-up-remote-r-workspaces.md)을 참조하세요.
 
 질문. **RTVS는 Microsoft R Server에 연결할 수 있나요?**
 
@@ -101,7 +104,7 @@ Q **Microsoft R Server가 무엇인가요?**
 
 Q **RTVS가 R이 설치된 원격 컴퓨터에 연결할 수 있나요?**
 
-원격 컴퓨터에서 R 코드를 실행하려면 요청을 수신하고, 코드를 받고, 결과를 다시 클라이언트 컴퓨터로 보내는 서비스가 있어야 합니다. 이것이 Visual Studio용 원격 R 서비스의 작업입니다. [원격 작업 영역 설정](workspaces-remote-setup.md)을 참조하세요.
+원격 컴퓨터에서 R 코드를 실행하려면 요청을 수신하고, 코드를 받고, 결과를 다시 클라이언트 컴퓨터로 보내는 서비스가 있어야 합니다. 이것이 Visual Studio용 원격 R 서비스의 작업입니다. [원격 작업 영역 설정](setting-up-remote-r-workspaces.md)을 참조하세요.
 
 질문. **원격 세션이 무엇인가요?**
 

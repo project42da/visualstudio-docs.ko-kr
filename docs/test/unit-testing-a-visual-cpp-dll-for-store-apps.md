@@ -9,44 +9,28 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: mblome
 manager: ghogen
-ms.workload: uwp
+ms.workload:
+- uwp
 author: mikeblome
-ms.openlocfilehash: 1b032b651603beb5771bfa68b8dc8628540d638e
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 8a85bf908b1f0908b8c07a7573306536b9bf78d7
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/01/2018
 ---
-# <a name="how-to-test-a-visual-c-dll-for-uwp-apps"></a>UWP 앱의 Visual C++ DLL 테스트 방법 
+# <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL 테스트 방법
+
 이 문서에서는 C++용 Microsoft 테스트 프레임워크를 사용하여 UWP(유니버설 Windows 플랫폼) 앱용 C++ DLL에 대한 단위 테스트를 만드는 한 가지 방법을 설명합니다. RooterLib DLL은 지정된 숫자의 제곱근 예상 값을 계산하는 함수를 구현하여 미적분법의 한계 이론에 대한 희미한 기억을 보여 줍니다. DLL은 UWP 앱에 포함하여 사용자에게 수학으로 할 수 있는 재밌는 것을 보여줄 수 있습니다.  
   
  이 항목에서는 개발의 첫 단계로 단위 테스트를 사용하는 방법을 보여 줍니다. 이 방법에서는 먼저 테스트하고 있는 시스템에서 특정 동작을 확인하는 테스트 메서드를 작성한 다음 테스트를 통과하는 코드를 작성합니다. 다음 절차의 순서를 변경함으로써 이 전략을 반대로 적용하여 먼저 테스트할 코드를 작성한 다음 단위 테스트를 작성할 수 있습니다.  
   
- 또한 이 항목에서는 단일 Visual Studio 솔루션과 테스트할 DLL 및 단위 테스트에 대한 별도의 프로젝트를 만듭니다. DLL 프로젝트에 직접 단위 테스트를 포함하거나 단위 테스트 및 .DLL에 대한 별도의 솔루션을 만들 수도 있습니다. 사용할 구조에 대한 팁은 [기존 C++ 응용 프로그램에 단위 테스트 추가](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)를 참조하세요.  
-  
-##  <a name="In_this_topic"></a> 항목 내용  
-
- [솔루션 및 단위 테스트 프로젝트 만들기](#Create_the_solution_and_the_unit_test_project)  
-  
- [테스트 탐색기에서 테스트가 실행되는지 확인](#Verify_that_the_tests_run_in_Test_Explorer)  
-  
- [솔루션에 DLL 프로젝트 추가](#Add_the_DLL_project_to_the_solution)  
-  
- [DLL 함수가 테스트 코드에 표시되도록 설정](#make_the_dll_functions_visible_to_the_test_code)  
-  
- [반복적으로 테스트를 확장하고 통과하도록 만들기](#Iteratively_augment_the_tests_and_make_them_pass)  
-  
- [실패한 테스트 디버그](#Debug_a_failing_test)  
-  
- [테스트를 변경하지 않고 코드 리팩터링](#Refactor_the_code_without_changing_tests)  
+ 또한 이 항목에서는 단일 Visual Studio 솔루션과 테스트할 DLL 및 단위 테스트에 대한 별도의 프로젝트를 만듭니다. DLL 프로젝트에 직접 단위 테스트를 포함하거나 단위 테스트 및 .DLL에 대한 별도의 솔루션을 만들 수도 있습니다. 사용할 구조에 대한 팁은 [기존 C++ 응용 프로그램에 단위 테스트 추가](../test/unit-testing-existing-cpp-applications-with-test-explorer.md)를 참조하세요.
   
 ##  <a name="Create_the_solution_and_the_unit_test_project"></a> 솔루션 및 단위 테스트 프로젝트 만들기  
   
-1.  **파일** 메뉴에서 **새로 만들기**를 선택하고 **새 프로젝트**를 선택합니다.  
+1.  **파일** 메뉴에서 **새로 만들기** > **새 프로젝트...**를 선택합니다.
   
-2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C++**를 차례로 확장하고 **UWP**를 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **단위 테스트 라이브러리(UWP 앱)**를 선택합니다.  
-  
-     ![C&#43;&#43; 단위 테스트 라이브러리 만들기](../test/media/ute_cpp_windows_unittestlib_create.png "UTE_Cpp_windows_UnitTestLib_Create")  
+2.  새 프로젝트 대화 상자에서 **설치됨** > **Visual C++**를 확장하고 **Windows 유니버설**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **유닛 테스트 앱(유니버설 Windows)**을 선택합니다.
   
 3.  프로젝트 이름을 `RooterLibTests`로 지정하고 위치를 지정합니다. 솔루션 이름을 `RooterLib`로 지정하고 **솔루션용 디렉터리 만들기**가 선택되어 있는지 확인합니다.  
   

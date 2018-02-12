@@ -1,29 +1,31 @@
 ---
 title: "Visual Studio의 IPython REPL | Microsoft Docs"
+description: "IPython 모드의 Visual Studio 대화형 창은 대화형 병렬 컴퓨팅 기능이 있는, 사용자에게 친숙한 대화형 개발 환경에 사용합니다."
 ms.custom: 
 ms.date: 07/13/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-python
+ms.technology:
+- devlang-python
 ms.devlang: python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d33765a2c70f6c58759e2722b04d770b6f8822a6
-ms.sourcegitcommit: 11740fed01cc602252ef698aaa11c07987b00570
+ms.openlocfilehash: d084731c821bf31743e8c4dce5f31881f19a56f4
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/12/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="using-ipython-in-the-interactive-window"></a>대화형 창에서 IPython 사용
 
-IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고급 대화형 개발 환경으로, 대화형 병렬 컴퓨팅 기능을 지원합니다. 이 항목에서는 일반적인 [대화형 창](interactive-repl.md) 기능도 모두 사용할 수 있는 Visual Studio 대화형 창에서 IPython을 사용하는 과정을 안내합니다.
+IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고급 대화형 개발 환경으로, 대화형 병렬 컴퓨팅 기능을 지원합니다. 이 항목에서는 일반적인 [대화형 창](python-interactive-repl-in-visual-studio.md) 기능도 모두 사용할 수 있는 Visual Studio 대화형 창에서 IPython을 사용하는 과정을 안내합니다.
 
 이 연습에서는 IPython 및 필요한 라이브러리를 포함하는 [Anaconda](https://www.continuum.io) 환경이 설치되어 있어야 합니다.
 
@@ -64,14 +66,14 @@ IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고�
         xs = np.arange(20)
         ys = np.random.rand(20)
         # You can provide either a single color or an array. To demonstrate this,
-        # the first bar of each set will be colored cyan.
-        cs = [c] * len(xs) 
-        cs[0] = 'c' 
+        # the first bar of each set is colored cyan.
+        cs = [c] * len(xs)
+        cs[0] = 'c'
         ax.bar(xs, ys, zs=z, zdir='y', color=cs, alpha=0.8)
 
-    ax.set_xlabel('X') 
-    ax.set_ylabel('Y') 
-    ax.set_zlabel('Z') 
+    ax.set_xlabel('X')
+    ax.set_ylabel('Y')
+    ax.set_zlabel('Z')
     plt.show()
     ```
 

@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a3f788b114b4250819c4867136cb1b888c816cf8
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 552d256b315d6506911ae4cf8724b33173cd39a4
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
 
@@ -31,12 +31,12 @@ Visual Studio용 Python 지원(Visual Studio용 Python 도구 또는 PTVS라고�
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 및 이전 버전](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터도 별도로 설치해야 합니다(Python 3.5 및 이전, 3.6은 지원되지 않으며 “지원되지 않는 Python 버전 3.6”이란 메시지가 표시됨). 자세한 내용은 [Python 환경](managing-python-environments-in-visual-studio.md)을 참조하세요. 같은 페이지는 Visual Studio 2017에 기존 Python 인터프리터 추가를 위한 지침도 포함합니다.
+Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터도 별도로 설치해야 합니다(Python 3.5 및 이전 버전, 3.6은 지원되지 않으며 “지원되지 않는 Python 버전 3.6”이라는 메시지가 표시됨). 자세한 내용은 [Python 환경](managing-python-environments-in-visual-studio.md)을 참조하세요. 같은 페이지는 Visual Studio 2017에 기존 Python 인터프리터 추가를 위한 지침도 포함합니다.
 
 설치 단계를 따른 후 Python 지원을 신속하게 테스트하려면 Alt+I를 누르고 `2+2`를 입력하여 Python 대화형 창을 엽니다. `4`의 출력이 표시되지 않으면 수행한 단계를 다시 확인합니다.
 
 > [!Tip]
-> Python 작업에는 템플릿을 검색하고, 템플릿 옵션을 입력하고, 프로젝트와 파일을 만들 수 있는 그래픽 사용자 인터페이스를 제공하는 유용한 Cookiecutter 확장 프로그램이 포함되어 있습니다. 자세한 내용은 [Cookiecutter 사용](cookiecutter.md)을 참조하세요.
+> Python 작업에는 템플릿을 검색하고, 템플릿 옵션을 입력하고, 프로젝트와 파일을 만들 수 있는 그래픽 사용자 인터페이스를 제공하는 유용한 Cookiecutter 확장 프로그램이 포함되어 있습니다. 자세한 내용은 [Cookiecutter 사용](using-python-cookiecutter-templates.md)을 참조하세요.
 
 > [!Note]
 > Python 지원은 현재 Mac용 Visual Studio에서 사용할 수 없으며 Visual Studio Code를 통해 Mac 및 Linux에서 사용할 수 있습니다. [질문과 대답](overview-of-python-tools-for-visual-studio.md#questions-and-answers)을 참조하세요.
@@ -64,11 +64,11 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
     | 옵션 | 설명 |
     | --- | --- |
     | Python 배포 | 작업하려는 Python 2, Python 3, Anaconda2 및 Anaconda3의 32비트 및 64비트 변형의 조합을 선택합니다. 각각은 배포의 인터프리터, 런타임 및 라이브러리를 포함합니다. 특히 Anaconda는 다양한 미리 설치된 패키지를 포함하는 개방형 데이터 과학 플랫폼입니다. (배포를 추가하거나 제거하기 위해 언제든지 Visual Studio 설치 관리자로 돌아갈 수 있습니다.) |
-    | Cookiecutter 템플릿 지원 | Cookiecutter 그래픽 UI를 설치하여 템플릿을 검색하고, 템플릿 옵션을 입력하고, 프로젝트 및 파일을 만듭니다. [Cookiecutter 확장 사용](cookiecutter.md)을 선택합니다. |
-    | Python 웹 지원 | Bottle, Flask 및 Django 프레임워크를 사용하는 프로젝트에 대한 템플릿과 함께 HTML, CSS 및 JavaScript 편집 지원을 포함하는 웹 개발용 도구를 설치합니다. [Python 웹 프로젝트 템플릿](template-web.md)을 참조하세요. |
+    | Cookiecutter 템플릿 지원 | Cookiecutter 그래픽 UI를 설치하여 템플릿을 검색하고, 템플릿 옵션을 입력하고, 프로젝트 및 파일을 만듭니다. [Cookiecutter 확장 사용](using-python-cookiecutter-templates.md)을 선택합니다. |
+    | Python 웹 지원 | Bottle, Flask 및 Django 프레임워크를 사용하는 프로젝트에 대한 템플릿과 함께 HTML, CSS 및 JavaScript 편집 지원을 포함하는 웹 개발용 도구를 설치합니다. [Python 웹 프로젝트 템플릿](python-web-application-project-templates.md)을 참조하세요. |
     | Python IoT 지원 | Python을 사용하여 Windows IoT Core 개발을 지원합니다. |
     | Python 네이티브 개발 도구 | C++ 컴파일러 및 Python에 대한 기본 확장을 개발하는 데 필요한 기타 구성 요소를 설치합니다. [Python용 C++ 확장 만들기](working-with-c-cpp-python-in-visual-studio.md)를 참조하세요. 또한 전체 C++ 지원을 사용하려면 **C++를 사용한 데스크톱 개발** 워크로드를 설치하세요. |
-    | Azure Cloud Services 핵심 도구 | Python에서 개발자 Azure Cloud Services에 대한 추가 지원을 제공합니다. [Azure Cloud Service 프로젝트](template-azure-cloud-service.md)를 참조하세요. |
+    | Azure Cloud Services 핵심 도구 | Python에서 개발자 Azure Cloud Services에 대한 추가 지원을 제공합니다. [Azure Cloud Service 프로젝트](python-azure-cloud-service-project-template.md)를 참조하세요. |
 
 1. 설치가 끝나면 설치 관리자는 Visual Studio를 수정, 실행, 복구 또는 제거하는 옵션을 제공합니다. **수정** 단추는 설치된 구성 요소에 업데이트를 사용할 수 있는 경우 Visual Studio에 대한 업데이트가 있는 경우 **업데이트**로 변경됩니다. (수정 옵션은 드롭다운 메뉴에서 사용할 수 있습니다.) "Visual Studio"를 검색하여 Windows 시작 메뉴에서 Visual Studio 및 설치 관리자를 시작할 수도 있습니다.
 

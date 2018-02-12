@@ -1,23 +1,26 @@
 ---
 title: "Visual Studio용 R 도구의 도움말 창 | Microsoft Docs"
+description: "R에 대한 도움말은 ? 명령을 통해 Visual Studio의 대화형 창에 직접 통합됩니다."
 ms.custom: 
-ms.date: 06/29/2017
+ms.date: 001/24/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-r
+ms.technology:
+- devlang-r
 ms.devlang: r
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
-ms.workload: data-science
-ms.openlocfilehash: 232c02bf68125afb1ffa5234e0feee049e9c5f69
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-science
+ms.openlocfilehash: c95cb854a5c6d517b6e02e63bc744cd2bdc3ba1e
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="help-in-r-tools-for-visual-studio"></a>Visual Studio용 R 도구의 도움말
 
@@ -28,7 +31,7 @@ R에 대한 도움말은 Visual Studio의 대화형 창에 직접 통합됩니�
 > [!Tip]
 > Visual Studio의 모든 다른 항목처럼 [도움말] 창을 원하는 대로 정렬 및 고정할 수 있습니다. [Visual Studio에서 창 레이아웃 사용자 지정](../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.
 >
-> 브라우저에서 도움말 결과를 열려면 **R 도구 > 옵션** 메뉴를 선택하고 **R 도움말 브라우저** 속성을 `External`로 설정합니다. [옵션](options.md)을 참조하세요.
+> 브라우저에서 도움말 결과를 열려면 **R 도구 > 옵션** 메뉴를 선택하고 **R 도움말 브라우저** 속성을 `External`로 설정합니다. [옵션](options-for-r-tools-in-visual-studio.md)을 참조하세요.
 
 도움말을 검색하려면 `??` 명령과 검색어를 차례로 사용합니다. 검색에 공백이 있으면 따옴표를 사용합니다.
 
@@ -52,7 +55,7 @@ R에 대한 도움말은 Visual Studio의 대화형 창에 직접 통합됩니�
     ![마우스 오른쪽 단추 클릭 상황에 맞는 메뉴를 통해 도움말 호출](media/help-right-click.png)
 
 > [!Tip]
-> 통합 도움말을 브라우저에서 열려면 **R 도구 > 옵션**을 선택하고 **F1 웹 브라우저**를 `External`로 설정합니다. [옵션](options.md)을 참조하세요.
+> 통합 도움말을 브라우저에서 열려면 **R 도구 > 옵션**을 선택하고 **F1 웹 브라우저**를 `External`로 설정합니다. [옵션](options-for-r-tools-in-visual-studio.md)을 참조하세요.
 
 ## <a name="integrated-stackoverflow-search"></a>통합 StackOverflow 검색
 
@@ -64,4 +67,4 @@ R 설명서를 검색할 뿐 아니라 개발자는 코드를 작성하는 동�
 
 ![F1 웹 검색 문자열 옵션 변경](media/options-dialog.png)
 
-브라우저에서 결과를 표시하려는 경우 [옵션](options.md)에 설명된 대로 **F1 웹 브라우저** 옵션을 변경합니다.
+브라우저에서 결과를 표시하려는 경우 [옵션](options-for-r-tools-in-visual-studio.md)에 설명된 대로 **F1 웹 브라우저** 옵션을 변경합니다.

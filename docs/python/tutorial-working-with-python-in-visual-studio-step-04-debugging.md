@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6924f4a4b3c2f0b4319af14ab8518bf01eaab912
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 94ee933b80c92f18fcc47cb8cb8940b48bfe7fc7
+ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/01/2018
 ---
 # <a name="step-4-running-code-in-the-debugger"></a>4단계: 디버거에서 코드 실행
 
@@ -114,5 +114,5 @@ Visual Studio는 프로젝트 관리, 풍부한 편집 환경 제공 및 대화�
 
 ### <a name="going-deeper"></a>자세히 알아보기
 
-- [디버깅](debugging.md).
+- [디버깅](debugging-python-in-visual-studio.md)
 - [Visual Studio에서 디버깅](../debugger/debugger-feature-tour.md)에 Visual Studio의 디버깅 기능에 대한 자세한 설명서가 나와 있습니다.
