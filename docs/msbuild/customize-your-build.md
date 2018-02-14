@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 06/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - transforms [MSBuild]
 ms.assetid: d0bceb3b-14fb-455c-805a-63acefa4b3ed
 caps.latest.revision: 
-author: kempb
-ms.author: kempb
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 82b7503b937babd81a41136656d75c95e844b94c
-ms.sourcegitcommit: 062795f922e7b59fe00d3d95a01a9a8a28840017
+ms.openlocfilehash: 5b11acd4360aa86d4727a4c697a56eaa753d522c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="customize-your-build"></a>빌드 사용자 지정
 MSBuild 15 이전 버전에서는 솔루션의 프로젝트에 대한 새로운 사용자 지정 속성을 제공하려면 해당 속성에 대한 참조를 솔루션의 모든 프로젝트 파일에 수동으로 추가해야 했습니다. 또는 *.props* 파일에서 속성을 정의하고 나서 무엇보다 솔루션의 모든 프로젝트에서 *.props* 파일을 명시적으로 가져와야 했습니다.

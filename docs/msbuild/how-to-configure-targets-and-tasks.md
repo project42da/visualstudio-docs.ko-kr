@@ -4,20 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 92814100-392a-471d-96fd-e26f637d6cc2
-caps.latest.revision: "5"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 692f39fb3f83ee12e3e1c6ec20ce892727d1f2a7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 46cb7a1234e6fafe9c2f9f3b795e05424c25dfb7
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-configure-targets-and-tasks"></a>방법: 대상 및 작업 구성
 선택된 MSBuild 작업은 개발 컴퓨터의 환경에 관계 없이 대상으로 지정된 환경에서 실행되도록 설정할 수 있습니다. 예를 들어 64비트 컴퓨터를 사용하여 32비트 아키텍처를 대상으로 하는 응용 프로그램을 빌드할 경우 선택한 작업은 32비트 프로세스에서 실행됩니다.  

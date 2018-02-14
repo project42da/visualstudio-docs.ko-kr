@@ -4,10 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#RegisterAssembly
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#RegisterAssembly
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - MSBuild, RegisterAssembly task
 - RegisterAssembly task [MSBuild]
 ms.assetid: ba5f19ac-6764-4d28-9b79-a86de58f8987
-caps.latest.revision: "16"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2b540f2b38385bdd18b1d97e4dee3e361b1c8710
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 9d4d1f5cda41fd7c72d32feda40f62d691a0d3cd
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="registerassembly-task"></a>RegisterAssembly 작업
 지정된 어셈블리 내의 메타데이터를 읽고 필요한 엔트리를 레지스트리에 추가할 수 있습니다. 이렇게 하면 COM 클라이언트에서 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 클래스를 투명하게 만들 수 있습니다. 이 작업의 동작은 [Regasm.exe(어셈블리 등록 도구)](/dotnet/framework/tools/regasm-exe-assembly-registration-tool)의 동작과 비슷하지만 같지는 않습니다.  

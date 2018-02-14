@@ -4,21 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: tgt-pltfrm-cross-plat
+ms.technology: vs-ide-mobile
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-caps.latest.revision: "15"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: xplat-cplusplus
-ms.openlocfilehash: d677c74d44f1ddc0b250d6763cef4738cd642832
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- xplat-cplusplus
+ms.openlocfilehash: b9f87e95a2d4088bb72890ef3f9508d9c5e02abc
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>플랫폼 간 모바일 개발용 Visual C++ 설치
 [플랫폼 간 모바일 개발용 Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=536383) 는 Visual Studio 2015의 설치 가능한 구성 요소입니다. 플랫폼 간 Visual Studio 템플릿을 포함하며, 직접 찾아서 다운로드 및 구성하지 않고도 신속하게 시작할 수 있도록 플랫폼 간 도구 및 SDK를 설치합니다. Visual Studio에서 이러한 도구를 사용하여 플랫폼 간 프로젝트를 쉽게 만들고, 편집, 디버그 및 테스트할 수 있습니다. 이 항목에서는 Visual Studio를 사용하여 플랫폼 간 앱을 개발하는 데 필요한 도구 및 타사 소프트웨어를 설치하는 방법을 설명합니다. 구성 요소의 개요는 [Visual C++ 플랫폼 간 모바일](http://go.microsoft.com/fwlink/p/?LinkId=536387)을 참조하세요.  

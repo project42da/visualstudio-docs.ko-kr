@@ -4,10 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#GenerateResource
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#GenerateResource
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - MSBuild, GenerateResource task
 - GenerateResource task [MSBuild]
 ms.assetid: c0aff32f-f2cc-46f6-9c3e-a5c9f8f912b1
-caps.latest.revision: "15"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ef2517b05b58ac2a672a5eba04ca6f1dc48a27f3
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: 37aacbfd2095cf4edae78393569702fe4fea6c7e
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="generateresource-task"></a>GenerateResource 작업
 .txt 및 .rest(XML 기반 리소스 형식) 파일과 런타임 이진 실행 파일에 포함되거나 위성 어셈블리로 컴파일할 수 있는 공용 언어 런타임 이진 .resources 파일 간을 변환합니다. 이 작업은 일반적으로 .txt 또는 .resx 파일을 .resource 파일로 변환하는 데 사용됩니다. `GenerateResource` 작업은 [resgen.exe](/dotnet/framework/tools/resgen-exe-resource-file-generator)와 기능적으로 비슷합니다.  

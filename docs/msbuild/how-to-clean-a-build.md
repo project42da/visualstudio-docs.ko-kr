@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +13,17 @@ helpviewer_keywords:
 - directories [.NET Framework], for output items
 - output, removing items
 ms.assetid: 999ba473-b0c4-45c7-930a-63ea7a510509
-caps.latest.revision: "13"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5316a6f7f206ce5f28c6a76d13bf6dc8e4143125
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6a459733e94657a711e6b28a0ae00952afae0543
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-clean-a-build"></a>방법: 빌드 정리
 빌드를 정리할 때 프로젝트 및 구성 요소 파일을 그대로 두고 모든 중간 파일과 출력 파일이 삭제됩니다. 그런 다음 프로젝트 및 구성 요소 파일에서 중간 파일과 출력 파일의 새 인스턴스를 빌드할 수 있습니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]를 통해 제공되는 일반 작업 라이브러리에는 시스템 명령을 실행하는 데 사용할 수 있는 [Exec](../msbuild/exec-task.md) 작업이 포함됩니다. 작업의 라이브러리에 자세한 내용은 [작업 참조](../msbuild/msbuild-task-reference.md)를 참조하세요.  

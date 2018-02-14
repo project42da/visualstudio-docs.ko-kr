@@ -4,21 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: tgt-pltfrm-cross-plat
+ms.technology: vs-ide-mobile
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: C++
+dev_langs:
+- C++
 ms.assetid: 0bb872d6-981b-4c96-9143-fcec5336bf0d
-caps.latest.revision: "9"
+caps.latest.revision: 
 author: corob-msft
 ms.author: corob
 manager: ghogen
-ms.workload: xplat-cplusplus
-ms.openlocfilehash: 699fc53d0679e303e9c661c54634f162d95e2a2c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- xplat-cplusplus
+ms.openlocfilehash: 2ae49bb09d30122297efc66779f808e0c39dd0d7
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-c-for-cross-platform-mobile-development"></a>플랫폼 간 모바일 개발용 Visual C++
 플랫폼 간 모바일 개발용 Visual C++를 사용하여 iOS, Android 및 Windows 장치용 네이티브 C++ 앱을 빌드하고 iOS, Android 및 Windows용으로 빌드된 라이브러리의 공통 코드를 공유할 수 있습니다. 이는 공유 라이브러리 및 네이티브 앱의 플랫폼 간 개발에 필요한 도구와 SDK를 설치하는, Visual Studio 2015에서 사용할 수 있는 옵션입니다. 설치된 경우 Visual C++를 사용하여 iOS 및 Android 장치와 플랫폼, Windows, Windows Phone 및 Xbox에서 실행되는 코드를 만들 수 있습니다.  

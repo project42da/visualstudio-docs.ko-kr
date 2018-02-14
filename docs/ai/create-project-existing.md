@@ -1,3 +1,5 @@
+---
+---
 # <a name="create-an-ai-project-from-existing-code"></a>기존 코드로 AI 프로젝트를 만듭니다.
 
 [Visual Studio Tools for AI를 설치](installation.md)하면 Visual Studio 프로젝트에 기존 Python 코드를 쉽게 가져올 수 있습니다.

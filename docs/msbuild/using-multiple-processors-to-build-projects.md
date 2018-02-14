@@ -4,23 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - multiple processors
 - MSBuild, multiple processor systems
 ms.assetid: 49fa36c9-8e14-44f5-8a2b-34146cf6807b
-caps.latest.revision: "13"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c2879b753ecdf06779403b01bbeb0681448759fa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: f8bf385b6ee34c532e70557c0f04754ba0c56bb9
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="using-multiple-processors-to-build-projects"></a>다중 프로세서를 사용하여 프로젝트 빌드
 MSBuild에서는 다중 프로세서 또는 다중 핵심 프로세서가 있는 시스템을 사용할 수 있습니다. 사용 가능한 각 프로세서에 대해 별도 빌드 프로세스가 만들어집니다. 예를 들어 시스템에 4개의 프로세서가 있는 경우 네 개의 빌드 프로세스가 만들어집니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 이러한 빌드를 동시에 처리할 수 있기 때문에 전체 빌드 시간이 감소합니다. 그러나 병렬 빌드에서는 빌드 프로세스가 발생하는 방법과 관련하여 몇 가지 사항이 변경되었습니다. 이 항목에서는 이러한 변경 내용에 대해 설명합니다.  

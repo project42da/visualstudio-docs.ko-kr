@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,16 +18,17 @@ helpviewer_keywords:
 - build tasks using the Microsoft build engine [WPF MSBuild], compile markup and process resources
 - WPF MSBuild task reference [WPF MSBuild]
 ms.assetid: 96df0370-e50f-4ffc-9771-b12fb8721143
-caps.latest.revision: "4"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c62a9c6c276d1f84ff504fd8637505d70d72a47c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 5dbb779e7f9d12465aab5abf4051677948cb6d14
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="wpf-msbuild-task-reference"></a>WPF MSBuild 작업 참조
 WPF(Windows Presentation Foundation) 빌드 프로세스는 태그를 컴파일하고 리소스를 처리하는 작업 등을 포함한 추가적인 빌드 작업 집합을 사용하여 Microsoft Build Engine(MSBuild)을 확장합니다.  

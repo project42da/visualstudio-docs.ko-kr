@@ -1,3 +1,5 @@
+---
+---
 # <a name="view-recent-job-performance-and-details"></a>최근 작업 성능 및 세부 정보 보기
 작업을 제출하면 작업 목록을 보고 해당 상태, 기간 등을 확인할 수 있습니다.
 

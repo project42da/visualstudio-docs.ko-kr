@@ -4,23 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, forwarding loggers
 - MSBuild, logging
 ms.assetid: 3aebf9c8-b62c-4cb2-b2d6-8cdfcd369a24
-caps.latest.revision: "9"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5037b284a0f524a8b7c550a72fe76a27afd37f10
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6dd9afd2c2ac4e7dab63ec94392f83c8268ea6ed
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="creating-forwarding-loggers"></a>전달 로거 만들기
 전달 로거는 다중 프로세서 시스템에서 프로젝트를 빌드할 때 모니터링하려는 이벤트를 선택할 수 있도록 하여 로깅 효율성을 개선합니다. 전달 로거를 사용하여 원하지 않는 이벤트가 중앙 로거를 가득 채우고, 빌드 시간이 느려지고, 로그를 어지럽히지 않도록 방지할 수 있습니다.  

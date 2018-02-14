@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 07/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- tgt-pltfrm-cross-plat
+ms.technology: vs-ide-mobile
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 80f0104f-a4db-44dd-bd55-37bb67776c62
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 3029954623ffbd5324a8a1ab9b67def375b1a486
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: de44978f60b42ccd91c6d362738981adffb05de9
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-studio-emulator-for-android"></a>Android용 Visual Studio 에뮬레이터
 Android용 Visual Studio 에뮬레이터는 Android 장치를 에뮬레이트하는 데스크톱 응용 프로그램입니다. 물리적 장치를 사용하지 않고도 Android 앱을 디버그하고 테스트할 수 있는 가상화된 환경을 제공합니다. 또한 응용 프로그램 프로토타입을 위한 격리된 환경을 제공합니다.  
