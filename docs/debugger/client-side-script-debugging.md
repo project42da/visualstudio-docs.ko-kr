@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,22 +17,23 @@ helpviewer_keywords:
 - debugging [Visual Studio], client-side scripts
 - client-side scripts, debugging
 ms.assetid: bb668527-2288-47bd-a6c8-cecbad76dde2
-caps.latest.revision: "30"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 401ee40e2d296cbef041cb56568b639d05835f04
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 8f1d0073f1623c96c86f3c43b6992385eca38193
+ms.sourcegitcommit: f219ef323b8e1c9b61f2bfd4d3fad7e3d5fb3561
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="client-side-script-debugging"></a>클라이언트 쪽 스크립트 디버깅
 Visual Studio 디버거는 ASP.NET 페이지의 클라이언트 쪽 스크립트에서 오류를 찾아 수정하기 위한 포괄적인 디버깅 환경을 제공합니다.  
   
 ## <a name="opening-script-documents"></a>스크립트 문서 열기  
- **솔루션 탐색기** 에서 서버 쪽 및 클라이언트 쪽 스크립트 문서 목록을 볼 수 있습니다. **솔루션 탐색기**에서는 원하는 모든 스크립트 문서를 열 수 있습니다. 자세한 내용은 [How to: View Script Documents](../debugger/how-to-view-script-documents.md)을 참조하십시오.  
+서버 쪽 및 클라이언트 쪽 스크립트 문서 목록을 볼 수는 **솔루션 탐색기** 볼 수 있습니다. **솔루션 탐색기**에서는 원하는 모든 스크립트 문서를 열 수 있습니다. 자세한 내용은 [How to: View Script Documents](../debugger/how-to-view-script-documents.md)을 참조하십시오.  
   
 ## <a name="breakpoint-mapping"></a>중단점 매핑  
  Visual Studio에서는 서버 쪽 코드를 직접 디버깅할 수 없지만 서버 쪽 파일에서 중단점을 설정할 수 있습니다. Visual Studio는 클라이언트 쪽 파일에서 해당하는 위치에 중단점을 자동으로 매핑하고 클라이언트 쪽 코드에서 매핑된 중단점을 만듭니다.  
