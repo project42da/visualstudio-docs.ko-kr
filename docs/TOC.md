@@ -23,9 +23,8 @@
 ### 네트워크에 설치
 #### [Visual Studio의 네트워크 기반 설치 만들기](install/create-a-network-installation-of-visual-studio.md)
 #### [Visual Studio의 네트워크 기반 설치 업데이트](install/update-a-network-installation-of-visual-studio.md)
-#### [방화벽 또는 프록시 서버 뒤에 Visual Studio 설치](install/install-visual-studio-behind-a-firewall-or-proxy-server.md)
-#### [프록시 권한 부여 오류 수정](ide/reference/proxy-authorization-required.md)
-#### [개인 네트워크의 허용 목록 URL](ide/whitelisting-urls-in-a-private-network.md)
+#### [방화벽 또는 프록시 서버 뒤에 Visual Studio 설치 및 사용](install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server.md)
+##### [Visual Studio 설치 또는 사용 시의 네트워크 오류 문제 해결](install/troubleshooting-network-related-errors-in-visual-studio.md)
 ### 엔터프라이즈에서 배포
 #### [지시 파일을 사용하여 Visual Studio 설치 자동화](install/automated-installation-with-response-file.md)
 #### [Visual Studio를 배포할 때 제품 키를 자동으로 적용](install/automatically-apply-product-keys-when-deploying-visual-studio.md)
@@ -188,6 +187,7 @@
 ### [Office/SharePoint 개발](vsto/office-and-sharepoint-development-in-visual-studio.md)
 ### [XML 및 XSLT 파일 작업](xml-tools/xml-tools-in-visual-studio.md)
 ### 추가 자습서
+#### [C# 또는 Visual Basic을 사용하여 WPF 앱 만들기](ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
 #### [자습서 1: 사진 뷰어 만들기(C#)](ide/tutorial-1-create-a-picture-viewer.md)
 ##### [1단계: Windows Forms 응용 프로그램 프로젝트 만들기](ide/step-1-create-a-windows-forms-application-project.md)
 ##### [2단계: 프로그램 실행](ide/step-2-run-your-program.md)
