@@ -17,10 +17,10 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: c82bc929fa7633719c06569cb3dded5df651a349
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.sourcegitcommit: e5bd950df79175a96fe62b3d4b17a3ef536ec4c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="enhancing-code-quality-with-team-project-check-in-policies"></a>팀 프로젝트 체크 인 정책을 사용하여 코드 품질 향상
 

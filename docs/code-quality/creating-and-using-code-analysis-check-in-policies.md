@@ -4,21 +4,24 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: code analysis, check-in policies
+helpviewer_keywords:
+- code analysis, check-in policies
 ms.assetid: 3fa5a849-e05f-4e31-8ba3-b014c889d94d
-caps.latest.revision: "39"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: b7187ef8d3342ad050c66debf939e9c6a6213957
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: e5bd950df79175a96fe62b3d4b17a3ef536ec4c3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="creating-and-using-code-analysis-check-in-policies"></a>코드 분석 체크 인 정책 만들기 및 사용
 버전 제어 TFVC (Team Foundation)를 사용 하면.NET Framework 및 팀 프로젝트에서 네이티브 (C/c + +) 코드 프로젝트에 대 한 코드 분석 체크 인 정책을 만들 수 있습니다. 코드 분석 체크 인 정책 제어 하 고 코드 베이스에 체크 인 되는 코드의 품질 향상에 사용할 수 있습니다.  
