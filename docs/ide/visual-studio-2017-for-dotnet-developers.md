@@ -11,11 +11,11 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: db1e944f3ce12369b096c75a7fc12648a2d7e91d
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: a834f9781ff51779b2216bd7de9dd3e449c9360a
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 개발자용 Visual Studio 2017
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 01/23/2018
 [설명서: IntelliSense 사용](using-intellisense.md)  
 [설명서: 스마트 편집기 기능](writing-code-in-the-code-and-text-editor.md)
 
-Visual Studio는 Roslyn 컴파일러를 통해 코드를 심층적으로 이해하여 구문 색 지정, 기능 코드 완성, 잘못 입력된 변수의 맞춤법 검사, 가져오지 않은 형식 확인, 개요, 구조 시각화 도우미 [CodeLens](find-code-changes-and-other-history-with-codelens.md), 호출 계층 구조, 마우스를 올려 놓을 수 있는 빠른 정보, 매개변수 도움말은 물론, 리팩터링, 빠른 작업 적용 및 코드 생성 도구 등의 스마트 편집 기능을 제공합니다.
+Visual Studio는 .NET("Roslyn") 컴파일러를 통해 코드를 심층적으로 이해하여 구문 색 지정, 기능 코드 완성, 잘못 입력된 변수의 맞춤법 검사, 가져오지 않은 형식 확인, 개요, 구조 시각화 도우미 [CodeLens](find-code-changes-and-other-history-with-codelens.md), 호출 계층 구조, 마우스를 올려 놓을 수 있는 빠른 정보, 매개변수 도움말은 물론, 리팩터링, 빠른 작업 적용 및 코드 생성 도구 등의 스마트 편집 기능을 제공합니다.
 
 ![Visual Studio 스마트 코드 편집기](../ide/media/VSIDE_Productivity_SmartCodeEditor.png "VSIDE_Productivity_SmartCodeEditor")
 

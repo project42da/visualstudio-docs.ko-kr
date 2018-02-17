@@ -4,20 +4,20 @@ ms.custom:
 ms.date: 03/01/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 9976b6fd-d052-4017-b848-35b5bf4b2f66
-caps.latest.revision: "23"
-author: kempb
-ms.author: kempb
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ae35bafc612b4fd7b76a06c47300fee4f35ce5ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 81ee5566181a96ef36e8ce8f1545a22964301198
+ms.sourcegitcommit: f219ef323b8e1c9b61f2bfd4d3fad7e3d5fb3561
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="whats-new-in-msbuild-15"></a>MSBuild 15의 새로운 기능
 MSBuild는 현재 [.NET Core SDK](https://www.microsoft.com/net/download/core)의 일부로 제공되며 Windows, macOS 및 Linux에서 .NET Core 프로젝트를 빌드할 수 있습니다.  
@@ -39,7 +39,7 @@ MSBuild는 현재 [.NET Core SDK](https://www.microsoft.com/net/download/core)�
 -   `SDK35ToolsPath` 및 `SDK40ToolsPath` 속성은 이 버전의 Visual Studio(예: 4.X 도구의 10.0A)를 사용하여 패키지된 .NET Framework SDK를 가리킵니다.  
 
 ## <a name="updates"></a>Updates
-- [Project 요소](../msbuild/project-element-msbuild.md)는 새 `SDK` 특성을 포함합니다. 이제 `Xmlns` 특성도 선택 사항입니다.
+- [Project 요소](../msbuild/project-element-msbuild.md)는 새 `SDK` 특성을 포함합니다. 이제 `Xmlns` 특성도 선택 사항입니다. 자세한 내용은 [패키지, 메타데이터, 프레임워크](/dotnet/core/packages) 및 [.NET 코어의 csproj 형식에 대한 추가 사항](/dotnet/core/tools/csproj)을 참조하세요.
 - 대상 외부의 [Item 요소](../msbuild/item-element-msbuild.md)는 새 `Update` 특성을 포합합니다. 또한 `Remove` 특성 대한 제한 사항도 제거되었습니다.
 - `Directory.Build.props`는 디렉터리 아래에 프로젝트에 대한 사용자 지정을 제공하는 사용자 정의 파일입니다. `ImportDirectoryBuildTargets` 속성을 **false**로 설정한 경우가 아니면 Microsoft.Common.props에서 이 파일을 자동으로 가져옵니다. `Directory.Build.targets`는 Microsoft.Common.targets에서 가져옵니다.
 - 현재 특성 목록과 충돌하지 않는 이름을 가진 메타데이터를 특성으로 선택적으로 표시할 수 있습니다. 자세한 내용은 [Item 요소](../msbuild/item-element-msbuild.md)를 참조하세요.

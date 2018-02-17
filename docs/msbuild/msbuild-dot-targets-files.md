@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 02/24/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,19 +16,20 @@ helpviewer_keywords:
 - .Targets files
 - MSBuild, .Targets files
 ms.assetid: f6d98eb4-d2fa-49b7-8e3c-bae1ca3cf596
-caps.latest.revision: "17"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c382d6e967705b95e46c6c797915c49841688c6c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: bacd57684350553c0ad44f6e25578299894c264c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="msbuild-targets-files"></a>MSBuild .Targets 파일
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 일반 시나리오용 항목, 속성, 대상 및 작업이 들어 있는 여러 .targets 파일을 포함합니다. 이러한 파일은 대부분의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 파일로 자동 가져오기되므로 쉽게 유지 관리하고 읽을 수 있습니다.  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 일반 시나리오용 항목, 속성, 대상 및 작업이 들어 있는 여러 .targets 파일을 포함합니다. 이러한 파일은 대부분의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 파일로 자동 가져오기되므로 쉽게 유지 관리하고 읽을 수 있습니다.  
 
  일반적으로 프로젝트에서는 하나 이상의 .targets 파일을 가져와서 빌드 프로세스를 정의합니다. 예를 들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]로 만든 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트에서 가져오는 Microsoft.CSharp.targets는 Microsoft.Common.targets를 가져옵니다. [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트 자체에서 해당 프로젝트와 관련된 항목과 속성을 정의하지만, [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 프로젝트에 대한 표준 빌드 규칙은 가져오는 .targets 파일에 정의되어 있습니다.  
 

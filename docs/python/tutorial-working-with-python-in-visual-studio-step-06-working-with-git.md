@@ -7,21 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.technology:
 - devlang-python
-ms.devlang: python
+dev_langs:
+- python
 ms.tgt_pltfrm: 
-ms.topic: get-started-article
-caps.latest.revision: 
+ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6ce191ce01a89b7fc743562eaf430656f6952271
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: eb39d8807deb0c08b12b04128365c584d9bd8251
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="step-6-working-with-git"></a>6단계: Git 작업
 
@@ -35,7 +35,7 @@ Visual Studio는 로컬 Git 리포지토리 및 GitHub 및 Visual Studio Team Se
 
   ![추가 정보는 Visual Studio 창에서 Git 컨트롤을 마우스로 가리킬 때 표시됩니다.](media/working-with-git-01.png)
 
-1. **팀 탐색기** 창도 리포지토리 헤더를 선택하여 사용할 수 있는 다양한 Git 옵션과 함께 표시됩니다. 표시된 대로 **동기화** 창은 원격 리포지토리에 게시를 위한 옵션을 제공합니다.
+1. **팀 탐색기** 창도 리포지토리 헤더를 선택하여 사용할 수 있는 다양한 Git 옵션과 함께 표시됩니다. **푸시** 헤더를 선택할 때 표시되는 **동기화** 창은 원격 리포지토리에 게시하기 위한 옵션을 제공합니다.
 
   ![로컬 리포지토리를 만든 후 Visual Studio의 팀 탐색기](media/working-with-git-02.png)
 
@@ -47,7 +47,7 @@ Visual Studio는 로컬 Git 리포지토리 및 GitHub 및 Visual Studio Team Se
 
   ![분기를 보여 주는 Visual Studio의 팀 탐색기](media/working-with-git-04.png)
 
-1. 로컬 저장소를 사용하는 경우 커밋된 변경 내용은 리포지토리로 직접 이동합니다. 원격 저장소에 연결된 경우 **동기화**를 선택하여 로컬 커밋을 푸시합니다.
+1. 로컬 저장소를 사용하는 경우 커밋된 변경 내용은 리포지토리로 직접 이동합니다. 원격 리포지토리에 연결된 경우 헤더를 선택하고 **동기화**를 **동기화** 섹션으로 전환하고 거기에 표시되는 명령으로 작업합니다.
 
 ## <a name="going-deeper"></a>자세히 알아보기
 

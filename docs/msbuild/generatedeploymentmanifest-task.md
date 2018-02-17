@@ -4,10 +4,11 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: http://schemas.microsoft.com/developer/msbuild/2003#GenerateDeploymentManifest
+f1_keywords:
+- http://schemas.microsoft.com/developer/msbuild/2003#GenerateDeploymentManifest
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - MSBuild, GenerateDeploymentManifest task
 - GenerateDeploymentManifest task [MSBuild]
 ms.assetid: 0734ebda-734d-49c4-9642-8d9d919d45fd
-caps.latest.revision: "27"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1dc0d1af8c79fe95ea091ac691519653b59a9648
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: dbb673b263cc7cf4931a07b968a763faf057fad4
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="generatedeploymentmanifest-task"></a>GenerateDeploymentManifest 작업
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트를 생성합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트는 배포에 대한 고유한 ID를 정의하고, 설치 또는 온라인 모드와 같은 배포 특성을 식별하고, 응용 프로그램 업데이트 설정 및 업데이트 위치를 지정하고, 해당 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트를 지정하여 응용 프로그램의 배포를 설명합니다.  
@@ -42,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 |`DeploymentUrl`|선택적 `String` 매개 변수입니다.<br /><br /> 응용 프로그램에 대한 업데이트 위치를 지정합니다. 이 매개 변수를 지정하지 않으면 응용 프로그램에 대한 업데이트 위치가 정의되지 않습니다. 그러나 `UpdateEnabled` 매개 변수가 `true`이면 업데이트 위치를 지정해야 합니다. 지정된 값은 정규화된 URL 또는 UNC 경로여야 합니다.|  
 |`Description`|선택적 `String` 매개 변수입니다.<br /><br /> 응용 프로그램에 대한 선택적 설명을 지정합니다.|  
 |`DisallowUrlActivation`|선택적 `Boolean` 매개 변수입니다.<br /><br /> 응용 프로그램이 URL을 통해 열릴 때 자동으로 실행되어야 하는지 여부를 지정합니다. 이 매개 변수가 `true`이면 응용 프로그램을 시작 메뉴에서만 시작할 수 있습니다. 이 매개 변수의 기본값은 `false`입니다. 이 입력은 `Install` 매개 변수 값이 `true`일 때만 적용됩니다.|  
-|`EntryPoint`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 매개 변수입니다.<br /><br /> 생성된 매니페스트 어셈블리에 대한 진입점을 나타냅니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트의 경우 이 입력은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트를 지정합니다.<br /><br /> [!INCLUDE[vsprvslong](../code-quality/includes/vsprvslong_md.md)]에서 [GenerateApplicationManifest 작업](../msbuild/generateapplicationmanifest-task.md)에는 응용 프로그램 매니페스트를 생성하기 위해 `EntryPoint`가 필요합니다. (어셈블리 또는 네이티브 매니페스트에는 `EntryPoint`가 필요 하지 않습니다.) 이 요구 사항은 빌드 오류 "MSB3185: 매니페스트에 EntryPoint를 지정하지 않았습니다."를 나타내며 적용되었습니다.<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 `EntryPoint` 작업 매개 변수가 지정되지 않을 경우 이 오류를 발생하지 않습니다. 대신 \<customHostSpecified> 태그는 \<entryPoint> 태그의 자식으로 삽입되며, 예를 들면 다음과 같습니다.<br /><br /> `<entryPoint xmlns="urn:schemas-`<br /><br /> `microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 다음 단계를 사용하여 응용 프로그램 매니페스트에 DLL 종속성을 추가할 수 있습니다.<br /><br /> 1.  <xref:Microsoft.Build.Tasks.ResolveAssemblyReference>를 호출하여 어셈블리 참조를 확인합니다.<br />2.  이전 작업의 출력 및 어셈블리 자체를 <xref:Microsoft.Build.Tasks.ResolveManifestFiles>에 전달합니다.<br />3.  `Dependencies` 매개 변수를 사용하여 <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>에 종속성을 전달합니다.|  
+|`EntryPoint`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 매개 변수입니다.<br /><br /> 생성된 매니페스트 어셈블리에 대한 진입점을 나타냅니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트의 경우 이 입력은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트를 지정합니다.<br /><br /> [!INCLUDE[vsprvslong](../code-quality/includes/vsprvslong_md.md)]에서 [GenerateApplicationManifest 작업](../msbuild/generateapplicationmanifest-task.md)에는 응용 프로그램 매니페스트를 생성하기 위해 `EntryPoint`가 필요합니다. (어셈블리 또는 네이티브 매니페스트에는 `EntryPoint`가 필요 하지 않습니다.) 이 요구 사항은 빌드 오류 "MSB3185: 매니페스트에 EntryPoint를 지정하지 않았습니다."를 나타내며 적용되었습니다.<br /><br /> [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] `EntryPoint` 작업 매개 변수가 지정되지 않을 경우 이 오류를 발생하지 않습니다. 대신 \<customHostSpecified> 태그는 \<entryPoint> 태그의 자식으로 삽입되며, 예를 들면 다음과 같습니다.<br /><br /> `<entryPoint xmlns="urn:schemas-`<br /><br /> `microsoft-com:asm.v2">`<br /><br /> `<co.v1:customHostSpecified />`<br /><br /> `</entryPoint>`<br /><br /> 다음 단계를 사용하여 응용 프로그램 매니페스트에 DLL 종속성을 추가할 수 있습니다.<br /><br /> 1.  <xref:Microsoft.Build.Tasks.ResolveAssemblyReference>를 호출하여 어셈블리 참조를 확인합니다.<br />2.  이전 작업의 출력 및 어셈블리 자체를 <xref:Microsoft.Build.Tasks.ResolveManifestFiles>에 전달합니다.<br />3.  `Dependencies` 매개 변수를 사용하여 <xref:Microsoft.Build.Tasks.GenerateApplicationManifest>에 종속성을 전달합니다.|  
 |`ErrorReportUrl`|선택적 <xref:System.String?displayProperty=fullName> 매개 변수입니다.<br /><br /> ClickOnce 설치 중에 대화 상자에 표시되는 웹 페이지의 URL을 지정합니다.|  
 |`InputManifest`|선택적 <xref:Microsoft.Build.Framework.ITaskItem> 매개 변수입니다.<br /><br /> 매니페스트 생성기에 대한 기본으로 사용되는 입력 XML 문서를 나타냅니다. 이를 통해 사용자 지정 매니페스트 정의와 같은 구조화된 데이터가 출력 매니페스트에 반영될 수 있습니다. XML 문서의 루트 요소는 asmv1 네임스페이스의 어셈블리 노드여야 합니다.|  
 |`Install`|선택적 `Boolean` 매개 변수입니다.<br /><br /> 응용 프로그램이 설치된 응용 프로그램인지 아니면 온라인 전용 응용 프로그램인지 여부를 지정합니다. 이 매개 변수가 `true`이면 응용 프로그램은 사용자의 [시작] 메뉴에 설치되며 [프로그램 추가/제거] 대화 상자를 사용하여 제거할 수 있습니다. 이 매개 변수가 `false`이면 응용 프로그램을 웹 페이지에서 온라인으로 사용해야 합니다. 이 매개 변수의 기본값은 `true`입니다.|  

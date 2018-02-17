@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -26,16 +26,17 @@ helpviewer_keywords:
 - MSBuild (Visual C++), MIDL task
 - MIDL task (MSBuild (Visual C++))
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
-caps.latest.revision: "8"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3dc6bcbf4814a05d05aa69a42e8d19f581e78863
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 51ed6c8c34fd5aa37eebffabcda077ca8554c498
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="midl-task"></a>MIDL 작업
 MIDL(Microsoft 인터페이스 정의 언어) 컴파일러 도구인 midl.exe를 래핑합니다. 자세한 내용은 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 웹 사이트에서 "MIDL 명령줄 참조"를 참조하세요.  
@@ -55,7 +56,7 @@ MIDL(Microsoft 인터페이스 정의 언어) 컴파일러 도구인 midl.exe를
   
      선택적 **문자열** 매개 변수입니다.  
   
-     명령줄 옵션의 목록입니다. 예를 들어 **"***/option1 /option2 /option#*"과 같습니다. 이 매개 변수를 사용하여 다른 MIDL 작업 매개 변수로 표현되지 않는 명령줄 옵션을 지정합니다.  
+     명령줄 옵션의 목록입니다. 예를 들면 **"***/option1 /option2 /option#*"과 같습니다. 이 매개 변수를 사용하여 다른 MIDL 작업 매개 변수로 표현되지 않는 명령줄 옵션을 지정합니다.  
   
      자세한 내용은 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 웹 사이트에서 "MIDL 명령줄 참조"를 참조하세요.  
   

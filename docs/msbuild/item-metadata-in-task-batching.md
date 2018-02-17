@@ -4,7 +4,7 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,19 +13,20 @@ helpviewer_keywords:
 - task batching [MSBuild]
 - MSBuild, task batching
 ms.assetid: 31e480f8-fe4d-4633-8c54-8ec498e2306d
-caps.latest.revision: "11"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 176f44c105909935988a06f3eb928e5adfb77149
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ee203056edb24bd2338caf1ad1b5608e4c5d3ca9
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-metadata-in-task-batching"></a>작업 일괄 처리의 항목 메타데이터
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에는 항목 목록을 항목 메타데이터에 따라 여러 다른 범주 또는 일괄 처리로 나누고 각 일괄 처리를 사용하여 한 번에 하나의 작업을 실행하는 기능이 있습니다. 어떤 항목이 어떤 일괄 처리를 통해 전달될지 정확히 이해하는 것은 어려울 수 있습니다. 이 항목에서는 일괄 처리와 관련된 다음과 같은 일반적인 시나리오를 다룹니다.  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 항목 목록을 항목 메타데이터에 따라 여러 다른 범주 또는 일괄 처리로 나누고 각 일괄 처리를 사용하여 한 번에 하나의 작업을 실행하는 기능이 있습니다. 어떤 항목이 어떤 일괄 처리를 통해 전달될지 정확히 이해하는 것은 어려울 수 있습니다. 이 항목에서는 일괄 처리와 관련된 다음과 같은 일반적인 시나리오를 다룹니다.  
   
 -   하나의 항목 목록을 일괄 처리로 나누기  
   
@@ -84,7 +85,7 @@ ms.lasthandoff: 12/22/2017
  `Number: 3 -- Items in ExampColl: Item3;Item6`  
   
 ## <a name="dividing-several-item-lists-into-batches"></a>여러 항목 목록을 일괄 처리로 나누기  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 여러 항목 목록을 동일한 메타데이터에 따라 일괄 처리로 나눌 수 있습니다. 이렇게 하면 쉽게 여러 다른 항목 목록을 일괄 처리로 나누어 여러 어셈블리를 빌드할 수 있습니다. 예를 들어 .cs 파일의 항목 목록을 응용 프로그램 일괄 처리 및 어셈블리 일괄 처리로 나누고, 리소스 파일의 항목 목록을 응용 프로그램 일괄 처리 및 어셈블리 일괄 처리로 나눌 수 있습니다. 그런 후 일괄 처리를 사용하여 이러한 항목 목록을 하나의 작업에 전달하고 응용 프로그램 및 어셈블리를 둘 다 빌드할 수 있습니다.  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 여러 항목 목록을 동일한 메타데이터에 따라 일괄 처리로 나눌 수 있습니다. 이렇게 하면 쉽게 여러 다른 항목 목록을 일괄 처리로 나누어 여러 어셈블리를 빌드할 수 있습니다. 예를 들어 .cs 파일의 항목 목록을 응용 프로그램 일괄 처리 및 어셈블리 일괄 처리로 나누고, 리소스 파일의 항목 목록을 응용 프로그램 일괄 처리 및 어셈블리 일괄 처리로 나눌 수 있습니다. 그런 후 일괄 처리를 사용하여 이러한 항목 목록을 하나의 작업에 전달하고 응용 프로그램 및 어셈블리를 둘 다 빌드할 수 있습니다.  
   
 > [!NOTE]
 >  작업에 전달되는 항목 목록에 참조된 메타데이터가 있는 항목이 없으면 해당 항목 목록의 모든 항목이 모든 일괄 처리로 전달됩니다.  

@@ -18,11 +18,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a3eee4abda5783707231332022e1f3f24728e7cc
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: d9f050662ed38814920e17b36f77bf6795aabfa9
+ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="publish-page-project-designer"></a>프로젝트 디자이너, 게시 페이지
 **프로젝트 디자이너** 의 **게시** 페이지를 통해 ClickOnce 배포를 위한 속성을 구성합니다.  
@@ -34,10 +34,8 @@ ms.lasthandoff: 01/29/2018
   
 ## <a name="uielement-list"></a>UI 요소 목록  
  **게시 폴더 위치**  
- 응용 프로그램이 게시되는 위치를 지정합니다. 드라이브 경로(`C:\deploy\myapplication`), 파일 공유(`\\server\myapplication`), FTP 서버(`ftp://ftp.microsoft.com/myapplication`) 또는 웹 사이트(`http://www.microsoft.com/myapplication`)일 수 있습니다. 찾아보기( **...** ) 단추가 작동하려면**게시 위치**상자에 텍스트가 있어야 합니다.  
-  
- 기본적으로 게시 위치는 IIS를 설치한 경우 `http://localhost/<projectname>/` , 또는 IIS를 설치하지 않은 경우 `publish\` 디렉터리입니다. 컴퓨터에서 Windows Vista가 실행 중인 경우 IIS의 설치 여부와 상관없이 기본값은 항상 `publish\` 디렉터리입니다.  
-  
+ 응용 프로그램이 게시되는 위치를 지정합니다. 드라이브 경로(`C:\deploy\myapplication`), 파일 공유(`\\server\myapplication`) 또는 FTP 서버(`ftp://ftp.microsoft.com/myapplication`)일 수 있습니다. 찾아보기( **...** ) 단추가 작동하려면**게시 위치**상자에 텍스트가 있어야 합니다.  
+   
  **설치 폴더 URL**  
  선택 사항입니다. 사용자가 응용 프로그램을 설치할 웹 사이트를 지정합니다. **게시 위치**와 다른 경우(예: 응용 프로그램이 준비 서버에 게시된 경우)에만 이 옵션이 필요합니다.  
   

@@ -5,32 +5,43 @@ ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vs.ExpansionManagerImport
 - vs.codesnippetmanager
 helpviewer_keywords:
-- code snippets, replacement parameters
-- code snippets, surround with
-- replacement parameters
-- code snippets, expansion
 - surround with
 - code snippets
 author: gewarren
 ms.author: gewarren
 manager: ghogen
+dev_langs:
+- CSharp
+- VB
+- CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 32aded825454ce53193d488c01e3aad70d9032f8
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 514408ff2dbbde12d243a1458c380a2e17b516cc
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="code-snippets"></a>코드 조각
 
-코드 조각은 상황에 맞는 메뉴 명령이나 바로 가기 키 조합을 사용하여 코드 파일에 삽입할 수 있는 다시 사용 가능한 작은 블록입니다. 일반적으로 try-finally 또는 if-else 블록과 같이 자주 사용되는 코드 블록을 포함하지만 전체 클래스나 메서드를 삽입하는 데 사용할 수 있습니다.
+코드 조각은 상황에 맞는 메뉴 명령이나 바로 가기 키 조합을 사용하여 코드 파일에 삽입할 수 있는 다시 사용 가능한 작은 블록입니다. 일반적으로 `try-finally` 또는 `if-else` 블록과 같이 자주 사용되는 코드 블록을 포함하지만 전체 클래스나 메서드를 삽입하는 데 사용할 수 있습니다.
+
+코드 조각은 C#, C++, Visual Basic, XML, T-SQL 등을 비롯하여 많은 언어에 대해 사용할 수 있습니다. 언어에 대해 사용할 수있는 모든 설치된 코드 조각을 보려면 Visual Studio의 **도구** 메뉴에서 **코드 조각 관리자**를 열고 맨 위에 있는 드롭다운 메뉴에서 언어를 선택합니다.
+
+![코드 조각 관리자 대화 상자](media/code-snippets-manager.png)
+
+코드 조각은 다음과 같은 일반적인 방법으로 액세스할 수 있습니다.
+
+- 메뉴 모음에서 **편집** > **IntelliSense** > **조각 삽입...**을 선택
+
+- 마우스 오른쪽 단추를 클릭하거나 코드 편집기의 상황에 맞는 메뉴에서 **코드 조각** > **조각 삽입...**을 선택
+
+- 키보드에서 **Ctrl**+**K**+**X**를 누름
 
 ## <a name="expansion-snippets-and-surround-with-snippets"></a>확장 조각 및 코드 감싸기 조각
 
@@ -49,9 +60,9 @@ finally
 }
 ```
 
-코드 창의 상황에 맞는 메뉴에서 **조각 삽입** 및 **Visual C#**을 클릭하여 이 코드 조각을 삽입하고, `tryf`를 입력하고, **탭**을 누르면 됩니다. 또는 `tryf`를 입력하고 **탭**을 두 번 누르면 됩니다.
+코드 창의 상황에 맞는 메뉴에서 **조각 삽입**, **Visual C#**를 차례로 클릭하여 이 조각을 삽입한 다음, `tryf`를 입력하고 나서 **Tab**을 누릅니다. 또는 `tryf`를 입력하고 **Tab**을 두 번 누를 수 있습니다.
 
-코드 감싸기 조각의 예: C++에서 바로 가기 `if`는 삽입 조각 또는 코드 감싸기 조각으로 사용할 수 있습니다. 코드 줄(예: `return FALSE;`)을 선택하고 **코드 감싸기**, **if**를 차례로 클릭하면 해당 줄 주위에서 조각이 확장됩니다.
+코드 감싸기 조각의 예: C++에서 바로 가기 `if`는 삽입 조각 또는 코드 감싸기 조각으로 사용할 수 있습니다. 코드 줄(예: `return FALSE;`)을 선택하고 **코드 감싸기** > **if**를 선택하면 해당 줄 주위에서 조각이 확장됩니다.
 
 ```cpp
 if (true)
@@ -64,7 +75,11 @@ if (true)
 
 조각은 작성 중인 정확한 코드에 맞게 바꿔야 하는 자리 표시자인 대체 매개 변수를 포함할 수 있습니다. 이전 예제에서 `true`는 적절한 조건으로 바꿀 대체 매개 변수입니다. 조각에서 같은 매개 변수의 모든 인스턴스에 대해 반복해서 대체를 수행합니다.
 
-예를 들어 Visual Basic에는 속성을 삽입하는 코드 조각이 있습니다. 코드 창의 상황에 맞는 메뉴에서 **조각 삽입**을 클릭하고 **코드 패턴**, **속성, 프로시저, 이벤트**, 속성 정의를 차례로 클릭합니다. 다음 코드가 삽입됩니다.
+예를 들어 Visual Basic에는 속성을 삽입하는 코드 조각이 있습니다. 조각을 삽입하려면 마우스 오른쪽 단추를 클릭하거나 Visual Basic 코드 파일의 상황에 맞는 메뉴에서 **조각...** > **조각 삽입**을 선택합니다. 그런 다음, **코드 패턴** > **속성, 프로시저, 이벤트** > **속성 정의**를 선택합니다.
+
+![속성을 정의하기 위한 코드 조각 메뉴](media/code-snippets-vb-property.png)
+
+다음 코드가 삽입됩니다.
 
 ```vb
 Private newPropertyValue As String
@@ -79,12 +94,6 @@ End Property
 ```
 
 `newPropertyValue`를 `m_property`로 변경하면 `newPropertyValue`의 모든 인스턴스가 변경됩니다. 속성 선언에서 `String`을 `Int`로 변경하면 set 메서드의 값도 `Int`로 변경됩니다.
-
-## <a name="code-snippet-manager"></a>코드 조각 관리자
-
-**도구**, **코드 조각 관리자**를 클릭하여 현재 설치된 모든 코드 조각과 디스크에서 해당 위치를 확인할 수 있습니다. 조각은 언어별로 표시됩니다.
-
-**코드 조각 관리자** 대화 상자에서 **추가** 및 **제거** 단추를 사용하여 조각 디렉터리를 추가 및 제거할 수 있습니다. 개별 코드 조각을 추가하려면 **가져오기** 단추를 사용합니다.
 
 ## <a name="see-also"></a>참고 항목
 

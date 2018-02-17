@@ -1,10 +1,10 @@
 ---
 title: "MSBuild 도구 집합(ToolsVersion) | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 01/31/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -13,16 +13,16 @@ helpviewer_keywords:
 - MSBuild, targeting a specific .NET framework
 - multitargeting [MSBuild]
 ms.assetid: 40040ee7-4620-4043-a6d8-ccba921421d1
-caps.latest.revision: "30"
-author: kempb
-ms.author: kempb
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c7c8658b3c1a39efc24e65845be2ce75eafc4437
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: e274fa60ff209436be9d11f52464d7b42972ef47
+ms.sourcegitcommit: f219ef323b8e1c9b61f2bfd4d3fad7e3d5fb3561
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="msbuild-toolset-toolsversion"></a>MSBuild 도구 집합(ToolsVersion)
 MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구로 구성된 도구 집합을 사용합니다. 일반적으로 MSBuild 도구 집합에는 microsoft.common.tasks 파일, microsoft.common.targets 파일 및 컴파일러(예: csc.exe 및 vbc.exe)가 포함되어 있습니다. 대부분의 도구 집합을 사용하여 응용 프로그램을 둘 이상의 .NET Framework 버전 및 둘 이상의 시스템 플랫폼으로 컴파일할 수 있습니다. 그러나 MSBuild 2.0 도구 집합을 사용해서는 .NET Framework 2.0만 대상으로 할 수 있습니다.  
@@ -32,7 +32,10 @@ MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구�
   
 ```xml  
 <Project ToolsVersion="15.0" ... </Project>  
-```  
+``` 
+
+> [!NOTE] 
+> 일부 프로젝트 형식은 `ToolsVersion` 대신 `sdk` 특성을 사용합니다. 자세한 내용은 [패키지, 메타데이터, 프레임워크](/dotnet/core/packages) 및 [.NET 코어의 csproj 형식에 대한 추가 사항](/dotnet/core/tools/csproj)을 참조하세요.
   
 ## <a name="how-the-toolsversion-attribute-works"></a>ToolsVersion 특성의 작동 방식  
  Visual Studio에서 프로젝트를 만들거나 기존 프로젝트를 업그레이드할 때 `ToolsVersion`이라는 특성이 자동으로 프로젝트 파일에 포함되고 해당 값은 Visual Studio 버전에 포함된 MSBuild의 버전에 해당합니다. 자세한 내용은 [특정 대상 .NET Framework 버전 지정](../ide/targeting-a-specific-dotnet-framework-version.md)을 참조하세요.  
@@ -72,7 +75,7 @@ MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구�
   
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper> 메서드 사용  
   
- 도구 집합 속성은 도구의 경로를 지정합니다. MSBuild는 프로젝트 파일의 `ToolsVersion` 특성 값을 사용하여 해당 레지스트리 키를 찾은 다음 레지스트리 키의 정보를 사용하여 도구 집합 속성을 설정합니다. 예를 들어, `ToolsVersion`의 값이 `12.0`인 경우 MSBuild는 HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0 레지스트리 키에 따라 도구 집합 속성을 설정합니다.  
+ 도구 집합 속성은 도구의 경로를 지정합니다. Visual Studio 2017부터 시작하여 MSBuild는 더 이상 고정된 위치를 갖지 않습니다. 기본적으로 Visual Studio 설치 위치에 대해 상대적인 MSBuild\15.0\Bin 폴더에 있습니다. 이전 버전에서 MSBuild는 프로젝트 파일의 `ToolsVersion` 특성 값을 사용하여 해당 레지스트리 키를 찾은 다음, 레지스트리 키의 정보를 사용하여 도구 집합 속성을 설정합니다. 예를 들어, `ToolsVersion`의 값이 `12.0`인 경우 MSBuild는 HKLM\Software\Microsoft\MSBuild\ToolsVersions\12.0 레지스트리 키에 따라 도구 집합 속성을 설정합니다.  
   
  다음은 도구 집합 속성입니다.  
   
@@ -95,7 +98,7 @@ MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구�
 -   <xref:Microsoft.Build.Utilities.ToolLocationHelper.GetPathToBuildTools%2A>는 빌드 도구의 경로를 반환합니다.  
   
 ### <a name="sub-toolsets"></a>하위 도구 집합  
- 이 항목의 앞부분에서 설명한 것처럼, MSBuild는 레지스트리 키를 사용하여 기본 도구의 경로를 지정합니다. 키에 하위 키가 포함된 경우 MSBuild는 하위 키를 사용하여 추가 도구가 포함되어 있는 하위 도구 집합의 경로를 지정합니다. 이 경우 도구 집합은 두 키 모두에 정의되어 있는 속성 정의를 결합하여 정의됩니다.  
+ 15.0 이전 버전의 MSBuild의 경우 MSBuild는 레지스트리 키를 사용하여 기본 도구의 경로를 지정합니다. 키에 하위 키가 포함된 경우 MSBuild는 하위 키를 사용하여 추가 도구가 포함되어 있는 하위 도구 집합의 경로를 지정합니다. 이 경우 도구 집합은 두 키 모두에 정의되어 있는 속성 정의를 결합하여 정의됩니다.  
   
 > [!NOTE]
 >  도구 집합 속성 이름이 충돌하는 경우 하위 키 경로에 대해 정의된 값이 루트 키 경로에 대해 정의된 값을 재정의합니다.  
@@ -106,7 +109,7 @@ MSBuild는 응용 프로그램을 빌드하기 위한 작업, 대상 및 도구�
   
 -   “11.0”은 .NET Framework 4.5 하위 도구 집합을 지정합니다.  
   
--   “12.0”은 .NET Framework 4.5.1 하위 도구 집합을 지정합니다.  
+-   “12.0”은 .NET Framework 4.5.1 하위 도구 집합을 지정합니다. 
   
  하위 도구 집합 10.0 및 11.0은 ToolsVersion 4.0과 함께 사용되어야 합니다. 나중 버전에서는 하위 도구 집합 버전과 ToolsVersion이 일치해야 합니다.  
   

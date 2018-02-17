@@ -4,21 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: MSBuild, tutorial
+helpviewer_keywords:
+- MSBuild, tutorial
 ms.assetid: b8a8b866-bb07-4abf-b9ec-0b40d281c310
-caps.latest.revision: "32"
-author: kempb
-ms.author: kempb
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fa0ec9c483244e15e5cc51cb6bdb743c1f586e7c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 00775856e57392355b1908d4849f1bbbd836c5f2
+ms.sourcegitcommit: f219ef323b8e1c9b61f2bfd4d3fad7e3d5fb3561
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/14/2018
 ---
 # <a name="walkthrough-using-msbuild"></a>연습: MSBuild 사용
 MSBuild는 Microsoft 및 Visual Studio용 빌드 플랫폼입니다. 이 연습에서는 MSBuild의 구성 요소를 소개하고 MSBuild 프로젝트를 작성, 조작 및 디버깅하는 방법을 보여 줍니다. 학습 내용은 다음과 같습니다.  
@@ -60,45 +61,33 @@ MSBuild는 Microsoft 및 Visual Studio용 빌드 플랫폼입니다. 이 연습�
      프로젝트 파일이 코드 편집기에 나타납니다.  
   
 ## <a name="targets-and-tasks"></a>대상 및 작업  
- 프로젝트 파일은 루트 노드 [프로젝트](../msbuild/project-element-msbuild.md)를 포함하는 XML 형식의 파일입니다.  
+프로젝트 파일은 루트 노드 [프로젝트](../msbuild/project-element-msbuild.md)를 포함하는 XML 형식의 파일입니다.  
   
 ```xml  
 <?xml version="1.0" encoding="utf-8"?>  
-<Project ToolsVersion="12.0" DefaultTargets="Build"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+<Project ToolsVersion="15.0"  xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
 ```  
   
- 프로젝트 요소에서 xmlns 네임스페이스를 지정해야 합니다.  
+프로젝트 요소에서 xmlns 네임스페이스를 지정해야 합니다. `ToolsVersion`이 새 프로젝트에 존재하는 경우 "15.0"이어야 합니다.
   
- 응용 프로그램 빌드 작업에서는 [대상](../msbuild/target-element-msbuild.md) 및 [작업](../msbuild/task-element-msbuild.md) 요소를 사용합니다.  
+응용 프로그램 빌드 작업에서는 [대상](../msbuild/target-element-msbuild.md) 및 [작업](../msbuild/task-element-msbuild.md) 요소를 사용합니다.  
   
 -   작업(task)은 작업(work)의 최소 단위(빌드의 "구성 요소")이며, 입력과 출력을 포함할 수 있는 독립적인 실행 가능 구성 요소입니다. 현재 프로젝트 파일에는 참조되거나 정의된 작업(task)이 없습니다. 아래 섹션에서 프로젝트 파일에 작업(task)을 추가합니다. 자세한 내용은 [작업](../msbuild/msbuild-tasks.md) 항목을 참조하세요.  
   
--   대상은 작업의 명명된 순서입니다. 프로젝트 파일의 끝에는 현재 HTML 주석으로 묶인 두 개의 대상(BeforeBuild 및 AfterBuild)이 있습니다.  
+-   대상은 작업의 명명된 순서입니다. 자세한 내용은 [대상](../msbuild/msbuild-targets.md) 항목을 참조하세요.  
   
-    ```xml  
-    <Target Name="BeforeBuild">  
-    </Target>  
-    <Target Name="AfterBuild">  
-    </Target>  
-    ```  
-  
-     자세한 내용은 [대상](../msbuild/msbuild-targets.md) 항목을 참조하세요.  
-  
- 프로젝트 노드에는 빌드할 기본 대상(이 연습의 경우에는 Build)을 선택하는 선택적인 DefaultTargets 특성이 있습니다.  
-  
-```xml  
-<Project ToolsVersion="12.0" DefaultTargets="Build" ...  
-```  
-  
- Build 대상은 프로젝트 파일에 정의되어 있지 않으며 대신 [Import](../msbuild/import-element-msbuild.md) 요소를 사용해 Microsoft.CSharp.targets 파일에서 가져옵니다.  
+기본 대상은 프로젝트 파일에 정의되어 있지 않으며 대신에 가져오는 프로젝트에 지정됩니다. [가져오기](../msbuild/import-element-msbuild.md) 요소는 가져오는 프로젝트를 지정합니다. 예를 들어 C# 프로젝트에서 기본 대상은 Microsoft.CSharp.targets 파일에서 가져옵니다. 
   
 ```xml  
 <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />  
 ```  
   
- 가져온 파일은 참조될 때마다 프로젝트 파일에 실제로 삽입됩니다.  
+가져온 파일은 참조될 때마다 프로젝트 파일에 실제로 삽입됩니다.  
+
+> [!NOTE]
+> .NET Core 같은 일부 프로젝트 형식은 `ToolsVersion` 대신 `Sdk` 특성을 가진 단순화된 스키마를 사용합니다. 이러한 프로젝트는 암시적 가져오기 및 다른 기본 특성 값을 가지고 있습니다.
   
- MSBuild는 빌드의 대상을 추적하며 각 대상이 여러 번 빌드되지 않음을 보장합니다.  
+MSBuild는 빌드의 대상을 추적하며 각 대상이 여러 번 빌드되지 않음을 보장합니다.  
   
 ## <a name="adding-a-target-and-a-task"></a>대상 및 작업 추가  
  이 섹션에서는 프로젝트 파일에 대상을 추가합니다. 그리고 메시지를 인쇄하는 작업을 대상에 추가합니다.  
@@ -158,9 +147,6 @@ MSBuild는 Microsoft 및 Visual Studio용 빌드 플랫폼입니다. 이 연습�
   
  코드 편집기와 명령 창을 오가면서 프로젝트 파일을 변경하고 결과를 빠르게 확인할 수 있습니다.  
   
-> [!NOTE]
->  /t 명령 스위치 없이 msbuild를 실행하는 경우 msbuild는 Project 요소의 DefaultTarget 특성에 의해 제공되는 대상(이 연습의 경우에는 "Build")을 빌드합니다. 그러면 Windows Forms 응용 프로그램 BuildApp.exe가 빌드됩니다.  
-  
 ## <a name="build-properties"></a>빌드 속성  
  빌드 속성은 빌드를 안내하는 이름-값 쌍입니다. 여러 빌드 속성이 프로젝트 파일의 위쪽에 이미 정의되어 있습니다.  
   
@@ -178,10 +164,10 @@ MSBuild는 Microsoft 및 Visual Studio용 빌드 플랫폼입니다. 이 연습�
  모든 속성은 PropertyGroup 요소의 자식 요소입니다. 속성의 이름은 자식 요소의 이름이며 속성값은 자식 요소의 텍스트 요소입니다. 예를 들어 개체에 적용된  
   
 ```xml  
-<TargetFrameworkVersion>v12.0</TargetFrameworkVersion>  
+<TargetFrameworkVersion>v15.0</TargetFrameworkVersion>  
 ```  
   
- 위의 코드는 TargetFrameworkVersion이라는 속성을 정의하고 해당 속성에 문자열 값 "v12.0"을 제공합니다.  
+ 위의 코드는 TargetFrameworkVersion이라는 속성을 정의하고 해당 속성에 문자열 값 "v15.0"을 제공합니다.  
   
  빌드 속성은 언제든지 다시 정의할 수 있습니다. 조건  
   
@@ -223,7 +209,7 @@ $(PropertyName)
   
     ```  
     Configuration is Debug  
-    MSBuildToolsPath is C:\Program Files\MSBuild\12.0\bin  
+    MSBuildToolsPath is C:\Program Files (x86)\Microsoft Visual Studio\2017\<Visual Studio SKU>\MSBuild\15.0\Bin  
     ```  
   
 > [!NOTE]

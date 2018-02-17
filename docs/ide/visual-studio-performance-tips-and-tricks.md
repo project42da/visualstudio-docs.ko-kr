@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: f15f9b34a19617986ca64f9b13af1b28d4c9d01a
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 3a48166490cb48870e9e6341b0cba6dfc9f668fc
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-studio-performance-tips-and-tricks"></a>Visual Studio 성능 팁과 요령
 
@@ -86,7 +86,7 @@ Visual Studio 성능 권장 사항은 드물게 발생할 수 있는 메모리 �
 
 ### <a name="managed-language-services-roslyn"></a>관리 언어 서비스(Roslyn)
 
-Roslyn 성능 고려 사항에 대한 자세한 내용은 [Performance considerations for large solutions](대규모 솔루션에 대한 성능 고려 사항)(https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions)를 참조하세요.
+.NET 컴파일러 플랫폼("Roslyn") 성능 고려 사항에 대한 자세한 내용은 [대규모 솔루션에 대한 성능 고려 사항]을 참조하세요(https://github.com/dotnet/roslyn/wiki/Performance-considerations-for-large-solutions).
 
 - **전체 솔루션 분석 사용 안 함**
 

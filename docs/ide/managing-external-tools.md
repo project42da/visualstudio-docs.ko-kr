@@ -4,31 +4,35 @@ ms.custom:
 ms.date: 11/20/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.externaltools
-helpviewer_keywords: external tools [Visual Studio]
+f1_keywords:
+- vs.externaltools
+helpviewer_keywords:
+- external tools [Visual Studio]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3e796b1e5a1773183c04409781cf6e2026bfe96e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 78a3e1ee549a42681d6f15b432d0c6bb608976fd
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="manage-external-tools"></a>외부 도구 관리
 
 **도구** 메뉴를 사용하여 Visual Studio 내에서 외부 도구를 호출할 수 있습니다. 몇 가지 기본 도구는 **도구** 메뉴에서 사용할 수 있으며, 원하는 다른 실행 파일을 추가하여 메뉴를 사용자 지정할 수 있습니다.
 
-## <a name="tools-available-on-the-visual-studio-tools-menu"></a>Visual Studio 도구 메뉴에서 사용할 수 있는 도구
+## <a name="tools-available-on-the-tools-menu"></a>도구 메뉴에서 사용할 수 있는 도구
 
 **도구** 메뉴에는 다음과 같은 몇 가지 기본 제공 명령이 포함되어 있습니다.
 
 * [Visual Studio 확장 관리](finding-and-using-visual-studio-extensions.md)를 위한  **확장 및 업데이트** 
-* [코드 조각 구성을 위한](code-snippets.md#code-snippet-manager) **코드 조각 관리자...** 
+* [코드 조각 구성을 위한](code-snippets.md) **코드 조각 관리자...** 
 * [Dotfuscator CE(Community Edition)](dotfuscator/index.md)이 [설치](dotfuscator/install.md)된 경우 실행하기 위한 **PreEmptive Protection - Dotfuscator** 
 * [메뉴 및 도구 모음 사용자 지정](how-to-customize-menus-and-toolbars-in-visual-studio.md)을 위한 **사용자 지정...** 
 * [Visual Studio IDE 및 기타 도구에 대한 다양한 옵션 설정](reference/options-dialog-box-visual-studio.md)을 위한  **옵션...** 
@@ -37,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 
 **도구** 메뉴에 표시할 외부 도구를 추가할 수 있습니다.
 
-1. **도구**, **외부 도구...**를 차례로 선택하여 **외부 도구** 대화 상자를 엽니다.
+1. **도구** > **외부 도구...**를 선택하여 **외부 도구** 대화 상자를 엽니다.
 
 1. **추가**를 클릭한 다음 정보를 입력합니다. 예를 들어 다음 항목은 현재 Visual Studio에서 열려 있는 파일의 디렉터리를 Windows 탐색기에서 엽니다.
 

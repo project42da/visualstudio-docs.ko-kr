@@ -4,26 +4,27 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - batching [MSBuild]
 - MSBuild, batching
 ms.assetid: d35c085b-27b8-49d7-b6f8-8f2f3a0eec38
-caps.latest.revision: "9"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 68977ca672aae84cd65ca169c4ca13feda6d7887
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 4411b82fc5a86e4f3eeae965fefd65e2c38d207e
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="msbuild-batching"></a>MSBuild 일괄 처리
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에는 항목 목록을 항목 메타데이터에 따라 여러 다른 범주 또는 일괄 처리로 나누고 각 일괄 처리를 사용하여 한 번에 하나의 대상 또는 작업을 실행하는 기능이 있습니다.  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 항목 목록을 항목 메타데이터에 따라 여러 다른 범주 또는 일괄 처리로 나누고 각 일괄 처리를 사용하여 한 번에 하나의 대상 또는 작업을 실행하는 기능이 있습니다.  
   
 ## <a name="task-batching"></a>작업 일괄 처리  
  작업 일괄 처리를 사용하면 항목 목록을 다른 일괄 처리로 나누고 해당 일괄 처리 각각을 별도로 작업에 전달하는 방법을 제공하여 프로젝트 파일을 간소화할 수 있습니다. 즉, 프로젝트 파일은 여러 번 실행될 수 있지만 작업 및 해당 특성을 한 번만 선언해야 합니다.  
@@ -58,7 +59,7 @@ ms.lasthandoff: 12/22/2017
  특정 일괄 처리 예제는 [작업 일괄 처리의 항목 메타데이터](../msbuild/item-metadata-in-task-batching.md)를 참조하세요.  
   
 ## <a name="target-batching"></a>대상 일괄 처리  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 대상이 실행되기 전에 대상의 입력 및 출력이 최신 상태인지를 확인합니다. 입력 및 출력이 모두 최신 상태인 경우 대상을 건너뜁니다. 대상 내의 작업이 일괄 처리를 사용하는 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 항목의 각 일괄 처리에 대한 입력 및 출력이 최신 상태인지를 확인해야 합니다. 그렇지 않으면 대상이 적중될 때마다 실행됩니다.  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 대상이 실행되기 전에 대상의 입력 및 출력이 최신 상태인지를 확인합니다. 입력 및 출력이 모두 최신 상태인 경우 대상을 건너뜁니다. 대상 내의 작업이 일괄 처리를 사용하는 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 항목의 각 일괄 처리에 대한 입력 및 출력이 최신 상태인지를 확인해야 합니다. 그렇지 않으면 대상이 적중될 때마다 실행됩니다.  
   
  다음 예제에서는 %(*ItemMetaDataName*) 표기법을 사용하는 `Outputs` 특성이 포함된 `Target` 요소를 보여줍니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 `Example` 항목 목록을 `Color` 항목 메타데이터를 기반으로 하는 일괄 처리로 나누고, 각 일괄 처리에 대한 출력 파일의 타임스탬프를 분석합니다. 일괄 처리의 출력이 최신 상태인 경우 대상이 실행됩니다. 그렇지 않으면 대상을 건너뜁니다.  
   

@@ -4,27 +4,29 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: msbuild
+helpviewer_keywords:
+- msbuild
 ms.assetid: 20dae076-733e-49c1-a2e9-b336757ae21d
-caps.latest.revision: "8"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3db59c3cb9234231a5a5fe4f881857433ab09479
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 10c327995363b2064498f88d9ec1a02a18650970
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="resolving-assemblies-at-design-time"></a>디자인 타임에 어셈블리 확인
 참조 추가 대화 상자의 .NET 탭을 통해 어셈블리에 참조를 추가할 때, 참조는 중간 참조 어셈블리를 가리킵니다. 이 어셈블리는 모든 형식 및 시그니처 정보를 포함하지만 코드를 반드시 포함하지는 않습니다. .NET 탭에는 .NET Framework의 런타임 어셈블리에 해당하는 참조 어셈블리가 표시됩니다. 또한 타사에서 사용되는 등록된 AssemblyFoldersEx 폴더의 런타임 어셈블리에 해당하는 참조 어셈블리도 표시됩니다.  
   
 ## <a name="multi-targeting"></a>멀티 타기팅  
- [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]를 사용하면 CLR(공용 언어 런타임) 버전 2.0 또는 버전 4에서 실행되는 .NET Framework의 버전을 대상으로 지정할 수 있습니다. 여기에는 .NET Framework 버전 2.0, 3.0, 3.5, 4, 4.5 및 4.5.1과 Silverlight 버전 1.0, 2.0 및 3.0이 포함됩니다. CLR 버전 2.0 또는 버전 4를 기준으로 하는 새 .NET Framework 버전이 릴리스되면 타기팅 팩을 사용하여 Framework를 설치할 수 있으며 설치된 후에는 자동으로 Visual Studio에서 대상으로 표시됩니다.  
+ [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)] CLR(공용 언어 런타임) 버전 2.0 또는 버전 4에서 실행되는 .NET Framework의 버전을 대상으로 지정할 수 있습니다. 여기에는 .NET Framework 버전 2.0, 3.0, 3.5, 4, 4.5 및 4.5.1과 Silverlight 버전 1.0, 2.0 및 3.0이 포함됩니다. CLR 버전 2.0 또는 버전 4를 기준으로 하는 새 .NET Framework 버전이 릴리스되면 타기팅 팩을 사용하여 Framework를 설치할 수 있으며 설치된 후에는 자동으로 Visual Studio에서 대상으로 표시됩니다.  
   
 ## <a name="how-type-resolution-works"></a>형식 확인 작동 방식  
  런타임에 CLR은 GAC, bin 디렉터리 및 모든 검색 경로를 확인하여 어셈블리의 형식을 확인합니다. 이 작업은 Fusion 로더에 의해 처리됩니다. 그러나 Fusion 로더에서 어떤 항목을 찾고 있는지를 어떻게 알 수 있나요? 이것은 응용 프로그램이 빌드되는 디자인 타임에 수행되는 확인에 따라 결정됩니다.  

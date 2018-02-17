@@ -4,8 +4,7 @@ ms.custom:
 ms.date: 01/25/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology:
-- vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -15,11 +14,11 @@ ms.author: jeffkl
 manager: angerlic
 ms.workload:
 - multiple
-ms.openlocfilehash: e5c12f319c8425bda8a90ace04c377b23aa76bd0
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 28027b21d3f562e3eda94dc91de16ddb38362d3c
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="how-to-use-msbuild-project-sdks"></a>방법: MSBuild 프로젝트 SDK 사용
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 15.0은 속성 및 대상을 가져오는 데 필요한 소프트웨어 개발 키트 사용을 간소화하는 “프로젝트 SDK”의 개념을 도입했습니다.

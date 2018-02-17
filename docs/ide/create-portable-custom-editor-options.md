@@ -12,11 +12,11 @@ author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.technology: vs-ide-general
-ms.openlocfilehash: 65eafeab083b85fb7e872adabf97f5497cc62291
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 8be85bc578b31b087c77da1444ddd9950a6bc0ed
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig를 사용하여 휴대용, 사용자 지정 편집기 설정 만들기
 
@@ -106,7 +106,7 @@ EditorConfig 파일은 위쪽에서 아래쪽으로 읽으며 가장 가까운 E
 
 ## <a name="editing-editorconfig-files"></a>EditorConfig 파일 편집
 
-Visual Studio는 .editorconfig 파일을 편집할 수 있는 몇 가지 IntelliSense를 제공합니다.
+Visual Studio는 IntelliSense 완성 목록을 제공하여 .editorconfig 파일을 편집하도록 도와 줍니다.
 
 ![.editorconfig 파일의 IntelliSense](media/editorconfig-intellisense-no-extension.png)
 

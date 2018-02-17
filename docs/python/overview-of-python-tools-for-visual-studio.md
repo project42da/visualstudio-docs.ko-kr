@@ -7,21 +7,21 @@ ms.reviewer:
 ms.suite: 
 ms.technology:
 - devlang-python
-ms.devlang: python
+dev_langs:
+- python
 ms.tgt_pltfrm: 
 ms.topic: hero-article
-caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4d2033e8912d6010adc8e83108a8b9ece1aa4b0e
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 7c81cd0308dc40049e4d067369e3dcacc1f839a3
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio에서 Python 작업(Windows)
 
@@ -70,7 +70,7 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 
 ## <a name="features-matrix"></a>기능 매트릭스
 
-[설치 가이드](installing-python-support-in-visual-studio.md)에 설명된 대로 Visual Studio의 다음 버전(edition)에 Python 지원을 설치할 수 있습니다.
+[설치 가이드](installing-python-support-in-visual-studio.md)에 설명된 대로 Visual Studio의 다음 버전(edition)에 Python 기능을 설치할 수 있습니다.
 
 - [Visual Studio 2017(모든 버전)](https://www.visualstudio.com/vs/)
 - [Visual Studio 2015(모든 버전)] (https://www.visualstudio.com/ko-kr/downloads/visual-studio-2015-downloads-vs)
@@ -81,7 +81,7 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 - Visual Studio 2012(Pro 버전 이상)
 - Visual Studio 2010 SP1(Pro 버전 이상, .NET 4.5 필요)
 
-Visual Studio 버전(version 및 edition)에서 지원되는 기능:
+기능이 Visual Studio의 최신 버전에 대해서만 완전하게 지원 및 유지 관리됩니다. 기능이 이전 버전에서 사용할 수 있지만 적극적으로 유지 관리되지 않습니다.
 
 | Python 지원 | 2017 | 2015 | 2013 Comm | 2013 Desktop | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|
@@ -166,6 +166,8 @@ Visual Studio 버전(version 및 edition)에서 지원되는 기능:
 | 원격 디버깅(Windows, Mac OS X, Linux) | &#10004; | &#10004; | &#10004; | &#10004; | &#10007; | &#10004; | &#10004; | &#10004; |
 | 디버그 대화형 창 | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; | &#10004; |
 <br/>
+
+<a name="matrix-profiling"></a>
 
 | 프로파일링 | 2017 | 2015 | 2013 Comm | 2013 Desktop | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|

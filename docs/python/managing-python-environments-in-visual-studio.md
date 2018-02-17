@@ -1,27 +1,27 @@
 ---
 title: "Visual Studio에서 Python 환경 관리 | Microsoft Docs"
-description: "Visual Studio에서 [Python 환경] 창을 사용하여 전역 및 가상 환경을 관리하며, Python 인터프리터 설치, 패키지 설치, 검색 경로 설정, Visual Studio 프로젝트의 환경 관리를 위한 사용자 지정 환경을 설정하는 방법입니다."
+description: "Visual Studio에서 Python 환경 창을 사용하여 전역 및 가상 환경을 관리하며, Python 인터프리터 설치, 패키지 설치, 검색 경로 설정, Visual Studio 프로젝트의 환경 관리를 위한 사용자 지정 환경을 설정하는 방법입니다."
 ms.custom: 
 ms.date: 01/16/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
 - devlang-python
-ms.devlang: python
+dev_langs:
+- python
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: 
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0b0195770bde2906ac34f0f4b8a5faf684130899
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 40f901c65872fe593457883c36f0d60bf7e2fd8a
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="python-environments"></a>Python 환경
 
@@ -70,13 +70,13 @@ Python 환경에 대한 새로운 검색 양식을 제공하려는 개발자인 
 
 [Python 환경] 창을 열려면 **보기 > 다른 창 > Python 환경** 메뉴 명령을 선택하거나 솔루션 탐색기에서 프로젝트에 대한 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고 **모든 Python 환경 보기**를 선택합니다.
 
-    ![View All Environments command in Solution Explorer](media/environments-view-all.png)
+![솔루션 탐색기에서 모든 환경 명령 보기](media/environments-view-all.png)
 
 두 경우 모두 Python 환경 창은 솔루션 탐색기의 형제 탭으로 나타납니다.
 
 ![Python 환경 창](media/environments-default-view.png)
 
-위의 예제에서는 Python 3.4(32비트 CPython)가 IronPython 2.7 32비트 및 64비트 버전과 함께 설치되어 있습니다. 굵게 표시된 기본 환경은 Python 3.4이며 모든 새로운 프로젝트에 사용됩니다. 목록에 환경이 표시되지 않는 경우 Visual Studio 2015 또는 이전 버전에 Visual Studio용 Python 도구를 설치했으나 Python 인터프리터를 설치하지 않은 것입니다(위의 [Python 인터프리터 선택 및 설치](#selecting-and-installing-python-interpreters) 참조). **+ 사용자 지정...** 명령을 사용하면 [기존 인터프리터의 환경을 만들](#create-an-environment-for-an-existing-interpreter) 수 있습니다.
+위의 예제에서는 Python 3.4(32비트 CPython)가 IronPython 2.7 32비트 및 64비트 버전과 함께 설치되어 있습니다. 굵게 표시된 기본 환경은 Python 3.4이며 모든 새로운 프로젝트에 사용됩니다. 목록에 환경이 표시되지 않는 경우 Visual Studio 2015 또는 이전 버전에 Visual Studio용 Python 도구를 설치했으나 Python 인터프리터를 설치하지 않은 것입니다(위의 [Python 인터프리터 선택 및 설치](#selecting-and-installing-python-interpreters) 참조). **+ 사용자 지정...** 명령을 사용하면 [기존 인터프리터의 환경을 만들](#creating-an-environment-for-an-existing-interpreter) 수 있습니다.
 
 나열된 각 환경의 오른쪽에는 해당 환경에 대한 대화형 창을 여는 컨트롤이 있습니다. 해당 환경의 IntelliSense 데이터베이스를 새로 고치는 다른 컨트롤이 나타날 수 있습니다.
 

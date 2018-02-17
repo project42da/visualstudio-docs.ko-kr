@@ -4,24 +4,26 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: MSBuild, concepts
+helpviewer_keywords:
+- MSBuild, concepts
 ms.assetid: 083b8ba3-e4ad-45af-bb5d-3bc81d406131
-caps.latest.revision: "13"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0a428fa303fc3f4ad60599155b0663370f823210
-ms.sourcegitcommit: fb73b56d45ebc0386cd4de1a706ba9e20c59daf1
+ms.workload:
+- multiple
+ms.openlocfilehash: d0b0283899980fdc9748709d0b3fef049e233f45
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/03/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="msbuild-concepts"></a>MSBuild 개념
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 빌드 플랫폼이 소프트웨어를 빌드하는 방법을 제어하는 데 사용할 수 있는 기본 XML 스키마를 제공합니다. 빌드의 구성 요소 및 이러한 구성 요소를 빌드할 방법을 지정하려면 MSBuild의 네 가지 부분(속성, 항목, 작업, 대상)을 사용합니다.  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 빌드 플랫폼이 소프트웨어를 빌드하는 방법을 제어하는 데 사용할 수 있는 기본 XML 스키마를 제공합니다. 빌드의 구성 요소 및 이러한 구성 요소를 빌드할 방법을 지정하려면 MSBuild의 네 가지 부분(속성, 항목, 작업, 대상)을 사용합니다.  
   
 ## <a name="related-topics"></a>관련 항목  
   

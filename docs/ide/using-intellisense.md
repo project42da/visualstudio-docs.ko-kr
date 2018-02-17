@@ -1,40 +1,31 @@
 ---
-title: "IntelliSense 사용 | Microsoft Docs"
+title: Visual Studio IntelliSense | Microsoft Docs
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
 - vc.tools.intellisense
 helpviewer_keywords:
-- IntelliSense, Complete Word
-- IntelliSense, completion mode
-- parameter information
-- IntelliSense, List Members
-- Quick Info
-- Parameter Info
+- Quick info
+- Parameter info
+- Complete word
+- List members
 - IntelliSense [Visual Studio]
-- IntelliSense, suggestion mode
-- IntelliSense, Parameter Info
-- IntelliSense, customizing
-- Complete Word
-- IntelliSense
-- List Members
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 42e34f5933d06bf9021ff8e0cab5b12f316ef52e
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 88ee47502d0aa15e391155cae918c8e579e72194
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
-# <a name="using-intellisense"></a>IntelliSense 사용
+# <a name="using-intellisense-in-visual-studio"></a>Visual Studio에서 IntelliSense 사용
 
 IntelliSense는 멤버 목록, 매개 변수 정보, 요약 정보 및 단어 자동 완성 등 여러 기능을 위한 제네릭 형식입니다. 이러한 기능을 사용하면 사용 중인 코드에 대한 자세한 정보를 보고, 입력하는 매개 변수를 계속 추적하고, 단 몇 번의 키 입력으로 속성과 메서드에 대한 호출을 추가할 수 있습니다.
 
@@ -86,7 +77,7 @@ XML 문서 주석을 사용하여 함수와 매개 변수에 주석을 달 경�
 
 ## <a name="complete-word"></a>단어 자동 완성
 
-단어 자동 완성은 항이 인식될 수 있을 정도의 문자를 사용자가 입력한 후에 변수, 명령 또는 함수 이름의 나머지 부분이 자동으로 입력되는 기능입니다. **편집** > **IntelliSense** > **단어 자동 완성**을 선택하거나, **Ctrl** + **스페이스**를 누르거나, 편집기 도구 모음에서 **단어 자동 완성** 단추를 선택하여 단어 자동 완성을 호출할 수 있습니다.
+단어 자동 완성은 항이 인식될 수 있을 정도의 문자를 사용자가 입력한 후에 변수, 명령 또는 함수 이름의 나머지 부분이 자동으로 입력되는 기능입니다. **편집** > **IntelliSense** > **단어 자동 완성**을 선택하거나, **Ctrl**+**스페이스**를 누르거나, 편집기 도구 모음에서 **단어 자동 완성** 단추를 선택하여 단어 자동 완성을 호출할 수 있습니다.
 
 ## <a name="intellisense-options"></a>IntelliSense 옵션
 
@@ -110,7 +101,7 @@ MessageBox( hWnd, "String literal|")
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Basic 관련 IntelliSense](../ide/visual-basic-specific-intellisense.md)  
+[Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md)  
 [C# IntelliSense](../ide/visual-csharp-intellisense.md)  
 [JavaScript IntelliSense](../ide/javascript-intellisense.md)  
 [코드 작성 및 리팩터링(C++)](/cpp/ide/writing-and-refactoring-code-cpp)  

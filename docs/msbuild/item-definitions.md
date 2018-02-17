@@ -4,21 +4,23 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology: msbuild
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: msbuild, item definitions
+helpviewer_keywords:
+- msbuild, item definitions
 ms.assetid: 8e3dc223-f9e5-4974-aa0e-5dc7967419cb
-caps.latest.revision: "21"
-author: kempb
-ms.author: kempb
+caps.latest.revision: 
+author: Mikejo5000
+ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a7df40a697bb294e369964fb6a4252b884794aea
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 080ed4c1076bd85579eb3d7b01404c677dfafb37
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="item-definitions"></a>항목 정의
 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 2.0에서는 [ItemGroup](../msbuild/itemgroup-element-msbuild.md) 요소를 사용하여 프로젝트 파일에서 항목의 정적 선언을 수행할 수 있습니다. 그러나 메타데이터는 모든 항목에 대해 동일하더라도 항목 수준에만 추가할 수 있습니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 3.5부터 [ItemDefinitionGroup](../msbuild/itemdefinitiongroup-element-msbuild.md)이라는 프로젝트 요소가 이 제한 사항을 해결합니다. *ItemDefinitionGroup*을 사용하면 명명된 항목 형식의 모든 항목에 기본 메타데이터 값을 추가하는 항목 정의 집합을 정의할 수 있습니다.  

@@ -6,15 +6,18 @@ ms.reviewer:
 ms.suite: 
 ms.topic: article
 author: gewarren
+f1_keywords:
+- vs.startpage
+- VS.StartPage.HowDoI
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bde32fc86610fa451aa01659401362fe4207f5c
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 242de63001f7df364dacbef3f3b57446ba1e724f
+ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/09/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE 개요
 
@@ -44,7 +47,7 @@ Visual Studio는 Microsoft Azure에서 구동하는 클라우드 지원 응용 �
 
 - [Azure 저장소](http://azure.microsoft.com/documentation/services/storage/)
 
-[HockeyApp](https://www.visualstudio.com/hockey-app/)을 통해 베타 버전을 배포하고, 실시간 크래시 보고서를 수집하고, 실제 사용자의 의견을 얻으세요. 또한 Office 365 REST API를 자신의 앱에 통합하여 클라우드에 저장된 데이터에 연결할 수 있습니다. 자세한 내용은 [이 GitHub 샘플](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)을 참조하세요.
+[HockeyApp](https://www.visualstudio.com/hockey-app/)을 통해 베타 버전을 배포하고, 실시간 충돌 보고서를 수집하고, 실제 사용자의 의견을 얻으세요. 또한 Office 365 REST API를 자신의 앱에 통합하여 클라우드에 저장된 데이터에 연결할 수 있습니다. 자세한 내용은 [이 GitHub 샘플](https://github.com/OfficeDev/?utf8=%E2%9C%93&query=o365)을 참조하세요.
 
 [Application Insights](https://marketplace.visualstudio.com/items?itemName=VisualStudioOnlineApplicationInsights.application-insights)는 앱 및 웹 서비스의 품질 문제를 확인 및 진단하는 데 도움이 됩니다. Application Insights를 통해 사용자가 실제로 앱을 통해 무엇을 하는지 이해하고 사용자 환경을 최적화할 수도 있습니다.
 
@@ -263,7 +266,7 @@ Visual Studio의 **SQL Server 개체 탐색기**는 SQL Server Management Studio
 
 요구되는 적절한 기능이 Visual Studio에 없으면 추가할 수 있습니다! 워크플로와 스타일에 따라 IDE를 개인 설정하고, Visual Studio와 아직 통합되지 않은 외부 도구에 대한 지원을 추가하고, 기존 기능을 수정하여 생산성을 높일 수 있습니다. 최신 버전의 Visual Studio 확장성 도구(VS SDK)를 찾으려면 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)를 참조하세요.
 
-.NET 컴파일러 플랫폼(Roslyn)을 사용하여 사용자 고유의 코드 분석기 및 코드 생성기를 작성할 수 있습니다. [Roslyn](https://github.com/dotnet/Roslyn)(영문)에서 필요한 모든 항목을 찾으세요.
+.NET 컴파일러 플랫폼("Roslyn")을 사용하여 사용자 고유의 코드 분석기 및 코드 생성기를 작성할 수 있습니다. [Roslyn](https://github.com/dotnet/Roslyn)(영문)에서 필요한 모든 항목을 찾으세요.
 
 Microsoft 개발자와 개발 커뮤니티에서 만든 [기존 Visual Studio용 확장](https://marketplace.visualstudio.com/vs)을 찾아 보세요.
 

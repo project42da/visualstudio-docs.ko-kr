@@ -7,16 +7,18 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: automated testing, lab management, test lab
+helpviewer_keywords:
+- automated testing, lab management, test lab
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 4dae17012ecf66258d65ff3c200a0dbe8e4c9429
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 25f1007458b691b97f0ea852a1bf0e7325d79d8a
+ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/12/2018
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>자동화된 테스트를 위해 Lab Management 대신 Build 및 Release Management 사용
 
@@ -26,7 +28,7 @@ ms.lasthandoff: 01/09/2018
 
 * [SCVMM 환경의 셀프 서비스 관리](#managescvmm)
 
-Build 및 Release Management는 네트워크 격리 SCVMM 환경의 셀프 서비스 만들기를 지원하지 않고 이후에도 이 지원을 제공할 계획이 없습니다. 그러나 몇 가지 [제안된 대체 방법](#isolatedenvir)이 있습니다.
+* [네트워크 격리 환경 만들기](#isolatedenvir)
 
 <a name="bdtautomation"></a>
 ## <a name="build-deploy-test-automation"></a>빌드-배포-테스트 자동화
@@ -74,14 +76,15 @@ Lab Center의 셀프 서비스 프로비전 기능에는 두 가지 목표가 �
 | 환경 검사점을 만들거나 환경을 새로운 검사점으로 복원합니다. | 환경 뷰어에서 랩 환경을 엽니다. 검사점을 만들거나 이전 검사점으로 복원하는 옵션을 선택합니다. | SCVMM 관리 콘솔을 사용하여 컴퓨터에서 이러한 작업을 수행합니다. 또는 더 큰 자동화의 일부로 이러한 단계를 수행하려면 [SCVMM 통합 확장](https://marketplace.visualstudio.com/items?itemname=ms-vscs-rm.scvmmapp)의 검사점 작업을 환경의 일부로 릴리스 정의에 포함합니다. |
 
 <a name="isolatedenvir"></a>
-## <a name="self-service-creation-of-network-isolated-environments"></a>네트워크 격리 환경의 셀프 서비스 만들기
+## <a name="creation-of-network-isolated-environments"></a>네트워크 격리 환경 만들기
 
 네트워크 격리 랩 환경은 네트워크 충돌 없이 안전하게 복제할 수 있는 SCVMM 가상 컴퓨터 그룹입니다. 이 작업은 네트워크 인터페이스 집합을 사용하여 개인 네트워크에서 가상 컴퓨터를 구성하고 또 다른 네트워크 인터페이스 카드 집합을 사용하여 공용 네트워크에서 가상 컴퓨터를 구성한 일련의 명령을 사용하여 MTM에서 수행되었습니다.
 
-[Microsoft Azure](https://azure.microsoft.com/) 및 [Microsoft Azure Stack](https://azure.microsoft.com/overview/azure-stack/)과 같은 다양한 공용 및 사설 클라우드 관리 시스템이 발전하면서 사용자가 직접 비슷한 기능을 위해 클라우드 관리 도구를 더 많이 사용할 수 있습니다. Build 및 Release Management에는 이 목표를 달성할 수 있는 방법이 없습니다.
+그러나 VSTS 및 TFS를 SCVMM 빌드 및 배포 작업과 함께 사용하여 SCVMM 환경을 관리하고 격리된 가상 네트워크를 프로비전하고 빌드-배포-테스트 시나리오를 구현할 수 있습니다. 예를 들어 이 작업을 사용하여 다음을 수행할 수 있습니다.
 
-네트워크 격리가 필요한 경우 다음 대체 방법을 고려하는 것이 좋습니다.
+* 검사점 만들기, 복원 및 삭제
+* 템플릿을 사용하여 새 가상 머신 만들기
+* 가상 머신 시작 및 중지
+* SCVMM에 대한 사용자 지정 PowerShell 스크립트 실행
 
-* 네트워크 격리의 한 가지 목적은 여러 복제본의 구성을 간소화하는 것이었습니다. 각 복제본이 원본의 정확한 복제본이므로 컴퓨터 이름 및 구성 설정이 있는 그대로 보존되고, 이에 따라 새 환경을 쉽게 설정할 수 있습니다. 그러나 응용 프로그램이 최종적으로 배포되는 방법이 동일하지 않기 때문에 수명 주기에서 나중에 동일한 이점으로 인해 문제가 발생합니다. **대신에** 프로덕션을 설정하는 것과 같은 방법으로 새 환경을 설정해 보고 네트워크 격리 사용을 피하세요.
-
-* 테스트에 필요한 경우 [Microsoft Azure](https://azure.microsoft.com/)와 같은 공용 클라우드 인프라를 사용합니다. 간편하게 [Azure Marketplace](https://azure.microsoft.com/marketplace/) 또는 [Azure 빠른 시작 템플릿](https://azure.microsoft.com/documentation/templates/)의 [Azure Resource Manager 템플릿](https://azure.microsoft.com/documentation/templates/)을 사용하여 개인 네트워크를 통해 연결되고 프록시 또는 ‘jumpbox’를 사용하여 공용 네트워크에만 표시되는 가상 컴퓨터 그룹을 설정할 수 있습니다.
+자세한 내용은 [빌드-배포-테스트 시나리오에 대한 가장 네트워크 격리 환경 만들기](/vsts/build-release/actions/virtual-networks/create-virtual-network)를 참조하세요.
