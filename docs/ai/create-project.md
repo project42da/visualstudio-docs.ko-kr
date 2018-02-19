@@ -1,6 +1,8 @@
+---
+---
 # <a name="create-an-ai-project-from-a-template-in-visual-studio"></a>Visual Studio의 템플릿에서 AI 프로젝트 만들기
 
-[AI에 Visual Studio Tools를 설치](installation.md)하면 다양한 템플릿을 사용하여 새 Python 프로젝트를 쉽게 만들 수 있습니다.
+[AI에 Visual Studio Tools를 설치](installation.md)하면 다양한 템플릿을 사용하여 새 AI 프로젝트를 쉽게 만들 수 있습니다.
 
 1. Visual Studio를 실행합니다.
 
