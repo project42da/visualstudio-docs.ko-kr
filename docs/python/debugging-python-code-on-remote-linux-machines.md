@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 11e48a67540ff7df665cc044557751be4b1c3be0
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 765d42de00c5fa716cd1445301136d8f7a39c2ec
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux에서 Python 코드 원격 디버깅
 
@@ -29,9 +29,9 @@ Visual Studio는 Windows 컴퓨터에서 Python 응용 프로그램을 로컬 �
 
 ptvsd를 사용하는 경우 디버그되는 Python 코드는 Visual Studio에서 연결할 수 있는 디버그 서버를 호스팅합니다. 이 호스팅을 사용하려면 서버를 가져오고 사용할 수 있도록 코드를 약간 수정해야 하며, TCP 연결을 허용하기 위해 원격 컴퓨터에 네트워크 또는 방화벽 구성이 필요할 수 있습니다.
 
-원격 디버깅에 대한 소개는 Visual Studio 2015 및 2017 둘 다에 적용되는 [자세히 알아보기: 플랫폼 간 원격 디버깅](https://youtu.be/y1Qq7BrV6Cc)(youtube.com, 6분 22초)을 참조하세요.
-
-> [!VIDEO https://www.youtube.com/embed/y1Qq7BrV6Cc]
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | 원격 디버깅에 대한 소개는 Visual Studio 2015 및 2017 둘 다에 적용되는 [자세히 알아보기: 플랫폼 간 원격 디버깅](https://youtu.be/y1Qq7BrV6Cc)(youtube.com, 6분 22초)을 참조하세요. |
 
 ## <a name="setting-up-a-linux-computer"></a>Linux 컴퓨터 설정
 

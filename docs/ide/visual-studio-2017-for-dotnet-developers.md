@@ -11,18 +11,18 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: a834f9781ff51779b2216bd7de9dd3e449c9360a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 053bd6077fa98142cd74eae58ce3df949291c326
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 개발자용 Visual Studio 2017
 
 ## <a name="smart-code-editor"></a>스마트 코드 편집기
 
-[설명서: IntelliSense 사용](using-intellisense.md)  
-[설명서: 스마트 편집기 기능](writing-code-in-the-code-and-text-editor.md)
+- [설명서: IntelliSense 사용](using-intellisense.md)
+- [설명서: 스마트 편집기 기능](writing-code-in-the-code-and-text-editor.md)
 
 Visual Studio는 .NET("Roslyn") 컴파일러를 통해 코드를 심층적으로 이해하여 구문 색 지정, 기능 코드 완성, 잘못 입력된 변수의 맞춤법 검사, 가져오지 않은 형식 확인, 개요, 구조 시각화 도우미 [CodeLens](find-code-changes-and-other-history-with-codelens.md), 호출 계층 구조, 마우스를 올려 놓을 수 있는 빠른 정보, 매개변수 도움말은 물론, 리팩터링, 빠른 작업 적용 및 코드 생성 도구 등의 스마트 편집 기능을 제공합니다.
 
@@ -50,14 +50,14 @@ Visual Studio에는 라이브 코드 진단 기능이 있어 오류와 잠재적
 
 [설명서: Visual Studio에서 유닛 테스트](../test/improve-code-quality.md)
 
-.NET Framework, .NET Standard 또는 .NET Core를 타게팅하는 응용 프로그램에 대해 MSTest, NUnit 또는 XUnit 테스팅 프레임워크에 기반하여 단위 테스트를 실행하고 디버깅합니다. *테스트 탐색기*에서 테스트를 탐색하고 검토하거나 *실시간 유닛 테스트*(Enterprise SKU만 해당)으로 편집기 내부에서 코드 변화가 단위 테스트에 어떻게 영향을 미치는지 즉시 확인합니다. 
+.NET Framework, .NET Standard 또는 .NET Core를 타게팅하는 응용 프로그램에 대해 MSTest, NUnit 또는 XUnit 테스팅 프레임워크에 기반하여 단위 테스트를 실행하고 디버깅합니다. *테스트 탐색기*에서 테스트를 탐색하고 검토하거나 *실시간 유닛 테스트*(Enterprise SKU만 해당)으로 편집기 내부에서 코드 변화가 단위 테스트에 어떻게 영향을 미치는지 즉시 확인합니다.
 
 ![Visual Studio의 실시간 유닛 테스트](../ide/media/VSIDE_Productivity_LiveUnitTesting.png "VSIDE_Productivity_LiveUnitTesting")
 
 ## <a name="code-consistency-and-style"></a>코드 일관성 및 스타일
 
-[설명서: 휴대용 사용자 지정 편집기 옵션](create-portable-custom-editor-options.md)  
-[설명서: .NET에 대한 EditorConfig 코드 스타일 설정](editorconfig-code-style-settings-reference.md)
+- [설명서: 휴대용 사용자 지정 편집기 옵션](create-portable-custom-editor-options.md)
+- [설명서: .NET에 대한 EditorConfig 코드 스타일 설정](editorconfig-code-style-settings-reference.md)
 
 Visual Studio에서는 코딩 규칙 구성을 지원하고 코딩 스타일 위반을 감지하며 **Ctrl+.** 바로 가기를 사용하여 스타일 문제를 해결하기 위한 빠른 해결을 제공합니다. *EditorConfig*를 사용하여 프로젝트 및 파일 수준에서 값 재지정을 허용하여 리포지토리 전반에서 팀의 서식 지정, 명명 및 코드 스타일 규칙을 구성하고 강제 적용합니다.
 
@@ -107,8 +107,6 @@ Visual Studio에는 필요에 따라 설치하거나 만들 수 있는 확장의
 | **Shift+F12** | 모든 참조 찾기 | 모든 기호 또는 리터럴 참조 보기 |
 | **Ctrl+.** (또는 C# 프로필에서 **Alt+Enter**) | 빠른 작업 및 리팩터링 | 커서 위치 또는 코드 선택에서 사용 가능한 코드 해결, 코드 생성 작업, 리팩터링, 또는 기타 빠른 작업 확인 |
 | **Ctrl**+**E**,**V** | 중복된 줄 | 커서가 있는 코드 줄 복제(**Visual Studio 2017 버전 15.6 미리 보기 2** 이상에서 사용 가능) |
-| **Ctrl**+**W** | 선택 영역 확장 | 현재 선택 영역을 하나의 구조 단위로 확장(**Visual Studio 2017 버전 15.5**에서 사용 가능) |
-| **Ctrl**+**Shift**+**W** | 선택 영역 축소 | 현재 선택 영역을 하나의 구조 단위로 축소(줄이기)(**Visual Studio 2017 버전 15.5**에서 사용 가능) |
 | **Ctrl+Q** | 빠른 실행 | 모든 Visual Studio 설정 검색 |
 | **F5** | 디버깅 시작 | 응용 프로그램 디버깅 시작 |
 | **Ctrl+F5** | 디버깅하지 않고 실행 | 디버깅하지 않고 응용 프로그램을 로컬에서 실행 |

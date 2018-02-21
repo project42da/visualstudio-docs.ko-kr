@@ -11,18 +11,19 @@ helpviewer_keywords:
 - code access security, coding errors
 - security [.NET Framework], about security
 ms.assetid: 318c34ce-f643-468c-83a1-843196f5d845
-caps.latest.revision: "20"
-author: kempb
-ms.author: kempb
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 995ac17cd99c395dcf1c69f0d05e1b273ac72f1d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c9d546d4020cb9a8e73efdea77fdb85d77d6146d
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="security-in-visual-studio"></a>Visual Studio의 보안
+
 디자인에서 배포에 이르기까지 응용 프로그램을 개발하는 모든 과정에 보안을 고려해야 합니다. Visual Studio를 최대한 안전하게 실행하여 시작합니다. [사용자 권한](../ide/user-permissions-and-visual-studio.md)을 참조하세요.  
   
  안전한 응용 프로그램을 효과적으로 개발하려면 보안 개념 및 개발할 플랫폼의 보안 기능에 대한 기본적인 내용과 보안 코딩 기술을 이해하고 있어야 합니다.  

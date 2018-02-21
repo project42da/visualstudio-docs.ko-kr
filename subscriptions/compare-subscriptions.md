@@ -9,11 +9,11 @@ Description: Compare features and benefits of Visual Studio standard and cloud s
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 0f820a0ae85bf4661f2c8a3ce244469b95c9a136
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 72492331ed44c55da243960049f1e56d2a3e52f8
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="compare-visual-studio-subscription-options"></a>Visual Studio 구독 옵션 비교
 
@@ -39,10 +39,10 @@ Visual Studio 구독은 Windows, iOS, Android 및 Linux 등을 비롯한 기본 
 
 **프로그램** – 표준 및 클라우드 구독 외에도 Microsoft는 다양하고 특별한 프로그램을 통해 구독을 제공합니다.
 
-- [Imagine](https://imagine.microsoft.com/en-us/about) - 학생을 위해 전문가 수준의 개발자 도구 및 소프트웨어를 무료로 제공합니다. 게임, 앱 및 웹 사이트를 만드는 데 필요한 모든 것이 포함됩니다.
+- [Imagine](https://imagine.microsoft.com/about) - 학생을 위해 전문가 수준의 개발자 도구 및 소프트웨어를 무료로 제공합니다. 게임, 앱 및 웹 사이트를 만드는 데 필요한 모든 것이 포함됩니다.
 - [BizSpark](https://bizspark.microsoft.com/About/Offers) - 스타트업을 위한 무료 제품 및 서비스입니다.  BizSpark 회원은 Azure, Windows, Visual Studio, Office 및 SQL Server를 포함한 모든 Microsoft 개발 및 테스트 소프트웨어에 무료로 액세스할 수 있습니다. 
-- [MPN(Microsoft 파트너 네트워크)](https://partner.microsoft.com/en-us) – MPN에서의 사용자 수준에 따라 최대 10개의 엔터프라이즈 구독을 받을 수 있습니다. 
-- [Microsoft 공인 교육 담당자](https://www.microsoft.com/en-us/learning/mct-certification.aspx) - 더 심도있는 기술적 전문 지식과 교육 스킬을 개발하는 데 도움이 되는 리소스에 대한 독점 액세스를 제공하기 위해 특별히 마련되었습니다.
+- [MPN(Microsoft 파트너 네트워크)](https://partner.microsoft.com/) – MPN에서의 사용자 수준에 따라 최대 10개의 엔터프라이즈 구독을 받을 수 있습니다. 
+- [Microsoft 공인 교육 담당자](https://www.microsoft.com/learning/mct-certification.aspx) - 더 심도있는 기술적 전문 지식과 교육 스킬을 개발하는 데 도움이 되는 리소스에 대한 독점 액세스를 제공하기 위해 특별히 마련되었습니다. MCT 소프트웨어 및 서비스와 MCT 개발자 소프트웨어 및 서비스 구독의 경우, 구독과 함께 제공되는 교육용 사용 권한에 대한 자세한 내용은 [Microsoft 공인 교육 담당자 웹 사이트](https://www.microsoft.com/learning/mct-certification.aspx#item-ID0EFAAAAACA)를 참조하세요. 
 
 ## <a name="visual-studio-licensing"></a>Visual Studio 라이선스
 Visual Studio 구독에서는 사용자별로 라이선스가 부여됩니다. 한 사람이 여러 대의 장치에서 소프트웨어를 사용하여 자신의 프로그램을 설계, 개발, 테스트 또는 데모를 수행할 수 있습니다. 또한 Visual Studio 구독을 통해 사용이 허가된 사용자는 자신의 프로그램과 관련된 문제를 진단하기 위해 소프트웨어를 평가하고 고객 환경을 시뮬레이션할 수 있습니다.
@@ -62,4 +62,4 @@ Visual Studio 구독은 개별적으로만 제공되며, “팀” 구독이나 
 
 [Visual Studio IDE 기능 비교](https://www.visualstudio.com/vs/compare/)
 
-MCT 소프트웨어 및 서비스와 MCT 개발자 소프트웨어 및 서비스 구독의 경우, 구독과 함께 제공되는 교육용 사용 권한에 대한 자세한 내용은 [Microsoft 공인 교육 담당자 웹 사이트](https://www.microsoft.com/learning/en-us/mct-certification.aspx#item-ID0EFAAAAACA)를 참조하세요.  
+ 

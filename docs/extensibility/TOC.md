@@ -189,7 +189,7 @@
 ## [방법: Visual Studio 확장에 대해 규칙 기반 UI 컨텍스트 사용](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md)
 ## [방법: 확장 성능 진단](how-to-diagnose-extension-performance.md)
 ## [VSPackage 문제 해결](troubleshooting-vspackages.md)
-# [셸(통합 또는 격리)](shell/)
+# [셸(통합 또는 격리)](https://vspartner.com/pages/vsshells)
 # [Visual Studio 확장 전달](shipping-visual-studio-extensions.md)
 ## [VSIX 프로젝트 템플릿](vsix-project-template.md)
 ## [VSIX 프로젝트 템플릿 시작](getting-started-with-the-vsix-project-template.md)
