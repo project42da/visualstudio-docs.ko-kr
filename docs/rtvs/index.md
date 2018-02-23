@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 762b56336fa790d57ffa38510aa319e744b5959c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7e5fd1c6f2e2d33fe3841923f1b25728ad002f6e
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="working-with-r-in-visual-studio"></a>Visual Studio에서 R 작업
 
@@ -52,9 +52,9 @@ Visual Studio에서 R을 사용해 보려면
 
 [질문과 대답](faq.md)을 참조하세요.
 
-또한 다음 비디오에서는 R Tools 기능을 간단히(5분 48초 분량) 검토합니다.
-
-> [!VIDEO https://www.youtube.com/embed/RcSDEfMgUvU]
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Visual Studio용 R 도구(12m 36s)의 개요에 대한 [비디오 보기(youtube.com)](https://www.youtube.com/watch?v=dll3IS1bfWQ). 또한 [더 많은 R 도구 비디오](https://www.youtube.com/results?search_query=R+Tools+for+visual+studio)를 참조합니다. |
 
 ## <a name="send-us-your-feedback"></a>피드백을 보내주세요.
 
