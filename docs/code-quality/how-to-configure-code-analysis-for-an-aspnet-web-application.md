@@ -15,17 +15,15 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - aspnet
-ms.openlocfilehash: 3d8d9b544b8cb4489ebfdfda8c6a237cb73c118f
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: 0f2aaf85128bd34f4e80a7b29763506b17d77911
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>방법: ASP.NET 웹 응용 프로그램에 대한 코드 분석 구성
 
 Visual Studio에서 코드 분석의 목록에서 선택할 수 있습니다 *규칙 집합* 에 적용할 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램입니다. 기본 규칙 집합은 Microsoft 최소 권장 규칙입니다. 웹 사이트에 적용 되도록 설정 하는 또 다른 규칙을 선택할 수 있습니다.
-
-## <a name="to-configure-a-rule-set-for-an-aspnet-page-framework-project"></a>ASP.NET 페이지 프레임워크 프로젝트에 대한 규칙 집합을 구성하려면
 
 1. 웹 사이트를 선택 **솔루션 탐색기**합니다.
 
