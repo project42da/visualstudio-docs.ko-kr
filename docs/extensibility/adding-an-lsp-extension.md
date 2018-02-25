@@ -15,11 +15,11 @@ ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5124547737405af8309161df90356f607909c0fa
-ms.sourcegitcommit: 06cdc1651aa7f45e03d260080da5a623d6258661
+ms.openlocfilehash: ea93ddee9c47f80322db2403aeecc0fb7dddb209
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="adding-a-language-server-protocol-extension"></a>서버 프로토콜 언어 확장 추가
 
@@ -136,7 +136,7 @@ LSP 언어에 대 한 텍스트 색 지정을 제공 하는 방법에 대 한 �
 
 1. 내부 확장 프로그램 "문법" 라는 폴더를 만듭니다 (또는 원하는 수)입니다.
 
-2. "문법" 폴더에 사용자 지정 색 지정을 제공 하는 원하는 *.tmlanguage 또는 *.tmtheme 파일을 포함 합니다.
+2. "문법" 폴더 안에 *.tmlanguage, *.plist, *.tmtheme, 또는 사용자 지정 색 지정을 제공 하는 원하는 *.json 파일을 포함 합니다.
 
 3. 선택한 파일을 마우스 오른쪽 단추로 클릭 **속성**합니다. 빌드 작업을 **콘텐츠** 및 **VSIX에 포함** 속성을 true로 합니다.
 
