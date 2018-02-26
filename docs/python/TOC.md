@@ -1,5 +1,6 @@
 # [개요](overview-of-python-tools-for-visual-studio.md)
 # [설치](installing-python-support-in-visual-studio.md)
+## [Python 인터프리터 설치](installing-python-interpreters.md)
 # 빠른 시작
 ## [기존 코드로 프로젝트 만들기](quickstart-01-project-from-existing.md)
 ## [템플릿으로 프로젝트 만들기](quickstart-02-python-in-visual-studio-project-from-template.md)
@@ -14,13 +15,17 @@
 ## [5 - 패키지 설치 및 Python 환경 관리](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 ## [6 - Git 작업](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 # 개념
-## [Python 환경](managing-python-environments-in-visual-studio.md)
 ## [Python 프로젝트](managing-python-projects-in-visual-studio.md)
 ### [웹 프로젝트 템플릿](python-web-application-project-templates.md)
 ### [Django 웹 프로젝트 템플릿](python-django-web-application-project-template.md)
 ### [Azure 클라우드 서비스 템플릿](python-azure-cloud-service-project-template.md)
 ## [Python용 Azure SDK](azure-sdk-for-python.md)
 # 방법 가이드
+## [환경 관리](managing-python-environments-in-visual-studio.md)
+### [프로젝트의 인터프리터 선택](selecting-a-python-environment-for-a-project.md)
+### [종속성에 대해 requirements.txt 사용](managing-required-packages-with-requirements-txt.md)
+### [검색 경로](search-paths.md)
+### [환경 창 참조](python-environments-window-tab-reference.md)
 ## [코드 편집](editing-python-code-in-visual-studio.md)
 ### [코드 서식 지정](formatting-python-code.md)
 ### [코드 리팩터링](refactoring-python-code.md)

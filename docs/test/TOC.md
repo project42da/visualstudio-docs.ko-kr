@@ -45,7 +45,7 @@
 ### [연습: C++ DLL에 대한 단위 테스트 작성](walkthrough-writing-unit-tests-for-cpp-dlls.md)
 ### [C++ API 참조에 대한 Microsoft 단위 테스트 프레임워크](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)
 ## [UWP 앱의 단위 테스트 만들기 및 실행](create-and-run-unit-tests-for-a-store-app-in-visual-studio.md)
-### [UWP 앱의 Visual C++ DLL 단위 테스트](unit-testing-a-visual-cpp-dll-for-store-apps.md)
+### [C++ UWP DLL 유닛 테스트](unit-testing-a-visual-cpp-dll-for-store-apps.md)
 ### [UWP 앱에서 Visual C# 코드 단위 테스트](unit-testing-visual-csharp-code-in-a-store-app.md)
 ### [UWP 앱의 단위 테스트 실행](run-unit-tests-for-store-apps-in-visual-studio.md)
 ## [코드 검사를 사용하여 테스트할 코드 범위 결정](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
