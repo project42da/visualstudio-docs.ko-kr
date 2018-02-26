@@ -17,11 +17,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 428dc6346fa39b3939b478d0d2c887b99024dc81
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 22c9aa56ab63d0c7c3b342e2c50cf81045580b54
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # 내게 적합한 게시 옵션
 
@@ -50,6 +50,8 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 - 웹 응용 프로그램을 호스트하는 서버에서 컴퓨터 수준 사용자 지정을 하지 않아도 됩니다.
 
 > 사용자 고유의 데이터 센터 또는 다른 온-프레미스 컴퓨터에서 Azure App Service를 사용하려는 경우 [Azure Stack](https://azure.microsoft.com/overview/azure-stack/)을 사용하면 됩니다.
+
+ASP.NET Core 앱 게시에 대한 자세한 내용은 [Visual Studio를 사용하여 Azure App Service에 ASP.NET Core 웹앱 게시](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)를 참조하세요.
 
 ## Azure Virtual Machines
 
@@ -83,7 +85,7 @@ App Service는 Azure의 클라우드 호스트 가상 컴퓨터에서 실행되�
 - 로컬 테스트 배포만 있으면 됩니다.
 - 다른 배포 대상에 보내기 전에 응용 프로그램 파일을 개별적으로 검사하고 수정하려고 합니다.
 
-
+.NET Core 앱 배포에 대한 자세한 내용은 [Visual Studio를 사용하여 .NET Core 앱 배포](/dotnet/core/deploying/deploy-with-vs)를 참조하세요.
 
 ## 사용자 지정 대상
 
@@ -103,3 +105,5 @@ Visual Studio에서 원하는 수의 사용자 지정 배포 프로필을 만들
 - URL을 통해 액세스할 수 있는 Azure 이외의 공급자에서 클라우드 서비스를 사용하고 있습니다.
 - Visual Studio 내에서 사용하거나 Azure 계정에 직접 연결된 것 이외의 자격 증명을 사용하여 배포하려고 합니다.
 - 배포할 때마다 대상에서 파일을 삭제하려고 합니다.
+
+IIS에 게시하는 방법에 대한 자세한 내용은 [ASP.NET 3.5 및 ASP.NET 4.5를 사용하는 IIS 8.0](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45) 및 [원격 IIS 컴퓨터에서 ASP.NET 원격 디버그](../../debugger/remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)를 참조하세요.

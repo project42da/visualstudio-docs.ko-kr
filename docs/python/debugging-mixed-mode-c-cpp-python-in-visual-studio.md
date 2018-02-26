@@ -18,17 +18,20 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 150f4b1c7e151e0b5d6f802ae40f4b5cf6943937
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d33e4d15e9d0de5c3aa35354dd1c8840d0ed9bd2
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="debugging-python-and-c-together"></a>Python과 C++로 디버깅
 
 대부분의 일반 Python 디버거는 Python 코드만 디버그할 수 있습니다. 그러나 실제로 Python은 고성능 또는 플랫폼 API를 직접 호출하는 기능이 필요한 시나리오에서 C 또는 C++와 함께 사용됩니다. (연습은 [Python용 C++ 확장 만들기](working-with-c-cpp-python-in-visual-studio.md)를 참조하세요.)
 
 Visual Studio에서는 Python 및 네이티브 C/C++에 대한 통합된 동시 혼합 모드 디버깅을 제공합니다. Visual Studio 설치 관리자에서 Python 개발 작업에 대해 **Python 네이티브 개발 도구** 옵션을 선택합니다.
+
+> [!Note]
+> 혼합 모드 디버깅은 Visual Studio 2015 및 이전 버전의 Visual Studio 1.x용 Python 도구에서 사용할 수 없습니다.
 
 이 문서에 설명된 대로 혼합 모드 디버깅 기능에는 다음 항목이 포함됩니다.
 
@@ -40,12 +43,9 @@ Visual Studio에서는 Python 및 네이티브 C/C++에 대한 통합된 동시 
 
 ![혼합 모드 디버깅](media/mixed-mode-debugging.png)
 
-Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 방법에 대한 비디오 소개는 [자세히 알아보기: 네이티브 모듈 만들기](https://youtu.be/D9RlT06a1EI)(youtube.com, 9분 9초)를 참조하세요. 이 동영상은 Visual Studio 2015 및 2017 모두에 적용됩니다.
-
-> [!VIDEO https://www.youtube.com/embed/D9RlT06a1EI]
-
-> [!Note]
-> 혼합 모드 디버깅은 Visual Studio 1.x용 Python 도구와 함께 사용할 수 없습니다.
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Visual Studio로 네이티브 C 모듈을 빌드, 테스트 및 디버그하는 방법에 대한 소개는 [Deep Dive: Creating Native Modules](https://youtu.be/D9RlT06a1EI)(자세히 알아보기: 네이티브 모듈 만들기)(youtube.com, 9분 09초)를 시청하세요. 이 동영상은 Visual Studio 2015 및 2017 모두에 적용됩니다. |
 
 ## <a name="enable-mixed-mode-debugging-in-a-python-project"></a>Python 프로젝트에서 혼합 모드 디버깅 사용
 

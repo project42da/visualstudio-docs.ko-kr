@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 24eeb39abdee21d5441c88a3fa253d4818fe61e1
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 1fa4c68b1d7dc89452376d6efc47e047f75d52d6
+ms.sourcegitcommit: 06cdc1651aa7f45e03d260080da5a623d6258661
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="defining-custom-commands-for-python-projects"></a>Python 프로젝트에 대한 사용자 지정 명령 정의
 
@@ -98,7 +98,7 @@ Visual Studio의 특정 Python 프로젝트 템플릿은 이미 자체의 `.targ
 
     ![Python 상황에 맞는 서브 메뉴에 나타나는 사용자 지정 명령](media/custom-commands-walkthrough-menu-item.png)
 
-1. **시작 파일 실행** 명령을 선택하고 명령 창에 텍스트 "Hello 사용자 지정 명령"에 이어서 "계속하려면 아무 키나 누르십시오. . ."가 표시되는지 확인합니다.  아무 키나 눌러 창을 닫습니다.
+1. **시작 파일 실행** 명령을 선택하고 명령 창에 텍스트 "Hello 사용자 지정 명령"에 이어서 "계속하려면 아무 키나 누르십시오. 이어야 합니다. ."가 표시되는지 확인합니다.  아무 키나 눌러 창을 닫습니다.
 
     ![콘솔 창의 사용자 지정 명령 출력](media/custom-commands-walkthrough-console.png)
 
@@ -282,7 +282,7 @@ Visual Studio가 해당 경고에서 올바른 정보를 추출하고 이를 **�
 
 ```xml
 <PropertyGroup>
-  <PythonCommands>$(PythonCommands);InstallMyPackage;ShowOutdatedPackages;ShowAllPythonFilesInProject</PythonCommands>
+  <PythonCommands>$(PythonCommands);ShowAllPythonFilesInProject</PythonCommands>
 </PropertyGroup>
 
 <Target Name="ShowAllPythonFilesInProject" Label="Show Python files in project" Returns="@(Commands)">
@@ -296,6 +296,62 @@ Visual Studio가 해당 경고에서 올바른 정보를 추출하고 이를 **�
 ### <a name="run-server-and-run-debug-server-commands"></a>서버 실행 및 디버그 서버 명령 실행
 
 웹 프로젝트에 대한 **Start server** 및 **Start debug server** 명령이 정의되는 방법을 알아보려면 [Microsoft.PythonTools.Web.targets](https://github.com/Microsoft/PTVS/blob/master/Python/Product/BuildTasks/Microsoft.PythonTools.Web.targets)(GitHub)를 참조하세요.
+
+### <a name="install-package-for-development"></a>개발용 패키지 설치
+
+```xml
+<PropertyGroup>
+  <PythonCommands>PipInstallDevCommand;$(PythonCommands);</PythonCommands>
+</PropertyGroup>
+
+<Target Name="PipInstallDevCommand" Label="Install package for development" Returns="@(Commands)">
+    <CreatePythonCommandItem Target="pip" TargetType="module" Arguments="install --editable $(ProjectDir)"
+        WorkingDirectory="$(WorkingDirectory)" ExecuteIn="Repl:Install package for development">
+      <Output TaskParameter="Command" ItemName="Commands" />
+    </CreatePythonCommandItem>
+  </Target>
+```
+
+*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa)(GitHub)에서 사용 권한과 함께 사용*
+
+### <a name="generate-windows-installer"></a>Windows Installer 생성
+
+```xml
+<PropertyGroup>
+  <PythonCommands>$(PythonCommands);BdistWinInstCommand;</PythonCommands>
+</PropertyGroup>
+
+<Target Name="BdistWinInstCommand" Label="Generate Windows Installer" Returns="@(Commands)">
+    <CreatePythonCommandItem Target="$(ProjectDir)setup.py" TargetType="script"
+        Arguments="bdist_wininst --user-access-control=force --title &quot;$(InstallerTitle)&quot; --dist-dir=&quot;$(DistributionOutputDir)&quot;"
+        WorkingDirectory="$(WorkingDirectory)" RequiredPackages="setuptools"
+        ExecuteIn="Repl:Generate Windows Installer">
+      <Output TaskParameter="Command" ItemName="Commands" />
+    </CreatePythonCommandItem>
+  </Target>
+```
+
+*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa)(GitHub)에서 사용 권한과 함께 사용*
+
+### <a name="generate-wheel-package"></a>휠 패키지 생성
+
+```xml
+<PropertyGroup>
+  <PythonCommands>$(PythonCommands);BdistWheelCommand;</PythonCommands>
+</PropertyGroup>
+
+<Target Name="BdistWheelCommand" Label="Generate Wheel Package" Returns="@(Commands)">
+
+  <CreatePythonCommandItem Target="$(ProjectDir)setup.py" TargetType="script"
+      Arguments="bdist_wheel --dist-dir=&quot;$(DistributionOutputDir)&quot;"
+      WorkingDirectory="$(WorkingDirectory)" RequiredPackages="wheel;setuptools"
+      ExecuteIn="Repl:Generate Wheel Package">
+    <Output TaskParameter="Command" ItemName="Commands" />
+  </CreatePythonCommandItem>
+</Target>
+```
+
+*[fxthomas/Example.pyproj.xml](https://gist.github.com/fxthomas/5c601e3e0c1a091bcf56aed0f2960cfa)(GitHub)에서 사용 권한과 함께 사용*
 
 ## <a name="troubleshooting"></a>문제 해결
 

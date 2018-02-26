@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a73226de18ea2003890c2923641ae65318dbfc1f
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 779867243bc30c26e1fce9260ddf497a9fcf193e
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="keyboard-tips-for-visual-studio"></a>Visual Studio 키보드 팁
 
@@ -84,8 +84,8 @@ ms.lasthandoff: 01/29/2018
 |블록 선택|Alt 키를 누른 채 마우스를 끌기, Shift+Alt+화살표 키||
 |위/아래로 줄 이동|Alt+위쪽 화살표/Alt+아래쪽 화살표||
 |중복된 줄|Ctrl+E,V|Visual Studio 2017 버전 15.6 미리 보기 2|
-|선택 영역 확장|Ctrl+W|Visual Studio 2017 15.5 버전|
-|선택 영역 축소|Ctrl+Shift+W|Visual Studio 2017 15.5 버전|
+|선택 영역 확장|**Shift**+**Alt**+**=**|Visual Studio 2017 15.5 버전|
+|선택 영역 축소|**Shift**+**Alt**+**-**|Visual Studio 2017 15.5 버전|
 |정의로 이동|F12||
 |정의 피킹(Peeking)|Alt+F12||
 |정의로 이동 스택|Ctrl+Shift+8(뒤로), Ctrl+Shift+7(앞으로)||
@@ -125,9 +125,9 @@ ms.lasthandoff: 01/29/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[바로 가기 키(VSTS 및 TFS)](/vsts/collaborate/keyboard-shortcuts)  
-[Visual Studio 블로그](http://blogs.msdn.com/b/visualstudio)  
-[Visual Studio 팁과 요령 블로그](http://blogs.msdn.com/b/zainnab)  
-[Channel 9의 Visual Studio 도구 상자](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)  
-[Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)  
-[Visual Studio Connect 버그](http://connect.microsoft.com/VisualStudio)
+- [바로 가기 키(VSTS 및 TFS)](/vsts/collaborate/keyboard-shortcuts)
+- [Visual Studio 블로그](http://blogs.msdn.com/b/visualstudio)
+- [Visual Studio 팁과 요령 블로그](http://blogs.msdn.com/b/zainnab)
+- [Channel 9의 Visual Studio 도구 상자](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)
+- [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)
+- [Visual Studio Connect 버그](http://connect.microsoft.com/VisualStudio)

@@ -14,37 +14,25 @@ ms.author: ghogen
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f047b143a7d0955d8ac3e2708098a903c73da59
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: dfdd5aee71c74febbeca0b7c9683aaa6be915e6e
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="cross-platform-mobile-development-in-visual-studio"></a>Visual Studio에서 플랫폼 간 모바일 개발
+
 Visual Studio를 사용하여 Android, iOS 및 Windows 장치용 앱을 빌드할 수 있습니다.  앱을 디자인할 때 Visual Studio의 도구를 사용하여 Office 365, Azure App Service 및 Application Insights와 같은 연결된 서비스를 쉽게 추가할 수 있습니다.
 
- C# 및 .NET Framework, HTML 및 JavaScript 또는 C++를 사용하여 앱을 빌드합니다. 코드, 문자열, 이미지 및 경우에 따라 사용자 인터페이스도 공유합니다.
+C# 및 .NET Framework, HTML 및 JavaScript 또는 C++를 사용하여 앱을 빌드합니다. 코드, 문자열, 이미지 및 경우에 따라 사용자 인터페이스도 공유합니다.
 
- 게임 또는 몰입형 그래픽 앱을 빌드하려는 경우 Visual Studio Tools for Unity를 설치하여 iOS, Android, Windows 및 기타 플랫폼에서 실행되는 앱을 위한 인기 있는 플랫폼 간 게임/그래픽 엔진 및 개발 환경인 Unity와 함께 Visual Studio의 모든 강력한 생산성 기능을 이용하세요.
+게임 또는 몰입형 그래픽 앱을 빌드하려는 경우 Visual Studio Tools for Unity를 설치하여 iOS, Android, Windows 및 기타 플랫폼에서 실행되는 앱을 위한 인기 있는 플랫폼 간 게임/그래픽 엔진 및 개발 환경인 Unity와 함께 Visual Studio의 모든 강력한 생산성 기능을 이용하세요.
 
- **이 문서의 내용:**
+## <a name="build-an-app-for-android-ios-and-windows-net-framework"></a>Android, iOS 및 Windows용 앱 빌드(.NET Framework)
 
--   [Android, iOS 및 Windows용 앱 빌드(.NET Framework)](#NET)
+![장치](../cross-platform/media/homedevices.png "HomeDevices")
 
-    -   [단일 코드 베이스에서 Android, iOS 및 Windows를 대상으로 지정](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#AndroidHTML)
-
-    -   [Windows 10 장치를 대상으로 지정](../cross-platform/cross-platform-mobile-development-in-visual-studio.md#WindowsHTML)
-
--   [Android, iOS 및 Windows용 앱 빌드(HTML/JavaScript)](#HTML)
-
--   [Android 및 Windows용 앱 빌드(C++)](#CPP)
-
--   [Visual Studio Tools for Unity를 사용하여 Android, iOS 및 Windows용 플랫폼 간 게임 빌드](#Unity)
-
-##  <a name="NET"></a> Android, iOS 및 Windows용 앱 빌드(.NET Framework)
- ![장치](../cross-platform/media/homedevices.png "HomeDevices")
-
- Xamarin을 사용하면 동일한 솔루션 및 공유 코드는 물론 UI에서도 Android, iOS 및 Windows를 대상으로 지정할 수 있습니다.
+Xamarin을 사용하면 동일한 솔루션 및 공유 코드는 물론 UI에서도 Android, iOS 및 Windows를 대상으로 지정할 수 있습니다.
 
 |**자세한 정보**|
 |--------------------|
@@ -52,7 +40,7 @@ Visual Studio를 사용하여 Android, iOS 및 Windows 장치용 앱을 빌드�
 |[Visual Studio의 Xamarin에 대해 알아보기](http://www.visualstudio.com/explore/xamarin-vs) (VisualStudio.com)|
 |[Visual Studio 및 Xamarin](../cross-platform/visual-studio-and-xamarin.md)(MSDN 라이브러리)|
 |[ALM(Application Lifecycle Management) 및 Xamarin 앱](../cross-platform/application-lifecycle-management-alm-with-xamarin-apps.md)(MSDN 라이브러리)|
-|[Visual Studio의 유니버설 Windows 앱에 대해 알아보기](https://www.visualstudio.com/vs/universal-windows-platform/)(VisualStudio.com)|
+|[Visual Studio의 유니버설 Windows 앱에 대한 자세한 정보](https://www.visualstudio.com/vs/universal-windows-platform/)(VisualStudio.com)|
 |[Swift와 C# 간의 유사점에 대해 알아보기](http://aka.ms/scposter) (download.microsoft.com)|
 |[Android 용 Visual Studio 에뮬레이터에 대해 알아보기](http://www.visualstudio.com/explore/msft-android-emulator-vs) (VisualStudio.com)|
 

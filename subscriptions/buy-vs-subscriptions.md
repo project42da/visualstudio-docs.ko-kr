@@ -9,11 +9,11 @@ Description: Explore your purchasing options for Visual Studio subscriptions
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 73d0f1c5016a9ea908d7d280575e297357ba78ba
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 9564af525d0c801e311e42bc9ebe93bb16166147
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="how-to-buy-a-subscription"></a>구독을 구입하는 방법
 Visual Studio 구독 유형은 크게 클라우드와 표준으로 나눌 수 있습니다. 이에 대한 설명은 [Visual Studio 가격 책정 페이지](https://www.visualstudio.com/vs/pricing/)에 나옵니다.
@@ -26,13 +26,14 @@ Visual Studio 구독 유형은 크게 클라우드와 표준으로 나눌 수 �
 ## <a name="buy-visual-studio-standard-subscriptions"></a>Visual Studio Standard 구독 구입
 소프트웨어 재판매인에게 연락하여 표준 Visual Studio 구독을 구입하거나 온라인 [Microsoft Store](https://www.microsoft.com/store)를 방문해야 합니다.
 
-*   Azure 구독에 등록하고 Visual Studio Marketplace에서 구매하려면 “개인” [Microsoft 계정](https://www.microsoft.com/account) 또는 조직에서 사용할 목적으로 구매하고 Azure AD(Azure Active Directory)로 ID를 관리하는 경우 [“회사 또는 학교 계정”](/azure/active-directory/sign-up-organization)이 필요합니다.
+
+
+### <a name="buy-visual-studio-cloud-subscriptions"></a>Visual Studio 클라우드 구독 구입
+
+Azure 구독에 등록하고 Visual Studio Marketplace에서 구매하려면 “개인” [Microsoft 계정](https://www.microsoft.com/account) 또는 조직에서 사용할 목적으로 구매하고 Azure AD(Azure Active Directory)로 ID를 관리하는 경우 [“회사 또는 학교 계정”](/azure/active-directory/sign-up-organization)이 필요합니다.
 
 > [!WARNING]
 > Azure 구독을 사용하여 Visual Studio 클라우드 구독을 구매하는 경우 이러한 요금은 초과로 표시되며 Azure 현금 약정 금액에 대해 계산되지 않습니다. [FAQ](/vsts/billing/faq-azure-billing)에서 Azure 요금 청구에 대해 자세히 알아보세요.  
-
-### <a name="buy-subscriptions"></a>구독 구입
-
 
 1.  [Visual Studio Marketplace > 구독](https://marketplace.visualstudio.com/subscriptions)에 로그인합니다.
 

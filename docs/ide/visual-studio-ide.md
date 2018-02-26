@@ -1,9 +1,10 @@
 ---
-title: "Visual Studio 개요 | Microsoft Docs"
+title: "Visual Studio 2017 개요 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/09/2017
+ms.date: 02/05/2018
 ms.reviewer: 
 ms.suite: 
+ms.technology: vs-ide-general
 ms.topic: article
 author: gewarren
 f1_keywords:
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 242de63001f7df364dacbef3f3b57446ba1e724f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8fc4946c79b16b3fb28e0991ff38cfe96e22a9e1
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE 개요
 
@@ -59,114 +60,105 @@ Visual Studio는 Microsoft Azure에서 구동하는 클라우드 지원 응용 �
 
 ### <a name="build-cross-platform-apps-and-games"></a>플랫폼 간 앱 및 게임 제작
 
-Visual Studio를 사용하여 Android, iOS, Linux, Windows 및 기타 장치용 앱과 게임을 빌드할 수 있습니다. [플랫폼 간 모바일 개발](../cross-platform/cross-platform-mobile-development-in-visual-studio.md)에서 자세한 내용을 알아보세요. 유니버설 Windows 앱을 통해 여러 플랫폼 간에 코드를 활용할 수 있습니다. 자세한 내용은 [유니버설 Windows 앱](https://dev.windows.com/windows-apps)을 참조하세요.
+Visual Studio를 사용하여 Android, iOS 및 기타 모바일 장치뿐 아니라 macOS, Linux, Windows용 앱과 게임을 빌드할 수 있습니다.
 
-앱 요구 사항과 사용하려는 언어에 따라 필요한 도구를 선택합니다.
+- Windows, macOS 및 Linux에서 실행되는 [.NET Core](/dotnet/core/) 앱을 빌드합니다.
 
-- [Xamarin for Visual Studio](../cross-platform/build-apps-with-native-ui-using-xamarin-in-visual-studio.md): C#을 사용하는 모든 장치용 공용 코드베이스
+- [Xamarin](https://developer.xamarin.com/guides/cross-platform/windows/visual-studio/)을 사용하여 C# 및 F#으로 iOS, Android 및 Windows용 모바일 앱을 빌드합니다.
 
-- [Visual Studio Tools for Apache Cordova](../cross-platform/visual-studio-tools-for-apache-cordova.md): HTML, CSS 및 JavaScript 또는 Typescript용 공용 코드베이스
+- HTML, CSS, JavaScript 등의 표준 웹 기술을 사용하여 [Apache Cordova](/visualstudio/cross-platform/tools-for-cordova/)로 iOS, Android 및 Windows용 모바일 앱을 빌드할 수 있습니다.
 
-- [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md): C#을 사용하는 2D/3D 게임 개발
+- [Visual Studio Tools for Unity](../cross-platform/visual-studio-tools-for-unity.md)를 사용하여 C#으로 2D 및 3D 게임을 빌드합니다.
 
-- [플랫폼 간 개발용 C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md): C++를 사용하는 공유 코드 라이브러리 및 앱
+- [플랫폼 간 개발용 C++](../cross-platform/visual-cpp-for-cross-platform-mobile-development.md)를 사용하여 iOS, Android 및 Windows 장치용 네이티브 C++ 앱을 빌드하고 iOS, Android 및 Windows용으로 빌드된 라이브러리에서 공통 코드를 공유합니다.
 
-- [Visual Studio Emulator for Android](../cross-platform/visual-studio-emulator-for-android.md): IDE에 관계없이 Android 앱 디버그 및 테스트
+- [Android Emulator](../cross-platform/visual-studio-emulator-for-android.md)를 사용하여 Android 앱을 배포, 테스트 및 디버그합니다.
 
-DirectX, Unity, Unreal, Cocos 등의 게임 개발 도구를 통해 [Visual Studio를 사용하여 게임 만들기](https://www.visualstudio.com/vs/game-development/)를 수행할 수 있습니다.
-
-Visual Studio는 더 많은 작업을 수행하는 데 도움을 줄 수 있습니다. 자세한 전체 목록은 [Visual Studio IDE](https://www.visualstudio.com/vs/)를 참조하세요.
+Visual Studio는 더 많은 작업을 수행하는 데 도움을 줄 수 있습니다. 더 자세한 목록은 [www.visualstudio.com](https://www.visualstudio.com/vs/)을 참조하세요.
 
 ## <a name="install-the-visual-studio-ide"></a>Visual Studio IDE 설치
 
 시작하려면 Visual Studio를 다운로드하여 시스템에 설치합니다. [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)에서 다운로드할 수 있습니다.
 
-이제 Visual Studio는 그 어느 때보다도 가벼워졌습니다! 모듈식 설치 관리자를 사용하면 선호하는 프로그래밍 언어 또는 플랫폼에 필요한 기능 그룹인 *워크로드*를 선택하여 설치할 수 있습니다. 이 전략을 통해 Visual Studio 설치에 필요한 공간을 이전보다 더 작게 유지할 수 있습니다. 즉 Visual Studio를 설치하고 업데이트하는 속도가 매우 빨라집니다.
+이제 Visual Studio는 그 어느 때보다도 가벼워졌습니다. 모듈식 설치 관리자를 사용하면 선호하는 프로그래밍 언어 또는 플랫폼에 필요한 기능 그룹인 *워크로드*를 선택하여 설치할 수 있습니다. 이 전략을 통해 Visual Studio 설치에 필요한 공간을 이전보다 더 작게 유지할 수 있습니다. 즉 Visual Studio를 설치하고 업데이트하는 속도가 매우 빨라집니다. 향상된 설치 성능 이외에도 Visual Studio 2017은 더 짧은 IDE 시작 및 솔루션 로드 시간을 갖습니다.
 
-아래 프로그램을 만드는 단계를 수행하려면 **유니버설 Windows 플랫폼 개발** 워크로드를 선택하고 설치해야 합니다.
+시스템에 Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 2017 설치](../install/install-visual-studio.md)를 참조하세요. [프로그램을 만드는](#create-a-program) 단계를 수행하려면 설치 중에 **.NET Core 플랫폼 간 개발** 워크로드를 선택해야 합니다.
 
-![Visual Studio 설치 관리자](../ide/media/vside_tour_install_dialog.png)
-
-향상된 설치 성능 이외에도 Visual Studio 2017은 더 짧은 IDE 시작 및 솔루션 로드 시간을 갖습니다.
-
-시스템에 Visual Studio를 설치하는 방법에 대한 자세한 내용은 [Visual Studio 2017 설치](../install/install-visual-studio.md)를 참조하세요.
+![Visual Studio 설치 관리자](../ide/media/overview-net-core-workload.png)
 
 ## <a name="sign-in"></a>로그인
 
-Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회사 또는 학교 계정으로 로그인할 수 있습니다. 로그인하면 여러 장치에서 창 레이아웃과 같은 Visual Studio 설정을 동기화할 수 있습니다. 또한 Azure 구독 및 Visual Studio Team Services와 같이 필요한 서비스에 자동으로 연결됩니다.
+Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회사 또는 학교 계정으로 로그인할 수 있습니다. 로그인하면 여러 장치에서 창 레이아웃과 같은 Visual Studio 설정을 동기화할 수 있습니다. 또한 Azure 구독 및 [Visual Studio Team Services](/vsts/)와 같은 필요한 서비스에 자동으로 연결됩니다.
 
 ## <a name="create-a-program"></a>프로그램 만들기
 
 무언가를 자세히 알아보는 좋은 방법 중 하나는 사용해 보는 것입니다! 이제 새롭고 간단한 프로그램을 만들어 보겠습니다.
 
-1. Visual Studio를 엽니다. 메뉴에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
+1. Visual Studio를 엽니다. 메뉴에서 **파일** > **새로 만들기** > **프로젝트...**를 선택합니다.
 
-  ![스크린샷](../ide/media/VSIDE_Tour_NewProject1.png)
+  ![메뉴 모음의 파일 > 새 프로젝트](../ide/media/VSIDE_Tour_NewProject1.png)
 
-  대신 시작 페이지를 사용하여 새 프로젝트를 만들 수 있습니다. 자세한 내용은 [새롭게 디자인된 시작 페이지(블로그)의 장점 활용](https://blogs.msdn.microsoft.com/visualstudio/2016/11/29/harness-the-power-of-the-redesigned-start-page/)을 참조하세요.
+1. **새 프로젝트** 대화 상자에는 여러 프로젝트 템플릿이 표시됩니다. **Visual C#**에서 **.NET Core** 범주를 선택한 다음 **콘솔 앱(.NET Core)** 템플릿을 선택합니다. **이름** 텍스트 상자에 "HelloWorld"를 입력합니다. **확인** 단추를 선택합니다.
 
-1. **새 프로젝트** 대화 상자에는 여러 프로젝트 템플릿이 표시됩니다. **Visual C#**에서 **Windows 유니버설** 범주를 선택하고, **비어 있는 앱(유니버설 Windows)** 템플릿을 선택한 다음, **확인** 단추를 선택합니다.
+  ![.NET Core 앱 템플릿](../ide/media/overview-new-project-dialog.png)
 
   > [!NOTE]
-  > **Windows 유니버설** 범주가 표시되지 않으면 **유니버설 Windows 플랫폼 개발** 워크로드를 설치해야 합니다. 이를 수행하려면 **새 프로젝트** 대화 상자의 왼쪽 아래에 있는 **Visual Studio 설치 관리자 열기** 링크를 선택합니다. **Visual Studio 설치 관리자**가 열리면 **유니버설 Windows 플랫폼 개발** 워크로드를 선택한 다음, **수정**을 선택합니다.
+  > **.NET Core** 범주가 표시되지 않으면 **.NET Core 플랫폼 간 개발** 워크로드를 설치해야 합니다. 이를 수행하려면 **새 프로젝트** 대화 상자의 왼쪽 아래에 있는 **Visual Studio 설치 관리자 열기** 링크를 선택합니다. **Visual Studio 설치 관리자**가 열리면 아래로 스크롤하여 **.NET Core 플랫폼 간 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.
 
-  ![UWP 빈 앱 템플릿](../ide/media/new-uwp-blank-app-template.png)
+   Visual Studio에서는 템플릿을 사용하여 프로젝트를 만듭니다. 이 프로젝트는 <xref:System.Console.WriteLine> 메서드를 호출하여 리터럴 문자열 “Hello World!”를 표시하는 간단한 “Hello World” 응용 프로그램입니다. 콘솔 창에 표시합니다.
 
-  이렇게 하면 C# 및 XAML을 프로그래밍 언어로 사용하여 비어 있는 새 유니버설 Windows 앱 프로젝트를 만듭니다. Visual Studio에서 사용자의 프로젝트를 설정하는 동안 잠시 기다려주세요. 정보를 요청하는 메시지가 표시되는 경우 이때는 기본값을 그대로 사용합니다.
+1. 잠시 후 다음 스크린샷과 비슷하게 표시됩니다.
 
-1. **새 유니버설 Windows 플랫폼 프로젝트** 대화 상자에서 **확인**을 선택하여 기본값을 승인합니다.
+  ![Visual Studio IDE](../ide/media/overview-ide-console-app.png)
 
-1. 잠시 후 다음 스크린샷과 비슷하게 표시됩니다. 프로젝트 파일이 [솔루션 탐색기]라는 창의 오른쪽에 나열되어 있습니다.
+   응용 프로그램의 C# 코드는 대부분의 공간을 차지하는 편집기 창에 표시됩니다. 코드 구문은 지정된 색으로 자동으로 표시되어 다양한 유형의 코드(예: 키워드 또는 형식)를 나타냅니다. 또한 코드에서 작은 세로 파선은 서로 일치하는 중괄호를 나타내며, 줄 번호는 나중에 코드를 찾는 데 도움이 됩니다. 작은 상자 안에 있는 빼기 기호를 선택하여 코드를 축소하거나 확장할 수 있습니다. 이 코드 개요 기능을 사용하면 필요 없는 코드를 숨길 수 있으므로 화면 상의 혼란을 최소화할 수 있습니다.
 
-  ![스크린샷](../ide/media/VSIDE_Tour_NewProject3.png)
+   프로젝트 파일은 **솔루션 탐색기**라는 창의 오른쪽에 나열됩니다.
 
-1. [솔루션 탐색기]에서 MainPage.xaml 파일 옆에 있는 작은 검은색 삼각형을 선택하여 확장하면 그 아래에 MainPage.xaml.cs 파일이 표시됩니다. 이 파일(C# 코드 포함)을 선택하여 엽니다.
-
-  MainPage.xaml.cs의 C# 코드는 화면 왼쪽의 코드 편집기에 표시됩니다. 코드 구문은 지정된 색으로 자동으로 표시되어 다양한 유형의 코드(예: 문 또는 주석)를 나타냅니다. 또한 코드에서 작은 세로 파선은 서로 일치하는 중괄호를 나타내며, 줄 번호는 나중에 코드를 찾는 데 도움이 됩니다. 작은 상자 안에 있는 빼기 기호를 선택하여 코드를 축소하거나 확장할 수 있습니다. 이 코드 개요 기능을 사용하면 필요 없는 코드를 숨길 수 있으므로 화면 상의 혼란을 최소화할 수 있습니다.
-
-  ![](../ide/media/VSIDE_Tour_NewProject3a.png)
+  ![빨간색 상자가 있는 Visual Studio IDE](../ide/media/overview-ide-console-app-red-boxes.png)
 
   다른 메뉴와 도구 창을 사용할 수 있지만 지금은 넘어가겠습니다.
 
-1. 사용자가 앱과 상호 작용할 수 있는 방법을 제공하는 단추를 XAML 양식에 추가합니다. 이렇게 하려면 MainPage.xaml 파일을 엽니다. 여기서는 분할된 보기, 즉 위에는 컨트롤을 시각적으로 배치하기 위한 디자이너, 아래에는 디자이너 뒤에 있는 XAML 코드를 보여 주는 코드 보기가 표시됩니다. 나중에 프로그램을 실행하면 사용자가 볼 수 있는 창인 "양식"이 디자이너에서 볼 수 있는 항목이 되고, 기본 XAML에서 양식에 표시되는 항목을 결정합니다.
+1. 이제 앱을 시작합니다. 메뉴 모음의 **디버그** 메뉴에서 **디버깅하지 않고 시작**을 선택하면 됩니다. **Ctrl**+**F5**를 누를 수도 있습니다.
 
-1. 화면 왼쪽에서 **도구 상자** 탭을 선택하여 도구 상자를 엽니다. 도구 상자에는 양식에 추가할 수 있는 다양한 시각적 컨트롤이 포함되어 있습니다. 지금은 단추 컨트롤만 추가하겠습니다.
+  ![디버그 > 디버깅하지 않고 시작 메뉴](../ide/media/overview-start-without-debugging.png)
 
-1. **공용 XAML 컨트롤** 섹션을 확장한 다음 Button 컨트롤을 양식 중간 부분으로 끌어갑니다. 정확한 위치는 중요하지 않습니다.
+  Visual Studio에서 앱을 빌드하며, 콘솔 창이 열리고 “Hello World!” 메시지가 표시됩니다. 이제 실행 중인 앱이 있습니다!
 
-  ![스크린샷](../ide/media/VSIDE_Tour_Toolbox.png)
+  ![콘솔 창](../ide/media/overview-console-window.png)
 
-  완료되면 다음과 비슷하게 표시됩니다.
+1. 콘솔 창을 닫으려면 키보드에서 아무 키나 누릅니다.
 
-  ![스크린샷](../ide/media/VSIDE_Tour_XAMLButton.png)
+1. 앱에 일부 코드를 추가하겠습니다. `Console.WriteLine("Hello World!");` 줄 앞에 다음 C# 코드를 추가합니다.
 
-  단추는 디자이너에 있으며, 강조 표시된 기본 코드가 디자이너의 XAML 코드에 자동으로 추가됩니다.
+   ```csharp
+   Console.WriteLine("\nWhat is your name?");
+   var name = Console.ReadLine();
+   ```
 
-1. 일부 XAML 코드를 변경해 보겠습니다. 단추 코드의 텍스트를 `Button`에서 `Hello!`로 바꿉니다.
+   이 코드는 "What is your name?"을 콘솔 창에 표시하고 사용자가 일부 텍스트를 입력한 후 **Enter** 키를 누를 때까지 기다립니다.
 
-  ![스크린샷](../ide/media/VSIDE_Tour_XAMLButton2.png)
+1. 이제 `Console.WriteLine("Hello World!");` 줄을 다음 코드로 변경합니다.
 
-1. 이제 앱을 시작합니다. 이 작업을 수행하려면 도구 모음에서 **시작**(![시작 단추](../ide/media/VSIDE_StartButton.png)) 단추를 선택하거나, **F5** 키를 선택하거나, 메뉴에서 **디버그** > **디버깅 시작**을 차례로 선택합니다.
+   ```csharp
+   Console.WriteLine($"\nHello {name}!");
+   ```
 
-  ![스크린샷](../ide/media/VSIDE_Tour_RunButton.png)
+1. **디버그** > **디버깅하지 않고 시작**을 선택하거나 **Ctrl**+**F5**를 눌러 앱을 다시 실행합니다.
 
-  앱에서 빌드 프로세스를 시작하고 상태 메시지가 [출력] 창에 표시됩니다. 잠시 후에 해당 단추가 있는 양식이 표시됩니다. 이제 실행 중인 앱이 있습니다!
+   Visual Studio에서 앱을 다시 빌드하고, 콘솔 창이 열리며 사용자 이름을 묻는 메시지가 표시됩니다.
 
-  ![스크린샷](../ide/media/VSIDE_Tour_RunProject.png)
+1. 콘솔 창에 이름을 입력하고 **Enter** 키를 누릅니다.
 
-  물론, 지금 당장은 아니지만, 원하는 경우 나중에 더 많은 기능을 추가할 수 있습니다.
+   ![콘솔 창 입력](media/overview-console-input.png)
 
-1. 프로그램 실행이 완료되면 도구 모음에서 [중지](![중지 단추](../ide/media/VSIDE_StopButton.png))를 선택하여 중지합니다.
-
-지금까지 수행한 작업을 정리해 보겠습니다. Visual Studio에서 새로운 C# Windows 유니버설 프로젝트를 만들고, 코드를 보고, 컨트롤을 디자이너에 추가하고, 일부 XAML 코드를 변경한 다음, 프로젝트를 실행했습니다. 여기서는 이 예제의 프로세스가 간소화되었지만, 자신의 앱을 개발할 때 사용할 Visual Studio IDE의 몇 가지 일반적인 부분을 보여 주었습니다. 이 예제에 대한 자세한 내용은 ["Hello, world" 앱 만들기(XAML)](/windows/uwp/get-started/create-a-hello-world-app-xaml-universal)을 참조하세요.
+1. 콘솔 창을 닫으려면 아무 키나 누릅니다.
 
 ## <a name="debug-test-and-improve-your-code"></a>코드 디버그, 테스트 및 향상
 
-항상 완벽하게 실행되는 것은 없습니다. 코드를 작성할 때 이를 실행하고 버그와 성능을 테스트해야 합니다. Visual Studio의 최신 디버깅 시스템을 사용하면 원격 장치 또는 에뮬레이터(예: Android 또는 Windows Phone 장치용 에뮬레이터)에서 실행 중인 로컬 프로젝트의 코드를 디버그할 수 있습니다. 한 번에 문 하나씩 코드를 단계별로 실행하고 진행에 따라 변수를 검사하고, 다중 스레드 응용 프로그램을 단계별로 실행하고, 지정된 조건이 true일 때만 적중되는 중단점을 설정할 수 있습니다. 코드 실행 등과 같은 변수 값을 모니터링할 수 있습니다. 이러한 값을 모두 코드 편집기 자체에서 관리할 수 있으므로 코드를 떠날 필요가 없습니다.
+항상 완벽하게 실행되는 것은 없습니다. 코드를 작성할 때 이를 실행하고 버그와 성능을 테스트해야 합니다. Visual Studio의 최신 디버깅 시스템을 사용하면 로컬 프로젝트에서 실행 중인 코드를 원격 장치 또는 에뮬레이터(예: [Android 장치용 에뮬레이터](../cross-platform/visual-studio-emulator-for-android.md))에서 디버그할 수 있습니다. 한 번에 문 하나씩, 코드를 단계별로 실행하고 변수를 검사할 수 있습니다. 지정된 조건이 true인 경우에만 적중되는 중단점을 설정할 수 있습니다. 코드 실행 등과 같은 변수 값을 모니터링할 수 있습니다. 이러한 값을 모두 코드 편집기 자체에서 관리할 수 있으므로 코드를 떠날 필요가 없습니다. Visual Studio의 디버깅에 대한 자세한 내용은 [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)를 참조하세요.
 
-![디버깅](../ide/media/VSIDE_Tour_Debugging.png)
-
-테스트를 위해 Visual Studio는 단위 테스트, IntelliTest, 부하 및 성능 테스트 등을 제공합니다. Visual Studio 디버깅 프로세스에 대한 자세한 내용은 [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)를 참조하세요. 테스트에 대해 자세히 알아보려면 [테스트 도구 및 시나리오](../test/developer-testing-scenarios.md)를 참조하세요. 앱 성능 향상에 대한 자세한 내용은 [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)를 참조하세요.
+테스트를 위해 Visual Studio는 단위 테스트, IntelliTest, 부하 및 성능 테스트 등을 제공합니다. 테스트에 대한 자세한 내용은 [테스트 도구 및 시나리오](../test/developer-testing-scenarios.md)를 참조하세요. 앱 성능 향상에 대한 자세한 내용은 [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)를 참조하세요.
 
 ## <a name="deploy-your-finished-application"></a>완성된 응용 프로그램 배포
 
@@ -198,7 +190,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
  ![리팩터링](../ide/media/VSIDE_refactor.png)
 
-- **IntelliSense** 는 편집기에서 직접 코드에 대한 형식 정보를 표시하고 경우에 따라 약간의 코드를 자동으로 작성하는 인기 있는 기능 집합에 대한 포괄적인 용어입니다. IntelliSense는 별도의 도움말 창에서 형식 정보를 조회할 필요가 없도록 기본 설명서를 편집기에 인라인으로 포함하는 것과 같습니다. IntelliSense 기능은 언어에 따라 달라집니다. 자세한 내용은 [C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md) 및 [Visual Basic-Specific IntelliSense](../ide/visual-basic-specific-intellisense.md)를 참조하세요. 다음 그림에서는 일부 IntelliSense 기능의 작동을 보여 줍니다.
+- **IntelliSense** 는 편집기에서 직접 코드에 대한 형식 정보를 표시하고 경우에 따라 약간의 코드를 자동으로 작성하는 인기 있는 기능 집합에 대한 포괄적인 용어입니다. IntelliSense는 별도의 도움말 창에서 형식 정보를 조회할 필요가 없도록 기본 설명서를 편집기에 인라인으로 포함하는 것과 같습니다. IntelliSense 기능은 언어에 따라 달라집니다. 자세한 내용은 [C# IntelliSense](../ide/visual-csharp-intellisense.md), [Visual C++ IntelliSense](../ide/visual-cpp-intellisense.md), [JavaScript IntelliSense](../ide/javascript-intellisense.md) 및 [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md)를 참조하세요. 다음 그림에서는 일부 IntelliSense 기능의 작동을 보여 줍니다.
 
   ![Visual Studio 멤버 목록](../ide/media/vs2017_Intellisense.png)
 
@@ -221,10 +213,6 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 - **정의로 이동** 상황에 맞는 메뉴 옵션은 함수 또는 개체가 정의된 위치로 바로 이동합니다. 편집기에서 마우스 오른쪽 단추를 클릭하면 다른 탐색 명령도 사용할 수 있습니다.
 
  ![정의로 이동](../ide/media/VSIDE_go_to_definition.png)
-
-- 관련 도구인 [개체 브라우저](http://msdn.microsoft.com/f89acfc5-1152-413d-9f56-3dc16e3f0470)를 사용하면 시스템의 .NET 또는 Windows 런타임 어셈블리를 검사하여 포함된 형식과 해당 형식에 속한 멤버(속성, 메서드, 이벤트 등)를 확인할 수 있습니다.
-
-  ![System.Timer를 보여 주는 개체 브라우저](../ide/media/objectbrowser.png)
 
 ## <a name="manage-your-source-code-and-collaborate-with-others"></a>소스 코드 관리 및 다른 사용자와 공동 작업
 
@@ -285,4 +273,3 @@ Visual Studio IDE 둘러보기를 완료하신 것을 축하합니다! 주요 �
 * [Visual Studio 블로그](https://blogs.msdn.microsoft.com/visualstudio/)
 * [Visual Studio 포럼](https://social.msdn.microsoft.com/Forums/vstudio/home?category=visualstudio%2Cvsarch%2Cvsdbg%2Cvstest%2Cvstfs%2Cvsdata%2Cvsappdev%2Cvisualbasic%2Cvisualcsharp%2Cvisualc)
 * [Microsoft Virtual Academy](https://mva.microsoft.com/)
-* [Channel 9](https://channel9.msdn.com/)

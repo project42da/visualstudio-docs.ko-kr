@@ -2,7 +2,7 @@
 title: "Visual Studio에서 Python 응용 프로그램용 프로젝트 관리 | Microsoft Docs"
 description: "Visual Studio의 프로젝트 용도를 설명하고, Python 코드용 프로젝트를 만들고 관리하는 방법을 보여 주고, Python에 사용할 수 있는 다양한 프로젝트 템플릿을 간략하게 설명합니다."
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/15/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: b9f1cc2abdc78da1279367432741ca30b5885335
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: aafb2259ec4f16341abf514e9496dbb66f3cb95c
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="python-projects"></a>Python 프로젝트
 
@@ -40,11 +40,10 @@ Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿�
 >
 > [기존 파일에서 프로젝트 만들기](#creating-a-project-from-existing-files)에 설명된 대로 기존 코드에서 Visual Studio 프로젝트를 만드는 것이 간단합니다.
 
-Visual Studio의 Python 프로젝트 소개의 경우 동영상 [Python 코드 가져오기](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121?l=iLAv23LWE_3905918567)(Microsoft Virtual Academy, 2분 17초)를 참조하세요.
-
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Getting-Python-Code-iLAv23LWE_3905918567]
-
-[자세히 알아보기: Python 프로젝트에서 소스 제어 사용](https://youtu.be/Aq8eqApnugM)(youtube.com, 8분 55초)도 시청할 수 있습니다.
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Python 프로젝트 소개 [비디오(Microsoft Virtual Academy)를 시청](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Getting-Python-Code-iLAv23LWE_3905918567)하세요(2분 17초). |
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | [Deep Dive: Using source control with Python projects](https://youtu.be/Aq8eqApnugM)(자세히 알아보기: Python 프로젝트에서 소스 제어 사용)(youtube.com, 8분 55초)도 시청하세요. |
 
 ## <a name="adding-files-assigning-a-startup-file-and-setting-environments"></a>파일 추가. 시작 파일 할당. 환경 설정
 

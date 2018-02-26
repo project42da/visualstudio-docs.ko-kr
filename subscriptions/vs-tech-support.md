@@ -9,17 +9,18 @@ Description: Learn how to activate the technical support benefit included with y
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 39d140f83f43d6032119d4a7e84d6f1f091af707
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+ms.openlocfilehash: 4fb6294d6d70e827bd69544fcc4f07cad72b7c5a
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="activating-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 기술 지원 혜택 활성화
 
-프로덕션이 아닌 환경에서 고장 수리 문제를 해결해 보세요.  (참고: 먼저 혜택을 활성화해야 지원 요청을 제출할 수 있습니다.)  Visual Studio Enterprise 표준 및 연간 클라우드 구독은 네 개의 인시던트를 받고, Visual Studio Professional 표준 및 연간 클라우드 구독은 두 개의 인시던트를 받습니다.  
+프로덕션이 아닌 환경에서 고장 수리 문제를 해결해 보세요.  혜택을 활성화해야만 지원 요청을 제출할 수 있습니다.  Visual Studio Enterprise 표준 및 연간 클라우드 구독은 네 개의 인시던트를 받고, Visual Studio Professional 표준 및 연간 클라우드 구독은 두 개의 인시던트를 받습니다.  
 
-**참고:**  지정된 수준의 일부 구독은 지원 인시던트를 받을 수 없습니다.  FTE, NFR, MPN, MCT 및 기타 프로그램을 통해 취득한 구독은 지원 인시던트를 받을 수 없습니다.  구독에 기술 지원 인시던트를 받을 자격이 없는 경우 기술 지원 타일이 사용 가능한 혜택에 나타나지 않습니다. 
+> [!NOTE]
+> 지정된 수준의 일부 구독은 지원 인시던트를 받을 수 없습니다.  FTE, NFR, MPN, MCT 및 기타 프로그램을 통해 취득한 구독은 지원 인시던트를 받을 수 없습니다.  구독에 기술 지원 인시던트를 받을 자격이 없는 경우 기술 지원 타일이 사용 가능한 혜택에 나타나지 않습니다. 
 
    ![기술 지원 혜택 타일](_img\vs-tech-support\vs-tech-support-tile.png)
 
@@ -33,7 +34,8 @@ ms.lasthandoff: 12/01/2017
 
     ![기술 지원 혜택 구독 ID 찾기](_img\vs-tech-support\vs-tech-support-subID-cropped.png)
 
-**참고:** 지원 계정을 영어가 아닌 다른 언어로 활성화하려면 [이 목록](http://support.microsoft.com/activatesupport)에서 국가를 선택하세요.   
+> [!NOTE]
+> 지원 계정을 영어가 아닌 다른 언어로 활성화하려면 [이 목록](http://support.microsoft.com/activatesupport)에서 국가를 선택합니다.   
 
 # <a name="how-to-submit-an-incident"></a>인시던트 제출 방법
 계약 ID와 액세스 ID가 설정되었으면 지원이 필요할 때 해당 국가의 기술 지원 서비스 전화 번호로 전화를 걸거나 지원 인시던트를 [온라인](http://support.microsoft.com/oas/)으로 제출하거나 Azure Portal을 통해 인시던트를 제출할 수 있습니다.  전화를 통해 지원을 받으려는 경우에도 인시던트를 온라인으로 제출할 수 있으며 Microsoft 기술 지원 전문가가 전화를 다시 겁니다.
@@ -85,7 +87,7 @@ Azure와 관련된 문제에 대해 Visual Studio 구독 기술 지원 혜택을
 1.  https://portal.azure.com을 방문하고 로그인합니다.
 2.  왼쪽 탐색에서 “도움말 + 지원”을 클릭합니다.
 3.  “지원”에서 “지원 계약 연결”을 클릭합니다.
-4.  위의 1번에서 제공한 “액세스 ID” 및 “계약 ID”를 입력합니다.
+4.  위의 1번에서 제공된 “액세스 ID” 및 “계약 ID”를 입력합니다.
 이러한 단계를 완료하면 Visual Studio 구독 혜택과 연결된 지원 플랜을 선택할 수 있습니다.  (플랜 이름에 “MSDN”"이 포함될 수 있습니다.)
 
  

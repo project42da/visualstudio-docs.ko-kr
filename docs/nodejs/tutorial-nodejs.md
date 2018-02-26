@@ -16,11 +16,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: a8e6c800ef036d0f6e8e5affae745e541a276284
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 1d91d46b20f82a1700c2d20639b3a8827c92bcb0
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="getting-started-with-nodejs-in-visual-studio"></a>Visual Studio에서 Node.js 시작
 Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다.  아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.  
@@ -37,6 +37,10 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
      **기본 Azure Node.js Express 4 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual Studio 설치 관리자 열기** 링크를 클릭합니다. Visual Studio 설치 관리자가 시작됩니다. **Node.js 개발** 워크로드를 선택한 다음 **수정**을 선택합니다. 
 
     Visual Studio가 새 솔루션을 만들고 프로젝트를 엽니다. **app.js** 프로젝트 파일이 편집기에 열립니다(왼쪽 창). Visual Studio 솔루션 및 프로젝트를 잘 모르는 경우 [빠른 시작: Visual Studio를 사용하여 첫 번째 Node.js 앱 만들기](../ide/quickstart-nodejs.md)를 참조하세요.
+
+4. Node.js 런타임이 아직 설치되어 있지 않으면 [Node.js](https://nodejs.org/en/download/) 웹 사이트에서 설치합니다.
+
+    일반적으로, 설치된 Node.js 런타임은 Visual Studio에서 자동으로 검색됩니다. 설치된 런타임이 검색되지 않을 경우 설치된 런타임을 참조하도록 프로젝트를 구성할 수 있습니다.
 
 ## <a name="add-some-code"></a>일부 코드를 추가합니다.
 
@@ -121,7 +125,7 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
     ![디버그 대상 선택](../nodejs/media/tutorial-nodejs-deploy-target.png) 
 
-1. **Ctrl+F5**를 눌러 응용 프로그램을 실행합니다.
+1. **F5**(**디버그** > **디버깅 시작**) 키를 눌러 응용 프로그램을 실행합니다.
 
     디버거가 설정한 중단점에서 일시 중지됩니다. 이제 앱 상태를 검사할 수 있습니다.
 
@@ -129,7 +133,7 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
     ![변수 검사](../nodejs/media/tutorial-nodejs-inspect-variables.png)
 
-1. **F5**를 눌러 계속합니다.
+1. **F5**(**디버그** > **계속**) 키를 눌러 계속합니다.
 
     앱이 브라우저에서 열립니다.
 
@@ -139,7 +143,7 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
     ![브라우저에서 실행 중인 앱](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
 
-1. **보기 > 다른 창 > Node.js 대화형 창**을 선택하여 Node.js 대화형 창을 엽니다.
+1. **보기** > **다른 창** > **Node.js 대화형 창**을 선택하여 Node.js 대화형 창을 엽니다.
 
    ![Node.js 대화형 창 열기](../nodejs/media/tutorial-nodejs-interactive-window.png)  
 

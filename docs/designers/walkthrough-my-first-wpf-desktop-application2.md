@@ -15,11 +15,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 71f0837bbc488518204e8b9336339c2d01c21600
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: c668d454cb4584cbaaa345c0ca00e286526c6aae
+ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
 
@@ -58,9 +58,9 @@ ms.lasthandoff: 01/25/2018
   
      **NavigationWindow**는 **Grid**와 같은 기타 UI 요소를 포함할 수 없습니다.
 
-1. **속성** 창에서 **일반** 범주 노드를 확장하고 **Title** 속성을 선택한 다음 `ExpenseIt` 를 입력하고 **Enter** 키를 누릅니다.
+1. **속성** 창에서 **Common** 범주 노드를 확장하고 **Title** 속성을 선택한 다음 `ExpenseIt` 를 입력하고 **Enter** 키를 누릅니다.
   
-     XAML 창의 **Title** 요소가 새 값과 일치하도록 변경됩니다. XAML 창 또는 **속성** 창에서 XAML 속성을 수정할 수 있으며 변경 내용이 동기화됩니다.
+     XAML 창의 **Title** 특성이 새 값과 일치하도록 변경됩니다. XAML 창 또는 **속성** 창에서 XAML 속성을 수정할 수 있으며 변경 내용이 동기화됩니다.
 
 1. XAML 창에서 **Height** 요소의 값을 `375`로 설정하고 **Width** 속성의 값을 `500`서 무료 평가판 계정을 등록할 수 있습니다.
   
@@ -116,7 +116,7 @@ ms.lasthandoff: 01/25/2018
 
 1. 디자이너에서 활성 디자이너 탭이 아닌 경우 **ExpenseItHome.xaml** 탭을 선택합니다.
 
-1. `<Title>` 요소를 선택하고 제목을 **ExpenseIt – Home**으로 변경합니다.
+1. `Title` 특성을 선택하고 값을 **ExpenseIt - 홈**으로 변경합니다.
   
      이제 C#에서 **ExpenseItHome.xaml** 파일이 다음과 같이 표시됩니다.  
   
@@ -178,7 +178,7 @@ ms.lasthandoff: 01/25/2018
 
 1. 디자이너에서 활성 디자이너 탭이 아닌 경우 **ExpenseReportPage.xaml** 탭을 선택합니다.
 
-1. `<Title>` 요소를 선택하고 제목을 **ExpenseIt – View Expense**로 변경합니다.
+1. `Title` 특성을 선택하고 값을 **ExpenseIt - 경비 보기**로 변경합니다.
   
      이제 C#에서 ExpenseReportPage.xaml 파일이 다음과 같이 표시됩니다.  
   
@@ -494,7 +494,7 @@ ms.lasthandoff: 01/25/2018
     </Grid>  
     ```  
   
-     이 UI는 홈페이지에 대해 만들어진 UI와 유사하지만 보고서 데이터가 **DataGrid** 컨트롤에 표시됩니다.
+     이 UI는 홈 페이지에 대해 만들어진 UI와 유사하지만 보고서 데이터가 **DataGrid** 컨트롤에 표시됩니다.
 
 1. 응용 프로그램을 빌드 및 실행합니다.
 

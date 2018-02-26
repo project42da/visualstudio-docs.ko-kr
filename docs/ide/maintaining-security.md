@@ -1,5 +1,5 @@
 ---
-title: "보안 유지 관리 | Microsoft Docs"
+title: "응용 프로그램 보안 유지 관리 | Microsoft Docs"
 ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
@@ -15,18 +15,19 @@ helpviewer_keywords:
 - MBSA (Microsoft Baseline Security Analyzer)
 - security [.NET Framework], maintaining after deployment
 ms.assetid: 621d10c1-842b-4902-be60-bb9719591751
-caps.latest.revision: "18"
-author: TerryGLee
-ms.author: tglee
+author: gewarren
+ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 01c2867c60a3aa7b00462503da08bda0a8ac80fb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 3f4b3e958cbf02f09d850ed9c50fb3e248617398
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="maintaining-security"></a>보안 유지 관리
+
 지속적인 경계가 보안의 대가라는 말이 있습니다. 응용 프로그램을 디자인하고 개발하는 동안 보안 문제에 최대한 신경을 많이 써도 배포 후에 보안 결함이 나타날 수 있습니다. 응용 프로그램을 감사하고 이벤트 로그를 분석하면 이전에 몰랐던 결함을 발견할 수도 있습니다.  
   
  또한 응용 프로그램에 대한 경계를 늦추지 않아야 할 뿐만 아니라 응용 프로그램이 실행되는 플랫폼과 종속되는 다른 제품의 보안 위협 및 결함을 지속적으로 확인해야 합니다.  

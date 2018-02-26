@@ -2,7 +2,7 @@
 title: "Visual Studio에서 Python 지원 설치 | Microsoft Docs"
 description: "옵션 및 설치 위치를 포함하여 Visual Studio 2017, 2015, 2013, 2012 및 2010에서 PTVS(Visual Studio용 Python 도구)를 설치하는 방법에 대한 자세한 지침입니다."
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 02/15/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: cd0ef5cba2924c33857a8366105bde1f933a1ae9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 32a8e6413fd719bfa4be6296972d39d609eab411
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
 
@@ -43,7 +43,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다. Python을 사용하려면 버전 15.2 이상을 설치해야 합니다.
+1. 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다. Visual Studio가 이미 설치되어 있는 경우 Visual Studio 설치 관리자를 실행하고 2단계로 건너뜁니다.
 
     > [!div class="nextstepaction"]
     > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Community 설치</a>
@@ -55,7 +55,10 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
     ![Visual Studio 설치 관리자의 Python 개발 작업](media/installation-python-workload.png)
 
-    선택 사항: 데이터 과학을 사용하는 경우 **데이터 과학 및 분석 응용 프로그램** 워크로드도 고려합니다(Visual Studio 2017 15.2 이상). 이 워크로드는 R 및 F# 언어뿐만 아니라 Python에 대한 지원도 포함합니다. 자세한 내용은 [데이터 과학 및 분석 응용 프로그램 워크로드](../rtvs/data-science-workload.md)를 참조하세요.
+    선택 사항: 데이터 과학을 사용하는 경우 **데이터 과학 및 분석 응용 프로그램** 워크로드도 고려합니다. 이 워크로드는 R 및 F# 언어뿐만 아니라 Python에 대한 지원도 포함합니다. 자세한 내용은 [데이터 과학 및 분석 응용 프로그램 워크로드](../rtvs/data-science-and-analytical-applications-workload.md)를 참조하세요.
+
+    > [!Note]
+    > Python 및 데이터 과학 워크로드는 Visual Studio 2017 버전 15.2 이상에서만 사용할 수 있습니다.
 
 1. 설치 관리자의 오른쪽에서 필요한 경우 추가 옵션을 선택합니다. 기본 옵션을 적용하려면 이 단계를 건너뜁니다.
 
@@ -63,7 +66,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
     | 옵션 | 설명 |
     | --- | --- |
-    | Python 배포 | 작업하려는 Python 2, Python 3, Anaconda2 및 Anaconda3의 32비트 및 64비트 변형의 조합을 선택합니다. 각각은 배포의 인터프리터, 런타임 및 라이브러리를 포함합니다. 특히 Anaconda는 다양한 미리 설치된 패키지를 포함하는 개방형 데이터 과학 플랫폼입니다. (배포를 추가하거나 제거하기 위해 언제든지 Visual Studio 설치 관리자로 돌아갈 수 있습니다.) |
+    | Python 배포 | 작업하려는 Python 2, Python 3, Anaconda2 및 Anaconda3의 32비트 및 64비트 변형의 조합을 선택합니다. 각각은 배포의 인터프리터, 런타임 및 라이브러리를 포함합니다. 특히 Anaconda는 다양한 미리 설치된 패키지를 포함하는 개방형 데이터 과학 플랫폼입니다. (배포를 추가하거나 제거하기 위해 언제든지 Visual Studio 설치 관리자로 돌아갈 수 있습니다.)  **참고**: Visual Studio 설치 관리자 외부에서 배포를 설치한 경우 여기서 해당 옵션을 선택할 필요가 없습니다. Visual Studio에서 기존 Python 설치를 자동으로 검색합니다. [Python 환경](managing-python-environments-in-visual-studio.md)을 참조하세요. |
     | Cookiecutter 템플릿 지원 | Cookiecutter 그래픽 UI를 설치하여 템플릿을 검색하고, 템플릿 옵션을 입력하고, 프로젝트 및 파일을 만듭니다. [Cookiecutter 확장 사용](using-python-cookiecutter-templates.md)을 선택합니다. |
     | Python 웹 지원 | Bottle, Flask 및 Django 프레임워크를 사용하는 프로젝트에 대한 템플릿과 함께 HTML, CSS 및 JavaScript 편집 지원을 포함하는 웹 개발용 도구를 설치합니다. [Python 웹 프로젝트 템플릿](python-web-application-project-templates.md)을 참조하세요. |
     | Python IoT 지원 | Python을 사용하여 Windows IoT Core 개발을 지원합니다. |
@@ -74,7 +77,9 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
     ![설치 관리자에서 Visual Studio 시작, 수정 또는 제거](media/installation-vs-launch.png)
 
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567]
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Visual Studio에서 Python 지원 설치에 대한 [비디오(Microsoft Virtual Academy)를 시청](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567)하세요.|
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 

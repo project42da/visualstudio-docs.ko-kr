@@ -9,11 +9,11 @@ Description: Learn how to obtain and manage your product keys in Visual Studio s
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 50143579a4bf9033e54385b81ef365228b2b63cf
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 2ed935a5d254f57f4e643013704159c2fc90c8f5
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 제품 키 사용
 
@@ -90,7 +90,8 @@ MPN, BizSpark, MCT 소프트웨어 및 서비스 및 MCT를 통해 제공되는 
 ### <a name="exporting-your-claimed-keys"></a>요청한 키 내보내기
 자동으로 "요청됨"으로 표시된 정적 및 다른 키 중에서 선택한 많은 항목과 함께 요청한 모든 키 목록을 내보낼 수 있습니다.  
 
-**중요: 구독이 만료되면 더 이상 새 키를 요청할 수 없거나 요청한 키를 내보낼 수 없습니다.** 
+> [!IMPORTANT] 
+> 구독이 만료되면 더 이상 새 키를 요청하거나 요청한 키를 내보낼 수 없습니다.** 
 
 키를 내보내려면 [제품 키] 페이지의 오른쪽 끝에 있는 **모든 키 내보내기** 링크를 클릭하기만 하면 됩니다.  KeysExport.xml이라는 제목의 .xml 파일이 만들어지고, 파일을 열거나 저장할 수 있는 옵션이 표시됩니다.  .xml 파일을 처리할 수 있는 응용 프로그램으로 파일을 열어야 합니다.  예를 들어 Excel에서 파일을 읽기 전용 통합 문서로 열 수 있습니다.  
 

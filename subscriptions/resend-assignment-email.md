@@ -1,22 +1,34 @@
 ---
-title: "VLSC에서 구독 할당 전자 메일을 다시 보내는 방법 | Microsoft Docs"
+title: "manage.visualstudio.com 또는 VLSC 내에서 구독 할당 전자 메일을 다시 보내는 방법 | Microsoft Docs"
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
-Ms.date: 12/29/2017
+Ms.date: 2/13/2018
 Ms.topic: Get-Started-Article
-Description: Learn how to resend the subscription assignment to a subscriber from within VLSC
+Description: Learn how to resend the subscription assignment to subscribers from manage.visualstudio.com or VLSC
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 7162435044a578a94249774305f2c6b8b6438219
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 0ba7d6e36c25ced78b0c6b25688e5eb5b26eb04a
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
-# <a name="how-to-resend-subscription-assignment-emails-from-vlsc"></a>VLSC에서 구독 할당 전자 메일을 다시 보내는 방법:
+# <a name="how-to-resend-subscription-assignment-emails"></a>구독 할당 전자 메일을 다시 보내는 방법:
 
+할당 전자 메일을 다시 보내는 데 필요한 단계는 구독 관리에 사용하는 포털에 따라 다릅니다. 
+
+## <a name="resending-assignment-emails-from-within-managevisualstudiocom"></a>manage.visualstudio.com 내에서 할당 전자 메일 다시 보내기
+
+manage.visualstudio.com 포털 내에서 할당 전자 메일을 다시 보내는 프로세스는 매우 간단합니다.
+
+1. [manage.visualstudio.com](https://manage.visualstudio.com) 포털을 방문하여 로그인합니다. 
+2. **필터** 탭을 사용하여 할당 전자 메일을 다시 보낼 구독자를 검색합니다. 필터링에 대한 자세한 내용은 [구독 검색](/visualstudio/subscriptions/search-license)을 참조하세요.
+3. 구독자를 클릭합니다.  Ctrl+클릭 또는 Shift+클릭을 사용하여 여러 구독자를 선택할 수 있습니다.
+4. 검색 결과의 맨 위에서 **다시 보내기**를 클릭합니다.  
+
+## <a name="resending-assignment-emails-from-within-vlsc"></a>VLSC 내에서 할당 전자 메일 다시 보내기
 VLSC의 구독자에게 구독이 할당되고 구독자가 할당 전자 메일을 다시 보내도록 요청할 경우 다시 보내려면 구독자의 전자 메일 정보를 편집한 다음, 다시 원래 주소로 변경합니다. 이렇게 하면 할당 전자 메일 다시 보내기가 자동으로 트리거됩니다.
 
 할당 전자 메일을 다시 보내려면 아래 지침을 따르세요.
@@ -37,4 +49,3 @@ VLSC의 구독자에게 구독이 할당되고 구독자가 할당 전자 메일
 
 > [!NOTE]
 > - 구독이 새로 할당되면 할당 전자 메일이 자동으로 생성됩니다. 위의 내용은 사용자가 새 할당 전자 메일 알림을 요청하거나 어떤 이유로든 알림이 전송되지 않은 경우에만 필요합니다.
-> - https://manage.visualstudio.com을 통해 할당된 구독에 대한 할당 전자 메일을 다시 보내는 데는 이 절차가 필요하지 않습니다.  포털의 구독자에게 할당 전자 메일을 다시 보내려면 구독자를 선택하고 구독자 목록 맨 위에서 **다시 보내기** 단추를 클릭합니다.  

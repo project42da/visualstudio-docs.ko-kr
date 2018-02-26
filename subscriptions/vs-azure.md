@@ -9,11 +9,11 @@ Description: Learn how to activate the Azure benefit included in your Visual Stu
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 7354f96a441faa587e2f669ee39defcf3ced1ff6
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: a0587e063aa73666a0e97460b8d92f4614b3b116
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="using-microsoft-azure-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 Microsoft Azure 사용
 
@@ -68,11 +68,16 @@ Visual Studio 구독자는 추가 비용 없이 Microsoft Azure를 사용할 수
 ![Azure 대시보드](_img\vs-azure\vs-azure-dashboard-cropped.png)
 
 ## <a name="faq"></a>FAQ
-*여기에서 업데이트를 확인하세요.*
+### <a name="q-how-do-i-submit-a-technical-support-incident-from-within-the-azure-portal"></a>Q: Azure Portal 내에서 기술 지원 인시던트를 제출하려면 어떻게 하나요?
+A: Azure Portal에서 지원 인시던트를 제출하는 작업은 세 단계로 실행되는 프로세스입니다.
+1. 기술 지원 혜택을 활성화하고 계약 ID 액세스 ID를 확보합니다.
+2. 지원 계약을 Azure 구독에 연결합니다. 
+3. 지원 인시던트를 제출합니다.
+자세한 내용은 [기술 지원](/visualstudio/subscriptions/vs-tech-support) 설명서를 참조하세요. 
 
 ## <a name="support-resources"></a>지원 리소스
 -  Azure와 관련하여 도움이 필요하세요?  다음 리소스를 확인하세요.
-    - 기술 지원: https://azure.microsoft.com/support/options/ 
-    - [문서](/azure/)
+    - 기술 지원: [https://azure.microsoft.com/support/options/](https://azure.microsoft.com/support/options/)
+    - [Azure 설명서](/visualstudio/azure/)
 -  Visual Studio 구독에 대한 판매, 구독, 계정 및 요금 청구에 대한 지원을 받으려면 Visual Studio [구독 지원](https://www.visualstudio.com/subscriptions/support/)에 문의하세요.
 -  Visual Studio IDE, Visual Studio Team Services 또는 기타 Visual Studio 제품 또는 서비스와 관련하여 궁금한 점이 있나요?  [Visual Studio 지원](https://www.visualstudio.com/support/)을 참조하세요. 

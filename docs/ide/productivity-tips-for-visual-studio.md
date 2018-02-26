@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0700f1ba19c9c352aeaafe4dd3a3f9f4a12f864f
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 48419196050111d12fb149612394fd9ef7935494
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 01/23/2018
 
 다음 기능을 사용하여 더욱 신속하게 코드를 작성합니다.
 
-- **유용한 명령을 사용**합니다. Visual Studio에는 일반적인 편집 작업을 더 빠르게 수행하는 데 도움이 되는 다양한 명령이 있습니다. 예를 들어 **Visual Studio 2017 버전 15.6 미리 보기 2** 이상에서는 코드 줄을 복사하지 않고도 쉽게 복제하여 커서 위치를 변경한 다음, 붙여넣는 명령을 선택할 수 있습니다. **편집** > **복제**를 선택하거나 **Ctrl**+**E**,**V**를 누릅니다. 또한 **편집** > **고급** > **선택 영역 확장** 및 **선택 영역 축소**를 선택하거나 **Ctrl**+**W** 및 **Ctrl**+**Shift**+**W**(**Visual Studio 2017 버전 15.5** 이상에서 사용 가능)를 눌러 선택 영역을 빠르게 확장하거나 축소할 수 있습니다.
+- **유용한 명령을 사용**합니다. Visual Studio에는 일반적인 편집 작업을 더 빠르게 수행하는 데 도움이 되는 다양한 명령이 있습니다. 예를 들어 **Visual Studio 2017 버전 15.6 미리 보기 2** 이상에서는 코드 줄을 복사하지 않고도 쉽게 복제하여 커서 위치를 변경한 다음, 붙여넣는 명령을 선택할 수 있습니다. **편집** > **복제**를 선택하거나 **Ctrl**+**E**,**V**를 누릅니다. 또한 **편집** > **고급** > **선택 영역 확장** 또는 **편집** > **고급** > **선택 영역 축소**를 선택하거나 **Shift**+**Alt**+**=** 또는 **Shift**+**Alt**+**-**(**Visual Studio 2017 버전 15.5** 이상에서 사용 가능)를 눌러 텍스트 선택 영역을 빠르게 확장하거나 축소할 수도 있습니다.
 
 - **IntelliSense 사용** 코드 편집기에 코드를 입력하면 멤버 목록, 매개 변수 정보, 요약 정보, 시그니처 도움말 및 단어 자동 완성과 같은 IntelliSense 정보가 나타납니다. 이러한 기능은 텍스트의 퍼지 일치를 지원합니다. 예를 들어, 멤버 목록의 결과 목록에는 사용자가 입력한 문자로 시작하는 항목 뿐만 아니라 이름에 문자 조합이 들어 있는 항목이 포함됩니다. 자세한 내용은 [IntelliSense 사용](../ide/using-intellisense.md)을 참조하세요.
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 01/23/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[자주 사용되는 명령의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)  
-[방법: 메뉴 및 도구 모음 사용자 지정](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)  
-[연습: 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
-[접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)
+- [자주 사용되는 명령의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio.md)
+- [방법: 메뉴 및 도구 모음 사용자 지정](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)
+- [연습: 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
+- [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)

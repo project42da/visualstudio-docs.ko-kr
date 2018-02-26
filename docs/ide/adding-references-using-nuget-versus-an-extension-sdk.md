@@ -4,19 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
-caps.latest.revision: "21"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4ec453e3bec8bbca0e01d0706b43f82fb413d162
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- multiple
+ms.openlocfilehash: 101d16c647887aced273804fc80a890d5102d22c
+ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 02/20/2018
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>NuGet을 사용한 참조 추가와 확장명 SDK를 사용한 참조 추가
 
@@ -66,7 +68,7 @@ Visual Studio에 대한 NuGet 확장 또는 SDK(소프트웨어 개발 키트)�
 |디버깅 지원을 위해 기호 패키지를 사용할 수 있습니다.|Y|SDK에 .pdb 파일을 넣으면 파일이 자동으로 선택됩니다.|Y||
 |메커니즘에서 패키지 관리자 자동 업데이트를 지원합니다.|N/A|SDK가 MSBuild로 수정됩니다.|Y||
 |메커니즘에서 경량 매니페스트 형식을 지원합니다.|Y|SDKManifest.xml에서 많은 특성을 지원하지만 일반적으로 작은 하위 집합만 있으면 됩니다.|Y||
-|모든 Visual Studio 버전에 메커니즘을 사용할 수 있습니다.|Y|SDK에서 Visual Studio Express부터 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]까지 모든 Visual Studio 버전을 지원합니다.|Y|NuGet에서 Express부터 [!INCLUDE[vsUltLong](../code-quality/includes/vsultlong_md.md)]까지 모든 Visual Studio 버전을 지원합니다.|
+|모든 Visual Studio 버전에 메커니즘을 사용할 수 있습니다.|Y|SDK가 모든 Visual Studio 버전을 지원합니다.|Y|NuGet이 모든 Visual Studio 버전을 지원합니다.|
 |모든 프로젝트 형식에 메커니즘을 사용할 수 있습니다.|N|SDK에서 [!INCLUDE[vs_dev11_long](../data-tools/includes/vs_dev11_long_md.md)]부터 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱을 지원합니다.|N|허용된 프로젝트 목록을 검토할 수 있습니다.|
 
 ## <a name="see-also"></a>참고 항목

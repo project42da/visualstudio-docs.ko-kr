@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -93,27 +94,31 @@ f1_keywords:
 - VB_E_TERRCLASSNOTREG
 - vs.webclient.help.general
 ms.assetid: 8f866eb5-a206-4c16-807e-96a0f2c0e645
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b5353009e2fbfc26898f4163aaad98dd8651c5b1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 5466d764413283cb3f33525f12d7782c02ce6925
+ms.sourcegitcommit: e5bd950df79175a96fe62b3d4b17a3ef536ec4c3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/15/2018
 ---
 # <a name="resources-for-troubleshooting-integrated-development-environment-errors"></a>통합 개발 환경 오류를 해결하기 위한 리소스
 일부 오류 메시지에만 특정 관련된 도움말 항목이 포함됩니다. 오류 메시지의 정보가 문제를 해결하는 데 도움이 되지 않는 경우 기술 자료 문서, 개발자 커뮤니티 또는 제품 지원과 같은 다른 리소스를 참조할 수 있습니다.  
-  
+
 ## <a name="knowledge-base-articles"></a>기술 자료 문서  
  KB(기술 자료)에서 온라인으로 제품 문제에 대한 문서를 검색할 수 있습니다. 일부 문제에는 해당하는 KB 문서가 없지만 많은 고객에게 발생한 오류는 일반적으로 문서화되어 있습니다. [Microsoft 지원](http://go.microsoft.com/fwlink/?linkid=1782) 웹 사이트에서 기술 자료 문서에 액세스할 수 있습니다.  
-  
+
 ## <a name="the-developer-community"></a>개발자 커뮤니티  
  포럼을 통해 다른 개발자 및 Microsoft 직원과 상호 작용할 수 있습니다. 해결 방법을 찾을 수 없는 오류가 발생한 경우에는 문제에 대한 질문을 포럼에 게시할 수 있습니다. 뉴스 그룹을 검색하여 다른 사용자가 같은 문제를 게시했는지 알아볼 수 있습니다.  
-  
+
  [Microsoft 기술 커뮤니티](http://go.microsoft.com/fwlink/?LinkID=144922) 웹 사이트에서 포럼, 블로그, 채팅 및 기타 리소스에 액세스할 수 있습니다.  
-  
+
 ## <a name="product-support"></a>기술 지원  
  다른 리소스를 확인한 후에도 질문 사항이 있는 경우 [Microsoft 지원](http://go.microsoft.com/fwlink/?linkid=1782) 웹 사이트를 방문하여 Microsoft 지원 서비스에 문의할 수 있습니다. 해당 지역에서 사용 가능한 제품 지원에 대한 자세한 내용은 [의견 보내기](../../ide/talk-to-us.md)를 참조하세요.
+
+ ## <a name="see-also"></a>참고 항목
+ * [프록시 오류 문제 해결](/visualstudio/install/install-and-use-visual-studio-behind-a-firewall-or-proxy-server#troubleshooting-proxy-errors)

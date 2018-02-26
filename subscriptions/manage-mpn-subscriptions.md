@@ -9,11 +9,11 @@ Description: Managing Visual Studio subscriptions included with Microsoft Partne
 Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
-ms.openlocfilehash: 9866b018d93e1a7b9612f65107f978ecd15bc9de
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 20c8e0593fa6049a270c8575608d57d59d0c4d2d
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="managing-visual-studio-subscriptions-included-with-microsoft-partner-network-mpn-memberships"></a>MPN(Microsoft 파트너 네트워크) 멤버 자격에 포함된 Visual Studio 구독 관리
 
@@ -28,7 +28,8 @@ Visual Studio 구독 수 및 수준은 MPN [주요 혜택](https://partner.micro
 - Microsoft 파트너 네트워크 [소프트웨어 및 온라인 서비스 혜택에 대한 프로그램 관리자 가이드]((https://assets.microsoft.com/Program-Administrator-Guide-to-Software-and-Online-Services-Benefits_1.pdf) )
     - 6페이지 - Action Pack에 대한 연락처 역할 및 Visual Studio 구독 할당
 
-      **참고:** Visual Studio 구독에는 기술 담당자 역할이 필요합니다.
+> [!NOTE]
+> Visual Studio 구독에는 기술 담당자 역할이 필요합니다.
     - 8페이지 - 역량 파트너에 대한 Visual Studio 구독 할당
 
 

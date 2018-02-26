@@ -2,7 +2,7 @@
 title: "Visual Studio의 Python 지원 개요(Windows) | Microsoft Docs"
 description: "전체 Visual Studio 버전에 대한 질문과 대답(FAQ) 및 기능 지원 매트릭스를 포함하여 Visual Studio의 Python(Visual Studio용 Python 도구, PTVS라고도 함)에 사용할 수 있는 기능의 요약입니다."
 ms.custom: 
-ms.date: 01/09/2018
+ms.date: 02/15/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7c81cd0308dc40049e4d067369e3dcacc1f839a3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8693e876d56a30b31cd873861c37dbef486e7284
+ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/19/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio에서 Python 작업(Windows)
 
@@ -50,9 +50,10 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 
 또한 Python 워크로드는 Windows, Mac OS X, Linux 앱에서 Azure 서비스를 간편하게 사용할 수 있도록 해주는 [Python용 Azure SDK](azure-sdk-for-python.md)도 포함합니다.
 
-동영상 소개는 Microsoft Virtual Academy에 있는 짤막한 [Visual Studio용 Python 도구](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121) 과정을 참조하세요(총 22분 정도). 
-
-> [!VIDEO https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567]
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Visual Studio의 Python 소개 [비디오 시리즈(Microsoft Virtual Academy)를 시청](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)하세요(총 22분). |
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Microsoft Virtual Academy에서 다음 비디오도 시청하세요.<ul><li>[Python을 사용한 프로그래밍 소개](https://mva.microsoft.com/en-US/training-courses/introduction-to-programming-with-python-8360?l=lqhuMxFz_8904984382)</li><li>[Python 초보자: 문자열 및 함수](https://mva.microsoft.com/en-US/training-courses/python-beginner-strings-and-functions-18015)</li><li>[Python 기초: 목록 및 루프](https://mva.microsoft.com/en-US/training-courses/python-fundamentals-lists-and-loops-18019)</li><li>[Python에 대해 가장 많이 하는 질문](https://mva.microsoft.com/en-US/training-courses/python-tools-for-visual-studio-2017-18121)</li></ul> |
 
 ## <a name="questions-and-answers"></a>질문과 대답
 
@@ -81,7 +82,8 @@ Windows의 Visual Studio는 Python 개발 및 데이터 과학 워크로드(Visu
 - Visual Studio 2012(Pro 버전 이상)
 - Visual Studio 2010 SP1(Pro 버전 이상, .NET 4.5 필요)
 
-기능이 Visual Studio의 최신 버전에 대해서만 완전하게 지원 및 유지 관리됩니다. 기능이 이전 버전에서 사용할 수 있지만 적극적으로 유지 관리되지 않습니다.
+> [!Important]
+> 기능이 Visual Studio의 최신 버전에 대해서만 완전하게 지원 및 유지 관리됩니다. 기능이 이전 버전에서 사용할 수 있지만 적극적으로 유지 관리되지 않습니다.
 
 | Python 지원 | 2017 | 2015 | 2013 Comm | 2013 Desktop | 2013 Web | 2013 Pro+ | 2012 Pro+ | 2010 SP1 Pro+ |
 | --- | --- | --- | --- | --- | --- | --- | --- | ---|
