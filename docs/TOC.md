@@ -97,6 +97,7 @@
 ##### [템플릿 매개 변수 대체](ide/how-to-substitute-parameters-in-a-template.md)
 #### [Visual Studio IDE 64비트 지원](ide/visual-studio-ide-64-bit-support.md)
 ### [프로젝트 또는 솔루션 없이 개발("폴더 열기")](ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+#### [빌드 및 디버그 작업 사용자 지정](ide/customize-build-and-debug-tasks-in-visual-studio.md)
 ### [편집기에서 코드 작성](ide/writing-code-in-the-code-and-text-editor.md)
 #### [텍스트 찾기 및 바꾸기](ide/finding-and-replacing-text.md)
 ##### [정규식 사용](ide/using-regular-expressions-in-visual-studio.md)
