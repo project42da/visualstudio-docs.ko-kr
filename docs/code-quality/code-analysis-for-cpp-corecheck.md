@@ -4,20 +4,23 @@ ms.custom:
 ms.date: 01/18/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: code analysis, C++ core check
+helpviewer_keywords:
+- code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d5db13aa350e33a297981066f36c3d1dfd1ecb67
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- cplusplus
+ms.openlocfilehash: e0e12941db7f8e6f539c88014fc5fa9c55ca809c
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C + + 핵심 지침 검사기 참조
 이 섹션에는 c + + 코어 지침 검사기 경고가 나열 됩니다. 코드 분석에 대 한 정보를 참조 하십시오. [/analyze (코드 분석)](/cpp/build/reference/analyze-code-analysis) 및 [빠른 시작: C/c + +에 대 한 코드 분석](../code-quality/quick-start-code-analysis-for-c-cpp.md)합니다.  
@@ -197,7 +200,7 @@ C26498 USE_CONSTEXPR_FOR_FUNCTIONCALL
 
 ## <a name="type-group"></a>형식 그룹
 C26465 NO_CONST_CAST_UNNECESSARY  
-  사용 하지 않는 `const_cast` 캐스팅 하 `const`합니다. `const_cast`필수가 아닙니다. 상수 성을 또는 변동성이이 변환에 의해 제거 되지 않습니다. 참조 [c + + 코어 지침 Type.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast)합니다.  
+  사용 하지 않는 `const_cast` 캐스팅 하 `const`합니다. `const_cast` 필수가 아닙니다. 상수 성을 또는 변동성이이 변환에 의해 제거 되지 않습니다. 참조 [c + + 코어 지침 Type.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-constcast)합니다.  
   
 C26466 NO_STATIC_DOWNCAST_POLYMORPHIC  
   사용 하지 않는 `static_cast` downcast 합니다. 다형 형식에서 캐스팅 dynamic_cast를 사용 해야 합니다. 참조 [c + + 코어 지침 Type.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#Pro-type-downcast)합니다.  
@@ -248,6 +251,20 @@ C26483 STATIC_INDEX_OUT_OF_RANGE
 
 [C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)   
   식 '%expr% ': 포인터 decay 배열이 없습니다. 참조 [c + + 코어 지침 Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)합니다.  
-  
+
+## <a name="deprecated-warnings"></a>사용 되지 않는 경고
+
+다음 경고는 초기 실험적 규칙 집합의 핵심 지침 검사기에 나타나는 하지만 이제 사용 되지 및 안전 하 게 무시할 수 있습니다. 경고는 위의 목록에서 경고에 의해 대체 됩니다.
+
+- 26412 DEREF_INVALID_POINTER
+- 26413 DEREF_NULLPTR
+- 26420 ASSIGN_NONOWNER_TO_EXPLICIT_OWNER
+- 26421 ASSIGN_VALID_OWNER
+- 26422 VALID_OWNER_LEAVING_SCOPE
+- 26423 ALLOCATION_NOT_ASSIGNED_TO_OWNER
+- 26424 VALID_ALLOCATION_LEAVING_SCOPE
+- 26425 ASSIGNING_TO_STATIC
+- 26499 NO_LIFETIME_TRACKING
+
 ## <a name="see-also"></a>참고 항목  
 [C + + 코어 지침 검사기를 사용 하 여](using-the-cpp-core-guidelines-checkers.md)

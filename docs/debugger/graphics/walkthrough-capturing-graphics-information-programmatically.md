@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: bbce760956dda7c9399d25dd241df26ec0e59644
-ms.sourcegitcommit: b01406355e3b97547b7cbf8ce3960f101b165cec
+ms.openlocfilehash: 3de32ab0b9ded416f57f4699e534b6401c2a483c
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/05/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>연습: 프로그래밍 방식으로 그래픽 정보 캡처
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 그래픽 진단을 사용하여 Direct3D 앱에서 그래픽 정보를 프로그래밍 방식으로 캡처할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 02/05/2018
   
 -   수동 테스트로는 렌더링 문제를 예측하고 캡처하기 어려워도 런타임의 앱 상태에 대한 정보를 사용하여 프로그래밍 방식으로 예측할 수 있는 경우 `CaptureCurrentFrame`을 호출합니다.  
   
-##  <a name="CaptureDX11_2"></a>Windows 10의 프로그래밍 방식 캡처  
+##  <a name="CaptureDX11_2"></a> Windows 10의 프로그래밍 방식 캡처  
  이 연습 부분에서는 강력한 캡처 방법을 사용 하 여 Windows 10에서 DirectX 11.2 API를 사용 하는 앱의 프로그래밍 방식 캡처를 보여 줍니다.
   
  이 섹션에서는 다음 작업을 수행하는 방법을 보여줍니다.  
@@ -79,7 +79,7 @@ ms.lasthandoff: 02/05/2018
     HRESULT getAnalysis = DXGIGetDebugInterface1(0, __uuidof(pGraphicsAnalysis), reinterpret_cast<void**>(&pGraphicsAnalysis));  
     ```  
   
-     `HRESULT` 이 반환한 `DXGIGetDebugInterface1` 를 확인하여 인터페이스를 사용하기 전에 유효한지 확인해야 합니다.  
+     반드시 확인는 `HRESULT` 반환한 [DXGIGetDebugInterface1](https://msdn.microsoft.com/library/windows/desktop/dn457937(v=vs.85).aspx) 를 확인 하는 유효한 인터페이스를 사용 하기 전에:  
   
     ```  
     if (FAILED(getAnalysis))  

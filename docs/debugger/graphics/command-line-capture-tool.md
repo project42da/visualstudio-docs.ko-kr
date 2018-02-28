@@ -4,20 +4,22 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
-caps.latest.revision: "4"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 68ea5a718b1a0d1ccff7155f842bc3808d640c21
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 4290ccb1184f658d04d6903520f709384e58e837
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="command-line-capture-tool"></a>명령줄 캡처 도구
 DXCap.exe는 그래픽 진단 캡처 및 재생을 위한 명령줄 도구로, 모든 기능 수준에서 Direct3D 10 - Direct3D 12를 지원합니다.  
@@ -42,12 +44,12 @@ DXCap.exe -info
   
  `-frame` `frames`  
  캡처 모드에서 `frames`는 캡처하려는 프레임을 지정합니다. 첫 번째 프레임은 1입니다. 쉼표 및 범위를 사용하여 여러 프레임을 지정할 수 있습니다. 예를 들어 경우 `frames` 은 `2, 5, 7-9, 15`, 프레임 `2`, `5`, `7`, `8`, `9`, 및 `15` 캡처됩니다.  
+
+> [!TIP]
+> 사용 하 여 `-frame` `manual` Print Screen 키를 눌러 프레임을 수동으로 캡처될를 지정할 수 있습니다. 앱이 시작될 때 프레임을 캡처할 수 있습니다. 프레임 캡처를 중지하려면 명령줄 인터페이스로 돌아가서 Enter 키를 누릅니다.  
   
  `-period` `periods`  
  캡처 모드에서 `periods`는 프레임을 캡처할 시간 범위를 초 단위로 지정합니다. 쉼표 및 범위를 사용하여 여러 기간을 지정할 수 있습니다. 예를 들어 경우 `periods` 은 `2.1-5, 7.0-9.3`, 사이 렌더링 된 프레임 `2.1` 및 `5` 초,`7` 및 `9.3` 초 캡처됩니다.  
-  
- `-manual`  
- 캡처 모드 `-manual` Print Screen 키를 눌러 프레임을 수동으로 캡처될 있는지를 지정 합니다. 앱이 시작될 때 프레임을 캡처할 수 있습니다. 프레임 캡처를 중지하려면 명령줄 인터페이스로 돌아가서 Enter 키를 누릅니다.  
   
  `-c` `app` [`args...`]  
  캡처 모드입니다. 캡처 모드에서 `app`은 그래픽 정보를 캡처할 앱의 이름을 지정하고 `args...`는 해당 앱에 대한 추가 명령줄 매개 변수를 지정합니다.  
@@ -164,17 +166,17 @@ DXCap.exe -e map
   
  위의 명령은 "map"와 일치 하는 UWP 앱을 열거 출력은 다음과 같습니다.  
   
- **패키지 "Microsoft.BingMaps":**  
- **C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe InstallDirectory:**  
- **FullName: Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
- **UserSID: S-1-5-21-2127521184-1604012920-1887927527-5603533**  
- **이름: Microsoft.BingMaps**  
- **게시자: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = 워싱턴, C = US**  
+ **Package "Microsoft.BingMaps":**  
+ **InstallDirectory : C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
+ **FullName         : Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
+ **UserSID          : S-1-5-21-2127521184-1604012920-1887927527-5603533**  
+ **Name             : Microsoft.BingMaps**  
+ **Publisher        : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US**  
  **버전: 2.1.2914.1734**  
  **시작 가능한 응용 프로그램:**  
- **Id: AppexMaps**  
- **Exe: C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
- **IsWWA: 아니요**  
+ **Id   : AppexMaps**  
+ **Exe  : C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
+ **IsWWA: No**  
  * * (시작)를 AppSpec: **DXCap.exe-c Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps*** 열거 된 각 응용 프로그램에 대 한 출력의 마지막 줄에서 그래픽 정보 캡처를 사용할 수 있습니다 명령이 표시 됩니다.  
   
 ### <a name="capture-specific-frames-or-frames-between-specific-times"></a>특정 프레임 또는 특정 시간 사이의 프레임 캡처  

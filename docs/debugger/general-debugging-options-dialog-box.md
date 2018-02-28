@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 05/23/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
@@ -18,18 +19,20 @@ dev_langs:
 - FSharp
 - C++
 - JScript
-helpviewer_keywords: Options dialog box, debugging
+helpviewer_keywords:
+- Options dialog box, debugging
 ms.assetid: b33aee0b-43c3-4c26-8ed4-bc673f491503
-caps.latest.revision: "46"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c7f6983c2be5604867f729ed006eadb5257c3a43
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload:
+- multiple
+ms.openlocfilehash: 01c87cfc2beb030b2fd10a4455def65ab139a5f0
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="general-debugging-options-dialog-box"></a>옵션 대화 상자, 디버깅, 일반
 **도구 > 옵션 > 디버깅 > 일반** 페이지에서는 다음 옵션을 설정할 수 있습니다.  
@@ -115,7 +118,7 @@ SrcSrv(`srcsrv.dll`) 프로토콜을 구현하는 소스 서버로부터 소스 
 모든 개체 구조체 뷰 사용자 지정을 해제합니다. 보기 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [.managed 개체의 사용자 지정 뷰 만들기](../debugger/create-custom-views-of-dot-managed-objects.md)합니다.  
   
 **(관리 전용) 모듈을 로드할 때 JIT 최적화를 표시 안 함**  
-디버거가 연결되어 있는 동안 모듈이 로드되고 JIT가 컴파일될 때 관리 코드의 JIT 최적화를 해제합니다. 최적화를 해제하면 성능이 저하될 수 있지만 일부 문제를 보다 쉽게 디버깅할 수 있습니다. 내 코드만 기능을 사용하는 경우 JIT 최적화를 해제하면 사용자가 작성하지 않은 코드가 사용자 코드("내 코드")로 표시될 수 있습니다.
+디버거가 연결되어 있는 동안 모듈이 로드되고 JIT가 컴파일될 때 관리 코드의 JIT 최적화를 해제합니다. 최적화를 해제하면 성능이 저하될 수 있지만 일부 문제를 보다 쉽게 디버깅할 수 있습니다. 내 코드만 기능을 사용하는 경우 JIT 최적화를 해제하면 사용자가 작성하지 않은 코드가 사용자 코드("내 코드")로 표시될 수 있습니다. 자세한 내용은 참조 [JIT 최적화 및 디버깅](../debugger/jit-optimization-and-debugging.md)합니다.
 
 **JavaScript 디버깅 (Chrome 및 IE) ASP.NET에 대 한 사용** ASP.NET 앱에 대 한 스크립트 디버거를 사용 하도록 설정 합니다. Chrome에서 처음 사용할 때 사용자가 설치한 크롬 확장명 사용을 처음 사용할 때 브라우저에 로그인 할 해야 합니다. 레거시 동작으로 되돌리려면이 옵션을 사용 하지 않도록 설정 합니다.    
 
