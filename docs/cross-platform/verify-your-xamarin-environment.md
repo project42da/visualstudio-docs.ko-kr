@@ -7,16 +7,17 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
-caps.latest.revision: "13"
+caps.latest.revision: 
 author: ghogen
 ms.author: ghogen
 manager: ghogen
-ms.workload: xamarin
-ms.openlocfilehash: 203f977ac4bc9a0ba72284b54a6936a77bae0f61
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- xamarin
+ms.openlocfilehash: 5878da6742412a368e7b5ff84d0e0e20a4751914
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 환경 확인
 설치 관리자가 완료되면([설정 및 설치](../cross-platform/setup-and-install.md) 참조) 몇 분 동안 Xamarin 개발을 경험할 모든 준비가 되었는지 확인하세요.  
@@ -77,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
          ![Windows Phone 에뮬레이터를 디버그 대상으로는 선택](../cross-platform/media/crossplat-xamarin-verify-4.png "CrossPlat Xamarin Verify 4")  
   
-    -   에뮬레이터를 작동하는 데 문제가 발생하는 경우 [Windows Phone 8 Emulator 문제 해결](https://msdn.microsoft.com/library/windows/apps/jj681694.aspx)(영문)을 참조하세요.  
+    -   에뮬레이터를 작동하는 데 문제가 발생하는 경우 [Windows Phone 8 Emulator 문제 해결](/previous-versions/windows/apps/jj681694\(v%3dvs.105\))(영문)을 참조하세요.  
   
 ## <a name="ios"></a>iOS  
   

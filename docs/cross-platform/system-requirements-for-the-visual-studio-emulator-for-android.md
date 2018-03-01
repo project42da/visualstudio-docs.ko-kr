@@ -14,16 +14,16 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 520cd9eacf494ac1d8f8e26a7e1ef51581a49956
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: def17f215bd157da8d0e31f400e6b353a4d38f12
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="system-requirements-for-the-visual-studio-emulator-for-android"></a>System requirements for the Visual Studio Emulator for Android
 Android용 Visual Studio 에뮬레이터는 Windows 8 이상 버전의 가상화 기술인 Hyper-V에서 가상 컴퓨터로 실행됩니다. 에뮬레이터를 실행하려면 컴퓨터가 이 항목의 설명대로 Hyper-V를 실행하기 위한 요구 사항을 충족해야 합니다.  
   
- 에뮬레이터를 설치할 때 설치 프로그램이 이러한 필수 조건을 자동으로 구성하려고 시도합니다. 설치에서 이 필수 조건이 성공적으로 구성되면 에뮬레이터는 예상대로 작동합니다. 제대로 구성되지 않으면 수동으로 이 필수 조건을 설정해야 할 수도 있습니다. 필수 조건을 수동으로 구성해야 하는 경우 단계 및 도구는 Windows Phone 에뮬레이터에 대해 [여기](https://msdn.microsoft.com/en-us/library/windows/apps/jj863509\(v=vs.105\).aspx) 에서 설명하는 단계와 동일합니다.  
+ 에뮬레이터를 설치할 때 설치 프로그램이 이러한 필수 조건을 자동으로 구성하려고 시도합니다. 설치에서 이 필수 조건이 성공적으로 구성되면 에뮬레이터는 예상대로 작동합니다. 제대로 구성되지 않으면 수동으로 이 필수 조건을 설정해야 할 수도 있습니다. 필수 조건을 수동으로 구성해야 하는 경우 단계 및 도구는 Windows Phone 에뮬레이터에 대해 [여기](/previous-versions/windows/apps/jj863509\(v=vs.105\)) 에서 설명하는 단계와 동일합니다.  
   
 > [!IMPORTANT]
 >  에뮬레이터에 대한 설치 프로그램은 Android용 Visual Studio 에뮬레이터를 실행하기 위한 필수 조건을 확인합니다. 필수 조건이 없는 경우 경고가 표시되지만 이러한 필수 조건을 필수로 요구하지는 않습니다.  

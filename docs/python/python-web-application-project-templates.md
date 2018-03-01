@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 49b27fcc972cf8b0bb0411f5ee54ea611cdd4d75
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b75aae5811fa2410cf169d3401184b8af7ca381d
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="python-web-application-project-templates"></a>Python 웹 응용 프로그램 프로젝트 템플릿
 
@@ -35,7 +35,7 @@ Visual Studio는 자체 프레임워크를 포함하지 않습니다. 프레임�
 
 Bottle, Flask 및 Django의 각 템플릿은 몇 가지 페이지 및 정적 파일이 있는 시작 사이트를 포함합니다. 이 코드를 통해 서버를 로컬(일부 설정을 해당 환경에서 가져와야 함)에서 충분히 실행하고 디버깅하며 Microsoft Azure에 배포([WSGI 앱](http://www.python.org/dev/peps/pep-3333/) 개체에 제공해야 함)할 수 있습니다.
 
-프레임워크별 템플릿에서 프로젝트를 만들 때 pip를 사용하여 필요한 패키지를 설치할 수 있는 대화 상자가 나타납니다. 웹 프로젝트에 대해 [가상 환경](managing-python-environments-in-visual-studio.md#global-and-virtual-environments)을 사용하여 웹 사이트를 게시할 때 올바른 종속성이 포함되도록 하는 것이 좋습니다.
+프레임워크별 템플릿에서 프로젝트를 만들 때 pip를 사용하여 필요한 패키지를 설치할 수 있는 대화 상자가 나타납니다. 웹 프로젝트에 대해 [가상 환경](selecting-a-python-environment-for-a-project.md#using-virtual-environments)을 사용하여 웹 사이트를 게시할 때 올바른 종속성이 포함되도록 하는 것이 좋습니다.
 
 ![프로젝트 템플릿에 대해 필요한 패키지를 설치하는 대화 상자](media/template-web-requirements-txt-wizard.png)
 

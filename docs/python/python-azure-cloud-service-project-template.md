@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: f6122e989ce1394f31aab26b3c2eace68e9f3d21
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: f8ed008df50eaa2c82686e67cf47461c14d491e0
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="azure-cloud-service-projects-for-python"></a>Python용 Azure Cloud Service 프로젝트
 
@@ -93,7 +93,7 @@ Visual Studio는 Python을 사용하여 Azure Cloud Services 만들기를 시작
 
 클라우드 서비스 인스턴스는 C 컴파일러를 포함하지 않으므로 C 확장명이 있는 모든 라이브러리는 사전 컴파일된 이진 파일을 제공해야 합니다.
 
-pip 및 해당 종속성과 `requirements.txt`의 패키지는 자동으로 다운로드되며 청구 가능한 대역폭 사용량으로 계산할 수 있습니다. `requirements.txt` 파일 관리에 대한 자세한 내용은 [필수 패키지 관리](managing-python-environments-in-visual-studio.md#managing-required-packages-requirementstxt)를 참조하세요.
+pip 및 해당 종속성과 `requirements.txt`의 패키지는 자동으로 다운로드되며 청구 가능한 대역폭 사용량으로 계산할 수 있습니다. `requirements.txt` 파일 관리에 대한 자세한 내용은 [필수 패키지 관리](managing-required-packages-with-requirements-txt.md)를 참조하세요.
 
 ## <a name="troubleshooting"></a>문제 해결
 
