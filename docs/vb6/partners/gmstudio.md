@@ -2,14 +2,17 @@
 title: "훌륭한 마이그레이션 Studio (gmStudio) | Microsoft Docs"
 description: "확장성, 사용자 지정 VB6/ASP/통신.NET 업그레이드 솔루션에 대 한 훌륭한 마이그레이션 도구"
 ms.date: 09/05/2017
-ms.technology: devlang-vb
+ms.technology:
+- devlang-vb
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: visual-basic
+dev_langs:
+- visual-basic
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 8478f4f7cd3bc342f19b84a085b1889405ca6676
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT

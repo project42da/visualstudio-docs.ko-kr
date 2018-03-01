@@ -2,14 +2,17 @@
 title: ".NET의 Visual Basic 업그레이드 도우미 (VBUC) 동원 | Microsoft Docs"
 description: "Visual Basic 6에서 Visual Basic.NET 및 C#으로 마이그레이션.Net의 도구 동원"
 ms.date: 09/05/2017
-ms.technology: devlang-vb
+ms.technology:
+- devlang-vb
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: visual-basic
+dev_langs:
+- visual-basic
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: b7fa2a16143368b829f29f43a4c8f60536b55c52
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT

@@ -2,14 +2,17 @@
 title: "Visual Basic 6.0 파트너 제품 | Microsoft Docs"
 description: "Visual Basic 6.0에서 .NET으로 마이그레이션에 대한 파트너 제품입니다."
 ms.date: 09/01/2017
-ms.technology: devlang-vb
+ms.technology:
+- devlang-vb
 ms.tgt_pltfrm: 
 ms.topic: article
-dev_langs: visual-basic
+dev_langs:
+- visual-basic
 author: rpetrusha
 ms.author: ronpet
 manager: wpickett
-ms.workload: dotnet
+ms.workload:
+- dotnet
 ms.openlocfilehash: 10db1f39ac362d64b0bf5b794695f6f2089f8aca
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT

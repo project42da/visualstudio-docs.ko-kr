@@ -7,17 +7,18 @@ ms.suite:
 ms.technology: vs-devops-test
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: coded UI tests
-ms.assetid: 544742b5-4ec1-4d51-b941-72b2f6ff17bc
-caps.latest.revision: "106"
-ms.author: douge
-manager: douge
-ms.workload: multiple
-ms.openlocfilehash: 580187da1ceb95369eb9da085248016a9d9a1707
-ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
+helpviewer_keywords:
+- coded UI tests
+ms.author: gewarren
+manager: ghogen
+ms.workload:
+- multiple
+author: gewarren
+ms.openlocfilehash: d2cc29115108b1a5d308a227ed0be30d44e56d67
+ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 01/09/2018
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼
 아래의 표에는 Visual Studio Enterprise의 코딩된 UI 테스트에 지원되는 구성 및 플랫폼이 나와 있습니다. 이러한 구성은 [!INCLUDE[MTRlong](../test/includes/mtrlong_md.md)]를 사용하여 만든 작업 기록에도 적용됩니다.  
@@ -70,6 +71,6 @@ ms.lasthandoff: 01/02/2018
   
  다른 플랫폼을 지원하기 위한 확장을 만드는 방법에 대한 자세한 내용은 [컨트롤의 코딩된 UI 테스트 사용](../test/enable-coded-ui-testing-of-your-controls.md) 및 [Microsoft Excel을 지원하도록 코딩된 UI 테스트 및 작업 기록 확장](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)을 참조하세요.  
   
-## <a name="see-also"></a>참고 항목  
- [UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)   
- [기존 작업 기록에서 코딩된 UI 테스트 생성](/devops-test-docs/test/generating-a-coded-ui-test-from-an-existing-action-recording)
+## <a name="see-also"></a>참고 항목
+
+[UI 자동화를 사용하여 코드 테스트](../test/use-ui-automation-to-test-your-code.md)  
