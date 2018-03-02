@@ -43,7 +43,6 @@
 #### [방법: 웹 사이트에 대한 성능 데이터 수집](how-to-collect-performance-data-for-a-web-site.md)
 #### [방법: 성능 세션 수동으로 만들기](how-to-manually-create-performance-sessions.md)
 #### [연습: 성능 문제 확인](walkthrough-identifying-performance-problems.md)
-#### [PeopleTrax 샘플(프로파일링 도구)](peopletrax-sample-profiling-tools.md)
 ### [성능 세션 구성](configuring-performance-sessions.md)
 #### [방법: Windows 기호 정보 참조](how-to-reference-windows-symbol-information.md)
 #### [방법: 수집 방법 선택](how-to-choose-collection-methods.md)
