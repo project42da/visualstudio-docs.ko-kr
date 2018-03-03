@@ -4,62 +4,74 @@ ms.custom:
 ms.date: 12/06/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9ee45132e4acf45bccffd3e05808defd3c7ced6d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 01e6203d7fbef7115ea2e380494735888995e343
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="view-snapshots-using-intellitrace-step-back"></a>IntelliTrace 단계 백을 사용 하 여 스냅숏을 볼
+# <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio에서 IntelliTrace를 사용 하 여 스냅숏 볼 단계 저장
+
 IntelliTrace 단계 다시 자동으로 스냅숏을에서 모든 중단점 및 디버거 응용 프로그램의 단계 이벤트입니다. 기록된 스냅숏을 통해 이전 중단점 또는 단계로 돌아가서 응용 프로그램의 과거 상태를 볼 수 있습니다. IntelliTrace 뒤로 이동을 사용하면 이전 응용 프로그램 상태를 보고 싶지만 디버깅을 다시 시작하거나 원하는 앱 상태를 다시 만들지 않으려는 경우에 시간을 절약할 수 있습니다.
 
 IntelliTrace 단계 저장은 Visual Studio Enterprise 2017 15.5 이상 버전에서에서 시작 가능 하 고 Windows 10 Anniversary 업데이트 필요 이상. 기능은 현재 ASP.NET, WinForms, WPF, 관리 되는 콘솔 응용 프로그램 및 관리 되는 클래스 라이브러리를 디버깅을 위해 지원 됩니다. ASP.NET Core,.NET Core 또는 UWP 응용 프로그램 디버깅 현재 지원 되지 않습니다. 
   
 ## <a name="enable-intellitrace-events-and-snapshots-mode"></a>IntelliTrace 이벤트 및 스냅숏 모드를 사용 하도록 설정 
-기능을 사용 하려면로 이동 **도구 > 옵션 > IntelliTrace** 설정 및 옵션을 선택 **IntelliTrace 이벤트 및 스냅숏**합니다. 
 
-![IntelliTrace 이벤트 및 스냅숏 모드를 사용 하도록 설정](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace 이벤트를 사용 하도록 설정 및 스냅숏 모드")
+1. Visual Studio Enterprise에서로 이동 **도구 > 옵션 > IntelliTrace** 설정 및 옵션을 선택 **IntelliTrace 이벤트 및 스냅숏**합니다. 
 
-IntelliTrace 스냅숏을 응용 프로그램의 프로세스의 각 디버거에서 단계와 중단점 이벤트입니다. 이러한 이벤트에 기록 됩니다는 **이벤트** 탭에 **진단 도구** 다른 IntelliTrace 이벤트와 함께 창. 이 창을 열려면 선택 **디버그 / Windows / 진단 도구 표시**합니다.
+    ![IntelliTrace 이벤트 및 스냅숏 모드를 사용 하도록 설정](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace 이벤트를 사용 하도록 설정 및 스냅숏 모드")
 
-카메라 아이콘 사용할 수 있는 스냅숏이를 이벤트 옆에 나타납니다. 
+2. Visual Studio에서 프로젝트를 엽니다.
 
-![이벤트 탭 스냅숏과 함께](../debugger/media/intellitrace-events-tab-with-snapshots.png "중단점 및 단계에 대 한 스냅숏이 포함 된 이벤트 탭")
+3. 프로젝트에 하나 이상의 중단점을 설정 하 고 디버깅 시작 (키를 눌러 **F5**), 코드를 단계별로 실행 하 여 디버깅을 시작 하거나 (**F10** 또는 **F11**).
 
-성능상의 이유로 스냅숏 매우 신속 하 게 단계별로 실행할 때 수행 되지 않습니다. 카메라 아이콘이 표시 되지 않으면 단계 옆에 느리게 단계별 실행 해 보십시오.
+    IntelliTrace 스냅숏을 응용 프로그램의 프로세스의 각 디버거에서 단계와 중단점 이벤트입니다. 이러한 이벤트에 기록 됩니다는 **이벤트** 탭에 **진단 도구** 다른 IntelliTrace 이벤트와 함께 창. 이 창을 열려면 선택 **디버그** > **Windows** > **진단 도구 표시**합니다.
+
+    카메라 아이콘 사용할 수 있는 스냅숏이를 이벤트 옆에 나타납니다. 
+
+    ![이벤트 탭 스냅숏과 함께](../debugger/media/intellitrace-events-tab-with-snapshots.png "중단점 및 단계에 대 한 스냅숏이 포함 된 이벤트 탭")
+
+    성능상의 이유로 스냅숏 매우 신속 하 게 단계별로 실행할 때 수행 되지 않습니다. 카메라 아이콘이 표시 되지 않으면 단계 옆에 느리게 단계별 실행 해 보십시오.
 
 ## <a name="navigate-and-view-snapshots"></a>이동 하 고 스냅숏 보기
 
-사용 하 여 이벤트 간을 탐색할 수 있습니다는 **이전 (Alt + [)** 및 **단계 (Alt +])** 디버그 도구 모음 단추입니다. 에 나타나는 이벤트를 탐색 하는이 단추는 **이벤트** 탭에 **진단 도구 창을**합니다. 이벤트의 앞이나 뒤로 이동하면 선택한 이벤트에 대한 기록 디버깅이 자동으로 활성화됩니다.
+1. 사용 하 여 이벤트 간의 탐색는 **이전 (Alt + [)** 및 **단계 (Alt +])** 디버그 도구 모음 단추입니다.
 
-![뒤로 및 앞으로 단추](../debugger/media/intellitrace-step-back-icons-description.png "단계 뒤로 및 앞으로 단계 단추")
+    에 나타나는 이벤트를 탐색 하는이 단추는 **이벤트** 탭에 **진단 도구 창을**합니다. 이벤트의 앞이나 뒤로 이동하면 선택한 이벤트에 대한 기록 디버깅이 자동으로 활성화됩니다.
 
-한 걸음 물러나 또는으로 이동 하는 경우 Visual Studio 기록 디버깅 모드를 입력 합니다. 이 모드에서는 선택한 이벤트가 기록 된 경우 시간은 디버거의 컨텍스트 전환 됩니다. 또한 visual Studio는 소스 창에서 코드의 해당 줄에 포인터를 이동합니다. 
+    ![뒤로 및 앞으로 단추](../debugger/media/intellitrace-step-back-icons-description.png "단계 뒤로 및 앞으로 단계 단추")
 
-이 보기에서의 값을 검사할 수 있습니다는 **호출 스택**, **지역**, **자동**, 및 **조사식** windows 합니다. DataTips를 확인 하 고에 식 평가 수행 하는 변수를 가리키면 수도 있습니다는 **직접 실행** 창. 보고 있는 데이터는 시간에서 해당 시점에 수행 되는 응용 프로그램의 프로세스의 스냅숏에서 됩니다.
+    한 걸음 물러나 또는으로 이동 하는 경우 Visual Studio 기록 디버깅 모드를 입력 합니다. 이 모드에서는 선택한 이벤트가 기록 된 경우 시간은 디버거의 컨텍스트 전환 됩니다. 또한 visual Studio는 소스 창에서 코드의 해당 줄에 포인터를 이동합니다. 
 
-따라서, 예를 들어 중단점에 도달 하 고 단계를 수행 하는 경우 (**F10**), **이전 단계** 단추 중단점에 해당 코드의 줄에서 기록 모드에서 Visual Studio를 넣습니다. 
+    이 보기에서의 값을 검사할 수 있습니다는 **호출 스택**, **지역**, **자동**, 및 **조사식** windows 합니다. DataTips를 확인 하 고에 식 평가 수행 하는 변수를 가리키면 수도 있습니다는 **직접 실행** 창. 보고 있는 데이터는 시간에서 해당 시점에 수행 되는 응용 프로그램의 프로세스의 스냅숏에서 됩니다.
 
-![활성 중 기록 모드 스냅숏 사용 하 여 이벤트에서](../debugger/media/intellitrace-historical-mode-with-snapshot.png "활성 중 기록 모드 스냅숏 사용 하 여 이벤트에서")
+    따라서, 예를 들어 중단점에 도달 하 고 단계를 수행 하는 경우 (**F10**), **이전 단계** 단추 중단점에 해당 코드의 줄에서 기록 모드에서 Visual Studio를 넣습니다. 
 
-라이브 실행 돌아가려면 선택 **계속 (F5)** 하거나 클릭 하 고 **라이브 디버깅으로 돌아가세요** 정보 표시줄에 링크 합니다. 
+    ![활성 중 기록 모드 스냅숏 사용 하 여 이벤트에서](../debugger/media/intellitrace-historical-mode-with-snapshot.png "활성 중 기록 모드 스냅숏 사용 하 여 이벤트에서")
 
-스냅숏을 볼 수 있습니다는 **이벤트** 탭 합니다. 스냅숏 사용 하 여 이벤트를 선택 하 고 클릭 **기록 디버깅 활성화**합니다. 기록 디버깅 활성화 하려면 카메라 아이콘을 클릭할 수도 있습니다.
+2. 라이브 실행 돌아가려면 선택 **계속 (F5)** 하거나 클릭 하 고 **라이브 디버깅으로 돌아가세요** 정보 표시줄에 링크 합니다. 
 
-![이벤트에 기록 디버깅 활성화](../debugger/media/intellitrace-activate-historical-debugging.png "이벤트에 기록 디버깅 활성화")
+3. 스냅숏을 볼 수 있습니다는 **이벤트** 탭 합니다. 이 작업을 수행 하려면 스냅숏 사용 하 여 이벤트를 선택 하 고 클릭 **기록 디버깅 활성화**합니다.
 
-와 달리는 **다음 문 설정** 스냅숏 보기 명령 코드를 다시 실행 하지 않으면 제공 응용 프로그램의 상태에 대 한 정적 뷰 시점 이전에 발생 한 시간에서입니다.
+    기록 디버깅 활성화 하려면 카메라 아이콘을 클릭할 수도 있습니다.
 
-![IntelliTrace 단계 다시 간략하게](../debugger/media/intellitrace-step-back-overview.png "개요의 IntelliTrace 단계 저장")
+    ![이벤트에 기록 디버깅 활성화](../debugger/media/intellitrace-activate-historical-debugging.png "이벤트에 기록 디버깅 활성화")
+
+    와 달리는 **다음 문 설정** 스냅숏 보기 명령 코드를 다시 실행 하지 않으면 제공 응용 프로그램의 상태에 대 한 정적 뷰 시점 이전에 발생 한 시간에서입니다.
+
+    ![IntelliTrace 단계 다시 간략하게](../debugger/media/intellitrace-step-back-overview.png "개요의 IntelliTrace 단계 저장")
 
 ## <a name="next-steps"></a>다음 단계  
  Visual Studio에서 변수를 검사 하는 방법을 알아보려면 참조 [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)  

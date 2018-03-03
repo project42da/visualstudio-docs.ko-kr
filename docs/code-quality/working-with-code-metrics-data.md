@@ -1,13 +1,15 @@
 ---
-title: "코드 메트릭 결과 Visual Studio에서 | Microsoft Docs"
+title: "Visual Studio에서 코드 메트릭 결과 창 | Microsoft Docs"
 ms.custom: 
 ms.date: 12/12/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-code-analysis
+ms.technology:
+- vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: vs.codemetrics.output
+f1_keywords:
+- vs.codemetrics.output
 helpviewer_keywords:
 - code metrics results
 - code metrics results window
@@ -15,14 +17,15 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c259a1d303c741d4e36af46250073b0378a65f8b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 772533e74b214d48583e5d2dc1d64278416933df
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="working-with-code-metrics-data"></a>코드 메트릭 데이터 작업
+# <a name="using-the-code-metrics-results-window"></a>코드 메트릭 결과 창 사용
 
 **코드 메트릭 결과** 코드 메트릭 분석에 의해 생성 되는 데이터 창에 표시 됩니다. 코드 메트릭 데이터 값에 대 한 자세한 내용은 참조 [코드 메트릭 값](../code-quality/code-metrics-values.md)합니다.
 
@@ -38,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 
 - 에 **보기** 메뉴 선택 **다른 창** > **코드 메트릭 결과**합니다.
 
-   **코드 메트릭 결과** 창이 없는 결과 포함 하는 경우에 표시 됩니다.
+**코드 메트릭 결과** 창이 없는 결과 포함 하는 경우에 표시 됩니다.
 
 ### <a name="to-view-code-metrics-details"></a>코드 메트릭 세부 정보를 보려면
 
@@ -70,7 +73,7 @@ ms.lasthandoff: 12/22/2017
 
 1. 클릭는 **열 추가/제거** 단추입니다.
 
-     \-또는-열 머리글을 마우스 오른쪽 단추로 클릭 하 고 클릭 **열 추가/제거**합니다.
+     \- 또는-열 머리글을 마우스 오른쪽 단추로 클릭 하 고 클릭 **열 추가/제거**합니다.
 
 1. 에 **열 추가/제거** 대화 상자에서 확인란의 선택을 취소는 열에 대 한 제거 하 고 클릭 하려는 **확인**합니다.
 
@@ -128,5 +131,5 @@ VSTS에 대 한 자세한 내용은 작업 항목을 참조 하십시오 [작업
 
 ## <a name="see-also"></a>참고 항목
 
-[코드 메트릭 값](../code-quality/code-metrics-values.md)  
-[방법: 코드 메트릭 데이터 생성](../code-quality/how-to-generate-code-metrics-data.md)
+- [코드 메트릭 값](../code-quality/code-metrics-values.md)
+- [방법: 코드 메트릭 데이터 생성](../code-quality/how-to-generate-code-metrics-data.md)

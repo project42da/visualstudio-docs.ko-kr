@@ -7,16 +7,18 @@ ms.suite:
 ms.technology: vs-ide-code-analysis
 ms.tgt_pltfrm: 
 ms.topic: article
-helpviewer_keywords: code metrics [Visual Studio]
+helpviewer_keywords:
+- code metrics [Visual Studio]
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: dc9a688892ca7ec08a89c4da8e1732b5e2b3e267
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 553ed7d6a6fcc2edef436251d720919fe399653a
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="code-metrics-values"></a>코드 메트릭 값
 
@@ -24,9 +26,11 @@ ms.lasthandoff: 12/22/2017
 
 개발자는 복잡 하 고 관리 코드의 유지 관리 용이성 측정 하는 코드 메트릭 데이터를 생성 하려면 Visual Studio를 사용할 수 있습니다. 전체 솔루션 또는 단일 프로젝트에 대해 코드 메트릭 데이터를 생성할 수 있습니다.
 
+Visual Studio에서 코드 메트릭 데이터를 생성 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 코드 메트릭 데이터 생성](../code-quality/how-to-generate-code-metrics-data.md)합니다.
+
 ## <a name="software-measurements"></a>소프트웨어 측정
 
-다음 목록은 코드 메트릭 결과 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 계산:
+다음 목록에는 코드 메트릭 결과 계산 하는 Visual Studio를 보여 줍니다.
 
 - **유지 관리 인덱스** -는 관리 코드를 나타내는 0에서 100 사이의 인덱스 값을 계산 합니다. 값이 높으면 더 나은 유지 관리를 의미합니다. 색으로 구분 된 등급 사용자 코드에서 문제가 있는 부분을 신속 하 게 식별 데 사용할 수 있습니다. 녹색 등급 20%에서 100 사이 이며 코드에 편의성이 있음을 나타냅니다. 노란색 등급 10에서 19 사이의 약간 유지 관리 가능한 코드를 나타냅니다. 빨간색 등급 0에서 9 사이 대 한 등급을 낮은 유지 관리를 나타냅니다.
 
@@ -49,3 +53,8 @@ ms.lasthandoff: 12/22/2017
 일부 소프트웨어 도구 및 컴파일러에는 프로젝트에 추가 되 고 프로젝트 개발자 보이지 않는 또는 변경 하지 않아야 하는 코드를 생성 합니다. 주로, 코드 메트릭 메트릭 값을 계산할 때 생성 된 코드를 무시 합니다. 이 통해 어떤 개발자 참조 하 고 변경할 수를 반영 하도록 메트릭 값.
 
 Windows Forms에 대 한 생성 된 코드는 개발자 참조 하 고 변경할 수 있는 코드 있기 때문에 무시 되지 않습니다.
+
+## <a name="next-steps"></a>다음 단계
+
+- [방법: 코드 메트릭 데이터 생성](../code-quality/how-to-generate-code-metrics-data.md)
+- [코드 메트릭 결과 창 사용](../code-quality/working-with-code-metrics-data.md)

@@ -15,15 +15,15 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ac4f31d1e93ed648bf2065bbff9dac8800c1d4f
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 80f3d2385fa1023637081b787c8d938ae42f79b4
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>방법: 코드 분석 체크 인 정책을 통해 유지 관리할 수 있는 코드 적용
+# <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>방법: 코드 분석 체크 인 정책 사용 하 여 유지 관리 가능한 코드 적용
 
-개발자 코드 메트릭 도구를 사용 하 여 복잡성 및 코드의 유지 관리 용이성 측정 하도록 하지만 체크 인 정책의 일부로 코드 메트릭을 호출할 수 없습니다. 그러나 코드 메트릭 표준 코드의 준수를 확인 하는 코드 분석 규칙 고 체크 인 정책을 통해 규칙을 적용할 수 있습니다. 코드 메트릭에 대 한 자세한 내용은 참조는 [코드 메트릭 값](../code-quality/code-metrics-values.md)합니다.
+개발자 코드 메트릭 도구를 사용 하 여 복잡성 및 코드의 유지 관리 용이성 측정 하도록 하지만 체크 인 정책의 일부로 코드 메트릭을 호출할 수 없습니다. 그러나 코드 메트릭 표준 코드의 준수를 확인 하는 코드 분석 규칙 고 체크 인 정책을 통해 규칙을 적용할 수 있습니다. 코드 메트릭에 대 한 자세한 내용은 참조 [코드 메트릭 값](../code-quality/code-metrics-values.md)합니다.
 
 상속 깊이, 클래스 결합, 유지 관리 인덱스와 복잡성 규칙 적용 코드 분석 체크 인 정책을 통해 유지 관리 가능한 코드를 사용할 수 있습니다. 이러한 규칙의 모든 네는 코드 분석 정책 편집기에서 "유지 관리 규칙" 범주 아래 있습니다.
 
@@ -64,4 +64,4 @@ Team foundation 버전 제어의 관리자는 체크 인 정책 요구 사항에
 ## <a name="see-also"></a>참고 항목
 
 [코드 메트릭 값](../code-quality/code-metrics-values.md)
-[코드 분석 체크 인 정책 만들기 및 사용](../code-quality/creating-and-using-code-analysis-check-in-policies.md)
+[작성 및 코드 분석 체크 인 정책 사용](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

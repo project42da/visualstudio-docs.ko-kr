@@ -14,12 +14,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3ca031d23d244c3b02cfea1e64685663e4e25a34
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 52726b521d3887dee31b74b0ba110aa8d25350e5
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="how-to-generate-code-metrics-data"></a>방법: 코드 메트릭 데이터 생성
 
@@ -37,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 
 - 에 **코드 메트릭 결과** 창, 선택는 **솔루션에 대해 코드 메트릭 계산** 단추입니다.
 
-   결과가 생성 되 고 **코드 메트릭 결과** 창이 표시 됩니다.
+결과가 생성 되 고 **코드 메트릭 결과** 창이 표시 됩니다.
 
 ## <a name="to-generate-code-metrics-results-for-one-or-more-selected-projects"></a>선택한 프로젝트 하나 이상에 대해 코드 메트릭 결과 생성 하려면
 
@@ -49,8 +50,9 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="to-view-the-results-details"></a>결과 세부 정보를 보려면
 
-- 에 **코드 메트릭 결과** 창에서 트리를 확장 하 고는 **계층** 열입니다.
+에 **코드 메트릭 결과** 창에서 트리를 확장 하 고는 **계층** 열입니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[코드 메트릭 값](../code-quality/code-metrics-values.md)
+- [코드 메트릭 결과 창 사용](../code-quality/working-with-code-metrics-data.md)
+- [코드 메트릭 값](../code-quality/code-metrics-values.md)
