@@ -29,4 +29,4 @@
 
 ## <a name="see-also"></a>참고 항목
 
-- [기존 Python 인터프리터에 대한 환경 만들기](../python/managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [기존 Python 환경 수동 식별](../python/managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)

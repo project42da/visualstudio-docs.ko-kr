@@ -17,11 +17,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 65f34339e4c101818cea9b99095d765d5d417cf4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4733d51d40b0aabffa108a1f99e4e492599b67c2
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="working-with-sql-server-and-r"></a>SQL Server 및 R 사용
 
@@ -32,9 +32,9 @@ Visual Studio의 뛰어난 SQL Server 지원은 SQL 쿼리를 생성 및 실행�
 > - Visual Studio 2017: Visual Studio 설치 관리자를 실행하고 데이터 저장소와 처리 워크로드를 선택합니다(SQL Server Data Tools 포함).
 > - Visual Studio 2015: [Download SQL Server Data Tools](https://docs.microsoft.com/sql/ssdt/download-sql-server-data-tools-ssdt)(SQL Server Data Tools 다운로드)의 지침을 따릅니다.
 
-다음 비디오(3분 03초)에서는 SQL Server 및 R에 대한 간략한 개요를 제공합니다.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/n4AYr0QIwdQ" frameborder="0" allowfullscreen></iframe>
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | SQL Server 및 R의 개요에 대한 [동영상(youtube.com)을 시청](https://www.youtube.com/watch?v=n4AYr0QIwdQ)하세요(3분 03초). |
 
 ## <a name="creating-and-running-sql-queries"></a>SQL 쿼리 만들기 및 실행
 
@@ -65,9 +65,9 @@ RTVS는 다음 섹션의 설명대로 SQL 및 R 코드를 단일 SQL 문으로 �
 - [SQL 저장 프로시저 작성 및 테스트](#write-and-test-a-sql-stored-procedure)
 - [SQL 저장 프로시저 게시](#publish-a-sql-stored-procedure)
 
-다음 비디오(6분 09초)에서는 이러한 기능의 개요를 제공합니다.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/dFKIT2OitWQ" frameborder="0" allowfullscreen></iframe>
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | R 및 SQL 저장 프로시저의 개요에 대한 [동영상(youtube.com)을 시청](https://www.youtube.com/watch?v=dFKIT2OitWQ)하세요(6분 09초). |
 
 ### <a name="add-a-database-connection"></a>데이터베이스 연결 추가
 

@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 375508647c7a192b7b3869c4faaf80b8df2d0a4a
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: e1e592d6fdb8fd7deb1e702513a932297a60e6ac
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="editing-python-code"></a>Python 코드 편집
 
@@ -39,7 +39,7 @@ Visual Studio 개체 브라우저(**보기 > 다른 창 > 개체 브라우저** 
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [요약 정보](#quick-info) 및 [코드 색 지정](#code-coloring)을 제공합니다. IntelliSense는 프로젝트의 각 Python 환경에 대해 생성된 완성 데이터베이스를 통해 성능을 향상시킵니다. 패키지를 추가, 제거 또는 업데이트할 경우 데이터베이스를 새로 고쳐야 할 수 있습니다. 데이터베이스 상태는 **Python 환경** 창(솔루션 탐색기의 형제)의 **IntelliSense** 탭에 표시됩니다([Python 환경](managing-python-environments-in-visual-studio.md) 참조). 
+IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [요약 정보](#quick-info) 및 [코드 색 지정](#code-coloring)을 제공합니다. IntelliSense는 프로젝트의 각 Python 환경에 대해 생성된 완성 데이터베이스를 통해 성능을 향상시킵니다. 패키지를 추가, 제거 또는 업데이트할 경우 데이터베이스를 새로 고쳐야 할 수 있습니다. 데이터베이스 상태는 **Python 환경** 창(솔루션 탐색기의 형제)의 **IntelliSense** 탭에 표시됩니다([Python 환경 창 참조](python-environments-window-tab-reference.md#intellisense-tab) 참조).
 
 ### <a name="completions"></a>완성
 
@@ -47,7 +47,7 @@ IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [�
 
 ![멤버 완성](media/code-editing-completions-simple.png)
 
-완성 목록이 열리면 화살표 키와 마우스를 사용하거나 계속 입력하여 원하는 완성을 검색할 수 있습니다. 더 많은 글자를 입력함에 따라 목록이 자세히 필터링되어 더 확실한 완성을 보여 줍니다. 다음과 같은 바로 가기를 사용할 수도 있습니다.
+완성 목록이 열리면 화살표 키와 마우스를 사용하거나 계속 입력하여 원하는 완성을 검색할 수 있습니다. 더 많은 글자를 입력함에 따라 목록이 자세히 필터링되어 더 확실한 완성을 보여줍니다. 다음과 같은 바로 가기를 사용할 수도 있습니다.
 
 - 'parse'와 같이 이름의 시작 부분에 없는 글자를 입력하면 'argparse'를 찾습니다.
 - 'abc'와 같이 단어의 시작 부분에 있는 글자만 입력하면 'AbstractBaseClass'를 찾거나 'air'를 입력하면 'as_integer_ratio'를 찾습니다.
@@ -82,7 +82,7 @@ IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [�
 
 ### <a name="signature-help"></a>서명 도움말
 
-함수를 호출하는 코드를 작성할 때 여는 `(`를 입력하면 시그니처 도움말이 표시되며, 사용할 수 있는 설명서와 매개 변수 정보를 보여 줍니다. 또한 함수 호출 내에서 Ctrl+Shift+스페이스를 사용하여 표시할 수도 있습니다. 표시되는 정보는 함수의 소스 코드에 있는 설명서 문자열에 따라 다르지만 모든 기본값이 포함됩니다.
+함수를 호출하는 코드를 작성할 때 여는 `(`를 입력하면 시그니처 도움말이 표시되며, 사용할 수 있는 설명서와 매개 변수 정보를 보여줍니다. 또한 함수 호출 내에서 Ctrl+Shift+스페이스를 사용하여 표시할 수도 있습니다. 표시되는 정보는 함수의 소스 코드에 있는 설명서 문자열에 따라 다르지만 모든 기본값이 포함됩니다.
 
 ![서명 도움말](media/code-editing-signature-help.png)
 

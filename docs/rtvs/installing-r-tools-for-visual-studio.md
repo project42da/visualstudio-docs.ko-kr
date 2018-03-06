@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: c4ca5a7fea1a84c4f4a38396daebd3e01412d9d7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 76dc2623edebed6cca48c40c0ad0bc96f783e39d
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>Visual Studio용 R 도구를 설치하는 방법
 
@@ -44,7 +44,7 @@ Visual Studio Test Professional, SQL Server Management Studio 등의 제품에 �
 
 ## <a name="installing-rtvs-in-visual-studio-2017"></a>Visual Studio 2017에서 RTVS 설치
 
-1. Visual Studio 설치 관리자를 실행합니다. Visual Studio가 설치되어 있지 않은 경우 [다운로드](https://www.visualstudio.com/downloads/)를 참조하세요. Windows 7에서 설치 관리자가 Visual Studio 버전 *15.2 빌드 26430.12* 이상을 표시하도록 업데이트되었는지 확인합니다.
+1. Visual Studio 설치 관리자를 실행합니다. Visual Studio가 설치되어 있지 않은 경우 [다운로드](https://www.visualstudio.com/downloads/)를 참조하세요. Windows 7에서 설치 관리자가 Visual Studio 2017 버전 ‘15.2 빌드 26430.12’ 이상을 표시하도록 업데이트되었는지 확인합니다.
 
 1. **데이터 과학 및 분석 응용 프로그램** 워크로드를 선택합니다.
 
@@ -81,12 +81,12 @@ Visual Studio 2015용 RTVS는 `%ProgramFiles(x86)%\Microsoft Visual Studio 14\Co
 
 오프라인 설치는 인터넷에 연결되지 않은 컴퓨터에 적합합니다.
 
-1. 지침에 따라 사용 중인 Visual Studio 버전용 오프라인 설치 관리자를 만듭니다. 
+1. 지침에 따라 사용 중인 Visual Studio 버전용 오프라인 설치 관리자를 만듭니다.
 
     - [Visual Studio 2017](../install/create-an-offline-installation-of-visual-studio.md)
     - [Visual Studio 2015](https://msdn.microsoft.com/library/mt706497.aspx)
 
-1. Visual Studio 2015의 경우 [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) 및 [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip)에서 오프라인 RTVS 설치 관리자를 다운로드합니다. 
+1. Visual Studio 2015의 경우 [https://aka.ms/rtvs-current-zip](https://aka.ms/rtvs-current-zip) 및 [https://aka.ms/rtvs-remote-zip](https://aka.ms/rtvs-remote-zip)에서 오프라인 RTVS 설치 관리자를 다운로드합니다.
 
 1. 오프라인 설치 관리자에서 Visual Studio 및 RTVS를 설치합니다.
 

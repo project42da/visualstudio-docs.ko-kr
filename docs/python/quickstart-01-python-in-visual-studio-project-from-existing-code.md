@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4caf9c973d6ee99475c94b2d7870e536eb62781b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e8e57fb97b5e792375cefb344306a9bdc71836be
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>빠른 시작: 기존 코드에서 Python 프로젝트를 만들려면
 
@@ -41,6 +41,6 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="see-also"></a>참고 항목
 
-- [기존 Python 인터프리터에 대한 환경 만들기](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [기존 Python 인터프리터 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment).
 - [Visual Studio 2015 이하 버전에서 Python 지원 설치](installing-python-support-in-visual-studio.md)
 - [설치 위치](installing-python-support-in-visual-studio.md#install-locations).

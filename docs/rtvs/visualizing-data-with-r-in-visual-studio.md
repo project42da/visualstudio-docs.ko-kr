@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 97e9838e46a4e0158b281f243ffda7d46044ef2d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 962a7a5685a5d4a1d4ad5466710377d4885ad398
+ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/21/2018
 ---
 # <a name="creating-visual-data-plots-with-r"></a>R을 사용하여 시각적 데이터 플롯 만들기
 
@@ -28,9 +28,9 @@ ms.lasthandoff: 02/09/2018
 
 ![영웅 이미지 그리기](media/plotting-hero-image.png)
 
-다음 비디오(2분 02초)에서는 RTVS에서 수행되는 그리기를 간단히 둘러봅니다.
-
-<iframe width="560" height="315" src="https://www.youtube.com/embed/ZTbKmz5RSgY" frameborder="0" allowfullscreen></iframe>
+|   |   |
+|---|---|
+| ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | R을 사용한 그리기에 대한 [동영상(youtube.com)을 시청](https://www.youtube.com/watch?v=ZTbKmz5RSgY)하세요(2분 02초). |
 
 ## <a name="the-plot-window"></a>플롯 창
 

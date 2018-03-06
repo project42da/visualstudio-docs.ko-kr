@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0faae917aba237a85c6a01743d89cf66adf06296
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: c946f9d0fea5192f75d2fd0a9865827b6027ef50
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="profiling-python-code"></a>Python 코드 프로파일링
 
@@ -38,6 +38,9 @@ CPython 기반 인터프리터를 사용하는 경우 Python 응용 프로그램
 |   |   |
 |---|---|
 | ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Python 프로파일링 데모 [비디오(Microsoft Virtual Academy)를 시청](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Profiling-Python-s6FoC6LWE_1005918567)하세요(3분 00초).|
+
+> [!Note]
+> 현재 Visual Studio는 이 수준의 전체 응용 프로그램 프로파일링만 지원하지만 향후 기능에 대한 여러분의 피드백을 보내 주시기 바랍니다. 이 페이지 아래쪽에 있는 [**제품 피드백 제공** 단추](#feedback)를 사용하세요.
 
 ## <a name="profiling-for-ironpython"></a>IronPython에 대한 프로파일링
 

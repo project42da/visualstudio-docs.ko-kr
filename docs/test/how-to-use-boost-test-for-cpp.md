@@ -1,7 +1,7 @@
 ---
 title: "Visual Studio에서 Boost.Test for C++를 사용하는 방법 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/05/2018
+ms.date: 01/29/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: vs-devops-test
@@ -10,12 +10,13 @@ ms.topic: article
 author: mikeblome
 ms.author: mblome
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: bdf772be03f6021f499b9bf777922d6d2743e0dc
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 2276c65dd0ed0478003c1e4f2c99683eb88b0ac8
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio에서 Boost.Test for C++를 사용하는 방법
 
@@ -33,32 +34,40 @@ Boost.Test에는 [Boost](http://www.boost.org/)가 필요합니다! Boost가 설
 
 1. Boost.Test 동적 또는 정적 라이브러리를 설치합니다.
 
-    - `vcpkg install boost-test`를 실행하여 Boost.Test 동적 라이브러리를 설치합니다.
+    - **vcpkg install boost-test**를 실행하여 Boost.Test 동적 라이브러리를 설치합니다.
     
        -또는-
        
-    - `vcpkg install boost-test:x86-windows-static`를 실행하여 Boost.Test 정적 라이브러리를 설치합니다.
+    - **vcpkg install boost-test:x86-windows-static**을 실행하여 Boost.Test 정적 라이브러리를 설치합니다.
 
-1. `vcpkg integrate install`을 실행하여 Visual Studio를 라이브러리로 구성하고 Boost 헤더와 이진 파일 경로를 포함합니다.
+1. **vcpkg integrate install**을 실행하여 Visual Studio를 라이브러리로 구성하고 Boost 헤더 및 이진 파일의 경로를 포함합니다.
 
-## <a name="create-a-project-for-your-tests"></a>테스트용 프로젝트 만들기
+## <a name="add-the-item-template-visual-studio-2017-version-156-and-later"></a>항목 템플릿을 추가합니다(Visual Studio 2017 버전 15.6 이상).
 
-> [!NOTE]
-> Visual Studio 2017 버전 15.5에서는 미리 구성된 테스트 프로젝트 또는 항목 템플릿을 Boost.Test에 사용할 수 없습니다. 따라서 테스트를 보유할 콘솔 응용 프로그램 프로젝트를 만들어야 합니다. Boost.Test용 테스트 템플릿은 Visual Studio의 이후 버전에 포함될 예정입니다.
+1. 테스트에 대한 .cpp 파일을 만들려면 **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **새 항목 추가**를 선택합니다. 
+ 
+![Boost.Test 항목 템플릿](media/boost_test_item_template.png "Boost.Test 항목 템플릿")
+
+1. 새 파일에 샘플 테스트 메서드가 있습니다. **테스트 탐색기**에서 메서드를 검색할 수 있도록 프로젝트를 빌드합니다.
+
+항목 템플릿은 Boost.Test의 단일 헤더 변형을 사용하지만 독립 실행형 라이브러리 변형을 사용하도록 #include 경로를 수정할 수 있습니다. 자세한 내용은 [include 지시문 추가](#add_include_directives)를 참조하세요.
+
+## <a name="create-a-test-project-visual-studio-2017-version-155"></a>테스트 프로젝트를 만듭니다(Visual Studio 2017 버전 15.5).
+
+Visual Studio 2017 버전 15.5에서는 미리 구성된 테스트 프로젝트 또는 항목 템플릿을 Boost.Test에 사용할 수 없습니다. 따라서 테스트를 포함할 콘솔 응용 프로그램 프로젝트를 만들고 구성해야 합니다. 
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 프로젝트...**를 차례로 선택합니다.
 
 1. 왼쪽 창에서 **Visual C++** > **Windows 데스크톱**을 선택한 다음 **Windows 콘솔 응용 프로그램** 템플릿을 선택합니다.
 
 1. 프로젝트 이름을 지정하고 **확인**을 선택합니다.
+1. .cpp 파일에서 `main` 함수를 삭제합니다. 
 
-## <a name="link-and-configuration-boost-static-library-only"></a>링크 및 구성(부스트 정적 라이브러리만 해당)
+1. Boost.Test의 단일 헤더 또는 동적 라이브러리 버전을 사용하는 경우 [include 지시문 추가](#add_include_directives)로 이동합니다. 정적 라이브러리 버전을 사용하는 경우 일부 추가 구성을 수행해야 합니다.
 
-Boost.Test 테스트를 실행하도록 프로젝트를 구성합니다.
+   a. 프로젝트 파일을 편집하려면 먼저 언로드하세요. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **프로젝트 언로드**를 선택합니다. 그런 다음 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **<name\>.vcxproj 편집**을 선택합니다.
 
-1. 프로젝트 파일을 편집하려면 먼저 언로드하세요. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **프로젝트 언로드**를 선택합니다. 그런 다음 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **<name\>.vcxproj 편집**을 선택합니다.
-
-1. 다음과 같이 **Globals** 속성 그룹에 두 줄을 추가합니다.
+   b. 다음과 같이 **Globals** 속성 그룹에 두 줄을 추가합니다.
 
     ```xml
     <PropertyGroup Label="Globals">
@@ -67,19 +76,17 @@ Boost.Test 테스트를 실행하도록 프로젝트를 구성합니다.
         <VcpkgEnabled>true</VcpkgEnabled>
     </PropertyGroup>
     ```
-1. \*.vcxproj 파일을 저장하고 닫은 후 프로젝트를 다시 로드합니다.
+   c. \*.vcxproj 파일을 저장하고 닫은 후 프로젝트를 다시 로드합니다.
 
-1. **속성 페이지**를 열려면 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
+   d. **속성 페이지**를 열려면 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 
-1. **C/C++** > **코드 생성**을 확장한 후 **런타임 라이브러리**를 선택합니다. 디버그 정적 런타임 라이브러리에 해당하는 `/MTd` 또는 릴리스 정적 런타임 라이브러리에 해당하는 `/MT`를 선택합니다.
+   d. **C/C++** > **코드 생성**을 확장한 후 **런타임 라이브러리**를 선택합니다. 디버그 정적 런타임 라이브러리에 해당하는 **/MTd** 또는 릴리스 정적 런타임 라이브러리에 해당하는 **/MT**를 선택합니다.
 
-1. **링커 > 시스템**을 확장합니다. **하위 시스템**이 **콘솔**로 설정되었는지 확인합니다.
+   f. **링커 > 시스템**을 확장합니다. **하위 시스템**이 **콘솔**로 설정되었는지 확인합니다.
 
-1. **확인**을 선택하여 속성 페이지를 닫습니다.
+   g. **확인**을 선택하여 속성 페이지를 닫습니다.
 
 ## <a name="add-include-directives"></a>include 지시문 추가
-
-1. test .cpp 파일에 `main` 함수가 있는 경우 삭제합니다.
 
 1. .cpp 테스트 파일에서 필요한 `#include` 지시문을 추가하여 프로그램의 형식과 함수를 테스트 코드에 표시되게 합니다. 일반적으로 프로그램은 폴더 계층 구조에서 한 수준 위에 있습니다. `#include "../"`를 입력하면 IntelliSense 창이 표시되어 헤더 파일에 대한 전체 경로를 선택할 수 있습니다.
 

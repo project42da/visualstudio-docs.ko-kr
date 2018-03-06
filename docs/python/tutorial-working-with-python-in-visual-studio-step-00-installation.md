@@ -17,18 +17,18 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ca3dccf8a30bb4e1132c0bbc7ea8d8e660ae0f8e
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 30e3341db1543690d39f5144ed67894b1fb65c4d
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="install-python-support-in-visual-studio"></a>Visual Studio에서 Python 지원 설치
 
 > [!Note]
 > Python 지원은 현재 Windows용 Visual Studio에서만 사용할 수 있으며, Visual Studio Code를 통해 Mac 및 Linux에서 사용할 수 있습니다. [질문과 대답](overview-of-python-tools-for-visual-studio.md#questions-and-answers)을 참조하세요.
 
-1. Windows용 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다(Python 지원은 릴리스 15.2 이상에 있음). Visual Studio가 이미 설치되어 있는 경우 Visual Studio 설치 관리자를 실행하고 2단계로 건너뜁니다.
+1. Windows용 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다(Python 지원은 릴리스 15.2 이상에 있음). Visual Studio가 이미 설치되어 있는 경우 Visual Studio 설치 관리자를 실행하고 2단계로 이동합니다.
 
     > [!div class="nextstepaction"]
     > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_gettingstarted">Visual Studio 2017 Community 설치</a>
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/19/2018
 
 ## <a name="see-also"></a>참고 항목
 
-- [기존 Python 인터프리터에 대한 환경 만들기](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)
+- [기존 Python 인터프리터 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment).
 - [Visual Studio 2015 이하 버전에서 Python 지원 설치](installing-python-support-in-visual-studio.md)
 - [설치 위치](installing-python-support-in-visual-studio.md#install-locations).
 

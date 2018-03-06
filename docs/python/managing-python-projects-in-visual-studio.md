@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aafb2259ec4f16341abf514e9496dbb66f3cb95c
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 005a3a2ae46154dbf532aacefe5316aacbbaeaf7
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="python-projects"></a>Python 프로젝트
 
@@ -54,7 +54,7 @@ Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿�
 > [!Tip]
 > 프로젝트에서 선택한 시작 파일을 제거하고 새 시작 파일을 선택하지 않은 경우에 프로젝트를 실행하면 Python 출력 창이 나타났다가 거의 바로 사라집니다. 이 동작이 발생할 경우 할당된 시작 파일이 있는지 확인합니다. 또한 이러한 경우 출력 창을 열어 두려면 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**을 선택하고, **디버그** 탭을 선택한 다음 `-i`를 **인터프리터 인수** 필드에 추가합니다. 이 인수를 사용하면 프로그램이 완료된 후 인터프리터가 대화형 모드로 전환되어 창이 열린 상태로 유지되며 Ctrl+Z, Enter 키를 누르면 종료됩니다.
 
-새 프로젝트는 항상 기본 글로벌 Python 환경과 연결됩니다. 프로젝트를 다른 환경(가상 환경 포함)과 연결하려면 프로젝트의 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고 **Python 환경 추가/제거**를 선택하고 원하는 항목을 선택합니다. 활성 상태의 환경을 변경하려면 원하는 환경을 마우스 오른쪽 단추로 클릭하고 아래 표시된 것처럼 **환경 활성화**를 선택합니다. 자세한 내용은 [Python 환경](managing-python-environments-in-visual-studio.md#selecting-an-environment-for-a-project)을 참조하세요.
+새 프로젝트는 항상 기본 글로벌 Python 환경과 연결됩니다. 프로젝트를 다른 환경(가상 환경 포함)과 연결하려면 프로젝트의 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고, **Python 환경 추가/제거**를 선택하고, 원하는 항목을 선택합니다. 활성 상태의 환경을 변경하려면 원하는 환경을 마우스 오른쪽 단추로 클릭하고 아래 표시된 것처럼 **환경 활성화**를 선택합니다. 자세한 내용은 [프로젝트의 환경 선택](selecting-a-python-environment-for-a-project.md)을 참조하세요.
 
 ![Python 프로젝트에 대한 환경 활성화](media/projects-activate-environment.png)
 
@@ -66,12 +66,12 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 
 ![Python 템플릿이 있는 새 프로젝트 대화 상자](media/projects-new-project-dialog.png)
 
-다음 표에서는 Visual Studio 2017에서 사용 가능한 템플릿을 요약하여 보여 줍니다(일부 템플릿만 이전 모든 버전에서 사용 가능).
+다음 표에서는 Visual Studio 2017에서 사용 가능한 템플릿을 요약하여 보여줍니다(일부 템플릿만 이전 모든 버전에서 사용 가능).
 
 | 템플릿 | 설명 |
 | --- | --- |
 | [기존 Python 코드에서](#creating-a-project-from-existing-files) | 폴더 구조의 기존 Python 코드에서 Visual Studio 프로젝트를 만듭니다.  |
-| Python 응용 프로그램 | 하나의 비어있는 소스 파일을 포함하는 새로운 Python 응용 프로그램에 대한 기본 프로젝트 구조입니다. 기본적으로 프로젝트는 기본 글로벌 환경의 콘솔 인터프리터에서 실행되며 [서로 다른 환경을 할당](managing-python-environments-in-visual-studio.md#selecting-an-environment-for-a-project)하여 변경할 수 있습니다. |
+| Python 응용 프로그램 | 하나의 비어있는 소스 파일을 포함하는 새로운 Python 응용 프로그램에 대한 기본 프로젝트 구조입니다. 기본적으로 프로젝트는 기본 글로벌 환경의 콘솔 인터프리터에서 실행되며 [서로 다른 환경을 할당](selecting-a-python-environment-for-a-project.md)하여 변경할 수 있습니다. |
 | [Azure Cloud Service](python-azure-cloud-service-project-template.md) | Python으로 작성된 Azure Cloud Service에 대한 프로젝트입니다. |
 | [웹 프로젝트](python-web-application-project-templates.md) | Bottle, Django, Flask 및 Flask/Jade를 비롯한 다양한 프레임워크를 기반으로 한 웹 서버에 대한 프로젝트입니다. |
 | IronPython 응용 프로그램 | Python 응용 프로그램 템플릿과 유사하지만 .NET interop 및 .NET 언어로 혼합 모드 디버깅을 기본적으로 사용하는 IronPython을 사용합니다. |
@@ -136,7 +136,7 @@ Visual Studio 프로젝트는 프로젝트 및 확장에 참조 추가를 지원
 
 언제든지 디스크에서 확장 모듈이 업데이트되는 경우 Visual Studio는 백그라운드로 모듈을 다시 분석합니다. 이 작업은 런타임 동작에 영향을 주지 않지만 분석이 끝날 때까지 일부 완성 기능을 사용할 수 없게 됩니다.
 
-모듈을 포함하는 폴더에 [검색 경로](managing-python-environments-in-visual-studio.md#search-paths)를 추가해야 할 수 있습니다.
+모듈을 포함하는 폴더에 [검색 경로](search-paths.md)를 추가해야 할 수 있습니다.
 
 ### <a name="net-projects"></a>.NET 프로젝트
 

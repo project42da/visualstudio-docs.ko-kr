@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 32a8e6413fd719bfa4be6296972d39d609eab411
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 3cc0b6b99dd76a531ed3e99dcac8ae5d438d7e63
+ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/23/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
 
@@ -31,7 +31,7 @@ Visual Studio용 Python 지원(Visual Studio용 Python 도구 또는 PTVS라고�
 - [Visual Studio 2015](#visual-studio-2015)
 - [Visual Studio 2013 및 이전 버전](#visual-studio-2013-and-earlier)
 
-Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터도 별도로 설치해야 합니다(Python 3.5 및 이전 버전, 3.6은 지원되지 않으며 “지원되지 않는 Python 버전 3.6”이라는 메시지가 표시됨). 자세한 내용은 [Python 환경](managing-python-environments-in-visual-studio.md)을 참조하세요. 같은 페이지는 Visual Studio 2017에 기존 Python 인터프리터 추가를 위한 지침도 포함합니다.
+Visual Studio 2015 및 이전 버전의 경우 별도로 원하는 [Python 인터프리터도 설치](installing-python-interpreters.md)해야 합니다(Python 3.5 및 이전 버전, 3.6은 지원되지 않으며 “지원되지 않는 Python 버전 3.6”이라는 메시지가 표시됨). 같은 페이지는 Visual Studio 2017에 기존 Python 인터프리터 추가를 위한 지침도 포함합니다.
 
 설치 단계를 따른 후 Python 지원을 신속하게 테스트하려면 Alt+I를 누르고 `2+2`를 입력하여 Python 대화형 창을 엽니다. `4`의 출력이 표시되지 않으면 수행한 단계를 다시 확인합니다.
 
@@ -43,7 +43,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다. Visual Studio가 이미 설치되어 있는 경우 Visual Studio 설치 관리자를 실행하고 2단계로 건너뜁니다.
+1. 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다. Visual Studio가 이미 설치되어 있는 경우 Visual Studio 설치 관리자를 실행하고 2단계로 이동합니다.
 
     > [!div class="nextstepaction"]
     > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Community 설치</a>
@@ -91,7 +91,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
 
     ![Visual Studio 2015 설치 관리자의 PTVS 옵션](media/installation-vs2015.png)
 
-1. Visual Studio 설치가 완료되면 [원하는 Python 인터프리터를 설치](managing-python-environments-in-visual-studio.md#selecting-and-installing-python-interpreters)합니다. 인터프리터가 이미 설치되어 있는 경우 [기존 인터프리터에 대한 환경 만들기](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
+1. Visual Studio 설치가 완료되면 [원하는 Python 인터프리터를 설치](installing-python-interpreters.md)합니다. 이미 인터프리터가 설치되어 있고 Visual Studio에서 이를 자동으로 검색하지 않는 경우 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)을 참조하세요.
 
 ## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 및 이전 버전
 
@@ -101,7 +101,7 @@ Visual Studio 2015 및 이전 버전의 경우 원하는 Python 인터프리터�
     - Visual Studio 2012: [Visual Studio 2012용 PTVS 2.1](https://pytools.codeplex.com/downloads/get/920478)
     - Visual Studio 2010: [Visual Studio 2010용 PTVS 2.1](https://pytools.codeplex.com/downloads/get/920479)
 
-1. [원하는 Python 인터프리터를 설치합니다](managing-python-environments-in-visual-studio.md#selecting-and-installing-python-interpreters). 인터프리터가 이미 설치되어 있는 경우 [기존 인터프리터에 대한 환경 만들기](managing-python-environments-in-visual-studio.md#creating-an-environment-for-an-existing-interpreter)를 참조하세요.
+1. [원하는 Python 인터프리터를 설치합니다](installing-python-interpreters.md). 이미 인터프리터가 설치되어 있고 Visual Studio에서 이를 자동으로 검색하지 않는 경우 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)을 참조하세요.
 
 ## <a name="install-locations"></a>설치 위치
 

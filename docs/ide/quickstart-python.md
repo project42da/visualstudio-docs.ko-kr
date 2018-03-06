@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 00b9d59ad1736d212dcd9fff3c097e81e0ad2a60
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9b45c694399553dd262a68d821d1757b65ea9600
+ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/27/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기
 
@@ -71,7 +71,7 @@ Python의 웹앱은 다수의 사용 가능한 Python 라이브러리 중 하나
 
 Falcon에 대한 자세한 내용은 [falconframework.org](https://falconframework.org/)를 방문하세요.
 
-일반적으로 개발자는 전역 환경에 라이브러리를 설치하는 대신 특정 프로젝트에 대한 라이브러리를 설치하는 "가상 환경"을 만듭니다. Visual Studio의 여러 Python 프로젝트 템플릿에는 템플릿이 의존하는 라이브러리가 나열된 `requirements.txt` 파일이 있습니다. 이러한 템플릿 중 하나에서 프로젝트를 생성하면 라이브러리가 설치될 가상 환경 만들기가 트리거됩니다. 자세한 내용은 [Python 환경 - 가상 환경](../python/managing-python-environments-in-visual-studio.md#creating-virtual-environments)을 참조하세요.
+일반적으로 개발자는 전역 환경에 라이브러리를 설치하는 대신 특정 프로젝트에 대한 라이브러리를 설치하는 "가상 환경"을 만듭니다. Visual Studio의 여러 Python 프로젝트 템플릿에는 템플릿이 의존하는 라이브러리가 나열된 `requirements.txt` 파일이 있습니다. 이러한 템플릿 중 하나에서 프로젝트를 생성하면 라이브러리가 설치될 가상 환경 만들기가 트리거됩니다. 자세한 내용은 [가상 환경 사용](../python/selecting-a-python-environment-for-a-project.md#using-virtual-environments)을 참조하세요.
 
 ## <a name="add-a-code-file"></a>코드 파일 추가
 
