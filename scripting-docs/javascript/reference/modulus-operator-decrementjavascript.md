@@ -1,5 +1,5 @@
 ---
-title: "모듈러스 연산자 (JavaScript) | Microsoft Docs"
+title: "나머지 연산자 (JavaScript) | Microsoft Docs"
 ms.custom: 
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
@@ -17,19 +17,19 @@ dev_langs:
 - DHTML
 helpviewer_keywords:
 - '% operator [JavaScript]'
-- modulus operator [JavaScript]
+- remainder operator [JavaScript]
 ms.assetid: f98bf7ee-8366-4f1d-8769-dbdff82056a8
 caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 0310b9ab6abde2661e0e1bf27cef59b79c1c0f30
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 447c397fcda758b21635388b64aa1aae9787c21e
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
-# <a name="modulus-operator--javascript"></a>모듈러스 연산자 (JavaScript)
+# <a name="remainder-operator--javascript"></a>나머지 연산자 (JavaScript)
 숫자 식의 값을 다른 숫자 식의 값으로 나누고 나머지를 생성 합니다.  
   
 ## <a name="syntax"></a>구문  

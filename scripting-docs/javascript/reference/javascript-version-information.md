@@ -20,11 +20,11 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: b0503abb3d62e9fd61149b884a7b58a685fbc62c
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 3a2335c3697be9ef3e2d674ac37047ddd3de242d
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="javascript-version-information"></a>JavaScript 버전 정보
 각 버전의 JavaScript마다 지원되는 JavaScript 요소 집합이 다릅니다. [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] 앱은 Internet Explorer와 조금 다른 기능 집합을 지원합니다.  
@@ -32,18 +32,18 @@ ms.lasthandoff: 10/27/2017
 > [!IMPORTANT]
 >  [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] 앱은 [!INCLUDE[win8](../../javascript/includes/win8-md.md)] 장치에서 실행되는 새로운 유형의 응용 프로그램입니다. 에 대 한 자세한 내용은 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] 앱 참조 [Windows 스토어 앱 이란 무엇 인가요?](http://msdn.microsoft.com/en-us/231c1fba-9f87-468e-94aa-45dd57edcc70)  
   
- 표준 모드(`<!doctype>` 지시문이 있는 경우 Internet Explorer 11까지 모든 버전의 Internet Explorer에서 사용되는 모드)에서는 특수 모드(`<!doctype>` 지시문이 없을 때 사용되는 모드)와 다른 요소 집합이 지원됩니다. 버전 관리에 대한 자세한 내용은 [Defining Document Compatibility(문서 호환성 정의)](http://go.microsoft.com/fwlink/?LinkId=208537)를 참조하세요.  
+ 표준 모드( `<!doctype>` 지시문이 있는 경우 Internet Explorer 11까지 모든 버전의 Internet Explorer에서 사용되는 모드)에서는 특수 모드( `<!doctype>` 지시문이 없을 때 사용되는 모드)와 다른 요소 집합이 지원됩니다. 버전 관리에 대한 자세한 내용은 [Defining Document Compatibility(문서 호환성 정의)](http://go.microsoft.com/fwlink/?LinkId=208537)를 참조하세요.  
   
  다음 표는 특정 언어 요소를 지원하는 Internet Explorer 문서 모드(및 [!INCLUDE[win8_appname_long](../../javascript/includes/win8-appname-long-md.md)] 과 [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)]을 나타내는 스토어 앱)를 보여줍니다. 지정된 요소를 지원하는 문서 모드는 문자 **Y**로 표시되고 지정된 요소를 지원하지 않는 문서 모드는 문자 **N**으로 표시됩니다.  
   
 > [!IMPORTANT]
->  [!INCLUDE[jsv12text](../../javascript/includes/jsv12text-md.md)](Windows 10의 Edge 브라우저)에는 레거시 문서 모드에 대한 지원이 포함되어 있지 않습니다. [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)] 앱에 대한 지원은 Windows Phone 8.1부터 시작됩니다. 실험적 기능 (에 대 한: flags) "Exp"로 표시 됩니다  
+>  [!INCLUDE[jsv12text](../../javascript/includes/jsv12text-md.md)] (Windows 10의 edge 브라우저)에 레거시 문서 모드에 대 한 지원이 포함 되지 않습니다. [!INCLUDE[winphone_appname](../../javascript/reference/includes/winphone-appname-md.md)] 앱에 대한 지원은 Windows Phone 8.1부터 시작됩니다. 실험적 기능 (에 대 한: flags) "Exp"로 표시 됩니다  
   
  표에는 요약 정보가 포함되어 있습니다. 자세한 내용은 언어 요소에 대한 설명서를 참조하세요.  
   
-|언어 요소|Quirks, Internet Explorer 6 표준, Internet Explorer 7 표준|Internet Explorer 8 표준|Internet Explorer 9 표준|Internet Explorer 10 표준|Internet Explorer 11 표준|가장자리|스토어 앱|  
+|언어 요소|Quirks, Internet Explorer 6 표준, Internet Explorer 7 표준|Internet Explorer 8 표준|Internet Explorer 9 표준|Internet Explorer 10 표준|Internet Explorer 11 표준|Microsoft Edge|스토어 앱|  
 |----------------------|--------------------------------------------------------------------------|-----------------------------------|-----------------------------------|------------------------------------|------------------------------------|----------|----------------|  
-|[__proto\_ \_ 속성 (Object)](../../javascript/reference/proto-property-object-javascript.md)|N|N|N|N|Y|Y|v8(Win): N<br />v8.1(Win): Y<br />v8.1(전화): Y|  
+|[__proto\_ \_ 속성 (Object)](../../javascript/reference/proto-property-object-javascript.md)|N|N|N|N|Y|Y|v8(Win): N<br />v8.1(Win): Y<br />v8.1(Phone): Y|  
 |[$1...$9 속성(RegExp)](../../javascript/reference/dollar-1-dot-dot-dot-dollar-9-properties-regexp-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[0n 속성](../../javascript/reference/0-dot-dot-dot-n-properties-arguments-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[abs 함수](../../javascript/reference/math-abs-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -207,7 +207,7 @@ ms.lasthandoff: 10/27/2017
 |[Int8Array 개체](../../javascript/reference/int8array-object.md)|N|N|N|Y|Y|Y|Y|  
 |[Int16Array 개체](../../javascript/reference/int16array-object.md)|N|N|N|Y|Y|Y|Y|  
 |[Int32Array 개체](../../javascript/reference/int32array-object.md)|N|N|N|Y|Y|Y|Y|  
-|[Intl.Collator 개체](../../javascript/reference/intl-collator-object-javascript.md)|N|N|N|N|Y|Y|v8(Win): N<br />v8.1(Win): Y<br />v8.1(전화): Y|  
+|[Intl.Collator 개체](../../javascript/reference/intl-collator-object-javascript.md)|N|N|N|N|Y|Y|v8(Win): N<br />v8.1(Win): Y<br />v8.1(Phone): Y|  
 |[Intl.DateTimeFormat 개체](../../javascript/reference/intl-datetimeformat-object-javascript.md)|N|N|N|N|Y|Y|v8: N<br />v8.1: Y|  
 |[Intl.NumberFormat 개체](../../javascript/reference/intl-numberformat-object-javascript.md)|N|N|N|N|Y|Y|v8: N<br />v8.1: Y|  
 |[isFinite 함수](../../javascript/reference/isfinite-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -262,8 +262,8 @@ ms.lasthandoff: 10/27/2017
 |[message 속성](../../javascript/reference/message-property-error-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[min 함수](../../javascript/reference/math-min-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[MIN_VALUE 상수](../../javascript/reference/number-constants-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[나머지 할당 연산자(%=)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
-|[나머지 연산자(%)](../../javascript/reference/modulus-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[나머지 할당 연산자 (% =)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
+|[나머지 연산자 (%)](../../javascript/reference/modulus-operator-decrementjavascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[moveFirst 메서드](../../javascript/reference/movefirst-method-enumerator-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[moveNext 메서드](../../javascript/reference/movenext-method-enumerator-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[multiline 속성](../../javascript/reference/multiline-property-regular-expression-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
@@ -412,7 +412,7 @@ ms.lasthandoff: 10/27/2017
 |[write 함수](../../javascript/reference/debug-write-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
 |[writeln 함수](../../javascript/reference/debug-writeln-function-javascript.md)|Y|Y|Y|Y|Y|Y|Y|  
   
- \*DOM 개체는 있지만 사용자 정의 개체를 지원합니다. `enumerable` 및 `configurable` 특성을 지정할 수는 있지만 사용되지 않습니다.  
+ \* DOM 개체는 있지만 사용자 정의 개체를 지원합니다. `enumerable` 및 `configurable` 특성을 지정할 수는 있지만 사용되지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Defining Document Compatibility(문서 호환성 정의)](http://go.microsoft.com/fwlink/?LinkId=208537)

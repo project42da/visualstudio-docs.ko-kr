@@ -20,11 +20,11 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 27be497a62a21aa8dc222c96539a48f7e5d62425
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 2e99ead2f921f5247757192bcb3330aa4ebca8d7
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="javascript-operators"></a>JavaScript 연산자
 다음 표에서는 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 연산자를 보여 줍니다.  
@@ -67,8 +67,8 @@ ms.lasthandoff: 10/27/2017
 |두 식의 논리곱 연산을 수행합니다.|[논리곱 연산자(&&)](../../javascript/reference/logical-and-operator-decrement-javascript.md)|  
 |식의 논리 부정 연산을 수행합니다.|[논리 부정 연산자(!)](../../javascript/reference/logical-not-operator-decrement-exclpt-javascript.md)|  
 |두 식의 논리합 연산을 수행합니다.|[논리 OR 연산자 (&#124; &#124;)](../../javascript/reference/logical-or-operator-decrement-javascript.md)|  
-|변수 값을 식 값으로 나누고 나머지를 변수에 할당합니다.|[나머지 할당 연산자(%=)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|  
-|두 숫자를 나누고 나머지를 반환합니다.|[나머지 연산자(%)](../../javascript/reference/modulus-operator-decrementjavascript.md)|  
+|변수 값을 식 값으로 나누고 나머지를 변수에 할당합니다.|[나머지 할당 연산자 (% =)](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|  
+|두 숫자를 나누고 나머지를 반환합니다.|[나머지 연산자 (%)](../../javascript/reference/modulus-operator-decrementjavascript.md)|  
 |변수 값에 식 값을 곱하고 결과를 변수에 할당합니다.|[곱하기 할당 연산자(*=)](../../javascript/reference/multiplication-assignment-operator-decrement-equal-javascript.md)|  
 |두 숫자를 곱합니다.|[곱하기 연산자(*)](../../javascript/reference/multiplication-operator-decrement-javascript.md)|  
 |새 개체를 만듭니다.|[new 연산자](../../javascript/reference/new-operator-decrementjavascript.md)|  

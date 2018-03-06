@@ -5,7 +5,8 @@ ms.date: 01/18/2017
 ms.prod: windows-client-threshold
 ms.reviewer: 
 ms.suite: 
-ms.technology: devlang-javascript
+ms.technology:
+- devlang-javascript
 ms.tgt_pltfrm: 
 ms.topic: language-reference
 dev_langs:
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - compound assignment operators
 - assignment operators, compound
 ms.assetid: c9bd75ed-c8f8-4643-a861-2673f00967f4
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ec12740c76eb5cdf47819ef666194ebc3e3d3f1e
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: b2f669d2a701b221d4d1a72dfe633ed7e3dd02cd
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="compound-assignment-operators-javascript"></a>복합 할당 연산자(JavaScript)
 다음 표에서 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 대입 연산자입니다.  
@@ -33,13 +34,13 @@ ms.lasthandoff: 10/27/2017
   
 |연산자|기호|  
 |--------------|------------|  
-|[추가](../../javascript/reference/addition-assignment-operator-decrement-equal-javascript.md)|+=|  
+|[더하기](../../javascript/reference/addition-assignment-operator-decrement-equal-javascript.md)|+=|  
 |[비트 AND](../../javascript/reference/bitwise-and-assignment-operator-decrement-equal-javascript.md)|&=|  
 |[비트 또는](../../javascript/reference/bitwise-or-assignment-operator-decrement-equal-javascript.md)|&#124;=|  
 |[비트 XOR](../../javascript/reference/bitwise-xor-assignment-operator-decrement-hat-equal-javascript.md)|^=|  
 |[나누기](../../javascript/reference/division-assignment-operator-decrement-equal-javascript.md)|/=|  
 |[왼쪽된 시프트](../../javascript/reference/left-shift-assignment-operator-decrement-equal-javascript.md)|<\<=|  
-|[모듈러스](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|%=|  
+|[Remainder](../../javascript/reference/modulus-assignment-operator-decrement-javascript.md)|%=|  
 |[곱하기](../../javascript/reference/multiplication-assignment-operator-decrement-equal-javascript.md)|*=|  
 |[오른쪽 시프트](../../javascript/reference/right-shift-assignment-operator-decrement-equal-javascript.md)|>>=|  
 |[빼기](../../javascript/reference/subtraction-assignment-operator-decrement-equal-javascript.md)|-=|  
