@@ -33,6 +33,8 @@
 #### [Visual Studio 배포에 대한 업데이트 제어](install/controlling-updates-to-visual-studio-deployments.md)
 ### 설치 관리
 #### [Visual Studio 인스턴스 검색 및 관리 도구](install/tools-for-managing-visual-studio-instances.md)
+### 구독 관리
+#### [Visual Studio 구독: 관리자 개요](/visualstudio/subscriptions/admin-responsibilities) 
 ### [도움말 뷰어 관리자 가이드](ide/help-viewer-administrator-guide.md)
 #### [도움말 콘텐츠 관리자에 대한 명령줄 인수](ide/command-line-arguments-for-the-help-content-manager.md)
 #### [도움말 콘텐츠 관리자 재정의](ide/help-content-manager-overrides.md)
@@ -46,7 +48,7 @@
 # 빠른 시작
 ## [Visual Studio 오리엔테이션](ide/quickstart-ide-orientation.md)
 ## [프로젝트 및 솔루션](ide/quickstart-projects-solutions.md)
-## [편집기에서 코드 작성](ide/quickstart-editor.md)
+## [편집기 사용](ide/quickstart-editor.md)
 ## [테마 및 텍스트 색 개인 설정](ide/quickstart-personalize-the-ide.md)
 ## [C++: 콘솔 앱 만들기](ide/getting-started-with-cpp-in-visual-studio.md)
 ## [Python: Web App 만들기](ide/quickstart-python.md)
@@ -98,7 +100,7 @@
 #### [Visual Studio IDE 64비트 지원](ide/visual-studio-ide-64-bit-support.md)
 ### [프로젝트 또는 솔루션 없이 개발("폴더 열기")](ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 #### [빌드 및 디버그 작업 사용자 지정](ide/customize-build-and-debug-tasks-in-visual-studio.md)
-### [편집기에서 코드 작성](ide/writing-code-in-the-code-and-text-editor.md)
+### [편집기 사용](ide/writing-code-in-the-code-and-text-editor.md)
 #### [텍스트 찾기 및 바꾸기](ide/finding-and-replacing-text.md)
 ##### [정규식 사용](ide/using-regular-expressions-in-visual-studio.md)
 ##### [찾기/명령 상자](ide/find-command-box.md)

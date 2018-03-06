@@ -188,6 +188,7 @@
 ## [방법: AsyncPackage를 사용하여 백그라운드에서 VSPackage를 로드](how-to-use-asyncpackage-to-load-vspackages-in-the-background.md)
 ## [방법: Visual Studio 확장에 대해 규칙 기반 UI 컨텍스트 사용](how-to-use-rule-based-ui-context-for-visual-studio-extensions.md)
 ## [방법: 확장 성능 진단](how-to-diagnose-extension-performance.md)
+## [방법: 확장으로 인해 발생한 진단 UI 지연](how-to-diagnose-ui-delays-caused-by-extensions.md)
 ## [VSPackage 문제 해결](troubleshooting-vspackages.md)
 # [셸(통합 또는 격리)](https://vspartner.com/pages/vsshells)
 # [Visual Studio 확장 전달](shipping-visual-studio-extensions.md)
