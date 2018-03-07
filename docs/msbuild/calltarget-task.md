@@ -22,11 +22,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: c15207a564a63f08d58c4f0164aae703d43daa9a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 339882fadba46dc0a42c6796d135e761a3554e9c
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="calltarget-task"></a>CallTarget 작업
 프로젝트 파일 내의 지정된 대상을 호출합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|`RunEachTargetSeparately`|선택적 `Boolean` 출력 매개 변수입니다.<br /><br /> `true`인 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 엔진이 대상마다 한 번씩 호출됩니다. `false`인 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 엔진이 한 번씩 호출되어 모든 대상을 빌드합니다. 기본값은 `false`입니다.|  
+|`RunEachTargetSeparately`|선택적 `Boolean` 입력 매개 변수입니다.<br /><br /> `true`인 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 엔진이 대상마다 한 번씩 호출됩니다. `false`인 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 엔진이 한 번씩 호출되어 모든 대상을 빌드합니다. 기본값은 `false`입니다.|  
 |`TargetOutputs`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 빌드된 모든 대상의 출력을 포함합니다.|  
 |`Targets`|선택적 `String[]` 매개 변수입니다.<br /><br /> 빌드할 대상을 지정합니다.|  
 |`UseResultsCache`|선택적 `Boolean` 매개 변수입니다.<br /><br /> `true`인 경우 캐시된 결과(있는 경우)가 반환됩니다.<br /><br /> **참고** MSBuild 작업이 실행되면 해당 출력은 (ProjectFileName, GlobalProperties)[TargetNames] 범위에 빌드 항목의 목록으로 캐시됩니다.|  

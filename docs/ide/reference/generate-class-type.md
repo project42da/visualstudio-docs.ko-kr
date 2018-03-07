@@ -16,11 +16,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 77b6feef7556950d121e462cb1e8e81e8c4bfe7f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 3016df12481da0a7ea81dee1ff895fc5dcbd059d
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="generate-a-class-or-type-in-visual-studio"></a>Visual Studio에서 클래스 또는 형식 생성
 
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - **Ctrl+.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 빨간색 구부러진 곡선 위로 마우스를 이동하고 표시되는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.
@@ -93,5 +93,5 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[코드 생성](../code-generation-in-visual-studio.md)  
-[변경 내용 미리 보기](../../ide/preview-changes.md)
+- [코드 생성](../code-generation-in-visual-studio.md)
+- [변경 내용 미리 보기](../../ide/preview-changes.md)

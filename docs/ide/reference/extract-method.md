@@ -16,11 +16,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 4ccdab053e06efc11b6f9c42d391d4b4fc1f85f7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d66a0e41f0c68d3d5c4378a664ef36aba0d869b7
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="extract-a-method-refactoring"></a>메서드 추출 리팩터링
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 
    - **키보드**
      - **Ctrl+R**을 누른 다음 **Ctrl+M**을 누릅니다. 바로 가기 키는 선택한 프로필에 따라 다를 수 있습니다.
-     - **Ctrl+.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **메서드 추출**을 선택합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **메서드 추출**을 선택합니다.
    - **마우스**
      - **편집 > 리팩터링 > 메서드 추출**을 선택합니다.
      - 코드를 마우스 오른쪽 단추로 클릭하고 **리팩터링 > 추출 > 메서드 추출**을 선택합니다.
@@ -64,16 +64,16 @@ ms.lasthandoff: 02/09/2018
    > 또한 이 새 이름을 사용하도록 주석과 기타 문자열을 업데이트하고, IDE의 오른쪽 위에 표시되는 **이름 바꾸기** 상자의 확인란을 사용하여 저장하기 전에 [변경 내용을 미리 볼](../../ide/preview-changes.md) 수 있습니다.
 
    - C#: 
-   
+
     ![메서드 이름 바꾸기 - C#](media/extractmethod-rename-cs.png)
 
    - Visual Basic:
-   
+
     ![메서드 이름 바꾸기 - Visual Basic](media/extractmethod-rename-vb.png)
 
 1. 변경 내용에 만족할 경우 **적용** 단추를 선택하거나 **Enter** 키를 누르면 변경 내용이 커밋됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[리팩터링](../refactoring-in-visual-studio.md)  
-[변경 내용 미리 보기](../../ide/preview-changes.md)
+- [리팩터링](../refactoring-in-visual-studio.md)
+- [변경 내용 미리 보기](../../ide/preview-changes.md)

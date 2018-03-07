@@ -9,27 +9,28 @@ ms.date: 11/13/2017
 ms.topic: how-to article
 ms.devlang: multiple
 ms.service: multiple
+ms.technology: vs-ai-tools
 ms.workload:
 - azure
-ms.openlocfilehash: 77eb12a8ffa0b40d83bcbe24326fb386eb0a4d9c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 90d0e7db36b91c2add1bcfe80fb3325bd1ddf126
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="train-ai-models-in-azure-batch-ai"></a>Azure Batch AI에서 AI 모델 학습
 
-Batch AI는 데이터 과학자와 AI 연구자들이 GPU 지원이 적용된 VM을 포함하여 Azure Virtual Machines 클러스터에서 AI 및 기타 기계 학습 모델을 교육시킬 수 있게 하는 관리되는 서비스입니다. 작업 요구 사항, 입력 확인 및 출력 저장 위치를 설명하면 Batch AI가 나머지를 처리합니다. [Azure Batch AI에 대한 자세한 정보](https://docs.microsoft.com/azure/batch-ai/overview) 
+Batch AI는 데이터 과학자와 AI 연구자들이 GPU 지원이 적용된 VM을 포함하여 Azure Virtual Machines 클러스터에서 AI 및 기타 기계 학습 모델을 교육시킬 수 있게 하는 관리되는 서비스입니다. 작업 요구 사항, 입력 확인 및 출력 저장 위치를 설명하면 Batch AI가 나머지를 처리합니다. [Azure Batch AI에 대한 자세한 정보](https://docs.microsoft.com/azure/batch-ai/overview)
 
 Visual Studio Tools for AI에 통합되므로 Azure에서 동적으로 학습 모델을 확장할 수 있습ㄴ디ㅏ.  [Visual Studio Tools for AI](installation.md)가 설치되면 Azure Machine Learning 샘플 갤러리에서 미리 만들어진 방법을 사용하여 새 Python 프로젝트를 쉽게 만들 수 있습니다.
 
-1. Visual Studio를 실행합니다. **AI 도구** 메뉴를 열고 **클러스터 선택**을 선택하여 **서버 탐색기**를 엽니다.  
+1. Visual Studio를 실행합니다. **AI 도구** 메뉴를 열고 **클러스터 선택**을 선택하여 **서버 탐색기**를 엽니다.
 
     ![클러스터 선택기](media\train-model\select-cluster.png)
 
-     
-2. **AI 도구**를 확장합니다. 사용자가 보유한 모든 Batch AI 리소스가 자동 검색되어 서버 탐색기에 표시됩니다. 
-    
+
+2. **AI 도구**를 확장합니다. 사용자가 보유한 모든 Batch AI 리소스가 자동 검색되어 서버 탐색기에 표시됩니다.
+
     ![샘플 갤러리](media\train-model\batchai.png)
 
 3. **보기 > 팀 탐색기...**를 선택하여 GitHub 또는 Visual Studio Team Services에 연결하거나 리포지토리를 복제할 수 있는 **팀 탐색기** 창을 엽니다.
@@ -42,10 +43,10 @@ Visual Studio Tools for AI에 통합되므로 Azure에서 동적으로 학습 �
     > 팀 탐색기에서 지정하는 폴더는 복제된 파일을 받을 특정 폴더입니다. `git clone` 명령과 달리 팀 탐색기에서 복제본을 만드는 것은 리포지토리의 이름으로 하위 폴더를 자동으로 만들지 않습니다.
 
 5. 복제가 완료되면 클릭 **파일 > 솔루션 열기 > 프로젝트 / 솔루션**을 클릭합니다.
-    
+
     ![샘플 갤러리](media\train-model\open-solution.png)
 
-5. 리포지토리를 복제한 디렉터리에서 **samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln**을 엽니다. 
+5. 리포지토리를 복제한 디렉터리에서 **samples-for-ai\TensorFlowExamples\TensorFlowExamples.sln**을 엽니다.
 
     ![샘플 갤러리](media\train-model\tensorflowexamples.png)
 

@@ -1,4 +1,10 @@
 ---
+ms.technology: vs-ai-tools
+ms.openlocfilehash: b941d0ba55c540de4bda1cb0f9c4ed18ceab524f
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="browse-storage-to-upload-data-or-download-models-and-logs"></a>저장소로 이동하여 데이터 업로드 또는 모델 및 로그 다운로드
 
@@ -14,6 +20,6 @@
 ## <a name="to-access-job-specific-data-on-the-remote-machine-or-file-share"></a>원격 컴퓨터 또는 파일 공유에서 작업 특정 데이터에 액세스하려면
 1. [작업 기록](job-details.md)을 엽니다.
 2. 작업을 선택합니다.
-3. 이러한 중요 로그 파일에 빠르게 액세스하기 위해 **작업 폴더**를 클릭하거나 StdOut/Stderr을 클릭합니다. 
+3. 이러한 중요 로그 파일에 빠르게 액세스하기 위해 **작업 폴더**를 클릭하거나 StdOut/Stderr을 클릭합니다.
 
     ![storage](media\manage-storage\job-workingfolder.png)

@@ -13,11 +13,11 @@ dev_langs:
 - csharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: d19a348ff21abce181f971c798d61cde393f4689
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: a76e6024a2b61bcae08fb8db169483bcee6e5d19
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="move-declaration-near-reference-refactoring"></a>참조 리팩터링 근처로 선언 이동
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - **Ctrl+.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **참조 근처로 선언 이동**을 선택합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **참조 근처로 선언 이동**을 선택합니다.
    - **마우스**
      - 코드를 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 **참조 근처로 선언 이동**을 선택합니다.
 
@@ -67,5 +67,5 @@ if (condition)
 
 ## <a name="see-also"></a>참고 항목
 
-[리팩터링](../refactoring-in-visual-studio.md)  
-[변경 내용 미리 보기](../../ide/preview-changes.md)
+- [리팩터링](../refactoring-in-visual-studio.md)
+- [변경 내용 미리 보기](../../ide/preview-changes.md)

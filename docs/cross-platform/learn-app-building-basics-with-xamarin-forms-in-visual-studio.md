@@ -7,24 +7,25 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: d22b5186-9e03-4e85-afc9-7cbe28522a6d
-caps.latest.revision: 
+ms.technology: vs-ide-mobile
 author: ghogen
 ms.author: ghogen
 manager: ghogen
 ms.workload:
 - xamarin
-ms.openlocfilehash: 3a066156f66a4e89132010a8c83edc7029dbe19e
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 71470cd03844c7761afbd07c9d454214f5dc36ca
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio에서 Xamarin.Forms를 사용한 앱 빌드 기본 사항 알아보기
+
 [Setup and install](../cross-platform/setup-and-install.md) 및 [Verify your Xamarin environment](../cross-platform/verify-your-xamarin-environment.md)의 단계를 완료했으면 이 연습 과정을 통해 Xamarin.Forms로 기본 앱을 구축하는 방법을 확인합니다(아래 참조). Xamarin.Forms를 사용하여 모든 UI 코드를 .NET Standard 클래스 라이브러리로 한꺼번에 작성합니다. 그러면 Xamarin은 iOS, Android 및 Windows 유니버설 플랫폼에 대한 네이티브 UI 컨트롤을 자동으로 렌더링합니다. .NET Standard 라이브러리는 모든 대상 플랫폼에서 지원되는 .NET API만 포함하고 Xamarin.Forms는 플랫폼 간 UI 코드 공유를 가능하게 하므로 공유 프로젝트가 아닌 이 접근 방법이 권장됩니다.  
   
- ![Android, iOS 및 Windows의 날씨 앱 샘플](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
+![Android, iOS 및 Windows의 날씨 앱 샘플](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
   
- 앱을 빌드하려면 다음 작업을 수행합니다.  
+앱을 빌드하려면 다음 작업을 수행합니다.  
   
 -   [솔루션 설정](#solution)  
   
@@ -37,10 +38,11 @@ ms.lasthandoff: 01/22/2018
 -   [플랫폼 간에 네이티브 모양 및 느낌을 지정하여 UI 완료](#finish)  
   
 > [!TIP]
->  [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)에서 이 프로젝트에 대한 전체 소스 코드를 찾을 수 있습니다.  
+> [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)에서 이 프로젝트에 대한 전체 소스 코드를 찾을 수 있습니다.  
   
 ##  <a name="solution"></a> 솔루션 설정  
- 다음 단계에서는 공유 코드에 대한 .NET Standard 클래스 라이브러리와 두 개의 추가 NuGet 패키지를 포함하는 Xamarin.Forms 솔루션을 만듭니다.  
+
+다음 단계에서는 공유 코드에 대한 .NET Standard 클래스 라이브러리와 두 개의 추가 NuGet 패키지를 포함하는 Xamarin.Forms 솔루션을 만듭니다.  
   
 1.  Visual Studio에서 새 **플랫폼 간 앱(Xamarin.Forms)** 솔루션을 만들고 **WeatherApp**으로 이름을 지정합니다. 왼쪽 목록에서 **Visual C#** 및 **플랫폼 간**을 선택하여 템플릿을 찾습니다.  
   
@@ -98,11 +100,12 @@ ms.lasthandoff: 01/22/2018
 7.  솔루션을 빌드하고 빌드 오류가 없는지 확인합니다.  
   
 ##  <a name="dataservice"></a> 공유 데이터 서비스 코드 작성  
- **WeatherApp** 프로젝트는 모든 플랫폼에서 공유되는 .NET Standard 라이브러리에 대한 코드를 작성하는 프로젝트입니다. 이 라이브러리는 iOS, Android, Windows 프로젝트에서 빌드된 앱 패키지에 자동으로 포함됩니다.  
+
+**WeatherApp** 프로젝트는 모든 플랫폼에서 공유되는 .NET Standard 라이브러리에 대한 코드를 작성하는 프로젝트입니다. 이 라이브러리는 iOS, Android, Windows 프로젝트에서 빌드된 앱 패키지에 자동으로 포함됩니다.  
   
- 이 샘플을 실행하려면 무료 API 키를 위해 [http://openweathermap.org/appid](http://openweathermap.org/appid)에 먼저 등록해야 합니다.  
+이 샘플을 실행하려면 무료 API 키를 위해 [http://openweathermap.org/appid](http://openweathermap.org/appid)에 먼저 등록해야 합니다.  
   
- 다음 단계에서는 날씨 서비스의 데이터를 액세스하고 저장하기 위한 코드를 .NET Standard 라이브러리에 추가합니다.  
+다음 단계에서는 날씨 서비스의 데이터를 액세스하고 저장하기 위한 코드를 .NET Standard 라이브러리에 추가합니다.  
   
 1.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 클래스...**를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름을 **Weather.cs**로 지정합니다. 이 클래스는 날씨 데이터 서비스의 데이터를 저장하는 데 사용합니다.  
   
@@ -206,7 +209,8 @@ ms.lasthandoff: 01/22/2018
 7.  **WeatherApp** 라이브러리 프로젝트를 빌드하여 코드가 올바른지 확인합니다.  
   
 ##  <a name="uicode"></a> 공유 UI 코드 작성 시작  
- Xamarin.Forms를 사용하여 .NET Standard 라이브러리에서 공유 UI 코드를 구현할 수 있습니다. 이 단계에서는 이전 섹션에서 추가한 코드를 날씨 데이터 서비스 코드에 의해 반환된 데이터로 해당 텍스트를 업데이트하는 단추가 있는 페이지를 프로젝트에 추가합니다.  
+
+Xamarin.Forms를 사용하여 .NET Standard 라이브러리에서 공유 UI 코드를 구현할 수 있습니다. 이 단계에서는 이전 섹션에서 추가한 코드를 날씨 데이터 서비스 코드에 의해 반환된 데이터로 해당 텍스트를 업데이트하는 단추가 있는 페이지를 프로젝트에 추가합니다.  
   
 1.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택하여 **WeatherPage.cs**라는 **콘텐츠 페이지**를 추가합니다. **새 항목 추가** 대화 상자에서 **콘텐츠 페이지**를 선택합니다. **콘텐츠 페이지(C#)** 또는 **콘텐츠 보기**를 선택하지 않도록 주의하세요. 이름을 **WeatherPage.cs**로 지정합니다.  
   
@@ -271,7 +275,8 @@ ms.lasthandoff: 01/22/2018
 5.  **WeatherApp** 프로젝트를 빌드하여 코드가 올바른지 확인합니다.  
   
 ##  <a name="test"></a> Android용 Visual Studio 에뮬레이터를 사용하여 앱을 테스트합니다.  
- 이제 앱을 실행할 준비가 되었습니다. 지금은 앱이 날씨 서비스의 데이터를 가져오는지를 Android 버전에서만 확인해 보겠습니다. iOS 및 UWP 버전은 다른 UI 요소를 추가한 후에 실행해 보겠습니다.   
+
+이제 앱을 실행할 준비가 되었습니다. 지금은 앱이 날씨 서비스의 데이터를 가져오는지를 Android 버전에서만 확인해 보겠습니다. iOS 및 UWP 버전은 다른 UI 요소를 추가한 후에 실행해 보겠습니다.   
   
 1.  **WeatherApp.Android** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **시작 프로젝트로 설정**을 선택하여 해당 프로젝트를 시작 프로젝트로 설정합니다.  
   
@@ -284,7 +289,8 @@ ms.lasthandoff: 01/22/2018
      ![단추를 탭하기 전후의 날씨 앱](../cross-platform/media/crossplat-xamarin-formsguide-8.png "CrossPlat Xamarin FormsGuide 8")  
   
 ##  <a name="finish"></a> 플랫폼 간에 네이티브 모양 및 느낌을 지정하여 UI 완료  
- Xamarin.Forms는 앱이 자동으로 네이티브 모양 및 느낌을 갖도록 각 플랫폼에 대해 네이티브 UI 컨트롤을 렌더링합니다. 이를 보다 명확히 이해하기 위해 우편 번호 입력 필드로 UI를 완료한 다음 서비스에서 반환되는 날씨 데이터를 표시해 보겠습니다.  
+
+Xamarin.Forms는 앱이 자동으로 네이티브 모양 및 느낌을 갖도록 각 플랫폼에 대해 네이티브 UI 컨트롤을 렌더링합니다. 이를 보다 명확히 이해하기 위해 우편 번호 입력 필드로 UI를 완료한 다음 서비스에서 반환되는 날씨 데이터를 표시해 보겠습니다.  
   
 1.  **WeatherPage.xaml** 의 내용을 아래 코드로 바꿉니다. 앞서 설명된 대로 **X:name** 특성을 사용하여 이름이 지정된 요소는 코드에서 참조될 수 있습니다. 또한 Xamarin.Forms는 다양한 [레이아웃 옵션](http://developer.xamarin.com/guides/xamarin-forms/controls/layouts/)(xamarin.com)을 제공합니다. 여기서 WeatherPage는 [Grid](http://developer.xamarin.com/api/type/Xamarin.Forms.Grid/)(xamarin.com) 및 [StackLayout](http://developer.xamarin.com/api/type/Xamarin.Forms.StackLayout/)(xamarin.com)을 사용합니다.  
   
@@ -398,4 +404,4 @@ ms.lasthandoff: 01/22/2018
   
      ![Android, iOS 및 Windows Phone의 날씨 앱 샘플](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")  
   
- 이 프로젝트에 대한 전체 소스 코드는 [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)에 있습니다.
+이 프로젝트에 대한 전체 소스 코드는 [GitHub의 xamarin-forms-samples 리포지토리](https://github.com/xamarin/xamarin-forms-samples/tree/master/Weather)에 있습니다.

@@ -16,11 +16,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 451b5ccddf6052eca3ae0a19b87076d2fd88a952
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e735b194da008de83fddac564194f8bb008c66bb
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="extract-an-interface-refactoring"></a>인터페이스 추출 리팩터링
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 02/09/2018
 
    - **키보드**
      - **Ctrl+R**을 누른 다음 **Ctrl+I**를 누릅니다. 바로 가기 키는 선택한 프로필에 따라 다를 수 있습니다.
-     - **Ctrl+.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **인터페이스 추출**을 선택합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **인터페이스 추출**을 선택합니다.
    - **마우스**
      - **편집 > 리팩터링 > 인터페이스 추출**을 선택합니다.
      - 클래스 이름을 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 **인터페이스 추출**을 선택합니다.

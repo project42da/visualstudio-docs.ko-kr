@@ -16,11 +16,11 @@ dev_langs:
 - csharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3d0a532e2e3e5bb8afa4a3c3dc9720134a1b7e8b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ab91e95d699b4a7fcc27ca1f6bcdf43b51af9c26
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="convert-get-method-to-property--convert-property-to-get-method-refactorings"></a>Get 메서드를 속성으로 변환 / 속성을 Get 메서드로 변환 / 리팩터링
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 02/09/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - **Ctrl+.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **메서드를 속성으로 대체**를 선택합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **메서드를 속성으로 대체**를 선택합니다.
    - **마우스**
      - 코드를 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 **메서드를 속성으로 대체**를 선택합니다.
 
@@ -73,7 +73,7 @@ public int MyValue
 
 **대상:** 속성을 Get 메서드로 변환할 수 있습니다.
 
-**시기:** 값을 즉시 설정하고 가져오는 것 이외에 관련된 속성이 있습니다. 
+**시기:** 값을 즉시 설정하고 가져오는 것 이외에 관련된 속성이 있습니다.
 
 ### <a name="how-to"></a>방법
 
@@ -82,7 +82,7 @@ public int MyValue
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - **Ctrl+.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **속성을 메서드로 대체**를 선택합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **속성을 메서드로 대체**를 선택합니다.
    - **마우스**
      - 코드를 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 **속성을 메서드로 대체**를 선택합니다.
 
@@ -90,5 +90,5 @@ public int MyValue
 
 ## <a name="see-also"></a>참고 항목
 
-[리팩터링](../refactoring-in-visual-studio.md)  
-[변경 내용 미리 보기](../../ide/preview-changes.md)
+- [리팩터링](../refactoring-in-visual-studio.md)
+- [변경 내용 미리 보기](../../ide/preview-changes.md)

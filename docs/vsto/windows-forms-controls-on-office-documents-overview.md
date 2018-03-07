@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -30,7 +31,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 898d0325b352f3ea8982dc68cf5a99a07181a31c
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -40,12 +42,12 @@ ms.lasthandoff: 01/10/2018
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Office 문서의 Windows Forms 컨트롤 개요
   Windows Forms 컨트롤은 사용자가 데이터를 입력하거나 조작하는 데 사용할 수 있는 개체입니다. Microsoft Office Excel 및 Microsoft Office Word의 문서 수준 프로젝트에서 디자인 타임에 프로젝트의 문서나 통합 문서에 Windows Forms 컨트롤을 추가하거나 런타임에 프로그래밍 방식으로 이러한 컨트롤을 추가할 수 있습니다. Excel 또는 Word용 VSTO 추가 기능에서 런타임에 열려 있는 문서나 워크시트에 프로그래밍 방식으로 이러한 컨트롤을 추가할 수 있습니다.  
   
- 자세한 내용은 [How to: Add Windows Forms Controls to Office Documents](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)을 참조하세요.  
+ 자세한 내용은 [방법: Office 문서에 Windows Forms 컨트롤 추가](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)을 참조하세요.  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
 ## <a name="using-windows-forms-controls"></a>Windows Forms 컨트롤 사용  
- 작업 창, 사용자 지정 작업창 및 Windows Forms 등의 사용자 지정 가능한 UI(사용자 인터페이스) 요소 및 문서에 Windows Forms 컨트롤을 추가할 수 있습니다. Windows Forms 컨트롤은 문서에서 일반적으로 다른 UI 요소와 동일한 동작을 수행하지만 몇 가지 차이점이 있습니다. 자세한 내용은 [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)을 참조하세요.  
+ 작업 창, 사용자 지정 작업창 및 Windows Forms 등의 사용자 지정 가능한 UI(사용자 인터페이스) 요소 및 문서에 Windows Forms 컨트롤을 추가할 수 있습니다. Windows Forms 컨트롤은 문서에서 일반적으로 다른 UI 요소와 동일한 동작을 수행하지만 몇 가지 차이점이 있습니다. 자세한 내용은 [Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)을 참조하세요.  
   
  Windows Forms 컨트롤을 문서에 추가할지 또는 기타 다른 UI 요소에 추가할지에 대한 결정은 여러 가지 요인에 따라 달라집니다. 솔루션의 UI를 디자인할 때는 다음 표에 설명된 Windows Forms 컨트롤의 용도를 고려해야 합니다.  
   
@@ -75,7 +77,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="adding-windows-forms-controls-programmatically"></a>프로그래밍 방식으로 Windows Forms 컨트롤 추가  
  런타임에 Windows Forms 컨트롤을 Word 문서와 Excel 워크시트에 추가할 수 있습니다. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 은 가장 일반적인 Windows Forms 컨트롤을 추가하는 데 필요한 도우미 메서드를 제공합니다. 이러한 도우미 메서드를 사용하면 Office 문서에 신속하게 컨트롤을 추가하고 결합된 Windows Forms 컨트롤 기능과 이러한 컨트롤의 Office 관련 기능에 액세스할 수 있습니다.  
   
- 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 ## <a name="using-windows-forms-controls-in-document-level-projects"></a>문서 수준 프로젝트에서 Windows Forms 컨트롤 사용  
  문서에서의 Windows Forms 컨트롤 사용은 문서 수준 프로젝트마다 고유하므로 Visual Studio 디자이너를 사용하여 문서의 UI를 디자인할 수 있습니다.  
@@ -116,7 +118,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="preventing-old-data-from-appearing-in-excel-workbooks-during-loading"></a>로드 중 Excel 통합 문서에 이전 데이터 표시 방지  
  디자인 타임에 Windows Forms 컨트롤을 문서 또는 워크시트에 추가하면 사용자가 문서를 닫아도 컨트롤이 문서에 유지됩니다. 디자인 타임에 추가된 컨트롤을 *정적 컨트롤*이라고 합니다.  
   
- 정적 컨트롤이 포함된 Excel 통합 문서를 열면 사용자 지정 코드가 실행되고 실제 컨트롤이 로드될 때까지 통합 문서의 ActiveX 컨트롤에 컨트롤의 비트맵이 표시됩니다. 통합 문서를 저장할 때마다 Excel에서 이 비트맵을 만들고 통합 문서에 저장합니다. 비트맵은 컨트롤이 표시 중인 데이터를 포함하여 통합 문서가 마지막으로 저장될 때의 모양으로 컨트롤을 표시합니다. Windows Forms 컨트롤 및 비트맵을 포함하는 ActiveX 컨트롤에 대한 자세한 내용은 [Limitations of Windows Forms Controls on Office Documents](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)을 참조하세요.  
+ 정적 컨트롤이 포함된 Excel 통합 문서를 열면 사용자 지정 코드가 실행되고 실제 컨트롤이 로드될 때까지 통합 문서의 ActiveX 컨트롤에 컨트롤의 비트맵이 표시됩니다. 통합 문서를 저장할 때마다 Excel에서 이 비트맵을 만들고 통합 문서에 저장합니다. 비트맵은 컨트롤이 표시 중인 데이터를 포함하여 통합 문서가 마지막으로 저장될 때의 모양으로 컨트롤을 표시합니다. Windows Forms 컨트롤 및 비트맵을 포함하는 ActiveX 컨트롤에 대한 자세한 내용은 [Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)을 참조하세요.  
   
  사용자가 디자인 모드로 통합 문서를 여는 등 특정 조건에서는 코드가 로드되지 않으며 비트맵만 표시됩니다. 또한 사용자가 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 이 설치되지 않은 컴퓨터에서 통합 문서를 열면 사용자 지정을 실행할 수 없어 컨트롤이 로드되지 않으므로 컨트롤의 비트맵만 표시됩니다. 통합 문서를 저장하여 다른 사용자에게 보내기 전에는 항상 통합 문서의 컨트롤에서 개인 정보를 제거하여 개인 정보가 실수로 공개되는 일을 방지해야 합니다.  
   
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/10/2018
   
 -   컨트롤을 부동 셰이프로 추가하려면 컨트롤의 왼쪽 및 위쪽 좌표를 사용하는 오버로드를 사용합니다.  
   
- 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
  Visual Studio 디자이너에서 Word 서식 파일을 여는 경우 **기본** 보기에서 열리므로 인라인이 아닌 컨트롤은 이 서식 파일에 표시되지 않을 수 있습니다. 컨트롤을 표시하려면 보기를 **인쇄 레이아웃**으로 변경합니다.  
   

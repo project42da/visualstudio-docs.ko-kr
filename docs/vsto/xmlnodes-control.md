@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 1a3759070d406e721a12e01950e0e99cea40d1fc
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -33,7 +35,7 @@ ms.lasthandoff: 01/10/2018
  XML 노드의 컬렉션을 생성 하는 Visual Studio에서 Word 개체 모델을 트래버스 하지 않고 직접 컨트롤에 대해 프로그래밍할 수 있습니다. <xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤이 문서에서 요소 매핑을 제거 하 여만 삭제할 수 있습니다.  
   
 > [!NOTE]  
->  자식 요소를 액세스 하는 경우는 <xref:Microsoft.Office.Tools.Word.XMLNodes> 를 통해 제어는 <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> 속성을 반환는 <xref:Microsoft.Office.Interop.Word.XMLNode> 개체 대신 <xref:Microsoft.Office.Tools.Word.XMLNode> 제어 합니다. 자세한 내용은 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
+>  자식 요소를 액세스 하는 경우는 <xref:Microsoft.Office.Tools.Word.XMLNodes> 를 통해 제어는 <xref:Microsoft.Office.Tools.Word.XMLNodes.Item%2A> 속성을 반환는 <xref:Microsoft.Office.Interop.Word.XMLNode> 개체 대신 <xref:Microsoft.Office.Tools.Word.XMLNode> 제어 합니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
   
 ## <a name="binding-data-to-the-control"></a>컨트롤에 데이터 바인딩  
  <xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤에 데이터 바인딩을 지원 하지 않습니다. 때문에 이것이 <xref:Microsoft.Office.Tools.Word.XMLNodes> 컨트롤에 복잡 한 데이터 바인딩 기능이 없으면 및 단순 데이터 바인딩 표현할 수 없으면 반복 되는 데이터입니다.  

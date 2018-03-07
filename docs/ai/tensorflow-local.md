@@ -9,40 +9,42 @@ ms.date: 11/13/2017
 ms.topic: quickstart
 ms.devlang: python
 ms.service: multiple
+ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 395340bbaaafb1a990590ab50e3b0257c221e355
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 107145ddc607aeb981797c935a9d693a3fd9f9a6
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
-# <a name="train-a-tensorflow-model-locally"></a>로컬로 tensorflow 모델 학습 
+# <a name="train-a-tensorflow-model-locally"></a>로컬로 tensorflow 모델 학습
 
-이 빠른 시작에서는 Visual Studio Tools for AI에서 로컬로 [MNIST](http://yann.lecun.com/exdb/mnist/) 데이터 집합을 통해 TensorFlow 모델을 학습합니다. MNIST 데이터베이스에는 60,000개의 학습 예제 집합과 직접 작성한 10,000개의 테스트 예제 집합이 있습니다. 
+이 빠른 시작에서는 Visual Studio Tools for AI에서 로컬로 [MNIST](http://yann.lecun.com/exdb/mnist/) 데이터 집합을 통해 TensorFlow 모델을 학습합니다.
+MNIST 데이터베이스에는 60,000개의 학습 예제 집합과 직접 작성한 10,000개의 테스트 예제 집합이 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 시작하기 전에 다음이 설치되었는지 확인합니다.
 
-### <a name="google-tensorflow"></a>Google TensorFlow 
+### <a name="google-tensorflow"></a>Google TensorFlow
 
-터미널에서 다음 명령을 실행합니다. 
+터미널에서 다음 명령을 실행합니다.
 ```cmd
 C:\>pip.exe install tensorflow
 ```
 
-### <a name="numpy-and-scipy"></a>NumPy 및 SciPy 
-[NumPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) 및 [SciPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy)를 설치합니다. 
+### <a name="numpy-and-scipy"></a>NumPy 및 SciPy
+[NumPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#numpy) 및 [SciPy](https://www.lfd.uci.edu/~gohlke/pythonlibs/#scipy)를 설치합니다.
 
 ### <a name="download-sample-code"></a>샘플 코드 다운로드
-TensorFlow, CNTK, Theano 등에 대한 심층 학습을 시작하기 위해 이 [GitHub 리포지토리](https://github.com/Microsoft/samples-for-ai)를 다운로드합니다. 
+TensorFlow, CNTK, Theano 등에 대한 심층 학습을 시작하기 위해 이 [GitHub 리포지토리](https://github.com/Microsoft/samples-for-ai)를 다운로드합니다.
 
 ## <a name="open-solution-and-train-model"></a>솔루션을 열고 모델 학습
 
 - Visual Studio를 시작하고 **파일 > 열기 > 프로젝트/솔루션**을 선택합니다.
 
-- 다운로드한 샘플 리포지토리에서 **Tensorflow Examples** 폴더를 선택하고 **TensorflowExamples.sln** 파일을 엽니다. 
+- 다운로드한 샘플 리포지토리에서 **Tensorflow Examples** 폴더를 선택하고 **TensorflowExamples.sln** 파일을 엽니다.
 
 ![프로젝트 열기](media\tensorflow-local\open-project.png)
 
@@ -50,7 +52,7 @@ TensorFlow, CNTK, Theano 등에 대한 심층 학습을 시작하기 위해 이 
 
 - **솔루션 탐색기**에서 MNIST 프로젝트를 찾아 마우스 오른쪽 버튼으로 클릭하고 **시작 프로젝트로 설정**을 선택합니다.
 
-- **시작**을 클릭합니다. 
+- **시작**을 클릭합니다.
 
 - 출력은 콘솔에 인쇄됩니다.
 

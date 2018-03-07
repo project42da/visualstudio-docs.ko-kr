@@ -9,38 +9,39 @@ ms.date: 11/13/2017
 ms.topic: article
 ms.devlang: multiple
 ms.service: multiple
+ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 997a7c57ad504c90c62299b552df9dae19ee10f8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 69317a662d6407cf4b18f44dcba37e5163b7662d
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="visual-studio-tools-for-ai"></a>Visual Studio Tools for AI
 
 Visual Studio Tools for AI는 딥 러닝/AI 솔루션을 빌드, 테스트 및 배포하기 위한 확장 기능입니다. 데이터 준비 및 모델 교육 작업을 다른 계산 대상에 투명하게 제출하는 것을 포함하지만 이에 국한되지 않는 강력한 실험 기능을 위해 Azure Machine Learning과 원활하게 통합됩니다. 또한 사용자 지정 메트릭 및 실행 기록 추적을 지원하므로 데이터 과학 재현 가능성과 감사가 가능합니다. 엔터프라이즈 지원 공동 작업을 통해 다른 사람들과 프로젝트를 안전하게 수행할 수 있습니다.
 
-[CNTK(Microsoft Cognitive Toolkit)](http://www.microsoft.com/en-us/cognitive-toolkit), [Google TensorFlow](https://www.tensorflow.org) 또는 기타 딥 러닝 프레임워크를 사용하여 딥 러닝을 시작합니다.  
- 
-## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>딥 러닝 모델 및 AI 솔루션 개발, 디버그 및 배포  
-Visual Studio의 생산성 기능을 사용하여 현재의 AI 혁신을 가속화합니다. 구문 강조, IntelliSense 및 텍스트 자동 서식과 같은 기본 제공 코드 편집기 기능을 사용합니다. 지역 변수 및 모델에 대한 단계별 디버깅을 사용하여 로컬 환경에서 딥 러닝 응용 프로그램을 대화형으로 테스트할 수 있습니다. 
+[CNTK(Microsoft Cognitive Toolkit)](http://www.microsoft.com/en-us/cognitive-toolkit), [Google TensorFlow](https://www.tensorflow.org) 또는 기타 딥 러닝 프레임워크를 사용하여 딥 러닝을 시작합니다.
+
+## <a name="develop-debug-and-deploy-deep-learning-models-and-ai-solutions"></a>딥 러닝 모델 및 AI 솔루션 개발, 디버그 및 배포
+Visual Studio의 생산성 기능을 사용하여 현재의 AI 혁신을 가속화합니다. 구문 강조, IntelliSense 및 텍스트 자동 서식과 같은 기본 제공 코드 편집기 기능을 사용합니다. 지역 변수 및 모델에 대한 단계별 디버깅을 사용하여 로컬 환경에서 딥 러닝 응용 프로그램을 대화형으로 테스트할 수 있습니다.
 
 ![딥 러닝 IDE](media\about\ide.png)
 
-## <a name="get-started-quickly-with-the-azure-machine-learning-sample-gallery"></a>Azure Machine Learning 샘플 갤러리를 통해 빠르게 시작  
-Visual Studio Tools for AI는 Azure Machine Learning과 통합되어 CNTK, TensorFlow, MMLSpark 등을 사용하여 샘플 실험 갤러리를 쉽게 탐색할 수 있습니다. 
+## <a name="get-started-quickly-with-the-azure-machine-learning-sample-gallery"></a>Azure Machine Learning 샘플 갤러리를 통해 빠르게 시작
+Visual Studio Tools for AI는 Azure Machine Learning과 통합되어 CNTK, TensorFlow, MMLSpark 등을 사용하여 샘플 실험 갤러리를 쉽게 탐색할 수 있습니다.
 
 ![샘플 탐색기](media\about\gallery.png)
 
 [샘플 갤러리에서 프로젝트를 만드는 방법에 대한 자세한 정보](create-project-gallery.md)
 
 ## <a name="scale-out-deep-learning-model-training-andor-inferencing-to-the-cloud"></a>딥 러닝 모델 학습 및/또는 클라우드로 유추 학습 확장
-이 확장을 사용하면 로컬 컴퓨터에서 모델을 쉽게 학습하거나 Azure Machine Learning과의 통합을 사용하여 클라우드에 작업을 제출할 수 있습니다. Spark 클러스터, Azure GPU 가상 머신 등 다양한 계산 대상에 작업을 제출할 수 있습니다.  
- 
+이 확장을 사용하면 로컬 컴퓨터에서 모델을 쉽게 학습하거나 Azure Machine Learning과의 통합을 사용하여 클라우드에 작업을 제출할 수 있습니다. Spark 클러스터, Azure GPU 가상 머신 등 다양한 계산 대상에 작업을 제출할 수 있습니다.
+
 ![작업 제출](media\about\submitjobs.png)
 
-[클라우드에서 모델을 학습하는 방법에 대한 자세한 정보](tensorflow-vm.md) 
+[클라우드에서 모델을 학습하는 방법에 대한 자세한 정보](tensorflow-vm.md)
 
 ## <a name="supported-operating-systems"></a>Supported Operating Systems
 이 확장은 현재 Windows 64비트 운영 체제를 지원합니다.

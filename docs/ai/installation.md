@@ -9,13 +9,14 @@ ms.date: 11/13/2017
 ms.topic: article
 ms.devlang: multiple
 ms.service: multiple
+ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 85513f908421f4eee5411b5d394b378e66fa31fd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7e182a000dc9c8aaeb721b81036f878430260618
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="installation"></a>설치
 
@@ -23,11 +24,11 @@ Visual Studio Tools for AI는 64비트 운영 체제에 설치할 수 있습니�
 
 ## <a name="installing-visual-studio-tools-for-ai"></a>Visual Studio Tools for AI 설치
 
-이 확장 프로그램은 [Visual Studio](https://docs.microsoft.com/visualstudio/) 2015, 2017, Community Edition 이상에서 작동합니다. 
+이 확장 프로그램은 [Visual Studio](https://docs.microsoft.com/visualstudio/) 2015, 2017, Community Edition 이상에서 작동합니다.
 
-설치하려면 [Visual Studio MarketPlace](http://aka.ms/vstoolsforai) 또는 Visual Studio 안에서 다운로드합니다. 
+설치하려면 [Visual Studio MarketPlace](http://aka.ms/vstoolsforai) 또는 Visual Studio 안에서 다운로드합니다.
 
-1. **도구**> **확장 및 업데이트** 
+1. **도구**> **확장 및 업데이트**
 
 ![Windows에 CUDA 설치](media\installation\extensions.png)
 

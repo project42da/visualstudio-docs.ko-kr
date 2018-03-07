@@ -12,11 +12,11 @@ ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2276c65dd0ed0478003c1e4f2c99683eb88b0ac8
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: b91c4dc3cc3bc3550f11bc60c95f1c3ed511cf62
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="how-to-use-boosttest-for-c-in-visual-studio"></a>Visual Studio에서 Boost.Test for C++를 사용하는 방법
 
@@ -35,18 +35,18 @@ Boost.Test에는 [Boost](http://www.boost.org/)가 필요합니다! Boost가 설
 1. Boost.Test 동적 또는 정적 라이브러리를 설치합니다.
 
     - **vcpkg install boost-test**를 실행하여 Boost.Test 동적 라이브러리를 설치합니다.
-    
+
        -또는-
-       
+
     - **vcpkg install boost-test:x86-windows-static**을 실행하여 Boost.Test 정적 라이브러리를 설치합니다.
 
 1. **vcpkg integrate install**을 실행하여 Visual Studio를 라이브러리로 구성하고 Boost 헤더 및 이진 파일의 경로를 포함합니다.
 
 ## <a name="add-the-item-template-visual-studio-2017-version-156-and-later"></a>항목 템플릿을 추가합니다(Visual Studio 2017 버전 15.6 이상).
 
-1. 테스트에 대한 .cpp 파일을 만들려면 **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **새 항목 추가**를 선택합니다. 
- 
-![Boost.Test 항목 템플릿](media/boost_test_item_template.png "Boost.Test 항목 템플릿")
+1. 테스트에 대한 .cpp 파일을 만들려면 **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **새 항목 추가**를 선택합니다.
+
+   ![Boost.Test 항목 템플릿](media/boost_test_item_template.png "Boost.Test 항목 템플릿")
 
 1. 새 파일에 샘플 테스트 메서드가 있습니다. **테스트 탐색기**에서 메서드를 검색할 수 있도록 프로젝트를 빌드합니다.
 
@@ -54,14 +54,14 @@ Boost.Test에는 [Boost](http://www.boost.org/)가 필요합니다! Boost가 설
 
 ## <a name="create-a-test-project-visual-studio-2017-version-155"></a>테스트 프로젝트를 만듭니다(Visual Studio 2017 버전 15.5).
 
-Visual Studio 2017 버전 15.5에서는 미리 구성된 테스트 프로젝트 또는 항목 템플릿을 Boost.Test에 사용할 수 없습니다. 따라서 테스트를 포함할 콘솔 응용 프로그램 프로젝트를 만들고 구성해야 합니다. 
+Visual Studio 2017 버전 15.5에서는 미리 구성된 테스트 프로젝트 또는 항목 템플릿을 Boost.Test에 사용할 수 없습니다. 따라서 테스트를 포함할 콘솔 응용 프로그램 프로젝트를 만들고 구성해야 합니다.
 
 1. **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **추가** > **새 프로젝트...**를 차례로 선택합니다.
 
 1. 왼쪽 창에서 **Visual C++** > **Windows 데스크톱**을 선택한 다음 **Windows 콘솔 응용 프로그램** 템플릿을 선택합니다.
 
 1. 프로젝트 이름을 지정하고 **확인**을 선택합니다.
-1. .cpp 파일에서 `main` 함수를 삭제합니다. 
+1. .cpp 파일에서 `main` 함수를 삭제합니다.
 
 1. Boost.Test의 단일 헤더 또는 동적 라이브러리 버전을 사용하는 경우 [include 지시문 추가](#add_include_directives)로 이동합니다. 정적 라이브러리 버전을 사용하는 경우 일부 추가 구성을 수행해야 합니다.
 
@@ -126,7 +126,7 @@ BOOST_AUTO_TEST_CASE(my\_boost_test)
 ```
 
 ## <a name="write-and-run-tests"></a>테스트 작성 및 실행
-이제 Boost Test를 작성하고 실행할 준비가 되었습니다. 테스트 매크로에 대한 내용은 [Boost Test 라이브러리 설명서](http://www.boost.org/doc/libs/1_38_0/libs/test/doc/html/index.html)를 참조하세요. **테스트 탐색기**를 사용한 테스트 검색, 실행 및 그룹화에 대한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)을 참조하세요.
+이제 Boost Test를 작성하고 실행할 준비가 되었습니다. 테스트 매크로에 대한 내용은 [Boost Test 라이브러리 설명서](http://www.boost.org/doc/libs/release/libs/test/doc/html/index.html)를 참조하세요. **테스트 탐색기**를 사용한 테스트 검색, 실행 및 그룹화에 대한 내용은 [테스트 탐색기를 사용하여 단위 테스트 실행](run-unit-tests-with-test-explorer.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 [C/C++에 대한 단위 테스트 작성](writing-unit-tests-for-c-cpp.md)
