@@ -2,12 +2,13 @@
 layout: LandingPage
 title: "Visual Studio에서 앱 디버그 | Microsoft Docs"
 description: "Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 디버그하는 방법에 대해 알아봅니다."
+ms.topic: landing-page
 ms.technology: vs-ide-debug
-ms.openlocfilehash: c08d88cf7ae8a38116d42b59747d956d7d4cf7ef
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 6c81a60b706a02a66fce176613fce1e0dae2496c
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="debugging-in-visual-studio"></a>Visual Studio의 디버깅
 
