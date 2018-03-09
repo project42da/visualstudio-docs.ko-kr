@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 8940cd30b4e573b7438b45b13fdd30735a504809
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -63,7 +65,7 @@ ms.lasthandoff: 01/10/2018
  Office 솔루션과 함께 배포되는 필수 조건으로 .NET Framework, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]및 Office 주 interop 어셈블리를 설치 패키지에 추가할 수 있습니다. 주 interop 어셈블리를 설치 하는 방법에 대 한 정보를 참조 하십시오. [Office 솔루션을 개발할 수 있도록 컴퓨터 구성](../vsto/configuring-a-computer-to-develop-office-solutions.md) 및 [하는 방법: 설치 Office 주 Interop 어셈블리](../vsto/how-to-install-office-primary-interop-assemblies.md)합니다.  
   
 ## <a name="publishing-using-localhost-can-cause-installation-problems"></a>'Localhost'를 사용하여 게시할 경우 설치 문제가 발생할 수 있음  
- 문서 수준 솔루션의 게시 또는 설치 위치로 "http://localhost"를 사용하면 **게시 마법사** 가 문자열을 실제 컴퓨터 이름으로 변환하지 않습니다. 이 경우 개발 컴퓨터에 솔루션을 설치해야 합니다. 배포된 솔루션에서 개발 컴퓨터의 IIS를 사용하게 하려면 localhost 대신 모든 HTTP/HTTPS/FTP 위치에 대한 정규화된 이름을 사용합니다.  
+ 문서 수준 솔루션의 게시 또는 설치 위치로 "http://localhost" 를 사용하면 **게시 마법사** 가 문자열을 실제 컴퓨터 이름으로 변환하지 않습니다. 이 경우 개발 컴퓨터에 솔루션을 설치해야 합니다. 배포된 솔루션에서 개발 컴퓨터의 IIS를 사용하게 하려면 localhost 대신 모든 HTTP/HTTPS/FTP 위치에 대한 정규화된 이름을 사용합니다.  
   
 ## <a name="cached-assemblies-are-loaded-instead-of-updated-assemblies"></a>업데이트된 어셈블리 대신 캐시된 어셈블리가 로드됨  
  .NET Framework 어셈블리 로더인 Fusion은 프로젝트 출력 경로가 네트워크 파일 공유에 있고, 어셈블리가 강력한 이름으로 서명되고, 사용자 지정의 어셈블리 버전이 변경되지 않은 경우 캐시된 어셈블리 복사본을 로드합니다. 이러한 조건을 충족하는 어셈블리를 업데이트할 경우 다음에 프로젝트를 실행할 때 캐시된 복사본이 로드되기 때문에 업데이트가 나타나지 않습니다.  

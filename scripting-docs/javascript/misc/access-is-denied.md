@@ -30,11 +30,11 @@ ms.lasthandoff: 10/27/2017
   
  예를 들어 현재 페이지가 https://employees.mycompany.com이면 다음 URL의 데이터에 액세스할 수 없습니다.  
   
--   http://data.contoso.com(HTTPS가 아니라 HTTP를 사용하므로)  
+-   http://data.contoso.com (HTTPS가 아니라 HTTP를 사용하므로)  
   
--   https://somedatasource.com(다른 도메인에 있으므로)  
+-   https://somedatasource.com (다른 도메인에 있으므로)  
   
--   https://employees.mycompany.com:8888(다른 포트를 사용하므로)  
+-   https://employees.mycompany.com:8888 (다른 포트를 사용하므로)  
   
 ### <a name="to-correct-this-error"></a>이 오류를 해결하려면  
   
