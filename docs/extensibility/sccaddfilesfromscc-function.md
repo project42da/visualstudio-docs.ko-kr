@@ -4,17 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SccAddFilesFromSCC
-helpviewer_keywords: SccAddFilesFromSCC function
+f1_keywords:
+- SccAddFilesFromSCC
+helpviewer_keywords:
+- SccAddFilesFromSCC function
 ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
-caps.latest.revision: "17"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 5bd53307323b1db4d5fa9e5407c3a0516f1187f4
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -66,7 +70,7 @@ SCCRTN SccAddFilesFromSCC(
  [in] 각 추가 되는 파일에 적용할 설명입니다.  
   
  pbResults  
- [out에서] (0이 아닌 또는 TRUE) 성공을 나타내기 위해 집합 또는 실패 하는 플래그의 배열 (0 또는 FALSE) 각 파일에 대 한 (배열 크기 이상 이어야 합니다 `cFiles` long)입니다.  
+ [out에서]\ (0이 아닌 또는 TRUE) 성공을 나타내기 위해 집합 또는 실패 하는 플래그의 배열 (0 또는 FALSE) 각 파일에 대 한 (배열 크기 이상 이어야 합니다 `cFiles` long)입니다.  
   
 ## <a name="return-value"></a>반환 값  
  소스 제어 플러그 인이 함수의 구현은 다음 값 중 하나를 반환:  

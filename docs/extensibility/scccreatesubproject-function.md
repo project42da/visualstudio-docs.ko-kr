@@ -4,17 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SccCreateSubProject
-helpviewer_keywords: SccCreateSubProject function
+f1_keywords:
+- SccCreateSubProject
+helpviewer_keywords:
+- SccCreateSubProject function
 ms.assetid: 08154aed-ae5c-463c-8694-745d0e332965
-caps.latest.revision: "19"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 97993833d08479fbf518fb5b4852f46cc34f9bc3
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -58,7 +62,7 @@ SCCRTN SccCreateSubProject(
  [out에서] NULL 종결자를 포함 하 여 SCC_PRJPATH_SIZE) (최대 프로젝트를 식별 하는 보조 문자열입니다.  
   
  lpSubProjPath  
- [out에서] (최대 SCC_PRJPATH_SIZE NULL 종결자 포함)의 하위 경로 식별 하는 출력 문자열입니다.  
+ [out에서] \(최대 SCC_PRJPATH_SIZE NULL 종결자 포함)의 하위 경로 식별 하는 출력 문자열입니다.  
   
 ## <a name="return-value"></a>반환 값  
  소스 제어 플러그 인이 함수의 구현은 다음 값 중 하나를 반환:  

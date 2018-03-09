@@ -4,17 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: IDebugProgramProvider2::GetProviderProcessData
-helpviewer_keywords: IDebugProgramProvider2::GetProviderProcessData
+f1_keywords:
+- IDebugProgramProvider2::GetProviderProcessData
+helpviewer_keywords:
+- IDebugProgramProvider2::GetProviderProcessData
 ms.assetid: 90cf7b7f-53d2-487e-b793-94501a6e24dd
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: e94e0606256eda3fb8cdcade90979342d078e125
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -64,7 +68,7 @@ int GetProviderProcessData(
  [in] [AD_PROCESS_ID](../../../extensibility/debugger/reference/ad-process-id.md) 구조에 프로그램을 포함 하는 프로세스의 ID를 보유 합니다.  
   
  `EngineFilter`  
- [in] (이러한 됩니다 필터링에 사용 될 모든 프로그램 반환 됩니다 엔진이 없습니다 지정 된 경우 제공 된 엔진; 지원 되는 내용에 따라 프로그램 실제로 반환 되는)이이 프로세스를 디버깅 하려면 할당 된 디버그 엔진에 대 한 Guid의 배열입니다.  
+ [in] \(이러한 됩니다 필터링에 사용 될 모든 프로그램 반환 됩니다 엔진이 없습니다 지정 된 경우 제공 된 엔진; 지원 되는 내용에 따라 프로그램 실제로 반환 되는)이이 프로세스를 디버깅 하려면 할당 된 디버그 엔진에 대 한 Guid의 배열입니다.  
   
  `pProcess`  
  [out] A [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 구조를 요청된 된 정보를 사용 하 여 채워집니다.  

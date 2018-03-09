@@ -36,7 +36,7 @@ HRESULT GetExceptionThrownKind(
   
 #### <a name="parameters"></a>매개 변수  
  `pExceptionKind`  
- [out] (예를 들어 첫째 또는 처리 되지 않은), throw 되는 예외 종류를 나타내는 [SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND 열거형](../../winscript/reference/script-error-debug-exception-thrown-kind-enumeration.md) 열거형 값입니다.  
+ [out] \(예를 들어 첫째 또는 처리 되지 않은), throw 되는 예외 종류를 나타내는 [SCRIPT_ERROR_DEBUG_EXCEPTION_THROWN_KIND 열거형](../../winscript/reference/script-error-debug-exception-thrown-kind-enumeration.md) 열거형 값입니다.  
   
 ## <a name="return-value"></a>반환 값  
  이 메서드는 `HRESULT`를 반환합니다. 가능한 값에는 다음 표에 있는 값이 포함되지만, 이에 국한되는 것은 아닙니다.  

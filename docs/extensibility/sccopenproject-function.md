@@ -4,17 +4,21 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
-f1_keywords: SccOpenProject
-helpviewer_keywords: SccOpenProject function
+f1_keywords:
+- SccOpenProject
+helpviewer_keywords:
+- SccOpenProject function
 ms.assetid: d609510b-660a-46d7-b93d-2406df20434d
-caps.latest.revision: "16"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 10afe84716153b67c419f4ddbd1a7b838b68cbf9
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -48,7 +52,7 @@ SCCRTN SccOpenProject (
  [in] 소스 제어 플러그 인을 제공 하는 모든 대화 상자에를 부모로 사용할 수 있는 IDE 창 핸들입니다.  
   
  lpUser  
- [out에서] (NULL 종결자를 포함 하 여 SCC_USER_SIZE 초과 하지 않음) 하는 사용자의 이름입니다.  
+ [out에서] \(NULL 종결자를 포함 하 여 SCC_USER_SIZE 초과 하지 않음) 하는 사용자의 이름입니다.  
   
  lpProjName  
  [in] 프로젝트의 이름을 나타내는 문자열입니다.  
