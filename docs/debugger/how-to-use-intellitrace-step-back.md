@@ -15,11 +15,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 01e6203d7fbef7115ea2e380494735888995e343
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 7a8f7343ceea2510c6ba8835c90bcb80b946fe91
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio에서 IntelliTrace를 사용 하 여 스냅숏 볼 단계 저장
 
@@ -107,5 +107,7 @@ IntelliTrace는 이벤트 및 스냅숏 모드에서 복잡 한 개체를 포함
 
     해결 방법:
     * 디버깅 세션을 종료 하 여 모든 스냅숏의 선택을 취소 합니다. 
+
+* 해당 프로세스에 많은 수의 Dll 로드 하는 응용 프로그램과 같이 고유 메모리 영역의 너무 많은 응용 프로그램을 디버깅할 때 사용 하도록 설정 하는 스냅숏과 함께 성능 단계별 실행 영향을 받습니다. 이 문제는 이후 버전의 Windows에서 해결 될 예정입니다. 이 문제를 발생 하는 경우에 도달 하 여 문의해 주십시오 stepback@microsoft.com합니다. 
 
 * 파일을 저장할 때 **디버그 > IntelliTrace > 저장 IntelliTrace 세션** 이벤트 및 스냅숏 모드에서 스냅숏에서 캡처한 추가 데이터에서에서 사용할 수 없는.itrace 파일입니다. 중단점 및 단계 이벤트에서 IntelliTrace 이벤트에 대 한 전용 모드에서 파일에 저장 하는 경우 동일한 정보를 참조 합니다. 
