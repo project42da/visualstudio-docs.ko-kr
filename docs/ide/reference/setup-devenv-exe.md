@@ -1,10 +1,10 @@
 ---
 title: "devenv.exe 설정 스위치 | Microsoft Docs"
-ms.custom: 
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -14,11 +14,11 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.openlocfilehash: 93f03de74540d130d66ce123b355691e0828b93e
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: e37fe50eefc36e7b5396f396d2b614851a0bd9cb
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="setup-devenvexe"></a>/Setup(devenv.exe)
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="syntax"></a>구문
 
-```
+```shell
 devenv /setup
 ```
 
@@ -34,13 +34,14 @@ devenv /setup
 
 이 스위치는 인수가 필요 없습니다. `devenv /setup` 명령은 일반적으로 설치 프로세스의 마지막 단계로 표시됩니다. `/setup` 스위치를 사용해도 Visual Studio가 시작되지는 않습니다.
 
-`devenv` 및 [devenv](../../ide/reference/setup-devenv-exe.md) 스위치를 사용하려면 관리자 권한으로 [devenv](../../ide/reference/installvstemplates-devenv-exe.md) 를 실행해야 합니다.
+> [!NOTE]
+> `/setup` 스위치를 사용하려면 관리자 권한으로 `devenv`를 실행해야 합니다.
 
 ## <a name="example"></a>예
 
 이 예는 VSPackages를 포함하는 Visual Studio 버전 설치의 마지막 단계를 보여 줍니다.
 
-```
+```shell
 devenv /setup
 ```
 

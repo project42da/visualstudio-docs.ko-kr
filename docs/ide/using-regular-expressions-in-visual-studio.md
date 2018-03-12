@@ -21,11 +21,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 077bb266e6ed55bfe59ec4e537b516ccde59e0c3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 43d566472a71b19ba9588a4564724d1ec8f5d933
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio에서 정규식 사용
 
@@ -56,11 +56,11 @@ Visual Studio에서는 [.NET Framework 정규식](/dotnet/standard/base-types/re
 |일치를 무효화합니다.|(?!abc)|`real (?!ity)`는 "realty" 및 "really"의 "real"과 일치하지만 "reality"와 일치하지 않습니다. "realityreal"에서 두 번째 "real"도 찾지만 첫 번째 "real"은 찾지 않습니다.|
 |지정된 문자 집합에 없는 모든 문자를 찾습니다.|[^abc]|`be[^n-t]`는 "before"의 "bef", "behind"의 "beh", "below"의 "bel"과 일치하지만 "beneath"와 일치하지 않습니다.|
 |기호 앞 또는 기호 뒤에 있는 식을 찾습니다.|&#124;|`(sponge&#124;mud) bath`는 "sponge bath" 및 "mud bath"와 일치합니다.|
-|백슬래시 뒤의 문자를 이스케이프합니다.|\\|`\^`은 문자 ^과 일치합니다.|
+|백슬래시 뒤의 문자를 이스케이프합니다.| \\ |`\^`은 문자 ^과 일치합니다.|
 |이전 문자 또는 그룹의 일치 항목 수를 지정합니다.|{x}. 여기서 x는 일치 항목 수입니다.|`x(ab){2}x`는 "xababx"와 일치하고, `x(ab){2,3}x`는 "xababx" 및 "xabababx"와 일치하지만 "xababababx"와 일치하지 않습니다.|
 |유니코드 문자 클래스에서 텍스트를 찾습니다. 여기서 “X”는 유니코드 번호입니다. 유니코드 문자 클래스에 대한 자세한 내용은<br /><br /> [Unicode Standard 5.2 Character Properties](http://www.unicode.org/versions/Unicode5.2.0/ch04.pdf)(유니코드 표준 5.2 문자 속성)를 참조하세요.|\p{X}|`\p{Lu}`는 "Thomas Doe"의 "T" 및 "D"와 일치합니다.|
 |단어 경계를 찾습니다.|`\b`(\b는 문자 클래스 외부에서 단어 경계를 지정하고 문자 클래스 내부에서 백스페이스를 지정함).|`\bin`은 "inside"의 "in"과 일치하지만 "pinto"와 일치하지 않습니다.|
-|줄 바꿈을 찾습니다(캐리지 리턴 뒤에 줄 바꿈).|\r?\n|`End\r?\nBegin`은 "End"가 줄의 마지막 문자열이고 "Begin"이 다음 줄의 첫 번째 문자열일 때만 "End" 및 "Begin"과 일치합니다.|
+|줄 바꿈을 찾습니다(즉, 캐리지 리턴 뒤에 줄 바꿈).|\r?\n|`End\r?\nBegin`은 "End"가 줄의 마지막 문자열이고 "Begin"이 다음 줄의 첫 번째 문자열일 때만 "End" 및 "Begin"과 일치합니다.|
 |영숫자 문자를 찾습니다.|\w|`a\wd`는 "add" 및 "a1d"와 일치하지만 "a d"와 일치하지 않습니다.|
 |공백 문자를 찾습니다.|(?([^\r\n])\s)|`Public\sInterface`는 구 "Public Interface"와 일치합니다.|
 |임의 숫자 문자를 찾습니다.|\d|`\d`는 "3456"의 "3", 23"의 "2", "1"의 "1"과 일치합니다.|

@@ -21,13 +21,13 @@ f1_keywords:
 - VC.Project.VCNMakeTool.ForcedIncludes
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 9f39aaaa17f48f832210ca26c1e255ae4b054514
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 955e3f7dfbab3293a01392c52b82aa2b7dce25c2
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/02/2018
 ---
-# <a name="nmake-properties-android-c"></a>NMake 속성(Android C++) 
+# <a name="nmake-properties-android-c"></a>NMake 속성(Android C++)
 
 속성 | 설명
 --- | ---
@@ -38,4 +38,4 @@ ms.lasthandoff: 02/09/2018
 전처리기 정의 | 원본 파일에서 사용하는 전처리기 정의를 지정합니다.
 포함 검색 경로 | 포함 파일을 확인하는 데 사용할 포함 검색 경로를 지정합니다.
 강제 포함 | 강제 포함 파일을 지정합니다.
-추가 옵션 | C++ 파일을 구문 분석할 때 Intellisense에서 사용하는 추가 컴파일러 스위치를 지정합니다.
+추가 옵션 | C++ 파일을 구문 분석할 때 IntelliSense에서 사용하는 추가 컴파일러 스위치를 지정합니다.

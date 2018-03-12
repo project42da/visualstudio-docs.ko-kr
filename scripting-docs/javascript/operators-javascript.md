@@ -20,14 +20,14 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c9d0a098418399dba19b77a12c057a3fba334e31
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a3068a609da2468c59066ccd38f6de87cef1ed17
+ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/05/2018
 ---
 # <a name="operators-javascript"></a>연산자(JavaScript)
-[!INCLUDE[javascript](../javascript/includes/javascript-md.md)]에는 산술, 논리, 비트 연산, 할당 및 일부 기타 연산자를 포함한 모든 범위의 연산자가 있습니다. 설명 및 예제를 보려면 특정 연산자에 대한 항목을 참조하세요.  
+[!INCLUDE[javascript](../javascript/includes/javascript-md.md)] 산술, 논리, 비트 연산, 할당 및 일부 기타 연산자를 포함한 모든 범위의 연산자가 있습니다. 설명 및 예제를 보려면 특정 연산자에 대한 항목을 참조하세요.  
   
 ## <a name="computational-operators"></a>계산 연산자  
   
@@ -38,7 +38,7 @@ ms.lasthandoff: 10/27/2017
 |[감소](../javascript/reference/increment-and-decrement-operators-javascript.md)|--|  
 |[곱하기](../javascript/reference/multiplication-operator-decrement-javascript.md)|*|  
 |[나누기](../javascript/reference/division-operator-decrement-javascript.md)|/|  
-|[모듈러스 산술](../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
+|[나머지 산술](../javascript/reference/modulus-operator-decrementjavascript.md)|%|  
 |[더하기](../javascript/reference/addition-operator-decrement-javascript.md)|+|  
 |[빼기](../javascript/reference/subtraction-operator-decrement-javascript.md)|-|  
   

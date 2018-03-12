@@ -4,26 +4,26 @@ ms.custom:
 ms.date: 10/25/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: tgt-pltfrm-cross-plat
+ms.technology: vs-unity-tools
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 8f5db192-8d78-4627-bd07-dbbc803ac554
-caps.latest.revision: "5"
 author: conceptdev
 ms.author: crdun
 manager: crdun
-ms.workload: unity
-ms.openlocfilehash: 7ede7734ec2a8c261cce3f31e06e77f932edd326
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- unity
+ms.openlocfilehash: 95d1724561886e1bcfa9a870bdf3bdadb787f9e8
+ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/02/2018
 ---
 # <a name="troubleshooting-and-known-issues-visual-studio-tools-for-unity"></a>문제 해결 및 알려진 문제(Visual Studio Tools for Unity)
-이 섹션에서는 Visual Stuio Tools for Unity와 관련된 일반적인 문제에 대한 솔루션, 알려진 문제의 설명을 찾아보고 오류를 보고하여 Visual Studio Tools for Unity를 개선하는 데 도움이 되는 방법을 알아봅니다.  
+이 섹션에서는 Visual Stuio Tools for Unity와 관련된 일반적인 문제에 대한 솔루션, 알려진 문제의 설명을 찾아보고 오류를 보고하여 Visual Studio Tools for Unity를 개선하는 데 도움이 되는 방법을 알아봅니다.
 
-## <a name="troubleshooting"></a>문제 해결  
-Visual Studio Tools for Unity에 대한 몇 가지 일반적인 문제를 해결하려면 다음 섹션을 참조하세요.  
+## <a name="troubleshooting"></a>문제 해결
+Visual Studio Tools for Unity에 대한 몇 가지 일반적인 문제를 해결하려면 다음 섹션을 참조하세요.
 
 ### <a name="visual-studio-crashes"></a>Visual Studio 크래시
 Visual Studio MEF 캐시가 손상되었기 때문에 발생할 수 있습니다.
@@ -40,7 +40,7 @@ MEF 캐시를 다시 설정하려면 다음 폴더를 제거해야 합니다. �
  devenv /setup
 ```
 
-### <a name="issues-with-vs2015-and-intellisense-or-code-coloration"></a>VS2015 및 Intellisense 또는 코드 색 지정 관련 문제
+### <a name="issues-with-vs2015-and-intellisense-or-code-coloration"></a>VS2015 및 IntelliSense 또는 코드 색 지정 관련 문제
 Visual Studio 2015를 업데이트 3으로 업그레이드해야 합니다.
 
 ### <a name="visual-studio-hangs"></a>Visual Studio 중지
@@ -74,90 +74,90 @@ Wi-Fi는 대기 시간 때문에 USB에 비해 유연성이 뛰어나지만 속�
 
 USB를 통해 다음을 시도하여 연결된 장치에서 열려 있는 포트를 확인할 수도 있습니다(디버깅 포트를 확인할 수 있도록 플레이어를 가동 및 실행함, 항상 56xxx 형식으로 표시).
 
-```shell  
+```shell
 adb shell netstat
-```  
+```
 
 로컬 PC에 포트를 전달합니다.
 
-```shell  
+```shell
 adb forward tcp:56xxx tcp:56xxx
-```  
+```
 
 그런 다음 전달된 127.0.0.1:56xxx 포트를 사용하여 VSTU를 연결합니다.
 
-### <a name="migrating-from-unityvs-to-visual-studio-tools-for-unity"></a>UnityVS에서 Visual Studio Tools for Unity로 마이그레이션  
- UnityVS에서 Visual Studio Tools for Unity로 마이그레이션하려면 Unity 프로젝트에 대한 새로운 Visual Studio 솔루션을 생성해야 합니다.  
+### <a name="migrating-from-unityvs-to-visual-studio-tools-for-unity"></a>UnityVS에서 Visual Studio Tools for Unity로 마이그레이션
+ UnityVS에서 Visual Studio Tools for Unity로 마이그레이션하려면 Unity 프로젝트에 대한 새로운 Visual Studio 솔루션을 생성해야 합니다.
 
-##### <a name="to-migrate-your-unity-project-from-unityvs-18-to-visual-studio-tools-for-unity-19"></a>UnityVS 1.8에서 Visual Studio Tools for Unity 1.9로 Unity 프로젝트를 마이그레이션하려면  
+##### <a name="to-migrate-your-unity-project-from-unityvs-18-to-visual-studio-tools-for-unity-19"></a>UnityVS 1.8에서 Visual Studio Tools for Unity 1.9로 Unity 프로젝트를 마이그레이션하려면
 
-1.  Unity 프로젝트에서 이전 솔루션 및 프로젝트 파일을 삭제합니다. Unity 프로젝트의 루트 디렉터리에서 Visual Studio .sln 및 .* proj 파일을 찾아 모두 삭제합니다.  
+1.  Unity 프로젝트에서 이전 솔루션 및 프로젝트 파일을 삭제합니다. Unity 프로젝트의 루트 디렉터리에서 Visual Studio .sln 및 .* proj 파일을 찾아 모두 삭제합니다.
 
-2.  Visual Studio Tools for Unity 패키지를 Unity 프로젝트로 가져옵니다. VSTU 패키지를 가져오는 방법에 대한 자세한 내용은 [시작](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) 페이지에서 Visual Studio Tools for Unity 구성을 참조하세요.  
+2.  Visual Studio Tools for Unity 패키지를 Unity 프로젝트로 가져옵니다. VSTU 패키지를 가져오는 방법에 대한 자세한 내용은 [시작](../cross-platform/getting-started-with-visual-studio-tools-for-unity.md) 페이지에서 Visual Studio Tools for Unity 구성을 참조하세요.
 
-3.  새 솔루션 및 프로젝트 파일을 생성합니다. 지금 생성하려면 Unity 편집기의 주 메뉴에서 **Visual Studio Tools**, **프로젝트 파일 생성**을 선택합니다. 그렇지 않으면 원하는 경우 이 단계를 건너뛸 수 있습니다. **Visual Studio Tools**, **Visual Studio에서 열기**를 선택하면 Visual Studio Tools for Unity에서 새 파일을 자동으로 생성합니다.  
+3.  새 솔루션 및 프로젝트 파일을 생성합니다. 지금 생성하려면 Unity 편집기의 주 메뉴에서 **Visual Studio Tools**, **프로젝트 파일 생성**을 선택합니다. 그렇지 않으면 원하는 경우 이 단계를 건너뛸 수 있습니다. **Visual Studio Tools**, **Visual Studio에서 열기**를 선택하면 Visual Studio Tools for Unity에서 새 파일을 자동으로 생성합니다.
 
-### <a name="on-windows-visual-studio-asks-to-download-the-unity-target-framework"></a>Windows에서 Visual Studio는 Unity 대상 프레임워크를 다운로드하도록 요청합니다.  
- Visual Studio Tools for Unity를 사용하려면 Windows 8 또는 10에 기본적으로 설치되지 않는 .NET Framework 3.5가 필요합니다. 이 문제를 해결하려면 지침에 따라 .net framework 3.5를 다운로드하고 설치하세요.  
+### <a name="on-windows-visual-studio-asks-to-download-the-unity-target-framework"></a>Windows에서 Visual Studio는 Unity 대상 프레임워크를 다운로드하도록 요청합니다.
+ Visual Studio Tools for Unity를 사용하려면 Windows 8 또는 10에 기본적으로 설치되지 않는 .NET Framework 3.5가 필요합니다. 이 문제를 해결하려면 지침에 따라 .net framework 3.5를 다운로드하고 설치하세요.
 
-## <a name="known-issues"></a>알려진 문제  
- Visual Studio Tools for Unity에는 디버거가 C# 컴파일러의 Unity 이전 버전과 상호작용하는 방법에서 발생하는 알려진 문제가 있습니다. 문제를 해결하기 위해 노력 중이지만 해결하기 전까지 다음과 같은 문제가 발생할 수 있습니다.  
+## <a name="known-issues"></a>알려진 문제
+ Visual Studio Tools for Unity에는 디버거가 C# 컴파일러의 Unity 이전 버전과 상호작용하는 방법에서 발생하는 알려진 문제가 있습니다. 문제를 해결하기 위해 노력 중이지만 해결하기 전까지 다음과 같은 문제가 발생할 수 있습니다.
 
--   디버그할 때 Unity가 충돌되는 경우가 있습니다.  
+-   디버그할 때 Unity가 충돌되는 경우가 있습니다.
 
--   디버그할 때 Unity가 중지되는 경우가 있습니다.  
+-   디버그할 때 Unity가 중지되는 경우가 있습니다.
 
--   특히 반복기 또는 switch 문 내에서 경우에 따라 메서드를 한 단계씩 코드 실행하고 메서드의 프로시저에서 나가는 동작이 제대로 작동하지 않습니다.  
+-   특히 반복기 또는 switch 문 내에서 경우에 따라 메서드를 한 단계씩 코드 실행하고 메서드의 프로시저에서 나가는 동작이 제대로 작동하지 않습니다.
 
-## <a name="reporting-errors"></a>오류 보고  
- 충돌, 고정 또는 기타 오류가 발생하는 경우 오류 보고서를 전송하여 Visual Studio Tools for Unity의 품질을 개선할 수 있도록 도와주시기 바랍니다. Visual Studio Tools for Unity의 문제를 조사하고 해결하는 데 도움이 됩니다. 감사합니다!  
+## <a name="reporting-errors"></a>오류 보고
+ 충돌, 고정 또는 기타 오류가 발생하는 경우 오류 보고서를 전송하여 Visual Studio Tools for Unity의 품질을 개선할 수 있도록 도와주시기 바랍니다. Visual Studio Tools for Unity의 문제를 조사하고 해결하는 데 도움이 됩니다. 감사합니다!
 
-### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Visual Studio가 고정될 때 오류를 보고하는 방법  
- Visual Studio가 Visual Studio Tools for Unity로 디버그할 때 중지되는 경우가 있다는 보고가 있지만 이 문제를 파악하려면 더 많은 데이터가 필요합니다. 아래의 단계를 따라 이 문제를 조사하는 데 도움을 주실 수 있습니다.  
+### <a name="how-to-report-an-error-when-visual-studio-freezes"></a>Visual Studio가 고정될 때 오류를 보고하는 방법
+ Visual Studio가 Visual Studio Tools for Unity로 디버그할 때 중지되는 경우가 있다는 보고가 있지만 이 문제를 파악하려면 더 많은 데이터가 필요합니다. 아래의 단계를 따라 이 문제를 조사하는 데 도움을 주실 수 있습니다.
 
 ##### <a name="to-report-that-visual-studio-freezes-while-debugging-with-visual-studio-tools-for-unity"></a>Visual Studio가 Visual Studio Tools for Unity로 디버그할 때 중지되는 문제를 보고하려면
 
-*Windows:*  
+*Windows:*
 
 1.  새 Visual Studio 인스턴스를 엽니다.
 
-2.  프로세스에 연결 대화 상자를 엽니다. Visual Studio의 새 인스턴스에 있는 주 메뉴에서 **디버그**, **프로세스에 연결**을 선택합니다.  
+2.  프로세스에 연결 대화 상자를 엽니다. Visual Studio의 새 인스턴스에 있는 주 메뉴에서 **디버그**, **프로세스에 연결**을 선택합니다.
 
-3.  Visual Studio의 중지된 인스턴스에 디버거를 연결합니다. **프로세스에 연결** 대화 상자에서 **사용 가능한 프로세스** 테이블로부터 Visual Studio의 중지된 인스턴스를 선택한 다음 **연결** 단추를 선택합니다.  
+3.  Visual Studio의 중지된 인스턴스에 디버거를 연결합니다. **프로세스에 연결** 대화 상자에서 **사용 가능한 프로세스** 테이블로부터 Visual Studio의 중지된 인스턴스를 선택한 다음 **연결** 단추를 선택합니다.
 
-4.  디버거를 일시 중지합니다. Visual Studio의 새 인스턴스에 있는 주 메뉴에서 **디버그**, **모두 중단**을 차례로 선택하거나 **Ctrl+Alt+Break**를 누르기만 하면 됩니다.  
+4.  디버거를 일시 중지합니다. Visual Studio의 새 인스턴스에 있는 주 메뉴에서 **디버그**, **모두 중단**을 차례로 선택하거나 **Ctrl+Alt+Break**를 누르기만 하면 됩니다.
 
-5.  스레드 덤프를 만듭니다. [명령] 창에서 다음 명령을 입력하고 **Enter** 키를 누릅니다.  
+5.  스레드 덤프를 만듭니다. [명령] 창에서 다음 명령을 입력하고 **Enter** 키를 누릅니다.
 
-    ```powershell  
-    Debug.ListCallStack /AllThreads /ShowExternalCode  
-    ```  
+    ```powershell
+    Debug.ListCallStack /AllThreads /ShowExternalCode
+    ```
 
-    **명령** 창이 먼저 표시되도록 해야 할 수 있습니다. Visual Studio의 주 메뉴에서 **보기**, **다른 창**, **명령 창**을 선택합니다.  
+    **명령** 창이 먼저 표시되도록 해야 할 수 있습니다. Visual Studio의 주 메뉴에서 **보기**, **다른 창**, **명령 창**을 선택합니다.
 
 *Mac:*
 
 1. 터미널을 열고 Mac용 Visual Studio의 PID를 가져옵니다.
 
-    ```shell  
+    ```shell
     ps aux | grep "[V]isual Studio.app"
     ```
 
 1. lldb 디버거를 시작합니다.
 
-    ```shell  
+    ```shell
     lldb
     ```
 
 1. PID를 사용하여 Mac용 Visual Studio 인스턴스에 연결합니다.
 
-    ```shell  
+    ```shell
     process attach --pid THE_PID_OF_THE_VSFM_PROCESS
     ```
 
 1. 모든 스레드에 대한 스택 추적을 검색합니다.
 
-    ```shell  
+    ```shell
     bt all
     ```
 

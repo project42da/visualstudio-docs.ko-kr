@@ -1,8 +1,6 @@
 ---
 title: "Visual Studio의 F1 기본 페이지 | Microsoft Docs"
-ms.date: 01/01/2018
-ms.reviewer: 
-ms.suite: 
+ms.date: 02/28/2018
 ms.topic: article
 robots: noindex,nofollow
 f1_keywords:
@@ -10,17 +8,29 @@ f1_keywords:
 - vs.ambient
 manager: ghogen
 ms.technology: vs-ide-general
-ms.openlocfilehash: f4c6e344acba0774a6a6a6f2dfe83bab9ff5ca18
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
+ms.openlocfilehash: 65f5e31060f745adfd5dd18460b0a9984064f660
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 02/28/2018
 ---
 # F1 도움말
 
-여기에 잘못 찾아온 것 같습니다. 키워드 또는 API 이름에 대한 F1 도움말을 찾고 있는 경우 **F1** 키를 누르기 전에 커서가 단어 내부 또는 바로 오른쪽에 있어야 합니다. 그래도 작동하지 않으면 https://docs.microsoft.com을 검색해 보세요.
+원하시는 내용을 찾을 수 없습니다. 죄송합니다. [기능 향상을 지원해주세요](#help-us-improve-f1).
 
-텍스트 편집기 자체에 대한 도움말을 검색하는 경우 [편집기에서 코드 작성](../../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요.
+## 커서 위치
+
+키워드 또는 API 이름에 대한 F1 도움말을 찾고 있는 경우 **F1** 키를 누르기 전에 커서가 단어 내부 또는 바로 오른쪽에 있어야 합니다. 작동하지 않는 경우 [유용한 링크](#useful-links) 목록 중에 선택하거나 https://docs.microsoft.com에서 검색합니다.
+
+## 유용한 링크
+
+- Visual Studio에 대한 일반적인 내용은 [Visual Studio 개요](../../ide/visual-studio-ide.md)를 참조하세요.
+- Visual Studio 텍스트 편집기의 도움말은 [코드 편집기 사용](../../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요.
+- C# 도움말은 [C# 가이드](/dotnet/csharp/index)를 참조하세요.
+- Visual Basic 도움말은 [Visual Basic 가이드](/dotnet/visual-basic/)를 참조하세요.
+- F# 도움말은 [F# 가이드](/dotnet/fsharp/)를 참조하세요.
+- Python 도움말은 [Visual Studio의 Python](../../python/overview-of-python-tools-for-visual-studio.md)을 참조하세요.
+- C++ 도움말은 [Visual Studio의 C++](/cpp/visual-cpp-in-visual-studio)를 참조하세요.
 
 ## 기능 향상 지원 F1
 

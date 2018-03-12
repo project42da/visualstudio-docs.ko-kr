@@ -11,11 +11,11 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 053bd6077fa98142cd74eae58ce3df949291c326
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: f15239ed045185449735ec3b5e0bcdc514fa786d
+ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 02/28/2018
 ---
 # <a name="visual-studio-2017-for-net-developers"></a>.NET 개발자용 Visual Studio 2017
 
@@ -40,9 +40,9 @@ Visual Studio는 .NET("Roslyn") 컴파일러를 통해 코드를 심층적으로
 
 [설명서: 리팩터링 및 빠른 작업](refactoring-code-generation-quick-actions.md)
 
-Visual Studio에는 라이브 코드 진단 기능이 있어 오류와 잠재적인 문제 코드를 감지하여 코드 품질을 개선하는 데 도움이 됩니다. 빠른 작업(**Ctrl +.**)을 제공하여 문서, 프로젝트 또는 솔루션 전반에서 감지된 문제를 해결할 수 있습니다. *전체 솔루션 분석*을 활성화하여 편집기에서 해당 파일이 열려 있지 않은 경우에도 솔루션 전체에서 문제를 찾을 수 있습니다.
+Visual Studio에는 라이브 코드 진단 기능이 있어 오류와 잠재적인 문제 코드를 감지하여 코드 품질을 개선하는 데 도움이 됩니다. 빠른 작업(**Ctrl**+**.**)을 제공하여 문서, 프로젝트 또는 솔루션 전반에서 감지된 문제를 해결할 수 있습니다. *전체 솔루션 분석*을 활성화하여 편집기에서 해당 파일이 열려 있지 않은 경우에도 솔루션 전체에서 문제를 찾을 수 있습니다.
 
-또한 코드 제안을 사용하여 모범 사례를 배우고 코드를 스텁 또는 생성하고 코드를 리팩터링하며 **Ctrl+.** 바로 가기로 새로운 언어 기능을 적용합니다.
+또한 코드 제안을 사용하여 모범 사례를 배우고 코드를 스텁 또는 생성하고 코드를 리팩터링하며 **Ctrl**+**.** 바로 가기로 새로운 언어 기능을 제공합니다. 스타일 문제를 해결하기 위한 빠른 해결을 제공합니다.
 
 ![전구 메뉴를 사용하여 빠른 해결 및 리팩터링 적용](../ide/media/VSIDE_Productivity_CodeAnalysis.png "VSIDE_Productivity_CodeAnalysis")
 
@@ -59,7 +59,7 @@ Visual Studio에는 라이브 코드 진단 기능이 있어 오류와 잠재적
 - [설명서: 휴대용 사용자 지정 편집기 옵션](create-portable-custom-editor-options.md)
 - [설명서: .NET에 대한 EditorConfig 코드 스타일 설정](editorconfig-code-style-settings-reference.md)
 
-Visual Studio에서는 코딩 규칙 구성을 지원하고 코딩 스타일 위반을 감지하며 **Ctrl+.** 바로 가기를 사용하여 스타일 문제를 해결하기 위한 빠른 해결을 제공합니다. *EditorConfig*를 사용하여 프로젝트 및 파일 수준에서 값 재지정을 허용하여 리포지토리 전반에서 팀의 서식 지정, 명명 및 코드 스타일 규칙을 구성하고 강제 적용합니다.
+Visual Studio에서는 코딩 규칙 구성을 지원하고 코딩 스타일 위반을 감지하며 **Ctrl**+**.** 바로 가기를 사용하여 스타일 문제를 해결하기 위한 빠른 해결을 제공합니다. *EditorConfig*를 사용하여 프로젝트 및 파일 수준에서 값 재지정을 허용하여 리포지토리 전반에서 팀의 서식 지정, 명명 및 코드 스타일 규칙을 구성하고 강제 적용합니다.
 
 ![EditorConfig를 사용하여 코딩 규칙 구성 및 강제 적용](../ide/media/VSIDE_Productivity_CodeStyle.png "VSIDE_Productivity_CodeStyle")
 
@@ -105,7 +105,7 @@ Visual Studio에는 필요에 따라 설치하거나 만들 수 있는 확장의
 | **F12**(또느ㅡㄴ **Ctrl + 클릭**) | 정의로 이동 | 기호가 정의된 위치로 이동 |
 | **Ctrl+F12** | 구현으로 이동 | 모든 베이스 형식 또는 멤버에서 다양한 구현으로 이동 |
 | **Shift+F12** | 모든 참조 찾기 | 모든 기호 또는 리터럴 참조 보기 |
-| **Ctrl+.** (또는 C# 프로필에서 **Alt+Enter**) | 빠른 작업 및 리팩터링 | 커서 위치 또는 코드 선택에서 사용 가능한 코드 해결, 코드 생성 작업, 리팩터링, 또는 기타 빠른 작업 확인 |
+| **Ctrl**+**.** (또는 C# 프로필에서 **Alt+Enter**) | 빠른 작업 및 리팩터링 | 커서 위치 또는 코드 선택에서 사용 가능한 코드 해결, 코드 생성 작업, 리팩터링, 또는 기타 빠른 작업 확인 |
 | **Ctrl**+**E**,**V** | 중복된 줄 | 커서가 있는 코드 줄 복제(**Visual Studio 2017 버전 15.6 미리 보기 2** 이상에서 사용 가능) |
 | **Ctrl+Q** | 빠른 실행 | 모든 Visual Studio 설정 검색 |
 | **F5** | 디버깅 시작 | 응용 프로그램 디버깅 시작 |
