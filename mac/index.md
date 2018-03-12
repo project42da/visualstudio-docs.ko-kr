@@ -6,15 +6,15 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: bc836806e1acf33b35604419ac1d6aad41a2d795
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: d12331bd074f77db83ae4574195b8b6f7e5c452a
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Mac용 Visual Studio 소개
 
-Mac용 Visual Studio는 모바일, 데스크톱 및 웹 응용 프로그램을 만들기 위한 다양한 기능을 갖춘 정교한 최신 IDE입니다. Mac용 Visual Studio는 다음에 대한 개발을 지원합니다.
+Mac용 Visual Studio는 모바일, 데스크톱 및 웹 응용 프로그램을 만들기 위한 다양한 기능을 갖춘 정교한 최신 IDE입니다. 다음 개발을 지원합니다.
 
 * .NET을 사용하는 모바일: Android, iOS, tvOS, watchOS
 * Mac 데스크톱 앱
@@ -22,9 +22,9 @@ Mac용 Visual Studio는 모바일, 데스크톱 및 웹 응용 프로그램을 �
 * ASP.NET Core 웹 응용 프로그램
 * 플랫폼 간 Unity 게임
 
-또한 고급 편집기와 디버깅뿐만 아니라 iOS, Mac 및 Android와의 네이티브 플랫폼 통합, 통합 소스 제어 등 여러 기능을 포함하고 있습니다.
+고급 편집기, 디버깅, iOS, Mac 및 Android를 통한 네이티브 플랫폼 통합 및 통합 소스 제어와 같은 여러 기능을 포함하고 있습니다.
 
-이 항목에서는 Mac용 Visual Studio의 다양한 섹션을 살펴보면서 플랫폼 간 응용 프로그램을 만들기 위한 강력한 도구를 구성하는 기능 중 일부를 안내하겠습니다.
+이 문서에서는 Mac용 Visual Studio의 다양한 섹션을 살펴보면서 플랫폼 간 응용 프로그램을 만들기 위한 강력한 도구를 구성하는 기능 중 일부를 안내하겠습니다.
 
 ## <a name="installation"></a>설치
 
@@ -36,7 +36,7 @@ Mac용 Visual Studio는 기본적으로 C# 및 F#에서의 개발을 지원합�
 
 ### <a name="c"></a>C#
 
-C#은 Mac용 Visual Studio에서 플랫폼 간 응용 프로그램을 만들기 위한 가장 일반적으로 사용되는 언어입니다. 여기에는 모든 C# 7 기능에 대한 완벽한 지원이 포함됩니다.
+C#은 Mac용 Visual Studio에서 플랫폼 간 응용 프로그램을 만들기 위한 가장 일반적으로 사용되는 언어입니다. IDE에는 모든 C# 7 기능에 대한 완벽한 지원이 포함됩니다.
 
 ### <a name="f"></a>F#
 
@@ -71,7 +71,7 @@ F#은 .NET에서 실행되도록 설계된 강력한 형식의 함수형 프로�
 
 Visual Studio에는 통합된 자체 Android SDK 관리자가 있습니다.
 
-Android 응용 프로그램의 경우 Mac용 Visual Studio에는 Android `.axml` 파일과 함께 작동하여 사용자 인터페이스를 시각적으로 구성하는 자체 디자이너가 포함됩니다. Mac용 Visual Studio는 아래와 같이 Android Designer에서 이러한 파일을 엽니다.
+Android 응용 프로그램의 경우 Mac용 Visual Studio에는 Android `.axml` 파일과 함께 작동하여 사용자 인터페이스를 시각적으로 구성하는 자체 디자이너가 포함됩니다. Mac용 Visual Studio는 다음 이미지와 같이 Android Designer에서 이러한 파일을 엽니다.
 
 ![](media/intro-image31.png)
 
@@ -118,7 +118,7 @@ Xamarin Inspector는 도구가 포함된 대화형 C# 콘솔 도구를 사용자
 
 ## <a name="next-steps"></a>다음 단계
 
-* **큰 그림 가져오기** - Mac용 Visual Studio의 주요 기능에 대한 개요를 얻으려면 Mac용 Visual Studio [IDE 둘러보기](~/ide-tour.md)를 참조하세요.
+* **둘러보기 가져오기** - Mac용 Visual Studio의 주요 기능에 대한 개요를 얻으려면 Mac용 Visual Studio [IDE 둘러보기](~/ide-tour.md)를 참조하세요.
 * **설치** - Visual Studio를 다운로드 및 설치하는 방법을 알아보려면 [설치](~/installation.md) 가이드를 참조하세요.
 * **Xamarin 자습서** - Xamarin을 사용하여 코드를 개발하는 방법을 알아보려면 Xamarin [개발자 센터](https://developer.xamarin.com)로 이동하세요.
 * **비디오** - Mac용 Visual Studio의 기타 기능 및 측면에 대해 자세히 알아보려면 [Xamarin University](https://university.xamarin.com) 웹 사이트에 있는 비디오를 시청하세요.
