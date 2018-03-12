@@ -1,21 +1,18 @@
 ---
 title: "방법: 검색을 사용 하 여 워크플로 디자이너에서 | Microsoft Docs"
-ms.custom: 
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 ms.assetid: f42d3115-2ed2-4941-8f1e-92dac41c30fa
-caps.latest.revision: "3"
-ms.author: sdanie
-manager: erikre
-ms.workload: multiple
-ms.openlocfilehash: 20e4cca7723a47b5735301c54a67029f0f956c49
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.author: gewarren
+manager: ghogen
+ms.workload:
+- multiple
+author: gewarren
+ms.openlocfilehash: 0ab8fe2ca639dd4660dfbabc8c5497f4ab0b3487
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>방법: 워크플로 디자이너에서 검색 사용
 더 크고 복잡한 워크플로를 쉽게 만들려면 워크플로 디자이너에서 검색 기능을 사용하여 키워드로 항목을 찾을 수 있습니다. 디자이너는 바꾸기를 지원하지 않습니다. 검색은 디자이너에서 다음을 찾습니다.  

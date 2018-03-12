@@ -1,33 +1,25 @@
 ---
 title: ".NET 3.0 또는.NET 3.5 대상으로 하는 워크플로 응용 프로그램 개발 프레임 워크 | Microsoft Docs"
-ms.custom: 
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
-helpviewer_keywords: Visual Studio 2005 Extensions for Windows Workflow Foundation
+helpviewer_keywords:
+- Visual Studio 2005 Extensions for Windows Workflow Foundation
 ms.assetid: b60aadee-3bf9-48c3-b2eb-4d5524e927ad
-caps.latest.revision: "8"
-author: ErikRe
-ms.author: erikre
-manager: erikre
-ms.workload: dotnet
-ms.openlocfilehash: 373dc0134326b590907d31ee9ab6cb31d534da0d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+author: gewarren
+ms.author: gewarren
+manager: ghogen
+ms.workload:
+- dotnet
+ms.openlocfilehash: 8e85b24889b29d56588f27796ff6891c14c4d3a2
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="developing-workflow-applications-targeting-the-net-30-or-net-35-framework"></a>.NET 3.0 또는 .NET 3.5 Framework를 대상으로 하는 워크플로 응용 프로그램 개발
-[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]에서는 [!INCLUDE[wfd1](../workflow-designer/includes/wfd1_md.md)]을 대상으로 하는 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 응용 프로그램을 만들기 위한 [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]를 제공합니다. 이 디자이너에서는 워크플로 응용 프로그램의 시각적 생성 및 디버깅을 위한 친숙한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 사용자 인터페이스를 사용합니다.  
-  
- [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]에서는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 하는 데 사용할 수 있는 레거시 Workflow Designer에도 액세스할 수 있습니다. 이 단원에는 이 레거시 디자이너의 사용에 대한 지침이 포함되어 있습니다.  
-  
-## <a name="in-this-section"></a>섹션 내용  
- [레거시 워크플로 디자이너 사용](../workflow-designer/using-the-legacy-workflow-designer.md)  
-  
- [레거시 워크플로 디버깅](../workflow-designer/debugging-legacy-workflows.md)  
-  
-## <a name="related-sections"></a>관련 단원  
+[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 만드는 Windows 워크플로 디자이너를 제공 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 대상으로 하는 응용 프로그램은 [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]합니다. 이 디자이너에서는 워크플로 응용 프로그램의 시각적 생성 및 디버깅을 위한 친숙한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 사용자 인터페이스를 사용합니다.
+
+ [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]에서는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 하는 데 사용할 수 있는 레거시 Workflow Designer에도 액세스할 수 있습니다. 이 단원에는 이 레거시 디자이너의 사용에 대한 지침이 포함되어 있습니다.
+
+## <a name="related-sections"></a>관련 단원
  [Windows Workflow Foundation 프로그래밍 가이드](http://go.microsoft.com/fwlink?LinkID=65012)

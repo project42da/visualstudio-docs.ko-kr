@@ -1,63 +1,61 @@
 ---
 title: "방법: 워크플로 디자이너에서 워크플로에 주석 추가 | Microsoft Docs"
-ms.custom: 
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - System.Activities.Presentation.Annotations.Annotation.UI
 - Annotation
 ms.assetid: 9aa0e8d6-8129-4438-8389-d460611581a7
-caps.latest.revision: "7"
-ms.author: sdanie
-manager: erikre
-ms.workload: multiple
-ms.openlocfilehash: 0a508fe657be8e2a12c54bc7ae1a46f338273cd9
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.author: gewarren
+manager: ghogen
+ms.workload:
+- multiple
+author: gewarren
+ms.openlocfilehash: eb7825f79ee54b02d764e4ad8754ee1382b5d41f
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>방법: 워크플로 디자이너에서 워크플로에 주석 추가
-더 크고 더 복잡한 워크플로를 쉽게 만들기 위해 [!INCLUDE[net_v45](../ide/includes/net_v45_md.md)]를 사용하여 개발자는 디자이너에서 다음 형식의 항목에 주석을 추가할 수 있습니다.  
-  
--   <xref:System.Activities.Activity>  
-  
--   <xref:System.Activities.Statements.State>  
-  
--   <xref:System.Activities.Statements.Transition>  
-  
--   <xref:System.Activities.Statements.FlowNode>에서 파생된 클래스  
-  
--   <xref:System.Activities.Variable>  
-  
--   <xref:System.Activities.Argument>  
-  
+
+더 크고 더 복잡한 워크플로를 쉽게 만들기 위해 [!INCLUDE[net_v45](../ide/includes/net_v45_md.md)]를 사용하여 개발자는 디자이너에서 다음 형식의 항목에 주석을 추가할 수 있습니다.
+
+-   <xref:System.Activities.Activity>
+
+-   <xref:System.Activities.Statements.State>
+
+-   <xref:System.Activities.Statements.Transition>
+
+-   <xref:System.Activities.Statements.FlowNode>에서 파생된 클래스
+
+-   <xref:System.Activities.Variable>
+
+-   <xref:System.Activities.Argument>
+
 > [!IMPORTANT]
->  주석 내용은 워크플로와 관련된 XAML 파일에 일반 텍스트로 저장되며 다른 사용자가 읽을 수 있습니다. 민감한 정보를 주석에 입력할 때는 주의하세요.  
-  
-### <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>디자이너의 활동에 주석 추가  
-  
-1. 워크플로 디자이너에서 마우스 오른쪽 단추로 클릭 워크플로 디자이너 및 선택 항목 **주석**, **주석 추가**합니다.  
-  
-1. 제공된 공란에 주석 텍스트를 추가합니다.  
-  
+> 주석 내용은 워크플로와 관련된 XAML 파일에 일반 텍스트로 저장되며 다른 사용자가 읽을 수 있습니다. 민감한 정보를 주석에 입력할 때는 주의하세요.
+
+### <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>디자이너의 활동에 주석 추가
+
+1. 워크플로 디자이너에서 마우스 오른쪽 단추로 클릭 워크플로 디자이너 및 선택 항목 **주석**, **주석 추가**합니다.
+
+1. 제공된 공란에 주석 텍스트를 추가합니다.
+
    항목 주석 아이콘을 볼 수 있습니다. 주석 아이콘을 가리키면 주석 텍스트가 표시 됩니다.
 
-### <a name="displaying-an-annotation-in-an-activitys-designer"></a>활동 디자이너에 주석 표시  
-  
-1.  활동 외부에 표시 하는 주석이 있는 활동 디자이너를 클릭 하 고 **Pin** 에서 주석 표시기 아이콘입니다.  
-  
-   주석은 활동 디자이너에 표시 됩니다. 아래의 스크린샷에서 활동 디자이너에 "워크플로에서 활동 시작" 주석이 표시됩니다.  
-  
-   ![활동 디자이너에 표시 되는 주석](../workflow-designer/media/annotationindesigner.png "AnnotationInDesigner")  
-  
-1. 활동 디자이너 외부에 주석을으로 표시 하려면 활동 디자이너의 주석 영역 위로 마우스를 가져가고 하 고 클릭 하 고 **고정 해제** 아이콘  
-  
-   ![활동 디자이너 외부에 표시 되는 주석](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")  
-  
+### <a name="displaying-an-annotation-in-an-activitys-designer"></a>활동 디자이너에 주석 표시
+
+1.  활동 외부에 표시 하는 주석이 있는 활동 디자이너를 클릭 하 고 **Pin** 에서 주석 표시기 아이콘입니다.
+
+   주석은 활동 디자이너에 표시 됩니다. 아래의 스크린샷에서 활동 디자이너에 "워크플로에서 활동 시작" 주석이 표시됩니다.
+
+   ![활동 디자이너에 표시 되는 주석](../workflow-designer/media/annotationindesigner.png "AnnotationInDesigner")
+
+1. 활동 디자이너 외부에 주석을으로 표시 하려면 활동 디자이너의 주석 영역 위로 마우스를 가져가고 하 고 클릭 하 고 **고정 해제** 아이콘
+
+   ![활동 디자이너 외부에 표시 되는 주석](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")
+
 ### <a name="showing-or-hiding-all-annotations"></a>모든 주석 표시 또는 숨기기
 
 1. 주석이 있는 활동을 마우스 오른쪽 단추로 클릭합니다. 선택 **주석**, **모든 주석 표시**합니다.

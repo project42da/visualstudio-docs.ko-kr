@@ -12,11 +12,11 @@ author: PooyaZv
 ms.author: pozandev
 manager: ghogen
 ms.workload: multiple
-ms.openlocfilehash: dffc67e550cb57f9f089e180ff399f27c817d253
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 714d047cda7a167045983f5068a425d0d82823ea
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="how-to-diagnose-ui-delays-caused-by-extensions"></a>방법: 진단 UI 확장으로 지연이 발생
 
@@ -157,6 +157,8 @@ PerfView에 코드에서 성능 병목 상태를 식별 하는 데 사용할 수
 
 * [https://aka.ms/vsthreading](https://aka.ms/vsthreading)
 * [https://aka.ms/vsthreadingcookbook](https://aka.ms/vsthreadingcookbook)
+
+확장에 대 한 새 Visual Studio 정적 분석기를 사용할 수도 있습니다 (NuGet 패키지 [여기](https://www.nuget.org/packages/microsoft.visualstudio.sdk.analyzers))을 효율적으로 확장을 작성 하기 위한 모범 사례에 지침을 제공 하는 합니다. 목록을 보려면 [VS SDK 분석기](https://github.com/Microsoft/VSSDK-Analyzers/blob/master/doc/index.md) 및 [분석기 스레딩](https://github.com/Microsoft/vs-threading/blob/master/doc/analyzers/index.md)합니다.
 
 > [!NOTE]
 > 대해서 컨트롤을가지고 있지 않습니다 종속성으로 인해 응답 하지 않는 문제를 해결할 수 없는 경우 (예: 확장 UI 스레드에서 동기 VS 서비스를 호출 하는 경우)을 알려 주세요. 이 Visual Studio 파트너 프로그램의 구성원 인 개발자 지원 요청을 제출 하 여 문의할 수 있습니다. 그렇지 않은 경우 '문제를 보고' 도구를 사용 하 여 피드백 제출 하 여 포함할 `"Extension UI Delay Notifications"` 제목에서입니다. 분석의 자세한 설명도 포함 하십시오.
