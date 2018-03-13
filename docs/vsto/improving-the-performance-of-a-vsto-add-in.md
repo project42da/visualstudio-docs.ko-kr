@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -13,7 +14,8 @@ dev_langs:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: be5ec0d8e4654ad9d383278e5d0d60c7fa2e34c9
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -98,7 +100,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  이 방법은 VSTO 추가 기능에 사용자의 컴퓨터에서 안전한 위치에 배포 하는 경우에 필요 하지 않습니다.  
   
- 자세한 내용은 [Deploying an Office Solution by Using Windows Installer](../vsto/deploying-an-office-solution-by-using-windows-installer.md)을 참조하십시오.  
+ 자세한 내용은 [Windows Installer를 사용하여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-windows-installer.md)을 참조하십시오.  
   
 ##  <a name="Bypass"></a> Bypass Ribbon Reflection  
  [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)]를 사용하여 솔루션을 빌드하는 경우 솔루션을 배포할 때 사용자가 최신 버전의 Visual Studio 2010 Tools for Office Runtime을 설치했는지 확인하세요. 이 런타임의 이전 버전은 리본 사용자 지정을 찾기 위해 솔루션 어셈블리에 리플렉션합니다. 이 프로세스로 인해 VSTO 추가 기능이 더 느리게 로드될 수 있습니다.  

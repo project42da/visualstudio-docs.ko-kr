@@ -21,7 +21,7 @@ ms.lasthandoff: 02/28/2018
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin을 사용한 모바일 개발에 대해 알아보기
 
-이 항목에서는 Xamarin을 사용한 플랫폼 간 모바일 앱 개발을 이해하는 데 도움되는 개요 자료를 안내합니다. 아직 Visual Studio 및 Xamarin을 설치하지 않았으면 먼저 [Setup and install](../cross-platform/setup-and-install.md) 프로세스를 시작하고 여기로 돌아와서 설치 관리자가 실행되는 동안 이러한 리소스를 살펴봅니다.  
+이 항목에서는 Xamarin을 사용한 플랫폼 간 모바일 앱 개발을 이해하는 데 도움되는 개요 자료를 안내합니다. 아직 Visual Studio 및 Xamarin을 설치하지 않았으면 먼저 [설정 및 설치](../cross-platform/setup-and-install.md) 프로세스를 시작하고 여기로 돌아와서 설치 관리자가 실행되는 동안 이러한 리소스를 살펴봅니다.  
   
 > [!NOTE]
 > 별도로 명시되지 않는 한 처음에는 부수적인 페이지가 아닌 여기에 직접 연결된 페이지만 읽는 것이 좋습니다. 이 목록이 완료된 후에도 설치 프로세스가 계속 실행 중이면 돌아가서 추가 항목을 살펴볼 수 있습니다.  

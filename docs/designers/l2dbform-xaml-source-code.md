@@ -4,15 +4,17 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-designers
+ms.technology:
+- vs-ide-designers
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 624e96d4-6d27-4195-8ac2-2f3835f6c57e
-caps.latest.revision: "2"
+caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: b815904a7ac2b8a050cd4b907698c43a91d929dc
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: HT
@@ -20,7 +22,7 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 12/22/2017
 ---
 # <a name="l2dbformxaml-source-code"></a>L2DBForm.xaml 원본 코드
-이 항목에서는 [WPF Data Binding Using LINQ to XML Example](../designers/wpf-data-binding-using-linq-to-xml-example.md)에 대한 XAML 소스 파일인 L2DBForm.xaml을 제공하며 이 파일에 대해 설명합니다.  
+이 항목에서는 [LINQ to XML 예제를 사용한 WPF 데이터 바인딩](../designers/wpf-data-binding-using-linq-to-xml-example.md)에 대한 XAML 소스 파일인 L2DBForm.xaml을 제공하며 이 파일에 대해 설명합니다.  
   
 ## <a name="overall-ui-structure"></a>전체적인 UI 구조  
  WPF 프로젝트에 일반적이듯이 이 파일에는 부모 요소가 하나 포함되어 있습니다. 이 부모 요소는 <xref:System.Windows.Window> 네임스페이스의 파생된 클래스 `L2XDBFrom` 과 연결된 `LinqToXmlDataBinding` XML 요소입니다.  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 01e9dfbe244d373eaa4e66c13e02c781b32b8691
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -32,7 +34,7 @@ ms.lasthandoff: 01/10/2018
   
  디자인 타임에 컨트롤을 추가 하는 경우 각 컨트롤에 대 한 옵션을 위치를 설정 해야 합니다.  
   
- Windows Forms 컨트롤을 프로그래밍 방식으로 추가 하 고 범위 인수를 제공 하는 경우 범위 내에 있는 셀의 크기를 조정할 때 컨트롤이 자동으로 조정 합니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ Windows Forms 컨트롤을 프로그래밍 방식으로 추가 하 고 범위 인수를 제공 하는 경우 범위 내에 있는 셀의 크기를 조정할 때 컨트롤이 자동으로 조정 합니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 ## <a name="resizing-controls-at-design-time"></a>디자인 타임에 컨트롤의 크기 조정  
   
