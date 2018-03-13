@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 53ff49eb204eda28174344b44d58e236bde24c64
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -37,7 +39,7 @@ ms.lasthandoff: 01/10/2018
   
  이러한 프로젝트 형식 중 솔루션에 가장 적합한 것을 결정하려면 특정 문서가 열려 있을 때만 코드가 실행되도록 할지 여부나 응용 프로그램이 실행 중일 때 코드를 항상 사용할 수 있도록 할지 여부에 대해 고려합니다. 프로젝트 템플릿에 대 한 자세한 내용은 참조 [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)합니다.  
   
- 만들 수 있는 프로젝트의 형식은 개발 컴퓨터에 설치한 Office 응용 프로그램에 따라 다릅니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ 만들 수 있는 프로젝트의 형식은 개발 컴퓨터에 설치한 Office 응용 프로그램에 따라 다릅니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
   
 ### <a name="document-level-customizations"></a>문서 수준 사용자 지정  
  문서 수준 사용자 지정은 Microsoft Office Word 또는 Microsoft Office Excel의 단일 문서, 통합 문서 또는 서식 파일과 연결된 어셈블리로 구성됩니다. 어셈블리는 연결된 문서가 열릴 때 로드됩니다. 사용자 지정에서 만든 기능은 연결된 문서가 열려 있을 때만 사용할 수 있습니다. 사용자 지정에서는 문서가 열려 있을 때 새 메뉴 항목이나 리본 탭을 표시하는 것과 같은 응용 프로그램 범위의 변경을 할 수 없습니다.  

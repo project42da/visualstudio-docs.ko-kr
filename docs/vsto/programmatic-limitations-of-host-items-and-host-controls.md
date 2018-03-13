@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -33,7 +34,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 96c027730553c8dd51774d1ff64c6552b4e5905b
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -43,7 +45,7 @@ ms.lasthandoff: 01/10/2018
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항
   각 호스트 항목 및 호스트 컨트롤은 추가 기능을 통해 해당 네이티브 Microsoft Office Word 또는 Microsoft Office Excel 개체처럼 동작하도록 설계되었습니다. 그러나 런타임에 호스트 항목과 호스트 컨트롤의 동작과 네이티브 Office 개체 간에는 몇 가지 근본적인 차이가 있습니다.  
   
- 호스트 항목 및 호스트 컨트롤에 대한 일반적인 내용은 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)를 참조하세요.  
+ 호스트 항목 및 호스트 컨트롤에 대한 일반적인 내용은 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)를 참조하세요.  
   
  [!INCLUDE[appliesto_controls](../vsto/includes/appliesto-controls-md.md)]  
   
@@ -52,10 +54,10 @@ ms.lasthandoff: 01/10/2018
   
  문서 수준 프로젝트에서는 런타임에 호스트 항목을 만들 수 없습니다. 문서 수준 프로젝트에서는 디자인 타임에만 호스트 항목을 만들 수 있습니다. 자세한 내용은 [Document Host Item](../vsto/document-host-item.md), [Workbook Host Item](../vsto/workbook-host-item.md)및 [Worksheet Host Item](../vsto/worksheet-host-item.md)을 참조하십시오.  
   
- VSTO 추가 기능 프로젝트에서 런타임에 <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Tools.Excel.Workbook>또는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목을 만들 수 있습니다. 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+ VSTO 추가 기능 프로젝트에서 런타임에 <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Tools.Excel.Workbook>또는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목을 만들 수 있습니다. 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
 ## <a name="programmatically-creating-host-controls"></a>프로그래밍 방식으로 호스트 컨트롤 만들기  
- 런타임에 프로그래밍 방식으로 호스트 컨트롤을 <xref:Microsoft.Office.Tools.Word.Document> 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목에 추가할 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 런타임에 프로그래밍 방식으로 호스트 컨트롤을 <xref:Microsoft.Office.Tools.Word.Document> 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목에 추가할 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
  호스트 컨트롤은 네이티브 <xref:Microsoft.Office.Interop.Word.Document> 또는 <xref:Microsoft.Office.Interop.Excel.Worksheet>에 추가할 수 없습니다.  
   
@@ -91,7 +93,7 @@ ms.lasthandoff: 01/10/2018
  Word 및 Excel 개체 모델은 문서 및 워크시트에서 네이티브 컨트롤의 컬렉션을 노출하는 속성을 포함합니다. 이러한 속성을 사용하면 관리되는 컨트롤에 액세스할 수 없습니다. 예를 들어 <xref:Microsoft.Office.Tools.Word.Bookmark> 의 <xref:Microsoft.Office.Interop.Word._Document.Bookmarks%2A> 속성 또는 <xref:Microsoft.Office.Interop.Word.Document> 의 <xref:Microsoft.Office.Tools.Word.Document.Bookmarks%2A> 속성을 사용하여 문서의 각 <xref:Microsoft.Office.Tools.Word.Document>호스트 컨트롤을 열거할 수 없습니다. 이러한 속성은 문서의 <xref:Microsoft.Office.Interop.Word.Bookmark> 컨트롤만 포함하며 문서의 <xref:Microsoft.Office.Tools.Word.Bookmark> 호스트 컨트롤은 포함하지 않습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
  [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
  [워크시트 호스트 항목](../vsto/worksheet-host-item.md)   

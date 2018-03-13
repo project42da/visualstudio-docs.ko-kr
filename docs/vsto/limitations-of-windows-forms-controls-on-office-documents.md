@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -23,7 +24,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 2c8795b643afff2cc02d507a1764871aa0e0e181
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -96,7 +98,7 @@ ms.lasthandoff: 01/10/2018
 |컨트롤 크기 조정|8 개의 크기 조정 핸들 중 하나를 사용 하 여 문서에서 컨트롤의 크기를 조정 하면 새 컨트롤 차원에 반영 되지 않습니다는 **속성** 컨트롤 다시 선택 될 때까지 창.|  
 |동작을 제어|Excel 워크시트에서 컨트롤은 워크시트 창 분할 될 때 예기치 않게 동작할 수 있습니다. 예를 들어에 대 한 액세스는 <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> 워크시트에만 사용할 수 창 중 하나에 있습니다.|  
 |컨트롤 이름 지정|컨트롤의 이름에 예약어를 사용할 수 없습니다. 예를 들어, 추가 하는 경우는 <xref:Microsoft.Office.Tools.Excel.Controls.Button> 워크시트에는 하 고 이름을 **시스템**, 프로젝트를 빌드할 때 오류가 발생 합니다.|  
-|프로그래밍 방식으로 컨트롤 추가|런타임에 문서에 컨트롤을 추가 하는 컨트롤의 생성자를 사용 하지 마십시오. 제공 하는 도우미 메서드를 사용 하 여 대신는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다. 예를 들어, 사용 된 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A> 워크시트에 단추를 추가 하는 메서드. 이러한 도우미 메서드에서 지원 되지 않는 컨트롤을 추가 하려는 경우 AddControl 메서드를 사용할 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.|  
+|프로그래밍 방식으로 컨트롤 추가|런타임에 문서에 컨트롤을 추가 하는 컨트롤의 생성자를 사용 하지 마십시오. 제공 하는 도우미 메서드를 사용 하 여 대신는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다. 예를 들어, 사용 된 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A> 워크시트에 단추를 추가 하는 메서드. 이러한 도우미 메서드에서 지원 되지 않는 컨트롤을 추가 하려는 경우 AddControl 메서드를 사용할 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.|  
 |컨트롤 복사|Windows Forms 컨트롤을 복사 하 고 런타임에 문서에 붙여 경우 빈 컨테이너 ActiveX 컨트롤이 문서에 붙여넣습니다. Windows Forms 컨트롤의 새 위치에 나타나지 않으며 원래 컨트롤 뒤에 있는 코드 ActiveX 컨트롤 컨테이너에 복사 되지 않습니다.|  
   
 ## <a name="limitations-in-document-level-projects"></a>문서 수준 프로젝트에 대 한 제한 사항  

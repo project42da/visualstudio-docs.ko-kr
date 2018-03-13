@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 906100a572170f218a23b1887ab7fddee37251b9
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -73,7 +75,7 @@ ms.lasthandoff: 01/10/2018
 ##  <a name="usingfeatures"></a> Using Features of Multiple Microsoft Office Applications in a Single Project  
  Visual Studio의 각 Office 프로젝트 템플릿은 단일 Microsoft Office 응용 프로그램에서 사용하도록 설계되어 있습니다. 여러 Microsoft Office 응용 프로그램에서 기능을 사용하거나 Visual Studio에 프로젝트가 없는 응용 프로그램 또는 구성 요소에서 기능을 사용하려면 필요한 PIA에 대한 참조를 추가해야 합니다.  
   
- 대부분의 경우에는 PIA에 대한 참조를 Visual Studio under the %ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\ 디렉터리에 추가해야 합니다. 이러한 어셈블리 버전은 **참조 관리자** 대화 상자의 **프레임워크** 탭에 표시됩니다. 자세한 내용은 [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)을 참조하세요.  
+ 대부분의 경우에는 PIA에 대한 참조를 Visual Studio under the %ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\ 디렉터리에 추가해야 합니다. 이러한 어셈블리 버전은 **참조 관리자** 대화 상자의 **프레임워크** 탭에 표시됩니다. 자세한 내용은 [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)을 참조하세요.  
   
  전역 어셈블리 캐시에서 PIA를 설치 및 등록한 경우 이러한 어셈블리 버전은 **참조 관리자** 대화 상자의 **COM** 탭에 표시됩니다. 이러한 어셈블리 버전에 대한 참조는 추가해서는 안 됩니다. 해당 버전을 사용하는 경우 몇 가지 개발 문제가 발생할 수 있습니다. 예를 들어 전역 어셈블리 캐시에 여러 PIA 버전을 등록한 경우에는 **참조 관리자** 대화 상자의 **COM** 탭에서 다른 어셈블리 버전을 지정하더라도 프로젝트는 마지막으로 등록된 어셈블리 버전에 자동으로 바인딩됩니다.  
   
@@ -110,7 +112,7 @@ ms.lasthandoff: 01/10/2018
  Office PIA를 Office와 함께 또는 PIA의 재배포 가능 패키지를 설치하여 전역 어셈블리 캐시에 설치 및 등록하면 바인딩 리디렉션 어셈블리도 전역 어셈블리 캐시에만 설치됩니다. 이러한 어셈블리를 통해 주 interop 어셈블리의 올바른 버전이 런타임에 로드되도록 할 수 있습니다. 예를 들어 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] 어셈블리를 참조하는 솔루션이 같은 주 interop 어셈블리의 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 버전이 설치된 컴퓨터에서 실행되면 바인딩 리디렉션 어셈블리는 주 interop 어셈블리의 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] 버전을 로드하도록 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 런타임에 명령합니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)를 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
- [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [Excel 개체 모델 개요](../vsto/excel-object-model-overview.md)   
  [InfoPath 솔루션](../vsto/infopath-solutions.md)   
  [Outlook 개체 모델 개요](../vsto/outlook-object-model-overview.md)   

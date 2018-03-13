@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -20,11 +21,12 @@ helpviewer_keywords:
 - applications [Visual Studio], ClickOnce deployment
 - deploying applications [ClickOnce], publishing ClickOnce applications
 ms.assetid: eb6dfe79-f54c-4331-8e36-073688e70973
-caps.latest.revision: "22"
+caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 02b5f2477a18f3432bc255b9bd17a2ac11fbc030
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -65,7 +67,7 @@ ms.lasthandoff: 12/22/2017
 ### <a name="application-files-dialog-box"></a>응용 프로그램 파일 대화 상자  
  이 대화 상자에서는 프로젝트의 파일이 게시, 동작 다운로드 및 업데이트용으로 분류되는 방법을 지정할 수 있습니다. 이 대화 상자에 포함된 표에는 기본적으로 제외되지 않거나 다운로드 그룹이 있는 프로젝트 파일이 나열됩니다.  
   
- 파일을 제외 하려면 파일을 데이터 파일 또는 필수 구성 요소를 표시할 및 Visual Studio UI에서 조건부 설치에 대 한 파일 그룹을 만들, 참조 [하는 방법: 지정는 통해 게시할 파일 ClickOnce](../deployment/how-to-specify-which-files-are-published-by-clickonce.md)합니다. Mage.exe를 사용하여 데이터 파일을 표시할 수도 있습니다. 자세한 내용은 [How to: Include a Data File in a ClickOnce Application](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)을 참조하세요.  
+ 파일을 제외 하려면 파일을 데이터 파일 또는 필수 구성 요소를 표시할 및 Visual Studio UI에서 조건부 설치에 대 한 파일 그룹을 만들, 참조 [하는 방법: 지정는 통해 게시할 파일 ClickOnce](../deployment/how-to-specify-which-files-are-published-by-clickonce.md)합니다. Mage.exe를 사용하여 데이터 파일을 표시할 수도 있습니다. 자세한 내용은 [방법: ClickOnce 응용 프로그램에 데이터 파일 포함](../deployment/how-to-include-a-data-file-in-a-clickonce-application.md)을 참조하세요.  
   
 ### <a name="prerequisites-dialog-box"></a>필수 조건 대화 상자  
  이 대화 상자에서는 설치되는 필수 구성 요소 및 해당 설치 방법을 지정합니다. 자세한 내용은 참조 [하는 방법: ClickOnce 응용 프로그램에 필수 구성 요소 설치](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md) 및 [필수 구성 요소 대화 상자](../ide/reference/prerequisites-dialog-box.md)합니다.  

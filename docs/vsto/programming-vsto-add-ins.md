@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -35,7 +36,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 58b6d40e2da962587b44e4b73c8331b3fba5590f
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -124,7 +126,7 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
 |VSTO 추가 기능이 로드될 때 코드를 실행하여 VSTO 추가 기능을 초기화합니다.|`ThisAddIn_Startup` 메서드에 코드를 추가합니다. <xref:Microsoft.Office.Tools.AddInBase.Startup> 이벤트에 대한 기본 이벤트 처리기입니다. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요.|  
 |VSTO 추가 기능이 언로드되기 전에 코드를 실행하여 VSTO 추가 기능에서 사용된 리소스를 정리합니다.|`ThisAddIn_Shutdown` 메서드에 코드를 추가합니다. <xref:Microsoft.Office.Tools.AddInBase.Shutdown> 이벤트에 대한 기본 이벤트 처리기입니다. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요. **참고:** Outlook 기본적으로는 `ThisAddIn_Startup` 이벤트 처리기가 항상 호출 되지 VSTO 추가 기능 언로드될 때. 자세한 내용은 [Events in Office Projects](../vsto/events-in-office-projects.md)을 참조하세요.|  
 |사용자 지정 작업창을 표시합니다.|`CustomTaskPanes` 필드를 사용합니다. 자세한 내용은 참조 [사용자 지정 작업창](../vsto/custom-task-panes.md)합니다.|  
-|다른 Microsoft Office 솔루션에 VSTO 추가 기능의 개체를 표시합니다.|<xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> 메서드를 재정의합니다. 자세한 내용은 [Calling Code in VSTO Add-ins from Other Office Solutions](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)을 참조하세요.|  
+|다른 Microsoft Office 솔루션에 VSTO 추가 기능의 개체를 표시합니다.|<xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> 메서드를 재정의합니다. 자세한 내용은 [다른 Office 솔루션에서 VSTO 추가 기능의 코드 호출](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)을 참조하세요.|  
 |확장성 인터페이스를 구현하여 Microsoft Office 시스템의 기능을 사용자 지정합니다.|<xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> 메서드를 재정의하여 인터페이스를 구현하는 클래스의 인스턴스를 반환합니다. 자세한 내용은 [Customizing UI Features By Using Extensibility Interfaces](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)을 참조하십시오. **참고:** 리본 UI를 사용자 지정 하려면 재정의할 수도 있습니다는 <xref:Microsoft.Office.Tools.AddInBase.CreateRibbonExtensibilityObject%2A> 메서드.|  
   
 ### <a name="understanding-the-design-of-the-thisaddin-class"></a>ThisAddIn 클래스의 디자인 이해  
@@ -139,12 +141,12 @@ Excel.Workbook newWorkbook = Globals.ThisAddIn.Application.Workbooks.Add(System.
   
  클래스 및 디자이너에서 지원하지 않는 방식으로 이러한 기능 중 하나를 사용자 지정하려는 경우 VSTO 추가 기능에서 *확장성 인터페이스* 를 구현하여 이러한 기능을 사용자 지정할 수도 있습니다. 자세한 내용은 [Customizing UI Features By Using Extensibility Interfaces](../vsto/customizing-ui-features-by-using-extensibility-interfaces.md)을 참조하십시오.  
   
- 또한 문서 및 통합 문서의 동작을 확장하는 호스트 항목을 생성하여 Word 문서 및 Excel 통합 문서의 UI를 수정할 수 있습니다. 그러면 문서 및 워크시트에 관리되는 컨트롤을 추가할 수 있습니다. 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+ 또한 문서 및 통합 문서의 동작을 확장하는 호스트 항목을 생성하여 Word 문서 및 Excel 통합 문서의 UI를 수정할 수 있습니다. 그러면 문서 및 워크시트에 관리되는 컨트롤을 추가할 수 있습니다. 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
 ## <a name="calling-code-in-vsto-add-ins-from-other-solutions"></a>다른 솔루션에서 VSTO 추가 기능의 코드 호출  
  VSTO 추가 기능의 개체를 다른 Office 솔루션을 비롯한 다른 솔루션에 표시할 수 있습니다. 이는 해당 VSTO 추가 기능이 다른 솔루션에서 사용하도록 하려는 서비스를 제공하는 경우에 유용합니다. 예를 들어 웹 서비스의 재무 데이터에 대해 계산을 수행하는 Microsoft Office Excel용 VSTO 추가 기능이 있는 경우 다른 솔루션에서는 런타임에 이 Excel VSTO 추가 기능을 호출하여 이러한 계산을 수행할 수 있습니다.  
   
- 자세한 내용은 [Calling Code in VSTO Add-ins from Other Office Solutions](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)을 참조하세요.  
+ 자세한 내용은 [다른 Office 솔루션에서 VSTO 추가 기능의 코드 호출](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Office 솔루션 개발](../vsto/developing-office-solutions.md)   

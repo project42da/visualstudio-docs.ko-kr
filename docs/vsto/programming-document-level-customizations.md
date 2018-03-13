@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -30,7 +31,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: a614173fc33547c3512c031b7e0bd8a5575e7cb2
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -130,7 +132,7 @@ Globals.ThisDocument.Save();
 ## <a name="managing-documents-on-a-server"></a>서버에서 문서 관리  
  Microsoft Office Word 또는 Microsoft Office Excel이 설치되지 않은 서버에서 문서 수준 사용자 지정의 다양한 측면을 관리할 수 있습니다. 예를 들어 문서의 데이터 캐시에 있는 데이터를 액세스 및 수정할 수 있습니다. 또한 문서와 연결된 사용자 지정 어셈블리를 관리할 수도 있습니다. 예를 들어 프로그래밍 방식으로 문서에서 어셈블리를 제거하여 문서에서 더 이상 코드를 실행하지 못하게 하거나 프로그래밍 방식으로 문서에 어셈블리를 연결할 수 있습니다.  
   
- 자세한 내용은 [Managing Documents on a Server by Using the ServerDocument Class](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)을 참조하십시오.  
+ 자세한 내용은 [ServerDocument 클래스를 사용하여 서버의 문서 관리](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)을 참조하십시오.  
   
 ## <a name="customizing-the-user-interface-of-microsoft-office-applications"></a>Microsoft Office 응용 프로그램의 사용자 인터페이스 사용자 지정  
  다음 방법으로 문서 수준 사용자 지정을 사용하여 Word 및 Excel의 UI를 사용자 지정할 수 있습니다.  
@@ -165,7 +167,7 @@ Globals.ThisDocument.Save();
   
 -   네이티브 Office 개체에 대 한 확장된 개체를 가져오려는 경우 GetVstoObject 메서드를 사용 합니다. 지정한 네이티브 Office 개체에 <xref:Microsoft.Office.Tools.Excel.ListObject>, <xref:Microsoft.Office.Tools.Excel.Workbook>, <xref:Microsoft.Office.Tools.Excel.Worksheet>또는 <xref:Microsoft.Office.Tools.Word.Document> 개체가 있는 경우 이 메서드는 해당 개체를 반환합니다. 그렇지 않으면 반환 GetVstoObject **null**합니다. GetVstoObject 메서드 반환 하는 예를 들어 한 <xref:Microsoft.Office.Tools.Word.Document> 경우 지정 된 <xref:Microsoft.Office.Interop.Word.Document> Word 문서 프로젝트의 문서에 대 한 기본 개체입니다.  
   
- 문서 수준 프로젝트에서를 만들려면 새 GetVstoObject 메서드를 사용할 수 없습니다 <xref:Microsoft.Office.Tools.Excel.Workbook>, <xref:Microsoft.Office.Tools.Excel.Worksheet>, 또는 <xref:Microsoft.Office.Tools.Word.Document> 런타임에 호스트 항목입니다. 이 메서드는 디자인 타임에 프로젝트에서 생성된 기존 호스트 항목에 액세스할 때만 사용할 수 있습니다. 런타임에 새 호스트 항목을 만들려면 VSTO 추가 기능 프로젝트를 개발해야 합니다. 자세한 내용은 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) 및 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)를 참조하세요.  
+ 문서 수준 프로젝트에서를 만들려면 새 GetVstoObject 메서드를 사용할 수 없습니다 <xref:Microsoft.Office.Tools.Excel.Workbook>, <xref:Microsoft.Office.Tools.Excel.Worksheet>, 또는 <xref:Microsoft.Office.Tools.Word.Document> 런타임에 호스트 항목입니다. 이 메서드는 디자인 타임에 프로젝트에서 생성된 기존 호스트 항목에 액세스할 때만 사용할 수 있습니다. 런타임에 새 호스트 항목을 만들려면 VSTO 추가 기능 프로젝트를 개발해야 합니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md) 및 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)를 참조하세요.  
   
 ## <a name="using-the-getvstoobject-and-hasvstoobject-methods"></a>GetVstoObject 및 HasVstoObject 메서드 사용  
  GetVstoObject 및 HasVstoObject 메서드를 호출 하려면 Globals.Factory.GetVstoObject 또는 Globals.Factory.HasVstoObject 메서드를 사용 하 고 네이티브 Word 또는 Excel 개체에 전달 (같은 <xref:Microsoft.Office.Interop.Word.Document> 또는 <xref:Microsoft.Office.Interop.Excel.Worksheet>)를 테스트 합니다.  
