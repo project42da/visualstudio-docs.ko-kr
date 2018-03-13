@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: dcf309bbfdd608a4ca93809804c51006ce7c2dd7
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -28,7 +30,7 @@ ms.lasthandoff: 01/10/2018
 # <a name="walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>연습: 런타임에 VSTO 추가 기능의 문서에 컨트롤 추가
   VSTO 추가 기능을 사용하여 열려 있는 Microsoft Office Word 문서에 컨트롤을 추가할 수 있습니다. 이 연습에서는 리본을 사용하여 사용자가 <xref:Microsoft.Office.Tools.Word.Controls.Button> 또는 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 문서에 추가할 수 있도록 하는 방법을 보여 줍니다.  
   
- **적용 대상:** 이 항목의 정보는 Word 2010의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ **적용 대상:** 이 항목의 정보는 Word 2010의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
   
  이 연습에서는 다음 작업을 수행합니다.  
   

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/17/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,11 +17,12 @@ helpviewer_keywords:
 - ClickOnce deployment, security
 - deploying applications, ClickOnce security
 ms.assetid: a05b5f2f-d1f2-471a-8096-8b11f7554265
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: a7825ef0b664007fc119d7ed08066e8585ee59ac
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -42,10 +44,10 @@ ms.lasthandoff: 12/22/2017
 |네트워크 파일 공유에서 설치|로컬 인트라넷 영역|  
 |CD-ROM에서 설치|Full Trust|  
   
- 기본 사용 권한은 응용 프로그램의 원래 버전이 배포된 위치를 기반으로 하며, 응용 프로그램 업데이트 시 해당 사용 권한이 상속됩니다. 응용 프로그램이 웹 또는 네트워크 위치에서 업데이트를 확인하도록 구성되어 있고 최신 버전이 사용 가능하면 원래 설치된 버전에서 완전 신뢰 권한 대신 인터넷 또는 인트라넷 영역에 대한 사용 권한을 받을 수 있습니다. 시스템 관리자가 특정 응용 프로그램 게시자를 신뢰할 수 있는 소스로 정의하는 ClickOnce 배포 정책을 지정하여 해당 메시지가 표시되지 않게 할 수도 있습니다. 이 정책이 배포되는 컴퓨터의 경우 사용 권한이 자동으로 부여되므로 사용자에게 관련 메시지가 표시되지 않습니다. 자세한 내용은 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)을 참조하십시오. 신뢰할 수 있는 응용 프로그램 배포를 구성하기 위해 인증서를 컴퓨터 또는 엔터프라이즈 수준에 설치할 수 있습니다. 자세한 내용은 [How to: Add a Trusted Publisher to a Client Computer for ClickOnce Applications](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)을 참조하십시오.  
+ 기본 사용 권한은 응용 프로그램의 원래 버전이 배포된 위치를 기반으로 하며, 응용 프로그램 업데이트 시 해당 사용 권한이 상속됩니다. 응용 프로그램이 웹 또는 네트워크 위치에서 업데이트를 확인하도록 구성되어 있고 최신 버전이 사용 가능하면 원래 설치된 버전에서 완전 신뢰 권한 대신 인터넷 또는 인트라넷 영역에 대한 사용 권한을 받을 수 있습니다. 시스템 관리자가 특정 응용 프로그램 게시자를 신뢰할 수 있는 소스로 정의하는 ClickOnce 배포 정책을 지정하여 해당 메시지가 표시되지 않게 할 수도 있습니다. 이 정책이 배포되는 컴퓨터의 경우 사용 권한이 자동으로 부여되므로 사용자에게 관련 메시지가 표시되지 않습니다. 자세한 내용은 [Trusted Application Deployment Overview](../deployment/trusted-application-deployment-overview.md)을 참조하십시오. 신뢰할 수 있는 응용 프로그램 배포를 구성하기 위해 인증서를 컴퓨터 또는 엔터프라이즈 수준에 설치할 수 있습니다. 자세한 내용은 [방법: ClickOnce 응용 프로그램의 클라이언트 컴퓨터에 트러스트된 게시자 추가](../deployment/how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications.md)을 참조하십시오.  
   
 ## <a name="code-access-security-policies"></a>코드 액세스 보안 정책  
- 응용 프로그램에 대 한 사용 권한이 설정에 의해 결정 됩니다는 [ \<trustInfo > 요소](../deployment/trustinfo-element-clickonce-application.md) 응용 프로그램 매니페스트는 요소입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 프로젝트의 **보안** 속성 페이지에 있는 설정을 기반으로 이 정보를 자동 생성합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에는 요청된 특정 권한만 부여됩니다. 예를 들어, 파일에 액세스하는 데 완전 신뢰 권한이 필요할 때 응용 프로그램에서 파일 액세스 권한을 요청하면 완전 신뢰 권한이 아니라 파일 액세스 권한만 부여됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 개발할 때, 응용 프로그램에서 필요한 특정 권한만 요청해야 합니다. 대부분의 경우, 인터넷 또는 로컬 인트라넷 영역을 사용하여 응용 프로그램을 부분 신뢰로 제한할 수 있습니다. 자세한 내용은 [How to: Set a Security Zone for a ClickOnce Application](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)을 참조하십시오. 응용 프로그램에 사용자 지정 권한이 필요한 경우 사용자 지정 영역을 만들 수 있습니다. 자세한 내용은 [How to: Set Custom Permissions for a ClickOnce Application](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)을 참조하세요.  
+ 응용 프로그램에 대 한 사용 권한이 설정에 의해 결정 됩니다는 [ \<trustInfo > 요소](../deployment/trustinfo-element-clickonce-application.md) 응용 프로그램 매니페스트는 요소입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 프로젝트의 **보안** 속성 페이지에 있는 설정을 기반으로 이 정보를 자동 생성합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에는 요청된 특정 권한만 부여됩니다. 예를 들어, 파일에 액세스하는 데 완전 신뢰 권한이 필요할 때 응용 프로그램에서 파일 액세스 권한을 요청하면 완전 신뢰 권한이 아니라 파일 액세스 권한만 부여됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 개발할 때, 응용 프로그램에서 필요한 특정 권한만 요청해야 합니다. 대부분의 경우, 인터넷 또는 로컬 인트라넷 영역을 사용하여 응용 프로그램을 부분 신뢰로 제한할 수 있습니다. 자세한 내용은 [방법: ClickOnce 응용 프로그램의 보안 영역 설정](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)을 참조하십시오. 응용 프로그램에 사용자 지정 권한이 필요한 경우 사용자 지정 영역을 만들 수 있습니다. 자세한 내용은 [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)을 참조하세요.  
   
  응용 프로그램이 배포되는 영역의 기본 권한 집합에 속하지 않는 권한을 포함하면 설치 또는 업데이트 시 권한을 부여하라는 메시지가 나타납니다. 시스템 관리자가 특정 응용 프로그램 게시자를 신뢰할 수 있는 소스로 정의하는 ClickOnce 배포 정책을 지정하여 해당 메시지가 표시되지 않게 할 수도 있습니다. 이 정책이 배포되는 컴퓨터에서는 사용 권한이 자동으로 부여되므로 사용자에게 관련 메시지가 표시되지 않습니다.  
   

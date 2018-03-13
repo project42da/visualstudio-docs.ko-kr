@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 9af7c7dd4a4c56cbd872b757704d64afd22c6101
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -191,7 +193,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="next-steps"></a>다음 단계  
  다음으로 수행할 수 있는 몇 가지 작업은 다음과 같습니다.  
   
--   Excel에서 호스트 컨트롤의 이벤트에 응답 하는 코드를 작성 합니다. 자세한 내용은 [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)을 참조하세요.  
+-   Excel에서 호스트 컨트롤의 이벤트에 응답 하는 코드를 작성 합니다. 자세한 내용은 [연습: NamedRange 컨트롤의 이벤트 프로그래밍](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)을 참조하세요.  
   
 -   책갈피에 서식을 변경 하는 확인란을 사용 합니다. 자세한 내용은 참조 [연습: 변경 문서 서식을 사용 하 여 CheckBox 컨트롤](../vsto/walkthrough-changing-document-formatting-using-checkbox-controls.md)합니다.  
   

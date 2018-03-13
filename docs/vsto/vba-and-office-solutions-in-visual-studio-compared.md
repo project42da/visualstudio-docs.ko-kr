@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: d6b2fd1cbf3ad2d58575b22b55f7ec1dc40b6ed4
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -46,7 +48,7 @@ ms.lasthandoff: 01/10/2018
 -   매크로 기록  
   
 ## <a name="combining-vba-solutions-and-office-solutions-created-by-using-visual-studio"></a>Visual Studio를 사용하여 만든 Office 솔루션과 VBA 솔루션 결합  
- Visual Studio를 사용하여 만든 Office 솔루션에서 VBA 코드를 호출할 수 있으며 VBA에서 Visual Studio를 사용하여 만든 Office 솔루션에서 코드를 호출할 수도 있습니다. 구체적인 방법은 Office 솔루션이 VSTO 추가 기능인지, 아니면 문서 수준 사용자 지정인지에 따라 다릅니다. 자세한 내용은 [Calling Code in VSTO Add-ins from Other Office Solutions](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md) 및 [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)를 참조하세요.  
+ Visual Studio를 사용하여 만든 Office 솔루션에서 VBA 코드를 호출할 수 있으며 VBA에서 Visual Studio를 사용하여 만든 Office 솔루션에서 코드를 호출할 수도 있습니다. 구체적인 방법은 Office 솔루션이 VSTO 추가 기능인지, 아니면 문서 수준 사용자 지정인지에 따라 다릅니다. 자세한 내용은 [다른 Office 솔루션에서 VSTO 추가 기능의 코드 호출](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md) 및 [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   

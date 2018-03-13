@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,7 +21,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 1a8c8eff138e2c736750040dc896e610975c25ab
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -88,7 +90,7 @@ ms.lasthandoff: 01/10/2018
 5.  리본에서 선택 된 **개발자** 탭 합니다.  
   
     > [!NOTE]  
-    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)을 참조하세요.  
+    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)을 참조하세요.  
   
 6.  에 **컨트롤** 그룹에서 선택 된 **텍스트** 단추 ![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") 는 를추가하려면<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>첫 번째 셀에 전달 합니다.  
   
@@ -317,7 +319,7 @@ ms.lasthandoff: 01/10/2018
   
 -   문서가 닫혀 있는 동안 사용자 지정 XML 부분의 데이터를 수정합니다. 다음에 사용자가 문서를 열면 XML 요소에 바인딩된 콘텐츠 컨트롤이 새 데이터를 표시합니다.  
   
--   콘텐츠 컨트롤을 사용하여 문서 부분을 보호합니다. 자세한 내용은 [How to: Protect Parts of Documents by Using Content Controls](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)을 참조하십시오.  
+-   콘텐츠 컨트롤을 사용하여 문서 부분을 보호합니다. 자세한 내용은 [방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)을 참조하십시오.  
   
 ## <a name="see-also"></a>참고 항목  
  [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
