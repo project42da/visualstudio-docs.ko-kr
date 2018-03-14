@@ -4,23 +4,27 @@ ms.custom:
 ms.date: 12/14/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
-caps.latest.revision: "5"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c75b5508cd23a2131bcdd64cf52aacc1486d2713
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload:
+- multiple
+ms.openlocfilehash: e858d24a37fec49468981b44d450212ba2fa3654
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="get-started-with-debugging-in-visual-studio"></a>Visual Studio에서 디버깅 시작
 Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통합 집합을 제공합니다. 이 항목에서는 가장 기본적인 디버깅 UI 기능 집합을 사용하여 시작하는 방법을 알아봅니다.  
+
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
 ## <a name="my-code-doesnt-work-help-me-visual-studio"></a>내 코드가 작동하지 않습니다. Visual Studio 도움말!  
  지금까지 편집기를 살펴보고 일부 코드를 만들었습니다. 이제 해당 코드의 디버그를 시작하려고 합니다. Visual Studio에서는 대부분의 IDE와 마찬가지로 디버깅이 두 단계로 이루어집니다. 먼저 프로젝트 및 컴파일러 오류를 catch하고 해결하는 코드를 빌드한 다음 환경에서 해당 코드를 실행하여 런타임 및 동적 오류를 catch하고 해결합니다.  
@@ -118,7 +122,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 ### <a name="inspect-your-code-at-run-time"></a>런타임에 코드 검사  
  실행 중인 코드가 중단점에 도달하여 일시 중지되면 노란색으로 표시된 코드 줄(현재 명령문)은 아직 실행되지 않았습니다. 이 시점에서 현재 명령문을 실행한 다음 변경된 값을 검사하는 것이 좋습니다. 여러 *단계* 명령을 사용하여 디버거에서 코드를 실행할 수 있습니다. 표시된 코드가 메서드 호출인 경우 **F11** 키를 눌러 한 단계씩 코드를 실행할 수 있습니다. **F10** 키를 눌러 코드 줄을 *프로시저 단위로 실행*할 수도 있습니다. 코드를 단계적으로 실행하는 방법에 대한 추가 명령 및 세부 정보 [디버거를 사용하여 코드 탐색](../debugger/navigating-through-code-with-the-debugger.md)을 참조하세요.
 
- ![Visual Studio 런타임 값 검사](../ide/media/vs_ide_gs_debug_hit_breakpoint.PNG "vs_ide_gs_debug_inspect_value") 
+ ![Visual Studio 런타임 값 검사](../ide/media/vs_ide_gs_debug_hit_breakpoint.PNG "vs_ide_gs_debug_inspect_value")
 
  앞의 그림에서 **F10** 또는 **F11** 키를 눌러서 디버거를 한 명령문 다음으로 진행할 수 있습니다. (여기에는 메서드 호출이 없으므로 두 가지 명령 모두 결과가 동일합니다.)
 
@@ -126,7 +130,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  ![Visual Studio 런타임 값 검사](../ide/media/vs_ide_gs_debug_inspect_value.PNG "vs_ide_gs_debug_inspect_value")  
 
- 변수 위로 마우스를 가져가서 현재 포함된 값 및 참조를 확인합니다. 예상하지 않은 값이 표시되는 경우 이전 또는 호출하는 코드 줄에 버그가 있을 가능성이 큽니다.  자세한 정보를 알아보려면 디버거 사용해 대해 [알아보세요](../debugger/getting-started-with-the-debugger.md). 
+ 변수 위로 마우스를 가져가서 현재 포함된 값 및 참조를 확인합니다. 예상하지 않은 값이 표시되는 경우 이전 또는 호출하는 코드 줄에 버그가 있을 가능성이 큽니다.  자세한 정보를 알아보려면 디버거 사용해 대해 [알아보세요](../debugger/getting-started-with-the-debugger.md).
 
  또한 Visual Studio에서는 앱의 시간별 CPU 및 메모리 사용량을 관찰할 수 있는 진단 도구 창을 표시합니다. 나중에 앱 개발 시 이러한 도구를 사용하여 예기치 않은 과도한 CPU 사용량이나 메모리 할당을 찾을 수 있습니다. **조사식** 창 및 중단점과 함께 사용하여 예기치 않은 높은 사용량이나 해제되지 않은 리소스의 원인을 확인합니다.  자세한 내용은 [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)를 참조하세요.
 

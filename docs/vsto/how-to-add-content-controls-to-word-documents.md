@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -29,7 +30,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: b1dd59fc777c012f92baaf96302f7cf031ad151c
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -93,7 +95,7 @@ ms.lasthandoff: 01/10/2018
 2.  리본에서 **개발자** 탭을 클릭합니다.  
   
     > [!NOTE]  
-    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 [How to: Show the Developer Tab on the Ribbon](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)을 참조하십시오.  
+    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)을 참조하십시오.  
   
 3.  **컨트롤** 그룹에서 추가하려는 콘텐츠 컨트롤의 아이콘을 클릭합니다.  
   
@@ -106,7 +108,7 @@ ms.lasthandoff: 01/10/2018
   
 -   문서의 네이티브 콘텐츠 컨트롤을 기반으로 하는 컨트롤을 추가합니다.  
   
- 동적으로 생성된 콘텐츠 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 콘텐츠 컨트롤은 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 콘텐츠 컨트롤을 기반으로 하는 콘텐츠 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 동적으로 생성된 콘텐츠 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 콘텐츠 컨트롤은 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 콘텐츠 컨트롤을 기반으로 하는 콘텐츠 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 > [!NOTE]  
 >  Word 2010 프로젝트에서 문서에 확인란 콘텐츠 컨트롤을 추가하려면 <xref:Microsoft.Office.Tools.Word.ContentControl> 개체를 만들어야 합니다. 자세한 내용은 [Content Controls](../vsto/content-controls.md)을 참조하세요.  

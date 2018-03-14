@@ -5,21 +5,23 @@ keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 10/09/2017
+ms.date: 03/05/2018
 ms.topic: article
 helpviewer_keywords:
 - workload ID, Visual Studio
 - component ID, Visual Studio
 - install Visual Studio, administrator guide
 ms.service: 
-ms.technology: vs-acquisition
+ms.technology:
+- vs-acquisition
 ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
-ms.workload: multiple
-ms.openlocfilehash: ba73e3c53e03bf3d6deb65deea0aabd715fc69fd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6a8b2ca8900c0f292d7e4bcc035e1eb58fd12a94
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 작업 및 구성 요소 ID
 명령줄을 사용하여 Visual Studio를 설치하거나 VSIX 매니페스트에 종속성으로 지정하는 데 필요하고 사용 가능한 워크로드 및 구성 요소 ID를 확인하려면 다음 표에서 버전 이름을 클릭합니다.

@@ -17,11 +17,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: ac6c9e79e659a7f7d152541bc5a2d7deea694086
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 53345fa849715a8065b0bf569977393033608caa
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig에 대한 .NET 코딩 규칙 설정
 
@@ -391,8 +391,8 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 | dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ 및 Visual Basic 15+ | true:suggestion | 첫 번째 릴리스 |
 | dotnet_style_coalesce_expression | IDE0029 | C# 및 Visual Basic | true:suggestion | 첫 번째 릴리스 |
 | dotnet_style_null_propagation | IDE0031 | C# 6.0 이상 및 Visual Basic 14 이상 | true:suggestion | 첫 번째 릴리스 |
-| dotnet_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ 및 Visual Basic 15+ | true:suggestion | 15.6 미리 보기 2 |
-| dotnet_prefer_inferred_anonymous_type_member_names | IDE0037 | C# 및 Visual Basic | true:suggestion | 15.6 미리 보기 2 |
+| dotnet_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ 및 Visual Basic 15+ | true:suggestion | 15.6 |
+| dotnet_prefer_inferred_anonymous_type_member_names | IDE0037 | C# 및 Visual Basic | true:suggestion | 15.6 |
 
 **dotnet\_style\_object_initializer**
 

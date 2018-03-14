@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: d6634fea629358368d3b61c5b505e5eec7ec0186
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -37,7 +39,7 @@ ms.lasthandoff: 01/10/2018
 -   에 대 한 매개 변수로 전달 된 범위를 채우기는 <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> 메서드. 이 대상 범위는 초기 값을 포함 하는 범위를 포함 해야 합니다.  
   
     > [!NOTE]  
-    >  전달할 수 없습니다는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤 대신는 <xref:Microsoft.Office.Interop.Excel.Range>합니다. 자세한 내용은 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
+    >  전달할 수 없습니다는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤 대신는 <xref:Microsoft.Office.Interop.Excel.Range>합니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
   
 ## <a name="example"></a>예  
  [!code-csharp[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#49)]

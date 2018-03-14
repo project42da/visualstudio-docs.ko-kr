@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: fe8b289dd30ea44331a2ae0c63dd451da8969369
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/10/2018
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  
   
 > [!NOTE]  
->  프로그래밍 방식으로 워크시트를 복사하든 또는 최종 사용자가 수동으로 워크시트를 복사하든 관계없이 새 워크시트에는 숨겨진 코드가 없으며 새 워크시트의 컨트롤이 작동하지 않습니다. 이는 새로 복사한 워크시트가 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목이 아니라 <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체이기 때문입니다. Windows Forms 컨트롤 및 호스트 컨트롤은 호스트 항목에만 추가할 수 있습니다. 자세한 내용은 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
+>  프로그래밍 방식으로 워크시트를 복사하든 또는 최종 사용자가 수동으로 워크시트를 복사하든 관계없이 새 워크시트에는 숨겨진 코드가 없으며 새 워크시트의 컨트롤이 작동하지 않습니다. 이는 새로 복사한 워크시트가 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목이 아니라 <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체이기 때문입니다. Windows Forms 컨트롤 및 호스트 컨트롤은 호스트 항목에만 추가할 수 있습니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
   
 ### <a name="to-add-a-copied-worksheet-to-a-workbook-in-a-document-level-customization"></a>문서 수준 사용자 지정에서 통합 문서에 복사된 워크시트를 추가하려면  
   
@@ -53,7 +55,7 @@ ms.lasthandoff: 01/10/2018
  [방법: 프로그래밍 방식으로 워크시트 선택](../vsto/how-to-programmatically-select-worksheets.md)   
  [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
  [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   
   

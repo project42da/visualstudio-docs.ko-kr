@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 52867e51e158f2e2c2ccbccba7466c1f7246e128
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: bb520f317eb285bcc278ff9f37bb2dc25c91e950
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="controlling-where-r-code-runs-with-workspaces"></a>작업 영역에서 R 코드가 실행되는 위치 제어
 
@@ -31,17 +31,6 @@ RTVS(Visual Studio용 R 도구)의 작업 영역에서는 R 세션이 실행되�
 ![Visual Studio용 R 도구(VS2017)의 작업 영역 창](media/workspaces-window.png)
 
 이 창에서 녹색 확인 표시는 RTVS가 바인딩된 활성 작업 영역을 나타냅니다. 녹색 화살표를 선택하면 활성 작업 영역이 설정됩니다. 각 작업 영역의 오른쪽에 있는 설정(기어) 아이콘을 사용하여 이름, 위치 및 명령줄 인수를 변경할 수 있습니다. 빨간색 X를 선택하면 수동으로 추가된 작업 영역이 제거됩니다.
-
-항목 내용:
-
-- [작업 영역 저장 및 다시 설정](#saving-and-resetting-a-workspace)
-- [로컬 작업 영역](#local-workspaces)
-- [원격 작업 영역](#remote-workspaces)
-- [원격 작업 영역 로그온](#remote-workspace-logon)
-- [작업 영역 간 전환](#switching-between-workspaces)
-- [로컬 및 원격 컴퓨터의 디렉터리](#directories-on-local-and-remote-computers)
-- [원격 작업 영역으로 프로젝트 파일 복사](#copying-project-files-to-remote-workspaces)
-- [원격 작업 영역에서 파일 복사](#copying-files-from-a-remote-workspace)
 
 ## <a name="saving-and-resetting-a-workspace"></a>작업 영역 저장 및 다시 설정
 

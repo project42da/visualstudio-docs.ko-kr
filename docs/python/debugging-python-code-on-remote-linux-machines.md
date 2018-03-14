@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9f5f3edfc536dce9d42d09a099c3f53a8a8ab3c7
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 895abe0f9ce632f5c67c487726d0422607f8d427
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux에서 Python 코드 원격 디버깅
 
@@ -48,29 +48,29 @@ Azure VM에 대한 방화벽 규칙을 만드는 방법에 대한 자세한 내�
 
 1. 원격 컴퓨터에서 다음 코드를 사용하여 `guessing-game.py`라는 Python 파일을 만듭니다.
 
-  ```python
-  import random
+    ```python
+    import random
 
-  guesses_made = 0
-  name = input('Hello! What is your name?\n')
-  number = random.randint(1, 20)
-  print('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
+    guesses_made = 0
+    name = input('Hello! What is your name?\n')
+    number = random.randint(1, 20)
+    print('Well, {0}, I am thinking of a number between 1 and 20.'.format(name))
 
-  while guesses_made < 6:
-      guess = int(input('Take a guess: '))
-      guesses_made += 1
-      if guess < number:
-          print('Your guess is too low.')
-      if guess > number:
-          print('Your guess is too high.')
-      if guess == number:
-          break
-  if guess == number:
-      print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
-  else:
-      print('Nope. The number I was thinking of was {0}'.format(number))
-  ```
- 
+    while guesses_made < 6:
+        guess = int(input('Take a guess: '))
+        guesses_made += 1
+        if guess < number:
+            print('Your guess is too low.')
+        if guess > number:
+            print('Your guess is too high.')
+        if guess == number:
+            break
+    if guess == number:
+        print('Good job, {0}! You guessed my number in {1} guesses!'.format(name, guesses_made))
+    else:
+        print('Nope. The number I was thinking of was {0}'.format(number))
+    ```
+
 1. `pip3 install ptvsd`를 사용하여 사용자 환경에 `ptvsd` 패키지를 설치합니다. (참고: 문제 해결에 필요한 경우를 대비하여 ptvsd 버전을 기록해 두는 것이 좋습니다. [ptvsd 목록](https://pypi.python.org/pypi/ptvsd)은 사용 가능한 버전도 보여 줍니다.)
 
 1. `guessing-game.py`에서 가능한 가장 빠른 지점에 다른 코드보다 먼저 해당 코드를 추가하여 원격 디버깅을 사용하도록 설정합니다. (엄격한 요구 사항은 아니지만, `enable_attach` 함수를 호출하기 전에 생성된 모든 백그라운드 스레드를 디버그할 수는 없습니다.)

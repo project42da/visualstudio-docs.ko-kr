@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 8655a03659bd3b69e23fd155620d42df6d52386c
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -34,7 +36,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  다음 예제에서는 암호 보호를 사용하지 않지만 문서 보호 추가 시 암호를 사용할 수 있습니다. 자세한 내용은 [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)의 문서 보호기 샘플을 참조하세요.  
   
- 또한 콘텐츠 컨트롤을 사용하여 문서 부분을 보호할 수 있습니다. 자세한 내용은 [How to: Protect Parts of Documents by Using Content Controls](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)을 참조하십시오.  
+ 또한 콘텐츠 컨트롤을 사용하여 문서 부분을 보호할 수 있습니다. 자세한 내용은 [방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)을 참조하십시오.  
   
 ## <a name="protecting-a-document-that-is-part-of-a-document-level-customization"></a>문서 수준 사용자 지정의 일부인 문서 보호  
   

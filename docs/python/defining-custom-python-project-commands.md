@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1fa4c68b1d7dc89452376d6efc47e047f75d52d6
-ms.sourcegitcommit: 06cdc1651aa7f45e03d260080da5a623d6258661
+ms.openlocfilehash: ec06764bb898888657a144f682827896f52ce223
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/15/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="defining-custom-commands-for-python-projects"></a>Python 프로젝트에 대한 사용자 지정 명령 정의
 
@@ -154,7 +154,7 @@ Visual Studio의 특정 Python 프로젝트 템플릿은 이미 자체의 `.targ
 | 인수 | Optional | 대상에 부여할 인수(있는 경우)의 문자열을 지정합니다. TargetType이 `script`이면 `python.exe`가 아닌 Python 프로그램에 인수가 주어진다는 데 주목하십시오. `code` TargetType에 대해서는 무시됩니다. |
 | ExecuteIn | 예 | 명령을 실행할 환경을 지정합니다.<ul><li>**console**: (기본값) Target 및 인수를 마치 명령줄에서 직접 입력한 것처럼 실행합니다. Target이 실행되는 동안 명령 창이 표시되었다가 자동으로 닫힙니다.</li><li>**consolepause**: console과 같지만 창을 닫기 전에 키를 누르기를 기다립니다.</li><li>**output**: Target을 실행하고 그 결과를 Visual Studio의 출력 창에 표시합니다. TargetType이 "pip"인 경우 Visual Studio는 Target을 패키지 이름으로 사용하고 Arguments를 추가합니다.</li><li>**repl**: [Python 대화형 창](interactive-repl.md)에서 Target을 실행합니다. 창의 제목에 선택적 표시 이름이 사용됩니다.</li><li>**none**: console과 같이 동작합니다.</li></ul>|
 | 시작 위치 | Optional | 명령을 실행할 폴더입니다. |
-| ErrorRegex<br>WarningRegEx | Optional | ExecuteIn이 `output`인 경우에만 사용됩니다. 두 값 모두 Visual Studio가 명령 출력을 구문 분석하여 자체의 오류 목록 창에 오류 및 경고를 표시하는 정규식을 지정합니다. 지정되지 않은 경우 이 명령은 오류 목록 창에 영향을 미치지 않습니다. Visual Studio에서 예상되는 내용에 대한 자세한 내용은 [명명된 캡처 그룹](#named-capture-groups-for-regular-expression)을 참조하세요. |
+| ErrorRegex<br>WarningRegEx | Optional | ExecuteIn이 `output`인 경우에만 사용됩니다. 두 값 모두 Visual Studio가 명령 출력을 구문 분석하여 자체의 오류 목록 창에 오류 및 경고를 표시하는 정규식을 지정합니다. 지정되지 않은 경우 이 명령은 오류 목록 창에 영향을 미치지 않습니다. Visual Studio에서 예상되는 내용에 대한 자세한 내용은 [명명된 캡처 그룹](#named-capture-groups-for-regular-expressions)을 참조하세요. |
 | RequiredPackages | Optional | [requirements.txt](https://pip.readthedocs.io/en/1.1/requirements.html)와 같은 형식을 사용하는 명령에 대한 패키지 요구 사항의 목록입니다(pip.readthedocs.io). 예를 들어 **PyLint 실행** 명령은 `pylint>=1.0.0`을 지정합니다. 명령을 실행하기 전에 Visual Studio은 목록의 모든 패키지가 설치되었는지 확인합니다. Visual Studio는 pip를 사용하여 누락된 패키지를 설치합니다. |
 | 환경 | Optional | 명령을 실행하기 전에 정의하는 환경 변수의 문자열입니다. 각 변수는 여러 변수를 세미콜론으로 구분하고 NAME=VALUE 형식을 사용합니다. 여러 값을 가진 변수는 'NAME=VALUE1;VALUE2'와 같이 홑따옴표 또는 따옴표로 둘러싸야 합니다. |
 

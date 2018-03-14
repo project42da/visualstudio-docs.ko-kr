@@ -13,15 +13,17 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a74d123d8cb0055f01619bae25b9a1bda54b35f4
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 96ae67eb895292e909e01471b329df6de587c75f
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>빠른 시작: 먼저 Visual Studio IDE 살펴보기
 
 이 5~10분이 걸리는 Visual Studio IDE(통합 개발 환경) 소개 내용에서는 창, 메뉴 및 기타 UI 기능 일부를 살펴보겠습니다.
+
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
 ## <a name="start-page"></a>시작 페이지
 

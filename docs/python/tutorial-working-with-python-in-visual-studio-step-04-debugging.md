@@ -2,7 +2,7 @@
 title: "Visual Studio에서 Python 작업, 4단계, 디버깅 | Microsoft Docs"
 description: "디버거에서 Python 코드를 실행하는 방법을 보여 주는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 4단계입니다."
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 03/08/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ed662831d37d466a89b2899b2e6822509b22c9a8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8c9cf775bb7edbdb51f7eb5ce6994fedaee13c9f
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="step-4-running-code-in-the-debugger"></a>4단계: 디버거에서 코드 실행
 
@@ -32,15 +32,14 @@ Visual Studio는 프로젝트 관리, 풍부한 편집 환경 제공 및 대화�
 1. `PythonApplication1.py` 파일의 코드를 다음으로 바꿉니다. 이 코드 변형은 `make_dot_string`을 확장하므로, 디버거에서 해당 개별 단계를 검사할 수 있습니다. 또한 `for` 루프를 `main` 함수에 배치하고 해당 함수를 호출하여 명시적으로 실행합니다.
 
     ```python
-    import sys
-    from math import sin, cos, radians
+    from math import cos, radians
 
     # Create a string with spaces proportional to a cosine of x in degrees
     def make_dot_string(x):
         rad = radians(x)                             # cos works with radians
         numspaces = int(20 * cos(radians(x)) + 20)   # scale to 0-40 spaces
-        str = ' ' * numspaces + 'o'                  # place 'o' after the spaces
-        return str
+        st = ' ' * numspaces + 'o'                   # place 'o' after the spaces
+        return st
 
     def main():
         for i in range(0, 1800, 12):

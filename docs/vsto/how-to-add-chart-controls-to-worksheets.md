@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 74ea64dc0f73d642d3d5ea7e693eda42c8d882c4
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -59,7 +61,7 @@ ms.lasthandoff: 01/10/2018
 6.  에 **데이터 원본 선택** 대화 상자를 클릭 **확인**합니다.  
   
 ##  <a name="runtimedoclevel"></a>런타임에 문서 수준 프로젝트에서 차트 컨트롤 추가  
- 런타임에 동적으로 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수 있습니다. 동적으로 생성된 차트는 문서를 닫을 때 문서에 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 런타임에 동적으로 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수 있습니다. 동적으로 생성된 차트는 문서를 닫을 때 문서에 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 #### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>프로그래밍 방식으로 워크시트에 차트 컨트롤을 추가하려면  
   
@@ -69,9 +71,9 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[Trin_VstcoreHostControlsExcel#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreHostControlsExcelVB/Sheet1.vb#1)]  
   
 ##  <a name="runtimeaddin"></a>런타임에 VSTO 추가 기능 프로젝트에서 차트 컨트롤 추가  
- VSTO 추가 기능 프로젝트에서 열려 있는 워크시트에 프로그래밍 방식으로 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수 있습니다. 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+ VSTO 추가 기능 프로젝트에서 열려 있는 워크시트에 프로그래밍 방식으로 <xref:Microsoft.Office.Tools.Excel.Chart> 컨트롤을 추가할 수 있습니다. 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
- 동적으로 생성된 차트 컨트롤은 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 동적으로 생성된 차트 컨트롤은 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 #### <a name="to-add-a-chart-control-to-a-worksheet-programmatically"></a>프로그래밍 방식으로 워크시트에 차트 컨트롤을 추가하려면  
   

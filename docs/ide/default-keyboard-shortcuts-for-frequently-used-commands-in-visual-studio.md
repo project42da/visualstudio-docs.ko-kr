@@ -4,18 +4,20 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 45aaccf19518572211bf9468a133989e651504bf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 6389e5673f589f581818d68f5652dd9529da7500
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="default-keyboard-shortcuts-for-frequently-used-commands-in-visual-studio"></a>Visual Studio에서 자주 사용되는 명령의 기본 바로 가기 키
 
@@ -66,7 +68,7 @@ ms.lasthandoff: 12/22/2017
 |편집.삭제|Delete[전역, 팀 탐색기]<br /><br /> 또는 Shift+Delete[시퀀스 다이어그램, UML 동작 다이어그램, 레이어 다이어그램]<br /><br /> 또는 Ctrl+Delete[클래스 다이어그램]|  
 |편집.찾기|Ctrl+F[전역]|  
 |편집.모든참조찾기|Shift+F12[전역]|  
-dit.FindinFiles|Ctrl+Shift+F[전역]|  
+|편집.파일에서찾기|Ctrl+Shift+F[전역]|  
 |편집.다음찾기|F3[전역]|  
 |편집.다음찾기선택|Ctrl+F3[전역]|  
 |편집.문서서식|Ctrl+K, Ctrl+D[텍스트 편집기]|  
@@ -81,8 +83,8 @@ dit.FindinFiles|Ctrl+Shift+F[전역]|
 |편집.줄잘라내기|Ctrl+L[텍스트 편집기]|  
 |편집.한줄아래까지열확장선택|Shift+Alt+아래쪽 화살표[텍스트 편집기]|  
 |편집.위쪽줄열기|Ctrl+Enter[텍스트 편집기]|  
-|편집.멤버목록|Ctrl+J[텍스트 편집기, Workflow Designer]<br /><br /> 또는 Ctrl+K, Ctrl+L[Workflow Designer]<br /><br /> 또는 Ctrl+K, L[워크플로 디자이너]|  
-dit.NavigateTo|Ctrl+,[전역]|  
+|편집.멤버목록|Ctrl+J[텍스트 편집기, Workflow Designer]<br /><br /> 또는 Ctrl+K, Ctrl+L[Workflow Designer]<br /><br /> 또는 Ctrl+K, L[Workflow Designer]|  
+|편집.탐색|Ctrl+,[전역]|  
 |Edit.OpenFile|Ctrl+Shift+G[전역]|  
 |편집.겹쳐쓰기모드|Insert[텍스트 편집기]|  
 |편집.매개변수정보|Ctrl+Shift+스페이스바[텍스트 편집기, Workflow Designer]<br /><br /> 또는 Ctrl+K, Ctrl+P[Workflow Designer]<br /><br /> 또는 Ctrl+K, P[Workflow Designer]|  
@@ -93,7 +95,7 @@ dit.NavigateTo|Ctrl+,[전역]|
 |편집.모두선택|Ctrl+A[전역]|  
 |편집.현재단어선택|Ctrl+W[텍스트 편집기]|  
 |편집.선택취소|Esc[텍스트 편집기, 보고서 디자이너, 설정 디자이너, Windows Forms 디자이너, 관리되는 리소스 편집기]|  
-dit.SurroundWith|Ctrl+K, Ctrl+S[전역]|  
+|편집.코드감싸기|Ctrl+K, Ctrl+S[전역]|  
 |편집.왼쪽으로탭이동|Shift+Tab[텍스트 편집기, 보고서 디자이너, Windows Forms 디자이너]|  
 |편집.전체개요표시숨기기|Ctrl+M, Ctrl+L[텍스트 편집기]|  
 |편집.책갈피설정해제|Ctrl+K, Ctrl+K[텍스트 편집기]|  
@@ -155,7 +157,7 @@ dit.SurroundWith|Ctrl+K, Ctrl+S[전역]|
 |보기.서버탐색기|Ctrl+Alt+S[전역]|  
 |보기.스마트태그표시|Ctrl+. [Global]<br /><br /> 또는 Shift+Alt+F10[전역, HTML 편집기 디자인 뷰]|  
 |보기.솔루션탐색기|Ctrl+Alt+L[전역]|  
-iew.TfsTeamExplorer|Ctrl+\\, Ctrl+M[전역]|  
+|View.TfsTeamExplorer|Ctrl+\\, Ctrl+M[전역]|  
 |보기.도구상자|Ctrl+Alt+X[전역]|  
 |보기.코드보기|Enter[클래스 다이어그램]<br /><br /> 또는 F7[설정 디자이너]|  
 |보기.디자이너보기|Shift+F7[HTML 편집기 소스 뷰]|  

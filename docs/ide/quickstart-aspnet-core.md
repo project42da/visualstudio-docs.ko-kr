@@ -7,23 +7,25 @@ ms.suite:
 ms.technology: vs-acquisition
 ms.tgt_pltfrm: 
 ms.topic: quickstart
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 dev_langs:
 - CSharp
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 66017b65e3d1201e02272447cbd3ec1c33c8a5d6
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: ba3c6655401501edf1f71e04f2aa249a6a001dda
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 ASP.NET Core 웹앱 만들기
 
-Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개에서는 간단한 C # ASP.NET Core 웹 응용 프로그램을 만듭니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개에서는 간단한 C # ASP.NET Core 웹 응용 프로그램을 만듭니다.
+
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 
@@ -86,6 +88,5 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio에서 C# 및 ASP.NET 시작](tutorial-csharp-aspnet-core.md)  
-[Visual Studio를 사용하여 C# 및 Visual Basic 시작](getting-started-with-visual-csharp-and-visual-basic.md)  
-[ASP.NET Core에서 Razor 페이지 시작](/aspnet/core/tutorials/razor-pages/razor-pages-start)
+* [Visual Studio에서 C# 및 ASP.NET 시작](tutorial-csharp-aspnet-core.md)
+* [ASP.NET Core에서 Razor 페이지 시작](/aspnet/core/tutorials/razor-pages/razor-pages-start)

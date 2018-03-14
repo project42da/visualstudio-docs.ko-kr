@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -39,7 +40,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 1512b4774efea9639f01135932ad076f6630ea12
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -77,12 +79,12 @@ ms.lasthandoff: 01/10/2018
   
  <xref:Microsoft.Office.Tools.Excel.Workbook> 호스트 항목은 사용자 인터페이스가 있는 컨트롤의 컨테이너로 사용되지 않습니다. 대신 이 호스트 항목의 디자이너는 <xref:System.Data.DataSet>같은 구성 요소를 해당 디자인 화면에 끌어 놓을 수 있는 구성 요소 트레이 기능을 수행합니다. 자세한 내용은 [Workbook Host Item](../vsto/workbook-host-item.md)을 참조하십시오.  
   
- 호스트 항목은 문서 수준 프로젝트에서 프로그래밍 방식으로 만들 수 없습니다. 대신 디자인 타임에 Visual Studio가 프로젝트에서 자동으로 생성하는 `ThisDocument`, `ThisWorkbook`또는 `Sheet`*n* 클래스를 사용합니다. 이렇게 생성된 클래스는 호스트 항목에서 파생되어 코드에 대한 진입점을 제공합니다. 자세한 내용은 [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
+ 호스트 항목은 문서 수준 프로젝트에서 프로그래밍 방식으로 만들 수 없습니다. 대신 디자인 타임에 Visual Studio가 프로젝트에서 자동으로 생성하는 `ThisDocument`, `ThisWorkbook`또는 `Sheet`*n* 클래스를 사용합니다. 이렇게 생성된 클래스는 호스트 항목에서 파생되어 코드에 대한 진입점을 제공합니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
   
 ### <a name="understanding-host-items-in-vsto-add-in-projects"></a>VSTO 추가 기능 프로젝트의 호스트 항목 이해  
  VSTO 추가 기능을 만드는 경우 기본값으로 호스트 항목에 액세스하지 않아도 됩니다. 하지만 런타임에 Word 및 Excel VSTO 추가 기능에서 <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Tools.Excel.Workbook>및 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목을 생성할 수 있습니다.  
   
- 호스트 항목을 생성한 후 문서에 컨트롤 추가와 같은 작업을 수행할 수 있습니다. 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+ 호스트 항목을 생성한 후 문서에 컨트롤 추가와 같은 작업을 수행할 수 있습니다. 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
 ## <a name="host-controls"></a>호스트 컨트롤  
  호스트 컨트롤 Microsoft.Office.Interop.Word.ContentControl 등 Word 및 Excel 개체 모델의 다양 한 사용자 인터페이스 (UI) 개체를 확장 하 고 <xref:Microsoft.Office.Interop.Excel.Range> 개체입니다.  
@@ -127,7 +129,7 @@ ms.lasthandoff: 01/10/2018
   
 -   호스트 컨트롤을 **데이터 원본** 창에서 문서 및 워크시트로 끌어 놓습니다. 그러면 이미 데이터에 바인딩된 컨트롤을 추가할 수 있습니다. 자세한 내용은 참조 [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)합니다.  
   
- 또한 문서 수준 및 VSTO 추가 기능 프로젝트에서 런타임에 일부 호스트 컨트롤을 문서에 추가할 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 또한 문서 수준 및 VSTO 추가 기능 프로젝트에서 런타임에 일부 호스트 컨트롤을 문서에 추가할 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
  호스트 컨트롤을 문서에 추가하는 방법에 대한 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -158,7 +160,7 @@ ms.lasthandoff: 01/10/2018
   
  디자인 타임에 호스트 컨트롤을 문서에 추가하는 경우 런타임에 해당 컨트롤을 프로그래밍 방식으로 제거해서는 안 됩니다. 다음에 코드의 해당 컨트롤을 사용하려고 할 때 예외가 throw되기 때문입니다. 호스트 컨트롤의 `Delete` 메서드는 런타임에 문서에 추가된 호스트 컨트롤만 제거합니다. 디자인 타임에 만들어진 호스트 컨트롤의 `Delete` 메서드를 호출하는 경우 예외가 throw됩니다.  
   
- 예를 들어 프로그래밍 방식으로 호스트 컨트롤이 워크시트에 추가된 경우 <xref:Microsoft.Office.Tools.Excel.NamedRange.Delete%2A> 의 <xref:Microsoft.Office.Tools.Excel.NamedRange> 메서드만 성공적으로 <xref:Microsoft.Office.Tools.Excel.NamedRange> 를 삭제합니다. 이를 동적으로 호스트 컨트롤을 만든다고 합니다. 또한 동적으로 만들어진 호스트 컨트롤은 해당 컨트롤 이름을 `Remove` 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> 속성의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 메서드에 전달함으로써 제거할 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 예를 들어 프로그래밍 방식으로 호스트 컨트롤이 워크시트에 추가된 경우 <xref:Microsoft.Office.Tools.Excel.NamedRange.Delete%2A> 의 <xref:Microsoft.Office.Tools.Excel.NamedRange> 메서드만 성공적으로 <xref:Microsoft.Office.Tools.Excel.NamedRange> 를 삭제합니다. 이를 동적으로 호스트 컨트롤을 만든다고 합니다. 또한 동적으로 만들어진 호스트 컨트롤은 해당 컨트롤 이름을 `Remove` 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> 속성의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 메서드에 전달함으로써 제거할 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
  최종 사용자가 런타임에 문서에서 호스트 컨트롤을 삭제하는 경우 솔루션이 예기치 않은 방법으로 실패할 수 있습니다. Word 및 Excel의 문서 보호 기능을 사용하여 호스트 컨트롤이 삭제되지 않도록 보호할 수 있습니다. 자세한 내용은 [Office Development Samples and Walkthroughs](../vsto/office-development-samples-and-walkthroughs.md)을 참조하세요.  
   
@@ -172,7 +174,7 @@ ms.lasthandoff: 01/10/2018
 >  Excel에서 <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> 개체의 <xref:Microsoft.Office.Interop.Excel.Application> 속성을 **false**라는 Word 또는 Excel 개체 모델에 고유하게 존재하는 개체를 확장합니다. 이 속성을 **false** 로 설정하면 Excel에서 호스트 컨트롤의 이벤트를 비롯한 어떤 이벤트도 발생시킬 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
  [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   

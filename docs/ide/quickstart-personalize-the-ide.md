@@ -13,15 +13,17 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: e5195693a4ef2ba3aeec1f2d5751e56b70f19e57
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 7f6d1ebe9838102b383353ed8c7d4d9c15fadaf9
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>빠른 시작: Visual Studio IDE 및 편집기 개인 설정
 
 이 5~10분이 걸리는 빠른 시작에서는 텍스트 편집기에서 Visual Studio 색 테마 및 두 개의 텍스트 색을 사용자 지정합니다.
+
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
 ## <a name="set-the-color-theme"></a>색 테마 설정
 

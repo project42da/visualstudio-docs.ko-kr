@@ -12,15 +12,17 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 74ac22508ea00a59dc4b29806253b4a041994c54
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: 284c99c9e9c1ed2e84b05070bbf6d9991c025f94
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>빠른 시작: 프로젝트 및 솔루션
 
 10분 빠른 시작에서는 Visual Studio에서 솔루션 및 프로젝트 만들기를 살펴봅니다. 프로젝트의 속성 및 포함될 수 있는 일부 파일을 살펴봅니다. 또한 두 번째 프로젝트에 대한 참조를 만듭니다.
+
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
 > [!TIP]
 > 이 빠른 시작에서 프로젝트의 개념을 이해하는 교육 연습으로 솔루션 및 프로젝트를 처음부터 구성하겠습니다. 일반적으로 Visual Studio를 사용하는 경우 대부분 Visual Studio에서 새 프로젝트를 만들 때 제공하는 여러 프로젝트 템플릿을 사용합니다.

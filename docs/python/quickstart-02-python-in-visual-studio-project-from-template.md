@@ -2,7 +2,7 @@
 title: "빠른 시작: 템플릿을 사용하여 Visual Studio에서 Python 프로젝트 만들기 | Microsoft Docs"
 description: "기본 제공 템플릿 중 하나를 사용하여 Visual Studio 프로젝트를 만들어 Python을 빠르게 시작할 수 있습니다."
 ms.custom: 
-ms.date: 09/25/2017
+ms.date: 03/08/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 648c1e2b4ee3a5c9bc10d74ee384a08bc5ddce64
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 4ab0f91022240d1fcf60bd6889ea9b2ec39f2db3
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>빠른 시작: Visual Studio의 템플릿에서 Python 프로젝트 만들기
 
@@ -66,14 +66,14 @@ ms.lasthandoff: 02/23/2018
             output += "%04d" % (carry + (total / scale))
             carry = total % scale
 
-        return output;
+        return output
 
     def test_py():
-        digits = 1000;
+        digits = 1000
 
         start = perf_counter()
-        output = pi_digits_Python(digits);
-        elapsed = perf_counter() - start;
+        output = pi_digits_Python(digits)
+        elapsed = perf_counter() - start
 
         print("PI to " + str(digits) + " digits in " + str(int(elapsed * 10000)/10000) + " seconds:")
 
@@ -81,7 +81,7 @@ ms.lasthandoff: 02/23/2018
         print(output.replace("3", "3.", 1))
 
     if __name__ == "__main__":
-        test_py();
+        test_py()
     ```
 
 1. Ctrl+F5 키를 누르거나 메뉴에서 **디버그 > 디버깅하지 않고 시작**을 선택하여 프로그램을 실행합니다. 결과는 콘솔 창에 표시됩니다.

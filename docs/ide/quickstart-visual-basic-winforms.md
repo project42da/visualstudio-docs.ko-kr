@@ -17,10 +17,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: ecab13523c5d2ae362a58527f8c15ce1f26dd225
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="quickstart-create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>빠른 시작: Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱 만들기
 Visual Studio IDE(통합 개발 환경)에 대한 소개는 이 5~10분 분량으로 여기서 Windows 기반 UI(사용자 인터페이스)가 있는 간단한 Visual Basic 응용 프로그램을 만듭니다.

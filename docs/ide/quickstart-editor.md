@@ -14,15 +14,17 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 2bbdabf7d35c2705d028c84ddc6c6dc82f71ff48
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 082a89453d76ac70edfbd39681d33b6af2700cc7
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="quickstart-use-the-code-editor"></a>빠른 시작: 코드 편집기 사용
 
 편집기에 대한 이 10분 소개에서 코드를 파일에 추가하여 Visual Studio에서 코드를 보다 쉽게 작성, 탐색 및 이해하는 몇 가지 방법을 살펴봅니다.
+
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
 이 빠른 시작에서는 프로그래밍 언어에 이미 친숙하다고 가정합니다. 친숙하지 않은 경우에는 먼저 [Python](../ide/quickstart-python.md) 또는 [C#](../ide/tutorial-csharp-aspnet-core.md)으로 웹앱 만들기나 [Visual Basic](../ide/quickstart-visual-basic-console.md) 또는 [C++](../ide/quickstart-cpp.md)로 콘솔 앱 만들기에 대한 프로그래밍 빠른 시작 중 하나를 살펴보는 것이 좋습니다.
 
@@ -94,7 +96,7 @@ Visual Studio에서는 일반적으로 사용되는 코드 블록을 쉽고 빠�
 
 ## <a name="collapsing-code-blocks"></a>코드 블록 축소
 
-코드의 보기를 정리하도록 생성된 `Class1`에 대한 빈 생성자를 표시하지 않으려면 축소할 수 있습니다. 생성자의 첫 번째 줄 여백에 있는 작은 회색 상자 안에 빼기 기호를 선택합니다. 또는 키보드 사용자인 경우 생성자 코드의 아무 곳에 커서를 두고 **Ctrl**+**M**, **Ctrl**+**M**을 누릅니다.
+코드의 보기를 정리하도록 생성된 `Class1`에 대한 빈 생성자를 표시하지 않으려면 축소할 수 있습니다. 생성자의 첫 번째 줄 여백에 있는 작은 회색 상자 안에 빼기 기호를 선택합니다. 또는 키보드 사용자인 경우 생성자 코드의 아무 곳에 커서를 두고 **Ctrl**+**M**, **Ctrl**+**M** 키를 누릅니다.
 
 ![축소 단추 개요](media/quickstart-collapse.png)
 
