@@ -41,16 +41,16 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: e5873276795477778e4c358d59788248230bb4b5
-ms.sourcegitcommit: 062795f922e7b59fe00d3d95a01a9a8a28840017
+ms.openlocfilehash: 95c6f87e120cd8a62aa3959548f968b70c820d39
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/24/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 중단점을 사용 합니다.
 예를 들어 코드 변수의 상태를 확인하거나 호출 스택을 검토하기 위해 디버거 실행을 중지하려는 경우 중단점을 설정할 수 있습니다. 개발자 도구 상자에 가장 중요한 디버깅 기술 중 하나가 있습니다.  
   
-##  <a name="BKMK_Overview"></a>소스 코드에서 줄 중단점을 설정합니다.  
+##  <a name="BKMK_Overview"></a> 소스 코드에서 줄 중단점을 설정합니다.  
  소스 코드 파일의 왼쪽된 여백을 클릭 하 여 또는 코드의 줄에 커서를 배치 하 고 F9 키를 눌러 소스 코드에서 줄 중단점을 설정 합니다. 중단점이 왼쪽 여백에 빨간 점으로 나타나고 코드 줄도 색이 지정됩니다.  
   
  ![중단점을 설정](../debugger/media/basicbreakpoint.png "BasicBreakpoint")  
@@ -65,7 +65,30 @@ ms.lasthandoff: 01/24/2018
   
  실행 코드의 임의의 줄에서 중단점을 설정할 수 있습니다. 예를 들어 위의 C# 코드에서 변수 선언이나 `for` 루프 또는 `for` 루프 내의 모든 코드에서 중단점을 설정할 수 있지만 네임스페이스, 클래스 선언 또는 메서드 서명에서는 중단점을 설정할 수 없습니다.  
   
-##  <a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> 다른 종류의 중단점 설정  
+##  <a name="BKMK_Set_a_breakpoint_in_a_source_file"></a> 함수 중단점 설정  
+  함수가 호출 될 때 실행을 중단할 수 있습니다.
+  
+1. 열기는 **중단점** 창을 선택 하 고 **새로 만들기 > 함수 중단점**합니다.
+
+2. 함수 이름 입력는 **함수 이름** 상자입니다. 
+
+   범위를 좁히려면 함수 사양:
+   
+   정규화 된 함수 이름을 사용 합니다. 
+   예: Namespace1.ClassX.MethodA()
+   
+   매개 변수 형식의 오버 로드 된 함수를 추가 합니다. 
+   예: 여 MethodA (int, string)
+   
+   사용 하는 '!' 기호 모듈을 지정 합니다.
+   예: App1.dll! 여 MethodA
+   
+   네이티브 c + +에서 컨텍스트 연산자를 사용 합니다.
+   {함수, [module]을 (를) [+&lt;메서드의 시작 로부터의 오프셋&gt;] 예: {여 MethodA, App1.dll}+2
+
+3. 에 **언어** 드롭다운에서 함수에서 중단 하려는 특정 언어를 선택 합니다.
+  
+##  <a name="BKMK_Set_a_breakpoint_in_a_function"></a> 다른 종류의 중단점 설정  
  호출 스택, 디스어셈블리 창 및 네이티브 C++ 코드에서 데이터 조건 또는 메모리 주소에 중단점을 설정할 수도 있습니다.  
   
 ## <a name="BKMK_Set_a_breakpoint_in_the_call_stack_window"></a> 호출 스택 창에서 중단점 설정  
@@ -213,7 +236,7 @@ ms.lasthandoff: 01/24/2018
 ##  <a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a> 중단점 작업 및 추적점  
  추적점은 출력 창에 메시지를 인쇄하는 중단점입니다. 추적점은 프로그래밍 언어의 임시 추적 문처럼 작동할 수 있습니다.  
   
- **중단점 설정** 창에서 **작업** 상자를 선택합니다. **작업** 그룹에서 **출력 창에 메시지 기록** 을 선택합니다. **테스트입니다**와 같은 일반 문자열을 인쇄할 수 있습니다. 변수의 값 또는 식을 포함하려면 중괄호로 묶습니다.  
+ **중단점 설정** 창에서 **작업** 상자를 선택합니다. **작업** 그룹에서 **출력 창에 메시지 기록** 을 선택합니다. **테스트입니다**와 같은 일반 문자열을 인쇄할 수 있습니다. 변수의 값 또는 식을 포함하려면 중괄호로 묶습니다.  형식 지정자를 사용할 수도 있습니다 ([C#](../debugger/format-specifiers-in-csharp.md) 및 [c + +](../debugger/format-specifiers-in-cpp.md)) 추적점에 포함 된 값에 대 한 합니다.
   
  추적점이 적중될 때 실행을 중단하려면 **계속 실행** 확인란을 선택 취소합니다. **계속 실행** 을 선택하면 실행이 중단되지 않습니다. 두 경우 모두 메시지가 인쇄됩니다.  
   

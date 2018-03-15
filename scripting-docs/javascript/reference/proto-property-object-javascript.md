@@ -20,14 +20,17 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: e38669c400acba6f4ed3c4ee3fb5836c31b1bc00
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: f8659c7a4ece5e30378838f20341ec6712f77ca3
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="proto-property-object-javascript"></a>__proto__ 속성 (Object) (JavaScript)
 지정된 된 개체의 내부 프로토타입에 대 한 참조를 포함합니다.  
+
+> [!WARNING]
+> `__proto__` 속성은 레거시 기능입니다. 사용 하 여 [Object.getPrototypeOf](../reference/object-getprototypeof-function-javascript.md) 대신 합니다.
   
 ## <a name="syntax"></a>구문  
   
@@ -37,7 +40,7 @@ object.__proto__
   
 #### <a name="parameters"></a>매개 변수  
  `object`  
- 필수 요소. 프로토타입을 설정 하는 개체입니다.  
+ 필수. 프로토타입을 설정 하는 개체입니다.  
   
 ## <a name="remarks"></a>설명  
  `__proto__` 개체의 프로토타입을 설정 하 여 속성을 사용할 수 있습니다.  
@@ -49,7 +52,7 @@ object.__proto__
 > [!NOTE]
 >  `__proto__` 속성 이름 시작 되 고 두 개의 밑줄로 끝나는 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 개체의 프로토타입을 설정하는 방법을 보여 줍니다.  
   
 ```JavaScript  
@@ -65,7 +68,7 @@ if (console && console.log) {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 프로토타입에 속성을 추가하여 개체에 속성을 추가하는 방법을 보여 줍니다.  
   
 ```JavaScript  
@@ -84,7 +87,7 @@ if (console && console.log) {
 }  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 새 프로토타입을 설정하여 `String` 개체에 속성을 추가합니다.  
   
 ```JavaScript  

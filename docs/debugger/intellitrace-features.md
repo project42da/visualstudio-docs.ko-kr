@@ -26,11 +26,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 273f7f94127929a3939d21414bd8da5c12abc83e
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 01515701b6aeecc1166551c6376bfd6823e73976
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="intellitrace-features"></a>IntelliTrace 기능
 
@@ -55,7 +55,7 @@ IntelliTrace가 켜져 있는지를 확인 하려면 열에서 **도구 > 옵션
 
 기본적으로 사용 되지 않으며이 있지만 IntelliTrace 수 모든 중단점 및 디버거 단계 이벤트에서 응용 프로그램의 스냅숏을 캡처하고 기록 디버깅 세션에서 이러한 스냅숏을 볼 수 있습니다. 스냅숏 전체 응용 프로그램 상태 보기를 제공 합니다. 스냅숏의 캡처를 사용 하도록 설정 하려면로 이동 **도구 > 옵션 > IntelliTrace > 일반**를 선택 하 고 **IntelliTrace 이벤트 및 스냅숏**합니다. 자세한 내용은 참조 [IntelliTrace 단계 백을 사용 하 여 스냅숏 보기](../debugger/how-to-use-intellitrace-step-back.md)
 
-Visual Studio Enterprise 2017 15.5 이상 버전에서에서 사용할 수 있는 스냅숏이 및 Windows 10 Anniversary 업데이트 필요 이상.  스냅숏은.NET Core 및 ASP.NET Core 응용 프로그램의 현재 사용할 수 없습니다.
+Visual Studio Enterprise 2017 15.5 이상 버전에서에서 사용할 수 있는 스냅숏이 및 Windows 10 Anniversary 업데이트 필요 이상.  .NET Core 및 ASP.NET Core 응용 프로그램에 대 한 Visual Studio Enterprise 2017 버전 15.7 미리 보기 1가 필요 합니다.
 
 ## <a name="GoingFurther"></a> IntelliTrace 이벤트 및 호출 정보 수집
 

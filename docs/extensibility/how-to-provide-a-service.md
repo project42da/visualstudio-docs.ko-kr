@@ -17,16 +17,16 @@ ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
-ms.openlocfilehash: ccc9b014a3d31fef4e3f491da394cdf1e9fb3ecb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d2a38a2c0830b701796b8417c69a75582c5b2f89
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-provide-a-service"></a>방법: 서비스 제공
 VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 수 있습니다. 서비스를 제공 하려면 VSPackage는 Visual Studio와 함께 서비스를 등록 하 고 서비스를 추가 해야 합니다.  
   
- <xref:Microsoft.VisualStudio.Shell.Package> 클래스 둘 다 구현 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 및 <xref:System.ComponentModel.Design.IServiceContainer>합니다. <xref:System.ComponentModel.Design.IServiceContainer>필요에 따라 서비스를 제공 하는 콜백 메서드를 포함 합니다.  
+ <xref:Microsoft.VisualStudio.Shell.Package> 클래스 둘 다 구현 <xref:Microsoft.VisualStudio.OLE.Interop.IServiceProvider> 및 <xref:System.ComponentModel.Design.IServiceContainer>합니다. <xref:System.ComponentModel.Design.IServiceContainer> 필요에 따라 서비스를 제공 하는 콜백 메서드를 포함 합니다.  
   
  서비스에 대 한 자세한 내용은 참조 [서비스 Essentials](../extensibility/internals/service-essentials.md) 합니다.  
   
@@ -35,7 +35,7 @@ VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 
   
 #### <a name="implementing-a-service"></a>서비스 구현  
   
-1.  VSIX 프로젝트를 만듭니다 (**파일 > 새로 만들기 > 프로젝트 > Visual C# > Extensiblity > VSIX 프로젝트**).  
+1.  VSIX 프로젝트를 만듭니다 (**파일 > 새로 만들기 > 프로젝트 > Visual C# > 확장성 > VSIX 프로젝트**).  
   
 2.  VSPackage 프로젝트에 추가 합니다. 프로젝트 노드를 선택는 **솔루션 탐색기** 클릭 **추가 > 새 항목 > Visual C# 항목 > 확장성 > Visual Studio 패키지**합니다.  
   
@@ -117,7 +117,7 @@ VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 
     private object CreateService(IServiceContainer container, Type serviceType)  
     {  
         if (typeof(SMyService) == serviceType)  
-            return new SMyService(this);  
+            return new MyService(this);  
         return null;  
     }  
     ```  
@@ -125,7 +125,7 @@ VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 
     > [!NOTE]
     >  Visual Studio 서비스를 제공 하는 요청을 거부할 수 있습니다. 이 작업을 수행 다른 VSPackage에서 서비스를 이미 제공 하는 경우.  
   
-3.  이제 서비스를 가져오고 해당 메서드를 사용 하 여 수 있습니다. 이 이니셜라이저의 보여 주 겠지만 있지만 서비스를 사용 하려는 서비스 위치를 가져올 수 있습니다.  
+3.  이제 서비스를 가져오고 해당 메서드를 사용 하 여 수 있습니다. 다음 예제에서는 서비스를 사용 하는 이니셜라이저의 보여주지만 서비스를 사용 하려는 서비스 위치를 가져올 수 있습니다.  
   
     ```csharp  
     protected override void Initialize()  
@@ -136,7 +136,7 @@ VSPackage는 다른 Vspackage에서 사용할 수 있는 서비스를 제공할 
   
         MyService myService = (MyService) this.GetService(typeof(SMyService));  
         myService.Hello();  
-        string helloString = myService.myString;  
+        string helloString = myService.Goodbye();  
   
         base.Initialize();  
     }  

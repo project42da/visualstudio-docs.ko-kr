@@ -34,16 +34,16 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 11be1eb546902e8e37843383fe499274f819883f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5b7efb90e6f2a2489fffb890c664393252021e6f
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서의 c + +에서 형식 지정자
 형식 지정자를 사용하여 **조사식** 창에 값이 표시되는 형식을 변경할 수 있습니다.  
   
- 또한 **직접 실행** 창, **명령** 창 및 소스 창에서도 형식 지정자를 사용할 수 있습니다. 이러한 창에서 식을 일시 중지하면 결과가 DataTip에 나타납니다. DataTip 표시는 형식 지정자를 반영합니다.  
+ 형식 지정자를 사용할 수도 있습니다는 **직접 실행** 창은 **명령** 창, [추적점](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints), 및 소스 창 에서도 합니다. 이러한 창에서 식을 일시 중지 하면 결과가 DataTip에 나타납니다. DataTip 표시는 형식 지정자를 반영합니다.  
   
 > [!NOTE]
 >  Visual Studio 네이티브 디버거가 새로운 디버깅 엔진으로 변경 하는 경우 추가 된 몇 가지 새로운 형식 지정자 및 일부 이전 구성을 제거 되었습니다. C++/CLI를 사용하여 interop(혼합 네이티브 및 관리) 디버깅을 수행할 때 이전 디버거가 계속 사용됩니다. 이 항목의 다음 섹션에서는 각 디버그 엔진에 대한 형식 지정자를 보여 줍니다.
@@ -62,7 +62,7 @@ int main() {
 }  
 ```  
   
- 추가 `my_var1` 변수를 **조사식** 창 (디버깅 하는 동안 **디버그 > Windows > 조사식 > 조사식 1**)는 표시를 16 진수로 설정 (에 **시청**창에서 변수를 마우스 오른쪽 단추로 클릭 하 고 선택 **16 진수 표시**). 이제는 조사식 창에서 변수의 값이 0x0065로 표시됩니다. 정수 대신 문자로 표현된 이 값을 보려면 이름 열에서 변수 이름 뒤에 문자 형식 지정자 **, c**를 추가합니다. 이제 **값** 열에 **101 'e'**가 표시됩니다.  
+ 추가 `my_var1` 변수를 **조사식** 창 (디버깅 하는 동안 **디버그 > Windows > 조사식 > 조사식 1**), 표시를 16 진수로 설정 합니다 (에 **시청**창에서 변수를 마우스 오른쪽 단추로 클릭 하 고 선택 **16 진수 표시**). 이제는 조사식 창에서 변수의 값이 0x0065로 표시됩니다. 정수 대신 문자로 표현된 이 값을 보려면 이름 열에서 변수 이름 뒤에 문자 형식 지정자 **, c**를 추가합니다. 이제 **값** 열에 **101 'e'**가 표시됩니다.  
   
  ![WatchFormatCPlus1](../debugger/media/watchformatcplus1.png "WatchFormatCPlus1")  
   
@@ -83,12 +83,12 @@ int main() {
 |su|유니코드 (utf-16 인코딩) 문자열|\<위치 > L "hello world"|L"hello world"<br /><br /> u"hello world"|  
 |sub|유니코드 (utf-16 인코딩) 문자열 (인용 부호 제외)|\<위치 > L "hello world"|hello world|  
 |bstr|BSTR 문자열|\<위치 > L "hello world"|L"hello world"|  
-|env|환경 블록 (이중 null 종료 문자열)|\<위치 > L "=:: =::\\\\"|L "=:: =::\\\\\\0 = C: = C:\\\\windows\\\\system32\\0ALLUSERSPROFILE =...|
+|env|환경 블록 (이중 null 종료 문자열)|\<위치 > L "=:: =::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
 |**s32**|UTF-32 문자열|\<위치 > U "hello world"|u"hello world"|  
 |**s32b**|UTF-32 문자열(따옴표 제외)|\<위치 > U "hello world"|hello world|  
 |**en**|enum|Saturday(6)|토요일|  
-|**hv**|포인터 유형 - 검사 중인 포인터 값이 배열의 힙 할당 결과임을 나타냅니다(예: `new int[3]`).|\<위치 > {\<첫 번째 멤버 >}|\<위치 > {\<첫 번째 멤버 >, \<두 번째 멤버 >, …}|  
-|**na**|개체에 대한 포인터의 메모리 주소를 표시하지 않습니다.|\<위치 >, {멤버 = value …}|{멤버 = value …}|  
+|**hv**|포인터 유형 - 검사 중인 포인터 값이 배열의 힙 할당 결과임을 나타냅니다(예: `new int[3]`).|\<location>{\<first member>}|\<위치 > {\<첫 번째 멤버 >, \<두 번째 멤버 >, …}|  
+|**na**|개체에 대한 포인터의 메모리 주소를 표시하지 않습니다.|\<location>, {member=value...}|{멤버 = value …}|  
 |**nd**|파생된 클래스는 무시하고 기본 클래스 정보만 표시합니다.|`(Shape*) square` 에는 기본 클래스 및 파생 클래스 정보가 포함됩니다.|기본 클래스 정보만 표시합니다.|  
 |hr|HRESULT 또는 Win32 오류 코드. 이제 디버거가 자동으로 HRESULT를 디코딩하므로 해당 경우에는 이 지정자가 필요하지 않습니다.|S_OK|S_OK|  
 |wc|Window 클래스 플래그|0x0010|WC_DEFAULTCHAR|  
@@ -120,11 +120,11 @@ int main() {
 |**f**|부호 있는 부동 소수점|(3./2.), f|1.500000|  
 |**e**|부호 있는 과학적 표기법|(3.0/2.0)|1.500000e+000|  
 |**g**|부호 있는 부동 소수점 또는 부호 있는 과학적 표기법 중에서 짧은 형식|(3.0/2.0)|1.5|  
-|c|단일 문자|\<위치 >|101 'e'|  
-|s|const char*|\<위치 >|"hello world"|  
-|su|const wchar_t*<br /><br /> char16_t const\*|\<위치 >|L"hello world"|  
-|sub|const wchar_t*<br /><br /> char16_t const\*|\<위치 >|hello world|  
-|s8|const char*|\<위치 >|"hello world"|  
+|c|단일 문자|\<location>|101 'e'|  
+|s|const char*|\<location>|"hello world"|  
+|su|const wchar_t*<br /><br /> char16_t const\*|\<location>|L"hello world"|  
+|sub|const wchar_t*<br /><br /> char16_t const\*|\<location>|hello world|  
+|s8|const char*|\<location>|"hello world"|  
 |hr|HRESULT 또는 Win32 오류 코드. 이제 디버거가 자동으로 HRESULT를 디코딩하므로 해당 경우에는 이 지정자가 필요하지 않습니다.|S_OK|S_OK|  
 |wc|Window 클래스 플래그|0x00000040,|WC_DEFAULTCHAR|  
 |wm|Windows 메시지 번호|0x0010|WM_CLOSE|  
@@ -143,7 +143,7 @@ int main() {
 |**mq**|쿼드워드 2개|0x0012ffac|0x0012ffac 7ffdf00000000000 5f441a790012fdd4|  
 |**mu**|2바이트 유니코드 문자|0x0012ffac|0x0012ffac 8478 77f4 ffff ffff 0000 0000 0000 0000|  
   
-###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a>C + interop 디버깅에서 배열로 사용 되는 포인터에 대 한 크기 지정자 + CLI  
+###  <a name="BKMK_Size_specifier_for_pointers_as_arrays_in_interop_debugging_and_C___edit_and_continue"></a> C + interop 디버깅에서 배열로 사용 되는 포인터에 대 한 크기 지정자 + CLI  
  배열로 표시할 개체에 대한 포인터가 있는 경우 다음과 같이 정수를 사용하여 배열 요소의 수를 지정할 수 있습니다.  
   
 |지정자|형식|식|표시되는 값|  

@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -12,16 +13,17 @@ helpviewer_keywords:
 - menu items, adding dynamically
 - menus, adding dynamic items
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
-caps.latest.revision: "37"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1eaa8cc41e7b27d509e68d6785c34a9ae214ffd3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8c7a803933b3b1e6d353b9899cb8997dbaa6897e
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="dynamically-adding-menu-items"></a>동적으로 메뉴 항목 추가
 지정 하 여 런타임에 메뉴 항목을 추가할 수는 `DynamicItemStart` 표시 및 처리 명령에 항목을 코드에서 메뉴의 번호를 정의 하는 다음 Visual Studio 명령 테이블 (.vsct) 파일에 있는 자리 표시자 단추 정의에서 플래그를 명령입니다. VSPackage 로드 될 때 자리 표시자 동적 메뉴 항목으로 바뀝니다.  
@@ -43,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
 -   그룹, 메뉴 컨트롤러 포함 된 및의 드롭다운 메뉴 항목을 포함 하는 다른 두 개의 명령  
   
--   형식의 메뉴 요소`MenuController`  
+-   형식의 메뉴 요소 `MenuController`  
   
 -   두 개의 단추, 아이콘 및 도구 모음에서 도구를 제공 하는 메뉴 항목과 다른에 대 한 자리 표시자 역할을 하는 하나입니다.  
   
@@ -209,7 +211,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="adding-the-command"></a>명령 추가  
  DynamicMenu 생성자는 메뉴 명령, 동적 메뉴 및 메뉴 항목을 포함 하 여 설정할 수 있습니다.  
   
-1.  DynamicMenuPackageGuids.cs, 명령 집합의 GUID 및 명령 ID를 추가 합니다.  
+1.  DynamicMenuPackage.cs, 명령 집합의 GUID 및 명령 ID를 추가 합니다.  
   
     ```csharp  
     public const string guidDynamicMenuPackageCmdSet = "00000000-0000-0000-0000-00000000";  // get the GUID from the .vsct file  
@@ -342,7 +344,7 @@ ms.lasthandoff: 12/22/2017
 [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)]  
 [ProvideMenuResource("Menus.ctmenu", 1)]  
 [ProvideAutoLoad(UIContextGuids.SolutionHasMultipleProjects)]  
-[Guid(DynamicMenuPackageGuids.PackageGuidString)]  
+[Guid(DynamicMenuPackage.PackageGuidString)]  
 public sealed class DynamicMenuItemsPackage : Package  
 {}  
 ```  

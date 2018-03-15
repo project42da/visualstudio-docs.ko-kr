@@ -22,11 +22,11 @@ caps.latest.revision:
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: c79c69e6c447b14e61fa67ccb8600d5d83bebd2b
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: a9ff8c7942c773d138dd599956c41d1e583e6288
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="typeof-operator-javascript"></a>typeof 연산자(JavaScript)
 식의 데이터 형식을 식별하는 문자열을 반환합니다.  
@@ -41,11 +41,13 @@ typeof[(]expression[)] ;
 ## <a name="remarks"></a>설명  
  *식* 인수는 형식에 대 한 정보를 찾는 식입니다.  
   
- `typeof` 연산자는 문자열 형식 정보를 반환 합니다. 6 개의 가능한 값 하는 `typeof` 반환: "number" "문자열" "부울," "개체" "function" 및 "undefined"입니다.  
+ `typeof` 연산자는 문자열 형식 정보를 반환 합니다. 7 개의 가능한 값 하는 `typeof` 반환: "number" "문자열" "부울", "개체" "작동" "undefined"을 "unknown"입니다.  
   
  괄호는에서 선택적 요소는 `typeof` 구문입니다.  
+
+ 개체는 XMLHTTPRequest에서 알 수 없는 형식으로 반환할 수 있습니다. 알 수 없는 형식으로 포함 된 javascript에서 없는 아날로그 COM 개체를 반환할 수도 있습니다.
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 데이터 형식의 변수를 테스트합니다.  
   
 ```JavaScript  
@@ -58,7 +60,7 @@ var result = (typeof description === 'string');
 // Output: true  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는의 데이터 형식에 대 한 테스트 `undefined` 선언 및 선언 되지 않은 변수에 대 한 합니다.  
   
 ```JavaScript  

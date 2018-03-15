@@ -13,11 +13,11 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: a55b2a12c9a45c5a3952e3e6f4e1627bec8ba520
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 37963e1ee5b7eeb0d07c36e0abe42c98eb6436fe
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 1. 에 **솔루션 탐색기**프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시** (Web Forms에 대 한 **웹 응용 프로그램 게시**).
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 10/27/2017
 5. ASP.NET 응용 프로그램에 대해 구성 된 로컬 디렉터리에 Visual Studio 컴퓨터에서 ASP.NET 프로젝트 디렉터리를 복사 (이 예제에서는 **C:\Publish**) Windows Server 컴퓨터에 있습니다. 이 자습서에서는 수동으로 복사 하는 PowerShell, Xcopy 또는 Robocopy와 같은 다른 도구를 사용할 수 있지만 가정 합니다.
 
     > [!CAUTION]
-    >  변경 하려면 코드 또는 다시 작성 해야 할 경우에 다시 게시 하 고이 단계를 반복 해야 합니다. 원격 컴퓨터에 복사한 실행 파일은 로컬 소스 및 기호와 정확히 일치해야 합니다.
+    >  변경 하려면 코드 또는 다시 작성 해야 할 경우에 다시 게시 하 고이 단계를 반복 해야 합니다. 원격 컴퓨터에 복사한 실행 파일은 로컬 소스 및 기호와 정확히 일치해야 합니다.    받습니다이 수행 하지 않으면 경우는 `cannot find or open the PDB file` 프로세스를 디버깅 하려고 할 때 Visual Studio에서 경고 합니다.
 
 6. Windows Server에서 있습니다 실행할 수 있는지 확인 앱 올바르게 브라우저에서 앱을 열어 합니다.
 

@@ -14,11 +14,11 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8808fca81da991727fa439aae10d0e3541e81389
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2520d0b7b5aba982f3e9ca228ad6de85f6890d7f
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="code-generation-in-a-build-process"></a>빌드 프로세스의 코드 생성
 [텍스트 변환](../modeling/code-generation-and-t4-text-templates.md) 의 일환으로 호출할 수는 [빌드 프로세스](http://msdn.microsoft.com/Library/a971b0f9-7c28-479d-a37b-8fd7e27ef692) 의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션입니다. 이는 텍스트 변형에 대해 특수화된 빌드 작업입니다. T4 빌드 작업은 디자인 타임 텍스트 템플릿을 실행하고 전처리된 런타임 텍스트 템플릿을 컴파일합니다.  
@@ -27,7 +27,7 @@ ms.lasthandoff: 02/09/2018
   
  이 MSBuild에서 텍스트 템플릿을 작성할 때 같은 방식으로 프로젝트 파일 이름과 같은 항목을 액세스할 수 없음을 의미 합니다. 하지만 [텍스트 템플릿 및 명령 프로세서에 빌드 매개 변수를 사용 하 여 환경 정보를 전달할](#parameters)합니다.  
   
-##  <a name="buildserver"></a>컴퓨터 구성  
+##  <a name="buildserver"></a> 컴퓨터 구성  
  개발 컴퓨터에서 빌드 작업을 사용 하도록 설정 하려면 Visual Studio에 대 한 Modeling SDK를 설치 합니다.
  
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/09/2018
   
  읽기 전용 파일을 덮어쓰도록 지정하려면 다음 속성을 삽입합니다.  
   
- `<OverwriteReadOnlyOuputFiles>true</OverwriteReadOnlyOuputFiles>`  
+ `<OverwriteReadOnlyOutputFiles>true</OverwriteReadOnlyOuputFiles>`  
   
  후처리 단계를 사용자 지정하지 않는 한 파일을 덮어쓸 때 경고가 오류 목록에 기록됩니다.  
   
@@ -208,7 +208,7 @@ $(IncludeFolders);$(MSBuildProjectDirectory)\Include;AnotherFolder;And\Another</
   
 ```  
   
-##  <a name="parameters"></a>템플릿으로 빌드 컨텍스트 데이터 전달  
+##  <a name="parameters"></a> 템플릿으로 빌드 컨텍스트 데이터 전달  
  프로젝트 파일에서 매개 변수 값을 설정할 수 있습니다. 예를 들어 전달할 수 있습니다 [빌드](../msbuild/msbuild-properties.md) 속성 및 [환경 변수](../msbuild/how-to-use-environment-variables-in-a-build.md):  
   
 ```xml  
@@ -242,7 +242,7 @@ Dim value = Host.ResolveParameterValue("-", "-", "parameterName")
 > [!NOTE]
 >  MSBuild를 사용하는 경우에만 `ResolveParameterValue`이 `T4ParameterValues`에서 데이터를 가져옵니다. Visual Studio를 사용하여 템플릿을 변형하는 경우 매개 변수에 기본값이 사용됩니다.  
   
-##  <a name="msbuild"></a>프로젝트 속성을 사용 하 여 어셈블리에 및 include 지시문  
+##  <a name="msbuild"></a> 프로젝트 속성을 사용 하 여 어셈블리에 및 include 지시문  
  $ (Solutiondir)과 같은 visual Studio 매크로 MSBuild에서 작동 하지 않습니다. 대신 적절한 프로젝트 속성을 사용할 수 있습니다.  
   
  프로젝트 속성을 정의하기 위해 .csproj 또는 .vbproj 파일을 편집합니다. 이 예제에서는 `myLibFolder`라는 속성을 정의합니다.  

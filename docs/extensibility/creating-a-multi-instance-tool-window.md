@@ -4,23 +4,25 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-sdk
+ms.technology:
+- vs-ide-sdk
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
 - multi
 - tool windows
 ms.assetid: 4a7872f1-acc9-4f43-8932-5a526b36adea
-caps.latest.revision: "12"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0cb73a5e5f40d21a5b17faae9602e40f7cd39d48
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: e13fb299d513f045c4c7c339a9c6602890079e40
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="creating-a-multi-instance-tool-window"></a>다중 인스턴스 도구 창 만들기
 여러 인스턴스를 동시에 열릴 수 있도록 도구 창을 프로그래밍할 수 있습니다. 기본적으로 도구 창을 열고 하나의 인스턴스만을 가질 수 있습니다.  
@@ -36,14 +38,14 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="making-a-tool-window-multi-instance"></a>도구 창 다중 인스턴스 만들기  
   
-1.  열기는 **MIToolWindowPackage.cs** 파일을 찾을 `ProvideToolWindow` 특성입니다. 및 `MultiInstances=true` 매개 변수를 다음 예제와 같이 합니다.  
+1.  열기는 **MIToolWindowPackage.cs** 파일을 찾을 `ProvideToolWindow` 특성입니다. 및 `MultiInstances=true` 다음 예제와 같이 매개 변수:  
   
     ```csharp  
     [PackageRegistration(UseManagedResourcesOnly = true)]  
         [InstalledProductRegistration("#110", "#112", "1.0", IconResourceID = 400)] // Info on this package for Help/About  
         [ProvideMenuResource("Menus.ctmenu", 1)]  
         [ProvideToolWindow(typeof(MultiInstanceToolWindow.MIToolWindow), MultiInstances = true)]  
-        [Guid(MIToolWindowPackageGuids.PackageGuidString)]  
+        [Guid(MIToolWindowPackage.PackageGuidString)]  
         public sealed class MIToolWindowPackage : Package  
     {. . .}  
     ```  
@@ -52,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  도구 창의 인스턴스를 만들려면 호출는 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 메서드 집합과 해당 `id` 하는 사용 가능한 값 및 해당 `create` 플래그를 `true`합니다.  
   
-     기본적으로 값은 `id` 의 매개 변수는 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 방법은 `0`합니다. 이 단일 인스턴스 도구 창을으로 열립니다. 둘 이상의 인스턴스를 호스팅할 수에 대 한 모든 인스턴스에 자체 고유 해야 `id`합니다.  
+     기본적으로 값은 `id` 의 매개 변수는 <xref:Microsoft.VisualStudio.Shell.Package.FindToolWindow%2A> 방법은 `0`합니다. 이 값이 단일 인스턴스 도구 창을으로 열립니다. 둘 이상의 인스턴스를 호스팅할 수에 대 한 모든 인스턴스에 자체 고유 해야 `id`합니다.  
   
 4.  호출는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.Show%2A> 에서 메서드는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame> 에서 반환 되는 개체는 <xref:Microsoft.VisualStudio.Shell.ToolWindowPane.Frame%2A> 도구 창 인스턴스의 속성입니다.  
   

@@ -14,18 +14,18 @@ helpviewer_keywords:
 ms.assetid: 553d5e07-3e19-4aba-b490-6c7dd05fd82e
 caps.latest.revision: 
 manager: douge
-ms.openlocfilehash: 0465057549543d8e07742e3b3806ebdcab28eb28
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 144410e0e9b5b8d5d40fee86a1573bd179aea44a
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="menucommands-vs-olemenucommands"></a>MenuCommand 및 OleMenuCommand
 <xref:System.ComponentModel.Design.MenuCommand> 또는 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 개체에서 파생하고 적절한 이벤트 처리기를 구현하여 메뉴 명령을 만들 수 있습니다. 대부분의 경우 <xref:System.ComponentModel.Design.MenuCommand>를 VSPackage 프로젝트 템플릿으로 사용할 수 있지만 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand>를 사용해야 할 때가 있습니다.  
   
  사용자가 VSPackage를 사용하려면 IDE에서 VSPackage를 사용할 수 있는 명령이 표시되어야 하고 사용하도록 설정되어야 합니다. Visual Studio Package 프로젝트 템플릿을 사용하여 .vsct 파일에서 명령이 만들어지면 기본적으로 표시되고 사용하도록 설정됩니다. `DynamicItemStart`등의 일부 명령 플래그를 설정하면 기본 동작을 변경할 수 있습니다. 표시 여부, 사용 설정 상태 및 명령의 기타 속성은 명령과 관련된 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 개체에 액세스하여 런타임 시 코드에서 변경할 수도 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
   
 ## <a name="template-locations-for-the-visual-studio-package-template"></a>Visual Studio 패키지 템플릿의 템플릿 위치  
@@ -190,9 +190,9 @@ ms.lasthandoff: 02/09/2018
   
     |MenuCommand 속성|OLECMDF 플래그|  
     |--------------------------|------------------|  
-    |<xref:System.ComponentModel.Design.MenuCommand.Checked%2A> = `true`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
-    |<xref:System.ComponentModel.Design.MenuCommand.Visible%2A> = `false`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
-    |<xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> = `true`|<xref:Microsoft.VisualStudio.OLE.Interop.OLECMDF>|  
+    |<xref:System.ComponentModel.Design.MenuCommand.Checked%2A> = `true`|OLECMDF_LATCHED|  
+    |<xref:System.ComponentModel.Design.MenuCommand.Visible%2A> = `false`|OLECMDF_INVISIBLE|  
+    |<xref:System.ComponentModel.Design.MenuCommand.Enabled%2A> = `true`|OLECMDF_ENABLED|  
   
      메뉴 명령의 텍스트를 변경하려면 다음 예제와 같이 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand.Text%2A> 개체에 대해 <xref:Microsoft.VisualStudio.Shell.OleMenuCommand> 속성을 사용합니다.  
   
@@ -238,7 +238,7 @@ ms.lasthandoff: 02/09/2018
   
     -   명령이 바로 가기 메뉴의 일부이고 기본적으로 숨겨져 있는 경우:  
   
-         `prgCmds[0] cmdf |= OLECMDF_DEFHIDEONCTXMENU`  
+         `prgCmds[0] cmdf |= OLECMDF_DEFHIDEONCTXTMENU`  
   
     -   명령에서 `TEXTCHANGES` 플래그를 사용하는 경우 `rgwz` 매개 변수의 `pCmdText` 요소를 명령의 새 텍스트로 설정하고 `cwActual` 매개 변수의 `pCmdText` 요소를 명령 문자열의 크기로 설정합니다.  
   
