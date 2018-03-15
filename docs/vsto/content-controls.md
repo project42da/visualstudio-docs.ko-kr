@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -41,7 +42,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: e06075c0e748aab34c4a1df425f95592856217db
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -170,7 +172,7 @@ ms.lasthandoff: 01/10/2018
   
  문서 수준 및 VSTO 추가 기능 프로젝트에서 컨트롤 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 속성의 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드를 사용하여 프로그래밍 방식으로 콘텐츠 컨트롤을 데이터 소스에 바인딩할 수 있습니다. 이 작업을 수행 하는 경우 문자열에 전달 **텍스트** 에 *propertyName* 의 매개 변수는 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드. **텍스트** 속성은 콘텐츠 컨트롤의 기본 데이터 바인딩 속성입니다.  
   
- 또한 콘텐츠 컨트롤은 컨트롤의 변경 내용이 데이터 소스에 업데이트되는 양방향 데이터 바인딩을 지원합니다. 자세한 내용은 [How to: Update a Data Source with Data from a Host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)을 참조하세요.  
+ 또한 콘텐츠 컨트롤은 컨트롤의 변경 내용이 데이터 소스에 업데이트되는 양방향 데이터 바인딩을 지원합니다. 자세한 내용은 [방법: 호스트 컨트롤의 데이터로 데이터 원본 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)을 참조하세요.  
   
 > [!NOTE]  
 >  콘텐츠 컨트롤은 복잡한 데이터 바인딩을 지원하지 않습니다. Windows Forms 데이터 모델을 사용하여 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> 또는 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>을 데이터 소스에 바인딩하는 경우 사용자가 컨트롤을 클릭하면 단일 값만 표시됩니다. 사용자가 선택할 수 있는 데이터 값 집합에 이러한 컨트롤을 바인딩하려는 경우 사용자 지정 XML 부분의 요소에 해당 컨트롤을 바인딩할 수 있습니다.  

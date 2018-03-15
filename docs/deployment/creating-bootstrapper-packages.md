@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -20,11 +21,12 @@ helpviewer_keywords:
 - custom prerequisites
 - redistributables list
 ms.assetid: ba1a785b-693d-446b-bcae-b88cadee73d1
-caps.latest.revision: "45"
+caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 5f269369084df3d81d323e75730fad27713831ca
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -37,7 +39,7 @@ ms.lasthandoff: 12/22/2017
  부트스트래퍼는 먼저 필수 구성 요소가 이미 설치되었는지를 검색합니다. 필수 구성 요소가 설치되지 않은 경우 부트스트래퍼는 먼저 사용권 계약을 표시합니다. 그런 다음 최종 사용자가 사용권 계약에 동의하면 필수 구성 요소 설치가 시작됩니다. 그렇지 않고 모든 필수 구성 요소가 검색되면 부트스트래퍼는 응용 프로그램 설치 관리자만 시작합니다.  
   
 ## <a name="creating-custom-packages"></a>사용자 지정 패키지 만들기  
- Visual Studio에서 XML 편집기를 사용하여 매니페스트를 생성할 수 있습니다. 자세한 내용은 [How to: Create a Package Manifest](../deployment/how-to-create-a-package-manifest.md) 및 [How to: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)를 참조하세요. 부트스트래퍼 패키지를 만드는 예제를 확인하려면 [Walkthrough: Creating a Custom Bootstrapper to Show a Privacy Prompt](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)를 참조하세요.  
+ Visual Studio에서 XML 편집기를 사용하여 매니페스트를 생성할 수 있습니다. 자세한 내용은 [How to: Create a Package Manifest](../deployment/how-to-create-a-package-manifest.md) 및 [How to: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)를 참조하세요. 부트스트래퍼 패키지를 만드는 예제를 확인하려면 [연습: 사용자 지정 부트스트래퍼를 만들어 개인 정보 취급 방침 프롬프트 표시](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)를 참조하세요.  
   
  부트스트래퍼 패키지를 만들려면 EXE 또는 MSI 파일 형식의 재배포 가능 파일을 부트스트래퍼 매니페스트 생성기에 제공해야 합니다. 그러면 부트스트래퍼 매니페스트 생성기에서 다음 파일을 만듭니다.  
   

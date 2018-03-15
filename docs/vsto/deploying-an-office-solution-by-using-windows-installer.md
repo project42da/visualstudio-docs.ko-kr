@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -21,7 +22,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 68ec55b1096f9e4244213cf4faeef5b904dd8fed
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -50,7 +52,7 @@ Visual Studio를 사용하여 Windows Installer를 만들면 최종 사용자의
   
 - [종속 구성 요소를 필수 조건으로 구성](#Configure)  
   
-- [Specify where you want to deploy the solution on the user's computer](#Location)  
+- [사용자 컴퓨터에 솔루션을 배포할 위치 지정](#Location)  
   
 - [VSTO 추가 기능 구성](#ConfigureRegisitry)  
   
@@ -77,7 +79,7 @@ ClickOnce를 사용 하 여 Office 솔루션을 배포 하는 방법에 대 한 
 사용자 컴퓨터에서 솔루션을 실행하려면 먼저 관리자가 다음 방법 중 하나로 신뢰를 부여하거나 사용자가 솔루션을 설치할 때 신뢰 프롬프트에 응답해야 합니다.  
   
   
-- 신뢰할 수 있고 확인된 게시자를 식별하는 인증서를 사용하여 매니페스트에 서명합니다. 자세한 내용은 [Trusting the Solution by Signing the Application and Deployment Manifests](../vsto/granting-trust-to-office-solutions.md#Signing)을 참조하세요.  
+- 신뢰할 수 있고 확인된 게시자를 식별하는 인증서를 사용하여 매니페스트에 서명합니다. 자세한 내용은 [응용 프로그램 및 배포 매니페스트에 서명하여 솔루션 신뢰](../vsto/granting-trust-to-office-solutions.md#Signing)를 참조하세요.  
   
 - 사용자의 컴퓨터에서 Program Files 디렉터리에 솔루션을 설치 합니다.  
   
