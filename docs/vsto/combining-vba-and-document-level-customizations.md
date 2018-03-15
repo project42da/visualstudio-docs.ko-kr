@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -27,7 +28,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 63f316d3ac6fefbef37735cddc8fb7a87a8d4bfb
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -81,7 +83,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   
 -   문서에서 VBA 코드를 작성하여 문서 수준 사용자 지정에서 개발하는 서비스를 서비스에 액세스할 수 있는 최종 사용자가 사용할 수 있도록 하려는 경우  
   
- Visual Studio의 Office 개발 도구는 VSTO 추가 기능에 대해 유사한 기능을 제공합니다. VSTO 추가 기능을 개발하는 경우 다른 Microsoft Office 솔루션에서 VSTO 추가 기능의 코드를 호출할 수 있습니다. 자세한 내용은 [Calling Code in VSTO Add-ins from Other Office Solutions](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)을 참조하세요.  
+ Visual Studio의 Office 개발 도구는 VSTO 추가 기능에 대해 유사한 기능을 제공합니다. VSTO 추가 기능을 개발하는 경우 다른 Microsoft Office 솔루션에서 VSTO 추가 기능의 코드를 호출할 수 있습니다. 자세한 내용은 [다른 Office 솔루션에서 VSTO 추가 기능의 코드 호출](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)을 참조하세요.  
   
 > [!NOTE]  
 >  이 기능은 Word 서식 파일 프로젝트에서 사용할 수 없습니다. 이 기능은 Word 문서, Excel 통합 문서 또는 Excel 서식 파일 프로젝트에서만 사용할 수 있습니다.  

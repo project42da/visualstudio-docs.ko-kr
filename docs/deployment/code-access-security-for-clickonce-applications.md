@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 11/04/2016
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-deployment
+ms.technology:
+- vs-ide-deployment
 ms.tgt_pltfrm: 
 ms.topic: article
 f1_keywords:
@@ -23,11 +24,12 @@ helpviewer_keywords:
 - ClickOnce applications, code access security policies
 - security, ClickOnce
 ms.assetid: 04b104d0-0bd3-4ccb-b164-1de92d234487
-caps.latest.revision: "31"
+caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: e4897ad027354ef54a77fdad3488d2e623264741
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
@@ -58,9 +60,9 @@ ClickOnce 응용 프로그램은 .NET Framework를 기반으로 하며 코드 �
   
  서로 다른 위치에서 배포된 응용 프로그램에는 메시지 표시 없이 다른 수준의 사용 권한이 부여됩니다. 예를 들어 응용 프로그램이 인터넷에서 배포된 경우 매우 제한적인 권한 집합을 받습니다. 로컬 인트라넷에서 설치하는 경우 더 많은 권한이 부여되고, CD-ROM에서 설치하는 경우 완전 신뢰 권한이 부여됩니다.  
   
- 사용 권한 구성의 시작점으로, **보안** 페이지의 **영역** 목록에서 보안 영역을 선택할 수 있습니다. 응용 프로그램이 둘 이상의 영역에서 배포되는 경우 최소한의 권한을 가진 영역을 선택합니다. 자세한 내용은 [How to: Set a Security Zone for a ClickOnce Application](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)을 참조하세요.  
+ 사용 권한 구성의 시작점으로, **보안** 페이지의 **영역** 목록에서 보안 영역을 선택할 수 있습니다. 응용 프로그램이 둘 이상의 영역에서 배포되는 경우 최소한의 권한을 가진 영역을 선택합니다. 자세한 내용은 [방법: ClickOnce 응용 프로그램의 보안 영역 설정](../deployment/how-to-set-a-security-zone-for-a-clickonce-application.md)을 참조하세요.  
   
- 설정할 수 있는 속성은 사용 권한 집합에 따라 달라집니다. 일부 사용 권한 집합에는 구성 가능한 속성이 없습니다. 응용 프로그램이 요청할 수 있는 사용 권한의 전체 목록에 대한 자세한 내용은 <xref:System.Security.Permissions>를 참조하세요. 사용자 지정 영역에 대해 권한을 설정하는 방법에 대한 자세한 내용은 [How to: Set Custom Permissions for a ClickOnce Application](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)을 참조하세요.  
+ 설정할 수 있는 속성은 사용 권한 집합에 따라 달라집니다. 일부 사용 권한 집합에는 구성 가능한 속성이 없습니다. 응용 프로그램이 요청할 수 있는 사용 권한의 전체 목록에 대한 자세한 내용은 <xref:System.Security.Permissions>를 참조하세요. 사용자 지정 영역에 대해 권한을 설정하는 방법에 대한 자세한 내용은 [방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정](../deployment/how-to-set-custom-permissions-for-a-clickonce-application.md)을 참조하세요.  
   
 ## <a name="debugging-an-application-that-has-restricted-permissions"></a>사용 권한이 제한된 응용 프로그램 디버그  
  개발자는 대개 완전 신뢰 권한으로 개발 컴퓨터를 실행합니다. 따라서 사용자가 제한된 권한으로 실행할 때 표시될 수 있는 응용 프로그램을 디버그하는 경우 동일한 보안 예외가 표시되지 않습니다.  
@@ -71,7 +73,7 @@ ClickOnce 응용 프로그램은 .NET Framework를 기반으로 하며 코드 �
   
  또한 코드를 작성할 때 코드 편집기의 IntelliSense 기능은 구성한 보안 권한에 포함되지 않은 모든 멤버를 사용하지 않도록 설정합니다.  
   
- 자세한 내용은 [How to: Debug a ClickOnce Application with Restricted Permissions](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)을 참조하세요.  
+ 자세한 내용은 [방법: 제한된 권한으로 ClickOnce 응용 프로그램 디버그](../deployment/how-to-debug-a-clickonce-application-with-restricted-permissions.md)을 참조하세요.  
   
 ## <a name="security-permissions-for-browser-hosted-applications"></a>브라우저에서 호스트되는 응용 프로그램의 보안 권한  
  Visual Studio에서는 WPF(Windows Presentation Foundation) 응용 프로그램에 대해 다음 프로젝트 형식을 제공합니다.  
