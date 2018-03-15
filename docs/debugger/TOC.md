@@ -10,6 +10,7 @@
 ## [IIS Express 또는 IIS](how-to-enable-debugging-for-aspnet-applications.md)에서 ASP.NET 디버그
 ## [디버거에서 Python 코드 실행...](../python/vs-tutorial-01-04.md)
 ## [라이브 Azure 앱 디버그](debug-live-azure-applications.md)
+## [IntelliTrace step-back을 사용하여 스냅숏 보기](how-to-use-intellitrace-step-back.md)
 ## [IIS 컴퓨터의 원격 디버그 ASP.NET Core](remote-debugging-aspnet-on-a-remote-iis-computer.md)
 ## [IIS 컴퓨터의 원격 디버그 ASP.NET](remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
 ## [Azure의 원격 디버그 ASP.NET](remote-debugging-azure.md)
@@ -152,7 +153,6 @@
 ### [연습: IntelliTrace 사용](walkthrough-using-intellitrace.md)
 ### [IntelliTrace 기능](intellitrace-features.md)
 ### [기록 디버깅](historical-debugging.md)
-### [IntelliTrace step-back을 사용하여 스냅숏 보기](how-to-use-intellitrace-step-back.md)
 ### [기록 디버깅을 사용하여 앱 검사](historical-debugging-inspect-app.md)
 ### [배포 후 문제 진단](diagnose-problems-after-deployment.md)
 ### [IntelliTrace 독립 실행형 수집기 사용](using-the-intellitrace-stand-alone-collector.md)
@@ -376,5 +376,5 @@
 #### [기타 대화 상자](other-dialog-boxes.md)
 ##### [Microsoft Spy++ 정보](about-microsoft-spy-increment.md)
 ##### [Spy++ 도움말에 대한 저작권 표시](copyright-notice-for-spy-increment-help.md)
-# 리소스
+# 자료
 ## [Visual Studio 디버거의 새로운 기능](what-s-new-for-the-debugger-in-visual-studio.md)

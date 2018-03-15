@@ -50,7 +50,6 @@
 ### [UWP 앱의 단위 테스트 실행](run-unit-tests-for-store-apps-in-visual-studio.md)
 ## [코드 검사를 사용하여 테스트할 코드 범위 결정](using-code-coverage-to-determine-how-much-code-is-being-tested.md)
 ### [코드 검사 분석 사용자 지정](customizing-code-coverage-analysis.md)
-### [빌드 확인 테스트에서 코드 검사 분석](analyzing-code-coverage-in-build-verification-tests.md)
 ### [코드 검사 문제 해결](troubleshooting-code-coverage.md)
 ## [에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리](using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications.md)
 # [유닛 테스트](live-unit-testing-intro.md)
