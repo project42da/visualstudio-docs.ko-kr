@@ -197,7 +197,7 @@ UI 작업 속성 편집
  *그 외 무엇을 알아야 하나요?*  
  **참고**  
   
--   ![필수 조건](../test/media/prereq.png "필수 조건") UI 작업 앞에 특정 컨트롤을 사용할 수 있도록 만들어야 하는 경우 테스트 메서드에 사용자 지정 코드를 추가해야 합니다. 이때 적절한 UITestControl.WaitForControlXXX() 메서드를 사용하면 됩니다. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][Making Coded UI Tests Wait For Specific Events During Playback](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)를 선택합니다.  
+-   ![필수 조건](../test/media/prereq.png "필수 조건") UI 작업 앞에 특정 컨트롤을 사용할 수 있도록 만들어야 하는 경우 테스트 메서드에 사용자 지정 코드를 추가해야 합니다. 이때 적절한 UITestControl.WaitForControlXXX() 메서드를 사용하면 됩니다. [!INCLUDE[crdefault](../test/includes/crdefault_md.md)][코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md).  
   
  **팁**  
   

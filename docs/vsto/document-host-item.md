@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -21,7 +22,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 85c3520d852575eef6e9dae1fd8c1120b9eccd74
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -48,7 +50,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="understanding-document-host-items-in-application-level-projects"></a>응용 프로그램 수준 프로젝트의 문서 호스트 항목 이해  
  VSTO 추가 기능 프로젝트에서는 런타임에 Word에서 열리는 문서에 대한 <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목을 생성할 수 있습니다. <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목을 사용하여 연결된 문서에 컨트롤을 추가하거나 <xref:Microsoft.Office.Interop.Word.Document> 개체에서 사용할 수 없는 이벤트를 처리할 수 있습니다.  
   
- 생성 하는 <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목, GetVstoObject 메서드를 사용 합니다. 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+ 생성 하는 <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목, GetVstoObject 메서드를 사용 합니다. 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   

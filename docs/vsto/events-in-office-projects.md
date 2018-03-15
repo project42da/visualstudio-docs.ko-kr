@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -35,7 +36,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 31d7e8483865ed03830376012e780bac87fdda07
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -138,7 +140,7 @@ ms.lasthandoff: 01/10/2018
   
  VSTO 추가 기능이 `ThisAddIn_Startup` 메서드를 재정의하지 않는 한 <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A> 이벤트 처리기의 코드는 실행할 첫 번째 사용자 코드입니다. 이 경우에 `ThisAddIn_Startup` 이벤트 처리기는 <xref:Microsoft.Office.Tools.AddInBase.RequestComAddInAutomationService%2A>뒤에 호출됩니다.  
   
- 코드를 추가 하지는 `ThisAdd-In_Startup` 이벤트 처리기 코드를 실행 하려면 문서를 열어야 하는 경우. 대신 사용자가 문서를 만들거나 열 때 Office 응용 프로그램에서 발생하는 이벤트에 해당 코드를 추가합니다. 자세한 내용은 [Accessing a Document When the Office Application Starts](../vsto/programming-vsto-add-ins.md#AccessingDocuments)을 참조하세요.  
+ 코드를 추가 하지는 `ThisAdd-In_Startup` 이벤트 처리기 코드를 실행 하려면 문서를 열어야 하는 경우. 대신 사용자가 문서를 만들거나 열 때 Office 응용 프로그램에서 발생하는 이벤트에 해당 코드를 추가합니다. 자세한 내용은 [Office 응용 프로그램이 시작될 때 문서 액세스](../vsto/programming-vsto-add-ins.md#AccessingDocuments)을 참조하세요.  
   
  VSTO 추가 기능의 시작 시퀀스에 대 한 자세한 내용은 참조 [아키텍처의 VSTO 추가 기능](../vsto/architecture-of-vsto-add-ins.md)합니다.  
   

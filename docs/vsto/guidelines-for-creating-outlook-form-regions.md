@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 1e82a4428dde7aa25c7e9a3d7d74017b9f2a874f
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -57,9 +59,9 @@ ms.lasthandoff: 01/10/2018
 ##  <a name="ClassNames"></a> 형식 및 메시지 클래스 이름 이해  
  Outlook 항목의 형식 이름은 Outlook 항목의 메시지 클래스 이름과 다릅니다. 예를 들어 RSS 항목의 형식 이름을 Microsoft.Office.Interop.Outlook.PostItem 됩니다. RSS 항목의 메시지 클래스 이름과 IPM 합니다. Post.RSS 합니다.  
   
- 형식 이름을 사용하여 코드의 Outlook 항목을 참조합니다. 형식 이름 목록에 대해서는 [Associating a Form Region with an Outlook Message Class](../vsto/associating-a-form-region-with-an-outlook-message-class.md)를 참조하세요.  
+ 형식 이름을 사용하여 코드의 Outlook 항목을 참조합니다. 형식 이름 목록에 대해서는 [Outlook 메시지 클래스에 양식 영역 연결](../vsto/associating-a-form-region-with-an-outlook-message-class.md)를 참조하세요.  
   
- **새 Outlook 양식 영역** 마법사에서 Outlook 항목의 메시지 클래스 이름을 사용하여 항목을 양식 영역과 연결합니다. 올바른 메시지 클래스 이름 목록에 대해서는 [Associating a Form Region with an Outlook Message Class](../vsto/associating-a-form-region-with-an-outlook-message-class.md)를 참조하세요.  
+ **새 Outlook 양식 영역** 마법사에서 Outlook 항목의 메시지 클래스 이름을 사용하여 항목을 양식 영역과 연결합니다. 올바른 메시지 클래스 이름 목록에 대해서는 [Outlook 메시지 클래스에 양식 영역 연결](../vsto/associating-a-form-region-with-an-outlook-message-class.md)를 참조하세요.  
   
 ##  <a name="ReadingPane"></a> Designing Adjoining Form Regions for the Reading Pane  
  Outlook 읽기 창을 사용하여 항목을 열지 않고도 Outlook 항목을 미리 볼 수 있습니다. 읽기 창은 읽기 전용으로 설계되어 있습니다. 따라서 항목 및 양식 영역이 읽기 창에서 열리는 경우 인접 양식 영역에 추가하는 입력 컨트롤(예: 텍스트 상자)이 예상대로 동작하지 않을 수 있습니다.  
