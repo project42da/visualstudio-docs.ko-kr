@@ -1,0 +1,15 @@
+- name: Node.js 설명서
+- name: 빠른 시작
+  items:
+    - name: 'Node.js: Web App 만들기...'
+      href: /visualstudio/ide/quickstart-nodejs?toc=/visualstudio/nodejs/toc.json
+- name: 자습서
+  items:
+    - name: Express를 사용하여 Node.js 앱 만들기
+      href: tutorial-nodejs.md
+    - name: React를 사용하여 Node.js 앱 만들기
+      href: tutorial-nodejs-with-react-and-jsx.md
+- name: 자료
+  items:
+    - name: Visual Studio용 Node.js 도구(Wiki 사이트)...
+      href: 'https://github.com/Microsoft/nodejstools'
