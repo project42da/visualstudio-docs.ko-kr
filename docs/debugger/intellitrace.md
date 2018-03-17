@@ -26,11 +26,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 07afad8b464e266477c4edbb97ffc3eb3d8436e4
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 8f4edf6c446bdcd35585a60d97965d2d6ee21ad1
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="intellitrace"></a>IntelliTrace
 
@@ -58,8 +58,8 @@ Visual Studio Enterprise Edition(Professional 또는 Community Edition 아님)�
 |||
 |-|-|
 |**지원됨**|-.NET Framework 2.0 또는 더 높은 버전을 사용 하는 Visual Basic 및 Visual C# 응용 프로그램<br/>ASP.NET, Microsoft Azure, Windows Forms, WCF, WPF, Windows Workflow, SharePoint 2010, SharePoint 2013 및 64비트 앱을 포함한 대부분의 응용 프로그램을 디버깅할 수 있습니다.<br/>IntelliTrace로 SharePoint 응용 프로그램을 디버깅 하려면 참조 [연습: IntelliTrace를 사용 하 여 SharePoint 응용 프로그램 디버깅](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)합니다.<br/> IntelliTrace 사용 하 여 Microsoft Azure 앱을 디버깅 하려면 참조 [IntelliTrace 및 Visual Studio는 게시 된 클라우드 서비스 디버깅](/azure/vs-azure-tools-intellitrace-debug-published-cloud-services)합니다.|
-|**제한 된 지원**|-.NET core 및 ASP.NET Core 응용 프로그램 이벤트에 대해서만 지원 합니다.<br />-시험 차원의 F # 응용 프로그램<br />-이벤트에 대해서만 지원 UWP 앱|
-|지원 안 함|-C + +, 다른 언어 및 스크립트<br />Windows 서비스, Silverlight, Xbox, 또는 [!INCLUDE[winmobile](../debugger/includes/winmobile_md.md)] 앱|
+|**제한 된 지원**|-.NET core 및 ASP.NET Core 응용 프로그램에서는 특정 이벤트만 (MVC 컨트롤러, ADO.NET 및 HTTPClicent 이벤트)의 로컬 디버깅 수 없습니다. 독립 실행형 수집기.NET Core 또는 ASP.NET Core 응용 프로그램에 대해 지원 되지 않습니다.<br />-시험 차원의 F # 응용 프로그램<br />-이벤트에 대해서만 지원 UWP 앱|
+|**지원 안 함**|-C + +, 다른 언어 및 스크립트<br />Windows 서비스, Silverlight, Xbox, 또는 [!INCLUDE[winmobile](../debugger/includes/winmobile_md.md)] 앱|
 
 > [!NOTE]
 > 이미 실행 중인 프로세스를 디버깅 하려는 경우에 IntelliTrace 이벤트에만 사용 (호출 정보 없음)를 수집할 수 있습니다. 로컬 컴퓨터에서 32 비트 또는 64 비트 프로세스에 연결할 수 있습니다. 프로세스에 연결 하기 전에 발생 하는 이벤트를 수집 되지 않습니다.
@@ -132,7 +132,7 @@ IntelliTrace는 재현하기 어렵거나 배포할 때 발생하는 오류를 �
 
 - **.NET framework 이벤트**
 
-     기본적으로 IntelliTrace는 가장 일반적인 .NET Framework 이벤트를 기록합니다. 예:
+     기본적으로 IntelliTrace는 가장 일반적인 .NET Framework 이벤트를 기록합니다. 예를 들어:
 
     - 확인란 확인 이벤트의 경우 IntelliTrace는 확인란 상태와 텍스트를 수집합니다.
 

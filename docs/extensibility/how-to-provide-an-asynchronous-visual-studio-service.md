@@ -7,19 +7,20 @@ ms.suite:
 ms.tgt_pltfrm: 
 ms.topic: article
 ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
-caps.latest.revision: "10"
+caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c13a899e5c678040d6ffe5b1996fd3ee96e9cc09
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4aac446e9ed71b6e6b0c86ea64068af7a6184767
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>방법: 비동기 Visual Studio 서비스를 제공 합니다.
-UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비동기 서비스 만들고 백그라운드 스레드에서 패키지를 로드 해야 합니다. 이 목적을 위해 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 아닌 <xref:Microsoft.VisualStudio.Shell.Package>, 비동기 패키지의 특별 한 비동기 메서드 사용 하 여 서비스를 추가 하 고  
+UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비동기 서비스 만들고 백그라운드 스레드에서 패키지를 로드 해야 합니다. 이 목적을 위해 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 아닌 <xref:Microsoft.VisualStudio.Shell.Package>, 비동기 패키지의 특별 한 비동기 메서드 사용 하 여 서비스를 추가 합니다.
   
  동기 Visual Studio 서비스를 제공 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 서비스 제공](../extensibility/how-to-provide-a-service.md)합니다.  
   
@@ -56,7 +57,7 @@ UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비
   
 7.  여기에 비동기 서비스 구현입니다. 생성자에서 동기 서비스 공급자 보다는 비동기 서비스 공급자를 설정 해야 하는 참고:  
   
-    ```  
+    ```csharp
     public class TextWriterService : STextWriterService, ITextWriterService  
     {  
         private Microsoft.VisualStudio.Shell.IAsyncServiceProvider serviceProvider;  
@@ -92,7 +93,7 @@ UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비
   
 -   추가 해야 합니다는 **AllowsBackgroundLoading = true** 필드는 <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>합니다. PackageRegistrationAttribute에 대 한 자세한 내용은 참조 [등록 및 등록 취소 Vspackage](../extensibility/registering-and-unregistering-vspackages.md)합니다.  
   
- 다음은 AsyncPackage 비동기 서비스 등록의 예::  
+ 비동기 서비스 등록 AsyncPackage의 예는 다음과 같습니다.
   
 ```csharp  
 [ProvideService((typeof(STextWriterService)), IsAsyncQueryable = true)]  
@@ -107,7 +108,7 @@ public sealed class TestAsyncPackage : AsyncPackage
   
 1.  TestAsyncPackage.cs을에서 제거 된 `Initialize()` 메서드와 재정의 `InitializeAsync()` 메서드. 서비스를 추가 하 고는 서비스를 만드는 콜백 메서드를 추가 합니다. 서비스를 추가 하는 비동기 이니셜라이저의 예는 다음과 같습니다.  
   
-    ```  
+    ```csharp
     protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
     {  
         this.AddService(typeof(STextWriterService), CreateService);  
@@ -146,7 +147,7 @@ public sealed class TestAsyncPackage : AsyncPackage
   
         ITextWriterService textService = await this.GetServiceAsync(typeof(STextWriterService)) as ITextWriterService;  
   
-        await writer.WriteLineAsync(<userpath>), "this is a test");  
+        await textService.WriteLineAsync(<userpath>), "this is a test");  
   
         await base.InitializeAsync(cancellationToken, progress);  
     }  
@@ -164,7 +165,7 @@ public sealed class TestAsyncPackage : AsyncPackage
   
 2.  사용자 지정 명령 템플릿을 다시 추가 `Initialize()` 메서드 명령을 초기화 하기 위해 TestAsyncPackage.cs 파일에 있습니다. Initialize () 메서드에서 명령을 초기화 하는 줄을 복사 합니다. 다음과 같이 표시됩니다.  
   
-    ```  
+    ```csharp
     TestAsyncCommand.Initialize(this);  
     ```  
   
@@ -182,7 +183,7 @@ public sealed class TestAsyncPackage : AsyncPackage
         ITextWriterService textService =   
            await this.GetServiceAsync(typeof(STextWriterService)) as ITextWriterService;  
   
-        await writer.WriteLineAsync((<userpath>, "this is a test");  
+        await textService.WriteLineAsync((<userpath>, "this is a test");  
   
         await base.InitializeAsync(cancellationToken, progress);  
     }  
@@ -193,9 +194,9 @@ public sealed class TestAsyncPackage : AsyncPackage
   
 4.  TestAsyncCommand.cs 파일에서 찾습니다는 `MenuItemCallback()` 메서드. 메서드의 본문을 삭제 합니다.  
   
-5.  사용 하 여 추가 문:  
+5.  using 문을 추가합니다.  
   
-    ```  
+    ```csharp 
     using System.IO;  
     ```  
   
@@ -208,14 +209,14 @@ public sealed class TestAsyncPackage : AsyncPackage
            this.ServiceProvider.GetService(typeof(STextWriterService))  
               as ITextWriterService;  
         // don't forget to change <userpath> to a local path  
-        await writer.WriteLineAsync((<userpath>),"this is a test");  
+        await textService.WriteLineAsync((<userpath>),"this is a test");  
        }  
   
     ```  
   
 7.  이 메서드를 호출 하는 `MenuItemCallback()` 메서드:  
   
-    ```  
+    ```csharp
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
         GetAsyncService();  

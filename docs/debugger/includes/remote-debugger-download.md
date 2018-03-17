@@ -13,17 +13,17 @@ translation.priority.ht:
 - tr-tr
 - zh-cn
 - zh-tw
-ms.openlocfilehash: 7e911686d1f8bff191c439f4fc2b92c37d60a31f
-ms.sourcegitcommit: 38097344f3ff74ba7b03bcfa45910015ca6bc2be
+ms.openlocfilehash: b16c0627fbebf13566726a7f4bfb56ecb2e6a64a
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/11/2017
+ms.lasthandoff: 03/17/2018
 ---
 1.  장치 또는 서버 디버깅 하려는 컴퓨터 (을 하지 않고 Visual Studio를 실행 하는 컴퓨터)에서 올바른 버전을의 원격 도구를 가져옵니다.
 
-    |버전|링크|참고|
+    |버전|링크|노트|
     |-|-|-|
-    |Visual Studio 2017 15.5 버전|[원격 도구](https://www.visualstudio.com/downloads/#remote-tools-for-visual-studio-2017)|항상 장치 운영 체제 (x86 또는 x64)를 일치 하는 버전을 다운로드 합니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
+    |Visual Studio 2017 (최신 버전)|[원격 도구](https://www.visualstudio.com/downloads/#remote-tools-for-visual-studio-2017)|항상 장치 운영 체제 (x86 또는 x64)를 일치 하는 버전을 다운로드 합니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
     |Visual Studio 2017 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|Visual Studio 2017의 이전 릴리스에 대 한 원격 도구가 My.VisualStudio.com에서 제공 됩니다. 메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
     |Visual Studio 2015 업데이트 3|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
     |Visual Studio 2015 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
