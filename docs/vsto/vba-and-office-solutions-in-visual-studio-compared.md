@@ -53,7 +53,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [다른 Office 솔루션에서 VSTO 추가 기능의 코드 호출](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   
- [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
+ [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)   
  [문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)   
  [VSTO 추가 기능 아키텍처](../vsto/architecture-of-vsto-add-ins.md)   
  [Office 솔루션 보안](../vsto/securing-office-solutions.md)   
