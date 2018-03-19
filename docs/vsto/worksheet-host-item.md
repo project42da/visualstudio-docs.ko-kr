@@ -57,7 +57,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="understanding-worksheet-host-items-in-vsto-add-in-projects"></a>VSTO 추가 기능 프로젝트에서 워크시트 호스트 항목 이해  
  응용 프로그램 수준 프로젝트에서는 런타임에 Excel에서 열리는 워크시트에 대해 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목을 생성할 수 있습니다. <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목을 사용하여 연결된 워크시트에 컨트롤을 추가하거나 <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체에서 사용할 수 없는 이벤트를 처리할 수 있습니다.  
   
- 생성 하는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목, GetVstoObject 메서드를 사용 합니다. 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+ 생성 하는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 호스트 항목, GetVstoObject 메서드를 사용 합니다. 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)   
