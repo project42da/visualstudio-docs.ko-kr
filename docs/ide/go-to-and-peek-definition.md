@@ -16,12 +16,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 945eb6e905613d3d068321e2d5993f4506036963
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+ms.workload:
+- multiple
+ms.openlocfilehash: 2bc0d66ff5cd225cba0cd6bd931f242b576b9f23
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="view-type-and-member-definitions"></a>형식 및 멤버 정의 보기
 
@@ -66,11 +67,11 @@ Visual Studio 2017 15.4 버전에는 마우스 사용자가 정의로 이동에 
 ![소스로서의 메타데이터](../ide/media/metadatasource.png "MetadataSource")
 
 > [!NOTE]
-> 내부로 표시된 형식 또는 멤버에 대해 **정의로 이동** 또는 **정의 피킹(Peeking)** 명령을 실행하려고 하면 참조하는 어셈블리가 friend인지 여부에 관계없이 Visual Studio에서 해당 메타데이터를 소스 코드로 표시하지 않습니다.
+> 내부로 표시된 형식 또는 멤버에 대해 **정의로 이동** 또는 **정의 피킹(Peeking)** 명령을 실행하려고 하면 참조하는 어셈블리가 friend인지 여부와 관계없이 Visual Studio에서 해당 메타데이터를 소스 코드로 표시하지 않습니다.
 
 ### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>메타데이터 대신 디컴파일된 소스 정의 보기(C#)
 
-**Visual Studio 2017 버전 15.6 미리 보기 2**의 새로운 기능으로서, 소스 코드를 사용할 수 없는 C# 형식 또는 멤버 코드의 정의를 볼 때 디컴파일된 소스 코드를 보는 옵션을 설정할 수 있습니다. 이 기능을 켜려면 메뉴 모음에서 **도구** > **옵션**을 선택합니다. 그런 다음 **텍스트 편집기** > **C#** > **고급**을 확장하고 **디컴파일된 소스에 대한 탐색 사용**을 선택합니다.
+**Visual Studio 2017 버전 15.6**의 새로운 기능으로서, 소스 코드를 사용할 수 없는 C# 형식 또는 멤버 코드의 정의를 볼 때 디컴파일된 소스 코드를 보는 옵션을 설정할 수 있습니다. 이 기능을 켜려면 메뉴 모음에서 **도구** > **옵션**을 선택합니다. 그런 다음 **텍스트 편집기** > **C#** > **고급**을 확장하고 **디컴파일된 소스에 대한 탐색 사용**을 선택합니다.
 
 ![디컴파일된 정의 보기](media/go-to-definition-decompiled-sources.png)
 
@@ -79,5 +80,5 @@ Visual Studio 2017 15.4 버전에는 마우스 사용자가 정의로 이동에 
 
 ## <a name="see-also"></a>참고 항목
 
-[코드 탐색](../ide/navigating-code.md)  
+[코드 탐색](../ide/navigating-code.md)
 [방법: 정의 피킹(Peeking)을 사용하여 코드 보기 및 편집(Alt+F12)](how-to-view-and-edit-code-by-using-peek-definition-alt-plus-f12.md)

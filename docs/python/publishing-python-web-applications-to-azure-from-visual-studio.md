@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 79036afd66d9c8c23ffb6351d6fd5329004479f9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 73e82e70733e12116250e47850bbcf1edff13a6d
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service에 게시
 
@@ -33,7 +33,7 @@ Visual Studio는 Python 웹앱을 Azure App Service에 직접 게시하는 기�
 > [!Note]
 > Visual Studio 2015와 Visual Studio 2017 간 변경 사항에서 배경의 경우, 블로그 게시물을 [Visual Studio 2017에서 Azure에 게시](https://blogs.msdn.microsoft.com/pythonengineering/2016/12/12/publish-to-azure-in-vs-2017/)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 연습에서는 Bottle, Flask 또는 Django 프레임워크를 기반으로 하는 웹앱 프로젝트가 필요합니다. 프로젝트가 아직 없거나 게시 프로세스를 사용해보려는 경우 다음과 같이 간단한 테스트 프로젝트를 만듭니다.
 
@@ -74,7 +74,7 @@ Azure에 게시하려면 대상 App Service가 필요합니다. 이 목적의 �
 
 ## <a name="configure-python-on-azure-app-service"></a>Azure App Service에서 Python 구성
 
-(구독에서 또는 무료 사이트에서) 실행 중인 빈 웹앱을 사용하는 App Service가 있으면, [Azure App Service에서 Python 관리](managing-python-on-azure-app-service.md)에 설명된 대로 선택한 Python 버전을 설치합니다. Visual Studio 2017에서 게시하려면 해당 항목에 설명된 대로 사이트 확장과 함께 설치된 Python 인터프리터에 대한 정확한 경로를 기록합니다.
+(구독에서 또는 무료 사이트에서) 실행 중인 빈 웹앱을 사용하는 App Service가 있으면, [Azure App Service에서 Python 관리](managing-python-on-azure-app-service.md)에 설명된 대로 선택한 Python 버전을 설치합니다. Visual Studio 2017에서 게시하려면 해당 문서에 설명된 대로 사이트 확장과 함께 설치된 Python 인터프리터에 대한 정확한 경로를 기록합니다.
 
 또한 원하는 경우 이 지침의 프로세스를 사용하여 `bottle` 패키지를 설치할 수 있습니다. 해당 패키지는 이 연습 중 다른 단계의 일부로 설치됩니다.
 

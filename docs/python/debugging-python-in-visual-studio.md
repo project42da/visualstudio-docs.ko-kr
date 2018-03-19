@@ -2,7 +2,7 @@
 title: "Visual Studio에서 Python 코드 디버깅 | Microsoft Docs"
 description: "중단점 설정, 단계별 실행, 값 검사, 예외 확인, 대화형 창에서 디버깅을 포함하여 특히 Python 코드에 대한 Visual Studio의 디버깅 기능 연습입니다."
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,17 +17,17 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a34ef14b1c966a8685497875d32563add635917b
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 52beda8ff0eb81b7f9a78545e264a2fcaee6ca92
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
 Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및 직접 실행 창에서 식을 계산하고, 지역 변수, 중단점, 문 단계별 실행/프로시저 나가기/프로시저 단위 실행, 다음 문 설정 등을 검사하는 작업을 포함한 포괄적인 디버깅 환경을 Python에 제공합니다.
 
-또한 다음 시나리오별 디버깅 항목을 참조하세요.
+또한 다음 시나리오별 디버깅 문서를 참조하세요.
 
 - [Linux 원격 디버깅](debugging-python-code-on-remote-linux-machines.md)
 - [Azure 원격 디버깅](debugging-remote-python-code-on-azure.md)
@@ -51,7 +51,7 @@ Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및
 
 기본적인 디버깅 워크플로에는 다음 섹션에서 설명한 대로 중단점 설정, 단계별 코드 실행, 값 검사 및 예외 처리가 포함됩니다. Visual Studio 디버거에 대한 자세한 내용은 [Visual Studio에서 디버깅](../debugger/debugging-in-visual-studio.md)을 참조하세요.
 
-디버깅 세션은 **디버그 > 디버깅 시작** 명령, 도구 모음의 **시작** 단추 또는 F5 키로 시작됩니다. 이러한 작업은 프로젝트의 활성 환경 및 프로젝트 속성([프로젝트 디버깅 옵션](#project-debugging-options) 참조)에 지정된 명령줄 인수 또는 검색 경로가 포함된 프로젝트의 시작 파일(솔루션 탐색기에서 굵게 표시됨)을 실행합니다. 그러나 몇 가지 이유로 시작 파일을 설정하지 않은 경우 Python 출력 창이 잠깐 나타났다가 사라집니다. 이 경우 해당 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
+디버깅 세션은 **디버그 > 디버깅 시작** 명령, 도구 모음의 **시작** 단추 또는 F5 키로 시작됩니다. 이러한 작업은 프로젝트의 활성 환경 및 프로젝트 속성([프로젝트 디버깅 옵션](#project-debugging-options) 참조)에 지정된 명령줄 인수 또는 검색 경로가 포함된 프로젝트의 시작 파일(솔루션 탐색기에서 굵게 표시됨)을 실행합니다. **Visual Studio 2017 버전 15.6** 이상에서는 시작 파일이 설정되지 않은 경우 경고가 표시되고, 이전 버전에서는 Python 인터프리터를 실행하는 출력 창이 열리거나 출력 창이 잠시 표시되었다가 사라집니다. 어떤 경우든, 해당 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
 
 > [!Note]
 > 디버거는 프로젝트에 대해 항상 활성 Python 환경으로 시작합니다. 환경을 변경하려면 [프로젝트에 대한 Python 환경 선택](selecting-a-python-environment-for-a-project.md)에 설명된 대로 다른 환경을 활성화합니다.
@@ -131,7 +131,7 @@ HTML, XML 및 JSON 시각화는 구문 강조 표시 및 트리 보기가 있는
 
 각 예외의 확인란은 예외가 발생했을 때 디버거가 *항상* 중단되는지 여부를 제어합니다. 특정 예외에 대해 더 자주 중단하려는 경우 이 상자를 선택합니다.
 
-기본적으로 예외 처리기가 소스 코드에 없는 경우 대부분의 예외가 중단됩니다. 이 동작을 변경하려면 예외를 마우스 오른쪽 단추로 클릭하고 **사용자 코드에서 처리되지 않은 경우 계속**을 선택하거나 선택 취소합니다. 예외로 인해 발생하는 중단을 줄이려면 이 상자를 선택 취소합니다.
+기본적으로 소스 코드에서 예외 처리기를 찾을 수 없는 경우 대부분의 예외로 인해 중단됩니다. 이 동작을 변경하려면 예외를 마우스 오른쪽 단추로 클릭하고 **사용자 코드에서 처리되지 않은 경우 계속**을 선택하거나 선택 취소합니다. 예외로 인해 발생하는 중단을 줄이려면 이 상자를 선택 취소합니다.
 
 이 목록에 표시되지 않은 예외를 구성하려면 **추가** 단추를 클릭하여 추가합니다. 이름은 예외의 전체 이름과 일치해야 합니다.
 
@@ -160,13 +160,13 @@ HTML, XML 및 JSON 시각화는 구문 강조 표시 및 트리 보기가 있는
 | 인터프리터 경로 | 현재 환경과 연결된 경로를 재정의합니다.  값은 비표준 인터프리터로 스크립트를 시작하는 데 유용할 수 있습니다. |
 | 환경 변수 | 이 여러 줄 텍스트 상자에 `NAME=VALUE` 형식의 항목을 추가합니다. 이 설정은 검색 경로 설정에 따라 `PYTHONPATH`가 설정된 후에 마지막으로 기존 전역 환경 변수의 맨 위에 적용되므로 다른 변수를 수동으로 재정의하는 데 사용될 수 있습니다. |
 
-<a name="the-debug-interactive-window"</a>
+<a name="the-debug-interactive-window"></a>
 
 ## <a name="immediate-and-interactive-windows"></a>직접 실행 창 및 대화형 창
 
 디버깅 세션 중에 사용할 수 있는 두 개의 대화형 창, 즉 표준 Visual Studio 직접 실행 창과 Python 대화형 디버그 창이 있습니다.
 
-[직접 실행] 창(**디버그 > 창 > 직접 실행**)은 Python 식을 빠르게 계산하고 실행 중인 프로그램 내에서 변수를 검사하거나 할당하는 데 사용됩니다. 자세한 내용은 일반 [직접 실행 창](../ide/reference/immediate-window.md) 항목을 참조하세요.
+[직접 실행] 창(**디버그 > 창 > 직접 실행**)은 Python 식을 빠르게 계산하고 실행 중인 프로그램 내에서 변수를 검사하거나 할당하는 데 사용됩니다. 자세한 내용은 일반적인 [직접 실행 창](../ide/reference/immediate-window.md) 문서를 참조하세요.
 
 Python 대화형 디버그 창(**디버그 > 창 > Python 대화형 디버그**)은 코드 작성 및 실행을 포함하여 디버깅 중에 완벽한 [대화형 REPL](python-interactive-repl-in-visual-studio.md) 환경을 사용할 수 있기 때문에 더욱 다양하게 구성되었습니다. **디버그 > 프로세스에 연결**를 통해 연결된 프로세스를 포함하여 표준 Python 시작 관리자를 사용하여 디버거에서 시작된 모든 프로세스에 자동으로 연결됩니다. 그러나 C/C++ 혼합 모드 디버깅을 사용하는 경우에는 사용할 수 없습니다.
 

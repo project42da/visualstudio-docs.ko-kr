@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 60b960a4a8f81f14bbbc2035670e6b9fd80b5312
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 598aa6332d69f7818f9f67134c3207a9bd365757
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>3단계: 대화형 REPL 창 사용
 
@@ -31,7 +31,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
 1. 솔루션 탐색기(예: 이전 그래픽에서 표시된 "Python 3.6(32비트)")에서 프로젝트의 Python 환경을 마우스 오른쪽 단추로 클릭하고 **대화형 창 열기**를 선택하여 대화형 창을 엽니다. Visual Studio 주 메뉴에서 **보기 > 다른 창 > Python 대화형 창**을 선택할 수도 있습니다.
 
-1. 대화형 창은 일반적인 `>>>` Python REPL 프롬프트와 함께 편집기 아래에 열립니다. 종종 대화형 창을 더 크게 만들기를 원합니다. 두 창 간의 구분 기호를 끌어 수행할 수 있습니다.
+1. 대화형 창은 표준 `>>>` Python REPL 프롬프트와 함께 편집기 아래에 열립니다. **환경** 드롭다운 목록을 사용하여 작업할 특정 인터프리터를 선택할 수 있습니다. 대화형 창을 더 크게 만들려는 경우도 있습니다. 이 경우 두 창 사이에 있는 구분 기호를 끌면 됩니다.
 
     ![Python 대화형 창 및 크기를 조정하도록 끌기](media/vs-getting-started-python-11-interactive1b.png)
 
@@ -79,7 +79,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
 1. 프로세스를 반복하여 가장 마음에 드는 값을 찾을 때까지 다른 단계 설정으로 실험합니다. 범위를 늘려(예: `range(0, 1800, 12)`) 웨이브 반복을 만들 수도 있습니다.
  
-1. 대화형 창에서 작성한 코드에 만족할 경우 해당 코드를 선택하고, 마우스 오른쪽 단추를 클릭하고 **코드 복사**(Ctrl+Shift+C)를 선택한 다음 편집기에 붙여넣습니다. Visual Studio의 이 특별한 기능이 모든 출력과 `>>>` 및 `...` 프롬프트를 자동으로 생략하는 방식을 확인합니다. 예를 들어 아래 이미지는 프롬프트 및 출력을 포함하는 선택 영역에서 **코드 복사** 명령을 사용하는 것을 보여 줍니다.
+1. 대화형 창에서 작성한 코드에 만족할 경우 해당 코드를 선택하고, 마우스 오른쪽 단추를 클릭하고 **코드 복사**(Ctrl+Shift+C)를 선택한 다음 편집기에 붙여넣습니다. Visual Studio의 이 특별한 기능이 모든 출력과 `>>>` 및 `...` 프롬프트를 자동으로 생략하는 방식을 확인합니다. 예를 들어 아래 이미지는 프롬프트 및 출력을 포함하는 선택 영역에서 **코드 복사** 명령을 사용하는 것을 보여줍니다.
 
     ![프롬프트 및 출력이 있는 선택 영역에서 대화형 창 코드 복사 명령](media/vs-getting-started-python-17-interactive7.png)
 
@@ -100,7 +100,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 > [!div class="nextstepaction"]
 > [디버거에서 코드 실행](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 
-### <a name="going-deeper"></a>자세히 알아보기
+## <a name="going-deeper"></a>자세히 알아보기
 
 - [대화형 창 사용](python-interactive-repl-in-visual-studio.md)
 - [IPython REPL 사용](interactive-repl-ipython.md)

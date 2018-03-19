@@ -6,19 +6,17 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 9005cf64f4b72f39923d6525e78de745d79c3953
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: abf772f1e00239b3a66e01c95dd827a392a12902
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 컴파일 및 빌드
 
 Mac용 Visual Studio를 사용하면 프로젝트를 개발하는 동안 응용 프로그램을 빌드하고 어셈블리를 만들 수 있습니다. 형식 불일치 및 기타 컴파일 시간 오류를 식별할 수 있도록 조기에 자주 코드를 컴파일 및 빌드하는 것이 중요합니다.
 
-## <a name="choosing-a-build-method"></a>빌드 방법 선택:
-
-### <a name="using-the-ide"></a>IDE 사용
+## <a name="building-from-the-ide"></a>IDE에서 빌드
 
 Mac용 Visual Studio를 사용하면 빌드 기능을 제어하는 동시에 즉시 빌드를 만들고 실행할 수 있습니다. Mac용 Visual Studio는 MSBuild를 기본 빌드 시스템으로 사용합니다.
 
@@ -40,13 +38,13 @@ Mac용 Visual Studio를 사용하여 다음 작업을 수행할 수도 있습니
 
     ![사용자 지정 명령 추가](media/compiling-and-building-image6.png)
 
-### <a name="building-from-command-line"></a>명령줄에서 빌드
+## <a name="building-from-command-line"></a>명령줄에서 빌드
 
 MSBuild 빌드 엔진을 사용하여 명령줄을 통해 응용 프로그램을 빌드할 수 있습니다.
 
 MSBuild 사용 방법에 대한 자세한 내용은 [MSBuild](https://docs.microsoft.com/visualstudio/msbuild/msbuild) 콘텐츠를 참조하세요.
 
-### <a name="using-visual-studio-team-services"></a>Visual Studio Team Services 사용
+## <a name="building-from-visual-studio-team-services"></a>Visual Studio Team Services에서 빌드
 
 * [Xamarin 앱 빌드](https://www.visualstudio.com/docs/build/apps/mobile/xamarin)
 * [Xamarin과의 연속 통합](https://developer.xamarin.com/guides/cross-platform/ci/)

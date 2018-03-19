@@ -6,11 +6,11 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 2d17a952c58e5ef7e593ee7aeb1980e09a376800
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 6ef9084e5cd571c0f3f2b60e2c08d8d7bb0b8518
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="customizing-the-build-system"></a>빌드 시스템 사용자 지정
 
@@ -26,17 +26,18 @@ MSBuild는 소스 파일 등의 입력 집합을 사용하여 작동하며, 실�
 MSBuild는 프로젝트 파일이라는 XML 파일을 사용합니다. 이 파일은 프로젝트의 일부인 *항목*(예: 이미지 리소스)과 프로젝트를 빌드하는 데 필요한 *속성*을 정의합니다. 이 프로젝트 파일의 파일 확장명은 C# 프로젝트의 `.csproj`와 같이 항상 `proj`로 끝납니다. 
 
 ### <a name="viewing-the-msbuild-file"></a>MSBuild 파일 보기
-프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **찾기에 표시**를 선택하면 이 파일을 찾을 수 있습니다. 아래 그림과 같이 `.csproj` 파일을 비롯하여 프로젝트와 관련된 모든 파일과 폴더가 표시됩니다.
+
+프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **찾기에 표시**를 선택하여 MSBuild 파일을 찾습니다. 찾기 창에는 다음 이미지와 같이 `.csproj` 파일을 비롯하여 프로젝트와 관련된 모든 파일과 폴더가 표시됩니다.
 
 ![](media/customizing-build-system-image1.png)
 
-프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **도구 > 파일 편집**으로 이동하면 Mac용 Visual Studio의 새 탭에서 `.csproj`를 표시할 수도 있습니다.
+Mac용 Visual Studio의 새 탭에서 `.csproj`를 표시하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **도구 > 파일 편집**으로 이동합니다.
 
 ![](media/customizing-build-system-image2.png)
 
 ### <a name="composition-of-the-msbuild-file"></a>MSBuild 파일의 컴퍼지션
 
-아래 그림과 같이 모든 MSBuild 파일에는 필수 루트 `Project` 요소가 포함되어 있습니다.
+모든 MSBuild 파일에는 다음과 같이 필수 루트 `Project` 요소가 포함되어 있습니다.
 
 ```
 <?xml version="1.0" encoding="utf-8"?>
@@ -44,7 +45,7 @@ MSBuild는 프로젝트 파일이라는 XML 파일을 사용합니다. 이 파�
 </Project>
 ```
 
-일반적으로 프로젝트는 다양한 파일을 처리하고 빌드하는 방법을 설명하는 많은 규칙이 포함된 `.targets` 파일도 가져옵니다. 대체로 `proj` 파일의 아래쪽에 표시되며, C# 프로젝트의 경우 다음과 같이 표시됩니다.
+일반적으로 프로젝트는 `.targets` 파일도 가져옵니다. 이 파일에는 다양한 파일을 처리하고 빌드하는 방법을 설명하는 많은 규칙이 포함되어 있습니다. 가져오기는 일반적으로 `proj` 파일의 아래쪽에 표시되며, C# 프로젝트의 경우 다음과 같이 표시됩니다.
 
 ```
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
@@ -54,15 +55,15 @@ MSBuild는 프로젝트 파일이라는 XML 파일을 사용합니다. 이 파�
 
 ### <a name="items-and-properties"></a>항목 및 속성
 
-MSBuild에는 두 가지 기본적인 데이터 형식인 *항목* 및 *속성*이 있습니다. 두 데이터 형식은 아래에서 자세히 설명합니다.
+MSBuild에는 두 가지 기본적인 데이터 형식인 ‘항목’ 및 ‘속성’이 있습니다. 두 데이터 형식은 다음 섹션에서 자세히 설명합니다.
 
 #### <a name="properties"></a>속성
 
 속성은 키/값 쌍으로, 컴파일러 옵션 등 컴파일에 영향을 주는 설정을 저장하는 데 사용됩니다.
 
-PropertiesGroup을 사용하여 설정되며, 임의 개수의 속성을 포함하는 임의 개수의 PropertiesGroup을 포함할 수 있습니다. 
+PropertyGroup을 사용하여 설정되며, 임의 개수의 속성을 포함하는 임의 개수의 PropertiesGroup을 포함할 수 있습니다. 
 
-예를 들어 간단한 콘솔 응용 프로그램의 PropertyGroup은 다음과 같이 표시될 수 있습니다.
+예를 들어, 간단한 콘솔 응용 프로그램의 PropertyGroup은 다음 XML과 같이 표시될 수 있습니다.
 
 ```
 <PropertyGroup>
@@ -84,7 +85,7 @@ PropertiesGroup을 사용하여 설정되며, 임의 개수의 속성을 포함�
 
 `ItemGroup`을 선언하여 항목을 만듭니다. 임의 개수의 항목을 포함하는 임의 개수의 ItemGroup이 있을 수 있습니다. 
 
-예를 들어 아래 코드 조각에서는 iOS 시작 화면을 만듭니다. 시작 화면은 `BundleResource` 형식이고, 사양은 이미지 경로입니다.
+예를 들어, 다음 코드 조각은 iOS 시작 화면을 만듭니다. 시작 화면에는 사양이 이미지 경로로 지정된 빌드 형식 `BundleResource`가 있습니다.
 
 ```
  <ItemGroup>

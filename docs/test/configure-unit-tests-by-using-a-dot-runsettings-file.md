@@ -8,15 +8,15 @@ manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c0808635d0cd471f0fdaeb00e970ffde94a279c6
-ms.sourcegitcommit: 873c0e1a31def013bcca1b0caa0eb0249de89bec
+ms.openlocfilehash: f10870096697341081904c4dac9540d72823e52f
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/05/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings* 파일을 사용하여 단위 테스트 구성
 
-*.runsettings* 파일을 사용하여 Visual Studio의 단위 테스트를 구성할 수 있습니다. 예를 들어, 테스트가 실행되는 .NET Framework 버전, 테스트 결과가 전달되는 디렉터리 및 테스트 실행 중에 수집된 데이터를 변경할 수 있습니다.
+*.runsettings* 파일을 사용하여 Visual Studio의 단위 테스트를 구성할 수 있습니다. 예를 들어, 테스트가 실행되는 .NET Framework 버전, 테스트 결과 디렉터리 또는 테스트 실행 중에 수집되는 데이터를 변경할 수 있습니다.
 
 > [!NOTE]
 > 확장명으로 '.runsettings'를 사용하면 파일 이름은 아무런 상관이 없습니다.
@@ -57,6 +57,10 @@ ms.lasthandoff: 03/05/2018
 
     <!-- Path to Test Adapters -->
     <TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>
+  
+     <!--TestSessionTimeout is only available with Visual Studio 2017 version 15.5 and higher -->
+     <!-- Specify timeout in milliseconds. A valid value should be greater than 0 -->
+     <TestSessionTimeout>10000</TestSessionTimeout>
   </RunConfiguration>
 
   <!-- Configurations for data collectors -->
@@ -129,6 +133,7 @@ ms.lasthandoff: 03/05/2018
 |`TreatTestAdapterErrorsAsWarnings`|False|false, true|
 |`TestAdaptersPaths`||TestAdapters가 있는 디렉터리에 대한 하나 또는 여러 경로|
 |`MaxCpuCount`|1|이 설정은 단위 테스트를 실행하는 경우 시스템에서 사용 가능한 코어를 사용하여 병렬 테스트 실행의 정도를 제어합니다. 테스트 실행 엔진이 사용 가능한 각 코어에서 별도의 프로세스로 시작되며, 실행할 테스트가 있는 컨테이너를 각 코어에 제공합니다. 컨테이너는 어셈블리, DLL 또는 관련 아티팩트일 수 있습니다. 테스트 컨테이너는 예약 단위입니다. 각 컨테이너에서 테스트는 테스트 프레임워크에 따라 실행됩니다. 많은 컨테이너가 있는 경우 프로세스가 컨테이너 내의 테스트 실행을 마치면 사용 가능한 다음 컨테이너가 제공됩니다.<br /><br /> MaxCpuCount는 다음과 같을 수 있습니다.<br /><br /> n, 여기서 1 < = n < = 코어 수에 해당하며 최대 n개의 프로세스가 시작됩니다.<br /><br /> n, 여기서 n = 다른 모든 값이 되며, 시작되는 프로세스의 수는 컴퓨터에서 사용 가능한 코어 수까지입니다.|
+|`TestSessionTimeout`||사용자가 지정된 시간 제한을 초과하는 테스트 세션을 종료할 수 있도록 합니다. 시간 제한을 설정하면 리소스가 효율적으로 사용되고 테스트 세션이 설정된 시간으로 제한됩니다. 이 설정은 **Visual Studio 2017 버전 15.5** 이상에서 사용할 수 있습니다.
 
 ### <a name="diagnostic-data-adapters-data-collectors"></a>진단 데이터 어댑터(데이터 수집기)
 

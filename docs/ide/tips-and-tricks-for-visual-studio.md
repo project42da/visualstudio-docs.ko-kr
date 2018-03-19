@@ -1,26 +1,26 @@
 ---
 title: "Visual Studio 바로 가기 키 | Microsoft Docs"
-ms.custom: 
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: article
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 779867243bc30c26e1fce9260ddf497a9fcf193e
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 81c4c0957642b97b3d6e88107d98b293a5d09328
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="keyboard-tips-for-visual-studio"></a>Visual Studio 키보드 팁
 
-이 항목에 나온 바로 가기 키를 사용하여 Visual Studio에서 쉽게 이동할 수 있습니다. 이 항목은 사용 가능한 바로 가기 키의 하위 집합일 뿐입니다. 더 자세한 목록은 [Visual Studio의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요. 접근성을 위해 Visual Studio를 최적화하는 방법에 대한 자세한 내용은 [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)을 참조하세요.
+이 문서에 있는 바로 가기 키를 사용하여 Visual Studio에서 쉽게 이동할 수 있습니다.
+
+여기에 나열된 바로 가기 키는 사용 가능한 바로 가기 키의 하위 집합일 뿐입니다. 더 자세한 목록은 [Visual Studio의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
+
+접근성을 위해 Visual Studio를 최적화하는 방법에 대한 자세한 내용은 [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)을 참조하세요.
 
 ## <a name="window-management"></a>창 관리
 
@@ -83,7 +83,7 @@ ms.lasthandoff: 02/19/2018
 |편집기 확대/축소|Ctrl+Shift+>(확대), Ctrl+Shift+<(축소)||
 |블록 선택|Alt 키를 누른 채 마우스를 끌기, Shift+Alt+화살표 키||
 |위/아래로 줄 이동|Alt+위쪽 화살표/Alt+아래쪽 화살표||
-|중복된 줄|Ctrl+E,V|Visual Studio 2017 버전 15.6 미리 보기 2|
+|중복된 줄|Ctrl+E,V|Visual Studio 2017 버전 15.6|
 |선택 영역 확장|**Shift**+**Alt**+**=**|Visual Studio 2017 15.5 버전|
 |선택 영역 축소|**Shift**+**Alt**+**-**|Visual Studio 2017 15.5 버전|
 |정의로 이동|F12||

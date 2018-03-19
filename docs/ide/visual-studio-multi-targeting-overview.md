@@ -1,10 +1,11 @@
 ---
 title: "Visual Studio에서 .NET Framework 대상 지정 | Microsoft Docs"
 ms.custom: 
-ms.date: 01/18/2018
+ms.date: 02/06/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-general
+ms.technology:
+- vs-ide-general
 ms.tgt_pltfrm: 
 ms.topic: article
 helpviewer_keywords:
@@ -16,12 +17,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: e4b68e5d7b7e63e76a2291eba6d81eb581756845
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- dotnet
+ms.openlocfilehash: e78f77993c510a223056696c0beac27147d18d5a
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio 멀티 타기팅 개요
 
@@ -48,7 +50,7 @@ Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework�
 
 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]의 이전 버전을 대상으로 지정하는 프로젝트 관련 작업을 할 경우 Visual Studio에서는 다음과 같이 개발 환경을 동적으로 변경합니다.
 
-- **새 프로젝트** 대화 상자, **새 항목 추가** 대화 상자, **새 참조 추가** 대화 상자 및 **서비스 참조 추가** 대화 상자에서 항목을 필터링하여 대상 버전에서 사용할 수 없는 선택 항목을 생략합니다.
+- **새 항목 추가** 대화 상자, **새 참조 추가** 대화 상자 및 **서비스 참조 추가** 대화 상자에서 항목을 필터링하여 대상 버전에서 사용할 수 없는 선택 항목을 생략합니다.
 
 - **도구 상자**에서 사용자 지정 컨트롤을 필터링하여 대상 버전에서 사용할 수 없는 컨트롤을 제거하고 여러 컨트롤을 사용할 수 있을 경우에는 가장 최신 컨트롤만 표시합니다.
 
@@ -65,7 +67,11 @@ Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework�
 
 ## <a name="selecting-a-target-framework-version"></a>대상 프레임워크 버전 선택
 
-프로젝트를 만들 때 **새 프로젝트** 대화 상자에서 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전을 선택합니다. 사용 가능한 프로젝트 템플릿 목록은 선택에 따라 필터링됩니다. 기존 프로젝트의 경우 [프로젝트 속성] 대화 상자에서 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전을 변경할 수 있습니다. 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.
+프로젝트를 만들 때 **새 프로젝트** 대화 상자에서 대상 .NET Framework 버전을 선택합니다. 사용 가능한 프레임워크 목록에는 선택한 템플릿 유형에 적용 가능한 설치된 프레임워크 버전이 포함됩니다. .NET Framework가 필요하지 않은 템플릿 유형의 경우(예: .NET Core 템플릿), **Framework** 드롭다운 목록이 숨겨집니다.
+
+![새 프로젝트 대화 상자의 Framework 드롭다운](media/vside-newproject-framework.png)
+
+기존 프로젝트의 경우 [프로젝트 속성] 대화 상자에서 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전을 변경할 수 있습니다. 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.
 
 ## <a name="resolving-system-and-user-assembly-references"></a>시스템 및 사용자 어셈블리 참조 확인
 

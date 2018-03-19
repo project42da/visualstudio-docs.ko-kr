@@ -6,27 +6,27 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
-ms.openlocfilehash: f0192b63c76fe4c3fe51c0f5aa6700e072fb80d4
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: bbc2f70f0d6774269f481cad5571dd9b78bac2da
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="customizing-the-ide"></a>IDE 사용자 지정
 
-Mac용 Visual Studio를 다양한 방식으로 사용자 지정하여 사용자가 효율성과 미적 요구를 모두 충족하는 환경에서 앱을 개발하도록 할 수 있습니다. 이 항목에서는 Mac용 Visual Studio를 요구에 맞게 조정할 수 있는 여러 가지 방법을 살펴봅니다.
+Mac용 Visual Studio를 다양한 방식으로 사용자 지정하여 사용자가 효율성과 미적 요구를 모두 충족하는 환경에서 앱을 개발하도록 할 수 있습니다. 이 문서에서는 Mac용 Visual Studio를 요구에 맞게 조정할 수 있는 여러 가지 방법을 살펴봅니다.
 
 ## <a name="dark-theme"></a>어두운 테마
 
 ![어두운 테마 보기](media/customizing-the-ide-image7a.png)
 
-아래 스크린샷과 같이 **Visual Studio > 기본 설정... > 환경 > 비주얼 스타일**로 이동한 다음 **사용자 인터페이스 테마** 드롭다운에서 원하는 테마를 선택하면 Mac용 Visual Studio에서 테마를 전환할 수 있습니다.
+다음 이미지와 같이 **Visual Studio > 기본 설정... > 환경 > 비주얼 스타일**로 이동한 다음, **사용자 인터페이스 테마** 드롭다운에서 원하는 테마를 선택하면 Mac용 Visual Studio에서 테마를 전환할 수 있습니다.
 
  ![어두운 테마 선택](media/customizing-the-ide-image7b.png)
 
 ## <a name="localization"></a>지역화
 
-Mac용 Visual Studio는 더 많은 개발자가 액세스할 수 있도록 13개 언어로 지역화되어 있습니다. 현재 사용할 수 있는 언어는 다음과 같습니다.
+Mac용 Visual Studio는 더 많은 개발자가 액세스할 수 있도록 다음 13개 언어로 지역화되어 있습니다.
 
 * 중국어 - 중국
 * 중국어 - 대만
@@ -42,29 +42,29 @@ Mac용 Visual Studio는 더 많은 개발자가 액세스할 수 있도록 13개
 * 스페인어
 * 터키어
 
-Mac용 Visual Studio에 표시되는 언어를 변경하려면 아래 스크린샷과 같이 **Visual Studio > 기본 설정... > 환경 > 비주얼 스타일**로 이동한 다음 **사용자 인터페이스 언어** 드롭다운에서 원하는 언어를 선택합니다.
+Mac용 Visual Studio에 표시되는 언어를 변경하려면 다음 이미지와 같이 **Visual Studio > 기본 설정... > 환경 > 비주얼 스타일**로 이동한 다음, **사용자 인터페이스 언어** 드롭다운에서 원하는 언어를 선택합니다.
 
 
 ![언어 선택](media/customizing-the-ide-image11a.png)
 
 ## <a name="author-information"></a>작성자 정보
 
-작성자 정보 패널에서는 아래 그림과 같이 이름, 전자 메일 주소, 작업의 저작권 소유자, 회사, 상표 등 자신과 관련된 정보를 추가할 수 있습니다.
+작성자 정보 패널에서는 이름, 전자 메일 주소, 작업의 저작권 소유자, 회사, 상표 등 자신과 관련된 정보를 추가할 수 있습니다.
 
  ![작성자 정보 섹션 편집](media/customizing-the-ide-image9a.png)
 
-이 정보는 Mac용 Visual Studio에서 만든 새 파일에 추가할 수 있는 라이선스 등의 표준 파일 헤더를 채우는 데 사용됩니다.
+이 정보는 새 파일에 추가할 수 있는 라이선스 등의 표준 파일 헤더를 채우는 데 사용됩니다.
 
  ![표준 헤더 옵션](media/customizing-the-ide-image8a.png)
 
 
-채워진 **이름** 및 **전자 메일** 필드는 Mac용 Visual Studio에서 버전 제어를 통해 수행된 모든 커밋에 정보를 추가하는 데 사용됩니다. 이러한 필드를 채우지 않은 경우 버전 제어를 사용하려고 할 때 Mac용 Visual Studio에서 필드를 채우라는 메시지를 표시합니다.
+채워진 **이름** 및 **전자 메일** 필드는 Mac용 Visual Studio에서 버전 제어를 통해 수행된 모든 커밋에 사용됩니다. 이러한 필드를 채우지 않은 경우 버전 제어를 사용하려고 할 때 Mac용 Visual Studio에서 필드를 채우라는 메시지를 표시합니다.
 
 ## <a name="key-bindings"></a>키 바인딩
 
 키 바인딩을 사용하면 Mac용 Visual Studio 전반에 걸쳐 보다 효율적으로 이동할 수 있도록 개발 환경을 조정할 수 있습니다. Mac용 Visual Studio에서는 Visual Studio(Windows), ReSharper, Visual Studio Code, Xcode 등 널리 사용되는 IDE에 대한 친숙한 키 바인딩을 제공합니다.
 
-아래 그림과 같이 **Visual Studio > 기본 설정... > 환경 > 키 바인딩**으로 이동하면 키 바인딩을 설정할 수 있습니다.
+다음 이미지와 같이 **Visual Studio > 기본 설정... > 환경 > 키 바인딩**으로 이동하면 키 바인딩을 설정할 수 있습니다.
 
  ![키 바인딩 설정](media/customizing-the-ide-image10a.png)
 
@@ -72,13 +72,13 @@ Mac용 Visual Studio에 표시되는 언어를 변경하려면 아래 스크린�
 
 ## <a name="workspace-layout"></a>작업 영역 레이아웃
 
-Mac용 Visual Studio 작업 영역은 주 문서 영역(일반적으로 편집기, 디자이너 화면 또는 옵션 파일)으로 구성되고, 응용 프로그램 파일 액세스 및 관리, 테스트, 디버그에 유용한 정보를 포함하는 무료 *패드*로 둘러싸여 있습니다.
+Mac용 Visual Studio 작업 영역은 주 문서 영역(일반적으로 편집기, 디자이너 화면 또는 옵션 파일)으로 구성되고, 응용 프로그램 파일 액세스 및 관리, 테스트, 디버그에 유용한 정보를 포함하는 무료 ‘패드’로 둘러싸여 있습니다.
 
  ![작업 영역 레이아웃](media/customizing-the-ide-image1a.png)
 
 ### <a name="viewing-and-arranging-pads"></a>패드 보기 및 정렬
 
-Mac용 Visual Studio에서 새 솔루션이나 파일을 열면 아래 그림과 같이 Solution Pad, 문서 개요, 오류 등 여러 가지 *패드*가 작업 영역에 표시됩니다.
+Mac용 Visual Studio에서 새 솔루션이나 파일을 열면 Solution Pad, 문서 개요, 오류 등 여러 가지 ‘패드’가 작업 영역에 표시됩니다.
 
 ![Solution Pad](media/customizing-the-ide-image2a.png)
 
@@ -103,7 +103,7 @@ Mac용 Visual Studio에서는 추가 정보, 도구, 탐색 보조 기능 등이
 
 항상 표시되는 패드는 현재 컨텍스트에 따라 달라집니다. 예를 들면 비주얼 디자이너를 사용할 때는 도구 상자 및 속성 표 패드가 가장 중요합니다. 디버그할 때는 스택 및 지역 변수를 보기 위한 디버거 패드가 있어야 유용합니다.
 
-열린 패드의 상태는 *레이아웃*으로 표시됩니다. 아래 그림과 같이 보기 메뉴를 통해 수동으로 레이아웃을 전환할 수도 있고, 디버그, 스토리보드 열기 등의 작업을 수행할 때 자동으로 전환되기도 합니다.
+열린 패드의 상태는 ‘레이아웃’으로 표시됩니다. 다음 이미지와 같이 보기 메뉴를 통해 수동으로 레이아웃을 전환할 수도 있고, 디버그, 스토리보드 열기 등의 작업을 수행할 때 자동으로 전환되기도 합니다.
 
 ![새 레이아웃 선택](media/customizing-the-ide-image6b.png)
 
@@ -118,7 +118,7 @@ Mac용 Visual Studio에서는 추가 정보, 도구, 탐색 보조 기능 등이
 
 Mac용 Visual Studio에서는 텍스트 편집기를 Side-by-Side로 열거나 편집기를 분리된 부동 창으로 표시할 수 있습니다.
 
-아래 그림과 같이 편집기 영역의 가장자리 중 하나로 편집기 탭을 끌거나 **보기 > 편집기 열 > 2열**을 선택하면 보기 메뉴 항목을 통해 2열 모드를 사용하도록 설정할 수 있습니다.
+편집기 영역의 가장자리 중 하나로 편집기 탭을 끌거나 **보기 > 편집기 열 > 2열**을 선택하면 보기 메뉴 항목을 통해 2열 모드를 사용하도록 설정할 수 있습니다.
 
  ![2열 Side-by-Side 모드](media/customizing-the-ide-sbs.png)
 

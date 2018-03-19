@@ -1,19 +1,19 @@
 ---
-title: "프로젝트에서 참조 관리"
+title: "Mac용 Visual Studio에서 프로젝트의 참조 관리 | Microsoft Docs"
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 4AD51385-B0A8-4BA7-B2D4-BF2BD167A142
-ms.openlocfilehash: 30f6c99c6ac827b7da94fd228a7034e9ce0b0fac
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 99f3ba9e5192bc17df23a93c9cad7e953797e9b4
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="managing-references-in-a-project"></a>프로젝트에서 참조 관리
 
-Mac용 Visual Studio에서는 프로젝트에 참조를 추가하기 위한 3가지 방법을 제공합니다.
+Mac용 Visual Studio에서는 프로젝트에 참조를 추가하기 위한 두 가지 방법을 제공합니다.
 
 ![프로젝트 참조](media/projects-and-solutions-image10.png)
 
@@ -21,7 +21,6 @@ Mac용 Visual Studio에서는 프로젝트에 참조를 추가하기 위한 3가
 
 * 참조
 * NuGets(패키지 폴더를 통해 추가)
-* 구성 요소
 
 또한 모든 프로젝트에 웹 참조 및 네이티브 참조를 추가할 수 있습니다.
 

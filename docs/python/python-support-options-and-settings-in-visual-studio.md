@@ -2,7 +2,7 @@
 title: "Visual Studio의 Python 옵션 및 설정 | Microsoft Docs"
 description: "Python 코드 및 프로젝트와 관련된 Visual Studio의 다양한 설정에 대한 참조입니다."
 ms.custom: 
-ms.date: 02/21/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,6 +16,7 @@ f1_keywords:
 - VS.ToolsOptionsPages.Python_Tools.General
 - VS.ToolsOptionsPages.Python_Tools.Debugging
 - VS.ToolsOptionsPages.Python_Tools.Diagnostics
+- VS.ToolsOptionsPages.Python_Tools.Experimental
 - VS.ToolsOptionsPages.Python_Tools.Interactive_Windows
 - VS.ToolsOptionsPages.Text_Editor.Python.Advanced
 author: kraigb
@@ -24,11 +25,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 25e0540c376017bfc3f3a64d23bbc6963942bb5c
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 9bb1316d46f252721230ce4ac1b14f4304693445
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="options-for-python-in-visual-studio"></a>Visual Studio의 Python 옵션
 
@@ -36,19 +37,21 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 
 ![Python 옵션 대화 상자, 일반 탭](media/options-general.png)
 
-또한 **텍스트 편집기 > Python > 고급** 탭에 Python과 관련된 추가 옵션도 있습니다.
+**텍스트 편집기 > Python > 고급** 탭과 **환경 > 글꼴 및 색** 탭의 “텍스트 편집기” 그룹 내에 추가 Python 관련 옵션이 있습니다.
 
 > [!Note]
 > **실험적** 그룹은 아직 개발 중인 기능에 대한 옵션을 포함하며 여기서는 설명하지 않습니다. 종종 [Microsoft 블로그의 Python 엔지니어링](https://blogs.msdn.microsoft.com/pythonengineering/)의 포스트에 논의됩니다.
 
 ## <a name="general-options"></a>일반 옵션
 
+( **도구 > 옵션 > Python** 탭)
+
 | 옵션 | 기본 | 설명 |
 | --- | --- | --- |
 | 가상 환경을 만들 때 출력 창 표시| 켜기 | 출력 창이 표시되지 않도록 하려면 선택 취소합니다. |
 | 패키지를 설치하거나 제거할 때 출력 창 표시 | 켜기 | 출력 창이 표시되지 않도록 하려면 선택 취소합니다. |
 | 항상 관리자로 pip 실행 | 끄기 | 항상 모든 환경에 대해 `pip install` 작업 권한을 상승합니다. 패키지를 설치할 때 환경이 `c:\Program Files`와 같은 파일 시스템의 보호된 영역에 있을 경우 Visual Studio에서 관리자 권한을 확인하는 메시지를 표시합니다. 해당 메시지에서 하나의 환경에 대해서만 항상 `pip install` 권한을 상승하도록 선택할 수 있습니다. [패키지 탭](python-environments-window-tab-reference.md#packages-tab)을 참조하세요. |
-| 처음 사용할 때 완성 DB 자동 생성 | 켜기 | [IntelliSense 완성](editing-python-code-in-visual-studio.md#intellisense) 기능이 라이브러리에 대해 작동하려면 Visual Studio에서 해당 라이브러리에 대한 완성 데이터베이스를 생성해야 합니다. 데이터베이스 작성은 라이브러리를 설치할 때 백그라운드에서 수행되지만 코드 작성을 시작할 때 완료되지 않았을 수 있습니다. 이 옵션을 선택하면 데이터베이스를 사용하는 코드를 작성할 때 Visual Studio에서 라이브러리에 대한 데이터베이스 완성에 우선 순위를 지정합니다. |
+| 처음 사용할 때 완성 DB 자동 생성 | 켜기 | Visual Studio 2017 버전 15.5 및 이전 버전과 IntelliSense 데이터베이스를 사용하는 경우 이후 버전에 적용됩니다. 데이터베이스를 사용하는 코드를 작성할 때 라이브러리에 대한 데이터베이스 완성에 우선 순위를 지정합니다. 자세한 내용은 [환경 창 참조 - Intellisense 탭](python-environments-window-tab-reference.md)을 참조하세요. |
 | 시스템 전체 PYTHONPATH 변수 무시 | 켜기 | Visual Studio에서 환경 및 프로젝트에 검색 경로를 지정하는 보다 직접적인 수단을 제공하기 때문에 PYTHONPATH는 기본적으로 무시됩니다. 자세한 내용은 [검색 경로](search-paths.md)를 참조하세요. |
 | 연결된 파일을 추가할 때 검색 경로 업데이트 | 켜기 | 설정된 경우 [연결된 파일](managing-python-projects-in-visual-studio.md#linked-files)을 프로젝트에 추가하면 IntelliSense가 연결된 파일의 폴더 내용을 완성 데이터베이스에 포함할 수 있도록 [검색 경로](search-paths.md)가 업데이트됩니다. 이러한 내용을 완성 데이터베이스에서 제외하려면 이 옵션의 선택을 취소합니다. |
 | 가져온 모듈을 찾을 수 없으면 경고 표시 | 켜기 | 가져온 모듈을 현재 사용할 수 없지만 달리 코드 작업에 영향을 주지 않음을 알고 있는 경우 경고를 무시하려면 이 옵션의 선택을 취소합니다. |
@@ -59,6 +62,8 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 ![Python 옵션 대화 상자, 일반 탭](media/options-general.png)
 
 ## <a name="debugging-options"></a>디버깅 옵션
+
+( **도구 > 옵션 > Python > 디버깅** 탭)
 
 | 옵션 | 기본 | 설명 |
 | --- | --- | --- |
@@ -72,6 +77,8 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 
 ## <a name="diagnostics-options"></a>진단 옵션
 
+( **도구 > 옵션 > Python > 진단** 탭)
+
 | 옵션 | 기본 | 설명 |
 | --- | --- | --- |
 | 분석 로그 포함 | 켜기 | 진단을 파일에 저장하거나 단추를 사용하여 클립보드에 복사할 경우 설치된 Python 환경의 분석과 관련된 세부 로그를 포함합니다. 이 옵션으로 생성된 파일의 크기가 늘어나고 IntelliSense 문제를 자주 진단해야 합니다. |
@@ -81,6 +88,8 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 ![Python 옵션 대화 상자, 진단 탭](media/options-diagnostics.png)
 
 ## <a name="interactive-windows-options"></a>대화형 Windows 옵션
+
+( **도구 > 옵션 > Python > 대화형 창** 탭)
 
 | 옵션 | 기본 | 설명 |
 | --- | --- | --- |
@@ -92,6 +101,8 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 ![Python 옵션 대화 상자, 대화형 창 탭](media/options-interactive-windows.png)
 
 ## <a name="advanced-python-editor-options"></a>고급 Python 편집기 옵션
+
+( **도구 > 옵션 > 텍스트 편집기 > Python > 고급** 탭)
 
 ### <a name="completion-results"></a>완료 결과
 
@@ -105,7 +116,7 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 
 | 옵션 | 기본 | 설명 |
 | --- | --- | --- |
-| 다음 문자를 입력하면 커밋됨 | {}[]().,:;+-*/%&&#124;^~=<>#@\ | 일반적으로 이러한 문자는 완성 목록에서 선택할 수 있는 식별자 다음에 오므로 문자를 입력해서 완료를 커밋하는 것이 편리합니다. 필요에 따라 목록에 특정 문자를 추가하거나 제거할 수 있습니다.  |
+| 다음 문자를 입력하면 커밋됨 | `{}[]().,:;+-*/%&&#124;^~=<>#@\` | 일반적으로 이러한 문자는 완성 목록에서 선택할 수 있는 식별자 다음에 오므로 문자를 입력해서 완료를 커밋하는 것이 편리합니다. 필요에 따라 목록에 특정 문자를 추가하거나 제거할 수 있습니다.  |
 | Enter 키를 눌러 현재 완료 커밋 | 켜기 | 설정하면 Enter 키를 누를 때 위의 문자와 마찬가지로 현재 선택한 완료가 선택 및 적용됩니다. 물론, Enter 키에 대한 문자는 없으므로 해당 목록에 직접 포함할 수는 없습니다. |
 | 단어를 모두 입력한 후 Enter 키를 누르면 새 줄 추가 | 끄기 | 기본적으로 완성 팝업에 표시되는 전체 단어를 입력하고 Enter 키를 누르면 해당 완료가 커밋됩니다. 이 옵션을 설정하면 식별자 입력을 마칠 때 실제로 완료가 커밋되고 Enter 키를 누를 때 새 줄이 삽입되도록 합니다. |
 
@@ -118,3 +129,11 @@ Python 옵션을 보려면 **도구 > 옵션** 메뉴 명령을 사용하고 **�
 | 형식에 따라 이름에 색 지정 | 켜기 | Python 코드에서 구문 색 지정을 사용하도록 설정합니다. |
 
 ![Python 편집기 옵션 대화 상자, 고급 탭](media/options-editor-advanced.png)
+
+## <a name="fonts-and-colors-options"></a>글꼴 및 색 옵션
+
+( **환경 > 글꼴 및 색** 탭의 “텍스트 편집기” 그룹 내)
+
+Python 옵션의 이름은 모두 “Python”으로 시작하며 이해하기 쉽습니다. 모든 Visual Studio 색 테마의 기본 글꼴은 10pt Consolas 보통 글꼴(굵은 글꼴 아님)입니다. 기본 색은 테마에 따라 다릅니다. 일반적으로 기본 설정으로 텍스트를 읽기 어려운 경우 글꼴 또는 색을 변경합니다.
+
+![Python 글꼴 및 색 옵션](media/options-fonts-and-colors.png)

@@ -17,15 +17,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7ee982a1068f2ea89299b75ca825f7a7c1c4e6b0
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 1f18ba5e7ce44766262851f68c829c887bfc9581
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="using-ipython-in-the-interactive-window"></a>대화형 창에서 IPython 사용
 
-IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고급 대화형 개발 환경으로, 대화형 병렬 컴퓨팅 기능을 지원합니다. 이 항목에서는 일반적인 [대화형 창](python-interactive-repl-in-visual-studio.md) 기능도 모두 사용할 수 있는 Visual Studio 대화형 창에서 IPython을 사용하는 과정을 안내합니다.
+IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고급 대화형 개발 환경으로, 대화형 병렬 컴퓨팅 기능을 지원합니다. 이 문서에서는 일반적인 [대화형 창](python-interactive-repl-in-visual-studio.md) 기능도 모두 사용할 수 있는 Visual Studio 대화형 창에서 IPython을 사용하는 과정을 단계별로 안내합니다.
 
 이 연습에서는 IPython 및 필요한 라이브러리를 포함하는 [Anaconda](https://www.continuum.io) 환경이 설치되어 있어야 합니다.
 
@@ -83,7 +83,7 @@ IPython 모드의 Visual Studio 대화형 창은 사용자에게 친숙한 고�
 
 IPython에는 시스템 셸로 이스케이프, 변수 대체, 캡처 출력과 같은 다른 여러 유용한 기능이 있습니다. 자세한 내용은 [IPython 설명서](http://ipython.org/documentation.html)를 참조하세요.
 
-## <a name="related-topics"></a>관련 항목
+## <a name="related-articles"></a>관련 문서
 
 - 설치하지 않고 쉽게 Jupyter를 사용하려면 노트북을 유지하고 다른 사용자와 공유할 수 있도록 해주는 무료 [Azure Notebook 호스티드 서비스](https://notebooks.azure.com/)를 시도해보세요.
 

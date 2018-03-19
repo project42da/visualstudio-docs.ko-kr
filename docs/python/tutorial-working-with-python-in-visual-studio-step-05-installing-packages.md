@@ -1,8 +1,8 @@
 ---
 title: "Visual Studio에서 Python 작업, 5단계, 패이지 설치 | Microsoft Docs"
-description: "Python 환경에서 패키지를 관리하는 Visual Studio의 기능을 보여 주는 Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 5단계입니다."
+description: "Python 환경에서 패키지를 관리하는 Visual Studio의 기능을 보여주는 Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 5단계입니다."
 ms.custom: 
-ms.date: 01/16/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: bb0890d5f9433e1f73039e4036b884d7bfcb7933
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d633ce061d0624c44060c5e059cf9b29733260d9
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="step-5-installing-packages-in-your-python-environment"></a>5단계: Python 환경에서 패키지 설치
 
@@ -44,19 +44,21 @@ Python 개발자 커뮤니티에서는 사용자 소유의 프로젝트에 통�
   ![환경에 matplotlib 설치](media/environments-add-matplotlib1.png)
 
 1. 메시지가 표시되면 권한 상승에 동의하여 수행합니다.
- 
-1. 패키지가 설치된 후 Python 환경 창에 나타납니다. 패키지의 오른쪽에 있는 **X**를 누르면 제거됩니다. 
+
+1. 패키지가 설치된 후 Python 환경 창에 나타납니다. 패키지의 오른쪽에 있는 **X**를 누르면 제거됩니다.
 
   ![환경에 matplotlib 설치 완료](media/environments-add-matplotlib2.png)
 
   환경 아래에 있는 작은 진행률 표시줄은 Visual Studio에서 새로 설치된 패키지에 대한 IntelliSense 데이터베이스를 빌드 중임을 나타냅니다. **IntelliSense** 탭에 더 자세한 정보가 표시됩니다. 해당 데이터베이스가 완료될 때까지 자동 완성 및 구문 검사와 같은 IntelliSense 기능은 해당 패키지에 대한 편집기에서 활성화되지 않습니다.
 
+  **Visual Studio 2017 버전 15.6** 이상에서는 IntelliSense 작업에 다른 더 빠른 방법을 사용하며, 그러한 목적으로 **IntelliSense** 탭에 메시지를 표시합니다.
+
 1. **파일 > 새로 만들기 > 프로젝트**로 새 프로젝트를 만들면서 “Python 응용 프로그램” 템플릿을 선택합니다. 표시되는 코드 파일에서 이전 자습서 단계와 같이 코사인 웨이브를 만드는, 이번에만 도표로 표시된 다음 코드를 붙여넣습니다.
 
     ```python
+    from math import radians
     import numpy as np     # installed with matplotlib
     import matplotlib.pyplot as plt
-    from math import radians
 
     def main():
         x = np.arange(0, radians(1800), radians(12))

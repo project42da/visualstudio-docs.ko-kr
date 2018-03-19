@@ -18,20 +18,20 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: e5d5cbc856a6af44941d690119f2a15a8acc3d41
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 0f0910459fecb01573b7282137949acbfd5dcb32
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/)는 브라우저를 통해 액세스한 사이트, 고유한 클라이언트에서 사용된 REST API, 이벤트 트리거된 처리 등 웹앱용 Platform-as-a-Service 제품입니다. App Service는 Python을 사용한 앱 구현을 완벽하게 지원합니다.
 
-사용자 지정이 가능한 Azure App Service의 Python 지원은 각각 특정 버전의 Python 런타임이 포함된 App Service *사이트 확장* 집합으로 제공됩니다. 이 항목에 설명된 대로 원하는 모든 패키지를 해당 환경에 직접 설치할 수 있습니다. App Service 자체에서 환경을 사용자 지정하면 웹 앱 프로젝트에서 패키지를 유지 관리하거나 앱 코드로 업로드할 필요가 없습니다.
+사용자 지정이 가능한 Azure App Service의 Python 지원은 각각 특정 버전의 Python 런타임이 포함된 App Service *사이트 확장* 집합으로 제공됩니다. 이 문서에 설명된 대로 원하는 모든 패키지를 해당 환경에 직접 설치할 수 있습니다. App Service 자체에서 환경을 사용자 지정하면 웹 앱 프로젝트에서 패키지를 유지 관리하거나 앱 코드로 업로드할 필요가 없습니다.
 
 > [!Tip]
-> 기본적으로 App Service는 서버의 루트 폴더에 Python 2.7 및 Python 3.4가 설치되어 있지만, 이러한 환경에서 패키지를 사용자 지정하거나 설치할 수도 없고, 현재 상태에 의존할 수도 없습니다. 대신 이 항목에 설명된 대로 사용자가 제어하는 사이트 확장을 사용해야 합니다.
+> 기본적으로 App Service는 서버의 루트 폴더에 Python 2.7 및 Python 3.4가 설치되어 있지만, 이러한 환경에서 패키지를 사용자 지정하거나 설치할 수도 없고, 현재 상태에 의존할 수도 없습니다. 대신 이 문서에 설명된 대로 직접 제어하는 사이트 확장을 사용해야 합니다.
 
 > [!Important]
 > 여기서 설명한 프로세스는 변경될 수 있으며, 특히 개선될 수 있습니다. 변경 내용은 [Python Engineering at Microsoft](https://blogs.msdn.microsoft.com/pythonengineering/)(Microsoft의 Python 엔지니어링) 블로그에 공지됩니다.

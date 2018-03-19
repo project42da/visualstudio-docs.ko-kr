@@ -1,7 +1,7 @@
 ---
 title: "RemoveDuplicates 작업 | Microsoft Docs"
 ms.custom: 
-ms.date: 11/04/2016
+ms.date: 03/01/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology: msbuild
@@ -24,11 +24,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: b735b706ec7c258e168c75dcfd8b456df23a021e
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ce3271b84d4d6bbb4f7905294d0c9fad678c1b8f
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="removeduplicates-task"></a>RemoveDuplicates 작업
 지정된 항목 컬렉션에서 중복된 항목을 제거합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
   
 |매개 변수|설명|  
 |---------------|-----------------|  
-|`Filtered`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 모든 중복 항목이 제거된 항목 컬렉션을 포함합니다.|  
+|`Filtered`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 출력 매개 변수입니다.<br /><br /> 모든 중복 항목이 제거된 항목 컬렉션을 포함합니다. 입력 항목의 순서는 보존되므로 각 중복 항목의 첫 번째 인스턴스를 유지합니다.|  
 |`Inputs`|선택적 <xref:Microsoft.Build.Framework.ITaskItem>`[]` 매개 변수입니다.<br /><br /> 중복 항목을 제거할 항목 컬렉션입니다.|  
   
 ## <a name="remarks"></a>설명  
@@ -70,7 +70,30 @@ ms.lasthandoff: 02/09/2018
     </Target>  
 </Project>  
 ```  
+
+ 다음 예제는 `RemoveDuplicates` 작업에서 입력 순서가 보존됨을 보여줍니다. 작업이 완료되면 `FilteredItems` 항목 컬렉션에 “MyFile2.cs”, “MyFile1.cs” 및 “MyFile3.cs” 항목이 순서대로 포함됩니다.  
   
+```xml  
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+  
+    <ItemGroup>  
+        <MyItems Include="MyFile2.cs"/>  
+        <MyItems Include="MyFile1.cs" />  
+        <MyItems Include="MyFile3.cs" />  
+        <MyItems Include="myfile1.cs"/>  
+    </ItemGroup>  
+  
+    <Target Name="RemoveDuplicateItems">  
+        <RemoveDuplicates  
+            Inputs="@(MyItems)">  
+            <Output  
+                TaskParameter="Filtered"  
+                ItemName="FilteredItems"/>  
+        </RemoveDuplicates>  
+    </Target>  
+</Project>  
+```  
+
 ## <a name="see-also"></a>참고 항목  
  [작업 참조](../msbuild/msbuild-task-reference.md)   
  [MSBuild 개념](../msbuild/msbuild-concepts.md)   

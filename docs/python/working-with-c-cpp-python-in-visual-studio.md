@@ -18,11 +18,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f87e5ac67a547a45b8c7519c96131623686a0866
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 1b2f570a75be94c3bff4b38a6d0641e3ecbce2f2
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python용 C++ 확장 만들기
 
@@ -32,11 +32,11 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 - 래퍼 모듈: 래퍼는 기존 C/C++ 인터페이스를 Python 코드에 노출하거나 Python에서 사용하기 쉬운 보다 “Python” 최적화된 API를 노출합니다.
 - 하위 수준 시스템 액세스 모듈: CPython 런타임, 운영 체제 또는 기본 하드웨어의 하위 수준 기능에 액세스하기 위해 만들었습니다.
 
-이 문서에서는 쌍곡 탄젠트를 계산하고 Python 코드에서 호출하는 CPython용 C++ 확장을 빌드하는 방법에 대해 설명합니다. C++에서 동일한 루틴을 구현할 경우의 관련된 성능 향상을 보여 주기 위해 Python에서 먼저 루틴을 구현합니다.
+이 문서에서는 쌍곡 탄젠트를 계산하고 Python 코드에서 호출하는 CPython용 C++ 확장을 빌드하는 방법에 대해 설명합니다. C++에서 동일한 루틴을 구현할 경우의 관련된 성능 향상을 보여주기 위해 Python에서 먼저 루틴을 구현합니다.
 
 여기에서 사용된 방법은 [Python 설명서](https://docs.python.org/3/c-api/)에 설명된 대로 표준 CPython 확장용입니다. 이 방법과 다른 방법의 비교는 이 문서의 끝에 있는 [대체 방법](#alternative-approaches)에 설명되어 있습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - 기본 옵션과 함께 설치된 **C++를 사용한 데스크톱 개발** 및 **Python 개발** 워크로드를 모두 사용하는 Visual Studio 2017.
 - **Python 개발** 워크로드에서 **Python 네이티브 개발 도구** 오른쪽에 있는 상자를 선택합니다. 이 옵션은 이 문서에 설명된 대부분의 구성을 설정합니다. 이 옵션에는 C++ 워크로드도 자동으로 포함됩니다.
@@ -231,7 +231,7 @@ Python에서 DLL을 사용할 수 있도록 설정하는 방법은 두 가지가
 
 Python 프로젝트와 C++ 프로젝트가 같은 솔루션에 있는 경우 첫 번째 방법을 사용할 수 있습니다. 솔루션 탐색기로 이동하여 Python 프로젝트에서 **참조** 노드를 마우스 오른쪽 단추로 클릭한 다음, **참조 추가**를 선택합니다. 나타나는 대화 상자에서 **프로젝트** 탭을 선택하고 **superfastcode** 프로젝트(또는 사용 중인 이름)를 선택한 다음 **확인**을 선택합니다.
 
-다음 단계에 설명된 두 번째 방법은 다른 Python 프로젝트에서도 사용 가능하도록 모듈을 전역 Python 환경에 설치합니다. (이 경우 일반적으로 해당 환경에 대한 IntelliSense 완성 데이터베이스를 새로 고쳐야 합니다. 환경에서 모듈을 제거하는 경우에도 새로 고침이 필요합니다.)
+다음 단계에 설명된 두 번째 방법은 다른 Python 프로젝트에서도 사용 가능하도록 모듈을 전역 Python 환경에 설치합니다. (이 경우 Visual Studio 2017 버전 15.5 및 이전 버전에서는 일반적으로 해당 환경에 대한 IntelliSense 완성 데이터베이스를 새로 고쳐야 합니다. 환경에서 모듈을 제거하는 경우에도 새로 고침이 필요합니다.)
 
 1. Visual Studio 2017을 사용하고 있는 경우 Visual Studio 설치 관리자를 실행하고 **수정**을 선택한 다음 **개별 구성 요소 > 컴파일러, 빌드 도구 및 런타임 > Visual C++ 2015.3 v140 toolset**(Visual C++ 2015.3 v140 도구 집합)를 선택합니다. 이 단계가 필요한 이유는 Python(Windows용) 자체는 Visual Studio 2015(버전 14.0)로 빌드되며 여기에 설명된 메서드를 통해 확장을 빌드할 경우 이러한 도구를 사용할 수 있다고 예상하기 때문입니다. (Python의 32비트 버전을 설치하고 DLL 대상을 x64가 아닌 Win32로 지정해야 할 수 있습니다.)
 

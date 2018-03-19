@@ -6,19 +6,19 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: 2f6c06ff640007f28cfaed6512fdedc5dcb16e65
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a8e32df2248f53a2b46a971b025b1138abba5101
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="setting-up-a-git-repository"></a>Git 리포지토리 설정
 
 Git은 모든 팀원이 동일한 문서를 동시에 작업할 수 있는 분산형 버전 제어 시스템입니다. 즉, 모든 파일을 포함하는 단일 서버가 있더라도 이 중앙 소스에서 리포지토리를 체크 아웃할 때마다 리포지토리 전체가 로컬 컴퓨터에 복제됩니다.
 
-Git를 사용한 버전 제어를 제공하는 원격 호스트는 많지만 가장 일반적인 것은 GitHub입니다. 다음 예제에서는 GitHub 호스트를 사용하지만, Mac용 Visual Studio에서 어떤 Git 호스트를 사용해도 버전 제어를 수행할 수 있습니다.
+Git을 사용한 버전 제어를 제공하는 원격 호스트는 많지만 가장 일반적인 호스트는 GitHub입니다. 다음 예제에서는 GitHub 호스트를 사용하지만, Mac용 Visual Studio에서 어떤 Git 호스트를 사용해도 버전 제어를 수행할 수 있습니다.
 
-GitHub를 사용하려면 계정을 만들고 구성한 다음 아래의 단계를 수행하세요. 
+GitHub를 사용하려면 계정을 만들고 구성한 다음, 이 문서의 단계를 수행하세요. 
 
 ## <a name="creating-a-remote-repo-on-github"></a>GitHub에서 원격 리포지토리 만들기
 
@@ -34,20 +34,22 @@ Git 리포지토리를 설정하려면 다음 단계를 수행하세요.
 
     ![Git 리포지토리 세부 사항 설정](media/version-control-git2.png)
 
-3. 다음 장소에서는 방금 만든 리포지토리에 대한 HTTPS 또는 SSH 주소를 표시하고 복사하는 옵션을 제공합니다.
+3. 다음 페이지에서는 직접 만든 리포지토리에 대한 HTTPS 또는 SSH 주소를 표시하고 복사하는 옵션을 제공합니다.
 
-    ![주소 보기 및 복사](media/version-control-git3.png) 이 리포지토리에 Mac용 Visual Studio를 지정하려면 HTTPS 주소가 필요합니다.
+    ![주소 보기 및 복사](media/version-control-git3.png)
+
+  Mac용 Visual Studio에서 이 리포지토리를 가리키려면 HTTPS 주소가 필요합니다.
 
 
 ## <a name="publishing-an-existing-project"></a>기존 프로젝트 게시
 
 4. Mac용 Visual Studio의 열린 프로젝트로 돌아옵니다. 
 
-5. 메뉴 모음에서 **버전 제어 > 버전 제어에서 게시...**를 선택합니다.
+5. 메뉴 모음에서 **버전 제어 > 버전 제어에서 게시...**를 선택하여 **리포지토리 선택** 대화 상자를 표시합니다.
 
     ![Mac용 Visual Studio에서 체크 아웃 시작](media/version-control-git4-sml.png)
 
-6. 이렇게 하면 **리포지토리 선택** 대화 상자가 표시됩니다. **등록된 리포지토리** 탭을 선택하고 **추가** 단추를 클릭합니다.
+6. **등록된 리포지토리** 탭을 선택하고 **추가** 단추를 클릭합니다.
 
     ![](media/version-control-git5.png)
 
@@ -57,23 +59,23 @@ Git 리포지토리를 설정하려면 다음 단계를 수행하세요.
 
     SSH를 사용하여 Git에 연결할 수도 있습니다.
 
-8. Git에 앱을 게시하려면 방금 만든 리포지토리를 선택하고 **모듈 이름**과 **메시지** 텍스트 필드를 작성했는지 확인합니다.
+8. Git에 앱을 게시하려면 리포지토리를 선택하고 **모듈 이름** 및 **메시지** 텍스트 필드가 둘 다 입력되었는지 확인합니다.
 
     ![Git에 프로젝트 게시](media/version-control-git7.png)
 
 9. **확인**을 클릭한 다음 경고 대화 상자에서 **게시**를 클릭합니다.
 
-10. Mac용 Visual Studio 기본 설정에서 Git 자격 증명을 입력하지 않았으면 지금 입력합니다. 우선 암호 대신 사용할 액세스 토큰을 만들어야 합니다. 액세스 토큰을 만들려면 Git [액세스 토큰](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) 설명서의 단계를 따르세요.
+10. Mac용 Visual Studio 기본 설정에서 Git 자격 증명을 입력하지 않았으면 지금 입력합니다. 우선 암호 대신 사용할 액세스 토큰을 만들어야 합니다. 액세스 토큰을 만들지 않은 경우에는 Git [액세스 토큰](https://help.github.com/articles/creating-an-access-token-for-command-line-use/) 설명서의 단계를 따르세요.
 
 11. 사용자 이름과 개인용 액세스 토큰을 입력하고 **확인**을 누릅니다.
 
     ![Git에 대한 사용자 이름 및 암호 입력](media/version-control-git9-sml.png)
 
-12. 몇 초 후 솔루션이 초기 커밋과 함께 게시될 것입니다. [버전 제어] 메뉴 항목을 탐색하여 이를 확인합니다. 이제 [버전 제어] 메뉴 항목이 다음과 같이 다양한 옵션으로 채워져 있을 것입니다. 
+12. 몇 초 후에 솔루션이 초기 커밋과 함께 게시됩니다. [버전 제어] 메뉴 항목을 찾아 게시되었는지 확인합니다. 이제 [버전 제어] 메뉴 항목이 다음과 같이 다양한 옵션으로 채워져 있어야 합니다. 
 
     ![버전 제어 메뉴](media/version-control-git10.png)
 
-13. 추가적인 변경 작업을 시작한 경우, **변경 내용 푸시...**를 선택하여 **원격** 리포지토리로 변경 내용을 푸시합니다. 이렇게 하면 github.com에서 해당하는 모든 사용자가 변경 사항을 볼 수 있습니다. 
+13. 추가적인 변경 작업을 시작한 경우, **변경 내용 푸시...**를 선택하여 변경 내용을 **원격** 리포지토리로 푸시합니다. 이렇게 하면 github.com에서 해당하는 모든 사용자가 변경 사항을 볼 수 있습니다. 
 
     ![원격 리포지토리에 변경 사항 푸시](media/version-control-git11.png)
 

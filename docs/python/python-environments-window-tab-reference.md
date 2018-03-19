@@ -2,7 +2,7 @@
 title: "Python 환경 창 참조 - Visual Studio | Microsoft Docs"
 description: "Visual Studio의 [Python 환경] 창에 나타나는 각 탭에 대한 세부 정보입니다."
 ms.custom: 
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 92d5014c257cf35e556eca1928e1c5612f4913eb
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 13d84eb160b4ba82d4a03d48fe814cb0d92388b0
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="python-environments-window-tabs-reference"></a>Python 환경 창 탭 참조
 
@@ -55,7 +55,7 @@ ms.lasthandoff: 02/23/2018
 
 시작 스크립트에는 가져오기, 함수 정의 등을 포함하여 대화형 창에서 자동으로 로드하고 실행하는 코드가 포함됩니다. 이러한 스크립트는 다음 두 가지 방법으로 참조됩니다.
 
-1. 환경을 설치할 때 Visual Studio는 `Documents\Visual Studio 2017\Python Scripts\<environment>` 폴더를 만듭니다. 여기서 &lt;environment&gt'는 환경 이름과 일치합니다. **대화형 스크립트 탐색** 명령을 사용하여 환경 관련 폴더를 쉽게 탐색할 수 있습니다. 해당 환경에 대한 대화형 창을 시작하면 여기서 발견된 `.py` 파일이 사전순으로 로드 및 실행됩니다.
+1. 환경을 설치할 때 Visual Studio는 `Documents\Visual Studio 2017\Python Scripts\<environment>` 폴더를 만듭니다. 여기서 &lt;environment&gt;는 환경 이름과 일치합니다. **대화형 스크립트 탐색** 명령을 사용하여 환경 관련 폴더를 쉽게 탐색할 수 있습니다. 해당 환경에 대한 대화형 창을 시작하면 여기서 발견된 `.py` 파일이 사전순으로 로드 및 실행됩니다.
 
 1. **도구 > 옵션 > Python 도구 > 대화형 Windows** 탭([대화형 windows 옵션](python-support-options-and-settings-in-visual-studio.md#interactive-windows-options) 참조)에 있는 **스크립트** 컨트롤은 모든 환경에서 로드 및 실행되는 시작 스크립트에 대한 추가 폴더를 지정하기 위한 것입니다. 그러나 이 기능은 현재 작동하지 않습니다.
 
@@ -80,9 +80,17 @@ ms.lasthandoff: 02/23/2018
 
 또한 이전 버전에서 “pip”로 레이블이 지정됩니다.
 
-환경에 설치된 패키지를 관리하여 종속성을 비롯한 새 패키지를 검색 및 설치할 수 있습니다. 검색을 수행하면 현재 설치된 패키지 및 [PyPI](https://pypi.python.org)가 필터링됩니다. 검색 상자에 `--user` 또는 `--no-deps` 등의 플래그를 포함하여 `pip install` 명령을 직접 입력할 수도 있습니다.
+환경에 설치된 패키지를 관리하여 종속성을 비롯한 새 패키지를 검색 및 설치할 수 있습니다.
 
-![Python 환경 패키지 탭](media/environments-pip-tab.png)
+이미 설치된 패키지는 패키지 업데이트(위쪽 화살표) 및 제거(원 안의 X) 컨트롤과 함께 표시됩니다.
+
+![Python 환경 패키지 탭](media/environments-pip-tab-controls.png)
+
+검색 용어를 입력하면 설치된 패키지 및 PyPI에서 설치할 수 있는 패키지 목록이 필터링됩니다.
+
+![“num” 검색이 있는 Python 환경 패키지 탭](media/environments-pip-tab.png)
+
+검색 상자에 `--user` 또는 `--no-deps` 등의 플래그를 포함하여 `pip install` 명령을 직접 입력할 수도 있습니다.
 
 패키지를 설치하면 파일 시스템에서 환경의 `Lib` 폴더 안에 하위 폴더가 생성됩니다. 예를 들어 `c:\Python36`에 Python 3.6이 설치되어 있는 경우 패키지는 `c:\Python36\Lib`에 설치됩니다. `c:\Program Files\Anaconda3`에 Anaconda3이 설치되어 있는 경우 패키지는 `c:\Program Files\Anaconda3\Lib`에 설치됩니다.
 
@@ -102,7 +110,9 @@ IntelliSense 완성 데이터베이스의 현재 상태를 보여줍니다.
 
 ![Python 환경 IntelliSense 탭](media/environments-intellisense-tab.png)
 
-데이터베이스에는 모든 환경의 라이브러리에 대한 메타데이터가 포함되며 IntelliSense 속도가 향상되고 메모리 사용량이 줄어듭니다. Visual Studio에서 새 환경을 검색하거나 사용자가 환경을 추가하면 라이브러리 소스 파일을 분석하여 데이터베이스 컴파일을 자동으로 시작합니다. 이 프로세스는 설치된 항목에 따라 1분에서 1시간 또는 그 이상이 소요될 수 있습니다. (예를 들어 Anaconda에는 많은 라이브러리가 함께 제공되며 데이터베이스를 컴파일하는 데 다소 시간이 소요됩니다.) 완료되면 자세한 IntelliSense를 얻게 되며 더 많은 라이브러리를 설치할 때까지 데이터베이스를 다시 새로 고치지 않아도 됩니다(**DB 새로 고침** 단추 사용).
+**Visual Studio 2017 버전 15.5** 및 이전 버전에서 IntelliSense 완성은 해당 라이브러리에 대해 컴파일된 데이터베이스에 따라 달라집니다. 데이터베이스 빌드는 라이브러리를 설치할 때 백그라운드에서 수행되지만 시간이 걸릴 수 있으며, 코드 작성을 시작할 때 완료되지 않았을 수도 있습니다. **Visual Studio 2017 버전 15.6** 이상에서는 더 빠른 방법을 사용하여 구체적으로 사용하도록 설정하지 않는 한, 데이터베이스에 종속되지 않는 완료를 제공합니다.
+
+Visual Studio에서 새 환경을 검색하거나 사용자가 환경을 추가하면 라이브러리 소스 파일을 분석하여 데이터베이스 컴파일을 자동으로 시작합니다. 이 프로세스는 설치된 항목에 따라 1분에서 1시간 또는 그 이상이 소요될 수 있습니다. (예를 들어 Anaconda에는 많은 라이브러리가 함께 제공되며 데이터베이스를 컴파일하는 데 다소 시간이 소요됩니다.) 완료되면 자세한 IntelliSense를 얻게 되며 더 많은 라이브러리를 설치할 때까지 데이터베이스를 다시 새로 고치지 않아도 됩니다(**DB 새로 고침** 단추 사용).
 
 컴파일되지 않은 데이터에 대한 라이브러리는 **!**로 표시되며 환경의 데이터베이스가 완료되지 않은 경우 주 환경 목록에서 데이터베이스 옆에도 **!** 가 표시됩니다.
 
@@ -110,5 +120,5 @@ IntelliSense 완성 데이터베이스의 현재 상태를 보여줍니다.
 
 - [Visual Studio에서 Python 환경 관리](managing-python-environments-in-visual-studio.md)
 - [프로젝트의 인터프리터 선택](selecting-a-python-environment-for-a-project.md)
-- [종속성에 대해 requirements.txt 사용](managing-required-packages-with-requirements-txt.md) 
+- [종속성에 대해 requirements.txt 사용](managing-required-packages-with-requirements-txt.md)
 - [검색 경로](search-paths.md)

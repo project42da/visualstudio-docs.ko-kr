@@ -1,8 +1,8 @@
 ---
 title: "Visual Studio에서 Python 응용 프로그램용 프로젝트 관리 | Microsoft Docs"
-description: "Visual Studio의 프로젝트 용도를 설명하고, Python 코드용 프로젝트를 만들고 관리하는 방법을 보여 주고, Python에 사용할 수 있는 다양한 프로젝트 템플릿을 간략하게 설명합니다."
+description: "Visual Studio의 프로젝트 용도를 설명하고, Python 코드용 프로젝트를 만들고 관리하는 방법을 보여주고, Python에 사용할 수 있는 다양한 프로젝트 템플릿을 간략하게 설명합니다."
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 005a3a2ae46154dbf532aacefe5316aacbbaeaf7
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: d996c99104e0a5d6b2e1acdb44273679a3998658
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="python-projects"></a>Python 프로젝트
 
@@ -52,13 +52,15 @@ Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿�
 각 Python 프로젝트에는 솔루션 탐색기에서 굵게 표시된 시작 파일이 하나씩 할당되어 있습니다. 시작 파일은 디버깅을 시작하거나(F5 또는  **디버그 > 디버깅 시작**) 대화형 창에서 프로젝트를 실행할 때(Shift+Alt+F5 또는 **디버그 > Python Interactive에서 프로젝트 실행**) 실행됩니다. 파일을 변경하려면 새 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
 
 > [!Tip]
-> 프로젝트에서 선택한 시작 파일을 제거하고 새 시작 파일을 선택하지 않은 경우에 프로젝트를 실행하면 Python 출력 창이 나타났다가 거의 바로 사라집니다. 이 동작이 발생할 경우 할당된 시작 파일이 있는지 확인합니다. 또한 이러한 경우 출력 창을 열어 두려면 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**을 선택하고, **디버그** 탭을 선택한 다음 `-i`를 **인터프리터 인수** 필드에 추가합니다. 이 인수를 사용하면 프로그램이 완료된 후 인터프리터가 대화형 모드로 전환되어 창이 열린 상태로 유지되며 Ctrl+Z, Enter 키를 누르면 종료됩니다.
+> 프로젝트에서 선택한 시작 파일을 제거하고 새 시작 파일을 선택하지 않으면 프로젝트를 실행하려고 할 때 Visual Studio에서 시작할 Python 파일을 알 수 없습니다. 이 경우 Visual Studio 2017 버전 15.6 이상에서는 오류가 표시되고, 이전 버전에서는 Python 인터프리터를 실행하는 출력 창이 열리거나 출력 창이 표시된 후 거의 즉시 사라집니다. 이러한 동작이 발생할 경우 할당된 시작 파일이 있는지 확인합니다.
+>
+> 어떤 이유로든 출력 창을 열어 두려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택한 다음, **디버그** 탭을 선택하고 **인터프리터 인수** 필드에 `-i`를 추가합니다. 이 인수를 사용하면 프로그램이 완료된 후 인터프리터가 대화형 모드로 전환되어 창이 열린 상태로 유지되며 Ctrl+Z, Enter 키를 누르면 종료됩니다.
 
 새 프로젝트는 항상 기본 글로벌 Python 환경과 연결됩니다. 프로젝트를 다른 환경(가상 환경 포함)과 연결하려면 프로젝트의 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고, **Python 환경 추가/제거**를 선택하고, 원하는 항목을 선택합니다. 활성 상태의 환경을 변경하려면 원하는 환경을 마우스 오른쪽 단추로 클릭하고 아래 표시된 것처럼 **환경 활성화**를 선택합니다. 자세한 내용은 [프로젝트의 환경 선택](selecting-a-python-environment-for-a-project.md)을 참조하세요.
 
 ![Python 프로젝트에 대한 환경 활성화](media/projects-activate-environment.png)
 
-<a name="project-types"</a>
+<a name="project-types"></a>
 
 ## <a name="project-templates"></a>프로젝트 템플릿
 

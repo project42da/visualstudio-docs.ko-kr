@@ -6,19 +6,19 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 61EAAB8F-3C32-4574-924F-CFC616604089
-ms.openlocfilehash: 46338778813b73dbc87458f90cfe0548bd8ccb8a
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 95aa6abeb5a64158fe0ef0ed2b64392108248523
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="managing-app-resources"></a>앱 리소스 관리
 
-이미지, 텍스트 파일 및 오디오 파일과 같은 앱 리소스 파일은 응용 프로그램과 함께 컴파일되지는 않지만 응용 프로그램의 필수 요소입니다. Mac용 Visual Studio에서 지원하는 각 플랫폼은 이러한 형식의 파일을 각자 다른 방법으로 처리합니다. Mac용 Visual Studio에서 앱 리소스를 처리하는 방법에 대한 자세한 내용은 아래의 가이드를 참조하세요.
+이미지, 텍스트 파일 및 오디오 파일과 같은 앱 리소스 파일은 응용 프로그램에 필요하지만 응용 프로그램과 함께 컴파일되지 않습니다. Mac용 Visual Studio에서 지원되는 플랫폼은 다음 가이드에 설명된 대로 이러한 리소스를 각기 다른 방식으로 처리합니다.
 
 ## <a name="xamarinforms"></a>Xamarin.Forms
 
-Xamarin.Forms 코드는 각자 자체적인 파일 시스템을 지닌 여러 개의 플랫폼에서 실행됩니다. 따라서 각 플랫폼에서 원시 파일 API를 사용하거나 파일을 포함 리소스로 추가하여 파일 읽기와 쓰기를 수행할 수 있습니다.
+Xamarin.Forms 코드는 여러 플랫폼에서 실행됩니다. 각 플랫폼에는 고유한 파일 시스템이 있고, 각 파일 시스템이 파일을 읽고 쓰는 방법을 제어합니다. Xamarin.Forms에서는 각 플랫폼에서 네이티브 파일 API를 사용하거나 포함된 리소스로 파일을 추가하여 앱 리소스를 관리할 수 있습니다.
 
 * [이미지 작업](https://developer.xamarin.com/guides/xamarin-forms/user-interface/images/)
 * [파일 작업]( https://developer.xamarin.com/guides/xamarin-forms/application-fundamentals/files/)

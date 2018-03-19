@@ -9,13 +9,14 @@ ms.tgt_pltfrm:
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 author: gewarren
-ms.openlocfilehash: 57a33ce473cd82fcb6fb8517d7003c8772c1d4da
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: c0cd7853c65d5501213076cb7ccb533c5134c9f4
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="install-third-party-unit-test-frameworks"></a>타사 단위 테스트 프레임워크 설치
 Visual Studio 테스트 탐색기는 탐색기의 어댑터 인터페이스를 개발한 단위 테스트 프레임워크를 실행할 수 있습니다. 프레임워크 설치 프로그램은 이진 파일을 설치하고, 지원하는 언어의 Visual Studio 프로젝트 템플릿을 추가합니다. 템플릿으로 프로젝트를 만들면 프레임워크가 테스트 탐색기에 등록됩니다. Visual Studio 솔루션에는 다양한 프레임워크를 사용하고 다양한 언어로 대상이 지정되는 단위 테스트 프로젝트가 포함될 수 있습니다. 테스트 탐색기는 이들 모두를 실행합니다.  
@@ -56,7 +57,24 @@ Visual Studio 테스트 탐색기는 탐색기의 어댑터 인터페이스를 �
   
 3.  **범주** 목록(**표시 중**으로 레이블 지정됨)에서 **도구** 노드를 확장하고 **테스트**를 선택합니다.  
   
-4.  결과 목록에서 프레임워크를 선택하여 해당 도구의 Visual Studio Marketplace 페이지로 이동합니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [코드 단위 테스트](../test/unit-test-your-code.md)
+4.  결과 목록에서 프레임워크를 선택하여 해당 도구의 Visual Studio Marketplace 페이지로 이동합니다. 
+
+## <a name="update-to-the-latest-test-adapters"></a>최신 테스트 어댑터로 업데이트
+
+테스트 검색 및 실행을 향상하려면 안정적인 최신 테스트 어댑터로 업데이트합니다. MSTest, NUnit 및 xUnit 테스트 어댑터의 업데이트에 대한 자세한 내용은 [Visual Studio 블로그](https://blogs.msdn.microsoft.com/visualstudio/2017/11/16/test-experience-improvements/)를 참조하세요.
+
+### <a name="to-update-to-the-latest-stable-test-adapter-version"></a>안정적인 최신 테스트 어댑터 버전으로 업데이트하려면
+
+1. **도구 > NuGet 패키지 관리자 > 솔루션에 대한 NuGet 패키지 관리**로 이동하여 솔루션에 대한 Nuget 패키지 관리자를 엽니다.
+
+2. **업데이트** 탭을 클릭하고 설치된 NUnit 또는 xUnit 테스트 어댑터를 검색합니다.
+
+3. 각 테스트 어댑터를 선택한 다음, 드롭다운 메뉴에서 안정적인 최신 버전을 선택합니다.
+
+4. **설치** 단추를 선택합니다.
+
+![테스트 어댑터 업그레이드](media/installadapter-upgrade.png)
+
+## <a name="see-also"></a>참고 항목
+
+- [코드 단위 테스트](../test/unit-test-your-code.md)

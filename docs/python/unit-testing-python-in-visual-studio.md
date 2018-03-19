@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ac44ade848b4e423c1fcb253cf1867937f371719
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 55b99e2f572b075c1e9ab1658c8a02b3fdd5ea88
+ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/12/2018
 ---
 # <a name="setting-up-unit-testing-for-python-code"></a>Python 코드에 대해 단위 테스트 설정
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 02/19/2018
 
 Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설계하는 동안 시나리오를 검증합니다. Visual Studio의 Python 지원에는 테스트를 별도로 실행할 필요 없이 개발 프로세스 컨텍스트 내에서 단위 테스트 검색, 실행, 디버깅이 포함됩니다.
 
-이 항목에서는 Visual Studio에서 Python을 사용하여 단위 테스트를 수행하는 기능에 대해 간략히 설명합니다. 일반적인 단위 테스트에 대한 자세한 내용은 [코드 단위 테스트](../test/unit-test-your-code.md)를 참조하세요.
+이 문서에서는 Visual Studio에서 Python을 사용하여 유닛 테스트를 수행하는 기능에 대해 간략히 설명합니다. 일반적인 단위 테스트에 대한 자세한 내용은 [코드 단위 테스트](../test/unit-test-your-code.md)를 참조하세요.
 
 |   |   |
 |---|---|
@@ -43,22 +43,22 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 1. 이 작업은 표준 `unittest` 모듈을 가져오고 `unittest.TestCase`에서 테스트 클래스를 파생하며 스크립트를 직접 실행하는 경우 `unittest.main()`을 호출하는 코드가 있는 `test1.py` 파일을 만듭니다.
 
-  ```python
-  import unittest
+    ```python
+    import unittest
 
-  class Test_test1(unittest.TestCase):
-      def test_A(self):
-          self.fail("Not implemented")
+    class Test_test1(unittest.TestCase):
+        def test_A(self):
+            self.fail("Not implemented")
 
-  if __name__ == '__main__':
-      unittest.main()
-  ```
+    if __name__ == '__main__':
+        unittest.main()
+    ```
 
 1. 필요한 경우 파일을 저장한 다음 **테스트 > 창 > 테스트 탐색기** 메뉴 명령으로 테스트 탐색기를 엽니다.
 
 1. 테스트 탐색기는 프로젝트에서 테스트를 검색하고 아래와 같이 표시합니다. 테스트를 두 번 클릭하면 해당 소스 파일이 열립니다.
 
-    ![기본 test_A를 보여 주는 테스트 탐색기](media/unit-test-A.png)
+    ![기본 test_A를 보여주는 테스트 탐색기](media/unit-test-A.png)
 
 1. 프로젝트에 더 많은 테스트를 추가함에 따라 도구 모음의 그룹화 방법 메뉴를 사용하여 테스트 탐색기에서 보기를 구성할 수 있습니다.
 
@@ -82,7 +82,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
     ![test_A 성공 상태](media/unit-test-A-pass.png)
 
-- 실패한 테스트에는 빨간색 십자 표시와 콘솔 출력 및 테스트 실행의 `unittest` 출력을 보여 주는 **출력** 링크가 표시됩니다.
+- 실패한 테스트에는 빨간색 십자 표시와 콘솔 출력 및 테스트 실행의 `unittest` 출력을 보여주는 **출력** 링크가 표시됩니다.
 
     ![test_A 실패 상태](media/unit-test-A-fail.png)
 

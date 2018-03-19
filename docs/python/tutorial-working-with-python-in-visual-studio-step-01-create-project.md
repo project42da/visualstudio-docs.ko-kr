@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 17108b8ff993d88d2e5ed179c3167f43d2895d7f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 469494b2c0c4704ac1eab42d36934657adc2313d
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio에서 Python 작업
 
@@ -30,14 +30,14 @@ Python은 안정적이고 유연하며 배우기 쉬울뿐만 아니라 모든 �
 Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 자습서가 다음 단계를 안내합니다.
 
 - [0단계: 설치](tutorial-working-with-python-in-visual-studio-step-00-installation.md)
-- [1단계: Python 프로젝트 만들기(이 항목)](#step-1-create-a-new-python-project)
+- [1단계: Python 프로젝트 만들기(이 문서)](#step-1-create-a-new-python-project)
 - [2단계: 작업에서 Visual Studio IntelliSense를 표시하도록 코드 작성 및 실행](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)
 - [3단계: 대화형 REPL 창에서 더 많은 코드 만들기](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)
 - [4단계: Visual Studio 디버거에서 완성된 프로그램 실행](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 - [5단계: 패키지 설치 및 Python 환경 관리](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 - [6단계: Git 작업](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - Python 작업이 설치된 Visual Studio 2017 지침은 [0단계](tutorial-working-with-python-in-visual-studio-step-00-installation.md)를 참조하세요.
 
@@ -57,7 +57,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 
 1. **Python 응용 프로그램** 템플릿을 선택하고, 프로젝트 이름을 지정하고, **확인**을 선택합니다.
 
-1. 몇 분 후에 Visual Studio는 **솔루션 탐색기** 창(1)에 프로젝트 구조를 표시합니다. 기본 코드 파일은 편집기(2)에 열립니다. 디스크에서의 정확한 위치를 포함하여 솔루션 탐색기에서 선택한 모든 항목에 대한 추가 정보를 보여 주는 속성 창(3)도 표시됩니다.
+1. 몇 분 후에 Visual Studio는 **솔루션 탐색기** 창(1)에 프로젝트 구조를 표시합니다. 기본 코드 파일은 편집기(2)에 열립니다. 디스크에서의 정확한 위치를 포함하여 솔루션 탐색기에서 선택한 모든 항목에 대한 추가 정보를 보여주는 속성 창(3)도 표시됩니다.
 
     ![Python 프로젝트와 솔루션 탐색기](media/vs-getting-started-python-02-windows.png)
 

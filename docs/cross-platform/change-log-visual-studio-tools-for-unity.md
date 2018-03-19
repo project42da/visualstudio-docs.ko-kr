@@ -13,14 +13,107 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 40356c5d80ee8572b4e5a6e468b9abf2919524de
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: f80e5eb1d82fab7167e86550739faaaa19000786
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="change-log-visual-studio-tools-for-unity"></a>변경 로그(Visual Studio Tools for Unity)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.
+
+## <a name="3604"></a>3.6.0.4
+ 릴리스됨 2018-03-05
+
+### <a name="bug-fixes"></a>버그 수정
+
+-   **Project Generation:**
+
+    -   Mono 버전 검색이 수정되었습니다.
+
+-   **통합:**
+
+    -   2018.1 및 플러그 인 활성화의 타이밍 문제가 수정되었습니다.
+
+## <a name="3603"></a>3.6.0.3
+ 릴리스됨 2018-02-23
+
+### <a name="new-features"></a>새 기능
+
+-   **Project Generation:**
+
+    -   .NET Standard에 대한 지원이 추가되었습니다.
+
+### <a name="bug-fixes"></a>버그 수정
+
+-   **Project Generation:**
+
+    -   Unity 대상 프레임워크 검색이 수정 되었습니다.
+
+-   **디버거:**
+
+    -   사용자 코드 외부에서 throw된 예외로 인한 중단이 수정되었습니다.
+
+## <a name="3602"></a>3.6.0.2
+ 릴리스됨 2018-02-07
+
+### <a name="new-features"></a>새 기능
+
+-   **통합:**
+
+    -   2017.3의 UnityMessage API 표면을 업데이트합니다.
+
+### <a name="bug-fixes"></a>버그 수정
+
+-   **통합:**
+
+    -   외부 변경 시에만 프로젝트를 다시 로드합니다(제한 있음).
+ 
+## <a name="3601"></a>3.6.0.1
+ 릴리스됨 2018-01-24
+
+### <a name="bug-fixes"></a>버그 수정
+
+-   **통합:**
+
+    -   자동 pdb에서 mdb로의 디버그 기호 변환을 수정했습니다.
+    
+    -   배열 크기를 변경하는 동안 검사기에 영향을 주는 EditorPrefs.GetBool에 대한 간접 호출이 수정되었습니다.
+ 
+## <a name="3600"></a>3.6.0.0
+ 릴리스됨 2018-01-10
+
+### <a name="new-features"></a>새 기능
+
+-   **Project Generation:**
+
+    -   2018.1 MonoIsland 참조 모델에 대한 지원이 추가되었습니다.
+
+-   **평가:**
+
+    -   $exception 식별자에 대한 지원이 추가되었습니다.
+
+-   **디버거:**
+
+    -   새 Unity 런타임에 DebuggerHidden/DebuggerStepThrough 특성에 대한 지원이 추가되었습니다.
+    
+-   **마법사:**
+
+    -   ‘최신’ 버전의 마법사가 도입되었습니다.
+
+### <a name="bug-fixes"></a>버그 수정
+
+-   **Project Generation:**
+
+    -   플레이어 프로젝트에 대한 프로젝트 guid 계산이 수정되었습니다.
+
+-   **디버거:**
+
+    -   중단 이벤트 처리 경합이 수정되었습니다.
+    
+-   **마법사:**
+
+    -   메서드를 삽입하기 전에 roslyn 컨텍스트를 새로 고칩니다.
 
 ## <a name="3503"></a>3.5.0.3
  릴리스됨 2018-01-09

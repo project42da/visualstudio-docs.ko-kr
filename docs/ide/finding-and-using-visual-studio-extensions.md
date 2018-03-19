@@ -21,11 +21,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a03ba719aa93976713dfdc16c4770aa6ccca3b92
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: f3057ae7cf987c19e87329894249031b3af29806
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="find-and-use-visual-studio-extensions"></a>Visual Studio 확장 찾기 및 사용
 
@@ -73,7 +73,7 @@ Visual Studio Marketplace에서 새 버전을 사용할 수 있으면 사용자 
 
 **Visual Studio 2017 버전 15.3**의 새로운 기능으로, Visual Studio는 확장이 이전 세션 중 발생한 크래시와 관련된 것으로 의심되는 경우 사용자에게 알립니다. Visual Studio의 작동이 중단되면 Visual Studio에서는 예외 스택을 저장합니다. 다음번에 Visual Studio가 시작되면 Visual Studio에서는 리프로 시작하고 베이스로 진행하여 스택을 검사합니다. Visual Studio에서는 프레임이 설치되고 사용하도록 설정된 확장의 일부인 모듈에 속한다고 판단할 경우 알림을 표시합니다.
 
-**Visual Studio 2017 버전 15.6 미리 보기 3**의 새로운 기능으로, Visual Studio는 확장으로 인해 UI가 응답하지 않는다고 의심되는 경우 사용자에게 알립니다.
+**Visual Studio 2017 버전 15.6**의 새로운 기능으로, Visual Studio는 확장으로 인해 UI가 응답하지 않는다고 의심되는 경우 사용자에게 알립니다.
 
 이러한 알림이 표시되면 알림을 무시하거나 다음 작업 중 하나를 수행할 수 있습니다.
 

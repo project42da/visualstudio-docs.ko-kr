@@ -2,7 +2,7 @@
 title: "Visual Studio에서 Python 코드 편집 | Microsoft Docs"
 description: "Visual Studio에서 Python을 편집하는 경우 서식, Lint, 리팩터링과 함께 IntelliSense, 코드 조각 및 탐색 기능이 제공됩니다."
 ms.custom: 
-ms.date: 02/15/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e1e592d6fdb8fd7deb1e702513a932297a60e6ac
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: aae28ff5634dc59f2481140918b7ee19c29c4e1e
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="editing-python-code"></a>Python 코드 편집
 
@@ -39,7 +39,11 @@ Visual Studio 개체 브라우저(**보기 > 다른 창 > 개체 브라우저** 
 
 ## <a name="intellisense"></a>IntelliSense
 
-IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [요약 정보](#quick-info) 및 [코드 색 지정](#code-coloring)을 제공합니다. IntelliSense는 프로젝트의 각 Python 환경에 대해 생성된 완성 데이터베이스를 통해 성능을 향상시킵니다. 패키지를 추가, 제거 또는 업데이트할 경우 데이터베이스를 새로 고쳐야 할 수 있습니다. 데이터베이스 상태는 **Python 환경** 창(솔루션 탐색기의 형제)의 **IntelliSense** 탭에 표시됩니다([Python 환경 창 참조](python-environments-window-tab-reference.md#intellisense-tab) 참조).
+IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [요약 정보](#quick-info) 및 [코드 색 지정](#code-coloring)을 제공합니다.
+
+**Visual Studio 2017 버전 15.5** 및 이전 버전의 IntelliSense는 프로젝트의 각 Python 환경에 대해 생성된 완성 데이터베이스를 통해 성능을 향상합니다. 패키지를 추가, 제거 또는 업데이트할 경우 데이터베이스를 새로 고쳐야 할 수 있습니다. 데이터베이스 상태는 **Python 환경** 창(솔루션 탐색기의 형제)의 **IntelliSense** 탭에 표시됩니다([환경 창 참조](python-environments-window-tab-reference.md#intellisense-tab) 확인).
+
+**Visual Studio 2017 버전 15.6** 이상에서는 데이터베이스에 종속되지 않는 IntelliSense 완성을 제공하는 다른 방법을 사용합니다.
 
 ### <a name="completions"></a>완성
 
@@ -110,15 +114,41 @@ IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [�
 
 ## <a name="code-snippets"></a>코드 조각
 
-코드 조각은 바로 가기를 입력하고 Tab 키를 누르거나 **편집 > IntelliSense > 코드 조각 삽입** **코드 감싸기** 명령을 사용하여 파일에 삽입할 수 있는 코드의 부분입니다. 예를 들어 `class` 다음에 Tab 키를 입력하면 클래스의 나머지 부분이 생성됩니다. 이름과 베이스 목록을 입력하고, Tab 키를 사용하여 강조 표시된 필드 사이를 이동한 다음, Enter 키를 눌러 본문을 입력할 수 있습니다.
+코드 조각은 바로 가기를 입력하고 Tab 키를 누르거나 **편집 > IntelliSense > 코드 조각 삽입** 및 **코드 감싸기** 명령을 사용하고 **Python**을 선택한 다음, 원하는 코드 조각을 선택하여 파일에 삽입할 수 있는 코드의 조각입니다.
 
-![코드 조각](media/code-editing-code-snippets.png)
+예를 들어, `class`는 클래스 정의를 삽입하는 코드 조각의 바로 가기입니다. `class`를 입력하면 자동 완성 목록에 코드 조각이 표시됩니다.
 
-언어로 **Python**을 선택하여 코드 조각 관리자(**도구 > 코드 조각 관리자**)에서 사용 가능한 코드 조각을 볼 수 있습니다.
+![클래스 바로 가기의 코드 조각](media/code-editing-code-snippet-class.png)
+
+Tab 키를 누르면 나머지 클래스가 생성됩니다. 그런 다음, 이름과 베이스 목록을 입력하고, Tab 키를 사용하여 강조 표시된 필드 사이를 이동하고, Enter 키를 눌러 본문을 입력할 수 있습니다.
+
+![완성할 코드 조각 영역의 강조 표시](media/code-editing-code-snippets.png)
+
+### <a name="menu-commands"></a>메뉴 명령
+
+**편집 > IntelliSense > 코드 조각 삽입** 메뉴 명령을 사용하는 경우 먼저 “Python”을 선택한 다음, 코드 조각을 선택합니다.
+
+![코드 조각 삽입 명령을 통해 코드 조각 선택](media/code-editing-code-snippet-insert.png)
+
+**편집 > IntelliSense > 코드 감싸기** 명령도 텍스트 편집기의 현재 선택 내용을 선택한 구조 요소 안에 유사하게 배치합니다. 예를 들어, 다음과 같은 코드가 있다고 가정해 보세요.
+
+```python
+sum = 0
+for x in range(1, 100):
+    sum = sum + x
+```
+
+이 코드를 선택하고 **코드 감싸기** 명령을 선택하면 사용 가능한 코드 조각 목록이 표시됩니다. 목록에서 `def`를 선택하면 선택한 코드가 함수 정의 내에 배치되며, Tab 키를 사용하여 강조 표시된 함수 이름과 인수 간에 탐색할 수 있습니다.
+
+![코드 조각에 코드 감싸기 명령 사용](media/code-editing-code-snippet-surround-with.png)
+
+### <a name="examine-available-snippets"></a>사용 가능한 코드 조각 검사
+
+**도구 > 코드 조각 관리자** 메뉴 명령을 사용하고 언어로 **Python**을 선택하면 열리는 코드 조각 관리자에서 사용 가능한 코드 조각을 확인할 수 있습니다.
 
 ![코드 조각 관리자](media/code-editing-code-snippets-manager.png)
 
-사용자 고유의 코드 조각을 만들려면 [연습: 코드 조각 만들기](../ide/walkthrough-creating-a-code-snippet.md)를 참조하세요. 
+사용자 고유의 코드 조각을 만들려면 [연습: 코드 조각 만들기](../ide/walkthrough-creating-a-code-snippet.md)를 참조하세요.
 
 공유하려는 중요한 코드 조각을 작성하는 경우 자유롭게 요점에 게시하고 [알려주세요](https://github.com/Microsoft/PTVS/issues). 그러면 Visual Studio의 향후 릴리스에 포함할 수 있습니다.
 
@@ -128,7 +158,7 @@ Visual Studio의 Python 지원에서는 소스 코드를 사용할 수 있는 �
 
 ### <a name="navigation-bar"></a>탐색 모음
 
-탐색 모음은 각 편집기 창의 위쪽에 표시되며, 정의의 2단계 목록을 포함하고 있습니다. 왼쪽 드롭다운에서는 현재 파일의 최상위 클래스와 함수 정의를 포함하고 있으며, 오른쪽 드롭다운에서는 왼쪽에 표시된 범위 내의 정의 목록을 표시합니다. 편집기에서 이동하는 대로 목록이 업데이트되어 현재 컨텍스트를 보여 주며, 이러한 목록에서 항목을 선택하여 직접 이동할 수도 있습니다.
+탐색 모음은 각 편집기 창의 위쪽에 표시되며, 정의의 2단계 목록을 포함하고 있습니다. 왼쪽 드롭다운에서는 현재 파일의 최상위 클래스와 함수 정의를 포함하고 있으며, 오른쪽 드롭다운에서는 왼쪽에 표시된 범위 내의 정의 목록을 표시합니다. 편집기에서 이동하는 대로 목록이 업데이트되어 현재 컨텍스트를 보여주며, 이러한 목록에서 항목을 선택하여 직접 이동할 수도 있습니다.
 
 ![탐색 모음](media/code-editing-navigation-bar.png)
 

@@ -6,28 +6,28 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: 78107CFA-9308-4293-A92A-9B552A259E15
-ms.openlocfilehash: e435418c0c77f1577e9db8ab35d76d6bd54f8447
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: bf27e89b6a1a606b2a7430fc7d4394b8c5ab22bc
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="understanding-build-configurations"></a>빌드 구성 이해
 
 ## <a name="project-build-configurations"></a>프로젝트 빌드 구성 
 
-프로젝트에 여러 개의 구성이 있을 수 있으며, 구성 간에 전환하면 빌드 시 다른 출력을 생성할 수 있습니다. 예를 들어 디버그 구성을 사용하는 경우 출력에 디버깅 기호가 포함되므로 디버거가 충돌한 응용 프로그램의 스택 추적에서 함수 이름, 매개 변수 또는 변수를 확인할 수 있습니다. 그러나 디버그 구성을 사용하면 파일 크기가 증가하므로 배포용 응용 프로그램에는 적합하지 않습니다.
+프로젝트에는 대체로 여러 개의 구성이 있으며, 구성 간에 전환하면 빌드 시 다른 출력을 생성할 수 있습니다. 예를 들어, 디버그 구성은 디버깅 기호를 출력하므로 디버거가 충돌한 응용 프로그램의 스택 추적에서 함수 이름, 매개 변수 또는 변수를 확인할 수 있습니다. 이 추가 정보는 개발 중에 유용하지만 파일 크기를 확장하므로 배포에 적합하지 않습니다.
 
-각 플랫폼에 해당 빌드에 대한 특정 구성이 있습니다. Xamarin.Android 개발에는 항상 릴리스 또는 디버그 구성만 포함됩니다. Xamarin.iOS에는 더 많은 구성이 있습니다. 최신 iOS 프로젝트에는 디버그 또는 릴리스 구성만 포함되지만 장치 또는 설치된 시뮬레이터에 대해 설정할 수 있습니다.
+각 플랫폼에 해당 빌드에 대한 특정 구성이 있습니다. 
 
 ## <a name="solution-configurations"></a>솔루션 구성
 
-프로젝트 구성과 마찬가지로, 솔루션 구성은 전체 프로젝트에 대한 사용자 지정 구성을 만드는 데 사용됩니다. 아래 그림과 같이 **빌드 > 구성** 항목 아래의 **구성 매핑** 탭을 사용하면 각 솔루션 항목의 대상 구성을 할당할 수 있습니다.
+프로젝트 구성과 마찬가지로, 솔루션 구성은 전체 프로젝트에 대한 사용자 지정 구성을 만드는 데 사용됩니다. 다음 이미지와 같이 **빌드 > 구성** 항목 아래의 **구성 매핑** 탭을 사용하면 각 솔루션 항목의 대상 구성을 할당할 수 있습니다.
 
 
  ![구성 매핑 옵션](media/projects-and-solutions-image3.png)
 
-자세한 내용은 James Montemagno의 [구성 관리자](https://www.youtube.com/watch?v=tjSdkqYh5Vg) 동영상을 참조하세요.
+구성에 대한 자세한 내용은 James Montemagno의 [구성 관리자](https://www.youtube.com/watch?v=tjSdkqYh5Vg) 동영상을 참조하세요.
 
 ## <a name="run-configuration"></a>실행 구성
 
@@ -49,7 +49,7 @@ Android 프로젝트에 대한 실행 구성을 사용하면 프로젝트를 실
 
 ## <a name="examples-of-data-that-might-be-included-in-run-configurations"></a>실행 구성에 포함될 수 있는 데이터의 예
 
-아래 목록에는 실행 구성에 포함될 수 있는 데이터의 몇 가지 예가 나와 있습니다.
+다음 목록에는 실행 구성에 포함될 수 있는 데이터의 몇 가지 예가 나와 있습니다.
 
 * 기본 .NET 프로젝트
     * 대체 시작 앱

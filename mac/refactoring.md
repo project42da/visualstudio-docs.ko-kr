@@ -6,19 +6,19 @@ ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: C7782BF3-016F-4B41-8A81-85FC540A1A8F
-ms.openlocfilehash: ba92cd9a0e9ca28d132116f65fd41758bce1a1f0
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 925c928e171b76af76304074e736fd8962158564
+ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 03/08/2018
 ---
 # <a name="refactoring"></a>리팩터링
 
-코드를 리팩터링하면 코드의 전체적인 동작을 변경하지 않으면서 기존의 코드를 재정렬 및 재구성하고 명확하게 나타낼 수 있습니다.
+코드를 리팩터링하면 코드의 전반적인 동작을 변경하지 않으면서 기존의 코드를 재정렬 및 재구성하고 명확하게 나타낼 수 있습니다.
 
-이는 안정성이 더 높은 코드베이스를 제공하므로 본인이나 코드를 참조할 수 있는 다른 개발자 혹은 사용자가 훨씬 더 쉽게 사용하고 읽고 유지 관리할 수 있습니다.
+리팩터링은 안정성이 더 높은 코드베이스를 제공하므로 본인이나 코드를 참조할 수 있는 다른 개발자 혹은 사용자가 더 쉽게 사용하고 읽고 유지 관리할 수 있습니다.
 
-Mac용 Visual Studio는 Microsoft의 오픈 소스 .NET 컴파일러 플랫폼인 Roslyn과 통합되어 더 많은 리팩터링 작업을 수행할 수 있을 뿐만 아니라 최신 C# 버전을 완벽하게 지원합니다.
+Mac용 Visual Studio는 Microsoft의 오픈 소스 .NET 컴파일러 플랫폼인 Roslyn과 통합되어 더 많은 리팩터링 작업을 수행할 수 있도록 합니다.
 
 ## <a name="renaming"></a>이름 바꾸기 
 
@@ -63,7 +63,7 @@ Mac용 Visual Studio는 Microsoft의 오픈 소스 .NET 컴파일러 플랫폼�
 * 선택한 코드를 포함하는 새 메서드를 만듭니다.
 * 선택한 코드가 있는 곳에서 새 메서드를 호출합니다.
 
-##### <a name="example"></a>예제
+##### <a name="example"></a>예
 
 1. 다음 코드를 추가합니다.
 

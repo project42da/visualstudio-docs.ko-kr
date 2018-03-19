@@ -2,7 +2,7 @@
 title: "Visual Studio에서 Python 환경 및 인터프리터를 관리하는 방법 | Microsoft Docs"
 description: "Visual Studio에서 Python 환경 창을 사용하여 전역 및 가상 환경을 관리하며, Python 인터프리터 설치, 패키지 설치, 검색 경로 설정, Visual Studio 프로젝트의 환경 관리를 위한 사용자 지정 환경을 설정하는 방법입니다."
 ms.custom: 
-ms.date: 02/20/2018
+ms.date: 03/05/2018
 ms.reviewer: 
 ms.suite: 
 ms.technology:
@@ -16,11 +16,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 570ce6beccf14c9f04fcd3e21b86a8d00a3d607f
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 558ce58461b27bc9a86906278602d00d96377c63
+ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/09/2018
 ---
 # <a name="managing-python-environments-in-visual-studio"></a>Visual Studio에서 Python 환경 관리
 
@@ -70,9 +70,9 @@ Visual Studio에서 인식하는 환경이 **Python 환경** 창에 표시됩니
 
 위의 이미지는 Visual Studio에서 Anaconda 5.0.0과 함께 Python 3.6(32비트)의 설치 두 개를 발견했음을 보여줍니다.
 
-굵게 표시된 기본 환경은 Python 3.6(이 경우 Anaconda 설치의 일부)으로, Visual Studio가 모든 새로운 프로젝트에 사용하는 환경입니다. 창의 하단 부분에 있는 명령은 선택된 Python 3.6 인터프리터에 적용되며, 여기서 볼 수 있듯이 이 인터프리터는 `C:\Python36-32`에 있는 특정 설치입니다. 원하는 환경이 표시되지 않으면 [기존 인터프리터 수동 식별](#manually-identifying-an-existing-interpreter)을 참조하세요.
+굵게 표시된 기본 환경은 Python 3.6(이 경우 Anaconda 설치의 일부)으로, Visual Studio가 모든 새로운 프로젝트에 사용하는 환경입니다. 창의 하단 부분에 있는 명령은 선택된 Python 3.6 인터프리터에 적용되며, 여기서 볼 수 있듯이 이 인터프리터는 `C:\Python36-32`에 있는 특정 설치입니다. 원하는 환경이 표시되지 않으면 [기존 환경 수동 식별](#manually-identifying-an-existing-environment)을 참조하세요.
 
-나열된 각 환경의 오른쪽에는 해당 환경에 대한 대화형 창을 여는 컨트롤이 있습니다. 해당 환경의 IntelliSense 데이터베이스를 새로 고치는 다른 컨트롤이 나타날 수 있습니다.
+나열된 각 환경의 오른쪽에는 해당 환경에 대한 대화형 창을 여는 컨트롤이 있습니다. 해당 환경의 IntelliSense 데이터베이스를 새로 고치는 다른 컨트롤이 표시될 수도 있습니다(데이터베이스에 대한 자세한 내용은 [환경 창 참조](python-environments-window-tab-reference.md#intellisense-tab) 확인).
 
 환경 목록 아래에는 [Python 환경 창 탭 참조](python-environments-window-tab-reference.md)에 설명된 **개요**, **패키지** 및 **IntelliSense** 옵션에 대한 드롭다운 선택기가 있습니다. 또한 **Python 환경** 창을 적당히 넓게 확장하면 이러한 옵션이 탭으로 표시되어 작업하기가 더 편리할 수 있습니다.
 
