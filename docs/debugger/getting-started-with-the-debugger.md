@@ -1,24 +1,28 @@
 ---
-title: "Visual Studio를 사용 하 여 디버깅 하는 방법을 설명 | Microsoft Docs"
-ms.custom: H1HackMay2017
-ms.date: 10/11/2017
+title: "-Visual Studio를 디버깅 하는 방법을 설명 | Microsoft Docs"
+ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data
+ms.custom: mvc
+ms.date: 03/16/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: get-started-article
-helpviewer_keywords: debugger
+helpviewer_keywords:
+- debugger
 ms.assetid: 62734c0d-a75a-4576-8f73-0e97c19280e1
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a09e0c54f1d7f0e49f08ddf65afbeb030a7087f1
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.workload:
+- multiple
+ms.openlocfilehash: e0686a4138fc2489c8a63b207e98cf7780477782
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="learn-to-debug-using-visual-studio"></a>Visual Studio를 사용 하 여 디버깅 하는 방법을 알아봅니다
 
@@ -31,6 +35,15 @@ ms.lasthandoff: 01/04/2018
 |  ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기")  |    [비디오 보기](https://mva.microsoft.com/en-US/training-courses-embed/getting-started-with-visual-studio-2017-17798/Debugger-Feature-tour-of-Visual-studio-2017-sqwiwLD6D_1111787171) 유사한 단계를 보여 주는 디버깅 합니다. |
 
 데모 앱의 C#을 기능은 c + +, Visual Basic, JavaScript 및 명시 된 경우) (제외 Visual Studio에서 지 원하는 다른 언어에 적용할 수 있습니다.
+
+이 자습서에서는 다음을 수행합니다.
+
+> [!div class="checklist"]
+> * 디버거를 시작 하 고 중단점에 도달 합니다.
+> * 디버거에서 코드를에서 단계별로 실행 하려면 명령에 알아보기
+> * 데이터 팁 및 디버거 창에 변수 검사
+> * 호출 스택을 검사합니다
+> * 예외 도우미 사용
 
 ## <a name="start-the-debugger"></a>디버거를 시작!
 
@@ -79,11 +92,11 @@ ms.lasthandoff: 01/04/2018
 
 ## <a name="restart-your-app-quickly"></a>응용 프로그램을 신속 하 게 다시 시작
 
-1. 클릭는 **다시 시작** ![응용 프로그램 다시 시작](../debugger/media/dbg-tour-restart.png "RestartApp") 디버그 도구 모음에서 단추 (Ctrl + Shift + F5).
+클릭는 **다시 시작** ![응용 프로그램 다시 시작](../debugger/media/dbg-tour-restart.png "RestartApp") 디버그 도구 모음에서 단추 (Ctrl + Shift + F5).
 
-    누를 때 **다시 시작**와 비교 하는 앱을 중지 하 고 디버거를 다시 시작 시간을 절약 합니다. 디버거는 코드를 실행 하 여 적중 하는 첫 번째 중단점에서 일시 중지 합니다.
+누를 때 **다시 시작**와 비교 하는 앱을 중지 하 고 디버거를 다시 시작 시간을 절약 합니다. 디버거는 코드를 실행 하 여 적중 하는 첫 번째 중단점에서 일시 중지 합니다.
 
-    에 설정한 중단점에서 디버거가 중지 다시는 `MainWindow` 생성자입니다.
+에 설정한 중단점에서 디버거가 중지 다시는 `MainWindow` 생성자입니다.
 
 ## <a name="navigate-code-in-the-debugger-using-step-commands"></a>단계 명령을 사용 하 여 디버거에서 코드를 탐색
 
@@ -145,20 +158,20 @@ ms.lasthandoff: 01/04/2018
 
 ## <a name="examine-the-call-stack"></a>호출 스택을 검사합니다
 
-- 일시 중지 된 동안는 `Update` 메서드를 클릭 하 여는 **호출 스택** 은 기본적으로 오른쪽 아래 창에서 열려 있는 창을 합니다.
+일시 중지 된 동안는 `Update` 메서드를 클릭 하 여는 **호출 스택** 은 기본적으로 오른쪽 아래 창에서 열려 있는 창을 합니다.
 
-     ![호출 스택을 검사](../debugger/media/dbg-tour-call-stack.png "ExamineCallStack")
+![호출 스택을 검사](../debugger/media/dbg-tour-call-stack.png "ExamineCallStack")
 
-    **호출 스택** 창에 있는 메서드 및 함수 호출 되는 순서를 가져오는 표시 합니다. 맨 윗줄로 현재 함수를 보여 줍니다 (의 `Update` 둘러보기 응용 프로그램에서 메서드). 두 번째 줄을 보여 줍니다 `Update` 에서 호출한는 `Path.set` 속성 및 기타 등등.
+**호출 스택** 창에 있는 메서드 및 함수 호출 되는 순서를 가져오는 표시 합니다. 맨 윗줄로 현재 함수를 보여 줍니다 (의 `Update` 둘러보기 응용 프로그램에서 메서드). 두 번째 줄을 보여 줍니다 `Update` 에서 호출한는 `Path.set` 속성 및 기타 등등.
 
-    >  [!NOTE]
-    > **호출 스택** 창은 Eclipse와 같은 일부 Ide에서 디버그 관점 비슷합니다.
+>  [!NOTE]
+> **호출 스택** 창은 Eclipse와 같은 일부 Ide에서 디버그 관점 비슷합니다.
 
-    호출 스택은 검토 하 고 응용 프로그램의 실행 흐름을 이해 하는 좋은 방법입니다.
+호출 스택은 검토 하 고 응용 프로그램의 실행 흐름을 이해 하는 좋은 방법입니다.
 
-    해당 소스 코드를 이동 하는 코드 줄을 두 번 클릭 수 및도 디버거를 통해 검사 중인 현재 범위를 변경 하는 합니다. 이 그러면 디버거를 진행 하지 않습니다.
+해당 소스 코드를 이동 하는 코드 줄을 두 번 클릭 수 및도 디버거를 통해 검사 중인 현재 범위를 변경 하는 합니다. 이 그러면 디버거를 진행 하지 않습니다.
 
-    오른쪽 클릭 메뉴에서 사용할 수도 있습니다는 **호출 스택** 창의 다른 작업을 수행 합니다. 지정 된 함수에 중단점을 삽입, 사용 하 여 디버거를 이동할 수 예를 들어 **커서까지 실행**, 소스 코드를 검사 이동 합니다. 자세한 내용은 참조 [하는 방법: 호출 스택 검사](../debugger/how-to-use-the-call-stack-window.md)합니다.
+오른쪽 클릭 메뉴에서 사용할 수도 있습니다는 **호출 스택** 창의 다른 작업을 수행 합니다. 지정 된 함수에 중단점을 삽입, 사용 하 여 디버거를 이동할 수 예를 들어 **커서까지 실행**, 소스 코드를 검사 이동 합니다. 자세한 내용은 참조 [하는 방법: 호출 스택 검사](../debugger/how-to-use-the-call-stack-window.md)합니다.
 
 ## <a name="step-out"></a>프로시저 나가기
 
@@ -280,7 +293,9 @@ ms.lasthandoff: 01/04/2018
 
 디버거 기능에 대 한 자세한 참조 [디버거 팁과 요령](../debugger/debugger-tips-and-tricks.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="next-steps"></a>다음 단계
 
-[Visual Studio의 디버깅](../debugger/index.md)  
-[디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)
+이 자습서에서는 코드를 단계별로 실행 하 고 디버거를 시작 하 고 변수를 검사 하는 방법을 배웠습니다. 높은 수준의 디버거 기능 추가 정보에 대 한 링크를 확인 하려는 경우.
+
+> [!div class="nextstepaction"]
+> [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)

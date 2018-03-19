@@ -1,42 +1,45 @@
 ---
 title: "Visual Studio 디버거를 사용 하는 c + +를 사용 하 여 디버그 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/06/2017
+ms.date: 03/18/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: quickstart
-helpviewer_keywords: debugger
+helpviewer_keywords:
+- debugger
 ms.assetid: 639e430b-6d2d-46bd-b738-8c60dfb384f1
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: ddf6aadc6b2debcb7423df589fb11739039c6476
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: fce20f8c17b52b109b469bd439905e0edd66c9d3
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="debug-with-c-using-the-visual-studio-debugger"></a>Visual Studio 디버거를 사용 하는 c + +를 사용 하 여 디버그
 
-Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 기능을 제공 합니다. 이 항목에는 기본 기능 중 일부에 대해 알아보려면 빠른 방법을 제공 합니다.
+Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 기능을 제공 합니다. 이 항목에는 기본 기능 중 일부에 대해 알아보는 빠른 방법을 제공합니다.
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 
-1. Visual Studio에서 선택 **파일 > 새 프로젝트**합니다.
+1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
-2. 아래 **Visual c + +**, 선택 **Windows 바탕 화면**를 선택한 다음 가운데 창에서 **Windows 콘솔 응용 프로그램**합니다.
+2. **Visual C++**에서 **Windows 데스크톱**을 선택한 다음, 가운데 창에서 **Windows 콘솔 응용 프로그램**을 선택합니다.
 
     표시 되지 않으면는 **Windows 콘솔 응용 프로그램** 서식 파일 프로젝트를 클릭 하 여는 **Open Visual Studio 설치 관리자** 의 왼쪽된 창에서 링크는 **새 프로젝트** 대화 상자. Visual Studio 설치 관리자가 시작됩니다. 선택 된 **c + + 데스크톱 개발** 작업을 선택 합니다 **수정**합니다.
 
 3. 같은 이름을 입력 **MyDbgApp** 클릭 **확인**합니다.
 
-    Visual Studio 프로젝트를 만듭니다.
+    Visual Studio가 프로젝트를 만듭니다.
 
-4. MyDbgApp.cpp에서 다음 코드 대체
+4. MyDbgApp.cpp에서 다음 코드를 
 
     ```c++
     int main()
@@ -45,7 +48,7 @@ Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 �
     }
     ```
 
-    이 코드로 (제거 하지 마십시오 `#include "stdafx.h"`):
+    이 코드로 바꿉니다(`#include "stdafx.h"` 제거 안 함).
 
     ```c++
     #include <list>  
@@ -89,21 +92,21 @@ A *중단점* 은 Visual Studio 사용자 실행 일시 중지 해야 할지 여
     중단점을 설정 하면 디버거에서 일시 중지 합니다. 디버거 및 앱 실행 일시 중지 된 문에 노란색 화살표로 표시 됩니다. 한 줄으로 된 `doWork` 함수 호출은 아직 실행 되지 않았습니다.
 
     > [!TIP]
-    > 루프 또는 재귀에 중단점이 있는 하거나 자주 단계별로 인 중단점을 많이 있는 경우 사용 하는 경우는 [조건부 중단점](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) 특정 조건이 충족 되는 경우에 코드는 일시 중단 되도록 합니다. 이 시간 절약 하 고 또한 쉽게 만들 수는 재현 하기 어려운 문제를 디버깅 하 합니다.
+    > 루프 또는 재귀에 중단점이 있는 하거나 자주를 단계별로 실행 하는 많은 중단점을 설정한 경우 사용 하는 경우는 [조건부 중단점](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) 특정 조건이 충족 되는 경우에 코드는 일시 중단 되도록 합니다. 조건부 중단점을 시간 절약 하 고 또한 쉽게 만들 수는 재현 하기 어려운 문제를 디버깅 하 합니다.
 
     메모리 관련 오류가 c + +에서 디버그를 시도할 때 사용할 수도 있습니다 중단점 주소 값 (NULL 검색)을 검사 하 고 개수를 참조 합니다. 
 
 ## <a name="navigate-code"></a>코드 탐색
 
-디버거를 계속 하도록 지시 하려면 명령입니다. Visual Studio 2017에 새로 추가 된 유용 코드 탐색 명령을 제공 됩니다.
+디버거를 계속 하도록 지시 하려면 명령입니다. Visual Studio 2017에 새로 추가 된 유용 코드 탐색 명령을 보여줍니다.
 
-- 중단점에서 일시 중지 된 동안 위로 마우스를 가져가고 문을 `c1.push_back(20)` 녹색 될 때까지 **클릭 하 여 실행** 단추 ![클릭에 실행](../debugger/media/dbg-tour-run-to-click.png "RunToClick") 나타나고 누릅니다는 **클릭 하 여 실행** 단추입니다.
+중단점에서 일시 중지 된 동안 위로 마우스를 가져가고 문을 `c1.push_back(20)` 녹색 될 때까지 **클릭 하 여 실행** 단추 ![클릭에 실행](../debugger/media/dbg-tour-run-to-click.png "RunToClick") 나타나고 누릅니다는 **클릭 하 여 실행** 단추입니다.
 
-    ![클릭 하 여 실행](../debugger/media/dbg-qs-run-to-click.png "클릭 하 여 실행")
+![클릭 하 여 실행](../debugger/media/dbg-qs-run-to-click.png "클릭 하 여 실행")
 
-    응용 프로그램 실행을 계속 호출 `doWork`, 단추를 클릭 하면 코드 줄에서 일시 중지 하 고 있습니다.
+응용 프로그램 실행을 계속 호출 `doWork`, 단추를 클릭 하면 코드 줄에서 일시 중지 하 고 있습니다.
 
-    하는 데 사용 되는 일반적인 키보드 명령 코드를 단계별로 포함 **F10** 및 **F11**합니다. 더 자세한 지침에 대 한 참조는 [초보자 가이드](../debugger/getting-started-with-the-debugger.md)합니다.
+하는 데 사용 되는 일반적인 키보드 명령 코드를 단계별로 포함 **F10** 및 **F11**합니다. 더 자세한 지침에 대 한 참조는 [초보자 가이드](../debugger/getting-started-with-the-debugger.md)합니다.
 
 ## <a name="inspect-variables-in-a-datatip"></a>Datatip에서 변수 검사
 
@@ -133,9 +136,7 @@ A *중단점* 은 Visual Studio 사용자 실행 일시 중지 해야 할지 여
 
 ## <a name="next-steps"></a>다음 단계
 
-- 디버거에 대 한 자세한 참조 [디버거를 시작 하 고 코드를 탐색](../debugger/getting-started-with-the-debugger.md)합니다.
-- 중단점에 대 한 자세한 참조 [중단점을 사용 하 여](../debugger/using-breakpoints.md)합니다.
+이 자습서에서는 코드를 단계별로 실행 하 고 디버거를 시작 하 고 변수를 검사 하는 방법을 배웠습니다. 높은 수준의 디버거 기능 추가 정보에 대 한 링크를 확인 하려는 경우.
 
-## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](../debugger/index.md)  
- [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)
+> [!div class="nextstepaction"]
+> [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)

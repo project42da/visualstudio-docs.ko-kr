@@ -14,11 +14,11 @@ ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a5a4721eea178e4a9ab5766760ccf1405589684
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 17b3b0a107d263a213746a625ec5a65419695b4d
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="installing-the-visual-studio-sdk"></a>Visual Studio SDK 설치
 Visual Studio SDK는 Visual Studio 설치 프로그램에서 선택적 기능. 또한 VS SDK를 나중에 설치할 수 있습니다.  
@@ -35,6 +35,6 @@ Visual Studio SDK는 Visual Studio 설치 프로그램에서 선택적 기능. �
  ![SolutionExplorerInstall](../extensibility/media/solutionexplorerinstall.png "SolutionExplorerInstall")  
   
 ## <a name="installing-the-visual-studio-sdk-from-the-command-line"></a>명령줄에서 Visual Studio SDK 설치  
-모든 Visual Studio 작업 또는 구성 요소와 마찬가지로 명령줄에서 항목을 설치할 수 있습니다. 참조 [명령줄 매개 변수를 사용 하 여 Visual Studio 설치](../install/use-command-line-parameters-to-install-visual-studio.md) 적절 한 명령줄 스위치와 작업 또는 구성 요소 식별자를 확인 하는 방법에 대 한 자세한 내용은 합니다.
+처럼 Visual Studio 작업 또는 구성 요소를 설치할 수도 있습니다는 **Visual Studio 확장 개발** 작업 (ID: Microsoft.VisualStudio.Workload.VisualStudioExtension) 명령줄에서. 참조 [명령줄 매개 변수를 사용 하 여 Visual Studio 설치](../install/use-command-line-parameters-to-install-visual-studio.md) 적절 한 명령줄 스위치를 사용 하 여 일반 작업 또는 구성 요소 식별자 결정에 대 한 자세한 내용은 합니다.
   
  참고가 설치 된 버전의 Visual Studio와 일치 하는 Visual Studio 설치 관리자를 사용 해야 합니다. 예를 들어 컴퓨터에 설치 된 Visual Studio Enterprise를 사용 하도록 설정한 경우에 Visual Studio Enterprise (vs_enterprise.exe) 설치 관리자를 실행 해야 합니다.

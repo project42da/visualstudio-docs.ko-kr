@@ -1,32 +1,35 @@
 ---
 title: "ASP.NET-Visual Studio 디버깅 | Microsoft Docs"
 ms.custom: 
-ms.date: 12/06/2017
+ms.date: 03/16/2018
 ms.reviewer: 
 ms.suite: 
-ms.technology: vs-ide-debug
+ms.technology:
+- vs-ide-debug
 ms.tgt_pltfrm: 
 ms.topic: quickstart
-helpviewer_keywords: debugger
+helpviewer_keywords:
+- debugger
 ms.assetid: f4cea2e1-08dc-47ac-aba2-3b8c338e607f
-caps.latest.revision: "1"
+caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: aspnet
-ms.openlocfilehash: c740265220f844b24ba9b4eeb133de185773a7a0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- aspnet
+ms.openlocfilehash: 0c6f3b0d074957ba8fabd93707e9a76f0dcd46e1
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="debug-aspnet-with-the-visual-studio-debugger"></a>Visual Studio 디버거를 사용 하 여 ASP.NET 디버그
 
-Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 기능을 제공 합니다. 이 항목에는 기본 기능 중 일부에 대해 알아보려면 빠른 방법을 제공 합니다.
+Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 기능을 제공 합니다. 이 항목에는 기본 기능 중 일부에 대해 알아보는 빠른 방법을 제공합니다.
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 
-1. Visual Studio에서 선택 **파일 > 새 프로젝트**합니다.
+1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
 1. 아래 **Visual C#**, 선택 **웹**를 선택한 다음 가운데 창에서 **ASP.NET Core 웹 응용 프로그램**합니다.
 
@@ -38,7 +41,7 @@ Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 �
 
     ![웹 응용 프로그램 선택](../debugger/media/dbg-qs-aspnet-choose-web-app.png)
 
-    Visual Studio 프로젝트를 만듭니다.
+    Visual Studio가 프로젝트를 만듭니다.
 
 1. 솔루션 탐색기에서 Pages/About.cshtml) (아래 About.cshtml.cs 열고 다음 코드를 대체 합니다.
 
@@ -49,7 +52,7 @@ Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 �
     }
     ```
 
-    이 코드로 변경 합니다.
+    이 코드로 바꿉니다.
 
     ```c#
     public void OnGet()
@@ -91,19 +94,19 @@ A *중단점* 은 Visual Studio 사용자 실행 일시 중지 해야 할지 여
     ![중단점 도달](../debugger/media/dbg-qs-hit-breakpoint-aspnet.png)
 
     > [!TIP]
-    > 루프 또는 재귀에 중단점이 있는 하거나 자주 단계별로 인 중단점을 많이 있는 경우 사용 하는 경우는 [조건부 중단점](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) 특정 조건이 충족 되는 경우에 코드는 일시 중단 되도록 합니다. 이 시간 절약 하 고 또한 쉽게 만들 수는 재현 하기 어려운 문제를 디버깅 하 합니다.
+    > 루프 또는 재귀에 중단점이 있는 하거나 자주를 단계별로 실행 하는 많은 중단점을 설정한 경우 사용 하는 경우는 [조건부 중단점](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression) 특정 조건이 충족 되는 경우에 코드는 일시 중단 되도록 합니다. 이 시간 절약 하 고 또한 쉽게 만들 수는 재현 하기 어려운 문제를 디버깅 하 합니다.
 
 ## <a name="navigate-code"></a>코드 탐색
 
-디버거를 계속 하도록 지시 하려면 명령입니다. Visual Studio 2017에 새로 추가 된 유용 코드 탐색 명령을 제공 됩니다.
+디버거를 계속 하도록 지시 하려면 명령입니다. Visual Studio 2017에 새로 추가 된 유용 코드 탐색 명령을 보여줍니다.
 
-- 중단점에서 일시 중지 된 동안 위로 마우스를 가져가고 문을 `return c2` 녹색 될 때까지 **클릭 하 여 실행** 단추 ![클릭에 실행](../debugger/media/dbg-tour-run-to-click.png) 나타나고 누릅니다는 **클릭 하 여 실행** 단추입니다.
+중단점에서 일시 중지 된 동안 위로 마우스를 가져가고 문을 `return c2` 녹색 될 때까지 **클릭 하 여 실행** 단추 ![클릭에 실행](../debugger/media/dbg-tour-run-to-click.png) 나타나고 누릅니다는 **클릭 하 여 실행** 단추입니다.
 
-    ![클릭 하 여 실행](../debugger/media/dbg-qs-run-to-click-aspnet.png)
+![클릭 하 여 실행](../debugger/media/dbg-qs-run-to-click-aspnet.png)
 
-    응용 프로그램 실행을 계속 하 고 단추를 클릭 하면 코드 줄에서 일시 중지 합니다.
+응용 프로그램 실행을 계속 하 고 단추를 클릭 하면 코드 줄에서 일시 중지 합니다.
 
-    하는 데 사용 되는 일반적인 키보드 명령 코드를 단계별로 포함 **F10** 및 **F11**합니다. 더 자세한 지침에 대 한 참조는 [초보자 가이드](../debugger/getting-started-with-the-debugger.md)합니다.
+하는 데 사용 되는 일반적인 키보드 명령 코드를 단계별로 포함 **F10** 및 **F11**합니다. 더 자세한 지침에 대 한 참조는 [초보자 가이드](../debugger/getting-started-with-the-debugger.md)합니다.
 
 ## <a name="inspect-variables-in-a-datatip"></a>Datatip에서 변수 검사
 
@@ -133,9 +136,7 @@ A *중단점* 은 Visual Studio 사용자 실행 일시 중지 해야 할지 여
 
 ## <a name="next-steps"></a>다음 단계
 
-- 디버거에 대 한 자세한 참조 [디버거를 시작 하 고 코드를 탐색](../debugger/getting-started-with-the-debugger.md)합니다.
-- 중단점에 대 한 자세한 참조 [중단점을 사용 하 여](../debugger/using-breakpoints.md)합니다.
+이 자습서에서는 코드를 단계별로 실행 하 고 디버거를 시작 하 고 변수를 검사 하는 방법을 배웠습니다. 높은 수준의 디버거 기능 추가 정보에 대 한 링크를 확인 하려는 경우.
 
-## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](../debugger/index.md)  
- [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)
+> [!div class="nextstepaction"]
+> [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)
