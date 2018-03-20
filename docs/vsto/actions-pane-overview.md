@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -18,7 +19,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 0e3fb356c00b3e9943ba8aff696283d4c5339e18
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -30,7 +32,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- Word 또는 Excel에 대한 문서 수준 사용자 지정에만 작업 창을 만들 수 있습니다. VSTO 추가 기능에서는 작업 창을 만들 수 없습니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ Word 또는 Excel에 대한 문서 수준 사용자 지정에만 작업 창을 만들 수 있습니다. VSTO 추가 기능에서는 작업 창을 만들 수 없습니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
   
 > [!NOTE]  
 >  작업 창은 사용자 지정 작업창과 다릅니다. 사용자 지정 작업창은 특정 문서가 아니라 응용 프로그램과 연결됩니다. VSTO 추가 기능에서 일부 Microsoft Office 응용 프로그램에 대한 사용자 지정 작업창을 만들 수 있습니다. 자세한 내용은 참조 [사용자 지정 작업창](../vsto/custom-task-panes.md)합니다.  

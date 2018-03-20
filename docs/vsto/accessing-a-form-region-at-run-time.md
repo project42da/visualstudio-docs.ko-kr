@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 70e9a970251aa5b95cff5983f5e2ce5e0c804a61
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/10/2018
   
 |적용 대상|  
 |----------------|  
-|이 항목의 정보는 다음 프로젝트 형식 및 Microsoft Office 버전에만 적용됩니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.<br /><br /> **프로젝트 형식**<br /><br /> VSTO 추가 기능 프로젝트<br /><br /> **Microsoft Office 버전**<br /><br /> -   [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]|  
+|이 항목의 정보는 다음 프로젝트 형식 및 Microsoft Office 버전에만 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.<br /><br /> **프로젝트 형식**<br /><br /> VSTO 추가 기능 프로젝트<br /><br /> **Microsoft Office 버전**<br /><br /> -   [!INCLUDE[Outlook_14_short](../vsto/includes/outlook-14-short-md.md)]|  
   
  `Globals` 클래스를 사용하여 Outlook 프로젝트의 어디에서나 양식 영역에 액세스할 수 있습니다. 에 대 한 자세한 내용은 `Globals` 클래스를 참조 하십시오. [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
   
@@ -72,7 +74,7 @@ ms.lasthandoff: 01/10/2018
   
  양식 영역 코드 파일 외부에서 컨트롤에 액세스할 수 있게 하려면 양식 영역 코드 파일 내에서 해당 컨트롤을 반환하도록 속성을 만듭니다.  
   
- C#에서 속성을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 선언 하 고 사용 하 여 읽기/쓰기 속성 & #40; & #35; 프로그래밍 가이드 & #41; ](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties).  
+ C#에서 속성을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 선언 하 고 사용 하 여 읽기/쓰기 속성 &#40; &#35; 프로그래밍 가이드 &#41; ](/dotnet/csharp/programming-guide/classes-and-structs/how-to-declare-and-use-read-write-properties).  
   
  Visual Basic에서 속성을 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 속성 (Visual Basic) 만들기](/dotnet/visual-basic/programming-guide/language-features/procedures/how-to-create-a-property)합니다.  
   

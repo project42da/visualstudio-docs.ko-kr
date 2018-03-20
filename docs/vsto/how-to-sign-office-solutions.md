@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -17,7 +18,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 2883f75c6ca75e1875621f9c6779db09722d6945
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -29,7 +31,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- 응용 프로그램을 수동으로 편집 하는 경우 매니페스트 생성 및 편집 도구 (mage.exe 및 mageui.exe)를 사용 하 여 배포 매니페스트를 사용할 수는 매니페스트 다시 서명 해야 합니다. 자세한 내용은 [How to: Re-sign Application and Deployment Manifests](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)을 참조하세요.  
+ 응용 프로그램을 수동으로 편집 하는 경우 매니페스트 생성 및 편집 도구 (mage.exe 및 mageui.exe)를 사용 하 여 배포 매니페스트를 사용할 수는 매니페스트 다시 서명 해야 합니다. 자세한 내용은 [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](/visualstudio/deployment/how-to-re-sign-application-and-deployment-manifests)을 참조하세요.  
   
 ## <a name="signing-by-using-a-certificate"></a>인증서를 사용 하 여 서명  
  인증서는 고유 키와 솔루션 게시자의 id를 포함 하는 파일입니다. 수 인증 기관에서 인증서를 구매 하거나 직접 인증서 있으며 서명 인증 기관.  
