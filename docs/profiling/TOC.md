@@ -42,7 +42,6 @@
 #### [초보자를 위한 CPU 샘플링 지침](beginners-guide-to-cpu-sampling.md)
 #### [방법: 웹 사이트에 대한 성능 데이터 수집](how-to-collect-performance-data-for-a-web-site.md)
 #### [방법: 성능 세션 수동으로 만들기](how-to-manually-create-performance-sessions.md)
-#### [연습: 성능 문제 확인](walkthrough-identifying-performance-problems.md)
 ### [성능 세션 구성](configuring-performance-sessions.md)
 #### [방법: Windows 기호 정보 참조](how-to-reference-windows-symbol-information.md)
 #### [방법: 수집 방법 선택](how-to-choose-collection-methods.md)
@@ -205,7 +204,6 @@
 ###### [방법: 명령줄을 통해 .NET Framework 독립 실행형 응용 프로그램에 프로파일러를 연결하여 메모리 데이터 수집](how-to-attach-the-profiler-to-a-dotnet-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line.md)
 ###### [방법: 명령줄에서 프로파일러를 사용하여 독립 실행형 .NET Framework 구성 요소 계측 및 메모리 데이터 수집](how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line.md)
 ##### [연습: 샘플링을 사용하여 명령줄 프로파일링](walkthrough-command-line-profiling-using-sampling.md)
-##### [연습: 계측을 사용하여 명령줄 프로파일링](walkthrough-command-line-profiling-using-instrumentation.md)
 #### [ASP.NET 웹 응용 프로그램의 명령줄 프로파일링](command-line-profiling-of-aspnet-web-applications.md)
 ##### [VSPerfASPNETCmd를 사용한 빠른 웹 사이트 프로파일링](rapid-web-site-profiling-with-vsperfaspnetcmd.md)
 ##### [명령줄에서 프로파일러 샘플링 방법을 사용하여 ASP.NET 웹 응용 프로그램에 대한 응용 프로그램 통계 수집](collecting-application-statistics-for-aspnet-web-applications-using-the-profiler-sampling-method-from-the-command-line.md)
@@ -376,5 +374,5 @@
 ##### [CvWriteMessage 함수](cvwritemessage-function.md)
 ### [동시성 시각화 도우미 명령줄 유틸리티(CVCollectionCmd)](concurrency-visualizer-command-line-utility-cvcollectioncmd.md)
 ## [스토어 앱의 에너지 사용 분석](analyze-energy-use-in-store-apps.md)
-# 리소스
+# 자료
 ## [프로파일링 도구의 새로운 기능](what-s-new-in-profiling-tools.md)

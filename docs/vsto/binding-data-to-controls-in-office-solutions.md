@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -21,7 +22,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 5892f77b335e26e5b907159c4a9da37a58d2ae19
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -100,7 +102,7 @@ ms.lasthandoff: 01/10/2018
   
  <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 사용해 복합 데이터 바인딩을 수행하는 경우는 메모리 내 데이터 원본을 명시적으로 업데이트 할 필요가 없습니다. 이 경우 추가 코드 없이 변경 내용을 자동으로 메모리 내 데이터 원본으로 보냅니다.  
   
- 자세한 내용은 [How to: Update a Data Source with Data from a Host Control](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)을 참조하세요.  
+ 자세한 내용은 [방법: 호스트 컨트롤의 데이터로 데이터 소스 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
  [어떻게 할까요?: Excel에서 데이터베이스 데이터 사용](http://go.microsoft.com/fwlink/?LinkID=130287)   

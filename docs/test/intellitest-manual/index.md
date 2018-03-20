@@ -1,11 +1,7 @@
 ---
 title: "IntelliTest 참조 설명서 | Microsoft 개발자 테스트 도구 | Microsoft Docs"
-ms.custom: 
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - IntelliTest Reference Manual, IntelliTest
@@ -14,18 +10,18 @@ manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 30c23fc51f136d7fc3dcfeca191f5c469fb1e331
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 8216d8b4f27bb1211bc90d829233602edc915e43
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="intellitest-reference-manual"></a>IntelliTest 참조 설명서
 
 ## <a name="contents"></a>목차
 
 * **[IntelliTest 개요](introduction.md)**
-  - [IntelliTest의 Hello World](introduction.md#hello-world)
+  - [IntelliTest의 Hello World](introduction.md#the-hello-world-of-intellitest)
   - [제한 사항](introduction.md#limitations)
     * [비결정성](introduction.md#nondeterminism)
     * [동시성](introduction.md#concurrency)
@@ -33,13 +29,13 @@ ms.lasthandoff: 01/09/2018
     * [플랫폼](introduction.md#platform)
     * [언어](introduction.md#language)
     * [상징적 지각](introduction.md#symbolic-reasoning)
-    * [잘못된 스택 추적](introduction.md#incorrect-stack)
+    * [잘못된 스택 추적](introduction.md#incorrect-stack-traces)
   - [추가 정보](introduction.md#further-reading)<p>&nbsp;</p>
 
 * **[IntelliTest 시작](getting-started.md)**
   - [중요한 특성](getting-started.md#important-attributes)
   - [중요한 정적 도우미 클래스](getting-started.md#helper-classes)<p>&nbsp;</p>
- 
+
 * **[테스트 생성](test-generation.md)**
   - [테스트 생성기](test-generation.md#test-generators)
   - [매개 변수가 있는 유닛 테스트](test-generation.md#parameterized-unit-testing)

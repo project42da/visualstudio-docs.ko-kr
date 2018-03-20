@@ -4,7 +4,8 @@ ms.custom:
 ms.date: 02/02/2017
 ms.reviewer: 
 ms.suite: 
-ms.technology: office-development
+ms.technology:
+- office-development
 ms.tgt_pltfrm: 
 ms.topic: article
 dev_langs:
@@ -16,7 +17,8 @@ helpviewer_keywords:
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.workload: office
+ms.workload:
+- office
 ms.openlocfilehash: 059d259b669e63c26759782010be7ff78691ffc3
 ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
 ms.translationtype: MT
@@ -45,7 +47,7 @@ ms.lasthandoff: 01/10/2018
  기본 클래스는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 재배포 가능 패키지의 일부가 아닙니다. 대신 Visual Studio에 포함된 유틸리티 어셈블리에서 정의됩니다. 이러한 어셈블리는 Office 프로젝트를 빌드할 때 출력 폴더에 복사되고 솔루션과 함께 배포되어야 합니다. 유틸리티 어셈블리에 대한 자세한 내용은 [Assemblies in the Visual Studio Tools for Office Runtime](../vsto/assemblies-in-the-visual-studio-tools-for-office-runtime.md)를 참조하세요.  
   
 ## <a name="breaking-changes-in-office-projects-that-are-retargeted-to-the-net-framework-4"></a>.NET Framework 4로 대상이 변경되는 Office 프로젝트의 주요 변경 내용  
- 다음 표에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상으로 대상이 변경되는 Office 프로젝트에서 경험할 수 있는 주요 변경 내용이 나와 있습니다. 자세한 내용은 [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)을 참조하세요.  
+ 다음 표에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상으로 대상이 변경되는 Office 프로젝트에서 경험할 수 있는 주요 변경 내용이 나와 있습니다. 자세한 내용은 [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)을 참조하세요.  
   
 |주요 변경 내용|결과|  
 |---------------------|-----------------|  
@@ -60,7 +62,7 @@ ms.lasthandoff: 01/10/2018
 |호스트 항목 클래스와 같은 `ThisWorkbook`, `Sheet`  *n* , `ThisDocument`, 및 `ThisAddIn`, 더 이상 재정의할 수 있는 Dispose 메서드를 제공 합니다.|모든 코드의에서 옮겨야 Dispose 메서드 재정의 호스트 항목 클래스에서 시스템 종료 이벤트 처리기에 예를 들어 `ThisAddIn_Shutdown`, 호스트 항목 클래스에서 Dispose 메서드 재정의 제거 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
+ [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [Office 개발의 새로운 기능](http://msdn.microsoft.com/en-us/bf054af2-c896-4723-aa15-6381145b14bb)   
  [Visual Studio Tools for Office 런타임 개요](../vsto/visual-studio-tools-for-office-runtime-overview.md)  
   

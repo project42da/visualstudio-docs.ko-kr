@@ -7,15 +7,9 @@
 ## [ASP.NET 앱 디버그](quickstart-debug-aspnet.md)
 # 자습서
 ## [Visual Studio를 사용하여 디버깅하는 자세한 내용](getting-started-with-the-debugger.md)
-## [IIS Express 또는 IIS](how-to-enable-debugging-for-aspnet-applications.md)에서 ASP.NET 디버그
 ## [디버거에서 Python 코드 실행...](../python/vs-tutorial-01-04.md)
 ## [라이브 Azure 앱 디버그](debug-live-azure-applications.md)
 ## [IntelliTrace step-back을 사용하여 스냅숏 보기](how-to-use-intellitrace-step-back.md)
-## [IIS 컴퓨터의 원격 디버그 ASP.NET Core](remote-debugging-aspnet-on-a-remote-iis-computer.md)
-## [IIS 컴퓨터의 원격 디버그 ASP.NET](remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
-## [Azure의 원격 디버그 ASP.NET](remote-debugging-azure.md)
-## [C# 또는 Visual Basic 프로젝트](remote-debugging-csharp.md) 원격 디버그
-## [C++ 프로젝트 원격 디버그](remote-debugging-cpp.md)
 # 방법 가이드
 ## [디버거로 코드 탐색](navigating-through-code-with-the-debugger.md)
 ## [중단점 사용](using-breakpoints.md)
@@ -107,6 +101,11 @@
 ##### [시각화 도우미 API 참조](visualizer-api-reference.md)
 ### [방법: 숨겨진 디버거 명령 복원](how-to-restore-hidden-debugger-commands.md)
 ## [원격 디버깅](remote-debugging.md)
+### [IIS 컴퓨터의 원격 디버그 ASP.NET Core](remote-debugging-aspnet-on-a-remote-iis-computer.md)
+### [IIS 컴퓨터의 원격 디버그 ASP.NET](remote-debugging-aspnet-on-a-remote-iis-7-5-computer.md)
+### [Azure의 원격 디버그 ASP.NET](remote-debugging-azure.md)
+### [C# 또는 Visual Basic 프로젝트](remote-debugging-csharp.md) 원격 디버그
+### [C++ 프로젝트 원격 디버그](remote-debugging-cpp.md)
 ### [원격 디버거 포트 할당](remote-debugger-port-assignments.md)
 ### [원격 디버깅을 위해 Windows 방화벽 구성](configure-the-windows-firewall-for-remote-debugging.md)
 ### [원격 디버깅 오류 및 문제 해결](remote-debugging-errors-and-troubleshooting.md)
