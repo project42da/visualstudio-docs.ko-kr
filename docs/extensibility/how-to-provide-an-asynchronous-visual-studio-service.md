@@ -13,11 +13,11 @@ ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4aac446e9ed71b6e6b0c86ea64068af7a6184767
-ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
+ms.openlocfilehash: ea22a30d6f31099ca5d69d9cd8178188577febfe
+ms.sourcegitcommit: a80e7ef2f0a0f6d906a44f4d696aeb208bc1ad70
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>방법: 비동기 Visual Studio 서비스를 제공 합니다.
 UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비동기 서비스 만들고 백그라운드 스레드에서 패키지를 로드 해야 합니다. 이 목적을 위해 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 아닌 <xref:Microsoft.VisualStudio.Shell.Package>, 비동기 패키지의 특별 한 비동기 메서드 사용 하 여 서비스를 추가 합니다.
@@ -38,7 +38,7 @@ UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비
   
 4.  서비스를 구현 하려면 세 가지 형식을 만들려면:  
   
-    -   서비스를 설명 하는 인터페이스입니다. 이러한 인터페이스의 대부분은 빈, 즉, 이러한 메서드가 없습니다.  
+    -   서비스를 식별 하는 인터페이스입니다. 이러한 인터페이스의 대부분은 빈, 즉, 서로 메서드가 없는 서비스를 쿼리 하기 위해 사용 되는 합니다.
   
     -   서비스 인터페이스를 설명 하는 인터페이스입니다. 이 인터페이스에 메서드를 구현 해야 합니다.  
   
@@ -52,7 +52,9 @@ UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비
     using System.Threading;  
     using System.Threading.Tasks;  
     using System.Runtime.CompilerServices;  
-    using System.IO;  
+    using System.IO;
+    using IAsyncServiceProvider = Microsoft.VisualStudio.Shell.IAsyncServiceProvider;
+    using Task = System.Threading.Tasks.Task;
     ```  
   
 7.  여기에 비동기 서비스 구현입니다. 생성자에서 동기 서비스 공급자 보다는 비동기 서비스 공급자를 설정 해야 하는 참고:  
@@ -60,39 +62,58 @@ UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비
     ```csharp
     public class TextWriterService : STextWriterService, ITextWriterService  
     {  
-        private Microsoft.VisualStudio.Shell.IAsyncServiceProvider serviceProvider;  
-        public TextWriterService(Microsoft.VisualStudio.Shell.IAsyncServiceProvider provider)  
-        {  
-            serviceProvider = provider;  
-        }  
-        public async System.Threading.Tasks.Task WriteLineAsync(string path, string line)  
+        private IAsyncServiceProvider asyncServiceProvider;  
+        
+        public TextWriterService(IAsyncServiceProvider provider)  
+        {
+            // constructor should only be used for simple initialization
+            // any usage of Visual Studio service, expensive background operations should happen in the
+            // asynchronous InitializeAsync method for best performance
+            asyncServiceProvider = provider;  
+        }
+        
+        public async Task InitializeAsync(CancellationToken cancellationToken)
+        {
+            // We have to use JoinableTaskFactory as code will switch to main thread in some parts
+            await ThreadHelper.JoinableTaskFactory.RunAsync(async () =>
+            {
+                await TaskScheduler.Default;
+                // do background operations that involve IO or other async methods
+                
+                await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync(cancellationToken);               
+                // query Visual Studio services on main thread unless they are documented as free threaded explicitly.
+                // The reason for this is the final cast to service interface (such as IVsShell) may involve COM operations to add/release references.
+                
+                IVsShell vsShell = this.asyncServiceProvider.GetServiceAsync(typeof(SVsShell)) as IVsShell;
+                // use Visual Studio services to continue initialization
+            });
+        }
+        
+        public async Task WriteLineAsync(string path, string line)  
         {  
             StreamWriter writer = new StreamWriter(path);  
             await writer.WriteLineAsync(line);  
             writer.Close();  
         }  
-        public TaskAwaiter GetAwaiter()  
-        {  
-            return new TaskAwaiter();  
-        }  
     }  
+
     public interface STextWriterService  
     {  
     }  
+    
     public interface ITextWriterService   
     {  
         System.Threading.Tasks.Task WriteLineAsync(string path, string line);  
-        TaskAwaiter GetAwaiter();  
     }  
     ```  
   
 ## <a name="registering-a-service"></a>서비스를 등록 하는 중  
- 서비스를 등록 하려면 추가 <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> 서비스를 제공 하는 패키지에 있습니다. 동기적 서비스 등록의 두 가지 차이점이 있습니다.  
+ 서비스를 등록 하려면 추가 <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> 서비스를 제공 하는 패키지에 있습니다. 패키지와 서비스 모두 비동기 로드를 지원 하는지 확인 해야 할 서로 다른 동기 서비스 등록, 있습니다.
   
--   자동 로드 하려는 경우 추가 해야 패키지는 <xref:Microsoft.VisualStudio.Shell.PackageAutoLoadFlags> BackgroundLoad 값 특성입니다. 자동 로드 Vspackage에 대 한 자세한 내용은 참조 [로드 Vspackage](../extensibility/loading-vspackages.md)합니다.  
+-   추가 해야 합니다는 **AllowsBackgroundLoading = true** 필드는 <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> 참조는 PackageRegistrationAttribute에 대 한 자세한 내용은 패키지를 비동기적으로 초기화 되도록 [등록 하 고 Vspackage의 등록을 취소](../extensibility/registering-and-unregistering-vspackages.md)합니다.  
   
--   추가 해야 합니다는 **AllowsBackgroundLoading = true** 필드는 <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute>합니다. PackageRegistrationAttribute에 대 한 자세한 내용은 참조 [등록 및 등록 취소 Vspackage](../extensibility/registering-and-unregistering-vspackages.md)합니다.  
-  
+-   추가 해야 합니다는 **IsAsyncQueryable = true** 필드는 <xref:Microsoft.VisualStudio.Shell.ProvideServiceAttribute> 서비스 인스턴스를 비동기적으로 초기화할 수 있도록 합니다.
+
  비동기 서비스 등록 AsyncPackage의 예는 다음과 같습니다.
   
 ```csharp  
@@ -109,11 +130,10 @@ public sealed class TestAsyncPackage : AsyncPackage
 1.  TestAsyncPackage.cs을에서 제거 된 `Initialize()` 메서드와 재정의 `InitializeAsync()` 메서드. 서비스를 추가 하 고는 서비스를 만드는 콜백 메서드를 추가 합니다. 서비스를 추가 하는 비동기 이니셜라이저의 예는 다음과 같습니다.  
   
     ```csharp
-    protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
+    protected override async Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
     {  
-        this.AddService(typeof(STextWriterService), CreateService);  
-  
         await base.InitializeAsync(cancellationToken, progress);  
+        this.AddService(typeof(STextWriterService), CreateTextWriterService);
     }  
   
     ```  
@@ -123,14 +143,11 @@ public sealed class TestAsyncPackage : AsyncPackage
 3.  콜백 메서드를 만들어 서비스를 반환 하는 비동기 메서드로 구현 합니다.  
   
     ```csharp  
-    public async System.Threading.Tasks.Task<object> CreateService(IAsyncServiceContainer container, CancellationToken cancellationToken, Type serviceType)  
+    public async Task<object> CreateTextWriterService(IAsyncServiceContainer container, CancellationToken cancellationToken, Type serviceType)  
     {  
-        STextWriterService service = null;  
-        await System.Threading.Tasks.Task.Run(() => {  
-                    service = new TextWriterService(this);  
-             });  
-  
-        return service;  
+        TextWriterService service = new TextWriterService(this);  
+        await service.InitializeAsync(cancellationToken);
+        return service;
     }  
   
     ```  
@@ -143,13 +160,13 @@ public sealed class TestAsyncPackage : AsyncPackage
     ```csharp  
     protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
     {  
-        this.AddService(typeof(STextWriterService), CreateService);  
+        await base.InitializeAsync(cancellationToken, progress);  
+        this.AddService(typeof(STextWriterService), CreateTextWriterService);  
   
         ITextWriterService textService = await this.GetServiceAsync(typeof(STextWriterService)) as ITextWriterService;  
   
         await textService.WriteLineAsync(<userpath>), "this is a test");  
   
-        await base.InitializeAsync(cancellationToken, progress);  
     }  
   
     ```  
@@ -175,17 +192,16 @@ public sealed class TestAsyncPackage : AsyncPackage
   
     protected override async System.Threading.Tasks.Task InitializeAsync(CancellationToken cancellationToken, IProgress<ServiceProgressData> progress)  
     {  
-        await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();  
-        TestAsyncCommand.Initialize(this);    
-  
-        this.AddService(typeof(STextWriterService), CreateService);  
-  
+        await base.InitializeAsync(cancellationToken, progress);  
+        this.AddService(typeof(STextWriterService), CreateTextWriterService);  
+
         ITextWriterService textService =   
            await this.GetServiceAsync(typeof(STextWriterService)) as ITextWriterService;  
   
         await textService.WriteLineAsync((<userpath>, "this is a test");  
   
-        await base.InitializeAsync(cancellationToken, progress);  
+        await ThreadHelper.JoinableTaskFactory.SwitchToMainThreadAsync();  
+        TestAsyncCommand.Initialize(this);
     }  
   
     ```  
@@ -200,14 +216,16 @@ public sealed class TestAsyncPackage : AsyncPackage
     using System.IO;  
     ```  
   
-6.  비동기 메서드를 라는 추가 `GetAsyncService()`, 서비스를 가져오고 해당 메서드를 사용 하 여:  
+6.  비동기 메서드를 라는 추가 `UseTextWriterAsync()`, 서비스를 가져오고 해당 메서드를 사용 하 여:  
   
     ```csharp  
-    private async System.Threading.Tasks.Task GetAsyncService()  
+    private async System.Threading.Tasks.Task UseTextWriterAsync()  
     {  
+        // Query text writer service asynchronously to avoid a blocking call.
         ITextWriterService textService =   
-           this.ServiceProvider.GetService(typeof(STextWriterService))  
+           await AsyncServiceProvider.GlobalProvider.GetServiceAsync(typeof(STextWriterService))  
               as ITextWriterService;  
+
         // don't forget to change <userpath> to a local path  
         await textService.WriteLineAsync((<userpath>),"this is a test");  
        }  
@@ -219,7 +237,7 @@ public sealed class TestAsyncPackage : AsyncPackage
     ```csharp
     private void MenuItemCallback(object sender, EventArgs e)  
     {  
-        GetAsyncService();  
+        UseTextWriterAsync();  
     }  
   
     ```  
