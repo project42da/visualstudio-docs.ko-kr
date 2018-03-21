@@ -19,11 +19,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: e78f77993c510a223056696c0beac27147d18d5a
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 7f84329923251b7239f7be67bc68e2f02e8dee4e
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio 멀티 타기팅 개요
 
@@ -87,6 +87,5 @@ Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework�
 
 ## <a name="see-also"></a>참고 항목
 
-[멀티 타기팅(MSBuild)](../msbuild/msbuild-multitargeting-overview.md)  
-[방법: 대상 프레임워크 및 플랫폼 도구 집합 수정(C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)  
-[Platform compatibility and system requirements](http://www.microsoft.com/visualstudio/eng/products/compatibility)(플랫폼 호환성 및 시스템 요구 사항)
+- [멀티 타기팅(MSBuild)](../msbuild/msbuild-multitargeting-overview.md)
+- [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정(C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

@@ -22,11 +22,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e490ad25535cddf20a2693c2f3b9b7642f0c46e
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c57923c75d1ae62b45b6ac288e75ef4e34a2f742
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="item-element-msbuild"></a>Item 요소(MSBuild)
 사용자 정의 항목 및 해당 메타데이터를 포함합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트에서 사용되는 모든 항목은 `ItemGroup` 요소의 자식으로 지정해야 합니다.  
@@ -75,7 +75,7 @@ MSBuild 15.1 이상에서는 현재 특성 목록과 충돌하지 않는 이름�
 
 |특성|설명|  
 |---------------|-----------------|  
-|`Include`|필수 특성입니다.<br /><br /> 항목 목록에 포함할 파일 또는 와일드카드입니다.|  
+|`Include`|선택적 특성입니다.<br /><br /> 항목 목록에 포함할 파일 또는 와일드카드입니다.|  
 |`Exclude`|선택적 특성입니다.<br /><br /> 항목 목록에서 제외할 파일 또는 와일드카드입니다.|  
 |`Condition`|선택적 특성입니다.<br /><br /> 평가할 조건입니다. 자세한 내용은 [조건](../msbuild/msbuild-conditions.md)을 참조하세요.|  
 |`Remove`|선택적 특성입니다.<br /><br /> 항목 목록에서 제거할 파일 또는 와일드카드입니다.<br /><br />|  

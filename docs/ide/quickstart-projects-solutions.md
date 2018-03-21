@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 284c99c9e9c1ed2e84b05070bbf6d9991c025f94
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: f8845ab2de127b511b9180bebbe201b777c23455
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>빠른 시작: 프로젝트 및 솔루션
 
@@ -185,10 +185,10 @@ ms.lasthandoff: 03/09/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[빠른 시작: 먼저 Visual Studio IDE 살펴보기](../ide/quickstart-ide-orientation.md)  
-[빠른 시작: Visual Studio IDE 및 편집기 개인 설정](../ide/quickstart-personalize-the-ide.md)  
-[빠른 시작: 편집기에서 코딩](../ide/quickstart-editor.md)  
-[프로젝트 및 솔루션 속성 관리](../ide/managing-project-and-solution-properties.md)  
-[프로젝트의 참조 관리](../ide/managing-references-in-a-project.md)  
-[프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)  
-[Visual Studio IDE 개요](../ide/visual-studio-ide.md)
+- [빠른 시작: 먼저 Visual Studio IDE 살펴보기](../ide/quickstart-ide-orientation.md)
+- [빠른 시작: Visual Studio IDE 및 편집기 개인 설정](../ide/quickstart-personalize-the-ide.md)
+- [빠른 시작: 편집기에서 코딩](../ide/quickstart-editor.md)
+- [프로젝트 및 솔루션 속성 관리](../ide/managing-project-and-solution-properties.md)
+- [프로젝트의 참조 관리](../ide/managing-references-in-a-project.md)
+- [프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
+- [Visual Studio IDE 개요](../ide/visual-studio-ide.md)

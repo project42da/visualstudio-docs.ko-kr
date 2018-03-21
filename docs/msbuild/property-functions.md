@@ -16,11 +16,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: d119b5baeccc762411aa8f7db4e4d02ba881c34d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c3bd5d35e3d996a1507a5ce14d40fbb59c24cbdb
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="property-functions"></a>속성 함수
 .NET Framework 버전 4 및 4.5에서는 속성 함수를 사용하여 MSBuild 스크립트를 평가할 수 있습니다. 속성 함수는 속성이 나타나는 곳마다 사용할 수 있습니다. 작업과 달리 속성 함수는 대상 외부에서 사용할 수 있으며, 대상이 실행되기 전에 평가됩니다.  
@@ -211,7 +211,7 @@ ms.lasthandoff: 02/09/2018
  이 속성 함수의 구문은 다음과 같습니다.  
 
 ```  
-$[MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture)  
+$([MSBuild]::DoesTaskHostExist(string theRuntime, string theArchitecture))
 ```  
 
 ##  <a name="msbuild-ensuretrailingslash"></a>MSBuild EnsureTrailingSlash  
@@ -229,7 +229,7 @@ $([MSBuild]::EnsureTrailingSlash('$(PathProperty)'))
  이 속성 함수의 구문은 다음과 같습니다.  
 
 ```  
-$[MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile)  
+$([MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile))
 ```  
 
  다음 코드는 이 구문의 예제입니다.  
@@ -246,7 +246,7 @@ $[MSBuild]::GetDirectoryNameOfFileAbove(string ThePath, string TheFile)
  이 속성 함수의 구문은 다음과 같습니다.  
 
 ```  
-$([MSBuild]::GetPathOfFileAbove(dir.props)  
+$([MSBuild]::GetPathOfFileAbove(dir.props))  
 ```  
 
 ##  <a name="msbuild-getregistryvalue"></a>MSBuild GetRegistryValue  
@@ -292,7 +292,7 @@ $([MSBuild]::GetRegistryValue(`HKEY_LOCAL_MACHINE\SOFTWARE\(SampleName)`, `(Samp
  이 속성 함수의 구문은 다음과 같습니다.  
 
 ```  
-$[MSBuild]::MakeRelative($(FileOrFolderPath1), $(FileOrFolderPath2))  
+$([MSBuild]::MakeRelative($(FileOrFolderPath1), $(FileOrFolderPath2)))
 ```  
 
  다음 코드는 이 구문의 예제입니다.  
