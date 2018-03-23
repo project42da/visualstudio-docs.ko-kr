@@ -1,26 +1,26 @@
 ---
-title: "IntelliTrace 단계 백-Visual Studio를 사용 하 여 스냅숏 보기 | Microsoft Docs"
+title: IntelliTrace 단계 백-Visual Studio를 사용 하 여 스냅숏 보기 | Microsoft Docs
 ms.description: Learn how to take snapshots, and view snapshots with IntelliTrace step-back
 ms.custom: mvc
 ms.date: 12/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
-caps.latest.revision: 
+caps.latest.revision: ''
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 9602aa5c75f9572f2ca0f5cd8ef3426cde8ed96a
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 8f9f0c65110ef1003c58c0a4002f90ec7e7e08e3
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio에서 IntelliTrace를 사용 하 여 스냅숏 볼 단계 저장
 
@@ -72,8 +72,6 @@ IntelliTrace 단계 저장은 Visual Studio Enterprise 2017 15.5 이상 버전�
 2. 라이브 실행 돌아가려면 선택 **계속 (F5)** 하거나 클릭 하 고 **라이브 디버깅으로 돌아가세요** 정보 표시줄에 링크 합니다. 
 
 3. 스냅숏을 볼 수 있습니다는 **이벤트** 탭 합니다. 이 작업을 수행 하려면 스냅숏 사용 하 여 이벤트를 선택 하 고 클릭 **기록 디버깅 활성화**합니다.
-
-    기록 디버깅 활성화 하려면 카메라 아이콘을 클릭할 수도 있습니다.
 
     ![이벤트에 기록 디버깅 활성화](../debugger/media/intellitrace-activate-historical-debugging.png "이벤트에 기록 디버깅 활성화")
 
