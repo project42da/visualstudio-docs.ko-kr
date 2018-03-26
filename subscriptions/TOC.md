@@ -1,8 +1,9 @@
-# [Visual Studio 구독](index.md) 
+# [Visual Studio 구독](index.md)
 ## 구독자 환경
 ### [구독자 포털 사용](using-the-subscriber-portal.md)
 #### [정품 구독 활성화](activate-store-subscriptions.md)
 #### [로그인](signing-in.md)
+#### [대체 ID](vs-alternate-identity.md)
 ##### [별칭으로 로그인](aliasing.md)
 #### [구독 관리](manage-vs-subscriptions.md)
 ### [소프트웨어 다운로드](subscriber-downloads.md)
@@ -14,9 +15,9 @@
 ### [구독자 혜택](subscriber-benefits.md)
 ## 구독자 혜택 사용
 ### 도구
-#### [Visual Studio IDE ](vs-ide-benefit.md) 
+#### [Visual Studio IDE ](vs-ide-benefit.md)
 #### [Visual Studio Team Services](vs-vsts.md)
-#### [Azure 크레딧](vs-azure.md) 
+#### [Azure 크레딧](vs-azure.md)
 #### [Visual Studio App Center](vs-visual-studio-app-center.md)
 #### [Parasoft](vs-parasoft.md)
 #### [WhiteSource Bolt](vs-whitesource.md)
@@ -61,15 +62,17 @@
 #### [만료된 구독](handle-expired-license.md)
 #### [개인 전자 메일 로그인이 있는 구독자](personal-email-sign-ins.md)
 ## Visual Studio 구독 취득
-### [구독 비교](compare-subscriptions.md)
+### [구독 옵션 비교](https://www.visualstudio.com/vs/pricing)
 ### 클라우드 구독 구입
 #### [개요](vscloud-overview.md)
-#### [최초 구입](vscloud-first-purchase.md)
-#### [갱신](vscloud-renewals.md)
-#### [추가 구입](vscloud-buy-more.md)
-#### [취소](vscloud-cancel.md)
-## 리소스
+#### [청구 FAQ](vscloud-billing-faq.md)
+#### [CSP 구입](vscloud-csp.md)
+### 프로그램을 통해 제공되는 구독
+#### [Microsoft 파트너 네트워크](program-mpn.md)
+#### [MPN에 대한 구독 관리](manage-mpn-subscriptions.md)
+#### [Microsoft for Startups](program-startups.md)
+## 자료
 ### [Visual Studio 사용 조건](vs-license-terms.md)
-### [Visual Studio 라이선스 백서](https://www.microsoft.com/downloads/details.aspx?displaylang=en&FamilyID=2b1504e6-0bf1-46da-be0e-85cc792c6b9d)
+### [Visual Studio 라이선스 백서](http://aka.ms/vslicensing)
 ### [구독 옵션 및 가격 비교](https://www.visualstudio.com/vs/pricing)
 ### [Visual Studio IDE 기능 비교](https://www.visualstudio.com/vs/compare)
