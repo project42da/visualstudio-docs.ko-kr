@@ -1,22 +1,22 @@
 ---
-title: "여러 사용자 계정으로 작업 | Microsoft 문서"
-ms.custom: 
+title: 여러 사용자 계정으로 작업 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology: vs-acquisition
+ms.tgt_pltfrm: ''
 ms.topic: article
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: def8b9347ec5c74cf369972602416c992dff39c7
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 535b01f8f0ef5840543013509d40b4b8393fa7f6
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="work-with-multiple-user-accounts"></a>Work with multiple user accounts
 

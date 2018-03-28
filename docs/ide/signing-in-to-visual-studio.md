@@ -1,23 +1,24 @@
 ---
-title: "Visual Studio에 로그인 | Microsoft 문서"
-ms.custom: 
+title: Visual Studio에 로그인 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/16/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
-caps.latest.revision: "30"
-author: gewarren
-ms.author: gewarren
+author: TerryGLee
+ms.author: tglee
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7e2fbc1c603886eecfa929406dfd91a1ed4e400b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 740913d6979e38fb924e0fa16b81ffda130bc2dc
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio에 로그인
 
@@ -25,7 +26,7 @@ IDE에 로그인하여 개인 설정 계정을 설정하면 Visual Studio의 개
 
 ## <a name="why-should-i-sign-in-to-visual-studio"></a>Visual Studio에 로그인해야 하는 이유는 무엇인가요?
 
-로그인하면 Visual Studio 환경이 향상됩니다. 몇 가지 예를 들자면, 로그인한 후에는 여러 장치에서 설정을 동기화하고 평가판을 연장하고 Azure 서비스에 자동으로 연결할 수 있습니다. 
+로그인하면 Visual Studio 환경이 향상됩니다. 몇 가지 예를 들자면, 로그인한 후에는 여러 장치에서 설정을 동기화하고 평가판을 연장하고 Azure 서비스에 자동으로 연결할 수 있습니다.
 
 다음은 로그인 후 예상할 수 있고 수행할 수 있는 작업의 전체 목록입니다.  
 

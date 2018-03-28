@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio 2017 작업 및 구성 요소 ID | Microsoft Docs"
-description: "작업 및 구성 요소 ID를 사용하여 명령줄로 Visual Studio를 설치하거나 VSIX 매니페스트에서 종속성으로 지정합니다."
-keywords: 
+title: Visual Studio 2017 작업 및 구성 요소 ID | Microsoft Docs
+description: 작업 및 구성 요소 ID를 사용하여 명령줄로 Visual Studio를 설치하거나 VSIX 매니페스트에서 종속성으로 지정합니다.
+keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
@@ -11,17 +11,17 @@ helpviewer_keywords:
 - workload ID, Visual Studio
 - component ID, Visual Studio
 - install Visual Studio, administrator guide
-ms.service: 
+ms.service: ''
 ms.technology:
 - vs-acquisition
 ms.assetid: 34e19ef1-abfb-44fd-aad2-33c5d7874482
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a8b2ca8900c0f292d7e4bcc035e1eb58fd12a94
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 967fdb78d603998ac992b3e3609bc607dc4ea0ff
+ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="visual-studio-2017-workload-and-component-ids"></a>Visual Studio 2017 작업 및 구성 요소 ID
 명령줄을 사용하여 Visual Studio를 설치하거나 VSIX 매니페스트에 종속성으로 지정하는 데 필요하고 사용 가능한 워크로드 및 구성 요소 ID를 확인하려면 다음 표에서 버전 이름을 클릭합니다.

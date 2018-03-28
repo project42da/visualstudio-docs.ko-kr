@@ -1,12 +1,12 @@
 ---
-title: "Visual Studio 설치에 대한 명령줄 매개 변수 예 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 설치에 대한 명령줄 매개 변수 예 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/06/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 837F31AA-F121-46e9-9996-F8BCE768E579
 author: timsneath
@@ -14,11 +14,11 @@ ms.author: tglee
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: f91810f53a27cc988c44e6c283364bb2d29e39e0
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: d9d13daf406dc0c39d6a2f3571acf5f60c763126
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="command-line-parameter-examples-for-visual-studio-2017-installation"></a>Visual Studio 2017 설치에 대한 명령줄 매개 변수 예
 [명령줄 매개 변수를 사용하여 Visual Studio를 설치](use-command-line-parameters-to-install-visual-studio.md)하는 방법을 보여 주기 위해 사용자의 요구에 맞게 사용자 지정할 수 있는 몇 가지 예를 제공합니다.
@@ -45,7 +45,7 @@ vs_enterprise.exe update --wait --passive --norestart --installPath "C:\installP
 ```
 
 > [!NOTE]
-> 두 명령이 모두 필요합니다. 첫 번째 명령은 Visual Studio 설치 관리자를 업데이트합니다. 두 번째 명령은 Visual Studio 인스턴스를 업데이트합니다. [사용자 계정 컨트롤] 대화 상자를 사용하지 않으려면 명령 프롬프트를 관리자 권한으로 실행합니다. 
+> 두 명령이 모두 필요합니다. 첫 번째 명령은 Visual Studio 설치 관리자를 업데이트합니다. 두 번째 명령은 Visual Studio 인스턴스를 업데이트합니다. [사용자 계정 컨트롤] 대화 상자를 사용하지 않으려면 명령 프롬프트를 관리자 권한으로 실행합니다.
 
 * 제품을 설치해야만 반환되는 프랑스어 언어 팩을 포함한 Visual Studio의 데스크톱 인스턴스를 자동으로 설치합니다.
 ```

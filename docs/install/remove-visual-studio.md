@@ -1,12 +1,13 @@
 ---
-title: "Visual Studio 2017 제거 | Microsoft Docs"
-description: "Visual Studio를 제거하는 방법을 단계별로 알아봅니다."
-ms.custom: 
+title: Visual Studio 2017 제거 | Microsoft Docs
+description: Visual Studio를 제거하는 방법을 단계별로 알아봅니다.
+ms.custom: ''
 ms.date: 09/12/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-acquisition
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - uninstall
@@ -19,14 +20,15 @@ f1_keywords:
 - clean up Visual Studio
 ms.assetid: 9c81a777-9c95-4934-b517-c60c6dc78799
 author: heaths
-ms.author: heaths
-manager: erickn
-ms.workload: multiple
-ms.openlocfilehash: a08a24be4f3f9e915a93c9beac7cf5e5c28eb7ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.author: tglee
+manager: ghogen
+ms.workload:
+- multiple
+ms.openlocfilehash: 409a1c83f0acbb32848a46e9df2f7eb2b3750e24
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="remove-visual-studio"></a>Visual Studio 제거
 
