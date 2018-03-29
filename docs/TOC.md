@@ -1,6 +1,5 @@
 # [Visual Studio 설명서](ide/index.md)
 # [개요](ide/visual-studio-ide.md)
-## [새로운 기능](ide/whats-new-in-visual-studio.md)
 # 설치
 ## [Visual Studio 설치](install/install-visual-studio.md)
 ## [Visual Studio에 로그인](ide/signing-in-to-visual-studio.md)
@@ -449,6 +448,17 @@
 ### [Dotfuscator CE 설치](ide/dotfuscator/install.md)
 ### [Dotfuscator CE 업그레이드](ide/dotfuscator/upgrades.md)
 # 자료
+## [새로운 기능](ide/whats-new-in-visual-studio.md)
+## 릴리스 정보 및 시스템 요구 사항
+### [현재 릴리스 정보](/visualstudio/releasenotes/vs2017-relnotes?context=visualstudio/default)
+### [미리 보기 릴리스 정보](/visualstudio/releasenotes/vs2017-preview-relnotes?context=visualstudio/default)
+### [릴리스 정보 기록](/visualstudio/releasenotes/vs2017-relnotes-history?context=visualstudio/default)
+### [릴리스 리듬](/visualstudio/productinfo/vs2017-release-rhythm?context=visualstudio/default)
+### [시스템 요구 사항](/visualstudio/productinfo/vs2017-system-requirements-vs?context=visualstudio/default)
+### [플랫폼 호환성](/visualstudio/productinfo/vs2017-compatibility-vs?context=visualstudio/default)
+### [라이선싱](https://www.visualstudio.com/license-terms/)
+### [배포 가능 코드](/visualstudio/productinfo/2017-redistribution-vs?context=visualstudio/default)
+### [지원 수명 주기 및 서비스](/visualstudio/productinfo/vs-servicing-vs?context=visualstudio/default)
 ## [Visual Studio의 문제를 보고하는 방법](ide/how-to-report-a-problem-with-visual-studio-2017.md)
 ## [IDE 오류 문제 해결을 위한 리소스](ide/reference/resources-for-troubleshooting-integrated-development-environment-errors.md)
 ## [의견 보내기](ide/talk-to-us.md)
