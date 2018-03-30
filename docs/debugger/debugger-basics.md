@@ -1,11 +1,12 @@
 ---
-title: "디버거 기본 사항 | Microsoft Docs"
-ms.custom: 
+title: 디버거 기본 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - C++
@@ -17,16 +18,17 @@ helpviewer_keywords:
 - debugger, about debugger
 - debugger, roadmap
 ms.assetid: 4da42a10-384d-44d7-b4dc-032202ff784b
-caps.latest.revision: "27"
+caps.latest.revision: 27
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 873e08817eef7d1760a717d98e413d8d4096323b
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="debugger-basics"></a>디버거 기본 사항
 Visual Studio 디버거를 사용하여 프로그램의 런타임 동작을 관찰하고 논리 오류를 찾아낼 수 있습니다. 디버거는 모든 Visual Studio 프로그래밍 언어 및 관련 라이브러리와 함께 작동합니다. 디버거를 사용하여 실행을 중단하고 코드를 단계별로 실행하고 응용 프로그램의 변수를 평가할 수 있습니다.  

@@ -10,17 +10,17 @@ ms.technology:
 ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
-caps.latest.revision: ''
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f9f0c65110ef1003c58c0a4002f90ec7e7e08e3
-ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
+ms.openlocfilehash: 6634a72b7bbed51e3ae250289696511d67c70041
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio에서 IntelliTrace를 사용 하 여 스냅숏 볼 단계 저장
 
@@ -39,11 +39,11 @@ IntelliTrace 단계 저장은 Visual Studio Enterprise 2017 15.5 이상 버전�
 
 1. Visual Studio Enterprise에서 프로젝트를 엽니다.
 
-1. 로 이동 **도구 > 옵션 > IntelliTrace** 설정 및 옵션을 선택 **IntelliTrace 이벤트 및 스냅숏**합니다. 
+1. 열기 **도구** > **옵션** > **IntelliTrace** 설정 및 옵션을 선택 **IntelliTrace 이벤트 및 스냅숏** . 
 
     ![IntelliTrace 이벤트 및 스냅숏 모드를 사용 하도록 설정](../debugger/media/intellitrace-enable-snapshots.png "IntelliTrace 이벤트를 사용 하도록 설정 및 스냅숏 모드")
 
-1. 프로젝트에 하나 이상의 중단점을 설정 하 고 디버깅 시작 (키를 눌러 **F5**), 코드를 단계별로 실행 하 여 디버깅을 시작 하거나 (**F10** 또는 **F11**).
+1. 프로젝트에서 하나 이상의 중단점을 설정 하 고 디버깅을 시작 (키를 눌러 **F5**), 코드를 단계별로 실행 하 여 디버깅을 시작 하거나 (**F10** 또는 **F11**).
 
     IntelliTrace 스냅숏을 응용 프로그램의 프로세스의 각 디버거에서 단계와 중단점 이벤트입니다. 이러한 이벤트에 기록 됩니다는 **이벤트** 탭에 **진단 도구** 다른 IntelliTrace 이벤트와 함께 창. 이 창을 열려면 선택 **디버그** > **Windows** > **진단 도구 표시**합니다.
 

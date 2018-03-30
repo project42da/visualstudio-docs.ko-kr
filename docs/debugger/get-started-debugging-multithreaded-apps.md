@@ -1,13 +1,13 @@
 ---
-title: "다중 스레드 응용 프로그램 디버깅을 시작 하려면 | Microsoft Docs"
+title: 다중 스레드 응용 프로그램 디버깅을 시작 하려면 | Microsoft Docs
 ms.custom: H1HackMay2017
 ms.date: 06/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,17 +17,17 @@ helpviewer_keywords:
 - multithreaded debugging, tutorial
 - tutorials, multithreaded debugging
 ms.assetid: 62df746b-b0f6-4df4-83cf-b1d9d2e72833
-caps.latest.revision: 
+caps.latest.revision: 38
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d2766a394c88d2040a8f062c33add4e3f7af019
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 48e912fdd04e25f9ad8f7babcf565afb5b739f05
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="get-started-debugging-a-multithreaded-application-in-visual-studio"></a>Visual Studio에서 다중 스레드 응용 프로그램 디버깅을 시작.
 Visual Studio는 여러 가지 도구와 다중 스레드 응용 프로그램을 디버그할 수 있도록 사용자 인터페이스 요소를 제공 합니다. 스레드 마커를 사용 하는 방법을 보여 주는이 자습서는 **병렬 스택** 창 고 **병렬 조사식** 창과 조건부 중단점, 중단점 필터입니다. 이 자습서에서는 몇 분 정도 걸리지만 완료에 익숙해질 수 다중 스레드 응용 프로그램 디버깅을 위한 기능입니다.
@@ -319,7 +319,7 @@ Visual Studio는 여러 가지 도구와 다중 스레드 응용 프로그램을
 
 스레드 플래그를 해제 하려면 하나 이상의 플래그가 지정 된 스레드 단추로 **병렬 조사식** 창을 선택 하 고 **플래그 해제**합니다.
 
-## <a name="bkmk_freeze"></a>중지 및 재개 스레드 실행 
+## <a name="bkmk_freeze"></a> 중지 및 재개 스레드 실행 
 
 > [!TIP]
 > 고정 및 고정 해제 수 (일시 중단 및 다시 시작) 스레드 작업을 수행 하는 순서를 제어 하는 스레드입니다. 이 교착 상태 같은 동시성 문제를 해결 하 고 경합 조건을 수 있습니다.
@@ -340,7 +340,7 @@ Visual Studio는 여러 가지 도구와 다중 스레드 응용 프로그램을
 
     앱에서 몇 가지 새 스레드를 인스턴스화할 수도 수 있습니다. 모든 새 스레드를 플래그 지정 된 않으며 고정 되지 않은 확인 합니다.
 
-## <a name="bkmk_follow_a_thread"></a>조건부 중단점을 사용 하 여 단일 스레드를 수행 합니다.
+## <a name="bkmk_follow_a_thread"></a> 조건부 중단점을 사용 하 여 단일 스레드를 수행 합니다.
 
 경우에 따라 디버거에서 단일 스레드로 실행을 추적 하 유용할 수 있습니다. 관심 않은 스레드를 고정 하 여 수행할 수 있는 한 가지 방법은 이지만 일부 시나리오는 단일 스레드 하지 않고를 따르는 고정 하는 다른 스레드 (예를 들어 특정 버그 재현)를 만들 수 있습니다. 스레드가 다른 스레드에서 고정 하지 않고를 수행 하려면에 관심이 있는 스레드에서 제외 하 고 코드를 중단 하면 하면 안 됩니다. 설정 하 여이 수행할 수는 [조건부 중단점](../debugger/using-breakpoints.md#BKMK_Specify_a_breakpoint_condition_using_a_code_expression)합니다.
 

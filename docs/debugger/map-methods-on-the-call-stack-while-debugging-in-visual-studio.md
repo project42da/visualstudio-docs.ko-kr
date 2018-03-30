@@ -1,13 +1,13 @@
 ---
-title: "호출 스택의 시각적 맵 만들기 | Microsoft Docs"
-ms.custom: 
+title: 호출 스택의 시각적 맵 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 f1_keywords:
 - vs.progression.debugwithcodemaps
 dev_langs:
@@ -30,17 +30,17 @@ helpviewer_keywords:
 - debugging [Visual Studio], tracing the call stack visually
 - debugging [Visual Studio], visualizing the call stack
 ms.assetid: d6a72e5e-f88d-46fc-94a3-1789d34805ef
-caps.latest.revision: 
+caps.latest.revision: 39
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 99f388fea1d6512760f99615256f71002099e9be
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: f5fc0025c9d7870b0de042922d87d3a23d7728c5
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="create-a-visual-map-of-the-call-stack-while-debugging-in-visual-studio-enterprise"></a>Visual Studio Enterprise에서 디버깅 하는 동안 호출 스택의 시각적 맵 만들기
 디버깅 하는 동안 호출 스택을 시각적으로 추적 하려면 코드 맵을 만듭니다. 맵을 기록해 두면 코드에서 어떤 작업을 하고 있는지 추적하여 버그를 찾는 데 집중할 수 있습니다.
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/01/2018
   
  명령 및 코드 맵에서 작업할 때 사용할 수 있는 작업의 세부 정보를 참조 하십시오. [찾아보기 및 다시 정렬 코드 맵](../modeling/browse-and-rearrange-code-maps.md)합니다.  
   
-##  <a name="MapStack"></a>호출 스택 매핑  
+##  <a name="MapStack"></a> 호출 스택 매핑  
   
 1.  디버깅을 시작합니다. (키보드: **F5**)  
   
@@ -87,17 +87,17 @@ ms.lasthandoff: 02/01/2018
   
      디버깅하는 동안 맵이 자동으로 업데이트됩니다. 참조 [다음 호출 스택과 함께 맵 업데이트](#UpdateMap)합니다.  
   
-##  <a name="MakeNotes"></a>코드에 대해 메모 하기  
+##  <a name="MakeNotes"></a> 코드에 대해 메모 하기  
  코드에서 일어나는 추적 하는 주석을 추가 합니다. 키를 눌러 새 줄의 메모를 추가 하려면 **Shift + Return**합니다.  
   
  ![코드 맵의 호출 스택에 설명 추가](../debugger/media/debuggermap_addcomment.png "DebuggerMap_AddComment")  
   
-##  <a name="UpdateMap"></a>다음 호출 스택과 함께 맵 업데이트  
+##  <a name="UpdateMap"></a> 다음 호출 스택과 함께 맵 업데이트  
  응용 프로그램을 다음 중단점까지 실행하거나 함수로 한 단계씩 실행합니다. 맵은 새로운 호출 스택을 추가합니다.  
   
  ![다음 호출 스택으로 코드 맵 업데이트](../debugger/media/debuggermap_addclearcallstack.png "DebuggerMap_AddClearCallStack")  
   
-##  <a name="AddRelatedCode"></a>맵에 관련된 코드 추가  
+##  <a name="AddRelatedCode"></a> 맵에 관련된 코드 추가  
  완성 되었습니다. 맵-어떤 다음? Visual C# 또는 Visual Basic로 작업할 경우에 필드, 속성 및 코드에서 한 사건을 추적 하는 기타 메서드가, 같은 항목을 추가 합니다.  
   
  메서드를 두 번 클릭하여 코드 정의를 보거나 메서드에 대한 바로 가기 메뉴를 사용합니다. (키보드: 메서드를 맵 및 키를 눌러 선택 **F12**)  
@@ -121,7 +121,7 @@ ms.lasthandoff: 02/01/2018
   
  ![호출 스택 코드 맵의 필드를 사용 하는 메서드](../debugger/media/debuggermap_foundallreferences.png "DebuggerMap_FoundAllReferences")  
   
-##  <a name="FindBugs"></a>지도 사용 하 여 버그 찾기  
+##  <a name="FindBugs"></a> 지도 사용 하 여 버그 찾기  
  코드를 시각화하면 버그를 더 빠르게 찾을 수 있습니다. 예를 들어 드로잉 프로그램에서 버그를 조사 한다고 가정 합니다. 선을 그렸다가 취소하려는 경우 다른 선을 그릴 때까지 아무 것도 발생하지 않습니다.  
   
  따라서 `clear`, `undo` 및 `Repaint` 메서드에서 중단점을 설정하고, 디버깅을 시작하고, 다음과 같은 맵을 빌드합니다.  
@@ -172,7 +172,7 @@ ms.lasthandoff: 02/01/2018
   
 -   **새 호출 스택이 자동으로 추가 지도 중지 하는 방법**  
   
-     선택 ![단추 &#45; 자동으로 호출 스택 코드 맵에 표시](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon") 맵 도구 모음에서 합니다. 현재 호출 스택을 맵에 수동으로 추가 하려면 다음을 눌러 **Ctrl** + **Shift** + **`**합니다.  
+     선택 ![단추 &#45; 표시 호출 스택 코드 맵에 자동으로](../debugger/media/debuggermap_automaticupdateicon.gif "DebuggerMap_AutomaticUpdateIcon") 맵 도구 모음에서 합니다. 현재 호출 스택을 맵에 수동으로 추가 하려면 다음을 눌러 **Ctrl** + **Shift** + **`**합니다.  
   
      맵을 디버깅할 때 기존 호출 스택을 맵에 강조 표시 계속 됩니다.  
   

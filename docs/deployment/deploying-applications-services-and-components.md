@@ -1,12 +1,13 @@
 ---
-title: "배포 개요-Visual Studio | Microsoft Docs"
-ms.custom: 
+title: 배포 개요-Visual Studio | Microsoft Docs
+ms.custom: mvc
 ms.date: 11/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-deployment
+ms.tgt_pltfrm: ''
+ms.topic: quickstart
 dev_langs:
 - FSharp
 - VB
@@ -21,18 +22,19 @@ helpviewer_keywords:
 - deploying applications [Visual Studio], about deploying applications
 - components [.NET Framework], deploying
 ms.assetid: 63fcdd5b-2e54-4210-9038-65bc23167725
-caps.latest.revision: "33"
+caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e05bf361515b45f3ebc7683fa0c83ec6116d9419
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.workload:
+- multiple
+ms.openlocfilehash: d07129bc373cf74c8ba373b3c51847016d585ade
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 03/30/2018
 ---
-# <a name="deployment-overview-in-visual-studio"></a>Visual Studio에서 배포 개요
+# <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>빠른 시작: Visual Studio에서 배포 시 소개
 
 다른 컴퓨터, 장치, 서버 또는 클라우드에 설치할 수 있도록 응용 프로그램, 서비스 또는 구성 요소를 배포할 수 있습니다. Visual Studio에서 필요한 배포 유형에 적합한 방법을 선택할 수 있습니다. (다양 한 응용 프로그램 종류 명령줄 배포 또는 NuGet 같은 여기에 설명 되지 않은 다른 배포 도구를 지원 합니다.)
 
@@ -40,7 +42,7 @@ ms.lasthandoff: 01/10/2018
 
 ### <a name="deploy-to-local-folder"></a>로컬 폴더에 배포
 
-- **ASP.NET**, **ASP.NET Core**, **Node.js**, **Python**, 및 **.NET Core**: 게시 도구를 사용 하 여 로컬 배포할 폴더입니다. 사용 가능한 옵션은 응용 프로그램 형식에 따라 달라 집니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**를 선택한 후 **폴더**합니다. 자세한 내용은 참조 [로컬 폴더에 배포](quickstart-deploy-to-local-folder.md)합니다.
+- **ASP.NET**, **ASP.NET Core**, **Node.js**, **Python**, 및 **.NET Core**: 게시 도구를 사용 하 여 로컬 폴더에 배포 되도록 합니다. 사용 가능한 옵션은 응용 프로그램 형식에 따라 달라 집니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**를 선택한 후 **폴더**합니다. 자세한 내용은 참조 [로컬 폴더에 배포](quickstart-deploy-to-local-folder.md)합니다.
 
     ![선택 게시](../deployment/media/quickstart-publish.png)
 

@@ -1,32 +1,32 @@
 ---
-title: "Visual Studio의 디버거 시작 | Microsoft Docs"
+title: Visual Studio의 디버거 시작 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: get-started-article
 ms.assetid: 0b3138c4-b840-446a-a15c-10ed8e2dd050
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 171b07d453c81883354848f70458bab39daa313e
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/29/2018
 ---
 # <a name="get-started-with-the-visual-studio-debugger"></a>Visual Studio 디버거 시작
 Visual Studio 디버거는 모든 언어에서 쉽게 사용할 수 있습니다. 간단한 C# 프로그램을 디버깅 하는 방법을 보여 주 겠지만 여기 하지만 c + + 및 JavaScript와 같은 다른 언어의 코드에 동일한 단계를 적용할 수 있습니다.
 
 유사한 기능을 보여 주는 비디오를 시청 하려면 [디버거 시작](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6)합니다.
   
-##  <a name="BKMK_Start_debugging_a_VS_project"></a>기본 C# 프로젝트 디버깅  
+##  <a name="BKMK_Start_debugging_a_VS_project"></a> 기본 C# 프로젝트 디버깅  
  간단한 C# 콘솔 응용 프로그램으로 시작 하겠습니다 (**파일 > 새로 만들기 > 프로젝트**을 선택한 후 **Visual C#** 차례로 **콘솔 응용 프로그램**). 이전에 Visual Studio 사용한 적, 참조 [연습: 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)합니다. **Main** 메서드 방금 10 회를 정수 변수에 1을 추가 하 고 결과를 콘솔에 출력 합니다.  
   
 ```csharp  
@@ -51,7 +51,7 @@ static void Main(string[] args)
   
  중단점에 대 한 자세한 내용은 참조 [를 사용 하 여 중단점](../debugger/using-breakpoints.md)합니다.  
   
-##  <a name="BKMK_Inspect_Variables"></a>변수 검사  
+##  <a name="BKMK_Inspect_Variables"></a> 변수 검사  
  특정 지점에서 원하는 값을 포함 하지 않는 변수를 찾는 종종 디버깅 작업이 포함 됩니다. 일부의 변수를 검사할 수 제공 됩니다.  
   
  다시 디버그를 시작합니다. `Console.WriteLine` 코드가 실행되기 전에 실행이 중지됩니다. 미리 단계별로 실행 하 여 실행 되 게 할 수 있습니다 (클릭 **디버그 > 프로시저 단위 실행** 또는 **F10**). 이 경우 선택할 수 있습니다 **한 단계씩 코드 실행** (**F11**)는 동일한 결과 얻을 차이 나중에 설명 하겠습니다. 메서드의 마지막 중괄호로 묶인 선이 노란색으로 변해야 합니다. 콘솔 창을 봅니다. 표시 되어야 **10**합니다.  
