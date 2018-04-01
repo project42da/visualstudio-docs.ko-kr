@@ -1,22 +1,25 @@
 ---
-title: "CA2242: NaN에 대해 올바르게 테스트 | Microsoft Docs"
-ms.custom: 
+title: 'CA2242: NaN에 대해 올바르게 테스트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-code-analysis
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - TestForNaNCorrectly
 - CA2242
-helpviewer_keywords: CA2242
+helpviewer_keywords:
+- CA2242
 ms.assetid: e12dcffc-e255-4e1e-8fdf-3c6054d44abe
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: b79c2d180bab62239dcace4bcf5b49195d339946
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT

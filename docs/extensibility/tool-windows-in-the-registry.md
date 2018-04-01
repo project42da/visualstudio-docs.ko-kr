@@ -1,19 +1,22 @@
 ---
-title: "도구 창을 레지스트리에 | Microsoft Docs"
-ms.custom: 
+title: 도구 창을 레지스트리에 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: tool windows, registering
+helpviewer_keywords:
+- tool windows, registering
 ms.assetid: c4bb8add-7148-49e4-a377-01d059fd5524
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 8d3277a4e24b12d409654548b5670a4d47fa9539
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT

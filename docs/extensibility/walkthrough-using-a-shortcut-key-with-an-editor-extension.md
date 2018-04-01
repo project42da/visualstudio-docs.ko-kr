@@ -1,19 +1,22 @@
 ---
-title: "연습: 바로 가기 키를 사용 하 여 편집기 확장명이 | Microsoft Docs"
-ms.custom: 
+title: '연습: 바로 가기 키를 사용 하 여 편집기 확장명이 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: editors [Visual Studio SDK], new - link keystrokes to commands
+helpviewer_keywords:
+- editors [Visual Studio SDK], new - link keystrokes to commands
 ms.assetid: cf6cc6c6-5a65-4f90-8f14-663decf74672
-caps.latest.revision: "32"
+caps.latest.revision: 32
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 60cfb35e2c3acbe3b52f460b040dd5c220e6b045
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT

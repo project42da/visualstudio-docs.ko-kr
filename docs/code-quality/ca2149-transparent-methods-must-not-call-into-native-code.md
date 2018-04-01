@@ -1,19 +1,22 @@
 ---
-title: "CA2149: 투명 한 메서드 호출 해서는 안 네이티브 코드로 | Microsoft Docs"
-ms.custom: 
+title: 'CA2149: 투명 한 메서드 호출 해서는 안 네이티브 코드로 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-code-analysis
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: CA2149
+f1_keywords:
+- CA2149
 ms.assetid: 28951bd7-f3db-4871-99aa-bad68d1ead80
-caps.latest.revision: "11"
+caps.latest.revision: 11
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: cplusplus
+ms.workload:
+- cplusplus
 ms.openlocfilehash: 9377a30d2fc56c8acef16b6bcf1187d0e9fa8741
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT

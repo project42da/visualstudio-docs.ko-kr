@@ -1,19 +1,22 @@
 ---
-title: "CA2143: 투명 한 메서드에 보안 요청을 사용 하지 않아야 | Microsoft Docs"
-ms.custom: 
+title: 'CA2143: 투명 한 메서드에 보안 요청을 사용 하지 않아야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-code-analysis
+ms.tgt_pltfrm: ''
 ms.topic: article
-f1_keywords: CA2143
+f1_keywords:
+- CA2143
 ms.assetid: 5d3923d7-cf40-4512-bc5c-0db0e0d6e25a
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 073ce1d22662b46a19bf5cf36305df63500347a7
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT

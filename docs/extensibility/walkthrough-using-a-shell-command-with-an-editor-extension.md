@@ -1,19 +1,22 @@
 ---
-title: "연습: 셸 명령을 사용 하 여 편집기 확장명이 | Microsoft Docs"
-ms.custom: 
+title: '연습: 셸 명령을 사용 하 여 편집기 확장명이 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-sdk
+ms.tgt_pltfrm: ''
 ms.topic: article
-helpviewer_keywords: editors [Visual Studio SDK], new - add a menu command
+helpviewer_keywords:
+- editors [Visual Studio SDK], new - add a menu command
 ms.assetid: 08526848-a442-4cd4-afa1-b2eac2005adb
-caps.latest.revision: "46"
+caps.latest.revision: 46
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
-ms.workload: vssdk
+ms.workload:
+- vssdk
 ms.openlocfilehash: 5a7f9426297ef28bdf4b829bd6697543f5aab55f
 ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
 ms.translationtype: MT
