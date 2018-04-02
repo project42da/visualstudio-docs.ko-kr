@@ -1,12 +1,12 @@
 ---
-title: "Visual Studio에서 C# 및 ASP.NET Core 시작 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 C# 및 ASP.NET Core 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/11/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.devlang: CSharp
 author: TerryGLee
@@ -17,11 +17,11 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: c4d67a57063854f859a766068084d63902ba038e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9a24ccbcecc2d5bd4d5799ada048fee0004514f7
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio에서 C# 및 ASP.NET 시작
 Visual Studio를 사용하여 ASP.NET Core로 C#을 개발하기 위한 이 자습서에서는 C# ASP.NET Core 웹앱을 만들고, 해당 앱에 코드를 추가하며, IDE의 일부 기능을 살펴보고 앱을 실행합니다. 
@@ -167,12 +167,9 @@ MVC 패턴을 통해 기존 모놀리식 응용 프로그램보다 테스트 및
 
  ![도구 모음에서 디버깅 중지 단추 클릭](../ide/media/csharp-aspnet-stop-debugging.png)
 
+## <a name="next-steps"></a>다음 단계
 
-축하합니다. 이 자습서를 마쳤습니다.
+축하합니다. 이 자습서를 마쳤습니다. C#, ASP.NET Core 및 Visual Studio IDE를 이해하는 데 도움이 되었기를 바랍니다. 자세히 알아보려면 계속 다음 자습서를 사용하세요.
 
-## <a name="see-also"></a>참고 항목
-* [ASP.NET Core MVC 및 Visual Studio 시작](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)
-* [ASP.NET Core에서 Razor 페이지 시작](/aspnet/core/tutorials/razor-pages/razor-pages-start)
-* [C#의 새로운 기능](/dotnet/csharp/whats-new)
-* [C# 언어 참조](/dotnet/csharp/language-reference/index)
-* [초보자를 위한 C# 기본 사항](https://mva.microsoft.com/en-US/training-courses/c-fundamentals-for-absolute-beginners-16169) 비디오 과정
+ > [!div class="nextstepaction"]
+ > [ASP.NET Core MVC 및 Visual Studio 시작](/aspnet/core/tutorials/first-mvc-app/start-mvc?tabs=aspnetcore2x)

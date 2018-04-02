@@ -1,10 +1,10 @@
 ---
-title: "Visual Studio 2017의 문제를 보고하는 방법 | Microsoft 문서"
-ms.custom: 
-ms.date: 02/26/2018
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+title: Visual Studio 2017의 문제를 보고하는 방법 | Microsoft 문서
+ms.custom: ''
+ms.date: 03/11/2018
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: TerryGLee
@@ -13,11 +13,11 @@ manager: ghogen
 ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: f3e5e01abeb45e7cfdefebb7d6fd3d63320e1e31
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 6fa988ce97968949036a74ff473cfe11dd3b669e
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017의 문제를 보고하는 방법
 
@@ -69,7 +69,7 @@ Visual Studio에 문제가 발생하는 경우와 관련하여 자세히 알려�
 
  **제출** 단추를 선택하여 이미지와 추적 또는 덤프 파일과 함께 보고서를 보냅니다. **제출** 단추가 회색으로 표시되는 경우 보고서의 제목과 설명을 입력했는지 확인합니다.
 
-## 대체 보고<a name="alternate_reporting"></a>
+## 대안 보고 <a name="alternate_reporting"></a>
 
 ### <a name="report-a-problem-by-using-the-visual-studio-installer"></a>Visual Studio 설치 관리자를 사용하여 문제 보고
 
@@ -77,9 +77,9 @@ Visual Studio 설치를 완료할 수 없거나 Visual Studio 내에서 피드�
 
  ![Visual Studio 설치 관리자의 피드백 제공 단추를 탭하여 피드백 도구를 열 수 있습니다.](../install/media/report-a-problem.png)
 
-### <a name="report-a-problem-directly-to-the-visual-studio-developer-community"></a>Visual Studio 개발자 커뮤니티에 직접 문제 보고
+### <a name="search-for-problems-and-solutions-by-using-the-visual-studio-developer-community"></a>Visual Studio 개발자 커뮤니티를 사용하여 문제 및 솔루션 검색
 
-Visual Studio를 사용하여 문제를 보고하지 않으려 하거나 할 수 없는 경우 대신 문제를 Visual Studio 개발자 커뮤니티에 직접 보고할 수 있습니다. 자세한 내용은 [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/) 페이지를 참조하세요.
+문제를 보고하기 위해 Visual Studio를 사용할 수 없거나 원하지 않는 경우 Visual Studio 개발자 커뮤니티에 문제가 이미 보고되고 솔루션이 게시됐을 수 있습니다. 자세한 내용은 [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/) 페이지를 참조하세요.
 
 #### <a name="provide-product-feedback-or-a-suggestion"></a>제품 피드백 또는 제안 제공
 

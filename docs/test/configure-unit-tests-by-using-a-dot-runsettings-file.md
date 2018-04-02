@@ -1,18 +1,18 @@
 ---
-title: "Visual Studio에서 *.runsettings* 파일을 사용하여 단위 테스트 구성 | Microsoft Docs"
+title: Visual Studio에서 .runsettings 파일을 사용하여 단위 테스트 구성 | Microsoft Docs
 ms.date: 02/28/2018
-ms.technology: vs-devops-test
+ms.technology: vs-ide-test
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: f10870096697341081904c4dac9540d72823e52f
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 94bcd0bc473a87246feb3b5e790ed060b615b4be
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="configure-unit-tests-by-using-a-runsettings-file"></a>*.runsettings* 파일을 사용하여 단위 테스트 구성
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 03/08/2018
 
     <!-- Path to Test Adapters -->
     <TestAdaptersPaths>%SystemDrive%\Temp\foo;%SystemDrive%\Temp\bar</TestAdaptersPaths>
-  
+
      <!--TestSessionTimeout is only available with Visual Studio 2017 version 15.5 and higher -->
      <!-- Specify timeout in milliseconds. A valid value should be greater than 0 -->
      <TestSessionTimeout>10000</TestSessionTimeout>
@@ -147,7 +147,7 @@ ms.lasthandoff: 03/08/2018
 
 비디오 데이터 수집기는 테스트를 실행할 때 기록되는 화면을 캡처합니다. 이 기록은 UI 테스트 문제 해결에 유용합니다. 비디오 데이터 수집기는 **Visual Studio 2017 버전 15.5** 이상에서 제공됩니다.
 
-다른 종류의 진단 데이터 어댑터를 사용자 지정하려면 테스트 설정 파일을 사용해야 합니다. 자세한 내용은 [Visual Studio 테스트에 대한 테스트 설정 지정](/devops-test-docs/test/specifying-test-settings-for-visual-studio-tests)을 참조하세요.
+다른 종류의 진단 데이터 어댑터를 사용자 지정하려면 테스트 설정 파일을 사용해야 합니다.
 
 ### <a name="testrunparameters"></a>TestRunParameters
 
@@ -181,4 +181,4 @@ TestContext를 사용하려면 개인 [TestContext](https://msdn.microsoft.com/l
 
 ## <a name="see-also"></a>참고 항목
 
-[코드 검사 분석 사용자 지정](../test/customizing-code-coverage-analysis.md)
+- [코드 검사 분석 사용자 지정](../test/customizing-code-coverage-analysis.md)

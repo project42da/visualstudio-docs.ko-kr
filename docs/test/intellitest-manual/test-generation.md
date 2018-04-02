@@ -1,11 +1,7 @@
 ---
-title: "테스트 생성 | Microsoft IntelliTest 개발자 테스트 도구 | Microsoft Docs"
-ms.custom: 
+title: 테스트 생성 | Microsoft IntelliTest 개발자 테스트 도구 | Microsoft Docs
 ms.date: 05/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - IntelliTest, Test generation
@@ -14,11 +10,11 @@ manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 478dbdd71845d8bc0eb98250318b853ba4b8e5e6
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 8cb42b33907b528ee2c4cdd6a85ce5c361111772
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="test-generation"></a>테스트 생성
 
@@ -120,7 +116,7 @@ public partial class ListTest {
 
 IntelliTest는 예외를 예상된 예외 및 예기치 않은 예외로 심사하는 데 유용한 다양한 유효성 검사 특성을 제공합니다.
 
-예상된 예외는 **ExpectedException(typeof(*xxx*))**와 같은 적절한 주석과 함께 부정적인 테스트 사례를 생성하지만, 예기치 않은 예외는 실패한 테스트 사례를 생성합니다.
+예상된 예외는 ***ExpectedException(typeof(*xxx**))와 같은 적절한 주석과 함께 부정적인 테스트 사례를 생성하지만, 예기치 않은 예외는 실패한 테스트 사례를 생성합니다.
 
 ```
 [PexMethod, PexAllowedException(typeof(ArgumentNullException))]

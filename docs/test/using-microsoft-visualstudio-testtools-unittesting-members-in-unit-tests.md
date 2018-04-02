@@ -1,20 +1,20 @@
 ---
-title: "단위 테스트에서 Microsoft.VisualStudio.TestTools.UnitTesting 구성원 사용 | Microsoft 문서"
+title: 단위 테스트에서 Microsoft.VisualStudio.TestTools.UnitTesting 구성원 사용 | Microsoft 문서
 ms.date: 03/02/2018
-ms.technology: vs-devops-test
+ms.technology: vs-ide-test
 ms.topic: article
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 7c841210c41e7b2b9870c80cc148006f3e63290d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 1ae1f1bd4deb81b92ffc7a38c82164e5824b4d76
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="using-the-mstest-framework-in-unit-tests"></a>단위 테스트에서 MSTest 프레임워크 사용
+# <a name="use-the-mstest-framework-in-unit-tests"></a>단위 테스트에서 MSTest 프레임워크 사용
 
 [MSTest](<xref:Microsoft.VisualStudio.TestTools.UnitTesting>) 프레임워크는 Visual Studio의 유닛 테스트를 지원합니다. 단위 테스트를 코딩하는 경우 <xref:Microsoft.VisualStudio.TestTools.UnitTesting> 네임스페이스의 클래스 및 멤버를 사용합니다. 코드에서 생성된 단위 테스트를 세분화할 때도 사용할 수 있습니다.
 

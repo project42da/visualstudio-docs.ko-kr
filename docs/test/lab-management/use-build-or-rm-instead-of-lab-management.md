@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio에서 자동화된 테스트를 위해 Build 또는 Release Management 사용 | Microsoft Docs"
+title: Visual Studio에서 자동화된 테스트를 위해 Build 또는 Release Management 사용 | Microsoft Docs
 ms.date: 03/02/2018
-ms.technology: vs-devops-test
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - automated testing, lab management, test lab
@@ -10,11 +10,11 @@ manager: ghogen
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: b12bffb6f2e5df0209fd3dfe3ea5fd005897d58d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 5596dbbe65dc57dcb1862b74ed6379d1e2c080cf
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="use-build-and-release-management-instead-of-lab-management-for-automated-testing"></a>자동화된 테스트를 위해 Lab Management 대신 Build 및 Release Management 사용
 
@@ -43,9 +43,9 @@ MTM 및 Lab Management는 XAML 빌드 정의를 사용하여 응용 프로그램
 
 ## <a name="self-service-management-of-scvmm-environments"></a>SCVMM 환경의 셀프 서비스 관리
 
-[Microsoft Test Manager의 Lab Center](https://msdn.microsoft.com/library/dd997438.aspx)는 [SCVMM 서버](/system-center/vmm/overview?view=sc-vmm-1801)를 사용하여 요청 시 환경을 프로비저닝하고 환경 템플릿의 라이브러리를 관리하는 기능을 지원합니다.
+[Microsoft Test Manager의 Test Center](/vsts/manual-test/mtm/guidance-mtm-usage)는 [SCVMM 서버](/system-center/vmm/overview?view=sc-vmm-1801)를 사용하여 요청 시 환경을 프로비저닝하고 환경 템플릿의 라이브러리를 관리하는 기능을 지원합니다.
 
-Lab Center의 셀프 서비스 프로비저닝 기능에는 두 가지 목표가 있습니다.
+Lab Center의 셀프 서비스 프로비전 기능에는 두 가지 목표가 있습니다.
 
 * 인프라를 관리하는 더 간단한 방법을 제공합니다. 예를 들어 인프라 관리를 위해 VM 및 환경 템플릿을 관리하고 서로 환경 복제본을 격리하는 개인 네트워크를 자동으로 만들었습니다.
 

@@ -1,27 +1,27 @@
 ---
-title: "프로파일링 기능 둘러보기 | Microsoft 문서"
+title: 프로파일링 기능 둘러보기 | Microsoft 문서
 ms.custom: H1HackMay2017
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - debugger
 ms.assetid: d2ee0301-ea78-43d8-851a-71b7b2043d73
-caps.latest.revision: 
+caps.latest.revision: 1
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 43955eedc5d7149396b3ad6dc7c380298b631d9e
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: b4662b1e498303bd7a4e09acd78db43519c142b1
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="profiling-feature-tour"></a>프로파일링 기능 둘러보기
 
@@ -154,18 +154,21 @@ CPU 사용량 또는 메모리 사용량 도구에 현재 표시되지 않는 �
 
 다음 테이블에는 Visual Studio가 제안하는 다양한 도구 및 그와 함께 사용할 수 있는 다양한 프로젝트 형식이 나열되어 있습니다.
   
-|성능 도구|Windows 바탕 화면|UWP|ASP.NET/ASP.NET Core|  
-|----------------------|---------------------|------------------------------|-------------|  
-|[메모리 사용량](../profiling/memory-usage.md)|예|예|예|  
-|[CPU 사용량](../profiling/cpu-usage.md)|예|예|예(.NET Core/ASP.NET Core의 경우 아니요)|  
-|[GPU 사용량](../debugger/gpu-usage.md)|예|예|no|  
-|[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|아니요|  
-|[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|  
-|[성능 탐색기](../profiling/performance-explorer.md)|예|아니요|예(ASP.NET Core의 경우 아니요)|  
-|[IntelliTrace](../debugger/intellitrace.md)|.NET 및 Visual Studio Enterprise만 해당|.NET 및 Visual Studio Enterprise만 해당|.NET 및 Visual Studio Enterprise만 해당|
-|[네트워크 사용량](../profiling/network-usage.md)|아니요|예|아니요| 
-|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|아니요|HTML은 예, XAML은 no|아니요|  
-|[JavaScript 메모리](../profiling/javascript-memory.md)|아니요|HTML은 예, XAML은 no|아니요|  
+|성능 도구|Windows 바탕 화면|UWP|ASP.NET/ASP.NET Core| 
+|----------------------|---------------------|-------------|-------------|  
+|[메모리 사용량](../profiling/memory-usage.md)|예|예|예| 
+|[CPU 사용량](../profiling/cpu-usage.md)|예(참고 참조)|예|예(참고 참조)|
+|[GPU 사용량](../debugger/gpu-usage.md)|예|예|no| 
+|[응용 프로그램 타임라인](../profiling/application-timeline.md)|예|예|아니요|
+|[PerfTips](../profiling/perftips.md)|예|XAML은 예, HTML은 no|예|
+|[성능 탐색기](../profiling/performance-explorer.md)|예|아니요|예|
+|[IntelliTrace](../debugger/intellitrace.md)|Visual Studio Enterprise만 포함된 .NET|Visual Studio Enterprise만 포함된 .NET|Visual Studio Enterprise만 포함된 .NET|
+|[네트워크 사용량](../profiling/network-usage.md)|아니요|예|아니요|
+|[HTML UI responsiveness](../profiling/html-ui-responsiveness.md)|아니요|HTML은 예, XAML은 no|아니요| 
+|[JavaScript 메모리](../profiling/javascript-memory.md)|아니요|HTML은 예, XAML은 no|아니요|
+
+> [!NOTE]
+> .NET Core 및 ASP.NET Core에 대한 CPU 사용량 도구는 현재 휴대용 PBD를 통해 정확한 결과를 제공하지 않습니다. 대신 전체 PDB를 사용합니다.
 
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio의 디버깅](../debugger/debugging-in-visual-studio.md)

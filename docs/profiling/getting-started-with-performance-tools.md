@@ -1,28 +1,28 @@
 ---
-title: "성능 도구 시작 | Microsoft 문서"
-ms.custom: 
+title: 성능 도구 시작 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - getting started, performance
 - getting started, profiling tools
 ms.assetid: 02085214-a8e4-40fd-9b26-32391a7a7082
-caps.latest.revision: 
+caps.latest.revision: 28
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: be3292cb4484263b9e70a4bbdde36f60f1ea7ccb
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: e63be8c89de677cf1cb644db2fcdecf4a20399b0
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="getting-started-with-performance-tools"></a>성능 도구 시작
 이 섹션에서는 Visual Studio 성능 도구를 사용하여 코드 성능을 수집, 표시 및 분석할 때 적용할 개념과 작업을 간단히 살펴봅니다.  
@@ -39,7 +39,6 @@ ms.lasthandoff: 02/27/2018
 |----------|---------------------|  
 |**응용 프로그램 또는 웹 사이트를 신속하게 프로파일링:** 성능 마법사를 사용하여 Visual Studio 솔루션 또는 웹 사이트에 대한 프로파일링 세션을 구성하고 실행할 수 있습니다.|-   [초보자를 위한 성능 프로파일링 지침](../profiling/beginners-guide-to-cpu-sampling.md)<br />-   [방법: 웹 사이트에 대한 성능 데이터 수집](../profiling/how-to-collect-performance-data-for-a-web-site.md)|  
 |**마법사를 사용하지 않고 응용 프로그램 프로파일링:** 성능 세션 속성 페이지를 사용하여 성능 세션을 만드는 방법을 알아봅니다.|-   [방법: 성능 세션 수동으로 만들기](../profiling/how-to-manually-create-performance-sessions.md)|  
-|**실습하기:** 샘플 응용 프로그램을 프로파일링하여 실습해 봅니다.|-   [연습: 성능 문제 확인](../profiling/walkthrough-identifying-performance-problems.md)<br />-   [PeopleTrax 샘플](../profiling/peopletrax-sample-profiling-tools.md)|  
   
 ## <a name="see-also"></a>참고 항목  
  [개요](../profiling/overviews-performance-tools.md)   

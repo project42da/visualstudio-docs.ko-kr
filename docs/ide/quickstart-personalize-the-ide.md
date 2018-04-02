@@ -1,23 +1,23 @@
 ---
-title: "Visual Studio에서 색 테마 및 글꼴 설정 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 색 테마 및 글꼴 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/20/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f6d1ebe9838102b383353ed8c7d4d9c15fadaf9
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 2098540adda6de1ab003a6a9d526519d1d753730
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>빠른 시작: Visual Studio IDE 및 편집기 개인 설정
 
@@ -29,22 +29,22 @@ ms.lasthandoff: 03/09/2018
 
 Visual Studio 2017의 기본 색 테마는 **파랑**이라고 합니다. **어두운**으로 변경해 보겠습니다.
 
-1. 메뉴 모음에서 **도구**, **옵션**을 선택합니다.
+1. 메뉴 모음에서 **도구** > **옵션**을 선택합니다.
 
-1. **환경**, **일반** 옵션 페이지에서 **색 테마** 선택을 **어두운**으로 변경한 다음 **확인**을 선택합니다.
+1. **환경** > **일반** 옵션 페이지에서 **색 테마** 선택을 **어두운**으로 변경한 다음, **확인**을 선택합니다.
 
    전체 IDE의 색 테마가 **어두운**으로 변경됩니다.
 
    ![어두운 테마의 VS](media/quickstart-personalize-dark-theme.png)
 
 > [!TIP]
-> [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2017ColorThemeEditor)에서 **Visual Studio 색 테마 편집기**를 설치하여 미리 정의된 추가 테마를 설치할 수 있습니다. 이 도구를 설치하면 색 테마 드롭다운 목록에 추가 색 테마가 나타납니다.
+> [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)에서 **Visual Studio 색 테마 편집기**를 설치하여 미리 정의된 추가 테마를 설치할 수 있습니다. 이 도구를 설치하면 색 테마 드롭다운 목록에 추가 색 테마가 나타납니다.
 
 ## <a name="change-text-color"></a>텍스트 색 변경
 
 이제 편집기의 일부 텍스트 색을 사용자 지정해 보겠습니다. 먼저 XML 파일을 열어 기본 색을 확인하겠습니다.
 
-1. 메뉴 모음에서 **파일**, **새로 만들기**, **파일...**을 차례로 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **파일...**을 차례로 선택합니다.
 
 1. **새 파일** 대화 상자의 **일반** 범주 아래에서 **XML 파일**을 선택한 다음 **열기**를 선택합니다.
 
@@ -80,7 +80,7 @@ Visual Studio 2017의 기본 색 테마는 **파랑**이라고 합니다. **어�
 
    ![XML 파일 글꼴 색](media/quickstart-personalize-xml-file.png)
 
-1. **옵션** 대화 상자를 열려면 메뉴 모음에서 **도구**, **옵션**을 차례로 선택합니다.
+1. **옵션** 대화 상자를 열려면 메뉴 모음에서 **도구** > **옵션**을 선택합니다.
 
 1. **환경** 아래에서 **글꼴 및 색** 범주를 선택합니다.
 
@@ -102,9 +102,9 @@ Visual Studio에서 색을 사용자 지정하는 몇 가지 방법을 살펴보
 
 ## <a name="see-also"></a>참고 항목
 
-[빠른 시작: 먼저 Visual Studio IDE 살펴보기](../ide/quickstart-ide-orientation.md)  
-[빠른 시작: 편집기에서 코딩](../ide/quickstart-editor.md)  
-[빠른 시작: 프로젝트 및 솔루션](../ide/quickstart-projects-solutions.md)  
-[Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)  
-[편집기 사용자 지정](../ide/customizing-the-editor.md)  
-[Visual Studio IDE 개요](../ide/visual-studio-ide.md)
+- [빠른 시작: 먼저 Visual Studio IDE 살펴보기](../ide/quickstart-ide-orientation.md)
+- [빠른 시작: 편집기에서 코딩](../ide/quickstart-editor.md)
+- [빠른 시작: 프로젝트 및 솔루션](../ide/quickstart-projects-solutions.md)
+- [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)
+- [편집기 사용자 지정](../ide/customizing-the-editor.md)
+- [Visual Studio IDE 개요](../ide/visual-studio-ide.md)

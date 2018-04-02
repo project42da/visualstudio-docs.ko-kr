@@ -1,27 +1,27 @@
 ---
-title: "MSBuild를 사용하여 빌드 로그 가져오기 | Microsoft Docs"
-ms.custom: 
+title: MSBuild를 사용하여 빌드 로그 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, logging
 - logging [MSBuild]
 ms.assetid: 6ba9a754-9cc0-4fed-9fc8-4dcd3926a031
-caps.latest.revision: 
+caps.latest.revision: 27
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: a9a2a7989e7b1cd98745d316ff01718653eda48f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ba20e37e9a984512e2d63de882d434b4f034120d
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="obtaining-build-logs-with-msbuild"></a>MSBuild를 사용하여 빌드 로그 가져오기
 MSBuild에서 스위치를 사용하면 검토할 빌드 데이터의 양과 하나 이상의 파일에 빌드 데이터를 저장할지를 지정할 수 있습니다. 빌드 데이터를 수집하는 사용자 지정 로거를 지정할 수도 있습니다. 이 항목에서 다루지 않는 MSBuild 명령줄 스위치에 대한 자세한 내용은 [명령줄 참조](../msbuild/msbuild-command-line-reference.md)를 참조하세요.  
@@ -45,7 +45,7 @@ MSBuild에서 스위치를 사용하면 검토할 빌드 데이터의 양과 하
 ```  
 msbuild MyProject.proj /t:go /v:diag  
 ```  
-  
+
 ## <a name="saving-the-build-log-to-a-file"></a>파일에 빌드 로그 저장  
  **/fileLogger**(**fl**) 스위치를 사용하여 빌드 데이터를 파일에 저장할 수 있습니다. 다음 예제에서는 이름이 `msbuild.log`인 파일에 빌드 데이터를 저장합니다.  
   
@@ -72,7 +72,19 @@ msbuild MyProject.proj /t:go /fl1 /fl2 /fl3 /flp2:logfile=JustErrors.log;errorso
 ```  
   
  자세한 내용은 [명령줄 참조](../msbuild/msbuild-command-line-reference.md)를 참조하세요.  
-  
+
+## <a name="saving-a-binary-log"></a>이진 로그 저장
+
+**/binaryLogger**(**bl**) 스위치를 사용하여 압축된 이진 형식으로 로그를 저장할 수 있습니다. 이 로그는 빌드 프로세스에 대한 자세한 설명을 포함하며, 특정 로그 분석 도구으로 읽을 수 있습니다.
+
+다음 예제에서는 이진 로그 파일이 `binarylogfilename` 이름으로 만들어집니다.
+
+```  
+/bl:binarylogfilename.binlog
+``` 
+ 
+자세한 내용은 [명령줄 참조](../msbuild/msbuild-command-line-reference.md)를 참조하세요.  
+
 ## <a name="using-a-custom-logger"></a>사용자 지정 로거 사용  
  <xref:Microsoft.Build.Framework.ILogger> 인터페이스를 구현하는 관리되는 형식을 만들어 자체의 로거를 작성할 수 있습니다. 예를 들어 사용자 지정 로거를 사용하여 빌드 오류를 이메일로 보내거나 데이터베이스 또는 XML 파일에 기록할 수 있습니다. 자세한 내용은 [빌드 로거](../msbuild/build-loggers.md)를 참조하세요.  
   

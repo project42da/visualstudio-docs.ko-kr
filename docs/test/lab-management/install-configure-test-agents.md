@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio에서 테스트 에이전트 설치 및 구성 | Microsoft Docs"
+title: Visual Studio에서 테스트 에이전트 및 테스트 컨트롤러 설치 | Microsoft Docs
 ms.date: 03/02/2018
-ms.technology: vs-devops-test
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - configure test agents, test lab
@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 16e29676ec67bc3fd22313debe70ba8dbcd7fd76
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 4eaba4be128042776382d63d1b0198a48cecef94
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/19/2018
 ---
-# <a name="install-and-configure-test-agents"></a>테스트 에이전트 설치 및 구성
+# <a name="install-test-agents-and-test-controllers"></a>테스트 에이전트 및 테스트 컨트롤러 설치
 
 Visual Studio 및 VSTS(Visual Studio Team Services) 또는 TFS(Team Foundation Server)를 사용하는 테스트 시나리오의 경우 테스트 컨트롤러가 필요하지 않습니다. Visual Studio용 에이전트가 VSTS 또는 TFS와 통신하여 오케스트레이션을 처리합니다. VSTS 또는 TFS에서 빌드 및 릴리스 워크플로에 대해 연속 테스트를 실행하는 시나리오가 가능합니다.
 
@@ -32,7 +32,9 @@ Lab Management 대신 [Build 또는 Release Management](use-build-or-rm-instead-
 
 ## <a name="install-the-test-controller-and-test-agents"></a>테스트 컨트롤러 및 테스트 에이전트 설치
 
-[visualstudio.com](https://www.visualstudio.com/downloads/?q=agents)에서 Agents for Visual Studio 2017을 다운로드할 수 있습니다. *Agents for Visual Studio 2017*을 찾은 다음, *에이전트* 또는 *컨트롤러*를 선택합니다. [이전 다운로드](https://www.visualstudio.com/vs/older-downloads/) 페이지에서 Agents for Visual Studio 2015 및 Agents for Visual Studio 2013을 다운로드할 수 있습니다.
+[visualstudio.com](https://www.visualstudio.com/downloads/?q=agents)에서 Agents for Visual Studio 2017을 다운로드할 수 있습니다. 페이지의 아래쪽으로 스크롤하여 *Agents for Visual Studio 2017*를 찾습니다. *에이전트* 또는 *컨트롤러* 중 하나를 선택한 다음, *다운로드*합니다. 다운로드한 실행 파일을 실행하여 컨트롤러 또는 테스트 에이전트를 설치합니다.
+
+[이전 다운로드](https://www.visualstudio.com/vs/older-downloads/) 페이지에서 Agents for Visual Studio 2015 및 Agents for Visual Studio 2013을 다운로드할 수 있습니다.
 
 이러한 설치 관리자는 가상 머신에 쉽게 설치할 수 있도록 ISO 파일로 제공됩니다.
 
@@ -59,10 +61,6 @@ Lab Management 대신 [Build 또는 Release Management](use-build-or-rm-instead-
 | Agents for Visual Studio 2013에서 지원되는 시나리오 | TFS 및 VSTS의 대체 방법 |
 | --- | --- |
 | Visual Studio의 빌드-배포-테스트 워크플로 | 사용자는 TFS의 빌드, 배포 및 테스트 시나리오에 [빌드 정의](/vsts/build-release/)(XAML 빌드가 아님)를 사용할 수 있습니다. |
-| 온-프레미스 원격 컴퓨터를 사용한 부하 테스트(성능 테스트) | Test Controller 및 Test Agents 2013 업데이트 5를 사용하여 온-프레미스로 부하 테스트를 실행할 수 있습니다. 자세한 내용은 [부하 테스트에서 테스트 컨트롤러 및 테스트 에이전트 사용](https://msdn.microsoft.com/library/ff400223.aspx)을 참조하세요. |
+| 온-프레미스 원격 컴퓨터를 사용한 부하 테스트(성능 테스트) | Test Controller 및 Test Agents 2013 업데이트 5를 사용하여 온-프레미스로 부하 테스트를 실행할 수 있습니다. |
 | 랩 환경을 사용하여 Microsoft Test Manager에서 자동화된 테스트 원격 실행 | 지금은 이 시나리오에 대한 대체 방법이 없습니다. 빌드 및 릴리스 정의(XAML 빌드가 아님)에서 기능 테스트 실행 작업을 사용하여 테스트를 원격으로 실행하는 것이 좋습니다. |
 | Visual Studio에서 원격 테스트를 실행하는 개발자 | 더 이상 지원되지 않습니다. |
-
-## <a name="see-also"></a>참고 항목
-
-* [컴퓨터 설정 및 진단 정보 수집](https://msdn.microsoft.com/library/dd286743%28v=vs.140%29.aspx)

@@ -1,12 +1,12 @@
 ---
-title: "Visual Studio에서 Visual Basic 시작 | Microsoft 문서"
-ms.custom: 
+title: Visual Studio에서 Visual Basic 시작 | Microsoft 문서
+ms.custom: ''
 ms.date: 12/08/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.devlang: vb
 author: TerryGLee
@@ -16,11 +16,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: b1de10c76d6a974280bfe016490a7567d0807675
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 3df1f9c2f7fc2af97bc5541d313df58da5907cea
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="getting-started-with-visual-basic-in-visual-studio"></a>Visual Studio에서 Visual Basic 시작
 Visual Basic(VB)에 대한 이 자습서에서는 Visual Studio를 사용하여 몇 가지 콘솔 앱을 만들어 실행하고, 그 과정에서 Visual Studio [IDE(통합 개발 환경)](visual-studio-ide.md)의 일부 기능을 살펴봅니다.
@@ -125,9 +125,9 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
 
     ![수행할 작업을 선택하는 프롬프트가 포함된 CaluculateThis 앱이 표시된 콘솔 창](../ide/media/vb-console-calculate-this.png)
 
-축하합니다. 이 자습서를 마쳤습니다.
+## <a name="next-steps"></a>다음 단계
+축하합니다. 이 자습서를 마쳤습니다. Visual Basic 및 Visual Studio IDE에 대해 자세히 알아보려면 다음 페이지를 참고하세요.
 
-## <a name="see-also"></a>참고 항목
 * [Visual Basic 가이드](/dotnet/visual-basic/index)
 * [Visual Basic 2010의 새로운 기능](/dotnet/visual-basic/getting-started/whats-new)
 * [Visual Basic 코드 파일에 대한 IntelliSense](visual-basic-specific-intellisense.md)

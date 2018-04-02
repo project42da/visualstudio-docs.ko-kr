@@ -1,15 +1,15 @@
 ---
-title: "Visual Studio에서 Python 지원 설치 | Microsoft Docs"
-description: "옵션 및 설치 위치를 포함하여 Visual Studio 2017, 2015, 2013, 2012 및 2010에서 PTVS(Visual Studio용 Python 도구)를 설치하는 방법에 대한 자세한 지침입니다."
-ms.custom: 
+title: Visual Studio에서 Python 지원 설치 | Microsoft Docs
+description: 옵션 및 설치 위치를 포함하여 Visual Studio 2017, 2015, 2013, 2012 및 2010에서 PTVS(Visual Studio용 Python 도구)를 설치하는 방법에 대한 자세한 지침입니다.
+ms.custom: ''
 ms.date: 02/15/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: kraigb
 ms.author: kraigb
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 3cc0b6b99dd76a531ed3e99dcac8ae5d438d7e63
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: faa901c14bd5d115aa3e7384a5d3b63c0410b64b
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
 
@@ -43,7 +43,7 @@ Visual Studio 2015 및 이전 버전의 경우 별도로 원하는 [Python 인�
 
 ## <a name="visual-studio-2017"></a>Visual Studio 2017
 
-1. 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다. Visual Studio가 이미 설치되어 있는 경우 Visual Studio 설치 관리자를 실행하고 2단계로 이동합니다.
+1. 최신 Visual Studio 2017 설치 관리자를 다운로드하고 실행합니다. Visual Studio가 이미 설치되어 있는 경우 Visual Studio 설치 관리자를 실행하고 **수정** 옵션([Visual Studio 수정](../install/modify-visual-studio.md) 참조)을 선택하고 2단계로 이동합니다.
 
     > [!div class="nextstepaction"]
     > <a target="frameTarget" href="https://www.visualstudio.com/thank-you-downloading-visual-studio/?sku=Community&rel=15&rid=34347&utm_source=docs&utm_medium=clickbutton&utm_campaign=python_install">Visual Studio 2017 Community 설치</a>

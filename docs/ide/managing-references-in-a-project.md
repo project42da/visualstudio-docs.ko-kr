@@ -1,12 +1,12 @@
 ---
-title: "프로젝트의 참조 관리 | Microsoft 문서"
-ms.custom: 
+title: 프로젝트의 참조 관리 | Microsoft 문서
+ms.custom: ''
 ms.date: 10/26/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.ProjectPropertiesReferencePaths
@@ -27,11 +27,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: b7fbb9ddfd53210f460b5035f1f83159e46b5aa1
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 6ede31cadef7048b2f75ca652efea9b01716351e
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="managing-references-in-a-project"></a>프로젝트의 참조 관리
 
@@ -108,7 +108,7 @@ GAC에 등록되어 있는 사용자 지정 구성 요소에 대한 참조가 �
 
 다른 .NET Framework 버전을 대상으로 하는 프로젝트나 어셈블리를 참조하는 응용 프로그램을 만들 수 있습니다. 예를 들어 [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]을 대상으로 하고, [!INCLUDE[dnprdnext](../ide/includes/dnprdnext_md.md)]을 대상으로 하는 어셈블리를 참조하는 응용 프로그램을 만들 수 있습니다. 이전 버전의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 대상으로 하는 프로젝트를 만드는 경우 해당 프로젝트에서 새 버전을 대상으로 하는 프로젝트나 어셈블리에 대한 참조를 설정할 수 없습니다.
 
-자세한 내용은 [특정 대상 .NET Framework 버전 지정](../ide/targeting-a-specific-dotnet-framework-version.md)을 참조하세요.
+자세한 내용은 [멀티 타기팅 개요](../ide/visual-studio-multi-targeting-overview.md)를 참조하세요.
 
 ## <a name="project-to-project-references"></a>프로젝트 간 참조
 
@@ -125,5 +125,5 @@ GAC에 등록되어 있는 사용자 지정 구성 요소에 대한 참조가 �
 
 ## <a name="see-also"></a>참고 항목
 
-[끊어진 참조 문제 해결](../ide/troubleshooting-broken-references.md)  
+[끊어진 참조 문제 해결](../ide/troubleshooting-broken-references.md)
 [방법: 참조 관리자를 사용하여 참조 추가 또는 제거](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)

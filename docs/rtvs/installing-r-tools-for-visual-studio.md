@@ -1,13 +1,13 @@
 ---
-title: "Visual Studio용 R 도구 설치 | Microsoft Docs"
-description: "오프라인 설치를 포함하여 Visual Studio 2017 및 Visual Studio 2015에서 Visual Studio용 R 도구를 설치하는 방법입니다."
-ms.custom: 
+title: Visual Studio용 R 도구 설치 | Microsoft Docs
+description: 오프라인 설치를 포함하여 Visual Studio 2017 및 Visual Studio 2015에서 Visual Studio용 R 도구를 설치하는 방법입니다.
+ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-r
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 dev_langs:
 - R
 ms.topic: article
@@ -16,11 +16,11 @@ ms.author: kraigb
 manager: ghogen
 ms.workload:
 - data-science
-ms.openlocfilehash: 76dc2623edebed6cca48c40c0ad0bc96f783e39d
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: bb8f380ce17242f7ac9953226db7ad683c17a2de
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="how-to-install-r-tools-for-visual-studio"></a>Visual Studio용 R 도구를 설치하는 방법
 
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/21/2018
 
 ## <a name="supported-versions-of-visual-studio"></a>지원되는 Visual Studio 버전
 
-RTVS(Visual Studio용 R 도구)는 [Visual Studio 2017](https://www.visualstudio.com/downloads/) 및 [Visual Studio 2015 업데이트 3 이상](http://go.microsoft.com/fwlink/?LinkId=691129)(직접 다운로드)의 Community(무료), Professional 및 Enterprise 버전이 있는 Windows에서 지원됩니다.
+RTVS(Visual Studio용 R 도구)는 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 및 [Visual Studio 2015 업데이트 3 이상](http://go.microsoft.com/fwlink/?LinkId=691129)(직접 다운로드)의 Community(무료), Professional 및 Enterprise 버전이 있는 Windows에서 지원됩니다.
 
 RTVS는 현재 Mac용 Visual Studio에서 지원되지 않습니다.
 
@@ -44,7 +44,7 @@ Visual Studio Test Professional, SQL Server Management Studio 등의 제품에 �
 
 ## <a name="installing-rtvs-in-visual-studio-2017"></a>Visual Studio 2017에서 RTVS 설치
 
-1. Visual Studio 설치 관리자를 실행합니다. Visual Studio가 설치되어 있지 않은 경우 [다운로드](https://www.visualstudio.com/downloads/)를 참조하세요. Windows 7에서 설치 관리자가 Visual Studio 2017 버전 ‘15.2 빌드 26430.12’ 이상을 표시하도록 업데이트되었는지 확인합니다.
+1. Visual Studio 설치 관리자를 실행하고 **수정** 옵션(세부 정보는 [Visual Studio 수정](../install/modify-visual-studio.md) 참조)을 선택합니다. Visual Studio가 설치되어 있지 않은 경우 [ Visual Studio 설치](../install/install-visual-studio.md)를 참조하세요. Windows 7에서 설치 관리자가 Visual Studio 2017 버전 ‘15.2 빌드 26430.12’ 이상을 표시하도록 업데이트되었는지 확인합니다.
 
 1. **데이터 과학 및 분석 응용 프로그램** 워크로드를 선택합니다.
 

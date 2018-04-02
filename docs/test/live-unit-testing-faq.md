@@ -1,9 +1,7 @@
 ---
 title: Live Unit Testing FAQ | Microsoft Docs
 ms.date: 2017-10-03
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-test
 ms.topic: article
 helpviewer_keywords:
 - Visual Studio ALM
@@ -12,11 +10,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2437a138e9e83d3b723971b53dac413ad0ea4151
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: c9a4628d6c2b0d842d57711f1204fbe15f88fac9
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="live-unit-testing-frequently-asked-questions"></a>Live Unit Testing 질문과 대답
 
@@ -25,7 +23,6 @@ ms.lasthandoff: 02/21/2018
 **대답:**
 
 Visual Studio 2017 버전 15.3부터 적용되는 Live Unit Testing의 새로운 기능 및 향상된 기능에 대한 자세한 내용은 [Live Unit Testing의 새로운 기능](live-unit-testing-whats-new.md)을 참조하세요.
-
 
 ## <a name="what-test-frameworks-does-live-unit-testing-support-and-what-are-the-minimum-supported-versions"></a>Live Unit Testing 에서 지원하는 테스트 프레임워크와 지원되는 최소 버전은 어떻게 되나요?
 
@@ -58,14 +55,13 @@ Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단�
 
 `Microsoft.VisualStudio.QualityTools.UnitTestFramework`를 참조하는 이전 MSTest 기반 테스트 프로젝트가 있고 최신 MSTest NuGet 패키지로 이동하지 않으려면 Visual Studio 2017 버전 15.4로 업그레이드하세요.
 
-경우에 따라 Live Unit Testing이 작동하기 위해 솔루션의 프로젝트에서 참조하는 NuGet 패키지를 명시적으로 복원해야 합니다. 이렇게 하려면 솔루션의 명시적 빌드를 수행합니다(최상위 Visual Studio 메뉴에서 **빌드**, **솔루션 다시 빌드**를 선택). 또는 Living Unit Testing을 활성화하기 전에 솔루션에서 패키지를 복원합니다(솔루션을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 복원**을 선택).
-
+경우에 따라 Live Unit Testing이 작동하기 위해 솔루션의 프로젝트에서 참조하는 NuGet 패키지를 명시적으로 복원해야 합니다. 솔루션의 명시적 빌드를 수행하거나(최상위 Visual Studio 메뉴에서 **빌드**, **솔루션 다시 빌드**를 선택) 또는 Living Unit Testing을 활성화하기 전에 솔루션을 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 복원**을 선택해서 패키지를 복원합니다.
 
 ## <a name="does-live-unit-testing-work-with-net-core"></a>Live Unit Testing은 .NET Core와 호환되나요?
 
 **대답:**
 
-예. Live Unit Testing은 .NET Core 및 .NET Framework와 호환됩니다. 최근에 Visual Studio 2017 버전 15.3에서 .NET Core 지원이 추가되었습니다. .NET Core에 대한 Live Unit Testing 지원이 필요한 경우 이 버전의 Visual Studio로 업그레이드하세요.
+예. Live Unit Testing은 .NET Core 및 .NET Framework와 호환됩니다. 최근에 Visual Studio 2017 버전 15.3에서 .NET Core 지원이 추가되었습니다. .NET Core에 대한 Live Unit Testing 지원이 필요한 경우 이 버전의 Visual Studio로 업그레이드합니다.
 
 ## <a name="why-doesnt-live-unit-testing-work-when-i-turn-it-on"></a>Live Unit Testing을 설정해도 작동하지 않는 이유는 무엇인가요?
 
@@ -75,9 +71,9 @@ Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단�
 
 - 솔루션의 프로젝트에서 참조하는 NuGet 패키지가 복원되지 않은 경우 Live Unit Testing은 작동하지 않습니다. Live Unit Testing을 설정하기 전에 솔루션을 명시적으로 빌드하거나 솔루션의 NuGet 패키지를 복원하면 이 문제가 해결되어야 합니다.
 
-- 프로젝트에서 MSTest 기반 테스트를 사용하는 경우 `Microsoft.VisualStudio.QualityTools.UnitTestFramework`에 대한 참조를 제거하고 최신 MSTest NuGet 패키지, `MSTest.TestAdapter`(1.1.11의 최소 버전 필요) 및 `MSTest.TestFramework`(1.1.11의 최소 버전 필요)에 대한 참조를 추가해야 합니다. 자세한 내용은 [Visual Studio 2017 Enterprise Edition에서 Live Unit Testing 사용](live-unit-testing.md#supported-test-frameworks) 항목의 "지원되는 테스트 프레임워크" 섹션을 참조하세요.
+- 프로젝트에서 MSTest 기반 테스트를 사용하는 경우 `Microsoft.VisualStudio.QualityTools.UnitTestFramework`에 대한 참조를 제거하고 최신 MSTest NuGet 패키지, `MSTest.TestAdapter`(1.1.11의 최소 버전 필요) 및 `MSTest.TestFramework`(1.1.11의 최소 버전 필요)에 대한 참조를 추가해야 합니다. 자세한 내용은 [Visual Studio 2017 Enterprise Edition에서 Live Unit Testing 사용](live-unit-testing.md#supported-test-frameworks) 아티클의 "지원되는 테스트 프레임워크" 섹션을 참조하세요.
 
-- 솔루션에 있는 하나 이상의 프로젝트에는 NuGet 참조 또는 xUnit, NUnit 또는 MSTest 테스트 프레임워크에 대한 직접 참조가 있어야 합니다. 이 프로젝트도 해당하는 Visual Studio 테스트 어댑터 NuGet 패키지를 참조해야 합니다. Visual Studio 테스트 어댑터는 `.runsettings` 파일을 통해 참조될 수도 있습니다. `.runsettings` 파일에는 다음과 같은 항목이 있어야 합니다.
+- 솔루션에 있는 하나 이상의 프로젝트에는 NuGet 참조 또는 xUnit, NUnit 또는 MSTest 테스트 프레임워크에 대한 직접 참조가 있어야 합니다. 이 프로젝트도 해당하는 Visual Studio 테스트 어댑터 NuGet 패키지를 참조해야 합니다. Visual Studio 테스트 어댑터는 `.runsettings` 파일을 통해 참조될 수도 있습니다. `.runsettings` 파일에는 다음 예제 같은 항목이 있어야 합니다.
 
    ```xml
     <RunSettings>
@@ -85,7 +81,7 @@ Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단�
           <TestAdaptersPaths>path-to-your-test-adapter</TestAdaptersPaths>
        </RunConfiguration>
     </RunSettings>
-   ``` 
+   ```
 
 ## <a name="why-does-live-unit-testing-show-incorrect-coverage-after-you-upgrade-the-test-adapter-referenced-in-your-visual-studio-projects-to-the-supported-version"></a>Visual Studio 프로젝트에서 참조되는 테스트 어댑터를 지원되는 버전으로 업그레이드한 후 Live Unit Testing에 잘못된 범위가 표시되는 이유는 무엇인가요?
 
@@ -174,7 +170,7 @@ Live Unit Testing은 다음 테이블에 나열된 세 가지 인기 있는 단�
 
 **대답:**
 
-사용자 지정 설정은 [Visual Studio 2017 Enterprise Edition에서 Live Unit Testing 사용](live-unit-testing.md#including-and-excluding-test-projects-and-test-methods) 항목의 "테스트 프로젝트 및 테스트 메서드 포함 및 제외" 섹션을 참조하세요. 이러한 기능은 특정 편집 세션에 특정 집합의 테스트를 실행하거나 고유한 개인 기본 설정을 유지하려는 경우에 매우 유용합니다.
+사용자 지정 설정은 [Visual Studio 2017 Enterprise Edition에서 Live Unit Testing 사용](live-unit-testing.md#including-and-excluding-test-projects-and-test-methods) 아키클의 "테스트 프로젝트 및 테스트 메서드 포함 및 제외" 섹션을 참조하세요. 이러한 기능은 특정 편집 세션에 특정 집합의 테스트를 실행하거나 고유한 개인 기본 설정을 유지하려는 경우에 유용합니다.
  
 솔루션 지정 설정은 Live Unit Testing에서 계측한 메서드, 속성, 클래스 또는 구조를 제외하여 프로그래밍 방식으로 <xref:System.Diagnostics.CodeAnalysis.ExcludeFromCodeCoverageAttribute?displayProperty=fullName> 특성을 적용할 수 있습니다. 또한 프로젝트 파일에서 `<ExcludeFromCodeCoverage>` 속성을 `true`로 설정하여 전체 프로젝트를 계측하지 않도록 제외할 수도 있습니다. Live Unit Testing은 계측되지 않는 테스트를 실행하지만 해당 검사를 시각화할 수는 없습니다.
 

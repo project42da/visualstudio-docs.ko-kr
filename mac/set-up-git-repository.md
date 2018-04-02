@@ -1,16 +1,16 @@
 ---
-title: "Mac용 Visual Studio에서 Git 리포지토리 설정 | Microsoft Docs"
-description: "Mac용 Visual Studio에서 Git 및 Subversion 사용"
+title: Mac용 Visual Studio에서 Git 리포지토리 설정 | Microsoft Docs
+description: Mac용 Visual Studio에서 Git 및 Subversion 사용
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: a8e32df2248f53a2b46a971b025b1138abba5101
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 3eb3e0874cfc46fc98209113cf60a32cdb92787d
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="setting-up-a-git-repository"></a>Git 리포지토리 설정
 
@@ -43,11 +43,15 @@ Git 리포지토리를 설정하려면 다음 단계를 수행하세요.
 
 ## <a name="publishing-an-existing-project"></a>기존 프로젝트 게시
 
-4. Mac용 Visual Studio의 열린 프로젝트로 돌아옵니다. 
+기존 프로젝트가 버전 제어에 아직 _존재하지 않는_ 경우 다음 단계를 사용해 Git에서 이를 설정합니다.
+
+4.  Mac용 Visual Studio의 Solution Pad에서 솔루션 이름을 선택합니다. 
 
 5. 메뉴 모음에서 **버전 제어 > 버전 제어에서 게시...**를 선택하여 **리포지토리 선택** 대화 상자를 표시합니다.
 
     ![Mac용 Visual Studio에서 체크 아웃 시작](media/version-control-git4-sml.png)
+
+    이 메뉴 항목이 메뉴에 표시되지 않으면 솔루션 이름을 선택했는지 확인합니다.  
 
 6. **등록된 리포지토리** 탭을 선택하고 **추가** 단추를 클릭합니다.
 

@@ -1,13 +1,13 @@
 ---
-title: "빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기 | Microsoft Docs"
-description: "Visual Studio에서 Python을 사용하여 Falcon 프레임워크를 통해 간단한 웹앱을 빌드하는 방법을 간략하게 소개합니다."
-ms.custom: 
-ms.date: 01/08/2018
-ms.reviewer: 
-ms.suite: 
+title: '빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기 | Microsoft Docs'
+description: Visual Studio에서 Python을 사용하여 Falcon 프레임워크를 통해 간단한 웹앱을 빌드하는 방법을 간략하게 소개합니다.
+ms.custom: ''
+ms.date: 03/14/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 dev_langs:
 - python
@@ -17,15 +17,15 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9b45c694399553dd262a68d821d1757b65ea9600
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 2b1880d95fcb4aae04d98171c8ee7df7373aaceb
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기
 
-Visual Studio IDE(통합 개발 환경)에 대한 5~10분 분량의 소개에서는 간단한 Python 웹 응용 프로그램을 만듭니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+Visual Studio IDE(통합 개발 환경)에 대한 5~10분 분량의 소개에서는 간단한 Python 웹 응용 프로그램을 만듭니다. 아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다. 설치 관리자에서 **Python 개발** 워크로드를 선택하도록 합니다.
 
 ## <a name="create-the-project"></a>프로젝트를 만듭니다.
 

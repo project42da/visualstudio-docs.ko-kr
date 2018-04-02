@@ -1,22 +1,18 @@
 ---
-title: "Visual Studio에서 C/C++에 대한 단위 테스트 작성 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 C/C++에 대한 단위 테스트 작성 | Microsoft Docs
 ms.date: 11/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-devops-test
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-test
 ms.topic: article
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 25a5d358ce8c9b36286929232a42dad48099cff5
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: ecb611d7ab816ed99e4bcce954466309f7436f76
+ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/19/2018
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio에서 C/C++에 대한 단위 테스트 작성
 
@@ -36,12 +32,11 @@ Visual Studio에는 다음 C++ 테스트 기능이 포함되어 있으며 추가
 
 **Visual Studio 2017 버전 15.5**
 
-1) **Google Test 어댑터**는 **C++를 통합 데스크톱 개발** 워크로드의 기본 구성 요소로 포함되어 있습니다. **솔루션 탐색기**의 **새 프로젝트 추가** 바로 가기 메뉴에서 솔루션에 추가하고 **도구 | 옵션**을 통해 옵션에 추가할 수 있는 프로젝트 템플릿이 있습니다. 자세한 내용은 [방법: Visual Studio에서 Google Test 사용](how-to-use-google-test-for-cpp.md)을 참조하세요.
+- **Google Test 어댑터**는 **C++를 통한 데스크톱 개발** 워크로드의 기본 구성 요소로 포함되어 있습니다. **솔루션 탐색기**의 **새 프로젝트 추가** 바로 가기 메뉴에서 솔루션에 추가하고 **도구 | 옵션**을 통해 옵션에 추가할 수 있는 프로젝트 템플릿이 있습니다. 자세한 내용은 [방법: Visual Studio에서 Google Test 사용](how-to-use-google-test-for-cpp.md)을 참조하세요.
 
-2) **Boost.Test**는 **C++를 통합 데스크톱 개발** 워크로드의 기본 구성 요소로 포함되어 있습니다. **테스트 탐색기**와 통합되지만 현재는 프로젝트 템플릿을 갖지 않으므로 수동으로 구성해야 합니다. 자세한 내용은 [방법: Visual Studio에서 Boost.Test 사용](how-to-use-boost-test-for-cpp.md)을 참조하세요.
+- **Boost.Test**는 **C++를 통한 데스크톱 개발** 워크로드의 기본 구성 요소로 포함되어 있습니다. **테스트 탐색기**와 통합되지만 현재는 프로젝트 템플릿을 갖지 않으므로 수동으로 구성해야 합니다. 자세한 내용은 [방법: Visual Studio에서 Boost.Test 사용](how-to-use-boost-test-for-cpp.md)을 참조하세요.
 
-3) **CTest** 지원은 **C++를 통한 데스크톱 개발** 워크로드의 일부인 [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp) 구성 요소에 포함되어 있습니다. 그러나 CTest는 아직 **테스트 탐색기**에 완전히 통합되지는 않았습니다. 자세한 내용은 [방법: Visual Studio에서 CTest 사용](how-to-use-ctest-for-cpp.md)을 참조하세요.
-
+- **CTest** 지원은 **C++를 통한 데스크톱 개발** 워크로드의 일부인 [CMake Tools for Visual Studio](/cpp/ide/cmake-tools-for-cpp) 구성 요소에 포함되어 있습니다. 그러나 CTest는 아직 **테스트 탐색기**에 완전히 통합되지는 않았습니다. 자세한 내용은 [방법: Visual Studio에서 CTest 사용](how-to-use-ctest-for-cpp.md)을 참조하세요.
 
 **Visual Studio 2015 및 이전 버전**
 
@@ -96,16 +91,16 @@ TEST_METHOD는 void를 반환합니다. 테스트 결과를 내려면 `Assert` �
 
 ### <a name="run-the-tests"></a>테스트 실행
 
-1.  **테스트** 메뉴에서 **창**, **테스트 탐색기**를 선택합니다. 다음 그림에서는 테스트를 아직 실행하지 않은 테스트 프로젝트를 보여 줍니다.
+1. **테스트** 메뉴에서 **Windows** > **테스트 탐색기**를 선택합니다. 다음 그림에서는 테스트를 아직 실행하지 않은 테스트 프로젝트를 보여 줍니다.
 
-![테스트 실행 전 테스트 탐색기](media/cpp-test-explorer.png "C++ 테스트 탐색기")
+   ![테스트 실행 전 테스트 탐색기](media/cpp-test-explorer.png "C++ 테스트 탐색기")
 
-> [!NOTE]
-> **테스트 탐색기**와의 CTest 통합은 아직 제공되지 않습니다. CMake 주 메뉴에서 CTest 테스트를 실행합니다.
+   > [!NOTE]
+   > **테스트 탐색기**와의 CTest 통합은 아직 제공되지 않습니다. CMake 주 메뉴에서 CTest 테스트를 실행합니다.
 
-2. 창에 일부 테스트가 표시되지 않는 경우 **솔루션 탐색기**에서 노드를 마우스 오른쪽 단추로 클릭하고 **빌드** 또는 **다시 빌드**를 선택하여 테스트 프로젝트를 빌드합니다. 
+1. 창에 일부 테스트가 표시되지 않는 경우 **솔루션 탐색기**에서 노드를 마우스 오른쪽 단추로 클릭하고 **빌드** 또는 **다시 빌드**를 선택하여 테스트 프로젝트를 빌드합니다. 
 
-3.  테스트 탐색기에서 **모두 실행**을 선택하거나 실행하려는 특정 테스트를 선택합니다. 테스트를 마우스 오른쪽 단추로 클릭하면 중단점을 사용하는 디버그 모드에서 실행 등, 다른 옵션이 표시됩니다. 모든 테스트를 실행한 후에는 창에 어떤 테스트에 통과했고 어떤 테스트에 실패했는지 표시됩니다.
+1. 테스트 탐색기에서 **모두 실행**을 선택하거나 실행하려는 특정 테스트를 선택합니다. 테스트를 마우스 오른쪽 단추로 클릭하면 중단점을 사용하는 디버그 모드에서 실행 등, 다른 옵션이 표시됩니다. 모든 테스트를 실행한 후에는 창에 어떤 테스트에 통과했고 어떤 테스트에 실패했는지 표시됩니다.
 
 ![테스트 실행 후 테스트 탐색기](media/cpp-test-explorer-passed.png "C++ 테스트: 테스트 실행 후 탐색기")
 

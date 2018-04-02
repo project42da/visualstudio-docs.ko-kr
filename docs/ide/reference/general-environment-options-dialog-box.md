@@ -1,11 +1,12 @@
 ---
-title: "옵션 대화 상자, 환경, 일반 | Microsoft Docs"
-ms.custom: 
+title: 옵션 대화 상자, 환경, 일반 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.Message.0x800a002e
@@ -25,16 +26,17 @@ helpviewer_keywords:
 - editors, autocompletion
 - Options dialog box, General Environment
 - General Environment Options dialog box
-caps.latest.revision: "34"
+caps.latest.revision: 34
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: de71795242cd5fbb1d41f3d071629e54cf5d04f5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 5c434b60efa054dbadcb8ef24470ed135d450e12
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="general-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 일반
 
@@ -49,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 
 IDE에 대해 **파란** 색 테마, **밝은** 색 테마 또는 **어두운** 색 테마를 선택합니다.
 
-[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.VisualStudio2017ColorThemeEditor)에서 **Visual Studio 색 테마 편집기**를 다운로드 및 설치하여 미리 정의된 추가 테마를 설치하고 사용자 지정 테마를 만들 수 있습니다. 이 도구를 설치하면 색 테마 목록 상자에 추가적인 색 테마가 나타납니다.
+[Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)에서 **Visual Studio 색 테마 편집기**를 다운로드 및 설치하여 미리 정의된 추가 테마를 설치하고 사용자 지정 테마를 만들 수 있습니다. 이 도구를 설치하면 색 테마 목록 상자에 추가적인 색 테마가 나타납니다.
 
 **메뉴 모음에 단어의 첫 글자를 대문자로 표시 적용**
 
@@ -69,22 +71,17 @@ Visual Studio에서 시각적 효과 조정을 자동으로 설정하는지 또�
 
 ## <a name="other"></a>기타
 
-**창 메뉴에 표시되는 항목**  
-**창** 메뉴의 Windows 목록에 표시되는 창 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다.
+**창 메뉴에 표시된 항목**은 **창** 메뉴의 Windows 목록에 표시되는 창 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다.
 
-**최근 사용한 목록에 표시되는 항목**  
-**파일** 메뉴에 표시되는 가장 최근에 사용한 프로젝트 및 파일 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다. 이 방법으로 최근에 사용한 프로젝트 및 파일을 쉽게 검색할 수 있습니다.
+**최근 사용된 목록에 표시된 항목**은 **파일** 메뉴에 표시되는 가장 최근에 사용한 프로젝트 및 파일 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다. 이 방법으로 최근에 사용한 프로젝트 및 파일을 쉽게 검색할 수 있습니다.
 
-**상태 표시줄 표시**  
-상태 표시줄을 표시합니다. 상태 표시줄은 IDE 창의 맨 아래에 있고 진행 중인 작업의 진행률에 대한 정보를 표시합니다.
+**상태 표시줄 표시**는 상태 표시줄을 표시합니다. 상태 표시줄은 IDE 창의 맨 아래에 있고 진행 중인 작업의 진행률에 대한 정보를 표시합니다.
 
-**활성 도구 창에서만 [닫기] 단추 수행**  
-**닫기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 닫히도록 지정합니다. 기본적으로 이 옵션이 선택됩니다.
+**활성 도구 창에서만 닫기 단추 수행**은 **닫기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 닫히도록 지정합니다. 기본적으로 이 옵션이 선택됩니다.
 
-**활성 도구 창에서만 [자동 숨기기] 단추 수행**  
-**자동 숨기기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 자동으로 숨겨지도록 지정합니다. 기본적으로 이 옵션은 선택되어 있지 않습니다.
+**활성 도구 창에서만 자동 숨기기 단추 수행**은 **자동 숨기기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 닫히도록 지정합니다. 기본적으로 이 옵션은 선택되어 있지 않습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[옵션 대화 상자, 환경](../../ide/reference/environment-options-dialog-box.md)  
-[창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md)
+[옵션 대화 상자, 환경](../../ide/reference/environment-options-dialog-box.md)
+[이 창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md)

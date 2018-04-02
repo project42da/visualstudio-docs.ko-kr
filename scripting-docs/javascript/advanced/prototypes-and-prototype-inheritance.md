@@ -1,12 +1,13 @@
 ---
-title: "프로토타입 및 프로토타입 상속 | Microsoft Docs"
-ms.custom: 
+title: 프로토타입 및 프로토타입 상속 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - prototype [JavaScript]
 - prototype inheritance [JavaScript]
 ms.assetid: 1e1d0631-2a9f-4011-b9fe-fa338e1ef34c
-caps.latest.revision: "6"
+caps.latest.revision: 6
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: ade60bcbbfad166bae18b650daa6906f9983d4cd
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 200ca757e72b2eec8f09fd48a841cc8eb816c85d
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="prototypes-and-prototype-inheritance"></a>프로토타입 및 프로토타입 상속
 JavaScript에서 `prototype`은 함수의 속성이며 생성자 함수에서 만든 개체의 속성입니다. 함수의 프로토타입은 개체입니다. 이는 함수가 생성자로 사용될 때 주로 사용됩니다.  
@@ -80,9 +81,12 @@ var bicycle = Object.create(Object.getPrototypeOf(Vehicle), {
  `bicycle` 개체에는 `wheels`, `engine`, `color` 및 `pedals` 속성이 있고, 그 프로토타입은 `Vehicle.prototype`입니다. JavaScript 엔진은 `pedals`의 `bicycle` 속성을 찾고, `wheels`의 `engine`, `color` 및 `Vehicle` 속성을 찾기 위해 프로토타입 체인을 조회합니다.  
   
 ### <a name="changing-an-objects-prototype"></a>개체의 프로토타입 변경  
- Internet Explorer 11에서 [__proto\_\_](../../javascript/reference/proto-property-object-javascript.md) 속성을 사용하여 개체 또는 함수의 내부 프로토타입을 새 프로토타입으로 대체할 수 있습니다. 이 속성을 사용하면 프로토타입 체인의 다른 속성 및 메서드와 함께 새 프로토타입의 속성 및 메서드를 상속합니다.  
+Internet Explorer 11에서 [__proto__](../../javascript/reference/proto-property-object-javascript.md) 속성을 사용하여 개체 또는 함수의 내부 프로토타입을 새 프로토타입으로 대체할 수 있습니다. 이 속성을 사용하면 프로토타입 체인의 다른 속성 및 메서드와 함께 새 프로토타입의 속성 및 메서드를 상속합니다.  
+
+> [!WARNING]
+> `__proto__` 속성은 레거시 기능입니다. 대신 [Object.getPrototypeOf](../reference/object-getprototypeof-function-javascript.md)를 사용합니다.
   
- 다음 예제에서는 개체의 프로토타입을 변경하는 방법을 보여 줍니다. 이 예제에서는 개체의 프로토타입을 변경할 때 해당 개체의 상속된 속성을 변경하는 방법을 보여 줍니다.  
+다음 예제에서는 개체의 프로토타입을 변경하는 방법을 보여 줍니다. 이 예제에서는 개체의 프로토타입을 변경할 때 해당 개체의 상속된 속성을 변경하는 방법을 보여 줍니다.  
   
 ```JavaScript  
 function Friend() {  

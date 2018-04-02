@@ -1,11 +1,11 @@
 ---
-title: "Visual Studio Tools for Unity 사용 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio Tools for Unity 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-unity-tools
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: e67ec9a2-a449-413e-8930-9a471bd43a06
 author: conceptdev
@@ -13,11 +13,11 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: e99f3e626487381639d0c76f94ceb6eac99084af
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 2e223132196d40c0418eb7869b36d20a3d15a235
+ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/17/2018
 ---
 # <a name="using-visual-studio-tools-for-unity"></a>Visual Studio Tools for Unity 사용
 이 섹션에서는 Visual Studio Tools for Unity의 통합 및 생산성 기능을 사용하는 방법과 Unity 개발을 위해 Visual Studio 디버거를 사용하는 방법에 대해 배워 봅니다.
@@ -134,6 +134,12 @@ ms.lasthandoff: 02/28/2018
 
 > [!IMPORTANT]
 >  Visual Studio Tools for Unity 및 Unity 인스턴스가 UDP 네트워크 소켓을 통해 통신 중이므로 방화벽이 이를 감지할 수 있습니다. 이 경우 VSTU 및 Unity가 통신할 수 있도록  연결 권한을 부여해야 합니다.
+
+### <a name="troubleshooting-the-connection-between-unity-and-visual-studio"></a>Unity와 Visual Studio 간의 연결 문제 해결
+
+#### <a name="confirm-editor-attaching-is-enabled"></a>편집기 연결이 사용하도록 설정되어 있는지 확인
+
+Unity 메뉴에서 **편집 > 기본 설정**을 선택한 다음, **외부 도구** 탭을 선택합니다. **편집기 연결** 확인 상자가 사용하도록 설정되어 있는지 확인합니다. 자세한 내용은 [Unity 기본 설정 설명서](https://docs.unity3d.com/Manual/Preferences.html)를 참조합니다.
 
 ###  <a name="debugging-your-project-in-a-unity-player"></a> Unity 플레이어에서 프로젝트 디버그
  Unity 편집기를 실행 중이지 않은 경우 Visual Studio Tools for Unity를 독립 실행형 플레이어에서 실행 중인 Unity 앱으로 직접 연결하거나 플랫폼 특정적인 문제를 디버그할 수 있습니다.

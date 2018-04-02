@@ -1,12 +1,13 @@
 ---
-title: "빠른 시작: Visual Studio를 사용하여 첫 번째 Node.js 앱 만들기 | Microsoft Docs"
-ms.custom: 
+title: '빠른 시작: Visual Studio를 사용하여 첫 번째 Node.js 앱 만들기 | Microsoft Docs'
+description: 이 빠른 시작에서는 Visual Studio를 사용하여 Node.js 앱 만들기
+ms.custom: ''
 ms.date: 11/15/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.devlang: javascript
 ms.assetid: b0e4ebed-1a01-41ef-aad1-4d8465ce5322
@@ -17,11 +18,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 89ecece1701520bf9e88221b2d3961a631d66ca0
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 8597d7ee61820afdd8fcfdbff9cdb5be8dfaa61c
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-nodejs-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 Node.js 앱 만들기
 Visual Studio IDE(통합 개발 환경)에 대한 이 5~10분 분량의 소개에서는 간단한 Node.js 웹 응용 프로그램을 만듭니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.  
@@ -29,21 +30,21 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5~10분 분량의 소개�
 ## <a name="create-a-project"></a>프로젝트 만들기
 먼저 Node.js 웹 응용 프로그램 프로젝트를 만듭니다.
 
+1. Node.js 런타임이 아직 설치되어 있지 않으면 [Node.js](https://nodejs.org/en/download/) 웹 사이트에서 LTS 버전을 설치합니다.
+
+    일반적으로, 설치된 Node.js 런타임은 Visual Studio에서 자동으로 검색됩니다. 설치된 런타임이 검색되지 않을 경우 설치된 런타임을 참조하도록 프로젝트를 구성할 수 있습니다.
+
 1. Visual Studio 2017을 엽니다.  
 
-2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.  
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.  
 
-3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **빈 Node.js 웹 응용 프로그램**을 선택한 후 **확인**을 선택합니다.   
+1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **빈 Node.js 웹 응용 프로그램**을 선택한 후 **확인**을 선택합니다.   
 
      **빈 Node.js 웹 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual Studio 설치 관리자 열기** 링크를 클릭합니다. Visual Studio 설치 관리자가 시작됩니다. **Node.js 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.  
 
      ![VS 설치 관리자에서 Node.js 워크로드](../ide/media/quickstart-nodejs-workload.png)  
 
-    Visual Studio에서 새 솔루션을 만들고 프로젝트를 엽니다. **server.js**가 편집기에서 열립니다.
-
-4. Node.js 런타임이 아직 설치되어 있지 않으면 [Node.js](https://nodejs.org/en/download/) 웹 사이트에서 설치합니다.
-
-    일반적으로, 설치된 Node.js 런타임은 Visual Studio에서 자동으로 검색됩니다. 설치된 런타임이 검색되지 않을 경우 설치된 런타임을 참조하도록 프로젝트를 구성할 수 있습니다.
+    Visual Studio에서 새 솔루션을 만들고 프로젝트를 엽니다. *server.js*가 왼쪽 창의 편집기에서 열립니다.
 
 ## <a name="explore-the-ide"></a>IDE 탐색  
 
@@ -61,11 +62,11 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5~10분 분량의 소개�
 
    ![Node.js 명령 프롬프트](../ide/media/quickstart-nodejs-command-prompt.png) 
 
-1. 편집기(왼쪽 창)의 **server.js** 파일에서 `http.createServer`를 선택한 후 **F12** 키를 누르거나 상황에 맞는 메뉴에서(마우스 오른쪽 단추 클릭) **정의로 이동**을 선택합니다. 이 명령을 실행하면 index.d.ts에 있는 `createServer` 함수에 대한 정의가 표시됩니다.  
+1. 편집기(왼쪽 창)의 *server.js* 파일에서 `http.createServer`를 선택한 후 **F12** 키를 누르거나 상황에 맞는 메뉴에서(마우스 오른쪽 단추 클릭) **정의로 이동**을 선택합니다. 이 명령을 실행하면 index.d.ts에 있는 `createServer` 함수에 대한 정의가 표시됩니다.  
 
    ![[정의로 이동] 바로 가기 메뉴](../ide/media/quickstart-nodejs-gotodefinition.png)  
 
-1. 이 코드 줄, `res.end('Hello World\n');`의 문자열 끝 부분에 커서를 놓고 다음과 같이 수정합니다.
+1. *server.js*로 돌아간 다음, 이 코드 줄, `res.end('Hello World\n');`의 문자열 끝 부분에 커서를 놓고 다음과 같이 수정합니다.
 
     `res.end('Hello World\n' + res.connection.`
 
@@ -88,6 +89,5 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5~10분 분량의 소개�
 
 ## <a name="next-steps"></a>다음 단계 
 
-- [Node.js에 대한 자습서](../nodejs/tutorial-nodejs.md) 살펴보기  
-- [Visual Studio IDE](../ide/visual-studio-ide.md)에 대해 자세히 알아보기  
-- [Visual Studio용 Node.js 도구](https://github.com/Microsoft/nodejstools/wiki)에 대해 자세히 알아보기
+- [Node.js 및 Express에 대한 자습서](../nodejs/tutorial-nodejs.md) 살펴보기  
+- [Node.js 및 React에 대한 자습서](../nodejs/tutorial-nodejs-with-react-and-jsx.md) 살펴보기  

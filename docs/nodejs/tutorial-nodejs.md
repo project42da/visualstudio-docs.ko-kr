@@ -1,12 +1,13 @@
 ---
-title: "Visual Studio에서 Node.js 시작 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/30/2017
-ms.reviewer: 
-ms.suite: 
+title: Node.js 및 Express 앱 만들기 - Visual Studio | Microsoft Docs
+description: 이 자습서에서는 Visual Studio에서 Node.js 및 Express 앱 만들기
+ms.custom: ''
+ms.date: 03/13/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: 
+- vs-nodejs
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
@@ -16,35 +17,63 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 1d91d46b20f82a1700c2d20639b3a8827c92bcb0
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 05e10e6016c4a6791b5bc80ba6a05616c1edb0f6
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/15/2018
 ---
-# <a name="getting-started-with-nodejs-in-visual-studio"></a>Visual Studio에서 Node.js 시작
-Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다.  아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.  
+# <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>자습서: Visual Studio에서 Node.js 및 Express 앱 만들기
+Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.  
+
+이 자습서에서는 다음 방법을 학습합니다.
+> [!div class="checklist"]
+> * Node.js 프로젝트 만들기
+> * 일부 코드를 추가합니다.
+> * IntelliSense 사용
+> * 앱 실행
+> * 중단점 도달
+
+## <a name="prerequisites"></a>전제 조건
+
+* Node.js 개발 워크로드와 Visual Studio가 설치되어 있어야 합니다.
+
+    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+
+    워크로드를 설치해야 하지만 이미 Visual Studio가 있는 경우 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Open Visual Studio 설치 관리자** 링크를 클릭합니다. Visual Studio 설치 관리자가 시작됩니다. **Node.js 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.
+
+* Node.js 런타임을 설치해야 합니다.
+
+    아직 설치되지 않은 경우 [Node.js](https://nodejs.org/en/download/) 웹 사이트에서 LTS 버전을 설치합니다. 일반적으로, 설치된 Node.js 런타임은 Visual Studio에서 자동으로 검색됩니다. 설치된 런타임이 검색되지 않으면 속성 페이지에서 설치된 런타임을 참조하도록 프로젝트를 구성할 수 있습니다(프로젝트를 만든 후 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다).
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 먼저 Node.js 웹 응용 프로그램 프로젝트를 만듭니다.
 
 1. Visual Studio 2017을 엽니다.  
 
-2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.  
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.  
 
-3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **기본 Azure Node.js Express 4 응용 프로그램**을 선택한 후 **확인**을 선택합니다.   
+1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **기본 Azure Node.js Express 4 응용 프로그램**을 선택한 후 **확인**을 선택합니다.   
 
-     **기본 Azure Node.js Express 4 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual Studio 설치 관리자 열기** 링크를 클릭합니다. Visual Studio 설치 관리자가 시작됩니다. **Node.js 개발** 워크로드를 선택한 다음 **수정**을 선택합니다. 
+     **기본 Azure Node.js Express 4 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 먼저 **Node.js 개발** 워크로드를 설치해야 합니다. 
 
-    Visual Studio가 새 솔루션을 만들고 프로젝트를 엽니다. **app.js** 프로젝트 파일이 편집기에 열립니다(왼쪽 창). Visual Studio 솔루션 및 프로젝트를 잘 모르는 경우 [빠른 시작: Visual Studio를 사용하여 첫 번째 Node.js 앱 만들기](../ide/quickstart-nodejs.md)를 참조하세요.
+    Visual Studio가 새 솔루션을 만들고 프로젝트를 엽니다. *app.js* 프로젝트 파일이 편집기에 열립니다(왼쪽 창).
 
-4. Node.js 런타임이 아직 설치되어 있지 않으면 [Node.js](https://nodejs.org/en/download/) 웹 사이트에서 설치합니다.
+    - 굵게 강조 표시된 것은 **새 프로젝트** 대화 상자에서 지정한 이름을 사용하는 프로젝트입니다. 파일 시스템에서 이 프로젝트는 프로젝트 폴더의 *.njsproj* 파일로 표시됩니다. 속성을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 프로젝트와 연결된 환경 변수와 속성을 설정할 수 있습니다. 프로젝트 파일이 Node.js 프로젝트 소스에 사용자 지정 변경을 하지 않으므로 다른 개발 도구와 라운드트립을 수행할 수 있습니다.
 
-    일반적으로, 설치된 Node.js 런타임은 Visual Studio에서 자동으로 검색됩니다. 설치된 런타임이 검색되지 않을 경우 설치된 런타임을 참조하도록 프로젝트를 구성할 수 있습니다.
+    - 최상위 수준은 기본적으로 프로젝트와 이름이 동일한 솔루션입니다. 디스크에서 *.sln* 파일로 표시되는 솔루션은 하나 이상의 관련된 프로젝트에 대한 컨테이너입니다.
+
+    - npm 노드에는 설치된 npm 패키지가 있으면 표시됩니다. npm 노드를 마우스 오른쪽 버튼으로 클릭하고 대화 상자를 사용하여 npm 패키지를 검색하고 설치할 수 있습니다.
+
+    - *app.js*와 같은 프로젝트 파일은 프로젝트 노드 아래 표시됩니다. *app.js*는 프로젝트 시작 파일입니다.
+
+1. **npm** 노드를 열고 모든 필수 npm 패키지가 존재하는지 확인합니다.
+
+    무엇인가 누락된(느낌표 아이콘) 경우는 **npm** 노드를 마우스 오른쪽 버튼으로 클릭하고 **누락된 npm 패키지 설치**를 선택합니다.
 
 ## <a name="add-some-code"></a>일부 코드를 추가합니다.
 
-1. 솔루션 탐색기(오른쪽 창)에서 Views 폴더를 연 다음 index.pug를 엽니다.
+1. 솔루션 탐색기(오른쪽 창)에서 Views 폴더를 연 다음, *index.pug*를 엽니다.
 
 1. 콘텐츠를 다음 표시로 바꿉니다.
 
@@ -68,7 +97,7 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
       a: img(id='myImage' height='200' width='200' src='')
     ```
 
-1. Routes 폴더에서 index.js를 엽니다.
+1. Routes 폴더에서 *index.js*를 엽니다.
 
 1. `router.get` 호출 앞에 다음 코드를 추가합니다.
 
@@ -91,7 +120,11 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
     });
     ```
 
-1. `data` 다음에 `: get`을 입력하면 IntelliSense가 getData 함수를 표시합니다. `getData`를 선택합니다.
+## <a name="use-intellisense"></a>IntelliSense 사용
+
+1. *index.js*에서 `res.render`을 포함한 코드 줄으로 이동합니다.
+
+1. `data` 문자열 다음에 `: get`을 입력하면 IntelliSense가 `getData` 함수를 표시합니다. `getData`를 선택합니다.
 
     ![IntelliSense 사용](../nodejs/media/tutorial-nodejs-intellisense.png) 
 
@@ -111,7 +144,7 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
 ## <a name="set-a-breakpoint"></a>중단점 설정
 
-1. Index.js에서 다음 코드 줄 앞의 왼쪽 여백을 클릭하여 중단점을 설정합니다.
+1. *index.js*에서 다음 코드 줄 앞의 왼쪽 여백을 클릭하여 중단점을 설정합니다.
 
     `res.render('index', { title: 'Express', "data": getData() });`
 
@@ -143,14 +176,6 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
     ![브라우저에서 실행 중인 앱](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
 
-1. **보기** > **다른 창** > **Node.js 대화형 창**을 선택하여 Node.js 대화형 창을 엽니다.
-
-   ![Node.js 대화형 창 열기](../nodejs/media/tutorial-nodejs-interactive-window.png)  
-
-    대화형 창은 `require()` 문의 사용을 포함하여 코드에서 수행할 수 있는 모든 항목을 지원합니다. 다음 스크린샷의 코드는 변수를 정의하고 Node.js 인터프리터의 위치를 표시합니다.
-
-   ![Node.js 대화형 창](../nodejs/media/tutorial-nodejs-interactive-window-example.png)  
-
 1. 웹 브라우저를 닫습니다.  
 
 ## <a name="optional-publish-to-azure-app-service"></a>(선택 사항) Azure App Service에 게시
@@ -175,5 +200,7 @@ Visual Studio를 사용하여 Node.js를 개발하기 위한 이 자습서에서
 
 ## <a name="next-steps"></a>다음 단계 
 
-- [Visual Studio용 Node.js 도구](https://github.com/Microsoft/nodejstools/wiki)에 대해 자세히 알아보기  
-- [Visual Studio IDE](../ide/visual-studio-ide.md)에 대해 자세히 알아보기  
+이 자습서에서는 Express를 사용하여 Node.js 앱을 만들고 실행하는 방법 및 디버거를 사용하여 중단점을 적중하는 방법을 배웠습니다.
+
+> [!div class="nextstepaction"]
+> [Visual Studio용 Node.js 도구](https://github.com/Microsoft/nodejstools)

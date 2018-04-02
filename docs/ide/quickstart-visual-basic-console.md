@@ -1,12 +1,12 @@
 ---
-title: "빠른 시작: Visual Studio에서 Visual Basic을 사용하여 첫 번째 콘솔 앱 만들기 | Microsoft Docs"
-ms.custom: 
+title: '빠른 시작: Visual Studio에서 Visual Basic을 사용하여 첫 번째 콘솔 앱 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 12/10/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.devlang: vb
 author: TerryGLee
@@ -16,11 +16,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 2573e1a2344b858b721fb234d6b228b421a36550
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.openlocfilehash: a531582b2474305d7c286f936e29a7bc9804d7bf
+ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 03/15/2018
 ---
 # <a name="quickstart-create-your-first-console-app-in-visual-studio-with-visual-basic"></a>빠른 시작: Visual Studio에서 Visual Basic을 사용하여 첫 번째 콘솔 앱 만들기
 Visual Studio IDE(통합 개발 환경)에 대한 소개는 이 5~10분 분량으로 여기서 콘솔에서 실행되는 간단한 Visual Basic 응용 프로그램을 만듭니다.
@@ -81,9 +81,8 @@ IDE에서 **HelloWorld** 단추를 클릭하면 디버그 모드에서 프로그
 
    ![Hello World 및 계속하려면 아무 키나 누르세요.를 표시하는 콘솔 창](../ide/media/vb-console-hello-world-press-any-key.png)
 
-이 빠른 시작을 완료한 것을 축하 드립니다! Visual Basic 및 Visual Studio IDE를 이해하는 데 도움이 되었기를 바랍니다. 보다 자세히 알아보려면 목차에서 **자습서** 섹션에 있는 자습서를 읽어보세요.
+## <a name="next-steps"></a>다음 단계
+이 빠른 시작을 완료한 것을 축하 드립니다! Visual Basic 및 Visual Studio IDE를 이해하는 데 도움이 되었기를 바랍니다. 자세히 알아보려면 계속 다음 자습서를 사용하세요.
 
-## <a name="see-also"></a>참고 항목
-* [빠른 시작: Visual Studio에서 Visual Basic을 사용하여 "Hello World" Windows Forms 앱 만들기](quickstart-visual-basic-winforms.md)
-* [자습서: Visual Studio에서 Visual Basic 시작](tutorial-visual-basic-console.md)
-* [Visual Basic 코드 파일에 대한 IntelliSense](visual-basic-specific-intellisense.md)
+> [!div class="nextstepaction"]
+> [Visual Studio에서 Visual Basic 시작](tutorial-visual-basic-console.md)
