@@ -1,23 +1,23 @@
 ---
-title: "Visual Studio 2017 빌드 번호 및 릴리스 날짜 | Microsoft Docs"
-description: "날짜별로 정렬된 Visual Studio 2017의 릴리스 버전 및 빌드 번호 목록입니다."
-keywords: 
+title: Visual Studio 2017 빌드 번호 및 릴리스 날짜 | Microsoft Docs
+description: 날짜별로 정렬된 Visual Studio 2017의 릴리스 버전 및 빌드 번호 목록입니다.
+keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/08/2018
+ms.date: 03/19/2018
 ms.topic: article
-helpviewer_keywords: 
+helpviewer_keywords: ''
 ms.technology:
 - vs-acquisition
-ms.service: 
+ms.service: ''
 ms.workload:
 - multiple
-ms.openlocfilehash: fffebc62b18226d50fb836144f250894b6a013fd
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 4fb2238d8a0afb8334a05585bf040931da81d66a
+ms.sourcegitcommit: a80e7ef2f0a0f6d906a44f4d696aeb208bc1ad70
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/21/2018
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 빌드 번호 및 릴리스 날짜
 
@@ -25,6 +25,10 @@ ms.lasthandoff: 03/12/2018
 
 | **Version**| **채널** | **릴리스 날짜** | **빌드 버전** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.6.3 | 릴리스 | 2018년 3월 19일 | 15.6.27428.2011 |
+| 15.7.0 미리 보기 1.0 | 미리 보기 | 2018년 3월 13일 | 15.7.27512.0 |
+| 15.6.2 | 릴리스 | 2018년 3월 13일 | 15.6.27428.2005 |
+| 15.0.11 | 릴리스 | 2018년 3월 13일 | 15.0.26228.29 |
 | 15.6.1 | 릴리스 | 2018년 3월 8일 | 15.6.27428.2002 |
 | 15.6.1 미리 보기 1.0 | 미리 보기 | 2018년 3월 8일 | 15.6.27428.2002 |
 | 15.6.0 | 릴리스 | 2018년 3월 5일 | 15.6.27428.1 |
