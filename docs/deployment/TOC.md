@@ -1,7 +1,8 @@
 # [배포 설명서](index.md)
 # 개요
-## [배포 개요](deploying-applications-services-and-components.md)
+## [배포 개요](deploying-applications-services-and-components-resources.md)
 # 빠른 시작
+## [배포 소개](deploying-applications-services-and-components.md)
 ## [로컬 폴더에 배포](quickstart-deploy-to-local-folder.md)
 ## [웹 사이트에 배포](quickstart-deploy-to-a-web-site.md)
 ## [Azure에 배포](quickstart-deploy-to-azure.md)
@@ -131,6 +132,4 @@
 #### [<Signature> 요소(ClickOnce 배포)](signature-element-clickonce-deployment.md)
 #### [<customErrorReporting> 요소(ClickOnce 배포)](customerrorreporting-element-clickonce-deployment.md)
 ### [ClickOnce 관리되지 않는 API 참조](clickonce-unmanaged-api-reference.md)
-# 리소스
-## [응용 프로그램, 서비스 및 구성 요소 배포](deploying-applications-services-and-components-resources.md)
 

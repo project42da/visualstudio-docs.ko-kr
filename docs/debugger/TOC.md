@@ -1,7 +1,7 @@
 # [디버거 설명서](index.md)
-# 개요
-## [디버거 기능 둘러보기](debugger-feature-tour.md)
+# [개요](debugger-overview.md)
 # 빠른 시작
+## [디버거 소개](debugger-feature-tour.md)
 ## [관리되는 앱 디버그](quickstart-debug-with-managed.md)
 ## [네이티브 앱 디버그](quickstart-debug-with-cplusplus.md)
 ## [ASP.NET 앱 디버그](quickstart-debug-aspnet.md)
@@ -26,9 +26,6 @@
 ### [시각화 도우미에서 문자열 값 보기](string-visualizer-dialog-box.md)
 ### [디스어셈블리 코드 보기](how-to-use-the-disassembly-window.md)
 #### [방법: 메모리에서 위 또는 아래로 한 페이지 이동](how-to-page-up-or-down-in-memory.md)
-### [호출 스택 보기](how-to-use-the-call-stack-window.md)
-#### [호출 스택 창의 혼합 코드 및 누락된 정보](mixed-code-and-missing-information-in-the-call-stack-window.md)
-#### [방법: 호출 스택 창에 네이티브 프레임이 없을 때 관리 코드에서 나가기](how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window.md)
 ### [레지스터 값 보기](how-to-use-the-registers-window.md)
 #### [레지스터 창 정보](debugging-basics-registers-window.md)
 #### [방법: 레지스터 그룹 표시 및 숨기기](how-to-display-and-hide-register-groups.md)

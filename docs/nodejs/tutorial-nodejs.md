@@ -17,11 +17,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 05e10e6016c4a6791b5bc80ba6a05616c1edb0f6
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 1ababcbc0903d474c2992b68e3571a71c4e88d99
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>자습서: Visual Studio에서 Node.js 및 Express 앱 만들기
 Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.  
@@ -45,6 +45,8 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
 * Node.js 런타임을 설치해야 합니다.
 
     아직 설치되지 않은 경우 [Node.js](https://nodejs.org/en/download/) 웹 사이트에서 LTS 버전을 설치합니다. 일반적으로, 설치된 Node.js 런타임은 Visual Studio에서 자동으로 검색됩니다. 설치된 런타임이 검색되지 않으면 속성 페이지에서 설치된 런타임을 참조하도록 프로젝트를 구성할 수 있습니다(프로젝트를 만든 후 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다).
+
+    이 자습서는 Node.js 8.10.0를 사용하여 테스트했습니다.
 
 ## <a name="create-a-project"></a>프로젝트 만들기
 먼저 Node.js 웹 응용 프로그램 프로젝트를 만듭니다.
@@ -119,6 +121,8 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
         res.render('index', { title: 'Express', "data" });
     });
     ```
+
+    `res.render`를 포함하는 코드 줄에 오류가 있습니다. 이 오류를 해결해야만 앱을 실행할 수 있습니다. 다음 섹션에서 이 오류를 해결합니다.
 
 ## <a name="use-intellisense"></a>IntelliSense 사용
 

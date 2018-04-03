@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 992bd55fdc83757f9edacb00f31580f7efaab8cb
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 4424db170240714ad3a74c84107e7a794a9dad54
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI 자동화를 사용하여 코드 테스트
 
@@ -45,26 +45,29 @@ UI(사용자 인터페이스)를 통해 응용 프로그램을 실행하는 자�
 
 ## <a name="create-coded-ui-tests"></a>코딩된 UI 테스트 만들기
 
+1. **코딩된 UI 테스트** 구성 요소를 설치합니다.
+
+   아직 설치하지 않은 경우 Visual Studio의 **코딩된 UI 테스트** 구성 요소를 설치합니다. **도구** > **도구 및 기능 가져오기**를 선택하여 **Visual Studio 설치 관리자**를 시작합니다. **Visual Studio 설치 관리자**에서 **개별 구성 요소** 탭을 선택하고 **디버깅 및 테스트** 섹션까지 아래로 스크롤합니다. **코딩된 UI 테스트** 구성 요소를 선택하고 **수정**을 선택합니다.
+
+   ![코딩된 UI 테스트 구성 요소](media/coded-ui-test-component.png)
+
 1. 코딩된 UI 테스트 프로젝트를 만듭니다.
 
-   코딩된 UI 테스트는 코딩된 UI 테스트 프로젝트에 포함되어 있어야 합니다. 아직 코딩된 UI 테스트 프로젝트가 없으면 하나를 만듭니다. **솔루션 탐색기**의 솔루션 바로 가기 메뉴에서 **추가** > **새 프로젝트**를 차례로 선택하고 **Visual Basic** 또는 **Visual C#**을 선택합니다. 그런 다음, **테스트** > **C코딩된 UI 테스트**를 차례로 선택합니다.
+   코딩된 UI 테스트는 코딩된 UI 테스트 프로젝트에 포함되어 있어야 합니다. 아직 코딩된 UI 테스트 프로젝트가 없으면 하나를 만듭니다. **파일** > **새로 만들기** > **프로젝트**를 선택하여 **새 프로젝트** 대화 상자를 엽니다. 왼쪽의 범주 창에서 **설치됨** > **Visual Basic** *또는* **Visual C#** > **테스트**를 확장합니다. **코딩된 UI 테스트 프로젝트** 템플릿을 선택하고 **확인**을 선택합니다.
 
-   > [!TIP]
-   > **코딩된 UI 테스트** 프로젝트 템플릿이 표시되지 않으면 코딩된 UI 테스트를 지원하지 않는 Visual Studio 버전을 사용하는 중일 수 있습니다. 코딩된 UI 테스트를 만들려면 Visual Studio Enterprise edition을 사용해야 합니다.
+   ![새 프로젝트 대화 상자의 코딩된 UI 테스트 프로젝트 템플릿](media/coded-ui-test-project-template.png)
 
 2. 코딩된 UI 테스트 파일을 추가합니다.
 
-     코딩된 UI 프로젝트를 방금 만든 경우 첫 번째 CUIT 파일이 자동으로 추가됩니다. 다른 테스트 파일을 추가하려면 코딩된 UI 테스트 프로젝트의 바로 가기 메뉴를 열고 **추가**를 가리킨 다음 **코딩된 UI 테스트**를 선택합니다.
-
-     ![코딩된 UI 테스트 만들기](../test/media/codedui_create.png "CodedUI_Create")
+     코딩된 UI 프로젝트를 방금 만든 경우 첫 번째 CUIT 파일이 자동으로 추가됩니다. 다른 테스트 파일을 추가하려면 **솔루션 탐색기**에서 코딩된 UI 테스트 프로젝트의 바로 가기 메뉴를 열고 **추가** > **코딩된 UI 테스트**를 선택합니다.
 
      **코딩된 UI 테스트에 대한 코드 생성** 대화 상자에서 **작업 기록, UI 맵 편집 또는 어설션 추가**를 선택합니다.
 
-     ![기록 작업 선택](../test/media/codedui_codegendialogb.png "CodedUI_CodeGenDialogB")
+     ![코딩된 UI 테스트에 대한 코드 생성 대화 상자](media/generate-code-for-coded-ui-test.png)
 
-     코딩된 UI 테스트 빌더가 나타나고 Visual Studio가 최소화됩니다.
+     코딩된 UI 테스트 빌더가 나타납니다.
 
-     ![코딩된 UI 테스트 빌더](../test/media/codedui_testbuilder.png "CodedUI_TestBuilder")
+     ![코딩된 UI 테스트 빌더](../test/media/codedui_testbuilder.png)
 
 3. 작업 시퀀스를 기록합니다.
 
@@ -168,7 +171,7 @@ UI 컨트롤을 위한 어설션을 생성하려면 코딩된 UI 테스트 빌�
 
 어설션에 대한 코드를 생성하고 UI 맵에 컨트롤을 추가하려면 **코드 생성** 아이콘을 선택합니다. 코딩된 UI 테스트 메서드의 이름과 메서드에 대한 주석으로 추가될 설명을 입력합니다. **추가 후 생성**을 선택합니다. 다음으로, **닫기** 아이콘을 선택해 **코딩된 UI 테스트 빌더**를 닫습니다. 그러면 다음 코드와 유사한 코드가 생성됩니다. 예를 들어 입력한 이름이 `AssertForAddTwoNumbers`이면 코드는 다음 예제와 같습니다.
 
--   코딩된 UI 테스트 파일의 테스트 메서드에 assert 메서드 AssertForAddTwoNumbers에 대한 호출을 추가합니다.
+- 코딩된 UI 테스트 파일의 테스트 메서드에 assert 메서드 AssertForAddTwoNumbers에 대한 호출을 추가합니다.
 
     ```csharp
     [TestMethod]
@@ -181,7 +184,7 @@ UI 컨트롤을 위한 어설션을 생성하려면 코딩된 UI 테스트 빌�
 
      이 파일을 편집하여 단계 및 어설션의 순서를 변경하거나 새 테스트 메서드를 만들 수 있습니다. 코드를 추가하려면 테스트 메서드에 커서를 올려 놓고 바로 가기 메뉴에서 **코딩된 UI 테스트에 대한 코드 생성**을 선택합니다.
 
--   UI 맵(UIMap.uitest)에 `AssertForAddTwoNumbers` 메서드를 추가합니다. 이 파일은 어설션을 편집할 수 있는 코딩된 UI 테스트 편집기에서 열립니다.
+- UI 맵(UIMap.uitest)에 `AssertForAddTwoNumbers` 메서드를 추가합니다. 이 파일은 어설션을 편집할 수 있는 코딩된 UI 테스트 편집기에서 열립니다.
 
      ![코딩된 UI 테스트 편집기를 사용하여 어설션 편집](../test/media/cuit_editor_assert.png "CUIT_Editor_assert")
 
@@ -226,7 +229,7 @@ UI 컨트롤을 위한 어설션을 생성하려면 코딩된 UI 테스트 빌�
 Mouse.Hover(uIItem1Text, new Point(87, 9));
 ```
 
-#### <a name="configuring-mouse-hover-keyboard-assignments"></a>마우스로 가리키기 키보드 할당 구성
+#### <a name="configure-mouse-hover-keyboard-assignments"></a>마우스로 가리키기 키보드 할당 구성
 
 내 환경의 다른 곳에서 마우스 가리키기 이벤트 캡처에 대한 키 할당이 사용 중인 경우.
 
@@ -269,35 +272,35 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
 코딩된 UI 테스트를 만든 후 Visual Studio에서 다음 도구 중 하나를 사용해 편집할 수 있습니다.
 
--   **코딩된 UI 테스트 빌더:** 코딩된 UI 테스트 빌더를 사용하여 테스트에 컨트롤 및 유효성 검사를 더 추가할 수 있습니다. 이 항목의 [컨트롤 추가 및 해당 컨트롤 속성에 대한 유효성 검사](#VerifyingCodeUsingCUITGenerateAssertions) 섹션을 참조하세요.
+- **코딩된 UI 테스트 빌더:** 코딩된 UI 테스트 빌더를 사용하여 테스트에 컨트롤 및 유효성 검사를 더 추가할 수 있습니다. 이 항목의 [컨트롤 추가 및 해당 컨트롤 속성에 대한 유효성 검사](#VerifyingCodeUsingCUITGenerateAssertions) 섹션을 참조하세요.
 
--   **코딩된 UI 테스트 편집기:** 코딩된 UI 테스트 편집기에서는 코딩된 UI 테스트를 쉽게 수정할 수 있습니다. 코딩된 UI 테스트 편집기를 사용하면 테스트 메서드를 찾아서 보고 편집할 수 있습니다. 또한 UI 작업을 편집하고 UI 컨트롤 맵에서 관련 컨트롤을 편집할 수도 있습니다. 자세한 내용은 [코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)을 참조하세요.
+- **코딩된 UI 테스트 편집기:** 코딩된 UI 테스트 편집기에서는 코딩된 UI 테스트를 쉽게 수정할 수 있습니다. 코딩된 UI 테스트 편집기를 사용하면 테스트 메서드를 찾아서 보고 편집할 수 있습니다. 또한 UI 작업을 편집하고 UI 컨트롤 맵에서 관련 컨트롤을 편집할 수도 있습니다. 자세한 내용은 [코딩된 UI 테스트 편집기를 사용하여 코딩된 UI 테스트 편집](../test/editing-coded-ui-tests-using-the-coded-ui-test-editor.md)을 참조하세요.
 
--   **코드 편집기:**
+- **코드 편집기:**
 
-    -   이 항목의 [UI 컨트롤 작업 및 속성 코딩](#VerifyingCodeCUITActionsandProperties) 섹션에서 설명하는 것처럼 테스트에서 컨트롤에 대한 코드를 수동으로 추가합니다.
+    - 이 항목의 [UI 컨트롤 작업 및 속성 코딩](#VerifyingCodeCUITActionsandProperties) 섹션에서 설명하는 것처럼 테스트에서 컨트롤에 대한 코드를 수동으로 추가합니다.
 
-    -   코딩된 UI 테스트를 만든 후 데이터 기반이 되도록 수정할 수 있습니다. 자세한 내용은 [데이터 기반의 코딩된 UI 테스트 만들기](../test/creating-a-data-driven-coded-ui-test.md)를 참조하세요.
+    - 코딩된 UI 테스트를 만든 후 데이터 기반이 되도록 수정할 수 있습니다. 자세한 내용은 [데이터 기반의 코딩된 UI 테스트 만들기](../test/creating-a-data-driven-coded-ui-test.md)를 참조하세요.
 
-    -   코딩된 UI 테스트 재생 시 창이 나타나거나 진행률 표시줄이 사라지는 등의 특정 이벤트가 발생할 때까지 기다리도록 테스트에 지시할 수 있습니다. 이렇게 하려면 적절한 UITestControl.WaitForControlXXX() 메서드를 추가합니다. 사용 가능한 메서드의 전체 목록을 보려면 [코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)을 참조하세요. WaitForControlEnabled 메서드를 사용하여 컨트롤이 사용하도록 설정될 때까지 기다리는 코딩된 UI 테스트에 대한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요.
+    - 코딩된 UI 테스트 재생 시 창이 나타나거나 진행률 표시줄이 사라지는 등의 특정 이벤트가 발생할 때까지 기다리도록 테스트에 지시할 수 있습니다. 이렇게 하려면 적절한 UITestControl.WaitForControlXXX() 메서드를 추가합니다. 사용 가능한 메서드의 전체 목록을 보려면 [코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정](../test/making-coded-ui-tests-wait-for-specific-events-during-playback.md)을 참조하세요. WaitForControlEnabled 메서드를 사용하여 컨트롤이 사용하도록 설정될 때까지 기다리는 코딩된 UI 테스트에 대한 예제는 [연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리](../test/walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)를 참조하세요.
 
-    -   코딩된 UI 테스트에는 Internet Explorer 9 및 Internet Explorer 10에 포함된 일부 HTML5 컨트롤에 대한 지원이 포함됩니다. 자세한 내용은 [코딩된 UI 테스트에서 HTML5 컨트롤 사용](../test/using-html5-controls-in-coded-ui-tests.md)을 참조하세요.
+    - 코딩된 UI 테스트에는 Internet Explorer 9 및 Internet Explorer 10에 포함된 일부 HTML5 컨트롤에 대한 지원이 포함됩니다. 자세한 내용은 [코딩된 UI 테스트에서 HTML5 컨트롤 사용](../test/using-html5-controls-in-coded-ui-tests.md)을 참조하세요.
 
-    -   **코딩된 UI 테스트 코딩 지침:**
+    - 코딩된 UI 테스트 코딩 지침:
 
-        -   [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)
+       - [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)
 
-        -   [최선의 코딩된 UI 테스트 방법](../test/best-practices-for-coded-ui-tests.md)
+       - [최선의 코딩된 UI 테스트 방법](../test/best-practices-for-coded-ui-tests.md)
 
-        -   [여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)
+       - [여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)
 
-        -   [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
+       - [코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼](../test/supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings.md)
 
 ### <a name="the-generated-code"></a>생성된 코드
 
 **코드 생성**을 선택하면 다음과 같이 여러 코드 조각이 생성됩니다.
 
--   **테스트 메서드의 줄**
+- **테스트 메서드의 줄**
 
     ```csharp
     [CodedUITest]
@@ -316,7 +319,7 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
 
      테스트 메서드를 새로 추가하고 해당 메서드에 동일한 방식으로 코드를 추가할 수도 있습니다. 각 테스트 메서드에는 `[TestMethod]` 특성이 있어야 합니다.
 
--   **UIMap.uitest의 메서드**
+- **UIMap.uitest의 메서드**
 
      이 메서드에는 기록한 작업에 대한 세부 정보 또는 확인한 값이 포함됩니다. 이 코드는 UIMap.uitest를 열어 편집할 수 있습니다. 이 파일은 기록된 작업을 삭제 또는 리팩터링할 수 있는 특수 편집기에서 열립니다.
 
@@ -335,9 +338,9 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
     ```
 
     > [!WARNING]
-    >테스트를 추가로 만들면 다시 생성되므로 이 파일은 편집하면 안 됩니다.
+    > 테스트를 추가로 만들면 다시 생성되므로 이 파일은 편집하면 안 됩니다.
 
-     메서드를 UIMap.cs로 복사하여 이러한 메서드의 변경된 버전을 만들 수 있습니다. 예를 들어 다음과 같이 테스트 메서드에서 호출할 수 있는 매개 변수화된 버전을 만들 수 있습니다.
+     메서드를 *UIMap.cs*로 복사하여 이러한 메서드의 변경된 버전을 만들 수 있습니다. 예를 들어 다음과 같이 테스트 메서드에서 호출할 수 있는 매개 변수화된 버전을 만들 수 있습니다.
 
     ```csharp
     // File: UIMap.cs
@@ -352,33 +355,33 @@ Mouse.Hover(uIItem1Text, new Point(87, 9));
     }
     ```
 
--   **UIMap.uitest의 선언**
+- **UIMap.uitest의 선언**
 
-     이러한 선언은 테스트에서 사용하는 응용 프로그램의 UI 컨트롤을 나타내고 생성된 코드에서 컨트롤을 작동하고 컨트롤의 속성에 액세스하는 데 사용됩니다.
+    이러한 선언은 테스트에서 사용하는 응용 프로그램의 UI 컨트롤을 나타내고 생성된 코드에서 컨트롤을 작동하고 컨트롤의 속성에 액세스하는 데 사용됩니다.
 
-     또한 자체 코드를 작성할 때 이러한 선언을 사용할 수도 있습니다. 예를 들어 웹 응용 프로그램이 테스트 메서드에서 하이퍼링크를 선택하거나 텍스트 상자에 값을 입력하거나 필드 값에 따라 분기해 다른 테스트 작업을 수행하도록 할 수 있습니다.
+    또한 자체 코드를 작성할 때 이러한 선언을 사용할 수도 있습니다. 예를 들어 웹 응용 프로그램이 테스트 메서드에서 하이퍼링크를 선택하거나 텍스트 상자에 값을 입력하거나 필드 값에 따라 분기해 다른 테스트 작업을 수행하도록 할 수 있습니다.
 
-     코딩된 UI 테스트 여러 개와 UI 맵 개체 및 파일 여러 개를 추가하여 큰 응용 프로그램을 쉽게 테스트할 수 있습니다. 자세한 내용은 [여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)를 참조하세요.
+    코딩된 UI 테스트 여러 개와 UI 맵 개체 및 파일 여러 개를 추가하여 큰 응용 프로그램을 쉽게 테스트할 수 있습니다. 자세한 내용은 [여러 UI 맵이 포함된 대형 응용 프로그램 테스트](../test/testing-a-large-application-with-multiple-ui-maps.md)를 참조하세요.
 
- 생성된 코드에 대한 자세한 내용은 [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)을 참조하세요.
+생성된 코드에 대한 자세한 내용은 [코딩된 UI 테스트 분석](../test/anatomy-of-a-coded-ui-test.md)을 참조하세요.
 
 ### <a name="code-ui-control-actions-and-properties"></a>UI 컨트롤 작업 및 속성 코딩
 
 코딩된 UI 테스트에서 UI 테스트 컨트롤 작업 시 이러한 컨트롤은 작업과 속성의 두 부분으로 나뉩니다.
 
--   첫 번째 부분은 UI 테스트 컨트롤에 대해 수행할 수 있는 작업으로 구성됩니다. 예를 들어 코딩된 UI 테스트는 UI 테스트 컨트롤에서 마우스 클릭을 시뮬레이트하거나 UI 테스트 컨트롤에 영향을 주기 위해 키보드에 입력된 키를 시뮬레이션할 수 있습니다.
+- 첫 번째 부분은 UI 테스트 컨트롤에 대해 수행할 수 있는 작업으로 구성됩니다. 예를 들어 코딩된 UI 테스트는 UI 테스트 컨트롤에서 마우스 클릭을 시뮬레이트하거나 UI 테스트 컨트롤에 영향을 주기 위해 키보드에 입력된 키를 시뮬레이션할 수 있습니다.
 
--   두 번째 파트는 UI 테스트 컨트롤에 대한 속성 얻기 및 설정 가능으로 구성됩니다. 예를 들어 코딩된 UI 테스트는 `ListBox`에서 항목 수를 얻거나 선택한 상태로 `CheckBox`를 설정할 수 있습니다.
+- 두 번째 파트는 UI 테스트 컨트롤에 대한 속성 얻기 및 설정 가능으로 구성됩니다. 예를 들어 코딩된 UI 테스트는 `ListBox`에서 항목 수를 얻거나 선택한 상태로 `CheckBox`를 설정할 수 있습니다.
 
 **UI 테스트 컨트롤의 작업 액세스**
 
 마우스 클릭 또는 키보드 작업과 같은 UI 테스트 컨트롤에 대한 작업을 수행하려면 다음과 같이 <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse> 및 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard> 클래스에서 메서드를 사용합니다.
 
--   UI 테스트 컨트롤에 대해 마우스 클릭과 같은 마우스 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A>을 사용합니다.
+- UI 테스트 컨트롤에 대해 마우스 클릭과 같은 마우스 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Mouse.Click%2A>을 사용합니다.
 
      `Mouse.Click(buttonCancel);`
 
--   편집 컨트롤에 입력과 같은 키보드 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A>을 사용합니다.
+- 편집 컨트롤에 입력과 같은 키보드 기반 작업을 수행하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.Keyboard.SendKeys%2A>을 사용합니다.
 
      `Keyboard.SendKeys(textBoxDestination, @"C:\Temp\Output.txt");`
 
@@ -390,7 +393,7 @@ UI 컨트롤 관련 속성 값을 얻고 설정하기 위해 컨트롤의 속성
 
 #### <a name="to-get-or-set-properties-from-ui-test-controls-directly"></a>UI 테스트 컨트롤에서 속성을 직접 얻거나 설정하려면
 
-T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList 또는 T:Microsoft.VisualStudio.TestTools.UITesting.WinControls.WinComboBox와 같이 T:Microsoft.VisualStudio.TestTools.UITesting.UITestControl에서 파생된 컨트롤을 사용하여 다음과 같이 해당 컨트롤의 속성 값을 직접 얻거나 설정할 수 있습니다.
+[HtmlList](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.uitesting.htmlcontrols.htmllist.aspx) 또는 [WinComboBox](https://msdn.microsoft.com/library/microsoft.visualstudio.testtools.uitesting.wincontrols.wincombobox.aspx)처럼 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl>에서 파생되는 컨트롤을 사용하여 속성 값을 직접 가져오거나 설정할 수 있습니다. 다음 코드에서는 몇 가지 예제를 보여줍니다.
 
  ```csharp
  int i = myHtmlList.ItemCount;
@@ -399,11 +402,11 @@ T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList 또는 T:Micr
 
 #### <a name="to-get-properties-from-ui-test-controls"></a>UI 테스트 컨트롤에서 속성을 얻으려면
 
--   컨트롤에서 속성 값을 얻으려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>를 사용합니다.
+- 컨트롤에서 속성 값을 얻으려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>를 사용합니다.
 
--   얻으려는 컨트롤의 속성을 지정하려면 각 컨트롤에 있는 `PropertyNames` 클래스의 적절한 문자열을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>에 대한 매개 변수로 사용합니다.
+- 얻으려는 컨트롤의 속성을 지정하려면 각 컨트롤에 있는 `PropertyNames` 클래스의 적절한 문자열을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>에 대한 매개 변수로 사용합니다.
 
--   <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>는 적절한 데이터 형식을 반환하지만 이 반환 값은 <xref:System.Object>로 캐스팅됩니다. 그런 다음 반환 <xref:System.Object>는 적절한 형식으로 캐스팅되어야 합니다.
+- <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.GetProperty%2A>는 적절한 데이터 형식을 반환하지만 이 반환 값은 <xref:System.Object>로 캐스팅됩니다. 그런 다음 반환 <xref:System.Object>는 적절한 형식으로 캐스팅되어야 합니다.
 
      예제:
 
@@ -411,9 +414,9 @@ T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList 또는 T:Micr
 
 #### <a name="to-set-properties-for-ui-test-controls"></a>UI 컨트롤의 속성을 설정하려면
 
--   컨트롤에서 속성을 설정하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>를 사용합니다.
+- 컨트롤에서 속성을 설정하려면 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>를 사용합니다.
 
--   설정할 컨트롤의 속성을 지정하려면 `PropertyNames` 클래스의 적절한 속성을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>에 대한 첫 번째 매개 변수로 사용하고 속성 값은 두 번째 매개 변수로 사용합니다
+- 설정할 컨트롤의 속성을 지정하려면 `PropertyNames` 클래스의 적절한 속성을 <xref:Microsoft.VisualStudio.TestTools.UITesting.UITestControl.SetProperty%2A>에 대한 첫 번째 매개 변수로 사용하고 속성 값은 두 번째 매개 변수로 사용합니다
 
      예제:
 
@@ -427,17 +430,17 @@ T:Microsoft.VisualStudio.TestTools.UITesting.HtmlControls.HtmlList 또는 T:Micr
 
 **코딩된 UI 테스트 실행을 위한 추가 옵션:** 이 항목의 앞에서 설명한 것처럼 Visual Studio에서 직접 코딩된 UI 테스트를 실행할 수 있습니다. 또한 Microsoft Test Manager 또는 Team Foundation Build에서 자동화된 UI 테스트를 실행할 수 있습니다. 코딩된 UI 테스트가 자동화된 경우 다른 자동화된 테스트와 달리 코딩된 UI 테스트를 실행할 때는 테스트와 데스크톱 사이에 상호 작용이 필요합니다.
 
--   [테스트 탐색기를 사용하여 단위 테스트 실행](../test/run-unit-tests-with-test-explorer.md)
+- [테스트 탐색기를 사용하여 단위 테스트 실행](../test/run-unit-tests-with-test-explorer.md)
 
--   [빌드 프로세스에서 테스트 실행](/vsts/build-release/test/getting-started-with-continuous-testing)
+- [빌드 프로세스에서 테스트 실행](/vsts/build-release/test/getting-started-with-continuous-testing)
 
--   [방법: 데스크톱과 상호 작용하는 테스트를 실행하도록 테스트 에이전트 설정](http://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
+- [방법: 데스크톱과 상호 작용하는 테스트를 실행하도록 테스트 에이전트 설정](http://msdn.microsoft.com/Library/3a94dd07-6d17-402c-ae8f-7947143755c9)
 
 **사용자 지정 컨트롤에 대한 지원 추가:** 코딩된 UI 테스트 프레임워크에서는 가능한 모든 UI를 지원하지는 않으므로 테스트하려는 UI가 지원되지 않을 수도 있습니다. 예를 들어 Microsoft Excel의 UI에 대한 코딩된 UI 테스트는 바로 만들 수 없습니다. 그러나 코딩된 UI 테스트 프레임워크에 대한 확장을 만들어 사용자 지정 컨트롤을 지원할 수 있습니다.
 
--   [컨트롤의 코딩된 UI 테스트 사용](../test/enable-coded-ui-testing-of-your-controls.md)
+- [컨트롤의 코딩된 UI 테스트 사용](../test/enable-coded-ui-testing-of-your-controls.md)
 
--   [Microsoft Excel을 지원하도록 코딩된 UI 테스트 및 작업 기록 확장](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
+- [Microsoft Excel을 지원하도록 코딩된 UI 테스트 및 작업 기록 확장](../test/extending-coded-ui-tests-and-action-recordings-to-support-microsoft-excel.md)
 
 코딩된 UI 테스트는 일반적으로 수동 테스트를 자동화하는 데 사용됩니다. 수동 테스트에 대한 자세한 내용은 [Microsoft Test Manager를 사용하여 수동 테스트 실행](/vsts/manual-test/mtm/run-manual-tests-with-microsoft-test-manager)을 참조하세요. 자동화된 테스트에 대한 자세한 내용은 [Visual Studio에서 도구 테스트](../test/improve-code-quality.md)를 참조하세요.
 

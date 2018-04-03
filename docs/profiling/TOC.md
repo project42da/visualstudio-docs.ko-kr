@@ -1,8 +1,8 @@
 
 # [프로파일링 설명서](index.md)
 # 개요
-## [프로파일링 기능 둘러보기](profiling-feature-tour.md)
 # 빠른 시작
+## [프로파일링 소개](profiling-feature-tour.md)
 ## [CPU 사용량 분석(관리)](quickstart-cpu-usage-managed.md)
 ## [CPU 사용량 분석(네이티브)](quickstart-cpu-usage-native.md)
 ## [CPU 사용량 분석(ASP.NET)](quickstart-cpu-usage-aspnet.md)
