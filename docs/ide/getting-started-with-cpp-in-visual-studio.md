@@ -1,10 +1,10 @@
 ---
-title: "Visual Studio에서 C++ 시작 | Microsoft Docs"
+title: Visual Studio에서 C++ 시작 | Microsoft Docs
 ms.custom: mvc
 ms.date: 12/04/2017
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: get-started-article
+ms.tgt_pltfrm: ''
+ms.topic: tutorial
 author: corob-msft
 ms.author: tglee
 manager: ghogen
@@ -12,17 +12,17 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2e0e0709b8a1737e3f78268ec324d4481dac285a
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: ce0d48a4390ee1c008f889e45760fcef92538cb2
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="get-started-with-c-in-visual-studio"></a>Visual Studio에서 C++ 시작
 
 이 빠른 시작을 완료하면 Visual Studio를 사용하여 C++로 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구 및 대화 상자에 익숙해집니다. 간단한 "Hello, World" 스타일 콘솔 응용 프로그램을 만들면서 IDE(통합 개발 환경)에서 작업하는 방법을 배워 보겠습니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 빠른 시작을 완료하려면 C++에 익숙하지 않아도 되지만 몇 가지 일반적인 프로그래밍 및 디버깅 개념을 잘 알고 있어야 합니다. Visual Studio 설명서에서는 C++로 프로그래밍하는 방법을 설명하지 않습니다. C++ 학습 리소스에 도움이 되는 가이드는 ISO C++ 웹 사이트의 [시작](https://isocpp.org/get-started) 페이지에 있습니다.
 

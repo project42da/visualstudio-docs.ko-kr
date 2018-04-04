@@ -1,16 +1,16 @@
 ---
-title: "Azure App Service에 Python 인터프리터 및 라이브러리 설치 | Microsoft Docs"
-description: "Azure App Service에 Python 인터프리터 및 라이브러리를 설치하고 해당 인터프리터를 제대로 참조하도록 웹 응용 프로그램을 구성하는 방법입니다."
-ms.custom: 
+title: Azure App Service에 Python 인터프리터 및 라이브러리 설치 | Microsoft Docs
+description: Azure App Service에 Python 인터프리터 및 라이브러리를 설치하고 해당 인터프리터를 제대로 참조하도록 웹 응용 프로그램을 구성하는 방법입니다.
+ms.custom: ''
 ms.date: 09/13/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 0f0910459fecb01573b7282137949acbfd5dcb32
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: f48a8040203f50970aa16d511f94222bf1578bb1
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
 
@@ -160,7 +160,7 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
 </configuration>
 ```
 
-여기에 표시된 `HTTP_PLATFORM_PORT` 환경 변수에는 로컬 서버가 localhost의 연결을 수신 대기해야 하는 포트가 포함됩니다. 이 예제에서는 원하는 경우 다른 환경 변수(이 경우 `SERVER_PORT`)를 만드는 방법도 보여줍니다.
+여기에 표시된 `HTTP_PLATFORM_PORT` 환경 변수에는 로컬 서버가 localhost의 연결을 수신 대기해야 하는 포트가 포함됩니다. 이 예제에서는 원하는 경우 다른 환경 변수(이 경우 `SERVER_PORT`)를 만드는 방법도 보여 줍니다.
 
 ## <a name="installing-packages"></a>패키지 설치
 
@@ -217,4 +217,4 @@ Azure Portal을 통해 Kudu 콘솔을 사용하는 대신 `https://yoursite.scm.
 
 명령 및 인증에 대한 자세한 내용은 [Kudu 설명서](https://github.com/projectkudu/kudu/wiki/REST-API)를 참조하세요.
 
-`az webapp deployment list-publishing-profiles` 명령을 사용하여 Azure CLI를 통해 자격 증명을 볼 수 있습니다([az webapp 배포](/cli/azure/webapp/deployment?view=azure-cli-latest#az_webapp_deployment_list_publishing_profiles) 참조). Kudu 명령을 게시하는 도우미 라이브러리도 [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)에서 사용할 수 있습니다.
+`az webapp deployment list-publishing-profiles` 명령을 사용하여 Azure CLI를 통해 자격 증명을 볼 수 있습니다([az webapp 배포](/cli/azure/webapp/deployment?view=azure-cli-latest#az-webapp-deployment-list-publishing-profiles) 참조). Kudu 명령을 게시하는 도우미 라이브러리도 [GitHub](https://github.com/lmazuel/azure-webapp-publish/blob/master/azure_webapp_publish/kudu.py#L42)에서 사용할 수 있습니다.

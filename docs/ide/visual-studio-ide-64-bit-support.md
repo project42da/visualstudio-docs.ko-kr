@@ -1,12 +1,7 @@
 ---
-title: "Visual Studio IDE 64비트 지원 | Microsoft 문서"
-ms.custom: 
+title: Visual Studio IDE 64비트 지원 | Microsoft 문서
 ms.date: 02/21/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-general
 ms.topic: article
 helpviewer_keywords:
 - 64-bit applications [C++]
@@ -17,15 +12,15 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: e9fe08a05d26dc4d226ca53d929e9889a7c98c41
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: ede476b4217ccf730775799cfa3af400513e98fe
+ms.sourcegitcommit: 627708d128a91656e34ce5d8e061102da4c66b4d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/04/2018
 ---
 # <a name="visual-studio-ide-64-bit-support"></a>Visual Studio IDE 64비트 지원
 
-Visual Studio를 사용하면 64비트 플랫폼을 비롯하여 다양한 플랫폼을 대상으로 하는 응용 프로그램을 설정할 수 있습니다. Visual Studio의 64비트 플랫폼 지원에 대한 자세한 내용은 [64비트 응용 프로그램](/dotnet/framework/64-bit-apps.md)을 참조하세요.
+Visual Studio를 사용하면 64비트 플랫폼을 비롯하여 다양한 플랫폼을 대상으로 하는 응용 프로그램을 설정할 수 있습니다. Visual Studio의 64비트 플랫폼 지원에 대한 자세한 내용은 [64비트 응용 프로그램](/dotnet/framework/64-bit-apps)을 참조하세요.
 
 ## <a name="deploying-a-64-bit-application"></a>64비트 응용 프로그램 배포
 

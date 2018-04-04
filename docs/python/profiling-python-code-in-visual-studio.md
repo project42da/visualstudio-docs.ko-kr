@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio에서 Python Code의 성능 측정 | Microsoft Docs"
-description: "CPython 기반 인터프리터를 사용할 때 Visual Studio 프로파일러를 통해 Python 코드의 성능을 확인하는 방법입니다."
-ms.custom: 
+title: Visual Studio에서 Python Code의 성능 측정 | Microsoft Docs
+description: CPython 기반 인터프리터를 사용할 때 Visual Studio 프로파일러를 통해 Python 코드의 성능을 확인하는 방법입니다.
+ms.custom: ''
 ms.date: 01/09/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c946f9d0fea5192f75d2fd0a9865827b6027ef50
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 4faa050056296b7dde625268c7ff1112b2c0c6c0
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="profiling-python-code"></a>Python 코드 프로파일링
 
