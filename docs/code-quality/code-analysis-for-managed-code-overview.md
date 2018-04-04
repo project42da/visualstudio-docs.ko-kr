@@ -1,12 +1,8 @@
 ---
-title: "코드 분석에 대 한 관리 되는 코드 개요 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Visual Studio에서 관리 되는 코드에 대 한 분석 코드 | Microsoft Docs
+ms.date: 03/26/2018
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.projectpropertypages.codeanalysis
 helpviewer_keywords:
@@ -17,13 +13,15 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5d30f84194ef7a48de106698c9ad4569e947923c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8209e17985ef7f9924fc677b91b5cfe539977cb9
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="code-analysis-for-managed-code-overview"></a>관리 코드 개요에 대 한 코드 분석
+# <a name="overview-of-code-analysis-for-managed-code"></a>관리 코드에 대 한 코드 분석 개요
+
+Visual Studio 2017 두 가지 방법으로 관리 되는 코드 분석: 이전 *FxCop* .NET 컴파일러 플랫폼 및 관리 되는 어셈블리의 정적 분석 *분석기*합니다. 이 항목에서는 FxCop 정적 코드 분석에 설명 합니다. .NET 컴파일러 플랫폼 분석기를 사용 하 여 코드를 분석 하는 방법에 대 한 자세한 참조 [Roslyn 개요 분석기](../code-quality/roslyn-analyzers-overview.md)합니다.
 
 관리 코드에 대한 코드 분석에서는 관리되는 어셈블리를 분석하고, Microsoft .NET Framework 디자인 지침에 설정된 프로그래밍 및 디자인 규칙의 위반과 같은 어셈블리 관련 정보를 보고합니다.
 
@@ -74,7 +72,8 @@ Public class MyClass
 
 빌드 시스템의 통합된 기능을 사용하여 빌드 프로세스의 일부로 분석 도구를 실행할 수 있습니다. 자세한 내용은 참조 [빌드 및 릴리스 (VSTS)](/vsts/build-release/index)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-[코드 분석 규칙 그룹화를 설정 하는 규칙을 사용 하 여](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)   
-[방법: 자동 코드 분석 활성화 및 비활성화](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)
+- [Roslyn 분석기 개요](../code-quality/roslyn-analyzers-overview.md)
+- [규칙 집합을 사용하여 코드 분석 규칙 그룹화](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)
+- [방법: 자동 코드 분석 활성화 및 비활성화](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)

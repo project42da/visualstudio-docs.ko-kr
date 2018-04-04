@@ -1,9 +1,6 @@
 ---
-title: "Visual Studio에서 코드 분석 경고 표시 안 함 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 코드 분석 경고 표시 안 함 | Microsoft Docs
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
 ms.topic: article
 helpviewer_keywords:
@@ -18,13 +15,13 @@ dev_langs:
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 5862b164c72c8f07c78db8948face95edfde357c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ef69462dc9b51fbd92da11bc5adb1bfa61e8a792
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="suppressing-code-analysis-warnings"></a>코드 분석 경고 표시하지 않기
+# <a name="suppress-code-analysis-warnings"></a>코드 분석 경고 표시 안 함
 
 경고가 적용 가능 하지 않은 나타내기 위해 종종 유용 합니다. 이 팀 멤버가 코드를 검토 하 고 경고가 표시 될 수 있는지를 나타냅니다. 소스 비 표시 (ISS) 사용 하 여는 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 경고를 표시 하는 특성입니다. 경고를 생성 코드 세그먼트에 가까운 특성을 배치할 수 있습니다. 추가할 수 있습니다는 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 에 입력 하 여 특성을 소스 파일에 경고의 바로 가기 메뉴를 사용할 수 있습니다는 **오류 목록** 자동으로 추가 하려면.
 
@@ -84,17 +81,17 @@ CA_SUPPRESS_MESSAGE("Rule Category", "Rule Id", Justification = "Justification",
 
 수준에서 코드 분석 경고는 표시 되지 않습니다는 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 특성은 적용 됩니다. 예를 들어, 어셈블리, 모듈, 형식, 멤버, 또는 매개 변수 수준에서 특성을 적용할 수 있습니다. 이 목적은 코드를 억제 (suppression) 정보를 위반이 발생 합니다.
 
-일반적인 형태의 억제 (suppression) 규칙 범주 및 규칙 이름에 대 한 선택적 읽을 표현이 포함 하는 규칙 식별자를 포함 합니다. 예:
+일반적인 형태의 억제 (suppression) 규칙 범주 및 규칙 이름에 대 한 선택적 읽을 표현이 포함 하는 규칙 식별자를 포함 합니다. 예를 들어:
 
 `[SuppressMessage("Microsoft.Design", "CA1039:ListsAreStrongTyped")]`
 
-소스에서 메타 데이터 최소화 엄격한 성능상의 이유로 인 규칙 이름을 생략할 수 있습니다. 규칙 범주와 규칙 ID는 충분히 고유한 규칙 식별자를 구성 합니다. 예:
+소스에서 메타 데이터 최소화 엄격한 성능상의 이유로 인 규칙 이름을 생략할 수 있습니다. 규칙 범주와 규칙 ID는 충분히 고유한 규칙 식별자를 구성 합니다. 예를 들어:
 
 `[SuppressMessage("Microsoft.Design", "CA1039")]`
 
 유지 관리 용이성을 위해 규칙 이름을 생략 권장 되지 않습니다.
 
-## <a name="suppressing-selective-violations-within-a-method-body"></a>메서드 본문 내에서 선택적 위반을 억제합니다.
+## <a name="suppress-selective-violations-within-a-method-body"></a>메서드 본문 내에서 선택적 위반 표시 안 함
 
 비 표시 특성 메서드에 적용할 수 있지만 메서드 본문 내에서 형식을 포함할 수 없습니다. 즉, 특정 규칙의 모든 위반 추가 하는 경우 표시 되지 않습니다는 <xref:System.Diagnostics.CodeAnalysis.SuppressMessageAttribute> 특성을 메서드에 합니다.
 
@@ -160,12 +157,13 @@ Global 수준 비 표시 오류는를 명시적으로 제공 되는 사용자 �
 `[module: SuppressMessage("Microsoft.Design", "CA1055:AbstractTypesDoNotHavePublicConstructors", Scope="member", Target="Microsoft.Tools.FxCop.Type..ctor()")]`
 
 > [!NOTE]
-> `Target`정규화 된 항목 이름 항상 포함 됩니다.
+> `Target` 정규화 된 항목 이름 항상 포함 됩니다.
 
 ## <a name="global-suppression-file"></a>전역 억제 (suppression) 파일
 
 전역 비 표시 오류 파일은 전역 수준 비 표시 오류 또는 대상을 지정 하지 않는 비 표시 오류 중 하나인 비 표시 오류를 유지 관리 합니다. 예를 들어 어셈블리 수준 위반에 대해가이 파일에 저장 됩니다. 또한 일부 ASP.NET 비 표시 오류 프로젝트 수준 설정을 뒤 폼 코드에 사용할 수 없기 때문에이 파일에 저장 됩니다. 전역 억제 (suppression) 파일을 만들고 선택 하는 처음으로 프로젝트에 추가 **프로젝트 억제 (suppression) 파일에서** 옵션의는 **표시 안 함** 명령에 **오류 목록**창.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-<xref:System.Diagnostics.CodeAnalysis>
+- <xref:System.Diagnostics.CodeAnalysis>
+- [Roslyn 분석기를 사용 하 여](../code-quality/use-roslyn-analyzers.md)

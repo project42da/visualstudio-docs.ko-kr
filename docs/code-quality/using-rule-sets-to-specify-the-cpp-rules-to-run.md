@@ -1,25 +1,25 @@
 ---
-title: "규칙을 사용 하 여 실행을 위해 c + + 규칙을 지정 하려면 집합 | Microsoft Docs"
-ms.custom: 
+title: 규칙을 사용 하 여 실행을 위해 c + + 규칙을 지정 하려면 집합 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: mikeblome
 ms.author: mblome
 manager: ghogen
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 803af4716a62411d01683d2dcb8155f8f4b80384
-ms.sourcegitcommit: bfa26fd7426af0d065cb2eef3d6827b5d6f7986c
+ms.openlocfilehash: 400b3228c1039ff7b859f769949c0c82c1939954
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/20/2018
+ms.lasthandoff: 04/03/2018
 ---
-# <a name="using-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용하여 실행할 C++ 규칙 지정
+# <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용 하 여 실행을 위해 c + + 규칙을 지정 하려면
 
 Visual Studio에서 있습니다 만들고 수정할 수는 사용자 지정 *규칙 집합* 코드 분석와 관련 된 특정 프로젝트 요구 사항에 맞게 합니다. 사용자 지정 C++ 규칙 집합을 만들기 위해서는 C/C++ 프로젝트를 Visual Studio IDE에서 열어야 합니다. 그런 다음 규칙 집합 편집기에서 표준 규칙 집합을 열고, 특정 규칙을 추가 또는 제거하고, 필요에 따라 코드 분석으로 규칙이 위반된 것으로 확인될 때 발생하는 작업을 변경합니다.
 
