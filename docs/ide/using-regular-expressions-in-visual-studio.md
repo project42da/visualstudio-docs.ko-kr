@@ -1,12 +1,8 @@
 ---
-title: "Visual Studio에서 정규식 사용 | Microsoft 문서"
-ms.custom: 
-ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+title: Visual Studio에서 정규식 사용 | Microsoft 문서
+ms.custom: 03/26/2018
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vsregularexpressionhelp
 - vs.regularexpressionhelp
@@ -21,11 +17,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 43d566472a71b19ba9588a4564724d1ec8f5d933
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: cd7da9b9993f2a3ae2d1eb94cad18e99f5281fde
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-regular-expressions-in-visual-studio"></a>Visual Studio에서 정규식 사용
 
@@ -33,7 +29,9 @@ Visual Studio에서는 [.NET Framework 정규식](/dotnet/standard/base-types/re
 
 ## <a name="replacement-patterns"></a>대체 패턴
 
-바꾸기 패턴에서 사용되는 정규식에 대한 자세한 내용은 [정규식의 대체(.NET 가이드)](/dotnet/standard/base-types/substitutions-in-regular-expressions)를 참조하세요. 번호가 있는 캡처 그룹을 사용하려는 경우 번호가 있는 그룹을 지정하려면 `$1` 구문을 사용하고 특정 그룹을 지정하려면 `(x)` 구문을 사용합니다. 예를 들어 그룹화된 정규식 `(\d)([a-z])`는 문자열 **1a 2b 3c 4d**에서 일치 항목 4개를 찾습니다. 바꾸기 문자열 `z$1`은 해당 문자열을 **z1 z2 z3 z4**로 변환합니다.
+번호가 매겨진 캡처 그룹을 사용하려면 정규식 패턴에서 괄호를 사용하여 그룹을 묶습니다. `number`가 바꾸기 패턴에서 특정한 번호가 매겨진 그룹을 지정하기 위해 1에서 시작하는 정수인 경우 `$number`을 사용합니다. 예를 들어 그룹화된 정규식 `(\d)([a-z])`은 다음 두 그룹을 정의합니다. 첫 번째 그룹은 단일 10진수를 포함하고 두 번째 그룹은 **a**와 **z** 사이의 단일 문자를 포함합니다. 식은 문자열 **1a 2b 3c 4d**에서 일치 항목 4개를 찾습니다. 대체 문자열 `z$1`은 첫 번째 그룹만 참조하고 문자열을 **z1 z2 z3 z4**로 변환합니다.
+
+바꾸기 패턴에서 사용되는 정규식에 대한 자세한 내용은 [정규식의 대체(.NET 가이드)](/dotnet/standard/base-types/substitutions-in-regular-expressions)를 참조하세요.
 
 ## <a name="regular-expression-examples"></a>정규식 예제
 
@@ -52,7 +50,7 @@ Visual Studio에서는 [.NET Framework 정규식](/dotnet/standard/base-types/re
 |일치 문자열을 줄의 끝에 고정합니다.|\r?$|`End\r?$`는 줄의 끝 부분에 나타날 때만 단어 "end"와 일치합니다.|
 |집합에 있는 단일 문자를 찾습니다.|[abc]|`b[abc]`는 "ba", "bb", "bc"와 일치합니다.|
 |문자 범위에서 임의 문자를 찾습니다.|[a-f]|`be[n-t]`는 "between"의 "bet", "beneath"의 "ben", "beside"의 "bes"와 일치하지만 "below"와 일치하지 않습니다.|
-|괄호 안에 포함된 식을 캡처하고 명시적으로 번호를 지정합니다.|()|`([a-z])X\1`은 "aXa" 및 "bXb"와 일치하지만 "aXb"와 일치하지 않습니다. " ". “\1”은 첫 번째 식 그룹 “[a-z]”를 나타냅니다.|
+|괄호 안에 포함된 식을 캡처하고 명시적으로 번호를 지정합니다.|()|`([a-z])X\1`은 "aXa" 및 "bXb"와 일치하지만 "aXb"와 일치하지 않습니다. " “\1”은 첫 번째 식 그룹 “[a-z]”를 나타냅니다.|
 |일치를 무효화합니다.|(?!abc)|`real (?!ity)`는 "realty" 및 "really"의 "real"과 일치하지만 "reality"와 일치하지 않습니다. "realityreal"에서 두 번째 "real"도 찾지만 첫 번째 "real"은 찾지 않습니다.|
 |지정된 문자 집합에 없는 모든 문자를 찾습니다.|[^abc]|`be[^n-t]`는 "before"의 "bef", "behind"의 "beh", "below"의 "bel"과 일치하지만 "beneath"와 일치하지 않습니다.|
 |기호 앞 또는 기호 뒤에 있는 식을 찾습니다.|&#124;|`(sponge&#124;mud) bath`는 "sponge bath" 및 "mud bath"와 일치합니다.|

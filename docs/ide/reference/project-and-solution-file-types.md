@@ -1,11 +1,11 @@
 ---
-title: "프로젝트 및 솔루션 파일 형식 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 및 솔루션 파일 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - File Properties.CopyToOutputDirectory
@@ -26,12 +26,13 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d05b7b5f1510777c758998572e78757c47148fa1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: d239a5e129f12c4521ba190674d84430f8f2e646
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="project-and-solution-file-types"></a>프로젝트 및 솔루션 파일 형식
 
@@ -50,7 +51,7 @@ Visual Studio에서는 .sln 및 .suo의 두 가지 파일 형식을 사용하여
 
 프로젝트에는 다양한 파일 형식이 포함될 수 있습니다. 예를 들어, C# 코드 파일은 확장명이 **.cs**이며d C++ 파일은 확장명이 **.cpp**입니다. 리소스는 **.resx** 파일에 저장되고 XAML은 **.xaml** 파일에 저장됩니다. [App.config](../../ide/managing-application-settings-dotnet.md) 파일에는 응용 프로그램 코드에 포함하지 말아야 하는 응용 프로그램 정보(&mdash;예: 연결 문자열)가 포함됩니다.
 
-C++ 프로젝트의 파일 형식에 대한 자세한 내용은 [Visual C++ 프로젝트용으로 만들어지는 파일 형식](/cpp/ide/file-types-created-for-visual-cpp-projects) 및 [Microsoft Foundation Class 라이브러리의 유니코드](/cpp/mfc/unicode-in-mfc)를 참조하세요.
+C++ 프로젝트에서 파일 형식에 대한 자세한 내용은 [Visual C++ 프로젝트용으로 만들어지는 파일 형식](/cpp/ide/file-types-created-for-visual-cpp-projects)을 참조하십시오.
 
 ## <a name="see-also"></a>참고 항목
 

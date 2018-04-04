@@ -1,23 +1,23 @@
 ---
-title: "Visual Studio용 Xamarin | Microsoft Docs"
-ms.custom: 
+title: Visual Studio용 Xamarin | Microsoft Docs
+ms.custom: ''
 ms.date: 04/13/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 2cfcad00-352c-4161-814c-f5ae32d8ada8
 ms.technology: vs-ide-mobile
-author: ghogen
-ms.author: ghogen
-manager: ghogen
+author: asb3993
+ms.author: amburns
+manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: bcaa49552c0e904b07cc90f3ae7e44aaa58a3895
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: a935ab3768d5e900aea681b392e920763cb53016
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="setup-and-install"></a>설정 및 설치
 
@@ -84,7 +84,7 @@ Xamarin을 사용하여 일반적인 C#/.NET 코드베이스에서 네이티브 
 
 1.  Apple ID가 없으면 [https://appleid.apple.com](https://appleid.apple.com/)에서 무료 Apple ID를 만듭니다. Xcode를 설치하고 서명하려면 이 작업이 필요합니다.
 
-2.  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)에서 Xcode를 다운로드하여 설치하고 [Adding Your Account to XCode(XCode에 계정 추가)](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1) (apple.com)에 설명된 대로 Apple ID를 추가합니다.
+2.  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)에서 Xcode를 다운로드하여 설치하고 [Adding Your Account to XCode(XCode에 계정 추가)](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppStoreDistributionTutorial/AddingYourAccounttoXcode/AddingYourAccounttoXcode.html#//apple_ref/doc/uid/TP40013839-CH40-SW1)(apple.com)에 설명된 대로 Apple ID를 추가합니다.
 
 3.  [Xamarin.iOS 설치 및 구성](http://developer.xamarin.com/guides/ios/getting_started/installation/mac/) (영문)(xamarin.com)의 지침에 따라 Xamarin을 다운로드하여 설치합니다.
 

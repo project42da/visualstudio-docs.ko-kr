@@ -1,15 +1,15 @@
 ---
-title: "Python용 Azure SDK | Microsoft Docs"
-description: "Python용 Azure SDK를 사용하면 모든 플랫폼에서 실행되는 Python 응용 프로그램을 통해 Microsoft Azure 서비스를 쉽게 이용할 수 있습니다."
-ms.custom: 
+title: Python용 Azure SDK | Microsoft Docs
+description: Python용 Azure SDK를 사용하면 모든 플랫폼에서 실행되는 Python 응용 프로그램을 통해 Microsoft Azure 서비스를 쉽게 이용할 수 있습니다.
+ms.custom: ''
 ms.date: 01/22/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: kraigb
 ms.author: kraigb
@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: baa206dfbb9caf58ce872d0c9dee22e183403adb
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 728fc1249671025ca99f36f62aab19a1282f15aa
+ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="azure-sdk-for-python"></a>Python용 Azure SDK
 
@@ -50,7 +50,7 @@ pip install azure
 - [Blob 저장소](/azure/storage/storage-python-how-to-use-blob-storage)
 - [테이블 저장소](/azure/storage/storage-python-how-to-use-table-storage)
 - [큐 저장소](/azure/storage/storage-python-how-to-use-queue-storage)
-- [DocumentDB](/azure/documentdb/documentdb-python-application)
+- [Azure Cosmos DB](/azure/cosmos-db/sql-api-python-application)
 - [Service Bus 큐](/azure/service-bus-messaging/service-bus-python-how-to-use-queues)
 - [Service Bus 토픽/구독](/azure/service-bus-messaging/service-bus-python-how-to-use-topics-subscriptions)
 - [Python에서 서비스 관리를 사용하는 방법](/azure/cloud-services/cloud-services-python-how-to-use-service-management)
@@ -64,6 +64,6 @@ pip install azure
 
 ## <a name="support"></a>Support(지원)
 
-SDK용 Git 리포지토리는 [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python)에 있습니다.
+SDK에 대한 Git 리포지토리는 [https://github.com/Azure/azure-sdk-for-python](https://github.com/Azure/azure-sdk-for-python)에 있습니다.
 
 문제를 발견하거나 SDK 사용에 대한 질문이 있는 경우 [리포지토리에 문제를 보고](https://github.com/Azure/azure-sdk-for-python/issues)해 주세요.

@@ -1,23 +1,23 @@
 ---
-title: "Mac 사용자용 설정, 설치 및 확인 | Microsoft Docs"
-ms.custom: 
+title: Mac 사용자용 설정, 설치 및 확인 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/13/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 22725520-59ba-4f6f-80e4-097b1287a34b
 ms.technology: vs-ide-mobile
-author: ghogen
-ms.author: ghogen
-manager: ghogen
+author: asb3993
+ms.author: amburns
+manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 366dd699555cd3eed637687668fc194ba00d5be4
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 5590e2a66fe2b6bdec192343f22338f257a8e5ba
+ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="setup-install-and-verifications-for-mac-users"></a>Mac 사용자용 설정, 설치 및 확인
 이 항목은 Mac에서 주로 작업하고 Mac의 Windows 가상 컴퓨터 내부에서 선택적으로 Visual Studio를 사용하는 개발자를 위해 제공됩니다. 주로 Windows 컴퓨터에서 작업하는 개발자가 iOS를 대상으로 하도록 보조 Mac을 설정해야 하면 기본 [설정 및 설치](../cross-platform/setup-and-install.md) 항목을 참조하세요.
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/28/2018
 
 1.  Apple ID가 없으면 [내 Apple ID](https://appleid.apple.com/)에서 무료 Apple ID를 만듭니다. Xcode를 설치하고 서명하려면 이 작업이 필요합니다.
 
-2.  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)에서 Xcode를 다운로드하여 설치합니다.
+2.  [https://developer.apple.com/xcode/](https://developer.apple.com/xcode/)에서 Xcode 다운로드 및 설치.
 
 3.  [Xamarin.iOS 설치 및 구성](http://developer.xamarin.com/guides/ios/getting_started/installation/mac/) (영문)(xamarin.com)의 지침에 따라 Xamarin을 다운로드하여 설치합니다.
 

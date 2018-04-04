@@ -1,11 +1,11 @@
 ---
-title: "연습: 내 첫 번째 WPF 데스크톱 응용 프로그램 | Microsoft Docs"
-ms.custom: 
+title: '연습: 내 첫 번째 WPF 데스크톱 응용 프로그램 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -15,11 +15,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: c239e811ea47158dd63660e761f943b8f22e8e23
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 95c35eae16f50b6fa8c0a8c86fa0d93732512a88
+ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 03/22/2018
 ---
 # <a name="walkthrough-my-first-wpf-desktop-application"></a>연습: 내 첫 WPF 데스크톱 응용 프로그램
 
@@ -573,7 +573,7 @@ ms.lasthandoff: 03/02/2018
 
     -   `listHeaderTextStyle`: 목록 헤더 **Label**의 형식을 지정합니다.
 
-    -   `buttonStyle`: `Button` ExpenseItHome.xaml **pppage에 있는** 의 형식을 지정합니다.
+    -   `buttonStyle`: **ExpenseItHome.xaml** 페이지에 있는 `Button` 형식을 지정합니다.
 
 1. **ExpenseItHome.xaml**을 열고 `<Grid>` 및 `</Grid>` 요소 사이에 있는 모든 내용을 다음 XAML로 바꿉니다.
 

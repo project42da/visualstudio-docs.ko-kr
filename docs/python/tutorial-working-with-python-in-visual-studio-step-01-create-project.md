@@ -1,15 +1,15 @@
 ---
-title: "Visual Studio에서 Python 작업, 1단계, 프로젝트 만들기 | Microsoft Docs"
-description: "전체 자습서를 개략적으로 설명하고, 필수 구성 요소를 설명하고, 새 Python 프로젝트를 만드는 프로세스를 연습하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 1단계입니다."
-ms.custom: 
+title: Visual Studio에서 Python 작업, 1단계, 프로젝트 만들기 | Microsoft Docs
+description: 전체 자습서를 개략적으로 설명하고, 필수 구성 요소를 설명하고, 새 Python 프로젝트를 만드는 프로세스를 연습하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 1단계입니다.
+ms.custom: ''
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 469494b2c0c4704ac1eab42d36934657adc2313d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 22588c1e8221375f05b9fb62870662d9aa3d2f5e
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio에서 Python 작업
 
@@ -57,7 +57,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 
 1. **Python 응용 프로그램** 템플릿을 선택하고, 프로젝트 이름을 지정하고, **확인**을 선택합니다.
 
-1. 몇 분 후에 Visual Studio는 **솔루션 탐색기** 창(1)에 프로젝트 구조를 표시합니다. 기본 코드 파일은 편집기(2)에 열립니다. 디스크에서의 정확한 위치를 포함하여 솔루션 탐색기에서 선택한 모든 항목에 대한 추가 정보를 보여주는 속성 창(3)도 표시됩니다.
+1. 몇 분 후에 Visual Studio는 **솔루션 탐색기** 창(1)에 프로젝트 구조를 표시합니다. 기본 코드 파일은 편집기(2)에 열립니다. 디스크에서의 정확한 위치를 포함하여 솔루션 탐색기에서 선택한 모든 항목에 대한 추가 정보를 보여 주는 속성 창(3)도 표시됩니다.
 
     ![Python 프로젝트와 솔루션 탐색기](media/vs-getting-started-python-02-windows.png)
 
@@ -71,7 +71,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 
     (3) 프로젝트 아래에 원본 파일이 표시됩니다. 이 경우 단일 `.py` 파일만 표시됩니다. 파일을 선택하면 해당 속성이 속성 창에 표시됩니다. 파일을 두 번 클릭하면 해당 파일에 대한 적절한 방식으로 열립니다.
 
-    (4) 또한 프로젝트 아래는 **Python 환경** 노드입니다. 확장하면 사용할 수 있는 사용 가능한 Python 인터프리터가 표시됩니다. 인터프리터 노드를 확장하여 해당 환경(5)에 설치되는 라이브러리를 봅니다.
+    (4) 또한 프로젝트 아래는 **Python 환경** 노드입니다. 확장하면 사용할 수 있는 Python 인터프리터가 표시됩니다. 인터프리터 노드를 확장하여 해당 환경(5)에 설치되는 라이브러리를 봅니다.
 
     솔루션 탐색기에서 노드 또는 항목을 마우스 오른쪽 단추로 클릭하여 해당 명령의 메뉴에 액세스합니다. 예를 들어 **Rename** 명령을 통해 프로젝트와 솔루션을 포함하여 노드 또는 항목의 이름을 변경할 수 있습니다.
 
