@@ -30,6 +30,7 @@
 
 # 방법
 ##[개발 환경 공유](how-to/share-dev-environment.md)
+##[사용자 지정 NuGet 피드 사용](how-to/use-a-custom-nuget-feed.md)
 ##[Visual Studio Connected Environment로 kubectl 사용](how-to/use-kubectl-with-vsce.md)
 
 # [문제 해결](troubleshooting.md)

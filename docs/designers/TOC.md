@@ -20,6 +20,7 @@
 #### [내게 필요한 옵션 제품 및 서비스(Blend)](accessibility-products-and-services-blend.md)
 ### [XAML 디자이너에 대한 바로 가기 키](keyboard-shortcuts-for-xaml-designer.md)
 ### [XAML 디자이너에서 프로젝트 코드 디버그 또는 사용하지 않도록 설정](debugging-or-disabling-project-code-in-xaml-designer.md)
+### [XAML 오류 및 경고](xaml-errors-warnings.md)
 ## [Windows Presentation Foundation으로 최신 데스크톱 응용 프로그램 만들기](create-modern-desktop-applications-with-windows-presentation-foundation.md)
 ### [WPF 시작](getting-started-with-wpf.md)
 #### [WPF 소개](introduction-to-wpf.md)
