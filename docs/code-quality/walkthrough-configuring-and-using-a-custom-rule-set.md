@@ -1,9 +1,9 @@
 ---
-title: "연습: 구성 및 사용자 지정을 사용 하 여 규칙 집합 | Microsoft Docs"
-ms.custom: 
+title: '연습: 구성 및 사용자 지정을 사용 하 여 규칙 집합 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-code-analysis
 ms.topic: article
 helpviewer_keywords:
@@ -15,10 +15,10 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: b72a86f10c6e864406929fdccfb59bdd9393752e
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="walkthrough-configuring-and-using-a-custom-rule-set"></a>연습: 사용자 지정 규칙 집합 구성 및 사용
 
@@ -148,7 +148,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  오류 목록 창에서 알 수 있듯이 클릭할 때 **경고**, CA1704 경고 위반이 "식별자 철자가" 규칙에 대 한 더 이상 볼 수 없습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [방법: 관리 코드 프로젝트에 대 한 코드 분석 구성](../code-quality/how-to-configure-code-analysis-for-a-managed-code-project.md)   
 [코드 분석 규칙 집합 참조](../code-quality/code-analysis-rule-set-reference.md)

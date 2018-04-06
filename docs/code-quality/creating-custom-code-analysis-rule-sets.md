@@ -1,23 +1,25 @@
 ---
-title: "사용자 지정 코드 분석 규칙 집합 만들기 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 코드 분석 규칙 집합 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-code-analysis
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 88db3a0a-1b92-496d-9fae-b2bb980f5933
-caps.latest.revision: "12"
+caps.latest.revision: 12
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
+ms.workload:
+- multiple
 ms.openlocfilehash: 18f527f30afe21678874f3555b539ce9d60bd816
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="creating-custom-code-analysis-rule-sets"></a>사용자 지정 코드 분석 규칙 집합 만들기
 하나 이상의 규칙을 포함 하는 규칙 집합을 지정 하 여 관리 코드 프로젝트에 코드 분석 규칙을 적용 합니다. Microsoft 표준 규칙 집합에는 함수 및 깊이 의해 구성 되는 규칙 그룹을 제공 합니다. 예를 들어, Microsoft 기본 디자인 지침 규칙 및 Microsoft 확장 디자인 지침 규칙 확장 규칙 집합의 명명 규칙에 주안점 유용성 및 유지 관리 문제에 집중 하는 규칙을 포함 합니다.  
