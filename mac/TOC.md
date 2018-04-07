@@ -50,6 +50,8 @@
 
 # [작업](workloads.md)
 ## [ASP.NET Core](asp-net-core.md)
+## [Azure](azure-workload.md)
+### [연결된 서비스](connected-services.md)
 ## [Unity 게임 개발](unity-tools.md)
 ### [설정](setup-vsmac-tools-unity.md)
 ### [Unity 도구 사용](using-vsmac-tools-unity.md)
