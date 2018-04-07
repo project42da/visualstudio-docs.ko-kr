@@ -1,12 +1,7 @@
 ---
-title: "방법: ASP.NET 웹 응용 프로그램에 대 한 코드 분석 구성 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Studio에서 ASP.NET 웹 응용 프로그램에 대 한 코드 분석 구성 | Microsoft Docs'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.technology: vs-ide-code-analysis
 ms.topic: article
 f1_keywords:
 - vs.codeanalysis.propertypages.asp
@@ -15,11 +10,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - aspnet
-ms.openlocfilehash: 0f2aaf85128bd34f4e80a7b29763506b17d77911
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 075382db550fae1198b0eca239be8efd1bfadff6
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="how-to-configure-code-analysis-for-an-aspnet-web-application"></a>방법: ASP.NET 웹 응용 프로그램에 대한 코드 분석 구성
 
@@ -45,4 +40,4 @@ Visual Studio에서 코드 분석의 목록에서 선택할 수 있습니다 *�
 
     - 선택  **\<찾아보기 >** 기존 사용자 지정 규칙 집합을 지정 하려면 목록에 없는 합니다.
 
-    - 사용할 규칙 집합을 선택합니다. 자세한 내용은 참조 [사용자 지정 규칙 집합 만들기](../code-quality/creating-custom-code-analysis-rule-sets.md)합니다.
+    - 정의 [사용자 지정 규칙 집합](../code-quality/how-to-create-a-custom-rule-set.md)합니다.

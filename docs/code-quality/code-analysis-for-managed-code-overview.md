@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8209e17985ef7f9924fc677b91b5cfe539977cb9
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 6d654cb3a7f0d0e952b447337603718c20eaee3e
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="overview-of-code-analysis-for-managed-code"></a>관리 코드에 대 한 코드 분석 개요
 
@@ -33,11 +33,11 @@ Visual Studio 2017 두 가지 방법으로 관리 되는 코드 분석: 이전 *
 
 프로젝트를 빌드할 때마다 코드 분석을 실행 하려면 선택 **빌드에 코드 분석 사용** 프로젝트의 속성 페이지에 있습니다. 자세한 내용은 참조 [하는 방법: 설정 및 자동 코드 분석 사용 안 함](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)합니다.
 
-프로젝트에 대해 수동으로 코드 분석을 실행 하려면 선택에 메뉴 모음에서 **분석** > **코드 분석 실행** > **에서 코드 분석 실행 <project>** . 자세한 내용은 참조 [하는 방법: 설정 및 자동 코드 분석 사용 안 함](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)합니다.
+프로젝트에 대해 수동으로 코드 분석을 실행 하려면 선택에 메뉴 모음에서 **분석** > **코드 분석 실행** > **에서 코드 분석 실행 \<프로젝트 >**합니다.
 
 ## <a name="rule-sets"></a>규칙 집합
 
-으로 관리 되는 코드에 대 한 코드 분석 규칙 그룹화 됩니다 *규칙 집합*합니다. Microsoft 표준 규칙 집합 중 하나를 사용하거나, 특정 요구 사항에 맞게 사용자 지정 규칙 집합을 만들 수 있습니다. 자세한 내용은 참조 [코드 분석 규칙 그룹화를 사용 하 여 규칙 집합](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)합니다.
+으로 관리 되는 코드에 대 한 코드 분석 규칙 그룹화 됩니다 [규칙 집합](../code-quality/using-rule-sets-to-group-code-analysis-rules.md)합니다. Microsoft 표준 규칙 집합 중 하나를 사용 하거나 할 수 있습니다 [사용자 지정 규칙 집합 만들기](../code-quality/how-to-create-a-custom-rule-set.md) 특정 요구 사항에 하 합니다.
 
 ## <a name="suppress-warnings"></a>경고 표시 안 함
 
@@ -56,7 +56,7 @@ Public class MyClass
 자세한 내용은 참조 [경고 표시 안 함](../code-quality/in-source-suppression-overview.md)합니다.
 
 > [!NOTE]
-> Visual Studio 2017로 프로젝트를 마이그레이션하는 경우 코드 분석 경고 늘고에 직면할 갑자기 수 있습니다. 경고를 해결 하 고 일시적으로 해제 하려면 코드 분석 아닌 경우 프로젝트의 속성 페이지를 엽니다 (**프로젝트** > ***프로젝트* 속성...** )로 이동 하 고는 **코드 분석** 탭 합니다. 선택 취소 **빌드에 코드 분석 사용**, 다음 프로젝트를 다시 빌드합니다. 또는 서로 다른 수의 작은 규칙 집합은 코드에 대해 실행을 선택할 수 있습니다. 코드 분석 되는 경고를 해결 하려면 준비에 다시 설정 해야 합니다.
+> Visual Studio 2017로 프로젝트를 마이그레이션하는 경우 많은 수의 코드 분석 경고에 직면할 갑자기 수 있습니다. 경고를 수정 하 고 생산성을 높이려는 즉시 준비 하지 않은 경우 다음을 할 수 있습니다 *초기* 프로젝트의 분석 상태입니다. **분석** 메뉴 선택 **코드 분석 실행 하 고 활성 문제를 표시 하지 않는**합니다.
 
 ## <a name="run-code-analysis-as-part-of-check-in-policy"></a>체크 인 정책의 일부로 코드 분석 실행
 

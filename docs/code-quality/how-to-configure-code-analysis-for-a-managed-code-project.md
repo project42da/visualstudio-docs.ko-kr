@@ -1,10 +1,11 @@
 ---
-title: '방법: 관리 코드 프로젝트에 대 한 코드 분석 구성 | Microsoft Docs'
-ms.date: 11/04/2016
+title: Visual Studio에서 코드 분석 구성 | Microsoft Docs
+ms.date: 04/04/2018
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.propertypages.csvb
+- vs.codeanalysis.propertypages.solution
 helpviewer_keywords:
 - code analysis, selecting rule sets
 - code analysis, rule sets
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - dotnet
-ms.openlocfilehash: 46d41b09f0f6639195613c8a4d9a08f952c79525
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: daac3af3a6d5d5fba4d6e8dbb652821583769762
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>방법: 관리 코드 프로젝트에 대한 코드 분석 구성
 
@@ -49,9 +50,28 @@ Visual Studio에서 코드 분석의 목록에서 선택할 수 있습니다 *�
 
     - 선택  **\<찾아보기... >** 는 기존 사용자 지정 규칙 집합을 찾을 수 없는 목록에 있습니다.
 
-    - 사용할 규칙 집합을 선택합니다. 자세한 내용은 참조 [사용자 지정 규칙 집합 만들기](../code-quality/creating-custom-code-analysis-rule-sets.md)합니다.
+    - 정의 [사용자 지정 규칙 집합](../code-quality/how-to-create-a-custom-rule-set.md)합니다.
+
+## <a name="specify-rule-sets-for-multiple-projects-in-a-solution"></a>솔루션의 여러 프로젝트에 대 한 규칙 집합을 지정 합니다.
+
+기본적으로 할당 된 솔루션의 모든 관리 되는 프로젝트는 *Microsoft 최소 권장 규칙* 코드 분석 규칙 집합입니다. 솔루션의 프로젝트에 할당 된 규칙 집합을 변경할 수는 **속성** 솔루션에 대 한 대화 상자.
+
+1. Visual Studio에서 솔루션을 엽니다.
+
+2. 에 **분석** 메뉴 선택 **솔루션에 대 한 코드 분석 구성**합니다.
+
+3. 필요한 경우 확장 **공용 속성**를 선택한 후 **코드 분석 설정**합니다.
+
+4. 하나 이상의 프로젝트에 대 한 규칙 집합을 지정할 수 있습니다.
+
+    - 개별 프로젝트에 대 한 규칙 집합을 지정 하려면 프로젝트 이름을 선택 합니다.
+
+    - 여러 프로젝트에 대 한 규칙 집합을 지정 하려면 키를 누른 채 **Ctrl** 하 고 프로젝트 이름을 선택 합니다.
+
+    - 모든 프로젝트는 솔루션을 지정 하려면 키를 누른 채 **Shift** 프로젝트 목록에서 클릭 합니다.
+
+5. 선택 된 **규칙 집합** 규칙의 이름에 적용 하려면 설정 프로젝트의 필드 및 선택 합니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [연습: 사용자 지정 규칙 집합 구성 및 사용](../code-quality/walkthrough-configuring-and-using-a-custom-rule-set.md)
 - [방법: ASP.NET 웹 응용 프로그램에 대한 코드 분석 구성](../code-quality/how-to-configure-code-analysis-for-an-aspnet-web-application.md)
