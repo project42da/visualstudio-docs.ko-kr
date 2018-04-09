@@ -11,11 +11,11 @@ helpviewer_keywords:
 - editor
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2dac5f48f69ce00ae914929638f08cf35f5a96ac
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: cc37a3185224a66fbe0533c615737de7e0124dcf
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="visual-studio-2017-productivity-guide-for-net-developers"></a>.NET 개발자용 Visual Studio 2017 생산성 가이드
 
@@ -31,12 +31,7 @@ ms.lasthandoff: 03/28/2018
 - [Visual Studio용 바로 가기 키(ReSharper/IntelliJ)](https://marketplace.visualstudio.com/items?itemName=JustinClareburtMSFT.HotKeys)
 - [VSVim](https://marketplace.visualstudio.com/items?itemName=JaredParMSFT.VsVim)
 
-![Visual Studio 확장 갤러리](../ide/media/VSIDE_Productivity_Extensibility.png)
-
 다음은 많이 사용되는 Visual Studio 바로 가기입니다. 
-
-> [!NOTE]
-> 일부 확장은 기본 Visual Studio 키 바인딩을 해제하므로 다음 명령을 사용하려면 키 바인딩을 복원해야 합니다. Visual Studio의 기본값으로 키 바인딩을 복원하려면 **도구 > 설정 가져오기 및 내보내기... > 모든 설정 다시 설정** 또는 **도구 > 옵션 > 키보드 > 다시 설정**으로 이동합니다.
 
 | 바로 가기(모든 프로필) | 명령 | 설명 |
 |-|-|-|
@@ -52,6 +47,9 @@ ms.lasthandoff: 03/28/2018
 | **Ctrl+F5** | 디버깅하지 않고 실행 | 디버깅하지 않고 응용 프로그램을 로컬에서 실행 |
 | **Ctrl + K,D**(기본 프로필) 또는 **Ctrl + E,D**(C# 프로필) | 문서 서식 | 줄 바꿈, 간격 및 들여쓰기 설정에 따라 파일에서 서식 위반 정리 |
 | **Ctrl+\\,E**(기본 프로필) 또는 **Ctrl+W,E**(C# 프로필) | 오류 목록 보기 | 문서, 프로젝트 또는 솔루션의 모든 오류 보기 |
+
+> [!NOTE]
+> 기본 Visual Studio keybindings의 바인딩을 해제한 일부 확장 다음과 같은 명령을 사용하려면 **도구 > 설정 가져오기 및 내보내기... > 모든 설정 다시 설정** 또는 **도구 > 옵션 > 키보드 > 다시 설정**으로 이동하여 Visual Studio의 기본값으로 키 바인딩을 복원합니다.
 
 ## <a name="i-need-a-way-to-quickly-navigate-to-files-or-types"></a>파일 또는 형식을 빠르게 탐색하는 방법이 있어야 합니다.
 Visual Studio 2017에 _전체로 이동_(**Ctrl + T**)이라는 기능이 있습니다. 전체로 이동은 사용자를 모든 파일, 형식, 멤버 또는 기호 선언으로 빠르게 이동하게 할 수 있습니다.
