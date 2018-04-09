@@ -1,10 +1,10 @@
 ---
-title: "다른 언어에 대한 Visual Studio 편집기 지원 추가 | Microsoft 문서"
-ms.custom: 
+title: 다른 언어에 대한 Visual Studio 편집기 지원 추가 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - syntax colorization
@@ -15,7 +15,7 @@ helpviewer_keywords:
 - TextMate language grammar
 - language support
 ms.assetid: d78c43ee-4ef2-42e5-984e-d137de4e7e92
-caps.latest.revision: 
+caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
 manager: ghogen
@@ -23,11 +23,11 @@ ms.technology:
 - vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dd53222baf58b0c609967bc86e3051c428073e1
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 885563b456ca27c319e8b1eafb1963e77d9d1cfa
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="adding-visual-studio-editor-support-for-other-languages"></a>다른 언어에 대한 Visual Studio 편집기 지원 추가
 Visual Studio 편집기에서 다양한 컴퓨터 언어 읽기 및 탐색을 지원하는 방법과 다른 언어에 대한 Visual Studio 편집기 지원을 추가하는 방법을 알아봅니다.  
@@ -66,24 +66,24 @@ Visual Studio 편집기에서 다양한 컴퓨터 언어 읽기 및 탐색을 �
   
 -   C#  
   
- 지정된 언어에 대한 지원이 아직 설치되지 않은 경우에도 이러한 모든 파일 형식에는 앞에서 설명한 기능이 있습니다. 일부 언어에 대한 특수 지원을 설치하면 IntelliSense 등의 추가 언어 지원이나 전구 등의 기타 고급 언어 기능이 제공됩니다.  
+지정된 언어에 대한 지원이 아직 설치되지 않은 경우에도 이러한 모든 파일 형식에는 앞에서 설명한 기능이 있습니다. 일부 언어에 대한 특수 지원을 설치하면 IntelliSense 등의 추가 언어 지원이나 전구 등의 기타 고급 언어 기능이 제공됩니다.  
   
 ## <a name="adding-support-for-non-supported-languages"></a>지원되지 않는 언어에 대한 지원 추가  
  Visual Studio 2015 업데이트 1 이상 버전에서는 [TextMate 문법](https://manual.macromates.com/en/language_grammars)을 사용하여 편집기의 언어 지원을 제공합니다. 자주 사용하는 프로그래밍 언어가 현재 Visual Studio 편집기에서 지원되지 않는 경우 먼저 웹을 검색하세요. 해당 언어에 대한 TextMate 번들이 있을 수도 있습니다. 해당 번들이 없는 경우 Visual Studio 2015 업데이트 1 이상에서는 언어 문법과 코드 조각에 대한 TextMate 번들 모델을 만들어 직접 지원을 추가할 수 있습니다.  
   
  Visual Studio에 대한 새 TextMate 문법을 다음 폴더에 추가합니다.  
   
- %userprofile%\\.vs\Extensions  
+ *%userprofile%\\.vs\Extensions*  
   
  상황에 적용되는 경우 다음 폴더를 이 기본 경로 아래에 추가합니다.  
   
 |폴더 이름|설명|  
 |-----------------|-----------------|  
-|\\*\<언어 이름>*|언어 폴더입니다. *\<언어 이름>*을 해당 언어의 이름으로 바꿉니다. 예를 들어 **\Matlab**으로 바꿉니다.|  
-|\Syntaxes|문법 폴더입니다. 언어의 문법 .json 파일(예: **Matlab.json**)이 들어 있습니다.|  
-|\Snippets|코드 조각 폴더입니다. 언어의 코드 조각이 들어 있습니다.|  
+|\\*\<언어 이름>*|언어 폴더입니다. *\<언어 이름>*을 해당 언어의 이름으로 바꿉니다. 예를 들어 *\Matlab*으로 바꿉니다.|  
+|*\Syntaxes*|문법 폴더입니다. 언어의 문법 *.json* 파일(예: *Matlab.json*)이 들어 있습니다.|  
+|*\Snippets*|코드 조각 폴더입니다. 언어의 코드 조각이 들어 있습니다.|  
   
- Windows에서 %userprofile%은 c:\Users\\*\<사용자 이름>*으로 확인됩니다. 시스템에 extensions 폴더가 없는 경우 새로 만들어야 합니다. 폴더가 이미 있는 경우 숨겨집니다.  
+ Windows에서 *%userprofile%*은 *c:\Users\\*\<user name> 경로로 확인됩니다. 시스템에 extensions 폴더가 없는 경우 새로 만들어야 합니다. 폴더가 이미 있는 경우 숨겨집니다.  
   
  TextMate 문법을 만드는 방법에 대한 자세한 내용은 [TextMate – Introduction to Language Grammars: How to add source code syntax highlighting embedded in HTML](https://developmentality.wordpress.com/2011/02/08/textmate-introduction-to-language-grammars/)(TextMate – 언어 문법 소개: HTML에 포함된 소스 코드 구문 강조 표시를 추가하는 방법) 및 [Notes on how to create a Language Grammar and Custom Theme for a Textmate Bundle](https://benparizek.com/notebook/notes-on-how-to-create-a-language-grammar-and-custom-theme-for-a-textmate-bundle)(Textmate 번들의 언어 문법 및 사용자 지정 테마를 만드는 방법에 대한 참고 사항)을 참조하세요.  
   

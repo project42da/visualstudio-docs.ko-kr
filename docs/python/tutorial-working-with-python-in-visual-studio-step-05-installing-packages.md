@@ -1,15 +1,15 @@
 ---
-title: "Visual Studio에서 Python 작업, 5단계, 패이지 설치 | Microsoft Docs"
-description: "Python 환경에서 패키지를 관리하는 Visual Studio의 기능을 보여주는 Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 5단계입니다."
-ms.custom: 
+title: Python 작업, 5단계, 패키지 설치 | Microsoft Docs
+description: Python 환경에서 패키지를 관리하는 Visual Studio의 기능을 보여 주는 Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 5단계입니다.
+ms.custom: mvc
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d633ce061d0624c44060c5e059cf9b29733260d9
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 509c601c6f3cf31cb7772182e0ecb771c232b8a6
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-5-installing-packages-in-your-python-environment"></a>5단계: Python 환경에서 패키지 설치
 

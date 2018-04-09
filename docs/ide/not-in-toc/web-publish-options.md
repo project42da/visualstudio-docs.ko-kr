@@ -1,27 +1,27 @@
 ---
-title: "내게 적합한 게시 옵션 | Microsoft 문서"
-ms.custom: 
+title: 내게 적합한 게시 옵션 | Microsoft 문서
+ms.custom: ''
 ms.date: 03/09/2017
 ms.reviewer: riande
-ms.suite: 
+ms.suite: ''
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ASP.NET, web applications, deployment, publishing
 ms.assetid: 3A13F685-531C-457D-A98E-631888011E4B
-caps.latest.revision: 
+caps.latest.revision: 1
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 22c9aa56ab63d0c7c3b342e2c50cf81045580b54
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 5e9eb5423b33fbdd27921afcd6ae6f5758bfc910
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/30/2018
 ---
 # 내게 적합한 게시 옵션
 
@@ -32,7 +32,7 @@ Visual Studio 내에서 웹 응용 프로그램을 다음 대상에 직접 게�
 - [파일 시스템](#file-system)
 - [사용자 지정 대상(IIS, FTP 등)](#custom-targets)(임의의 모든 웹 서버 포함)
 
-**게시** 탭에서 기존 게시 프로필을 선택하거나, 기존 게시 프로필을 가져오거나, 여기에 설명된 옵션을 사용하여 새로 만들 수 있습니다.
+**게시** 탭에서 기존 게시 프로필을 선택하거나, 기존 게시 프로필을 가져오거나, 여기에 설명된 옵션을 사용하여 새로 만들 수 있습니다. 다양한 앱 형식에 대한 IDE에서 게시 옵션을 둘러보려면 [배포 소개](../../deployment/deploying-applications-services-and-components.md)를 참조하세요.
 
 ## Azure App Service Web Apps
 

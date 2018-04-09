@@ -15,11 +15,11 @@ ms.workload:
 - multiple
 author: kendrahavens
 manager: ghogen
-ms.openlocfilehash: 1ca63ce299cb95546100e7f7ce7f98eb1c1616c2
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 9e64528b6b0669a0403188b540a90e9b921bfb34
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="visual-studio-test-explorer-faq"></a>Visual Studio 테스트 탐색기 FAQ
 
@@ -70,6 +70,10 @@ ms.lasthandoff: 03/19/2018
   프로젝트, 네임스페이스, 클래스 그룹 옆의 아이콘은 해당 그룹 내의 테스트 상태를 나타냅니다. 다음 표를 참조하고
 
   ![테스트 탐색기 계층 구조 아이콘](media/testex-hierarchyicons.png)
+  
+### <a name="10-there-is-no-longer-a-file-path-filter-in-the-test-explorer-search-box"></a>10. 테스트 탐색기 검색 상자에 "파일 경로" 필터가 더 이상 존재하지 않습니다.
+
+**테스트 탐색기** 검색 상자의 파일 경로 필터는 Visual Studio 2017 버전 15.7 미리 보기 3에서 제거되었습니다. 이 기능은 사용량이 낮으므로, 테스트 탐색기는 이 기능을 제외하여 테스트 메서드를 빠르게 검색할 수 있습니다. 이 변경이 개발 흐름을 방해하는 경우 [개발자 커뮤니티](https://developercommunity.visualstudio.com/)에 피드백을 제출하여 알려주세요.
 
 ## <a name="features"></a>기능
 

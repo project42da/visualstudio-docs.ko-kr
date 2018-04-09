@@ -1,15 +1,15 @@
 ---
-title: "Visual Studio에서 Python 작업, 6단계, Git 작업 | Microsoft Docs"
-description: "Visual Studio의 Git 관련 기능을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 6단계입니다."
-ms.custom: 
+title: Python 작업, 6단계, Git 작업 | Microsoft Docs
+description: Visual Studio의 Git 관련 기능을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 6단계입니다.
+ms.custom: mvc
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -17,41 +17,51 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ef143862c56f07edc844874bbf71cd916ac9eabc
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: ec8534e7fd3121510a05e201e8bdea2e9a7fce1c
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-6-working-with-git"></a>6단계: Git 작업
 
 **이전 단계: [패키지 설치 및 Python 환경 관리](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)**
 
-Visual Studio는 로컬 Git 리포지토리 및 GitHub 및 Visual Studio Team Services와 같은 서비스에 상주하는 것과의 직접 통합을 제공합니다. 통합은 리포지토리 복제, 변경 내용 커밋 및 분기 관리를 포함합니다.
+Visual Studio는 로컬 Git 리포지토리 및 원격 리포지토리(예: GitHub 및 Visual Studio Team Services)와의 직접 통합을 제공합니다. 통합은 리포지토리 복제, 변경 내용 커밋 및 분기 관리를 포함합니다.
 
-이 문서에서는 기존 프로젝트에 대한 로컬 Git 리포지토리를 만드는 방법을 설명합니다. 원격 Git 리포지토리에서 프로젝트를 만드는 연습은 [빠른 시작: Visual Studio에서 Python 코드의 리포지토리 복제](quickstart-03-python-in-visual-studio-project-from-repository.md)를 참조하세요.
+이 아티클에서는 기존 프로젝트에서 로컬 Git 리포지터리를 만들고 Visual Studio의 Git 관련 기능 중 일부에 익숙해지기 위한 기본적인 개요를 제공합니다.
 
-1. [이전 단계](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)의 프로젝트와 같은 Visual Studio에서 열린 프로젝트를 사용하여 솔루션을 마우스 오른쪽 단추로 클릭하고 **소스 제어에 솔루션 추가**를 선택합니다. Visual Studio는 프로젝트 코드를 포함하는 로컬 Git 리포지토리를 만들고 Visual Studio 창의 아래쪽을 따라 표시되는 Git 관련 컨트롤도 표시합니다. 컨트롤은 보류 중인 커밋, 변경 내용, 리포지토리의 이름 및 분기를 표시합니다. 추가 정보를 보려면 마우스로 컨트롤을 가리킵니다.
+1. [이전 단계](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)의 프로젝트와 같은 Visual Studio에서 열린 프로젝트를 사용하여 솔루션을 마우스 오른쪽 단추로 클릭하고 **소스 제어에 솔루션 추가**를 선택합니다. Visual Studio에서는 프로젝트 코드를 포함하는 로컬 Git 리포지토리를 만듭니다.
 
-  ![추가 정보는 Visual Studio 창에서 Git 컨트롤을 마우스로 가리킬 때 표시됩니다.](media/working-with-git-01.png)
+1. Visual Studio가 Git 리포지토리에서 프로젝트가 관리되고 있는지 검색하는 경우 Git 관련 컨트롤은 Visual Studio 창의 오른쪽 아래 모서리에 나타납니다. 컨트롤은 보류 중인 커밋, 변경 내용, 리포지토리의 이름 및 분기를 표시합니다. 추가 정보를 보려면 마우스로 컨트롤을 가리킵니다.
 
-1. **팀 탐색기** 창도 리포지토리 헤더를 선택하여 사용할 수 있는 다양한 Git 옵션과 함께 표시됩니다. **푸시** 헤더를 선택할 때 표시되는 **동기화** 창은 원격 리포지토리에 게시하기 위한 옵션을 제공합니다.
+    ![추가 정보는 Visual Studio 창에서 Git 컨트롤을 마우스로 가리킬 때 표시됩니다.](media/working-with-git-01.png)
 
-  ![로컬 리포지토리를 만든 후 Visual Studio의 팀 탐색기](media/working-with-git-02.png)
+1. 새 리포지토리를 만들거나 Git 컨트롤 중 하나를 선택할 때 Visual Studio는 **팀 탐색기** 창을 엽니다. (언제든지 **보기 > 팀 탐색기** 메뉴 명령을 사용하여 창을 열 수 있습니다.) 창에는 **팀 탐색기** 헤더의 드롭다운을 사용하여 전환할 수 있는 세 개의 기본 창이 있습니다. 게시 작업을 제공하는 **동기화** 창은 푸시 컨트롤(위쪽 화살표 아이콘)을 선택한 경우에도 나타납니다.
 
-1. **변경 내용**을 선택하여 커밋되지 않은 변경 내용을 검토하고 필요한 경우 커밋합니다.
+    ![로컬 리포지토리를 만든 후 Visual Studio의 팀 탐색기](media/working-with-git-02.png)
 
-  ![커밋되지 않은 변경 내용을 보여주는 Visual Studio의 팀 탐색기](media/working-with-git-03.png)
+1. **변경 내용**(또는 연필 아이콘을 포함한 Git 컨트롤)을 선택하여 커밋되지 않은 변경 내용을 검토하고 필요한 경우 커밋합니다.
 
-1. **분기**를 선택하여 분기를 검사하고 병합을 수행하고 작업을 다시 지정합니다.
+    ![커밋되지 않은 변경 내용을 보여 주는 Visual Studio의 팀 탐색기](media/working-with-git-03.png)
 
-  ![분기를 보여주는 Visual Studio의 팀 탐색기](media/working-with-git-04.png)
+    **변경** 목록에서 파일을 두 번 클릭하여 해당 파일에 대한 차이 보기를 엽니다.
 
-1. 로컬 저장소를 사용하는 경우 커밋된 변경 내용은 리포지토리로 직접 이동합니다. 원격 리포지토리에 연결된 경우 헤더를 선택하고 **동기화**를 **동기화** 섹션으로 전환하고 거기에 표시되는 명령으로 작업합니다.
+    ![파일 변경 내용에 대한 차이 보기](media/working-with-git-05.png)
+
+1. **분기**(또는 분기 이름을 포함한 Git 컨트롤)를 선택하여 분기를 검사하고 병합을 수행하고 작업을 다시 지정합니다.
+
+    ![분기를 보여 주는 Visual Studio의 팀 탐색기](media/working-with-git-04.png)
+
+1. 리포지토리 이름(이전 이미지에서 "CosineWave")을 포함한 Git 컨트롤을 선택하면 **팀 탐색기**는 다른 리포지토리로 신속하고 완전하게 전환할 수 있는 **연결** 인터페이스를 보여줍니다.
+
+1. 로컬 저장소를 사용하는 경우 커밋된 변경 내용은 리포지토리로 직접 이동합니다. 원격 리포지토리에 연결된 경우 **팀 탐색기**에서드 롭다운 헤더를 선택하고, **동기화**를 선택하여 **동기화** 섹션으로 전환하고 거기에 표시되는 끌어오기 및 페치 명령으로 작업합니다.
 
 ## <a name="going-deeper"></a>자세히 알아보기
 
-Git 작업에 대한 보다 광범위한 자습서는 [Visual Studio 2017 및 VSTS Git와 코드 공유](/vsts/git/share-your-code-in-git-vs-2017)를 참조하세요.
+원격 Git 리포지토리에서 프로젝트를 만드는 짧은 연습은 [빠른 시작: Visual Studio에서 Python 코드의 리포지토리 복제](quickstart-03-python-in-visual-studio-project-from-repository.md)를 참조하세요.
+
+병합 충돌을 처리하고, 끌어오기 요청으로 코드를 검토하고, 기준 주소를 다시 지정하고, 분기 간에 cherry-pick하는 작업을 비롯하여 훨씬 더 포괄적인 자습서는 [Git 및 VSTS 시작](/vsts/git/gitquickstart?toc=/visualstudio/version-control/toc.json&bc=/vsts/git/breadcrumb/vc/toc.json&view=vsts&tabs=visual-studio)을 참조하세요.
 
 ## <a name="tutorial-review"></a>자습서 검토
 
@@ -64,7 +74,7 @@ Visual Studio의 Python에 대한 이 자습서 완료를 축하합니다. 이 �
 - 패키지 설치 및 Python 환경 관리
 - Git 리포지토리에서 코드 작업
 
-여기에서 다음을 포함하여 개념 및 방법 가이드를 살펴봅니다.
+여기에서 다음과 같은 아티클을 포함하여 개념 및 방법 가이드를 살펴봅니다.
 
 - [Python용 C++ 확장 만들기](working-with-c-cpp-python-in-visual-studio.md)
 - [Azure App Service에 게시](publishing-python-web-applications-to-azure-from-visual-studio.md)

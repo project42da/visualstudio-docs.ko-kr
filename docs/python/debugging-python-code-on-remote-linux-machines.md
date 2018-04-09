@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio를 사용하여 Python 코드 원격 Linux 컴퓨터 디버깅 | Microsoft Docs"
-description: "필요한 구성 단계, 보안 및 문제 해결을 포함해서 Visual Studio를 사용하여 원격 Linux 컴퓨터에서 실행 중인 Python 코드를 디버그하는 방법입니다."
-ms.custom: 
+title: 원격 Linux 컴퓨터에서 Python 코드 디버깅 | Microsoft Docs
+description: 필요한 구성 단계, 보안 및 문제 해결을 포함해서 Visual Studio를 사용하여 원격 Linux 컴퓨터에서 실행 중인 Python 코드를 디버그하는 방법입니다.
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 895abe0f9ce632f5c67c487726d0422607f8d427
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c56d404116c100ff306597a017f68a591b296306
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="remotely-debugging-python-code-on-linux"></a>Linux에서 Python 코드 원격 디버깅
 

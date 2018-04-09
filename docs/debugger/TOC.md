@@ -7,7 +7,7 @@
 ## [ASP.NET 앱 디버그](quickstart-debug-aspnet.md)
 # 자습서
 ## [Visual Studio를 사용하여 디버깅하는 자세한 내용](getting-started-with-the-debugger.md)
-## [디버거에서 Python 코드 실행...](../python/vs-tutorial-01-04.md)
+## [디버거에서 Python 코드 실행...](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 ## [라이브 Azure 앱 디버그](debug-live-azure-applications.md)
 ## [IntelliTrace step-back을 사용하여 스냅숏 보기](how-to-use-intellitrace-step-back.md)
 # 방법 가이드

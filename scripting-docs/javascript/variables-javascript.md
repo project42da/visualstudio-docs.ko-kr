@@ -1,12 +1,13 @@
 ---
-title: "변수(JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 변수(JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - JavaScript
@@ -16,15 +17,15 @@ helpviewer_keywords:
 - coercion
 - case sensitivity, JavaScript variable name
 ms.assetid: 12a450e5-4818-4a09-9878-cd7c6cd2a248
-caps.latest.revision: "20"
+caps.latest.revision: 20
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: f30946899ad35286dfb1e786cf903d58f5c98cb6
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: c1d09f634bd4901e4015766bf55f272926a0a31c
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="variables-javascript"></a>변수(JavaScript)
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)]에서 변수에는 “hello” 또는 5라는 값이 포함됩니다. 변수를 사용하면 해당 변수가 나타내는 데이터를 참조합니다(예; `NumberOfDaysLeft = EndDate - TodaysDate`).  
@@ -48,7 +49,7 @@ var count = 0, amount = 100;
 ## <a name="naming-variables"></a>변수 이름 지정  
  [!INCLUDE[javascript](../javascript/includes/javascript-md.md)]는 대소문자를 구분하는 언어입니다. 즉, **myCounter**와 같은 변수 이름은 변수 이름 **MYCounter**와 다릅니다. 변수 이름의 길이는 다음과 같을 수 있습니다. 유효한 변수 이름을 만드는 규칙은 다음과 같습니다.  
   
--   첫 번째 문자는 ASCII 문자(대문자 또는 소문자)이거나 밑줄(_) 문자여야 합니다. 숫자는 첫 번째 문자로 사용할 수 없습니다.  
+-   첫 번째 문자는 ASCII 문자(대문자 또는 소문자), 유니코드 변수 명명 규칙을 준수하는 문자 또는 밑줄 친(_) 문자여야 합니다. 숫자는 첫 번째 문자로 사용할 수 없습니다.  
   
 -   후속 문자는 문자, 숫자 또는 밑줄(_)이어야 합니다.  
   

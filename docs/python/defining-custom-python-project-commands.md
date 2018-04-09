@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio에서 Python 프로젝트에 대한 사용자 지정 메뉴 명령을 정의하는 방법| Microsoft Docs"
-description: "Visual Studio에서 프로젝트 및 대상 파일을 편집하여 Python 프로젝트 상황에 맞는 메뉴에 사용자 지정 명령을 추가하는 방법을 보여 줍니다. 명령은 실행 프로그램, 스크립트, 모듈, 인라인 코드 조각 및 pip에서 호출할 수 있습니다."
-ms.custom: 
+title: Python 프로젝트에 대한 사용자 지정 메뉴 명령을 정의하는 방법| Microsoft Docs
+description: Visual Studio에서 프로젝트 및 대상 파일을 편집하여 Python 프로젝트 상황에 맞는 메뉴에 사용자 지정 명령을 추가하는 방법을 보여 줍니다. 명령은 실행 프로그램, 스크립트, 모듈, 인라인 코드 조각 및 pip에서 호출할 수 있습니다.
+ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ec06764bb898888657a144f682827896f52ce223
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 755313a85c96c826335d390235477d76d68cd17f
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="defining-custom-commands-for-python-projects"></a>Python 프로젝트에 대한 사용자 지정 명령 정의
 

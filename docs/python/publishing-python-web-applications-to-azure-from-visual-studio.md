@@ -1,16 +1,16 @@
 ---
-title: "Visual Studio에서 Azure App Service에 Python 앱 게시 | Microsoft Docs"
-description: "web.config 파일에 필요한 콘텐츠를 포함하여 Visual Studio에서 Azure App Service에 직접 Python 웹 응용 프로그램을 게시하는 방법입니다."
-ms.custom: 
+title: Azure App Service에 Python 앱 게시 | Microsoft Docs
+description: web.config 파일에 필요한 콘텐츠를 포함하여 Visual Studio에서 Azure App Service에 직접 Python 웹 응용 프로그램을 게시하는 방법입니다.
+ms.custom: ''
 ms.date: 09/27/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
@@ -18,11 +18,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 73e82e70733e12116250e47850bbcf1edff13a6d
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 110ae4660f81766b5e9fb93afc96f606b0549ec3
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service에 게시
 

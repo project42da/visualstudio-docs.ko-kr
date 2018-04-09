@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio에서 Python 코드 디버깅 | Microsoft Docs"
-description: "중단점 설정, 단계별 실행, 값 검사, 예외 확인, 대화형 창에서 디버깅을 포함하여 특히 Python 코드에 대한 Visual Studio의 디버깅 기능 연습입니다."
-ms.custom: 
+title: Python 코드 디버깅 | Microsoft Docs
+description: 중단점 설정, 단계별 실행, 값 검사, 예외 확인, 대화형 창에서 디버깅을 포함하여 특히 Python 코드에 대한 Visual Studio의 디버깅 기능 연습입니다.
+ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 52beda8ff0eb81b7f9a78545e264a2fcaee6ca92
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: a9e8cf75bcdf11994f549be3ef47d5a95868eeef
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
@@ -49,7 +49,7 @@ Visual Studio에서는 실행 중인 프로세스에 연결하고, 조사식 및
 
 ## <a name="basic-debugging"></a>기본적인 디버깅
 
-기본적인 디버깅 워크플로에는 다음 섹션에서 설명한 대로 중단점 설정, 단계별 코드 실행, 값 검사 및 예외 처리가 포함됩니다. Visual Studio 디버거에 대한 자세한 내용은 [Visual Studio에서 디버깅](../debugger/debugging-in-visual-studio.md)을 참조하세요.
+기본적인 디버깅 워크플로에는 다음 섹션에서 설명한 대로 중단점 설정, 단계별 코드 실행, 값 검사 및 예외 처리가 포함됩니다.
 
 디버깅 세션은 **디버그 > 디버깅 시작** 명령, 도구 모음의 **시작** 단추 또는 F5 키로 시작됩니다. 이러한 작업은 프로젝트의 활성 환경 및 프로젝트 속성([프로젝트 디버깅 옵션](#project-debugging-options) 참조)에 지정된 명령줄 인수 또는 검색 경로가 포함된 프로젝트의 시작 파일(솔루션 탐색기에서 굵게 표시됨)을 실행합니다. **Visual Studio 2017 버전 15.6** 이상에서는 시작 파일이 설정되지 않은 경우 경고가 표시되고, 이전 버전에서는 Python 인터프리터를 실행하는 출력 창이 열리거나 출력 창이 잠시 표시되었다가 사라집니다. 어떤 경우든, 해당 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
 
@@ -198,3 +198,7 @@ Python 대화형 디버그 창(**디버그 > 창 > Python 대화형 디버그**)
 대화형 디버그 창에는 **도구 > 옵션 > Python 도구 > 대화형 디버그 창**를 통해 액세스할 수 있는 고유한 옵션 집합이 있습니다. 각 Python 환경마다 별도의 인스턴스가 있는 일반 Python 대화형 창과 달리, 하나의 [대화형 디버그] 창만 있으며, 디버깅 중인 프로세스에 대해 항상 Python 인터프리터를 사용합니다. [옵션 - 디버깅 옵션](python-support-options-and-settings-in-visual-studio.md#debugging-options)을 참조하세요.
 
 ![대화형 디버그 창 옵션](media/debugging-interactive-options.png)
+
+## <a name="see-also"></a>참고 항목
+
+Visual Studio 디버거에 대한 자세한 내용은 [Visual Studio에서 디버깅](../debugger/debugging-in-visual-studio.md)을 참조하세요.

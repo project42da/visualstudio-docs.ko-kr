@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio에서 Python 코드 편집 | Microsoft Docs"
-description: "Visual Studio에서 Python을 편집하는 경우 서식, Lint, 리팩터링과 함께 IntelliSense, 코드 조각 및 탐색 기능이 제공됩니다."
-ms.custom: 
+title: Python 코드 편집 | Microsoft Docs
+description: Visual Studio에서 Python을 편집하는 경우 서식, Lint, 리팩터링과 함께 IntelliSense, 코드 조각 및 탐색 기능이 제공됩니다.
+ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: aae28ff5634dc59f2481140918b7ee19c29c4e1e
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 8e9d5a3b18e7193786ea2b6d0bf2dfb038828e78
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="editing-python-code"></a>Python 코드 편집
 
@@ -51,7 +51,7 @@ IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [�
 
 ![멤버 완성](media/code-editing-completions-simple.png)
 
-완성 목록이 열리면 화살표 키와 마우스를 사용하거나 계속 입력하여 원하는 완성을 검색할 수 있습니다. 더 많은 글자를 입력함에 따라 목록이 자세히 필터링되어 더 확실한 완성을 보여줍니다. 다음과 같은 바로 가기를 사용할 수도 있습니다.
+완성 목록이 열리면 화살표 키와 마우스를 사용하거나 계속 입력하여 원하는 완성을 검색할 수 있습니다. 더 많은 글자를 입력함에 따라 목록이 자세히 필터링되어 더 확실한 완성을 보여 줍니다. 다음과 같은 바로 가기를 사용할 수도 있습니다.
 
 - 'parse'와 같이 이름의 시작 부분에 없는 글자를 입력하면 'argparse'를 찾습니다.
 - 'abc'와 같이 단어의 시작 부분에 있는 글자만 입력하면 'AbstractBaseClass'를 찾거나 'air'를 입력하면 'as_integer_ratio'를 찾습니다.
@@ -86,7 +86,7 @@ IntelliSense는 [완성](#completions), [서명 도움말](#signature-help), [�
 
 ### <a name="signature-help"></a>서명 도움말
 
-함수를 호출하는 코드를 작성할 때 여는 `(`를 입력하면 시그니처 도움말이 표시되며, 사용할 수 있는 설명서와 매개 변수 정보를 보여줍니다. 또한 함수 호출 내에서 Ctrl+Shift+스페이스를 사용하여 표시할 수도 있습니다. 표시되는 정보는 함수의 소스 코드에 있는 설명서 문자열에 따라 다르지만 모든 기본값이 포함됩니다.
+함수를 호출하는 코드를 작성할 때 여는 `(`를 입력하면 시그니처 도움말이 표시되며, 사용할 수 있는 설명서와 매개 변수 정보를 보여 줍니다. 또한 함수 호출 내에서 Ctrl+Shift+스페이스를 사용하여 표시할 수도 있습니다. 표시되는 정보는 함수의 소스 코드에 있는 설명서 문자열에 따라 다르지만 모든 기본값이 포함됩니다.
 
 ![서명 도움말](media/code-editing-signature-help.png)
 
@@ -158,7 +158,7 @@ Visual Studio의 Python 지원에서는 소스 코드를 사용할 수 있는 �
 
 ### <a name="navigation-bar"></a>탐색 모음
 
-탐색 모음은 각 편집기 창의 위쪽에 표시되며, 정의의 2단계 목록을 포함하고 있습니다. 왼쪽 드롭다운에서는 현재 파일의 최상위 클래스와 함수 정의를 포함하고 있으며, 오른쪽 드롭다운에서는 왼쪽에 표시된 범위 내의 정의 목록을 표시합니다. 편집기에서 이동하는 대로 목록이 업데이트되어 현재 컨텍스트를 보여주며, 이러한 목록에서 항목을 선택하여 직접 이동할 수도 있습니다.
+탐색 모음은 각 편집기 창의 위쪽에 표시되며, 정의의 2단계 목록을 포함하고 있습니다. 왼쪽 드롭다운에서는 현재 파일의 최상위 클래스와 함수 정의를 포함하고 있으며, 오른쪽 드롭다운에서는 왼쪽에 표시된 범위 내의 정의 목록을 표시합니다. 편집기에서 이동하는 대로 목록이 업데이트되어 현재 컨텍스트를 보여 주며, 이러한 목록에서 항목을 선택하여 직접 이동할 수도 있습니다.
 
 ![탐색 모음](media/code-editing-navigation-bar.png)
 

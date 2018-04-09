@@ -1,15 +1,15 @@
 ---
-title: "Visual Studio에서 Python 작업, 3단계, 대화형 REPL 창 | Microsoft Docs"
-description: "Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 3단계입니다."
-ms.custom: 
+title: Python 작업, 3단계, 대화형 REPL 창 | Microsoft Docs
+description: Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 3단계입니다.
+ms.custom: mvc
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 598aa6332d69f7818f9f67134c3207a9bd365757
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 437dc0b64c3fb9b1a92c4651ad66e5cec867d66b
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>3단계: 대화형 REPL 창 사용
 
@@ -79,7 +79,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
 1. 프로세스를 반복하여 가장 마음에 드는 값을 찾을 때까지 다른 단계 설정으로 실험합니다. 범위를 늘려(예: `range(0, 1800, 12)`) 웨이브 반복을 만들 수도 있습니다.
  
-1. 대화형 창에서 작성한 코드에 만족할 경우 해당 코드를 선택하고, 마우스 오른쪽 단추를 클릭하고 **코드 복사**(Ctrl+Shift+C)를 선택한 다음 편집기에 붙여넣습니다. Visual Studio의 이 특별한 기능이 모든 출력과 `>>>` 및 `...` 프롬프트를 자동으로 생략하는 방식을 확인합니다. 예를 들어 아래 이미지는 프롬프트 및 출력을 포함하는 선택 영역에서 **코드 복사** 명령을 사용하는 것을 보여줍니다.
+1. 대화형 창에서 작성한 코드에 만족할 경우 해당 코드를 선택하고, 마우스 오른쪽 단추를 클릭하고 **코드 복사**(Ctrl+Shift+C)를 선택한 다음 편집기에 붙여넣습니다. Visual Studio의 이 특별한 기능이 모든 출력과 `>>>` 및 `...` 프롬프트를 자동으로 생략하는 방식을 확인합니다. 예를 들어 아래 이미지는 프롬프트 및 출력을 포함하는 선택 영역에서 **코드 복사** 명령을 사용하는 것을 보여 줍니다.
 
     ![프롬프트 및 출력이 있는 선택 영역에서 대화형 창 코드 복사 명령](media/vs-getting-started-python-17-interactive7.png)
 

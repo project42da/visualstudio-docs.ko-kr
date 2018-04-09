@@ -1,25 +1,25 @@
 ---
-title: "디버거 Visual Studio에서 창 | Microsoft Docs"
+title: 디버거 Visual Studio에서 창 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/25/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.assetid: 4c6fe8f1-b015-4989-bb31-72ebac390026
-caps.latest.revision: 
+caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ff4b731f703d8237b338dbce821fa7e00c39e3d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 64c792594920cff47dfeac8331a73938a2512dcf
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="learn-about-debugger-windows-in-visual-studio"></a>Visual Studio에서 디버거 창에 대 한 자세한 내용은
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 02/09/2018
 |모듈|Ctrl+Alt+U|[방법: 모듈 창 사용](../debugger/how-to-use-the-modules-window.md)|
 |GPU 스레드|-|[방법: GPU 스레드 창 사용](../debugger/how-to-use-the-gpu-threads-window.md)|
 |작업|Ctrl+Shift+D, K|[작업 창 사용](../debugger/using-the-tasks-window.md)|
-|Python 대화형 디버그|Shift+Alt+I|[Python 대화형 복제](../python/interactive-repl.md)|
+|Python 대화형 디버그|Shift+Alt+I|[Python 대화형 복제](../python/python-interactive-repl-in-visual-studio.md)|
 |JavaScript 콘솔|Ctrl+Alt+V, C|[퀵 스타트: JavaScript 디버깅](../debugger/quickstart-debug-javascript-using-the-console.md)|
 |DOM 탐색기|Ctrl+Alt+V, D|[DOM 탐색기를 사용하여 레이아웃 디버그](../debugger/debug-layout-using-dom-explorer.md)|
 |라이브 시각적 트리|-|[디버그하는 동안 XAML 속성 검사](../debugger/inspect-xaml-properties-while-debugging.md)|

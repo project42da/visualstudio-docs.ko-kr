@@ -1,26 +1,26 @@
 ---
-title: "Visual Studio에서 Python 환경 및 인터프리터를 관리하는 방법 | Microsoft Docs"
-description: "Visual Studio에서 Python 환경 창을 사용하여 전역 및 가상 환경을 관리하며, Python 인터프리터 설치, 패키지 설치, 검색 경로 설정, Visual Studio 프로젝트의 환경 관리를 위한 사용자 지정 환경을 설정하는 방법입니다."
-ms.custom: 
-ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
+title: Python 환경 및 인터프리터를 관리하는 방법 | Microsoft Docs
+description: Visual Studio에서 Python 환경 창을 사용하여 전역 및 가상 환경을 관리하며, Python 인터프리터 설치, 패키지 설치, 검색 경로 설정, Visual Studio 프로젝트의 환경 관리를 위한 사용자 지정 환경을 설정하는 방법입니다.
+ms.custom: ''
+ms.date: 03/21/2018
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 ms.devlang: python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 558ce58461b27bc9a86906278602d00d96377c63
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: a1bf9c9c016a71c816ed8cc40b675c520e9c9397
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="managing-python-environments-in-visual-studio"></a>Visual Studio에서 Python 환경 관리
 
@@ -35,6 +35,8 @@ Windows의 Visual Studio에서는 이 문서에 설명된 대로 [Python 환경]
 
 또한 **파일 > 열기 > 폴더** 명령을 사용하여 폴더로만 열리는 Python 코드의 환경을 관리할 수 없습니다. 대신 Visual Studio의 환경 기능을 사용하기 위해 [기존 코드에서 Python 프로젝트를 만듭니다](quickstart-01-python-in-visual-studio-project-from-existing-code.md).
 
+환경에 패키지를 설치하려는 경우 [패키지 탭](python-environments-window-tab-reference.md#packages-tab)을 참조합니다.
+
 ## <a name="types-of-environments"></a>환경 유형
 
 ### <a name="global-environments"></a>글로벌 환경
@@ -47,7 +49,7 @@ Windows의 Visual Studio에서는 이 문서에 설명된 대로 [Python 환경]
 
 전역 환경에 설치된 패키지는 해당 환경을 사용하는 모든 프로젝트에서 사용 가능하므로 두 프로젝트에 호환되지 않은 패키지 또는 동일한 패키지의 서로 다른 버전이 필요한 경우 충돌이 발생할 수 있습니다. 가상 환경은 전역 환경의 인터프리터 및 표준 라이브러리를 사용하지만 해당 패키지 저장소를 격리된 폴더에서 유지 관리하여 이러한 충돌을 방지합니다.
 
-Visual Studio에서는 프로젝트의 하위 폴더에 저장된 특정 프로젝트에 대한 가상 환경을 만들 수 있습니다([가상 환경 만들기](selecting-a-python-environment-for-a-project.md#creating-a-virtual-environment) 참조). 프로젝트 파일은 가상 환경도 식별합니다. 또한 Visual Studio는 해당 가상 환경에 설치하는 모든 패키지를 프로젝트의 `requirements.txt` 파일에 기록합니다. 프로젝트를 공유하고 다른 개발자가 컴퓨터에서 이 프로젝트를 열 경우 Visual Studio에서는 가상 환경을 다시 만드는 옵션을 제공합니다.
+Visual Studio에서는 프로젝트의 하위 폴더에 저장된 특정 프로젝트에 대한 가상 환경을 만들 수 있습니다. Visual Studio에서는 쉽게 다른 컴퓨터에서 환경을 다시 만들 수 있도록 가상 환경에서 `requirements.txt` 파일을 생성하는 명령을 제공합니다. 자세한 내용은 [가상 환경 사용](selecting-a-python-environment-for-a-project.md#using-virtual-environments)을 참조하세요.
 
 ### <a name="conda-environments"></a>Conda 환경
 
@@ -87,7 +89,7 @@ Visual Studio에서 인식하는 환경이 **Python 환경** 창에 표시됩니
 
 ### <a name="what-if-no-environments-appear"></a>환경이 나타나지 않으면 어떻게 하나요?
 
-환경이 나타나지 않으면 Visual Studio가 표준 위치에서 Python 설치를 검색하지 못한 것입니다. 예를 들어 Visual Studio 2017을 설치했지만 Python 워크로드에 대한 설치 관리자 옵션에서 모든 인터프리터 옵션을 선택 취소했을 수 있습니다. 마찬가지로 Visual Studio 2015 이하를 설치했지만 인터프리터를 수동으로 설치하지 않았을 수 있습니다([Python 인터프리터 선택 및 설치](installing-python-interpreters.md) 참조).
+환경이 나타나지 않으면 Visual Studio가 표준 위치에서 Python 설치를 검색하지 못한 것입니다. 예를 들어 Visual Studio 2017을 설치했지만 Python 워크로드에 대한 설치 관리자 옵션에서 모든 인터프리터 옵션을 선택 취소했을 수 있습니다. 마찬가지로 Visual Studio 2015 이하를 설치했지만 인터프리터를 수동으로 설치하지 않았을 수 있습니다([Python 인터프리터 설치](installing-python-interpreters.md) 참조).
 
 컴퓨터에 Python 인터프리터가 있는 것을 알지만 Visual Studio(모든 버전)가 이를 검색하지 못하는 경우 **+ 사용자 지정...** 명령을 사용하여 해당 위치를 수동으로 지정합니다. 다음 섹션 [기존 환경 수동 식별](#manually-identifying-an-existing-environment)을 참조하세요.
 

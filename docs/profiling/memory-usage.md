@@ -1,22 +1,24 @@
 ---
-title: "Visual Studio에서 메모리 사용 분석 | Microsoft Docs"
+title: Visual Studio에서 메모리 사용 분석 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/25/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-debug
+ms.tgt_pltfrm: ''
 ms.topic: article
-caps.latest.revision: "13"
+caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d6fc25c3a9d7306332c704453f22073df4e76546
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.workload:
+- multiple
+ms.openlocfilehash: 38f4457146f8373ad0e4ce3a5477c98a43424538
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="profile-memory-usage-in-visual-studio"></a>Visual Studio에서 프로필 메모리 사용량
 디버거 통합 **메모리 사용량** 진단 도구를 사용하여 디버그하는 동안 메모리 누수 및 비효율적인 메모리를 찾습니다. 메모리 사용량 도구를 통해 관리되는 메모리 및 네이티브 메모리 힙의 *스냅숏*을 하나 이상 만들어 개체 유형이 메모리 사용에 미치는 영향을 이해할 수 있습니다. .NET, 네이티브 또는 혼합 모드(.NET 및 네이티브) 앱의 스냅숏을 수집할 수 있습니다.  
@@ -33,6 +35,12 @@ ms.lasthandoff: 01/04/2018
 >  **사용자 지정 할당자 지원** 기본 메모리 프로파일러는 런타임 중 내보낸 할당 [ETW](/windows-hardware/drivers/devtest/event-tracing-for-windows--etw-) 이벤트 데이터를 수집하여 작동합니다.  CRT 및 Windows SDK의 할당자가 해당 할당 데이터를 캡처할 수 있도록 원본 수준에서 주석이 추가되었습니다.  고유한 할당자를 작성하는 경우 myMalloc에 대한 다음 예제처럼 새로 할당된 힙 메모리에 대한 포인터를 반환하는 모든 함수를 [__declspec](/cpp/cpp/declspec)(allocator)로 데코레이트할 수 있습니다.  
 >   
 >  `__declspec(allocator) void* myMalloc(size_t size)` 
+
+이 자습서에서 다음을 수행합니다.
+
+> [!div class="checklist"]
+> * 메모리 스냅숏 생성
+> * 메모리 사용량 데이터 분석
 
 ## <a name="collect-memory-usage-data"></a>메모리 사용량 데이터 수집
 
@@ -165,6 +173,9 @@ ms.lasthandoff: 01/04/2018
   
  [Visual C++ 블로그: Visual C++ 2015의 메모리 프로파일링](https://blogs.msdn.microsoft.com/vcblog/2015/10/21/memory-profiling-in-visual-c-2015/)  
 
-## <a name="see-also"></a>참고 항목
- [Visual Studio의 프로파일링](../profiling/index.md)  
- [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)
+## <a name="next-steps"></a>다음 단계
+
+이 자습서에서는 메모리 사용량 데이터를 수집하고 분석하는 방법을 배웠습니다. 이미 [프로파일러 둘러보기](../profiling/profiling-feature-tour.md)를 완료한 경우 앱에서 CPU 사용량을 분석하는 방법을 빠르게 확인하는 것이 좋습니다.
+
+> [!div class="nextstepaction"]
+> [CPU 사용 분석](../profiling/beginners-guide-to-performance-profiling.md) 

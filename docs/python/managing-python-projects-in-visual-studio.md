@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio에서 Python 응용 프로그램용 프로젝트 관리 | Microsoft Docs"
-description: "Visual Studio의 프로젝트 용도를 설명하고, Python 코드용 프로젝트를 만들고 관리하는 방법을 보여주고, Python에 사용할 수 있는 다양한 프로젝트 템플릿을 간략하게 설명합니다."
-ms.custom: 
+title: Python 응용 프로그램 프로젝트 관리 | Microsoft Docs
+description: Visual Studio의 프로젝트 용도를 설명하고, Python 코드용 프로젝트를 만들고 관리하는 방법을 보여 주고, Python에 사용할 수 있는 다양한 프로젝트 템플릿을 간략하게 설명합니다.
+ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d996c99104e0a5d6b2e1acdb44273679a3998658
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: dccac11e0ffedf90b72812806b1161f7c270571b
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="python-projects"></a>Python 프로젝트
 
@@ -68,7 +68,7 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 
 ![Python 템플릿이 있는 새 프로젝트 대화 상자](media/projects-new-project-dialog.png)
 
-다음 표에서는 Visual Studio 2017에서 사용 가능한 템플릿을 요약하여 보여줍니다(일부 템플릿만 이전 모든 버전에서 사용 가능).
+다음 표에서는 Visual Studio 2017에서 사용 가능한 템플릿을 요약하여 보여 줍니다(일부 템플릿만 이전 모든 버전에서 사용 가능).
 
 | 템플릿 | 설명 |
 | --- | --- |

@@ -1,11 +1,11 @@
 ---
-title: "코드 조각을 사용하는 방법에 대한 유용한 정보 | Microsoft 문서"
-ms.custom: 
+title: 코드 조각을 사용하는 방법에 대한 유용한 정보 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - code snippets, best practices
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 31951001512578446c4a3ab05efe3ade99223068
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 6d5ac19f3caa795fc309b77d0845db0d412e1ccb
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="best-practices-for-using-code-snippets"></a>코드 조각 사용에 대한 모범 사례
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 02/09/2018
 
 응용 프로그램에 맞게 파일 위치를 조정할 경우 다음을 고려해야 합니다.
 
-- 액세스 가능한 위치 찾기. 사용자에게 컴퓨터의 Program Files 폴더에 대한 액세스 권한이 없을 수 있으므로 응용 프로그램 파일과 함께 파일이 저장되지 않을 수 있습니다.
+- 액세스 가능한 위치 찾기. 사용자에게 컴퓨터의 *Program Files* 폴더에 대한 액세스 권한이 없을 수 있으므로 응용 프로그램 파일과 함께 파일이 저장되지 않을 수 있습니다.
 
 - 안전한 위치 찾기. 파일을 루트 폴더(*C:\\*)에 저장하는 것은 안전하지 않습니다. 응용 프로그램 데이터의 경우 *Application Data* 폴더를 사용하는 것이 좋습니다. 개별 사용자 데이터의 경우 응용 프로그램에서 *문서* 폴더에 각 사용자에 대한 파일을 만들 수 있습니다.
 

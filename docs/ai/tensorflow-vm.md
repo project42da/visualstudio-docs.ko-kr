@@ -1,7 +1,7 @@
 ---
-title: "클라우드에서 TensorFlow 모델 실행"
-description: "Azure 딥 러닝 VM에서 TensorFlow 모델을 실행합니다."
-keywords: "AI, Visual Studio, 딥 러닝 가상 머신"
+title: 클라우드에서 TensorFlow 모델 실행
+description: Azure 딥 러닝 VM에서 TensorFlow 모델을 실행합니다.
+keywords: AI, Visual Studio, 딥 러닝 가상 머신
 author: lisawong19
 ms.author: liwong
 manager: routlaw
@@ -12,15 +12,15 @@ ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f02a03ca314138715b46e098416c7eef49e6d72
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 7006802f38076283221b9351ba9660448e64a696
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="train-a-tensorflow-model-in-the-cloud"></a>클라우드에서 TensorFlow 모델 학습
 
-이 자습서에서는 Azure [딥 러닝](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) 가상 머신에서 [MNIST 데이터 집합](http://yann.lecun.com/exdb/mnist/)을 사용하여 TensorFlow 모델을 학습합니다.
+이 자습서에서는 Azure [심층 학습](https://docs.microsoft.com/azure/machine-learning/data-science-virtual-machine/deep-learning-dsvm-overview) 가상 머신에서 [MNIST 데이터 집합](http://yann.lecun.com/exdb/mnist/)을 사용하여 TensorFlow 모델을 학습합니다.
 
 MNIST 데이터베이스에는 60,000개의 학습 예제 집합과 직접 작성한 10,000개의 테스트 예제 집합이 있습니다.
 
@@ -42,7 +42,7 @@ echo -e ". /etc/profile\n$(cat ~/.bashrc)" > ~/.bashrc
 
 ### <a name="download-sample-code"></a>샘플 코드 다운로드
 
-이 [GitHub 리포지토리](https://github.com/Microsoft/samples-for-ai)에서 TensorFlow, CNTK, Theano 등에서 딥 러닝을 시작하기 위한 샘플을 다운로드합니다.
+TensorFlow, CNTK, Theano 등에서 심층 학습을 시작하는 샘플이 포함된 이 [GitHub 리포지토리](https://github.com/Microsoft/samples-for-ai)를 다운로드합니다.
 
 ## <a name="open-project"></a>프로젝트 열기
 

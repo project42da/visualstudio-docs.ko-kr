@@ -1,24 +1,24 @@
 ---
-title: "Azure Virtual Machine에서 Visual Studio 사용 | Microsoft Docs"
-description: "Azure Virtual Machine에서 Visual Studio를 사용하는 방법에 대한 자세한 정보"
+title: Azure Virtual Machine에서 Visual Studio 사용 | Microsoft Docs
+description: Azure Virtual Machine에서 Visual Studio를 사용하는 방법에 대한 자세한 정보
 ms.date: 03/03/2018
 ms.technology: vs-acquisition
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - azure services
 - virtual machine; VM
 - installation
 - visual studio
 author: PhilLee-MSFT
-ms.author: phillee
-manager: sacalla
+ms.author: tglee
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4492a35c7d58aa92c2c3e86de5bd6be8f8ad9eca
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 0a7e1a3646e2e30302548f2445b0ab657f8e3ec4
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a id="top"> </a> Azure의 Visual Studio 이미지
 사전 구성된 Azure VM(가상 머신)에서 Visual Studio를 사용하는 것이 제대로 실행되는 개발 환경을 처음부터 구현하는 쉽고 빠른 방법입니다. 다양한 Visual Studio 구성을 포함하는 시스템 이미지가 [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=%22visual%20studio%202017%22&page=1)에서 제공됩니다.
@@ -28,12 +28,13 @@ Azure를 처음 사용하는 경우 [체험 Azure 계정을 만드세요](https:
 ## <a name="what-configurations-and-versions-are-available"></a>사용 가능한 구성 및 버전은 무엇인가요?
 Azure Marketplace에서 최신 주 버전(Visual Studio 2017 및 Visual Studio 2015)용 이미지를 찾을 수 있습니다. 주 버전마다 원래 릴리스된 (RTW) 버전과 최신 업데이트 버전이 표시됩니다. 각 버전은 Visual Studio Enterprise 및 Visual Studio Community 버전을 제공합니다. 이러한 이미지는 최신 Visual Studio 및 Windows 업데이트를 포함하도록 매달 한 번 이상 업데이트됩니다. 이미지 이름은 동일하지만 각 이미지의 설명에 설치된 제품 버전과 이미지의 “기준” 날짜가 포함되어 있습니다.
 
-| 릴리스 버전              | 버전            | 제품 버전     |
-|:-----------------------------------------:|:----------------------------:|:-----------------------:|
-| Visual Studio 2017: 최신(버전 15.6) |    Enterprise, Community     |      버전 15.6.0     |
-|         Visual Studio 2017: RTW           |    Enterprise, Community     |      버전 15.0.10    |
-|   Visual Studio 2015: 최신(업데이트 3)   |    Enterprise, Community     |  버전 14.0.25431.01  |
-|         Visual Studio 2015: RTW           |             없음             | (서비스 만료됨) |
+| 릴리스 버전                                              | 버전                     |     제품 버전     |
+|:------------------------------------------------------------:|:----------------------------:|:-----------------------:|
+| Visual Studio 2017: 최신(버전 15.6)                    |    Enterprise, Community     |      버전 15.6.4     |
+| Visual Studio 2017: 최신 미리 보기(버전 15.7, 미리 보기 3) |    Enterprise, Community     |      버전 15.7.0     |
+|         Visual Studio 2017: RTW                              |    Enterprise, Community     |      버전 15.0.10    |
+|   Visual Studio 2015: 최신(업데이트 3)                      |    Enterprise, Community     |  버전 14.0.25431.01  |
+|         Visual Studio 2015: RTW                              |             없음             | (서비스 만료됨) |
 
 > [!NOTE]
 > Microsoft 서비스 정책에 따라 원래 릴리스된(RTW) Visual Studio 2015 버전에 대한 서비스가 만료되었습니다. Visual Studio 2015 업데이트 3이 Visual Studio 2015 제품 라인에 대해 제공되는 유일한 버전입니다.
@@ -54,7 +55,7 @@ Azure Marketplace에서 최신 주 버전(Visual Studio 2017 및 Visual Studio 2
 ```shell
     vs_enterprise.exe --allWorkloads --includeRecommended --passive ^
        add Microsoft.Net.Component.4.7.SDK ^
-       add Microsoft.Net.Component.4.7.TargetingPack ^ 
+       add Microsoft.Net.Component.4.7.TargetingPack ^
        add Microsoft.Net.Component.4.6.2.SDK ^
        add Microsoft.Net.Component.4.6.2.TargetingPack ^
        add Microsoft.Net.ComponentGroup.4.7.DeveloperTools ^
@@ -75,14 +76,14 @@ Azure는 전체 범위의 가상 머신 크기를 제공합니다. Visual Studio
    * Standard_D2_v2
    * Standard_D2S_v2
    * Standard_D3_v2
-    
+
 최신 머신 크기에 대한 자세한 내용은 [Azure의 Windows 가상 머신 크기](/azure/virtual-machines/windows/sizes)를 참조하세요.
 
 Azure를 사용하면 VM의 크기를 조정하여 초기 선택 항목을 다시 조정할 수 있습니다. 새 VM을 더 적합한 크기로 프로비전하거나 기존 VM의 크기를 다른 기본 하드웨어로 조정할 수 있습니다. 자세한 내용은 [Windows VM 크기 조정](/azure/virtual-machines/windows/resize-vm)을 참조하세요.
 
 ## <a name="after-the-vm-is-running-whats-next"></a>VM을 실행한 후 다음 작업은 무엇인가요?
 Visual Studio는 Azure의 “사용자 라이선스 필요” 모델을 따릅니다. 독점 하드웨어의 설치와 마찬가지로, 첫 번째 단계 중 하나는 Visual Studio 설치에 대한 라이선스를 부여하는 것입니다. Visual Studio 잠금을 해제하려면 다음 중 하나를 수행합니다.
-- Visual Studio 구독과 연결된 Microsoft 계정으로 로그인 
+- Visual Studio 구독과 연결된 Microsoft 계정으로 로그인
 - 초기 구입 시 제공된 제품 키로 Visual Studio 잠금 해제
 
 자세한 내용은 [Visual Studio에 로그인](../ide/signing-in-to-visual-studio.md) 및 [Visual Studio의 잠금을 해제하는 방법](../ide/how-to-unlock-visual-studio.md)을 참조하세요.

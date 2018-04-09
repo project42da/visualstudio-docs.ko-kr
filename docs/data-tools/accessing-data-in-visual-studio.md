@@ -15,11 +15,11 @@ manager: ghogen
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f99c01ec5f10909e8236d6986836603553b4008d
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: 82717e8b0eb8b4b751fc8c5ed983695ff6b6fc4a
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="accessing-data-in-visual-studio"></a>Visual Studio에서 데이터 액세스
 
@@ -109,7 +109,7 @@ C + + 응용 프로그램에서 데이터베이스에 연결 하는 방법에 �
 
 ## <a name="python"></a>Python
 
-설치 [Visual Studio에서 Python 지원](../python/python-in-visual-studio.md) Python 응용 프로그램을 만드는 합니다. Azure 설명서에서 다음을 포함 하는 데이터에 연결 하는 여러 자습서에 있습니다.
+설치 [Visual Studio에서 Python 지원](../python/overview-of-python-tools-for-visual-studio.md) Python 응용 프로그램을 만드는 합니다. Azure 설명서에서 다음을 포함 하는 데이터에 연결 하는 여러 자습서에 있습니다.
 
 - [Django 및 Azure에서 SQL 데이터베이스](/azure/app-service/app-service-web-get-started-python)
 - [Django 및 Azure에서 MySQL](/azure/app-service-web/web-sites-python-ptvs-django-mysql)

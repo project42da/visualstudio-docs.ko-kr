@@ -7,7 +7,7 @@ ms.suite: ''
 ms.technology:
 - vs-ide-debug
 ms.tgt_pltfrm: ''
-ms.topic: get-started-article
+ms.topic: tutorial
 f1_keywords:
 - vs.performance.wizard.intropage
 helpviewer_keywords:
@@ -22,11 +22,11 @@ ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
-ms.openlocfilehash: 83268e1c7e4c4672caf17b6852cbf3fd38ea31b1
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 392bae77ffa2333fa9360dcda7f25b156e1601bc
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="profile-application-performance-in-visual-studio"></a>Visual Studio에서 응용 프로그램 성능 프로파일링
 Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성능 문제를 분석할 수 있습니다. 이 절차에서는 진단 도구의 **CPU 사용량** 탭을 사용하여 앱의 성능 데이터를 가져오는 방법을 보여 줍니다. 진단 도구는 ASP.NET을 포함한 Visual Studio의 .NET 개발 및 네이티브/C++ 개발에 사용할 수 있습니다.
@@ -43,6 +43,12 @@ Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성�
 
 > [!NOTE]
 > .NET Core 및 ASP.NET Core에 대한 CPU 사용량 도구는 현재 휴대용 PBD를 통해 정확한 결과를 제공하지 않습니다. 대신 전체 PDB를 사용합니다.
+
+이 자습서에서 다음을 수행합니다.
+
+> [!div class="checklist"]
+> * CPU 사용량 데이터 수집
+> * CPU 사용량 데이터 분석
   
 ##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 1단계: 프로파일링 데이터 수집 
   
@@ -155,9 +161,10 @@ CPU 사용량 아래의 함수 목록을 검사하고, 가장 많은 작업을 �
 
 > [!TIP]
 > Windows 함수를 호출하는 외부 코드를 프로파일링하는 경우 가장 최근의 .pdb 파일이 있는지 확인해야 합니다. 이 파일이 없으면 보고서 뷰에 암호화되어 이해하기 어려운 Windows 함수 이름이 표시됩니다. 필요한 파일이 있는지 확인하는 방법에 대한 자세한 내용은 [디버거에서 기호(.pdb) 및 소스 파일 지정](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)을 참조하세요.
-  
-## <a name="see-also"></a>참고 항목  
- [메모리 사용량](../profiling/memory-usage.md)  
- [CPU 사용량](../profiling/cpu-usage.md)  
- [Visual Studio의 프로파일링](../profiling/index.md)  
- [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)
+
+## <a name="next-steps"></a>다음 단계
+
+이 자습서에서는 CPU 사용량 데이터를 수집하고 분석하는 방법을 배웠습니다. 이미 [프로파일러 둘러보기](../profiling/profiling-feature-tour.md)를 완료한 경우 앱에서 메모리 사용량을 분석하는 방법을 빠르게 확인하는 것이 좋습니다.
+
+> [!div class="nextstepaction"]
+> [메모리 사용량 분석](../profiling/memory-usage.md) 

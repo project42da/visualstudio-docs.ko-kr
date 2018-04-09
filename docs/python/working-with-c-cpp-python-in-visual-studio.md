@@ -1,28 +1,28 @@
 ---
-title: "Visual Studio에서 C++ 및 Python 사용 | Microsoft 문서"
-description: "Visual Studio에서 Python용 C++ 확장 또는 모듈을 작성하는 프로세스 amd 단계"
-ms.custom: 
+title: C++ 및 Python 작업 | Microsoft Docs
+description: Visual Studio에서 Python용 C++ 확장 또는 모듈을 작성하는 프로세스 amd 단계
+ms.custom: ''
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
 - C++
-ms.tgt_pltfrm: 
-ms.topic: tutorial
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1b2f570a75be94c3bff4b38a6d0641e3ecbce2f2
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 12309747949e9f541c69fad64584e86627252907
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python용 C++ 확장 만들기
 
@@ -32,7 +32,7 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 - 래퍼 모듈: 래퍼는 기존 C/C++ 인터페이스를 Python 코드에 노출하거나 Python에서 사용하기 쉬운 보다 “Python” 최적화된 API를 노출합니다.
 - 하위 수준 시스템 액세스 모듈: CPython 런타임, 운영 체제 또는 기본 하드웨어의 하위 수준 기능에 액세스하기 위해 만들었습니다.
 
-이 문서에서는 쌍곡 탄젠트를 계산하고 Python 코드에서 호출하는 CPython용 C++ 확장을 빌드하는 방법에 대해 설명합니다. C++에서 동일한 루틴을 구현할 경우의 관련된 성능 향상을 보여주기 위해 Python에서 먼저 루틴을 구현합니다.
+이 문서에서는 쌍곡 탄젠트를 계산하고 Python 코드에서 호출하는 CPython용 C++ 확장을 빌드하는 방법에 대해 설명합니다. C++에서 동일한 루틴을 구현할 경우의 관련된 성능 향상을 보여 주기 위해 Python에서 먼저 루틴을 구현합니다.
 
 여기에서 사용된 방법은 [Python 설명서](https://docs.python.org/3/c-api/)에 설명된 대로 표준 CPython 확장용입니다. 이 방법과 다른 방법의 비교는 이 문서의 끝에 있는 [대체 방법](#alternative-approaches)에 설명되어 있습니다.
 
@@ -50,6 +50,8 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 ## <a name="create-the-python-application"></a>Python 응용 프로그램 만들기
 
 1. **파일 > 새로 만들기 > 프로젝트**를 선택하여 Visual Studio에서 새 Python 프로젝트를 만듭니다. “Python”을 검색하고 **Python 응용 프로그램** 템플릿을 선택한 다음 적합한 이름과 위치를 지정하고 **확인**을 선택합니다.
+
+1. C++로 작업하려면 32비트 Python 인터프리터(Python 3.6 권장)를 사용해야 합니다. Visual Studio의 **솔루션 탐색기** 창에서 프로젝트 노드를 확장한 다음, **Python 환경** 노드를 확장합니다. 32비트 환경이 기본값(굵게 또는 "전역 기본값"으로 레이블을 지정)으로 표시되지 않은 경우 [프로젝트에 대한 Python 환경 선택](selecting-a-python-environment-for-a-project.md)의 지침에 따릅니다. 32비트 인터프리터가 설치되지 않은 경우 [Python 인터프리터 설치](installing-python-interpreters.md)를 참조하세요.
 
 1. 프로젝트의 `.py` 파일에서 쌍곡 탄젠트 계산(더 쉬운 비교를 위해 수학 라이브러리를 사용하지 않고 구현됨)을 벤치마크하는 다음 코드를 붙여넣습니다. 언제든지 코드를 수동으로 입력하여 [Python 편집 기능](editing-python-code-in-visual-studio.md)의 일부를 경험해 보세요.
 
@@ -104,7 +106,7 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 
 1. 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트...**를 선택합니다. Visual Studio 솔루션에는 Python 및 C++ 프로젝트가 함께 포함될 수 있습니다.
 
-1. “C++”를 검색하고, **빈 프로젝트**를 선택하고, 이름을 지정한 다음(이 문서에서는 “superfastcode” 사용) **확인**을 선택합니다. 참고: Visual Studio 2017과 함께 **Python 네이티브 개발 도구**를 설치한 경우 여기에 설명된 내용이 이미 많이 포함되어 있는 **Python 확장 모듈** 템플릿으로 시작할 수 있습니다. 그러나 이 연습에서는 빈 프로젝트로 시작하여 확장 모듈 빌드를 단계별로 보여줍니다.
+1. “C++”를 검색하고, **빈 프로젝트**를 선택하고, 이름을 지정한 다음(이 문서에서는 “superfastcode” 사용) **확인**을 선택합니다. 참고: Visual Studio 2017과 함께 **Python 네이티브 개발 도구**를 설치한 경우 여기에 설명된 내용이 이미 많이 포함되어 있는 **Python 확장 모듈** 템플릿으로 시작할 수 있습니다. 그러나 이 연습에서는 빈 프로젝트로 시작하여 확장 모듈 빌드를 단계별로 보여 줍니다.
 
 1. 새 프로젝트에서 **소스 파일** 노드를 마우스 오른쪽 단추로 클릭하여 C++ 파일을 만들고, **추가 > 새 항목..."**을 선택하고 **C++ 파일**을 선택하여 이름(예: `module.cpp`)을 지정한 다음 **확인**을 선택합니다. 이 단계는 다음 단계에서 C++ 속성 페이지를 설정하는 데 필요합니다.
 

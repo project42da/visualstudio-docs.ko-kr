@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio의 Python용 CookieCutter 확장 | Microsoft Docs"
-description: "Visual Studio는 Python 코드용 템플릿을 검색하고 해당 템플릿으로 프로젝트를 만들기 위한 그래픽 Cookiecutter 확장을 지원합니다."
-ms.custom: 
+title: Python용 CookieCutter 확장 | Microsoft Docs
+description: Visual Studio는 Python 코드용 템플릿을 검색하고 해당 템플릿으로 프로젝트를 만들기 위한 그래픽 Cookiecutter 확장을 지원합니다.
+ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 96590d2856d14b8c74a9c30f73e3a933cf572164
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d70a6a4041892166b383574730ac1814a19ad39a
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="using-the-cookiecutter-extension"></a>Cookiecutter 확장 사용
 
@@ -35,7 +35,7 @@ Cookiecutter에는 Python 3.3 이상(32비트 또는 64비트) 또는 Anaconda 3
 
 ## <a name="cookiecutter-workflow"></a>Cookiecutter 워크플로
 
-Cookiecutter 작업은 다음 섹션에서 설명한 대로 템플릿을 검색하여 선택하고, 로컬 컴퓨터에 복제하고, 옵션을 설정한 다음 해당 템플릿에서 코드를 만드는 프로세스입니다.
+Cookiecutter 작업은 다음 섹션에서 설명한 대로 템플릿을 검색하여 선택하고, 로컬 컴퓨터에 복제하고, 옵션을 설정한 다음, 해당 템플릿에서 코드를 만드는 프로세스입니다.
 
 ### <a name="browsing-templates"></a>템플릿 찾아보기
 

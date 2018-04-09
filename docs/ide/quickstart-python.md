@@ -1,8 +1,8 @@
 ---
 title: '빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기 | Microsoft Docs'
-description: Visual Studio에서 Python을 사용하여 Falcon 프레임워크를 통해 간단한 웹앱을 빌드하는 방법을 간략하게 소개합니다.
-ms.custom: ''
-ms.date: 03/14/2018
+description: 이 빠른 시작에서 Flask 프레임워크를 사용하여 Python의 간단한 웹앱을 빌드하기 위해 Visual Studio를 사용합니다.
+ms.custom: mvc
+ms.date: 03/21/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -13,29 +13,31 @@ dev_langs:
 - python
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2b1880d95fcb4aae04d98171c8ee7df7373aaceb
-ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
+ms.openlocfilehash: 71501e113bc744f430c6935dbf20bfd2ec533758
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기
 
-Visual Studio IDE(통합 개발 환경)에 대한 5~10분 분량의 소개에서는 간단한 Python 웹 응용 프로그램을 만듭니다. 아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다. 설치 관리자에서 **Python 개발** 워크로드를 선택하도록 합니다.
+Python IDE인 Visual Studio에 대한 5~10분 분량의 소개에서는 Flask 프레임워크에 따라 간단한 Python 웹 응용 프로그램을 만듭니다. Visual Studio의 기본 기능에 대해 알 수 있는 불연속 단계를 통해 프로젝트를 만듭니다.
+
+아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs)로 이동하여 체험용으로 설치합니다. 설치 관리자에서 **Python 개발** 워크로드를 선택하도록 합니다.
 
 ## <a name="create-the-project"></a>프로젝트를 만듭니다.
+
+다음 단계에서는 응용 프로그램에 대한 컨테이너로 제공되는 빈 *프로젝트*를 만듭니다.
 
 1. Visual Studio 2017을 엽니다.
 
 1. 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...**를 차례로 선택합니다.
 
-1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **설치됨**을 확장한 다음 **Python**을 선택합니다.
-
-1. 가운데 창에서 **웹 프로젝트**를 선택하고 프로젝트 이름(예: "HelloPython")을 입력한 다음 **확인**을 선택합니다.
+1. **새 프로젝트** 대화 상자에서 오른쪽 아래의 검색 필드에 "Python 웹 프로젝트"를 입력한 다음, 중간 목록에서 **웹 프로젝트**를 선택하고, 프로젝트에 "HelloPython"과 같은 이름을 지정한 다음, **확인**을 선택합니다.
 
     ![Python 웹 프로젝트가 선택된 새 프로젝트 대화 상자](media/quickstart-python-00-web-project.png)
 
@@ -49,29 +51,38 @@ Visual Studio IDE(통합 개발 환경)에 대한 5~10분 분량의 소개에서
 
 **질문: Python 응용 프로그램에 대한 Visual Studio에서 프로젝트를 만드는 경우의 이점은 무엇입니까?**
 
-답변: 일반적으로 Python 응용 프로그램은 폴더 및 파일만 사용하여 정의되지만 응용 프로그램이 커질수록 이 구조는 복잡해질 수 있으며 자동 생성된 파일, 웹 응용 프로그램용 JavaScript 등을 포함할 수 있습니다. Visual Studio 프로젝트는 이러한 복잡성을 관리하는 데 도움이 됩니다. 프로젝트(`.pyproj` 파일)는 프로젝트와 관련된 모든 소스 및 콘텐츠 파일을 식별하며 각 파일에 대한 빌드 정보를 포함하고 소스 제어 시스템과 통합할 정보를 유지 관리하며 응용 프로그램을 논리 구성 요소로 구성하는 데 도움을 줍니다.
+**대답**: 일반적으로 Python 응용 프로그램은 폴더 및 파일만 사용하여 정의되지만 응용 프로그램이 커질수록 이 간단한 구조는 복잡해질 수 있으며 자동 생성된 파일, 웹 응용 프로그램용 JavaScript 등을 포함할 수 있습니다. Visual Studio 프로젝트는 이러한 복잡성을 관리하는 데 도움이 됩니다. 프로젝트(`.pyproj` 파일)는 프로젝트와 관련된 모든 소스 및 콘텐츠 파일을 식별하며 각 파일에 대한 빌드 정보를 포함하고 소스 제어 시스템과 통합할 정보를 유지 관리하며 응용 프로그램을 논리 구성 요소로 구성하는 데 도움을 줍니다.
 
-## <a name="install-the-falcon-library"></a>Falcon 라이브러리 설치
+**질문: 솔루션 탐색기에 표시된 "솔루션"이란?**
 
-Python의 웹앱은 다수의 사용 가능한 Python 라이브러리 중 하나를 웹 요청 라우팅과 응답 형성과 같은 낮은 수준의 세부 사항을 처리하기 위해 거의 항상 사용합니다. 이 목적을 위해 Visual Studio는 Bottle, Flask 및 Django 프레임워크를 사용한 웹앱을 위한 다양한 템플릿을 제공합니다.
+**대답**: Visual Studio *솔루션*은 하나 이상의 관련 프로젝트를 그룹으로 관리할 수 있는 컨테이너이고, 프로젝트에 특정되지 않는 구성 설정을 저장합니다. 솔루션의 프로젝트는 어떤 프로젝트(Python 앱)를 실행하면 두 번째 프로젝트(예: Python 앱에서 사용하는 C++ 확장)를 자동으로 빌드하는 방식으로 서로 참조할 수도 있습니다.
 
-이 빠른 시작에서는 Falcon 라이브러리를 사용하여 패키지를 설치하고 처음부터 웹앱을 만드는 과정을 경험합니다. (Visual Studio는 현재 Falcon 관련 템플릿을 포함하지 않습니다.) 간단히 설명하기 위해, 다음 단계는 Falcon을 기본 전역 환경에 설치합니다.
+## <a name="install-the-flask-library"></a>Flask 라이브러리 설치
+
+Python의 웹앱은 다수의 사용 가능한 Python 라이브러리 중 하나를 웹 요청 라우팅과 응답 형성과 같은 낮은 수준의 세부 사항을 처리하기 위해 거의 항상 사용합니다. 이 목적 상 Visual Studio는 이 빠른 시작에서 나중에 사용할 웹앱에 다양한 *템플릿*을 제공합니다.
+
+여기에서 다음 단계를 사용하여 Visual Studio에서 이 프로젝트에 사용하는 기본 "전역 환경"에 Flask 라이브러리를 설치합니다.
 
 1. 프로젝트에서 **Python 환경** 노드를 확장하여 프로젝트의 기본 환경을 확인합니다.
 
     ![기본 환경을 보여 주는 솔루션 탐색기](media/quickstart-python-02-default-environment.png)
 
-1. 환경을 마우스 오른쪽 단추로 클릭하고 **Python 패키지 설치...**를 선택합니다. 이 명령은 **패키지** 탭에 **Python 환경** 창을 엽니다. 검색 필드에 "falcon"을 입력하고 **"pip install falcon" from PyPI**을 선택합니다. 관리자 권한에 대한 프롬프트가 표시되면 수락하고 Visual Studio의 **출력** 창에서 진행률을 살펴봅니다. (전역 환경에 대한 패키지 폴더가 `c:\program files`와 같이 보호되는 영역 내에 있는 경우 권한 상승에 대한 프롬프트가 발생합니다.)
+1. 환경을 마우스 오른쪽 단추로 클릭하고 **Python 패키지 설치...**를 선택합니다. 이 명령은 **패키지** 탭에 **Python 환경** 창을 엽니다.
 
-    ![Falcon 라이브러리 설치하기](media/quickstart-python-03-install-package.png)
+1. 검색 필드에 "flask"를 입력하고 **pip install flask from PyPI**를 선택합니다. 관리자 권한에 대한 프롬프트가 표시되면 수락하고 Visual Studio의 **출력** 창에서 진행률을 살펴봅니다. (전역 환경에 대한 패키지 폴더가 `c:\program files`와 같이 보호되는 영역 내에 있는 경우 권한 상승에 대한 프롬프트가 발생합니다.)
+
+    ![Flask 라이브러리 설치](media/quickstart-python-03-install-package.png)
 
 1. 설치 후에는 **솔루션 탐색기**의 환경에 라이브러리가 표시되며 Python 코드에서 해당 라이브러리를 사용할 수 있습니다.
 
-    ![Falcon 라이브러리가 설치됨](media/quickstart-python-04-package-installed.png)
+    ![Flask 라이브러리가 설치됨](media/quickstart-python-04-package-installed.png)
 
-Falcon에 대한 자세한 내용은 [falconframework.org](https://falconframework.org/)를 방문하세요.
+> [!Note]
+> 일반적으로 개발자는 전역 환경에 라이브러리를 설치하는 대신 특정 프로젝트에 대한 라이브러리를 설치하는 "가상 환경"을 만듭니다. Visual Studio 템플릿은 일반적으로 [빠른 시작 - 템플릿을 사용하여 Python 프로젝트 만들기](../python/quickstart-02-python-in-visual-studio-project-from-template.md)에 설명된 대로 이 옵션을 제공합니다.
 
-일반적으로 개발자는 전역 환경에 라이브러리를 설치하는 대신 특정 프로젝트에 대한 라이브러리를 설치하는 "가상 환경"을 만듭니다. Visual Studio의 여러 Python 프로젝트 템플릿에는 템플릿이 의존하는 라이브러리가 나열된 `requirements.txt` 파일이 있습니다. 이러한 템플릿 중 하나에서 프로젝트를 생성하면 라이브러리가 설치될 가상 환경 만들기가 트리거됩니다. 자세한 내용은 [가상 환경 사용](../python/selecting-a-python-environment-for-a-project.md#using-virtual-environments)을 참조하세요.
+**질문: 어디에서 사용 가능한 다른 Python 패키지에 대해 자세히 알아볼 수 있나요?**
+
+**응답**: [Python 패키지 인덱스](https://pypi.python.org/pypi)(pypi.python.org)를 방문하세요.
 
 ## <a name="add-a-code-file"></a>코드 파일 추가
 
@@ -79,74 +90,79 @@ Falcon에 대한 자세한 내용은 [falconframework.org](https://falconframewo
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 차례로 선택합니다.
 
-1. 대화 상자가 나타나면 **빈 Python 파일**을 선택하고 이름을 `hello.py`라고 지정하고 **추가**를 선택합니다. Visual Studio의 편집기 창에서 파일이 자동으로 열립니다. (일반적으로 **추가 > 새 항목...** 명령은 프로젝트에 여러 종류의 파일을 추가하는 좋은 방법입니다. 항목 템플릿에 유용한 상용구 코드가 종종 제공되기 때문입니다.)
+1. 대화 상자가 나타나면 **빈 Python 파일**을 선택하고 이름을 `app.py`라고 지정하고 **추가**를 선택합니다. Visual Studio의 편집기 창에서 파일이 자동으로 열립니다.
 
-1. 다음 코드를 복사하여 `hello.py`에 붙여넣습니다.
+1. 다음 코드를 복사하여 `app.py`에 붙여넣습니다.
 
     ```python
-    import falcon
+    from flask import Flask
 
-    # In Falcon, define a class for each resource and define on_* methods
-    # where * is any standard HTTP methods in lowercase, such as on_get.
+    # Create an instance of the Flask class that is the WSGI application.
+    # The first argument is the name of the application module or package,
+    # typically __name__ when using a single module.
+    app = Flask(__name__)
 
-    class HelloResource:
-        # In this application, the single HelloResource responds to only GET
-        # requests, so it has only an on_get method.
+    # Flask route decorators map / and /hello to the hello function.
+    # To add other resources, create functions that generate the page contents
+    # and add decorators to define the appropriate resource locators for them.
 
-        def on_get(self, req, resp):
-            resp.status = falcon.HTTP_200  # 200 is the default
-            resp.body = "Hello, Python!"
+    @app.route('/')
+    @app.route('/hello')
+    def hello():
+        # Render the page
+        return "Hello Python!"
 
-    # Resources are represented by long-lived class instances
-    hello = HelloResource()
-
-    # Instruct Falcon to route / and /hello to HelloResource. If you add
-    # other resources, use api.add_route to define the desired
-    # resource locators for them.
-    api = falcon.API()
-    api.add_route('/', hello)
-    api.add_route('/hello', hello)
-
-    if __name__ == "__main__":
-        # Use Python's built-in WSGI reference implementation to run
-        # a web server for the application.
-        from wsgiref.simple_server import make_server
-
-        # Run the web server on localhost:8080
-        print("Starting web app server")
-        srv = make_server('localhost', 8080, api)
-        srv.serve_forever()
+    if __name__ == '__main__':
+        # Run the app server on localhost:4449
+        app.run('localhost', 4449)
     ```
 
-1. 이 코드를 붙여넣은 후 Visual Studio에서는 첫 번째 줄에서 `falcon` 아래 및 20줄에서 `wsgiref.simple.server` 아래에 구불구불한 선이 표시될 수도 있습니다. 이러한 표시기는 Visual Studio에서는 여전히 해당 모듈에 대한 IntelliSense 데이터베이스를 구축하는 경우에 나타납니다.
+1. **추가 > 새 항목...** 대화 상자가 Python 클래스, Python 패키지, Python 단위 테스트, web.config 파일 등을 비롯한 Python 프로젝트에 추가할 수 있는 다양한 형식의 파일을 표시합니다. 일반적으로 호출된 이러한 *항목 템플릿*을 사용하여 유용한 상용구 코드를 사용하여 파일을 신속하게 만들 수 있습니다.
 
-Falcon에 대한 자세한 내용은 [Falcon 빠른 시작](https://falcon.readthedocs.io/en/stable/user/quickstart.html)(falcon.readthedocs.io)을 참조하세요.
+**질문: 어디에서 Flask에 대해 자세히 알아볼 수 있나요?**
+
+**대답**: [Flask 빠른 시작](https://flask.pocoo.org/docs/0.12/quickstart/)(flask.pocoo.org)부터는 Flask 설명서를 참조합니다.
 
 ## <a name="run-the-application"></a>응용 프로그램 실행
 
-1. **솔루션 탐색기**에서 `hello.py`를 마우스 오른쪽 단추로 클릭하고, **시작 파일로 설정**을 선택합니다. 이 명령은 앱을 실행할 때 Python으로 실행할 코드 파일을 식별합니다.
+1. **솔루션 탐색기**에서 `app.py`를 마우스 오른쪽 단추로 클릭하고, **시작 파일로 설정**을 선택합니다. 이 명령은 앱을 실행할 때 Python으로 실행할 코드 파일을 식별합니다.
 
     ![솔루션 탐색기에서 프로젝트에 대한 시작 파일 설정](media/quickstart-python-05-set-as-startup-file.png)
 
-1. **솔루션 탐색기**에서 "Hello Python" 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 그런 다음 **디버그** 탭을 선택하고 **포트 번호** 속성을 `8080`으로 설정합니다. 이 단계를 수행하면 Visual Studio가 임의의 포트를 사용하는 대신 `localhost:8080`으로 브라우저를 시작합니다.
+1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 그런 다음 **디버그** 탭을 선택하고 **포트 번호** 속성을 `4449`으로 설정합니다. 이 단계를 사용하면 Visual Studio가 코드에서 `app.run` 인수와 일치하는 `localhost:4449`으로 브라우저를 시작합니다.
 
 1. **디버그 > 디버깅하지 않고 시작**(Ctrl+F5)을 선택하여 변경 내용을 파일에 저장하고 앱을 실행합니다.
 
-1. 명령 창에 “Starting web app server(웹앱 서버 시작 중)” 메시지가 표시된 다음 브라우저 창에 `localhost:8080`이 열리고 “Hello, Python!”이라는 메시지가 표시됩니다. 명령 창에 GET 요청도 나타납니다.
+1. 명령 창에는 "*https://localhost:4449/에서 실행" 메시지가 표시되고, 브라우저 창이 "Hello, Python!"이라는 메시지가 표시되는 `localhost:4449`에 열려야 합니다. 명령 창에 200 상태와 함께 GET 요청도 나타납니다.
 
-    브라우저가 자동으로 열리지 않으면 원하는 브라우저를 시작하고 `localhost:8080`으로 이동합니다.)
+    브라우저가 자동으로 열리지 않으면 원하는 브라우저를 시작하고 `localhost:4449`으로 이동합니다.
 
-    명령 창에 Python 대화형 셸만 보이거나 창이 화면에서 잠시 깜박이면 위의 1단계에서 `hello.py`를 시작 파일로 설정했는지 확인합니다.
+    명령 창에 Python 대화형 셸만 보이거나 창이 화면에서 잠시 깜박이면 위의 1단계에서 `app.py`를 시작 파일로 설정했는지 확인합니다.
+
+1. `localhost:4449/hello`로 이동하여 `/hello` 리소스에 대한 데코레이터도 작동하는지 테스트합니다. 다시 명령 창에 200 상태와 함께 GET 요청이 나타납니다. 다른 URL도 사용하여 명령 창에서 404 상태 코드가 표시되는지 확인합니다.
 
 1. 명령 창을 닫아 앱을 중지한 다음, 브라우저 창을 닫습니다.
 
+**질문: 디버깅 없이 시작 명령과 디버깅 시작 간의 차이점은 무엇인가요?**
+
+**대답**: **디버깅 시작**을 사용하여 [Visual Studio 디버거](../python/debugging-python-in-visual-studio.md)의 컨텍스트에서 앱을 실행하면 중단점을 설정하고, 변수를 확인하고, 한 줄씩 코드를 실행할 수 있습니다. 앱은 디버깅할 수 있게 하는 다양한 후크 때문에 디버거에서 느리게 실행될 수 있습니다. 반면, **디버깅 없이 시작**은 디버깅 컨텍스트 없이 명령줄에서 실행한 것처럼 앱을 직접 실행하고, 자동으로 브라우저를 시작하고, 프로젝트 속성  **디버그** 탭에 지정된 URL로 이동합니다.
+
 ## <a name="next-steps"></a>다음 단계
 
-빠른 시작을 완료하셨습니다. 지금까지 Python과 Visual Studio IDE에 대해 살펴보았습니다. 대화형 창 사용, 디버깅, 데이터 시각화 및 Git 작업을 포함하여, Visual Studio의 Python에 대한 자습서를 계속 진행하려면 아래 단추를 선택하십시오.
+축하합니다! Visual Studio에서 첫 번째 Python 앱을 실행했습니다. 여기서 Python IDE인 Visual Studio를 사용하는 방법에 대해 알아보았습니다
+
+이 빠른 시작에서 수행한 단계가 매우 일반적이기 때문에 자동화될 수 있다고 추측할 수 있습니다. 이러한 자동화는 Visual Studio *프로젝트 템플릿*의 역할입니다. 이 아티클에서 만든 것과 비슷한 웹앱을 더 적은 단계로 만드는 데모는 아래 단추를 선택합니다.
+
+> [!div class="nextstepaction"]
+> [빠른 시작 - 템플릿을 사용하여 Python 프로젝트 만들기](../python/quickstart-02-python-in-visual-studio-project-from-template.md)
+
+대화형 창 사용, 디버깅, 데이터 시각화 및 Git 작업을 포함하여, Visual Studio의 Python에 대한 자습서를 계속 진행하려면 아래 단추를 선택하십시오.
 
 > [!div class="nextstepaction"]
 > [자습서: Visual Studio에서 Python 시작](../python/tutorial-working-with-python-in-visual-studio-step-01-create-project.md).
 
+Visual Studio에서 제공하는 다른 기능을 탐색하려면 아래 링크를 선택합니다.
+
 - [Visual Studio의 Python 웹앱 템플릿](../python/python-web-application-project-templates.md)에 대해 알아보기
 - [Python 디버깅](../python/debugging-python-in-visual-studio.md)에 대해 자세히 알아보기
-- [Visual Studio IDE](../ide/visual-studio-ide.md)에 대해 자세히 알아보기
+- 일반적인 [Visual Studio IDE](../ide/visual-studio-ide.md)에 대해 자세히 알아보기

@@ -1,13 +1,13 @@
 ---
-title: "Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱 만들기 | Microsoft Docs"
-description: "Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱을 만드는 방법을 단계별로 알아봅니다."
-ms.custom: 
+title: Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱 만들기 | Microsoft Docs
+description: Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱을 만드는 방법을 단계별로 알아봅니다.
+ms.custom: ''
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 ms.devlang: vb
 author: TerryGLee
@@ -17,11 +17,11 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 592ad202ca41792c6a73a77b7c01bab71fdbcdc7
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: d3a6593a6e459b16541358a0e89dc5bc21fde982
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱 만들기
 Visual Studio IDE(통합 개발 환경)에 대한 이 짧은 소개에서는 Windows 기반 UI(사용자 인터페이스)가 있는 간단한 Visual Basic 응용 프로그램을 만듭니다.
@@ -50,31 +50,31 @@ Visual Basic 프로젝트 템플릿을 선택하고 파일 이름을 지정한 �
 
      ![도구 상자를 클릭하여 도구 상자 창을 엽니다.](../ide/media/vb-toolbox-toolwindow.png)  
 
-     (도구 상자 플라이아웃 옵션이 표시되지 않으면 메뉴 모음에서 열 수 있습니다. 이렇게 하려면 **보기** > **도구 상자**를 클릭합니다. 또는 **Ctrl**+**Alt**+**X** 키를 누릅니다.)
+     (**도구 상자** 플라이아웃 옵션이 표시되지 않으면 메뉴 모음에서 열 수 있습니다. 이렇게 하려면 **보기** > **도구 상자**를 클릭합니다. 또는 **Ctrl**+**Alt**+**X** 키를 누릅니다.)
 
-2. **Pin** 아이콘을 클릭하여 도구 상자 창을 고정합니다.
+2. **Pin** 아이콘을 클릭하여 **도구 상자** 창을 고정합니다.
 
      ![Pin 아이콘을 클릭하여 도구 상자 창을 IDE에 고정합니다.](../ide/media/vb-pin-the-toolbox-window.png)  
 3. **단추** 컨트롤을 클릭하고 다음 양식으로 끌어옵니다.
 
      ![양식에 단추 추가](../ide/media/vb-add-a-button-to-form1.png)
 
-4. **속성** 창의 **모양** 섹션에서 "항목 클릭"을 입력한 다음 **Enter** 키를 누릅니다.
+4. **속성** 창의 **모양** 섹션에서 `Click this`을 입력한 다음, **Enter** 키를 누릅니다.
 
      ![폼에서 단추에 텍스트 추가](../ide/media/vb-button-control-text.png)  
 
-     (속성 창이 표시되지 않으면 메뉴 모음에서 열 수 있습니다. 이렇게 하려면 **보기** > **속성 창**을 클릭합니다. 또는 **F4** 키를 누릅니다.)
+     (**속성** 창이 표시되지 않으면 메뉴 모음에서 열 수 있습니다. 이렇게 하려면 **보기** > **속성 창**을 클릭합니다. 또는 **F4** 키를 누릅니다.)
 
-5. **속성** 창의 **디자인** 섹션에서 이름을 "Button1"에서 "btnClickThis"로 변경한 다음 **Enter** 키를 누릅니다.
+5. **속성** 창의 **디자인** 섹션에서 이름을 **Button1**에서 `btnClickThis`로 변경한 다음, **Enter** 키를 누릅니다.
 
      ![양식에서 단추에 함수 추가](../ide/media/vb-button-control-function.png)
 
 ### <a name="add-a-label-to-the-form"></a>양식에 레이블 추가
 동작을 만드는 단추 컨트롤을 추가했습니다. 텍스트를 보낼 레이블 컨트롤을 추가해 보겠습니다.
 
-1. 도구 상자 창에서 **레이블** 컨트롤을 선택한 다음 양식으로 끌어오고 **항목 클릭** 단추 아래에 놓습니다.
+1. **도구 상자** 창에서 **레이블** 컨트롤을 선택한 다음, 양식으로 끌어오고, **항목 클릭** 단추 아래에 놓습니다.
 
-2. **속성** 창의 **디자인** 섹션에서 이름을 "Label1"에서 "lblHelloWorld"로 변경한 다음 **Enter** 키를 누릅니다.
+2. **속성** 창의 **디자인** 섹션에서 이름을 **Label1**에서 `lblHelloWorld`로 변경한 다음, **Enter** 키를 누릅니다.
 
 ### <a name="add-code-to-the-form"></a>양식에 코드 추가
 
@@ -91,9 +91,9 @@ Visual Basic 프로젝트 템플릿을 선택하고 파일 이름을 지정한 �
 
      ![시작을 클릭하여 앱을 디버깅하고 실행합니다.](../ide/media/vb-click-start-hello-world.png)
 
-   몇 가지 현상이 발생합니다. Visual Studio IDE에서 진단 도구 창이 열리고 출력 창도 열립니다. 하지만 IDE 외부에서 Form1 대화 상자가 나타납니다. **항목 클릭** 단추 및 "Label1"라는 텍스트가 포함됩니다.
+   몇 가지 현상이 발생합니다. Visual Studio IDE에서 **진단 도구** 창이 열리고 **출력** 창도 열립니다. 하지만 IDE 외부에서 **Form1** 대화 상자가 나타납니다. **항목 클릭** 단추 및 **Label1**이라는 텍스트가 포함됩니다.
 
-2. **Form1** 대화 상자에서 **항목 클릭** 단추를 클릭합니다. "Label1" 텍스트를 "Hello World!"로 변경합니다.
+2. **Form1** 대화 상자에서 **항목 클릭** 단추를 클릭합니다. **Label1** 텍스트를 **Hello World!**로 변경합니다.
 
     ![Label1 텍스트를 포함하는 Form1 대화 상자 ](../ide/media/vb-form1-dialog-hello-world.png)
 

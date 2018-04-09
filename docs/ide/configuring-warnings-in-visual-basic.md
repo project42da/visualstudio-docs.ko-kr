@@ -1,32 +1,34 @@
 ---
-title: "Visual Basic에서 경고 구성 | Microsoft 문서"
-ms.custom: 
+title: Visual Basic에서 경고 구성 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- vs-ide-general
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - errors [Visual Basic], warnings
 - run-time errors, warnings
 - warnings, configuring
 ms.assetid: 99cf4781-bd4d-47b4-91b9-217933509f82
-caps.latest.revision: "35"
+caps.latest.revision: 35
 author: gewarren
 ms.author: gewarren
 manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c076fe18318a9110babdf17d74898f35466d710c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 65e290734a906f006f283bf3462d07389876375c
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 03/28/2018
 ---
-# <a name="configuring-warnings-in-visual-basic"></a>Configuring Warnings in Visual Basic
+# <a name="configuring-warnings-in-visual-basic"></a>Visual Basic에서 경고 구성
 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 컴파일러에는 런타임 오류를 일으킬 수 있는 코드에 대한 일련의 경고가 포함됩니다. 이 정보를 사용하여 버그가 더 적으면서 더 깔끔하고 더 빠르고 더 나은 코드를 작성할 수 있습니다. 예를 들어 컴파일러에서는 사용자가 할당되지 않은 개체 변수의 멤버를 호출하거나, 반환 값을 설정하지 않고 함수에서 반환되거나, 예외를 catch하기 위한 논리에서 오류가 있는 `Try` 블록을 실행하려고 시도할 경우 경고를 생성합니다.  
   
- 경우에 따라 컴파일러에서는 사용자가 오류 발생이 예상되는 작업이 아닌 긴급한 작업에 집중할 수 있도록 사용자 대신 추가 논리를 제공합니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 이전 버전에서 `Option Strict`는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 컴파일러가 제공하는 추가 논리를 제한하는 데 사용되었습니다. 경고를 구성하면 이 논리를 개별 경고 수준에서 더 세밀하게 제한할 수 있습니다.  
+ 경우에 따라 컴파일러에서는 사용자가 오류 발생이 예상되는 작업이 아닌 긴급한 작업에 집중할 수 있도록 사용자 대신 추가 논리를 제공합니다. [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 이전 버전에서 **Option Strict**는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 컴파일러가 제공하는 추가 논리를 제한하는 데 사용되었습니다. 경고를 구성하면 이 논리를 개별 경고 수준에서 더 세밀하게 제한할 수 있습니다.  
   
  프로젝트를 사용자 지정하고 응용 프로그램에 관련되지 않은 일부 경고를 끄면서 다른 경고를 오류로 전환하고자 할 수 있습니다. 이 페이지에서는 개별 경고를 켜고 끄는 방법을 설명합니다.  
   
@@ -75,13 +77,13 @@ ms.lasthandoff: 12/22/2017
   
  ID: 42017  
   
-### <a name="operands-of-type-object-warnings"></a>Object 형식 경고의 피연산자  
- `Option Strict On` 관련 오류를 생성하는 `Object` 형식의 피연산자가 발생할 경우 생성됩니다. 새 프로젝트의 기본값은 켜기입니다.  
+### <a name="operands-of-type-object-warnings"></a>'Object' 형식 경고의 피연산자  
+ **Option Strict On** 관련 오류를 생성하는 `Object` 형식의 피연산자가 발생할 경우 생성됩니다. 새 프로젝트의 기본값은 켜기입니다.  
   
  ID: 42018 및 42019  
   
 ### <a name="declarations-require-as-clause-warnings"></a>선언에 'As' 절 필요 경고  
- `As` 절이 없는 변수, 함수 또는 속성 선언에서 `Option Strict On` 관련 오류가 발생할 경우 생성됩니다. 형식이 할당되지 않은 변수는 `Object` 형식으로 간주합니다. 새 프로젝트의 기본값은 켜기입니다.  
+ `As` 절이 없는 변수, 함수 또는 속성 선언에서 **Option Strict On** 관련 오류가 발생할 경우 생성됩니다. 형식이 할당되지 않은 변수는 `Object` 형식으로 간주합니다. 새 프로젝트의 기본값은 켜기입니다.  
   
  ID: 42020(변수 선언), 42021(함수 선언) 및 42022(속성 선언).  
   
@@ -122,8 +124,8 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목  
  [오류 형식](/dotnet/visual-basic/programming-guide/language-features/error-types)   
- [Try...Catch...Finally 문](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)   
+ [Try...Catch...Finally 명령문](/dotnet/visual-basic/language-reference/statements/try-catch-finally-statement)   
  [/nowarn](/dotnet/visual-basic/reference/command-line-compiler/nowarn)   
  [/warnaserror(Visual Basic)](/dotnet/visual-basic/reference/command-line-compiler/warnaserror)   
- [프로젝트 디자이너, 컴파일 페이지(Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
+ [컴파일 페이지, 프로젝트 디자이너(Visual Basic)](../ide/reference/compile-page-project-designer-visual-basic.md)   
  [기본적으로 해제되어 있는 컴파일러 경고](/cpp/preprocessor/compiler-warnings-that-are-off-by-default)

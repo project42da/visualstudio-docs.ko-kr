@@ -1,35 +1,35 @@
 ---
-title: "방화벽 또는 프록시 서버 배후에서 Visual Studio와 Azure 서비스 설치 및 사용 | Microsoft Docs"
-description: 
-ms.custom: 
+title: 방화벽 또는 프록시 서버 배후에서 Visual Studio와 Azure 서비스 설치 및 사용 | Microsoft Docs
+description: ''
+ms.custom: ''
 ms.date: 02/12/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 helpviewer_keywords:
 - network installation, Visual Studio
 - administrator guide, Visual Studio
 - installing Visual Studio, administrator guide
 - list of domains, locations, URLs
-ms.assetid: 
+ms.assetid: ''
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 320b2492d73e0c15d806dac9aac3802bf957f83c
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 13f9f83c89e09e07d6024b779a89b9a6c4374112
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>방화벽 또는 프록시 서버 배후에서 Visual Studio와 Azure 서비스 설치 및 사용
 사용자 또는 사용자 조직에서 방화벽 또는 프록시 서버와 같은 보안 조치를 사용하는 경우 Visual Studio와 Azure 서비스를 설치 및 사용할 때 최상의 경험을 얻으려면 특정 포트 및 프로토콜을 열고 특정 도메인 URL을 “허용 목록”에 추가하는 것이 좋습니다.
 
-* **[Visual Studio 설치](#install-visual-studio)**: 이 표에는 원하는 모든 구성 요소 및 워크로드에 액세스할 수 있도록 허용 목록에 추가할 도메인 URL이 나와 있습니다.    
+* **[Visual Studio 설치](#install-visual-studio)**: 이 표에는 원하는 모든 구성 요소 및 워크로드에 액세스할 수 있도록 허용 목록에 추가할 도메인 URL이 나와 있습니다.
 
 * **[Visual Studio 및 Azure 서비스 사용](#use-visual-studio-and-azure-services)**: 이 표에는 원하는 모든 기능과 서비스에 액세스할 수 있도록 허용 목록에 추가할 도메인 URL과 열려는 포트 및 프로토콜이 나와 있습니다.
 
@@ -113,6 +113,7 @@ Visual Studio 설치 관리자는 다양한 도메인과 다운로드 서버에�
 | 스냅숏 <br>디버거 | 1. go.microsoft.com <br>2. management.azure.com <br> 3. &#42;azurewebsites.net <br> 4. &#42;scm.azurewebsites.net<br>5. api.nuget.org/v3/index.json <br>6. msvsmon | 1. https <br>2. https  <br>3. http <br>4. https <br>5. https <br>6. Concord <br> | 1. 443<br> 2. 443<br>3. 80  <br>4. 443<br> 5. 443<br> 6. 4022(Visual Studio 버전 종속) | 1. App Service SKU 크기에 대해 .json 파일 쿼리 <br>2. 다양한 Azure RM 호출 <br>3. 사이트 준비 호출  <br>4. 고객의 대상 App Service Kudu 끝점 <br>5. nuget.org에 게시된 쿼리 사이트 확장 버전 <br>6. 원격 디버깅 채널 |
 |Azure Stream Analytics <br><br>HDInsight | Management.azure.com |https|443 |ASA 작업을 확인, 제출, 실행 및 관리하는 데 사용됩니다. <br><br> HDI 클러스터를 찾아보고 HDI 작업을 제출, 진단 및 디버그하는 데 사용됩니다. |
 | Azure Data Lake | &#42;.azuredatalakestore.net <br>&#42;.azuredatalakeanalytics.net | https | 443 | 작업을 컴파일, 제출, 확인, 진단 및 디버그하는 데 사용됩니다. ADLS 파일을 찾는 데 사용됩니다. 파일을 업로드 및 다운로드하는 데 사용됩니다. |
+|패키징 서비스 | [계정].visualstudio.com <br/> [계정].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | *.npmjs.org, *.nuget.org 및 *.nodejs.org는 특정 빌드 작업 시나리오(예: NuGet 도구 설치 관리자, 노드 도구 설치 관리자) 또는 피드와 함께 공용 업스트림을 사용하려는 경우에만 필요합니다.  다른 세 가지 도메인은 패키징 서비스의 핵심 기능에 필요합니다. |
 |||||||
 
 

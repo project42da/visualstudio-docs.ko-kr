@@ -1,27 +1,27 @@
 ---
-title: "Visual Studio의 Python 유닛 테스트 | Microsoft Docs"
-description: "Visual Studio에서 Python 코드에 대해 유닛 테스트를 설정하면 테스트 탐색기 기능을 최대한 활용하여 테스트를 검색, 실행 및 디버그할 수 있습니다."
-ms.custom: 
+title: Python에서 유닛 테스트 | Microsoft Docs
+description: Visual Studio에서 Python 코드에 대해 유닛 테스트를 설정하면 테스트 탐색기 기능을 최대한 활용하여 테스트를 검색, 실행 및 디버그할 수 있습니다.
+ms.custom: ''
 ms.date: 07/13/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 55b99e2f572b075c1e9ab1658c8a02b3fdd5ea88
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: eee1ec05a46050c5a994aa2d774a5be0090171f3
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="setting-up-unit-testing-for-python-code"></a>Python 코드에 대해 단위 테스트 설정
 
@@ -58,7 +58,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 1. 테스트 탐색기는 프로젝트에서 테스트를 검색하고 아래와 같이 표시합니다. 테스트를 두 번 클릭하면 해당 소스 파일이 열립니다.
 
-    ![기본 test_A를 보여주는 테스트 탐색기](media/unit-test-A.png)
+    ![기본 test_A를 보여 주는 테스트 탐색기](media/unit-test-A.png)
 
 1. 프로젝트에 더 많은 테스트를 추가함에 따라 도구 모음의 그룹화 방법 메뉴를 사용하여 테스트 탐색기에서 보기를 구성할 수 있습니다.
 
@@ -82,7 +82,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
     ![test_A 성공 상태](media/unit-test-A-pass.png)
 
-- 실패한 테스트에는 빨간색 십자 표시와 콘솔 출력 및 테스트 실행의 `unittest` 출력을 보여주는 **출력** 링크가 표시됩니다.
+- 실패한 테스트에는 빨간색 십자 표시와 콘솔 출력 및 테스트 실행의 `unittest` 출력을 보여 주는 **출력** 링크가 표시됩니다.
 
     ![test_A 실패 상태](media/unit-test-A-fail.png)
 

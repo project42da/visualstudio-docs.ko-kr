@@ -1,27 +1,27 @@
 ---
-title: "빠른 시작: Visual Studio에서 기존 코드로 Python 프로젝트 만들기 | Microsoft Docs"
-description: "편리한 템플릿을 사용하여 기존 코드로 Visual Studio 프로젝트를 만들어 Python을 빠르게 시작할 수 있습니다."
-ms.custom: 
+title: '빠른 시작: 기존 코드로 Python 프로젝트 만들기 | Microsoft Docs'
+description: 이 빠른 시작의 기존 폴더에서 편리한 템플릿을 사용하여 Python용 Visual Studio 프로젝트를 만듭니다.
+ms.custom: mvc
 ms.date: 01/08/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e8e57fb97b5e792375cefb344306a9bdc71836be
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: b31cda03c2ca233e90e1ba0194d83845805e28f3
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="quickstart-create-a-python-project-from-existing-code"></a>빠른 시작: 기존 코드에서 Python 프로젝트를 만들려면
 

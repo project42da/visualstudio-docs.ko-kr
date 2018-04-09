@@ -1,27 +1,27 @@
 ---
-title: "빠른 시작 - Visual Studio에서 Cookiecutter를 사용하여 Python 프로젝트 만들기 | Microsoft Docs"
-description: "Visual Studio에서 Cookiecutter 템플릿을 사용하여 Python을 빠르게 시작할 수 있습니다."
-ms.custom: 
+title: 빠른 시작 - Cookiecutter를 사용하여 Python 프로젝트 만들기 | Microsoft Docs
+description: 이 빠른 시작에서 Cookiecutter 템플릿을 사용하여 Python용 Visual Studio 프로젝트를 만듭니다.
+ms.custom: mvc
 ms.date: 09/22/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4b9b7a51436eeeb67634714216f9a583de679a07
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: e6ba3c034c199853b3cf6b08e026a6d9c78e47d3
+ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/30/2018
 ---
 # <a name="quickstart-create-a-project-from-a-cookiecutter-template"></a>빠른 시작: Cookiecutter 템플릿에서 프로젝트 만들기
 

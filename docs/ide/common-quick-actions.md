@@ -1,11 +1,7 @@
 ---
-title: "일반적인 빠른 작업 | Microsoft Docs"
-ms.custom: 
-ms.date: 11/30/2017
-ms.reviewer: 
-ms.suite: 
+title: 일반적인 빠른 작업 | Microsoft Docs
+ms.date: 03/28/2018
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: reference
 author: kuhlenh
 ms.author: kaseyu
@@ -15,15 +11,15 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: ea7ecb89ed732af828fb4ca26d123d131f6d1918
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 8d751e122d0c9eca23d0349761054d092a438ba8
+ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/03/2018
 ---
 # <a name="common-quick-actions"></a>일반적인 빠른 작업
 
-이 항목의 섹션에는 C# 및 Visual Basic 코드 모두에 적용할 수 있는 일반적인 빠른 작업 중 일부가 나와 있습니다.
+이 항목의 섹션에는 C# 및 Visual Basic 코드 모두에 적용할 수 있는 일반적인 빠른 작업 중 일부가 나와 있습니다. Visual Studio에서 기본 제공 [분석기 규칙](../code-quality/roslyn-analyzers-overview.md)에 대한 *코드 수정* 작업이 포함됩니다.
 
 ## <a name="actions-that-fix-errors"></a>오류를 수정하는 작업
 
@@ -176,7 +172,7 @@ End Function
 
 ## <a name="actions-that-remove-unnecessary-code"></a>불필요한 코드를 제거하는 작업
 
-### <a name="remove-unnecesary-usingsimports"></a>불필요한 using/Import 제거
+### <a name="remove-unnecessary-usingsimports"></a>불필요한 using/Import 제거
 
 **Remove Unnecessary Usings/Imports**(불필요한 Using/Import 제거) 빠른 작업은 현재 파일에 대해 사용되지 않은 `using` 및 `Import` 문을 제거합니다.  이 항목을 선택하면 사용되지 않은 네임스페이스 가져오기가 바로 제거됩니다.
 
@@ -239,7 +235,7 @@ public MyMethod()
 | ------- | -------------------- | ----------------  |
 | CS0219, BC42024 | C# 및 Visual Basic | Visual Studio 2017 15.3 버전 |
 
-### <a name="remove-type-from-default-value-expression"></a>**기본** 값 식에서 형식 제거
+### <a name="remove-type-from-default-value-expression"></a>기본값 식에서 형식 제거
 
 이 빠른 작업은 기본 값 식에서 값 형식을 제거하고 컴파일러가 식의 형식을 유추할 수 있는 경우 [ 리터럴](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference)을 사용합니다.
 
@@ -260,7 +256,7 @@ void DoWork(CancellationToken cancellationToken = default) { ... }
 
 ## <a name="actions-that-add-missing-code"></a>누락된 코드를 추가하는 작업
 
-### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>참조 어셈블리나 NuGet 패키지의 형식 또는 솔루션의 다른 형식에 대해 using/Import 추가
+### <a name="add-usingsimports-for-types-in-reference-assemblies-nuget-packages-or-other-types-in-your-solution"></a>참조 어셈블리나 NuGet 패키지의 형식 또는 솔루션의 다른 형식에 대해 using/import 추가
 
 솔루션의 다른 프로젝트에 있는 형식을 사용하면 빠른 작업이 자동으로 표시되지만 **도구 > 옵션 > C#** 또는 **Basic > 고급** 탭에서 다른 작업을 사용하도록 설정해야 합니다.
 
@@ -475,7 +471,7 @@ private static int thisFieldIsPublic;
 
 ## <a name="code-transformations"></a>코드 변환
 
-### <a name="convert-if-construct-to-switch"></a>**if** 구문을 **switch**로 변환
+### <a name="convert-if-construct-to-switch"></a>'if' 구문을 'switch'로 변환
 
 이 빠른 작업을 통해 **if-then-else** 구문을 **switch** 구문으로 변환할 수 있습니다.
 
@@ -741,7 +737,7 @@ int fibonacci(int n)
 }
 ```
 
-### <a name="convert-referenceequals-to-is-null"></a>`ReferenceEquals`를 `is null`로 변환
+### <a name="convert-referenceequals-to-is-null"></a>'ReferenceEquals'를 'is null'로 변환
 
 |  진단 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
@@ -959,4 +955,4 @@ Console.WriteLine($"{x} {y}");
 
 ## <a name="see-also"></a>참고 항목
 
-[빠른 작업](../ide/quick-actions.md)  
+[빠른 작업](../ide/quick-actions.md)

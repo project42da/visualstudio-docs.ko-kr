@@ -1,28 +1,28 @@
 ---
-title: "Visual Studio에서 Python에 대한 혼합 모드 디버깅 | Microsoft Docs"
-description: "환경 간의 단계별 실행, 값 보기 및 식 계산을 포함하여 Visual Studio에서 C++ 및 Python을 동시에 디버그하는 방법입니다."
-ms.custom: 
+title: Python에 대한 혼합 모드 디버깅 | Microsoft Docs
+description: 환경 간의 단계별 실행, 값 보기 및 식 계산을 포함하여 Visual Studio에서 C++ 및 Python을 동시에 디버그하는 방법입니다.
+ms.custom: ''
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 dev_langs:
 - python
 - C++
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d33e4d15e9d0de5c3aa35354dd1c8840d0ed9bd2
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+ms.openlocfilehash: 4f555e24c1328a4d784e3f8c5b2d0f1a7c590f8b
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="debugging-python-and-c-together"></a>Python과 C++로 디버깅
 

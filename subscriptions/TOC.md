@@ -42,22 +42,25 @@
 #### [우선 순위 포럼 지원](vs-priority-support.md)
 #### [Concierge 지원](vs-concierge-chat.md)
 ## 구독 관리
-### 개요
-#### [구독 관리에 대한 자세한 정보](subscription-management-info.md)
-#### [관리자 책임](admin-responsibilities.md)
-#### [관리자 관리](managing-admins.md)
-#### [포털 액세스](access-admin-portal.md)
-#### 조직 온보딩
-##### [PCN 찾기](find-pcn.md)
-##### [다중 PCN 관리](multiple-pcns.md)
-##### [기본 연락처 찾기](find-primary-contact.md)
-##### [구독 ID 찾기](find-subscription-id.md)
-### 관리 포털 사용
+### [관리자 책임](admin-responsibilities.md)
+### [구독 관리에 대한 자세한 정보](subscription-management-info.md)
+### 포털 액세스 및 관리자 관리
+#### [볼륨 라이선스의 경우](volume-license-admins.md)
+##### [VLSC 관리 마이그레이션 FAQ](vlsc-admin-faq.md)
+##### 조직 온보딩
+###### [온보딩 이메일 통신](volume-license-onboarding-email.md)
+###### [PCN 찾기](find-pcn.md)
+###### [기본 연락처 찾기](find-primary-contact.md)
+#### [MPSA의 경우](mpsa.md)
+#### [클라우드 구독의 경우](cloud-admin.md)
+#### [온보딩 비디오](https://channel9.msdn.com/Series/Visual-Studio-Subscriptions-Administration/Onboarding-your-organization-to-the-new-Visual-Studio-Subscription-Administration-Portal-and-setting)
+### [관리 포털 사용](using-admin-portal.md)
 #### [구독 할당](assign-license.md)
 #### [할당 전자 메일 다시 보내기](resend-assignment-email.md)
 #### [구독 편집](edit-license.md)
 #### [구독 삭제](delete-license.md)
 #### [구독 검색](search-license.md)
+#### [구독 내보내기](exporting-subscriptions.md)
 #### [초과 할당](handle-overclaimed-license.md)
 #### [만료된 구독](handle-expired-license.md)
 #### [개인 전자 메일 로그인이 있는 구독자](personal-email-sign-ins.md)
@@ -76,3 +79,6 @@
 ### [Visual Studio 라이선스 백서](http://aka.ms/vslicensing)
 ### [구독 옵션 및 가격 비교](https://www.visualstudio.com/vs/pricing)
 ### [Visual Studio IDE 기능 비교](https://www.visualstudio.com/vs/compare)
+### [Visual Studio 관리 및 구독 지원](https://www.visualstudio.com/support/support-overview-vs)
+### [볼륨 라이선스 및 PUR(제품 사용 권한)](http://www.microsoft.com/licensing/product-licensing/products.aspx)
+### [MPSA(Microsoft 제품 및 서비스 계약)](https://www.microsoft.com/en-us/licensing/mpsa/default.aspx)

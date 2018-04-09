@@ -1,26 +1,26 @@
 ---
-title: "Python 인터프리터 선택 및 설치 | Microsoft Docs"
-description: "설치 관리자를 찾을 위치에 대한 간단한 지침이 포함된 Visual Studio에서 지원되는 Python 인터프리터의 전체 목록입니다."
-ms.custom: 
+title: Python 인터프리터 선택 및 설치 | Microsoft Docs
+description: 설치 관리자를 찾을 위치에 대한 간단한 지침이 포함된 Visual Studio에서 지원되는 Python 인터프리터의 전체 목록입니다.
+ms.custom: ''
 ms.date: 02/20/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-python
 ms.devlang: python
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.tgt_pltfrm: ''
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
 manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 1bdec69c45cbd6ebb7943ce38853fd2207000a0f
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: 3b8d1bf4f0ac6c66222f86e73b7c18cfdceb3354
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="installing-python-interpreters"></a>Python 인터프리터 설치
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/23/2018
 
 Visual Studio 설치 관리자 외부에서 아래 표에 나열된 인터프리터를 수동으로 설치할 수도 있습니다. 예를 들어 Visual Studio를 설치하기 전에 Anaconda 3을 설치한 경우 Visual Studio 설치 관리자를 통해 다시 설치할 필요가 없습니다.
 
-Visual Studio 2015 이하의 경우 인터프리터 중 하나를 수동으로 설치해야 합니다.
+**Visual Studio 2015 이하**의 경우 인터프리터 중 하나를 수동으로 설치해야 합니다.
 
 Visual Studio(모든 버전)는 레지스트리를 확인하여 각 설치된 Python 인터프리터 및 해당 환경을 자동으로 검색합니다([Windows 레지스트리의 PEP 514 - Python 등록](https://www.python.org/dev/peps/pep-0514/)에 따라).
 

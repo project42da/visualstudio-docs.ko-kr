@@ -1,7 +1,7 @@
 ---
-title: Visual Studio에서 Python 작업, 1단계, 프로젝트 만들기 | Microsoft Docs
+title: Python 작업, 1단계, 프로젝트 만들기 | Microsoft Docs
 description: 전체 자습서를 개략적으로 설명하고, 필수 구성 요소를 설명하고, 새 Python 프로젝트를 만드는 프로세스를 연습하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 1단계입니다.
-ms.custom: ''
+ms.custom: mvc
 ms.date: 01/16/2018
 ms.reviewer: ''
 ms.suite: ''
@@ -17,8 +17,8 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 22588c1e8221375f05b9fb62870662d9aa3d2f5e
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: c97af84d02b1dcf6fb60f8dad06bf3bd6975a4e3
+ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 03/28/2018
