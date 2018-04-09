@@ -5,7 +5,7 @@ keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: ghogen
-ms.date: 03/19/2018
+ms.date: 03/22/2018
 ms.topic: article
 helpviewer_keywords: ''
 ms.technology:
@@ -13,11 +13,11 @@ ms.technology:
 ms.service: ''
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fb2238d8a0afb8334a05585bf040931da81d66a
-ms.sourcegitcommit: a80e7ef2f0a0f6d906a44f4d696aeb208bc1ad70
+ms.openlocfilehash: bd209ce81800bd289a36e469fb23e6eec0dd008e
+ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 03/28/2018
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 빌드 번호 및 릴리스 날짜
 
@@ -25,6 +25,8 @@ ms.lasthandoff: 03/21/2018
 
 | **Version**| **채널** | **릴리스 날짜** | **빌드 버전** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.6.4 | 릴리스 | 2018년 3월 22일 | 15.6.27428.2015 |
+| 15.7.0 미리 보기 2.0 | 미리 보기 | 2018년 3월 21일 | 15.7.27520.0 |
 | 15.6.3 | 릴리스 | 2018년 3월 19일 | 15.6.27428.2011 |
 | 15.7.0 미리 보기 1.0 | 미리 보기 | 2018년 3월 13일 | 15.7.27512.0 |
 | 15.6.2 | 릴리스 | 2018년 3월 13일 | 15.6.27428.2005 |
