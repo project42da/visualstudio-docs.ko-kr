@@ -1,9 +1,9 @@
 ---
-title: "프로그램 코드에서 레이어 모델 탐색 및 업데이트 | Microsoft Docs"
-ms.custom: 
+title: 프로그램 코드에서 레이어 모델 탐색 및 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - layer models, navigating in program code
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: e79479e97efd953c1366348454eee70773faf07a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="navigate-and-update-layer-models-in-program-code"></a>프로그램 코드에서 레이어 모델 탐색 및 업데이트
 이 항목에서는 프로그램 코드를 사용하여 탐색하고 업데이트할 수 있는 레이어 모델의 요소와 관계에 대해 설명합니다. 사용자의 관점에서 종속성 다이어그램에 대 한 자세한 내용은 참조 [종속성 다이어그램: 참조](../modeling/layer-diagrams-reference.md) 및 [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)합니다.  

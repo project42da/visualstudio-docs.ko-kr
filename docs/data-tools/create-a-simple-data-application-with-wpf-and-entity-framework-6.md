@@ -1,10 +1,10 @@
 ---
-title: "WPF 및 Entity Framework 6 간단한 데이터 응용 프로그램을 만들 | Microsoft Docs"
-ms.custom: 
+title: WPF 및 Entity Framework 6 간단한 데이터 응용 프로그램을 만들 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/22/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - CSharp
@@ -15,10 +15,10 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 ms.openlocfilehash: 394dbf9aba422f8fbf16857d6980a53b353e931a
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="create-a-simple-data-application-with-wpf-and-entity-framework-6"></a>WPF 및 Entity Framework 6 간단한 데이터 응용 프로그램 만들기
 
@@ -431,7 +431,7 @@ MainWindow.xaml.cs의 MainWindow 클래스에이 처리기 메서드를 추가 �
 
 디버깅을 시작하려면 **F5** 키를 누릅니다. 고객 및 주문 데이터가 표에서 채워진 표시 되어야 하 고 탐색 단추의 예상 대로 작동 해야 합니다. "커밋" 데이터를 입력 한 후 모델에 새 고객 또는 주문과 추가 하려면 클릭 합니다. 새 고객 또는 새 주문 양식 데이터를 저장 하지 않고 취소 하려면 "취소"를 클릭 합니다. 기존 고객과 텍스트 상자에 직접 주문을 편집할 수 하 고 해당 변경 내용이 모델에 자동으로 기록 됩니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET용 Visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)  
 [Entity Framework 설명서](/ef/)

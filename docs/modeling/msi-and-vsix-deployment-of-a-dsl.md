@@ -1,9 +1,9 @@
 ---
-title: "MSI 및 DSL의 VSIX 배포 | Microsoft Docs"
-ms.custom: 
+title: MSI 및 DSL의 VSIX 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,15 +12,15 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: de6b219610908503f37658ff977f042363fb8663
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL의 MSI 및 VSIX 배포
-도메인 특정 언어 또는 다른 컴퓨터 사용자의 컴퓨터에 설치할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]대상 컴퓨터에 이미 설치 되어 있어야 합니다.  
+도메인 특정 언어 또는 다른 컴퓨터 사용자의 컴퓨터에 설치할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 대상 컴퓨터에 이미 설치 되어 있어야 합니다.  
   
-##  <a name="which"></a>VSIX 및 MSI 배포 중에서 선택  
+##  <a name="which"></a> VSIX 및 MSI 배포 중에서 선택  
  도메인 특정 언어를 배포 하는 방법은 두 가지가 있습니다.  
   
 |메서드|이점|  
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
 |VSX ([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 확장)|배포 하기 아주 간단: 복사를 실행 하 고는 **.vsix** DslPackage 프로젝트에서 파일입니다.<br /><br /> 자세한 내용은 참조 [설치 및는 VSX를 사용 하 여 DSL 제거](#Installing)합니다.|  
 |MSI (설치 관리자 파일)|-을 열도록 허용 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] DSL 파일을 두 번 클릭 합니다.<br />-아이콘 대상 컴퓨터에서 DSL 파일 형식과 연결합니다.<br />-DSL 파일 형식과 XSD (XML 스키마)를 연결합니다. 이렇게 하면 경고에 파일을 로드할 때 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.<br /><br /> MSI를 만들려면 솔루션에 설치 프로젝트를 추가 해야 합니다.<br /><br /> 자세한 내용은 참조 [MSI 파일을 사용 하 여 DSL 배포](#msi)합니다.|  
   
-##  <a name="Installing"></a>설치 하 고는 VSX를 사용 하 여 DSL 제거  
+##  <a name="Installing"></a> 설치 하 고는 VSX를 사용 하 여 DSL 제거  
  사용자가 내에서 DSL 파일을 열 수 DSL이이 방법으로 설치 되 면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 있지만 Windows 탐색기에서 파일을 열 수 없습니다.  
   
 #### <a name="to-install-a-dsl-by-using-the-vsx"></a>DSL의 VSX를 사용 하 여 설치 하려면  
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/09/2018
   
  *LocalAppData* **\Microsoft\VisualStudio\10.0\Extensions**  
   
-##  <a name="msi"></a>MSI 사용 하는 DSL 배포  
+##  <a name="msi"></a> MSI 사용 하는 DSL 배포  
  DSL에 대 한 MSI (Windows Installer) 파일을 정의 하 여 사용자가을 Windows 탐색기에서 DSL 파일을 열 수 있습니다. 아이콘 및 간단한 설명 파일 이름 확장명으로 연결할 수도 있습니다. 또한 MSI DSL 파일 유효성을 검사 하는 데 사용할 수 있는 XSD를 설치할 수 있습니다. 원하는 경우에 동시에 설치할 수 있는 MSI로 다른 구성 요소를 추가할 수 있습니다.  
   
  MSI 파일 및 기타 배포 옵션에 대 한 자세한 내용은 참조 [응용 프로그램 배포, 서비스 및 구성 요소](../deployment/deploying-applications-services-and-components.md)합니다.  

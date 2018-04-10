@@ -1,9 +1,9 @@
 ---
-title: "셰이프 및 연결선은 모델을 반영 하도록 업데이트 | Microsoft Docs"
-ms.custom: 
+title: 셰이프 및 연결선은 모델을 반영 하도록 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 6d50d0258a44553451deed68a8ccf17c60d88965
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="updating-shapes-and-connectors-to-reflect-the-model"></a>모양 및 연결선을 업데이트하여 모델 반영
 에 도메인 특정 언어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 기본 모델의 상태를 반영 하는 도형의 모양을 만들 수 있습니다.  
@@ -85,7 +85,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 ```  
   
 ## <a name="use-onchildconfigured-to-initialize-a-shapes-properties"></a>OnChildConfigured 셰이프의 속성을 초기화 사용  
- 처음 셰이프의 속성을 설정 하려면 만들어지면 재정의 `OnChildConfigured()` 다이어그램 클래스의 부분 정의에서 합니다. DSL 정의에 다이어그램 클래스를 지정 하 고 생성 된 코드는 **Dsl\Generated Code\Diagram.cs**합니다. 예:  
+ 처음 셰이프의 속성을 설정 하려면 만들어지면 재정의 `OnChildConfigured()` 다이어그램 클래스의 부분 정의에서 합니다. DSL 정의에 다이어그램 클래스를 지정 하 고 생성 된 코드는 **Dsl\Generated Code\Diagram.cs**합니다. 예를 들어:  
   
 ```csharp  
 partial class MyLanguageDiagram  
@@ -110,7 +110,7 @@ partial class MyLanguageDiagram
   
  이 메서드는 모두 도메인 속성 및 도형의 크기와 같은 비 저장소 기능을 사용할 수 있습니다.  
   
-##  <a name="OnAssociatedProperty"></a>AssociateValueWith()를 사용 하 여 도형의 다른 기능을 업데이트 하려면  
+##  <a name="OnAssociatedProperty"></a> AssociateValueWith()를 사용 하 여 도형의 다른 기능을 업데이트 하려면  
  그림자를 또는 연결선의 화살표 스타일에 있는지 여부 등의 셰이프의 일부 기능에 대 한 기능 도메인 속성으로 노출 기본 설정 방법이 있습니다.  등의 기능이 변경 내용은 트랜잭션 시스템에 의해 제어 되지 않습니다. 따라서 해당 키를 업데이트 하는 데 적합 하지 않음을 규칙을를 사용 하는 실행 취소 명령을 수행할 때 규칙 호출 되지 않습니다.  
   
  대신, 사용 하 여 이러한 기능을 업데이트할 수 있습니다 <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnAssociatedPropertyChanged%2A>합니다. 다음 예제에서는 연결선의 화살표 스타일은 커넥터를 표시 하는 관계의 domain 속성 값에 의해 제어 됩니다.  
@@ -154,6 +154,6 @@ public partial class ArrowConnector // My connector class.
   
 ```  
   
- `AssociateValueWith()`등록 하려는 각 도메인 속성에 대해 한 번씩을 호출 되어야 합니다. 지정된 된 속성을 변경한 호출 호출 된 후 `OnAssociatedPropertyChanged()` 속성의 모델 요소를 제공 하는 모든 셰이프에 있습니다.  
+ `AssociateValueWith()` 등록 하려는 각 도메인 속성에 대해 한 번씩을 호출 되어야 합니다. 지정된 된 속성을 변경한 호출 호출 된 후 `OnAssociatedPropertyChanged()` 속성의 모델 요소를 제공 하는 모든 셰이프에 있습니다.  
   
  호출할 필요는 없습니다 `AssociateValueWith()` 각 인스턴스에 대 한 합니다. InitializeResources 인스턴스 메서드인 경우에 각 셰이프 클래스에 대해 한 번만 호출 됩니다.

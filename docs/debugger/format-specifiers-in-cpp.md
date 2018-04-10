@@ -1,12 +1,12 @@
 ---
-title: "형식 지정자 (c + +) 디버거에서 | Microsoft Docs"
-ms.custom: 
+title: 형식 지정자 (c + +) 디버거에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - vs.debug
@@ -28,17 +28,17 @@ helpviewer_keywords:
 - format specifiers, debugger
 - debugger, format specifiers recognized by
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
-caps.latest.revision: 
+caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - cplusplus
 ms.openlocfilehash: 5b7efb90e6f2a2489fffb890c664393252021e6f
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서의 c + +에서 형식 지정자
 형식 지정자를 사용하여 **조사식** 창에 값이 표시되는 형식을 변경할 수 있습니다.  
@@ -80,15 +80,15 @@ int main() {
 |**sb**|const char * 문자열 (인용 부호 제외)|\<위치 > "hello world"|hello world|  
 |s8|UTF-8 문자열|\<위치 > "이것이 u t F-8 커피 컵 â˜•"|"This is u t F-8 커피 컵 ☕"|
 |**s8b**|U t F-8 문자열 (인용 부호 제외)|\<위치 > "hello world"|hello world|  
-|su|유니코드 (utf-16 인코딩) 문자열|\<위치 > L "hello world"|L"hello world"<br /><br /> u"hello world"|  
-|sub|유니코드 (utf-16 인코딩) 문자열 (인용 부호 제외)|\<위치 > L "hello world"|hello world|  
-|bstr|BSTR 문자열|\<위치 > L "hello world"|L"hello world"|  
-|env|환경 블록 (이중 null 종료 문자열)|\<위치 > L "=:: =::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
+|su|유니코드 (utf-16 인코딩) 문자열|\<location> L"hello world"|L"hello world"<br /><br /> u"hello world"|  
+|sub|유니코드 (utf-16 인코딩) 문자열 (인용 부호 제외)|\<location> L"hello world"|hello world|  
+|bstr|BSTR 문자열|\<location> L"hello world"|L"hello world"|  
+|env|환경 블록 (이중 null 종료 문자열)|\<location> L"=::=::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
 |**s32**|UTF-32 문자열|\<위치 > U "hello world"|u"hello world"|  
 |**s32b**|UTF-32 문자열(따옴표 제외)|\<위치 > U "hello world"|hello world|  
 |**en**|enum|Saturday(6)|토요일|  
-|**hv**|포인터 유형 - 검사 중인 포인터 값이 배열의 힙 할당 결과임을 나타냅니다(예: `new int[3]`).|\<location>{\<first member>}|\<위치 > {\<첫 번째 멤버 >, \<두 번째 멤버 >, …}|  
-|**na**|개체에 대한 포인터의 메모리 주소를 표시하지 않습니다.|\<location>, {member=value...}|{멤버 = value …}|  
+|**hv**|포인터 유형 - 검사 중인 포인터 값이 배열의 힙 할당 결과임을 나타냅니다(예: `new int[3]`).|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|  
+|**na**|개체에 대한 포인터의 메모리 주소를 표시하지 않습니다.|\<location>, {member=value...}|{member=value...}|  
 |**nd**|파생된 클래스는 무시하고 기본 클래스 정보만 표시합니다.|`(Shape*) square` 에는 기본 클래스 및 파생 클래스 정보가 포함됩니다.|기본 클래스 정보만 표시합니다.|  
 |hr|HRESULT 또는 Win32 오류 코드. 이제 디버거가 자동으로 HRESULT를 디코딩하므로 해당 경우에는 이 지정자가 필요하지 않습니다.|S_OK|S_OK|  
 |wc|Window 클래스 플래그|0x0010|WC_DEFAULTCHAR|  
@@ -122,8 +122,8 @@ int main() {
 |**g**|부호 있는 부동 소수점 또는 부호 있는 과학적 표기법 중에서 짧은 형식|(3.0/2.0)|1.5|  
 |c|단일 문자|\<location>|101 'e'|  
 |s|const char*|\<location>|"hello world"|  
-|su|const wchar_t*<br /><br /> char16_t const\*|\<location>|L"hello world"|  
-|sub|const wchar_t*<br /><br /> char16_t const\*|\<location>|hello world|  
+|su|const wchar_t*<br /><br /> const char16_t\*|\<location>|L"hello world"|  
+|sub|const wchar_t*<br /><br /> const char16_t\*|\<location>|hello world|  
 |s8|const char*|\<location>|"hello world"|  
 |hr|HRESULT 또는 Win32 오류 코드. 이제 디버거가 자동으로 HRESULT를 디코딩하므로 해당 경우에는 이 지정자가 필요하지 않습니다.|S_OK|S_OK|  
 |wc|Window 클래스 플래그|0x00000040,|WC_DEFAULTCHAR|  

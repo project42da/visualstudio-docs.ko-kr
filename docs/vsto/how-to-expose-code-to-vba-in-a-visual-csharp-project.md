@@ -1,12 +1,12 @@
 ---
-title: "방법: Visual C# 프로젝트에서 VBA로 코드 노출 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual C# 프로젝트에서 VBA로 코드 노출 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 dev_langs:
 - VB
@@ -22,10 +22,10 @@ manager: ghogen
 ms.workload:
 - office
 ms.openlocfilehash: 1b750137a52d30688f69c825f83f72c7cbeebe45
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-c-project"></a>방법: Visual C# 프로젝트에서 VBA로 코드 노출
   두 가지 유형의 서로 상호 작용 하는 코드를 원하는 경우 Visual C# 프로젝트에서 Visual Basic에서 VBA 코드에 대 한 코드를 노출할 수 있습니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="exposing-code-in-a-visual-c-project"></a>Visual C# 프로젝트의 코드 노출  
  Visual C# 프로젝트에서 코드를 호출 하는 VBA 코드를 사용 하려면 COM에 노출 되기 때문에 코드를 수정 하 고 다음 설정의 **ReferenceAssemblyFromVbaProject** 속성을 **True** 디자이너에서 합니다.  
   
- VBA에서 Visual C# 프로젝트에서 메서드를 호출 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: VBA에서 Visual C# 35;에서 코드 호출 프로젝트](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)합니다.  
+ VBA에서 Visual C# 프로젝트에서 메서드를 호출 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: Visual C에서 vba의 코드 호출&#35; 프로젝트](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)합니다.  
   
 #### <a name="to-expose-code-in-a-visual-c-project-to-vba"></a>에 Visual C# 프로젝트에서 VBA로 코드 노출 하려면  
   
@@ -108,8 +108,8 @@ ms.lasthandoff: 02/09/2018
 ## <a name="see-also"></a>참고 항목  
  [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
- [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
- [연습: VBA에서 Visual C# 35; 호출 코드 프로젝트](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
+ [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)   
+ [연습: Visual C에서 vba의 코드 호출&#35; 프로젝트](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
  [방법: Visual Basic 프로젝트에서 VBA로 코드 노출](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)  
   
   

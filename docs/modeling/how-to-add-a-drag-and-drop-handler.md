@@ -1,9 +1,9 @@
 ---
-title: "방법: 끌어서 놓기 처리기를 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 끌어서 놓기 처리기를 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 61eff22f3a666f067f4a1eddd8ecab84429fea21
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-add-a-drag-and-drop-handler"></a>방법: 끌어서 놓기 처리기 추가
 사용자가 다른 다이어그램이나 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]의 다른 부분에서 다이어그램으로 항목을 끌 수 있도록 DSL에 끌어서 놓기 이벤트용 처리기를 추가할 수 있습니다. 또한 두 번 클릭 등의 이벤트용 처리기도 추가할 수 있습니다. 끌어서 놓기 및 두 번 클릭 처리기 라고 함께 *제스처 처리기*합니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [마우스 동작을 사용 하 여: 구획 항목을 끌어](#mouseActions)합니다. 이 샘플에서는 셰이프 필드의 마우스 작업을 차단 하는 하위 수준의 처리기를 보여 줍니다. 사용자는 이 예를 토대로 마우스로 항목을 끌어 구획에서 항목 순서를 변경할 수 있습니다.  
   
-##  <a name="overrideShapeElement"></a>ShapeElement 메서드를 재정의 하 여 제스처 처리기 정의  
+##  <a name="overrideShapeElement"></a> ShapeElement 메서드를 재정의 하 여 제스처 처리기 정의  
  DSL 프로젝트에 새 코드 파일을 추가합니다. 일반적으로 제스처 처리기의 경우 최소한 다음 `using` 문을 포함해야 합니다.  
   
 ```csharp  
@@ -64,7 +64,7 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A>-이 메서드는 해제 하는 경우 사용자가 마우스 단추 마우스 포인터가 모양 또는 다이어그램,이 위에 있을 때 경우 `OnDragOver(DiagramDragEventArgs e)` 이전에 설정한 `e.Effect` 이외의 다른 값으로 `None`합니다.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDragDrop%2A> -이 메서드는 해제 하는 경우 사용자가 마우스 단추 마우스 포인터가 모양 또는 다이어그램,이 위에 있을 때 경우 `OnDragOver(DiagramDragEventArgs e)` 이전에 설정한 `e.Effect` 이외의 다른 값으로 `None`합니다.  
   
     ```csharp  
     public override void OnDragDrop(DiagramDragEventArgs e)  
@@ -81,13 +81,13 @@ using System.Linq;
   
     ```  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A>-이 메서드는 모양 또는 다이어그램을 두 번 클릭할 때 호출 됩니다.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.OnDoubleClick%2A> -이 메서드는 모양 또는 다이어그램을 두 번 클릭할 때 호출 됩니다.  
   
      자세한 내용은 참조 [하는 방법: 도형 또는 Decorator 클릭 가로채기](../modeling/how-to-intercept-a-click-on-a-shape-or-decorator.md)합니다.  
   
  끌어 온 항목이 적절한지 여부를 확인하도록 `IsAcceptableDropItem(e)`을 정의하고 항목을 놓을 때 모델을 업데이트하도록 ProcessDragDropItem(e)을 정의합니다. 이러한 메서드는 먼저 이벤트 인수에서 항목을 추출해야 합니다. 작업을 수행 하는 방법에 대 한 정보를 참조 하십시오. [를 끌어 온된 항목에 대 한 참조를 가져오는 방법을](#extracting)합니다.  
   
-##  <a name="MEF"></a>MEF를 사용 하 여 제스처 처리기 정의  
+##  <a name="MEF"></a> MEF를 사용 하 여 제스처 처리기 정의  
  MEF(Managed Extensibility Framework)를 사용하면 최소한의 구성으로 설치 가능한 구성 요소를 정의할 수 있습니다. 자세한 내용은 [MEF(관리되는 확장성 프레임워크 개요)](/dotnet/framework/mef/index)를 참조하십시오.  
   
 #### <a name="to-define-a-mef-gesture-handler"></a>MEF 제스처 처리기를 정의하려면  
@@ -130,22 +130,22 @@ using System.Linq;
   
 3.  대상 모양, 연결선 또는 다이어그램 클래스에 대해 partial 클래스 정의를 추가하고 `IsAcceptableDropItem()` 및 `ProcessDragDropItem()` 메서드를 정의합니다. 이러한 메서드는 먼저 이벤트 인수에서 끈 항목을 추출해야 합니다. 자세한 내용은 참조 [를 끌어 온된 항목에 대 한 참조를 가져오는 방법을](#extracting)합니다.  
   
-##  <a name="extracting"></a>끈된 항목을 디코드 하는 방법  
+##  <a name="extracting"></a> 끈된 항목을 디코드 하는 방법  
  사용자가 다이어그램으로 항목을 끌거나 다이어그램의 부분 간에 항목을 끌 때는 끌어 놓는 항목에 대한 정보를 `DiagramDragEventArgs`에서 사용할 수 있습니다. 끌기 작업은 화면에 표시된 임의의 개체에서 시작되었을 수 있으므로 다양한 형식 중 하나로 데이터를 사용할 수 있습니다. 코드는 처리 가능한 형식을 인식해야 합니다.  
   
  끌기 소스 정보를 사용할 수 있는 형식을 검색하려면 `OnDragOver()` 또는 `CanDragDrop()` 진입 위치에 중단점을 설정하여 디버깅 모드에서 코드를 실행합니다. `DiagramDragEventArgs` 매개 변수의 값을 검사합니다. 정보는 두 가지 형식으로 제공됩니다.  
   
--   <xref:System.Windows.Forms.IDataObject>  `Data`-이 속성에 여러 가지 형식 일반적으로 소스 개체의 serialize 된 버전을 전달합니다. 이 속성의 가장 유용한 기능은 다음과 같습니다.  
+-   <xref:System.Windows.Forms.IDataObject>  `Data` -이 속성에 여러 가지 형식 일반적으로 소스 개체의 serialize 된 버전을 전달합니다. 이 속성의 가장 유용한 기능은 다음과 같습니다.  
   
     -   diagramEventArgs.Data.GetDataFormats()-끌어 온된 개체를 디코딩할 수 있는 형식이 나와 있습니다. 예를 들어 사용자가 바탕 화면에서 파일을 끄는 경우 사용 가능한 형식에는 파일 이름("`FileNameW`")이 포함됩니다.  
   
-    -   `diagramEventArgs.Data.GetData(format)`-지정된 된 형식으로 끌어 온된 개체를 디코딩합니다. 적절한 형식으로 개체를 캐스팅합니다. 예를 들면 다음과 같습니다.  
+    -   `diagramEventArgs.Data.GetData(format)` -지정된 된 형식으로 끌어 온된 개체를 디코딩합니다. 적절한 형식으로 개체를 캐스팅합니다. 예를 들면 다음과 같습니다.  
   
          `string fileName = diagramEventArgs.Data.GetData("FileNameW") as string;`  
   
          소스의 모델 버스 참조와 같은 개체를 고유한 사용자 지정 형식으로 전송할 수도 있습니다. 자세한 내용은 참조 [모델 버스 참조 드래그 앤 드롭에서 전송 하는 방법을](#mbr)합니다.  
   
--   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>`Prototype` -사용자가 항목을 끌어 놓을 DSL 또는 UML 모델에서이 속성을 사용 합니다. 요소 그룹 프로토타입은 하나 이상의 개체, 링크 및 해당 속성 값을 포함하며 붙여넣기 작업과 도구 상자에서 요소를 추가할 때도 사용됩니다. 프로토타입에서는 개체와 해당 형식을 GUID로 식별합니다. 예를 들어 다음 코드를 사용하면 UML 다이어그램 또는 UML 모델 탐색기에서 클래스 요소를 끌어 놓을 수 있습니다.  
+-   <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype> `Prototype` -사용자가 항목을 끌어 놓을 DSL 또는 UML 모델에서이 속성을 사용 합니다. 요소 그룹 프로토타입은 하나 이상의 개체, 링크 및 해당 속성 값을 포함하며 붙여넣기 작업과 도구 상자에서 요소를 추가할 때도 사용됩니다. 프로토타입에서는 개체와 해당 형식을 GUID로 식별합니다. 예를 들어 다음 코드를 사용하면 UML 다이어그램 또는 UML 모델 탐색기에서 클래스 요소를 끌어 놓을 수 있습니다.  
   
     ```csharp  
     private bool IsAcceptableDropItem(DiagramDragEventArgs e)  
@@ -162,7 +162,7 @@ using System.Linq;
   
  `DiagramDragEventArgs`에는 현재 마우스 포인터 위치와 사용자가 Ctrl, Alt, Shift 키를 누르고 있는지 여부를 나타내는 속성도 있습니다.  
   
-##  <a name="getOriginal"></a>끌어 온 요소의 원래 하는 방법  
+##  <a name="getOriginal"></a> 끌어 온 요소의 원래 하는 방법  
  이벤트 인수의 `Data` 및 `Prototype` 속성은 끌어 온 모양의 참조만을 포함합니다. 일반적으로는 특정 방식으로 프로토타입에서 파생되는 대상 DSL에 개체를 만들려면 파일 내용을 읽거나 모양이 표시하는 모델 요소로 이동하는 등의 방법으로 원본에 액세스해야 합니다.  Visual Studio ModelBus를 사용하면 원본에 액세스할 수 있습니다.  
   
 ### <a name="to-prepare-a-dsl-project-for-model-bus"></a>ModelBus용 DSL 프로젝트를 준비하려면  
@@ -175,7 +175,7 @@ using System.Linq;
   
     3.  클릭 **모든 템플릿 변형** 는 솔루션을 다시 빌드합니다.  
   
-###  <a name="mbr"></a>개체 소스 DSL에서 보낼  
+###  <a name="mbr"></a> 개체 소스 DSL에서 보낼  
   
 1.  ElementOperations 서브클래스에서 `Copy()`를 재정의하여 MBR(모델 버스 참조)을 IDataObject로 인코딩하도록 지정합니다. 사용자가 소스 다이어그램에서 끌기를 시작하면 이 메서드가 호출됩니다. 그러면 사용자가 대상 다이어그램에 개체를 놓을 때 인코딩된 MBR을 IDataObject에서 사용할 수 있습니다.  
   
@@ -335,7 +335,7 @@ using System.Linq;
   
     ```  
   
-##  <a name="mouseActions"></a>구획 항목을 끌어 마우스 동작을 사용 하 여:  
+##  <a name="mouseActions"></a> 구획 항목을 끌어 마우스 동작을 사용 하 여:  
  셰이프 필드의 마우스 작업을 차단 하는 처리기를 작성할 수 있습니다. 사용자는 다음 예를 토대로 마우스로 항목을 끌어 구획에서 항목 순서를 변경할 수 있습니다.  
   
  이 예제를 빌드하려면를 사용 하 여 솔루션을 만듭니다는 **클래스 다이어그램** 솔루션 템플릿을 합니다. 이때 코드 파일과 다음 코드를 추가하고 네임스페이스를 실제 네임스페이스와 동일하게 조정합니다.  

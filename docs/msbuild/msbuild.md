@@ -1,27 +1,27 @@
 ---
 title: MSBuild | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - MSBuild, about MSBuild
 - MSBuild, overview
 ms.assetid: e39f13f7-1e1d-4435-95ca-0c222bca071c
-caps.latest.revision: 
+caps.latest.revision: 59
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: f7fd044ccc50d5c988ae121a66a362158a750e17
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="msbuild"></a>MSBuild
 [!INCLUDE[vstecmsbuildengine](../msbuild/includes/vstecmsbuildengine_md.md)]은 응용 프로그램을 빌드하기 위한 플랫폼입니다. MSBuild라고도 하는 이 엔진은 빌드 플랫폼에서 소프트웨어를 처리하고 빌드하는 방법을 제어하는 프로젝트 파일에 대한 XML 스키마를 제공합니다. Visual Studio는 MSBuild를 사용하지만 Visual Studio에 종속되지 않습니다. 프로젝트 또는 솔루션 파일에서 msbuild.exe를 호출하여 Visual Studio가 설치되지 않은 환경에서 제품을 조정하고 빌드할 수 있습니다.  
@@ -88,7 +88,7 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
 >  프로젝트를 다운로드하기 전에 코드를 신뢰할 수 있는지 확인하십시오.  
   
 ##  <a name="BKMK_ProjectFile"></a> 프로젝트 파일  
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 간단하고 확장 가능한 XML 기반 프로젝트 파일 형식을 사용합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일 형식을 통해 개발자는 빌드할 항목뿐만 아니라 항목을 다른 운영 체제 및 구성에 대해 빌드하는 방법을 설명합니다. 또한 프로젝트 파일 형식을 통해 개발자는 개별 파일로 분해될 수 있는 다시 사용 가능한 빌드 규칙을 작성하여 해당 제품 내의 여러 프로젝트에서 일관성 있는 빌드를 수행할 수 있습니다.  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 간단하고 확장 가능한 XML 기반 프로젝트 파일 형식을 사용합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일 형식을 통해 개발자는 빌드할 항목뿐만 아니라 항목을 다른 운영 체제 및 구성에 대해 빌드하는 방법을 설명합니다. 또한 프로젝트 파일 형식을 통해 개발자는 개별 파일로 분해될 수 있는 다시 사용 가능한 빌드 규칙을 작성하여 해당 제품 내의 여러 프로젝트에서 일관성 있는 빌드를 수행할 수 있습니다.  
   
  다음 단원에서는 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일 형식의 몇 가지 기본 요소에 대해 설명합니다. 기본 프로젝트 파일을 만드는 방법에 대한 자습서는 [연습: 처음부터 새로 MSBuild 프로젝트 파일 만들기](../msbuild/walkthrough-creating-an-msbuild-project-file-from-scratch.md)를 참조하세요.  
   
@@ -141,7 +141,7 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
   
  작업의 실행 논리는 관리 코드로 작성되며 [UsingTask](../msbuild/usingtask-element-msbuild.md) 요소를 사용하여 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에 매핑됩니다. <xref:Microsoft.Build.Framework.ITask> 인터페이스를 구현하는 관리되는 형식을 만들어 자체의 작업을 작성할 수 있습니다. 작업을 작성하는 방법에 대한 자세한 내용은 [작업 작성](../msbuild/task-writing.md)을 참조하세요.  
   
- [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 요구 사항에 맞게 수정할 수 있는 일반 작업이 포함되어 있습니다.  예를 들어 파일을 복사하는 [Copy](../msbuild/copy-task.md), 디렉터리를 만드는 [MakeDir](../msbuild/makedir-task.md), Visual C# 소스 코드 파일을 컴파일하는 [Csc](../msbuild/csc-task.md) 등이 있습니다. 사용할 수 있는 작업 및 사용법 정보에 대한 전체 목록은 [작업 참조](../msbuild/msbuild-task-reference.md)를 참조하세요.  
+ [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]에는 요구 사항에 맞게 수정할 수 있는 일반 작업이 포함되어 있습니다.  예를 들어 파일을 복사하는 [Copy](../msbuild/copy-task.md), 디렉터리를 만드는 [MakeDir](../msbuild/makedir-task.md), Visual C# 소스 코드 파일을 컴파일하는 [Csc](../msbuild/csc-task.md) 등이 있습니다. 사용할 수 있는 작업 및 사용법 정보에 대한 전체 목록은 [작업 참조](../msbuild/msbuild-task-reference.md)를 참조하세요.  
   
  작업 이름을 포함하는 요소를 [Target](../msbuild/target-element-msbuild.md) 요소의 자식으로 만들어 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일에서 작업을 실행합니다. 작업은 일반적으로 요소 특성으로 전달되는 매개 변수를 받아들입니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 속성과 항목은 모두 매개 변수로 사용할 수 있습니다. 예를 들어 다음 코드에서는 [MakeDir](../msbuild/makedir-task.md) 작업을 호출하고 앞의 예제에서 선언한 `BuildDir` 속성값을 해당 작업으로 전달합니다.  
   
@@ -170,7 +170,7 @@ MSBuild.exe MyProj.proj /property:Configuration=Debug
  빌드 오류, 경고 및 메시지를 콘솔이나 다른 출력 장치에 기록할 수 있습니다. 자세한 내용은 [빌드 로그 가져오기](../msbuild/obtaining-build-logs-with-msbuild.md) 및 [MSBuild의 로그인](../msbuild/logging-in-msbuild.md)을 참조하세요.  
   
 ##  <a name="BKMK_VisualStudio"></a> Visual Studio에서 MSBuild 사용  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일 형식을 사용하여 관리되는 프로젝트에 대한 빌드 정보를 저장합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인터페이스를 사용하여 추가되거나 변경된 프로젝트 설정은 모든 프로젝트에 대해 생성되는 .*proj 파일에 반영됩니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 관리되는 프로젝트를 로드 및 빌드하기 위해 호스팅된 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 인스턴스를 사용합니다. 즉, 관리되는 프로젝트는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 또는 명령 프롬프트([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]가 설치되지 않은 경우)에서 빌드할 수 있으며 그 결과는 동일합니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일 형식을 사용하여 관리되는 프로젝트에 대한 빌드 정보를 저장합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 인터페이스를 사용하여 추가되거나 변경된 프로젝트 설정은 모든 프로젝트에 대해 생성되는 .*proj 파일에 반영됩니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 관리되는 프로젝트를 로드 및 빌드하기 위해 호스팅된 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 인스턴스를 사용합니다. 즉, 관리되는 프로젝트는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 또는 명령 프롬프트([!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]가 설치되지 않은 경우)에서 빌드할 수 있으며 그 결과는 동일합니다.  
   
  Visual Studio에서 MSBuild를 사용하는 방법에 대한 자습서는 [연습: MSBuild 사용](../msbuild/walkthrough-using-msbuild.md)을 참조하세요.  
   

@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 165f973fa9139f281211e6b01167b3d7044166df
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="idebugeventcallback2"></a>IDebugEventCallback2
 이 인터페이스는 세션 디버그 관리자 (SDM)로 디버그 이벤트를 보내는 디버그 엔진 (DE)에 의해 사용 됩니다.  
@@ -35,7 +35,7 @@ IDebugEventCallback2 : IUnknown
 ```  
   
 ## <a name="notes-for-implementers"></a>구현자 참고 사항  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]디버그 엔진에서 이벤트를 받도록이 인터페이스를 구현 합니다.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 디버그 엔진에서 이벤트를 받도록이 인터페이스를 구현 합니다.  
   
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  SDM 호출할 때 일반적으로 디버그 엔진이이 인터페이스는 [연결](../../../extensibility/debugger/reference/idebugprogram2-attach.md), [연결](../../../extensibility/debugger/reference/idebugengine2-attach.md), 또는 [LaunchSuspended](../../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md)합니다. 디버그 엔진은 SDM를 호출 하 여 이벤트를 보냅니다 [이벤트](../../../extensibility/debugger/reference/idebugeventcallback2-event.md)합니다.  
@@ -57,7 +57,7 @@ IDebugEventCallback2 : IUnknown
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

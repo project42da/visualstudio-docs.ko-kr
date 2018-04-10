@@ -1,12 +1,12 @@
 ---
-title: "CA1036: 비교 가능한 형식에 메서드를 재정의 하십시오. | Microsoft Docs"
-ms.custom: 
+title: 'CA1036: 비교 가능한 형식에 메서드를 재정의 하십시오. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - CA1036
@@ -15,17 +15,17 @@ helpviewer_keywords:
 - OverrideMethodsOnComparableTypes
 - CA1036
 ms.assetid: 2329f844-4cb8-426d-bee2-cd065d1346d0
-caps.latest.revision: 
+caps.latest.revision: 21
 author: gewarren
 ms.author: gewarren
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: d5e366144a70e25fc805d63ddcc7664a60df4303
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="ca1036-override-methods-on-comparable-types"></a>CA1036: 비교 가능한 형식에 메서드를 재정의하십시오.
 |||  
@@ -57,12 +57,12 @@ ms.lasthandoff: 02/01/2018
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  누락 된 연산자에 의해 위반이 발생 하 고 선택한 프로그래밍 언어는 Visual Basic의 경우와 연산자 오버 로드를 지원 하지 하는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다. Op_Equality 연산자를 구현 하는 경우 의미가 없으며 응용 프로그램 컨텍스트에 이외의 같음 연산자에서 발생할 경우이 규칙에 대 한 경고를 표시 하지 않아도 안전 이기도 합니다. 그러나 해야 항상 op_Equality 통해 및 Object.Equals를 재정의 하는 경우 연산자 = = 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에는 올바르게 구현 하는 형식이 포함 되어 <xref:System.IComparable>합니다. 관련 된 다양 한 규칙을 만족 하는 메서드를 식별 하는 코드 주석을 <xref:System.Object.Equals%2A> 및 <xref:System.IComparable> 인터페이스입니다.  
   
  [!code-csharp[FxCop.Design.IComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 응용 프로그램의 동작을 테스트는 <xref:System.IComparable> 앞에 나온 구현 합니다.  
   
  [!code-csharp[FxCop.Design.TestIComparable#1](../code-quality/codesnippet/CSharp/ca1036-override-methods-on-comparable-types_2.cs)]  

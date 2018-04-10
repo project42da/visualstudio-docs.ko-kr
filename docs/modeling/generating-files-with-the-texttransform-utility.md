@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 5ecc5af3c37889bc79dc5978c33caf8249433978
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="generate-files-with-the-texttransform-utility"></a>TextTransform 유틸리티를 사용 하 여 파일을 생성 합니다.
 
@@ -58,7 +58,7 @@ TextTransform [<options>] <templateName>
 |**-r** \<assembly>|컴파일 및 텍스트 템플릿을 실행에 사용 되는 어셈블리입니다.|
 |**-u** \<namespace>|서식 파일을 컴파일하는 데 사용 되는 네임 스페이스입니다.|
 |**-I** \<includedirectory>|지정 된 텍스트 서식 파일에 포함 된 텍스트 템플릿을 포함 하는 디렉터리입니다.|
-|**-P** \<참조 경로 >|텍스트 템플릿 내에 지정 된 어셈블리 또는 사용 하 여 검색 하려면 디렉터리는 **-r** 옵션입니다.<br /><br /> 예를 들어 Visual Studio API에 대 한 사용 되는 어셈블리를 포함 하려면 사용<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
+|**-P** \<referencepath>|텍스트 템플릿 내에 지정 된 어셈블리 또는 사용 하 여 검색 하려면 디렉터리는 **-r** 옵션입니다.<br /><br /> 예를 들어 Visual Studio API에 대 한 사용 되는 어셈블리를 포함 하려면 사용<br /><br /> `-P "%VSSHELLFOLDER%\Common7\IDE\PublicAssemblies"`|
 |**-dp** \<processorName>!\<className>!\<assemblyName&#124;codeBase>|이름, 전체 형식 이름 및 텍스트 템플릿 내에서 사용자 지정 지시문 처리를 사용할 수 있는 지시문 프로세서의 어셈블리입니다.|
 |**-a** [processorName]![directiveName]!\<parameterName>!\<parameterValue>|지시문 프로세서에 대 한 매개 변수 값을 지정 합니다. 매개 변수 이름 및 값을 지정 하면 매개 변수가 모든 지시문 프로세서에 사용할 수 있는 됩니다. 지시문 프로세서를 지정 하면 지정 된 프로세서 수입니다. 지시문 이름을 지정 하면 지정된 된 지시문을 처리 되는 경우에 사용할 수는 매개 변수는.<br /><br /> 매개 변수 값에 지시문 프로세서 또는 텍스트 서식 파일에서 액세스를 사용 하 여 [ITextTemplatingEngineHost.ResolveParameterValue](https://msdn.microsoft.com/library/microsoft.visualstudio.texttemplating.itexttemplatingenginehost.resolveparametervalue.aspx)합니다. 텍스트 템플릿을 포함 `hostspecific` template 지시문에에서 메시지를 호출 하 고 `this.Host`합니다. 예를 들어:<br /><br /> `<#@template language="c#" hostspecific="true"#> [<#= this.Host.ResolveParameterValue("", "", "parameterName") #>]`.<br /><br /> 항상 입력의 '!' 옵션 프로세서와 지시문 이름은 생략 한 경우에 표시 합니다. 예를 들어:<br /><br /> `-a !!param!value`|
 |**-h**|도움말을 제공 합니다.|

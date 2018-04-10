@@ -1,32 +1,32 @@
 ---
-title: "AsyncTaskMethodBuilder&lt;TResult&gt;합니다. ObjectIdForDebugger 속성 | Microsoft Docs"
-ms.custom: 
+title: AsyncTaskMethodBuilder&lt;TResult&gt;합니다. ObjectIdForDebugger 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - ObjectForDebugger property, AsyncTaskMethodBuilder<TResult> structure [.NET Framework debug engines]
 ms.assetid: 060b857f-daf5-43ea-bb51-abf9368e1e91
-caps.latest.revision: 
+caps.latest.revision: 3
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: a2b4a1645ed229ba47a6eea952094f76b571917f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="asynctaskmethodbuilderlttresultgtobjectidfordebugger-property"></a>AsyncTaskMethodBuilder&lt;TResult&gt;합니다. ObjectIdForDebugger 속성
 고유 하 게 식별 하 고 디버거가이 작성기를 사용할 수 있는 개체를 가져옵니다.  
   
- **Namespace:**<xref:System.Runtime.CompilerServices?displayProperty=fullName>  
+ **Namespace:** <xref:System.Runtime.CompilerServices?displayProperty=fullName>  
   
  **어셈블리:** (mscorlib.dll)에 mscorlib  
   

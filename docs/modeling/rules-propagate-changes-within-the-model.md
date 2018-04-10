@@ -1,9 +1,9 @@
 ---
-title: "규칙은 모델 내에서 변경 내용을 전파 | Microsoft Docs"
-ms.custom: 
+title: 규칙은 모델 내에서 변경 내용을 전파 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: af086275f641e3237f8d22308c960ad30240b647
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>규칙으로 모델 내부의 변경 내용 전파
 시각화 및 모델링 SDK (VMSDK)에서 다른 요소에서 변경 전파 하는 저장소 규칙을 만들 수 있습니다. 저장소에 있는 모든 요소를 변경 하면 규칙 예정 가장 바깥쪽 트랜잭션이 커밋될 때 일반적으로 실행할 수입니다. 다양 한 유형의 여러 종류의 요소를 추가 또는 삭제와 같은 이벤트에 대 한 규칙 있습니다. 요소, 도형 또는 다이어그램의 특정 형식에 규칙을 연결할 수 있습니다. 규칙에 의해 정의 된 여러 기본 제공 기능: 다이어그램 모델 변경 될 때 업데이트 되도록 규칙을 확인 하는 예를 들어 있습니다. 사용자 고유의 규칙을 추가 하 여 도메인 특정 언어를 사용자 지정할 수 있습니다.  
@@ -163,7 +163,7 @@ namespace ExampleNamespace
   
 7.  다른 대안을 고려한 후에 규칙을 사용 합니다. 예를 들어 값이 변경 될 때 속성을 업데이트 하려는 경우에 계산 된 속성을 사용 하는 것이 좋습니다. 크기 또는 도형의 위치를 제한 하려는 경우 사용 하 여 한 `BoundsRule`합니다. 속성 값의 변경에 응답 하려면 추가 `OnValueChanged` 처리기 속성입니다. 자세한 내용은 참조 [에 대응 하 고 변경 내용을 전파](../modeling/responding-to-and-propagating-changes.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 개의 요소를 연결 하는 도메인 관계를 인스턴스화할 때 속성을 업데이트 합니다. 뿐만 아니라 사용자가 만들 때 링크를 다이어그램에서 뿐만 아니라 프로그램 코드에 링크를 만드는 경우이 규칙이 트리거됩니다.  
   
  이 예제를 테스트 하려면 솔루션 작업 흐름 템플릿을 사용 하 여 DSL 만들고 Dsl 프로젝트의 파일에 다음 코드를 삽입 합니다. 빌드 및 솔루션을 실행 하 고 디버깅 프로젝트에서 샘플 파일을 엽니다. 메모 모양와 흐름 요소 사이 주석 링크를 그립니다. 주석에서 텍스트에 연결 하는 가장 최근의 요소에 대해 보고 하도록 변경 합니다.  

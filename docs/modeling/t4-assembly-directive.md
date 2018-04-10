@@ -1,9 +1,9 @@
 ---
-title: "T4 Assembly 지시문 | Microsoft Docs"
-ms.custom: 
+title: T4 Assembly 지시문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 9f586931bd14089beca787c24d92bc2605c4d5de
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="t4-assembly-directive"></a>T4 Assembly 지시문
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디자인 타임 텍스트 템플릿에서는 템플릿 코드에 해당 형식이 사용될 수 있도록 `assembly` 지시문이 어셈블리를 로드합니다. 그 효과는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에 어셈블리 참조를 추가하는 것과 비슷합니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
   
 -   어셈블리의 절대 경로  
   
- `$(variableName)` 구문을 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 변수(예: `$(SolutionDir)`)를 참조하고 `%VariableName%`을 사용하여 환경 변수를 참조할 수 있습니다. 예:  
+ `$(variableName)` 구문을 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 변수(예: `$(SolutionDir)`)를 참조하고 `%VariableName%`을 사용하여 환경 변수를 참조할 수 있습니다. 예를 들어:  
   
 ```  
 <#@ assembly name="$(SolutionDir)\MyProject\bin\Debug\SomeLibrary.Dll" #>  
@@ -65,7 +65,7 @@ ms.lasthandoff: 02/09/2018
   
 -   DSL이 들어 있는 어셈블리  
   
-##  <a name="msbuild"></a>MSBuild 및 Visual Studio 모두에서 프로젝트 속성 사용  
+##  <a name="msbuild"></a> MSBuild 및 Visual Studio 모두에서 프로젝트 속성 사용  
  $ (Solutiondir)과 같은 visual Studio 매크로 MSBuild에서 작동 하지 않습니다. 빌드 컴퓨터에서 템플릿을 변형하려는 경우 대신 프로젝트 속성을 사용해야 합니다.  
   
  프로젝트 속성을 정의하기 위해 .csproj 또는 .vbproj 파일을 편집합니다. 이 예제에서는 `myLibFolder`라는 속성을 정의합니다.  

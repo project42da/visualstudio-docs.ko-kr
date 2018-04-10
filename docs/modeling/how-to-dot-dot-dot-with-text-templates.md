@@ -1,9 +1,9 @@
 ---
-title: "... 텍스트 템플릿 사용 하는 방법 | Microsoft Docs"
-ms.custom: 
+title: '... 텍스트 템플릿 사용 하는 방법 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 47824561813dfc422dfb19460f1c90f7ed78d1ad
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to--with-text-templates"></a>텍스트 템플릿 사용 방법
 텍스트 템플릿 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 어떤 종류의 텍스트를 생성 하는 효과적인 방법을 제공 합니다. 텍스트 템플릿 텍스트를 생성 하려면 디자인 타임에 프로젝트 코드의 일부를 생성 하 고 응용 프로그램의 일부로 실행 시 사용할 수 있습니다. 이 항목에서는 가장 자주 요약 "작업 방법...?" 라는 메시지가 표시 질문 합니다.  
@@ -73,14 +73,14 @@ ms.lasthandoff: 02/09/2018
   
 ### <a name="generate-files-from-a-complex-model"></a>복잡 한 모델에서 파일을 생성 합니다.  
   
--   도메인 특정 언어 DSL ()을 나타내는 모델을 만드는 것이 좋습니다. 따라서 훨씬 더 쉽게 작성할 템플릿, 형식 및 모델에 있는 요소의 이름을 반영 하는 속성을 사용 하기 때문에 있습니다. 파일을 구문 분석 또는 XML 노드를 탐색할 필요가 없습니다. 예:  
+-   도메인 특정 언어 DSL ()을 나타내는 모델을 만드는 것이 좋습니다. 따라서 훨씬 더 쉽게 작성할 템플릿, 형식 및 모델에 있는 요소의 이름을 반영 하는 속성을 사용 하기 때문에 있습니다. 파일을 구문 분석 또는 XML 노드를 탐색할 필요가 없습니다. 예를 들어:  
   
      `foreach (Book book in this.Library) { ... }`  
   
      자세한 내용은 참조 [도메인 특정 언어 시작](../modeling/getting-started-with-domain-specific-languages.md) 및 [도메인 특정 언어에서 코드 생성](../modeling/generating-code-from-a-domain-specific-language.md)합니다.  
   
-### <a name="get-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>데이터 가져오기[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
- 제공 하는 서비스를 사용 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 집합에 의해는 `hostSpecific` 특성과 부하는 `EnvDTE` 어셈블리. 예:  
+### <a name="get-data-from-includevsprvscode-qualityincludesvsprvsmdmd"></a>데이터 가져오기 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
+ 제공 하는 서비스를 사용 하려면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 집합에 의해는 `hostSpecific` 특성과 부하는 `EnvDTE` 어셈블리. 예를 들어:  
   
 ```csharp  
 <#@ template hostspecific="true" language="C#" #>  
@@ -101,7 +101,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
   
 ## <a name="more-general-questions"></a>보다 일반적인 질문  
   
-###  <a name="starting"></a>텍스트 템플릿을 작성을 시작 하는 가장 좋은 방법은 무엇입니까?  
+###  <a name="starting"></a> 텍스트 템플릿을 작성을 시작 하는 가장 좋은 방법은 무엇입니까?  
   
 1.  생성된 된 파일의 특정 예제를 작성 합니다.  
   

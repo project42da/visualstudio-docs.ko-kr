@@ -1,9 +1,9 @@
 ---
-title: "T4 텍스트 템플릿 작성 지침 | Microsoft Docs"
-ms.custom: 
+title: T4 텍스트 템플릿 작성 지침 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: accf32ad313cbbfe11c2e85fdfe3101ab428c4a4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 텍스트 템플릿 작성 지침
 다음 일반 지침 프로그램 코드 또는 다른 응용 프로그램 리소스에서 생성 하는 경우 유용할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이들이 하지 규칙 수정 합니다.  
@@ -99,7 +99,7 @@ MyProject
   
  `The total is: <#= ComputeTotal() #>`  
   
- **MyReportText Methods.cs**:  
+ In **MyReportText-Methods.cs**:  
   
  `private string ComputeTotal() { ... }`  
   
@@ -136,7 +136,7 @@ class FabrikamTemplate : MyStandardRunTimeTemplate
  생성 되 고이 정확한 지 확인 하려면 코드 또는 텍스트의 예를 작성 합니다. 그런 다음 해당 확장명.tt을 변경 하 고 증분 방식으로 모델을 참조 하 여 콘텐츠를 수정 하는 코드를 삽입 합니다.  
   
  형식화 된 모델을 사용 하는 것이 좋습니다.  
- 모델에 대 한 XML 또는 데이터베이스 스키마를 만들 수 있지만 도메인 특정 언어 DSL ()을 만들 유용할 수도 있습니다. DSL는 스키마 및 속성의 특성을 나타내는 각 노드를 나타내는 클래스를 생성 하기 쉽습니다. 즉, 비즈니스 모델을 기준으로 프로그래밍할 수 있습니다. 예:  
+ 모델에 대 한 XML 또는 데이터베이스 스키마를 만들 수 있지만 도메인 특정 언어 DSL ()을 만들 유용할 수도 있습니다. DSL는 스키마 및 속성의 특성을 나타내는 각 노드를 나타내는 클래스를 생성 하기 쉽습니다. 즉, 비즈니스 모델을 기준으로 프로그래밍할 수 있습니다. 예를 들어:  
   
 ```  
 Team Members:  

@@ -1,9 +1,9 @@
 ---
-title: "사용자 지정 호스트를 사용 하 여 텍스트 템플릿 처리 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 호스트를 사용 하 여 텍스트 템플릿 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - text templates, in application or VS extension
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: af3e5b50095b30a912f6de7b67ba8a40f99127f8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="processing-text-templates-by-using-a-custom-host"></a>사용자 지정 호스트를 사용하여 텍스트 템플릿 처리
 *텍스트 템플릿 변환* 하나를 처리는 *텍스트 템플릿* 파일 입력 및 출력으로 하는 텍스트 파일을 생성 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서나 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]가 설치된 컴퓨터에서 실행되는 독립 실행형 응용 프로그램에서 텍스트 변환 엔진을 호출할 수 있습니다. 그러나 제공 해야는 *텍스트 템플릿 호스트*합니다. 이 클래스는 템플릿을 환경에 연결하여 어셈블리, 포함 파일 등의 리소스를 찾고 출력 및 오류 메시지를 처리합니다.  
@@ -49,7 +49,7 @@ string output = engine.ProcessTemplate(templateString, host);
   
  호스트는 오류를 기록하고 어셈블리 및 포함 파일에 대한 참조를 확인할 있어야 하며 템플릿이 실행될 수 있는 응용 프로그램 도메인을 제공하고 각 지시문에 적절한 프로세서를 호출할 수 있어야 합니다.  
   
- <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName>에 정의 된 **Microsoft.VisualStudio.TextTemplating.\*합니다. 0 dll**, 및 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> 에 정의 된 **Microsoft.VisualStudio.TextTemplating.Interfaces.\*합니다. 0 dll**합니다.  
+ <xref:Microsoft.VisualStudio.TextTemplating.Engine?displayProperty=fullName> 에 정의 된 **Microsoft.VisualStudio.TextTemplating.\*합니다. 0 dll**, 및 <xref:Microsoft.VisualStudio.TextTemplating.ITextTemplatingEngineHost> 에 정의 된 **Microsoft.VisualStudio.TextTemplating.Interfaces.\*합니다. 0 dll**합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [연습: 사용자 지정 텍스트 템플릿 호스트 만들기](../modeling/walkthrough-creating-a-custom-text-template-host.md)  

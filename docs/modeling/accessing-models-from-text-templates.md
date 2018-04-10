@@ -1,9 +1,9 @@
 ---
-title: "텍스트 템플릿에서 모델에 액세스 | Microsoft Docs"
-ms.custom: 
+title: 텍스트 템플릿에서 모델에 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - text templates, accessing models
@@ -14,10 +14,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 3162350a9afbe7972c4e593049141f533517bdc3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="accessing-models-from-text-templates"></a>텍스트 템플릿에서 모델에 액세스
 텍스트 템플릿을 사용 하 여 보고서 파일, 소스 코드 파일 및 도메인 특정 언어 모델을 기반으로 하는 기타 텍스트 파일을 만들 수 있습니다. 텍스트 템플릿에 대 한 기본 정보에 대 한 참조 [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)합니다. 텍스트 템플릿 DSL를 디버깅할 때 실험적 모드에서 작동 하며 DSL 프로그램이 배포 되는 컴퓨터에도 작동 합니다.  
@@ -64,7 +64,7 @@ Here is a list of elements in the model:
   
 -   코드 조각을 작성 되는 언어는 C#을 이지만 모든 종류의 텍스트를 생성할 수 있습니다. 는 코드를 작성 또는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 속성을 추가 하 여 `language="VB"` 에 `template` 지시문입니다.  
   
--   서식 파일을 디버깅 하려면 추가 `debug="true"` 에 `template` 지시문입니다. 서식 파일의 다른 인스턴스에서 열립니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 예외가 발생 합니다. 코드에서 특정 한 시점에 디버거를 중단 하려는 경우 끝에 구문을 삽입합니다`System.Diagnostics.Debugger.Break();`  
+-   서식 파일을 디버깅 하려면 추가 `debug="true"` 에 `template` 지시문입니다. 서식 파일의 다른 인스턴스에서 열립니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 예외가 발생 합니다. 코드에서 특정 한 시점에 디버거를 중단 하려는 경우 끝에 구문을 삽입합니다 `System.Diagnostics.Debugger.Break();`  
   
      자세한 내용은 참조 [T4 텍스트 템플릿 디버그](../modeling/debugging-a-t4-text-template.md)합니다.  
   
@@ -99,7 +99,7 @@ Here is a list of elements in the model:
   
  오류가 발견 된 오류 창에 보고 됩니다 및 결과 파일에 오류 메시지가 포함 됩니다.  
   
-##  <a name="Multiple"></a>텍스트 템플릿에서 여러 모델에 액세스  
+##  <a name="Multiple"></a> 텍스트 템플릿에서 여러 모델에 액세스  
   
 > [!NOTE]
 >  이 방법을 사용 하면 같은 서식 파일에서 여러 모델을 읽을 수 있지만 ModelBus 참조를 지원 하지 않습니다. ModelBus 참조를 통해 상호 연결 하는 모델, 참조 [텍스트 템플릿에서 Visual Studio ModelBus를 사용 하 여](../modeling/using-visual-studio-modelbus-in-a-text-template.md)합니다.  
@@ -177,7 +177,7 @@ For Each element As ExampleElement In Me.WorkModel.Elements
   
 ```  
   
- `LoopSplitter.tt`호출 `LoopTemplate.t4`, 한 다음 해당 세그먼트에 결과 파일을 분할 합니다. 이 템플릿에 없습니다을 모델링 템플릿인 모델 읽을 때문에 확인 합니다.  
+ `LoopSplitter.tt` 호출 `LoopTemplate.t4`, 한 다음 해당 세그먼트에 결과 파일을 분할 합니다. 이 템플릿에 없습니다을 모델링 템플릿인 모델 읽을 때문에 확인 합니다.  
   
 ```  
 <#@ template hostspecific="true" language="C#" #>  

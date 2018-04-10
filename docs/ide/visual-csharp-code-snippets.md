@@ -1,11 +1,11 @@
 ---
-title: "C# 코드 조각 | Microsoft Docs"
-ms.custom: 
+title: C# 코드 조각 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/05/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - snippets [C#]
@@ -18,10 +18,10 @@ manager: ghogen
 ms.workload:
 - dotnet
 ms.openlocfilehash: 0328ceb6c1420b038ca424c42dd408e36da6f891
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="c-code-snippets"></a>C# 코드 조각
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 02/09/2018
 |using|[using](/dotnet/csharp/language-reference/keywords/using-directive) 지시문을 만듭니다.|네임스페이스(전역 네임스페이스 포함) 내부|
 |while|[while](/dotnet/csharp/language-reference/keywords/while) 루프를 만듭니다.|메서드, 인덱서, 속성 접근자 또는 이벤트 접근자 내부|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [코드 조각 함수](../ide/code-snippet-functions.md)  
 [코드 조각](../ide/code-snippets.md)  

@@ -1,9 +1,9 @@
 ---
-title: "T4 템플릿 지시문 | Microsoft Docs"
-ms.custom: 
+title: T4 템플릿 지시문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 3c4e53c4d123a5a5de493059c68ef09685c903a8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="t4-template-directive"></a>T4 템플릿 지시문
 일반적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] T4 텍스트 템플릿은 템플릿의 처리 방식을 지정하는 `template` 지시문으로 시작합니다. 하나의 텍스트 템플릿 및 템플릿이 포함된 파일에는 템플릿 지시문이 하나만 있어야 합니다.  
@@ -80,7 +80,7 @@ hostspecific="true"
   
  이 속성의 형식이 호스트의 형식에 따라 달라지기 때문에 이 속성은 특정 호스트에서만 작동하는 텍스트 템플릿을 작성하는 경우에만 유용합니다. 적용할 [디자인 타임 템플릿의](../modeling/design-time-code-generation-by-using-t4-text-templates.md), 아닌 [타임 템플릿](../modeling/run-time-text-generation-with-t4-text-templates.md)합니다.  
   
- `hostspecific`이 `true`이고 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 사용하고 있는 경우 `this.Host`를 IServiceProvider로 캐스팅하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 기능에 액세스할 수 있습니다. `Host.ResolvePath(filename)`를 사용하여 프로젝트에서 파일의 절대 경로를 가져올 수도 있습니다. 예:  
+ `hostspecific`이 `true`이고 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 사용하고 있는 경우 `this.Host`를 IServiceProvider로 캐스팅하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 기능에 액세스할 수 있습니다. `Host.ResolvePath(filename)`를 사용하여 프로젝트에서 파일의 절대 경로를 가져올 수도 있습니다. 예를 들어:  
   
 ```csharp  
 <#@ template debug="false" hostspecific="true" language="C#" #>  
@@ -115,7 +115,7 @@ Content of myFile is:
   
  언어를 지정 하는 언어 특성 ([!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)]) 문 및 식 블록의 소스 코드에 대 한 사용 하도록 합니다. 출력이 생성되는 중간 코드 파일에서 이 언어가 사용됩니다. 이 언어는 템플릿에서 생성되는 언어와 관련이 없으며 모든 종류의 텍스트일 수 있습니다.  
   
- 예:  
+ 예를 들어:  
   
 ```vb  
 <#@ template language="VB" #>  

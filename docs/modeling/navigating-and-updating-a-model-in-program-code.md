@@ -1,9 +1,9 @@
 ---
-title: "프로그램 코드 탐색 및 모델에 업데이트 | Microsoft Docs"
-ms.custom: 
+title: 프로그램 코드 탐색 및 모델에 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
@@ -14,10 +14,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 3e5b76c384f92e1b943e0e9e6a522d16b6a6cadc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="navigating-and-updating-a-model-in-program-code"></a>프로그램 코드에서 모델 탐색 및 업데이트
 만들기 및 삭제 모델 요소, 해당 속성을 설정 하 고 만들기 및 요소 간의 연결을 삭제 하는 코드를 작성할 수 있습니다. 트랜잭션 내에서 모든 변경 해야 합니다. 요소는 다이어그램을 볼 경우 다이어그램 됩니다 "수정" 자동으로 트랜잭션이 끝날 때.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/09/2018
   
  [문서 뷰 및 DocData](#docdata)  
   
-##  <a name="example"></a>예제 DSL 정의  
+##  <a name="example"></a> 예제 DSL 정의  
  다음은이 항목의 예제에 대 한 DslDefinition.dsl의 주요 부분입니다.  
   
  ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png "FamilyT_Person")  
@@ -73,7 +73,7 @@ ms.lasthandoff: 02/09/2018
   
  또한 DSL 정의 되어 있는 것과에서 다른 프로젝트에 코드를 작성 하는 경우 Dsl 프로젝트에서 빌드한 어셈블리를 가져올 해야 합니다.  
   
-##  <a name="navigation"></a>모델 탐색  
+##  <a name="navigation"></a> 모델 탐색  
   
 ### <a name="properties"></a>속성  
  DSL 정의에서 정의 하는 도메인 속성에는 프로그램 코드에서 액세스할 수 있는 속성이 됩니다.  
@@ -117,7 +117,7 @@ ms.lasthandoff: 02/09/2018
   
  `foreach (ParentsHaveChildren link in ParentsHaveChildren.GetLinks(henry, edward)) { ... }`  
   
- 링크에 액세스 하기 위한 다른 방법 있습니다. 예:  
+ 링크에 액세스 하기 위한 다른 방법 있습니다. 예를 들어:  
   
  `foreach (ParentsHaveChildren link in     ParentsHaveChildren.GetLinksToChildren(henry)) { ... }`  
   
@@ -140,8 +140,8 @@ ms.lasthandoff: 02/09/2018
   
  `store.ElementDirectory.GetElement(elementId);`  
   
-##  <a name="metadata"></a>클래스 정보 액세스  
- 클래스, 관계 및 DSL 정의의 다른 측면에 대 한 정보를 얻을 수 있습니다. 예:  
+##  <a name="metadata"></a> 클래스 정보 액세스  
+ 클래스, 관계 및 DSL 정의의 다른 측면에 대 한 정보를 얻을 수 있습니다. 예를 들어:  
   
  `DomainClassInfo personClass = henry.GetDomainClass();`  
   
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/09/2018
   
 -   ElementLink-모든 관계는 ElementLinks  
   
-##  <a name="transaction"></a>트랜잭션 내의 변경을 수행합니다  
+##  <a name="transaction"></a> 트랜잭션 내의 변경을 수행합니다  
  프로그램 코드는 저장소에 아무 것도 변경 될 때마다 하나의 트랜잭션으로 수행 해야 것입니다. 이 모든 모델 요소, 관계, 셰이프, 다이어그램 및 해당 속성에 적용 됩니다. 자세한 내용은 <xref:Microsoft.VisualStudio.Modeling.Transaction>을 참조하세요.  
   
  와 트랜잭션을 관리 하는 가장 편리한 방법은 `using` 문 안에 한 `try...catch` 문:  
@@ -194,7 +194,7 @@ catch (Exception ex)
   
  변경 내용을 영구적, 하려면 `Commit` 삭제 하기 전에 트랜잭션. 예외가 발생 하지는 트랜잭션 내부는 저장소 변경 되기 전에 상태로 다시 설정 됩니다.  
   
-##  <a name="elements"></a>모델 요소 만들기  
+##  <a name="elements"></a> 모델 요소 만들기  
  이 예에서는 기존 모델에 요소를 추가 합니다.  
   
 ```  
@@ -227,18 +227,18 @@ using (Transaction t =
   
  이러한 방식으로 요소를 만들 셰이프 (DSL에는 다이어그램) 경우 자동으로 생성 됩니다. 기본 모양, 색 및 기타 기능으로는 자동으로 할당 된 위치에 나타납니다. 참조 하십시오 관련된 셰이프가 표시 되는 위치와 방법을 제어 하려면 [요소를 만들고 해당 모양](#merge)합니다.  
   
-##  <a name="links"></a>관계 링크 만들기  
+##  <a name="links"></a> 관계 링크 만들기  
  예제 DSL 정의에 정의 된 두 개의 관계가 있습니다. 각 관계를 정의 *역할 속성* 관계의 양쪽 끝 클래스에 있습니다.  
   
  세 가지 방법으로 관계의 인스턴스를 만들 수 있습니다. 이러한 세 가지 메서드는 각각 동일한 영향을 미칩니다.  
   
--   소스 역할 수행자의 속성을 설정 합니다. 예:  
+-   소스 역할 수행자의 속성을 설정 합니다. 예를 들어:  
   
     -   `familyTree.People.Add(edward);`  
   
     -   `edward.Parents.Add(henry);`  
   
--   대상 역할 수행자의 속성을 설정 합니다. 예:  
+-   대상 역할 수행자의 속성을 설정 합니다. 예를 들어:  
   
     -   `edward.familyTreeModel = familyTree;`  
   
@@ -248,7 +248,7 @@ using (Transaction t =
   
          이 역할의 복합성은 `0..*`이므로 해당 컬렉션에 추가 합니다.  
   
--   관계의 인스턴스를 명시적으로 생성 합니다. 예:  
+-   관계의 인스턴스를 명시적으로 생성 합니다. 예를 들어:  
   
     -   `FamilyTreeHasPeople edwardLink = new FamilyTreeHasPeople(familyTreeModel, edward);`  
   
@@ -258,7 +258,7 @@ using (Transaction t =
   
  이러한 방식으로 요소를 만들 때 커넥터 다이어그램에 자동으로 만들어집니다 했으나 기본 모양, 색 및 기타 기능입니다. 참조 관련된 된 커넥터를 만드는 방법을 제어 하려면 [요소를 만들고 해당 모양](#merge)합니다.  
   
-##  <a name="deleteelements"></a>요소 삭제  
+##  <a name="deleteelements"></a> 요소 삭제  
  요소를 호출 하 여 삭제 `Delete()`:  
   
  `henry.Delete();`  
@@ -281,7 +281,7 @@ using (Transaction t =
   
  경우에 따라 삭제 전파 하 여 삭제 하려는 요소 또는 요소에 한 잠금 상태에 따라 금지 됩니다. 사용할 수 있습니다 `element.CanDelete()` 에 요소를 삭제할 수 있는지 여부를 확인 합니다.  
   
-##  <a name="deletelinks"></a>관계 링크 삭제  
+##  <a name="deletelinks"></a> 관계 링크 삭제  
  역할 속성에서 요소를 제거 하 여 관계 링크를 삭제할 수 있습니다.  
   
  `henry.Children.Remove(edward); // or:`  
@@ -296,11 +296,11 @@ using (Transaction t =
   
  역할에는 복합성이 0..1 또는 1.. 1 인, 경우 설정할 수 있습니다 `null`, 또는 다른 값:  
   
- `edward.FamilyTreeModel = null;`또는:  
+ `edward.FamilyTreeModel = null;` 또는:  
   
  `edward.FamilyTreeModel = anotherFamilyTree;`  
   
-##  <a name="reorder"></a>관계의 링크를 다시 정렬  
+##  <a name="reorder"></a> 관계의 링크를 다시 정렬  
  특정 관계는이 원본 또는 대상으로 특정 모델 요소를 링크 특정 순서가 있어야 합니다. 추가 된 순서에 나타납니다. 예를 들어이 문은 동일한 순서로 자식을 양보할 항상:  
   
  `foreach (Person child in henry.Children) ...`  
@@ -317,12 +317,12 @@ using (Transaction t =
   
  `link.MoveBefore(role, nextLink);`  
   
-##  <a name="locks"></a>잠금  
+##  <a name="locks"></a> 잠금  
  변경 내용을 잠금을 하 여 방지할 수 있습니다. 개별 요소, 파티션 및 저장소에는 잠금은 설정할 수 있습니다. 만들려는 변경의 종류를 방지 하는 잠금을 같은이 수준 모두 있으면 시도 하면 예외가 throw 될 수 있습니다. 요소를 사용 하 여 잠금이 설정 되어 있는지 여부를 확인할 수 있습니다. 네임 스페이스에 정의 된 확장 메서드는 GetLocks() <xref:Microsoft.VisualStudio.Modeling.Immutability>합니다.  
   
  자세한 내용은 참조 [잠금 정책을 정의 하는 읽기 전용 세그먼트 만들기를](../modeling/defining-a-locking-policy-to-create-read-only-segments.md)합니다.  
   
-##  <a name="copy"></a>복사 및 붙여넣기  
+##  <a name="copy"></a> 복사 및 붙여넣기  
  요소 또는 요소 그룹을 복사할 수 있습니다는 <xref:System.Windows.Forms.IDataObject>:  
   
 ```  
@@ -345,9 +345,9 @@ using (Transaction t = targetDiagram.Store.
 }  
 ```  
   
- `Merge ()`둘 중 하나를 허용 수는 `PresentationElement` 또는 `ModelElement`합니다. 지정 하는 경우는 `PresentationElement`, 세 번째 매개 변수로 대상 다이어그램에서 위치를 지정할 수도 있습니다.  
+ `Merge ()` 둘 중 하나를 허용 수는 `PresentationElement` 또는 `ModelElement`합니다. 지정 하는 경우는 `PresentationElement`, 세 번째 매개 변수로 대상 다이어그램에서 위치를 지정할 수도 있습니다.  
   
-##  <a name="diagrams"></a>탐색 및 다이어그램 업데이트  
+##  <a name="diagrams"></a> 탐색 및 다이어그램 업데이트  
  를 사용 하는 DSL에서 사람이 나 노래 같은 개념을 나타내는 도메인 모델 요소를 다이어그램에 표시 된 내용을 나타내는 셰이프 요소에서 분리 됩니다. 도메인 모델 요소는 중요 한 속성 및 개념의 관계를 저장합니다. 셰이프 요소는 크기, 위치 및 다이어그램에서 개체의 보기의 색 및 레이아웃 해당 구성 요소 부분을 저장합니다.  
   
 ### <a name="presentation-elements"></a>프레젠테이션 요소  
@@ -369,7 +369,7 @@ using (Transaction t = targetDiagram.Store.
   
  셰이프는 두 집합의 자식 모양을 가질 수 있습니다. 셰이프는 `NestedChildShapes` 집합은 해당 부모의 경계 상자에만 적용 됩니다. 셰이프는 `RelativeChildShapes` 목록에 외부 또는 부분적으로 부모-예: 레이블 또는 포트 범위를 벗어나는 나타날 수 있습니다. 다이어그램에 `RelativeChildShapes` 및 no `Parent`합니다.  
   
-###  <a name="views"></a>도형 및 요소 간 탐색  
+###  <a name="views"></a> 도형 및 요소 간 탐색  
  도메인 모델 요소와 도형 요소에 의해 연관 되는 <xref:Microsoft.VisualStudio.Modeling.Diagrams.PresentationViewsSubject> 관계입니다.  
   
 ```csharp  
@@ -441,22 +441,22 @@ FamilyTreeDiagram diagram =
   
  --------- *YourConnector*  
   
-###  <a name="shapeProperties"></a>셰이프 및 연결선의 속성  
+###  <a name="shapeProperties"></a> 셰이프 및 연결선의 속성  
  대부분의 경우에서 필요는 없습니다 셰이프에 대 한 명시적 변경할 수 있습니다. 모델 요소를 변경 하는 경우 "픽스업" 규칙 셰이프 및 연결선을 업데이트 합니다. 자세한 내용은 참조 [에 대응 하 고 변경 내용을 전파](../modeling/responding-to-and-propagating-changes.md)합니다.  
   
  그러나 일부를 변경할 명시적 모델 요소와 무관 하는 속성의 모양에 유용 합니다. 예를 들어 이러한 속성을 변경할 수 있습니다.  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Size%2A>-모양의 너비와 높이 결정 합니다.  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Size%2A> -모양의 너비와 높이 결정 합니다.  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Location%2A>-부모 모양 또는 다이어그램에 상대적인 위치  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.NodeShape.Location%2A> -부모 모양 또는 다이어그램에 상대적인 위치  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.StyleSet%2A>-펜과 브러시 셰이프 또는 연결선을 그리는 데 사용 되는 집합  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.StyleSet%2A> -펜과 브러시 셰이프 또는 연결선을 그리는 데 사용 되는 집합  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Hide%2A>-하면 모양을 표시 되지 않습니다  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Hide%2A> -하면 모양을 표시 되지 않습니다  
   
--   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Show%2A>-하면 셰이프 후 볼 수는`Hide()`  
+-   <xref:Microsoft.VisualStudio.Modeling.Diagrams.ShapeElement.Show%2A> -하면 셰이프 후 볼 수는 `Hide()`  
   
-###  <a name="merge"></a>요소 및 해당 모양 만들기  
+###  <a name="merge"></a> 요소 및 해당 모양 만들기  
  요소를 만들고 포함 관계의 트리에 연결 셰이프는 자동으로 만들어지고 연결 된. 이 작업은 트랜잭션이 끝날 때 실행 하는 "수정" 규칙에 의해 수행 됩니다. 그러나 셰이프를 자동으로 할당 된 위치에 표시 됩니다 및 모양, 색 및 기타 기능 기본값을 갖습니다. 셰이프를 만드는 방법을 제어 하려면 병합 기능을 사용할 수 있습니다. 먼저, ElementGroup에 추가할 요소를 추가 하 고 다이어그램에는 그룹을 병합 해야 합니다.  
   
  이 방법:  
@@ -509,7 +509,7 @@ partial class MyDiagram
 ### <a name="use-transactions"></a>트랜잭션을 사용 하 여  
  셰이프와 연결선 다이어그램의 하위 형식을 <xref:Microsoft.VisualStudio.Modeling.ModelElement> 와 사용 중인 저장소에 있습니다. 따라서 변경 해야 할 트랜잭션 내에 합니다. 자세한 내용은 참조 [하는 방법: 모델을 업데이트 하려면 트랜잭션을 사용 하 여](../modeling/how-to-use-transactions-to-update-the-model.md)합니다.  
   
-##  <a name="docdata"></a>문서 데이터와 문서 보기  
+##  <a name="docdata"></a> 문서 데이터와 문서 보기  
  ![표준 다이어그램 형식의 클래스 다이어그램](../modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")  
   
 ## <a name="store-partitions"></a>파티션을 저장합니다  

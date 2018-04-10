@@ -1,9 +1,9 @@
 ---
-title: "복사 동작 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 복사 동작 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: f8eba726c35b402e93bd1fd1b50048b8dce4bf2b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-copy-behavior"></a>복사 동작 사용자 지정
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 사용하여 만든 DSL(Domain-Specific Language)에서는 사용자가 요소를 복사하고 붙여넣을 때 수행되는 작업을 변경할 수 있습니다.  
@@ -216,7 +216,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
  **사용자가 끌어서 놓기 요소 수입니다.**  
  참조 [하는 방법: 끌어서 놓기 처리기를 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)합니다.  
   
-##  <a name="customizeLinks"></a>링크 복사 동작 사용자 지정  
+##  <a name="customizeLinks"></a> 링크 복사 동작 사용자 지정  
  사용자가 요소를 복사할 때의 표준 동작은 포함된 요소도 모두 복사하는 것입니다. 이러한 표준 복사 동작을 수정할 수 있습니다. DSL 정의에서 속성 창 설정 및 관계의 한 쪽에서 역할을 선택 된 **전파 복사** 값입니다.  
   
  ![도메인 역할의 복사 속성 전파](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")  
@@ -562,7 +562,7 @@ namespace Company.MyDsl
   
 ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [사용자 지정 요소 만들기 및 이동](../modeling/customizing-element-creation-and-movement.md)   
 [방법: 끌어서 놓기 처리기 추가](../modeling/how-to-add-a-drag-and-drop-handler.md)   

@@ -1,9 +1,9 @@
 ---
-title: "다이어그램의 속성 | Microsoft Docs"
-ms.custom: 
+title: 다이어그램의 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 f1_keywords:
 - vs.dsltools.dsldesigner.dsldiagram
@@ -16,10 +16,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: c00ec651510da84594c370e312112c50bc545606
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="properties-of-diagrams"></a>다이어그램의 속성
 생성 된 디자이너에서 다이어그램 모양을 지정 하는 속성을 설정할 수 있습니다. 예를 들어 다이어그램에 텍스트에 대 한 기본 색을 지정할 수 있습니다.  
@@ -38,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 |사용자 지정 생성자|경우 `True`, 사용자 지정 생성자의 소스 코드에서 제공 됩니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)...|False|  
 |상속 한정자|다이어그램에서 생성 되는 소스 코드 클래스의 상속의 종류를 설명 (`none`, `abstract` 또는 `sealed`).|없음|  
 |기본 다이어그램|이 다이어그램의 기본 클래스입니다.|(없음)|  
-|name|이 다이어그램의 이름입니다.|현재 이름|  
+|이름|이 다이어그램의 이름입니다.|현재 이름|  
 |네임스페이스|이 다이어그램와 연결 되어 있는 네임 스페이스입니다.|현재 네임 스페이스|  
 |클래스 표시|이 다이어그램을 나타내는 루트 도메인 클래스입니다.|해당 하는 경우 현재 루트 클래스|  
 |노트|이 요소와 연결 된 비공식 정보입니다.|\<none>|  

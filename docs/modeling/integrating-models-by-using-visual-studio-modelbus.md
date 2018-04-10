@@ -1,9 +1,9 @@
 ---
-title: "Visual Studio Modelbus를 사용 하 여 모델을 통합 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio Modelbus를 사용 하 여 모델을 통합 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 92be17ab117a1c76456180cbb40a9b1d77f9181c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus를 사용하여 모델 통합
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus 모델로 다른 도구 및 모델 간의 링크를 만드는 방법을 제공 합니다. 예를 들어 (DSL) 도메인 특정 언어 모델 및 UML 모델을 연결할 수 있습니다. 통합 DSL 집합을 만들 수 있습니다.  
@@ -33,10 +33,10 @@ ms.lasthandoff: 02/09/2018
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
   
-##  <a name="provide"></a>DSL에 액세스 제공  
+##  <a name="provide"></a> DSL에 액세스 제공  
  모델이나 모델의 요소에 대한 ModelBus 참조를 만들려면 DSL에 대해 ModelBusAdapter를 정의해야 합니다. 가장 쉽게 정의하는 방법은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus 확장을 사용하는 것입니다. 이 확장은 DSL 디자이너에 명령을 추가합니다.  
   
-###  <a name="expose"></a>모델 버스 DSL 정의 노출 하려면  
+###  <a name="expose"></a> 모델 버스 DSL 정의 노출 하려면  
   
 1.  Visual Studio ModelBus 확장을 이미 설치하지 않은 경우 다운로드하여 설치합니다. 자세한 내용은 참조 [Visualization and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=185579)합니다.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
  `ModelBusAdapters\bin\*` 폴더에는 `Dsl` 프로젝트와 `ModelBusAdapters` 프로젝트에서 작성한 어셈블리가 포함됩니다. 다른 DSL에서 이 DSL을 참조하려면 이러한 어셈블리를 가져와야 합니다.  
   
 ### <a name="making-sure-that-elements-can-be-referenced"></a>요소를 참조할 수 있는지 확인  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 기본적으로 식별 하는 요소 중 guid를 사용 하는 ModelBus 어댑터. 따라서 이러한 식별자를 모델 파일에 영구적으로 저장해야 합니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus 어댑터는 기본적으로 요소 GUID를 사용해 요소를 식별합니다. 따라서 이러한 식별자를 모델 파일에 영구적으로 저장해야 합니다.  
   
 ##### <a name="to-ensure-that-element-ids-are-persisted"></a>요소 ID가 영구적으로 저장되었는지 확인하려면  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 02/09/2018
   
 -   ModelBus 참조에서 올바른 요소를 찾도록 `ResolveElementReference`를 재정의합니다.  
   
-##  <a name="editRef"></a>DSL 다른 DSL에서 액세스  
+##  <a name="editRef"></a> DSL 다른 DSL에서 액세스  
  DSL의 도메인 속성에 ModelBus 참조를 저장할 수 있으며 해당 참조를 사용하는 사용자 지정 코드를 작성할 수 있습니다. 사용자가 모델 파일과 파일 내의 요소를 선택하여 ModelBus 참조를 만들도록 할 수도 있습니다.  
   
  다른 DSL에 대 한 참조를 사용 하는 DSL을 사용 하려면 먼저 확인 해야 하는 *소비자* 모델 버스 참조 합니다.  
@@ -144,7 +144,7 @@ ms.lasthandoff: 02/09/2018
 3.  디버깅 프로젝트의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험 인스턴스에서 각 DSL의 인스턴스인 파일을 추가합니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus 같은 항목이 있는 모델에 대 한 참조만 해결할 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션입니다. 예를 들어 파일 시스템의 다른 부분에 있는 모델 파일에 대한 참조를 만들 수는 없습니다.  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus는 같은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션의 항목인 모델에 대한 참조만 확인할 수 있습니다. 예를 들어 파일 시스템의 다른 부분에 있는 모델 파일에 대한 참조를 만들 수는 없습니다.  
   
 4.  표시되는 DSL의 인스턴스에서 요소와 링크를 몇 개 만들고 해당 DSL을 저장합니다.  
   

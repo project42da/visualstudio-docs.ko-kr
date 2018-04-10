@@ -1,9 +1,9 @@
 ---
-title: "삭제 동작 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 삭제 동작 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 f1_keywords:
 - vs.dsltools.dsldesigner.deletebehavior
@@ -16,10 +16,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 12f2a1690a4d68f6900006b10a699c23c83c8c2a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-deletion-behavior"></a>삭제 동작 사용자 지정
 일반적으로 요소를 삭제하면 관련 요소도 삭제됩니다. 해당 요소에 연결된 모든 관계와 모든 자식 요소도 삭제됩니다. 이 동작은 라는 *삭제 전파*합니다. 예를 들어 삭제 전파를 사용자 지정하여 추가 관련 요소도 삭제되도록 지정할 수 있습니다. 프로그램 코드를 작성하면 모델 상태에 따라 삭제 전파가 수행되도록 지정할 수 있습니다. 또한 삭제에 응답하여 다른 변경도 수행되도록 할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [분할](#unmerge) -분할 작업을 사용 하 여 해당 부모에 자식 요소를 연결 하는 병합 작업을 취소할 수 있습니다.  
   
-##  <a name="default"></a>기본 삭제 동작  
+##  <a name="default"></a> 기본 삭제 동작  
  기본적으로 삭제 전파를 규정하는 규칙은 다음과 같습니다.  
   
 -   요소를 삭제하면 포함된 요소도 모두 삭제됩니다. 포함된 요소는 이 요소가 소스인 포함 관계의 대상인 요소입니다. 예를 들어에서 포함 관계가 **앨범** 를 **노래**, 다음 특정 앨범 삭제 되 면 모든 노래도 삭제 됩니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 02/09/2018
   
 -   소스 또는 대상 역할에서 요소에 연결되는 모든 관계는 삭제됩니다. 그러면 반대쪽 역할의 요소 역할 속성은 더 이상 삭제된 요소를 포함하지 않습니다.  
   
-##  <a name="property"></a>역할의 삭제 전파 옵션 설정  
+##  <a name="property"></a> 역할의 삭제 전파 옵션 설정  
  삭제가 참조 관계에서 또는 포함된 자식에서 부모에 전파되도록 지정할 수 있습니다.  
   
 #### <a name="to-set-delete-propagation"></a>삭제 전파를 설정하려면  
@@ -78,7 +78,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 >  DSL 정의 프로그램 코드를 추가 하려면에 별도 코드 파일을 만듭니다는 **Dsl** 프로젝트 및 코드 생성 폴더에 있는 클래스를 확장할 수 있는 부분 정의 작성 합니다. 자세한 내용은 참조 [도메인 특정 언어를 사용자 지정 하는 작성 코드](../modeling/writing-code-to-customise-a-domain-specific-language.md)합니다.  
   
-##  <a name="closure"></a>Delete 클로저를 정의합니다.  
+##  <a name="closure"></a> Delete 클로저를 정의합니다.  
  삭제 작업의 클래스를 사용 하 여 *YourModel * * * DeleteClosure** 지정 된 초기 선택을 삭제 하려면 요소를 확인 하 합니다. 이 클래스는 `ShouldVisitRelationship()` 및 `ShouldVisitRolePlayer()`를 반복적으로 호출하여 관계 그래프를 단계별로 이동합니다. 이러한 메서드를 재정의할 수 있습니다. ShouldVisitRolePlayer id 링크와 링크의 역할 중 하나에 있는 요소를 함께 제공 됩니다. 다음 값 중 하나를 반환해야 합니다.  
   
 -   **VisitorFilterResult.Yes**-요소를 삭제 해야 하 고는 워커 진행 시도 하도록 요소의 다른 링크 합니다.  
@@ -131,7 +131,7 @@ partial class MusicLibDeleteClosure
   
  그러나 이 기술은 삭제가 관계 그래프의 인접 항목에만 적용된다고 가정합니다. 따라서 이 메서드를 사용해 모델의 다른 부분에 있는 요소를 삭제할 수는 없습니다. 요소를 추가하거나 삭제에 대한 응답으로 다른 변경을 수행하려는 경우에는 이 메서드를 사용할 수 없습니다.  
   
-##  <a name="ondeleting"></a>OnDeleting 및 OnDeleted 사용 하 여  
+##  <a name="ondeleting"></a> OnDeleting 및 OnDeleted 사용 하 여  
  도메인 클래스나 도메인 관계에서 `OnDeleting()` 또는 `OnDeleted()`를 재정의할 수 있습니다.  
   
 1.  요소를 삭제하려고 하면 해당 관계가 끊기기 전에 <xref:Microsoft.VisualStudio.Modeling.ModelElement.OnDeleting%2A>이 호출됩니다. 이 시점에서는 해당 요소와 다른 요소 간에 계속 이동할 수 있으며 해당 요소는 아직 `store.ElementDirectory`에 있습니다.  
@@ -198,7 +198,7 @@ partial class Artist
   
  요소에 대해 <xref:Microsoft.VisualStudio.Modeling.ModelElement.Delete%2A>를 수행하면 OnDeleting 및 OnDeleted가 호출됩니다. 이러한 메서드는 항상 수행된 인라인-즉, 바로 앞 이나 뒤 실제로 삭제 합니다. 코드가 둘 이상의 요소를 삭제하는 경우에는 모든 요소에 대해 OnDeleting 및 OnDeleted가 번갈아 가며 호출됩니다.  
   
-##  <a name="rules"></a>삭제 규칙 및 이벤트  
+##  <a name="rules"></a> 삭제 규칙 및 이벤트  
  OnDelete 처리기를 사용하는 대신 삭제 규칙과 삭제 이벤트를 정의할 수 있습니다.  
   
 1.  **삭제** 및 **삭제** 규칙이 트리거되만 트랜잭션 아니라에 취소 또는 다시 실행 합니다. 삭제를 수행하는 트랜잭션 종료 시 이러한 규칙이 실행 대기되도록 설정할 수 있습니다. Deleting 규칙은 항상 큐의 Deleted 규칙보다 먼저 실행됩니다.  

@@ -1,9 +1,9 @@
 ---
-title: "CA2002: 약한 id 가진 개체를 잠그지 마십시오 | Microsoft Docs"
-ms.custom: 
+title: 'CA2002: 약한 id 가진 개체를 잠그지 마십시오 | Microsoft Docs'
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-code-analysis
 ms.topic: article
 f1_keywords:
@@ -21,10 +21,10 @@ dev_langs:
 ms.workload:
 - multiple
 ms.openlocfilehash: e27af6104b06b1f6a01ae6a98bfe88e8a0e967b1
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="ca2002-do-not-lock-on-objects-with-weak-identity"></a>CA2002: 약한 ID를 가진 개체를 잠그지 마십시오.
 
@@ -75,14 +75,14 @@ ms.lasthandoff: 02/01/2018
 
 [CA2213: 삭제 가능한 필드는 삭제해야 합니다.](../code-quality/ca2213-disposable-fields-should-be-disposed.md)
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 규칙을 위반 하는 몇 개의 개체 잠금을 보여 줍니다.
 
 [!code-vb[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/VisualBasic/ca2002-do-not-lock-on-objects-with-weak-identity_1.vb)]
 [!code-csharp[FxCop.Reliability.LockWeakObjects#1](../code-quality/codesnippet/CSharp/ca2002-do-not-lock-on-objects-with-weak-identity_1.cs)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 <xref:System.Threading.Monitor>  
 <xref:System.AppDomain>  

@@ -1,11 +1,11 @@
 ---
-title: "RC 작업 | Microsoft Docs"
-ms.custom: 
+title: RC 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VC.Project.VCResourceCompilerTool.UndefineProcessorDefinitions
@@ -22,17 +22,17 @@ helpviewer_keywords:
 - RC task (MSBuild (Visual C++))
 - MSBuild (Visual C++), RC task
 ms.assetid: 2fd26c75-a056-4dda-9f7e-2f90d3748d88
-caps.latest.revision: 
+caps.latest.revision: 10
 author: Mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: 2a785ae38f76f58c20baec6a0705d68feb9cbbf2
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="rc-task"></a>RC 작업
 Microsoft Windows 리소스 컴파일러 도구, rc.exe를 래핑합니다. **RC** 작업은 커서, 아이콘, 비트맵, 대화 상자 및 글꼴과 같은 리소스를 리소스(.res) 파일로 컴파일합니다. 자세한 내용은 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 웹 사이트에서 "리소스 컴파일러"를 참조하세요.  
@@ -46,7 +46,7 @@ Microsoft Windows 리소스 컴파일러 도구, rc.exe를 래핑합니다. **RC
 |**AdditionalOptions**|선택적 **문자열** 매개 변수입니다.<br /><br /> 명령줄 optionsor 예제 목록은 **"***/option1 /option2 /option#*"입니다. 이 매개 변수를 사용하여 다른 **RC** 작업 매개 변수로 표현되지 않는 명령줄 옵션을 지정합니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 옵션을 참조하세요.|  
 |**문화권**.|선택적 **문자열** 매개 변수입니다.<br /><br /> 리소스에서 사용되는 문화권을 나타내는 로캘 ID를 지정합니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/l** 옵션을 참조하세요.|  
 |**IgnoreStandardIncludePath**|선택적 **Boolean** 매개 변수입니다.<br /><br /> `true`인 경우 리소스 컴파일러가 헤더 파일이나 리소스 파일을 검색할 때 INCLUDE 환경 변수를 검사하는 것을 금지합니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/x** 옵션을 참조하세요.|  
-|**NullTerminateStrings**|선택적 **Boolean** 매개 변수입니다.<br /><br /> `true`인 경우 문자열 테이블의 모든 문자열을 null로 끝냅니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/n** 옵션을 참조하세요.|  
+|**NullTerminateStrings**|선택적 **Boolean** 매개 변수입니다.<br /><br /> `true`인 경우 문자열 테이블의 모든 문자열을 null로 끝냅니다.<br /><br /> 자세한 내용은 참조는 **/n** 옵션 [RC (RC 명령줄)를 사용 하 여](http://go.microsoft.com/fwlink/?LinkId=155730) MSDN 웹 사이트에서.|  
 |**PreprocessorDefinitions**|선택적 **String[]** 매개 변수입니다.<br /><br /> 리소스 컴파일러에 대한 하나 이상의 전처리기 기호를 정의합니다. 매크로 기호 목록을 지정합니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/d** 옵션을 참조하세요. 이 표의 **UndefinePreprocessorDefinitions**도 참조하세요.|  
 |**ResourceOutputFileName**|선택적 **문자열** 매개 변수입니다.<br /><br /> 리소스 파일 이름을 지정합니다. 리소스 파일 이름을 지정합니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/fo** 옵션을 참조하세요.|  
 |**ShowProgress**|선택적 **Boolean** 매개 변수입니다.<br /><br /> `true`인 경우 컴파일러의 진행 상황을 보고하는 메시지가 표시됩니다.<br /><br /> 자세한 내용은 MSDN 웹 사이트의 [RC 사용(RC 명령줄)](http://go.microsoft.com/fwlink/?LinkId=155730)에서 **/v** 옵션을 참조하세요.|  

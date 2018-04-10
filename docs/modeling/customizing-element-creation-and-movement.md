@@ -1,9 +1,9 @@
 ---
-title: "요소 만들기 및 이동 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 요소 만들기 및 이동 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 f1_keywords:
 - vs.dsltools.dsldesigner.elementmergedirective
@@ -16,10 +16,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: ac29f7b745c9698f6051bce6a7b54a1476bf8a7c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-element-creation-and-movement"></a>요소 만들기 및 이동 사용자 지정
 요소를 도구 상자 또는 붙여넣기 후에 다른 끌어 놓을 수 또는 이동 작업을 허용할 수 있습니다. 지정한 관계를 사용 하 여 대상 요소에 연결 하는 이동된 된 요소를 포함할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="defining-an-element-merge-directive"></a>정의 요소 병합 지시문  
  도메인 클래스, 도메인 관계, 셰이프, 커넥터 및 다이어그램을 병합 지시문 요소를 추가할 수 있습니다. 추가 하거나 수신 도메인 클래스 아래 DSL 탐색기에서 찾을 수 있습니다. 받는 클래스는 이미 및 새 또는 복사 된 요소의 병합할 수에 모델에 있는 요소의 도메인 클래스입니다.  
   
- ![DSL&#45;EMD&#95;Details](../modeling/media/dsl-emd_details.png "DSL-EMD_Details")  
+ ![DSL&#45;EMD&#95;세부 정보](../modeling/media/dsl-emd_details.png "DSL EMD_Details")  
   
  **인덱싱 클래스** 도메인 클래스 받는 클래스의 구성원으로 병합 될 수 있는 요소입니다. 설정 하지 않으면 인덱싱 클래스의 서브 클래스의 인스턴스에서이 EMD로 병합 될 수도 **하위 클래스에 적용 됩니다.** False로 합니다.  
   
@@ -230,7 +230,7 @@ ms.lasthandoff: 02/09/2018
   
 5.  내용을 검사 **Dsl\Generated Files\DomainClasses.cs**합니다. 명명 된 메서드에 대 한 검색 `MergeRelate` 해당 내용을 검사 합니다. 사용자가 자체 버전을 작성 하는 데 도움이 됩니다.  
   
-6.  새 코드 파일에서 받는 클래스에 대 한 partial 클래스를 작성 한 재정의 `MergeRelate` 메서드. 기본 메서드를 호출 해야 합니다. 예:  
+6.  새 코드 파일에서 받는 클래스에 대 한 partial 클래스를 작성 한 재정의 `MergeRelate` 메서드. 기본 메서드를 호출 해야 합니다. 예를 들어:  
   
     ```csharp  
     partial class ExampleModel  

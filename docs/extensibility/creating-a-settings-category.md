@@ -1,27 +1,27 @@
 ---
-title: "설정 범주 만들기 | Microsoft Docs"
-ms.custom: 
+title: 설정 범주 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - profile settings, creating categories
 ms.assetid: 97c88693-05ff-499e-8c43-352ee073dcb7
-caps.latest.revision: 
+caps.latest.revision: 39
 author: gregvanl
 ms.author: gregvanl
 manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 2bdf3231f2df8b3700c7865fa53e60003b814a5f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="creating-a-settings-category"></a>설정 범주 만들기
 이 연습에서는 Visual Studio 설정 범주 만들고 사용 하 여 값을 저장 하 고 설정 파일에서 값을 복원 합니다. 설정 범주는 "사용자 지정 설정 지점;"으로 표시 되는 관련된 속성 그룹 즉,에 확인란으로는 **가져오기 및 내보내기 설정을** 마법사. (에서 찾을 수 있습니다는 **도구** 메뉴.) 설정을 저장 또는 범주를 복원 및 개별 설정 마법사에 표시 되지 않습니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  이 연습을 시작 하려면 먼저의 첫 번째 섹션을 완료 해야 [옵션 페이지 만들기](../extensibility/creating-an-options-page.md)합니다. 결과 옵션 속성 표를 사용 하 여 검토 하 고 범주에서 속성을 변경할 수 있습니다. 설정 파일에서 속성 범주를 저장 한 후 속성 값은 저장 하는 방법을 확인 하려면 파일을 검사 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-settings-category"></a>설정 범주 만들기  
@@ -42,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  VSPackage.resx 파일을 열고 이러한 세 개의 문자열 리소스를 추가 합니다.  
   
-    |name|값|  
+    |이름|값|  
     |----------|-----------|  
     |106|내 범주|  
     |107|내 설정|  

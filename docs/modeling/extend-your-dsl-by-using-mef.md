@@ -1,9 +1,9 @@
 ---
-title: "MEF를 사용 하 여 DSL 확장 | Microsoft Docs"
-ms.custom: 
+title: MEF를 사용 하 여 DSL 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 735de60d18bc5cbca7dc2ba509372d81622038be
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="extend-your-dsl-by-using-mef"></a>MEF를 사용하여 DSL 확장
 프레임 워크 MEF (Managed Extensibility)를 사용 하 여 해당 도메인 특정 언어 DSL ()를 확장할 수 있습니다. 또는 다른 개발자 DSL 정 및 프로그램 코드를 변경 하지 않고 DSL에 대 한 확장을 작성 하는 일을 할 수 있습니다. 이러한 확장 메뉴 명령, 끌어서 놓기 처리기 및 유효성 검사를 포함 합니다. 사용자는 DSL을 설치 하 고 다음에 대 한 필요에 따라 확장을 설치 하는 작업을 할 수 있습니다.  
@@ -28,7 +28,7 @@ ms.lasthandoff: 02/09/2018
   
 1.  라는 새 폴더 만들기 **MefExtension** 내는 **DslPackage** 프로젝트. 다음 파일을 추가 합니다.  
   
-     파일 이름:`CommandExtensionVSCT.tt`  
+     파일 이름: `CommandExtensionVSCT.tt`  
   
     > [!IMPORTANT]
     >  GUID DslPackage\GeneratedCode\Constants.tt에 정의 된 GUID CommandSetId와 동일 하 게이 파일에 설정  
@@ -44,21 +44,21 @@ ms.lasthandoff: 02/09/2018
     <#@ include file="DslPackage\CommandExtensionVSCT.tt" #>  
     ```  
   
-     파일 이름:`CommandExtensionRegistrar.tt`  
+     파일 이름: `CommandExtensionRegistrar.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="DslPackage\CommandExtensionRegistrar.tt" #>  
     ```  
   
-     파일 이름:`ValidationExtensionEnablement.tt`  
+     파일 이름: `ValidationExtensionEnablement.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="DslPackage\ValidationExtensionEnablement.tt" #>  
     ```  
   
-     파일 이름:`ValidationExtensionRegistrar.tt`  
+     파일 이름: `ValidationExtensionRegistrar.tt`  
   
      이 파일을 추가 하는 경우에서 설정 해야 유효성 검사 DSL의 스위치 중 하나 이상을 사용 하 여 **EditorValidation** DSL 탐색기에서.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 02/09/2018
     <#@ include file="DslPackage\ValidationExtensionRegistrar.tt" #>  
     ```  
   
-     파일 이름:`PackageExtensionEnablement.tt`  
+     파일 이름: `PackageExtensionEnablement.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
@@ -76,21 +76,21 @@ ms.lasthandoff: 02/09/2018
   
 2.  라는 새 폴더 만들기 **MefExtension** 내는 **Dsl** 프로젝트. 다음 파일을 추가 합니다.  
   
-     파일 이름:`DesignerExtensionMetaDataAttribute.tt`  
+     파일 이름: `DesignerExtensionMetaDataAttribute.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="Dsl\DesignerExtensionMetadataAttribute.tt" #>  
     ```  
   
-     파일 이름:`GestureExtensionEnablement.tt`  
+     파일 이름: `GestureExtensionEnablement.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
     <#@ include file="Dsl\GestureExtensionEnablement.tt" #>  
     ```  
   
-     파일 이름:`GestureExtensionController.tt`  
+     파일 이름: `GestureExtensionController.tt`  
   
     ```  
     <#@ Dsl processor="DslDirectiveProcessor" requires="fileName='..\..\Dsl\DslDefinition.dsl'" #>  
@@ -176,7 +176,7 @@ ms.lasthandoff: 02/09/2018
 ### <a name="menu-commands"></a>메뉴 명령  
  메뉴 명령을 작성 하기 위해 구현 하는 클래스 정의 <xref:Microsoft.VisualStudio.Modeling.ExtensionEnablement.ICommandExtension> 라는 DSL에 정의 된 특성이 있는 클래스를 접두사 *YourDsl*`CommandExtension`합니다. 둘 이상의 메뉴 명령 클래스를 작성할 수 있습니다.  
   
- `QueryStatus()`다이어그램을 마우스 오른쪽 단추로 클릭할 때마다 호출 됩니다. 현재 선택 영역을 검사 하 고 설정 `command.Enabled` 를 나타내는 명령이 적용 됩니다.  
+ `QueryStatus()` 다이어그램을 마우스 오른쪽 단추로 클릭할 때마다 호출 됩니다. 현재 선택 영역을 검사 하 고 설정 `command.Enabled` 를 나타내는 명령이 적용 됩니다.  
   
 ```  
 using System.ComponentModel.Composition;  

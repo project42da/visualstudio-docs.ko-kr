@@ -1,9 +1,9 @@
 ---
-title: "방법: 도메인 특정 언어에 표준 메뉴 명령을 수정 | Microsoft Docs"
-ms.custom: 
+title: '방법: 도메인 특정 언어에 표준 메뉴 명령을 수정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - .vsct files, adding commands to a domain-specific language
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: c11a559fb8ef3cc6eb951950d8779691ad20c3b5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>방법: 도메인별 언어에서 표준 메뉴 명령 수정
 DSL에서 자동으로 정의되는 일부 표준 명령의 동작을 수정할 수 있습니다. 수정할 수는 예를 들어 **잘라내기** 를 중요 한 정보는 제외 됩니다. 이렇게 하려면 명령 집합 클래스에서 메서드를 재정의합니다. 이러한 클래스는 DslPackage 프로젝트의 CommandSet.cs 파일에서 정의되며 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>에서 파생됩니다.  
@@ -36,7 +36,7 @@ DSL에서 자동으로 정의되는 일부 표준 명령의 동작을 수정할 
 > [!NOTE]
 >  사용자 지정 메뉴 명령을 만들 경우 참조 [하는 방법: 바로 가기 메뉴에 명령을 추가](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)합니다.  
   
-##  <a name="what"></a>명령 작업 수정할 수 있습니까?  
+##  <a name="what"></a> 명령 작업 수정할 수 있습니까?  
   
 #### <a name="to-discover-what-commands-you-can-modify"></a>수정할 수 있는 명령을 파악하려면  
   
@@ -53,7 +53,7 @@ DSL에서 자동으로 정의되는 일부 표준 명령의 동작을 수정할 
     > [!NOTE]
     >  일반적으로는 생성된 파일을 편집하면 안 됩니다. 다음 번에 파일을 생성하면 편집 내용이 손실됩니다.  
   
-##  <a name="extend"></a>적절 한 명령 집합 클래스를 확장 합니다.  
+##  <a name="extend"></a> 적절 한 명령 집합 클래스를 확장 합니다.  
  명령 집합 클래스의 partial 선언이 포함된 새 파일을 만듭니다.  
   
 #### <a name="to-extend-the-command-set-class"></a>명령 집합 클래스를 확장하려면  
@@ -66,7 +66,7 @@ DSL에서 자동으로 정의되는 일부 표준 명령의 동작을 수정할 
   
 2.  **DslPackage**, 라는 폴더를 만듭니다 **사용자 지정 코드**합니다. 이 폴더에 라는 새 클래스 파일을 만들 `CommandSet.cs`합니다.  
   
-3.  새 파일에 생성된 partial 클래스와 이름 및 네임스페이스가 같은 partial 선언을 작성합니다. 예:  
+3.  새 파일에 생성된 partial 클래스와 이름 및 네임스페이스가 같은 partial 선언을 작성합니다. 예를 들어:  
   
     ```  
     using System;  
@@ -78,7 +78,7 @@ DSL에서 자동으로 정의되는 일부 표준 명령의 동작을 수정할 
   
      **참고** 클래스 파일 서식 파일을 사용 하는 새 파일을 만드는 경우 네임 스페이스와 클래스 이름을 모두 수정 해야 합니다.  
   
-##  <a name="override"></a>명령 메서드를 재정의 합니다.  
+##  <a name="override"></a> 명령 메서드를 재정의 합니다.  
  대부분의 명령은 두 개의 연결 된 메서드가: 같은 이름 사용 하 여 메서드 `ProcessOnStatus`... 표시 되 고 사용할 명령을 사용 해야 하는지 여부를 결정 합니다. 이 메서드는 사용자가 다이어그램을 마우스 오른쪽 단추로 클릭할 때마다 호출되고 빠르게 실행되며 아무것도 변경하지 않아야 합니다. `ProcessOnMenu`... 때 호출 되는 사용자의 명령을 클릭 하 고 명령의 기능을 수행 해야 합니다. 이 두 메서드 중 하나 또는 둘 다를 재정의할 수 있습니다.  
   
 ### <a name="to-change-when-the-command-appears-on-a-menu"></a>메뉴에 명령이 표시되는 경우를 변경하려면  
@@ -137,7 +137,7 @@ protected override void ProcessOnMenuDeleteCommand()
   
 -   `this.CurrentSelection`. 사용자가 마우스 오른쪽 단추로 클릭한 모양은 항상 이 모양 및 연결선 목록에 포함됩니다. 사용자가 다이어그램의 빈 부분을 클릭하는 경우의 목록 멤버는 Diagram뿐입니다.  
   
--   `this.IsDiagramSelected()` - `true`사용자는 다이어그램의 빈 부분을 클릭 합니다.  
+-   `this.IsDiagramSelected()` - `true` 사용자는 다이어그램의 빈 부분을 클릭 합니다.  
   
 -   `this.IsCurrentDiagramEmpty()`  
   

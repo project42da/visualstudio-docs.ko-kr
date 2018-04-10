@@ -1,12 +1,12 @@
 ---
-title: "도구 상자, 구성 요소 탭 | Microsoft 문서"
-ms.custom: 
+title: 도구 상자, 구성 요소 탭 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: reference
 helpviewer_keywords:
 - Toolbox, Components tab
@@ -16,10 +16,10 @@ manager: ghogen
 ms.workload:
 - multiple
 ms.openlocfilehash: aa91db706d7e1236162ef69e6fd31e791ed44dbb
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
-ms.translationtype: HT
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="toolbox-components-tab"></a>도구 상자, 구성 요소 탭
 
@@ -72,7 +72,7 @@ Visual Basic 및 C# 디자이너에 추가할 수 있는 구성 요소를 표시
 > [!NOTE]
 >  **도구 상자**에 추가할 수 있는 시스템 기반 <xref:System.Timers.Timer>도 있습니다. 이 <xref:System.Timers.Timer>는 서버 응용 프로그램에 최적화되어 있고 Windows Forms <xref:System.Windows.Forms.Timer>는 Windows Forms에 가장 적합합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [구성 요소를 사용한 프로그래밍](http://msdn.microsoft.com/Library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
 [구성 요소 프로그래밍 연습](http://msdn.microsoft.com/Library/373cacf7-479e-4b05-991c-5cb18824e913)  

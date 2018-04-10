@@ -1,9 +1,9 @@
 ---
-title: "방법: 바로 가기 메뉴에 명령을 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 바로 가기 메뉴에 명령을 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language Tools, walkthroughs
@@ -15,10 +15,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 4f65964e1d7fd4221746d8ec17a498cf9ee3a354
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-add-a-command-to-the-shortcut-menu"></a>방법: 바로 가기 메뉴에 명령 추가
 사용자가 DSL(Domain-Specific Language) 관련 작업을 수행할 수 있도록 DSL에 메뉴 명령을 추가할 수 있습니다. 사용자가 다이어그램을 마우스 오른쪽 단추로 클릭하면 상황에 맞는(바로 가기) 메뉴에 명령이 표시됩니다. 특정 상황에서만 메뉴에 표시되도록 명령을 정의할 수 있습니다. 예를 들어 사용자가 특정 형식의 요소나 특정 상태의 요소를 클릭할 때만 메뉴가 표시되도록 지정할 수 있습니다.  
@@ -51,7 +51,7 @@ ms.lasthandoff: 02/09/2018
   
  그 외의 경우에는 MEF 메서드를 사용하여 명령을 정의하는 것이 좋습니다. 자세한 내용은 참조 [MEF를 사용 하 여 DSL 확장](../modeling/extend-your-dsl-by-using-mef.md)합니다.  
   
-##  <a name="VSCT"></a>선언에 Commands.Vsct 명령  
+##  <a name="VSCT"></a> 선언에 Commands.Vsct 명령  
  DslPackage\Commands.vsct에서 메뉴 명령을 선언합니다. 이러한 정의는 메뉴 항목의 레이블 및 메뉴에서 항목이 표시되는 위치를 지정합니다.  
   
  Commands.vsct, 파일을 편집 하는 디렉터리에 있는 여러 개의.h 파일에서 정의 가져오고 *Visual Studio SDK 설치 경로*\VisualStudioIntegration\Common\Inc 합니다. 또한 DSL 정의에서 생성되는 GeneratedVsct.vsct도 포함합니다.  
@@ -131,7 +131,7 @@ ms.lasthandoff: 02/09/2018
   
     -   `My Context Menu Command`  
   
-##  <a name="version"></a>Package.tt 패키지 버전 업데이트  
+##  <a name="version"></a> Package.tt 패키지 버전 업데이트  
  명령을 추가하거나 변경할 때마다 새 DSL 버전을 릴리스하기 전에 패키지 클래스에 적용되는 `version`의 <xref:Microsoft.VisualStudio.Shell.ProvideMenuResourceAttribute> 매개 변수를 업데이트합니다.  
   
  패키지 클래스는 생성된 파일에서 정의되므로 Package.cs 파일을 생성하는 텍스트 템플릿 파일에서 특성을 업데이트합니다.  
@@ -142,11 +142,11 @@ ms.lasthandoff: 02/09/2018
   
 2.  `ProvideMenuResource` 특성을 찾습니다.  
   
-3.  특성의 `version` 매개 변수(두 번째 매개 변수)를 증분합니다. 원하는 경우 용도에 맞게 매개 변수 이름을 명시적으로 작성할 수 있습니다. 예:  
+3.  특성의 `version` 매개 변수(두 번째 매개 변수)를 증분합니다. 원하는 경우 용도에 맞게 매개 변수 이름을 명시적으로 작성할 수 있습니다. 예를 들어:  
   
      `[VSShell::ProvideMenuResource("1000.ctmenu", version: 2 )]`  
   
-##  <a name="CommandSet"></a>명령 동작 정의  
+##  <a name="CommandSet"></a> 명령 동작 정의  
  DS에는 DslPackage\GeneratedCode\CommandSet.cs에서 선언된 partial 클래스에서 구현되는 일부 명령이 이미 포함되어 있습니다. 새 명령을 추가하려면 같은 클래스의 partial 선언을 포함하는 새 파일을 만들어 이 클래스를 확장해야 합니다. 클래스의 이름은 일반적으로  *\<YourDslName >*`CommandSet`합니다. 먼저 클래스 이름을 확인하고 해당 내용을 검사하면 유용합니다.  
   
  명령 집합 클래스는 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>에서 파생됩니다.  
@@ -161,7 +161,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  **DslPackage**, 명명 된 폴더를 만들고 **사용자 지정 코드**합니다. 이 폴더에 라는 새 클래스 파일을 만듭니다 `CommandSet.cs`합니다.  
   
-3.  새 파일에 생성된 partial 클래스와 이름 및 네임스페이스가 같은 partial 선언을 작성합니다. 예:  
+3.  새 파일에 생성된 partial 클래스와 이름 및 네임스페이스가 같은 partial 선언을 작성합니다. 예를 들어:  
   
      `namespace Company.Language1 /* Make sure this is correct */`  
   
@@ -224,7 +224,7 @@ private void OnStatusMyContextMenuCommand(object sender, EventArgs e)
   
 -   `this.CurrentSelection`. 사용자가 마우스 오른쪽 단추로 클릭한 모양은 항상 이 목록에 포함됩니다. 사용자가 다이어그램의 빈 부분을 클릭하는 경우의 목록 멤버는 Diagram뿐입니다.  
   
--   `this.IsDiagramSelected()` - `true`사용자는 다이어그램의 빈 부분을 클릭 합니다.  
+-   `this.IsDiagramSelected()` - `true` 사용자는 다이어그램의 빈 부분을 클릭 합니다.  
   
 -   `this.IsCurrentDiagramEmpty()`  
   

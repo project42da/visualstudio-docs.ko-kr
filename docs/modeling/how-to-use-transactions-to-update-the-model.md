@@ -1,9 +1,9 @@
 ---
-title: "방법: 트랜잭션을 사용 하 여 모델을 업데이트할 | Microsoft Docs"
-ms.custom: 
+title: '방법: 트랜잭션을 사용 하 여 모델을 업데이트할 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: ecd9645bfb202d83bf672d03d3c6903a889677f9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="how-to-use-transactions-to-update-the-model"></a>방법: 트랜잭션을 사용하여 모델 업데이트
 트랜잭션은 변경 내용을 저장소에 대 한 그룹으로 취급 됩니다 있는지 확인 합니다. 그룹화 된 변경 내용은 커밋하거나 하나의 단위로 롤백할 수 있습니다.  

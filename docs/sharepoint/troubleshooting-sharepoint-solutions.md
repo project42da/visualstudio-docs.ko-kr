@@ -1,12 +1,12 @@
 ---
-title: "SharePoint 솔루션 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 솔루션 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2017
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - Microsoft.VisualStudio.Tools.SharePoint.Errors.Debugging
@@ -23,10 +23,10 @@ manager: ghogen
 ms.workload:
 - office
 ms.openlocfilehash: 6f03f8fd1fd5609f93d4fae22a7a694e61b1c80c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="troubleshooting-sharepoint-solutions"></a>SharePoint 솔루션 문제 해결
   다음과 같은 문제 또는 경고를 사용 하 여 SharePoint 솔루션을 디버깅할 때 발생할 수 있습니다는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거 합니다. 자세한 내용은 참조 [SharePoint 2007 워크플로 솔루션 디버깅](http://msdn.microsoft.com/en-us/3a5392f3-66f3-48be-956e-02de23fa6247)합니다.
@@ -177,7 +177,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="resolution"></a>해결  
  이 문제를 해결 하려면 모델을 수동으로 삭제 한 다음 솔루션을 다시 배포 합니다.  다음 도구 중 하나를 사용 하 여 모델을 삭제할 수 있습니다.  
   
--   SharePoint 2010 중앙 관리 합니다. 자세한 내용은 참조 [BDC 모델 관리](http://go.microsoft.com/fwlink/?LinkID=181472) Microsoft TechNet 웹 사이트에 있습니다.  
+-   SharePoint 2010 Central Administration. 자세한 내용은 참조 [BDC 모델 관리](http://go.microsoft.com/fwlink/?LinkID=181472) Microsoft TechNet 웹 사이트에 있습니다.  
   
 -   Windows PowerShell. 명령 프롬프트에서 다음이 명령을 입력 하 여 모델을 삭제할 수 있습니다: **제거 SPBusinessDataCatalogModel**합니다. 자세한 내용은 참조 [일반 cmdlet (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkID=182375) Microsoft TechNet 웹 사이트에 있습니다.  
   
@@ -217,7 +217,7 @@ ms.lasthandoff: 01/10/2018
  가져온된 목록 인스턴스에 이름을 바꾼 후 실행 하는 경우이 문제가 발생 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  
   
 ### <a name="error-message"></a>오류 메시지  
- 빌드 오류: 배포 단계 ' 기능 활성화에서 오류가 발생 했습니다: 파일 Template\Features\\[*프로젝트 가져오기**기능**이름*] \Files\Lists \\[*이전**목록 이름*] \Schema.xml 존재 하지 않습니다.  
+ 빌드 오류: 배포 단계 ' 기능 활성화에서 오류가 발생 했습니다: 파일 Template\Features\\[*프로젝트 가져오기**기능**이름*] \Files\Lists\\[*이전 * * 목록 이름*] \Schema.xml 존재 하지 않습니다.  
   
 ### <a name="resolution"></a>해결  
  목록 인스턴스를 가져올 때 CustomSchema 특성 목록 인스턴스의 Elements.xml 파일에 추가 됩니다. Elements.xml 목록 인스턴스에 대 한 사용자 지정 schema.xml의 경로 포함 합니다. 에 목록 인스턴스의 이름을 바꾸면 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 사용자 지정 schema.xml에 대 한 배포 경로 변경 되지만 CustomSchema 특성의 경로 값 업데이트 되지 않습니다. 결과적으로, 목록 인스턴스는이 기능을 활성화 하는 경우 CustomSchema 특성에 지정 된 이전 경로에 schema.xml 파일을 찾을 수 없습니다.  

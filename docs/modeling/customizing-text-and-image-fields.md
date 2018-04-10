@@ -1,9 +1,9 @@
 ---
-title: "텍스트 및 이미지 필드를 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 텍스트 및 이미지 필드를 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 author: gewarren
 ms.author: gewarren
@@ -12,10 +12,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: f577669c685d6f42b73c80f947e8edad0c7b9088
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-text-and-image-fields"></a>텍스트 및 이미지 필드 사용자 지정
 셰이프의 텍스트 데코레이터를 정의 하는 경우를 TextField로 표현 됩니다. 에 대 한 예제 TextFields 다른 ShapeFields의 초기화, DSL 솔루션에서 Dsl\GeneratedCode\Shapes.cs를 검사 합니다.  

@@ -1,9 +1,9 @@
 ---
-title: "속성 창을 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 속성 창을 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.topic: article
 helpviewer_keywords:
 - Domain-Specific Language, Properties window
@@ -14,10 +14,10 @@ ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: 545c8181cdaa3f13d2de04f13101d2678f9fd0ab
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="customizing-the-properties-window"></a>속성 창 사용자 지정
 사용자 지정할 수 있습니다 모양 및 동작의 속성 창에서 도메인 특정 언어 (DSL)에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. DSL 정의에서 각 도메인 클래스에서 도메인 속성을 정의합니다. 기본적으로 모델 탐색기 또는 다이어그램에서 클래스의 인스턴스를 선택 하면 속성 창에서 모든 도메인 속성이 나열 됩니다. 이렇게 하면 참조 하 고 도메인 속성의 값을 편집할 다이어그램에서 셰이프 필드에 매핑되어 있지 있을 경우에 합니다.  
@@ -183,7 +183,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 >  에 있는 별도 코드 파일에 코드를 추가 **Dsl** 프로젝트.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor  
@@ -223,7 +223,7 @@ internal class TextFileNameEditor : System.Windows.Forms.Design.FileNameEditor
   
 ```  
   
- <xref:System.ComponentModel.TypeConverter>에서 파생된 클래스를 정의합니다. 코드에서 별도 파일에 추가 된 **Dsl** 프로젝트. 예:  
+ <xref:System.ComponentModel.TypeConverter>에서 파생된 클래스를 정의합니다. 코드에서 별도 파일에 추가 된 **Dsl** 프로젝트. 예를 들어:  
   
 ```csharp  
 /// <summary>  

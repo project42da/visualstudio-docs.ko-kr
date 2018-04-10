@@ -20,10 +20,10 @@ manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: 0a5782f0a50ac37b45c4b7e3402bcdded96b4683
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="idebugportevents2"></a>IDebugPortEvents2
 이 인터페이스는 프로세스 및 프로그램 만들기 및 소멸 특정 포트에서의 수신기를 (일반적으로 세션 디버그 관리자 [SDM] 또는 디버그 엔진)에 게 알립니다. 프로세스 및 포트에서 실행 중인 프로그램의 실시간 보기를 표시 하이 정보를 사용할 수 있습니다.  
@@ -48,7 +48,7 @@ IDebugPortEvents2 : IUnknown
 |[Event](../../../extensibility/debugger/reference/idebugportevents2-event.md)|생성 및 소멸 프로세스 및 포트에서 프로그램을 설명 하는 이벤트를 보냅니다.|  
   
 ## <a name="remarks"></a>설명  
- `IDebugPortEvents2`또한은 SDM에서 이미 디버깅 중인 프로세스에서 실행 되는 프로그램을 디버깅할 합니다.  
+ `IDebugPortEvents2` 또한은 SDM에서 이미 디버깅 중인 프로세스에서 실행 되는 프로그램을 디버깅할 합니다.  
   
  포트 이벤트는이 인터페이스는 SDM에 전달 됩니다.  
   
@@ -57,7 +57,7 @@ IDebugPortEvents2 : IUnknown
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

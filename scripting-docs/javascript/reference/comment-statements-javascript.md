@@ -1,13 +1,13 @@
 ---
-title: "주석 문 (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: 주석 문 (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 f1_keywords:
 - Comment_JavaScript
@@ -19,15 +19,15 @@ helpviewer_keywords:
 - comments, ignoring
 - comment statements
 ms.assetid: b604824f-ac17-49d3-bcdb-2a893ab5fff8
-caps.latest.revision: 
+caps.latest.revision: 13
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
 ms.openlocfilehash: c270379725550e116928bbecd69e6be51c34992f
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="comment-statements-javascript"></a>Comment 문(JavaScript)
 주석이 [!INCLUDE[javascript](../../javascript/includes/javascript-md.md)] 파서에서 무시되도록 합니다.  

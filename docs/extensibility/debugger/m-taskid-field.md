@@ -1,5 +1,5 @@
 ---
-title: 필드 m_taskId | Microsoft Docs
+title: m_taskId Field | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
 ms.reviewer: ''
@@ -18,15 +18,15 @@ manager: ghogen
 ms.workload:
 - vssdk
 ms.openlocfilehash: a3b32a56ed4a9e9c80618e52ff185b26aca1f7a4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/10/2018
 ---
-# <a name="mtaskid-field"></a>m_taskId 필드
+# <a name="mtaskid-field"></a>m_taskId Field
 에 대 한 지원 필드는 <xref:System.Threading.Tasks.Task.Id%2A?displayProperty=fullName> 속성입니다.  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **어셈블리:** (mscorlib.dll)에 mscorlib  
   

@@ -1,22 +1,22 @@
 ---
-title: "내부 활성화 | Microsoft Docs"
-ms.custom: 
+title: 내부 활성화 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - in-place view activation
 ms.assetid: 7d316945-06e0-4d8e-ba3a-0ef96fc75399
-caps.latest.revision: 
+caps.latest.revision: 26
 manager: douge
 ms.openlocfilehash: d1fe2c1dfe71923897836f803e3a9712b4dec0f1
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/10/2018
 ---
 # <a name="in-place-activation"></a>내부 활성화
 편집기 뷰에서 ActiveX 또는 기타 활성 컨트롤을 호스트하는 경우 바로 활성화 모델을 사용하여 ActiveX 컨트롤 또는 활성 문서 데이터 개체로 편집기 뷰를 구현해야 합니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="objects-and-interfaces-used"></a>사용되는 개체 및 인터페이스  
  바로 활성화를 만드는 데 사용되는 개체는 다음 그림에 나와 있습니다.  
   
- ![&#45; 바로 활성화 편집기](../extensibility/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
+ ![&#45;활성화 편집기](../extensibility/media/vsinplaceactivationeditor.gif "vsInPlaceActivationEditor")  
 바로 활성화 편집기  
   
 > [!NOTE]
