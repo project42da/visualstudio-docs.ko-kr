@@ -27,9 +27,9 @@ ms.lasthandoff: 03/28/2018
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>시나리오: 시각화 및 모델링을 사용하여 디자인 변경
 Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨어 시스템이 사용자의 요구를 충족하는지 확인합니다.
-코드 맵, 종속성 다이어그램 및 클래스 다이어그램을와 같은 도구를 사용 합니다.  
+코드 맵, 종속성 다이어그램 및 클래스 다이어그램을와 같은 도구를 사용 합니다:  
 
- 각 도구를 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
+ 각 도구를 지원하는 Visual Studio 버전을 확인하려면 [아키텍처 및 모델링 도구에 대한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
 
 -   사용자의 요구 사항 및 비즈니스 프로세스를 분명하게 설명합니다.  
 
@@ -112,7 +112,7 @@ Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨�
 -   [종속성 다이어그램을 사용하여 코드 유효성 검사](../modeling/validate-code-with-layer-diagrams.md)  
 
     > [!NOTE]
-    >  일부 버전의 Visual Studio 시각화 및 모델링에 대 한 종속성 유효성 검사 및 코드 맵 읽기 전용 버전을 지원합니다. 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
+    >  일부 버전의 Visual Studio 시각화 및 모델링에 대 한 종속성 유효성 검사 및 코드 맵 읽기 전용 버전을 지원합니다. 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [아키텍처 및 모델링 도구에 대한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
 
 ##  <a name="UnderstandingCommunicating"></a> 시스템에 대한 정보 이해 및 전달  
  Visual Studio 모델링 다이어그램을 사용하는 데는 미리 정의된 순서가 없으므로 요구나 접근 방식에 맞게 사용할 수 있습니다. 일반적으로 팀에서는 프로젝트 내내 모델을 반복적으로 자주 다시 확인합니다. 각 다이어그램은 개발 중인 시스템의 다양한 측면을 이해, 설명 및 전달하도록 도와주는 특정 기능을 제공합니다.  
@@ -186,7 +186,7 @@ Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨�
 |-----------------|-------------------|  
 |*종속성 다이어그램*<br /><br /> 참조<br /><br /> -   [코드에서 종속성 다이어그램 만들기](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [종속성 다이어그램: 참조](../modeling/layer-diagrams-reference.md)<br />-   [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)<br />-   [종속성 다이어그램으로 코드 유효성 검사](../modeling/validate-code-with-layer-diagrams.md)|코드의 논리적 아키텍처.<br /><br /> 종속성 다이어그램을 구성 하 고의 아티팩트를 매핑하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 라는 추상 그룹에는 솔루션 *레이어*합니다. 이들 레이어는 아티팩트가 시스템에서 수행하는 역할, 작업 또는 기능을 식별합니다.<br /><br /> 레이어 다이어그램은 의도한 시스템 디자인을 설명하고 해당 디자인에 대해 발전하는 코드의 유효성을 검사하는 데 유용합니다.<br /><br /> 레이어를 만들려면 솔루션 탐색기, 코드 맵, 클래스 뷰 및 개체 브라우저에서 항목을 끌어옵니다. 새 레이어를 그리려면 도구 상자를 사용하거나 다이어그램 곡면을 마우스 오른쪽 단추로 클릭합니다.<br /><br /> 기존 종속성을 보려면 레이어 다이어그램 곡면을 마우스 오른쪽 단추로 클릭하고 **종속성 생성**을 클릭합니다. 의도한 종속성을 지정하려면 새 종속성을 그립니다.|  
 
- 예를 들어 다음 종속성 다이어그램에서는 레이어 간 종속성 및 각 레이어와 연결 된 아티팩트의 수를 설명 합니다.  
+ 예를 들어 다음 종속성 다이어그램에서는 레이어 간 종속성 및 각 레이어와 연결 된 아티팩트의 수를 설명 합니다:  
 
  ![통합된 지불 시스템의 종속성 다이어그램](../modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")  
 
@@ -337,7 +337,7 @@ Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨�
 
 |**다이어그램**|**설명 내용**|  
 |-----------------|-------------------|  
-|종속성 다이어그램|시스템의 논리적 아키텍처. 종속성 유효성 검사를 사용 하 여 코드와 디자인의 일관성이 유지 되도록 합니다.<br /><br /> 를 기존 dependencys 또는 의도 된 dependencys 식별할 수 있도록 코드 맵을 만들고 관련된 항목을 그룹화 합니다. 종속성 다이어그램을 만들려면 다음을 참조 하세요.<br /><br /> -   [코드에서 종속성 다이어그램 만들기](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)|  
+|종속성 다이어그램|시스템의 논리적 아키텍처. 종속성 유효성 검사를 사용 하 여 코드와 디자인의 일관성이 유지 되도록 합니다.<br /><br /> 를 기존 dependencys 또는 의도 된 dependencys 식별할 수 있도록 코드 맵을 만들고 관련된 항목을 그룹화 합니다. 종속성 다이어그램을 만들려면 다음을 참조 하세요:<br /><br /> -   [코드에서 종속성 다이어그램 만들기](../modeling/create-layer-diagrams-from-your-code.md)<br />-   [종속성 다이어그램: 지침](../modeling/layer-diagrams-guidelines.md)|  
 |클래스 다이어그램(코드 기반)|특정 프로젝트에 대한 코드의 기존 클래스.<br /><br /> 코드에서 기존 클래스를 시각화 및 수정하려면 클래스 디자이너를 사용합니다.<br /><br /> [How to: Add Class Diagrams to Projects (Class Designer)](../ide/how-to-add-class-diagrams-to-projects-class-designer.md)을 참조하세요.|  
 
 ###  <a name="DefineClasses"></a> 형식 용어집 정의: 클래스 다이어그램  
@@ -411,7 +411,7 @@ Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨�
 ###  <a name="DescribeLayers"></a> 논리적 아키텍처 설명: 종속성 다이어그램  
  솔루션의 아티팩트를 추상 그룹으로 구성 하 여 시스템의 논리적 아키텍처를 설명 하는 종속성 다이어그램 또는 *레이어*합니다. 아티팩트는 네임스페이스, 프로젝트, 클래스, 메서드 등 다양한 항목에 해당할 수 있습니다. 레이어는 아티팩트가 시스템에서 수행하는 역할 또는 작업을 표시하고 설명합니다. 빌드 및 체크 인 작업에 레이어 유효성 검사를 포함하여 코드와 디자인의 일관성이 유지되는지 확인할 수도 있습니다.  
 
- 코드와 디자인의 일관성을 유지 하기 위해 Dinner Now 및 Lucerne 발전 함에 따라 코드의 유효성을 검사 하려면 다음 종속성 다이어그램을 사용 합니다.  
+ 코드와 디자인의 일관성을 유지 하기 위해 Dinner Now 및 Lucerne 발전 함에 따라 코드의 유효성을 검사 하려면 다음 종속성 다이어그램을 사용 합니다:  
 
  ![통합된 지불 시스템의 종속성 다이어그램](../modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")  
 
@@ -434,7 +434,7 @@ Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨�
  **PaymentProcessing이 없는 코드 맵**  
 
 #### <a name="drawing-a-dependency-diagram"></a>종속성 다이어그램 그리기  
- 종속성 다이어그램의 주요 기능은 다음과 같습니다.  
+ 종속성 다이어그램의 주요 기능은 다음과 같습니다:  
 
 -   *레이어* - 아티팩트의 논리 그룹을 설명합니다.  
 
@@ -467,7 +467,7 @@ Visual Studio에서 시각화 및 모델링 도구를 사용하여 소프트웨�
 -   [종속성 다이어그램을 사용하여 코드 유효성 검사](../modeling/validate-code-with-layer-diagrams.md)  
 
 #### <a name="summary-strengths-of-dependency-diagrams"></a>요약: 종속성 다이어그램의 장점  
- 종속성 다이어그램 데 유용 합니다.  
+ 종속성 다이어그램 데 유용 합니다:  
 
 -   아티팩트의 기능에 따라 시스템의 논리적 아키텍처를 설명합니다.  
 
