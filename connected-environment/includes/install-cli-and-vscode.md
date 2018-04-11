@@ -8,8 +8,6 @@ curl -L https://aka.ms/get-vsce-mac | bash
 ```
 
 ### <a name="install-on-windows"></a>Windows에 설치
-1. [Git for Windows](https://git-scm.com/downloads)를 설치하고 기본 설치 옵션을 선택합니다. 
-1. [이 링크](https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe)에서 **kubectl.exe**를 다운로드하고 경로의 위치에 **저장**합니다.
 1. [연결된 환경 CLI 설치관리자](https://aka.ms/get-vsce-windows)를 다운로드하고 실행합니다. 
 
 ### <a name="install-on-linux"></a>Linux에 설치
@@ -23,5 +21,5 @@ curl -L https://aka.ms/get-vsce-mac | bash
 1. 확장을 설치합니다. 
 
 ```cmd
-code --install-extension path-to-downloaded-extension/vsce-0.1.0.vsix
+code --install-extension path-to-downloaded-extension/vsce-0.1.1.vsix
 ```

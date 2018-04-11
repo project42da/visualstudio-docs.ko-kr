@@ -1,17 +1,17 @@
 ---
-title: "Mac용 Visual Studio 제거 | Microsoft Docs"
-description: "Mac용 Visual Studio 및 관련 도구를 제거하는 방법을 안내합니다."
+title: Mac용 Visual Studio 제거 | Microsoft Docs
+description: Mac용 Visual Studio 및 관련 도구를 제거하는 방법을 안내합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 193856ca96395db9a5b3bd494a5b8f1f7331f702
-ms.sourcegitcommit: 238cd48787391aa0ed1eb684f3f04e80f7958705
+ms.openlocfilehash: 985905c81acc5816c2b7a37debb4f5af3d93e94f
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/12/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac용 Visual Studio 제거
 
@@ -163,7 +163,7 @@ sudo /Library/Frameworks/Xamarin.Interactive.framework/Versions/Current/uninstal
 * `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Interactive"` 및 `"~/Library/Application Support/XamarinStudio-6.0/LocalInstall/Addins/Xamarin.Inspector"` 추가 기능 삭제
 * `/Library/Frameworks/Xamarin.Interactive.framework` 및 `/Library/Frameworks/Xamarin.Inspector.framework`에서 Inspector 및 지원 파일 삭제
 
-# <a name="uninstall-the-xamarin-profiler"></a>Xamarin Profiler 제거
+## <a name="uninstall-the-xamarin-profiler"></a>Xamarin Profiler 제거
 
 ```bash
 sudo rm -rf "/Applications/Xamarin Profiler.app"

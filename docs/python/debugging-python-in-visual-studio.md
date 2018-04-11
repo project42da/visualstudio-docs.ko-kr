@@ -17,11 +17,11 @@ manager: ghogen
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a9e8cf75bcdf11994f549be3ef47d5a95868eeef
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 850fb940b35e3fe988b8ecf8dc483ed489f985db
+ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/08/2018
 ---
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
@@ -201,4 +201,4 @@ Python 대화형 디버그 창(**디버그 > 창 > Python 대화형 디버그**)
 
 ## <a name="see-also"></a>참고 항목
 
-Visual Studio 디버거에 대한 자세한 내용은 [Visual Studio에서 디버깅](../debugger/debugging-in-visual-studio.md)을 참조하세요.
+Visual Studio 디버거에 대한 자세한 내용은 [Visual Studio에서 디버깅](../debugger/debugger-feature-tour.md)을 참조하세요.

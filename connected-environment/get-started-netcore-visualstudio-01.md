@@ -2,17 +2,17 @@
 title: Visual Studio가 있는 클라우드에서 Kubernetes를 사용하여 컨테이너가 있는 .NET Core 개발 환경 만들기 - 1단계 - 도구 설치 | Microsoft Docs
 author: johnsta
 ms.author: johnsta
-ms.date: 02/20/2018
+ms.date: 04/05/2018
 ms.topic: get-started-article
 ms.technology: vsce-kubernetes
 description: Azure에서 마이크로 서비스 및 컨테이너를 사용하여 신속하게 Kubernetes 개발
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
 manager: ghogen
-ms.openlocfilehash: 4f25d4ae550f47533628bf073f2f22d9ed158cab
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 64aa0b322c777baa78da5bf86cb1220a47128d93
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="get-started-on-connected-environment-with-net-core-and-visual-studio"></a>.NET Core 및 Visual Studio를 사용하여 연결된 환경에서 시작
 
@@ -28,8 +28,6 @@ ms.lasthandoff: 03/19/2018
 ## <a name="install-the-connected-environment-cli"></a>연결된 환경 CLI 설치
 연결된 환경에는 최소한 로컬 컴퓨터 설치가 필요합니다. 대부분의 개발 환경의 구성은 클라우드에 저장되며 다른 사용자와 공유할 수 있습니다.
 
-1. [Git for Windows](https://git-scm.com/downloads)를 설치하고 기본 설치 옵션을 선택합니다. 
-1. [이 링크](https://storage.googleapis.com/kubernetes-release/release/v1.9.0/bin/windows/amd64/kubectl.exe)에서 **kubectl.exe**를 다운로드하고 경로의 위치에 **저장**합니다.
 1. [연결된 환경 CLI 설치관리자](https://aka.ms/get-vsce-windows)를 다운로드하고 실행합니다. 
 
 ## <a name="get-kubernetes-debugging-tools"></a>Kubernetes 디버깅 도구 가져오기

@@ -1,5 +1,5 @@
 ---
-title: "둘 이상의 PCN이 있으면 어떻게 하나요? 어떤 것을 사용하나요? | Microsoft 문서"
+title: 둘 이상의 PCN이 있으면 어떻게 하나요? 어떤 것을 사용하나요? | Microsoft 문서
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -10,10 +10,10 @@ Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
 ms.openlocfilehash: a721491343c04113092831c3387750c618994008
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="what-if-i-have-more-than-one-pcn-which-one-do-i-use"></a>둘 이상의 PCN이 있으면 어떻게 하나요? 어떤 것을 사용하나요?
 
