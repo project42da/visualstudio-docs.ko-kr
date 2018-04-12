@@ -74,7 +74,7 @@ ms.lasthandoff: 04/10/2018
   
 5.  [웹 응용 프로그램 또는 SharePoint 응용 프로그램에서 데이터 수집](#BKMK_Collect_Data_from_IIS_Application_Pools)  
   
-     또는  
+     -또는-  
   
      [관리되는 앱에서 데이터를 수집합니다.](#BKMK_Collect_Data_from_Executables)  
   
@@ -195,7 +195,7 @@ ms.lasthandoff: 04/10/2018
   
              `icacls "C:\IntelliTraceLogFiles" /grant "IIS APPPOOL\SharePoint - 80":F`  
   
-         또는  
+         -또는-  
   
     -   Windows 탐색기 또는 파일 탐색기를 통해 사용 권한을 설정하려면 다음 단계를 수행합니다.  
   
