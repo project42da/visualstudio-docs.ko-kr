@@ -13,7 +13,7 @@ ms.workload:
 ms.technology: vs-ide-modeling
 ms.openlocfilehash: efcd1d354705fefcaeb0fbfbec0622ff2f06c331
 ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/10/2018
 ---
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/10/2018
   
  확장을 배포 하 고 있는 기본 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 다른 컴퓨터에 다음이 단계를 수행 합니다.  
   
-1.  Bin의 VSIX 프로젝트에 VSIX 설치 파일을 찾거나\\*\\\*.vsix  
+1.  Bin의 VSIX 프로젝트에 VSIX 설치 파일을 찾거나\\*\*\\\*.vsix  
   
 2.  대상 컴퓨터에이 파일을 복사한 다음 Windows 탐색기 (또는 파일 탐색기)에서 두 번 클릭 합니다.  
   
