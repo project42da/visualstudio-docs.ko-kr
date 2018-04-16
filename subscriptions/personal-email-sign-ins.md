@@ -1,19 +1,19 @@
 ---
-title: "VLSC에 표시된 개인 전자 메일"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/23/2018
-Ms.topic: Get-Started-Article
-Description: "Visual Studio Subscriptions – Why Am I Seeing Hotmail or Gmail Addresses for My Subscribers?"
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 2bfe2f39d432be5fc6ff7b24be2a218d02fce961
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: VLSC에 표시된 개인 전자 메일
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/23/2018
+ms.topic: Get-Started-Article
+description: Visual Studio 구독 - 구독자의 Hotmail 또는 Gmail 주소가 보이는 이유는 무엇인가요?
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: cfe035d82976e3df683f4e3a35bd9d7f3c8cf9e2
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="visual-studio-subscriptions--why-am-i-seeing-hotmail-or-gmail-addresses-for-my-subscribers"></a>Visual Studio 구독 - 구독자의 Hotmail 또는 Gmail 주소가 보이는 이유는 무엇인가요? 
 
@@ -25,13 +25,10 @@ ms.lasthandoff: 01/29/2018
 1. 관리자가 해당 회사 또는 학교 전자 메일 주소를 사용하여 개별 구독자에게 구독을 “할당”했습니다.
 2. 구독자가 구독을 “활성화”했습니다.
 
-구독자 활성화 프로세스 중에:
-1. 로그인하려면 Microsoft 계정(MSA)이 필요했습니다.
-2. 구독자가 해당 회사 또는 학교 계정(예: John@contoso.com)을 MSA로 설정하지 않은 경우 새 MSA를 만들거나 기존 MSA를 활용할 수 있었습니다.
-3. 이로 인해 “로그인 전자 메일 주소”가 “할당 대상 전자 메일 주소”와 달라졌습니다.
+구독자 활성화 프로세스 중에: 로그인하려면 msA(Microsoft 계정)가 필요했습니다. 구독자가 해당 회사 또는 학교 계정(예: John@contoso.com)을 MSA로 설정하지 않은 경우 새 MSA를 만들거나 기존 MSA를 활용할 수 있었습니다. 이로 인해 “로그인 전자 메일 주소”가 “할당 대상 전자 메일 주소”와 달라졌습니다.
 
 > [!NOTE] 
-> [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)의 새로운 구독자 환경은 회사/학교 및 Microsoft 계정(MSA) ID 유형을 둘 다 지원합니다.
+> [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)의 새로운 구독자 환경은 회사/학교 및 msA(Microsoft 계정) ID 유형을 둘 다 지원합니다.
 
 마지막으로, 관리자 마이그레이션은 구독자의 “로그인 전자 메일 주소”에 대한 VLSC의 데이터를 가져와서 새 구독자 관리 환경을 채우므로, 이 정보가 더 잘 보이는 UI 변경으로 인해 최근에 마이그레이션된 관리자는 이전에는 보이지 않았던 이러한 개인 계정을 볼 수 있습니다.
 

@@ -13,15 +13,15 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 33b9a56d88b4f64c4253126dafa5e3515aa498c6
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 6276c70cebd8f4d71e056142258422645c50cdfa
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
 
@@ -80,6 +80,16 @@ Visual Studio 2015 및 이전 버전의 경우 별도로 원하는 [Python 인�
 |   |   |
 |---|---|
 | ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Visual Studio에서 Python 지원 설치에 대한 [비디오(Microsoft Virtual Academy)를 시청](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Installing-Visual-Studio-Python-Support-go1id3LWE_1705918567)하세요.|
+
+### <a name="troubleshooting"></a>문제 해결
+
+Visual Studio에서 Python 설치 또는 실행 문제가 발생하는 경우 다음을 시도합니다.
+
+- Python CLI를 사용하여 동일한 오류가 발생했는지 확인합니다. 즉, 명령 프롬프트에서 `python.exe`를 실행합니다.
+- [Visual Studio 설치 관리자의 복구 옵션](../install/repair-visual-studio.md)을 사용합니다.
+- Windows의 **설정 > 앱 및 기능**을 통해 Python을 복구하거나 다시 설치합니다.
+
+**예제 오류**: 대화형 프로세스를 시작하지 못했습니다. System.ComponentModel.Win32Exception (0x80004005): Microsoft.PythonTools.Repl.PythonInteractiveEvaluator.d__43.MoveNext()에서 알 수 없는 오류(0xc0000135)입니다.
 
 ## <a name="visual-studio-2015"></a>Visual Studio 2015
 

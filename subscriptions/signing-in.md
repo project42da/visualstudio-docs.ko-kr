@@ -1,19 +1,19 @@
 ---
-title: "Visual Studio 구독에 로그인 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 12/11/2017
-Ms.topic: Get-Started-Article
-Description: How to Sign In to Your Visual Studio Subscription
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: bb6313e06525967f7ac8dd0aa6dd74bb4417ffef
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio 구독에 로그인 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 12/11/2017
+ms.topic: Get-Started-Article
+description: Visual Studio 구독에 로그인하는 방법
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: a6a29a67882e36a23f5c61757b80cf9558b93be1
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="signing-in-to-your-visual-studio-subscription"></a>Visual Studio 구독에 로그인
 
@@ -25,7 +25,7 @@ Visual Studio 구독에 로그인하는 단계는 사용 중인 계정의 종류
 3. [Microsoft 계정을 사용하여 회사/학교 계정에 로그인](#using-your-microsoft-account-to-sign-in-to-a-work-or-school-account)
 
 ## <a name="signing-in-with-your-microsoft-account-msa"></a>Microsoft 계정(MSA)으로 로그인
-1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)을 방문하세요.
+1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)을 방문해 보세요.
 2. Visual Studio 구독을 설정하거나 구매할 때 제공한 전자 메일 주소를 입력합니다.
     
    > [!NOTE] 
@@ -39,7 +39,7 @@ Visual Studio 구독에 로그인하는 단계는 사용 중인 계정의 종류
 Visual Studio Dev Essentials 구독에 처음 액세스할 때 시작 대화 상자가 표시됩니다.  **확인**을 클릭하여 프로그램의 사용 약관에 동의합니다.
 
 ## <a name="signing-in-with-your-work-or-school-account"></a>회사 또는 학교 계정으로 로그인 
-1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)을 방문하세요.
+1. [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)을 방문해 보세요.
 2. 새 Visual Studio 구독이 할당된 전자 메일 주소를 입력합니다.
     
    > [!NOTE]

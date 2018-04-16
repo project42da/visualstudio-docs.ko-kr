@@ -2,7 +2,7 @@
 title: Visual Studio 2017 수정 | Microsoft Docs
 description: Visual Studio를 수정하는 방법을 단계별로 알아봅니다.
 ms.custom: H1Hack27Feb2017
-ms.date: 11/08/2017
+ms.date: 04/06/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -20,14 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 597da9be2ce4c6d22beaa6fc5fc419ef785ece94
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 3145b1fef86b6d9540e105557bdf40d291049a52
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="modify-visual-studio-2017-by-adding-or-removing-workloads-and-components"></a>작업과 구성 요소를 추가하거나 제거하여 Visual Studio 2017 수정
-수행하려는 작업에 맞게 Visual Studio를 쉽게 개인 설정할 수 있을 뿐만 아니라 더 쉽게 사용자 지정할 수도 있습니다. 더 이상 제어판에서 작업할 필요 없이 새로운 Visual Studio 설치 관리자를 시작하고 원하는 대로 변경하면 됩니다.
+수행하려는 작업에 맞게 Visual Studio를 쉽게 개인 설정할 수 있을 뿐만 아니라 더 쉽게 사용자 지정할 수도 있습니다. 그러면 새로운 Visual Studio 설치 관리자를 시작하고 원하는 대로 변경하면 됩니다.
 
 방법은 다음과 같습니다.  
 
@@ -39,36 +39,40 @@ ms.lasthandoff: 04/03/2018
 
 1.  컴퓨터에서 Visual Studio 설치 관리자를 찾습니다.  
 
-     예를 들어 Windows 10 1주년 업데이트를 실행하는 컴퓨터에서 **시작**을 선택한 다음 **V** 문자로 스크롤하면 **Visual Studio 설치 관리자**로 나열됩니다.  
+     예를 들어 Windows 10을 실행하는 컴퓨터에서 **시작**을 선택한 다음, **Visual Studio 설치 관리자**로 나열되는 **V** 문자로 스크롤합니다.  
 
      ![Visual Studio 설치 관리자](media/vs2017-locate-the-visual-studio-installer.PNG "Microsoft Visual Studio 설치 관리자 찾기")
 
      >[!NOTE]
      일부 컴퓨터에서는 Visual Studio 설치 관리자가 **Microsoft Visual Studio 설치 관리자**로 문자 **“M”** 아래에 나열될 수 있습니다.<br/><br/> 또는 다음 위치에서 Visual Studio 설치 관리자를 찾을 수 있습니다.`C:\Program Files (x86)\Microsoft Visual Studio\Installer\vs_installer.exe`
 
-2.  설치 관리자를 클릭하거나 탭한 다음 **수정**을 선택합니다.  
+2.  설치 관리자를 클릭하거나 탭한 다음, **수정**을 선택합니다.  
 
-     ![Visual Studio 실행 또는 수정](media/vs2017-modify.PNG "Visual Studio 2017 수정")  
+     ![Visual Studio 실행 또는 수정](media/modify-visual-studio.png "Visual Studio 2017 수정")
+
+     보류 중인 업데이트가 있는 경우 수정 단추는 다른 위치에 있습니다. **자세히**를 클릭한 다음, **수정**을 선택합니다.   
+
+     ![Visual Studio 업데이트 또는 수정](media/modify-or-update-visual-studio.png "Visual Studio 2017 업데이트 또는 수정")
 
 3.  **작업** 화면에서 설치하거나 제거할 작업을 선택하거나 선택 취소합니다.  
 
     ![Visual Studio 2017 설치 대화 상자](media/vs2017-modify-workloads.PNG "Visual Studio 2017에서 작업 선택")
 
-4. **수정**을 다시 클릭하거나 탭합니다.  
+4. **수정**을 다시 선택합니다.  
 
-5. 새 작업과 구성 요소가 설치된 후 **시작**을 클릭합니다.
+5. 새 워크로드 및 구성 요소가 설치된 후 **시작**을 선택합니다.
 
 ## <a name="modify-individual-components"></a>개별 구성 요소 수정
 
-편리한 작업 기능을 사용하여 Visual Studio 설치를 사용자 지정하지 않으려는 경우 Visual Studio 설치 관리자에서 **개별 구성 요소** 옵션을 선택하고 원하는 구성 요소를 선택한 다음 프롬프트를 따릅니다.  
+Visual Studio 설치를 사용자 지정하기 위해 편리한 작업 기능을 사용하지 않으려는 경우 Visual Studio 설치 관리자에서 **개별 구성 요소** 옵션을 선택하고 원하는 구성 요소를 선택한 다음, 표시되는 메시지를 따릅니다.  
 
 ## <a name="get-support"></a>지원 받기
-때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지를 참조하세요. 문제 해결 단계가 도움이 되지 않는 경우 라이브 채팅을 통해 Microsoft에 설치 지원을 문의할 수 있습니다(영어만 가능). 자세한 내용은 [Visual Studio 지원 페이지](https://www.visualstudio.com/vs/support/#talktous)를 참조하세요.
+때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지를 참조하여 도움을 받으세요. [실시간 채팅](https://www.visualstudio.com/vs/support/#talktous)(영어 전용)을 통해 설치 도움말에 대한 문의할 수 있습니다. 자세한 내용은 [Visual Studio “사용자 의견”](https://www.visualstudio.com/vs/support/#talktous)을 참조하세요.
 
 몇 가지 추가 지원 옵션은 다음과 같습니다.
 * Visual Studio 설치 관리자와 Visual Studio IDE에 모두 표시되는 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 Microsoft에 제품 문제를 보고할 수 있습니다.
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 Microsoft와 제품 제안을 공유할 수 있습니다.
-* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다.
+* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고, 답변을 찾을 수 있습니다.
 * [Gitter 커뮤니티의 Visual Studio 관련 대화](https://gitter.im/Microsoft/VisualStudio)를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다.  (이 옵션을 사용하려면 [GitHub](https://github.com/) 계정이 필요합니다.)
 
 ## <a name="see-also"></a>참고 항목

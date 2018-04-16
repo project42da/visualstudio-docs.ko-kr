@@ -1,19 +1,19 @@
 ---
-title: "Visual Studio 구독 - 구독자 혜택"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 2/12/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the benefits included in your Visual Studio subscription
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: b42d4f826d6bc589ecf16db2d1d4eddb98d81ff9
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+title: Visual Studio 구독 - 구독자 혜택
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 02/12/2018
+ms.topic: Get-Started-Article
+description: Visual Studio 구독에 포함된 혜택 알아보기
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 7e174253601de47de50f8abe17758d18466b236d
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="benefits-included-in-your-visual-studio-subscription"></a>Visual Studio 구독에 포함된 혜택
 
@@ -22,7 +22,7 @@ Visual Studio 구독은 Windows, iOS, Android, Linux 등을 비롯한 기본 플
 혜택은 다음 세 가지 범주로 그룹화됩니다.
 
 ## <a name="tools"></a>도구
-도구 범주에서는 [Visual Studio IDE](/vs-ide-benefit), [Visual Studio Team Services](/vs-vsts) 및 [Azure](/vs-azure)와 같은 중요한 혜택을 포함하여 다양한 혜택에 액세스할 수 있습니다.  구독 수준에 따라 Windows 및 Office 365 개발자 계정, Visual Studio App Center, 파트너(예: WhiteSource Bolt 및 ModernRequirements)의 혜택도 표시됩니다.
+도구 범주에서는 [Visual Studio IDE](/vs-ide-benefit/), [Visual Studio Team Services](/vs-vsts/) 및 [Azure](/vs-azure/)와 같은 중요한 혜택을 포함하여 다양한 혜택에 액세스할 수 있습니다.  구독 수준에 따라 Windows 및 Office 365 개발자 계정, Visual Studio App Center, 파트너(예: WhiteSource Bolt 및 ModernRequirements)의 혜택도 표시됩니다.
 
 ## <a name="professional-development"></a>전문적인 개발
 역량을 지속적으로 향상하고 최신 기술을 유지하는 데 도움이 되도록 업계 리더가 제공하는 최상의 온라인 교육에 액세스할 수 있습니다. 제공되는 유용한 콘텐츠의 예는 다음과 같습니다.

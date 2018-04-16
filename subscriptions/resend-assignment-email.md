@@ -1,21 +1,21 @@
 ---
-title: "manage.visualstudio.com 또는 VLSC 내에서 구독 할당 전자 메일을 다시 보내는 방법 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 2/13/2018
-Ms.topic: Get-Started-Article
-Description: Learn how to resend the subscription assignment to subscribers from manage.visualstudio.com or VLSC
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 0ba7d6e36c25ced78b0c6b25688e5eb5b26eb04a
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+title: manage.visualstudio.com 또는 VLSC 내에서 구독 할당 전자 메일을 다시 보내는 방법 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 02/13/2018
+ms.topic: Get-Started-Article
+description: manage.visualstudio.com 또는 VLSC에서 구독 할당을 구독자에게 다시 보내는 방법 알아보기
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 080ec95c73ed649168838d823a0dcc5d809ee89a
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="how-to-resend-subscription-assignment-emails"></a>구독 할당 전자 메일을 다시 보내는 방법:
+# <a name="how-to-resend-subscription-assignment-emails-in-the-visual-studio-subscription-management-portal"></a>Visual Studio 구독 관리 포털에서 구독 할당 이메일을 다시 보내는 방법
 
 할당 전자 메일을 다시 보내는 데 필요한 단계는 구독 관리에 사용하는 포털에 따라 다릅니다. 
 

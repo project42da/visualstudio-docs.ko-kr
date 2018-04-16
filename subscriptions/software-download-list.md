@@ -1,23 +1,23 @@
 ---
-title: "어떤 소프트웨어를 다운로드할 수 있는지 어떻게 알 수 있나요? | Microsoft 문서"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 12/28/2017
-Ms.topic: Get-Started-Article
-Description: Find a list of the software downloads included with your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 072b39475f9020b84df0d72acca87119e12ce3b9
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+title: 어떤 소프트웨어를 다운로드할 수 있는지 어떻게 알 수 있나요? | Microsoft 문서
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 12/28/2017
+ms.topic: Get-Started-Article
+description: Visual Studio 구독에 포함된 소프트웨어 다운로드 목록을 찾습니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: c59565e903947df54ec0ae593421ee0cc447e8c5
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="how-do-i-know-what-software-is-available-for-download"></a>어떤 소프트웨어를 다운로드할 수 있는지 어떻게 알 수 있나요?
 
-사용 가능한 [소프트웨어 다운로드 목록](http://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)은 사용 중인 구독에 따라 다릅니다.  동일한 로그인 주소에 연결된 구독이 두 개 이상 있는 경우 보고 있는 구독과 관계없이 최상위 수준 구독에 포함된 다운로드가 표시됩니다.  예를 들어 Visual Studio Enterprise 표준 구독 및 Visual Studio Dev Essentials 멤버 자격이 있는 경우 Enterprise 구독에서 사용할 수 있는 전체 다운로드 목록이 표시됩니다.  구독 목록을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)를 방문하세요. 
+사용 가능한 [소프트웨어 다운로드 목록](http://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Visual_Studio_by_Subscription_Level.xlsx)은 사용 중인 구독에 따라 다릅니다.  동일한 로그인 주소에 연결된 구독이 두 개 이상 있는 경우 보고 있는 구독과 관계없이 최상위 수준 구독에 포함된 다운로드가 표시됩니다.  예를 들어 Visual Studio Enterprise 표준 구독 및 Visual Studio Dev Essentials 멤버 자격이 있는 경우 Enterprise 구독에서 사용할 수 있는 전체 다운로드 목록이 표시됩니다.  구독 목록을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)을 방문해 보세요. 
 
 이미 Visual Studio 구독이 있는 경우: 
 1. [https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)로 이동합니다.

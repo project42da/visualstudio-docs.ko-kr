@@ -1,23 +1,22 @@
 ---
-title: "제품 키 사용 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to obtain and manage your product keys in Visual Studio subscriptions.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 2ed935a5d254f57f4e643013704159c2fc90c8f5
-ms.sourcegitcommit: a07b789cc41ed72664f2c700c1f114476e7b0ddd
+title: 제품 키 사용 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: Visual Studio 구독에서 제품 키를 얻고 관리하는 방법을 알아봅니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 2d3ca72182c26e2e43bcdf97ea6277a4dd1375f0
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/19/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-product-keys-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 제품 키 사용
 
-## <a name="product-keys-overview"></a>제품 키 개요
 Visual Studio 구독에서는 응용 프로그램을 설계, 개발, 테스트 및 시연하는 다양한 Microsoft 제품에 대한 액세스 권한을 제공합니다. 이러한 제품 중 일부에는 설치 중에 제품 키가 필요하고, 일부에는 정품 인증이 필요합니다.
 
 일반적으로 Visual Studio 구독에는 Windows 및 Office 제품의 현재 버전에 대한 5개의 제품 키와 이전 버전에 대한 3개의 키가 포함됩니다.
@@ -48,7 +47,7 @@ MPN, BizSpark, MCT 소프트웨어 및 서비스 및 MCT를 통해 제공되는 
 ## <a name="locating-and-claiming-product-keys"></a>제품 키 찾기 및 요청
 제품 키를 보려면 Visual Studio 구독에 로그인해야 합니다. 개별 제품 키는 아래 표시된 것처럼 [다운로드](https://my.visualstudio.com/downloads) 페이지에서 특정 제품에 대한 파란색 **키 가져오기** 링크를 선택하여 확인할 수 있습니다.  또한 모든 키는 [제품 키](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) 페이지에서 전체적으로 사용할 수도 있습니다. 단일 제품에 대해 여러 키가 있는 경우 다운로드를 위해 [메모] 열에 해당 정보가 표시되어 사용해야 할 키를 식별하는 데 도움이 됩니다.
 
-![다운로드 페이지에서 키 가져오기](_img/product-keys/download-get-key.png)
+   ![다운로드 페이지에서 키 가져오기](_img/product-keys/download-get-key.png)
 
 일부 제품은 한 번에 다운로드할 수 있도록 여러 버전이 번들로 구성되어 있습니다. 이러한 경우 입력하는 제품 키에 따라 설치되는 제품 버전이 결정됩니다.
 일부 키는 "정적" 키와 같이 자동으로 제공되며, 정품 인증이 필요하지 않으므로 필요한 만큼 여러 번 사용할 수 있습니다. 다른 키는 제품에 대한 **키 가져오기** 링크를 선택하여 요청해야 합니다.
@@ -82,7 +81,7 @@ MPN, BizSpark, MCT 소프트웨어 및 서비스 및 MCT를 통해 제공되는 
 1.  Visual Studio 구독에 로그인합니다.  제품을 다운로드하거나 제품 키를 요청하려면 로그인해야 합니다. 
 2.  [제품 키](https://my.visualstudio.com/productkeys?wt.mc_id=o~msft~docs) 탭을 클릭합니다.
 3.  제품 키는 제품 이름별 사전순으로 나열됩니다.  원하는 제품의 이름으로 스크롤하거나 페이지 위쪽의 검색 표시줄을 사용하여 검색할 수 있습니다.  
-![제품 키 검색](_img\product-keys\visio-product-key-cropped.png)
+    ![제품 키 검색](_img\product-keys\visio-product-key-cropped.png)
 
 이 예에서는 검색 표시줄을 사용하여 Visio 2010에 대한 제품 키를 찾습니다.
 여기서는 Visio 2010의 몇 가지 버전이 나열되어 있습니다.  이미 Visio Standard 2010 및 Visio Premium 2010에 대해 각각 하나의 키를 요청했으며, 둘 다에 4개의 키가 남아 있습니다.  요청한 키는 모두 일반 정품 키이며 페이지에 표시됩니다.  **메모** 열에서 요청한 키에 대한 간단한 메모를 기록할 수 있습니다.  **요청됨** 열의 날짜와 함께 이 메모를 사용하면 요청한 키를 추적할 수 있습니다.  예를 들어 키를 사용하여 제품 설치를 정품 인증할 때 메모를 만들 수 있습니다.  
@@ -91,7 +90,7 @@ MPN, BizSpark, MCT 소프트웨어 및 서비스 및 MCT를 통해 제공되는 
 자동으로 "요청됨"으로 표시된 정적 및 다른 키 중에서 선택한 많은 항목과 함께 요청한 모든 키 목록을 내보낼 수 있습니다.  
 
 > [!IMPORTANT] 
-> 구독이 만료되면 더 이상 새 키를 요청하거나 요청한 키를 내보낼 수 없습니다.** 
+> 구독이 만료되면 더 이상 새 키를 요청하거나 요청한 키를 내보낼 수 없습니다. 
 
 키를 내보내려면 [제품 키] 페이지의 오른쪽 끝에 있는 **모든 키 내보내기** 링크를 클릭하기만 하면 됩니다.  KeysExport.xml이라는 제목의 .xml 파일이 만들어지고, 파일을 열거나 저장할 수 있는 옵션이 표시됩니다.  .xml 파일을 처리할 수 있는 응용 프로그램으로 파일을 열어야 합니다.  예를 들어 Excel에서 파일을 읽기 전용 통합 문서로 열 수 있습니다.  
 

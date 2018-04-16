@@ -1,21 +1,21 @@
 ---
-title: "별칭을 사용하여 Visual Studio 구독에 로그인하지 못할 수 있음 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/2/2018
-Ms.topic: Get-Started-Article
-Description: Sign-in may fail if aliases or friendly names are used.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 8c07bc8d3cf674d86c2152ff80f20e4fac003fc3
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: 별칭을 사용하여 Visual Studio 구독에 로그인하지 못할 수 있음 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 01/02/2018
+ms.topic: Get-Started-Article
+description: 별칭 또는 대화명을 사용하는 경우 로그인에 실패할 수 있습니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 869835e53b1975d86501660b3e4ca34a41a1a7d4
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
-# <a name="signing-in-to-visual-studio-subscriptions-may-fail-with-aliases"></a>별칭을 사용하여 Visual Studio 구독에 로그인하지 못할 수 있음
+# <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>별칭을 사용하여 Visual Studio 구독에 로그인하지 못할 수 있음
 
 로그인에 사용되는 계정 유형에 따라 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)에 로그인할 때 사용 가능한 구독이 제대로 표시되지 않을 수 있습니다. 한 가지 원인은 구독이 할당된 로그인 ID 대신 “별칭” 또는 “이름”을 사용하기 때문일 수 있습니다. 이것을 “별칭 지정”이라고 합니다. 
 
@@ -28,8 +28,8 @@ ms.lasthandoff: 01/29/2018
 ## <a name="as-an-administrator-what-options-do-i-have"></a>관리자로서 어떤 옵션이 있나요?
 
 관리자는 구독자가 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)에 성공적으로 로그인했는지 확인하는 두 가지 옵션이 있습니다. 
-1. 첫 번째 옵션(권장)은 VLSC(볼륨 라이선스 서비스 센터)에서 디렉터리 계정을 할당된 주소로 활용하는 것입니다. 자세한 내용은 이 문서의 [디렉터리 계정에 구독자 할당](#assigning-subscribers-to-a-directory-account) 섹션을 참조하세요.
-2. 두 번째 옵션(보안 수준 낮음)은 구독자가 “회사 또는 학교” 전자 메일 주소를 “개인” 계정(즉 Microsoft 계정 또는 MSA)에 연결하도록 허용하는 것입니다. 자세한 내용은 [회사 또는 학교 계정을 개인 계정으로 정의 ](#defining-a-work-or-school-account-as-a-personal-account ) 섹션을 참조하세요.
+- 첫 번째 옵션(권장)은 VLSC(볼륨 라이선스 서비스 센터)에서 디렉터리 계정을 할당된 주소로 활용하는 것입니다. 자세한 내용은 이 문서의 [디렉터리 계정에 구독자 할당](#assigning-subscribers-to-a-directory-account) 섹션을 참조하세요.
+- 두 번째 옵션(보안 수준 낮음)은 구독자가 “회사 또는 학교” 전자 메일 주소를 “개인” 계정(즉 Microsoft 계정 또는 MSA)에 연결하도록 허용하는 것입니다. 자세한 내용은 [회사 또는 학교 계정을 개인 계정으로 정의 ](#defining-a-work-or-school-account-as-a-personal-account ) 섹션을 참조하세요.
 
 > [!NOTE]
 > 회사가 새 Visual Studio 구독 [관리 포털](https://manage.visualstudio.com)로 마이그레이션되면 구독자 프로필의 일부로 디렉터리 및 전자 메일 주소를 제공할 수 있는 새 관리 환경을 활용할 수 있습니다.  [마이그레이션](https://support.microsoft.com/help/4013930/visual-studio-subscriptions-administrator-migration-details)에 대해 자세히 알아보세요.
@@ -102,7 +102,7 @@ ms.lasthandoff: 01/29/2018
 
 Visual Studio 구독이 할당되었습니다.  https://my.visualstudio.com을 방문하고 %DIRECTORY ADDRESS% 주소로 로그인하여 구독을 활성화하고 액세스하세요. 
 
-문제가 있는 경우 지원 팀 (https://www.visualstudio.com/subscriptions/support/)에 문의해 주세요.
+문제가 있는 경우 지원 팀(https://www.visualstudio.com/subscriptions/support/))에 문의하세요.
 
 페이지 아래쪽에서 다음을 선택합니다.
    - 계정, 구독 및 청구 지원
@@ -120,8 +120,8 @@ Visual Studio 구독이 할당되었습니다.  https://my.visualstudio.com을 �
 > [!WARNING]
 > Microsoft는 “회사 또는 학교” ID를 “개인” ID와 결합하는 것을 권장하지 않습니다.  이 작업으로 인해 조직은 계정의 소유권 및 제어를 상실하고 직원은 회사를 떠난 후에도 특정 제품 또는 서비스에 계속 액세스할 수 있습니다.  자세한 내용은 Microsoft Identity 팀에서 제공하는 이 블로그 [게시물](https://blogs.technet.microsoft.com/enterprisemobility/2016/09/15/cleaning-up-the-azure-ad-and-microsoft-account-overlap/)을 참조하세요.
 
-### <a name="defining-an-email-address-as-a-personal-account"></a>전자 메일 주소를 개인 계정으로 정의
-구독자에게 구독이 할당된 후 구독 혜택을 활용하기 위해 https://my.visualstudio.com을 방문하도록 요청하는 전자 메일이 제공됩니다.  로그인을 시도할 때 Visual Studio 구독 로그인에 실패하고 계정이 인식되지 않음을 나타내는 오류가 표시됩니다.  https://my.visualstudio.com 환경에 로그인하기 전에 구독자에게 이러한 지침을 따르도록 요청하세요.  필요한 경우 구독을 할당한 후 이 [템플릿](#notifying-your-subscribers-using-personal-accounts)을 사용하여 구독자에게 알릴 수 있습니다.
+### <a name="defining-an-email-address-as-a-personal-account"></a>이메일 주소를 개인 계정으로 정의
+구독자에게 구독이 할당된 후 구독 혜택을 활용하기 위해 https://my.visualstudio.com을 방문하도록 요청하는 이메일이 제공됩니다.  로그인을 시도할 때 Visual Studio 구독 로그인에 실패하고 계정이 인식되지 않음을 나타내는 오류가 표시됩니다.  https://my.visualstudio.com 환경에 로그인하기 전에 구독자에게 이러한 지침을 따르도록 요청하세요.  필요한 경우 구독을 할당한 후 이 [템플릿](#notifying-your-subscribers-using-personal-accounts)을 사용하여 구독자에게 알릴 수 있습니다.
 
 1. https://my.visualstudio.com으로 이동하여 **새 Microsoft 계정 만들기**를 클릭합니다.
 
@@ -145,8 +145,8 @@ Visual Studio 구독이 할당되었습니다.  https://my.visualstudio.com을 �
 
 안녕하세요 %SUBSCRIBER NAME% 님,
 
-Visual Studio 구독이 할당되었고 시작 전자 메일을 기반으로 https://my.visualstudio.com에 로그인하도록 지시되었을 수 있습니다.  이는 혜택을 이용하기 위한 올바른 웹 사이트이지만 조직에서는 사이트에 액세스하기 전에 몇 가지 추가 단계를 수행해야 합니다.  회사 전자 메일 주소에 연결된 “Microsoft 계정”을 만드는 데 도움이 되는 아래 지침을 따르세요.  이러한 단계가 완료되면 전자 메일 주소를 사용하여 구독 혜택에 액세스합니다.
-1. https://my.visualstudio.com을 방문합니다.
+Visual Studio 구독이 할당되었고 시작 이메일을 기반으로 https://my.visualstudio.com에 로그인하도록 지시되었을 수 있습니다.  이는 혜택을 이용하기 위한 올바른 웹 사이트이지만 조직에서는 사이트에 액세스하기 전에 몇 가지 추가 단계를 수행해야 합니다.  회사 전자 메일 주소에 연결된 “Microsoft 계정”을 만드는 데 도움이 되는 아래 지침을 따르세요.  이러한 단계가 완료되면 전자 메일 주소를 사용하여 구독 혜택에 액세스합니다.
+1. https://my.visualstudio.com을 방문해 보세요.
 
 2. 오른쪽에서 [새 Microsoft 계정 만들기]를 클릭합니다.
 
@@ -164,7 +164,7 @@ Visual Studio 구독이 할당되었고 시작 전자 메일을 기반으로 htt
 
 참고: 나중에 https://my.visualstudio.com을 방문하면 사용할 계정을 선택하라는 메시지가 표시될 수 있습니다(예: “회사 또는 학교 계정” 또는 “개인 계정”).  위의 단계를 수행한 후 “개인 계정” 옵션을 활용해야 합니다.
 
-문제가 있는 경우 지원 팀 (https://www.visualstudio.com/subscriptions/support/)에 문의해 주세요.
+문제가 있는 경우 지원 팀(https://www.visualstudio.com/subscriptions/support/))에 문의하세요.
 
 페이지 아래쪽에서 다음을 선택합니다.
    - 계정, 구독 및 청구 지원

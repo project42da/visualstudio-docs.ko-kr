@@ -1,25 +1,28 @@
 ---
-title: "관리자 포털에서 구독 편집 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how administrators can edit subscription assignments.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 120bf87ddbaf50efa1abe59bac1c2e4616db7737
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: 관리자 포털에서 구독 편집 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: 관리자가 구독 할당을 편집하는 방법을 알아봅니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: fa700e62f6491321aae2696739f85b7cfd4cecd3
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="editing-visual-studio-subscription-assignments"></a>Visual Studio 구독 할당 편집
 
+구독 관리자는 조직 내에서 개인에게 할당된 구독을 변경할 수 있습니다.  이 문서에서는 관리자가 변경할 수 있는 유형에 대해 설명하고 필요한 단계를 제공합니다. 
+
 ## <a name="making-changes-to-subscriber-information"></a>구독자 정보 변경
 구독자 정보를 편집하여 오류를 수정하거나 정보를 업데이트할 수 있습니다. 
-**구독자의 이메일 주소를 편집하면 기존 혜택이 다시 설정됩니다.**
+> [!NOTE]
+> 구독자의 이메일 주소를 편집하면 기존 혜택이 다시 설정됩니다.
 
 구독자를 편집하려면 마우스로 위를 가리킬 때 구독자의 이메일 주소 옆에 나타나는 줄임표(...)를 선택합니다. 드롭다운이 표시됩니다.  **편집**을 선택하여 구독자 세부 정보를 수정합니다. 또한 그리드에서 구독자의 행을 두 번 클릭하여 편집 창을 열 수도 있습니다.
 
@@ -53,7 +56,7 @@ ms.lasthandoff: 01/29/2018
 
     ![라이선스 편집 - 대량 편집 파일 업로드](_img\edit-license\edit-license-bulk-file-upload1.png)
 
-5.  파일이 업로드되면 성공했음을 알려주는 알림이 표시됩니다. 
+5.  파일이 업로드되면 성공했음을 알려주는 알림이 표시됩니다. 이 시점에서 편집한 내용이 구독자 정보에 반영됩니다. 
 
     ![라이선스 편집 - 대량 편집 업로드 완료](_img\edit-license\edit-license-bulk-upload-complete.png)
 

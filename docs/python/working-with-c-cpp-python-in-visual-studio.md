@@ -2,7 +2,7 @@
 title: C++ 및 Python 작업 | Microsoft Docs
 description: Visual Studio에서 Python용 C++ 확장 또는 모듈을 작성하는 프로세스 amd 단계
 ms.custom: ''
-ms.date: 01/16/2018
+ms.date: 04/03/2018
 ms.reviewer: ''
 ms.suite: ''
 ms.technology:
@@ -14,36 +14,39 @@ ms.tgt_pltfrm: ''
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 12309747949e9f541c69fad64584e86627252907
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 3f81a9f14d64e014fd2b40b0628d7d71884810a3
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="creating-a-c-extension-for-python"></a>Python용 C++ 확장 만들기
 
 C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대한 액세스를 가능하게 할 뿐만 아니라 Python 인터프리터의 기능을 확장하는 데 일반적으로 사용됩니다. 모듈은 세 가지 기본 형식이 있습니다.
 
-- 액셀러레이터 모듈: Python은 해석된 언어이기 때문에 성능 향상을 위해 특정 코드 부분을 C++로 작성할 수 있습니다. 
-- 래퍼 모듈: 래퍼는 기존 C/C++ 인터페이스를 Python 코드에 노출하거나 Python에서 사용하기 쉬운 보다 “Python” 최적화된 API를 노출합니다.
+- 액셀러레이터 모듈: Python은 해석된 언어이기 때문에 성능 향상을 위해 특정 코드 부분을 C++로 작성할 수 있습니다.
+- 래퍼 모듈: 기존 C/C++ 인터페이스를 Python 코드에 노출하거나 Python에서 사용하기 쉬운 보다 “Python” 최적화된 API를 노출합니다.
 - 하위 수준 시스템 액세스 모듈: CPython 런타임, 운영 체제 또는 기본 하드웨어의 하위 수준 기능에 액세스하기 위해 만들었습니다.
 
 이 문서에서는 쌍곡 탄젠트를 계산하고 Python 코드에서 호출하는 CPython용 C++ 확장을 빌드하는 방법에 대해 설명합니다. C++에서 동일한 루틴을 구현할 경우의 관련된 성능 향상을 보여 주기 위해 Python에서 먼저 루틴을 구현합니다.
 
 여기에서 사용된 방법은 [Python 설명서](https://docs.python.org/3/c-api/)에 설명된 대로 표준 CPython 확장용입니다. 이 방법과 다른 방법의 비교는 이 문서의 끝에 있는 [대체 방법](#alternative-approaches)에 설명되어 있습니다.
 
+이 연습에서 완료된 샘플은 [python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension)(GitHub)에서 찾을 수 있습니다.
+
 ## <a name="prerequisites"></a>전제 조건
 
 - 기본 옵션과 함께 설치된 **C++를 사용한 데스크톱 개발** 및 **Python 개발** 워크로드를 모두 사용하는 Visual Studio 2017.
 - **Python 개발** 워크로드에서 **Python 네이티브 개발 도구** 오른쪽에 있는 상자를 선택합니다. 이 옵션은 이 문서에 설명된 대부분의 구성을 설정합니다. 이 옵션에는 C++ 워크로드도 자동으로 포함됩니다.
 
-![Python 네이티브 개발 도구 옵션 선택](media/cpp-install-native.png)
+    ![Python 네이티브 개발 도구 옵션 선택](media/cpp-install-native.png)
 
-- **데이터 과학 및 분석 응용 프로그램** 워크로드 설치에는 Python 및 **Python 네이티브 개발 도구** 옵션이 기본적으로 포함됩니다.
+    > [!Tip]
+    > **데이터 과학 및 분석 응용 프로그램** 워크로드 설치에는 Python 및 **Python 네이티브 개발 도구** 옵션이 기본적으로 포함됩니다.
 
 다른 버전의 Visual Studio 사용을 포함한 자세한 내용은 [Visual Studio용 Python 지원 설치](installing-python-support-in-visual-studio.md)를 참조하세요. Python을 별도로 설치하는 경우 설치 관리자의 **고급 옵션**에서 **디버깅 기호 다운로드** 및 **디버그 버전의 이진 파일 다운로드**를 선택해야 합니다. 이 옵션은 디버그 빌드를 수행하도록 선택할 경우 필요한 디버그 라이브러리를 사용할 수 있도록 합니다.
 
@@ -91,10 +94,11 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
         print('{} took {:.3f} seconds\n\n'.format(name, duration))
 
         for d in result:
-            assert -1 <= d <=1, " incorrect values"
+            assert -1 <= d <= 1, " incorrect values"
 
     if __name__ == "__main__":
         print('Running benchmarks with COUNT = {}'.format(COUNT))
+
         test(sequence_tanh, 'sequence_tanh')
 
         test(lambda d: [tanh(x) for x in d], '[tanh(x) for x in d]')
@@ -104,11 +108,17 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 
 ## <a name="create-the-core-c-project"></a>핵심 C++ 프로젝트 만들기
 
-1. 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트...**를 선택합니다. Visual Studio 솔루션에는 Python 및 C++ 프로젝트가 함께 포함될 수 있습니다.
+1. 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트...**를 선택합니다. Visual Studio 솔루션은 Python 및 C++ 프로젝트를 모두 함께 포함합니다(Python용 Visual Studio 사용에 대한 이점 중 하나).
 
-1. “C++”를 검색하고, **빈 프로젝트**를 선택하고, 이름을 지정한 다음(이 문서에서는 “superfastcode” 사용) **확인**을 선택합니다. 참고: Visual Studio 2017과 함께 **Python 네이티브 개발 도구**를 설치한 경우 여기에 설명된 내용이 이미 많이 포함되어 있는 **Python 확장 모듈** 템플릿으로 시작할 수 있습니다. 그러나 이 연습에서는 빈 프로젝트로 시작하여 확장 모듈 빌드를 단계별로 보여 줍니다.
+1. “C++”를 검색하고, **빈 프로젝트**를 선택하고, 이름을 지정한 다음(이 문서에서는 “superfastcode” 사용) **확인**을 선택합니다.
 
-1. 새 프로젝트에서 **소스 파일** 노드를 마우스 오른쪽 단추로 클릭하여 C++ 파일을 만들고, **추가 > 새 항목..."**을 선택하고 **C++ 파일**을 선택하여 이름(예: `module.cpp`)을 지정한 다음 **확인**을 선택합니다. 이 단계는 다음 단계에서 C++ 속성 페이지를 설정하는 데 필요합니다.
+    > [!Tip]
+    > Visual Studio 2017에 설치된 **Python 네이티브 개발 도구**를 사용하면 아래 설명된 내용이 이미 많이 포함되어 있는 **Python 확장 모듈** 템플릿으로 시작할 수 있습니다. 그러나 이 연습에서는 빈 프로젝트로 시작하여 확장 모듈 빌드를 단계별로 보여 줍니다. 프로세스를 이해하고 나면 사용자 고유의 확장을 작성할 때 템플릿으로 시간을 절약할 수 있습니다.
+
+1. 새 프로젝트에서 **소스 파일** 노드를 마우스 오른쪽 단추로 클릭하여 C++ 파일을 만든 다음, **추가 > 새 항목...”**을 선택하고 **C++ 파일**을 선택하여 이름(예: `module.cpp`)을 지정한 후, **확인**을 선택합니다.
+
+    > [!Important]
+    > 이어지는 다음 단계에서 C++ 속성 페이지를 켜려면 `.cpp` 확장이 포함된 파일이 필요합니다.
 
 1. 솔루션에서 C++ 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 
@@ -136,7 +146,7 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 
 1. C++ 프로젝트를 마우스 오른쪽 단추로 클릭하고 **빌드**를 선택하여 구성(디버그 및 릴리스)을 테스트합니다. `.pyd` 파일은 C++ 프로젝트 폴더 자체가 아니라 **디버그** 및 **릴리스** 아래의 *솔루션* 폴더에 있습니다.
 
-1. C++ 프로젝트의 주 `.cpp` 파일에 다음 코드를 추가합니다.
+1. C++ 프로젝트의 `module.cpp` 파일에 다음 코드를 추가합니다.
 
     ```cpp
     #include <Windows.h>
@@ -161,19 +171,17 @@ C++(또는 C)로 작성된 모듈은 하위 수준 운영 체제 기능에 대�
 
 ## <a name="convert-the-c-project-to-an-extension-for-python"></a>C++ 프로젝트를 Python용 확장으로 변환
 
-C++ DLL을 Python용 확장으로 만들려면 먼저 내보낸 메서드를 Python 형식과 상호 작용하도록 수정해야 합니다. 그런 다음 모듈의 메서드 정의와 함께 모듈을 내보내는 함수를 추가해야 합니다. 여기에 설명된 내용에 대한 배경 정보는 python.org에서 [Python/C API Reference Manual](https://docs.python.org/3/c-api/index.html)(Python/C API 참조 설명서) 및 특히 [Module Objects](https://docs.python.org/3/c-api/module.html)(모듈 개체)를 참조하세요. 오른쪽 위 드롭다운 컨트롤에서 Python의 버전을 선택해야 합니다.
+C++ DLL을 Python용 확장으로 만들려면 먼저 내보낸 메서드를 Python 형식과 상호 작용하도록 수정해야 합니다. 그런 다음 모듈의 메서드 정의와 함께 모듈을 내보내는 함수를 추가해야 합니다.
 
-> [!Note]
-> 이러한 지침은 Python 3.x에 적용됩니다. Python 2.7을 사용하여 작업하는 경우 [Extending Python 2.7 with C or C++](https://docs.python.org/2.7/extending/extending.html)(C 또는 C++를 사용하여 Python 2.7 확장) 및 [Porting Extension Modules to Python 3](https://docs.python.org/2.7/howto/cporting.html)(확장 모듈을 Python 3에 이식)(python.org)을 참조하세요.
+Python 3.x에 대해 이 섹션에 표시된 기능의 배경은 [Python/C API 참조 설명서](https://docs.python.org/3/c-api/index.html) 및 특히 python.org에 있는 [모듈 개체](https://docs.python.org/3/c-api/module.html)를 참조하세요(올바른 설명서를 보려면 오른쪽 위에 있는 드롭다운 컨트롤에서 Python의 버전을 선택해야 함).
+
+Python 2.7로 작업하는 경우 [Extending Python 2.7 with C or C++](https://docs.python.org/2.7/extending/extending.html)(C 또는 C++를 사용하여 Python 2.7 확장) 및 [Porting Extension Modules to Python 3](https://docs.python.org/2.7/howto/cporting.html)(확장 모듈을 Python 3에 이식) (python.org)을 참조하세요.
 
 1. C++ 파일의 맨 위에 `Python.h`를 포함합니다.
 
     ```cpp
     #include <Python.h>
     ```
-
-    > [!Tip]
-    > *E1696: 원본 파일 “Python.h”를 열 수 없음* 및/또는 *C1083: “Python.h” 포함 파일을 열 수 없음 : 해당 파일 또는 디렉터리 없음*이 표시되는 경우 [핵심 C++ 프로젝트 만들기](#create-the-core-c-project)의 6단계에 설명된 대로 프로젝트 속성의 **C/C++ > 일반 > 추가 포함 디렉터리** 설정을 Python 설치의 `include` 폴더로 설정했는지 확인합니다.
 
 1. Python 형식을 허용하고 반환하도록 `tanh_impl` 메서드를 수정합니다(즉, `PyOjbect*`).
 
@@ -219,8 +227,8 @@ C++ DLL을 Python용 확장으로 만들려면 먼저 내보낸 메서드를 Pyt
     ```
 
 1. 대상 구성을 “릴리스”로 설정하고 C++ 프로젝트를 다시 빌드하여 코드를 확인합니다. 오류가 발생하면 다음과 같은 경우를 확인합니다.
-    - Python.h를 찾을 수 없음: 프로젝트 속성에서 **C/C++ > 일반 > 추가 포함 디렉터리**의 경로가 Python 설치 `include` 폴더를 가리키는지 확인합니다.
-    - Python 라이브러리를 찾을 수 없음: 프로젝트 속성에서 **링커 > 일반 > 추가 라이브러리 디렉터리**의 경로가 Python 설치 `libs` 폴더를 가리키는지 확인합니다.
+    - Python.h를 찾을 수 없음(*E1696: 원본 파일 “Python.h”를 열 수 없음* 및/또는 *C1083: “Python.h” 포함 파일을 열 수 없음: 해당 파일 또는 디렉터리 없음*): 프로젝트 속성의 **C/C++ > 일반 > 추가 포함 디렉터리**의 경로가 Python 설치의 `include` 폴더로 설정되어 있는지 확인합니다. [핵심 C++ 프로젝트 만들기](#create-the-core-c-project)의 6단계를 참조하세요.
+    - Python 라이브러리를 찾을 수 없음: 프로젝트 속성에서 **링커 > 일반 > 추가 라이브러리 디렉터리**의 경로가 Python 설치 `libs` 폴더를 가리키는지 확인합니다. [핵심 C++ 프로젝트 만들기](#create-the-core-c-project)의 6단계를 참조하세요.
     - 대상 아키텍처와 관련된 링커 오류: C++ 대상 프로젝트 아키텍처를 Python 설치에 맞게 변경합니다. 예를 들어 C++ 프로젝트에서 x64를 대상으로 지정하지만 Python 설치가 x86인 경우 C++ 프로젝트를 변경하여 x86을 대상으로 지정합니다.
 
 ## <a name="test-the-code-and-compare-the-results"></a>코드를 테스트하고 결과 비교
@@ -232,6 +240,8 @@ DLL을 Python 확장으로 구조화했으므로 Python 프로젝트에서 참�
 Python에서 DLL을 사용할 수 있도록 설정하는 방법은 두 가지가 있습니다.
 
 Python 프로젝트와 C++ 프로젝트가 같은 솔루션에 있는 경우 첫 번째 방법을 사용할 수 있습니다. 솔루션 탐색기로 이동하여 Python 프로젝트에서 **참조** 노드를 마우스 오른쪽 단추로 클릭한 다음, **참조 추가**를 선택합니다. 나타나는 대화 상자에서 **프로젝트** 탭을 선택하고 **superfastcode** 프로젝트(또는 사용 중인 이름)를 선택한 다음 **확인**을 선택합니다.
+
+![superfastcode 프로젝트에 참조 추가](media/cpp-add-reference.png)
 
 다음 단계에 설명된 두 번째 방법은 다른 Python 프로젝트에서도 사용 가능하도록 모듈을 전역 Python 환경에 설치합니다. (이 경우 Visual Studio 2017 버전 15.5 및 이전 버전에서는 일반적으로 해당 환경에 대한 IntelliSense 완성 데이터베이스를 새로 고쳐야 합니다. 환경에서 모듈을 제거하는 경우에도 새로 고침이 필요합니다.)
 
@@ -269,7 +279,18 @@ Python 프로젝트와 C++ 프로젝트가 같은 솔루션에 있는 경우 첫
     test(lambda d: [fast_tanh(x) for x in d], '[fast_tanh(x) for x in d]')
     ```
 
-1. Python 프로그램을 실행하고(**디버그 > 디버깅하지 않고 시작** 또는 Ctrl + F5) C++ 루틴이 Python 구현보다 5-20배 빠르게 실행되는지 확인합니다. 차이가 더 분명해지도록 다시 `COUNT` 변수를 늘려 보세요. 또한 디버그 빌드는 덜 최적화되고 다양한 오류 검사를 포함하기 때문에 C++ 모듈의 디버그 빌드가 릴리스 빌드보다 더 느리게 실행됩니다. 그러한 구성을 자유롭게 전환하여 비교해 보세요.
+1. Python 프로그램을 실행하고(**디버그 > 디버깅하지 않고 시작** 또는 Ctrl + F5) C++ 루틴이 Python 구현보다 5-20배 빠르게 실행되는지 확인합니다. 일반적인 출력은 다음과 같습니다.
+
+    ```output
+    Running benchmarks with COUNT = 500000
+    sequence_tanh took 1.542 seconds
+
+    [tanh(x) for x in d] took 1.087 seconds
+
+    [fast_tanh(x) for x in d] took 0.158 seconds
+    ```
+
+1. 차이가 더 분명해지도록 `COUNT` 변수를 늘려 보세요. 또한 디버그 빌드는 덜 최적화되고 다양한 오류 검사를 포함하기 때문에 C++ 모듈의 디버그 빌드가 릴리스 빌드보다 더 느리게 실행됩니다. 그러한 구성을 자유롭게 전환하여 비교해 보세요.
 
 ## <a name="debug-the-c-code"></a>C++ 코드 디버그
 
@@ -301,7 +322,13 @@ Visual Studio는 디버깅 Python 및 C++ 코드를 함께 지원합니다.
 | 방법 | 연도 | 담당자 | 장점 | 단점 |
 | --- | --- | --- | --- | --- |
 | CPython용 C/C++ 확장 모듈 | 1991 | 표준 라이브러리 | [광범위한 설명서 및 자습서](https://docs.python.org/3/c-api/). 전체 제어. | 컴파일, 이식성, 참조 관리. 높은 C 지식. |
-| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 한 번에 여러 언어에 대한 바인딩 생성. | Python이 유일한 대상일 경우 과도한 오버헤드. |
+| [pybind11](https://github.com/pybind/pybind11)(C++에 권장됨) | 2015 |  | 기존 C++ 코드의 Python 바인딩을 만드는 간단한 헤더 전용 라이브러리. 약간의 종속성. PyPy 호환성. | 더 새롭고 완성도 낮음. C++11 기능 사용 빈도 높음. 몇 가지 지원되는 컴파일러(Visual Studio 포함). |
+| Cython(C에 권장됨) | 2007 | [gevent](http://www.gevent.org/), [kivy](https://kivy.org/) | Python과 유사. 높은 완성도. 고성능. | 컴파일, 새 구문 및 새 도구 체인. |
+| [Boost.Python](https://www.boost.org/doc/libs/1_66_0/libs/python/doc/html/index.html) | 2002 | | 모든 C++ 컴파일러와 작동. | 대규모의 복잡한 라이브러리 모음으로 이전 컴파일러에 대한 많은 대안을 포함. |
 | ctypes | 2003 | [oscrypto](https://github.com/wbond/oscrypto) | 컴파일 안 함, 광범위한 가용성. | 번거로운 C 구조체 액세스 및 변경과 오류 발생 가능성. |
-| Cython | 2007 | [gevent](http://www.gevent.org/), [kivy](https://kivy.org/) | Python과 유사. 높은 완성도. 고성능. | 컴파일, 새 구문 및 새 도구 체인. |
-| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/), [pypy](http://pypy.org/) | 간편한 통합, PyPy 호환성. | 새로운 방법, 완성도 낮음. |
+| SWIG | 1996 | [crfsuite](http://www.chokkan.org/software/crfsuite/) | 한 번에 여러 언어에 대한 바인딩 생성. | Python이 유일한 대상일 경우 과도한 오버헤드. |
+| cffi | 2013 | [cryptography](https://cryptography.io/en/latest/), [pypy](http://pypy.org/) | 간편한 통합, PyPy 호환성. | 더 새롭고 완성도 낮음. |
+
+## <a name="see-also"></a>참고 항목
+
+이 연습에서 완료된 샘플은 [python-samples-vs-cpp-extension](https://github.com/Microsoft/python-sample-vs-cpp-extension)(GitHub)에서 찾을 수 있습니다.

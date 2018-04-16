@@ -1,5 +1,5 @@
 ---
-title: "관리자 포털에 액세스 | Visual Studio Marketplace"
+title: 관리자 포털에 액세스 | Visual Studio Marketplace
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -10,10 +10,10 @@ Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
 ms.openlocfilehash: 41bee30e54411a3b9bcaed6c72be3909f2d1cfab
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="accessing-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 구독 관리자 포털에 액세스
 ## <a name="for-mpsa"></a>MPSA의 경우
@@ -43,7 +43,7 @@ Visual Studio 클라우드 구독을 구매하려면 [https://marketplace.visual
 ## <a name="for-programs-subscriptions"></a>프로그램 구독의 경우
 
 ### <a name="microsoft-bizspark"></a>Microsoft BizSpark
-Microsoft BizSpark 관리자인 경우 [https://bizspark.microsoft.com/my/index](https://bizspark.microsoft.com/my/index)에 로그인하여 **내 BizSpark**에서 조직의 Visual Studio 구독을 관리할 수 있습니다.
+Microsoft BizSpark 관리자인 경우 [https://bizspark.microsoft.com/my/index](https://bizspark.microsoft.com/my/index)에 로그인하여 **내 BizSpark**에서 내 조직의 Visual Studio 구독을 관리할 수 있습니다.
 
 Microsoft BizSpark 프로그램에 대한 자세한 정보는 [https://bizspark.microsoft.com](https://bizspark.microsoft.com)에서 찾을 수 있습니다.
 
@@ -53,4 +53,4 @@ Microsoft Imagine 관리자인 경우 [https://imagine.microsoft.com/institution
 
 
 ### <a name="partner"></a>파트너
-MPN(Microsoft 파트너 네트워크) Visual Studio 구독에 대한 자세한 내용은 [https://support.microsoft.com/help/4013871/microsoft-partner-network-mpn-visual-studio-subscriptions](https://support.microsoft.com/help/4013871/microsoft-partner-network-mpn-visual-studio-subscriptions)에서 리소스에 관한 문서를 살펴보고 구매 및 관리에 관한 정보를 얻으세요.
+MPN(Microsoft 파트너 네트워크) Visual Studio 구독에 대한 자세한 내용은 [https://support.microsoft.com/help/4013871/microsoft-partner-network-mpn-visual-studio-subscriptions](https://support.microsoft.com/help/4013871/microsoft-partner-network-mpn-visual-studio-subscriptions)에서 리소스에 관한 이 문서를 살펴보고 구매 및 관리에 관한 정보를 얻으세요.

@@ -1,29 +1,29 @@
 ---
-title: "Visual Studio 구독의 Pluralsight 혜택 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 1/4/2018
-Ms.topic: Get-Started-Article
-Description: Learn about the Pluralsight training subscription included with your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 118fa74608bc0a36c8ce0a6941915fec535aad84
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio 구독의 Pluralsight 혜택 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 1/4/2018
+ms.topic: Get-Started-Article
+description: Visual Studio 구독에 포함된 Pluralsight 교육 구독에 대해 알아봅니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 973909a6ebc2730bfa7f4b9a0c576960175a8b7e
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 구독의 Pluralsight 교육 혜택
-## <a name="overview"></a>개요
+
 전문가가 만든 과정, 교육 경로, 적응형 기술 평가 등을 통해 기술을 향상하세요.  보유한 Visual Studio 구독 또는 프로그램 멤버 자격에 따라 전체 Pluralsight 카탈로그에 6개월까지 비용 없이 무제한 액세스할 수 있습니다. 
 
 아래 표에서는 각 Visual Studio 구독 유형에서 사용할 수 있는 Pluralsight 구독 혜택을 자세히 설명합니다.  일부 구독자는 전체 카탈로그 액세스 구독이 만료된 후 제한된 과정을 이용할 수도 있습니다. 전체 카탈로그 구독이 만료되면 Pluralsight에서 해당 프로세스를 안내합니다. 
 
  구독 유형에 따라, Visual Studio 구독을 통해 제공된 Pluralsight 구독을 이전에 사용한 적이 있는 일부 구독자는 새 Pluralsight 혜택 제안을 사용할 수 없습니다. 추가적인 Pluralsight 교육 혜택을 사용할 자격이 없는 경우 Pluralsight 웹 사이트에서 혜택을 활성화하려고 하면 알림을 받게 됩니다.  
 
-### <a name="eligibility"></a>자격
+## <a name="eligibility"></a>자격
 | 구독 수준/프로그램                                 | 이점               | 갱신 가능?                                                         |
 |--------------------------------------------------------------|-----------------------|--------------------------------------------------------------------|
 | Visual Studio Enterprise Standard                            | 6개월 구독 | 아니요.  만료 이후 12개월의 제한적 카탈로그 사용 가능. |
@@ -47,7 +47,7 @@ ms.lasthandoff: 01/29/2018
 | Visual Studio Enterprise - MCT 소프트웨어 및 서비스 개발자 | 사용할 수 없음         |                                                                    |
 <sup>1</sup> NFR(전매 금지), MVP(Microsoft Valued Partner), RD(Region Director), VSIP(Visual Studio Industry Partner) 포함  
 
-어떤 구독을 사용하고 있는지 확실하지 않나요?  전자 메일 주소에 할당된 모든 구독을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)에 연결하세요. 일부 구독이 표시되지 않으면 하나 이상이 다른 전자 메일 주소에 할당되어 있을 수 있습니다.  해당 구독을 보려면 해당 전자 메일 주소로 로그인해야 합니다. 
+어떤 구독을 사용하고 있는지 확실하지 않나요?  자신의 이메일 주소에 할당된 모든 구독을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)에 연결합니다. 일부 구독이 표시되지 않으면 하나 이상이 다른 전자 메일 주소에 할당되어 있을 수 있습니다.  해당 구독을 보려면 해당 전자 메일 주소로 로그인해야 합니다. 
  
 
 
@@ -103,8 +103,8 @@ A: 일부 Visual Studio Enterprise 구독에는 Pluralsight 혜택이 포함되�
 
 ### <a name="q-what-happens-when-my-pluralsight-subscription-runs-out"></a>Q: Pluralsight 구독이 만료되면 어떻게 되나요?  
 A: 체험 Pluralsight 구독이 끝나면 다음과 같은 두 가지 옵션이 있습니다.
-1. Visual Studio 구독에 따라 추가 12개월 동안 제한적인 과정 선택을 사용할 수 있습니다.  [자격 테이블](#eligibility)을 확인하여 구독이 적합한지 확인하세요.
-2. Pluralsight에서 직접 구독을 구매할 수 있습니다.  자세한 내용은 [Pluralsight](http://www.pluralsight.com)에 문의하세요.  
+1. 세 가지 주요 영역 중 하나에서 클라우드에서 앱 개발, AI, Machine Learning 및 데이터, 클라우드에서 DevOps와 같은 50개 과정의 제한된 집합에 대한 무료 12개월 액세스(자신의 구독이 자격이 있는지 보려면 [자격 테이블](#eligibility)을 확인)를 얻습니다. 만료된 후 체험판 액세스를 요구하는 Pluralsight 이메일을 기다려 보세요. 각 부분 라이브러리에서 사용할 수 있는 [과정의 목록](https://help.pluralsight.com/help/which-courses-are-included-with-the-visual-studio-benefit)을 확인할 수 있습니다.
+2. 전체 과정 카탈로그에 대한 액세스를 제공하는 구독을 10% 할인된 가격으로 Pluralsight에서 직접 구매할 수도 있습니다.  자세한 내용은 [Pluralsight](http://www.pluralsight.com)에 문의하세요.  
 
 ## <a name="support-resources"></a>지원 리소스
 -  [Pluralsight 도움말 센터](https://help.pluralsight.com/help)는 Pluralsight 과정을 진행하거나 Pluralsight 웹 사이트를 사용하여 지원을 제공합니다. 

@@ -1,19 +1,19 @@
 ---
-title: "Visual Studio 구독에서 구독자 다운로드 사용 | Microsoft Docs"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to locate and download Microsoft products included with your Visual Studio subscription.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 4c49ae8b6c51f261abc6ea95d27d200706da18ce
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+title: Visual Studio 구독에서 구독자 다운로드 사용 | Microsoft Docs
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: Visual Studio 구독에 포함된 Microsoft 제품을 찾고 다운로드하는 방법을 알아봅니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: 708a33c35739acc6f0742d778a51e635a35d9567
+ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/06/2018
 ---
 # <a name="using-subscriber-downloads-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 구독자 다운로드 사용
 구독자 혜택의 일환으로 다양한 소프트웨어 다운로드에 액세스할 수 있습니다.  
@@ -34,7 +34,7 @@ ms.lasthandoff: 01/29/2018
 ## <a name="what-do-i-get"></a>무엇을 얻을 수 있나요?
 다운로드 수와 유형은 구독 수준과 프로그램 멤버 자격에 따라 다릅니다.  예를 들어 Visual Studio Enterprise 표준 구독이 있는 구독자는 Microsoft 파트너 네트워크 또는 BizSpark 프로그램 구독을 통해 구독을 가져오는 구독자와 다른 다운로드를 사용할 수 있습니다.  각 구독 수준에서 사용할 수 있는 다운로드에 대한 자세한 내용은 [혜택 수준별 제품](https://download.microsoft.com/download/1/5/4/15454442-CF17-47B9-A65D-DF84EF88511B/Products_by_Benefit_Level.xlsx) 목록을 다운로드하세요.
 
-어떤 구독을 사용하고 있는지 확실하지 않나요?  전자 메일 주소에 할당된 모든 구독을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)에 연결하세요. 일부 구독이 표시되지 않으면 하나 이상이 다른 전자 메일 주소에 할당되어 있을 수 있습니다.  해당 구독을 보려면 해당 전자 메일 주소로 로그인해야 합니다. 
+어떤 구독을 사용하고 있는지 확실하지 않나요?  자신의 이메일 주소에 할당된 모든 구독을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)에 연결합니다. 일부 구독이 표시되지 않으면 하나 이상이 다른 전자 메일 주소에 할당되어 있을 수 있습니다.  해당 구독을 보려면 해당 전자 메일 주소로 로그인해야 합니다. 
 
 ## <a name="how-do-i-find-downloads-in-the-subscriber-portal"></a>구독자 포털에서 다운로드를 찾으려면 어떻게 할까요? 
 [다운로드](https://my.visualstudio.com/downloads/featured) 페이지에는 자신의 구독에 포함된 다운로드만 표시됩니다.  둘 이상의 구독 또는 프로그램 멤버 자격이 있으면 현재 다른 구독을 보고 있는 경우에도 보유한 **최상위 구독**에 대한 다운로드가 표시됩니다.  예를 들어 Visual Studio Professional 구독과 Visual Studio Dev Essentials 멤버 자격이 모두 동일한 로그인 ID와 연결되는 경우 현재 Dev Essentials 혜택을 보고 있는 경우에도 전문가 수준 구독에 포함된 다운로드가 표시됩니다.  

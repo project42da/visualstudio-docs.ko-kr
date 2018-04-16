@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio 구독 관리자 포털에서 관리자 권한 관리"
+title: Visual Studio 구독 관리자 포털에서 관리자 권한 관리
 Author: evanwindom
 Ms.author: jaunger
 Manager: evelynp
@@ -10,15 +10,15 @@ Ms.prod: vs-subscription
 Ms.technology: vs-subscriptions
 Searchscope: VS Subscription
 ms.openlocfilehash: 83bf27d5aaa99c2095ad8a1fafd7541df90f316b
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/05/2018
 ---
 # <a name="managing-administrator-rights-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 구독 관리자 포털에서 관리자 권한 관리
 
 ## <a name="overview"></a>개요 
-Visual Studio 구독 관리자 포털 (https://manage.visualstudio.com) 에는 두 개의 관리 역할이 있습니다.
+Visual Studio 구독 관리자 포털(https://manage.visualstudio.com))에는 두 개의 관리 역할이 있습니다.
 
 **슈퍼 관리자:** 조직이 처음 설정되면 기본적으로 기본 또는 통지 연락처 담당자가 슈퍼 관리자가 됩니다. 기본 또는 통지 연락처 담당자는 슈퍼 관리자 또는 관리자를 추가로 할당하도록 선택할 수 있습니다. 슈퍼 관리자는 개별 구독자의 구독을 관리하는 것 외에도 다른 관리자 및 슈퍼 관리자를 추가하고 제거할 수 있습니다. 시스템에 둘 이상의 슈퍼 관리자가 있는 경우 슈퍼 관리자는 보안을 위해 마지막 두 개를 제외하고 모두 삭제할 수 있습니다. 
 
