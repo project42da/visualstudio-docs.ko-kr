@@ -1,11 +1,8 @@
 ---
-title: "데이터 집합의 데이터 편집 | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합의 데이터 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], editing data
 - data [Visual Studio], editing in datasets
 ms.assetid: 50d5c580-fbf7-408f-be70-e63ac4f4d0eb
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: afb484c1d3bfdd705c5a28f150e4631048ead49d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: a72949ad06b9140faa3e5013a8fd07e98b4db172
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-data-in-datasets"></a>데이터 집합의 데이터 편집
 모든 데이터베이스의 테이블에 데이터를 편집할 때 처럼 데이터 테이블의에서 데이터를 편집 합니다. 삽입, 업데이트 및 테이블의 레코드를 삭제 하는 프로세스 포함할 수 있습니다. 데이터 바인딩된 폼에 있는 사용자가 편집 가능한 필드를 지정할 수 있습니다. 이 경우 데이터 바인딩 인프라는 모든 변경 내용 추적 나중에 변경 내용을 데이터베이스에 다시 보낼 수 있도록 처리 합니다. 프로그래밍 방식으로 데이터를 편집을 수행한 경우 해당 변경 내용을 데이터베이스에 다시 보내려는 개체 및 사용자에 대 한 변경 내용 추적을 수행 하는 메서드를 사용 해야 합니다.  
@@ -111,5 +108,5 @@ ms.lasthandoff: 12/22/2017
 [!code-csharp[VbRaddataEditing#23](../data-tools/codesnippet/CSharp/edit-data-in-datasets_7.cs)]
 [!code-vb[VbRaddataEditing#23](../data-tools/codesnippet/VisualBasic/edit-data-in-datasets_7.vb)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)

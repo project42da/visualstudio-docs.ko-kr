@@ -1,11 +1,8 @@
 ---
-title: "연습: 데이터 집합 디자이너에서 DataTable 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 데이터 집합 디자이너에서 DataTable 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 10/19/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DataTable objects, creating
 - Dataset Designer, creating data tables
@@ -13,14 +10,15 @@ helpviewer_keywords:
 - data [Visual Studio], Dataset Designer
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 7df2579f5556e0e35b4203c700ca3f96f46a7d2f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 535dc8a0cc992d83523f14f491adc5925bc1c05d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-datatable-in-the-dataset-designer"></a>연습: 데이터 집합 디자이너에서 DataTable 만들기
 
@@ -110,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
 -   에 **파일** 메뉴를 클릭 하 여 **모두 저장**합니다.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio에서 데이터 집합 만들기 및 구성](../data-tools/create-and-configure-datasets-in-visual-studio.md)  
 [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)  

@@ -1,11 +1,8 @@
 ---
-title: "N 계층 응용 프로그램에서 데이터 집합 작업 | Microsoft Docs"
-ms.custom: 
+title: N 계층 응용 프로그램에서 데이터 집합 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - datasets [Visual Basic], n-tier applications
 - multi-tier database applications
@@ -18,17 +15,17 @@ helpviewer_keywords:
 - typed datasets, n-tier applications
 - multiple tier applications
 ms.assetid: f6ae2ee0-ea5f-4a79-8f4b-e21c115afb20
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 1bb1b91894fc562b7080a8225b69b3703948a604
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 0858a99dfb56dcdfabb66479788097e4fe272fe9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="work-with-datasets-in-n-tier-applications"></a>N 계층 응용 프로그램에서 데이터 집합 작업
 *N 계층 데이터 응용 프로그램* 은 여러 논리 계층으로 분리 되어 있는 데이터 중심 응용 프로그램 (또는 *계층*). 다시 말해서 N 계층 데이터 응용 프로그램은 여러 프로젝트로 구분되며 데이터 액세스 계층, 비즈니스 논리 계층 및 표시 계층이 각 프로젝트에 포함되는 응용 프로그램입니다. 자세한 내용은 참조 [N 계층 데이터 응용 프로그램 개요](../data-tools/n-tier-data-applications-overview.md)합니다.  
@@ -41,7 +38,7 @@ TableAdapter 및 데이터 클래스를 개별 프로젝트로 생성할 수 있
 <xref:System.Data.DataSet>  
 <xref:System.Data.TypedTableBase%601>  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [N 계층 데이터 응용 프로그램 개요](../data-tools/n-tier-data-applications-overview.md)  
 [연습: N 계층 데이터 응용 프로그램 만들기](../data-tools/walkthrough-creating-an-n-tier-data-application.md)  
 [n 계층 응용 프로그램에서 TableAdapter에 코드 추가](../data-tools/add-code-to-tableadapters-in-n-tier-applications.md)  

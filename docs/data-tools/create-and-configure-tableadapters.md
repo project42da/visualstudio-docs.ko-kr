@@ -1,11 +1,8 @@
 ---
-title: "만들기 및 Tableadapter를 구성 | Microsoft Docs"
-ms.custom: 
+title: 만들기 및 Tableadapter를 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/01/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - table adapters, creating
 - creating TableAdapters
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - data [Visual Studio], TableAdapters
 - data [Visual Studio], creating table adapters
 ms.assetid: 08630d69-0d6c-4e8f-b42d-2922f45f8415
-caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 3c9b501b78a82a94b81b2a29c86fd07a7a0d7f98
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 4cfc4815a61a6a15d6a5eef6a8efc3502bef7a73
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-configure-tableadapters"></a>만들기 및 Tableadapter를 구성 합니다.
 Tableadapter 응용 프로그램과 데이터베이스 간에 통신을 제공합니다. 데이터베이스, 실행된 된 쿼리 또는 저장된 프로시저에 연결 하 고 새 데이터를 반환 하거나 테이블 또는 기존 채우기 <xref:System.Data.DataTable> 반환 된 데이터를 사용 합니다. Tableadapter는 데이터베이스에 다시 응용 프로그램에서 업데이트 된 데이터를 보낼 수도 있습니다.  
@@ -113,5 +110,5 @@ TableAdapter에 수행한 모든 변경 내용을 주 `Fill` 메서드는 연결
     > [!NOTE]
     >  끌어는 **쿼리** 에 직접 드롭하면 개체는 **데이터 집합 디자이너** 스칼라 (단일) 값만 반환 하는 메서드를 만듭니다. 쿼리 또는 저장된 프로시저를 선택 하면 단일 값 보다 더 반환할 수 있습니다, 하는 동안 마법사에 의해 만들어진 메서드만 단일 값을 반환 합니다. 예를 들어 쿼리에서 반환된 된 데이터의 첫 번째 행의 첫 번째 열을 반환할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [TableAdapter를 사용하여 데이터 집합 채우기](../data-tools/fill-datasets-by-using-tableadapters.md)

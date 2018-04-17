@@ -1,29 +1,25 @@
 ---
 title: 'Idiasession:: Findsymbolbytoken | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSession::findSymbolByToken method
 ms.assetid: 3c92149c-6eef-454f-86be-66e89557b9e6
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: acc97b2c0c24a661ddfe7a9cb973e07474d6f6e8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e836e4498f9953650845380228693c549fbe4c61
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasessionfindsymbolbytoken"></a>IDiaSession::findSymbolByToken
 지정 된 메타 데이터 토큰을 포함 하는 기호를 검색 합니다.  
@@ -51,7 +47,7 @@ HRESULT findSymbolByToken (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 IDiaSymbol* pFunc;  

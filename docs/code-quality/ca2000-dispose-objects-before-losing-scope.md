@@ -1,12 +1,10 @@
 ---
-title: "CA2000: 범위를 벗어나기 전에 개체를 삭제 | Microsoft Docs"
-ms.custom: 
+title: 'CA2000: 범위를 벗어나기 전에 개체를 삭제 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2000
 - Dispose objects before losing scope
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - CA2000
 - DisposeObjectsBeforeLosingScope
 ms.assetid: 0c3d7d8d-b94d-46e8-aa4c-38df632c1463
-caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 57b499756292a62c64b44f864042ffa740a14016
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d6771797128ba1f889f0639ea763a523353c8018
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2000-dispose-objects-before-losing-scope"></a>CA2000: 범위를 벗어나기 전에 개체를 삭제하십시오.
 |||  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
  [CA2202: 개체를 여러 번 삭제하지 마십시오.](../code-quality/ca2202-do-not-dispose-objects-multiple-times.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  삭제 가능한 개체를 반환 하는 메서드를 구현 하는 경우 catch 블록 없이 try/finally 블록을 사용 하 여 개체가 삭제 되는지 되도록 합니다. Try/finally 블록을 사용 하 여 오류 지점에서 발생 하 고 해당 개체가 삭제 되었는지 확인 하는 예외를 허용 합니다.  
   
  OpenPort1 메서드에서 SomeMethod에 대 한 호출 나 SerialPort ISerializable 개체를 열기 호출이 실패할 수 있습니다. 이 구현 CA2000 경고가 발생 합니다.  
@@ -156,7 +154,7 @@ Public Function OpenPort2(ByVal PortName As String) As SerialPort
 End Function
 ```
  
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  기본적으로는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 컴파일러는 오버플로 검사 하는 모든 산술 연산자. 따라서 모든 Visual Basic의 산술 연산은 throw 될 수 있습니다는 <xref:System.OverflowException>합니다. CA2000 등의 규칙에서 예기치 않은 위반이 발생할 수 있습니다. 예를 들어 Visual Basic 컴파일러를 표시 하 고는 오버플로 StreamReader를 삭제 하지 못하도록 하는 예외를 throw 할 수 있는 추가 대 한 지침을 검사 하기 때문에 다음 CreateReader1 함수 CA2000 위반을 생성 합니다.  
   
  이 해결 하려면 프로젝트에서 Visual Basic 컴파일러에 의해 오버플로 검사 내보내기를 비활성화할 수 있습니다 또는 다음 CreateReader2 함수에서와 같이 코드를 수정할 수 있습니다.  

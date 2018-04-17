@@ -1,27 +1,23 @@
 ---
-title: "실행 제어 | Microsoft Docs"
-ms.custom: 
+title: 실행 제어 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], control of execution
 ms.assetid: 97071846-007e-450f-95a6-f072d0f5e61e
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a76b14f28bdb74345813931fc334f98090abd93c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c9fc47a0b73d07e4b24ef55c736ad80197f282cb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="control-of-execution"></a>실행 제어
 디버그 엔진 (DE) 일반적으로 보내는 다음 이벤트 중 하나가 마지막 시작 이벤트로:  
@@ -45,11 +41,11 @@ ms.lasthandoff: 12/22/2017
   
 5.  과다, 단계씩 실행 하 여 사용자가 또는 IDE 함수에서 메시지를 호출 프로그램의 디버그 세션을 표시 하는 경우 `Step` (명령, 문 또는 선) 단계 및 단계의 종류의 단위를 전달 하는 메서드,-즉, 한 단계씩 코드 실행, 넘는 것인지 또는 함수를 벗어났습니다. 단계가 완료 되 면는 DE stopping 이벤트는 디버그 세션을 단계 완료 이벤트를 보냅니다.  
   
-     또는  
+     -또는-  
   
      현재 명령 포인터에서 실행을 계속 하 여 사용자가을 IDE 라는 메시지를 표시 하는 프로그램을 호출 하면 디버그 세션 **Execute** 메서드. 다음 중지 상태에 도달할 때까지 프로그램 실행을 다시 시작 합니다.  
   
-     또는  
+     -또는-  
   
      디버그 세션 특정 stopping 이벤트를 무시할 경우 디버그 세션 프로그램의를 호출 하는 **계속** 메서드. 프로그램 중단 조건이 발생 했을 때, 또는 함수에서 실행 된, 단계를 계속 합니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "방법: 플래그 지정 및 스레드의 플래그를 해제 | Microsoft Docs"
-ms.custom: 
+title: '방법: 플래그 지정 및 스레드의 플래그를 해제 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - treads, switching [debugging]
 ms.assetid: 952d579d-6911-413e-b3e5-54e7e797e70c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 489403e4ce5052cb526a361e4548ab8823a20b18
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4f23d937325a0cbfbf67bdfa8fdfe8344fba1b7c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-flag-and-unflag-threads"></a>방법: 스레드에 플래그 지정 및 스레드의 플래그 해제
 스레드를 사용할 때 특히 주의에서 아이콘으로 표시 하 여 제공 하려는 플래그를 설정할 수 있습니다는 **스레드**, **병렬 스택** (스레드 뷰) **병렬 조사식**, 및  **GPU 스레드** windows 합니다. 이 아이콘은 플래그 설정된 스레드를 다른 스레드와 구분하는 데 도움이 됩니다.  

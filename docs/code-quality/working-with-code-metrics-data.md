@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio에서 코드 메트릭 결과 창 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 코드 메트릭 결과 창 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codemetrics.output
 helpviewer_keywords:
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - results window, code metrics
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 772533e74b214d48583e5d2dc1d64278416933df
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 8663b2c8d0fe4de4fa4b2073827175e7bc65a91a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-code-metrics-results-window"></a>코드 메트릭 결과 창 사용
 
@@ -129,7 +126,7 @@ VSTS에 대 한 자세한 내용은 작업 항목을 참조 하십시오 [작업
 
 4.  에 **파일** 메뉴를 클릭 하 여 **모두 저장** 작업 항목을 저장 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [코드 메트릭 값](../code-quality/code-metrics-values.md)
 - [방법: 코드 메트릭 데이터 생성](../code-quality/how-to-generate-code-metrics-data.md)

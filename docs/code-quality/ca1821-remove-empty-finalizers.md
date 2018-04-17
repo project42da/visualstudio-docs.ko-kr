@@ -2,29 +2,25 @@
 title: 'CA1821: 빈 종료자를 제거 하세요. | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - RemoveEmptyFinalizers
 - CA1821
 helpviewer_keywords:
 - CA1821
 ms.assetid: 3f4855a0-e4a0-46e6-923c-4c3b7074048d
-caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 98aebdcc889cdd3bd2bbe124b00a572e066b0e4a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 75c77a35fc09ea4b45bdbef756341b330bdd11df
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1821-remove-empty-finalizers"></a>CA1821: 빈 종료자를 제거하십시오.
 |||  
@@ -46,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서 메시지를 표시 하지 마십시오. 종료 되지 않도록 하지 않으면 성능이 저하 되 고 이점이 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 빈 종료자를 제거 해야 하는에 포함 되어야 하는 종료자 `#if DEBUG / #endif` 지시문 및 사용 하는 종료자는 `#if DEBUG / #endif` 지시문 올바르게 합니다.  
   
  [!code-csharp[FxCop.Performance.RemoveEmptyFinalizers#1](../code-quality/codesnippet/CSharp/ca1821-remove-empty-finalizers_1.cs)]

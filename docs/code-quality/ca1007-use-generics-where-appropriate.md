@@ -1,12 +1,10 @@
 ---
-title: "CA1007: 적합 한 제네릭을 사용 | Microsoft Docs"
-ms.custom: 
+title: 'CA1007: 적합 한 제네릭을 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1007
 - UseGenericsWhereAppropriate
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1007
 - UseGenericsWhereAppropriate
 ms.assetid: eab780ea-3b1f-4d32-b15a-5d48da2df46b
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2d7093c437abf84bd86b520f84ffcf980491c77c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0f0d1f324ce3ff3c27b608d8bcef1a1850804ea9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1007-use-generics-where-appropriate"></a>CA1007: 적합한 제네릭을 사용하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 특수 및 제네릭 메서드로 구현 되는 범용 스왑 루틴을 보여 줍니다. Note 제네릭이 아닌 메서드에 비해 제네릭 메서드를 사용 하 여 문자열 얼마나 효율적으로 바뀝니다.  
   
  [!code-vb[FxCop.Design.UseGenerics#1](../code-quality/codesnippet/VisualBasic/ca1007-use-generics-where-appropriate_1.vb)]

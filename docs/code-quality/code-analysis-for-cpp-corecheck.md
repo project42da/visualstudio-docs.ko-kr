@@ -2,25 +2,22 @@
 title: Visual Studio c + + 코어 지침 참조 검사에서 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/22/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis, C++ core check
 ms.assetid: f1429463-136e-41ed-8a75-a8dbf0b4fd89
 author: mikeblome
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0825ea42ca74b224574299846504dfde7dd6f809
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: f0b657781981b6204bda42fcbf18f8945fb59004
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="c-core-guidelines-checker-reference"></a>C + + 핵심 지침 검사기 참조
 
@@ -69,7 +66,7 @@ ms.lasthandoff: 03/22/2018
 
 [C26481 NO_POINTER_ARITHMETIC](C26481.md) 포인터 산술 연산을 사용 하지 마십시오. 범위를 대신 사용 합니다. 참조 [c + + 코어 지침 Bounds.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)합니다.
 
-[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md).
+[C26485 NO_ARRAY_TO_POINTER_DECAY](C26485.md)합니다.
 식 '%expr% ': 포인터 decay 배열이 없습니다. 참조 [c + + 코어 지침 Bounds.3](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)합니다.
 
 ## <a name="uniquepointer-group"></a>UNIQUE_POINTER 그룹
@@ -190,7 +187,7 @@ ms.lasthandoff: 03/22/2018
 
 [C26446 USE_GSL_AT](c26446.md) 사용을 선호 `gsl::at()` unchecked 아래 첨자 연산자 대신 합니다. 참조 [c + + 코어 지침: Bounds.4: 표준 라이브러리 함수 및 범위 확인 되지 않는 형식을 사용 하지 않는](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#probounds-bounds-safety-profile)합니다.
 
-[C26481 NO_POINTER_ARITHMETIC](C26481.md).
+[C26481 NO_POINTER_ARITHMETIC](C26481.md)합니다.
 포인터 산술 연산을 사용 하지 마십시오. 범위를 대신 사용 합니다. 참조 [c + + 코어 지침 Bounds.1](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)
 
 [C26482 NO_DYNAMIC_ARRAY_INDEXING](c26482.md) 상수 식을 사용 하 여 배열에만 인덱스입니다. 참조 [c + + 코어 지침 Bounds.2](https://github.com/isocpp/CppCoreGuidelines/blob/master/CppCoreGuidelines.md#SS-bounds)

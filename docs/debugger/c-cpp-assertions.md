@@ -1,12 +1,10 @@
 ---
-title: "C/c + + 어설션 | Microsoft Docs"
-ms.custom: 
+title: C/c + + 어설션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -28,16 +26,16 @@ helpviewer_keywords:
 - Assertion Failed dialog box
 - failures, finding locations
 ms.assetid: 2d7b0121-71aa-414b-bbb6-ede1093d0bfc
-caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: a53c03f1ab2c8680329f17bfa36a49b12062bff5
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8c5180e1ef5a75a31ff6ceb6c225480e1abba5fc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cc-assertions"></a>C/C++ 어설션
 어설션 문은 프로그램의 한 지점에서 true가 될 조건을 지정 합니다. 조건이 true가 아닐 경우 어설션이 실패, 프로그램의 실행이 중단 되 고 [어설션 오류 대화 상자](../debugger/assertion-failed-dialog-box.md) 나타납니다.  
@@ -77,17 +75,17 @@ ms.lasthandoff: 01/22/2018
   
 -   [처리 되지 않은 찾기 오류](#BKMK_Testing_error_conditions_)  
   
-##  <a name="BKMK_How_assertions_work"></a>어설션 작동 방식  
+##  <a name="BKMK_How_assertions_work"></a> 어설션 작동 방식  
  디버거 인해 중지 되는 MFC 또는 C 런타임 라이브러리 어설션을, 다음 소스를 사용할 수 있는 경우 디버거 탐색 어설션이 발생 한 소스 파일의 지점에 합니다. 어설션 메시지에도 나타납니다는 [출력 창](../ide/reference/output-window.md) 및 **어설션 오류** 대화 상자. 어설션 메시지를 복사할 수는 **출력** 나중에 참조할 저장 하려면 텍스트 창에는 창입니다. **출력** 창에는 다른 오류 메시지에도 포함 될 수 있습니다. 어설션 실패의 원인에 단서를 제공 하기 때문에 이러한 메시지를 주의 깊게 검토 합니다.  
   
  어설션을 사용 하 여 개발 하는 동안 오류를 검색 합니다. 일반적으로 각 가정에 어설션이 두 개를 사용 합니다. 예를 들어 한 인수가 NULL 임을 가정 하는 경우 어설션에서 아니라고를 테스트 하려면 사용 합니다.  
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a>디버그 및 릴리스 빌드에 어설션  
+##  <a name="BKMK_Assertions_in_Debug_and_Release_builds"></a> 디버그 및 릴리스 빌드에 어설션  
  어설션 문을 컴파일할 경우에 `_DEBUG` 정의 됩니다. 그렇지 않으면 컴파일러는 null 문으로 어설션을 처리 합니다. 따라서 어설션 문이 적용 오버 헤드 없음 또는 성능 릴리스 프로그램에서 비용 및 사용 하지 않도록 할 수 `#ifdef` 지시문입니다.  
   
-##  <a name="BKMK_Side_effects_of_using_assertions"></a>어설션을 사용 하 여의 파생 작업  
+##  <a name="BKMK_Side_effects_of_using_assertions"></a> 어설션을 사용 하 여의 파생 작업  
  코드에 어설션 추가 하면 어설션을 부작용을 포함 하지 않는지 확인 합니다. 예를 들어를 수정 하는 경우 다음 어설션이 `nM` 값:  
   
 ```  
@@ -95,7 +93,7 @@ ASSERT(nM++ > 0); // Don't do this!
   
 ```  
   
- 때문에 `ASSERT` 프로그램의 릴리스 버전에서 식은 계산 되지 않습니다 `nM` 디버그 및 릴리스 버전에 서로 다른 값을 갖습니다. MFC에서이 문제를 방지 하려면 사용할 수 있습니다는 [확인](/cpp/mfc/reference/diagnostic-services#verify) 매크로 대신 `ASSERT`합니다.  `VERIFY`모든 버전의 식을 계산 하지만 릴리스 버전에서 결과 확인 하지 않습니다.  
+ 때문에 `ASSERT` 프로그램의 릴리스 버전에서 식은 계산 되지 않습니다 `nM` 디버그 및 릴리스 버전에 서로 다른 값을 갖습니다. MFC에서이 문제를 방지 하려면 사용할 수 있습니다는 [확인](/cpp/mfc/reference/diagnostic-services#verify) 매크로 대신 `ASSERT`합니다.  `VERIFY` 모든 버전의 식을 계산 하지만 릴리스 버전에서 결과 확인 하지 않습니다.  
   
  함수를 가질 수 있으므로 어설션 문에서 함수 호출을 사용 하는 방법에 대 한 특히 주의 해야 예기치 않은 부작용입니다.  
   
@@ -104,11 +102,11 @@ ASSERT ( myFnctn(0)==1 ) // unsafe if myFnctn has side effects
 VERIFY ( myFnctn(0)==1 ) // safe  
 ```  
   
- `VERIFY`호출 `myFnctn` 디버그와 릴리스 버전 이므로를 사용할 수 있습니다. 그러나를 사용 하 여 `VERIFY` 릴리스 버전에 대 한 불필요 한 함수 호출의 오버 헤드가 있습니다.  
+ `VERIFY` 호출 `myFnctn` 디버그와 릴리스 버전 이므로를 사용할 수 있습니다. 그러나를 사용 하 여 `VERIFY` 릴리스 버전에 대 한 불필요 한 함수 호출의 오버 헤드가 있습니다.  
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_CRT_assertions"></a>CRT 어설션  
+##  <a name="BKMK_CRT_assertions"></a> CRT 어설션  
  CRTDBG 합니다. H 헤더 파일에 정의 된 [_ASSERT 및 _ASSERTE 매크로](/cpp/c-runtime-library/reference/assert-asserte-assert-expr-macros) 어설션 검사에 대 한 합니다.  
   
 |매크로|결과|  
@@ -116,7 +114,7 @@ VERIFY ( myFnctn(0)==1 ) // safe
 |`_ASSERT`|지정 된 식이 FALSE로 계산 되는 경우의 파일 이름과 줄 번호는 `_ASSERT`합니다.|`_ASSERTE`|  
 |`_ASSERTE`|와 동일 `_ASSERT`, 더하기 어설션된 식의 문자열 표현입니다.|  
   
- `_ASSERTE`값이 false 확인 된 어설션된 식을 보고 하기 때문에 보다 강력한입니다. 이 소스 코드를 참조 하지 않고 문제를 식별할 수 있습니다. 그러나, 응용 프로그램의 디버그 버전에서 사용 하 여 설정 되었습니다. 각 식에 대 한 문자열 상수 포함 됩니다 `_ASSERTE`합니다. 많이 사용 하면 `_ASSERTE` 매크로, 메모리가 많이 차지 이러한 문자열 식입니다. 문제를를 사용 하 여 `_ASSERT` 메모리를 절약 하려면.  
+ `_ASSERTE` 값이 false 확인 된 어설션된 식을 보고 하기 때문에 보다 강력한입니다. 이 소스 코드를 참조 하지 않고 문제를 식별할 수 있습니다. 그러나, 응용 프로그램의 디버그 버전에서 사용 하 여 설정 되었습니다. 각 식에 대 한 문자열 상수 포함 됩니다 `_ASSERTE`합니다. 많이 사용 하면 `_ASSERTE` 매크로, 메모리가 많이 차지 이러한 문자열 식입니다. 문제를를 사용 하 여 `_ASSERT` 메모리를 절약 하려면.  
   
  때 `_DEBUG` 정의 `_ASSERTE` 매크로 다음과 같이 정의 됩니다.  
   
@@ -160,7 +158,7 @@ _ASSERTE(_CrtIsMemoryBlock (myData, size, &requestNumber, &filename, &linenumber
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_MFC_assertions"></a>MFC 어설션  
+##  <a name="BKMK_MFC_assertions"></a> MFC 어설션  
  MFC 정의 [ASSERT](http://msdn.microsoft.com/Library/1e70902d-d58c-4e7b-9f69-2aeb6cbe476c) 어설션 검사에 대 한 매크로입니다. 또한 정의 `MFC ASSERT_VALID` 및 `CObject::AssertValid` 의 내부 상태 검사에 대 한 메서드는 `CObject`-파생 된 개체입니다.  
   
  경우 MFC의 인수 `ASSERT` 매크로 계산 결과가 0 또는 false 이면 매크로 프로그램 실행을 중지 한 사용자에 게 알립니다; 그리고 그렇지 않은 경우 실행이 계속 됩니다.  
@@ -182,8 +180,8 @@ ASSERT( pObject1->IsKindOf( RUNTIME_CLASS( CPerson ) ) );
   
  `ASSERT` 매크로 릴리스 버전에 없는 코드를 생성 합니다. 식을 계산 하 고 릴리스 버전에 필요한 경우 사용 된 [확인](/cpp/mfc/reference/diagnostic-services#verify) 매크로 ASSERT 대신 합니다.  
   
-###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a>MFC ASSERT_VALID 및 CObject::AssertValid  
- [CObject::AssertValid](/cpp/mfc/reference/cobject-class.md#CObject__AssertValid) 메서드는 개체의 내부 상태에 대 한 런타임 검사를 제공 합니다. 재정의 필요 하지 않지만 `AssertValid` 에서 클래스를 파생 시키는 경우 `CObject`, 클래스 만들 수 있습니다 프로그램 안정적이 됩니다. `AssertValid`모든 유효한 값이 들어 있는지 확인 하는 개체의 멤버 변수에서 어설션을 수행 해야 합니다. 예를 들어 포인터 멤버 변수가 NULL이 아닌지 확인 해야 합니다.  
+###  <a name="BKMK_MFC_ASSERT_VALID_and_CObject__AssertValid"></a> MFC ASSERT_VALID 및 CObject::AssertValid  
+ [CObject::AssertValid](/cpp/mfc/reference/cobject-class.md#CObject__AssertValid) 메서드는 개체의 내부 상태에 대 한 런타임 검사를 제공 합니다. 재정의 필요 하지 않지만 `AssertValid` 에서 클래스를 파생 시키는 경우 `CObject`, 클래스 만들 수 있습니다 프로그램 안정적이 됩니다. `AssertValid` 모든 유효한 값이 들어 있는지 확인 하는 개체의 멤버 변수에서 어설션을 수행 해야 합니다. 예를 들어 포인터 멤버 변수가 NULL이 아닌지 확인 해야 합니다.  
   
  선언 하는 방법을 보여 주는 다음 예제는 `AssertValid` 함수:  
   
@@ -259,7 +257,7 @@ void CMyData::AssertValid( ) const
   
 ```  
   
- `CMyData`사용 하 여는 `AssertValid` 해당 데이터 멤버에 저장 된 개체의 유효성을 테스트 하기 위한 메커니즘입니다. 재정의 `AssertValid` 의 `CMyData` 호출의 `ASSERT_VALID` m_pDataList 멤버 변수 자체에 대 한 매크로입니다.  
+ `CMyData` 사용 하 여는 `AssertValid` 해당 데이터 멤버에 저장 된 개체의 유효성을 테스트 하기 위한 메커니즘입니다. 재정의 `AssertValid` 의 `CMyData` 호출의 `ASSERT_VALID` m_pDataList 멤버 변수 자체에 대 한 매크로입니다.  
   
  유효성 테스트에서 중지 하지 않으면이 수준 때문에 클래스 `CObList` 재정의 `AssertValid`합니다. 이 재정의 목록의 내부 상태에 대 한 테스트 추가 유효성 검사를 수행 합니다. 에 유효성을 테스트 하는 따라서는 `CMyData` 개체는 저장 된의 내부 상태에 대 한 추가 유효성 테스트를 까지로 `CObList` 목록 개체.  
   
@@ -267,14 +265,14 @@ void CMyData::AssertValid( ) const
   
  디버깅을 위해 빌드할 때 강력한 메커니즘입니다. 릴리스 이후에 빌드용 메커니즘은 자동으로 해제 됩니다.  
   
-###  <a name="BKMK_Limitations_of_AssertValid"></a>AssertValid의 제한 사항  
+###  <a name="BKMK_Limitations_of_AssertValid"></a> AssertValid의 제한 사항  
  트리거된 어설션은 나타냅니다 개체가 잘못 된 실행이 중지 됩니다. 그러나 어설션의 부족 발견 된 문제가 있지만 개체 반드시 좋은 것만 나타냅니다.  
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Using_assertions"></a>어설션을 사용 하 여  
+##  <a name="BKMK_Using_assertions"></a> 어설션을 사용 하 여  
   
-###  <a name="BKMK_Catching_logic_errors"></a>논리 오류 검색  
+###  <a name="BKMK_Catching_logic_errors"></a> 논리 오류 검색  
  프로그램의 논리에 따라 충족 해야 하는 조건에 대 한 어설션을 설정할 수 있습니다. 어설션이 논리 오류가 발생 하지 않는 한 아무 효과가 없습니다.  
   
  예를 들어, 변수, 컨테이너에서 가스 분자를 시뮬레이션 하는 경우 `numMols` 분자 총 수를 나타냅니다. 이 번호는 다음과 같은 MFC 어설션 문을 포함할 수 있으므로 0 보다 작을 수 없습니다.  
@@ -294,7 +292,7 @@ _ASSERT(numMols >= 0);
   
  [항목 내용](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Checking_results_"></a>결과 확인 하는 중  
+###  <a name="BKMK_Checking_results_"></a> 결과 확인 하는 중  
  어설션은 작업 결과 빠른 visual 검사에서 명확 하지 테스트를 위해 중요 합니다.  
   
  예를 들어 다음 변수를 업데이트 하는 코드가 `iMols` 연결 리스트에서 가리키는 내용에 따라 `mols`:  
@@ -317,7 +315,7 @@ _ASSERT(iMols<=numMols); // CRT version
   
  [항목 내용](#BKMK_In_this_topic)  
   
-###  <a name="BKMK_Testing_error_conditions_"></a>처리 되지 않은 찾기 오류  
+###  <a name="BKMK_Testing_error_conditions_"></a> 처리 되지 않은 찾기 오류  
  코드의 한 지점에서 오류 조건을 테스트할 수 있는 오류 처리 해야 어설션을 사용할 수 있습니다. 다음 예제에서는 그래픽 루틴이 0 성공 또는 오류 코드를 반환합니다.  
   
 ```  

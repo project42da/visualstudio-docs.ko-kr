@@ -1,27 +1,24 @@
 ---
-title: "개념적 모델 (WCF Data Services) 사용 | Microsoft Docs"
-ms.custom: 
+title: 개념적 모델 (WCF Data Services) 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data [Visual Studio], querying a service
 - data [Visual Studio], LINQ to Entities
 - data [Visual Studio], querying an EDM
 ms.assetid: 2cd873cf-b010-49f2-a278-bb1277aaa934
-caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 86a7a4c253aa9bdd2d311d72f40e8b9374a37ff4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: aef81f949d52c3aba9fadf3871fe1b6cd624d536
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-a-conceptual-model-wcf-data-services"></a>작업을 개념적 모델 (WCF Data Services)
 개념적 모델을 사용 하 여 데이터베이스의 데이터에 설명 하는 경우 데이터베이스 스키마 및 개체 모델 간의 간에 변환할 필요 없이 개체를 통해 데이터를 쿼리할 수 있습니다.  

@@ -1,29 +1,27 @@
 ---
-title: "오류: 없는 프로세스 &#39; 조사할 수 s identity | Microsoft Docs"
-ms.custom: 
+title: '오류: 없는 프로세스를 조사할 수&#39;s identity | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology:
+- vs-ide-debug
 ms.topic: reference
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f51087d4f7882c34826942a898328640107a5ac6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8f62f612d4b07e0799c318ae972220459e0700e3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>오류: 없는 프로세스 &#39; 조사할 수 s identity
+# <a name="error-you-do-not-have-permission-to-inspect-the-process39s-identity"></a>오류: 없는 프로세스를 조사할 수&#39;s identity
 프로세스의 ID를 검사할 수 있는 권한이 없습니다. 시스템의 구성에 문제가 있는 것 같습니다.  
   
  디버깅에 필요한 정보인 프로세스 ID를 디버거에서 검사할 수 없습니다. 이는 터미널 서비스가 해제되었기 때문일 가능성이 높습니다. 터미널 서비스는 기본적으로 사용됩니다. 이 서비스를 다시 사용하려면 다음 단계에 따릅니다.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  클릭 **시작** 마우스 오른쪽 단추로 클릭 한 다음 **내 컴퓨터**합니다.  
   
-2.  선택 **속성**합니다.  
+2.  **속성**을 선택합니다.  
   
      **시스템 속성** 창이 표시 됩니다.  
   

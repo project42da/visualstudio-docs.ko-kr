@@ -1,26 +1,24 @@
 ---
-title: "사용자 지정 편집기 및 디자이너를 만드는 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 편집기 및 디자이너를 만드는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK]
 - editors [Visual Studio SDK], custom
 ms.assetid: b6a5e8b2-0ae1-4fc3-812d-09d40051b435
-caps.latest.revision: "31"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d8d354333545a6ec2b637e160818d506fa049c29
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4c0dbc0db9d5116e372d96b43059a393ac8f4b5d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-custom-editors-and-designers"></a>사용자 지정 편집기 및 디자이너 만들기
 Visual Studio 통합된 개발 환경 (IDE)는 다양 한 유형의 편집기를 호스팅할 수 있습니다.  
@@ -73,7 +71,7 @@ Visual Studio 통합된 개발 환경 (IDE)는 다양 한 유형의 편집기를
   
      포함할 수 있는 경우 호스트 창 외부 편집기에 대 한를 만들고 다음 호출에서 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject3.IsDocumentInProject%2A> 집합과, 메서드는 <xref:Microsoft.VisualStudio.Shell.Interop.VSDOCUMENTPRIORITY> 열거형 값을 `DP_External`합니다. 편집기를 포함할 수 없는 경우 IDE에 대 한 별도 창을 자동으로 만듭니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [연습: 사용자 지정 편집기 만들기](../extensibility/walkthrough-creating-a-custom-editor.md)  
  사용자 지정 편집기를 만드는 방법에 설명 합니다.  
   

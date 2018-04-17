@@ -1,23 +1,21 @@
 ---
-title: "SAL 이해 | Microsoft Docs"
-ms.custom: 
+title: SAL 이해 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
-caps.latest.revision: "18"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 196bfdbeeda00199861ea2f676553f024fcaf98f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: deb1825bb514afec4db3bf705ac787aadb88cc11
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="understanding-sal"></a>SAL 이해
 Microsoft 소스 코드 주석 언어 (SAL)를 함수 매개 변수, 하는 것은 그에 대 한 가정 및 보장 하는 것은 완료 될 때 사용 하는 방법을 설명 하는 데 사용할 수 있는 주석 집합을 제공 합니다. 헤더 파일에 정의 된 주석은 `<sal.h>`합니다. C + +에 대 한 visual Studio 코드 분석 함수에 대 한 분석을 수정 하려면 SAL 주석을 사용 합니다. Windows 드라이버 개발에 대 한 SAL 2.0에 대 한 자세한 내용은 참조 [Windows 드라이버에 대 한 SAL 2.0 주석](http://go.microsoft.com/fwlink/?LinkId=250979)합니다.  
@@ -47,7 +45,7 @@ void * memcpy(
   
  설명서에는 두 가지 프로그램 정확성을 유지 하려면 특정 속성을 유지 하기 위해 코드에는 제안 하는 정보의 비트:  
   
--   `memcpy`복사는 `count` 소스 버퍼의 바이트를 대상 버퍼입니다.  
+-   `memcpy` 복사는 `count` 소스 버퍼의 바이트를 대상 버퍼입니다.  
   
 -   대상 버퍼 최소한 소스 버퍼의 크기 여야 합니다.  
   
@@ -131,9 +129,9 @@ wchar_t * wmemcpy(
   
 -   호출자는 버퍼를 제공 하 고 초기화 해야 합니다.  
   
--   `_In_`"읽기 전용"를 지정합니다. 적용 하는 일반적인 실수는 `_In_` 있어야 하는 매개 변수에 `_Inout_` 주석 대신 합니다.  
+-   `_In_` "읽기 전용"를 지정합니다. 적용 하는 일반적인 실수는 `_In_` 있어야 하는 매개 변수에 `_Inout_` 주석 대신 합니다.  
   
--   `_In_`하지만 바로 포인터가 아닌 스칼라에 분석기가 허용 됩니다.  
+-   `_In_` 하지만 바로 포인터가 아닌 스칼라에 분석기가 허용 됩니다.  
   
 ```cpp  
 void InCallee(_In_ int *pInt)  
@@ -161,7 +159,7 @@ void BadInCaller()
  이 예제에서 Visual Studio Code 분석을 사용 하면 유효성을 검사는 호출자에 대 한 초기화 된 버퍼를 Null이 아닌 포인터를 전달 `pInt`합니다. 이 경우 `pInt` 포인터에는 NULL 일 수 없습니다.  
   
 ### <a name="example-the-inopt-annotation"></a>예: _In_opt\_ 주석  
- `_In_opt_`동일 `_In_`제외 하 고 입력된 매개 변수는 NULL 일 수이 고 따라서 함수는이를 확인 해야 합니다.  
+ `_In_opt_` 동일 `_In_`제외 하 고 입력된 매개 변수는 NULL 일 수이 고 따라서 함수는이를 확인 해야 합니다.  
   
 ```cpp  
   
@@ -189,7 +187,7 @@ void InOptCaller()
  Visual Studio 코드 분석 함수 NULL에 대 한 버퍼에 액세스 하기 전에 확인의 유효성을 검사 합니다.  
   
 ### <a name="example-the-out-annotation"></a>예: _Out\_ 주석  
- `_Out_`요소 버퍼를 가리키는 NULL이 아닌 포인터 전달 하 고 함수는 요소를 초기화 하는 일반적인 시나리오를 지원 합니다. 호출자를; 호출 하기 전에 버퍼를 초기화할 필요가 없습니다. 호출된 된 함수 프라미스를 반환 하기 전에 초기화 합니다.  
+ `_Out_` 요소 버퍼를 가리키는 NULL이 아닌 포인터 전달 하 고 함수는 요소를 초기화 하는 일반적인 시나리오를 지원 합니다. 호출자를; 호출 하기 전에 버퍼를 초기화할 필요가 없습니다. 호출된 된 함수 프라미스를 반환 하기 전에 초기화 합니다.  
   
 ```cpp  
   
@@ -216,7 +214,7 @@ void OutCaller()
  Visual Studio 코드 분석 도구는 호출자에 대 한 버퍼를 NULL이 아닌 포인터를 전달 하는 유효성을 검사 `pInt` 버퍼를 반환 하기 전에 함수에 의해 초기화 되 고 있습니다.  
   
 ### <a name="example-the-outopt-annotation"></a>예: _Out_opt\_ 주석  
- `_Out_opt_`동일 `_Out_`한다는 점을 제외 하는 매개 변수는 null을 허용 하 고 따라서 함수는이를 확인 해야 합니다.  
+ `_Out_opt_` 동일 `_Out_`한다는 점을 제외 하는 매개 변수는 null을 허용 하 고 따라서 함수는이를 확인 해야 합니다.  
   
 ```cpp  
   
@@ -244,7 +242,7 @@ void OutOptCaller()
  Visual Studio 코드 분석 하기 전에 NULL에 대 한이 함수를 확인 하는 유효성을 검사 `pInt` 역참조 될 경우 `pInt` NULL이 아니면 반환 하기 전에 버퍼 함수에 의해 초기화 됩니다.  
   
 ### <a name="example-the-inout-annotation"></a>예: _Inout\_ 주석  
- `_Inout_`포인터 매개 변수는 함수에 의해 변경 될 수 있는 주석을 추가 하는 데 사용 됩니다. 포인터는 호출 전에 올바른 초기화 된 데이터를 가리켜야 및 변경 될 경우에 여전히 있어야 올바른 값을 반환 합니다. 주석은 지정 된 함수 수 자유롭게에서 읽은 요소가 하나인 버퍼에 쓸입니다. 호출자는 버퍼를 제공 하 고 초기화 해야 합니다.  
+ `_Inout_` 포인터 매개 변수는 함수에 의해 변경 될 수 있는 주석을 추가 하는 데 사용 됩니다. 포인터는 호출 전에 올바른 초기화 된 데이터를 가리켜야 및 변경 될 경우에 여전히 있어야 올바른 값을 반환 합니다. 주석은 지정 된 함수 수 자유롭게에서 읽은 요소가 하나인 버퍼에 쓸입니다. 호출자는 버퍼를 제공 하 고 초기화 해야 합니다.  
   
 > [!NOTE]
 >  마찬가지로 `_Out_`, `_Inout_` 수정 가능한 값에 적용 해야 합니다.  
@@ -276,7 +274,7 @@ void BadInOutCaller()
  호출자에 대 한 초기화 된 버퍼를 NULL이 아닌 포인터를 전달 하는 visual Studio 코드 분석의 유효성을 검사 `pInt`, 하며, 반환 하기 전에 `pInt` 여전히 NULL이 고 버퍼를 초기화 합니다.  
   
 ### <a name="example-the-inoutopt-annotation"></a>예: _Inout_opt\_ 주석  
- `_Inout_opt_`동일 `_Inout_`제외 하 고 입력된 매개 변수는 NULL 일 수이 고 따라서 함수는이를 확인 해야 합니다.  
+ `_Inout_opt_` 동일 `_Inout_`제외 하 고 입력된 매개 변수는 NULL 일 수이 고 따라서 함수는이를 확인 해야 합니다.  
   
 ```cpp  
   
@@ -306,7 +304,7 @@ void InOutOptCaller()
  Visual Studio 코드 분석, 버퍼에 액세스 하기 전에 그리고이 함수 NULL에 대 한 확인 하는 유효성을 검사 `pInt` NULL이 아니면 반환 하기 전에 버퍼 함수에 의해 초기화 됩니다.  
   
 ### <a name="example-the-outptr-annotation"></a>예: _Outptr\_ 주석  
- `_Outptr_`포인터를 반환 하기 위한 옵션에 매개 변수를 주석을 추가 하는 데 사용 됩니다.  매개 변수 자체에 NULL를 사용 해야 합니다. 및 호출된 된 함수에 NULL이 아닌 포인터를 반환 하 고 해당 포인터 초기화 된 데이터를 가리킵니다.  
+ `_Outptr_` 포인터를 반환 하기 위한 옵션에 매개 변수를 주석을 추가 하는 데 사용 됩니다.  매개 변수 자체에 NULL를 사용 해야 합니다. 및 호출된 된 함수에 NULL이 아닌 포인터를 반환 하 고 해당 포인터 초기화 된 데이터를 가리킵니다.  
   
 ```cpp  
   
@@ -337,7 +335,7 @@ void OutPtrCaller()
  호출자에 대 한 NULL이 아닌 포인터를 전달 하는 visual Studio 코드 분석의 유효성을 검사 `*pInt`, 버퍼를 반환 하기 전에 함수에 의해 초기화 되 고 있습니다.  
   
 ### <a name="example-the-outptropt-annotation"></a>예: _Outptr_opt\_ 주석  
- `_Outptr_opt_`동일 `_Outptr_`한다는 점을 제외 하는 매개 변수는 선택적-호출자에 게 매개 변수는 NULL 포인터에서 전달할 수 있습니다.  
+ `_Outptr_opt_` 동일 `_Outptr_`한다는 점을 제외 하는 매개 변수는 선택적-호출자에 게 매개 변수는 NULL 포인터에서 전달할 수 있습니다.  
   
 ```cpp  
   

@@ -2,26 +2,22 @@
 title: 'CA2130: 보안 위험 상수는 투명 해야 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CA2130
 ms.assetid: 344c7f7b-9130-4675-ae7f-9fa260cc9789
-caps.latest.revision: 10
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ddd6e768f0c5311d6ca8ea19f43f4155f6168b5f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2fbda0886fe05d22ccf61f36792d8bfcf687547a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2130-security-critical-constants-should-be-transparent"></a>CA2130: 보안 위험 상수는 투명해야 합니다.
 |||  
@@ -43,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 열거형 값 `EnumWithCriticalValues.CriticalEnumValue` 상수의 `CriticalConstant` 이 경고를 발생 시킵니다. 문제를 해결 하려면 제거에서 [`SecurityCritical`] 특성으로 보안 투명 하 게 만들려면 합니다.  
   
  [!code-csharp[FxCop.Security.CA2130.ConstantsShouldBeTransparent#1](../code-quality/codesnippet/CSharp/ca2130-security-critical-constants-should-be-transparent_1.cs)]

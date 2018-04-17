@@ -1,28 +1,26 @@
 ---
-title: "GPU 코드 디버그 | Microsoft Docs"
-ms.custom: 
+title: GPU 코드 디버그 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: c7e77a5a-cb57-4b11-9187-ecc89acc8775
-caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0699df7890528a200648ad10975b3cf272a3534f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9e873eb89f1f5b22307b4a2be960d7b04121c222
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-gpu-code"></a>GPU 코드 디버깅
 GPU(그래픽 처리 장치)에서 실행되는 C++ 코드를 디버깅할 수 있습니다. Visual Studio의 GPU 디버깅 지원에는 경합 상태 감지, 프로세스 시작, 프로세스에 연결 및 디버깅 창에 대한 통합이 포함됩니다.  

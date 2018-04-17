@@ -1,28 +1,25 @@
 ---
-title: "Visual Studio의 데이터 바인딩된 컨트롤에 대 한 캡션을 만드는 방법을 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio의 데이터 바인딩된 컨트롤에 대 한 캡션을 만드는 방법을 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Label captions, Data Sources window
 - smart captions
 - captions, data-bound
 - Data Sources Window, label captions
 ms.assetid: 6d4d15f8-4d78-42fd-af64-779ae98d62c8
-caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 60d98d6b8cefc2f7fb7829d841001f92bd9063de
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 031301edc2fbf0c9acc08f92d3324160dd5383cf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio의 데이터 바인딩된 컨트롤에 대 한 캡션을 만드는 방법을 사용자 지정
 항목을 끌면는 [데이터 소스 창](add-new-data-sources.md) 디자이너에 특별 한 고려 질문과 관련 하 여: 캡션 레이블의 열 이름을 두 보다 읽기 쉬운 문자열로 변경 또는 되도록 개 이상의 단어가 서로 연결 됩니다. 이러한 레이블을 설정 하 여 만든 하는 방법을 사용자 지정할 수 있습니다는 **SmartCaptionExpression**, **SmartCaptionReplacement**, 및 **SmartCaptionSuffix** 값 **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data 디자이너** 레지스트리 키입니다.  
@@ -44,14 +41,14 @@ ms.lasthandoff: 12/22/2017
   
 |레지스트리 항목|기본값|설명|  
 |-------------------|-------------------|-----------------|  
-|**SmartCaptionExpression**|(\\\p{Ll}) (\\\p{Lu}) &#124; _ +|소문자 대문자 문자 또는 밑줄 문자를 찾습니다.|  
+|**SmartCaptionExpression**|(\\\p{Ll}) (\\\p{Lu})&#124;_ +|소문자 대문자 문자 또는 밑줄 문자를 찾습니다.|  
 |**SmartCaptionReplacement**|$1 $2|$1 식의 첫 번째 괄호로 일치 하는 문자를 나타내고 $2의 두 번째 괄호에 일치 하는 문자를 나타냅니다. 대신 일치 하는 첫 번째, 공백 하나 및 일치 하는 두 번째에 있습니다.|  
-|**SmartCaptionSuffix**|:|반환된 된 문자열에 추가 되는 문자를 나타냅니다. 예를 들어, 캡션이 `Company Name`, 접미사를 사용 하면`Company Name:`|  
+|**SmartCaptionSuffix**|:|반환된 된 문자열에 추가 되는 문자를 나타냅니다. 예를 들어, 캡션이 `Company Name`, 접미사를 사용 하면 `Company Name:`|  
   
 > [!CAUTION]
 > 레지스트리 편집기에서 작업을 수행 하는 경우에 매우 주의 해야 합니다. 편집 하기 전에 레지스트리를 백업 합니다. 레지스트리 편집기를 잘못 사용 하면 운영 체제를 다시 설치 해야 하는 심각한 문제가 발생할 수 있습니다. Microsoft은 레지스트리 편집기를 잘못 사용 하 여 발생 하는 문제를 해결할 수 있음을 보장 하지 않습니다. 레지스트리 편집기 사용에 따른 결과는 사용자의 책임입니다.  
 >   
->  다음 기술 자료 문서를 백업, 편집 및 레지스트리 복원에 대 한 지침이 포함 되어: [Microsoft Windows 레지스트리 설명](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb;en-us; 256986)  
+>  다음 기술 자료 문서를 백업, 편집 및 레지스트리 복원에 대 한 지침이 포함 되어: [Microsoft Windows 레지스트리 설명](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb; en-us; 256986)  
   
 ### <a name="to-modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>데이터 소스 창에서의 스마트 캡션 동작을 수정 하려면  
   

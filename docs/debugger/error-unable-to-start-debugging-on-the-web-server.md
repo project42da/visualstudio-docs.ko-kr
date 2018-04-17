@@ -1,12 +1,9 @@
 ---
-title: "오류: 웹 서버에서 디버깅을 시작할 수 없습니다. | Microsoft Docs"
-ms.custom: 
+title: '오류: 웹 서버에서 디버깅을 시작할 수 없습니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 05/23/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.http
@@ -27,17 +24,16 @@ helpviewer_keywords:
 - errors [debugger], unable to start debugging
 - debugging ASP.NET Web applications, unable to start debugging error
 - remote debugging, errors
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d9c4160726f808a2f456bb52390839c34dc308e2
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 459df1ca9ffed246116c71adac8a38039b6602ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="error-unable-to-start-debugging-on-the-web-server"></a>오류: 웹 서버에서 디버깅을 시작할 수 없습니다.
 
@@ -59,32 +55,32 @@ ms.lasthandoff: 01/29/2018
 - [디버거는 원격 컴퓨터에 연결할 수 없습니다.](#cannot_connect)
 - [참조 일반적인 구성 오류에 대 한 도움말입니다. 디버거 외부에서 웹 페이지를 실행 합니다. 추가 정보가 제공 될 수 있습니다.](#see_help)
 
-## <a name="IISlist"></a>IIS 시작와 일치 하는 웹 사이트를 나열 하지 않습니다 url
+## <a name="IISlist"></a> IIS 시작와 일치 하는 웹 사이트를 나열 하지 않습니다 url
 
 - 관리자 권한으로 Visual Studio를 다시 시작 하 고 디버깅을 다시 시도 하십시오. (일부 ASP.NET 디버깅 시나리오에는 상승 된 권한이 필요 합니다.)
 
     Visual Studio 바로 가기 아이콘을 마우스 오른쪽 단추로 클릭 하 여 항상 관리자 권한으로 실행 하려면 Visual Studio를 구성할 수 있습니다 선택 **속성 > 고급**를 선택한 다음 항상 관리자 권한으로 실행 합니다.
 
-## <a name="web_server_config"></a>웹 서버가 올바르게 구성 되지 않았습니다.
+## <a name="web_server_config"></a> 웹 서버가 올바르게 구성 되지 않았습니다.
 
 - 참조 [오류: 웹 서버가 올바르게 구성 되지 않았습니다.](../debugger/error-the-web-server-is-not-configured-correctly.md)합니다.
 
-## <a name="unabletoconnect"></a>웹 서버에 연결할 수 없습니다.
+## <a name="unabletoconnect"></a> 웹 서버에 연결할 수 없습니다.
 
 - 동일한 컴퓨터에서 Visual Studio와 웹 서버를 실행 및 사용 하 여 디버깅 **F5** (대신 **프로세스에 연결**)? 프로젝트 속성을 열고 프로젝트가 올바른 웹 서버에 연결 하 고 URL을 시작 하도록 구성 되어 있는지 확인 합니다. (열기 **속성 > 웹 > 서버** 또는 **속성 > 디버그** 프로젝트 형식에 따라 합니다. Web Forms 프로젝트를 열고 **속성 페이지 > 시작 옵션 > 서버**.)
 
 - 그렇지 않은 경우 응용 프로그램 풀을 다시 시작 하 고 IIS 다시 설정 합니다. 자세한 내용은 참조 [IIS 구성을 확인](#vxtbshttpservererrorsthingstocheck)합니다.
 
-## <a name="webservertimeout"></a>웹 서버가 적시에 응답 하지 않습니다.
+## <a name="webservertimeout"></a> 웹 서버가 적시에 응답 하지 않습니다.
 
 - IIS를 다시 설정 하 고 디버깅을 다시 시도 하십시오. 여러 디버거 인스턴스는 IIS 프로세스;에 연결 기본 설정으로 종료합니다. 자세한 내용은 참조 [IIS 구성을 확인](#vxtbshttpservererrorsthingstocheck)합니다.
 
-## <a name="msvsmon"></a>Microsoft visual studio 원격 디버깅 monitor(msvsmon.exe) 원격 컴퓨터에서 실행 되 고 표시 되지 않습니다.
+## <a name="msvsmon"></a> Microsoft visual studio 원격 디버깅 monitor(msvsmon.exe) 원격 컴퓨터에서 실행 되 고 표시 되지 않습니다.
 
 - 원격 컴퓨터에서 디버깅 하는 경우 했는지 확인 [설치 하 고 원격 디버거를 실행 하는](../debugger/remote-debugging.md)합니다. 메시지에 언급 방화벽, 있는지 확인는 [방화벽에서 포트를 수정](../debugger/remote-debugger-port-assignments.md) 특히 타사 방화벽을 사용 하는 경우에 열려 있습니다.
 - 호스트 파일을 사용 하는 경우 올바르게 구성 되어 있는지 확인 합니다. 예를 들어, 사용 하 여 디버깅 하는 경우 **F5** (대신 **프로세스에 연결**), 호스트 파일, 프로젝트 속성에서와 같이 동일한 프로젝트 URL을 포함 해야 **속성 > 웹 > 서버**  또는 **속성 > 디버그**프로젝트 형식에 따라 합니다.
 
-## <a name="server_error"></a>원격 서버 오류를 반환합니다.
+## <a name="server_error"></a> 원격 서버 오류를 반환합니다.
 
 확인 프로그램 [IIS 로그 파일](https://support.microsoft.com/help/943891/the-http-status-code-in-iis-7-0--iis-7-5--and-iis-8-0) 오류 하위 코드 및 추가 정보와이 IIS 7 [블로그 게시물](https://blogs.iis.net/tomkmvp/troubleshoot-a-403)합니다.
 
@@ -93,24 +89,24 @@ ms.lasthandoff: 01/29/2018
 - (503) 서버를 사용할 수 없습니다. 응용 프로그램 풀 오류 또는 구성 변경으로 인해 중지 있을 수 있습니다. 응용 프로그램 풀을 다시 시작 합니다.
 - (404) 찾을 수 없습니다. 올바른 버전의 ASP.NET에 대 한 응용 프로그램 풀 구성 되어 있는지 확인 합니다.
 
-## <a name="aspnet"></a>ASP.NET 디버깅을 시작할 수 없습니다.
+## <a name="aspnet"></a> ASP.NET 디버깅을 시작할 수 없습니다.
 
 - 응용 프로그램 풀을 다시 시작 하 고 IIS를 다시 설정 합니다. 자세한 내용은 참조 [IIS 구성을 확인](#vxtbshttpservererrorsthingstocheck)합니다.
 - URL을 다시 작성 하는 경우 없는 URL 다시 작성 된 기본 web.config를 테스트 합니다. 참조는 **참고** URL에 대 한 모듈에서 다시 작성 [IIS 구성을 확인](#vxtbshttpservererrorsthingstocheck)합니다.
 
-## <a name="cannot_connect"></a>디버거는 원격 컴퓨터에 연결할 수 없습니다.
+## <a name="cannot_connect"></a> 디버거는 원격 컴퓨터에 연결할 수 없습니다.
 
 로컬로 디버깅 하는 경우 64 비트 버전의 원격 디버거를 사용 하 여 64 비트 응용 프로그램을 디버깅할 수 있도록 Visual Studio는 32 비트 응용 프로그램을이 오류가 발생할 수 있습니다. 프로젝트 속성을 열고 프로젝트에 연결 하는 올바른 웹 서버 URL 구성 되어 있는지 확인 합니다. (열기 **속성 > 웹 > 서버** 또는 **속성 > 디버그** 프로젝트 형식에 따라.)
 
 또한 호스트 파일을 사용 하는 경우 올바르게 구성 되어 있는지 확인 합니다. 예를 들어 호스트 파일, 프로젝트 속성에서와 같이 동일한 프로젝트 URL을 포함 해야 **속성 > 웹 > 서버** 또는 **속성 > 디버그**프로젝트 형식에 따라 합니다.
 
-## <a name="see_help"></a>참조 일반적인 구성 오류에 대 한 도움말입니다. 디버거 외부에서 웹 페이지를 실행 합니다. 추가 정보가 제공 될 수 있습니다.
+## <a name="see_help"></a> 참조 일반적인 구성 오류에 대 한 도움말입니다. 디버거 외부에서 웹 페이지를 실행 합니다. 추가 정보가 제공 될 수 있습니다.
 
 - Visual Studio와 웹 서버는 동일한 컴퓨터에서 실행 중인 있습니다? 프로젝트 속성을 열고 프로젝트가 올바른 웹 서버에 연결 하 고 URL을 시작 하도록 구성 되어 있는지 확인 합니다. (열기 **속성 > 웹 > 서버** 또는 **속성 > 디버그** 프로젝트 형식에 따라.)
 
 - 단계를 수행 되지 않으면 원격 디버깅 하는, [IIS 구성을 확인](#vxtbshttpservererrorsthingstocheck)합니다.
 
-##  <a name="vxtbshttpservererrorsthingstocheck"></a>IIS 구성을 확인 하십시오.
+##  <a name="vxtbshttpservererrorsthingstocheck"></a> IIS 구성을 확인 하십시오.
 
 문제를 해결 하려면 여기에서 자세히 설명 하는 단계를 수행한 후 및 디버깅을 다시 시도 하기 전에 IIS를 다시 설정 할 수도 있습니다. 관리자 권한 명령 프롬프트를 열고 입력 하 여 할 수 있습니다 `iisreset`합니다. 
 

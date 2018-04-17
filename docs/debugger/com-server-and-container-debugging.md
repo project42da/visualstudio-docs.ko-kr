@@ -1,13 +1,10 @@
 ---
-title: "COM 서버 및 컨테이너 디버깅 | Microsoft Docs"
-ms.custom: 
+title: COM 서버 및 컨테이너 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.com
 dev_langs:
@@ -22,29 +19,28 @@ helpviewer_keywords:
 - ActiveX controls, debugging
 - COM [Visual Studio], debugging
 ms.assetid: b7ce8696-ebb8-4354-a767-f76b8ada4ac1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d1e4ec34b55e9e24c33157446cd74262a640d4f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: aa27c3d63a21bf3a1cad31bb705df6532eed873c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="com-server-and-container-debugging"></a>COM 서버 및 컨테이너 디버깅
 COM 응용 프로그램은 프로그래머가 직접 제어할 수 없는 많은 작업을 수행합니다. DLL 사이의 통신, 개체 사용 횟수, 클립보드 작업 등 제한된 몇 가지 영역에서 프로그램이 비정상적으로 작동할 수 있습니다. 이러한 문제가 발생하면 먼저 문제가 발생한 위치를 추적해야 합니다.  
   
  Visual Studio 디버거에서는 컨테이너와 서버 사이를 이동하면서 단계적으로 실행할 수 있습니다. RPC(원격 프로시저 호출) 사이에서 단계별 실행도 가능합니다.  
   
-##  <a name="BKMK_COMServerandContainerintheSameSolution"></a>COM 서버와 동일한 솔루션에는 컨테이너 디버깅  
+##  <a name="BKMK_COMServerandContainerintheSameSolution"></a> COM 서버와 동일한 솔루션에는 컨테이너 디버깅  
  동일한 솔루션 내에서 프로젝트 두 개를 사용하여 COM 서버와 컨테이너를 디버깅할 수 있습니다. 각 프로젝트에 적절한 중단점을 설정하고 디버깅하십시오. 컨테이너에서는 중단점에 도달하여 서버가 호출될 경우 디버깅이 완료되어 서버 코드가 반환될 때까지 대기합니다.  
   
  COM 컨테이너 디버깅은 표준 프로그램 디버깅과 유사합니다. 그러나 컨테이너 응용 프로그램으로 데이터를 끌어 오는 경우처럼 콜백을 실행하는 이벤트가 디버깅될 때는 한 가지 차이점이 있습니다. 이 경우에는 콜백 함수에 중단점을 설정해야 합니다.  
   
-##  <a name="BKMK_ServerApplicationWithoutContainerInformation"></a>컨테이너 정보 없이 서버 응용 프로그램 디버깅  
+##  <a name="BKMK_ServerApplicationWithoutContainerInformation"></a> 컨테이너 정보 없이 서버 응용 프로그램 디버깅  
  컨테이너 응용 프로그램에 대한 디버깅 정보가 없거나 필요하지 않은 경우에는 다음 3단계 절차를 통해 서버 응용 프로그램 디버깅을 시작할 수 있습니다.  
   
 1.  일반적인 응용 프로그램처럼 서버 디버깅을 시작합니다.  
@@ -53,7 +49,7 @@ COM 응용 프로그램은 프로그래머가 직접 제어할 수 없는 많은
   
 3.  컨테이너 응용 프로그램을 시작합니다.  
   
-##  <a name="BKMK_DebuggingaServerandDomainIsolationSDIApplication"></a>서버 및 도메인 격리 (SDI) 응용 프로그램 디버깅  
+##  <a name="BKMK_DebuggingaServerandDomainIsolationSDIApplication"></a> 서버 및 도메인 격리 (SDI) 응용 프로그램 디버깅  
  지정 해야 SDI 서버 응용 프로그램 디버깅 하는 경우, `/Embedding` 또는 `/Automation` 에 **명령줄 인수** 속성에는 *프로젝트* C/c + +, C#에 대 한 속성 페이지 대화 상자 또는 Visual Basic 프로젝트입니다.  
   
  이 명령줄 인수를 사용하면 컨테이너에서 실행하는 것처럼 디버거에서 서버 응용 프로그램을 실행할 수 있습니다. 그런 다음 프로그램 관리자나 파일 관리자에서 컨테이너를 시작하면 컨테이너는 디버거에서 시작된 서버 인스턴스를 사용합니다.  

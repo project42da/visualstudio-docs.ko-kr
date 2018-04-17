@@ -1,26 +1,23 @@
 ---
-title: "함수 &#39; 함수 &#39; 오류: 평가 초과 하는 안전 하지 않은 방식으로 중단 하는 데 필요한 | Microsoft Docs"
-ms.custom: 
+title: '오류: 함수를 계산 &#39;함수&#39; 을 초과 하는 안전 하지 않은 방식으로 중단 하는 데 필요한 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
 ms.topic: reference
 f1_keywords:
 - vs.debug.error.unsafe_func_eval_abort
 ms.technology: vs-ide-debug
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d0d03efbb844c29195eca7c13303a850c168e0f
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 1c230c27c8d1c8dcc01910fa598fb8a97b314845
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>함수 &#39; 함수 &#39; 오류: 평가 초과 하는 안전 하지 않은 방식으로 중단 하는 데 필요한
+# <a name="error-evaluating-the-function-39function39-timed-out-and-needed-to-be-aborted-in-an-unsafe-way"></a>오류: 함수를 계산 &#39;함수&#39; 을 초과 하는 안전 하지 않은 방식으로 중단 하는 데 필요한
 
 전체 메시지 텍스트: 시간 초과 및 안전 하지 않은 방식으로 중단 하는 데 필요한 'function' 함수를 계산 합니다. 대상 프로세스를 손상 있을 수 있습니다. 
 
@@ -37,9 +34,9 @@ ms.lasthandoff: 02/28/2018
 오류 메시지에는 디버거를 호출 하려고 함수의 이름을 알려줍니다. 이 함수를 수정할 수 있는 경우에 속성 getter 또는 ToString 메서드 호출에서 디버거를 방지할 수 있습니다. 다음 중 하나를 사용 하십시오.
  
 * 방법 getter 속성 외에도 코드의 일부 다른 형식으로 변경 하거나 ToString 메서드 및 문제가 나타나지 것입니다.
-    또는
+    -또는-
 * (ToString)에 대 한 형식에 DebuggerDisplay 특성을 정의 하 고 평가 ToString 이외의 디버거를 사용할 수 있습니다.
-    또는
+    -또는-
 * (예: 속성 getter) 배치는 `[System.Diagnostics.DebuggerBrowsable(DebuggerBrowsableState.Never)]` 속성에는 특성입니다. 이 API 호환성을 위해 속성 상태로 유지 해야 하는 메서드를 설정한 경우에 유용할 수 있습니다 하지만 메서드가 실제로 이어야 합니다.
  
 ### <a name="solution-2-have-the-target-code-ask-the-debugger-to-abort-the-evaluation"></a>해결 방법 2: 계산을 중단 하도록 디버거를 요청 하는 대상 코드를 있는

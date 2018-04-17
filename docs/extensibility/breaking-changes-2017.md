@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio 2017 확장성의 주요 변경 내용 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 2017 확장성의 주요 변경 내용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/09/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 54d5af60-0b44-4ae1-aa57-45aa03f89f3d
-caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 068b71a78149bb1c52e28bc47245d0dc888496bc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: bff9c97b052f359f3d03e12093b1cdae86d5dfbd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changes-in-visual-studio-2017-extensibility"></a>Visual Studio 2017 확장성의 변경 내용
 
@@ -65,7 +63,7 @@ Visual Studio 프로세스 내에서 실행 되는 코드는 Visual Studio 설�
   * GAC에 있는 복사본은 설치 프로그램에서 제거 되었습니다.
   * 어셈블리에 대 한 코드 베이스 엔트리를 지정 하는.pkgdef 파일 추가 되었습니다.
 
-    예:
+    예를 들어:
     
     ```xml
     [$RootKey$\RuntimeConfiguration\dependentAssembly\codeBase\{UniqueGUID}]

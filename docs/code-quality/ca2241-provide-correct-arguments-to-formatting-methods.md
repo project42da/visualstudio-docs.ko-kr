@@ -1,12 +1,10 @@
 ---
-title: "CA2241: 올바른 인수를 제공 하십시오. | Microsoft Docs"
-ms.custom: 
+title: 'CA2241: 올바른 인수를 제공 하십시오. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2241
 - Provide correct arguments to formatting methods
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ProvideCorrectArgumentsToFormattingMethods
 - CA2241
 ms.assetid: 83639bc4-4c91-4a07-a40e-dc5e49a84494
-caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f5f71926705169d4ed7dc40318e83f265e8603f5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a4fbaaa9b2d89b80fec1fb5106e94a7ef504e3c1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2241-provide-correct-arguments-to-formatting-methods"></a>CA2241: 형식 메서드에 올바른 인수를 제공하십시오.
 |||  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 개의 규칙을 위반 경우를 보여 줍니다.  
   
  [!code-vb[FxCop.Usage.FormattingArguments#1](../code-quality/codesnippet/VisualBasic/ca2241-provide-correct-arguments-to-formatting-methods_1.vb)]

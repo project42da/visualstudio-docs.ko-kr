@@ -1,13 +1,10 @@
 ---
-title: "데이터의 사용자 지정 시각화 도우미를 만드는 | Microsoft Docs"
-ms.custom: 
+title: 데이터의 사용자 지정 시각화 도우미를 만드는 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/19/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.visualizer.troubleshoot
 dev_langs:
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - debugger, visualizers
 - visualizers
 ms.assetid: c24c006f-f2ac-429f-89db-677fc0c6e1ea
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23985c56ba61e5a788232523611a48cfde902335
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dac2fd507936ffc3b305e8d1339000def3e00e2a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-custom-visualizers-of-data"></a>데이터의 사용자 지정 시각화 도우미 만들기
  시각화 도우미는의 구성 요소는 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 디버거 사용자 인터페이스입니다. A *시각화 도우미* 대화 상자나 다른 인터페이스의 데이터 형식에 적합 한 방식으로 변수나 개체를 표시 하려면를 만듭니다. 예를 들어 HTML 시각화 도우미는 HTML 문자열을 해석하고 브라우저 창에서와 마찬가지로 그 결과를 표시합니다. 비트맵 시각화 도우미는 비트맵 구조를 해석하고 그 구조가 표현하는 그래픽을 표시합니다. 일부 시각화 도우미에서는 데이터를 볼 수 있을 뿐만 아니라 수정할 수도 있습니다.

@@ -1,23 +1,21 @@
 ---
-title: "Mip 맵 생성 변형 | Microsoft Docs"
-ms.custom: 
+title: Mip 맵 생성 변형 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 3b4b3583-0b01-4f5d-aacb-3f96d19111d9
-caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f6b7773562ed7b09ca00f7fc471b7ee2924c0181
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 63b414345f7e0a8be7a334416b838897d4f8f620
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mip-map-generation-variant"></a>MIP 맵 생성 변형
 렌더링 대상이 아닌 질감에 대해 Mip 맵을 사용합니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
  질감에 대한 Mip 맵이 자동으로 생성된 경우 질감 샘플링 중 Mip 체인을 사용하도록 `ID3D11Device::CreateShaderResourceView`에 대한 호출이 재생 중 수정됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **Mip 맵 생성** 변형은 다음과 같은 코드를 사용 하 여 재현할 수 있습니다.  
   
 ```  

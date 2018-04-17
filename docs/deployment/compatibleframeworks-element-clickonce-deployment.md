@@ -1,13 +1,10 @@
 ---
-title: "&lt;compatibleFrameworks&gt; 요소 (ClickOnce 배포) | Microsoft Docs"
-ms.custom: 
+title: '&lt;compatibleFrameworks&gt; 요소 (ClickOnce 배포) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - <compatibleFrameworks> element [ClickOnce deployment manifest]
 ms.assetid: f6c3ee55-9e65-403d-8664-3ebde872c7d4
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 955e29add1990793711dd69fffbd2306ce61407d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e3554a643422aa74f8896e9911f9367566ddcfda
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt; 요소 (ClickOnce 배포)
 이 응용 프로그램이 설치 및 실행할 수 있는 .NET Framework의 버전을 식별합니다.  
@@ -53,20 +49,20 @@ ms.lasthandoff: 12/22/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`S` `upportUrl`|선택 사항입니다. 호환 되는 기본.NET Framework 버전을 다운로드할 수 있는 URL을 지정 합니다.|  
+|`S` `upportUrl`|선택적 요소. 호환 되는 기본.NET Framework 버전을 다운로드할 수 있는 URL을 지정 합니다.|  
   
 ## <a name="framework"></a>프레임워크  
- 필수. 다음 표에서 특성을 나열 하는 `framework` 요소를 지원 합니다.  
+ 필수 요소. 다음 표에서 특성을 나열 하는 `framework` 요소를 지원 합니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
-|`targetVersion`|필수. 대상.NET Framework의 버전 번호를 지정합니다.|  
-|`profile`|필수. 대상.NET Framework의 프로필을 지정합니다.|  
-|`supportedRuntime`|필수. 대상.NET Framework와 관련 된 런타임 버전 번호를 지정 합니다.|  
+|`targetVersion`|필수 요소. 대상.NET Framework의 버전 번호를 지정합니다.|  
+|`profile`|필수 요소. 대상.NET Framework의 프로필을 지정합니다.|  
+|`supportedRuntime`|필수 요소. 대상.NET Framework와 관련 된 런타임 버전 번호를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 `compatibleFrameworks` 요소에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트 합니다. 이 배포에서 실행할 수는 [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]합니다. 또한에서 실행할 수는 [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)] 의 상위 집합 이므로 [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]합니다.  
   
 ```  

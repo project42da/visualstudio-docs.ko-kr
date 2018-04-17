@@ -1,12 +1,10 @@
 ---
-title: "CA2240: 구현 ISerializable 올바르게 | Microsoft Docs"
-ms.custom: 
+title: 'CA2240: 구현 ISerializable 올바르게 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2240
 - ImplementISerializableCorrectly
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2240
 - ImplementISerializableCorrectly
 ms.assetid: cf05936d-0d6c-49ed-a1b4-220032e50b97
-caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b60f145d31b966ebdc05af975baf5c862cc76251
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1d8ea8d7be9dd208dcafc7ad9d6f9890401d521d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2240-implement-iserializable-correctly"></a>CA2240: ISerializable을 올바르게 구현하십시오.
 |||  
@@ -51,14 +49,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 규칙을 위반 하는 두 직렬화 가능 유형을 보여 줍니다.  
   
  [!code-csharp[FxCop.Usage.ImplementISerializableCorrectly#1](../code-quality/codesnippet/CSharp/ca2240-implement-iserializable-correctly_1.cs)]
  [!code-cpp[FxCop.Usage.ImplementISerializableCorrectly#1](../code-quality/codesnippet/CPP/ca2240-implement-iserializable-correctly_1.cpp)]
  [!code-vb[FxCop.Usage.ImplementISerializableCorrectly#1](../code-quality/codesnippet/VisualBasic/ca2240-implement-iserializable-correctly_1.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는의 재정의 가능한 구현을 제공 하 여 두 개의 이전 위반을 해결 <xref:System.Runtime.Serialization.ISerializable.GetObjectData> Book 클래스에 및의 구현을 제공 하 여 `GetObjectData` 라이브러리 클래스에 있습니다.  
   
  [!code-cpp[FxCop.Usage.ImplementISerializableCorrectly2#1](../code-quality/codesnippet/CPP/ca2240-implement-iserializable-correctly_2.cpp)]

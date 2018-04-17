@@ -1,12 +1,10 @@
 ---
-title: "CA1002: 제네릭 목록을 노출 하지 마십시오. | Microsoft Docs"
-ms.custom: 
+title: 'CA1002: 제네릭 목록을 노출 하지 마십시오. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - DoNotExposeGenericLists
 - CA1002
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1002
 - DoNotExposeGenericLists
 ms.assetid: 5caac810-1a79-47df-a27b-c46c5040bf34
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d98b088b663eca89b04ea264a582a062d324a473
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9aa12ea2d611d2e60e46665368b668e9c578db5b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1002-do-not-expose-generic-lists"></a>CA1002: 제네릭 목록을 노출하지 마십시오.
 |||  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  형식에 포함 되는 외부에서 볼 수 있는 멤버는 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 형식, 반환은 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 형식 또는 서명이 포함 되어는 <xref:System.Collections.Generic.List%601?displayProperty=fullName> 매개 변수입니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- <xref:System.Collections.Generic.List%601?displayProperty=fullName>상속이 아니라 성능을 위해 설계 되는 제네릭 컬렉션입니다. <xref:System.Collections.Generic.List%601?displayProperty=fullName>보다 쉽게 상속된 된 클래스의 동작을 변경할 수 있도록 가상 멤버를 포함 되지 않습니다. 다음과 같은 제네릭 컬렉션 상속을 위해 디자인 하 고 대신 노출 되어야 합니다 <xref:System.Collections.Generic.List%601?displayProperty=fullName>합니다.  
+ <xref:System.Collections.Generic.List%601?displayProperty=fullName> 상속이 아니라 성능을 위해 설계 되는 제네릭 컬렉션입니다. <xref:System.Collections.Generic.List%601?displayProperty=fullName> 보다 쉽게 상속된 된 클래스의 동작을 변경할 수 있도록 가상 멤버를 포함 되지 않습니다. 다음과 같은 제네릭 컬렉션 상속을 위해 디자인 하 고 대신 노출 되어야 합니다 <xref:System.Collections.Generic.List%601?displayProperty=fullName>합니다.  
   
 -   <xref:System.Collections.ObjectModel.Collection%601?displayProperty=fullName>  
   

@@ -1,12 +1,10 @@
 ---
-title: "연습: Windows Form 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '연습: Windows Form 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - Windows Forms, debugging
 - debugging Windows Forms, walkthroughs
 ms.assetid: 529db1e2-d9ea-482a-b6a0-7c543d17f114
-caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1d0ab1ccdf6f5365c04c4a7ee0cac8ce75ab5f17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 20013d5af0cd06f37c5e502618253354e9410374
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debugging-a-windows-form"></a>연습: Windows Form 디버깅
 Windows Form에는 가장 일반적인 관리 되는 응용 프로그램 중 하나입니다. Windows Form Windows 표준 응용 프로그램을 만듭니다. Visual Basic, C# 또는 c + +를 사용 하 여이 연습을 완료할 수 있습니다.  
@@ -67,7 +65,7 @@ Windows Form에는 가장 일반적인 관리 되는 응용 프로그램 중 하
   
 6.  에 **보기** 메뉴 선택 **도구 상자**합니다.  
   
-     도구 상자가 열립니다. 자세한 내용은 참조 [도구 상자](../ide/reference/toolbox.md)합니다.  
+     도구 상자가 열립니다. 자세한 내용은 [도구 상자](../ide/reference/toolbox.md)를 참조하세요.  
   
 7.  도구 상자에서에서 클릭 된 **단추** 제어 하 고 양식 디자인 화면에 컨트롤을 끌어 놓습니다. 폼에 단추를 놓습니다.  
   
@@ -90,7 +88,7 @@ Windows Form에는 가장 일반적인 관리 되는 응용 프로그램 중 하
     textBox1->Text = "Button was clicked!";  
     ```  
   
-11. 에 **빌드** 메뉴 선택 **솔루션 빌드**합니다.  
+11. **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
      프로젝트가 오류 없이 빌드되어야 합니다.  
   

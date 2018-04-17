@@ -1,12 +1,10 @@
 ---
-title: "CA1303: 리터럴을 지역화 된 매개 변수 전달 하지 마십시오 | Microsoft Docs"
-ms.custom: 
+title: 'CA1303: 리터럴을 지역화 된 매개 변수 전달 하지 마십시오 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - Do not pass literals as localized parameters
 - DoNotPassLiteralsAsLocalizedParameters
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - DoNotPassLiteralsAsLocalizedParameters
 - CA1303
 ms.assetid: 904d284e-76d0-4b8f-a4df-0094de8d7aac
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 361155e9d46e4f71ddc61775f56105cedb5d18b9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1af1edcd86d73687e24619d7e998fe304f9b5787
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1303-do-not-pass-literals-as-localized-parameters"></a>CA1303: 리터럴을 지역화된 매개 변수로 전달하지 마십시오.
 |||  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  사용자가 메서드에 전달할 수 없습니다. 지역화 된 문자열 매개 변수 또는 명명 된 속성의 이름을 바꾸거나 또는 이러한 항목을 조건부로 표시 하 여를 제거할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 범위를 벗어났습니다. 해당 두 인수 중 하나의 경우 예외를 throw 하는 메서드를 보여 줍니다. 첫 번째 인수에 대 한 예외 생성자에는이 규칙을 위반 하는 리터럴 문자열을 전달 됩니다. 두 번째 인수에 대 한 생성자를 통해 검색 된 문자열이 전달 올바르게 됩니다는 <xref:System.Resources.ResourceManager>합니다.  
   
  [!code-cpp[FxCop.Globalization.DoNotPassLiterals#1](../code-quality/codesnippet/CPP/ca1303-do-not-pass-literals-as-localized-parameters_1.cpp)]

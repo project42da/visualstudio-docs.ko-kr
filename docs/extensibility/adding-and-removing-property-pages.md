@@ -1,27 +1,25 @@
 ---
-title: "추가 하 고 속성 페이지를 제거 합니다. | Microsoft Docs"
-ms.custom: 
+title: 추가 하 고 속성 페이지를 제거 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - property pages, adding
 - property pages, project subtypes
 - property pages, removing
 ms.assetid: 34853412-ab8a-4caa-9601-7d0727b2985d
-caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 98d6edf4da8b7f0275a7b361f5492f4f49a1f747
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8a8130056437bf35a1617544ae7d1ecfb9068946
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-and-removing-property-pages"></a>추가 하 고 속성 페이지를 제거 합니다.
 프로젝트 속성, 설정 및의 리소스를 관리 하기 위한 중앙된 위치를 제공 하는 프로젝트 디자이너 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 단일 창으로 표시 된 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 통합 개발 환경 (IDE) 하 고 오른쪽에서 왼쪽의 탭을 통해 액세스할 수 있는 창 수를 포함 합니다. 프로젝트 디자이너의 창 (속성 페이지 라고도 함)는 프로젝트 형식 및 언어에 따라 다릅니다. 프로젝트 디자이너를 사용 하 여 액세스할 수 수는 **속성** 명령을 **프로젝트** 메뉴.  

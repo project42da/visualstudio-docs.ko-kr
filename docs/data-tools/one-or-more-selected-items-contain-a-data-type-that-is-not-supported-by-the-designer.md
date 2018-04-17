@@ -1,23 +1,20 @@
 ---
-title: "디자이너에서 지원 되지 않는 데이터 형식이 들어 있는 하나 이상의 선택한 항목 | Microsoft Docs"
-ms.custom: 
+title: 디자이너에서 지원 되지 않는 데이터 형식이 들어 있는 하나 이상의 선택한 항목 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 71dcd4f9-2946-42c5-9ce4-99c819ea2785
-caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 2a652cc1a48e851f0c13c1b50d4a145531b87147
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 966adc7a4114c54479c0ad8c52a604e0fb5d3380
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="one-or-more-selected-items-contain-a-data-type-that-is-not-supported-by-the-designer"></a>선택한 항목 중 하나 이상이 디자이너에서 지원되지 않는 데이터 형식을 포함하고 있습니다.
 하나 이상의 항목을 끌 **서버 탐색기**/**데이터베이스 탐색기** 에 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 에서 지원 되지 않는 데이터 형식이 포함 되어는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)] 예를 들어 [CLR 사용자 정의 형식](/dotnet/framework/data/adonet/sql/clr-user-defined-types)합니다.  
@@ -28,6 +25,6 @@ ms.lasthandoff: 12/22/2017
   
 2.  뷰를 끌어 놓을 **서버 탐색기**/**데이터베이스 탐색기** 디자이너에 끌어 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [O/R 디자이너 메시지](../data-tools/o-r-designer-messages.md)  
 [Visual Studio에서 LINQ to SQL 도구](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

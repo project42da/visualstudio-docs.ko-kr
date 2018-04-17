@@ -1,13 +1,10 @@
 ---
-title: "DebugBreak 및 __debugbreak | Microsoft Docs"
-ms.custom: 
+title: DebugBreak 및 __debugbreak | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DebugBreak
 dev_langs:
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - DebugBreak function
 - breakpoints, DebugBreak function
 ms.assetid: 9787c795-df94-4f48-bc8d-3bf899b67421
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 83128e4d5bd274013db1e7195e8182d021c257d5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d76b4a08c90b3ae37832da97e0615282c0f11d67
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugbreak-and-debugbreak"></a>DebugBreak 및 __debugbreak
 DebugBreak Win32 함수를 호출할 수 있습니다 또는 [__debugbreak](/cpp/intrinsics/debugbreak) 코드에서 언제 든 지 내장 함수입니다. `DebugBreak` 및 `__debugbreak`는 해당 위치에 중단점을 설정하는 것과 같은 효과가 있습니다.  

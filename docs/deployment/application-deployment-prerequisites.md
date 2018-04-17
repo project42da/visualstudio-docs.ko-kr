@@ -1,12 +1,10 @@
 ---
-title: "응용 프로그램 배포 필수 구성 요소 | Microsoft Docs"
-ms.custom: 
+title: 응용 프로그램 배포 필수 구성 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - prerequisites, ClickOnce
 - dependencies, ClickOnce
 ms.assetid: fc6e047e-ad94-44e8-8ff5-b6d1f4ca7735
-caps.latest.revision: "51"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 4060933a904a5cb842a7c319b3ef5da645e4119e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 5fdeb1d5e543216e0cbb9cab72ecd98001caff3c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="application-deployment-prerequisites"></a>응용 프로그램 배포 필수 구성 요소
 응용 프로그램을 올바르게 설치 및 실행하려면 응용 프로그램이 사용할 모든 구성 요소가 대상 컴퓨터에 이미 설치되어 있는지를 먼저 확인해야 합니다. 예를 들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 사용하여 만드는 대부분의 응용 프로그램은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 사용하므로 응용 프로그램을 설치하기 전에 올바른 공용 언어 런타임 버전을 대상 컴퓨터에 설치해야 합니다.  
@@ -48,10 +46,10 @@ ms.lasthandoff: 12/22/2017
   
 -   GAC(전역 어셈블리 캐시)에 미리 설치해야 하는 모든 어셈블리의 최소 버전. 어셈블리 매니페스트에서 어셈블리 종속성 선언을 통해 지정합니다.  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]누락 된 필수 구성 요소를 검색할 수 있습니다 및 부트스트래퍼를 사용 하 여 필수 구성 요소를 설치할 수 있습니다. 자세한 내용은 참조 [하는 방법: ClickOnce 응용 프로그램에 필수 구성 요소 설치](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)합니다.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 누락 된 필수 구성 요소를 검색할 수 있습니다 및 부트스트래퍼를 사용 하 여 필수 구성 요소를 설치할 수 있습니다. 자세한 내용은 참조 [하는 방법: ClickOnce 응용 프로그램에 필수 구성 요소 설치](../deployment/how-to-install-prerequisites-with-a-clickonce-application.md)합니다.  
   
 > [!NOTE]
->  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 및 MageUI.exe와 같은 도구를 통해 생성된 매니페스트의 값을 변경하려면 텍스트 편집기에서 응용 프로그램 매니페스트를 편집한 다음 응용 프로그램 및 배포 매니페스트를 모두 다시 서명해야 합니다. 자세한 내용은 참조 [하는 방법: 다시 서명 하는 응용 프로그램 및 배포 매니페스트에](../deployment/how-to-re-sign-application-and-deployment-manifests.md)합니다.  
+>  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 및 MageUI.exe와 같은 도구를 통해 생성된 매니페스트의 값을 변경하려면 텍스트 편집기에서 응용 프로그램 매니페스트를 편집한 다음 응용 프로그램 및 배포 매니페스트를 모두 다시 서명해야 합니다. 자세한 내용은 [방법: 응용 프로그램 및 배포 매니페스트에 다시 서명](../deployment/how-to-re-sign-application-and-deployment-manifests.md)을 참조하세요.  
   
  Visual Studio 및 ClickOnce를 사용하여 응용 프로그램을 배포하는 경우 기본적으로 선택되는 부트스트래퍼 패키지는 솔루션의 .NET Framework 버전에 따라 달라집니다. 그러나 대상.NET Framework 버전을 변경 하는 경우 옵션에 업데이트 해야 합니다는 **필수 구성 요소 대화 상자** 수동으로 합니다.  
   
@@ -78,9 +76,9 @@ ms.lasthandoff: 12/22/2017
 |---------------------------|-----------------|  
 |**-?,-h,-도움말**|도움말 대화 상자를 표시합니다.|  
 |**--componentsurl url**|이 설치를 위한 저장된 URL 및 구성 요소 URL을 표시합니다.|  
-|**-url =**`location`|Setup.exe가 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 찾을 URL을 설정합니다.|  
-|**-componentsurl =**`location`|Setup.exe가 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 등의 종속성을 찾을 URL을 설정합니다.|  
-|**-homesite =** `true` **&#124;**`false`|때 `true`, 공급 업체의 사이트에서 원하는 위치에서 종속성을 다운로드 합니다. 이 재정의 **-componentsurl** 설정 합니다. 때 `false`로 지정 된 URL에서 종속성을 다운로드 **-componentsurl**합니다.|  
+|**-url =** `location`|Setup.exe가 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 찾을 URL을 설정합니다.|  
+|**-componentsurl =** `location`|Setup.exe가 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 등의 종속성을 찾을 URL을 설정합니다.|  
+|**-homesite =** `true`**&#124;** `false`|때 `true`, 공급 업체의 사이트에서 원하는 위치에서 종속성을 다운로드 합니다. 이 재정의 **-componentsurl** 설정 합니다. 때 `false`로 지정 된 URL에서 종속성을 다운로드 **-componentsurl**합니다.|  
   
 ## <a name="operating-system-support"></a>운영 체제 지원  
  기능이 제한되는 저가형 유지 관리 서버 환경을 제공하는 Windows Server 2008 Server Core 또는 Windows Server 2008 R2 Server Core에서는 Visual Studio 부트스트래퍼가 지원되지 않습니다. 예를 들어 Server Core 설치 옵션을 사용하는 경우 .NET Framework 3.5 Server Core 프로필만 지원되므로 전체 .NET Framework를 사용하는 Visual Studio 기능을 실행할 수 없습니다.  

@@ -1,13 +1,10 @@
 ---
-title: "디버거에서 변수에 대 한 메모리를 보려면 | Microsoft Docs"
+title: 디버거에서 변수에 대 한 메모리를 보려면 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.memory
 dev_langs:
@@ -24,17 +21,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], Memory window
 - buffers, viewing
 ms.assetid: 7f7a0439-10e4-4966-bb2d-51f04cda4fe2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96a4dc22f4f5c96d3dd9d40a565c2656ffe6e283
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e5e2c43f48a1a91c35c770f5f7150972bebb1a1a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-the-memory-windows-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 메모리 창을 사용 하 여
 **메모리** 창은 응용 프로그램에서 사용 되는 메모리 공간에 대 한 뷰를 제공 합니다. **조사식** 창 **간략 한 조사식** 대화 상자, **자동** 창 및 **지역** 창은 변수의 내용을 보여 줍니다. 메모리의 특정 위치에 저장 됩니다. 하지만 **메모리** 포괄적 창에 표시 합니다. 이 뷰는 다른 창들에는 잘 표시되지 않는 버퍼나 큰 문자열 등의 큰 데이터를 검사하는 데 편리합니다. 그러나는 **메모리** 창이 데이터의 표시에 제한 되지 않습니다. 메모리 창에는 메모리 공간의 할당되지 않은 메모리에 데이터, 코드 또는 임의 가비지 비트 중 어떤 내용이 있든 관계없이 메모리 공간의 모든 내용이 표시됩니다.  

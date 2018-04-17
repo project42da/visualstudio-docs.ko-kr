@@ -1,26 +1,24 @@
 ---
-title: "로컬 값을 변경 | Microsoft Docs"
-ms.custom: 
+title: 로컬 값을 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, changing values programmatically
 ms.assetid: 8407d3df-d38a-4328-82d1-98084bef43ec
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 03e6acb4ee9756d0bbb14a6e3667375d32cafba9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 422d1702f319db6da21892bcaa1bd50adad7909d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changing-the-value-of-a-local"></a>로컬 값 변경
 > [!IMPORTANT]
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  Visual Studio를 호출 하는 사용자가 새 값을 입력 한 후 [SetValueAsString](../../extensibility/debugger/reference/idebugproperty2-setvalueasstring.md) 에 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 로컬와 연결 된 개체입니다.  
   
-2.  `IDebugProperty2::SetValueAsString`다음 작업을 수행합니다.  
+2.  `IDebugProperty2::SetValueAsString`는 다음 작업을 수행합니다.  
   
     1.  값을 생성 하는 문자열을 평가 합니다.  
   
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
  변수 값을 변경 하려면이 절차는 또한는 **조사식** 창을 제외 하는 `IDebugProperty2` 대신 사용 되는 지역 변수의 값과 관련 된 개체는 `IDebugProperty2` 로컬와 연결 된 개체 자체입니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [값 변경 샘플 구현](../../extensibility/debugger/sample-implementation-of-changing-values.md)  
  MyCEE 샘플링을 사용 하 여 값을 변경 하는 과정을 단계별로 실행 되도록 합니다.  
   

@@ -1,29 +1,25 @@
 ---
 title: UsingNameSpace | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - UsingNamespace symbol tag
 ms.assetid: e8e1beb5-7cb9-43b4-9ff4-760d5f91ea2d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c0dc4f85ffb6f84320b01e441297a1c8be5eb1c6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 09a91900fbcf6dac6f145c47deb2f5b323828b92
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
 일부 기호 네임 스페이스에 의해 참조 될 수 있습니다 및로 식별 되었을 것 이후에 `SymTagUsingNameSpace` 태그입니다.  

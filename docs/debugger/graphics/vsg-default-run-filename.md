@@ -1,23 +1,21 @@
 ---
 title: VSG_DEFAULT_RUN_FILENAME | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: ea549d2f-c857-458c-93c7-bc5a2d11d15d
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f7fe31b96911329089174772094784c0d0f3371c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: cb0853e51a5c56ed36babb3474d33adac480e8e4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vsgdefaultrunfilename"></a>VSG_DEFAULT_RUN_FILENAME
 그래픽 로그 파일의 기본 파일 이름을 정의합니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
  정의 된 파일 이름을 변경 하려면 다시 정의 해야 것 포함 하기 전에 `vsgcapture.h` 프로그램에서 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 캡처 파일의 기본 파일 이름을 변경하는 방법을 보여줍니다.  
   
 ```C++  

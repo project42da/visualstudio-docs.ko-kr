@@ -1,12 +1,10 @@
 ---
-title: "CA2235: 모든 순차 불가능 필드로 표시 하십시오. | Microsoft Docs"
-ms.custom: 
+title: 'CA2235: 모든 순차 불가능 필드로 표시 하십시오. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2235
 - MarkAllNonSerializableFields
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2235
 - MarkAllNonSerializableFields
 ms.assetid: 599ad877-3a15-426c-bf17-5de15427365f
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: de8f0c035689edda0757ecffb027069aee83a65b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d08d13bd6bd42ab18c7c415391969b7a0e15943e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2235-mark-all-non-serializable-fields"></a>CA2235: 모두 serialize할 수 없는 필드로 표시하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  경우에이 규칙에서 경고를 표시 하지는 <xref:System.Runtime.Serialization.ISerializationSurrogate?displayProperty=fullName> 직렬화 및 역직렬화 될 필드의 인스턴스를 허용 하는 형식이 선언 되었습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 형식 및 규칙을 충족 하는 형식을 보여 줍니다.  
   
  [!code-csharp[FxCop.Usage.MarkNonSerializable#1](../code-quality/codesnippet/CSharp/ca2235-mark-all-non-serializable-fields_1.cs)]

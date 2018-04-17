@@ -1,29 +1,25 @@
 ---
 title: 'Idiasymbol:: Get_basetype | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_baseType method
 ms.assetid: 5c69a241-a8d3-48ed-8b36-27463a196572
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e63a0f102fa22b9b83947e70e850ce0d47822bcb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c9e30e8b60457f03f7d30799f6f18581cc25fe43
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolgetbasetype"></a>IDiaSymbol::get_baseType
 이 기호에 대 한 기본 형식을 검색*합니다.*  
@@ -49,7 +45,7 @@ HRESULT get_baseType (
 ## <a name="remarks"></a>설명  
  기호 형식을 있으며 기본 형식에 대 한 형식을 반환 하 심문의 차이 먼저 기호에 대 한 기본 유형이 확인할 수 있습니다. 참고 일부 기호는 기본 형식을 사용할 수 없습니다-예: 구조 이름입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 IDiaSymbol* pType;  

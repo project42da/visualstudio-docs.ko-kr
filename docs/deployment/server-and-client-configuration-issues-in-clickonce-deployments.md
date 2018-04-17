@@ -1,12 +1,10 @@
 ---
-title: "서버 및 클라이언트 구성 문제 ClickOnce 배포에서 | Microsoft Docs"
-ms.custom: 
+title: 서버 및 클라이언트 구성 문제 ClickOnce 배포에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - ClickOnce deployment, troubleshooting
 - Windows applications, ClickOnce deployments
 ms.assetid: 929e5fcc-dd56-409c-bb57-00bd9549b20b
-caps.latest.revision: "33"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: b50dbe51f58af79b8c1074c592f98abccbe8ba7e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 11cc26689b20f989cb449f67387052caf3096811
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="server-and-client-configuration-issues-in-clickonce-deployments"></a>ClickOnce 배포 시 서버 및 클라이언트 구성 문제
 인터넷 정보 서비스 (IIS)를 사용 하 여 Windows Server에서 배포에는 Windows에서 인식 하지 못하는 파일 형식을 포함 하는 경우 해당 파일을 전송 하는 데 Microsoft Word 파일을 같은 IIS 거부 합니다 및 배포에 실패 합니다.  
@@ -51,9 +49,9 @@ ms.lasthandoff: 12/22/2017
  A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램이 제대로 작동 하므로 SSL을 통해 Internet Explorer를 SSL 인증서에 대 한 프롬프트를 발생 하는 때를 제외 하 고 있습니다. 프롬프트는 만료 된 경우 사이트 이름이 일치 하지 않는 같은 인증서 또는 인증서에 문제가 있을 때 발생할 수 있습니다. 있도록 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] SSL 연결을 통해 작업, 인증서, 최신 상태이 고 인증서 데이터에 사이트 데이터와 일치 하는지 확인 합니다.  
   
 ## <a name="clickonce-and-proxy-authentication"></a>ClickOnce 및 프록시 인증  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)].NET Framework 3.5부터 Windows 통합 프록시 인증에 대 한 지원을 제공 합니다. 특정 machine.config 지시문이 없는 필요 합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]기본 또는 다이제스트 등의 다른 인증 프로토콜에 대 한 지원을 제공 하지 않습니다.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] .NET Framework 3.5부터 Windows 통합 프록시 인증에 대 한 지원을 제공 합니다. 특정 machine.config 지시문이 없는 필요 합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 기본 또는 다이제스트 등의 다른 인증 프로토콜에 대 한 지원을 제공 하지 않습니다.  
   
- 또한이 기능을 사용 하도록 설정 하려면.NET Framework 2.0에는 핫픽스를 적용할 수 있습니다. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkId=158730를 참조 하십시오.  
+ 또한이 기능을 사용 하도록 설정 하려면.NET Framework 2.0에는 핫픽스를 적용할 수 있습니다. 자세한 내용은 http://go.microsoft.com/fwlink/?LinkId=158730을 참조하세요.  
   
  자세한 내용은 참조 [ \<defaultProxy > 요소 (네트워크 설정)](/dotnet/framework/configure-apps/file-schema/network/defaultproxy-element-network-settings)합니다.  
   
@@ -96,7 +94,7 @@ ms.lasthandoff: 12/22/2017
  ClickOnce 응용 프로그램을 게시 하려면 Visual Studio를 사용 하는 경우에 설치 위치로 매핑된 드라이브를 지정할 수 없습니다. 그러나 ClickOnce 응용 프로그램 매니페스트 생성기 및 (Mage.exe 및 MageUI.exe) 편집기를 사용 하 여 매핑된 드라이브에서 설치를 수정할 수 있습니다. 자세한 내용은 참조 [Mage.exe (매니페스트 생성 및 편집 도구)](/dotnet/framework/tools/mage-exe-manifest-generation-and-editing-tool) 및 [MageUI.exe (매니페스트 생성 및 편집 도구, 그래픽 클라이언트)](/dotnet/framework/tools/mageui-exe-manifest-generation-and-editing-tool-graphical-client)합니다.  
   
 ## <a name="ftp-protocol-not-supported-for-installing-applications"></a>FTP 프로토콜 응용 프로그램 설치에 지원 되지 않습니다.  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]모든 HTTP 1.1 웹 서버나 파일 서버에서 응용 프로그램을 설치 하도록 지원 합니다. FTP 파일 전송 프로토콜은 응용 프로그램 설치에 지원 되지 않습니다. FTP를 사용 하 여만 응용 프로그램을 게시할 수 있습니다. 다음 표에서 이러한 차이점을 보여 줍니다.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 모든 HTTP 1.1 웹 서버나 파일 서버에서 응용 프로그램을 설치 하도록 지원 합니다. FTP 파일 전송 프로토콜은 응용 프로그램 설치에 지원 되지 않습니다. FTP를 사용 하 여만 응용 프로그램을 게시할 수 있습니다. 다음 표에서 이러한 차이점을 보여 줍니다.  
   
 |URL 형식|설명|  
 |--------------|-----------------|  
@@ -122,7 +120,7 @@ ms.lasthandoff: 12/22/2017
   
 -   확장명을 가진 MIME 형식을 만드는 경우 "*" 및 MIME 형식이 "응용 프로그램/옥텟 스트림" 파일을 다운로드할 수 파일 형식은 허용 됩니다. 그러나 (차단 된 파일 형식 예:.aspx 및.asmx를 다운로드할 수 없습니다.)  
   
- Windows Server에서 MIME 형식을 구성 하는 방법에 대 한 자세한 내용은 참조 Microsoft 기술 자료 문서 KB326965, "IIS 6.0 않습니다 하지 제공 알 수 없는 MIME 형식"에서 [http://support.microsoft.com/default.aspx?scid=kb;en-us;326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965).  
+ Windows Server에서 MIME 형식을 구성 하는 방법에 대 한 자세한 내용은 참조 Microsoft 기술 자료 문서 KB326965, "IIS 6.0 않습니다 하지 제공 알 수 없는 MIME 형식"에 [ http://support.microsoft.com/default.aspx?scid=kb; en-us; 326965](http://support.microsoft.com/default.aspx?scid=kb;en-us;326965)합니다.  
   
 ## <a name="content-type-mappings"></a>콘텐츠 형식 매핑  
  .Application 파일에 대 한 콘텐츠 형식 (MIME 형식)를 HTTP를 통해 게시 하는 경우 "/ x ms-응용 프로그램입니다." 이어야 합니다. 있는 경우 [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)] 서버에 설치,이 대해 설정할 하면 자동으로 합니다. 이 설치 되지 않은 경우에 대 한 MIME 형식 연결을 만들어야 할는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] vroot 응용 프로그램 (또는 전체 서버).  

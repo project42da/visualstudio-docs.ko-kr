@@ -1,13 +1,10 @@
 ---
-title: "CA1062: public 메서드의 인수의 유효성을 검사 | Microsoft Docs"
-ms.custom: 
+title: 'CA1062: public 메서드의 인수의 유효성을 검사 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CA1062
 - ValidateArgumentsOfPublicMethods
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - ValidateArgumentsOfPublicMethods
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f3661a9475935dbe92dfd55f566170ce46d69f84
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 6a14017c63c9012609f91005378f44a5e4a8401e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1062-validate-arguments-of-public-methods"></a>CA1062: public 메서드의 인수의 유효성을 검사하십시오.
 
@@ -53,7 +50,7 @@ ms.lasthandoff: 02/28/2018
 
 역참조 매개 변수는 함수에서 다른 메서드 호출 검증 된 확신 하는 경우이 규칙에서는 경고를에서 억제할 수 있습니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 규칙을 위반 하는 메서드 및 규칙을 충족 하는 메서드를 보여 줍니다.
 
@@ -123,7 +120,7 @@ Namespace DesignLibrary
 End Namespace
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 개체를 참조 하는 필드 또는 속성을 채우는 복사 생성자는 CA1062 규칙을 위반할 수 있습니다. 복사 생성자에 전달 되는 복사 된 개체 수 있기 때문에 위반이 발생 `null` (`Nothing` Visual basic에서). 위반을 해결 하려면 정적 (Visual Basic의 경우 Shared) 메서드를 사용 하 여 복사한 개체 null 인지 확인 합니다.
 
@@ -150,7 +147,7 @@ public class Person
 }
 ```
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 수정 된 `Person` 예제에서는 `other` 에서 null에 대 한 복사 생성자에 전달 되는 개체를 먼저 검사는 `PassThroughNonNull` 메서드.
 

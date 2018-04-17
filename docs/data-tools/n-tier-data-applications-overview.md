@@ -1,28 +1,25 @@
 ---
-title: "N 계층 데이터 응용 프로그램 개요 | Microsoft Docs"
-ms.custom: 
+title: N 계층 데이터 응용 프로그램 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - presentation tier
 - middle tier
 - data tier
 - n-tier applications, about n-tier applications
 ms.assetid: 1020581d-eaaa-41a2-aca4-bf4c212895f6
-caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 894e3f7d2ad605aa1e8b8a52a72cd8f83dc90192
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: bf82b55ebc0b86a043dffffbf82c100cceb58e72
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="n-tier-data-applications-overview"></a>N 계층 데이터 응용 프로그램 개요
 *N 계층* 데이터 응용 프로그램은 여러도 분리 되어 있는 데이터 응용 프로그램 *계층*합니다. N 계층 응용 프로그램 "분산된 응용 프로그램" 및 "다중 계층 응용 프로그램" 라고도 함, 클라이언트와 서버 간에 배포 된 개별 계층으로 처리를 구분 합니다. 데이터에 액세스 하는 응용 프로그램을 개발 하는 경우 응용 프로그램을 구성 하는 다양 한 계층 간의 분리를 있어야 합니다.  
@@ -85,7 +82,7 @@ Visual Studio는 개발자가 n 계층 응용 프로그램을 만들 수 있도�
 
 [LINQ to SQL을 사용한 N 계층 및 원격 응용 프로그램](/dotnet/framework/data/adonet/sql/linq/n-tier-and-remote-applications-with-linq-to-sql)  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [연습: N 계층 데이터 응용 프로그램 만들기](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
 [계층적 업데이트](../data-tools/hierarchical-update.md)   
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)   

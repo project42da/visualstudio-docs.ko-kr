@@ -1,26 +1,24 @@
 ---
-title: "CommandPlacement 요소 | Microsoft Docs"
-ms.custom: 
+title: CommandPlacement 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - CommandPlacements element (VSCT XML schema)
 - VSCT XML schema elements, CommandPlacements
 ms.assetid: 2cbd7ac8-c55a-43d8-a26d-713b3d790016
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a6a5c8d9220b0cd2c0dddfee283d222f4efb9ab8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 14f28c8e2758d2dde9cf38db268abc9fa9b4f863
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commandplacement-element"></a>CommandPlacement 요소
 CommandPlacement 요소에는 단추, 그룹 및 메뉴 둘 이상의 그룹이 나 메뉴에 포함 될 수 있습니다. CommandPlacement 요소를 사용 하 여 완전히 사용자 인터페이스의 모양을 수정 하기 위해 이러한 항목을 다시 정의할 필요가 없습니다.  
@@ -36,22 +34,22 @@ CommandPlacement 요소에는 단추, 그룹 및 메뉴 둘 이상의 그룹이 
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
 |특성|설명|  
 |---------------|-----------------|  
-|guid|필수. 에 정의 된 명령 집합의 guid는 [기호 요소](../extensibility/symbols-element.md)합니다.|  
-|ID|필수. 메뉴, 그룹 또는 명령에 정의 된 대로 배치할의 id는 `Symbols Element`합니다.|  
-|priority|필수. 부모 요소에는 항목의 시각적 위치를 결정합니다.|  
-|조건|선택 사항입니다. 참조 [조건부 특성](../extensibility/vsct-xml-schema-conditional-attributes.md)합니다.|  
+|guid|필수 요소. 에 정의 된 명령 집합의 guid는 [기호 요소](../extensibility/symbols-element.md)합니다.|  
+|ID|필수 요소. 메뉴, 그룹 또는 명령에 정의 된 대로 배치할의 id는 `Symbols Element`합니다.|  
+|priority|필수 요소. 부모 요소에는 항목의 시각적 위치를 결정합니다.|  
+|조건|선택적 요소. 참조 [조건부 특성](../extensibility/vsct-xml-schema-conditional-attributes.md)합니다.|  
   
 ### <a name="child-elements"></a>자식 요소  
   
 |요소|설명|  
 |-------------|-----------------|  
-|부모|필수. 메뉴 또는 항목을 배치할 수를 호스팅하는 그룹입니다.|  
+|부모|필수 요소. 메뉴 또는 항목을 배치할 수를 호스팅하는 그룹입니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
   
@@ -59,7 +57,7 @@ CommandPlacement 요소에는 단추, 그룹 및 메뉴 둘 이상의 그룹이 
 |-------------|-----------------|  
 |[CommandPlacements 요소](../extensibility/commandplacements-element.md)|CommandPlacements 및 CommandPlacement 요소 그룹을 지정합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 <CommandPlacements>  

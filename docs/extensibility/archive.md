@@ -1,23 +1,21 @@
 ---
-title: "아카이브 | Microsoft Docs"
-ms.custom: 
+title: 아카이브 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: eb92f40d-c0f0-42a9-8388-97ba0476efdf
-caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0f9bcf96f6c1bcf6664d2bcb6a362ede940a1c30
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: fd683ee7edc2a8641d38ef84d69c30badd5b14db
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="archive"></a>보관
 이 섹션에는 계속 지원 하지만 최신인 교체 기술 않는 Visual Studio 확장성 기술에 대해 포함 되어 있습니다.  

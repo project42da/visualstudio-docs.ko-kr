@@ -1,13 +1,10 @@
 ---
-title: "C# 또는 VB 프로젝트의 경우 Visual Studio에서 원격 디버깅 | Microsoft Docs"
+title: C# 또는 VB 프로젝트의 경우 Visual Studio에서 원격 디버깅 | Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 08/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 - FSharp
@@ -17,17 +14,16 @@ dev_langs:
 helpviewer_keywords:
 - remote debugging, setup
 ms.assetid: a9753fbb-e7f4-47f0-9dbe-9de90c6c8457
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6546e58139b4c427f6bbc4343faf64bdd655b63e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a7c6892eb43191c69608e66b05f8177777e3e006
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-debugging-a-c-or-visual-basic-project-in-visual-studio"></a>원격 Visual Studio에서 C# 또는 Visual Basic 프로젝트 디버깅
 다른 컴퓨터에 배포 된 Visual Studio 응용 프로그램을 디버깅 하려면 설치 하 고 앱을 배포한 컴퓨터에서 원격 도구를 실행, Visual Studio에서 원격 컴퓨터에 연결 하 여 프로젝트를 구성 및 응용 프로그램을 실행 합니다.
@@ -50,14 +46,14 @@ ms.lasthandoff: 01/10/2018
 > [!TIP]
 > 일부 시나리오에서는 파일 공유에서 원격 디버거를 실행 하는 가장 효율적인 수 있습니다. 자세한 내용은 참조 [파일 공유에서 원격 디버거를 실행](../debugger/remote-debugging.md#fileshare_msvsmon)합니다.
   
-## <a name="BKMK_setup"></a>원격 디버거 설정
+## <a name="BKMK_setup"></a> 원격 디버거 설정
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
 > [!NOTE]
 > 추가 사용자에 대 한 사용 권한을 추가 하는 인증 모드를 변경 하거나 원격 디버거에 대 한 포트 번호에 필요한 경우 참조 [원격 디버거 구성](../debugger/remote-debugging.md#configure_msvsmon)합니다.
   
-## <a name="remote_csharp"></a>프로젝트 원격 디버그
+## <a name="remote_csharp"></a> 프로젝트 원격 디버그
 디버거는 원격 컴퓨터에 Visual C# 또는 Visual Basic 데스크톱 응용 프로그램을 배포할 수 없지만 다음과 같이 원격으로 계속 디버그할 수 있습니다. 라는 컴퓨터에서 디버깅 하려면 다음 절차에서는 **MJO DL**아래 그림에 표시 된 것 처럼 합니다.
   
 1.  라는 WPF 프로젝트 **MyWpf**합니다.  
@@ -97,7 +93,7 @@ ms.lasthandoff: 01/10/2018
   
 13. 메시지가 표시 되 면 원격 컴퓨터에 연결 하려면 네트워크 자격 증명을 입력 합니다.  
   
-     필요한 자격 증명은 네트워크의 보안 구성에 따라 달라 집니다. 예를 들어 도메인 컴퓨터에 도메인 이름 및 암호를 입력할 수 있습니다. 도메인이 아닌 컴퓨터에서 입력할 수 있습니다 컴퓨터 이름 및 유효한 사용자 계정 이름 같은  **MJO-DL\name@something.com** , 올바른 암호와 함께 합니다.
+     필요한 자격 증명은 네트워크의 보안 구성에 따라 달라 집니다. 예를 들어 도메인 컴퓨터에 도메인 이름 및 암호를 입력할 수 있습니다. 도메인이 아닌 컴퓨터에서 입력할 수 있습니다 컴퓨터 이름 및 유효한 사용자 계정 이름 같은 **MJO-DL\name@something.com**, 올바른 암호와 함께 합니다.
 
      WPF 응용 프로그램의 주 창이 원격 컴퓨터에서 열려 있다고 표시 됩니다.
   

@@ -1,12 +1,10 @@
 ---
-title: "C# 디버그 구성에 대 한 설정을 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: C# 디버그 구성에 대 한 설정을 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -20,16 +18,16 @@ helpviewer_keywords:
 - project configurations, debug
 - debugging [C#], debugger settings
 ms.assetid: e30ca810-66e9-4d6e-9cf6-9f285cd0b100
-caps.latest.revision: "22"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 054a015c5fcd6a70696ed6945faa5cbd01547168
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 7f51964a303641e8e430417d63d0241603d7f360
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-settings-for--c-debug-configurations"></a>C# 디버그 구성에 대한 프로젝트 설정
 C# 디버그 구성에 대 한 프로젝트 설정을 변경할 수 있습니다는 **속성 페이지** 창에 설명 된 대로 [디버그 및 릴리스 구성](../debugger/how-to-set-debug-and-release-configurations.md)합니다. 다음 표에에서 디버거 관련 설정을 확인할 수 있는 위치는 **속성 페이지** 창.  
@@ -37,7 +35,7 @@ C# 디버그 구성에 대 한 프로젝트 설정을 변경할 수 있습니다
 > [!WARNING]
 >  이 항목은 UWP 앱에 적용되지 않습니다. 참조 [(VB, C#, c + + 및 XAML) 디버그 세션 시작](../debugger/start-a-debugging-session-for-a-store-app-in-visual-studio-vb-csharp-cpp-and-xaml.md)  
   
-##  <a name="BKMK_Debug_tab"></a>디버그 탭  
+##  <a name="BKMK_Debug_tab"></a> 디버그 탭  
   
 |**설정**|**설명**|  
 |-----------------|---------------------|  
@@ -49,7 +47,7 @@ C# 디버그 구성에 대 한 프로젝트 설정을 변경할 수 있습니다
 |**비관리 코드 디버깅 사용**|관리되는 응용 프로그램에서의 비관리 네이티브 Win32 코드에 대한 호출을 디버깅할 수 있습니다.|  
 |**SQL Server 디버깅 사용**|SQL Server 데이터베이스 개체를 디버깅할 수 있습니다.|  
   
-##  <a name="BKMK_Build_tab"></a>빌드 탭  
+##  <a name="BKMK_Build_tab"></a> 빌드 탭  
   
 |설정|설명|  
 |-------------|-----------------|  

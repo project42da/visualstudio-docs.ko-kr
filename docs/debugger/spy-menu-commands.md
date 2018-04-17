@@ -1,27 +1,23 @@
 ---
-title: "메뉴 명령 스파이 | Microsoft Docs"
-ms.custom: 
+title: 메뉴 명령 스파이 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Spy menu commands
 ms.assetid: 802549be-dbd8-4df0-a18b-971900eaa769
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 892802b71997dd090561b9eb49d1e6065e4f28af
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3d711e30fa50a19a8826fb277a179ef68e427a41
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spy-menu-commands"></a>Spy 메뉴 명령
 **Spy** 메뉴는 Spy + + 창 및 뷰를 사용 하는 명령을 제공 합니다.  

@@ -1,23 +1,21 @@
 ---
-title: "0 x-2 x-4 msaa 변형 | Microsoft Docs"
-ms.custom: 
+title: 0 x-2 x-4 msaa 변형 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 668a6603-5082-4c78-98e6-f3dc871aa55b
-caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 77e4d199fe0c0ae1d876eae62014e6aaabd6f643
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 09ec8c25a076fd9f74690b3be92715aa62b60f65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="0x2x4x-msaa-variants"></a>0x/2x/4x MSAA 변형
 모든 렌더링 대상 및 스왑 체인에서 MSAA(MultiSample Anti-Aliasing) 설정을 재정의합니다.  
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
  재생 시 이러한 종류의 충돌이 감지되면 의도된 동작을 복제하려고 최대한 시도하지만 결과가 정확하게 일치하지 않을 수도 있습니다. 이러한 변형의 영향을 잘못 표현하는 방식으로 이 문제가 해당 변형의 성능에 영향을 미치는 것이 일반적이지 않긴 하지만 복제된 질감의 콘텐츠가 동일하지 않을 수 있으므로 가능합니다. 예를 들어 픽셀 셰이더의 흐름 제어가 질감의 정확한 콘텐츠로 결정되는 경우가 여기에 해당됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `ID3D11Device::CreateTexture2D`를 사용하여 만든 렌더링 대상에 대해 다음과 같은 코드를 사용하여 이러한 변형을 재현할 수 있습니다.  
   
 ```  
@@ -69,7 +67,7 @@ target_description.SampleDesc.Quality = 0;
 d3d_device->CreateTexture2D(&target_description, nullptr, &render_target);  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  또는 다음과 같은 코드를 사용하여 IDXGISwapChain::CreateSwapChain 또는 D3D11CreateDeviceAndSwapChain을 사용해 만든 스왑 체인에 대해서도 이러한 변형을 재현할 수 있습니다.  
   
 ```  

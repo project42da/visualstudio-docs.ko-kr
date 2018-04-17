@@ -1,13 +1,10 @@
 ---
-title: "저장 된 IntelliTrace 데이터를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 저장 된 IntelliTrace 데이터를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.historicaldebug.norepro
 helpviewer_keywords:
@@ -16,24 +13,23 @@ helpviewer_keywords:
 - IntelliTrace log files
 - .iTrace files
 ms.assetid: 9f2cce86-345a-4e22-84ba-91542d81e67a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 37c4c82dc3edb1abcad9dc212040864155deb1a6
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.openlocfilehash: 2a39531134d4c2f041c170d328c79d157fd74a0d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-saved-intellitrace-data"></a>저장된 IntelliTrace 데이터 사용
 IntelliTrace 로그(.iTrace) 파일에서 디버깅을 시작할 때 응용 프로그램 실행의 특정 지점으로 이동합니다. 이 파일에는 응용 프로그램이 실행되는 동안 IntelliTrace가 기록하는 성능 이벤트, 예외, 스레드, 테스트 단계 및 기타 시스템 정보가 포함될 수 있습니다.  
   
  아래와 같은 파일과 버전이 있어야 합니다.  
   
--   응용 프로그램 코드에 일치하는 소스 파일과 기호 파일(.pdb) 이 파일이 없으면 Visual Studio에서 소스 위치를 확인할 수 없어 "기호를 찾을 수 없습니다." 메시지가 표시됩니다. 참조 [지정 기호 (.pdb) 및 소스 파일](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 및 [배포 후 문제 진단](../debugger/diagnose-problems-after-deployment.md)합니다.  
+-   응용 프로그램 코드에 일치하는 소스 파일과 기호 파일(.pdb) 그렇지 않으면 Visual Studio는 소스 위치를 확인할 수 없어 "기호를 찾을 수 없습니다." 메시지를 표시합니다. 참조 [지정 기호 (.pdb) 및 소스 파일](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 및 [배포 후 문제 진단](../debugger/diagnose-problems-after-deployment.md)합니다.  
   
 -   개발 컴퓨터 또는 다른 컴퓨터에서 .iTrace 파일을 열기 위한 Visual Studio Enterprise(Professional 또는 Community Edition 아님)  
   
@@ -165,7 +161,7 @@ IntelliTrace 로그(.iTrace) 파일에서 디버깅을 시작할 때 응용 프�
   
 1.  해당 소스에서 SharePoint 상관 관계 ID를 복사합니다.  
   
-     예:  
+     예를 들어:  
   
      ![IntelliTrace &#45; SharePoint 오류 &#45; 상관 관계 ID](../debugger/media/sharepointerror_intellitrace.png "SharePointError_IntelliTrace")  
   
@@ -179,7 +175,7 @@ IntelliTrace 로그(.iTrace) 파일에서 디버깅을 시작할 때 응용 프�
   
     2.  이벤트가 발생한 지점에서 디버깅을 시작하려면 **디버깅 시작** 을 선택합니다.  
   
-     ![IntelliTrace 로그 파일 &#45; 웹 요청 보기 &#43; 이벤트](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
+     ![IntelliTrace 로그 파일 &#45; 보기 웹 요청 &#43; 이벤트](../debugger/media/entersharepointcorrelationid2.png "EnterSharePointCorrelationID2")  
   
  이러한 종류의 SharePoint 이벤트를 IntelliTrace 이벤트와 함께 볼 수 있습니다.  
   
@@ -224,7 +220,7 @@ IntelliTrace 로그(.iTrace) 파일에서 디버깅을 시작할 때 응용 프�
   
      응용 프로그램의 시작 지점에서 디버깅을 시작하려면 **주 스레드**를 두 번 클릭합니다. 참조 [IntelliTrace 기능](../debugger/intellitrace-features.md)합니다.  
   
- 사용자가 만드는 스레드 데이터는 서버가 만들고 IIS를 호스트하는 웹 응용 프로그램을 관리하는 스레드보다 더 유용할 수 있습니다.  
+ 사용자가 만드는 스레드 데이터는 서버가 만들고 IIS를 호스팅하는 웹 응용 프로그램을 관리하는 스레드보다 더 유용할 수 있습니다.  
   
 |**열**|**표시**|  
 |----------------|-------------------|  

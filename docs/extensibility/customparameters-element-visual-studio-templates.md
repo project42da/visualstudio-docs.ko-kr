@@ -1,29 +1,25 @@
 ---
-title: "CustomParameters 요소 (Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: 
+title: CustomParameters 요소 (Visual Studio 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#CustomParameters
 helpviewer_keywords:
 - CustomParameters element [Visual Studio project templates]
 ms.assetid: cf3efc91-1532-4022-bbb8-a18658424fee
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1b5fa3543113641666977816fadec49a02bc912a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4c09d320b1a9185e79e36d54ff0363219d3dabc6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customparameters-element-visual-studio-templates"></a>CustomParameters 요소(Visual Studio 템플릿)
 사용자 지정 매개 변수 마법사 매개 변수 대체를 사용 하면 템플릿 마법사 전달 되는 그룹화 합니다.  
@@ -38,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -57,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="remarks"></a>설명  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 서식 파일에 여러 사용자 지정 매개 변수를 사용 하는 방법을 보여 줍니다. 프로젝트 또는 항목이 만들어질 때 다음 사용자 지정 매개 변수의 모든 인스턴스를 사용 하 여 템플릿에서 `$color1$` 및 `$color2$` 서식 파일에서 파일을 대체할 `Red` 및 `Blue`각각.  
   
 ```  

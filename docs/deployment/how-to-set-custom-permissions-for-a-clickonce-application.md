@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정 | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 응용 프로그램에 대 한 사용자 지정 권한을 설정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce applications, permissions
 - permissions, ClickOnce applications
 ms.assetid: 660459ca-ef73-44a8-b323-610001f63b93
-caps.latest.revision: "17"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: a2a9a3315b58fa0181c004917081362cf60df4c0
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.workload:
+- multiple
+ms.openlocfilehash: 62c9d97b73c1c640f6fbc1ced15936be86f38e29
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-custom-permissions-for-a-clickonce-application"></a>방법: ClickOnce 응용 프로그램에 대한 사용자 지정 권한 설정
 인터넷 또는 로컬 인트라넷 영역에 대한 기본 권한을 사용하는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 배포할 수 있습니다. 또는 응용 프로그램에 필요한 특정 사용 권한에 대한 사용자 지정 영역을 만들 수 있습니다. 이렇게 하려면 **프로젝트 디자이너** 의 **보안**페이지에서 보안 권한을 사용자 지정할 수 있습니다.  

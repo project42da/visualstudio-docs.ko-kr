@@ -1,11 +1,8 @@
 ---
-title: "연습: Windows Forms에서 간단한 WCF 서비스 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: Windows Forms에서 간단한 WCF 서비스 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - WCF services
 - WCF services, walkthrough
 ms.assetid: 5fef1a64-27a4-4f10-aa57-29023e28a2d6
-caps.latest.revision: "25"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c45ea549f17d71fd524a96e7d019c2b0d86bc628
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: cacd1e15d2b20c4c24056416df4f9d25ea87474e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>연습: Windows Forms에서 간단한 WCF 서비스 만들기
 이 연습에서는 간단한 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 서비스를 만들고 테스트한 다음 Windows Forms 응용 프로그램에서 액세스하는 방법을 보여 줍니다.  
@@ -79,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  에 **WCF 테스트 클라이언트** 양식에서 두 번 클릭은 **getdata ()** 아래 메서드의 **IService1**합니다. **GetData** 탭이 표시 됩니다.  
   
-     ![GetData &#40; &#41; 메서드](../data-tools/media/wcf4.png "wcf4")  
+     ![GetData&#40; &#41; 메서드](../data-tools/media/wcf4.png "wcf4")  
   
 3.  에 **요청** 상자는 **값** 필드와 형식 `Hello`합니다.  
   

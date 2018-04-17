@@ -1,12 +1,10 @@
 ---
-title: "CA1804: 사용 되지 않는 제거 | Microsoft Docs"
-ms.custom: 
+title: 'CA1804: 사용 되지 않는 제거 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1804
 - RemoveUnusedLocals
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - RemoveUnusedLocals
 - CA1804
 ms.assetid: cc332e67-6543-4813-bd8a-6f6fc75bf22a
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d75bc10407e9eae1c23ad06fdc2bd9515bdd505f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3eb04f7b8e804bc776ee3d8beaf02b65cee75051
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1804-remove-unused-locals"></a>CA1804: 사용되지 않는 로컬 항목을 제거하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  컴파일러는 변수를 내보낸 경우이 규칙에서 경고를 표시 합니다. 또한 성능 및 코드 유지 관리 주요 관심사 없는 경우에 해당 규칙을 사용 하지 않도록 설정 하거나이 규칙에서는 경고를에서 표시 하지 않으려면 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 몇 가지 사용 하지 않는 지역 변수를 보여 줍니다.  
   
  [!code-vb[FxCop.Performance.UnusedLocals#1](../code-quality/codesnippet/VisualBasic/ca1804-remove-unused-locals_1.vb)]

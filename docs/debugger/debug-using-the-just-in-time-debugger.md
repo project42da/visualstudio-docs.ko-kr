@@ -1,26 +1,24 @@
 ---
-title: "Just-In-Time 디버거를 사용 하 여 디버깅 | Microsoft Docs"
-ms.custom: 
+title: Just-In-Time 디버거를 사용 하 여 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/06/17
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Visual Studio], Just-In-Time
 - Just-In-Time debugging
 ms.assetid: ee4d79a5-a1d2-4418-a93f-dd57a53e1836
-caps.latest.revision: "48"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4bcdd28247b767321d3d5fed9681082538ba2b12
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1bfaed6a788d61f239fb8fb69095549fe5c20d6d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-using-the-just-in-time-debugger-in-visual-studio"></a>Just-In-Time 디버거를 사용 하 여 Visual Studio에서 디버깅
 Just-in-time 디버깅 시작 Visual Studio 자동으로 외부 Visual Studio를 실행 하는 응용 프로그램에서 예외 또는 충돌이 발생 합니다. 그러면 Visual Studio 실행 중이지 않을 때 응용 프로그램을 테스트 하 고 문제가 발생 한 경우 Visual Studio와 함께 디버깅을 시작할 수 있습니다.
@@ -30,7 +28,7 @@ Just-in-time 디버깅 Windows 데스크톱 앱에서 작동합니다. 유니버
 > [!TIP] 
 > 시간에서 마법사에 응답 하는 방법을 알고 싶으면 debugger 대화 상자, 참조 [이 항목](../debugger/just-in-time-debugging-in-visual-studio.md)합니다.
 
-##  <a name="BKMK_Enabling"></a>사용 또는 사용 안 함 시간 Just 디버깅  
+##  <a name="BKMK_Enabling"></a> 사용 또는 사용 안 함 시간 Just 디버깅  
 Just In Time Visual Studio에서 디버깅을 사용 하지 않도록 설정 하거나 설정할 수 있습니다 **도구 > 옵션** 대화 상자.
   
 #### <a name="to-enable-or-disable-just-in-time-debugging"></a>Just-In-Time 디버깅을 활성화하거나 비활성화하려면  
@@ -55,7 +53,7 @@ Just In Time Visual Studio에서 디버깅을 사용 하지 않도록 설정 하
   
 #### <a name="to-disable-just-in-time-debugging-by-editing-the-registry"></a>레지스트리를 편집하여 Just-In-Time 디버깅을 비활성화하려면  
   
-1.  에 **시작** 메뉴, 검색 하 고 실행`regedit.exe`  
+1.  에 **시작** 메뉴, 검색 하 고 실행 `regedit.exe`  
   
 2.  에 **레지스트리 편집기** 창 찾아 다음 레지스트리 항목을 삭제 합니다.  
   

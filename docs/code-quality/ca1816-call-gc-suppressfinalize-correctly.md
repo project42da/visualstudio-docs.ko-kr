@@ -1,12 +1,10 @@
 ---
-title: "CA1816: GC를 호출 합니다. SuppressFinalize 올바르게 | Microsoft Docs"
-ms.custom: 
+title: 'CA1816: GC를 호출 합니다. SuppressFinalize 올바르게 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1816
 - DisposeMethodsShouldCallSuppressFinalize
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - DisposeMethodsShouldCallSuppressFinalize
 - CA1816
 ms.assetid: 47915fbb-103f-4333-b157-1da16bf49660
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8d0287b570ed1ff5393ff0ff04b9e5d2252c29bf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9d6d65561e9b902202d4fc69d15d200482880cf4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1816-call-gcsuppressfinalize-correctly"></a>CA1816: GC.SuppressFinalize를 올바르게 호출하십시오.
 |||  
@@ -42,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 -   메서드 호출 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 이 (Visual Basic의 Me) 이외의 값을 전달 하 고 있습니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 메서드 개체가 가비지 수집을 사용할 수 있게 되기 전에 언제 든 지 리소스를 해제할 수 있습니다. 경우는 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 메서드가 호출 되 면 개체의 리소스를 해제 합니다. 따라서 반드시 종료할 필요가 있습니다. <xref:System.IDisposable.Dispose%2A?displayProperty=fullName>호출 해야 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 하므로 가비지 수집기는 개체의 종료자를 호출 하지 않습니다.  
+ <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 메서드 개체가 가비지 수집을 사용할 수 있게 되기 전에 언제 든 지 리소스를 해제할 수 있습니다. 경우는 <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 메서드가 호출 되 면 개체의 리소스를 해제 합니다. 따라서 반드시 종료할 필요가 있습니다. <xref:System.IDisposable.Dispose%2A?displayProperty=fullName> 호출 해야 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 하므로 가비지 수집기는 개체의 종료자를 호출 하지 않습니다.  
   
  파생된 형식과 종료자를 다시 구현 하지 않도록 하려면 <xref:System.IDisposable> 계속 호출 해야 unsealed 형식의 종료 자가 없는 호출할 수 및 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>합니다.  
   
@@ -58,13 +56,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  사용 하 여 의도적는 경우에이 규칙에서 경고를 표시 하지 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName> 다른 개체의 수명을 제어 합니다. 구현이이 규칙에서는 경고를에서 표시 해야 <xref:System.IDisposable.Dispose%2A> 호출 하지 않습니다 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>합니다. 이런이 경우에 종료 하지 않는 실패 하 고 성능이 저하 됩니다 있으며 이점도 없습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 메서드를 잘못 표시 호출 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>합니다.  
   
  [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_1.vb)]
  [!code-csharp[FxCop.Usage.CallGCSuppressFinalizeCorrectly#1](../code-quality/codesnippet/CSharp/ca1816-call-gc-suppressfinalize-correctly_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 메서드를 보여 줍니다를 올바르게 호출 <xref:System.GC.SuppressFinalize%2A?displayProperty=fullName>합니다.  
   
  [!code-vb[FxCop.Usage.CallGCSuppressFinalizeCorrectly2#1](../code-quality/codesnippet/VisualBasic/ca1816-call-gc-suppressfinalize-correctly_2.vb)]

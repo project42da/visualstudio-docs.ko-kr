@@ -1,25 +1,22 @@
 ---
-title: "C + + 용 visual Studio data tools | Microsoft Docs"
-ms.custom: 
+title: C + + 용 visual Studio data tools | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CPP
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: 0b7f49708c00bd02fb8c74bc3ed6258d41729bf2
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.openlocfilehash: a853edf80cd11400b2e54c17dfe95f1ccfb1c822
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C + + 용 visual Studio data tools
 
@@ -72,6 +69,6 @@ SQL Server 2005에서 사용자 지정 기능을 활용 하 고 나중에 사용
   
      ![ODBC 예제 쿼리 출력](../data-tools/media/raddata-odbc-sample-query-output.png "raddata ODBC 샘플 쿼리 출력")  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)

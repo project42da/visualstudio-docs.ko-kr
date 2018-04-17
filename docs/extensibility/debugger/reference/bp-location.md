@@ -2,28 +2,24 @@
 title: BP_LOCATION | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - BP_LOCATION
 helpviewer_keywords:
 - BP_LOCATION union
 ms.assetid: ed1e874c-f289-4c31-8b6c-04dde03ad0f5
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6e268d809442b0101d5d520ca7bdd5f5c37fb62b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b73a625e21da8e8ba026df140e437e96bdeb1ff5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bplocation"></a>BP_LOCATION
 중단점의 위치를 설명 하는 데 사용 하는 구조체의 형식을 지정 합니다.  
@@ -100,15 +96,15 @@ public struct BP_LOCATION {
   
 |`bpLocationType`|`unionmember1`|`unionmember2`|`unionmember3`|`unionmember4`|  
 |----------------------|--------------------|--------------------|--------------------|--------------------|  
-|`BPLT_CODE_FILE_LINE`|`string`(컨텍스트)|[IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)|-|-|  
-|`BPLT_CODE_FUNC_OFFSET`|`string`(컨텍스트)|[IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)|-|-|  
+|`BPLT_CODE_FILE_LINE`|`string` (컨텍스트)|[IDebugDocumentPosition2](../../../extensibility/debugger/reference/idebugdocumentposition2.md)|-|-|  
+|`BPLT_CODE_FUNC_OFFSET`|`string` (컨텍스트)|[IDebugFunctionPosition2](../../../extensibility/debugger/reference/idebugfunctionposition2.md)|-|-|  
 |`BPLT_CODE_CONTEXT`|[IDebugCodeContext2](../../../extensibility/debugger/reference/idebugcodecontext2.md)|-|-|-|  
-|`BPLT_CODE_STRING`|`string`(컨텍스트)|`string`(조건부 식)|-|-|  
-|`BPLT_CODE_ADDRESS`|`string`(컨텍스트)|`string`(모듈 URL)|`string`함수 이름|`string`(주소)|  
-|`BPLT_DATA_STRING`|[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)|`string`(컨텍스트)|`string`(데이터 식)|`uint`(요소 수)|  
+|`BPLT_CODE_STRING`|`string` (컨텍스트)|`string` (조건부 식)|-|-|  
+|`BPLT_CODE_ADDRESS`|`string` (컨텍스트)|`string` (모듈 URL)|`string` 함수 이름|`string` (주소)|  
+|`BPLT_DATA_STRING`|[IDebugThread2](../../../extensibility/debugger/reference/idebugthread2.md)|`string` (컨텍스트)|`string` (데이터 식)|`uint` (요소 수)|  
 |`BPLT_RESOLUTION`|[IDebugBreakpointResolution2](../../../extensibility/debugger/reference/idebugbreakpointresolution2.md)|-|-|-|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  해석 하는 방법을 보여 주는이 예제는 `BP_LOCATION` 구조에 대 한 C#에서 `BPLT_DATA_STRING` 유형입니다. 이 특정 형식에 모든 4를 해석 하는 방법을 보여 줍니다 `unionmemberX` 모든 가능한 형식이 (개체, 문자열 및 숫자)의 멤버입니다.  
   
 ```csharp  
@@ -139,7 +135,7 @@ namespace MyPackage
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   

@@ -1,30 +1,28 @@
 ---
-title: "내 코드만 사용 하 여 사용자 코드를 디버그 | Microsoft Docs"
-ms.custom: 
+title: 내 코드만 사용 하 여 사용자 코드를 디버그 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 0f0df097-bbaf-46ad-9ad1-ef5f40435079
-caps.latest.revision: "9"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 476ff209f96aa5729d20bd9a5a5d12c9e5a5c39a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bf41b8d264d353b6c47acd2e0a762a57d46412e1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-whether-to-debug-only-user-code-using-just-my-code-in-visual-studio"></a>Visual Studio에서 내 코드만 사용 하 여 사용자 코드만 디버깅 것인지 지정
 자동으로 시스템, 프레임 워크 및 기타 비 사용자 호출을 건너뛸 및 호출 스택 창에서 해당 호출을 축소 하는 Visual Studio를 구성할 수 있습니다. 이 동작을 사용할지 여부를 지정 하는 기능을 라고 *내 코드만*합니다. 이 항목에서는 C#, Visual Basic, c + + 및 JavaScript 프로젝트에서 내 코드만 사용 하는 방법에 설명 합니다.
 
 대부분의 프로그래밍 언어에 대 한 내 코드만 기본적으로 사용 됩니다.
   
-##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a>사용 하도록 설정 하거나 내 코드만 사용 하지 않도록 설정  
+##  <a name="BKMK_Enable_or_disable_Just_My_Code"></a> 사용 하도록 설정 하거나 내 코드만 사용 하지 않도록 설정  
  를 사용 하거나 내 코드만 사용 하지 않도록 설정 하려면 선택은 **도구 > 옵션** Visual Studio에서 메뉴. 에 **디버깅** > **일반** 노드를 선택 하거나 선택 취소 **내 코드만 사용**합니다.
   
  ![옵션 대화 상자에서 내 코드만 사용](../debugger/media/dbg_justmycode_options.png "DBG_JustMyCode_Options")  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  **내 코드만 사용** 설정은 모든 언어의 모든 Visual Studio 프로젝트에 적용 되는 전역 설정입니다.  
   
-###  <a name="BKMK_Override_call_stack_filtering"></a>호출 스택 보기에 사용자 코드가 아닌 표시  
+###  <a name="BKMK_Override_call_stack_filtering"></a> 호출 스택 보기에 사용자 코드가 아닌 표시  
  와 같은 호출 스택 표시는 보기에는 **호출 스택** 및 **작업** 사용자 코드가 아닌 레이블이 있는 주석이 달린된 프레임으로 축소 하는 windows에서 내 코드만 `[External Code]`합니다. 축소 된 프레임을 보려면 **외부 코드 포시** 호출 스택의 상황에 맞는 메뉴에 표시 합니다.
 
  ![호출 스택 창에서 외부 코드 표시](../debugger/media/dbg_justmycode_showexternalcode.png "DBG_JustMyCode_ShowExternalCode")
@@ -40,9 +38,9 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  **외부 코드 포시** 설정은 현재 사용자의 프로파일러에 저장 됩니다. 이 사용자가 여는 모든 언어의 프로젝트에 모두 적용됩니다.
   
-##  <a name="BKMK__NET_Framework_Just_My_Code"></a>.NET framework 내 코드만  
+##  <a name="BKMK__NET_Framework_Just_My_Code"></a> .NET framework 내 코드만  
   
-###  <a name="BKMK_NET_User_and_non_user_code"></a>사용자 및 사용자가 아닌 코드  
+###  <a name="BKMK_NET_User_and_non_user_code"></a> 사용자 및 사용자가 아닌 코드  
  사용자 코드를 비 사용자 코드에서 구분 하기 위해 내 코드만 기호 (.pdb) 파일 및 프로그램 최적화 살펴봅니다. 이진이 최적화되었거나 .pdb 파일을 사용할 수 없는 경우 디버거에서 코드를 사용자가 작성하지 않은 코드로 간주합니다.
   
  다음 세 가지 특성도 디버거에서 내 코드로 간주되는 항목에 영향을 줍니다.  
@@ -55,20 +53,20 @@ ms.lasthandoff: 12/22/2017
   
  다른 모든 코드는 사용자 코드로 간주됩니다.  
   
-###  <a name="BKMK_NET_Stepping_behavior"></a>단계별 실행 동작  
+###  <a name="BKMK_NET_Stepping_behavior"></a> 단계별 실행 동작  
  때 있습니다 **한 단계씩 코드 실행** (바로 가기 키: F11) 사용자 코드가 아닌, 다음 사용자 문 하는 코드를 통해 디버거 단계입니다. 때 있습니다 **나가기** (키보드: Shift + F11), 경우 디버거가 사용자 코드의 다음 줄을 실행 합니다. 사용자 코드에 오류가 발생 하면 경우 실행이 계속 될 때까지 응용 프로그램 종료 되거나, 중단점이 적중 되거나 예외가 발생 합니다.  
   
-###  <a name="BKMK_NET_Breakpoint_behavior"></a>기본 중단점 동작  
+###  <a name="BKMK_NET_Breakpoint_behavior"></a> 기본 중단점 동작  
  내 코드만 사용 하는 경우 선택할 수 있습니다 **모두 중단** (키보드: Ctrl + Alt + Break) 위치에서 실행을 중지 하 고 표시할 사용자 코드가 없습니다. 이 경우 소스 없음 창이 표시됩니다. 단계별 실행 명령을 선택하면 디버거에서 사용자 코드의 다음 줄로 이동합니다.  
   
-###  <a name="BKMK_NET_Exception_behavior"></a>예외 동작  
+###  <a name="BKMK_NET_Exception_behavior"></a> 예외 동작  
  사용자가 작성하지 않은 코드에서 처리되지 않은 예외가 발생할 경우 디버거는 예외가 생성된 사용자 코드의 줄에서 중단됩니다.  
   
  예외에 대해 첫째 예외가 설정된 경우 사용자 코드 줄이 녹색으로 강조 표시됩니다. 호출 스택은 레이블이 있는 주석이 달린된 프레임이 표시 **[External Code]**합니다.  
   
-##  <a name="BKMK_C___Just_My_Code"></a>C + + 내 코드만  
+##  <a name="BKMK_C___Just_My_Code"></a> C + + 내 코드만  
   
-###  <a name="BKMK_CPP_User_and_non_user_code"></a>사용자 및 사용자가 아닌 코드  
+###  <a name="BKMK_CPP_User_and_non_user_code"></a> 사용자 및 사용자가 아닌 코드  
  단계별 실행 동작이 호출 스택 동작과 독립적이므로 C++ 내 코드만 옵션은 .NET Framework 및 JavaScript 내 코드만 옵션과 다릅니다.  
   
  **호출 스택**  
@@ -87,15 +85,15 @@ ms.lasthandoff: 12/22/2017
   
  고유한 `.natstepfilter` 및 `.natjmc`를 만들어 `%USERPROFILE%\My Documents\Visual Studio 2015\Visualizers`의 단계별 실행 및 호출 스택 창 동작을 사용자 지정할 수 있습니다.  
   
-###  <a name="BKMK_CPP_Stepping_behavior"></a>단계별 실행 동작  
+###  <a name="BKMK_CPP_Stepping_behavior"></a> 단계별 실행 동작  
  때 있습니다 **한 단계씩 코드 실행** (바로 가기 키: F11) 사용자 코드가 아닌 사용자 코드에서 사용자 코드의 다음 줄을 코드 디버거 단계입니다. 때 있습니다 **나가기** (키보드: Shift + F11), 경우 디버거가 사용자 코드의 다음 줄을 실행 합니다. 사용자 코드에 오류가 발생 하면 경우 실행이 계속 될 때까지 응용 프로그램 종료 되거나, 중단점이 적중 되거나 예외가 발생 합니다.  
   
  사용자가 작성하지 않은 코드에서 디버거가 중단된 경우(예를 들어 모두 중단 명령이 사용자가 작성하지 않은 코드에서 중지된 경우) 사용자가 작성하지 않은 코드에서 단계별 실행이 계속됩니다.  
   
-###  <a name="BKMK_CPP_Exception_behavior"></a>예외 동작  
+###  <a name="BKMK_CPP_Exception_behavior"></a> 예외 동작  
  디버거가 예외를 적중, 사용자 또는 사용자 코드가 아닌 인지에 관계 없이 예외에서 중지 됩니다. **사용자가 처리** 옵션에 **예외** 대화 상자는 무시 됩니다.  
   
-###  <a name="BKMK_CPP_Customize_stepping_behavior"></a>단계별 실행 동작을 사용자 지정  
+###  <a name="BKMK_CPP_Customize_stepping_behavior"></a> 단계별 실행 동작을 사용자 지정  
  `*.natstepfilter` 파일에 사용자가 작성하지 않은 코드로 나열하여 프로시저 단위로 실행할 함수를 지정할 수 있습니다.  
   
 -   Visual Studio 컴퓨터의 모든 사용자에 대 한 사용자가 아닌 코드를 지정 하려면.natstepfilter 파일을 추가할는 `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` 폴더입니다.  
@@ -122,12 +120,12 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|함수|필수. 하나 이상의 함수를 사용자가 작성하지 않은 함수로 지정합니다.|  
-|`Name`|필수. 일치시킬 전체 함수 이름을 지정하는 ECMA 262 형식의 정규식입니다. 예:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> `MyNS::MyClass`의 모든 메서드를 사용자가 작성하지 않은 코드로 간주하도록 디버거에 지시합니다. 일치 항목 찾기에서는 대/소문자를 구분합니다.|  
-|`Module`|선택 사항입니다. 함수를 포함하는 모듈의 전체 경로를 지정하는 ECMA 262 형식의 정규식입니다. 일치 항목 찾기에서는 대/소문자를 구분하지 않습니다.|  
-|`Action`|필수. 대/소문자를 구분하는 다음 값 중 하나입니다.<br /><br /> -   `NoStepInto`-일치 하는 함수를 통해 실행 되도록 디버거에 지시 합니다.<br />-   `StepInto`-다른 재정의 일치 하는 함수를 한 단계씩 하도록 디버거에 지시 `NoStepInto` 일치 하는 함수에 대 한 합니다.|  
+|함수|필수 요소. 하나 이상의 함수를 사용자가 작성하지 않은 함수로 지정합니다.|  
+|`Name`|필수 요소. 일치시킬 전체 함수 이름을 지정하는 ECMA 262 형식의 정규식입니다. 예를 들어:<br /><br /> `<Name>MyNS::MyClass.*</Name>`<br /><br /> `MyNS::MyClass`의 모든 메서드를 사용자가 작성하지 않은 코드로 간주하도록 디버거에 지시합니다. 일치 항목 찾기에서는 대/소문자를 구분합니다.|  
+|`Module`|선택적 요소. 함수를 포함하는 모듈의 전체 경로를 지정하는 ECMA 262 형식의 정규식입니다. 일치 항목 찾기에서는 대/소문자를 구분하지 않습니다.|  
+|`Action`|필수 요소. 대/소문자를 구분하는 다음 값 중 하나입니다.<br /><br /> -   `NoStepInto`  -일치 하는 함수를 통해 실행 되도록 디버거에 지시 합니다.<br />-   `StepInto`  -다른 재정의 일치 하는 함수를 한 단계씩 하도록 디버거에 지시 `NoStepInto` 일치 하는 함수에 대 한 합니다.|  
   
-###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a>호출 스택 동작 사용자 지정  
+###  <a name="BKMK_CPP_Customize_call_stack_behavior"></a> 호출 스택 동작 사용자 지정  
  `*.natjmc` 파일에 지정하여 호출 스택에서 사용자가 작성하지 않은 코드로 처리할 모듈, 소스 파일 및 함수를 지정할 수 있습니다.  
   
 -   Visual Studio 컴퓨터의 모든 사용자에 대 한 사용자가 아닌 코드를 지정 하려면.natjmc 파일을 추가할는 `%VsInstallDirectory%\Common7\Packages\Debugger\Visualizers` 폴더입니다.  
@@ -160,26 +158,26 @@ ms.lasthandoff: 12/22/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수. 모듈의 전체 경로입니다. Windows 와일드 카드 문자를 사용할 수 있습니다 `?` (0 개 또는 1 문자) 및 `*` (0 개 이상의 문자)입니다. 예를 들어 개체에 적용된<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> 는 드라이브의 `\3rdParty\UtilLibs`에 있는 모든 모듈을 외부 코드로 처리하도록 디버거에 지시합니다.|  
-|`Company`|선택 사항입니다. 실행 파일에 포함된 모듈을 게시하는 회사의 이름입니다. 이 특성을 사용하여 모듈을 구분할 수 있습니다.|  
+|`Name`|필수 요소. 모듈의 전체 경로입니다. Windows 와일드 카드 문자를 사용할 수 있습니다 `?` (0 개 또는 1 문자) 및 `*` (0 개 이상의 문자)입니다. 예를 들면 다음과 같습니다.<br /><br /> `<Module Name="?:\3rdParty\UtilLibs\*" />`<br /><br /> 는 드라이브의 `\3rdParty\UtilLibs`에 있는 모든 모듈을 외부 코드로 처리하도록 디버거에 지시합니다.|  
+|`Company`|선택적 요소. 실행 파일에 포함된 모듈을 게시하는 회사의 이름입니다. 이 특성을 사용하여 모듈을 구분할 수 있습니다.|  
   
  **파일 요소 특성**  
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수. 외부 코드로 처리할 소스 파일의 전체 경로입니다. 경로를 지정할 때 Windows 와일드 카드 문자 `?` 및 `*`를 사용할 수 있습니다.|  
+|`Name`|필수 요소. 외부 코드로 처리할 소스 파일의 전체 경로입니다. 경로를 지정할 때 Windows 와일드 카드 문자 `?` 및 `*`를 사용할 수 있습니다.|  
   
  **함수 요소 특성**  
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수. 외부 코드로 처리할 함수의 정규화된 이름입니다.|  
-|`Module`|선택 사항입니다. 함수를 포함하는 모듈의 이름 또는 전체 경로입니다. 이 특성을 사용하여 동일한 이름을 가진 함수를 구분할 수 있습니다.|  
+|`Name`|필수 요소. 외부 코드로 처리할 함수의 정규화된 이름입니다.|  
+|`Module`|선택적 요소. 함수를 포함하는 모듈의 이름 또는 전체 경로입니다. 이 특성을 사용하여 동일한 이름을 가진 함수를 구분할 수 있습니다.|  
 |`ExceptionImplementation`|`true`로 설정된 경우 이 함수 대신 예외를 발생시킨 함수가 호출 스택에 표시됩니다.|  
   
-##  <a name="BKMK_JavaScript_Just_My_Code"></a>JavaScript 내 코드만  
+##  <a name="BKMK_JavaScript_Just_My_Code"></a> JavaScript 내 코드만  
   
-###  <a name="BKMK_JS_User_and_non_user_code"></a>사용자 및 사용자가 아닌 코드  
+###  <a name="BKMK_JS_User_and_non_user_code"></a> 사용자 및 사용자가 아닌 코드  
  **코드 분류**  
   
  JavaScript 내 코드만 옵션은 다음 분류 중 하나로 코드를 분류하여 단계별 실행 및 호출 스택 표시를 제어합니다.  
@@ -206,7 +204,7 @@ ms.lasthandoff: 12/22/2017
   
  기타 모든 코드로 분류 됩니다 **MyCode**합니다.  
   
-###  <a name="BKMK_JS_Stepping_behavior"></a>단계별 실행 동작  
+###  <a name="BKMK_JS_Stepping_behavior"></a> 단계별 실행 동작  
   
 -   함수는 사용자가 아닌 경우 (**MyCode**) 코드를 **한 단계씩 코드 실행** (바로 가기 키: F11)로 동작 **프로시저 단위 실행** (키보드: F10).  
   
@@ -216,7 +214,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **프로시저 나가기** (키보드: Shift + F11) 사용자 코드의 다음 줄에서 중지 합니다. 사용자 코드에 오류가 발생 하면 경우 실행이 계속 될 때까지 응용 프로그램 종료 되거나, 중단점이 적중 되거나 예외가 발생 합니다.  
   
-###  <a name="BKMK_JS_Breakpoint_behavior"></a>기본 중단점 동작  
+###  <a name="BKMK_JS_Breakpoint_behavior"></a> 기본 중단점 동작  
   
 -   코드에 설정 된 중단점 해당 코드의 분류에 관계 없이 항상 적중 됩니다.  
   
@@ -226,7 +224,7 @@ ms.lasthandoff: 12/22/2017
   
     -   **UnrelatedCode** 코드에서 디버거가 중지 되지 않습니다.  
   
-###  <a name="BKMK_JS_Exception_behavior"></a>예외 동작  
+###  <a name="BKMK_JS_Exception_behavior"></a> 예외 동작  
  처리되지 않는 예외가  
   
 -   **MyCode** 또는 **LibraryCode** 코드에서 디버거가 항상 중단 합니다.  
@@ -239,7 +237,7 @@ ms.lasthandoff: 12/22/2017
   
 -   예외가 처리되지 않았으면 디버거가 중단됩니다.  
   
-###  <a name="BKMK_JS_Customize_Just_My_Code"></a>내 코드만 사용자 지정  
+###  <a name="BKMK_JS_Customize_Just_My_Code"></a> 내 코드만 사용자 지정  
  단일 Visual Studio 프로젝트에 대해 사용자 코드 및 사용자가 작성하지 않은 코드를 분류하려면 프로젝트의 루트 폴더에 `mycode.json`이라는 .json 파일을 추가합니다.  
   
  분류는 다음 순서대로 수행됩니다.  
@@ -290,11 +288,11 @@ ms.lasthandoff: 12/22/2017
   
  다음 키워드 중 하나로 값을 변경할 수 있습니다.  
   
--   `MyCode`스크립트도 분류 **MyCode**합니다.  
+-   `MyCode`  스크립트도 분류 **MyCode**합니다.  
   
--   `Library`스크립트도 분류 **LibraryCode**합니다.  
+-   `Library`  스크립트도 분류 **LibraryCode**합니다.  
   
--   `Unrelated`스크립트도 분류 **UnrelatedCode**합니다.  
+-   `Unrelated`  스크립트도 분류 **UnrelatedCode**합니다.  
   
  **MyCode, Libraries 및 Unrelated**  
   

@@ -1,27 +1,25 @@
 ---
-title: "Visual Studio에서 UWP 앱 배포 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 UWP 앱 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/16/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 28b1897fad45ae0c2bd174c39433645caf011f09
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: dec0b32b0be121e15c81b93f5ed7dd6aa0b9c324
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-uwp-apps-from-visual-studio"></a>Visual Studio에서 UWP 앱 배포
   
@@ -39,7 +37,7 @@ ms.lasthandoff: 01/19/2018
   
 -   다른 앱 또는 메서드에서 시작되는 경우 디버깅할 앱 배포
   
-##  <a name="BKMK_How_to_deploy_a_Windows_Store_app"></a>UWP 앱을 배포 하는 방법  
+##  <a name="BKMK_How_to_deploy_a_Windows_Store_app"></a> UWP 앱을 배포 하는 방법  
  수동 앱 배포 프로세스는 다음과 같이 간단합니다.  
   
 1.  원격 장치에 배포하는 경우 앱 시작 프로젝트의 속성 프로젝트 페이지에서 장치의 이름 또는 IP 주소를 지정합니다. 이 작업 단계는 이 항목 아래에 나열되어 있습니다.  
@@ -81,7 +79,7 @@ ms.lasthandoff: 01/19/2018
   
  **JavaScript 또는 Visual C++ 프로젝트 페이지에서 원격 장치 지정**  
   
- ![C# 43; &#43; 원격 디버깅에 대 한 속성을 프로젝트](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")  
+ ![C&#43; &#43; 프로젝트 원격 디버깅에 대 한 속성](../debugger/media/vsrun_cpp_projprop_remote.png "VSRUN_CPP_ProjProp_Remote")  
   
 1.  **실행할 디버거** 목록에서 **원격 디버거** 를 선택합니다.  
   

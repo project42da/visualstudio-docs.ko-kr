@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio의 디버거에서 중단점을 사용 하 여 | Microsoft Docs"
+title: Visual Studio의 디버거에서 중단점을 사용 하 여 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.breakpointswin
 - vs.debug.disassembly.insert
@@ -35,17 +32,16 @@ f1_keywords:
 helpviewer_keywords:
 - breakpoints, about breakpoints
 ms.assetid: 020b2e97-3b3e-4b2c-872d-b5c6025e120e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 95c6f87e120cd8a62aa3959548f968b70c820d39
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 755b167d49aed33aee30f4a616b7609bf2cd0d6c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 중단점을 사용 합니다.
 예를 들어 코드 변수의 상태를 확인하거나 호출 스택을 검토하기 위해 디버거 실행을 중지하려는 경우 중단점을 설정할 수 있습니다. 개발자 도구 상자에 가장 중요한 디버깅 기술 중 하나가 있습니다.  
@@ -59,7 +55,7 @@ ms.lasthandoff: 03/15/2018
   
  ![중단점 실행 중지 됨](../debugger/media/breakpointexecution.png "BreakpointExecution")  
   
- 이때 `testInt` 의 값은 여전히 1입니다.  
+ 이때 `testInt`의 값은 여전히 1입니다.  
   
  변수 값 및 호출 스택을 포함하여 응용 프로그램의 현재 상태를 확인할 수 있습니다. 호출 스택에 대한 자세한 내용은 [How to: Use the Call Stack Window](../debugger/how-to-use-the-call-stack-window.md)을 참조하세요.  
   
@@ -141,7 +137,7 @@ ms.lasthandoff: 03/15/2018
   
 1.  클래스의 해당 인스턴스가 인스턴스화된 후 어딘가에 중단점을 설정합니다.  
   
-2.  인스턴스의 주소를 찾습니다( `0xcccccccc`라고 함).  
+2.  인스턴스의 주소를 찾습니다(`0xcccccccc`라고 함).  
   
 3.  클릭 **디버그 > 새 중단점 > 함수 중단점** (또는 **ALT + F9, B**).  
   
@@ -177,7 +173,7 @@ ms.lasthandoff: 03/15/2018
   
  ![중단점 조건이 true 인](../debugger/media/breakpointconditionistrue.png "BreakpointConditionIsTrue")  
   
- 다음 예제에서는 `testInt` 의 값이 변경되는 경우에만 중단점이 적중되도록 설정합니다.  
+ 다음 예제에서는 `testInt`의 값이 변경되는 경우에만 중단점이 적중되도록 설정합니다.  
   
  ![변경 된 경우 중단점](../debugger/media/breakpointwhenchanged.png "BreakpointWhenChanged")  
   
@@ -231,7 +227,7 @@ ms.lasthandoff: 03/15/2018
   
 -   ThreadName = "이름"  
   
- 문자열 값은 큰따옴표로 묶습니다. `&` (AND), `||` (OR), `!` (NOT), 괄호를 사용하여 절을 결합할 수 있습니다.  
+ 문자열 값은 큰따옴표로 묶습니다. `&`(AND), `||`(OR), `!`(NOT), 괄호를 사용하여 절을 결합할 수 있습니다.  
   
 ##  <a name="BKMK_Print_to_the_Output_window_with_tracepoints"></a> 중단점 작업 및 추적점  
  추적점은 출력 창에 메시지를 인쇄하는 중단점입니다. 추적점은 프로그래밍 언어의 임시 추적 문처럼 작동할 수 있습니다.  

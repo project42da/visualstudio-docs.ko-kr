@@ -1,12 +1,10 @@
 ---
-title: "CA1903: 대상된 프레임 워크에서 API만 사용 | Microsoft Docs"
-ms.custom: 
+title: 'CA1903: 대상된 프레임 워크에서 API만 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - UseOnlyAPIFromTargetedFramework
 - CA1903
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - UseOnlyApiFromTargetedFramework
 - CA1903
 ms.assetid: efdb5cc7-bbd8-4fa7-9fff-02b91e59350e
-caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d20496fae54b0fdf2b0f0d17de0590c325bab0ee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b61f1281c88404d3331d9a94d5767a9052786700
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1903-use-only-api-from-targeted-framework"></a>CA1903: 대상 프레임워크에서 API만 사용하십시오.
 |||  
@@ -57,12 +55,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 관리 팩은 지정 된 서비스 팩 의도적인 종속성 아닌 경우에이 규칙에서는 경고를에서 표시 하지 마십시오. 이 경우 응용 프로그램이 서비스 팩이 설치 되지 않은 시스템에서 실행 하지 못할 수 있습니다. 경고를 억제 또는 의도적인 종속성이 경우이 규칙을 해제 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 DateTimeOffset만.NET 2.0 서비스 팩 1에서 사용할 수 있는 형식을 사용 하는 클래스를 보여 줍니다. 이 예제에서는.NET Framework 2.0가 선택한 프로젝트 속성에 대상 프레임 워크 드롭다운 목록에서 필요 합니다.  
   
  [!code-csharp[FxCop.Portability.UseOnlyApiFromTargetedFramework#1](../code-quality/codesnippet/CSharp/ca1903-use-only-api-from-targeted-framework_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 앞에서 설명한 위반 DateTimeOffset 형식의 사용 날짜/시간 형식으로 대체 하 여 문제를 해결 합니다.  
   
  [!code-csharp[FxCop.Portability.UseOnlyApiFromTargetedFramework2#1](../code-quality/codesnippet/CSharp/ca1903-use-only-api-from-targeted-framework_2.cs)]  

@@ -2,26 +2,22 @@
 title: 핵심 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], core interfaces
 ms.assetid: 666b9116-8550-4bdd-bc15-55fc57de87df
-caps.latest.revision: 24
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 54ecbe034f4fa7054be2725205a013e5899849e7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 45521c0db16ac892d2e0e43e34c4b030075f7be2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="core-interfaces"></a>코어 인터페이스
 다음 인터페이스는 디버거를 사용 하 여 확장 하기 위한 핵심 인터페이스는 [!INCLUDE[vsipsdk](../../../extensibility/includes/vsipsdk_md.md)]합니다.  
@@ -71,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
 -   Visual Studio (VS)  
   
-##  <a name="Breakpoints"></a>중단점  
+##  <a name="Breakpoints"></a> 중단점  
  이러한 인터페이스와 관련 된 중단점의 추적을 구현 합니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -92,7 +88,7 @@ ms.lasthandoff: 12/22/2017
 |[IEnumDebugBoundBreakpoints2](../../../extensibility/debugger/reference/ienumdebugboundbreakpoints2.md)|DE|바인딩된 중단점의 집합에 대해 열거형을 나타냅니다.|  
 |[IEnumDebugErrorBreakpoints2](../../../extensibility/debugger/reference/ienumdebugerrorbreakpoints2.md)|DE|메모리 위치에 바인딩할 수 없으며 중단점의 집합에 대해 열거형을 나타냅니다.|  
   
-##  <a name="Contexts"></a>컨텍스트  
+##  <a name="Contexts"></a> 컨텍스트  
  이러한 인터페이스는 다양 한 종류를의 디버깅 중인 프로그램 내에서 컨텍스트를 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -106,7 +102,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugStackFrame3](../../../extensibility/debugger/reference/idebugstackframe3.md)|DE|중단점 또는 예외에서 스택 프레임 컨텍스트를 나타냅니다.|  
 |[IEnumDebugCodeContexts2](../../../extensibility/debugger/reference/ienumdebugcodecontexts2.md)|DE|코드 컨텍스트 집합에 대해 열거형을 나타냅니다.|  
   
-##  <a name="CoreServer"></a>핵심 서버  
+##  <a name="CoreServer"></a> 핵심 서버  
  이러한 인터페이스는 프로그램 디버깅 중인 컴퓨터를 나타냅니다. 이러한 작업으로 구현 됩니다 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 있지만 디버그 엔진을 호출할 수 있습니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -114,7 +110,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)|VS|컴퓨터에 대 한 정보 뿐만 아니라 포트 및 포트 공급 업체에 대 한 액세스를 제공합니다.|  
 |[IDebugCoreServer3](../../../extensibility/debugger/reference/idebugcoreserver3.md)|VS|나타냅니다는 [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md) 를 원격 디버깅을 지원 합니다.|  
   
-##  <a name="DebugEngines"></a>디버그 엔진  
+##  <a name="DebugEngines"></a> 디버그 엔진  
  이러한 인터페이스는 디버그 엔진 및 관련 된 이벤트를 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -126,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugProgramEngines2](../../../extensibility/debugger/reference/idebugprogramengines2.md)|PS DE|여러 디버그 엔진을 처리 하는 프로그램 노드를 나타냅니다.|  
 |[IDebugQueryEngine2](../../../extensibility/debugger/reference/idebugqueryengine2.md)|DE|SDM 스레드, 프로그램 또는 스택 프레임에서 디버그 엔진에는 인터페이스를 가져올 수 있는 방법을 제공 합니다.|  
   
-##  <a name="Documents"></a>문서  
+##  <a name="Documents"></a> 문서  
  이러한 인터페이스는 문서 (원본 파일) 및 관련된 요소를 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -186,7 +182,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugThreadDestroyEvent2](../../../extensibility/debugger/reference/idebugthreaddestroyevent2.md)|DE|스레드가 메뉴가 제거 될 때는 DE 전송한 합니다.|  
 |[IDebugThreadNameChangedEvent2](../../../extensibility/debugger/reference/idebugthreadnamechangedevent2.md)|DE|스레드 이름 변경 될 때는 DE 전송한 합니다.|  
   
-##  <a name="Expressions"></a>식  
+##  <a name="Expressions"></a> 식  
  이러한 인터페이스를 특정 컨텍스트에서 계산 되도록 식을 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -195,7 +191,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugExpressionContext2](../../../extensibility/debugger/reference/idebugexpressioncontext2.md)|DE|식이 계산 되는 컨텍스트를 나타냅니다. 가져온는 [IDebugStackFrame2](../../../extensibility/debugger/reference/idebugstackframe2.md) 인터페이스입니다.|  
 |[IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md)|DE|비동기 식 평가 완료 하는 경우는 DE 전송한 합니다.|  
   
-##  <a name="Memory"></a>메모리  
+##  <a name="Memory"></a> 메모리  
  이러한 인터페이스는 메모리의 바이트 시퀀스를 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -214,7 +210,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugSourceServerModule](../../../extensibility/debugger/reference/idebugsourceservermodule.md)|DE|PDB 파일에 포함 된 원본 서버 정보를 나타냅니다.|  
 |[IEnumDebugModules2](../../../extensibility/debugger/reference/ienumdebugmodules2.md)|DE|알고 있는 모듈의 집합에 대해 열거형을 나타내면 프로그램 [IDebugProgram2](../../../extensibility/debugger/reference/idebugprogram2.md)합니다.|  
   
-##  <a name="Ports"></a>포트  
+##  <a name="Ports"></a> 포트  
  이러한 인터페이스는 포트 및 포트 공급자를 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -234,7 +230,7 @@ ms.lasthandoff: 12/22/2017
 |[IEnumDebugPorts2](../../../extensibility/debugger/reference/ienumdebugports2.md)|VS PS|포트의 집합에 대해 열거형을 나타냅니다.|  
 |[IEnumDebugPortSuppliers2](../../../extensibility/debugger/reference/ienumdebugportsuppliers2.md)|VS|포트 공급 업체의 집합에 대해 열거형을 나타냅니다.|  
   
-##  <a name="Processes"></a>프로세스  
+##  <a name="Processes"></a> 프로세스  
  이러한 인터페이스는 프로세스를, 하나 이상의 프로그램을 포함 하는 단일 실행 파일을 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -246,7 +242,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugProcessEx2](../../../extensibility/debugger/reference/idebugprocessex2.md)|PS|세션 연결을 추적 해야 하는 프로세스를 나타냅니다.|  
 |[IEnumDebugProcesses2](../../../extensibility/debugger/reference/ienumdebugprocesses2.md)|PS|일련의 포트에서 프로세스의 열거형을 나타냅니다.|  
   
-##  <a name="Programs"></a>프로그램  
+##  <a name="Programs"></a> 프로그램  
  이러한 인터페이스는 프로그램을, 실제 실행 파일 또는 모듈에 해당 하지 않는 실행의 논리 단위를 나타냅니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -279,7 +275,7 @@ ms.lasthandoff: 12/22/2017
 |[IEnumDebugPropertyInfo2](../../../extensibility/debugger/reference/ienumdebugpropertyinfo2.md)|DE|세트에 대 한 열거형을 나타내면 [DEBUG_PROPERTY_INFO](../../../extensibility/debugger/reference/debug-property-info.md) 변수, 레지스터, 매개 변수 및 식을 설명 하는 구조입니다.|  
 |[IEnumDebugReferenceInfo2](../../../extensibility/debugger/reference/ienumdebugreferenceinfo2.md)|DE|세트에 대 한 열거형을 나타내면 [DEBUG_REFERENCE_INFO](../../../extensibility/debugger/reference/debug-reference-info.md) 구조입니다.|  
   
-##  <a name="StackFrames"></a>스택 프레임  
+##  <a name="StackFrames"></a> 스택 프레임  
  이러한 인터페이스는 컨텍스트 스택 프레임을 나타내는에 있는 중단점 또는 예외가 발생 했습니다.  
   
 |인터페이스|에 의해 구현|설명|  
@@ -300,7 +296,7 @@ ms.lasthandoff: 12/22/2017
 |[IDebugThreadNameChangedEvent2](../../../extensibility/debugger/reference/idebugthreadnamechangedevent2.md)|DE|스레드 이름 변경 될 때는 DE 전송한 합니다.|  
 |[IEnumDebugThreads2](../../../extensibility/debugger/reference/ienumdebugthreads2.md)|DE|스레드의 집합에 대해 열거형을 나타냅니다.|  
   
-##  <a name="TypeVisualizers"></a>형식 시각화 도우미  
+##  <a name="TypeVisualizers"></a> 형식 시각화 도우미  
  이러한 인터페이스는 형식 시각화 도우미에 대 한 지원을 제공합니다. 이러한 인터페이스는 식 계산기에서 일반적으로 구현 됩니다.  
   
 |인터페이스|에 의해 구현|설명|  

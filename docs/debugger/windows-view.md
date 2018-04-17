@@ -1,43 +1,39 @@
 ---
-title: "창 뷰 | Microsoft Docs"
-ms.custom: 
+title: 창 뷰 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.windowsview
 helpviewer_keywords:
 - Windows view
 ms.assetid: 154786ce-c803-4bfb-8198-f7962a900363
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 94aae2c271b0b9030d63597fe8100e8c8f2bccbe
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bea2801baab38f84b8af8f2154f2be4f05dc205f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-view"></a>창 뷰
 를 처음 연 Spy + + 창 뷰 시스템의 모든 창 및 컨트롤의 트리를 표시 합니다. 창 핸들 및 클래스 이름이 표시 됩니다. 트리의 맨 위에 있는 현재 데스크톱 창이입니다. 다른 모든 windows 데스크톱의 자식 이며 표준 창 계층 구조에 따라 나열 됩니다. 해당 부모의 아래 expansible 목록에 형제 창이 나타납니다.  
   
  아래 그림의 최상위 노드를 확장으로 일반적인 Spy + + 창 뷰를 보여줍니다.  
   
- ![Spy &#43; #43 창 뷰](../debugger/media/spy--_windowsview.png "Spy + + _WindowsView")  
+ ![Spy&#43; &#43; 창 뷰](../debugger/media/spy--_windowsview.png "Spy + + _WindowsView")  
 Spy++ 창 뷰  
   
  트리의 맨 위에 있는 현재 데스크톱 창이입니다. 다른 모든 windows 데스크톱의 자식 이며 형제 창이 Z-순서에 따라 정렬 된 표준 창 계층 구조에 따라 나열 됩니다. 확장 하거나 클릭 하 여 트리의 모든 부모 노드를 축소할 수는 + 또는-기호 노드 옆에 있습니다.  
   
  창 뷰 포커스가 있을 때의 찾기 도구를 사용할 수 있습니다는 [창 경로 대화 상자](../debugger/window-search-dialog-box.md) 시스템에 열려 있는 모든 창의 정보를 표시 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [방법: 찾기 도구 사용](../debugger/how-to-use-the-finder-tool.md)  
  이 도구 속성이 나 메시지에 대 한 기간을 검색 하는 방법을 보여 줍니다.  
   

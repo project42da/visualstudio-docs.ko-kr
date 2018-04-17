@@ -1,26 +1,22 @@
 ---
-title: "스냅숏 디버깅에 대 한 문제 해결 및 알려진 문제 | Microsoft Docs"
+title: 스냅숏 디버깅에 대 한 문제 해결 및 알려진 문제 | Microsoft Docs
 ms.date: 11/07/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugger
 ms.assetid: 511a0697-c68a-4988-9e29-8d0166ca044a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7792e22398afd476703407e8ae2159e0f1afd931
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: ae5da4031ceb2716970b028fb15c11348df89c4a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-and-known-issues-for-snapshot-debugging-in-visual-studio"></a>스냅숏 Visual Studio의 디버깅에 대 한 문제 해결 및 알려진 문제
 
@@ -86,7 +82,7 @@ ms.lasthandoff: 01/19/2018
 - 슬롯 사이트를 시작 합니다. 다시 준비 사이트를 방문 하는 것이 좋습니다.
 - 프로덕션으로 슬롯의 교환 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio의 디버깅](../debugger/index.md)  
 [스냅숏 디버거를 사용 하 여 라이브 ASP.NET 앱 디버그](../debugger/debug-live-azure-applications.md)  

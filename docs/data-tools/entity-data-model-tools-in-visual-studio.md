@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio에서 entity Framework 도구 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 entity Framework 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
-caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: f288d794040c533f2d00e95d628f7d04e55e96e4
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+ms.workload:
+- data-storage
+ms.openlocfilehash: c9335e5d5bba077a2fd517e80398fa452718fed3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio에서 entity Framework 도구
 Entity Framework는.NET 개발자가 도메인별 개체를 사용 하 여 관계형 데이터에 사용할 수 있는 개체-관계형 매핑 기술. 개발자들이 보통 작성해야 하는 데이터 액세스 코드가 대부분 필요하지 않게 됩니다. Entity Framework는 새로운.NET 응용 프로그램에 대 한 기술 모델링 권장된 개체-관계형 매핑을 (ORM).  

@@ -1,11 +1,8 @@
 ---
-title: "Windows Communication Foundation 서비스 및 Visual Studio에서 WCF Data Services | Microsoft Docs"
-ms.custom: 
+title: Windows Communication Foundation 서비스 및 Visual Studio에서 WCF Data Services | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -34,26 +31,26 @@ helpviewer_keywords:
 - WCF services, endpoints
 - service method, called asynchronously[Visual Studio]
 ms.assetid: d56f12cb-e139-4fec-b3e4-488383356642
-caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 898cdbd15367aef6ac48d35a44b1ccb4a3deded9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 2e1e44eeff16277b21a530bf4c5debcb02de7633
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Windows Communication Foundation 서비스 및 Visual Studio의 WCF Data Services
 Visual Studio는 Windows Communication Foundation (WCF)으로 작업 하기 위한 도구를 제공 하 고 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], 분산 응용 프로그램을 만들기 위한 Microsoft 기술입니다. 이 항목에서는에서 서비스에 대 한 소개는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 관점입니다. 전체 설명서를 참조 하십시오. [WCF 데이터 서비스 4.5](/dotnet/framework/data/wcf/index)합니다.  
   
 ## <a name="what-is-wcf"></a>WCF는 무엇입니까?  
- [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)]통합된 보안, 신뢰할 수 있는, 트랜잭션 및 상호 운용할 수 있는 분산된 응용 프로그램을 만들기 위한 프레임 워크가입니다. ASMX 웹 서비스,.NET Remoting, 엔터프라이즈 서비스 (DCOM) 및 MSMQ와 같은 이전 프로세스 간 통신 기술을 대체합니다. WCF 통합된 프로그래밍 모델에서 이러한 모든 기술은의 기능을 결합 합니다. 이 배포 응용 프로그램 개발 작업을 간소화 합니다.  
+ [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 통합된 보안, 신뢰할 수 있는, 트랜잭션 및 상호 운용할 수 있는 분산된 응용 프로그램을 만들기 위한 프레임 워크가입니다. ASMX 웹 서비스,.NET Remoting, 엔터프라이즈 서비스 (DCOM) 및 MSMQ와 같은 이전 프로세스 간 통신 기술을 대체합니다. WCF 통합된 프로그래밍 모델에서 이러한 모든 기술은의 기능을 결합 합니다. 이 배포 응용 프로그램 개발 작업을 간소화 합니다.  
   
 #### <a name="what-are-wcf-data-services"></a>WCF Data Services는 무엇입니까  
- [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]표준 OData (개방형 데이터) 프로토콜의 구현입니다.  WCF Data Services와 같은 표준 HTTP 동사를 사용 하 여 데이터 가져오기 반환, POST, PUT 또는 DELETE 수 있도록 하는 REST Api의 집합으로 테이블 형식 데이터를 노출할 수 있습니다. 서버 쪽에서 WCF Data Services는에 의해 대체 중인 [ASP.NET Web API](http://www.asp.net/web-api) 새 OData 서비스를 만들기 위한 합니다. WCF Data Services 클라이언트 라이브러리는 Visual Studio에서.NET 응용 프로그램에서 OData 서비스를 사용 하기 위한 올바른 선택 계속 (**프로젝트 &#124; 서비스 참조 추가**). 자세한 내용은 참조 [WCF 데이터 서비스 4.5](http://go.microsoft.com/fwlink/?LinkID=119952)합니다.  
+ [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 표준 OData (개방형 데이터) 프로토콜의 구현입니다.  WCF Data Services와 같은 표준 HTTP 동사를 사용 하 여 데이터 가져오기 반환, POST, PUT 또는 DELETE 수 있도록 하는 REST Api의 집합으로 테이블 형식 데이터를 노출할 수 있습니다. 서버 쪽에서 WCF Data Services는에 의해 대체 중인 [ASP.NET Web API](http://www.asp.net/web-api) 새 OData 서비스를 만들기 위한 합니다. WCF Data Services 클라이언트 라이브러리는 Visual Studio에서.NET 응용 프로그램에서 OData 서비스를 사용 하기 위한 올바른 선택 계속 (**프로젝트 &#124; 서비스 참조 추가**). 자세한 내용은 참조 [WCF 데이터 서비스 4.5](http://go.microsoft.com/fwlink/?LinkID=119952)합니다.  
   
 ### <a name="wcf-programming-model"></a>WCF 프로그래밍 모델  
  두 엔터티 간의 통신을 기반으로 WCF 프로그래밍 모델은: WCF 서비스와 WCF 클라이언트입니다. 프로그래밍 모델에 캡슐화 되어는 <xref:System.ServiceModel> 네임 스페이스에는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.  
@@ -86,7 +83,7 @@ Visual Studio는 Windows Communication Foundation (WCF)으로 작업 하기 위�
  [!code-vb[WCFWalkthrough#3](../data-tools/codesnippet/VisualBasic/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio_3.vb)]  
   
 ## <a name="wcf-tools-in-visual-studio"></a>Visual Studio의 WCF 도구  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]WCF 서비스와 WCF 클라이언트를 만드는 데 도움이 되는 도구를 제공 합니다. 도구를 보여 주는 연습을 참조 하십시오. [연습: Windows Forms에서 간단한 WCF 서비스 만들기](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md)합니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] WCF 서비스와 WCF 클라이언트를 만드는 데 도움이 되는 도구를 제공 합니다. 도구를 보여 주는 연습을 참조 하십시오. [연습: Windows Forms에서 간단한 WCF 서비스 만들기](../data-tools/walkthrough-creating-a-simple-wcf-service-in-windows-forms.md)합니다.  
   
 ### <a name="creating-and-testing-wcf-services"></a>만들기 및 WCF 서비스를 테스트 합니다.  
  WCF를 사용할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 템플릿을 신속 하 게 만들 사용자 고유의 서비스 기반으로 합니다. 그런 다음 디버깅 하 고 서비스를 테스트할 WCF 서비스 자동 호스트와 WCF 테스트 클라이언트를 사용할 수 있습니다. 함께 이러한 도구는 빠르고 편리한 디버그 및 테스트 주기를 제공 하 고 초기 단계에서 호스팅 모델에 대 한 커밋 할 필요가 없도록 합니다.  
@@ -113,7 +110,7 @@ Visual Studio는 Windows Communication Foundation (WCF)으로 작업 하기 위�
  WCF 테스트 클라이언트에 대 한 자세한 참조 [WCF 테스트 클라이언트 (WcfTestClient.exe)](/dotnet/framework/wcf/wcf-test-client-wcftestclient-exe)합니다.  
   
 ### <a name="accessing-wcf-services-in-visual-studio"></a>Visual Studio에서 WCF 서비스에 액세스  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]WCF 클라이언트에 자동으로 생성 되는 프록시 및 사용 하 여 추가 하는 서비스에 대 한 끝점을 만드는 작업을 간소화 된 **서비스 참조 추가** 대화 상자. 모든 필요한 구성 정보는 app.config 파일에 추가 됩니다. 대부분의 경우 사용을 위해 서비스를 인스턴스화하는 수행 해야 하는 모든 합니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] WCF 클라이언트에 자동으로 생성 되는 프록시 및 사용 하 여 추가 하는 서비스에 대 한 끝점을 만드는 작업을 간소화 된 **서비스 참조 추가** 대화 상자. 모든 필요한 구성 정보는 app.config 파일에 추가 됩니다. 대부분의 경우 사용을 위해 서비스를 인스턴스화하는 수행 해야 하는 모든 합니다.  
   
  **서비스 참조 추가** 대화 상자를 사용 하는 서비스에 대 한 주소를 입력 하거나 솔루션에 정의 된 서비스를 검색할 수 있습니다. 대화 상자에는 서비스 및 해당 서비스에서 제공 하는 작업의 목록을 반환 합니다. 또한 여 코드에서 서비스 참조는 네임 스페이스를 정의할 수 있습니다.  
   

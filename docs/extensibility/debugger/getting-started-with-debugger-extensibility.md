@@ -1,34 +1,32 @@
 ---
-title: "디버거 확장성 시작 | Microsoft Docs"
-ms.custom: 
+title: 디버거 확장성 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started, Debugging SDK
 - debugging [Debugging SDK], getting started
 - Debugging SDK, getting started
 ms.assetid: d6ce6f43-1409-4bf7-93cd-f3464ca23504
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 964b6bcc18e74174aa59e7a1bb4441e24d3918d7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 98d6e0200c1a68ae3819d3276ce8a04aaada2e78
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-debugger-extensibility"></a>디버거 확장성 시작
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 만들고 프로그램 내에서 디버그 하는 데 사용 되는 디버거 구성 요소를 사용자 지정 하는 데 필요한 정보를 제공는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 환경입니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]디버깅은 이전에 수행 하는 테스트가 광범위 한 유용성 향상 추가 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버거 합니다. 사용할 수 있습니다 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다국어 응용 프로그램을 통해 단계로 디버깅 즉석에서 응용 프로그램 및 다중 언어 솔루션을 디버깅 하는 동안 변수 편집 구현할 수 있습니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅은 이전에 수행 하는 테스트가 광범위 한 유용성 향상 추가 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버거 합니다. 사용할 수 있습니다 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다국어 응용 프로그램을 통해 단계로 디버깅 즉석에서 응용 프로그램 및 다중 언어 솔루션을 디버깅 하는 동안 변수 편집 구현할 수 있습니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]디버깅은 실행된-out-of-process 디버깅 중인 프로그램 이므로 응용 프로그램의 프로세스 공간에 덜 개입 합니다. 결과적 디버깅 프로그램 영향을 주지 않고 디버거를 사용 하는 구성 요소를 작성 하는 것이 쉽습니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅은 실행된-out-of-process 디버깅 중인 프로그램 이므로 응용 프로그램의 프로세스 공간에 덜 개입 합니다. 결과적 디버깅 프로그램 영향을 주지 않고 디버거를 사용 하는 구성 요소를 작성 하는 것이 쉽습니다.  
   
  최대한의 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], 다음에 잘 알고 있어야 합니다.  
   
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/22/2017
   
 -   ATL COM  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [디버거 확장 로드맵](../../extensibility/debugger/roadmap-for-extending-the-debugger.md)  
  컴파일러 및 출력에 따라 제품에서 디버깅을 구현 하는 과정에 간략하게 설명 합니다.  
   

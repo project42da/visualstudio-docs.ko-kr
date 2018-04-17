@@ -1,12 +1,10 @@
 ---
-title: "구조체 및 클래스에 주석 지정 | Microsoft Docs"
-ms.custom: 
+title: 구조체 및 클래스에 주석 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - _Field_size_bytes_part_
 - _Field_size_bytes_full_opt_
@@ -23,16 +21,16 @@ f1_keywords:
 - _Field_size_full_
 - _Field_size_full_opt_
 ms.assetid: b8278a4a-c86e-4845-aa2a-70da21a1dd52
-caps.latest.revision: "9"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8aafad0da7581f1fa07f1e0134df0032655d679a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2735ae7ba6763a3006edce146df1b19cbaed2f2c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotating-structs-and-classes"></a>구조체 및 클래스에 주석 지정
 고정 처럼 작동 하는 주석을 사용 하 여 구조체와 클래스 멤버에 주석을 달 수 있습니다-함수 진입점/종료 바깥쪽 구조는 매개 변수 또는 결과 값으로 포함 된 또는 함수 호출에서 true가 될 것으로 가정 됩니다.  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
      요소 (또는 바이트)로 지정 된 읽기 및 쓰기 가능한 크기를 가진 필드 `size`합니다.  
   
-     구조체 또는 클래스 선언에 적용 됩니다.  가 지정한 바이트 수와 해당 유형의 유효한 개체 선언 된 형식 보다 클 수 있습니다 나타냅니다 `size`합니다.  예:  
+     구조체 또는 클래스 선언에 적용 됩니다.  가 지정한 바이트 수와 해당 유형의 유효한 개체 선언 된 형식 보다 클 수 있습니다 나타냅니다 `size`합니다.  예를 들어:  
   
     ```cpp  
   

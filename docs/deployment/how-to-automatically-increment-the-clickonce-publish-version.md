@@ -1,12 +1,10 @@
 ---
-title: "방법: 자동으로 증가 ClickOnce 게시 버전 | Microsoft Docs"
-ms.custom: 
+title: '방법: 자동으로 증가 ClickOnce 게시 버전 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - ClickOnce deployment, incrementing publish version automatically
 - publishing, ClickOnce
 ms.assetid: 686ab88a-6305-4914-a05b-fe269cc0ae1e
-caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 2e1399795400d52543b92cb13635a8485b160f22
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 0a0cc134dbed973681ed43830435a6ce5ae0331c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-automatically-increment-the-clickonce-publish-version"></a>방법: ClickOnce 게시 버전 자동 증가
 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 변경 하는 응용 프로그램의 `Publish Version` 속성으로 인해 응용 프로그램이 업데이트로 게시 합니다. 기본적으로 Visual Studio 자동 증가 `Revision` 의 숫자는 `Publish Version` 응용 프로그램을 게시할 때마다 합니다.  

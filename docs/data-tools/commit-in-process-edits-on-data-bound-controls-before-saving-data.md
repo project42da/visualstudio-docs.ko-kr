@@ -1,11 +1,8 @@
 ---
-title: "데이터를 저장 하기 전에 데이터 바인딩된 컨트롤에서 in-process 편집 커밋 | Microsoft Docs"
-ms.custom: 
+title: 데이터를 저장 하기 전에 데이터 바인딩된 컨트롤에서 in-process 편집 커밋 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,17 @@ helpviewer_keywords:
 - BindingSource class, commiting edited records
 - EndEdit method
 ms.assetid: 61af4798-eef7-468c-b229-5e1497febb2f
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 38d50f1e3da0004869ae66df8e486affa1b68c2d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: ffc192d5afc8540c60712192dc6d1af6135a2d66
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commit-in-process-edits-on-data-bound-controls-before-saving-data"></a>데이터를 저장 하기 전에 데이터 바인딩된 컨트롤에서 in-process 편집 커밋
 데이터 바인딩된 컨트롤의 값을 편집할 때 사용자가 컨트롤에 바인딩되는 데이터 원본에 값이 업데이트를 적용 하려면 현재 레코드 탐색 해야 합니다. 항목을 끌면는 [데이터 소스 창](add-new-data-sources.md) 폼으로 끌어 놓으면 첫 번째 항목에는 코드를 생성 된 **저장** 단추 클릭 이벤트의는 <xref:System.Windows.Forms.BindingNavigator>합니다. 이 코드는 호출 된 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 의 메서드는 <xref:System.Windows.Forms.BindingSource>합니다. 따라서에 대 한 호출에서 <xref:System.Windows.Forms.BindingSource.EndEdit%2A> 메서드가 첫 번째에 대해서만 생성 됩니다 <xref:System.Windows.Forms.BindingSource> 폼에 추가 된 합니다.  

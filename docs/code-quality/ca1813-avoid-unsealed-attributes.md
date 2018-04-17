@@ -1,12 +1,10 @@
 ---
-title: ": Ca1813 파일을 봉인 되지 않은 특성 | Microsoft Docs"
-ms.custom: 
+title: ': Ca1813 파일을 봉인 되지 않은 특성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1813
 - AvoidUnsealedAttributes
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1813
 - AvoidUnsealedAttributes
 ms.assetid: f5e31b4c-9f8b-49e1-a2a8-bb5f1140729a
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9ad548bd51985484ebcb39cb6022e994a5e0534a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 04f557dea4fca796de4e786737f7cef2b59a3896
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1813-avoid-unsealed-attributes"></a>CA1813: 봉인되지 않은 특성을 사용하지 마십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 하면 특성 계층을 정의 하는 특성을 봉인 하거나 없습니다 abstract로 만들 경우에이 작업을 수행 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 만족 하는 사용자 지정 특성을 보여 줍니다.  
   
  [!code-csharp[FxCop.Performance.AttributesSealed#1](../code-quality/codesnippet/CSharp/ca1813-avoid-unsealed-attributes_1.cs)]

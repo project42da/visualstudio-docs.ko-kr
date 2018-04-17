@@ -1,13 +1,10 @@
 ---
-title: "보고서 후크 함수 | Microsoft Docs"
-ms.custom: 
+title: 보고서 후크 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.hooks
 dev_langs:
@@ -24,17 +21,16 @@ helpviewer_keywords:
 - _CrtSetReportHook function
 - report hook functions
 ms.assetid: 1854bca7-d7eb-4502-89bf-b1ee64cb50ef
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 958c33c623830af509185b3d35ef8a8b5956aaae
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7de5ae8611a3577902d5a6a893d7971ac40cc88b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="report-hook-functions"></a>보고서 후크 함수
 보고서 후크 함수를 사용 하 여 설치 [_CrtSetReportHook](/cpp/c-runtime-library/reference/crtsetreporthook), 때마다 호출 됩니다 [_CrtDbgReport](/cpp/c-runtime-library/reference/crtdbgreport-crtdbgreportw) 디버그 보고서를 생성 합니다. 보고서 후크 함수를 사용하여 특정한 할당 형식에 맞게 보고서를 필터링할 수 있습니다. 보고서 후크 함수에는 다음과 같이 프로토타입이 있어야 합니다.  

@@ -2,28 +2,24 @@
 title: IDebugEngine2::Attach | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEngine2::Attach
 helpviewer_keywords:
 - IDebugEngine2::Attach
 ms.assetid: 173dcbda-5019-4c5e-bca9-a071838b5739
-caps.latest.revision: 14
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fb45d2196a9f84b8f956b8ede665df6e3ed249c2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 264ef65472bf3d003852f2f7efc0fe21ee45d2a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugengine2attach"></a>IDebugEngine2::Attach
 프로그램 또는 프로그램을 디버그 엔진 (DE)를 연결합니다. DE는 프로세스 내에서 실행 하 여 SDM 세션 디버그 관리자 (SDM)에서 호출 됩니다.  
@@ -72,11 +68,11 @@ int Attach(
 ## <a name="remarks"></a>설명  
  다음과 같이 프로그램에 연결 하기 위한 세 가지 이유가 있습니다.  
   
--   `ATTACH_REASON_LAUNCH`사용자는 포함 하는 프로세스를 시작 하기 때문에 프로그램에는 DE이 연결을 나타냅니다.  
+-   `ATTACH_REASON_LAUNCH` 사용자는 포함 하는 프로세스를 시작 하기 때문에 프로그램에는 DE이 연결을 나타냅니다.  
   
--   `ATTACH_REASON_USER`사용자가 프로그램 (또는 프로그램을 포함 하는 프로세스)에 연결 하려면 DE 요청 명시적으로 나타냅니다.  
+-   `ATTACH_REASON_USER` 사용자가 프로그램 (또는 프로그램을 포함 하는 프로세스)에 연결 하려면 DE 요청 명시적으로 나타냅니다.  
   
--   `ATTACH_REASON_AUTO`DE이 다른 프로그램에서 특정 프로세스를 디버깅 하는 이미 때문에 특정 프로그램에 연결 됨을 나타냅니다. 가 자동으로 연결 합니다.  
+-   `ATTACH_REASON_AUTO` DE이 다른 프로그램에서 특정 프로세스를 디버깅 하는 이미 때문에 특정 프로그램에 연결 됨을 나타냅니다. 가 자동으로 연결 합니다.  
   
  이 메서드를 호출할 때는 DE 시퀀스에서 이러한 이벤트를 전송 해야 합니다.  
   

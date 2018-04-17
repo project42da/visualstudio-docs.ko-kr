@@ -1,12 +1,10 @@
 ---
-title: "CA1404: P Invoke 다음에 바로 GetLastError를 호출 합니다. | Microsoft Docs"
-ms.custom: 
+title: 'CA1404: P Invoke 다음에 바로 GetLastError를 호출 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CallGetLastErrorImmediatelyAfterPInvoke
 - CA1404
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CallGetLastErrorImmediatelyAfterPInvoke
 - CA1404
 ms.assetid: 52ae9eff-50f9-4b2f-8039-ca7e49fba88e
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c12d90fe9ae453f3b02c9e6c3f961e54084081aa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 5c9561167be4b80512967ea5991a4d5a31bb17f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1404-call-getlasterror-immediately-after-pinvoke"></a>CA1404: P/Invoke 다음에 바로 GetLastError를 호출하십시오.
 |||  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  플랫폼 간 코드 호출 메서드를 호출할 경우이 규칙에서는 경고를에서 표시 하지 않는를 안전 하 게 및 <xref:System.Runtime.InteropServices.Marshal.GetLastWin32Error%2A> 메서드 호출 수 없는 명시적 또는 암시적으로 인해 변경 하는 오류 코드입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 메서드 및 규칙을 충족 하는 메서드를 보여 줍니다.  
   
  [!code-vb[FxCop.Interoperability.LastErrorPInvoke#1](../code-quality/codesnippet/VisualBasic/ca1404-call-getlasterror-immediately-after-p-invoke_1.vb)]

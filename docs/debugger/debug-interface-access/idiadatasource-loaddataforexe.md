@@ -1,29 +1,25 @@
 ---
 title: 'Idiadatasource:: Loaddataforexe | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaDataSource::loadDataForExe method
 ms.assetid: d94a1068-f53f-44b5-b6fb-00dec361a7f2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0bf987771019755754098ad29a8d178082c59bd5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2e9e68acd3b8c87bb3fa7a609380a2afe8bb9bee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiadatasourceloaddataforexe"></a>IDiaDataSource::loadDataForExe
 열리고.exe/.dll 파일과 관련 된 디버그 데이터를 준비 합니다.  
@@ -73,7 +69,7 @@ HRESULT loadDataForExe (
   
  사용 하 여 메모리에서 직접.pdb 파일을 로드 하려면는 [idiadatasource:: Loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) 메서드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 class MyCallBack: public IDiaLoadCallback  

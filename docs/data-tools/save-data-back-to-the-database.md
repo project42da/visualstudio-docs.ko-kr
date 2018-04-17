@@ -1,11 +1,8 @@
 ---
-title: "데이터는 데이터베이스에 다시 저장 | Microsoft Docs"
-ms.custom: 
+title: 데이터는 데이터베이스에 다시 저장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - datasets [Visual Basic], validating data
 - data validation, datasets
@@ -19,17 +16,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], constraints
 - TableAdapters
 ms.assetid: afe6cb8a-dc6a-428b-b07b-903ac02c890b
-caps.latest.revision: "27"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 733a495c7f6865e9973f5288c9c324baef7f1d8e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 1e7d2b27f0d90677d99d3f0fbc434493fdc7da83
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-data-back-to-the-database"></a>데이터베이스에 다시 데이터를 저장 합니다.
 데이터 집합은 데이터의 메모리 내 복사본입니다. 해당 데이터를 수정 하면 인지 다시 데이터베이스에 변경 내용을 저장 하는 것이 좋습니다. 다음 세 가지 방법 중 하나에서 이렇게합니다.  
@@ -158,7 +155,7 @@ Tableadapter에 익숙한 경우에 다음이 항목 중 하나에 직접 이동
   
  사용 하 여 변경 된 레코드의 하위 집합을 만들 수는 `GetChanges` 데이터 테이블의 메서드 (<xref:System.Data.DataTable.GetChanges%2A>) 또는 데이터 집합의 (<xref:System.Data.DataSet.GetChanges%2A>) 자체입니다. 데이터 테이블에 대 한 메서드를 호출 하는 경우 변경 된 레코드만 포함 된 테이블의 복사본을 반환 합니다. 마찬가지로, 데이터 집합에서 메서드를 호출 하는 경우에 변경 된 레코드와 새 데이터 집합을 얻습니다.  
   
- `GetChanges`단독으로 변경 된 모든 레코드를 반환합니다. 반면, 원하는 전달 하 여 <xref:System.Data.DataRowState> 매개 변수로 `GetChanges` 메서드를 원하는 변경 된 레코드의 하위 집합을 지정할 수 있습니다: 새로 분리 된 레코드를 삭제 하도록 표시 된 레코드는 레코드를 추가 또는 수정 된 레코드입니다.  
+ `GetChanges` 단독으로 변경 된 모든 레코드를 반환합니다. 반면, 원하는 전달 하 여 <xref:System.Data.DataRowState> 매개 변수로 `GetChanges` 메서드를 원하는 변경 된 레코드의 하위 집합을 지정할 수 있습니다: 새로 분리 된 레코드를 삭제 하도록 표시 된 레코드는 레코드를 추가 또는 수정 된 레코드입니다.  
   
  변경 된 레코드의 하위 집합 가져오기 처리를 위해 다른 구성 요소에 레코드를 보내려고 할 때 유용 합니다. 전체 데이터 집합을 전송 하지 않고 구성 요소에서 필요로 하는 레코드만 가져와서 다른 구성 요소와 통신 하는 오버 헤드를 줄일 수 있습니다.   
   
@@ -264,7 +261,7 @@ Tableadapter에 익숙한 경우에 다음이 항목 중 하나에 직접 이동
 > [!NOTE]
 >  값을 설정할 수는 `Parameters` 컬렉션 데이터 어댑터에 대 한 이벤트 처리기에서 일반적으로 수행 하려면 코드에서 직접 <xref:System.Data.DataTable.RowChanging> 이벤트입니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)   
 [만들기 및 Tableadapter를 구성 합니다.](create-and-configure-tableadapters.md)  
 [TableAdapter를 사용 하 여 데이터 업데이트](../data-tools/update-data-by-using-a-tableadapter.md)   

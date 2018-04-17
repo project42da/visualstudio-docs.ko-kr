@@ -2,26 +2,22 @@
 title: 텍스트 버퍼에 액세스 하는 레거시 API를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text buffers
 ms.assetid: cd6cf4ae-fff5-4e23-b293-7cbafdb8aed2
-caps.latest.revision: 15
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 77002e095690da85e73f1a79d405cb5174b96851
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 84bf79ea19fc0867643ce3e8ee6db0a645d9a0dd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-the-text-buffer-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 텍스트 버퍼에 액세스
 텍스트는 텍스트 스트림 및 파일 유지 관리 담당 합니다. 버퍼를 읽거나 쓰게 다른 형식, 있지만 버퍼와 모든 일반 통신은 유니코드를 사용 하 여 수행 됩니다. 레거시 Api에서 텍스트 버퍼가 1 개 또는 2 차원 좌표계 버퍼에서 문자 위치를 식별 하기 사용할 수 있습니다.  
@@ -36,7 +32,7 @@ ms.lasthandoff: 04/10/2018
   
  텍스트 버퍼의 두 번째 책임 파일 지 속성입니다. 이 작업을 수행 하기 위해 텍스트 버퍼 개체 구현 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> 및 프로젝트 항목에 대 한 문서 데이터 개체 구성 요소와 다른 환경 구성 요소를 지 속성에 관련 된 역할을 합니다. 자세한 내용은 참조 [열기 및 프로젝트 항목 저장](../extensibility/internals/opening-and-saving-project-items.md)합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [레거시 API를 사용 하 여 보기 설정 변경](../extensibility/changing-view-settings-by-using-the-legacy-api.md)  
  레거시 API를 사용 하 여 보기 설정을 변경 하는 방법에 설명 합니다.  
   

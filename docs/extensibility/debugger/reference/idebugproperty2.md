@@ -2,28 +2,24 @@
 title: IDebugProperty2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProperty2
 helpviewer_keywords:
 - IDebugProperty2 interface
 ms.assetid: a7d5c70f-a1a5-4120-9f70-184e01c25bff
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8dc1305fb8534dc8e14192268913290aef25f2cc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fb0cd134d30da277ddc1f984e0cf9e57dd5e4963
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugproperty2"></a>IDebugProperty2
 이 인터페이스는 스택 프레임 속성, 프로그램 문서 속성 또는 일부 다른 속성을 나타냅니다. 속성 식 평가의 결과 일반적으로 합니다.  
@@ -41,7 +37,7 @@ IDebugProperty2 : IUnknown
  DE 특정 유형의 값을 나타내기 위해이 인터페이스를 구현 합니다. 예를 들어, 값에는 식 계산, 메모리 또는 레지스터와 해당 값의 목록 표시에 사용 되는 메모리 내 컨텍스트에 결과로 숫자 값을 수 있습니다.  
   
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
- 호출 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 또는 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 평가의 결과 나타내는이 인터페이스를 가져올 수 있습니다. `IDebugExpression2::EvaluateAsync`전송 하 여이 인터페이스를 반환 합니다.는 [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) 인터페이스를 호출 하 여 SDM [GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md) 속성을 검색 합니다.  
+ 호출 [EvaluateSync](../../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 또는 [EvaluateAsync](../../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 평가의 결과 나타내는이 인터페이스를 가져올 수 있습니다. `IDebugExpression2::EvaluateAsync` 전송 하 여이 인터페이스를 반환 합니다.는 [IDebugExpressionEvaluationCompleteEvent2](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2.md) 인터페이스를 호출 하 여 SDM [GetResult](../../../extensibility/debugger/reference/idebugexpressionevaluationcompleteevent2-getresult.md) 속성을 검색 합니다.  
   
  [GetDebugProperty](../../../extensibility/debugger/reference/idebugpropertycreateevent2-getdebugproperty.md) 관련된 스크립트 문서를 제공 하려면이 인터페이스를 반환 합니다.  
   
@@ -80,7 +76,7 @@ IDebugProperty2 : IUnknown
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

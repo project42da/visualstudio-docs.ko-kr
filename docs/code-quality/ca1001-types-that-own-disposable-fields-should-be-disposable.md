@@ -1,12 +1,10 @@
 ---
-title: "CA1001: 삭제 가능한 필드가 있는 형식은 삭제 가능 해야 | Microsoft Docs"
-ms.custom: 
+title: 'CA1001: 삭제 가능한 필드가 있는 형식은 삭제 가능 해야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1001
 - TypesThatOwnDisposableFieldsShouldBeDisposable
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1001
 - TypesThatOwnDisposableFieldsShouldBeDisposable
 ms.assetid: c85c126c-2b16-4505-940a-b5ddf873fb22
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: dd2372acf82d275b0c240ee3fe1c17e687854340
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a1306f594af4639d1b2af24d07e4654f8825cd3d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1001-types-that-own-disposable-fields-should-be-disposable"></a>CA1001: 삭제 가능한 필드가 있는 형식은 삭제 가능해야 합니다.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 클래스 및 구현 하 여 규칙을 충족 하는 클래스 <xref:System.IDisposable>합니다. 클래스는 직접 관리 되지 않는 리소스를 소유 하지 때문에 클래스 종료자를 구현 하지 않습니다.  
   
  [!code-vb[FxCop.Design.DisposableFields#1](../code-quality/codesnippet/VisualBasic/ca1001-types-that-own-disposable-fields-should-be-disposable_1.vb)]

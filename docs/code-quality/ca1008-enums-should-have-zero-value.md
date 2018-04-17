@@ -1,12 +1,10 @@
 ---
-title: "CA1008: 열거형 값이 있어야 0 | Microsoft Docs"
-ms.custom: 
+title: 'CA1008: 열거형 값이 있어야 0 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1008
 - EnumsShouldHaveZeroValue
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1008
 - EnumsShouldHaveZeroValue
 ms.assetid: 3503a73c-360c-416d-8ee4-c2aa44365a05
-caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8aab8c294e9db20e78f653a52875c5f20b1b63c5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: af0b742c42dae829c0e066babf77494f612e8908
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1008-enums-should-have-zero-value"></a>CA1008: 열거형에는 0 값이 있어야 합니다.
 |||  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  에 이전에 제공 된 플래그 특성을 사용 하는 열거형 이외에이 규칙에서는 경고를에서 표시 하지 마십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 충족 하는 두 개의 열거형 및 열거형 `BadTraceOptions`는 규칙을 위반 하 합니다.  
   
  [!code-cpp[FxCop.Design.EnumsZeroValue#1](../code-quality/codesnippet/CPP/ca1008-enums-should-have-zero-value_1.cpp)]

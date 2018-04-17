@@ -1,29 +1,25 @@
 ---
 title: 'Idiasymbol:: Get_length | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_length method
 ms.assetid: cc62f028-d195-4fbf-93bc-10b08bef52d2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c2a1d879b2460b4b09ea47bcb892f760a912e7b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 552406ae28368194b0191396bb4cf5a0616593fd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolgetlength"></a>IDiaSymbol::get_length
 이 기호를 나타내는 개체에 의해 사용 되는 메모리의 바이트 또는 비트 수를 검색 합니다.  
@@ -49,7 +45,7 @@ HRESULT get_length (
 ## <a name="remarks"></a>설명  
  경우는 [LocationType 열거형](../../debugger/debug-interface-access/locationtype.md) 기호는 `LocIsBitField`,이 메서드에 의해 반환 된 길이 비트에서 이며 그렇지 않은 경우 길이 다른 모든 위치 형식에 대 한 바이트 단위입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 IDiaSymbol* pSymbol;  

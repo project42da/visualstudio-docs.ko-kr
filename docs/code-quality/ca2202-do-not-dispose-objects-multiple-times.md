@@ -2,12 +2,9 @@
 title: 'CA2202: 개체 여러 번 삭제 하지 마십시오 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CA2202
 - Do not dispose objects multiple times
@@ -15,17 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - CA2202
 ms.assetid: fa85349a-cf1e-42c8-a86b-eacae1f8bd96
-caps.latest.revision: 20
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3439739626a81636020a6b645ba5820a59747f2d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e8d7132f9f4ac935b49ad61a7b3e4df307395e73
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2202-do-not-dispose-objects-multiple-times"></a>CA2202: 개체를 여러 번 삭제하지 마십시오.
 |||  
@@ -50,7 +46,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다. 경우에 <xref:System.IDisposable.Dispose%2A> 개체가 여러 번 안전 하 게 호출 가능한 것으로 알려져에 대 한 구현 나중에 변경 될 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  중첩 된 `using` 문 (`Using` Visual basic에서) CA2202 경고 위반이 발생할 수 있습니다. 경우 중첩 내부 IDisposable 리소스 `using` 외부의 리소스를 포함 하는 문을 `using` 문에서 `Dispose` 중첩된 리소스의 메서드는 포함 된 리소스를 해제 합니다. 이러한 상황이 발생 하는 경우는 `Dispose` 메서드 외부의 `using` 문에서 리소스를 두 번째로를 삭제 하려고 합니다.  
   
  다음 예제에서는 <xref:System.IO.Stream> 외부에서 생성 된 개체의 Dispose 메서드가에서 문을 사용 하는 내부 끝날 때 해제가 문을 사용 하는 <xref:System.IO.StreamWriter> 포함 된 개체는 `stream` 개체입니다. 외부의 끝에 `using` 문에서 `stream` 개체를 두 번 해제 합니다. 두 번째 릴리스 CA2202에 위반 됩니다.  
@@ -66,7 +62,7 @@ using (Stream stream = new FileStream("file.txt", FileMode.OpenOrCreate))
   
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 문제를 해결 하려면 사용을 `try` / `finally` 외부 대신 블록 `using` 문. 에 `finally` 차단 되어 있는지 확인 합니다는 `stream` 리소스가 null이 됩니다.  
   
 ```  

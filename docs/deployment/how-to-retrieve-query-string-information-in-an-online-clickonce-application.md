@@ -1,12 +1,10 @@
 ---
-title: "방법: 온라인 ClickOnce 응용 프로그램에서 쿼리 문자열 정보 검색 | Microsoft Docs"
-ms.custom: 
+title: '방법: 온라인 ClickOnce 응용 프로그램에서 쿼리 문자열 정보 검색 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, query strings
 - query strings, retrieving information
 ms.assetid: 48ce098a-a075-481b-a5f5-c8ba11f63120
-caps.latest.revision: "19"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: e0fb359dba89a3eef6f257b0cfe560a3f3ab5738
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: ae316f8ed84658c96d78f25f2aaf9c64a800d42c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-query-string-information-in-an-online-clickonce-application"></a>방법: 온라인 ClickOnce 응용 프로그램에서 쿼리 문자열 정보 검색
 *쿼리 문자열* 은 임의의 정보를 *name=value*형식으로 포함하는, 물음표(?)로 시작되는 URL의 일부입니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 에 호스트하는 `WindowsApp1` 이라는 이름의 `servername`응용 프로그램이 있으며, 응용 프로그램이 시작될 때 `username` 변수에 대해 값을 전달하려 한다고 가정해 보겠습니다. URL은 다음과 같습니다.  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[ClickOnceQueryString#1](../deployment/codesnippet/CSharp/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.cs)]
      [!code-vb[ClickOnceQueryString#1](../deployment/codesnippet/VisualBasic/how-to-retrieve-query-string-information-in-an-online-clickonce-application_1.vb)]  
   
-2.  이름으로 인덱싱된 쿼리 문자열 매개 변수의 <xref:System.Collections.DictionaryBase.Dictionary%2A> 를 검색하려면 전에 정의한 함수를 호출합니다.  
+2.  이름으로 인덱싱된 쿼리 문자열 매개 변수의 <xref:System.Collections.DictionaryBase.Dictionary%2A>를 검색하려면 전에 정의한 함수를 호출합니다.  
   
 ### <a name="to-enable-query-string-passing-in-a-clickonce-application-with-mageuiexe"></a>MageUI.exe를 사용하여 ClickOnce 응용 프로그램에서 쿼리 문자열이 전달되도록 하려면  
   

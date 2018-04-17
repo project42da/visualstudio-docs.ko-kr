@@ -2,28 +2,24 @@
 title: IDebugProperty3::GetStringChars | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProperty3::GetStringChars
 helpviewer_keywords:
 - IDebugProperty3::GetStringChars
 ms.assetid: 832c37f3-85cb-4227-8ab2-f27a80eafe90
-caps.latest.revision: 7
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6af447a8d22881ebb0b970863aaa5ede7a7ddf26
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d2f7d5430326f57acf686b90f911445cc36dbf02
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugproperty3getstringchars"></a>IDebugProperty3::GetStringChars
 이 속성과 연결 된 문자열을 검색 하 고 사용자가 제공한 버퍼에 저장 합니다.  
@@ -67,7 +63,7 @@ int GetStringChars(
 > [!NOTE]
 >  C + +에서는 반환 된 문자열에는 null 종결 문자 포함 되지 않습니다. 를 지정 하는 경우 `pceltFetched` 문자열의 문자 수를 지정 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  
 ```cpp  
 CStringW RetrievePropertyString(IDebugProperty2 *pPropInfo)  

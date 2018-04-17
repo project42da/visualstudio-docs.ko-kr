@@ -1,12 +1,10 @@
 ---
-title: ": P Invoke 진입점 ca1400 | Microsoft Docs"
-ms.custom: 
+title: ': P Invoke 진입점 ca1400 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1400
 - PInvokeEntryPointsShouldExist
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - PInvokeEntryPointsShouldExist
 - CA1400
 ms.assetid: 1d64e470-7b2f-4cca-8fb0-ac92829e6332
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 95e4b0841cfed5ae5ba2428a9a38da2ab43b8527
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 53e677308d5dcb5e89b410e4ab06a33a6c0caab4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1400-pinvoke-entry-points-should-exist"></a>CA1400: P/Invoke 진입점이 있어야 합니다.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  관리 되지 않는 라이브러리 참조 하는 관리 되는 어셈블리와 동일한 디렉터리에 있으면이 규칙에서는 경고를에서 표시 하지 마십시오. 관리 되지 않는 라이브러리를 찾을 수 없는 경우에는이 규칙에서 경고를 표시 하지 않아도 안전 수도 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 형식을 보여 줍니다. 라고 하는 함수가 `DoSomethingUnmanaged` kernel32.dll에서 발생 합니다.  
   
  [!code-csharp[FxCop.Interoperability.DLLExists#1](../code-quality/codesnippet/CSharp/ca1400-p-invoke-entry-points-should-exist_1.cs)]  

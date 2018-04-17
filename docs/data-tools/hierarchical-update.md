@@ -1,11 +1,8 @@
 ---
-title: "계층적 업데이트 | Microsoft Docs"
-ms.custom: 
+title: 계층적 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,17 +17,17 @@ helpviewer_keywords:
 - updated data saving
 - related tables, saving
 ms.assetid: 68bae3f6-ec9b-45ee-a33a-69395029f54c
-caps.latest.revision: "26"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: b02ef945136297287d18c2b29ea2d3afab1b3683
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 1b374ac0b062069e11a5fa9b15822a4146cbaebf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchical-update"></a>계층적 업데이트
 *계층적 업데이트* 규칙 참조 무결성을 유지 하면서 데이터베이스에 다시 (두 개 이상의 관련 테이블 집합)의 업데이트 된 데이터를 저장 하는 프로세스를 말합니다. *참조 무결성* 삽입, 업데이트 및 삭제 관련된 레코드의 동작을 제어 하는 데이터베이스에서 제약 조건이 제공 일관성 규칙을 가리킵니다. 예를 들어 이며 해당 고객에 대 한 주문을 만들 수 있도록 허용 하기 전에 customer 레코드를 만들을 적용 하는 참조 무결성  데이터 집합에 있는 관계에 대 한 자세한 내용은 참조 [데이터 집합의 관계](../data-tools/relationships-in-datasets.md)  

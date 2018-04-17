@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 배포 API를 사용 하 여 프로그래밍 방식으로 응용 프로그램 업데이트 확인 | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 배포 API를 사용 하 여 프로그래밍 방식으로 응용 프로그램 업데이트 확인 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, updates
 - application updates
 ms.assetid: 1a886310-67c8-44e5-a382-c2f0454f887d
-caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 02e6a4c0b69bf9e9d6170175b4324ccb226854e2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 2812a12541d71d29beff453c66344f85be904f5a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-check-for-application-updates-programmatically-using-the-clickonce-deployment-api"></a>방법: ClickOnce 배포 API를 사용하여 프로그래밍 방식으로 응용 프로그램 업데이트 확인
 ClickOnce 배포 후 응용 프로그램을 업데이트 하는 두 가지를 제공 합니다. 첫 번째 방법은 특정 간격에 따라 업데이트를 자동으로 확인 하려면 ClickOnce 배포를 구성할 수 있습니다. 두 번째 방법을 사용 하는 코드를 작성할 수 있습니다는 <xref:System.Deployment.Application.ApplicationDeployment> 업데이트를 확인 하려면 클래스 사용자 요청과 같은 이벤트를 기반으로 합니다.  
@@ -50,7 +48,7 @@ ClickOnce 배포 후 응용 프로그램을 업데이트 하는 두 가지를 �
   
 ### <a name="using-mageexe-to-deploy-an-application-that-checks-for-updates-programmatically"></a>Mage.exe를 사용 하 여 프로그래밍 방식으로 업데이트를 확인 하는 응용 프로그램을 배포 하려면  
   
--   에 설명 된 대로 Mage.exe를 사용 하 여 응용 프로그램을 배포 하기 위한 지침에 따라 [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)합니다. 배포 매니페스트를 생성 하는 Mage.exe를 호출할 때 명령줄 스위치를 사용 하 고 있는지 확인 하십시오 `providerUrl`, 여기서 ClickOnce 업데이트를 확인할 URL을 지정할 수 있습니다. 응용 프로그램에서 업데이트 경우 [http://www.adatum.com/MyApp](http://www.adatum.com/MyApp), 예를 들어 배포 매니페스트를 생성 하는를 호출 하 여 다음과 같습니다.  
+-   에 설명 된 대로 Mage.exe를 사용 하 여 응용 프로그램을 배포 하기 위한 지침에 따라 [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)합니다. 배포 매니페스트를 생성 하는 Mage.exe를 호출할 때 명령줄 스위치를 사용 하 고 있는지 확인 하십시오 `providerUrl`, 여기서 ClickOnce 업데이트를 확인할 URL을 지정할 수 있습니다. 응용 프로그램에서 업데이트 경우 [ http://www.adatum.com/MyApp ](http://www.adatum.com/MyApp), 예를 들어 배포 매니페스트를 생성 하는를 호출 하 여 다음과 같습니다.  
   
     ```  
     mage -New Deployment -ToFile WindowsFormsApp1.application -Name "My App 1.0" -Version 1.0.0.0 -AppManifest 1.0.0.0\MyApp.manifest -providerUrl http://www.adatum.com/MyApp/MyApp.application  

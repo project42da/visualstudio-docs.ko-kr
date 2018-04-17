@@ -1,13 +1,10 @@
 ---
 title: IntelliTrace | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/18/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.historicaldebug.overview
 helpviewer_keywords:
@@ -23,14 +20,14 @@ helpviewer_keywords:
 - IntelliTrace, debugging after a crash
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f4edf6c446bdcd35585a60d97965d2d6ee21ad1
-ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
+ms.openlocfilehash: 655bbde8ca1e2ee1cfed1ae2b57f99ed91525ec7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="intellitrace"></a>IntelliTrace
 
@@ -180,7 +177,7 @@ IntelliTrace가 호출 정보를 어느 정도 수집할지 제어하려면 관�
 
 호출 정보를 수집하면 응용 프로그램 성능이 크게 느려질 수 있습니다. 또한 IntelliTrace 로그 파일(.iTrace 파일)을 디스크에 저장하는 경우 로그 파일의 크기도 커질 수 있습니다. 이러한 효과를 최소화하려면 관심 있는 모듈에 대한 호출 정보만 수집합니다.  .ITrace 파일의 최대 크기를 변경 하려면로 이동 **도구**, **옵션**, **IntelliTrace**, **고급**합니다. 
 
-## <a name="in-this-section"></a>단원 내용
+## <a name="in-this-section"></a>섹션 내용
 
 [IntelliTrace 기능](../debugger/intellitrace-features.md)
 [배포 후 문제 진단](../debugger/diagnose-problems-after-deployment.md)

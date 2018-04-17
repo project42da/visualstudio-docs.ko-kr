@@ -1,23 +1,21 @@
 ---
-title: "1x1 뷰포트 크기 변형 | Microsoft Docs"
-ms.custom: 
+title: 1x1 뷰포트 크기 변형 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 3dbc3247-00f5-4644-8ff9-72e9febcf09a
-caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ab9f8be1d202f21147afaf9f4f52a3c90c403ed8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3f645c078314522d767e578cc6d5770969971c5f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="1x1-viewport-size-variant"></a>1x1 뷰포트 크기 변형
 모든 렌더링 대상의 뷰포트 크기를 1x1 픽셀로 줄입니다.  
@@ -30,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  `ID3D11DeviceContext::OMSetRenderTargets` 또는 `ID3D11DeviceContext::RSSetViewports`를 호출한 후에는 항상 뷰포트 크기가 1x1로 다시 설정됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 변형은 다음과 같은 코드를 사용하여 재현할 수 있습니다.  
   
 ```  

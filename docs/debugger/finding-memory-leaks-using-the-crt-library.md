@@ -1,12 +1,10 @@
 ---
-title: "CRT 라이브러리를 사용 하 여 메모리 누수를 찾는 | Microsoft Docs"
-ms.custom: 
+title: CRT 라이브러리를 사용 하 여 메모리 누수를 찾는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -29,16 +27,16 @@ helpviewer_keywords:
 - _CRTDBG_MAP_ALLOC
 - _CrtSetDbgFlag
 ms.assetid: cf6dc7a6-cd12-4283-b1b6-ea53915f7ed1
-caps.latest.revision: "28"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e67f3c3b8cc10e6aa3e7c9b996cd1c608d893eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c02fea4639d130840f3f5dbbd9e77693c676d304
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="finding-memory-leaks-using-the-crt-library"></a>CRT 라이브러리를 사용하여 메모리 누수 찾기
 이전에 할당한 메모리를 올바르게 할당 해제하지 못한 상태로 정의되는 메모리 누수는 C/C++ 응용 프로그램에서 가장 미묘하고 찾아 내기 어려운 버그입니다. 소량의 메모리 누수는 처음에는 알아차리지 못하는 경우가 많지만 시간이 지나면서 누적된 메모리 누수량이 많아지면 성능 저하에서부터 메모리 고갈로 인한 응용 프로그램 충돌에 이르기까지 다양한 증상이 발생할 수 있습니다. 더 심한 경우 누수 응용 프로그램이 사용 가능한 메모리를 모두 소진하여 다른 응용 프로그램에서도 충돌이 발생하면 문제의 원인이 되는 응용 프로그램을 파악하기가 어려워질 수 있습니다. 메모리 누수는 겉으로는 심각해 보이지 않더라도 반드시 해결해야 하는 다른 문제의 전조 증상인 경우도 있습니다.  
@@ -106,7 +104,7 @@ Object dump complete.
   
  두 번째 보고서에는 누수된 메모리가 처음 할당된 파일 이름 및 줄 번호가 표시된다는 차이점이 있습니다.  
   
- `_CRTDBG_MAP_ALLOC` 의 정의 여부에 관계없이 메모리 누수 보고서에 항상 표시되는 정보는 다음과 같습니다.  
+ `_CRTDBG_MAP_ALLOC`의 정의 여부에 관계없이 메모리 누수 보고서에 항상 표시되는 정보는 다음과 같습니다.  
   
 -   메모리 할당 번호(이 예제의 경우 `18` )  
   
@@ -114,7 +112,7 @@ Object dump complete.
   
 -   16진수 메모리 위치(이 예제의 경우 `0x00780E80` )  
   
--   블록 크기(이 예제의 경우 `64 bytes` )  
+-   블록 크기(이 예제의 경우 `64 bytes`)  
   
 -   블록 내 데이터의 처음 16바이트(16진수 형식)  
   
@@ -245,7 +243,7 @@ Total allocations: 3764 bytes.
   
 ```  
   
- 코드의 한 섹션에서 메모리 누수가 발생했는지 확인하려면 해당 섹션 앞뒤에서 메모리 상태 스냅숏을 만든 다음 `_ CrtMemDifference` 를 사용하여 두 상태를 비교합니다.  
+ 코드의 한 섹션에서 메모리 누수가 발생했는지 확인하려면 해당 섹션 앞뒤에서 메모리 상태 스냅숏을 만든 다음 `_ CrtMemDifference`를 사용하여 두 상태를 비교합니다.  
   
 ```  
 _CrtMemCheckpoint( &s1 );  
@@ -256,12 +254,12 @@ if ( _CrtMemDifference( &s3, &s1, &s2) )
    _CrtMemDumpStatistics( &s3 );  
 ```  
   
- `_CrtMemDifference` 는 메모리 상태 `s1` 과 `s2` 를 비교하고,`s3`과 `s1` 의 차이를 나타내는 결과를 `s2`에 반환합니다.  
+ `_CrtMemDifference`는 메모리 상태 `s1`과 `s2`를 비교하고, `s3`과 `s1`의 차이를 나타내는 결과를 `s2`에 반환합니다.  
   
- 메모리 누수를 찾는 한 가지 기술은 응용 프로그램의 처음과 마지막에 `_CrtMemCheckpoint` 호출을 배치한 다음 `_CrtMemDifference`를 사용하여 결과를 비교하는 작업으로 시작됩니다. `_CrtMemDifference` 가 메모리 누수를 표시하는 경우, `_CrtMemCheckpoint` 호출을 추가하여 누수 원인을 확인할 때까지 이진 검색을 통해 프로그램을 나눌 수 있습니다.  
+ 메모리 누수를 찾는 한 가지 기술은 응용 프로그램의 처음과 마지막에 `_CrtMemCheckpoint` 호출을 배치한 다음 `_CrtMemDifference`를 사용하여 결과를 비교하는 작업으로 시작됩니다. `_CrtMemDifference`가 메모리 누수를 표시하는 경우, `_CrtMemCheckpoint` 호출을 추가하여 누수 원인을 확인할 때까지 이진 검색을 통해 프로그램을 나눌 수 있습니다.  
   
 ## <a name="false-positives"></a>가양성(false positive)  
- 간혹 `_CrtDumpMemoryLeaks` 가 메모리 누수를 잘못 표시하는 경우도 있습니다. 이러한 오류는 내부 할당을 `_CRT_BLOCK`이나 `_CLIENT_BLOCK`대신 _NORMAL_BLOCK으로 표시하는 라이브러리를 사용할 때 발생할 수 있습니다. 이 경우 `_CrtDumpMemoryLeaks` 가 사용자 할당과 내부 라이브러리 할당을 구별할 수 없게 됩니다. `_CrtDumpMemoryLeaks`를 호출한 이후에 라이브러리 할당을 위한 전역 소멸자가 실행되면 모든 내부 라이브러리 할당이 메모리 누수로 보고됩니다. Visual Studio .NET 이전 버전의 표준 템플릿 라이브러리에서는 `_CrtDumpMemoryLeaks` 가 이러한 가양성(false positive)을 보고했지만, 최신 릴리스에서는 이 문제가 해결되었습니다.  
+ 간혹 `_CrtDumpMemoryLeaks`가 메모리 누수를 잘못 표시하는 경우도 있습니다. 이러한 오류는 내부 할당을 `_CRT_BLOCK`이나 `_CLIENT_BLOCK` 대신 _NORMAL_BLOCK으로 표시하는 라이브러리를 사용할 때 발생할 수 있습니다. 이 경우 `_CrtDumpMemoryLeaks`가 사용자 할당과 내부 라이브러리 할당을 구별할 수 없게 됩니다. `_CrtDumpMemoryLeaks`를 호출한 이후에 라이브러리 할당을 위한 전역 소멸자가 실행되면 모든 내부 라이브러리 할당이 메모리 누수로 보고됩니다. Visual Studio .NET 이전 버전의 표준 템플릿 라이브러리에서는 `_CrtDumpMemoryLeaks`가 이러한 가양성(false positive)을 보고했지만, 최신 릴리스에서는 이 문제가 해결되었습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [CRT 디버그 힙 정보](../debugger/crt-debug-heap-details.md)   

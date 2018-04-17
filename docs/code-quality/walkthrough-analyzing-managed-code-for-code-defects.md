@@ -1,24 +1,22 @@
 ---
-title: "코드 오류에 대 한 관리 코드 분석 하는 연습 | Microsoft Docs"
-ms.custom: 
+title: 코드 오류에 대 한 관리 코드 분석 하는 연습 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/29/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis [Visual Studio]
 - managed code, analyzing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e1c708f31d31dd811017015cd37c7e60d49beef9
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 3af6d4f1580313457aa553ce11f920be5376641c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>연습: 코드에 대 한 관리 코드 분석 오류
 
@@ -30,7 +28,7 @@ ms.lasthandoff: 02/01/2018
 
 ### <a name="to-create-a-class-library"></a>클래스 라이브러리를 만들려면
 
-1. 에 **파일** 메뉴 선택 **새로** > **프로젝트...** .
+1. **파일** 메뉴에서 **새로 만들기** > **프로젝트...**를 선택합니다.
 
 1. 에 **새 프로젝트** 대화 상자에서 **설치 됨** > **Visual C#**를 선택한 후 **클래식 Windows 데스크톱**합니다.
 
@@ -112,7 +110,7 @@ ms.lasthandoff: 02/01/2018
 
    1. 코드를 추가 `using System.Runtime.Serialization;` Class1.cs 파일의 시작 부분에 있습니다.
 
-   1. 그런 다음 생성자를 추가 합니다.`protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
+   1. 그런 다음 생성자를 추가 합니다. `protected demo (SerializationInfo info, StreamingContext context) : base(info, context) { } to the class demo.`
 
    [CA1032: 표준 예외 생성자를 구현](../code-quality/ca1032-implement-standard-exception-constructors.md): Microsoft.Design:이 클래스에 다음 생성자를 추가 합니다: 공용 demo()
 
@@ -197,6 +195,6 @@ ms.lasthandoff: 02/01/2018
 
      경고 또는 오류 없이 프로젝트가 빌드됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [관리 코드에 대 한 코드 분석](../code-quality/code-analysis-for-managed-code-overview.md)

@@ -1,28 +1,26 @@
 ---
-title: "Blend에서 XAML 디버그 | Microsoft Docs"
-ms.custom: 
+title: Blend에서 XAML 디버그 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: 29a37182-2a2c-47e4-a4a9-2d5412738fed
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 8406f07b6f74211b4df873c7eae054e9ab67749c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: efcb38238bfc1d8001e99d6755da1f3e2f02edcd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-xaml-in-blend"></a>Blend에서 XAML 디버그
 [!INCLUDE[blend_first](../debugger/includes/blend_first_md.md)]의 도구를 사용하여 앱에서 XAML을 디버그할 수 있습니다. 프로젝트를 빌드할에 오류가 표시 됩니다는 **결과** 패널입니다. 오류를 두 번 클릭하여 오류와 관련된 태그를 찾습니다. 작업 공간이 더 필요한 경우 숨길 수 있습니다는 **결과** F12 키를 눌러 패널입니다.  
@@ -109,13 +107,13 @@ ms.lasthandoff: 12/22/2017
   
 1.  목록에서 첫 번째 오류를 두 번 클릭합니다. 설명은 "값 '<'는 특성에서 사용할 수 없습니다."입니다. 오류를 두 번 클릭하면 포인터가 코드에서 해당하는 위치를 찾습니다. `<` 앞의 `Button`은(는) 유효하지만 오류 메시지에서 제시한 대로 특성은 아닙니다. 코드의 이전 줄을 살펴보면 특성 `Top`의 닫는 따옴표가 누락되어 있습니다. 닫는 따옴표를 입력합니다. 이 오류는 **결과** 패널 변경 내용을 반영 하도록 업데이트 합니다.  
   
-2.  설명을 두 번 클릭 "'0' 올바르지 이름의 시작 부분에 있습니다." `Margin="0,149,0,0"`형식이 올바른 것으로 나타납니다. 그러나 `Margin`의 색 코딩이 해당 코드에서 `Margin`의 다른 인스턴스와 일치하지 않습니다. 이전 이름/값 쌍(`VerticalAlignment="Top`)에 닫는 따옴표가 누락되어 있기 때문에, `Margin="`은 이전 특성 값의 일부분으로 읽고 0은 이름/값 쌍의 시작으로 읽습니다. `Top`의 닫는 따옴표를 입력합니다. 오류 목록에는 **결과** 패널 변경 내용을 반영 하도록 업데이트 합니다.  
+2.  설명을 두 번 클릭 "'0' 올바르지 이름의 시작 부분에 있습니다." `Margin="0,149,0,0"` 형식이 올바른 것으로 나타납니다. 그러나 `Margin`의 색 코딩이 해당 코드에서 `Margin`의 다른 인스턴스와 일치하지 않습니다. 이전 이름/값 쌍(`VerticalAlignment="Top`)에 닫는 따옴표가 누락되어 있기 때문에, `Margin="`은 이전 특성 값의 일부분으로 읽고 0은 이름/값 쌍의 시작으로 읽습니다. `Top`의 닫는 따옴표를 입력합니다. 오류 목록에는 **결과** 패널 변경 내용을 반영 하도록 업데이트 합니다.  
   
 3.  나머지 오류 "닫는 XML 태그 '단추'가 일치하지 않습니다."를 두 번 클릭합니다. 포인터는 닫는 위치한 **그리드** 태그 (`</Grid>`), 제안 오류 내에 있는 `Grid` 개체입니다. 두 번째 `Button` 개체에 닫는 태그가 누락되어 있습니다. 닫는 추가한 후 `/`, **결과** 패널 목록이 업데이트 됩니다. 이러한 초기 오류를 해결했으므로 두 가지의 추가 오류가 식별되었습니다.  
   
 4.  "멤버 '콘텐츠'를 인식할 수 없거나 액세스할 수 없습니다."를 두 번 클릭합니다. `c`의 `content`는 대문자여야 합니다. 소문자 "c"를 대문자 "c"로 바꿉니다.  
   
-5.  "속성 'Mame'이 'http://schemas.microsoft.com/winfx/2006/xaml' 네임스페이스에 없습니다."를 두 번 클릭합니다. "Mame"의 "M"은 "N"이어야 합니다. "M"을 "N"으로 바꿉니다. XAML을 구문 분석할 수 있으므로 응용 프로그램이 디자인 화면에 나타납니다.  
+5.  두 번 클릭 "'Mame'에 존재 하지 않는 속성은 'http://schemas.microsoft.com/winfx/2006/xaml' 네임 스페이스입니다." "Mame"의 "M"은 "N"이어야 합니다. "M"을 "N"으로 바꿉니다. XAML을 구문 분석할 수 있으므로 응용 프로그램이 디자인 화면에 나타납니다.  
   
      ![Blend for Visual Studio에서에서 XAML 디버깅](../debugger/media/blend_debugartboard_xaml.png "blend_debugArtboard_XAML")  
   

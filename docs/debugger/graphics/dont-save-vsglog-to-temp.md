@@ -1,23 +1,21 @@
 ---
 title: DONT_SAVE_VSGLOG_TO_TEMP | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: f27ab0e6-9575-4ca0-9901-37d3e5c3a2f5
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5a98081aa73d11d9a2edea9293804d6c83a211d4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c46fc7aa6de405fb6a48d822c5e676d15f442d6c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dontsavevsglogtotemp"></a>DONT_SAVE_VSGLOG_TO_TEMP
 그래픽 로그 파일이 사용자의 임시 파일 디렉터리에 저장되는지 여부를 존재로 정의합니다.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/22/2017
   
  그래픽 로그 파일을 임시 파일 디렉터리에 저장 되지 않도록 방지 하려면 정의 해야 `DONT_SAVE_VSGLOG_TO_TEMP` 포함 하기 전에 `vsgcapture.h`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에는 호스트 컴퓨터에 절대 경로에 그래픽 로그 파일을 저장 하는 방법을 보여 줍니다.  
   
 ```  

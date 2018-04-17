@@ -1,12 +1,10 @@
 ---
-title: "연습: ClickOnce 배포 API에서 요청 시 어셈블리 다운로드 | Microsoft Docs"
-ms.custom: 
+title: '연습: ClickOnce 배포 API에서 요청 시 어셈블리 다운로드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - ClickOnce deployment, on-demand download
 - on-demand assemblies, ClickOnce
 ms.assetid: d20e2789-8621-4806-b5b7-841122da1456
-caps.latest.revision: "16"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 640c0852a3745d11aae119e3c00e024b594d9132
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: a9dc200d2dbab68dd3cc4577f5024df4077bfc6a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api"></a>연습: ClickOnce 배포 API에서 요청 시 어셈블리 다운로드
 기본적으로 모든 어셈블리에 포함 된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 처음 실행할 때 응용 프로그램 다운로드 됩니다. 그러나 응용 프로그램의 작은 집합이 사용자에서 사용 되는 부분을 할 수 있습니다. 이 경우 해당 형식 중 하나를 만들 때에만 어셈블리를 다운로드하고자 할 수 있습니다. 다음 연습에는 "optional"로 응용 프로그램의 특정 어셈블리를 표시 하는 방법을 보여 줍니다 및의 클래스를 사용 하 여이 다운로드 하는 방법의 <xref:System.Deployment.Application> 공용 언어 런타임 (CLR) 요청할 때 네임 스페이스입니다.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  이 절차를 사용하려면 완전 신뢰 상태에서 응용 프로그램을 실행해야 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>필수 조건  
  이 연습을 완료 하려면 다음 구성 요소가 필요 합니다.  
   
 -   Windows SDK Windows SDK는 Microsoft 다운로드 센터에서 다운로드할 수 있습니다.  

@@ -2,26 +2,22 @@
 title: IDebugExpressionEvaluator3::Parse2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDebugExpressionEvaluator3::Parse2
 ms.assetid: 78099628-d600-4f76-b7c8-ee07c864af1e
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c4c5e2a62cfbe44fe6a68da703df6ff81a89d07e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 64344d66bcdd0ab64f6dd1e944f161e286c132de
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugexpressionevaluator3parse2"></a>IDebugExpressionEvaluator3::Parse2
 기호 공급자 및 평가 프레임의 주소를 제공 하는 구문 분석 된 식에는 식 문자열을 변환 합니다.  
@@ -85,7 +81,7 @@ HRESULT Parse2 (
 ## <a name="remarks"></a>설명  
  이 메서드는 구문 분석 된 식, 실제 값을 생성합니다. 구문 분석 된 식 준비가 되었습니다 평가할 수, 즉, 값으로 변환 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CEE** 공개 하는 개체는 [IDebugExpressionEvaluator3](../../../extensibility/debugger/reference/idebugexpressionevaluator3.md) 인터페이스입니다.  
   
 ```cpp  

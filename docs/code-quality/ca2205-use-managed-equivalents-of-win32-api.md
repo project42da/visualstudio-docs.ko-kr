@@ -1,12 +1,10 @@
 ---
-title: "CA2205: 사용 하 여 관리 되는 Win32 API의 해당 항목 | Microsoft Docs"
-ms.custom: 
+title: 'CA2205: 사용 하 여 관리 되는 Win32 API의 해당 항목 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - UseManagedEquivalentsOfWin32Api
 - CA2205
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - UseManagedEquivalentsOfWin32Api
 - CA2205
 ms.assetid: 1c65ab59-3e50-4488-a727-3969c7f6cbe4
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: ea1c408e524614009c8c12bda85afad397faf607
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54c21ea55b1679e05c46c9cb0105c0418133a3cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2205-use-managed-equivalents-of-win32-api"></a>CA2205: Win32 API에 있는 동일한 기능의 관리되는 항목을 사용하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  제안된 된 대체 메서드가 필요한 기능을 제공 하지 않는 경우에이 규칙에서 경고를 표시 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  플랫폼에는 다음 예제와 규칙을 위반 하는 메서드 정의 호출 합니다. 또한 플랫폼에 대 한 호출 메서드를 호출 하 고 해당 하는 관리 되는 메서드 표시 됩니다.  
   
  [!code-csharp[FxCop.Usage.ManagedEquivalents#1](../code-quality/codesnippet/CSharp/ca2205-use-managed-equivalents-of-win32-api_1.cs)]

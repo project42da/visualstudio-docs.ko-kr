@@ -1,26 +1,24 @@
 ---
-title: "첨부 파일 시작 기반 | Microsoft Docs"
-ms.custom: 
+title: 첨부 파일 시작 기반 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, launching
 - debug engines, attaching to programs
 ms.assetid: 362f00ac-1909-4a3a-bacb-c0ceb5549816
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d05f0b8d8fd0190391da831351b65d873eac4efc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 892518cc92286f9415e39c96b6ed2afa8eb0d792
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="launch-based-attachment"></a>시작 기반 첨부 파일
 프로그램으로 시작 기반 첨부 파일은 자동입니다. 프로그램을 호스트 하는 프로세스는 SDM에 의해 시작 되 면 시작 기반 첨부 파일 수동 첨부 메서드와 비슷한 경로 따릅니다. 자세한 내용은 참조 [은 프로그램에 연결할](../../extensibility/debugger/attaching-to-the-program.md)합니다.  

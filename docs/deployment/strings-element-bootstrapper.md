@@ -1,13 +1,10 @@
 ---
-title: "&lt;문자열&gt; 요소 (부트스트래퍼) | Microsoft Docs"
-ms.custom: 
+title: '&lt;문자열&gt; 요소 (부트스트래퍼) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild.GenerateBootstrapper.NoStringsForCulture
 - MSBuild.GenerateBootstrapper.ProductCultureNotFound
@@ -19,17 +16,16 @@ dev_langs:
 helpviewer_keywords:
 - <Strings> element [bootstrapper]
 ms.assetid: d5ea3613-5fc9-4a11-bef3-46a01178bf60
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd950dab8fe00ecdaec83c64a819b58193b1272
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4d6a7d9ec23995fa2ea7114afa9b785c4fd4e6e3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltstringsgt-element-bootstrapper"></a>&lt;문자열&gt; 요소 (부트스트래퍼)
 제품 이름, 패키지 이름 및 설치 오류 메시지에 대 한 지역화 된 문자열을 정의합니다.  
@@ -51,13 +47,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="string"></a>문자열  
  `String` 의 자식인 요소는 `Strings` 요소입니다. A `Strings` 하나 이상의 요소를 가질 수 `String` 요소입니다.  
   
- `String`에 다음 특성이 있습니다.  
+ `String` 에 다음 특성이 있습니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수. 문자열의 이름입니다.|  
+|`Name`|필수 요소. 문자열의 이름입니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 지정에 대 한 영어 문자열의 모든 고 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 설치 관리자입니다.  
   
 ```  

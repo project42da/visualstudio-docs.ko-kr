@@ -2,28 +2,24 @@
 title: 새 데이터 원본을 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.datasource.datasourcefieldspicker
 helpviewer_keywords:
 - data [Visual Studio], data sources
 - data sources
 ms.assetid: ed28c625-bb89-4037-bfde-cfa435d182a2
-caps.latest.revision: 56
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 865f575aefedb5813a72d7a0bb2024bc85313db0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7dae171cb5f620d9dac09edb966ac1291a127d65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-new-data-sources"></a>새 데이터 원본 추가
 Visual Studio에서.NET 데이터 도구의 컨텍스트에서 용어 *데이터 소스* 는 데이터 저장소에 연결 하 고.NET 응용 프로그램에 데이터를 노출 하는.NET 개체를 나타냅니다. Visual Studio 디자이너에서 데이터베이스 개체를 끌어서 폼에 데이터를 바인딩하는 상용구 코드를 생성 하는 데이터 원본의 출력을 사용할 수는 **데이터 소스** 창. 이 종류의 데이터 원본이 될 수 있습니다.  
@@ -76,7 +72,7 @@ Visual Studio에서.NET 데이터 도구의 컨텍스트에서 용어 *데이터
   
 -   WCF Data Services. 자세한 내용은 참조 [개요](/dotnet/framework/data/wcf/wcf-data-services-overview)합니다.  
   
--   WCF 서비스입니다. 자세한 내용은 참조 [Windows Communication Foundation 서비스 및 Visual Studio에서 WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)합니다.  
+-   WCF 서비스. 자세한 내용은 참조 [Windows Communication Foundation 서비스 및 Visual Studio에서 WCF Data Services](../data-tools/windows-communication-foundation-services-and-wcf-data-services-in-visual-studio.md)합니다.  
   
 -   웹 서비스입니다.  
   

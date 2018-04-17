@@ -1,8 +1,8 @@
 ---
-title: "CA2117: APTCA 형식은 APTCA 기본 형식만 확장만 해야 | Microsoft Docs"
+title: 'CA2117: APTCA 형식은 APTCA 기본 형식만 확장만 해야 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.technology: vs-ide-code-analysis
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CA2117
 - AptcaTypesShouldOnlyExtendAptcaBaseTypes
@@ -12,14 +12,14 @@ helpviewer_keywords:
 ms.assetid: c505b586-2f1e-47cb-98ee-a5afcbeda70f
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4987d9624e448cfcdba263bb08ceed4e6c1c7b60
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 3fec097019a6b1a57346cc3965f364f96740ee75
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2117-aptca-types-should-only-extend-aptca-base-types"></a>CA2117: APTCA 형식은 APTCA 기본 형식만 확장해야 합니다.
 
@@ -62,7 +62,7 @@ APTCA 특성이 필요한 경우 완전 신뢰에 대 한 상속 요청 형식�
 
 이 규칙에서는 경고를에서 표시 하지 않으려면,는 해당 형식에서 노출 하는 보호 된 멤버 직접 또는 간접적으로 불가 신뢰할 수 없는 호출자가 중요 한 정보, 작업 또는 악용에서 사용할 수 있는 리소스에 액세스할 수를 확인 해야 합니다.
 
-## <a name="example"></a>예
+## <a name="example"></a>예제
 
 다음 예제에서는 두 어셈블리와 테스트 응용 프로그램을 사용 하 여이 규칙으로 검색 하는 보안 문제를 나타냅니다. 첫 번째 어셈블리에 APTCA 특성이 없고 부분적으로 신뢰할 수 있는 형식 상속 되지 않습니다 (나타내는 `T2` 이전 설명의).
 
@@ -88,7 +88,7 @@ APTCA 특성이 필요한 경우 완전 신뢰에 대 한 상속 요청 형식�
 
 [CA2116: APTCA 메서드는 APTCA 메서드만 호출해야 합니다.](../code-quality/ca2116-aptca-methods-should-only-call-aptca-methods.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)
 - [부분적으로 신뢰할 수 있는 코드에서 라이브러리 사용](/dotnet/framework/misc/using-libraries-from-partially-trusted-code)

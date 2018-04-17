@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 응용 프로그램에 대 한 클라이언트 컴퓨터에 신뢰할 수 있는 게시자 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 응용 프로그램에 대 한 클라이언트 컴퓨터에 신뢰할 수 있는 게시자 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - ClickOnce deployment, install without prompting
 - trusted application deployment, Trusted Publishers
 ms.assetid: 35fe324c-45a1-4509-b7be-5c18b4b1b4ab
-caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 758bf6b7b12d8c32a1985b5c07ba5c66f3937415
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 659d0c53a0784439fdb6721070de736f4cf8e98c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>방법: ClickOnce 응용 프로그램의 클라이언트 컴퓨터에 신뢰할 수 있는 게시자 추가
+# <a name="how-to-add-a-trusted-publisher-to-a-client-computer-for-clickonce-applications"></a>방법: ClickOnce 응용 프로그램의 클라이언트 컴퓨터에 트러스트된 게시자 추가
 신뢰할 수 있는 응용 프로그램 배포를 사용하면 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램이 사용자 프롬프트 없이 더 높은 신뢰 수준으로 실행되도록 클라이언트 컴퓨터를 구성할 수 있습니다. 다음 절차에서는 명령줄 도구 CertMgr.exe를 사용하여, 클라이언트 컴퓨터의 신뢰할 수 있는 게시자 저장소에 게시자의 인증서를 추가하는 방법을 보여 줍니다.  
   
  인증서를 발급한 CA(인증 기관)가 클라이언트의 신뢰할 수 있는 루트의 일부인지 여부에 따라 사용하는 명령이 약간 달라집니다. Windows 클라이언트 컴퓨터가 도메인의 일부이면 신뢰할 수 있는 루트로 간주되는 CA가 목록에 포함됩니다. 이 목록은 일반적으로 시스템 관리자가 구성합니다. 인증서가 이러한 신뢰할 수 있는 루트 중 하나에서 또는 이와 연결된 CA에서 발급된 경우, 클라이언트의 신뢰할 수 있는 루트 저장소에 인증서를 추가할 수 있습니다. 반면, 인증서가 이러한 신뢰할 수 있는 루트 중 하나에서 발급되지 않은 경우 클라이언트의 신뢰할 수 있는 루트 저장소 및 신뢰할 수 있는 게시자 저장소에 모두 인증서를 추가해야 합니다.  

@@ -1,26 +1,23 @@
 ---
-title: "DataContext 메서드 (O R 디자이너) | Microsoft Docs"
-ms.custom: 
+title: DataContext 메서드 (O R 디자이너) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c149f4e5-3b61-4c33-892e-3e26d47f3eeb
-caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 5eb37bd3abbf88b04bed0d382e07abe4379eb661
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 9c0eda7461ffe8f90edfb8b9ddaa10a9fa4caf3b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="datacontext-methods-or-designer"></a>DataContext 메서드(O/R 디자이너)
-<xref:System.Data.Linq.DataContext>메서드 (의 컨텍스트에서 [LINQ to SQL 도구 Visual Studio에서](../data-tools/linq-to-sql-tools-in-visual-studio2.md))은 방법으로는 <xref:System.Data.Linq.DataContext> 데이터베이스에서 저장된 프로시저 및 함수를 실행 하는 클래스입니다.  
+<xref:System.Data.Linq.DataContext> 메서드 (의 컨텍스트에서 [LINQ to SQL 도구 Visual Studio에서](../data-tools/linq-to-sql-tools-in-visual-studio2.md))은 방법으로는 <xref:System.Data.Linq.DataContext> 데이터베이스에서 저장된 프로시저 및 함수를 실행 하는 클래스입니다.  
   
  <xref:System.Data.Linq.DataContext> 클래스는 SQL Server 데이터베이스와 해당 데이터베이스에 매핑되는 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 엔터티 클래스 간의 연결 통로 역할을 하는 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 클래스입니다. <xref:System.Data.Linq.DataContext> 클래스에는 연결 문자열 정보 및 데이터베이스에 연결 하 고 데이터베이스에서 데이터를 조작 하기 위한 메서드가 포함 되어 있습니다. 기본적으로는 <xref:System.Data.Linq.DataContext> 클래스와 같은 호출할 수 있는 여러 메서드가 포함 되어는 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 업데이트 된 데이터를 보내는 메서드 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 데이터베이스에는 클래스입니다. 추가로 만들 수 있습니다 <xref:System.Data.Linq.DataContext> 저장된 프로시저 및 함수에 매핑되는 메서드가 있습니다. 즉 이러한 사용자 지정 메서드를 호출하면 <xref:System.Data.Linq.DataContext> 메서드가 매핑되는 데이터베이스의 저장 프로시저 또는 함수가 실행됩니다. 클래스를 확장하는 메서드를 추가하는 것처럼 <xref:System.Data.Linq.DataContext> 클래스에 새 메서드를 추가할 수 있습니다. 그러나에 대 한 토론에 <xref:System.Data.Linq.DataContext> 의 컨텍스트에서 메서드는 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)], 이기는 <xref:System.Data.Linq.DataContext> 저장된 프로시저 및 해당 함수에 매핑되는 메서드.  
   

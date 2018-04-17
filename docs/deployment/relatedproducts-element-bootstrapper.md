@@ -1,13 +1,10 @@
 ---
-title: "&lt;RelatedProducts&gt; 요소 (부트스트래퍼) | Microsoft Docs"
-ms.custom: 
+title: '&lt;RelatedProducts&gt; 요소 (부트스트래퍼) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MSBuild.GenerateBootstrapper.MissingDependency
 - MSBuild.GenerateBootstrapper.DuplicateItems
@@ -22,17 +19,16 @@ dev_langs:
 helpviewer_keywords:
 - <RelatedProducts> element [bootstrapper]
 ms.assetid: bf152712-4c1e-48bd-9b7f-311cf0fdb832
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 548c1002eae581dc0e231f8dd2e28ee4a8376e27
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9fafc77df0bc557952bd5e197f3c950a3d028e3e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltrelatedproductsgt-element-bootstrapper"></a>&lt;RelatedProducts&gt; 요소 (부트스트래퍼)
 `RelatedProducts` 요소에 종속 되거나 현재 제품에 포함 된 다른 제품을 정의 합니다.  
@@ -61,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="dependsonproduct"></a>DependsOnProduct  
  `DependsOnProduct` 요소 의미 현재 전에 명명된 된 제품을 설치 해야 하 고 현재 제품 명명된 된 제품에 따라 달라 집니다. 자식인는 `RelatedProducts` 요소입니다. A `RelatedProducts` 하나 이상 있을 수 있습니다 `DependsOnProduct` 요소입니다.  
   
- `DependsOnProduct`에 다음 특성이 있습니다.  
+ `DependsOnProduct` 에 다음 특성이 있습니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
@@ -73,13 +69,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="includesproduct"></a>IncludesProduct  
  `IncludesProduct` 요소 의미 제품이 현재 설치에 포함 되며 별도 설치는 필요 하지 않습니다. 자식인는 `RelatedProducts` 요소입니다. A `RelatedProducts` 하나 이상 있을 수 있습니다 `IncludesProduct` 요소입니다.  
   
- `IncludesProduct`에 다음 특성이 있습니다.  
+ `IncludesProduct` 에 다음 특성이 있습니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
 |`Code`|에 지정 된 대로 포함된 된 제품의 코드명은 `ProductCode` 의 특성은 `Product` 요소입니다. 자세한 내용은 참조 [ \<제품 > 요소](../deployment/product-element-bootstrapper.md)합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 지정 Microsoft 설치 관리자와 함께 설치 되는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], 별도 설치 필요 하지 것입니다.  
   
 ```  

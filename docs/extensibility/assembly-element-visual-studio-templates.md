@@ -1,35 +1,31 @@
 ---
-title: "Assembly 요소 (Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: 
+title: Assembly 요소 (Visual Studio 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Assembly
 helpviewer_keywords:
 - Assembly element [Visual Studio templates]
 - <Assembly> element [Visual Studio templates]
 ms.assetid: 9242f76a-1273-4b8a-8f26-6606f91829ef
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5202d7468ecefe9de1754f592eef826f0390b869
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 97e6209fdf446d88ed79ef741c3584b2bc4f5602
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assembly-element-visual-studio-templates"></a>Assembly 요소(Visual Studio 템플릿)
 템플릿을 사용 하 여 해당 어셈블리의 참조를 프로젝트에 추가 하는 어셈블리에 대 한 정보를 지정 합니다.  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<참조 >  
  \<참조 >  
@@ -42,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -61,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
  이 텍스트는 항목 템플릿이 인스턴스화될 때 프로젝트에 추가할 어셈블리를 지정 합니다. 이 어셈블리 이름은 다음 방법 중 하나로 지정 해야 합니다.  
   
--   전체 어셈블리 이름입니다. 예:  
+-   전체 어셈블리 이름입니다. 예를 들어:  
   
     ```  
     <Assembly>  
@@ -69,7 +65,7 @@ ms.lasthandoff: 12/22/2017
     </Assembly>  
     ```  
   
--   단순한 텍스트 참조 합니다. 예:  
+-   단순한 텍스트 참조 합니다. 예를 들어:  
   
     ```  
     <Assembly> System </Assembly>  
@@ -80,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
  `Reference`, `References,` 및 `Assembly` 요소 있는.vstemplate 파일에만 사용할 수 있습니다는 `Type` 특성 값이 `Item`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 `TemplateContent` 항목 템플릿의 요소입니다. 이 XML System.dll 및 System.Data.dll 어셈블리에 대 한 참조를 추가합니다.  
   
 ```  

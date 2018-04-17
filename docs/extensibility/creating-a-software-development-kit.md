@@ -1,23 +1,21 @@
 ---
-title: "소프트웨어 개발 키트 만들기 | Microsoft Docs"
-ms.custom: 
+title: 소프트웨어 개발 키트 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 8496afb4-1573-4585-ac67-c3d58b568a12
-caps.latest.revision: "54"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 4ea17b02cfa2e987c4a3c02acddf838001b4ae2f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 55b62ac0ac448023793f511389146ebb1b07da0f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-software-development-kit"></a>소프트웨어 개발 키트 만들기
 소프트웨어 개발 키트 (SDK)은 Visual Studio에서 단일 항목으로 참조할 수 있는 Api의 컬렉션입니다. **참조 관리자** 대화 상자는 프로젝트에 관련 된 모든 Sdk를 나열 합니다. 프로젝트에 SDK를 추가 하면 Api는 Visual Studio에서 사용할 수 있습니다.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [확장 Sdk](#ExtensionSDKs)  
   
-##  <a name="PlatformSDKs"></a>플랫폼 Sdk  
+##  <a name="PlatformSDKs"></a> 플랫폼 Sdk  
  플랫폼 Sdk는 한 플랫폼에 대 한 앱을 개발 해야 합니다. 예를 들어는 [!INCLUDE[win81](../debugger/includes/win81_md.md)] SDK는 응용 프로그램을 개발 해야 [!INCLUDE[win81](../debugger/includes/win81_md.md)]합니다.  
   
 ### <a name="installation"></a>설치  
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 |아키텍처 폴더|모든 지원 되는 아키텍처 폴더 존재할 수 있습니다. Visual Studio에서는 다음 아키텍처: x86, x64, ARM 및 neutral입니다. 참고: Win32 x86에 매핑되고 AnyCPU 중립에 매핑됩니다.<br /><br /> MSBuild는 플랫폼 Sdk에 대 한 \CommonConfiguration\neutral 인 경우에 찾습니다.|  
 |SDKManifest.xml|이 파일에 Visual Studio SDK를 사용 해야 방법을 설명 합니다. 에 대 한 SDK 매니페스트에 살펴보고 [!INCLUDE[win81](../debugger/includes/win81_md.md)]:<br /><br /> `<FileList             DisplayName = "Windows"             PlatformIdentity = "Windows, version=8.1"             TargetFramework = ".NET for Windows Store apps, version=v4.5.1; .NET Framework, version=v4.5.1"             MinVSVersion = "14.0">              <File Reference = "Windows.winmd">                <ToolboxItems VSCategory = "Toolbox.Default" />             </File> </FileList>`<br /><br /> **표시 이름:** 찾아보기 목록에 개체 브라우저를 표시 하는 값입니다.<br /><br /> **PlatformIdentity:** 이 특성의 존재 여부 Visual Studio 및 MSBuild는 SDK 플랫폼 SDK 이며 알립니다 여기에서 추가 된 참조를 복사 하지 않아야 함을 로컬로 합니다.<br /><br /> **TargetFramework:** 만이 값에 지정 된 대로 동일한 프레임 워크를 대상으로 하는 투영 하 되도록 Visual Studio에서이 특성은 사용 특성 SDK를 사용할 수 있습니다.<br /><br /> **MinVSVersion:** 이 특성에 적용 되 고 Sdk를 사용 하도록 Visual Studio에서 사용 됩니다.<br /><br /> **참조:** 이 특성 컨트롤이 포함 된 참조에만 지정 되어야 합니다. 참조 컨트롤 포함 되는지 여부를 지정 하는 방법에 대 한 내용은 다음을 참조 합니다.|  
   
-##  <a name="ExtensionSDKs"></a>확장 Sdk  
+##  <a name="ExtensionSDKs"></a> 확장 Sdk  
  다음 섹션에서는 확장 SDK를 배포 하기 위해 수행 해야 합니다.  
   
 ### <a name="installation"></a>설치  
@@ -173,7 +171,7 @@ MoreInfo = "http://msdn.microsoft.com/MySDK">
   
 6.  MaxPlatformVerson: 확장 SDK는 작동 하지는 플랫폼 버전을 지정할 최대 대상 플랫폼 버전을 사용 해야 합니다. 예를 들어 Microsoft Visual c + + 런타임 패키지 v11.0만 Windows 8 프로젝트에서 참조 하도록 합니다. 따라서 Windows 8 프로젝트의 MaxPlatformVersion 8.0입니다. 즉, Windows 8.1 프로젝트에 대 한 필터링 된 Microsoft Visual c + + 런타임 패키지 참조 관리자 MSBuild 오류를 발생 시키는 경우는 [!INCLUDE[win81](../debugger/includes/win81_md.md)] 프로젝트에서 참조 합니다. 참고:이 요소는 지원부터 [!INCLUDE[vs_dev12](../extensibility/includes/vs_dev12_md.md)]합니다.  
   
-7.  AppliesTo: 적용 되는 Visual Studio 프로젝트 유형을 지정 하 여 참조 관리자에서 사용할 수 있는 Sdk를 지정 합니다. 9 개의 값이 인식 되: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, 관리 및 네이티브 합니다. SDK 작성자 צ ְ ײ 및 ("+'), 또는 ("&#124;"), 없습니다 ("! ") SDK에 적용 되는 프로젝트 형식의 범위 정확 하 게 지정 하는 연산자입니다.  
+7.  AppliesTo: 적용 되는 Visual Studio 프로젝트 유형을 지정 하 여 참조 관리자에서 사용할 수 있는 Sdk를 지정 합니다. 9 개의 값이 인식 되: WindowsAppContainer, VisualC, VB, CSharp, WindowsXAML, JavaScript, 관리 및 네이티브 합니다. SDK 작성자 צ ְ ײ 및 ("+'), 또는 ("&#124;")이 아니라 ("! ") SDK에 적용 되는 프로젝트 형식의 범위 정확 하 게 지정 하는 연산자입니다.  
   
      WindowsAppContainer 식별에 대 한 프로젝트 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱.  
   
@@ -195,7 +193,7 @@ MoreInfo = "http://msdn.microsoft.com/MySDK">
   
 16. 파일 참조: 지정 된 컨트롤이 포함 파일이 나 네이티브 Winmd 참조만. 참조 컨트롤 포함 되는지 여부를 지정 하는 방법에 대 한 정보를 참조 하십시오. [도구 상자 항목의 위치 지정](#ToolboxItems) 아래 합니다.  
   
-##  <a name="ToolboxItems"></a>도구 상자 항목의 위치 지정  
+##  <a name="ToolboxItems"></a> 도구 상자 항목의 위치 지정  
  SDKManifest.xml 스키마의 ToolBoxItems 요소 플랫폼 및 확장 Sdk 모두에 범주 및 도구 상자 항목의 위치를 지정합니다. 다음 예에서는 서로 다른 위치를 지정 하는 방법을 보여 줍니다. WinMD 또는 DLL 참조에 적용 됩니다.  
   
 1.  도구 상자 기본 범주에 컨트롤을 배치 합니다.  

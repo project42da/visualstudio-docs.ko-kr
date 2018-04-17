@@ -1,11 +1,8 @@
 ---
-title: "N 계층 데이터 집합에 유효성 검사를 추가 | Microsoft Docs"
-ms.custom: 
+title: N 계층 데이터 집합에 유효성 검사를 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +11,17 @@ helpviewer_keywords:
 - validation [Visual Basic], n-tier data applications
 - validating n-tier data applications
 ms.assetid: 34ce4db6-09bb-4b46-b435-b2514aac52d3
-caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: a3f37b734bb9d109634fc272fca3140d40c040f7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: addcbd4640acd86cc40097742dcdfd515308f256
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>N 계층 데이터 집합에 유효성 검사 추가
 N 계층 솔루션으로 분리 되어 있는 데이터 집합에 유효성 검사 추가 기본적으로 단일 파일 (단일 프로젝트에서 데이터 집합) 데이터 집합에 유효성 검사와 동일 합니다. 데이터에 유효성 검사를 수행 하기 위한 권장된 위치는 동안는 <xref:System.Data.DataTable.ColumnChanging> 및/또는 <xref:System.Data.DataTable.RowChanging> 데이터 테이블의 이벤트입니다.  
@@ -62,7 +59,7 @@ End Sub
 2.  유효성을 검사 하려는 열을 두 번 클릭 합니다. 이 작업을 만듭니다는 <xref:System.Data.DataTable.ColumnChanging> 이벤트 처리기입니다.  
   
     > [!NOTE]
-    >  데이터 집합 디자이너 자동으로 C# 이벤트에 대 한 이벤트 처리기를 만들지 않습니다. C#에서 이벤트를 처리 하는 코드는 다음 섹션에 포함 됩니다. `SampleColumnChangingEvent`생성 되 고 다음로 후크는 <xref:System.Data.DataTable.ColumnChanging> 이벤트에는 <xref:System.Data.DataTable.EndInit%2A> 메서드.  
+    >  데이터 집합 디자이너 자동으로 C# 이벤트에 대 한 이벤트 처리기를 만들지 않습니다. C#에서 이벤트를 처리 하는 코드는 다음 섹션에 포함 됩니다. `SampleColumnChangingEvent` 생성 되 고 다음로 후크는 <xref:System.Data.DataTable.ColumnChanging> 이벤트에는 <xref:System.Data.DataTable.EndInit%2A> 메서드.  
   
 3.  코드를 확인 하는 추가 `e.ProposedValue` 응용 프로그램의 요구 사항을 충족 하는 데이터를 포함 합니다. 제안 된 값을 수용할 수 없으면 오류가 포함 되어 있음을 나타내도록 열을 설정 합니다.  
   

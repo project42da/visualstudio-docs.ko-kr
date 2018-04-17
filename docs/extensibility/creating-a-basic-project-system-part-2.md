@@ -1,27 +1,25 @@
 ---
-title: "기본 프로젝트 시스템 만들기, 2 부 | Microsoft Docs"
-ms.custom: 
+title: 기본 프로젝트 시스템 만들기, 2 부 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - writing a project system
 - project system
 - tutorial
 ms.assetid: aee48fc6-a15f-4fd5-8420-7f18824de220
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 699f9176fd39cacaf2bb4f433cd9d2ceb8e326b5
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: f39150f02481e18997035a8027518648fa410f48
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-basic-project-system-part-2"></a>기본 프로젝트 시스템 만들기, 2 부
 이 시리즈의 첫 번째 연습 [기본 프로젝트 시스템, 1 부 만드는](../extensibility/creating-a-basic-project-system-part-1.md), 기본 프로젝트 시스템을 만드는 방법을 보여 줍니다. 이 연습에서는 Visual Studio 템플릿, 속성 페이지 및 기타 기능을 추가 하 여 기본 프로젝트 시스템에 구축 합니다. 이 시작 하기 전에 첫 번째 연습을 완료 해야 합니다.  
@@ -268,7 +266,7 @@ ZipProjects:
   
 4.  확장 된 **SimpleProject** 노드. **콘솔** 자식 노드가 표시 됩니다. **SimpleProject 응용 프로그램** 서식 파일에 계속 표시는 **템플릿** 창.  
   
-5.  이어야 합니다. 클릭 **취소** 디버깅을 중지 하 고  
+5.  . 클릭 **취소** 디버깅을 중지 하 고  
   
  ![](../extensibility/media/simpproj2_rollup.png "SimpProj2_Rollup")  
   
@@ -354,7 +352,7 @@ ZipProjects:
   
 -   OutputType  
   
--   RootNamespace.  
+-   RootNamespace 합니다.  
   
 1.  SimpleProjectPackage.cs 파일에서이 추가 `ProvideObject` 특성을 `SimpleProjectPackage` 클래스:  
   

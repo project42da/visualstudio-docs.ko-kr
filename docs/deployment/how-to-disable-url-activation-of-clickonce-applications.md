@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 응용 프로그램의 URL 활성화 해제 | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 응용 프로그램의 URL 활성화 해제 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - URL activation, ClickOnce applications
 - ClickOnce deployment, URL activation
 ms.assetid: db31a16b-960f-4264-91d7-c7c40f876068
-caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 3f94029c682029ad8fa3167314a2d95b51b00648
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 1d781736d53b4f0ff61b6007f3017554e60e0293
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-disable-url-activation-of-clickonce-applications"></a>방법: ClickOnce 응용 프로그램의 URL 활성화를 사용하지 않도록 설정
 일반적으로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 웹 서버에서 설치된 후 바로 자동으로 시작됩니다. 보안상의 이유로이 동작을 해제 하 여 사용자가 응용 프로그램을 시작 하도록 결정할 수 있습니다는 **시작** 메뉴 대신 합니다. 다음 절차에서는 URL 활성화를 사용하지 않도록 설정하는 방법에 대해 설명합니다.  

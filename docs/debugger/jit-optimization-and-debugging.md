@@ -1,13 +1,10 @@
 ---
-title: "JIT 최적화 및 디버깅 | Microsoft Docs"
-ms.custom: 
+title: JIT 최적화 및 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], optimized code
 - optimized code, debugging
 ms.assetid: 19bfabf3-1a2e-49dc-8819-a813982e86fd
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23de1ec4e053a87c4f91cf7b599f49b8fe318015
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 31bbad33da65450375c5f3d6fba9b47b9eb55c8a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="jit-optimization-and-debugging"></a>JIT 최적화 및 디버깅
 **최적화.NET에서 작동 하는 방법:** 코드를 디버깅 하려는 경우 더 쉽게 때 코드는 **하지** 최적화 합니다. 코드가 최적화 되 면 컴파일러와 런타임은 변경할 내보낸된 CPU 코드를 더 빨리 실행 하지만 원래 소스 코드에 직접 매핑을 않도록 때문입니다. 즉, 디버거를 자주 코드 단계별 실행 및 지역 변수의 값을 알 수 없는 중단점 예상 대로 작동 하지 않을 수 있습니다.

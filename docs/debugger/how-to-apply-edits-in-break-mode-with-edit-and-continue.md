@@ -1,13 +1,10 @@
 ---
-title: "방법: 편집을 사용 하 여 중단 모드에서 편집 적용 하 고 계속 | Microsoft Docs"
-ms.custom: 
+title: '방법: 편집을 사용 하 여 중단 모드에서 편집 적용 하 고 계속 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.variables.failededit
 dev_langs:
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - coding, editing in break mode
 - code, editing in break mode
 ms.assetid: 1eef7498-6a1f-4fba-8146-510adc6375c9
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54fb069f5328dd9bc7cabab16c0688109312dfd1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 37c172c49132f8080dc29040fa7325c19f1871f1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-apply-edits-in-break-mode-with-edit-and-continue"></a>방법: 편집하며 계속하기를 사용하여 중단 모드에서 편집 적용
 편집하며 계속하기를 사용하면 실행을 중지한 후에 다시 시작하지 않고도 중단 모드에서 코드를 편집한 다음 계속 진행할 수 있습니다.  
@@ -46,11 +42,11 @@ ms.lasthandoff: 12/22/2017
   
     -   코드에서 중단점을 설정 합니다. 그런 다음 선택 **디버깅 시작** 에서 **디버그** 메뉴와 중단점 응용 프로그램에 대 한 대기입니다.  
   
-         또는  
+         -또는-  
   
     -   디버깅을 시작 하 고 다음 선택 **모두 중단** 에서 **디버그** 메뉴.  
   
-         또는  
+         -또는-  
   
     -   예외가 발생 하면 선택 **편집 사용** 에**예외 도우미**합니다.  
   

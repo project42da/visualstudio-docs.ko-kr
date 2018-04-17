@@ -1,25 +1,22 @@
 ---
-title: "그래픽 프레임 분석 | Microsoft Docs"
-ms.custom: 
+title: 그래픽 프레임 분석 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.frameanalysis
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd3af414b5d59ec49ed6e042d6a656d322fe8a38
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 95544a030870feaace585d62a8027c17dbc56c64
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graphics-frame-analysis"></a>그래픽 프레임 분석
 Visual Studio Graphics Analyzer의 그래픽 프레임 분석을 사용하여 Direct3D 게임 또는 앱의 렌더링 성능을 분석하고 최적화합니다.  
@@ -75,7 +72,7 @@ Visual Studio Graphics Analyzer의 그래픽 프레임 분석을 사용하여 Di
 #### <a name="timeline"></a>타임라인  
  타임라인은 서로 관련된 그리기 호출에 대한 개요를 보여 줍니다. 막대가 더 클수록 그리기 시간이 더 길어지므로 타임라인을 사용하여 프레임에서 가장 긴 그리기 호출을 빠르게 찾을 수 있습니다. 캡처된 프레임에 매우 많은 수의 그리기 호출이 포함된 경우 여러 그리기 호출을 막대 하나로 결합할 수 있습니다. 이때 막대 길이는 이러한 그리기 호출의 합계를 나타냅니다.  
   
- ![타임 라인에 그리기 &#45;표시 비용을 호출 합니다. ] (media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")  
+ ![타임 라인에 그리기 표시&#45;비용을 호출 합니다. ] (media/pix_frame_analysis_timeline.png "pix_frame_analysis_timeline")  
   
  막대가 해당하는 그리기 호출 이벤트를 표시하기 위해 막대에 포인터를 남겨 둘 수 있습니다. 막대를 선택하면 이벤트 목록이 해당 이벤트로 동기화됩니다.  
   
@@ -137,7 +134,7 @@ Visual Studio Graphics Analyzer의 그래픽 프레임 분석을 사용하여 Di
   
  프레임 분석에서는 다시 시도 횟수를 10회로 제한합니다. 플랫폼에 공격적인 전원 관리 또는 클록 게이팅 기능이 있는 경우 프레임 분석에 실패할 수 있고 다시 시도 제한을 초과했으므로 오류를 보고할 수 있습니다. 플랫폼에서 설정할 수 있는 경우 플랫폼의 전원 관리와 클록 속도 제한을 보다 여유 있는 값으로 다시 설정하여 이 문제를 완화할 수 있습니다.  
   
-##  <a name="HardwareSupport"></a>하드웨어 지원  
+##  <a name="HardwareSupport"></a> 하드웨어 지원  
   
 ### <a name="timestamps-and-occlusion-queries"></a>타임스탬프 및 폐색 쿼리  
  타임스탬프는 프레임 분석을 지원하는 모든 플랫폼에서 지원됩니다. 픽셀 폐색 카운터에 필요한 깊이 폐색 쿼리는 기능 수준 9.2 이상을 지원하는 플랫폼에서 지원됩니다.  
@@ -175,7 +172,7 @@ Visual Studio Graphics Analyzer의 그래픽 프레임 분석을 사용하여 Di
 ### <a name="warp"></a>WARP  
  프레임 분석은 실제 하드웨어에서 렌더링 성능을 프로파일링 및 향상시키는 데 사용됩니다. WARP 장치에서 프레임 분석을 실행 방지할 수 없습니다 것만 일반적으로 있는데 하이엔드 CPU에서 실행 중인 WARP도의 최소 지원 최신 Gpu 보다 느립니다. 고 특정 CPU에 따라 WARP 성능이 크게 달라질 수 있으므로 실행 됩니다.  
   
-##  <a name="Variants"></a>변형  
+##  <a name="Variants"></a> 변형  
  프레임 분석이 재생 중 프레임이 렌더링 되는 방식에 대해 하는 각 변경 라고는 *variant*합니다. 프레임 분석에서 검사한 변형은 앱의 렌더링 성능 또는 시각적 품질을 향상시키기 위해 수행한 일반적이고 상대적으로 쉬운 변경에 해당합니다(예: 질감 크기 줄이기, 질감 압축 사용 또는 다른 종류의 앤티앨리어싱 사용). 변형은 앱의 일반적인 렌더링 컨텍스트와 매개 변수를 재정의합니다. 다음은 요약입니다.  
   
 |변형|설명|  

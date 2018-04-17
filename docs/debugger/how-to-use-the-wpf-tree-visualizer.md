@@ -1,12 +1,10 @@
 ---
-title: "방법: WPF 트리 시각화 도우미를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: '방법: WPF 트리 시각화 도우미를 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,21 +14,21 @@ helpviewer_keywords:
 - WPF, debugging
 - debugging, WPF
 ms.assetid: 2a1bf1cd-90f9-4d06-9fb4-1bfc925afef3
-caps.latest.revision: "18"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 78806b2ace7872db06ff403bcae28bb6eff21cd2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d25e7c2e6b086bced66df747cd26cc7279e52f96
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-the-wpf-tree-visualizer"></a>방법: WPF 트리 시각화 도우미 사용
 WPF 트리 시각화 도우미를 사용하여 WPF 개체의 표시 트리를 탐색하고 트리에 포함된 개체의 WPF 종속성 속성을 볼 수 있습니다. 시각적 트리에 대 한 자세한 내용은 참조 [In WPF](/dotnet/framework/wpf/advanced/trees-in-wpf)합니다. 종속성 속성에 대 한 자세한 내용은 참조 [종속성 속성 개요](/dotnet/framework/wpf/advanced/dependency-properties-overview)합니다.  
   
- WPF 트리 시각화 도우미를 열면 두 개의 창이 표시 됩니다:는 **시각적 트리** 왼쪽 및 **의 속성** *이름***:**  *형식* 오른쪽 창입니다. 모든 개체를 선택는 **시각적 트리** 창 및 **의 속성** *이름***:***형식* 창은 해당 개체에 대 한 속성을 표시 하도록 자동으로 업데이트 합니다.  
+ WPF 트리 시각화 도우미를 열면 두 개의 창이 표시 됩니다:는 **시각적 트리** 왼쪽 및 **의 속성** *이름***:***형식* 창 오른쪽입니다. 모든 개체를 선택는 **시각적 트리** 창 및 **의 속성** *이름***:***형식* 창이 자동으로 업데이트 되면서 표시는 해당 개체에 대 한 속성입니다.  
   
 ### <a name="to-open-the-wpf-tree-visualizer"></a>WPF 트리 시각화 도우미를 열려면  
   
@@ -54,7 +52,7 @@ WPF 트리 시각화 도우미를 사용하여 WPF 개체의 표시 트리를 �
   
 ### <a name="to-search-the-properties-list"></a>속성 목록을 검색하려면  
   
--   에 **의 속성** *이름***:***형식* 창에서 검색 하려는 문자열을 입력에서 **필터링**상자입니다.  
+-   에 **의 속성** *이름***:***형식* 창에서 검색 하려는 문자열을 입력의 **필터** 상자.  
   
      WPF 트리 시각화 도우미가 입력한 문자열과 일치하는 속성을 즉시 찾습니다. 이제 목록에는 입력한 문자열과 일치하는 속성만 표시됩니다. 문자를 추가로 입력하여 좀 더 정확하게 일치하는 항목을 찾을 수 있습니다.  
   

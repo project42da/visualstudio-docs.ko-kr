@@ -1,11 +1,8 @@
 ---
-title: "Access 데이터베이스 (Windows Forms)의 데이터에 연결 | Microsoft Docs"
-ms.custom: 
+title: Access 데이터베이스 (Windows Forms)의 데이터에 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/15/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - databases, connecting to
 - databases, Access
@@ -13,22 +10,22 @@ helpviewer_keywords:
 - connecting to data, from Access databases
 - Access databases, connecting
 ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
-caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 8d55ecd52b3fa817e9a5ee199a69e3d29644346e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 4a46ffdb71f723948db6141704bd96192773d15a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access 데이터베이스 (Windows Forms)의 데이터에 연결
 Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.accdb 파일)에 연결할 수 있습니다. 에 표시할 연결을 정의한 후의 데이터는 **데이터 소스** 창. 그 창에서 테이블 또는 뷰를 폼으로 끌 수 있습니다.   
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이러한 절차를 사용 하려면 Windows Forms 응용 프로그램 프로젝트와 Access 데이터베이스 (.accdb 파일) 또는 Access 2000-2003 데이터베이스 (.mdb 파일)이 필요 합니다. 파일 형식에 해당하는 절차를 따릅니다.  
   
 ## <a name="creating-the-dataset-for-an-accdb-file"></a>.Accdb 파일에 대 한 데이터 집합 만들기  
@@ -130,5 +127,5 @@ Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.ac
   
 -   유효성 검사 논리를 추가 <xref:System.Data.DataTable.ColumnChanging> 또는 <xref:System.Data.DataTable.RowChanging> 데이터 집합에 있는 데이터 테이블의 이벤트 (참조 [데이터 집합의 데이터 유효성 검사](../data-tools/validate-data-in-datasets.md)).  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [연결 추가](../data-tools/add-new-connections.md)

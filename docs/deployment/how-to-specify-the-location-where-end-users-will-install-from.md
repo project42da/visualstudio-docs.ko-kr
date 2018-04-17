@@ -1,12 +1,10 @@
 ---
-title: "방법:에서 최종 사용자가 설치 하는 위치를 지정 합니다. | Microsoft Docs"
-ms.custom: 
+title: 방법:에서 최종 사용자가 설치 하는 위치를 지정 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - installation, specifying installation an URL
 - Installation URL property
 ms.assetid: 04a804bf-ed55-4a7a-a1e6-f63ed99c0276
-caps.latest.revision: "9"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: a3a2770933f4a9f600b12a2d601deca855de3a94
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 3161cfb36c09f78911a762347f9c9ec6d125ee39
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-the-location-where-end-users-will-install-from"></a>방법: 최종 사용자의 설치 원본 위치 지정
 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 다운로드 하 고 응용 프로그램을 설치 하려면 사용자가 이동 하지 일 필요는 처음 응용 프로그램을 게시할 위치입니다. 예를 들어 일부 조직에서는 개발자 응용 프로그램을 스테이징 서버에 게시 될 수로 이동한 다음 관리자는 웹 서버에 응용 프로그램입니다.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  클릭는 **게시** 탭 합니다.  
   
-3.  설치 URL 필드에 서식 http://www.microsoft.com/ApplicationName 또는 형식을 사용 하 여 UNC 경로 사용 하 여 정규화 된 URL을 사용 하 여 설치 위치를 입력 \\\Server\ApplicationName 합니다.  
+3.  설치 URL 필드에는 형식을 사용 하 여 정규화 된 URL을 사용 하 여 설치 위치를 입력 http://www.microsoft.com/ApplicationName, 형식을 사용 하는 UNC 경로 또는 \\\Server\ApplicationName 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [방법: Visual Studio의 파일 복사 위치 지정](../deployment/how-to-specify-where-visual-studio-copies-the-files.md)   

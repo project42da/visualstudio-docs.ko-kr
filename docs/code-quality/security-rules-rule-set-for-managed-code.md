@@ -1,23 +1,21 @@
 ---
-title: "관리 코드에 대 한 보안 규칙 규칙 집합 | Microsoft Docs"
-ms.custom: 
+title: 관리 코드에 대 한 보안 규칙 규칙 집합 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 ms.assetid: 564aeac6-03fa-41b0-b655-88179f0ab01b
-caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 3085eaabd5725a158c7099015adbe940ea5bd61c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: b1de557fefe315d85f320361670aecb47022949d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-rules-rule-set-for-managed-code"></a>관리 코드에 대한 보안 규칙 규칙 집합
 Microsoft 보안 규칙 규칙 집합을 보고 되는 잠재적 보안 문제의 수를 최대화 하기 위해 포함 되어야 합니다.  

@@ -1,12 +1,10 @@
 ---
-title: "코드 편집기에서 DataTips에 데이터 값 보기 | Microsoft Docs"
-ms.custom: 
+title: 코드 편집기에서 DataTips에 데이터 값 보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], DataTips
 - DataTips tool
 ms.assetid: ffa7bd18-439b-4685-a9b3-c7884b5de41f
-caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 178bd1768474eaaaf760e2ef4feecfe0e1519bee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0c098e4b4ae94c5145a193e1903aa04a0eb757b4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-data-values-in-datatips-in-the-code-editor"></a>코드 편집기에서 DataTips의 데이터 값 보기
 DataTips를 통해 디버깅하는 동안 프로그램의 변수에 대한 정보를 손쉽게 볼 수 있습니다. DataTips는 중단 모드에서 현재 실행 범위 내의 변수에 대해서만 작동합니다.
@@ -75,7 +73,7 @@ DataTips를 통해 디버깅하는 동안 프로그램의 변수에 대한 정�
   
 #### <a name="to-expand-a-variable-to-see-its-elements"></a>변수를 확장하여 해당 요소를 보려면  
   
--   DataTip에서 위에 마우스 포인터를 놓고는  **+**  변수 이름 앞에 있는 기호입니다.  
+-   DataTip에서 위에 마우스 포인터를 놓고는 **+** 변수 이름 앞에 있는 기호입니다.  
   
     변수가 확장되어 해당 요소가 트리 형태로 표시됩니다.
 
@@ -105,7 +103,7 @@ DataTips를 통해 디버깅하는 동안 프로그램의 변수에 대한 정�
   
 -   돋보기 아이콘을 클릭 ![VisualizerIcon](../debugger/media/dbg-tips-visualizer-icon.png "시각화 도우미 아이콘") 데이터 형식에 대 한 기본 시각화 도우미를 선택 합니다.  
   
-     또는  
+     -또는-  
   
      시각화 도우미 옆의 팝업 화살표를 클릭하고 시각화 도우미 목록에서 데이터 형식에 적절한 시각화 도우미를 선택합니다.  
   

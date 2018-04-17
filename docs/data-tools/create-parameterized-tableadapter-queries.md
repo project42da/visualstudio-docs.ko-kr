@@ -1,11 +1,8 @@
 ---
-title: "매개 변수가 있는 TableAdapter 쿼리 만들기 | Microsoft Docs"
-ms.custom: 
+title: 매개 변수가 있는 TableAdapter 쿼리 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,17 @@ helpviewer_keywords:
 - TableAdapters, searching data
 - queries [Visual Studio], TableAdapters
 ms.assetid: 104d1d19-b5a9-4071-b81e-1b3af08e9c7b
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 65c4ab52ead981d54cf9b0c64c7a3c1c941de5b0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 361bb7f9acea5d07283b63cb1b3b1b97bb495a8e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-parameterized-tableadapter-queries"></a>매개 변수가 있는 TableAdapter 쿼리 만들기
 매개 변수가 있는 쿼리는 쿼리의 WHERE 절 조건을 충족하는 데이터를 반환합니다. 예를 들어 고객 목록을 반환하는 SQL 문 끝에 `WHERE City = @City`를 추가하여 특정 구/군/시의 고객만 표시하도록 고객 목록을 매개 변수화할 수 있습니다.  
@@ -46,7 +43,7 @@ ms.lasthandoff: 12/22/2017
   
 -   원하는 매개 변수가 포함된 WHERE 절을 SQL 문에 추가하여 새 TableAdapter를 만듭니다. 자세한 내용은 참조 [만들기 및 Tableadapter를 구성](../data-tools/create-and-configure-tableadapters.md)합니다.  
   
-     또는  
+     -또는-  
   
 -   원하는 매개 변수가 포함된 WHERE 절을 SQL 문에 추가하여 기존 TableAdapter에 쿼리를 추가합니다.
   
@@ -71,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  에 이름을 입력 된 **새 쿼리 이름** 새 쿼리를 만드는 경우 상자입니다.  
   
-     또는  
+     -또는-  
   
      쿼리를 선택는 **기존 쿼리 이름** 상자입니다.  
   

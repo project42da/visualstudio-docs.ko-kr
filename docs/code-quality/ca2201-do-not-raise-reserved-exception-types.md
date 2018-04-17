@@ -1,12 +1,10 @@
 ---
-title: "CA2201: 예약 된 예외 형식을 발생 시 키 지 않는 | Microsoft Docs"
-ms.custom: 
+title: 'CA2201: 예약 된 예외 형식을 발생 시 키 지 않는 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - DoNotRaiseReservedExceptionTypes
 - CA2201
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2201
 - DoNotRaiseReservedExceptionTypes
 ms.assetid: dd14ef5c-80e6-41a5-834e-eba8e2eae75e
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 11e00594c1cf279fb6b07791bb48f2222cc9c79b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: cd95bedc273a14d9b3d455db5fd25eac1cf74aa4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2201-do-not-raise-reserved-exception-types"></a>CA2201: 예약된 예외 형식을 발생시키지 마십시오.
 |||  
@@ -67,19 +65,19 @@ ms.lasthandoff: 12/22/2017
   
 |매개 변수 설명|예외|  
 |---------------------------|---------------|  
-|`null`참조|<xref:System.ArgumentNullException?displayProperty=fullName>|  
+|`null` 참조|<xref:System.ArgumentNullException?displayProperty=fullName>|  
 |값 (예: 컬렉션 또는 목록의 대 한 인덱스)의 허용된 범위를 벗어납니다.|<xref:System.ArgumentOutOfRangeException?displayProperty=fullName>|  
 |잘못 된 `enum` 값|<xref:System.ComponentModel.InvalidEnumArgumentException?displayProperty=fullName>|  
 |메서드의 매개 변수 사양에 맞지 않는 형식이 포함 되어 있는 (형식 문자열과 같은 `ToString(String)`)|<xref:System.FormatException?displayProperty=fullName>|  
 |유효 하지 않음|<xref:System.ArgumentException?displayProperty=fullName>|  
   
- 작업 개체 throw의 현재 상태에 대해 유효 하지 않은 경우<xref:System.InvalidOperationException?displayProperty=fullName>  
+ 작업 개체 throw의 현재 상태에 대해 유효 하지 않은 경우 <xref:System.InvalidOperationException?displayProperty=fullName>  
   
- 삭제 된 개체에서 연산이 수행 될 때 throw<xref:System.ObjectDisposedException?displayProperty=fullName>  
+ 삭제 된 개체에서 연산이 수행 될 때 throw <xref:System.ObjectDisposedException?displayProperty=fullName>  
   
- 작업이 지원 되지 않는 경우 (예: 재정의 된 **Stream.Write** 읽기용으로 열 스트림의) throw<xref:System.NotSupportedException?displayProperty=fullName>  
+ 작업이 지원 되지 않는 경우 (예: 재정의 된 **Stream.Write** 읽기용으로 열 스트림의) throw <xref:System.NotSupportedException?displayProperty=fullName>  
   
- (예: 명시적 캐스트 연산자 오버 로드) 오버플로가 변환으로 인해 throw<xref:System.OverflowException?displayProperty=fullName>  
+ (예: 명시적 캐스트 연산자 오버 로드) 오버플로가 변환으로 인해 throw <xref:System.OverflowException?displayProperty=fullName>  
   
  다른 모든 상황에서 파생 되는 형식을 직접 만드는 것이 좋습니다 <xref:System.Exception> 해당 예외를 throw 합니다.  
   

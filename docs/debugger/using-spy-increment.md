@@ -1,32 +1,28 @@
 ---
-title: "Spy + +를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: Spy + +를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Using Spy++
 ms.assetid: 02769bfa-5679-4ee2-8c6b-27876edb4e8c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b450fc3720ba199b833ed2fbd98a748c71b8d74f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 384386f40aecc0072af385cc789c82d02be2e260
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-spy"></a>Spy++ 사용
 Spy + + (SPYXX 합니다. EXE)는 시스템의 프로세스, 스레드, 창 및 창 메시지에 대 한 그래픽 뷰를 제공 하는 Win32 기반 유틸리티입니다. Spy + + 도움말의이 섹션에는 다음 도움말 항목에 포함 됩니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [Spy++ 소개](../debugger/introducing-spy-increment.md)  
  Spy + + 도구도 표시할 수 있는 정보의 종류에 설명 합니다.  
   

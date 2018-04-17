@@ -1,27 +1,25 @@
 ---
-title: "방법: 코드 분석 사전 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: '방법: 코드 분석 사전 사용자 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 helpviewer_keywords:
 - code analysis dictionary
 - custom dictionary, code analysis
 - dictionary, code analysis
 ms.assetid: 667e3b4e-beff-48be-b3d1-376e1716a895
-caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7fa5f88a3578998fca325500a3815b909b6ce4a9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b2d60b2a187b7fccf4d5f564d9554badd5da9dec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-customize-the-code-analysis-dictionary"></a>방법: 코드 분석 사전 사용자 지정
 코드 분석은 기본 제공 사전 검사 오류 맞춤법, 문법 대/소문자 및의 다른 명명 규칙에 대 한 코드의 식별자를 사용 하 여는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 지침입니다. 사용자 지정 사전 Xml 파일을 추가, 제거 또는 수정 용어, 약어 및 기본 제공 된 사전에 머리 글자어를 만들 수 있습니다.  
@@ -75,7 +73,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [사전/머리글자어/CasingExceptions/머리글자어](../code-quality/how-to-customize-the-code-analysis-dictionary.md#BKMK_DictionaryAcronymsCasingExceptionsAcronym)  
   
-###  <a name="BKMK_DictionaryWordsRecognizedWord"></a>사전/단어/인식/단어  
+###  <a name="BKMK_DictionaryWordsRecognizedWord"></a> 사전/단어/인식/단어  
  철자가으로 코드 분석을 식별 하는 단어 목록에 지정 하는 단어를 포함 하려면 사전/단어/인식/단어 요소의 내부 텍스트로 용어를 추가 합니다. 사전/단어/인식/단어 요소에서 용어는 대/소문자 구분 하지 않습니다.  
   
  **예제**  
@@ -110,7 +108,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [CA2204: 리터럴의 철자가 맞아야 합니다.](../code-quality/ca2204-literals-should-be-spelled-correctly.md)  
   
-###  <a name="BKMK_DictionaryWordsUnrecognizedWord"></a>사전/단어/인식할 수 없는/단어  
+###  <a name="BKMK_DictionaryWordsUnrecognizedWord"></a> 사전/단어/인식할 수 없는/단어  
  용어를 철자가으로 코드 분석을 식별 하는 단어 목록에서 제외 하려면 사전/단어/인식할 수 없음/단어 요소의 내부 텍스트로 제외 용어를 추가 합니다. 사전/단어/인식할 수 없음/단어 요소에서 용어는 대/소문자 구분 하지 않습니다.  
   
  **예제**  
@@ -145,7 +143,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [CA2204: 리터럴의 철자가 맞아야 합니다.](../code-quality/ca2204-literals-should-be-spelled-correctly.md)  
   
-###  <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a>사전/단어/사용 되지 않음/용어 [@PreferredAlternate]  
+###  <a name="BKMK_DictionaryWordsDeprecatedTermPreferredAlternate"></a> 사전/단어/사용 되지 않음/용어 [@PreferredAlternate]  
  코드 분석 사용 중단으로 식별 하는 단어 목록에 지정 하는 단어를 포함 하려면 사전/단어/사용 되지 않음/용어 요소의 내부 텍스트로 용어를 추가 합니다. 사용 되지 않는 철자가 정확 하지만 사용 하지 않아야 하는 단어입니다.  
   
  경고에서 제안된 된 대체 용어를 포함 하려면 대체 용어 요소의 PreferredAlternate 특성에 지정 합니다. 대체를 제안 하지 않을 경우 특성 값을 비워 둘 수 있습니다.  
@@ -182,7 +180,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [CA1726: 기본 설정 용어를 사용하십시오.](../code-quality/ca1726-use-preferred-terms.md)  
   
-###  <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a>사전/단어/복합/용어 [@CompoundAlternate]  
+###  <a name="BKMK_DictionaryWordsCompoundTermCompoundAlternate"></a> 사전/단어/복합/용어 [@CompoundAlternate]  
  기본 제공 사전 복합 용어 보다는 단일, discrete 조건으로 몇 가지 용어를 식별합니다. 코드 분석 복합 단어를 식별 하는 단어 목록에 지정 하는 단어를 포함 하 고 해당 기간 올바른 대/소문자를 지정 하는 사전/단어/복합/용어 요소의 내부 텍스트도 용어를 추가 합니다. 용어 요소 CompoundAlternate 특성에서 개별 단어 (파스칼식 대 / 소문자로)의 첫 글자 대문자화으로 복합 용어를 구성 하는 개별 단어를 지정 합니다. Note 내부 텍스트에 지정 된 용어 사전/단어/DiscreteExceptions 목록에 자동으로 추가 됩니다.  
   
 -   사전/단어의 사용 되지 않는 용어/사용 되지 않음/용어 요소는 대/소문자 구분 하지 않습니다.  
@@ -215,7 +213,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [CA1704: 식별자에는 정확한 철자를 사용해야 합니다.](../code-quality/ca1704-identifiers-should-be-spelled-correctly.md)  
   
-###  <a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a>사전/단어/DiscreteExceptions/용어  
+###  <a name="BKMK_DictionaryWordsDiscreteExceptionsTerm"></a> 사전/단어/DiscreteExceptions/용어  
  코드 분석 single로 식별 하는 단어 목록에서 한 항을 제외 하려면 복합 단어에 대 한 대/소문자 규칙 이라는 용어를 선택 하면 개별 단어는 사전/단어/DiscreteExceptions/용어 요소의 내부 텍스트로 용어를 추가 합니다. 사전/단어/DiscreteExceptions/용어 요소에 해당 용어는 대/소문자 구분 하지 않습니다.  
   
  **예제**  
@@ -240,7 +238,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [CA1702: 복합 단어는 정확한 대/소문자를 사용해야 합니다.](../code-quality/ca1702-compound-words-should-be-cased-correctly.md)  
   
-###  <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a>사전/머리글자어/CasingExceptions/머리글자어  
+###  <a name="BKMK_DictionaryAcronymsCasingExceptionsAcronym"></a> 사전/머리글자어/CasingExceptions/머리글자어  
  사전/머리글자어/CasingExceptions의 내부 텍스트로 철자가으로 코드 분석을 식별 하는 단어 목록에서 약어를 포함 하 고, 약어는 대/소문자 구분 하 여 용어를 선택 하면 규칙 복합 단어에 대 한 방법을 나타내기 위해 추가 용어 / Acronym 요소입니다. 사전/머리글자어/CasingExceptions/Acronym 요소에 대 한 약어는 대/소문자 구분 합니다.  
   
  **예제**  
@@ -263,7 +261,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [CA1709: 식별자는 정확한 대/소문자를 사용해야 합니다.](../code-quality/ca1709-identifiers-should-be-cased-correctly.md)  
   
-##  <a name="BKMK_ToApplyACustomDictionaryToAProject"></a>사용자 지정 사전을 프로젝트에 적용 하려면  
+##  <a name="BKMK_ToApplyACustomDictionaryToAProject"></a> 사용자 지정 사전을 프로젝트에 적용 하려면  
   
 1.  **솔루션 탐색기**, 다음 절차 중 하나를 사용 합니다.  
   

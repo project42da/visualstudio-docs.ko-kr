@@ -1,29 +1,25 @@
 ---
 title: IDiaLineNumber | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaLineNumber interface
 ms.assetid: 1071f7d0-1f8c-4384-933f-c49c7eb930bd
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea164deb661dfe093ee81d40658c4f9ef6c57558
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c2520f52b83558909f1901bd280c7d924dab86e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idialinenumber"></a>IDiaLineNumber
 원본 파일 줄 번호를 이미지 텍스트의 바이트 블록에서 매핑 프로세스를 설명 하는 정보를 액세스 합니다.  
@@ -59,7 +55,7 @@ IDiaLineNumber : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenumlinenumbers:: Item](../../debugger/debug-interface-access/idiaenumlinenumbers-item.md) 또는 [idiaenumlinenumbers:: Next](../../debugger/debug-interface-access/idiaenumlinenumbers-next.md) 메서드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 함수는 함수에 사용 되는 줄 번호 표시 됩니다 (나타내는 `pSymbol`).  
   
 ```C++  

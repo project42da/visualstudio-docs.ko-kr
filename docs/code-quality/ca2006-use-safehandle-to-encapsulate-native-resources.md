@@ -1,12 +1,10 @@
 ---
-title: "CA2006: 네이티브 리소스를 캡슐화 하 SafeHandle 하는 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 'CA2006: 네이티브 리소스를 캡슐화 하 SafeHandle 하는 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2006
 - UseSafeHandleToEncapsulateNativeResources
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - UseSafeHandleToEncapsulateNativeResources
 - CA2006
 ms.assetid: a71950bd-bcc1-463d-b1f2-5233bc451456
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d70c453e502dd0a7f4eda2e9247dbc3ec3229ebe
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 0fdef78fdad92eb08012a474afff5c4c8c4d7ab8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2006-use-safehandle-to-encapsulate-native-resources"></a>CA2006: SafeHandle을 사용하여 네이티브 리소스를 캡슐화하십시오.
 |||  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
   
  이러한 시나리오에서는 보안 이나 안정성도 문제가 있습니다 다중 스레드 액세스 하도록 허용 된 경우는 `IntPtr` 나타내는 리소스를 해제 하는 방법을 `IntPtr` 제공 됩니다. 이러한 문제는 재활용 못하는 `IntPtr` 리소스를 해제할 다른 스레드에서 수행 되는 리소스를 동시에 사용 하는 동안에 값입니다. 이 경합 상태를 하나의 스레드만 읽거나 쓸 수 잘못 된 리소스와 연결 된 데이터를 발생할 수 있습니다. 예를 들어, 형식이로 OS 핸들을 저장 하는 경우는 `IntPtr` 있고 사용자가 호출할 수 있도록 **닫기** 다른 메서드와 동시에 및 종류의 동기화 하지 않고이 핸들을 사용 하 여 코드에 재활용 핸들 및 문제가 발생 했습니다.  
   
- 이 핸들 재활용 문제는 데이터 손상이 나 대부분의 경우 보안 취약점이 발생할 수 있습니다. `SafeHandle`및 형제 클래스인 <xref:System.Runtime.InteropServices.CriticalHandle> 이러한 스레딩 문제를 피할 수 있도록 리소스에 대 한 기본 핸들을 캡슐화 하는 메커니즘을 제공 합니다. 사용할 수는 또한 `SafeHandle` 및 형제 클래스인 `CriticalHandle` 다른 스레딩 문제, 예를 들어 네이티브 메서드 호출에 대해 기본 핸들의 복사본이 포함 된 관리 되는 개체의 수명을 제어 합니다. 이러한 경우를 제거할 수도 있습니다에 대 한 호출 `GC.KeepAlive`합니다. 사용할 때 발생 하는 성능 오버 헤드 위치 `SafeHandle` 및 어느 정도 `CriticalHandle`를 신중 하 게 디자인 피할 수 있습니다.  
+ 이 핸들 재활용 문제는 데이터 손상이 나 대부분의 경우 보안 취약점이 발생할 수 있습니다. `SafeHandle` 및 형제 클래스인 <xref:System.Runtime.InteropServices.CriticalHandle> 이러한 스레딩 문제를 피할 수 있도록 리소스에 대 한 기본 핸들을 캡슐화 하는 메커니즘을 제공 합니다. 사용할 수는 또한 `SafeHandle` 및 형제 클래스인 `CriticalHandle` 다른 스레딩 문제, 예를 들어 네이티브 메서드 호출에 대해 기본 핸들의 복사본이 포함 된 관리 되는 개체의 수명을 제어 합니다. 이러한 경우를 제거할 수도 있습니다에 대 한 호출 `GC.KeepAlive`합니다. 사용할 때 발생 하는 성능 오버 헤드 위치 `SafeHandle` 및 어느 정도 `CriticalHandle`를 신중 하 게 디자인 피할 수 있습니다.  
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
  변환 `IntPtr` 사용량과 `SafeHandle` 네이티브 리소스에 대 한 액세스를 안전 하 게 관리할 수 있습니다. 참조는 <xref:System.Runtime.InteropServices.SafeHandle> 예제에 대 한 참조 항목입니다.  

@@ -1,12 +1,10 @@
 ---
-title: "명령줄에서 ClickOnce 응용 프로그램을 구축 | Microsoft Docs"
-ms.custom: 
+title: 명령줄에서 ClickOnce 응용 프로그램을 구축 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - publishing
 - publishing, ClickOnce
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
-caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 39a64737c3e34b7e0c4d89824b22f169d60d4fd0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 183cb81798841c6640ea1b17d8db3820e0229769
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>명령줄에서 ClickOnce 응용 프로그램 빌드
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], 통합된 개발 환경 (IDE)에서 만들어진 경우에 명령줄에서 프로젝트를 빌드할 수 있습니다. 사용 하 여 만든 프로젝트를 다시 작성할 수는 실제로 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 만 있는 다른 컴퓨터에는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 설치 합니다. 이 자동화 된 프로세스를 사용 하 여 빌드를 재현할 수 있습니다, 그리고 예를 들어 중앙의 빌드 랩 또는 사용 하 여 고급 스크립팅 기술을 자체 프로젝트의 범위를 벗어납니다.  
@@ -112,7 +110,7 @@ msbuild /target:publish /property:BootstrapperEnabled=false
   
  게시 속성은에서 제어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서 **게시**, **보안**, 및 **서명** 의 속성 페이지는 **프로젝트 디자이너** . 다음은 응용 프로그램 디자이너의 다양 한 속성 페이지에 설정 되어 각 방법의 표시와 함께 게시 속성에 대 한 설명을입니다.  
   
--   `AssemblyOriginatorKeyFile`서명에 사용 되는 키 파일을 결정 하면 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. 어셈블리에 강력한 이름을 지정 하려면이 동일한 키를 사용할 수도 있습니다. 이 속성에 **서명** 의 페이지는 **프로젝트 디자이너**합니다.  
+-   `AssemblyOriginatorKeyFile` 서명에 사용 되는 키 파일을 결정 하면 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 합니다. 어셈블리에 강력한 이름을 지정 하려면이 동일한 키를 사용할 수도 있습니다. 이 속성에 **서명** 의 페이지는 **프로젝트 디자이너**합니다.  
   
  에 다음 속성이 설정 된는 **보안** 페이지:  
   
@@ -122,41 +120,41 @@ msbuild /target:publish /property:BootstrapperEnabled=false
   
  에 다음 속성이 설정 된는 **게시** 페이지:  
   
--   `PublishUrl`IDE에서에 응용 프로그램이 게시 될 위치가입니다. 에 삽입 됩니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 모두 없으면 응용 프로그램 매니페스트는 `InstallUrl` 또는 `UpdateUrl` 속성을 지정 합니다.  
+-   `PublishUrl` IDE에서에 응용 프로그램이 게시 될 위치가입니다. 에 삽입 됩니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 모두 없으면 응용 프로그램 매니페스트는 `InstallUrl` 또는 `UpdateUrl` 속성을 지정 합니다.  
   
--   `ApplicationVersion`버전을 지정 된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다. 버전 4 자리 수입니다. 마지막 자릿수가 양수인 경우는 "*"를 하면 `ApplicationRevision` 빌드 시에는 매니페스트에 삽입 되는 값을 대체 합니다.  
+-   `ApplicationVersion` 버전을 지정 된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다. 버전 4 자리 수입니다. 마지막 자릿수가 양수인 경우는 "*"를 하면 `ApplicationRevision` 빌드 시에는 매니페스트에 삽입 되는 값을 대체 합니다.  
   
--   `ApplicationRevision`수정 버전을 지정 합니다. 이것이 IDE에 게시할 때마다 증가 하는 정수입니다. 에 대 한 자동으로 증가 하지는 명령줄에서 수행한 빌드합니다.  
+-   `ApplicationRevision` 수정 버전을 지정 합니다. 이것이 IDE에 게시할 때마다 증가 하는 정수입니다. 에 대 한 자동으로 증가 하지는 명령줄에서 수행한 빌드합니다.  
   
--   `Install`응용 프로그램이 설치 된 응용 프로그램 또는 웹에서 실행 응용 프로그램 인지 확인 합니다.  
+-   `Install` 응용 프로그램이 설치 된 응용 프로그램 또는 웹에서 실행 응용 프로그램 인지 확인 합니다.  
   
--   `InstallUrl`사용자가 설치 하는 응용 프로그램을 위치가 됩니다 (표시 되지 않음). Setup.exe 부트스트래퍼에이 값 구워진를 지정 하는 경우는 `IsWebBootstrapper` 속성을 사용할 수 있습니다. 매니페스트 경우 응용 프로그램에 삽입 된 `UpdateUrl` 지정 되지 않았습니다.  
+-   `InstallUrl` 사용자가 설치 하는 응용 프로그램을 위치가 됩니다 (표시 되지 않음). Setup.exe 부트스트래퍼에이 값 구워진를 지정 하는 경우는 `IsWebBootstrapper` 속성을 사용할 수 있습니다. 매니페스트 경우 응용 프로그램에 삽입 된 `UpdateUrl` 지정 되지 않았습니다.  
   
--   `SupportUrl`(표시 되지 않음)가 연결 된 위치에는 **프로그램 추가/제거** 설치 된 응용 프로그램에 대 한 대화 상자.  
+-   `SupportUrl` (표시 되지 않음)가 연결 된 위치에는 **프로그램 추가/제거** 설치 된 응용 프로그램에 대 한 대화 상자.  
   
  다음 속성에서 설정 됩니다는 **응용 프로그램 업데이트** 에서 액세스 되는 대화 상자는 **게시** 페이지.  
   
--   `UpdateEnabled`응용 프로그램 업데이트를 확인 해야 하는지 여부를 나타냅니다.  
+-   `UpdateEnabled` 응용 프로그램 업데이트를 확인 해야 하는지 여부를 나타냅니다.  
   
--   `UpdateMode`포그라운드 업데이트 또는 백그라운드 업데이트를 지정합니다.  
+-   `UpdateMode` 포그라운드 업데이트 또는 백그라운드 업데이트를 지정합니다.  
   
--   `UpdateInterval`응용 프로그램 업데이트를 확인 하는 빈도 지정 합니다.  
+-   `UpdateInterval` 응용 프로그램 업데이트를 확인 하는 빈도 지정 합니다.  
   
--   `UpdateIntervalUnits`지정 여부는 `UpdateInterval` 값은 시간, 일 또는 주 단위로 합니다.  
+-   `UpdateIntervalUnits` 지정 여부는 `UpdateInterval` 값은 시간, 일 또는 주 단위로 합니다.  
   
--   `UpdateUrl`응용 프로그램 업데이트를 받을 위치를입니다 (표시 되지 않음). 를 지정 하는 경우이 값은 응용 프로그램 매니페스트에 삽입 됩니다.  
+-   `UpdateUrl` 응용 프로그램 업데이트를 받을 위치를입니다 (표시 되지 않음). 를 지정 하는 경우이 값은 응용 프로그램 매니페스트에 삽입 됩니다.  
   
 -   다음 속성에서 설정 됩니다는 **게시 옵션** 에서 액세스 되는 대화 상자는 **게시** 페이지.  
   
--   `PublisherName`설치 또는 응용 프로그램을 실행할 때 표시 되는 프롬프트에 표시 된 게시자의 이름을 지정 합니다. 설치 된 응용 프로그램의 경우에 사용 됩니다에 폴더 이름을 지정 하는 **시작** 메뉴.  
+-   `PublisherName` 설치 또는 응용 프로그램을 실행할 때 표시 되는 프롬프트에 표시 된 게시자의 이름을 지정 합니다. 설치 된 응용 프로그램의 경우에 사용 됩니다에 폴더 이름을 지정 하는 **시작** 메뉴.  
   
--   `ProductName`설치 또는 응용 프로그램을 실행할 때 표시 되는 프롬프트에 표시 되는 제품의 이름을 지정 합니다. 설치 된 응용 프로그램의 경우에 사용 됩니다에 바로 가기 이름을 지정 하는 **시작** 메뉴.  
+-   `ProductName` 설치 또는 응용 프로그램을 실행할 때 표시 되는 프롬프트에 표시 되는 제품의 이름을 지정 합니다. 설치 된 응용 프로그램의 경우에 사용 됩니다에 바로 가기 이름을 지정 하는 **시작** 메뉴.  
   
 -   다음 속성에서 설정 됩니다는 **필수 구성 요소** 에서 액세스 되는 대화 상자는 **게시** 페이지.  
   
--   `BootstrapperEnabled`setup.exe 부트스트래퍼를 생성 여부를 결정 합니다.  
+-   `BootstrapperEnabled` setup.exe 부트스트래퍼를 생성 여부를 결정 합니다.  
   
--   `IsWebBootstrapper`setup.exe 부트스트래퍼 웹을 통해 또는 디스크 기반 모드에서 작동 하는지 여부를 결정 합니다.  
+-   `IsWebBootstrapper` setup.exe 부트스트래퍼 웹을 통해 또는 디스크 기반 모드에서 작동 하는지 여부를 결정 합니다.  
   
 ## <a name="installurl-supporturl-publishurl-and-updateurl"></a>InstallURL, SupportUrl, PublishURL, 및 UpdateURL  
  다음 표에서 ClickOnce 배포를 위한 4 개의 URL 옵션을 보여 줍니다.  
@@ -164,9 +162,9 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 |URL 옵션|설명|  
 |----------------|-----------------|  
 |`PublishURL`|ClickOnce 응용 프로그램 웹 사이트에 게시 하는 경우 필요 합니다.|  
-|`InstallURL`|선택 사항입니다. 설치 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `InstallURL` 웹 URL로 합니다.|  
-|`SupportURL`|선택 사항입니다. 지원 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `SupportURL` 회사의 고객 지원 웹 사이트입니다.|  
-|`UpdateURL`|선택 사항입니다. 업데이트 위치과 다른 경우이 URL 옵션을 설정 합니다.는 `InstallURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `UpdateURL` 웹 URL로 합니다.|  
+|`InstallURL`|선택적 요소. 설치 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `InstallURL` 웹 URL로 합니다.|  
+|`SupportURL`|선택적 요소. 지원 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `SupportURL` 회사의 고객 지원 웹 사이트입니다.|  
+|`UpdateURL`|선택적 요소. 업데이트 위치과 다른 경우이 URL 옵션을 설정 합니다.는 `InstallURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `UpdateURL` 웹 URL로 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.Build.Tasks.GenerateBootstrapper>   

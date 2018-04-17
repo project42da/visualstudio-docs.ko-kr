@@ -1,13 +1,10 @@
 ---
-title: "연습: ClickOnce 응용 프로그램을 수동으로 배포 | Microsoft Docs"
-ms.custom: 
+title: '연습: ClickOnce 응용 프로그램을 수동으로 배포 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,22 +18,21 @@ helpviewer_keywords:
 - manual ClickOnce deployments
 - manifests [ClickOnce]
 ms.assetid: ccee6551-a1b9-4ca2-8845-9c1cf4ac2560
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e0035641a8ed374892060dbaabe79d808150cc2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 001aa8f3436e1594b198a81779c77258ca829a21
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>연습: ClickOnce 응용 프로그램 수동 배포
 배포 하려면 Visual Studio를 사용할 수 없는 경우 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 고급 배포 기능을 사용 해야 하는 응용 프로그램을 만드는 데 Mage.exe 명령줄 도구 사용 해야 하는 신뢰할 수 있는 응용 프로그램 배포와 같은 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트 합니다. 이 연습을 만드는 방법을 설명는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 명령줄 버전 (Mage.exe) 또는 매니페스트 생성 및 편집 도구의 그래픽 버전 (MageUI.exe) 중 하나를 사용 하 여 배포 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>필수 조건  
  이 연습에서는 일부 필수 구성 요소 및 배포를 빌드하기 전에 선택 해야 하는 옵션에 있습니다.  
   
 -   Mage.exe 및 MageUI.exe를 설치 합니다.  
@@ -70,7 +66,7 @@ ms.lasthandoff: 12/22/2017
   
 -   클라이언트 컴퓨터에서 필수 구성 요소는 응용 프로그램에 필요한 지 여부를 결정 합니다.  
   
-     [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]Visual Studio에서 배포 된 응용 프로그램 배포와 필수 구성 요소 설치 부트스트래퍼 (setup.exe)를 포함할 수 있습니다. 이 연습에 필요한 두 개의 매니페스트 만듭니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 합니다. 필수 부트스트래퍼를 사용 하 여 만들 수 있습니다는 [GenerateBootstrapper 작업](../msbuild/generatebootstrapper-task.md)합니다.  
+     [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Visual Studio에서 배포 된 응용 프로그램 배포와 필수 구성 요소 설치 부트스트래퍼 (setup.exe)를 포함할 수 있습니다. 이 연습에 필요한 두 개의 매니페스트 만듭니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 합니다. 필수 부트스트래퍼를 사용 하 여 만들 수 있습니다는 [GenerateBootstrapper 작업](../msbuild/generatebootstrapper-task.md)합니다.  
   
 ### <a name="to-deploy-an-application-with-the-mageexe-command-line-tool"></a>Mage.exe는 명령줄 도구와 응용 프로그램을 배포 하려면  
   
@@ -128,7 +124,7 @@ ms.lasthandoff: 12/22/2017
   
 10. 배포 디렉터리에서 모든 파일의 배포 대상 또는 미디어를 복사 합니다. 이 웹 사이트 또는 FTP 사이트, 파일 공유 또는 CD-ROM에서 폴더를 수 있습니다.  
   
-11. URL, UNC, 또는 응용 프로그램을 설치 하는 데 필요한 실제 미디어와 사용자가 제공 합니다. URL 또는 UNC 제공 하는 경우 부여 해야 사용자가 전체 경로 배포 매니페스트를 합니다. 예를 들어 AppToDeploy http://webserver01/ AppToDeploy 디렉터리에를 배포 하는 경우 전체 URL 경로 http://webserver01/AppToDeploy/AppToDeploy.application 것입니다.  
+11. URL, UNC, 또는 응용 프로그램을 설치 하는 데 필요한 실제 미디어와 사용자가 제공 합니다. URL 또는 UNC 제공 하는 경우 부여 해야 사용자가 전체 경로 배포 매니페스트를 합니다. 예를 들어, AppToDeploy에 배포 되 면 http://webserver01/ AppToDeploy 디렉터리의 전체 URL 경로 될 http://webserver01/AppToDeploy/AppToDeploy.application합니다.  
   
 ### <a name="to-deploy-an-application-with-the-mageuiexe-graphical-tool"></a>MageUI.exe 그래픽 도구와 응용 프로그램을 배포 하려면  
   
@@ -165,7 +161,7 @@ ms.lasthandoff: 12/22/2017
   
 13. 파일 시스템에 파일로 저장 된 인증서를 사용 하도록 설정한 경우 사용 된 **인증서 파일로 서명** 옵션을 줄임표를 사용 하 여 파일 시스템에서 인증서 선택 (**...** ) 단추입니다. 인증서 암호를 입력 합니다.  
   
-     또는  
+     -또는-  
   
      인증서가 컴퓨터에서 액세스할 수 있는 인증서 저장소에 보관 되어 있는 경우 선택 된 **저장 된 인증서로 서명** 옵션 제공된 된 목록에서 인증서를 선택 합니다.  
   
@@ -193,7 +189,7 @@ ms.lasthandoff: 12/22/2017
   
 25. 파일 시스템에 파일로 저장 된 인증서를 사용 하도록 설정한 경우 사용 된 **인증서 파일로 서명** 옵션을 줄임표를 사용 하 여 파일 시스템에서 인증서 선택 (**...** ) 단추입니다. 인증서 암호를 입력 합니다.  
   
-     또는  
+     -또는-  
   
      인증서가 컴퓨터에서 액세스할 수 있는 인증서 저장소에 보관 되어 있는 경우 선택 된 **저장 된 인증서로 서명** 옵션 제공된 된 목록에서 인증서를 선택 합니다.  
   
@@ -203,7 +199,7 @@ ms.lasthandoff: 12/22/2017
   
 28. 배포 디렉터리에서 모든 파일의 배포 대상 또는 미디어를 복사 합니다. 이 웹 사이트 또는 FTP 사이트, 파일 공유 또는 CD-ROM에서 폴더를 수 있습니다.  
   
-29. URL, UNC, 또는 응용 프로그램을 설치 하는 데 필요한 실제 미디어와 사용자가 제공 합니다. URL 또는 UNC 제공 하는 경우에 배포 매니페스트의 전체 경로 사용자에 게 부여 해야 합니다. 예를 들어 AppToDeploy http://webserver01/ AppToDeploy 디렉터리에를 배포 하는 경우 전체 URL 경로 http://webserver01/AppToDeploy/AppToDeploy.application 것입니다.  
+29. URL, UNC, 또는 응용 프로그램을 설치 하는 데 필요한 실제 미디어와 사용자가 제공 합니다. URL 또는 UNC 제공 하는 경우에 배포 매니페스트의 전체 경로 사용자에 게 부여 해야 합니다. 예를 들어, AppToDeploy에 배포 되 면 http://webserver01/ AppToDeploy 디렉터리의 전체 URL 경로 될 http://webserver01/AppToDeploy/AppToDeploy.application합니다.  
   
 ## <a name="next-steps"></a>다음 단계  
  응용 프로그램의 새 버전을 배포 해야 할 경우 새 버전의 이름을 딴 새 디렉터리를 만들-1.0.0.1—and 새 디렉터리에 새 응용 프로그램 파일을 복사 하는 예를 들어 있습니다. 다음을 생성 하 고 새 응용 프로그램 매니페스트, 서명 및 업데이트 배포 매니페스트에 서명 하는 이전 단계를 수행 해야 합니다. Mage.exe에서 같은 더 높은 버전을 지정 해야 합니다. `-New` 및 `-Update` 호출으로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 이상 버전에서 가장 중요 한 가장 왼쪽 정수로 업데이트 합니다. MageUI.exe를 사용 하는 경우 업데이트할 수 있습니다 배포 매니페스트를 열거나을 선택 하 고 **응용 프로그램 참조** 탭을 클릭 하 고 **매니페스트 선택** 단추를 클릭 한 다음 업데이트 된 선택 하 응용 프로그램 매니페스트입니다.  

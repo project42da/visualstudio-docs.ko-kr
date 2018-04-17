@@ -1,11 +1,8 @@
 ---
-title: "연습: N 계층 데이터 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: N 계층 데이터 응용 프로그램 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 09/08/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - n-tier applications, creating
 - n-tier applications, walkthroughs
 ms.assetid: d15e4d31-2839-48d9-9e0e-2e73404d82a2
-caps.latest.revision: "48"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 9e513fc346991912dcc91e9a56062e49760d9779
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: a22ba174310aa9fc3f7e2676c140d164911d5bf4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-n-tier-data-application"></a>연습: N 계층 데이터 응용 프로그램 만들기
 *N 계층* 데이터 응용 프로그램은 여러 논리 계층으로 분리 되어 데이터에 액세스 하는 응용 프로그램 또는 *계층*합니다. 응용 프로그램 구성 요소를 개별 계층으로 분리하면 응용 프로그램의 확장성과 유지 관리 가능성이 높아집니다. 이는 전체 솔루션을 다시 설계하지 않고도 단일 계층에 적용할 수 있는 새로운 기술을 보다 쉽게 도입할 수 있기 때문입니다. N 계층 아키텍처에는 표시 계층, 중간 계층 및 데이터 계층이 포함됩니다. 중간 계층에는 대개 데이터 액세스 계층, 비즈니스 논리 계층 및 인증, 유효성 검사 등의 공유 구성 요소가 포함됩니다. 데이터 계층에는 관계형 데이터베이스가 포함됩니다. 표시 계층에 액세스하는 최종 사용자로부터 격리된 상태를 유지하기 위해 N 계층 응용 프로그램에서는 보통 중요한 정보가 중간 계층의 데이터 액세스 계층에 저장됩니다. 자세한 내용은 참조 [N 계층 데이터 응용 프로그램 개요](../data-tools/n-tier-data-applications-overview.md)합니다.  
@@ -54,7 +51,7 @@ N 계층 응용 프로그램의 여러 계층을 분리하는 방법 중 하나�
   
 ![비디오에 링크](../data-tools/media/playvideo.gif "PlayVideo") 이 항목의 동영상 버전을 참조 하십시오. [비디오 방법: N 계층 데이터 응용 프로그램 만들기](http://go.microsoft.com/fwlink/?LinkId=115188)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
 이 연습에서는 Northwind 샘플 데이터베이스 및 SQL Server Express LocalDB를 사용 합니다.  
   
 1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/sql-server/sql-server-editions-express), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **.NET 데스크톱 개발** 작업 또는 개별 구성 요소입니다.  
@@ -124,7 +121,7 @@ N 계층 응용 프로그램의 여러 계층을 분리하는 방법 중 하나�
   
      Northwind 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 선택합니다.  
   
-     또는  
+     -또는-  
   
      선택 **새 연결** 열려는 **연결 추가** 대화 상자.  
   
@@ -154,7 +151,7 @@ N 계층 응용 프로그램의 여러 계층을 분리하는 방법 중 하나�
   
 4.  에 **데이터 집합 프로젝트** 목록에서 **DataEntityTier**합니다.  
   
-5.  에 **빌드** 메뉴 선택 **솔루션 빌드**합니다.  
+5.  **빌드** 메뉴에서 **솔루션 빌드**를 선택합니다.  
   
  데이터 집합 및 TableAdapters가 두 클래스 라이브러리 프로젝트로 분리됩니다. 원래 전체 데이터 집합(DataAccessTier)이 포함되었던 프로젝트에 이제는 TableAdapters만이 포함됩니다. 에 지정 된 프로젝트는 **데이터 집합 프로젝트** 속성 (DataEntityTier) 형식화 된 데이터 집합에 포함: NorthwindDataSet.Dataset.Designer.vb (또는 northwinddataset.dataset.designer.cs가) 있습니다.  
   

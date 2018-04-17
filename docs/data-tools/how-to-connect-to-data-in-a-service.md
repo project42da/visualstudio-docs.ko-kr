@@ -1,11 +1,8 @@
 ---
-title: "방법: 데이터 서비스에 연결 | Microsoft Docs"
-ms.custom: 
+title: '방법: 데이터 서비스에 연결 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data [Visual Studio], connecting to Web services
 - data sources, creating from Web services
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - Web services, as data sources
 - Web services, connecting
 ms.assetid: a6b54353-05fe-4e5c-8631-90231fc95504
-caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 58d22a756edd625a9c664862d05de5fe405fd9f0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 6e85af7411da7ff9f7912c4127d51db100f82063
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-connect-to-data-in-a-service"></a>방법: 서비스의 데이터에 연결
 응용 프로그램을 실행 하 여 서비스에서 반환 되는 데이터 연결의 [데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png) 선택 하 고 **서비스** 에 **데이터소스형식선택**페이지.  

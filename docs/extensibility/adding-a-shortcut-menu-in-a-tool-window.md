@@ -1,28 +1,26 @@
 ---
-title: "도구 창에서 바로 가기 메뉴를 추가 | Microsoft Docs"
-ms.custom: 
+title: 도구 창에서 바로 가기 메뉴를 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - context menus, adding to tool windows
 - menus, context menus
 - shortcut menus, adding to tool windows
 - tool windows, adding context menus
 ms.assetid: 50234537-9e95-4b7e-9cb7-e5cf26d6e9d2
-caps.latest.revision: "37"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 4f90f5971a101b54aae1cd968d5d5dad67caec74
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 49008836057ce6e5b67a0795bc5c6572ef6f7935
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-shortcut-menu-in-a-tool-window"></a>도구 창에서 바로 가기 메뉴를 추가합니다.
 이 연습에서는 도구 창에서 바로 가기 메뉴를 넣습니다. 바로 가기 메뉴에 단추, 텍스트 상자 또는 창 배경 단추로 클릭할 때 표시 되는 메뉴가입니다. 바로 가기 메뉴에 명령을 다른 메뉴나 도구 모음에서 명령과 동일 하 게 동작 합니다. 바로 가기 메뉴를 지원 하려면.vsct 파일에서 지정 하 고 마우스 오른쪽 단추로 클릭에 대 한 응답에 표시 합니다.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
  또는 바로 가기 메뉴에 Visual Studio 기능을 액세스 하지 않는 경우 있습니다 사용할 수는 <xref:System.Windows.FrameworkElement.ContextMenu%2A> 사용자 정의 컨트롤에 있는 XAML 요소의 속성입니다. 자세한 내용은 참조 [ContextMenu](/dotnet/framework/wpf/controls/contextmenu)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>필수 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-the-tool-window-shortcut-menu-package"></a>도구 창 바로 가기 메뉴 패키지 만들기  

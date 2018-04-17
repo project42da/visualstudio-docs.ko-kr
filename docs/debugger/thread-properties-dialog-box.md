@@ -1,33 +1,31 @@
 ---
-title: "스레드 속성 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 스레드 속성 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
+ms.technology:
+- vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Spy++, thread properties
 - thread properties, Spy++
 ms.assetid: 5352d11a-debb-4c20-b9a0-d37d94900b1c
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0abdebd821051d6821567c8a8ec87329868c6b28
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d8b3a0fbb7feb4e2865f67a9c51404d0ec45641d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="thread-properties-dialog-box"></a>스레드 속성 대화 상자
 이 대화 상자 찾기 특정 스레드에 대 한 자세한 정보를 사용 합니다. 이 대화 상자를 표시 하려면 포커스를 이동 하는 [스레드 뷰](../debugger/threads-view.md) 창 또는 열기 [메시지 뷰](../debugger/messages-view.md) 메시지를 확장 합니다. 트리에서 스레드 노드를 선택한 후 선택 **속성** 에서 **보기** 메뉴.  
   
  **일반** 탭에는 표시 합니다. 이 탭의 수정된 된 버전은 Windows 98 및 Windows 95 운영 체제에서 표시 됩니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [스레드 속성 대화 상자, 일반 탭](../debugger/general-tab-thread-properties-dialog-box.md)  
  이 대화 상자를 사용 하 여 선택한 스레드에 대 한 자세한 내용을 합니다.  
   

@@ -1,30 +1,26 @@
 ---
-title: "BuildProjectOnLoad (Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: 
+title: BuildProjectOnLoad (Visual Studio 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#BuildOnLoad
 helpviewer_keywords:
 - <BuildOnLoad> element [Visual Studio Templates]
 - BuildOnLoad element [Visual Studio Templates]
 ms.assetid: 950f5fc1-d041-4090-9a5c-60844768a4cc
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b3fc7842e71ff1bff3bd3e362f0c12afcf4292f
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 58493c8e3c4668f1cd94c7f892d727479b755f3f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buildprojectonload-visual-studio-templates"></a>BuildProjectOnLoad(Visual Studio 템플릿)
 생성 된 후 즉시 프로젝트를 빌드할 것인지 지정 합니다.  
@@ -40,7 +36,7 @@ ms.lasthandoff: 02/01/2018
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -60,9 +56,9 @@ ms.lasthandoff: 02/01/2018
  텍스트 중 하나 여야 합니다 `true` 또는 `false`, 생성 된 후 즉시 프로젝트를 빌드할 것인지를 나타내는입니다.  
   
 ## <a name="remarks"></a>설명  
- `BuildProjectOnLoad`선택적 특성이입니다. 기본값은 `false`입니다.  
+ `BuildProjectOnLoad` 선택적 특성이입니다. 기본값은 `false`입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿의 메타데이터를 보여 줍니다.  
   
 ```  

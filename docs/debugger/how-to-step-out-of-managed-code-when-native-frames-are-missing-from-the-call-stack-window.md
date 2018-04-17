@@ -1,12 +1,10 @@
 ---
-title: "방법: 네이티브 프레임이 호출 스택 창에서 없을 때 관리 코드를 나가기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 네이티브 프레임이 호출 스택 창에서 없을 때 관리 코드를 나가기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -21,18 +19,17 @@ helpviewer_keywords:
 - stepping, out of managed code
 - managed code, stepping out of
 ms.assetid: 97cdd2a8-02a9-4a06-a5b1-c92b1e431979
-caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
 - dotnet
-ms.openlocfilehash: 7599c99c9375cda7b5f24432db8c137c5c4357df
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5c64016f5ca0613a2986ec8a0bf305d88ecffd64
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-step-out-of-managed-code-when-native-frames-are-missing-from-the-call-stack-window"></a>방법: 호출 스택 창에 네이티브 프레임이 없을 때 관리 코드에서 나가기
 코드에 네이티브 프레임에 표시 되는 경우는 **호출 스택** 창, 관리 코드에서 나가면 예기치 않은 결과가 발생할 수 있습니다. 이 문제를 해결 대신 중단점을 사용 하면 **나가기**합니다.  

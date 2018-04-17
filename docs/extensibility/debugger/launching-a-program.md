@@ -1,26 +1,24 @@
 ---
-title: "프로그램을 시작 | Microsoft Docs"
-ms.custom: 
+title: 프로그램을 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, launching
 - programs, launching
 ms.assetid: 6857e9c6-e44a-468a-afa4-f7c4a0b77844
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5762b59a52cce2bf918c50630bbf82e176d9e82f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 714d751e9855b5567bf76ccd902fada727e14ba1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="launching-a-program"></a>프로그램을 시작
 프로그램을 디버깅 하려는 사용자는 IDE에서 디버거를 실행 하려면 f5 수 있습니다. 이 일련의 IDE의 다시 연결 하거나 연결, 프로그램에 다음과 같이 디버그 엔진 (DE)에 연결 하면 결국 이벤트가 시작 됩니다.  
@@ -29,7 +27,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  장치가 지정 된 경우는 DE 프로그램을 시작 하려면 운영 체제를 호출 합니다. 프로그램을 실행할로 인해 프로그램의 런타임 환경 로드 됩니다. 예를 들어 프로그램 MSIL로 작성 프로그램을 실행 하려면 공용 언어 런타임에서 호출 됩니다.  
   
-     또는  
+     -또는-  
   
      포트는 DE 지정 되지 않은 경우 프로그램의 런타임 환경을 로드할는 프로그램을 시작 하려면 운영 체제를 호출 합니다.  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  경우 `GUID_NULL` 전달 되는 포트는 프로그램을 시작 합니다. 프로그램이 실행 되 면 런타임 환경 만듭니다는 `IDebugProgramNode2` 전달 하는 프로그램을 설명 하기 위해 인터페이스 `IDebugPortNotify2::AddProgramNode`합니다. 이 프로그램이 실행 되는 포트를 알립니다. 다음은 SDM 실행 중인 프로그램에 디버그 엔진을 연결합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [포트에 알림](../../extensibility/debugger/notifying-the-port.md)  
  프로그램 시작 되 고 포트 알립니다 후의 상황에 대해 설명 합니다.  
   

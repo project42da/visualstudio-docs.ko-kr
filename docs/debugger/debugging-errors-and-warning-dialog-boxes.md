@@ -2,11 +2,8 @@
 title: 디버깅 오류 및 경고 대화 상자가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - VS.WebClient.AccessRequiredDialog
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - debugger, errors
 - errors [Visual Studio], debugger
 ms.assetid: 73baaf39-3026-48c9-be48-8b9ba0063cde
-caps.latest.revision: 10
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 547c9befa5868aee669bc663bf5f7542e8d09ab7
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 9e03df4aeb82d6737be92425b3869a2ed6714780
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-errors-and-warning-dialog-boxes"></a>디버깅 오류 및 경고 대화 상자
 다음은 응용 프로그램을 디버깅할 때 발생할 수 있는 오류 및 경고 대화 상자입니다.  

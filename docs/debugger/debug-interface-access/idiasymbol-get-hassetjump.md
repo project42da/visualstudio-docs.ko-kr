@@ -1,29 +1,25 @@
 ---
 title: 'Idiasymbol:: Get_hassetjump | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_hasSetJump method
 ms.assetid: 22656206-dccf-40ed-b179-fc016d1b262a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6d7141e6dd97fbe4c1d7b3df9a2d245e2abe3d4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ead924405782a6b33e4b930c71571fd00a08c78c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolgethassetjump"></a>IDiaSymbol::get_hasSetJump
 사용 하는 함수에 포함 되어 있는지 여부를 지정 하는 플래그를 검색는 [setjmp](/cpp/c-runtime-library/reference/setjmp) 명령 (이루는 [longjmp](/cpp/c-runtime-library/reference/longjmp) 명령, 예외 처리의 C 스타일 메서드를 형성 하는 이러한).  

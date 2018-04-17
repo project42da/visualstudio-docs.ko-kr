@@ -1,29 +1,25 @@
 ---
 title: 'Idiadatasource:: Loadandvalidatedatafrompdb | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaDataSource::loadAndValidateDataFromPdb method
 ms.assetid: d66712dd-6c24-4192-919a-cce262066f0e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bcd82116c7499d2a2289fc0c198a2be053226721
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2613ee54f9db7216480093fcf4ed65a7927b775c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiadatasourceloadandvalidatedatafrompdb"></a>IDiaDataSource::loadAndValidateDataFromPdb
 엽니다 및 프로그램 데이터베이스 (.pdb) 파일에 제공 된 서명 정보과 일치 하는지 확인 하 고 디버그 데이터 소스로.pdb 파일을 준비 합니다.  
@@ -73,7 +69,7 @@ HRESULT loadAndValidateDataFromPdb (
   
  사용 하 여 메모리에서 직접.pdb 파일을 로드 하려면는 [idiadatasource:: Loaddatafromistream](../../debugger/debug-interface-access/idiadatasource-loaddatafromistream.md) 메서드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 IDiaDataSource* pSource;  // Previously created data source.  

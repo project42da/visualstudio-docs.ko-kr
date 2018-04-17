@@ -1,30 +1,26 @@
 ---
-title: "썽크 | Microsoft Docs"
-ms.custom: 
+title: 썽크 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - thunk properties [DIA SDK]
 - thunk symbol
 ms.assetid: 01abb95f-d89a-465c-a4eb-8e8509598c95
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2dc847378510a6c7b0c07834a7658874f94b764e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bb7177d89ef139ad25392df3bdab91031d59f10c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="thunk"></a>썽크
 각 `thunk` 으로 식별 되는 `SymTagThunk` 태그입니다.  
@@ -58,11 +54,11 @@ ms.lasthandoff: 12/22/2017
 |[IDiaSymbol::get_thunkOrdinal](../../debugger/debug-interface-access/idiasymbol-get-thunkordinal.md)|`DWORD`|에 정의 된 대로 형식을 썽크는 [THUNK_ORDINAL 열거형](../../debugger/debug-interface-access/thunk-ordinal.md)합니다.|  
 |[IDiaSymbol::get_type](../../debugger/debug-interface-access/idiasymbol-get-type.md)|`IDiaSymbol*`|이 썽크 (DIA SDK v 8.0 이상 에서만에서)의 형식입니다.|  
 |[IDiaSymbol::get_typeId](../../debugger/debug-interface-access/idiasymbol-get-typeid.md)|`DWORD`|기호 형식 (DIA SDK v 8.0 이상 에서만에서)의 ID입니다.|  
-|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE`썽크 (DIA SDK v 8.0 이상 에서만에서), 정렬 되지 않은 경우|  
-|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE`이면 썽크 가상 (DIA SDK v 8.0 이상 에서만에서).|  
+|[IDiaSymbol::get_unalignedType](../../debugger/debug-interface-access/idiasymbol-get-unalignedtype.md)|`BOOL`|`TRUE` 썽크 (DIA SDK v 8.0 이상 에서만에서), 정렬 되지 않은 경우|  
+|[IDiaSymbol::get_virtual](../../debugger/debug-interface-access/idiasymbol-get-virtual.md)|`BOOL`|`TRUE` 이면 썽크 가상 (DIA SDK v 8.0 이상 에서만에서).|  
 |[IDiaSymbol::get_virtualAddress](../../debugger/debug-interface-access/idiasymbol-get-virtualaddress.md)|`ULONGLONG`|이 썽크 실행 가능 이미지 내에서 위치입니다.|  
 |[IDiaSymbol::get_virtualBaseOffset](../../debugger/debug-interface-access/idiasymbol-get-virtualbaseoffset.md)|`DWORD`|이 썽크 (DIA SDK v 8.0에만 또는 이상)를 가상 테이블의 오프셋입니다.|  
-|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE`경우 썽크 (DIA SDK v 8.0 이상 에서만에서) volatile로 표시 되어 있습니다.|  
+|[IDiaSymbol::get_volatileType](../../debugger/debug-interface-access/idiasymbol-get-volatiletype.md)|`BOOL`|`TRUE` 경우 썽크 (DIA SDK v 8.0 이상 에서만에서) volatile로 표시 되어 있습니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [기호 형식의 어휘 계층 구조](../../debugger/debug-interface-access/lexical-hierarchy-of-symbol-types.md)   

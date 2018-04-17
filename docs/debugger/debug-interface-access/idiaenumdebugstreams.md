@@ -1,29 +1,25 @@
 ---
 title: IDiaEnumDebugStreams | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumDebugStreams interface
 ms.assetid: 611caf4f-7a5f-4aa4-b909-52feeb3cc752
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e90f20f1f2653c516c455fcfabf06fcf502544fe
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 82c785331d8e4377844fa25ab07ea65b033e06cd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaenumdebugstreams"></a>IDiaEnumDebugStreams
 데이터 소스에 포함 된 다양 한 디버그 스트림을 열거 합니다.  
@@ -53,7 +49,7 @@ IDiaEnumDebugStreams : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  호출 된 [idiasession:: Getenumdebugstreams](../../debugger/debug-interface-access/idiasession-getenumdebugstreams.md) 를 얻는 메서드를 프로그램 `IDiaEnumDebugStreams` 개체입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는이 인터페이스에서 사용할 수 있는 데이터 스트림 액세스 하는 방법을 보여 줍니다. 참조는 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) 의 구현에 대 한 인터페이스는 `PrintStreamData` 함수입니다.  
   
 ```C++  

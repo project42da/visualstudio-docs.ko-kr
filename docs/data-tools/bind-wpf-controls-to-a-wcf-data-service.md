@@ -1,11 +1,8 @@
 ---
-title: "WCF 데이터 서비스에 WPF 컨트롤 바인딩 | Microsoft Docs"
-ms.custom: 
+title: WCF 데이터 서비스에 WPF 컨트롤 바인딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +11,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 8823537c-82f0-41f7-bf30-705f0e5e59fd
-caps.latest.revision: "40"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: ec13e17aac37a24e92732b9b052147c7d9faa916
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: a10ce63d969f67c12197f13f0ab285bc05e258cb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-wpf-controls-to-a-wcf-data-service"></a>WCF 데이터 서비스에 WPF 컨트롤 바인딩
 이 연습에서는 데이터 바인딩된 컨트롤을 포함하는 WPF 응용 프로그램을 만듭니다. 이러한 컨트롤은 [!INCLUDE[ss_data_service](../data-tools/includes/ss_data_service_md.md)]에서 캡슐화된 고객 레코드에 바인딩됩니다. 또한 고객이 레코드를 보고 업데이트하는 데 사용할 수 있는 단추도 추가합니다.  
@@ -43,7 +40,7 @@ ms.lasthandoff: 12/22/2017
   
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
@@ -247,11 +244,11 @@ WPF 디자이너에서 XAML을 수정하여 창에 여러 단추를 추가합니
      [!code-vb[Data_WPFWCF#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_2.vb)]  
   
 ## <a name="navigate-sales-records"></a>판매 레코드 탐색  
-사용자가 사용 하 여 판매 레코드를 스크롤할 수 있는 코드를 추가  **\<**  및  **>**  단추입니다.  
+사용자가 사용 하 여 판매 레코드를 스크롤할 수 있는 코드를 추가 **\<** 및 **>** 단추입니다.  
   
 #### <a name="to-enable-users-to-navigate-sales-records"></a>사용자가 판매 레코드를 탐색할 수 있도록 설정하려면  
   
-1.  디자이너에서 두 번 클릭 하 고  **<**  창 화면에서 단추입니다.  
+1.  디자이너에서 두 번 클릭 하 고 **<** 창 화면에서 단추입니다.  
   
      Visual Studio 코드 숨김 파일이 열리고 새 `backButton_Click` 에 대 한 이벤트 처리기는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
@@ -260,7 +257,7 @@ WPF 디자이너에서 XAML을 수정하여 창에 여러 단추를 추가합니
      [!code-csharp[Data_WPFWCF#3](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-wcf-data-service_3.cs)]
      [!code-vb[Data_WPFWCF#3](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-wcf-data-service_3.vb)]  
   
-3.  디자이너로 돌아온 두 번 클릭은  **>**  단추입니다.  
+3.  디자이너로 돌아온 두 번 클릭은 **>** 단추입니다.  
   
      Visual Studio 코드 숨김 파일이 열리고 새 `nextButton_Click` 에 대 한 이벤트 처리기는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
@@ -302,7 +299,7 @@ WPF 디자이너에서 XAML을 수정하여 창에 여러 단추를 추가합니
   
     -   텍스트 상자에 판매 주문 ID가 첫 번째 판매 레코드 데이터의 서로 다른 필드가 표시 **71774**합니다.  
   
-    -   클릭할 수는  **>**  또는  **<**  단추 다른 판매 레코드를 탐색할 수 있습니다.  
+    -   클릭할 수는 **>** 또는 **<** 단추 다른 판매 레코드를 탐색할 수 있습니다.  
   
 5.  판매 레코드 중 하나에 텍스트를 입력 합니다.는 **주석** 상자를 선택한 다음 클릭 **ब ा ळ**합니다.  
   
@@ -319,7 +316,7 @@ WPF 디자이너에서 XAML을 수정하여 창에 여러 단추를 추가합니
   
 -   사용 하는 **데이터 소스** WPF 컨트롤에 관련된 데이터 (즉, 부모-자식 관계의 데이터)를 표시 하는 Visual Studio의 창. 자세한 내용은 참조 [연습: WPF 응용 프로그램의 관련 데이터 표시](../data-tools/display-related-data-in-wpf-applications.md)합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio에서 데이터에에서 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
 [데이터 집합에 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-a-dataset.md)   
 [WCF (.NET Framework) 개요](/dotnet/framework/data/wcf/wcf-data-services-overview)   

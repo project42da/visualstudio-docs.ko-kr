@@ -1,27 +1,25 @@
 ---
-title: "명령의 모양 변경 | Microsoft Docs"
-ms.custom: 
+title: 명령의 모양 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands, changing appearance
 - menu commands, changing appearance
 - menus, changing command appearance
 ms.assetid: da2474fa-f92d-4e9e-b8bf-67c61bf249c2
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: eec62227ec39c1758c15e83fd1d8306e807d59fd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4a19793f16991bc61636a929822757823728a926
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changing-the-appearance-of-a-command"></a>명령의 모양 변경
 명령의 모양을 변경 하 여 여 사용자에 게 피드백을 제공할 수 있습니다. 예를 들어 명령을 사용할 수 없는 경우 다른 모양으로 좋습니다. 사용 가능 여부가 명령을 확인, 숨기기 또는 표시 하거나 수 있습니다, 또는 확인 메뉴에서의 선택을 취소 합니다.  

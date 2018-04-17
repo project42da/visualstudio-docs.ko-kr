@@ -1,20 +1,20 @@
 ---
-title: ".NET 용 visual Studio data tools | Microsoft Docs"
+title: .NET 용 visual Studio data tools | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3175080-1dfb-4ab8-a460-92dadbb844b4
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - dotnet
-ms.openlocfilehash: d96b92037b42c33cd7b9702705e2487b02bc69bc
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: b855516e6eb440b970489c3ebc6209dc0573f231
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-data-tools-for-net"></a>.NET 용 visual Studio data tools
 
@@ -40,6 +40,6 @@ Visual Studio 및.NET Framework에는 광범위 한 API와 도구를 데이터�
 
 3 단계를 건너뛰고 모델을 사용 하지 않고 데이터베이스에 직접 명령 실행 하는.NET 응용 프로그램을 프로그래밍할 수 있습니다. 이 경우에 관련 설명서를 찾을 수 있습니다: [ADO.NET](/dotnet/framework/data/adonet/index)합니다. Note 여전히 사용할 수 있는 데이터 소스 구성 마법사 및 디자이너에 메모리와 해당 개체에 데이터 바인딩 UI 컨트롤에 사용자 정의 개체를 채울 때 데이터 바인딩 코드를 생성 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)

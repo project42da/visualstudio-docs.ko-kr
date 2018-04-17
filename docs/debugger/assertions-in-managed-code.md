@@ -1,13 +1,10 @@
 ---
-title: "관리 코드에 어설션 | Microsoft Docs"
-ms.custom: 
+title: 관리 코드에 어설션 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -23,17 +20,16 @@ helpviewer_keywords:
 - Trace.Listeners property
 - assertions, managed code
 ms.assetid: 70ab2522-6486-4076-a1a9-e0f11cd0f3a1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 90e39956f777ddd79fad080d8bb6d13b30d4ccd0
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: f682768aeb3f3a0f3cc22da8a68f8db4a225b375
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assertions-in-managed-code"></a>관리 코드에 어설션 사용
 어설션 또는 `Assert` 문은 `Assert` 문에 대한 인수로 지정하는 조건을 테스트합니다. 조건이 true로 평가되면 동작이 발생하지 않고, 조건이 false로 평가되면 어설션이 실패합니다. 디버그 빌드로 실행 중인 경우 프로그램 중단 모드가 시작됩니다.  
@@ -53,14 +49,14 @@ ms.lasthandoff: 01/29/2018
   
  [구성 파일에서 어설션 설정](#BKMK_Setting_assertions_in_configuration_files)  
   
-##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a>System.Diagnostics Namespace의 assert  
+##  <a name="BKMK_Asserts_in_the_System_Diagnostics_Namespace"></a> System.Diagnostics Namespace의 assert  
  Visual Basic 및 Visual C#에서는 `Assert` 네임스페이스에 있는 <xref:System.Diagnostics.Debug> 또는 <xref:System.Diagnostics.Trace>에서 <xref:System.Diagnostics> 메서드를 사용할 수 있습니다. <xref:System.Diagnostics.Debug> 클래스 메서드는 프로그램의 릴리스 버전에 포함되지 않으므로 릴리스 코드의 크기를 증가시키거나 속도를 떨어뜨리지 않습니다.  
   
  C++는 <xref:System.Diagnostics.Debug> 클래스 메서드를 지원하지 않습니다. 사용 하 여 동일한 결과 얻을 수는 <xref:System.Diagnostics.Trace> 와 같은 클래스에 조건부 컴파일을 `#ifdef DEBUG`... `#endif`.  
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_The_Debug_Assert_method"></a>Debug.Assert 메서드  
+##  <a name="BKMK_The_Debug_Assert_method"></a> Debug.Assert 메서드  
  코드가 정확한 경우 true로 유지되어야 하는 조건을 테스트하려면 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName> 메서드를 사용합니다. 예를 들어 정수 나누기 함수를 작성한 경우, 수학의 규칙에 따라 0으로는 나눌 수 없습니다. 다음과 같이 어설션을 사용하여 이를 테스트할 수 있습니다.  
   
 ```VB  
@@ -114,7 +110,7 @@ savingsAccount.Withdraw ( amount );
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Side_effects_of_Debug_Assert"></a>Debug.Assert의 파생 작업  
+##  <a name="BKMK_Side_effects_of_Debug_Assert"></a> Debug.Assert의 파생 작업  
  <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>를 사용할 때는 `Assert`가 제거되어도 `Assert` 내의 코드에 의해 프로그램의 결과가 변경되지 않도록 해야 합니다. 프로그램 결과가 변경되면 릴리스 버전의 프로그램에만 나타나는 버그가 발생할 수 있습니다. 특히 다음 예와 같이 함수 또는 프로시저 호출이 포함된 Assert를 사용할 경우에 주의해야 합니다.  
   
 ```VB  
@@ -143,7 +139,7 @@ Debug.Assert ( temp != 0 );
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Trace_and_Debug_Requirements"></a>Trace 및 Debug 요구 사항  
+##  <a name="BKMK_Trace_and_Debug_Requirements"></a> Trace 및 Debug 요구 사항  
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 마법사를 사용하여 프로젝트를 만드는 경우 릴리스 구성과 디버그 구성 모두에서 기본적으로 TRACE 기호가 정의됩니다. 디버그 기호는 기본적으로 디버그 빌드에서만 정의됩니다.  
   
  그 밖의 경우에 <xref:System.Diagnostics.Trace> 메서드가 작동하려면 프로그램의 소스 파일 맨 위에 다음 중 하나가 있어야 합니다.  
@@ -162,7 +158,7 @@ Debug.Assert ( temp != 0 );
   
  C++는 <xref:System.Diagnostics.Debug> 클래스 메서드를 지원하지 않습니다. 사용 하 여 동일한 결과 얻을 수는 <xref:System.Diagnostics.Trace> 와 같은 클래스에 조건부 컴파일을 `#ifdef DEBUG`... `#endif`. 이러한 기호를 정의할 수는  **\<프로젝트 > 속성 페이지** 대화 상자. 자세한 내용은 참조 [Visual Basic 디버그 구성에 대 한 프로젝트 설정 변경](../debugger/project-settings-for-a-visual-basic-debug-configuration.md) 또는 [C 또는 c + + 디버그 구성에 대 한 프로젝트 설정 변경](../debugger/project-settings-for-a-cpp-debug-configuration.md)합니다.  
   
-##  <a name="BKMK_Assert_arguments"></a>Assert 인수  
+##  <a name="BKMK_Assert_arguments"></a> Assert 인수  
  <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> 및 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>에는 세 가지 인수가 사용됩니다. 첫 번째 인수는 확인할 조건으로, 필수 인수입니다. 호출 하는 경우 <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> 또는 <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName> 하나의 인수를 사용는 `Assert` 메서드는 조건을 확인 하 고, 결과가 false 인 경우에 호출 스택의 내용을 출력는 **출력** 창. 다음 예제에서는 <xref:System.Diagnostics.Trace.Assert(System.Boolean)?displayProperty=fullName> 및 <xref:System.Diagnostics.Debug.Assert(System.Boolean)?displayProperty=fullName>를 보여 줍니다.  
   
 ```VB  
@@ -202,7 +198,7 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Customizing_Assert_behavior"></a>Assert 동작 사용자 지정  
+##  <a name="BKMK_Customizing_Assert_behavior"></a> Assert 동작 사용자 지정  
  사용자 인터페이스 모드로 응용 프로그램을 실행 하는 경우는 `Assert` 메서드 표시는 **어설션 오류** 조건이 실패 하면 대화 상자. 어설션이 실패할 때 발생 하는 작업에 의해 제어 되는 <xref:System.Diagnostics.Debug.Listeners%2A> 또는 <xref:System.Diagnostics.Trace.Listeners%2A> 속성입니다.  
   
  <xref:System.Diagnostics.TraceListener> 개체를 `Listeners` 컬렉션에 추가하거나, <xref:System.Diagnostics.TraceListener>를 `Listeners` 컬렉션에서 제거하거나, 기존 <xref:System.Diagnostics.TraceListener.Fail%2A?displayProperty=fullName>의 `TraceListener` 메서드를 다르게 동작하도록 재정의하는 방법으로 출력 동작을 사용자 지정할 수 있습니다.  
@@ -215,7 +211,7 @@ Trace.Assert ( stacksize > 0, "Out of stack space", "Failed in inctemp" );
   
  [항목 내용](#BKMK_In_this_topic)  
   
-##  <a name="BKMK_Setting_assertions_in_configuration_files"></a>구성 파일에서 어설션 설정  
+##  <a name="BKMK_Setting_assertions_in_configuration_files"></a> 구성 파일에서 어설션 설정  
  코드뿐만 아니라 프로그램 구성 파일에서도 어설션을 설정할 수 있습니다. 자세한 내용은 <xref:System.Diagnostics.Trace.Assert%2A?displayProperty=fullName> 또는 <xref:System.Diagnostics.Debug.Assert%2A?displayProperty=fullName>를 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  

@@ -1,27 +1,23 @@
 ---
-title: "디버그 엔진 | Microsoft Docs"
-ms.custom: 
+title: 디버그 엔진 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines
 ms.assetid: 148b1efc-ca07-4d8e-bdfc-c723a760c620
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70e572b73f8474f77a17989c790f2e7336f9d7a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1816d19425897a2f63fa7e5cbe30771bd5eac3d4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-engine"></a>디버그 엔진
 디버그 엔진 (DE) 작동 인터프리터 또는 운영 체제 실행 제어, 중단점 및 식 평가 같은 디버깅 서비스를 제공 합니다. DE는 디버깅 중인 프로그램의 상태를 모니터링 하는 일을 담당 합니다. 이 위해 수행 하는 DE 모든 메서드를 지원 되는 런타임을 사용할 수 있는 Api 또는 CPU에서 런타임에 제공 되는 여부를 사용 합니다.  
@@ -37,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  TRANSACT-SQL에 대 한 별도 DE 구현을 상태인 및 [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)], VBScript 및 [!INCLUDE[jsprjscript](../../debugger/debug-interface-access/includes/jsprjscript_md.md)] 단일 DE 공유 합니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]디버깅 디버그 두 가지 방법 중 하나를 실행 하는 엔진:와 같은 프로세스에서는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 골조 또는 대상 프로그램와 동일한 프로세스에서 디버깅 중인 합니다. 두 번째 폼에는 일반적으로 디버깅 중인 프로세스는 인터프리터에서 실행 되는 스크립트에 실제로 디버그 엔진 스크립트를 모니터링 하기 위해 인터프리터의 지식이 있어야 때 발생 합니다. 이 경우 인터프리터는 런타임 실제로; 디버그 엔진은이 특정 런타임 구현에 대 한 합니다. 또한 단일 DE의 구현 (예: 원격 디버깅) 프로세스 및 컴퓨터 경계에 걸쳐 분할 될 수 있습니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅 디버그 두 가지 방법 중 하나를 실행 하는 엔진:와 같은 프로세스에서는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 골조 또는 대상 프로그램와 동일한 프로세스에서 디버깅 중인 합니다. 두 번째 폼에는 일반적으로 디버깅 중인 프로세스는 인터프리터에서 실행 되는 스크립트에 실제로 디버그 엔진 스크립트를 모니터링 하기 위해 인터프리터의 지식이 있어야 때 발생 합니다. 이 경우 인터프리터는 런타임 실제로; 디버그 엔진은이 특정 런타임 구현에 대 한 합니다. 또한 단일 DE의 구현 (예: 원격 디버깅) 프로세스 및 컴퓨터 경계에 걸쳐 분할 될 수 있습니다.  
   
  DE 노출은 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅 인터페이스입니다. COM.를 통해 모든 통신은 In process, 프로세스 아웃 또는 다른 컴퓨터에서 로드 되는 DE 여부를 구성 요소 통신에는 영향을 주지 않습니다.  
   

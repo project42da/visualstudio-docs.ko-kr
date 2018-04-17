@@ -1,12 +1,10 @@
 ---
-title: "CA2243: 특성 문자열 리터럴이 올바르게 구문 분석 되어야 | Microsoft Docs"
-ms.custom: 
+title: 'CA2243: 특성 문자열 리터럴이 올바르게 구문 분석 되어야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2243
 - AttributeStringLiteralsShouldParseCorrectly
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - AttributeStringLiteralsShouldParseCorrectly
 - CA2243
 ms.assetid: bfadb366-379d-4ee4-b17b-c4a09bf1106b
-caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 79ffda960d85c05648a0f1ea7d6c759fc9e76f78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0715624391b766649e48775470ed9e27f47f9613
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2243-attribute-string-literals-should-parse-correctly"></a>CA2243: 특성 문자열 리터럴이 올바르게 구문 분석되어야 합니다.
 |||  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  매개 변수가 URL, GUID 또는 버전 나타내지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 위반 하는 AssemblyFileVersionAttribute에 대 한 코드를 보여 줍니다.  
   
  [!code-csharp[FxCop.Usage.AttributeStringLiteralsShouldParseCorrectly#1](../code-quality/codesnippet/CSharp/ca2243-attribute-string-literals-should-parse-correctly_1.cs)]  

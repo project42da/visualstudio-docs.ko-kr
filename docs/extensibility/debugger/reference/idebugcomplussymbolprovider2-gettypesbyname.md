@@ -1,26 +1,24 @@
 ---
 title: IDebugComPlusSymbolProvider2::GetTypesByName | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - GetTypesByName
 - IDebugComPlusSymbolProvider2::GetTypesByName
 ms.assetid: ef76b1a8-6910-48fe-b4af-d9045eefd23f
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 4d5485906cf86693c0af7297f2640c6b54afd413
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 098c04615629b844fae8022058d47455db9cd98a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugcomplussymbolprovider2gettypesbyname"></a>IDebugComPlusSymbolProvider2::GetTypesByName
 이름이 지정 된 형식을 검색 합니다.  
@@ -59,7 +57,7 @@ int GetTypesByName(
 ## <a name="remarks"></a>설명  
  제네릭 형식에 대해 찾을 이름에 대 한 ' 목록\<int >' 또는 ' 목록\<int, int >' 'List'는 것입니다. 이름이 같은 유형의 여러 모듈에서 표시 하는 경우는 `ppEnum` 매개 변수가 복사본을 모두 포함 됩니다. 사용 해야 [GetTypeInfo](../../../extensibility/debugger/reference/idebugfield-gettypeinfo.md) 과 구분에 따라는 `guidModule` 매개 변수입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한이 메서드를 구현 하는 방법을 보여 줍니다는 **CDebugSymbolProvider** 공개 하는 개체는 [IDebugComPlusSymbolProvider2](../../../extensibility/debugger/reference/idebugcomplussymbolprovider2.md) 인터페이스입니다.  
   
 ```cpp  

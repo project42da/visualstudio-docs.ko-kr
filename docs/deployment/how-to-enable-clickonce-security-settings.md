@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 보안 설정 사용 | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 보안 설정 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,18 +14,18 @@ helpviewer_keywords:
 - ClickOnce deployment, security settings
 - security settings, ClickOnce deployment
 ms.assetid: 73cd3e9d-cd72-4ad2-8cae-94d6bb6b01e0
-caps.latest.revision: "8"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: d9fb07f8348e161743b373a83d49c4dd614d8c5f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 5c59786a49f09efd2dc4d906511ac2602c765c07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="how-to-enable-clickonce-security-settings"></a>How to: Enable ClickOnce Security Settings
+# <a name="how-to-enable-clickonce-security-settings"></a>방법: ClickOnce 보안 설정 사용
 응용 프로그램을 게시 하려면 ClickOnce 응용 프로그램에 대 한 코드 액세스 보안을 사용 해야 합니다. 게시 마법사를 사용 하 여 응용 프로그램을 게시할 때 자동으로 수행 됩니다.  
   
  경우에 따라 코드 액세스 보안을 사용 하면 성능에 미치는 영향을 빌드하거나; 응용 프로그램을 디버깅할 때 이러한 경우를 일시적으로 보안 설정을 지정할 수 있습니다.  

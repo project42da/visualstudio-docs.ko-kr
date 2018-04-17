@@ -1,27 +1,25 @@
 ---
-title: "단추의 다시 사용할 수 있는 그룹 만들기 | Microsoft Docs"
-ms.custom: 
+title: 단추의 다시 사용할 수 있는 그룹 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - button groups, creating in VSPackages
 - VSPackages, creating reusable button groups
 - buttons, creating reusable groups
 ms.assetid: 0c561617-fb86-476d-8bd1-c6e5e7464c65
-caps.latest.revision: "44"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c2ac175d2fd267500f19e9f22cd46d88dcc9f314
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 97ee7cc2ec63a94036472ccce07b1dc9fa736504
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-reusable-groups-of-buttons"></a>단추의 다시 사용할 수 있는 그룹 만들기
 명령 그룹은 항상 메뉴 또는 도구 모음에 함께 표시 되는 명령 컬렉션입니다. 모든 명령 그룹.vsct 파일의 CommandPlacements 섹션에서 다른 부모 메뉴에 할당 하 여 다시 사용할 수 있습니다.  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/22/2017
     </GuidSymbol>  
     ```  
   
-     명령 항목 템플릿에 기본적으로 명명 된 그룹을 만듭니다 **MyGroup** 와 각각에 대 한 IDSymbol 항목이 함께 제공 된 이름이 있는 단추가 있습니다.  
+     명령 항목 템플릿에 기본적으로 명명 된 그룹을 만듭니다 **MyMenuGroup** 와 각각에 대 한 IDSymbol 항목이 함께 제공 된 이름이 있는 단추가 있습니다.  
   
 5.  그룹 섹션에서 기호 섹션에서 제공 되는 것과 동일한 GUID 및 ID 특성을 지닌 그룹 요소를 만듭니다. 기존 그룹을 사용 하거나 다음 예제와 같이 명령 서식 파일에서 제공 되는 항목을 사용할 수도 있습니다. 이 그룹에 표시 된 **도구** 메뉴  
   

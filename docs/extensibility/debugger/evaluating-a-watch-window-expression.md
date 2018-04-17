@@ -1,27 +1,25 @@
 ---
-title: "조사식 창 식 평가 | Microsoft Docs"
-ms.custom: 
+title: 조사식 창 식 평가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Watch window expressions
 - Watch window, expressions
 - expression evaluation, Watch window expressions
 ms.assetid: b07e72c7-60d3-4b30-8e3f-6db83454c348
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: fb109fd91e4c295bf372b14e26bc2a75c3be6b1d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: beb632b484659c3bc901142b35ab52d25b8067fe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluating-a-watch-window-expression"></a>조사식 창 식 평가
 > [!IMPORTANT]
@@ -35,13 +33,13 @@ ms.lasthandoff: 12/22/2017
   
 2.  Visual Studio에서 호출 조사 목록에 각 식, [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 식 텍스트 구문 분석 된 식으로 변환할 수 있습니다.  
   
-3.  `IDebugExpressionContext2::ParseText`호출 [구문 분석](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 생성와 텍스트를 구문 분석의 실제 작업을 수행 하는 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) 개체입니다.  
+3.  `IDebugExpressionContext2::ParseText` 호출 [구문 분석](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 생성와 텍스트를 구문 분석의 실제 작업을 수행 하는 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) 개체입니다.  
   
-4.  `IDebugExpressionContext2::ParseText`만듭니다는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 개체 및 설정의 `IDebugParsedExpression` 개체입니다. 이 I`DebugExpression2` 개체 Visual Studio에 반환 됩니다.  
+4.  `IDebugExpressionContext2::ParseText` 만듭니다는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 개체 및 설정의 `IDebugParsedExpression` 개체입니다. 이 I`DebugExpression2` 개체 Visual Studio에 반환 됩니다.  
   
 5.  Visual Studio 호출 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 구문 분석 된 식을 계산할 수 있습니다.  
   
-6.  `IDebugExpression2::EvaluateSync`에 대 한 호출을 전달 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) 실제 평가 수행 하 고 생성 하는 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) Visual Studio로 반환 되는 개체입니다.  
+6.  `IDebugExpression2::EvaluateSync` 에 대 한 호출을 전달 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) 실제 평가 수행 하 고 생성 하는 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) Visual Studio로 반환 되는 개체입니다.  
   
 7.  Visual Studio 호출 [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) 다음 조사 목록에 표시 되는 식의 값을 가져옵니다.  
   
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  Visual Studio에서는이; 가정 하는 경우에이 2 단계 프로세스에 맞게 EE 필요 하지 않습니다. EE 구문 분석 하 고 동일한 단계에서 평가할 수 있습니다 때 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) 호출 됩니다 (이 예를 들어 MyCEE 샘플이 작동 방법). 해당 언어 복잡 한 식을 형성 되는 경우에 평가 단계에서 구문 분석 단계를 구분 하는 것이 좋습니다. 이렇게 여러 식을 조사할 때 Visual Studio 디버거에서 성능이 향상 표시 됩니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [식 계산의 샘플 구현](../../extensibility/debugger/sample-implementation-of-expression-evaluation.md)  
  식 계산 과정을 단계별로 실행 되도록 MyCEE 샘플을 사용 합니다.  
   

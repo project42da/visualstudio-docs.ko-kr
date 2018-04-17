@@ -1,12 +1,10 @@
 ---
-title: "CA2234: System.Uri 개체를 전달 문자열 대신 | Microsoft Docs"
-ms.custom: 
+title: 'CA2234: System.Uri 개체를 전달 문자열 대신 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - PassSystemUriObjectsInsteadOfStrings
 - CA2234
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2234
 - PassSystemUriObjectsInsteadOfStrings
 ms.assetid: 14616b37-74c4-4286-b051-115d00aceb5f
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fbafbcdf8750a31fc7fc7a142961e67182c4bbc7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ec09fe58e7a30f6b554afbf275ef0d8663cb0abb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2234-pass-systemuri-objects-instead-of-strings"></a>CA2234: 문자열 대신 System.Uri 개체를 전달하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  문자열 매개 변수는 URI를 나타내지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 메서드를 `ErrorProne`, 규칙을 위반 하는 메서드는 `SaferWay`를 올바르게 호출는 <xref:System.Uri> 오버 로드 합니다.  
   
  [!code-vb[FxCop.Usage.PassUri#1](../code-quality/codesnippet/VisualBasic/ca2234-pass-system-uri-objects-instead-of-strings_1.vb)]

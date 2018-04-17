@@ -1,30 +1,26 @@
 ---
-title: "시작 (디버그 인터페이스 액세스 SDK) | Microsoft Docs"
-ms.custom: 
+title: 시작 (디버그 인터페이스 액세스 SDK) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - .dbg files
 - DBG files
 ms.assetid: cb3d040a-2846-40d7-bdbc-8a5beb5dd2f6
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d37843917be3a2668e9a2887f046eaee00600dc8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d0c3c6df3fc92370d939771a7e94334db7f2cfc4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>시작(디버그 인터페이스 액세스 SDK)
 디버그 인터페이스 액세스 (DIA) SDK 사용 안내 설명서와 DIA API를 사용 하는 방법을 보여 주는 샘플을 제공 합니다. DIA sdk에서는 인터페이스 및 메서드를 사용 하 여.pdb 및.dbg 파일을 열고 기호, 값, 특성, 주소 및 기타 디버깅 정보에 대 한 콘텐츠를 검색 하는 사용자 지정 응용 프로그램을 개발 하 합니다. 이 SDK는 또한 c + + 응용 프로그램에 있는 기호와 연결 된 속성에 대 한 참조 테이블을 제공 합니다.  

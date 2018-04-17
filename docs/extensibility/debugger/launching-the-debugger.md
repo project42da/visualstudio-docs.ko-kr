@@ -1,26 +1,24 @@
 ---
-title: "디버거 시작 | Microsoft Docs"
-ms.custom: 
+title: 디버거 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], launching the debugger
 - debugger [Debugging SDK], launching
 ms.assetid: f24da1a1-f923-48b4-989f-18a22b581d1b
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7b5b596f553c0f84c9306bba010d2b97a33e1a16
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2606e0f6c7d5dfe17e4c82528c36b3f7cdc26c5e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="launching-the-debugger"></a>디버거 시작
 디버거 시작 메서드 및 이벤트와 해당 하는 적절 한 특성의 순서를 전송 해야 합니다.  
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
      경우 `S_FALSE` 가상 컴퓨터 중 로드 되도록 디버그 엔진 (DE)가 반환 됩니다.  
   
-     또는  
+     -또는-  
   
      경우 `S_OK` 반환 되 면는 DE 로드 하는 것은 SDM의 프로세스입니다. 다음은 SDM 다음 작업을 수행합니다.  
   

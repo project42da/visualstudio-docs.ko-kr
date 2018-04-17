@@ -1,29 +1,25 @@
 ---
 title: 'Idiasession:: Findchildren | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSession::findChildren method
 ms.assetid: 5d19046f-f668-4aa9-8788-95cda9a98997
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0cae2dd492fd11ff4a5d707ba95c571711358358
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8292dc1e88a3421b24b820c5607158799d4c7cd0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasessionfindchildren"></a>IDiaSession::findChildren
 지정한 부모 식별자의 이름 및 기호 형식에 일치 하는 모든 자식을 검색 합니다.  
@@ -59,7 +55,7 @@ HRESULT findChildren (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에는 함수의 로컬 변수를 찾는 방법을 보여 줍니다 `pFunc` 해당 일치 하는 이름 `szVarName`합니다.  
   
 ```C++  

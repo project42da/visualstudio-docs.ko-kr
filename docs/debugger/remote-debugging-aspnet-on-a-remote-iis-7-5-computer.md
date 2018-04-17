@@ -1,25 +1,21 @@
 ---
-title: "원격 디버깅 원격 IIS 컴퓨터에 ASP.NET | Microsoft Docs"
+title: 원격 디버깅 원격 IIS 컴퓨터에 ASP.NET | Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 07/26/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 9cb339b5-3caf-4755-aad1-4a5da54b2a23
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 6f11ec81c740a6930ce4eaef16d4e4e389aaca47
-ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
+ms.openlocfilehash: 1c8d2cfb57d3e96b845bc243575eb63af88720c0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>원격 IIS 컴퓨터에 ASP.NET 원격 디버그
 IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 응용 프로그램을 배포한 컴퓨터에서 원격 도구를 실행 하 고 Visual Studio에서 실행 중인 앱에 연결 합니다.
@@ -44,7 +40,7 @@ IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 
 
 2. HomeController.cs 파일을 열고 `About()` 메서드에 중단점을 설정합니다.
 
-## <a name="bkmk_configureIIS"></a>설치 하 고 Windows 서버에서 IIS를 구성 합니다.
+## <a name="bkmk_configureIIS"></a> 설치 하 고 Windows 서버에서 IIS를 구성 합니다.
 
 [!INCLUDE [remote-debugger-install-iis-role](../debugger/includes/remote-debugger-install-iis-role.md)]
 
@@ -61,7 +57,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
 소프트웨어를 다운로드 하는 경우에 다양 한 웹 사이트 스크립트 및 리소스를 로드할 수 있는 권한을 부여 하는 요청 발생할 수 있습니다. 대부분의 경우에서 이러한 추가 리소스는 소프트웨어를 설치 하지 않아도 됩니다.
 
-## <a name="BKMK_deploy_asp_net"></a>Windows Server에 ASP.NET 4.5를 설치 합니다.
+## <a name="BKMK_deploy_asp_net"></a> Windows Server에 ASP.NET 4.5를 설치 합니다.
 
 IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
 
@@ -76,11 +72,11 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
 
 2. 시스템을 다시 시작 (실행 또는 **net stop가 /y** 뒤 **net 시작 w3svc** 시스템 경로에 대 한 변경을 선택 하기 위해 명령 프롬프트에서).
 
-## <a name="BKMK_install_webdeploy"></a>(선택 사항) 설치 웹 배포 Windows Server에서 3.6
+## <a name="BKMK_install_webdeploy"></a> (선택 사항) 설치 웹 배포 Windows Server에서 3.6
 
 [!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
 
-## <a name="BKMK_deploy_asp_net"></a>Windows Server 컴퓨터에 ASP.NET 웹 사이트를 구성 합니다.
+## <a name="BKMK_deploy_asp_net"></a> Windows Server 컴퓨터에 ASP.NET 웹 사이트를 구성 합니다.
 
 1. Windows 탐색기를 열고 새 폴더를 만들 **C:\Publish**, ASP.NET 프로젝트를 나중에 배포 됩니다 있습니다.
 
@@ -98,7 +94,7 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
 
 8. IIS 관리자에서 선택한 사이트를 선택할 **사용 권한 편집**, 해당 IUSR, IIS_IUSRS, 또는 사용자 응용 프로그램 풀에는 읽기 및 실행 권한 가진 인증된 된 사용자에 대해 구성 되었는지 확인 합니다. 이러한 사용자의 아무 특성도 없으면 IUSR 읽기 및 실행 권한이 있는 사용자로 추가 합니다.
 
-## <a name="bkmk_webdeploy"></a>(선택 사항) Visual Studio에서 Web Deploy를 사용 하 여 앱을 배포 및 게시
+## <a name="bkmk_webdeploy"></a> (선택 사항) Visual Studio에서 Web Deploy를 사용 하 여 앱을 배포 및 게시
 
 [!INCLUDE [remote-debugger-deploy-app-web-deploy](../debugger/includes/remote-debugger-deploy-app-web-deploy.md)]
 
@@ -125,7 +121,7 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-## <a name="BKMK_msvsmon"></a>다운로드 하 여 Windows Server에서 원격 도구 설치
+## <a name="BKMK_msvsmon"></a> 다운로드 하 여 Windows Server에서 원격 도구 설치
 
 이 자습서에서는 Visual Studio 2017 사용 했습니다.
 
@@ -134,7 +130,7 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
 > [!TIP]
 > 일부 시나리오에서는 파일 공유에서 원격 디버거를 실행 하는 가장 효율적인 수 있습니다. 자세한 내용은 참조 [파일 공유에서 원격 디버거를 실행](../debugger/remote-debugging.md#fileshare_msvsmon)합니다.
   
-## <a name="BKMK_setup"></a>Windows Server에서 원격 디버거 설정
+## <a name="BKMK_setup"></a> Windows Server에서 원격 디버거 설정
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
@@ -152,7 +148,7 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
     > Visual Studio 2017에 다시 연결할 수 있습니다 이전에 사용 하 여 연결할 동일한 프로세스에 **디버그 > 프로세스에 다시 연결 중...** (Shift+Alt+P). 
 
 3. 한정자 필드를 설정  **\<원격 컴퓨터 이름 >: 4022**합니다.
-4. 클릭 **새로 고침**합니다.
+4. **새로 고침**가 있어야 합니다.
     일부 프로세스가 **사용 가능한 프로세스** 창에 표시됩니다.
 
     모든 프로세스가 표시 되지 않으면, (포트는 필수) 원격 컴퓨터 이름 대신 IP 주소를 사용해 보십시오. 사용할 수 있습니다 `ipconfig` IPv4 주소를 얻기 위해 명령줄에 있습니다.
@@ -171,7 +167,7 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
 
     Visual Studio에서 중단점이 적중됩니다.
 
-## <a name="bkmk_openports"></a>문제 해결: Windows Server에 필요한 포트를 열려면
+## <a name="bkmk_openports"></a> 문제 해결: Windows Server에 필요한 포트를 열려면
 
 대부분의 설치 프로그램에서 ASP.NET와 원격 디버거 설치를 통해 필요한 포트가 열립니다. 그러나 포트가 열려 있는지 확인 해야 합니다.
 

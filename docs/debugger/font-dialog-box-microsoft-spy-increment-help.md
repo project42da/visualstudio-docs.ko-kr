@@ -1,27 +1,23 @@
 ---
-title: "글꼴 대화 상자 (Microsoft Spy + + 도움말) | Microsoft Docs"
-ms.custom: 
+title: 글꼴 대화 상자 (Microsoft Spy + + 도움말) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Font dialog box
 ms.assetid: 414c42a5-7168-46a9-bbea-6ab10f2d82a8
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a080d6cff410c09b2efa685703e1195e7d31594
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e600855faba30d11d6ad48cfd6943dc325a48c85
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="font-dialog-box-microsoft-spy-help"></a>글꼴 대화 상자(Microsoft Spy++ 도움말)
 이 대화 상자를 사용 하 여 사용 되는 문자 글꼴을 구성 하는 [Spy + + 뷰](../debugger/spy-increment-views.md) 창. 이 대화 상자를 표시 하려면 확장 된 **보기** 메뉴 선택 **글꼴**합니다.  

@@ -1,29 +1,25 @@
 ---
 title: 'Idiadatasource:: Opensession | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaDataSource::openSession method
 ms.assetid: a3319ed0-3979-483b-9852-c0af96852c48
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b7cfaf3e2cf7331576ca79b9820bafb761fc44c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 701b3dda0341544e5d94a2b0a9e8ddf8f55d33f1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiadatasourceopensession"></a>IDiaDataSource::openSession
 기호를 쿼리 하기 위한 세션을 엽니다.  
@@ -52,9 +48,9 @@ HRESULT openSession (
 ## <a name="remarks"></a>설명  
  이 메서드는 엽니다는 [IDiaSession](../../debugger/debug-interface-access/idiasession.md) 데이터 원본에 대 한 개체입니다.  
   
- `IDiaSession`개체는 데이터 소스에 쿼리를 구현합니다. 세션을 각 집합 디버그 기호에 대 한 주소 공간을 관리합니다. 데이터 원본 기호에 의해 설명 하는.exe 또는.dll 파일은 여러 주소에 활성 범위 (예를 들어 여러 프로세스가 있으므로 로드) 한 다음 각 주소 범위에 대 한 세션을 사용 해야 합니다.  
+ `IDiaSession` 개체는 데이터 소스에 쿼리를 구현합니다. 세션을 각 집합 디버그 기호에 대 한 주소 공간을 관리합니다. 데이터 원본 기호에 의해 설명 하는.exe 또는.dll 파일은 여러 주소에 활성 범위 (예를 들어 여러 프로세스가 있으므로 로드) 한 다음 각 주소 범위에 대 한 세션을 사용 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 IDiaSession* pSession;  

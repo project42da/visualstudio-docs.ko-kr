@@ -1,12 +1,10 @@
 ---
-title: ": Ca1413 comvisible 값 형식에 public이 아닌 필드 | Microsoft Docs"
-ms.custom: 
+title: ': Ca1413 comvisible 값 형식에 public이 아닌 필드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1413
 - AvoidNonpublicFieldsInComVisibleValueTypes
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1413
 - AvoidNonpublicFieldsInComVisibleValueTypes
 ms.assetid: 1352e7eb-fefc-4239-8847-25edc7804a54
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e2763cb21107f19768a8161d18e1128eb000d29
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e68f29fed3a1f25eb2a80b1b6acf09827e8ee18f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1413-avoid-non-public-fields-in-com-visible-value-types"></a>CA1413: ComVisible 값 형식에 public이 아닌 필드를 사용하지 마십시오.
 |||  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  필드의 노출 허용 되는 경우이 규칙에서는 경고를에서 표시 하지 않으려면 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 형식을 보여 줍니다.  
   
  [!code-csharp[FxCop.Interoperability.NonpublicField#1](../code-quality/codesnippet/CSharp/ca1413-avoid-non-public-fields-in-com-visible-value-types_1.cs)]

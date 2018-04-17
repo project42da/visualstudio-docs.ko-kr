@@ -1,12 +1,10 @@
 ---
-title: "방법: 네이티브 코드에 스레드 이름 설정 | Microsoft Docs"
-ms.custom: 
+title: '방법: 네이티브 코드에 스레드 이름 설정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 04/27/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,23 +17,23 @@ helpviewer_keywords:
 - thread names
 - debugging [Visual Studio], threads
 ms.assetid: c85d0968-9f22-4d69-87f4-acca2ae777b8
-caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 34340fc1a56c3b35c626cbd48157b1b09d0cd91d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: a85ad8a81046ca6bc2e602d5449ce7924ad7a4a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-a-thread-name-in-native-code"></a>방법: 네이티브 코드에 스레드 이름 설정
 스레드 명명 기능은 Visual Studio의 모든 버전에서 사용할 수 있습니다. 스레드 명명 기능은에서 스레드를 추적할 때 유용는 **스레드** 창.
 
 프로그램의 스레드 이름을 설정하려면 다음 코드 예제와 같이 `SetThreadName` 함수를 사용합니다. `threadName` 매개 변수에 대한 메모리가 해제될 수 있도록 스레드 이름이 스레드에 복사됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 //  

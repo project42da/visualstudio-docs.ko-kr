@@ -1,31 +1,29 @@
 ---
-title: "Spy + + 뷰의 검색 도구 | Microsoft Docs"
-ms.custom: 
+title: Spy + + 뷰의 검색 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - searching, Spy++
 - Spy++, searching
 ms.assetid: db0c32cf-8e50-4e1b-9a9f-4c07fd6a2163
-caps.latest.revision: "4"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1d0e6e71dacef98cfaf38581d6638998509ab922
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 4fd3b7f1d9d9d1ad7b5c148781550988690e24e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="search-tools-for-spy-views"></a>Spy++ 뷰의 검색 도구
 Spy + + 뷰 창에 표시 되는 데이터를 지정 하려면 이러한 대화 상자를 사용 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [창 찾기 대화 상자](../debugger/find-window-dialog-box.md)  
  속성이 나 특정 창에서 메시지를 확인 하는 데 사용 합니다.  
   

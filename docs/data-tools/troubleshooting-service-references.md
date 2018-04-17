@@ -1,11 +1,8 @@
 ---
-title: "서비스 참조 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: 서비스 참조 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - msvse_wcf.Err.ReferenceGroup_NamespaceConflictsOther
 - msvse_wcf.Err.AddSvcRefDlg_NothingSelectedOnGo
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - service references [Visual Studio], troubleshooting
 - WCF services, troubleshooting
 ms.assetid: 3b531120-1325-4734-90c6-6e6113bd12ac
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: b57547aa9a5fa3c036a534c85cb55bb1749a421b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 827533f76f8807cca146b9ea0b7483cb8fb84caf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-service-references"></a>서비스 참조 문제 해결
 이 항목에서는 사용 하 여 작업할 때 발생할 수 있는 일반적인 문제 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 또는 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 에서 참조 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  
@@ -33,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="error-returning-data-from-a-service"></a>서비스에서 데이터를 반환 하는 오류  
  반환 하는 `DataSet` 또는 `DataTable` 는 서비스에서 "들어오는 메시지에 대 한 최대 크기 할당량 초과 했습니다." 예외가 나타날 수 있습니다. 기본적으로는 `MaxReceivedMessageSize` 일부 바인딩에 대 한 속성은 상대적으로 작은 값으로 서비스 거부 공격에 대 한 노출을 제한 합니다. 예외를 방지 하기 위해이 값을 늘릴 수 있습니다. 자세한 내용은 <xref:System.ServiceModel.HttpBindingBase.MaxReceivedMessageSize%2A>을 참조하세요.  
   
- 이 오류를 해결 하려면  
+ 이 오류를 해결하려면  
   
 1.  **솔루션 탐색기**를 열려는 app.config 파일을 두 번 클릭 합니다.  
   
@@ -42,14 +39,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="cannot-find-a-service-in-my-solution"></a>솔루션 내에 서비스를 찾을 수 없습니다.  
  클릭는 **Discover** 단추는 **서비스 참조 추가** 대화 상자에서 솔루션의 WCF 서비스 라이브러리 프로젝트를 하나 이상의 서비스 목록에 표시 되지 않습니다. 이 서비스 라이브러리 솔루션에 추가 되었지만 아직 컴파일되지 않은 경우 발생할 수 있습니다.  
   
- 이 오류를 해결 하려면  
+ 이 오류를 해결하려면  
   
 -   **솔루션 탐색기**WCF 서비스 라이브러리 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 클릭 **빌드**합니다.  
   
 ## <a name="error-accessing-a-service-over-a-remote-desktop"></a>원격 데스크톱을 통해 서비스에 액세스 하는 오류  
  사용자가 액세스 한 원격 데스크톱 연결을 통해 웹에 호스팅된 WCF 서비스 관리 권한이, NTLM 인증이 사용 됩니다. 사용자가 다음과 같은 오류 메시지가 나타날 수 관리 권한이 없으면: "HTTP 요청은 클라이언트 인증 구성표 '익명' 권한이 없습니다. 서버에서 받은 인증 헤더를 'NTLM'. "  
   
- 이 오류를 해결 하려면  
+ 이 오류를 해결하려면  
   
 1.  웹 사이트 프로젝트를 열고는 **속성** 페이지입니다.  
   

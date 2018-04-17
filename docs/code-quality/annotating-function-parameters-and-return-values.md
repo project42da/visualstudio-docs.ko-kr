@@ -1,12 +1,10 @@
 ---
-title: "함수 매개 변수 및 반환 값에 주석 지정 | Microsoft Docs"
-ms.custom: 
+title: 함수 매개 변수 및 반환 값에 주석 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - _Outptr_opt_result_bytebuffer_to_
 - _Inout_updates_all_opt_
@@ -125,16 +123,16 @@ f1_keywords:
 - _Result_nullonfailure_
 - _Ret_null_
 ms.assetid: 82826a3d-0c81-421c-8ffe-4072555dca3a
-caps.latest.revision: "15"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ac25f8bbda4431850f613f2b41b1d9ed4908c118
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: daeed5dd92116af4346cd8aa2086e6a3dd3af216
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotating-function-parameters-and-return-values"></a>함수 매개 변수 및 반환 값에 주석 지정
 이 문서에서는 간단한 함수 매개 변수에 대 한 주석의 일반적 사용 범위 설명-스칼라 및 구조체와 클래스에 대 한 포인터-및 버퍼의 대부분 종류입니다.  이 문서에는 일반적인 사용 패턴에 대 한 주석 보여 줍니다. 함수에 관련 된 추가 주석이 참조 [함수 동작에 주석 지정](../code-quality/annotating-function-behavior.md)  
@@ -188,7 +186,7 @@ ms.lasthandoff: 12/22/2017
   
      `typedef _Null_terminated_ wchar_t *PWSTR; void MyStringCopy(_Out_writes_ (size) PWSTR p1,    _In_ size_t size,    _In_ PWSTR p2);`  
   
-     이 예제에서는 호출자의 버퍼를 제공 `size` 요소에 대 한 `p1`합니다.  `MyStringCopy`결과 유효한 해당 요소의 일부입니다. 무엇 보다도 `_Null_terminated_` 주석에 `PWSTR` 즉 `p1` 사후 상태에서 null로 종결 됩니다.  이러한 방식으로 유효한 요소 수가 여전히 잘 정의 되어 있지만 특정 요소 수가 필요는 없습니다.  
+     이 예제에서는 호출자의 버퍼를 제공 `size` 요소에 대 한 `p1`합니다.  `MyStringCopy` 결과 유효한 해당 요소의 일부입니다. 무엇 보다도 `_Null_terminated_` 주석에 `PWSTR` 즉 `p1` 사후 상태에서 null로 종결 됩니다.  이러한 방식으로 유효한 요소 수가 여전히 잘 정의 되어 있지만 특정 요소 수가 필요는 없습니다.  
   
      `_bytes_` variant 요소 대신 바이트의 크기를 제공 합니다. 크기 요소로 표현할 수 없는 경우에이 사용 합니다.  예를 들어 `char` 문자열 사용는 `_bytes_` variant 비슷한 작동 하는 경우에 사용 하 여 `wchar_t` 것입니다.  
   
@@ -220,7 +218,7 @@ ms.lasthandoff: 12/22/2017
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     최대 버퍼에 존재 하는 모든 요소 즉, `s` 사전 상태에서 유효한 사후 상태입니다.  예:  
+     최대 버퍼에 존재 하는 모든 요소 즉, `s` 사전 상태에서 유효한 사후 상태입니다.  예를 들어:  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -248,7 +246,7 @@ ms.lasthandoff: 12/22/2017
   
      `_Out_writes_to_(_Old_(s), _Old_(s))    _Out_writes_bytes_to_(_Old_(s), _Old_(s))`  
   
-     최대 버퍼에 존재 하는 모든 요소 즉, `s` 사전 상태에서 유효한 사후 상태입니다.  예:  
+     최대 버퍼에 존재 하는 모든 요소 즉, `s` 사전 상태에서 유효한 사후 상태입니다.  예를 들어:  
   
      `void *memcpy(_Out_writes_bytes_all_(s) char *p1,    _In_reads_bytes_(s) char *p2,    _In_ int s); void * wordcpy(_Out_writes_all_(s) DWORD *p1,     _In_reads_(s) DWORD *p2,    _In_ int s);`  
   
@@ -485,7 +483,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `_Struct_size_bytes_(size)`  
   
-     구조체 또는 클래스 선언에 적용 됩니다.  제공 되는 바이트 수와 해당 유형의 유효한 개체 선언 된 형식 보다 클 수 있습니다 나타냅니다 `size`합니다.  예:  
+     구조체 또는 클래스 선언에 적용 됩니다.  제공 되는 바이트 수와 해당 유형의 유효한 개체 선언 된 형식 보다 클 수 있습니다 나타냅니다 `size`합니다.  예를 들어:  
   
      `typedef _Struct_size_bytes_(nSize) struct MyStruct {    size_t nSize;    ... };`  
   

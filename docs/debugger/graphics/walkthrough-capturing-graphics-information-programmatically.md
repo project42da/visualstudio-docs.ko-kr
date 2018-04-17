@@ -1,23 +1,20 @@
 ---
-title: "연습: 그래픽 정보를 프로그래밍 방식으로 캡처 | Microsoft Docs"
-ms.custom: 
+title: '연습: 그래픽 정보를 프로그래밍 방식으로 캡처 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3de32ab0b9ded416f57f4699e534b6401c2a483c
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 899c5e233a8afb898d7864d388448a186b8ab781
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-capturing-graphics-information-programmatically"></a>연습: 프로그래밍 방식으로 그래픽 정보 캡처
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 그래픽 진단을 사용하여 Direct3D 앱에서 그래픽 정보를 프로그래밍 방식으로 캡처할 수 있습니다.  
@@ -92,7 +89,7 @@ ms.lasthandoff: 02/27/2018
     >  경우 `DXGIGetDebugInterface1` 반환 `E_NOINTERFACE` (`error: E_NOINTERFACE No such interface supported`), 앱이 그래픽 진단에서 실행 되 고 있는지 확인 하십시오 (Alt + f 5에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]).  
   
 ### <a name="capturing-graphics-information"></a>그래픽 정보 캡처  
- 이제 유효한 `IDXGraphicsAnalysis` 인터페이스가 있으므로 `BeginCapture` 및 `EndCapture` 를 사용하여 그래픽 정보를 캡처할 수 있습니다.  
+ 이제 유효한 `IDXGraphicsAnalysis` 인터페이스가 있으므로 `BeginCapture` 및 `EndCapture`를 사용하여 그래픽 정보를 캡처할 수 있습니다.  
   
 ##### <a name="to-capture-graphics-information"></a>그래픽 정보를 캡처하려면  
   
@@ -104,7 +101,7 @@ ms.lasthandoff: 02/27/2018
     ...  
     ```  
   
-     `BeginCapture` 가 호출되면 즉시 캡처가 시작됩니다. 다른 프레임이 시작되도록 기다리지 않습니다. 현재 프레임이 표시되거나 다음과 같이 `EndCapture`를 호출하면 캡처가 중지됩니다.  
+     `BeginCapture`가 호출되면 즉시 캡처가 시작됩니다. 다른 프레임이 시작되도록 기다리지 않습니다. 현재 프레임이 표시되거나 다음과 같이 `EndCapture`를 호출하면 캡처가 중지됩니다.  
   
     ```  
     ...  

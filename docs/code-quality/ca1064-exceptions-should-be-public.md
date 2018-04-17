@@ -1,13 +1,10 @@
 ---
-title: "CA1064: 예외는 public 이어야 | Microsoft Docs"
-ms.custom: 
+title: 'CA1064: 예외는 public 이어야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CA1064
 - ExceptionsShouldBePublic
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - ExceptionsShouldBePublic
 - CA1064
 ms.assetid: 83eb224c-2456-4368-acf4-3b3378e67759
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b376de69c288a084ff3bb33aba1e1b8a0bc881e5
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 5d110c03cc09124f672cb6be7421b60d2014bd58
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1064-exceptions-should-be-public"></a>CA1064: 예외는 public이어야 합니다.
 |||  
@@ -49,7 +45,7 @@ ms.lasthandoff: 03/09/2018
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  모든 경우에는 내부 범위 내에서 개인 예외를 발생 됩니다는 확신 하는 경우이 규칙에서 메시지를 표시 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 규칙은 첫 번째 예제에서는 메서드 FirstCustomException 예외 클래스 예외에서 직접 파생 되 고 내부 때문에 됩니다. 규칙은 클래스를 공용 선언 하지만 클래스도 예외에서 직접 파생 SecondCustomException 클래스에서 발생 하지 않습니다. 세 번째 클래스도 발생 하지 않습니다 규칙에서 직접 파생 되지 않는 <xref:System.Exception?displayProperty=fullName>, <xref:System.SystemException?displayProperty=fullName>, 또는 <xref:System.ApplicationException?displayProperty=fullName>합니다.  
   
  [!code-csharp[FxCop.Design.ExceptionsShouldBePublic.CA1064#1](../code-quality/codesnippet/CSharp/ca1064-exceptions-should-be-public_1.cs)]

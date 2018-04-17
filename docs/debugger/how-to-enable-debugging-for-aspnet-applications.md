@@ -1,12 +1,10 @@
 ---
-title: "ASP.NET 응용 프로그램에 대 한 디버깅을 활성화 | Microsoft Docs"
+title: ASP.NET 응용 프로그램에 대 한 디버깅을 활성화 | Microsoft Docs
 ms.custom: H1HackMay2017
 ms.date: 09/21/17
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - Web.config configuration file, debug mode
 - debugging [Visual Studio], ASP.NET
 ms.assetid: 3beed819-cece-4864-8184-bd410000973a
-caps.latest.revision: "37"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: aspnet
-ms.openlocfilehash: e3c6dffbd99dbdd91753ce8d06ab139006692089
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.workload:
+- aspnet
+ms.openlocfilehash: 397dbe26aafd7ec385e6afeb11b3ca19155dfbcc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-aspnet-applications-in-visual-studio"></a>Visual Studio에서 ASP.NET 응용 프로그램 디버그
 
@@ -38,7 +36,7 @@ Visual Studio에서 ASP.NET 응용 프로그램을 디버깅할 수 있습니다
 
 - IIS Express 이상 Visual Studio 2012에서 기본적으로 포함 되어 있습니다
 
-    또는
+    -또는-
 
 - 로컬 IIS 웹 서버 (버전 8.0 이상)를 올바로 구성 되 고 오류 없이 ASP.NET 응용 프로그램을 실행할 수입니다.
 
@@ -81,14 +79,14 @@ ASP.NET Core에 대 한 web.config 파일도 (이 이미 있는) 하는 경우 �
   
 3.  `compilation` 요소에 `debug` 특성이 없으면 요소에 특성을 추가합니다.  
   
-4.  `debug` 특성 값이 `true`로 설정되었는지 확인합니다.  
+4.  `debug` 특성 값이 `true`을 참조하세요.  
   
 Web.config 파일은 다음 예제와 같아야 합니다.
 
 > [!NOTE]
 > 이 예제에서는 부분 web.config 파일입니다. 추가 XML 섹션 구성 요소와 system.web 요소 사이 일반적으로 제공 됩니다. 컴파일 요소는 다른 특성 및 요소를 포함할 수도 있습니다.
   
-#### <a name="example"></a>예  
+#### <a name="example"></a>예제  
   
 ```  
 <configuration>  
@@ -142,7 +140,7 @@ IIS express 웹 서버를 구성할 필요가 없습니다 (이 섹션 생략). 
     > [!NOTE]
     > Windows Server 2008 r 2를 사용 하는 경우이 명령을 사용 하는 ASP.NET 4를 설치 합니다.
 
-     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe ir**
+     **C:\Windows\Microsoft.NET\Framework64\v4.0.30319\aspnet_regiis.exe -ir**
 
 2. 열기는 **인터넷 정보 서비스 (IIS) 관리자**합니다. (서버 관리자의 왼쪽된 창에서 선택 **IIS**합니다. 서버를 마우스 오른쪽 단추로 클릭 하 고 선택 **인터넷 정보 서비스 (IIS) 관리자**.)
 

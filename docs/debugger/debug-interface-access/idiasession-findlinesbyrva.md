@@ -1,29 +1,25 @@
 ---
 title: 'Idiasession:: Findlinesbyrva | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSession::findLinesByRVA method
 ms.assetid: 06f53b0b-b5b4-42cf-9252-dcee0dbe2d71
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 00f7ddef98d64bb09c1c010f4f120e11180e48e5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3e33ae59f79133cae8fe065c181f9f220d1f5146
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasessionfindlinesbyrva"></a>IDiaSession::findLinesByRVA
 지정 된 상대 가상 주소 (RVA)를 포함 하는 지정 된 컴파일 대상에 줄을 검색 합니다.  
@@ -51,7 +47,7 @@ HRESULT findLinesByRVA (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 함수의 상대 가상 주소 및 길이 사용 하 여 지정된 된 함수에 포함 된 모든 줄 번호를 가져오는 함수를 보여 줍니다.  
   
 ```C++  

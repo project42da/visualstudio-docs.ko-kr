@@ -1,29 +1,25 @@
 ---
 title: IDiaSegment | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSegment interface
 ms.assetid: 384ae0e1-077e-4d4f-98de-ac43c32c882f
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0464b871cda03b507d0127f5deeb97b94167b21a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 85f3c0dd04705091acd3c431f7214a2538b81f5c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasegment"></a>IDiaSegment
 지도 데이터는 섹션 번호 주소 공간의 세그먼트입니다.  
@@ -55,7 +51,7 @@ IDiaSegment : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenumsegments:: Item](../../debugger/debug-interface-access/idiaenumsegments-item.md) 또는 [idiaenumsegments:: Next](../../debugger/debug-interface-access/idiaenumsegments-next.md) 메서드. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 함수는 테이블을 가장 가까운 기호 모든 세그먼트의 주소를 표시 합니다.  
   
 ```C++  

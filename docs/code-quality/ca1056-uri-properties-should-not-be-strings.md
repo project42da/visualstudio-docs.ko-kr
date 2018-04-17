@@ -1,12 +1,10 @@
 ---
-title: "CA1056: URI 속성 안 문자열 | Microsoft Docs"
-ms.custom: 
+title: 'CA1056: URI 속성 안 문자열 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - UriPropertiesShouldNotBeStrings
 - CA1056
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - UriPropertiesShouldNotBeStrings
 - CA1056
 ms.assetid: fdc99d29-0904-4a65-baa8-4f76833c953e
-caps.latest.revision: "12"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cdfcce6ff0c9526508b5cf4088968a1a8081c822
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: cda8af664b6ad71ce90aa7d0bf3bbe06aefc3ab0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1056-uri-properties-should-not-be-strings"></a>CA1056: URI 속성은 문자열이면 안 됩니다.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  속성이 URI를 나타내지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 형식 `ErrorProne`,이 규칙을 위반 하는 형식 하 `SaferWay`, 규칙을 충족 하 합니다.  
   
  [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1056-uri-properties-should-not-be-strings_1.cs)]

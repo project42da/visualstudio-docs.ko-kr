@@ -1,29 +1,25 @@
 ---
 title: IDiaEnumSegments | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumSegments interface
 ms.assetid: 0c9edd5e-b9ce-43e1-a791-cd4c5d16d923
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 98043b7160caaa32ac341ad4aa5065d5cdbe8a59
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f75044d439381d69ba9431ffd070cbde718bfbbe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaenumsegments"></a>IDiaEnumSegments
 데이터 원본에 포함 된 다양 한 세그먼트를 열거 합니다.  
@@ -52,7 +48,7 @@ IDiaEnumSegments : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  호출 하 여이 인터페이스를 가져옵니다는 `QueryInterface` 에서 메서드는 [IDiaTable](../../debugger/debug-interface-access/idiatable.md) 개체입니다. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  가져오는 방법을 보여 주는이 예제는 `IDiaEnumSections` 테이블에서 인터페이스입니다. 세그먼트를 사용 하 여의 자세한 예제에 대 한 참조는 [IDiaSegment](../../debugger/debug-interface-access/idiasegment.md) 인터페이스입니다.  
   
 ```C++  

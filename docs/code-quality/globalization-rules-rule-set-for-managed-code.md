@@ -1,23 +1,21 @@
 ---
-title: "관리 코드에 대 한 전역화 규칙 규칙 집합 | Microsoft Docs"
-ms.custom: 
+title: 관리 코드에 대 한 전역화 규칙 규칙 집합 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 ms.assetid: 3c4032ee-0805-4581-8c48-b1827cd6b213
-caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 07a2e8da87eb486f8247a79263ec371a8fd4afc5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 54e1df6f8c49112747ccd7254f01a57d33dccf0e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="globalization-rules-rule-set-for-managed-code"></a>관리 코드에 대한 전역화 규칙 규칙 집합
 Microsoft 전역화 규칙 규칙 집합 다양 한 언어, 로캘 및 문화권에서 올바르게 표시 응용 프로그램에서 데이터를 방해할 수 있는 문제에 초점을 사용할 수 있습니다. 응용 프로그램이 지역화 되거나 전역화 되는 경우이 규칙 집합 중 하나 또는 둘 다를 포함 해야 합니다.  

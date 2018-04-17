@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio O/R 디자이너 개요 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio O/R 디자이너 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 45e477c0-5c6b-41f9-b2d0-2808fb4f6537
-caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: a160cce25814cd2e110f8896ed6752a18b5dd0da
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 09fe5a8cbec1ba1ab5a45abda4c88864e25a1751
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="linq-to-sql-tools-in-visual-studio"></a>LINQ to SQL 도구 Visual Studio에서
 LINQ to SQL에는 Microsoft에서 릴리스한 첫 번째 개체-관계형 매핑 기술을 했습니다. 기본 시나리오에서 잘 작동 하 고 계속 Visual Studio에서 지원 하지만 더 이상 현재 개발에 포함 됩니다. LINQ to SQL을 이미 사용 하는 레거시 응용 프로그램 유지 관리 하는 경우 또는 SQL Server를 사용 하는 다중 테이블 매핑이 필요 하지 않은 간단한 응용 프로그램에서 사용 합니다. 일반적으로 새 응용 프로그램 개체 관계형 매퍼 계층에 필요한 경우 Entity Framework를 사용 해야 합니다.  
@@ -72,6 +69,6 @@ Visual Studio에서 LINQ to SQL 클래스 개체 관계형 디자이너 (O/R 디
 <xref:System.Linq>  
 <xref:System.Data.Linq>  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)    
 [질문과 대답 (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/frequently-asked-questions) 

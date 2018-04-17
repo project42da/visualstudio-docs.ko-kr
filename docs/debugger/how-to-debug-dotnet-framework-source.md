@@ -1,27 +1,23 @@
 ---
-title: "방법:.NET Framework 소스 디버깅 | Microsoft Docs"
-ms.custom: 
+title: 방법:.NET Framework 소스 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/23/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging, .NET Framework source
 ms.assetid: fc12e472-ac6a-4e77-8e22-a769e13a03b8
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 75f3665afcf5d4937fae46e2a6871e0f7121b561
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 8c5de7fe62a03ae50323af2497bb6f85b48e51e2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-debug-net-framework-source"></a>방법: .NET Framework 소스 디버깅
 .NET Framework 소스를 디버깅 하려면 코드에 대 한 디버깅 기호에 액세스할 수 있어야 합니다. 또한.NET Framework 소스를 한 단계씩를 사용 하도록 설정 해야 합니다.  

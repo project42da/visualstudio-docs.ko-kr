@@ -1,12 +1,10 @@
 ---
-title: "확장 속성 및 속성 창 | Microsoft Docs"
-ms.custom: 
+title: 확장 속성 및 속성 창 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - STrackSelection interface, supporting Property Browser
 - SelectedObjects property
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - SelectionContainer class
 - SelectableObjects property
 ms.assetid: 1e925025-3d21-4cdb-a917-78db7bb78fe9
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0a0775a8476d7fc4842ade5f4ac7b96271d06a8b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 3d03a9c31afed5a737a2f33e1cece490e7dd91b5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-properties-and-the-property-window"></a>확장 속성 및 속성 창
 **속성** 창은 보고 디자인 타임 속성 및 선택한 개체의 이벤트를 편집 하는 데 사용 됩니다.  

@@ -1,29 +1,25 @@
 ---
 title: IDiaImageData | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaImageData interface
 ms.assetid: b696f350-fc08-4352-9287-a15e87512c1e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d85ef4eeb3d0836c1da8b12bf3413e11699d1af1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b0f30a58bdf853e3ba5a4602ae1bcdda09d02b8c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaimagedata"></a>IDiaImageData
 모듈 또는 이미지의 기본 위치와 메모리 오프셋의 세부 정보를 노출합니다.  
@@ -49,7 +45,7 @@ IDiaImageData : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올 `QueryInterface` 에 [IDiaEnumDebugStreamData](../../debugger/debug-interface-access/idiaenumdebugstreamdata.md) 개체입니다. 디버그 일부는 지원 스트리밍하는 `IDiaImageData` 인터페이스입니다. 예를 들어, 현재 XDATA 및 PDATA 스트림을 지원는 `IDiaImageData` 인터페이스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  모든 지 원하는 모든 스트림에 대 한 디버그 스트림을 검색 하는이 예제는 `IDiaImageData` 인터페이스입니다. 이러한 스트림을 발견 되 면 그에 대 한 일부 정보가 표시 됩니다.  
   
 ```C++  

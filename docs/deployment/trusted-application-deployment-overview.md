@@ -1,12 +1,10 @@
 ---
-title: "응용 프로그램 배포 개요를 신뢰할 수 있는 | Microsoft Docs"
-ms.custom: 
+title: 응용 프로그램 배포 개요를 신뢰할 수 있는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - ClickOnce deployment, security
 - trusted application deployment
 ms.assetid: b24a1702-8fbe-45b1-87a0-9618a0708f1d
-caps.latest.revision: "31"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 34e83d6b035ba6ea91190fa89b9e1a63366e7907
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 46a43a372a8a8c4de407d4063ea2a625ede38b14
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="trusted-application-deployment-overview"></a>신뢰할 수 있는 응용 프로그램 배포 개요
 이 항목에서는 신뢰할 수 있는 응용 프로그램 배포 기술을 사용하여, 관리자 권한이 있는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 배포하는 방법에 대한 개요를 제공합니다.  
@@ -84,7 +82,7 @@ ms.lasthandoff: 12/22/2017
 -   CertMgr.exe - Internet Explorer의 구성 요소이므로 Windows 98 및 모든 이후 버전에 있습니다. 자세한 내용은 참조 [Certmgr.exe (인증서 관리자 도구)](/dotnet/framework/tools/certmgr-exe-certificate-manager-tool)합니다.  
   
 ### <a name="create-a-clickonce-application"></a>ClickOnce 응용 프로그램 만들기  
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 응용 프로그램을 설명하고 설치 매개 변수를 제공하는 매니페스트 파일과 결합된 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 클라이언트 응용 프로그램입니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 에서 **게시** 명령을 사용하여 프로그램을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]응용 프로그램으로 전환할 수 있습니다. 또는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 에 포함된 도구를 사용하여 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]배포에 필요한 모든 파일을 생성할 수 있습니다. 에 대 한 자세한 단계 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 참조 [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)합니다.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 응용 프로그램을 설명하고 설치 매개 변수를 제공하는 매니페스트 파일과 결합된 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 클라이언트 응용 프로그램입니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 에서 **게시** 명령을 사용하여 프로그램을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]응용 프로그램으로 전환할 수 있습니다. 또는 [!INCLUDE[winsdklong](../deployment/includes/winsdklong_md.md)]에 포함된 도구를 사용하여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포에 필요한 모든 파일을 생성할 수 있습니다. 에 대 한 자세한 단계 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 참조 [연습: ClickOnce 응용 프로그램 수동 배포](../deployment/walkthrough-manually-deploying-a-clickonce-application.md)합니다.  
   
  신뢰할 수 있는 응용 프로그램 배포는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에 관련되고 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에서만 사용할 수 있습니다.  
   

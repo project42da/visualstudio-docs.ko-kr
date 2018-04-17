@@ -1,11 +1,8 @@
 ---
-title: "DataRelation을 사용 하 여 데이터 집합 간의 관계를 만드는 | Microsoft Docs"
-ms.custom: 
+title: DataRelation을 사용 하 여 데이터 집합 간의 관계를 만드는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vbData.Microsoft.VSDesigner.DataSource.DesignRelation
 - vbdata.Microsoft.VSDesigner.DataSource.DesignRelation
@@ -14,17 +11,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], relationships
 - relationships, datasets
 ms.assetid: cfe274f0-71fe-40f6-994e-7c7f6273c9ba
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 95bfef50e7ce5016b68df1442e625a88beb22181
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 94fb9217b779d00314b2a188ae2fe6f7d0ba4bb1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-relationships-between-datasets"></a>데이터 집합 간에 관계 만들기
 관련된 데이터를 포함 하는 데이터 집합 테이블을 사용 하 여 <xref:System.Data.DataRelation> 서로 관련된 레코드를 반환 하 고 테이블 간의 부모/자식 관계를 나타내기 위해 개체입니다. 관련된 테이블을 사용 하 여 데이터 집합에 추가 **데이터 소스 구성 마법사**, 또는 **데이터 집합 디자이너**, 작성 및 구성의 <xref:System.Data.DataRelation> 있습니다에 대 한 개체입니다.  
@@ -108,5 +105,5 @@ Visual Studio에서 데이터 디자인 도구를 사용 하 여 데이터 테�
   
 2.  **데이터** 메뉴는 **관계 레이블 표시** 관계 이름을 표시 하는 명령입니다. 관계 이름 해당 명령의 선택을 취소 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio에서 데이터 집합 만들기 및 구성](../data-tools/create-and-configure-datasets-in-visual-studio.md)

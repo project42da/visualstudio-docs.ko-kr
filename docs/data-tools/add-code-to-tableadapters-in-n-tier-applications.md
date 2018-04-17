@@ -1,11 +1,8 @@
 ---
-title: "N 계층 응용 프로그램에서 Tableadapter에 코드 추가 | Microsoft Docs"
-ms.custom: 
+title: N 계층 응용 프로그램에서 Tableadapter에 코드 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, extending TableAdapters
 ms.assetid: dafac00e-df9d-4d4a-95a6-e34b4d099425
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 54df2144511e847988c6f11212e9c9a4941d0b38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 52c732842f5a98bfb1c78a125830f730aeeb5321
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-code-to-tableadapters-in-n-tier-applications"></a>N 계층 응용 프로그램에서 Tableadapter에 코드 추가
 TableAdapter에 대 한 partial 클래스 파일을 만들고 코드를 추가 하 여 TableAdapter의 기능을 확장할 수 있습니다 (코드를 추가 하는 대신는 *DatasetName*합니다. DataSet.Designer 파일)입니다. Partial 클래스는 여러 개의 물리적 파일에서 나눌 수 특정 클래스에 대 한 코드를 사용 합니다. 자세한 내용은 참조 [부분](/dotnet/visual-basic/language-reference/modifiers/partial) 또는 [부분 (형식)](/dotnet/csharp/language-reference/keywords/partial-type)합니다.  
@@ -69,7 +66,7 @@ TableAdapter를 정의 하는 코드는 데이터 집합에서 TableAdapter에 �
     }  
     ```  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [N 계층 데이터 응용 프로그램 개요](../data-tools/n-tier-data-applications-overview.md)   
 [N 계층 응용 프로그램에서 데이터 집합에 코드 추가](../data-tools/add-code-to-datasets-in-n-tier-applications.md)   
 [만들기 및 Tableadapter를 구성 합니다.](create-and-configure-tableadapters.md)   

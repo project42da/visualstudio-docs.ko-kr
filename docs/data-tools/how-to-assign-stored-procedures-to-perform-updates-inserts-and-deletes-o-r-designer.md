@@ -1,23 +1,20 @@
 ---
-title: "업데이트를 수행 하는 저장 프로시저 insert, 및 Linq to SQL O/R 디자이너에서에서 delete | Microsoft Docs"
-ms.custom: 
+title: 업데이트를 수행 하는 저장 프로시저 insert, 및 Linq to SQL O/R 디자이너에서에서 delete | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: e88224ab-ff61-4a3a-b6b8-6f3694546cac
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 20669a4ec19865e99a9498e87e896aa645321257
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 69071f0a49b5e2a8b0261aaf64b97cefaeb9aa9f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-assign-stored-procedures-to-perform-updates-inserts-and-deletes-or-designer"></a>방법: 저장된 프로시저를 할당 업데이트, 삽입 및 삭제 (O/R 디자이너)를 수행 합니다.
 저장 프로시저를 O/R 디자이너에 추가하여 일반적인 <xref:System.Data.Linq.DataContext> 메서드로 실행할 수 있습니다. 기본값을 재정의 하려면 사용할 수도 [!INCLUDE[vbtecdlinq](../data-tools/includes/vbtecdlinq_md.md)] 데이터베이스에 변경 내용을 엔터티 클래스에서 저장 될 때 삭제 및 삽입, 업데이트를 수행 하는 런타임 동작 (예를 들어 호출 하는 경우는 <xref:System.Data.Linq.DataContext.SubmitChanges%2A> 메서드).  
@@ -65,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 업데이트를 위한 기본 런타임 논리 사용으로 되돌리려면 Insert, Update, 옆의 줄임표 또는 삭제 명령은 **속성** 창과 선택 **런타임을 사용** 에  **동작 구성** 대화 상자.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio에서 LINQ to SQL 도구](../data-tools/linq-to-sql-tools-in-visual-studio2.md)   
 [DataContext 메서드](../data-tools/datacontext-methods-o-r-designer.md)   
 [LINQ to SQL (.NET Framework)](/dotnet/framework/data/adonet/sql/linq/index)   

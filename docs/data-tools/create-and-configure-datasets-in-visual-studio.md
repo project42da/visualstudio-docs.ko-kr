@@ -1,25 +1,23 @@
 ---
-title: "만들기 및 Visual Studio에서 데이터 집합을 구성 | Microsoft Docs"
-ms.custom: 
+title: 만들기 및 Visual Studio에서 데이터 집합을 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - typed datasets, creating
 - datasets, creating
 - datasets, configuring
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: da81d141e453e0106d329565338f7893b4fad758
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 1e71f7dcde2e1232f15b6c455f01ee30272b8f28
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-and-configure-datasets-in-visual-studio"></a>만들기 및 Visual Studio에서 데이터 집합 구성
 
@@ -91,6 +89,6 @@ A *데이터 집합* 는 메모리는 데이터베이스에서 데이터를에�
 
 4.  독립 실행형 테이블 구현 해야 할 `Fill` 독립 실행형 테이블에서 논리를 데이터로 채울 수 있도록 합니다. 독립 실행형 데이터 테이블을 채우는 대 한 자세한 내용은 참조 [DataAdapter에서 DataSet 채우기](/dotnet/framework/data/adonet/populating-a-dataset-from-a-dataadapter)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)

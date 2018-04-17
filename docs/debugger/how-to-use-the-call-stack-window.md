@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio 디버거에서 호출 스택을 보려면 | Microsoft Docs"
+title: Visual Studio 디버거에서 호출 스택을 보려면 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/06/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.callstack
 dev_langs:
@@ -29,17 +26,16 @@ helpviewer_keywords:
 - stack, switching stack frames
 - Call Stack window, viewing disassembly code for functions on the call stack
 ms.assetid: 5154a2a1-4729-4dbb-b675-db611a72a731
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e10b81ff07b77e2fd6202d2f5fb27392fe8134c2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a55f940c6310300b458f4497f8659bfc0897d4b7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-the-call-stack-and-use-the-call-stack-window-in-the-visual-studio-debugger"></a>호출 스택 보기 및 Visual Studio 디버거에서 호출 스택 창 사용
 
@@ -71,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
 **[\<외부 코드 >]**  
   
-## <a name="bkmk_switch"></a>다른 스택 프레임 (디버거 컨텍스트 변경)으로 전환
+## <a name="bkmk_switch"></a> 다른 스택 프레임 (디버거 컨텍스트 변경)으로 전환
   
 1.  에 **호출 스택** 창, 해당 코드와 데이터를 보려는 스택 프레임을 마우스 오른쪽 단추로 클릭 합니다.
 
@@ -113,9 +109,9 @@ Visual Studio Enterprise (전용)를 사용 하는 경우 디버그 하는 동�
 
 ## <a name="change-the-optional-information-displayed"></a>표시 되는 선택적 정보를 변경 합니다.  
   
--   마우스 오른쪽 단추로 클릭는 **호출 스택** 창 및 세트나 clear **표시 \<**  *정보를*  **>** .  
+-   마우스 오른쪽 단추로 클릭는 **호출 스택** 창 및 세트나 clear **표시 \< ***정보를***>**합니다.  
   
-## <a name="bkmk_symbols"></a>모듈에 대 한 기호 로드
+## <a name="bkmk_symbols"></a> 모듈에 대 한 기호 로드
 에 **호출 스택** 창에서 기호가 로드 현재 되어 하지 않은 코드에 대 한 디버깅 기호를 로드할 수 있습니다. 이러한 기호는 Microsoft 공용 기호 서버에서 다운로드한 .NET Framework 또는 시스템 기호일 수도 있고 디버깅 중인 컴퓨터의 기호 경로에 있는 기호일 수도 있습니다.  
   
 참조 [기호 (.pdb)을 지정 하 고 소스 파일](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md)  

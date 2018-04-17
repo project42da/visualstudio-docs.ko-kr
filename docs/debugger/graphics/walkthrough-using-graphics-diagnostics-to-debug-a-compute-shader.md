@@ -1,23 +1,21 @@
 ---
-title: "연습: 그래픽 진단을 사용 하 여 계산 셰이더 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '연습: 그래픽 진단을 사용 하 여 계산 셰이더 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 69287456-644b-4aff-bd03-b1bbb2abb82a
-caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ef73c45b39c638b2dfc1f88be3323d083efa8493
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 4498f819dae42c1f010fa97891511253624d7b97
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader"></a>연습: 그래픽 진단을 사용하여 계산 셰이더 디버깅
 이 연습에서는 잘못된 결과를 생성하는 계산 셰이더를 Visual Studio 그래픽 진단 도구를 사용하여 조사하는 방법을 보여 줍니다.  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  검사는 **그래픽 이벤트 목록** 데이터 집합을 렌더링 하는 그리기 이벤트에 대 한 합니다. 간단 하 게 하려면이 입력 `Draw` 에 **검색** 의 오른쪽 위 모퉁이 있는 상자는 **그래픽 이벤트 목록** 창. 그러면 목록이 필터링되어 제목에 "그리기"가 포함된 이벤트만 나타납니다. 이 시나리오에서는 다음과 같은 그리기 이벤트가 발생한 것이 확인됩니다.  
   
-     ![이벤트 목록 &#40; EL &#41; 그리기 이벤트입니다. ] (media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")  
+     ![이벤트 목록 &#40;EL&#41; 그리기 이벤트입니다. ] (media/gfx_diag_demo_compute_shader_fluid_step_2.png "gfx_diag_demo_compute_shader_fluid_step_2")  
   
 3.  각 그리기 이벤트 간에 이동하면서 그래픽 로그 문서 탭에서 렌더링 대상을 살펴봅니다.  
   
@@ -102,11 +100,11 @@ ms.lasthandoff: 12/22/2017
   
 6.  계산 셰이더 소스 코드를 검토하여 힘 계산 단계가 있는지 확인합니다. 이 시나리오에서는 여기가 오류의 원인이라는 것이 확인됩니다.  
   
-     ![ForceCS &#95; 디버깅 간단한 계산 셰이더 합니다. ] (media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")  
+     ![ForceCS 디버깅&#95;간단한 셰이더를 계산 합니다. ] (media/gfx_diag_demo_compute_shader_fluid_step_9.png "gfx_diag_demo_compute_shader_fluid_step_9")  
   
  오류의 위치를 확인한 후에는 디버깅을 중지하고 상호 작용하는 입자 간의 거리를 올바르게 계산하도록 계산 셰이더 소스 코드를 수정할 수 있습니다. 이 시나리오에서는 줄 `float2 diff = N_position + P_position;`을 `float2 diff = N_position - P_position;`으로 변경하면 됩니다.  
   
- ![수정 된 계산 및 #45, 셰이더 코드입니다. ] (media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")  
+ ![수정 된 계산&#45;셰이더 코드입니다. ] (media/gfx_diag_demo_compute_shader_fluid_step_10.png "gfx_diag_demo_compute_shader_fluid_step_10")  
   
  이 시나리오에서는 런타임에 계산 셰이더가 컴파일되기 때문에 변경한 후에 앱을 다시 시작하기만 하면 시뮬레이션에 미치는 영향을 확인할 수 있습니다. 앱을 다시 빌드할 필요가 없습니다. 앱을 실행하면 이제 시뮬레이션이 올바르게 동작하는 것이 확인됩니다.  
   

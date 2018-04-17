@@ -1,32 +1,28 @@
 ---
-title: "디버깅 작업 | Microsoft Docs"
-ms.custom: 
+title: 디버깅 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], tasks
 ms.assetid: 5d60e9e8-305e-4a48-829f-b9440fc8af7b
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d1a6ffff4d3ac0410ca3de7e2cd595119763e88b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 77cc933c49e15786221fd1cd3eb7e242118527a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-tasks"></a>디버깅 작업
 프로그램을 디버깅 하려면이 시작 해야 및 디버그 엔진 (DE),에 연결 되어야 합니다. 그렇지 않으면는 DE 이전에 시작된 된 프로그램에 연결 되어야 합니다. 연결 하면는 DE 특정 시작 이벤트를 생성 해야 합니다. 에 대 한 응답 디버그 패키지가 IDE에서 설정 된 중단점을 바인딩할 시도 합니다. 바인딩된 중단점을 적중 하는 프로그램을 중지 하 고 사용자 입력을 대기 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [보안 문제](../../extensibility/debugger/security-issues.md)  
  프로그램을 디버깅 하는 데 필요한 보안 단계를 설명 합니다.  
   

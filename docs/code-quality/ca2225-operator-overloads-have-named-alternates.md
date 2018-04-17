@@ -1,12 +1,10 @@
 ---
-title: "CA2225: 연산자 오버 로드는 명명 된 대체 | Microsoft Docs"
-ms.custom: 
+title: 'CA2225: 연산자 오버 로드는 명명 된 대체 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - OperatorOverloadsHaveNamedAlternates
 - CA2225
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - OperatorOverloadsHaveNamedAlternates
 - CA2225
 ms.assetid: af8f7ab1-63ad-4861-afb9-b7a7a2be15e1
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f8c7b71fc964f898aefc5e243c787be71a8a063a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a46b2d7a158fb340f56f6f38c2889fa2696c6cf0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2225-operator-overloads-have-named-alternates"></a>CA2225: 연산자 오버로드에는 명명된 대체 항목이 있습니다.
 |||  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  공유 라이브러리를 구현 하는 경우에이 규칙에서는 경고를에서 표시 하지 마십시오. 응용 프로그램에는이 규칙에서는 경고를에서 무시 해도 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 위반 하는 구조를 정의 합니다. 이 예제를 수정 하려면 추가 공용 `Add(int x, int y)` 구조에 메서드.  
   
  [!code-csharp[FxCop.Usage.OperatorOverloadsHaveNamedAlternates#1](../code-quality/codesnippet/CSharp/ca2225-operator-overloads-have-named-alternates_1.cs)]  

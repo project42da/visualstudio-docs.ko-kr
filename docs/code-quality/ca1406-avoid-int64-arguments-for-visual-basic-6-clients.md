@@ -1,12 +1,10 @@
 ---
-title: ": Ca1406 Visual Basic 6 클라이언트에 대 한 Int64 인수 | Microsoft Docs"
-ms.custom: 
+title: ': Ca1406 Visual Basic 6 클라이언트에 대 한 Int64 인수 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - AvoidInt64ArgumentsForVB6Clients
 - CA1406
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - AvoidInt64ArgumentsForVB6Clients
 - CA1406
 ms.assetid: d5d0d3fc-f105-43da-be5b-923ab023309c
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ed47a2ccea76ce9cb6e2a1ef6dd73d53c961544c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3b07be7368269701b2b77fa633464095cc509779
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1406-avoid-int64-arguments-for-visual-basic-6-clients"></a>CA1406: Visual Basic 6 클라이언트에서 Int64 인수를 사용하지 않습니다.
 |||  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서 경고를 표시 하지 않는 것이 확실 한 경우 Visual Basic 6 COM 클라이언트 형식을 액세스 하지 않음을 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 형식을 보여 줍니다.  
   
  [!code-csharp[FxCop.Interoperability.LongArgument#1](../code-quality/codesnippet/CSharp/ca1406-avoid-int64-arguments-for-visual-basic-6-clients_1.cs)]

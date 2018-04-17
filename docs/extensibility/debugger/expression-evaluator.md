@@ -1,27 +1,25 @@
 ---
-title: "식 계산기 | Microsoft Docs"
-ms.custom: 
+title: 식 계산기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Debugging SDK]
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation
 ms.assetid: f9381b2f-99aa-426c-aea0-d9c15f3c859b
-caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 55aaa595c49d0c50cff5f874d1b322c3adbb9729
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8dd2cc4409dbdb7650454715e133fd76dda5b780
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="expression-evaluator"></a>식 계산기
 식 계산기 (EE) IDE가 중단 모드에 있을 때 사용자가 볼 수 있도록 하는 언어를 구문 분석 하 고 실행할 때 변수 및 식 평가의 구문을 검사 합니다.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  디버그 패키지가 가져옵니다는 `IDebugExpressionContext2` 에서 개체는 [IDebugStackFrame2](../../extensibility/debugger/reference/idebugstackframe2.md) 인터페이스 및 호출은 `IDebugStackFrame2::ParseText` 메서드를 가져올 수는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 개체입니다.  
   
-3.  호출 하 여 디버그 패키지는 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 메서드 또는 [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 식의 값을 가져오는 방법입니다. `IDebugExpression2::EvaluateAsync`명령/직접 실행 창에서 호출 됩니다. 다른 모든 UI 구성 요소 호출 `IDebugExpression2::EvaluateSync`합니다.  
+3.  호출 하 여 디버그 패키지는 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 메서드 또는 [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 식의 값을 가져오는 방법입니다. `IDebugExpression2::EvaluateAsync` 명령/직접 실행 창에서 호출 됩니다. 다른 모든 UI 구성 요소 호출 `IDebugExpression2::EvaluateSync`합니다.  
   
 4.  식 계산의 결과는 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 이름, 형식 및 식 평가의 결과 값을 포함 하는 개체입니다.  
   

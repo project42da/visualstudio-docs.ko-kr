@@ -1,23 +1,21 @@
 ---
-title: "AppliesTo 요소 (Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: 
+title: AppliesTo 요소 (Visual Studio 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 8fb1334b-d78c-405f-98b4-786e9f6b58d7
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 35e11a53b2b9b63a71aab2858151721cfdfd7f9c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2e27ee1ab0ba42a82d61e2adbe9fb4c6c81cbb48
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="appliesto-element-visual-studio-templates"></a>AppliesTo 요소(Visual Studio 템플릿)
 하나 이상의 기능에 맞게 선택적 식을 지정합니다. <xref:Microsoft.VisualStudio.Shell.Interop.VsProjectCapabilityExpressionMatcher>를 참조하십시오. 기능은 계층 구조를 통해 프로젝트 형식에 의해 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID5> 속성으로 노출됩니다. 이렇게 하면 적용할 수 있는 일반적인 기능을 가진 여러 프로젝트 형식에서 템플릿을 공유할 수 있습니다.  
@@ -26,8 +24,8 @@ ms.lasthandoff: 12/22/2017
   
  이 특성은 Visual Studio 2013 업데이트 2에서 도입되었습니다. 올바른 버전을 참조 하려면 참조 [참조 하는 Visual Studio 2013 SDK 업데이트 2에 전달 된 어셈블리](http://msdn.microsoft.com/en-us/42b65c3e-e42b-4c39-98c8-bea285f25ffb)합니다.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<AppliesTo >  
   
 ## <a name="syntax"></a>구문  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
  올바른 식 구문은 다음과 같이 정의됩니다.  
   
--   "(VisualC &#124; 같은 기능 식 CSharp) + (MSTest &#124; NUnit) "입니다.  
+-   기능 식와 같은 "(VisualC &#124; CSharp) + (MSTest &#124; NUnit)"입니다.  
   
 -   "&#124;"는 OR 연산자입니다.  
   
@@ -68,9 +66,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Null 또는 비어 있는 식은 일치하는 항목으로 계산됩니다.  
   
--   프로젝트 기능에는 이러한 예약 된 문자를 제외한 모든 문자일 수 있습니다: "':;,+-*/\\! ~ &#124; %$@^()={} & <>? \t\b\n\r  
+-   프로젝트 기능에는 이러한 예약 된 문자를 제외한 모든 문자일 수 있습니다: "':;,+-*/\\! ~&#124;%$@^()={} & <>? \t\b\n\r  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 세 개의 서로 다른 템플릿을 보여줍니다. `Template1`은 모든 C# 프로젝트 형식 또는 `WindowsAppContainer` 기능을 지원하는 모든 기타 프로젝트 형식에 적용됩니다. `Template2`는 모든 종류의 전체 C# 프로젝트에 적용됩니다. `Template3`은 `WindowsAppContainer` 프로젝트가 아닌 C# 프로젝트에 적용됩니다.  
   
 ```xml  

@@ -1,11 +1,8 @@
 ---
-title: "동시성 예외 처리 | Microsoft Docs"
-ms.custom: 
+title: 동시성 예외 처리 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,17 @@ helpviewer_keywords:
 - updating datasets, errors
 - concurrency control, walkthroughs
 ms.assetid: 73ee9759-0a90-48a9-bf7b-9d6fc17bff93
-caps.latest.revision: "23"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 71572ac38c7aed3154360d3bad9e4b84fe0107e3
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: 816d00c4d2c08ba5122b0d9a3f6091937243270a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="handle-a-concurrency-exception"></a>동시성 예외 처리
 동시성 예외 (<xref:System.Data.DBConcurrencyException>)는 두 명의 사용자가 동시에 데이터베이스에 동일한 데이터를 변경 하려고 할 때 발생 합니다. Catch 하는 방법을 보여 주는 Windows 응용 프로그램을 만들면이 연습에서는 한 <xref:System.Data.DBConcurrencyException>를 오류를 발생 하는 행 키를 찾아 처리 하는 방법에 대 한 전략에 알아봅니다.  
@@ -48,7 +45,7 @@ ms.lasthandoff: 01/23/2018
   
 7.  오류를 catch 한 다음 계속 하 고 데이터베이스를 업데이트 또는 업데이트 작업을 취소 여부를 결정 하는 레코드의 서로 다른 버전을 표시 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
 이 연습에서는 Northwind 샘플 데이터베이스 및 SQL Server Express LocalDB를 사용 합니다.  
   
 1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/sql-server/sql-server-editions-express), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **데이터 저장 및 처리** 작업 또는 개별 구성 요소입니다.  

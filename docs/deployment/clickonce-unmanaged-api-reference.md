@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce 관리 되지 않는 API 참조 | Microsoft Docs"
-ms.custom: 
+title: ClickOnce 관리 되지 않는 API 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,19 +16,19 @@ helpviewer_keywords:
 - CleanOnlineAppCacheW interface [ClickOnce unmanaged]
 - GetDeploymentDataFromManifest [ClickOnce unmanaged]
 ms.assetid: ec002138-4054-456d-bcc1-79ac2f4a4fd7
-caps.latest.revision: "6"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: cplusplus
-ms.openlocfilehash: 392ada2288adcc229834f617c2f6284bb2e7ed0f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8463976825d38c5ff5e8cb910df153737da9eeee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clickonce-unmanaged-api-reference"></a>ClickOnce 관리되지 않는 API 참조
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]dfshim.dll에서 관리 되지 않는 공용 Api를 지원 합니다.  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] dfshim.dll에서 관리 되지 않는 공용 Api를 지원 합니다.  
   
 ## <a name="cleanonlineappcache"></a>CleanOnlineAppCache  
  정리 하거나 모든 온라인 응용 프로그램에서 제거 된 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 캐시 합니다.  
@@ -63,7 +61,7 @@ ms.lasthandoff: 12/22/2017
  성공 하면 s_ok이 고; 반환 그렇지 않으면 실패를 나타내는 HRESULT를 반환 합니다. 버퍼가 너무 작은 경우 HRESULTFROMWIN32(ERROR_INSUFFICIENT_BUFFER)를 반환 합니다.  
   
 ### <a name="remarks"></a>설명  
- 포인터를 null 이어야 합니다. `pcwzActivationUrl`및 `pcwzPathToDeploymentManifest` 비어 있지 않아야 합니다.  
+ 포인터를 null 이어야 합니다. `pcwzActivationUrl` 및 `pcwzPathToDeploymentManifest` 비어 있지 않아야 합니다.  
   
  호출자의 정품 인증 URL을 정리 합니다. 예를 들어 이스케이프 문자를 추가 필요한 위치 또는 쿼리 문자열을 제거 합니다.  
   

@@ -1,26 +1,23 @@
 ---
-title: "Windows Forms 응용 프로그램에서 조회 테이블 만들기 | Microsoft Docs"
-ms.custom: 
+title: Windows Forms 응용 프로그램에서 조회 테이블 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - lookup tables
 - lookup tables, creating
 ms.assetid: 0edd5385-c381-4b17-9096-74e2778db9d5
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: f27fdbe216b6ba2a738f6d9f45d746344d542b38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 75035b12972299c0c9d4b9b515cb4cbd51308739
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-lookup-tables-in-windows-forms-applications"></a>Windows Forms 응용 프로그램에서 조회 테이블 만들기
 용어 *조회 테이블* 두 관련된 데이터 테이블에 바인딩되는 컨트롤에 설명 합니다. 이러한 조회 컨트롤에는 두 번째 테이블에서 선택한 값에 따라 첫 번째 테이블의에서 데이터를 표시 합니다.  
@@ -55,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
     |속성|설정 설명|  
     |--------------|----------------------------|  
-    |**데이터 원본**|Visual Studio는 사용자가 컨트롤로 끌어 온 테이블에 대해 작성된 <xref:System.Windows.Forms.BindingSource>로 이 속성을 설정합니다. 컨트롤을 만들 때 작성된 <xref:System.Windows.Forms.BindingSource>가 아닙니다.<br /><br /> 조정이 필요한 경우 그런 다음이 설정는 <xref:System.Windows.Forms.BindingSource> 표시 하려는 열이 있는 테이블입니다.|  
+    |**DataSource**|Visual Studio는 사용자가 컨트롤로 끌어 온 테이블에 대해 작성된 <xref:System.Windows.Forms.BindingSource>로 이 속성을 설정합니다. 컨트롤을 만들 때 작성된 <xref:System.Windows.Forms.BindingSource>가 아닙니다.<br /><br /> 조정이 필요한 경우 그런 다음이 설정는 <xref:System.Windows.Forms.BindingSource> 표시 하려는 열이 있는 테이블입니다.|  
     |**DisplayMember**|Visual Studio는 컨트롤로 끄는 테이블에 대해 문자열 데이터 형식을 포함하는 기본 키 다음의 첫 번째 열로 이 속성을 설정합니다.<br /><br /> 조정이 필요한 경우 표시 하려는 열 이름으로 설정 합니다.|  
     |**ValueMember**|Visual Studio는 이 속성을 기본 키에 포함되는 첫 번째 열로 설정하거나 키가 정의되어 있지 않으면 테이블의 첫 번째 열로 설정합니다.<br /><br /> 조정이 필요한 경우 표시 하려는 열이 있는 테이블의 기본 키로 설정 합니다.|  
     |**SelectedValue**|삭제할 원래 열에이 속성을 설정 하는 visual Studio는 **데이터 소스** 창.<br /><br /> 조정이 필요한 경우 관련된 테이블의 외래 키 열으로 설정 합니다.|  

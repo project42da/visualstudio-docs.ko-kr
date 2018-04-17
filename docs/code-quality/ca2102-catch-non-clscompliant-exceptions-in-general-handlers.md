@@ -2,29 +2,25 @@
 title: 'CA2102: 일반 처리기에서 비 CLSCompliant 예외를 Catch | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - CA2102
 - CatchNonClsCompliantExceptionsInGeneralHandlers
 helpviewer_keywords:
 - CA2102
 ms.assetid: bf2df68f-d386-4379-ad9e-930a2c2e930d
-caps.latest.revision: 19
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 17238e140f8672e9d2d5a67594eb26b415c0b8d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cff8d36cd80a31cf05ca461730d51703afc106ee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2102-catch-non-clscompliant-exceptions-in-general-handlers"></a>CA2102: 일반 처리기에서 비 CLSCompliant 예외를 catch하십시오.
 |||  
@@ -42,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 -   C#: `catch {}`  
   
--   C + +: `catch(...) {}` 또는`catch(Object^) {}`  
+-   C + +: `catch(...) {}` 또는 `catch(Object^) {}`  
   
  처리 되지 않은 비 CLS 비규격 예외 catch 블록에서 이전에 허용 된 권한 제거 되는 보안 문제가 됩니다. 비 CLS 규격이 아닌 예외를 발견 하지 및 때문에 비 CLS 비규격 예외를 throw 하는 악성 메서드는 승격 된 권한으로 실행 수 없습니다.  
   
@@ -52,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  Try 블록 비 CLS 비규격 예외가 생성 하는 모든 문이 포함 되어 있지 않으면이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 네이티브 또는 관리 코드 비 CLS 비규격 예외 throw 할 수 있습니다, 때문에이 try 블록 내의 모든 코드 경로에 실행 될 수 있는 모든 코드에 대 한 지식이 필요 합니다. 공용 언어 런타임에 의해 비 CLS 규격 예외가 throw 되지 않습니다 확인 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 비 CLS 비규격 예외를 throw 하는 MSIL 클래스를 보여 줍니다.  
   
 ```  
@@ -69,7 +65,7 @@ ms.lasthandoff: 12/22/2017
 }  
 ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 충족 하는 일반 catch 블록을 포함 하는 메서드를 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.CatchNonClsCompliantException#1](../code-quality/codesnippet/CSharp/ca2102-catch-non-clscompliant-exceptions-in-general-handlers_1.cs)]  

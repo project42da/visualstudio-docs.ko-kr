@@ -1,29 +1,25 @@
 ---
 title: IDiaEnumSymbols | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumSymbols interface
 ms.assetid: 649f7bfd-86ac-49a5-8533-aff77e1bc62e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 66d972ad65bd6ff3f4f9f5d7dd71893d9fe09c2c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e4e6384e6822c03190d3650d2a1371f7b9fffe59
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaenumsymbols"></a>IDiaEnumSymbols
 데이터 원본에 포함 된 다양 한 기호를 열거 합니다.  
@@ -59,11 +55,11 @@ IDiaEnumSymbols : IUnknown
   
 -   [IDiaSourceFile::get_compilands](../../debugger/debug-interface-access/idiasourcefile-get-compilands.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  가져오는 방법을 보여 주는이 예제는 `IDiaEnumSymbols` 인터페이스 한 다음 목록으로 사용자 정의 형식 (Udt)에 해당 열거형을 사용 합니다.  
   
 > [!NOTE]
->  `CDiaBSTR`래핑하는 클래스는 `BSTR` 인스턴스화 범위를 벗어나면 문자열이 해제를 자동으로 처리 하 고 있습니다.  
+>  `CDiaBSTR` 래핑하는 클래스는 `BSTR` 인스턴스화 범위를 벗어나면 문자열이 해제를 자동으로 처리 하 고 있습니다.  
   
 ```C++  
 void ShowUDTs(IDiaSymbol *pGlobals)  

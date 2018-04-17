@@ -1,11 +1,8 @@
 ---
-title: "Visual Studio-1 부의 데이터에에서 WPF 컨트롤 바인딩 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio-1 부의 데이터에에서 WPF 컨트롤 바인딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data [WPF], displaying
 - WPF, data binding in Visual Studio
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - WPF Designer, data binding
 - data binding, WPF
 ms.assetid: e05a1e0c-5082-479d-bbc9-d395b0bc6580
-caps.latest.revision: "36"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 77c56d70c6fc3dd3dac9a563c146d8bab2c6f699
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 4c059013703a73a83a9a6f35b3c89f7b27c523d5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-wpf-controls-to-data-in-visual-studio"></a>Visual Studio에서 데이터에에서 WPF 컨트롤 바인딩
 데이터를 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 컨트롤에 바인딩하여 응용 프로그램 사용자에게 데이터를 표시할 수 있습니다. 이러한 데이터 바인딩된 컨트롤을 만들려면에서 항목을 이동할 수는 **데이터 원본** 창으로는 [!INCLUDE[wpfdesigner_current_short](../data-tools/includes/wpfdesigner_current_short_md.md)] 에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이 항목에서는 데이터 바인딩된 [!INCLUDE[TLA#tla_titlewinclient](../data-tools/includes/tlasharptla_titlewinclient_md.md)] 응용 프로그램을 만드는 데 사용할 수 있는 가장 일반적인 몇 가지 작업, 도구 및 클래스에 대해 설명합니다.  
@@ -96,11 +93,11 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  사용자 지정 클래스 public 이어야 하며, 기본적으로 매개 변수가 없는 생성자를 보유 합니다. 이러한 구문에는 "점" can'tbe 중첩 클래스입니다. 자세한 내용은 참조 [XAML을 WPF에 대 한 사용자 지정 클래스](/dotnet/framework/wpf/advanced/xaml-and-custom-classes-for-wpf)합니다.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]생성 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] 하는 다음 작업을 수행 합니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 생성 [!INCLUDE[TLA#tla_titlexaml](../data-tools/includes/tlasharptla_titlexaml_md.md)] 하는 다음 작업을 수행 합니다.  
   
 -   항목을 끌어 온 컨테이너의 리소스에 새 <xref:System.Windows.Data.CollectionViewSource>를 추가합니다. <xref:System.Windows.Data.CollectionViewSource>는 개체에 있는 데이터를 탐색하고 표시하는 데 사용할 수 있는 개체입니다.  
   
 -   컨트롤에 대한 데이터 바인딩을 만듭니다. 디자이너의 기존 컨트롤로 항목을 끌면 XAML이 컨트롤을 항목에 바인딩합니다. 컨테이너에 항목을 끌면 XAML이 끌어 온된 항목에 대 한 선택 된 컨트롤을 만듭니다. 및 컨트롤 항목에 바인딩합니다. 이 컨트롤은 새로운 <xref:System.Windows.Controls.Grid> 내에 만들어집니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)

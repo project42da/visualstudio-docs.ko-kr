@@ -3,24 +3,20 @@ title: IntelliTrace 단계 백-Visual Studio를 사용 하 여 스냅숏 보기 
 ms.description: Learn how to take snapshots, and view snapshots with IntelliTrace step-back
 ms.custom: mvc
 ms.date: 12/06/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.assetid: 7c60d929-d993-49dc-9db3-43b30be9912b
-caps.latest.revision: 5
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6634a72b7bbed51e3ae250289696511d67c70041
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: bc6450da4e103e5cd5a18f03df3116cb805a9983
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-snapshots-using-intellitrace-step-back-in-visual-studio"></a>Visual Studio에서 IntelliTrace를 사용 하 여 스냅숏 볼 단계 저장
 
@@ -28,7 +24,7 @@ IntelliTrace 단계 다시 자동으로 스냅숏을에서 모든 중단점 및 
 
 IntelliTrace 단계 저장은 Visual Studio Enterprise 2017 15.5 이상 버전에서에서 시작 가능 하 고 Windows 10 Anniversary 업데이트 필요 이상. 기능은 현재 ASP.NET, WinForms, WPF, 관리 되는 콘솔 응용 프로그램 및 관리 되는 클래스 라이브러리를 디버깅을 위해 지원 됩니다. Visual Studio 2017 Enterprise 버전 15.7 미리 보기 1 부터는 기능 또한 대해서는.NET Core 및 ASP.NET Core 합니다. UWP 응용 프로그램 디버깅 현재 지원 되지 않습니다.
 
-이 자습서에서는 다음을 수행합니다.
+이 자습서에서 다음을 수행합니다.
 
 > [!div class="checklist"]
 > * Intellitrace 이벤트와 스냅숏 사용

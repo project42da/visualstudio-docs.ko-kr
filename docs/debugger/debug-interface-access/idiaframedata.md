@@ -1,29 +1,25 @@
 ---
 title: IDiaFrameData | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaFrameData interface
 ms.assetid: 2f1b4986-341b-4641-89a4-226e261e9d93
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ecbc6d6bd94c3b6ed58b1afe8f1c090aca82e36
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 80175ea5ff6d5c394a586e87751576d5f0cd9502
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaframedata"></a>IDiaFrameData
 스택 프레임의 세부 정보를 노출합니다.  
@@ -64,7 +60,7 @@ IDiaFrameData : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenumframedata:: Next](../../debugger/debug-interface-access/idiaenumframedata-next.md) 또는 [idiaenumframedata:: Item](../../debugger/debug-interface-access/idiaenumframedata-item.md) 메서드. 참조는 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) 세부 정보에 대 한 인터페이스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 속성을 출력 한 `IDiaFrameData` 개체입니다. 참조는 [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md) 방법의 예에 대 한 인터페이스 `IDiaFrameData` 인터페이스를 가져옵니다.  
   
 ```C++  

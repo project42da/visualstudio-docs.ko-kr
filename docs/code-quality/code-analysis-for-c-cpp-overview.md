@@ -1,13 +1,10 @@
 ---
-title: "C/c + + 개요에 대 한 코드 분석 | Microsoft Docs"
-ms.custom: 
+title: C/c + + 개요에 대 한 코드 분석 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - annotations, code analysis
 - build integration, code analysis
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - '#pragma directives, code analysis'
 - C, code analysis
 ms.assetid: 81f0c9e8-f471-4de5-aac4-99db336a8809
-caps.latest.revision: 
 author: mikeblome
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2261921e4266f1b58ed31650ac1ff1bb7c028942
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 90b586a9a131e6c1ef19f591f1348ff5125e9701
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="code-analysis-for-cc-overview"></a>C/c + + 개요에 대 한 코드 분석
 
@@ -58,7 +54,7 @@ C/C++ 코드 분석 도구는 C/C++ 소스 코드에서 발생할 수 있는 오
   
  `C:\>cl /analyze Sample.cpp`
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [코드 분석 도구를 사용 하 여 드라이버 품질 분석](/windows-hardware/drivers/develop/analyzing-driver-quality-by-using-code-analysis-tools)  
 [드라이버 경고에 대 한 코드 분석](/windows-hardware/drivers/devtest/prefast-for-drivers-warnings)

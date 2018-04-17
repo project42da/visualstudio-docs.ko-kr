@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 응용 프로그램에 대 한 시작 메뉴 이름 지정 | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 응용 프로그램에 대 한 시작 메뉴 이름 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - Start menu name
 - ClickOnce deployment, Start menu name
 ms.assetid: 4b5183b2-2fd4-4433-9310-4a73bb12c4e3
-caps.latest.revision: "17"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: f01bb5750f31101a6d8ec0cb5f33669e5fbf2b4b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: a27adbd81db29b413bf85b2c7a465897eaeac987
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-a-start-menu-name-for-a-clickonce-application"></a>방법: ClickOnce 응용 프로그램의 시작 메뉴 이름 지정
 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 온라인 및 오프 라인 사용 하 여 응용 프로그램 설치에 항목이 추가 되는 **시작** 메뉴 및 **프로그램 추가 / 제거** 목록입니다. 기본적으로는 표시 이름은 응용 프로그램 어셈블리의 이름과 동일 같지만 표시 이름을 설정 하 여 변경할 수 있습니다 **제품 이름** 에 **게시 옵션** 대화 상자.  

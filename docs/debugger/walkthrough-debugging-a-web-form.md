@@ -1,12 +1,10 @@
 ---
-title: "연습: Web Form 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '연습: Web Form 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -22,16 +20,16 @@ helpviewer_keywords:
 - debugging ASP.NET Web applications, Web Forms
 - debugging [Visual Studio], Web Forms
 ms.assetid: e2b4fa14-8f5b-444d-a903-54070b784bd4
-caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 842b52d063b5de701c74501410e3249da7358776
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1fbd7250aef7becd3dc2d29b38eccf9cc6c0f430
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debugging-a-web-form"></a>연습: Web Form 디버깅
 이 연습 과정에서는 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램(Web Form)의 디버깅 방법을 보여 줍니다. 시작 및 실행을 중지 하 고, 중단점을 설정 하 고에서 변수를 검사 하는 방법을 보여는 **조사식** 창.  

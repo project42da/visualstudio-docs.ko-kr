@@ -1,29 +1,25 @@
 ---
 title: IDiaInjectedSource | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaInjectedSource interface
 ms.assetid: 75192c5c-812d-4675-9dc5-4c2cff3ba503
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cfcb19170221ea7e37a25cb93c7bf77fc769fd1a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2a59c35059cd07936ffa34b43520721244e9d3fe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiainjectedsource"></a>IDiaInjectedSource
 액세스는 DIA 데이터 원본에 저장 하는 소스 코드를 삽입 합니다.  
@@ -53,7 +49,7 @@ IDiaInjectedSource : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [idiaenuminjectedsources:: Item](../../debugger/debug-interface-access/idiaenuminjectedsources-item.md) 또는 [idiaenuminjectedsources:: Next](../../debugger/debug-interface-access/idiaenuminjectedsources-next.md) 메서드. 참조는 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) 인터페이스 가져오기에 대 한 예제는 `IDiaInjectedSource` 인터페이스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용할 수 있는 데이터를 표시 하는이 예제는 `IDiaInjectedSource` 인터페이스입니다. 사용 하 여 다른 방법에 대 한는 [IDiaPropertyStorage](../../debugger/debug-interface-access/idiapropertystorage.md) 인터페이스에서 예제를 참조 하십시오.는 [IDiaEnumInjectedSources](../../debugger/debug-interface-access/idiaenuminjectedsources.md) 인터페이스입니다.  
   
 ```C++  

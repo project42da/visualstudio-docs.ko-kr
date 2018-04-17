@@ -1,12 +1,10 @@
 ---
-title: ": Ca1715 식별자에는 올바른 접두사 사용 해야 합니다. | Microsoft Docs"
-ms.custom: 
+title: ': Ca1715 식별자에는 올바른 접두사 사용 해야 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1715
 - IdentifiersShouldHaveCorrectPrefix
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - IdentifiersShouldHaveCorrectPrefix
 - CA1715
 ms.assetid: cf45f8df-6855-4cb6-a4e2-7cfed714cf2f
-caps.latest.revision: "30"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d8a87359b0a4d1ac45199e4f233a7bf3174ba2bd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8c6d744022c6be599d0df57f86c0d67b1f6a72dd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1715-identifiers-should-have-correct-prefix"></a>CA1715: 식별자에는 올바른 접두사를 사용해야 합니다.
 |||  
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="cause"></a>원인  
  외부에 표시 되는 인터페이스의 이름이 대문자 "I'로 시작 하지 않습니다.  
   
- 또는  
+ -또는-  
   
  에 외부에서 볼 수 있는 형식 또는 메서드의 제네릭 형식 매개 변수 이름을 않습니다 앞 하지 대문자 ' T '입니다.  
   
@@ -55,28 +53,28 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **다음 예제에서는 이름이 잘못 된 인터페이스를 보여 줍니다.**  
   
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_1.cpp)]
  [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_1.vb)]
  [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **다음 예제에서는 'i'는 인터페이스를 접두사로 사용 하 여 위반을 해결 합니다.**  
   
  [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_2.cs)]
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_2.cpp)]
  [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix2#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_2.vb)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **다음 예제는 이름이 잘못 제네릭 형식 매개 변수를 보여 줍니다.**  
   
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_3.cpp)]
  [!code-vb[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/VisualBasic/ca1715-identifiers-should-have-correct-prefix_3.vb)]
  [!code-csharp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix3#1](../code-quality/codesnippet/CSharp/ca1715-identifiers-should-have-correct-prefix_3.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **다음 예제에서는 앞에 ' T 제네릭 형식 매개 변수를 추가 하 여 위반을 해결 '.**  
   
  [!code-cpp[FxCop.Naming.IdentifiersShouldHaveCorrectPrefix4#1](../code-quality/codesnippet/CPP/ca1715-identifiers-should-have-correct-prefix_4.cpp)]

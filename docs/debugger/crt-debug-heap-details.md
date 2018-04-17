@@ -1,12 +1,10 @@
 ---
-title: "CRT 디버그 힙 정보 | Microsoft Docs"
-ms.custom: 
+title: CRT 디버그 힙 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -73,16 +71,16 @@ helpviewer_keywords:
 - _CRTDBG_CHECK_CRT_DF macro
 - debug heap, reporting functions
 ms.assetid: bf78ace6-28e4-4a04-97c6-39e0cdd00ba4
-caps.latest.revision: "19"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cc7b945a8c53d290f573eac4565f2240ec7a2d7b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e3bbbed8eb7e7ca7294ca23386b5b1ec9add31e3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="crt-debug-heap-details"></a>CRT 디버그 힙 정보
 이 항목에서는 CRT 디버그 힙에 대해 자세히 설명합니다.  
@@ -102,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
  [힙 할당 요청 추적](#BKMK_Track_Heap_Allocation_Requests)  
   
-##  <a name="BKMK_Find_buffer_overruns_with_debug_heap"></a>디버그 힙 사용 하 여 버퍼 오버런 찾기  
+##  <a name="BKMK_Find_buffer_overruns_with_debug_heap"></a> 디버그 힙 사용 하 여 버퍼 오버런 찾기  
  할당 된 버퍼 및 메모리 누수 (실패 한 할당을 해제할 필요 없게 된 후)의 끝을 덮어쓰고는 프로그래머 발생 하는 가장 일반적이 고 다루기 문제 중 두 가지 없습니다. 디버그 힙을 사용하여 이러한 메모리 할당 문제를 효과적으로 해결할 수 있습니다.  
   
  힙 함수의 디버그 버전은 릴리스 빌드에서 사용하는 표준 또는 기본 버전을 호출합니다. 메모리 블록을 요청하면 디버그 힙 관리자는 요청한 것 보다 약간 더 큰 메모리 블록을 기본 힙에서 할당하고 블록의 해당 부분에 대한 포인터를 반환합니다. 예를 들어 응용 프로그램에 `malloc( 10 )` 호출이 있을 경우, 릴리스 빌드에서 [malloc](/cpp/c-runtime-library/reference/malloc) 이 10 바이트의 할당을 요청 하는 기본 힙 할당 루틴을 호출 합니다. 그러나 디버그 빌드에 `malloc` 호출 [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg), 10 바이트의 할당 및 약 36 바이트의 추가 메모리를 요청 하는 기본 힙 할당 루틴을 호출 합니다. 디버그 힙의 모든 결과 메모리 블록은 할당된 순서에 따라 하나의 연결 리스트로 연결됩니다.  
@@ -149,7 +147,7 @@ typedef struct _CrtMemBlockHeader
   
  ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
-##  <a name="BKMK_Types_of_blocks_on_the_debug_heap"></a>디버그 힙의 블록 형식  
+##  <a name="BKMK_Types_of_blocks_on_the_debug_heap"></a> 디버그 힙의 블록 형식  
  디버그 힙의 모든 메모리 블록은 다섯 가지 할당 형식 중 하나에 지정됩니다. 누수 탐지와 상태 보고 등의 목적에 따라 이러한 형식을 다르게 추적하고 보고합니다. 와 같은 디버그 힙 할당 함수 중 하나를 직접 호출을 사용 하 여 할당 하면 블록의 형식을 지정할 수 있습니다 있습니다 [_malloc_dbg](/cpp/c-runtime-library/reference/malloc-dbg)합니다. 디버그 힙에서 메모리 블록의 5 가지 유형 (에서 설정는 **_crtmemblockheader** 의 멤버는 **_CrtMemBlockHeader** 구조)은 다음과 같습니다:  
   
  **_NORMAL_BLOCK**  
@@ -159,7 +157,7 @@ typedef struct _CrtMemBlockHeader
  여러 런타임 라이브러리 함수에 의해 내부적으로 할당된 메모리 블록은 CRT 블록으로 표시되어 별도로 처리될 수 있습니다. 결과적으로 누수 탐지나 다른 작업들이 런타임 라이브러리 함수의 영향을 받지 않습니다. 할당은 CRT 형식의 어떠한 블록도 할당하거나 할당 취소하거나 해제할 수 없습니다.  
   
  `_CLIENT_BLOCK`  
- 응용 프로그램은 지정한 할당 그룹을 이 형식의 메모리 블록으로 할당함으로써 디버깅을 위해 이 할당 그룹을 특별히 추적하여 디버그 힙 함수를 명시적으로 호출할 수 있습니다. 예를 들어, MFC는은 모두 할당 하며 **CObjects** 클라이언트 블록; 다른 응용 프로그램 수 유지 하는 여러 메모리 개체 클라이언트 블록에 있습니다. 또한 보다 정교하게 추적하도록 클라이언트 블록의 하위 형식을 지정할 수 있습니다. 클라이언트 블록의 하위 형식을 지정하려면 16비트로 남긴 숫자를 변환하고 `OR`으로 `_CLIENT_BLOCK`연산을 실행하십시오. 예:  
+ 응용 프로그램은 지정한 할당 그룹을 이 형식의 메모리 블록으로 할당함으로써 디버깅을 위해 이 할당 그룹을 특별히 추적하여 디버그 힙 함수를 명시적으로 호출할 수 있습니다. 예를 들어, MFC는은 모두 할당 하며 **CObjects** 클라이언트 블록; 다른 응용 프로그램 수 유지 하는 여러 메모리 개체 클라이언트 블록에 있습니다. 또한 보다 정교하게 추적하도록 클라이언트 블록의 하위 형식을 지정할 수 있습니다. 클라이언트 블록의 하위 형식을 지정하려면 16비트로 남긴 숫자를 변환하고 `OR`으로 `_CLIENT_BLOCK`연산을 실행하십시오. 예를 들어:  
   
 ```  
 #define MYSUBTYPE 4  
@@ -183,7 +181,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
   
  ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
-##  <a name="BKMK_Check_for_heap_integrity_and_memory_leaks"></a>힙 무결성 및 메모리 누수 확인  
+##  <a name="BKMK_Check_for_heap_integrity_and_memory_leaks"></a> 힙 무결성 및 메모리 누수 확인  
  디버그 힙의 기능 중 상당수는 코드 안에서 액세스해야 합니다. 다음 단원에서는 이러한 기능과 사용 방법에 대해 설명합니다.  
   
  `_CrtCheckMemory`  
@@ -204,7 +202,7 @@ freedbg(pbData, _CLIENT_BLOCK|(MYSUBTYPE<<16));
   
  ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
-##  <a name="BKMK_Configure_the_debug_heap"></a>디버그 힙 구성  
+##  <a name="BKMK_Configure_the_debug_heap"></a> 디버그 힙 구성  
  `malloc`, `free`, `calloc`, `realloc`, `new` 및 `delete` 등의 힙 함수에 대한 모든 호출은 디버그 힙에서 작동하는 해당 함수의 디버그 버전으로 확인됩니다. 메모리 블록을 해제할 경우, 디버그 힙은 자동으로 할당 영역 양쪽에 있는 버퍼의 무결성을 확인하며 덮어쓰기가 발생하면 오류 보고서를 만듭니다.  
   
  **디버그 힙을 사용 하도록**  
@@ -239,7 +237,7 @@ _CrtSetDbgFlag( tmpFlag );
   
  ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
-##  <a name="BKMK_new__delete__and__CLIENT_BLOCKs_in_the_C___debug_heap"></a>디버그 힙의 new, delete 및 _client_block은 c + +  
+##  <a name="BKMK_new__delete__and__CLIENT_BLOCKs_in_the_C___debug_heap"></a> 디버그 힙의 new, delete 및 _client_block은 c + +  
  C 런타임 라이브러리의 디버그 버전은 C++ `new` 및 `delete` 연산자의 디버그 버전을 포함합니다. `_CLIENT_BLOCK` 할당 형식을 사용하는 경우 다음 예제와 같이 `new` 연산자의 디버그 버전을 직접 호출하거나 디버그 모드에서 `new` 연산자를 대체하는 매크로를 만들어야 합니다.  
   
 ```  
@@ -277,7 +275,7 @@ int main( )   {
   
  ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
-##  <a name="BKMK_Heap_State_Reporting_Functions"></a>힙 상태 보고 함수  
+##  <a name="BKMK_Heap_State_Reporting_Functions"></a> 힙 상태 보고 함수  
  **_CrtMemState**  
   
  지정한 순간에 힙 상태의 요약 스냅숏을 캡처하려면 CRTDBG.H에 정의된 _CrtMemState 구조체를 사용하십시오.  
@@ -314,7 +312,7 @@ typedef struct _CrtMemState
   
  ![맨 위로 이동](../debugger/media/pcs_backtotop.png "PCS_BackToTop") [목차](#BKMK_Contents)  
   
-##  <a name="BKMK_Track_Heap_Allocation_Requests"></a>힙 할당 요청 추적  
+##  <a name="BKMK_Track_Heap_Allocation_Requests"></a> 힙 할당 요청 추적  
  어설션 매크로나 보고서 매크로를 실행하는 소스 파일 이름과 줄 번호를 식별하는 것은 문제의 원인을 찾는 데 유용하지만 힙 할당 함수에서는 다릅니다. 응용 프로그램 논리 트리에서는 적절한 지점에 매크로를 삽입할 수 있지만, 할당은 서로 다른 시간에 여러 위치에서 호출되는 특별한 루틴에 숨겨지는 경우도 있습니다. 대개의 경우 코드의 어느 줄이 잘못된 할당을 만들었는지가 아니라 잘못된 할당이 어느 것이고 원인이 무엇인지가 문제입니다.  
   
  **고유한 할당 요청 번호 및 _crtBreakAlloc**  

@@ -2,28 +2,24 @@
 title: IDebugCodeContext2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugCodeContext2
 helpviewer_keywords:
 - IDebugCodeContext2 interface
 ms.assetid: 3670439e-2171-405d-9d77-dedb0f1cba93
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 75403c0597b2285aa9117f3ffb51acd01c967f3d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5b46ec36a93ac91647a3f17aac28187519ca2447
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugcodecontext2"></a>IDebugCodeContext2
 이 인터페이스는 코드 명령의 시작 위치를 나타냅니다. 대부분 런타임 아키텍처에 대 한 현재 코드 컨텍스트 생각할 수 있습니다 프로그램의 실행 스트림의 주소로 합니다.  
@@ -49,14 +45,14 @@ IDebugCodeContext2 : IDebugMemoryContext2
 |[GetLanguageInfo](../../../extensibility/debugger/reference/idebugcodecontext2-getlanguageinfo.md)|이 코드의 컨텍스트에 대 한 언어 정보를 가져옵니다.|  
   
 ## <a name="remarks"></a>설명  
- 주요 차이점은 `IDebugCodeContext2` 인터페이스 및 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 인터페이스는 하는 `IDebugCodeContext2` 는 항상 명령-맞춰집니다. 즉, 한 `IDebugCodeContext2` 반면는 명령의 시작 부분에 항상 가리키는 `IDebugMemoryContext2` 런타임 아키텍처에서는 메모리의 모든 바이트를 가리킬 수 있습니다. `IDebugCodeContext2`기본 저장소 크기 (일반적으로 바이트)가 아니라 지침에서 증가 합니다.  
+ 주요 차이점은 `IDebugCodeContext2` 인터페이스 및 [IDebugMemoryContext2](../../../extensibility/debugger/reference/idebugmemorycontext2.md) 인터페이스는 하는 `IDebugCodeContext2` 는 항상 명령-맞춰집니다. 즉, 한 `IDebugCodeContext2` 반면는 명령의 시작 부분에 항상 가리키는 `IDebugMemoryContext2` 런타임 아키텍처에서는 메모리의 모든 바이트를 가리킬 수 있습니다. `IDebugCodeContext2` 기본 저장소 크기 (일반적으로 바이트)가 아니라 지침에서 증가 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [GetDisassemblyStream](../../../extensibility/debugger/reference/idebugprogram2-getdisassemblystream.md)   

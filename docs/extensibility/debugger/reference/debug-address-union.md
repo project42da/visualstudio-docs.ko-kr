@@ -2,28 +2,24 @@
 title: DEBUG_ADDRESS_UNION | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DEBUG_ADDRESS_UNION
 helpviewer_keywords:
 - DEBUG_ADDRESS_UNION union
 ms.assetid: e3d11aab-de0d-4109-b5dc-11e07e64382d
-caps.latest.revision: 9
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fc4e5c4bf075c69f4549e34185d407ba9fb95cd5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0b0fcd662e3a4831b78ca55c139ce1511ea04b24
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugaddressunion"></a>DEBUG_ADDRESS_UNION
 서로 다른 주소에 설명합니다.  
@@ -100,7 +96,7 @@ public struct DEBUG_ADDRESS_UNION {
   
  [C#] 다음 표를 해석 하는 방법을 보여줍니다는 `unionmember` 각 유형의 주소에 대 한 멤버입니다. 한 종류의 주소에 대 한이 작업을 수행 하는 방법을 보여 줍니다.  
   
-|`dwKind`|`unionmember`로 해석|  
+|`dwKind`|`unionmember` 로 해석|  
 |--------------|----------------------------------|  
 |`ADDRESS_KIND_NATIVE`|[NATIVE_ADDRESS](../../../extensibility/debugger/reference/native-address.md)|  
 |`ADDRESS_KIND_UNMANAGED_THIS_RELATIVE`|[UNMANAGED_ADDRESS_THIS_RELATIVE](../../../extensibility/debugger/reference/unmanaged-address-this-relative.md)|  
@@ -112,7 +108,7 @@ public struct DEBUG_ADDRESS_UNION {
 |`ADDRESS_KIND_ARRAYELEM`|[METADATA_ADDRESS_ARRAYELEM](../../../extensibility/debugger/reference/metadata-address-arrayelem.md)|  
 |`ADDRESS_KIND_RETVAL`|[METADATA_ADDRESS_RETVAL](../../../extensibility/debugger/reference/metadata-address-retval.md)|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 한 종류의 주소를 해석 하는 방법을 보여 줍니다 (`METADATA_ADDRESS_ARRAYELEM`)의 `DEBUG_ADDRESS_UNION` C#의 구조입니다. 나머지 요소를 동일한 방식으로 해석할 수 있습니다.  
   
 ```csharp  
@@ -142,7 +138,7 @@ namespace MyPackage
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [구조체 및 공용 구조체](../../../extensibility/debugger/reference/structures-and-unions.md)   

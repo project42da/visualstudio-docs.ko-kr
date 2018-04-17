@@ -1,12 +1,10 @@
 ---
-title: "CA2236: ISerializable 형식에서 기본 클래스 메서드를 호출 | Microsoft Docs"
-ms.custom: 
+title: 'CA2236: ISerializable 형식에서 기본 클래스 메서드를 호출 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2236
 - CallBaseClassMethodsOnISerializableTypes
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2236
 - CallBaseClassMethodsOnISerializableTypes
 ms.assetid: 5a15b20d-769c-4640-b31a-36e07077daae
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c2e4db6ac698dba6a24bf0f485deb8b1d2e1488a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1679772ea95fbaf0a13a91572ad81f0b987a2e31
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2236-call-base-class-methods-on-iserializable-types"></a>CA2236: ISerializable 형식에서 기본 클래스 메서드를 호출하십시오.
 |||  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 serialization 생성자를 호출 하 여 규칙을 충족 하는 파생 된 형식 및 <xref:System.Runtime.Serialization.ISerializable.GetObjectData%2A> 기본 클래스의 메서드.  
   
  [!code-vb[FxCop.Usage.CallBaseISerializable#1](../code-quality/codesnippet/VisualBasic/ca2236-call-base-class-methods-on-iserializable-types_1.vb)]

@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 응용 프로그램 게시 마법사를 사용 하 여 게시 | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 응용 프로그램 게시 마법사를 사용 하 여 게시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - Windows applications, ClickOnce deployments
 - publishing, ClickOnce
 ms.assetid: 2e4aa67c-4445-4f7b-9e03-9acb95829127
-caps.latest.revision: "25"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: d314763f8ff4dc170148cca166e3ecdff051ae24
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 762ef9813232b282b4f140e9c01e8d722a42bf3d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-publish-a-clickonce-application-using-the-publish-wizard"></a>방법: 게시 마법사를 사용하여 ClickOnce 응용 프로그램 게시
 ClickOnce 응용 프로그램을 사용자에게 제공하려면 파일 공유나 경로, FTP 서버 또는 이동식 미디어에 해당 응용 프로그램을 게시해야 합니다. 게시 마법사;를 사용 하 여 응용 프로그램을 게시할 수 있습니다. 게시와 관련 된 추가 속성을 사용할 수는 **게시** 의 페이지는 **프로젝트 디자이너**합니다. 자세한 내용은 참조 [ClickOnce 응용 프로그램 게시](../deployment/publishing-clickonce-applications.md)합니다.  

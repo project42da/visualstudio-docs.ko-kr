@@ -1,29 +1,25 @@
 ---
 title: IDiaEnumSourceFiles | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumSourceFiles interface
 ms.assetid: 5c0779a6-a2ea-408a-90da-ebdecf2b83c0
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2e549a4c7dffe565ef311bb75ff5706afb5c65cd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e128ab62ef865cb731ef875934815d40fe3d06c8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaenumsourcefiles"></a>IDiaEnumSourceFiles
 데이터 원본에 포함 된 다양 한 소스 파일을 열거 합니다.  
@@ -52,7 +48,7 @@ IDiaEnumSourceFiles : IUknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  호출 하 여이 인터페이스를 가져옵니다는 `QueryInterface` 에서 메서드는 [IDiaTable](../../debugger/debug-interface-access/idiatable.md) 개체입니다. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  가져오는 방법을 보여 주는이 예제는 `IDiaEnumSourceFiles` DIA 세션 개체에는 테이블 목록에서 인터페이스입니다. 소스 파일 정보에 액세스 하는 예제를 보려면는 [IDiaSourceFile](../../debugger/debug-interface-access/idiasourcefile.md) 인터페이스입니다.  
   
 ```C++  

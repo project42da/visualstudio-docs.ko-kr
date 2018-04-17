@@ -1,32 +1,29 @@
 ---
-title: "데이터베이스 파일을 만들고 테이블 디자이너를 사용 하 여 Visual Studio에서 | Microsoft Docs"
-ms.custom: 
+title: 데이터베이스 파일을 만들고 테이블 디자이너를 사용 하 여 Visual Studio에서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database tables, creating
 - database files, creating
 - table designer
 ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
-caps.latest.revision: "49"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: ffbb2259ff556dcf96021adc47c733fdbcd9125d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 99f5c341df6ca04c25abf325146c4dac961bafc7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>데이터베이스를 만들고 Visual Studio에서 테이블을 추가 합니다.
 만들고 SQL Server Express LocalDB에서 로컬 데이터베이스 파일을 업데이트 합니다. Visual Studio를 사용할 수 있습니다. TRANSACT-SQL 문을 실행 하 여 데이터베이스를 만들 수도 있습니다는 **SQL Server 개체 탐색기** Visual Studio의 도구 창입니다. 이 항목에서는.mdf 파일을 만들고 고 테이블 디자이너를 사용 하 여 테이블 및 키를 추가 합니다.
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
 이 연습을 완료 하려면 선택적 있어야 **데이터 저장 및 처리** Visual Studio에 설치 하는 작업입니다. 를 설치 하려면 열고 **Visual Studio 설치 관리자** 선택 하 고는 **작업** 탭 합니다. 아래 **웹 및 클라우드에**, 선택 **데이터 저장 및 처리**합니다. 선택 된 **수정** Visual Studio에 작업을 추가 하는 단추입니다.
   
 ## <a name="create-a-project-and-a-local-database-file"></a>프로젝트 및 로컬 데이터베이스 파일 만들기  
@@ -57,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 
 10. 에 **응용 프로그램 구성 파일에 연결 문자열 저장** 페이지에서 선택 **다음**합니다.
 
-11. 하나는 **데이터베이스 개체 선택** 페이지 표시 데이터베이스 수 없다는 메시지가 모든 개체를 포함 하지 않습니다. 선택 **마침**합니다.
+11. 하나는 **데이터베이스 개체 선택** 페이지 표시 데이터베이스 수 없다는 메시지가 모든 개체를 포함 하지 않습니다. **마침**을 선택합니다.
 
 ### <a name="to-view-properties-of-the-data-connection"></a>데이터 연결의 속성을 보려면
 데이터 연결의 속성 창을 열어 SampleDatabase.mdf 파일에 대 한 연결 문자열을 볼 수 있습니다.
@@ -171,5 +168,5 @@ ms.lasthandoff: 12/22/2017
   
 7.  메뉴 모음에서 선택 **파일**, **모두 저장**합니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio에서 데이터 액세스](accessing-data-in-visual-studio.md)

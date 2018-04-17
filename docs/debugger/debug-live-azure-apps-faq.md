@@ -1,26 +1,22 @@
 ---
 title: 스냅숏 디버깅에 대 한 FAQ | Microsoft Docs
 ms.date: 11/07/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugger
 ms.assetid: 944f1eb0-a74b-4d28-ae2b-a370cd869add
-caps.latest.revision: 1
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fd2ca2bf48c50b0ea5b44654d0711ba162313f04
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: db887f783cf205bb7951cde985fa371ab1ab755c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="frequently-asked-questions-for-snapshot-debugging-in-visual-studio"></a>스냅숏 Visual Studio에서 디버깅에 관한 질문과 대답
 
@@ -58,7 +54,7 @@ ms.lasthandoff: 12/22/2017
 1. 앱 서비스의 Kudu 사이트로 이동 (즉, yourappservice. **scm**. azurewebsites.net)로 이동 하 고 **확장 사이트**합니다.
 1. 제거 하려면 스냅숏 디버거 사이트 확장에 있는 X를 클릭 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio의 디버깅](../debugger/index.md)  
 [스냅숏 디버거를 사용 하 여 라이브 ASP.NET 앱 디버그](../debugger/debug-live-azure-applications.md)  

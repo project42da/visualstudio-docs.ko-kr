@@ -1,27 +1,23 @@
 ---
-title: "프로그램에 직접 연결 | Microsoft Docs"
-ms.custom: 
+title: 프로그램에 직접 연결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, attaching to programs
 ms.assetid: ad2b7db8-821c-440c-ba07-c55c6a395e0f
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c528925e323e4cff5784365e3097cc7f5f414963
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6885cb0dea801ab95e2e88e3f8168c139fea0e0c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="attaching-directly-to-a-program"></a>프로그램에 직접 연결
 일반적으로 이미 실행 중인 프로세스에서 프로그램을 디버깅 하려는 사용자는이 프로세스를 따릅니다.  

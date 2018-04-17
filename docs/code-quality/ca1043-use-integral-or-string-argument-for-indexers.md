@@ -1,12 +1,10 @@
 ---
-title: "CA1043: 인덱서에 정수 또는 문자열 인수를 사용 하십시오. | Microsoft Docs"
-ms.custom: 
+title: 'CA1043: 인덱서에 정수 또는 문자열 인수를 사용 하십시오. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1043
 - UseIntegralOrStringArgumentForIndexers
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1043
 - UseIntegralOrStringArgumentForIndexers
 ms.assetid: d7f14b9e-2220-4f80-b6b8-48c655a05701
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a75e3cc167f98763cfc0a1747b48e69987a9610b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bc2bb2e1d92ccbe93edbeded6132f2303a41645e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1043-use-integral-or-string-argument-for-indexers"></a>CA1043: 인덱서에 정수 또는 문자열 인수를 사용하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  비표준 인덱서에 대 한 필요성을 신중 하 게 고려한 후에이 규칙에서 경고를 표시 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 인덱서를 사용 하는 <xref:System.Int32> 인덱스입니다.  
   
  [!code-csharp[FxCop.Design.IntegralOrStringIndexers#1](../code-quality/codesnippet/CSharp/ca1043-use-integral-or-string-argument-for-indexers_1.cs)]

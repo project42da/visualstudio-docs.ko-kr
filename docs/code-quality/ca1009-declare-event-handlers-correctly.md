@@ -1,12 +1,10 @@
 ---
-title: "CA1009: 이벤트 처리기를 제대로 선언 | Microsoft Docs"
-ms.custom: 
+title: 'CA1009: 이벤트 처리기를 제대로 선언 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1009
 - DeclareEventHandlersCorrectly
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1009
 - DeclareEventHandlersCorrectly
 ms.assetid: ab65c471-1449-49d2-9896-7b9af74284b4
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8e72f10ef44c784af98628f4b0c1ed3b72814977
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9d207bff88129cb9cc6769cc47ae6e70cbe74d1c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1009-declare-event-handlers-correctly"></a>CA1009: 이벤트 처리기를 제대로 선언하십시오.
 |||  
@@ -47,8 +45,8 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
- 다음 예제에서는 이벤트를 처리 하는 데 적합 하는 대리자를 보여 줍니다. 이 이벤트 처리기가 호출 될 수 있는 메서드는 디자인 지침에 지정 된 시그니처를 준수 합니다. `AlarmEventHandler`대리자의 형식 이름이입니다. `AlarmEventArgs`이벤트 데이터에 대 한 기본 클래스에서 파생 <xref:System.EventArgs>, 및 경고 이벤트 데이터를 포함 합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 이벤트를 처리 하는 데 적합 하는 대리자를 보여 줍니다. 이 이벤트 처리기가 호출 될 수 있는 메서드는 디자인 지침에 지정 된 시그니처를 준수 합니다. `AlarmEventHandler` 대리자의 형식 이름이입니다. `AlarmEventArgs` 이벤트 데이터에 대 한 기본 클래스에서 파생 <xref:System.EventArgs>, 및 경고 이벤트 데이터를 포함 합니다.  
   
  [!code-cpp[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/CPP/ca1009-declare-event-handlers-correctly_1.cpp)]
  [!code-csharp[FxCop.Design.EventsTwoParams#1](../code-quality/codesnippet/CSharp/ca1009-declare-event-handlers-correctly_1.cs)]

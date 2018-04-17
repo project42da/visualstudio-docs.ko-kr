@@ -1,29 +1,25 @@
 ---
-title: "프로세스 뷰 | Microsoft Docs"
-ms.custom: 
+title: 프로세스 뷰 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.processesview
 helpviewer_keywords:
 - Processes view
 ms.assetid: e144e70e-eef2-45a7-a562-a177f177d9a1
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2dc97cbe5c6bc178e4b14c89287a3f1c3794dca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 40a92a65e4a10cd5321f513cb313035d8910022f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="processes-view"></a>프로세스 뷰
 프로세스 뷰에 시스템에서 모든 활성 프로세스의 트리를 표시합니다. 프로세스 ID 및 모듈 이름이 표시 됩니다. 프로세스 뷰를 사용 하 여 실행 중인 프로그램에 해당 하는 일반적으로 특정 시스템 프로세스를 검사 하려는 경우. 프로세스는 모듈 이름으로 식별 되거나 "시스템 프로세스입니다."로 지정 됩니다.  
@@ -38,12 +34,12 @@ ms.lasthandoff: 12/22/2017
   
 1.  **Spy** 메뉴 선택 **프로세스**합니다.  
   
- ![Spy &#43; #43 프로세스 뷰](../debugger/media/spy--_processes.png "Spy + + _Processes")  
+ ![Spy&#43; &#43; 프로세스 뷰](../debugger/media/spy--_processes.png "Spy + + _Processes")  
 Spy++ 프로세스 뷰  
   
  위의 그림 확장 프로세스 및 스레드 노드와 프로세스 뷰를 보여 줍니다.  
   
-### <a name="in-this-section"></a>섹션 내용  
+### <a name="in-this-section"></a>단원 내용  
  [프로세스 뷰에서 프로세스 검색](../debugger/how-to-search-for-a-process-in-processes-view.md)  
  프로세스 뷰에서 특정 프로세스를 확인 하는 방법에 설명 합니다.  
   

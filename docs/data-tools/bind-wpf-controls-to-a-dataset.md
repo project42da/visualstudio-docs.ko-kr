@@ -1,11 +1,8 @@
 ---
-title: "데이터 집합에 WPF 컨트롤 바인딩 | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합에 WPF 컨트롤 바인딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -14,17 +11,17 @@ helpviewer_keywords:
 - WPF data binding [Visual Studio], walkthroughs
 - WPF Designer, data binding
 ms.assetid: 177420b9-568b-4dad-9d16-1b0e98a24d71
-caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 072adcf912e5921164647cf77ee561617f844786
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: f4034651b68194906285c6d1911f7f650287074d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>데이터 집합에 WPF 컨트롤 바인딩
 이 연습에서는 데이터 바인딩된 컨트롤을 포함하는 WPF 응용 프로그램을 만듭니다. 이러한 컨트롤은 데이터 집합에서 캡슐화된 제품 레코드에 바인딩됩니다. 또한 제품을 찾아보고 제품 레코드 변경 내용을 저장할 수 있는 단추도 추가합니다.  
@@ -41,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
@@ -183,11 +180,11 @@ ms.lasthandoff: 12/22/2017
 7.  에 **속성** 창에서 옆에 확인란은 **IsReadOnly** 속성입니다.  
   
 ## <a name="navigating-product-records"></a>제품 레코드 탐색  
- 사용자가을 사용 하 여 제품 레코드를 스크롤할 수 있도록 하는 코드를 추가  **\<**  및  **>**  단추입니다.  
+ 사용자가을 사용 하 여 제품 레코드를 스크롤할 수 있도록 하는 코드를 추가 **\<** 및 **>** 단추입니다.  
   
 #### <a name="to-enable-users-to-navigate-product-records"></a>사용자가 제품 레코드를 탐색할 수 있도록 설정하려면  
   
-1.  디자이너에서 두 번 클릭 하 고  **<**  창 화면에서 단추입니다.  
+1.  디자이너에서 두 번 클릭 하 고 **<** 창 화면에서 단추입니다.  
   
      Visual Studio 코드 숨김 파일이 열리고 새 `backButton_Click` 에 대 한 이벤트 처리기는 <xref:System.Windows.Controls.Primitives.ButtonBase.Click> 이벤트입니다.  
   
@@ -201,7 +198,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[Data_WPFDATASET#2](../data-tools/codesnippet/CSharp/bind-wpf-controls-to-a-dataset_2.cs)]
      [!code-vb[Data_WPFDATASET#2](../data-tools/codesnippet/VisualBasic/bind-wpf-controls-to-a-dataset_2.vb)]  
   
-4.  디자이너를 돌아가서 두 번 클릭은  **>**  단추입니다.  
+4.  디자이너를 돌아가서 두 번 클릭은 **>** 단추입니다.  
   
 5.  다음 코드를 `nextButton_Click` 이벤트 처리기에 추가합니다.  
   
@@ -236,7 +233,7 @@ ms.lasthandoff: 12/22/2017
   
     -   텍스트 상자에 사진이 포함된 첫 번째 제품 레코드의 데이터가 표시됩니다. 이 제품의 이름과 ID는 713 **Long-sleeve Logo Jersey, S**합니다.  
   
-    -   클릭할 수는  **>**  또는  **<**  다른 제품 레코드를 탐색 하는 단추입니다.  
+    -   클릭할 수는 **>** 또는 **<** 다른 제품 레코드를 탐색 하는 단추입니다.  
   
 2.  제품 레코드 중 하나에서 변경 된 **크기** 값을 클릭 한 다음 **ब ा ळ**합니다.  
   
@@ -253,7 +250,7 @@ ms.lasthandoff: 12/22/2017
   
 -   사용 하는 **데이터 소스** WPF 컨트롤에 관련된 데이터 (즉, 부모-자식 관계의 데이터)를 표시 하는 Visual Studio의 창. 자세한 내용은 참조 [연습: WPF 응용 프로그램의 관련 데이터 표시](../data-tools/display-related-data-in-wpf-applications.md)합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio에서 데이터에에서 WPF 컨트롤 바인딩](../data-tools/bind-wpf-controls-to-data-in-visual-studio.md)   
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)   
 [데이터 바인딩 개요](/dotnet/framework/wpf/data/data-binding-overview)

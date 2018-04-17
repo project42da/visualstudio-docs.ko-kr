@@ -1,7 +1,7 @@
 ---
-title: "Visual Studio에서 자동 기능 일시 중단이 | Microsoft Docs"
+title: Visual Studio에서 자동 기능 일시 중단이 | Microsoft Docs
 ms.date: 11/04/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - full solution analysis
 - performance
@@ -9,15 +9,15 @@ helpviewer_keywords:
 ms.assetid: 572c15aa-1fd0-468c-b6be-9fa50e170914
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - multiple
-ms.openlocfilehash: d71960fb51d061e9c3ac9c165497582578a719ee
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: bf11b7d0723f3ecabf9fc794fb244f48daa95672
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automatic-feature-suspension"></a>자동 기능 일시 중단
 
@@ -62,7 +62,7 @@ GC 낮은 대기 시간 모드를 다시 활성화 하려면 Visual Studio를 �
 > [!NOTE]
 > 자동 기능 일시 중단 경고 세션당 기반이 아니라 솔루션 별로 한 번만 발생합니다. 즉, Visual Basic에서 Visual C# (또는 그 반대로)로 전환 하 고 다른 메모리 부족 상태를 실행 하는 경우 확인할 수 있는 가능한 다른 자동 기능 일시 중단 경고 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [방법: 전체 솔루션 분석 활성화 및 비활성화](../code-quality/how-to-enable-and-disable-full-solution-analysis-for-managed-code.md)
 - [가비지 수집 기본 사항](/dotnet/standard/garbage-collection/fundamentals)

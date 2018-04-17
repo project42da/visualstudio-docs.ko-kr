@@ -1,30 +1,28 @@
 ---
-title: "BuildProjectOnload 요소 (Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: 
+title: BuildProjectOnload 요소 (Visual Studio 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: b07d3074-0fc9-45e1-baf5-da6bd4f3f1c0
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6d672eca7b818ce9bc06df4a09a7623be9e8d89f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 689d2510a8513b880f3c2cddca584449c03217b4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="buildprojectonload-element-visual-studio-templates"></a>BuildProjectOnload 요소(Visual Studio 템플릿)
 만들고 있는 솔루션에 추가할 때만 새 프로젝트를 빌드합니다. 전체 솔루션 빌드되지 않습니다.  
   
- \<VSTemplate >  
- \<TemplateData >  
- \<BuildProjectOnLoad >  
+ \<VSTemplate>  
+ \<TemplateData>  
+ \<BuildProjectOnLoad>  
   
 ## <a name="syntax"></a>구문  
   
@@ -33,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
  없음  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  `BuildProjectOnLoad`는 선택적 요소입니다. 기본값은 `false`입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 Visual C# 템플릿에 대 한 메타 데이터를 보여 줍니다.  
   
 ```  

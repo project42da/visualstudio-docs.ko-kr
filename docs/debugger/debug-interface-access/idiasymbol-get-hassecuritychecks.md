@@ -1,29 +1,25 @@
 ---
 title: 'Idiasymbol:: Get_hassecuritychecks | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSymbol::get_hasSecurityChecks method
 ms.assetid: 4bb51f62-8645-41a4-bc44-1451010623fd
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8247ed4735bdd8ca4bc8e62ff4507b0aafb957e7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 366c41cc07439e75a6b8f8d2ca460a78166e04e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolgethassecuritychecks"></a>IDiaSymbol::get_hasSecurityChecks
 컴파일 대상 또는 함수 버퍼 오버런 보안 검사와 컴파일된 있는지 여부를 지정 하는 플래그를 검색 (예를 들어는 [/GS (버퍼 보안 검사)](/cpp/build/reference/gs-buffer-security-check) 컴파일러 스위치).  
@@ -55,4 +51,4 @@ HRESULT get_hasSecurityChecks(
   
 ## <a name="see-also"></a>참고 항목  
  [IDiaSymbol](../../debugger/debug-interface-access/idiasymbol.md)   
- [/GS (버퍼 보안 검사)](/cpp/build/reference/gs-buffer-security-check)
+ [/GS(버퍼 보안 검사)](/cpp/build/reference/gs-buffer-security-check)

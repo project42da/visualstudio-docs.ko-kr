@@ -1,29 +1,25 @@
 ---
 title: 'Idiaaddressmap:: Set_addressmap | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaAddressMap::set_addressMap method
 ms.assetid: 81e82073-089b-43d5-af39-49d7a4907c7a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 681e0bae46497d9b581e89340069937370831777
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 861bcce094765e18b7fce94b6477c1520e32826b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaaddressmapsetaddressmap"></a>IDiaAddressMap::set_addressMap
 이미지 레이아웃 번역을 지원 하기 위해 주소 맵을 제공 합니다.  
@@ -46,7 +42,7 @@ HRESULT set_addressMap (
  [in] 배열을 [DiaAddressMapEntry 구조체](../../debugger/debug-interface-access/diaaddressmapentry.md) 변환 맵을 정의 하는 구조입니다.  
   
  `imagetoSymbols`  
- [in] `TRUE` 경우는 `data` 매개 변수 정의 원래 레이아웃으로 새 이미지 레이아웃의 지도 (디버그 기호에 의해 설명 참조). `FALSE`경우 `data` 한 맵이 원래 레이아웃에서 가져온 새 이미지 레이아웃입니다.  
+ [in] `TRUE` 경우는 `data` 매개 변수 정의 원래 레이아웃으로 새 이미지 레이아웃의 지도 (디버그 기호에 의해 설명 참조). `FALSE` 경우 `data` 한 맵이 원래 레이아웃에서 가져온 새 이미지 레이아웃입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`, 그러지 않으면 오류 코드가 반환 됩니다.  

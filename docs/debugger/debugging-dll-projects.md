@@ -1,12 +1,10 @@
 ---
-title: "DLL 프로젝트 디버깅 | Microsoft Docs"
-ms.custom: 
+title: DLL 프로젝트 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/23/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - DLLs, debugging
 - debugging [Visual Studio], DLLs
 ms.assetid: 433cab30-d191-460b-96f7-90d2530ca243
-caps.latest.revision: "38"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7b43d7c5fb8d66e758a44b86d4918f04599d6147
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3b7e897b69770f42bac9757f061f96a67fc9b99f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-dll-projects-from-visual-studio"></a>Visual Studio에서 DLL 프로젝트 디버깅
 다음 Visual Studio 템플릿 Dll을 만듭니다.  
@@ -106,7 +104,7 @@ DLL을 디버깅하려면 호출 응용 프로그램 디버깅을 먼저 시작�
   
      중단점에 도달하면 `Test`를 단계별로 실행할 수 있습니다. `Test`실행을 마치면 디버거가 디자인 모드로 되돌아갑니다.
 
-## <a name="vxtskdebuggingdllprojectsexternal"></a>C + + 프로젝트에서를 외부 DLL 디버깅
+## <a name="vxtskdebuggingdllprojectsexternal"></a> C + + 프로젝트에서를 외부 DLL 디버깅
 
 (예: 코드를 단계별로) 사용할 수 있는 디버깅 기능에 따라 달라 집니다 외부 DLL 프로젝트를 디버깅 하는 경우는 [DLL의 디버그 구성을](#vxtskdebuggingdllprojectsbuildingadebugversion) 여부와 작성 했을 때의 [.pdb파일](../debugger/specify-symbol-dot-pdb-and-source-files-in-the-visual-studio-debugger.md) 및 DLL에 대 한 다른 필수 파일을 사용할 수 있습니다.
 

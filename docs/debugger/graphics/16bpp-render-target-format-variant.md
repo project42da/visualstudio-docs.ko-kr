@@ -1,23 +1,21 @@
 ---
-title: "16bpp 렌더링 대상 형식 변형 | Microsoft Docs"
-ms.custom: 
+title: 16bpp 렌더링 대상 형식 변형 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 24b22ad9-5ad0-4161-809a-9b518eb924bf
-caps.latest.revision: "5"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 896ca20589e987f5a516e85c47d3f06a44a2550c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 620bc415349a46ba8ab2315d6d41b93dc9194ca1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="16bpp-render-target-format-variant"></a>16bpp 렌더링 대상 형식 변형
 모든 렌더링 대상 및 백 버퍼에 대한 픽셀 형식을 DXGI_FORMAT_B5G6R5_UNORM으로 설정합니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="restrictions-and-limitations"></a>제한 사항  
  B5G6R5 형식에는 알파 채널이 없으므로 이 변형은 알파 콘텐츠를 유지하지 않습니다. 앱에서 렌더링하려면 렌더링 대상에 알파 채널이 있어야 하는 경우 간단히 B5G6R5 형식으로 전환할 수 있는 것이 아닙니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  **16bpp 렌더링 대상 형식** 를 사용 하 여 만든 렌더링 대상에 대 한 변형을 재현할 수 있는 `CreateTexture2D` 다음과 같은 코드를 사용 하 여:  
   
 ```  

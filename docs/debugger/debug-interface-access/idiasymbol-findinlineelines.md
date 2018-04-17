@@ -1,27 +1,23 @@
 ---
 title: IDiaSymbol::findInlineeLines | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 56ba4bc0-8f96-47c2-8b18-332b4e7c2d91
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca7afb69acc63a6cc1b7188a587e2f0680b389f8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3ac4510e40105182322fe43bb7bb546f92fa3a55
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasymbolfindinlineelines"></a>IDiaSymbol::findInlineeLines
 클라이언트가 모든 없는 함수를 인라인 처리, 직접 또는 간접적으로이 기호는 줄 번호 정보를 반복 하는 데 사용 하는 열거형을 검색 합니다.  

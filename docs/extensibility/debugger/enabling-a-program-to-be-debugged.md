@@ -1,32 +1,28 @@
 ---
-title: "디버깅할 프로그램을 사용 하도록 설정 | Microsoft Docs"
-ms.custom: 
+title: 디버깅할 프로그램을 사용 하도록 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], enabling for programs
 ms.assetid: 61d24820-0cd9-48b6-8674-6813f7493237
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a581c5a9ae56f52727c011db1de2ad35a5ba3592
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3f8dc37e5d59738e6ef326be71e773c1e4e57351
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enabling-a-program-to-be-debugged"></a>디버깅할 프로그램을 사용 하도록 설정
 디버그 엔진 (DE)을 통해 프로그램을 디버그할 수는 DE 시작 하거나 해야 기존 프로그램에 연결 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [포트 가져오기](../../extensibility/debugger/getting-a-port.md)  
  디버깅할 프로그램을 사용 하도록 설정 하는 첫 번째 단계로 포트를 가져오는 방법을 설명 합니다.  
   

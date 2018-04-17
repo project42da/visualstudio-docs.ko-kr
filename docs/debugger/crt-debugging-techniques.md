@@ -1,13 +1,10 @@
 ---
-title: "CRT 디버깅 기술 | Microsoft Docs"
-ms.custom: 
+title: CRT 디버깅 기술 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - c.runtime.debugging
 dev_langs:
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - CRT, debugging
 - debugging [C++], CRT debug support
 ms.assetid: 9be561f6-14a8-44ff-925d-d911d5b8e6ff
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52f1847112741e90634ce0e68acbcfdd11b837db
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 71ec5d63f0518310794a2dc6a119b13eaf3a4aac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="crt-debugging-techniques"></a>CRT 디버깅 기술
 C 런타임 라이브러리를 사용하는 프로그램을 디버깅할 경우 다음 디버깅 기술이 유용할 수 있습니다.  

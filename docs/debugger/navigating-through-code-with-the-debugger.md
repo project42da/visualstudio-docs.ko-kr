@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio의 디버거를 사용 하 여 코드 탐색 | Microsoft Docs"
+title: Visual Studio의 디버거를 사용 하 여 코드 탐색 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 02/07/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.execution
 helpviewer_keywords:
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], execution control
 - execution, controlling in debugger
 ms.assetid: 759072ba-4aaa-447e-8e51-0dd1456fe896
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6b83e1be32eb657555131a934f8c11f9567c5bc
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 4e39c343531b7ce81c202e979117d3d2c7196cd7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="navigate-code-with-the-visual-studio-debugger"></a>Visual Studio 디버거를 사용 하 여 코드 탐색
 디버거에서 코드를 탐색 하는 명령 및 바로 가기를을 잘 알고 있으며 있는 빠르고 쉽게 찾아 앱의 문제를 해결 하려면. 디버거에서 코드를 탐색 하는 동안 응용 프로그램의 상태를 검사 또는 실행 흐름에 해당 하는 방법에 대 한 자세한 정보 수 있습니다.  
@@ -35,7 +31,7 @@ ms.lasthandoff: 01/29/2018
   
  녹색 화살표 또한 디버거를 시작 (동일 **F5**).  
   
- ![DBG&#95;Basics&#95;Start&#95;Debugging](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
+ ![DBG&#95;기본 사항&#95;시작&#95;디버깅](../debugger/media/dbg_basics_start_debugging.png "DBG_Basics_Start_Debugging")  
   
  디버거가 연결 된 앱을 시작할 수는 몇 가지 다른 방법을 포함 **F11** ([코드를 한 단계씩](#BKMK_Step_into__over__or_out_of_the_code)), **F10** ([코드 건너뛰기](#BKMK_Step_over_Step_out)), 또는 사용 하 여 **커서까지 실행**합니다.  이러한 옵션에 수행할 작업에 대 한 정보는이 항목의 다른 섹션을 참조 하십시오.  
   
@@ -47,7 +43,7 @@ ms.lasthandoff: 01/29/2018
   
  지역 창에서 변수 값 보기 또는 조사식 창에서 식 계산과 같은 대부분의 디버거 기능은 디버거가 일시 중지 하는 동안에 사용할 수 있는 (호출 또한 *중단 모드*). 디버거를 일시 중지 하면 함수, 변수, 하는 동안 일시 중단 하면 응용 프로그램 상태가 및 개체가 메모리에 남아 있습니다. 중단 모드에서 요소의 위치와 상태 위반이 나 버그를 확인할 수 있습니다. 일부 프로젝트 형식에 대 한 중단 모드에서 앱에 대 한 조정이 만들 수 있습니다. 이러한 기능을 보여 주는 비디오를 시청 하려면 [디버거 시작](https://www.youtube.com/watch?v=FtGCi5j30YU&list=PLReL099Y5nRfw6VNvzMkv0sabT2crbSpK&index=6)합니다.
   
-##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a>한 줄씩 코드를 한 단계씩  
+##  <a name="BKMK_Step_into__over__or_out_of_the_code"></a> 한 줄씩 코드를 한 단계씩  
  을 중지 하려면 코드 (각 문)의 각 줄에서 디버깅 하는 동안 사용 된 **F11** 바로 가기 키 (또는 **디버그** > **한 단계씩 코드 실행** 메뉴에서).  
   
 > [!TIP]
@@ -75,7 +71,7 @@ ms.lasthandoff: 01/29/2018
   
  함수를 한 단계씩 실행 하는 동안 호출 스택을 시각적으로 추적, 참조 [디버깅 하는 동안 호출 스택의 메서드 매핑할](../debugger/map-methods-on-the-call-stack-while-debugging-in-visual-studio.md)합니다.  
   
-##  <a name="BKMK_Step_over_Step_out"></a>코드를 건너뛴 함수  
+##  <a name="BKMK_Step_over_Step_out"></a> 코드를 건너뛴 함수  
  디버거에서 코드를 실행 하는 경우 종종 얻게 될 특정 함수에서 수행 되는 작업을 볼 필요가 없습니다 (신경쓰지 않아도 또는 알고 있는 작동 같은 테스트 된 라이브러리 코드). 이러한 명령을 사용 하 여 코드를 통해 건너뛸 (함수 여전히 실행 물론, 되지만, 디버거는 해당 건너뜁니다).  
   
 |키보드 명령|메뉴 명령|설명|  
@@ -86,7 +82,7 @@ ms.lasthandoff: 01/29/2018
 > [!TIP]
 >  로 시작 하는 응용 프로그램의 진입점을 찾으려고 해야 할 경우 **F10** 또는 **F11**합니다. 응용 프로그램 상태를 검사 하거나 해당 실행 흐름에 대 한 자세한 내용을 검색 하려고 할 때 유용한 경우가 있습니다.  
   
-##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a>특정 위치 또는 함수까지 실행  
+##  <a name="BKMK_Break_into_code_by_using_breakpoints_or_Break_All"></a> 특정 위치 또는 함수까지 실행  
  종종 코드 디버깅 하는 기본 방법은, 이러한 메서드는 유용 검사를 하려는 코드 정확히 알고 있는 경우 또는 디버깅을 시작 하려면 알고 이상.  
   
 -   **코드에 중단점 설정**  
@@ -132,7 +128,7 @@ ms.lasthandoff: 01/29/2018
   
      ![중단점 선택 대화 상자](../debugger/media/dbg_execution_overloadedbreakpoints.png "DBG_Execution_OverloadedBreakpoints")  
   
-##  <a name="BKMK_Set_the_next_statement_to_execute"></a>실행 흐름을 변경 하려면 포인터를 이동  
+##  <a name="BKMK_Set_the_next_statement_to_execute"></a> 실행 흐름을 변경 하려면 포인터를 이동  
  디버거를 일시 중지 된 동안에 코드를 실행할 수의 다음 문을 설정 하려면 명령 포인터를 이동할 수 있습니다. 소스 또는 디스어셈블리 창의 여백에 있는 노란색 화살표는 다음에 실행할 문의 위치를 나타냅니다. 코드의 일부를 건너뛰거나 이전에 실행한 줄로 돌아가려면 이 화살표를 이동합니다. 알려진 버그를 포함하는 코드 섹션을 건너뛰려는 경우 등에 이 방법을 사용할 수 있습니다.  
   
  ![포인터를 이동](../debugger/media/dbg_basics_example3.gif "DBG_Basics_Example3")

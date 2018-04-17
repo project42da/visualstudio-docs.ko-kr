@@ -2,26 +2,22 @@
 title: 만들기 및 모달 대화 상자 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dialog boxes, managing in Visual Studio
 ms.assetid: 491bc0de-7dba-478c-a76b-923440e090f3
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc53145a52d6b902ef1b8d15195df37ee6de0d62
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 14b1e39e4479b0b6b909c625e1e8b6ad19955d30
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-and-managing-modal-dialog-boxes"></a>만들기 및 관리 모달 대화 상자
 Visual Studio 내 모달 대화 상자를 만들 때에 대화 상자가 표시 되는 동안 대화 상자의 부모 창 해제 다음 대화 상자를 닫은 후 다시 부모 창 사용 하도록 설정 해야 합니다. 이렇게 하지 않으면 오류가 나타날 수 있습니다: "Microsoft Visual Studio 활성 상태 이므로 모달 대화 상자를 종료할 수 없는 합니다. 활성 대화 상자를 닫고 다시 시도 하십시오. "  

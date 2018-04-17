@@ -1,26 +1,23 @@
 ---
-title: "Visual Studio에서 코드 메트릭 데이터를 생성 하는 방법 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 코드 메트릭 데이터를 생성 하는 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/12/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code metrics data
 - code metrics results
 - code metrics [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52726b521d3887dee31b74b0ba110aa8d25350e5
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: b81c8f07295005bd9888dca96bbaa89464990717
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-generate-code-metrics-data"></a>방법: 코드 메트릭 데이터 생성
 
@@ -52,7 +49,7 @@ ms.lasthandoff: 03/02/2018
 
 에 **코드 메트릭 결과** 창에서 트리를 확장 하 고는 **계층** 열입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [코드 메트릭 결과 창 사용](../code-quality/working-with-code-metrics-data.md)
 - [코드 메트릭 값](../code-quality/code-metrics-values.md)

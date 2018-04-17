@@ -1,12 +1,10 @@
 ---
-title: "CA2218: GetHashCode Equals를 재정의 | Microsoft Docs"
-ms.custom: 
+title: 'CA2218: GetHashCode Equals를 재정의 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2218
 - OverrideGetHashCodeOnOverridingEquals
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - OverrideGetHashCodeOnOverridingEquals
 - CA2218
 ms.assetid: 69b020cd-29e8-45a6-952e-32cf3ce2e21d
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: eed9ae032a89eb30785acb71feac47d6c4f8cdc3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a7844f4bc10acabeef81001a0c0890c603410ec5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2218-override-gethashcode-on-overriding-equals"></a>CA2218: Equals를 재정의할 때 GetHashCode를 재정의하십시오.
 |||  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  공용 형식이 재정의 <xref:System.Object.Equals%2A?displayProperty=fullName> 하지만 재정의 하지 않습니다 <xref:System.Object.GetHashCode%2A?displayProperty=fullName>합니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- <xref:System.Object.GetHashCode%2A>해싱 알고리즘 및 해시 테이블과 같은 데이터 구조에 적합 하는 현재 인스턴스를 기반으로 하는 값을 반환 합니다. 동일한 형식이 고 동일한 두 개체는 다음 형식의 인스턴스가 올바르게 작동 하는지 확인 하는 동일한 해시 코드를 반환 해야 합니다.  
+ <xref:System.Object.GetHashCode%2A> 해싱 알고리즘 및 해시 테이블과 같은 데이터 구조에 적합 하는 현재 인스턴스를 기반으로 하는 값을 반환 합니다. 동일한 형식이 고 동일한 두 개체는 다음 형식의 인스턴스가 올바르게 작동 하는지 확인 하는 동일한 해시 코드를 반환 해야 합니다.  
   
 -   <xref:System.Collections.Hashtable?displayProperty=fullName>  
   
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
   
 -   <xref:System.Collections.Specialized.OrderedDictionary?displayProperty=fullName>  
   
--   구현 하는 형식<xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>  
+-   구현 하는 형식 <xref:System.Collections.Generic.IEqualityComparer%601?displayProperty=fullName>  
   
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
  이 규칙 위반 문제를 해결 하려면의 구현을 제공 <xref:System.Object.GetHashCode%2A>합니다. 구현 하는 경우 동일한 값을 반환 하는 확인 해야 동일한 유형의 개체를 쌍의 구현 <xref:System.Object.Equals%2A> 반환 `true` 쌍을 찾습니다.  

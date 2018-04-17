@@ -1,27 +1,23 @@
 ---
-title: "방법: Spy + + 트리 확장 및 축소 | Microsoft Docs"
-ms.custom: 
+title: '방법: Spy + + 트리 확장 및 축소 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Expanding and Collapsing Spy++ Trees
 ms.assetid: 22993182-7026-4155-8046-b84fd99f803c
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e419adef776c3973ae3d470e97c88483f0d7d0ea
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9811222334cc19cce14680a5d0810ea4bef29fc9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-expand-and-collapse-spy-trees"></a>방법: Spy++ 트리 확장명 및 축소
 확장 및 두 가지 방법으로 창, 프로세스 및 스레드 뷰를 축소할 수 있습니다: 창이 나 사용 하 여 아이콘을 클릭 하 여는 **트리** 메뉴. + 및-트리에서 아이콘 Visual c + + 프로젝트 창에서와 마찬가지로 작동 합니다.  

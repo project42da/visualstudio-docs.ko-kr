@@ -1,11 +1,8 @@
 ---
-title: "데이터 저장 | Microsoft Docs"
-ms.custom: 
+title: 데이터 저장 | Microsoft Docs
+ms.custom: ''
 ms.date: 10/19/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DataRow.RowState
 - DataSet.GetChanges
@@ -20,18 +17,18 @@ helpviewer_keywords:
 - saving data
 - updating databases
 ms.assetid: 21d2b115-62e4-4ac9-a873-dcbb535b8af8
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 robots: noindex,nofollow
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 9f4e4cd3ebb12e59fc4b7fbcf16122b381d5f610
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 6df9761de31aa44b212b38e5c5b5598ef6a7605b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="saving-data"></a>데이터 저장
 데이터를 저장 하면 원래 데이터 저장소, 일반적으로 SQL Server와 같은 관계형 데이터베이스에 다시 변경 된 응용 프로그램의 데이터 모델의 데이터를 유지 하는 과정입니다.  

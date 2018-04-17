@@ -1,27 +1,23 @@
 ---
-title: "디버거 컨텍스트 | Microsoft Docs"
-ms.custom: 
+title: 디버거 컨텍스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], contexts
 ms.assetid: 79808036-b680-4e4c-9c61-4ed43aa11323
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f36df39cf29ff298a327ec6e6d4bb02ff53485a0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8a9310512417ac0e24046a1b7bcc1fd92099fe98
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugger-contexts"></a>디버거 컨텍스트
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅, 디버그 엔진 (DE)는 동시에 여러 가지 컨텍스트 내에서 다음과 같이 표시 합니다.  
@@ -32,7 +28,7 @@ ms.lasthandoff: 12/22/2017
   
 -   식 계산 컨텍스트는 식에는 실행할 컨텍스트를 설명 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [코드 컨텍스트](../../extensibility/debugger/code-context.md)  
  코드를 명령은 처리 하지만 다른 방법으로 표현 되지 않을 수 있습니다 여기서 않던 언어와 오늘날의 런타임 아키텍처에서 프로그램의 명령 스트림에 주소로 코드 컨텍스트를 설명 합니다.  
   

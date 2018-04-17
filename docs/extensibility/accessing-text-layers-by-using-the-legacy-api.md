@@ -2,26 +2,22 @@
 title: 레거시 API를 사용 하 여 텍스트 레이어 액세스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - text layers
 ms.assetid: 2258fcdd-38d1-479d-b8f8-1d4e6525f72c
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8a5f7a80e8d594f3c9e62ecd2047cc1116948d2c
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: d21b31940f1e1ebca767b9d3f0cf5ab802181bda
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-text-layers-by-using-the-legacy-api"></a>레거시 API를 사용 하 여 텍스트 계층에 액세스
 일반적으로 텍스트 레이어 텍스트 레이아웃의 일부 측면을 캡슐화합니다. 예를 들어 "함수에서-한 번" 레이어 캐럿 (텍스트 삽입 지점)이 포함 된 함수 앞뒤 텍스트를 숨깁니다.  

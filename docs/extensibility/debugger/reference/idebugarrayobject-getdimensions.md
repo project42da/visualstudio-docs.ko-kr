@@ -1,29 +1,25 @@
 ---
 title: IDebugArrayObject::GetDimensions | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugArrayObject::GetDimensions
 helpviewer_keywords:
 - IDebugArrayObject::GetDimensions method
 ms.assetid: 113e0aff-9028-49d6-b104-9fe7be4772d7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e5297019470fe8f3fe314d542013850eab7f1e9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5a20073a19f785d30b0fcd0a7f126919371e722c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugarrayobjectgetdimensions"></a>IDebugArrayObject::GetDimensions
 배열의 크기를 가져옵니다.  
@@ -49,7 +45,7 @@ int GetDimensions(
  [in] 차원 검색할 수입니다.  
   
  `dwDimensions`  
- [out에서] 각 차원 크기를 사용 하 여 입력은 배열입니다. `dwCount`최대 크기를 지정 된 `dwDimensions` 배열입니다.  
+ [out에서] 각 차원 크기를 사용 하 여 입력은 배열입니다. `dwCount` 최대 크기를 지정 된 `dwDimensions` 배열입니다.  
   
 ## <a name="return-value"></a>반환 값  
  성공 하면 s_ok이 고; 반환 그렇지 않은 경우 오류 코드를 반환합니다.  

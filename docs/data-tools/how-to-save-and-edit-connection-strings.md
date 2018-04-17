@@ -1,23 +1,20 @@
 ---
-title: "방법: 저장 하 고 연결 문자열 편집 | Microsoft Docs"
-ms.custom: 
+title: '방법: 저장 하 고 연결 문자열 편집 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f8ef3a2c-029c-423b-9d9e-a4f1add4f640
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: bb3ddcf8a4d1ac14b356bfabac2378ff345ef65b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: b3d1da0eba7a113a1a7430b2a2685663dfbd4626
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-save-and-edit-connection-strings"></a>방법: 연결 문자열 저장 및 편집
 Visual Studio 응용 프로그램의 연결 문자열 (응용 프로그램 설정 라고도 함) 응용 프로그램 구성 파일에 저장 하거나 응용 프로그램에 직접 하드 코드 될 수 있습니다. 응용 프로그램 구성 파일에 연결 문자열을 저장하면 응용 프로그램 유지 관리 작업을 간소화할 수 있습니다. 연결 문자열을 변경해야 하는 경우 소스 코드에서 문자열을 변경한 다음 응용 프로그램을 다시 컴파일하는 대신 응용 프로그램 설정 파일에서 문자열을 업데이트할 수 있습니다.
@@ -59,5 +56,5 @@ Windows 통합 보안을 사용하도록 선택하지 않았는데 데이터베�
 암호와 같은 중요한 정보를 연결 문자열 내에 저장하면 응용 프로그램 보안 문제가 발생할 수 있습니다. 데이터베이스 액세스를 제어할 경우에는 Windows 통합 보안을 사용하는 방법이 더 안전합니다.
 자세한 내용은 [연결 정보 보호](/dotnet/framework/data/adonet/protecting-connection-information)를 참조하세요.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [연결 추가](../data-tools/add-new-connections.md)

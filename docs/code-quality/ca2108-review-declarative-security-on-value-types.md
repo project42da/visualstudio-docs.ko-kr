@@ -1,12 +1,10 @@
 ---
-title: "CA2108: 값 형식에서 선언적 보안을 검토 | Microsoft Docs"
-ms.custom: 
+title: 'CA2108: 값 형식에서 선언적 보안을 검토 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - ReviewDeclarativeSecurityOnValueTypes
 - CA2108
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - ReviewDeclarativeSecurityOnValueTypes
 - CA2108
 ms.assetid: d62bffdd-3826-4d52-a708-1c646c5d48c2
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b05873b87767fa39cc6e0d675980bf658d76c584
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ba05728d1b12cee50512185e0875be12fa55b957
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2108-review-declarative-security-on-value-types"></a>CA2108: 값 형식에서 선언적 보안을 검토하십시오.
 |||  
@@ -45,12 +43,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  모든 호출자가 보안 위협을 하지 않고 기본 상태로에서 값 형식의 인스턴스를 얻을 수 있는 경우이 규칙에서는 경고를에서 표시 하지 않을 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 위반 하는 값 형식을 포함 하는 라이브러리를 보여 줍니다. `StructureManager` 유형 값 형식의 인스턴스를 전달 하는 호출자가 만들거나 인스턴스에 액세스할 수 있는 권한이 있다고 가정 합니다.  
   
  [!code-csharp[FxCop.Security.DemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 응용 프로그램 라이브러리의 약점을 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.TestDemandOnValueType#1](../code-quality/codesnippet/CSharp/ca2108-review-declarative-security-on-value-types_2.cs)]  

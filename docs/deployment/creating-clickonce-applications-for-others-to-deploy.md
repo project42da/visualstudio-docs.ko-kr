@@ -1,12 +1,10 @@
 ---
-title: "배포를 다른 사용자에 대 한 ClickOnce 응용 프로그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: 배포를 다른 사용자에 대 한 ClickOnce 응용 프로그램 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -24,16 +22,16 @@ helpviewer_keywords:
 - ClickOnce applications, deployed by others
 - ClickOnce applications, previous .NET Framework
 ms.assetid: d20766c7-4ef3-45ab-8aa0-3f15b61eccaa
-caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: d3a9762872f74b39d8cef387703488c01647dbcc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: c3cd93353cd20ac52f95d7852c306124561cdf0e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-clickonce-applications-for-others-to-deploy"></a>다른 사용자가 배포할 수 있는 ClickOnce 응용 프로그램 만들기
 ClickOnce 배포를 만들고 있는 일부 개발자는 자체 응용 프로그램을 배포 하도록 계획 합니다. 그 중 대부분 방금 ClickOnce를 사용 하 여 해당 응용 프로그램을 패키지 하 대기업 등의 고객에 게 파일 전달 합니다. 고객 워크시트가 네트워크에서 응용 프로그램을 호스트 하는 일을 담당 합니다. 이 항목에서는 버전의.NET Framework 버전 3.5 이전에서는 이러한 배포의 문제 중 일부에 대해 설명 합니다. .NET Framework 3.5의 새로운 "매니페스트 사용 하 여 신뢰에 대 한" 기능을 사용 하 여 제공 하는 새 솔루션에 설명 합니다. 마지막으로, 이전 버전의.NET Framework를 계속 사용 하는 고객에 대 한 ClickOnce 배포를 만들기 위한 권장된 사항을 문으로 끝납니다.  

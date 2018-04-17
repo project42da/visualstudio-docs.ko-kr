@@ -1,12 +1,10 @@
 ---
-title: "CA2213: 삭제 가능한 필드가 삭제 해야 | Microsoft Docs"
-ms.custom: 
+title: 'CA2213: 삭제 가능한 필드가 삭제 해야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - DisposableFieldsShouldBeDisposed
 - CA2213
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2213
 - DisposableFieldsShouldBeDisposed
 ms.assetid: e99442c9-70e2-47f3-b61a-d8ac003bc6e5
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4da3299e839be08a5ff11792aa2c80a364349b18
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 89f861db9c6e22492a8720a5890020cce26a4f43
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2213-disposable-fields-should-be-disposed"></a>CA2213: 삭제 가능한 필드는 삭제해야 합니다.
 |||  
@@ -45,13 +43,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  자신이 담당 하지 않는 필드를 보유 하는 리소스를 해제에 대 한 또는 경우에이 규칙에서 경고를 표시를 안전 하 게 호출 <xref:System.IDisposable.Dispose%2A> 규칙 검사 보다 깊은 호출 수준에서 발생 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 형식 `TypeA` 를 구현 하는 <xref:System.IDisposable> (`FT` 이전 설명의).  
   
  [!code-csharp[FxCop.Usage.IDisposablePattern#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_1.cs)]  
   
-## <a name="example"></a>예  
- 다음 예제에서는 형식 `TypeB` 필드를 선언 하 여이 규칙을 위반 하는 `aFieldOfADisposableType` (`F` 이전 설명의) 삭제 가능한 형식으로 (`TypeA`) 호출 하지 <xref:System.IDisposable.Dispose%2A> 필드입니다. `TypeB`에 해당 `T` 이전 설명의 합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 형식 `TypeB` 필드를 선언 하 여이 규칙을 위반 하는 `aFieldOfADisposableType` (`F` 이전 설명의) 삭제 가능한 형식으로 (`TypeA`) 호출 하지 <xref:System.IDisposable.Dispose%2A> 필드입니다. `TypeB` 에 해당 `T` 이전 설명의 합니다.  
   
  [!code-csharp[FxCop.Usage.IDisposableFields#1](../code-quality/codesnippet/CSharp/ca2213-disposable-fields-should-be-disposed_2.cs)]  
   

@@ -1,12 +1,10 @@
 ---
-title: "함수 동작에 주석 지정 | Microsoft Docs"
-ms.custom: 
+title: 함수 동작에 주석 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - _On_failure_
 - _Return_type_success_
@@ -20,16 +18,16 @@ f1_keywords:
 - _Check_return_
 - _Use_decl_annotations_
 ms.assetid: c0aa268d-6fa3-4ced-a8c6-f7652b152e61
-caps.latest.revision: "11"
 author: mikeblome
 ms.author: mblome
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 60cebdd015263ac5d05045e168d3f1063e0527a1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9c061c12e7c34a67692af41b72ea7b04b6f06e07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="annotating-function-behavior"></a>함수 동작에 주석 지정
 주석을 추가 하는 것 외에도 [함수 매개 변수 및 반환 값](../code-quality/annotating-function-parameters-and-return-values.md), 전체 함수의 속성을 주석 처리할 수 있습니다.  
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
 |주석|설명|  
 |----------------|-----------------|  
-|`_Called_from_function_class_(name)`|독립 실행형으로 사용되지 않으며, 대신 `_When_` 주석과 함께 사용되는 조건자입니다. 자세한 내용은 참조 [지정 하 고 여기서는 주석이 적용 됩니다](../code-quality/specifying-when-and-where-an-annotation-applies.md)합니다.<br /><br /> `name` 매개 변수는 임의의 문자열에 나타나는 `_Function_class_` 일부 함수의 선언에 주석이 있습니다.  `_Called_from_function_class_`현재 분석 중인 함수를 사용 하 여 주석이 지정 된 경우 0이 아닌 반환 `_Function_class_` 의 동일한 값이 `name`, 그렇지 않으면 0을 반환 합니다.|  
+|`_Called_from_function_class_(name)`|독립 실행형으로 사용되지 않으며, 대신 `_When_` 주석과 함께 사용되는 조건자입니다. 자세한 내용은 참조 [지정 하 고 여기서는 주석이 적용 됩니다](../code-quality/specifying-when-and-where-an-annotation-applies.md)합니다.<br /><br /> `name` 매개 변수는 임의의 문자열에 나타나는 `_Function_class_` 일부 함수의 선언에 주석이 있습니다.  `_Called_from_function_class_` 현재 분석 중인 함수를 사용 하 여 주석이 지정 된 경우 0이 아닌 반환 `_Function_class_` 의 동일한 값이 `name`, 그렇지 않으면 0을 반환 합니다.|  
 |`_Check_return_`|반환 값을 주석 처리하고 호출자가 이를 조사하도록 지시합니다. 함수가 void 컨텍스트에서 호출되면 검사기가 오류를 보고합니다.|  
 |`_Function_class_(name)`|`name` 매개 변수는 사용자가 지정하는 임의의 문자열입니다.  이 매개 변수는 다른 네임스페이스와 구분되는 네임스페이스에 존재합니다. 함수, 함수 포인터 또는 가장 유용한 함수 포인터 유형은 하나 이상의 함수 클래스에 속하는 것으로 지정될 수 있습니다.|  
 |`_Raises_SEH_exception_`|`_When_` 및 `_On_failure_` 조건에 따라 항상 SEH(구조화된 예외 처리기) 예외를 일으키는 함수를 주석 처리합니다. 자세한 내용은 참조 [지정 하 고 여기서는 주석이 적용 됩니다](../code-quality/specifying-when-and-where-an-annotation-applies.md)합니다.|  

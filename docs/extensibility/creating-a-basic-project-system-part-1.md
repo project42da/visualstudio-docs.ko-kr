@@ -1,29 +1,25 @@
 ---
-title: "1 부 기본 프로젝트 시스템을 만드는, | Microsoft Docs"
-ms.custom: 
+title: 1 부 기본 프로젝트 시스템을 만드는, | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - writing a project system
 - project system
 - tutorial
 ms.assetid: 882a10fa-bb1c-4b01-943a-7a3c155286dd
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf0570dd6f58d6a6893be5babdcde530d3a57109
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 9ceb7bb63caf3677c3758d88713308daa0c34fb4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-basic-project-system-part-1"></a>기본 프로젝트 시스템을 1 부 만들기
 Visual Studio에서 프로젝트는 소스 코드 파일 및 기타 자산을 구성 하려면 개발자가 사용 하는 컨테이너입니다. 프로젝트에서 솔루션의 자식으로 나타나며는 **솔루션 탐색기**합니다. 프로젝트 구성, 빌드, 디버깅 및 소스 코드를 배포 및 웹 서비스, 데이터베이스 및 기타 리소스에 대 한 참조를 만들 수 있습니다.  
@@ -61,7 +57,7 @@ Visual Studio에서 프로젝트는 소스 코드 파일 및 기타 자산을 �
   
 -   기본 템플릿 매개 변수 대체를 구현 합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
  또한 소스 코드를 다운로드 해야는 [프로젝트에 대 한 관리 되는 패키지 프레임 워크](http://mpfproj12.codeplex.com/)합니다. 만들 것인지 솔루션에 액세스할 수 있는 위치에 파일을 추출 합니다.  

@@ -1,26 +1,24 @@
 ---
-title: "식 계산기 구현 | Microsoft Docs"
-ms.custom: 
+title: 식 계산기 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluators
 - debugging [Debugging SDK], expression evaluators
 ms.assetid: e9ada7be-845e-4baa-bf8f-e4890e7ba490
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9f18e2e131b6baa325bd7e0b65babee4c3679ed8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ed1df74c187b3f0a93e1a1ec84e8803bc164d223
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-an-expression-evaluator"></a>식 계산기 구현
 > [!IMPORTANT]
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md)  
   
- EE 구현 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)합니다. `IDebugProperty2`지역 변수, 기본 형식, 또는 다음에 적절 한 정보를 표시 하는 Visual Studio에는 개체가 식 평가의 결과 설명 하기 위한 메커니즘을 제공 된 **지역**,  **조사식**, 또는 **직접 실행** 창.  
+ EE 구현 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md)합니다. `IDebugProperty2` 지역 변수, 기본 형식, 또는 다음에 적절 한 정보를 표시 하는 Visual Studio에는 개체가 식 평가의 결과 설명 하기 위한 메커니즘을 제공 된 **지역**,  **조사식**, 또는 **직접 실행** 창.  
   
  SP 정보를 요청 하는 경우에 EE는 DE로 제공 됩니다. SP 주소 및 다음 인터페이스 및 해당 파생 항목 등의 필드에 설명 하는 인터페이스를 구현 합니다.  
   
@@ -62,7 +60,7 @@ ms.lasthandoff: 12/22/2017
   
  EE 이러한 인터페이스를 모두 사용합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [식 계산기 구현 전략](../../extensibility/debugger/expression-evaluator-implementation-strategy.md)  
  식 계산기 (EE) 구현 전략에 대 한 3 단계 프로세스를 정의합니다.  
   

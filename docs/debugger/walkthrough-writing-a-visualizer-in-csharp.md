@@ -2,29 +2,25 @@
 title: '연습: C#에서 시각화 도우미 작성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 helpviewer_keywords:
 - visualizers, writing
 - walkthroughs [Visual Studio], visualizers
 ms.assetid: 53467461-8e0f-45ee-9bc4-374bbaeaf00f
-caps.latest.revision: 33
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6e161b3c914d0a87a720f1217b52a571b85f5ff9
-ms.sourcegitcommit: 03a74d29a1e0584ff4808ce6c9e812b51e774905
+ms.openlocfilehash: 7520072d719d7941acff57b871b8b1d1c69d0d7d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>연습: C#에서 시각화 도우미 작성 #
 이 연습에서는 C#을 사용 하 여 간단한 시각화 도우미를 작성 하는 방법을 보여 줍니다. 이 연습에서 만들 시각화 도우미는 Windows forms 메시지 상자를 사용 하 여 문자열의 내용을 표시 합니다. 이 간단한 문자열 시각화 도우미 자체에서 특히 유용 하지 않습니다. 하지만 다른 데이터 형식에 대 한 보다 유용한 시각화 도우미를 만들기 위해 수행 해야 하는 기본 단계를 보여 줍니다.  
@@ -59,7 +55,7 @@ ms.lasthandoff: 01/02/2018
 2.  DebuggerSide.cs 같은 의미 있는 이름을 Class1.cs에서 변경 합니다.  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]새 파일 이름과 일치 하도록 DebuggerSide.cs의 클래스 선언이 자동으로 변경 합니다.  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 새 파일 이름과 일치 하도록 DebuggerSide.cs의 클래스 선언이 자동으로 변경 합니다.  
   
 3.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **참조** 선택 **참조 추가** 바로 가기 메뉴.  
   
@@ -89,7 +85,7 @@ ms.lasthandoff: 01/02/2018
     public class DebuggerSide : DialogDebuggerVisualizer  
     ```  
   
- `DialogDebuggerVisualizer`에 하나의 추상 메서드 (`Show`) 재정의 해야 합니다.  
+ `DialogDebuggerVisualizer` 에 하나의 추상 메서드 (`Show`) 재정의 해야 합니다.  
   
 #### <a name="to-override-the-dialogdebuggervisualizershow-method"></a>DialogDebuggerVisualizer.Show 메서드를 재정의하려면  
   

@@ -1,12 +1,10 @@
 ---
-title: "CA1306: 데이터 형식에 대 한 로캘을 설정 | Microsoft Docs"
-ms.custom: 
+title: 'CA1306: 데이터 형식에 대 한 로캘을 설정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1306
 - SetLocaleForDataTypes
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1306
 - SetLocaleForDataTypes
 ms.assetid: 104297b2-5806-4de0-a8d9-c589380a796c
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fc39ece5eaecfdb36576501caa432abeb365b9cb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 344b93f6c48ba1848c272522b4580b03ec4f0b5d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1306-set-locale-for-data-types"></a>CA1306: 데이터 형식에 맞는 로캘을 설정하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  라이브러리 또는 응용 프로그램은 제한 된 로컬 사용자를 대상, 데이터 공유 되지 않습니다 또는 기본 설정은 지원 되는 모든 시나리오에서 원하는 동작을 수행할 때이 규칙에서 경고를 표시 하지 않으려면 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 개의 <xref:System.Data.DataTable> 인스턴스.  
   
  [!code-csharp[FxCop.Globalization.DataTable#1](../code-quality/codesnippet/CSharp/ca1306-set-locale-for-data-types_1.cs)]  

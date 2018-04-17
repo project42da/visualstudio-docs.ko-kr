@@ -1,12 +1,10 @@
 ---
-title: "CA1049: 네이티브 리소스가 있는 형식은 삭제 가능 해야 | Microsoft Docs"
-ms.custom: 
+title: 'CA1049: 네이티브 리소스가 있는 형식은 삭제 가능 해야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1049
 - TypesThatOwnNativeResourcesShouldBeDisposable
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - TypesThatOwnNativeResourcesShouldBeDisposable
 - CA1049
 ms.assetid: 084e587d-0e45-4092-b767-49eed30d6a35
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 8d387cd29b0c17bdb31db495fe42146cf1a886d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 435286622b03bb59e2173faf644649ad66bd3f71
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1049-types-that-own-native-resources-should-be-disposable"></a>CA1049: 네이티브 리소스가 있는 형식은 삭제 가능해야 합니다.
 |||  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  형식이 관리 되지 않는 리소스를 참조 하지 않을 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 때문에이 규칙에서 경고를 표시 하지 마십시오 그렇지 않은 경우를 구현 하지 못하면 <xref:System.IDisposable> 하면 관리 되지 않는 리소스를 사용할 수 없게 될 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 구현 하는 형식을 <xref:System.IDisposable> 관리 되지 않는 리소스를 정리할 수 있습니다.  
   
  [!code-csharp[FxCop.Design.UnmanagedResources#1](../code-quality/codesnippet/CSharp/ca1049-types-that-own-native-resources-should-be-disposable_1.cs)]
@@ -63,5 +61,5 @@ ms.lasthandoff: 12/22/2017
  [CA1001: 삭제 가능한 필드가 있는 형식은 삭제 가능해야 합니다.](../code-quality/ca1001-types-that-own-disposable-fields-should-be-disposable.md)  
   
 ## <a name="see-also"></a>참고 항목  
- [관리 되지 않는 리소스 정리](/dotnet/standard/garbage-collection/unmanaged)   
+ [관리되지 않는 리소스 정리](/dotnet/standard/garbage-collection/unmanaged)   
  [삭제 패턴](/dotnet/standard/design-guidelines/dispose-pattern)

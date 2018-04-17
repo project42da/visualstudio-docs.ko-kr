@@ -1,13 +1,10 @@
 ---
-title: "관리 코드 디버깅 | Microsoft Docs"
-ms.custom: 
+title: 관리 코드 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,20 +16,20 @@ helpviewer_keywords:
 - managed code, debugging
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6710f5065622161b60e7a40cc136cdb2ba2b0b72
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 8d7bb0c18eda3f8bb4d5387acdcf496e204f8018
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-managed-code"></a>관리 코드 디버깅
 
 이 단원에서는 Visual Basic, C# 및 C++ 등 공용 언어 런타임을 대상으로 하는 언어로 작성된 관리되는 응용 프로그램의 일반적인 디버깅 문제와 기술에 대해 설명합니다. 이 단원에서 설명하는 기술은 높은 수준의 기술입니다. 자세한 내용은 참조 [디버거를 사용 하 여](../debugger/debugger-basics.md)합니다.
 
-## <a name="in-this-section"></a>섹션 내용
+## <a name="in-this-section"></a>단원 내용
 
 [출력 창에 표시되는 진단 메시지](../debugger/diagnostic-messages-in-the-output-window.md)  
 설명의 <xref:System.Diagnostics.Debug> 및 <xref:System.Diagnostics.Trace> 클래스는 런타임에 메시지를 작성할 수 있습니다는 **출력** 창. 이러한 클래스에는 실행을 중단하지 않고 정보를 출력하는 출력 메서드와 지정된 조건이 실패할 경우 실행을 중단하고 정보를 출력하는 출력 메서드가 포함되어 있습니다.
@@ -89,7 +86,7 @@ LINQ 쿼리에 대한 디버깅 기술에 대해 설명합니다.
 [디버깅 홈 페이지](../debugger/debugger-feature-tour.md)  
 자세한 디버깅 설명서 단원으로 연결되는 링크를 제공합니다. 이 정보에는 디버거의 새로운 기능, 설정 및 준비, 중단점, 예외 처리, 편집 및 계속, 관리 코드 디버깅, Visual C++ 프로젝트 디버깅, COM 및 ActiveX 디버깅, DLL 디버깅, SQL 디버깅, 사용자 인터페이스 참조 등이 포함됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [연습: 사용자 지정 Windows Forms 컨트롤 디버깅 디자인 타임에](/dotnet/framework/winforms/controls/walkthrough-debugging-custom-windows-forms-controls-at-design-time)
 [디버거 보안](../debugger/debugger-security.md)

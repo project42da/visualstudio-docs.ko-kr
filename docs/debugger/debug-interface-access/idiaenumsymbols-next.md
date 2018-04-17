@@ -1,29 +1,25 @@
 ---
 title: 'Idiaenumsymbols:: Next | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumSymbols::Next method
 ms.assetid: bfe5fe27-6a84-4392-910f-e325146d7552
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7354b4c0f5d00c1d3cbb7b5a7443263eb722d164
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ab91d5f5e31bc234d15aff7fb1ad312b4c881296
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaenumsymbolsnext"></a>IDiaEnumSymbols::Next
 지정된 된 수의 기호 열거형 시퀀스를 검색합니다.  
@@ -51,7 +47,7 @@ HRESULT Next (
 ## <a name="return-value"></a>반환 값  
  성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 더 많은 기호가 없는 경우. 그러지 않으면 오류 코드가 반환됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
 IDiaEnumSymbols* pEnum  

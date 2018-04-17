@@ -1,11 +1,8 @@
 ---
-title: "Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/03/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - data [Windows Forms], data sources
 - Windows Forms, data binding
@@ -16,17 +13,17 @@ helpviewer_keywords:
 - displaying data, Windows Forms
 - data [Windows Forms], displaying
 ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
-caps.latest.revision: "37"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 7ade7aa6e103a8637d26b10029faabc434ce3a83
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: f60b3318ef6e38ba444a157feee07f173443540c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩
 Windows Forms에 데이터를 바인딩하여 응용 프로그램의 사용자에 게 데이터를 표시할 수 있습니다. 이러한 데이터 바인딩된 컨트롤을 만들려면에서 항목을 이동할 수는 **데이터 소스** Visual Studio에서 Windows Forms 디자이너 창.
@@ -77,6 +74,6 @@ Windows Forms에 데이터를 바인딩하여 응용 프로그램의 사용자�
   
 각 컨트롤에 있는 스마트 태그는 또한 note 합니다. 이 태그에만 해당 컨트롤에 적용 되는 사용자 지정 수 있습니다.
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)  
 [Windows Forms (.NET Framework)의 데이터 바인딩](/dotnet/framework/winforms/windows-forms-data-binding)

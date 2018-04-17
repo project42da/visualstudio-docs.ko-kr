@@ -1,12 +1,10 @@
 ---
-title: "CA1003: 제네릭 이벤트 처리기 인스턴스를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: 'CA1003: 제네릭 이벤트 처리기 인스턴스를 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - UseGenericEventHandlerInstances
 - CA1003
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1003
 - UseGenericEventHandlerInstances
 ms.assetid: 402101b6-555d-4cf7-b223-1d9fdfaaf1cd
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 66f18e0b62d5dc2526d97109949c0dda21ad4e71
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c6804adbaa360f6523d9cc3d98d555fb13142dd8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1003-use-generic-event-handler-instances"></a>CA1003: 제네릭 이벤트 처리기 인스턴스를 사용하십시오.
 |||  
@@ -45,13 +43,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 대리자를 보여 줍니다. 에 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 예제에서는 주석은 규칙을 충족 하도록 예제를 수정 하는 방법에 설명 합니다. C# 예제에서는 수정 된 코드를 보여 주는 예가 따릅니다.  
   
  [!code-vb[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/VisualBasic/ca1003-use-generic-event-handler-instances_1.vb)]
  [!code-csharp[FxCop.Design.CustomEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 충족 하 고에서 사용을 대체 하는 이전 예제에서 대리자 선언을 제거는 `ClassThatRaisesEvent` 및 `ClassThatHandlesEvent` 메서드를 사용 하 여는 <xref:System.EventHandler%601?displayProperty=fullName> 위임 합니다.  
   
  [!code-csharp[FxCop.Design.GenericEventHandler#1](../code-quality/codesnippet/CSharp/ca1003-use-generic-event-handler-instances_2.cs)]  

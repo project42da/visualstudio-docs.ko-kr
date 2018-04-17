@@ -1,12 +1,10 @@
 ---
-title: "CA1414: 부울 P Invoke 인수를 MarshalAs로 표시 | Microsoft Docs"
-ms.custom: 
+title: 'CA1414: 부울 P Invoke 인수를 MarshalAs로 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1414
 - MarkBooleanPInvokeArgumentsWithMarshalAs
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1414
 - MarkBooleanPInvokeArgumentsWithMarshalAs
 ms.assetid: c0c84cf5-7701-4897-9114-66fc4b895699
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3ce70291bd59ef3211c9fea871c8155f1a3e7fed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 16e561e04444fba7200c00f299cc775978829100
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1414-mark-boolean-pinvoke-arguments-with-marshalas"></a>CA1414: 부울 P/Invoke 인수를 MarshalAs로 표시하십시오.
 |||  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  플랫폼 호출 메서드 선언을 포함는 <xref:System.Boolean?displayProperty=fullName> 매개 변수 또는 반환 값 이지만 <xref:System.Runtime.InteropServices.MarshalAsAttribute?displayProperty=fullName> 특성 매개 변수 또는 반환 값에 적용 되지 않습니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- 플랫폼 비관리 코드에 액세스 메서드를 호출 하 고 사용 하 여 정의 된 `Declare` 키워드 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>합니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute>관리 코드와 비관리 코드 간에 데이터 형식을 변환 하는 데 사용 되는 마샬링 동작을 지정 합니다. 와 같은 대부분의 간단한 데이터 형식은 <xref:System.Byte?displayProperty=fullName> 및 <xref:System.Int32?displayProperty=fullName>; 공용 언어 런타임에 올바른 동작을 자동으로 제공, 비관리 코드에서 단일 표현이 및 마샬링 동작을 지정할 필요가 없습니다.  
+ 플랫폼 비관리 코드에 액세스 메서드를 호출 하 고 사용 하 여 정의 된 `Declare` 키워드 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 또는 <xref:System.Runtime.InteropServices.DllImportAttribute?displayProperty=fullName>합니다. <xref:System.Runtime.InteropServices.MarshalAsAttribute> 관리 코드와 비관리 코드 간에 데이터 형식을 변환 하는 데 사용 되는 마샬링 동작을 지정 합니다. 와 같은 대부분의 간단한 데이터 형식은 <xref:System.Byte?displayProperty=fullName> 및 <xref:System.Int32?displayProperty=fullName>; 공용 언어 런타임에 올바른 동작을 자동으로 제공, 비관리 코드에서 단일 표현이 및 마샬링 동작을 지정할 필요가 없습니다.  
   
  <xref:System.Boolean> 데이터 형식은 비관리 코드에서 여러 표현이 가지입니다. 경우는 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 기본 마샬링 동작을 지정 하지 않으면는 <xref:System.Boolean> 데이터 형식이 <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>합니다. 모든 경우에 적합 하지 않는 32 비트 정수입니다. 관리 되지 않는 메서드가에 필요한 부울 표현을 결정 하 고 적절 한 일치 해야 <xref:System.Runtime.InteropServices.UnmanagedType?displayProperty=fullName>합니다. UnmanagedType.Bool는은 항상 4 바이트 Win32 BOOL 형식. C + +에 사용할 UnmanagedType.U1 `bool` 또는 기타 1 바이트 형식입니다.  
   
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다. 적절 한 기본 마샬링 동작 경우 동작을 명시적으로 지정 하는 코드 보다 쉽게 유지 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 적절 한 것으로 표시 된 메서드를 호출 하는 두 개의 플랫폼 <xref:System.Runtime.InteropServices.MarshalAsAttribute> 특성입니다.  
   
  [!code-csharp[FxCop.Interoperability.BoolMarshalAs#1](../code-quality/codesnippet/CSharp/ca1414-mark-boolean-p-invoke-arguments-with-marshalas_1.cs)]

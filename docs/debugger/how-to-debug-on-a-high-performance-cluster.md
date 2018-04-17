@@ -1,12 +1,10 @@
 ---
-title: "방법: 고성능 클러스터에서 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '방법: 고성능 클러스터에서 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - cluster debugging
 - high-perfomance debugging
 ms.assetid: a2f0eb07-840e-4f95-a1b1-9509217e5b8f
-caps.latest.revision: "24"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 18a8d66da62fd480934c750a6b809465022c5d6b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d90037fbf147dd0234ee356f217ab97e5af87a01
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-debug-on-a-high-performance-cluster"></a>방법: 고성능 클러스터에서 디버깅
 고성능 클러스터에서 다중 처리 프로그램을 디버깅하는 방법은 원격 컴퓨터에서 일반적인 프로그램을 디버깅하는 방법과 비슷합니다. 그러나 여기에는 몇 가지 추가로 고려해야 할 사항이 있습니다. 일반 원격 설치 요구 사항에 대 한 참조 [원격 디버깅](../debugger/remote-debugging.md)합니다.  
@@ -70,7 +68,7 @@ ms.lasthandoff: 12/22/2017
   
      또는  
   
-     `ProcessID =`*yourprocessIDnumber*  
+     `ProcessID =` *yourprocessIDnumber*  
   
      좀 더 복잡한 필터를 만들려면 `&`(AND 연산자), `||`(OR 연산자), `!`(NOT 연산자) 및 괄호를 사용하여 절을 조합합니다.  
   
@@ -84,17 +82,17 @@ ms.lasthandoff: 12/22/2017
   
 3.  에 **중단점 필터** 대화 상자에서:  
   
-     `ThreadName =`*yourthreadname*  
+     `ThreadName =` *yourthreadname*  
   
      또는  
   
-     `ThreadID =`*yourthreadIDnumber*  
+     `ThreadID =` *yourthreadIDnumber*  
   
      좀 더 복잡한 필터를 만들려면 `&`(AND 연산자), `||`(OR 연산자), `!`(NOT 연산자) 및 괄호를 사용하여 절을 조합합니다.  
   
 4.  **확인**을 클릭합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `marvin`이라는 컴퓨터와 `fourier1`이라는 스레드에 중단점 필터를 만드는 방법을 보여 줍니다.  
   
 ```  

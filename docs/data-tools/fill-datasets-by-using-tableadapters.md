@@ -1,11 +1,8 @@
 ---
-title: "Tableadapter를 사용 하 여 데이터 집합 채우기 | Microsoft Docs"
-ms.custom: 
+title: Tableadapter를 사용 하 여 데이터 집합 채우기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,17 +15,17 @@ helpviewer_keywords:
 - data [Visual Studio], retrieving
 - data [Visual Studio], datasets
 ms.assetid: 55f3bfbe-db78-4486-add3-c62f49e6b9a0
-caps.latest.revision: "32"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: e338335263a9c0757bbf6305a42fd092d4f90c04
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: efd40aa9e702ce855438e29f65e5bcd221bae9a5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Tableadapter를 사용 하 여 데이터 집합 채우기
 TableAdapter 구성 요소는 데이터 집합 쿼리 또는 사용자가 지정한 저장된 프로시저를 하나 이상에 따라 데이터베이스의 데이터로 채웁니다. Tableadapter를 수행할 수도 추가, 업데이트 및 데이터 집합에 수행한 변경 내용을 유지 하려면 데이터베이스에서 삭제 합니다. 또한 특정 테이블에 관련 되지 않은 전역 명령을 실행할 수 있습니다.  
@@ -54,7 +51,7 @@ TableAdapter 구성 요소는 데이터 집합 쿼리 또는 사용자가 지정
   
  ![클라이언트 응용 프로그램의 데이터 흐름](../data-tools/media/clientdatadiagram.gif "ClientDataDiagram")  
   
- Tableadapter로 설계 되어는 **데이터 집합 디자이너**, TableAdapter 클래스의 중첩 된 클래스로 생성 되지 않은 <xref:System.Data.DataSet>합니다. 각 데이터 집합에만 적용 되는 별도 네임 스페이스에 있습니다. 예를 들어, 라는 데이터 집합이 있는 경우 `NorthwindDataSet`, 연관 된 Tableadapter <xref:System.Data.DataTable>에서 s는 `NorthwindDataSet` 것에 `NorthwindDataSetTableAdapters` 네임 스페이스입니다. 특정 TableAdapter에 프로그래밍 방식으로 액세스 하려면 TableAdapter의 새 인스턴스를 선언 해야 합니다. 예:  
+ Tableadapter로 설계 되어는 **데이터 집합 디자이너**, TableAdapter 클래스의 중첩 된 클래스로 생성 되지 않은 <xref:System.Data.DataSet>합니다. 각 데이터 집합에만 적용 되는 별도 네임 스페이스에 있습니다. 예를 들어, 라는 데이터 집합이 있는 경우 `NorthwindDataSet`, 연관 된 Tableadapter <xref:System.Data.DataTable>에서 s는 `NorthwindDataSet` 것에 `NorthwindDataSetTableAdapters` 네임 스페이스입니다. 특정 TableAdapter에 프로그래밍 방식으로 액세스 하려면 TableAdapter의 새 인스턴스를 선언 해야 합니다. 예를 들어:  
   
  [!code-csharp[VbRaddataTableAdapters#7](../data-tools/codesnippet/CSharp/fill-datasets-by-using-tableadapters_1.cs)]
  [!code-vb[VbRaddataTableAdapters#7](../data-tools/codesnippet/VisualBasic/fill-datasets-by-using-tableadapters_1.vb)]  
@@ -128,5 +125,5 @@ TableAdapter 구성 요소는 데이터 집합 쿼리 또는 사용자가 지정
 ## <a name="security"></a>보안  
 데이터 명령 CommandType 속성이로 설정 된 사용 하는 경우 <xref:System.Data.CommandType.Text>, 신중 하 게 데이터베이스에 전달 하기 전에 클라이언트에서 전송 되는 정보를 확인 합니다. 악의적인 사용자가를 보내려고 시도할 수 있습니다 (주입) 데이터베이스를 훼손 하거나 무단으로 액세스 하기 위해 SQL 문을 수정 또는 추가 합니다. 데이터베이스에 사용자 입력을 전송 하기 전에 항상 정보가 올바른지 확인 합니다. 항상 가능한 경우 저장된 프로시저 또는 매개 변수가 있는 쿼리를 사용 하는 것이 좋습니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)

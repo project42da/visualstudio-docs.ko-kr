@@ -1,29 +1,25 @@
 ---
 title: IDiaDataSource | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaDataSource interface
 ms.assetid: 6260ac76-4f9d-4144-ba22-32f8620b32c2
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51a277d9ff1bf190aa87d7c4e9d8d852f8c38323
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 48e248e537749983293bbeefd60098eabcf70b2d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiadatasource"></a>IDiaDataSource
 디버깅 기호가의 원본에 대 한 액세스를 시작 합니다.  
@@ -52,7 +48,7 @@ IDiaDataSource : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져온는 `CoCreateInstance` 클래스 식별자와 함수 `CLSID_DiaSource` 인터페이스 id의 `IID_IDiaDataSource`합니다. 이 인터페이스는 가져오는 방법을 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```C++  
   

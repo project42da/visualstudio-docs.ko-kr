@@ -1,12 +1,10 @@
 ---
-title: "CA2115: GC를 호출 합니다. KeepAlive 네이티브 리소스를 사용 하는 경우 | Microsoft Docs"
-ms.custom: 
+title: 'CA2115: GC를 호출 합니다. KeepAlive 네이티브 리소스를 사용 하는 경우 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CallGCKeepAliveWhenUsingNativeResources
 - CA2115
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2115
 - CallGCKeepAliveWhenUsingNativeResources
 ms.assetid: f00a59a7-2c6a-4bbe-a1b3-7bf77d366f34
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: f767c923d319a0accce655eea84a6fff22dc5069
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 5ea82194eced9caed52e75216091060ff9350379
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2115-call-gckeepalive-when-using-native-resources"></a>CA2115: 네이티브 리소스를 사용하는 경우에는 GC.KeepAlive를 호출하십시오.
 |||  
@@ -53,8 +51,8 @@ ms.lasthandoff: 12/22/2017
   
  제외 하기 전에 다른 메시지를 주의 깊게 검토 합니다. 이 규칙에서는 디버그 하 고 재현 하기 어려운 오류를 감지 합니다.  
   
-## <a name="example"></a>예  
- 다음 예제에서 `BadMethod`에는 `GC.KeepAlive`에 대한 호출이 포함되지 않으므로 규칙을 위반합니다. `GoodMethod`수정 된 코드를 포함합니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서 `BadMethod`에는 `GC.KeepAlive`에 대한 호출이 포함되지 않으므로 규칙을 위반합니다. `GoodMethod` 수정 된 코드를 포함합니다.  
   
 > [!NOTE]
 >  이 예제는 의사 코드입니다. 코드가 컴파일되고 실행되더라도 관리되지 않는 리소스가 생성 또는 해제되지 않으므로 경고가 발생하지 않습니다.  

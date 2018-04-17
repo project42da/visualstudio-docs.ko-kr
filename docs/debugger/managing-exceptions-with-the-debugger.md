@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio 디버거를 사용한 예외 관리 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 디버거를 사용한 예외 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/05/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.exceptions
 - vs.debug.exceptions.find
@@ -33,17 +30,16 @@ helpviewer_keywords:
 - native run-time checks
 - exceptions, debugging
 ms.assetid: 43a77fa8-37d0-4c98-a334-0134dbca4ece
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 978c78ba68460a2f038d85afb92246275acfb9ef
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 063f4581a741325ce34022b731322cf0a4e37e39
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-exceptions-with-the-debugger-in-visual-studio"></a>Visual Studio에서 디버거를 사용한 예외 관리
 
@@ -145,7 +141,7 @@ ms.lasthandoff: 01/29/2018
   
  ![예외 설정에서 기본값 복원](../debugger/media/restoredefaultexceptions.png "RestoreDefaultExceptions")  
   
-##  <a name="BKMK_UserUnhandled"></a>사용자가 처리 하지 않은 예외에 대해 계속 하도록 디버거에 지시합니다  
+##  <a name="BKMK_UserUnhandled"></a> 사용자가 처리 하지 않은 예외에 대해 계속 하도록 디버거에 지시합니다  
  [Just My Code](../debugger/just-my-code.md)옵션을 사용하여 .NET 또는 JavaScript 코드를 디버그하는 경우 사용자 코드에서 처리되지 않았지만 다른 위치에서는 처리된 예외가 발견되면 실행을 중단하지 않도록 디버거에 지시할 수 있습니다.  
   
 1.  **예외 설정** 창에서 창 내부를 마우스 오른쪽 단추로 클릭한 다음 **열 표시**를 선택하여 상황에 맞는 메뉴를 엽니다. ( **내 코드만**을 해제한 경우에는 이 명령이 표시되지 않습니다.)  
@@ -156,7 +152,7 @@ ms.lasthandoff: 01/29/2018
   
  예를 들어 ASP.NET 웹 응용 프로그램은 예외를 HTTP 500 상태 코드([ASP.NET API의 예외 처리](http://www.asp.net/web-api/overview/error-handling/exception-handling))로 변환하여 예외를 처리하며, 이에 따라 예외의 소스를 확인하는 데 도움이 되지 않을 수도 있습니다. 아래 예제에서는 사용자 코드가 `String.Format()` 을 발생시키는 <xref:System.FormatException>을 호출합니다. 다음과 같이 실행이 중단됩니다.  
   
- ![user& # 45에 구분선; 처리 하지 않은 예외](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
+ ![사용자 중단&#45;처리 하지 않은 예외](../debugger/media/exceptionunhandledbyuser.png "ExceptionUnhandledByUser")  
   
 ## <a name="add-and-delete-exceptions"></a>추가 하 고 예외를 삭제 합니다.  
  예외를 추가하거나 삭제할 수 있습니다. 어느 범주에서나 어떤 형식의 예외든 삭제할 수 있습니다. 예외를 선택하고 **예외 설정** 도구 모음에서 **삭제** 단추(빼기 기호)를 클릭하거나 예외를 마우스 오른쪽 단추로 클릭하고 상황에 맞는 메뉴에서 **삭제** 를 선택하면 됩니다. 예외를 삭제하는 것은 예외를 선택 취소하는 것과 같은 효과를 가집니다. 즉, 해당 예외가 발생해도 디버거가 실행을 중단하지 않습니다.  
@@ -190,7 +186,7 @@ public class GenericException<T> : Exception
 예외 조건을 설정할 수 있습니다는 **예외 설정** 대화 상자. 현재 지원 되는 조건, 모듈 이름 포함 하거나 제외할 예외에 대 한 포함 됩니다. 모듈 이름의 조건으로 설정 하 여 특정 코드 모듈에만 예외에 대 한 중단 하도록 선택할 수 있습니다 또는 특정 모듈에 분리를 방지할 수 있습니다.
 
 > [!NOTE]
-> 예외에 조건을 추가 하는 것은 2의 새로운 기능[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
+> 예외에 조건을 추가 하는 것은 2의 새로운 기능 [!include[vs_dev15](../misc/includes/vs_dev15_md.md)]
 
 조건부 예외를 추가 하려면 선택은 **조건 편집** 예외 설정 대화 상자에서 아이콘 상자 또는 예외를 마우스 오른쪽 단추로 클릭 하 고 선택 **조건 편집**합니다.
 

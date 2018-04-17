@@ -1,29 +1,25 @@
 ---
 title: IDiaEnumStackFrames | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumStackFrames interface
 ms.assetid: 3d1e8403-c9fc-42ff-ae35-0ab9a5ed2ad7
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9c4c81fcecb76cc094297cb8fa5c733a677a831
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8e5a23f575e00631c8aabdbdfdd9e6fab6c1a5ed
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaenumstackframes"></a>IDiaEnumStackFrames
 사용할 수 있는 다양 한 스택 프레임을 열거 합니다.  
@@ -40,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져올는 [IDiaStackWalker::getEnumFrames](../../debugger/debug-interface-access/idiastackwalker-getenumframes.md) 또는 [IDiaStackWalker::getEnumFrames2](../../debugger/debug-interface-access/idiastackwalker-getenumframes2.md) 메서드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다운로드 하 고 사용 하는 방법을 보여 주는이 예제는 `IDiaEnumStackFrames` 인터페이스입니다. 참조는 [IDiaStackFrame](../../debugger/debug-interface-access/idiastackframe.md) 의 구현에 대 한 인터페이스는 `PrintStackFrame` 함수입니다.  
   
 ```C++  

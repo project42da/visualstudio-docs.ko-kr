@@ -1,12 +1,10 @@
 ---
-title: "방법: ClickOnce 배포에 개별 필수 구성 요소에 대 한 지원 URL을 지정 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: ClickOnce 배포에 개별 필수 구성 요소에 대 한 지원 URL을 지정 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, prerequisites
 - ClickOnce deployment, URLs
 ms.assetid: 590742c3-a286-4160-aa75-7a441bb2207b
-caps.latest.revision: "10"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 4a73d6cd0996f3f0e91b5a5381ee1b8ccd58a2a1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 86d4b765dc5e6c56fdc8e7a3b082afaa72accf49
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-a-support-url-for-individual-prerequisites-in-a-clickonce-deployment"></a>방법: ClickOnce 배포 시 개별 필수 구성 요소에 대한 지원 URL 지정
 A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 필수 구성 요소에 대 한 클라이언트 컴퓨터에서 사용할 수 있어야 하는 다양 한 배포를 테스트할 수는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 실행 합니다. 여기에 필요한 최소 버전의는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)], 운영 체제 및 전역 어셈블리 캐시 (GAC)에 미리 설치 해야 하는 모든 어셈블리의 버전입니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]그러나으로 설치할 수 없습니다 이러한 필수 구성 요소 자체; 필수 구성 요소가 없는 경우 단순히 설치를 중지 하 고 설치에 실패 한 이유를 설명 하는 대화 상자를 표시 합니다.  
@@ -69,7 +67,7 @@ A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 필수 구�
       </dependency>  
     ```  
   
-5.  선택 사항입니다. .NET Framework 4를 대상으로 하는 응용 프로그램에 대 한 배포 매니페스트 (.application 파일)를 열고 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 텍스트 편집기에서 응용 프로그램입니다.  
+5.  선택적 요소. .NET Framework 4를 대상으로 하는 응용 프로그램에 대 한 배포 매니페스트 (.application 파일)를 열고 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 텍스트 편집기에서 응용 프로그램입니다.  
   
 6.  .NET Framework 4에 필수 구성 요소에 대 한 추가 `supportUrl` 특성을 `compatibleFrameworks` 요소:  
   

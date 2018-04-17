@@ -1,12 +1,10 @@
 ---
-title: "CA2116: APTCA 메서드는 APTCA 메서드만 호출 | Microsoft Docs"
-ms.custom: 
+title: 'CA2116: APTCA 메서드는 APTCA 메서드만 호출 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - AptcaMethodsShouldOnlyCallAptcaMethods
 - CA2116
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - AptcaMethodsShouldOnlyCallAptcaMethods
 - CA2116
 ms.assetid: 8b91637e-891f-4dde-857b-bf8012270ec4
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a3a7818c3d758e8e92724af37dfe955f9a466746
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 52e757e2e83974a532a4dc16ce7075105606b1ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2116-aptca-methods-should-only-call-aptca-methods"></a>CA2116: APTCA 메서드는 APTCA 메서드만 호출해야 합니다.
 |||  
@@ -41,9 +39,9 @@ ms.lasthandoff: 12/22/2017
   
  완전히 신뢰할 수 있는 어셈블리에 APTCA 특성이 부분적으로 신뢰할 수 있는 호출자를 허용 하지 않는 다른 어셈블리의 코드를 실행 하는 경우 보안 허점이 불가능 합니다. 하는 경우 두 가지 방법 `M1` 및 `M2` 다음 조건을 충족, 악의적인 호출자가 메서드를 사용할 수 `M1` 를 보호 하는 완전 신뢰 암시적 링크 요청을 사용 하지 않을 `M2`:  
   
--   `M1`공용 메서드는 APTCA 특성이 있는 완전히 신뢰할 수 있는 어셈블리에 선언 됩니다.  
+-   `M1` 공용 메서드는 APTCA 특성이 있는 완전히 신뢰할 수 있는 어셈블리에 선언 됩니다.  
   
--   `M1`메서드를 호출 `M2` 외부 `M1`의 어셈블리.  
+-   `M1` 메서드를 호출 `M2` 외부 `M1`의 어셈블리.  
   
 -   `M2`어셈블리에 APTCA 특성이 없고, 따라서 실행 하지 않아야 또는 부분적으로 신뢰할 수 있는 호출자를 대신 하 여 합니다.  
   
@@ -55,17 +53,17 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를에서 표시 하지 않으려면, 메서드에서 노출 하는 기능이을 직접 또는 간접적으로 허용 하지 호출자가 중요 한 정보, 작업 또는 악용에서 사용할 수 있는 리소스에 액세스 하도록 확인 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 두 어셈블리와 테스트 응용 프로그램을 사용 하 여이 규칙으로 검색 하는 보안 문제를 나타냅니다. 첫 번째 어셈블리에 APTCA 특성이 없고 부분적으로 신뢰할 수 있는 호출자에 게 액세스할 수 없습니다 (나타내는 `M2` 이전 설명의).  
   
  [!code-csharp[FxCop.Security.NoAptca#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  두 번째 어셈블리는 완전히 신뢰할 수 있는 이며 부분적으로 신뢰할 수 있는 호출자를 허용 합니다. (나타내는 `M1` 이전 설명의).  
   
  [!code-csharp[FxCop.Security.YesAptca#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_2.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  테스트 응용 프로그램 (나타내는 `X` 이전 설명의) 부분적으로 신뢰할 수 있습니다.  
   
  [!code-csharp[FxCop.Security.TestAptcaMethods#1](../code-quality/codesnippet/CSharp/ca2116-aptca-methods-should-only-call-aptca-methods_3.cs)]  

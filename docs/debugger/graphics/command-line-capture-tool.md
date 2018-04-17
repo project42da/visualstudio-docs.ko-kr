@@ -1,25 +1,21 @@
 ---
-title: "명령줄 캡처 도구 | Microsoft Docs"
-ms.custom: 
+title: 명령줄 캡처 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: db75b3a7-80b2-4a74-91d2-fd6e0f73b45d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4290ccb1184f658d04d6903520f709384e58e837
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: f284fdbd4172c560c30aa3d7defb8a496e8e8e9d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="command-line-capture-tool"></a>명령줄 캡처 도구
 DXCap.exe는 그래픽 진단 캡처 및 재생을 위한 명령줄 도구로, 모든 기능 수준에서 Direct3D 10 - Direct3D 12를 지원합니다.  
@@ -168,13 +164,13 @@ DXCap.exe -e map
   
  **Package "Microsoft.BingMaps":**  
  **InstallDirectory : C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
- **FullName         : Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
+ **FullName: Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe**  
  **UserSID          : S-1-5-21-2127521184-1604012920-1887927527-5603533**  
- **Name             : Microsoft.BingMaps**  
- **Publisher        : CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US**  
+ **이름: Microsoft.BingMaps**  
+ **게시자: CN = Microsoft Corporation, O = Microsoft Corporation, L = Redmond, S = 워싱턴, C = US**  
  **버전: 2.1.2914.1734**  
  **시작 가능한 응용 프로그램:**  
- **Id   : AppexMaps**  
+ **Id: AppexMaps**  
  **Exe  : C:\Program Files\WindowsApps\Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe\Map.exe**  
  **IsWWA: No**  
  * * (시작)를 AppSpec: **DXCap.exe-c Microsoft.BingMaps_2.1.2914.1734_x64__8wekyb3d8bbwe,AppexMaps*** 열거 된 각 응용 프로그램에 대 한 출력의 마지막 줄에서 그래픽 정보 캡처를 사용할 수 있습니다 명령이 표시 됩니다.  

@@ -1,29 +1,25 @@
 ---
-title: "디버거에서 기본 개체의 사용자 지정 뷰 만들기 | Microsoft Docs"
-ms.custom: 
+title: 디버거에서 기본 개체의 사용자 지정 뷰 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - natvis
 dev_langs:
 - C++
 ms.assetid: 2d9a177a-e14b-404f-a6af-49498eff0bd7
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 340d0d7366749f402cb76f3075778fb2b7ea215b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 40a78f95ed98b0486b1ffa85eabea3ae8591b823
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 기본 개체의 사용자 지정 뷰 만들기
 Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 네이티브 형식을 표시 하는 방법을 사용자 지정할 수 있습니다 (예를 들어는 **조사식** 창 **지역** 창 및  **DataTips**합니다.
@@ -222,7 +218,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 ```  
   
 ####  <a name="BKMK_Versioning"></a> Version 요소  
- `Version` 요소를 사용하면 이름 충돌을 최소화하고 각기 다른 시각화를 다양한 버전의 형식에 사용할 수 있도록 시각화 범위를 특정 모듈 및 해당 버전으로 지정할 수 있습니다. 예:  
+ `Version` 요소를 사용하면 이름 충돌을 최소화하고 각기 다른 시각화를 다양한 버전의 형식에 사용할 수 있도록 시각화 범위를 특정 모듈 및 해당 버전으로 지정할 수 있습니다. 예를 들어:  
   
 ```xml
 <Type Name="DirectUI::Border">  
@@ -464,7 +460,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 -   `ValueNode`는 비워 둘 수도 있고, `this`가 링크된 목록 노드를 참조하도록 할 수도 있습니다.  
   
 #### <a name="customlistitems-expansion"></a>CustomListItems 확장  
- `CustomListItems` 확장을 사용하여 해시 테이블 같은 데이터 구조 전송에 대한 사용자 지정 논리를 작성할 수 있습니다. 사용 해야 `CustomListItems` 구조 평가 해야 하는 모든 c + + 식을 통해 표현 가능 하지만 대 한 작업이 적합 하지 않은 데이터를 시각화 `ArrayItems`, `TreeItems`, 또는`LinkedListItems.`  
+ `CustomListItems` 확장을 사용하여 해시 테이블 같은 데이터 구조 전송에 대한 사용자 지정 논리를 작성할 수 있습니다. 사용 해야 `CustomListItems` 구조 평가 해야 하는 모든 c + + 식을 통해 표현 가능 하지만 대 한 작업이 적합 하지 않은 데이터를 시각화 `ArrayItems`, `TreeItems`, 또는 `LinkedListItems.`  
   
  CAtlMap의 시각화 도우미는 `CustomListItems` 가 적합한 가장 좋은 예입니다.  
   
@@ -542,7 +538,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 ####  <a name="BKMK_ExpandedItem_expansion"></a> ExpandedItem 확장  
  `ExpandedItem` 요소는 기본 클래스 또는 데이터 멤버를 시각화된 형식의 자식이었던 것처럼 표시하는 방식으로 집계된 자식 뷰를 생성하는 데 사용할 수 있습니다. 지정된 식이 평가되고 결과의 자식 노드가 시각화된 형식의 자식 목록에 추가됩니다. 예를 들어 스마트 포인터 형식이 `auto_ptr<vector<int>>`, 일반적으로 표시 하 합니다.  
   
- ![자동 및 #95; ptr &#60; 벡터 &#60; int &#62; &#62; 기본 확장](../debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG_NATVIS_Expand_ExpandedItem_Default")  
+ ![자동&#95;ptr&#60;벡터&#60;int&#62; &#62; 기본 확장](../debugger/media/dbg_natvis_expand_expandeditem_default.png "DBG_NATVIS_Expand_ExpandedItem_Default")  
   
  벡터 값을 확인하려면 변수 창에서 두 개의 수준을 드릴다운하여 _Myptr 멤버를 통과해야 합니다. `ExpandedItem` 요소를 추가하면 계층 구조에서 `_Myptr` 변수를 제거하고 벡터 요소를 바로 확인할 수 있습니다.  
   
@@ -555,7 +551,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- ![자동 및 #95; ptr &#60; 벡터 &#60; int &#62; &#62; ExpandedItem 확장](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "DBG_NATVIS_Expand_ExpandedItem_Visualized")  
+ ![자동&#95;ptr&#60;벡터&#60;int&#62; &#62; ExpandedItem 확장](../debugger/media/dbg_natvis_expand_expandeditem_visualized.png "DBG_NATVIS_Expand_ExpandedItem_Visualized")  
   
  다음 예제에서는 파생된 클래스에서 기본 클래스에서 속성을 집계 하는 방법을 보여 줍니다. `CPanel` 클래스가 `CFrameworkElement`에서 파생된다고 가정해 보겠습니다. `CFrameworkElement` 노드는 기본 `ExpandedItem` 클래스에서 가져온 속성을 반복하는 대신, 이러한 속성을 `CPanel` 클래스의 자식 목록에 추가할 수 있도록 합니다. **nd** 파생된 클래스에 대 한 일치 하는 시각화를 해제 하는 형식 지정자는 여기 필요 합니다. 그렇지 않으면 식 `*(CFrameworkElement*)this` 하면는 `CPanel` 기본 시각화 형식 일치 규칙 때문에 다시 적용 되는데 시각화는 가장 적합 한 것입니다. 사용 하 여 **nd** 형식 지정자의 기본 클래스에 시각화가 없는 경우 기본 클래스 시각화 또는 기본 클래스 기본 확장을 사용 하도록 디버거에 지시 합니다.  
   

@@ -1,27 +1,24 @@
 ---
-title: "Visual Studio 데이터베이스 호환성 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 데이터베이스 호환성 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/06/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - database systems
 - database compatibility
 - databases for Visual Studio
 ms.assetid: 821de34b-eaa9-40af-b9aa-b8305de16899
-caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 8fbe818e233c8bbdaf4431c70b8962baf43a2ed2
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+ms.workload:
+- data-storage
+ms.openlocfilehash: 3c8cffef6144c188fd5f53e504f6065c4e7d0c1d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio에 대 한 호환 데이터베이스 시스템
 
@@ -57,7 +54,7 @@ SQLite는 응용 프로그램의 자체 프로세스에서 실행 되는 포함 
 
 Firebird는 오픈 소스 SQL 데이터베이스 시스템입니다. 다운로드할 수는 [Firebird 다운로드 페이지](http://firebirdsql.org/en/downloads/)합니다. ADO.NET 데이터 공급자는 NuGet 패키지 관리자를 통해 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)  
 [버전 및 SQL Server 및 해당 구성 요소의 버전을 확인 하는 방법](http://support.microsoft.com/kb/321185)

@@ -1,12 +1,10 @@
 ---
-title: "CA2112: 보안된 형식은 필드를 노출 하지 해야 | Microsoft Docs"
-ms.custom: 
+title: 'CA2112: 보안된 형식은 필드를 노출 하지 해야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2112
 - SecuredTypesShouldNotExposeFields
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - SecuredTypesShouldNotExposeFields
 - CA2112
 ms.assetid: 9eb13a78-3487-49f2-81d1-3c3866db132f
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e3959540d00a74d99095a3facf824d822827a00d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 050aa2a5048ed4d58e6b5a285f584eda330f178f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2112-secured-types-should-not-expose-fields"></a>CA2112: 보안 형식은 필드를 노출하면 안 됩니다.
 |||  
@@ -45,19 +43,19 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  모두 보안 문제에 대 한 좋은 디자인, public 필드 nonpublic 함으로써 위반 문제를 해결 해야 합니다. 필드는 보안을 유지 해야 하는 정보를 유지 하지 않으면이 규칙에서는 경고를에서 표시 하지 않을 수 있습니다 및 필드의 내용에 의존 하지 마십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 라이브러리 형식으로 구성 됩니다 (`SecuredTypeWithFields`), 보안 되지 않은 필드는 형식 (`Distributor`) 라이브러리 형식의 인스턴스를 만들 수 있는 형식에 잘못된 전달 인스턴스를 만들 수 있는 권한이 없는 및 응용 프로그램 코드에 인스턴스의 필드 형식을 보호 하는 권한 없는 경우에 읽을 수 있습니다.  
   
  라이브러리 코드의 다음 규칙을 위반 합니다.  
   
  [!code-csharp[FxCop.Security.LinkDemandOnField#1](../code-quality/codesnippet/CSharp/ca2112-secured-types-should-not-expose-fields_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  응용 프로그램 보안된 형식을 보호 하는 링크 요청으로 인해 인스턴스를 만들 수 없습니다. 다음 클래스에는 응용 프로그램을을 보안 된 형식의 인스턴스를 가져올 수 있습니다.  
   
  [!code-csharp[FxCop.Security.LDOnFieldsDistributor#1](../code-quality/codesnippet/CSharp/ca2112-secured-types-should-not-expose-fields_2.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 응용 프로그램은 어떻게 보안된 형식의 메서드에 액세스할 수 있는 권한이 없으면 코드가 액세스할 수 있는 해당 필드를 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.TestLinkDemandOnFields#1](../code-quality/codesnippet/CSharp/ca2112-secured-types-should-not-expose-fields_3.cs)]  

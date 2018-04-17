@@ -1,12 +1,10 @@
 ---
-title: "CA1810: 참조 형식 정적 필드를 인라인으로 초기화 | Microsoft Docs"
-ms.custom: 
+title: 'CA1810: 참조 형식 정적 필드를 인라인으로 초기화 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - InitializeReferenceTypeStaticFieldsInline
 - CA1810
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - InitializeReferenceTypeStaticFieldsInline
 - CA1810
 ms.assetid: e9693118-a914-4efb-9550-ec659d8d97d2
-caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4b3a6ffe04be6116fddc225d0820d3709644fe52
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7e49e346594a8546c6808e718ee7b4d7c78c10b1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810: 참조 형식 정적 필드를 인라인으로 초기화하십시오.
 |||  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  안전 성능이; 별로 중요 하지 않은 경우이 규칙에서 경고를 표시 합니다. 정적 초기화가 발생 하는 전역 상태 변경 내용을 비용이 많이 드는 또는 해야 하는 경우 또는 형식의 정적 메서드를 호출 하거나 형식의 인스턴스를 만들 전에 적용 되려면 보장할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 형식 `StaticConstructor`, 규칙을 위반 하는 형식이 있는 `NoStaticConstructor`, 인라인 초기화가 규칙을 만족 하 고 정적 생성자를 대체 하 합니다.  
   
  [!code-csharp[FxCop.Performance.RefTypeStaticCtor#1](../code-quality/codesnippet/CSharp/ca1810-initialize-reference-type-static-fields-inline_1.cs)]

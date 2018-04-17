@@ -1,12 +1,10 @@
 ---
-title: "CA2118: SuppressUnmanagedCodeSecurityAttribute 사용을 검토 | Microsoft Docs"
-ms.custom: 
+title: 'CA2118: SuppressUnmanagedCodeSecurityAttribute 사용을 검토 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2118
 - ReviewSuppressUnmanagedCodeSecurityUsage
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - ReviewSuppressUnmanagedCodeSecurityUsage
 - CA2118
 ms.assetid: 4cb8d2fc-4e44-4dc3-9b74-7f5838827d41
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 6a6c5e60ed84a79e6e81d4cd066d75b1270bdb71
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 8d862f285efa3487c428aed2e5aed3a67c3baef6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2118-review-suppressunmanagedcodesecurityattribute-usage"></a>CA2118: SuppressUnmanagedCodeSecurityAttribute 사용을 검토하십시오.
 |||  
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
  Public 또는 protected 형식이 나 멤버에는 <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute?displayProperty=fullName> 특성입니다.  
   
 ## <a name="rule-description"></a>규칙 설명  
- <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute>COM interop 또는 플랫폼 호출을 사용 하 여 관리 되지 않는 코드를 실행 하는 멤버에 대 한 기본 보안 시스템 동작을 변경 합니다. 시스템에서는 일반적으로 [데이터 및 모델링](/dotnet/framework/data/index) 비관리 코드 권한이 대 한 합니다. 이 요청 된 멤버를 호출할 때마다 런타임 시 발생 하 고 권한에 대 한 호출 스택의 모든 호출자를 확인 합니다. 특성이 있는 경우 시스템에서는 한 [링크 요청](/dotnet/framework/misc/link-demands) 권한에 대 한: JIT 컴파일된 호출자가 직접 실행 호출자의 권한이 확인 됩니다.  
+ <xref:System.Security.SuppressUnmanagedCodeSecurityAttribute> COM interop 또는 플랫폼 호출을 사용 하 여 관리 되지 않는 코드를 실행 하는 멤버에 대 한 기본 보안 시스템 동작을 변경 합니다. 시스템에서는 일반적으로 [데이터 및 모델링](/dotnet/framework/data/index) 비관리 코드 권한이 대 한 합니다. 이 요청 된 멤버를 호출할 때마다 런타임 시 발생 하 고 권한에 대 한 호출 스택의 모든 호출자를 확인 합니다. 특성이 있는 경우 시스템에서는 한 [링크 요청](/dotnet/framework/misc/link-demands) 권한에 대 한: JIT 컴파일된 호출자가 직접 실행 호출자의 권한이 확인 됩니다.  
   
  이 특성은 기본적으로 성능 향상을 위해 사용되지만 성능이 향상되는 대신 중대한 보안 위험이 발생합니다. 네이티브 메서드를 호출 하는 공용 멤버에 특성을 배치 하는 경우 직접 실행 호출자) (제외 호출 스택의 호출자에 게 비관리 코드를 실행 하려면 비관리 코드 권한이 않아도 됩니다. Public 멤버의 작업 및 입력된 처리에 따라 해당 액세스 기능을 일반적으로 신뢰할 수 있는 코드 제한에 신뢰할 수 없는 호출자를 통합할 수 있습니다.  
   
@@ -57,17 +55,17 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를에서 표시 하지 않으려면, 있는지 코드에서는 호출자 작업이 나 악용에서 사용할 수 있는 리소스에 대 한 액세스를 확인 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 합니다.  
   
  [!code-csharp[FxCop.Security.TypesDoNotSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 `DoWork` 플랫폼 호출 메서드를 공개적으로 액세스할 수 있는 코드 경로 제공 하는 메서드 `FormatHardDisk`합니다.  
   
  [!code-csharp[FxCop.Security.PInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_2.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 공용 메서드 `DoDangerousThing` 위반을 발생 합니다. 위반을 해결 하려면 `DoDangerousThing` private, 및 표시 된 것 처럼 보안 요청으로 보안 되는 공용 메서드를 통해 액세스할 수 있어야는 `DoWork` 메서드.  
   
  [!code-csharp[FxCop.Security.TypeInvokeAndSuppress#1](../code-quality/codesnippet/CSharp/ca2118-review-suppressunmanagedcodesecurityattribute-usage_3.cs)]  

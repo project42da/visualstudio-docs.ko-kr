@@ -1,23 +1,20 @@
 ---
-title: "하나 이상의 선택한 데이터베이스 개체는 대상 클래스의 스키마와 일치 하지 않는 스키마를 반환 합니다. | Microsoft Docs"
-ms.custom: 
+title: 하나 이상의 선택한 데이터베이스 개체는 대상 클래스의 스키마와 일치 하지 않는 스키마를 반환 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3794e88b-4d3d-4e7a-ade6-8208eabe3eae
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: e188947f51cb8e277c71a072dfcee72922f37982
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 24ffc57e126a01eb91d6d539568a4e3dce462538
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="one-or-more-selected-database-objects-return-a-schema-that-does-not-match-the-schema-of-the-target-class"></a>선택한 데이터베이스 개체 중 하나 이상이 대상 클래스의 스키마와 일치하지 않는 스키마를 반환합니다.
 선택한 하나 이상의 데이터베이스 개체에서 대상 데이터 클래스 스키마와 일치하지 않는 스키마를 반환합니다. 디자이너에 아무 것도 추가되지 않았습니다.  
@@ -30,6 +27,6 @@ ms.lasthandoff: 12/22/2017
   
 2.  O/R 디자이너에서 데이터베이스 개체를 끌어 놓는 대상 클래스의 스키마와 일치하는 데이터를 반환하는 데이터베이스 개체를 선택합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [O/R 디자이너 메시지](../data-tools/o-r-designer-messages.md)  
 [Visual Studio에서 LINQ to SQL 도구](../data-tools/linq-to-sql-tools-in-visual-studio2.md)

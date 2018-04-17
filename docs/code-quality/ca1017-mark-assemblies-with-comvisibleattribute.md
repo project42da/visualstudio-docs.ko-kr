@@ -1,12 +1,10 @@
 ---
-title: "CA1017: ComVisibleAttribute로 어셈블리 표시 | Microsoft Docs"
-ms.custom: 
+title: 'CA1017: ComVisibleAttribute로 어셈블리 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1017
 - MarkAssembliesWithComVisible
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - MarkAssembliesWithComVisible
 - CA1017
 ms.assetid: 4842cb49-8dd8-4e5d-a2d6-ceeaf6c6cf8e
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1cf713e2c177a24938c44c4577da88d8943e4fef
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 5aa835d06dc081445673bc3a92dff1184d329d51
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1017-mark-assemblies-with-comvisibleattribute"></a>CA1017: ComVisibleAttribute로 어셈블리 표시
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다. 어셈블리를 노출 하려는 경우 특성을 적용 하 고 해당 값을 설정 `true`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 어셈블리를는 <xref:System.Runtime.InteropServices.ComVisibleAttribute> COM 클라이언트에 게 표시 되지 않도록 적용 된 특성입니다.  
   
  [!code-cpp[FxCop.Design.AssembliesCom#1](../code-quality/codesnippet/CPP/ca1017-mark-assemblies-with-comvisibleattribute_1.cpp)]

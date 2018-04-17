@@ -1,13 +1,10 @@
 ---
-title: "디버거에서 스레드를 보고 | Microsoft Docs"
-ms.custom: 
+title: 디버거에서 스레드를 보고 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.threads
 dev_langs:
@@ -24,17 +21,16 @@ helpviewer_keywords:
 - '@TIB'
 - debugging [Visual Studio], threads
 ms.assetid: 590ffd57-0556-43d8-8962-ee27e5b2b7d7
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bde9f1c8aa09f8e5961bd228a5f1947c2fc30f82
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 081d3d2289ff73b3e5ccacfc23fd8a5fe7eb292b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="view-threads-in-the-debugger-in-visual-studio-using-the-threads-window"></a>스레드 창을 사용 하 여 Visual Studio의 디버거에서 스레드 뷰
 에 **스레드** 창을 검토 하 고 수 디버깅 중인 응용 프로그램의에서 스레드를 사용 합니다. 사용 하는 방법에 대 한 단계별 지침에 대 한는 **스레드** 창 참조 [연습: 스레드 창 사용 하 여 디버깅](../debugger/how-to-use-the-threads-window.md)합니다.

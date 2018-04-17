@@ -1,27 +1,25 @@
 ---
-title: "식 계산 | Microsoft Docs"
-ms.custom: 
+title: 식 계산 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - expressions [Debugging SDK], evaluating
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation
 ms.assetid: 5ccfcc80-dea5-48a1-8bae-6a26f8d3bc56
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 24cc20166bad875dcaebbd5492a7fe8317539d47
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 47de275d63f5be1743408aa93c971dcff2959c25
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluating-expressions"></a>식 계산
 식은 자동, 조사식, 간략 한 조사식, 또는 직접 실행 창에서 전달 되는 문자열에서 만들어집니다. 식이 계산 되는 이름 및 유형의 변수 또는 인수 및 값을 포함 하는 인쇄 가능한 문자열을 생성 됩니다. 이 문자열은 해당 IDE 창에 표시 됩니다.  

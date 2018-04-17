@@ -1,12 +1,10 @@
 ---
-title: "CA2122: 링크 요청이 있는 메서드를 간접적으로 노출 하지 마십시오 | Microsoft Docs"
-ms.custom: 
+title: 'CA2122: 링크 요청이 있는 메서드를 간접적으로 노출 하지 마십시오 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2122
 - DoNotIndirectlyExposeMethodsWithLinkDemands
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - DoNotIndirectlyExposeMethodsWithLinkDemands
 - CA2122
 ms.assetid: 3eda58e7-c6ec-41c3-8112-ae0841109c6a
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: fc1d8c2ea663862e44b3092b0e2b8489eff3df6f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 836fca663baaa5a5c62c720eac9f7408732f95d5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2122-do-not-indirectly-expose-methods-with-link-demands"></a>CA2122: 링크 요청이 있는 메서드를 간접적으로 노출하지 마십시오.
 |||  
@@ -45,12 +43,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를에서 표시 하지 않으려면,는 코드 권한을 부여 하지 않습니다 호출자에 게 작업이 나 악용에서 사용할 수 있는 리소스에 액세스할 수 있는지 확인 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예에서는 규칙을 위반 하는 라이브러리와 라이브러리의 약점을 보여 주는 응용 프로그램을 보여 줍니다. 예제 라이브러리 함께 규칙을 위반 하는 두 메서드를 제공 합니다. `EnvironmentSetting` 메서드를 환경 변수에 대 한 무제한 액세스를 위한 링크 요청에 의해 보안 됩니다. `DomainInformation` 메서드 호출 되기 전에 호출자의 보안 요청을 만들면 `EnvironmentSetting`합니다.  
   
  [!code-csharp[FxCop.Security.UnsecuredDoNotCall#1](../code-quality/codesnippet/CSharp/ca2122-do-not-indirectly-expose-methods-with-link-demands_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 응용 프로그램은 보안 되지 않은 라이브러리 멤버를 호출합니다.  
   
  [!code-csharp[FxCop.Security.TestUnsecuredDoNot1#1](../code-quality/codesnippet/CSharp/ca2122-do-not-indirectly-expose-methods-with-link-demands_2.cs)]  

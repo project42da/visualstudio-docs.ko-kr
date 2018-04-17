@@ -1,26 +1,23 @@
 ---
-title: "데이터 집합 쿼리 | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합 쿼리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
-caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: f25507493237ba54c9d6820500706d06d4bf7710
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: f2d3ca534783b8178f14a4121a46e2552221ab92
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-datasets"></a>쿼리 데이터 집합
 데이터 집합의 특정 레코드를 검색 하려면 FindBy 메서드를 사용 하 여 DataTable에서, 테이블의 행 컬렉션을 반복 하거나 사용 하 여 해당 하는 foreach 문을 작성 [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)합니다.  
@@ -98,5 +95,5 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[VbRaddataDatasets#7](../data-tools/codesnippet/CSharp/query-datasets_5.cs)]
      [!code-vb[VbRaddataDatasets#7](../data-tools/codesnippet/VisualBasic/query-datasets_5.vb)]
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)  

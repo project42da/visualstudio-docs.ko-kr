@@ -1,26 +1,24 @@
 ---
-title: "평가 컨텍스트에 | Microsoft Docs"
-ms.custom: 
+title: 평가 컨텍스트에 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, context
 ms.assetid: 008a20c7-1b27-4013-bf96-d6a3f510da02
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9a490ef7c4ea42fe85c291ee913d7ad5e1cda1bb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 266fe85bedeea2c7e3dae7726d113d66a4b2b1e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluation-context"></a>평가 컨텍스트
 > [!IMPORTANT]
@@ -36,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 |`pAddress`|[IDebugAddress](../../extensibility/debugger/reference/idebugaddress.md) 현재 실행 지점을 지정 하는 인터페이스입니다. 실행 중인 코드가 포함 하는 메서드를 찾는 데 사용할 수 있습니다이 있습니다.|  
 |`pBinder`|[IDebugBinder](../../extensibility/debugger/reference/idebugbinder.md) 값과 이름이 지정 된 기호 형식을 찾는 데 사용할 수 있는 인터페이스입니다.|  
   
- `IDebugParsedExpression::EvaluateSync`반환 된 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 결과 값 및 해당 형식을 나타내는 인터페이스입니다.  
+ `IDebugParsedExpression::EvaluateSync` 반환 된 [IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 결과 값 및 해당 형식을 나타내는 인터페이스입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [키 식 계산기 인터페이스](../../extensibility/debugger/key-expression-evaluator-interfaces.md)   

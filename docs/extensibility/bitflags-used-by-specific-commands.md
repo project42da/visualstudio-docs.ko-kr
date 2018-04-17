@@ -2,26 +2,22 @@
 title: 특정 명령에서 사용 하는 비트 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, bitflags used by specific commands
 ms.assetid: 37969977-6f7d-45c9-ba03-1306ae71f5d1
-caps.latest.revision: 24
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: be102b5eaf39db2fc7495c62c456e35e54ffd0f3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3bc59c79e0f047cc7880332c4c23643ab2136c86
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bitflags-used-by-specific-commands"></a>특정 명령에서 사용 하는 비트
 단일 값에서 하나 이상의 비트를 설정 하 여 다양 한 소스 제어 플러그 인 API의 함수 동작을 수정할 수 있습니다. 이러한 값을 비트 라고 합니다. 소스 제어 플러그 인 API에서 사용 하는 다양 한 비트를 사용 하는 기능에 따라 그룹화 여기에서 자세히 나와 있습니다.  
@@ -40,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |----------|-----------|-----------------|  
 |`SCC_FILETYPE_AUTO`|0x00|소스 제어 플러그 인는 텍스트 또는 이진 파일 인지 여부를 자동으로 감지 해야 합니다.|  
 |`SCC_FILETYPE_TEXT`|0x01|파일 형식은 텍스트입니다.|  
-|`SCC_FILETYPE_BINARY`|0x04|파일 형식은 이진입니다. **참고:** `SCC_FILETYPE_TEXT` 및 `SCC_FILETYPE_BINARY` 플래그는 함께 사용할 수 없습니다. 정확히 하나 또는 둘 다 설정 합니다.|  
+|`SCC_FILETYPE_BINARY`|0x04|파일 형식은 이진입니다. **참고:** `SCC_FILETYPE_TEXT` 및 `SCC_FILETYPE_BINARY` 플래그는 함께 사용할 수 없습니다.   정확히 하나 또는 둘 다 설정 합니다.|  
 |`SCC_ADD_STORELATEST`|0x02|최신 버전 (델타 없음)만 저장 합니다.|  
   
 ## <a name="diff-flags"></a>비교 플래그  

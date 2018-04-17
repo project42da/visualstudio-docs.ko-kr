@@ -2,29 +2,25 @@
 title: IDebugModule3::GetSymbolInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugModule3::GetSymbolInfo
 helpviewer_keywords:
 - GetSymbolInfo method
 - IDebugModule3::GetSymbolInfo method
 ms.assetid: dda5e8e1-6878-4aa9-9ee4-e7d0dcc11210
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8648e591e545db73b636c6b21fcbcaa1d1afb640
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 53d84b9ef6cdabc12c88e30fc65d506cad673a26
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugmodule3getsymbolinfo"></a>IDebugModule3::GetSymbolInfo
 각 경로 검색의 결과 함께 기호 검색 하는 경로 목록을 검색 합니다.  
@@ -66,7 +62,7 @@ int GetSymbolInfo(
   
  마지막 항목 \r\n 시퀀스 하지 않았는지 확인 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는이 메서드는 세 개의 서로 다른 검색 결과 함께 3 개의 경로 반환합니다. 각 줄은 캐리지 리턴/줄 바꿈 쌍과 함께 종료 됩니다. 방금이 예제의 출력을 단일 문자열로 검색 결과 인쇄합니다.  
   
 > [!NOTE]

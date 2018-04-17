@@ -1,12 +1,10 @@
 ---
-title: "CA2237: ISerializable 형식을 SerializableAttribute로 표시 | Microsoft Docs"
-ms.custom: 
+title: 'CA2237: ISerializable 형식을 SerializableAttribute로 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2237
 - MarkISerializableTypesWithSerializable
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - MarkISerializableTypesWithSerializable
 - CA2237
 ms.assetid: 9bd6bb24-a527-43dd-9952-043c0c694f46
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 75f16ce8a3158e9340c3215968f8df0170ab2c44
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b9b4c0d05e972b4cf9a84677ccbc7d15d117c3f0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2237-mark-iserializable-types-with-serializableattribute"></a>CA2237: ISerializable 형식을 SerializableAttribute로 표시하십시오.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  응용 프로그램 도메인에서 제대로 작동 하려면 직렬화 가능 해야 하기 때문에 예외 클래스에 대 한이 규칙에서는 경고를에서 표시 하지 마십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 형식을 보여 줍니다. 주석 처리 제거는 <xref:System.SerializableAttribute> 규칙을 만족 하는 선 특성입니다.  
   
  [!code-vb[FxCop.Usage.MarkSerializable#1](../code-quality/codesnippet/VisualBasic/ca2237-mark-iserializable-types-with-serializableattribute_1.vb)]

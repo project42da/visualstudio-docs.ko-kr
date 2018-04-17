@@ -1,12 +1,10 @@
 ---
-title: "웹 응용 프로그램 디버깅: 오류 및 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: '웹 응용 프로그램 디버깅: 오류 및 문제 해결 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -26,16 +24,16 @@ helpviewer_keywords:
 - debugging Web applications, troubleshooting
 - troubleshooting Web applications
 ms.assetid: 63f2742e-2031-48a8-9773-d9b547c62230
-caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b8d915339ae8e81d16b46ca602b45d527ab78aa9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bb3e4ec14f5ae1864d58c2dc295680b3fc4eeab2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-web-applications-errors-and-troubleshooting"></a>웹 응용 프로그램 디버깅: 오류 및 문제 해결
 웹 응용 프로그램을 디버깅하려고 할 때 다음과 같은 오류가 발생할 수 있습니다.  

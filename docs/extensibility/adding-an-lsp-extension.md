@@ -1,25 +1,21 @@
 ---
-title: "서버 프로토콜 언어 확장 추가 | Microsoft Docs"
-ms.custom: 
+title: 서버 프로토콜 언어 확장 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 52f12785-1c51-4c2c-8228-c8e10316cd83
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea93ddee9c47f80322db2403aeecc0fb7dddb209
-ms.sourcegitcommit: c0a2385a16cc4f47d2e1ff23d35c4da40f5605e0
+ms.openlocfilehash: bb6c82eab6878e99c9840ed593d9b9993056d391
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-language-server-protocol-extension"></a>서버 프로토콜 언어 확장 추가
 
@@ -64,7 +60,7 @@ client/registerCapability |
 client/unregisterCapability |
 workspace/didChangeConfiguration | 예
 workspace/didChangeWatchedFiles | 예
-workspace/symbol | 예
+작업 영역/기호 | 예
 workspace/executeCommand | 예
 workspace/applyEdit | 예
 textDocument/publishDiagnostics | 예
@@ -84,7 +80,7 @@ textDocument/documentSymbol | 예
 textDocument/서식 지정 | 예
 textDocument/rangeFormatting | 예
 textDocument/onTypeFormatting |
-textDocument/definition | 예
+textDocument/정의 | 예
 textDocument/codeAction | 예
 textDocument/codeLens |
 codeLens/resolve |
@@ -117,7 +113,7 @@ VSIX 종속성을 정의 하려면 프로그램 VSIX에 대 한 VSIX 매니페�
 * **Identifier**: Microsoft.VisualStudio.LanguageServer.Client.Preview
 * **버전 범위**: [1.0,2.0)
 * **종속성 확인 방법은**: 사용자가 설치 된
-* **Download URL**: [https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview)
+* **다운로드 URL**: [https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview](https://marketplace.visualstudio.com/items?itemName=vsext.LanguageServerClientPreview)
 
 > [!NOTE]
 > **다운로드 URL** 확장 프로그램을 설치 하는 사용자가 필요한 종속성을 설치 하는 방법을 확인할 수 있도록 입력 해야 합니다.
@@ -303,7 +299,7 @@ LSP 언어 서버에 대 한 지원 추가 하지 않아도 Visual Studio에서 
 
 아래 LSP 언어 서비스 확장 프로그램에 설정에 대 한 지원을 추가 하려면 다음이 단계를 수행 합니다.
 
-1. JSON 파일 (예: "MockLanguageExtensionSettings.json")을 설정 및 기본값을 포함 하는 프로젝트에 추가 합니다. 예:
+1. JSON 파일 (예: "MockLanguageExtensionSettings.json")을 설정 및 기본값을 포함 하는 프로젝트에 추가 합니다. 예를 들어:
 
   ```json
   {
@@ -344,7 +340,7 @@ LSP 언어 서버에 대 한 지원 추가 하지 않아도 Visual Studio에서 
 
 1. 사용자는 소유 하 고 서버에 파일을 포함 하는 작업 영역을 엽니다.
 2. 사용자는 "VSWorkspaceSettings.json" 라는 ".vs" 폴더의 파일을 추가 합니다.
-3. 사용자는 서버에서 제공 하는 설정에 대 한 VSWorkspaceSettings.json 파일에 줄을 추가 합니다. 예:
+3. 사용자는 서버에서 제공 하는 설정에 대 한 VSWorkspaceSettings.json 파일에 줄을 추가 합니다. 예를 들어:
 
   ```json
   {

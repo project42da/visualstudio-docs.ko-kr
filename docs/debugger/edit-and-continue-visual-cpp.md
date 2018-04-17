@@ -1,12 +1,10 @@
 ---
-title: "편집 하며 계속 (Visual c + +) | Microsoft Docs"
-ms.custom: 
+title: 편집 하며 계속 (Visual c + +) | Microsoft Docs
+ms.custom: ''
 ms.date: 05/31/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - debugging [C++], Edit and Continue
 - C/C++, Edit and Continue
 ms.assetid: 1815251e-a877-433e-9e5e-69bd9ba254c7
-caps.latest.revision: "25"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: d1b9326aa862bd03bb989a4d6863e94dae7bddef
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 107014740c9d976be65fb2a268723184a9134868
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-and-continue-visual-c"></a>Edit and Continue (Visual C++)
 Visual C++ 프로젝트에서 편집하며 계속하기를 사용할 수 있습니다. 참조 [지원 코드 변경 내용 (c + +)](../debugger/supported-code-changes-cpp.md) 편집 하며 계속 하기의 제한 사항에 대 한 정보에 대 한 합니다.
@@ -41,7 +39,7 @@ Visual Studio 2015 업데이트 3 향상 된 기능에 대 한 자세한 내용�
  현재 디버깅 세션 중에 적용하지 않으려는 코드 편집 내용이 있는 경우 편집하며 계속하기의 자동 호출을 사용하지 않도록 설정할 수 있습니다. 자동 편집하며 계속하기를 다시 사용하도록 설정할 수도 있습니다.
 
 > [!IMPORTANT]
-> 필요한 빌드 설정 및 기능 호환성에 대 한 기타 정보에 대 한 참조 [c + + 편집 하며 계속 하기에서 Visual Studio 2015 업데이트 3] (https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/ 합니다.
+> 필요한 빌드 설정 및 기능 호환성에 대 한 기타 정보에 대 한 참조 [c + + 편집 하며 계속 하기에서 Visual Studio 2015 업데이트 3] (https://blogs.msdn.microsoft.com/vcblog/2016/07/01/c-edit-and-continue-in-visual-studio-2015-update-3/합니다.
   
 1.  디버깅 세션에 있는 경우 디버깅을 중지 (**Shift + f 5를 눌러**).
 

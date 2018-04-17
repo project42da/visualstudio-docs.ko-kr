@@ -1,13 +1,10 @@
 ---
-title: "&lt;패키지&gt; 요소 (부트스트래퍼) | Microsoft Docs"
-ms.custom: 
+title: '&lt;패키지&gt; 요소 (부트스트래퍼) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -16,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - <package> element [bootstrapper]
 ms.assetid: ecd06658-ad02-4440-bccd-88437b7fb816
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 5281d53f213d2cb09f470484ddca2fbaa8cb4601
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4c00bdae8c257b0dc09077ffc10b146329af797f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;패키지&gt; 요소 (부트스트래퍼)
 `Package` 요소는 요소는 패키지 파일 내의 최상위 XML 요소입니다.  
@@ -151,11 +147,11 @@ ms.lasthandoff: 12/22/2017
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Culture`|필수. 사용할 언어를 결정 하는이 패키지에 대 한 문화권을 정의 합니다. 이 특성은 한 키의 `Strings` 요소를 설치 하는 동안 제품 이름과 오류 메시지에 대 한 culture 관련 문자열을 나열 합니다.|  
-|`Name`|필수. 와 같은 도구 내에서 개발자에 게 표시 되는 패키지의 이름을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이 특성은 한 키는 `Strings` 포함 해야 하는 요소는 `String` 인 요소는 `Name` 및 `Culture` 속성과 일치 하도록 설정는 `Name` 및 `Culture` 의 속성 `Package`합니다.|  
-|`LicenseAgreement`|선택 사항입니다. (EULA (최종 사용자 사용권 계약)를 포함 하는 배포 패키지에서 파일의 이름을 지정 합니다.  이 파일에는 일반 텍스트 (.txt) 또는 서식 있는 텍스트 형식 수 있습니다. (.rtf)|  
+|`Culture`|필수 요소. 사용할 언어를 결정 하는이 패키지에 대 한 문화권을 정의 합니다. 이 특성은 한 키의 `Strings` 요소를 설치 하는 동안 제품 이름과 오류 메시지에 대 한 culture 관련 문자열을 나열 합니다.|  
+|`Name`|필수 요소. 와 같은 도구 내에서 개발자에 게 표시 되는 패키지의 이름을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이 특성은 한 키는 `Strings` 포함 해야 하는 요소는 `String` 인 요소는 `Name` 및 `Culture` 속성과 일치 하도록 설정는 `Name` 및 `Culture` 의 속성 `Package`합니다.|  
+|`LicenseAgreement`|선택적 요소. (EULA (최종 사용자 사용권 계약)를 포함 하는 배포 패키지에서 파일의 이름을 지정 합니다.  이 파일에는 일반 텍스트 (.txt) 또는 서식 있는 텍스트 형식 수 있습니다. (.rtf)|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 재배포 하기 위한 완전 한 패키지 파일을 보여 줍니다.는 [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]합니다.  
   
 ```  

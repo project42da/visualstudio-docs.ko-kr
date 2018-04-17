@@ -1,30 +1,26 @@
 ---
-title: "인터페이스 (디버그 인터페이스 액세스 SDK) | Microsoft Docs"
-ms.custom: 
+title: 인터페이스 (디버그 인터페이스 액세스 SDK) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - interfaces [DIA SDK]
 - DIA SDK, interfaces
 ms.assetid: 62aee7c3-d314-4272-a32b-b2818f32fab8
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e128aa0a4cbb30106981b152252ff308e21669b7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 09f1d0496595f3026c7066f4ccfdeb7bc3add6d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="interfaces-debug-interface-access-sdk"></a>인터페이스(디버그 인터페이스 액세스 SDK)
 메서드는 내용의 고 Vtable 순서의 인터페이스 페이지에는 테이블의 각 인터페이스에서 사전순으로 나열 됩니다.  

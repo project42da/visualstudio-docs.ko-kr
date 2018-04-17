@@ -1,11 +1,8 @@
 ---
-title: "방법: 추가, 업데이트 또는 WCF 데이터 서비스 참조를 제거 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: 추가, 업데이트 또는 WCF 데이터 서비스 참조를 제거 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - service references [Visual Studio]
 - WCF Data Service reference
@@ -13,17 +10,17 @@ helpviewer_keywords:
 - ADO.NET service references
 - ADO.NET Data Service reference
 ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
-caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c35fdaabf3de306af0541fb4781a085a3c409ff8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 2e128268a0dd81aead3204436bb8f4ea80b5a048
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>방법: WCF 데이터 서비스 참조 추가, 업데이트 또는 제거
 A *서비스 참조* 하면 하나 이상의 액세스 하려면 프로젝트 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]합니다. 사용 하 여는 **서비스 참조 추가** 대화 상자를 검색할 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 인터넷 또는 로컬 영역 네트워크에서 로컬에서 현재 솔루션의 합니다.  
@@ -41,7 +38,7 @@ A *서비스 참조* 하면 하나 이상의 액세스 하려면 프로젝트 [!
 2.  에 **주소** 상자, 서비스에 대 한 URL을 입력 한 다음 클릭 **이동** 는 서비스를 검색 합니다. 서비스 사용자 이름 및 암호 보안을 구현 하는 경우 사용자 이름 및 암호에 대 한 라는 메시지가 표시 될 수 있습니다.  
   
     > [!NOTE]
-    >  출처를 신뢰할 수 있는 서비스 참조 해야 합니다. 신뢰할 수 없는 소스에서 참조를 추가 하면 보안상을 위험할 수 있습니다.  
+    >  신뢰할 수 있는 원본의 서비스만 참조해야 합니다. 신뢰할 수 없는 원본에서 참조를 추가하면 보안이 손상될 수 있습니다.  
   
      URL을 선택할 수도 있습니다는 **주소** 유효한 서비스 메타 데이터가 발견 된 이전 15 Url을 저장 하는 목록입니다.  
   

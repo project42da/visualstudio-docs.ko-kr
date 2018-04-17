@@ -1,12 +1,10 @@
 ---
-title: "지원 되는 코드 변경 (C# 및 Visual Basic) | Microsoft Docs"
-ms.custom: 
+title: 지원 되는 코드 변경 (C# 및 Visual Basic) | Microsoft Docs
+ms.custom: ''
 ms.date: 10/11/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,16 +14,16 @@ helpviewer_keywords:
 - Edit and Continue [C#], supported code changes
 - Edit and Continue [Visual Basic], supported code changes
 ms.assetid: c7a48ea9-5a7f-4328-a9d7-f0e76fac399d
-caps.latest.revision: "27"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: dotnet
-ms.openlocfilehash: 628aad6f1ae097ea040a6043db1ef12f0b60a7a4
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: eba3de7930b650ad7c1fc2d6ad4511ca3ca4c9d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supported-code-changes-c-and-visual-basic"></a>지원 되는 코드 변경 내용 (C# 및 Visual Basic)
 편집하며 계속하기에서는 메서드 본문 내의 코드 변경 유형을 대부분 처리합니다. 그러나 메서드 본문 외부의 변경 내용 대부분과 메서드 본문 내의 몇 가지 변경 내용은 디버깅 중에 적용할 수 없습니다. 이러한 지원되지 않는 변경 내용을 적용하려면 디버깅을 중지하고 새로운 버전의 코드로 다시 시작해야 합니다.
@@ -36,7 +34,7 @@ ms.lasthandoff: 01/19/2018
 
 |언어 요소/기능|지원 되는 편집 작업|제한 사항|
 |-|-|-|
-|유형|메서드, 필드, 생성자, et al 추가|[예](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
+|형식|메서드, 필드, 생성자, et al 추가|[예](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |반복기|추가 또는 수정|아니요|
 |async/await 식|추가 또는 수정|[예](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits)|
 |동적 개체|추가 또는 수정|아니요|
@@ -60,12 +58,12 @@ ms.lasthandoff: 01/19/2018
 |언어 요소/기능|지원 되지 않는 편집 작업|
 |-|-|
 |모든 코드 요소|이름 바꾸기|
-|네임스페이스|추가|
+|네임스페이스|Add|
 |네임 스페이스, 형식, 멤버|삭제|
 |제네릭|추가 또는 수정|
 |인터페이스|수정|
-|유형|추상 또는 가상 멤버를 추가, 재정의 추가 (참조 [세부 정보](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
-|유형|소멸자를 추가 합니다.|
+|형식|추상 또는 가상 멤버를 추가, 재정의 추가 (참조 [세부 정보](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
+|형식|소멸자를 추가 합니다.|
 |멤버|포함된 된 interop 형식 참조 멤버를 수정|
 |멤버 (Visual Basic)|On Error 또는 Resume 문 사용 하 여 멤버를 수정|
 |멤버 (Visual Basic)|집계, Group By, 간단한 조인 또는 그룹 가입 LINQ 쿼리 절이 포함 된 멤버를 수정|
@@ -77,7 +75,7 @@ ms.lasthandoff: 01/19/2018
 |연산자 또는 인덱서|형식 매개 변수, 기본 형식 수정 대리자, 형식 또는 반환 형식 |
 |catch 블록|활성 문을 포함 하는 경우 수정|
 |try – catch – finally 블록|활성 문을 포함 하는 경우 수정|
-|using 문|추가|
+|using 문|Add|
 |비동기 메서드/람다|.NET Framework 4를 대상으로 하는 프로젝트에서 비동기 메서드/람다를 수정 하 고 줄이려면 (참조 [세부 정보](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
 |반복기|.NET Framework 4를 대상으로 하는 프로젝트에서 반복기를 수정 하 고 줄이려면 (참조 [세부 정보](https://github.com/dotnet/roslyn/wiki/EnC-Supported-Edits))|
   

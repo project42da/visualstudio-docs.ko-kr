@@ -1,11 +1,8 @@
 ---
-title: "Visual Studio의 데이터 집합 도구 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio의 데이터 집합 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.data.DataSet
 helpviewer_keywords:
@@ -46,18 +43,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], namespace
 - data adapters, populating datasets
 ms.assetid: ee57f4f6-9fe1-4e0a-be9a-955c486ff427
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: a8c8660fbc489dd8c4926bb09b8b42006da0897a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7db4eaf50f04d0baf082f6612ee7bd13a0d30ed6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dataset-tools-in-visual-studio"></a>Visual Studio의 데이터 집합 도구
 > [!NOTE]
@@ -86,7 +82,7 @@ ms.lasthandoff: 12/22/2017
   
     -   [데이터를 다시 데이터베이스에 저장](../data-tools/save-data-back-to-the-database.md)  
   
--   쿼리 및 데이터 집합의 데이터를 검색 합니다. 자세한 내용은 참조 [데이터 집합 쿼리](../data-tools/query-datasets.md)합니다. [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)]수 있도록 [LINQ (Language-Integrated Query)](/dotnet/csharp/linq/) 데이터에 대해 한 <xref:System.Data.DataSet> 개체입니다. 자세한 내용은 [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)를 참조하세요.  
+-   쿼리 및 데이터 집합의 데이터를 검색 합니다. 자세한 내용은 참조 [데이터 집합 쿼리](../data-tools/query-datasets.md)합니다. [!INCLUDE[linq_dataset](../data-tools/includes/linq_dataset_md.md)] 수 있도록 [LINQ (Language-Integrated Query)](/dotnet/csharp/linq/) 데이터에 대해 한 <xref:System.Data.DataSet> 개체입니다. 자세한 내용은 [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)를 참조하세요.  
   
 -   사용 하 여는 **데이터 소스** 창 사용자 인터페이스 컨트롤 데이터 집합 또는 해당 개별 열을 바인딩할 하 고 사용자가 편집 가능한 되는 열을 지정할 수 있습니다. 자세한 내용은 참조 [Visual Studio에서 데이터에 컨트롤 바인딩](../data-tools/bind-controls-to-data-in-visual-studio.md)합니다.  
   

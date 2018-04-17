@@ -1,12 +1,10 @@
 ---
-title: "CA2114: 메서드 보안은 이어야 형식의 상위 집합 | Microsoft Docs"
-ms.custom: 
+title: 'CA2114: 메서드 보안은 이어야 형식의 상위 집합 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - MethodSecurityShouldBeASupersetOfType
 - CA2114
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA2114
 - MethodSecurityShouldBeASupersetOfType
 ms.assetid: 663f7aa4-8be5-4bd5-be92-4e9444f07077
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: a3ff1a6be01b51f45b0ca5b5417ead2195d023bf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a4924a6306b99fe2d2ead83442bca2ee1edb5219
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: 메서드 보안은 형식의 상위 집합이어야 합니다.
 |||  
@@ -45,14 +43,14 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  메서드는 형식으로 지정 하는 보안 필요 하지 않은 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 그러나이 일반적인 시나리오가 아니며 신중 하 게 디자인 검토에 대 한 요구가 나타낼 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 위반의 위험성을 보여 주기 위해 환경 권한을 사용 합니다. 이 예제에서는 응용 프로그램 코드 형식에 필요한 사용 권한을 거부 하기 전에 보안 된 형식의 인스턴스를 만듭니다. 실제 위협 시나리오에서는 응용 프로그램에는 개체의 인스턴스를 가져오는 다른 방법이 필요 합니다.  
   
  다음 예제에서 라이브러리 요구는 형식에 대 한 권한을 쓰고 메서드에 대 한 읽기 권한이 있습니다.  
   
  [!code-csharp[FxCop.Security.MethodLevelSecurity#1](../code-quality/codesnippet/CSharp/ca2114-method-security-should-be-a-superset-of-type_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 응용 프로그램 코드 형식 수준 보안 요구 사항을 충족 하지 않는 경우에 메서드를 호출 하 여 라이브러리의 취약성을 보여 줍니다.  
   
  [!code-csharp[FxCop.Security.TestMethodLevelSecurity#1](../code-quality/codesnippet/CSharp/ca2114-method-security-should-be-a-superset-of-type_2.cs)]  

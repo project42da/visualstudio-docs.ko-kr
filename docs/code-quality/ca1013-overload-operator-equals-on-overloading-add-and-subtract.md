@@ -1,12 +1,10 @@
 ---
-title: "CA1013: 오버 로드 연산자 오버 로드에 더하기 및 빼기 | Microsoft Docs"
-ms.custom: 
+title: 'CA1013: 오버 로드 연산자 오버 로드에 더하기 및 빼기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - OverrideOperatorEqualsOnOverridingAddAndSubtract
 - OverrideOperatorEqualsOnOverloadingAddAndSubtract
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - CA1013
 - OverloadOperatorEqualsOnOverloadingAddAndSubtract
 ms.assetid: 5bd28d68-c179-49ff-af47-5250b8b18a10
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d668760159af34e8f22a69bed41de185fa4254e4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3117841570e737f981959165892b0ea2d39bd7bd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: 더하기 및 빼기를 오버로드할 때 같음 연산자를 오버로드하십시오.
 |||  
@@ -65,12 +63,12 @@ return left.Equals(right);
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  같음 연산자의 기본 구현에서 형식에 대 한 올바른 동작을 제공 하는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 형식 정의 (`BadAddableType`)이이 규칙을 위반 하 합니다. 이 형식은 테스트 필드 값이 같은 두 인스턴스에 확인 하도록 같음 연산자를 구현 해야 `true` 같음에 대 한 합니다. 형식 `GoodAddableType` 수정 된 구현을 보여 줍니다. 이 형식은 또한 같지 않음 연산자를 구현 및 재정의 <xref:System.Object.Equals%2A> 다른 규칙을 충족 하기 위해 합니다. 완전 한 구현도 구현 <xref:System.Object.GetHashCode%2A>합니다.  
   
  [!code-csharp[FxCop.Design.AddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 같음 연산자에 대 한 기본 및 올바른 동작을 설명 하기 위해이 항목에서 이전에 정의 된 형식의 인스턴스를 사용 하 여 같음을 테스트 합니다.  
   
  [!code-csharp[FxCop.Design.TestAddAndSubtract#1](../code-quality/codesnippet/CSharp/ca1013-overload-operator-equals-on-overloading-add-and-subtract_2.cs)]  

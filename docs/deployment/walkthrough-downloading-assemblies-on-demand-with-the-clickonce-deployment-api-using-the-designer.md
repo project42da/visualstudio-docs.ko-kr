@@ -1,12 +1,10 @@
 ---
-title: "연습: ClickOnce 배포 디자이너를 사용 하 여 API에서 요청 시 어셈블리 다운로드 | Microsoft Docs"
-ms.custom: 
+title: '연습: ClickOnce 배포 디자이너를 사용 하 여 API에서 요청 시 어셈블리 다운로드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,16 @@ helpviewer_keywords:
 - ClickOnce deployment, on-demand download
 - on-demand assemblies, ClickOnce
 ms.assetid: 59a0dd5f-1cab-4f2f-b780-0ab7399905d5
-caps.latest.revision: "18"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: b19f8759ecaa29ffda36660877bfc69acaa06375
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 247487277052cf488907ba97393519b1fca44f3d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-downloading-assemblies-on-demand-with-the-clickonce-deployment-api-using-the-designer"></a>연습: 디자이너를 사용하여 ClickOnce 배포 API에서 요청 시 어셈블리 다운로드
 기본적으로 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 포함된 모든 어셈블리는 응용 프로그램을 처음 실행할 때 다운로드됩니다. 그러나 소수의 사용자가 사용하는 응용 프로그램의 일부가 있을 수 있습니다. 이 경우 해당 형식 중 하나를 만들 때에만 어셈블리를 다운로드하고자 할 수 있습니다. 다음 연습에서는 응용 프로그램의 특정 어셈블리를 "선택 사항"으로 표시하는 방법 및 공용 언어 런타임에서 요청할 때 <xref:System.Deployment.Application> 네임스페이스에 있는 클래스를 사용하여 이를 다운로드하는 방법을 설명합니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 12/22/2017
 1.  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 새 Windows Forms 프로젝트를 만듭니다. **파일** 메뉴에서 **추가**를 가리킨 다음 **새 프로젝트**를 클릭합니다. 대화 상자에서 **클래스 라이브러리** 프로젝트를 선택하고 이름을 `ClickOnceLibrary`로 지정합니다.  
   
     > [!NOTE]
-    >  Visual basic에서 이 프로젝트의 루트 네임스페이스를 `Microsoft.Samples.ClickOnceOnDemand` 로 변경하거나 선택한 네임스페이스로 변경하려면 프로젝트 속성을 수정하는 것이 좋습니다. 편의상 이 연습의 두 프로젝트는 네임스페이스가 동일합니다.  
+    >  Visual basic에서 이 프로젝트의 루트 네임스페이스를 `Microsoft.Samples.ClickOnceOnDemand`로 변경하거나 선택한 네임스페이스로 변경하려면 프로젝트 속성을 수정하는 것이 좋습니다. 편의상 이 연습의 두 프로젝트는 네임스페이스가 동일합니다.  
   
 2.  `DynamicClass` 라는 이름의 단일 속성으로 `Message`라는 이름의 클래스를 정의합니다.  
   
@@ -81,7 +79,7 @@ ms.lasthandoff: 12/22/2017
   
 3.  ClickOnceLibrary.dll에 대한 목록을 찾습니다. **게시 상태** 드롭다운 상자를 **포함**으로 설정합니다.  
   
-4.  **그룹** 드롭다운 상자를 확장하고 **새로 만들기**를 선택합니다. `ClickOnceLibrary` 라는 이름을 새 그룹 이름으로 입력합니다.  
+4.  **그룹** 드롭다운 상자를 확장하고 **새로 만들기**를 선택합니다. `ClickOnceLibrary`라는 이름을 새 그룹 이름으로 입력합니다.  
   
 5.  에 설명 된 대로 응용 프로그램을 게시 계속 [하는 방법: ClickOnce 응용 프로그램 게시 마법사를 사용 하 여 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)합니다.  
   

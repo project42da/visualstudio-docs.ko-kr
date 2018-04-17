@@ -1,12 +1,10 @@
 ---
-title: "방법: 배포 업데이트를 위한 대체 위치를 지정 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: 배포 업데이트를 위한 대체 위치를 지정 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, updates
 - deployment update, alternative locations
 ms.assetid: 7faacd35-2638-492d-80f6-6b57e5f820de
-caps.latest.revision: "15"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 637f4517734d3a0bbf86c3894c4f0fc7dd5b5e8d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 107fb4680b2ee5600c2cee847ebb3d2b5efd7da4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-specify-an-alternate-location-for-deployment-updates"></a>방법: 배포 업데이트를 위한 대체 위치 지정
 설치할 수 있습니다 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD 또는 파일 공유에서 처음 응용 프로그램이 있지만 응용 프로그램 웹 정기적 업데이트를 확인 해야 합니다. 응용 프로그램을 처음 설치한 후 웹에서 자동으로 업데이트할 수 있도록 배포 매니페스트에 업데이트에 대 한 대체 위치를 지정할 수 있습니다.  
@@ -50,9 +48,9 @@ ms.lasthandoff: 12/22/2017
   
 1.  .NET Framework 명령 프롬프트를 엽니다.  
   
-2.  다음 명령을 사용 하 여 업데이트 위치를 설정 합니다. 이 예제에서는 **HelloWorld.exe.application** 에 경로 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 항상에.application 확장, 응용 프로그램 매니페스트 및 **http://adatum.com/Update/Path** url [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 업데이트를 확인 합니다.  
+2.  다음 명령을 사용 하 여 업데이트 위치를 설정 합니다. 이 예제에서는 **HelloWorld.exe.application** 에 경로 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 항상에.application 확장, 응용 프로그램 매니페스트 및 **http://adatum.com/Update/Path** 해당 URL입니다[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 업데이트를 확인 합니다.  
   
-     **Mage-HelloWorld.exe.application 업데이트-ProviderUrl http://adatum.com/Update/Path**  
+     **Mage-ProviderUrl HelloWorld.exe.application 업데이트 http://adatum.com/Update/Path**  
   
 3.  파일을 저장합니다.  
   

@@ -2,28 +2,24 @@
 title: IDebugPortSupplier2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugPortSupplier2
 helpviewer_keywords:
 - IDebugPortSupplier2 interface
 ms.assetid: 37067324-2ea6-4a01-8829-a6e9c7a70068
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 257bbf334adbdfd3a93cf172de0b15bf63cb3217
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e4aa26aa37b40c0e483342e6eb93cbac15bbbfc2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugportsupplier2"></a>IDebugPortSupplier2
 이 인터페이스는 포트 세션 디버그 관리자 (SDM)를 제공합니다.  
@@ -38,7 +34,7 @@ IDebugPortSupplier2 : IUnknown
  사용자 지정 포트 공급자 포트 공급자를 나타내는 데이 인터페이스를 구현 합니다.  
   
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
- 에 대 한 호출 `CoCreateInstance` 포트 공급 업체와 `GUID` (이것이이 인터페이스를 검색 하는 일반적인 방법)이이 인터페이스를 반환 합니다. 예:  
+ 에 대 한 호출 `CoCreateInstance` 포트 공급 업체와 `GUID` (이것이이 인터페이스를 검색 하는 일반적인 방법)이이 인터페이스를 반환 합니다. 예를 들어:  
   
 ```cpp  
 IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)  
@@ -84,7 +80,7 @@ IDebugPortSupplier2 *GetPortSupplier(GUID *pPortSupplierGuid)
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

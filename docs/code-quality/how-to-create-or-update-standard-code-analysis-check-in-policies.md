@@ -1,26 +1,23 @@
 ---
-title: "방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트 | Microsoft Docs"
-ms.custom: 
+title: '방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codeanalysis.policyeditor
 helpviewer_keywords:
 - code analysis, migrating check-in policy
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0fba16ee285faeafdc37fc38e6b5bb0a0725a46
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: c9d6a28c5dd0ae8d72f11c76d33ff15268d4dda4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트
 
@@ -71,6 +68,6 @@ ms.lasthandoff: 02/01/2018
 
     - 집합을 만들고 사용자 지정 체크 인 정책 규칙을 구현 하는 방법에 대 한 자세한 내용은 참조 하십시오. [관리 코드에 대 한 사용자 지정 구현에서 체크 인 정책을](../code-quality/implementing-custom-code-analysis-check-in-policies-for-managed-code.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [코드 분석 체크 인 정책 만들기 및 사용](../code-quality/creating-and-using-code-analysis-check-in-policies.md)

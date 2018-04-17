@@ -1,11 +1,8 @@
 ---
-title: "데이터 소스 창에 사용자 지정 컨트롤 추가 | Microsoft Docs"
-ms.custom: 
+title: 데이터 소스 창에 사용자 지정 컨트롤 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.datasource.howtoaddcustomcontrol
 helpviewer_keywords:
@@ -16,18 +13,17 @@ helpviewer_keywords:
 - ComplexBindingPropertiesAttribute class, using
 - Data Sources Window, selecting controls
 ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ffa55100e9bbec33fdbca19ab2757c4de63f5030
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d00e818c0cfaa2659f55e5eb8bb8e4e4a87e8abc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>데이터 소스 창에 사용자 지정 컨트롤 추가
 항목을 끌면는 **데이터 소스** 데이터 바인딩된 컨트롤을 만드는 디자인 화면에 창을 만드는 컨트롤의 형식을 선택할 수 있습니다. 창에서 각 항목을 선택할 수 있는 컨트롤을 표시 하는 드롭다운 목록을 있습니다. 각 항목에 연결 된 컨트롤의 집합은 데이터 형식 항목에 따라 결정 됩니다. 만들 컨트롤 목록에 나타나지 않으면 목록에 컨트롤을 추가 하려면이 항목의 지침은 따르면 됩니다.  
@@ -37,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  표시되는 대화 상자와 메뉴 명령은 실제 설정이나 버전에 따라 도움말에서 설명하는 것과 다를 수 있습니다. 설정을 변경 하는 **도구** 메뉴 선택 **설정 가져오기 및 내보내기**합니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-##  <a name="customizinglist"></a>데이터 형식에 대 한 바인딩 가능한 컨트롤의 목록을 사용자 지정  
+##  <a name="customizinglist"></a> 데이터 형식에 대 한 바인딩 가능한 컨트롤의 목록을 사용자 지정  
  추가 하거나 항목에 대해 사용할 수 있는 컨트롤의 목록에서 컨트롤을 제거 하는 **데이터 소스** 창 다음 단계를 수행 하는 특정 데이터 형식입니다.  
   
 #### <a name="to-select-the-controls-to-be-listed-for-a-data-type"></a>데이터 형식에 대 한 나열 하려면 컨트롤을 선택 하려면  
@@ -71,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
      선택한 컨트롤의 **컨트롤 연결한** 상자 항목에 대 한 드롭다운 메뉴에 표시 합니다.  
   
-##  <a name="addingcontrols"></a>데이터 형식에 대 한 연결 된 컨트롤 목록에 컨트롤 추가  
+##  <a name="addingcontrols"></a> 데이터 형식에 대 한 연결 된 컨트롤 목록에 컨트롤 추가  
  컨트롤 데이터 형식과 연결 하 고 싶지만 컨트롤에 표시 되지 않습니다는 **컨트롤 연결한** 상자, 목록에 컨트롤을 추가 해야 합니다. 컨트롤은 현재 솔루션의 또는 참조 된 어셈블리에 있어야 합니다. 사용할 수 있는 수도 있어야는 **도구 상자**, 컨트롤의 데이터 바인딩 동작을 지정 하는 특성을 가질 수 있습니다.  
   
 #### <a name="to-add-controls-to-the-list-of-associated-controls"></a>연결 된 컨트롤 목록에 컨트롤을 추가 하려면  

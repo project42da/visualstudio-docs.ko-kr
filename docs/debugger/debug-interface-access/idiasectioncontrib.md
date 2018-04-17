@@ -1,29 +1,25 @@
 ---
 title: IDiaSectionContrib | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaSectionContrib interface
 ms.assetid: 371d40f6-ca0e-4d7e-9210-64d3768996c6
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f8bfec567897a3d5ce6b69e9d4aeae77872de95
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: cfaa6208c0ca25e1ede8e34feaebdce540c08d6d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiasectioncontrib"></a>IDiaSectionContrib
 섹션 기여도 설명 하는 데이터를 검색, 즉, 연속 된 메모리 블록을 제공한 이미지에는 컴파일 대상입니다.  
@@ -69,7 +65,7 @@ IDiaSectionContrib : IUnknown
 ## <a name="notes-for-callers"></a>호출자에 대 한 참고 사항  
  이 인터페이스를 호출 하 여 가져온는 [idiaenumsectioncontribs:: Item](../../debugger/debug-interface-access/idiaenumsectioncontribs-item.md) 및 [idiaenumsectioncontribs:: Next](../../debugger/debug-interface-access/idiaenumsectioncontribs-next.md) 메서드. 참조는 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) 인터페이스 가져오기에 대 한 예제는 `IDiaSectionContrib` 인터페이스입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 기능은 연결 된 모든 기호 함께 각 섹션의 주소를 표시합니다. 참조는 [IDiaEnumSectionContribs](../../debugger/debug-interface-access/idiaenumsectioncontribs.md) 인터페이스를 방법을 `IDiaSectionContrib` 인터페이스를 가져옵니다.  
   
 ```C++  

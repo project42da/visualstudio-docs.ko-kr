@@ -1,13 +1,10 @@
 ---
-title: ": 멤버 ca2223 반환 형식 이외의 | Microsoft Docs"
-ms.custom: 
+title: ': 멤버 ca2223 반환 형식 이외의 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - MembersShouldDifferByMoreThanReturnType
 - CA2223
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - CA2223
 - MembersShouldDifferByMoreThanReturnType
 ms.assetid: eb326d9f-50d9-48cb-84be-d41c84a8fe09
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c72475c76a85216499a389d12f090ef302fc143
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 637580bee168ac35295e735bcddfed81922e95eb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2223-members-should-differ-by-more-than-return-type"></a>CA2223: 멤버는 반환 형식 이외의 것도 달라야 합니다.
 |||  
@@ -47,7 +43,7 @@ ms.lasthandoff: 02/01/2018
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제를 Microsoft intermediate language (MSIL)에서이 규칙을 위반 하는 형식을 보여줍니다. 공지는 C# 또는 Visual Basic을 사용 하 여이 규칙을 위반 될 수 없습니다.  
   
 ```  

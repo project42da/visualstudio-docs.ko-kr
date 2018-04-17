@@ -1,12 +1,10 @@
 ---
-title: ": 중첩된 형식은 해야 하지 ca1034 | Microsoft Docs"
-ms.custom: 
+title: ': 중첩된 형식은 해야 하지 ca1034 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - NestedTypesShouldNotBeVisible
 - CA1034
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - NestedTypesShouldNotBeVisible
 - CA1034
 ms.assetid: e9789a2c-2540-42a1-8705-ae7104011194
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: dc35514eab2344c086305ec88435ff8a32285e4f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: db5983dff8bf100c3215fd457f4dfbc5170c2d30
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1034-nested-types-should-not-be-visible"></a>CA1034: 중첩 형식은 노출하지 마십시오.
 |||  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 형식을 보여 줍니다.  
   
  [!code-cpp[FxCop.Design.NestedTypes#1](../code-quality/codesnippet/CPP/ca1034-nested-types-should-not-be-visible_1.cpp)]

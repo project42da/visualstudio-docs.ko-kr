@@ -1,26 +1,24 @@
 ---
-title: "포트 가져오기 | Microsoft Docs"
-ms.custom: 
+title: 포트 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - ports, getting
 - debugging [Debugging SDK], ports
 ms.assetid: 745c2337-cfff-4d02-b49c-3ca7c4945c5e
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5f6065c91845df020325e279a1fa3858a4f75505
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6c20b3e3bdc2644e7af7d9a35de06af7f96d7680
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-a-port"></a>포트 가져오기
 포트는 프로세스가 실행 될 컴퓨터에 대 한 연결을 나타냅니다. 해당 컴퓨터를 로컬 컴퓨터나 원격 컴퓨터를 수 있습니다 (있는 가능 실행 될 수는 Windows 기반 운영 체제; 참조 [포트](../../extensibility/debugger/ports.md) 자세한 정보에 대 한).  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
  Visual Studio 디버그 엔진에 필요한 포트에서 제공 하 고 포트 공급자에서이 포트를 가져옵니다. 프로그램에 연결 된 경우 (또는에서 디버거 내에서 예외로 인해 throw 되었으면 Just 시간 [JIT] 대화 상자를 트리거되어), 사용자는 사용할 전송 (포트 공급자에 대 한 다른 이름)의 옵션이 제공 됩니다. 그렇지 않으면 사용자가 디버거 내에서 프로그램 시작 되 면 프로젝트 시스템에서 사용할 포트 공급자를 지정 합니다. Visual Studio가 나타내는 포트 공급자를 인스턴스화하 하거나 이벤트에 [IDebugPortSupplier2](../../extensibility/debugger/reference/idebugportsupplier2.md) 인터페이스를 하 고 새 포트를 호출 하 여 요청 [포트 추가](../../extensibility/debugger/reference/idebugportsupplier2-addport.md) 와 [ IDebugPortRequest2](../../extensibility/debugger/reference/idebugportrequest2.md) 인터페이스입니다. 그러면이 포트 원본이 나 다른 한 가지 형태에 디버그 엔진에 전달 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 코드 조각에 제공 되는 포트를 사용 하는 방법을 보여 줍니다 [LaunchSuspended](../../extensibility/debugger/reference/idebugenginelaunch2-launchsuspended.md) 에서 프로그램 노드를 등록 하려면 [ResumeProcess](../../extensibility/debugger/reference/idebugenginelaunch2-resumeprocess.md)합니다. 쉽게 구별할 수 있도록 직접 관련 되지 않은이 개념 매개 변수를 생략 했습니다.  
   
 > [!NOTE]

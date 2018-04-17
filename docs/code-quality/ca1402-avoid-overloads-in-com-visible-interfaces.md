@@ -1,12 +1,10 @@
 ---
-title: ": Ca1402 COM 노출 인터페이스에서 오버 로드 | Microsoft Docs"
-ms.custom: 
+title: ': Ca1402 COM 노출 인터페이스에서 오버 로드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - AvoidOverloadsInComVisibleInterfaces
 - CA1402
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - AvoidOverloadsInComVisibleInterfaces
 - CA1402
 ms.assetid: 2724c1f9-d5d3-4704-b124-21c4d398e5df
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9294e1aab07aa05bc10de507e0a5885a47ebcc40
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 48edf4111b64f4adacb7694a68cc279273024933
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1402-avoid-overloads-in-com-visible-interfaces"></a>CA1402: COM 노출 인터페이스에서 오버로드를 사용하지 마십시오.
 |||  
@@ -61,7 +59,7 @@ void SomeMethod_3(int valueOne, int valueTwo);
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 규칙을 위반 하는 인터페이스 및 규칙을 충족 하는 인터페이스를 보여 줍니다.  
   
  [!code-vb[FxCop.Interoperability.OverloadsInterface#1](../code-quality/codesnippet/VisualBasic/ca1402-avoid-overloads-in-com-visible-interfaces_1.vb)]

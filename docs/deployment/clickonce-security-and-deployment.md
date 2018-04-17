@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce 보안 및 배포 | Microsoft Docs"
-ms.custom: 
+title: ClickOnce 보안 및 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,25 +15,25 @@ helpviewer_keywords:
 - ClickOnce deployment
 - publishing, ClickOnce
 ms.assetid: abab6d34-c3c2-45c1-a8b6-43c7d3131e7a
-caps.latest.revision: "32"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: 1923c39669d50303f907974816fbb54297c477c0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 24ebab9776c6cb0b829e1b79cb089ef6b826f726
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clickonce-security-and-deployment"></a>ClickOnce 보안 및 배포
-[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]설치 하 고 최소한의 사용자 작업으로 실행할 수 있는 자동 업데이트 Windows 기반 응용 프로그램을 만들 수 있게 해 주는 배포 기술이입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]게시 하 고 Visual Basic 및 C#를 사용 하 여 프로젝트를 개발한 경우 ClickOnce 기술을 사용 하 여 배포 된 응용 프로그램 업데이트에 대 한 완벽 한 지원을 제공 합니다. Visual C++ 응용 프로그램을 배포 하는 방법에 대 한 내용은 [Visual C++ 응용 프로그램에 대 한 ClickOnce 배포](/cpp/ide/clickonce-deployment-for-visual-cpp-applications).  
+[!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 설치 하 고 최소한의 사용자 상호 작용을 통해 실행할 수 있는 자동 업데이트 Windows 기반 응용 프로그램을 만들 수 있도록 하는 배포 기술이입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 게시 하 고 Visual Basic 및 Visual C# 프로젝트를 개발한 경우 ClickOnce 기술을 통해 배포 된 응용 프로그램 업데이트에 대 한 모든 지원을 제공 합니다. Visual C++ 응용 프로그램을 배포 하는 방법에 대 한 내용은 [Visual C++ 응용 프로그램에 대 한 ClickOnce 배포](/cpp/ide/clickonce-deployment-for-visual-cpp-applications).  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]배포 배포의 세 가지 주요 문제를 극복 합니다.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포에서 세 가지 주요 문제를 극복 하는 배포:  
   
--   **응용 프로그램 업데이트의 어려움입니다.** Microsoft Windows Installer 배포를 사용 하 여 응용 프로그램이 업데이트 될 때마다 사용자는 msp 파일 업데이트를 설치 하는; 설치 된 제품에 적용 사용 하 여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 업데이트를 자동으로 제공할 수 있습니다. 응용 프로그램의 변경 된 부분만 다운로드 되 고 병렬 하 여 새 폴더에서 업데이트 된 전체 응용 프로그램이 다시 설치 됩니다 다음.  
+-   **응용 프로그램을 업데이트 하는 데 문제가 있습니다.** Microsoft Windows Installer 배포를 사용 하 여 응용 프로그램이 업데이트 될 때마다 사용자는 msp 파일 업데이트를 설치 하는; 설치 된 제품에 적용 사용 하 여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 업데이트를 자동으로 제공할 수 있습니다. 응용 프로그램의 변경 된 부분만 다운로드 되 고 병렬 하 여 새 폴더에서 업데이트 된 전체 응용 프로그램이 다시 설치 됩니다 다음.  
   
--   **사용자의 컴퓨터에 영향을 미칩니다.** Windows Installer 배포를 사용 하 여 응용 프로그램이 자주 사용 공유 구성 요소를 프로그램과 충돌할 수 없습니다. 사용 하 여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포의 경우 각 응용 프로그램은 독립적 이며 다른 응용 프로그램을 방해할 수 있습니다.  
+-   **사용자의 컴퓨터에 미치는 영향입니다.** Windows Installer 배포를 사용 하 여 응용 프로그램이 자주 사용 공유 구성 요소를 프로그램과 충돌할 수 없습니다. 사용 하 여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포의 경우 각 응용 프로그램은 독립적 이며 다른 응용 프로그램을 방해할 수 있습니다.  
   
 -   **보안 권한입니다.** Windows Installer 배포 관리자 권한이 필요 하며 제한 된 사용자 설치만. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 설치를 사용 하면 비관리 응용 프로그램에 필요한 코드 액세스 보안 권한만 부여 하 고 있습니다.  
   
@@ -44,9 +42,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="what-is-a-clickonce-application"></a>ClickOnce 응용 프로그램 이란?  
  A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] (.xbap) Windows Presentation Foundation, Windows Forms (.exe), 콘솔 응용 프로그램 (.exe) 또는 Office 솔루션 (.dll)를 사용 하 여 게시 된 응용 프로그램은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 기술. 게시할 수 있는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 세 가지 방법으로 응용 프로그램: 웹 페이지, 네트워크 파일 공유 또는 CD-ROM과 같은 미디어. A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 최종 사용자의 컴퓨터에 설치 하 고 컴퓨터가 오프 라인 상태 또는 아무것도 최종 사용자의 컴퓨터에 영구적으로 설치 하지 않고 온라인 전용 모드로 실행할 수 있습니다 경우에 로컬로 실행할 수 있습니다. 자세한 내용은 [ClickOnce 배포 전략 선택](../deployment/choosing-a-clickonce-deployment-strategy.md)을 참조하세요.  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]응용 프로그램 자체 업데이트 될 수 있습니다; 사용할 수 있게 되 고 자동으로 업데이트 된 파일을 대체 하는 새 버전에 대 한 확인할 수 있습니다. 개발자는 업데이트 동작; 지정할 수 있습니다. 네트워크 관리자가 제어할 수 업데이트 전략, 예를 들어, 업데이트가 필수로 표시 합니다. 업데이트 수 롤백할 수도 이전 버전으로 최종 사용자 또는 관리자입니다. 자세한 내용은 [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md).  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 자체 업데이트 수 있습니다. 최신 버전을 사용할 수 있게 자동으로 업데이트 된 파일을 대체할 때를 확인할 수 있습니다. 개발자는 업데이트 동작; 지정할 수 있습니다. 네트워크 관리자가 제어할 수 업데이트 전략, 예를 들어, 업데이트가 필수로 표시 합니다. 업데이트 수 롤백할 수도 이전 버전으로 최종 사용자 또는 관리자입니다. 자세한 내용은 [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md).  
   
- 때문에 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 격리 된 설치 하거나 실행 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 해도 기존 응용 프로그램입니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]응용 프로그램은 독립적인 경우. 각 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 설치 되어 안전한 사용자별, 응용 프로그램별 캐시에서에서 실행 됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]응용 프로그램은 인터넷 또는 인트라넷 보안 영역에서 실행 합니다. 필요한 경우 응용 프로그램이 승격 된 보안 권한을 요청할 수 있습니다. 자세한 내용은 [ClickOnce 응용 프로그램 게시](../deployment/securing-clickonce-applications.md)를 참조하세요.  
+ 때문에 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 격리 된 설치 하거나 실행 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 해도 기존 응용 프로그램입니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 자체 포함 합니다. 각 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 설치 되어 보안 사용자별, 응용 프로그램별 캐시에서에서 실행 합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 인터넷 또는 인트라넷 보안 영역에서 실행합니다. 필요한 경우 응용 프로그램이 승격 된 보안 권한을 요청할 수 있습니다. 자세한 내용은 [ClickOnce 응용 프로그램 게시](../deployment/securing-clickonce-applications.md)를 참조하세요.  
   
 ## <a name="how-clickonce-security-works"></a>ClickOnce 보안 작동 방법  
  코어 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 보안은 인증서, 코드 액세스 보안 정책 및 ClickOnce 신뢰 프롬프트에 기초 합니다.  
@@ -87,7 +85,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  **게시 마법사** 이러한 단계를 수행 하려면 Visual Studio에서 사용할 수 있습니다.  
   
- 배포 위치 외에도 배포 매니페스트는 응용 프로그램에서 업데이트 된 버전을 여기서 확인 한 업데이트 위치 (웹 페이지 또는 네트워크 파일 공유)도 포함 됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]**게시** 속성은 응용 프로그램 업데이트를 확인 하는 시기와 빈도 지정 하는 데 사용 됩니다. 배포 매니페스트의 업데이트 동작을 지정할 수 있습니다 또는 방법으로 응용 프로그램의 사용자 인터페이스에서 사용자 선택으로 제공할 수 있습니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Api입니다. 또한 **게시** 속성을 사용 하 업데이트를 필수로 또는 이전 버전으로 롤백할 수 있습니다. 자세한 내용은 [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md).  
+ 배포 위치 외에도 배포 매니페스트는 응용 프로그램에서 업데이트 된 버전을 여기서 확인 한 업데이트 위치 (웹 페이지 또는 네트워크 파일 공유)도 포함 됩니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] **게시** 속성은 응용 프로그램 업데이트를 확인 하는 시기와 빈도 지정 하는 데 사용 됩니다. 배포 매니페스트의 업데이트 동작을 지정할 수 있습니다 또는 방법으로 응용 프로그램의 사용자 인터페이스에서 사용자 선택으로 제공할 수 있습니다는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] Api입니다. 또한 **게시** 속성을 사용 하 업데이트를 필수로 또는 이전 버전으로 롤백할 수 있습니다. 자세한 내용은 [ClickOnce 업데이트 전략 선택](../deployment/choosing-a-clickonce-update-strategy.md).  
   
 ### <a name="third-party-installers"></a>타사 설치 관리자  
  응용 프로그램과 함께 타사 구성 요소를 설치 하 여 ClickOnce 설치 관리자를 사용자 지정할 수 있습니다. 재배포 가능 패키지 (.exe 또는.msi 파일)를 포함 하며 언어 중립적인 제품 매니페스트 및 언어별로 패키지 매니페스트를 사용 하 여 패키지에 설명 합니다. 자세한 내용은 참조 [부트스트래퍼 패키지 만들기](../deployment/creating-bootstrapper-packages.md)합니다.  

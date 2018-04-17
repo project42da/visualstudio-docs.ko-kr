@@ -1,27 +1,23 @@
 ---
-title: "그래픽 이벤트 목록 | Microsoft Docs"
-ms.custom: 
+title: 그래픽 이벤트 목록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.eventlist
 ms.assetid: a1252e19-b27d-4dc7-a16b-fdac894c1f0e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 601fc4eb47e89a4035f14722793169a76d73f520
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 244f7dd8c89eb1dcb15b81bcb20c0db9cb6cf617
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graphics-event-list"></a>그래픽 이벤트 목록
 Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 게임 또는 앱의 프레임 렌더링 중 기록된 Direct3D 이벤트를 살펴봅니다.  
@@ -60,7 +56,7 @@ Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 �
 -   에 **그래픽 이벤트 목록** 창의 이벤트 목록 위에 **보기** 드롭다운 중에서 선택할는 **타임 라인** 보기 또는 **GPU작업** 보기.  
   
 ### <a name="filtering-events"></a>이벤트 필터링  
- **그래픽 이벤트 목록** 창의 오른쪽 맨 위 모퉁이에 있는 검색 상자를 사용하여 이름에 특정 키워드가 포함된 이벤트만 포함하도록 이벤트 목록을 필터링할 수 있습니다. 이전 그림에서처럼 `Vertex`와 같은 키워드 하나를 지정하거나 `Draw;Primitive`와 같이 세미콜론으로 구분된 목록을 사용하여 여러 키워드를 지정할 수 있습니다. 그러면 이름에 `Draw` 또는 `Primitive` 가 포함된 이벤트를 찾게 됩니다. 검색어는 공백을 구분합니다. 예를 들어 `VSSet` 와 `VS Set` 는 다른 검색어입니다. 따라서 검색어는 주의 깊게 입력해야 합니다.  
+ **그래픽 이벤트 목록** 창의 오른쪽 맨 위 모퉁이에 있는 검색 상자를 사용하여 이름에 특정 키워드가 포함된 이벤트만 포함하도록 이벤트 목록을 필터링할 수 있습니다. 이전 그림에서처럼 `Vertex`와 같은 키워드 하나를 지정하거나 `Draw;Primitive`와 같이 세미콜론으로 구분된 목록을 사용하여 여러 키워드를 지정할 수 있습니다. 그러면 이름에 `Draw` 또는 `Primitive` 가 포함된 이벤트를 찾게 됩니다. 검색어는 공백을 구분합니다. 예를 들어 `VSSet`와 `VS Set`는 다른 검색어입니다. 따라서 검색어는 주의 깊게 입력해야 합니다.  
   
 ### <a name="moving-between-draw-calls"></a>그리기 호출 간에 이동  
  `Draw` 호출 검사는 특히 중요하므로 **그래픽 이벤트 목록** 창의 왼쪽 맨 아래 모퉁이에 있는 **다음 그리기 호출로 이동** 및 **이전 그리기 호출로 이동** 단추를 사용하여 그리기 호출을 찾으면 그리기 호출 간에 신속하게 이동할 수 있습니다.  
@@ -75,8 +71,8 @@ Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 �
 |----------|-----------------------|  
 |(아이콘 없음)|일반 이벤트<br /> 사용자 정의 이벤트, 사용자 정의 이벤트 그룹 또는 그리기 이벤트가 아닌 모든 이벤트입니다.|  
 |![그리기 이벤트 아이콘](media/vsg_eventlist_icon_draw.png "vsg_eventlist_icon_draw")|그리기 이벤트<br /> 캡처된 프레임 중 발생한 그리기 이벤트를 표시합니다.|  
-|![User&#45; 정의 이벤트 마커 아이콘](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|사용자 정의 이벤트 그룹<br /> 앱에서 정의한 것처럼 그룹 관련 이벤트입니다.|  
-|![User&#45; 정의 이벤트 마커 아이콘](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|사용자 정의 이벤트 표식<br /> 앱에서 정의한 것처럼 특정 위치를 표시합니다.|  
+|![사용자&#45;정의 이벤트 마커 아이콘](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|사용자 정의 이벤트 그룹<br /> 앱에서 정의한 것처럼 그룹 관련 이벤트입니다.|  
+|![사용자&#45;정의 이벤트 마커 아이콘](media/vsg_eventlist_icon_user.png "vsg_eventlist_icon_user")|사용자 정의 이벤트 표식<br /> 앱에서 정의한 것처럼 특정 위치를 표시합니다.|  
   
 ## <a name="marking-user-defined-events-in-your-app"></a>앱에서 사용자 정의 이벤트 표시  
  사용자 정의 이벤트는 앱에 고유합니다. 이러한 이벤트를 사용하여 앱에서 발생한 중요한 이벤트를 그래픽 이벤트 목록의 이벤트와 연관시킬 수 있습니다. 예를 들어 사용자 정의 이벤트 그룹을 만들어 관련 이벤트(예: 사용자 인터페이스를 렌더링하는 이벤트)를 그룹 또는 계층 구조로 그룹화하여 이벤트 목록을 보다 쉽게 찾을 수 있습니다. 또는 특정 종류의 개체를 그릴 때 표식을 만들어 이벤트 목록에서 그래픽 이벤트를 쉽게 찾을 수 있습니다.  
@@ -102,17 +98,17 @@ Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 �
 |이벤트 그룹 종료|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|  
 |이벤트 표식 만들기|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|  
   
- 사용 중인 Direct3D 버전에서 지원하는 API 중 하나를 사용할 수 있습니다. 예를 들어 Direct3D 11.1 API를 대상으로 하는 경우 `SetMarker` 또는 `D3DPerf_SetMarker` 를 사용하여 이벤트 표식을 만들 수 있지만 `SetMarkerInt` 는 Direct3D 11.2에서만 사용할 수 있으므로 사용하지 마세요. 그리고 다른 버전의 Direct3D를 지원하는 API를 동일한 앱에서 함께 사용할 수 있습니다.  
+ 사용 중인 Direct3D 버전에서 지원하는 API 중 하나를 사용할 수 있습니다. 예를 들어 Direct3D 11.1 API를 대상으로 하는 경우 `SetMarker` 또는 `D3DPerf_SetMarker`를 사용하여 이벤트 표식을 만들 수 있지만 `SetMarkerInt`는 Direct3D 11.2에서만 사용할 수 있으므로 사용하지 마세요. 그리고 다른 버전의 Direct3D를 지원하는 API를 동일한 앱에서 함께 사용할 수 있습니다.  
 
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
-##리소스 기록 Visual Studio 2017 이상에 포함 된 **리소스 기록** 창.  조사식 아이콘을 선택 하면 ![조사식 아이콘](media/gfx_watch.png) 옆에 있는 항목에는 **이벤트 목록** 창이 표시 됩니다는 **리소스 기록** 창 아래에 표시 된:
+## 리소스 기록 Visual Studio 2017 이상에 포함 된 **리소스 기록** 창.  조사식 아이콘을 선택 하면 ![조사식 아이콘](media/gfx_watch.png) 옆에 있는 항목에는 **이벤트 목록** 창이 표시 됩니다는 **리소스 기록** 창 아래에 표시 된:
 
 ![리소스 기록](media/gfx_diag_resource_history.png)
 
 이 창에는 이벤트 목록에서 선택한 항목의 기록을 볼 수 있습니다.  맨 위에 있는 드롭다운의 기록을 보려면 다른 항목을 선택 데 사용할 수 있습니다.  위쪽 창에 포함 된 **프레임 설치 이벤트**합니다.  이 이벤트에 해당을 *만들기* 범주를 입력 하 고 일반적으로 초기화 하 고 리소스를 만들지 여부를 지정 하는 호출 됩니다.  포함 하 고 창 아래쪽에서 **프레임 이벤트** 섹션.  이러한 일반적인 읽기 되었으며 리소스의 사용 하는 동안 발생 하는 이벤트를 작성 합니다.  
 
-열|설명
+Column|설명
 ---|---
 **Type** | 일반적으로 항목의 형식을 보여 줍니다 *만들기*, *읽기* 및 *쓰기*합니다.  
 **보기** | 리소스의 미리 보기에 표시 됩니다.  당시에는 리소스의 자세히 보기를 열려면 미리 보기를 두 번 클릭 합니다.  

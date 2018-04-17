@@ -1,26 +1,23 @@
 ---
-title: "형식화 되지 않은 데이터 집합과 비교 입력 한 | Microsoft Docs"
-ms.custom: 
+title: 형식화 되지 않은 데이터 집합과 비교 입력 한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 ms.assetid: c83ba0bb-5425-4d47-8891-6b4dbf937701
-caps.latest.revision: "5"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: af42a48a311cadba9fc22a487d03492f92ba6469
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 7c55b160012997281cd5e7551ea07178b63f0fca
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="typed-vs-untyped-datasets"></a>형식화 되지 않은 데이터 집합과 비교 입력
 형식화 된 데이터 집합은 먼저 기본에서 파생 되는 데이터 집합 <xref:System.Data.DataSet> 클래스 하 고 다음 정보를 사용 하 여는 **데이터 집합 디자이너**, dataset 클래스를 강력한 형식의 새로운를 생성 하는.xsd 파일에 저장 되어 있습니다. 스키마 (테이블, 열 및 등)에서 정보 생성 이며 첫 번째 클래스 개체 및 속성의 집합으로이 새 데이터 집합 클래스도 컴파일됩니다. 형식화 된 데이터 집합 기본에서 상속 하기 때문에 <xref:System.Data.DataSet> 의 기능을 모두 클래스, 형식화 된 가정은 <xref:System.Data.DataSet> 클래스 및 인스턴스를 사용 하는 메서드와 함께 사용할 수는 <xref:System.Data.DataSet> 클래스를 매개 변수로 합니다.  
@@ -44,5 +41,5 @@ ms.lasthandoff: 12/22/2017
   
  보다 일반적으로, 있습니다 여러 번 사용할 수 있는 스키마 필요 없이 동적으로 데이터 집합을 만들 수 있습니다. 이 경우 데이터 집합은 단순히 편리한 구조를 정보를 유지할 수 있습니다으로 데이터를 관계형으로 나타낼 수 있습니다. 이와 동시에 XML 파일로 쓰지 또는 다른 프로세스에 전달 하는 정보를 serialize 하는 기능 등의 데이터 집합의 기능을 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)

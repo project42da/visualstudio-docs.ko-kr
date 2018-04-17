@@ -1,13 +1,10 @@
 ---
-title: "네이티브 코드 디버깅 | Microsoft Docs"
-ms.custom: 
+title: 네이티브 코드 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/11/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug
 dev_langs:
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - debugging [Visual Studio], native code
 - native code, debugging
 ms.assetid: d94eee90-7e0d-4cac-88c1-9831030daa5e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 94f3d0cfd57f4d907bab758e52e0499b63941236
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d6ce01abed3193cd838031002128b859028bc168
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-native-code"></a>네이티브 코드 디버깅
 이 단원에서는 네이티브 응용 프로그램의 몇 가지 일반적인 디버깅 문제와 기술에 대해 설명합니다. 이 단원에서 설명하는 기술은 높은 수준의 기술입니다. Visual Studio 디버거를 사용 하는 방법을 참조 하세요. [디버거 로드맵](../debugger/debugger-basics.md)합니다.  

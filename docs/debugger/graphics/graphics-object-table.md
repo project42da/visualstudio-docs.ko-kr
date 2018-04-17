@@ -1,27 +1,25 @@
 ---
-title: "그래픽 개체 테이블 | Microsoft Docs"
-ms.custom: 
+title: 그래픽 개체 테이블 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.graphics.datavisualizer
 - vs.graphics.objecttable
 - vs.graphics.bufferviewer
 ms.assetid: f48f62d9-16ff-4a2e-8c01-5cbe99513788
-caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: eb03ab88ca3d1d50b559cef87bfdf045a0a81319
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: fce78395efff7ec1344d0034c4d18001550798aa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graphics-object-table"></a>그래픽 개체 테이블
 Visual Studio Graphics Analysis의 그래픽 개체 테이블은 게임이나 앱의 프레임을 지원하는 Direct3D 개체를 이해하는 데 도움이 됩니다.  
@@ -51,7 +49,7 @@ Visual Studio Graphics Analysis의 그래픽 개체 테이블은 게임이나 �
 |**너비**|텍스처 개체의 너비입니다. 다른 개체 형식에는 적용되지 않습니다.|  
 |**높이**|텍스처 개체의 높이입니다. 다른 개체 형식에는 적용되지 않습니다.|  
 |**깊이**|3D 텍스처 개체의 깊이입니다. 텍스처가 3D가 아닌 경우에는 값이 0입니다. 다른 개체 형식에는 적용되지 않습니다.|  
-|**Mips**|텍스처 개체에 포함된 MIP 수준의 수입니다. 다른 개체 형식에는 적용되지 않습니다.|  
+|**mips**|텍스처 개체에 포함된 MIP 수준의 수입니다. 다른 개체 형식에는 적용되지 않습니다.|  
 |**ArraySize**|텍스처 배열의 텍스처 수입니다. 범위는 1부터 현재 기능 수준에서 정의된 상한까지입니다. 큐브 맵의 경우 이 값은 배열에 있는 큐브 맵 수의 6배입니다.|  
 |**샘플**|픽셀당 멀티샘플 수입니다.|  
   

@@ -1,29 +1,25 @@
 ---
 title: IDebugEngine3::SetSymbolPath | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEngine3::SetSymbolPath
 helpviewer_keywords:
 - IDebugEngine3::SetSymbolPath
 ms.assetid: 47b48f84-8a96-401f-84df-0baa8a96d26e
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8cc60a266a238ee8d3635637b907ce88933b29a0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d5a79cfd817be1a665f0008a39420e7cb39cc50b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugengine3setsymbolpath"></a>IDebugEngine3::SetSymbolPath
 경로 또는 디버깅 기호 검색 경로 설정 합니다.  
@@ -60,7 +56,7 @@ int SetSymbolPath(
 ## <a name="remarks"></a>설명  
  문자열 `szSymbolSearchPath` 의 기호를 검색 하려면 세미콜론 구분 하 여 하나 이상의 경로 목록입니다. 이러한 경로 로컬 경로, UNC 스타일 경로 또는 URL 될 수 있습니다. 이러한 경로 다양 한 종류의 혼합 될 수도 있습니다. 경로가 UNC 경로인 경우 (예를 들어 \\\Symserver\Symbols), 경로 기호 서버에 이며 캐시에서 지정 된 경로에서 해당 서버에서 기호를 로드 해야 하는 경우 디버그 엔진 결정 해야 하는 다음 `szSymbolCachePath`합니다.  
   
- 기호 경로는 캐시 위치를 하나 이상 포함할 수도 있습니다. 캐시는 먼저 가장 높은 우선 순위 캐시와 우선 순위 순서로 나열 하 고 구분 하 여 * 기호. 예:  
+ 기호 경로는 캐시 위치를 하나 이상 포함할 수도 있습니다. 캐시는 먼저 가장 높은 우선 순위 캐시와 우선 순위 순서로 나열 하 고 구분 하 여 * 기호. 예를 들어:  
   
 ```  
 \\symbols\symbols;\\someotherserver\symbols;c:\symbols\httpsymbols*http://msdl.microsoft.com  

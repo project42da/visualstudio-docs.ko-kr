@@ -2,28 +2,24 @@
 title: DisassemblyData | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DisassemblyData
 helpviewer_keywords:
 - DisassemblyData structure
 ms.assetid: 10e70aa7-9381-40d3-bdd1-d2cad78ef16c
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0e97d2cc15e3b613fa56d2d4df1d5df8c68f9b06
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0313ddccb7c6f7c4f09d3e4836c04283dd5bfc17
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="disassemblydata"></a>DisassemblyData
 표시할 통합된 개발 환경 (IDE)에 대 한 하나의 디스어셈블리 명령에 설명 합니다.  
@@ -116,7 +112,7 @@ public struct DisassemblyData {
   
  경우는 `dwFlags` 필드에는 `DF_DOCUMENT_CHECKSUM` 플래그가 설정, 추가 체크섬 정보에서 가리키는 문자열 뒤에 나오는 다음는 `bstrDocumentUrl` 필드입니다. 특히, null 문자열 종결자 후 있습니다 뒤에 오는 체크섬의 바이트 수를 나타내는 4 바이트 값으로 다시 다음 하 고 차례로 뒤에 체크섬 바이트 체크섬 알고리즘을 식별 하는 GUID입니다. 인코딩 및 디코딩이 필드에서 하는 방법에이 항목의 예제를 참조 하십시오. [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  `bstrDocumentUrl` 경우 필드 문자열 이외의 추가 정보를 포함 될 수는 `DF_DOCUMENT_CHECKSUM` 플래그가 설정 되어 있습니다. 만들고이 인코딩된 문자열을 읽는 간단에서 [!INCLUDE[vcprvc](../../../code-quality/includes/vcprvc_md.md)]합니다. 그러나 [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)], 다른 문제를입니다. 사용자를 위해 자세한 내용을 보려면, 다음 예제에서는에서 인코딩된 문자열을 만드는 한 가지 방법은 [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)] 에서 인코딩된 문자열을 디코딩하는 한 가지 방법은 및 [!INCLUDE[csprcs](../../../data-tools/includes/csprcs_md.md)]합니다.  
   
 ```csharp  

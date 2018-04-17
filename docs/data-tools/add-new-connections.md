@@ -1,22 +1,19 @@
 ---
-title: "새 연결 추가 | Microsoft Docs"
-ms.custom: 
+title: 새 연결 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
-caps.latest.revision: "14"
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 26a45e8fe44e2e0945a105711ae84b1082d5c891
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 0355b4fe3c05fb089e6feaac5bb52ff7f3f56da0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-new-connections"></a>새 연결 추가
 
@@ -58,6 +55,6 @@ ms.lasthandoff: 12/22/2017
 
 만들 준비가 된 테스트에 성공 하면는 *데이터 소스*, 의미 있는 Visual Studio 용어는 *데이터 모델* 기본 데이터베이스 또는 서비스를 기반으로 하는 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [.NET용 Visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)

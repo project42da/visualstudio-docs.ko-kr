@@ -1,13 +1,10 @@
 ---
-title: "&lt;제품&gt; 요소 (부트스트래퍼) | Microsoft Docs"
-ms.custom: 
+title: '&lt;제품&gt; 요소 (부트스트래퍼) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - FSharp
 - VB
@@ -16,17 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - <product> element [bootstrapper]
 ms.assetid: 52b414af-ec80-4d2f-ad14-902543cd268e
-caps.latest.revision: 
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: af40da0690bd8b6cc9cc12dd16fe9e11045b0624
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bb087d4daaceca4ae1ba913b3bacc9f85c2b9cb9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltproductgt-element-bootstrapper"></a>&lt;제품&gt; 요소 (부트스트래퍼)
 `Product` 요소는 요소는 제품 파일 내의 최상위 XML 요소입니다.  
@@ -150,7 +146,7 @@ ProductCode
 |---------------|-----------------|  
 |`ProductCode`|제품에 대 한 고유 식별자입니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제를 설치 하기 위한 완전 한 제품 파일을 보여 줍니다.는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.  
   
 ```  

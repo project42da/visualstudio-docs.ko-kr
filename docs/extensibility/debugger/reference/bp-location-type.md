@@ -1,29 +1,25 @@
 ---
 title: BP_LOCATION_TYPE | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - BP_LOCATION_TYPE
 helpviewer_keywords:
 - BP_LOCATION_TYPE structure
 ms.assetid: 0248430a-3b61-4809-87a9-e9b6bb7d1130
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 919cef75834c6606cf4980b3a0e861302f29b73a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: db35e354b2cfbe91b9c6041dc6239d2dfd2531f8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bplocationtype"></a>BP_LOCATION_TYPE
 중단점 요청에 대 한 중단점의 위치 유형을 지정합니다.  
@@ -122,14 +118,14 @@ public enum enum_BP_LOCATION_TYPE {
   
  중단점 위치 형식 중단점 유형 및 위치 유형으로 구성 됩니다. 즉, 중단점 위치 형식 중단점 형식만 않습니다 (예를 들어 `BPT_CODE`) 또는 위치 유형 (예를 들어 `BPLT_FILE_LINE`). 현재 지원 되는 모든 중단점 위치 유형에 대해 미리 정의 된 상수가이 열거형에 포함 됩니다 (`BPLT_CODE_FILE_LINE` 통해 `BPLT_DATA_STRING`).  
   
- `BPT_CODE`및 `BPT_DATA` 의 멤버인는 [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) 열거 합니다.  
+ `BPT_CODE` 및 `BPT_DATA` 의 멤버인는 [BP_TYPE](../../../extensibility/debugger/reference/bp-type.md) 열거 합니다.  
   
 ## <a name="requirements"></a>요구 사항  
  헤더: msdbg.h  
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

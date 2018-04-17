@@ -1,12 +1,10 @@
 ---
-title: "방법: WPF 추적 정보를 표시 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: WPF 추적 정보를 표시 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -16,19 +14,19 @@ helpviewer_keywords:
 - WPF, debugging
 - debugging, WPF
 ms.assetid: be3c6859-06e1-459e-9fd0-46375b5f55ef
-caps.latest.revision: "13"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3e210d575b17552d7b5e4d6dc126335ff3711ee5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3584ae0d1dcd0e33bfa08954a2ad376485b6b71e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-display-wpf-trace-information"></a>방법: WPF 추적 정보 표시
-[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)]WPF 응용 프로그램에서 디버그 추적 정보를 수신 하 고 해당 정보를 표시할 수는 **출력** 창. 디버그 추적 정보를 표시 하려면 WPF 추적을 사용할 수 있어야 합니다.  
+[!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] WPF 응용 프로그램에서 디버그 추적 정보를 수신 하 고 해당 정보를 표시할 수는 **출력** 창. 디버그 추적 정보를 표시 하려면 WPF 추적을 사용할 수 있어야 합니다.  
   
  WPF 추적 설정에는 App.Config 파일을 사용하거나 <xref:System.Diagnostics.PresentationTraceSources> 클래스를 통한 프로그래밍 방식을 사용할 수 있습니다. 사용 하는 것 보다 쉽게 WPF 추적 설정 수는 **옵션** 창. 응용 프로그램에 대한 WPF 추적은 지원되지 않습니다.  
   

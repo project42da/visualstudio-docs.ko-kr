@@ -1,29 +1,25 @@
 ---
 title: 'Idiaframedata:: Get_program | Microsoft Docs'
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaFrameData::get_program method
 ms.assetid: 9201409e-b4b1-4e2e-a9f8-d17678ac538b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 10d5d331c4308586485ea77824cda4864c6ee943
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dc770db5f5cf16d9870e05ada01e235206b94078
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaframedatagetprogram"></a>IDiaFrameData::get_program
 현재 함수를 호출 하기 전에 설정 하는 레지스터를 계산 하는 데 사용 되는 프로그램 문자열을 검색 합니다.  
@@ -44,7 +40,7 @@ HRESULT get_program (
  성공 하면 반환 `S_OK`합니다. 반환 `S_FALSE` 경우이 속성이 지원 되지 않습니다. 그러지 않으면 오류 코드가 반환됩니다.  
   
 ## <a name="remarks"></a>설명  
- 프로그램 문자열은 프롤로그를 설정 하기 위해 해석 되는 시퀀스 매크로입니다. 일반적인 스택 프레임에서 프로그램 문자열을 사용할 수는 예를 들어 `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`합니다. 형식은 역방향 폴란드어 표기법으로 연산자는 피연산자를 수행 하는 위치입니다. `T0`스택에 있는 임시 변수를 나타냅니다. 이 예에서는 다음 단계를 수행합니다.  
+ 프로그램 문자열은 프롤로그를 설정 하기 위해 해석 되는 시퀀스 매크로입니다. 일반적인 스택 프레임에서 프로그램 문자열을 사용할 수는 예를 들어 `"$T0 $ebp = $eip $T0 4 + ^ = $ebp $T0 ^ = $esp $T0 8 + ="`합니다. 형식은 역방향 폴란드어 표기법으로 연산자는 피연산자를 수행 하는 위치입니다. `T0` 스택에 있는 임시 변수를 나타냅니다. 이 예에서는 다음 단계를 수행합니다.  
   
 1.  레지스터의 내용을 이동 `ebp` 를 `T0`합니다.  
   

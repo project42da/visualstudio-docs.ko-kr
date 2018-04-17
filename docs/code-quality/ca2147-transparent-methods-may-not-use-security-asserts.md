@@ -1,12 +1,10 @@
 ---
-title: "CA2147: 투명 한 메서드를 사용할 수 없습니다 보안 어설션 | Microsoft Docs"
-ms.custom: 
+title: 'CA2147: 투명 한 메서드를 사용할 수 없습니다 보안 어설션 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - SecurityTransparentCodeShouldNotAssert
 - CA2147
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - CA2128
 - SecurityTransparentCodeShouldNotAssert
 ms.assetid: 5d31e940-e599-4b23-9b28-1c336f8d910e
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 38ac5492c987515c7c6504c91d2e035f8b8645ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 75d841da0c738ff7504e95b372ecd4e06f9c77f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2147-transparent-methods-may-not-use-security-asserts"></a>CA2147: 투명 메서드는 보안 어설션을 사용할 수 없습니다.
 |||  
@@ -52,12 +50,12 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서 메시지를 표시 하지 마십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 코드는 경우 실패 `SecurityTestClass` 경우는 투명 하 고는 `Assert` 메서드가 throw 한 <xref:System.InvalidOperationException>합니다.  
   
  [!code-csharp[FxCop.Security.CA2147.TransparentMethodsMustNotUseSecurityAsserts#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  첫 번째 방법은 다음 예제에서 SecurityTransparentMethod 메서드 코드 검토 하 고 메서드가 권한 상승로 간주 되 면 표시 SecurityTransparentMethod with 보안에 중요 한이 있어야 하는 자세한, 완료 및 오류 없이 보안 함께 모든 설명선 Assert 메서드 내에서 발생 하는 방법에 감사를 수행 해야 합니다.  
   
  [!code-csharp[FxCop.Security.SecurityTransparentCode2#1](../code-quality/codesnippet/CSharp/ca2147-transparent-methods-may-not-use-security-asserts_2.cs)]  

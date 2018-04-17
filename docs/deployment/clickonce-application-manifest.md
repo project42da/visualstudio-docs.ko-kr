@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce 응용 프로그램 매니페스트 | Microsoft Docs"
-ms.custom: 
+title: ClickOnce 응용 프로그램 매니페스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,31 +13,31 @@ helpviewer_keywords:
 - application manifests [ClickOnce]
 - ClickOnce, application manifests
 ms.assetid: 29570cec-4e53-4660-a850-abc4fa150243
-caps.latest.revision: "23"
 author: stevehoag
 ms.author: shoag
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: a7df31b2d76639ec0eedc353e857fc1c0c8df39b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 7241995190c9384c1ed19cd4f9ae4cbf36f72f05
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="clickonce-application-manifest"></a>ndptecclick
+# <a name="clickonce-application-manifest"></a>ClickOnce 응용 프로그램 매니페스트
 A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트를 사용 하 여 배포 된 응용 프로그램을 설명 하는 XML 파일은 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]합니다.  
   
- [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]응용 프로그램 매니페스트는 다음 요소와 특성에 있어야 합니다.  
+ [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트는 다음 요소와 특성에 있어야 합니다.  
   
 |요소|설명|특성|  
 |-------------|-----------------|----------------|  
-|[\<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md)|필수. 최상위 요소입니다.|`manifestVersion`|  
-|[\<assemblyIdentity > 요소](../deployment/assemblyidentity-element-clickonce-application.md)|필수. 주 어셈블리를 식별 하는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다.|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language`|  
+|[\<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md)|필수 요소. 최상위 요소입니다.|`manifestVersion`|  
+|[\<assemblyIdentity > 요소](../deployment/assemblyidentity-element-clickonce-application.md)|필수 요소. 주 어셈블리를 식별 하는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다.|`name`<br /><br /> `version`<br /><br /> `publicKeyToken`<br /><br /> `processorArchitecture`<br /><br /> `language`|  
 |[\<trustInfo > 요소](../deployment/trustinfo-element-clickonce-application.md)|응용 프로그램 보안 요구 사항을 식별합니다.|없음|  
-|[\<entryPoint > 요소](../deployment/entrypoint-element-clickonce-application.md)|필수. 응용 프로그램 코드 진입점을 식별합니다.|`name`|  
-|[\<종속성 > 요소](../deployment/dependency-element-clickonce-application.md)|필수. 응용 프로그램을 실행하는 데 필요한 각 종속성을 식별합니다. 필요에 따라 사전 설치해야 하는 어셈블리를 식별합니다.|없음|  
-|[\<파일 > 요소](../deployment/file-element-clickonce-application.md)|선택 사항입니다. 응용 프로그램에서 사용 되는 각 어셈블리 이외의 파일을 식별 합니다. 파일에 연결된 COM(구성 요소 개체 모델) 격리 데이터를 포함할 수 있습니다.|`name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType`|  
-|[\<fileAssociation > 요소](../deployment/fileassociation-element-clickonce-application.md)|선택 사항입니다. 응용 프로그램에 연결할 파일 확장명을 식별 합니다.|`extension`<br /><br /> `description`<br /><br /> `progid`<br /><br /> `defaultIcon`|  
+|[\<entryPoint > 요소](../deployment/entrypoint-element-clickonce-application.md)|필수 요소. 응용 프로그램 코드 진입점을 식별합니다.|`name`|  
+|[\<종속성 > 요소](../deployment/dependency-element-clickonce-application.md)|필수 요소. 응용 프로그램을 실행하는 데 필요한 각 종속성을 식별합니다. 필요에 따라 사전 설치해야 하는 어셈블리를 식별합니다.|없음|  
+|[\<파일 > 요소](../deployment/file-element-clickonce-application.md)|선택적 요소. 응용 프로그램에서 사용 되는 각 어셈블리 이외의 파일을 식별 합니다. 파일에 연결된 COM(구성 요소 개체 모델) 격리 데이터를 포함할 수 있습니다.|`name`<br /><br /> `size`<br /><br /> `group`<br /><br /> `optional`<br /><br /> `writeableType`|  
+|[\<fileAssociation > 요소](../deployment/fileassociation-element-clickonce-application.md)|선택적 요소. 응용 프로그램에 연결할 파일 확장명을 식별 합니다.|`extension`<br /><br /> `description`<br /><br /> `progid`<br /><br /> `defaultIcon`|  
   
 ## <a name="remarks"></a>설명  
  [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 사용 하 여 배포 응용 프로그램을 식별 하는 응용 프로그램 매니페스트 파일 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에 대한 자세한 내용은 [ClickOnce 보안 및 배포](../deployment/clickonce-security-and-deployment.md)를 참조하세요.  
@@ -54,7 +52,7 @@ A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프�
   
  `example.exe.manifest`  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에 대 한 응용 프로그램 매니페스트를 보여 줍니다.는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다.  
   
 ```  

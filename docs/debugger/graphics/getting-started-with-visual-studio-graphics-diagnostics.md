@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio 그래픽 진단 시작 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 그래픽 진단 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 05/26/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ca07027874c304f009bdee7fddf9d6465e047202
-ms.sourcegitcommit: ba29e4d37db92ec784d4acf9c6e120cf0ea677e9
+ms.openlocfilehash: 11de8cc6cf559d82ffa7ac543e396644057346c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-visual-studio-graphics-diagnostics"></a>Visual Studio 그래픽 진단 시작
 이 섹션에서는 처음으로 그래픽 진단 사용을 준비한 다음 Direct3D 앱에서 프레임을 캡처하고 Graphics Analyzer에서 검사합니다.  
@@ -32,7 +29,7 @@ ms.lasthandoff: 02/01/2018
   
  그래픽 도구를 설치 하는 방법에 대 한 정보를 참조 하십시오. [Windows 10 용 그래픽 도구 설치](#InstallGraphicsTools)합니다.  
   
-##  <a name="InstallGraphicsTools"></a>Windows 10 용 그래픽 도구 설치  
+##  <a name="InstallGraphicsTools"></a> Windows 10 용 그래픽 도구 설치  
  Windows 10에서 그래픽 진단 인프라는 라는 Windows의 선택적 기능에서 제공 *그래픽 도구*합니다. 이 기능은 캡처할 앱이 이전 버전의 Windows를 대상으로 하는지 여부나 사용하는 Direct3D 버전에 관계없이 Windows 10에서 그래픽 정보를 캡처하고 재생하는 데 필요합니다. 그래픽 도구 기능을 미리 설치하도록 선택할 수 있습니다. 그렇지 않으면 처음으로 Visual Studio에서 그래픽 진단 세션을 시작할 때 주문형으로 설치됩니다.  
   
 #### <a name="to-install-graphics-tools-for-windows-10"></a>Windows 10용 그래픽 도구를 설치하려면  

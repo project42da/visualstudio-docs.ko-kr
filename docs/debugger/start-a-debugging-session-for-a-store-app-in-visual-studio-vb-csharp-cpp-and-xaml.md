@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio에서 UWP 앱에 대 한 디버깅 세션을 시작 합니다. | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 UWP 앱에 대 한 디버깅 세션을 시작 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 01/04/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCAppHostRemoteDebugPageObject.MachineName
 - VC.Project.IVCAppHostRemoteDebugPageObject.BreakpointBehavior
@@ -34,16 +32,16 @@ dev_langs:
 - VB
 - FSharp
 - C++
-caps.latest.revision: "20"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 718d24ab0f9fbb310d2482b63bc98dd139658330
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: 667fa5294f813a59425516e7e6d97177ca681365
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app-in-visual-studio"></a>Visual Studio에서 UWP 앱에 대 한 디버깅 세션을 시작 합니다.
   
@@ -79,7 +77,7 @@ ms.lasthandoff: 01/19/2018
 |**장치**|USB로 연결 된 장치에 응용 프로그램을 디버깅 합니다. 장치가 개발자 잠금 해제 하 고 화면을 잠금 해제 해야 합니다.|  
 |**모바일 에뮬레이터**|에뮬레이터에 지정 된 구성을 사용 하 여 에뮬레이터를 부팅, 앱을 배포 하 고 디버깅을 시작 합니다. 에뮬레이터는 Hyper-v 사용 컴퓨터에서 사용할 수만 있습니다.|  
 
-##  <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a>추가 디버깅 옵션을 선택 합니다.  
+##  <a name="BKMK_Open_the_debugging_property_page_for_the_project"></a> 추가 디버깅 옵션을 선택 합니다.  
 
 추가 디버깅 옵션을 구성 해야 할 경우에 프로젝트에 대 한 속성 페이지를 엽니다.
   
@@ -89,11 +87,11 @@ ms.lasthandoff: 01/19/2018
   
     -   Visual C# 및 Visual Basic 응용 프로그램의 경우 **디버그**를 선택합니다.  
   
-         ![&#35; &#47; VB 프로젝트 디버그 속성 페이지](../debugger/media/dbg_csvb_debugpropertypage.png)  
+         ![C&#35; &#47; VB 프로젝트 디버그 속성 페이지](../debugger/media/dbg_csvb_debugpropertypage.png)  
   
     -   Visual c + + 및 JavaScript 앱에 대 한 확장 된 **구성 속성** 노드를 선택한 후 **디버깅**합니다.  
   
-         ![C# 43; &#43; UWP 앱 디버깅 속성 페이지](../debugger/media/dbg_cpp_debugpropertypage.png)  
+         ![C&#43; &#43; UWP 앱 디버깅 속성 페이지](../debugger/media/dbg_cpp_debugpropertypage.png)  
 
 ###  <a name="BKMK_Choose_the_debugger_to_use"></a> 사용할 디버거 선택  
 기본적으로 Visual Studio는 C# 및 Visual Basic 응용 프로그램에서 관리 코드를 디버깅합니다. C# 및 Visual Basic 응용 프로그램의 경우 응용 프로그램에서 관리 코드 및 네이티브 C/C++ 코드를 디버깅하도록 선택할 수 있습니다. C + + 앱의 Visual Studio는 기본적으로 네이티브 코드를 디버깅합니다. JavaScript 앱에서 Visual Studio는 기본적으로 스크립트를 디버깅 합니다. 
@@ -179,11 +177,11 @@ F5 키를 사용하여 디버깅을 시작할 때 Visual Studio에서는 응용 
   
 디버거에서 설치 된 응용 프로그램을 시작 하려면 선택 **디버그**, 다음 **기타 디버그 대상**, 차례로 **설치 된 응용 프로그램 패키지 디버그**합니다. 자세한 내용은 참조 하십시오. [설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)합니다.
 
-###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a>실행 중인 UWP 앱에 디버거 연결  
+###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> 실행 중인 UWP 앱에 디버거 연결  
 
 실행 중인 UWP 앱을 디버깅 하려면 선택 **디버그**, 다음 **기타 디버그 대상**, 차례로 **설치 된 응용 프로그램 패키지 디버그**합니다. 자세한 내용은 참조 하십시오. [설치 된 응용 프로그램 패키지 디버그](../debugger/debug-installed-app-package.md)합니다.
   
-###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a>실행 중인 Windows 8.x 앱에 디버거 연결
+###  <a name="BKMK_Attach_the_debugger_to_a_running_app_"></a> 실행 중인 Windows 8.x 앱에 디버거 연결
  [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 응용 프로그램에 디버거를 연결하려면 디버깅 가능 패키지 관리자를 사용하여 응용 프로그램이 디버그 모드에서 실행되도록 설정합니다. 디버깅 가능 패키지 관리자 Visual Studio 원격 도구가 설치 되어 있습니다.  
   
  응용 프로그램에 디버거를 연결하는 기능은 [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]에서 설치된 응용 프로그램과 같은 이미 설치된 응용 프로그램을 디버깅해야 하는 경우 유용합니다. 응용 프로그램의 소스 파일은 있지만 응용 프로그램에 대한 Visual Studio 프로젝트가 없는 경우 연결해야 합니다. 예를 들어 Visual Studio 프로젝트 또는 솔루션을 사용하지 않는 사용자 지정 빌드 시스템이 있을 수 있습니다.  
@@ -200,7 +198,7 @@ F5 키를 사용하여 디버깅을 시작할 때 Visual Studio에서는 응용 
   
 1.  앱을 설치 하는 장치에 Visual Studio 용 원격 도구를 설치 합니다. 참조 [원격 도구 설치](../debugger/remote-debugging.md)합니다.  
   
-2.  시작 화면에서 `Debuggable Package Manager` 를 검색한 다음 시작합니다.  
+2.  시작 화면에서 `Debuggable Package Manager`를 검색한 다음 시작합니다.  
   
      AppxDebug cmdlet에 맞게 올바르게 구성된 PowerShell 창이 나타납니다.  
   

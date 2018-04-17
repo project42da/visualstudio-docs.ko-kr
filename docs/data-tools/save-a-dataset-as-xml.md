@@ -1,11 +1,8 @@
 ---
-title: "데이터 집합을 XML로 저장 합니다. | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합을 XML로 저장 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - datasets [Visual Basic], saving as XML
 - saving data
 ms.assetid: 68b8327c-ae05-49ff-b9ba-99183e70b52c
-caps.latest.revision: "11"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: c6176b1d7e9f18ce08fddf21f199cd21304ca8a4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: b9d91e964ddade89c8bce8f0519517995b7d75a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="save-a-dataset-as-xml"></a>데이터 집합을 XML로 저장 합니다.
 데이터 집합에서 사용할 수 있는 XML 메서드를 호출 하 여 데이터 집합의 XML 데이터를 액세스할 수 있습니다. XML 형식으로 데이터를 저장 하려면 호출 하면는 <xref:System.Data.DataSet.GetXml%2A> 메서드 또는 <xref:System.Data.DataSet.WriteXml%2A> 의 메서드는 <xref:System.Data.DataSet>합니다.  

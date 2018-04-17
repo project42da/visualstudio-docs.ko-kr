@@ -2,11 +2,8 @@
 title: 디버깅 세션 대화 상자에 대 한 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: ''
 ms.topic: reference
 f1_keywords:
 - vs.debug.exefordebug
@@ -21,17 +18,16 @@ helpviewer_keywords:
 - debugger, Executable for Debugging Session dialog box
 - Executable for Debugging Session dialog box
 ms.assetid: c0ddbe32-b99f-4425-acf1-f48842804f56
-caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c52d66d0a2e71b96a907fc73b16d42fa13b080bb
-ms.sourcegitcommit: 9e6ff74da1afd8bd2f0e69387ce81f2a74619182
+ms.openlocfilehash: 915f6f7c9ab13fb7cd832df61638fa0e18e853a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="executable-for-debugging-session-dialog-box"></a>디버깅 세션에 사용할 실행 파일 대화 상자
 이 대화 상자는 실행 파일이 지정되지 않은 DLL을 디버깅하려고 할 때 나타납니다. Visual Studio는 DLL을 직접 시작할 수 없으며, 대신 지정된 실행 파일을 시작합니다. DLL이 실행 파일에서 호출되면 DLL을 디버깅할 수 있습니다.  

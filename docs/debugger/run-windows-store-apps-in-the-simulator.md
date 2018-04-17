@@ -1,28 +1,26 @@
 ---
-title: "UWP 앱은 시뮬레이터에 있는 실행 | Microsoft Docs"
-ms.custom: 
+title: UWP 앱은 시뮬레이터에 있는 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
 ms.assetid: 81b69bf8-ec87-4bb6-9ad4-1fa7b7802d16
-caps.latest.revision: "42"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 40cdfaf430483d68744e4ec9535c2546e75d4470
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: b3ec07f7bf36ba606e9f1ddb45bdcde75d570a32
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-uwp-apps-in-the-simulator"></a>시뮬레이터에서 UWP 앱을 실행 합니다.
 UWP 앱 용 Visual Studio 시뮬레이터는 UWP 앱을 시뮬레이션 하는 데스크톱 응용 프로그램입니다. 일반적으로 로컬 시스템, 연결된 된 장치 또는 원격 컴퓨터에서 디버깅 합니다. 그러나 일부 시나리오에서는 서로 다른 실제 화면 크기와 해상도 에뮬레이션 하기 위해 Visual Studio 시뮬레이터를 사용 하 여 수 있습니다. 일반적인 터치 및 회전 이벤트를 시뮬레이션 하 고 네트워크 연결 속성을 시뮬레이트할 수도 있습니다.
@@ -99,11 +97,11 @@ UWP 앱 용 Visual Studio 시뮬레이터는 UWP 앱을 시뮬레이션 하는 �
 > [!NOTE]
 >  비트맵 이미지의 배율이 조정된 버전을 응용 프로그램에 저장할 수 있으며 그러면 Windows에서 현재 배율에 맞는 올바른 이미지가 로드됩니다. 자세한 내용은 참조 [디자인과 UI 소개](/windows/uwp/layout/design-and-ui-intro)합니다. 그러나 Windows에서 해상도에 맞는 다른 이미지를 선택하도록 시뮬레이터 해상도를 변경하면 디버그 세션을 중지한 후 다시 시작해야만 새 이미지를 볼 수 있습니다.  
   
-##  <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a>Microsoft 스토어에 제출할 응용 프로그램의 스크린 샷 캡처  
+##  <a name="BKMK_Capture_a_screenshot_of_your_app_for_submission_to_the_Microsoft_Store"></a> Microsoft 스토어에 제출할 응용 프로그램의 스크린 샷 캡처  
  Microsoft 스토어에 앱을 제출할 때 앱의 스크린 샷을 포함 해야 합니다.  
   
 > [!NOTE]
->  스크린샷은 시뮬레이터의 현재 해상도로 저장됩니다. 해상도를 변경하려면 **해상도 변경** 단추를 선택합니다.  
+>  스크린 샷은 시뮬레이터의 현재 해상도로 저장됩니다. 해상도를 변경하려면 **해상도 변경** 단추를 선택합니다.  
   
 -   시뮬레이터에서 응용 프로그램의 스크린샷을 만들려면 **클립보드에 스크린샷 캡처** 단추를 선택합니다.  
   

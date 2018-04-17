@@ -1,21 +1,19 @@
 ---
-title: "CA3076: 안전 하지 않은 XSLT 스크립트 실행 | Microsoft Docs"
-ms.custom: 
+title: 'CA3076: 안전 하지 않은 XSLT 스크립트 실행 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 66d415b792558dce91de0205ee688fecb5caa182
-ms.sourcegitcommit: 49aa031cbebdd9c7ec070c713afb1a97d1ecb701
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9793d0af1c2207b5201cb9e0e7bebe0d7bf4ef1c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca3076-insecure-xslt-script-execution"></a>CA3076: 안전하지 않은 XSLT 스크립트 실행
 
@@ -34,11 +32,11 @@ ms.lasthandoff: 01/23/2018
 
 **XSLT** 는 XML 데이터를 변환에 대 한 World Wide Web Consortium (W3C) 표준입니다. XSLT는 XML 데이터를 HTML, 고정 길이 텍스트, 쉼표로 구분된 텍스트 또는 기타 XML 형식 등으로 변환하기 위한 스타일시트를 작성하는 데 일반적으로 사용됩니다. 이 기능은 프로젝트에서 기본적으로는 금지되어 있지만 사용하도록 설정할 수 있습니다.
 
-공격 영역을 노출하지 않도록 하기 위해 이 규칙은 XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 가 안전하지 않은 <xref:System.Xml.Xsl.XsltSettings> 및 <xref:System.Xml.XmlResolver>인스턴스가 함께 수신될 때마다 트리거되어 악성 스크립트를 처리합니다.
+공격 노출 영역이 노출 하지 않도록 하기 위해,이 규칙이 트리거됩니다 때마다는 XslCompiledTransform.<xref:System.Xml.Xsl.XslCompiledTransform.Load%2A> 인스턴스가 안전 하지 않은 함께 수신 <xref:System.Xml.Xsl.XsltSettings> 및 <xref:System.Xml.XmlResolver>, 트리거되어 악성 스크립트를 처리 합니다.
 
 ## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
 
-- 안전하지 않은 XsltSettings 인수를 XsltSettings.<xref:System.Xml.Xsl.XsltSettings.Default%2A> 또는 문서 함수 및 스크립트 실행을 사용하지 않도록 하는 인스턴스로 바꿉니다.
+- 안전 하지 않은 XsltSettings 인수를 XsltSettings 바꿉니다.<xref:System.Xml.Xsl.XsltSettings.Default%2A> 또는 인스턴스로 문서 함수 및 스크립트 실행 비활성화입니다.
 
 - <xref:System.Xml.XmlResolver> 인수를 null 또는 <xref:System.Xml.XmlSecureResolver> 인스턴스로 바꿉니다.
 
@@ -142,6 +140,6 @@ namespace TestNamespace
 }
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [XSLT 보안 고려 사항 (.NET 가이드)](/dotnet/standard/data/xml/xslt-security-considerations)

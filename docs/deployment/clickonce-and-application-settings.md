@@ -2,12 +2,9 @@
 title: ClickOnce 및 응용 프로그램 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-deployment
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - ClickOnce deployment, application settings
 ms.assetid: 891caba6-faef-4a3c-8f71-60e6fadb60eb
-caps.latest.revision: 10
 author: stevehoag
 ms.author: shoag
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 862f51aa7d124c3dbaa6514b666d74c26334e299
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 69563869fe6518d112273da13889fc04db96d09f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="clickonce-and-application-settings"></a>ClickOnce 및 응용 프로그램 설정
 Windows Forms에 대 한 응용 프로그램 설정 하면 쉽게 만들고, 저장 및 사용자 지정 응용 프로그램과 사용자 기본 설정 클라이언트에서 유지 관리할 수 있습니다. 다음 문서에는 응용 프로그램 설정 파일 ClickOnce 응용 프로그램에서 작업 하는 방법 및 사용자는 다음 버전으로 업그레이드 하면 ClickOnce가 설정을 마이그레이션하 하는 방법을 설명 합니다.  

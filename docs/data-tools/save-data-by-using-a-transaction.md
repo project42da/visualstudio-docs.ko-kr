@@ -1,11 +1,8 @@
 ---
-title: "방법: 트랜잭션을 사용 하 여 데이터 저장 | Microsoft Docs"
-ms.custom: 
+title: '방법: 트랜잭션을 사용 하 여 데이터 저장 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,17 +12,17 @@ helpviewer_keywords:
 - transactions, saving data
 - data [Visual Studio], saving
 ms.assetid: 8b835e8f-34a3-413d-9bb5-ebaeb87f1198
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: 9f2373e3a851899d139360caf0f6bb8b6ab0efa5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: f830884763e30cdcb915b2c940051e7c5858cebf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-save-data-by-using-a-transaction"></a>방법: 트랜잭션을 사용 하 여 데이터 저장
 사용 하 여 트랜잭션에서 데이터를 저장 된 <xref:System.Transactions> 네임 스페이스입니다. 사용 된 <xref:System.Transactions.TransactionScope> 개체가 자동으로 관리 되는 트랜잭션에 참여 하도록 합니다.  
@@ -53,6 +50,6 @@ ms.lasthandoff: 12/22/2017
      [!code-vb[VbRaddataSaving#11](../data-tools/codesnippet/VisualBasic/save-data-by-using-a-transaction_1.vb)]
      [!code-csharp[VbRaddataSaving#11](../data-tools/codesnippet/CSharp/save-data-by-using-a-transaction_1.cs)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [데이터를 다시 데이터베이스에 저장](../data-tools/save-data-back-to-the-database.md)  
 [연습: 트랜잭션에 데이터 저장](../data-tools/save-data-in-a-transaction.md)  

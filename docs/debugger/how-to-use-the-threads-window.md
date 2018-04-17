@@ -1,13 +1,10 @@
 ---
-title: "스레드 창을 사용 하 여 다중 스레드 응용 프로그램 디버그 | Microsoft Docs"
+title: 스레드 창을 사용 하 여 다중 스레드 응용 프로그램 디버그 | Microsoft Docs
 ms.custom: H1HackMay2017
 ms.date: 05/18/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - multithreaded debugging, tutorial
 - tutorials, multithreaded debugging
 ms.assetid: adfbe002-3d7b-42a9-b42a-5ac0903dfc25
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 367bade1041012670ae47937c21be42e38157dca
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 78a233722242548bd40322c872dc9c2e6d0925b9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debug-a-multithreaded-application-in-visual-studio-using-the-threads-window"></a>연습: 스레드 창을 사용 하 여 Visual Studio에서 다중 스레드 응용 프로그램 디버깅
 Visual Studio에서 제공 된 **스레드** 창 및 기타 사용자 인터페이스 요소 다중 스레드 응용 프로그램을 디버그할 수 있도록 합니다. 사용 하는 방법을 보여 주는이 자습서는 **스레드** 창 및 **디버그 위치** 도구 모음입니다. 다른 도구에 대 한 자세한 내용은 참조 [다중 스레드 응용 프로그램 디버깅을 시작 하려면](../debugger/get-started-debugging-multithreaded-apps.md)합니다. 이 자습서에서는 몇 분 정도 걸리지만 완료에 익숙해질 수 다중 스레드 응용 프로그램 디버깅을 위한 기능입니다.   
@@ -215,7 +211,7 @@ Visual Studio에서 제공 된 **스레드** 창 및 기타 사용자 인터페�
   
      콘텐츠는 **호출 스택** 창 변경 되었습니다. 
 
-## <a name="bkmk_freeze"></a>중지 및 재개 스레드 실행 
+## <a name="bkmk_freeze"></a> 중지 및 재개 스레드 실행 
 
 고정 및 고정 해제 수 (일시 중단 및 다시 시작) 스레드 작업을 수행 하는 순서를 제어 하는 스레드입니다. 이 교착 상태 같은 동시성 문제를 해결 하 고 경합 조건을 수 있습니다.
 

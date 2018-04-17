@@ -1,12 +1,10 @@
 ---
-title: "CA1039: 목록은 강력한 형식 | Microsoft Docs"
-ms.custom: 
+title: 'CA1039: 목록은 강력한 형식 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1039
 - ListsAreStronglyTyped
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1039
 - ListsAreStronglyTyped
 ms.assetid: 5ac366c4-fd87-4d5c-95d5-f755510c8e5c
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 358ae06a2913f7b89338027c79f81c298253d23b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: a52479c5c89cf2098ac90e3f755110fb81bb2697
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1039-lists-are-strongly-typed"></a>CA1039: 목록은 강력한 형식이어야 합니다.
 |||  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="rule-description"></a>규칙 설명  
  이 규칙에 따라 <xref:System.Collections.IList> 사용자가 인수를 캐스팅할 필요가 있도록 구현 제공할 강력한 형식의 멤버가 <xref:System.Object?displayProperty=fullName> 인터페이스에서 제공 되는 기능을 사용할 때를 입력 합니다. <xref:System.Collections.IList> 인터페이스 인덱스에서 액세스할 수 있는 개체의 컬렉션에 의해 구현 됩니다. 이 규칙에서는 구현 하는 형식이 가정 <xref:System.Collections.IList> 보다 강력한 형식의 인스턴스 컬렉션을 관리 하는 <xref:System.Object>합니다.  
   
- <xref:System.Collections.IList>구현 하는 <xref:System.Collections.ICollection?displayProperty=fullName> 및 <xref:System.Collections.IEnumerable?displayProperty=fullName> 인터페이스입니다. 구현 하는 경우 <xref:System.Collections.IList>에 필요한 강력한 형식의 멤버를 제공 해야 <xref:System.Collections.ICollection>합니다. 컬렉션의 개체를 확장할 경우 <xref:System.ValueType?displayProperty=fullName>에 대 한 강력한 형식의 멤버를 제공 해야 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 성능 저하를 방지 하기 위해 boxing 시킨;이 때는 필요 하지 않습니다는 컬렉션의 개체는 참조 형식입니다.  
+ <xref:System.Collections.IList> 구현 하는 <xref:System.Collections.ICollection?displayProperty=fullName> 및 <xref:System.Collections.IEnumerable?displayProperty=fullName> 인터페이스입니다. 구현 하는 경우 <xref:System.Collections.IList>에 필요한 강력한 형식의 멤버를 제공 해야 <xref:System.Collections.ICollection>합니다. 컬렉션의 개체를 확장할 경우 <xref:System.ValueType?displayProperty=fullName>에 대 한 강력한 형식의 멤버를 제공 해야 <xref:System.Collections.IEnumerable.GetEnumerator%2A> 성능 저하를 방지 하기 위해 boxing 시킨;이 때는 필요 하지 않습니다는 컬렉션의 개체는 참조 형식입니다.  
   
  이 규칙을 준수 하는 인터페이스 멤버를 명시적으로 구현와 같은 형태로 InterfaceName.InterfaceMemberName, 이름을 사용 하 여 <xref:System.Collections.IList.Add%2A>합니다. 명시적 인터페이스 멤버는 인터페이스에서 선언 된 데이터 형식을 사용 합니다. 와 같은 인터페이스 멤버 이름을 사용 하 여 강력한 형식의 멤버를 구현 `Add`합니다. Public으로 강력한 형식의 멤버를 선언 하 고 매개 변수를 선언 컬렉션에 의해 관리 되는 강력한 형식의 값을 반환 합니다. 강력한 형식 보다 약한 종류를 같은 바꿉니다 <xref:System.Object> 및 <xref:System.Array> 인터페이스에 선언 된 합니다.  
   
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  새 컬렉션을 확장 하는 형식이 강력한 형식을 결정 하는 연결 된 목록 같은 새 개체 기반 컬렉션을 구현 하는 경우에이 규칙에서 경고를 표시 합니다. 이러한 형식은이 규칙을 준수 하 고 강력한 형식의 멤버를 노출 해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 형식에서에서 `YourType` 확장 <xref:System.Collections.CollectionBase?displayProperty=fullName>와 마찬가지로 모든 강력한 형식의 컬렉션입니다. <xref:System.Collections.CollectionBase> 의 명시적 구현을 제공는 <xref:System.Collections.IList> 인터페이스입니다. 따라서 강력한 형식의 멤버를만 제공 해야 <xref:System.Collections.IList> 및 <xref:System.Collections.ICollection>합니다.  
   
  [!code-csharp[FxCop.Design.IListStrongTypes#1](../code-quality/codesnippet/CSharp/ca1039-lists-are-strongly-typed_1.cs)]  

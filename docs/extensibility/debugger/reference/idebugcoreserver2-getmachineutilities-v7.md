@@ -2,28 +2,24 @@
 title: IDebugCoreServer2::GetMachineUtilities_V7 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugCoreServer2::GetMachineUtilities_V7
 helpviewer_keywords:
 - IDebugCoreServer2::GetMachineUtilities_V7
 ms.assetid: 64c1f08f-853b-4498-9810-29791581ef2f
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bf5881dabea216d7226e731c169dd97d1460c7fb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 96f374d83af705d8e9376d8767c822af82ed4d4a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugcoreserver2getmachineutilitiesv7"></a>IDebugCoreServer2::GetMachineUtilities_V7
 이 메서드는 서버에 대 한 시스템 유틸리티를 가져옵니다.  
@@ -53,7 +49,7 @@ int GetMachineUtilities_V7(
  항상 반환 `E_NOTIMPL`, 나타내는 메서드가 구현 되지 않았습니다.  
   
 ## <a name="remarks"></a>설명  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]항상 반환 `E_NOTIMPL` 이 메서드를 호출 합니다.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 항상 반환 `E_NOTIMPL` 이 메서드를 호출 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [IDebugCoreServer2](../../../extensibility/debugger/reference/idebugcoreserver2.md)

@@ -1,23 +1,21 @@
 ---
-title: "배포 후 문제 진단 | Microsoft Docs"
-ms.custom: 
-ms.date: 06/20/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+title: 배포 후 문제 진단 | Microsoft Docs
+ms.custom: ''
+ms.date: 04/10/2018
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: a3463eab-a352-4d17-8551-adbaad526db0
-caps.latest.revision: "60"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 562222296ca79a568a3b68aac55a879c8f2f51b1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: dc5ffb60e10f28fc33654a78f3f8486e42a2ed85
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="diagnose-problems-after-deployment"></a>배포 후 문제 진단
 IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하려면 Visual Studio에서 IntelliTrace 로그를 디버그하는 데 필요한 올바른 소스 파일과 기호 파일을 자동으로 찾을 수 있도록 릴리스에 빌드 정보를 포함합니다.  
@@ -34,18 +32,14 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 -   IntelliTrace를 사용하여 진단 데이터를 검토하고 코드를 디버그하기 위한 Visual Studio Enterprise(Professional 또는 Community Edition 아님)  
 
-##  <a name="SetUpBuild"></a>1 단계: 포함 정보를 릴리스에 빌드  
+##  <a name="SetUpBuild"></a> 1 단계: 포함 정보를 릴리스에 빌드  
  빌드 프로세스를 설정하여 웹 프로젝트의 빌드 매니페스트(BuildInfo.config 파일)를 만들어 이 매니페스트를 릴리스에 포함시킵니다. 이 매니페스트에는 특정 빌드를 만드는 데 사용된 프로젝트, 소스 제어 및 빌드 시스템에 대한 정보가 포함됩니다. 기록된 이벤트를 살펴보기 위해 IntelliTrace 로그를 열면 Visual Studio가 이 매니페스트 정보를 통해 일치하는 소스 및 기호를 간단히 찾을 수 있습니다.  
 
-###  <a name="AutomatedBuild"></a>Team Foundation Server를 사용 하 여 자동화 빌드용 빌드 매니페스트 만들기  
-
- Team Foundation 버전 제어 또는 GIT에서 다음 단계를 수행합니다.
-  
- **2단계:** [2단계: Release your app](#DeployRelease)  
+###  <a name="AutomatedBuild"></a> Team Foundation Server를 사용 하 여 자동화 빌드용 빌드 매니페스트 만들기  
   
  Team Foundation 버전 제어 또는 GIT에서 다음 단계를 수행합니다.  
  
- ####  <a name="TFS2017"></a>Team Foundation Server 2017
+ ####  <a name="TFS2017"></a> Team Foundation Server 2017
 
  빌드 정의를 설정하여 소스, 빌드 및 기호의 위치를 빌드 매니페스트(BuildInfo.config 파일)에 추가합니다. Team Foundation Build가 이 파일을 자동으로 만들어 프로젝트의 출력 폴더에 저장합니다.
   
@@ -55,7 +49,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
   
 2.  새 서식 파일을 만드는 경우에 ASP.NET Core (.NET Framework) 템플릿을 선택 합니다. 
   
-     ![빌드 프로세스 템플릿을 &#45;를 선택 합니다. TFS 2017](../debugger/media/ffr_tfs2017buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
+     ![빌드 프로세스 템플릿 선택 &#45; TFS 2017](../debugger/media/ffr_tfs2017buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
   
 3.  소스가 자동으로 인덱싱되도록 기호(PDB) 파일을 저장할 위치를 지정합니다.  
   
@@ -72,8 +66,10 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
      웹 서버에 액세스할 수 있는 사용자는 누구나 빌드 매니페스트에서 이러한 위치를 참조할 수 있습니다. 원본 서버가 안전한지 확인합니다.
   
 6.  새 빌드를 실행합니다.  
+  
+    로 이동 [2 단계: 앱 릴리스](#DeployRelease)  
 
-####  <a name="TFS2013"></a>Team Foundation Server 2013  
+####  <a name="TFS2013"></a> Team Foundation Server 2013  
  빌드 정의를 설정하여 소스, 빌드 및 기호의 위치를 빌드 매니페스트(BuildInfo.config 파일)에 추가합니다. Team Foundation Build가 이 파일을 자동으로 만들어 프로젝트의 출력 폴더에 저장합니다.  
 
 1.  [빌드 정의 편집 하거나 새 빌드 정의 만듭니다.](http://msdn.microsoft.com/Library/1c2eca2d-9a65-477e-9b23-0678ff7882ee)  
@@ -82,7 +78,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 2.  기본 템플릿(TfvcTemplate.12.xaml) 또는 사용자 지정 템플릿을 선택합니다.  
 
-     ![빌드 프로세스 템플릿을 &#45;를 선택 합니다. TFS 2013](../debugger/media/ffr_tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
+     ![빌드 프로세스 템플릿 선택 &#45; TFS 2013](../debugger/media/ffr_tfs2013buildprocesstemplate.png "FFR_TFS2013BuildProcessTemplate")  
 
 3.  소스가 자동으로 인덱싱되도록 기호(PDB) 파일을 저장할 위치를 지정합니다.  
 
@@ -116,9 +112,9 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 6.  새 빌드를 실행합니다.  
 
- **2단계:** [2단계: Release your app](#DeployRelease)  
+    로 이동 [2 단계: 앱 릴리스](#DeployRelease)  
 
-####  <a name="TFS2012_2010"></a>Team Foundation Server 2012 또는 2010  
+####  <a name="TFS2012_2010"></a> Team Foundation Server 2012 또는 2010  
  다음 단계에 따라 프로젝트에 대한 빌드 매니페스트(BuildInfo.config 파일)를 자동으로 만들고 프로젝트의 출력 폴더에 파일을 저장합니다. 이 파일은 출력 폴더에 "*ProjectName*.BuildInfo.config"로 표시되지만 앱 게시 후 배포 폴더에는 "BuildInfo.config"라는 이름으로 바뀝니다.  
 
 1.  Team Foundation Build 서버에 임의 버전의 Visual Studio 2013을 설치합니다.  
@@ -141,9 +137,9 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 4.  새 빌드를 실행합니다.  
 
- **2단계:** [2단계: Release your app](#DeployRelease)  
+    로 이동 [2 단계: 앱 릴리스](#DeployRelease)  
 
-###  <a name="ManualBuild"></a>Visual Studio를 사용 하 여 수동 빌드용 빌드 매니페스트 만들기  
+###  <a name="ManualBuild"></a> Visual Studio를 사용 하 여 수동 빌드용 빌드 매니페스트 만들기  
  다음 단계에 따라 프로젝트에 대한 빌드 매니페스트(BuildInfo.config 파일)를 자동으로 만들고 프로젝트의 출력 폴더에 파일을 저장합니다. 이 파일은 출력 폴더에 "*ProjectName*.BuildInfo.config"로 표시되지만 앱 게시 후 배포 폴더에는 "BuildInfo.config"라는 이름으로 바뀝니다.  
 
 1.  **솔루션 탐색기**에서 웹 프로젝트를 언로드합니다.  
@@ -168,9 +164,9 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 4.  새 빌드를 실행합니다.  
 
- **2단계:** [2단계: Release your app](#DeployRelease)  
+    로 이동 [2 단계: 앱 릴리스](#DeployRelease)  
 
-###  <a name="MSBuild"></a>MSBuild.exe를 사용 하 여 수동 빌드용 빌드 매니페스트 만들기  
+###  <a name="MSBuild"></a> MSBuild.exe를 사용 하 여 수동 빌드용 빌드 매니페스트 만들기  
  빌드를 실행할 때 다음의 빌드 인수를 추가합니다.  
 
  **/p:GenerateBuildInfoConfigFile = true**  
@@ -179,7 +175,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
  **/p:BuildSymbolStorePath =**\<*기호에 대 한 경로*>  
 
-##  <a name="DeployRelease"></a>2 단계: 앱 릴리스  
+##  <a name="DeployRelease"></a> 2 단계: 앱 릴리스  
  빌드 프로세스에서 만들어진 [Web.Deploy 패키지](http://msdn.microsoft.com/library/dd394698.aspx) 를 사용하여 앱을 배포할 경우 빌드 매니페스트는 자동으로 "*ProjectName*.BuildInfo.config"에서 "BuildInfo.config"라는 이름으로 바뀌어 웹 서버에서 앱의 Web.config 파일과 같은 폴더에 저장됩니다.  
 
  다른 방법을 사용하여 앱을 배포할 경우에는 빌드 매니페스트가 "*ProjectName*.BuildInfo.config"에서 "BuildInfo.config"라는 이름으로 바뀌어 웹 서버에서 앱의 Web.config 파일과 같은 폴더에 저장되었는지 확인해야 합니다.  
@@ -187,7 +183,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 ## <a name="step-3-monitor-your-app"></a>3단계: 앱 모니터링  
  앱의 문제를 모니터링하고 진단 이벤트를 기록하고 해당 이벤트를 IntelliTrace 로그 파일에 저장할 수 있도록 웹 서버에 응용 프로그램 성능 모니터링을 설정합니다. 참조 [배포 문제에 대해 릴리스 모니터링](../debugger/using-the-intellitrace-stand-alone-collector.md)합니다.  
 
-##  <a name="InvestigateEvents"></a>4 단계: 문제 찾기  
+##  <a name="InvestigateEvents"></a> 4 단계: 문제 찾기  
  IntelliTrace를 사용하여 기록된 이벤트를 검토하고 코드를 디버그하려면 개발 컴퓨터 또는 다른 컴퓨터에 Visual Studio Enterprise가 있어야 합니다. 문제 진단을 도와주는 CodeLens, 디버거 지도 및 코드 맵 등의 도구를 사용할 수도 있습니다.  
 
 ### <a name="open-the-intellitrace-log-and-matching-solution"></a>IntelliTrace 로그 및 연결 솔루션 열기  
@@ -208,7 +204,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
      그렇지 않을 경우, 다른 작업 영역을 선택하거나 새 작업 영역 만듭니다. Visual Studio가 전체 분기를 이 작업 영역에 매핑합니다.  
 
-     ![소스 제어에서 열기 &#45; 새 작업 영역 만들기](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
+     ![소스 제어에서 열기 &#45; 새 작업 영역을 만들](../debugger/media/ffr_openprojectfromsourcecontrol_createnewworkspace.png "FFR_OpenProjectFromSourceControl_CreateNewWorkspace")  
 
      사용자의 컴퓨터 이름이 아닌 다른 이름 또는 특정 매핑으로 작업 영역을 만들려면 **관리**를 선택합니다.  
 
@@ -254,7 +250,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
      이제 다른 기록된 값, 호출 스택을 검토하거나 **IntelliTrace** 창을 사용하여 [다른 기록된 이벤트 사이의 "in time"](../debugger/intellitrace.md), 관련 코드 및 이 시점에 기록된 값을 뒤나 앞으로 이동합니다. [기타 모든 이벤트 및 IntelliTrace 로그의 정보는 무엇입니까?](../debugger/using-saved-intellitrace-data.md)  
 
-###  <a name="WhatElse"></a>여기에서 그 외 무엇을 수행할 수 있습니까?  
+###  <a name="WhatElse"></a> 여기에서 그 외 무엇을 수행할 수 있습니까?  
 
 -   [이 코드에 대 한 자세한 정보를 가져올](../ide/find-code-changes-and-other-history-with-codelens.md)합니다. 이 코드에 대 한 참조를 찾으려면 변경 기록, 관련된 버그, 작업 항목, 코드 검토 또는 단위 테스트-편집기 내 all-편집기에서 CodeLens 표시기 사용 합니다.  
 
@@ -268,12 +264,12 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 ###  <a name="FAQ"></a> Q & A  
 
-####  <a name="WhyInclude"></a>내 프로젝트, 소스 제어, 빌드 및 기호를 릴리스에 대 한 정보를 포함 q?  
+####  <a name="WhyInclude"></a> 내 프로젝트, 소스 제어, 빌드 및 기호를 릴리스에 대 한 정보를 포함 q?  
  Visual Studio는 이러한 정보를 사용하여, 디버깅하려는 릴리스에 맞는 솔루션 및 소스를 찾아냅니다. IntelliTrace 로그를 열고 이벤트를 선택하여 디버깅을 시작하면, Visual Studio는 기호를 사용하여 이벤트가 발생한 코드를 찾아 보여줍니다. 그런 다음 기록된 값을 살펴보고 코드 실행 이전 또는 이후 위치로 이동할 수 있습니다.  
 
  TFS와이 정보를 사용 하는 경우 빌드 매니페스트 (BuildInfo.config 파일), 일치 하는 소스 및 기호에 현재 연결 된 TFS에 대 한 Visual Studio 검색 되지 않습니다. Visual Studio가 올바른 TFS나 일치하는 소스를 찾을 수 없는 경우에는 다른 TFS를 선택하라는 메시지가 표시됩니다.  
 
-####  <a name="InvalidConfigFile"></a>Q: IntelliTrace 로그 배포 된 앱에 대 한 정보가 없습니다. 그 이유는 무엇입니까? 어떻게 해야 합니까?  
+####  <a name="InvalidConfigFile"></a> Q: IntelliTrace 로그 배포 된 앱에 대 한 정보가 없습니다. 그 이유는 무엇입니까? 어떻게 해야 합니까?  
  개발 컴퓨터에서 배포하거나 배포 시 TFS에 연결되어 있지 않은 경우에 이러한 문제가 발생할 수 있습니다.  
 
 1.  프로젝트의 배포 폴더로 이동합니다.  
@@ -284,7 +280,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 -   **ProjectName**  
 
-     Visual Studio에서의 프로젝트의 이름입니다. 예:  
+     Visual Studio에서의 프로젝트의 이름입니다. 예를 들어:  
 
     ```  
     <ProjectName>FabrikamFiber.Extranet.Web</ProjectName>  
@@ -302,7 +298,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
         -   **ProjectVersionSpec**: 프로젝트 버전  
 
-         예:  
+         예를 들어:  
 
         ```  
         <SourceControl type="TFS">  
@@ -324,7 +320,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
         -   **CommitId**: 커밋 id  
 
-         예:  
+         예를 들어:  
 
         ```  
         <SourceControl type="Git">   
@@ -338,7 +334,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
 -   **빌드**  
 
-     빌드 시스템( `"TeamBuild"` 또는 `"MSBuild"`) 및 다음의 필수 속성에 대한 정보입니다.  
+     빌드 시스템(`"TeamBuild"` 또는 `"MSBuild"`) 및 다음의 필수 속성에 대한 정보입니다.  
 
     -   **BuildLabel** (TeamBuild용): 빌드 이름 및 번호입니다. 이 레이블은 배포 이벤트의 이름으로도 사용됩니다. 빌드 번호에 대 한 자세한 내용은 참조 하십시오. [빌드 완료 된 빌드에 의미 있는 이름을 지정 하는 숫자를 사용 하 여](http://msdn.microsoft.com/Library/1f302e9d-4b0a-40b5-8009-b69ca6f988c3)합니다.  
 
@@ -350,7 +346,7 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
     -   **BuiltSolution**: Visual Studio에서 일치하는 솔루션을 찾고 열기 위해 사용하는 솔루션 파일의 경로입니다. **SolutionPath** MsBuild 속성의 내용입니다.  
 
-     예:  
+     예를 들어:  
 
     -   **TFS**  
 
@@ -377,12 +373,12 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
         </Build>  
         ```  
 
-####  <a name="IneligibleWorkspace"></a>Q: 이유는 Visual Studio 예를 들어 선택한 작업 영역이 적합 하지?  
+####  <a name="IneligibleWorkspace"></a> Q: 이유는 Visual Studio 예를 들어 선택한 작업 영역이 적합 하지?  
  **A:** 선택된 작업 영역에는 소스 제어 폴더와 로컬 폴더 간의 매핑이 없습니다. 이 작업 영역에 대한 매핑을 만들려면 **관리**를 선택합니다. 그렇지 않으면, 이미 매핑된 작업 영역을 선택하거나 새 작업 영역 만듭니다.  
 
  ![매핑된 작업 영역 없이 소스 제어에서 열기](../debugger/media/ffr_openprojectfromsourcecontrol_notmapped.png "FFR_OpenProjectFromSourceControl_NotMapped")  
 
-####  <a name="ChooseTeamProject"></a>팀 컬렉션이 나 다른 컬렉션을 선택할 때까지 계속할 수 없는 q  
+####  <a name="ChooseTeamProject"></a> 팀 컬렉션이 나 다른 컬렉션을 선택할 때까지 계속할 수 없는 q  
  **A:** 이 문제는 다음과 같은 이유로 인해 발생할 수 있습니다.  
 
 -   Visual Studio가 TFS에 연결되어 있지 않습니다.  
@@ -399,10 +395,10 @@ IntelliTrace를 사용하여 배포한 후 ASP.NET 웹앱의 문제를 진단하
 
      ![소스 제어에서 열기 &#45; 마이그레이션된](../debugger/media/ffr_openprojectfromsourcecontrol_migrated.png "FFR_OpenProjectFromSourceControl_Migrated")  
 
-####  <a name="WhatWorkspace"></a>Q: 작업 영역 이란?  
+####  <a name="WhatWorkspace"></a> Q: 작업 영역 이란?  
  **A:** 프로그램 [작업 영역은 소스 사본을 저장](http://msdn.microsoft.com/Library/1d7f6ed8-ec7c-48f8-86da-9aea55a90d5a) 을 개발 하 고 별도로 테스트 하기 전에 확인 작업에서 수 있도록 합니다. 발견된 솔루션 또는 프로젝트에 특별히 매핑된 작업 영역이 아직 없는 경우 Visual Studio는 사용 가능한 작업 영역을 선택하거나 기본 작업 영역 이름으로 사용자 컴퓨터 이름을 사용하는 새 작업 영역을 만들 것인지 묻는 메시지를 표시합니다.  
 
-####  <a name="UntrustedSymbols"></a>신뢰할 수 없는 기호에 대 한이 메시지는 q 습 니가?  
+####  <a name="UntrustedSymbols"></a> 신뢰할 수 없는 기호에 대 한이 메시지는 q 습 니가?  
  ![트러스트 되지 않은 기호 경로 사용 하 여 디버그? ] (../debugger/media/ffr_ituntrustedsymbolpaths.png "FFR_ITUntrustedSymbolPaths")  
 
  **A:** 이 메시지를 표시 하는 경우 빌드 매니페스트 파일에 기호 경로 (\<*p r o j*> 합니다. BuildInfo.config)의 신뢰할 수 있는 기호 경로 목록에 포함 되지 않습니다. 디버거 옵션에서 기호 경로 목록에 경로를 추가할 수 있습니다.

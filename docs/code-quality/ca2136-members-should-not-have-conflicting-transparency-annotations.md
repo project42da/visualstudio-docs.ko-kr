@@ -1,12 +1,10 @@
 ---
-title: "CA2136: 멤버 해야 합니다. 충돌 하는 투명도 주석을 | Microsoft Docs"
-ms.custom: 
+title: 'CA2136: 멤버 해야 합니다. 충돌 하는 투명도 주석을 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2127
 - SecurityTransparentAssembliesShouldNotContainSecurityCriticalCode
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - SecurityTransparentAssembliesShouldNotContainSecurityCriticalCode
 - CA2127
 ms.assetid: ff5a1d18-7c52-4da5-8990-60be83a8ea81
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: aad39e8b42a709aabc6321718a671510a5b686da
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e6b77dfdbb97d54e5ad1ac31d3f5e29a03cd9b54
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2136-members-should-not-have-conflicting-transparency-annotations"></a>CA2136: 멤버는 충돌하는 투명도 주석을 가져서는 안 됩니다.
 |||  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서 경고를 표시 하지 마십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  메서드를로 다음 예에서 <xref:System.Security.SecuritySafeCriticalAttribute> 특성 되며로 표시 된 클래스의 멤버는 <xref:System.Security.SecurityCriticalAttribute> 특성입니다. 보안 안전 특성을 제거 해야 합니다.  
   
  [!code-csharp[FxCop.Security.CA2136.TransparencyAnnotationsShouldNotConflict#1](../code-quality/codesnippet/CSharp/ca2136-members-should-not-have-conflicting-transparency-annotations_1.cs)]

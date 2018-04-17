@@ -1,12 +1,10 @@
 ---
-title: "CA1018: 표시 특성을 AttributeUsageAttribute로 | Microsoft Docs"
-ms.custom: 
+title: 'CA1018: 표시 특성을 AttributeUsageAttribute로 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1018
 - MarkAttributesWithAttributeUsage
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1018
 - MarkAttributesWithAttributeUsage
 ms.assetid: 6ab70ec0-220f-4880-af31-45067703133c
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 2b94cb7c11c803e713609036db12c47e2027cb61
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3d40b97ee7637b5f742caee71b23cd9d384a1ecc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1018-mark-attributes-with-attributeusageattribute"></a>CA1018: 특성을 AttributeUsageAttribute로 표시하십시오.
 |||  
@@ -47,8 +45,8 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  메시지를 제외 하는 대신이 규칙 위반 문제를 해결 해야 합니다. 특성을 상속 하는 경우에 <xref:System.AttributeUsageAttribute>, 코드 유지 관리를 간소화 하는 특성이 있어야 합니다.  
   
-## <a name="example"></a>예  
- 다음 예제에서는 두 가지 특성을 정의합니다. `BadCodeMaintainerAttribute`생략 된 올바르지 않은 <xref:System.AttributeUsageAttribute> 문, 및 `GoodCodeMaintainerAttribute` 올바르게이 단원의 앞에서 설명한 특성을 구현 합니다. 속성 `DeveloperName` 설계 규칙에 필요한 [CA1019: 특성 인수의 접근자를 정의](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) 완전성을 위해 포함 됩니다.  
+## <a name="example"></a>예제  
+ 다음 예제에서는 두 가지 특성을 정의합니다. `BadCodeMaintainerAttribute` 생략 된 올바르지 않은 <xref:System.AttributeUsageAttribute> 문, 및 `GoodCodeMaintainerAttribute` 올바르게이 단원의 앞에서 설명한 특성을 구현 합니다. 속성 `DeveloperName` 설계 규칙에 필요한 [CA1019: 특성 인수의 접근자를 정의](../code-quality/ca1019-define-accessors-for-attribute-arguments.md) 완전성을 위해 포함 됩니다.  
   
  [!code-csharp[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/CSharp/ca1018-mark-attributes-with-attributeusageattribute_1.cs)]
  [!code-vb[FxCop.Design.AttributeUsage#1](../code-quality/codesnippet/VisualBasic/ca1018-mark-attributes-with-attributeusageattribute_1.vb)]  

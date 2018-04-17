@@ -2,12 +2,9 @@
 title: '연습: 병렬 응용 프로그램을 디버깅 | Microsoft Docs'
 ms.custom: H1HackMay2017
 ms.date: 03/22/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -22,17 +19,16 @@ helpviewer_keywords:
 - parallel applications, debugging [Visual Basic]
 - parallel applications, debugging [C#]
 ms.assetid: 2820ac4c-c893-4d87-8c62-83981d561493
-caps.latest.revision: ''
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af74685428f15cebdcaf0992ae3ad529f2dd41b8
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: 97afdf674868c400a02a54a9b17011ff96c11245
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debugging-a-parallel-application-in-visual-studio"></a>연습: Visual Studio에서 병렬 응용 프로그램 디버깅
 이 연습에서는 사용 하는 **병렬 작업** 및 **병렬 스택** 병렬 응용 프로그램을 디버깅 하는 windows. 이러한 창은 이해 하 고 사용 하는 코드의 런타임 동작을 확인 하는 데 도움이 [라이브러리 TPL (작업 병렬)](/dotnet/standard/parallel-programming/task-parallel-library-tpl) 또는 [동시성 런타임](/cpp/parallel/concrt/concurrency-runtime)합니다. 이 연습에서는 기본 제공 중단점이 있는 샘플 코드를 제공합니다. 사용 하는 방법을 보여 줍니다 코드가 중단 된 후의 **병렬 작업** 및 **병렬 스택** 검사 하는 windows.  
@@ -49,7 +45,7 @@ ms.lasthandoff: 03/28/2018
   
 -   창에서 그룹화, 확대/축소 및 기타 관련 기능을 통한 크기 조정을 처리하는 방법  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 조건  
  이 연습에서는 가정 하는 **내 코드만** 사용 (Visual Studio의 최신 버전에서 기본적으로 사용 됩니다). 에 **도구** 메뉴에서 클릭 **옵션**, 확장 하 고는 **디버깅** 노드를 선택 **일반**를 선택한 후 **사용 하도록 설정 내 코드만 5d; (관리 전용)**합니다. 이 기능을 설정하지 않아도 연습을 사용할 수 있지만 결과가 그림과 다를 수 있습니다.  
   
 ## <a name="c-sample"></a>C# 샘플  

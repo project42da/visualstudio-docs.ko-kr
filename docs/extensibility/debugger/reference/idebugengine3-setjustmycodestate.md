@@ -2,28 +2,24 @@
 title: IDebugEngine3::SetJustMyCodeState | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugEngine3::SetJustMyCodeState
 helpviewer_keywords:
 - IDebugEngine3::SetJustMyCodeState
 ms.assetid: 8ec17fbf-df93-424a-b2ed-fd1e5ee51256
-caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 08d396d378f168b9a54e3b640e69dfeb3f6c9ba1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fda672cc9d6861520b9da3a894b94d51f4100683
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugengine3setjustmycodestate"></a>IDebugEngine3::SetJustMyCodeState
 이 메서드는 JustMyCode 상태 정보에 대 한 디버그 엔진을 지시합니다.  
@@ -51,7 +47,7 @@ int SetJustMyCodeState(
  [in] 0이 아닌 (`TRUE`) 현재 정보를 업데이트 하려면 0 (`FALSE`) 모든 정보 (이전에 설정 된 모든 것을 제외)를 다시 설정 합니다.  
   
  `dwModules`  
- [in] 정보 구조 수`rgJMCSpec.`  
+ [in] 정보 구조 수 `rgJMCSpec.`  
   
  `rgJMCSpec`  
  [in] 배열 [JMC_CODE_SPEC](../../../extensibility/debugger/reference/jmc-code-spec.md) 구조를 사용 합니다.  

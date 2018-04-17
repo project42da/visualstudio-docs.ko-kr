@@ -1,13 +1,10 @@
 ---
-title: "설치 된 앱 패키지 (UWP) 디버그 | Microsoft Docs"
+title: 설치 된 앱 패키지 (UWP) 디버그 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 07/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.installedapppackagelauncher
 - vs.debug.remote.connection
@@ -20,17 +17,16 @@ dev_langs:
 helpviewer_keywords:
 - app package, debug
 ms.assetid: 5a94ad64-100d-43ca-9779-16cb5af86f97
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 16f4b69fa25861d893471a161fdb7c1a6bba34e5
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 9c1406637b6d1dce312b0574cfba3c9a4f7356e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debug-an-installed-app-package-in-visual-studio-uwp"></a>Visual Studio (UWP) 설치 된 앱 패키지를 디버그 합니다.
 
@@ -62,7 +58,7 @@ ms.lasthandoff: 01/19/2018
 > [!NOTE]
 > Visual Studio를 선택 하 여 실행 중인 모든 UWP 응용 프로그램 프로세스에 첨부할 수도 **디버그**, 차례로 **프로세스에 연결**합니다. 원래 Visual Studio 프로젝트 필요 하지 않은 실행 중인 프로세스에 연결 되지만 프로세스의 기호를 로드 하면 현저 하 게 지원 하지 않는 원본 코드는 프로세스를 디버깅할 때.
   
-## <a name="remote"></a>원격 컴퓨터에 설치 되거나 실행 응용 프로그램 디버깅 
+## <a name="remote"></a> 원격 컴퓨터에 설치 되거나 실행 응용 프로그램 디버깅 
 
 Visual Studio를 처음으로 원격 컴퓨터에 설치 된 응용 프로그램 패키지를 디버깅할 때 올바른 버전의 대상 장치에 대해 원격 도구를 설치 합니다. 대상 장치에 Windows 10 컴퓨터, XBox 및 HoloLens, IoT 장치 여야 합니다.
 

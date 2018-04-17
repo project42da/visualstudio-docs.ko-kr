@@ -1,26 +1,23 @@
 ---
-title: "데이터 집합 및 Tableadapter를 다른 프로젝트로 분리 | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합 및 Tableadapter를 다른 프로젝트로 분리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - TableAdapters, n-tier applications
 - n-tier applications, separating Datasets and TableAdapters
 ms.assetid: f66a3940-6227-46af-a930-9177f425f4fd
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: af4e082bfa3e1b7669eb43218977b03a47c2f0bd
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 304fa17ab036f868b8653efe64a59f68f0452723
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>별도 데이터 집합 및 Tableadapter 다른 프로젝트로
 형식화 된 데이터 집합 향상 된 있도록는 [Tableadapter](create-and-configure-tableadapters.md) 및 별도 프로젝트로 dataset 클래스를 생성할 수 있습니다. 따라서 빠르게 응용 프로그램 계층을 분리 하 고 n 계층 데이터 응용 프로그램을 생성할 수 있습니다.  
@@ -61,7 +58,7 @@ TableAdapter 코드에서 데이터 집합 코드를 분리 하는 경우에 데
 > [!NOTE]
 >  생성 된 클래스 파일을 보려면 데이터 집합 또는 TableAdapter 프로젝트를 선택 합니다. 그런 다음 **솔루션 탐색기**선택, **모든 파일 표시**합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [N 계층 데이터 응용 프로그램 개요](../data-tools/n-tier-data-applications-overview.md)   
 [연습: N 계층 데이터 응용 프로그램 만들기](../data-tools/walkthrough-creating-an-n-tier-data-application.md)   
 [계층적 업데이트](../data-tools/hierarchical-update.md)   

@@ -1,12 +1,10 @@
 ---
-title: "CA1026: 기본 매개 변수를 사용할 수 해야 | Microsoft Docs"
-ms.custom: 
+title: 'CA1026: 기본 매개 변수를 사용할 수 해야 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1026
 - DefaultParametersShouldNotBeUsed
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1026
 - DefaultParametersShouldNotBeUsed
 ms.assetid: 09643415-36ef-4d0f-9411-5721e14e2512
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 43f83bf88e017da06ee3653019aa91807229d55e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b3bc307b0c82400a209d09b490ba0882e6474db3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1026-default-parameters-should-not-be-used"></a>CA1026: 기본 매개 변수를 사용하면 안 됩니다.
 |||  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 이와 동일한 기능을 제공 하는 오버 로드 된 메서드와 기본 매개 변수를 사용 하는 방법을 보여 줍니다.  
   
  [!code-vb[FxCop.Design.DefaultParameters#1](../code-quality/codesnippet/VisualBasic/ca1026-default-parameters-should-not-be-used_1.vb)]  

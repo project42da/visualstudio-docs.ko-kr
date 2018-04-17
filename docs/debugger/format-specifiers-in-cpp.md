@@ -2,12 +2,9 @@
 title: 형식 지정자 (c + +) 디버거에서 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug
 dev_langs:
@@ -28,17 +25,16 @@ helpviewer_keywords:
 - format specifiers, debugger
 - debugger, format specifiers recognized by
 ms.assetid: 0f6f3b7c-ce2c-4b4d-b14f-7589dbed5444
-caps.latest.revision: 40
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 5b7efb90e6f2a2489fffb890c664393252021e6f
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: f1b6151350faa55b3e2918a45908111ab96edf6a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서의 c + +에서 형식 지정자
 형식 지정자를 사용하여 **조사식** 창에 값이 표시되는 형식을 변경할 수 있습니다.  
@@ -69,26 +65,26 @@ int main() {
 ##  <a name="BKMK_Visual_Studio_2012_format_specifiers"></a> 형식 지정자  
  다음 표에서는 Visual Studio에서 사용할 수 있는 형식 지정자를 보여 줍니다. 굵게 표시된 지정자는 C++/CLI를 사용하는 interop 디버깅에 대해 지원되지 않습니다.  
   
-|지정자|형식|원래 조사식 값|표시되는 값|  
+|지정자|서식|원래 조사식 값|표시되는 값|  
 |---------------|------------|--------------------------|---------------------|  
 |일|10진수 정수|0x00000066|102|  
 |o|부호 없는 8진수 정수|0x00000066|000000000146|  
 |x<br /><br /> **h**|16진수 정수|102|0xcccccccc|  
-|X<br /><br /> **H**|16진수 정수|102|0xcccccccc|  
+|X<br /><br /> **H**|16진수 정수|102|0xCCCCCCCC|  
 |c|단일 문자|0x0065, c|101 'e'|  
 |s|const char* 문자열|\<위치 > "hello world"|"hello world"|  
 |**sb**|const char * 문자열 (인용 부호 제외)|\<위치 > "hello world"|hello world|  
 |s8|UTF-8 문자열|\<위치 > "이것이 u t F-8 커피 컵 â˜•"|"This is u t F-8 커피 컵 ☕"|
 |**s8b**|U t F-8 문자열 (인용 부호 제외)|\<위치 > "hello world"|hello world|  
-|su|유니코드 (utf-16 인코딩) 문자열|\<location> L"hello world"|L"hello world"<br /><br /> u"hello world"|  
-|sub|유니코드 (utf-16 인코딩) 문자열 (인용 부호 제외)|\<location> L"hello world"|hello world|  
-|bstr|BSTR 문자열|\<location> L"hello world"|L"hello world"|  
+|su|유니코드 (utf-16 인코딩) 문자열|\<위치 > L "hello world"|L"hello world"<br /><br /> u"hello world"|  
+|sub|유니코드 (utf-16 인코딩) 문자열 (인용 부호 제외)|\<위치 > L "hello world"|hello world|  
+|bstr|BSTR 문자열|\<위치 > L "hello world"|L"hello world"|  
 |env|환경 블록 (이중 null 종료 문자열)|\<location> L"=::=::\\\\"|L"=::=::\\\\\\0=C:=C:\\\\windows\\\\system32\\0ALLUSERSPROFILE=...|
 |**s32**|UTF-32 문자열|\<위치 > U "hello world"|u"hello world"|  
 |**s32b**|UTF-32 문자열(따옴표 제외)|\<위치 > U "hello world"|hello world|  
 |**en**|enum|Saturday(6)|토요일|  
-|**hv**|포인터 유형 - 검사 중인 포인터 값이 배열의 힙 할당 결과임을 나타냅니다(예: `new int[3]`).|\<location>{\<first member>}|\<location>{\<first member>, \<second member>, ...}|  
-|**na**|개체에 대한 포인터의 메모리 주소를 표시하지 않습니다.|\<location>, {member=value...}|{member=value...}|  
+|**hv**|포인터 유형 - 검사 중인 포인터 값이 배열의 힙 할당 결과임을 나타냅니다(예: `new int[3]`).|\<위치 > {\<첫 번째 멤버 >}|\<위치 > {\<첫 번째 멤버 >, \<두 번째 멤버 >, …}|  
+|**na**|개체에 대한 포인터의 메모리 주소를 표시하지 않습니다.|\<위치 >, {멤버 = value …}|{멤버 = value …}|  
 |**nd**|파생된 클래스는 무시하고 기본 클래스 정보만 표시합니다.|`(Shape*) square` 에는 기본 클래스 및 파생 클래스 정보가 포함됩니다.|기본 클래스 정보만 표시합니다.|  
 |hr|HRESULT 또는 Win32 오류 코드. 이제 디버거가 자동으로 HRESULT를 디코딩하므로 해당 경우에는 이 지정자가 필요하지 않습니다.|S_OK|S_OK|  
 |wc|Window 클래스 플래그|0x0010|WC_DEFAULTCHAR|  
@@ -101,7 +97,7 @@ int main() {
 ###  <a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> 배열로 사용되는 포인터에 대한 크기 지정자  
  배열로 표시할 개체에 대한 포인터가 있는 경우 다음과 같이 정수 또는 식을 사용하여 배열 요소의 수를 지정할 수 있습니다.  
   
-|지정자|형식|원래 조사식 값|표시되는 값|  
+|지정자|서식|원래 조사식 값|표시되는 값|  
 |---------------|------------|---------------------------|---------------------|  
 |n|10진수 또는 **16진수** 정수|pBuffer,[32]<br /><br /> pBuffer,**[0x20]**|`pBuffer` 를 요소가 32개인 배열로 표시합니다.|  
 |**[exp]**|정수로 확인되는 유효한 C++ 식입니다.|pBuffer,[bufferSize]|PBuffer를 `bufferSize` 요소의 배열로 표시합니다.|  
@@ -110,7 +106,7 @@ int main() {
 ##  <a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> C++/CLI를 사용하는 interop 디버깅의 형식 지정자  
  **굵게** 표시된 지정자는 네이티브 및 C++/CLI 코드 디버깅에 대해서만 지원됩니다.  
   
-|지정자|형식|원래 조사식 값|표시되는 값|  
+|지정자|서식|원래 조사식 값|표시되는 값|  
 |---------------|------------|--------------------------|---------------------|  
 |**d,i**|부호 있는 10진수 정수|0xF000F065|-268373915|  
 |**u**|부호 없는 10진수 정수|0x0065|101|  

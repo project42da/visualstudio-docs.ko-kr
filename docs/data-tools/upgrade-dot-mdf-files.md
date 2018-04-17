@@ -1,11 +1,8 @@
 ---
-title: ".Mdf 파일을 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: .Mdf 파일을 업그레이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - SQL Server Express
 - SQL Server LocalDB
@@ -15,14 +12,15 @@ helpviewer_keywords:
 - upgrading to LocalDB
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: b0e12b716d98920ea2d358a43116042ca54ffd2f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: 91a58a3605873f309b44f3d22ef4fbc2ca8c12f5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-mdf-files"></a>.Mdf 파일을 업그레이드
 
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  에 **연결 추가** 대화 상자에서 다음 정보를 지정 합니다.  
   
-    -   **데이터 원본**:`Microsoft SQL Server (SqlClient)`  
+    -   **데이터 원본**: `Microsoft SQL Server (SqlClient)`  
   
     -   **서버 이름**:  
   
@@ -114,6 +112,6 @@ ms.lasthandoff: 12/22/2017
   
     SQL Server Express 응용 프로그램에 대 한 기본 데이터베이스 엔진 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio에서 데이터 액세스](accessing-data-in-visual-studio.md)

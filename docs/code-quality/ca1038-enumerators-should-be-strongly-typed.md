@@ -1,12 +1,10 @@
 ---
-title: "CA1038: 열거자 강력한 형식 이어야 합니다 | Microsoft Docs"
-ms.custom: 
+title: 'CA1038: 열거자 강력한 형식 이어야 합니다 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - EnumeratorsShouldBeStronglyTyped
 - CA1038
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - EnumeratorsShouldBeStronglyTyped
 - CA1038
 ms.assetid: 8919f526-d487-42a4-87dc-2b2ee25260c4
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 84ddea0bebd5c3811da84abadd207b839ec8be48
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 01b194864f559ff095d8727ff11a4906377aa482
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1038-enumerators-should-be-strongly-typed"></a>CA1038: 열거자는 강력한 형식이어야 합니다.
 |||  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이진 트리 같은 개체 기반 컬렉션에서 사용 하기 위해 개체 기반 열거자를 구현 하는 경우에이 규칙에서 경고를 표시 합니다. 새 컬렉션을 확장 하는 형식은 강력한 형식의 열거자를 정의 하 고 강력한 형식의 속성을 노출 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 강력한 형식의 구현 하는 올바른 방법은 <xref:System.Collections.IEnumerator> 유형입니다.  
   
  [!code-csharp[FxCop.Design.IEnumeratorStrongTypes#1](../code-quality/codesnippet/CSharp/ca1038-enumerators-should-be-strongly-typed_1.cs)]  

@@ -2,28 +2,24 @@
 title: IDebugProperty2::GetExtendedInfo | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugProperty2::GetExtendedInfo
 helpviewer_keywords:
 - IDebugProperty2::GetExtendedInfo
 ms.assetid: 0c9c0b2b-7540-4424-adb5-fce7aa37a026
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2d3dfd2111533896db2a3b298ff294ff180d4a70
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e6865361ac0b518f4fa78a3521973d756e6ab780
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugproperty2getextendedinfo"></a>IDebugProperty2::GetExtendedInfo
 확장 속성에 대 한 정보를 가져옵니다.  
@@ -59,7 +55,7 @@ int GetExtendedInfo (
   
  다음 Guid는 (의 GUID 값이 지정 되어 C# 이름을 어셈블리에서 사용할 수 없기 때문)이이 메서드에 의해 일반적으로 인식 됩니다. 내부 사용에 대 한 추가 Guid는 만들 수 있습니다.  
   
-|name|GUID|설명|  
+|이름|GUID|설명|  
 |----------|----------|-----------------|  
 |guidDocument|{3f98de84-fee9-11d0-b47f-00a0244a1dd2}|반환 된 `IUnknown` 문서에 대 한 인터페이스입니다. 일반적으로 [IDebugDocumentText2](../../../extensibility/debugger/reference/idebugdocumenttext2.md) 에서이 인터페이스를 가져올 수 있습니다 `IUnknown` 인터페이스입니다.|  
 |guidCodeContext|{e2fc65e-56ce-11 d 1-b528-00aax004a8797}|반환 된 `IUnknown` 인터페이스를 문서 컨텍스트에서 가져왔습니다. 일반적으로 [IDebugDocumentContext2](../../../extensibility/debugger/reference/idebugdocumentcontext2.md) 에서이 인터페이스를 가져올 수 있습니다 `IUnknown` 인터페이스입니다.|  

@@ -1,11 +1,8 @@
 ---
-title: "데이터 집합의 데이터 유효성 검사 | Microsoft Docs"
-ms.custom: 
+title: 데이터 집합의 데이터 유효성 검사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - DataTable.ColumnChanging
 - System.Data.DataTable.ColumnChanging
@@ -20,17 +17,17 @@ helpviewer_keywords:
 - validating data, datasets
 - updating datasets, validating data
 ms.assetid: 79500596-1e4d-478e-a991-a636fd73a622
-caps.latest.revision: "24"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-data-tools
-ms.workload: data-storage
-ms.openlocfilehash: b5cc63d5a83c9f1400dd183982fa68864d35fdbf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- data-storage
+ms.openlocfilehash: a85e7b429300ce86290e707bb612d778b8fbb20e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-data-in-datasets"></a>데이터 집합의 데이터 유효성 검사
 데이터 집합의 스키마 내에서 제약 조건에 따르는 데이터 개체에 입력할 값 확인 과정은 데이터 유효성을 검사 합니다. 유효성 검사 프로세스는 또한 이러한 값은 다음 응용 프로그램에 대해 설정 된 규칙을 확인 합니다. 업데이트를 내부 데이터베이스에 보내기 전에 데이터 유효성 검사는 것이 좋습니다. 이렇게 하면 오류 뿐 아니라 잠재적인 응용 프로그램과 데이터베이스 간의 왕복 수가 줄어듭니다.  
@@ -211,7 +208,7 @@ ms.lasthandoff: 12/22/2017
      [!code-csharp[VbRaddataEditing#22](../data-tools/codesnippet/CSharp/validate-data-in-datasets_7.cs)]
      [!code-vb[VbRaddataEditing#22](../data-tools/codesnippet/VisualBasic/validate-data-in-datasets_7.vb)]  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 [Visual Studio의 데이터 집합 도구](../data-tools/dataset-tools-in-visual-studio.md)  
 [방법: Windows Forms DataGridView 컨트롤에서 데이터 유효성 검사](/dotnet/framework/winforms/controls/how-to-validate-data-in-the-windows-forms-datagridview-control)   
 [방법: Windows Forms ErrorProvider 구성 요소를 사용하여 폼 유효성에 대한 오류 아이콘 표시](/dotnet/framework/winforms/controls/display-error-icons-for-form-validation-with-wf-errorprovider)

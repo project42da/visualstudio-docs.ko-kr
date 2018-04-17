@@ -1,29 +1,25 @@
 ---
 title: IDiaEnumSectionContribs | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaEnumSectionContribs interface
 ms.assetid: 0d6c0632-310f-4a99-8921-58149a1817e3
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1e1497092e94a176ab3024da65e068f5c982fc2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 320fc78c255a0bf8c777fc2d4de13dbfd698a3f3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiaenumsectioncontribs"></a>IDiaEnumSectionContribs
 데이터 소스에 포함 된 다양 한 섹션 기여를 열거 합니다.  
@@ -52,7 +48,7 @@ IDiaEnumSectionContribs : IUnknown
 ## <a name="note-for-callers"></a>호출자에 대 한 참고  
  이 인터페이스를 가져옵니다는 [idiasession:: Getenumtables](../../debugger/debug-interface-access/idiasession-getenumtables.md) 메서드. 자세한 내용은 예제를 참조 하십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에 가져오는 방법을 보여 줍니다 (는 `GetEnumSectionContribs` 함수) 및 사용 (의 `ShowSectionContribs` 함수)는 `IDiaEnumSectionContribs` 인터페이스. 섹션 기여를 사용 하 여의 자세한 예제에 대 한 참조는 [IDiaSectionContrib](../../debugger/debug-interface-access/idiasectioncontrib.md) 인터페이스입니다.  
   
 ```C++  

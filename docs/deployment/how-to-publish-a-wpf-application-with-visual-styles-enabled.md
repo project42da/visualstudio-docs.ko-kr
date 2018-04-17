@@ -1,23 +1,21 @@
 ---
-title: "방법: 비주얼 스타일을 사용으로 WPF 응용 프로그램 게시 | Microsoft Docs"
-ms.custom: 
+title: '방법: 비주얼 스타일을 사용으로 WPF 응용 프로그램 게시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-deployment
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-deployment
+ms.topic: conceptual
 ms.assetid: 73b22b02-fc75-42aa-82d3-51fdcaf8e5c8
-caps.latest.revision: "3"
 author: mairaw
 ms.author: mairaw
 manager: wpickett
-ms.workload: multiple
-ms.openlocfilehash: bab4660d0e76e467bc95c373002a9035a4ccd672
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- multiple
+ms.openlocfilehash: 2fbf3c2573d02111f5d1309fb80ceb09aa09f2e4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>방법: 비주얼 스타일을 사용하여 WPF 응용 프로그램 게시
 비주얼 스타일을 사용자가 선택한 테마에 따라 변경 하는 공용 컨트롤의 모양을 사용 하도록 설정 합니다. 기본적으로 비주얼 스타일은 사용 되지 Windows Presentation Foundation (WPF) 응용 프로그램에 대해 않으므로 수동으로 사용 해야 합니다. 그러나 WPF 응용 프로그램에 대 한 비주얼 스타일을 사용 하도록 설정 하 고 다음 솔루션을 게시 하면 오류가 발생 합니다. 이 항목에서는이 오류 및 사용 하도록 설정 하는 비주얼 스타일으로는 WPF 응용 프로그램을 게시 하기 위한 프로세스를 해결 하는 방법을 설명 합니다. 비주얼 스타일에 대 한 자세한 내용은 참조 [비주얼 스타일 개요](http://msdn.microsoft.com/5b5d7bb6-684f-478d-bf5f-b8d18bbcff2e)합니다. 오류 메시지에 대 한 자세한 내용은 참조 [ClickOnce 배포의 특정 오류 문제 해결](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)합니다.  
@@ -34,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
  그런 다음 최종 사용자가 응용 프로그램을 설치 하려는 위치에 게시 된 파일을 이동할 수 있습니다.  
   
-##  <a name="BKMK_publishsolwovs"></a>비주얼 스타일을 사용 하지 않고 솔루션을 게시 합니다.  
+##  <a name="BKMK_publishsolwovs"></a> 비주얼 스타일을 사용 하지 않고 솔루션을 게시 합니다.  
   
 1.  프로젝트에 비주얼 스타일을 사용 하지 않았는지 확인 합니다. 첫째, 다음 XML에 대 한 프로젝트의 매니페스트 파일을 확인 합니다. 그런 다음 있으면 헤더는 XML 주석 태그를 사용 하 여 XML로 묶습니다.  
   
@@ -48,7 +46,7 @@ ms.lasthandoff: 12/22/2017
   
     ###### <a name="to-open-the-manifest-file-in-a-visual-basic-project"></a>Visual Basic 프로젝트에서 매니페스트 파일을 열려면  
   
-    1.  메뉴 모음에서 **프로젝트**, *p r o j***속성**여기서 *ProjectName* WPF 프로젝트의 이름입니다.  
+    1.  메뉴 모음에서 **프로젝트**, * r o j ***속성**여기서 *p r o j* WPF 프로젝트의 이름입니다.  
   
          WPF 프로젝트에 대 한 속성 페이지가 나타납니다.  
   
@@ -58,7 +56,7 @@ ms.lasthandoff: 12/22/2017
   
     ###### <a name="to-open-the-manifest-file-in-a-c-project"></a>C# 프로젝트에서 매니페스트 파일을 열려면  
   
-    1.  메뉴 모음에서 **프로젝트**, *p r o j***속성**여기서 *ProjectName* WPF 프로젝트의 이름입니다.  
+    1.  메뉴 모음에서 **프로젝트**, * r o j ***속성**여기서 *p r o j* WPF 프로젝트의 이름입니다.  
   
          WPF 프로젝트에 대 한 속성 페이지가 나타납니다.  
   
@@ -73,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
 2.  빌드 및 솔루션을 게시 합니다. 솔루션을 게시 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: ClickOnce 응용 프로그램 게시 마법사를 사용 하 여 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)합니다.  
   
-##  <a name="BKMK_CreateManifest"></a>매니페스트 파일을 만듭니다  
+##  <a name="BKMK_CreateManifest"></a> 매니페스트 파일을 만듭니다  
   
 1.  메모장 파일에 다음 XML을 붙여 넣습니다.  
   
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/22/2017
     > [!NOTE]
     >  나머지 절차는이 파일의 이름은 이라고 가정 하겠습니다. **themes.manifest** 및 파일이 컴퓨터의 C:\temp 디렉터리에 저장 됩니다.  
   
-##  <a name="BKMK_embedmanifest"></a>게시 된 솔루션의 실행 파일에 매니페스트 파일을 포함  
+##  <a name="BKMK_embedmanifest"></a> 게시 된 솔루션의 실행 파일에 매니페스트 파일을 포함  
   
 1.  열기는 **Visual Studio 명령 프롬프트**합니다.  
   
@@ -107,7 +105,7 @@ ms.lasthandoff: 12/22/2017
     > -   솔루션은 다음 디렉터리에 있는: `%UserProfile%\Documents\Visual Studio 2010\Projects\`합니다.  
     >   
     >      솔루션은 다음 디렉터리에 게시: `%UserProfile%\Documents\Visual Studio 2010\Projects\publish`합니다.  
-    > -   게시 된 응용 프로그램 파일의 최신 버전은 다음 디렉터리에 있습니다.`%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
+    > -   게시 된 응용 프로그램 파일의 최신 버전은 다음 디렉터리에 있습니다. `%UserProfile%\Documents\Visual Studio 2010\Projects\publish\Application Files\WPFApp_1_0_0_0`  
     >   
     >  이름이 나 위에서 설명한 디렉터리 위치를 사용할 필요가 없습니다. 이름 및 위치 위에 설명 된 솔루션을 게시 하는 데 필요한 단계를 설명 하기 위해 사용 됩니다.  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 12/22/2017
     mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy  
     ```  
   
-##  <a name="BKMK_signappdeplyman"></a>응용 프로그램 및 배포 매니페스트 서명  
+##  <a name="BKMK_signappdeplyman"></a> 응용 프로그램 및 배포 매니페스트 서명  
   
 1.  명령 프롬프트에서 제거 하려면 다음 명령을 실행 하 여 `.deploy` 현재 디렉터리에서 실행 파일에서 확장 합니다.  
   

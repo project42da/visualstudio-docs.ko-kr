@@ -1,26 +1,24 @@
 ---
-title: "지역 변수를 표시 합니다. | Microsoft Docs"
-ms.custom: 
+title: 지역 변수를 표시 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluation, displaying locals
 ms.assetid: 62264cec-845b-4233-aed7-0b038fa79250
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8566baec58e2dd95b42be8916b7d48131370e65e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 03a3f08498e8b046b02defd32083677b7f39e7e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="displaying-locals"></a>지역 변수를 표시합니다.
 > [!IMPORTANT]
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  **간략 한 조사식** 및 **조사식** 창에서는 변수 이름, 값 및 형식 같은 형식으로도 표시 합니다. 호출 하 여 해당 값을 가져오는 반면 [GetPropertyInfo](../../extensibility/debugger/reference/idebugproperty2-getpropertyinfo.md) 대신 `IDebugProperty2::EnumChildren`합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [로컬 항목의 샘플 구현](../../extensibility/debugger/sample-implementation-of-locals.md)  
  예제를 사용 하 여 지역 변수를 구현 하는 과정을 단계별로 실행 되도록 합니다.  
   

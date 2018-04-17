@@ -1,27 +1,23 @@
 ---
-title: "Spy + + 도움말 | Microsoft Docs"
-ms.custom: 
+title: Spy + + 도움말 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Spy++ Help contents
 ms.assetid: 82155004-8d9e-4875-b7db-237a3cffb530
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 10e50e8afde8bd4d5669ee899a061b708377f28f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c86666812d714757650a6728f13698f6f9c11a6d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="spy-help"></a>Spy++ 도움말
 Spy + + 유틸리티에 대 한 설명서에서 사용 하 여 Spy + +와 Spy + + 보기의 일반 항목 중 두 그룹에 포함 됩니다. 그 다음에 Spy + + 하는 참조를 각 사용 가능한 메뉴 명령과 대화 상자에서 추가 정보를 제공 합니다.  

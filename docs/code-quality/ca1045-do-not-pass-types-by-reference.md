@@ -1,12 +1,10 @@
 ---
-title: "CA1045: 참조로 형식을 전달 하지 마십시오 | Microsoft Docs"
-ms.custom: 
+title: 'CA1045: 참조로 형식을 전달 하지 마십시오 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA1045
 - DoNotPassTypesByReference
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1045
 - DoNotPassTypesByReference
 ms.assetid: bcc3900a-e092-4bb8-896f-cb83f6289968
-caps.latest.revision: "18"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7542e21963f272dd10180203a52bee9994de2cdc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 6640942827834ff1eafeecc84e1256ce3589443b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1045-do-not-pass-types-by-reference"></a>CA1045: 참조로 참조 형식을 전달하지 않습니다.
 |||  
@@ -56,22 +54,22 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙;에서 경고를 표시 하지 않아도 안전 합니다. 그러나이 디자인 유용성 문제가 발생할 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 라이브러리에는 사용자의 피드백에 대 한 응답을 생성 하는 클래스의 두 가지 구현을 보여 줍니다. 첫 번째 구현 (`BadRefAndOut`)을 설정 하면 라이브러리 사용자 3 개의 반환 값을 관리할 수 있습니다. 두 번째 구현 (`RedesignedRefAndOut`) 컨테이너 클래스의 인스턴스를 반환 하 여 사용자 환경을 단순화 (`ReplyData`) 하나의 단위로 데이터를 관리 하는입니다.  
   
  [!code-csharp[FxCop.Design.NoRefOrOut#1](../code-quality/codesnippet/CSharp/ca1045-do-not-pass-types-by-reference_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 응용 프로그램 사용자의 경험을 보여 줍니다. 다시 디자인 된 라이브러리에 대 한 호출 (`UseTheSimplifiedClass` 메서드)는 더 간단 및 메서드에 의해 반환 되는 정보를 손쉽게 관리할 수 있습니다. 두 방법 중에서 출력은 동일 합니다.  
   
  [!code-csharp[FxCop.Design.TestNoRefOrOut#1](../code-quality/codesnippet/CSharp/ca1045-do-not-pass-types-by-reference_2.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제 라이브러리에서는 어떻게 `ref` 참조 형식에 대 한 매개 변수 사용 되 고이 기능을 구현 하는 더 나은 방법을 보여줍니다.  
   
  [!code-csharp[FxCop.Design.RefByRefNo#1](../code-quality/codesnippet/CSharp/ca1045-do-not-pass-types-by-reference_3.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 응용 프로그램 동작을 보여 주기 위해 라이브러리에서 각 메서드를 호출 합니다.  
   
  [!code-csharp[FxCop.Design.TestRefByRefNo#1](../code-quality/codesnippet/CSharp/ca1045-do-not-pass-types-by-reference_4.cs)]  

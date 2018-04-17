@@ -1,13 +1,10 @@
 ---
-title: "자동 및 지역 창에서 변수를 검사 | Microsoft Docs"
+title: 자동 및 지역 창에서 변수를 검사 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/17/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.debug.autos
 - vs.debug.locals
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - debugger, variable windows
 - debugging [Visual Studio], variable windows
 ms.assetid: bb6291e1-596d-4af0-9f22-5fd713d6b84b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 763a079ec8da8c2c1e9e7d7864fc4d0cee6197ed
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 2b3bad753a18352ebbf68bef5f398a8039a9c4dd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>Visual Studio에서 자동에서 변수 및 지역 변수 검사
 **자동** 창 (디버깅 하는 동안 **CTRL + ALT + V, A**, 또는 **디버그 > Windows > 자동**) 및 **지역** 창 (디버깅 중 **CTRL + ALT + V, L**, 또는 **디버그 > Windows > 지역**)는 디버깅 하는 동안 변수 값을 확인 하려는 경우 매우 유용 합니다. **지역** 창에는 로컬 범위에 정의되는 변수가 표시되며, 일반적으로 현재 실행되고 있는 함수 또는 메서드입니다. **자동** 창에는 현재 줄(디버거가 중지되어 있는 위치)에 사용된 변수가 표시됩니다. 이 창에는 변수 표시 되는 정확 하 게 하는 것은 다른 언어에서는 다릅니다. 아래에서 [What variables appear in the Autos Window?](#bkmk_whatvariables) 참조하세요.  
@@ -55,7 +51,7 @@ ms.lasthandoff: 01/29/2018
 
  `c = 3`; 줄에 중단점을 설정하고 디버거를 실행하는 경우 실행이 중지되면 **자동** 창이 다음과 같이 표시됩니다.  
 
- ![Autos&#45;CSharp](../debugger/media/autos-csharp.png "Autos-CSharp")  
+ ![자동&#45;CSharp](../debugger/media/autos-csharp.png "자동 CSharp")  
 
  `c` 줄이 아직 실행되지 않았기 때문에 `c = 3` 의 값이 0입니다.  
 
@@ -75,7 +71,7 @@ ms.lasthandoff: 01/29/2018
 
  `e = 5;` 줄에 중단점을 설정하고 디버거를 실행하는 경우 실행이 중지되면 **자동** 창이 다음과 같이 표시됩니다.  
   
- ![자동 &#45; Cplus](../debugger/media/autos-cplus.png "자동 Cplus")  
+ ![자동&#45;Cplus](../debugger/media/autos-cplus.png "자동 Cplus")  
   
  `e = 5;` 줄의 코드가 아직 실행되지 않았기 때문에 변수 e가 초기화되지 않습니다.  
   

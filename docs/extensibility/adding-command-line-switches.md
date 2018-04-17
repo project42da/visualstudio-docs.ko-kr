@@ -1,28 +1,26 @@
 ---
-title: "명령줄 스위치를 추가 합니다. | Microsoft Docs"
-ms.custom: 
+title: 명령줄 스위치를 추가 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - command-line switches, adding
 - command-line switches, retrieving
 - IVsAppCommandLine::GetOption method
 - command line, switches
 ms.assetid: 8bbbd87e-76fe-4fb5-8ef9-65f5e31967cf
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d686e7b68e790c419679bf495bf08ad4cd4807e2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: daef07d0b8dd02f6823717b0c0cb5d68d837ccde
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-command-line-switches"></a>명령줄 스위치를 추가합니다.
 Devenv.exe를 실행할 때 VSPackage에 적용 되는 명령줄 스위치를 추가할 수 있습니다. 사용 하 여 <xref:Microsoft.VisualStudio.Shell.ProvideAppCommandLineAttribute> 스위치와 해당 속성의 이름을 선언 하 합니다. 이 예제에서는 myswitch 인 스위치 라는 VSPackage의 서브 클래스에 대 한 추가 됩니다 **AddCommandSwitchPackage** 인수 없이 및 자동으로 로드 하는 VSPackage를 사용 합니다.  
@@ -42,7 +40,7 @@ Devenv.exe를 실행할 때 VSPackage에 적용 되는 명령줄 스위치를 �
  HelpString  
  도움말 문자열 또는 리소스 ID 문자열의 사용을 표시 하려면 **devenv /?**합니다.  
   
- name  
+ 이름  
  스위치입니다.  
   
  PackageGuid  

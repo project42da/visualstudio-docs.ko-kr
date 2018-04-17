@@ -1,12 +1,10 @@
 ---
-title: "CA2238: serialization 메서드를 올바르게 구현 | Microsoft Docs"
-ms.custom: 
+title: 'CA2238: serialization 메서드를 올바르게 구현 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - ImplementSerializationMethodsCorrectly
 - CA2238
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - ImplementSerializationMethodsCorrectly
 - CA2238
 ms.assetid: 00882cf9-e10d-4d40-9126-3e6753e3c934
-caps.latest.revision: "16"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e3fa59585a5233bbebde7df0d074d303285c616
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 615d465ad6e8846c1960c45b0a60e99f5a7f9bfd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2238-implement-serialization-methods-correctly"></a>CA2238: serialization 메서드를 올바르게 구현하십시오.
 |||  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 이벤트 처리기 올바르게 선언 된 직렬화를 보여 줍니다.  
   
  [!code-vb[FxCop.Usage.SerializationEventHandlers#1](../code-quality/codesnippet/VisualBasic/ca2238-implement-serialization-methods-correctly_1.vb)]

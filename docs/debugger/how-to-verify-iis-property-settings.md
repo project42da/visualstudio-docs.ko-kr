@@ -1,12 +1,10 @@
 ---
-title: "방법: IIS 속성 설정 확인 | Microsoft Docs"
-ms.custom: 
+title: '방법: IIS 속성 설정 확인 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -19,16 +17,16 @@ helpviewer_keywords:
 - Web applications, setting properties
 - properties [debugger], setting with IIS administration tool
 ms.assetid: 9efc50bf-02fb-4750-9b3e-f03c38f10d8b
-caps.latest.revision: "12"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5a9bda1bdf3fadffedc71873ddec6733b68651a1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2b351f45d8e45116894d08f4a813e7c427f4cb5c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-verify-iis-property-settings"></a>방법: IIS 속성 설정 확인
 IIS 관리 도구를 사용하여 웹 응용 프로그램의 속성을 설정할 수 있습니다. 이러한 속성이 제대로 설정되어 있어야 응용 프로그램이 실행되므로 일반적으로 문제를 해결하는 데는 이러한 설정을 확인하는 단계가 필요합니다.  

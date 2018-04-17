@@ -1,27 +1,25 @@
 ---
-title: "식 계산기 아키텍처 | Microsoft Docs"
-ms.custom: 
+title: 식 계산기 아키텍처 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - architecture, expression evaluators
 - expression evaluators, architecture
 - debugging [Debugging SDK], expression evaluators
 ms.assetid: aad7c4c6-1dc1-4d32-b975-f1fdf76bdeda
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3ccfca52bb4fe2190837202342915e248dbd6167
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 7fdcdfef67531af40027a2dfe8c731fe9ba5128f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="expression-evaluator-architecture"></a>식 계산기 아키텍처
 > [!IMPORTANT]
@@ -39,7 +37,7 @@ ms.lasthandoff: 12/22/2017
  DE 구현 하는 개체를 만듭니다.는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 인터페이스를 넣습니다는 `IDebugParsedExpression` 개체는 `IDebugExpression2` 개체 및 반환은 `IDebugExpression2` 에서 개체 `IDebugExpressionContext2::ParseText`합니다.  
   
 ### <a name="evaluating-the-expression"></a>식을 계산  
- Visual Studio 호출 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 또는 [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 구문 분석 된 식을 계산할 수 있습니다. 두이 메서드가 모두 호출 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) (`IDebugExpression2::EvaluateSync` 메서드를 호출 하는 동안 즉시 `IDebugExpression2::EvaluateAsync` 백그라운드 스레드를 통해 메서드를 호출) 구문 분석된 된 식을 평가 하 고 반환는 [ IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 구문 분석된 된 식의 종류와 값을 나타내는 인터페이스입니다. `IDebugParsedExpression::EvaluateSync`제공 된 SH, 주소 및 바인더를 사용 하 여 구문 분석된 된 식으로 표현 하는 실제 값으로 변환 하는 `IDebugProperty2` 인터페이스입니다.  
+ Visual Studio 호출 [EvaluateSync](../../extensibility/debugger/reference/idebugexpression2-evaluatesync.md) 또는 [EvaluateAsync](../../extensibility/debugger/reference/idebugexpression2-evaluateasync.md) 구문 분석 된 식을 계산할 수 있습니다. 두이 메서드가 모두 호출 [EvaluateSync](../../extensibility/debugger/reference/idebugparsedexpression-evaluatesync.md) (`IDebugExpression2::EvaluateSync` 메서드를 호출 하는 동안 즉시 `IDebugExpression2::EvaluateAsync` 백그라운드 스레드를 통해 메서드를 호출) 구문 분석된 된 식을 평가 하 고 반환는 [ IDebugProperty2](../../extensibility/debugger/reference/idebugproperty2.md) 구문 분석된 된 식의 종류와 값을 나타내는 인터페이스입니다. `IDebugParsedExpression::EvaluateSync` 제공 된 SH, 주소 및 바인더를 사용 하 여 구문 분석된 된 식으로 표현 하는 실제 값으로 변환 하는 `IDebugProperty2` 인터페이스입니다.  
   
 ### <a name="for-example"></a>예를 들어  
  중단점에서 실행 중인 프로그램에서 변수를 보려면 사용자 선택에서 **간략 한 조사식** 대화 상자. 이 대화 상자에는 변수 이름, 해당 값 및 해당 형식을 표시 합니다. 일반적으로 사용자 값을 변경할 수 있습니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  참조 [표시 지역](../../extensibility/debugger/displaying-locals.md) 변수 값을 표시 하는이 과정에 대 한 자세한 내용은 합니다. 참조 [로컬 값을 변경](../../extensibility/debugger/changing-the-value-of-a-local.md) 변수의 값이 변경 되는 방법에 대 한 자세한 내용은 합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [평가 컨텍스트](../../extensibility/debugger/evaluation-context.md)  
  DE EE를 호출할 때 전달 되는 인수를 제공 합니다.  
   

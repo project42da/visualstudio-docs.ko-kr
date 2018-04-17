@@ -1,26 +1,23 @@
 ---
-title: "원격 디버깅 IIS와 Azure에서 ASP.NET Core | Microsoft Docs"
+title: 원격 디버깅 IIS와 Azure에서 ASP.NET Core | Microsoft Docs
 ms.custom: remotedebugging
 ms.date: 08/14/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 ms.assetid: a6c04b53-d1b9-4552-a8fd-3ed6f4902ce6
-caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 22b7724a6eee2c31de1bf64f12a040e042972e96
-ms.sourcegitcommit: 65f85389047c5a1938b6d5243ccba8d4f14362ba
+ms.openlocfilehash: 021b9c9fe0e4e921e339db432fdf6d248624c92c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017에는 Azure에서 IIS에서 ASP.NET Core 원격 디버그
 
@@ -63,7 +60,7 @@ Azure에서 원격 디버그 하는 권장된 방법은 각 시나리오에 따�
 
 4. About.cshtml.cs 파일을 열고에 중단점을 설정는 `OnGet` 메서드 (에 중단점을 설정 하 고 이전 템플릿은 HomeController.cs를 대신 엽니다는 `About()` 메서드).
 
-## <a name="remote_debug_azure_app_service"></a>Azure 앱 서비스에서 ASP.NET Core 원격 디버그
+## <a name="remote_debug_azure_app_service"></a> Azure 앱 서비스에서 ASP.NET Core 원격 디버그
 
 Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응용 프로그램을 디버깅할 신속 하 게 있습니다. 그러나 IIS 구성 사전 설정 되어 있으며 사용자 지정할 수 없습니다. 자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다. (IIS 사용자 지정 하는 기능, 필요한 경우 디버깅에서 시도 [Azure VM](#BKMK_azure_vm).) 
 
@@ -83,7 +80,7 @@ Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응
 
     정말 간단하죠. 이 항목의 단계 나머지는 Azure VM에 원격 디버깅에 적용 됩니다.
 
-## <a name="remote_debug_azure_vm"></a>Azure VM에서 ASP.NET Core 원격 디버그
+## <a name="remote_debug_azure_vm"></a> Azure VM에서 ASP.NET Core 원격 디버그
 
 Windows 서버에 대 한 Azure VM 만들 지정 하 고 설치 및 IIS 및 기타 필수 소프트웨어 구성 요소를 구성 합니다. 이 Azure 응용 프로그램 서비스를 배포 하는 보다 많은 시간이 소요 되며이 자습서의 나머지 단계를 수행 해야 합니다.
 
@@ -109,15 +106,15 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 1. 설치는 [.NET 핵심 Windows Server 호스팅](https://aka.ms/dotnetcore-2-windowshosting) 호스팅 시스템에서 번들입니다. 번들은.NET Core 런타임,.NET 핵심 라이브러리 및 ASP.NET Core 모듈을 설치 합니다. 더 자세한 지침에 대 한 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다.
 
     > [!NOTE]
-    > 시스템으로 지정 되지 않은 인터넷에 연결 하는 경우 구하여 설치는  *[Microsoft Visual c + + 2015 재배포 가능](https://www.microsoft.com/download/details.aspx?id=53840)*  .NET 핵심 Windows Server 호스팅 번들을 설치 하기 전에.
+    > 시스템으로 지정 되지 않은 인터넷에 연결 하는 경우 구하여 설치는 *[Microsoft Visual c + + 2015 재배포 가능](https://www.microsoft.com/download/details.aspx?id=53840)* .NET 핵심 Windows Server 호스팅 번들을 설치 하기 전에.
 
 3. 시스템을 다시 시작 (실행 또는 **net stop가 /y** 뒤 **net 시작 w3svc** 시스템 경로에 대 한 변경을 선택 하기 위해 명령 프롬프트에서).
 
-### <a name="BKMK_install_webdeploy"></a>(선택 사항) 설치 웹 배포 Windows Server에서 3.6
+### <a name="BKMK_install_webdeploy"></a> (선택 사항) 설치 웹 배포 Windows Server에서 3.6
 
 [!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
 
-### <a name="BKMK_deploy_asp_net"></a>Windows Server 컴퓨터에 ASP.NET 웹 사이트를 구성 합니다.
+### <a name="BKMK_deploy_asp_net"></a> Windows Server 컴퓨터에 ASP.NET 웹 사이트를 구성 합니다.
 
 1. **IIS(인터넷 정보 서비스) 관리자** 를 열고 **사이트**로 이동합니다.
 
@@ -129,7 +126,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
     액세스 권한이 있는이 사용자 중 하나가 표시 되지 않으면, IUSR 읽기 및 실행 권한이 있는 사용자로 추가 하는 단계를 통해 이동 합니다.
 
-### <a name="bkmk_webdeploy"></a>(선택 사항) Visual Studio에서 Web Deploy를 사용 하 여 앱을 배포 및 게시
+### <a name="bkmk_webdeploy"></a> (선택 사항) Visual Studio에서 Web Deploy를 사용 하 여 앱을 배포 및 게시
 
 웹 플랫폼 설치 관리자를 사용 하 여 웹 배포를 설치한 경우 Visual Studio에서 직접 앱을 배포할 수 있습니다.
 
@@ -169,11 +166,11 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
-### <a name="BKMK_msvsmon"></a>다운로드 하 여 Windows Server에서 원격 도구 설치
+### <a name="BKMK_msvsmon"></a> 다운로드 하 여 Windows Server에서 원격 도구 설치
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
   
-### <a name="BKMK_setup"></a>Windows Server에서 원격 디버거 설정
+### <a name="BKMK_setup"></a> Windows Server에서 원격 디버거 설정
 
 [!INCLUDE [remote-debugger-configuration](../debugger/includes/remote-debugger-configuration.md)]
 
@@ -189,7 +186,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
     > Visual Studio 2017에 다시 연결할 수는 동일한 프로세스를 이전에 사용 하 여 연결할 **디버그 > 프로세스에 다시 연결 중...** (Shift+Alt+P). 
 
 3. 한정자 필드를 설정  **\<원격 컴퓨터 이름 >: 4022**합니다.
-4. 클릭 **새로 고침**합니다.
+4. **새로 고침**가 있어야 합니다.
     일부 프로세스가 **사용 가능한 프로세스** 창에 표시됩니다.
 
     모든 프로세스가 표시 되지 않으면, (포트는 필수) 원격 컴퓨터 이름 대신 IP 주소를 사용해 보십시오. 사용할 수 있습니다 `ipconfig` IPv4 주소를 얻기 위해 명령줄에 있습니다.
@@ -211,7 +208,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
     Visual Studio에서 중단점이 적중됩니다.
 
-### <a name="bkmk_openports"></a>문제 해결: Windows Server에 필요한 포트를 열려면
+### <a name="bkmk_openports"></a> 문제 해결: Windows Server에 필요한 포트를 열려면
 
 대부분의 설치 프로그램에서 ASP.NET와 원격 디버거 설치를 통해 필요한 포트가 열립니다. 그러나 배포 문제를 해결 하는 경우 방화벽 뒤에 있는 응용 프로그램은 호스트에서 올바른 포트가 열려 있는지 확인 해야 합니다.
 

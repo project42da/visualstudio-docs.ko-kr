@@ -1,12 +1,10 @@
 ---
-title: "디버거에서 기호 (.pdb) 및 소스 파일을 지정 합니다. | Microsoft Docs"
+title: 디버거에서 기호 (.pdb) 및 소스 파일을 지정 합니다. | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/05/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Debugger.Native
 - VS.ToolsOptionsPages.Debugger.Symbols
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - pdb files
 - debugger
 ms.assetid: 1105e169-5272-4e7c-b3e7-cda1b7798a6b
-caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cbef364c316f51be8996e79f63a493b51e619f1e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7e2549cfe71ef05d611251bbc8a017bd4891df3e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-symbol-pdb-and-source-files-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 기호 파일(.pdb) 및 원본 파일 지정
 기호 파일이 라고도 하는 프로그램 데이터베이스 (.pdb) 파일에는 클래스, 메서드 및 기타 코드 프로젝트의 컴파일된 실행 파일에 사용 되는 식별자에 대 한 소스 코드에서 만드는 식별자를 매핑합니다. .pdb 파일은 소스 코드의 문을 실행 파일의 실행 명령에 매핑합니다. 디버거는이 정보를 사용 하 여 두 가지 중요 한 내용을 확인 하려면:
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/22/2017
 > [!TIP]
 > 프로젝트 소스 코드 외부에서 코드를 디버깅 하려는 경우 Windows 코드 또는 제 3 자 코드와 같은 프로젝트에서 호출,.pdb (및 필요에 따라 외부 코드의 소스 파일)의 위치를 지정 있고 이러한 파일 t의 빌드와 정확히 일치 해야 합니다. 그 실행 파일입니다.  
  
-##  <a name="BKMK_Find_symbol___pdb__files"></a>기호 파일에 대 한 디버거 검색 하는 위치 
+##  <a name="BKMK_Find_symbol___pdb__files"></a> 기호 파일에 대 한 디버거 검색 하는 위치 
   
 1.  DLL 또는 실행 파일 내의 지정된 위치  
   
@@ -69,14 +67,14 @@ ms.lasthandoff: 12/22/2017
 ##  <a name="BKMK_Why_do_symbol_files_need_to_exactly_match_the_executable_files_"></a> 기호 파일이 실행 파일과 정확하게 일치해야 하는 이유  
 디버거는 실행 파일을 빌드할 때 만든 .pdb 파일과 정확히 일치하는 실행 파일의 .pdb 파일만 로드합니다. 즉, .pdb는 원본이거나 원본 .pdb 파일의 복사본이어야 합니다. 올바르고 효율적인 코드를 작성하는 주요 작업 외에 컴파일 속도에 대해 컴파일러가 최적화되므로 실행 파일의 실제 레이아웃은 코드 자체가 변경되지 않은 경우에도 변경될 수 있습니다. 자세한 내용은 [Why does Visual Studio require debugger symbol files to exactly match the binary files that they were built with?](https://blogs.msdn.microsoft.com/jimgries/2007/07/06/why-does-visual-studio-require-debugger-symbol-files-to-exactly-match-the-binary-files-that-they-were-built-with/)
   
-##  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a>디버거가 기호 파일과 기호 로드 동작에 대 한 찾을 위치를 구성 합니다.
+##  <a name="BKMK_Specify_symbol_locations_and_loading_behavior"></a> 디버거가 기호 파일과 기호 로드 동작에 대 한 찾을 위치를 구성 합니다.
  Visual Studio IDE에서 프로젝트를 디버깅할 때 디버거는 자동으로 프로젝트 디렉터리에 있는 기호 파일을 로드 합니다. 대체 검색 경로 지정 하 고 Microsoft, Windows 또는 타사 구성 요소에 대 한 기호 서버 수 **도구 > 옵션 > 디버깅 > 기호**합니다. 또한 특정 모듈에 대 한 기호를 자동으로 로드 하려면 디버거 되도록 지정할 수 있습니다. 그런 다음 본격적으로 디버깅하는 동안 이러한 설정을 수동으로 변경할 수 있습니다.  
   
 1.  Visual Studio에서 열고는 **도구 > 옵션 > 디버깅 > 기호** 페이지.  
   
-     ![Tools&#45; 옵션 &#45; 디버깅 &#45; 기호 페이지](../debugger/media/dbg_tools_options_symbols.gif "DBG_Tools_Options_Symbols")  
+     ![도구 &#45; 옵션 &#45; 디버깅 &#45; 기호 페이지](../debugger/media/dbg_tools_options_symbols.gif "DBG_Tools_Options_Symbols")  
   
-2.  폴더를 선택 ![도구 &#47; 옵션 &#47; 디버깅 &#47; 기호 폴더 아이콘](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") 아이콘입니다. 편집 가능한 텍스트가 **기호 파일(.pdb) 위치** 상자에 나타납니다.  
+2.  폴더를 선택 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") 아이콘입니다. 편집 가능한 텍스트가 **기호 파일(.pdb) 위치** 상자에 나타납니다.  
   
 3.  기호 서버 또는 기호 위치에 대한 URL 또는 디렉터리 경로를 입력합니다. 문 완성 기능으로 올바른 형식을 찾을 수 있습니다.
 
@@ -148,7 +146,7 @@ DLL의 내보내기 테이블에서 사용할 수 있는 기호를 확인하려�
   
 -   검색 경로를 변경하려면 선택되지 않은 경로를 선택하거나 **새로 만들기** 를 선택하고 새 경로를 입력합니다. 경로를 다시 검색하고 발견되는 기호 파일을 로드하려면 **로드** 를 선택합니다.  
   
--   **실행 파일 이름***찾아보기***...** 를 선택하여 기호 옵션을 재정의하고 검색 경로를 다시 시도합니다. 기호 파일이 발견되는 경우 로드되거나, 파일 탐색기가 표시되어 기호 파일을 수동으로 선택할 수 있습니다.  
+-   선택 **찾아보기***실행 파일 이름***...**  여 기호 옵션을 재정의 하는 검색 경로 다시 시도 합니다. 기호 파일이 발견되는 경우 로드되거나, 파일 탐색기가 표시되어 기호 파일을 수동으로 선택할 수 있습니다.  
   
 -   선택 **기호 설정을 변경 중...**  표시 하는 **디버깅** > **기호** VS 옵션 대화 상자 페이지입니다.  
   
@@ -213,7 +211,7 @@ DLL의 내보내기 테이블에서 사용할 수 있는 기호를 확인하려�
   
 4.  모듈의 .pdb에 대한 소스 정보. 모듈이 빌드된 경우 소스 파일의 위치이거나, 소스 서버에 대한 명령일 수 있습니다.  
   
-###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a>Source/No 로드 된 기호 없음 페이지에서 소스 파일 찾기 및 로드  
+###  <a name="BKMK_Find_and_load_source_files_with_the_No_Source___No_Symbols_Loaded_pages"></a> Source/No 로드 된 기호 없음 페이지에서 소스 파일 찾기 및 로드  
  소스 파일을 사용할 수 없는 위치에서 디버거가 실행을 중단하면 소스 파일을 찾는 데 유용할 수 있는 **로드된 소스 없음** 또는 **로드된 기호 없음** 페이지가 표시됩니다. 디버거에서 실행 파일에 대한 기호(.pdb) 파일을 찾아 검색을 완료할 수 없는 경우 **로드된 기호 없음** 이 표시됩니다. 로드된 기호 없음 페이지는 파일을 검색하는 옵션을 제공합니다. 옵션 중 하나를 실행한 후 .pdb가 발견되고 디버거가 기호 파일에 있는 정보를 사용하여 소스 파일을 검색할 수 있는 경우 소스가 표시됩니다. 그렇지 않은 경우에는 문제를 설명하는 **로드된 소스 없음** 페이지가 나타납니다. 이 페이지에는 문제를 해결할 수 있는 작업을 수행할 수 있는 옵션 링크가 표시됩니다.  
   
 ###  <a name="BKMK_Add_source_file_search_paths_to_a_solution"></a> 솔루션에 소스 파일 검색 경로 추가  
@@ -223,7 +221,7 @@ DLL의 내보내기 테이블에서 사용할 수 있는 기호를 확인하려�
   
 2.  **공용 속성** 노드에서 **소스 파일 디버그**를 선택합니다.  
   
-3.  폴더를 클릭 ![도구 &#47; 옵션 &#47; 디버깅 &#47; 기호 폴더 아이콘](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") 아이콘입니다. 편집 가능한 텍스트가 **소스 코드가 포함되어 있는 디렉터리** 목록에 나타납니다.  
+3.  폴더를 클릭 ![도구&#47; 옵션&#47; 디버깅&#47;기호 폴더 아이콘](../debugger/media/dbg_tools_options_foldersicon.png "DBG_Tools_Options_FoldersIcon") 아이콘입니다. 편집 가능한 텍스트가 **소스 코드가 포함되어 있는 디렉터리** 목록에 나타납니다.  
   
 4.  검색할 경로를 추가합니다.  
   

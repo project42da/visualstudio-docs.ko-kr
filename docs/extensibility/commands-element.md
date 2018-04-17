@@ -1,30 +1,26 @@
 ---
-title: "명령 요소 | Microsoft Docs"
-ms.custom: 
+title: 명령 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Commands
 helpviewer_keywords:
 - Commands element (VSCT XML schema)
 - VSCT XML schema elements, Commands
 ms.assetid: 47cf16a5-d78b-452e-86f6-b5893856dddf
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c5cce390ad786ad530153e1850850509990b039
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2d905914c9819671cf8c77d81ec8d51302467a9d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commands-element"></a>Commands 요소
 VSPackage 도구 모음에서 명령의 컬렉션을 나타냅니다. 컬렉션 최대 5 개 하위 섹션을 다음과 같이 있을 수 있습니다: 메뉴, 그룹, 단추, 바로 가기 단축키 +, 및 비트맵입니다.  
@@ -44,7 +40,7 @@ VSPackage 도구 모음에서 명령의 컬렉션을 나타냅니다. 컬렉션 
 ```  
   
 ## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -68,7 +64,7 @@ VSPackage 도구 모음에서 명령의 컬렉션을 나타냅니다. 컬렉션 
 |-------------|-----------------|  
 |[CommandTable 요소](../extensibility/commandtable-element.md)|VSPackage는 IDE에 제공 하는 명령을 나타내는 모든 요소를 정의 합니다. 가능한 요소는 메뉴 항목, 메뉴, 도구 모음 및 콤보 상자입니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  사용 하는 방법을 보여 주는 다음 예제는 [Commands 요소](../extensibility/commands-element.md)합니다.  
   
 ```  

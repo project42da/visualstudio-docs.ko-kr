@@ -2,34 +2,30 @@
 title: IDebugReference2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IDebugReference2
 helpviewer_keywords:
 - IDebugReference2 interface
 ms.assetid: 3cfed312-f532-4bce-84a5-1677c14567d7
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 30f3b8351789adbb52651909cf9ff3b669934d66
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fb5d5d8b3ab6e608a2454847fc9ec27e384777bc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idebugreference2"></a>IDebugReference2
 이 인터페이스는 스택 프레임 속성 또는 일부 다른 속성에 대 한 참조를 나타냅니다.  
   
 > [!NOTE]
->  `IDebugReference2`나중에 사용할 수 있도록 하 고 모든 해당 메서드를 반환 해야 하기 위해 예약 되어 `E_NOTIMPL`합니다.  
+>  `IDebugReference2` 나중에 사용할 수 있도록 하 고 모든 해당 메서드를 반환 해야 하기 위해 예약 되어 `E_NOTIMPL`합니다.  
   
 ## <a name="syntax"></a>구문  
   
@@ -76,7 +72,7 @@ IDebugReference2 : IUnknown
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

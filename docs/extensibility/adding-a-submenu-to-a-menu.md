@@ -1,30 +1,26 @@
 ---
-title: "하위 메뉴는 메뉴에 추가 | Microsoft Docs"
-ms.custom: 
+title: 하위 메뉴는 메뉴에 추가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - context menus
 - submenus, cascading
 - cascading submenus
 - menus, creating cascading submenus
 ms.assetid: 692600cb-d052-40e2-bdae-4354ae7c6c84
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 19bf2ca98c7ba6227e791a7df44b34aa125cc786
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: f6998c275aead7b12b107f700e699f5a82edd84e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-a-submenu-to-a-menu"></a>메뉴에는 하위 메뉴 추가
 이 연습에서 데모에 빌드 [메뉴를 Visual Studio 메뉴 모음에 추가](../extensibility/adding-a-menu-to-the-visual-studio-menu-bar.md) 한 하위 메뉴를 추가 하는 방법을 표시 하 여는 **TestMenu** 메뉴 합니다.  
@@ -33,7 +29,7 @@ ms.lasthandoff: 03/08/2018
   
  이 연습에서는 Visual Studio 메뉴 모음에서 메뉴에는 하위 메뉴를 만들고 하위 메뉴에 새 명령을 배치 합니다. 이 연습에는 또한 새 명령을 구현합니다.  
   
-## <a name="prerequisites"></a>전제 조건  
+## <a name="prerequisites"></a>필수 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="adding-a-submenu-to-a-menu"></a>메뉴에는 하위 메뉴 추가  

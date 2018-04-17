@@ -1,12 +1,10 @@
 ---
-title: "CA2211: 비상수 필드 표시 되지 않음을 | Microsoft Docs"
-ms.custom: 
+title: 'CA2211: 비상수 필드 표시 되지 않음을 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - CA2211
 - NonConstantFieldsShouldNotBeVisible
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - NonConstantFieldsShouldNotBeVisible
 - CA2211
 ms.assetid: e1e42c40-0acd-4312-af29-70133739a304
-caps.latest.revision: "13"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b31eb16fda818ab2eee001e0fe14c5f433f5fcd1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9d2e91cce74877a4160646db829ba9208410b403
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca2211-non-constant-fields-should-not-be-visible"></a>CA2211: 비상수 필드는 노출되면 안 됩니다.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  응용 프로그램을 개발 하는 경우이 규칙에서 경고를 표시 하지 않고 있어서 정적 필드가 포함 된 형식의 액세스에 대해 모든 권한을 가지 안전 합니다. 라이브러리 디자이너;이 규칙에서 경고를 표시 해야 상수가 아닌 정적 필드를 사용 하 여 올바르게 사용 하려면 개발자 용 어려운 라이브러리를 사용 하 여 만들 수 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 위반 하는 형식을 보여 줍니다.  
   
  [!code-vb[FxCop.Usage.AvoidStaticNonConstants#1](../code-quality/codesnippet/VisualBasic/ca2211-non-constant-fields-should-not-be-visible_1.vb)]

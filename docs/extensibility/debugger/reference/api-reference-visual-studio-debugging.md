@@ -1,34 +1,30 @@
 ---
-title: "API 참조 (Visual Studio 디버깅) | Microsoft Docs"
-ms.custom: 
+title: API 참조 (Visual Studio 디버깅) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], API reference
 ms.assetid: e4e429da-3667-41f7-9158-a8207d13e91a
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9f6e3110ca4988fcc12e547f3bcd82c1026f3aeb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3c9007d679e36e2aa6dbab41074338395434be42
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="api-reference-visual-studio-debugging"></a>API 참조 (Visual Studio 디버깅)
 API, 구문 및 모든 API 요소에 대 한 사용법을 보여 주는 가이드의 개념 개요와 다양 한 코드 예제 참조 섹션에 포함 되어 있습니다. 모든 참조 범주별으로 나열 됩니다.  
   
  다음 표에서 일반적인 `HRESULT` 메서드에 의해 반환 되는 값입니다.  
   
-|name|설명|값|  
+|이름|설명|값|  
 |----------|-----------------|-----------|  
 |S_OK|명령 실행 성공|0x00000000|  
 |E_UNEXPECTED|예기치 않은 오류가 발생 했습니다.|0x8000FFFF|  

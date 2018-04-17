@@ -1,29 +1,25 @@
 ---
 title: IDiaTable | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 helpviewer_keywords:
 - IDiaTable interface
 ms.assetid: c99a2c44-7b72-4e3c-b963-25fe3df3a555
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8f596d2c51c5d5e543ed67212662c5096ea2e4eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 93eedd9579f264b218e9c05c29dc3848fb3ceb9f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="idiatable"></a>IDiaTable
 DIA 데이터 소스 테이블을 열거합니다.  
@@ -68,11 +64,11 @@ IDiaTable : IEnumUnknown
   
 -   [IDiaEnumFrameData](../../debugger/debug-interface-access/idiaenumframedata.md)  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  첫 번째 함수 `ShowTableNames`, 세션에 모든 테이블의 이름을 표시 합니다. 두 번째 함수 `GetTable`, 지정된 된 인터페이스를 구현 하는 테이블에 대 한 테이블의 모든 검색 합니다. 세 번째 함수 `UseTable`를 사용 하는 방법을 보여 줍니다.는 `GetTable` 함수입니다.  
   
 > [!NOTE]
->  `CDiaBSTR`래핑하는 클래스는 `BSTR` 인스턴스화 범위를 벗어나면 문자열이 해제를 자동으로 처리 하 고 있습니다.  
+>  `CDiaBSTR` 래핑하는 클래스는 `BSTR` 인스턴스화 범위를 벗어나면 문자열이 해제를 자동으로 처리 하 고 있습니다.  
   
 ```C++  
 void ShowTableNames(IDiaSession *pSession)  
