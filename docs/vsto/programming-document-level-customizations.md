@@ -1,13 +1,10 @@
 ---
-title: "문서 수준 사용자 지정 프로그래밍 | Microsoft Docs"
-ms.custom: 
+title: 문서 수준 사용자 지정 프로그래밍 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Sheet3
 - thisWorkbook
@@ -30,14 +27,14 @@ helpviewer_keywords:
 - application development [Office development in Visual Studio], document-level customizations
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a614173fc33547c3512c031b7e0bd8a5575e7cb2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 5f44b7d5a283d6e2946eb26e5036f47b09729de8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-document-level-customizations"></a>문서 수준 사용자 지정 프로그래밍
   문서 수준 사용자 지정을 사용하여 Microsoft Office Word 또는 Microsoft Office Excel을 확장한 경우 다음 작업을 수행할 수 있습니다.  
@@ -58,7 +55,7 @@ ms.lasthandoff: 01/10/2018
   
  문서 수준 프로젝트에서 코드 작성의 일부 측면은 Visual Studio의 다른 프로젝트 유형과 다릅니다. 이러한 차이점 대부분은 Office 개체 모델이 관리 코드에 표시되는 방식에 기인합니다. 자세한 내용은 [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)을 참조하세요.  
   
- Visual Studio에서 Office 개발 도구를 사용 하 여 만들 수 있는 문서 수준 사용자 지정 및 다른 유형의 솔루션에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
+ Visual Studio에서 Office 개발 도구를 사용 하 여 만들 수 있는 문서 수준 사용자 지정 및 다른 유형의 솔루션에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)합니다.  
   
 ## <a name="using-the-generated-classes-in-document-level-projects"></a>문서 수준 프로젝트에서 생성된 클래스 사용  
  문서 수준 프로젝트를 만들 때 Visual Studio에서 프로젝트에서 코드 작성을 시작하기 위해 사용할 수 있는 클래스를 자동으로 생성합니다. Visual Studio에서는 다양한 Word 및 Excel용 클래스를 생성합니다.  
@@ -84,7 +81,7 @@ ms.lasthandoff: 01/10/2018
   
 -   `ThisWorkbook`: <xref:Microsoft.Office.Tools.Excel.WorkbookBase>에서 파생됩니다.  
   
--   `Sheet` *n*: <xref:Microsoft.Office.Tools.Excel.WorksheetBase>에서 파생됩니다.  
+-   `Sheet` *n*:에서 파생 <xref:Microsoft.Office.Tools.Excel.WorksheetBase>합니다.  
   
  이러한 기본 클래스는 해당 멤버에 대한 모든 호출을 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에 있는 해당 호스트 항목 인터페이스의 내부 구현으로 리디렉션합니다. 예를 들어 <xref:Microsoft.Office.Tools.Word.DocumentBase.Protect%2A> 클래스의 `ThisDocument` 메서드를 호출하는 경우 <xref:Microsoft.Office.Tools.Word.DocumentBase> 클래스는 이 호출을 <xref:Microsoft.Office.Tools.Word.Document> 에 있는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]인터페이스의 내부 구현으로 리디렉션합니다.  
   
@@ -174,7 +171,7 @@ Globals.ThisDocument.Save();
   
 ## <a name="see-also"></a>참고 항목  
  [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
- [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
+ [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)   
  [ServerDocument 클래스를 사용 하 여 서버의 문서 관리](../vsto/managing-documents-on-a-server-by-using-the-serverdocument-class.md)   
  [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
   

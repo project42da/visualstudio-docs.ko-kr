@@ -1,13 +1,10 @@
 ---
-title: "SharePoint 패키징 및 배포 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 패키징 및 배포 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTO.WorkflowDeployment.Troubleshooting
 - VS.SharePointTools.Project.PackageRetraction
@@ -26,14 +23,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deployment conflict resolution
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b30c17b9b20c59085fc8a684e3b9735daa0e019c
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 95dfd93433fc70895baa9056ce1b1522845bf497
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-sharepoint-packaging-and-deployment"></a>SharePoint 패키징 및 배포 문제 해결
   이 항목에서는 SharePoint 솔루션을 패키지하고 배포할 때 발생할 수 있는 다양한 문제에 대해 설명합니다.
@@ -42,7 +39,7 @@ ms.lasthandoff: 03/02/2018
  Visual Studio, SharePoint 및 기타 계층 간에서 진단하려면 EnableDiagnostics 레지스트리 키를 사용하여 스택 추적을 확인할 수 있습니다. 자세한 내용은 참조 [SharePoint 솔루션 디버깅](../sharepoint/debugging-sharepoint-solutions.md)합니다.
 
 ## <a name="adding-project-output-to-the-solution-package"></a>솔루션 패키지에 프로젝트 출력 추가
- 패키지 디자이너를 통해 패키지에 프로젝트 출력을 추가할 수 있습니다. 그러나 프로젝트 출력을 추가할 때 프로젝트의 플랫폼이 SharePoint 솔루션의 플랫폼과 일치하는지 확인해야 합니다. 사용 하는 것이 좋습니다는 **Any CPU** SharePoint 서버에 배포 하려는 하는 어셈블리에 대 한 대상 플랫폼입니다. 자세한 내용은 참조 [컴파일 페이지, 프로젝트 디자이너 &#40; Visual Basic &#41; ](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 및 [고급 컴파일러 설정 대화 상자 &#40; Visual Basic &#41; ](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic).
+ 패키지 디자이너를 통해 패키지에 프로젝트 출력을 추가할 수 있습니다. 그러나 프로젝트 출력을 추가할 때 프로젝트의 플랫폼이 SharePoint 솔루션의 플랫폼과 일치하는지 확인해야 합니다. 사용 하는 것이 좋습니다는 **Any CPU** SharePoint 서버에 배포 하려는 하는 어셈블리에 대 한 대상 플랫폼입니다. 자세한 내용은 참조 [프로젝트 디자이너, 컴파일 페이지 &#40;Visual Basic&#41; ](/visualstudio/ide/reference/compile-page-project-designer-visual-basic) 및 [고급 컴파일러 설정 대화 상자 &#40;Visual Basic&#41;](/visualstudio/ide/reference/advanced-compiler-settings-dialog-box-visual-basic)합니다.
 
 ## <a name="validation-warnings-and-errors"></a>유효성 검사 경고 및 오류
  Visual Studio의 SharePoint 개발 도구는 유효성 검사 단계를 수행하여 솔루션 패키지가 올바르게 생성되었는지 확인합니다. 기능과 패키지에 대한 사용자 지정 유효성 검사 단계를 만들 수도 있습니다. 자세한 내용은 참조 [하는 방법: 사용자 지정 기능 및 패키지 유효성 검사 규칙 만들기 SharePoint 솔루션에 대 한](../sharepoint/how-to-create-custom-feature-and-package-validation-rules-for-sharepoint-solutions.md)합니다.

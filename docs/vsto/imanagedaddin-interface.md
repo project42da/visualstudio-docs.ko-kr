@@ -1,13 +1,10 @@
 ---
-title: "IManagedAddin 인터페이스 | Microsoft Docs"
-ms.custom: 
+title: IManagedAddin 인터페이스 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - IManagedAddin interface
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ce339bb56368ab5c7e88d1cc8956a3b19a7e89b3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: d626257d3a2683a6fbb6032e8053572fd1301645
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="imanagedaddin-interface"></a>IManagedAddin 인터페이스
   VSTO 추가 기능 관리 하는 로드 하는 구성 요소를 만드는 IManagedAddin 인터페이스를 구현 합니다. 이 인터페이스는 2007 Microsoft Office 시스템에서 추가되었습니다.  
@@ -48,7 +45,7 @@ interface IManagedAddin : IUnknown
 ## <a name="methods"></a>메서드  
  다음 표에서 IManagedAddin 인터페이스에서 정의한 메서드를 보여 줍니다.  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[IManagedAddin::Load](../vsto/imanagedaddin-load.md)|Microsoft Office 응용 프로그램에서 관리되는 VSTO 추가 기능을 로드할 때 호출됩니다.|  
 |[IManagedAddin::Unload](../vsto/imanagedaddin-unload.md)|Microsoft Office 응용 프로그램에서 관리되는 VSTO 추가 기능을 언로드하기 직전에 호출됩니다.|  
@@ -90,6 +87,6 @@ interface IManagedAddin : IUnknown
 >  이 CLSID는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]의 VSTOLoader.dll에 의해서도 사용됩니다. 따라서 IManagedAddin를 사용 하 여 사용자 고유의 VSTO 추가 기능 로더 및 런타임 구성 요소를 만들 경우 배포할 수 없습니다 구성 요소는 VSTO 추가 기능을 사용 하는 실행 중인 컴퓨터에는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [관리 되지 않는 API 참조 &#40; Visual Studio &#41;에서 Office 개발](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
+ [관리 되지 않는 API 참조 &#40;Visual Studio에서 Office 개발&#41;](../vsto/unmanaged-api-reference-office-development-in-visual-studio.md)  
   
   

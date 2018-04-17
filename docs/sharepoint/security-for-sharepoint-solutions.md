@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 솔루션에 대 한 보안 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 솔루션에 대 한 보안 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +15,17 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, security
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6e9aff74a49f738f4a0ed0df68ffe2e9a5b33525
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 471de3ab69a969f5153723658c628d659038c3a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-for-sharepoint-solutions"></a>SharePoint 솔루션 보안
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint 응용 프로그램의 보안을 향상 시키려면 다음과 같은 기능을 통합 합니다.  
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 응용 프로그램의 보안을 향상 시키려면 다음과 같은 기능을 통합 합니다.  
   
 ## <a name="safe-control-entries"></a>안전 컨트롤 항목  
  모든 SharePoint 프로젝트 항목에서 만든 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에 **안전 컨트롤 항목** 안전 하 게 나타내는 속성 컬렉션을 제어 합니다. 해당 **안전** 하위 속성을 사용 하면 보안을 고려 하는 컨트롤을 지정할 수 있습니다. 자세한 내용은 참조 [패키징 및 배포 프로젝트 항목에는 정보 제공](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) 및 [안전한 웹 파트를 지정 하](http://go.microsoft.com/fwlink/?LinkId=177521)합니다.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
  *삽입 스크립트* 컨트롤이 나 웹 페이지에 잠재적으로 악의적인 코드가 삽입 됩니다. 스크립트 삽입에 대해 SharePoint 2010 사이트를 보호 하려면 참가자 보거나 기본적으로 웹 파트 또는 해당 속성을 편집할 수 없습니다. 이 동작은 SafeAgainstScript 라고 하는 SafeControl 특성으로 제어 됩니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 프로젝트 항목의에이 특성을 설정 **안전 컨트롤 항목** 하위 속성 **스크립트에 대해 안전**합니다. 자세한 내용은 참조 [패키징 및 배포 프로젝트 항목에는 정보 제공](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md) 및 [하는 방법: 안전 컨트롤로 표시 컨트롤](../sharepoint/how-to-mark-controls-as-safe-controls.md)합니다.  
   
 ## <a name="vista-and-windows-7-user-account-control"></a>Vista 및 Windows 7 사용자 계정 컨트롤  
- [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)]및 [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] 사용자 계정 컨트롤 (UAC)으로 보안 기능이 통합 되어 있습니다. SharePoint 솔루션을 개발 하려면 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에 [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] 및 [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] 시스템 UAC 실행 해야 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 시스템 관리자입니다. **시작** 메뉴에 대 한 바로 가기 메뉴를 열고 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 선택한 후 **관리자 권한으로 실행**합니다.  
+ [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] 및 [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] 사용자 계정 컨트롤 (UAC)으로 보안 기능이 통합 되어 있습니다. SharePoint 솔루션을 개발 하려면 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에 [!INCLUDE[windowsver](../sharepoint/includes/windowsver-md.md)] 및 [!INCLUDE[win7](../sharepoint/includes/win7-md.md)] 시스템 UAC 실행 해야 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 시스템 관리자입니다. **시작** 메뉴에 대 한 바로 가기 메뉴를 열고 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]를 선택한 후 **관리자 권한으로 실행**합니다.  
   
  구성 하는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 항상 관리자 권한으로 실행 하 고, 해당 바로 가기 메뉴를 열고,을 선택 하려면 바로 가기 **속성**, 선택는 **고급** 단추는 **속성**대화 상자를 닫은 다음 선택에서 **관리자 권한으로 실행** 확인란 합니다.  
   

@@ -1,21 +1,19 @@
 ---
-title: "XML 편집기 | Microsoft Docs"
-ms.custom: 
+title: XML 편집기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b00ca61dc99765ccc4611765ba7d9b1d58a91514
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 6c3729086a9e2038c2cfd15643f8d076947645cf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-editor"></a>XML 편집기
 
@@ -71,6 +69,6 @@ XML 편집기 사용자 인터페이스 구성 요소에 설명합니다.
 [XML 표준 참조](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)  
 XML, DTD(문서 종류 정의), XSD(XML 스키마 정의 언어), XSLT 등의 XML 기술에 대한 정보를 제공합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)

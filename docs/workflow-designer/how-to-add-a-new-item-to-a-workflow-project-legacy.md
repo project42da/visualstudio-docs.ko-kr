@@ -1,5 +1,5 @@
 ---
-title: "방법: 워크플로 프로젝트 (레거시)에 새 항목 추가 | Microsoft Docs"
+title: '방법: 워크플로 프로젝트 (레거시)에 새 항목 추가 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 130cd83d-942d-437b-bbb5-8088ec0a6d79
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2b0c644854f8f08ff7aeeb05f92fe3fd359f45e
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 1699b3f2d16bb481a7efb744eed58d395dbc8773
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>방법: 워크플로 프로젝트에 새 항목 추가(레거시)
 제공 되는 레거시 Windows 워크플로 디자이너를 사용 하 여 워크플로 프로젝트를 만든 후 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 를 대상으로 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 추가할 수 있습니다 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 항목 및 다른 친숙 한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 항목을 사용자 프로젝트입니다.
@@ -45,6 +45,6 @@ ms.lasthandoff: 03/12/2018
 
 3.  클릭 **추가** 워크플로 프로젝트에 항목을 추가 하 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레거시 워크플로 프로젝트 만들기](../workflow-designer/creating-legacy-workflow-projects.md)

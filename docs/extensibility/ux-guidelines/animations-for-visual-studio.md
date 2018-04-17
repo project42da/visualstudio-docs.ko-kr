@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio에 대 한 애니메이션 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대 한 애니메이션 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 446773a9-e6f7-4c0c-8dbc-9e303bf32eb1
-caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a45fd22cce46cb9e43a649fb969980f42b395db2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 3f28e4d6f9ae1a0af060723047621b3e205d012c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="animations-for-visual-studio"></a>Visual Studio에 대 한 애니메이션
 ## <a name="animation-fundamentals"></a>애니메이션 기본 사항  
@@ -197,7 +195,7 @@ Visual Studio UI에서 애니메이션 통신 도구로 작동합니다.  다양
   
 -   비활성화 상태 표시기의 마침 수 있 느낌 뿐만 아니라 작업 얼마나 진행의 의미 진행 되 사용자에 게 제공 합니다.  
   
-##  <a name="BKMK_AnimationPatterns"></a>애니메이션 패턴  
+##  <a name="BKMK_AnimationPatterns"></a> 애니메이션 패턴  
   
 ### <a name="overview"></a>개요  
 Visual Studio에서 애니메이션 사용자 생산성을 방해 하지 않고 특정 기능을 제공 되어야 합니다. 일반적으로 Visual Studio에서 애니메이션 여야 합니다.  
@@ -331,7 +329,7 @@ UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메
   
 -   스타일 감속/가속: 사인 InOut  
   
-##### <a name="example"></a>예  
+##### <a name="example"></a>예제  
 탭 순서 변경  
   
 #### <a name="rotate"></a>회전  
@@ -350,7 +348,7 @@ UI 요소 한 컨텍스트를 다른 위치를 변경 하는 경우에 애니메
   
 -   Duration: 연속  
   
-##### <a name="example"></a>예  
+##### <a name="example"></a>예제  
 비활성화 상태의 진행률 표시기 (회전)  
   
 ### <a name="common-shell-ui-actions-and-recommended-animations"></a>일반적인 셸 UI 작업 및 권장된 애니메이션  

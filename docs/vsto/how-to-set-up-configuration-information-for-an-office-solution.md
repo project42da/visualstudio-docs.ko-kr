@@ -1,12 +1,10 @@
 ---
-title: "방법: Office 솔루션에 대 한 구성 정보를 설정 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: Office 솔루션에 대 한 구성 정보를 설정 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - configuration files [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6f604fa40a9816d5e46593bc50fcb91f82d13325
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9659872fa6cb4e294d1757412862c10e42cde2e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-up-configuration-information-for-an-office-solution"></a>방법: Office 솔루션의 구성 정보 설정
   Office 솔루션에 관련 된 설정을 구성 하려면 구성 파일을 사용할 수 있습니다. 어셈블리 바인딩 정책, 원격 개체, debug 및 추적 설정 등 설정을 지정할 수 있습니다.  

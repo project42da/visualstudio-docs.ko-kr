@@ -1,10 +1,8 @@
 ---
-title: "방법: 도메인 특정 언어 솔루션을 만들어 | Microsoft Docs"
-ms.custom: 
+title: '방법: 도메인 특정 언어 솔루션을 만들어 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.designerwizard
 helpviewer_keywords:
@@ -13,20 +11,20 @@ helpviewer_keywords:
 - Domain-Specific Language Tools, creating solutions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5adfe90d88f46f4a3c31c1ddb6eb860403d57fe4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c2b14b407a6274e444ff50a6693b20b7ec763e72
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>방법: 도메인별 언어 솔루션 만들기
 도메인 특정 언어 DSL ()는 특수화 된를 사용 하 여 만들어집니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션입니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 절차를 시작 하려면 먼저 이러한 구성 요소를 먼저 설치 해야 합니다.  
   
 |||  
@@ -81,7 +79,7 @@ ms.lasthandoff: 02/09/2018
     > [!NOTE]
     >  신뢰할 수 없는 소스에서 텍스트 템플릿을 실행를 클릭 합니다. 사용자에 게 하지 경고 메시지가 표시 되 면 **확인**합니다. 이 메시지가 다시 표시 하지를 설정할 수 있습니다.  
   
-##  <a name="settings"></a>DSL 디자이너 마법사 페이지  
+##  <a name="settings"></a> DSL 디자이너 마법사 페이지  
  기본값에서 변경 되지 않은 필드 중 몇 개 둘 수 있습니다. 그러나 파일 확장명 필드를 설정 해야 합니다.  
   
 ### <a name="solution-settings-page"></a>솔루션 설정 페이지  
@@ -134,7 +132,7 @@ ms.lasthandoff: 02/09/2018
   
  강력한 이름에 대 한 자세한 내용은 참조 [and using strong-named Assemblies](http://go.microsoft.com/fwlink/?LinkId=186073)합니다.  
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [도메인별 언어 정의 방법](../modeling/how-to-define-a-domain-specific-language.md)  
 [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

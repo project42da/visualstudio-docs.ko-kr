@@ -1,12 +1,10 @@
 ---
-title: "방법: 특정 Finder 메서드 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 특정 Finder 메서드 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], get an entity
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6bf2c422efd005c8121ee49fed6dbc7329708b90
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9d00159a8c944944348e4eec5fb98aaa4d6e9bae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-specific-finder-method"></a>방법: SpecificFinder 메서드 추가
   단일 엔터티 인스턴스를 만들어 반환할 수 있습니다는 *Specificfinder* 메서드. BDC 비즈니스 데이터 연결 () 서비스는 사용자가 비즈니스 데이터 웹 파트 또는 외부 목록에서 엔터티를 선택할 때 특정 Finder 메서드를 실행 합니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  

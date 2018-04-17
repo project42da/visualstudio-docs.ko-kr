@@ -2,22 +2,20 @@
 title: 텍스트 템플릿에서 모델에 액세스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, accessing models
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3162350a9afbe7972c4e593049141f533517bdc3
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: da230b9b5da994a123aff04b1f588d9761c9820e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessing-models-from-text-templates"></a>텍스트 템플릿에서 모델에 액세스
 텍스트 템플릿을 사용 하 여 보고서 파일, 소스 코드 파일 및 도메인 특정 언어 모델을 기반으로 하는 기타 텍스트 파일을 만들 수 있습니다. 텍스트 템플릿에 대 한 기본 정보에 대 한 참조 [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)합니다. 텍스트 템플릿 DSL를 디버깅할 때 실험적 모드에서 작동 하며 DSL 프로그램이 배포 되는 컴퓨터에도 작동 합니다.  

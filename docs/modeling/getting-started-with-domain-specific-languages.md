@@ -1,21 +1,19 @@
 ---
-title: "도메인 특정 언어 시작 | Microsoft Docs"
-ms.custom: 
+title: 도메인 특정 언어 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 68b750735c8f5d5f6bd7f1497565692c8836914c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 791686b948c5a0541cbe8f8cb420f38ef885c9d3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>도메인별 언어 시작
 이 항목에서는 정의 하 고 Visual Studio에 대 한 Modeling SDK를 사용 하 여 만든 도메인 특정 언어 DSL ()를 사용 하 여 기본 개념을 설명 합니다.
@@ -38,7 +36,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  이 개요의 나머지 부분을 만들고 도메인 특정 언어를 사용 하 여 Visual Studio에서의 기본 작업을 소개 하는 연습입니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  DSL을 정의하려면 다음 구성 요소를 설치해야 합니다.  
   
 |||  
@@ -102,7 +100,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
 -   **DslPackage 프로젝트** 이 프로젝트를 열고 Visual Studio에서 편집 DSL의 인스턴스를 허용 하는 코드를 포함 합니다.  
   
-##  <a name="Debugging"></a>DSL 실행  
+##  <a name="Debugging"></a> DSL 실행  
  만든 즉시 DSL 솔루션을 실행할 수 있습니다. 이상에서는 수정할 수 있습니다 DSL 정의 점차적으로 각 변경 후에 다시 솔루션을 실행 합니다.  
   
 #### <a name="to-experiment-with-the-dsl"></a>DSL 테스트 하려면  
@@ -391,7 +389,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  자세한 내용은 참조 [도메인별 언어 솔루션 배포](../modeling/deploying-domain-specific-language-solutions.md)합니다.  
   
-##  <a name="Reset"></a>이전 실험적 Dsl 제거  
+##  <a name="Reset"></a> 이전 실험적 Dsl 제거  
  더 이상 사용 하지 않으려면 실험적 Dsl을 만든 경우 Visual Studio 실험적 인스턴스를 다시 설정 하 여 컴퓨터에서 제거할 수 없습니다.  
   
  이 값은 모든 실험적 Dsl 및 다른 실험적 Visual Studio 확장 컴퓨터에서 제거 됩니다. 이들은 디버깅 모드에서 실행 된 확장입니다.  
@@ -404,7 +402,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
 2.  모든 실험적 Dsl 또는 기타 실험적 Visual Studio 확장을 사용 하려면 다시 작성 합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [이해 모델, 클래스 및 관계](../modeling/understanding-models-classes-and-relationships.md)   
 [도메인별 언어 정의 방법](../modeling/how-to-define-a-domain-specific-language.md)

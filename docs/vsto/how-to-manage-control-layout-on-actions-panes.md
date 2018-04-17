@@ -1,12 +1,10 @@
 ---
-title: "방법: 작업 창에서 컨트롤 레이아웃 관리 | Microsoft Docs"
-ms.custom: 
+title: '방법: 작업 창에서 컨트롤 레이아웃 관리 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - smart documents [Office development in Visual Studio], control layout
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7b70bf12ee608b28e462f022fae15b3be6336545
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0831740c612e4e9d4eddd47a0648302e9460f060
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-manage-control-layout-on-actions-panes"></a>방법: 작업 창에서 컨트롤 레이아웃 관리
   기본적으로 문서 또는 워크시트의 오른쪽에 작업 창 도킹 그러나 왼쪽, 위쪽 또는 아래쪽에 도킹 될 수 있습니다. 여러 사용자 정의 컨트롤을 사용 하는 경우 작업 창에서 사용자 정의 컨트롤을 제대로 쌓는 코드를 작성할 수 있습니다. 자세한 내용은 [Actions Pane Overview](../vsto/actions-pane-overview.md)을 참조하십시오.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  프로젝트를 실행 하 고 작업 창 컨트롤 쌓이는 지 왼쪽에서 오른쪽 문서 위쪽에 도킹 하 고 컨트롤은 문서의 오른쪽에 도킹 때 누적 위쪽에서 아래쪽으로 확인 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[Trin_VstcoreActionsPaneWord#29](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneWordCS/ThisDocument.cs#29)]
  [!code-vb[Trin_VstcoreActionsPaneWord#29](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneWordVB/ThisDocument.vb#29)]  
   

@@ -1,24 +1,22 @@
 ---
-title: "사용자 요구 사항을 모델링할 | Microsoft Docs"
-ms.custom: 
+title: 사용자 요구 사항을 모델링할 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - requirements
 - stories
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1401328b53f03d6ff1121e93ac7e56ebba0e585e
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 3837c6876c8eb1beecea13fb501a78c764555d9e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="model-user-requirements"></a>사용자 요구 사항 모델링
 
@@ -63,7 +61,7 @@ Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수�
 
 비즈니스 규칙은 특정 사용 사례와 연결되지 않은 요구 사항이며 시스템 전체에서 관찰되어야 합니다.  
   
- 대부분의 비즈니스 규칙은 개념적 클래스 간의 관계에 대한 제약 조건입니다. 이 작성할 수 있습니다 *정적 * * 비즈니스 규칙* 개념적 클래스 다이어그램에 관련 클래스와 연결 된 주석으로 합니다. 예:  
+ 대부분의 비즈니스 규칙은 개념적 클래스 간의 관계에 대한 제약 조건입니다. 이 작성할 수 있습니다 *정적 * * 비즈니스 규칙* 개념적 클래스 다이어그램에 관련 클래스와 연결 된 주석으로 합니다. 예를 들어:  
   
  ![Order 클래스에 연결 된 주석의 규칙입니다. ] (../modeling/media/uml_reqmcd2.png "UML_ReqmCD2")  
   
@@ -99,7 +97,7 @@ Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수�
 
 참조 [응용 프로그램의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md) 서비스 품질 요구 사항 준수 하는 코드를 개발 하는 방법을 배울 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [개발 프로세스에서 모델 사용](../modeling/use-models-in-your-development-process.md)  
 [앱의 아키텍처 모델링](../modeling/model-your-app-s-architecture.md)

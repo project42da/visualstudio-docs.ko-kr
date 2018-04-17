@@ -1,23 +1,21 @@
 ---
-title: "Roslyn 분석기 및 코드 인식 ImmutableArrays 라이브러리 | Microsoft Docs"
-ms.custom: 
+title: Roslyn 분석기 및 코드 인식 ImmutableArrays 라이브러리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 0b0afa22-3fca-4d59-908e-352464c1d903
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6870f1733d507f2cf46d196b2bba027b998b5ba4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6ebafdd09e6fca0e1266c4eb03c4f6cb66554d06
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="roslyn-analyzers-and-code-aware-library-for-immutablearrays"></a>Roslyn 분석기 및 코드 인식 ImmutableArrays 라이브러리
 
@@ -28,8 +26,8 @@ ms.lasthandoff: 12/22/2017
 이 예제를 빌드하려면 다음이 필요 합니다.
 
 * Visual Studio 2015 (한 Express Edition 아님) 또는 이후 버전입니다.  무료 사용할 수 있습니다 [Visual Studio Community Edition](https://www.visualstudio.com/products/visual-studio-community-vs)
-* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  확인할 수도 있습니다, Visual Studio를 설치 하는 경우 일반적인 도구는 동시에 SDK를 설치 하려면 아래에서 Visual Studio 확장성 도구입니다.  Visual Studio를 이미 설치한 경우 또한이 SDK 설치할 수 있습니다이 기본 메뉴로 이동 하 여 **파일 &#124; 새로 만들기 &#124; 프로젝트...** 왼쪽된 탐색 창에서 C#을 선택 하 고 다음 확장을 선택 합니다.  선택 하는 경우는 "**Visual Studio 확장성 도구 설치**" 이동 경로 탐색 프로젝트 템플릿을 묻는 다운로드 하 여 SDK를 설치 합니다.
-* [.NET 컴파일러 플랫폼 ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)합니다.  주 메뉴에 이동 하 여이 SDK를 설치할 수도 있습니다 **파일 &#124; 새로 만들기 &#124; 프로젝트...** 선택, **C#** 왼쪽된 탐색 창 고에서 다음 **확장성**합니다.  선택 하는 경우 "**.NET 컴파일러 플랫폼 SDK 다운로드**" 이동 경로 탐색 프로젝트 템플릿을 묻는 다운로드 하 여 SDK를 설치 합니다.  이 SDK에 포함 되어는 [Roslyn 구문 시각화 도우미](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)합니다.  코드 모델 유형을 파악이 매우 유용한 도구를 사용 하면 찾아야 프로그램 분석기.  분석기 인프라 코드만 필요한 경우에 실행 하 고 관련 코드 분석에 집중할 수 있도록 특정 코드 모델 유형에 대 한 코드를 호출 합니다.
+* [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  확인할 수도 있습니다, Visual Studio를 설치 하는 경우 일반적인 도구는 동시에 SDK를 설치 하려면 아래에서 Visual Studio 확장성 도구입니다.  Visual Studio를 이미 설치한 경우 또한이 SDK 설치할 수 있습니다이 기본 메뉴로 이동 하 여 **파일 &#124; 새로 &#124;프로젝트...** 왼쪽된 탐색 창에서 C#을 선택 하 고 다음 확장을 선택 합니다.  선택 하는 경우는 "**Visual Studio 확장성 도구 설치**" 이동 경로 탐색 프로젝트 템플릿을 묻는 다운로드 하 여 SDK를 설치 합니다.
+* [.NET 컴파일러 플랫폼 ("Roslyn") SDK](http://aka.ms/roslynsdktemplates)합니다.  기본 메뉴로 이동 하 여이 SDK를 설치할 수도 있습니다 **파일 &#124; 새로 &#124; 프로젝트...** 선택, **C#** 왼쪽된 탐색 창 고에서 다음 **확장성**합니다.  선택 하는 경우 "**.NET 컴파일러 플랫폼 SDK 다운로드**" 이동 경로 탐색 프로젝트 템플릿을 묻는 다운로드 하 여 SDK를 설치 합니다.  이 SDK에 포함 되어는 [Roslyn 구문 시각화 도우미](https://github.com/dotnet/roslyn/wiki/Syntax%20Visualizer)합니다.  코드 모델 유형을 파악이 매우 유용한 도구를 사용 하면 찾아야 프로그램 분석기.  분석기 인프라 코드만 필요한 경우에 실행 하 고 관련 코드 분석에 집중할 수 있도록 특정 코드 모델 유형에 대 한 코드를 호출 합니다.
 
 ## <a name="whats-the-problem"></a>문제가 뭔가요?
 
@@ -65,7 +63,7 @@ Console.WriteLine("b2.Length = { 0}", b2.Length);
 
 ## <a name="creating-the-analyzer-project"></a>분석기 프로젝트 만들기
 
-주 메뉴에서 선택 **파일 &#124; 새로 만들기 &#124; 프로젝트...** .  **새 프로젝트** 대화 아래에서 **C#** 프로젝트 왼쪽된 탐색 모음에서 확장성을 선택 하 고 오른쪽 창에서 선택 된 **를 사용 하 여 코드 수정** 프로젝트 서식 파일입니다.  이름을 입력 하 고 대화 상자를 확인 합니다.
+주 메뉴에서 선택 **파일 &#124; 새로 &#124; 프로젝트...** .  **새 프로젝트** 대화 아래에서 **C#** 프로젝트 왼쪽된 탐색 모음에서 확장성을 선택 하 고 오른쪽 창에서 선택 된 **를 사용 하 여 코드 수정** 프로젝트 서식 파일입니다.  이름을 입력 하 고 대화 상자를 확인 합니다.
 
 서식 파일 DiagnosticAnalyzer.cs 파일을 엽니다.  해당 편집기 버퍼 탭을 선택 합니다.  이 파일에는 분석기 클래스 (구성 프로젝트 이름에서 지정한)에서 파생 된 `DiagnosticAnalyzer` (Roslyn API 유형).  새 클래스에는 `DiagnosticAnalyzerAttribute` 프로그램 분석기 선언은 컴파일러 검색 하 여 분석기를 로드 하는 C# 언어와 관련이 있습니다.
 

@@ -1,13 +1,10 @@
 ---
-title: "Office 프로그래밍의 일반적인 작업 | Microsoft Docs"
-ms.custom: 
+title: Office 프로그래밍의 일반적인 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, frequently asked questions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 65a20b5d65ba49789aea857459bd6a4d316195eb
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 32e24833e77ffd6f178a70c5548e9bc1277b06b3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="common-tasks-in-office-programming"></a>Office 프로그래밍의 일반적인 작업
   이 항목은 Visual Studio를 사용하여 Office 솔루션을 프로그래밍하는 방법에 대한 다음 범주의 일반적인 질문에 대해 답변을 찾을 수 있도록 설계되었습니다.  
@@ -236,7 +233,7 @@ ms.lasthandoff: 01/10/2018
 -   [방법: Office 솔루션의 설치 경로 변경](http://msdn.microsoft.com/en-us/d0eaa07b-2d72-4902-899f-2f9fb165b8fd).  
   
 ## <a name="see-also"></a>참고 항목  
- [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [시작 하기 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office 응용 프로그램 및 프로젝트 형식에 따라 사용할 수 있는 기능](../vsto/features-available-by-office-application-and-project-type.md)   
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)  
   

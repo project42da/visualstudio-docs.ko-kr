@@ -1,12 +1,10 @@
 ---
-title: "런타임에 Word 문서 및 VSTO 추가 기능에서 Excel 통합 문서 확장 | Microsoft Docs"
-ms.custom: 
+title: 런타임에 Word 문서 및 VSTO 추가 기능에서 Excel 통합 문서 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - HasVstoObject method
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5cd29d7de596704087eb1326791e4fc9df9921a6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0f95c7cb0dfa5fb867807e32366157839725db85
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time"></a>런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장
   VSTO 추가 기능을 사용하여 다음과 같은 방법으로 Word 문서 및 Excel 통합 문서를 사용자 지정할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
  이 기능을 사용하려면 런타임에 문서 또는 통합 문서를 확장하는 개체를 생성합니다.  
   
- **적용 대상:** 이 항목의 정보는 Excel 및 Word의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ **적용 대상:** 이 항목의 정보는 Excel 및 Word의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
   
 ## <a name="generating-extended-objects-in-vsto-add-ins"></a>VSTO 추가 기능에서 확장 개체 생성  
  *확장 개체* 는 Visual Studio Tools for Office 런타임에서 제공하는 형식의 인스턴스로, 기본적으로 Word 또는 Excel 개체 모델에 있는 개체( *네이티브 Office 개체*라고 함)에 기능을 추가합니다. Word 또는 Excel 개체에 대 한 확장된 개체를 생성 하려면 GetVstoObject 메서드를 사용 합니다. 처음으로 지정된 된 Word 또는 Excel 개체에 대 한 GetVstoObject 메서드를 호출 하면 지정된 된 개체를 확장 하는 새 개체를 반환 합니다. 메서드를 호출하고 동일한 Word 또는 Excel 개체를 지정할 때마다 동일한 확장 개체가 반환됩니다.  
@@ -87,7 +86,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_ExcelAddInDynamicControls#3](../vsto/codesnippet/CSharp/trin_exceladdindynamiccontrols4/ThisAddIn.cs#3)]  
   
 ##  <a name="AddControls"></a> 문서 및 워크시트에 관리되는 컨트롤 추가  
- <xref:Microsoft.Office.Tools.Word.Document> 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet>를 생성한 후 이러한 확장 개체가 나타내는 문서 또는 워크시트에 컨트롤을 추가할 수 있습니다. 이 위해의 컨트롤 속성을 사용 하 여는 <xref:Microsoft.Office.Tools.Word.Document> 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet>합니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ <xref:Microsoft.Office.Tools.Word.Document> 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet>를 생성한 후 이러한 확장 개체가 나타내는 문서 또는 워크시트에 컨트롤을 추가할 수 있습니다. 이 위해의 컨트롤 속성을 사용 하 여는 <xref:Microsoft.Office.Tools.Word.Document> 또는 <xref:Microsoft.Office.Tools.Excel.Worksheet>합니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
  Windows Forms 컨트롤 또는 *호스트 컨트롤*을 추가할 수 있습니다. 호스트 컨트롤은 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 에서 제공하는 컨트롤로, Word 또는 Excel 주 interop 어셈블리에서 해당 컨트롤을 래핑합니다. 호스트 컨트롤은 기본 네이티브 Office 개체의 모든 동작을 표시할 뿐만 아니라 이벤트를 발생시키고 Windows Forms 데이터 바인딩 모델을 사용하여 데이터에 바인딩될 수도 있습니다. 자세한 내용은 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)을 참조하십시오.  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)  
   
   

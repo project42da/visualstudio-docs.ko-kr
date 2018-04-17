@@ -1,12 +1,10 @@
 ---
-title: "Office 프로젝트의 개체에 전역 액세스 | Microsoft Docs"
-ms.custom: 
+title: Office 프로젝트의 개체에 전역 액세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -32,13 +30,14 @@ helpviewer_keywords:
 - ThisAddIn_Shutdown
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bdfc9b62e6dc94560693c072526e1f2989ddec15
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: fda3dee12cdea7442d0f92a2ba794551d76b14cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="global-access-to-objects-in-office-projects"></a>Office 프로젝트의 개체에 전역 액세스
   Office 프로젝트를 만들면 Visual Studio에서 `Globals` 라는 클래스를 프로젝트에 자동으로 생성합니다. `Globals` 클래스를 사용하여 프로젝트의 모든 코드에서 런타임에 여러 프로젝트 항목에 액세스할 수 있습니다.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="how-to-use-the-globals-class"></a>Globals 클래스를 사용하는 방법  
  `Globals` 는 프로젝트의 특정 항목에 대한 참조를 유지하는 정적 클래스입니다. `Globals` 클래스를 사용하면 런타임에 프로젝트의 코드에서 다음과 같은 항목에 액세스할 수 있습니다.  
   
--   Excel 통합 문서 또는 서식 파일 프로젝트의 `ThisWorkbook` 및 `Sheet`*n* 클래스. 사용 하 여 이러한 개체에 액세스할 수 있습니다는 `Globals.ThisWorkbook` 및 `Sheet`  *n*  속성입니다.  
+-   Excel 통합 문서 또는 서식 파일 프로젝트의 `ThisWorkbook` 및 `Sheet`*n* 클래스. `Globals.ThisWorkbook` 및 `Sheet`*n* 속성을 사용하여 이러한 개체에 액세스할 수 있습니다.  
   
 -   Word 문서 또는 서식 파일 프로젝트의 `ThisDocument` 클래스. `Globals.ThisDocument` 속성을 사용하여 이 개체에 액세스할 수 있습니다.  
   
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
  [런타임에 양식 영역 액세스](../vsto/accessing-a-form-region-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [문서 호스트 항목](../vsto/document-host-item.md)   
  [통합 문서 호스트 항목](../vsto/workbook-host-item.md)   
  [워크시트 호스트 항목](../vsto/worksheet-host-item.md)   

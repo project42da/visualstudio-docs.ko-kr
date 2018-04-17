@@ -1,5 +1,5 @@
 ---
-title: "규칙 집합 대화 상자 (레거시)를 선택 합니다. | Microsoft Docs"
+title: 규칙 집합 대화 상자 (레거시)를 선택 합니다. | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: cb2bc3f9-7730-4fb2-9f7b-303a9d9f0c8e
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df8d8675d7a3a94aa9bc4e72da6c52de65df3545
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 376b76e93849e58ac2d26f5c9360dc7673f2a3f0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="select-rule-set-dialog-box-legacy"></a>규칙 집합 선택 대화 상자(레거시)
 이 항목에서는 설명 방법을 사용 하 여는 **규칙 집합 선택** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/12/2018
 |**이름 바꾸기...**|선택한 규칙 집합 이름을 바꾸는 데 사용하는 대화 상자를 열려면 클릭합니다.|
 |**삭제**|선택한 규칙 집합을 삭제하려면 클릭합니다.|
 |**규칙 집합 미리 보기**|선택한 규칙 집합의 규칙을 표시합니다.|
-|**OK**|선택한 규칙 집합을 할당 하려면 클릭은 **PolicyActivity** 활동입니다.|
+|**그래**|선택한 규칙 집합을 할당 하려면 클릭은 **PolicyActivity** 활동입니다.|
 
  만들고 규칙 집합을 편집 하는 방법에 대 한 자세한 내용은 참조 [규칙 집합 편집기 대화 상자 (레거시)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)합니다.
 
@@ -41,7 +41,7 @@ ms.lasthandoff: 03/12/2018
 
  조건에 대 한 자세한 내용은 참조 [워크플로에서 조건 사용](http://go.microsoft.com/fwlink?LinkID=65009)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)
 - [규칙 집합 편집기 대화 상자(레거시)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)

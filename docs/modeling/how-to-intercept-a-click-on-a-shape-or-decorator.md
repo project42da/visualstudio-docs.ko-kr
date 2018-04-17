@@ -1,29 +1,27 @@
 ---
-title: "방법: 도형 또는 Decorator 클릭 가로채기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 도형 또는 Decorator 클릭 가로채기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a4e096209c462452a7956f89560edaa74d8678cc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: a1eecce61b59016c0fa359f861fc1edb0ebc61a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>방법: 모양 또는 데코레이터 클릭 가로채기
 다음 절차는 셰이프나 아이콘 decorator 클릭 가로채기 하는 방법을 보여 줍니다. 번의 클릭을 가로챌 수, 두 번 클릭할 끌기과 기타 제스처, 응답 요소를 확인 합니다.  
   
 ## <a name="to-intercept-clicks-on-shapes"></a>도형에 대 한 클릭을 가로챌 수  
- Dsl 프로젝트 생성 된 코드 파일에서 별도 코드 파일에서 shape 클래스에 대 한 partial 클래스 정의 작성 합니다. 재정의 `OnDoubleClick()` 문자로 시작 하는 이름을 가진 다른 방법 중 하나 또는 `On...`합니다. 예:  
+ Dsl 프로젝트 생성 된 코드 파일에서 별도 코드 파일에서 shape 클래스에 대 한 partial 클래스 정의 작성 합니다. 재정의 `OnDoubleClick()` 문자로 시작 하는 이름을 가진 다른 방법 중 하나 또는 `On...`합니다. 예를 들어:  
   
 ```  
 public partial class MyShape // change  

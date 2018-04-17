@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio에서 SharePoint 도구 확장 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 SharePoint 도구 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending tools
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: db0afa41641cd9d5ae04cfe6d391dbf0fe814f0f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7d5ad6f27574fcb7bd8a859bcd21ac65e159596e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-the-sharepoint-tools-in-visual-studio"></a>Visual Studio에서 SharePoint 도구 확장
   Visual Studio에서 SharePoint 도구에는 많은 응용 프로그램 개발 시나리오의 요구 사항을 충족합니다. 그러나 또는 다른 개발자가 필요로 하는 기능 제공 하지 않는 경우를 발견할 수 있습니다. 이러한 경우에 필요한 기능을 만들려면 SharePoint 도구를 확장할 수 있습니다.  
@@ -56,7 +55,7 @@ ms.lasthandoff: 01/10/2018
  [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)   
  [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [SharePoint 도구 확장의 프로그래밍 개념 및 기능](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)   
- [참조 &#40; SharePoint 도구 확장성 &#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
+ [참조 &#40;SharePoint 도구 확장성&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
  [Visual Studio에서 SharePoint 도구에 대 한 확장 디버깅](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)   
  [Visual Studio에서 SharePoint 도구에 대한 확장명 배포](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)  
   

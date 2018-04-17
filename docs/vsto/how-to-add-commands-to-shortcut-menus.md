@@ -1,12 +1,10 @@
 ---
-title: "방법: 바로 가기 메뉴에 명령 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 바로 가기 메뉴에 명령 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, context menus
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 361809dd94ae1419c5c6d2d06470d4d8d025cecf
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0d1bf0aee988e194b51220588a710a4b5b8d66ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-commands-to-shortcut-menus"></a>방법: 바로 가기 메뉴에 명령 추가
   이 항목에서는 VSTO 추가 기능을 사용하여 Office 응용 프로그램의 바로 가기 메뉴에 명령을 추가하는 방법을 보여 줍니다.  

@@ -1,13 +1,10 @@
 ---
-title: "방법: 이벤트 수신기 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 이벤트 수신기 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.SPE.EventReceiver
 dev_langs:
@@ -20,14 +17,14 @@ helpviewer_keywords:
 - event receivers [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1b00d82679388c50d6d111209a9a206bd9587a3a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ead81e01022c8f389ad6010c89d0e433b82c542e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-an-event-receiver"></a>방법: 이벤트 수신자 만들기
   만들어 *이벤트 수신기*, 목록 등의 SharePoint 항목 또는 목록 항목이와 상호 작용할 때 응답할 수 있습니다. 예를 들어 사용자가 일정을 변경 하거나 연락처 목록에서 이름을 삭제 하는 경우 이벤트 수신기에서 코드를 트리거할 수 있습니다. 이 항목에 따라 목록 인스턴스에 이벤트 수신기를 추가 하는 방법을 배울 수 있습니다.  

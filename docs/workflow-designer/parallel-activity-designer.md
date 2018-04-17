@@ -1,5 +1,5 @@
 ---
-title: "활동 디자이너를 병렬 | Microsoft Docs"
+title: 활동 디자이너를 병렬 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 0306dc3b-075a-4091-ac3a-96486fbabed5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d40a016631632ace52257d7086d4b1dca87520f
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: b1c3f24af736dfd3762de7942ba1f52442dfd20c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parallel-activity-designer"></a>Parallel 활동 디자이너
 <xref:System.Activities.Statements.Parallel> 활동은 자식 활동 컬렉션을 동시에 실행합니다.
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.Parallel.Branches%2A>|True|실행할 자식 활동의 컬렉션을 포함합니다.|
 |<xref:System.Activities.Statements.Parallel.CompletionCondition%2A>|False|분기가 완료된 후 확인됩니다. 로 평가 되 면 **True**, 예약 된 보류 중인 분기가 취소 됩니다. 이 속성이 설정 되어 있지 않거나로 평가 되는 경우 **False**, 자식 활동이 모두 완료 했을 때 작업을 완료 합니다. 기본값은 **null**합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [시퀀스](../workflow-designer/sequence-activity-designer.md)
 - [ParallelForEach\<T>](../workflow-designer/parallelforeach-t-activity-designer.md)

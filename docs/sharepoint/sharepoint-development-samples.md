@@ -1,13 +1,10 @@
 ---
-title: "SharePoint 개발 샘플 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 개발 샘플 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, samples
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9cfe4870ed7d7c976e05f6ebc8deeb197e029183
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 57ae572d6377ceef221c5040086e3418eb87b991
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sharepoint-development-samples"></a>SharePoint 개발 샘플
   Visual Studio를 사용 하 여 다운로드 하 고 샘플에서 SharePoint 응용 프로그램의 설치는 [MSDN 코드 갤러리](http://go.microsoft.com/fwlink/?LinkId=254185)합니다.  

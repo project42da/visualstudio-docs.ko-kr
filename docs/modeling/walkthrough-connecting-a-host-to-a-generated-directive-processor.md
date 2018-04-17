@@ -1,24 +1,22 @@
 ---
-title: "연습: 생성된 된 지시문 프로세서를 호스트에 연결 | Microsoft Docs"
-ms.custom: 
+title: '연습: 생성된 된 지시문 프로세서를 호스트에 연결 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], connecting host to processor
 - text templates, custom directive hosts
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b506957c80b1e678bab75afedb8a50621d611220
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b9180ba4c12c279667f1678d8f3ef489815b865d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-connecting-a-host-to-a-generated-directive-processor"></a>연습: 생성된 지시문 프로세서에 호스트 연결
 텍스트 템플릿을 처리 하는 고유 호스트를 작성할 수 있습니다. 기본 사용자 지정 호스트에 설명 된 [연습: 사용자 지정 텍스트 템플릿 호스트 만들기](../modeling/walkthrough-creating-a-custom-text-template-host.md)합니다. 여러 개의 출력 파일로 생성 하는 등의 함수를 추가 하려면 해당 호스트를 확장할 수 있습니다.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
 -   생성 된 지시문 프로세서를 가진 사용자 지정 호스트를 테스트 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  DSL을 정의하려면 다음 구성 요소를 설치해야 합니다.  
   
 |||  

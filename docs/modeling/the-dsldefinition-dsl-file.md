@@ -1,23 +1,21 @@
 ---
-title: "DslDefinition.dsl 파일 | Microsoft Docs"
-ms.custom: 
+title: DslDefinition.dsl 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, definition file
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 92bd27f1590aae455c0d5bba540720421338b63c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 361f723997f898091b05a80cfb55c9cc5680ceb3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-dsldefinitiondsl-file"></a>DslDefinition.dsl 파일
 이 항목의 Dsl 프로젝트에 DslDefinition.dsl 파일의 구조를 설명 합니다.는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 솔루션을 정의 하는 *도메인 특정 언어*합니다. DslDefinition.dsl 파일 클래스와 함께 다이어그램, 도형, 커넥터, 직렬화 형식 도메인 특정 언어에서의 관계를 설명 하 고 **도구 상자** 도메인 특정 언어의 및 해당 편집 도구입니다. DSL 솔루션에서 이러한 도구를 정의하는 코드는 DslDefinition.dsl 파일의 정보에 따라 생성됩니다.  
@@ -196,7 +194,7 @@ ms.lasthandoff: 02/09/2018
   
 -   **종류**합니다. 이 특성은 Normal, Calculated 또는 CustomStorage로 설정해야 합니다. 이 특성을 Calculated로 설정하는 경우 값을 결정하는 사용자 지정 코드를 제공해야 하며 속성은 읽기 전용이 됩니다. 이 특성을 CustomStorage로 설정하는 경우에는 값을 가져오고 설정하는 코드를 제공해야 합니다.  
   
--   **IsElementName**. 이 특성을 true로 설정하면 부모 클래스 인스턴스를 만들 때 해당 값이 고유한 값으로 자동 설정됩니다. 각 클래스에서 문자열 형식이어야 하는 속성 하나에 대해서만 이 특성을 true로 설정할 수 있습니다. 구성 요소 다이어그램 예제에서는 `Name`의 `NamedElement` 속성에서 `IsElementName`이 true로 설정되어 있습니다. 따라서 사용자가 `Component`에서 상속하는 `NamedElement` 요소를 만들 때마다 이름이 "Component6"처럼 자동으로 초기화됩니다.  
+-   **IsElementName**합니다. 이 특성을 true로 설정하면 부모 클래스 인스턴스를 만들 때 해당 값이 고유한 값으로 자동 설정됩니다. 각 클래스에서 문자열 형식이어야 하는 속성 하나에 대해서만 이 특성을 true로 설정할 수 있습니다. 구성 요소 다이어그램 예제에서는 `Name`의 `NamedElement` 속성에서 `IsElementName`이 true로 설정되어 있습니다. 따라서 사용자가 `Component`에서 상속하는 `NamedElement` 요소를 만들 때마다 이름이 "Component6"처럼 자동으로 초기화됩니다.  
   
 -   `DefaultValue`. 이 특성을 지정한 경우 지정한 값이 이 클래스의 새 인스턴스에 대해 이 특성에 할당됩니다. `IsElementName`이 설정되어 있으면 DefaultValue 특성은 새 문자열의 시작 부분을 지정합니다.  
   
@@ -244,9 +242,9 @@ ms.lasthandoff: 02/09/2018
 ### <a name="relationship-attributes"></a>관계 특성  
  모든 클래스에서 사용 가능한 특성 및 자식 노드 외에 각 관계에는 다음 클래스도 포함됩니다.  
   
--   **IsEmbedding**. 이 부울 특성은 관계가 포함 트리의 일부분인지를 지정합니다. 모든 모델은 포함 관계로 트리를 형성해야 합니다. 따라서 모든 도메인 컨트롤러는 모델의 루트가 아니면 포함 관계 하나 이상의 대상이어야 합니다.  
+-   **IsEmbedding**합니다. 이 부울 특성은 관계가 포함 트리의 일부분인지를 지정합니다. 모든 모델은 포함 관계로 트리를 형성해야 합니다. 따라서 모든 도메인 컨트롤러는 모델의 루트가 아니면 포함 관계 하나 이상의 대상이어야 합니다.  
   
--   **AllowsDuplicates**. 기본적으로 false로 설정되는 이 부울 특성은 소스 및 대상 둘 다에서 다중성이 "다"인 관계에만 적용됩니다. 이 특성은 언어 사용자가 같은 관계의 링크 둘 이상을 사용하여 단일 소스 및 대상 요소 쌍을 연결할 수 있는지 여부를 결정합니다.  
+-   **AllowsDuplicates**합니다. 기본적으로 false로 설정되는 이 부울 특성은 소스 및 대상 둘 다에서 다중성이 "다"인 관계에만 적용됩니다. 이 특성은 언어 사용자가 같은 관계의 링크 둘 이상을 사용하여 단일 소스 및 대상 요소 쌍을 연결할 수 있는지 여부를 결정합니다.  
   
 ## <a name="designer-and-toolbox-tabs"></a>Designer 및 ToolboxTab  
  주요 부분은 **디자이너** DslDefinition.dsl 파일의 섹션은 **ToolboxTab** 요소입니다. 디자이너는 한 이러한 요소를 각각 나타내는 생성 된 디자이너에서 헤드 섹션 중 몇 가지 점이 **도구 상자**합니다. 각 **ToolboxTab** 하나 이상의 요소가 포함 될 수 있습니다 **ElementTool** 요소 **ConnectionTool** 요소, 또는 둘 다 합니다.  
@@ -441,7 +439,7 @@ ms.lasthandoff: 02/09/2018
   
  연결 관계에는 요소 및 특성 이름을 제공하는 자체 XML 클래스 데이터가 있습니다.  
   
- 경우는 **OmitElement** 특성이 설정 된 관계를 true로 역할 이름이 생략 된 serialize 된 파일을 줄여서 표시 하 고 두 클래스에 둘 이상의 관계가 있으면 명확 합니다. 예:  
+ 경우는 **OmitElement** 특성이 설정 된 관계를 true로 역할 이름이 생략 된 serialize 된 파일을 줄여서 표시 하 고 두 클래스에 둘 이상의 관계가 있으면 명확 합니다. 예를 들어:  
   
 ```  
 <component name="Component3">  

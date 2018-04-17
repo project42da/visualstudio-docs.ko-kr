@@ -1,21 +1,19 @@
 ---
-title: "T4 Include 지시문 | Microsoft Docs"
-ms.custom: 
+title: T4 Include 지시문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0de398b381cd1e45ff43b3eb1df79c9becd829c4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 4cfa7742a75b24288ef3617d8195a75e13d8e817
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="t4-include-directive"></a>T4 Include 지시문
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 `<#@include#>` 지시문을 사용하여 다른 파일의 텍스트를 텍스트 템플릿에 포함할 수 있습니다. 텍스트 템플릿에서 첫 번째 클래스 기능 블록 `include` 앞의 어느 곳에나`<#+ ... #>` 지시문을 둘 수 있습니다. 포함된 파일에는 `include` 지시문 및 다른 지시문도 포함할 수 있습니다. 따라서 템플릿 간에 템플릿 코드와 상용구 텍스트를 공유할 수 있습니다.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 02/09/2018
   
      이러한 추가적인 포함 폴더는 포함 파일의 파일 확장명에 따라 달라질 수 있습니다. 예를 들어 DSL 도구의 포함 폴더에서는 파일 확장명이 `.tt`인 파일이 있는 포함 파일에만 액세스할 수 있습니다.  
   
--   `filePath`는 "%"로 구분되는 환경 변수를 포함할 수 있습니다. 예:  
+-   `filePath`는 "%"로 구분되는 환경 변수를 포함할 수 있습니다. 예를 들어:  
   
     ```  
     <#@ include file="%HOMEPATH%\MyIncludeFile.t4" #>  
@@ -111,7 +109,7 @@ Output message 5 (from top template).
   
 ```  
   
-##  <a name="msbuild"></a>MSBuild 및 Visual Studio에서 프로젝트 속성 사용  
+##  <a name="msbuild"></a> MSBuild 및 Visual Studio에서 프로젝트 속성 사용  
  Include 지시문에 $ (solutiondir)과 같은 Visual Studio 매크로 사용 하 여 있지만 MSBuild에서 작동 하지 않습니다. 빌드 컴퓨터에서 템플릿을 변형하려는 경우 대신 프로젝트 속성을 사용해야 합니다.  
   
  프로젝트 속성을 정의하기 위해 .csproj 또는 .vbproj 파일을 편집합니다. 이 예제에서는 `myIncludeFolder`라는 속성을 정의합니다.  

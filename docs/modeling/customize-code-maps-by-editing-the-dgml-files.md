@@ -1,10 +1,8 @@
 ---
-title: "DGML 파일을 편집 하 여 코드 맵 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: DGML 파일을 편집 하 여 코드 맵 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency graphs, creating path aliases
 - dependency graphs, linking items to nodes
@@ -20,15 +18,15 @@ helpviewer_keywords:
 - dependency graphs, assigning categories and properties
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a0000482b34ea3c98ac6467cbebccc83bd8b5a74
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2a23bc9b82941fda5a771f49a2aaf5c944a210bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Customize code maps by editing the DGML files
 코드 맵을 사용자 지정하려면 맵의 Directed Graph Markup Language(.dgml) 파일을 편집할 수 있습니다. 예를 들어 요소를 편집하여 사용자 지정 스타일을 지정하거나, 코드 요소와 링크에 속성 및 범주를 할당하거나, 코드 요소 또는 링크에 문서 또는 URL을 연결할 수 있습니다. DGML 요소에 대 한 자세한 내용은 참조 [전송 그래프 DGML Markup Language () 참조](../modeling/directed-graph-markup-language-dgml-reference.md)합니다.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 02/09/2018
 > [!NOTE]
 >  코드 맵을 만들려면 Visual Studio Enterprise가 있어야 합니다. Visual Studio에서 코드 맵을 편집하는 경우 .dgml 파일을 저장할 때 사용되지 않는 DGML 요소와 특성이 삭제되어 정리됩니다. 또한 수동으로 새 링크를 추가하는 경우 자동으로 코드 요소가 생성됩니다. .dgml 파일을 저장하면 사용자가 요소에 추가한 특성이 사전순으로 자동으로 재배열됩니다.  
   
-##  <a name="OrganizeNodes"></a>그룹 코드 요소  
+##  <a name="OrganizeNodes"></a> 그룹 코드 요소  
  새 그룹을 추가하거나 기존 노드를 그룹으로 변환할 수 있습니다.  
   
 1.  텍스트 또는 XML 편집기에서 .dgml 파일을 엽니다.  
@@ -66,7 +64,7 @@ ms.lasthandoff: 02/09/2018
   
     -   그룹 코드 요소와 자식 코드 요소 간의 `Category` 관계를 지정하는 `Contains` 특성  
   
-     예:  
+     예를 들어:  
   
     ```xml  
     <Links>  
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/09/2018
   
      에 대 한 자세한 내용은 `Category` 특성을 참조 하십시오. [범주 코드 포인트 및 링크에 할당](#AssignCategories)합니다.  
   
-##  <a name="ChangeGraphStyle"></a>지도의 스타일 변경  
+##  <a name="ChangeGraphStyle"></a> 지도의 스타일 변경  
  맵의 .dgml 파일을 편집하여 맵의 배경색과 테두리 색을 변경할 수 있습니다. 코드 포인트 및 링크의 스타일을 변경 하려면 참조 [코드 포인트 및 링크의 스타일을 변경](#Highlight)합니다.  
   
 1.  텍스트 또는 XML 편집기에서 .dgml 파일을 엽니다.  
@@ -98,7 +96,7 @@ ms.lasthandoff: 02/09/2018
     Stroke="StrokeValue"  
     ```  
   
-     예:  
+     예를 들어:  
   
     ```xml  
     <DirectedGraph Background="Green" xmlns="http://schemas.microsoft.com/vs/2009/dgml" >  
@@ -107,7 +105,7 @@ ms.lasthandoff: 02/09/2018
     </DirectedGraph>  
     ```  
   
-##  <a name="Highlight"></a>코드 포인트 및 링크의 스타일을 변경  
+##  <a name="Highlight"></a> 코드 포인트 및 링크의 스타일을 변경  
   
 ###  <a name="CreateCustomStyles"></a>   
  다음 코드 요소에 사용자 지정 스타일을 적용할 수 있습니다.  
@@ -268,7 +266,7 @@ ms.lasthandoff: 02/09/2018
   
 2.  `<Style/>` 요소에 `<Condition/>` 특성이 포함된 `Expression` 요소를 추가하여 부울 값을 반환하는 식을 지정합니다.  
   
-     예:  
+     예를 들어:  
   
     ```xml  
     <Condition Expression="MyCategory"/>  
@@ -302,15 +300,15 @@ ms.lasthandoff: 02/09/2018
   
      <MethodCall> ::= <Identifier> "(" <MethodArgs> ")"  
   
-     <PropertyGet>:: = 식별자  
+     <PropertyGet> :: = 식별자  
   
      <MethodArgs> ::= <Expression> &#124; <Expression> "," <MethodArgs> &#124; <empty>  
   
      <Identifier> ::= [^. ]*  
   
-     <Literal>:: = 작은따옴표 또는 큰따옴표로 묶은 문자열 리터럴  
+     <Literal> :: = 작은따옴표 또는 큰따옴표로 묶은 문자열 리터럴  
   
-     <Number>:: = 선택적 소수 부분이 숫자 문자열  
+     <Number> :: = 선택적 소수 부분이 숫자 문자열  
   
      여러 개 지정할 수 `<Condition/>` 모두 스타일을 적용 하려면 true 여야 하는 요소입니다.  
   
@@ -437,7 +435,7 @@ ms.lasthandoff: 02/09/2018
 </DirectedGraph>  
 ```  
   
-##  <a name="AssignProperties"></a>코드 포인트 및 링크 속성 할당  
+##  <a name="AssignProperties"></a> 코드 포인트 및 링크 속성 할당  
  속성을 할당하여 코드 요소 및 링크를 구성할 수 있습니다. 예를 들어 속성에 따라 코드 요소를 그룹화하거나, 스타일을 변경하거나, 숨길 수 있도록 특정 속성을 가진 코드 요소를 선택할 수 있습니다.  
   
 #### <a name="to-assign-a-property-to-a-code-element"></a>코드 요소에 속성을 할당하려면  
@@ -482,7 +480,7 @@ ms.lasthandoff: 02/09/2018
     </Properties>  
     ```  
   
-##  <a name="AssignCategories"></a>범주 코드 포인트 및 링크에 할당  
+##  <a name="AssignCategories"></a> 범주 코드 포인트 및 링크에 할당  
  다음 섹션에서는 코드 요소에 범주를 할당하여 구성하는 방법 및 코드 요소 구성에 도움이 되는 계층적 범주를 만들고 상속을 사용하여 자식 범주에 특성을 추가하는 방법을 보여 줍니다.  
   
 #### <a name="to-assign-a-category-to-a-code-element"></a>코드 요소에 범주를 할당하려면  
@@ -553,7 +551,7 @@ ms.lasthandoff: 02/09/2018
   
      이 예제에서 `MyFirstNode`의 `Category` 특성은 `Background`의 `MyParentCategory` 특성을 상속하므로 이 노드의 배경은 녹색입니다.  
   
-##  <a name="AddReferences"></a>코드 포인트 및 링크에 대 한 Url 또는 문서 연결  
+##  <a name="AddReferences"></a> 코드 포인트 및 링크에 대 한 Url 또는 문서 연결  
  맵의 .dgml 파일을 편집하고 코드 요소에 대한 `Reference` 요소 또는 링크에 대한 `<Node/>` 요소에 `<Link/>` 특성을 추가하여 코드 요소 또는 링크에 문서 또는 URL을 연결할 수 있습니다. 그런 다음 코드 요소 또는 링크에서 해당 콘텐츠를 열고 볼 수 있습니다. `Reference` 특성은 해당 내용의 경로를 지정합니다. 이 경로는 .dgml 파일의 위치를 기준으로 하는 상대 경로이거나 절대 경로일 수 있습니다.  
   
 > [!CAUTION]
@@ -609,7 +607,7 @@ ms.lasthandoff: 02/09/2018
   
         4.  사용 하 여는 `Label` 코드 요소에 대해 표시할 텍스트를 지정 하는 특성 **참조로 이동** 바로 가기 메뉴.  
   
-     예:  
+     예를 들어:  
   
     ```xml  
     <Nodes>  

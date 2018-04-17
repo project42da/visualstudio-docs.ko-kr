@@ -2,20 +2,18 @@
 title: MSI 및 DSL의 VSIX 배포 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: de6b219610908503f37658ff977f042363fb8663
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: b66c2e2a61ebe046ab04006e1f7ce345151224c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL의 MSI 및 VSIX 배포
 도메인 특정 언어 또는 다른 컴퓨터 사용자의 컴퓨터에 설치할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 대상 컴퓨터에 이미 설치 되어 있어야 합니다.  

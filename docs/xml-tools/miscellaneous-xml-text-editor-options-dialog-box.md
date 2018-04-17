@@ -1,23 +1,21 @@
 ---
-title: "기타, XML, 텍스트 편집기, 옵션 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 기타, XML, 텍스트 편집기, 옵션 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: fd3fff31-cddc-422d-a2f0-a5a1ef492afd
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4773bf87e89bd504b477d9a1a31dfe961a3f29ff
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ccbdfae65792fb6816a0604db6339a9d63fa2ccb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>기타, XML, 텍스트 편집기, 옵션 대화 상자
 이 대화 상자에서는 XML 편집기에 대한 자동 완성 기능 및 스키마 설정을 변경할 수 있습니다. 에 액세스할 수 있습니다는 **옵션** 에서 대화 상자는 **도구** 메뉴.  

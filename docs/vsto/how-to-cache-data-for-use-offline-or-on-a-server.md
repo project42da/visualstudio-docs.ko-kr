@@ -1,12 +1,10 @@
 ---
-title: "방법: 오프 라인 상태가 되거나 서버에 사용 하기 위해 데이터를 캐시 | Microsoft Docs"
-ms.custom: 
+title: '방법: 오프 라인 상태가 되거나 서버에 사용 하기 위해 데이터를 캐시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio], offline use
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 44130744af5d09e8582e2589bcefb7aca11b5ce2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 91b50684e18aaf4b7b6d95d24c81ecb56bdefc4c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-cache-data-for-use-offline-or-on-a-server"></a>방법: 오프라인이나 서버에서 사용할 데이터 캐싱
   표시할 수 있습니다는 문서에 캐시 되어야 데이터 항목을 사용할 수 있도록 오프 라인입니다. 이 쉽게 처리할 수는 데이터에 대 한 문서에서 문서를 서버에 저장 될 때 다른 코드에 의해 조작 될를 합니다.  

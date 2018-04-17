@@ -1,23 +1,21 @@
 ---
-title: "보기 장식, 명령 및 설정 만들기 | Microsoft Docs"
-ms.custom: 
+title: 보기 장식, 명령 및 설정 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 4a2df0a3-42da-4f7b-996f-ee16a35ac922
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c7b59afc8d32cefd8877d18d91556230aef9a284
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 57a7696eae0da92d88babf64c580a4767775dffd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-view-adornment-commands-and-settings-column-guides"></a>연습: 보기 장식, 명령 및 설정 (열 안내선) 만들기
 명령 및 효과 보기와 Visual Studio 텍스트/코드 편집기를 확장할 수 있습니다.  이 항목에서는 확장 인기 있는 기능을 사용 하면 열 안내선 시작 하는 방법을 보여 줍니다.  열 안내선 코드 특정 열 너비를 관리할 수 있도록 텍스트 편집기의 보기에 그려진 시각적으로 밝은 회선이 합니다.  구체적으로 서식이 지정 된 코드에 대 한 문서, 블로그 게시물을 포함 하거나 버그 보고서 예제 중요할 수 있습니다.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 -   한 `ColumnGuideCommands` .vsct 파일에 선언 된 사용자 명령을 구현 하는 명령에 대 한 명령 처리기를 연결 하는 개체입니다.  
   
- **VSIX**합니다.  사용 하 여 **파일 &#124; 새로운...**  프로젝트를 만들려면 명령입니다.  왼쪽된 탐색 창에서 C#에서 확장성 노드를 선택 하 고 선택 **VSIX 프로젝트** 오른쪽 창에서.  ColumnGuides 이름을 입력 하 고 선택 **확인** 프로젝트를 만듭니다.  
+ **VSIX**합니다.  사용 하 여 **파일 &#124; 새로 만들기...**  프로젝트를 만들려면 명령입니다.  왼쪽된 탐색 창에서 C#에서 확장성 노드를 선택 하 고 선택 **VSIX 프로젝트** 오른쪽 창에서.  ColumnGuides 이름을 입력 하 고 선택 **확인** 프로젝트를 만듭니다.  
   
  **장식 볼**합니다.  솔루션 탐색기에서 프로젝트 노드를 오른쪽 포인터 단추를 눌러 합니다.  선택 된 **추가 &#124; 새 항목...**  명령을 새 보기 장식 항목을 추가 합니다.  선택 **확장성 &#124; 편집기** 왼쪽된 탐색 창에서 선택한 **편집기 뷰포트 장식** 오른쪽 창에서.  항목 이름으로 ColumnGuideAdornment 이름을 입력 하 고 선택 **추가** 추가 합니다.  
   
@@ -1214,7 +1212,7 @@ private int GetApplicableColumn(EventArgs e)
   
 ```  
   
- `GetCurrentEditorColumn`가져올 자세히 파일에 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> 코드의 보기입니다.  통해 추적 하는 경우 `GetActiveTextView`, `GetActiveView`, 및 `GetTextViewFromVsTextView`, 작업을 수행 하는 방법을 알 수 있습니다.  다음 관련 코드는 추상적 현재 선택 항목으로 시작을 차례로 선택의 프레임을 가져오기으로 프레임의 문서 뷰 가져오기는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>, 한 다음 가져와 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> 뷰 호스트 가져오기 IVsTextView에서 및 마지막으로 IWpfTextView:  
+ `GetCurrentEditorColumn` 가져올 자세히 파일에 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView> 코드의 보기입니다.  통해 추적 하는 경우 `GetActiveTextView`, `GetActiveView`, 및 `GetTextViewFromVsTextView`, 작업을 수행 하는 방법을 알 수 있습니다.  다음 관련 코드는 추상적 현재 선택 항목으로 시작을 차례로 선택의 프레임을 가져오기으로 프레임의 문서 뷰 가져오기는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>, 한 다음 가져와 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsUserData> 뷰 호스트 가져오기 IVsTextView에서 및 마지막으로 IWpfTextView:  
   
 ```csharp  
    IVsMonitorSelection selection =  

@@ -1,23 +1,21 @@
 ---
-title: "XML 편집기 IntelliSense 기능 | Microsoft Docs"
-ms.custom: 
+title: XML 편집기 IntelliSense 기능 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 2b26f214-cc3a-46bf-b260-14eb8e599182
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f98f11cf9f4aef491951e1968105a30a679e687a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: bc4a0e9cc3da9d2cfad86d1891514a68dd2b87fe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-editor-intellisense-features"></a>XML 편집기 IntelliSense 기능
 XML 편집기에서는 Visual Studio에서 제공하는 다른 언어 편집기에 버금가는 완전한 IntelliSense 기능을 제공합니다. 이 단원에서는 XSD(XML 스키마 정의 언어) 및 XSLT 문서와 함께 IntelliSense를 사용하는 방법에 대해 설명합니다.  
@@ -105,7 +103,7 @@ IntelliSense 목록에서 정규화된 네임스페이스 요소 또는 특성�
   
  **자동 삽입** 의 섹션은 **기타** 다음과 같은 동작을 제어 하는 페이지:  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |닫기 태그|새 요소에 대해 닫기 태그를 삽입합니다.|  
 |특성 따옴표|새 특성 이름을 입력할 때 특성 값 따옴표를 삽입합니다.|  

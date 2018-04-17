@@ -1,5 +1,5 @@
 ---
-title: "While 활동 디자이너 | Microsoft Docs"
+title: While 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: ea008091-2e4c-4f64-bfa5-afb919552446
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 541113e598246cf20f9fe625f57c51f68d7e9ca8
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 2c5b75a2575a7e8d6eeed4f42a269849bc2df899
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="while-activity-designer"></a>While 활동 디자이너
 <xref:System.Activities.Statements.While> 활동에 포함 된 활동을 실행 합니다. 해당 <xref:System.Activities.Statements.While.Body%2A> 동안 지정 된 <xref:System.Activities.Statements.While.Condition%2A> 계산 **true**합니다. 포함된 활동이 실행되지 않을 수도 있습니다. 포함된 활동이 적어도 한 번은 실행되도록 하려면 그 대신 <xref:System.Activities.Statements.DoWhile> 활동을 사용하세요.
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.While.Body%2A>|False|실행할 활동을 포함 하는 동안는 <xref:System.Activities.Statements.While.Condition%2A> 계산 **true**합니다.|
 |<xref:System.Activities.Statements.While.Condition%2A>|True|[!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 활동을 실행할지 여부를 결정하기 위해 평가하는 <xref:System.Activities.Statements.While.Body%2A> 식을 포함합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [제어 흐름](../workflow-designer/control-flow-activity-designers.md)
 - [DoWhile](../workflow-designer/dowhile-activity-designer.md)

@@ -1,12 +1,10 @@
 ---
-title: "&lt;postAction&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: '&lt;postAction&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - postAction element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 63e15e2a02ac58ee385e38d5ed2d435c0e80dddb
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 2934b0ad761dcd512b21e2424515c06fb896dda5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltpostactiongt-element-office-development-in-visual-studio"></a>&lt;postAction&gt; 요소 (Visual Studio에서 Office 개발)
   `postAction` 네임스페이스의 `vstav3` 요소에는 `entrypoint` 요소 및 배포 후 작업과 관련된 모든 `postActionData` 요소가 포함되며 Office 솔루션 설치 후 실행됩니다.  
@@ -46,10 +45,10 @@ ms.lasthandoff: 01/10/2018
  `postAction` 에는 다음 요소가 있습니다.  
   
 ### <a name="entrypoint"></a>entrypoint  
- 선택 사항입니다. 역할은 `entryPoint` 요소에는 `vstav3` 네임 스페이스에 정의 된 [&#60; 진입점 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
+ 선택 사항입니다. 역할은 `entryPoint` 요소에는 `vstav3` 네임 스페이스에 정의 된 [ &#60;t r y p&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)합니다.  
   
 ### <a name="postactiondata"></a>postActionData  
- 선택 사항입니다. 역할은 `postActionData` 요소에는 `vstav3` 네임 스페이스에 정의 된 [&#60; postActionData &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/postactiondata-element-office-development-in-visual-studio.md).  
+ 선택 사항입니다. 역할은 `postActionData` 요소에는 `vstav3` 네임 스페이스에 정의 된 [ &#60;postActionData&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/postactiondata-element-office-development-in-visual-studio.md)합니다.  
   
 ## <a name="post-deployment-action-example"></a>배포 후 작업 예제  
   

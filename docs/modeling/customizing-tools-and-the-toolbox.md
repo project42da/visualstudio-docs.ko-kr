@@ -1,10 +1,8 @@
 ---
-title: "도구를 사용자 지정 도구 상자 | Microsoft Docs"
-ms.custom: 
+title: 도구를 사용자 지정 도구 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.selectiondialog
 - vs.dsltools.dsldesigner.selecticondialog
@@ -13,15 +11,15 @@ helpviewer_keywords:
 - Domain-Specific Language, toolbox
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 160c1c27ab9d01dc76d6a5c76feb07179f7966b9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 0644aa33d0e091fc3a2ff856109fe9661e2dc805
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>도구 및 도구 상자 사용자 지정
 사용자가 모델에 추가할 수 있도록 할 요소에 대해 도구 상자 항목을 정의해야 합니다. 도구에는 요소 도구와 연결 도구의 두 가지 종류가 있습니다. 사용자는 생성된 디자이너에서 요소 도구를 선택해 도형을 다이어그램으로 끌고 연결 도구를 선택해 도형 간에 링크를 그릴 수 있습니다. 일반적으로 요소 도구를 사용하면 도메인 클래스 인스턴스를 모델에 추가할 수 있으며 연결 도구를 사용하면 도메인 관계 인스턴스를 추가할 수 있습니다.  
@@ -36,7 +34,7 @@ ms.lasthandoff: 02/09/2018
   
 -   [연결 도구를 사용자 지정](#connections)  
   
-##  <a name="ToolboxDef"></a>도구 상자를 정의 하는 방법  
+##  <a name="ToolboxDef"></a> 도구 상자를 정의 하는 방법  
  DSL 탐색기에서 편집기 노드와 그 아래의 노드를 확장합니다. 일반적으로는 다음과 같은 계층 구조가 표시됩니다.  
   
 ```  
@@ -93,7 +91,7 @@ Editor
   
      도구가 표시되지 않으면 실험 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 중지합니다. Windows에서 **시작** 메뉴, 실행 **Microsoft Visual Studio 2010 실험적 인스턴스를 다시 설정**합니다. 에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] **빌드** 메뉴를 클릭 하 여 **솔루션 다시 빌드**합니다. 그런 후에 DSL을 다시 테스트합니다.  
   
-##  <a name="customizing"></a>요소 도구 사용자 지정  
+##  <a name="customizing"></a> 요소 도구 사용자 지정  
  도구는 기본적으로 지정한 클래스의 단일 인스턴스를 만들지만 두 가지 방법을 통해 이 기본 옵션을 변경할 수 있습니다.  
   
 -   다른 클래스에 대해 요소 병합 지시문을 정의하여 해당 클래스가 이 클래스의 새 인스턴스를 수락하고 새 요소를 만들 때 추가 링크를 만들 수 있도록 설정합니다. 예를 들어 사용자가 다른 요소에 주석을 놓아 두 요소 간에 참조 링크를 만들도록 허용할 수 있습니다.  
@@ -104,7 +102,7 @@ Editor
   
 -   요소 그룹을 만들 수 있도록 도구를 사용자 지정하는 코드를 작성합니다. 그러면 도구가 재정의 가능한 ToolboxHelper.cs의 메서드를 통해 초기화됩니다. 자세한 내용은 참조 [만드는 요소 그룹 도구에서](#groups)합니다.  
   
-##  <a name="groups"></a>도구에서 요소 그룹 만들기  
+##  <a name="groups"></a> 도구에서 요소 그룹 만들기  
  각 요소 도구는 만들어야 하는 요소의 프로토타입을 포함합니다. 기본적으로 각 요소 도구는 단일 요소를 만들지만 도구 하나로 관련 개체 그룹을 만들 수도 있습니다. 이렇게 하려면 관련 항목이 포함된 <xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>을 사용하여 도구를 초기화합니다.  
   
  다음 예제는 Transistor 형식이 포함된 DSL에서 가져온 것입니다. 각 Transistor에는 명명된 Terminal 세 개가 있습니다. Transistor용 요소 도구는 모델 요소 4개와 관계 링크 3개가 포함된 프로토타입을 저장합니다. 사용자가 도구를 다이어그램으로 끌면 프로토타입이 인스턴스화되어 모델 루트에 연결됩니다.  
@@ -154,7 +152,7 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
   
 ```  
   
-##  <a name="connections"></a>연결 도구를 사용자 지정  
+##  <a name="connections"></a> 연결 도구를 사용자 지정  
  일반적으로는 새 연결선 클래스를 만들 때 요소 도구를 만듭니다. 두 도구의 형식을 통해 관계 형식을 결정하도록 허용하여 도구 하나를 재정의할 수도 있습니다. 예를 들어 사용자 간 관계와 사용자 대 지역 관계를 모두 만들 수 있는 연결 도구 하나를 정의할 수 있습니다.  
   
  연결 도구는 연결 작성기를 호출합니다. 연결 작성기를 통해 사용자가 생성된 디자이너에서 요소를 연결할 수 있는 방법을 지정합니다. 연결 작성기는 연결 가능한 요소 및 해당 요소 간에 작성되는 링크의 종류를 지정합니다.  

@@ -1,18 +1,18 @@
 ---
-title: "기본 활동 디자이너 | Microsoft Docs"
+title: 기본 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 0a2b613e-dc04-49a1-a787-caec2ec63b90
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 05ebb0f80cd763a24ebffb2a5f5889e43d2db997
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: aba571ebb30b04cc1b7aab4bc46b0e8f5ff8493c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="primitives-activity-designers"></a>기본 형식 활동 디자이너
 
@@ -33,6 +33,6 @@ ms.lasthandoff: 03/12/2018
 
  [오류 처리](../workflow-designer/error-handling-activity-designers.md)
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [활동 디자이너 사용](../workflow-designer/using-the-activity-designers.md)

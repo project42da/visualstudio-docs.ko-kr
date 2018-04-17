@@ -1,12 +1,10 @@
 ---
-title: "방법: Office 문서에 Windows Forms 컨트롤 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: Office 문서에 Windows Forms 컨트롤 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], Windows Forms controls
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 937c64f8fadf8763d4e5b3ad32489262cddafdfd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ebd26c78e30e522b3d961d42226fc42825eb2a2d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-windows-forms-controls-to-office-documents"></a>How to: Add Windows Forms Controls to Office Documents
   디자인 타임에 문서 수준 프로젝트에서 Microsoft Office Excel 및 Microsoft Office Word 문서에 Windows Forms 컨트롤을 추가할 수 있습니다. 런타임에 문서 수준 사용자 지정 및 VSTO 추가 기능에서 컨트롤을 추가할 수 있습니다. 예를 들어 사용자가 옵션 목록에서 선택할 수 있도록 워크시트에 <xref:Microsoft.Office.Tools.Excel.Controls.ComboBox> 컨트롤을 추가할 수 있습니다.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
   
  ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요?: 컨트롤 추가 런타임에 문서 화면에?](http://go.microsoft.com/fwlink/?LinkId=132782)합니다.  
   
-##  <a name="designtime"></a>디자인 타임에 컨트롤 추가  
+##  <a name="designtime"></a> 디자인 타임에 컨트롤 추가  
  디자인 타임에 문서 수준 프로젝트의 문서에 Windows Forms 컨트롤을 추가하는 여러 가지 방법이 있습니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
@@ -102,10 +101,10 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  Excel에서 컨트롤을 선택하는 경우 **수식 입력줄** 에 **=EMBED("WinForms.Control.Host","")**가 표시됩니다. 이 텍스트는 필요하며 삭제하면 안 됩니다.  
   
-##  <a name="runtimedoclevel"></a>런타임에 문서 수준 프로젝트에서 컨트롤 추가  
- 프로그래밍 방식으로 런타임에 Windows Forms 컨트롤을 문서에 추가할 수 있습니다. Word에서 `ThisDocument` 클래스의 <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> 속성 메서드를 사용합니다. Excel에서는 메서드를 사용는 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> 속성은 `Sheet`  *n*  클래스입니다. 각 메서드에는 다양한 방법으로 컨트롤의 위치를 지정할 수 있는 여러 오버로드가 있습니다.  
+##  <a name="runtimedoclevel"></a> 런타임에 문서 수준 프로젝트에서 컨트롤 추가  
+ 프로그래밍 방식으로 런타임에 Windows Forms 컨트롤을 문서에 추가할 수 있습니다. Word에서 `ThisDocument` 클래스의 <xref:Microsoft.Office.Tools.Word.DocumentBase.Controls%2A> 속성 메서드를 사용합니다. Excel에서는 메서드를 사용는 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Controls%2A> 속성은 `Sheet` *n* 클래스입니다. 각 메서드에는 다양한 방법으로 컨트롤의 위치를 지정할 수 있는 여러 오버로드가 있습니다.  
   
- 런타임에 Windows Forms 컨트롤을 문서에 추가할 경우 문서를 닫으면 컨트롤이 문서에 유지되지 않습니다. 다음에 문서를 열 때 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 런타임에 Windows Forms 컨트롤을 문서에 추가할 경우 문서를 닫으면 컨트롤이 문서에 유지되지 않습니다. 다음에 문서를 열 때 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 #### <a name="to-add-a-windows-forms-control-at-run-time"></a>런타임에 Windows Forms 컨트롤을 추가하려면  
   
@@ -116,10 +115,10 @@ ms.lasthandoff: 01/10/2018
      [!code-vb[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/VisualBasic/my excel chart/Sheet1.vb#4)]
      [!code-csharp[Trin_VstcoreProgrammingControlsExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsExcelCS/Sheet1.cs#4)]  
   
-##  <a name="runtimeaddin"></a>런타임에 VSTO 추가 기능에서 컨트롤 추가  
+##  <a name="runtimeaddin"></a> 런타임에 VSTO 추가 기능에서 컨트롤 추가  
  프로그래밍 방식으로 런타임에 열려 있는 문서에 Windows Forms 컨트롤을 추가할 수 있습니다. 먼저, 열려 있는 문서 또는 워크시트의 기반이 되는 호스트 항목을 생성합니다. 그런 다음 Word에서 새 호스트 항목의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 속성 메서드를 사용합니다. Excel에서 새 호스트 항목의 <xref:Microsoft.Office.Tools.Excel.Worksheet.Controls%2A> 속성 메서드를 사용합니다. 각 메서드에는 다양한 방법으로 컨트롤의 위치를 지정할 수 있는 여러 오버로드가 있습니다.  
   
- 런타임에 Windows Forms 컨트롤을 문서에 추가할 경우 문서를 닫으면 컨트롤이 문서에 유지되지 않습니다. 다음에 문서를 열 때 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 런타임에 Windows Forms 컨트롤을 문서에 추가할 경우 문서를 닫으면 컨트롤이 문서에 유지되지 않습니다. 다음에 문서를 열 때 컨트롤을 다시 만들 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
  VSTO 추가 기능 프로젝트에서 호스트 항목을 생성 하는 방법에 대 한 자세한 내용은 참조 [런타임에 Word 문서 및 Excel 통합 문서 런타임에 VSTO 추가 기능에서](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)합니다.  
   
@@ -139,6 +138,6 @@ ms.lasthandoff: 01/10/2018
  [Windows Forms 컨트롤 Office 문서 개요](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
  [방법: 워크시트 셀에서 컨트롤 크기 조정](../vsto/how-to-resize-controls-within-worksheet-cells.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   

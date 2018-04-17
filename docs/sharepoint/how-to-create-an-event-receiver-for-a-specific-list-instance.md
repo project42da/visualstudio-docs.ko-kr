@@ -1,12 +1,10 @@
 ---
-title: "방법: 특정 목록 인스턴스에 대 한 이벤트 수신기 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 특정 목록 인스턴스에 대 한 이벤트 수신기 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - event receivers [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 66801e82f64e23ee24e66c63a62dd895c58389dc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4d6d01b9f9ed0db8588124b71c982b2d37aa86ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>방법: 특정 목록 인스턴스에 대한 이벤트 수신기 만들기
   목록 인스턴스 이벤트 수신자 목록 정의의 모든 인스턴스에서 발생 하는 이벤트에 응답 합니다. 이벤트 수신기 서식 파일의 특정 목록 인스턴스에 대상으로 사용 하지 않는, 있지만 특정 목록 인스턴스에의 이벤트에 응답 하는 목록 정의 범위 지정 된 이벤트 수신기를 수정할 수 있습니다.  

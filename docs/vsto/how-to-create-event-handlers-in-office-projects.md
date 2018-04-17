@@ -1,12 +1,10 @@
 ---
-title: "방법: Office 프로젝트의 이벤트 처리기 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: Office 프로젝트의 이벤트 처리기 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c392d365ca14daeb204f4ee2f331bb1fe86ad304
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 833e41979d1dac9def7e647b396161d0ac5e2b67
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-event-handlers-in-office-projects"></a>방법: Office 프로젝트에서 이벤트 처리기 만들기
   여러 가지 방법으로 Visual Basic 및 C#에서 이벤트 처리기를 만들 수 있습니다. 디자인 뷰에서 컨트롤을 두 번 클릭 하 여 기본 컨트롤에 대 한 이벤트 처리기를 만들 하거나 이벤트 창을 사용 하 여 수는 **속성** 창 컨트롤에 모든 이벤트에 대 한 처리기를 만들 수 있습니다. 그러나 코드 보기에 있는 경우 있습니다 하지 않을 이벤트 처리기를 만들 디자인 뷰로 전환 합니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/10/2018
   
 ### <a name="to-create-an-event-handler-in-c"></a>C#의 이벤트 처리기를 만들려면  
   
-1.  이벤트 대리자를 만듭니다는 **시작** 뒤에 공백이 정규화 된 이벤트 이름을 입력 하 고 입력 하 여 클래스의 이벤트  **+=**  공백 없이 나중에 있습니다. 예:  
+1.  이벤트 대리자를 만듭니다는 **시작** 뒤에 공백이 정규화 된 이벤트 이름을 입력 하 고 입력 하 여 클래스의 이벤트 **+=** 공백 없이 나중에 있습니다. 예를 들어:  
   
      `this.<object name>.<event name> +=`  
   

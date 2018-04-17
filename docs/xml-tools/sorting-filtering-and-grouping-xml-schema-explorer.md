@@ -1,23 +1,21 @@
 ---
-title: "정렬, 필터링 및 그룹화 (XML 스키마 탐색기) | Microsoft Docs"
-ms.custom: 
+title: 정렬, 필터링 및 그룹화 (XML 스키마 탐색기) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 4a914de0-9ffc-4526-9603-92e460e52513
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b8fe3daa1c95169623a908307d4d6c81044d378f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ad8225ae325c453836f5c7bcf7fb6ac0c5fb04a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>정렬, 필터링 및 그룹화(XML 스키마 탐색기)
 통해 사용할 수 있는 옵션을 설명 하는이 항목의 **정렬, 필터링 및 그룹화 옵션** XML 스키마 탐색기 도구 모음에서 메뉴.  

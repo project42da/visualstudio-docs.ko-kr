@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 최근에 사용한 파일 목록에서 통합 문서 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 최근에 사용한 파일 목록에서 통합 문서 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - recent file list, Excel
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e8a64f8a934e8cd7cdbbed11a87d15e795d19d0f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: c2d9c333b6d96329abec3fd52ecaa5da1cf97c74
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-list-recently-used-workbook-files"></a>방법: 프로그래밍 방식으로 최근에 사용한 통합 문서 파일 나열
   <xref:Microsoft.Office.Interop.Excel._Application.RecentFiles%2A> 속성이 최근에 사용한 파일의 Microsoft Office Excel 목록에 표시 되는 모든 파일의 이름이 포함 된 컬렉션을 반환 합니다. 목록의 길이 유지 하려면 사용자가 선택한 파일의 수에 따라 달라 집니다. 범위에서 결과 표시할 수 있습니다.  

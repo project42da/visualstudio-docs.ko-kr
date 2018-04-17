@@ -1,18 +1,18 @@
 ---
-title: "방법: Windows Communication Foundation 계약 작업 (레거시)를 구현 합니다. | Microsoft Docs"
+title: '방법: Windows Communication Foundation 계약 작업 (레거시)를 구현 합니다. | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: d6aeb20e-fac8-4a9d-bd26-ae78bef96b41
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8ea31cf143c572e42f1250f3a16cf73148a53fd
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 71bf4e4e6f5abc1d2984362396f21f3c613de795
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>방법: Windows Communication Foundation 계약 작업 구현(레거시)
 이 항목에서는 구현 하는 방법을 설명는 [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 작업 계약에서 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/12/2018
 
     -   클릭 **추가 계약** 대화 상자의 오른쪽 위 모퉁이에 있습니다. 이렇게 하면 새 [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] 계약 및 작업이 자동으로 만들어집니다.
 
-         또는
+         -또는-
 
     -   클릭 **가져오기** 대화 상자의 오른쪽 위 모퉁이에 있습니다. [찾아.NET 유형 선택 대화 상자 (레거시)](../workflow-designer/browse-and-select-a-dotnet-type-dialog-box-legacy.md) 열립니다. 원하는 계약이 들어 있는 어셈블리나 프로젝트를 검색합니다. 계약을 선택 하 고 클릭 **확인**합니다.
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/12/2018
 
 5.  워크플로 활동 내에서 해당 작업의 구현에 사용할 것인지를 배치에서 **ReceiveActivity** 활동입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [작업 선택 대화 상자(레거시)](../workflow-designer/choose-operation-dialog-box-legacy.md)
 - [방법: WCF 계약 작업 호출 (레거시)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)

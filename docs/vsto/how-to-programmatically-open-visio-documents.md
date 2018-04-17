@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 Visio 문서 열기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 Visio 문서 열기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Visio [Office development in Visual Studio], opening Visio documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a558e0cd069c91a490f039198b59aa3a89c83662
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: b5a837b4b12420c65817b6dfb156e0fe47fcdba6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-open-visio-documents"></a>방법: 프로그래밍 방식으로 Visio 문서 열기
   기존 Microsoft Office Visio 문서를 여는 방법은 두 가지가: Open 및 OpenEx 합니다. 인수는 호출자에 게 문서가 하는 방법을 지정할 수 있다는 점을 제외 하 고 OpenEx 방법은 Open 메서드와 동일 합니다.  

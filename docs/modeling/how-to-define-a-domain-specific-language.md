@@ -1,10 +1,8 @@
 ---
-title: "도메인 특정 언어를 정의 하는 방법 | Microsoft Docs"
-ms.custom: 
+title: 도메인 특정 언어를 정의 하는 방법 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.domainrelationship
 - vs.dsltools.dsldesigner.domainclass
@@ -16,22 +14,22 @@ helpviewer_keywords:
 - Domain-Specific Language, domain properties
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 57ae6465ec8d9fbbe85ff1f040d69b227c6a76fe
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 5cff720949f6b521b35fb68154ff3b3b43f14a8d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>도메인별 언어 정의 방법
 도메인 특정 언어 DSL ()를 정의 하려면 서식 파일에서 Visual Studio 솔루션을 만듭니다. 이 솔루션의 중요한 요소는 DslDefinition.dsl에 저장되는 DSL 정의 다이어그램입니다. DSL 정의는 DSL의 클래스와 모양을 정의합니다. 이러한 요소를 수정하고 필요한 내용을 추가한 후에 프로그램 코드를 추가하여 DSL을 보다 자세하게 사용자 지정할 수 있습니다.
 
 Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL Tools 랩**,이 사이트에서 찾을 수 있는: [Visualizaton and Modeling SDK](http://go.microsoft.com/fwlink/?LinkID=186128)
 
-##  <a name="templates"></a>서식 파일 솔루션 선택  
+##  <a name="templates"></a> 서식 파일 솔루션 선택  
  DSL을 정의하려면 다음 구성 요소를 설치해야 합니다.  
   
 |||  
@@ -123,7 +121,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  나머지 클래스는 요구 사항에 맞게 삭제하거나 이름을 바꿉니다.  
   
-##  <a name="patterns"></a>DSL 정의 하기 위한 패턴  
+##  <a name="patterns"></a> DSL 정의 하기 위한 패턴  
  한 번에 1~2개 기능을 추가하거나 조정하여 DSL을 개발하는 것이 좋습니다. 기능 하나를 추가하고 DSL을 실행하여 테스트한 다음 1~2개 기능을 더 추가합니다. DSL의 일반적인 기능은 다음과 같습니다.  
   
 -   도메인 클래스, 모델에 요소를 연결하는 포함 관계, 다이어그램에서 해당 클래스의 요소를 표시하는 데 필요한 모양, 사용자가 요소를 만드는 데 사용할 수 있는 요소 도구  
@@ -150,7 +148,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 > [!NOTE]
 >  여기서 "모델"은 사용자가 만드는 DSL 인스턴스를 지칭하며 대개 다이어그램으로 표시됩니다. 이 항목에서는 DSL 사용 시에 표시되는 DSL 정의 다이어그램 및 모델 다이어그램 둘 다에 대해 설명합니다.  
   
-##  <a name="classes"></a>도메인 클래스 정의  
+##  <a name="classes"></a> 도메인 클래스 정의  
  도메인 클래스는 DSL의 개념을 나타냅니다. 인스턴스는 *모델 요소*합니다. 예를 들어는 **MusicLibrary** DSL 해야할 라는 도메인 클래스 **앨범** 및 **노래**합니다.  
   
  도메인 클래스를 만들려면에서 끌어는 **도메인 클래스 라는** 도구 다이어그램을 클릭 한 다음 클래스의 이름을 바꿉니다.  
@@ -232,7 +230,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
 7.  **파일을 저장, 닫았다가 다시 열어**합니다. 노드를 확장하고 나면 작성한 모든 인스턴스가 탐색기에 표시되어야 합니다.  
   
-##  <a name="shapes"></a>다이어그램에서 셰이프를 정의합니다.  
+##  <a name="shapes"></a> 다이어그램에서 셰이프를 정의합니다.  
  다이어그램에 사각형, 타원 또는 아이콘으로 표시되는 요소 클래스를 정의할 수 있습니다.  
   
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>다이어그램에 모양으로 표시되는 요소 클래스를 정의하려면  
@@ -328,7 +326,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  모양을 처음으로 테스트한 후에 일부 속성을 조정하고 몇 가지 고급 기능을 더 추가할 수 있습니다. 자세한 내용은 참조 [사용자 지정 및 도메인 특정 언어 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)합니다.  
   
-##  <a name="references"></a>참조 관계 정의  
+##  <a name="references"></a> 참조 관계 정의  
  소스 도메인 클래스와 대상 도메인 클래스 간에 참조 관계를 정의할 수 있습니다. 참조 관계는 보통 다이어그램에 연결선(모양 사이의 선)으로 표시됩니다.  
   
  예를 들어 음악 앨범 및 아티스트가 다이어그램에 모양으로 표시되는 경우에는 아티스트를 참여 앨범에 연결하는 ArtistsAppearedOnAlbums 관계를 정의할 수 있습니다. 아래 그림의 예를 참조하세요.  
@@ -410,7 +408,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  연결선을 처음으로 테스트한 후에 일부 속성을 조정하고 몇 가지 고급 기능을 더 추가할 수 있습니다. 자세한 내용은 참조 [사용자 지정 및 도메인 특정 언어 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)합니다.  
   
-##  <a name="compartments"></a>목록이 포함 된 셰이프를 정의: 모양 구획  
+##  <a name="compartments"></a> 목록이 포함 된 셰이프를 정의: 모양 구획  
  구획 모양은 항목 목록을 하나 이상 포함합니다. 예를 들어 MusicLibrary DSL에서는 구획 모양을 사용하여 음악 Album을 표시할 수 있습니다. 각 Album에는 노래 목록이 있습니다.  
   
  ![구획 모양](../modeling/media/compartmentshape.png "CompartmentShape")  
@@ -538,7 +536,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
 7.  구획 모양에서 링크나 항목을 선택합니다. 링크와 항목이 모두 사라져야 합니다.  
   
-##  <a name="ports"></a>다른 도형 경계에 포트를 정의합니다.  
+##  <a name="ports"></a> 다른 도형 경계에 포트를 정의합니다.  
  포트는 다른 모양의 경계에 있는 모양입니다.  
   
  포트를 사용하여 다른 모양에 고정 연결점을 제공할 수 있습니다. 사용자는 이 연결점에 연결선을 그릴 수 있습니다. 이 경우 포트 모양을 투명하게 지정할 수 있습니다.  
@@ -561,7 +559,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  자세한 내용은 참조 [Port 셰이프 속성](../modeling/properties-of-port-shapes.md)합니다.  
   
-##  <a name="swimlanes"></a>스윔 레인을가 하는 DSL 정의  
+##  <a name="swimlanes"></a> 스윔 레인을가 하는 DSL 정의  
  스윔 레인은 다이어그램의 수평 또는 수직 파티션입니다. 각 스윔 레인은 모델 요소에 해당합니다. DSL 정의에서는 스윔 레인 요소당 도메인 클래스가 하나씩 있어야 합니다.  
   
  스윔 레인이 포함된 DSL을 만드는 가장 효율적인 방법은 새 DSL 솔루션을 만들고 작업 흐름 솔루션 템플릿을 선택하는 것입니다. DSL 정의에서 Actor 클래스는 스윔 레인에 매핑되는 도메인 클래스입니다. 이 클래스와 기타 클래스의 이름을 프로젝트에 맞게 바꿉니다.  
@@ -572,7 +570,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  자세한 내용은 참조 [스윔 레인 속성](../modeling/properties-of-swimlanes.md)합니다.  
   
-##  <a name="addTypes"></a>속성 형식 추가  
+##  <a name="addTypes"></a> 속성 형식 추가  
   
 ### <a name="domain-enumerations-and-literals"></a>도메인 열거형 및 리터럴  
  도메인 열거형은 여러 리터럴 값을 포함하는 형식입니다.  
@@ -588,7 +586,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  형식을 추가할 DSL 탐색기에서 모델의 루트를 마우스 오른쪽 단추로 클릭 하 고 클릭 **새 외부 형식 추가**합니다. 속성 창에서 이름을 설정 **색** 및 네임 스페이스를 **System.Drawing**합니다. 이 형식은 이제 DSL 탐색기 아래에 나타납니다. **도메인 형식**합니다. 도메인 속성 형식을 설정할 때마다 이 형식을 선택할 수 있습니다.  
   
-##  <a name="custom"></a>DSL 사용자 지정  
+##  <a name="custom"></a> DSL 사용자 지정  
  이 항목에서 설명하는 기술을 사용하면 다이어그램 표기법, 읽을 수 있는 XML 형식 및 코드와 기타 아티팩트를 생성하는 데 필요한 기본적인 도구를 사용해 DSL을 빠르게 만들 수 있습니다.  
   
  두 가지 방법으로 DSL 정의를 확장할 수 있습니다.  
@@ -608,7 +606,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
   
  참고 항목 [하는 방법: 도메인 특정 언어의 Namespace 변경](../modeling/how-to-change-the-namespace-of-a-domain-specific-language.md)합니다.  
   
-##  <a name="trouble"></a>문제 해결  
+##  <a name="trouble"></a> 문제 해결  
  아래 테이블에는 DSL을 디자인할 때 가장 흔히 발생하는 몇 가지 문제와 제안 해결 방법이 나와 있습니다. 자세한 도움말을 사용할 수는 [시각화 도구 Extensibililty 포럼](http://go.microsoft.com/fwlink/?LinkId=186074)합니다.  
   
 |문제점|제안 해결 방법|  

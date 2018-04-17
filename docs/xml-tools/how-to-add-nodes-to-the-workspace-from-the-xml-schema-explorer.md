@@ -1,23 +1,21 @@
 ---
-title: "방법: XML 스키마 탐색기에서 작업 영역에 노드 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: XML 스키마 탐색기에서 작업 영역에 노드 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 3b5a5749-9693-4b29-b0c2-8e07e0e55514
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 37da28d4c5db1e008af29c03997943720dcfbada
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d79aa5c10559eb67801ef68ad9b44f441736ccfb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-nodes-to-the-workspace-from-the-xml-schema-explorer"></a>방법: XML 스키마 탐색기에서 작업 영역에 노드 추가
 이 항목에서는 노드를 추가 하는 방법에 설명 된 [XML 스키마 디자이너 작업 영역](../xml-tools/xml-schema-designer-workspace.md) XML 스키마 탐색기에서 합니다. 이렇게 노드를 추가하려면 XML 스키마 탐색기에서 XSD 디자이너 뷰로 노드를 끌어다 놓거나 XML 스키마 탐색기의 상황에 맞는 메뉴를 사용해야 합니다. 또한 XML 스키마 탐색기에서 수행된 검색 결과로 강조 표시된 노드를 추가할 수 있습니다. 자세한 내용은 참조 [하는 방법: 스키마 집합 검색 결과 노드 추가 작업 영역에](../xml-tools/how-to-add-schema-set-search-result-nodes-to-the-workspace.md)합니다.  

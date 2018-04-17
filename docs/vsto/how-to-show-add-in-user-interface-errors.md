@@ -1,12 +1,10 @@
 ---
-title: "방법: 추가 기능 사용자 인터페이스 오류 표시 | Microsoft Docs"
-ms.custom: 
+title: '방법: 추가 기능 사용자 인터페이스 오류 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - application-level add-ins [Office development in Visual Studio], user interface errors
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4ce5204855cd6ebe468d652b8420cddc7fd19a1a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 795578d6a168dff5fee259a90abac83fa7788121
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-show-add-in-user-interface-errors"></a>방법: 추가 기능 사용자 인터페이스 오류 표시
   기본적으로 VSTO 추가 기능은 Microsoft Office UI(사용자 인터페이스) 조작이 실패한 경우 오류 메시지를 표시하지 않습니다. 그러나 UI에 관련된 오류에 대한 메시지를 표시하도록 Microsoft Office 응용 프로그램을 구성할 수 있습니다. 이러한 메시지를 사용하여 사용자 지정 리본이 나타나지 않는 이유 또는 리본이 나타나지만 컨트롤이 표시되지 않는 이유를 확인할 수 있습니다.  

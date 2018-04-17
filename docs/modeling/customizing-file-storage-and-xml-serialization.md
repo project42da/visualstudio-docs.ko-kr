@@ -1,25 +1,23 @@
 ---
-title: "파일 저장소 및 XML Serialization을 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 파일 저장소 및 XML Serialization을 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.xmlbehavior
 helpviewer_keywords:
 - Domain-Specific Language, serialization
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a15a331d465c2450f0f1e6230eac3415106e860b
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 2ca1b9f8e6261ae04217b0d74e13073a3683915c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-file-storage-and-xml-serialization"></a>파일 저장소 및 XML Serialization 사용자 지정
 사용자 인스턴스를 저장할 때 또는 *모델*, (DSL)에 도메인 특정 언어의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], XML 파일로 생성 되거나 업데이트 됩니다. 파일을 저장소에서 모델을 다시 다시 로드할 수 있습니다.  
@@ -101,7 +99,7 @@ ms.lasthandoff: 02/09/2018
 ## <a name="understanding-monikers"></a>모니커 이해  
  모니커는 모델 및 다이어그램 파일의 다른 부분 사이의 상호 참조를 나타내는 데 사용 됩니다. 에 사용할 수도 있습니다는 `.diagram` 모델 파일의 노드를 참조 하는 파일입니다. 두 가지 형태의 모니커 가지가 있습니다.  
   
--   *Id 모니커* 견적 대상 요소의 GUID입니다. 예:  
+-   *Id 모니커* 견적 대상 요소의 GUID입니다. 예를 들어:  
   
     ```  
     <personShapeMoniker Id="f79734c0-3da1-4d72-9514-848fa9e75157" />  
@@ -275,7 +273,7 @@ ms.lasthandoff: 02/09/2018
 |사용자 지정|이 속성을 설정 **True** 이 도메인 클래스에 대 한 고유한 serialization 및 deserialization 코드를 작성 하려는 경우.<br /><br /> 솔루션을 빌드하고 자세한 지침을 검색 하려면 오류를 조사 합니다.|  
 |도메인 클래스|이 클래스의 데이터 노드에 적용 되는 도메인 클래스입니다. 읽기 전용입니다.|  
 |요소 이름|이 클래스의 요소에 대 한 Xml 노드 이름입니다. 기본값은 도메인 클래스 이름의 소문자 버전입니다.|  
-|모니커 특성 이름|참조를 포함 하도록 모니커 요소에 사용 되는 특성의 이름입니다. 이 옵션이 공백인 경우에 키 속성이 나 id의 이름이 사용 됩니다.<br /><br /> 이 예제에서 "이름"입니다.`<personMoniker name="/Mike Nash"/>`|  
+|모니커 특성 이름|참조를 포함 하도록 모니커 요소에 사용 되는 특성의 이름입니다. 이 옵션이 공백인 경우에 키 속성이 나 id의 이름이 사용 됩니다.<br /><br /> 이 예제에서 "이름"입니다.  `<personMoniker name="/Mike Nash"/>`|  
 |모니커 요소 이름|이 클래스의 요소를 참조 하는 모니커에 사용 되는 xml 요소의 이름입니다.<br /><br /> 기본값은 클래스 이름 접미사 "Moniker"의 소문자 버전입니다. 예를 들어, `personMoniker`을 입력합니다.|  
 |모니커 형식 이름|이 클래스의 요소에는 모니커에 대해 생성 된 xsd 유형의 이름입니다. XSD 중인 **Dsl\Generated 코드\\\*Schema.xsd**|  
 |Id를 serialize 합니다.|True 이면 요소 GUID 파일에 포함 됩니다. 표시 된 속성이 있는 경우 true 이어야 합니다 **모니커 Is Key** DSL이이 클래스에 참조 관계를 정의 합니다.|  

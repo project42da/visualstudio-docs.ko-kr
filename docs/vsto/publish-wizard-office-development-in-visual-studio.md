@@ -1,12 +1,10 @@
 ---
-title: "게시 마법사 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: 게시 마법사 (Visual Studio에서 Office 개발) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectProperties.PublishWizard
 - VST.PublishWizard.Publish.2007System
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - Publish Wizard, Office solutions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 43b4869435c34a29cac5fd18a13d2b4b140e8b6c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 67e3222c6f1deeca58b84aca4ba73d2826483b26
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publish-wizard-office-development-in-visual-studio"></a>게시 마법사(Visual Studio에서는 Office 개발)
   사용 하 여는 **게시 마법사** 솔루션 파일을 지정 된 위치에 복사 하려면 매니페스트 파일을 만들고 설치 프로그램을 만듭니다.  
@@ -45,9 +44,9 @@ ms.lasthandoff: 01/10/2018
   
 -   범용 명명 규칙 (UNC) 경로 같은 \\\ServerName\MyApplication\\합니다.  
   
--   Http://www.microsoft.com/MyApplication 같은 웹 사이트의 URL입니다.  
+-   URL을 웹 사이트와 같은 http://www.microsoft.com/MyApplication합니다.  
   
- 기본적으로 게시 위치는 IIS를 설치한 경우 *http://localhost/projectname/* 이고, IIS를 설치하지 않은 경우 publish\ 디렉터리입니다.  
+ 기본적으로 게시 위치는 *http://localhost/projectname/* IIS가 설치 되어 있는 경우 또는 작업을 수행한 경우 publish\ 디렉터리 IIS가 설치 되지 합니다.  
   
 > [!NOTE]  
 >  대상 컴퓨터가 Windows Vista를 실행 중인 경우 자세한 고려 사항이 있습니다. 로컬 게시 옵션을 사용 하려면 Windows Vista 컴퓨터의 관리자 여야 합니다. 또한 기본 위치는 항상는 *게시\\*  IIS가 설치 되어 있는지 여부에 관계 없이 디렉터리입니다.  
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/10/2018
   
 ## <a name="see-also"></a>참고 항목  
  [ClickOnce를 사용 하 여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
- [Visual Studio &#41;의 페이지, 프로젝트 디자이너 &#40; Office 개발을 게시](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
+ [프로젝트 디자이너, 게시 페이지 &#40;Visual Studio에서 Office 개발&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
  [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)  
   
   

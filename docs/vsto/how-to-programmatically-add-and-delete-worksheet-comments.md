@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 추가 하 고 워크시트 메모를 삭제 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 추가 하 고 워크시트 메모를 삭제 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - comments, worksheets
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 9351dd018c2db4832db20a4abbdaa050f060793e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0891524a9172c3c7adf0ca0ce55173dffb0ad19b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-add-and-delete-worksheet-comments"></a>방법: 프로그래밍 방식으로 워크시트 메모 추가 및 삭제
   프로그래밍 방식으로 Microsoft Office Excel 워크시트에서 메모를 추가하거나 삭제할 수 있습니다. 메모는 다중 셀 범위가 아닌 단일 셀에만 추가할 수 있습니다.  

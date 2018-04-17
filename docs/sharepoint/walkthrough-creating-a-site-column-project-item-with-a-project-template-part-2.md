@@ -1,25 +1,24 @@
 ---
-title: "연습: 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기, 2 부 | Microsoft Docs"
-ms.custom: 
+title: '연습: 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기, 2 부 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
 - SharePoint project items, creating template wizards
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: f0472688f9f36d2b14c89cc904bf6ce4badd6ca6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e080c981715e746b8d24e2b2959fa1d5bd97029b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부
   사용자 지정 형식의 SharePoint 프로젝트 항목을 정의 하 고 Visual Studio에서 프로젝트 템플릿을 사용 하 여 연결 하는 마법사를 제공 수도 있습니다. 서식 파일 프로젝트 항목이 포함 된 새 프로젝트를 만들려면 사용할 때 사용자 로부터 정보를 수집 하는 마법사를 사용할 수 있습니다. 수집 하는 정보는 프로젝트 항목을 초기화 데 사용할 수 있습니다.  
@@ -41,9 +40,9 @@ ms.lasthandoff: 01/10/2018
 -   디버깅 하 고 마법사를 테스트 합니다.  
   
 > [!NOTE]  
->  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
+>  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [ http://go.microsoft.com/fwlink/?LinkId=191369 ](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행 하려면 먼저 만들어야 합니다 SiteColumnProjectItem 솔루션을 완료 하 여 [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)합니다.  
   
  또한이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 01/10/2018
   
 -   Sharepoint에서 사이트 열입니다. 자세한 내용은 참조 [열](http://go.microsoft.com/fwlink/?LinkId=183547)합니다.  
   
-##  <a name="wizardcomponents"></a>마법사 구성 요소 이해  
+##  <a name="wizardcomponents"></a> 마법사 구성 요소 이해  
  이 연습에 설명 된 마법사에는 몇 가지 구성 요소를 포함 합니다. 다음 표에서 이러한 구성 요소를 설명합니다.  
   
 |구성 요소|설명|  
@@ -90,7 +89,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  프로젝트 템플릿 목록에서 선택 **WPF 사용자 정의 컨트롤 라이브러리**, 프로젝트 이름을 **ProjectTemplateWizard**를 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **ProjectTemplateWizard** 프로젝트를 솔루션 기본 usercontrol1.xaml이 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **ProjectTemplateWizard** 프로젝트를 솔루션 기본 usercontrol1.xaml이 파일을 엽니다.  
   
 6.  프로젝트에서 usercontrol1.xaml이 파일을 삭제 합니다.  
   
@@ -104,7 +103,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  선택 된 **클래스 라이브러리** 서식 파일 프로젝트에서 프로젝트 이름을 **SharePointCommands**, 선택한 후는 **확인** 단추 합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **SharePointCommands** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **SharePointCommands** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -163,7 +162,7 @@ ms.lasthandoff: 01/10/2018
   
 13. Visual Basic 프로젝트를 개발 하는 경우 ProjectTemplateWizard 네임 스페이스를 프로젝트에 사용 하 여 가져올는 **프로젝트 디자이너**합니다.  
   
-     자세한 내용은 참조 [하는 방법: 추가 또는 제거 가져온 네임 스페이스 &#40; Visual Basic &#41; ](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md).  
+     자세한 내용은 참조 [하는 방법: 추가 또는 가져온 네임 스페이스 제거 &#40;Visual Basic&#41;](../ide/how-to-add-or-remove-imported-namespaces-visual-basic.md)합니다.  
   
 #### <a name="to-configure-the-sharepointcommands-project"></a>SharePointCommands 프로젝트를 구성 하려면  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  옆에 있는 화살표를 선택는 **추가** 단추를 선택한 후는 **링크로 추가** 나타나는 메뉴에서 옵션입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]코드 파일을 추가 하는 **SharePointCommands** 링크로 프로젝트입니다. 코드 파일에는 **ProjectTemplateWizard** 프로젝트 이지만 파일의 코드에도 컴파일된는 **SharePointCommands** 프로젝트.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 코드 파일을 추가 하는 **SharePointCommands** 링크로 프로젝트입니다. 코드 파일에는 **ProjectTemplateWizard** 프로젝트 이지만 파일의 코드에도 컴파일된는 **SharePointCommands** 프로젝트.  
   
 5.  에 **SharePointCommands** 프로젝트에서 명령을 라고 하는 다른 코드 파일을 추가 합니다.  
   
@@ -406,7 +405,7 @@ ms.lasthandoff: 01/10/2018
     </WizardExtension>  
     ```  
   
-     에 대 한 자세한 내용은 `WizardExtension` 요소 참조 [WizardExtension 요소 &#40; Visual Studio 서식 파일 &#41; ](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
+     에 대 한 자세한 내용은 `WizardExtension` 요소 참조 [WizardExtension 요소 &#40;Visual Studio 템플릿&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates)합니다.  
   
 3.  파일을 저장한 후 닫습니다.  
   

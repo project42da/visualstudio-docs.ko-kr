@@ -1,13 +1,10 @@
 ---
-title: "방법: SharePoint 프로젝트 서비스 검색 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 프로젝트 서비스 검색 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint project service
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b1abdf4a48d05285a7394469dd391caf48981f9f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: f1e8cdcc863cfd363b1a73f11ed05ffb5a5ff12e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-retrieve-the-sharepoint-project-service"></a>방법: SharePoint 프로젝트 서비스 검색
   SharePoint 프로젝트 서비스는 다음과 같은 유형의 솔루션에 액세스할 수 있습니다.  

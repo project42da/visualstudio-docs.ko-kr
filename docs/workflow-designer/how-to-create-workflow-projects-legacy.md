@@ -1,5 +1,5 @@
 ---
-title: "방법: 워크플로 프로젝트 (레거시) 만들기 | Microsoft Docs"
+title: '방법: 워크플로 프로젝트 (레거시) 만들기 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 32299555-662c-469d-a90d-89f4700dc78c
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc38c6b323ee06ed9b312811eb892e7654134d05
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: ca6fdbbd8a744c472c06fdefbdafce77679ec2c9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-workflow-projects-legacy"></a>방법: 워크플로 프로젝트 만들기(레거시)
 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 또는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]를 대상으로 하는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)] 프로젝트를 만들려면 다음 단계를 따릅니다. 이 프로시저에서 제공 되는 레거시 Windows 워크플로 디자이너를 사용 하 여 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]합니다.
@@ -24,7 +24,7 @@ ms.lasthandoff: 03/12/2018
 
 1.  [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)]를 시작합니다.
 
-2.  에 **파일** 메뉴에서 **새로**를 선택한 후 **프로젝트**합니다.
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음, **프로젝트**를 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
@@ -57,6 +57,6 @@ ms.lasthandoff: 03/12/2018
 
 8.  **확인**을 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레거시 워크플로 프로젝트 만들기](../workflow-designer/creating-legacy-workflow-projects.md)

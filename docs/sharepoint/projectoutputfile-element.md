@@ -1,13 +1,10 @@
 ---
-title: "ProjectOutputFile 요소 | Microsoft Docs"
-ms.custom: 
+title: ProjectOutputFile 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - ProjectOutputFile element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5b57f00960629d65f264f22532a16202d6ae5d7a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 52898168eb0debf047613a03702647195ab7d3cd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="projectoutputfile-element"></a>ProjectOutputFile 요소
   SharePoint에 배포 될 때 프로젝트 항목과 함께 포함할 별도 프로젝트의 출력을 나타냅니다.  

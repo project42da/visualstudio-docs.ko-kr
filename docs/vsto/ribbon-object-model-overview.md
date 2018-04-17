@@ -1,13 +1,10 @@
 ---
-title: "리본 개체 모델 개요 | Microsoft Docs"
-ms.custom: 
+title: 리본 개체 모델 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], object model
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bda61cd7ca0e169a4f62fbc0c33b24e3c4ec0048
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c0d6defc160d08d0c92dd21370144c1ef748e7e2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ribbon-object-model-overview"></a>리본 개체 모델 개요
   [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 가져오고 런타임에 리본 컨트롤의 속성을 설정 하는 데 사용할 수 있는 강력한 형식의 개체 모델을 노출 합니다. 예를 들어 하면 동적으로 메뉴 컨트롤을 채우는 또는 표시 하거나 숨길 수 컨트롤 컨텍스트. 리본이 Office 응용 프로그램에서 로드 되기 전에만 하지만 리본, 탭, 그룹 및 컨트롤도 추가할 수 있습니다. 자세한 내용은 참조 [읽기 전용이 되는 속성 설정을](#SettingReadOnlyProperties)합니다.  
@@ -31,12 +28,12 @@ ms.lasthandoff: 01/10/2018
   
  주로 구성이 리본 개체 모델에서 [리본 클래스](#RibbonClass), [리본 이벤트](#RibbonEvents), 및 [리본 컨트롤 클래스](#RibbonControlClasses)합니다.  
   
-##  <a name="RibbonClass"></a>리본 클래스  
+##  <a name="RibbonClass"></a> 리본 클래스  
  추가 하는 경우 새 **리본 (비주얼 디자이너)** 항목을 프로젝트에 추가 하는 Visual Studio는 **리본** 프로젝트에 클래스입니다. **리본** 클래스에서 상속 된 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> 클래스입니다.  
   
  이 클래스는 리본 코드 파일 및 리본 디자이너 코드 파일 분할 된 partial 클래스로 표시 됩니다.  
   
-##  <a name="RibbonEvents"></a>리본 이벤트  
+##  <a name="RibbonEvents"></a> 리본 이벤트  
  **리본** 클래스는 다음 세 가지 이벤트를 포함 합니다.  
   
 |이벤트(event)|설명|  
@@ -45,7 +42,7 @@ ms.lasthandoff: 01/10/2018
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.LoadImage>|리본을 로드할 때의 리본 메뉴 사용자 지정 이미지를 캐시할 수 합니다. 이 이벤트 처리기에서 리본 메뉴 이미지를 캐시 하는 코드를 작성 하는 경우 성능이 약간 향상을 얻을 수 있습니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.LoadImage>을 참조하세요.|  
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonBase.Close>|리본 인스턴스가 닫힐 때 발생 합니다.|  
   
-##  <a name="RibbonControlClasses"></a>리본 컨트롤  
+##  <a name="RibbonControlClasses"></a> 리본 컨트롤  
  <xref:Microsoft.Office.Tools.Ribbon> 네임 스페이스에서 볼 수 있는 각 컨트롤에 대 한 형식이 포함 되어는 **Office 리본 컨트롤** 그룹는 **도구 상자**합니다.  
   
  다음 표에서 각 형식을 보여 줍니다. `Ribbon` 제어 합니다. 각 컨트롤에 대 한 참조 [리본 개요](../vsto/ribbon-overview.md)합니다.  
@@ -87,14 +84,14 @@ ms.lasthandoff: 01/10/2018
 |컨트롤에 표시 되는 이미지를 가져옵니다.|이미지 속성을 사용 합니다.|  
 |컨트롤의 레이블을 변경 합니다.|Label 속성을 사용 합니다.|  
 |컨트롤에 사용자 정의 데이터를 추가 합니다.|Tag 속성을 사용 합니다.|  
-|항목을 가져올는 <xref:Microsoft.Office.Tools.Ribbon.RibbonBox>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>, 또는<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>컨트롤입니다.|Items 속성을 사용 합니다.|  
+|항목을 가져올는 <xref:Microsoft.Office.Tools.Ribbon.RibbonBox>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>, 또는<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton> 컨트롤입니다.|Items 속성을 사용 합니다.|  
 |에 항목 추가 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>, <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>, 또는 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery> 제어 합니다.|Items 속성을 사용 합니다.|  
 |컨트롤을 추가 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>합니다.|Items 속성을 사용 합니다.<br /><br /> 컨트롤을 추가 하려면는 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu> 리본이 Office 응용 프로그램에 로드 된 후 설정 해야 합니다는 <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.Dynamic%2A> 속성을 **true** 리본이 Office 응용 프로그램에 로드 되기 전에 합니다. 자세한 내용은 참조 [읽기 전용이 되는 속성 설정을](#SettingReadOnlyProperties)합니다.|  
 |선택된 항목 가져오기는 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>,<br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown>또는 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>합니다.|SelectedItem 속성을 사용 합니다. 에 대 한는 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox>를 사용 하 여는 <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.Text%2A> 속성입니다.|  
 |그룹을 가져옵니다는 <xref:Microsoft.Office.Tools.Ribbon.RibbonTab>합니다.|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab.Groups%2A> 속성을 사용합니다.|  
 |최대 5 개의 행과 열에 표시 되는 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>합니다.|사용 하 여 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.RowCount%2A> 및 <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ColumnCount%2A> 속성입니다.|  
   
-##  <a name="SettingReadOnlyProperties"></a>읽기 전용으로 설정 되는 속성 설정  
+##  <a name="SettingReadOnlyProperties"></a> 읽기 전용으로 설정 되는 속성 설정  
  리본을 로드 하기 전에만 일부 속성을 설정할 수 있습니다. 이러한 속성을 설정 하려면 다음 세 위치 가지가 있습니다.  
   
 -   Visual Studio에서 **속성** 창.  
@@ -131,7 +128,7 @@ ms.lasthandoff: 01/10/2018
  [!code-vb[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/VisualBasic/trin_ribbon_objectmodel_dotnet4/ThisWorkbook.vb#2)]
  [!code-csharp[Trin_Ribbon_ObjectModel#2](../vsto/codesnippet/CSharp/trin_ribbon_objectmodel_dotnet4/ThisWorkbook.cs#2)]  
   
-###  <a name="ReadOnlyProperties"></a>읽기 전용으로 설정 되는 속성  
+###  <a name="ReadOnlyProperties"></a> 읽기 전용으로 설정 되는 속성  
  다음 표에서 리본을 로드 하기 전에만 설정할 수 있는 속성을 보여 줍니다.  
   
 > [!NOTE]  
@@ -142,7 +139,7 @@ ms.lasthandoff: 01/10/2018
 |**BoxStyle**|<xref:Microsoft.Office.Tools.Ribbon.RibbonBox>|  
 |**ButtonType**|<xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton>|  
 |**열 개수**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGallery>|  
-|**ControlId**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|  
+|**controlId**|<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|  
 |**DialogLauncher**|<xref:Microsoft.Office.Tools.Ribbon.RibbonGroup>|  
 |**동적**|<xref:Microsoft.Office.Tools.Ribbon.RibbonMenu>|  
 |**Global**|<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon>|  

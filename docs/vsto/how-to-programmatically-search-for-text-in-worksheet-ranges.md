@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 워크시트 범위에서 텍스트 검색 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 워크시트 범위에서 텍스트 검색 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - text searches, worksheets
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 42c95ab26437ad590d457ad926db6e070a7c8de0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 2749834f459085b8d182b58f12a4c372f7493cba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-search-for-text-in-worksheet-ranges"></a>방법: 프로그래밍 방식으로 워크시트 범위에서 텍스트 검색
   <xref:Microsoft.Office.Interop.Excel.Range.Find%2A> 의 메서드는 <xref:Microsoft.Office.Interop.Excel.Range> 개체를 사용 하면 범위 내의 텍스트를 검색할 수 있습니다. 이 텍스트와 같이 워크시트 셀에 나타날 수 있는 오류 문자열 중 하나일 수 또한 있습니다 `#NULL!` 또는 `#VALUE!`합니다. 오류 문자열에 대 한 자세한 내용은 참조 [셀 오류 값](http://msdn.microsoft.com/library/office/ff839168.aspx)합니다.  
@@ -75,7 +74,7 @@ ms.lasthandoff: 01/10/2018
   
  다음 예제에서는 전체 메서드를 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#57)]
  [!code-vb[Trin_VstcoreExcelAutomation#57](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#57)]  
   

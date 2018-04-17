@@ -1,5 +1,5 @@
 ---
-title: "순차 워크플로 뷰 (레거시) | Microsoft Docs"
+title: 순차 워크플로 뷰 (레거시) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -8,14 +8,14 @@ helpviewer_keywords:
 ms.assetid: 135f24b9-1b37-442b-9ef8-f0f2108a3212
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f412fa9afee6aa768447fc226553fd68970e646
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: a6b42ba9c1c9f7dbe2beb4a741501967e4968508
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sequential-workflow-views-legacy"></a>순차 워크플로 뷰(레거시)
 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 사용할 수 있는 레거시 Windows 워크플로 디자이너를 제공 합니다. 대상에는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/12/2018
 
  유사한 방식에 대 한 자세한 내용은 참조 [활동 뷰 (레거시)](../workflow-designer/activity-views-legacy.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [활동 뷰(레거시)](../workflow-designer/activity-views-legacy.md)
 - [레거시 워크플로 프로젝트 만들기](../workflow-designer/creating-legacy-workflow-projects.md)

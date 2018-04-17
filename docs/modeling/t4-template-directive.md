@@ -2,20 +2,18 @@
 title: T4 템플릿 지시문 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3c4e53c4d123a5a5de493059c68ef09685c903a8
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: c39783b9ca8be2f9e406782258befecce416f551
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="t4-template-directive"></a>T4 템플릿 지시문
 일반적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] T4 텍스트 템플릿은 템플릿의 처리 방식을 지정하는 `template` 지시문으로 시작합니다. 하나의 텍스트 템플릿 및 템플릿이 포함된 파일에는 템플릿 지시문이 하나만 있어야 합니다.  

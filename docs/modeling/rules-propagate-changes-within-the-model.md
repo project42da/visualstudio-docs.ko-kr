@@ -2,23 +2,21 @@
 title: 규칙은 모델 내에서 변경 내용을 전파 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain models
 - Domain-Specific Language, rules
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: af086275f641e3237f8d22308c960ad30240b647
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: af43a323676eb977b3e722dd4a677976790a8d5f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rules-propagate-changes-within-the-model"></a>규칙으로 모델 내부의 변경 내용 전파
 시각화 및 모델링 SDK (VMSDK)에서 다른 요소에서 변경 전파 하는 저장소 규칙을 만들 수 있습니다. 저장소에 있는 모든 요소를 변경 하면 규칙 예정 가장 바깥쪽 트랜잭션이 커밋될 때 일반적으로 실행할 수입니다. 다양 한 유형의 여러 종류의 요소를 추가 또는 삭제와 같은 이벤트에 대 한 규칙 있습니다. 요소, 도형 또는 다이어그램의 특정 형식에 규칙을 연결할 수 있습니다. 규칙에 의해 정의 된 여러 기본 제공 기능: 다이어그램 모델 변경 될 때 업데이트 되도록 규칙을 확인 하는 예를 들어 있습니다. 사용자 고유의 규칙을 추가 하 여 도메인 특정 언어를 사용자 지정할 수 있습니다.  

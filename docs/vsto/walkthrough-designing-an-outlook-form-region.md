@@ -1,13 +1,10 @@
 ---
-title: "연습: Outlook 양식 영역 디자인 | Microsoft Docs"
-ms.custom: 
+title: '연습: Outlook 양식 영역 디자인 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - form regions [Office development in Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: afe17d19ebe87d34ae4857b1477be6cb3e894bb7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 22d67ffe14b261911d220dfeb64a0204a6a16032
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-designing-an-outlook-form-region"></a>연습: Outlook 양식 영역 디자인
   사용자 지정 양식 영역은 표준 또는 사용자 지정 Microsoft Office Outlook 양식을 확장합니다. 이 연습에서는 연락처 항목의 검사기 창에 새 페이지로 표시되는 사용자 지정 양식 영역을 디자인합니다. 이 양식 영역은 Windows Live 로컬 검색 웹 사이트에 주소 정보를 전송하여 연락처에 대해 나열된 각 주소의 지도를 표시합니다. 양식 영역에 대 한 정보를 참조 하십시오. [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)합니다.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -159,7 +156,7 @@ ms.lasthandoff: 01/10/2018
     |주소 형식|주소|  
     |------------------|-------------|  
     |**비즈니스**|**4567 Main St. 롱비치, 캘리포니아주**|  
-    |**홈**|**1234 북부 St. 롱비치, 캘리포니아주**|  
+    |**Home**|**1234 북부 St. 롱비치, 캘리포니아주**|  
     |**기타**|**3456 Main St. 워싱턴주 시애틀**|  
   
 4.  연락처 항목을 저장하고 닫습니다.  

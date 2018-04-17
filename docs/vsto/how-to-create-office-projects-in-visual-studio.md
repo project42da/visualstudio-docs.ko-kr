@@ -1,12 +1,10 @@
 ---
-title: "방법: Visual Studio에서 Office 프로젝트 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Studio에서 Office 프로젝트 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VST.SelectDocWizard.Page1
 - VST.SelectDocWizard.Http
@@ -23,16 +21,17 @@ helpviewer_keywords:
 - application-level add-ins [Office development in Visual Studio], creating projects
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 60addb19ba78734237e6ccf888cdb69f2629f98c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 50739bfde7578a49226e5396c8eeb78e56c4b0ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>방법: Visual Studio에서 Office 프로젝트 만들기
-  사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 만들고 VSTO 추가 기능을 문서 수준 사용자 지정 Microsoft Office 응용 프로그램에 대 한 합니다. 이러한 유형의 프로젝트에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션 개발 개요 & #40; VSTO & #41; ](../vsto/office-solutions-development-overview-vsto.md).  
+  사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 만들고 VSTO 추가 기능을 문서 수준 사용자 지정 Microsoft Office 응용 프로그램에 대 한 합니다. 이러한 유형의 프로젝트에 대 한 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)합니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
@@ -149,7 +148,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] 프로젝트에서 기존 문서를 사용할 경우 [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)]에서 생성되거나 해당 항목으로 변환된 문서만 사용하세요. 마찬가지로 Word 2010 프로젝트의 기존 문서를 사용할 경우 Word 2010에서 생성되거나 해당 항목으로 변환된 문서만 사용하세요. 이전 버전 Word에서 생성된 문서를 사용하면 문서에서 특정 기능이 사용하지 않도록 설정됩니다. 이들 기능을 사용하는 코드를 작성하려고 하면 프로젝트에서 오류가 발생할 수 있습니다. 문서를 변환 하려면 열 [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] 또는 Word 2010에서의 **파일** 리본 메뉴에 탭을 선택 **정보**, **변환**합니다.  
   
-8.  선택 **마침**합니다.  
+8.  **마침**을 선택합니다.  
   
 9. 다음 경우에 Word의 보안 센터에 있는 신뢰할 수 있는 위치 목록에 프로젝트 폴더와 하위 폴더를 추가합니다.  
   

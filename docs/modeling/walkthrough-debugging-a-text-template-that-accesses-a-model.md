@@ -1,21 +1,19 @@
 ---
-title: "연습: 모델에 액세스 하는 텍스트 템플릿 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '연습: 모델에 액세스 하는 텍스트 템플릿 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: d0cc9d59e4dfbe98312d44cceb91e729f0b81126
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c509a4769323696c56d69bbd5a632f28413cbe91
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>연습: 모델에 액세스하는 텍스트 템플릿 디버깅
 수정 하거나 도메인 특정 언어 솔루션에서 텍스트 템플릿을 추가 하는 경우 엔진은 소스 코드에 또는 생성된 된 코드를 컴파일할 때 서식 파일을 변환 하는 경우 오류가 발생할 수 있습니다. 다음 연습에서는 텍스트 템플릿을 디버깅을 수행할 수 있는 작업의 일부를 보여 줍니다.  
@@ -176,7 +174,7 @@ ms.lasthandoff: 02/09/2018
   
 4.  코드를 해결 하려면 속성 이름 변경 `LibraryModel` 텍스트 템플릿 코드에 있습니다.  
   
-     변경 내용은 강조 표시 됩니다.  
+     변경 내용은 강조 표시되어 있습니다.  
   
     ```csharp  
     <#@ template language="C#" inherits="Microsoft.VisualStudio.TextTemplating.VSHost.ModelingTextTransformation"#>  

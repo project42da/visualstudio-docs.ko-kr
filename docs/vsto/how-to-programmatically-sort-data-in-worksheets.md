@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 워크시트에서 데이터 정렬 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 워크시트에서 데이터 정렬 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - sorting data, in worksheets
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6049cd6ce5a42a410b98e19b354ed4f9ea2da826
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4d53baac81bc3a2e583743a61635560b1486a76e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-sort-data-in-worksheets"></a>방법: 워크시트에서 프로그래밍 방식으로 데이터 정렬
   런타임에 워크시트 범위와 목록에 포함된 데이터를 정렬할 수 있습니다. 다음 코드에서는 첫 번째 열의 데이터와 두 번째 열의 데이터를 기준으로 차례로 `Fruits`라는 다중 열 범위를 정렬합니다.  

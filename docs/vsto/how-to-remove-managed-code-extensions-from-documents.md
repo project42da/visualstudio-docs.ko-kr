@@ -1,12 +1,10 @@
 ---
-title: "방법: 문서에서 관리 코드 확장을 제거 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: 문서에서 관리 코드 확장을 제거 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], managed code extensions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c83f9794cdce71db9f51a6adca69fbeabc8c7a8e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7a5e70db36c0cd1b99a670e13a353e15f7558e7e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-remove-managed-code-extensions-from-documents"></a>방법: 문서에서 관리 코드 확장명 제거
   프로그래밍 방식으로 문서 또는 Microsoft Office Word 또는 Microsoft Office Excel 문서 수준 사용자 지정의 일부인 통합 문서에서 사용자 지정 어셈블리를 제거할 수 있습니다. 사용자 수 다음 문서를 열 내용이 되지만 문서에 추가 사용자 지정 사용자 인터페이스 (UI) 표시 되지 않습니다 및 코드가 실행 되지 않습니다.  

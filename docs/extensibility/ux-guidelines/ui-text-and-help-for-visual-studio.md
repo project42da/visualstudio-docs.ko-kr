@@ -1,26 +1,24 @@
 ---
-title: "UI 텍스트와 Visual Studio에 대 한 도움말 | Microsoft Docs"
-ms.custom: 
+title: UI 텍스트와 Visual Studio에 대 한 도움말 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: e8747d07-6c90-46cc-b425-55b589f7e9e4
-caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 555fd622f5655a69ba77f3905a39635e01831c76
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 697c794d17f3004b0f37e668ff67afb703490e18
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ui-text-and-help-for-visual-studio"></a>UI 텍스트와 Visual Studio에 대 한 도움말
-##  <a name="BKMK_UITextAndTerminology"></a>UI 텍스트 및 용어  
+##  <a name="BKMK_UITextAndTerminology"></a> UI 텍스트 및 용어  
  알기 텍스트는 효과적인 UI에 중요 합니다. 소프트웨어 사용자가 읽는 경향이 레이블을 먼저, 즉 작업 완료에 가장 적합 합니다. 덜 빈도로 정적 텍스트를 읽어옵니다. 해당 작업 세션이 대략적인 순서로 UI의 읽기 뒤 전체 창의 빠른 검색을 시작 하는 사용자를 위한 계획:  
   
 1.  센터에서 대화형 컨트롤  

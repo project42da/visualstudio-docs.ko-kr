@@ -1,13 +1,10 @@
 ---
-title: "VBA 및 문서 수준 사용자 지정 결합 | Microsoft Docs"
-ms.custom: 
+title: VBA 및 문서 수준 사용자 지정 결합 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.VBAInterop.InvalidAssemblyVersion
 - VST.VBAInterop.ProjectLoadFailure
@@ -27,14 +24,14 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], Visual Basic for Applications and
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 63f316d3ac6fefbef37735cddc8fb7a87a8d4bfb
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 01870498522ce138925fdaaf4c6ada9b13961f76
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="combining-vba-and-document-level-customizations"></a>VBA 및 문서 수준 사용자 지정 결합
   Microsoft Office Word 또는 Microsoft Office Excel의 문서 수준 사용자 지정의 일부인 문서에서 VBA(Visual Basic for Applications) 코드를 사용할 수 있습니다. 사용자 지정 어셈블리에서 문서의 VBA 코드를 호출하거나, 문서의 VBA 코드에서 사용자 지정 어셈블리의 코드를 호출할 수 있도록 프로젝트를 구성할 수 있습니다.  
@@ -120,7 +117,7 @@ Globals.Sheet1.Application.Run("MyMacro", missing, missing, missing,
   
     3.  프로젝트에서 호스트 항목 클래스의 **ReferenceAssemblyFromVbaProject** 속성을 **True**로 설정합니다. 이렇게 하면 사용자 지정 어셈블리의 형식 라이브러리가 어셈블리에 포함되고 형식 라이브러리에 대한 참조가 문서의 VBA 프로젝트에 추가됩니다.  
   
- 자세한 내용은 참조 [하는 방법: Visual Basic 프로젝트에서 VBA로 코드 노출](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md) 및 [하는 방법: Visual C# 35; 및 답변에서 VBA로 코드 노출 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)합니다.  
+ 자세한 내용은 참조 [하는 방법: Visual Basic 프로젝트에서 VBA로 코드 노출](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md) 및 [하는 방법: Visual C에서 VBA로 코드 노출&#35; 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)합니다.  
   
  **EnableVbaCallers** 및 **ReferenceAssemblyFromVbaProject** 속성은 디자인 타임에만 **속성** 창에서 사용할 수 있으며 런타임에는 사용할 수 없습니다. 속성을 보려면 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 호스트 항목에 대한 디자이너를 엽니다. 이러한 속성을 설정할 때 Visual Studio에서 수행하는 특정 작업에 대한 자세한 내용은 [호스트 항목 속성에 의해 수행되는 작업](#PropertyTasks)을 참조하세요.  
   
@@ -256,9 +253,9 @@ GetManagedClass(pdispInteropObject Object) As Object
   
 ## <a name="see-also"></a>참고 항목  
  [How to: Expose Code to VBA in a Visual Basic Project](../vsto/how-to-expose-code-to-vba-in-a-visual-basic-project.md)   
- [방법: Visual C# 35; 및 답변에서 VBA로 코드 노출 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
+ [방법: Visual C에서 VBA로 코드 노출&#35; 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)   
  [연습: Visual Basic 프로젝트에서 vba의 코드 호출](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
- [연습: VBA에서 Visual C# 35; 호출 코드 프로젝트](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
+ [연습: Visual C에서 vba의 코드 호출&#35; 프로젝트](../vsto/walkthrough-calling-code-from-vba-in-a-visual-csharp-project.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
  [VBA와 비교 하는 Visual Studio에서 Office 솔루션](../vsto/vba-and-office-solutions-in-visual-studio-compared.md)   
  [Programming Document-Level Customizations](../vsto/programming-document-level-customizations.md)  

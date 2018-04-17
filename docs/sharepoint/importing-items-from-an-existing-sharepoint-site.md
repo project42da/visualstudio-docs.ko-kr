@@ -1,12 +1,10 @@
 ---
-title: "기존 SharePoint 사이트에서 항목 가져오기 | Microsoft Docs"
-ms.custom: 
+title: 기존 SharePoint 사이트에서 항목 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.WSPImport.SelectionDependency
 - VS.SharepointTools.WSPImport.SpecifyProjectSource
@@ -22,13 +20,14 @@ helpviewer_keywords:
 - importing items [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a542a74bf162c4fc2bb2fe2c725b02742d568547
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: b5a4f282923b073a87307d88f0c3e3b4365d1057
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="importing-items-from-an-existing-sharepoint-site"></a>기존 SharePoint 사이트에서 항목 가져오기
   SharePoint 솔루션 패키지 가져오기 프로젝트 템플릿을 사용하면 기존 SharePoint 사이트에 있는 콘텐츠 형식 및 필드 등의 요소를 새 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 솔루션에서 다시 사용할 수 있습니다. 수정 없이도 가져온 솔루션을 대부분 실행할 수 있지만 몇 가지 제한 및 문제를 고려해야 합니다. 항목을 가져온 후 수정한 경우에는 특히 주의해야 합니다.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="item-name-character-limit"></a>항목 이름 문자 제한  
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서는 프로젝트 및 프로젝트 항목 이름에 경로를 포함하여 총 260자까지 포함할 수 있습니다. 솔루션을 가져올 때 항목 이름이 이 제한을 초과하면 오류가 발생합니다.  
   
- **지정된 된 경로, 파일 이름 또는 둘 다가 너무 깁니다. 정규화 된 파일 이름은 260 자 미만, 해야 하 고 디렉터리 이름은 248 자 미만 이어야 합니다.**  
+ **지정된 된 경로, 파일 이름 또는 둘 다가 너무 깁니다. 정규화된 파일 이름은 260자 미만이어야 하며 디렉터리 이름은 248자 미만이어야 합니다.**  
   
  이 오류가 발생하는 경우 항목이 만들어지지 않습니다. 이 문제는 모듈을 가져올 때 가장 자주 발생합니다. 이 문제를 방지하려면 다음을 수행합니다.  
   

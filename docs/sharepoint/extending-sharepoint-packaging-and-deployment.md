@@ -1,13 +1,10 @@
 ---
-title: "SharePoint 패키징 및 배포 확장 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 패키징 및 배포 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2fa807472a0787f0f1ae4c61f074fd8bb3ad5055
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c91c78e6ab78ac39eb5c53c32a70ead895129df0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-sharepoint-packaging-and-deployment"></a>SharePoint 패키징 및 배포 확장
   SharePoint 프로젝트의 패키징 및 배포 프로세스를 확장할 수 있습니다.
@@ -33,7 +30,7 @@ ms.lasthandoff: 01/10/2018
  배포 단계를 만드는 방법을 보여 주는 연습을 참조 하십시오. [연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)합니다.  
   
 ##  <a name="creating-deployment-configurations"></a>배포 구성 만들기  
- 배포 구성은 지정된 프로젝트에 대해 실행되지만 모든 SharePoint 프로젝트 항목에 영향을 미칠 수 있는 일련의 배포 단계입니다. 각 배포 구성에는 프로젝트 배포 시 실행되는 일련의 단계와 프로젝트 취소 시 실행되는 일련의 단계가 포함되어 있습니다. [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)]두 개의 기본 제공 배포 구성이 포함 되어 있지만 있습니다 수, 직접 만들 수도 있습니다. 배포 구성을 만들 때 기본 제공 배포 단계와 직접 만든 배포 단계를 포함할 수 있습니다.  
+ 배포 구성은 지정된 프로젝트에 대해 실행되지만 모든 SharePoint 프로젝트 항목에 영향을 미칠 수 있는 일련의 배포 단계입니다. 각 배포 구성에는 프로젝트 배포 시 실행되는 일련의 단계와 프로젝트 취소 시 실행되는 일련의 단계가 포함되어 있습니다. [!INCLUDE[vs_current_short](../sharepoint/includes/vs-current-short-md.md)] 두 개의 기본 제공 배포 구성이 포함 되어 있지만 있습니다 수, 직접 만들 수도 있습니다. 배포 구성을 만들 때 기본 제공 배포 단계와 직접 만든 배포 단계를 포함할 수 있습니다.  
   
  배포 구성을 만드는 방법을 보여 주는 연습을 참조 하십시오. [연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md)합니다.  
   

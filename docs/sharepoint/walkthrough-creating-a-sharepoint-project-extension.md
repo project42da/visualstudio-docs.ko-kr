@@ -1,12 +1,10 @@
 ---
-title: "연습: SharePoint 프로젝트 확장 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: SharePoint 프로젝트 확장 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint projects, extending
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a03dd09525d29aaea31ef5c376814bd09747f90e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 17722233c5215858dce59a0d85a05f668de85446
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-sharepoint-project-extension"></a>연습: SharePoint 프로젝트 확장명 만들기
   이 연습에는 SharePoint 프로젝트에 대 한 확장을 만드는 방법을 보여 줍니다. 프로젝트를 추가, 삭제 또는 이름이 같은 프로젝트 수준 이벤트에 응답 하는 프로젝트 확장을 사용할 수 있습니다. 사용자 지정 속성을 추가 하거나 속성 값이 변경 될 때 응답할 수 있습니다. 프로젝트 항목 확장과 달리 project 확장 특정 SharePoint 프로젝트 형식에 연결할 수 없습니다. 확장에서 모든 종류의 SharePoint 프로젝트를 열면 프로젝트 확장을 만드는 경우 로드 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
   
 -   디버깅 및 프로젝트 속성을 테스트 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
 -   지원 되는 버전 [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)], SharePoint 및 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -86,7 +85,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  에 **이름** 상자에 입력 **ProjectExtension**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **ProjectExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **ProjectExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -131,7 +130,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  **솔루션 탐색기**를 source.extension.vsixmanifest 파일에 대 한 바로 가기 메뉴를 열고 다음을 선택는 **열고** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]매니페스트 디자이너에서 파일을 엽니다. 에 표시 되는 정보는 **메타 데이터** 탭도 표시는 **확장명 및 업데이트**합니다. 모든 VSIX 패키지 extension.vsixmanifest 파일을 필요합니다. 이 파일에 대 한 자세한 내용은 참조 [VSIX 확장 스키마 1.0 참조](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 매니페스트 디자이너에서 파일을 엽니다. 에 표시 되는 정보는 **메타 데이터** 탭도 표시는 **확장명 및 업데이트**합니다. 모든 VSIX 패키지 extension.vsixmanifest 파일을 필요합니다. 이 파일에 대 한 자세한 내용은 참조 [VSIX 확장 스키마 1.0 참조](http://msdn.microsoft.com/en-us/76e410ec-b1fb-4652-ac98-4a4c52e09a2b)합니다.  
   
 2.  에 **제품 이름** 상자에 입력 **사용자 지정 프로젝트 속성**합니다.  
   
@@ -175,7 +174,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  프로젝트의 디버그 빌드를 선택 하거나 시작는 **F5** 키 또는 메뉴 모음 선택에서 **디버그**, **디버깅 시작**합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]프로젝트 Property\1.0 %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom에 확장을 설치 하 고의 실험적 인스턴스가 시작 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 프로젝트 Property\1.0 %UserProfile%\AppData\Local\Microsoft\VisualStudio\11.0Exp\Extensions\Contoso\Custom에 확장을 설치 하 고의 실험적 인스턴스가 시작 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  
   
 3.  실험적 인스턴스에서 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]팜 솔루션에 대 한 SharePoint 프로젝트를 만들고 마법사의 다른 값에 대 한 기본값을 사용 합니다.  
   

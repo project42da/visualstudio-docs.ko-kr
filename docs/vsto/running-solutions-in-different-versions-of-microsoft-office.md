@@ -1,12 +1,10 @@
 ---
-title: "다른 버전의 Microsoft Office에서 솔루션 실행 | Microsoft Docs"
-ms.custom: 
+title: 다른 버전의 Microsoft Office에서 솔루션 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - multiple Office versions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5f39217b456694b7e611e0386cede9fdf3c11baf
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e228f407edd38e173da78c092c0cca7061a661a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="running-solutions-in-different-versions-of-microsoft-office"></a>여러 버전의 Microsoft Office에서 솔루션 실행
     
@@ -48,9 +47,9 @@ ms.lasthandoff: 01/10/2018
   
 |솔루션을 만드는 데 사용되는 Visual Studio 버전|프로젝트 템플릿이 대상으로 하는 Office 버전|솔루션을 실행할 수 있는 Office 버전|최종 사용자 컴퓨터에서 필요한 런타임|최종 사용자 컴퓨터에서 필요한 .NET Framework 버전|  
 |----------------------------------------------------------|--------------------------------------------------------|--------------------------------------------------|-------------------------------------------|----------------------------------------------------------|  
-|Visual Studio 2008 Professional<br /><br /> 또는<br /><br /> Visual Studio Team System 2008|2007 Microsoft Office System|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] <sup>1</sup><br /><br /> 2007 Microsoft Office System|Visual Studio 2010 Tools for Office Runtime<sup>1</sup><br /><br /> 또는<br /><br /> Visual Studio Tools for the Microsoft Office system(버전 3.0 런타임)|.NET Framework 3.5|  
-|VSTO 2005 se는 Visual Studio 2005의 다음 버전 중 하나가<sup>2</sup> 설치:<br /><br /> -Visual Studio 2005 Tools for Office<br />-Visual Studio Team System 2005<br />-Visual Studio 2005 Professional|2007 Microsoft Office System|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (32 비트 전용<sup>3</sup>)<br /><br /> 2007 Microsoft Office System|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0, .NET Framework 3.0 또는 .NET Framework 3.5|  
-|다음 Visual Studio 버전 중 하나:<br /><br /> -Visual Studio 2008 Professional<br />-Visual Studio Team System 2008<br />-Visual Studio 2005 Tools for Office (VSTO 2005 SE 유무<sup>2</sup> 설치)<br />-Visual Studio Team System 2005 (VSTO 2005 SE 유무<sup>2</sup> 설치)<br />-VSTO 2005 se visual Studio 2005 Professional<sup>2</sup> 설치|Microsoft Office 2003|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)]및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (32 비트 전용<sup>3</sup>)<br /><br /> 2007 Microsoft Office System<br /><br /> Microsoft Office 2003|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0, .NET Framework 3.0 또는 .NET Framework 3.5|  
+|Visual Studio 2008 Professional<br /><br /> 또는<br /><br /> Visual Studio Team System 2008|2007 Microsoft Office System|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] <sup>1</sup><br /><br /> 2007 Microsoft Office System|Visual Studio 2010 Tools for Office Runtime<sup>1</sup><br /><br /> 또는<br /><br /> Visual Studio Tools for the Microsoft Office system(버전 3.0 런타임)|.NET Framework 3.5|  
+|VSTO 2005 se는 Visual Studio 2005의 다음 버전 중 하나가<sup>2</sup> 설치:<br /><br /> -Visual Studio 2005 Tools for Office<br />-Visual Studio Team System 2005<br />-Visual Studio 2005 Professional|2007 Microsoft Office System|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (32 비트 전용<sup>3</sup>)<br /><br /> 2007 Microsoft Office System|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0, .NET Framework 3.0 또는 .NET Framework 3.5|  
+|다음 Visual Studio 버전 중 하나:<br /><br /> -Visual Studio 2008 Professional<br />-Visual Studio Team System 2008<br />-Visual Studio 2005 Tools for Office (VSTO 2005 SE 유무<sup>2</sup> 설치)<br />-Visual Studio Team System 2005 (VSTO 2005 SE 유무<sup>2</sup> 설치)<br />-VSTO 2005 se visual Studio 2005 Professional<sup>2</sup> 설치|Microsoft Office 2003|[!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] (32 비트 전용<sup>3</sup>)<br /><br /> 2007 Microsoft Office System<br /><br /> Microsoft Office 2003|Visual Studio 2005 Tools for Office Second Edition Runtime|.NET Framework 2.0, .NET Framework 3.0 또는 .NET Framework 3.5|  
   
  1. [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] 응용 프로그램에는 Visual Studio 2010 Tools for Office Runtime이 포함되어 있습니다. 따라서 이 시나리오에서 이러한 응용 프로그램은 항상 Visual Studio Tools for the Microsoft Office system(버전 3.0 런타임) 대신 Visual Studio 2010 Tools for Office Runtime을 사용합니다. 2007 Microsoft Office system의 응용 프로그램은 Visual Studio 2010 Tools for Office Runtime 또는 Visual Studio Tools for the Microsoft Office system(버전 3.0 런타임)을 사용할 수 있습니다.  
   

@@ -1,12 +1,10 @@
 ---
-title: "비즈니스 데이터 연결 모델 디자인 | Microsoft Docs"
-ms.custom: 
+title: 비즈니스 데이터 연결 모델 디자인 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], designing a model
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fe3de196219091478a30ff07d6c2f5916d423f15
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 6f34a754562674aacf989c294ff2662ca4f8f28f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="designing-a-business-data-connectivity-model"></a>비즈니스 데이터 연결 모델 디자인
   모델 파일에 엔터티 및 메서드를 추가 하 여 BDC 비즈니스 데이터 연결 () 서비스에 대 한 모델을 개발할 수 있습니다. 엔터티는 데이터 필드의 컬렉션을 설명 합니다. 예를 들어 엔터티는 데이터베이스의 테이블을 나타낼 수 있습니다. 메서드 추가, 삭제 또는 엔터티를 나타내는 데이터를 업데이트 하는 등의 작업을 수행 합니다. 자세한 내용은 참조 [를 SharePoint에 비즈니스 데이터 통합](../sharepoint/integrating-business-data-into-sharepoint.md)합니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio를 사용 하면 모델에 대 한 매개 변수 간의 형식 설명자를 복사할 수 있습니다. 예를 들어 명명 된 형식 설명자를 정의할 수 있습니다 `CustomerTD` 의 반환 매개 변수는 `GetCustomer` 메서드. 복사할 수 있습니다는 `CustomerTD` 형식 설명자에는 **BDC 탐색기**, 복사한 후 해당 형식 설명자의 입력 매개 변수는 `CreateCustomer` 메서드. 이렇게 하면 동일한 형식 설명자를 두 번 이상 정의할 필요가 없습니다.  
   
-##  <a name="MethodInstances"></a>메서드 인스턴스  
+##  <a name="MethodInstances"></a> 메서드 인스턴스  
  메서드를 만들 때 Visual Studio 기본 메서드 인스턴스를 추가 합니다. 메서드 인스턴스는 메서드, 및 매개 변수에 대해 기본 값에 대 한 참조입니다. 단일 메서드는 여러 메서드 인스턴스가 있을 수 있습니다. 각 인스턴스 메서드 시그니처 조합과 기본값 집합이 됩니다. 자세한 내용은 참조 [하는 방법: 매개 변수의 형식 설명자 정의](../sharepoint/how-to-define-the-type-descriptor-of-a-parameter.md)합니다.  
   
  프로젝트를 실행 하면 메서드 인스턴스는 SharePoint 목록 위의 드롭다운 목록에 나타납니다. 사용자는 메서드 인스턴스를 선택하여 데이터를 볼 수 있습니다.  

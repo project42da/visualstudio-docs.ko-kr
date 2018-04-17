@@ -1,5 +1,5 @@
 ---
-title: "ParallelForEach&lt;T&gt; 활동 디자이너 | Microsoft Docs"
+title: ParallelForEach&lt;T&gt; 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: e93a4843-aef2-4d3e-9a0a-a2d3d1411aa7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4d8a46b2535c976bbfe490f85fc5cc5fd6082bc7
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 62d86499296c72f48d1ffcad932e9f1ff4d2fef1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parallelforeachlttgt-activity-designer"></a>ParallelForEach&lt;T&gt; 활동 디자이너
 <xref:System.Activities.Statements.ParallelForEach%601> 활동은 컬렉션의 요소를 열거하고 컬렉션의 각 요소에 대해 포함 문을 병렬로 실행합니다. 각 요소는 동일 스레드에서 비동기적입니다. <xref:System.Activities.Statements.Sequence> 활동의 자식 활동이 유휴 상태가 되는 경우 이 활동 대신 이 흐름 제어 활동을 사용합니다.
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/12/2018
 
  루프 반복기는 기본적으로 이름이 지정된 항목입니다. 반복기 변수의 이름을 변경할 수 있습니다는 **ForEach** 상자에 **ParallelForEach\<T >** 활동 디자이너입니다. 루프 반복기는 <xref:System.Activities.Statements.ParallelForEach%601> 활동의 자식에 포함된 식에서 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [시퀀스](../workflow-designer/sequence-activity-designer.md)
 - [병렬](../workflow-designer/parallel-activity-designer.md)

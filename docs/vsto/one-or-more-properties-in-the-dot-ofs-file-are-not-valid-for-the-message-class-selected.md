@@ -1,13 +1,10 @@
 ---
-title: ".Ofs 파일에 하나 이상의 속성이 선택한 메시지 클래스에 유효 하지 않습니다. | Microsoft Docs"
-ms.custom: 
+title: .Ofs 파일에 하나 이상의 속성이 선택한 메시지 클래스에 유효 하지 않습니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTO.NewFormRegionWizard.OFSPropertyError
 dev_langs:
@@ -15,14 +12,14 @@ dev_langs:
 - CSharp
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6ab0b36921911ac8c70501096868f47a40371f79
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 7ac9f5ab05ba6ed858946b5f665d850eea51c230
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="one-or-more-properties-in-the-ofs-file-are-not-valid-for-the-message-class-selected"></a>.ofs 파일에 있는 하나 이상의 속성을 선택한 메시지 클래스에 사용할 수 없습니다.
   이 오류는 Outlook에서 디자인되는 양식 영역을 가져올 때 나타나지만 양식 영역의 하나 이상의 필드가 **새 양식 영역** 마법사의 마지막 페이지에서 선택하는 메시지 클래스와 호환되지 않습니다.  

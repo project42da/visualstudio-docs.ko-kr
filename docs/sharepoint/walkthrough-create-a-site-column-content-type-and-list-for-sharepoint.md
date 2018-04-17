@@ -1,12 +1,10 @@
 ---
-title: "연습: 사이트 열, 콘텐츠 형식 및 SharePoint에 대 한 목록 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 사이트 열, 콘텐츠 형식 및 SharePoint에 대 한 목록 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.ListDesigner.GeneralMessageHelp
 - Microsoft.VisualStudio.SharePoint.Designers.ListDesigner.ViewModels.ListViewModel.SortingAndGrouping
@@ -23,13 +21,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, content types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4db9ed078131e7152f3987c80f4e6181f888e540
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a6fc193ba73c040042e7d19d5b86f0acf61e69ac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-a-site-column-content-type-and-list-for-sharepoint"></a>연습: SharePoint용 사이트 열, 콘텐츠 형식 및 목록 만들기
   다음 절차에는 사용자 지정 SharePoint 사이트 열을 만드는 방법을 보여 줍니다-또는 *필드*-사이트 열을 사용 하는 콘텐츠 형식 뿐만 아니라 합니다. 또한 새 콘텐츠 형식을 사용 하는 목록을 만드는 방법을 보여 줍니다.  
@@ -48,14 +47,14 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   Windows 및 SharePoint 버전의 지원. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
   
 -   Visual Studio.  
   
-##  <a name="BKMK_CreatingCustSiteCols"></a>사용자 지정 사이트 열 만들기  
+##  <a name="BKMK_CreatingCustSiteCols"></a> 사용자 지정 사이트 열 만들기  
  이 예제에는 환자 병원에 관리에 대 한 목록을 만듭니다. 먼저 SharePoint 프로젝트에 만들어야 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 사이트 열, 다음과 같이 추가 하 고 있습니다.  
   
 #### <a name="to-create-the-project"></a>프로젝트를 만들려면  
@@ -97,7 +96,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  동일한 절차를 사용 하 여 두 개 이상의 사이트 열 프로젝트에 추가: **환자 ID** (유형 = "정수") 및 **의사 이름이** (유형 = "Text"). 그룹 값이 설정 **Clinic 사이트 열**합니다.  
   
-##  <a name="BKMK_CreateCustContType"></a>사용자 지정 콘텐츠 형식 만들기  
+##  <a name="BKMK_CreateCustContType"></a> 사용자 지정 콘텐츠 형식 만들기  
  다음으로, 콘텐츠 형식 만들기-연락처 콘텐츠 형식에 따라-이전 절차에서 만든 사이트 열을 포함 하는 합니다. 기존 콘텐츠 형식, 콘텐츠 형식을 기반으로 기본 콘텐츠 형식에서 새 콘텐츠 형식 사용 하기 위해 여러 사이트 열을 제공 하기 때문에 시간을 절약할 수 있습니다.  
   
 #### <a name="to-create-a-custom-content-type"></a>사용자 지정 콘텐츠 형식을 만들려면  
@@ -131,7 +130,7 @@ ms.lasthandoff: 01/10/2018
   
 11. 메뉴 모음에서 **파일**, **모두 저장**, 콘텐츠 형식 디자이너를 닫습니다.  
   
-##  <a name="BKMK_CreateList"></a>목록 만들기  
+##  <a name="BKMK_CreateList"></a> 목록 만들기  
  이제 새 콘텐츠 유형 및 사이트 열을 사용 하는 목록을 만듭니다.  
   
 #### <a name="to-create-a-list"></a>목록을 만들려면  
@@ -205,7 +204,7 @@ ms.lasthandoff: 01/10/2018
   
 15. 에 **열 이름** 목록에서 선택 **환자 이름**, 있는지 확인은 **정렬** 열으로 설정 된 **오름차순**는 를선택합니다 **정상** 단추입니다.  
   
-##  <a name="BKMK_TestApp"></a>응용 프로그램 테스트  
+##  <a name="BKMK_TestApp"></a> 응용 프로그램 테스트  
  사용자 지정 사이트 열, 콘텐츠 형식 및 목록 준비 되 면 했으므로를 SharePoint에 배포 하 고 테스트를 위해 응용 프로그램을 실행 합니다.  
   
 #### <a name="to-test-the-application"></a>응용 프로그램을 테스트하려면  

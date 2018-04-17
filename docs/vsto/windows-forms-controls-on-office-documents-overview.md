@@ -1,13 +1,10 @@
 ---
-title: "Windows Forms 컨트롤 Office 문서 개요 | Microsoft Docs"
-ms.custom: 
+title: Windows Forms 컨트롤 Office 문서 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -30,14 +27,14 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], Windows Forms
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 898d0325b352f3ea8982dc68cf5a99a07181a31c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 2693c31d06edc621f355749f76caf04e44fb28e1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-forms-controls-on-office-documents-overview"></a>Office 문서의 Windows Forms 컨트롤 개요
   Windows Forms 컨트롤은 사용자가 데이터를 입력하거나 조작하는 데 사용할 수 있는 개체입니다. Microsoft Office Excel 및 Microsoft Office Word의 문서 수준 프로젝트에서 디자인 타임에 프로젝트의 문서나 통합 문서에 Windows Forms 컨트롤을 추가하거나 런타임에 프로그래밍 방식으로 이러한 컨트롤을 추가할 수 있습니다. Excel 또는 Word용 VSTO 추가 기능에서 런타임에 열려 있는 문서나 워크시트에 프로그래밍 방식으로 이러한 컨트롤을 추가할 수 있습니다.  
@@ -153,7 +150,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
  [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [작업 창 개요](../vsto/actions-pane-overview.md)   
  [Windows Forms 컨트롤](/dotnet/framework/winforms/controls/index)   
  [Office 문서의 Windows Forms 컨트롤의 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)   

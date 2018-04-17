@@ -1,12 +1,10 @@
 ---
-title: "Excel 개체 모델 개요 | Microsoft Docs"
-ms.custom: 
+title: Excel 개체 모델 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - Office object models
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bbf76579baeebfabf3ec796498c20b32feed4cac
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 6b700d3834cf432ff9af2ec17e1daa3011763cac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="excel-object-model-overview"></a>Excel Object Model Overview
   Microsoft Office Excel을 사용하는 솔루션을 개발하려면 Excel 개체 모델에서 제공하는 개체와 상호 작용할 수 있습니다. 이 항목에서는 가장 중요한 개체를 소개합니다.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
   
  이 항목에서는 Excel 개체 모델에 대한 간략한 개요를 제공합니다. 전체 Excel 개체 모델에 대해 자세히 알아볼 수 있는 리소스에 대 한 참조 [Excel 개체 모델 설명서 사용](#ExcelOMDocumentation)합니다.  
   
- ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 사용 하 여 이벤트 처리기는 Excel 2007 추가 기능에서?](http://go.microsoft.com/fwlink/?LinkID=130291), 및 [어떻게 수행 할까요?: 도형을 사용 하 여 거품을 만들려면 Excel 차트? ](http://go.microsoft.com/fwlink/?LinkID=130313).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 사용 하 여 이벤트 처리기는 Excel 2007 추가 기능에서?](http://go.microsoft.com/fwlink/?LinkID=130291), 및 [어떻게 수행 할까요?: 도형을 사용 하 여 거품형 차트 만들기 excel? ](http://go.microsoft.com/fwlink/?LinkID=130313).  
   
 ## <a name="accessing-objects-in-an-excel-project"></a>Excel 프로젝트의 개체 액세스  
  Excel에 대한 새 VSTO 추가 기능 프로젝트를 만들면 Visual Studio에서 자동으로 ThisAddIn.vb 또는 ThisAddIn.cs 코드 파일을 만듭니다. `Me.Application` 또는 `this.Application`을 사용하여 응용 프로그램 개체에 액세스할 수 있습니다.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/10/2018
 |Sheet2.vb|Sheet2.cs|  
 |Sheet3.vb|Sheet3.cs|  
   
- 프로젝트에서 `Globals` 클래스를 사용하여 해당 클래스 외부에서 `ThisWorkbook`, `Sheet1`, `Sheet2` 또는 `Sheet3`에 액세스할 수 있습니다. 자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다. 다음 예제에서는 <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> 방식의 `Sheet1` 코드 중 하나에 배치 되는지 여부에 관계 없이 `Sheet`  *n*  클래스 또는 `ThisWorkbook` 클래스입니다.  
+ 프로젝트에서 `Globals` 클래스를 사용하여 해당 클래스 외부에서 `ThisWorkbook`, `Sheet1`, `Sheet2` 또는 `Sheet3`에 액세스할 수 있습니다. 자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다. 다음 예제에서는 <xref:Microsoft.Office.Interop.Excel._Worksheet.PrintPreview%2A> 방식의 `Sheet1` 코드 중 하나에 배치 되는지 여부에 관계 없이 `Sheet` *n* 클래스 또는 `ThisWorkbook` 클래스입니다.  
   
  [!code-csharp[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#82)]
  [!code-vb[Trin_VstcoreExcelAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#82)]  
@@ -102,7 +101,7 @@ ms.lasthandoff: 01/10/2018
   
  Visual Studio는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 및 <xref:Microsoft.Office.Tools.Excel.XmlMappedRange> 형식을 제공하여 <xref:Microsoft.Office.Interop.Excel.Range> 개체를 확장합니다. 이러한 형식은 <xref:Microsoft.Office.Interop.Excel.Range> 개체와 동일한 기능을 사용할 뿐만 아니라 데이터 바인딩 기능과 같은 새로운 기능 및 새로운 이벤트로 제공합니다. 자세한 내용은 참조 [NamedRange 컨트롤](../vsto/namedrange-control.md) 및 [XmlMappedRange 컨트롤](../vsto/xmlmappedrange-control.md)합니다.  
   
-##  <a name="ExcelOMDocumentation"></a>Excel 개체 모델 설명서 사용  
+##  <a name="ExcelOMDocumentation"></a> Excel 개체 모델 설명서 사용  
  Excel 개체 모델에 대한 자세한 내용은 Excel PIA(주 interop 어셈블리) 참조 및 VBA 개체 모델 참조를 참조할 수 있습니다.  
   
 ### <a name="primary-interop-assembly-reference"></a>주 interop 어셈블리 참조  

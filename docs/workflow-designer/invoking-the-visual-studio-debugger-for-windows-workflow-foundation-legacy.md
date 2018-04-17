@@ -1,5 +1,5 @@
 ---
-title: "Visual Studio Debugger for Windows Workflow Foundation (레거시)를 호출 합니다. | Microsoft Docs"
+title: Visual Studio Debugger for Windows Workflow Foundation (레거시)를 호출 합니다. | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -16,14 +16,14 @@ helpviewer_keywords:
 ms.assetid: d6f58e35-5cce-4ff2-9afc-b2d9d0f819cf
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3d1b00cc3f838de8d70310e56f6cdb3476cf742
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 6e3563b175359e00a051138451292eb015958480
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Visual Studio Debugger for Windows Workflow Foundation 호출(레거시)
 이 항목에서는 설명 방법을 사용 하 여는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디버거를 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 레거시 Windows 워크플로 디자이너에서 응용 프로그램입니다. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/12/2018
 
  호스트 응용 프로그램이 시작 프로젝트로 설정되는 경우 Visual Studio 디버거만 디버깅을 위해 호출됩니다. [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation은 호출되지 않습니다. Visual Studio 디버거가 사용되는 경우 C# 또는 Visual Basic 코드 중단점만 적중됩니다. Workflow Designer에 설정된 중단점은 적중되지 않습니다. 예를 들어 디자이너에서 <xref:System.Workflow.Activities.ParallelActivity> 활동에 대해 설정한 중단점은 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation이 사용되는 경우에 적중되지만 Visual Studio 디버거 사용 시에는 적중되지 않습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [방법: 워크플로에 중단점 설정(레거시)](../workflow-designer/how-to-set-breakpoints-in-workflows-legacy.md)
 - [레거시 워크플로 디버깅](../workflow-designer/debugging-legacy-workflows.md)

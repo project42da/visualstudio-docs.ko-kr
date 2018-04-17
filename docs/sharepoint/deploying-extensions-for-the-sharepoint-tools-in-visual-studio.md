@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio에서 SharePoint 도구에 대 한 확장 배포 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 SharePoint 도구에 대 한 확장 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying extensions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 80cc884e45d9db10f6552fa44e611e87b7b4f801
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 7c49e12b7357cc8f3aa6ce9f7cbdcd02294cc253
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-extensions-for-the-sharepoint-tools-in-visual-studio"></a>Visual Studio에서 SharePoint 도구에 대한 확장명 배포
   SharePoint 도구 확장을 배포 하려면 만들기를 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 확장 프로그램 어셈블리 및 다른 모든 파일 확장명으로 배포 하려면에 포함 된 (VSIX) 확장 패키지입니다. VSIX 패키지는 압축된 된 파일을 열고 패키징 규칙 (OPC) 표준을 따릅니다. VSIX 패키지는.vsix 확장을 포함합니다.  
@@ -132,7 +129,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  **솔루션 탐색기**, 프로젝트 템플릿 또는 항목 템플릿을 프로젝트에 대 한 바로 가기 메뉴를 열고 선택한 후 **프로젝트 언로드**합니다.  
   
-7.  프로젝트 노드에 대 한 바로 가기 메뉴를 다시 연 다음 선택 **편집***YourTemplateProjectName***.csproj** 또는 **편집**  *YourTemplateProjectName***.vbproj**합니다.  
+7.  프로젝트 노드에 대 한 바로 가기 메뉴를 다시 연 다음 선택 **편집***YourTemplateProjectName***.csproj** 또는 **편집***YourTemplateProjectName***합니다. vbproj**합니다.  
   
 8.  다음 찾기 `VSTemplate` 프로젝트 파일의 요소입니다.  
   
@@ -239,7 +236,7 @@ ms.lasthandoff: 01/10/2018
   
     -   확장 프로그램 프로젝트 템플릿 또는 항목 템플릿에 대 한 사용자 지정 마법사가 포함 된 경우 추가 `Assembly` 요소 아래에서 `Assets` 요소입니다. VSIX 패키지에 어셈블리의 상대 경로를 새 요소의 값을 설정한 다음 설정의 `AssemblyName` 특성을 전체 어셈블리 이름 (버전, culture 및 공개 키 토큰 포함). 자세한 내용은 참조 [Dependency 요소 (VSX 스키마)](http://msdn.microsoft.com/en-us/1f63f60a-98ad-48ec-8e44-4eba383d3e37)합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 SharePoint 도구 확장에 대 한 extension.vsixmanifest 파일의 내용을 보여 줍니다. 확장은 Contoso.ProjectExtension.dll 라는 어셈블리에서 구현 됩니다. 확장 Contoso.ExtensionCommands.dll 및 명명 된 폴더에서 항목 템플릿을 라고 하는 SharePoint 명령 어셈블리가 포함 **Itemtemplate** VSIX 패키지에 있습니다. 이 예에서는 extension.vsixmanifest 파일 VSIX 패키지에서와 같은 폴더에는 두 어셈블리가 모두 가정 합니다.  
   
 ```  

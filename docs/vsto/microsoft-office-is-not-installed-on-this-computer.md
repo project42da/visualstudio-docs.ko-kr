@@ -1,13 +1,10 @@
 ---
-title: "이 컴퓨터에 Microsoft Office가 설치 되어 있지 | Microsoft Docs"
-ms.custom: 
+title: 이 컴퓨터에 Microsoft Office가 설치 되어 있지 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.SelectDocWizard.OfficeNotInstalled
 dev_langs:
@@ -15,14 +12,14 @@ dev_langs:
 - CSharp
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 58c3290cd27d498e4dbd00114bf1b2f0f289efec
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 45a15b1680fbc12c9493833e01a6d8e90085faad
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="microsoft-office-is-not-installed-on-this-computer"></a>이 컴퓨터에 Microsoft Office가 설치되어 있지 않습니다.
   Visual Studio에서는 프로젝트 형식에 해당하는 Microsoft Office 응용 프로그램을 찾을 수 없습니다. VSTO 추가 기능 프로젝트를 개발하고 있는 경우 프로젝트를 디버그하거나 실행할 수 없다는 의미입니다. 문서 수준 프로젝트를 만들려고 하는 경우 프로젝트를 만들 수 없다는 의미입니다.  

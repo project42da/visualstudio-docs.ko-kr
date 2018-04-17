@@ -1,5 +1,5 @@
 ---
-title: "CancellationScope 활동 디자이너 | Microsoft Docs"
+title: CancellationScope 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 2c85d663-b219-4142-9866-7693ffd46379
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 406e46ccc3f8d0fd70b185a0e5f02151592e85d4
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 3231d62d5c961e63fa2a72374d5a1adcf50288f0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cancellationscope-activity-designer"></a>CancellationScope 활동 디자이너
 **CancellationScope** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.Activities.Statements.CancellationScope> 활동입니다.
@@ -36,10 +36,10 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.CancellationScope.Body%2A>|True|취소 논리가 제공되는 활동을 지정합니다. 추가 하는 <xref:System.Activities.Statements.CancellationScope.Body%2A> 활동의 활동은 **도구 상자** 에 **본문** 상자에 **CancellationScope** "놓기 힌트 텍스트가 있는 활동 디자이너 "여기에 작업 합니다.|
 |<xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A>|True|취소 시 실행할 활동을 지정합니다. 추가 하는 <xref:System.Activities.Statements.CancellationScope.CancellationHandler%2A> 활동의 활동은 **도구 상자** 에 **CancellationHandler** 상자에 **CancellationScope** 힌트를 사용 하 여 활동 디자이너 텍스트 "여기에 작업 놓기"입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [트랜잭션](../workflow-designer/transaction-activity-designers.md)
 - [CompensableActivity](../workflow-designer/compensableactivity-activity-designer.md)
 - [보정](../workflow-designer/compensate-activity-designer.md)
-- [Confirm](../workflow-designer/confirm-activity-designer.md)
+- [확인](../workflow-designer/confirm-activity-designer.md)
 - [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

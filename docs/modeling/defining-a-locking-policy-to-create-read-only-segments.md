@@ -1,21 +1,19 @@
 ---
-title: "읽기 전용 세그먼트를 만들려면 잠금 정책을 정의 | Microsoft Docs"
-ms.custom: 
+title: 읽기 전용 세그먼트를 만들려면 잠금 정책을 정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: dc7e620c04e31a063bbe8fada68527d391f0a903
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 75fe3205f1b43cb21fa78976ac2547ef3bd2fdfc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="defining-a-locking-policy-to-create-read-only-segments"></a>잠금 정책을 정의하여 읽기 전용 세그먼트 만들기
 불변성 API는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK 프로그램 잠금 일부 또는 전체 도메인 특정 언어 (DSL) 모델을 읽을 있지만 변경 되지 않습니다 수 있도록 허용 합니다. 이 읽기 전용 옵션이 사용할 수, 예를 들어 사용자가 동료 들이 주석 달기 및 DSL 모델 검토를 요청할 수 있지만가 원래 변경할 거부할 수 있도록 합니다.  
@@ -70,7 +68,7 @@ partition.SetLocks(Locks.Delete);
 -   속성 변경은 허용 하지만 추가 및 삭제의 요소와 특정 클래스의 관계를 허용 하지 않습니다. 이로써 사용자에 고정된 폼 속성을 채울 수 있습니다.  
   
 ## <a name="lock-values"></a>잠금 값  
- 잠금은 저장소, 파티션 또는 개별 모델 요소에서 설정할 수 있습니다. 잠금이 0이 `Flags` 열거형:를 사용 하 여 해당 값을 결합할 수 있습니다 ' &#124;'.  
+ 잠금은 저장소, 파티션 또는 개별 모델 요소에서 설정할 수 있습니다. 잠금이 0이 `Flags` 열거형:를 사용 하 여 해당 값을 결합할 수 있습니다 '&#124;'.  
   
 -   ModelElement의 잠금에는 항상 해당 파티션 잠금이 포함합니다.  
   
@@ -103,7 +101,7 @@ partition.SetLocks(Locks.Delete);
 -   이 클래스 DSL의 DocData를 통해 사용할 수 있는 서비스를 추가 합니다.  
   
 ### <a name="to-define-a-locking-policy"></a>잠금 정책을 정의 하려면  
- <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy>다음 정의 있습니다.  
+ <xref:Microsoft.VisualStudio.Modeling.Immutability.ILockingPolicy> 다음 정의 있습니다.  
   
 ```  
 public interface ILockingPolicy  
@@ -116,7 +114,7 @@ public interface ILockingPolicy
   
  이러한 메서드를 호출할 때 호출 됩니다 `SetLocks()` 저장소, 파티션 또는 모델 요소에 있습니다. 각 방법에서는 제안 된 잠금 집합이 함께 제공 됩니다. 제안 된 집합을 반환할 수 있습니다 또는 추가 하 고 잠금을 뺄 수 있습니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 using Microsoft.VisualStudio.Modeling;  
@@ -146,7 +144,7 @@ namespace Company.YourDsl.DslPackage // Change
   
 ```  
   
- 다른 코드를 호출 하는 경우에 사용자가 요소를 삭제할 수 있는지 확인 하려면`SetLocks(Lock.Delete):`  
+ 다른 코드를 호출 하는 경우에 사용자가 요소를 삭제할 수 있는지 확인 하려면 `SetLocks(Lock.Delete):`  
   
  `return proposedLocks & (Locks.All ^ Locks.Delete);`  
   

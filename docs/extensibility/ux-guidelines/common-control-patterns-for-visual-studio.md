@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio의 일반 컨트롤 패턴 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio의 일반 컨트롤 패턴 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 3e893949-6398-42f1-9eab-a8d8c2b7f02d
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ded7ed6dd843a7879100704276766bfcb528b6f7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8383537a7e9d49f79e98da4dd95a3474803315d8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="common-control-patterns-for-visual-studio"></a>Visual Studio의 일반 컨트롤 패턴
-##  <a name="BKMK_CommonControls"></a>공용 컨트롤  
+##  <a name="BKMK_CommonControls"></a> 공용 컨트롤  
   
 ### <a name="overview"></a>개요  
 공용 컨트롤 대부분의 Visual Studio의 사용자 인터페이스를 구성 합니다. Visual Studio 인터페이스에 사용 되는 가장 일반적인 컨트롤 따라야는 [Windows 데스크톱 상호 작용 지침](https://msdn.microsoft.com/library/windows/desktop/dn742399.aspx)합니다. 이 항목은 Visual Studio에 국한 되며 이러한 Windows 지침을 확대 하는 정보 또는 특수 한 상황에 설명 합니다.  
@@ -52,10 +50,10 @@ ms.lasthandoff: 12/22/2017
   
 -   **도구 창, 문서 편집기, 디자인 화면 및 테마가 지정 된 대화 상자:** 색 서비스를 사용 하 여 특수 테마 모양을 사용 합니다.  
   
-###  <a name="BKMK_Scrollbars"></a>스크롤 막대  
+###  <a name="BKMK_Scrollbars"></a> 스크롤 막대  
  스크롤 막대 따라야 [Windows에 대 한 일반적인 상호 작용 패턴 스크롤 막대](https://msdn.microsoft.com/en-us/library/windows/desktop/bb787527\(v=vs.85\).aspx) 코드 편집기에서와 같이 콘텐츠 정보를 보강 하는 이러한, 하지 않는 한 합니다.  
   
-###  <a name="BKMK_InputFields"></a>입력된 필드  
+###  <a name="BKMK_InputFields"></a> 입력된 필드  
  일반적인 상호 작용 동작에 따라는 [텍스트 상자에 대 한 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742442\(v=vs.85\).aspx)합니다.  
   
 #### <a name="visual-style"></a>비주얼 스타일  
@@ -78,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
      ![입력된 필드 길이 수정: 입력된 필드는 예상 되는 콘텐츠에 대 한 적절 한 너비입니다. ] (../../extensibility/ux-guidelines/media/0707-02_correctinputfieldcontrol.png "0707 02_CorrectInputFieldControl")<br />입력된 필드 길이 수정: 입력된 필드는 예상 되는 콘텐츠에 대 한 적절 한 너비입니다.
   
-###  <a name="BKMK_ComboBoxesAndDropDowns"></a>콤보 상자 및 드롭다운 목록  
+###  <a name="BKMK_ComboBoxesAndDropDowns"></a> 콤보 상자 및 드롭다운 목록  
 일반적인 상호 작용 동작에 따라는 [드롭 다운 목록 및 콤보 상자에 대 한 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742404\(v=vs.85\).aspx)합니다.  
   
 #### <a name="visual-style"></a>비주얼 스타일  
@@ -94,7 +92,7 @@ ms.lasthandoff: 12/22/2017
   
 ![올바른: 드롭 다운 번역 증가 대 한 허용 하 긴 하지 불필요 하 게 조정 됩니다. ] (../../extensibility/ux-guidelines/media/0707-04_correctdropdownlayout.png "0707 04_CorrectDropDownLayout")<br />올바른: 드롭 다운 번역 증가 대 한 허용 하 긴 하지 불필요 하 게 조정 됩니다. 
   
-###  <a name="BKMK_CheckBoxes"></a>확인란  
+###  <a name="BKMK_CheckBoxes"></a> 확인란  
 일반적인 상호 작용 동작에 따라는 [확인란에 대 한 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742401\(v=vs.85\).aspx)합니다.  
   
 #### <a name="visual-style"></a>비주얼 스타일  
@@ -113,7 +111,7 @@ ms.lasthandoff: 12/22/2017
   
      ![올바른: 확인란 텍스트의 첫 번째 줄으로 정렬 됩니다. ] (../../extensibility/ux-guidelines/media/0707-06_correctcheckboxalign.png "0707 06_CorrectCheckBoxAlign")<br />올바른: 확인란 텍스트의 첫 번째 줄으로 정렬 됩니다.
   
-###  <a name="BKMK_RadioButtons"></a>라디오 단추  
+###  <a name="BKMK_RadioButtons"></a> 라디오 단추  
 일반적인 상호 작용 동작에 따라는 [라디오 단추에 대 한 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742436\(v=vs.85\).aspx)합니다.  
   
 #### <a name="visual-style"></a>비주얼 스타일  
@@ -122,7 +120,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="specialized-interactions"></a>특수 한 상호 작용  
 긴밀 하 게 레이아웃에 그룹 구분을 유지 하기 위해 필요한 경우가 아니면 그룹 프레임을 묶는 라디오 선택 옵션을 사용 하려면 필요는 없습니다.  
   
-###  <a name="BKMK_GroupFrames"></a>그룹 프레임  
+###  <a name="BKMK_GroupFrames"></a> 그룹 프레임  
 일반적인 상호 작용 동작에 따라는 [그룹 프레임에 대 한 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742405\(v=vs.85\).aspx)합니다.  
   
 #### <a name="visual-style"></a>비주얼 스타일  
@@ -136,7 +134,7 @@ ms.lasthandoff: 12/22/2017
   
 -   경우에 따라 그룹 프레임 컨테이너 대신 가로 규칙을 사용 하는 것이 좋습니다.  
   
-##  <a name="BKMK_TextControls"></a>텍스트 컨트롤
+##  <a name="BKMK_TextControls"></a> 텍스트 컨트롤
 
 ### <a name="static-text-fields"></a>정적 텍스트 필드
 
@@ -217,7 +215,7 @@ ms.lasthandoff: 12/22/2017
 
 사용자가 정보를 복사 하는 기능을 사용 하도록 하려는 경우 동적 텍스트 읽기 전용 텍스트 필드에 있어야 합니다.
   
-##  <a name="BKMK_ButtonsAndHyperlinks"></a>단추, 하이퍼링크  
+##  <a name="BKMK_ButtonsAndHyperlinks"></a> 단추, 하이퍼링크  
   
 ### <a name="overview"></a>개요  
 단추 및 링크 컨트롤 (하이퍼링크) 따라야 [하이퍼링크에 대 한 기본 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742406\(v=vs.85\).aspx) 사용의 경우 용어를 조정 하 고 간격입니다.  
@@ -331,11 +329,11 @@ Visual Studio에서 대부분의 단추 유틸리티 대화 상자에 나타나�
   
 -   가리키기 밑줄 표시 해서는 안 됩니다. 대신, 링크가 활성화 되어 사용자에 게 피드백은 약간의 색 변경 하 고 적절 한 링크 커서입니다.  
   
-##  <a name="BKMK_TreeViews"></a>트리 뷰  
+##  <a name="BKMK_TreeViews"></a> 트리 뷰  
   
 트리 뷰에서 제공 부모-자식 그룹으로 복잡 한 구성 하는 방법을 나열 합니다. 사용자가 확장 하거나 기본 자식 항목을 표시 하거나 숨기려면 부모 그룹을 축소 합니다. 추가 작업을 제공 하는 트리 뷰 내에서 각 항목을 선택할 수 있습니다.  
   
-###  <a name="BKMK_TreeViewVisualStyle"></a>트리 뷰 비주얼 스타일  
+###  <a name="BKMK_TreeViewVisualStyle"></a> 트리 뷰 비주얼 스타일  
   
 #### <a name="expanders"></a>확장기  
 트리 뷰 컨트롤은 Windows 및 Visual Studio에서 사용 하는 확장 디자인을 따라야 합니다. 각 노드는 expander 컨트롤을 사용 하 여 기본 항목을 표시 하거나 숨깁니다. Expander 컨트롤을 사용 하 여 다른 트리 뷰 창 및 Visual Studio 내에서 발생할 수 있는 사용자에 대 한 일관성을 제공 합니다.  
@@ -359,7 +357,7 @@ Visual Studio에서 대부분의 단추 유틸리티 대화 상자에 나타나�
   
 ![트리 뷰 컨트롤의 한계를 초과 하 게 내용이 되므로 두 세로 및 가로 스크롤 막대가 표시 됩니다. ] (../../extensibility/ux-guidelines/media/070705-4_scrollbars.png "070705 4_Scrollbars")<br />트리 뷰 컨트롤의 한계를 초과 하 게 내용이 되므로 두 세로 및 가로 스크롤 막대가 표시 됩니다.
   
-###  <a name="BKMK_TreeViewInteractions"></a>트리 뷰 상호 작용  
+###  <a name="BKMK_TreeViewInteractions"></a> 트리 뷰 상호 작용  
   
 #### <a name="context-menus"></a>상황에 맞는 메뉴  
 트리 뷰 노드 상황에 맞는 메뉴에서 하위 메뉴 옵션을 표시할 수 있습니다. 일반적으로이 사용자가 항목을 마우스 오른쪽 단추로 클릭 하거나 선택한 항목으로 Windows 키보드에서 메뉴 키를 누를 때 발생 합니다. 노드 포커스 및 선택 유용 합니다. 이렇게 하면 사용자에 속한 하위 메뉴 항목을 식별할 수 있습니다.  

@@ -1,12 +1,10 @@
 ---
-title: "&lt;entryPointsCollection&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: '&lt;entryPointsCollection&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - entryPointsCollection element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 478731cde6c1ac08ca0d197f918e2fee4a8673ee
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 357e2b4d7aedb82b63676055f1ad1215171a25cf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltentrypointscollectiongt-element-office-development-in-visual-studio"></a>&lt;entryPointsCollection&gt; 요소 (Visual Studio에서 Office 개발)
   `entryPointsCollection` 네임스페이스의 `vstav3` 요소에는 Office 솔루션과 관련된 모든 `entryPoints` 요소가 포함됩니다.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/10/2018
  `entryPointsCollection` 에는 다음 요소가 있습니다.  
   
 ### <a name="entrypoints"></a>entryPoints  
- 필수. 역할은 `entryPoints` 요소에는 `vstav3` 네임 스페이스에 정의 된 [&#60; 진입점 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
+ 필수. 역할은 `entryPoints` 요소에는 `vstav3` 네임 스페이스에 정의 된 [ &#60;t r y p&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)합니다.  
   
 ## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
   

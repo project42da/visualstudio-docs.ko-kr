@@ -1,12 +1,10 @@
 ---
-title: "방법: SharePoint 프로젝트 항목 형식 정의 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 프로젝트 항목 형식 정의 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 24ead19b6e79b2f6003847483877cdcaf3440890
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4a0470e84b6c85fdb0786cdee27a2d208a594c0d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-define-a-sharepoint-project-item-type"></a>방법: SharePoint 프로젝트 항목 형식 정의
   사용자 지정 SharePoint 프로젝트 항목을 만들 때 프로젝트 항목 형식을 정의 합니다. 자세한 내용은 참조 [사용자 지정 SharePoint 프로젝트 항목 형식 정의](../sharepoint/defining-custom-sharepoint-project-item-types.md)합니다.  
@@ -49,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  구현에서는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeProvider.InitializeType%2A> 메서드를 사용 하 여 멤버는 *projectItemTypeDefinition* 매개 변수는 프로젝트 항목 형식의 동작을 정의 합니다. 이 매개 변수는 한 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemTypeDefinition> 개체에 정의 된 이벤트에 대 한 액세스를 제공 하는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> 및 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemFileEvents> 인터페이스입니다. 특정 인스턴스의 프로젝트 항목 형식에 액세스 하려면 처리 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents> 와 같은 이벤트 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemAdded> 및 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemInitialized>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 간단한 프로젝트 항목 형식을 정의 하는 방법을 보여 줍니다. 이 프로젝트 항목 형식에 메시지를 씁니다는 **출력** 창 및 **오류 목록** 창 사용자는 이러한 종류의 프로젝트 항목을 프로젝트에 추가 합니다.  
   
  [!code-vb[SPExtensibility.ProjectSystemExtension.General#2](../sharepoint/codesnippet/VisualBasic/projectsystemexamples/extension/projectitemtype.vb#2)]

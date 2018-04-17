@@ -1,12 +1,10 @@
 ---
-title: "솔루션의에서 데이터 Office 연습 | Microsoft Docs"
-ms.custom: 
+title: 솔루션의에서 데이터 Office 연습 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - walkthroughs [Office development in Visual Studio], data
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: ff2d79e0be978295ab6ad3228f8d576e0bce82cd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0a30280c2e47a5beac99c52eefb61fcbc7fbbdea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-in-office-solutions-walkthroughs"></a>Office 솔루션의 데이터 연습
   다음 연습에서는 Microsoft Office Word 및 Microsoft Office Excel용 문서 수준 사용자 지정 및 VSTO 추가 기능 데이터로 작업하는 방법을 보여 줍니다.  
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/10/2018
  [Office UI 사용자 지정 연습](../vsto/office-ui-customization-walkthroughs.md)   
  [보안 및 배포 연습](../vsto/security-and-deployment-walkthroughs.md)   
  [Office 개발 샘플](../vsto/office-development-samples.md)   
- [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [시작 하기 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   

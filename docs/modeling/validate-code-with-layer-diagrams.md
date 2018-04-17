@@ -1,10 +1,8 @@
 ---
-title: "종속성 다이어그램으로 코드 유효성 검사 | Microsoft Docs"
-ms.custom: 
+title: 종속성 다이어그램으로 코드 유효성 검사 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, validating
 - validation, dependency diagrams
@@ -19,15 +17,15 @@ helpviewer_keywords:
 - MSBuild, validating code
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 484afcd70717162719e9eaf8ace294cb1f71cbcd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cd799e5114c64b075592ddbe35670907fc81fa9c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="validate-code-with-dependency-diagrams"></a>종속성 다이어그램으로 코드 유효성 검사
 
@@ -57,7 +55,7 @@ ms.lasthandoff: 02/09/2018
   
 -   포함 된 솔루션을 모델링 프로젝트 종속성 다이어그램을 포함 합니다. 이 종속성 다이어그램의 유효성을 검사 하려는 C# 또는 Visual Basic 프로젝트의 아티팩트에 연결 되어야 합니다. 참조 [사용자 코드에서 종속성 다이어그램을 만들](../modeling/create-layer-diagrams-from-your-code.md)합니다.  
   
- 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
+ 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [아키텍처 및 모델링 도구에 대한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
   
  Visual Studio에서 열기 종속성 다이어그램에서 수동으로 또는 명령 프롬프트에서 코드를 확인할 수 있습니다. 또한 로컬 빌드 또는 Team Foundation Build를 실행할 때 자동으로 코드 유효성 검사를 실행할 수도 있습니다. 참조 [Channel 9 비디오: 디자인 종속성 다이어그램을 사용 하 여 아키텍처 및 유효성 검사](http://go.microsoft.com/fwlink/?LinkID=252073)합니다.  
   
@@ -92,21 +90,21 @@ ms.lasthandoff: 02/09/2018
 
 * 프로젝트 업데이트를 새로운 종속성 유효성 검사 프로젝트 트리거를 추가 합니다. 
   
-##  <a name="SupportsValidation"></a>항목에서 유효성 검사를 지원 하는지 확인  
+##  <a name="SupportsValidation"></a> 항목에서 유효성 검사를 지원 하는지 확인  
  레이어를 웹 사이트, Office 문서, 일반 텍스트 파일 및 여러 앱에서 공유되는 프로젝트의 파일에 연결할 수는 있지만, 유효성 검사 프로세스에는 레이어가 포함되지 않습니다. 별도의 레이어에 연결된 프로젝트 또는 어셈블리의 경우에는 해당 레이어 간에 종속성이 나타나지 않아도 유효성 검사 오류가 나타나지 않습니다. 이러한 참조는 코드에서 사용하지 않는 한 종속성으로 처리되지 않습니다.  
   
 1.  종속성 다이어그램에서 하나 이상의 레이어를 선택 하 고 선택 항목을 마우스 오른쪽 단추로 클릭 **링크 보기**합니다.  
   
 2.  **레이어 탐색기**, 확인 된 **유효성 검사 지원** 열입니다. 값이 false일 경우 해당 항목은 유효성 검사를 지원하지 않습니다.  
   
-##  <a name="IncludeReferences"></a>다른.NET 어셈블리 및 유효성 검사에 대 한 프로젝트 포함  
+##  <a name="IncludeReferences"></a> 다른.NET 어셈블리 및 유효성 검사에 대 한 프로젝트 포함  
  종속성 다이어그램에 항목을 끌면 해당.NET 어셈블리나 프로젝트에 대 한 참조가 자동으로 추가 되는 **레이어 참조** 모델링 프로젝트의 폴더에에서 있습니다. 이 폴더에는 유효성 검사 중 분석되는 프로젝트와 어셈블리에 대한 참조가 포함되어 있습니다. 다른.NET 어셈블리와 프로젝트 유효성 검사를 위한 수동으로 종속성 다이어그램으로 끌어 놓지 않고도 포함할 수 있습니다.  
   
 1.  **솔루션 탐색기**, 모델링 프로젝트를 마우스 오른쪽 단추로 클릭 또는 **레이어 참조** 폴더를 마우스 클릭 한 다음 **참조 추가**합니다.  
   
 2.  에 **참조 추가** 대화 상자에서 어셈블리 또는 프로젝트를 선택한 다음 **확인**합니다.  
   
-##  <a name="ValidateManually"></a>수동으로 코드 유효성 검사  
+##  <a name="ValidateManually"></a> 수동으로 코드 유효성 검사  
  솔루션 항목에 연결 하는 개방형 종속성 다이어그램이 있는 경우 실행할 수 있습니다는 **유효성 검사** 다이어그램에서 바로 가기 명령입니다. 실행 하려면 명령 프롬프트를 사용할 수도 있습니다는 **msbuild** 명령에 **/p:ValidateArchitecture** 로 설정 하는 사용자 지정 속성 **True**합니다. 예를 들어, 코드를 변경할 때 종속성 충돌을 빠르게 찾을 수 있도록 레이어 유효성 검사를 정기적으로 수행합니다.  
   
 #### <a name="to-validate-code-from-an-open-dependency-diagram"></a>열린 종속성 다이어그램에서 코드 유효성을 검사 하려면   
@@ -121,7 +119,7 @@ ms.lasthandoff: 02/09/2018
 2.  각 오류의 소스를 보려면 오류를 두 번 클릭 하 고 **오류 목록** 창.  
   
     > [!NOTE]
-    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 오류 소스 대신 코드 맵에 표시 될 수 있습니다. 이 코드에서는 종속성 다이어그램에서 지정 되지 않은 어셈블리에 대 한 종속 또는 코드 종속성 다이어그램으로 지정 된 종속성이 없는 경우 발생 합니다. 이 경우 코드 맵이나 코드를 검토하여 종속성이 있어야 하는지 여부를 확인합니다. 코드 맵에 대 한 자세한 내용은 참조 [솔루션 전체의 종속성 매핑](../modeling/map-dependencies-across-your-solutions.md)합니다.  
+    >  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 오류 소스 대신 코드 맵이 표시될 수도 있습니다. 이 코드에서는 종속성 다이어그램에서 지정 되지 않은 어셈블리에 대 한 종속 또는 코드 종속성 다이어그램으로 지정 된 종속성이 없는 경우 발생 합니다. 이 경우 코드 맵이나 코드를 검토하여 종속성이 있어야 하는지 여부를 확인합니다. 코드 맵에 대 한 자세한 내용은 참조 [솔루션 전체의 종속성 매핑](../modeling/map-dependencies-across-your-solutions.md)합니다.  
   
 3.  오류를 관리 하려면 참조 [유효성 검사 오류 관리](#ManageErrors)합니다.  
   
@@ -163,7 +161,7 @@ ms.lasthandoff: 02/09/2018
   
  유효성 검사 오류에 대 한 자세한 내용은 참조 [레이어 유효성 검사 오류 이해 및 해결](#UnderstandingValidationErrors)합니다.  
   
-###  <a name="ManageErrors"></a>유효성 검사 오류 관리  
+###  <a name="ManageErrors"></a> 유효성 검사 오류 관리  
  개발 과정에서 유효성 검사 중 보고된 충돌 문제 중 일부를 표시하지 않을 수 있습니다. 예를 들어 이미 해결되었거나 특정 시나리오와 관계가 없는 오류를 표시하지 않을 수 있습니다. 오류를 표시하지 않는 경우에는 [!INCLUDE[esprfound](../code-quality/includes/esprfound_md.md)]에 작업 항목을 기록하는 것이 좋습니다.  
   
 > [!WARNING]
@@ -182,7 +180,7 @@ ms.lasthandoff: 02/09/2018
 |복원에 표시 되지 않는 모든 오류는 **오류 목록** 창|아무 곳 이나 마우스 오른쪽 단추로 클릭는 **오류 목록** 창, 가리킨 **유효성 검사 오류 관리**, 클릭 하 고 **표시 안 한 오류**합니다.|  
 |사용자에서 표시 되지 않는 모든 오류는 **오류 목록** 창|아무 곳 이나 마우스 오른쪽 단추로 클릭는 **오류 목록** 창, 가리킨 **유효성 검사 오류 관리**, 클릭 하 고 **숨기기 안 한 오류 표시**합니다.|  
   
-##  <a name="ValidateAuto"></a>코드를 자동으로 유효성 검사  
+##  <a name="ValidateAuto"></a> 코드를 자동으로 유효성 검사  
  로컬 빌드를 실행할 때마다 레이어 유효성 검사를 수행할 수 있습니다. 팀에서 Team Foundation Build를 사용하는 경우, 사용자 지정 MSBuild 작업을 생성하여 지정할 수 있는 제어된 체크 인을 사용하여 유효성 검사를 수행하고 빌드 보고서를 사용하여 유효성 검사 오류를 수집할 수 있습니다. 제어 된 체크 인된 빌드를 만들려면 참조 [제어 된 체크 인된 빌드 프로세스를 사용 하 여 변경 사항을 확인 하려면](http://msdn.microsoft.com/Library/9cfc8b9c-1023-40fd-8ab5-1b1bd9c172ec)합니다.  
   
 #### <a name="to-validate-code-automatically-during-a-local-build"></a>로컬 빌드 중 자동으로 코드의 유효성을 검사하려면  
@@ -229,14 +227,14 @@ ms.lasthandoff: 02/09/2018
   
 -   [실행 중인 빌드의 진행률 모니터링](http://msdn.microsoft.com/Library/e51e3bad-2d1d-4b7b-bfcc-c43439c6c8ef)  
   
-##  <a name="TroubleshootingValidation"></a>레이어 유효성 검사 문제 해결  
+##  <a name="TroubleshootingValidation"></a> 레이어 유효성 검사 문제 해결  
  다음 표에서는 레이어 유효성 검사 문제와 해결 방법에 대해 설명합니다. 이 문제는 코드와 디자인 간의 충돌로 인해 발생하는 오류와 다릅니다. 이러한 오류에 대 한 자세한 내용은 참조 [레이어 유효성 검사 오류 이해 및 해결](#UnderstandingValidationErrors)합니다.  
   
 |**문제**|**가능한 원인**|**해결**|  
 |---------------|------------------------|--------------------|  
 |유효성 검사 오류가 예상대로 발생하지 않습니다.|유효성 검사 하는 솔루션 탐색기에서 다른 종속성 다이어그램에서 복사한 같은 모델링 프로젝트에 종속성 다이어그램에서 작동 하지 않습니다. 이러한 방식으로 복사 하는 종속성 다이어그램은 원래 종속성 다이어그램과 동일한 참조를 포함 합니다.|모델링 프로젝트에 새 종속성 다이어그램을 추가 합니다.<br /><br /> 소스 종속성 다이어그램에서 새 다이어그램으로 요소를 복사 합니다.|  
   
-##  <a name="UnderstandingValidationErrors"></a>레이어 유효성 검사 오류 이해 및 해결  
+##  <a name="UnderstandingValidationErrors"></a> 레이어 유효성 검사 오류 이해 및 해결  
  종속성 다이어그램에 대해 코드 유효성을 검사할 때 코드가 디자인과 충돌 하면 유효성 검사 오류가 발생 합니다. 예를 들어, 다음과 같은 조건에서 유효성 검사 오류가 발생할 수 있습니다.  
   
 -   잘못된 레이어에 아티팩트가 할당되었습니다. 이 경우 아티팩트를 이동합니다.  

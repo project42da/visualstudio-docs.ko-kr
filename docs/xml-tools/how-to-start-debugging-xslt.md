@@ -1,24 +1,21 @@
 ---
-title: "방법: XSLT 디버깅 시작 | Microsoft Docs"
-ms.custom: 
+title: '방법: XSLT 디버깅 시작 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 88e7019870adf2e7d301d0c3d9f69b725a54820b
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: f76412ce4dd0f5d443564755c460dfb82c186847
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-start-debugging-xslt"></a>방법: XSLT 디버깅 시작
 
@@ -93,7 +90,7 @@ namespace ConsoleApplication
 }  
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [연습: XSLT 스타일시트 디버그](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)  
 [디버거 기본 사항](../debugger/debugger-basics.md)

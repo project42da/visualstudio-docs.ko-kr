@@ -1,12 +1,10 @@
 ---
-title: "방법: SharePoint 응용 프로그램 페이지에 대 한 사용자 정의 컨트롤 만들기 또는 웹 파트 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 응용 프로그램 페이지에 대 한 사용자 정의 컨트롤 만들기 또는 웹 파트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - user controls [SharePoint development in Visual Studio], adding
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7fc51bae65f67a3810c6db208e5f7c6f04183c22
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 26f71486f48379f0f7005107b3df4f9f79960ca1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part"></a>방법: SharePoint 응용 프로그램 페이지 또는 웹 파트를 위한 사용자 정의 컨트롤 만들기
   SharePoint 솔루션에 대한 사용자 지정 기능을 제공하는 사용자 지정 사용자 정의 컨트롤을 만들 수 있으며, 프로젝트 내에서 해당 기능을 다시 사용할 수 있습니다. 웹 파트 또는 응용 프로그램 페이지에 사용자 정의 컨트롤을 포함하고, 다른 ASP.NET 컨트롤과 SharePoint 컨트롤을 추가하고, 컨트롤에 대한 속성과 메서드를 정의할 수 있습니다. 사용자 정의 컨트롤에 대 한 자세한 내용은 참조 [웹 파트 또는 응용 프로그램 페이지에 대 한 재사용 가능한 컨트롤 만들기](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md) 및 [사용자 정의 컨트롤 및 컨트롤 서버 컨트롤에 SharePoint](http://blogs.msdn.com/b/kaevans/archive/2011/04/28/user-controls-and-server-controls-in-sharepoint.aspx)합니다.  

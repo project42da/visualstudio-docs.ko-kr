@@ -1,12 +1,10 @@
 ---
-title: "방법: 서버 탐색기에서 SharePoint 노드 확장 | Microsoft Docs"
-ms.custom: 
+title: '방법: 서버 탐색기에서 SharePoint 노드 확장 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending SharePoint Connections node in Server Explorer
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: d6fd079980897085f4e9c17a16dc57279ec586c2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9522e793171500b7b7f0a356eff63947fdba84cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-extend-a-sharepoint-node-in-server-explorer"></a>방법: 서버 탐색기에서 SharePoint 노드 확장
   아래에 노드를 확장할 수 있습니다는 **SharePoint 연결** 노드에서 **서버 탐색기**합니다. 기존 노드에 새 자식 노드, 바로 가기 메뉴 항목 또는 속성을 추가 하려는 경우에 유용 합니다. 자세한 내용은 참조 [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)합니다.  
@@ -58,7 +57,7 @@ ms.lasthandoff: 01/10/2018
   
     -   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeEvents.NodePropertiesRequested>: 노드에 사용자 지정 속성을 추가 하려면이 이벤트를 처리 합니다. 속성에 표시 된 **속성** 노드가 선택 되었을 때 창.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 두 가지 유형의 노드 확장을 만드는 방법을 보여 줍니다.  
   
 -   상황에 맞는 메뉴 항목을 SharePoint 사이트 노드를 추가 하는 확장입니다. 메뉴 항목을 클릭할 때 클릭 된 노드의 이름을 표시 합니다.  

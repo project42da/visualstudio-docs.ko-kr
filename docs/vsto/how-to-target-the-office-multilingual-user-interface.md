@@ -1,12 +1,10 @@
 ---
-title: "방법: Office 다국어 사용자 인터페이스 대상 | Microsoft Docs"
-ms.custom: 
+title: '방법: Office 다국어 사용자 인터페이스 대상 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], globalization
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 39ee8b6bdcb4ad647164ec555cfa37ee9cfe8f50
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 54b305311b686f527a79092280fbc33c3974247e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-target-the-office-multilingual-user-interface"></a>방법: Office 다국어 사용자 인터페이스 대상 선택
   인터페이스 MUI (다국어 사용자)는 최종 사용자의 사용자 인터페이스 (UI) 언어를 변경 하는 기능을 제공 하는 Microsoft Office 기능입니다. 예를 들어 영어 UI를 사용 하는 최종 사용자 스페인어로 UI의 언어를 변경할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_VstcoreCreatingExcel#10](../vsto/codesnippet/CSharp/Trin_VstcoreCreatingExcelCS/Sheet1.cs#10)]  
   
 ## <a name="see-also"></a>참고 항목  
- [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [Office 솔루션에서 런타임에 바인딩](../vsto/late-binding-in-office-solutions.md)  
   
   

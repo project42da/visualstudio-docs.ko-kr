@@ -1,5 +1,5 @@
 ---
-title: "InitializeCorrelation 활동 디자이너 | Microsoft Docs"
+title: InitializeCorrelation 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 4c54f34c-ee84-42a6-abb0-ec260c1ccb76
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6f39f25e7a4cf589b43fcf3b3f84b9784241961
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 72778ac3757cc259019df5fb5616115f41ce0c34
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initializecorrelation-activity-designer"></a>InitializeCorrelation 활동 디자이너
 **InitializeCorrelation** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.ServiceModel.Activities.InitializeCorrelation> 보내거나 받기 전에 메시지 간의 상관 관계를 설정 하는 데 사용 되는 활동입니다.
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.ServiceModel.Activities.InitializeCorrelation.Correlation%2A>|False|상관 관계에서 워크플로 활동을 연결하는 데 사용되는 <xref:System.ServiceModel.Activities.CorrelationHandle>입니다.|
 |<xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>|False|메시지를 워크플로 인스턴스와 연결하는 상관 관계 데이터의 사전입니다.<br /><br /> 사용 하 여는 **상관 관계 초기화** 대화 상자를 구성할 수는 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A>합니다. 사용에 대 한 자세한 내용은이 대화 상자 참조는 [형식 컬렉션 편집기 대화 상자](../workflow-designer/type-collection-editor-dialog-box.md) 항목입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)
 - [수신](../workflow-designer/receive-activity-designer.md)

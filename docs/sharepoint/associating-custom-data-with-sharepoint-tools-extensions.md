@@ -1,12 +1,10 @@
 ---
-title: "SharePoint와 함께 사용자 지정 데이터 연결 도구 확장 | Microsoft Docs"
-ms.custom: 
+title: SharePoint와 함께 사용자 지정 데이터 연결 도구 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extensibility features
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 8868300375d34664ba267b473f24d2c6a91ddd55
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 106f6a828035393273d7157c4b3e5bd898322e46
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="associating-custom-data-with-sharepoint-tools-extensions"></a>SharePoint 도구 확장과 사용자 지정 데이터 연결
   SharePoint 도구 확장에서 특정 개체를 사용자 지정 데이터를 추가할 수 있습니다. 데이터 확장 프로그램의 다른 코드에서 나중에 액세스 하려면 확장 프로그램의 한 부분에 있는 경우에 유용 합니다. 데이터 저장 및 액세스 하는 사용자 지정 방법을 구현 하는 대신 확장에 데이터 개체와 연결할 수 있으며 나중에 동일한 개체에서 데이터를 한 다음 검색할 수 있습니다.  

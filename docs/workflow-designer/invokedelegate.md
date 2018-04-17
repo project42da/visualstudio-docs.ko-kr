@@ -7,15 +7,15 @@ f1_keywords:
 - System.Activities.Statements.InvokeDelegate.UI
 ms.assetid: 289a7498-5127-453f-beb5-05f05b80d26f
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 717e9bec58c1eed248c868144ad72aae55948636
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 93e41d98b156b6314158a1cc99e368092b0cf494
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="invokedelegate"></a>InvokeDelegate
 **InvokeDelegate** 디자이너 만들고 구성 하는 데 사용 됩니다는 <xref:System.Activities.Statements.InvokeDelegate> 활동입니다.
@@ -37,6 +37,6 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.InvokeDelegate.Delegate%2A>|True|작업이 실행될 때 호출할 <xref:System.Activities.ActivityDelegate>의 이름입니다. 이 속성은 디자이너 화면에서 편집할 수 있습니다. 이 속성은 필수 속성입니다.|
 |<xref:System.Activities.Statements.InvokeDelegate.DelegateArguments%2A>|False|호출한 대리자의 인수 컬렉션입니다. 매개 변수 개체의 이름에 키는 <xref:System.Activities.ActivityDelegate> 이며 값은 인수를 식에서 해당 평가 되 고 해당 매개 변수 개체에 할당 합니다. 속성 그리드에서에서 줄임표 단추를 클릭는 **DelegateArguments** 표시 필드는 **DelegateArguments** 대화가이 속성을 설정할 수 있습니다. 클릭는 **인수 만들기** 필드는 인수를 추가 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [방법: 워크플로 디자이너에서 활동 대리자 정의 및 사용](../workflow-designer/how-to-define-and-consume-activity-delegates-in-the-workflow-designer.md)

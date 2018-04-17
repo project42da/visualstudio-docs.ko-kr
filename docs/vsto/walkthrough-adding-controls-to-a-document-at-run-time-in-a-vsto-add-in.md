@@ -1,13 +1,10 @@
 ---
-title: "연습: VSTO 추가 기능에서 런타임에 문서에 컨트롤 추가 | Microsoft Docs"
-ms.custom: 
+title: '연습: VSTO 추가 기능에서 런타임에 문서에 컨트롤 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], adding controls at run time
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dcf309bbfdd608a4ca93809804c51006ce7c2dd7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 1f26a60bdbd0db2464a8ac479b7534fb63f18cea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-adding-controls-to-a-document-at-run-time-in-a-vsto-add-in"></a>연습: 런타임에 VSTO 추가 기능의 문서에 컨트롤 추가
   VSTO 추가 기능을 사용하여 열려 있는 Microsoft Office Word 문서에 컨트롤을 추가할 수 있습니다. 이 연습에서는 리본을 사용하여 사용자가 <xref:Microsoft.Office.Tools.Word.Controls.Button> 또는 <xref:Microsoft.Office.Tools.Word.RichTextContentControl> 을 문서에 추가할 수 있도록 하는 방법을 보여 줍니다.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  

@@ -1,23 +1,21 @@
 ---
-title: "그래프 보기 | Microsoft Docs"
-ms.custom: 
+title: 그래프 보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 5881afde-3f24-4eb9-bff8-6cb3fc8aade7
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5ee2965fab52915ec3f9651edd3dc51b2ed1c491
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7ee4165f6aaccc08b8d1578ebec50634a07a9682
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="graph-view"></a>그래프 뷰
 그래프 뷰에서는 전역 스키마 노드 및 노드 간 관계를 그래픽으로 표현합니다. 그래프 뷰에서는 디자인 화면에서 스키마 집합의 레이아웃을 변경할 수 없습니다. 그래프 뷰에는 XML 스키마 디자이너 도구 모음과 이동 경로 탐색 막대도 들어 있습니다.  

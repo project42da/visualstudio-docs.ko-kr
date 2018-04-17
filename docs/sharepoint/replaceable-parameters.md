@@ -1,12 +1,10 @@
 ---
-title: "대체 가능 매개 변수 | Microsoft Docs"
-ms.custom: 
+title: 대체 가능 매개 변수 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, replaceable parameters
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fa002f58ffd749cef9a4cbf9b536a36d7901b105
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 696388ca89102d588bd1a291b6f5689dc08e26a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="replaceable-parameters"></a>대체 가능 매개 변수
   대체 가능 매개 변수 또는 *토큰*, 실제 값을 갖는 디자인 타임에 알 수 없는 SharePoint 솔루션 항목에 대 한 값을 제공 합니다. 프로젝트 파일 내 사용할 수 있습니다. 이러한 매개 변수는 기능적으로 표준 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 템플릿 토큰과 유사합니다. 자세한 내용은 참조 [템플릿 매개 변수](/visualstudio/ide/template-parameters)합니다.  
@@ -54,7 +53,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="tokens-list"></a>토큰 목록  
  다음 표에서 사용 가능한 토큰을 나열합니다.  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |$SharePoint.Project.FileName$|"NewProj.csproj"와 같은 포함 된 프로젝트 파일의 이름입니다.|  
 |$SharePoint.Project.FileNameWithoutExtension$|파일 이름 확장명 없이 포함 하는 프로젝트 파일의 이름입니다. 예를 들어 "NewProj"가 있습니다.|  

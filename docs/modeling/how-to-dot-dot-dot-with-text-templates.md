@@ -2,20 +2,18 @@
 title: '... 텍스트 템플릿 사용 하는 방법 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 47824561813dfc422dfb19460f1c90f7ed78d1ad
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 95ef3440e9b330860c8438b997c9c0e8b3c4fe0c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to--with-text-templates"></a>텍스트 템플릿 사용 방법
 텍스트 템플릿 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 어떤 종류의 텍스트를 생성 하는 효과적인 방법을 제공 합니다. 텍스트 템플릿 텍스트를 생성 하려면 디자인 타임에 프로젝트 코드의 일부를 생성 하 고 응용 프로그램의 일부로 실행 시 사용할 수 있습니다. 이 항목에서는 가장 자주 요약 "작업 방법...?" 라는 메시지가 표시 질문 합니다.  

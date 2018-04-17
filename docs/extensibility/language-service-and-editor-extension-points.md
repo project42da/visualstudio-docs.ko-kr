@@ -2,26 +2,22 @@
 title: 언어 서비스 및 편집기 확장점 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extension points
 ms.assetid: 91a6417e-a6fe-4bc2-9d9f-5173c634a99b
-caps.latest.revision: 33
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7e62f1f3cac8f279dedbc79f283b908119d66ff2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d3c253ba52da1fd6bb9133e44ba6858e8f1a4151
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="language-service-and-editor-extension-points"></a>언어 서비스 및 편집기 확장 지점
 편집기는 프레임 워크 MEF (Managed Extensibility) 구성 요소 부분을 대부분 언어 서비스 기능으로 확장할 수 있는 확장명 지점을 제공 합니다. 다음은 기본 확장 지점 범주입니다.  
@@ -47,9 +43,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="extending-content-types"></a>콘텐츠 형식 확장  
  콘텐츠 유형은 종류는 편집기에서 예를 들어 처리 하는 텍스트, "text", "code" 또는 "CSharp"의 정의입니다. 형식의 변수를 선언 하 여 새 콘텐츠 형식을 정의한 <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> 새 콘텐츠 형식에 고유한 이름을 지정 하 고 있습니다. 콘텐츠 형식 편집기를 등록 하려면 다음 특성 함께 내보냅니다.  
   
--   <xref:Microsoft.VisualStudio.Utilities.NameAttribute>콘텐츠 형식 이름이입니다.  
+-   <xref:Microsoft.VisualStudio.Utilities.NameAttribute> 콘텐츠 형식 이름이입니다.  
   
--   <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute>이 콘텐츠 형식 파생 되는 콘텐츠 형식의 이름이입니다. 콘텐츠 형식에서 다른 여러 개의 콘텐츠 형식을 상속할 수 있습니다.  
+-   <xref:Microsoft.VisualStudio.Utilities.BaseDefinitionAttribute> 이 콘텐츠 형식 파생 되는 콘텐츠 형식의 이름이입니다. 콘텐츠 형식에서 다른 여러 개의 콘텐츠 형식을 상속할 수 있습니다.  
   
  때문에 <xref:Microsoft.VisualStudio.Utilities.ContentTypeDefinition> 클래스는 봉인 클래스, 형식 매개 변수가 없는 내보낼 수 있습니다.  
   
@@ -298,7 +294,7 @@ internal IViewTagAggregatorFactoryService ViewTagAggregatorFactoryService { get;
   
 -   <xref:Microsoft.VisualStudio.Text.Classification.UserVisibleAttribute>:이 인해 UI에 표시 해야 하는 형식  
   
- 생성자에서 표시 이름 및 태그의 모양을 정의합니다. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.BackgroundColor%2A>채우기 색을 정의 하 고 <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.ForegroundColor%2A> 테두리 색을 정의 합니다. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.DisplayName%2A> 형식 정의의 지역화 가능한 이름입니다.  
+ 생성자에서 표시 이름 및 태그의 모양을 정의합니다. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.BackgroundColor%2A> 채우기 색을 정의 하 고 <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.ForegroundColor%2A> 테두리 색을 정의 합니다. <xref:Microsoft.VisualStudio.Text.Classification.EditorFormatDefinition.DisplayName%2A> 형식 정의의 지역화 가능한 이름입니다.  
   
  다음은 형식 정의의 예제입니다.  
   
@@ -346,7 +342,7 @@ internal AdornmentLayerDefinition testLayerDefinition;
   
 -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: 장식 올바른지 콘텐츠 (예: "text" 또는 "코드")의 종류입니다.  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>:이 장식 올바른지 텍스트 보기의 종류입니다. 클래스 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> 미리 정의 된 텍스트 보기 역할 집합이 포함 됩니다. 예를 들어 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> 는 파일의 텍스트 보기에 주로 사용 됩니다. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>사용자를 편집 하거나 마우스 및 키보드를 사용 하 여 탐색 텍스트 보기에 사용 됩니다. 몇 가지 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> 뷰는 텍스트 편집기 보기 및 **출력** 창.  
+-   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>:이 장식 올바른지 텍스트 보기의 종류입니다. 클래스 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> 미리 정의 된 텍스트 보기 역할 집합이 포함 됩니다. 예를 들어 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> 는 파일의 텍스트 보기에 주로 사용 됩니다. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> 사용자를 편집 하거나 마우스 및 키보드를 사용 하 여 탐색 텍스트 보기에 사용 됩니다. 몇 가지 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> 뷰는 텍스트 편집기 보기 및 **출력** 창.  
   
  다음 예제에서는 장식 공급자에 내보내기 특성을 보여 줍니다.  
   
@@ -374,7 +370,7 @@ internal AdornmentLayerDefinition testAdornmentLayer;
   
 -   <xref:Microsoft.VisualStudio.Utilities.ContentTypeAttribute>: 사용자 장식 올바른지 콘텐츠 (예: "text" 또는 "코드")의 종류입니다.  
   
--   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>:이 대 한 텍스트 보기의 종류 태그 또는 장식 유효 합니다. 클래스 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> 미리 정의 된 텍스트 보기 역할 집합이 포함 됩니다. 예를 들어 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> 는 파일의 텍스트 보기에 주로 사용 됩니다. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive>사용자를 편집 하거나 마우스 및 키보드를 사용 하 여 탐색 텍스트 보기에 사용 됩니다. 몇 가지 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> 뷰는 텍스트 편집기 보기 및 **출력** 창.  
+-   <xref:Microsoft.VisualStudio.Text.Editor.TextViewRoleAttribute>:이 대 한 텍스트 보기의 종류 태그 또는 장식 유효 합니다. 클래스 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles> 미리 정의 된 텍스트 보기 역할 집합이 포함 됩니다. 예를 들어 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Document> 는 파일의 텍스트 보기에 주로 사용 됩니다. <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> 사용자를 편집 하거나 마우스 및 키보드를 사용 하 여 탐색 텍스트 보기에 사용 됩니다. 몇 가지 <xref:Microsoft.VisualStudio.Text.Editor.PredefinedTextViewRoles.Interactive> 뷰는 텍스트 편집기 보기 및 **출력** 창.  
   
 -   <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute>: 태그 또는 사용자가 정의한 장식의 종류입니다. 두 번째 추가 해야 <xref:Microsoft.VisualStudio.Text.Tagging.TagTypeAttribute> 에 대 한 <xref:Microsoft.VisualStudio.Text.Tagging.SpaceNegotiatingAdornmentTag>합니다.  
   
@@ -514,7 +510,7 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource>사용 되지 않습니다 기준 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>합니다.  
+>  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSource> 사용 되지 않습니다 기준 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSource>합니다.  
   
  또한 같은 종류의 공급자를 구현 해야 합니다.  
   
@@ -527,7 +523,7 @@ internal sealed class TestOption : EditorOptionDefinition<bool>
 -   <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>  
   
 > [!IMPORTANT]
->  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider>사용 되지 않습니다 기준 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>합니다.  
+>  <xref:Microsoft.VisualStudio.Language.Intellisense.ISmartTagSourceProvider> 사용 되지 않습니다 기준 <xref:Microsoft.VisualStudio.Language.Intellisense.ISuggestedActionsSourceProvider>합니다.  
   
  공급자는 다음과 같은 특성이 함께 내보내기를 수행 해야 합니다.  
   

@@ -1,23 +1,21 @@
 ---
-title: "도메인 특정 언어를 사용자 지정 하는 코드를 작성 | Microsoft Docs"
-ms.custom: 
+title: 도메인 특정 언어를 사용자 지정 하는 코드를 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 81d0608189d45ed4ef9770a8fecdc61c7ebb118c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cb058ba2467ae852491339dc64a3fba837249688
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-code-to-customise-a-domain-specific-language"></a>도메인별 언어를 사용자 지정하는 코드 작성
 이 섹션을 액세스, 수정 또는 도메인 특정 언어에 모델을 만들 사용자 지정 코드를 사용 하는 방법을 보여 줍니다.  
@@ -26,7 +24,7 @@ ms.lasthandoff: 02/09/2018
   
 -   **사용자 지정 명령입니다.** 사용자가 다이어그램을 마우스 오른쪽 단추로 클릭 하 여 호출할 수 및 모델을 수정할 수 있는 명령을 만들 수 있습니다. 자세한 내용은 참조 [하는 방법: 바로 가기 메뉴에 명령을 추가](../modeling/how-to-add-a-command-to-the-shortcut-menu.md)합니다.  
   
--   **유효성 검사 합니다.** 모델 올바른 상태 인지 확인 하는 코드를 작성할 수 있습니다. 자세한 내용은 참조 [도메인 특정 언어의 유효성 검사](../modeling/validation-in-a-domain-specific-language.md)합니다.  
+-   **유효성 검사** 모델 올바른 상태 인지 확인 하는 코드를 작성할 수 있습니다. 자세한 내용은 참조 [도메인 특정 언어의 유효성 검사](../modeling/validation-in-a-domain-specific-language.md)합니다.  
   
 -   **기본 동작을 재정의 합니다.** DslDefinition.dsl에서 생성 되는 코드의 여러 측면을 수정할 수 있습니다. 자세한 내용은 참조 [재정의 및 생성 된 클래스를 확장](../modeling/overriding-and-extending-the-generated-classes.md)합니다.  
   

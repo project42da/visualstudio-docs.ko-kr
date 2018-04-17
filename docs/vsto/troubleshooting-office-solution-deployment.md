@@ -1,13 +1,10 @@
 ---
-title: "Office 솔루션 배포 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션 배포 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - deploying applications [Office development in Visual Studio], troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8940cd30b4e573b7438b45b13fdd30735a504809
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 29c3cfdcf31609eb5b6aec0111fe2297ba8c01ef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-office-solution-deployment"></a>Office 솔루션 배포 문제 해결
   이 항목에는 Office 솔루션을 배포할 때 발생할 수 있는 일반적인 문제를 해결하는 방법에 대한 정보가 포함되어 있습니다.  
@@ -65,7 +62,7 @@ ms.lasthandoff: 01/10/2018
  Office 솔루션과 함께 배포되는 필수 조건으로 .NET Framework, [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]및 Office 주 interop 어셈블리를 설치 패키지에 추가할 수 있습니다. 주 interop 어셈블리를 설치 하는 방법에 대 한 정보를 참조 하십시오. [Office 솔루션을 개발할 수 있도록 컴퓨터 구성](../vsto/configuring-a-computer-to-develop-office-solutions.md) 및 [하는 방법: 설치 Office 주 Interop 어셈블리](../vsto/how-to-install-office-primary-interop-assemblies.md)합니다.  
   
 ## <a name="publishing-using-localhost-can-cause-installation-problems"></a>'Localhost'를 사용하여 게시할 경우 설치 문제가 발생할 수 있음  
- 문서 수준 솔루션의 게시 또는 설치 위치로 "http://localhost" 를 사용하면 **게시 마법사** 가 문자열을 실제 컴퓨터 이름으로 변환하지 않습니다. 이 경우 개발 컴퓨터에 솔루션을 설치해야 합니다. 배포된 솔루션에서 개발 컴퓨터의 IIS를 사용하게 하려면 localhost 대신 모든 HTTP/HTTPS/FTP 위치에 대한 정규화된 이름을 사용합니다.  
+ 사용 하는 경우 "http://localhost" 문서 수준 솔루션에 대 한 게시 또는 설치 위치로 **게시 마법사** 실제 컴퓨터 이름에 문자열을 변환 하지 않습니다. 이 경우 개발 컴퓨터에 솔루션을 설치해야 합니다. 배포된 솔루션에서 개발 컴퓨터의 IIS를 사용하게 하려면 localhost 대신 모든 HTTP/HTTPS/FTP 위치에 대한 정규화된 이름을 사용합니다.  
   
 ## <a name="cached-assemblies-are-loaded-instead-of-updated-assemblies"></a>업데이트된 어셈블리 대신 캐시된 어셈블리가 로드됨  
  .NET Framework 어셈블리 로더인 Fusion은 프로젝트 출력 경로가 네트워크 파일 공유에 있고, 어셈블리가 강력한 이름으로 서명되고, 사용자 지정의 어셈블리 버전이 변경되지 않은 경우 캐시된 어셈블리 복사본을 로드합니다. 이러한 조건을 충족하는 어셈블리를 업데이트할 경우 다음에 프로젝트를 실행할 때 캐시된 복사본이 로드되기 때문에 업데이트가 나타나지 않습니다.  
@@ -74,7 +71,7 @@ ms.lasthandoff: 01/10/2018
   
 #### <a name="to-download-assemblies-instead-of-loading-cached-copies"></a>캐시된 복사본을 로드하지 않고 어셈블리를 다운로드하려면  
   
-1.  메뉴 모음에서 **프로젝트**, *ProjectName***속성**을 참조하세요.  
+1.  메뉴 모음에서 **프로젝트**, * r o j ***속성**합니다.  
   
 2.  **응용 프로그램** 페이지에서 **어셈블리 정보**를 선택합니다.  
   
@@ -116,7 +113,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="reinstalling-office-solutions-causes-an-argument-out-of-range-exception"></a>Office 솔루션 다시 설치 시 인수가 범위를 벗어남 예외 발생  
  Office 솔루션을 다시 설치할 때 '지정한 인수가 유효한 값 범위를 벗어났습니다.'라는 오류 메시지와 함께 <xref:System.ArgumentOutOfRangeException> 예외가 나타날 수 있습니다.  
   
- 이러한 문제는 설치 위치에 대한 URL의 대소문자가 다른 경우 발생합니다. 예를 들어 [http://fabrikam.com/ExcelSolution.vsto](http://fabrikam.com/ExcelSolution.vsto) 에서 Office 솔루션을 처음 설치하고 두 번째 사용할 때 [http://fabrikam.com/excelsolution.vsto](http://fabrikam.com/excelsolution.vsto) 를 지정한 경우 발생합니다.  
+ 이러한 문제는 설치 위치에 대한 URL의 대소문자가 다른 경우 발생합니다. Office 솔루션을 설치한 경우이 오류는 표시 하는 예를 들어 [ http://fabrikam.com/ExcelSolution.vsto ](http://fabrikam.com/ExcelSolution.vsto) 처음으로 사용 하 고 [ http://fabrikam.com/excelsolution.vsto ](http://fabrikam.com/excelsolution.vsto) 두 번째로 합니다.  
   
  메시지를 표시하지 않으려면 Office 솔루션을 설치할 때 동일한 대/소문자를 사용합니다.  
   

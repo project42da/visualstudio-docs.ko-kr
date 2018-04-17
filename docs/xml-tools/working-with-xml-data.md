@@ -1,21 +1,19 @@
 ---
-title: "XML 데이터 사용 | Microsoft Docs"
-ms.custom: 
+title: XML 데이터 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 6dfcff932a12680f31acc24d9239adf89be7687e
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 1e92bd40eba56c486c95be4d85e376f80beffccf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-xml-data"></a>XML 데이터 사용
 
@@ -69,6 +67,6 @@ XML, DTD(문서 종류 정의), XSD(XML 스키마 정의 언어), XSLT 등의 XM
 [관리 코드에서 XML 웹 서비스](http://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196)  
 XML Web services를 만들고 배포하는 방법 및 XML Web services에 액세스하는 방법에 대해 설명합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)

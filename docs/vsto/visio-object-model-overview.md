@@ -1,12 +1,10 @@
 ---
-title: "Visio 개체 모델 개요 | Microsoft Docs"
-ms.custom: 
+title: Visio 개체 모델 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Visio object model
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e829842f4e530b014a19f69c567a91dc49bd78e6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0e77256d800cb23b61a6680cdf59e60a39c7b57e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visio-object-model-overview"></a>Visio 개체 모델 개요
   Microsoft Office Visio용 Office 솔루션을 개발하기 위해 Visio 개체 모델을 조작할 수 있습니다. 이 개체 모델은 Visio 용 주 interop 어셈블리에서 제공 되 고 Microsoft.Office.Interop.Visio 네임 스페이스에 정의 되어 있는 클래스와 인터페이스의 구성 합니다.  

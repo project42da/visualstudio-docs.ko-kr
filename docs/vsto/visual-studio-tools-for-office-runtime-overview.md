@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio Tools for Office Runtime 개요 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio Tools for Office Runtime 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -28,13 +26,14 @@ helpviewer_keywords:
 - runtime [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: ed9f3657fcb49a7b39ee41d2ce9b73dddda7fd93
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f357e593c7fe1e3dc5e4803b93ac515911ed9f75
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-tools-for-office-runtime-overview"></a>Visual Studio Tools for Office 런타임 개요
   Visual Studio에서 Microsoft Office 개발자 도구를 사용하여 만든 솔루션을 실행하려면 Visual Studio 2010 Tools for Office Runtime이 최종 사용자 컴퓨터에 설치되어 있어야 합니다. 자세한 내용은 [How to: Install the Visual Studio Tools for Office Runtime Redistributable](../vsto/how-to-install-the-visual-studio-tools-for-office-runtime-redistributable.md)을 참조하세요. Visual Studio 2010 Tools for Office Runtime은 다음 두 가지 주 구성 요소로 구성됩니다.  

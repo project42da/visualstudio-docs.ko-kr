@@ -1,12 +1,10 @@
 ---
-title: "ServerDocument 클래스를 사용 하 여 서버의 문서 관리 | Microsoft Docs"
-ms.custom: 
+title: ServerDocument 클래스를 사용 하 여 서버의 문서 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - ServerDocument class, managing documents on server
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2120e7c70abaddd4f51c0214a2c5ae517cf955cc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ef676de4ff352a557019f68037203364a97834d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-documents-on-a-server-by-using-the-serverdocument-class"></a>Managing Documents on a Server by Using the ServerDocument Class
   ServerDocument 클래스를 사용할 수는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] Microsoft Office Word 및 Microsoft Office Excel 설치 되어 있지 않은 경우에 문서 수준 사용자 지정의 여러 측면을 관리할 수 있습니다. 다음 작업을 수행할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  Office system 용 Visual Studio tools에서 ServerDocument 클래스를 사용 하는 레거시 응용 프로그램의 경우 (버전 3.0 런타임), Office system 용 Visual Studio Tools (버전 3.0 런타임) 응용 프로그램을 실행 하는 컴퓨터에 설치 해야 합니다. Visual Studio 2010 Tools for Office Runtime 이러한 응용 프로그램을 실행할 수 없습니다.  
   
-##  <a name="CachedData"></a>문서에서 캐시 된 데이터 사용  
+##  <a name="CachedData"></a> 문서에서 캐시 된 데이터 사용  
  ServerDocument 클래스 사용자 지정 된 문서에서 데이터 캐시를 사용 하는 데 사용할 멤버를 제공 합니다. 캐시 된 데이터에 대 한 자세한 내용은 참조 [데이터 캐싱](../vsto/caching-data.md) 및 [서버에 있는 문서의 데이터 액세스](../vsto/accessing-data-in-documents-on-the-server.md)합니다.  
   
  다음 표에서 캐시 된 데이터로 작업 하는 데 사용할 수는 멤버를 나열 합니다.  
@@ -53,7 +52,7 @@ ms.lasthandoff: 01/10/2018
 |문서 데이터 캐시에 있는지 여부를 확인 합니다.|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.IsCacheEnabled%2A> 메서드|  
 |문서에서 캐시 된 데이터에 액세스 하 합니다.<br /><br /> 자세한 내용은 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)을 참조하세요.|<xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument.CachedData%2A> 속성|  
   
-##  <a name="CustomizationInfo"></a>문서 사용자 지정 관리  
+##  <a name="CustomizationInfo"></a> 문서 사용자 지정 관리  
  문서와 연결 된 사용자 지정 어셈블리를 관리 하는 ServerDocument 클래스의 멤버를 사용할 수 있습니다. 예를 들어 없습니다 프로그래밍 방식으로 제거 하 여 사용자 지정 문서에서 문서가 더 이상 사용자 지정의 일부입니다.  
   
  다음 표에서 사용자 지정 어셈블리를 관리 하는 데 사용할 수는 멤버를 나열 합니다.  

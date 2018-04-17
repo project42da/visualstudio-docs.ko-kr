@@ -1,5 +1,5 @@
 ---
-title: "CompensableActivity 활동 디자이너 | Microsoft Docs"
+title: CompensableActivity 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: e0340d89-d39e-4a52-8557-13e27040d7b5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c45a0f2638a3d1fc5b6f4dc536cf051751c9c897
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: b8f9fcf62b727ef3c8b607b503b3305508921e30
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compensableactivity-activity-designer"></a>CompensableActivity 활동 디자이너
 **CompensableActivity** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.Activities.Statements.CompensableActivity> 활동입니다.
@@ -39,10 +39,10 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.CompensableActivity.CompensationHandler%2A>|False|<xref:System.Activities.Statements.CompensableActivity.Body%2A> 활동을 보정할 때 실행할 활동을 지정합니다. <xref:System.Activities.Statements.Compensate> 활동을 사용하여 이 처리기를 명시적으로 호출할 수 있습니다.<br /><br /> 활동을 추가 하려면 해당 활동 디자이너를 삭제는 **도구 상자** 에 **CompensationHandler** 상자에 **CompensableActivity** 힌트 텍스트를 사용 하 여 활동 디자이너 " 여기에 작업 놓기 "입니다.|
 |<xref:System.Activities.Statements.CompensableActivity.ConfirmationHandler%2A>|False|<xref:System.Activities.Statements.CompensableActivity.Body%2A> 활동을 확인할 때 실행할 활동을 지정합니다. <xref:System.Activities.Statements.Confirm> 활동을 사용하여 이 처리기를 명시적으로 호출할 수 있습니다.<br /><br /> 활동을 추가 하려면 해당 활동 디자이너를 삭제는 **도구 상자** 에 **ConfirmationHandler** 상자에 **CompensableActivity** 힌트 텍스트를 사용 하 여 활동 디자이너 " 여기에 작업 놓기 "입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [트랜잭션](../workflow-designer/transaction-activity-designers.md)
 - [CancellationScope](../workflow-designer/cancellationscope-activity-designer.md)
 - [보정](../workflow-designer/compensate-activity-designer.md)
-- [Confirm](../workflow-designer/confirm-activity-designer.md)
+- [확인](../workflow-designer/confirm-activity-designer.md)
 - [TransactionScope](../workflow-designer/transactionscope-activity-designer.md)

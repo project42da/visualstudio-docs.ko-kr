@@ -1,13 +1,10 @@
 ---
-title: "방법: Office 솔루션에 서명 | Microsoft Docs"
-ms.custom: 
+title: '방법: Office 솔루션에 서명 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - signing manifests [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2883f75c6ca75e1875621f9c6779db09722d6945
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 31b5e1fc3c78aecf518af0941a4a2dd0ab7e57c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-sign-office-solutions"></a>방법: Office 솔루션에 서명
   솔루션에 서명할 인증서를 사용 하 여 증명 정보로 솔루션에 신뢰를 부여할 수 있습니다. 동일한 인증서를 사용 하 여 여러 솔루션에 대 한 및 추가 보안 정책 업데이트가 없는 모든 솔루션 신뢰 됩니다.  
@@ -40,7 +37,7 @@ ms.lasthandoff: 01/10/2018
   
 #### <a name="to-sign-an-office-solution-by-using-a-certificate"></a>인증서를 사용 하 여 Office 솔루션 서명 하려면  
   
-1.  에 **프로젝트** 메뉴를 클릭 하 여 *SolutionName***속성**합니다.  
+1.  에 **프로젝트** 메뉴를 클릭 하 여 * SolutionName ***속성**합니다.  
   
 2.  **시그니처** 탭을 클릭합니다.  
   

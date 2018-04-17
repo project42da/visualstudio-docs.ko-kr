@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 프로젝트 항목 확장 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 프로젝트 항목 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e990896720916048ab449c7ccb5a927577861256
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1cc202b2e3e303f8f6e92b82bbfbc6f5525966bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-sharepoint-project-items"></a>SharePoint 프로젝트 항목 확장
   Visual Studio에서 이미 설치 되어 있는 SharePoint 프로젝트 항목의 형식에 기능을 추가 하려는 경우 프로젝트 항목 확장을 만듭니다. 예를 들어 기본 제공에 대 한 확장을 만들 수 있습니다 **이벤트 수신기** 또는 **목록 정의** Visual Studio에서 프로젝트 항목 또는 사용자 지정 프로젝트 항목 형식에 대 한 확장을 만들 수 있습니다. 모든 SharePoint 프로젝트 항목 형식에 대 한 확장을 만들 수도 있습니다.  
@@ -46,7 +45,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="identifiers-for-sharepoint-project-items"></a>SharePoint 프로젝트 항목에 대 한 식별자  
  각 SharePoint 프로젝트 항목에 해당 하는 문자열 식별자입니다. 다음 작업을 수행 하려는 경우 프로젝트 항목에 대 한 식별자를 알고 있어야 합니다.  
   
--   프로젝트 항목에 대 한 확장을 만듭니다. 생성자에 게 확장 하려는 경우 프로젝트 항목에 대 한 식별자를 전달 해야 하는 경우에 <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>합니다. 모든 프로젝트 항목 형식에 대 한 확장을 생성, 전달 된  **\***  문자열 값입니다.  
+-   프로젝트 항목에 대 한 확장을 만듭니다. 생성자에 게 확장 하려는 경우 프로젝트 항목에 대 한 식별자를 전달 해야 하는 경우에 <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemTypeAttribute>합니다. 모든 프로젝트 항목 형식에 대 한 확장을 생성, 전달 된 **\*** 문자열 값입니다.  
   
 -   프로그래밍 방식으로 프로젝트에 프로젝트 항목을 추가 합니다. 프로젝트 항목에 대 한 식별자를 전달 해야 하는 경우에 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemCollection.Add%2A> 메서드.  
   

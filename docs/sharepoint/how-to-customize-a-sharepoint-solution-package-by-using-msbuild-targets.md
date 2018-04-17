@@ -1,13 +1,10 @@
 ---
-title: "방법: MSBuild 대상을 사용 하 여 SharePoint 솔루션 패키지를 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: '방법: MSBuild 대상을 사용 하 여 SharePoint 솔루션 패키지를 사용자 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ab9aa26efe3002c28ec031457d2732c828eca445
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: fea1719eb80515a97a1b18336f1653cb535359e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>방법: MSBuild 대상을 사용하여 SharePoint 솔루션 패키지 사용자 지정
   명령 프롬프트에서 MSBuild 대상을 사용하여 Visual Studio에서 SharePoint 패키지 파일(.wsp)을 만드는 방법을 사용자 지정할 수 있습니다. 예를 들어 MSBuild 속성을 사용자 지정하여 패키징 중간 디렉터리 및 열거되는 파일을 지정하는 MSBuild 항목 그룹을 변경할 수 있습니다.  
@@ -50,7 +47,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  프로젝트를 열고, 해당 바로 가기 메뉴를 연 다음 선택 **프로젝트 언로드**합니다.  
   
-4.  **솔루션 탐색기**를 프로젝트에 대 한 바로 가기 메뉴를 열고 다음 선택 **편집***ProjectName***.vbproj** 또는 **편집***ProjectName***.csproj**합니다.  
+4.  **솔루션 탐색기**를 프로젝트에 대 한 바로 가기 메뉴를 열고 다음을 선택 **편집***ProjectName***.vbproj** 또는 **편집***ProjectName*** .csproj**합니다.  
   
 5.  프로젝트 파일의 끝 부분에 있는 `Import` 행 뒤에 다음 줄을 추가합니다.  
   

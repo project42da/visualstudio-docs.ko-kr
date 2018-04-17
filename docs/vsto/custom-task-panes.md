@@ -1,12 +1,10 @@
 ---
-title: "사용자 지정 작업 창 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 작업 창 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -27,13 +25,14 @@ helpviewer_keywords:
 - custom task panes [Office development in Visual Studio], about custom task panes
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6a99fd7cc89190a8360341684dee91a7cf93f0e0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: acbe91b0a7150ac3a04f9a0b33c8b95d371caf53
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-task-panes"></a>사용자 지정 작업 창
   작업창은 일반적으로 Microsoft Office 응용 프로그램에서 창의 한쪽에 도킹된 사용자 인터페이스 패널입니다. 사용자 지정 작업창을 사용하면 사용자 고유의 작업창을 만들고 사용자에게 솔루션 기능에 액세스하기 위한 친숙한 인터페이스를 제공할 수 있습니다. 예를 들어 인터페이스에는 문서를 수정하거나 데이터 소스의 데이터를 표시하는 코드를 실행하는 컨트롤이 포함될 수 있습니다.  
@@ -129,7 +128,7 @@ ms.lasthandoff: 01/10/2018
   
  VSTO 추가 기능이 언로드되면 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서 사용자 지정 작업창이 사용하는 리소스를 자동으로 정리합니다. 호출 하지 마십시오는 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Remove%2A> 또는 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.RemoveAt%2A> 의 메서드는 `ThisAddIn_Shutdown` 프로젝트의 이벤트 처리기입니다. `ThisAddIn_Shutdown`이 호출되기 전에 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]에서 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체가 사용하는 리소스를 정리하기 때문에 이러한 메서드에서 <xref:System.ObjectDisposedException>이 발생합니다. 에 대 한 자세한 내용은 `ThisAddIn_Shutdown`, 참조 [Office 프로젝트의 이벤트](../vsto/events-in-office-projects.md)  
   
-##  <a name="Managing"></a>여러 응용 프로그램 창에서 사용자 지정 작업창 관리  
+##  <a name="Managing"></a> 여러 응용 프로그램 창에서 사용자 지정 작업창 관리  
  응용 프로그램에서 여러 창을 사용하여 문서 및 기타 항목을 표시하는 사용자 지정 작업창을 만드는 경우 사용자가 예상하는 시기에 작업창이 표시되도록 추가 단계를 수행해야 합니다.  
   
  모든 응용 프로그램의 사용자 지정 작업창은 사용자에게 문서 또는 항목의 뷰를 제공하는 문서 프레임 창에 연결됩니다. 작업창은 연결된 창이 표시되는 경우에만 표시됩니다. 그러나 일부 응용 프로그램은 문서 프레임 창을 동일한 방식으로 사용합니다.  
@@ -142,7 +141,7 @@ ms.lasthandoff: 01/10/2018
   
  ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 할까요?: 관리 작업창 Word VSTO 추가 기능에서?](http://go.microsoft.com/fwlink/?LinkId=136781)합니다.  
   
-##  <a name="Outlook"></a>Outlook  
+##  <a name="Outlook"></a> Outlook  
  Outlook에 대한 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창이 특정 탐색기 또는 검사기 창에 연결됩니다. 탐색기는 폴더 내용을 표시하는 창이고, 검사기는 메일 메시지 또는 작업과 같은 항목을 표시하는 창입니다.  
   
  여러 탐색기 또는 검사기 창이 포함된 사용자 지정 작업창을 표시하려는 경우 탐색기 또는 검사기 창이 열릴 때 사용자 지정 작업창의 새 인스턴스를 만들어야 합니다. 이렇게 하려면 탐색기 또는 검사기 창을 만들 때 발생하는 이벤트를 처리한 다음 이벤트 처리기에서 작업창을 만듭니다. 표시되는 창에 따라 탐색기 및 검사기 이벤트를 처리하여 작업창을 숨기거나 표시할 수도 있습니다.  
@@ -177,7 +176,7 @@ ms.lasthandoff: 01/10/2018
   
  사용자 지정 작업창을 명시적으로 제거하지 않는 경우 Outlook 창에 사용자 지정 작업창의 여러 인스턴스가 표시될 수도 있습니다. 경우에 따라 Outlook에서 창을 재활용하며, 재활용된 창은 연결된 사용자 지정 작업창에 대한 참조를 유지합니다.  
   
-##  <a name="WordAndInfoPath"></a>Word, InfoPath 및 PowerPoint  
+##  <a name="WordAndInfoPath"></a> Word, InfoPath 및 PowerPoint  
  Word, InfoPath 및 PowerPoint는 각 문서를 서로 다른 문서 프레임 창에서 표시합니다. 이러한 응용 프로그램에 대한 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창이 특정 문서에만 연결됩니다. 사용자가 다른 문서를 여는 경우 이전 문서가 다시 표시될 때까지 사용자 지정 작업창이 숨겨집니다.  
   
  여러 문서가 포함된 사용자 지정 작업창을 표시하려는 경우 사용자가 새 문서를 만들거나 기존 문서를 열 때 사용자 지정 작업창의 새 인스턴스를 만듭니다. 이렇게 하려면 문서를 만들거나 열 때 발생하는 이벤트를 처리한 다음 이벤트 처리기에서 작업창을 만듭니다. 표시되는 문서에 따라 문서 이벤트를 처리하여 작업창을 숨기거나 표시할 수도 있습니다.  

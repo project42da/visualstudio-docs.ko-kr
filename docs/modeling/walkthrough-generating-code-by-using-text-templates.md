@@ -1,24 +1,22 @@
 ---
-title: "연습: 텍스트 템플릿을 사용 하 여 코드를 생성 | Microsoft Docs"
-ms.custom: 
+title: '연습: 텍스트 템플릿을 사용 하 여 코드를 생성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], generating application code
 - walkthroughs [text templates]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 46cbf0c6a28b10434ed364dffd77c4c01620d6ea
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7099edb08216cd91858a20e65c7bb2fede786977
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>연습: 텍스트 템플릿을 사용하여 코드 생성
 코드 생성 기능을 사용하면 강력한 형식을 가지고 있지만 소스 모델이 변경될 때 손쉽게 변경할 수 있는 프로그램 코드를 생성할 수 있습니다. 이와 반대로, 구성 파일을 허용하는 완전한 제네릭 프로그램을 작성하는 대체 방식을 사용할 경우에는 좀 더 유연성이 있지만 코드를 읽고 변경하기가 쉽지 않으며 코드의 성능도 그렇게 좋지 않습니다. 이 연습에서는 이러한 이점을 보여 줍니다.  
@@ -107,7 +105,7 @@ foreach (XmlNode artist in catalog.SelectNodes("artist"))
  .  
   
 ### <a name="add-a-test-code-file"></a>테스트 코드 파일 추가  
- C# 파일을 프로젝트에 추가하고, 여기에 원하는 코드의 샘플을 작성합니다. 예:  
+ C# 파일을 프로젝트에 추가하고, 여기에 원하는 코드의 샘플을 작성합니다. 예를 들어:  
   
 ```  
 using System;  

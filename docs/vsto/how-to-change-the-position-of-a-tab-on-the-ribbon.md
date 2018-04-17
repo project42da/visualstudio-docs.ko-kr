@@ -1,13 +1,10 @@
 ---
-title: "방법: 리본의 탭 위치 변경 | Microsoft Docs"
-ms.custom: 
+title: '방법: 리본의 탭 위치 변경 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], tabs
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5016651a6cc4f1316536c22d555a65aaba64b788
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 65a610ac75af4fe6e29070b83286fb3b4f8b91cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-change-the-position-of-a-tab-on-the-ribbon"></a>방법: 리본의 탭 위치 변경
   사용 하 여 리본 메뉴 사용자 지정 탭의 순서를 변경할 수는 **탭 컬렉션 편집기**합니다. 리본의 기본 제공 탭 앞 이나 뒤에 사용자 지정 탭을 배치할 수 있습니다. 기본 제공 탭은 Microsoft Office 응용 프로그램의 리본 메뉴에 이미 있는 탭입니다. 예를 들어는 **데이터** 탭은 Excel의 기본 제공 탭입니다.  

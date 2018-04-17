@@ -1,13 +1,10 @@
 ---
-title: "Windows Installer를 사용 하 여 Office 솔루션 배포 | Microsoft Docs"
-ms.custom: 
+title: Windows Installer를 사용 하 여 Office 솔루션 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - Office applications [Office development in Visual Studio], MSI
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 68ec55b1096f9e4244213cf4faeef5b904dd8fed
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: f2c51b101b890a2aaf2ea63edfd1f55d05abe18e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-an-office-solution-by-using-windows-installer"></a>Windows Installer를 사용하여 Office 솔루션 배포
 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)]을 사용하여 Office 솔루션에 필요한 Windows Installer를 만드는 방법을 알아봅니다.  
@@ -239,7 +236,7 @@ Office 프로젝트의 출력을 포함하도록 **OfficeAddInSetup** 프로젝�
   
 6. **다른 이름으로 저장** 대화 상자에서 **바탕 화면** 폴더를 찾습니다.  
   
-7. 에 **파일 형식** 목록에서 선택 **모든 파일 (&#42;. &#42;)**합니다.  
+7. 에 **파일 형식** 목록에서 선택 **모든 파일 (&#42;.&#42;)** .  
   
 8. **파일 이름** 상자에 **Visual Studio 2010 Tools for Office Runtime.prq**를 입력한 후 **저장** 단추를 선택합니다.  
   
@@ -493,7 +490,7 @@ VSTO 추가 기능을 컴퓨터의 모든 사용자에 대해 설치할지(컴�
   
 13. 메모장에서 솔루션의 프로젝트 파일을 엽니다. Visual Basic 프로젝트의 경우 파일 이름이 ExcelWorkbook.csproj입니다. C# 프로젝트의 경우 파일 이름이 ExcelWorkbook.csproj입니다.  
   
-14. 프로젝트 파일에서 검색 된  **&lt;SolutionID&gt;**  요소를 해당 값을 클립보드에 복사한 다음 메모장을 닫습니다.  
+14. 프로젝트 파일에서 검색 된 **&lt;SolutionID&gt;** 요소를 해당 값을 클립보드에 복사한 다음 메모장을 닫습니다.  
   
    이 값을 콘솔 응용 프로그램에 매개 변수로 전달합니다.  
   
@@ -533,7 +530,7 @@ VSTO 추가 기능을 컴퓨터의 모든 사용자에 대해 설치할지(컴�
   
 9. 메뉴 모음에서 **빌드**, **OfficeAddInSetup 빌드**를 차례로 선택합니다.  
   
-   빌드가 완료 된 후의 setup.exe 파일을 찾을 수 있습니다는 **OfficeAddInSetup** 다음 위치에서 프로젝트: *OfficeAddInSetupProjectRoot***\ \ OfficeAddInSetup\Express\SingleImage\DiskImages\DISK1\**  
+   빌드가 완료 된 후의 setup.exe 파일을 찾을 수 있습니다는 **OfficeAddInSetup** 다음 위치에서 프로젝트: *OfficeAddInSetupProjectRoot * * * \OfficeAddInSetup\Express\SingleImage\DiskImages\ DISK1\**  
   
   
 ## <a name="see-also"></a>참고 항목  

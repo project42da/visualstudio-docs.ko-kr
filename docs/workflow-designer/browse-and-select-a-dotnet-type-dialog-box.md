@@ -1,5 +1,5 @@
 ---
-title: ".NET 유형 대화 상자를 선택 합니다. | Microsoft Docs"
+title: .NET 유형 대화 상자를 선택 합니다. | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 ms.assetid: 864b60b6-a070-4e5c-aa5b-a25341b57ea6
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 33e2ba5ff213c2bdd2684d72f411b172c0437c99
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 04aba24d3dffc96fb8e5288d74322258fa77ce19
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET 유형 선택 대화 상자
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/12/2018
 ## <a name="filtering-search-results-in-the-type-browser"></a>형식 브라우저에서 검색 결과 필터링
  형식 목록이 **유형 이름** 상자 짧아집니다 일치 항목을 찾을 많은 문자를 입력 합니다. 필터링된 목록에는 정규화된 이름 또는 약식 이름이 입력한 문자열로 시작되는 형식만 표시됩니다.
 
- 예:
+ 예를 들어:
 
 1.  입력 **작업** 일치 <xref:System.OperationCanceledException> 아닌 <xref:System.InvalidOperationException>합니다. <xref:System.InvalidOperationException>을 찾으려면 System.I 또는 Invalid를 입력해야 합니다.
 
@@ -69,6 +69,6 @@ ms.lasthandoff: 03/12/2018
 ## <a name="selecting-a-service-contract-using-the-type-browser-dialog"></a>형식 브라우저 대화 상자를 사용하여 서비스 계약 선택
  서비스 계약 형식을 선택할 때 형식 브라우저는 <xref:System.ServiceModel.ServiceContractAttribute> 특성이 있는 형식만 보여줍니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [활동 디자이너 사용](../workflow-designer/using-the-activity-designers.md)

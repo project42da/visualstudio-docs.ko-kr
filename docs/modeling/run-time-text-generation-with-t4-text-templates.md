@@ -1,10 +1,8 @@
 ---
-title: "T4 텍스트 템플릿을 사용 하 여 런타임 텍스트 생성 | Microsoft Docs"
-ms.custom: 
+title: T4 텍스트 템플릿을 사용 하 여 런타임 텍스트 생성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - text templates, generating files at run time
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f3900a9f42791f4b71ef221bbeb1f010d1785917
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 30956435c321a45a3a1ee32a305080d35b073293
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-time-text-generation-with-t4-text-templates"></a>T4 텍스트 템플릿을 사용하여 런타임 텍스트 생성
 
@@ -110,7 +108,7 @@ Language 매개 변수는 프로젝트의 언어에 따라 달라 집니다.
 
 ### <a name="plain-content"></a>일반 콘텐츠
 
-편집 된 **.tt** 파일을 생성 하는 응용 프로그램 텍스트를 포함 합니다. 예:
+편집 된 **.tt** 파일을 생성 하는 응용 프로그램 텍스트를 포함 합니다. 예를 들어:
 
 ```html
 <html><body>
@@ -122,7 +120,7 @@ This report is Company Confidential.
 
 ### <a name="embedded-program-code"></a>포함 된 프로그램 코드
 
-사이 프로그램 코드를 삽입할 수 `<#` 및 `#>`합니다. 예:
+사이 프로그램 코드를 삽입할 수 `<#` 및 `#>`합니다. 예를 들어:
 
 ```csharp
 <table>
@@ -436,7 +434,7 @@ End material for DerivedTemplate1.
 
 런타임 템플릿은 컴파일 타임에 템플릿과 그 내용이 결정 됩니다 모든 응용 프로그램에서 사용할 수 있습니다. 하지만 런타임 시 변경 하는 서식 파일에서 텍스트를 생성 하는 Visual Studio 확장 프로그램을 작성 하려는 참조 [VS 확장에서 텍스트 변환 호출](../modeling/invoking-text-transformation-in-a-vs-extension.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)
 - [T4 텍스트 템플릿 쓰기](../modeling/writing-a-t4-text-template.md)

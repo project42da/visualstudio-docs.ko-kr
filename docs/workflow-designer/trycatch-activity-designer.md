@@ -1,5 +1,5 @@
 ---
-title: "TryCatch 활동 디자이너 | Microsoft Docs"
+title: TryCatch 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -8,14 +8,14 @@ f1_keywords:
 ms.assetid: 02a326c2-4009-442f-b7cb-e42121fd2992
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dc20be3f2d8b2e6281d44139bbd97d9dd67593d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 9ae4cd4340bc30249ea649a2806afe3e027fc439
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch 활동 디자이너
 **TryCatch** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.Activities.Statements.TryCatch> 활동입니다.
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.TryCatch.Catches%2A>|False|컬렉션 **Catch** 때 확인 해야 할 요소는 <xref:System.Activities.Statements.TryCatch.Try%2A> 작업 예외를 throw 합니다.<br /><br /> <xref:System.Activities.Statements.TryCatch.Catches%2A>에 하나 이상의 활동을 추가하거나 <xref:System.Activities.Statements.TryCatch.Finally%2A> 블록에 활동을 추가해야 합니다.|
 |<xref:System.Activities.Statements.TryCatch.Finally%2A>|False|<xref:System.Activities.Statements.TryCatch.Try%2A> 및 <xref:System.Activities.Statements.TryCatch.Catches%2A> 컬렉션의 필요한 모든 활동이 실행 완료될 때 실행할 활동입니다.<br /><br /> <xref:System.Activities.Statements.TryCatch.Catches%2A>에 하나 이상의 활동을 추가하거나 <xref:System.Activities.Statements.TryCatch.Finally%2A> 블록에 활동을 추가해야 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [컬렉션](../workflow-designer/collection-activity-designers.md)
 - [rethrow](../workflow-designer/rethrow-activity-designer.md)

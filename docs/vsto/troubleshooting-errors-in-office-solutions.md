@@ -1,13 +1,10 @@
 ---
-title: "Office 솔루션의 오류 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션의 오류 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Project.DesignerDisabled
 - VST.Designer.CannotActivate
@@ -23,14 +20,14 @@ helpviewer_keywords:
 - troubleshooting [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6a077949de07d89adad76c6fc68754d2018fa461
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 1166f183e49bfc01592a645916ce12c1148ec8de
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-errors-in-office-solutions"></a>Office 솔루션에서 런타임 오류 문제 해결
   Visual Studio에서 Office 솔루션을 개발하는 동안 다음 작업을 수행할 때 문제가 발생할 수 있습니다.  
@@ -45,7 +42,7 @@ ms.lasthandoff: 01/10/2018
   
 -   [프로젝트 디버깅](#debugging)  
   
-##  <a name="creating"></a>만들기, 업그레이드 및 프로젝트 열기  
+##  <a name="creating"></a> 만들기, 업그레이드 및 프로젝트 열기  
  Office 프로젝트를 만들거나 열 때 다음과 같은 오류가 발생할 수 있습니다.  
   
 ### <a name="the-project-cannot-be-created"></a>프로젝트를 만들 수 없습니다.  
@@ -89,7 +86,7 @@ ms.lasthandoff: 01/10/2018
   
  프로젝트 업그레이드를 완료한 후 다른 Office 솔루션에서 사용되고 있지 않으면 개발 컴퓨터에서 Visual Studio 2005 Tools for Office Second Edition Runtime을 제거할 수 있습니다.  
   
-##  <a name="designers"></a>디자이너 사용  
+##  <a name="designers"></a> 디자이너 사용  
  문서 수준 프로젝트에서 문서, 통합 문서 또는 워크시트 디자이너를 사용하는 경우 다음과 같은 오류가 발생할 수 있습니다.  
   
 ### <a name="designer-failed-to-load-correctly"></a>디자이너를 제대로 로드하지 못했습니다.  
@@ -175,7 +172,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
   
  Word 또는 Excel 네임 스페이스 가져온 하 고 그 안에 있는 모든 클래스에 대 한 액세스 권한이 있지만 Word 또는 Excel 네임 스페이스 모호성을 없애기 위해 모든 형식을 정규화 해야 합니다.  
   
-##  <a name="building"></a>프로젝트 빌드  
+##  <a name="building"></a> 프로젝트 빌드  
  Office 프로젝트를 빌드하면 다음과 같은 오류가 발생할 수 있습니다.  
   
 ### <a name="cannot-build-a-document-level-project-that-is-based-on-a-document-with-restricted-permissions"></a>제한된 권한을 가진 문서를 기반으로 하는 문서 수준 프로젝트를 빌드할 수 없습니다.  
@@ -188,7 +185,7 @@ Word.Document document = Globals.ThisAddIn.Application.ActiveDocument;
 ### <a name="compiler-errors-occur-after-a-namedrange-control-is-deleted"></a>NamedRange 컨트롤이 삭제된 후 컴파일러 오류 발생  
  디자이너에서 활성 워크시트가 아닌 워크시트에서 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 삭제하는 경우 프로젝트에서 자동 생성된 코드를 제거할 수 없으며 컴파일러 오류가 발생할 수 있습니다. 코드를 제거하려면 컨트롤을 삭제하기 전에 항상 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤이 포함된 워크시트를 선택하여 활성 워크시트로 만들어야 합니다. 컨트롤을 삭제할 때 자동 생성된 코드가 삭제되지 않는 경우 워크시트를 활성화하고 워크시트가 수정된 상태로 표시되도록 내용을 변경하여 디자이너에서 코드를 삭제하게 할 수 있습니다. 프로젝트를 다시 빌드하면 코드가 제거됩니다.  
   
-##  <a name="debugging"></a>프로젝트 디버깅  
+##  <a name="debugging"></a> 프로젝트 디버깅  
  Office 프로젝트를 디버그하면 다음과 같은 오류가 발생할 수 있습니다.  
   
 ### <a name="prompt-to-uninstall-appears-when-you-publish-and-install-a-solution-on-the-development-computer"></a>개발 컴퓨터에 솔루션을 게시 및 설치할 때 제거 메시지가 표시됩니다.  

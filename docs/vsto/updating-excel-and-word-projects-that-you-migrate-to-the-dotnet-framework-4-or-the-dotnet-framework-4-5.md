@@ -1,13 +1,10 @@
 ---
-title: "Excel 및 Word 프로젝트는.NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 업데이트 | Microsoft Docs"
-ms.custom: 
+title: Excel 및 Word 프로젝트는.NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 974071c68edd685bd23b29d6d37c520f50a78078
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 8a1c7022af6a02a036476e55bdfc57becbd9d7f5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-excel-and-word-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 또는 .NET Framework 4.5로 마이그레이션하는 Excel 및 Word 프로젝트 업데이트
   다음 기능 중 하나를 사용하는 Excel 또는 Word 프로젝트가 있는 경우 대상 프레임워크가 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상으로 변경되면 코드를 수정해야 합니다.  
@@ -125,7 +122,7 @@ Microsoft.Office.Tools.Word.Document vstoDocument =
         Globals.Factory.GetVstoObject(Globals.ThisAddIn.Application.ActiveDocument);  
     ```  
   
- 자세한 내용은 [Extending Word Documents and Excel Workbooks in VSTO Add-ins at Run Time](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
+ 자세한 내용은 [런타임에 VSTO 추가 기능에서 Word 문서 및 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)을 참조하세요.  
   
 ##  <a name="generatedclasses"></a> 문서 수준 프로젝트에서 생성된 클래스의 인스턴스를 사용하는 코드 업데이트  
  .NET Framework 3.5를 대상으로 하는 문서 수준 프로젝트에서는 프로젝트에서 생성된 클래스가 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]의 다음 클래스에서 파생됩니다.  
@@ -199,7 +196,7 @@ private void DoSomethingToSheet(Microsoft.Office.Tools.Excel.Worksheet worksheet
   
  대상으로 하는 프로젝트에서 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 이상 버전에서는 이러한 메서드는 Controls 속성에서 사용할 수 있는 확장 메서드입니다. 이러한 확장 메서드를 사용하려면 메서드를 사용하는 코드 파일에 **Controls** 또는 **N:Microsoft.Office.Tools.Excel** 네임스페이스에 대한 <xref:Microsoft.Office.Tools.Excel> 또는 <xref:Microsoft.Office.Tools.Word> 문이 있어야 합니다. 이 문은 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 새 프로젝트에서 자동으로 생성됩니다. 그러나 .NET Framework 3.5를 대상으로 하는 프로젝트에서는 이 문이 자동으로 추가되지 않으므로 프로젝트를 변경할 때 추가해야 합니다.  
   
- 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 ##  <a name="ccevents"></a> Word 콘텐츠 컨트롤 이벤트를 처리하는 코드 업데이트  
  .NET Framework 3.5를 대상으로 하는 프로젝트에서 Word 콘텐츠 컨트롤의 이벤트는 제네릭 <xref:System.EventHandler%601> 대리자에 의해 처리됩니다. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서는 이러한 이벤트가 다른 대리자에 의해 처리됩니다.  
@@ -220,7 +217,7 @@ private void DoSomethingToSheet(Microsoft.Office.Tools.Excel.Worksheet worksheet
   
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 이러한 클래스는 <xref:Microsoft.Office.Tools.Excel.ControlSite> 및 <xref:Microsoft.Office.Tools.Word.ControlSite> 인터페이스로 바뀌었습니다. 참조를 대신 참조 하도록 Microsoft.Office.Tools.Excel.OLEObject 및 Microsoft.Office.Tools.Word.OLEControl 하는 코드를 수정 해야 <xref:Microsoft.Office.Tools.Excel.ControlSite> 및 <xref:Microsoft.Office.Tools.Word.ControlSite>합니다. 새 이름을 제외하면 이러한 컨트롤은 .NET Framework 3.5를 대상으로 하는 프로젝트와 동일한 방식으로 동작합니다.  
   
- 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+ 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 ##  <a name="itemproperty"></a> Controls.Item(Object) 속성을 사용하는 코드 업데이트  
  .NET Framework 3.5를 대상으로 하는 프로젝트에서 문서 또는 워크시트에 있는지 확인 하려면 Microsoft.Office.Tools.Word.Document.Controls 또는 Microsoft.Office.Tools.Excel.Worksheet.Controls 컬렉션의 Item(Object) 속성을 사용할 수 있습니다는 지정 된 컨트롤입니다.  
@@ -235,7 +232,7 @@ private void DoSomethingToSheet(Microsoft.Office.Tools.Excel.Worksheet worksheet
  [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 이러한 컬렉션 형식은 이제 <xref:System.Collections.CollectionBase>에서 파생되지 않는 인터페이스입니다. <xref:System.Collections.CollectionBase.Capacity%2A>, <xref:System.Collections.CollectionBase.List%2A>및 <xref:System.Collections.CollectionBase.InnerList%2A>와 같은 일부 멤버는 이러한 컬렉션 형식에서 더 이상 사용할 수 없습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
+ [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [콘텐츠 컨트롤](../vsto/content-controls.md)   
  [런타임에 Word 문서 및 VSTO 추가 기능에서 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   

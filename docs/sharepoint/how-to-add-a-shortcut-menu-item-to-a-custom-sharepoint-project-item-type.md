@@ -1,12 +1,10 @@
 ---
-title: "방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 바로 가기 메뉴 항목을 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 바로 가기 메뉴 항목을 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e30a04d06f74f905daeebc4236962e88c20540bd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1fa954c2f24daa17ce4f1ed9aeb90df9f4566e58
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-a-custom-sharepoint-project-item-type"></a>방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 바로 가기 메뉴 항목 추가
   사용자 지정 SharePoint 프로젝트 항목 형식을 정의한 경우에 프로젝트 항목에 바로 가기 메뉴 항목을 추가할 수 있습니다. 프로젝트 항목을 클릭할 때 메뉴 항목이 표시 **솔루션 탐색기**합니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  에 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem.Click> 새에 대 한 이벤트 처리기 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> 개체, 사용자가 바로 가기 메뉴 항목을 선택할 때 실행 하려는 작업을 수행 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 사용자 지정 프로젝트 항목 형식에 상황에 맞는 메뉴 항목을 추가 하는 방법을 보여 줍니다. 프로젝트 항목에서 바로 가기 메뉴를 열 때 **솔루션 탐색기** 를 선택 하 고는 **출력 창에 메시지 쓰기** 에 메시지를 표시 하는 메뉴 항목을 Visual Studio는 **출력**  창.  
   
  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#4](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypemenu.cs#4)]

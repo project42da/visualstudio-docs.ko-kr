@@ -1,13 +1,10 @@
 ---
-title: ".NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 Office 프로젝트에서 리본 메뉴 사용자 지정 업데이트 | Microsoft Docs"
-ms.custom: 
+title: .NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 Office 프로젝트에서 리본 메뉴 사용자 지정 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], migrating to .NET Framework 4
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4d3c2e834b3a618bf033ef7f37ca8bbac7d0efcf
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 98c5dee34fd40506289cf4a9f31488c3acc710ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 또는 .NET Framework 4.5로 마이그레이션하는 Office 프로젝트에서 리본 메뉴 사용자 지정 업데이트
   프로젝트가 사용 하 여 만든 리본 사용자 지정을 포함 하는 경우는 **리본 (비주얼 디자이너)** 프로젝트 항목, 대상 프레임 워크를 변경 하면 프로젝트 코드를 다음과 같이 변경을 확인 해야는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 나중에 있습니다.  
@@ -116,7 +113,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  Visual Basic 프로젝트에서 파일의 끝에 있는 `ThisRibbonCollection` 클래스를 찾습니다. 이 클래스의 선언을 수정 하도록 Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection에서 더 이상 상속 합니다.  
   
-##  <a name="ribboncontrols"></a>리본 컨트롤 인스턴스화  
+##  <a name="ribboncontrols"></a> 리본 컨트롤 인스턴스화  
  리본 컨트롤을 동적으로 인스턴스화하는 코드를 수정해야 합니다. .NET Framework 3.5를 대상으로 프로젝트에서 리본 컨트롤은 특정 시나리오에서 직접 인스턴스화할 수 있는 클래스입니다. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 이러한 컨트롤은 직접 인스턴스화할 수 없는 인터페이스입니다. <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 개체가 제공하는 메서드를 사용하여 컨트롤을 만들어야 합니다.  
   
  <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 개체에 액세스하는 방법에는 다음 두 가지가 있습니다.  
@@ -151,7 +148,7 @@ ms.lasthandoff: 01/10/2018
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonTab>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonTab%2A>|  
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton>|<xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.CreateRibbonToggleButton%2A>|  
   
-##  <a name="ribbonevents"></a>리본 이벤트 처리  
+##  <a name="ribbonevents"></a> 리본 이벤트 처리  
  Ribbon 컨트롤의 이벤트를 처리하는 코드를 수정해야 합니다. .NET Framework 3.5를 대상으로 하는 프로젝트에서 이러한 이벤트는 제네릭 <xref:System.EventHandler%601> 대리자에 의해 처리됩니다. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서는 이제 이러한 이벤트가 다른 대리자에 의해 처리됩니다.  
   
  다음 표에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 리본 이벤트 및 연결된 대리자를 보여 줍니다.  
@@ -192,7 +189,7 @@ this.tab1.Position = this.Factory.RibbonPosition.AfterOfficeId("TabHome");
 ```  
   
 ## <a name="see-also"></a>참고 항목  
- [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
+ [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [리본 디자이너](../vsto/ribbon-designer.md)  
   
   

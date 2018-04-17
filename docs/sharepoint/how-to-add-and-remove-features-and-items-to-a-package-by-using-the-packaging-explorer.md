@@ -1,13 +1,10 @@
 ---
-title: "방법: 패키징 탐색기를 사용 하 여 패키지에 기능과 항목을 제거 하 고 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 패키징 탐색기를 사용 하 여 패키지에 기능과 항목을 제거 하 고 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.RAD.PackagingExplorer
 dev_langs:
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 25a2514f2d25661de2898be8d2ef9ff051cc5559
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: dafa11c17968eb5468ecd4eff462ff9474ce5131
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer"></a>방법: 패키징 탐색기를 사용하여 패키지에 기능과 항목 추가 및 제거
   SharePoint 항목 및 기능을 배포 하는 패키지를 구성 하려면 패키징 탐색기를 사용할 수 있습니다. .Wsp 파일 내 SharePoint 프로젝트 항목 및 기능을 조정할 수 있습니다.  

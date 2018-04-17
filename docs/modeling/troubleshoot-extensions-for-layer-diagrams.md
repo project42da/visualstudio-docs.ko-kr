@@ -1,29 +1,27 @@
 ---
-title: "종속성 다이어그램의 확장 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: 종속성 다이어그램의 확장 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, extension errors
 - dependency diagrams, troubleshooting extensions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 21a14ed32bb1b63e2363736e438139479ff5bf60
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b546fa6a858ed959d93d4ec388c7bb8fb913864f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshoot-extensions-for-dependency-diagrams"></a>종속성 다이어그램의 확장 문제 해결
 이 항목에서는 레이어 모델 확장을 만들 때 발생할 수 있는 몇 가지 문제를 해결합니다.  
   
-#### <a name="when-i-press-f5-to-debug-my-extension-my-commands-gesture-handlers-validation-extensions-or-custom-properties-do-not-appear-on-dependency-diagrams-in-the-experimental-instance-of-includevsprvscode-qualityincludesvsprvsmdmd"></a>명령, 제스처 처리기, 유효성 검사 확장 또는 사용자 지정 속성의 실험적 인스턴스에서 종속성 다이어그램에 표시 되지는 my 확장을 디버그 하려면 f5 키를 누를 때[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
+#### <a name="when-i-press-f5-to-debug-my-extension-my-commands-gesture-handlers-validation-extensions-or-custom-properties-do-not-appear-on-dependency-diagrams-in-the-experimental-instance-of-includevsprvscode-qualityincludesvsprvsmdmd"></a>명령, 제스처 처리기, 유효성 검사 확장 또는 사용자 지정 속성의 실험적 인스턴스에서 종속성 다이어그램에 표시 되지는 my 확장을 디버그 하려면 f5 키를 누를 때 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]  
   
 1.  실험적 인스턴스에서 확장 솔루션을 열고 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 및는 **빌드** 메뉴를 클릭 **솔루션 다시 빌드**합니다.  
   
@@ -35,7 +33,7 @@ ms.lasthandoff: 02/09/2018
   
 1.  실행 중인 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 실험적 인스턴스가 없는지 확인합니다.  
   
-2.  Delete the following folder:  %LocalAppData%\Microsoft\VisualStudio\\[version]\ComponentModelCache  
+2.  다음 폴더를 삭제: %LocalAppData%\Microsoft\VisualStudio\\[version] \ComponentModelCache  
   
     > [!NOTE]
     >  % LocalAppData %는 일반적으로 *DriveName*: \Users\\*UserName*\AppData\Local입니다.  

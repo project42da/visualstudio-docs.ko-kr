@@ -1,12 +1,10 @@
 ---
-title: "연습: 사용자 지정 사이트 워크플로 작업 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 사용자 지정 사이트 워크플로 작업 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, site workflows
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: b723635b1baecfec4bddb2339414d57803c76d5d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 14eaa5f23af978ae603c4f8b94d3c3d18953943f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-a-custom-site-workflow-activity"></a>연습: 사용자 지정 사이트 워크플로 작업 만들기
   이 연습에서는를 사용 하 여 사이트 수준 워크플로 대 한 사용자 지정 활동을 만드는 방법을 보여 줍니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. (사이트 수준 워크플로 사이트에서 목록 뿐 아니라 전체 사이트에 적용 합니다.) 사용자 지정 활동 백업 알림 목록을 만들고 공지 목록의 내용을 그 안에 복사 합니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   지원 되는 버전 [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] 및 SharePoint 합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  

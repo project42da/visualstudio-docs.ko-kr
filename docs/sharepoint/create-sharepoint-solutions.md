@@ -1,13 +1,10 @@
 ---
-title: "SharePoint 솔루션 만들기 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 솔루션 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 84cc2df4bd683315676acaa7e3f0eead1c36e859
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 807fa532961edb4f2723858a47dcf1fe87134338
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-sharepoint-solutions"></a>SharePoint 솔루션 만들기
   SharePoint 응용 프로그램을 SharePoint Designer에서 만드는 대신 Visual Studio에서 만들 수 있습니다. Visual Studio에서는 고급 디버깅 도구, IntelliSense, 문 완성, 프로젝트 템플릿 등의 기능이 제공되므로 SharePoint 개발을 신속하게 수행할 수 있습니다. 또한 Visual Studio는 고급 .NET Framework 기반 도구 및 언어를 활용합니다. Visual Basic 또는 Visual C#을 사용하여 SharePoint 프로젝트를 개발할 수 있으며 JavaScript를 사용하여 SharePoint 프로젝트용 앱을 개발할 수 있습니다.  
@@ -36,7 +33,7 @@ ms.lasthandoff: 01/10/2018
   
 |||  
 |-|-|  
-|![설명서](../sharepoint/media/vs-icon-documentation.gif "설명서")|**문서**<br /><br /> -   [시작 &#40; Visual Studio &#41;에서 SharePoint 개발](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)<br />-   [SharePoint 솔루션 개발](../sharepoint/developing-sharepoint-solutions.md)<br />-   [SharePoint 솔루션 지역화](../sharepoint/localizing-sharepoint-solutions.md)<br />-   [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)<br />-   [SharePoint 솔루션 패키징 및 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)<br />-   [Visual Studio에서 SharePoint 도구 확장](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|  
+|![설명서](../sharepoint/media/vs-icon-documentation.gif "설명서")|**문서**<br /><br /> -   [시작 하기 &#40;Visual Studio에서 SharePoint 개발&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)<br />-   [SharePoint 솔루션 개발](../sharepoint/developing-sharepoint-solutions.md)<br />-   [SharePoint 솔루션 지역화](../sharepoint/localizing-sharepoint-solutions.md)<br />-   [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)<br />-   [SharePoint 솔루션 패키징 및 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)<br />-   [Visual Studio에서 SharePoint 도구 확장](../sharepoint/extending-the-sharepoint-tools-in-visual-studio.md)|  
 |![설명서](../sharepoint/media/vs-icon-documentation.gif "설명서")|**주요 작업**<br /><br /> -   [연습: 사이트 열, 콘텐츠 형식 및 SharePoint에 대 한 목록 만들기](../sharepoint/walkthrough-create-a-site-column-content-type-and-list-for-sharepoint.md)<br />-   [방법: 이벤트 수신기 만들기](../sharepoint/how-to-create-an-event-receiver.md)<br />-   [방법: BDC 모델 만들기](../sharepoint/how-to-create-a-bdc-model.md)<br />-   [방법: SharePoint 웹 파트 만들기](../sharepoint/how-to-create-a-sharepoint-web-part.md)<br />-   [방법: SharePoint 응용 프로그램 페이지에 대 한 사용자 정의 컨트롤 만들기 또는 웹 파트](../sharepoint/how-to-create-a-user-control-for-a-sharepoint-application-page-or-web-part.md)|  
 |![연습](../sharepoint/media/vs-icon-walkthroughs.gif "연습")|**연습**<br /><br /> -   [SharePoint 개발 연습](../sharepoint/sharepoint-development-walkthroughs.md)|  
 |![코드 샘플](../sharepoint/media/vs-icon-codesamples.gif "코드 샘플")|**코드 샘플**<br /><br /> -   [SharePoint 개발 샘플](../sharepoint/sharepoint-development-samples.md)<br />-   [SharePoint 개발자 다운로드](http://msdn.microsoft.com/sharepoint/aa905690.aspx)|  

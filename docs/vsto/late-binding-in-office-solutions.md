@@ -1,12 +1,10 @@
 ---
-title: "Office 솔루션에서 런타임에 바인딩 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션에서 런타임에 바인딩 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - casting, object to specific type
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 430c10ffa5f79be45282d637b48772943be638e9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7e205874e1c5c4e5de639e28768d6369b43c1e1a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="late-binding-in-office-solutions"></a>Office 솔루션에서 런타임에 바인딩
   Office 응용 프로그램의 개체 모델의 일부 형식은 런타임에 바인딩 기능을 통해 사용할 수 있는 기능을 제공 합니다. 예를 들어 일부 메서드 및 속성은 다양 한 유형의 Office 응용 프로그램의 컨텍스트에 따라 개체를 반환할 수 있으며 일부 형식은 다른 메서드나 속성에 다양 한 상황에 노출할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
  반환 값의 가능한 형식을 반환 하는 멤버에 대 한 참조 설명서 대부분의 경우에서 나열 된 <xref:System.Object>합니다. 개체를 캐스팅 또는 변환 코드 편집기에서 개체에 대 한 IntelliSense를 사용할 수 있습니다.  
   
- Visual Basic의 변환에 대 한 정보를 참조 하십시오. [암시적 및 명시적 변환 &#40; Visual Basic &#41; ](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions) 및 [CType 함수 &#40; Visual Basic &#41; ](/dotnet/visual-basic/language-reference/functions/ctype-function).  
+ Visual Basic의 변환에 대 한 정보를 참조 하십시오. [암시적 변환과 명시적 변환 &#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/data-types/implicit-and-explicit-conversions) 및 [CType 함수 &#40;Visual Basic&#41;](/dotnet/visual-basic/language-reference/functions/ctype-function)합니다.  
   
 ### <a name="examples"></a>예제  
  다음 코드 예제에서는 Visual Basic 프로젝트에서 특정 형식으로 개체를 캐스팅 하는 방법을 보여 줍니다. 여기서 **Option Strict** 켜져 있습니다. 이러한 유형의 프로젝트를 명시적으로 캐스팅 해야는 <xref:Microsoft.Office.Tools.Excel.WorksheetBase.Cells%2A> 속성을는 <xref:Microsoft.Office.Interop.Excel.Range>합니다. 이 예제는 문서 수준 Excel 프로젝트 이라는 워크시트 클래스가 포함 된 `Sheet1`합니다.  
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)   
  [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)   
- [유형 동적 &#40;를 사용 하 여 &#35; 프로그래밍 가이드 &#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
+ [Dynamic 형식 사용 &#40;C&#35; 프로그래밍 가이드&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
  [Option Strict 문](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [리플렉션(C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [리플렉션(Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  

@@ -1,13 +1,10 @@
 ---
-title: "문서 수준 사용자 지정 아키텍처 | Microsoft Docs"
-ms.custom: 
+title: 문서 수준 사용자 지정 아키텍처 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -22,14 +19,14 @@ helpviewer_keywords:
 - architecture [Office development in Visual Studio], document-level customizations
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 09a8700086ec8a718e14764f807e57fcb1f882f7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 659950fee0e292a0e0c37a82bb8a18fe2783824d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="architecture-of-document-level-customizations"></a>문서 수준 사용자 지정 아키텍처
   [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)] 에는 Microsoft Office Word 및 Microsoft Office Excel용 문서 수준 사용자 지정을 만드는 프로젝트가 포함되어 있습니다. 이 항목에서는 다음과 같은 문서 수준 사용자 지정의 측면에 대해 설명합니다.  
@@ -42,14 +39,14 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- 문서 수준 사용자 지정 만들기에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md), [Word 용 문서 수준 사용자 지정 프로그래밍 시작](../vsto/getting-started-programming-document-level-customizations-for-word.md), 및 [Excel 용 문서 수준 사용자 지정 프로그래밍 시작](../vsto/getting-started-programming-document-level-customizations-for-excel.md)합니다.  
+ 문서 수준 사용자 지정 만들기에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md), [가져오기 시작 문서 수준 사용자 지정 프로그래밍 Word에 대 한 ](../vsto/getting-started-programming-document-level-customizations-for-word.md), 및 [Excel 용 문서 수준 사용자 지정 프로그래밍 시작](../vsto/getting-started-programming-document-level-customizations-for-excel.md)합니다.  
   
 ##  <a name="UnderstandingCustomizations"></a> Understanding Customizations  
  Visual Studio에서 Office 개발자 도구를 사용하여 문서 수준 사용자 지정을 만들 때 특정 문서와 연결된 관리 코드 어셈블리를 만듭니다. 연결된 어셈블리가 있는 문서 또는 통합 문서를 관리 코드 확장이 있다고 말합니다. 자세한 내용은 [Designing and Creating Office Solutions](../vsto/designing-and-creating-office-solutions.md)을 참조하세요.  
   
  사용자가 문서를 열면 Microsoft Office 응용 프로그램에서 해당 어셈블리가 로드됩니다. 어셈블리가 로드되고 나면 문서가 열려있는 동안 사용자 지정이 이벤트에 응답할 수 있습니다. 사용자 지정은 문서가 열려 있는 동안 응용 프로그램을 자동화하고 확장하기 위해 개체 모델을 호출할 수도 있으며 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]의 클래스 중 하나를 사용할 수 있습니다.  
   
- 어셈블리는 응용 프로그램의 주 interop 어셈블리를 통해 응용 프로그램의 COM 구성 요소와 통신합니다. 자세한 내용은 참조 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md) 및 [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
+ 어셈블리는 응용 프로그램의 주 interop 어셈블리를 통해 응용 프로그램의 COM 구성 요소와 통신합니다. 자세한 내용은 참조 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md) 및 [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)합니다.  
   
  사용자가 동시에 여러 개의 문서 수준 사용자 지정을 여는 경우 각 어셈블리는 서로 다른 응용 프로그램 도메인에 로드됩니다. 즉, 한 솔루션이 잘못 동작해도 다른 솔루션이 실패할 수 없습니다. 문서 수준 사용자 지정은 단일 응용 프로그램 도메인의 단일 문서에서 작동하도록 설계된 것으로 문서 간 통신을 위해 설계되지 않았습니다. 응용 프로그램 도메인에 대 한 자세한 내용은 참조 [응용 프로그램 도메인](/dotnet/framework/app-domains/application-domains)합니다.  
   

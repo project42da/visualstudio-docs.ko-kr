@@ -2,23 +2,21 @@
 title: '방법: 도메인 특정 언어에 표준 메뉴 명령을 수정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - .vsct files, adding commands to a domain-specific language
 - Domain-Specific Language, adding custom commands
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c11a559fb8ef3cc6eb951950d8779691ad20c3b5
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 19d555f770802044b88e6a446932596176baa9fb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-modify-a-standard-menu-command-in-a-domain-specific-language"></a>방법: 도메인별 언어에서 표준 메뉴 명령 수정
 DSL에서 자동으로 정의되는 일부 표준 명령의 동작을 수정할 수 있습니다. 수정할 수는 예를 들어 **잘라내기** 를 중요 한 정보는 제외 됩니다. 이렇게 하려면 명령 집합 클래스에서 메서드를 재정의합니다. 이러한 클래스는 DslPackage 프로젝트의 CommandSet.cs 파일에서 정의되며 <xref:Microsoft.VisualStudio.Modeling.Shell.CommandSet>에서 파생됩니다.  

@@ -1,12 +1,10 @@
 ---
-title: "PowerPoint 솔루션 | Microsoft Docs"
-ms.custom: 
+title: PowerPoint 솔루션 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,18 +17,19 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], PowerPoint
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 9dfa41bdecc7e47a0bf367409aac79d354daaad3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 3808ecf78e8a7e110561c558a6278ee4873843c0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="powerpoint-solutions"></a>PowerPoint 솔루션
   Visual Studio에서는 Microsoft Office PowerPoint용 VSTO 추가 기능을 만드는 데 사용할 수 있는 프로젝트 템플릿을 제공합니다. VSTO 추가 기능을 사용하여 PowerPoint를 자동화하거나, PowerPoint 기능을 확장하거나, PowerPoint UI(사용자 인터페이스)를 사용자 지정할 수 있습니다.  
   
- VSTO 추가 기능에 대한 자세한 내용은 [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md) 및 [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)를 참조하세요. Microsoft Office를 사용한 프로그래밍을 처음 접하는 경우 참조 [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)합니다.  
+ VSTO 추가 기능에 대한 자세한 내용은 [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md) 및 [Architecture of VSTO Add-ins](../vsto/architecture-of-vsto-add-ins.md)를 참조하세요. Microsoft Office를 사용한 프로그래밍을 처음 접하는 경우 참조 [시작 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)합니다.  
   
  [!INCLUDE[appliesto_pptallapp](../vsto/includes/appliesto-pptallapp-md.md)]  
   
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/10/2018
   
  VSTO 추가 기능에서 PowerPoint 개체 모델에 액세스하려면 프로젝트에서 `Application` 클래스의 `ThisAddIn` 필드를 사용합니다. `Application` 필드는 PowerPoint의 현재 인스턴스를 나타내는 <xref:Microsoft.Office.Interop.PowerPoint.Application> 개체를 반환합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
- PowerPoint 개체 모델을 호출할 때 PowerPoint의 주 Interop 어셈블리에서 제공되는 형식을 사용합니다. 주 interop 어셈블리는 VSTO 추가 기능의 관리 코드와 PowerPoint의 COM 개체 모델 간의 다리 역할을 합니다. PowerPoint 주 interop 어셈블리의 모든 형식은 <xref:Microsoft.Office.Interop.PowerPoint> 네임스페이스에서 정의됩니다. 주 interop 어셈블리에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md)합니다.  
+ PowerPoint 개체 모델을 호출할 때 PowerPoint의 주 Interop 어셈블리에서 제공되는 형식을 사용합니다. 주 interop 어셈블리는 VSTO 추가 기능의 관리 코드와 PowerPoint의 COM 개체 모델 간의 다리 역할을 합니다. PowerPoint 주 interop 어셈블리의 모든 형식은 <xref:Microsoft.Office.Interop.PowerPoint> 네임스페이스에서 정의됩니다. 주 interop 어셈블리에 대 한 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md)합니다.  
   
 ##  <a name="WordOMDocumentation"></a> PowerPoint 개체 모델 설명서 사용  
  PowerPoint 개체 모델에 대한 자세한 내용은 PowerPoint PIA(주 interop 어셈블리) 참조 및 VBA 개체 모델 참조를 참조할 수 있습니다.  
@@ -79,7 +78,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [연습: 첫 번째 VSTO 추가 기능에 PowerPoint에 대 한 만들기](../vsto/walkthrough-creating-your-first-vsto-add-in-for-powerpoint.md)   
  [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)   
- [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [VSTO 추가 기능 아키텍처](../vsto/architecture-of-vsto-add-ins.md)   
  [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   

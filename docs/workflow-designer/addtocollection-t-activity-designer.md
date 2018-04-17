@@ -1,5 +1,5 @@
 ---
-title: "A d d&lt;T&gt; 활동 디자이너 | Microsoft Docs"
+title: A d d&lt;T&gt; 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: f7fc0702-164e-4370-8946-bb2f9f9384b7
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6da9179de0402acc5fdbe9cb5cfe7c8dda3ba1a5
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c961c8ab893b1d8b4a2d519d8b9dce27fd6f93c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="addtocollectionlttgt-activity-designer"></a>A d d&lt;T&gt; 활동 디자이너
 **a d d\<T >** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.Activities.Statements.AddToCollection%601> 활동입니다.
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.AddToCollection%601.Collection%2A>|True|항목이 추가될 컬렉션입니다. 이 컬렉션은 형식의 **c t i o < TypeArgument\>**합니다. 컬렉션을 지정하려면 속성 표에 Visual Basic 식을 입력합니다.|
 |*TypeArgument*|True|<xref:System.Collections.Generic.ICollection%601>에 포함된 항목의 형식 T입니다. 기본적으로이 *TypeArgument* 유형이으로 설정 되어 **Int32**합니다. 값을 변경의 종류를 변경 하려면는 *TypeArgument* 속성 표의 콤보 상자에 있습니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [컬렉션](../workflow-designer/collection-activity-designers.md)
 - [A d d\<T > 활동 디자이너](../workflow-designer/addtocollection-t-activity-designer.md)

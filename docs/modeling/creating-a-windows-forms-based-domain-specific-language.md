@@ -2,20 +2,18 @@
 title: Windows Forms 기반 도메인 특정 언어를 만드는 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7eb6bc6542350439250ace3dbaa7f2ba920e93ed
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 23fe0d582f92d5025049974ccd64357203e4845a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows Forms 기반 도메인별 언어 만들기
 Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도메인 특정 언어 (DSL) 모델의 상태를 표시 합니다. 이 항목에서는 Windows Form DSL에 바인딩, 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK입니다.  

@@ -1,12 +1,10 @@
 ---
-title: "연습: Excel 용 첫 문서 수준 사용자 지정 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: Excel 용 첫 문서 수준 사용자 지정 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], creating your first project
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 656486b691c030839fbb2f0d0ebb568d72ca36e0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f1a8335c301d8eba2ec170c9b1b462d09364904f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-your-first-document-level-customization-for-excel"></a>연습: Excel용 첫 문서 수준 사용자 지정 만들기
   이 소개용 연습에서는 Microsoft Office Excel에 대한 문서 수준 사용자 지정을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 특정 통합 문서가 열려 있는 경우에만 사용할 수 있습니다. 통합 문서가 열려 있을 때 새 리본 탭 표시와 같은 응용 프로그램 수준 변경은 문서 수준 사용자 지정을 사용하여 수행할 수 없습니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/10/2018
   
 8.  선택 **새 문서**를 클릭 하 고 **확인**합니다.  
   
-    -   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]만듭니다는 **FirstWorkbookCustomization** 프로젝트를 연 다음 파일을 프로젝트에 추가 합니다.  
+    -   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 만듭니다는 **FirstWorkbookCustomization** 프로젝트를 연 다음 파일을 프로젝트에 추가 합니다.  
   
     -   *FirstWorkbookCustomization*.xlsx-프로젝트에 Excel 통합 문서를 나타냅니다. 모든 워크시트 및 차트를 포함합니다.  
   
@@ -170,7 +169,7 @@ ms.lasthandoff: 01/10/2018
 -   Excel 용 문서 수준 사용자 지정 배포: [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Excel 솔루션](../vsto/excel-solutions.md)   
  [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
  [Excel 개체 모델 개요](../vsto/excel-object-model-overview.md)   

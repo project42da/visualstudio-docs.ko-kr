@@ -1,13 +1,10 @@
 ---
-title: "방법: 증분 변경 되는 데이터를 사용한 프로그래밍 방식으로 자동으로 채우기 범위 | Microsoft Docs"
-ms.custom: 
+title: '방법: 증분 변경 되는 데이터를 사용한 프로그래밍 방식으로 자동으로 채우기 범위 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - workbooks, filling ranges
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d6634fea629358368d3b61c5b505e5eec7ec0186
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: e358869dea101d0c0ca012acd46b7822e6cf5873
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-automatically-fill-ranges-with-incrementally-changing-data"></a>방법: 프로그래밍 방식으로 증분 변경되는 데이터를 사용한 범위 자동 입력
   <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> 의 메서드는 <xref:Microsoft.Office.Interop.Excel.Range> 개체를 사용 하면 값이 포함 된 워크시트의 범위를 자동으로 채울 수 있습니다. 대부분의 경우는 <xref:Microsoft.Office.Interop.Excel.Range.AutoFill%2A> 증분적으로 증가 하거나 감소 하는 값 범위에 저장할 메서드를 사용 합니다. 옵션 상수를 제공 하 여 동작을 지정할 수는 <xref:Microsoft.Office.Interop.Excel.XlAutoFillType> 열거형입니다.  
@@ -41,7 +38,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  전달할 수 없습니다는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤 대신는 <xref:Microsoft.Office.Interop.Excel.Range>합니다. 자세한 내용은 [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)을 참조하세요.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#49)]
  [!code-vb[Trin_VstcoreExcelAutomation#49](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#49)]  
   
@@ -61,7 +58,7 @@ ms.lasthandoff: 01/10/2018
  [방법: 프로그래밍 방식으로 코드에서 워크시트 범위 참조](../vsto/how-to-programmatically-refer-to-worksheet-ranges-in-code.md)   
  [방법: 프로그래밍 방식으로 통합 문서에서 범위에 스타일을 적용](../vsto/how-to-programmatically-apply-styles-to-ranges-in-workbooks.md)   
  [방법: 프로그래밍 방식으로 Excel 계산 실행](../vsto/how-to-programmatically-run-excel-calculations-programmatically.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)  
   
   

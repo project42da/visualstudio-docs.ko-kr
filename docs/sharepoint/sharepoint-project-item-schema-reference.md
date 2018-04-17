@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 프로젝트 항목 스키마 참조 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 프로젝트 항목 스키마 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -25,13 +23,14 @@ helpviewer_keywords:
 - ProjectItem element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 99a2471919483f02a9f58a35ad164527a12a39c5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9b039b1cf31a04a24819b03114c661a3ab1b108a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sharepoint-project-item-schema-reference"></a>SharePoint 프로젝트 항목 스키마 참조
   Visual Studio를 사용 하 여 SharePoint 프로젝트 항목 스키마.spdata 파일의 내용을 합니다. .Spdata 파일 내용과 SharePoint 프로젝트 항목의 동작을 지정합니다. SharePoint 프로젝트 항목의 내용에 대 한 자세한 내용은 참조 [SharePoint 프로젝트 항목에 대 한 프로젝트 템플릿과 항목 템플릿 만들기](../sharepoint/creating-item-templates-and-project-templates-for-sharepoint-project-items.md)합니다.  

@@ -1,21 +1,19 @@
 ---
-title: "아이콘 또는 데코레이터의 표시 여부 제어 | Microsoft Docs"
-ms.custom: 
+title: 아이콘 또는 데코레이터의 표시 여부 제어 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 835d9d356a06c831bb3decf6d0a5a6a4b5620302
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7682bbb448caa6dbd1938dfc6dcdb6d89c083680
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>아이콘 또는 데코레이터의 가시성 제어
 A *decorator* 아이콘이 나 DSL ()는 도메인 특정 언어의 모양에 표시 되는 텍스트의 줄은 합니다. Decorator 표시 하 고 모델의 속성의 상태에 따라 사라질 수 있습니다. 예를 들어 개인을 나타낼 셰이프를 개인의 성별, 자식, 수에 따라 표시 하는 서로 다른 아이콘이 있을 수 있습니다.  
@@ -67,7 +65,7 @@ A *decorator* 아이콘이 나 DSL ()는 도메인 특정 언어의 모양에 �
   
      **이름** 예를 들어 **DecoratorControl**  
   
-     **Type** = `Boolean`  
+     **형식** = `Boolean`  
   
      자세한 내용은 참조 [계산 및 저장소 속성을 사용자 지정](../modeling/calculated-and-custom-storage-properties.md)합니다.  
   
@@ -91,7 +89,7 @@ A *decorator* 아이콘이 나 DSL ()는 도메인 특정 언어의 모양에 �
   
 6.  네임 스페이스, 클래스와 메서드가 누락 된 note 합니다.  예를 들어 Company.FamilyTree.Person.GetDecoratorControlValue() 합니다.  
   
-7.  별도 코드 파일에서 누락 된 메서드를 포함 하는 partial 클래스 정의 작성 합니다. 예:  
+7.  별도 코드 파일에서 누락 된 메서드를 포함 하는 partial 클래스 정의 작성 합니다. 예를 들어:  
   
     ```  
     namespace Company.FamilyTree  

@@ -1,25 +1,23 @@
 ---
-title: "T4 텍스트 템플릿 작성 | Microsoft Docs"
-ms.custom: 
+title: T4 텍스트 템플릿 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, syntax
 - text templates, guide
 - text templates, functions that generate text
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e640583f42154497ffe5bd25d3c6860fb9d20ca8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 140e49af62b2ea1a9bb43b7cf3fb95ccc7b257e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-a-t4-text-template"></a>T4 텍스트 템플릿 쓰기
 텍스트 템플릿은 해당 템플릿에서 생성될 텍스트를 포함합니다. 예를 들어 웹 페이지를 만드는 템플릿을 포함 됩니다 "\<html > …" 및 HTML 페이지의 다른 모든 표준 부분입니다. 템플릿에 삽입은 *제어 블록*, 프로그램 코드 조각인입니다. 제어 블록은 경우에 따라 다른 값을 제공하여 텍스트 부분을 조건부로/반복 적용할 수 있도록 합니다.  
@@ -190,7 +188,7 @@ private void WriteSquareLine(int i)
 <#@ assembly name="System.Xml" #>  
 ```  
   
- 절대 경로 이름을 사용하거나 경로 이름에 표준 매크로 이름을 사용해야 합니다. 예:  
+ 절대 경로 이름을 사용하거나 경로 이름에 표준 매크로 이름을 사용해야 합니다. 예를 들어:  
   
 ```  
 <#@ assembly name="$(SolutionDir)library\MyAssembly.dll" #>  
@@ -211,7 +209,7 @@ private void WriteSquareLine(int i)
   
  자세한 내용은 참조 [T4 Import 지시문](../modeling/t4-import-directive.md)합니다.  
   
-###  <a name="Include"></a>코드 및 텍스트 포함  
+###  <a name="Include"></a> 코드 및 텍스트 포함  
  `include` 지시문은 다른 템플릿 파일의 텍스트를 삽입합니다. 예를 들어 다음 지시문은 `test.txt`의 내용을 삽입합니다.  
   
  `<#@ include file="c:\test.txt" #>`  
@@ -241,7 +239,7 @@ private void WriteSquareLine(int i)
   
  **탐색 가능한 모델로 파일을 로드**합니다. 즉, 텍스트 템플릿 코드가 탐색할 수 있는 모델로 데이터를 읽는 보다 효율적인 방식을 사용할 수 있습니다. 예를 들어 XML 파일을 로드한 다음 XPath 식을 사용하여 탐색할 수 있습니다. 사용할 수도 있습니다 [xsd.exe](http://go.microsoft.com/fwlink/?LinkId=178765) 의 XML 데이터를 읽을 수 있는 클래스 집합을 만듭니다.  
   
- **다이어그램 또는 폼에서 모델 파일을 편집 합니다.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]다이어그램 또는 Windows form으로 모델을 편집할 수 있는 도구를 제공 합니다. 그러면 생성된 응용 프로그램의 사용자와 모델에 대해 보다 쉽게 논의할 수 있습니다. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]에서는 모델 구조를 반영하는 강력한 형식의 클래스 집합도 만듭니다. 자세한 내용은 참조 [도메인 특정 언어에서 코드 생성](../modeling/generating-code-from-a-domain-specific-language.md)합니다.  
+ **다이어그램 또는 폼에서 모델 파일을 편집 합니다.** [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 다이어그램 또는 Windows form으로 모델을 편집할 수 있는 도구를 제공 합니다. 그러면 생성된 응용 프로그램의 사용자와 모델에 대해 보다 쉽게 논의할 수 있습니다. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]에서는 모델 구조를 반영하는 강력한 형식의 클래스 집합도 만듭니다. 자세한 내용은 참조 [도메인 특정 언어에서 코드 생성](../modeling/generating-code-from-a-domain-specific-language.md)합니다.  
   
 ### <a name="relative-file-paths-in-design-time-templates"></a>디자인 타임 템플릿의 상대 파일 경로  
  에 [디자인 타임 텍스트 템플릿](../modeling/design-time-code-generation-by-using-t4-text-templates.md)텍스트 템플릿 사용 하 여 상대적인 위치에 파일을 참조 하려는 경우, `this.Host.ResolvePath()`합니다. 또한 `hostspecific="true"` 지시문에서 `template`도 설정해야 합니다.  

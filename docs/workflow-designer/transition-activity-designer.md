@@ -1,20 +1,20 @@
 ---
-title: "전환 활동 디자이너 | Microsoft Docs"
+title: 전환 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
 - System.Activities.Statements.Transition.UI
 ms.assetid: f6e8b5cc-7fb8-4699-9703-f3c9fc7cc316
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e245df7132075c0a7b691e5fee1069ebffd47ca0
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 25b00c38110e8a97d5e5465f3e170bef9c28bb88
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="transition-activity-designer"></a>전환 활동 디자이너
 <xref:System.Activities.Statements.Transition>은 두 상태 간 전환을 나타냅니다.
@@ -42,7 +42,7 @@ ms.lasthandoff: 03/12/2018
 
  공유 트리거 전환은 같은 트리거 이벤트를 공유하는 전환 집합입니다. 공유 트리거를 사용하면 공통의 트리거 이벤트를 공유하는 여러 전환에 대해 구성된 식의 평가를 기준으로 대상 상태로 조건적 진행이 가능합니다. 전환에 추가 작업을 추가하고 공유 전환을 만들려면 원하는 전환의 시작을 나타내는 원을 클릭하고 원하는 상태로 끕니다. 새 전환은 초기 전환과 동일한 트리거를 공유하지만 고유한 조건과 작업을 사용합니다. 공유 전환을 만들 수도 있습니다에서 전환 디자이너 내에서 클릭 하 여 **공유 트리거 전환 추가** 전환 디자이너 한 다음 원하는 대상 상태를 선택 하 고 맨 아래에  **연결에 사용할 상태** 드롭 다운 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [StateMachine](../workflow-designer/statemachine-activity-designer.md)
 - [FinalState](../workflow-designer/finalstate-activity-designer.md)

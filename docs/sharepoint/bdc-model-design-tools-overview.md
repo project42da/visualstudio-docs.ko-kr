@@ -1,12 +1,10 @@
 ---
-title: "BDC 모델 디자인 도구 개요 | Microsoft Docs"
-ms.custom: 
+title: BDC 모델 디자인 도구 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.BDC.Method_Details
 - VS.SharePointTools.BDC.Explorer
@@ -27,13 +25,14 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], designer
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 89b497221e17402567970588a5b55a49fec3d705
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 088afa321e5f4026735e88c3068900b0bfc8c07c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bdc-model-design-tools-overview"></a>BDC 모델 디자인 도구 개요
   BDC 디자이너를 사용 하 여 비즈니스 데이터 BDC (연결) 모델을 디자인할 수는 **BDC 메서드 세부 정보** 창 및 **BDC 탐색기**합니다.  

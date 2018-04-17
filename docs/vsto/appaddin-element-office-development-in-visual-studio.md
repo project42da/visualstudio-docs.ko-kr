@@ -1,13 +1,10 @@
 ---
-title: "&lt;appAddin&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: '&lt;appAddin&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <appAddin> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 27f286f9bde8db68a7190796f1d154a402fb208d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 9def97d044af74f02a2064703691333ec9f176aa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltappaddingt-element-office-development-in-visual-studio"></a>&lt;appAddin&gt; 요소 (Visual Studio에서 Office 개발)
   `appAddin` 네임스페이스의 `vstov4` 요소는 VSTO 추가 기능에 대한 사용자 지정 관련 정보를 저장합니다.  
@@ -54,13 +51,13 @@ ms.lasthandoff: 01/10/2018
  `appAddin` 요소에는 다음 자식 요소가 있습니다.  
   
 ### <a name="friendlyname"></a>friendlyName  
- 선택 사항입니다. `friendlyName` 요소에 대해서는 설명 [&#60; friendlyName &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/friendlyname-element-office-development-in-visual-studio.md).  
+ 선택 사항입니다. `friendlyName` 요소에 대해서는 설명 [ &#60;friendlyName&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/friendlyname-element-office-development-in-visual-studio.md)합니다.  
   
 ### <a name="description"></a>설명  
- 선택 사항입니다. `description` 요소에 대해서는 설명 [&#60; 설명 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/description-element-office-development-in-visual-studio.md).  
+ 선택 사항입니다. `description` 요소에 대해서는 설명 [ &#60;설명&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/description-element-office-development-in-visual-studio.md)합니다.  
   
 ### <a name="formregions"></a>formRegions  
- 양식 영역을 포함하는 Outlook VSTO 추가 기능에 대해서만 필수 요소. `formRegions` 요소에 대해서는 설명 [&#60; formRegions &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/formregions-element-office-development-in-visual-studio.md).  
+ 양식 영역을 포함하는 Outlook VSTO 추가 기능에 대해서만 필수 요소. `formRegions` 요소에 대해서는 설명 [ &#60;formRegions&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/formregions-element-office-development-in-visual-studio.md)합니다.  
   
 ## <a name="vsto-add-in-example"></a>VSTO 추가 기능 예제  
   

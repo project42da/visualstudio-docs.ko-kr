@@ -1,24 +1,22 @@
 ---
-title: "T4 텍스트 템플릿 디버깅 | Microsoft Docs"
-ms.custom: 
+title: T4 텍스트 템플릿 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, troubleshooting
 - text templates, debugging
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8408cfca0df02a903e4b6394e2b60dcffcfb2904
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 86d8bb0fafefab8a0273012ed8e45b44c31eac47
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-a-t4-text-template"></a>T4 텍스트 템플릿 디버깅
 텍스트 서식 파일에서 중단점을 설정할 수 있습니다. 디자인 타임 텍스트 서식 파일을 디버깅 하려면 텍스트 템플릿 파일을 저장 한 다음 선택 **T4 템플릿 디버깅** 솔루션 탐색기에서 파일의 바로 가기 메뉴. 런타임 텍스트 서식 파일을 디버깅 하려면 단순히 속해 있는 응용 프로그램을 디버깅 합니다.  
@@ -72,7 +70,7 @@ ms.lasthandoff: 02/09/2018
 |파일 ' {'이 (가)에 대 한 include 지시문에서는 무한 루프가 발생 합니다.|순환 지시문을 포함 하는 경우 표시 지정 (예를 들어: 파일 A A 라는 파일이 포함 된 파일 B 포함).|순환 지정 하지 않으면 지시문을 포함 합니다.|  
 |변환 실행:|모든 오류 또는 경고 변환을 실행 하는 동안 생성 된이 문자열에 추가 합니다.|해당 사항 없음.|  
 |블록 내에서 예기치 않은 시작 또는 끝 태그를 찾았습니다. 시작 또는 끝 태그를 잘못 입력 하지 않은 하며 템플릿에 중첩된 된 블록이 없는지 확인 합니다.|예기치 않은 경우에 표시 \<# 또는 #> 합니다. 즉, 있는 경우는 \<# 닫혀 있지 다른 열린 태그 뒤 또는 있습니다 사용할 #> 때 전에 닫히지 않은 열려 태그가 없습니다. 메시지는 일치 하지 않는 태그의 줄 번호를 제공 합니다.|일치 하지 않는 시작 또는 끝 태그를 제거 하거나 이스케이프 문자를 사용 합니다.|  
-|지시문의 형식이 잘못 지정 되었습니다. 지시문은 무시 됩니다. 형식에서 지시문을 지정 하십시오`<#@ name [parametername="parametervalue"]*  #>`|올바른 형식에서 지시문을 지정 하지 않으면 파서에서 표시 합니다. 메시지는 잘못 된 지시문의 줄 번호를 제공 합니다.|모든 지시문 형태로 확인 `<#@ name [parametername="parametervalue"]*  #>`합니다. 자세한 내용은 참조 [T4 텍스트 템플릿 지시문](../modeling/t4-text-template-directives.md)합니다.|  
+|지시문의 형식이 잘못 지정 되었습니다. 지시문은 무시 됩니다. 형식에서 지시문을 지정 하십시오 `<#@ name [parametername="parametervalue"]*  #>`|올바른 형식에서 지시문을 지정 하지 않으면 파서에서 표시 합니다. 메시지는 잘못 된 지시문의 줄 번호를 제공 합니다.|모든 지시문 형태로 확인 `<#@ name [parametername="parametervalue"]*  #>`합니다. 자세한 내용은 참조 [T4 텍스트 템플릿 지시문](../modeling/t4-text-template-directives.md)합니다.|  
 |등록 된 지시문 프로세서 '{1 \}'에 대 한 어셈블리 ' {'이 (가) 로드 하지 못했습니다.<br /><br /> {2}|호스트에서 지시문 프로세서를 로드할 수 없을 때 발생 합니다. 지시문 프로세서의 이름과 지시문 프로세서에 대해 제공 된 어셈블리를 식별 하는 메시지입니다.|지시문 프로세서가 올바르게 등록 하 고 어셈블리에 존재 하는지 확인 해야 합니다.|  
 |등록 된 지시문 프로세서 '{2 \}'에 대 한 '{1 \}' 어셈블리에서 형식 ' {'이 (가)을 찾지 못했습니다.<br /><br /> {3}|지시문 프로세서 형식을 해당 어셈블리에서에서 로드할 수 없을 때 발생 합니다. 메시지 유형, 어셈블리 및 지시문 프로세서의 이름을 제공 합니다.|vshost 레지스트리에서 지시문 프로세서 정보를 (이름, 어셈블리 및 형식)를 찾습니다. 지시문 프로세서 올바르게 등록 되 고 해당 형식이 어셈블리에 존재 하는지 확인 해야 합니다.|  
 |어셈블리 ' {'이 (가) 로드 하는 데 문제가 발생 했습니다.|어셈블리를 로드 하는 문제가 있을 때 발생 합니다. 메시지에는 어셈블리의 이름을 제공합니다.|에 로드 될 어셈블리를 지정할 수 \<@# assembly #> 지시문 및 지시문 프로세서. 이 문자열 뒤에 오는 오류 메시지는 어셈블리 로드 실패 한 이유에 대 더 많은 데이터를 제공 해야 합니다.|  

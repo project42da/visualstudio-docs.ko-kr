@@ -1,21 +1,19 @@
 ---
-title: "DSL 라이브러리를 사용 하 여 Dsl 간의 클래스 공유 | Microsoft Docs"
-ms.custom: 
+title: DSL 라이브러리를 사용 하 여 Dsl 간의 클래스 공유 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a58726bdc4e6e139963ae8cca2d12f26e0696246
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: f1164b0a96a10e7fa9cda3f8082bb052a0b445e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sharing-classes-between-dsls-by-using-a-dsl-library"></a>DSL 라이브러리를 사용하여 DSL 간에 클래스 공유
 에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 다른 DSL로 가져올 수 있는 불완전 한 DSL 정의 만들 수 있습니다. 이렇게 하면 유사한 모델의 공통 부분을 구분할 수 있습니다.  
@@ -44,7 +42,7 @@ ms.lasthandoff: 02/09/2018
   
 6.  프로젝트를 빌드합니다.  
   
-7.  컴파일된 어셈블리 (DLL)와 파일을 모두 제공 해야 다른 사용자가 사용 하는 DSL을 배포할 때 `DslDefinition.dsl`합니다. 하위 폴더에 컴파일된 어셈블리를 찾을 수 있습니다.`Dsl\bin\*`  
+7.  컴파일된 어셈블리 (DLL)와 파일을 모두 제공 해야 다른 사용자가 사용 하는 DSL을 배포할 때 `DslDefinition.dsl`합니다. 하위 폴더에 컴파일된 어셈블리를 찾을 수 있습니다. `Dsl\bin\*`  
   
 #### <a name="to-import-a-dsl-library"></a>DSL 라이브러리를 가져오려면  
   

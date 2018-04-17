@@ -1,12 +1,10 @@
 ---
-title: "&lt;문서&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: '&lt;문서&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - <document> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 38b03c2a4980891d9a6841b24365db32ee555de4
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0e33e638937a02589a08e3ba2bebf9d3e9aeb1a4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltdocumentgt-element-office-development-in-visual-studio"></a>&lt;문서&gt; 요소 (Visual Studio에서 Office 개발)
   `document` 의 요소는 `vstov4` 네임 스페이스는 문서 수준 사용자 지정에 대 한 사용자 지정 관련 정보를 저장 합니다.  
@@ -40,7 +39,7 @@ ms.lasthandoff: 01/10/2018
 |---------------|-----------------|  
 |`solutionId`|필수. 고유 하 게 식별 하는 문서 수준 솔루션에서 Visual Studio Tools for Office 런타임에서 사용 하는 GUID입니다. 이 값은 _AssemblyLocation 사용자 지정 문서 속성으로 저장 됩니다. 자세한 내용은 [Custom Document Properties Overview](../vsto/custom-document-properties-overview.md)을 참조하세요.|  
   
- `document`자식 요소가 없습니다.  
+ `document` 자식 요소가 없습니다.  
   
 ## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
   

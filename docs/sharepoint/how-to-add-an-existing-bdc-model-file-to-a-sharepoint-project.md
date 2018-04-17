@@ -1,13 +1,10 @@
 ---
-title: "방법: SharePoint 프로젝트에 기존 BDC 모델 파일 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 프로젝트에 기존 BDC 모델 파일 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.BDC.ImportDialog
 dev_langs:
@@ -22,14 +19,14 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], remove a model
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f5f13377211a6b8a7a2035d85e1423be9d2bbb72
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a8a6b42a9cff28cc57365081bc4a041524ece7fa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project"></a>방법: SharePoint 프로젝트에 기존 BDC 모델 파일 추가
   패키지를 사용자 지정할 수 있으며 BDC 비즈니스 데이터 연결 () 모델을 SharePoint 팜에 프로젝트 모델 파일 (.bdcm)를 추가 하려면 Visual Studio를 사용 하 여 다시 배포할 수 있습니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델을 만드는](../sharepoint/creating-a-business-data-connectivity-model.md)합니다.  

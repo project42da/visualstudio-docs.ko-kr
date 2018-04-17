@@ -1,5 +1,5 @@
 ---
-title: "TerminateWorkflow 활동 디자이너 | Microsoft Docs"
+title: TerminateWorkflow 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 08e632ed-0724-4fb4-9df1-f8d443eaf0ac
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 683c482436e968ff9d2a1bd4ce0bbb8e173a5520
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 444ea597fd6c76c8312369afcbc497e640bace6f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="terminateworkflow-activity-designer"></a>TerminateWorkflow 활동 디자이너
 **TerminateWorkflow** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.Activities.Statements.TerminateWorkflow> 활동입니다.
@@ -36,7 +36,7 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.TerminateWorkflow.Exception%2A>|False|워크플로가 종료될 때 throw할 예외입니다. 이 속성은 속성 표에서 설정합니다.|
 |<xref:System.Activities.Statements.TerminateWorkflow.Reason%2A>|False|워크플로가 왜 종료되었는지 설명하는 이유입니다. 이 속성은 속성 표에서 설정합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [런타임](../workflow-designer/runtime-activity-designers.md)
 - [유지](../workflow-designer/persist-activity-designer.md)

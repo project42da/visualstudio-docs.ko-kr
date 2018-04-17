@@ -1,12 +1,10 @@
 ---
-title: "보안 및 배포 연습 | Microsoft Docs"
-ms.custom: 
+title: 보안 및 배포 연습 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - walkthroughs [Office development in Visual Studio], deployment
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1a4b8fa57868e0631e528fd73e199b5c6a017c08
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0a0d68bceffaf26297ca8a1709978cf3447520c3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-and-deployment-walkthroughs"></a>보안 및 배포 연습
   다음 항목에서는 Office 솔루션을 배포 하는 방법 및를 실행 하려면 솔루션을 허용 하도록 보안 정책을 설정 하는 방법을 설명 합니다.  
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/10/2018
  [Office 솔루션의 데이터 연습](../vsto/data-in-office-solutions-walkthroughs.md)  
  솔루션에서 데이터로 작업 하는 방법을 보여 주는 단계별 지침을 제공 합니다.  
   
- [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)  
+ [시작 하기 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)  
  설치 프로그램, 프로젝트 템플릿, Office 주 interop 어셈블리 및 Office 개발의 새로운 기능에 대 한 정보 링크를 제공 합니다.  
   
  [Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)  

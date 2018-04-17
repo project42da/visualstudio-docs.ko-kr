@@ -1,11 +1,9 @@
 ---
-title: "앱에 대 한 모델을 만들 | Microsoft Docs"
-ms.custom: 
+title: 앱에 대 한 모델을 만들 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-modeling
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.teamarch.common.commentlink.properties
 - vs.teamarch.UMLModelExplorer.dependency
@@ -22,14 +20,14 @@ helpviewer_keywords:
 - software, modeling
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 57d56897b7381bd8d7f7a276e64c32ca83d5a969
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9f6da9b6e70280cc4d22264356fb0c63d2fe71ef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-models-for-your-app"></a>앱용 모델 만들기
 
@@ -56,7 +54,7 @@ ms.lasthandoff: 02/09/2018
 |[개발 프로세스에서 모델 사용](../modeling/use-models-in-your-development-process.md)<br /><br /> [Agile 개발에서 모델 사용](http://msdn.microsoft.com/592ac27c-3d3e-454a-9c38-b76658ed137f)|모델을 사용하여 개발하는 동안 시스템을 이해하고 변경하도록 도와줍니다.|  
 |[모델링 솔루션 구성](../modeling/structure-your-modeling-solution.md)|대규모 또는 중간 규모 프로젝트에서 모델을 구성합니다.|  
   
-## <a name="resources"></a>리소스
+## <a name="resources"></a>자료
 
 [Visual Studio 시각화 및 모델링 도구 포럼](http://go.microsoft.com/fwlink/?LinkId=184720)  
 [Visual Studio 확장성 포럼](https://social.msdn.microsoft.com/Forums/vstudio/en-US/home?forum=vsx)

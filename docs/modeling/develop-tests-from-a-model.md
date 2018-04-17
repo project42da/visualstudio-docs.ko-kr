@@ -1,23 +1,21 @@
 ---
-title: "모델에서 테스트를 개발 | Microsoft Docs"
-ms.custom: 
+title: 모델에서 테스트를 개발 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - tests and requirements
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a2937edee2040d8e48938b9cbbf8e78e48780884
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 0982bc72a98be6f015d580f3170a5790fe941867
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="develop-tests-from-a-model"></a>모델에서 테스트 개발
 요구 사항 및 아키텍처 모델을 사용하여 시스템 및 해당 구성 요소의 테스트를 구성하도록 지원할 수 있습니다. 이렇게 하면 사용자 및 기타 이해 관계자에게 중요한 요구 사항을 테스트하는지 확인할 수 있고 요구 사항이 변경될 때 테스트를 빠르게 업데이트할 수 있습니다. [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)]를 사용하는 경우 모델과 테스트 간의 링크를 유지할 수도 있습니다.  
@@ -131,7 +129,7 @@ Assert (countAfter == countBefore = 1);
   
  테스트 관점에서 요구 사항 모델은 테스트 축약형으로 간주될 수 있습니다. 따라서 프로젝트 전체에서 테스트와 모델 간의 관계를 유지하는 것이 중요합니다.  
   
-##  <a name="Attaching"></a>모델 요소에 테스트 사례 연결  
+##  <a name="Attaching"></a> 모델 요소에 테스트 사례 연결  
  프로젝트에서 [!INCLUDE[TCMlong](../modeling/includes/tcmlong_md.md)]를 사용하는 경우 모델의 요소에 테스트를 연결할 수 있습니다. 이렇게 하면 요구 사항 변경의 영향을 받는 테스트를 빠르게 찾을 수 있으며 요구 사항이 인식된 익스텐트를 추적하는 데 도움이 됩니다.  
   
  모든 종류의 요소에 테스트를 연결할 수 있습니다. 다음은 몇 가지 예입니다.  

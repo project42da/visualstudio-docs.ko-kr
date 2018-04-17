@@ -1,13 +1,10 @@
 ---
-title: "연습: 비즈니스 데이터를 사용 하 여 SharePoint에 외부 목록 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 비즈니스 데이터를 사용 하 여 SharePoint에 외부 목록 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -24,14 +21,14 @@ helpviewer_keywords:
 - Business Data Connectivity service [SharePoint development in Visual Studio], external list
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 49c43e3add54b3ba3f584af6feda630a8d1ad526
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 09606f3ca61abd747451f92d4ecf8ee43010e669
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-external-list-in-sharepoint-by-using-business-data"></a>연습: 비즈니스 데이터를 사용하여 SharePoint에 외부 목록 만들기
 
@@ -47,7 +44,7 @@ BDC 비즈니스 데이터 연결 () 서비스는 SharePoint을 백 엔드 서�
 - 특정 finder 메서드를 추가 합니다.
 - 프로젝트를 테스트 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
@@ -189,12 +186,12 @@ BDC 비즈니스 데이터 연결 () 서비스는 SharePoint을 백 엔드 서�
 
 10. 다음 각 필드에 대 한 형식 설명자를 만들려면 6 단계를 반복 합니다.
 
-    |name|형식 이름|
+    |이름|형식 이름|
     |----------|---------------|
     |FirstName|System.String|
     |LastName|System.String|
     |전화 번호|System.String|
-    |EmailAddress|System.String|
+    |전자 메일 주소|System.String|
     |EmailPromotion|System.Int32|
     |NameStyle|System.Boolean|
     |PasswordHash|System.String|

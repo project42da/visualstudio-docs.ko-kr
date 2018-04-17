@@ -1,23 +1,21 @@
 ---
-title: "XML 편집기와의 통합 | Microsoft Docs"
-ms.custom: 
+title: XML 편집기와의 통합 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 43d7a8e6-bd94-4407-a800-15a145c74223
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5fef7ed581ad39488bc35d9cc46ac211008f5962
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 864c00b26cd4b11e040d93318602ada92464463f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="integration-with-xml-editor"></a>XML 편집기와의 통합
 XML 스키마 디자이너는 XML 편집기와 통합되었습니다. XML 편집기에서 XSD 파일을 수정 하면 변경에 반영 됩니다는 [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md)합니다. 있는 경우는 [그래프 보기](../xml-tools/graph-view.md) 또는 [콘텐츠 모델 뷰](../xml-tools/content-model-view.md) 열려 변경도 내용이 있습니다. 다음 방법을 사용하여 XML 스키마 디자이너와 XML 편집기 간을 탐색할 수 있습니다.  

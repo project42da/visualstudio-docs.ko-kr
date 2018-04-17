@@ -1,13 +1,10 @@
 ---
-title: "방법: 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호 | Microsoft Docs"
-ms.custom: 
+title: '방법: 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - GroupContentControl
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 444fd63ecfe1fc74161920b17a3c7caead5a434a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 0a72603f71395bbbf8e167b6a2361f7d8b2a30a6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-protect-parts-of-documents-by-using-content-controls"></a>방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호
   문서의 일부를 보호하는 경우 사용자가 문서의 해당 부분에서 내용을 변경하거나 삭제할 수 없습니다. 콘텐츠 컨트롤을 사용하여 Microsoft Office Word 문서 부분을 보호할 수 있는 여러 가지 방법이 있습니다.  
@@ -39,7 +36,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
-##  <a name="EditDeleteControl"></a>콘텐츠 컨트롤 보호  
+##  <a name="EditDeleteControl"></a> 콘텐츠 컨트롤 보호  
  디자인 타임 또는 런타임에 문서 수준 프로젝트에서 컨트롤의 속성을 설정하여 사용자가 콘텐츠 컨트롤을 편집하거나 삭제하는 것을 방지할 수 있습니다.  
   
  VSTO 추가 기능 프로젝트를 사용하여 런타임에 문서에 추가하는 콘텐츠 컨트롤을 보호할 수도 있습니다. 자세한 내용은 참조 [하는 방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)합니다.  
@@ -111,7 +108,7 @@ ms.lasthandoff: 01/10/2018
  [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
  [콘텐츠 컨트롤](../vsto/content-controls.md)   
  [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)  
    

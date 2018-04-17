@@ -1,12 +1,10 @@
 ---
-title: "방법: 리본에 개발자 탭 표시 | Microsoft Docs"
-ms.custom: 
+title: '방법: 리본에 개발자 탭 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Developer tab [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: b0a4793de32956e3aa3de2965eef15623785716d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9921c10d8a886eb4051b3d5f3d8392ddc77c2da7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-show-the-developer-tab-on-the-ribbon"></a>방법: 리본 메뉴에 개발 도구 탭 표시
   액세스는 **개발자** 탭 Office 응용 프로그램의 리본 메뉴에 기본적으로 표시 되지 않으므로 해당 탭을 표시 하도록 구성 해야 있습니다. 예를 표시 Word의 문서 수준 사용자 지정에 <xref:Microsoft.Office.Tools.Word.GroupContentControl>을 추가하려면 해당 탭을 표시해야 합니다.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/10/2018
   
      ![Outlook 2013 Preview의 옵션 단추](../vsto/media/vsto-office2013-optionsbutton.png "Outlook 2013 preview에서의 옵션 단추")  
   
-3.  에 *ApplicationName***옵션** 대화 상자에서 선택 하는 **리본 사용자 지정** 단추입니다.  
+3.  에 *ApplicationName * * * 옵션** 대화 상자에서 선택 하는 **리본 사용자 지정** 단추입니다.  
   
      다음 그림에서는 **옵션** 대화 상자와 **리본 사용자 지정** Excel 2010에서 단추입니다. 이 단추의 위치는 이 항목의 위쪽 “적용 대상" 섹션에 나열된 다른 모든 응용 프로그램에서 유사합니다.  
   

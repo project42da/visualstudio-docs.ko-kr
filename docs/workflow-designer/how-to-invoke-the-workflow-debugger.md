@@ -1,18 +1,18 @@
 ---
-title: "방법: 워크플로 디버거 호출 | Microsoft Docs"
+title: '방법: 워크플로 디버거 호출 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 34c592af-f4f6-4d02-99f6-63a94698e48b
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b84fad1bd0daf1f7163a06683f8c41ff0257a2e4
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: f4865956c0c5929c817f55bf2bfa5aea76f4ef6f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-invoke-the-workflow-debugger"></a>방법: 워크플로 디버거 호출
 일반적으로 워크플로 디버깅은 다른 Visual Studio 프로그래밍 언어로 작성된 프로그램의 디버깅과 동일합니다. 다음과 같은 방법으로 워크플로 디버거를 시작할 수 있습니다.
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/12/2018
 
 -   워크플로 콘솔 응용 프로그램 프로젝트를 작성 하는 경우 간단히 누릅니다 **F5** 에 응용 프로그램 및 워크플로 디버깅을 시작 합니다. 활동 라이브러리를 자체적으로 빌드하려는 경우 시작 프로젝트인 실행 가능 호스트 응용 프로그램이 있어야 합니다. 시작 프로젝트를 설정 하려면 **솔루션 탐색기**호스트의 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **시작 프로젝트로 설정**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [방법: 워크플로에 중단점 설정](../workflow-designer/how-to-set-breakpoints-in-workflows.md)
 - [워크플로 디자이너로 워크플로 디버깅](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)

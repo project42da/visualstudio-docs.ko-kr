@@ -1,5 +1,5 @@
 ---
-title: ".NET 3.0 또는.NET 3.5 대상으로 하는 워크플로 응용 프로그램 개발 프레임 워크 | Microsoft Docs"
+title: .NET 3.0 또는.NET 3.5 대상으로 하는 워크플로 응용 프로그램 개발 프레임 워크 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: b60aadee-3bf9-48c3-b2eb-4d5524e927ad
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8e85b24889b29d56588f27796ff6891c14c4d3a2
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c95f383573241edb2bbc31961d60c16d06b03f9f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developing-workflow-applications-targeting-the-net-30-or-net-35-framework"></a>.NET 3.0 또는 .NET 3.5 Framework를 대상으로 하는 워크플로 응용 프로그램 개발
 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 만드는 Windows 워크플로 디자이너를 제공 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 대상으로 하는 응용 프로그램은 [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)]합니다. 이 디자이너에서는 워크플로 응용 프로그램의 시각적 생성 및 디버깅을 위한 친숙한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 사용자 인터페이스를 사용합니다.

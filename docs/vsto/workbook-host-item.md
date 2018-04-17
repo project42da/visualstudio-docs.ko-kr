@@ -1,13 +1,10 @@
 ---
-title: "통합 문서 호스트 항목 | Microsoft Docs"
-ms.custom: 
+title: 통합 문서 호스트 항목 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -23,14 +20,14 @@ helpviewer_keywords:
 - events [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1c1e6de8313b3e7b94ac88627ef3cdc463c92906
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a5cf1281e084a5ffc51f06b35e3b1c68b2745c43
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="workbook-host-item"></a>통합 문서 호스트 항목
   <xref:Microsoft.Office.Tools.Excel.Workbook> 호스트 항목은 Excel용 주 interop 어셈블리의 <xref:Microsoft.Office.Interop.Excel.Workbook> 형식을 확장한 형식입니다. <xref:Microsoft.Office.Tools.Excel.Workbook> 호스트 항목은 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체와 동일한 속성, 메서드 및 이벤트를 제공하지만 추가 기능도 제공합니다.  
@@ -62,7 +59,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)   
  [런타임에 Word 문서 및 VSTO 추가 기능에서 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [워크시트 호스트 항목](../vsto/worksheet-host-item.md)   
  [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
  [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  

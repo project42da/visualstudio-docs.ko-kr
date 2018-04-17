@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 용 사이트 열, 콘텐츠 형식 및 목록 만들기 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 용 사이트 열, 콘텐츠 형식 및 목록 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.ListDesigner.ContentTypeSetting
 - VS.SharePointTools.ContentTypeDesigner.CommonPropertiesPage
@@ -20,13 +18,14 @@ dev_langs:
 - CSharp
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 6f6ca2ad09bd41206873045f9eeb26b5e590a049
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1025884bb23290c616a42a8cbbdcbad1d5814b67
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-site-columns-content-types-and-lists-for-sharepoint"></a>SharePoint용 사이트 열, 콘텐츠 형식 및 목록 만들기
   Visual Studio는 다양 한 기본 SharePoint 항목을 포함 하 여에 대 한 프로젝트 항목 템플릿을 제공 *나열* 및 *콘텐츠 형식을*, 사이트 열을 통합할 수 있는 (또는  *필드*). 콘텐츠 형식 및 목록에 대한 새로운 디자이너를 사용하면 이러한 항목을 이전보다 쉽게 만들 수 있습니다.  

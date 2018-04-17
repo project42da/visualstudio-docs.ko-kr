@@ -1,13 +1,10 @@
 ---
-title: "SharePoint 솔루션 개발 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 솔루션 개발 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.ProjectProperties
 - VS.SharePointTools.Project.ProjectItemProperties
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, overview
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 848ddab54dd9e7617cce7758fa06d939700f2c3b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: cf4e6f10d76b29c5bf70ce01d99a2103672ae213
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="developing-sharepoint-solutions"></a>SharePoint 솔루션 개발
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 여러 가지 SharePoint 프로젝트 형식 템플릿을 사용하여 SharePoint 사이트와 사이트 요소를 만들 수 있습니다. 목록이 사용 가능한 프로젝트 형식에 대 한 참조 [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)합니다. SharePoint 프로젝트의 요소와 속성에 대한 설명은 다음과 같습니다.  
@@ -56,7 +53,7 @@ ms.lasthandoff: 01/10/2018
  기능이 SharePoint 프로젝트에 추가되면 **솔루션 탐색기** 에 기본 이름인 Feature*x*.feature를 사용한 노드로 표시됩니다. 여기서 *x* 는 고유 번호입니다. 기능이 SharePoint 서버에 배포되고 나면 SharePoint 관리자가 기능을 활성화하여 SharePoint 사이트 사용자가 사용 가능하도록 설정할 수 있습니다.  
   
 #### <a name="package-node"></a>패키지 노드  
- **패키지** 노드에는 SharePoint 프로젝트에 대한 배포 메커니즘으로 사용하는 단일 파일이 포함됩니다. *솔루션**package*라고도 하는 이 파일은 .CAB를 기반으로 하고 확장명은 .WSP입니다. 솔루션 패키지는 SharePoint 사이트에 적용되는 기능 집합, 사이트 정의 및 어셈블리가 포함되고 개별적으로 사용하거나 사용하지 않도록 설정할 수 있는 배포 가능하고 재사용 가능한 파일입니다. **패키지** 노드는 항상 Package.wspdef 라는 파일이 파일을 포함 한 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 패키지에 대 한 정의 파일입니다. 패키지가 SharePoint를 실행하는 서버에 배포되고 나면 SharePoint 관리자가 패키지를 설치하고 해당 기능을 활성화할 수 있습니다.  
+ **패키지** 노드에는 SharePoint 프로젝트에 대한 배포 메커니즘으로 사용하는 단일 파일이 포함됩니다. 라고도 하는이 파일을 *솔루션 * * 패키지*, 됩니다. CAB에 기반을 합니다. WSP 확장 합니다. 솔루션 패키지는 SharePoint 사이트에 적용되는 기능 집합, 사이트 정의 및 어셈블리가 포함되고 개별적으로 사용하거나 사용하지 않도록 설정할 수 있는 배포 가능하고 재사용 가능한 파일입니다. **패키지** 노드는 항상 Package.wspdef 라는 파일이 파일을 포함 한 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 패키지에 대 한 정의 파일입니다. 패키지가 SharePoint를 실행하는 서버에 배포되고 나면 SharePoint 관리자가 패키지를 설치하고 해당 기능을 활성화할 수 있습니다.  
   
  보거나 패키지 노드를 두 번 클릭 하거나 바로 가기 메뉴를 열고 선택 하 여 패키지 디자이너에서 패키지의 콘텐츠를 변경할 수 **열려**합니다. 자세한 내용은 참조 [SharePoint 솔루션 패키지 만들기](../sharepoint/creating-sharepoint-solution-packages.md)합니다.  
   
@@ -132,10 +129,10 @@ ms.lasthandoff: 01/10/2018
 |[방법: 매핑된 폴더 추가 및 제거](../sharepoint/how-to-add-and-remove-mapped-folders.md)|SharePoint 리소스에 더 쉽게 액세스할 수 있도록 매핑된 폴더를 프로젝트에 추가하는 방법을 설명합니다.|  
 |[샌드박스 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)|샌드박스 솔루션과 관련된 문제에 대해 설명합니다.|  
 |[SharePoint 솔루션 보안](../sharepoint/security-for-sharepoint-solutions.md)|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 SharePoint 솔루션을 개발하기 위한 보안 고려 사항을 설명합니다.|  
-|[URL 선택기 대화 상자 &#40; Visual Studio &#41;에서 SharePoint 개발](../sharepoint/url-picker-dialog-box-sharepoint-development-in-visual-studio.md)|프로젝트 또는 로컬 SharePoint 서버의 리소스에 경로 참조를 추가하는 데 사용할 수 있는 대화 상자에 대해 설명합니다.|  
+|[URL 선택기 대화 상자 &#40;Visual Studio에서 SharePoint 개발&#41;](../sharepoint/url-picker-dialog-box-sharepoint-development-in-visual-studio.md)|프로젝트 또는 로컬 SharePoint 서버의 리소스에 경로 참조를 추가하는 데 사용할 수 있는 대화 상자에 대해 설명합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
- [시작 &#40; Visual Studio &#41;에서 SharePoint 개발](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)   
+ [시작 하기 &#40;Visual Studio에서 SharePoint 개발&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)   
  [서버 탐색기를 사용 하 여 SharePoint 연결 찾아보기](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)   
  [SharePoint 솔루션 패키징 및 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  

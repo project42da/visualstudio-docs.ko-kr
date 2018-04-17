@@ -1,13 +1,10 @@
 ---
-title: "방법: SharePoint 솔루션 빌드 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 솔루션 빌드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, building
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 71355ad98765a2022521a24c3c5bd3e4b535776d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: a6afa8e521ae11653d401b97a286e9478dde4bec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-build-sharepoint-solutions"></a>방법: SharePoint 솔루션 빌드
   SharePoint 솔루션을 작성 하는 것은 Visual Studio에서 다른 응용 프로그램을 구축 하는 방법과 다르지 않습니다. 응용 프로그램을 구축 하는 방법에 대 한 자세한 내용은 참조 [Visual Studio에서 컴파일 및 빌드](/visualstudio/ide/compiling-and-building-in-visual-studio)합니다. SharePoint 솔루션에 관련 된 몇 가지 고려 사항이의 논의 알려면 [하는 방법: SharePoint 솔루션을 로컬 SharePoint 사이트에 게시 및 배포](../sharepoint/how-to-deploy-and-publish-a-sharepoint-solution-to-a-local-sharepoint-site.md)합니다.  

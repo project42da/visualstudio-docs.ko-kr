@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio에서 Office 기능을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 Office 기능을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - Office functionality inside Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fa848d522096b5df12db113cf0c7272ab61c80be
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5927c9b3288755efc8e4b5700487a138f7a04f63
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-office-functionality-inside-of-visual-studio"></a>Visual Studio 내에서 Office 기능 사용
   문서 수준 프로젝트를 만들면 문서와 연결된 된 응용 프로그램 내에 호스팅됩니다 Visual Studio 디자인 하 고 문서와 직접 협업할 수 있도록 합니다. Microsoft Office 응용 프로그램 Visual Studio에서 열을 사용 하는 경우 일반적으로 예상 대로 작동 합니다. 그러나 응용 프로그램의 기능 중 일부를 다른 있거나 액세스할 수 있습니다.  

@@ -1,25 +1,24 @@
 ---
-title: "연습: 항목 템플릿을 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기, 2 부 | Microsoft Docs"
-ms.custom: 
+title: '연습: 항목 템플릿을 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기, 2 부 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating template wizards
 - SharePoint project items, creating template wizards
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 55794f7976e90e34ba24654400f755de9244e13e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 264decc53d8ba2d818562a9513ecfa2aab6f882c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>연습: 항목 템플릿을 사용하여 사용자 지정 작업 프로젝트 항목 만들기, 2부
   사용자 지정 형식의 SharePoint 프로젝트 항목을 정의 하 고 Visual Studio에서 항목 템플릿을 사용 하 여 연결 하는 마법사를 제공 수도 있습니다. 서식 파일 프로젝트에 프로젝트 항목의 새 인스턴스를 추가 하는 데 사용할 사용자 로부터 정보를 수집 하는 마법사를 사용할 수 있습니다. 수집 하는 정보는 프로젝트 항목을 초기화 데 사용할 수 있습니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [SharePoint 도구 확장성 연습에 대 한 프로젝트 파일](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행 하려면 먼저 만들어야 합니다 CustomActionProjectItem 솔루션을 완료 하 여 [연습: 항목 템플릿, 1 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)합니다.  
   
  또한이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  선택 된 **WPF 사용자 정의 컨트롤 라이브러리** 서식 파일 프로젝트에서 프로젝트 이름을 **ItemTemplateWizard**, 선택한 후는 **확인** 단추 합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **ItemTemplateWizard** 프로젝트를 솔루션입니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **ItemTemplateWizard** 프로젝트를 솔루션입니다.  
   
 6.  프로젝트에서 UserControl1 항목을 삭제 합니다.  
   
@@ -209,7 +208,7 @@ ms.lasthandoff: 01/10/2018
     </WizardExtension>  
     ```  
   
-     에 대 한 자세한 내용은 `WizardExtension` 요소 참조 [WizardExtension 요소 &#40; Visual Studio 서식 파일 &#41; ](/visualstudio/extensibility/wizardextension-element-visual-studio-templates).  
+     에 대 한 자세한 내용은 `WizardExtension` 요소 참조 [WizardExtension 요소 &#40;Visual Studio 템플릿&#41;](/visualstudio/extensibility/wizardextension-element-visual-studio-templates)합니다.  
   
 3.  파일을 저장한 후 닫습니다.  
   
@@ -327,7 +326,7 @@ ms.lasthandoff: 01/10/2018
   
      **목록 설정** 페이지가 나타납니다.  
   
-4.  아래는 **통신** 선택 페이지의 맨 위 근처에 머리글을 **SharePoint 개발자 센터** 링크를 브라우저에 웹 사이트 http://msdn.microsoft.com/sharepoint/ 열리는지 확인 default.aspx를 닫은 후 브라우저.  
+4.  아래는 **통신** 선택 페이지의 맨 위 근처에 머리글을 **SharePoint 개발자 센터** 링크를 브라우저에서 웹 사이트 열리는지 확인 http://msdn.microsoft.com/sharepoint/default.aspx, 한 다음 브라우저를 닫습니다.  
   
 ## <a name="cleaning-up-the-development-computer"></a>개발 컴퓨터를 정리합니다.  
  프로젝트 항목의 테스트를 마친 후에 Visual Studio의 실험적 인스턴스에서 프로젝트 항목 템플릿을 제거 합니다.  

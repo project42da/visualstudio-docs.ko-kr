@@ -1,12 +1,10 @@
 ---
-title: "1 부 연습: 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기, | Microsoft Docs"
-ms.custom: 
+title: '1 부 연습: 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기, | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2266fc715322c024625e5f52f83805d0d582416b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 535d5d32771a7be2eacca575f0735548ff2926ae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1"></a>연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 1부
   SharePoint 프로젝트는 하나 이상의 SharePoint 프로젝트 항목에 대 한 컨테이너입니다. SharePoint 프로젝트 항목 형식을 사용자를 만들고 프로젝트 템플릿을 사용 하 여 연결 하 여 Visual Studio에서 SharePoint 프로젝트 시스템을 확장할 수 있습니다. 이 연습에서는 사이트 열을 만들기 위한 프로젝트 항목 형식을 정의 합니다 및 다음 사이트 열 프로젝트 항목을 포함 하는 새 프로젝트를 만드는 데 사용할 수 있는 프로젝트 템플릿의 만듭니다.  
@@ -41,9 +40,9 @@ ms.lasthandoff: 01/10/2018
  독립 실행형 연습입니다. 이 연습을 완료 한 후 마법사 프로젝트 템플릿을 추가 하 여 프로젝트 항목을 개선할 수 있습니다. 자세한 내용은 참조 [연습: 2 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)합니다.  
   
 > [!NOTE]  
->  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
+>  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [ http://go.microsoft.com/fwlink/?LinkId=191369 ](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
 -   지원 되는 버전의 Microsoft Windows, SharePoint 및 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -84,7 +83,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  에 **이름** 상자에 입력 **SiteColumnProjectItem**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **SiteColumnProjectItem** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **SiteColumnProjectItem** 프로젝트를 **솔루션 탐색기**합니다.  
   
 #### <a name="to-create-the-project-template-project"></a>프로젝트 템플릿 프로젝트를 만들려면  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  에 **이름** 상자에 입력 **SiteColumnProjectTemplate**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **SiteColumnProjectTemplate** 프로젝트를 솔루션입니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **SiteColumnProjectTemplate** 프로젝트를 솔루션입니다.  
   
 6.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -126,7 +125,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  에 **이름** 상자에 입력 **ProjectItemTypeDefinition** 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **ProjectItemTypeDefinition** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **ProjectItemTypeDefinition** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -434,7 +433,7 @@ ms.lasthandoff: 01/10/2018
   
     -   추가 `ProjectItem` 각 filethat에 대 한 요소의 인스턴스마다 프로젝트에에서 포함 합니다.  
   
-    -   "Http://schemas.microsoft.com/developer/vstemplate/2005" 네임 스페이스를 사용 합니다. 이 솔루션의 다른 프로젝트 파일 http://schemas.microsoft.com/developer/msbuild/2003 네임 스페이스를 사용 합니다. 따라서 XML 스키마 경고 메시지가 생성 될 있지만이 연습에서 무시할 수 있습니다.  
+    -   네임 스페이스를 사용 하 여 "http://schemas.microsoft.com/developer/vstemplate/2005"입니다. 이 솔루션 사용의 다른 프로젝트 파일에서 "http://schemas.microsoft.com/developer/msbuild/2003" 네임 스페이스입니다. 따라서 XML 스키마 경고 메시지가 생성 될 있지만이 연습에서 무시할 수 있습니다.  
   
      .Vstemplate 파일의 내용에 대 한 자세한 내용은 참조 하십시오. [Visual Studio 템플릿 스키마 참조](/visualstudio/extensibility/visual-studio-template-schema-reference)합니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "연습: 사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩 | Microsoft Docs"
-ms.custom: 
+title: '연습: 사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,14 +17,14 @@ helpviewer_keywords:
 - DatePickerContentControl, binding to a custom XML part
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1a8c8eff138e2c736750040dc896e610975c25ab
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 7ca9c3e049d29874419327ec4ac7d71e0537466c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-binding-content-controls-to-custom-xml-parts"></a>연습: 콘텐츠 컨트롤을 사용자 지정 XML 부분에 바인딩
   이 연습에서는 문서에 저장된 XML 데이터에 Word에 대한 문서 수준 사용자 지정의 콘텐츠 컨트롤을 바인딩하는 방법을 보여 줍니다.  
@@ -52,7 +49,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -66,7 +63,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  이름으로 한 Word 문서 프로젝트 만들기 **EmployeeControls**합니다. 솔루션에 대한 새 문서를 만듭니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]디자이너에서 새 Word 문서가 열리고 추가 **EmployeeControls** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에서 새 Word 문서가 열리고 추가 **EmployeeControls** 프로젝트를 **솔루션 탐색기**합니다.  
   
 ## <a name="adding-content-controls-to-the-document"></a>문서에 콘텐츠 컨트롤 추가  
  사용자가 직원에 대한 정보를 보거나 편집할 수 있는 세 가지 형식의 콘텐츠 컨트롤을 포함하는 테이블을 만듭니다.  
@@ -326,8 +323,8 @@ ms.lasthandoff: 01/10/2018
  [콘텐츠 컨트롤](../vsto/content-controls.md)   
  [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [방법: 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
- [Programmatic Limitations of Host Items and Host Controls](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)  
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)  
   
   

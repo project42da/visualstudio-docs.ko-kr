@@ -1,12 +1,10 @@
 ---
-title: "방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 속성 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 속성 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fa11cdfa8b46b6dcba889e00068676af5bdd5450
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 2da3ebd75ef8b195b0e4c6117b28a6bc294ac050
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-property-to-a-custom-sharepoint-project-item-type"></a>방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 속성 추가
   사용자 지정 SharePoint 프로젝트 항목 형식을 정의한 경우에 프로젝트 항목에 속성을 추가할 수 있습니다. 에 해당 속성이 표시는 **속성** 창에서 프로젝트 항목을 선택 하는 경우 **솔루션 탐색기**합니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  에 대 한 이벤트 처리기에는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> 이벤트를 사용자 지정 속성 클래스의 인스턴스를 추가 <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.PropertySources%2A> 이벤트 인수 매개 변수 컬렉션입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 라는 속성을 추가 하는 방법을 보여 줍니다. **예제 속성** 을 사용자 지정 프로젝트 항목 형식입니다.  
   
  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#11](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#11)]

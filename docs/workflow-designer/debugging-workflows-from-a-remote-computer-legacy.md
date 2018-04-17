@@ -1,5 +1,5 @@
 ---
-title: "원격 컴퓨터 (레거시)에서 워크플로 디버깅 | Microsoft Docs"
+title: 원격 컴퓨터 (레거시)에서 워크플로 디버깅 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 44eaec8f-9959-4ae7-a374-670946f933c1
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be8c1f6a049224cc5b79a82dc6bc100840c72fd0
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: e6a3058d61d2aff0369fd52e1f03726a91a2267c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugging-workflows-from-a-remote-computer-legacy"></a>원격 컴퓨터에서 워크플로 디버깅(레거시)
 이 항목에서는 원격 레거시 디버깅 하는 방법을 설명 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 빌드된 응용 프로그램은 레거시 Windows 워크플로 디자이너를 사용 합니다. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 응용 프로그램이 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -28,6 +28,6 @@ ms.lasthandoff: 03/12/2018
 
  [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] 원격 디버깅은 다른 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 구성 요소의 원격 디버깅과 동일하게 작동합니다. 자세한 내용은 참조 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] MSDN Library에서 원격 디버깅 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레거시 워크플로 디버깅](../workflow-designer/debugging-legacy-workflows.md)

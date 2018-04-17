@@ -1,12 +1,10 @@
 ---
-title: "샌드박스 솔루션 고려 사항 | Microsoft Docs"
-ms.custom: 
+title: 샌드박스 솔루션 고려 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.SandboxedSolutions
 - VS.SharePointTools.Security.SandboxedSolutions
@@ -22,13 +20,14 @@ helpviewer_keywords:
 - farm solutions [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0b510097dc21c385f67a9358eaca3997cbdc2316
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ff85f3407fb24d6d49856bb11ff1852c544cad35
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sandboxed-solution-considerations"></a>Sandboxed Solution Considerations
   *샌드박스 솔루션* 사이트 컬렉션 사용자가 자신의 사용자 지정 코드 솔루션을 업로드할 수 있는 Microsoft SharePoint 2010의 기능입니다. 일반적인 샌드박스 솔루션은 사용자가 자신의 웹 파트를 업로드 합니다.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/10/2018
  샌드박스 SharePoint 응용 프로그램 그리고 웹 팜의 제한 부분에 액세스할 수 있는 안전 하 고 모니터링 프로세스에서 실행 됩니다. Microsoft SharePoint 2010 샌드박스 솔루션을 사용 하도록 설정 하려면 기능, 솔루션 갤러리, 모니터링, 솔루션 및 유효성 검사 프레임 워크의 조합을 사용 합니다.  
   
 ## <a name="specifying-project-trust-level"></a>프로젝트 신뢰 수준 지정  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]원하는 라고 하는 부울 프로젝트 속성을 통해 샌드박스 솔루션 지원 *샌드박스 솔루션*합니다. 언제 든 지 프로젝트에서이 속성을 설정할 수 있습니다 또는에서 프로젝트를 만들 때 지정할 수 있습니다는 **SharePoint 사용자 지정 마법사**합니다.  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 원하는 라고 하는 부울 프로젝트 속성을 통해 샌드박스 솔루션 지원 *샌드박스 솔루션*합니다. 언제 든 지 프로젝트에서이 속성을 설정할 수 있습니다 또는에서 프로젝트를 만들 때 지정할 수 있습니다는 **SharePoint 사용자 지정 마법사**합니다.  
   
 > [!NOTE]  
 >  변경 된 *샌드박스 솔루션* 를 만든 후 프로젝트의 속성 유효성 검사 오류가 발생할 수 있습니다.  
@@ -120,7 +119,7 @@ ms.lasthandoff: 01/10/2018
   
 -   SPWebEventReceiver  
   
--   파생 되는 모든 웹 파트에 대 한 지원`System.Web.UI.WebControls.WebParts.WebPart`  
+-   파생 되는 모든 웹 파트에 대 한 지원 `System.Web.UI.WebControls.WebParts.WebPart`  
   
 -   웹 파트  
   

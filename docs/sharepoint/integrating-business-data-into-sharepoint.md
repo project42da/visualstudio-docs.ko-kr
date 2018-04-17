@@ -1,12 +1,10 @@
 ---
-title: "SharePoint에 비즈니스 데이터 통합 | Microsoft Docs"
-ms.custom: 
+title: SharePoint에 비즈니스 데이터 통합 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -23,13 +21,14 @@ helpviewer_keywords:
 - BDC [SharePoint development in Visual Studio], data
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: c054049c09f13c224ee4f0bb3021af1121f5cea8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 91524d979d345da3ccbfd71ba07ce51f6e1c17c8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="integrating-business-data-into-sharepoint"></a>SharePoint에 비즈니스 데이터 통합
   SharePoint에 비즈니스 데이터를 통합할 수 있습니다. 비즈니스 데이터와 같은 백 엔드 서버 응용 프로그램에서 가져올 수 있습니다 [!INCLUDE[TLA#tla_sqlsvr](../sharepoint/includes/tlasharptla-sqlsvr-md.md)], Siebel 및 SAP, 또는 웹 서비스입니다. 사용자 수 보기, 추가, 업데이트 또는 외부 목록 또는 SharePoint에 비즈니스 데이터 웹 파트를 사용 하 여 비즈니스 데이터를 삭제 합니다.  사용자가 Microsoft Outlook과 같은 Microsoft Office 응용 프로그램에서 오프 라인으로이 데이터에 액세스할 수도 있습니다. 자세한 내용은 참조 [위치 수 하면 외부 데이터 표시](http://go.microsoft.com/fwlink/?LinkId=169295)합니다.  

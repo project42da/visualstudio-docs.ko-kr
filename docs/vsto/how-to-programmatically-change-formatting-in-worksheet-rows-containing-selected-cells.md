@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 선택한 셀이 포함 된 워크시트 행의 서식 변경 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 선택한 셀이 포함 된 워크시트 행의 서식 변경 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - worksheets, changing formatting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 441adcf3b8f803d1473cd36a6d73474b06cf6efe
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 35f0475a15b41b63b99c08a90ebbf724b0adaed8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-change-formatting-in-worksheet-rows-containing-selected-cells"></a>방법: 프로그래밍 방식으로 선택한 셀이 포함된 워크시트 행의 서식 변경
   글꼴의 텍스트를 굵게 표시 된 선택한 셀이 포함 된 전체 행을 변경할 수 있습니다.  
@@ -68,7 +67,7 @@ ms.lasthandoff: 01/10/2018
   
  다음 예제에서는 전체 메서드를 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[Trin_VstcoreExcelAutomation#36](../vsto/codesnippet/CSharp/Trin_VstcoreExcelAutomationCS/Sheet1.cs#36)]
  [!code-vb[Trin_VstcoreExcelAutomation#36](../vsto/codesnippet/VisualBasic/Trin_VstcoreExcelAutomation/Sheet1.vb#36)]  
   

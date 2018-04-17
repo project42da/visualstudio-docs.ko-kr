@@ -1,5 +1,5 @@
 ---
-title: "레거시 워크플로 활동 | Microsoft Docs"
+title: 레거시 워크플로 활동 | Microsoft Docs
 ms.date: 01/18/2017
 ms.topic: reference
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 4af7a06b-1e82-43c8-aec8-0dc5fb63d08a
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 61c719725f3d4ebfffe291ff31115ddd0cc5f3d4
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 2f31ff7ac208d4b06ce454ef309d35400cb79f97
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="legacy-workflow-activities"></a>레거시 워크플로 활동
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/12/2018
 
  사용자 지정 활동을 만드는 방법에 대 한 자세한 내용은 참조 [사용자 지정 활동 개발](http://go.microsoft.com/fwlink?LinkID=65023) 및 [레거시 활동 디자이너를 사용 하 여](../workflow-designer/using-the-legacy-activity-designer.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [Windows Workflow Foundation 활동](http://go.microsoft.com/fwlink?LinkID=65005)
 - [워크플로 개발](http://go.microsoft.com/fwlink?LinkID=65010)

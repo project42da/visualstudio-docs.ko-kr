@@ -1,23 +1,21 @@
 ---
-title: "방법: XML 편집기에서 XSLT 변형을 실행 | Microsoft Docs"
-ms.custom: 
+title: '방법: XML 편집기에서 XSLT 변형을 실행 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 56a0fe82-5231-487d-8b6e-a08a9b04e0fc
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 7f2cd765b36024048a4bba5680a0fdc2445a1cc3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2ce56195d0bc9750af3b869cb3e8bb0a780fdcde
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-execute-an-xslt-transformation-from-the-xml-editor"></a>방법: XML 편집기에서 XSLT 변형 실행
 XML 편집기에서 XSLT 스타일시트를 XML 문서에 연결하고 변형을 수행하며 출력을 볼 수 있습니다. XSLT 변형의 결과로 나타나는 출력이 새 문서 창에 표시됩니다.  
@@ -34,7 +32,7 @@ XML 편집기에서 XSLT 스타일시트를 XML 문서에 연결하고 변형을
   
     -   XML 문서에 `xml-stylesheet` 처리 명령을 추가합니다. 예를 들어, 문서 프롤로그에 다음 `<?xml-stylesheet type='text/xsl' href='filename.xsl'?>` 줄을 추가합니다.  
   
-         또는  
+         -또는-  
   
     -   추가 하 여 XSLT 스타일 시트는 **속성** 창. 문서에서 **속성 창**, 클릭는 **찾아보기** 에 대 한 단추는 **스타일 시트** 필드, XSLT 스타일 시트를 선택 하 고, 클릭 **열**.  
   

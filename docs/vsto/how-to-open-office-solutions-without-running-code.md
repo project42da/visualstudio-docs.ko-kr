@@ -1,12 +1,10 @@
 ---
-title: "방법: Office 솔루션 코드를 실행 하지 않고 열기 | Microsoft Docs"
-ms.custom: 
+title: '방법: Office 솔루션 코드를 실행 하지 않고 열기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], opening without running code
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bd7a401ab96cbb196d97b2e210b3ede0a624deb8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 86a44d2a6c82f65d91c558c76743a8fbbd2fa1e8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-open-office-solutions-without-running-code"></a>방법: 코드를 실행하지 않고 Office 솔루션 열기
   관리 코드 확장을 사용 하 여 만든 Microsoft Office 솔루션에는 최종 사용자의 Office 응용 프로그램에서 보안 설정을 높음으로 설정 되어 있는 경우에 실행 됩니다. Microsoft Office가 아닌 Microsoft.NET Framework에서 관리 하는.NET 어셈블리 코드 보안 때문입니다.  

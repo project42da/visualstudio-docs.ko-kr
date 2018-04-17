@@ -2,23 +2,21 @@
 title: '연습: 사용자 지정 텍스트 템플릿 호스트 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - walkthroughs [text templates], custom host
 - text templates, custom host walkthrough
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ad2bc2a049a0a96a8093289af4648f077f2d1478
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: HT
+ms.openlocfilehash: b5084734e06eb911aa53a6436ba9ee29cb85f702
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-text-template-host"></a>연습: 사용자 지정 텍스트 템플릿 호스트 만들기
 A *텍스트 템플릿**호스트*  수 있도록 하는 환경을 제공는 *텍스트 템플릿 변환 엔진* 실행 되도록 합니다. 호스트는 파일 시스템과 엔진의 상호 작용을 관리합니다. 엔진 또는 *지시문 프로세서* 는 필요한 파일 또는 어셈블리는 호스트에서 리소스를 요청할 수 있습니다. 그러면 호스트는 디렉터리와 전역 어셈블리 캐시를 검색하여 요청된 리소스를 찾을 수 있습니다. 자세한 내용은 참조 [텍스트 템플릿 변환 프로세스](../modeling/the-text-template-transformation-process.md)합니다.  

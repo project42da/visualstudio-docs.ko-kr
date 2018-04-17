@@ -1,12 +1,10 @@
 ---
-title: "연습: 첫 번째 VSTO 추가 기능에 Word에 대 한 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 첫 번째 VSTO 추가 기능에 Word에 대 한 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], creating your first project
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 3452bd5e550ab724dc6c236515579869814a9237
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d7bddcf43d275dc30b0f3825fbb2dbe665e46025
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-your-first-vsto-add-in-for-word"></a>연습: Word용 첫 VSTO 추가 기능 만들기
   이 소개용 연습에서는 Microsoft Office Word용 VSTO 추가 기능을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 열려 있는 문서에 관계없이 응용 프로그램 자체에서 사용할 수 있습니다.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -67,7 +66,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]만듭니다는 **FirstWordAddIn** 프로젝트 및 ThisAddIn 코드 파일을 편집기에서 열립니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 만듭니다는 **FirstWordAddIn** 프로젝트 및 ThisAddIn 코드 파일을 편집기에서 열립니다.  
   
 ## <a name="writing-code-to-add-text-to-the-saved-document"></a>저장된 문서에 텍스트를 추가하는 코드 작성  
  다음 작업으로, ThisAddIn 코드 파일에 코드를 추가합니다. 새 코드는 Word의 개체 모델을 사용하여 저장된 각 문서에 상용구 텍스트를 추가합니다. 기본적으로 ThisAddIn 코드 파일에는 다음과 같은 생성된 코드가 포함되어 있습니다.  
@@ -137,7 +136,7 @@ ms.lasthandoff: 01/10/2018
 -   Word 용 VSTO 추가 기능 배포: [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Word 솔루션](../vsto/word-solutions.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
  [Word 개체 모델 개요](../vsto/word-object-model-overview.md)   

@@ -1,23 +1,21 @@
 ---
-title: "도메인 특정 언어 탐색기 작업 | Microsoft Docs"
-ms.custom: 
+title: 도메인 특정 언어 탐색기 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools, DSL Explorer
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 3a70d43f2261dbb2af7f71b1fe2520bb96b53414
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7d7558d086d12817f715bdded323c04bda90b69b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-the-domain-specific-language-explorer"></a>도메인별 언어 탐색기 작업
 **DSL 탐색기** 트리 보기에서 여러 종류의 정보를 표시 합니다. 대부분의 경우 DSL 탐색기에서 항목에 대 한 자세한 내용은 참조 [도메인 특정 언어를 정의 하는 방법을](../modeling/how-to-define-a-domain-specific-language.md)합니다.  

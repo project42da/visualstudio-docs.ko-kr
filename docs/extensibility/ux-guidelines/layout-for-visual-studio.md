@@ -1,28 +1,26 @@
 ---
-title: "Visual Studio에 대 한 레이아웃 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대 한 레이아웃 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: c19e3022-047c-43b6-a046-a82717efed4f
-caps.latest.revision: "2"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ef3c590a82fc3a7b89d21684ffe2e4b0f216ca98
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2e26caa6e47f0f2ee2a20611cf12e166832e007b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="layout-for-visual-studio"></a>Visual Studio에 대 한 레이아웃
 대부분의 Visual Studio 대화 상자는 [유틸리티 대화 상자 레이아웃](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_UtilityDialogLayout), 표준에 따라 대화 상자의 unthemed는 [Windows 바탕 화면 대화 상자 레이아웃 원칙](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742499\(v=vs.85\).aspx)합니다. Visual Studio UI를 새로 고치려면 이동, 순위가 더 높은 대화의 일부 환경으로 제품 정의 설정 하는 새로운 디자인이 되었습니다. 이러한 [테마가 지정 된 대화 상자 레이아웃](../../extensibility/ux-guidelines/layout-for-visual-studio.md#BKMK_ThemedDialogLayout) 테마 모양을 갖도록 합니다.  
   
-##  <a name="BKMK_UtilityDialogLayout"></a>유틸리티 대화 상자 레이아웃  
+##  <a name="BKMK_UtilityDialogLayout"></a> 유틸리티 대화 상자 레이아웃  
   
 -   유틸리티 대화 상자 내에서 모든 컨트롤 위쪽/왼쪽에서 시작 하 고 아래쪽으로 전달 해야 합니다.  
   
@@ -104,7 +102,7 @@ ms.lasthandoff: 12/22/2017
   
 -   줄 길이는 사용자를 구문 분석 하 고 읽기에 대 한 능숙 너비 여야 합니다. 중간 대화 너비가 개 이하의 550 픽셀 이어야 합니다.  
   
-####  <a name="BKMK_InteriorCommandButtons"></a>내부 명령 단추  
+####  <a name="BKMK_InteriorCommandButtons"></a> 내부 명령 단추  
  더 복잡 한 대화 상자, 내부 제어 대화의 커밋 단추 있는 영향을 줄 수 있는 자체 관련된 단추를 사용할 수 있습니다.  
   
 -   세로 맞춤 (열)의 내부 때 단추를 사용 하 여 **확인**/**취소** 오른쪽 아래 모퉁이의 가로 방향으로 나타납니다.  
@@ -124,7 +122,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="browse-button"></a>[찾아보기...] 단추  
  **[찾아보기...]**  텍스트 상자에 따라 단추 해야 줄임표를 포함 하 여 전체에서 "찾아보기..." 쓰십시오. 공간이 긴밀 하 게 하거나 여러 개 있는 경우 **[찾아보기...]**  단추는 화면에서 단추 줄임표만 줄일 수 있습니다.  
   
-##  <a name="BKMK_ThemedDialogLayout"></a>테마가 지정 된 대화 상자 레이아웃  
+##  <a name="BKMK_ThemedDialogLayout"></a> 테마가 지정 된 대화 상자 레이아웃  
  Visual Studio에서 테마가 지정 된 대화 상자 어 지는 모양이 및 더 많은 흰색 공간을 제공 합니다. 강조 점점 더 개방 줄 간격 및 글꼴 크기 및 중량의 변형 제공 관심 있는 입력 체계를 제공 합니다. 가능한 경우, chrome 및 제목 표시줄 감소 되거나 제거 된 합니다. 이 대화 상자 레이아웃이 기본 패턴을 따라야 합니다.  
   
 1.  대화 상자의 배경색은 흰색입니다.  

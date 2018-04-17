@@ -1,12 +1,10 @@
 ---
-title: "방법: 배포, 게시 및 원격 서버에 SharePoint 솔루션 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: '방법: 배포, 게시 및 원격 서버에 SharePoint 솔루션 업그레이드 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 154af4ba9ac4a83c40c5d53a6b292c212aa71503
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 108474e725c95f495bf6eec0f9a2224ca971b3d2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-deploy-publish-and-upgrade-sharepoint-solutions-on-a-remote-server"></a>방법: 원격 서버에서 SharePoint 솔루션 배포, 게시 및 업그레이드
   로컬 시스템에 SharePoint 솔루션을 배포 하는 것 외에도 원격 사이트 또는 로컬 SharePoint 사이트 샌드박스 SharePoint 솔루션을 게시할 수 있습니다. 원격 게시 프로세스 SharePoint 서버에.wsp 파일을 복사 하 고 솔루션을 설치 하면 솔루션을 활성화할 수 있습니다. 변경한 후에 원격 SharePoint 솔루션 설치를 업그레이드할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 01/10/2018
   
 1.  **솔루션 탐색기**를 게시 하 고 다음을 선택 하려는 샌드박스 SharePoint 프로젝트에 대 한 바로 가기 메뉴를 열고 **게시**합니다.  
   
-2.  에 **게시** 대화 상자에서 선택 하는 **SharePoint 사이트에 게시** 옵션 단추를 선택한 다음 예와 같이 온라인 게시 사이트에 대 한 URL을 입력 한 다음: **https:// mytestsite.sharepoint.microsoftonline.com**합니다.  
+2.  에 **게시** 대화 상자에서 선택 하는 **SharePoint 사이트에 게시** 옵션 단추를 선택한 다음 예와 같이 온라인 게시 사이트에 대 한 URL을 입력 한 다음: **https://mytestsite.sharepoint.microsoftonline.com** .  
   
 3.  선택 된 **게시 후 브라우저에서 솔루션 갤러리 페이지를 엽니다** 에서 솔루션의 목록을 보려면 옵션 단추는 **솔루션 갤러리** 게시 한 후 페이지입니다.  
   

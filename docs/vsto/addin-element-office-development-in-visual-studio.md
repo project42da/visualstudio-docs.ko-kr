@@ -1,12 +1,10 @@
 ---
-title: "&lt;addin&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: '&lt;addin&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,19 +14,20 @@ helpviewer_keywords:
 - <addin> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: b362894449670a7c672d36fa5b7421a9efb0976b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5795c15b4e7ecaa29a26d942fb09122aae6a579f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltaddingt-element-office-development-in-visual-studio"></a>&lt;addin&gt; 요소 (Visual Studio에서 Office 개발)
   `addin` 네임스페이스의 `vstav3` 요소에는 Microsoft Office VSTO 추가 기능과 관련된 정보 및 Visual Studio를 사용하여 개발된 문서 수준 사용자 지정이 있습니다.  
-  
+
 ## <a name="syntax"></a>구문  
-  
+
 ```  
 <addIn>  
   <entryPointsCollection>  
@@ -50,33 +49,33 @@ ms.lasthandoff: 01/10/2018
   </application  
 </addIn>  
 ```  
-  
+
 ## <a name="elements-and-attributes"></a>요소 및 특성  
  `addin` 네임스페이스의 `vstav3` 요소에는 Office 솔루션 및 Microsoft Office 응용 프로그램에 대한 정보가 있습니다. 이 요소는 `vstav3=urn:schemas-microsoft-com:vsta.v3`네임스페이스에 있어야 합니다. 자식 요소도 이 네임스페이스에 있어야 합니다.  
-  
+
  `addin` 요소에는 특성이 없습니다.  
-  
+
  `addin` 요소에는 다음 자식 요소가 있습니다.  
-  
+
 ### <a name="entrypoints"></a>entryPoints  
- 필수. `entryPoints` 요소에 설명 된 [&#60; 진입점 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/entrypoints-element-office-development-in-visual-studio.md).  
-  
+ 필수. `entryPoints` 요소에 설명 된 [ &#60;진입점&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/entrypoints-element-office-development-in-visual-studio.md)합니다.  
+
 ### <a name="update"></a>업데이트  
- 필수. `update` 요소에 설명 된 [&#60; update&#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/update-element-office-development-in-visual-studio.md).  
-  
+ 필수. `update` 요소에 설명 된 [ &#60;업데이트&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/update-element-office-development-in-visual-studio.md)합니다.  
+
 ### <a name="postactions"></a>postActions  
- 선택 사항입니다. `postActions` 요소에 설명 된 [&#60; postActions &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/postactions-element-office-development-in-visual-studio.md).  
-  
+ 선택 사항입니다. `postActions` 요소에 설명 된 [ &#60;postActions&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/postactions-element-office-development-in-visual-studio.md)합니다.  
+
 ### <a name="application"></a>응용 프로그램  
- 필수. `application` 요소에 설명 된 [&#60; 응용 프로그램 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/application-element-office-development-in-visual-studio.md).  
-  
+ 필수. `application` 요소에 설명 된 [ &#60;응용 프로그램&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/application-element-office-development-in-visual-studio.md)합니다.  
+
 ## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
-  
+
 ### <a name="description"></a>설명  
  다음 코드 예제에서는 `addin` 를 사용하여 배포된 문서 수준 Office 솔루션의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
-  
+
 ### <a name="code"></a>코드  
-  
+
 ```  
 <vstav3:addIn   
   xmlns:vstav3="urn:schemas-microsoft-com:vsta.v3">  
@@ -133,14 +132,14 @@ ms.lasthandoff: 01/10/2018
   </vstav3:application>  
 </vstav3:addIn>  
 ```  
-  
+
 ## <a name="vsto-add-in-example"></a>VSTO 추가 기능 예제  
-  
+
 ### <a name="description"></a>설명  
  다음 코드 예제에서는 `addin` 를 사용하여 배포된 응용 프로그램 수준 Office 솔루션의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
-  
+
 ### <a name="code"></a>코드  
-  
+
 ```  
 <vstav3:addIn   
   xmlns:vstav3="urn:schemas-microsoft-com:vsta.v3">  
@@ -191,10 +190,8 @@ ms.lasthandoff: 01/10/2018
   </vstav3:application>  
 </vstav3:addIn>  
 ```  
-  
+
 ## <a name="see-also"></a>참고 항목  
  [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
  [Office 솔루션에 대 한 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)  
-  
-  

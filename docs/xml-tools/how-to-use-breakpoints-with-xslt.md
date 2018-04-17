@@ -1,21 +1,19 @@
 ---
-title: "방법: XSLT에 중단점 사용 | Microsoft Docs"
-ms.custom: 
+title: '방법: XSLT에 중단점 사용 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c86877781b86d34e8e8e68ec71f711b42f7042b7
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0f262fa2b1822f74dc15b6f8599b88161c0a1cf8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-breakpoints-with-xslt"></a>방법: XSLT에 중단점 사용
 
@@ -59,6 +57,6 @@ XSLT 스타일시트 또는 XML 소스 문서에서 중단점을 설정할 수 �
   
 5.  클릭는 **XSL 디버깅** XML 편집기 도구 모음 단추입니다.  
  
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [연습: XSLT 스타일시트 디버그](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md)

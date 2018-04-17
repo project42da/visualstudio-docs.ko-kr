@@ -1,26 +1,24 @@
 ---
-title: "셰이프 및 연결선을 정의 합니다. | Microsoft Docs"
-ms.custom: 
+title: 셰이프 및 연결선을 정의 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a1a1043515afb8d7567459e1adae23f1d4fcfde9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: d915487a9cbddb9678a6b9aa37d990e7b70527e1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="defining-shapes-and-connectors"></a>모양 및 연결선 정의
 DSL(Domain-Specific Language)에서 다이어그램에 정보를 표시하는 데 사용할 수 있는 다양한 기본 모양 형식이 있습니다.  
   
-##  <a name="shapeTypes"></a>기본 유형의 셰이프 및 연결선  
+##  <a name="shapeTypes"></a> 기본 유형의 셰이프 및 연결선  
  DSL 다이어그램의 컬렉션을 보여 줍니다. *셰이프* 선으로 상호 연결 또는 *커넥터*합니다.  이러한 모양에는 일반적으로 다음 사항이 적용됩니다(항상은 아님).  
   
 -   모양은 모델 요소가 표시되는 표현입니다.  
@@ -44,5 +42,5 @@ DSL(Domain-Specific Language)에서 다이어그램에 정보를 표시하는 �
 |스윔 레인|스윔 레인은 다이어그램을 수평 또는 수직 세그먼트로 분할하며, 항상 다이어그램의 다른 모양 아래에 있습니다.<br /><br /> 일반적으로 스윔 레인 모델 요소의 부모는 모델 루트이고 자식은 다른 요소입니다. 예를 들어 작업 흐름 솔루션 템플릿에서 DSL을 만들 수 있습니다.|  
 |연결선|모양 간에 그려지는 선은 보통 참조 관계를 나타냅니다. 연결선을 직선이나 직각선으로 만들고 여러 화살촉 형식을 사용하는 옵션을 설정할 수 있습니다.|  
   
-##  <a name="shapeInheritance"></a>셰이프 상속  
+##  <a name="shapeInheritance"></a> 셰이프 상속  
  모양은 다른 모양에서 상속될 수 있습니다. 그러나 이 경우 모양의 종류가 같아야 합니다. 예를 들어 기하 도형만이 기하 도형을 상속할 수 있습니다. 상속된 도형은 기본 도형의 구획과 Decorator를 포함합니다. 연결선은 연결선에서 상속될 수 있습니다.

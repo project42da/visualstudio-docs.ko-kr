@@ -1,21 +1,19 @@
 ---
-title: "도메인 역할의 속성 | Microsoft Docs"
-ms.custom: 
+title: 도메인 역할의 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 61537deec73a5da8d647639a588641d7cf773da3
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 00ed4a86f2a00f9317f198d925fddbbc7f115481
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-of-domain-roles"></a>도메인 역할의 속성
 다음 표에 있는 속성 도메인 역할 연관 됩니다. 도메인 역할에 대 한 정보를 참조 하십시오. [이해 모델, 클래스 및 관계](../modeling/understanding-models-classes-and-relationships.md)합니다. 이러한 속성을 사용 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 및 도메인 특정 언어 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)합니다.
@@ -29,7 +27,7 @@ ms.lasthandoff: 03/02/2018
 |속성 Getter의 액세스 한정자|생성 된 속성에 대 한 getter에 대 한 액세스 한정자 (`public`, `internal`, `private`, `protected`, 또는 `protected internal`).|`public`|
 |속성 Setter의 액세스 한정자|생성 된 속성의 setter에 대 한 액세스 한정자 (`public`, `internal`, `private`, `protected`, 또는 `protected internal`).|`public`|
 |복합성|반대 역할을 재생할 수 있는 모델 요소 수 (`0..1`, `1..1`, `0..*`, 또는 `1..*`). 복합성 이면 `0..*` 또는 `1..*`, 다음 생성 된 속성 컬렉션을 나타냅니다; 그렇지 않으면, 생성 된 속성 단일 모델 요소를 나타냅니다.|관계 유형에 따라 여부는 관계의 원본 또는 대상 역할입니다.|
-|name|도메인 역할의 이름입니다. 이 속성에 공백을 포함할 수 없습니다.|이 역할에 대 한 역할 수행자의 도메인 클래스의 이름입니다.|
+|이름|도메인 역할의 이름입니다. 이 속성에 공백을 포함할 수 없습니다.|이 역할에 대 한 역할 수행자의 도메인 클래스의 이름입니다.|
 |복사를 전파합니다.|`DoNotPropagateCopy` -복사 된 역할 수행자가이 링크의 없는 복사본을 가지게 됩니다.<br /><br /> `PropagateCopyToLinkOnly` -복사 된 링크는 기존 반대 역할 수행자를 가리킵니다.<br /><br /> `PropagateCopyToLinkAndOppositeRolePlayer` -복사 된 링크 반대 역할 수행자의 복사본을 가리킵니다.|`PropagateCopyToLinkAndOppositeRolePlayer` 포함의 소스 역할을 지정 합니다.<br /><br /> `DoNotPropagateCopy` 다른 역할입니다.<br /><br /> 자세한 내용은 참조 [복사 동작을 사용자 지정](../modeling/customizing-copy-behavior.md)|
 |삭제를 전파합니다.|`True` 연결 된 링크가 삭제 될 때이 역할을 수행 하는 요소를 삭제 합니다.|`True` 에 대 한 포함 된 역할의 대상입니다.<br /><br /> `False` 다른 역할입니다.<br /><br /> 자세한 내용은 참조 [삭제 동작 사용자 지정](../modeling/customizing-deletion-behavior.md)합니다.|
 |속성 이름|역할 수행자의 코드에서 생성 된 속성의 이름입니다. 이 이름은 공백을 포함할 수 없습니다.|이 역할에는 0-1 경우 반대 역할의 이름 또는 일대일 복합성; 그렇지 않으면 pluralized 반대 역할의 이름입니다.|
@@ -38,7 +36,7 @@ ms.lasthandoff: 03/02/2018
 |범주|생성 된 속성에 표시 되는 범주는 **속성** 생성 된 디자이너의 창. 이 속성이 비어 있으면 생성 된 속성 아래에 표시 된 **기타** 범주|< 없음\>|
 |설명|코드를 작성 하는 데 사용 되 고 생성 된 디자이너의 UI에 사용 되는 설명입니다.<br /><br /> 설명은 역할 플레이어 클래스에서 생성 된 속성에 대 한 IntelliSense 도구 설명에 나타납니다.|`Description for` *역할의 전체 이름*|
 |표시 이름|도메인 역할에 대 한 생성 된 디자이너에 표시 되는 이름입니다.|Name 속성의 조정 된 값입니다.|
-|Help Keyword|도메인 역할에 대 한 F1 도움말을 인덱싱하는 데 사용할 optional 키워드|\<none>|
+|Help Keyword|도메인 역할에 대 한 F1 도움말을 인덱싱하는 데 사용할 optional 키워드|\<없음 >|
 |속성 표시 이름|생성 된 역할 속성에 대 한 생성 된 디자이너에 표시 되는 이름입니다.|속성 이름 속성의 조정 된 값입니다.|
 
 > [!NOTE]

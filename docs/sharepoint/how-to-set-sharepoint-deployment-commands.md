@@ -1,13 +1,10 @@
 ---
-title: "방법: SharePoint 배포 명령 설정 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 배포 명령 설정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,21 +14,21 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2f465deaaca406c28aab177434e72de9746fb101
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 8779ba4ee4cf9803982d9849b3af7c83930d8a5b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-sharepoint-deployment-commands"></a>방법: SharePoint 배포 명령 설정
   배포 전 / 배포 후 명령이 설정 하 여 배포 프로세스를 사용자 지정할 수 있습니다. 이들이 명령은 Visual Studio에서 SharePoint 솔루션을 디버깅할 때 다른 배포 작업 전후의 실행 합니다.  
   
 ### <a name="to-add-a-pre-deployment-command"></a>배포 전 명령을 추가 하려면  
   
-1.  메뉴 모음에서 **프로젝트**, *ProjectName***속성**을 참조하세요.  
+1.  메뉴 모음에서 **프로젝트**, * r o j ***속성**합니다.  
   
 2.  선택 된 **SharePoint** 탭 합니다.  
   
@@ -41,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
 ### <a name="to-add-a-post-deployment-command"></a>배포 후 명령을 추가 하려면  
   
-1.  메뉴 모음에서 **프로젝트**, *ProjectName***속성**을 참조하세요.  
+1.  메뉴 모음에서 **프로젝트**, * r o j ***속성**합니다.  
   
 2.  선택 된 **SharePoint** 탭 합니다.  
   

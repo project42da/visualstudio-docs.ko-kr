@@ -1,6 +1,6 @@
 
 # [프로파일링 설명서](index.md)
-# 개요
+# [개요](profiling-overview.md)
 # 빠른 시작
 ## [프로파일링 소개](profiling-feature-tour.md)
 ## [CPU 사용량 분석(관리)](quickstart-cpu-usage-managed.md)
@@ -208,15 +208,15 @@
 ##### [VSPerfASPNETCmd를 사용한 빠른 웹 사이트 프로파일링](rapid-web-site-profiling-with-vsperfaspnetcmd.md)
 ##### [명령줄에서 프로파일러 샘플링 방법을 사용하여 ASP.NET 웹 응용 프로그램에 대한 응용 프로그램 통계 수집](collecting-application-statistics-for-aspnet-web-applications-using-the-profiler-sampling-method-from-the-command-line.md)
 ###### [방법: 명령줄을 통해 ASP.NET 웹 응용 프로그램에 프로파일러를 연결하여 응용 프로그램 통계 수집](how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-application-statistics-by-using-the-command-line.md)
-##### [명령줄에서 프로파일러 계측 방법을 사용하여 ASP.NET 웹 응용 프로그램에 대한 자세한 타이밍 데이터 수집](collecting-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line.md)
+##### [명령줄에서 프로파일러 계측 방법을 사용하여 ASP.NET 웹 응용 프로그램에 대한 자세한 타이밍 데이터 수집](collecting-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method.md)
 ###### [방법: 명령줄에서 프로파일러를 사용하여 정적으로 컴파일된 ASP.NET 웹 응용 프로그램 계측 및 자세한 타이밍 데이터 수집](how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)
-###### [방법: 명령줄에서 프로파일러를 사용하여 동적으로 컴파일된 ASP.NET 웹 응용 프로그램 계측 및 자세한 타이밍 데이터 수집](how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)
+###### [방법: 명령줄에서 프로파일러를 사용하여 동적으로 컴파일된 ASP.NET 웹 응용 프로그램 계측 및 자세한 타이밍 데이터 수집](how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler.md)
 ##### [프로파일러 명령줄을 사용하여 ASP.NET 웹 응용 프로그램에 대한 동시성 데이터 수집](collecting-concurrency-data-for-an-aspnet-web-application-using-the-profiler-command-line.md)
 ###### [방법: 명령줄을 통해 ASP.NET 웹 응용 프로그램에 프로파일러를 연결하여 동시성 데이터 수집](how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-concurrency-data-by-using-the-command-line.md)
 ##### [프로파일러 명령줄을 사용하여 ASP.NET 웹 응용 프로그램의 메모리 데이터 수집](collecting-memory-data-from-an-aspnet-web-application-by-using-the-profiler-command-line.md)
 ###### [방법: 명령줄을 통해 ASP.NET 웹 응용 프로그램에 프로파일러를 연결하여 메모리 데이터 수집](how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)
 ###### [방법: 프로파일러 명령줄을 통해 정적으로 컴파일된 ASP.NET 웹 응용 프로그램 계측 및 메모리 데이터 수집](how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md)
-###### [방법: 프로파일러 명령줄을 통해 동적으로 컴파일된 ASP.NET 웹 응용 프로그램 계측 및 메모리 데이터 수집](how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md)
+###### [방법: 프로파일러 명령줄을 통해 동적으로 컴파일된 ASP.NET 웹 응용 프로그램 계측 및 메모리 데이터 수집](how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)
 ##### [방법: 계측할 Web.Config 파일 수정 및 동적으로 컴파일된 ASP.NET 웹 응용 프로그램 프로파일링](how-to-modify-web-config-files-to-instrument-and-profile-dynamically-compiled-aspnet-web-applications.md)
 #### [서비스의 명령줄 프로파일링](command-line-profiling-of-services.md)
 ##### [프로파일러 샘플링 방법을 사용하여 서비스에 대한 응용 프로그램 통계 수집](collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md)

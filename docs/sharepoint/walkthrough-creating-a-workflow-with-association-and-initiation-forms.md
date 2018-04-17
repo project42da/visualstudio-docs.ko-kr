@@ -1,12 +1,10 @@
 ---
-title: "연습: 연결 및 초기화 폼이 있는 워크플로 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 연결 및 초기화 폼이 있는 워크플로 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, workflow initiation forms
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4b6eed3807b4031a7ab41c16f532442fb0968601
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 92aefd2292976bd9dcb50603e93b460cdf2bf991
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>연습: 연결 및 초기화 폼이 있는 워크플로 만들기
   이 연습에는 연결 및 초기화 폼의 사용을 통합 하는 기본적인 순차 워크플로 만드는 방법을 보여 줍니다. 이들은 (연결 양식) SharePoint 관리자가 처음 연결할 때 및 워크플로 (시작 양식) 사용자가 시작 될 때 워크플로에 추가할 매개 변수를 사용 하도록 설정 하는 ASPX 폼입니다.  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/10/2018
 >   
 >  컴퓨터를 다른 이름 또는 위치 중 일부에 대해 표시할 수 있습니다는 또한는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 다음 지침에 설명 된 사용자 인터페이스 요소입니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 해야 하는 버전 및 설정이 있습니다를 사용 하는 이러한 요소에 따라 결정 됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   지원 되는 버전 [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] 및 SharePoint 합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  

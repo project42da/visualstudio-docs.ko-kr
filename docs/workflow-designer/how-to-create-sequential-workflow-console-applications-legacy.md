@@ -1,5 +1,5 @@
 ---
-title: "방법: 순차 워크플로 콘솔 응용 프로그램 만들기 (레거시) | Microsoft Docs"
+title: '방법: 순차 워크플로 콘솔 응용 프로그램 만들기 (레거시) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 9f7be7fa-551f-42c6-a9bb-f5ae8ab83625
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 211c750dd0baa1dad0a365310b3636c0d0922882
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 26b479fb5f926d6dff0e1db05fe36fc4354ec89d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-sequential-workflow-console-applications-legacy"></a>방법: 순차 워크플로 콘솔 응용 프로그램 만들기(레거시)
 제공 되는 레거시 Windows 워크플로 디자이너를 사용 하 여 순차 워크플로 콘솔 응용 프로그램 프로젝트를 만들려면 다음이 단계를 수행 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]합니다. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/12/2018
 
 1.  Visual Studio를 시작합니다.
 
-2.  에 **파일** 메뉴에서 **새로**를 선택한 후 **프로젝트**합니다.
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음, **프로젝트**를 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 03/12/2018
 
 9. 활동을 끌어는 **도구 상자** 의 디자인 화면에는 **활동을 Drop** 영역을 지정 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레거시 워크플로 프로젝트 만들기](../workflow-designer/creating-legacy-workflow-projects.md)
 - [워크플로 개발](http://msdn.microsoft.com/en-us/557bcb1f-a7ab-49f6-8df7-2706b7001301)

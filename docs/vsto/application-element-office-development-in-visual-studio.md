@@ -1,13 +1,10 @@
 ---
-title: "&lt;응용 프로그램&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: '&lt;응용 프로그램&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - application manifests [Office development in Visual Studio], <application> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9f20c4c8e6d44c62282f68173ce980f650da2692
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 8550b5374bde5d18d3f645c08f89902250ae5f2d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltapplicationgt-element-office-development-in-visual-studio"></a>&lt;응용 프로그램&gt; 요소 (Visual Studio에서 Office 개발)
   `application` 네임스페이스의 `vstav3` 요소는 Office 솔루션에 대한 설명을 래핑합니다. 문서 수준 사용자 지정 및 VSTO 추가 기능에 대한 자식 요소가 서로 다릅니다.  
@@ -65,7 +62,7 @@ ms.lasthandoff: 01/10/2018
  `application` 요소에는 다음 요소가 있습니다.  
   
 ### <a name="customization"></a>사용자 지정  
- 역할은 `customization` 요소에는 `vstov3` 네임 스페이스에 정의 된 [&#60; 사용자 지정 &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/customization-element-office-development-in-visual-studio.md).  
+ 역할은 `customization` 요소에는 `vstov3` 네임 스페이스에 정의 된 [ &#60;사용자 지정&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/customization-element-office-development-in-visual-studio.md)합니다.  
   
 ## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
   

@@ -1,5 +1,5 @@
 ---
-title: "규칙 집합 편집기 대화 상자 (레거시) | Microsoft Docs"
+title: 규칙 집합 편집기 대화 상자 (레거시) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 7cfd5df1-1115-4e5c-9b72-121f39419e83
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 989e0ed3f390513efeb849a71f94d5d61aecc57e
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 7284b4a318f1d6c182f1d7d27e41f6c77092ad00
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>규칙 집합 편집기 대화 상자(레거시)
 이 항목에서는 설명 방법을 사용 하 여는 **규칙 집합 편집기** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -49,7 +49,7 @@ ms.lasthandoff: 03/12/2018
 |**조건:**|규칙 조건을 위한 식을 입력합니다. 식 구문에 대한 자세한 내용은 이 페이지의 "조건 및 작업 식 입력" 단원을 참조하세요.|
 |**그런 다음 작업의 경우:**|Then 작업을 위한 식을 입력합니다. 식 구문에 대한 자세한 내용은 이 페이지의 "조건 및 작업 식 입력" 단원을 참조하세요.|
 |**Else 작업:**|Else 작업을 위한 식을 입력합니다. 식 구문에 대한 자세한 내용은 이 페이지의 "조건 및 작업 식 입력" 단원을 참조하세요.|
-|**OK**|규칙 집합을 .rules 파일로 저장하려면 클릭합니다.|
+|**그래**|규칙 집합을 .rules 파일로 저장하려면 클릭합니다.|
 
  규칙 집합에 대 한 자세한 내용은 참조 [PolicyActivity 활동 사용](http://go.microsoft.com/fwlink?LinkID=65004)합니다.
 
@@ -88,7 +88,7 @@ Update("this/Address/State")
 
  사용에 대 한 자세한 내용은 **업데이트** 전방 연결 참조 [PolicyActivity 활동 사용](http://go.microsoft.com/fwlink?LinkID=65004)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)
 - [규칙 집합 선택 대화 상자(레거시)](../workflow-designer/select-rule-set-dialog-box-legacy.md)

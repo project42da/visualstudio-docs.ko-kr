@@ -1,23 +1,21 @@
 ---
-title: "방법: 그래프 뷰 및 콘텐츠 모델 뷰에서 다이어그램을 인쇄 | Microsoft Docs"
-ms.custom: 
+title: '방법: 그래프 뷰 및 콘텐츠 모델 뷰에서 다이어그램을 인쇄 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 7e1785e4-4aaf-4c66-8735-51e7ca035565
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0c88f2efd3e7494fdec5d0cfaee8ecb492c43603
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 86f36e09e691acd0a94a27f1cc7d4b510e2b1dbf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-print-diagrams-from-the-graph-view-and-the-content-model-view"></a>방법: 그래프 뷰 및 콘텐츠 모델 뷰에서 다이어그램 인쇄
 이 항목에서는 그래프 뷰 또는 콘텐츠 모델 뷰에서 다이어그램을 인쇄하는 방법에 대해 설명합니다.  

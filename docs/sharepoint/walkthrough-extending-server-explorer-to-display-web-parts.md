@@ -1,12 +1,10 @@
 ---
-title: "연습: 웹 파트를 표시 하는 서버 탐색기 확장 | Microsoft Docs"
-ms.custom: 
+title: '연습: 웹 파트를 표시 하는 서버 탐색기 확장 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio], creating a new node type
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e8b613f19a23bdb60452b50cf927af08b399d180
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 34975f93b719c759707110907a3c19dabbd661c1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>연습: 서버 탐색기를 확장하여 웹 파트 표시
   Visual Studio에서 사용할 수 있습니다는 **SharePoint 연결** 의 노드 **서버 탐색기** SharePoint 사이트에서 구성 요소를 확인 합니다. 그러나 **서버 탐색기** 기본적으로 일부 구성 요소를 표시 하지 않습니다. 이 연습에서는 연장 됩니다 **서버 탐색기** SharePoint 사이트 각각 연결 된 웹 파트 갤러리에 표시 되도록 합니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  다른 버전의 SharePoint 용 클라이언트 개체 모델을 사용 하 여 서버 개체 모델에 해당 하는 대신이 연습을 참조 하십시오. [연습: 서버 탐색기 확장의 SharePoint 클라이언트 개체 모델 호출](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
 -   지원 되는 창, SharePoint 및 Visual Studio의 버전입니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -84,7 +83,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  선택 된 **VSIX 프로젝트** 서식 파일을 프로젝트 이름 **WebPartNode**, 선택한 후는 **확인** 단추 합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **WebPartNode** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **WebPartNode** 프로젝트를 **솔루션 탐색기**합니다.  
   
 #### <a name="to-create-the-extension-project"></a>확장 프로젝트를 만들려면  
   
@@ -96,7 +95,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  프로젝트 템플릿 목록에서 선택 **클래스 라이브러리**, 프로젝트 이름을 **WebPartNodeExtension**를 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **WebPartNodeExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **WebPartNodeExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -112,7 +111,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  프로젝트 템플릿 목록에서 선택 **클래스 라이브러리**, 프로젝트 이름을 **WebPartCommands**를 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **WebPartCommands** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **WebPartCommands** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 6.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -159,7 +158,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  옆에 있는 화살표를 선택는 **추가** 단추를 선택한 후 **링크로 추가** 표시 되는 메뉴에 있습니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]링크로 WebPartCommands 프로젝트에 코드 파일을 추가합니다. 결과적으로, WebPartNodeExtension 프로젝트에서 코드 파일은 있지만 WebPartCommands 프로젝트에서 파일에 코드 파일도 컴파일됩니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 링크로 WebPartCommands 프로젝트에 코드 파일을 추가합니다. 결과적으로, WebPartNodeExtension 프로젝트에서 코드 파일은 있지만 WebPartCommands 프로젝트에서 파일에 코드 파일도 컴파일됩니다.  
   
 5.  에 대 한 바로 가기 메뉴를 열고는 **WebPartCommands** 다시 프로젝트를 마우스 선택 **참조 추가**합니다.  
   
@@ -188,7 +187,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  선택 된 **리소스** 탭을 선택 합니다는 **이 프로젝트는 기본 리소스 파일 포함 되어 있지 않습니다. 새로 만들려면 여기를 클릭 하십시오.** 링크 합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]리소스 파일을 만들고 디자이너에서 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 리소스 파일을 만들고 디자이너에서 엽니다.  
   
 4.  디자이너 맨 위에 있는 화살표를 옆에 선택 된 **리소스 추가** 메뉴 명령을 실행 하 고 다음 선택 **새 아이콘 추가** 나타나는 메뉴에서.  
   
@@ -378,6 +377,6 @@ ms.lasthandoff: 01/10/2018
  [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [연습: 서버 탐색기 확장의 SharePoint 클라이언트 개체 모델 호출](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)   
  [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)   
- [아이콘 &#41;에 대 한 아이콘 또는 다른 이미지 &#40; 이미지 편집기 만들기](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [아이콘 또는 다른 이미지 만들기 &#40;아이콘에 대 한 이미지 편집기&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

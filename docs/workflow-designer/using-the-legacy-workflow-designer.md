@@ -1,5 +1,5 @@
 ---
-title: "레거시 워크플로 디자이너를 사용 하 여 | Microsoft Docs"
+title: 레거시 워크플로 디자이너를 사용 하 여 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -7,14 +7,14 @@ helpviewer_keywords:
 ms.assetid: 7af53077-afd7-465f-9c1d-b387e9d4f216
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a042d98019b7f618792f7a9104d262362a4e6e3d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 700434451d8390b9875a290b428c2173953cbb8f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-legacy-workflow-designer"></a>레거시 워크플로 디자이너 사용
 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 또는 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]를 대상으로 하려는 경우 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]에서 제공하는 레거시 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 사용할 수 있습니다.
@@ -34,6 +34,6 @@ ms.lasthandoff: 03/12/2018
 |자동 스크롤|워크플로가 큰 경우 디자인 화면의 가시 영역을 바깥으로 활동을 배치할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서는 활동을 배치할 위치와 가장 가까운 디자인 화면의 가장자리 쪽으로 활동을 끌 수 있습니다. 그러면 디자인 화면 뷰가 자동으로 그 방향으로 이동합니다.|
 |스마트 태그|완전히 구성되지 않거나 올바르지 않게 구성된 활동은 느낌표 아이콘으로 표시됩니다. 이 아이콘을 클릭하면 해당 활동에 대한 구성 요구 사항 보여 주는 드롭다운 목록이 나타납니다. 그런 다음 사용할 수는 **속성** 창에서 작업을 적절 하 게 구성할 수 있습니다. 활동의 모든 속성이 올바르게 구성되면 느낌표 아이콘이 사라집니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [워크플로 개발](http://go.microsoft.com/fwlink?LinkID=65010)

@@ -1,26 +1,24 @@
 ---
-title: "테스트 영역 8: 플러그 인 전환 | Microsoft Docs"
-ms.custom: 
+title: '테스트 영역 8: 플러그 인 전환 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], switching plug-ins
 - source control plug-ins, switching
 ms.assetid: 01370792-b5da-4e46-9ce2-7dd326587141
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9f6a518d618b3a98ec85cbbe015d3b2c5fc7a710
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 534bd9338181c5b682779b62a9c118a5ccaf8cda
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-8-plug-in-switching"></a>테스트 영역 8: 플러그 인 전환
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) 현재 소스 제어 플러그 인을 변경 하려면 사용자 인터페이스 (UI)에 있습니다. 이 테스트 영역을 선택 하는 솔루션 소스 제어에 사용할 플러그 인 프로세스에 대 한 테스트 사례를 제공 합니다.  

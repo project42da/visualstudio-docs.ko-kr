@@ -1,13 +1,10 @@
 ---
-title: "호스트 항목 및 호스트 컨트롤 개요 | Microsoft Docs"
-ms.custom: 
+title: 호스트 항목 및 호스트 컨트롤 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -39,14 +36,14 @@ helpviewer_keywords:
 - host controls [Office development in Visual Studio], deleting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1512b4774efea9639f01135932ad076f6630ea12
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 84e0b2cf74eb8c0d3faca8d1c28d3bea91c87f76
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="host-items-and-host-controls-overview"></a>호스트 항목 및 호스트 컨트롤 개요
   호스트 항목과 호스트 컨트롤은 Visual Studio에서 Office 개발 도구를 사용하여 만든 Office 솔루션에 프로그래밍 모델을 제공하는 데 도움이 되는 형식입니다. 호스트 항목과 호스트 컨트롤은 COM 기반의 Microsoft Office Word 및 Microsoft Office Excel의 개체 모델과 상호 작용합니다. 이는 Windows Forms 컨트롤과 같이 관리되는 개체와 상호 작용한다고 하는 편이 더 정확합니다.  
@@ -168,7 +165,7 @@ ms.lasthandoff: 01/10/2018
 >  문서 또는 워크시트의 `Shutdown` 이벤트 처리기 중에 프로그래밍 방식으로 컨트롤을 제거하지 마세요. UI 요소는 `Shutdown` 이벤트가 발생할 때 더 이상 사용할 수 없습니다. 응용 프로그램이 닫히기 전에 컨트롤을 제거하려면 `BeforeClose` 또는 `BeforeSave`등의 다른 이벤트 처리기에 코드를 추가합니다.  
   
 ### <a name="programming-against-host-control-events"></a>호스트 컨트롤 이벤트 프로그래밍  
- 호스트 컨트롤이 Office 개체를 확장하는 한 가지 방법은 이벤트를 추가하는 것입니다. 예를 들어 Excel의 <xref:Microsoft.Office.Interop.Excel.Range> 개체 및 Word의 <xref:Microsoft.Office.Interop.Word.Bookmark> 개체에는 이벤트가 없지만 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 은 프로그래밍 가능한 이벤트를 추가하여 이러한 개체를 확장합니다. Windows Forms에서 컨트롤의 이벤트를 액세스하는 방법과 같은 방법으로(Visual Basic의 이벤트 드롭다운 목록 및 C#의 이벤트 속성 페이지를 통해) 이러한 이벤트에 액세스하고 코드를 추가할 수 있습니다. 자세한 내용은 [Walkthrough: Programming Against Events of a NamedRange Control](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)을 참조하세요.  
+ 호스트 컨트롤이 Office 개체를 확장하는 한 가지 방법은 이벤트를 추가하는 것입니다. 예를 들어 Excel의 <xref:Microsoft.Office.Interop.Excel.Range> 개체 및 Word의 <xref:Microsoft.Office.Interop.Word.Bookmark> 개체에는 이벤트가 없지만 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 은 프로그래밍 가능한 이벤트를 추가하여 이러한 개체를 확장합니다. Windows Forms에서 컨트롤의 이벤트를 액세스하는 방법과 같은 방법으로(Visual Basic의 이벤트 드롭다운 목록 및 C#의 이벤트 속성 페이지를 통해) 이러한 이벤트에 액세스하고 코드를 추가할 수 있습니다. 자세한 내용은 [연습: NamedRange 컨트롤의 이벤트 프로그래밍](../vsto/walkthrough-programming-against-events-of-a-namedrange-control.md)을 참조하세요.  
   
 > [!NOTE]  
 >  Excel에서 <xref:Microsoft.Office.Interop.Excel._Application.EnableEvents%2A> 개체의 <xref:Microsoft.Office.Interop.Excel.Application> 속성을 **false**라는 Word 또는 Excel 개체 모델에 고유하게 존재하는 개체를 확장합니다. 이 속성을 **false** 로 설정하면 Excel에서 호스트 컨트롤의 이벤트를 비롯한 어떤 이벤트도 발생시킬 수 없습니다.  

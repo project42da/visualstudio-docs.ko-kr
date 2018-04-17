@@ -1,12 +1,10 @@
 ---
-title: "연습: VSTO의 서비스에서 데이터 바인딩 추가 기능에서 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: '연습: VSTO의 서비스에서 데이터 바인딩 추가 기능에서 프로젝트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,18 +14,19 @@ helpviewer_keywords:
 - data [Office development in Visual Studio], scrolling database records
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 386a8c14ebb831a47c6d08d6fd45f9c3d614263d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a89b9455051031b3faa0a44102f2fe97dca97d89
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-binding-to-data-from-a-service-in-a-vsto-add-in-project"></a>연습: VSTO 추가 기능 프로젝트의 서비스에서 데이터 바인딩
   VSTO 추가 기능 프로젝트에서 호스트 컨트롤에 데이터를 바인딩할 수 있습니다. 이 연습에서는 Microsoft Office Word 문서에 컨트롤을 추가하고, MSDN 콘텐츠 서비스에서 검색된 데이터에 컨트롤을 바인딩하고, 런타임에 이벤트에 응답하는 방법을 보여 줍니다.  
   
- **적용 대상:** 이 항목의 정보는 Word 2010의 응용 프로그램 수준 프로젝트에 적용됩니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ **적용 대상:** 이 항목의 정보는 Word 2010의 응용 프로그램 수준 프로젝트에 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
   
  이 연습에서는 다음 작업을 수행합니다.  
   
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  

@@ -1,20 +1,18 @@
 ---
-title: "연습: XSLT 계층 구조를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: '연습: XSLT 계층 구조를 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 1e36ebaec08d09cbf006f4c20e743b5c2a909169
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.openlocfilehash: a4259a06d79588983e3591510c40e119bc4fcb3b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-using-xslt-hierarchy"></a>연습: XSLT 계층 구조 사용
 
@@ -113,6 +111,6 @@ XSLT 계층 구조 도구가 유용한 다른 시나리오는 기본 제공 템�
   
 6.  명령에서 디버거가 중지 되는 경우 `<xsl:include href="xslincludefile.xsl" />`를 눌러는 **한 단계씩 코드 실행** 단추입니다. 참조된 스타일시트에서 디버깅을 계속할 수 있습니다. 계층 구조가 표시되며 디자이너에서 올바른 경로를 표시합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [연습: XSLT 프로파일러](../xml-tools/walkthrough-xslt-profiler.md)

@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 문서의 문자 수 문서 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 문서의 문자 수 문서 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], counting characters
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e1d22d8fc6f6e939ec349d185dad22bdb94d176d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4ae05466c871b51d790f1031755be062806fc120
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-count-characters-in-documents"></a>방법: 프로그래밍 방식으로 문서의 문자 수 세기
   문서에서 첫 번째 문자는 문자 위치 0에 있는 문자이며 삽입 지점을 나타냅니다. 마지막 문자 위치는 문서에 있는 총 문자 수와 같습니다. <xref:Microsoft.Office.Interop.Word.Characters.Count%2A> 컬렉션의 <xref:Microsoft.Office.Interop.Word.Characters> 속성을 사용하여 문서에 있는 문자 수를 확인할 수 있습니다.  

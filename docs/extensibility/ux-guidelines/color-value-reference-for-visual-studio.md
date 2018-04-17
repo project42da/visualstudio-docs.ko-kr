@@ -1,24 +1,24 @@
 ---
-title: "Visual Studio에 대 한 값 참조 색 | Microsoft Docs"
-description: "새 Visual Studio 색 토큰을 만들기 위한 참조: 16 진수 코드"
-keywords: "색, 16 진수 코드, 색상, 테마 UI, 테마 설정"
+title: Visual Studio에 대 한 값 참조 색 | Microsoft Docs
+description: '새 Visual Studio 색 토큰을 만들기 위한 참조: 16 진수 코드'
+keywords: 색, 16 진수 코드, 색상, 테마 UI, 테마 설정
 author: brickgeorge
 ms.author: v-brickg
 ms.date: 08/04/2017
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 694ffb31-132c-4d63-b930-8254e7c50c25
-ms.custom: 
+ms.custom: ''
 ms.reviewer: Jamie.Young
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-manager: ghogen
-ms.workload: v-brickg
-ms.openlocfilehash: 001e9db65209f8ae60cd070d5d68b9f72ef62672
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.technology:
+- vs-ide-sdk
+manager: douge
+ms.workload:
+- v-brickg
+ms.openlocfilehash: 421fca16db2ed2792a539ead2ab46d325cee3a11
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="color-value-reference-for-visual-studio"></a>Visual Studio에 대 한 색 값 참조
 이 항목은 새 색 토큰을 만들기에 대 한 참조입니다. 새 UI를 만들 때 각 주제에 대 한 색 및 고대비 테마의 해당 요소에 대 한 시스템 색 이름을 선택 하려면 기존 UI에서 유사한 색을 사용할 수 있습니다. 
@@ -162,9 +162,9 @@ ms.lasthandoff: 12/22/2017
 | 배경: 누름 | ![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br />`#FF007ACC` | ![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br />`#FF007ACC` | ![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br />`#FF007ACC` | ![견본 강조 표시](../../extensibility/ux-guidelines/media/HCHighlight.png "강조 견본")<br />`Highlight` |
 | 전경: 사용 하지 않도록 설정 | ![#FFA2A4A5 견본](../../extensibility/ux-guidelines/media/A2A4A5.png "#FFA2A4A5 견본")<br />`#FFA2A4A5` | ![#FF656565 견본](../../extensibility/ux-guidelines/media/656565.png "#FF656565 견본")<br />`#FF656565` | ![#FFA2A4A5 견본](../../extensibility/ux-guidelines/media/A2A4A5.png "#FFA2A4A5 견본")<br />`#FFA2A4A5` | ![GrayText 견본](../../extensibility/ux-guidelines/media/HCGrayText.png "GrayText 견본")<br />`GrayText` |
 | 배경: 사용 하지 않도록 설정 | ![#FFF5F5F5 견본](../../extensibility/ux-guidelines/media/F5F5F5.png "#FFF5F5F5 견본")<br />`#FFF5F5F5` | ![#FF252526 견본](../../extensibility/ux-guidelines/media/252526.png "#FF252526 견본")<br />`#FF252526` | ![#FFF6F6F6 견본](../../extensibility/ux-guidelines/media/F6F6F6.png "#FFF6F6F6 견본")<br />`#FFF6F6F6` | ![창 견본](../../extensibility/ux-guidelines/media/HCWindow.png "창 견본")<br />`Window` |
-| 테두리: 가리키기 | ![#FFC9DEF5 견본](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 견본")<br />`#FFC9DEF5` | ![#FF3E3E40 견본](../../extensibility/ux-guidelines/media/3E3E40.png "#FF3E3E40 견본")<br />`#FF3E3E40` |![#FFFEFEFE 견본](../../extensibility/ux-guidelines/media/FEFEFE.png "#FFFEFEFE 견본")<br /> `#FFFEFEFE` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
-| 테두리: 누름 | ![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br />`#FF007ACC` | ![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br />`#FF007ACC` |![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br /> `#FF007ACC` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
-| 테두리: 사용 하지 않도록 설정 | ![#FFCCCEDB 견본](../../extensibility/ux-guidelines/media/CCCEDB.png "#FFCCCEDB 견본")<br />`#FFCCCEDB` | ![#FF434346 견본](../../extensibility/ux-guidelines/media/434346.png "#FF434346 견본")<br />`#FF434346` | ![#FFC6C6C6 견본](../../extensibility/ux-guidelines/media/C6C6C6.png "#FFC6C6C6 견본")<br />`#FFC6C6C6` | ![WindowFrame 견본](../../extensibility/ux-guidelines/media/HCWindowFrame.png "WindowFrame 견본")<br />`WindowFrame` |
+| 테두리: 가리키기 | ![#FFC9DEF5 견본](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 견본")<br />`#FFC9DEF5` | ![ #FF3E3E40 견본](../../extensibility/ux-guidelines/media/3E3E40.png "#FF3E3E40 견본")<br />`#FF3E3E40` |![#FFFEFEFE 견본](../../extensibility/ux-guidelines/media/FEFEFE.png "#FFFEFEFE 견본")<br /> `#FFFEFEFE` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
+| 테두리: 누름 | ![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br />`#FF007ACC` | ![ #FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br />`#FF007ACC` |![#FF007ACC 견본](../../extensibility/ux-guidelines/media/007ACC.png "#FF007ACC 견본")<br /> `#FF007ACC` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
+| 테두리: 사용 하지 않도록 설정 | ![#FFCCCEDB 견본](../../extensibility/ux-guidelines/media/CCCEDB.png "#FFCCCEDB 견본")<br />`#FFCCCEDB` | ![ #FF434346 견본](../../extensibility/ux-guidelines/media/434346.png "#FF434346 견본")<br />`#FF434346` | ![#FFC6C6C6 견본](../../extensibility/ux-guidelines/media/C6C6C6.png "#FFC6C6C6 견본")<br />`#FFC6C6C6` | ![WindowFrame 견본](../../extensibility/ux-guidelines/media/HCWindowFrame.png "WindowFrame 견본")<br />`WindowFrame` |
 
 ## <a name="properties-grid-control-elements"></a>속성 표 컨트롤 요소
 
@@ -309,7 +309,7 @@ ms.lasthandoff: 12/22/2017
 | 전경 (텍스트): 가리키기 | ![#FF1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#FF1E1E1E 견본")<br />`#FF1E1E1E` | ![#FFFFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 견본")<br />`#FFFFFFFF` | ![#FF1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#FF1E1E1E 견본")<br />`#FF1E1E1E` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
 | 배경: 가리키기 | ![#FFC9DEF5 견본](../../extensibility/ux-guidelines/media/C9DEF5.png "#FFC9DEF5 견본")<br />`#FFC9DEF5` | ![#FF606060 견본](../../extensibility/ux-guidelines/media/606060.png "#FF606060 견본")<br />`#FF606060` | ![#FFFDF4BF 견본](../../extensibility/ux-guidelines/media/FDF4BF.png "#FFFDF4BF 견본")<br />`#FFFDF4BF` | ![견본 강조 표시](../../extensibility/ux-guidelines/media/HCHighlight.png "강조 견본")<br />`Highlight` |
 | 전경 (텍스트): 누름 | ![#FFFFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 견본")<br />`#FFFFFFFF` | ![#FFFFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 견본")<br />`#FFFFFFFF` | ![#FFFFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 견본")<br />`#FFFFFFFF` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
-| 배경: 누름 | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![견본 강조 표시](../../extensibility/ux-guidelines/media/HCHighlight.png "강조 견본")<br />`Highlight` |
+| 배경: 누름 | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![ #FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![견본 강조 표시](../../extensibility/ux-guidelines/media/HCHighlight.png "강조 견본")<br />`Highlight` |
 | 전경 (텍스트): 선택한 | ![#FFFFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 견본")<br />`#FFFFFFFF` | ![#FFFFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 견본")<br />`#FFFFFFFF` | ![#FFFFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFFFF 견본")<br />`#FFFFFFFF` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
 | 배경: 선택한 | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![#FF3399FF 견본](../../extensibility/ux-guidelines/media/3399FF.png "#FF3399FF 견본")<br />`#FF3399FF` | ![견본 강조 표시](../../extensibility/ux-guidelines/media/HCHighlight.png "강조 견본")<br />`Highlight` |
 
@@ -398,14 +398,14 @@ ms.lasthandoff: 12/22/2017
 | 배경 | ![#FEFEFE 견본](../../extensibility/ux-guidelines/media/FEFEFE.png "#FEFEFE 견본")<br />`#FEFEFE` | ![#252526 견본](../../extensibility/ux-guidelines/media/252526.png "#252526 견본")<br />`#252526` | ![#FEFEFE 견본](../../extensibility/ux-guidelines/media/FEFEFE.png "#FEFEFE 견본")<br />`#FEFEFE` | ![컨트롤 견본](../../extensibility/ux-guidelines/media/HCControl.png "제어 견본")<br />`Control` |
 | 테두리 | ![#717171 견본](../../extensibility/ux-guidelines/media/717171.png "#717171 견본")<br />`#717171` | ![#999999 견본](../../extensibility/ux-guidelines/media/999999.png "#999999 견본")<br />`#999999` | ![#717171 견본](../../extensibility/ux-guidelines/media/717171.png "#717171 견본")<br />`#717171` | ![ControlDark 견본](../../extensibility/ux-guidelines/media/HCControlDark.png "ControlDark 견본")<br />`ControlDark` |
 | 텍스트 | ![#1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![#F1F1F1 견본](../../extensibility/ux-guidelines/media/F1F1F1.png "#F1F1F1 견본")<br />`#F1F1F1` | ![#1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![ControlText 견본](../../extensibility/ux-guidelines/media/HCControlText.png "ControlText 견본")<br />`ControlText` |
-| 문자 모양 | ![견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![#F1F1F1 견본](../../extensibility/ux-guidelines/media/F1F1F1.png "#F1F1F1 견본")<br />`#F1F1F1` | ![#1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![ControlText 견본](../../extensibility/ux-guidelines/media/HCControlText.png "ControlText 견본")<br />`ControlText` |
+| 문자 모양 | ![ 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![#F1F1F1 견본](../../extensibility/ux-guidelines/media/F1F1F1.png "#F1F1F1 견본")<br />`#F1F1F1` | ![#1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![ControlText 견본](../../extensibility/ux-guidelines/media/HCControlText.png "ControlText 견본")<br />`ControlText` |
 
 ### <a name="disabled"></a>사용 안 함
 
 | | 밝은 테마 | 어두운 테마 | 파란색 테마 | 고대비 | 
 | --- | :---: | :---: | :---: | :---: |
 | 모양 | ![밝은 테마의 사용할 수 없는 확인란](../../extensibility/ux-guidelines/media/03.03.Checkbox.controls.disabled.png "밝은 테마의 확인란을 사용 하지 않도록 설정") | ![어두운 테마의 사용할 수 없는 확인란](../../extensibility/ux-guidelines/media/03.03.Checkbox.controls.disabled.dark.png "어두운 테마의 확인란을 사용 하지 않도록 설정") | ![파란색 테마의 사용할 수 없는 확인란](../../extensibility/ux-guidelines/media/03.03.Checkbox.controls.disabled.blue.png "파란색 테마의 확인란을 사용 하지 않도록 설정") | ![고대비 테마의 사용할 수 없는 확인란](../../extensibility/ux-guidelines/media/03.03.Checkbox.controls.disabled.hc.png "고대비 테마의 확인란을 사용 하지 않도록 설정") |
-| 배경 | ![견본 F6F6F&#6;](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` | ![#2D2D30 견본](../../extensibility/ux-guidelines/media/2D2D30.png "#2D2D30 견본")<br />`#2D2D30` | ![견본 F6F6F&#6;](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` | ![InactiveCaption 견본](../../extensibility/ux-guidelines/media/HCInactiveCaption.png "InactiveCaption 견본")<br />`InactiveCaption` |
+| 배경 | ![견본 F6F6F6 #](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` | ![#2D2D30 견본](../../extensibility/ux-guidelines/media/2D2D30.png "#2D2D30 견본")<br />`#2D2D30` | ![견본 F6F6F6 #](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` | ![InactiveCaption 견본](../../extensibility/ux-guidelines/media/HCInactiveCaption.png "InactiveCaption 견본")<br />`InactiveCaption` |
 | 테두리 | ![#C6C6C6 견본](../../extensibility/ux-guidelines/media/C6C6C6.png "#C6C6C6 견본")<br />`#C6C6C6` | ![#F434346 견본](../../extensibility/ux-guidelines/media/434346.png "#434346 견본")<br />`#434346` | ![#C6C6C6 견본](../../extensibility/ux-guidelines/media/C6C6C6.png "#C6C6C6 견본")<br />`#C6C6C6` | ![InactiveBorder 견본](../../extensibility/ux-guidelines/media/HCInactiveBorder.png "InactiveBorder 견본")<br />`InactiveBorder` |
 | 텍스트 | ![#A2A4A5 견본](../../extensibility/ux-guidelines/media/A2A4A5.png "#A2A4A5 견본")<br />`#A2A4A5` | ![#656565 견본](../../extensibility/ux-guidelines/media/656565.png "#656565 견본")<br />`#656565` | ![#A2A4A5 견본](../../extensibility/ux-guidelines/media/A2A4A5.png "#A2A4A5 견본")<br />`#A2A4A5` | ![InactiveCaption 견본](../../extensibility/ux-guidelines/media/HCInactiveCaption.png "InactiveCaption 견본")<br />`InactiveCaption` |
 | 문자 모양 | ![#A2A4A5 견본](../../extensibility/ux-guidelines/media/A2A4A5.png "#A2A4A5 견본")<br />`#A2A4A5` | ![#656565 견본](../../extensibility/ux-guidelines/media/656565.png "#656565 견본")<br />`#656565` | ![#A2A4A5 견본](../../extensibility/ux-guidelines/media/A2A4A5.png "#A2A4A5 견본")<br />`#A2A4A5` | ![InactiveCaptionText 견본](../../extensibility/ux-guidelines/media/HCInactiveCaptionText.png "InactiveCaptionText 견본")<br />`InactiveCaptionText` |
@@ -516,7 +516,7 @@ ms.lasthandoff: 12/22/2017
 
 | | 밝은 테마 | 어두운 테마 | 파란색 테마 | 고대비 | 
 | --- | :---: | :---: | :---: | :---: |
-| 배경 | ![견본 F6F6F&#6;](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` | ![#1B1B1C 견본](../../extensibility/ux-guidelines/media/1B1B1C.png "#1B1B1C 견본")<br />`#1B1B1C` | ![#EFEFEF 견본](../../extensibility/ux-guidelines/media/EFEFEF.png "#EFEFEF 견본")<br />`#EFEFEF` | ![메뉴 견본](../../extensibility/ux-guidelines/media/HCMenu.png "메뉴 견본")<br />`Menu` |
+| 배경 | ![견본 F6F6F6 #](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` | ![#1B1B1C 견본](../../extensibility/ux-guidelines/media/1B1B1C.png "#1B1B1C 견본")<br />`#1B1B1C` | ![#EFEFEF 견본](../../extensibility/ux-guidelines/media/EFEFEF.png "#EFEFEF 견본")<br />`#EFEFEF` | ![메뉴 견본](../../extensibility/ux-guidelines/media/HCMenu.png "메뉴 견본")<br />`Menu` |
 | 테두리 | ![#CCCEDB 견본](../../extensibility/ux-guidelines/media/CCCEDB.png "#CCCEDB 견본")<br />`#CCCEDB` | ![#3F3F46 견본](../../extensibility/ux-guidelines/media/3F3F46.png "#3F3F46 견본")<br />`#3F3F46` | ![#98A7B7 견본](../../extensibility/ux-guidelines/media/98A7B7.png "#98A7B7 견본")<br />`#98A7B7`| ![MenuText 견본](../../extensibility/ux-guidelines/media/HCMenuText.png "MenuText 견본")<br />`MenuText` |
 | 텍스트 | ![#1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![#FFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFF 견본")<br />`#FFFFFF` | ![#000000 견본](../../extensibility/ux-guidelines/media/000000.png "#000000 견본")<br />`#000000` | ![MenuText 견본](../../extensibility/ux-guidelines/media/HCMenuText.png "MenuText 견본")<br />`MenuText` |
 | 배경 그림자 | ![#19000000 견본](../../extensibility/ux-guidelines/media/19000000.png "#19000000 견본")<br />`#19000000` | ![#19000000 견본](../../extensibility/ux-guidelines/media/19000000.png "#19000000 견본")<br />`#19000000` | ![#19000000 견본](../../extensibility/ux-guidelines/media/19000000.png "#19000000 견본")<br />`#19000000` | ![ControlDark 견본](../../extensibility/ux-guidelines/media/HCControlDark.png "ControlDark 견본")<br />`ControlDark` |
@@ -541,7 +541,7 @@ ms.lasthandoff: 12/22/2017
 
 | | 밝은 테마 | 어두운 테마 | 파란색 테마 | 고대비 | 
 | --- | :---: | :---: | :---: | :---: |
-| 배경 | ![견본 F6F6F&#6;](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` |![#3F3F46 견본](../../extensibility/ux-guidelines/media/3F3F46.png "#3F3F46 견본")<br />`#3F3F46` | ![#FDF4BF 견본](../../extensibility/ux-guidelines/media/FDF4BF.png "#FDF4BF 견본")<br />`#FDF4BF` | ![견본 강조 표시](../../extensibility/ux-guidelines/media/HCHighlight.png "강조 견본")<br />`Highlight` |
+| 배경 | ![견본 F6F6F6 #](../../extensibility/ux-guidelines/media/F6F6F6.png "#F6F6F6 견본")<br />`#F6F6F6` |![#3F3F46 견본](../../extensibility/ux-guidelines/media/3F3F46.png "#3F3F46 견본")<br />`#3F3F46` | ![#FDF4BF 견본](../../extensibility/ux-guidelines/media/FDF4BF.png "#FDF4BF 견본")<br />`#FDF4BF` | ![견본 강조 표시](../../extensibility/ux-guidelines/media/HCHighlight.png "강조 견본")<br />`Highlight` |
 | 테두리 | ![#C9DEF5 견본](../../extensibility/ux-guidelines/media/C9DEF5.png "#C9DEF5 견본")<br />`#C9DEF5` |![#3F3F46 견본](../../extensibility/ux-guidelines/media/3F3F46.png "#3F3F46 견본")<br />`#3F3F46` |![#FDF4BF 견본](../../extensibility/ux-guidelines/media/FDF4BF.png "#FDF4BF 견본")<br />`#FDF4BF` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
 | 텍스트 | ![#1E1E1E 견본](../../extensibility/ux-guidelines/media/1E1E1E.png "#1E1E1E 견본")<br />`#1E1E1E` | ![#FFFFFF 견본](../../extensibility/ux-guidelines/media/FFFFFF.png "#FFFFFF 견본")<br />`#FFFFFF` |![#000000 견본](../../extensibility/ux-guidelines/media/000000.png "#000000 견본")<br />`#000000` | ![HighlightText 견본](../../extensibility/ux-guidelines/media/HCHighlightText.png "HighlightText 견본")<br />`HighlightText` |
 

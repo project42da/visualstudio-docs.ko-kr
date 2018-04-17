@@ -1,13 +1,10 @@
 ---
-title: "호스트 항목 및 호스트 컨트롤의 프로그래밍 방식으로 제한 사항 | Microsoft Docs"
-ms.custom: 
+title: 호스트 항목 및 호스트 컨트롤의 프로그래밍 방식으로 제한 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -33,14 +30,14 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], host controls
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 96c027730553c8dd51774d1ff64c6552b4e5905b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c47b1158eefda91e83ce85a5a7403f3f8f0249a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programmatic-limitations-of-host-items-and-host-controls"></a>호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항
   각 호스트 항목 및 호스트 컨트롤은 추가 기능을 통해 해당 네이티브 Microsoft Office Word 또는 Microsoft Office Excel 개체처럼 동작하도록 설계되었습니다. 그러나 런타임에 호스트 항목과 호스트 컨트롤의 동작과 네이티브 Office 개체 간에는 몇 가지 근본적인 차이가 있습니다.  

@@ -1,23 +1,21 @@
 ---
-title: "XML 스키마 대화 상자가 | Microsoft Docs"
-ms.custom: 
+title: XML 스키마 대화 상자가 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 0271fa26-2205-49bd-96e0-ae1441571808
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 71cff97fc87d22a4edeee3b114e9599f307ab040
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 15426c1fa74a2f7d9f3ef5dfc456f0b4c2f78434
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="xml-schemas-dialog-box"></a>XML 스키마 대화 상자
 **XML 스키마** 대화 상자는 XML 문서와 연결 하는 XML 스키마 정의 언어 (XSD) 스키마를 선택 하는 데 사용 됩니다. 스키마 캐시에서 스키마를 선택하거나 캐시에 없는 스키마를 지정할 수 있습니다. 선택한 스키마는 스키마 집합의 일부분으로 간주됩니다. 스키마 집합은 IntelliSense 및 XML 문서 유효성 검사에 사용됩니다.  

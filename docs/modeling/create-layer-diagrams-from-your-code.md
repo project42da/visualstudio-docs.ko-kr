@@ -1,10 +1,8 @@
 ---
-title: "코드에서 종속성 다이어그램 만들기 | Microsoft Docs"
-ms.custom: 
+title: 코드에서 종속성 다이어그램 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - architecture, dependency diagrams
 - dependency diagrams
@@ -12,19 +10,19 @@ helpviewer_keywords:
 - constraints, architectural
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 18477479255ff7af8216d093830c6c0d60fa50dc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9acc63c676463743ad598736f1d095f0ced0b388
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-dependency-diagrams-from-your-code"></a>코드에서 종속성 다이어그램 만들기
 
-소프트웨어 시스템의 상위 수준, 논리적 아키텍처를 시각화 하려면 만듭니다는 *종속성 다이어그램* Visual Studio에서. 코드가 디자인의 일관성이 유지 되는지을 하려면 종속성 다이어그램을 사용 하 여 코드의 유효성을 검사 합니다. Visual C# 및 Visual Basic 프로젝트에 대 한 종속성 다이어그램을 만들 수 있습니다. 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.
+소프트웨어 시스템의 상위 수준, 논리적 아키텍처를 시각화 하려면 만듭니다는 *종속성 다이어그램* Visual Studio에서. 코드가 디자인의 일관성이 유지 되는지을 하려면 종속성 다이어그램을 사용 하 여 코드의 유효성을 검사 합니다. Visual C# 및 Visual Basic 프로젝트에 대 한 종속성 다이어그램을 만들 수 있습니다. 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [아키텍처 및 모델링 도구에 대한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.
 
 ![종속성 다이어그램 만들기](../modeling/media/layerdiagramvisualizecode.png "LayerDiagramVisualizeCode")
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 02/09/2018
 
 [비디오: 실시간으로 아키텍처 종속성 유효성 검사](https://sec.ch9.ms/sessions/69613110-c334-4f25-bb36-08e5a93456b5/170ValidateArchitectureDependenciesWithVisualStudio.mp4) 
 
-##  <a name="CreateDiagram"></a>종속성 다이어그램 만들기
+##  <a name="CreateDiagram"></a> 종속성 다이어그램 만들기
 
 종속성 다이어그램을 만들려면 먼저 솔루션에 모델링 프로젝트가 있는지 확인 합니다.
 
@@ -51,7 +49,7 @@ ms.lasthandoff: 02/09/2018
   
 4.  **모델링 프로젝트에 추가**로 이동 하 고 솔루션의 기존 모델링 프로젝트를 선택 합니다.  
   
-     또는  
+     -또는-  
   
      선택 **새 모델링 프로젝트를 만들** 새 모델링 프로젝트는 솔루션에 추가 합니다.  
   
@@ -78,7 +76,7 @@ ms.lasthandoff: 02/09/2018
 
 ![코드 맵에서 생성 된 종속성 다이어그램](media/dependency-validation-01.png)
   
-##  <a name="CreateLayers"></a>아티팩트에서 레이어 만들기  
+##  <a name="CreateLayers"></a> 아티팩트에서 레이어 만들기  
  프로젝트, 코드 파일, 네임스페이스, 클래스, 메서드 등 Visual Studio 솔루션 항목에서 레이어를 만들 수 있습니다. 이렇게 하면 레이어와 항목 간에 링크가 자동으로 만들어지고 레이어 유효성 검사 프로세스에 포함됩니다.  
   
  또한 Word 문서 또는 PowerPoint 프레젠테이션과 같이 유효성 검사를 지원하지 않는 항목에 레이어를 연결하여 레이어에 사양 또는 계획을 연결할 수 있습니다. 또한 여러 앱에 공유되는 프로젝트의 파일에 레이어를 연결할 수 있지만, 유효성 검사 프로세스에는 "레이어 1", "레이어 2"와 같이 제네릭 이름으로 나타나는 레이어는 포함되지 않습니다.  
@@ -107,7 +105,7 @@ ms.lasthandoff: 02/09/2018
   
 -   레이어가 아티팩트에 연결된 다른 레이어를 포함하면 컨테이너 레이어가 이 아티팩트에도 연결됩니다. 단, 컨테이너 레이어의 숫자에는 이러한 아티팩트가 포함되지 않습니다.  
   
-##  <a name="Managing"></a>레이어와 아티팩트 간의 링크 관리  
+##  <a name="Managing"></a> 레이어와 아티팩트 간의 링크 관리  
   
 1.  종속성 다이어그램에는 계층에 대 한 바로 가기 메뉴를 열고 선택한 후 **링크 보기**합니다.  
   
@@ -123,7 +121,7 @@ ms.lasthandoff: 02/09/2018
 |기존 아티팩트 링크에서 새 레이어 만들기|아티팩트 링크를 다이어그램의 빈 영역으로 끌어 옵니다.|  
 |연결된 된 아티팩트가 종속성 다이어그램의 유효성 검사를 지원 하는지 확인 합니다.|확인 된 **유효성 검사 지원** 아티팩트 링크에 대 한 열입니다.|  
   
-##  <a name="Discovering"></a>기존 종속성 리버스 엔지니어링  
+##  <a name="Discovering"></a> 기존 종속성 리버스 엔지니어링  
  한 레이어와 연결된 아티팩트에 다른 레이어와 연결된 아티팩트에 대한 참조가 있을 때마다 종속성이 존재합니다. 예를 들어 한 레이어의 클래스가 다른 레이어의 클래스를 포함하는 변수를 선언하는 경우입니다. 다이어그램의 레이어에 연결된 아티팩트에 대한 기존 종속성을 리버스 엔지니어링할 수 있습니다.  
   
 > [!NOTE]
@@ -133,7 +131,7 @@ ms.lasthandoff: 02/09/2018
   
  일반적으로 존재할 수 없는 일부 종속성이 나타나는데, 이러한 종속성을 편집하여 계획된 디자인에 맞출 수 있습니다.  
   
-##  <a name="EditDependencies"></a>레이어 및 종속성을 의도 한 디자인을 보여주는 편집  
+##  <a name="EditDependencies"></a> 레이어 및 종속성을 의도 한 디자인을 보여주는 편집  
  시스템 또는 의도 한 아키텍처를 하려면 계획 된 변경 내용을 설명 하기 위해 종속성 다이어그램을 편집 합니다.  
   
 |**대상**|**다음이 단계를 수행 합니다.**|  
@@ -144,10 +142,10 @@ ms.lasthandoff: 02/09/2018
 |레이어와 연결된 아티팩트가 지정된 네임스페이스에 속하지 않도록 지정합니다.|계층의 네임 스페이스를 입력 **것이 금지 되어 네임 스페이스** 속성입니다. 세미콜론을 사용 하 여 (**;**)을 네임 스페이스를 구분 합니다.|  
 |레이어와 연결된 아티팩트가 지정된 네임스페이스 중 하나에 속해야 하도록 지정합니다.|레이어의에 네임 스페이스를 입력 **필요한 네임 스페이스** 속성입니다. 세미콜론을 사용 하 여 (**;**)을 네임 스페이스를 구분 합니다.|  
   
-##  <a name="EditLayout"></a>다이어그램에 요소가 표시 되는 방식을 변경 합니다.  
+##  <a name="EditLayout"></a> 다이어그램에 요소가 표시 되는 방식을 변경 합니다.  
  해당 속성을 편집하여 레이어의 크기, 모양, 색, 위치 또는 종속성의 색을 변경할 수 있습니다.  
   
-##  <a name="Codemaps"></a>검색 패턴 및 코드 맵에 종속성  
+##  <a name="Codemaps"></a> 검색 패턴 및 코드 맵에 종속성  
  종속성 다이어그램을 만드는 동안 작성할 수도 있습니다 **코드 맵**합니다. 이러한 다이어그램은 코드를 탐색하는 동안 패턴 및 종속성을 검색하는 데 도움이 됩니다. 솔루션 탐색기, 클래스 뷰 또는 개체 브라우저를 사용하여 어셈블리, 네임스페이스 및 클래스를 탐색합니다. 이러한 요소는 기존 레이어에 해당하는 경우가 많습니다. 코드 맵에 대한 자세한 내용은 다음을 참조하세요.  
   
 -   [솔루션 전체의 종속성 매핑](../modeling/map-dependencies-across-your-solutions.md)  

@@ -1,5 +1,5 @@
 ---
-title: "테마, 워크플로 디자이너, 옵션 대화 상자 (레거시) | Microsoft Docs"
+title: 테마, 워크플로 디자이너, 옵션 대화 상자 (레거시) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -10,14 +10,14 @@ helpviewer_keywords:
 ms.assetid: 71150631-4674-4568-bce8-570bef3780ad
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47916c854c2d0e30173442188419c723e5d170a3
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 95bda5a08871dd89b3600dd48b54f14e92f6640a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="themes-workflow-designer-options-dialog-box-legacy"></a>테마, 워크플로 디자이너, 옵션 대화 상자(레거시)
 이 항목에서는 설명 방법을 사용 하 여는 **테마, 워크플로 디자이너, 옵션** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -35,7 +35,7 @@ ms.lasthandoff: 03/12/2018
 |**설명**|테마 목록의 테마 설명 열 머리글입니다.|
 |**위치**|테마 목록의 테마 위치 열 머리글입니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [테마 구성 대화 상자(레거시)](../workflow-designer/theme-configuration-dialog-box-legacy.md)
 - [Windows Workflow Foundation용 레거시 디자이너 UI 도움말](../workflow-designer/legacy-designer-for-windows-workflow-foundation-ui-help.md)

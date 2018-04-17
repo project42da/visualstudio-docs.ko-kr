@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 솔루션 패키지 만들기 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 솔루션 패키지 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - packages [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: ee3da66dd8e683748198992041bec5a8139cb7e9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e67073d1a12a9412b153adc0c06471c4d39ff15a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-sharepoint-solution-packages"></a>SharePoint 솔루션 패키지 만들기
   패키지 디자이너를 사용 하 여 만들 수 있으며 배포 패키지를 사용자 지정 키를 누릅니다. 예를 들어 SharePoint 프로젝트 항목 및 기능을 IIS 서버를 다시 설정, 기능 활성화 범위를 설정 하 고 기능 종속성을 식별할를 추가할 수 있습니다. 또한이 디자이너는 각 패키지를 설명 하는 XML 파일인 매니페스트를 생성 합니다.  

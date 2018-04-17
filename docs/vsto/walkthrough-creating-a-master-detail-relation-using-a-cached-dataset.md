@@ -1,12 +1,10 @@
 ---
-title: "연습: 캐시 된 데이터 집합을 사용 하 여 마스터 세부 관계 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 캐시 된 데이터 집합을 사용 하 여 마스터 세부 관계 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - data caching [Office development in Visual Studio], Master/Detail Relation
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 161fdc5e35a24b1318a44d2102867961330ba559
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: abe0b766214c1906afcf443c23948c492a6bde90
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-master-detail-relation-using-a-cached-dataset"></a>연습: 캐시 된 데이터 집합을 사용 하 여 마스터 세부 관계 만들기
   이 연습에서는 워크시트에서 마스터/세부 관계를 만드는 솔루션을 오프 라인으로 사용할 수 있도록 데이터를 캐시 하는 방법을 보여 줍니다.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  

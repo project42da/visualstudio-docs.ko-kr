@@ -1,12 +1,10 @@
 ---
-title: "Office 솔루션의 배포 매니페스트 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션의 배포 매니페스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, deployment manifests
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 0cbee926a2f9590526b11c1fb1ad70cfa2013011
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e1276650d38f16f8ccc36720f7e273472e609367
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office 솔루션의 배포 매니페스트
   배포 매니페스트는 Office 솔루션의 배포 설정에 설명 하 고 현재 응용 프로그램 버전을 식별 하는 XML 파일입니다.  
@@ -36,7 +35,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="file-name-syntax"></a>파일 이름 구문  
  배포 매니페스트 파일의 이름은.vsto 확장명으로 끝나야 합니다. 이것은 표준 있지만 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 배포 매니페스트는 Visual Studio Tools for Office runtime 파일을 처리할 수 있도록 확장 달라 집니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 Office 솔루션에 대 한 Visual Studio Tools에 대 한 배포 매니페스트를 보여 줍니다.  
   
 ```  

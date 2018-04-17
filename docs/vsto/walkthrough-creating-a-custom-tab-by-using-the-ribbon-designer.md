@@ -1,12 +1,10 @@
 ---
-title: "연습: 리본 디자이너를 사용 하 여 사용자 지정 탭 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 리본 디자이너를 사용 하 여 사용자 지정 탭 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - Custom tab [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: cdbbd7ee286c97a986e89ccdb5bdcfdde4ef7578
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7fdae2b6a867b6d87c6579fc1d24f9d0ebd07cf9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer"></a>연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기
   리본 디자이너를 사용하여 사용자 지정 탭을 만들고 이 탭에 컨트롤을 추가 및 배치할 수 있습니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -59,7 +58,7 @@ ms.lasthandoff: 01/10/2018
   
      Visual Studio 디자이너에서 새 통합 문서를 열고 추가 된 **MyExcelRibbon** 프로젝트를 **솔루션 탐색기**합니다.  
   
-##  <a name="BKMK_CreateActionsPanes"></a>작업 창 만들기  
+##  <a name="BKMK_CreateActionsPanes"></a> 작업 창 만들기  
  프로젝트에 두 개의 사용자 지정 작업 창을 추가합니다. 나중에 이러한 작업 창을 표시하거나 숨기는 단추를 사용자 지정 탭에 추가합니다.  
   
 #### <a name="to-create-actions-panes"></a>작업 창을 만들려면  
@@ -76,7 +75,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  1-5단계를 반복하여 두 번째 작업 창 및 레이블을 만듭니다. 설정의 **텍스트** 속성 두 번째 레이블의 **Actions Pane 2**합니다.  
   
-##  <a name="BKMK_CreateCustomTab"></a>사용자 지정 탭 만들기  
+##  <a name="BKMK_CreateCustomTab"></a> 사용자 지정 탭 만들기  
  Office 응용 프로그램의 디자인 지침 중 하나는 사용자가 항상 Office 응용 프로그램 UI를 제어할 수 있어야 한다는 것입니다. 작업 창에 대해 이 기능을 추가하려면 리본 메뉴의 사용자 지정 탭에서 각 작업 창을 표시하거나 숨기는 단추를 추가합니다. 사용자 지정 탭을 만들려면 한 **리본 (비주얼 디자이너)** 항목을 프로젝트입니다. 이 디자이너는 컨트롤을 추가 및 배치하고, 컨트롤 속성을 설정하고, 컨트롤 이벤트를 처리하는 데 유용합니다.  
   
 #### <a name="to-create-a-custom-tab"></a>사용자 지정 탭을 만들려면  
@@ -111,7 +110,7 @@ ms.lasthandoff: 01/10/2018
   
 14. 설정의 **레이블** 속성을 **Hide Actions Pane**합니다.  
   
-##  <a name="BKMK_HideShowActionsPane"></a>숨기기 및 사용자 지정 탭의 단추를 사용 하 여 작업 창 표시  
+##  <a name="BKMK_HideShowActionsPane"></a> 숨기기 및 사용자 지정 탭의 단추를 사용 하 여 작업 창 표시  
  마지막 단계는 사용자에게 응답하는 코드를 추가하는 것입니다. 두 단추의 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> 이벤트와 설정/해제 단추의 <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click> 이벤트에 대한 이벤트 처리기를 추가합니다. 이러한 이벤트 처리기에 작업 창을 숨기거나 표시할 수 있는 코드를 추가합니다.  
   
 #### <a name="to-hide-and-show-actions-panes-by-using-buttons-in-the-custom-tab"></a>사용자 지정 탭의 단추를 사용하여 작업 창을 숨기거나 표시하려면  

@@ -1,12 +1,10 @@
 ---
-title: "방법: SharePoint 연결 추가 또는 제거 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 연결 추가 또는 제거 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: b7144f5f8c7c4d2ca42543abe236479ac364d7f8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: db37c29c049a4e233be96e468b93b8e2998c0565
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-or-remove-sharepoint-connections"></a>방법: SharePoint 연결 추가 또는 제거
   서버 탐색기를 사용 하면 SharePoint 사이트 뿐만 아니라 데이터 연결을 찾아볼 수 있습니다. 그러나 SharePoint 사이트의 내용을 찾아볼 수 있습니다 추가 해야 하는 **SharePoint 연결** 노드.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/10/2018
   
 2.  **서버 탐색기**, 선택는 **SharePoint 연결** 노드를 선택한 다음 메뉴 모음에서 메뉴 **도구**, **SharePoint 연결 추가**.  
   
-3.  에 **SharePoint 연결 추가** 상자에 입력에서 [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] SharePoint 사이트 (예를 들어 http://testserver/sites/unittests)에 대 한 합니다.  
+3.  에 **SharePoint 연결 추가** 상자에 입력에서 [!INCLUDE[TLA2#tla_url](../sharepoint/includes/tla2sharptla-url-md.md)] SharePoint 사이트에 대 한 (예를 들어 http://testserver/sites/unittests)합니다.  
   
 ### <a name="to-delete-a-sharepoint-site-from-the-sharepoint-connections-node"></a>SharePoint 연결 노드에서 SharePoint 사이트를 삭제 하려면  
   

@@ -1,5 +1,5 @@
 ---
-title: "방법: PolicyActivity 규칙 집합 (레거시) 만들기 | Microsoft Docs"
+title: '방법: PolicyActivity 규칙 집합 (레거시) 만들기 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: f272489d-3342-4511-8b59-6a0fd7a42d70
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96fcb8dd8e1255863840cae8edd90759af605f1d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 4911912aa46f5dc8a6aea9b9b20e87c1f83e576f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>방법: PolicyActivity 규칙 집합 만들기(레거시)
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/12/2018
 
     -   규칙 집합의 이름을 입력합니다. 클릭는 **RuleSetReference** 줄임표 **[...]** 를 선택한 후 **편집** 에 [선택 규칙 설정 대화 상자 (레거시)](../workflow-designer/select-rule-set-dialog-box-legacy.md)합니다.
 
-         또는
+         -또는-
 
     -   규칙 집합의 이름을 입력합니다. 확장 된 **RuleSetReference** 속성과 선택 줄임표 **[...]**  에 **RuleSet Definition** 속성입니다.
 
@@ -61,7 +61,7 @@ ms.lasthandoff: 03/12/2018
 
 9. 작업을 마쳤으면 **확인**을 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019)
 - [규칙 집합 선택 대화 상자(레거시)](../workflow-designer/select-rule-set-dialog-box-legacy.md)

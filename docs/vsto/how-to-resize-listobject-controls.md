@@ -1,12 +1,10 @@
 ---
-title: "방법: ListObject 컨트롤 크기 조정 | Microsoft Docs"
-ms.custom: 
+title: '방법: ListObject 컨트롤 크기 조정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - ListObject control, resizing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e018ed60e60c63dd47b5d56b599ea0f0499f561c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 12a81e6bb4a0484b79ad42b8fbab77db97ea82c0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-resize-listobject-controls"></a>방법: ListObject 컨트롤 크기 조정
   <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤의 크기는 Microsoft Office Excel 통합 문서에 추가할 때 설정하지만 나중에 크기를 조정할 수 있습니다. 예를 들어 2열로 된 목록을 3열로 변경할 수 있습니다.  
@@ -92,7 +91,7 @@ ms.lasthandoff: 01/10/2018
  [런타임에 Word 문서 및 VSTO 추가 기능에서 Excel 통합 문서 확장](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)   
  [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
  [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)   
+ [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md)   
  [ListObject 컨트롤](../vsto/listobject-control.md)   
  [방법: 워크시트에 ListObject 컨트롤 추가](../vsto/how-to-add-listobject-controls-to-worksheets.md)   

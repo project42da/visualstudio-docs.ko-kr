@@ -1,25 +1,23 @@
 ---
-title: "기능 &#39; XML 편집기의 새로운 s | Microsoft Docs"
-ms.custom: 
+title: 어떤&#39;XML 편집기의 새로운 s | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: bd335a8d-6692-4a4c-9b5f-aa98f1fcaba3
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1c70a4011d38b7ad92b1c225c719fb1ffe709caa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 28d690eb34128b987b631b61f50749803bec9e60
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what39s-new-in-the-xml-editor"></a>기능 &#39; XML 편집기의 새로운 s
+# <a name="what39s-new-in-the-xml-editor"></a>어떤&#39;XML 편집기의 새로운 s
 다음은 Visual Studio 2010의 새로운 기능입니다.  
   
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense  

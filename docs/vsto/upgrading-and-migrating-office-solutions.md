@@ -1,13 +1,10 @@
 ---
-title: "Office 솔루션 업그레이드 및 마이그레이션 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션 업그레이드 및 마이그레이션 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - migrating Office solutions in Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c81cba2c80f8eaabeae15fc5425ed7e02c378123
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 920fc096072cb4304e76ca8171d52d3e40caeb3d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-and-migrating-office-solutions"></a>Office 솔루션 업그레이드 및 마이그레이션
   Microsoft Office 프로젝트를 이전 버전 Visual Studio에서 만든 경우 현재 버전의 Visual Studio에서 사용하려면 프로젝트를 업그레이드해야 합니다. Microsoft Office 프로젝트를 업그레이드하려면 Microsoft Office 개발자 도구가 포함된 Visual Studio 버전에서 프로젝트를 엽니다. Microsoft Office 개발자 도구가 포함 된 버전의 Visual Studio에 대 한 자세한 내용은 참조 [Office 솔루션을 개발할 수 있도록 컴퓨터 구성](../vsto/configuring-a-computer-to-develop-office-solutions.md)합니다.  
@@ -91,7 +88,7 @@ ms.lasthandoff: 01/10/2018
   
 ## <a name="see-also"></a>참고 항목  
  [방법: Office 솔루션 업그레이드](http://msdn.microsoft.com/en-us/a269e539-b717-4680-a568-2152b070347e)   
- [Migrating Office Solutions to the .NET Framework 4 or later](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
+ [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [옵션 대화 상자, 프로젝트 업그레이드](../vsto/project-upgrade-options-dialog-box.md)  
   
   

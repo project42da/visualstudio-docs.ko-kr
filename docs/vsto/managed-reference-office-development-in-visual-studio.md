@@ -1,12 +1,10 @@
 ---
-title: "관리 되는 참조 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: 관리 되는 참조 (Visual Studio에서 Office 개발) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - Office development in Visual Studio, reference
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 3304d104a0ccf308c02a770f3e79fb08f6d06049
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 5b0b6d7b6fdbb55030088f33fc235429d0b6142e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managed-reference-office-development-in-visual-studio"></a>관리되는 참조(Visual Studio에서 Office 개발)
-  이 섹션에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]대상의 Office 프로젝트에서 사용되는 네임스페이스 및 형식에 대한 API 참조 설명서가 포함되어 있습니다. .NET Framework 3.5를 대상으로 하는 Office 프로젝트에서 사용되는 네임스페이스 및 형식에 대한 API 참조 설명서는 Visual Studio 설명서에서 [http://go.microsoft.com/fwlink/?LinkId=160658](http://go.microsoft.com/fwlink/?LinkId=160658)참조 섹션을 참조하세요.  
+  이 섹션에는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)]대상의 Office 프로젝트에서 사용되는 네임스페이스 및 형식에 대한 API 참조 설명서가 포함되어 있습니다. 네임 스페이스 및.NET Framework 3.5를 대상으로 하는 Office 프로젝트에서 사용 되는 형식에 대 한 API 참조 설명서는 Visual Studio 설명서의 참조 섹션을 참조 하십시오.: [ http://go.microsoft.com/fwlink/?LinkId=160658 ](http://go.microsoft.com/fwlink/?LinkId=160658)합니다.  
   
 > [!NOTE]  
 >  Office 환경을 확장 하는 솔루션을 개발에 관심이 [여러 플랫폼](https://dev.office.com/add-in-availability)? 체크 아웃 새 [Office 추가 기능 모델](https://dev.office.com/docs/add-ins/overview/office-add-ins)합니다. Office 추가 기능에서 VSTO 추가 기능 및 솔루션에 비해 적을 있고 거의 모든 웹 프로그래밍 HTML5, JavaScript, CSS3 및 XML 등의 기술을 사용 하 여 빌드할 수 있습니다.  
@@ -65,7 +64,7 @@ ms.lasthandoff: 01/10/2018
   
 ## <a name="see-also"></a>참고 항목  
  [Visual Studio Tools for Office Runtime Overview](../vsto/visual-studio-tools-for-office-runtime-overview.md)   
- [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [시작 하기 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   

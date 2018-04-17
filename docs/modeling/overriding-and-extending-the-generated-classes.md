@@ -1,23 +1,21 @@
 ---
-title: "재정의 및 생성 된 클래스를 확장 합니다. | Microsoft Docs"
-ms.custom: 
+title: 재정의 및 생성 된 클래스를 확장 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, providing overridable classes
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f86600b6fd4bb272ece4454e9a94032ed05f3af1
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 80dd80a88b0244008efde9b10a1706ff18ba6136
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>생성된 클래스 재정의 및 확장
 DSL 정의 플랫폼 도구 도메인 특정 언어를 기반으로 하는 강력한 집합을 작성할 수 있습니다. 재정의 하 고 DSL 정의에서 생성 되는 클래스를 확장 하 여 확장 하 고 조정 작업을 만들 수 있습니다. 이러한 클래스 DSL 정의 다이어그램에 명시적으로 정의 된 도메인 클래스 뿐 아니라 뿐만 아니라 도구 상자, 탐색기, serialization 및 등을 정의 하는 다른 클래스를 포함 합니다.  

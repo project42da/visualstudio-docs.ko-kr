@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 Word 표 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 Word 표 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - tables [Office development in Visual Studio], adding to documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: cdec862635ff011049f48176b28b31835ca33139
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f77b6ee70d56c12b6c1a6b9c88de36a9adb7d92e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-create-word-tables"></a>방법: 프로그래밍 방식으로 Word 표 만들기
   <xref:Microsoft.Office.Interop.Word.Tables> 컬렉션은 <xref:Microsoft.Office.Interop.Word.Document>, <xref:Microsoft.Office.Tools.Word.Document>, <xref:Microsoft.Office.Interop.Word.Selection> 및 <xref:Microsoft.Office.Interop.Word.Range> 클래스의 멤버이므로 이러한 컨텍스트 중 하나에서 표를 만들 수 있습니다. <xref:Microsoft.Office.Interop.Word.Tables> 컬렉션의 <xref:Microsoft.Office.Interop.Word.Tables.Add%2A> 메서드를 사용하여 지정된 범위에 표를 추가합니다.  

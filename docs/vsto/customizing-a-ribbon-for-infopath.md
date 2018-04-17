@@ -1,12 +1,10 @@
 ---
-title: "InfoPath에 대 한 리본 메뉴 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: InfoPath에 대 한 리본 메뉴 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], InfoPath
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 40cf51fce578540a5ea27a96e3482e5d7f906754
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a3e5121285f66059a898ce64fc4107903f371485
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-a-ribbon-for-infopath"></a>InfoPath에 대해 리본 메뉴 사용자 지정
   Microsoft Office InfoPath에서 리본을 사용자 지정할 경우 응용 프로그램에서 사용자 지정 리본이 나타나는 위치를 고려해야 합니다. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] 에서는 다음 세 가지 유형의 InfoPath 응용 프로그램 창에서 리본을 표시할 수 있습니다.  
@@ -32,7 +31,7 @@ ms.lasthandoff: 01/10/2018
   
 -   인쇄 미리 보기 창입니다.  
   
- **적용 대상:** 이 항목의 정보는 InfoPath 2010의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Features Available by Office Application and Project Type](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ **적용 대상:** 이 항목의 정보는 InfoPath 2010의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
   
  사용자와 디자이너는 디자이너 모드에서 양식 템플릿을 열고 템플릿의 모양과 레이아웃을 수정합니다. 사용자는 양식 템플릿에 기반을 둔 양식을 열고 콘텐츠를 추가합니다.  
   

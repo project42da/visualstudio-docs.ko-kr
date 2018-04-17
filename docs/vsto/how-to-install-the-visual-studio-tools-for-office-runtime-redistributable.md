@@ -1,12 +1,10 @@
 ---
-title: "방법: Visual Studio Tools for Office 런타임 재배포 가능 설치 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Studio Tools for Office 런타임 재배포 가능 설치 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - installing Office development tools in Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5f76191ca8b41f252e5009c0d3e7e09415f6f081
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 552ef84dc5b4bba8b9f63173d41a43a4efd82a14
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-install-the-visual-studio-tools-for-office-runtime-redistributable"></a>방법: 재배포 가능한 Visual Studio Tools for Office 런타임 설치
   Visual Studio 2010 Tools for Office Runtime의 Microsoft Office 개발자 도구를 사용 하 여 만든 솔루션을 사용 하는 컴퓨터에 설치 해야 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. 런타임은 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 및 Microsoft Office를 설치할 때 자동으로 설치됩니다. 자세한 내용은 [Visual Studio Tools for Office Runtime Installation Scenarios](../vsto/visual-studio-tools-for-office-runtime-installation-scenarios.md)을 참조하십시오.  
@@ -52,7 +51,7 @@ ms.lasthandoff: 01/10/2018
      [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]언어 팩을 포함 합니다. Windows 설치가 영어 이외의 언어로 설정된 경우 Windows에 사용하는 동일한 언어로 런타임 메시지를 표시할 수 있습니다. 이와 마찬가지로 최종 사용자가 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]을 설치하고 영어 이외의 언어로 설정된 Windows 설치에서 솔루션을 실행하는 경우 런타임 메시지가 Windows와 동일한 언어로 표시됩니다. 경우에 따라 추가 언어 팩이 필요할 수 있습니다. 예를 들어 windows 둘 이상의 언어 설정을 사용 하거나 이미 설치 된 후 다른 언어로 전환 하는 경우 추가 언어 팩 할 수도 있습니다는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다. 언어 팩을 찾을 수 있습니다 [Microsoft Visual Studio 2010 Tools for Microsoft Office System (버전 4.0 런타임) 언어 팩](http://go.microsoft.com/fwlink/?LinkId=140386)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [시작 하기 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)   
  [방법: Office 솔루션을 개발 하도록 컴퓨터 구성](../vsto/how-to-configure-a-computer-to-develop-office-solutions.md)   
  [방법: Office 주 Interop 어셈블리 설치](../vsto/how-to-install-office-primary-interop-assemblies.md)   

@@ -1,12 +1,10 @@
 ---
-title: "방법: 리본 그룹에 대화 상자 표시 아이콘 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: 리본 그룹에 대화 상자 표시 아이콘 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], dialog box launcher
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 49dee3d090e2b7f985fd85a6061dea3a2c204e4a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d71124d0a3843053ad7558e0e1038b8d6626b5e1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-dialog-box-launcher-to-a-ribbon-group"></a>방법: 리본 그룹에 대화 상자 시작 관리자 추가
   대화 상자 표시 아이콘은 리본 메뉴의 그룹에 추가할 수 있습니다. 대화 상자 표시 아이콘은 그룹에 표시 되는 작은 아이콘입니다. 사용자 그룹에 관련 된 추가 옵션을 제공 하는 작업 창 또는 관련된 대화 상자를 열려면이 아이콘을 클릭 합니다.  

@@ -1,12 +1,10 @@
 ---
-title: "ClickOnce를 사용 하 여 Office 솔루션 배포 | Microsoft Docs"
-ms.custom: 
+title: ClickOnce를 사용 하 여 Office 솔루션 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - ClickOnce deployment [Office development in Visual Studio], deploying solutions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a989fe2bc88d25ad81238b65bf8ecd775c39bc35
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0b5e1b9437412f343874b8cca6513a551d9900d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-an-office-solution-by-using-clickonce"></a>ClickOnce를 사용하여 Office 솔루션 배포
   ClickOnce를 사용하면 Office 솔루션을 더 적은 단계로 배포할 수 있습니다. 업데이트를 게시하는 경우 솔루션에서 자동으로 이를 감지하여 설치합니다. 그러나 ClickOnce에서는 컴퓨터의 각 사용자에 대해 별도로 솔루션을 설치하도록 합니다. 따라서 둘 이상의 사용자가 같은 컴퓨터에서 솔루션을 실행하는 경우 Windows Installer(.msi)를 사용하는 것이 좋습니다.  
@@ -48,8 +47,8 @@ ms.lasthandoff: 01/10/2018
   
  Windows Installer 파일을 만들어 Office 솔루션을 배포 하는 방법에 대 한 자세한 내용은 참조 [Windows Installer를 사용 하 여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-windows-installer.md)합니다.  
   
-##  <a name="Publish"></a>솔루션을 게시  
- 사용 하 여 솔루션을 게시할 수는 **게시 마법사** 또는 **프로젝트 디자이너**합니다. 이 절차를 사용 하 여는 **프로젝트 디자이너** 게시 옵션의 전체 집합을 제공 하기 때문에 있습니다. 참조 [마법사 &#40; Office 개발에서 Visual Studio &#41; 게시](../vsto/publish-wizard-office-development-in-visual-studio.md)합니다.  
+##  <a name="Publish"></a> 솔루션을 게시  
+ 사용 하 여 솔루션을 게시할 수는 **게시 마법사** 또는 **프로젝트 디자이너**합니다. 이 절차를 사용 하 여는 **프로젝트 디자이너** 게시 옵션의 전체 집합을 제공 하기 때문에 있습니다. 참조 [게시 마법사 &#40;Visual Studio에서 Office 개발&#41;](../vsto/publish-wizard-office-development-in-visual-studio.md)합니다.  
   
 #### <a name="to-publish-the-solution"></a>솔루션을 게시하려면  
   
@@ -136,12 +135,12 @@ ms.lasthandoff: 01/10/2018
   
 14. 이 절차의 앞부분에서 지정한 설치 위치에 솔루션 파일을 복사합니다.  
   
-##  <a name="Trust"></a>솔루션에 신뢰를 부여 하는 방법을 결정합니다  
+##  <a name="Trust"></a> 솔루션에 신뢰를 부여 하는 방법을 결정합니다  
  사용자 컴퓨터에서 솔루션을 실행하려면 먼저 관리자가 신뢰를 부여하거나 사용자가 솔루션을 설치할 때 신뢰 프롬프트에 응답해야 합니다. 솔루션에 신뢰를 부여하려면 신뢰할 수 있고 확인된 게시자를 식별하는 인증서를 사용하여 매니페스트에 서명합니다. 참조 [매니페스트 응용 프로그램 및 배포에 서명 하 여 솔루션 신뢰](../vsto/granting-trust-to-office-solutions.md#Signing)합니다.  
   
  문서 수준 사용자 지정을 배포 하는 경우 사용자의 컴퓨터에는 폴더에 문서를 저장 하거나 SharePoint 사이트에서 문서를 사용할 수 있도록 하려면 Office에서 문서의 위치를 신뢰 해야 합니다. 참조 [문서에 신뢰 부여](../vsto/granting-trust-to-documents.md)합니다.  
   
-##  <a name="Helping"></a>사용자의 솔루션 설치 지원  
+##  <a name="Helping"></a> 사용자의 솔루션 설치 지원  
  사용자는 설치 프로그램을 실행하고 배포 매니페스트를 열거나 문서 수준 사용자 지정의 경우 문서를 직접 열어 솔루션을 설치할 수 있습니다. 가장 좋은 방법은 사용자가 설치 프로그램을 사용하여 솔루션을 설치하는 것입니다. 다른 두 방법에서는 필수 구성 요소 소프트웨어가 설치 되어 있는지 보장할 수 없습니다. 사용자가 설치 위치에서 문서를 열려는 경우, Office 응용 프로그램의 보안 센터에서 신뢰할 수 있는 위치 목록에 이 문서를 추가해야 합니다.  
   
 ### <a name="opening-the-document-of-a-document-level-customization"></a>문서 수준 사용자 지정의 문서 열기  
@@ -190,7 +189,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  변경 내용이 적용되려면 World Wide Web Publishing 서비스를 다시 시작하거나 작업자 프로세스가 재생될 때까지 기다려야 합니다. 그런 다음 브라우저의 디스크 캐시를 플러시하고 .vsto 파일을 다시 열어 봅니다.  
   
-##  <a name="Put"></a>최종 사용자의 컴퓨터 (문서 수준 사용자 지정에만 해당)에 솔루션 문서 저장  
+##  <a name="Put"></a> 최종 사용자의 컴퓨터 (문서 수준 사용자 지정에만 해당)에 솔루션 문서 저장  
  배포 후 작업을 만들어 최종 사용자의 컴퓨터에 솔루션의 문서에 복사할 수 있습니다. 이런 방식으로 사용자는 수동으로 복사 문서 설치 위치에서 자신의 컴퓨터에 솔루션을 설치한 후 필요가 없습니다. 배포 후 작업을 정의 하는 클래스를 생성, 빌드 및 솔루션을 게시할 응용 프로그램 매니페스트를 수정 및 응용 프로그램 및 배포 매니페스트에 다시 서명 해야 합니다.  
   
  다음 절차에서 프로젝트 이름의 임을 가정 **ExcelWorkbook** 솔루션을 게시 하 고는 **C:\publish** 컴퓨터에 디렉터리입니다.  
@@ -309,7 +308,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  ExcelWorkbook.vsto 파일을 복사는 **c:\publish\Application Files\ExcelWorkbook**\__MostRecentVersionNumber_ 디렉터리입니다.  
   
-##  <a name="SharePoint"></a>(문서 수준 사용자 지정에만 해당) SharePoint를 실행 하는 서버에 솔루션 문서 저장  
+##  <a name="SharePoint"></a> (문서 수준 사용자 지정에만 해당) SharePoint를 실행 하는 서버에 솔루션 문서 저장  
  SharePoint를 사용하여 최종 사용자에게 문서 수준 사용자 지정을 게시할 수 있습니다. 사용자가 SharePoint 사이트에서 문서를 열면 런타임에 자동으로 공유 네트워크 폴더의 솔루션을 사용자의 로컬 컴퓨터에 설치합니다. 솔루션이 로컬로 설치된 후, 문서가 바탕 화면과 같은 다른 위치에 복사되는 경우에도 사용자 지정은 계속 작동합니다.  
   
 #### <a name="to-put-the-document-on-a-server-thats-running-sharepoint"></a>SharePoint를 실행하는 서버에 문서를 저장하려면  
@@ -338,7 +337,7 @@ ms.lasthandoff: 01/10/2018
   
              사용자가 SharePoint 사이트에서 문서를 열면 이 문서가 열리고 사용자 지정이 설치됩니다. 사용자는 바탕 화면에 이 문서를 복사할 수 있습니다. 문서의 속성에서 문서의 네트워크 위치를 가리키므로 사용자 지정은 계속 실행됩니다.  
   
-##  <a name="Custom"></a>사용자 지정 설치 관리자 만들기  
+##  <a name="Custom"></a> 사용자 지정 설치 관리자 만들기  
  솔루션을 게시할를 생성 하는 설치 프로그램을 사용 하는 대신 Office 솔루션에 필요한 사용자 지정 설치 관리자를 만들 수 있습니다. 예를 들어 로그온 스크립트를 사용하여 설치를 시작하거나 사용자 상호 작업 없이 배치 파일을 사용하여 솔루션을 설치할 수 있습니다. 이러한 시나리오는 최종 사용자의 컴퓨터에 필수 구성 요소가 이미 설치된 경우에 가장 적합합니다.  
   
  사용자 지정 설치 프로세스의 일부로, 다음 위치에 기본적으로 설치되어 있는 Office 솔루션용 설치 관리자 도구(VSTOInstaller.exe)가 호출됩니다.  
@@ -372,12 +371,12 @@ ms.lasthandoff: 01/10/2018
 |-401|솔루션을 제거할 수 없습니다.|  
 |-500|솔루션을 설치 또는 제거할 수 없거나 배포 매니페스트를 다운로드할 수 없어 작업이 취소되었습니다.|  
   
-##  <a name="Update"></a>업데이트 게시  
+##  <a name="Update"></a> 업데이트 게시  
  솔루션을 업데이트 하려면 다시 게시를 사용 하 여는 **프로젝트 디자이너** 또는 **게시 마법사**, 한 다음 업데이트 된 솔루션의 설치 위치로 복사 합니다. 설치 위치에 파일을 복사하면 이전 파일을 덮어쓰게 됩니다.  
   
  다음에 솔루션을 확인 하는 업데이트에 대 한 것 찾아 새 버전을 자동으로 로드 합니다.  
   
-##  <a name="Location"></a>솔루션의 설치 위치를 변경 합니다.  
+##  <a name="Location"></a> 솔루션의 설치 위치를 변경 합니다.  
  솔루션이 게시된 후 설치 경로를 추가하거나 변경할 수 있습니다. 다음 이유 중 하나 이상으로 인해 설치 경로를 변경하려 할 수 있습니다.  
   
 -   설치 경로가 알려지기 전에 설치 프로그램을 컴파일한 경우  
@@ -435,7 +434,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  /url 매개 변수를 사용하지 않고 설치 프로그램을 실행하여 지정한 위치에 솔루션을 설치합니다.  
   
-##  <a name="Roll"></a>이전 버전으로 솔루션 롤백  
+##  <a name="Roll"></a> 이전 버전으로 솔루션 롤백  
  솔루션을 롤백하면 사용자의 해당 솔루션이 이전 버전으로 돌아갑니다.  
   
 #### <a name="to-roll-back-a-solution"></a>솔루션을 롤백하려면  

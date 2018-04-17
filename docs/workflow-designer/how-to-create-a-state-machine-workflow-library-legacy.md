@@ -1,5 +1,5 @@
 ---
-title: "방법: 상태 시스템 워크플로 라이브러리 만들기 (레거시) | Microsoft Docs"
+title: '방법: 상태 시스템 워크플로 라이브러리 만들기 (레거시) | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 5bd68c6e-6a98-47d9-826d-9bb7a4fd72f8
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c65eafa04b25a2ba3f449d26e9a93daab1699664
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: a8220c6e9dbd2d97e0bf1017498ca3b295424863
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-state-machine-workflow-library-legacy"></a>방법: 상태 시스템 워크플로 라이브러리 만들기(레거시)
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 03/12/2018
 
 1.  Visual Studio를 시작합니다.
 
-2.  에 **파일** 메뉴에서 **새로**를 선택한 후 **프로젝트**합니다.
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음, **프로젝트**를 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 03/12/2018
 
 8.  **확인**을 클릭합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레거시 워크플로 프로젝트 만들기](../workflow-designer/creating-legacy-workflow-projects.md)
 - [상태 시스템 워크플로](/dotnet/framework/windows-workflow-foundation/state-machine-workflows)

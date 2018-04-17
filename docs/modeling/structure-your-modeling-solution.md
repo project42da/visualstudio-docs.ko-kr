@@ -1,21 +1,19 @@
 ---
-title: "모델링 솔루션 구성 | Microsoft Docs"
-ms.custom: 
+title: 모델링 솔루션 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: d8839b28fcfa67612bd28405984a4d99119e59c5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: da05bef4f69c5cb29aca00713bd777f910ab094e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="structure-your-modeling-solution"></a>모델링 솔루션 구성
 개발 프로젝트에서 모델을 효과적으로 사용하려면 팀 멤버가 프로젝트의 다른 파트 모델에서 동시에 작업할 수 있어야 합니다. 이 항목에서는 전체 레이어 다이어그램의 레이어에 해당하는 여러 파트로 응용 프로그램을 나누는 체계를 제안합니다.  

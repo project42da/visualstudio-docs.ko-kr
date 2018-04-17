@@ -1,12 +1,10 @@
 ---
-title: "연습: SharePoint 프로젝트 항목 형식 확장 | Microsoft Docs"
-ms.custom: 
+title: '연습: SharePoint 프로젝트 항목 형식 확장 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e2f39fc15d73b2019e739d7695f40cf0e3fd0940
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: ed2c425af4127af443254bfdc269d58c653bb3c9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-extending-a-sharepoint-project-item-type"></a>연습: SharePoint 프로젝트 항목 형식 확장
   사용할 수는 **비즈니스 데이터 연결 모델** SharePoint의 BDC 비즈니스 데이터 연결 () 서비스에 대 한 모델을 만드는 프로젝트 항목입니다. 기본적으로이 프로젝트 항목을 사용 하 여 모델을 만들 때 모델의 데이터 표시 되지 않습니다 사용자에 게. 사용자가 데이터를 볼 수 있도록 SharePoint에 외부 목록도 만들어야 합니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
   
 -   확장을 테스트 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
 -   Microsoft Windows, SharePoint 및 Visual Studio의 버전을 지원 합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -80,7 +79,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  에 **이름** 상자에 입력 **GenerateExternalDataLists**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **GenerateExternalDataLists** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **GenerateExternalDataLists** 프로젝트를 **솔루션 탐색기**합니다.  
   
 7.  Source.extension.vsixmanifest 파일 자동으로 열리지 GenerateExternalDataLists 프로젝트의 바로 가기 메뉴를 열고 선택한 후 **열**  
   
@@ -98,7 +97,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  에 **이름** 상자에 입력 **BdcProjectItemExtension**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **BdcProjectItemExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **BdcProjectItemExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 6.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   

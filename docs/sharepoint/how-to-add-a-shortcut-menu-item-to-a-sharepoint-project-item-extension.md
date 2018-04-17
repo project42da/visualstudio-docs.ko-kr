@@ -1,12 +1,10 @@
 ---
-title: "방법: SharePoint 프로젝트 항목 확장에 바로 가기 메뉴 항목을 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 프로젝트 항목 확장에 바로 가기 메뉴 항목을 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 26158159015a9d4e6b76845341903aa8c25af0e4
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: b2ac26672e7df8cc01fbca862df5867787e5283c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-shortcut-menu-item-to-a-sharepoint-project-item-extension"></a>방법: SharePoint 프로젝트 항목 확장에 바로 가기 메뉴 항목 추가
   프로젝트 항목 확장을 사용 하 여 기존 SharePoint 프로젝트 항목에 바로 가기 메뉴 항목을 추가할 수 있습니다. 프로젝트 항목을 클릭할 때 메뉴 항목이 표시 **솔루션 탐색기**합니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  에 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem.Click> 새에 대 한 이벤트 처리기 <xref:Microsoft.VisualStudio.SharePoint.IMenuItem> 개체, 바로 가기 메뉴 항목을 클릭할 때 실행 하려는 작업을 수행 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 이벤트 수신기 프로젝트 항목에 바로 가기 메뉴 항목을 추가 하는 방법을 보여 줍니다. 프로젝트 항목을 클릭할 때 **솔루션 탐색기** 클릭는 **출력 창에 메시지 쓰기** 에 메시지를 표시 하는 메뉴 항목을 Visual Studio는 **출력**창.  
   
  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#1](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemextensionmenu.vb#1)]

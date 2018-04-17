@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 책갈피 텍스트 업데이트 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 책갈피 텍스트 업데이트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - Bookmark control, updating contents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: af3252f87bd3c7d6a6c6e75ae85cea4cd75bd1e9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d041ff303a27d4eefee4f36776d5c5eda7c16b32
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-update-bookmark-text"></a>방법: 프로그래밍 방식으로 책갈피 텍스트 업데이트
   나중에 텍스트를 검색할 수 있도록 또는 책갈피의 텍스트를 바꾸기 위해 Microsoft Office Word 문서의 자리 표시자 책갈피에 텍스트를 삽입할 수 있습니다. 문서 수준 사용자 지정을 개발하는 경우 데이터에 바인딩된 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤의 텍스트를 업데이트할 수도 있습니다. 자세한 내용은 참조 [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)합니다.  

@@ -1,5 +1,5 @@
 ---
-title: "찾아보기 및.NET 유형 선택 대화 상자 (레거시) | Microsoft Docs"
+title: 찾아보기 및.NET 유형 선택 대화 상자 (레거시) | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 1e66c9bc-94b2-46e2-bedf-871752e5f917
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3cdc5d3928cd436d86d529e667f99251e1e7cc95
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: a283caa664bb208613a695cb4afb8873caba3645
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="browse-and-select-a-net-type-dialog-box-legacy"></a>.NET 유형 선택 대화 상자(레거시)
 이 항목에서는 설명 방법을 사용 하 여는 **.NET 유형 선택** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -30,6 +30,6 @@ ms.lasthandoff: 03/12/2018
 |**유형 이름:**|현재 선택한 형식의 이름입니다.|
 |**Type**|왼쪽 창에는 참조된 어셈블리의 트리 뷰가 나타나고, 오른쪽 창에는 왼쪽 창에서 선택한 참조된 어셈블리 선택 항목에 대해 사용 가능한 형식이 표시됩니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레거시 활동 디자이너 사용](../workflow-designer/using-the-legacy-activity-designer.md)

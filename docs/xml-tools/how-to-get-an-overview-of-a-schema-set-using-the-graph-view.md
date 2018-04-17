@@ -1,23 +1,21 @@
 ---
-title: "방법: 그래프 뷰를 사용 하 여 스키마 집합에 대 한 개요 | Microsoft Docs"
-ms.custom: 
+title: '방법: 그래프 뷰를 사용 하 여 스키마 집합에 대 한 개요 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: c0df4b0d-52ef-4a6c-9676-1d8311aad7c7
-caps.latest.revision: "3"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d9499e9972f32998b66be23d60acb8c585776d62
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 145a55312d042811b0d51d46136078657d10fee1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>방법: 그래프 뷰를 사용하여 스키마 집합의 개요 가져오기
 이 항목에서는 사용 하는 방법을 설명는 [그래프 보기](../xml-tools/graph-view.md) 노드 간 관계 및 스키마 집합에 있는 노드의 상위 수준으로 볼 수 있습니다.  

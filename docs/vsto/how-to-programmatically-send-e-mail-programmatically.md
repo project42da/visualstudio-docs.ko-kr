@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 전자 메일을 보낼 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 전자 메일을 보낼 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,20 +15,21 @@ helpviewer_keywords:
 - e-mail [Office development in Visual Studio], sending
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: f8681fecf8dc2d4c3a26aeaeb372faeb57e54094
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: c3ee656a8a4965f01969bad19d66d0ea6215bcbe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-send-e-mail"></a>방법: 프로그래밍 방식으로 전자 메일 보내기  
   이 예제에서는 도메인 이름을 가진 연락처에 전자 메일 메시지를 보냅니다 **example.com** 전자 메일 주소에 있습니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-csharp[Trin_OL_ProgramEmail#1](../vsto/codesnippet/CSharp/Trin_OL_ProgramEMail/thisaddin.cs#1)]  
   
 ## <a name="compiling-the-code"></a>코드 컴파일  

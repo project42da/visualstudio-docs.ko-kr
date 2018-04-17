@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 통합 문서를 보호 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 통합 문서를 보호 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - workbooks, protecting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1799366258786bafb3b24b5580ccf29be1d59927
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 03cab4591bbca62c237877e39dabf40328768ccf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-protect-workbooks"></a>방법: 프로그래밍 방식으로 통합 문서 보호
   사용자 수 없는 추가 하거나 워크시트를 삭제 하 고 또한 프로그래밍 방식으로 통합 문서를 보호 해제 되도록 Microsoft Office Excel 통합 문서를 보호할 수 있습니다. 필요에 따라 암호를 지정 하, 여부를 나타낼 있습니다 (사용자가 시트를 이동할 수 없습니다) 되므로 보호 구조를 보호 하는 통합 문서의 창을 표시할지 여부를 지정 수 있습니다.  

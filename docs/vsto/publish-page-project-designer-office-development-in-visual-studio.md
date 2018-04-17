@@ -1,13 +1,10 @@
 ---
-title: "게시 페이지, 프로젝트 디자이너 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: 게시 페이지, 프로젝트 디자이너 (Visual Studio에서 Office 개발) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectProperties.Publish.2007System
 dev_langs:
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - Property Pages dialog box, Publish [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d9cc3fa102c0552893c6f7859a256b7df26e3af5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ee835542d88fa316eb3aec859e5aaf61d376f624
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="publish-page-project-designer-office-development-in-visual-studio"></a>게시 페이지, 프로젝트 디자이너(Visual Studio에서는 Office 개발)
   **프로젝트 디자이너** 의 **게시** 페이지를 통해 배포를 위한 속성을 구성합니다.  
@@ -44,7 +41,7 @@ ms.lasthandoff: 01/10/2018
   
  옵션에는 로컬 컴퓨터, UNC 파일 공유 또는 HTTP/HTTPS 웹 사이트가 포함됩니다. 경로 로컬 일 수 있습니다 (*c:\foldername\publishfolder*), 상대 (*게시\\*), 또는 정규화 된 위치 (*\\\servername\foldername* 또는 http://*servername/foldername*).  
   
- 기본적으로 게시 위치는 IIS를 설치한 경우 *http://localhost/projectname/* 이고, IIS를 설치하지 않은 경우 publish\ 디렉터리입니다.  
+ 기본적으로 게시 위치는 *http://localhost/projectname/* IIS가 설치 되어 있는 경우 또는 작업을 수행한 경우 publish\ 디렉터리 IIS가 설치 되지 합니다.  
   
  **설치 폴더 URL**  
  선택 사항입니다.  

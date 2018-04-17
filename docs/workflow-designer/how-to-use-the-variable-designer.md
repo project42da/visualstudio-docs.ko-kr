@@ -1,5 +1,5 @@
 ---
-title: "방법: 변수 디자이너를 사용 하 여 | Microsoft Docs"
+title: '방법: 변수 디자이너를 사용 하 여 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: 0318dfb0-bf8f-4f92-9b86-ae4c1b2161ad
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d23307cc40084cdd455b6aaf8eee8ce675d8656d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c5ea858c6ebe448b7faf77533395a044bcc2fb32
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-the-variable-designer"></a>방법: 변수 디자이너 사용
 변수 디자이너는 데이터 바인딩 시나리오 및 조건문에 사용할 변수를 만드는 데 사용됩니다. 클릭 하 여 액세스 하는 디자이너는 **변수** 디자인 캔버스의 왼쪽 아래 모퉁이의 단추입니다. 디자이너는 테이블 형식으로 표시 되며을 제외 하 고 각각의 열 머리글을 따라 정렬 될 변수 목록이 포함 되어는 **기본** 열입니다. 각 변수에는 이름, 변수 형식, 범위 및 기본값(있는 경우)이 포함됩니다. 이름 및 기본값은 편집 가능한 텍스트 필드이며 형식과 범위는 드롭다운입니다. 범위란 변수 디자이너를 호출할 때 선택한 활동입니다. 선택 항목의 범위 안에서 변수를 만들 수 없는 경우, 선택 항목과 가장 근접하면서 변수를 만들 수 있는 상위 활동 범위가 기본 범위로 사용됩니다. 자세한 내용은 참조 [변수 및 인수 (.NET)](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)합니다.
@@ -34,7 +34,7 @@ ms.lasthandoff: 03/12/2018
     > [!NOTE]
     > 변수를 삭제 하려면 클릭 하 여 변수를 선택 하 고 다음 키를 누릅니다는 **삭제** 키입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [워크플로 디자이너 사용](../workflow-designer/using-the-workflow-designer.md)
 - [변수 및 인수](/dotnet/framework/windows-workflow-foundation/variables-and-arguments)

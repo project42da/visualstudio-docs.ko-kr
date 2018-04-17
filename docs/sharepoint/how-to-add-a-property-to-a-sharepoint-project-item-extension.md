@@ -1,12 +1,10 @@
 ---
-title: "방법: SharePoint 프로젝트 항목 확장에 속성 추가 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 프로젝트 항목 확장에 속성 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1b096a1d524a1702d7fae01d35fb08e2fa697c70
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d80881d69addd2d1f92bdf2c9b47c6f528945d30
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-a-property-to-a-sharepoint-project-item-extension"></a>방법: SharePoint 프로젝트 항목 확장에 속성 추가
   Visual Studio에서 이미 설치 되어 있는 모든 SharePoint 프로젝트 항목 속성을 추가 하려면 프로젝트 항목 확장을 사용할 수 있습니다. 에 해당 속성이 표시는 **속성** 창에서 프로젝트 항목을 선택 하는 경우 **솔루션 탐색기**합니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  에 대 한 이벤트 처리기에는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItemEvents.ProjectItemPropertiesRequested> 이벤트 속성 클래스의 인스턴스를 추가 <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectItemPropertiesRequestedEventArgs.PropertySources%2A> 이벤트 인수 매개 변수 컬렉션입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제에서는 라는 속성을 추가 하는 방법을 보여 줍니다. **예제 속성** 이벤트 수신기 프로젝트 항목에 있습니다.  
   
  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#8](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemextensionproperty.cs#8)]

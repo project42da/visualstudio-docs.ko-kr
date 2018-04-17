@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio 환경의 office 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 환경의 office 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectItem.WordDocument
 - VST.ProjectItem.ExcelWorkbook
@@ -43,13 +41,14 @@ helpviewer_keywords:
 - VST.Designer.ExcelVST.Designer.Word
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: a937f98a11ab9c8cb9723637be902808dce86563
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 80a8f866cb43eb6279cca45bebc94c54af898eab
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-projects-in-the-visual-studio-environment"></a>Visual Studio 환경의 Office 프로젝트
   Microsoft Office 프로젝트에는 Windows Forms 프로젝트를 비롯하여 Visual Studio의 다른 프로젝트 형식과 비슷한 개발 환경이 있습니다. Office 프로젝트를 만들거나 열 경우 **솔루션 탐색기**에 프로젝트 항목이 나타납니다. 문서 수준 프로젝트의 경우 문서(Word 문서 또는 Excel 통합 문서)가 Visual Studio에서 열리고 이 문서가 비주얼 디자이너와 같은 기능을 수행합니다.  

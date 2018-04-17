@@ -2,20 +2,18 @@
 title: T4 매개 변수 지시문 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f44e25f9256cd37692970e92744d7564bc3abd19
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 594765ea839f7d761d0faf7216ac90989b4acc7f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="t4-parameter-directive"></a>T4 매개 변수 지시문
 에 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 텍스트 템플릿에서 `parameter` 지시문 컨텍스트 외부에서 전달 된 값에서 초기화 되는 템플릿 코드에 속성을 선언 합니다. 텍스트 변환 호출 하는 코드를 작성 하는 경우 이러한 값을 설정할 수 있습니다.  

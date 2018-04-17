@@ -1,13 +1,10 @@
 ---
-title: "SharePoint에서 지 원하는 MSBuild 속성 | Microsoft Docs"
-ms.custom: 
+title: SharePoint에서 지 원하는 MSBuild 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, MSBuild properties
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 115896965eb47eb6dc4a9cdbb0b9df8dd8972c5f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 1e60843119ee72f1164288f50b27116cdda31e9b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="msbuild-properties-supported-by-sharepoint"></a>SharePoint에서 지원하는 MSBuild 속성
   모든 [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] Microsoft.VisualStudio.SharePoint.targets 파일, 프로젝트 파일 또는 프로젝트 사용자 파일에 정의 된 속성에 사용할 수 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 프로젝트. 공통 외에도 [!INCLUDE[vstecmsbuild](../sharepoint/includes/vstecmsbuild-md.md)] SharePoint 프로젝트에 관련 된 추가 속성을 정의 하는 프로젝트를 SharePoint에서 제공 하는 속성입니다.  

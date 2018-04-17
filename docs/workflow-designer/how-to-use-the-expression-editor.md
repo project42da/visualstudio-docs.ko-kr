@@ -1,5 +1,5 @@
 ---
-title: "방법: 식 편집기를 사용 하 여 | Microsoft Docs"
+title: '방법: 식 편집기를 사용 하 여 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: b5f961dd-6dda-41a9-9cae-0383d479ef3d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: be43ad439c8868064fc7e0bab79e051abb991e0d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: f9873d341238f3278779277d70da6df56f29f721
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-the-expression-editor"></a>방법: 식 편집기 사용
 식 편집기에 입력 하 고 이러한 식을 계산 하는 방법으로 많은 워크플로 활동에서 사용 되는 Windows 워크플로 디자이너 컨트롤입니다. 식 편집기는 IntelliSense, 색 지정, ParamInfo, 오류 물결선 등 다양한 기능이 포함된 완벽한 IDE 편집 환경을 제공합니다. 그리고 컴파일러는 입력된 식의 유효성을 검사합니다. 식이 잘못된 경우 오류 아이콘이 표시됩니다. 편집기로 열 수도 있습니다는 **식 편집기** 대화 상자.
@@ -51,6 +51,6 @@ ms.lasthandoff: 03/12/2018
 
      속성 표에서 속성 이름 옆에 있는 줄임표를 클릭하여 식을 입력/편집할 수도 있습니다. 열립니다는 **식 편집기** 대화 상자로 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - <xref:System.Activities.Presentation.View.ExpressionTextBox>

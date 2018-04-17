@@ -1,13 +1,10 @@
 ---
-title: "SharePoint 코드 확인 및 디버깅 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 코드 확인 및 디버깅 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, unit testing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6c824a5e08375d90f84db2499f76099f87ef035f
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: fc294bcd94c7fd4c1ed699d8aaceab66eaecc47b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="verifying-and-debugging-sharepoint-code"></a>SharePoint 코드 확인 및 디버깅
  
@@ -55,6 +52,6 @@ SharePoint 프로젝트는 .NET Framework 기반의 응용 프로그램에서 �
 |[연습: IntelliTrace를 사용하여 SharePoint 응용 프로그램 디버깅](../sharepoint/walkthrough-debugging-a-sharepoint-application-by-using-intellitrace.md)|IntelliTrace를 사용하여 SharePoint 프로젝트에서 코딩 오류를 찾는 방법을 보여 줍니다.|
 |[코드 단위 테스트](/visualstudio/test/unit-test-your-code)|단위 테스트를 사용 하 여 코드에서 논리 오류를 확인 하는 방법에 설명 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [코드 품질 향상](/visualstudio/test/improve-code-quality)

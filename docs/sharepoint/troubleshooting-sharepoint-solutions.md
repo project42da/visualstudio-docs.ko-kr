@@ -2,12 +2,9 @@
 title: SharePoint 솔루션 문제 해결 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/22/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - office-development
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Tools.SharePoint.Errors.Debugging
 dev_langs:
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6f03f8fd1fd5609f93d4fae22a7a694e61b1c80c
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: ba8f84db31cbe41e8bd3f62a7806de0a6d2ea58e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-sharepoint-solutions"></a>SharePoint 솔루션 문제 해결
   다음과 같은 문제 또는 경고를 사용 하 여 SharePoint 솔루션을 디버깅할 때 발생할 수 있습니다는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거 합니다. 자세한 내용은 참조 [SharePoint 2007 워크플로 솔루션 디버깅](http://msdn.microsoft.com/en-us/3a5392f3-66f3-48be-956e-02de23fa6247)합니다.
@@ -177,7 +174,7 @@ ms.lasthandoff: 04/10/2018
 ### <a name="resolution"></a>해결  
  이 문제를 해결 하려면 모델을 수동으로 삭제 한 다음 솔루션을 다시 배포 합니다.  다음 도구 중 하나를 사용 하 여 모델을 삭제할 수 있습니다.  
   
--   SharePoint 2010 Central Administration. 자세한 내용은 참조 [BDC 모델 관리](http://go.microsoft.com/fwlink/?LinkID=181472) Microsoft TechNet 웹 사이트에 있습니다.  
+-   SharePoint 2010 중앙 관리 합니다. 자세한 내용은 참조 [BDC 모델 관리](http://go.microsoft.com/fwlink/?LinkID=181472) Microsoft TechNet 웹 사이트에 있습니다.  
   
 -   Windows PowerShell. 명령 프롬프트에서 다음이 명령을 입력 하 여 모델을 삭제할 수 있습니다: **제거 SPBusinessDataCatalogModel**합니다. 자세한 내용은 참조 [일반 cmdlet (SharePoint Server 2010)](http://go.microsoft.com/fwlink/?LinkID=182375) Microsoft TechNet 웹 사이트에 있습니다.  
   

@@ -1,12 +1,10 @@
 ---
-title: "연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending deployment
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 036f8d135e535547e9e5f790135186bf1f5728bc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 1538e68d29667eb7a1b3f0c976ddc5d77dab825b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects"></a>연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기
   SharePoint 프로젝트를 배포 하면 Visual Studio는 일련의 배포 단계는 특정 순서로 실행 합니다. Visual Studio에는 많은 기본 제공 배포 단계가 포함 하지만 있습니다 수, 직접 만들 수도 있습니다.  
@@ -42,7 +41,7 @@ ms.lasthandoff: 01/10/2018
   
 -   새 배포 단계를 테스트 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
 -   지원 되는 Windows, SharePoint 및 Visual Studio의 버전입니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -83,7 +82,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  선택 된 **VSIX 프로젝트** 서식 파일을 프로젝트 이름 **UpgradeDeploymentStep**, 선택한 후는 **확인** 단추 합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **UpgradeDeploymentStep** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **UpgradeDeploymentStep** 프로젝트를 **솔루션 탐색기**합니다.  
   
 #### <a name="to-create-the-extension-project"></a>확장 프로젝트를 만들려면  
   
@@ -95,7 +94,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  선택 된 **클래스 라이브러리** 서식 파일 프로젝트에서 프로젝트 이름을 **DeploymentStepExtension**, 선택한 후는 **확인** 단추 합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **DeploymentStepExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **DeploymentStepExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -271,7 +270,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  선택 된 **마침** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]EmployeesListDefinition 프로젝트를 만듭니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] EmployeesListDefinition 프로젝트를 만듭니다.  
   
 8.  EmployeesListDefinition 프로젝트에 대 한 바로 가기 메뉴를 열고 **추가**를 선택한 후 **새 항목**합니다.  
   
@@ -289,7 +288,7 @@ ms.lasthandoff: 01/10/2018
   
     3.  **기본값 (비어 있음)** 에서 선택한는 **기반으로 사용자 지정 가능한 목록을 만들:** 목록입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]제목 열 및 하나의 빈 인스턴스로 직원 목록 항목을 만들고 목록 디자이너를 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 제목 열 및 하나의 빈 인스턴스로 직원 목록 항목을 만들고 목록 디자이너를 엽니다.  
   
 12. 목록 디자이너에서에 **열** 탭을 선택는 **기존 또는 새 열 이름을 입력** 행을 한 후에 다음 열을 추가 **열 표시 이름** 목록:  
   
@@ -433,7 +432,7 @@ ms.lasthandoff: 01/10/2018
   
      속성 편집기/디자이너가 열립니다.  
   
-4.  에 **뷰** 탭을 선택는 **전자 메일** 열을 선택한 후는  **<**  해당 열을 이동 하는 키의 **열을선택한**목록을 **사용 가능한 열** 목록입니다.  
+4.  에 **뷰** 탭을 선택는 **전자 메일** 열을 선택한 후는 **<** 해당 열을 이동 하는 키의 **열을선택한**목록을 **사용 가능한 열** 목록입니다.  
   
      이 작업의 기본 보기에서 이러한 필드를 제거는 **직원** SharePoint 사이트의 목록입니다.  
   

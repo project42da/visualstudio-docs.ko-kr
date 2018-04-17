@@ -1,13 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 문서 및 문서의 일부 보호 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 문서 및 문서의 일부 보호 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - Word documents, protection
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8655a03659bd3b69e23fd155620d42df6d52386c
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 2e25dd6af67307ebf28a63893411bb2dfaa7bf61
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-protect-documents-and-parts-of-documents"></a>방법: 프로그래밍 방식으로 문서 및 문서의 일부 보호
   Microsoft Office Word 문서에 보호를 추가하여 사용자의 문서 편집을 방지할 수 있습니다.  
@@ -77,7 +74,7 @@ ms.lasthandoff: 01/10/2018
  [문서 수준 솔루션의 문서 보호](../vsto/document-protection-in-document-level-solutions.md)   
  [Office 문서의 암호 보호](../vsto/password-protection-on-office-documents.md)   
  [방법: 코드 권한이 제한 된 문서 뒤 실행 허용](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
- [How to: Add Bookmark Controls to Word Documents](../vsto/how-to-add-bookmark-controls-to-word-documents.md)   
+ [방법: Word 문서에 책갈피 컨트롤 추가](../vsto/how-to-add-bookmark-controls-to-word-documents.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   
   

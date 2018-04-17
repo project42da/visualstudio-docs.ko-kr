@@ -1,21 +1,19 @@
 ---
-title: "DGML Graph Markup Language () 참조를 전달 합니다. | Microsoft Docs"
-ms.custom: 
+title: DGML Graph Markup Language () 참조를 전달 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: cfa143669f757a3a71ddb89ea731ffbfc5059d24
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 49ae2e854908afa6b7decb7ea94cca63b4203fbe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="directed-graph-markup-language-dgml-reference"></a>DGML(Directed Graph Markup Language) 참조
 DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분석을 수행하는 데 사용되는 정보를 설명하며, Visual Studio에서 코드 맵을 지속하는 데 사용되는 형식입니다. 단순 XML을 사용하여 순환 및 비순환 방향이 지정된 그래프를 설명합니다. 방향이 지정된 그래프는 링크 또는 가장자리로 연결되는 노드의 집합입니다. 노드 및 링크를 사용하여 소프트웨어 프로젝트의 요소와 같은 네트워크 구조를 나타낼 수 있습니다.  
@@ -25,7 +23,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
 > [!NOTE]
 >  .dgml 파일을 편집하는 경우 IntelliSense를 사용하면 각 요소 및 요소 값에 사용할 수 있는 특성을 식별할 수 있습니다. 특성에 색을 지정하려면 "Blue"와 같은 일반적인 색의 이름 또는 "#ffa0b1c3"과 같은 ARGB 16진수 값을 사용합니다. DGML은 WPF(Windows Presentation Foundation) 색 정의 형식의 일부를 사용합니다. 자세한 내용은 참조 [색 클래스](http://go.microsoft.com/fwlink/?LinkId=182345)합니다.  
   
-##  <a name="DGML"></a>DGML 구문  
+##  <a name="DGML"></a> DGML 구문  
  다음 표에서는 DGML에서 사용되는 요소 종류에 대해 설명합니다.  
   
 -   `<DirectedGraph></DirectedGraph>`  
@@ -95,7 +93,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
   
      다음 목록에서는 포함할 수 있는 선택적 특성 중 일부에 대해 설명합니다.  
   
-     `Label`-노드의 표시 이름입니다.  
+     `Label` -노드의 표시 이름입니다.  
   
      스타일 특성. [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)을 참조하세요.  
   
@@ -301,7 +299,7 @@ DGML(Directed Graph Markup Language)은 시각화에 사용되고 복잡성 분�
     </DirectedGraph>  
     ```  
   
-###  <a name="AddAlias"></a>일반적으로 사용 되는 경로 대 한 별칭  
+###  <a name="AddAlias"></a> 일반적으로 사용 되는 경로 대 한 별칭  
  일반적으로 사용되는 경로를 별칭으로 바꾸면 .dgml 파일의 크기뿐만 아니라 파일을 로드하거나 저장하는 데 필요한 시간을 줄일 수 있습니다. 별칭을 만들려면 .dgml 파일의 끝에 `<Paths></Paths>` 섹션을 추가합니다. 다음과 같이 이 섹션에서 `<Path/>` 요소를 추가하여 경로의 별칭을 정의합니다.  
   
 ```xml  

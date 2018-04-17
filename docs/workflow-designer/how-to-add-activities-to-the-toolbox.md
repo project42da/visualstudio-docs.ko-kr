@@ -1,18 +1,18 @@
 ---
-title: "방법: 도구 상자에 활동 추가 | Microsoft Docs"
+title: '방법: 도구 상자에 활동 추가 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 275917a56d451c35093bcb1b42aadcb599a4aa4e
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: acb101f5dff84f7e8d586ce33c63adbe30fa0dbf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>방법: 도구 상자에 활동 추가
 
@@ -57,6 +57,6 @@ ms.lasthandoff: 03/12/2018
 
 6.  사용자 지정 활동에 표시 된 **도구 상자** 항목을 추가 하기 전에 포커스가 있던 범주 아래 합니다. 예를 들어 경우는 **일반** 범주에서 선택 된는 **도구 상자** 도구 상자 항목을 추가 하기 전에 활동 아래에 표시는 **일반** 범주입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [워크플로 디자이너 사용](../workflow-designer/using-the-workflow-designer.md)

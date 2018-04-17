@@ -2,22 +2,20 @@
 title: 사용자 지정 T4 텍스트 템플릿 지시문 프로세서 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, custom directive processors
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 305eb97d18e8513a92637cd92b1f28798677f314
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: e55ff7c1c0041e386980b55c9cca7c9263f0b62e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-custom-t4-text-template-directive-processors"></a>사용자 지정 T4 텍스트 템플릿 지시문 프로세서 만들기
 *텍스트 템플릿 변환 프로세스* 사용는 *텍스트 템플릿* 파일 입력 및 출력으로 하는 텍스트 파일을 생성 합니다. *텍스트 템플릿 변환 엔진* 컨트롤 텍스트 템플릿 변환 호스트와 하나 이상의 텍스트 템플릿에와 상호 작용 하는 프로세스와 엔진 *지시문 프로세서* 프로세스를 완료 합니다. 자세한 내용은 참조 [텍스트 템플릿 변환 프로세스](../modeling/the-text-template-transformation-process.md)합니다.  

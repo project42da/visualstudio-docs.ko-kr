@@ -1,23 +1,21 @@
 ---
-title: "디버거 사용자 인터페이스 (XSLT) | Microsoft Docs"
-ms.custom: 
+title: 디버거 사용자 인터페이스 (XSLT) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 846fdabd-e5c3-4688-9b0d-a93fbeea1b96
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 1071db6a7a8205ef337737473a18d1a6c31af43c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3d4f5638ce7f61a1ba79ff6536a0e6f98e4de1c9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="debugger-user-interface-xslt"></a>디버거 사용자 인터페이스(XSLT)
 이 항목에서는 디버거 창과 대화 상자에 대해 설명합니다. XSLT 관련 디버깅 동작이 있는 사용자 인터페이스 부분에 대해서만 설명합니다.  

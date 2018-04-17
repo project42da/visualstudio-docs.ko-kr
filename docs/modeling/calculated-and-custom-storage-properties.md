@@ -1,23 +1,21 @@
 ---
-title: "계산 및 사용자 지정 저장소 속성 | Microsoft Docs"
-ms.custom: 
+title: 계산 및 사용자 지정 저장소 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, programming domain properties
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1b5d89a621c0f325fd20dbff47c30975f760a6f8
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 153ff58e5ace618fbf9e6f0e3bb25614d21fc98a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="calculated-and-custom-storage-properties"></a>계산된 저장소 속성 및 사용자 지정 저장소 속성
 도메인 특정 언어 (DSL)의 모든 도메인 속성 언어 탐색기에서 다이어그램에 사용자에 게 표시할 수 있습니다 및 프로그램 코드에서 액세스할 수 있습니다. 그러나 속성은 해당 값을 저장 하는 방식에서 다릅니다.  
@@ -69,7 +67,7 @@ ms.lasthandoff: 02/09/2018
     }  }  
     ```  
   
-8.  설정한 경우 **종류** 를 **사용자 지정 저장소**를 제공 해야 합니다는 `Set` 메서드. 예:  
+8.  설정한 경우 **종류** 를 **사용자 지정 저장소**를 제공 해야 합니다는 `Set` 메서드. 예를 들어:  
   
     ```  
     void SetAgeValue(int value)  
@@ -84,7 +82,7 @@ ms.lasthandoff: 02/09/2018
   
 10. 속성을 테스트 합니다. 시도 하면 확인 **실행 취소** 및 **다시 실행**합니다.  
   
-##  <a name="setters"></a>트랜잭션 및 Setter를 사용자 지정  
+##  <a name="setters"></a> 트랜잭션 및 Setter를 사용자 지정  
  사용자 지정 저장소 속성의 Set 메서드의 않아도, 트랜잭션을 열지 활성화 된 트랜잭션 내부 메서드는 일반적으로 하기 때문에 합니다.  
   
  그러나 실행 취소 또는 다시 실행 하면 사용자가 또는 트랜잭션이 롤백되는 경우이 집합 메서드를 호출도 수 있습니다. 때 <xref:Microsoft.VisualStudio.Modeling.Store.InUndoRedoOrRollback%2A> 가 true 이면 Set 메서드가 다음과 같이 동작 합니다.  
@@ -93,7 +91,7 @@ ms.lasthandoff: 02/09/2018
   
 -   그러나 해당 데이터베이스 또는 파일 내용을 스토어 외부 개체 등의 외부 리소스를 업데이트 해야 합니다. 저장소에 값을 가진 synchronism에 유지 됩니다는 있는지 확인 합니다.  
   
- 예:  
+ 예를 들어:  
   
 ```  
 void SetAgeValue(int value)  

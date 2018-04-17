@@ -1,12 +1,10 @@
 ---
-title: "Office UI 사용자 지정 연습 | Microsoft Docs"
-ms.custom: 
+title: Office UI 사용자 지정 연습 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - walkthroughs [Office development in Visual Studio], action panes
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2ae30b9b157cfcd26e709d39c05af4cc0605a5a1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 8ab6fe6ee93eb775846bfd84c5269f3451db9b2a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-ui-customization-walkthroughs"></a>Office UI 사용자 지정 연습
   다음 연습에서는 문서 수준 사용자 지정 및 VSTO 추가 기능을 사용하여 Microsoft Office 응용 프로그램의 UI(사용자 인터페이스)를 사용자 지정할 수 있는 방법을 보여 줍니다.  
@@ -89,7 +88,7 @@ ms.lasthandoff: 01/10/2018
  [Excel을 사용한 연습](../vsto/walkthroughs-using-excel.md)   
  [에서 데이터 Office 솔루션 연습](../vsto/data-in-office-solutions-walkthroughs.md)   
  [보안 및 배포 연습](../vsto/security-and-deployment-walkthroughs.md)   
- [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [시작 하기 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
   

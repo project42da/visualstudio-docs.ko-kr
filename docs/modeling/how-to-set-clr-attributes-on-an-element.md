@@ -1,25 +1,23 @@
 ---
-title: "방법: 요소에 대해 CLR 특성을 설정 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: 요소에 대해 CLR 특성을 설정 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.EditAttributesDialog
 helpviewer_keywords:
 - Domain-Specific Language, custom attrributes
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 1eedf41931c7f9476691e507ab0afcd9e2a4c4ee
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 919f77955426ada0b772b1eb1f4c0adfffb59b81
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-clr-attributes-on-an-element"></a>방법: 요소에 CLR 특성 설정
 사용자 지정 특성은 도메인 요소, 셰이프, 커넥터 및 다이어그램에 추가할 수 있는 특수 한 특성입니다. 상속 되는 모든 특성을 추가할 수는 `System.Attribute` 클래스입니다.  
@@ -42,7 +40,7 @@ ms.lasthandoff: 02/09/2018
   
      **사용자 정의 특성** 속성 이제 다음과 같은 형식의 특성을 표시 합니다.  
   
-     `[` *AttributeName* `(` *ParameterName* `=` *Type* `)]`  
+     `[` *AttributeName* `(` *ParameterName* `=` *유형* `)]`  
   
 ## <a name="see-also"></a>참고 항목  
  [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

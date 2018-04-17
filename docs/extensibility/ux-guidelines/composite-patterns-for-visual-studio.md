@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio에 대 한 복합 패턴 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대 한 복합 패턴 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: e48ecfb2-f4b5-4d3a-b4a2-7a4d62fa4ec0
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a751bcc54fe53f9c9582dab71e2f393e885d1480
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6515b5aefc0536ea92f09a92b1a17050b820008d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="composite-patterns-for-visual-studio"></a>Visual Studio에 대 한 복합 패턴
 복합 패턴 고유 구성 요소 상호 작용 및 디자인 결합 요소로 결합 합니다. 일관성을 고려 하 여 Visual Studio에서 가장 중요 한 복합 패턴 중 일부는 다음과 같습니다.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [터치식 입력](../../extensibility/ux-guidelines/composite-patterns-for-visual-studio.md#BKMK_TouchInput)  
   
-##  <a name="BKMK_DataVisualization"></a>데이터 시각화  
+##  <a name="BKMK_DataVisualization"></a> 데이터 시각화  
   
 ### <a name="overview"></a>개요  
  차트는 시각적으로 집계 하 고 의사 결정을 개선 하기 위해 데이터를 시각화 합니다. 많은 주의 기울이게 기능 및 작업을 할 수 어떤 참조 거의 의미 하지만 데이터를 처리 하는 사용자가 도움이 수 있습니다.  
@@ -85,7 +83,7 @@ ms.lasthandoff: 12/22/2017
 |![견본 79D7F2](../../extensibility/ux-guidelines/media/0711_79d7f2.png "0711_79D7F2")|# 79D7F2|121,215,242|  
 |![견본 B5B5B5](../../extensibility/ux-guidelines/media/0711_b5b5b5.png "0711_B5B5B5")|# B5B5B5|181,181,181|  
   
-##  <a name="BKMK_OnObjectUI"></a>개체에 UI 및 보기  
+##  <a name="BKMK_OnObjectUI"></a> 개체에 UI 및 보기  
  이 섹션 관찰, 코드 peek 보기 라고도 형식의 Visual Studio에 고유한 개체에 UI에 컨텍스트를 제공 합니다.  
   
 ### <a name="overview"></a>개요  
@@ -161,7 +159,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  지 속성 및 커밋 모델  
   
-    -   일시적이 지  
+    -   Transient  
   
     -   Durable  
   
@@ -251,7 +249,7 @@ ms.lasthandoff: 12/22/2017
   
 -   **하지** 가리키기 편집할 수 있는 것 같습니다. 또는 사용자 상호 작용을 초대 하는 콘텐츠를 표시 합니다. 이 동작은 도구 설명에 대 한 표준 동작은 커서가 있는 경우 더 이상 커서 생성 한 콘텐츠를 즉시 해제 하는 것 처럼 세부 콘텐츠 위로 커서를 이동 하 려 할 경우 사용자가 불편을 줄 수 없습니다.  
   
-##  <a name="BKMK_SelectionModels"></a>모델 선택  
+##  <a name="BKMK_SelectionModels"></a> 모델 선택  
   
 ### <a name="overview"></a>개요  
  선택 모델은 나타내고 사용자 인터페이스 내에서 필요한 하나 이상의 개체에 대 한 작업을 확인 하는 데 사용 하는 메커니즘입니다. 이 항목에서는 Visual Studio 문서 편집기 내에서 선택 상호 작용 패턴: 텍스트 편집기, 디자인 화면 및 모델링 합니다.  
@@ -309,7 +307,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="region-selection-box-selection"></a>지역 선택 (상자 선택)  
  Visual Studio 텍스트 편집기에서 지역 선택 항목을 지원 하 고이 상자 선택 이라고 합니다. 상자 선택 일반 텍스트 스트림에 따르지 않는 텍스트 영역을 선택할 수 있습니다. 표준 텍스트 선택와 마찬가지로 선택이 연속적 이어야 합니다. Alt 키를 누른 채 마우스를 사용 하 여 끌거나 상자 선택 시작 됩니다. Alt 키 및 Shift 키를 누른 채 화살표 키를 사용 하 여 선택 영역을 나타내기 위해 여 상자 선택을 초기화할 수도 있습니다. 상자 선택 일반 선택 강조 표시를 사용 하 고 삽입 지점 커서 선택 영역 끝 깜박입니다.이 보여 줍니다.  
   
- ![국가 &#40; 상자 &#41; Visual Studio에서 선택](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713 04_BoxSelection")  
+ ![국가별 &#40;상자&#41; Visual Studio에서 선택](../../extensibility/ux-guidelines/media/0713-04_boxselection.png "0713 04_BoxSelection")  
   
  **Visual Studio에서 지역 (상자) 선택**  
   
@@ -394,19 +392,19 @@ ms.lasthandoff: 12/22/2017
   
  **두 개의 보조 선택 항목을 사용한 기본 선택**  
   
-####  <a name="BKMK_GraphicalObjectSelectionAppearance"></a>그래픽 개체 선택 모양  
+####  <a name="BKMK_GraphicalObjectSelectionAppearance"></a> 그래픽 개체 선택 모양  
  선택 핸들은 사각형 개체의 경계 상자 주위의 사각형 패턴으로 그려집니다. 아래 차트 핸들, 크기 조정, 내부 편집 모양을와 그래픽 개체를 가질 수 있는 다양 한 상태 예를 보여 줍니다. 핸들의 크기와 연결 해야 창 테두리 및 가장자리 메트릭을 사용 하 여 **GetSystemMetrics** API입니다.  
   
 |시스템 상태|모양|Visual 세부 정보|  
 |-----------|----------------|--------------------|  
 |**선택 되지 않음**|기본|![기본 단추 상태](../../extensibility/ux-guidelines/media/0713-10_defaultstate.png "0713 10_DefaultState")||  
-|**기본 선택**|크기를 조정할 수|![크기 조정 핸들을 사용한 기본 선택](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 11_PrimaryResize")|![크기를 조정 핸들 &#40; 확대/축소 됨을 사용한 기본 선택 &#41; ] (../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713 12_PrimaryResizeZoom")|  
-|**기본 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용 하지 않는 기본 선택](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713 13_PrimaryNoResize")|![사용 하지 않는 기본 선택 조정 핸들 &#40; 확대/축소 됨 &#41; ] (../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713 14_PrimaryNoResizeZoom")|  
-|**기본 선택**|잠금|![기본 선택 항목 잠김](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713 15_PrimaryLocked")|![기본 선택 항목 잠김 &#40; 확대/축소 됨 &#41; ] (../../extensibility/ux-guidelines/media/0713-16_primarylockedzoom.png "0713 16_PrimaryLockedZoom")|  
-|**보조 선택**|크기를 조정할 수|![크기 조정 핸들을 사용한 보조 선택](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713 17_SecondaryResize")|![크기를 조정 핸들 &#40; 확대/축소 됨을 사용한 보조 선택 &#41; ] (../../extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713 18_SecondaryResizeZoom")|  
-|**보조 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용 하지 않는 보조 선택](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713 19_SecondaryNoResize")|![크기 조정 &#40; 사용 하지 않는 보조 선택 확대/축소 됨 &#41; ] (../../extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713 20_SecondaryNoResizeZoom")|  
-|**보조 선택**|잠금|![보조 선택 항목 잠김](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713 21_SecondaryLocked")|![보조 선택 항목 잠김 &#40; 확대/축소 됨 &#41; ] (../../extensibility/ux-guidelines/media/0713-22_secondarylockedzoom.png "0713 22_SecondaryLockedZoom")|  
-|**활성 UI**|기본|![UI 활성 상태](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713 23_UIActive")|![UI 활성 상태 &#40; 확대/축소 됨 &#41; ] (../../extensibility/ux-guidelines/media/0713-24_uiactivezoom.png "0713 24_UIActiveZoom")|  
+|**기본 선택**|크기를 조정할 수|![크기 조정 핸들을 사용한 기본 선택](../../extensibility/ux-guidelines/media/0713-11_primaryresize.png "0713 11_PrimaryResize")|![크기 조정 핸들을 사용한 기본 선택 &#40;확대/축소 됨&#41;](../../extensibility/ux-guidelines/media/0713-12_primaryresizezoom.png "0713 12_PrimaryResizeZoom")|  
+|**기본 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용 하지 않는 기본 선택](../../extensibility/ux-guidelines/media/0713-13_primarynoresize.png "0713 13_PrimaryNoResize")|![크기 조정 핸들을 사용 하지 않는 기본 선택 &#40;확대/축소 됨&#41;](../../extensibility/ux-guidelines/media/0713-14_primarynoresizezoom.png "0713 14_PrimaryNoResizeZoom")|  
+|**기본 선택**|잠금|![기본 선택 항목 잠김](../../extensibility/ux-guidelines/media/0713-15_primarylocked.png "0713 15_PrimaryLocked")|![기본 선택 항목 잠김 &#40;확대/축소 됨&#41;](../../extensibility/ux-guidelines/media/0713-16_primarylockedzoom.png "0713 16_PrimaryLockedZoom")|  
+|**보조 선택**|크기를 조정할 수|![크기 조정 핸들을 사용한 보조 선택](../../extensibility/ux-guidelines/media/0713-17_secondaryresize.png "0713 17_SecondaryResize")|![크기 조정 핸들을 사용한 보조 선택 &#40;확대/축소 됨&#41;](../../extensibility/ux-guidelines/media/0713-18_secondaryresizezoom.png "0713 18_SecondaryResizeZoom")|  
+|**보조 선택**|크기를 조정할 수 없습니다|![크기 조정 핸들을 사용 하지 않는 보조 선택](../../extensibility/ux-guidelines/media/0713-19_secondarynoresize.png "0713 19_SecondaryNoResize")|![크기 조정 사용 하지 않는 보조 선택 &#40;확대/축소 됨&#41;](../../extensibility/ux-guidelines/media/0713-20_secondarynoresizezoom.png "0713 20_SecondaryNoResizeZoom")|  
+|**보조 선택**|잠금|![보조 선택 항목 잠김](../../extensibility/ux-guidelines/media/0713-21_secondarylocked.png "0713 21_SecondaryLocked")|![보조 선택 항목 잠김 &#40;확대/축소 됨&#41;](../../extensibility/ux-guidelines/media/0713-22_secondarylockedzoom.png "0713 22_SecondaryLockedZoom")|  
+|**활성 UI**|기본|![UI 활성 상태](../../extensibility/ux-guidelines/media/0713-23_uiactive.png "0713 23_UIActive")|![UI 활성 상태 &#40;확대/축소 됨&#41;](../../extensibility/ux-guidelines/media/0713-24_uiactivezoom.png "0713 24_UIActiveZoom")|  
   
 ### <a name="view-selection-models"></a>선택 모델 보기  
   
@@ -475,7 +473,7 @@ ms.lasthandoff: 12/22/2017
   
 -   F2 키 위치에 현재 선택 된 셀에 대 한 편집을 활성화 합니다.  
   
-##  <a name="BKMK_PersistenceAndSavingSettings"></a>지 속성 및 설정을 저장 하는  
+##  <a name="BKMK_PersistenceAndSavingSettings"></a> 지 속성 및 설정을 저장 하는  
   
 ### <a name="overview"></a>개요  
  Visual Studio의 각 소프트웨어 구성 요소는 일반적으로 자체 상태 및 지 속성에 대 한 책임을 이지만 Visual Studio 자동으로 설정을 저장 일부의 경우에서와 같은 한 창 크기와 위치 합니다. 다음 표에서 자동으로 저장 하는 설정과 명시적 사용자 해야 하거나 수행할 동작을 프로그래밍 하는 설정의 조합입니다.  
@@ -510,7 +508,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="profile-specific-layouts"></a>프로필 관련 레이아웃  
  각 프로필 특정 개발자 가상 사용자에 게 익숙한 방식으로 구성 되는 도구 창 레이아웃을 포함 합니다 (Visual c + + 개발자 것으로 기대 되는 **솔루션 탐색기** C# 개발자는 기대하는동안IDE의왼쪽에 **솔루션 탐색기** 오른쪽에). 프로필 관련 창 레이아웃 사용자가 시작 시에는 프로필을 선택한 후에 로드 됩니다. 패키지 작성자에는 사용자가을 창 구성 변경 내용을 유지 한 다음 됩니다 알고 있으면 해당 고객의 경험에 대 한 가장 적합 한 창 레이아웃을 결정 해야 합니다.  
   
-##  <a name="BKMK_TouchInput"></a>터치식 입력  
+##  <a name="BKMK_TouchInput"></a> 터치식 입력  
  사용자가 Microsoft 개발 제품을 사용 하 여 터치 장치에 점점 더 됩니다. 그러나 터치 장치에 개발 도구를 사용 하 여 어려운 들도록 장벽이 있습니다. 사용자가 신뢰할 수 있는 고 정확 하 게 터치 환경을 제공 하기 위해 제품을 기대 합니다. 이 지침의 목적은 어떤 터치 기능을 통합 하 고 Visual Studio 및 관련된 제품 간에 일치 터치 환경을 장려할를 결정할 것입니다.  
   
 ### <a name="levels-of-experience"></a>환경의 수준  

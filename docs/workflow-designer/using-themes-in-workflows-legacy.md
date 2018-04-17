@@ -1,5 +1,5 @@
 ---
-title: "(레거시) 워크플로에서 테마 사용 | Microsoft Docs"
+title: (레거시) 워크플로에서 테마 사용 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -9,14 +9,14 @@ helpviewer_keywords:
 ms.assetid: 10225f34-aced-432a-846c-82cf6137d7c0
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 752b25ba03df813bf3255af5f6c8b84f56ef5ed7
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 0297426568e9b15d668490becfd2ae0b2da86ab6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-themes-in-workflows-legacy"></a>워크플로에서 테마 사용(레거시)
 이 항목에는 테마를 사용 하는 방법을 설명 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하는 경우는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
@@ -27,7 +27,7 @@ ms.lasthandoff: 03/12/2018
 
  사용 하 여 사용자 지정 테마를 저장 및 기본값을 선택할 수 있습니다는 [테마, 워크플로 디자이너, 옵션 대화 상자 (레거시)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)합니다. 이 대화 상자를 열려면 **사용자 지정 테마 선택** 에 **워크플로** 메뉴 (또는 워크플로 디자인 화면을 마우스 오른쪽 단추로 클릭 하 고 클릭 **사용자 지정 테마 선택**) 한 다음 선택 **워크플로 디자이너** 옵션입니다. 누르고 원하는 테마 선택 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [테마 구성 대화 상자(레거시)](../workflow-designer/theme-configuration-dialog-box-legacy.md)
 - [테마, 워크플로 디자이너, 옵션 대화 상자(레거시)](../workflow-designer/themes-workflow-designer-options-dialog-box-legacy.md)

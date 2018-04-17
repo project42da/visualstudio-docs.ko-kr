@@ -1,10 +1,8 @@
 ---
-title: "T4 텍스트 템플릿을 사용 하 여 디자인 타임 코드 생성 | Microsoft Docs"
-ms.custom: 
+title: T4 텍스트 템플릿을 사용 하 여 디자인 타임 코드 생성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, guidelines for code generation
 - text templates, data source model
@@ -15,15 +13,15 @@ helpviewer_keywords:
 - text templates, generating code for your application
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ff7f01274b47b8c7c333aedbbb6dc646e14b89d3
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: fea82e3343016ab4221a482e2c7975a6d39c1afb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="design-time-code-generation-by-using-t4-text-templates"></a>T4 텍스트 템플릿을 사용하여 디자인 타임 코드 생성
 디자인 타임 T4 텍스트 템플릿을 사용하면 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트에서 프로그램 코드 및 기타 파일을 생성할 수 있습니다. 데이터에 따라 생성 하는 코드가 달라 지도록 템플릿을 작성 일반적으로 *모델*합니다. 모델은 파일 또는 응용 프로그램의 요구 사항에 대 한 키 정보가 포함 된 데이터베이스.  
@@ -294,7 +292,7 @@ Number of projects in this VS solution:  <#= dte.Solution.Projects.Count #>
 > [!TIP]
 >  텍스트 템플릿은 자체 앱 도메인에서 실행되며 마샬링을 통해 서비스에 액세스합니다. 이 경우에는 GetCOMService()가 GetService()보다 안정적입니다.  
   
-##  <a name="Regenerating"></a>코드를 자동으로 다시 생성  
+##  <a name="Regenerating"></a> 코드를 자동으로 다시 생성  
  일반적으로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션의 여러 파일은 입력 모델 하나를 사용하여 생성됩니다. 각 파일은 자체 템플릿에서 생성되지만 모든 템플릿은 같은 모델을 참조합니다.  
   
  소스 모델이 변경되면 솔루션에서 모든 템플릿을 다시 실행해야 합니다. 이렇게 하려면 수동으로 선택 **모든 템플릿 변형** 에 **빌드** 메뉴.  
@@ -322,7 +320,7 @@ Error("An error message");
 Warning("A warning message");  
 ```  
   
-##  <a name="Converting"></a>기존 파일을 템플릿으로 변환  
+##  <a name="Converting"></a> 기존 파일을 템플릿으로 변환  
  템플릿의 유용한 특징 중 하나는 삽입된 일부 프로그램 코드와 함께, 템플릿에서 생성한 파일과 매우 비슷하다는 점입니다. 이로 인해 템플릿을 만드는 유용한 방법이 제공됩니다. 먼저 일반 파일을 프로토타입으로 같은 만듭니다는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 파일을 선택한 다음 결과 파일을 변경 하는 생성 코드를 단계적으로 채택 합니다.  
   
 #### <a name="to-convert-an-existing-file-to-a-design-time-template"></a>기존 파일을 디자인 타임 템플릿으로 변환하려면  

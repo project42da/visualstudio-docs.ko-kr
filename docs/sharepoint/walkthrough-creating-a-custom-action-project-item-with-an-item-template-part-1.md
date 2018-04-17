@@ -1,12 +1,10 @@
 ---
-title: "1 부 연습: 항목 템플릿을 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기, | Microsoft Docs"
-ms.custom: 
+title: '1 부 연습: 항목 템플릿을 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기, | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, defining new project item types
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: dae92a4c20130425fa93a413856f3d2cb5a37387
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e690d18bae72b59234f2f90cbcf903b9941df7d6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>연습: 항목 템플릿, 1 부와 사용자 지정 작업 프로젝트 항목 만들기
   항목 형식 사용자 고유의 프로젝트를 만들어 Visual Studio에서 SharePoint 프로젝트 시스템을 확장할 수 있습니다. 이 연습에서는 SharePoint 사이트에서 사용자 지정 동작을 만들려면 SharePoint 프로젝트에 추가할 수 있는 프로젝트 항목을 만듭니다. 메뉴 항목을 추가 하는 사용자 지정 작업은 **사이트 작업** SharePoint 사이트의 메뉴.  
@@ -47,9 +46,9 @@ ms.lasthandoff: 01/10/2018
  독립 실행형 연습입니다. 이 연습을 완료 한 후 마법사 항목 템플릿을 추가 하 여 프로젝트 항목을 개선할 수 있습니다. 자세한 내용은 참조 [연습: 항목 템플릿, 2 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)합니다.  
   
 > [!NOTE]  
->  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [http://go.microsoft.com/fwlink/?LinkId=191369](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
+>  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [ http://go.microsoft.com/fwlink/?LinkId=191369 ](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
 -   Microsoft Windows, SharePoint 및 Visual Studio의 버전을 지원 합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -90,7 +89,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  에 **이름** 상자에 입력 **CustomActionProjectItem**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **CustomActionProjectItem** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **CustomActionProjectItem** 프로젝트를 **솔루션 탐색기**합니다.  
   
 #### <a name="to-create-the-item-template-project"></a>항목 템플릿 프로젝트를 만들려면  
   
@@ -104,7 +103,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  에 **이름** 상자에 입력 **ItemTemplate**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **ItemTemplate** 프로젝트를 솔루션입니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **ItemTemplate** 프로젝트를 솔루션입니다.  
   
 #### <a name="to-create-the-extension-project"></a>확장 프로젝트를 만들려면  
   
@@ -116,7 +115,7 @@ ms.lasthandoff: 01/10/2018
   
 4.  에 **이름** 상자에 입력 **ProjectItemDefinition**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **ProjectItemDefinition** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **ProjectItemDefinition** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -430,7 +429,7 @@ ms.lasthandoff: 01/10/2018
     > [!NOTE]  
     >  경우는 **스크립트 디버깅 사용 안 함** 선택 대화 상자가 나타나면는 **예** 프로젝트 디버깅을 계속 하려면는 단추입니다.  
   
-4.  에 **사이트 작업** 메뉴 선택 **SharePoint 개발자 센터**브라우저 웹 사이트 http://msdn.microsoft.com/sharepoint/default.aspx 열리는지 확인 한 다음 웹 브라우저를 닫습니다.  
+4.  에 **사이트 작업** 메뉴 선택 **SharePoint 개발자 센터**, 브라우저에서 웹 사이트 열리는지 확인 http://msdn.microsoft.com/sharepoint/default.aspx, 웹 브라우저를 닫습니다.  
   
 ## <a name="cleaning-up-the-development-computer"></a>개발 컴퓨터를 정리합니다.  
  프로젝트 항목의 테스트를 마친 후에 Visual Studio의 실험적 인스턴스에서 프로젝트 항목 템플릿을 제거 합니다.  
@@ -459,6 +458,6 @@ ms.lasthandoff: 01/10/2018
  [SharePoint 프로젝트 서비스 사용](../sharepoint/using-the-sharepoint-project-service.md)   
  [Visual Studio 템플릿 스키마 참조](/visualstudio/extensibility/visual-studio-template-schema-reference)   
  [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)   
- [아이콘 &#41;에 대 한 아이콘 또는 다른 이미지 &#40; 이미지 편집기 만들기](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [아이콘 또는 다른 이미지 만들기 &#40;아이콘에 대 한 이미지 편집기&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

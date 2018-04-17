@@ -1,13 +1,10 @@
 ---
-title: "Office 문서에서 컨트롤을 지속 동적 | Microsoft Docs"
-ms.custom: 
+title: Office 문서에서 컨트롤을 지속 동적 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - host controls [Office development in Visual Studio], persisting in the document
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 10f5840b085ce55485734c9287972a743859c3ef
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 220a6e2c0b7e4633f91e7391448d27dddb5895c8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="persisting-dynamic-controls-in-office-documents"></a>Office 문서에서 동적 컨트롤 유지
   문서 또는 통합 문서를 저장하고 닫으면 런타임에 추가한 컨트롤이 유지되지 않습니다. 정확한 동작은 호스트 컨트롤 및 Windows Forms 컨트롤에서 서로 다릅니다. 두 경우 모두, 사용자가 문서를 다시 열 때 컨트롤을 다시 만드는 코드를 솔루션에 추가할 수 있습니다.  

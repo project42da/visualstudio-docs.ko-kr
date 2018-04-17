@@ -1,12 +1,10 @@
 ---
-title: "InfoPath 솔루션 | Microsoft Docs"
-ms.custom: 
+title: InfoPath 솔루션 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - Office projects [Office development in Visual Studio], InfoPath
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 4e59b91ff6159af8f6e5736621c0443d3d96c8b5
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9db28542e4141767be55241b98e0a6b762b0e236
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="infopath-solutions"></a>InfoPath 솔루션
   Visual Studio에서는 Microsoft Office InfoPath 2013 및 InfoPath 2010용 VSTO 추가 기능을 만드는 데 사용할 수 있는 프로젝트 템플릿을 제공합니다. InfoPath는 Office 2016에서 사용할 수 없습니다.  
@@ -47,7 +46,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="automating-infopath-by-using-an-add-in"></a>추가 기능을 사용하여 InfoPath 자동화  
  Visual Studio에서 Office 개발 도구를 사용하여 만든 Office VSTO 추가 기능에서 InfoPath 개체 모델에 액세스하려면 프로젝트에서 `Application` 클래스의 `ThisAddIn` 필드를 사용합니다. `Application` 필드는 InfoPath의 현재 인스턴스를 나타내는 <xref:Microsoft.Office.Interop.InfoPath.Application> 개체를 반환합니다. 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)를 시작합니다.  
   
- VSTO 추가 기능에서 InfoPath 개체 모델을 호출할 때 InfoPath의 주 Interop 어셈블리에서 제공되는 형식을 사용합니다. 주 interop 어셈블리는 VSTO 추가 기능의 관리 코드와 InfoPath의 COM 개체 모델 간의 다리 역할을 합니다. InfoPath 주 interop 어셈블리의 모든 형식은 <xref:Microsoft.Office.Interop.InfoPath> 네임스페이스에서 정의됩니다. InfoPath 주 interop 어셈블리에 대한 자세한 내용은 [Microsoft Office InfoPath 주 Interop 어셈블리 정보](http://msdn.microsoft.com/en-us/1b3ae03c-6951-49e4-a489-4712d3f7ba72)를 참조하세요. 주 interop 어셈블리에 대 한 자세한 내용은 참조 일반적으로 [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md)합니다.  
+ VSTO 추가 기능에서 InfoPath 개체 모델을 호출할 때 InfoPath의 주 Interop 어셈블리에서 제공되는 형식을 사용합니다. 주 interop 어셈블리는 VSTO 추가 기능의 관리 코드와 InfoPath의 COM 개체 모델 간의 다리 역할을 합니다. InfoPath 주 interop 어셈블리의 모든 형식은 <xref:Microsoft.Office.Interop.InfoPath> 네임스페이스에서 정의됩니다. InfoPath 주 interop 어셈블리에 대한 자세한 내용은 [Microsoft Office InfoPath 주 Interop 어셈블리 정보](http://msdn.microsoft.com/en-us/1b3ae03c-6951-49e4-a489-4712d3f7ba72)를 참조하세요. 주 interop 어셈블리에 대 한 자세한 내용은 참조 일반적으로 [Office 솔루션 개발 개요 &#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md)합니다.  
   
 ## <a name="customizing-the-user-interface-of-infopath-by-using-an-add-in"></a>추가 기능을 사용하여 InfoPath의 사용자 인터페이스 사용자 지정  
  InfoPath용 VSTO 추가 기능을 만들 때 몇 가지 UI 사용자 지정 옵션이 있습니다. 다음 표에 이러한 옵션 중 일부가 나와 있습니다.  
@@ -62,7 +61,7 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [Microsoft Office InfoPath 주 Interop 어셈블리 정보](http://msdn.microsoft.com/en-us/1b3ae03c-6951-49e4-a489-4712d3f7ba72)   
  [Getting Started Programming VSTO Add-ins](../vsto/getting-started-programming-vsto-add-ins.md)   
- [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [VSTO 추가 기능 아키텍처](../vsto/architecture-of-vsto-add-ins.md)   
  [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   

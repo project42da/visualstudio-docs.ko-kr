@@ -1,21 +1,19 @@
 ---
-title: "도메인 특정 언어에서 코드를 생성 | Microsoft Docs"
-ms.custom: 
+title: 도메인 특정 언어에서 코드를 생성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ad823ee772119f6398e47e6df6211360468b13ad
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 37dd84cbe3c2c665ce788218c5b802a4a2c05ff3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generating-code-from-a-domain-specific-language"></a>도메인별 언어에서 코드 생성
 Microsoft [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 모델에 표시 된 데이터에서 코드, 문서, 구성 파일 및 기타 아티팩트를 생성 하는 강력한 방법을 제공 합니다. 사용 하 여 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)], 데이터를 나타내는 클래스 집합을 만들 수 있습니다 및 이름이 클래스에서 텍스트 템플릿을 작성할 수 있습니다 및 해당 데이터를 반영 하는 속성입니다.  

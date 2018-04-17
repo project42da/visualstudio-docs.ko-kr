@@ -2,20 +2,18 @@
 title: 텍스트 템플릿에서 Visual Studio ModelBus를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0184e3b543e509d0e523504c0ea07f6fcc36775f
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 9a3cca1ed96cc2190ace1c8e1ece0423221f59f0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-visual-studio-modelbus-in-a-text-template"></a>텍스트 템플릿에서 Visual Studio ModelBus 사용
 포함 하는 모델을 읽을 하는 텍스트 템플릿을 작성 하는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus 참조, 액세스 대상 모델에 대 한 참조를 확인 하는 것이 좋습니다. 이 경우 텍스트 템플릿 및 참조 도메인 특정 언어 (Dsl)를 적용 해야 할 수도 있습니다.  

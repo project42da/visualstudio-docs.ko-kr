@@ -1,13 +1,10 @@
 ---
-title: "서버 탐색기를 사용 하 여 SharePoint 연결 찾아보기 | Microsoft Docs"
-ms.custom: 
+title: 서버 탐색기를 사용 하 여 SharePoint 연결 찾아보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.SharePointExplorer.SharePointConnection
 dev_langs:
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - SharePoint Connections [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5ea474f2439b6da519563f08ffe4ddc2f6dcef30
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ca6e7ff8d046ae94d6016c01b346bce592b2fcf1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="browsing-sharepoint-connections-using-server-explorer"></a>서버 탐색기를 사용하여 SharePoint 연결 찾아보기
   로컬 SharePoint 연결에서 검색할 수 있습니다 **서버 탐색기**합니다. 이 방법을 사용하면 시스템에서 SharePoint 사이트의 구성 요소를 탐색할 수 있습니다. SharePoint 사이트 구성 요소 목록 정의 콘텐츠 형식 등 명명 된 노드에 표시 **SharePoint 연결** 의 트리 보기에서 **서버 탐색기**합니다. 표시 하려면 **서버 탐색기**, 메뉴 모음에서 **보기**, **서버 탐색기**합니다. SharePoint 사이트 구성 요소를 표시하는 것 외에도 바로 가기 메뉴의 명령을 사용하여 항목을 제거하거나, 속성을 보거나, 트리 뷰를 새로 고칠 수 있습니다.  

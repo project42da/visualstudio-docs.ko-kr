@@ -1,18 +1,18 @@
 ---
-title: "방법: 활동 디자이너 라이브러리 만들기 | Microsoft Docs"
+title: '방법: 활동 디자이너 라이브러리 만들기 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: 5b62e092-63b3-462d-9d77-fb112482f45d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f257aabb4b1c2c1b1dce05e34273dc303a8f7da
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c0dc336db00f8a638cf20e6af79f2cf7ec030a5f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-an-activity-designer-library"></a>방법: 활동 디자이너 라이브러리 만들기
 사용자 지정 활동 디자이너를 사용하여 표준 또는 사용자 지정 활동을 위한 사용자 인터페이스를 만들 수 있습니다. 사용자 인터페이스의 복잡성을 조절하고 한 가지 활동에 대해 두 개 이상의 활동 디자이너를 만들 수 있습니다. 이 시나리오에서는 여러 대상에 맞게 조정한 디자이너를 만들 수 있습니다.
@@ -43,6 +43,6 @@ ms.lasthandoff: 03/12/2018
     > [!WARNING]
     > 기본 사용자 지정 활동 에서도에 사용자 지정 활동 디자이너를 사용할 수 있습니다 [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]활동입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [워크플로 프로젝트 만들기](../workflow-designer/creating-a-workflow-project.md)

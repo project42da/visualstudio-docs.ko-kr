@@ -1,13 +1,10 @@
 ---
-title: "ListObject 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: ListObject 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Toolbox.List
 dev_langs:
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - ListObject control, improving performance when bound to data
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2100a1c30fda5981d3d7e58f2f5077e0cdf87a2d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: ed8a11a62487e47cd86ae86b9f4126cb99b37159
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="listobject-control"></a>ListObject 컨트롤
   <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 이벤트를 노출하고, 데이터에 바인딩될 수 있는 목록입니다. 워크시트에 목록을 추가하면 Visual Studio에서 Microsoft Office Excel 개체 모델을 트래버스하지 않고 직접 프로그래밍할 수 있는 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 만듭니다.  
@@ -39,7 +36,7 @@ ms.lasthandoff: 01/10/2018
  문서 수준 프로젝트에서는 디자인 타임 또는 런타임에 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 워크시트에 추가할 수 있습니다. VSTO 추가 기능 프로젝트에서는 런타임에만 워크시트에 <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤을 추가할 수 있습니다. 자세한 내용은 [How to: Add ListObject Controls to Worksheets](../vsto/how-to-add-listobject-controls-to-worksheets.md)을 참조하세요.  
   
 > [!NOTE]  
->  기본적으로 동적으로 생성된 목록 개체는 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+>  기본적으로 동적으로 생성된 목록 개체는 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
 ## <a name="binding-data-to-the-control"></a>컨트롤에 데이터 바인딩  
  <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 간단한 데이터 바인딩 및 복잡한 데이터 바인딩을 지원합니다. <xref:Microsoft.Office.Tools.Excel.ListObject> 컨트롤은 디자인 타임에 <xref:Microsoft.Office.Tools.Excel.ListObject.DataSource%2A> 및 <xref:Microsoft.Office.Tools.Excel.ListObject.DataMember%2A> 속성을 사용하거나 런타임에 <xref:Microsoft.Office.Tools.Excel.ListObject.SetDataBinding%2A> 메서드를 사용하여 데이터 원본에 바인딩되어야 합니다.  

@@ -1,23 +1,21 @@
 ---
-title: "연습: 전구 제안을 표시 | Microsoft Docs"
-ms.custom: 
+title: '연습: 전구 제안을 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 99e5566d-450e-4660-9bca-454e1c056a02
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 97ab32d4bfe0772d7b50ea1ca5a0b0ec143ed536
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 750e3b0915478b4249ce8db1ac294c1f2a3006f5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-light-bulb-suggestions"></a>연습: 전구 제안 표시
 전구는 일련의 작업을 표시 하도록 확장, 예를 들어 기본 제공 코드 분석기 또는 코드 리팩터링에 의해 식별 된 문제를 해결 하는 Visual Studio 편집기에서 사용 되는 아이콘입니다.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/22/2017
   
  사용자 고유의 제안 된 작업을 제공 하도록 전구를 사용할 수 있습니다. 예를 들어 여 중괄호를 새 줄으로 이동 하거나 앞 줄의 끝으로 이동 하는 작업을 제공할 수 있습니다. 다음 연습에서는 현재 단어에 표시 된 전구를 만드는 방법을 보여주며, 두 개의 제안 동작: **대문자로 변환** 및 **를 소문자로 변환**합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>MEF(Managed Extensibility Framework) 프로젝트 만들기  

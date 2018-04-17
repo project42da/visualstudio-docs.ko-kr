@@ -1,5 +1,5 @@
 ---
-title: "StateMachine 활동 디자이너 | Microsoft Docs"
+title: StateMachine 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,15 +7,15 @@ f1_keywords:
 - System.Activities.Statements.StateMachine.UI
 ms.assetid: 474d5fb3-1049-4b3f-bc6b-7524dbbe1672
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 41215bea8c437d35d62448617eb5575b07bbca6a
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 2e036c1921f5c6219947de9109f3a94092fa5395
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="statemachine-activity-designer"></a>StateMachine 활동 디자이너
 <xref:System.Activities.Statements.StateMachine> 활동에는 익숙한 상태 시스템 패러다임을 사용하여 상태와 모델 워크플로의 컬렉션이 포함되어 있습니다.
@@ -30,7 +30,7 @@ ms.lasthandoff: 03/12/2018
 |-------------------|--------------|-----------|
 |<xref:System.Activities.Activity.DisplayName%2A>|False|머리글에 <xref:System.Activities.Statements.StateMachine> 활동 디자이너의 이름을 지정합니다. 기본값은 **StateMachine**합니다. 속성 표에서 또는 활동 디자이너의 머리글에서 직접 값을 편집할 수 있습니다. <xref:System.Activities.Activity.DisplayName%2A>은 Workflow Designer 상단에 표시되는 이동 경로 탐색에 사용됩니다.<br /><br /> <xref:System.Activities.Activity.DisplayName%2A>은 꼭 필요하지 않더라도 사용하는 것이 좋습니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [워크플로](../workflow-designer/flowchart-activity-designer.md)
 - [제어 흐름](../workflow-designer/control-flow-activity-designers.md)

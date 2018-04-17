@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 기존 문서 열기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 기존 문서 열기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Word [Office development in Visual Studio], opening documents
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 151571ace6790f05c067f8dff641988301bc1b0e
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0c7542b2222839afc75b3b5b1b84fc5afe56f523
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-open-existing-documents"></a>방법: 프로그래밍 방식으로 기존 문서 열기
   <xref:Microsoft.Office.Interop.Word.Documents.Open%2A> 정규화 된 경로 파일 이름으로 지정 된 기존 Microsoft Office Word 문서를 엽니다. 이 메서드는 반환 된 <xref:Microsoft.Office.Interop.Word.Document> 열려 있는 문서를 나타내는입니다.  

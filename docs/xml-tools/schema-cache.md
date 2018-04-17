@@ -1,23 +1,21 @@
 ---
-title: "스키마 캐시 | Microsoft Docs"
-ms.custom: 
+title: 스키마 캐시 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 35a7fcad-f3bf-4a96-9008-4306e7276223
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9315fdeeb336ac262f59df31b941c05ca3101b3b
-ms.sourcegitcommit: 5f436413bbb1e8aa18231eb5af210e7595401aa6
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3a7a089e799c2480f667eb000d39c3036220d02e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="schema-cache"></a>스키마 캐시
 XML 편집기에서는 %InstallRoot%\Xml\Schemas 디렉터리에 있는 스키마 캐시를 제공합니다. 스키마 캐시는 컴퓨터의 모든 사용자에 전체적으로 적용되며 IntelliSense 및 XML 문서 유효성 검사에 사용되는 표준 XML 스키마를 포함합니다.  
@@ -29,22 +27,22 @@ XML 편집기에서는 %InstallRoot%\Xml\Schemas 디렉터리에 있는 스키�
 |파일 이름|설명|  
 |--------------|-----------------|  
 |catalog.xsd|XML 편집기 스키마 카탈로그 파일에 대한 스키마입니다. 스키마 카탈로그에 대한 자세한 내용은 아래를 참조하세요.|  
-|DotNetConfig.xsd|Web.Config 파일에 대한 스키마입니다(http://schemas.microsoft.com/.NETConfiguration/v2.0).|  
-|msbuild.xsd|MSBuild 작성 파일에 대한 스키마입니다(http://schemas.microsoft.com/developer/msbuild/2003).|  
+|DotNetConfig.xsd|Web.Config 파일에 대 한 스키마 "http://schemas.microsoft.com/.NETConfiguration/v2.0"입니다.|  
+|msbuild.xsd|MSBuild 작성 파일에 대 한 스키마 "http://schemas.microsoft.com/developer/msbuild/2003"입니다.|  
 |msdata.xsd|<xref:System.Data.DataSet> 클래스 "urn:schemas-microsoft-com:xml-msdata"에 의해 추가된 XSD 주석의 스키마입니다.|  
 |msxsl.xsd|Microsoft XSLT 스크립트 블록 확장 urn:schemas-microsoft-com:xslt에 대한 스키마입니다.|  
 |SnippetFormat.xsd|코드 조각 XML 파일에 대한 스키마입니다. 예를 들어, %InstallDir%\VC#\Expansions를 참조하세요.|  
-|Soap1.1.xsd|SOAP(Simple Object Access Protocol) 1.1에 대한 스키마입니다(http://schemas.xmlsoap.org/soap/envelope/).|  
+|Soap1.1.xsd|Simple Object Access Protocol (SOAP) 1.1에 대 한 스키마 http://schemas.xmlsoap.org/soap/envelope/합니다.|  
 |Soap1.2.xsd|SOAP(Simple Object Access Protocol) 1.2에 대한 스키마입니다.|  
-|SiteMapSchema.xsd|ASP.NET 사이트 맵 XML 파일에 대한 스키마입니다(http://schemas.microsoft.com/AspNet/SiteMap-File-1.0).|  
-|wsdl.xsd|WSDL(Web Service Description Language)에 대한 스키마입니다(http://schemas.xmlsoap.org/wsdl/).|  
-|xenc.xsd|XML 암호화에 대한 스키마입니다(http://www.w3.org/2000/09/xmldsig#).|  
-|xhtml.xsd|XHTML에 대한 스키마입니다(http://www.w3.org/1999/xhtml).|  
-|xlink.xsd|XLink 1.0에 대한 스키마입니다(http://www.w3.org/1999/xlink).|  
-|xml.xsd|xml:space 및 xml:lang 특성을 설명하는 스키마입니다(http://www.w3.org/XML/1998/namespace).|  
-|xmlsig.xsd|XML 디지털 서명에 대한 스키마입니다(http://www.w3.org/2000/09/xmldsig#).|  
-|xsdschema.xsd|XSD 자체를 설명하는 스키마입니다(http://www.w3.org/2001/XMLSchema).|  
-|xslt.xsd|XML 변환에 대한 스키마입니다(http://www.w3.org/1999/XSL/Transform).|  
+|SiteMapSchema.xsd|ASP.NET 사이트 맵 XML 파일에 대 한 스키마 "http://schemas.microsoft.com/AspNet/SiteMap-File-1.0"입니다.|  
+|wsdl.xsd|웹 서비스 기술 언어에 대 한 스키마 http://schemas.xmlsoap.org/wsdl/합니다.|  
+|xenc.xsd|XML 암호화에 대 한 스키마 http://www.w3.org/2000/09/xmldsig#합니다.|  
+|xhtml.xsd|XHTML에 대 한 스키마 http://www.w3.org/1999/xhtml합니다.|  
+|xlink.xsd|XLink1.0에 대 한 스키마 http://www.w3.org/1999/xlink합니다.|  
+|xml.xsd|Xml: space 및 xml: lang 특성을 설명 하는 스키마 http://www.w3.org/XML/1998/namespace합니다.|  
+|xmlsig.xsd|XML 디지털 서명에 대 한 스키마 http://www.w3.org/2000/09/xmldsig#합니다.|  
+|xsdschema.xsd|XSD 자체를 설명 하는 스키마 http://www.w3.org/2001/XMLSchema합니다.|  
+|xslt.xsd|XML에 대 한 스키마를 변형 http://www.w3.org/1999/XSL/Transform합니다.|  
   
 ## <a name="updating-schemas-in-the-cache"></a>캐시에서 스키마 업데이트  
  XML 편집기 패키지가 로드될 때 편집기에서 스키마 캐시 디렉터리를 로드하며 실행하는 동안 변경 내용을 조사합니다. 스키마가 추가되면 알려진 스키마의 메모리 내 인덱스에 자동으로 로드됩니다. 스키마가 제거되면 메모리 내 인덱스에서 자동으로 제거됩니다. 스키마가 업데이트되면 이 스키마의 메모리 내 캐시가 자동으로 무효화됩니다.  

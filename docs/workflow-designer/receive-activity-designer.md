@@ -1,5 +1,5 @@
 ---
-title: "Receive 활동 디자이너 | Microsoft Docs"
+title: Receive 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: f58d3c70-944d-4bb4-90a7-e68c103caddc
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8058b13dd488ddca2237056048673529c379256
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 900cf704dd29c78a1ddc8de7dce4940d8ba09fae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="receive-activity-designer"></a>Receive 활동 디자이너
 **수신** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.ServiceModel.Activities.Receive> 활동입니다. <xref:System.ServiceModel.Activities.Receive> 활동은 기본 제공 형식(예:  <xref:System.ServiceModel.Channels.Message>, <xref:System.IO.Stream> 또는 <xref:System.Xml.Linq.XElement>)이거나 serialize될 수 있는 응용 프로그램 정의 데이터 계약, 메시지 계약 또는 XML 클래스 중 하나인 메시지를 수신하는 활동입니다.
@@ -47,9 +47,9 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.ServiceModel.Activities.Receive.KnownTypes%2A>|False|이 <xref:System.ServiceModel.Activities.Receive> 활동에 의해 구현되는 서비스 작업의 알려진 형식 컬렉션을 지정합니다. 이 속성은 <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>로 설정된 <xref:System.Runtime.Serialization.DataContractSerializer> 속성과 함께 사용해야 합니다. <xref:System.Xml.Serialization.XmlSerializer>를 사용하는 경우 무시됩니다.<br /><br /> 옆에 있는 줄임표 단추를 클릭 합니다.는 **KnownTypes** 필드에 표시 하려면 속성 표는 **형식 컬렉션 편집기** 관련 형식을 추가할 수 있는 대화 상자. 이 상자를 사용 하는 방법에 대 한 자세한 내용은 참조는 [형식 컬렉션 편집기 대화 상자](../workflow-designer/type-collection-editor-dialog-box.md) 항목입니다.|
 |<xref:System.ServiceModel.Activities.Receive.ProtectionLevel%2A>|False|메시지의 <xref:System.Net.Security.ProtectionLevel>을 지정합니다.<br /><br /> 1. <xref:System.Net.Security.ProtectionLevel> 인증만 의미 합니다.<br />2. <xref:System.Net.Security.ProtectionLevel> 의미 전송 된 데이터의 무결성을 보장 하는 데이터에 서명 합니다.<br />3. <xref:System.Net.Security.ProtectionLevel> 의미를 암호화 및 전송 된 데이터의 무결성 및 기밀성을 위해 데이터에 서명 합니다.|
 |<xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>|False|<xref:System.ServiceModel.Activities.Receive> 활동에 의해 구현되는 서비스 작업에 사용할 serializer의 형식을 지정합니다. 기본값은 <xref:System.Runtime.Serialization.DataContractSerializer>이며, 제공된 데이터 계약을 사용하는 XML 스트림 또는 문서에 형식 인스턴스를 serialize 및 deserialize합니다. XML에 대한 제어를 강화해야 하는 경우에도 <xref:System.Xml.Serialization.XmlSerializer>를 사용할 수 있습니다.|
-|<xref:System.ServiceModel.Activities.Receive.Action%2A>|False|메시지의 동작 헤더를 지정합니다. 명시적으로 설정 되지 않은 경우 기본값: https://tempuri.org/ {서비스 계약 네임 스페이스} / {서비스 계약 이름} / {/{operation name}.|
+|<xref:System.ServiceModel.Activities.Receive.Action%2A>|False|메시지의 동작 헤더를 지정합니다. 명시적으로 설정 되지 않은 경우 기본값: https://tempuri.org/{service 계약 네임 스페이스} / {서비스 계약 이름} / {/{operation name}.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)
 - [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)

@@ -1,5 +1,5 @@
 ---
-title: "레거시 상태 시스템 워크플로 디자이너를 사용 하 여 | Microsoft Docs"
+title: 레거시 상태 시스템 워크플로 디자이너를 사용 하 여 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -14,14 +14,14 @@ helpviewer_keywords:
 ms.assetid: 2cd21123-35c2-4eaf-82f6-86fce7a8f04d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ebf214ce8e65ba65127d82686770b00cfd8d3f90
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 16178d2f83ef9cc45ef7007350e30d2b36d6993a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>레거시 상태 시스템 워크플로 디자이너 사용
 새 상태 시스템 워크플로 프로젝트를 만드는 경우 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 를 대상으로 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 사용 하 여 선택할 수 있습니다는 **상태 시스템 워크플로 콘솔 응용 프로그램** 또는  **상태 시스템 워크플로 라이브러리** 레거시 프로젝트 템플릿을 합니다. 이러한 상태 시스템 프로젝트 템플릿 중 하나를 선택하면 상태 시스템 디자이너가 레거시 워크플로 디자이너 사용자 인터페이스로 나타납니다. 레거시 상태 시스템 프로젝트 템플릿에 대 한 정보를 참조 하십시오. [하는 방법: 만들기 상태 시스템 워크플로 콘솔 응용 프로그램 (레거시)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) 및 [하는 방법: 상태 시스템 워크플로 라이브러리 (레거시)만들기](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
@@ -55,7 +55,7 @@ ms.lasthandoff: 03/12/2018
 >
 > 열려는 **문서 개요** 창에는 **보기** 메뉴에서 **다른 창**를 선택한 후 **문서 개요**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [방법: 상태 시스템 워크플로 콘솔 응용 프로그램 만들기(레거시)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md)
 - [방법: 상태 시스템 워크플로 라이브러리 만들기(레거시)](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md)

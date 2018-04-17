@@ -1,24 +1,22 @@
 ---
-title: "Visual Studio-도메인 특정 언어에 대 한 SDK 모델링 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio-도메인 특정 언어에 대 한 SDK 모델링 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-modeling
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language Tools
 - Domain-Specific Language
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1edb30221d85f8e634a9d618d50cd1e0b772b69a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 7cb927128ae4284f665fef534aafa9bc27a73c28
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio용 모델링 SDK - 도메인별 언어
 에 대 한 Modeling SDK를 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 통합할 수 있는 모델을 기반으로 강력한 개발 도구를 만들 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 동일한 방식으로 하나 이상의 모델 정의를 만들고 도구 집합으로 통합할 수 있습니다.  

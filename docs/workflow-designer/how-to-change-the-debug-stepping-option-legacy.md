@@ -1,5 +1,5 @@
 ---
-title: "방법: 단계별 디버깅 옵션 (레거시) 변경 | Microsoft Docs"
+title: '방법: 단계별 디버깅 옵션 (레거시) 변경 | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 helpviewer_keywords:
@@ -11,14 +11,14 @@ helpviewer_keywords:
 ms.assetid: aedc06af-d58a-44d6-aee4-f397f1f923a0
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea687b0a08aa4697ac9f7c7b0aca875af131a561
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: aedb8e738dc2e6ca2b066dd9a2cd42e332bbd8be
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-change-the-debug-stepping-option-legacy"></a>방법: 단계별 디버깅 옵션 변경(레거시)
 이 항목에서는 단계별 디버깅 옵션을 변경 하는 방법을 설명 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 동시 동작 있는 레거시 Windows 워크플로 디자이너에서 응용 프로그램입니다. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
@@ -39,7 +39,7 @@ ms.lasthandoff: 03/12/2018
 
 4.  선택 **인스턴스** 또는 **분기**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [레거시 워크플로 디버깅](../workflow-designer/debugging-legacy-workflows.md)
 - [단계별 디버깅 옵션(레거시)](../workflow-designer/debug-stepping-options-legacy.md)

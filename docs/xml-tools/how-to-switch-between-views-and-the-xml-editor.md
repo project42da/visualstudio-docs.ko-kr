@@ -1,23 +1,21 @@
 ---
-title: "방법: 뷰와 XML 편집기 사이 전환 | Microsoft Docs"
-ms.custom: 
+title: '방법: 뷰와 XML 편집기 사이 전환 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: cb69fbbd-d99c-439e-9498-5df9050f8df0
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ea46fac34eea04f364f07d010267be5b1ef2ea69
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2624bd5ca7ce9b450a3f77da90c4c6d3b09ac5e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-switch-between-views-and-the-xml-editor"></a>방법: 뷰와 XML 편집기 간 전환
 이 항목에서는 XML 스키마 디자이너(XSD 디자이너) 뷰와 XML 편집기 간을 전환하는 방법을 보여 줍니다. 사용 하 여이 예제는 [구매 주문 스키마](../xml-tools/sample-xsd-file-simple-schema.md)합니다.  

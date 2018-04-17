@@ -1,12 +1,10 @@
 ---
-title: "연습: SharePoint 응용 프로그램 프로 파일링 | Microsoft Docs"
-ms.custom: 
+title: '연습: SharePoint 응용 프로그램 프로 파일링 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - profiling [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 91952e2f10f025568d356149f63bff63e0c0b1fc
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f6eb4e9f78a9defaafb774551e301d6101cc40d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-profiling-a-sharepoint-application"></a>연습: SharePoint 응용 프로그램 프로파일링
   이 연습에서는 Visual Studio에서 프로파일링 도구를 사용하여 SharePoint 응용 프로그램의 성능을 최적화하는 방법을 보여 줍니다. 예제 응용 프로그램은 기능 이벤트 수신기의 성능을 저하시키는 유휴 루프가 포함된 SharePoint 기능 이벤트 수신기입니다. Visual Studio 프로파일러를 사용 하면을 찾고, 프로젝트의 가장 비용이 많이 드는 (성능이 가장 낮은) 부분을 라고도 제거할는 *실행 부하 과다 경로*합니다.  
@@ -40,10 +39,10 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   지원되는 Microsoft Windows 및 SharePoint 버전. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][SharePoint 솔루션 개발을 위한 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
+-   지원되는 Microsoft Windows 및 SharePoint 버전. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint 솔루션 개발을 위한 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
@@ -70,7 +69,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  선택 된 **마침** 단추입니다. 에 프로젝트가 표시 **솔루션 탐색기**합니다.  
   
-##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a>기능 및 기능 이벤트 수신기 추가  
+##  <a name="BKMK_AddFtrandFtrEvntReceiver"></a> 기능 및 기능 이벤트 수신기 추가  
  다음 작업으로, 기능의 이벤트 수신기와 함께 프로젝트에 기능을 추가합니다. 이 이벤트 수신기에는 프로파일링할 코드가 포함됩니다.  
   
 #### <a name="to-add-a-feature-and-feature-event-receiver"></a>기능 및 기능 이벤트 수신기를 추가하려면  
@@ -191,7 +190,7 @@ ms.lasthandoff: 01/10/2018
   
 9. 프로젝트를 저장합니다.  
   
-##  <a name="BKMK_ConfigSharePointApp"></a>구성 및 SharePoint 응용 프로그램 배포  
+##  <a name="BKMK_ConfigSharePointApp"></a> 구성 및 SharePoint 응용 프로그램 배포  
  SharePoint 프로젝트가 준비되었으므로 이 프로젝트를 구성하고 SharePoint 서버에 배포합니다.  
   
 #### <a name="to-configure-and-deploy-the-sharepoint-application"></a>SharePoint 응용 프로그램을 구성하고 배포하려면  
@@ -214,7 +213,7 @@ ms.lasthandoff: 01/10/2018
   
      마법사 응용 프로그램 서버에 프로 파일링, 표시 된 **성능 탐색기** 창을 닫은 후 빌드, 배포 및 SharePoint 응용 프로그램을 실행 합니다.  
   
-##  <a name="BKMK_RunSPApp"></a>SharePoint 응용 프로그램 실행  
+##  <a name="BKMK_RunSPApp"></a> SharePoint 응용 프로그램 실행  
  SharePoint에서 기능을 활성화하여 `FeatureActivation` 이벤트 코드가 실행되도록 합니다.  
   
 #### <a name="to-run-the-sharepoint-application"></a>SharePoint 응용 프로그램을 실행하려면  
@@ -235,7 +234,7 @@ ms.lasthandoff: 01/10/2018
   
      SharePoint를 닫은 후 프로파일러 및 샘플 프로 파일링 보고서를 표시 만들고에.vsp 파일로 저장 된 **ProfileTest** 프로젝트의 폴더입니다.  
   
-##  <a name="BKMK_ViewResults"></a>확인 및 프로 파일링 결과 해석  
+##  <a name="BKMK_ViewResults"></a> 확인 및 프로 파일링 결과 해석  
  SharePoint 응용 프로그램을 실행하고 프로파일링했으므로 테스트 결과를 확인합니다.  
   
 #### <a name="to-view-and-interpret-the-profiling-results"></a>프로파일링 결과를 확인하고 해석하려면  

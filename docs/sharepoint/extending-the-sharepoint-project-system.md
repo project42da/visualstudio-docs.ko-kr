@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 프로젝트 시스템 확장 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 프로젝트 시스템 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending project items
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e79808ef9d5d4712d67426b202046615c8ab14b2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 2a76a56eccb1d65e8b64b691d0da29e8b9d30637
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-the-sharepoint-project-system"></a>SharePoint 프로젝트 시스템 확장
   Visual Studio에서의 프로젝트 템플릿과 항목 템플릿 집합을 사용 하 여 SharePoint 솔루션을 만들 수 있습니다. 이러한 템플릿은 많은 개발 시나리오의 요구 사항을 충족 하지만 요구 되는 기능을 제공 하지 않는 경우에 따라 발견할 수 있습니다. 이러한 경우에 SharePoint 프로젝트 시스템을 확장할 수 있습니다.  

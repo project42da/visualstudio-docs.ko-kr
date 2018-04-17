@@ -1,13 +1,10 @@
 ---
-title: ".NET Framework 4 또는.NET Framework 4.5 대상으로 하는 Office 프로젝트의 디자인 변경 | Microsoft Docs"
-ms.custom: 
+title: .NET Framework 4 또는.NET Framework 4.5 대상으로 하는 Office 프로젝트의 디자인 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - what's new [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 059d259b669e63c26759782010be7ff78691ffc3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 2c6f050e98665d55c7a64261131cef7ba31c684f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="changes-to-the-design-of-office-projects-that-target-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 또는 .NET Framework 4.5를 대상으로 하는 Office 프로젝트의 디자인 변경
   [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)]부터 Visual Studio에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 Office 프로젝트의 디자인에 몇 가지 변경 사항이 도입되었습니다. 이전 버전의 Visual Studio에서 Office 프로젝트를 사용하는 데 익숙한 경우 .NET Framework 4.0 이상의 버전을 대상으로 하는 Office 프로젝트를 개발하기 전에 이러한 변경 사항을 알고 있어야 합니다. 기본적으로 Visual Studio 2013 이상을 사용하여 만드는 모든 프로젝트는 .NET Framework 4.0 이상을 대상으로 합니다.  
@@ -59,7 +56,7 @@ ms.lasthandoff: 01/10/2018
 |GetVstoObject 및 HasVstoObject 메서드 구문이 변경 되었습니다.|주 interop 어셈블리 (Pia) 로부터 네이티브 개체에 액세스 하면 하거나 프로젝트에서 Globals.Factory 속성에서 반환 되는 개체에서 이러한 메서드에 액세스할 수 있습니다 Globals.Factory 개체를 이러한 메서드에 전달 해야 합니다. 자세한 내용은 참조 [Excel 및 Word 프로젝트는.NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 업데이트](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)합니다.|  
 |Word 콘텐츠 컨트롤의 이벤트가 새 대리자와 연결됩니다.|Word 콘텐츠 컨트롤의 이벤트를 처리하는 모든 코드를 수정하여 새 대리자를 지정해야 합니다. 자세한 내용은 참조 [Excel 및 Word 프로젝트는.NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 업데이트](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)합니다.|  
 |OLEObject 및 OLEControl 클래스 이름이 바뀌었습니다.|이러한 클래스의 인스턴스를 사용하는 모든 코드를 수정하여 <xref:Microsoft.Office.Tools.Excel.ControlSite> 또는 <xref:Microsoft.Office.Tools.Word.ControlSite> 개체를 대신 사용해야 합니다. 자세한 내용은 참조 [Excel 및 Word 프로젝트는.NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 업데이트](../vsto/updating-excel-and-word-projects-that-you-migrate-to-the-dotnet-framework-4-or-the-dotnet-framework-4-5.md)합니다.|  
-|호스트 항목 클래스와 같은 `ThisWorkbook`, `Sheet`  *n* , `ThisDocument`, 및 `ThisAddIn`, 더 이상 재정의할 수 있는 Dispose 메서드를 제공 합니다.|모든 코드의에서 옮겨야 Dispose 메서드 재정의 호스트 항목 클래스에서 시스템 종료 이벤트 처리기에 예를 들어 `ThisAddIn_Shutdown`, 호스트 항목 클래스에서 Dispose 메서드 재정의 제거 합니다.|  
+|호스트 항목 클래스와 같은 `ThisWorkbook`, `Sheet` *n*, `ThisDocument`, 및 `ThisAddIn`, 더 이상 재정의할 수 있는 Dispose 메서드를 제공 합니다.|모든 코드의에서 옮겨야 Dispose 메서드 재정의 호스트 항목 클래스에서 시스템 종료 이벤트 처리기에 예를 들어 `ThisAddIn_Shutdown`, 호스트 항목 클래스에서 Dispose 메서드 재정의 제거 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   

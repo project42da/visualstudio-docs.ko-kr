@@ -1,12 +1,10 @@
 ---
-title: "Office 솔루션에 대 한 특정 보안 고려 사항 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션에 대 한 특정 보안 고려 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - security [Office development in Visual Studio], troubleshooting
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: f7f2e865ccb94a9996e13f7cf3c695784623fded
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f799a0ef393def5c77249f51a26278bd419ac523
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specific-security-considerations-for-office-solutions"></a>Office 솔루션에 대한 특정 보안 고려 사항
   Microsoft .NET Framework 및 Microsoft Office에서 제공된 보안 기능을 통해 다양한 보안 위협에 대해 Office 솔루션을 보호할 수 있습니다. 이 항목에서는 이러한 위협 중 일부에 대해 설명하고 이러한 위협으로부터 보호하기 위한 권장 사항을 제공합니다. 또한 Office 솔루션에 영향을 주는 Microsoft Office 보안 설정에 대한 정보를 포함합니다.  

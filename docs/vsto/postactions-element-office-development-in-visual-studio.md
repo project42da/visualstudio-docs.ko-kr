@@ -1,12 +1,10 @@
 ---
-title: "&lt;postActions&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs"
-ms.custom: 
+title: '&lt;postActions&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - <postActions> element
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bbe0708ce97eb6410f006b6dcdc8d8194907b9c1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 2c4dafa1c5ac7ef296ba388ecdfd93d00afef708
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ltpostactionsgt-element-office-development-in-visual-studio"></a>&lt;postActions&gt; 요소 (Visual Studio에서 Office 개발)
   `postActions` 네임스페이스의 `vstav3` 요소에는 배포 후 작업을 설명하는 모든 `postAction` 요소가 포함되며 Office 솔루션 설치 후 실행됩니다.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
  `postActions` 에는 다음 요소가 있습니다.  
   
 ### <a name="postaction"></a>postAction  
- 선택 사항입니다. 역할은 `postAction` 요소에는 `vstav3` 네임 스페이스에 정의 된 [&#60; postAction &#62; 요소 &#40; Visual Studio &#41;에서 Office 개발 ](../vsto/postaction-element-office-development-in-visual-studio.md).  
+ 선택 사항입니다. 역할은 `postAction` 요소에는 `vstav3` 네임 스페이스에 정의 된 [ &#60;postAction&#62; 요소 &#40;Visual Studio에서 Office 개발&#41;](../vsto/postaction-element-office-development-in-visual-studio.md)합니다.  
   
 ## <a name="post-deployment-action-example"></a>배포 후 작업 예제  
   

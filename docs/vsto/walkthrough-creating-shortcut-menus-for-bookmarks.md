@@ -1,13 +1,10 @@
 ---
-title: "연습: 책갈피에 대 한 바로 가기 메뉴 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 책갈피에 대 한 바로 가기 메뉴 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - menus, creating in Office applications
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9af7c7dd4a4c56cbd872b757704d64afd22c6101
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 6d54d23330c6d5fab836f168a291b15b90379117
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-shortcut-menus-for-bookmarks"></a>연습: 책갈피에 대한 바로 가기 메뉴 만들기
   이 연습에 대 한 바로 가기 메뉴를 만드는 방법을 보여 줍니다 <xref:Microsoft.Office.Tools.Word.Bookmark> Word 용 문서 수준 사용자 지정에서 컨트롤입니다. 책갈피에 텍스트를 누를 때 바로 가기 메뉴가 표시 되 고 텍스트의 서식을 지정 하기 위한 옵션이 제공.  
@@ -44,14 +41,14 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
   
 -   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] 또는 [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
   
-##  <a name="BKMK_CreateProject"></a>프로젝트 만들기  
+##  <a name="BKMK_CreateProject"></a> 프로젝트 만들기  
  첫 번째 단계는 Visual Studio에서 Word 문서 프로젝트를 만드는 것입니다.  
   
 #### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
@@ -60,7 +57,7 @@ ms.lasthandoff: 01/10/2018
   
      Visual Studio 디자이너에서 새 Word 문서가 열리고 추가 **내 책갈피 바로 가기 메뉴** 프로젝트를 **솔루션 탐색기**합니다.  
   
-##  <a name="BKMK_addtextandbookmarks"></a>문서에 텍스트와 책갈피를 추가  
+##  <a name="BKMK_addtextandbookmarks"></a> 문서에 텍스트와 책갈피를 추가  
  문서에 일부 텍스트를 추가 하 고 두 개의 겹치는 책갈피를 추가 합니다.  
   
 #### <a name="to-add-text-to-your-document"></a>텍스트 문서를 추가 하려면  
@@ -77,18 +74,18 @@ ms.lasthandoff: 01/10/2018
   
 2.  "텍스트를 마우스 오른쪽 단추로 클릭 바로 가기 메뉴를 만드는" 단어를 선택를 클릭 하 고 **확인**합니다.  
   
-     `bookmark1`문서에 추가 됩니다.  
+     `bookmark1` 문서에 추가 됩니다.  
   
 3.  다른 항목 추가 <xref:Microsoft.Office.Tools.Word.Bookmark> "책갈피의 텍스트를 마우스 오른쪽 단추로 클릭" 단어를 제어 합니다.  
   
-     `bookmark2`문서에 추가 됩니다.  
+     `bookmark2` 문서에 추가 됩니다.  
   
     > [!NOTE]  
     >  둘 다에 있는 "텍스트를 오른쪽 단추로 클릭" 단어 `bookmark1` 및 `bookmark2`합니다.  
   
  디자인 타임에 문서에 책갈피를 추가 하는 경우는 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤이 만들어집니다. 책갈피의 여러 이벤트에 대해 프로그래밍할 수 있습니다. 코드를 작성할 수 있습니다는 <xref:Microsoft.Office.Tools.Word.Bookmark.BeforeRightClick> 이벤트 책갈피의 책갈피에 텍스트를 클릭할 때 있도록 바로 가기 메뉴가 나타납니다.  
   
-##  <a name="BKMK_AddCmndsShortMenu"></a>바로 가기 메뉴에 명령 추가  
+##  <a name="BKMK_AddCmndsShortMenu"></a> 바로 가기 메뉴에 명령 추가  
  문서를 마우스 오른쪽 단추로 클릭할 때 표시 되는 바로 가기 메뉴를 단추를 추가 합니다.  
   
 #### <a name="to-add-commands-to-a-shortcut-menu"></a>바로 가기 메뉴에 명령을 추가 하려면  
@@ -148,7 +145,7 @@ ms.lasthandoff: 01/10/2018
      [!code-csharp[Trin_Word_Document_Menus#5](../vsto/codesnippet/CSharp/trin_word_document_menus.cs/ribbon1.cs#5)]
      [!code-vb[Trin_Word_Document_Menus#5](../vsto/codesnippet/VisualBasic/trin_word_document_menus.vb/ribbon1.vb#5)]  
   
-##  <a name="BKMK_formattextbkmk"></a>책갈피에 텍스트 서식 지정  
+##  <a name="BKMK_formattextbkmk"></a> 책갈피에 텍스트 서식 지정  
   
 #### <a name="to-format-the-text-in-the-bookmark"></a>책갈피의 텍스트 서식을 지정 하려면  
   

@@ -1,18 +1,18 @@
 ---
-title: "방법: Windows Communication Foundation 계약 작업 (레거시)를 호출 합니다. | Microsoft Docs"
+title: '방법: Windows Communication Foundation 계약 작업 (레거시)를 호출 합니다. | Microsoft Docs'
 ms.date: 11/04/2016
 ms.topic: reference
 ms.assetid: a9058345-708f-4fcf-8739-2a43e5285b7a
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 522db4f46486470333393ca99f384f258898e09a
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: c97b62f7ddfbe46ac5ede4aefba53e50020f3b65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-invoke-a-windows-communication-foundation-contract-operation-legacy"></a>방법: Windows Communication Foundation 계약 작업 호출(레거시)
 이 항목에서는 호출 하는 방법을 설명는 [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 작업 계약에서 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
@@ -45,7 +45,7 @@ ms.lasthandoff: 03/12/2018
 
 4.  구성 파일에 끝점 구성이 아직 없으면 만듭니다. 클라이언트를 구성 하는 방법에 대 한 자세한 내용은 참조 [WCF 클라이언트 개요](/dotnet/framework/wcf/wcf-client-overview)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [작업 선택 대화 상자(레거시)](../workflow-designer/choose-operation-dialog-box-legacy.md)
 - [방법: WCF 계약 작업 구현 (레거시)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md)

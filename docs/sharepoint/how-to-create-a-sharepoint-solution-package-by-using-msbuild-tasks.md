@@ -1,13 +1,10 @@
 ---
-title: "방법: MSBuild 작업을 사용 하 여 SharePoint 솔루션 패키지 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: MSBuild 작업을 사용 하 여 SharePoint 솔루션 패키지 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packages
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 210793ab224e4da324591780dd3e6b171a1d721a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 629b63b8645f1b5ebd84d25a04a4cec4e8bca6a3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>방법: MSBuild 작업을 사용하여 SharePoint 솔루션 패키지 만들기
   빌드, 정리 및 명령줄 MSBuild 작업을 사용 하 여 개발 컴퓨터에서 SharePoint 패키지 (.wsp) 유효성을 검사할 수 있습니다. 또한 빌드 컴퓨터에서 Team Foundation Server를 사용 하 여 빌드 프로세스를 자동화 하기 이러한 명령을 사용할 수 있습니다.  

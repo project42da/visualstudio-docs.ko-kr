@@ -1,13 +1,10 @@
 ---
-title: "방법: Visual Studio 내에서 워크시트에 스키마 매핑 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Studio 내에서 워크시트에 스키마 매핑 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - worksheets [Office development in Visual Studio], XML schemas
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ed0da1c2ac181db93105a93dd2269be55f0379a2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: b2d0caadfc08d7fa1d2ea29d04e84a5d954a42fd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-map-schemas-to-worksheets-inside-visual-studio"></a>방법: Visual Studio 내에서 워크시트에 스키마 매핑
   Visual Studio에서 열려 있는 워크시트 동안 워크시트에 XML 스키마를 매핑할 수 있습니다. 통합 문서 Visual Studio 외부에서 열릴 때 사용 하는 동일한 Microsoft Office Excel 도구를 사용 합니다. Office 프로젝트 이전 워크시트에 스키마 매핑 여부 Excel 솔루션을 만든 후 동일한 개체를 만듭니다.  

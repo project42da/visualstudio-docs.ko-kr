@@ -1,13 +1,10 @@
 ---
-title: "SharePoint 응용 프로그램의 성능을 프로 파일링 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 응용 프로그램의 성능을 프로 파일링 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Profiling.SilverlightWebPartOnly
 - VS.SharePointTools.Profiling.DotNetTrustLevel
@@ -21,14 +18,14 @@ helpviewer_keywords:
 - profiling [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 44c2566a722794fea176100db144f09c6c010f6e
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 5ecae69e83e86e851705bd990d5e5887400a7104
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="profiling-the-performance-of-sharepoint-applications"></a>SharePoint 응용 프로그램 성능 프로파일링
  
@@ -72,7 +69,7 @@ Visual Studio에서 부하 테스트 및 웹 성능 테스트를 만들어 응�
 |[코드 단위 테스트](/visualstudio/test/unit-test-your-code)|단위 테스트를 사용 하 여 코드에서 논리 오류를 확인 하는 방법에 설명 합니다.|
 |[코딩된 UI 테스트를 사용하여 SharePoint 2010 응용 프로그램 테스트](/visualstudio/test/testing-sharepoint-2010-applications-with-coded-ui-tests)|SharePoint 응용 프로그램의 사용자 인터페이스를 테스트 하는 방법에 설명 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)  
 [코드 품질 향상](/visualstudio/test/improve-code-quality)

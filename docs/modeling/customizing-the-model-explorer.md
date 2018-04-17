@@ -1,25 +1,23 @@
 ---
-title: "모델 탐색기 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 모델 탐색기 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.dsltools.dsldesigner.explorerbehavior
 helpviewer_keywords:
 - Domain-Specific Language Tools, Domain-Specific Language Explorer
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: eac91df1a07e54b80e88538695b1cc22353396d6
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c69cdd822941fd81478fae0b62d509b64ef513da
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-the-model-explorer"></a>모델 탐색기 사용자 지정
 변경할 수 있습니다 모양 및 동작 탐색기의 도메인 특정 언어 디자이너에 대 한 다음과 같습니다.  
@@ -114,6 +112,6 @@ ms.lasthandoff: 02/09/2018
   
      탐색기만 표시 됩니다는 **행위자** 노드를 표시 하지 않아야 하 고는 **주석** 노드.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

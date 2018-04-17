@@ -1,12 +1,10 @@
 ---
-title: "Office 솔루션 디자인 및 만들기 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션 디자인 및 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - Office project types in Visual Studio
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7f5a0163d422e5bb04e3c43b5455cc94dde06f09
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e43824ed3fa34a7cd22b98fb25f946f36cb8eab6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="designing-and-creating-office-solutions"></a>Designing and Creating Office Solutions
   Visual Studio에서는 몇 가지 유형의 Office 솔루션을 만드는 데 사용할 수 있는 프로젝트 템플릿을 제공합니다. 설명서의 이 섹션에서는 프로젝트 템플릿에 대해 설명하고 Office 프로젝트를 만드는 지침을 제공합니다. 프로젝트를 만든 후 코드 및 사용자 인터페이스 사용자 지정을 구현 하는 방법에 대 한 정보를 참조 하십시오. [Office 솔루션 개발](../vsto/developing-office-solutions.md)합니다.  
@@ -100,7 +99,7 @@ ms.lasthandoff: 01/10/2018
  [Visual Studio 환경의 office 프로젝트](../vsto/office-projects-in-the-visual-studio-environment.md)   
  [Office 프로젝트의 속성](../vsto/properties-in-office-projects.md)   
  [다른 버전의 Microsoft Office에서 솔루션 실행](../vsto/running-solutions-in-different-versions-of-microsoft-office.md)   
- [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [응용 프로그램 및 Office 솔루션의 배포 매니페스트](../vsto/application-and-deployment-manifests-in-office-solutions.md)   
  [방법: Office 솔루션에 대 한 구성 정보를 설정 합니다.](../vsto/how-to-set-up-configuration-information-for-an-office-solution.md)   
  [Visual Studio에서 Office 기능 사용](../vsto/using-office-functionality-inside-of-visual-studio.md)   

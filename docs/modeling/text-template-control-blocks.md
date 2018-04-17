@@ -1,23 +1,21 @@
 ---
-title: "텍스트 템플릿 제어 블록 | Microsoft Docs"
-ms.custom: 
+title: 텍스트 템플릿 제어 블록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, template code
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: aea2d274e209c6ea0493da4bd743b008c9a5921f
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e48193bbd8cde6a4312ddd1dbd9718e131dae524
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="text-template-control-blocks"></a>텍스트 템플릿 제어 블록
 제어 블록을 사용하면 다양한 출력을 생성하기 위해 텍스트 템플릿에 코드를 작성할 수 있습니다. 다음과 같은 세 가지 종류의 제어 블록이 있으며 각각 여는 대괄호로 구분됩니다.  
@@ -121,7 +119,7 @@ Some text.
 > [!NOTE]
 >  같은 템플릿 파일에서 클래스 기능 제어 블록 뒤에 표준 제어 블록을 두지 않아야 합니다. 그러나 `<#@include#>` 지시문을 사용한 결과에는 이러한 제한 사항이 적용되지 않습니다. 각각의 포함된 파일에서는 표준 블록 뒤에 클래스 기능 블록이 올 수 있습니다.  
   
- 텍스트 및 식 블록을 클래스 기능 제어 블록 안에 포함하여 출력을 생성하는 함수를 만들 수 있습니다. 예:  
+ 텍스트 및 식 블록을 클래스 기능 제어 블록 안에 포함하여 출력을 생성하는 함수를 만들 수 있습니다. 예를 들어:  
   
 ```  
 <#+  

@@ -2,20 +2,18 @@
 title: '방법: 도메인 특정 언어 디자이너 확장 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: efcd1d354705fefcaeb0fbfbec0622ff2f06c331
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: HT
+ms.openlocfilehash: 8e867e1941484fe347b032ebcbe9025b962d4def
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-extend-the-domain-specific-language-designer"></a>방법: 도메인별 언어 디자이너 확장
 사용 하 여 DSL 정의 편집 하는 디자이너 확장을 만들 수 있습니다. 형식의 확장명과 적용할 수 있는 메뉴 명령을 추가 끌어서 제스처 및 특정 유형의 값 또는 관계를 변경할 때 트리거되는 규칙을 두 번 클릭에 대 한 처리기를 추가 합니다. 확장으로는 VSIX Visual Studio Integration Extension ()를 패키지 하 고 다른 사용자에 게 배포할 수 있습니다.  

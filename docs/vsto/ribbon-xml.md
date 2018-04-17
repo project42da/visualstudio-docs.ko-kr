@@ -1,13 +1,10 @@
 ---
-title: "리본 XML | Microsoft Docs"
-ms.custom: 
+title: 리본 XML | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTO.Ribbon.RibbonXMLItem
 dev_langs:
@@ -26,14 +23,14 @@ helpviewer_keywords:
 - customizing the Ribbon, displaying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e12489431a7496b1d64d5aef93a24fcc239be81a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 76527949bcfc5b3023ebd75fe15726b02938d39e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ribbon-xml"></a>리본 XML
   리본(XML) 항목을 사용하면 XML을 통해 리본을 사용자 지정할 수 있습니다. 리본(비주얼 디자이너) 항목에서 지원하지 않는 방법으로 리본을 사용자 지정하려는 경우 리본(XML) 항목을 사용합니다. 각 항목으로 수행할 수 있는 한 비교를 참조 하십시오. [리본 개요](../vsto/ribbon-overview.md)합니다.  
@@ -133,7 +130,7 @@ ms.lasthandoff: 01/10/2018
 |**onLoad**|**customUI**|응용 프로그램에서 리본 메뉴를 로드할 때 호출되는 메서드를 식별합니다.|  
 |**idMso**|**탭**|리본 메뉴에 표시할 기본 제공 탭을 식별합니다.|  
 |**ID**|**group**|그룹을 식별합니다.|  
-|**레이블**|**group**|그룹에 나타나는 텍스트를 지정합니다.|  
+|**label**|**group**|그룹에 나타나는 텍스트를 지정합니다.|  
   
  리본 XML 파일의 기본 요소와 특성은 사용할 수 있는 요소 및 특성의 일부에 불과합니다. 사용 가능한 요소 및 특성의 전체 목록은 기술 문서 [개발자용 Office(2007) 리본 사용자 인터페이스 사용자 지정(2/3부)](http://msdn.microsoft.com/en-us/6b904f55-525f-4520-9b81-a017db65657b)를 참조하세요.  
   
@@ -144,7 +141,7 @@ ms.lasthandoff: 01/10/2018
   
 |메서드|설명|  
 |------------|-----------------|  
-|`GetCustomUI`|리본 XML 파일의 내용을 반환합니다. Microsoft Office 응용 프로그램은 이 메서드를 호출하여 사용자 지정 리본 메뉴의 사용자 인터페이스를 정의하는 XML 문자열을 가져옵니다. 이 메서드는 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 메서드를 구현합니다. **참고:** `GetCustomUI` 는 리본 XML 파일의 내용만 반환 하도록 구현 해야 VSTO 추가 기능에 대 한 초기화를 사용 해야 합니다. 특히, `GetCustomUI` 구현에서 대화 상자 또는 다른 창을 표시하려고 하면 안 됩니다. 그렇지 않으면 사용자 지정 리본 메뉴가 올바르게 동작하지 않을 수 있습니다. VSTO 추가 기능을 초기화하는 코드를 실행해야 하는 경우 `ThisAddIn_Startup` 이벤트 처리기에 코드를 추가합니다.|  
+|`GetCustomUI`|리본 XML 파일의 내용을 반환합니다. Microsoft Office 응용 프로그램은 이 메서드를 호출하여 사용자 지정 리본 메뉴의 사용자 인터페이스를 정의하는 XML 문자열을 가져옵니다. 이 메서드는 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 메서드를 구현합니다. **참고:** `GetCustomUI` 는 리본 XML 파일의 내용만 반환 하도록 구현 해야 VSTO 추가 기능에 대 한 초기화를 사용 해야 합니다.   특히, `GetCustomUI` 구현에서 대화 상자 또는 다른 창을 표시하려고 하면 안 됩니다. 그렇지 않으면 사용자 지정 리본 메뉴가 올바르게 동작하지 않을 수 있습니다. VSTO 추가 기능을 초기화하는 코드를 실행해야 하는 경우 `ThisAddIn_Startup` 이벤트 처리기에 코드를 추가합니다.|  
 |`OnLoad`|<xref:Microsoft.Office.Core.IRibbonControl> 필드에 `ribbon` 매개 변수를 할당합니다. 사용자 지정 리본 메뉴를 로드하는 경우 Microsoft Office 응용 프로그램에서 이 메서드를 호출합니다. 이 필드를 사용하여 사용자 지정 리본 메뉴를 동적으로 업데이트할 수 있습니다. 자세한 내용은 기술 문서 [개발자용 Office(2007) 리본 사용자 인터페이스 사용자 지정(1/3부)](http://msdn.microsoft.com/en-us/a4fd6d18-d4a8-4e64-bd89-f437208573d3)를 참조하세요.|  
 |`GetResourceText`|`GetCustomUI` 메서드에서 리본 XML 파일의 내용을 가져오기 위해 호출합니다.|  
   

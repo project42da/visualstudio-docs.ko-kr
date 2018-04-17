@@ -1,12 +1,10 @@
 ---
-title: "연습: Word 용 첫 문서 수준 사용자 지정 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: Word 용 첫 문서 수준 사용자 지정 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], creating your first project
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 8d37dde0027e33af16bdb6c146ec74076c686cf6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9bb85c10b2a66741bf0405d4a1313fb2343a708b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-your-first-document-level-customization-for-word"></a>연습: Word용 첫 문서 수준 사용자 지정 만들기
   이 소개용 연습에서는 Microsoft Office Word에 대한 문서 수준 사용자 지정을 만드는 방법을 보여 줍니다. 이러한 종류의 솔루션에서 만드는 기능은 특정 문서가 열려 있는 경우에만 사용할 수 있습니다. 문서가 열려 있을 때 새 리본 탭 표시와 같은 응용 프로그램 수준 변경은 문서 수준 사용자 지정을 사용하여 수행할 수 없습니다.  
@@ -43,7 +42,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -72,7 +71,7 @@ ms.lasthandoff: 01/10/2018
   
 8.  선택 **새 문서**를 클릭 하 고 **확인**합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]만듭니다는 **FirstDocumentCustomization** 프로젝트를 마우스 추가 **FirstDocumentCustomization** 문서와 ThisDocument 코드 파일을 프로젝트입니다. **FirstDocumentCustomization** 디자이너에서 문서를 자동으로 열립니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 만듭니다는 **FirstDocumentCustomization** 프로젝트를 마우스 추가 **FirstDocumentCustomization** 문서와 ThisDocument 코드 파일을 프로젝트입니다. **FirstDocumentCustomization** 디자이너에서 문서를 자동으로 열립니다.  
   
 ## <a name="closing-and-reopening-the-document-in-the-designer"></a>디자이너에서 문서를 닫은 후 다시 열기  
  프로젝트를 개발하는 동안 디자이너에서 의도적으로 또는 실수로 문서를 닫은 경우 다시 열 수 있습니다.  
@@ -158,7 +157,7 @@ ms.lasthandoff: 01/10/2018
 -   Word 용 문서 수준 사용자 지정 배포: [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Office 솔루션 개발 개요 &#40; VSTO &#41;](../vsto/office-solutions-development-overview-vsto.md)   
+ [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)   
  [Word 솔루션](../vsto/word-solutions.md)   
  [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
  [Word 개체 모델 개요](../vsto/word-object-model-overview.md)   

@@ -1,25 +1,23 @@
 ---
-title: "코드 시각화 | Microsoft Docs"
-ms.custom: 
+title: 코드 시각화 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-modeling
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code, understanding
 - code, visualizing
 - code, exploring
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb4b7729cb0541c6ef3feb007e99b9e532c6c361
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 229979e608198f6eeb3f68f6e9f31d4e3391dbc2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visualize-code"></a>코드 시각화
 Visual Studio의 시각화 및 모델링 도구를 사용하여 기존 코드를 이해하고 응용 프로그램을 설명할 수 있습니다. 이렇게 하면 변경 내용이 코드에 미치는 영향을 시각적으로 알아보고 작업 및 해당 변경 내용으로 인한 위험을 평가할 수 있습니다. 예:  

@@ -1,12 +1,10 @@
 ---
-title: "방법: 기능 지역화 | Microsoft Docs"
-ms.custom: 
+title: '방법: 기능 지역화 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, localizing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1ddb5e705fd581ce2717539ac6daf3e9a2081f6d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 08756ce33d97e156d63fd873c63d4d6fc282285b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-localize-a-feature"></a>방법: 기능 지역화
   기본적으로 기능 제목 및 설명 하드 코드 된 문자열 값을 사용 합니다. 기능 제목 및 설명 필드를 지역화, 지역화 된 리소스를 참조 하는 식으로 문자열을 대체 합니다.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  지역화 하는 **제목** 및 **설명** 필드는 기능에는 다음 형식을 사용 하 여 해당 상자에 값을 입력 합니다.  
   
-     `$Resources:`*문자열 ID*  
+     `$Resources:` *문자열 ID*  
   
      예를 들어 $Resources 입력:**제목** 에 **기능 제목은** 상자 및 $Resources:**설명** 에 **기능 설명** 상자 .  
   

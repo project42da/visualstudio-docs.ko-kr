@@ -1,12 +1,10 @@
 ---
-title: "워크시트 작업 | Microsoft Docs"
-ms.custom: 
+title: 워크시트 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - worksheets [Office development in Visual Studio], common tasks
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 61dd449c4e495f5bf70f14f4295526d4a2dc3fec
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: f7e55b281c2b6ba571e9d0b33f355b99f6b2f53f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-worksheets"></a>워크시트 작업
   <xref:Microsoft.Office.Tools.Excel.Worksheet> 및 <xref:Microsoft.Office.Interop.Excel.Worksheet> 클래스에는 워크시트가 있는 작업을 수행하는 데 사용하는 메서드 및 속성이 포함됩니다.  

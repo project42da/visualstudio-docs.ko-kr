@@ -1,12 +1,10 @@
 ---
-title: "방법: 마스터 페이지 또는 테마 가져오기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 마스터 페이지 또는 테마 가져오기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,16 +13,17 @@ helpviewer_keywords:
 - importing items [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 07c3e9fb88ea562a85e1c7555d2c57cb04d769ff
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: e60977a44593953b4858ea0262befc61c3189cec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-import-a-master-page-or-theme"></a>방법: 마스터 페이지 또는 테마 가져오기
-  제공할 수 있습니다 페이지 SharePoint 사이트에서 일관 된 모양을 만들고 마스터 페이지 및 테마를 사용 하 여 합니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]이러한 요소에 대 한 템플릿을 제공 하지 않지만 SharePoint Designer에서 만들로 가져올 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. 자세한 내용은 참조 [문서 블록: 페이지 및 사용자 인터페이스](http://go.microsoft.com/fwlink/?LinkID=182095) Microsoft 웹 사이트입니다.  
+  제공할 수 있습니다 페이지 SharePoint 사이트에서 일관 된 모양을 만들고 마스터 페이지 및 테마를 사용 하 여 합니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 이러한 요소에 대 한 템플릿을 제공 하지 않지만 SharePoint Designer에서 만들로 가져올 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. 자세한 내용은 참조 [문서 블록: 페이지 및 사용자 인터페이스](http://go.microsoft.com/fwlink/?LinkID=182095) Microsoft 웹 사이트입니다.  
   
 ### <a name="to-import-a-master-page-or-theme"></a>마스터 페이지 또는 테마 가져오기  
   

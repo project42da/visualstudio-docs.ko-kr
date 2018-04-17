@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 프로젝트 및 프로젝트 항목 템플릿 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 프로젝트 및 프로젝트 항목 템플릿 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/22/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.SPE.FirstWizardPage
 - VS.SharePointTools.SPE.ListInstance
@@ -24,13 +22,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, templates
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 3890d7678fdc50a867e254edbbb7503acbebcd76
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d671c397f139cfaa51bd664e5324a32cce671361
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sharepoint-project-and-project-item-templates"></a>SharePoint 프로젝트 및 프로젝트 항목 템플릿
   다음 섹션에서는 사용할 수 있는 SharePoint 프로젝트에 설명 하 고 프로젝트 항목 템플릿 및 사용 방법. 
