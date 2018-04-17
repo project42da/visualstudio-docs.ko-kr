@@ -1,29 +1,25 @@
 ---
-title: "메뉴 항목을 추가 하는 동적으로 | Microsoft Docs"
-ms.custom: 
+title: 메뉴 항목을 추가 하는 동적으로 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - DYNAMICITEMSTART
 - menu items, adding dynamically
 - menus, adding dynamic items
 ms.assetid: d281e9c9-b289-4d64-8d0a-094bac6c333c
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8c7a803933b3b1e6d353b9899cb8997dbaa6897e
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: bf7c9f8da800e827ac4b1993c55d4d96c8ca9d89
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="dynamically-adding-menu-items"></a>동적으로 메뉴 항목 추가
 지정 하 여 런타임에 메뉴 항목을 추가할 수는 `DynamicItemStart` 표시 및 처리 명령에 항목을 코드에서 메뉴의 번호를 정의 하는 다음 Visual Studio 명령 테이블 (.vsct) 파일에 있는 자리 표시자 단추 정의에서 플래그를 명령입니다. VSPackage 로드 될 때 자리 표시자 동적 메뉴 항목으로 바뀝니다.  

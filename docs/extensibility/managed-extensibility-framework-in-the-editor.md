@@ -2,26 +2,22 @@
 title: 편집기에서 Extensibility Framework 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - using MEF for extensions
 ms.assetid: 3f59a285-6c33-4ae3-a4fb-ec1f5aa21bd1
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c13b1a4e1b183b3a6f4b54f58cca3593ce5c7bb2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 91b507893cf2d17b9885944a766c9c9a8c084a7a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managed-extensibility-framework-in-the-editor"></a>편집기에서 관리 되는 확장 프레임 워크
 편집기는 프레임 워크 MEF (Managed Extensibility) 구성 요소를 사용 하 여 작성 됩니다. 사용자 자신의 MEF 구성 요소 편집기를 확장 하 작성할 수 있으며, 코드 편집기 구성 요소에도 사용할 수 있습니다.  

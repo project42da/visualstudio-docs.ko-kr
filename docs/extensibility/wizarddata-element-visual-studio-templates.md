@@ -2,34 +2,30 @@
 title: WizardData 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#WizardData
 helpviewer_keywords:
 - WizardData element [Visual Studio Templates]
 - <WizardData> element [Visual Studio Templates]
 ms.assetid: d0403a16-5d07-4fe5-b474-19ae3d9fd3ab
-caps.latest.revision: 9
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2e6303d9334086f14bcbb7a090dd26df81e1abae
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6685c09e463b50f1fd856c65eadc09555a6dedb9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wizarddata-element-visual-studio-templates"></a>WizardData 요소(Visual Studio 템플릿)
 사용자 지정 XML 지정  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<WizardData >  
   
 ## <a name="syntax"></a>구문  
@@ -66,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
  콘텐츠는 `WizardData` 요소 내에서 매개 변수의 문자열 사전 매개 변수로 변경 되지 않고 전달 되는 `IWizard.RunStarted` 메서드. 매개 변수는 이름이 $WizardData$입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한 표준 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  

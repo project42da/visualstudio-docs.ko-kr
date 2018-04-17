@@ -1,26 +1,24 @@
 ---
-title: "사용자 인터페이스를 업데이트 | Microsoft Docs"
-ms.custom: 
+title: 사용자 인터페이스를 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user interfaces, updating
 - commands, updating UI
 ms.assetid: 376e2f56-e7bf-4e62-89f5-3dada84a404b
-caps.latest.revision: "41"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: bea4f89d2894344069b8aa5b3037bd00b973a40e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6b3bc8c4b87aefe62cbd27e64fc426ddb7abf96e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="updating-the-user-interface"></a>사용자 인터페이스 업데이트
 명령을 구현 하 고 나면 새 명령의 상태와 사용자 인터페이스를 업데이트 하는 코드를 추가할 수 있습니다.  

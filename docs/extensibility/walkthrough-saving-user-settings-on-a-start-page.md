@@ -1,23 +1,21 @@
 ---
-title: "연습: 시작 페이지에서 사용자 설정을 저장 하 | Microsoft Docs"
-ms.custom: 
+title: '연습: 시작 페이지에서 사용자 설정을 저장 하 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 754b9bf3-8681-4c77-b0a4-09146a4e1d2d
-caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 16de0e205d71e2a71b14f523dedbb45354157355
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8ea4d4a07ed9f61f20ca2b3f79b99d3a2ebfa0b3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-saving-user-settings-on-a-start-page"></a>연습: 시작 페이지에서 사용자 설정 저장
 시작 페이지에 대 한 사용자 설정을 유지할 수 있습니다. 이 연습을 수행 함으로써 사용자가 단추를 클릭 하 고 다음 시작 페이지가 로드 될 때마다이 설정 검색 레지스트리에 설정을 저장 하는 컨트롤을 만들 수 있습니다. 시작 페이지 프로젝트 템플릿을 사용자 지정 가능한 사용자 정의 컨트롤을 포함 하므로, 해당 컨트롤을 호출 하는 기본 시작 페이지 XAML 자체 시작 페이지를 수정할 필요가 없습니다.  
@@ -28,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
  설정을 유지 하는 방법에 대 한 자세한 내용은 참조 [확장 사용자 설정 및 옵션](../extensibility/extending-user-settings-and-options.md)합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
   
 > [!NOTE]
 >  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  

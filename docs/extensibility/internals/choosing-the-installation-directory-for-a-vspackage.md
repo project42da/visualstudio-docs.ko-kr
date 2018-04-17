@@ -1,39 +1,35 @@
 ---
-title: "VSPackage에 대 한 설치 디렉터리를 선택 합니다. | Microsoft Docs"
-ms.custom: 
+title: VSPackage에 대 한 설치 디렉터리를 선택 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, installation directory
 ms.assetid: 01fbbb5b-f747-446c-afe0-2a081626a945
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 085c3bea9b9edc726fa09dd5d7658aff4a55e568
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 564a184e8b3907f5a61bccc26cfbafa8d2cf8e67
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="choosing-the-installation-directory-for-a-vspackage"></a>VSPackage에 대 한 설치 디렉터리를 선택합니다.
 VSPackage 및 해당 지원 파일 사용자의 파일 시스템에 있어야 합니다. 위치는 VSPackage는 관리 하거나 관리 되지 않는,-side-by-side 버전 관리 체계 및 사용자 선택에 따라 달라 집니다.  
   
 ## <a name="unmanaged-vspackages"></a>관리 되지 않는 Vspackage  
- 관리 되지 않는 VSPackage는 어느 위치에 설치할 수 있는 COM 서버입니다. 등록 정보 해당 위치를 정확 하 게 반영 해야 합니다. 설치 프로그램 사용자 인터페이스 (UI)를 하위 ProgramFilesFolder Windows Installer 속성의 기본 위치를 제공 해야 합니다. 예:  
+ 관리 되지 않는 VSPackage는 어느 위치에 설치할 수 있는 COM 서버입니다. 등록 정보 해당 위치를 정확 하 게 반영 해야 합니다. 설치 프로그램 사용자 인터페이스 (UI)를 하위 ProgramFilesFolder Windows Installer 속성의 기본 위치를 제공 해야 합니다. 예를 들어:  
   
  [ProgramFilesFolder] MyCompany\MyVSPackageProduct\V1.0\  
   
  작은 부트 파티션을 유지 하는 사용자를 수용 하기 위해 기본 디렉터리를 변경 하 고 다른 볼륨에 응용 프로그램 및 도구를 설치 하는 것을 선호 하는 사용자 수 있어야 합니다.  
   
- 나란히 체계 버전 관리 된 VSPackage를 사용 하는 경우에 서로 다른 버전을 저장할 수 하위 디렉터리를 사용할 수 있습니다. 예:  
+ 나란히 체계 버전 관리 된 VSPackage를 사용 하는 경우에 서로 다른 버전을 저장할 수 하위 디렉터리를 사용할 수 있습니다. 예를 들어:  
   
  [ProgramFilesFolder] MyCompany\MyVSPackageProduct\V1.0\2002\  
   

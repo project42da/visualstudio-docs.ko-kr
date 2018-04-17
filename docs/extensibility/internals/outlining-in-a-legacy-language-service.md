@@ -1,27 +1,25 @@
 ---
-title: "레거시 언어 서비스에서 개요 | Microsoft Docs"
-ms.custom: 
+title: 레거시 언어 서비스에서 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - outlining
 - language services [managed package framework], outlining
 - outlining, supporting in language services [managed package framework]
 ms.assetid: 7b5578b4-a20a-4b94-ad4c-98687ac133b9
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 76f47edd31892a98ec3235bfc4a00f5f2e647408
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b899f53ba6b2a0b58997cc51a83a0d9ca8480e63
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outlining-in-a-legacy-language-service"></a>레거시 언어 서비스에서 개요
 개요 기능 개요 또는 개요로 복잡 한 프로그램을 축소할 수 있습니다. 예를 들어 C#에서 모든 메서드는 메서드 시그니처를 보여 주는, 한 줄으로 축소할 수 있습니다. 또한 구조체와 클래스 구조체와 클래스의 이름에만 표시 하도록 축소할 수 있습니다. 메서드 내에서 단일 복잡 한 논리와 같은 문 중 첫 번째 줄만 표시 하 여 전체 흐름을 표시 하려면 축소 있습니다 `foreach`, `if`, 및 `while`합니다.  
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
  숨겨진된 영역 세션 소멸 될 때 확인 해야 할 경우 숨겨진된 영역을 변경 하거나 특정 숨겨진된 영역 표시 되 고 있는지 확인 해야 합니다. 클래스를 파생 해야 합니다는 <xref:Microsoft.VisualStudio.Package.Source> 클래스 및 적절 한 메서드를 재정의 <xref:Microsoft.VisualStudio.Package.Source.OnBeforeSessionEnd%2A>, <xref:Microsoft.VisualStudio.Package.Source.OnHiddenRegionChange%2A>, 및 <xref:Microsoft.VisualStudio.Package.Source.MakeBaseSpanVisible%2A>각각.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  모든 중괄호 쌍에 대 한 숨겨진된 영역을 만드는 간단한 예는 다음과 같습니다. 가정 언어의 중괄호 짝 맞추기를 제공 하 고 일치 시킬 중괄호 포함 이상 중괄호 ({및}). 이 방법이 설명 목적 으로만입니다. 완전 한 구현에서 사례의 전체 처리를 갖기 <xref:Microsoft.VisualStudio.Package.LanguageService.ParseSource%2A>합니다. 이 예제에서는 설정 하는 <xref:Microsoft.VisualStudio.Package.LanguagePreferences.AutoOutlining%2A> 에 우선 순위를 `true` 일시적으로 합니다. 대신 지정 하는 것은 `AutoOutlining` 명명 된 매개 변수에서는 `ProvideLanguageServiceAttribute` 언어 패키지에는 특성입니다.  
   
  이 예제에서는 C# 주석, 문자열 및 리터럴에 대 한 규칙을 가정합니다.  

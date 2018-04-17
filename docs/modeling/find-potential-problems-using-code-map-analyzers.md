@@ -2,8 +2,6 @@
 title: 코드 맵 분석기를 사용 하 여 잠재적 문제 찾기 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.topic: conceptual
 f1_keywords:
 - vs.progression.codemapanalyzers
@@ -13,15 +11,15 @@ helpviewer_keywords:
 - graph documents, analyzing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 228012039c360e362948d6566411cf05720627f0
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: 99ee711922cd7f486373ef4aa2703483adb91347
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-potential-problems-using-code-map-analyzers"></a>코드 맵 분석기를 사용하여 잠재적 문제 찾기
 코드 맵에서 분석기를 실행하여 지나치게 복잡하거나 개선이 필요한 코드를 식별할 수 있습니다. 예를 들어 다음 분석기를 사용할 수 있습니다.  

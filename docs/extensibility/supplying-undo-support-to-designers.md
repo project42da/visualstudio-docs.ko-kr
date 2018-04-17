@@ -2,26 +2,22 @@
 title: 실행 취소 디자이너에 대 한 지원을 제공 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - designers [Visual Studio SDK], undo support
 ms.assetid: 43eb1f14-b129-404a-8806-5bf9b099b67b
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 98243c15f5f69a9aecba589b966d56a68201ab2a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5fc289426c2560e978819efcd8eaf17e56b224a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supplying-undo-support-to-designers"></a>Designer 실행 취소 지원 제공
 일반적으로 디자이너, 편집기와 같은 코드 요소를 수정 하는 경우 사용자가 최근 변경 내용이 되돌릴 수 있도록 실행 취소 작업을 지원 해야 합니다.  
@@ -30,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
  실행 취소 기능에 대 한 지원을 제공 하는 디자이너 구현:  
   
--   추상 기본 클래스를 구현 하 여 실행 취소 관리를 제공 합니다.<xref:System.ComponentModel.Design.UndoEngine>  
+-   추상 기본 클래스를 구현 하 여 실행 취소 관리를 제공 합니다. <xref:System.ComponentModel.Design.UndoEngine>  
   
 -   구현 하 여 지정 지 속성 및 CodeDOM 지원는 <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService> 및 <xref:System.ComponentModel.Design.IComponentChangeService> 클래스입니다.  
   
@@ -73,7 +69,7 @@ ms.lasthandoff: 12/22/2017
   
  환경 SDK는 CodeDOM 및 지 속성을 제공 하 여 지원:  
   
--   <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService>구현으로는<xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
+-   <xref:System.ComponentModel.Design.Serialization.CodeDomComponentSerializationService> 구현으로는 <xref:System.ComponentModel.Design.Serialization.IDesignerSerializationService>  
   
  A <xref:System.ComponentModel.Design.IComponentChangeService> 에서 제공 되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]' 디자인 호스트 합니다.  
   
@@ -100,7 +96,7 @@ ms.lasthandoff: 12/22/2017
   
 -   통해 속성이 변경 된는 <xref:System.ComponentModel.TypeDescriptor> 개체입니다.  
   
--   <xref:System.ComponentModel.Design.IComponentChangeService>이벤트는 실행 취소할 수 있는 변경 내용이 커밋될 때 수동으로 생성 됩니다.  
+-   <xref:System.ComponentModel.Design.IComponentChangeService> 이벤트는 실행 취소할 수 있는 변경 내용이 커밋될 때 수동으로 생성 됩니다.  
   
 -   컨텍스트 내에서 생성 된 디자이너에서 수정 된 <xref:System.ComponentModel.Design.DesignerTransaction>합니다.  
   

@@ -2,28 +2,24 @@
 title: SccEndBatch 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccEndBatch
 helpviewer_keywords:
 - SccEndBatch function
 ms.assetid: 100e7833-fe0a-45c0-9fca-3e61fd1165b7
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 96932ae56b734582d011369ee50a67e933bf9be4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ec549b5bb0a6c48946edf59f0ab1423cea0ac704
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccendbatch-function"></a>SccEndBatch 함수
 이 함수는 일괄 처리의 소스 제어 작업을 완료 했습니다. 이러한 일괄 처리를 중첩할 수 있습니다.  

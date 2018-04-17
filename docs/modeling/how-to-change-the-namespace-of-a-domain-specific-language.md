@@ -1,23 +1,21 @@
 ---
-title: "방법: 도메인 특정 언어의 Namespace 변경 | Microsoft Docs"
-ms.custom: 
+title: '방법: 도메인 특정 언어의 Namespace 변경 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, namespace
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 468cf24ccb16452c93583b2aa99af560d920bcf4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 0e05aaf6d8049aa780b9b00843ca8382463f1c31
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-change-the-namespace-of-a-domain-specific-language"></a>방법: 도메인별 언어의 네임스페이스 변경
 도메인 특정 언어의 네임 스페이스를 변경할 수 있습니다. 변경 내용을 확인 해야 합니다.는 **DSL 탐색기**, Dsl 패키지 프로젝트의 속성 및 어셈블리 정보입니다.  
@@ -48,12 +46,12 @@ ms.lasthandoff: 02/09/2018
   
 10. Visual Studio 실험적 인스턴스를 다시 설정 합니다.  
   
-    1.  Delete **\Users\\***{your name}***\AppData\Local\Microsoft\VisualStudio\\\*Exp**  
+    1.  삭제 **\Users\\***{name}***\AppData\Local\Microsoft\VisualStudio\\\*Exp**  
   
     2.  Windows **시작** 메뉴 선택 **모든 프로그램**, **Microsoft Visual Studio 2010 SDK**, **도구**, **다시 설정 된 실험적 인스턴스**합니다.  
   
 11. 에 **빌드** 메뉴 선택 **솔루션 다시 빌드**합니다.  
   
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [도메인 특정 언어 도구 용어집](http://msdn.microsoft.com/ca5e84cb-a315-465c-be24-76aa3df276aa)

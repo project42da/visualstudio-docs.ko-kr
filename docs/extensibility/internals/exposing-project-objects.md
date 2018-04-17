@@ -1,26 +1,24 @@
 ---
-title: "프로젝트 개체를 노출 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 개체를 노출 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project objects, exposing
 - extensibility, project objects
 ms.assetid: 5bb24967-434a-4ef4-87a0-2f3250c9e22d
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 668287dc8b0b5ac9dd37cb450582e3a56fb7f25e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4eaa2a5e8c5c153698069084b9f0cfe406cad7db
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-project-objects"></a>프로젝트 개체 노출
 사용자 지정 프로젝트 형식을 자동화 인터페이스를 사용 하 여 프로젝트에 대 한 액세스를 허용 하기 위해 자동화 개체를 제공할 수 있습니다. 모든 프로젝트 형식을 표준 제공 될 <xref:EnvDTE.Project> 에서 액세스 되는 자동화 개체 <xref:EnvDTE.Solution>, IDE에서 열려 있는 모든 프로젝트의 컬렉션이 들어 있는입니다. 프로젝트의 각 항목을 표시 해야 사용할 수는 <xref:EnvDTE.ProjectItem> 개체를 사용 하 여 액세스할 `Project.ProjectItems`합니다. 이러한 표준 자동화 개체 외에도 프로젝트 프로젝트 관련 자동화 개체를 제공 하도록 선택할 수 있습니다.  

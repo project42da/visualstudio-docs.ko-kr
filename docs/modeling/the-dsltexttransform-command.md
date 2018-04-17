@@ -1,23 +1,21 @@
 ---
-title: "DslTextTransform 명령 | Microsoft Docs"
-ms.custom: 
+title: DslTextTransform 명령 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language, commands
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 24a3f292633b915678bad232a4a671c7906e15cb
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 11fb12f3716fe9f8b5fee13a7eecd88ee107ff45
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-dsltexttransform-command"></a>DslTextTransform 명령
 DslTextTransform.cmd는 TextTransform.exe를 호출 하 고 일반 옵션으로 실행 하는 스크립트입니다. DslTextTransformation.cmd를 사용 하 여의 야간 빌드를 자동화 하 여 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 프로젝트. 자세한 내용은 참조 [TextTransform 유틸리티를 사용 하 여 파일 생성](../modeling/generating-files-with-the-texttransform-utility.md)합니다.  

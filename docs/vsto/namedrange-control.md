@@ -1,13 +1,10 @@
 ---
-title: "NamedRange 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: NamedRange 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Toolbox.Range
 dev_langs:
@@ -20,14 +17,14 @@ helpviewer_keywords:
 - NamedRange control
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 22adc003c10e95de0e701eb3f382d9e530b28acf
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 5273baec024da8eb339e8f3d12541fc6e98e97c0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="namedrange-control"></a>NamedRange 컨트롤
   <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤은 고유 이름이 있고, 이벤트를 노출하고, 데이터에 바인딩될 수 있는 범위입니다. 자세한 내용은 [Excel Object Model Overview](../vsto/excel-object-model-overview.md)을 참조하세요.  
@@ -40,7 +37,7 @@ ms.lasthandoff: 01/10/2018
  런타임에 VSTO 추가 기능에서 워크시트에 <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤을 추가할 수 있습니다. 자세한 내용은 [How to: Add NamedRange Controls to Worksheets](../vsto/how-to-add-namedrange-controls-to-worksheets.md)을 참조하십시오.  
   
 > [!NOTE]  
->  기본적으로 동적으로 만들어진 명명된 범위는 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+>  기본적으로 동적으로 만들어진 명명된 범위는 워크시트를 닫을 때 워크시트에서 호스트 컨트롤로 유지되지 않습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
  <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤은 특정 시트 범위로만 구성될 수 있습니다. <xref:Microsoft.Office.Tools.Excel.NamedRange> 컨트롤은 모든 시트에 적용되는 상대적 이름을 가질 수 없으며 통합 문서에서 둘 이상의 워크시트를 포함하는 범위(3D 범위)로 구성될 수 없습니다.  
   

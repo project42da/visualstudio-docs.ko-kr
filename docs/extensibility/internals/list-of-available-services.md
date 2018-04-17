@@ -1,29 +1,27 @@
 ---
-title: "사용 가능한 서비스 목록 | Microsoft Docs"
-ms.custom: 
+title: 사용 가능한 서비스 목록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - services, Visual Studio
 - Visual Studio, services
 ms.assetid: 724eb24b-b87c-4971-a2e7-adee7afc03b2
-caps.latest.revision: "49"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 50016483ea1fa5a04c41e49493eda92b6a270b8c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6f2caeaee433fc0c47d8332c4443d104e26a7ee7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="list-of-available-services"></a>사용 가능한 서비스 목록
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]및 Visual Studio SDK는 다음 서비스를 지원 합니다. 여기 나열 되지 않은 자신의 서비스를 제공 하는 일부 패키지-예를 들어 언어 서비스는 단일 서비스가 없는 GUID입니다. 레지스트리에서 언어 서비스의 GUID를 찾을 수 언어의 이름을 사용 해야 합니다.  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 및 Visual Studio SDK는 다음 서비스를 지원 합니다. 여기 나열 되지 않은 자신의 서비스를 제공 하는 일부 패키지-예를 들어 언어 서비스는 단일 서비스가 없는 GUID입니다. 레지스트리에서 언어 서비스의 GUID를 찾을 수 언어의 이름을 사용 해야 합니다.  
   
  여기에 나열 된 또는 다른 소스 (예를 들어 언어 서비스)에서 가져온 서비스 Guid를 사용 하 여 기본 인터페이스 또는 각 서비스에 표시 된 인터페이스를 가져올 수 있습니다.  
   

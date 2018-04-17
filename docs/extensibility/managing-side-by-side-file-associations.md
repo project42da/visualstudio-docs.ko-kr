@@ -2,26 +2,22 @@
 title: 나란히 파일 연결 관리 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - verbs, setting default
 ms.assetid: 9b6df3bc-d15c-4a5d-9015-948a806193b7
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7d0a6f8ec88a49b785b771aef51dc25b5646ffda
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e9144125786e7aa5f2a70823a033d49ac3fa2990
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-side-by-side-file-associations"></a>나란히 파일 연결 관리
 파일 연결을 제공 하는 VSPackage를 함께-설치를 처리 하는 방법을 결정 해야 특정 버전의 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 파일을 호출 해야 합니다. 호환 되지 않는 파일 형식 복합 문제입니다.  
@@ -49,7 +45,7 @@ ms.lasthandoff: 12/22/2017
   
     -   가 존재 하는 경우에 visual Studio.NET 2003은 최신 버전 및 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 나타나지 않습니다.  
   
-    -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]만 있는 버전인 경우 최신 버전이입니다.  
+    -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 만 있는 버전인 경우 최신 버전이입니다.  
   
      그 결과 DEVENV_EXE_LATEST의 최신 버전의 devenv.exe 경로 포함 합니다.  
   

@@ -2,28 +2,24 @@
 title: SccCheckin 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccCheckin
 helpviewer_keywords:
 - SccCheckin function
 ms.assetid: e3f26ac2-6163-42e1-a764-22cfea5a3bc6
-caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f95377f79d02952c63b673d50569fac058a8573c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bf8c8d23a89e55b272657dde0c2374c78e63bfaf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="scccheckin-function"></a>SccCheckin 함수
 이 함수를 이전에 체크 아웃 된 파일 변경 내용을 저장 하 고 새 버전을 만드는 소스 제어 시스템을 확인 합니다. 이 함수는 작업 항목 및 체크 인 파일의 이름 배열을 수 함께 호출 되었습니다.  
@@ -74,7 +70,7 @@ SCCRTN SccCheckin (
 |SCC_E_ACCESSFAILURE|소스 제어 시스템에 네트워크 또는 경합 문제 때문에 액세스 하는 문제가 발생 했습니다. 다시 시도 하 여 것이 좋습니다.|  
 |SCC_E_NONSPECIFICERROR|알 수 없는 오류가 발생 했습니다. 파일 체크 인 되었습니다.|  
 |SCC_E_NOTCHECKEDOUT|사용자가 하지 파일을 체크 아웃을 체크 인할 수 없습니다.|  
-|SCC_E_CHECKINCONFLICT|때문에 체크 인을 수행할 수 없습니다.<br /><br /> -다른 사용자가 체크 인 계속 및 `bAutoReconcile` false입니다.<br /><br /> 또는<br /><br /> (예를 들어 경우 파일은 이진)-자동 병합을 수행할 수 없습니다.|  
+|SCC_E_CHECKINCONFLICT|때문에 체크 인을 수행할 수 없습니다.<br /><br /> -다른 사용자가 체크 인 계속 및 `bAutoReconcile` false입니다.<br /><br /> -또는-<br /><br /> (예를 들어 경우 파일은 이진)-자동 병합을 수행할 수 없습니다.|  
 |SCC_E_VERIFYMERGE|파일 자동 병합 되었지만 사용자가 확인 보류 중인 검사 하지 않았습니다.|  
 |SCC_E_FIXMERGE|파일 자동 병합 되었지만 인해 병합 충돌이 수동으로 해결 해야 하는 검사 하지 않았습니다.|  
 |SCC_E_NOTAUTHORIZED|사용자가이 작업을 수행할 수 없습니다.|  

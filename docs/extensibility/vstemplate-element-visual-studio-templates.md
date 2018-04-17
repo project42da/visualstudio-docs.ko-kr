@@ -2,28 +2,24 @@
 title: VSTemplate 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#VSTemplate
 helpviewer_keywords:
 - VSTemplate element [Visual Studio project templates]
 ms.assetid: f8ac561b-3b0b-4246-9ec9-118d2447e9a9
-caps.latest.revision: 20
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1c9fe87ae48c705e447b4fc5bd2834a417c4e8d4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f6151dfd852a76caa1dccbae55241af89681fd81
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vstemplate-element-visual-studio-templates"></a>VSTemplate 요소(Visual Studio 템플릿)
 프로젝트 템플릿, 항목 템플릿 또는 시작 키트에 대 한 모든 메타 데이터를 포함합니다.  
@@ -63,7 +59,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  `VSTemplate` 요소는.vstemplate 파일의 루트 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램입니다.  
   
 ```  

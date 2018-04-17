@@ -1,21 +1,19 @@
 ---
-title: "색, 선 스타일 및 기타 모양 속성을 제어 합니다. | Microsoft Docs"
-ms.custom: 
+title: 색, 선 스타일 및 기타 모양 속성을 제어 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5903c6cc79e637514b75c9e44cb4cbe5c0342ee7
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: e49e6cbc6ecfba85e2c2684b0a7e71e05757ab59
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="controlling-color-line-style-and-other-shape-properties"></a>색, 선 스타일 및 기타 모양 속성 제어
 일부 셰이프 속성 색 노출 될 수 있습니다' '-같은 즉, 연결 된 셰이프의 도메인 속성에 합니다. 일부는에 대 한 직접 제어 합니다.  
@@ -28,7 +26,7 @@ ms.lasthandoff: 02/09/2018
  모양에는 이제 프로그램 코드에서 또는 사용자로 설정할 수 있는 도메인 속성을 있습니다.  
   
 ## <a name="dynamically-updating-an-exposed-property"></a>노출 된 속성을 동적으로 업데이트합니다.  
- 일반적으로 다른 속성에 따라 노출 된 속성을 확인 하려고 합니다. 예를 들어 좋습니다 0 보다 작은 있는 셰이프를 특정 도메인 속성은 때마다 빨간색으로 바뀝니다. 이 종속성을 하려면 만들고는 [규칙](../modeling/rules-propagate-changes-within-the-model.md)합니다. 예:  
+ 일반적으로 다른 속성에 따라 노출 된 속성을 확인 하려고 합니다. 예를 들어 좋습니다 0 보다 작은 있는 셰이프를 특정 도메인 속성은 때마다 빨간색으로 바뀝니다. 이 종속성을 하려면 만들고는 [규칙](../modeling/rules-propagate-changes-within-the-model.md)합니다. 예를 들어:  
   
 ```csharp  
 using System;  

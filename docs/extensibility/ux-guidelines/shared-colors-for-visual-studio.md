@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio에 대 한 색 공유 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대 한 색 공유 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 8d11b9a0-6175-4f2e-8e7f-79daee1bfd41
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 45bbff985a45ba4d04945ec95587c4c6c9cc448c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b9093eef6166c86eb6e1ffdf602b4fb75841834d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shared-colors-for-visual-studio"></a>Visual Studio에 대 한 공유 색
 경우 일반적인 Visual Studio 셸 요소를 사용 하는 UI를 디자인 하 고 원하는 하거나 인터페이스 요소를 유사한 기능과 일치 사용 하 여 기존 토큰 이름을 패키지 정의 파일에서 선택 하 고 색을 할당 합니다. 이렇게 하면 UI가 전체 Visual Studio 환경과 일관성 있게 유지되며 테마를 추가하거나 업데이트할 경우 자동으로 업데이트됩니다.  
@@ -858,7 +856,7 @@ ms.lasthandoff: 12/22/2017
 | 링크 배경 | `SearchControl.PopupButtonMouseDownBackgroundGradientBegin`<br />(테마 UI에서는 사용 되지 않습니다는이 토큰에 대 한 그라데이션 중지점) |
 | 전경(링크 텍스트) | `SearchControl.PopupButtonMouseDownText` |
 
-###  <a name="BKMK_TreeView"></a>트리 뷰  
+###  <a name="BKMK_TreeView"></a> 트리 뷰  
 색에 색 이름으로 제어 되는 계층적 조직 체계를 구현 하는 솔루션 탐색기, 서버 탐색기 및 클래스 뷰를 포함 하 여 여러 도구 창은 `TreeView` 범주입니다. 트리 뷰의 모든 항목에는 배경색과 텍스트 색이 있습니다. 중첩된 자식 요소가 있는 항목에는 항목이 확장 또는 축소되었는지 여부를 나타내는 문자 모양도 있습니다.  
 
 ![트리 뷰 (검토)](../../extensibility/ux-guidelines/media/0303-147_treeviewredline.png "0303 147_TreeViewRedline")<br />트리 뷰 (검토)
@@ -1041,7 +1039,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="command-structures"></a>명령 구조  
 
-###  <a name="BKMK_CommandMenus"></a>메뉴  
+###  <a name="BKMK_CommandMenus"></a> 메뉴  
 메뉴는 Visual Studio 내의 여러 위치에서 발생할 수 있습니다: 포함 된 문서 또는 도구 창에 또는 IDE 전체의 다양 한 위치에서 마우스 오른쪽 단추 클릭에서 주 메뉴 모음입니다. 다른 UI 요소와 연결된 메뉴의 구현은 해당 요소에 대한 섹션에서 설명합니다. 항상 Visual Studio 환경에서 제공하는 표준 메뉴 구현을 사용해야 합니다. 그러나 드물긴 하지만 표준 Visual Studio 메뉴에 액세스할 수 없는 경우도 있습니다. 이러한 경우 다음 토큰 이름을 사용하여 Visual Studio의 다른 메뉴와 UI의 일관성을 유지합니다.  
 
 ![Visual Studio 메뉴 (검토)](../../extensibility/ux-guidelines/media/0303-000_menuredline.png "0303 000_MenuRedline")<br />Visual Studio 메뉴 (검토)
@@ -1282,7 +1280,7 @@ ms.lasthandoff: 12/22/2017
 | 전경(텍스트) | `Environment.CommandBarTextInactive` |
 | 테두리 | N/A |
 
-####  <a name="BKMK_CommandComboBox"></a>명령 모음 콤보 상자
+####  <a name="BKMK_CommandComboBox"></a> 명령 모음 콤보 상자
 
 > [!IMPORTANT]
 > 콤보 상자는 드롭다운과 유사하지만 편집 가능한 텍스트 영역을 포함합니다. 드롭다운에 편집 가능한 텍스트 영역이 포함 되어 있지 않으면에 대 한 색 토큰을 사용 하 여 [명령 모음 드롭다운](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandDropDown)합니다.  
@@ -1307,7 +1305,7 @@ ms.lasthandoff: 12/22/2017
 
 **명령 모음 드롭 다운 단추: 기본 상태**  
 
-![콤보 상자 삭제 &#45; 아래쪽 단추](../../extensibility/ux-guidelines/media/0303-031_comboboxdropdownbutton.png "0303 031_ComboBoxDropdownButton")<br />명령 모음 드롭 다운 단추
+![콤보 상자 놓기&#45;버튼](../../extensibility/ux-guidelines/media/0303-031_comboboxdropdownbutton.png "0303 031_ComboBoxDropdownButton")<br />명령 모음 드롭 다운 단추
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |
@@ -1414,7 +1412,7 @@ ms.lasthandoff: 12/22/2017
 | 배경 | 없음 |
 | 전경(문자 모양) | `Environment.ComboBoxDisabledGlyph` |
 
-####  <a name="BKMK_CommandDropDown"></a>명령 모음 드롭다운 목록
+####  <a name="BKMK_CommandDropDown"></a> 명령 모음 드롭다운 목록
 
 > [!IMPORTANT]
 >  드롭다운은 콤보 상자와 유사하지만 편집 가능한 텍스트 영역이 없습니다. 드롭다운에 편집 가능한 텍스트 영역이 포함 된 경우에 대 한 색 토큰을 사용 하 여 [명령 콤보 상자 모음](../../extensibility/ux-guidelines/shared-colors-for-visual-studio.md#BKMK_CommandComboBox)합니다.  
@@ -1489,7 +1487,7 @@ ms.lasthandoff: 12/22/2017
 
  **명령 모음 드롭다운 선택 필드: 누른 상태**  
 
-![Drop &#45; 선택 필드 누름 아래로](../../extensibility/ux-guidelines/media/0303-049_dropdownselectionfieldpressed.png "0303 049_DropdownSelectionFieldPressed")<br />명령 모음 드롭다운 선택 필드 누름
+![Drop&#45;아래로 선택 필드 누름](../../extensibility/ux-guidelines/media/0303-049_dropdownselectionfieldpressed.png "0303 049_DropdownSelectionFieldPressed")<br />명령 모음 드롭다운 선택 필드 누름
 
 | 요소 | 토큰 이름: Category.color |
 | --- | --- |

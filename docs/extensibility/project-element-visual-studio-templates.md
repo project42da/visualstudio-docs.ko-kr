@@ -2,34 +2,30 @@
 title: 프로젝트 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Project
 helpviewer_keywords:
 - Project element [Visual Studio Templates]
 - <Project> element [Visual Studio Templates]
 ms.assetid: 1da15ea6-26e2-462b-a03e-584ef4996579
-caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e6fd8881d484f35a0183d83d1b540fc2249e9c4f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 3ef09516237ad30a18f9790ddae40260d834af21
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-element-visual-studio-templates"></a>Project 요소(Visual Studio 템플릿)
 파일 또는 프로젝트에 추가할 디렉터리를 지정 합니다.  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<Project>  
   
@@ -61,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|[폴더](../extensibility/folder-element-visual-studio-project-templates.md)|선택적 요소입니다.<br /><br /> 프로젝트에 추가할 폴더를 지정 합니다.|  
+|[Folder](../extensibility/folder-element-visual-studio-project-templates.md)|선택적 요소입니다.<br /><br /> 프로젝트에 추가할 폴더를 지정 합니다.|  
 |[프로젝트 항목](../extensibility/projectitem-element-visual-studio-project-templates.md)|선택적 요소입니다.<br /><br /> 프로젝트에 추가할 파일을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -75,11 +71,11 @@ ms.lasthandoff: 12/22/2017
   
  `Project` 요소는 프로젝트를 지정 하는 데 사용 되며 따라서 으로만 프로젝트 템플릿에서 유효 합니다.  
   
- `Project`요소 있을 수 있습니다 [폴더](../extensibility/folder-element-visual-studio-project-templates.md) 자식 요소 또는 [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 자식 요소가 있지만 둘 다의 혼합 하지 `Folder` 및 `ProjectItem` 자식 요소입니다.  
+ `Project` 요소 있을 수 있습니다 [폴더](../extensibility/folder-element-visual-studio-project-templates.md) 자식 요소 또는 [ProjectItem](../extensibility/projectitem-element-visual-studio-project-templates.md) 자식 요소가 있지만 둘 다의 혼합 하지 `Folder` 및 `ProjectItem` 자식 요소입니다.  
   
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]사용자가 입력 한 이름을 기반으로 프로젝트 파일 이름이 자동으로 이름을 **새 프로젝트** 대화 상자. 사용 하 여는 `TargetFileName` 특성 템플릿을 사용 하 여 만든 프로젝트 파일에 대 한 대체 파일 이름을 제공 하려는 경우.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 사용자가 입력 한 이름을 기반으로 프로젝트 파일 이름이 자동으로 이름을 **새 프로젝트** 대화 상자. 사용 하 여는 `TargetFileName` 특성 템플릿을 사용 하 여 만든 프로젝트 파일에 대 한 대체 파일 이름을 제공 하려는 경우.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 응용 프로그램입니다.  
   
 ```  

@@ -1,23 +1,21 @@
 ---
-title: "샘플 XSD 파일: 단순한 스키마 | Microsoft Docs"
-ms.custom: 
+title: '샘플 XSD 파일: 단순한 스키마 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: f7e1dde1-b4f6-4371-add4-935b68ec77d7
-caps.latest.revision: "4"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 328e1f69d8d48f04a3762f7639613ec400b68080
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ec7a88703439161eeeb99f0d1916d3f8306f4104
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-xsd-file-simple-schema"></a>샘플 XSD 파일: 단순한 스키마
 다음 XSD 파일은 XSD 스키마 디자이너 설명서의 다양한 예제에서 사용됩니다. 이 파일은 단순한 구매 주문 스키마입니다.  

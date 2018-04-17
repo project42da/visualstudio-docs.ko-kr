@@ -2,26 +2,22 @@
 title: 실행 취소 관리와 레거시 API를 사용 하 여 다시 실행 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - undo management
 ms.assetid: 838c0ddf-fdf3-4df1-8d21-79610b8ba0b1
-caps.latest.revision: 14
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c50316b7d5786b1fb3f07255eaf4d875f7f41e5b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 93bb65fa9865c5ca7386925d2c145f2acbc0993a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-undo-and-redo-by-using-the-legacy-api"></a>실행 취소 관리와 레거시 API를 사용 하 여 다시 실행
 편집기는 사용자가 코드를 수정 하는 경우 최근 변경 내용이 되돌릴 수 있도록 실행 취소 작업을 지원 해야 합니다. 대부분의 편집기에서 구현 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 및 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 통합된 개발 환경 (IDE)에서 자동으로 제공 하는 실행 취소 지원을 가질 수 있습니다.  

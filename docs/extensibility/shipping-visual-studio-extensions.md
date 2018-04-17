@@ -1,27 +1,25 @@
 ---
-title: "Visual Studio 확장 전달 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 확장 전달 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSIX deployment
 - deployment, VSIX
 - satellite DLLs, in VSIX packages
 ms.assetid: 13cd263d-25f7-488e-9c1a-cff908caedb6
-caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 543f107081a5cc29ac14f1c2ba2e05924b72e353
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 3c646ec2c5159e6c3551776761baa9328e3d62bb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shipping-visual-studio-extensions"></a>Visual Studio 확장 전달
 확장 프로그램 개발을 완료 한 후 다른 컴퓨터에 설치할 친구와 동료와 공유 하거나 Visual Studio 마켓플레이스에 게시할 수 있습니다. 게시 하 고 확장 프로그램을 유지 하기 위해 수행 해야 하는 모든 것이이 섹션의 설명:.vsix 파일을 게시 하 고 지역화, 업데이트를 사용 합니다.  

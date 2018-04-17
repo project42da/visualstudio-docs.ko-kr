@@ -1,32 +1,30 @@
 ---
-title: "Windows Forms 만들기 도구 상자 컨트롤 | Microsoft Docs"
-ms.custom: 
+title: Windows Forms 만들기 도구 상자 컨트롤 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - winforms
 - toolbox
 - windows forms
 ms.assetid: 0be6ffc1-8afd-4d02-9a5d-e27dde05fde6
-caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 4229d9045dfe64fcb320eca7cf004de56e7f8f0d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6a7d5bae07d3596902f94417cda20c3d40feed2f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-a-windows-forms-toolbox-control"></a>Windows Forms 도구 상자 컨트롤 만들기
 Visual Studio 확장성 도구 (VS SDK)에 포함 된 Windows Forms 도구 상자 컨트롤 항목 템플릿에 자동으로 추가 하는 컨트롤을 만들 수 있습니다는 **도구 상자** 확장 기능이 설치 됩니다. 이 항목에는 다른 사용자에 게 배포할 수 있는 간단한 카운터 컨트롤을 만드는 템플릿을 사용 하는 방법을 보여 줍니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>필수 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-windows-forms-toolbox-control"></a>Windows Forms 도구 상자 컨트롤 만들기  

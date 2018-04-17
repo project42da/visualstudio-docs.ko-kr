@@ -1,26 +1,24 @@
 ---
-title: "구성 옵션 개요 | Microsoft Docs"
-ms.custom: 
+title: 구성 옵션 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project configurations
 - configuration options, about configuration options
 ms.assetid: f4ad4dd3-b39e-42df-ad89-d403cdf24a2b
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0edfe84e26a9331b8c40ec24b00387768bdbba82
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 85ee328b278ef9eb1d81acfc5a8299920a221e59
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configuration-options-overview"></a>옵션 구성 개요
 프로젝트에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 디버깅, 실행, 및/또는 배포 된 빌드할 수 있는 여러 구성을 지원할 수 있습니다. 구성에는 컴파일러 스위치와 파일 위치 속성의 명명된 된 집합 설명 하는 경우 빌드 형식입니다. 기본적으로 새 솔루션 디버그 및 릴리스 구성을 포함 됩니다. 이러한 구성은 특정 프로젝트 및/또는 솔루션 요구 사항에 맞게 수정할 또는 해당 기본 설정을 사용 하 여 적용할 수 있습니다. 두 가지 방법으로 일부 패키지를 빌드할 수 있습니다: ActiveX 편집기로 또는 내부 구성 요소로 합니다. 그러나 여러 구성을 지원 하기 위해 프로젝트 필요가 없습니다. 사용할 수 있는 하나의 구성만 있으면 해당 구성은 솔루션 구성의 모든 열로 매핑됩니다.  
@@ -57,15 +55,15 @@ ms.lasthandoff: 12/22/2017
   
  위의 다이어그램에 관련 된 몇 가지 참고 사항:  
   
--   `IDispatch`구성 개체에 대 한 옵션으로 표시 되어 있습니다. 특히, 찾아보기 개체에서 구성 인터페이스 하기로 선택 사항입니다.  
+-   `IDispatch` 구성 개체에 대 한 옵션으로 표시 되어 있습니다. 특히, 찾아보기 개체에서 구성 인터페이스 하기로 선택 사항입니다.  
   
--   `IVsDebuggableProjectCfg`구성 개체의 경우 선택 사항으로 표시 되어 있지만 디버깅 지원에 필요 합니다.  
+-   `IVsDebuggableProjectCfg` 구성 개체의 경우 선택 사항으로 표시 되어 있지만 디버깅 지원에 필요 합니다.  
   
--   `IVsProjectCfg2`구성 개체의 경우 선택 사항으로 표시 되지만 지원 그룹화 하는 출력을 위해 필요 합니다.  
+-   `IVsProjectCfg2` 구성 개체의 경우 선택 사항으로 표시 되지만 지원 그룹화 하는 출력을 위해 필요 합니다.  
   
 -   `Config Provider` 개체는 선택적 개체로 표시 되어 있지만 옵션에는 기본 클래스를 구현할 수 있는 위치입니다. 프로젝트 개체 또는 별도 개체에 개체를 구현할 수 있습니다.  
   
--   `IVsCfgProvider2`지원 되는 플랫폼 및 구성 편집에 대 한 필요 합니다. `IVsCfgProvider`해당 기능을 구현 하지 않는 경우에 충분 합니다.  
+-   `IVsCfgProvider2` 지원 되는 플랫폼 및 구성 편집에 대 한 필요 합니다. `IVsCfgProvider` 해당 기능을 구현 하지 않는 경우에 충분 합니다.  
   
 -   동일한 클래스 필요한 별도 개체를 결합할 수 있는 대로 다이어그램에 표시 된 이러한 개체 중 일부 요구 사항을 기반으로 특정 디자인 합니다. 그러나이 섹션의 다른 항목에서는 개체와 해당 개체와 연결 된 인터페이스 살펴봅니다 다이어그램에 제시 된 시나리오에 따라.  
   

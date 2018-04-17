@@ -2,29 +2,25 @@
 title: 소스 제어를 지 원하는 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], supporting
 ms.assetid: 567acde3-354e-4f39-8d99-0ef86c103396
-caps.latest.revision: 18
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f5dd2a98ec84b656dc70a00236775710266c54ba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9ae3590a5d02c2b3f1d4b67f724d0177f671f7d2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supporting-source-control"></a>소스 제어를 지원합니다.
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]파일 체크 아웃, 체크 인 및 프로젝트 또는 편집기에 대해 다른 소스 제어 작업을 지원합니다. 소스 제어 클라이언트도 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 와 같은 원본 제어 패키지와 상호 작용 하도록 설계 되었습니다 [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)], 보관, 버전 관리 및 동적으로 정의 된 파일 집합에 대 한 제어 기능도 제공 합니다.  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 파일 체크 아웃, 체크 인 및 프로젝트 또는 편집기에 대해 다른 소스 제어 작업을 지원합니다. 소스 제어 클라이언트도 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 와 같은 원본 제어 패키지와 상호 작용 하도록 설계 되었습니다 [!INCLUDE[vsvss](../../extensibility/includes/vsvss_md.md)], 보관, 버전 관리 및 동적으로 정의 된 파일 집합에 대 한 제어 기능도 제공 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [소스 제어 패키지 모델](../../extensibility/internals/model-for-source-control-packages.md)  

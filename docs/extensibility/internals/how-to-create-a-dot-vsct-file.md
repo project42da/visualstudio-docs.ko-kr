@@ -2,26 +2,22 @@
 title: '방법: 만들기는 합니다. Vsct 파일 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, creating
 ms.assetid: b955f51c-f9f9-49c3-a8e4-63b6eb0e0341
-caps.latest.revision: 19
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b64d9b35030a18a6258de52ed0f12f9796044ba5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c6456b0b866f08956862fa197719354bedf0ecf6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-vsct-file"></a>방법: 만들기는 합니다. Vsct 파일  
   
@@ -102,9 +98,9 @@ ms.lasthandoff: 12/22/2017
   
 3.  Visual Studio 명령 프롬프트에서 .cto 및 .ctsym 파일이 들어 있는 디렉터리로 이동합니다.  
   
-4.  **vsct.exe** *ctofilename***.cto** *vsctfilename***.vsct -S***symfilename***.ctsym**를 입력합니다.  
+4.  형식 **vsct.exe** *ctofilename * * *.cto** * vsctfilename***.vsct-S***symfilename ***.ctsym**합니다.  
   
-     `ctofilename`.cto 파일의 이름인 `vsctfilename` , 만들려는 vsct 파일의 이름 및 `symfilename` .ctsym 파일의 이름입니다.  
+     `ctofilename` .cto 파일의 이름인 `vsctfilename` , 만들려는 vsct 파일의 이름 및 `symfilename` .ctsym 파일의 이름입니다.  
   
      이 프로세스는 새 .vsct XML 명령 테이블 컴파일러 파일을 만듭니다. vsct 컴파일러인 vsct.exe를 사용하여 다른 .vsct 파일처럼 파일을 편집 및 컴파일할 수 있습니다.  
   

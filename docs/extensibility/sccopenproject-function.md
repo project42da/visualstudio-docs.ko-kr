@@ -1,29 +1,25 @@
 ---
-title: "SccOpenProject 함수 | Microsoft Docs"
-ms.custom: 
+title: SccOpenProject 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccOpenProject
 helpviewer_keywords:
 - SccOpenProject function
 ms.assetid: d609510b-660a-46d7-b93d-2406df20434d
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 10afe84716153b67c419f4ddbd1a7b838b68cbf9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 15d9cf6d5fa4533b5ee0ff65f8aeae86df3d571a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccopenproject-function"></a>SccOpenProject 함수
 이 함수는 기존 소스 제어 프로젝트를 열거나 새를 만듭니다.  
@@ -70,7 +66,7 @@ SCCRTN SccOpenProject (
  [in] 소스 제어 플러그 인에서 출력 텍스트를 표시 하는 선택적 콜백 함수입니다.  
   
  dwFlags  
- [in] 신호를 프로젝트를 소스에 알 수 없는 경우 새 프로젝트를 만들어야 하는지 여부를 제어 플러그 인 합니다. 값의 조합 수 `SCC_OP_CREATEIFNEW` 및`SCC_OP_SILENTOPEN.`  
+ [in] 신호를 프로젝트를 소스에 알 수 없는 경우 새 프로젝트를 만들어야 하는지 여부를 제어 플러그 인 합니다. 값의 조합 수 `SCC_OP_CREATEIFNEW` 및 `SCC_OP_SILENTOPEN.`  
   
 ## <a name="return-value"></a>반환 값  
  소스 제어 플러그 인이 함수의 구현은 다음 값 중 하나를 반환:  
@@ -94,9 +90,9 @@ SCCRTN SccOpenProject (
 > [!NOTE]
 >  IDE를 수행 해야 할 수는 첫 번째 작업에 대 한 호출 수는 `SccOpenProject` 함수 또는 [SccGetProjPath](../extensibility/sccgetprojpath-function.md)합니다. 이러한 이유로 그중에서 둘 다 동일한 `lpUser` 매개 변수입니다.  
   
- `lpAuxProjPath`및`lpProjName` 솔루션 파일에서 읽은 또는 호출에서 반환 되는 `SccGetProjPath` 함수입니다. 이러한 매개 변수 소스 제어 플러그 인은 프로젝트와 연결 하는 문자열을 포함 하며는 플러그 인에 의미를 갖습니다. 해당 문자열이 없거나 솔루션 파일에 있고 사용자가 찾아보려면 묻지 (통해 문자열을 반환 하는 `SccGetProjPath` 함수), 모두에 대 한 빈 문자열을 전달 하는 IDE `lpAuxProjPath` 및 `lpProjName`, 이러한 값을 업데이트할 수 예상 플러그 인 경우가이 함수를 반환합니다.  
+ `lpAuxProjPath` 및`lpProjName` 솔루션 파일에서 읽은 또는 호출에서 반환 되는 `SccGetProjPath` 함수입니다. 이러한 매개 변수 소스 제어 플러그 인은 프로젝트와 연결 하는 문자열을 포함 하며는 플러그 인에 의미를 갖습니다. 해당 문자열이 없거나 솔루션 파일에 있고 사용자가 찾아보려면 묻지 (통해 문자열을 반환 하는 `SccGetProjPath` 함수), 모두에 대 한 빈 문자열을 전달 하는 IDE `lpAuxProjPath` 및 `lpProjName`, 이러한 값을 업데이트할 수 예상 플러그 인 경우가이 함수를 반환합니다.  
   
- `lpTextOutProc`명령 결과 출력을 표시 하기 위해 플러그 인 소스 제어에 IDE에서 제공 하는 콜백 함수에 포인터가입니다. 이 콜백 함수에 자세히 설명 되어 [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)합니다.  
+ `lpTextOutProc` 명령 결과 출력을 표시 하기 위해 플러그 인 소스 제어에 IDE에서 제공 하는 콜백 함수에 포인터가입니다. 이 콜백 함수에 자세히 설명 되어 [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)합니다.  
   
 > [!NOTE]
 >  소스 제어 플러그 인이 활용 하기 위해 노드가, 하는 경우 설정 있어야 합니다는 `SCC_CAP_TEXTOUT` 플래그는 [SccInitialize](../extensibility/sccinitialize-function.md)합니다. 해당 플래그 설정 되지 않은 경우 또는 IDE에이 기능을 지원 하지 않는 경우 `lpTextOutProc` 됩니다 `NULL`합니다.  

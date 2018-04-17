@@ -1,27 +1,25 @@
 ---
-title: "솔루션 (합니다. Sln) 파일 | Microsoft Docs"
-ms.custom: 
+title: 솔루션 (합니다. Sln) 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - sln files, VSPackages
 - solutions, .sln files
 - .sln files, VSPackages
 ms.assetid: 7d7ef539-2e4b-4637-b853-8ec7626609df
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ad918b72d38e61fb1670adda8ff1f730987c2aa3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 73d6f7fb83e9420f59122135761ce44ea641fe57
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="solution-sln-file"></a>솔루션 (합니다. Sln) 파일
 솔루션에 Visual Studio에서 프로젝트를 구성 하기 위한 구조입니다. 솔루션은 프로젝트 (텍스트 기반, 공유).sln 및.suo (이진, 사용자 고유의 솔루션 옵션) 파일에 대 한 상태 정보를 유지 관리합니다. .Suo 파일에 대해 보다 자세한 정보를 참조 하십시오. [솔루션 사용자 옵션 (합니다. Suo) 파일](../../extensibility/internals/solution-user-options-dot-suo-file.md)합니다.  
@@ -96,7 +94,7 @@ EndGlobal
   
  정보를 저장할 수 없는 경우는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> 인터페이스에 대 한 포인터를 사용 하 여 호출 되는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.SaveSolutionProps%2A> 메서드. <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistSolutionProps.WriteSolutionProps%2A> 에서 이름-값 쌍을 검색 하는 환경에서 메서드가 호출 됩니다 `IPropertyBag` 인터페이스 및.sln 파일에 정보를 기록 합니다.  
   
- `SaveSolutionProps`및 `WriteSolutionProps` 개체에 저장할 정보를 검색 하는 환경에서 재귀적으로 호출 되는 `IPropertyBag` .sln 파일에 입력 된 모든 변경 될 때까지 인터페이스입니다. 이러한 방식으로 솔루션 및 사용 가능한 다음 솔루션을 열 때 사용 하 여 정보를 유지할지 보장 수 있습니다.  
+ `SaveSolutionProps` 및 `WriteSolutionProps` 개체에 저장할 정보를 검색 하는 환경에서 재귀적으로 호출 되는 `IPropertyBag` .sln 파일에 입력 된 모든 변경 될 때까지 인터페이스입니다. 이러한 방식으로 솔루션 및 사용 가능한 다음 솔루션을 열 때 사용 하 여 정보를 유지할지 보장 수 있습니다.  
   
  로드 된 모든 VSPackage.sln 파일을 저장 하는 아무 것도에 있는지를 열거 됩니다. 레지스트리 키를 쿼리 하는 로드 시만 것 합니다. 솔루션을 저장 하는 시간에 메모리에 있기 때문에 모든 로드 된 패키지에 대 한 환경을 알고 있습니다.  
   

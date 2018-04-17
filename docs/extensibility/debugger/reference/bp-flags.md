@@ -2,28 +2,24 @@
 title: BP_FLAGS | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - BP_FLAGS
 helpviewer_keywords:
 - BP_FLAGS enumeration
 ms.assetid: c45dfc74-5e7f-4f1e-a147-ab2a55dccbd0
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 3c4818cca16ffb23429006267829b076d52069c0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 481dd21287ba3ca68c2abc61412785fc0151788d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="bpflags"></a>BP_FLAGS
 중단점을 설정할 때 추가 정보를 지정 하는 데 사용할 수 있는 선택적 플래그를 제공 합니다.  
@@ -67,7 +63,7 @@ public enum enum_BP_FLAGS {
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

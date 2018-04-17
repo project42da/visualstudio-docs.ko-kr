@@ -2,26 +2,22 @@
 title: '연습: 표시 문 완성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - statement completion
 ms.assetid: f3152c4e-7673-4047-a079-2326941d1c83
-caps.latest.revision: 36
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d9c3b44bd46c34a864896cbf1002505085be5143
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bbdc79275dd99c502533c82665741b84620be928
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-statement-completion"></a>연습: 표시 문 완성
 완성 기능을 제공 하려면 식별자를 정의 하 고 다음 완료 세션을 트리거하지 언어 기반의 문 완성을 구현할 수 있습니다. 기존 콘텐츠 형식에 대 한 완료를 트리거할 수 또는 언어 서비스의 컨텍스트에서 문 완성을 정의 하, 고유한 파일 이름 확장명 및 내용 유형을 정의 하 고 다음 해당 형식만 대 한 완료를 표시할 수-예를 들어 일반 "텍스트"입니다. 이 연습에서는 텍스트 파일의 콘텐츠 형식인 "일반 텍스트" 콘텐츠 형식에 대 한 문 완성을 트리거할는 방법을 보여 줍니다. "Text" 콘텐츠 형식은 모든 다른 콘텐츠 형식 코드 및 XML 파일 등의 상위 항목입니다.  
@@ -30,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
  이 연습에서는 하드 코드 된 식별자 집합에 대 한 문 완성 기능을 구현 하는 방법을 보여 줍니다. 전체 구현에서 언어 서비스 및 언어 문서는 해당 콘텐츠를 제공 하는 데 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-mef-project"></a>MEF 프로젝트 만들기  

@@ -1,26 +1,24 @@
 ---
 title: Visual Studio Shell | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - shell, Visual Studio
 - Visual Studio, shell
 ms.assetid: cb124ef4-1a6b-4bfe-bfbf-295ef9c07f36
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9240df0a4f551ab4fa47fc2ceacaf0654dc562e4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 71b624cee0e55f95f90a86eac943828bbc26ac97
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-shell"></a>Visual Studio Shell
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] shell에 통합의 주요 에이전트인은 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. 셸 공통 서비스를 공유 하는 Vspackage를 사용 하도록 설정 하려면 필요한 기능을 제공 합니다. 때문에의 아키텍처 목표 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] , Vspackage의 기본 기능을 vest를 셸에 기본 기능을 제공 하 고 Vspackage의 구성 요소 간 간 통신을 지원 하기 위한 프레임 워크.  
@@ -44,9 +42,9 @@ ms.lasthandoff: 12/22/2017
   
     -   현재 프로젝트  
   
-    -   현재 프로젝트 항목 또는 현재 ItemID<xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
+    -   현재 프로젝트 항목 또는 현재 ItemID <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy>  
   
-    -   에 대 한 현재 선택 된 **속성** 창 또는`SelectionContainer`  
+    -   에 대 한 현재 선택 된 **속성** 창 또는 `SelectionContainer`  
   
     -   Id 또는 CmdUIGuids 명령, 메뉴 및 도구 모음의 표시 유형을 제어 하는 UI 컨텍스트  
   

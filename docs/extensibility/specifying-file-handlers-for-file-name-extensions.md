@@ -2,26 +2,22 @@
 title: 파일 이름 확장명에 대 한 파일 처리기 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file extensions, specifying file handlers
 ms.assetid: e3de4730-a95c-465a-b3b2-92ca85364ad7
-caps.latest.revision: 18
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d5db7a218a718e27f584abbf350b49907b56fb17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0d0086f8badb32431c85f16e1f74fe8f186c9b2e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specifying-file-handlers-for-file-name-extensions"></a>파일 이름 확장명에 대 한 파일 처리기 지정
 다양 한 방법으로 특정 파일 확장명을 가진 파일을 처리 하는 응용 프로그램을 확인할 수 있습니다. OpenWithList 및 Openwithprogid 동사에는 파일 확장명에 대 한 레지스트리 항목에서 파일 처리기를 지정 하려면 두 가지 있습니다.  
@@ -53,7 +49,7 @@ HKEY_CLASSES_ROOT\
 |--------------------|----------------------|  
 |.extension|제품 이름입니다. extension.versionMajor.versionMinor|  
   
- 특정 파일 확장명 값으로는 HKEY_CLASSES_ROOT에 버전이 지정 된 Progid를 추가 하 여 열 수 있는 응용 프로그램을 등록할 수 있습니다\\*\<확장 >*\OpenWithProgids 키입니다. 이 레지스트리 키에는 파일 확장명과 연결 된 대체 Progid의 목록이 포함 되어 있습니다. 나열 된 Progid와 관련 된 응용 프로그램에 표시 된 **프로그램***제품 이름* 하위 메뉴입니다. 동일한 응용 프로그램 모두에 지정 된 경우는 `OpenWithList` 및 `OpenWithProgids` 키, 운영 체제는 중복을 병합 합니다.  
+ 특정 파일 확장명 값으로는 HKEY_CLASSES_ROOT에 버전이 지정 된 Progid를 추가 하 여 열 수 있는 응용 프로그램을 등록할 수 있습니다\\*\<확장 >*\OpenWithProgids 키입니다. 이 레지스트리 키에는 파일 확장명과 연결 된 대체 Progid의 목록이 포함 되어 있습니다. 나열 된 Progid와 관련 된 응용 프로그램에 표시 된 **프로그램 * * * 제품 이름* 하위 메뉴입니다. 동일한 응용 프로그램 모두에 지정 된 경우는 `OpenWithList` 및 `OpenWithProgids` 키, 운영 체제는 중복을 병합 합니다.  
   
 > [!NOTE]
 >  `OpenWithProgids` 키만 Windows XP에서 지원 됩니다. 다른 운영 체제의이 키를 무시 하기 때문에 사용 하지 마십시오 것만 등록으로 파일 처리기에 대 한. 이 키를 사용 하 여 Windows XP에서 더 나은 사용자 환경을 제공 합니다.  
@@ -69,7 +65,7 @@ HKEY_CLASSES_ROOT\
          otherprogid   REG_NONE (zero-length binary value)  
 ```  
   
- 파일 확장명에 대 한 기본값은 기본 파일 처리기가 지정 된 ProgID입니다. 이전 버전의 함께 제공 되는 파일 확장명에 대 한 ProgID를 수정 하는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 또는 다른 응용 프로그램 키를 사용할 수 있는 다음 등록 해야 합니다는 `OpenWithProgids` 와 함께 목록에 새 ProgID를 지정 하 고 파일 확장명에 대 한 키 지 원하는 이전 Progid입니다. 예:  
+ 파일 확장명에 대 한 기본값은 기본 파일 처리기가 지정 된 ProgID입니다. 이전 버전의 함께 제공 되는 파일 확장명에 대 한 ProgID를 수정 하는 경우 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 또는 다른 응용 프로그램 키를 사용할 수 있는 다음 등록 해야 합니다는 `OpenWithProgids` 와 함께 목록에 새 ProgID를 지정 하 고 파일 확장명에 대 한 키 지 원하는 이전 Progid입니다. 예를 들어:  
   
 ```  
 HKEY_CLASSES_ROOT\  

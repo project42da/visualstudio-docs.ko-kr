@@ -1,26 +1,24 @@
 ---
-title: "Vspackage를 로드 합니다. | Microsoft Docs"
-ms.custom: 
+title: Vspackage를 로드 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, autoloading
 - VSPackages, loading
 ms.assetid: f4c3dcea-5051-4065-898f-601269649d92
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5efc043ae6e88f3f7b3c989a2c37c0ff9f555dd6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 008cd31bc3d9f909477089e608393f596bfb0682
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="loading-vspackages"></a>Vspackage를 로드합니다.
 Vspackage는 해당 기능이 필요할 때에 Visual Studio에 로드 됩니다. 예를 들어 VSPackage는 Visual Studio 프로젝트 팩터리 또는 VSPackage 구현 하는 서비스를 사용 하는 경우 로드 됩니다. 이 기능은 성능 향상을 위해 가능 하면 사용 되는 지연된 로드를 라고 합니다.  

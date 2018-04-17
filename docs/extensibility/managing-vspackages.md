@@ -1,28 +1,26 @@
 ---
-title: "관리 Vspackage | Microsoft Docs"
-ms.custom: 
+title: 관리 Vspackage | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, autoloading
 - VSPackages, delayed loading
 - delay loading
 - VSPackages, loading
 ms.assetid: 386e0ce5-4107-4164-b0cd-1cf43eb5e7cf
-caps.latest.revision: "35"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3c3201c032d0cae645460e614b6d4138297e4a93
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 9e3241bae84b89b53e30c3d0949e4f8551110e7d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-vspackages"></a>Vspackage를 관리합니다.
 대부분의 경우에서 프로젝트 및 항목 템플릿을 등록 하 고 패키지를 자동으로 로드 되므로 Vspackage, 관리 하는 방법에 대 한 걱정할 필요가 없습니다. 그러나 일부 경우에 패키지를 관리 하기 위해 좀 더 자세한 내용을 보려면 할 수 있습니다.  

@@ -3,8 +3,7 @@ title: IDE 상수 | Microsoft Docs
 ms.date: 03/22/2018
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IDE, errors
 - logical views
@@ -14,17 +13,16 @@ helpviewer_keywords:
 - IDE, constants
 - physical views
 ms.assetid: 5030e70a-241d-474a-ba8c-e3b1cf947ff0
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0184cd4654f07b407a12ca12f0ff9da39c9ec890
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: e9c7e870b02dbe5a903ca8195954ffd5a8f63549
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ide-constants"></a>IDE 상수
 
@@ -78,7 +76,7 @@ ms.lasthandoff: 03/28/2018
 |<xref:Microsoft.VisualStudio.VSConstants.VSCOOKIE_NIL>|에 적용 되는 상수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 쿠키 설정 되어 있지 않음을 나타내는입니다.|
 |[VSITEMID.Nil](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Nil>)|A [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 항목의 부재를 나타내는 항목 식별자입니다. 이 값은 현재 선택 영역이 없는 경우 사용 됩니다.|
 |[VSITEMID.Root](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Root>)|A [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 항목 식별자를 프로젝트 계층의 루트를 나타내는 단일 항목이 아닌 전체 계층 구조를 확인 하는 데 사용 됩니다.|
-|[VSITEMID.Selection](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Selection>)|A [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 현재 선택 된 항목 또는 계층의 루트를 포함할 수 있는 항목을 나타내는 항목 식별자입니다.|
+|[VSITEMID 합니다. 선택 영역](<xref:Microsoft.VisualStudio.VSConstants.VSITEMID#Microsoft_VisualStudio_VSConstants_VSITEMID_Selection>)|A [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 현재 선택 된 항목 또는 계층의 루트를 포함할 수 있는 항목을 나타내는 항목 식별자입니다.|
 
 ## <a name="ivsselectionevents"></a>IVsSelectionEvents
  IDE의 구성 요소가 무엇 인지 방금 선택한 경우에 설명 된 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSelectionEvents.OnElementValueChanged%2A> 호출 예를 들어 합니다.

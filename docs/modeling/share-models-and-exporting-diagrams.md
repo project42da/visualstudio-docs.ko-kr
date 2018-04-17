@@ -1,29 +1,27 @@
 ---
-title: "모델 및 다이어그램 내보내기 공유 | Microsoft Docs"
-ms.custom: 
+title: 모델 및 다이어그램 내보내기 공유 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - UML model, sharing
 - UML diagrams, saving
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 8a615fcbd55d8520e2c340d3b1d0afe0321fd1f9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: a40e35ef01698639f89aa64cc1494d7721506895
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="share-models-and-exporting-diagrams"></a>모델 공유 및 다이어그램 내보내기
 Visual Studio에서 여러 가지 방법으로 모델 및 다이어그램을 동료와 공유할 수 있습니다.  
   
- 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
+ 이 기능을 지원하는 Visual Studio 버전을 확인하려면 [아키텍처 및 모델링 도구에 대한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
   
 ## <a name="working-on-a-model-as-a-team"></a>팀으로 모델 작업  
  Visual Studio의 사용자를 만들고 모델, 종속성 다이어그램 및 지정 된 그래프를 편집할 수 있습니다.  
@@ -35,7 +33,7 @@ Visual Studio에서 여러 가지 방법으로 모델 및 다이어그램을 동
  중간 규모 또는 대규모 프로젝트에서 모델을 구성 하는 방법에 대 한 제안 사항에 대 한 참조 [모델링 솔루션 구성](../modeling/structure-your-modeling-solution.md)합니다.  
   
 ## <a name="reading-and-reviewing-models"></a>모델 읽기 및 검토  
- 일부 버전의 Visual Studio (하 여 모델을 만들 수 없습니다)를 사용 하 여 팀 멤버 모델링 다이어그램 및 방향이 지정 된 그래프 모델, 읽을 수는 있지만 편집할 수 없습니다.  이 기능을 지원하는 Visual Studio 버전을 확인하려면 [Version support for architecture and modeling tools](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
+ 일부 버전의 Visual Studio (하 여 모델을 만들 수 없습니다)를 사용 하 여 팀 멤버 모델링 다이어그램 및 방향이 지정 된 그래프 모델, 읽을 수는 있지만 편집할 수 없습니다.  이 기능을 지원하는 Visual Studio 버전을 확인하려면 [아키텍처 및 모델링 도구에 대한 버전 지원](../modeling/what-s-new-for-design-in-visual-studio.md#VersionSupport)을 참조하세요.  
   
  생성 된 모델 내 에서만 종속성 다이어그램을 열 수 있습니다. 따라서 다이어그램에 대한 액세스를 제공하려면 모든 모델링 프로젝트 파일 또는 해당 복사본에 대한 액세스를 제공해야 합니다.  
   

@@ -1,26 +1,24 @@
 ---
-title: "VSIX 프로젝트 템플릿은 | Microsoft Docs"
-ms.custom: 
+title: VSIX 프로젝트 템플릿은 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - deploy packages
 - publish extension
 ms.assetid: b6c82167-e2a5-4cff-8c8b-2d72e2a9092c
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: de8de116a9853391249a7a37a35bd54d0a6946d2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: bff05b0b1b05a6b00b7924f0fb5bfc957adba41c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vsix-project-template"></a>VSIX 프로젝트 템플릿
 VSIX 프로젝트에서 하나 이상의 Visual Studio 확장을 래핑할 VSIX 프로젝트 템플릿을 사용 하 고 다음에 패키지를 게시할 수 있습니다는 [Visual Studio 갤러리](http://go.microsoft.com/fwlink/?LinkID=123847) 웹 사이트입니다.  
@@ -82,7 +80,7 @@ VSIX 프로젝트에서 하나 이상의 Visual Studio 확장을 래핑할 VSIX 
   
 8.  솔루션을 빌드합니다.  
   
-     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSIX 매니페스트 파일, [Content_Types].xml 파일 및 프로젝트에 추가 하는 확장 자산을 모두 포함 하는.vsix 파일을 작성 합니다.  
+     [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSIX 매니페스트 파일, [Content_Types].xml 파일 및 프로젝트에 추가 하는 확장 자산을 모두 포함 하는.vsix 파일을 작성 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [VSIX 확장 2.0 스키마 참조](../extensibility/vsix-extension-schema-2-0-reference.md)   

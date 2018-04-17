@@ -2,34 +2,30 @@
 title: 요소 (Visual Studio 템플릿)를 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#References
 helpviewer_keywords:
 - <References> element [Visual Studio Templates]
 - References element [Visual Studio Templates]
 ms.assetid: 1969146d-46bf-422d-8d46-0e9493925003
-caps.latest.revision: 8
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ceee0091dc20938f9098985c2609f0a3d239c699
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8e758bb0bc493086d9e8090c14eaca744129c277
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="references-element-visual-studio-templates"></a>References 요소(Visual Studio 템플릿)
 서식 파일 프로젝트에 추가 하는 어셈블리 참조를 그룹화 합니다.  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<참조 >  
   
@@ -66,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
  `Reference` 및 `References` 요소 있는.vstemplate 파일에만 사용할 수 있습니다는 `Type` 특성 값이 `Item`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 `TemplateContent` 항목 템플릿의 요소입니다. 이 XML System.dll 및 System.Data.dll 어셈블리에 대 한 참조를 추가합니다.  
   
 ```  

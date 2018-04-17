@@ -1,30 +1,28 @@
 ---
-title: "쿼리 (소스 제어 VSPackage) 저장 쿼리 편집 | Microsoft Docs"
-ms.custom: 
+title: 쿼리 (소스 제어 VSPackage) 저장 쿼리 편집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - QEQS events
 - Query Edit Query Save events
 - source control packages, Query Edit Query Save events
 ms.assetid: c360d2ad-fe42-4d65-899d-d1588cc8a322
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e3428e51dda2f8cc8410b6ac67f5779f7c2300ed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: bf4fd74544e0646a84e4fdc37f35ba84b301f693
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="query-edit-query-save-source-control-vspackage"></a>쿼리 (소스 제어 VSPackage) 저장 쿼리 편집
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]편집기에 쿼리 편집 쿼리 저장 (QEQS) 이벤트 브로드캐스트할 수 있습니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]소스 제어 스텁 QEQS 이벤트의 받는 사람 있도록 QEQS 서비스를 구현 합니다. 이러한 이벤트는 다음 현재 소스 제어 VSPackage에 위임 됩니다. VSPackage 구현 현재 소스 제어는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> 및 해당 메서드. 메서드는 `IVsQueryEditQuerySave2` 인터페이스는 일반적으로 문서를 저장 하기 전에 즉시 및 처음으로 문서를 편집 하는 바로 전에 호출 됩니다.  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 편집기에 쿼리 편집 쿼리 저장 (QEQS) 이벤트 브로드캐스트할 수 있습니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 소스 제어 스텁 QEQS 이벤트의 받는 사람 있도록 QEQS 서비스를 구현 합니다. 이러한 이벤트는 다음 현재 소스 제어 VSPackage에 위임 됩니다. VSPackage 구현 현재 소스 제어는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> 및 해당 메서드. 메서드는 `IVsQueryEditQuerySave2` 인터페이스는 일반적으로 문서를 저장 하기 전에 즉시 및 처음으로 문서를 편집 하는 바로 전에 호출 됩니다.  
   
 ## <a name="queryeditquerysave-events"></a>QueryEditQuerySave 이벤트  
  소스 제어 VSPackage를 구현 하 여 QEQS 이벤트를 처리 해야 합니다는 `IVsQueryEditQuerySave2` 인터페이스와 필요한 메서드. 다음은 최소한 VSPackage 구현 해야 하는 두 가지 방법에 대 한 간단한 설명입니다. 소스 제어 모델의 논리에 따라 실제 구현 해야 합니다.  

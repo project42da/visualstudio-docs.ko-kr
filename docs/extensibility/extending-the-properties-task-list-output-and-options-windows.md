@@ -1,12 +1,10 @@
 ---
-title: "속성, 작업 목록, 출력 및 옵션 창을 확장 | Microsoft Docs"
-ms.custom: 
+title: 속성, 작업 목록, 출력 및 옵션 창을 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - properties pane
 - task list
@@ -15,21 +13,21 @@ helpviewer_keywords:
 - tutorials
 - tool windows
 ms.assetid: 06990510-5424-44b8-9fd9-6481acec5c76
-caps.latest.revision: "37"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 631c336d0350fdf8a43d747eb6bda7b01e9d1eba
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4db9bb9101bd06921814132856fab0335a4a2530
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-the-properties-task-list-output-and-options-windows"></a>속성, 작업 목록, 출력 및 옵션 창을 확장합니다.
 Visual Studio의 모든 도구 창에 액세스할 수 있습니다. 이 연습에서는 새 도구 창에 대 한 정보를 통합 하는 방법을 보여 줍니다. **옵션** 페이지와 새 설정에는 **속성** 페이지 및에 쓰는 방법을 **작업목록** 및 **출력** windows 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="create-an-extension-with-a-tool-window"></a>도구 창 확장 만들기  
@@ -150,7 +148,7 @@ Visual Studio의 모든 도구 창에 액세스할 수 있습니다. 이 연습�
   
      도구 창이 사용자가 사용할 수 있을 때 목록 상자에서 항목 TodoItems로 표현 됩니다. 사용자가 목록 상자에서 이러한 항목 중 하나를 선택는 **속성** 창 항목에 대 한 정보에 표시 됩니다.  
   
-     데이터에서 사용할 수 있게 하는 **속성** 두 가지 특별 한 특성이 있는 공용 속성으로 데이터를 바꿀 창 `Description` 및 `Category`합니다. `Description`맨 아래에 나타나는 텍스트는 **속성** 창. `Category`여기서 속성이 표시 되는 시기를 결정은 **속성** 창에 표시 됩니다는 **항목별** 보기. 다음 그림에는 **속성** 창에 내용이 **항목별** 보기는 **이름** 속성에는 **ToDo 필드** 범주는 을 선택 하 고에 대 한 설명을 **이름** 속성 창의 맨 아래에 표시 됩니다.  
+     데이터에서 사용할 수 있게 하는 **속성** 두 가지 특별 한 특성이 있는 공용 속성으로 데이터를 바꿀 창 `Description` 및 `Category`합니다. `Description` 맨 아래에 나타나는 텍스트는 **속성** 창. `Category` 여기서 속성이 표시 되는 시기를 결정은 **속성** 창에 표시 됩니다는 **항목별** 보기. 다음 그림에는 **속성** 창에 내용이 **항목별** 보기는 **이름** 속성에는 **ToDo 필드** 범주는 을 선택 하 고에 대 한 설명을 **이름** 속성 창의 맨 아래에 표시 됩니다.  
   
      ![속성 창](../extensibility/media/t5properties.png "T5Properties")  
   

@@ -2,26 +2,22 @@
 title: 소스 제어 디자인 결정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], design decisions
 ms.assetid: 5f60ec1a-5a74-4362-8293-817a4dd73872
-caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4c1a512e104a092ae98ac86dc5e731fd1732aa33
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b0385d5feb7baf7fe60e253616c8db0f326932e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-design-decisions"></a>소스 제어에 대 한 디자인 관련 결정
 다음과 같은 디자인 관련 결정 소스 제어를 구현 하는 경우 프로젝트에 대해 고려할 수 있습니다.  

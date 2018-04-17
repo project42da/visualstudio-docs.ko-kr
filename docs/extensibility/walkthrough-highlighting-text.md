@@ -2,31 +2,27 @@
 title: '연습: 텍스트를 강조 표시. | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - highlight text
 ms.assetid: 64b772ad-4392-42e9-a237-5137f0384bf0
-caps.latest.revision: 42
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b54dabbe00b0df920655b595cab32ed21126415b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 90bf22bfe65b1120f5cc149d95eea25357b8ffa4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-highlighting-text"></a>연습: 텍스트를 강조 표시
 편집기 프레임 워크 MEF (Managed Extensibility) 구성 요소 부분을 만들어 다양 한 시각적 효과 추가할 수 있습니다. 이 연습에서는 텍스트 파일에서 현재 단어의 모든 위치를 강조 표시 하는 방법을 보여 줍니다. 단어가 텍스트 파일에 여러 번 발생 한 항목에 캐럿을 배치 하는 경우 발생할 때마다이 강조 표시 됩니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-mef-project"></a>MEF 프로젝트 만들기  

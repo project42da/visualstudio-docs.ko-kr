@@ -1,23 +1,21 @@
 ---
-title: "문서 로드를 지연 | Microsoft Docs"
-ms.custom: 
+title: 문서 로드를 지연 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: fb07b8e2-a4e3-4cb0-b04f-8eb11c491f35
-caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e69ee994f434e122894989d82b97ea79e4bd995c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: dc10d7807633433b38fa8587d41c2ac3c0273ebe
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="delayed-document-loading"></a>문서 로드를 지연합니다.
 사용자가 Visual Studio 솔루션을 대부분의 관련된 문서 즉시 로드 되지 않습니다. 문서 창 프레임 초기화 보류 중 상태에 만들어지고 (스텁 프레임 라고 함) 자리 표시자 문서에는 실행 중인 문서 테이블 (RDT)에 배치 됩니다.  
@@ -49,7 +47,7 @@ ms.lasthandoff: 12/22/2017
   
  관련 속성에 대 한 하기 전에 다음 방법 중 하나를 호출 하 여 불필요 한 문서 로드를 방지할 수 있습니다: 다른 속성에 대 한 요청 전에 합니다.  
   
--   <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A>사용 하 여 <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6>합니다.  
+-   <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowFrame.GetProperty%2A> 사용 하 여 <xref:Microsoft.VisualStudio.Shell.Interop.__VSFPROPID6>합니다.  
   
 -   <xref:Microsoft.VisualStudio.Shell.Interop.IVsRunningDocumentTable4.GetDocumentFlags%2A>. 이 메서드가 반환 된 <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> 에 대 한 값을 포함 하는 개체 <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS4> 문서 아직 초기화 되지 않은 경우.  
   

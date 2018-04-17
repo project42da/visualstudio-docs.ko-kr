@@ -2,29 +2,25 @@
 title: QUERYCHANGESFUNC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - QUERYCHANGESFUNC
 helpviewer_keywords:
 - QUERYCHANGESFUNC callback function
 - QUERYCHANGESDATA structure
 ms.assetid: 9d383e2c-eee1-4996-973a-0652d4c5951c
-caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 43add362011b31ce695e9a8d9e77d6ca2dedb0e2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d1df5f21ffed27c45ebee6315fcc29ee1dcc8fa4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="querychangesfunc"></a>QUERYCHANGESFUNC
 사용 하는 콜백 함수는 [SccQueryChanges](../extensibility/sccquerychanges-function.md) 작업을 파일 이름 컬렉션을 열거 하 고 각 파일의 상태를 확인 합니다.  
@@ -56,7 +52,7 @@ typedef BOOL (*QUERYCHANGESFUNC)(
 |SCC_I_OPERATIONCANCELED|처리를 중지 합니다.|  
 |SCC_E_xxx|모든 적절 한 SCC 오류 처리를 중지 해야 합니다.|  
   
-##  <a name="LinkQUERYCHANGESDATA"></a>QUERYCHANGESDATA 구조  
+##  <a name="LinkQUERYCHANGESDATA"></a> QUERYCHANGESDATA 구조  
  각 파일에 전달 된 구조는 다음과 같습니다.  
   
 ```cpp  

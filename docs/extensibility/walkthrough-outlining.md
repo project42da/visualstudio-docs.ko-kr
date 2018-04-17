@@ -2,31 +2,27 @@
 title: '연습: 개요 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - outlining
 ms.assetid: d75a44aa-265a-44d4-9c28-457f59c4ff9f
-caps.latest.revision: 30
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 15dd5f0121fca86a38631bf775ec25d4428632e1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8360daf5ff1e7d94d995bdbefee6228a47e47db8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-outlining"></a>연습: 개요
 개요 확장 또는 축소 하려면 텍스트 영역의 종류를 정의 하 여 같은 언어 기반 기능을 구현할 수 있습니다. 언어 서비스의 컨텍스트에서 영역을 정의할 수 있습니다 또는 고유한 파일 이름 확장명 및 콘텐츠 형식을 정의 하 고 영역 정의 해당 형식에만 적용할 수 있습니다 또는 기존 콘텐츠 형식 (예: "text")는 영역 정의 적용할 수 있습니다. 이 연습에는 정의 개요 영역을 표시 하는 방법을 보여 줍니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-managed-extensibility-framework-mef-project"></a>MEF(Managed Extensibility Framework) 프로젝트 만들기  

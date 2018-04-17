@@ -1,13 +1,10 @@
 ---
-title: "Office 솔루션 개발 개요 (VSTO) | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션 개발 개요 (VSTO) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - Office development in Visual Studio, about developing solutions
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 53ff49eb204eda28174344b44d58e236bde24c64
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: f36b75b8c8c3cde4441520819ab566696d1d9066
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="office-solutions-development-overview-vsto"></a>Office 솔루션 개발 개요(VSTO)
   Microsoft Office를 솔루션의 프런트 엔드로 사용하여 Word의 워드 프로세싱 기능, Excel의 데이터 분석 기능 및 Outlook의 전자 메일 관리 기능과 같은 익숙한 Microsoft Office 사용자 인터페이스 및 도구를 활용할 수 있습니다. Visual Studio에서 솔루션을 개발하여 Office 응용 프로그램을 사용자 지정하고 비즈니스 프로세스에 필요한 특정 기능을 추가할 수 있습니다. 예를 들어 편집 가능하거나 편집 가능하지 않게 만들 수 있는 기존 부분에서 계약을 구성하는 계약 생성기로 Word를 전환할 수 있습니다. Excel을 사용하여 다양한 프로젝트에 대해 사용자 지정된 자동화된 예산 워크시트를 만들 수 있습니다. 또한 사용자가 Office 솔루션을 오프라인으로 전환하여 복잡한 솔루션을 웹 기반 아키텍처를 사용하는 경우보다 실용적으로 만들 수도 있습니다.  
@@ -91,7 +88,7 @@ ms.lasthandoff: 01/10/2018
  VSTO Office 솔루션의 보안은 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 에서 솔루션을 설치하고 로드할 때 수행하는 일련의 검사를 통해 적용됩니다. 이러한 검사에는 배포 매니페스트의 위치를 신뢰할 수 있는지 여부나 배포 매니페스트에 서명하는 데 사용되는 인증서를 신뢰할 수 있는지 여부의 확인이 포함됩니다. 자세한 내용은 [Securing Office Solutions](../vsto/securing-office-solutions.md)을 참조하세요.  
   
 ## <a name="see-also"></a>참고 항목  
- [시작 &#40; Visual Studio &#41;에서 Office 개발](../vsto/getting-started-office-development-in-visual-studio.md)   
+ [시작 하기 &#40;Visual Studio에서 Office 개발&#41;](../vsto/getting-started-office-development-in-visual-studio.md)   
  [문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)   
  [VSTO 추가 기능 아키텍처](../vsto/architecture-of-vsto-add-ins.md)   
  [Excel 용 문서 수준 사용자 지정 프로그래밍 시작](../vsto/getting-started-programming-document-level-customizations-for-excel.md)   

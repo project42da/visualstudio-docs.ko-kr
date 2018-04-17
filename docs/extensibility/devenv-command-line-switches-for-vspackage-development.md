@@ -1,12 +1,10 @@
 ---
-title: "VSPackage 개발에 대 한 Devenv 명령줄 스위치 | Microsoft Docs"
-ms.custom: 
+title: VSPackage 개발에 대 한 Devenv 명령줄 스위치 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - /setup command line switch
 - /resetskippkgs command line switch
@@ -17,19 +15,19 @@ helpviewer_keywords:
 - command line, switches
 - Visual Studio SDK, command-line switches
 ms.assetid: d65d2c04-dd84-42b0-b956-555b11f5a645
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 18c531bb849793de184f3797067dceff4bd10199
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b6ad615048255452fc5642f8680b586d69587db5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="devenv-command-line-switches-for-vspackage-development"></a>VSPackage 개발에 대 한 Devenv 명령줄 스위치
-[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]devenv.exe를 Visual Studio 통합된 개발 환경 (IDE)를 시작 하는 파일을 실행할 때 명령줄에서 작업을 자동화 하는 개발자가 있습니다.  
+[!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] devenv.exe를 Visual Studio 통합된 개발 환경 (IDE)를 시작 하는 파일을 실행할 때 명령줄에서 작업을 자동화 하는 개발자가 있습니다.  
   
  작업은 다음과 같습니다.  
   
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 -   IDE 외부 모두에서 특정 구성에서 IDE를 로드 합니다. 또한 시작 시 IDE를 사용자 지정할 수 있습니다.  
   
 ## <a name="guidelines-for-switches"></a>스위치에 대 한 지침  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]설명서는 사용자 수준 devenv 명령줄 스위치에 설명 합니다. 자세한 내용은 참조 [Devenv 명령줄 스위치](../ide/reference/devenv-command-line-switches.md)합니다. 또한 Devenv VSPackage 개발, 배포 및 디버깅에 유용한 추가 명령줄 스위치를 지원 합니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 설명서는 사용자 수준 devenv 명령줄 스위치에 설명 합니다. 자세한 내용은 참조 [Devenv 명령줄 스위치](../ide/reference/devenv-command-line-switches.md)합니다. 또한 Devenv VSPackage 개발, 배포 및 디버깅에 유용한 추가 명령줄 스위치를 지원 합니다.  
   
 |명령줄 스위치|설명|  
 |--------------------------|-----------------|  

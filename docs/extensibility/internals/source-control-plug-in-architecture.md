@@ -2,26 +2,22 @@
 title: 원본 제어 플러그 인 아키텍처 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, architecture
 ms.assetid: 35351d4c-9414-409b-98fc-f2023e2426b7
-caps.latest.revision: 24
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 22929c34d656fb4f163076ca0b5dfb498d44c884
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 498f3aeb87855a0dac5afacc1baa7e2e816375f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-plug-in-architecture"></a>소스 제어 플러그 인 아키텍처
 원본 제어 지원을 추가할 수 있습니다는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 구현 하는 소스 제어 플러그 인을 연결 하 여 통합된 개발 환경 (IDE). IDE는 잘 정의 된 소스 제어 플러그 인 API를 통해 플러그 인 소스 제어에 연결합니다. IDE의 도구 모음 및 메뉴 명령으로 구성 된 사용자 인터페이스 (UI)를 제공 하 여 원본 제어 시스템의 버전 제어 기능을 노출 합니다. 소스 제어 플러그 인 소스 제어 기능을 구현합니다.  

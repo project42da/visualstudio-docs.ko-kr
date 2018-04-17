@@ -2,26 +2,22 @@
 title: Visual Studio SDK 용어집 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - glossary [Visual Studio SDK]
 ms.assetid: b64d432b-c39b-4904-ad18-3c3218b6e3aa
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa0f7eaed09df717eb0746076715f9c780464df1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0a08985c4977896e35fa8cd94014385ac32dd8bd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-sdk-glossary"></a>Visual Studio SDK 용어집
 사용 되는 용어에 대 한 정의 제공 하는이 용어는 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] 설명서입니다.  
@@ -76,7 +72,7 @@ ms.lasthandoff: 12/22/2017
  일반적으로 전체 문서를 참조 하는 데 사용-모두는 `DocData` 및 `DocView`합니다. 예를 들어 한 DocumentFrame는 `DocView`에 대 한 참조 유지도 있지만 `DocData` 지 속성을 처리 하 합니다.  
   
  문서 뷰  
- 와 상호 작용할을 보고 조작할 내부 DocObject/포함/창의 `DocData`합니다. 사용자에 게의 일부인 문서/뷰 구분을 이용지 않습니다는 `DocObject` 인터페이스 디자인 합니다. 사용자는 전체 DocObject 라고 하는 기본 데이터의 추상적 (및 덜 공식화) 개념을 사용 하는 대신 보기 역할을 사용 하 여 `DocData`합니다. `DocView`개체는 IDE의 문서 프레임 개체 (MDI 자식 창)와 항상 포함 됩니다.  
+ 와 상호 작용할을 보고 조작할 내부 DocObject/포함/창의 `DocData`합니다. 사용자에 게의 일부인 문서/뷰 구분을 이용지 않습니다는 `DocObject` 인터페이스 디자인 합니다. 사용자는 전체 DocObject 라고 하는 기본 데이터의 추상적 (및 덜 공식화) 개념을 사용 하는 대신 보기 역할을 사용 하 여 `DocData`합니다. `DocView` 개체는 IDE의 문서 프레임 개체 (MDI 자식 창)와 항상 포함 됩니다.  
   
  DTE  
  `DTE` (개발 도구 확장성) 개체는 프로그래밍 방식으로 자동화 하 고 IDE를 확장할 수 있는 Visual Studio 자동화 모델의 최상위 액세스 지점입니다.  

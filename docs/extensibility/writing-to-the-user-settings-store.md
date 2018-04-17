@@ -1,23 +1,21 @@
 ---
-title: "사용자 설정 저장소에 쓰기 | Microsoft Docs"
-ms.custom: 
+title: 사용자 설정 저장소에 쓰기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: efd27f00-7fe5-45f8-9b97-371af732be97
-caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a461a255920cc8a01282d2c93b9ba7fd5b38df75
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 0e205fa8850bdd5ee664f66c6d6bb7bf86195bfd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-to-the-user-settings-store"></a>사용자 설정 저장소에 쓰기
 사용자 설정은 같은 쓰기 가능 설정이 **도구 / 옵션** 대화 상자, 속성 창 및 다른 특정 대화 상자. Visual Studio 확장명 적은 양의 데이터를 저장 하려면이 사용할 수 있습니다. 이 연습에서는 읽기 및 사용자 설정 저장소에 기록 하 여 Visual Studio에는 외부 도구도 메모장을 추가 하는 방법을 보여 줍니다.  

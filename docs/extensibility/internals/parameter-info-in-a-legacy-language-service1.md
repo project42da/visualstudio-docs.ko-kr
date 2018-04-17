@@ -1,12 +1,10 @@
 ---
-title: "레거시 언어 Service1에 매개 변수 정보 | Microsoft Docs"
-ms.custom: 
+title: 레거시 언어 Service1에 매개 변수 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, method tips
 - method tips
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - IVsMethodData interface
 - Parameter Info (IntelliSense)
 ms.assetid: f367295e-45b6-45d2-9ec8-77481743beef
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 70f6a24a8d5a3d516286efe01cffc6e1d3514e18
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 50450d1968c626e0a5b32dee4c6f03d005d6ede9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="parameter-info-in-a-legacy-language-service"></a>레거시 언어 서비스에 대 한 매개 변수 정보
 IntelliSense 매개 변수 정보 도구 설명 사용자에 게 언어 구문이 있는 곳에 대 한 힌트를 제공 합니다.  
@@ -40,7 +38,7 @@ IntelliSense 매개 변수 정보 도구 설명 사용자에 게 언어 구문�
   
  매개 변수 정보 도구 설명 명령 인터 셉 션을 통해 언어 서비스에서 시작 됩니다. 언어 서비스 개체를 사용자 문자를 가로채기 위해 구현 해야 합니다는 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 인터페이스 및 텍스트 보기에 대 한 포인터를 전달 하면 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget> 구현을 호출 하 여는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.AddCommandFilter%2A> 에서 메서드는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 인터페이스. 명령 필터에는 코드 창에 입력 하는 명령을 차단 합니다. 사용자에 게 매개 변수 정보를 표시 하는 시기를 알아야 명령 정보를 모니터링 합니다. 문 완성, 오류 표식 등에 대 한 동일한 명령 필터를 사용할 수 있습니다.  
   
- 언어 서비스 힌트를 제공할 수 있는 키워드를 입력 하는 경우 다음 언어 서비스 만듭니다는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> 개체와 호출은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> 에서 메서드는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 힌트를 표시할 수 있도록 IDE에 알리는 인터페이스를 합니다. 만들기는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> 개체 사용 하 여 `VSLocalCreateInstance` coclass를 지정 하 고 `CLSID_VsMethodTipWindow`합니다. `VsLocalCreateInstance`함수를 호출 하는 헤더 파일 vsdoc.h에 정의 된 `QueryService` 로컬 레지스트리 및 호출에 대 한 `CreateInstance` 에 대 한이 개체에는 `CLSID_VsMethodTipWindow`합니다.  
+ 언어 서비스 힌트를 제공할 수 있는 키워드를 입력 하는 경우 다음 언어 서비스 만듭니다는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> 개체와 호출은 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView.UpdateTipWindow%2A> 에서 메서드는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView> 힌트를 표시할 수 있도록 IDE에 알리는 인터페이스를 합니다. 만들기는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> 개체 사용 하 여 `VSLocalCreateInstance` coclass를 지정 하 고 `CLSID_VsMethodTipWindow`합니다. `VsLocalCreateInstance` 함수를 호출 하는 헤더 파일 vsdoc.h에 정의 된 `QueryService` 로컬 레지스트리 및 호출에 대 한 `CreateInstance` 에 대 한이 개체에는 `CLSID_VsMethodTipWindow`합니다.  
   
 ## <a name="providing-a-method-tip"></a>메서드 설명 제공  
  호출 메서드 팁을 제공 하려면는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow.SetMethodData%2A> 에서 메서드는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodTipWindow> 인터페이스를 구현 전달는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsMethodData> 인터페이스입니다.  

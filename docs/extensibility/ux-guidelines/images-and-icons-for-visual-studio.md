@@ -1,25 +1,21 @@
 ---
-title: "이미지와 Visual Studio에 대 한 아이콘 | Microsoft Docs"
-ms.custom: 
+title: 이미지와 Visual Studio에 대 한 아이콘 | Microsoft Docs
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f410325e-9cf2-4f39-b6d7-b672121c2691
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 164a450ca346fe2bd7b267d951ce522d27f14160
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 3fae6a5350d5204219edcb14732c7686984035e4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="images-and-icons-for-visual-studio"></a>이미지와 Visual Studio에 대 한 아이콘
 ##  <a name="BKMK_ImageUseInVisualStudio"></a> Visual Studio에서 이미지 사용  
@@ -96,7 +92,7 @@ ms.lasthandoff: 03/13/2018
 |||  
 |-|-|  
 |**"Search"**|**"Zoom"**|  
-|![검색 아이콘](../../extensibility/ux-guidelines/media/0404-09_search.png "0404 09_Search")|![Zoom icon](../../extensibility/ux-guidelines/media/0404-10_zoom.png "0404-10_Zoom")|  
+|![검색 아이콘](../../extensibility/ux-guidelines/media/0404-09_search.png "0404 09_Search")|![확대/축소 아이콘](../../extensibility/ux-guidelines/media/0404-10_zoom.png "0404 10_Zoom")|  
   
  트리 보기에서 폴더 아이콘와 한정자를 사용 하지 마십시오. 사용 가능한 경우에 한정자만 사용 합니다.  
   
@@ -274,11 +270,11 @@ ms.lasthandoff: 03/13/2018
 ### <a name="base-palette"></a>기본 색상표  
  모든 표준 아이콘 세 가지 기본 색을 포함합니다. 아이콘 없음 그라데이션 포함 또는 3D 도구 아이콘에 대 한 하나 또는 두 개의 예외 그림자 됩니다.  
   
-|사용법|name|값 (밝은 테마)|견본|예|  
+|사용법|이름|값 (밝은 테마)|견본|예제|  
 |-----------|----------|---------------------------|------------|-------------|  
 |배경/어두운|VS BG|424242 / 66,66,66|![견본 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|![기본 색상표 예](../../extensibility/ux-guidelines/media/0405-02_basepaletteexample.png "0405 02_BasePaletteExample")|  
-|전경/사용 요구가 적음|VS FG|F0EFF1 / 240,239,241|![견본 F0EFF1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||  
-|윤곽선|VS 아웃|F6F6F6 / 246,246,246|![견본 F6F6F6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||  
+|전경/사용 요구가 적음|VS FG|F0EFF1 240,239,241 /|![견본 F0EFF1](../../extensibility/ux-guidelines/media/0405_f0eff1.png "0405_F0EFF1")||  
+|윤곽선|VS 아웃|F6F6F6 246,246,246 /|![견본 F6F6F6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")||  
   
  기본 색 외에도 각 아이콘 추가 확장된 팔레트에서 색을 포함할 수 있습니다.  
   
@@ -287,19 +283,19 @@ ms.lasthandoff: 03/13/2018
 #### <a name="action-modifiers"></a>작업 한정자  
  아래 표시 된 네 개의 색 작업 한정자에 필요한 동작의 유형을 나타냅니다.  
   
-|사용법|name|값 (모든 테마)|견본|  
+|사용법|이름|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
-|양수|VS 작업 녹색|388A34 / 56,138,52|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
-|음수|VS 작업 빨간색|A1260D / 161,38,13|![Swatch A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|  
-|중립|VS 작업 Blue|00539C / 0,83,156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|/ 새로 만들기|VS 작업 주황색|C27D1A / 194,156,26|![Swatch C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
+|양수|VS 작업 녹색|388A34 56,138,52 /|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|음수|VS 작업 빨간색|A1260D / 161,38,13|![견본 A1260D](../../extensibility/ux-guidelines/media/0405_a1260d.png "0405_A1260D")|  
+|중립|VS 작업 Blue|00539C / 0,83,156|![견본 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
+|/ 새로 만들기|VS 작업 주황색|C27D1A / 194,156,26|![견본 C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
   
 ##### <a name="examples"></a>예제  
  "추가"와 같은 양의 작업 한정자에 대 한 녹색은 "실행," "재생","및"유효성 검사 합니다."  
   
 |||||  
 |-|-|-|-|  
-|![Run icon](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />실행|![쿼리 실행 아이콘](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405 04_ExecuteQuery")<br />쿼리 실행|![모든 단계 재생 아이콘](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405 05_PlayAllSteps")<br />모든 단계 재생|![컨트롤 추가 아이콘](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405 06_AddControl")<br />컨트롤 추가|  
+|![실행 아이콘](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405 03_ActionModifierRun")<br />실행|![쿼리 실행 아이콘](../../extensibility/ux-guidelines/media/0405-04_executequery.png "0405 04_ExecuteQuery")<br />쿼리 실행|![모든 단계 재생 아이콘](../../extensibility/ux-guidelines/media/0405-05_playallsteps.png "0405 05_PlayAllSteps")<br />모든 단계 재생|![컨트롤 추가 아이콘](../../extensibility/ux-guidelines/media/0405-06_addcontrol.png "0405 06_AddControl")<br />컨트롤 추가|  
   
  빨간색 "Delete", "Stop"와 같은 음수 작업 한정자에 사용 되 "취소" 및 "닫기"입니다.  
   
@@ -324,47 +320,47 @@ ms.lasthandoff: 03/13/2018
   
 ||||||  
 |-|-|-|-|-|  
-|![Run icon](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405-03_ActionModifierRun")<br />실행|![중지 아이콘](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405 19_Stop")<br />Stop|![삭제 아이콘](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405 20_Delete")<br />삭제|![저장 아이콘](../../extensibility/ux-guidelines/media/0405-21_save.png "0405 21_Save")<br />저장|![뒤로 탐색 아이콘](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405 22_NavigateBack")<br />뒤로 탐색|  
+|![실행 아이콘](../../extensibility/ux-guidelines/media/0405-03_actionmodifierrun.png "0405 03_ActionModifierRun")<br />실행|![중지 아이콘](../../extensibility/ux-guidelines/media/0405-19_stop.png "0405 19_Stop")<br />Stop|![삭제 아이콘](../../extensibility/ux-guidelines/media/0405-20_delete.png "0405 20_Delete")<br />삭제|![저장 아이콘](../../extensibility/ux-guidelines/media/0405-21_save.png "0405 21_Save")<br />저장|![뒤로 탐색 아이콘](../../extensibility/ux-guidelines/media/0405-22_navigateback.png "0405 22_NavigateBack")<br />뒤로 탐색|  
   
 ### <a name="code-hierarchy-palette"></a>코드 계층 색상표  
   
 #### <a name="folder"></a>폴더  
   
-|사용법|name|값 (모든 테마)|견본|예|  
+|사용법|이름|값 (모든 테마)|견본|예제|  
 |-----------|----------|--------------------------|------------|-------------|  
 |폴더|폴더|DCB67A / 220,182,122|![견본 DCB67A](../../extensibility/ux-guidelines/media/0405_dcb67a.png "0405_DCB67A")|![폴더 색 아이콘](../../extensibility/ux-guidelines/media/0405-23_foldercolor.png "0405 23_FolderColor")|  
   
 #### <a name="visual-studio-languages"></a>Visual Studio 언어  
  각 공용 언어 또는 Visual Studio에서 사용할 수 있는 플랫폼에 연결 된 색입니다. 이러한 색은 기본 아이콘 또는 복합 아이콘의 오른쪽 위 모서리에 표시 되는 언어 한정자에 사용 됩니다.  
   
-|사용법|name|값 (모든 테마)|견본|  
+|사용법|이름|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
-|ASP, HTML, WPF|ASP HTML WPF Blue|0095D7 / 0,149,215|![Swatch 0095D7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|  
-|C++|CPP 자주색|9B4F96 / 155,79,150|![견본 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
-|C#|CS 녹색 (VS 동작 녹색)|388A34 / 56,138,52|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
-|CSS|CSS 빨간색|BD1E2D / 189,30,45|![Swatch BD1E2D](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|  
+|ASP, HTML, WPF|ASP HTML WPF Blue|0095D 7 0,149,215 /|![견본 0095d7](../../extensibility/ux-guidelines/media/0405_0096d7.png "0405_0096D7")|  
+|C++|CPP 자주색|9B4F96 155,79,150 /|![견본 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
+|C#|CS 녹색 (VS 동작 녹색)|388A34 56,138,52 /|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|CSS|CSS 빨간색|BD1E2D / 189,30,45|![견본 BD1E2D](../../extensibility/ux-guidelines/media/0405_bd1e2d.png "0405_BD1E2D")|  
 |F#|FS 자주색|672878 / 103,40,120|![견본 672878](../../extensibility/ux-guidelines/media/0405_672878.png "0405_672878")|  
-|JavaScript|JS 주황색|F16421 / 241,100,33|![견본 F16421](../../extensibility/ux-guidelines/media/0405_f16421.png "0405_F16421")|  
-|VB|VB 파랑 (VS 동작 파랑)|00539C / 0,83,156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|TypeScript|TS 주황색|E04C06 / 224,76,6|![견본 E04C06](../../extensibility/ux-guidelines/media/0405_e04c06.png "0405_E04C06")|  
+|JavaScript|JS 주황색|F16421 241,100,33 /|![견본 F16421](../../extensibility/ux-guidelines/media/0405_f16421.png "0405_F16421")|  
+|VB|VB 파랑 (VS 동작 파랑)|00539C / 0,83,156|![견본 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
+|TypeScript|TS 주황색|E04C06 224,76,6 /|![견본 E04C06](../../extensibility/ux-guidelines/media/0405_e04c06.png "0405_E04C06")|  
 |Python|PY 녹색|879636 / 135,150,54|![견본 879636](../../extensibility/ux-guidelines/media/0405_879636.png "0405_879636")|  
   
 ##### <a name="examples-of-icons-with-language-modifiers"></a>언어 한정자가 있는 아이콘의 예  
   
 |||||||  
 |-|-|-|-|-|-|  
-|![Visual Basic icon](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405-25_VB")<br />VB|![C&#35; icon](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405-26_CSharp")<br />C#|![C&#43; &#43; 아이콘](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405 27_CPlusPlus")<br />C++|![F&#35; icon](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405-28_FSharp")<br />F#|![JavaScript 아이콘](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405 29_JavaScript")<br />JavaScript|![Python 아이콘](../../extensibility/ux-guidelines/media/0405-30_python.png "0405 30_Python")<br />Python|  
-|![HTML icon](../../extensibility/ux-guidelines/media/0405-31_html.png "0405-31_HTML")<br />HTML|![WPF 아이콘](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405 32_WPF")<br />WPF|![ASP 아이콘](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405 33_ASP")<br />ASP|![CSS icon](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript icon](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405-35_TypeScript")<br />TypeScript||  
+|![Visual Basic 아이콘](../../extensibility/ux-guidelines/media/0405-25_vb.png "0405 25_VB")<br />VB|![C&#35; 아이콘](../../extensibility/ux-guidelines/media/0405-26_csharp.png "0405 26_CSharp")<br />C#|![C&#43; &#43; 아이콘](../../extensibility/ux-guidelines/media/0405-27_cplusplus.png "0405 27_CPlusPlus")<br />C++|![F&#35; 아이콘](../../extensibility/ux-guidelines/media/0405-28_fsharp.png "0405 28_FSharp")<br />F#|![JavaScript 아이콘](../../extensibility/ux-guidelines/media/0405-29_javascript.png "0405 29_JavaScript")<br />JavaScript|![Python 아이콘](../../extensibility/ux-guidelines/media/0405-30_python.png "0405 30_Python")<br />Python|  
+|![HTML 아이콘](../../extensibility/ux-guidelines/media/0405-31_html.png "0405 31_HTML")<br />HTML|![WPF 아이콘](../../extensibility/ux-guidelines/media/0405-32_wpf.png "0405 32_WPF")<br />WPF|![ASP 아이콘](../../extensibility/ux-guidelines/media/0405-33_asp.png "0405 33_ASP")<br />ASP|![CSS icon](../../extensibility/ux-guidelines/media/0405-34_css.png "0405-34_CSS")<br />CSS|![TypeScript 아이콘](../../extensibility/ux-guidelines/media/0405-35_typescript.png "0405 35_TypeScript")<br />TypeScript||  
   
 #### <a name="intellisense"></a>IntelliSense  
  IntelliSense 아이콘 단독 색 색상표를 사용합니다. 이러한 색 IntelliSense는 팝업 목록에서 다른 항목을 신속 하 게 구분할 수 있도록 하는 데 사용 됩니다.  
   
-|사용법|name|값 (모든 테마)|견본|  
+|사용법|이름|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
-|이벤트 클래스|VS 작업 주황색|C27D1A / 194,125,26|![Swatch C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
-|확장 메서드를 대리자 메서드를 모듈|VS 작업 자주색|652D90 / 101,45,144|![Swatch 652D90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|  
-|필드, 열거형 항목, 매크로, 구조체, 공용 구조체 값 형식, 연산자, 인터페이스|VS 작업 Blue|00539C / 0,83,156|![Swatch 00539C](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
-|Object|VS 작업 녹색|388A34 / 56,138,52|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
+|이벤트 클래스|VS 작업 주황색|C27D1A / 194,125,26|![견본 C27D1A](../../extensibility/ux-guidelines/media/0405_c27d1a.png "0405_C27D1A")|  
+|확장 메서드를 대리자 메서드를 모듈|VS 작업 자주색|652D90 / 101,45,144|![견본 652d90](../../extensibility/ux-guidelines/media/0405_652d90.png "0405_652D90")|  
+|필드, 열거형 항목, 매크로, 구조체, 공용 구조체 값 형식, 연산자, 인터페이스|VS 작업 Blue|00539C / 0,83,156|![견본 00539c](../../extensibility/ux-guidelines/media/0405_00539c.png "0405_00539C")|  
+|Object|VS 작업 녹색|388A34 56,138,52 /|![견본 388A34](../../extensibility/ux-guidelines/media/0405_388a34.png "0405_388A34")|  
 |상수, 예외, 열거형 항목, 지도, 지도 항목, Namespace, 템플릿, 형식 정의|배경 (VS BG)|424242 / 66,66,66|![견본 424242](../../extensibility/ux-guidelines/media/0405_424242.png "0405_424242")|  
   
 ##### <a name="examples-of-intellisense-icons"></a>IntelliSense 아이콘의 예  
@@ -377,7 +373,7 @@ ms.lasthandoff: 03/13/2018
 ### <a name="notifications"></a>알림  
  Visual Studio에서 알림 상태를 나타내는 데 사용 됩니다. 알림 팔레트 검정색 또는 흰색 전경 채우기 옵션 뿐만 아니라 다음과 같은 네 가지 색을 사용 하 여 다음과 같은 상태 수준 사용 하 여 알림을 정의 합니다.  
   
-|사용법|name|값 (모든 테마)|견본|  
+|사용법|이름|값 (모든 테마)|견본|  
 |-----------|----------|--------------------------|------------|  
 |상태: 중립|알림 파랑 (VS 파랑)|1BA1E2 / 27,161,226|![견본 1BA1E2](../../extensibility/ux-guidelines/media/0405_1ba1e2.png "0405_1BA1E2")|  
 |상태: 양수|알림 녹색 (VS 녹색)|339933 / 51,153,51|![견본 339933](../../extensibility/ux-guidelines/media/0405_339933.png "0405_339933")|  
@@ -395,7 +391,7 @@ ms.lasthandoff: 03/13/2018
 ### <a name="visual-studio-online"></a>Visual Studio Online  
  일반적으로 Visual Studio Online 이루어져 브라우저에서 호스트 하는 기능이 있습니다. 서로 다른 환경에서 색 다르지만 스타일 동일 하 게 유지 합니다.  
   
-|그룹화|사용법|name|값 (모든 테마)|견본|  
+|그룹화|사용법|이름|값 (모든 테마)|견본|  
 |-----------|-----------|----------|--------------------------|------------|  
 |TFS|배경|TFSO BG|656565/ 101, 101, 101|![견본 656565](../../extensibility/ux-guidelines/media/0405_656565.png "0405_656565")|  
 |TFS|윤곽선|TFSO 아웃|FFFFFF / 255, 255, 255|![견본 FFFFFF](../../extensibility/ux-guidelines/media/0405_ffffff.png "0405_FFFFFF")|  
@@ -405,16 +401,16 @@ ms.lasthandoff: 03/13/2018
 |F12|보통|F12 Grey_Primary|555555 / 85, 85, 85|![견본 555555](../../extensibility/ux-guidelines/media/0405_555555.png "0405_555555")|  
 |F12|가리키기|F12 Blue_Hover|2279BF / 34,121,191|![견본 2279BF](../../extensibility/ux-guidelines/media/0405_2279bf.png "0405_2279BF")|  
 |F12|사용 안 함|F12 LtGrey_Disabled|ABABAC / 171,171,172|![견본 ABABAC](../../extensibility/ux-guidelines/media/0405_ababac.png "0405_ABABAC")|  
-|F12|가리키면 표시 배경|Bg 마우스를 가져가고합니다|D9EBF7 / 217,235,247|![견본 D9EBF7](../../extensibility/ux-guidelines/media/0405_d9ebf7.png "0405_D9EBF7")|  
-|F12|누른된 배경|Bg 누름된|B2D7F0 / 178,215,240|![Swatch B2D7F0](../../extensibility/ux-guidelines/media/0405_b2d7f0.png "0405_B2D7F0")|  
-|F12|윤곽선|VS 아웃|F6F6F6 / 246,246,246|![견본 F6F6F6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")|  
-|F12|정보|정보|00BCF2 / 0,188,242|![Swatch 00BCF2](../../extensibility/ux-guidelines/media/0405_00bcf2.png "0405_00BCF2")|  
-|F12|경고|경고|F28300 / 242,131,0|![Swatch F28300](../../extensibility/ux-guidelines/media/0405_f28300.png "0405_F28300")|  
-|F12|오류 음수 /|Error_Negative|E81123 / 232,17,35|![견본 E81123](../../extensibility/ux-guidelines/media/0405_e81123.png "0405_E81123")|  
-|F12|시작 / 양수|Start_Positive|009E49 / 0,158,73|![Swatch 009E49](../../extensibility/ux-guidelines/media/0405_009e49.png "0405_009E49")|  
-|F12|광고 유형|광고 유형|9B4F96 / 155,79,150|![견본 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
-|F12|이벤트 표시|이벤트 표시|A51F00 165,31,0 /|![Swatch A51F00](../../extensibility/ux-guidelines/media/0405_a51f00.png "0405_A51F00")|  
-|F12|사용자 표시|사용자 표시|F16220 / 241,98,32|![견본 F16220](../../extensibility/ux-guidelines/media/0405_f16220.png "0405_F16220")|  
+|F12|가리키면 표시 배경|Bg 마우스를 가져가고합니다|D9EBF7 217,235,247 /|![견본 D9EBF7](../../extensibility/ux-guidelines/media/0405_d9ebf7.png "0405_D9EBF7")|  
+|F12|누른된 배경|Bg 누름된|B2D7F0 / 178,215,240|![견본 B2D7F0](../../extensibility/ux-guidelines/media/0405_b2d7f0.png "0405_B2D7F0")|  
+|F12|윤곽선|VS 아웃|F6F6F6 246,246,246 /|![견본 F6F6F6](../../extensibility/ux-guidelines/media/0405_f6f6f6.png "0405_F6F6F6")|  
+|F12|정보|정보|00BCF2 / 0,188,242|![견본 00BCF2](../../extensibility/ux-guidelines/media/0405_00bcf2.png "0405_00BCF2")|  
+|F12|경고|경고|F28300 242,131,0 /|![견본 F28300](../../extensibility/ux-guidelines/media/0405_f28300.png "0405_F28300")|  
+|F12|오류 음수 /|Error_Negative|E81123 232,17,35 /|![견본 E81123](../../extensibility/ux-guidelines/media/0405_e81123.png "0405_E81123")|  
+|F12|시작 / 양수|Start_Positive|009E49 / 0,158,73|![견본 009E49](../../extensibility/ux-guidelines/media/0405_009e49.png "0405_009E49")|  
+|F12|광고 유형|광고 유형|9B4F96 155,79,150 /|![견본 9B4F96](../../extensibility/ux-guidelines/media/0405_9b4f96.png "0405_9B4F96")|  
+|F12|이벤트 표시|이벤트 표시|A51F00 165,31,0 /|![견본 A51F00](../../extensibility/ux-guidelines/media/0405_a51f00.png "0405_A51F00")|  
+|F12|사용자 표시|사용자 표시|F16220 241,98,32 /|![견본 F16220](../../extensibility/ux-guidelines/media/0405_f16220.png "0405_F16220")|  
   
 #### <a name="examples-of-visual-studio-online-icons"></a>Visual Studio Online 아이콘의 예  
   

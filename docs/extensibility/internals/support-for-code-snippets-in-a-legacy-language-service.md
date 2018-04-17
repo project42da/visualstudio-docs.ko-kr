@@ -1,27 +1,25 @@
 ---
-title: "레거시 언어 서비스의 코드 조각에 대 한 지원 | Microsoft Docs"
-ms.custom: 
+title: 레거시 언어 서비스의 코드 조각에 대 한 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - snippets, supporting in language services
 - code snippets, supporting in language services [managed package framework]
 - language services [managed package framework], supporting code snippets
 ms.assetid: 7490325b-acee-4c2d-ac56-1cd5db1a1083
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6102a5bb6298cd6403285e3d36842424b0be3412
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: eb62481b9ba2c42ed067275480ba137b151a483b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-code-snippets-in-a-legacy-language-service"></a>레거시 언어 서비스의 코드 조각에 대 한 지원
 코드 조각은 소스 파일에 삽입할 수 있는 코드입니다. 코드 조각 자체는 필드 집합으로는 XML 기반 서식 파일입니다. 이러한 필드에는 코드 조각을 삽입 되 고 코드 조각 삽입 되는 컨텍스트에 따라 다른 값을 가질 수 후 강조 표시 됩니다. 코드 조각을 삽입 한 후에 즉시 코드 조각 언어 서비스에 서식을 지정할 수 있습니다.  
@@ -346,7 +344,7 @@ namespace TestLanguagePackage
   
  확장 공급자 초기화 되지 않았습니다. 완전히 확장 함수를 호출 하는 시점으로 인수를 사용 하거나 다른 필드에 액세스 해야 하는 확장 함수는 편집 가능한 필드와 연결 되지 않아야 합니다. 결과적으로, 확장 함수는 인수 또는 다른 필드의 값을 가져올 수 없습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  호출 하는 간단한 확장 함수 방법의 예로 `GetName` 구현 될 수 있습니다. 이 확장 함수 번호를 추가 하는 기본 클래스 이름을 확장 함수 인스턴스화될 때마다 (해당 하는 각 시간 관련된 코드 조각은 삽입).  
   
 ```csharp  

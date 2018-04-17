@@ -2,26 +2,22 @@
 title: 웹 사이트 지원 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web site projects
 ms.assetid: ce9f4266-bb64-4c09-be88-4bd6413f60d0
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 09b43963d657e8d1fe7aa24e98632d2ca46240c6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6d3da310c6695598eef36998cc562f6d477eff29
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-site-support"></a>웹 사이트 지원
 웹 사이트 프로젝트 시스템은 웹 프로젝트를 만드는 프로젝트 시스템. 웹 프로젝트는 웹 응용 프로그램에 만듭니다. 웹 사이트 프로젝트 코드를 연결 된 각 웹 페이지에 대 한 하나의 실행 파일을 생성 합니다. 실행 파일을 추가 /App_Code 폴더의 소스 코드 파일에서 생성 됩니다.  

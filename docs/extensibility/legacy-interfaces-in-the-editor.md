@@ -2,26 +2,22 @@
 title: 편집기에서 레거시 인터페이스 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy
 ms.assetid: 741d45f5-0ea3-4614-972a-8728fe054e07
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a9d09c452fb6d03f7f5072e34813c3757455f96a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 64e867430c2ae55f530bdb66844240a887bd5545
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="legacy-interfaces-in-the-editor"></a>편집기에서 레거시 인터페이스
 Visual Studio 편집기에서 레거시 인터페이스에 액세스할 수 있습니다. 라고 하는 어댑터를 포함 하는 Visual Studio SDK *shim*, 이러한 인터페이스를 새 편집기와 상호 작용할 수 있도록 합니다. 그럼에도 불구 하 고 새 편집기 API를 사용 하 여 레거시 코드를 업데이트 하는 것이 좋습니다. 사용자 코드에서 더 잘 수행 하 고 (WPF (Windows Presentation Foundation) 및는 프레임 워크 MEF (Managed Extensibility)와 같은 새로운 기술을 사용할 수 있습니다.  

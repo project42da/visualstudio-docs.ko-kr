@@ -2,26 +2,22 @@
 title: 레거시 언어 서비스 마이그레이션 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, migrating
 ms.assetid: e0f666a0-92a7-4f9c-ba79-d05b13fb7f11
-caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4f5f7cff29dd368acbbc3f599ec0cf623343031f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 412b09016a3f889e0d6c5e40ff75895d5ae8ff48
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="migrating-a-legacy-language-service"></a>레거시 언어 서비스 마이그레이션
 프로젝트를 업데이트 하는 프로젝트 source.extension.vsixmanifest 파일을 추가 하 여 Visual Studio의 이후 버전으로 레거시 언어 서비스를 마이그레이션할 수 있습니다. Visual Studio 편집기에 맞게 변경 하기 때문에 자체 언어 서비스는 이전과 같이 작동 계속 됩니다.  

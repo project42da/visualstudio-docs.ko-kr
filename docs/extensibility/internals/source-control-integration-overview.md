@@ -2,32 +2,28 @@
 title: 소스 제어 통합 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], about source control
 ms.assetid: 3a46e4eb-e677-49c3-8647-d927d035a19a
-caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dd7b6a48b00e8bef62ff801519fc35cdc163902d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 19d75936e21729729dfeafaa041d800acbe01caa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-integration-overview"></a>소스 제어 통합 개요
 이 단원에는 Visual Studio 소스 제어;에 통합 하는 두 가지 방법을 비교합니다 소스 제어 플러그 인 및 원본 제어 솔루션을 제공 하 고 새 소스 제어 기능을 강조 표시 하는 VSPackage입니다. Visual Studio 솔루션을 기반으로 자동 전환 뿐 아니라 소스 제어 Vspackage 및 소스 제어 플러그 인 간 수동 전환 수 있습니다.  
   
 ## <a name="source-control-integration"></a>소스 제어 통합  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]두 가지 유형의 소스 제어 통합 옵션을 지원합니다. 모든 버전의에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 통합할 수도 있습니다 API에 따라 소스 제어 플러그 인 (이전에 라고도 MSSCCI API)를 소스 제어 사용자 인터페이스 (Visual Studio를 사용 하는 동안 기본 소스 제어 기능을 제공 하는 플러그 인 UI)입니다. 소스 제어 VSPackage, 반면에 새로 만들었거나, 딥 통합을 제공 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 높은 수준의 지원 및의 소스 제어 모델에는 자치를 요구 하는 소스 제어 통합에 대 한 적절 한 경로입니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 두 가지 유형의 소스 제어 통합 옵션을 지원합니다. 모든 버전의에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 통합할 수도 있습니다 API에 따라 소스 제어 플러그 인 (이전에 라고도 MSSCCI API)를 소스 제어 사용자 인터페이스 (Visual Studio를 사용 하는 동안 기본 소스 제어 기능을 제공 하는 플러그 인 UI)입니다. 소스 제어 VSPackage, 반면에 새로 만들었거나, 딥 통합을 제공 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 높은 수준의 지원 및의 소스 제어 모델에는 자치를 요구 하는 소스 제어 통합에 대 한 적절 한 경로입니다.  
   
  ![소스 제어 개요](../../extensibility/internals/media/sourcectnrloverview.gif "SourceCtnrlOverview")  
   
@@ -61,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 -   VSPackage는 소스 제어 플러그 인 소스 제어를 구현 하는 것이 쉽습니다.  
   
 ## <a name="source-control-vspackage"></a>소스 제어 VSPackage  
- [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]소스 제어 기능에 대 한 모든 제어 및 Visual Studio에서 제공 하는 소스 제어 사용자 인터페이스의 완전 한 대체와 Visual Studio에 완벽 한 통합을 허용합니다. 소스 제어 VSPackage Visual Studio에 등록 하 고 소스 제어 기능을 제공 합니다. Visual Studio와 함께 여러 가지 소스 제어 Vspackage를 등록 수, 둘 중 하나만 활성화할 수 한 번에 있습니다. 소스 제어 VSPackage는 활성화 되어 있는 동안 소스 제어 기능 및 모양에 대 한 모든 권한을 Visual Studio에서에 있습니다. 다른 모든 소스 제어 시스템에 등록 될 수 있는 Vspackage 활성화 되며 모든 UI를 전혀 표시 되지 않습니다.  
+ [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 소스 제어 기능에 대 한 모든 제어 및 Visual Studio에서 제공 하는 소스 제어 사용자 인터페이스의 완전 한 대체와 Visual Studio에 완벽 한 통합을 허용합니다. 소스 제어 VSPackage Visual Studio에 등록 하 고 소스 제어 기능을 제공 합니다. Visual Studio와 함께 여러 가지 소스 제어 Vspackage를 등록 수, 둘 중 하나만 활성화할 수 한 번에 있습니다. 소스 제어 VSPackage는 활성화 되어 있는 동안 소스 제어 기능 및 모양에 대 한 모든 권한을 Visual Studio에서에 있습니다. 다른 모든 소스 제어 시스템에 등록 될 수 있는 Vspackage 활성화 되며 모든 UI를 전혀 표시 되지 않습니다.  
   
  소스 제어 VSPackage를 구현 하는 "전체 또는 아무 것 도" 전략이 필요 합니다. 소스 제어 VSPackage의 작성자에 상당한 노력을 구현 하는 다양 한 소스 제어 인터페이스와 새 UI 요소 (대화 상자, 메뉴 및 도구 모음) 전체 소스 제어 기능을 포괄 하도록 투자 해야 합니다. 참조 [소스 제어 VSPackage 만들기](../../extensibility/internals/creating-a-source-control-vspackage.md) 내용을 확인 합니다.  
   

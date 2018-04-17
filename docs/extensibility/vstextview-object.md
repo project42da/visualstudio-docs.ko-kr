@@ -2,29 +2,25 @@
 title: VSTextView 개체 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSTextView
 helpviewer_keywords:
 - VSTextView object, reference
 - views [Visual Studio SDK], reference
 ms.assetid: 78272ddc-9718-4c65-a94e-a44a2e8d54f4
-caps.latest.revision: 8
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f169c3302b3e6fd72e5017193e34836ed3e5340e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5be89d01a668fd05e70e73e31ffaf3742317c272
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vstextview-object"></a>VSTextView 개체
 텍스트 보기에는 사용자가을 보고 텍스트 버퍼의 유니코드 텍스트를 편집할 수 있는 창입니다. 기본적으로 뷰는, 대부분의 사용자가 참조 작업 편집기로 합니다. 버퍼에서 다양 한 텍스트 계층 (줄 바꿈, 개요 텍스트 및 등)에 의해 뷰의 구분 때문에 보기는 정확한 버퍼에서 텍스트 표시 되도록 보장 되지 않습니다. 텍스트 보기에 대 한 자세한 내용은 참조 하세요. [레거시 API를 사용 하 여 텍스트 보기에 액세스](../extensibility/accessing-thetext-view-by-using-the-legacy-api.md)  
@@ -38,7 +34,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.OLE.Interop.IObjectWithSite>|표준 OLE 인터페이스입니다.|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>|표준 OLE 인터페이스입니다.|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsCompoundAction>|복합 작업 (즉, 단일 실행 취소/다시 실행 단위로 그룹화 하는 작업)를 만들 수 있도록 합니다.|  
-|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|관리 및 보기에 액세스 하기 위한 기본 메서드를 제공 합니다. `IVsTextView`하지 스레드로부터 안전 합니다.|  
+|<xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextView>|관리 및 보기에 액세스 하기 위한 기본 메서드를 제공 합니다. `IVsTextView` 하지 스레드로부터 안전 합니다.|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane>|만들고 된 창 도킹 창을 관리 합니다.|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLayeredTextView>|텍스트 계층 상호 작용합니다.|  
 |<xref:Microsoft.VisualStudio.TextManager.Interop.IVsThreadSafeTextView>|다른 스레드에서 보기에 대 한 작업을 수행합니다.|  

@@ -2,20 +2,18 @@
 title: 요소 도구 사용자 지정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0797defab29289b424855f617ed7b6825800b5c7
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 96fe1bf1667cb9a00ad81301738b5eb3c93e1114
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-element-tools"></a>요소 도구 사용자 지정
 일부 DSL 정의의 요소를 그룹으로 단일 개념을 나타냅니다. 예를 들어 구성 요소에는 고정된 포트 집합을 모델을 만들면 항상 하려는 경우 해당 부모 구성 요소와 같은 시간에 만들려는 포트. 따라서 하나가 아닌 요소의 그룹을 만듭니다 요소 작성 도구를 사용자 지정 해야 합니다. 이 위해 요소 작성 도구를 초기화 하는 방법을 사용자 지정할 수 있습니다.  

@@ -1,26 +1,24 @@
 ---
-title: "프로젝트 및 구성 속성에 대 한 지원 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 및 구성 속성에 대 한 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project properties, supporting with Visual Studio SDK
 - configuration properties, suppporting with Visual Studio SDK
 ms.assetid: 9fcfaa0f-7b41-4b68-82ec-7a151dca5d7e
-caps.latest.revision: "25"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e31f4feda55469d2740b32b0eac5d9cfba286d0c
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 823bfa0453d3e33fea2daa51779b1fe4800a1a86
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-for-project-and-configuration-properties"></a>프로젝트 및 구성 속성에 대 한 지원
 **속성** 창에는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) 프로젝트 및 구성 속성을 표시할 수 있습니다. 사용자 응용 프로그램에 대 한 속성을 설정할 수 있도록 고유한 프로젝트 형식에 대 한 속성 페이지를 제공할 수 있습니다.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/22/2018
 ## <a name="persistence-of-project-and-configuration-properties"></a>프로젝트 및 구성 속성의 지 속성  
  프로젝트 및 구성 속성은 예를 들어 프로젝트 형식과 연결 된 파일 이름 확장명,.csproj,.vbproj, 및.myproj 있는 프로젝트 파일에서 유지 됩니다. 언어 프로젝트는 일반적으로 프로젝트 파일을 생성 하려면 서식 파일을 사용 합니다. 그러나 실제로 여러 가지 방법으로 프로젝트 형식 및 서식 파일을 연결할 수 있습니다. 자세한 내용은 참조 [템플릿 디렉터리 설명 (합니다. Vsdir) 파일](../../extensibility/internals/template-directory-description-dot-vsdir-files.md)합니다.  
   
- 프로젝트 및 구성 속성은 템플릿 파일에 항목을 추가 하 여 생성 됩니다. 이러한 속성은 다음이 템플릿을 사용 하는 프로젝트 형식을 사용 하 여 만든 모든 프로젝트에 사용할 수 있습니다. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]프로젝트 및 둘 다 사용 MPFProj는 [빌드에 없음: MSBuild 개요](http://msdn.microsoft.com/en-us/b588fd73-a45b-4706-908f-cc131bccfbde) 템플릿 파일에 대 한 스키마입니다. 이러한 파일 각각의 구성에 대 한 소스 파일 섹션에 있습니다. 프로젝트의 속성 구성 인수가 null 문자열로 설정 하는 첫 번째 소스 파일 섹션에서 일반적으로 유지 됩니다.  
+ 프로젝트 및 구성 속성은 템플릿 파일에 항목을 추가 하 여 생성 됩니다. 이러한 속성은 다음이 템플릿을 사용 하는 프로젝트 형식을 사용 하 여 만든 모든 프로젝트에 사용할 수 있습니다. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 프로젝트 및 둘 다 사용 MPFProj는 [빌드에 없음: MSBuild 개요](http://msdn.microsoft.com/en-us/b588fd73-a45b-4706-908f-cc131bccfbde) 템플릿 파일에 대 한 스키마입니다. 이러한 파일 각각의 구성에 대 한 소스 파일 섹션에 있습니다. 프로젝트의 속성 구성 인수가 null 문자열로 설정 하는 첫 번째 소스 파일 섹션에서 일반적으로 유지 됩니다.  
   
  다음 코드에서는 기본 MSBuild 프로젝트 파일의 시작 부분을 보여 줍니다.  
   
@@ -62,9 +60,9 @@ ms.lasthandoff: 01/22/2018
   
  `SettingsPage` 클래스 및 `Microsoft.VisualStudio.Package.ProjectNode` 클래스는 프로젝트 및 구성 속성을 유지 하도록 이러한 메서드를 제공 합니다.  
   
--   `Microsoft.VisualStudio.Package.ProjectNode.GetProjectProperty`및 `Microsoft.VisualStudio.Package.ProjectNode.SetProjectProperty` 프로젝트 속성을 유지 합니다.  
+-   `Microsoft.VisualStudio.Package.ProjectNode.GetProjectProperty` 및 `Microsoft.VisualStudio.Package.ProjectNode.SetProjectProperty` 프로젝트 속성을 유지 합니다.  
   
--   `Microsoft.VisualStudio.Package.SettingsPage.GetConfigProperty`및 `Microsoft.VisualStudio.Package.SettingsPage.SetConfigProperty` 구성 속성을 유지 합니다.  
+-   `Microsoft.VisualStudio.Package.SettingsPage.GetConfigProperty` 및 `Microsoft.VisualStudio.Package.SettingsPage.SetConfigProperty` 구성 속성을 유지 합니다.  
   
     > [!NOTE]
     >  구현에서 `Microsoft.VisualStudio.Package.SettingsPage` 및 `Microsoft.VisualStudio.Package.ProjectNode` 사용 하는 클래스는 `Microsoft.Build.BuildEngine` 가져오고 프로젝트 파일에서 프로젝트 및 구성 속성을 설정 하는 메서드를 (MSBuild).  

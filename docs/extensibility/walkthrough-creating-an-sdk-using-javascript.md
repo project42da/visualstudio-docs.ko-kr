@@ -1,23 +1,21 @@
 ---
-title: "연습: JavaScript를 사용 하 여 SDK 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: JavaScript를 사용 하 여 SDK 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: a8c89d5d-5b78-4435-817f-c5f25ca6d715
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2a53b10f3d9a69c0181a432dad491bebd177f5be
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2132269329c8b6af3ac846596adea7b3462db5bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-sdk-using-javascript"></a>연습: JavaScript를 사용 하 여 SDK 만들기
 이 연습에서는 JavaScript를 사용 하 여 간단한 수식을 SDK는 Visual Studio 확장 (VSIX)으로 만드는 방법에 설명 합니다.  이 연습에서는 이러한 부분으로 구분 됩니다.  
@@ -28,10 +26,10 @@ ms.lasthandoff: 12/22/2017
   
  JavaScript에는 없는 클래스 라이브러리 프로젝트 형식입니다. 이 연습에서는 샘플 arithmetic.js 파일이 VSIX 프로젝트에서 직접 만들어집니다. 처음 작성 하는 JavaScript 및 CSS 파일을 Windows 스토어 앱 테스트 권장 실제로-를 사용 하 여 예를 들어는 **비어 있는 앱** 템플릿-VSIX 프로젝트에 삽입 하기 전에.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
   
-##  <a name="createSimpleMathVSIX"></a>SimpleMathVSIX 확장 SDK 프로젝트를 만들려면  
+##  <a name="createSimpleMathVSIX"></a> SimpleMathVSIX 확장 SDK 프로젝트를 만들려면  
   
 1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
@@ -142,7 +140,7 @@ ms.lasthandoff: 12/22/2017
   
 21. Visual Studio를 다시 시작합니다.  
   
-##  <a name="createSampleApp"></a>SDK를 사용 하는 샘플 앱을 만들려면  
+##  <a name="createSampleApp"></a> SDK를 사용 하는 샘플 앱을 만들려면  
   
 1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
@@ -315,7 +313,7 @@ ms.lasthandoff: 12/22/2017
   
 11. 앱 빌드 및 실행 하려면 F5 키를 선택 합니다.  
   
-12. 앱 UI에에서는 두 개의 숫자를 입력 하 여 작업을 선택한 다음 선택에서  **=**  단추입니다. 올바른 결과가 나타납니다.  
+12. 앱 UI에에서는 두 개의 숫자를 입력 하 여 작업을 선택한 다음 선택에서 **=** 단추입니다. 올바른 결과가 나타납니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [소프트웨어 개발 키트 만들기](../extensibility/creating-a-software-development-kit.md)

@@ -1,24 +1,22 @@
 ---
-title: "레이어 모델 확장명 배포 | Microsoft Docs"
-ms.custom: 
+title: 레이어 모델 확장명 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, deploying extensions
 - layer models, deploying extensions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 311add860016c914aab232ffad6e3a4efadb15c9
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 95cfb5fa4764c53c14e5884cf41165f61a063337
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploy-a-layer-model-extension"></a>레이어 모델 확장명 배포
 Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이어 모델링 확장을 설치할 수 있습니다.  
@@ -43,7 +41,7 @@ Visual Studio의 다른 사용자는 Visual Studio를 사용하여 만든 레이
 2.  확장의 이름을 클릭 한 다음 클릭 **제거**합니다.  
   
 ## <a name="installing-an-extension-on-a-team-foundation-build-server"></a>Team Foundation Build 서버에 확장 설치  
- [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버 일반적으로 Visual Studio가 설치를 갖지 않으며 따라서 두 번 클릭 하 여 VSIX를 설치할 수 없습니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 설치에는 VSIX 확장 실행을 허용하는 일부 구성 요소가 포함되어 있지만 수동으로 확장을 설치해야 합니다.  
+ [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에는 일반적으로 Visual Studio가 설치되어 있지 않으므로 VSIX를 두 번 클릭하여 설치할 수 없습니다. [!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 설치에는 VSIX 확장 실행을 허용하는 일부 구성 요소가 포함되어 있지만 수동으로 확장을 설치해야 합니다.  
   
 #### <a name="to-install-your-layer-extension-on-a-includeesprbuildmiscincludesesprbuildmdmd-server"></a>[!INCLUDE[esprbuild](../misc/includes/esprbuild_md.md)] 서버에 레이어 확장을 설치하려면  
   

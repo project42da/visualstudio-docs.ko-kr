@@ -2,26 +2,22 @@
 title: 프로젝트 유형을 만들어야 하는 경우 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project types, conditions for creating
 ms.assetid: 26adc860-ee4a-4f5c-95e1-e41b207dd7e6
-caps.latest.revision: 14
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f766619054ed1912d677ac08fad511cfd3a3dcb4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 732d71e09d00cd5dbaa077b8a62e240fe401540b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="when-to-create-project-types"></a>프로젝트 형식 만들어야 하는 경우
 사용자 지정 하기 위한 기반을 제공 하는 새 프로젝트 형식을 만드는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 사용자에 대 한 합니다. 그러나 만들 새 프로젝트 형식을 필요는 없습니다 모든 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 사용자 지정 합니다. 새 프로젝트 형식을 시나리오에 필요한 지 여부를 결정 합니다. 다음 지침 도움이 됩니다.  

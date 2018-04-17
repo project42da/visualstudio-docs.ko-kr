@@ -1,28 +1,26 @@
 ---
-title: "레거시 언어 서비스의 구문 색 지정 | Microsoft Docs"
-ms.custom: 
+title: 레거시 언어 서비스의 구문 색 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], syntax highlighting
 - colorization, supporting in language services [managed package framework]
 - syntax highlighting, supporting in language services [managed package framework]
 - language services [managed package framework], colorization
 ms.assetid: 1ca1736a-f554-42e4-a9c7-fe8c3c1717df
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8ec6641859653d9f16137353ee2571006ae592c0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1d82a85958fd979a3d9d44375656b08356ef09d9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syntax-colorizing-in-a-legacy-language-service"></a>레거시 언어 서비스의 구문 색 지정
 구문 색 지정은 서로 다른 색 및 스타일에 있는 원본 파일에 표시 되는 프로그래밍 언어의 다양 한 요소를 발생 시키는 기능입니다. 이 기능을 지원 하려면 파서 또는 어휘 요소 또는 파일에 있는 토큰 유형을 식별할 수 있는 스캐너를 제공 해야 합니다. 다양 한 언어 키워드, 구분 기호 (예: 괄호나 중괄호), 및 의견 다양 한 방식에서으로 색을 지정 하 여 구분 합니다.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
  언어;에 대 한 기본 색입니다. 사용자는 원하는 작업이 무엇이 든를이 색상을 변경할 수 있습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  선언 하 고 사용 하 여 사용자 지정 색 항목 배열을 채우는 한 가지 방법은 보여 주는이 예제는 <xref:Microsoft.VisualStudio.Package.ColorableItem> 클래스입니다. 이 예에서는 24 비트 색을 사용 하는 키워드와 주석 색을 설정 합니다.  
   
 ```csharp  
@@ -107,7 +105,7 @@ namespace TestLanguagePackage
   
  색 인덱스에 저장 된는 <xref:Microsoft.VisualStudio.Package.TokenInfo> 구조는 일반적으로에서 값의 <xref:Microsoft.VisualStudio.Package.TokenColor> 키워드 및 연산자와 같은 다양 한 언어 요소에 해당 하는 명명 된 인덱스의 수를 제공 하는 열거형입니다. 사용자 지정 색 항목 목록 일치 하는 경우 항목으로 표시는 <xref:Microsoft.VisualStudio.Package.TokenColor> 열거를 사용할 수 있습니다만 열거형의 색으로 각 토큰에 대 한 합니다. 그러나 추가 색 항목 또는 그 순서 대로 기존 값을 사용 하지 않을 경우 사용자 지정 색 항목 목록에 해당 목록에는 적절 한 인덱스를 반환 하 고 필요에 따라 정렬할 수 있습니다. 인덱스를 캐스팅 그래픽을 한 <xref:Microsoft.VisualStudio.Package.TokenColor> 에 저장 하는 경우는 <xref:Microsoft.VisualStudio.Package.TokenInfo> ; 구조체 [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] 인덱스만 게 표시 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음 예제에서는 스캐너 수 3 개의 토큰 형식을 식별 하는 방법: 숫자, 문장 부호, 및 식별자 (이외의 모든 숫자 또는 문장 부호). 이 예제는 설명 목적 으로만 이며 포괄적인 파서와 스캐너 구현을 나타내지 않습니다. 있다는 가정는 `Lexer` 클래스와 `GetNextToken()` 문자열을 반환 하는 메서드입니다.  
   
 ```csharp  

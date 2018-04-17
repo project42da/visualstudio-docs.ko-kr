@@ -2,35 +2,31 @@
 title: ProjectSubType 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectSubType
 helpviewer_keywords:
 - ProjectSubType element [Visual Studio Templates]
 - <ProjectSubType> element [Visual Studio Templates]
 ms.assetid: f6895cd4-3e95-4f0e-aa9e-8c7750f46ed4
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 11effbe7e1fc6c7380ba8dbc8da3f2fe14614b5b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e4414d5f444613996312978e9033145c6b8d3d82
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="projectsubtype-element-visual-studio-templates"></a>ProjectSubType 요소(Visual Studio 템플릿)
 서식 파일에 지정 된 값의 하위 범주도 분류 하는 `ProjectType` 요소입니다.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<ProjectSubType >  
   
 ## <a name="syntax"></a>구문  
@@ -74,7 +70,7 @@ ms.lasthandoff: 12/22/2017
   
 -   `VisualBasic`: 서식 파일을 만들도록 지정는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 웹 프로젝트 또는 항목입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 장치 응용 프로그램을 대상으로 [!INCLUDE[Compact](../extensibility/includes/compact_md.md)] 버전 2.0.  
   
 ```  

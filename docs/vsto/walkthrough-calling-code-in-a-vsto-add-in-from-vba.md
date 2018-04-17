@@ -1,12 +1,10 @@
 ---
-title: "연습: VBA에서 VSTO 추가 기능에서 코드 호출 | Microsoft Docs"
-ms.custom: 
+title: '연습: VBA에서 VSTO 추가 기능에서 코드 호출 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - calling code from VBA
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 677ddfef196c79d1dd696889fd16dcfa0300ccff
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 74ca5c12acf7b3bde5a009d5a45d4741451b1760
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-calling-code-in-a-vsto-add-in-from-vba"></a>연습: VBA에서 VSTO 추가 기능의 코드 호출
   이 연습에서는 VSTO 추가 기능의 개체를 VBA(Visual Basic for Applications) 및 COM VSTO 추가 기능을 비롯한 다른 Microsoft Office 솔루션에 노출하는 방법을 보여 줍니다.  
@@ -45,7 +44,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  

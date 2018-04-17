@@ -2,28 +2,24 @@
 title: SccSetOption 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccSetOption
 helpviewer_keywords:
 - SccSetOption function
 ms.assetid: 4b5e6666-c24c-438a-a9df-9c52f58f8175
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 70fe624984adce58191ee7d354185eac0bb527ed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 916378ea594d14c9493535b3a28e72ea49ed4733
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccsetoption-function"></a>SccSetOption 함수
 이 함수는 소스 제어 플러그 인의 동작을 제어 하는 옵션을 설정 합니다.  
@@ -75,7 +71,7 @@ SCCRTN SccSetOption(
  경우 `nOption` 은 `SCC_OPT_EVENTQUEUE`, IDE가 사용 하지 않도록 설정 (또는 다시 사용 하도록 설정) 백그라운드 작업을 처리 합니다. 예를 들어,를 컴파일하는 동안 IDE 소스 제어 플러그 인을 어떤 종류의 유휴에 처리를 중지를 지시할 수 있습니다. 다시 컴파일, 후 이벤트 큐에 대 한 플러그 인을 최신 상태로 유지 하는 백그라운드 처리를 수입니다. 에 해당 하는 `SCC_OPT_EVENTQUEUE` 값 `nOption`, 두 개의 가능한 값에 대 한 `dwVal`, 즉, `SCC_OPT_EQ_ENABLE` 및 `SCC_OPT_EQ_DISABLE`합니다.  
   
 ## <a name="sccopthascancelmode"></a>SCC_OPT_HASCANCELMODE  
- 경우에 대 한 값 `nOption` 은 `SCC_OPT_HASCANCELMODE`, IDE 장기 작업을 취소할 수 있습니다. 설정 `dwVal` 를 `SCC_OPT_HCM_NO` (기본값) IDE 비 취소 모드에 있는지를 나타냅니다. 소스 제어 플러그 인은 사용자를 취소할 수를 원하는 경우 자체 "취소" 단추가 제공 해야 합니다. `SCC_OPT_HCM_YES`IDE 플러그 인 SCC 자체 "취소" 단추가 표시 하지 않아도 되므로 작업을 취소 하는 기능을 제공 함을 나타냅니다. IDE 설정 하는 경우 `dwVal` 를 `SCC_OPT_HCM_YES`에 응답할 준비가 `SCC_MSG_STATUS` 및 `DOCANCEL` 에 전송 된 메시지는 `lpTextOutProc` 콜백 함수 (참조 [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)). IDE에서이 변수를 설정 하는 경우 플러그 인 보내면 안 이러한 두 메시지입니다.  
+ 경우에 대 한 값 `nOption` 은 `SCC_OPT_HASCANCELMODE`, IDE 장기 작업을 취소할 수 있습니다. 설정 `dwVal` 를 `SCC_OPT_HCM_NO` (기본값) IDE 비 취소 모드에 있는지를 나타냅니다. 소스 제어 플러그 인은 사용자를 취소할 수를 원하는 경우 자체 "취소" 단추가 제공 해야 합니다. `SCC_OPT_HCM_YES` IDE 플러그 인 SCC 자체 "취소" 단추가 표시 하지 않아도 되므로 작업을 취소 하는 기능을 제공 함을 나타냅니다. IDE 설정 하는 경우 `dwVal` 를 `SCC_OPT_HCM_YES`에 응답할 준비가 `SCC_MSG_STATUS` 및 `DOCANCEL` 에 전송 된 메시지는 `lpTextOutProc` 콜백 함수 (참조 [LPTEXTOUTPROC](../extensibility/lptextoutproc.md)). IDE에서이 변수를 설정 하는 경우 플러그 인 보내면 안 이러한 두 메시지입니다.  
   
 ## <a name="sccoptnamechangepfn"></a>SCC_OPT_NAMECHANGEPFN  
  NOption로 설정 되어 있으면 `SCC_OPT_NAMECHANGEPFN`, 및 원본 제어 플러그 인 및 IDE 허용 플러그 인 수을 실제로 이름을 변경 하거나 소스 제어 작업을 하는 동안 파일을 이동 합니다. `dwVal` 함수 포인터 형식으로 설정 됩니다 [OPTNAMECHANGEPFN](../extensibility/optnamechangepfn.md)합니다. 소스 제어 작업을 하는 동안 플러그 인 수이 함수를 호출, 세 개의 매개 변수를 전달 합니다. 이 해당 파일 및 IDE와 관련 된 정보에 대 한 포인터의 새 이름 (정규화 된 경로로) 파일의 이전 이름 (정규화 된 경로로)입니다. 호출 하 여이 마지막 포인터에서 IDE 보냅니다 `SccSetOption` 와 `nOption` 로 설정 `SCC_OPT_USERDATA`와 `dwVal` 된 데이터를 가리키는 합니다. 이 함수에 대 한 지원을 선택 사항입니다. VSSCI 플러그-를 사용 하 여가이 기능 초기화 해야 해당 함수 포인터 및 사용자 데이터 변수를 `NULL`, 것 부여 되어 하나 rename 함수를 호출 하지 해야 합니다. 지정 된 값을 보유할 또는에 대 한 새 호출에 대 한 응답의 설정을 변경 하려면에 준비 해야 `SccSetOption`합니다. 소스 제어 명령 작업 중에 발생 하지 않고이 있지만 명령 사이 발생할 수 있습니다.  

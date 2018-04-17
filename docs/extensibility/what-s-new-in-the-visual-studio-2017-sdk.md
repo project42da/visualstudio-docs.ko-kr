@@ -1,25 +1,23 @@
 ---
-title: "기능 &#39; Visual Studio 2017 SDK의 새로운 s | Microsoft Docs"
-ms.custom: 
+title: 어떤&#39;Visual Studio 2017 SDK의 새로운 s | Microsoft Docs
+ms.custom: ''
 ms.date: 10/31/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 9efcf0a3-dbde-4cab-8ed3-425826a48b2e
-caps.latest.revision: "1"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f6b27e60f1cc47b236ed2d3516313537a6121be5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: abc1f12a5a6c7368bc47e8f4e924d109dcf87f57
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>기능 &#39;의 새로운 Visual Studio 2017 SDK
+# <a name="what39s-new-in-the-visual-studio-2017-sdk"></a>어떤&#39;의 새로운 Visual Studio 2017 SDK
 
 Visual Studio SDK는 Visual Studio 2017에 대 한 다음과 같은 새로운 기능과 업데이트 된 기능에 있습니다.
 

@@ -2,29 +2,25 @@
 title: VisibilityConstraints 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VisibilityConstraints
 helpviewer_keywords:
 - VSCT XML schema elements, VisibilityConstraints
 - VisibilityConstraints element (VSCT XML schema)
 ms.assetid: d6dcd314-6fe4-4693-a189-91fa026c7b34
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 946fc12ab7a77aa72d5d09f7ba9522723f8e18b7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f81ddd40a6de287fb40840c0473e5702d385793d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visibilityconstraints-element"></a>VisibilityConstraints 요소
 VisibilityConstraints 요소 명령 및 도구 모음 그룹의 정적 표시 여부를 결정 합니다. 에 의해 표시 유형을 제어 먼저 됩니다는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage를 로드 하지 않고 통합된 개발 환경 (IDE).  
@@ -60,7 +56,7 @@ VisibilityConstraints 요소 명령 및 도구 모음 그룹의 정적 표시 �
 |-------------|-----------------|  
 |[CommandTable 요소](../extensibility/commandtable-element.md)|IDE에 VSPackage를 제공 하는 명령 (예: 메뉴 항목, 메뉴, 도구 모음 및 콤보 상자)을 나타내는 모든 요소를 정의 합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 <VisibilityConstraints>  

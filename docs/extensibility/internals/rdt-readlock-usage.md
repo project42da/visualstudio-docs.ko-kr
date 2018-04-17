@@ -1,32 +1,30 @@
 ---
-title: "RDT_ReadLock 사용 | Microsoft Docs"
-ms.custom: 
+title: RDT_ReadLock 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - RDT_ReadLock
 - visible
 - RDT_EditLock
 - invisible
 ms.assetid: b935fc82-9d6b-4a8d-9b70-e9a5c5ad4a55
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 31c13d9255442459c884379e83b619e1f73a1c2a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 7fda2fbb4a4b03dff9d677d9c7581a4138d9fcf7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="rdtreadlock-usage"></a>RDT_ReadLock 사용
 
-<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS>Visual Studio IDE에서 현재 열려 있는 모든 문서의 목록인에 실행 중인 문서 테이블 RDT (), 문서를 잠그기 위한 논리를 제공 하는 플래그가입니다. 이 플래그는 문서를 열 때 및 사용자 인터페이스에서 표시 되거나 메모리에서 켜지 열린 문서 인지를 결정 합니다.
+<xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS> Visual Studio IDE에서 현재 열려 있는 모든 문서의 목록인에 실행 중인 문서 테이블 RDT (), 문서를 잠그기 위한 논리를 제공 하는 플래그가입니다. 이 플래그는 문서를 열 때 및 사용자 인터페이스에서 표시 되거나 메모리에서 켜지 열린 문서 인지를 결정 합니다.
 
 일반적으로 사용 <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS> 다음 중 하나가 충족 될 경우:
 
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="rdteditlock-and-document-modification"></a>RDT_EditLock 및 문서 수정
 
-이전에 언급 된 플래그는 문서를 여는 보이지 않는 양보할 나타냅니다 해당 `RDT_EditLock` 에 표시 되는 문서는 사용자가 열릴 때 **참조 하시기 바랍니다**합니다. 이 경우 사용자가가 표시는 **저장** 때 메시지를 표시에서는 표시 되 **참조 하시기 바랍니다** 닫혀 있습니다. `Microsoft.VisualStudio.Package.Automation.OAProject.CodeModel`사용 하는 구현의 <xref:Microsoft.VisualStudio.Shell.Interop.IVsInvisibleEditorManager> 경우에 서비스 작동 하는 처음에 `RDT_ReadLock` (즉, 문서를 열 때 하지 시각적으로 정보를 구문 분석)를 수행 합니다. 나중 문서를 수정 해야 하는 경우 잠금을로 업그레이드 약한 **RDT_EditLock**합니다. 표시 되는 다음 문서를 열 경우 **참조 하시기 바랍니다**, `CodeModel`의 약한 `RDT_EditLock` 해제 됩니다.
+이전에 언급 된 플래그는 문서를 여는 보이지 않는 양보할 나타냅니다 해당 `RDT_EditLock` 에 표시 되는 문서는 사용자가 열릴 때 **참조 하시기 바랍니다**합니다. 이 경우 사용자가가 표시는 **저장** 때 메시지를 표시에서는 표시 되 **참조 하시기 바랍니다** 닫혀 있습니다. `Microsoft.VisualStudio.Package.Automation.OAProject.CodeModel` 사용 하는 구현의 <xref:Microsoft.VisualStudio.Shell.Interop.IVsInvisibleEditorManager> 경우에 서비스 작동 하는 처음에 `RDT_ReadLock` (즉, 문서를 열 때 하지 시각적으로 정보를 구문 분석)를 수행 합니다. 나중 문서를 수정 해야 하는 경우 잠금을로 업그레이드 약한 **RDT_EditLock**합니다. 표시 되는 다음 문서를 열 경우 **참조 하시기 바랍니다**, `CodeModel`의 약한 `RDT_EditLock` 해제 됩니다.
 
 닫은 다음는 **참조 하시기 바랍니다** 를 선택 하 고 **아니요** 열려 있는 문서를 저장할지 묻는 메시지가 나타나면 하면 `CodeModel` 구현 문서에 있는 모든 정보를 삭제 하 고 다시 열립니다는 문서에서 디스크 켜지 다음에 문서에 자세한 정보가 필요 합니다. 이 동작에 미묘한은 사용자가 열 인스턴스는 **참조 하시기 바랍니다** 수정 보이지 않는 열린 문서의 닫고 한 다음 선택 **아니요** 문서를 저장 하 라는 메시지가 나타나면 합니다. 이 경우 문서에는 `RDT_ReadLock`, 다음 문서 실제로 닫히지 것입니다 및 수정된 된 문서 열린 채로 메모리에서 켜지 하지 문서를 저장 하는 사용자를 선택 합니다.
 

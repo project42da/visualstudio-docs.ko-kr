@@ -1,33 +1,29 @@
 ---
-title: "속성 창 단추 | Microsoft Docs"
-ms.custom: 
+title: 속성 창 단추 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Properties window, buttons
 ms.assetid: bdd2e3a7-ae6e-4e88-be1a-e0e3b7ddbbcc
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 950b9f0a7b0f38689042877a42499e23253e6486
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 361333fdfceda28ecd78dc54145fded716ee81eb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-window-buttons"></a>속성 창 단추
 개발 언어와 제품 종류에 따라 특정 단추에 대 한 도구 모음에서 기본적으로 표시 되는 **속성** 창. 모든 경우에는 **항목별**, **Alphabetized**, **속성**, 및 **속성 페이지** 단추가 표시 됩니다. Visual C# 및 Visual Basic의 경우에 **이벤트** 단추가 표시 됩니다. 특정 Visual c + + 프로젝트에는 **VC + + 메시지** 및 **VC 재정의** 단추가 표시 됩니다. 다른 프로젝트 형식에 대 한 추가 단추가 표시 될 수 있습니다. 단추에 대 한 자세한 내용은 **속성** 창 참조 [속성 창](../../ide/reference/properties-window.md)합니다.  
   
 ## <a name="implementation-of-properties-window-buttons"></a>속성 창 단추의 구현  
- 클릭는 **항목별** 단추를 Visual Studio 호출은 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> 범주별로 정렬 하려면 해당 속성 포커스가 있는 개체의 인터페이스입니다. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>구현 되는 `IDispatch` 에 제공 되는 개체는 **속성** 창.  
+ 클릭는 **항목별** 단추를 Visual Studio 호출은 <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> 범주별로 정렬 하려면 해당 속성 포커스가 있는 개체의 인터페이스입니다. <xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties> 구현 되는 `IDispatch` 에 제공 되는 개체는 **속성** 창.  
   
  음수 값이 들어 있는 미리 정의 된 속성 범주 11 가지가 있습니다. 사용자 지정 범주를 정의할 수 있지만 할당 하는 해당 양수 값 미리 정의 된 범주와 구별 하는 것이 좋습니다.  
   

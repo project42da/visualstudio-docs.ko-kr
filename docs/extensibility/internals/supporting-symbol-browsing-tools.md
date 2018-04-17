@@ -1,12 +1,10 @@
 ---
-title: "기호 검색 도구를 지 원하는 | Microsoft Docs"
-ms.custom: 
+title: 기호 검색 도구를 지 원하는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - symbols, symbol-browsing tools
 - browsers, symbol browsers
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - symbols
 - libraries, symbol-browsing tools
 ms.assetid: 70d8c9e5-4b0b-4a69-b3b3-90f36debe880
-caps.latest.revision: "26"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 78a4e910dbd2c6063f4bdf7b0dff3f27f79b218e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 08185f64310da610253dc35e69323b17ab0177fd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="supporting-symbol-browsing-tools"></a>기호 검색 도구를 지원합니다.
 **개체 브라우저**, **클래스 뷰**, **호출 브라우저** 및 **기호 찾기 결과** 도구는 Visual Studio의 기능을 검색 하는 기호를 제공 합니다. 이러한 도구는 기호 중 한 계층 구조 트리 보기를 표시 하 고 트리에서 기호 사이의 관계를 보여 줍니다. 기호 네임 스페이스, 개체, 클래스, 클래스 멤버 및 다양 한 구성 요소에 포함 된 다른 언어 요소를 나타낼 수 있습니다. 구성 요소에는 Visual Studio 프로젝트의 경우 외부 포함 [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)] 구성 요소 및 라이브러리 (.tlb) 형식입니다. 자세한 내용은 [코드 구조 보기](../../ide/viewing-the-structure-of-code.md)를 참조하세요.  

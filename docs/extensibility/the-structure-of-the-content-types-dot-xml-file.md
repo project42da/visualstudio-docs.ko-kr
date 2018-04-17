@@ -1,28 +1,26 @@
 ---
-title: "[Content_types].xml 파일의 구조 | Microsoft Docs"
-ms.custom: 
+title: '[Content_types].xml 파일의 구조 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - content_types
 - content types
 - opc
 - vsix
 ms.assetid: 9c399598-b9fa-4da7-84b5-defbf82e9335
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 08f1bb76f27f7ae0923eed43339f656c90f4856f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 38e65f484411abcfb2acd78b124b77ff3f2c49cd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-structure-of-the-contenttypesxml-file"></a>[Content_types].xml 파일의 구조
 VSIX 패키지의 콘텐츠 종류에 대 한 정보를 포함합니다. Visual Studio에서 [Content_Types].xml 파일을 사용 하 여 패키지를 설치 하지만 파일 자체를 설치 하지 않습니다.  
@@ -70,8 +68,8 @@ VSIX 패키지의 콘텐츠 종류에 대 한 정보를 포함합니다. Visual 
   
 |확장명|ContentType|  
 |---------------|-----------------|  
-|txt|텍스트/일반|  
-|pkgdef|텍스트/일반|  
+|txt|text/plain|  
+|pkgdef|text/plain|  
 |xml|text/xml|  
 |vsixmanifest|text/xml|  
 |htm 또는 html|html 텍스트 /|  
@@ -85,7 +83,7 @@ VSIX 패키지의 콘텐츠 종류에 대 한 정보를 포함합니다. Visual 
 |dll|application/octet-stream|  
 |다른 모든 파일 형식|application/octet-stream|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ### <a name="description"></a>설명  
  다음 [Content_Types].xml 파일 일반적인 VSIX 패키지를 설명합니다.  

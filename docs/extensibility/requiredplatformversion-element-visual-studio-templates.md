@@ -1,23 +1,21 @@
 ---
-title: "RequiredPlatformVersion 요소 (Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: 
+title: RequiredPlatformVersion 요소 (Visual Studio 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 6f0e4986-3157-4bba-aed3-c28413ebe976
-caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 818405e6c7df6466208db325a7417e0b5b9387e2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 35a8dc6fa57dbe88ce1e30e9be58105f28fe5641
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="requiredplatformversion-element-visual-studio-templates"></a>RequiredPlatformVersion 요소(Visual Studio 템플릿)
 프로젝트 템플릿이 제대로 작동 하는 데 필요한 운영 체제의 최소 버전을 지정 합니다. 이 요소는 만들 프로젝트 템플릿에 대 한 데 [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱.  
@@ -58,7 +56,7 @@ RequiredPlatformVersion
 ## <a name="remarks"></a>설명  
  이 텍스트는 서식 파일에 필요한 최소 운영 체제 버전을 지정 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  이 예제에서는 프로젝트 템플릿이 [!INCLUDE[win8](../debugger/includes/win8_md.md)] 이상을 대상으로 하도록 지정합니다.  
   
 ```xml  

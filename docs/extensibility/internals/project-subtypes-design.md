@@ -2,26 +2,22 @@
 title: 프로젝트 디자인 하위 유형 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, design
 ms.assetid: 405488bb-1362-40ed-b0f1-04a57fc98c56
-caps.latest.revision: 32
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 126bee146d1f53233db3c14672f80da4c0d60e9e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6a931d6509b5a8a90f371986f4ddb8955c64387d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-subtypes-design"></a>프로젝트 하위 형식 디자인
 Microsoft Build Engine (MSBuild)에 따라 프로젝트를 확장 하는 Vspackage를 사용 하는 프로젝트 하위 형식입니다. 집계 사용 하면 대량의에서 구현 되는 핵심 관리 되는 프로젝트 시스템을 다시 사용할 수 있습니다 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 하면서도 여전히 특정 시나리오에 대 한 동작을 사용자 지정 합니다.  
@@ -63,7 +59,7 @@ Microsoft Build Engine (MSBuild)에 따라 프로젝트를 확장 하는 Vspacka
  여러 수준의 프로젝트 하위 형식 집계 프로젝트 하위 형식에서 집계 하는 고급 프로젝트 하위 형식에서 더 이상 집계 되는 기본 프로젝트, 세 가지 수준으로 구성 됩니다. 일부 지원의 일부로 제공 되는 인터페이스에 중점을 두고 그림은 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 프로젝트 하위 형식 아키텍처.  
   
 ##### <a name="deployment-mechanisms"></a>배포 메커니즘  
- 속하는 기본 프로젝트 시스템의 많은 프로젝트 하위 형식에서 향상 된 기능에는 배포 메커니즘입니다. 프로젝트 하위 형식 구성 인터페이스를 구현 하 여 배포 메커니즘에 영향을 줍니다 (예: <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>)에서 QueryInterface를 호출 하 여 검색 된 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>합니다. 기본 프로젝트 프로젝트 하위 형식 및 고급 프로젝트 하위 형식 모두이 다른 구성 구현을 추가 하는 시나리오에서 호출 `QueryInterface` 고급 프로젝트 하위 형식 `IUnknown`합니다. 내부 프로젝트 하위 형식에 대 한 기본 프로젝트를 요청 하는 구성 구현 들어 있는 경우 고급 프로젝트 하위 형식 내부 프로젝트 하위 형식에서 제공 하는 구현에 위임 합니다. 다른 하나의 집계 수준에서 상태를 유지 하는 메커니즘, 프로젝트 하위 형식 수준의 모든 구현 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> 프로젝트 파일에 관련 된 XML 데이터를 비 빌드를 유지 합니다. 자세한 내용은 참조 [MSBuild 프로젝트 파일의 데이터를 유지할 수 있도록](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)합니다. <xref:EnvDTE80.IInternalExtenderProvider>automation extender 프로젝트 하위 형식에서 검색 하는 메커니즘으로 구현 됩니다.  
+ 속하는 기본 프로젝트 시스템의 많은 프로젝트 하위 형식에서 향상 된 기능에는 배포 메커니즘입니다. 프로젝트 하위 형식 구성 인터페이스를 구현 하 여 배포 메커니즘에 영향을 줍니다 (예: <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployableProjectCfg> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg>)에서 QueryInterface를 호출 하 여 검색 된 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfgProvider>합니다. 기본 프로젝트 프로젝트 하위 형식 및 고급 프로젝트 하위 형식 모두이 다른 구성 구현을 추가 하는 시나리오에서 호출 `QueryInterface` 고급 프로젝트 하위 형식 `IUnknown`합니다. 내부 프로젝트 하위 형식에 대 한 기본 프로젝트를 요청 하는 구성 구현 들어 있는 경우 고급 프로젝트 하위 형식 내부 프로젝트 하위 형식에서 제공 하는 구현에 위임 합니다. 다른 하나의 집계 수준에서 상태를 유지 하는 메커니즘, 프로젝트 하위 형식 수준의 모든 구현 <xref:Microsoft.VisualStudio.Shell.Interop.IPersistXMLFragment> 프로젝트 파일에 관련 된 XML 데이터를 비 빌드를 유지 합니다. 자세한 내용은 참조 [MSBuild 프로젝트 파일의 데이터를 유지할 수 있도록](../../extensibility/internals/persisting-data-in-the-msbuild-project-file.md)합니다. <xref:EnvDTE80.IInternalExtenderProvider> automation extender 프로젝트 하위 형식에서 검색 하는 메커니즘으로 구현 됩니다.  
   
  다음 그림에 집중 자동화 extender 구현 프로젝트 구성 찾아보기 개체 특히, 프로젝트 하위 형식에서 기본 프로젝트 시스템을 확장 하는 데 사용 합니다.  
   

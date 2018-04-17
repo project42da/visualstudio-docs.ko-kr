@@ -2,29 +2,25 @@
 title: ProjectItem 요소 (Visual Studio 항목 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#ProjectItem
 helpviewer_keywords:
 - <ProjectItem> element [Visual Studio item templates]
 - ProjectItem element [Visual Studio item templates]
 ms.assetid: 9ed94112-0c38-49df-b728-0dd2d0d1eb47
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2fe9abece45efdc206e775bc8f5e79666e334001
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 886fc57258b4ccafaa4ab8d522fad632de455e17
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="projectitem-element-visual-studio-item-templates"></a>ProjectItem 요소(Visual Studio 항목 템플릿)
 항목 템플릿에 포함 되어 있는 파일을 지정 합니다.  
@@ -32,7 +28,7 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  `ProjectItem` 요소는 프로젝트 또는 항목에 대 한 서식 파일 인지에 따라 서로 다른 특성을 수락 합니다. 이 항목에 설명 된 `ProjectItem` 항목에 대 한 요소입니다. 에 대 한 설명은 `ProjectItem` 프로젝트 템플릿에 대 한 요소 참조 [ProjectItem 요소 (Visual Studio 프로젝트 템플릿)](../extensibility/projectitem-element-visual-studio-project-templates.md)합니다.  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<프로젝트 항목 >  
   
@@ -77,7 +73,7 @@ ms.lasthandoff: 12/22/2017
  A `string` 템플릿.zip 파일에 있는 파일의 이름을 나타내는입니다.  
   
 ## <a name="remarks"></a>설명  
- `ProjectItem`선택적 자식은 `TemplateContent`합니다.  
+ `ProjectItem` 선택적 자식은 `TemplateContent`합니다.  
   
  `TargetFileName` 매개 변수를 사용 하 여 파일의 이름을 바꾸려면 특성을 사용할 수 있습니다. 예를 들어 경우 파일 `MyFile.vb` 원하는 이름을 지정 하는 파일에 사용자가 제공한 파일 이름에 따라 템플릿.zip 파일의 루트 디렉터리에 있는 **새 항목 추가** 대화 상자에서 다음 XML을 사용:  
   
@@ -87,7 +83,7 @@ ms.lasthandoff: 12/22/2017
   
  파일 이름은에 입력 한 사용자 이름에 기반 합니다 항목이 만들어지면이 템플릿에서 **새 항목 추가** 대화 상자. 다중 파일 항목 템플릿을 만들 때 유용 합니다. 자세한 내용은 참조 [하는 방법: 다중 파일 항목 템플릿 만들기](../ide/how-to-create-multi-file-item-templates.md) 및 [템플릿 매개 변수](../ide/template-parameters.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한 표준 항목 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 클래스입니다.  
   
 ```  

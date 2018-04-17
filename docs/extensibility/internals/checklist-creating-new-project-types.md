@@ -1,26 +1,24 @@
 ---
-title: "검사 목록: 새 프로젝트 형식을 만들지 | Microsoft Docs"
-ms.custom: 
+title: '검사 목록: 새 프로젝트 형식을 만들지 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], creating new types
 - project types, checklist for creating
 ms.assetid: 29eb9c3b-1933-4741-aa85-65a33f0825ba
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ea9c2ebd295fe463192c50da402240e0b1df1304
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 11707e62e99dd6a7920ad627d02e6e418c002e80
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="checklist-creating-new-project-types"></a>검사 목록: 새 프로젝트 형식 만들기
 새 프로젝트 형식을 생성 하기 위한 몇 가지 작업을 완료 해야 합니다. 다음 검사 목록을 해당 작업에 대 한 지침을 제공합니다.  

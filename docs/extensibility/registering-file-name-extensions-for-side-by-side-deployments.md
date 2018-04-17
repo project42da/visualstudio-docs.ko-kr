@@ -2,26 +2,22 @@
 title: 병렬 배포를 위한 파일 이름 확장명을 등록 하는 중입니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - file extensions, registering for side-by-side
 ms.assetid: 9ab046a2-147d-4167-aa14-7d661b1eaaa5
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 457f9e5303c71d73467815b581c091dc239c1b63
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ae7d7307ef12184dcbfc29254ec5cbae9ff55bb8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-file-name-extensions-for-side-by-side-deployments"></a>병렬 배포를 위한 파일 이름 확장명을 등록 하는 중입니다.
 병렬 환경에 배포 된, Vspackage에 대 한 올바른 버전의 파일 연관 시킬 파일 이름 확장명을 등록 해야 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 프로젝트를 열고 프로젝트에 적절 한 버전의 파일 항목을 사용 하면 등록 버전별 파일 이름 확장명을 사용 하지 않는 한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다.  

@@ -2,28 +2,24 @@
 title: SccQueryInfo 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccQueryInfo
 helpviewer_keywords:
 - SccQueryInfo function
 ms.assetid: 3973d336-a9b7-41a2-a4e6-bb8184a96aaf
-caps.latest.revision: 18
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7bda59c3bf674354e38fa306abe1fbb673f40e19
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5e2838709d7c2c2ad6e6b1eeef36c2cc0018a1a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccqueryinfo-function"></a>SccQueryInfo 함수
 이 함수는 소스 제어에서 선택한 파일의 집합에 대 한 상태 정보를 가져옵니다.  
@@ -69,11 +65,11 @@ SCCRTN SccQueryInfo(
   
  이 함수를 사용 하 여 파일을 체크 아웃, 다음을 유의 하십시오. `MSSCCI` 상태 요구 사항:  
   
--   `SCC_STATUS_OUTBYUSER`현재 사용자가 파일을 체크 아웃 하는 경우 설정 됩니다.  
+-   `SCC_STATUS_OUTBYUSER` 현재 사용자가 파일을 체크 아웃 하는 경우 설정 됩니다.  
   
--   `SCC_STATUS_CHECKEDOUT`설정할 수 없습니다 `SCC_STATUS_OUTBYUSER` 설정 됩니다.  
+-   `SCC_STATUS_CHECKEDOUT` 설정할 수 없습니다 `SCC_STATUS_OUTBYUSER` 설정 됩니다.  
   
--   `SCC_STATUS_CHECKEDOUT`파일은 체크 아웃할 때 지정 된 작업 디렉터리에만 설정 됩니다.  
+-   `SCC_STATUS_CHECKEDOUT` 파일은 체크 아웃할 때 지정 된 작업 디렉터리에만 설정 됩니다.  
   
 -   하는 경우 파일은 체크 아웃 된 현재 사용자가 작업 디렉터리가 아닌 다른 디렉터리에 `SCC_STATUS_OUTBYUSER` 설정 되어 있지만 `SCC_STATUS_CHECKEDOUT` 않습니다.  
   

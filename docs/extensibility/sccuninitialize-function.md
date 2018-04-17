@@ -2,28 +2,24 @@
 title: SccUninitialize 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccUninitialize
 helpviewer_keywords:
 - SccUninitialize function
 ms.assetid: 17cf5337-d251-4422-bc96-93fe7d48f2ae
-caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5976313939ee9efa81c71e7894da8e5f45e2d017
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 41cb6b5cec0e0d9bb4c90cc284009ab7fc693912
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccuninitialize-function"></a>SccUninitialize 함수
 이 함수를 한 할당 이나 열려 있는 연결에 대 한 이전 호출에서 만든 정리는 [SccInitialize](../extensibility/sccinitialize-function.md) 소스 제어 플러그 인을 종료 하는 준비 과정에서 합니다.  

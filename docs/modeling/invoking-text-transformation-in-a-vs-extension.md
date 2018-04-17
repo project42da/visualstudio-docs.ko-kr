@@ -2,20 +2,18 @@
 title: VS 확장에서 텍스트 변환 호출 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ae354bafe55a6d5b23caf244f7ff119a107a9b2e
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 21044b77c2c7d4215d570557fc7701d9af57bfdf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="invoking-text-transformation-in-a-vs-extension"></a>VS 확장에서 텍스트 변환 호출
 메뉴 명령 등 Visual Studio 확장을 작성 하는 경우 또는 [도메인 특정 언어](../modeling/modeling-sdk-for-visual-studio-domain-specific-languages.md), 텍스트 템플릿 서비스를 사용 하 여 텍스트 템플릿을 변형할 수 있습니다. <xref:Microsoft.VisualStudio.TextTemplating.VSHost.STextTemplating> 서비스를 가져와서 <xref:Microsoft.VisualStudio.TextTemplating.VSHost.ITextTemplating>으로 캐스팅합니다.  

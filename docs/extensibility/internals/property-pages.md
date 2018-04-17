@@ -1,27 +1,25 @@
 ---
-title: "속성 페이지 | Microsoft Docs"
-ms.custom: 
+title: 속성 페이지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - configuration options, changing properties
 - property pages
 - property pages, changing configuration options
 ms.assetid: b9b3e6e8-1e30-4c89-9862-330265dcf38c
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: cedf021321b66c47690450823a7da92cd19888eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1b08e210a57388d77859600c02c0e6a30a404884
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="property-pages"></a>속성 페이지
 사용자가 볼 수 있고 속성 페이지를 사용 하 여 프로젝트 구성에 종속 된 매개 변수와-독립적인 속성을 변경 합니다. A **속성 페이지** 에서 단추를 사용할 수는 **속성** 창 또는 선택된 된 개체의 속성 페이지 보기를 제공 하는 개체에 대 한 솔루션 탐색기 도구 모음입니다. 속성 페이지에는 솔루션 및 프로젝트에 사용할 수 있는 및 환경에 의해 만들어집니다. 그러나도 사용할 수는 구성에 종속 된 속성을 사용 하는 프로젝트 항목에 대 한 사용 가능 합니다. 프로젝트 내에서 파일을 다른 컴파일러 스위치 설정을 올바르게 빌드되려면 필요로 할 때이 기능을 사용할 수도 있습니다.  
@@ -50,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
  최상위 범주 아래에 표시 된 각 범주에는 별도 속성 페이지를 나타냅니다. Category 및 subcategory 사용할 수 있는 항목 대화 상자에서의 구현에 따라 결정 됩니다 `ISpecifyPropertyPages` 및 `IVsPropertyPage`합니다.  
   
- `IDispatch`속성 페이지 구현에 대해 표시할 속성을 가진 선택 항목 컨테이너의 항목에 대 한 개체 `ISpecifyPropertyPages` 클래스 Id의 목록을 열거할 수 있습니다. 클래스 Id를 변수로 전달 된 `ISpecifyPropertyPages` 및 속성 페이지를 인스턴스화하는 데 사용 됩니다. 클래스 Id의 목록에 전달 됩니다 `IVsPropertyPage` 대화 상자의 왼쪽의 트리 구조를 생성 합니다. 속성 페이지 다음 패스 정보로 다시는 `IDispatch` 구현 하는 개체 `ISpecifyPropertyPages` 하 고 각 페이지에 대 한 정보로 채워집니다.  
+ `IDispatch` 속성 페이지 구현에 대해 표시할 속성을 가진 선택 항목 컨테이너의 항목에 대 한 개체 `ISpecifyPropertyPages` 클래스 Id의 목록을 열거할 수 있습니다. 클래스 Id를 변수로 전달 된 `ISpecifyPropertyPages` 및 속성 페이지를 인스턴스화하는 데 사용 됩니다. 클래스 Id의 목록에 전달 됩니다 `IVsPropertyPage` 대화 상자의 왼쪽의 트리 구조를 생성 합니다. 속성 페이지 다음 패스 정보로 다시는 `IDispatch` 구현 하는 개체 `ISpecifyPropertyPages` 하 고 각 페이지에 대 한 정보로 채워집니다.  
   
  사용 하 여 찾아보기 개체의 속성이 검색 `IDispatch` 선택 컨테이너에 있는 각 개체에 대 한 합니다.  
   
@@ -73,11 +71,11 @@ ms.lasthandoff: 12/22/2017
   
      프로젝트 또는 F5 키를 누르거나 빌드 메뉴에서 실행을 선택할 때 시작 될 솔루션의 속성 페이지에서 프로젝트를 지정할 수 있습니다. 굵은 글꼴로 이름을 솔루션 탐색기에 표시 되도록 의미에서 오래 된 활성 프로젝트에 분산 됩니다.  
   
-     호출 하 여 자동화 모델의 속성으로 시작 프로젝트를 검색할 수 있습니다 `DTE.Solution.SolutionBuild.StartupProjects`합니다. 호출 vspackage에서는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> 또는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> 메서드. `IVsSolutionBuildManager`사용 하 여 서비스로 사용할 수 `QueryService` SID_SVsSolutionBuildManager에 있습니다. 자세한 내용은 참조 [프로젝트 구성 개체](../../extensibility/internals/project-configuration-object.md) 및 [솔루션 구성](../../extensibility/internals/solution-configuration.md)합니다.  
+     호출 하 여 자동화 모델의 속성으로 시작 프로젝트를 검색할 수 있습니다 `DTE.Solution.SolutionBuild.StartupProjects`합니다. 호출 vspackage에서는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> 또는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionBuildManager2.get_StartupProject%2A> 메서드. `IVsSolutionBuildManager` 사용 하 여 서비스로 사용할 수 `QueryService` SID_SVsSolutionBuildManager에 있습니다. 자세한 내용은 참조 [프로젝트 구성 개체](../../extensibility/internals/project-configuration-object.md) 및 [솔루션 구성](../../extensibility/internals/solution-configuration.md)합니다.  
   
 -   활성 솔루션 빌드 구성  
   
-     [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]구현 하 여 자동화 모델에서 사용할 수 있는 활성 솔루션 구성에 `DTE.Solution.SolutionBuild.ActiveConfiguration`합니다. 솔루션 구성은 (각 프로젝트 들어 여러 구성이 서로 다른 이름으로 여러 플랫폼에서 있을 수 있습니다) 솔루션의 각 프로젝트에 대 한 하나의 프로젝트 구성을 포함 하는 컬렉션. 솔루션의 속성 페이지와 관련 된 자세한 내용은 참조 하십시오. [솔루션 구성](../../extensibility/internals/solution-configuration.md)합니다.  
+     [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 구현 하 여 자동화 모델에서 사용할 수 있는 활성 솔루션 구성에 `DTE.Solution.SolutionBuild.ActiveConfiguration`합니다. 솔루션 구성은 (각 프로젝트 들어 여러 구성이 서로 다른 이름으로 여러 플랫폼에서 있을 수 있습니다) 솔루션의 각 프로젝트에 대 한 하나의 프로젝트 구성을 포함 하는 컬렉션. 솔루션의 속성 페이지와 관련 된 자세한 내용은 참조 하십시오. [솔루션 구성](../../extensibility/internals/solution-configuration.md)합니다.  
   
 -   현재 선택 된 프로젝트  
   

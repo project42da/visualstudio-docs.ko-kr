@@ -2,34 +2,30 @@
 title: 요소 (Visual Studio 템플릿)를 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Reference
 helpviewer_keywords:
 - Reference element [Visual Studio templates]
 - <Reference> element [Visual Studio templates]
 ms.assetid: 852772ea-c324-42e9-8c8a-6d565414a109
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1006e85611044805c0f3bd1e0035595288a5b32d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 9e0217360b2a8e9c6c8e723561aff383ed3226d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="reference-element-visual-studio-templates"></a>Reference 요소(Visual Studio 템플릿)
 항목이 프로젝트에 추가될 때 추가할 어셈블리 참조를 지정합니다.  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<참조 >  
  \<참조 >  
@@ -65,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
  `Reference` 및 `References` 요소 있는.vstemplate 파일에만 사용할 수 있습니다는 `Type` 특성 값이 `Item`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 `TemplateContent` 항목 템플릿의 요소입니다. 이 XML System.dll 및 System.Data.dll 어셈블리에 대 한 참조를 추가합니다.  
   
 ```  

@@ -1,23 +1,21 @@
 ---
-title: "XML 데이터로 작업 하는 경우 보안 고려 사항 | Microsoft Docs"
-ms.custom: 
+title: XML 데이터로 작업 하는 경우 보안 고려 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: fce2b708-1aef-454f-be59-52b76f359351
-caps.latest.revision: "2"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 55c312597afd3df9cc26ada23902f8569d23d927
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 80cb0d35e5850361d21df35dfd3f226fc03df9d7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-considerations-when-working-with-xml-data"></a>XML 데이터 사용 시 보안 고려 사항
 이 항목에서는 XML 편집기나 XSLT 디버거로 작업할 때 알아 두어야 할 보안 문제에 대해 설명합니다.  

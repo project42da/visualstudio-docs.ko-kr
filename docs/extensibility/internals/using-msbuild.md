@@ -1,27 +1,25 @@
 ---
-title: "MSBuild를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: MSBuild를 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, compiling with MSBuild
 - MSBuild, extensibility
 - packages, compiling with MSBuild
 ms.assetid: 9d38c388-1f64-430e-8f6c-e88bc99a4260
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3b9d05b85cacfcdf90a883ffd08d4dec316eaafc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4115d6f1b368734631acf3ee4395d71dbe418c07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-msbuild"></a>MSBuild를 사용 하 여
 MSBuild를 잘 정의 된 확장 가능한 XML 형식 완벽 하 게 빌드할 수, 작업, 빌드 및 빌드 구성 프로젝트 항목을 설명 하는 프로젝트 파일을 만들기 위한를 제공 합니다.  
@@ -29,7 +27,7 @@ MSBuild를 잘 정의 된 확장 가능한 XML 형식 완벽 하 게 빌드할 �
 ## <a name="general-msbuild-considerations"></a>일반적인 MSBuild 고려 사항  
  MSBuild 프로젝트 파일, 예를 들어 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] .csproj 및 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] .vbproj 파일 데이터가 있는 빌드 시 사용 하지만 또한 디자인 타임에 사용 되는 데이터를 포함할 수 있습니다. 빌드 시간 데이터는 포함 하 여 MSBuild 기본 형식을 사용 하 여 저장 [Item 요소 (MSBuild)](../../msbuild/item-element-msbuild.md) 및 [Property 요소 (MSBuild)](../../msbuild/property-element-msbuild.md)합니다. 프로젝트 형식 및 모든 관련된 프로젝트 하위 형식에 특정 한 데이터는 디자인 타임 데이터를 예약 하는 자유 형식의 XML에 저장 됩니다.  
   
- MSBuild는 구성 개체에 대 한 기본 지원을 없지만에서는 구성 관련 데이터를 지정에 대해 조건부 특성을 제공 합니다. 예:  
+ MSBuild는 구성 개체에 대 한 기본 지원을 없지만에서는 구성 관련 데이터를 지정에 대해 조건부 특성을 제공 합니다. 예를 들어:  
   
 ```xml  
 <OutputDir Condition="'$(Configuration)'=="release'">Bin\MyReleaseConfig</OutputDir>  
@@ -52,7 +50,7 @@ MSBuild를 잘 정의 된 확장 가능한 XML 형식 완벽 하 게 빌드할 �
 |`Microsoft.VisualStudio.Package.ProjectConfig`|<xref:Microsoft.VisualStudio.Shell.Interop.IVsCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg><br /><br /> <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg>|  
 |`Microsoft.VisualStudio.Package.SettingsPage`|<xref:Microsoft.VisualStudio.OLE.Interop.IPropertyPageSite>|  
   
- `Microsoft.VisualStudio.Package.ProjectElement`클래스는 MSBuild 항목에 대 한 래퍼입니다.  
+ `Microsoft.VisualStudio.Package.ProjectElement` 클래스는 MSBuild 항목에 대 한 래퍼입니다.  
   
 #### <a name="single-file-generators-vs-msbuild-tasks"></a>단일 파일 생성기 vs입니다. MSBuild 작업  
  단일 파일 생성기는 디자인 타임에만, 액세스할 수 있지만 빌드 시간 및 디자인 타임에 MSBuild 작업을 사용할 수 있습니다. 유연성을 극대화 변형 하는 코드를 생성 합니다. 따라서 MSBuild 작업을 사용 합니다. 자세한 내용은 참조 [사용자 지정 도구](../../extensibility/internals/custom-tools.md)합니다.  

@@ -2,29 +2,25 @@
 title: UsedCommands 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - UsedCommands
 helpviewer_keywords:
 - UsedCommands element (VSCT XML schema)
 - VSCT XML schema elements, UsedCommands
 ms.assetid: 5e000ee0-a919-46e9-9277-2a0659f1eb78
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 35b8821a76926da6ea9cab8ca61ef8f62e5ec72d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: aa2dd8bbcfaaa84905f60e2f4ae984f3269c7095
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="usedcommands-element"></a>UsedCommands 요소
 UsedCommand 요소와 다른 UsedCommands 그룹화 UsedCommands 요소를 그룹화합니다.  
@@ -60,7 +56,7 @@ UsedCommand 요소와 다른 UsedCommands 그룹화 UsedCommands 요소를 그�
 |-------------|-----------------|  
 |[CommandTable 요소](../extensibility/commandtable-element.md)|통합된 개발 환경 (IDE)에 VSPackage가 제공 하는 명령 (예: 메뉴 항목, 메뉴, 도구 모음 및 콤보 상자)을 나타내는 모든 요소를 정의 합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 <UsedCommands>  

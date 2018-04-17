@@ -1,12 +1,10 @@
 ---
-title: "CA1016: AssemblyVersionAttribute로 어셈블리 표시 | Microsoft Docs"
-ms.custom: 
+title: 'CA1016: AssemblyVersionAttribute로 어셈블리 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - MarkAssembliesWithAssemblyVersion
 - CA1016
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1016
 - MarkAssembliesWithAssemblyVersion
 ms.assetid: 4340aed8-d92b-4cde-a398-cb6963c6da5a
-caps.latest.revision: "19"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b716a809f1d2a5bcf73b9dda77b94d637b2e8493
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9dc5bea6f18265117c0d284ed048009ff9fdafcd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1016-mark-assemblies-with-assemblyversionattribute"></a>CA1016: AssemblyVersionAttribute로 어셈블리 표시
 |||  
@@ -55,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  제 3 자에서 또는 프로덕션 환경에서 사용 되는 어셈블리에 대 한이 규칙에서는 경고를에서 표시 하지 마십시오.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 어셈블리를는 <xref:System.Reflection.AssemblyVersionAttribute> 특성이 적용 합니다.  
   
  [!code-csharp[FxCop.Design.AssembliesVersion#1](../code-quality/codesnippet/CSharp/ca1016-mark-assemblies-with-assemblyversionattribute_1.cs)]

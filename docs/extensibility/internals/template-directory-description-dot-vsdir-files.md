@@ -1,27 +1,25 @@
 ---
-title: "템플릿 디렉터리 설명 (합니다. Vsdir) 파일 | Microsoft Docs"
-ms.custom: 
+title: 템플릿 디렉터리 설명 (합니다. Vsdir) 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - .vsdir files
 - VSDIR files
 - template directory description files
 ms.assetid: 9df51800-190e-4662-b685-fdaafcff1400
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 739dd0d41fb63c4993dad0d66737aaada1cf01c4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 14ea2e0bcc11324e6529c70c04c11874ec4a3399
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="template-directory-description-vsdir-files"></a>템플릿 디렉터리 설명 (합니다. Vsdir) 파일
 템플릿 디렉터리 설명 파일 (.vsdir)은 통합된 개발 환경 (IDE) 폴더, 마법사.vsz 파일 및 대화 상자에서 프로젝트와 연결 된 템플릿 파일을 표시할 수 있도록 하는 텍스트 파일. 내용이 파일 또는 폴더 마다 하나의 레코드를 포함 합니다. 하나의.vsdir 파일 여러 폴더, 마법사 또는 템플릿 파일을 설명 하기 위해 일반적으로 제공 되는 참조 된 위치에 있는 모든.vsdir 파일 병합 됩니다.  

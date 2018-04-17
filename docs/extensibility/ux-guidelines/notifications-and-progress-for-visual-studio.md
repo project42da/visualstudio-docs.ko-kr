@@ -1,28 +1,24 @@
 ---
-title: "알림 및 Visual Studio에 대 한 진행률 | Microsoft Docs"
-ms.custom: 
+title: 알림 및 Visual Studio에 대 한 진행률 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f0ef65e9-0f1f-45f4-9f25-6e2398691168
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 00ab0622820777f556eff667e6de5f769196e6b0
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: 237ed5c382a6ac880b0be59165a33ad338370976
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="notifications-and-progress-for-visual-studio"></a>알림 및 Visual Studio에 대 한 진행률
-##  <a name="BKMK_NotificationSystems"></a>알림 시스템  
+##  <a name="BKMK_NotificationSystems"></a> 알림 시스템  
   
 ### <a name="overview"></a>개요  
  여러 가지 방법으로에서 일어나는 Visual Studio 소프트웨어 개발 작업에 대 한 사용자에 게 알립니다.  
@@ -61,14 +57,14 @@ ms.lasthandoff: 02/01/2018
   
 ### <a name="notification-methods"></a>알림 방법  
   
-####  <a name="BKMK_ModalErrorMessageDialogs"></a>모달 오류 메시지 대화 상자  
+####  <a name="BKMK_ModalErrorMessageDialogs"></a> 모달 오류 메시지 대화 상자  
  모달 오류 메시지 대화 상자가 사용자의 휴지통 또는 확인 작업을 필요로 하는 오류 메시지를 표시 하는 데 사용 됩니다.  
   
  ![모달 오류 메시지](../../extensibility/ux-guidelines/media/0901-01_modalerrormessage.png "0901 01_ModalErrorMessage")  
   
  **데이터베이스에 잘못 된 연결 문자열의 사용자에 게 알리는 모달 오류 메시지 대화 상자**  
   
-####  <a name="BKMK_IDEStatusBar"></a>IDE 상태 표시줄  
+####  <a name="BKMK_IDEStatusBar"></a> IDE 상태 표시줄  
  사용자 상태 표시줄 텍스트를 표시 하는 가능성 최고의 컴퓨터 환경 및 Windows 플랫폼 특정 경험을 연관 시킵니다. Visual Studio 고객 기반 경향이 두 영역에서 숙련 된 경우에 잘 알고 있는 Windows 사용자는 상태 표시줄에 변경 내용을 놓칠 수 있기 때문입니다. 따라서 상태 표시줄은 적합 정보 제공의 목적 또는 중복 신호로 정보가 다른 곳에서 표시에 대 한 합니다. 알림 도구 창에서 또는 대화 상자에서 모든 종류의 사용자는 즉시 확인 해야 하는 중요 한 정보를 제공 합니다.  
   
  Visual Studio 상태 표시줄은 여러 유형의 정보 표시 될 수 있도록 설계 되었습니다. 피드백, 디자이너, 진행률 표시줄, 애니메이션 및 클라이언트에 대 한 영역으로 구분 됩니다.  
@@ -81,24 +77,24 @@ ms.lasthandoff: 02/01/2018
   
  **IDE 상태 표시줄 색상**  
   
-####  <a name="BKMK_EmbeddedInfobar"></a>포함 된 정보 표시줄  
+####  <a name="BKMK_EmbeddedInfobar"></a> 포함 된 정보 표시줄  
  정보 표시줄과 문서 창이 나 도구 창의 맨 위에 있는 시 / 조건 사용자에 게 알리는 데 사용할 수 있습니다. 또한 사용자를 쉽게 작업을 수행 하는 방법을 가질 수 있습니다 명령을 제공할 수 있습니다. 정보 표시줄 표준 셸 컨트롤입니다. 작동 되며 IDE에서 다른 사용자와 일치 하지 않는 표시를 직접 만들지는 마십시오. 참조 [정보 표시줄](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_Infobars) 구현 세부 정보 및 사용 지침에 대 한 합니다.  
   
- ![Embedded infobar](../../extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "0901-03_EmbeddedInfobar")  
+ ![정보 표시줄 포함](../../extensibility/ux-guidelines/media/0901-03_embeddedinfobar.png "0901 03_EmbeddedInfobar")  
   
  **기록 디버깅 모드에서 IDE 되 고 편집기에서 표준 디버깅 모드와 같은 방식으로 응답 하지 않을 사용자에 게 알려주는 문서 창에 포함 된 정보 표시줄입니다.**  
   
-####  <a name="BKMK_MouseCursorChanges"></a>마우스 커서 변경 사항  
+####  <a name="BKMK_MouseCursorChanges"></a> 마우스 커서 변경 사항  
  마우스 커서를 변경할 때는 VSColor 서비스에 연결 되 고 이미 커서와 연결 되어 있는 색을 사용 합니다. 커서 변경 사항 진행 중인 작업을 나타내는 데 사용할 수 있습니다으로 끌어을 끌어다 놓을 하거나 개체를 선택 하려면 사용할 수 있는 대상 사용자가 마우스로 영역을 적중 합니다.  
   
  모든 추가 입력 표현에서 때문에 사용자는 작업에 대 한 모든 사용 가능한 CPU 시간을 예약 해야 하는 경우에 사용 중/대기 마우스 커서를 사용 합니다. 다중 스레딩을 사용 하 여는 잘 작성 된 응용 프로그램으로 대부분의 경우 때 수 없는 사용자에서 다른 작업을 수행 하는 시간이 거의 발생 하지 않아야 합니다.  
   
  정보에 대 한 중복 큐 다른 곳에서 제시 된 커서 변경 사항 유용 하다는 것을 명심 하십시오. 유일한 방법으로 무언가 전달 하려고 하는 경우에 특히 사용자와 통신 하는 사용자 해결 해야 하는 커서 변경에 의존 하지 마십시오.  
   
-####  <a name="BKMK_NotSysProgressIndicators"></a>진행률 표시기  
+####  <a name="BKMK_NotSysProgressIndicators"></a> 진행률 표시기  
  진행률 표시기는 프로세스를 완료 하려면 몇 초를 사용 하는 동안 사용자에 게 피드백을 제공 하는 것에 대 한 중요 합니다. 진행률 표시기 나타날 수 있는 원위치 (시작 지점 부근 작업 진행 중), 포함 된 상태 표시줄, 모달 대화 상자 또는 Visual Studio 상태 표시줄에 합니다. 지침에 따라 [진행률 표시기](../../extensibility/ux-guidelines/notifications-and-progress-for-visual-studio.md#BKMK_ProgressIndicators) 용도 구현에 대 한 합니다.  
   
-####  <a name="BKMK_VSNotificationsToolWindow"></a>Visual Studio 알림 창  
+####  <a name="BKMK_VSNotificationsToolWindow"></a> Visual Studio 알림 창  
  Visual Studio 알림 창 라이선스, 환경 (Visual Studio), 확장명 및 업데이트 하는 방법에 대 한 개발자를 게 알립니다. 개별 알림을 해제할 사용자나 특정 종류의 알림 무시 하도록 선택할 수 있습니다. 무시 된 알림 목록에서 관리 되는 **도구 > 옵션** 페이지.  
   
  알림 창이 현재 확장할 수는 없습니다.  
@@ -107,33 +103,33 @@ ms.lasthandoff: 02/01/2018
   
  **Visual Studio 알림 도구 창**  
   
-####  <a name="BKMK_ErrorList"></a>오류 목록  
+####  <a name="BKMK_ErrorList"></a> 오류 목록  
  오류 목록에서 알림을 컴파일하는 동안 발생 또는 및 빌드 프로세스 및 해당 특정 코드 오류가 발생 하는 코드를 탐색할 수 있도록 하는 오류 및 경고를 나타냅니다.  
   
  ![오류 목록](../../extensibility/ux-guidelines/media/0901-08_errorlist.png "0901 08_ErrorList")  
   
  **Visual Studio의 오류 목록**  
   
-####  <a name="BKMK_EmbeddedStatusBars"></a>포함 된 상태 표시줄  
+####  <a name="BKMK_EmbeddedStatusBars"></a> 포함 된 상태 표시줄  
  IDE 상태 표시줄에는 현재 문서 창 및 사용자의 컨텍스트 및/또는 시스템 응답에 업데이트 된 정보로 설정 하는 클라이언트 영역 컨텍스트와 동적, 어렵습니다 정보의 연속 표시 유지 관리 또는 장기의 상태를 지정 하려면 비동기 프로세스입니다. 예를 들어 IDE 상태 표시줄에 대 한 여러 실행 및/또는 즉시 실행 가능한 항목이 선택 항목에 대 한 테스트 실행 결과 알림을 적합 하지 않습니다. 사용자가 항목을 선택 하거나 프로세스를 시작 있는 문서 또는 도구 창 컨텍스트에서 이러한 상태 정보를 유지 하는 것이 유용 합니다.  
   
  ![포함 된 상태 표시줄](../../extensibility/ux-guidelines/media/0901-09_embeddedstatusbar.png "0901 09_EmbeddedStatusBar")  
   
  **Visual Studio에 포함 된 상태 표시줄**  
   
-####  <a name="BKMK_WindowsTray"></a>Windows 트레이에서 알림  
+####  <a name="BKMK_WindowsTray"></a> Windows 트레이에서 알림  
  Windows 작업 표시줄에서 Windows 알림 영역 옆에 있는 시스템은 클록입니다. 다양 한 유틸리티와 소프트웨어 구성 요소는 사용자는 화면 해상도 변경 하거나 소프트웨어 업데이트를 가져오는 등의 시스템 차원의 작업에 대 한 상황에 맞는 메뉴를 볼 수 있도록이 영역에서 아이콘을 제공 합니다.  
   
  환경 수준 알림 Visual Studio 알림 허브 Windows 알림 영역에에서 표시 되어야 합니다.  
   
-####  <a name="BKMK_NotificationBubbles"></a>알림 거품형  
+####  <a name="BKMK_NotificationBubbles"></a> 알림 거품형  
  알림 거품형 정보는 편집기/디자이너 내에서 또는 Windows 알림 영역의 일부로 나타날 수 있습니다. 사용자에 게 이러한 거품 나중 해결할 수 있는 문제 단순한 알림에 대 한 이점은입니다. 거품은 사용자를 즉시 해결 해야 하는 중요 한 정보에 대 한 적합 하지 않습니다. 알림 거품을 사용 하 여 Visual Studio에서 수행, 경우에 따라는 [알림 거품에 대 한 Windows 바탕 화면 지침](https://msdn.microsoft.com/en-us/library/windows/desktop/dn742472\(v=vs.85\).aspx)합니다.  
   
  ![알림 거품형](../../extensibility/ux-guidelines/media/0901-07_notificationbubbles.png "0901 07_NotificationBubbles")  
   
  **Visual Studio에 사용 되는 Windows 알림 영역에서 알림 거품형**  
   
-##  <a name="BKMK_ProgressIndicators"></a>진행률 표시기  
+##  <a name="BKMK_ProgressIndicators"></a> 진행률 표시기  
   
 ### <a name="overview"></a>개요  
  진행률 표시기는 사용자에 게 피드백을 제공 하기 위한 알림 시스템의 중요 한 부분입니다. 사용자를 알 프로세스와 작업을 완료 합니다. 친숙 한 표시기 유형에 진행률 표시줄, 회전 커서 및 애니메이션된 아이콘입니다. 진행률 표시기의 배치와 유형을 보고 내용을 포함 하 여 컨텍스트 및 기간 프로세스 또는 작업 완료에 소요 될에 따라 달라 집니다.  
@@ -287,7 +283,7 @@ ms.lasthandoff: 02/01/2018
   
  **프로세스 진행 상태와 함께 출력 창 및 메시징 대기**  
   
-##  <a name="BKMK_Infobars"></a> Infobars  
+##  <a name="BKMK_Infobars"></a> 정보 표시줄  
   
 ### <a name="overview"></a>개요  
  정보 표시줄 사용자 관심 지점에 가까운 표시기를 제공 하 고 시각적 모양 및 상호 작용의 일관성을 유지 하는 공유 정보 표시줄 컨트롤을 사용 하 여 키를 누릅니다.  
@@ -476,13 +472,13 @@ public interface IVsInfoBarUIEvents
   
 ```  
   
-##  <a name="BKMK_ErrorValidation"></a>유효성 검사 오류  
+##  <a name="BKMK_ErrorValidation"></a> 유효성 검사 오류  
  필수 필드를 건너뜁니다 같은 또는 잘못 된 형식의 데이터를 입력할 때 허용 되지 않는 정보를 입력 하는 경우 유효성 검사를 사용 하 여 제어 또는 차단 팝업 오류 대화 상자를 사용 하는 대신 컨트롤 근처 피드백 하는 것이 좋습니다.  
   
 ### <a name="field-validation"></a>필드 유효성 검사  
  세 가지 구성 요소로 이루어져 있습니다 폼 및 필드 유효성 검사: 컨트롤, 아이콘 및 도구 설명 합니다. 여러 유형의 컨트롤을 사용할 수 있지만이 텍스트 상자가 예로 사용 됩니다.  
   
- ![필드 유효성 검사 &#40; 공백 &#41; ] (../../extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905 01_FieldValidation")  
+ ![유효성 검사 필드 &#40;빈&#41;](../../extensibility/ux-guidelines/media/0905-01_fieldvalidation.png "0905 01_FieldValidation")  
   
  필드가 필요한 경우 있어야 않았다는 텍스트가 워터 마크  **\<필요한 >** 필드 배경 light 해야 노란색 (VSColor: `Environment.ControlEditRequiredBackground`) 전경 회색 이어야 하 고 (VSColor: `Environment.ControlEditRequiredHintText`):  
   
@@ -515,7 +511,7 @@ public interface IVsInfoBarUIEvents
 #### <a name="in-place-warning-text"></a>내부 경고 텍스트  
  오류의 상태에 가깝게 컨트롤 오류 메시지를 저장 하는 사용 가능한 공간이 있으면이 단독 도구 설명을 사용 하 여 보다 선호 됩니다.  
   
- ![&#45; 내부 경고](../../extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905 06_InPlaceWarning")  
+ ![&#45;경고 배치](../../extensibility/ux-guidelines/media/0905-06_inplacewarning.png "0905 06_InPlaceWarning")  
   
  **내부 경고 텍스트**  
   

@@ -1,12 +1,10 @@
 ---
-title: "프로젝트 및 항목 템플릿 등록 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 및 항목 템플릿 등록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding items
 - registry, Add New Item dialog box
@@ -14,19 +12,19 @@ helpviewer_keywords:
 - Add New Project dialog box
 - registry, Add New Project dialog box
 ms.assetid: 6b909f93-d7f5-4aec-81c6-ee9ff0f31638
-caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c064a6632741eba69a553be87fb8f829063b266b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 85c22d0191d015979dff5a4845c4dda0af96ee60
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-project-and-item-templates"></a>프로젝트 및 항목 템플릿 등록
-프로젝트 형식 프로젝트 및 프로젝트 항목 템플릿이 있는 디렉터리에 등록 해야 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]프로젝트 형식에 연결 된 등록 정보를 사용 하 여에 표시할 작업을 결정 하는 **새 프로젝트 추가** 및 **새 항목 추가** 대화 상자.  
+프로젝트 형식 프로젝트 및 프로젝트 항목 템플릿이 있는 디렉터리에 등록 해야 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 프로젝트 형식에 연결 된 등록 정보를 사용 하 여에 표시할 작업을 결정 하는 **새 프로젝트 추가** 및 **새 항목 추가** 대화 상자.  
   
  서식 파일에 대 한 자세한 내용은 참조 [추가 프로젝트 및 프로젝트 항목 템플릿](../../extensibility/internals/adding-project-and-project-item-templates.md)합니다.  
   
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 "ProjectTemplatesDir"="C:\\MyProduct\\MyProjectTemplates"  
 ```  
   
-|name|형식|설명|  
+|이름|형식|설명|  
 |----------|----------|-----------------|  
 |@|REG_SZ|이러한 종류의 프로젝트의 기본 이름입니다.|  
 |DisplayName|REG_SZ|패키지에서 등록 하는 위성 DLL에서에서 검색 해야 하는 이름의 리소스 ID입니다.|  
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/22/2017
 "SortPriority"=dword:00000064  
 ```  
   
-|name|형식|설명|  
+|이름|형식|설명|  
 |----------|----------|-----------------|  
 |@|REG_SZ|항목 추가 템플릿에 대 한 리소스 ID입니다.|  
 |TemplatesDir|REG_SZ|에 대 한 대화 상자에 표시 되는 프로젝트 항목의 경로 **새 항목 추가** 마법사.|  
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/22/2017
 "SortPriority"=dword:00000064  
 ```  
   
-|name|형식|설명|  
+|이름|형식|설명|  
 |----------|----------|-----------------|  
 |CommonFindFilesFilter|REG_DWORD|공통 필터 중 하나에 있는 필터를 사용 하면는 **파일에서 찾기** 대화 상자. 공통 필터는 일반적으로 표시 되어 있지 필터 보다 먼저 필터 목록에 나열 됩니다.|  
 |CommonOpenFilesFilter|REG_DWORD|공통 필터 중 하나에 있는 필터를 사용 하면는 **열려 있는 파일** 대화 상자. 공통 필터는 일반적으로 표시 되어 있지 필터 보다 먼저 필터 목록에 나열 됩니다.|  

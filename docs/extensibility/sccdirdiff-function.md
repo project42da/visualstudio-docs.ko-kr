@@ -2,28 +2,24 @@
 title: SccDirDiff 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccDirDiff
 helpviewer_keywords:
 - SccDirDiff function
 ms.assetid: 26c9ba92-e3b9-4dd2-bd5e-76b17745e308
-caps.latest.revision: 15
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c1f6f990bb33ddbc1d7591fa3ab9837f472f8418
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7d2bea7816375da1131f557ebcbe206056f347f2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccdirdiff-function"></a>SccDirDiff 함수
 이 함수는 클라이언트 디스크에서 현재 로컬 디렉터리와 해당 소스 제어에서 프로젝트 간의 차이 표시합니다.  

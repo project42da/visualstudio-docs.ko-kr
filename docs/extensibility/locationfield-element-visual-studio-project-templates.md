@@ -2,34 +2,30 @@
 title: LocationField 요소 (Visual Studio 프로젝트 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#LocationField
 helpviewer_keywords:
 - LocationField element [Visual Studio project templates]
 ms.assetid: 6aaaa155-6ce0-4f7f-aa50-8d63d7a7c992
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1aa4acf4b0d2aeb83e4ea4feb70ace3ae55ea2b2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0877d374317e3a7142996b012ff6abefc6b94724
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="locationfield-element-visual-studio-project-templates"></a>LocationField 요소(Visual Studio 프로젝트 템플릿)
 지정 여부는 **위치** 텍스트 상자에 **새 프로젝트** 대화 상자가 활성화, 비활성화 또는 프로젝트 템플릿에 대 한 숨겨진 합니다.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<LocationField >  
   
 ## <a name="syntax"></a>구문  
@@ -71,7 +67,7 @@ ms.lasthandoff: 12/22/2017
   
  에 지정 된 값은 `Location` 요소 기본 프로젝트 시스템에서 지원할 경우에 대화 상자에 의해 적용 됩니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 템플릿의 메타데이터를 보여 줍니다.  
   
 ```  

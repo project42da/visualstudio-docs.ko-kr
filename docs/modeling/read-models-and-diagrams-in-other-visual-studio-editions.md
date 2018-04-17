@@ -1,23 +1,21 @@
 ---
-title: "다른 Visual Studio 버전에서 모델 및 다이어그램 읽기 | Microsoft Docs"
-ms.custom: 
+title: 다른 Visual Studio 버전에서 모델 및 다이어그램 읽기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - models, versions of Visual Studio
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: bec543b7adbf4ea27dca40be4ba51dc0eb622669
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 0b25a69293e98ffb56c3536683837d1320fea319
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="read-models-and-diagrams-in-other-visual-studio-editions"></a>다른 Visual Studio 버전에서 모델 및 다이어그램 읽기
 모델 생성을 지원하지 않는 Visual Studio 버전에서 모델을 열면 읽기 전용 모드로 모델이 열립니다. 이 모드에서는 다이어그램의 레이아웃을 변경할 수 있지만 모델을 변경할 수는 없습니다.  
@@ -54,7 +52,7 @@ ms.lasthandoff: 02/09/2018
   
  이러한 변경 내용을 저장할 수 있습니다. 업데이트 된 변경 내용을 다른 사용자에 게 표시 하려는 경우 전송 이상 해야 **.layout** 파일입니다.  
   
-##  <a name="RelatedTopics"></a>관련된 항목  
+##  <a name="RelatedTopics"></a> 관련된 항목  
   
 |제목|설명|  
 |-----------|-----------------|  

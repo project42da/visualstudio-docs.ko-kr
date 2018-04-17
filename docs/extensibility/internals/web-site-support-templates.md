@@ -1,27 +1,23 @@
 ---
-title: "웹 사이트 템플릿을 지 원하는 | Microsoft Docs"
-ms.custom: 
+title: 웹 사이트 템플릿을 지 원하는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - we site projects, templates
 ms.assetid: 37173c97-486b-4b3c-8ed3-cf5890c4de23
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 8be16e2bf1532b99f0c9c594394c3f0cbf8b1f75
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: af8e0d845157b475e4a5527443f55286828023cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-site-support-templates"></a>웹 사이트 지원 서식 파일
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 웹 사이트 프로젝트 및 항목 템플릿을 처음부터 새 웹 사이트 프로젝트와 항목을 만들 필요성을 제거 하 여 개발 프로세스를 가속화할 재사용 및 사용자 지정 가능한 웹 사이트 프로젝트와 항목 스텁을 제공 합니다. 대 한 자세한 내용은 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 템플릿 참조 [프로젝트 만들기 및 항목 템플릿](../../ide/creating-project-and-item-templates.md)합니다.
@@ -182,7 +178,7 @@ ms.lasthandoff: 03/02/2018
 
      마스터 페이지의 시작 하는 내용입니다. 이 마스터 페이지에는 관련된 코드 숨김 종속 파일이 있습니다.
 
--   Codebehind.*extension*
+-   코드 숨김 합니다. *확장*
 
      마스터 페이지 클래스를 구현 하는 종속 파일 코드 숨김 언어에 따라 결정 된 *확장* 이 파일의 합니다.
 

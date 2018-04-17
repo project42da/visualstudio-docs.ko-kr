@@ -1,27 +1,23 @@
 ---
-title: "연습: 서명 도움말 표시 | Microsoft Docs"
-ms.custom: 
+title: '연습: 서명 도움말 표시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - signature help/parameter info
 ms.assetid: 4a6a884b-5730-4b54-9264-99684f5b523c
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ced0eb5d3545a75ee31cff55d0e4fb9dab8c8bcb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a714fdb268f44fd2a65d04184d899ced3de53bb9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-signature-help"></a>연습: 서명 도움말 표시
 서명 도움말 (라고도 *매개 변수 정보*) 매개 변수 목록 시작 문자 (일반적으로 괄호)를 입력 한 사용자는 메서드의 서명 도구 설명에 표시 됩니다. 매개 변수 및 매개 변수 구분 기호 (쉼표)를 입력 한 도구 설명 굵게 표시 된 다음 매개 변수를 표시 하도록 업데이트 됩니다. 언어 서비스의 컨텍스트에서 시그니처 도움말를 정의할 수 또는 고유한 파일 이름 확장명 및 콘텐츠 형식을 정의 하 고 해당 형식만 대 한 시그니처 도움말을 표시할 수 또는 기존 콘텐츠 형식 (예: "text")에 대 한 시그니처 도움말를 표시할 수 있습니다. 이 연습에서는 "text" 콘텐츠 형식에 대 한 시그니처 도움말을 표시 하는 방법을 보여 줍니다.  
@@ -30,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
  이 연습에서는 하드 코드 된 식별자 집합에 대 한 시그니처 도움말을 구현 하는 방법을 보여 줍니다. 전체 구현에서는 언어는 해당 콘텐츠를 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-mef-project"></a>MEF 프로젝트 만들기  

@@ -2,26 +2,22 @@
 title: '연습: 추가 기능을 사용자 지정 편집기에 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - add features
 ms.assetid: bfe083b6-3e35-4b9c-ad4f-b30b9ff412a5
-caps.latest.revision: 38
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f3c207b80686a66d9a06b8c50321b4dce2257ada
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 14642a13553f3c4a09b86daa2d7638183fe7d8d9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-adding-features-to-a-custom-editor"></a>연습: 추가 기능 사용자 지정 편집기
 사용자 지정 편집기를 만든 후에 더 많은 기능을 추가할 수 있습니다.  
@@ -148,7 +144,7 @@ ms.lasthandoff: 12/22/2017
   
 -   메뉴 명령이 UI에 너무 많은 방지 하려면 사용 해야 기존 명령이 IDE에 새 명령을 한계 하기 전에. 공유 명령은 SharedCmdDef.vsct 및 ShellCmdDef.vsct에서 정의 됩니다. 이러한 파일의 VisualStudioIntegration\Common\Inc 하위 디렉터리에 기본적으로 설치 된 프로그램 [!INCLUDE[vsipsdk](../extensibility/includes/vsipsdk_md.md)] 설치 합니다.  
   
--   `ISelectionContainer`단일 및 다중 선택 항목을 표현할 수 있습니다. 선택한 각 개체는로 구현 된 `IDispatch` 개체입니다.  
+-   `ISelectionContainer` 단일 및 다중 선택 항목을 표현할 수 있습니다. 선택한 각 개체는로 구현 된 `IDispatch` 개체입니다.  
   
 -   IDE 구현 `IOleUndoManager` 에서 액세스할 수 있는 서비스는 <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A> 또는 통해 인스턴스화할 수 있는 개체로 <xref:Microsoft.VisualStudio.Shell.Interop.ILocalRegistry2.CreateInstance%2A>합니다. 편집기 구현은 `IOleUndoUnit` 각각에 대 한 인터페이스 `Undo` 동작 합니다.  
   

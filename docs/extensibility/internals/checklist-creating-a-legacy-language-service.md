@@ -1,26 +1,24 @@
 ---
-title: "검사 목록: 레거시 언어 서비스를 만드는 | Microsoft Docs"
-ms.custom: 
+title: '검사 목록: 레거시 언어 서비스를 만드는 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - language services
 - language services, native code
 ms.assetid: 8b73b341-a33a-4ab5-9390-178c9e563d2d
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b09176efca3a8839d5e6a741a1e161ff61cdc7ca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ad407d85213bf640b8631e9fbcb12b681ac87406
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="checklist-creating-a-legacy-language-service"></a>검사 목록: 레거시 언어 서비스 만들기
 다음 검사 목록에 대 한 언어 서비스를 만들기 위해 수행 해야 하는 기본 단계를 요약는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 코어 편집기입니다. 언어 서비스에 통합할 수 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 디버그 식 계산기를 만들어야 합니다. 자세한 내용은 참조 [CLR 식 계산기 작성](../../extensibility/debugger/writing-a-common-language-runtime-expression-evaluator.md) 에 [Visual Studio 디버거 확장성](../../extensibility/debugger/visual-studio-debugger-extensibility.md)합니다.  

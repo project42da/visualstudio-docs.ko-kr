@@ -2,33 +2,29 @@
 title: '연습: 셸 명령을 사용 하 여 편집기 확장명이 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - add a menu command
 ms.assetid: 08526848-a442-4cd4-afa1-b2eac2005adb
-caps.latest.revision: 46
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5a7f9426297ef28bdf4b829bd6697543f5aab55f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 112e78e6143d0a3bd67ff2a65814f2d77b85cdc1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-using-a-shell-command-with-an-editor-extension"></a>연습: 셸 명령을 사용 하 여 편집기 확장명이
 VSPackage에서 편집기로 메뉴 명령과 같은 기능을 추가할 수 있습니다. 이 연습에 메뉴 명령을 호출 하 여 편집기에서 텍스트 보기로 adornment를 추가 하는 방법을 보여 줍니다.  
   
  이 연습에서는 프레임 워크 MEF (Managed Extensibility) 구성 요소 부분 함께 VSPackage의 사용법을 보여줍니다. Visual Studio 셸을 사용 하 여 메뉴 명령을 등록 하는 VSPackage를 사용 해야 하 고 명령을 사용 하 여 MEF 구성 요소 부분에 액세스할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-an-extension-with-a-menu-command"></a>메뉴 명령을 사용 하 여 확장 만들기  

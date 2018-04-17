@@ -1,23 +1,21 @@
 ---
-title: "연습: c + +를 사용 하 여 SDK 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: c + +를 사용 하 여 SDK 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 36ea793b-3832-41a1-b906-69e680ad5e1d
-caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7a4091506bcd16222ff02600bd924d3526d57c38
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 33880dc3b9c359798c47c666debc3d5564524794
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-sdk-using-c"></a>연습: c + +를 사용 하 여 SDK 만들기
 이 연습에는 네이티브 c + + 수학 라이브러리 SDK, SDK로는 VSIX Visual Studio Extension (), 패키지를 만들고 다음 앱을 만드는 데 사용 하는 방법을 보여 줍니다. 이 연습에서는 다음이 단계도 구분 됩니다.  
@@ -28,10 +26,10 @@ ms.lasthandoff: 01/09/2018
   
 -   [클래스 라이브러리를 사용 하는 샘플 앱을 만들려면](../extensibility/walkthrough-creating-an-sdk-using-cpp.md#createSample)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
   
-##  <a name="createClassLibrary"></a>네이티브 및 Windows 런타임 라이브러리를 만들려면  
+##  <a name="createClassLibrary"></a> 네이티브 및 Windows 런타임 라이브러리를 만들려면  
   
 1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 01/09/2018
   
 9. 메뉴 모음에서 **빌드**, **솔루션 빌드**를 선택합니다.  
   
-##  <a name="createVSIX"></a>NativeMathVSIX 확장 프로젝트를 만들려면  
+##  <a name="createVSIX"></a> NativeMathVSIX 확장 프로젝트를 만들려면  
   
 1.  **솔루션 탐색기**, 바로 가기 메뉴를 열고 **솔루션 'NativeMath'**를 선택한 후 **추가**, **새 프로젝트**합니다.  
   
@@ -143,7 +141,7 @@ ms.lasthandoff: 01/09/2018
   
 18. 선택 된 **설치** 단추 설치가 완료 되기를 기다린 후 다음 Visual Studio를 시작 합니다.  
   
-##  <a name="createSample"></a>클래스 라이브러리를 사용 하는 샘플 앱을 만들려면  
+##  <a name="createSample"></a> 클래스 라이브러리를 사용 하는 샘플 앱을 만들려면  
   
 1.  메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트**를 차례로 선택합니다.  
   
@@ -171,7 +169,7 @@ ms.lasthandoff: 01/09/2018
   
 9. 앱을 실행 하려면 F5 키를 선택 합니다.  
   
-10. 앱에서 다음을 있는 두 숫자를 입력 하 여 작업을 선택한 다음 선택에서  **=**  단추입니다.  
+10. 앱에서 다음을 있는 두 숫자를 입력 하 여 작업을 선택한 다음 선택에서 **=** 단추입니다.  
   
      올바른 결과가 나타납니다.  
   

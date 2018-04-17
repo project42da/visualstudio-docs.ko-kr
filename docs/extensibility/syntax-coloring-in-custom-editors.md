@@ -2,26 +2,22 @@
 title: 구문 색 사용자 지정 편집기에서 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - syntax coloring
 ms.assetid: 74900b9a-baef-432a-8231-4568fb5e19ad
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 699479d162bd4f2f0d37cc43f80ff40a53e5cb44
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: 18e087e82754244b7abda530f733a6047447f4a7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="syntax-coloring-in-custom-editors"></a>사용자 지정 편집기에서 색을 지정 하는 구문
 코어 편집기를 포함 하 여 visual Studio 환경 SDK 편집기 특정 구문 항목을 식별 하는 지정 된 문서 보기에 대 한 지정 된 색으로 표시할 언어 서비스를 사용 합니다.

@@ -1,23 +1,21 @@
 ---
-title: "FAQ: VSPackage 확장에 추가 기능을 변환 | Microsoft Docs"
-ms.custom: 
+title: 'FAQ: VSPackage 확장에 추가 기능을 변환 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 3a01d333-6e31-423f-ae06-5091a4fcb7a9
-caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 43376b304637ffe59d443ee82350d5492133db2f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: daec495ee71bf27bc40174b74cd95a6df47c247f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="faq-converting-add-ins-to-vspackage-extensions"></a>FAQ: VSPackage 확장으로 추가 기능 변환
 추가 기능은 이제 사용되지 않습니다. 새 Visual Studio 확장을 하려면 VSIX 확장을 만들기 위해 필요 합니다. 다음은 VSIX 확장을 Visual Studio 추가 기능을 변환 하는 방법에 대 한 몇 가지 자주 묻는 질문에 대답 합니다.  
@@ -41,7 +39,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="can-i-convert-my-add-in-project-to-a-vsix-project"></a>VSIX 프로젝트에 내 추가 기능 프로젝트를 변환할 수 있습니까?  
  VSIX 프로젝트에서 사용 되는 메커니즘 추가 기능 프로젝트에서 되는 것과 동일 하지 않기 때문에 VSIX 프로젝트에 직접 추가 기능 프로젝트를 변환할 수 없습니다. VSIX 프로젝트 템플릿 및 적절 한 프로젝트 항목 템플릿 덕분은 비교적 쉽게 시작 하 고 VSIX 확장으로 실행 중인 코드 많이 있을 것입니다.  
   
-##  <a name="BKMK_StartDeveloping"></a>VSIX 확장을 개발을 시작 하는 방법  
+##  <a name="BKMK_StartDeveloping"></a> VSIX 확장을 개발을 시작 하는 방법  
  메뉴 명령에는 VSIX를 확인 하는 방법을 다음과 같습니다.  
   
 #### <a name="to-make-a-vsix-extension-that-has-a-menu-command"></a>메뉴 명령이 포함 된 VSIX 확장을 확인 하려면  
@@ -56,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
      에 **도구** 이라는 단추가 표시 됩니다 (실험적 인스턴스)에 메뉴 **내 명령 이름을**합니다. 이 단추를 선택 하면 메시지가 표시 됩니다: **내 TestVSPackagePackage.MenuItemCallback()**합니다.  
   
-##  <a name="BKMK_RunAddin"></a>VSPackage에서 추가 기능에서 코드를 실행 하는 방법  
+##  <a name="BKMK_RunAddin"></a> VSPackage에서 추가 기능에서 코드를 실행 하는 방법  
  추가 기능 코드는 보통 두 가지 방법 중 하나로 실행됩니다.  
   
 -   메뉴 명령을 통한 트리거. 코드는 `IDTCommandTarget.Exec` 메서드에 포함되어 있습니다.  

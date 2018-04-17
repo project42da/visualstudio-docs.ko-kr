@@ -1,22 +1,19 @@
 ---
-title: "이미지 서비스 및 카탈로그 | Microsoft Docs"
-ms.custom: 
+title: 이미지 서비스 및 카탈로그 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 34990c37-ae98-4140-9b1e-a91c192220d9
-caps.latest.revision: "37"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6f5d31e28c47dbcd4f17f7f1e1bc0ac6a8755d5b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d9b393d9dcf732d9042338dc0786d824351deca3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="image-service-and-catalog"></a>이미지 서비스 및 카탈로그
 이 cookbook 지침과 Visual Studio 이미지 서비스 및 Visual Studio 2015에 도입 된 이미지 카탈로그에 대 한 유용한 정보를 포함 합니다.  
@@ -655,12 +652,12 @@ b714fcf7-855e-4e4c-802a-1fd87144ccad,2,fda30684-682d-421c-8be4-650a2967058e,200
 ## <a name="testing-your-images"></a>이미지 테스트  
  모든 것이 제대로 작성 되었는지 확인 하 여 이미지 매니페스트를 테스트 하는 이미지 라이브러리 뷰어 도구를 사용할 수 있습니다. 에 포함 된 도구를 찾을 수 있습니다는 [Visual Studio 2015 SDK](http://msdn.microsoft.com/library/bb166441.aspx)합니다. 이 도구 및 기타 도구에 대 한 설명서가 있습니다. [여기](http://aka.ms/VSImageThemeTools)합니다.  
   
-## <a name="additional-resources"></a>추가 리소스  
+## <a name="additional-resources"></a>추가 자료  
   
 ### <a name="samples"></a>샘플  
  GitHub의 Visual Studio 샘플 중 몇 가지 다양 한 Visual Studio 확장 지점의 일환으로 이미지 서비스를 사용 하는 방법을 보여 주는 업데이트 되었습니다.  
   
- 확인 [http://github.com/Microsoft/VSSDK-Extensibility-Samples](http://github.com/Microsoft/VSSDK-Extensibility-Samples) 최신 샘플에 대 한 합니다.  
+ 확인 [ http://github.com/Microsoft/VSSDK-Extensibility-Samples ](http://github.com/Microsoft/VSSDK-Extensibility-Samples) 최신 샘플에 대 한 합니다.  
   
 ### <a name="tooling"></a>도구  
  이미지 서비스에 대 한 지원 도구 집합이 이미지 서비스를 사용 하는 UI를 작성/업데이트에 도움이 되도록 만들어졌습니다. 각 도구에 대 한 자세한 내용은 도구와 함께 제공 되는 설명서를 확인 합니다. 도구는의 일부로 포함 된 [Visual Studio 2015 SDK입니다.](http://msdn.microsoft.com/library/bb166441.aspx)  

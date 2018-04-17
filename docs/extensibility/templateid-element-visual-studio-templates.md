@@ -2,35 +2,31 @@
 title: TemplateID 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#TemplateID
 helpviewer_keywords:
 - <TemplateID> element [Visual Studio Templates]
 - TemplateID element [Visual Studio Templates]
 ms.assetid: 6ca24b4e-0325-4a9e-855e-0cbbe7361d8f
-caps.latest.revision: 15
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 192fd3725271e5cf4f68d0e502ea9207b7e89ebb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a7e431e603d0b2844431b5bffaedf7fa82bd7132
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="templateid-element-visual-studio-templates"></a>TemplateID 요소(Visual Studio 템플릿)
 항목 템플릿의 그룹으로 분류 하는 항목 템플릿에 대 한 식별자를 지정 된 [TemplateGroupID](../extensibility/templategroupid-element-visual-studio-templates.md) 요소입니다.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<TemplateID >  
   
 ## <a name="syntax"></a>구문  

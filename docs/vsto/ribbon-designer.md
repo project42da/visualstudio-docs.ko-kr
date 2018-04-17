@@ -1,13 +1,10 @@
 ---
-title: "리본 디자이너 | Microsoft Docs"
-ms.custom: 
+title: 리본 디자이너 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Designer_Microsoft.VisualStudio.Tools.Office.Ribbon.Design.RibbonDesigner
 dev_langs:
@@ -29,14 +26,14 @@ helpviewer_keywords:
 - Ribbon [Office development in Visual Studio], shortcut keys
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cab4a223f8e2d33185f37bc6ad90397ace1d56e1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c1ab841be09122a3a9e1680bf2ae3ae1c6df9aac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ribbon-designer"></a>리본 디자이너
   리본 디자이너는 시각적 디자인 캔버스입니다. 리본 디자이너를 사용 하 여 Microsoft Office 응용 프로그램의 리본에 사용자 지정 탭, 그룹 및 컨트롤을 추가 합니다.  
@@ -69,7 +66,7 @@ ms.lasthandoff: 01/10/2018
   
  이미 있는 경우는 **리본 (비주얼 디자이너)** 항목 다른 프로젝트에서 다시 사용할 수 있습니다 것을 현재 프로젝트에 사용 하 여는 **기존 항목 추가** 대화 상자.  
   
-##  <a name="DesigningRibbonLayout"></a>리본 메뉴 디자인  
+##  <a name="DesigningRibbonLayout"></a> 리본 메뉴 디자인  
  세 가지 방법으로 리본 디자이너를 엽니다.  
   
 -   **솔루션 탐색기**, 리본 코드 파일을 두 번 클릭 합니다.  
@@ -103,7 +100,7 @@ ms.lasthandoff: 01/10/2018
   
  리본 메뉴에서 다른 탭 간에 컨트롤을 끌 수 없습니다. 컨트롤을 다른 탭으로 이동 하려는 경우 사용 해야는 **잘라내기** 명령을 한 탭에서 컨트롤을 제거 하 고 컨트롤을 다른 탭을 붙여 넣습니다. 컨트롤을 잘라내어 붙여지 않습니다, 이벤트 처리기 작동 하지 않습니다. 이벤트 처리기에 다시 연결할 수 있습니다는 **속성** 창. 자세한 내용은 참조 [속성 창](/visualstudio/ide/reference/properties-window)합니다.  
   
-###  <a name="AddTabToRibbon"></a>리본에 사용자 지정 탭 추가  
+###  <a name="AddTabToRibbon"></a> 리본에 사용자 지정 탭 추가  
  리본에 사용자 지정 탭을 추가 하는 방법은 세 가지가 있습니다.  
   
 -   탭 추가 **도구 상자**합니다.  
@@ -137,10 +134,10 @@ ms.lasthandoff: 01/10/2018
   
  기본 제공 탭 사용자 지정 하는 방법에 대 한 세부 정보를 참조 하십시오. [하는 방법: 기본 제공 탭 사용자 지정](../vsto/how-to-customize-a-built-in-tab.md)합니다.  
   
-###  <a name="AddGroupsToTab"></a>탭에 그룹 추가  
+###  <a name="AddGroupsToTab"></a> 탭에 그룹 추가  
  그룹의 리본 메뉴의 컨트롤을 논리적으로 구성합니다. 탭에 그룹을 추가 합니다. 그룹에 다른 모든 컨트롤을 추가 합니다.  
   
-###  <a name="AddControlsToGroups"></a>그룹에 컨트롤 추가  
+###  <a name="AddControlsToGroups"></a> 그룹에 컨트롤 추가  
  그룹에 하나 이상의 컨트롤을 추가 합니다. 다음 표에서 각 컨트롤에 설명 합니다.  
   
 |Control|설명|  
@@ -159,7 +156,7 @@ ms.lasthandoff: 01/10/2018
 |**분할 단추**|연결 된 메뉴 단추입니다. 분할 단추는 다음 컨트롤 중 하나를 포함할 수 있습니다.<br /><br /> 단추<br />-확인란<br />-갤러리<br />메뉴<br />분할 단추<br />-토글 단추<br />구분 기호<br /><br /> 메뉴에서와 마찬가지로 분할 단추는 디자인 화면을 있습니다. 그러나 메뉴에서 달리 업데이트할 수 있습니다만 분할 단추에 있는 항목 리본이 Office 응용 프로그램에 로드 되기 전에. 분할 단추에 있는 항목을 업데이트 하는 방법에 대 한 정보를 참조 하십시오. [리본 개체 모델 개요](../vsto/ribbon-object-model-overview.md)합니다.|  
 |**토글 단추**|표시 되는 단추 상태나 누르지 않은 합니다.|  
   
-##  <a name="HandleEventsSetProperties"></a>이벤트를 처리 하 고 속성을 설정  
+##  <a name="HandleEventsSetProperties"></a> 이벤트를 처리 하 고 속성을 설정  
  리본 디자이너를 사용 하면 사용 하 여 디자인 타임에 컨트롤 속성을 설정 하는 **속성** 창. 또한 리본 가져오고 런타임에 리본 컨트롤의 속성을 설정 하는 데 사용할 수 있는 강력한 형식의 개체 모델을 노출 합니다.  
   
  컨트롤의 기본 이벤트에 대 한 이벤트 처리기를 열려는 디자이너에 있는 컨트롤을 두 번 클릭 수 있습니다. 사용 하 여 다른 모든 컨트롤 이벤트에 대 한 이벤트 처리기를 만들 수는 **속성** 창.  
@@ -168,7 +165,7 @@ ms.lasthandoff: 01/10/2018
   
  리본 이벤트를 처리 하 고 런타임에 리본 컨트롤의 속성을 설정 하는 방법에 대 한 내용은 [리본 개체 모델 개요](../vsto/ribbon-object-model-overview.md)합니다.  
   
-##  <a name="CustomizingMicrosoftOfficeButton"></a>Backstage 보기 사용자 지정  
+##  <a name="CustomizingMicrosoftOfficeButton"></a> Backstage 보기 사용자 지정  
  리본 디자이너를 사용 하 여 컨트롤을 클릭할 때 열리는 메뉴에 추가 하 고 **파일** 탭 합니다. 이 메뉴 Backstage 보기를 라고 합니다.  
   
  리본 디자이너를 사용 하 여 기본 제공 컨트롤 전후 컨트롤을 배치할 수 없습니다. 기본 제공 컨트롤에는 이미 Backstage 보기에 표시 되는 컨트롤이입니다. 기본 제공 컨트롤 전후 컨트롤을 배치 하려는 경우 리본 XML을 사용 해야 합니다. 에 대 한 자세한 내용은 **리본 (XML)**, 참조 [리본 XML](../vsto/ribbon-xml.md)합니다. Backstage 보기 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [개발자를 위한 Office 2010 Backstage 보기 소개](http://go.microsoft.com/fwlink/?LinkId=182189) 및 [개발자를 위한 Office 2010 Backstage 보기 사용자 지정](http://go.microsoft.com/fwlink/?LinkId=182188)합니다.  
@@ -177,7 +174,7 @@ ms.lasthandoff: 01/10/2018
   
  Backstage 보기에 컨트롤을 추가 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: Backstage 보기에 컨트롤 추가](../vsto/how-to-add-controls-to-the-backstage-view.md)합니다.  
   
-##  <a name="Accessibility"></a>리본 디자이너의 내게 필요한 옵션  
+##  <a name="Accessibility"></a> 리본 디자이너의 내게 필요한 옵션  
  리본 디자이너에서 컨트롤을 이동 하려면 바로 가기 키를 사용할 수 있습니다. 일부 바로 가기 키는 모든 컨트롤에 적용 하 고 메뉴를 포함 하는 컨트롤에만 적용 합니다.  
   
  다음 표에서 모든 컨트롤에 적용 되는 바로 가기 키 표시 됩니다.  

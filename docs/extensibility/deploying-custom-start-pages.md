@@ -1,26 +1,24 @@
 ---
-title: "사용자 지정 시작 페이지 배포 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 시작 페이지 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - package start page
 - deploy start page
 ms.assetid: 4a7eb360-de83-41d5-be53-3cfb160d19f9
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c52a71ebb521f84f96bead09502389f6b395e90c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6110be404ec7de9b52aef23fc9d1d77d1ae7e2c3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="deploying-custom-start-pages"></a>사용자 지정 시작 페이지를 배포합니다.
 VSIX 배포를 사용 하 여 또는 대상 컴퓨터의 올바른 위치에 파일을 복사 하 여 사용자 지정 시작 페이지를 배포할 수 있습니다.  

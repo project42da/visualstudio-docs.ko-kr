@@ -1,22 +1,19 @@
 ---
 title: Hello World | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 07/10/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f74e1ad1-1ee5-4360-9bd5-d82467b884ca
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1b7d695f2211f01ce374ee41404d5ab49abde70a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 7c531d8acddfebcd2656d6dca05b95244f54ec01
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-your-first-extension-hello-world"></a>첫 번째 확장 프로그램을 만들기: Hello World
 
@@ -33,7 +30,7 @@ Hello World 예제에서는 Visual Studio에 대 한 첫 번째 확장 프로그
 
 ![hello world 명령](media/hello-world-say-hello-world.png)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 시작 하기 전에 설치 했는지 확인는 **Visual Studio 확장 개발** VSIX 템플릿이 필요 하 고 예제 코드를 포함 하는 작업입니다.
 

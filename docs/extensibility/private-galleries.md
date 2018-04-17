@@ -1,26 +1,24 @@
 ---
-title: "전용 갤러리 | Microsoft Docs"
-ms.custom: 
+title: 전용 갤러리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSIX galleries, private
 - private galleries, VSIX
 ms.assetid: b6b3dee7-91c5-4556-9f69-0d56b675e83b
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5226ff7a4ed77333d2a6f9287f129c6a6d754cac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: baf810f644ed45433d77ddff75bf8aec93f76f1e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="private-galleries"></a>Private Galleries
 컨트롤, 템플릿 및 하도록 게시 하 여 개발 하는 도구를 공유할 수는 *전용 갤러리* 다음과 같이 조직에 대 한 인트라넷에:  
@@ -46,9 +44,9 @@ ms.lasthandoff: 12/22/2017
   
 5.  에 **URL** 필드는 Atom 피드 또는 전용 갤러리를 호스팅하는 SharePoint 사이트의 URL을 입력 합니다.  
   
-    1.  전용 갤러리에 연결 하는 호스트가 있는 경우 Atom 피드, URL이 중 하나를 유사 하 게: http://www.mywebsite/mygallery/atom.xml 합니다.  이 URL은 파일 또는 네트워크 경로를 참조할 수 있습니다.  
+    1.  전용 갤러리에 연결 하는 호스트가 있는 경우 Atom 피드, URL이 중 하나를 유사 하 게: http://www.mywebsite/mygallery/atom.xml합니다.  이 URL은 파일 또는 네트워크 경로를 참조할 수 있습니다.  
   
-    2.  URL이 하나 같습니다 호스트 SharePoint 사이트인 경우: http://mysharepoint/sites/mygallery/forms/AllItems.aspx 합니다.  
+    2.  URL이 하나 같습니다 호스트 SharePoint 사이트인 경우: http://mysharepoint/sites/mygallery/forms/AllItems.aspx합니다.  
   
 ### <a name="managing-private-galleries"></a>전용 갤러리를 관리합니다.  
  관리자가 사용할 수 전용 갤러리 여러 컴퓨터에 동시에 각 컴퓨터에서 시스템 레지스트리 수정 하 여 합니다. 이를 위해 새 레지스트리 키와 해당 값을 설명 하는.pkgdef 파일을 만듭니다.  이 파일의 형식은 다음과 같습니다.  

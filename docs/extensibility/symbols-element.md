@@ -1,26 +1,24 @@
 ---
-title: "요소를 기호 | Microsoft Docs"
-ms.custom: 
+title: 요소를 기호 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Symbols element (VSCT XML schema)
 - VSCT XML schema elements, Symbols
 ms.assetid: 1cda43d8-42a5-4b1b-a3c8-cf0401c3202f
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0a6065162ce5ba7c8f611be7a093bba7a0c55fca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 87e9159e1e392ff242407b105589f4f33341b45b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="symbols-element"></a>기호 요소
 Guid 및 다른 VSCT 요소에 의해 사용 되는 Id를 정의 합니다. 비관리 코드에 대 한이 정보는 일반적으로 제공 하 여 지정 된 헤더 파일에서 [Extern 요소](../extensibility/extern-element.md)합니다. 코드에서는이 정보를 정의 하는 기호 요소의 자식 요소를 관리 합니다.  
@@ -60,7 +58,7 @@ Guid 및 다른 VSCT 요소에 의해 사용 되는 Id를 정의 합니다. 비�
 |-------------|-----------------|  
 |[CommandTable 요소](../extensibility/commandtable-element.md)|.Vsct 파일의 루트 요소입니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 <Symbols>  

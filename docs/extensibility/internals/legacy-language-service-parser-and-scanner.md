@@ -1,26 +1,24 @@
 ---
-title: "레거시 언어 서비스 파서 및 스캐너 | Microsoft Docs"
-ms.custom: 
+title: 레거시 언어 서비스 파서 및 스캐너 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - parsers, language services [managed package framework]
 - language services [managed package framework], Parsers
 ms.assetid: 1ac3de27-a23b-438d-9593-389e45839cfa
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 755516fb9d341193005ad39e419e708b6d28867c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a838b193689d480c7e02053dd67adb6bfbd2314f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="legacy-language-service-parser-and-scanner"></a>레거시 언어 서비스 파서 및 스캐너
 파서가 언어 서비스의 핵심입니다. 관리 되는 패키지 프레임 워크 (MPF) 언어 클래스에는 표시 되 고 코드에 대 한 정보를 선택할 언어 파서를 필요 합니다. 파서는 텍스트 어휘 토큰으로 분리 하 고 유형과 기능으로 이러한 토큰을 식별 합니다.  

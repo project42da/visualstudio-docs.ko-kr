@@ -2,34 +2,30 @@
 title: WizardExtension 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#WizardExtension
 helpviewer_keywords:
 - WizardExtension element [Visual Studio Templates]
 - <WizardExtension> element [Visual Studio Templates]
 ms.assetid: d54b01c1-50f5-4b65-828c-686e2321cc8c
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: bb0922d0d3666d1bb00f01c0151dfa14c24a3931
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5544f0d97fec3ae0b3102ed02c284b9c22a98b54
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="wizardextension-element-visual-studio-templates"></a>WizardExtension 요소(Visual Studio 템플릿)
 템플릿 마법사 사용자 지정 하기 위한 등록 요소를 포함 합니다.  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  ...  
  \<WizardExtension >  
   
@@ -64,7 +60,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="remarks"></a>설명  
  `WizardExtension`은 `VSTemplate`의 선택적 자식 요소입니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한 표준 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  

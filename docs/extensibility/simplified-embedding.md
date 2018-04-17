@@ -2,26 +2,22 @@
 title: 포함 하는 간소화 된 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - simple view embedding
 ms.assetid: f1292478-a57d-48ec-8c9e-88a23f04ffe5
-caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 183dc4ad9d7ea1a2f6855be050ad8459a3f801ac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 01b06a0a63059c39035d15221feb201d3674d4a7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="simplified-embedding"></a>포함 하는 간소화 된
 해당 문서 뷰 개체 (즉, 수행의 자식) 부모가 되는 경우 편집기에서 활성화 되어 단순화 포함 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)], 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsWindowPane> 인터페이스는 창 명령을 처리 하기 위해 구현 됩니다. 간단한 포함 편집기 활성 컨트롤을 호스트할 수 없습니다. 간소화 된 포함 된 편집기를 만드는 데 개체는 다음 그림에 표시 됩니다.  

@@ -2,29 +2,25 @@
 title: VSCodeWindow 개체 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VSCodeWindow
 helpviewer_keywords:
 - views [Visual Studio SDK], VSCodeWindow object
 - VsCodeWindow object
 ms.assetid: cf5fe926-e784-4098-bc01-cac49c7c55c6
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2de0998a3d89c1af3e18fa60aa3f8511716f6165
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c2b1d85eea974e67ae37f8d4d5bfd7aa0069e92b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vscodewindow-object"></a>VSCodeWindow 개체
 코드 창은 일반적으로 하나 이상의 텍스트 뷰를 포함할 수 있는 특수 한 문서 창에서 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView> 개체입니다.  

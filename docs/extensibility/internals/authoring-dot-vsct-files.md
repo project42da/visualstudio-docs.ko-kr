@@ -2,26 +2,22 @@
 title: 제작 합니다. Vsct 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, manual authoring
 ms.assetid: e9f715dc-12b7-439b-bdf3-f3dc75e62f1c
-caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fa274c807aaa1ed212a7b283a35e510615561eb5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 65fc62d5685ca7c81b3ebb7f524db3cdbebe72c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="authoring-vsct-files"></a>제작 합니다. Vsct 파일
 이 문서에는 Visual Studio 통합된 개발 환경 (IDE)에 메뉴 항목, 도구 모음 및 기타 사용자 인터페이스 (UI) 요소를 추가 하려면.vsct 파일을 작성 하는 방법을 보여 줍니다. 이미.vsct 파일을 맺지 않은 Visual Studio 패키지 (VSPackage)에 UI 요소를 추가 하는 경우 다음이 단계를 사용 합니다.  
@@ -234,7 +230,7 @@ ms.lasthandoff: 12/22/2017
  메뉴 및 단추 유형도 특수 동작을 포함합니다. 다음 표에서 몇 가지 특수 한 메뉴 및 단추 종류를 설명합니다. 다른 형식의 참조는 `types` 특성에 대 한 설명을 [메뉴 요소](../../extensibility/menu-element.md), [Button 요소](../../extensibility/button-element.md), 및 [콤보 요소](../../extensibility/combo-element.md)합니다.  
   
  콤보 상자  
- 콤보 상자에는 도구 모음에서 사용할 수 있는 드롭다운 목록입니다. 콤보 상자에는 UI를 추가 하려면 만듭니다는 [바로 가기 단축키 +](../../extensibility/combos-element.md) 요소에는 `Commands` 요소입니다. 그런 다음에 추가 `Combos` 요소는 `Combo` 추가할 각 콤보 상자에 대 한 요소입니다. `Combo`요소에 동일한 특성 및 자식으로 있는 `Button` 요소 또한 `DefaultWidth` 및 `idCommandList` 특성입니다. `DefaultWidth` 너비를 픽셀 단위로 설정 하는 특성 및 `idCommandList` 특성 콤보 상자를 채우는 데 사용 되는 명령 ID를 가리킵니다. 자세한 내용은 참조는 `Combo` 요소 설명서입니다.  
+ 콤보 상자에는 도구 모음에서 사용할 수 있는 드롭다운 목록입니다. 콤보 상자에는 UI를 추가 하려면 만듭니다는 [바로 가기 단축키 +](../../extensibility/combos-element.md) 요소에는 `Commands` 요소입니다. 그런 다음에 추가 `Combos` 요소는 `Combo` 추가할 각 콤보 상자에 대 한 요소입니다. `Combo` 요소에 동일한 특성 및 자식으로 있는 `Button` 요소 또한 `DefaultWidth` 및 `idCommandList` 특성입니다. `DefaultWidth` 너비를 픽셀 단위로 설정 하는 특성 및 `idCommandList` 특성 콤보 상자를 채우는 데 사용 되는 명령 ID를 가리킵니다. 자세한 내용은 참조는 `Combo` 요소 설명서입니다.  
   
  MenuController  
  메뉴 컨트롤러는 옆쪽 화살표가 있는는 단추입니다. 화살표를 클릭 하면 목록이 열립니다. 메뉴 컨트롤러는 UI를 추가 하려면 만듭니다는 `Menu` 요소 집합과 해당 `type` 특성을 **MenuController** 또는 **MenuControllerLatched**원하는 동작에 따라 합니다. 메뉴 컨트롤러를 채우려면의 부모로 설정할는 `Group` 요소입니다. 메뉴 컨트롤러는 해당 그룹의 모든 자식 드롭 다운 목록에 표시 됩니다.  

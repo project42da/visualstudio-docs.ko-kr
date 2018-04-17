@@ -1,12 +1,10 @@
 ---
-title: "디버깅에 대 한 SDK 도우미 | Microsoft Docs"
-ms.custom: 
+title: 디버깅에 대 한 SDK 도우미 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - dbgmetric.lib
 - registry, Debugging SDK
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - dbgmetric.h
 - metrics [Debugging SDK]
 ms.assetid: 80a52e93-4a04-4ab2-8adc-a7847c2dc20b
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b87756f52cb1506be30014331d63eec5d15beff4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e80344b8cec1bc013e044be39638879b049c8d0a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sdk-helpers-for-debugging"></a>디버깅을 위한 도우미 SDK
 이러한 함수 및 선언에는 c + +에서 디버그 엔진, 식 계산기 및 기호 공급자를 구현 하기 위한 전역 도우미 함수입니다.  
@@ -276,7 +274,7 @@ HRESULT EnumMetricSections(
 >  모든 Guid의 형식으로 저장 되며 `{GUID}`합니다. 예를 들어, `{123D150B-FA18-461C-B218-45B3E4589F9B}`을 입력합니다.  
   
 ### <a name="debug-engines"></a>디버그 엔진  
- 다음은 레지스트리에서 디버그 엔진 메트릭의 구성 합니다. `Engine`디버그 엔진에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]* 위의 레지스트리 하위 트리에 있는 합니다.  
+ 다음은 레지스트리에서 디버그 엔진 메트릭의 구성 합니다. `Engine` 디버그 엔진에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]* 위의 레지스트리 하위 트리에 있는 합니다.  
   
  `Engine`\  
   
@@ -303,7 +301,7 @@ HRESULT EnumMetricSections(
 |*[포트 공급자 guid]*|있는 경우 포트 공급자의 GUID입니다. 많은 디버그 엔진 기본 포트 공급자를 사용 하 여 및 자신의 공급 업체를 지정 하지 마십시오. 이 경우, 하위 키 `PortSupplier` 없습니다.|  
   
 ### <a name="port-suppliers"></a>포트 공급자  
- 다음은 레지스트리에서 포트 공급 업체 메트릭의 구성 합니다. `PortSupplier`포트 공급자에 대 한 메트릭 형식 이름 및 해당 *[메트릭 유형]*합니다.  
+ 다음은 레지스트리에서 포트 공급 업체 메트릭의 구성 합니다. `PortSupplier` 포트 공급자에 대 한 메트릭 형식 이름 및 해당 *[메트릭 유형]*합니다.  
   
  `PortSupplier`\  
   
@@ -321,7 +319,7 @@ HRESULT EnumMetricSections(
 |*[클래스 guid]*|이 포트 공급자를 구현 하는 클래스의 GUID|  
   
 ### <a name="symbol-providers"></a>기호 공급자  
- 다음은 레지스트리에서 기호 공급 업체 메트릭의 구성 합니다. `SymbolProvider`기호 공급자에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
+ 다음은 레지스트리에서 기호 공급 업체 메트릭의 구성 합니다. `SymbolProvider` 기호 공급자에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
   
  `SymbolProvider`\  
   
@@ -349,7 +347,7 @@ HRESULT EnumMetricSections(
 |*[클래스 guid]*|이 기호 공급자를 구현 하는 클래스의 GUID|  
   
 ### <a name="expression-evaluators"></a>식 계산기  
- 다음은 레지스트리에서 식 계산기 메트릭의 구성 합니다. `ExpressionEvaluator`식 계산기에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
+ 다음은 레지스트리에서 식 계산기 메트릭의 구성 합니다. `ExpressionEvaluator` 식 계산기에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
   
 > [!NOTE]
 >  에 대 한 메트릭 유형을 `ExpressionEvaluator` 식 계산기에 대 한 모든 메트릭 변경 내용을 적절 한 식 계산기 메트릭 함수를 통해 진행 될를 가정 하는 대로 dbgmetric.h에 정의 되지 않았습니다 (의 레이아웃은 `ExpressionEvaluator` 다소 하위 키를 복잡 하 고 dbgmetric.lib 내 세부 정보가 숨겨져 있으므로).  
@@ -380,7 +378,7 @@ HRESULT EnumMetricSections(
 |*[디버그 엔진 guid]*|이 식 계산기를 사용 하는 디버그 엔진의 GUID|  
   
 ### <a name="expression-evaluator-extensions"></a>식 계산기 확장  
- 다음은 식 계산기 확장 메트릭 레지스트리에 구성 합니다. `EEExtensions`이 식에 대 한 메트릭 형식 이름이 계산기 확장 하 고 해당 *[메트릭 유형]*합니다.  
+ 다음은 식 계산기 확장 메트릭 레지스트리에 구성 합니다. `EEExtensions` 이 식에 대 한 메트릭 형식 이름이 계산기 확장 하 고 해당 *[메트릭 유형]*합니다.  
   
  `EEExtensions`\  
   
@@ -395,7 +393,7 @@ HRESULT EnumMetricSections(
 |*[확장 guid]*|식 계산기 확장의 GUID|  
   
 ### <a name="exceptions"></a>예외  
- 다음은 레지스트리에서 예외 메트릭 구성 합니다. `Exception`예외에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
+ 다음은 레지스트리에서 예외 메트릭 구성 합니다. `Exception` 예외에 대 한 메트릭 유형 이름이 며 해당 *[메트릭 유형]*합니다.  
   
  `Exception`\  
   

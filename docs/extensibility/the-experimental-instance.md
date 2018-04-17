@@ -1,27 +1,25 @@
 ---
-title: "실험적 인스턴스 | Microsoft Docs"
-ms.custom: 
+title: 실험적 인스턴스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - experimental builds
 - VSPackages, experimental builds
 - VSIP, experimental builds
 ms.assetid: ead0df4e-6f88-4b42-9297-581b7902f050
-caps.latest.revision: "36"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a656baf951e573a5913960b19c1b583797de090f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: c80c071866e46528fe7edd287e082df3af166973
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-experimental-instance"></a>실험적 인스턴스
 Visual Studio 개발 환경에서 테스트 되지 않은 응용 프로그램을 변경할 수 있는 데이터를 보호 하려면 VSSDK 실험 하는 데 사용할 수 있는 한 실험적 공간을 제공 합니다. 일반적으로 Visual Studio를 사용 하 여 새 응용 프로그램을 개발 하지만이 실험적 인스턴스를 사용 하 여 실행할 수 있습니다.  

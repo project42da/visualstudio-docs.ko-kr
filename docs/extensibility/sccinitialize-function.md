@@ -2,28 +2,24 @@
 title: SccInitialize 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccInitialize
 helpviewer_keywords:
 - SccInitialize function
 ms.assetid: 5bc0d28b-2c68-4d43-9e51-541506a8f76e
-caps.latest.revision: 14
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6bf217218dcc1830cc2acf2833aa7e31e85745d9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1146573f3d969ffc5cd56576ba92faa4e6ffdce0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccinitialize-function"></a>SccInitialize 함수
 이 함수 소스 제어 플러그 인을 초기화 하 고 기능 및 통합된 개발 환경 (IDE)에 대 한 제한을 제공 합니다.  
@@ -85,7 +81,7 @@ SCCRTN SccInitialize (
   
  `lpCallerName` 및 `lpSccName` 매개 변수 이름은 교환 하는 소스 제어 플러그 인 및 IDE를 사용 합니다. 실제로 메뉴 또는 대화 상자에 표시 될 수 또는 여러 인스턴스를 구별할 수에 단순히 이러한 이름은 사용할 수 있습니다.  
   
- `lpAuxPathLabel` 매개 변수는 솔루션 파일에 저장 되 고 소스 제어 플러그 인에 대 한 호출에 전달 하는 보조 프로젝트 경로 확인 하는 주석으로 사용 되는 문자열은 [SccOpenProject](../extensibility/sccopenproject-function.md)합니다. [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)]문자열을 사용 하 여 "SourceSafe 프로젝트:"; 이 특정 문자열을 사용 하 여 다른 소스 제어 플러그 인이 포함 되지 않습니다 해야 합니다.  
+ `lpAuxPathLabel` 매개 변수는 솔루션 파일에 저장 되 고 소스 제어 플러그 인에 대 한 호출에 전달 하는 보조 프로젝트 경로 확인 하는 주석으로 사용 되는 문자열은 [SccOpenProject](../extensibility/sccopenproject-function.md)합니다. [!INCLUDE[vsvss](../extensibility/includes/vsvss_md.md)] 문자열을 사용 하 여 "SourceSafe 프로젝트:"; 이 특정 문자열을 사용 하 여 다른 소스 제어 플러그 인이 포함 되지 않습니다 해야 합니다.  
   
  `lpSccCaps` 매개 변수는 소스 제어를 제공 플러그 인에 대 한 플러그 인 기능을 나타내는 비트를 저장 합니다. (기능 비트 전체 목록을 참조 하십시오. [기능 플래그](../extensibility/capability-flags.md)). 예를 들어, 기능을 설정 하는 플러그 인을 호출자에 게 제공 콜백 함수로 결과 기록 하도록 하는 플러그 인 계획 SCC_CAP_TEXTOUT 비트 경우. 버전 제어 결과 대 한 창을 만들지 IDE를 신호로 알리는 것이 합니다.  
   

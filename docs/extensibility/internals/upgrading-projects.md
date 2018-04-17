@@ -1,27 +1,25 @@
 ---
-title: "프로젝트 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 업그레이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - upgrading VSPackages
 - upgrading applications, strategies
 - VSPackages, upgrade support
 ms.assetid: e01cb44a-8105-4cf4-8223-dfae65f8597a
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 060823a04127480ef8de387200425a34c6ef1178
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: cb64d71a50cb59a3c981dd87695bbb685f793761
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-projects"></a>프로젝트 업그레이드
 프로젝트 모델에의 한 버전에서 변경 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다음 해야 최신 버전에서 실행 될 수 있도록 프로젝트 및 솔루션 업그레이드할 수 있습니다. [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 사용자의 프로젝트에 업그레이드 지원을 구현 하는 데 사용할 수 있는 인터페이스를 제공 합니다.  
@@ -57,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
  백업 하 고 프로젝트를 업그레이드 하는 방법에 대 한 자세한 내용은 vsshell2.idl에 IVsProjectUpgrade에 대 한 주석을 참조 합니다.  
   
-## <a name="upgrading-custom-projects"></a>사용자 지정 프로젝트 업그레이드
+## <a name="upgrading-custom-projects"></a> 사용자 지정 프로젝트 업그레이드
 제품의 다른 Visual Studio 버전 간에 프로젝트 파일에 있는 정보를 변경하는 경우 이전 버전에서 새 버전으로의 프로젝트 파일 업그레이드를 지원해야 합니다. 에 참여할 수 있도록 업그레이드를 지원 하려면는 **Visual Studio 변환 마법사**, 구현에서 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 인터페이스입니다. 이 인터페이스에는 복사 업그레이드에 사용할 수 있는 메커니즘만 포함되어 있습니다. 프로젝트 업그레이드는 솔루션의 일부가 열릴 때 수행됩니다. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 인터페이스 프로젝트 팩터리에서 구현 되거나 프로젝트 팩터리에서 얻을 수 이상 있어야 합니다.  
   
  사용 하는 이전 메커니즘은 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 인터페이스는 계속 지원 하지만 프로젝트를 열고의 일부로 프로젝트 시스템을 개념적으로 업그레이드 합니다. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 인터페이스 따라서 호출한는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 환경 경우라도는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 인터페이스 또는 구현 합니다. 이 방법을 사용할 수 있습니다. <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 복사본을 구현 하 고 프로젝트 업그레이드의 전용 부분 위임할 수 (수 있는 새 위치)에서 전체를 수행 하는 작업의 나머지 부분에서 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 인터페이스입니다.  
@@ -92,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
 5.  메서드를 사용 하 여 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUpgradeLogger> 업그레이드를 게시 하려면 Visual Studio 마이그레이션 마법사를 사용 하 여 사용자에 대 한 메시지를 관련 됩니다.  
   
-6.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileUpgrade>인터페이스는 모든 종류의 프로젝트 업그레이드의 일부로 발생 해야 하는 파일 업그레이드를 구현 하는 데 사용 됩니다. 이 인터페이스에서 호출 하지 않으면 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>, 프로젝트 시스템, 하지만 기본 프로젝트 시스템의 일부인 파일을 업그레이드 하는 메커니즘을 직접 미처 인식 하지 못할 때 제공 됩니다. 예를 들어 나머지 프로젝트 시스템을 처리하는 개발 팀이 컴파일러 관련 파일 및 속성을 처리하지 않는 경우 이러한 상황이 발생할 수 있습니다.  
+6.  <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileUpgrade> 인터페이스는 모든 종류의 프로젝트 업그레이드의 일부로 발생 해야 하는 파일 업그레이드를 구현 하는 데 사용 됩니다. 이 인터페이스에서 호출 하지 않으면 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory>, 프로젝트 시스템, 하지만 기본 프로젝트 시스템의 일부인 파일을 업그레이드 하는 메커니즘을 직접 미처 인식 하지 못할 때 제공 됩니다. 예를 들어 나머지 프로젝트 시스템을 처리하는 개발 팀이 컴파일러 관련 파일 및 속성을 처리하지 않는 경우 이러한 상황이 발생할 수 있습니다.  
   
 ### <a name="ivsprojectupgrade-implementation"></a>IVsProjectUpgrade 구현  
  프로젝트 시스템을 구현 하는 경우 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 만에 참여 하지 수는 **Visual Studio 변환 마법사**합니다. 그러나 구현 하는 경우에는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgradeViaFactory> 인터페이스를 위임할 수 있습니다 여전히 파일 업그레이드를 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectUpgrade> 구현 합니다.  

@@ -1,5 +1,5 @@
 ---
-title: "Assign 활동 디자이너 | Microsoft Docs"
+title: Assign 활동 디자이너 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: ba3feb3c-f144-47ea-926d-cf752b804153
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 875a05866a85084b58236ab6bf918201d1848b1d
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: e5992420bb83323525e0b36bbc7d3b383ca9a3a2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assign-activity-designer"></a>Assign 활동 디자이너
 **할당** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.Activities.Statements.Assign> 활동입니다.
@@ -36,9 +36,9 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.Activities.Statements.Assign.To%2A>|True|<xref:System.Activities.Statements.Assign.Value%2A>가 할당되는 변수 또는 인수입니다. 이것은 유효한 Visual Basic 식별자여야 합니다. Visual Basic 식을 입력 속성을 설정 하는 **를** 상자에 **할당** 활동 디자이너나 속성 표의 합니다.|
 |<xref:System.Activities.Statements.Assign.Value%2A>|True|변수에 할당된 값입니다. 설정 하는 <xref:System.Activities.Statements.Assign.Value%2A>, Visual Basic 식을 입력는 **값** 상자에 **할당** 활동 디자이너나 속성 표의 합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [Primitives](../workflow-designer/primitives-activity-designers.md)
-- [Delay](../workflow-designer/delay-activity-designer.md)
+- [지연](../workflow-designer/delay-activity-designer.md)
 - [InvokeMethod](../workflow-designer/invokemethod-activity-designer.md)
 - [WriteLine](../workflow-designer/writeline-activity-designer.md)

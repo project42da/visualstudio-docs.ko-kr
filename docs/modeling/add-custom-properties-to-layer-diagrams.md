@@ -2,22 +2,20 @@
 title: 종속성 다이어그램에 사용자 지정 속성 추가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - dependency diagrams, adding custom properties
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: f05c5f5a16b0d44794bf6fdcc6990a206dec30f5
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: fbdf0587b6bba938ddc178842939c14c9079a2a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="add-custom-properties-to-dependency-diagrams"></a>종속성 다이어그램에 사용자 지정 속성 추가
 종속성 다이어그램에 대 한 확장 프로그램 코드를 작성할 때 종속성 다이어그램에서 모든 요소를 사용 하 여 값을 저장할 수 있습니다. 값은 다이어그램이 저장되고 다시 열릴 때 유지됩니다. 이러한 속성에 나타날 수 있습니다는 **속성** 창이 보고 편집할 수 있도록 합니다. 예를 들어 사용자가 각 레이어에 대한 정규식을 지정하고, 각 레이어의 클래스 이름이 사용자가 지정한 패턴을 따르는지 확인하기 위해 유효성 검사 코드를 작성하도록 허용할 수 있습니다.  

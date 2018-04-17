@@ -2,29 +2,25 @@
 title: ': 추상 형식 ca1012 안 생성자 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-code-analysis
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - AbstractTypesShouldNotHaveConstructors
 - CA1012
 helpviewer_keywords:
 - CA1012
 ms.assetid: 09f458ac-dd88-4cd7-a47f-4106c1e80ece
-caps.latest.revision: 25
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 42c0309181dbea76826aafb67b33579e2bd3ae78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5b10d41b9671b3f25aea6722835d709b24ab9b12
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1012-abstract-types-should-not-have-constructors"></a>CA1012: 추상 형식에는 생성자를 사용하면 안 됩니다.
 |||  
@@ -46,13 +42,13 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다. 추상 형식에 public 생성자를 있습니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 위반 하는 추상 형식을 포함 합니다.  
   
  [!code-vb[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/VisualBasic/ca1012-abstract-types-should-not-have-constructors_1.vb)]
  [!code-csharp[FxCop.Design.AbstractTypeBad#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_1.cs)]  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서 생성자의 액세스 가능성을 변경 하 여 위반을 해결 `public` 를 `protected`합니다.  
   
  [!code-csharp[FxCop.Design.AbstractTypeGood#1](../code-quality/codesnippet/CSharp/ca1012-abstract-types-should-not-have-constructors_2.cs)]

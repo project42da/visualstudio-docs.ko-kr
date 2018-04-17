@@ -2,29 +2,25 @@
 title: 프로젝트 형식 Essentials | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project types [Visual Studio SDK]
 ms.assetid: 09991589-2300-430e-b6a4-7f2b95fe676f
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 899d2758be1561d9b5fbda3280230333cc0ac8a3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: aff6cc669d7df46acaa2cbcb129a6b13b7261d9b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-type-essentials"></a>프로젝트 형식 Essentials
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]와 같은 언어에 대 한 몇 가지 프로젝트 형식에 포함 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 또는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]사용자 고유의 프로젝트 형식을 만들 수도 있습니다.  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 와 같은 언어에 대 한 몇 가지 프로젝트 형식에 포함 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 또는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 사용자 고유의 프로젝트 형식을 만들 수도 있습니다.  
   
  사용자 지정 명령을, 편집기, 또는 도구 창을 추가 하려는 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 새 프로젝트 형식을 만들지 않고 그렇게 할 수 있습니다. 자세한 내용은 다음 항목을 참조하세요.  
   
@@ -62,11 +58,11 @@ ms.lasthandoff: 12/22/2017
   
 -   프로젝트 형식.exe 또는.dll 어셈블리를 구축 하는 일반적인 소스 코드 파일 외에 데이터를 지원할 수 있습니다. 예를 들어 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 데이터베이스 프로젝트 디스크에 저장 된 쿼리 및 스크립트 파일에 대 한 참조를 포함 하 고에 명령을 추가할 **솔루션 탐색기** 실행 하는 스크립트 및 데이터베이스에 있지만 프로젝트에 대 한 쿼리 지원 하지 않습니다 동작을 빌드하십시오. 자세한 내용은 참조 [열기 및 프로젝트 항목 저장](../../extensibility/internals/opening-and-saving-project-items.md)합니다.  
   
--   프로젝트 형식 파일을 전혀 사용할 필요가 없습니다. 예를 들어 프로젝트 형식 데이터베이스의 모든 데이터를 저장할 수 있습니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]프로젝트 형식 프로젝트 및 프로젝트 항목에 대 한 데이터를 유지 하는 방법을 완전히 제어를 제공 합니다. 자세한 내용은 참조 [프로젝트 형식에 대 한 디자인 관련 결정](../../extensibility/internals/project-type-design-decisions.md)합니다.  
+-   프로젝트 형식 파일을 전혀 사용할 필요가 없습니다. 예를 들어 프로젝트 형식 데이터베이스의 모든 데이터를 저장할 수 있습니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 프로젝트 형식 프로젝트 및 프로젝트 항목에 대 한 데이터를 유지 하는 방법을 완전히 제어를 제공 합니다. 자세한 내용은 참조 [프로젝트 형식에 대 한 디자인 관련 결정](../../extensibility/internals/project-type-design-decisions.md)합니다.  
   
 -   프로젝트 형식에 제공 해야 합니다는 *프로젝트 팩터리*, 프로젝트의 인스턴스를 생성 하는 개체가 때마다 입력 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 열기 또는 해당 프로젝트 형식을 기반으로 하는 프로젝트를 만들기에 지시 합니다. 자세한 내용은 참조 [만들기 프로젝트 인스턴스 여를 사용 하 여 프로젝트 팩터리](../../extensibility/internals/creating-project-instances-by-using-project-factories.md)합니다.  
   
--   프로젝트 형식에는 프로젝트와 프로젝트 항목에 대 한 템플릿을 제공 해야 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]사용자가 새 프로젝트를 만들고 기존 프로젝트에 새 항목을 추가 하는 경우 서식 파일을 사용 합니다. 자세한 내용은 참조 [추가 프로젝트 및 프로젝트 항목 템플릿](../../extensibility/internals/adding-project-and-project-item-templates.md)합니다.  
+-   프로젝트 형식에는 프로젝트와 프로젝트 항목에 대 한 템플릿을 제공 해야 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 사용자가 새 프로젝트를 만들고 기존 프로젝트에 새 항목을 추가 하는 경우 서식 파일을 사용 합니다. 자세한 내용은 참조 [추가 프로젝트 및 프로젝트 항목 템플릿](../../extensibility/internals/adding-project-and-project-item-templates.md)합니다.  
   
 -   프로젝트 형식에는 디버그 및 릴리스 등 여러 구성을 지원할 수 있습니다. 프로젝트의 다양 한 구성을 제공 하는 속성 페이지를 사용 하 여 변경할 수 있습니다. 자세한 내용은 참조 [구성 옵션 관리](../../extensibility/internals/managing-configuration-options.md)합니다.  
   

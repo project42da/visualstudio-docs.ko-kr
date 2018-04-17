@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio 확장 개발 하기 시작 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 확장 개발 하기 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/18/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - getting started, Visual Studio integration
 - Visual Studio, integration
 ms.assetid: 8fe5e2ab-a424-4173-9d39-dd082c4d58d0
-caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7bc03568465efa022981ade059b0de68019a5978
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 44403b5d60fc13666ffc6ec00558b80ef3a50ea9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="starting-to-develop-visual-studio-extensions"></a>Visual Studio 확장 개발 하기 시작
 하기 전에 Visual Studio 확장을 작성해 본 경험이 있는 경우 몇 가지 질문 있을 수도 있습니다. 여기에 가장 일반적인 것 중 일부 나열한 했습니다. 피드백 단추를 사용 하 여 원하는 정보 보이지 않으면 (**이 페이지가 도움이 되었나요?** 화면 맨 아래에) 대상에 게 요청 합니다.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 01/05/2018
   
 -   [Visual Studio Shell(격리)](../extensibility/visual-studio-isolated-shell.md)  
   
-##  <a name="BKMK_ProjectTemplate"></a>VSSDK 여 어떤 프로젝트 템플릿이 제공 됩니다.  
+##  <a name="BKMK_ProjectTemplate"></a> VSSDK 여 어떤 프로젝트 템플릿이 제공 됩니다.  
  확장의 두 가지 주요 유형은 Vspackage 및 MEF 확장입니다. 일반적으로 VSPackage 확장 사용 하거나 명령, 도구 창 및 프로젝트를 확장 하는 확장에 사용 됩니다. MEF 확장을 확장 하거나 Visual Studio 편집기를 사용자 지정 하는 데 사용 됩니다.  
   
  Visual C# 및 Visual Basic 확장에 대 한 VSSDK를 메뉴 명령과 도구 창, 편집기 확장을 만드는 새 항목 템플릿은 함께 사용할 수 있는 빈 VSIX 프로젝트 템플릿을 제공 합니다. 또한 다른 사용자에 게 배포에 대 한이 서식 파일을 패키지 프로젝트 템플릿, 코드 조각 및 기타 아티팩트를 사용할 수 있습니다.  

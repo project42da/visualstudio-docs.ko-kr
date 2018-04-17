@@ -1,26 +1,24 @@
 ---
-title: "방법: 소스 제어 플러그 인 설치 | Microsoft Docs"
-ms.custom: 
+title: '방법: 소스 제어 플러그 인 설치 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], source control plug-ins
 - source control plug-ins, installing
 ms.assetid: 9e2e01d9-7beb-42b2-99b2-86995578afda
-caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: dab9270b55f5980d36256db78db89b5e4ac186f0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4ffabd7adf35956163c8744eae6539e96990f38a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-install-a-source-control-plug-in"></a>방법: 소스 제어 플러그 인 설치
 소스 제어 플러그 인을 만드는 세 가지 단계가 포함 됩니다.  
@@ -32,7 +30,7 @@ ms.lasthandoff: 12/22/2017
 3.  적절 한 레지스트리 항목을 만들어서 DLL을 등록 합니다.  
   
 ## <a name="integration-with-visual-studio"></a>Visual Studio와의 통합  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]소스 제어 플러그 인 소스 제어 플러그 인 API를 따르는 지원 합니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 소스 제어 플러그 인 소스 제어 플러그 인 API를 따르는 지원 합니다.  
   
 ### <a name="registering-the-source-control-plug-in"></a>소스 제어 플러그 인을 등록합니다.  
  먼저 원본 실행 중인 통합된 개발 환경 (IDE) 소스 제어 시스템을 호출할 수 전에 찾아야 API를 내보내는 플러그 인 DLL을 제어 합니다.  
@@ -83,7 +81,7 @@ ms.lasthandoff: 12/22/2017
   
      이 항목의 이름 (동일 SCCServerName 항목에 대 한 지정 된 값), 공급자의 사용자가 읽을 수 있는 이름 이므로 값을 다시 한 번, 1 단계에서 만든 하위 키입니다. 이 패턴은 HKEY_LOCAL_MACHINE\SOFTWARE\SourceCodeControlProvider\InstalledSCCProviders\\*[이름 표시]* 소프트웨어 =\\*[회사 이름]* \\ *[product name]*합니다.  
   
-     예:  
+     예를 들어:  
   
     |샘플 레지스트리 항목|샘플 값|  
     |---------------------------|------------------|  

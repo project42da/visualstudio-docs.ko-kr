@@ -1,26 +1,24 @@
 ---
-title: "Windows Installer를 사용 하 여 Vspackage 설치 | Microsoft Docs"
-ms.custom: 
+title: Windows Installer를 사용 하 여 Vspackage 설치 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], with Windows Installer
 - VSPackages, deploying
 ms.assetid: 41d2c72c-0a97-4fcd-b3aa-33a8d3aa962a
-caps.latest.revision: "30"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a9f4d45c3fccebed9febc2ea722981f597896ace
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6fafebe0dc2bb8e13c99be8b340e7f5663a9930f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installing-vspackages-with-windows-installer"></a>Windows Installer를 사용 하 여 Vspackage 설치
 VSPackage에 통합 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 것 이상의 사용자의 컴퓨터에 파일을 복사 해야 합니다. VSPackage의 설치 관리자는 VSPackage 및 해당 종속 파일을 설치 하 고을 등록 하 고로 통합 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. VSPackage에 아이콘을 표시 하는 등 통합 기능을 이용할 수는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 화면 및 정보 대화 상자를 시작 합니다.  

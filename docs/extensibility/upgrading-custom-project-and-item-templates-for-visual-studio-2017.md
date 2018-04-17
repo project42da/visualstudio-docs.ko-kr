@@ -1,23 +1,21 @@
 ---
-title: "사용자 지정 프로젝트 및 항목 템플릿 Visual Studio 2017에 대 한 업그레이드 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 프로젝트 및 항목 템플릿 Visual Studio 2017에 대 한 업그레이드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: ad02477b-e101-4f32-aeb7-292bf95d5c2f
-caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0c0843c8bfb899dc23bcb1ce31eb3f8b9eaffd54
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: af60281e7211e7b16e86200c02aef791d26da274
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrading-custom-project-and-item-templates-for-visual-studio-2017"></a>사용자 지정 프로젝트 및 Visual Studio 2017에 대 한 항목 템플릿 업그레이드
 
@@ -191,7 +189,7 @@ Visual Studio 2017 년부터 Visual Studio은 Visual Studio의 이전 버전을 
 
 프로젝트 및 항목 템플릿에 대 한 별도 매니페스트를 만들어야 하 고 루트 템플릿 지정 된 대로 위의 디렉터리를 가리켜야 합니다. 확장 및 로캘 당 한 매니페스트를 만듭니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [템플릿 검색 문제 해결](troubleshooting-template-discovery.md)  
 [사용자 지정 프로젝트 및 항목 템플릿 만들기](creating-custom-project-and-item-templates.md)

@@ -2,28 +2,24 @@
 title: SccGetProjPath 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccGetProjPath
 helpviewer_keywords:
 - SccGetProjPath function
 ms.assetid: 1079847e-d45f-4cb8-9d92-1e01ce5d08f6
-caps.latest.revision: 15
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ce41826a3a0d778c5a417496d47f290e97806fb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7ef5041b483e85e0806827f7d1188d432b476c5b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccgetprojpath-function"></a>SccGetProjPath 함수
 이 함수에 대 한 소스 제어 플러그 인에 의미 있는 문자열 인 프로젝트 경로 라는 메시지를 표시 합니다. 사용자가 때 호출 됩니다.  
@@ -98,14 +94,14 @@ SCCRTN SccGetProjPath (
 ## <a name="remarks"></a>설명  
  이 함수의 용도 매개 변수를 얻으려고 IDE `lpProjName` 및 `lpAuxProjPath`합니다. 소스 제어 플러그 인 사용자에 게이 정보를 요청 후 IDE에 이러한 두 문자열을 전달 합니다. IDE의 솔루션 파일에 이러한 문자열을 지속 하 고 파이프라인 연산자는 [SccOpenProject](../extensibility/sccopenproject-function.md) 사용자가이 프로젝트를 열 때마다 합니다. 이러한 문자열은 프로젝트와 관련 된 정보를 추적 플러그 인을 사용 합니다.  
   
- 함수를 처음 호출할 때는 `lpAuxProjPath` 빈 문자열로 설정 됩니다. `lProjName`또한 비어 있을 수 소스 제어 플러그 인 사용 하거나 무시할 수 있는 IDE 프로젝트 이름을 포함할 수 있습니다. 함수는 성공적으로 반환 될 때 해당 문자열 두 플러그 인 반환 합니다. IDE 이러한 문자열에 대 한가 정도 하지 않습니다, 사용 하지 않으며 사용자 이미지를 수정할 수 없도록 합니다. 사용자가 설정을 변경 하려는 경우 IDE는 호출 `SccGetProjPath` 다시 같은 값의 전달 받았습니다 이전 시간입니다. 이 플러그 인 완전히 제어할 이러한 두 문자열을 제공합니다.  
+ 함수를 처음 호출할 때는 `lpAuxProjPath` 빈 문자열로 설정 됩니다. `lProjName` 또한 비어 있을 수 소스 제어 플러그 인 사용 하거나 무시할 수 있는 IDE 프로젝트 이름을 포함할 수 있습니다. 함수는 성공적으로 반환 될 때 해당 문자열 두 플러그 인 반환 합니다. IDE 이러한 문자열에 대 한가 정도 하지 않습니다, 사용 하지 않으며 사용자 이미지를 수정할 수 없도록 합니다. 사용자가 설정을 변경 하려는 경우 IDE는 호출 `SccGetProjPath` 다시 같은 값의 전달 받았습니다 이전 시간입니다. 이 플러그 인 완전히 제어할 이러한 두 문자열을 제공합니다.  
   
  에 대 한 `lpUser`, IDE 사용자 이름에 전달할 수 있습니다 또는 단순히 빈 문자열에 대 한 포인터에 통과할 수 있습니다. 사용자 이름이 없는 경우 소스 제어 플러그 인을 기본값으로 사용 해야 합니다. 그러나 이름이 전달 되지 않은 경우 또는 지정 된 이름의 로그인에 실패 하는 경우 플러그 인에서 메시지를 표시 한 로그인 및 이름에 다시 전달에 대 한 사용자 `lpUser` 유효한 로그인을 받을 때입니다. IDE는 크기의 버퍼를 할당할 항상 플러그 인이 문자열 변경 될 수 있습니다, 때문에 (`SCC_USER_LEN`+ 1).  
   
 > [!NOTE]
 >  IDE를 수행 하는 첫 번째 작업에 대 한 호출 수는 `SccOpenProject` 함수 또는 `SccGetProjPath` 함수입니다. 둘 모두 이미 동일한 `lpUser` 소스 제어 플러그 타임에 사용자를 로그인 할 수 있는 매개 변수입니다. 함수에서 반환 된 값이 실패 했음을 의미, 경우에 플러그 인 채워야 유효한 로그인 이름으로이 문자열.  
   
- `lpLocalPath`사용자는 프로젝트를 유지 하는 위치는 디렉터리가입니다. 빈 문자열일 수 있습니다. (의 경우 처럼를 소스 제어 시스템에서 프로젝트를 다운로드 하 사용자) 현재 정의 된 디렉터리가 없는 한 경우 `bAllowChangePath` 은 `TRUE`, 소스 제어 플러그 인 입력에 대 한 사용자 수 또는 일부 다른 메서드를 사용 하 여 해당 문자열을 소유 `lpLocalPath`합니다. 경우 `bAllowChangePath` 은 `FALSE`, 플러그 인 변경 안 문자열, 사용자가 이미 지정된 된 디렉터리에서 작업 하기 때문에 있습니다.  
+ `lpLocalPath` 사용자는 프로젝트를 유지 하는 위치는 디렉터리가입니다. 빈 문자열일 수 있습니다. (의 경우 처럼를 소스 제어 시스템에서 프로젝트를 다운로드 하 사용자) 현재 정의 된 디렉터리가 없는 한 경우 `bAllowChangePath` 은 `TRUE`, 소스 제어 플러그 인 입력에 대 한 사용자 수 또는 일부 다른 메서드를 사용 하 여 해당 문자열을 소유 `lpLocalPath`합니다. 경우 `bAllowChangePath` 은 `FALSE`, 플러그 인 변경 안 문자열, 사용자가 이미 지정된 된 디렉터리에서 작업 하기 때문에 있습니다.  
   
  사용자를 소스 제어 설정 해야 새 프로젝트를 만드는 경우 소스 제어 플러그 인 만들지 못할 수도 있습니다 실제로 해당 소스 제어 시스템에서 시간에 `SccGetProjPath` 호출 됩니다. 그 대신, 전달 다시에 0이 아닌 값이 있는 함께 문자열 `pbNew`, 소스 제어 시스템에서 프로젝트를 만들 수는 나타내는입니다.  
   

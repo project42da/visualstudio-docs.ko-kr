@@ -1,21 +1,18 @@
 ---
-title: "방법: Visual Studio 확장에 대 한 규칙 기반 UI 컨텍스트를 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Studio 확장에 대 한 규칙 기반 UI 컨텍스트를 사용 하 여 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 8dd2cd1d-d8ba-49b9-870a-45acf3a3259d
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-ms.workload: vssdk
-ms.openlocfilehash: 92166106c1470aaf1af7198a133495dba333c121
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8597c413c899b54e61e848649c3c524cbdb20724
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-rule-based-ui-context-for-visual-studio-extensions"></a>방법: Visual Studio 확장에 대 한 규칙 기반 UI 컨텍스트를 사용 합니다.
 Visual Studio에서는 특정 때 Vspackage의 로드 잘 알려진 <xref:Microsoft.VisualStudio.Shell.UIContext>s 활성화 됩니다. 이러한 UI 컨텍스트가 하지 매우가 덜 세분화 된 옵션이 없음 확장 작성자를 종료 하지만 않으며 지점 앞를 활성화 하는 사용 가능한 UI 컨텍스트를 선택할 수 있습니다 않았는지 확인 하 고 VSPackage를 로드 합니다. 잘 알려진 UI 컨텍스트 목록이 참조 <xref:Microsoft.VisualStudio.Shell.KnownUIContexts>합니다.  
@@ -137,7 +134,7 @@ Visual Studio에서는 특정 때 Vspackage의 로드 잘 알려진 <xref:Micros
 |ConfigSettingsStoreQuery:\<쿼리 >|"쿼리" 0이 아닌 값으로 계산 되어야 하는 구성 설정 저장소에 전체 경로 나타냅니다. 쿼리는 "collection"과 마지막 슬래시에서 "propertyName"으로 나누어집니다.|  
 |ActiveProjectFlavor:\<projectTypeGuid >|현재 선택한 프로젝트 버전이 지정 된 때마다 용어 true 됩니다 (집계 됨) 및 지정된 된 프로젝트 형식의 GUID와 일치 하는 버전입니다.|  
 |ActiveEditorContentType:\<contentType >|선택한 문서는 지정한 콘텐츠 형식의 텍스트 편집기 용어 true 됩니다.|  
-|ActiveProjectCapability:\<식 >|현재 프로젝트 기능에는 제공 된 식과 일치 하는 경우 용어 마찬가지입니다. 식을 VB &#124;와 같은 문제가 있을 수 있습니다. CSharp|  
+|ActiveProjectCapability:\<식 >|현재 프로젝트 기능에는 제공 된 식과 일치 하는 경우 용어 마찬가지입니다. 식을 VB 같이 수 &#124; CSharp|  
 |SolutionHasProjectCapability:\<식 >|솔루션에 로드 된 프로젝트 식에 일치 하는 경우 위의 유사 하지만 용어 마찬가지입니다.|  
 |SolutionHasProjectFlavor:\<projectTypeGuid >|솔루션 (집계 됨)은 버전이 지정 된 프로젝트에 있고 지정된 된 프로젝트 형식의 GUID와 일치 하는 버전 때마다 용어 true 됩니다.|
 

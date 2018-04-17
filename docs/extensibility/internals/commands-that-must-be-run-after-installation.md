@@ -1,27 +1,23 @@
 ---
-title: "설치 후 실행 해야 하는 명령을 | Microsoft Docs"
-ms.custom: 
+title: 설치 후 실행 해야 하는 명령을 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - post-install commands
 ms.assetid: c9601f2e-2c6e-4da9-9a6e-e707319b39e2
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2ff4b1e572fd1e0c5c500fbd756d01063665bd1f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 84f1651f311fbad7aefe40a2744c61dc7d81725c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commands-that-must-be-run-after-installation"></a>설치 후 실행 해야 하는 명령
 .Msi 파일을 통해 확장 프로그램을 배포 하는 경우 실행 해야 `devenv /setup` Visual Studio 확장을 검색 하는 순서로 설치의 일부로 합니다.  
@@ -34,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="reglocator-table-rows-to-locate-devenvexe-from-different-versions-of-visual-studio"></a>서로 다른 버전의 Visual Studio의 devenv.exe를 찾으려고 RegLocator 테이블 행  
   
-|Signature_|루트|Key|name|형식|  
+|Signature_|루트|Key|이름|형식|  
 |-----------------|----------|---------|----------|----------|  
 |RL_DevenvExe_2002|2|SOFTWARE\Microsoft\VisualStudio\7.0\Setup\VS|EnvironmentPath|2|  
 |RL_DevenvExe_2003|2|SOFTWARE\Microsoft\VisualStudio\7.1\Setup\VS|EnvironmentPath|2|  
@@ -73,7 +69,7 @@ ms.lasthandoff: 12/22/2017
  설치 하는 동안 실행 하도록 일정을 잡는 InstallExecuteSequence 테이블에 사용자 지정 작업을 작성 해야 합니다. 조건 열의 각 행에서 해당 속성을 사용 하 여 사용자 지정 작업 하는 경우 해당 실행 되지 않도록 방지 하기 위해 버전의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 시스템에 설치 되지 않았습니다.  
   
 > [!NOTE]
->  `Null`속성으로 계산 `False` 조건에 사용 된 경우.  
+>  `Null` 속성으로 계산 `False` 조건에 사용 된 경우.  
   
  각 사용자 지정 동작에 대 한 시퀀스 열의 값은 Windows Installer 패키지의 다른 시퀀스 값에 따라 달라 집니다. 시퀀스 값와 InstallFinalize 표준 작업 직전 최대한 가깝게 devenv.exe 사용자 지정 작업으로 실행 되도록 해야 합니다.  
   

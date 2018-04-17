@@ -1,32 +1,30 @@
 ---
-title: "연습: Visual Studio 확장을 게시 | Microsoft Docs"
-ms.custom: 
+title: '연습: Visual Studio 확장을 게시 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - publishing web controls
 - web controls, publishing
 ms.assetid: a7816161-0490-4043-86f5-0f7331ed83b3
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: be1402da1677388712472d4309c40ce767358f7b
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: f823334f3686bdba3406daac69b2a98d203780a7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-publishing-a-visual-studio-extension"></a>연습: Visual Studio 확장 게시
 
 이 연습에서는 Visual Studio 마켓플레이스를 Visual Studio 확장을 게시 하는 방법을 보여 줍니다. 마켓플레이스 확장 프로그램을 추가 하면 개발자가 사용할 수 **확장명 및 업데이트** 새로 추가 되거나 업데이트 된 확장을 검색할 수 있는 하 합니다.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.
 

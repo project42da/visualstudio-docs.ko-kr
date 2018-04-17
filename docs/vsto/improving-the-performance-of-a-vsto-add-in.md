@@ -1,26 +1,23 @@
 ---
-title: "VSTO 추가 기능을 성능을 향상 시킬 수 | Microsoft Docs"
-ms.custom: 
+title: VSTO 추가 기능을 성능을 향상 시킬 수 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: be5ec0d8e4654ad9d383278e5d0d60c7fa2e34c9
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 17fbb8d0d1bdb2c3924645f494d8bd5eccd457a9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="improving-the-performance-of-a-vsto-add-in"></a>VSTO 추가 기능의 성능 향상
   Office 응용 프로그램용으로 만드는 VSTO 추가 기능을 최적화하여 신속하게 시작하고, 종료하고, 항목을 열고, 다른 작업을 수행할 수 있는 향상된 환경을 사용자에게 제공할 수 있습니다. VSTO 추가 기능이 Outlook용인 경우 낮은 성능 때문에 VSTO 추가 기능이 사용하지 않도록 설정될 가능성도 줄일 수 있습니다. 다음 전략을 실행하여 VSTO 추가 기능의 성능을 높일 수 있습니다.  
@@ -84,9 +81,9 @@ ms.lasthandoff: 01/10/2018
   
     ```  
   
-     C# 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 빌드 이벤트 지정 &#40; C# 35; &#41; ](/visualstudio/ide/how-to-specify-build-events-csharp).  
+     C# 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 빌드 이벤트 지정 &#40;C&#35;&#41;](/visualstudio/ide/how-to-specify-build-events-csharp)합니다.  
   
-     Visual Basic 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 빌드 이벤트 지정 &#40; Visual Basic &#41; ](/visualstudio/ide/how-to-specify-build-events-visual-basic).  
+     Visual Basic 프로젝트에서 빌드 후 이벤트를 만드는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 빌드 이벤트 지정 &#40;Visual Basic&#41;](/visualstudio/ide/how-to-specify-build-events-visual-basic)합니다.  
   
 ##  <a name="Publish"></a> Publish Office Solutions by Using Windows Installer  
  Windows Installer를 사용하여 솔루션을 게시하는 경우 Visual Studio 2010 Tools for Office Runtime은 VSTO 추가 기능이 로드될 때 다음 단계를 우회합니다.  

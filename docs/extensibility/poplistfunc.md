@@ -2,28 +2,24 @@
 title: POPLISTFUNC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - POPDIRLISTFUNC
 helpviewer_keywords:
 - POPLISTFUNC callback function
 ms.assetid: b2199fd5-d707-4628-92dd-e2a01e2f507a
-caps.latest.revision: 16
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc15af65c6541df5ef77a3bdc85ee0e59fa20991
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 950807b0568a28763b369fef4041c69b264d12fc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="poplistfunc"></a>POPLISTFUNC
 이 콜백은에 제공 되는 [SccPopulateList](../extensibility/sccpopulatelist-function.md) IDE에서 소스 제어 플러그 인 파일 또는 디렉터리의 목록을 업데이트 하는 데 사용 되 고 (또한에 제공 되는 `SccPopulateList` 함수).  

@@ -1,23 +1,21 @@
 ---
-title: "방법: 이스케이프 시퀀스를 사용 하 여 템플릿에서 템플릿 생성 | Microsoft Docs"
-ms.custom: 
+title: '방법: 이스케이프 시퀀스를 사용 하 여 템플릿에서 템플릿 생성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, generating templates from templates
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 902cbf66ba0a45f605dc082009cd63cfdf6be1af
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 160234b8db7f09d25b22e33fb5bc722e06187ba9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>방법: 이스케이프 시퀀스를 사용하여 템플릿에서 템플릿 생성
 생성 된 텍스트 출력으로 다른 텍스트 템플릿을 작성 하는 텍스트 템플릿을 만들 수 있습니다. 이 작업을 수행 하려면 텍스트 템플릿 태그를 직접 지정할 필요 없이 이스케이프 시퀀스를 사용 해야 합니다. 이스케이프 시퀀스를 사용 하지 않는 경우 생성 된 텍스트 템플릿을 미리 정의 된 의미를 갖습니다. 텍스트 템플릿에서 이스케이프 시퀀스를 사용 하는 방법에 대 한 자세한 내용은 참조 [텍스트 템플릿에서 이스케이프 시퀀스를 사용 하 여](../modeling/using-escape-sequences-in-text-templates.md)합니다.  
@@ -33,7 +31,7 @@ ms.lasthandoff: 02/09/2018
     \<#+ classfeature \#>  
     ```  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 텍스트 템플릿에서 텍스트 서식 파일을 생성 하기 위해 이스케이프 문자를 사용 합니다. `output` 지시문 텍스트 템플릿 파일 형식 (.tt) 대상 파일 형식으로 설정 합니다.  
   
 ```csharp  

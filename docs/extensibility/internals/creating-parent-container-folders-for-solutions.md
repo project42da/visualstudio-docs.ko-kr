@@ -1,26 +1,24 @@
 ---
-title: "솔루션에 대 한 부모 컨테이너 폴더를 만드는 | Microsoft Docs"
-ms.custom: 
+title: 솔루션에 대 한 부모 컨테이너 폴더를 만드는 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions, creating parent containers
 - source control plug-ins, creating parent containers
 ms.assetid: 961e68ed-2603-4479-a306-330eda2b2efa
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b2aa63a0c55ad196edf6c209475a816c0c3c027c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2104c0c109db0d410cbd08683ce227c62982fd65
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-parent-container-folders-for-solutions"></a>솔루션에 대 한 부모 컨테이너 폴더 만들기
 소스 제어 플러그 인 API 버전 1.2에서에서 사용자 솔루션 내에서 모든 웹 프로젝트에 대 한 단일 루트 소스 제어 위치를 지정할 수 있습니다. 이 단일 루트는 슈퍼 통합 루트 (도메인 이름 얻기) 라고 합니다.  
@@ -64,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
  도메인 이름 얻기 폴더 및 하위 작업을 취소 하거나 오류로 인해 실패 여부에 관계 없이 생성 됩니다. 자동으로 취소 또는 오류 상태에서 제거 되지 않습니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]소스 제어 플러그 인을 반환 하지 않는 경우 버전 1.1 동작을 기본값으로 `SCC_CAP_CREATESUBPROJECT` 및 `SCC_CAP_GETPARENTPROJECT` 기능 플래그입니다. 또한 사용자의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dword: 00000001에 다음 키의 값을 설정 하 여 버전 1.1 동작으로 되돌리려면 하도록 선택할 수 있습니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 소스 제어 플러그 인을 반환 하지 않는 경우 버전 1.1 동작을 기본값으로 `SCC_CAP_CREATESUBPROJECT` 및 `SCC_CAP_GETPARENTPROJECT` 기능 플래그입니다. 또한 사용자의 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] dword: 00000001에 다음 키의 값을 설정 하 여 버전 1.1 동작으로 되돌리려면 하도록 선택할 수 있습니다.  
   
  [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\8.0\SourceControl] "DoNotCreateSolutionRootFolderInSourceControl" = dword: 00000001  
   

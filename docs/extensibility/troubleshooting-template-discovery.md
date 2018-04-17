@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio에서 템플릿을 검색 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 템플릿을 검색 문제 해결 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 72663d56844fcc34164e9408ab14c8ead234683e
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d183fd664258fbb7dbcf27c913c56c6f6160e6c4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-template-installation"></a>템플릿을 설치 문제 해결
 
@@ -47,6 +45,6 @@ ms.lasthandoff: 01/05/2018
 > [!NOTE]
 > 로깅을 사용 하지 않으려면, pkgdef 파일을 제거 하거나 변경의 값 `EnableTemplateDiscoveryLog` 를 `dword:00000000`, 한 다음 실행 `devenv /updateConfiguration` 다시 합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [사용자 지정 프로젝트 및 항목 템플릿 만들기](creating-custom-project-and-item-templates.md)

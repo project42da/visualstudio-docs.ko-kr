@@ -2,28 +2,24 @@
 title: SccGet 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccGet
 helpviewer_keywords:
 - SccGet function
 ms.assetid: 09a18bd2-b788-411a-9da6-067d806e46f6
-caps.latest.revision: 14
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 73f5c55b39d855eb084206ef27e2254d50377b86
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fb793eb5c35c4ca9ee22a58496ebe175b83c68e4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccget-function"></a>SccGet 함수
 이 함수는 보기 및 컴파일하고, 있지만 편집 대 한 하나 이상의 파일의 복사본을 검색 합니다. 대부분의 시스템에서 파일 읽기 전용으로 태그가 지정 됩니다.  
@@ -81,7 +77,7 @@ SCCRTN SccGet(
  `SCC_GET_ALL` 플래그 함께 사용할 수는 `SCC_GET_RECURSIVE` 플래그를 지정 된 디렉터리의 모든 파일 및 모든 하위 디렉터리도 검색 합니다.  
   
 > [!NOTE]
->  `SCC_GET_RECURSIVE`없이 전달 되지 해야 `SCC_GET_ALL`합니다. 또한는 C:\A\B 및 C:\A 디렉터리 인 get 재귀 전달 모두 C:\A\B 및 모든 하위 디렉터리를 실제로 검색할 두 번 note 합니다. IDE의 책임-원본이 아닌 인 제어-이러한 중복 항목 배열에서 유지 되 고 있는지 확인 하려면.  
+>  `SCC_GET_RECURSIVE` 없이 전달 되지 해야 `SCC_GET_ALL`합니다. 또한는 C:\A\B 및 C:\A 디렉터리 인 get 재귀 전달 모두 C:\A\B 및 모든 하위 디렉터리를 실제로 검색할 두 번 note 합니다. IDE의 책임-원본이 아닌 인 제어-이러한 중복 항목 배열에서 유지 되 고 있는지 확인 하려면.  
   
  소스 제어 플러그 인 경우에 지정 하는 마지막으로 `SCC_CAP_GET_NOUI` 초기화 Get 명령에 대 한 사용자 인터페이스 필요는 없으며,이 함수는 파일을 검색 하도록 IDE에 의해 여전히 호출 수를 나타내는 플래그입니다. 플래그는 IDE Get 메뉴 항목 표시 되지 않습니다 및 모든 UI를 제공 해야 하는 플러그 인 없기 의미로입니다.  
   

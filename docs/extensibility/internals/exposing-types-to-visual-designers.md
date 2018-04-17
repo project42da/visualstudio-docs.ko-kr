@@ -1,30 +1,28 @@
 ---
-title: "비주얼 디자이너 형식을 노출 | Microsoft Docs"
-ms.custom: 
+title: 비주얼 디자이너 형식을 노출 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - types [Visual Studio SDK], exposing to visual designers
 - designers [Visual Studio SDK], exposing types
 - custom tools, exposing types to visual designers
 ms.assetid: a7a32ad4-3a0a-4eb8-a6ac-491c42885639
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a85648a95a6651ff62f50b2361b07feba9a58b47
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 28dcc17c74a5b5ef3c9784fafe972beb6f170d90
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="exposing-types-to-visual-designers"></a>비주얼 디자이너 형식을 노출합니다.
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]비주얼 디자이너를 표시 하기 위해 디자인 타임에 클래스 및 형식 정의에 액세스할 수 있어야 합니다. 클래스는 미리 정의 된 집합이 (참조 및 해당 종속성)은 현재 프로젝트의 전체 종속성 집합을 포함 하는 어셈블리에서 로드 됩니다. 또한 액세스 클래스 및 사용자 지정 도구에서 생성 된 파일에 정의 된 형식에 대 한 비주얼 디자이너에 필요한 수 있습니다.  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 비주얼 디자이너를 표시 하기 위해 디자인 타임에 클래스 및 형식 정의에 액세스할 수 있어야 합니다. 클래스는 미리 정의 된 집합이 (참조 및 해당 종속성)은 현재 프로젝트의 전체 종속성 집합을 포함 하는 어셈블리에서 로드 됩니다. 또한 액세스 클래스 및 사용자 지정 도구에서 생성 된 파일에 정의 된 형식에 대 한 비주얼 디자이너에 필요한 수 있습니다.  
   
  [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 및 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 프로젝트 시스템 임시 노트북을 통해 생성 된 클래스 및 형식에 액세스 하기 위한 지원을 제공 실행 파일 (임시 Pe). 사용자 지정 도구에 의해 생성 된 모든 파일 형식이 해당 어셈블리에서 로드 및 디자이너에 노출 될 수 있도록 임시 어셈블리로 컴파일할 수 있습니다. 각 사용자 지정 도구의 출력을 별도 임시 PE로 컴파일되고 성공 또는 실패의 임시 컴파일이 생성된 된 파일을 컴파일할 수 여부에 의해 결정 됩니다. 프로젝트에 전체적으로 빌드되지 않을 수 있습니다, 경우에 개별 임시 Pe 디자이너에 사용할 수 수 있습니다.  
   
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  임시 PE 지원 기능을 활용 하는 사용자 지정 도구는 다음 규칙을 따라야 합니다.  
   
--   `GeneratesDesignTimeSource`레지스트리에서 1로 설정 되어야 합니다.  
+-   `GeneratesDesignTimeSource` 레지스트리에서 1로 설정 되어야 합니다.  
   
      프로그램 실행 파일 컴파일 없음이 설정이 없으면 이루어집니다.  
   

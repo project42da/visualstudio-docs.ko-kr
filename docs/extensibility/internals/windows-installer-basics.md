@@ -1,26 +1,24 @@
 ---
-title: "Windows Installer 기본 사항 | Microsoft Docs"
-ms.custom: 
+title: Windows Installer 기본 사항 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Windows Installer, VSPackages
 - VSPackages, Windows Installer basics
 ms.assetid: 497e479b-add8-4644-870a-917f15306b97
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1a9f895db0d202dd573e7c665b1185f6e3f4b751
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8fba35aba1e1947ee4eeeb59ca2225253e2aa3a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="windows-installer-basics"></a>Windows Installer 기본 사항
 Windows Installer 설치 및 Windows Installer 구성 요소가 (WICs 또는 정당한 구성 요소 라고도 함) 라는 단위로 이러한 작업을 수행 합니다. 응용 프로그램 또는 사용자의 컴퓨터에 소프트웨어 제품 제거 합니다. GUID는 설치 및 Windows Installer를 사용 하 여 설치를 사용한 참조의 기본 단위를 각 WIC를 식별 합니다.  

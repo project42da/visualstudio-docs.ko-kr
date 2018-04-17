@@ -2,26 +2,22 @@
 title: 웹 프로젝트 Essentials | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - web projects, essentials
 ms.assetid: ca2f4e43-322c-4431-8680-52da846940bc
-caps.latest.revision: 15
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ac781256ee78becf3b0cfdffbbec6f0c6bc30225
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 6918c539409a31dfe5249adb5858ca20c8c2337c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="web-project-essentials"></a>웹 프로젝트 Essentials
 웹 프로젝트는 웹 응용 프로그램을 만듭니다. 스마트 웹 페이지에 있는 웹 응용 프로그램을 만들려면 웹 프로젝트를 사용할 수 있습니다. 스마트 웹 페이지에는 필요에 따라 웹 페이지를 렌더링 하는 서버 쪽 코드를 있습니다.  

@@ -1,29 +1,25 @@
 ---
-title: "SccAddFilesFromSCC 함수 | Microsoft Docs"
-ms.custom: 
+title: SccAddFilesFromSCC 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccAddFilesFromSCC
 helpviewer_keywords:
 - SccAddFilesFromSCC function
 ms.assetid: f21a3500-ade8-4dd8-8647-10e2179be9c1
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5bd53307323b1db4d5fa9e5407c3a0516f1187f4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: dc42a7be878ce52f4d951171c6b5cb08e195d564
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccaddfilesfromscc-function"></a>SccAddFilesFromSCC 함수
 이 함수는 현재 열려 있는 프로젝트를 소스 제어에서 파일 목록을 추가 합니다.  
@@ -78,7 +74,7 @@ SCCRTN SccAddFilesFromSCC(
 |값|설명|  
 |-----------|-----------------|  
 |SCC_E_PROJNOTOPEN|프로젝트 열려 있지 않습니다.|  
-|SCC_E_OPNOTPERFORMED|연결에 지정 된 대로 동일한 프로젝트에 없으면`lpAuxProjPath.`|  
+|SCC_E_OPNOTPERFORMED|연결에 지정 된 대로 동일한 프로젝트에 없으면 `lpAuxProjPath.`|  
 |SCC_E_NOTAUTHORIZED|사용자는 데이터베이스를 업데이트할 권한이 없습니다.|  
 |SCC_E_NONSPECIFICERROR|알 수 없는 오류가 발생 했습니다.|  
 |SCC_I_RELOADFILE|파일 또는 프로젝트 다시 로드 해야 합니다.|  

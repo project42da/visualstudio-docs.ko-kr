@@ -1,28 +1,26 @@
 ---
-title: "유니버설 Windows 프로젝트 관리 | Microsoft Docs"
-ms.custom: 
+title: 유니버설 Windows 프로젝트 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 47926aa1-3b41-410d-bca8-f77fc950cbe7
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: eb8abbcb335aad7b65466ee40cfa70d656a3ea3a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d251818d9fba0c025b94fa17611a725daad3cec8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="managing-universal-windows-projects"></a>유니버설 Windows 프로젝트 관리
 유니버설 Windows 앱은 Windows 8.1 및 Windows Phone 8.1, 때문에 두 플랫폼 모두에서 코드 및 기타 자산을 사용 하는 개발자가 모두 대상으로 하는 앱. 동안 플랫폼 관련 코드 및 리소스에 별도 프로젝트, Windows 및 Windows Phone 대 한 기타 보관 되는 공유 코드와 리소스 공유 프로젝트에 유지 됩니다. 유니버설 Windows 앱에 대 한 자세한 내용은 참조 [유니버설 Windows 앱](http://msdn.microsoft.com/library/windows/apps/dn609832.aspx)합니다. Visual Studio 확장명 프로젝트를 관리 하는 유니버설 Windows 앱 프로젝트는 단일 플랫폼 앱과 다른 구조를 제공 해야 합니다. 이 연습에서는 공유 프로젝트를 탐색 하 고 공유 항목을 관리 하는 방법을 보여 줍니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ### <a name="navigate-the-shared-project"></a>공유 프로젝트를 이동 합니다.  

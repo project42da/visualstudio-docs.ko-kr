@@ -1,32 +1,30 @@
 ---
-title: "어떤 &#39; 소스 제어의 새로운 s | Microsoft Docs"
-ms.custom: 
+title: 어떤&#39;소스 제어의 새로운 s | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - what's new [Visual Studio SDK], source control
 - source control [Visual Studio SDK], what's new
 ms.assetid: bcf85418-18fb-4824-9dae-d14bf3d56a77
-caps.latest.revision: "27"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9fc1c5956a4d3c20f8b9abec36d554f3ec56c8c9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b46730ab1acac6605af2e1ff1c418dbe8c886406
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="what39s-new-in-source-control"></a>어떤 &#39; 소스 제어의 새로운 s
+# <a name="what39s-new-in-source-control"></a>어떤&#39;s 소스 제어의 새로운
 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 소스 제어 VSPackage를 구현 하 여 밀접 하 게 통합된 소스 제어 솔루션을 제공할 수 있습니다. 이 섹션 소스 제어 Vspackage의 기능을 설명 하 고 구현 하는 단계에 대해 간략하게 설명 합니다.  
   
 ## <a name="the-source-control-vspackage"></a>소스 제어 VSPackage  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]두 가지 유형의 원본 제어 솔루션을 지원합니다. 모든 버전의에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 소스 제어 플러그 인 API 기반 통합할 수도 있습니다 플러그 인 합니다. 전체 통합을 제공 하는 소스 제어에 대 한 VSPackage를 만들 수도 있습니다 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 높은 수준의 지원 및 자치를 필요로 하는 원본 제어 솔루션에 적합 한 경로입니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 두 가지 유형의 원본 제어 솔루션을 지원합니다. 모든 버전의에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 소스 제어 플러그 인 API 기반 통합할 수도 있습니다 플러그 인 합니다. 전체 통합을 제공 하는 소스 제어에 대 한 VSPackage를 만들 수도 있습니다 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 높은 수준의 지원 및 자치를 필요로 하는 원본 제어 솔루션에 적합 한 경로입니다.  
   
  VSPackage는 거의 모든 종류의 기능을 추가할 수 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. 소스 제어 VSPackage에 대 한 완전 한 소스 제어 기능을 제공 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 소스 제어 시스템과 백 엔드 통신을 사용자에 게 UI에서 합니다.  
   

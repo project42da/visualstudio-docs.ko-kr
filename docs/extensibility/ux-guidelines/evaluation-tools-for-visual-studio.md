@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio에 대 한 평가 도구 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대 한 평가 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 94e0e9a3-440c-4943-ad7b-772ed742e034
-caps.latest.revision: "3"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7026a14a4880a47f415f5aecd1c15f8a2423d86e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6a149d9163e61dd49105f123b373ecd9c7c1c278
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="evaluation-tools-for-visual-studio"></a>Visual Studio에 대 한 평가 도구
 ## <a name="craftsmanship-checklist-for-visual-studio"></a>Visual Studio에 대 한 장인 검사 목록  
@@ -149,7 +147,7 @@ ms.lasthandoff: 12/22/2017
   
 -   필드가 필수 필드 에서처럼 식별 해야 하는 경우 다음을 확인 합니다.  
   
-    -   백그라운드로 설정 되어 있는지 `Environment.ControlEditRequiredBackground` 전경으로 설정 되 고`Environment.ControlEditRequiredHintText`  
+    -   백그라운드로 설정 되어 있는지 `Environment.ControlEditRequiredBackground` 전경으로 설정 되 고 `Environment.ControlEditRequiredHintText`  
   
     -   힌트 텍스트가 표시 되는 컨트롤 내에서 **"\<필요한 >"**  
   

@@ -2,12 +2,9 @@
 title: LPTEXTOUTPROC | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - LPTEXTOUTPROC
 helpviewer_keywords:
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - LPTEXTOUTPROC callback function
 - SccMsgDataOnAfterGetFile structure
 ms.assetid: 2025c969-e3c7-4cf4-a5c5-099d342895ea
-caps.latest.revision: 21
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9fb212d7908d32bc9d9d14d7e8f4786089bc5f89
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 235d98ba6a5ca665857b8a18db5ca823ecc0c7c1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="lptextoutproc"></a>LPTEXTOUTPROC
 통합된 개발 환경 (IDE) 내에서 소스 제어 작업을 실행 하는 사용자, 소스 제어 플러그 인 작업에 오류 또는 상태 메시지를 전달 하기 위해 할 수 있습니다. 플러그 인이 목적을 위해 자체 메시지 상자를 표시할 수 있습니다. 그러나 더 원활한 통합에 대 한 플러그 인을 전달할 수 문자열 IDE, 상태 정보를 표시 하는 기본 방법에서 표시 합니다. 이 메커니즘은는 `LPTEXTOUTPROC` 함수 포인터입니다. IDE 오류 및 상태를 표시 하기 위한 (아래에서 자세히 설명)이이 함수를 구현 합니다.  
@@ -70,12 +66,12 @@ typedef LONG (*LPTEXTOUTPROC) (
 |SCC_MSG_RTN_OK|작업이 성공적으로 완료 또는 문자열 표시 되었습니다.|  
 |SCC_MSG_RTN_CANCEL|사용자가 작업을 취소 하려고 합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  IDE 호출 가정은 [SccGet](../extensibility/sccget-function.md) 20 개 파일 이름으로 합니다. 소스 제어 플러그 인 파일 가져오기 도중에 작업을 취소 하지 못하게 하려고 했습니다. 각 파일을 가져온 후 호출 `lpTextOutProc`, 각 파일에 상태 정보를 전달 하 고 보내는 `SCC_MSG_DOCANCEL` 에 보고할 상태가 있으면 메시지입니다. 언제 든 지 플러그 인 들어오는지 반환 값이 `SCC_MSG_RTN_CANCEL` IDE에서 취소의 가져오기 작업에 즉시 파일이 더 이상 없습니다 검색 않도록 합니다.  
   
 ## <a name="structures"></a>구조체  
   
-###  <a name="LinkSccMsgDataIsCancelled"></a>SccMsgDataIsCancelled  
+###  <a name="LinkSccMsgDataIsCancelled"></a> SccMsgDataIsCancelled  
   
 ```cpp  
 typedef struct {  
@@ -85,7 +81,7 @@ typedef struct {
   
  이 구조와 함께 보내집니다는 `SCC_MSG_BACKGROUND_IS_CANCELLED` 메시지입니다. 취소 된 백그라운드 작업의 ID를 통신에 사용 됩니다.  
   
-###  <a name="LinkSccMsgDataOnBeforeGetFile"></a>SccMsgDataOnBeforeGetFile  
+###  <a name="LinkSccMsgDataOnBeforeGetFile"></a> SccMsgDataOnBeforeGetFile  
   
 ```cpp  
 typedef struct {  
@@ -96,7 +92,7 @@ typedef struct {
   
  이 구조와 함께 보내집니다는 `SCC_MSG_BACKGROUND_ON_BEFORE_GET_FILE` 메시지입니다. 검색할 파일의 이름과 ID는 검색을 수행 하는 백그라운드 작업의 통신에 사용 됩니다.  
   
-###  <a name="LinkSccMsgDataOnAfterGetFile"></a>SccMsgDataOnAfterGetFile  
+###  <a name="LinkSccMsgDataOnAfterGetFile"></a> SccMsgDataOnAfterGetFile  
   
 ```cpp  
 typedef struct {  
@@ -108,7 +104,7 @@ typedef struct {
   
  이 구조와 함께 보내집니다는 `SCC_MSG_BACKGROUND_ON_AFTER_GET_FILE` 메시지입니다. 으로 지정된 된 파일을 검색 하 여 수행한 백그라운드 작업의 ID를 검색 하는 결과 통신에 사용 됩니다. 반환 값에 대 한 참조는 [SccGet](../extensibility/sccget-function.md) 에 어떤 결과적으로 제공 될 수 있습니다.  
   
-###  <a name="LinkSccMsgDataOnMessage"></a>SccMsgDataOnMessage  
+###  <a name="LinkSccMsgDataOnMessage"></a> SccMsgDataOnMessage  
  [C++]  
   
 ```  

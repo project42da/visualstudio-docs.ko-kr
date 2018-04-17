@@ -2,26 +2,22 @@
 title: '연습: 표시 나타나도록 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - QuickInfo
 ms.assetid: 23fb8384-4f12-446f-977f-ce7910347947
-caps.latest.revision: 27
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9cd3e9d5e10e6946b4cae8ce02a5a39511e4baaf
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 81974967094d238f12141ad7cd31bcc8015b9633
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-displaying-quickinfo-tooltips"></a>연습: QuickInfo 도구 설명 표시
 QuickInfo 메서드 시그니처를 표시 하는 IntelliSense 기능이 이며 사용자 설명을 메서드 이름 위로 포인터를 이동 합니다. QuickInfo 설명을 제공 하려는 식별자를 정의 하 고 다음에 콘텐츠를 표시할 도구 설명을 만들어 QuickInfo 등의 언어 기반 기능을 구현할 수 있습니다. 언어 서비스의 컨텍스트에서 QuickInfo를 정의할 수 있습니다 또는 고유한 파일 이름 확장명 및 콘텐츠 형식을 정의 하 고 해당 형식만 대 한 QuickInfo를 표시할 수 또는 기존 콘텐츠 형식 (예: "text")에 대 한 QuickInfo를 표시할 수 있습니다. 이 연습에서는 QuickInfo "text" 콘텐츠 형식에 대 한 표시 하는 방법을 보여 줍니다.  
@@ -40,7 +36,7 @@ QuickInfo 메서드 시그니처를 표시 하는 IntelliSense 기능이 이며 
   
  이 예에서는 QuickInfo 원본은 메서드 이름 및 설명의 하드 코드 된 목록을 사용 하지만 전체 구현에서 언어 서비스 및 해당 언어 설명서에 대 한 책임이 해당 콘텐츠를 제공 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-mef-project"></a>MEF 프로젝트 만들기  

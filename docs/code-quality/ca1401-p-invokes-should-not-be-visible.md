@@ -1,12 +1,10 @@
 ---
-title: "CA1401: P 호출 표시 되지 않음을 | Microsoft Docs"
-ms.custom: 
+title: 'CA1401: P 호출 표시 되지 않음을 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-code-analysis
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-code-analysis
+ms.topic: conceptual
 f1_keywords:
 - PInvokesShouldNotBeVisible
 - CA1401
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - CA1401
 - PInvokesShouldNotBeVisible
 ms.assetid: 0f4d96c1-f9de-414e-b223-4dc7f691bee3
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: cbb2a08e5a346aff8d03f76a7fc0579ce9928952
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c3efe89182eba0f7a81bf14c3265d395fcb86a07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ca1401-pinvokes-should-not-be-visible"></a>CA1401: P/Invoke는 노출되지 않아야 합니다.
 |||  
@@ -45,7 +43,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
  이 규칙에서는 경고를 표시해야 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는이 규칙을 위반 하는 메서드를 선언 합니다.  
   
  [!code-vb[FxCop.Interoperability.DllImports#1](../code-quality/codesnippet/VisualBasic/ca1401-p-invokes-should-not-be-visible_1.vb)]

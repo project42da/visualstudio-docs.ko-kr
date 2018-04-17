@@ -1,26 +1,24 @@
 ---
-title: "옵션 페이지 만들기 | Microsoft Docs"
-ms.custom: 
+title: 옵션 페이지 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - managed package framework, creating Tools Options pages
 - Tools Options pages [Visual Studio SDK], creating using managed package framework
 ms.assetid: 1bf11fec-dece-4943-8053-6de1483c43eb
-caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ae8540a2f372abacd8eda6e63cd868edbb050392
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 51e05c5f2660adfe8d7a35c816e5f94706631c8f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-options-pages"></a>옵션 페이지 만들기
 에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 관리 패키지 프레임 워크 클래스에서 파생 된 <xref:Microsoft.VisualStudio.Shell.DialogPage> 확장는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 추가 하 여 IDE **옵션** 아래 페이지는 **도구** 메뉴.  
@@ -60,7 +58,7 @@ ms.lasthandoff: 12/22/2017
   
  이러한 모든 기본 기능을 재정의할 수 있습니다. 예를 들어 생성 하려면 보다 정교한 사용자 인터페이스 필요의 기본 구현만 재정의 <xref:Microsoft.VisualStudio.Shell.DialogPage.Window%2A>합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음은 옵션 페이지의 간단한 "hello world" 구현 합니다. Visual Studio 패키지 템플릿을 사용 하 여 만든 기본 프로젝트에 다음 코드를 추가 **메뉴 명령을** 옵션을 선택 옵션 페이지 기능을 시연 적절 하 게 됩니다.  
   
 ### <a name="description"></a>설명  

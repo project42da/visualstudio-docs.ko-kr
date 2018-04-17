@@ -1,22 +1,19 @@
 ---
-title: "코드에 매니페스트 | Microsoft Docs"
-ms.custom: 
+title: 코드에 매니페스트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 17ecacea-397d-4a97-b003-01bd5d56e936
-caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 74a2fac33ed9e464dd6a54e5a63f46a6cd29a0d6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 12fc742ae77df98b67593318e08d4151e2991a4f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manifest-to-code"></a>코드에 매니페스트
 코드 도구 매니페스트입니다 Visual Studio 이미지 서비스에 대 한.imagemanifest 파일 하 고 래퍼 파일 또는 c + +, C#, VB 또는 Visual Studio 확장에 대 한.vsct 파일에는 이미지 매니페스트 값 참조에 대 한 파일을 생성 하는 콘솔 응용 프로그램. 이 도구를 직접 Visual Studio 이미지 서비스에서 이미지를 요청 하거나 코드 자체 UI와 렌더링 중 처리 하지 않을 경우 Api 통해 매니페스트 값을 전달 하기 위해 사용할 수 있는 래퍼 파일을 생성 합니다.  

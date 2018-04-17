@@ -2,35 +2,31 @@
 title: SortOrder 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#SortOrder
 helpviewer_keywords:
 - SortOrder element [Visual Studio Templates]
 - <SortOrder> element [Visual Studio Templates]
 ms.assetid: 151932c1-f08a-4f78-a8d0-bd2f32211a9c
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: a6473e867655974f42f41a276b8becfd12fbab7a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b963b6e74b7c24d31ddc611407df22380ff8bb60
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sortorder-element-visual-studio-templates"></a>SortOrder 요소(Visual Studio 템플릿)
 중 하나에 표시 된 대로 동일한 범주에 다른 템플릿 간에 템플릿을 정렬 하는 데 사용 되는 값을 지정 된 **새 프로젝트** 또는 **새 항목 추가** 대화 상자.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<SortOrder >  
   
 ## <a name="syntax"></a>구문  
@@ -66,7 +62,7 @@ ms.lasthandoff: 12/22/2017
   
  템플릿이 낮은 정렬 순서 값 중 하나에 표시 되는 **새 프로젝트** 또는 **새 항목 추가** 높은 정렬 순서 값이 있는 템플릿 하기 전에 대화 상자.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에서는 표준에 대 한 메타 데이터 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 클래스 템플릿을 합니다.  
   
 ```  

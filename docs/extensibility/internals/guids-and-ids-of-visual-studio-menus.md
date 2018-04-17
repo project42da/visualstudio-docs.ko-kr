@@ -1,12 +1,10 @@
 ---
-title: "Guid 및 Id를 Visual Studio 메뉴 | Microsoft Docs"
-ms.custom: 
+title: Guid 및 Id를 Visual Studio 메뉴 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - visual studio menus
 - visual studio groups
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - guid
 - menus
 ms.assetid: 84639d86-dd21-4b35-9988-6bb654162488
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 69ad8f62931b628582c73a3e370a86611795caa6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 163f7b81295468a69cfb28959f608a21f94a4a99
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guids-and-ids-of-visual-studio-menus"></a>Guid 및 Id를 Visual Studio 메뉴
 이 항목 메뉴 및 Visual Studio 메뉴 모음에서 그룹의 GUID 및 ID 값을 열거 합니다. 이러한 값은 Visual Studio SDK의 일부로 설치 되는.vsct 파일에서 정의 됩니다. 자세한 내용은 참조 [IDE-Defined 명령, 메뉴 및 그룹](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)합니다.  
