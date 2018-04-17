@@ -1,31 +1,29 @@
 ---
-title: "Task 클래스-내부 멤버 | Microsoft Docs"
-ms.custom: 
+title: Task 클래스-내부 멤버 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, Task class [.NET Framework]
 - Task class [.NET Framework debug engines]
 ms.assetid: 28e47c3b-9323-424a-80ac-6cc3bf19e09b
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b92a622b6b898c917710ac748b9205079d71ea5e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 161572ece44f3a9f07c9eb40638ca98170e3a86c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="task-class---internal-members"></a>작업 클래스-내부 멤버
 이 항목의 내부 멤버를 설명 합니다.는 <xref:System.Threading.Tasks.Task?displayProperty=fullName> 사용자 지정 디버거를 구현 하는 데 도움이 되는 클래스입니다. 이 클래스에 대 한 일반 정보에 대 한 참조는 <xref:System.Threading.Tasks.Task> 참조 항목입니다.  
   
- **Namespace:**<xref:System.Threading.Tasks?displayProperty=fullName>  
+ **Namespace:** <xref:System.Threading.Tasks?displayProperty=fullName>  
   
  **어셈블리:** (mscorlib.dll)에 mscorlib  
   
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="fields"></a>필드  
   
-|name|설명|  
+|이름|설명|  
 |----------|-----------------|  
 |[m_action](../../extensibility/debugger/m-action-field.md)|실행할 코드를 나타내는 대리자는 <xref:System.Threading.Tasks.Task> 개체입니다.|  
 |[m_contingentProperties](../../extensibility/debugger/m-contingentproperties-field.md)|추가 속성을 저장는 <xref:System.Threading.Tasks.Task> 개체입니다.|  

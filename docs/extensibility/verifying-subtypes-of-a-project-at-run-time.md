@@ -1,26 +1,24 @@
 ---
-title: "런타임 시 프로젝트의 하위 형식을 확인 하는 중 | Microsoft Docs"
-ms.custom: 
+title: 런타임 시 프로젝트의 하위 형식을 확인 하는 중 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes
 - check subtypes
 ms.assetid: b87780ec-36a3-4e9a-9ee2-7abdc26db739
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 18049c034286c33247aec11aba77071daa93ef5c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b8898da6850c01c1a248b57b0fbc5f46be2a8ff4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="verifying-subtypes-of-a-project-at-run-time"></a>런타임 시 프로젝트의 하위 형식을 확인 하는 중
 사용자 지정 프로젝트 하위 형식에 따라 달라 지는 VSPackage를 찾도록 하위 형식에 나타나지 않으면 안정적으로 실패할 수 있도록 하위 유형을 하는 논리를 포함 해야 합니다. 다음 절차에는 지정 된 하위의 존재 여부를 확인 하는 방법을 보여 줍니다.  

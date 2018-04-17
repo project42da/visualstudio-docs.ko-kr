@@ -1,27 +1,25 @@
 ---
-title: "열기 및 프로젝트 항목을 저장 | Microsoft Docs"
-ms.custom: 
+title: 열기 및 프로젝트 항목을 저장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], file persistence
 - files [Visual Studio], opening and saving
 - editors [Visual Studio SDK], file persistence
 ms.assetid: f71898ad-335f-4c43-a177-4da87078afd1
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a270811cc13d4b0e9af027ec2b4b5d2032582a3e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 895306a70d386b7a895b52b22704ec42a07d17ce
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="opening-and-saving-project-items"></a>열기 및 프로젝트 항목 저장
 새 프로젝트 형식을 추가 하면 열고 저장 하 여 프로젝트 파일에서 관리 해야는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE). 다음 항목 파일 열기 및 저장 하는 다른 방법에 설명 합니다.  

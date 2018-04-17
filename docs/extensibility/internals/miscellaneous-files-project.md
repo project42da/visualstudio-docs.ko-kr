@@ -1,28 +1,26 @@
 ---
-title: "기타 파일 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: 기타 파일 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - files, adding existing files to solutions
 - Miscellaneous Files project
 - Solution Items folder
 - files, opening with Miscellaneous Files project
 ms.assetid: 93a278a8-d4f4-400b-8945-4f1b0a2b5bac
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 0d3fa64b06504d8982594945f5b0c38956676b4b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a637b37590a0aaf321a4e04896b2cbe12c29691f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="miscellaneous-files-project"></a>기타 파일 프로젝트
 프로젝트 항목을 열려고 IDE에서 모든 항목을 솔루션의 모든 프로젝트의 구성원이 아닌 기타 파일 프로젝트에 할당 합니다.  

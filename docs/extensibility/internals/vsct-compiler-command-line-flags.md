@@ -1,26 +1,24 @@
 ---
-title: "VSCT 컴파일러 명령줄 플래그 | Microsoft Docs"
-ms.custom: 
+title: VSCT 컴파일러 명령줄 플래그 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, compiling
 - command-table file compilation (VSCT files)
 ms.assetid: 9dc6c33f-e6cf-4cf2-9b05-e8f7bfac1cfb
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d33c0e1bc54ee0c1abab736ba24ce76fbf710fdc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6e2e1045adb451c7f4dd06b888fca356d26b7ff3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vsct-compiler-command-line-flags"></a>VSCT 컴파일러 명령줄 플래그
 Visual Studio 명령 테이블 (VSCT) 컴파일러.vsct 파일의 컴파일 되도록 명령줄 스위치를 제공 합니다.  
@@ -63,7 +61,7 @@ Syntax: vsct <infile> [<outfile>] [-S[symbols file]] [-D<preprocessor-define>]*
 |차원|모든 추가 정의 된 기호를 지정 합니다.|  
 |-I|추가 포함 파일 참조를 확인할 때 사용 해야 하는 경로 나타냅니다.|  
 |-L|지정 된 <xref:System.Globalization.CultureInfo> 문화권 이름, 예를 들어 "EN-US"입니다.|  
-|-E|C# 개체 [C &#124; 이어서 명령 항목에 대 한 지정된 된 네임 스페이스에서 내보내기 H &#124; N]:*filename*여기서 C = C#, H c + + 헤더, N = = 네임 스페이스입니다. 네임 스페이스는 C# 필요 합니다.|  
+|-E|C# 명령 항목을 다음에 대 한 지정된 된 네임 스페이스의 개체를 내보냅니다 [C&#124;H&#124;N]:*filename*여기서 C = C#, H c + + 헤더, N = = 네임 스페이스입니다. 네임 스페이스는 C# 필요 합니다.|  
 |-v|자세한 정보를 출력 합니다.|  
   
  -L 스위치에 해당 하는 이진.cto 파일을 생성 하는 문자열의 그룹을 선택 하려면 컴파일러에 지시 된 주어진 <xref:System.Globalization.CultureInfo> 문화권 이름입니다. 지정 된 문화권 이름에는 하나 이상의 언어 특성과 일치 해야 [Strings 요소](../../extensibility/strings-element.md) .vsct 파일에 있습니다. 포함 하는에서 상속 된 문자열 요소의 언어 특성이 없는 경우 [CommandTable 요소](../../extensibility/commandtable-element.md)합니다.  

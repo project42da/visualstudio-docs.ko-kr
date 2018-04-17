@@ -2,26 +2,22 @@
 title: 레거시 언어 서비스의 개요와 숨겨진 텍스트 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - outlining, supporting in native code
 ms.assetid: 252c5221-2e64-461c-8dcf-b622e400e0be
-caps.latest.revision: 5
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 0435225f30f5f596aed4631f0130b94cd3b273ac
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 509b2a27444847fd5ae20dbf0ecee89e05357456
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="outlining-and-hidden-text-in-a-legacy-language-service"></a>레거시 언어 서비스의 개요와 숨겨진 텍스트
 개요 하면 텍스트 줄의 시퀀스를 한 줄으로 축소할 수 있습니다. 예를 들어 c + +에서 모든 메서드는 메서드 시그니처를 보여 주는, 한 줄으로 축소할 수 있습니다. 숨겨진된 텍스트에는 표시 하거나 숨길 수 있는 텍스트 줄의 시퀀스입니다.  

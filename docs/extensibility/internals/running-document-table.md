@@ -1,12 +1,10 @@
 ---
-title: "Document 테이블 실행 | Microsoft Docs"
-ms.custom: 
+title: Document 테이블 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - read locks
 - running document table (RDT), IVsDocumentLockHolder interface
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - running document table (RDT), edit locks
 - document data objects, running document table
 ms.assetid: bbec74f3-dd8e-48ad-99c1-2df503c15f5a
-caps.latest.revision: "18"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 41a9fc5a2b364ecc0c9037980c3ef2804a6808d8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4a49a5267fcccbde60e194e3fc58b0f6b6ea7552
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="running-document-table"></a>실행 중인 문서 테이블
 IDE에는 실행 중인 문서 테이블 (RDT) 라는 내부 구조에 현재 열려 있는 모든 문서 목록을 유지 관리 합니다. 이 목록은 이러한 문서 편집 현재는 여부에 관계 없이 메모리에 열려 있는 모든 문서를 포함 합니다. 문서는 프로젝트 또는 주 프로젝트 파일 (예를 들어.vcxproj 파일)에서 파일을 포함 하 여 유지 되는 모든 항목입니다.  
@@ -36,7 +34,7 @@ IDE에는 실행 중인 문서 테이블 (RDT) 라는 내부 구조에 현재 �
 |문서 모니커|문서 데이터 개체를 고유 하 게 식별 하는 문자열입니다. 이 절대 파일 경로 (예를 들어 C:\MyProject\MyFile) 파일을 관리 하는 프로젝트 시스템에 대 한 것입니다. 이 문자열은 이외의 데이터베이스에 저장된 프로시저와 같은 파일 시스템 저장소에 저장 하는 프로젝트에도 사용 됩니다. 이 경우 프로젝트 시스템에서 인식 하 고 문서를 저장 하는 방법을 결정 하기 위해 수 있는 구문 분석할 수 있는 고유 문자열로 서 만들 수 있습니다.|  
 |계층 소유자|로 표현 되는 문서를 소유 하는 계층 개체는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 인터페이스입니다.|  
 |항목 ID|계층 내에서 특정 항목에 대 한 항목 식별자입니다. 이 값은이 문서를 소유 하는 계층의 모든 문서 중에서 고유 하지만이 값은 서로 다른 계층 전체에서 고유 해야 아닙니다.|  
-|문서 데이터 개체|이 최소한 한`IUnknown`<br /><br /> 이름입니다. IDE는 특정 인터페이스 외 필요 하지 않습니다는 `IUnknown` 사용자 지정 편집기의 문서 데이터 개체에 대 한 인터페이스입니다. 그러나 표준 편집기에 대 한 편집기의 구현에서 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> 프로젝트에서 파일 지 속성 호출을 처리 하려면 인터페이스가 필요 합니다. 자세한 내용은 참조 [저장 하는 표준 문서](../../extensibility/internals/saving-a-standard-document.md)합니다.|  
+|문서 데이터 개체|이 최소한 한 `IUnknown`<br /><br /> 이름입니다. IDE는 특정 인터페이스 외 필요 하지 않습니다는 `IUnknown` 사용자 지정 편집기의 문서 데이터 개체에 대 한 인터페이스입니다. 그러나 표준 편집기에 대 한 편집기의 구현에서 <xref:Microsoft.VisualStudio.Shell.Interop.IVsPersistDocData2> 프로젝트에서 파일 지 속성 호출을 처리 하려면 인터페이스가 필요 합니다. 자세한 내용은 참조 [저장 하는 표준 문서](../../extensibility/internals/saving-a-standard-document.md)합니다.|  
 |플래그|RDT에 항목이 추가 될 때 읽기 또는 편집 잠금이 적용 되는지 여부를 문서를 저장 하는지 여부를 제어 하는 플래그 및 등을 지정할 수 있습니다. 자세한 내용은 <xref:Microsoft.VisualStudio.Shell.Interop._VSRDTFLAGS> 열거형을 참조하세요.|  
 |잠금 수를 편집 합니다.|편집 잠금 수입니다. 편집 잠금 일부 편집기에 문서가 편집을 위해 열려 있는지를 나타냅니다. 편집 잠금 횟수를 0으로 바뀌면가 수정 된 경우 사용자 문서를 저장 하 라는 메시지가 됩니다. 예를 들어, 사용 하 여 편집기에서 문서를 열 때마다는 **새 창** 명령을 편집 잠금은 RDT에서 해당 문서에 대 한 추가 됩니다. 문서 순서로 설정 해야 하는 편집 잠금에 대 한 계층 구조를가지고 있거나 항목 id입니다.|  
 |읽기 잠금 수|읽기 잠금을의 개수입니다. 읽기 잠금은 마법사와 같은 몇 가지 메커니즘을 통해 문서를 읽고 있는지를 나타냅니다. 읽기 잠금을 나타내는 문서를 편집할 수 없는 동안는 RDT에서 활성 문서를 포함 합니다. 문서 계층 구조가 하지 않거나 항목 id입니다. 경우에 읽기 잠금을 설정할 수 있습니다. 이 기능을 사용 하면 메모리에 문서를 열고 모든 계층에서 소유 하는 문서 없이 RDT에 입력할 수 있습니다. 이 기능은 거의 사용 되지 않습니다.|  

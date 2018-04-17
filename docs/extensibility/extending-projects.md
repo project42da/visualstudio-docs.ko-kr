@@ -1,26 +1,24 @@
 ---
-title: "프로젝트 확장 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - solutions [Visual Studio]
 - projects [Visual Studio]
 ms.assetid: 096d273d-4fe9-4f24-9b00-470bfbdf4bdf
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5e22bbdbbf297fd6eb4580bd53d55c96f2faac17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: bdfa33417002b58e1c1c9718637438cb1210b5af
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-projects"></a>프로젝트 확장
 프로젝트 및 솔루션에는 Visual Studio는 컴파일 및 배포 단위로 코드 및 리소스 파일을 구분 하는 방법입니다. 프로젝트에 대 한 자세한 정보를 찾을 수 [프로젝트 (Visual Studio SDK)](../extensibility/extending-projects.md)합니다.  

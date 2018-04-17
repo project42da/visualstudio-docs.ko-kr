@@ -1,29 +1,27 @@
 ---
-title: "프로젝트 형식 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project types, adding
 - projects [Visual Studio SDK], adding new types
 ms.assetid: 263a084f-f97a-4e09-add7-f0e8a6a27daf
-caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5b04ebb2fd28c808c742897bbf4ceb94505641e4
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 10fc05f8b1870c259bf0f2bc7494beeff141c387
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-types"></a>프로젝트 형식
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]와 같은 언어에 대 한 몇 가지 프로젝트 형식에 포함 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 및 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]사용자 고유의 프로젝트 형식을 만들 수도 있습니다.  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 와 같은 언어에 대 한 몇 가지 프로젝트 형식에 포함 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 및 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 사용자 고유의 프로젝트 형식을 만들 수도 있습니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [Essentials](../../extensibility/internals/project-type-essentials.md)  

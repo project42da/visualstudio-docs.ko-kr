@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio 아키텍처 도구 설명서 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 아키텍처 도구 설명서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: d2642741ef8d00e194f4fbd7f028aa8a29f24a43
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: bec3ce1db1dff1671b56a198ebbca6f7d5cff4e0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-architecture-tooling-guidance"></a>Visual Studio 아키텍처 도구 사용 지침
 이 아키텍처 도구 설명서는 Visual Studio 2010의 모델링 도구의 사용에 대 한 실무 지침의 다운로드 가능한 패키지. 통합 방식에서 모든 모델링 도구를 사용 하는 방법 간략하게 소개 하며 도구 사용 되는 가장 일반적인 시나리오에 설명 합니다.  

@@ -1,28 +1,26 @@
 ---
-title: "선택 및 IDE에서 통화 | Microsoft Docs"
-ms.custom: 
+title: 선택 및 IDE에서 통화 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - currency, Visual Studio IDE
 - IDE, selection
 - selection, Visual Studio IDE
 - IDE, currency
 ms.assetid: 2f6f18d1-acd8-454d-a856-9a4d81155052
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e46c18f424130a29085aaccad19328c9f86682f6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: bf8c58cb08f82b10970424600843b0fedcf477fc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="selection-and-currency-in-the-ide"></a>선택 및 IDE에서 통화
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) 선택을 사용 하 여 현재 선택한 개체에 대 한 사용자의 정보를 유지 관리 *컨텍스트*합니다. 선택 항목 컨텍스트 Vspackage 두 가지 방법으로 추적 하는 통화의 일부를 사용할 수 있습니다.  
@@ -38,7 +36,7 @@ ms.lasthandoff: 12/22/2017
 |-------------|-----------------|  
 |현재 계층 구조|일반적으로 현재 프로젝트입니다. NULL 현재 계층 구조 전체 솔루션 현재 임을 나타냅니다.|  
 |현재 ItemID|현재 계층 구조 내에서 선택한 항목 프로젝트 창에서 여러 개의 항목을 현재 항목을 여러 개 있을 수 있습니다.|  
-|현재`SelectionContainer`|속성 창의 속성을 표시 하는 하나 이상의 개체를 보유 합니다.|  
+|현재 `SelectionContainer`|속성 창의 속성을 표시 하는 하나 이상의 개체를 보유 합니다.|  
   
  또한 환경에는 두 가지 전역 목록을 유지 관리합니다.  
   

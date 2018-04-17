@@ -2,26 +2,22 @@
 title: 소스 제어 정보를 제거 합니다. Proj 및 합니다. Sln 파일 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, .sln and .proj files
 ms.assetid: 7b06883f-35de-41e2-9a9e-d3edba236f17
-caps.latest.revision: 14
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 4131e3d5139911c6a1bb9b44d8d8acaefa6cb632
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 695a4ccfc5da20bda25c78929488625c244959a8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="removal-of-source-control-information-from-proj-and-sln-files"></a>소스 제어 정보를 제거 합니다. Proj 및 합니다. Sln 파일
 SCC는 소스 제어 플러그 인 API의 버전 1.2의에서 정보는 MSSCCPRJ에 저장 됩니다. SCC 파일입니다. MSSCCPRJ 활용 합니다. SCC 파일을 SCC 정보는 원본이 아닌-.proj 및.sln 파일 만큼 제어입니다.  

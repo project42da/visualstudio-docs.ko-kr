@@ -1,27 +1,23 @@
 ---
-title: "엔진을 디버그 하는 사용자 지정 등록 | Microsoft Docs"
-ms.custom: 
+title: 엔진을 디버그 하는 사용자 지정 등록 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - debug engines, registering
 ms.assetid: 9984cd3d-d34f-4662-9ace-31766499abf5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 50903d9b45828725da03c0fcb0db0f08d7f884eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 99ff41f116e569baaae312acd17408928a6c79f4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-a-custom-debug-engine"></a>사용자 지정 디버그 엔진을 등록 하는 중
 디버그 엔진 해야 COM 규칙을 따르는 클래스 팩터리로 자신을 등록할 뿐만 아니라 Visual Studio 레지스트리 하위 키를 통해 Visual Studio와 함께 등록 합니다.  
@@ -34,7 +30,7 @@ ms.lasthandoff: 12/22/2017
   
  [디버깅에 대 한 SDK 도우미](../../extensibility/debugger/reference/sdk-helpers-for-debugging.md) 위치를 설명 뿐만 아니라 레지스트리 디버그 엔진;을 등록 하는 데 필요한 다양 한 유용한 함수가 및 구성 하는 c + + 개발자에 대 한 선언을 포함 하는 dbgmetric.lib 라이브러리에 대해서도 설명 보다 쉽게 레지스트리를 조작 합니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음은 사용 하는 방법을 보여 주는 (TextInterpreter 샘플)에서 일반적인 예로 `SetMetric` Visual Studio와 함께 디버그 엔진을 등록 하려면 (dbgmetric.lib)에서 작동 합니다. 전달 되는 메트릭은 dbgmetric.lib에도 정의 합니다.  
   
 > [!NOTE]

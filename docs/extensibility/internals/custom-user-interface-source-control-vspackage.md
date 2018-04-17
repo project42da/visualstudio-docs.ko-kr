@@ -1,26 +1,24 @@
 ---
-title: "사용자 지정 사용자 인터페이스 (소스 제어 VSPackage) | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 사용자 인터페이스 (소스 제어 VSPackage) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user interface, source control packages
 - source control packages, user interface
 ms.assetid: f35ddb24-53bf-461e-b34f-7414f657c082
-caps.latest.revision: "28"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3d3c223b45d0228781779a73f057ef3518374344
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ebd2361e94e9b1430f5bac99f2e71dc53a02ebf1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-user-interface-source-control-vspackage"></a>사용자 지정 사용자 인터페이스 (소스 제어 VSPackage)
 VSPackage는 Visual Studio 명령 테이블 (.vsct) 파일을 통해 해당 메뉴 항목 및 기본 상태로 선언합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) VSPackage 로드 될 때까지 기본 상태로 있는 메뉴 항목을 표시 합니다. 이후에 <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget.QueryStatus%2A> 메서드는 메뉴 항목을 사용 합니다.  
@@ -49,7 +47,7 @@ VSPackage는 Visual Studio 명령 테이블 (.vsct) 파일을 통해 해당 메�
   
  필요한 <xref:Microsoft.VisualStudio.Shell.Interop.IVsQueryEditQuerySave2> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccManager2>, 또한 소스 제어와 관련 된 모든 선택적 인터페이스 호출 하지 않으면 소스 제어 VSPackage를 사용 하지 않으면 및 합니다.  
   
- 경우는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE가 시작 되 면 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage id입니다. 현재 기본 소스 제어의 ID로 명령 UI 컨텍스트를 설정 합니다. 이렇게 하면 현재 소스 제어 실제로 VSPackage를 로드 하지 않고 IDE에 표시 하기 위해 VSPackage의 정적 UI. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]등록 하는 VSPackage에 대 한 일시 중지 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통해는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> VSPackage 호출 하기 전에.  
+ 경우는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE가 시작 되 면 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] VSPackage id입니다. 현재 기본 소스 제어의 ID로 명령 UI 컨텍스트를 설정 합니다. 이렇게 하면 현재 소스 제어 실제로 VSPackage를 로드 하지 않고 IDE에 표시 하기 위해 VSPackage의 정적 UI. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 등록 하는 VSPackage에 대 한 일시 중지 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통해는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsRegisterScciProvider> VSPackage 호출 하기 전에.  
   
  다음 표에서 방법에 대 한 특정 세부 정보를 설명 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] IDE 다른 UI 항목을 숨깁니다.  
   

@@ -1,27 +1,25 @@
 ---
-title: "Windows Installer VSPackage 제거 | Microsoft Docs"
-ms.custom: 
+title: Windows Installer VSPackage 제거 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - packages, uninstalling
 - VSPackages, uninstalling
 - uninstalling VSPackages
 ms.assetid: c4575ac7-82da-4af8-a375-ea756a101fbf
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ee8ad89e02dfa8aebbb39a9d7ebe523ad01bb7e9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d8a62692003b26afcd5b7814bdc03320fa1c453a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="uninstalling-a-vspackage-with-windows-installer"></a>Windows Installer VSPackage를 제거합니다.
 대부분의 경우 Windows Installer를 제거할 수 VSPackage에서 방금 수행한 VSPackage를 설치 하려면 "취소"입니다. 설명 하는 사용자 지정 동작 [명령을 해야 수를 실행 한 후 설치](../../extensibility/internals/commands-that-must-be-run-after-installation.md) 도 제거 후 실행 해야 합니다. Devenv.exe에 대 한 호출 모두 설치 및 제거에 대 한 InstallFinalize 표준 작업 바로 전에 발생 하기 때문에 두 경우 모두 사용자 지정 및 InstallExecuteSequence 테이블 항목에 사용 됩니다.  
@@ -40,7 +38,7 @@ ms.lasthandoff: 12/22/2017
  대신 추가 하는 `OR Installed` 를 제거 하는 동안 중요 하지 않은 조건을 시작 합니다. 하면 조건을 제거 하는 동안 true은 항상 시작 조건 오류 메시지 표시 되지 것입니다.  
   
 > [!NOTE]
->  `Installed`VSPackage는 시스템에 이미 설치 되어 있는지를 감지할 때 설정 하는 Windows Installer 속성이입니다.  
+>  `Installed` VSPackage는 시스템에 이미 설치 되어 있는지를 감지할 때 설정 하는 Windows Installer 속성이입니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Installer](http://msdn.microsoft.com/en-us/187d8965-c79d-4ecb-8689-10930fa8b3b5)   

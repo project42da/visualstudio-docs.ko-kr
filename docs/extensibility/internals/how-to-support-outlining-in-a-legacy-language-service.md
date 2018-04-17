@@ -1,27 +1,25 @@
 ---
-title: "방법: 레거시 언어 서비스의 개요 기능을 지원 합니다. | Microsoft Docs"
-ms.custom: 
+title: '방법: 레거시 언어 서비스의 개요 기능을 지원 합니다. | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], collapse to definitions command
 - language services, supporting Collapse to Definitions command
 - hidden text, Collapse to Definitions command
 ms.assetid: bb6e74c3-93e4-4ef7-afc7-1c9b342f083b
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: fa57b0d09cb8422a9dde1f70306d2f3808b0384e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: f9880c5c255118478d15f34f9a9245a1c25d97fd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-support-outlining-in-a-legacy-language-service"></a>방법: 레거시 언어 서비스의 개요 기능을 지원 합니다.
 개요 확장 또는 텍스트의 다른 영역을 축소 하는 데 사용 됩니다. 사용 되는 방식으로 개요 표시 다른 언어에서 다르게 정의할 수 있습니다. 자세한 내용은 [개요](../../ide/outlining.md)를 참조하세요.  

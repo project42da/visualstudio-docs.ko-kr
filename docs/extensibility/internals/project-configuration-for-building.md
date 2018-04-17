@@ -1,26 +1,24 @@
 ---
-title: "프로젝트 만들기에 대 한 구성 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 만들기에 대 한 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], configuration for building
 - project configurations, building
 ms.assetid: 2c83615d-fa4d-4b9f-b315-7a69b3000da0
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2d8f37068d197d133ba8798703c8f82093261aca
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 4d78ac1cabc356db162639d3eb19d0bff71e295e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-configuration-for-building"></a>만들기에 대 한 프로젝트 구성
 지정된 된 솔루션에 대 한 솔루션 구성 목록에는 솔루션 구성 대화 상자에서 관리 됩니다.  
@@ -51,9 +49,9 @@ ms.lasthandoff: 12/22/2017
 > [!NOTE]
 >  로 지정 된 명시적 종속성으로 인해 환경에 의해 추가 된 목록에 확인란이 선택 되어 있지만 흐리게 표시 하는 프로젝트는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildDependency> 또는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDeployDependency> , 인터페이스를 만들고 변경할 수 없습니다. 예를 들어에서 프로젝트 참조를 추가할는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 다른 프로젝트에 프로젝트 참조를 삭제 하 여 제거 될 수 있는 빌드 종속성을 자동으로 추가 합니다. 이렇게 종속성 루프가 생성 하기 때문에 해당 확인란 선택 취소 되어 있고 흐리게 표시 하는 프로젝트를 선택할 수 없습니다 (예를 들어 Project1: Project2에 따라 달라진 다는 및 Project2 Project1 종속 것) 빌드가 중단 것입니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]빌드 프로세스의 일반적인 컴파일 및 빌드 단일 명령으로 호출 되는 링크 작업에 포함 됩니다. 다른 두 개의 빌드 프로세스 지원 될 수 있습니다: 이전 빌드 및 구성의 출력 항목에 변경 되었는지 여부를 결정 하는 최신 검사에서 모든 출력 항목을 삭제할 정리 작업을 합니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 빌드 프로세스의 일반적인 컴파일 및 빌드 단일 명령으로 호출 되는 링크 작업에 포함 됩니다. 다른 두 개의 빌드 프로세스 지원 될 수 있습니다: 이전 빌드 및 구성의 출력 항목에 변경 되었는지 여부를 결정 하는 최신 검사에서 모든 출력 항목을 삭제할 정리 작업을 합니다.  
   
- <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2>해당 개체를 반환 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> (에서 반환 된 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>) 빌드 프로세스에서 관리할 수 있습니다. 를 실행 하는 동안 빌드 작업의 상태를 보고 하려면 구성을 확인에 대 한 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>는 환경에서 구현 된 인터페이스 및 빌드 상태 이벤트에 관심 있는 다른 모든 개체.  
+ <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2> 해당 개체를 반환 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildableProjectCfg> (에서 반환 된 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectCfg2.get_CfgType%2A>) 빌드 프로세스에서 관리할 수 있습니다. 를 실행 하는 동안 빌드 작업의 상태를 보고 하려면 구성을 확인에 대 한 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildStatusCallback>는 환경에서 구현 된 인터페이스 및 빌드 상태 이벤트에 관심 있는 다른 모든 개체.  
   
  작성 되 면 구성 설정은 디버거의 제어를 받으며 실행 될 수 있는지 여부를 결정 하 사용할 수 있습니다. 구성을 구현 <xref:Microsoft.VisualStudio.Shell.Interop.IVsDebuggableProjectCfg> 디버깅을 지원할 수 있습니다.  
   

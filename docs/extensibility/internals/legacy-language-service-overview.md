@@ -2,26 +2,22 @@
 title: 레거시 언어 서비스 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - language services [managed package framework], about language services
 ms.assetid: bb44e27b-d228-463c-b2cf-cd5c24c7c1b5
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 05805e5cf4b21f4c7d233cab7dd8421ee76f626f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e8641a3e009cb5a7b61d8334b6dcb2440d186f4f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="legacy-language-service-overview"></a>레거시 언어 서비스 개요
 언어 서비스는 특정 구현할 수 있게 하는 편집기 지원 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 기능입니다. 자주 사용 하는 기능 및 기타 기능에 대 한 부분 지원에 대 한 모든 지원을 제공 하는 관리 패키지 프레임 워크 (MPF) 언어 서비스 클래스.  

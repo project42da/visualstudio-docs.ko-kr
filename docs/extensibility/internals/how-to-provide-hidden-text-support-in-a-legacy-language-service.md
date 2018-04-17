@@ -1,27 +1,25 @@
 ---
-title: "방법: 레거시 언어 서비스에 대 한 숨겨진된 텍스트 지원 | Microsoft Docs"
-ms.custom: 
+title: '방법: 레거시 언어 서비스에 대 한 숨겨진된 텍스트 지원 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - hidden text, supporting
 - editors [Visual Studio SDK], hidden text
 - language services, implementing hidden text regions
 ms.assetid: 1c1dce9f-bbe2-4fc3-a736-5f78a237f4cc
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 664ab99af45e8c449247c5515184293ecb1a469f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 54e508c6bcbb9cb79459e0b61a97f51350c00708
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-provide-hidden-text-support-in-a-legacy-language-service"></a>방법: 레거시 언어 서비스에 대 한 숨겨진된 텍스트 지원
 개요 영역 뿐만 아니라 숨겨진된 텍스트 영역을 만들 수 있습니다. 숨겨진된 텍스트 영역 수도 있고 클라이언트 제어 편집기 제어 텍스트 영역을 완전히 숨기려면 하는 데 사용 됩니다. 편집기는 가로선으로 숨겨진된 영역을 표시합니다. 이러한 예는 HTML 편집기에서 스크립트 전용 뷰입니다.  

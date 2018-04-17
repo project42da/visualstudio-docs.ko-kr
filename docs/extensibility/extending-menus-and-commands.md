@@ -1,27 +1,25 @@
 ---
-title: "메뉴 및 명령을 확장 | Microsoft Docs"
-ms.custom: 
+title: 메뉴 및 명령을 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - menus, common tasks
 - VSPackages, menu tasks
 - .vsct files, common menu tasks
 ms.assetid: 7b2be4b9-e3fe-4412-874f-ae72ebc84c4b
-caps.latest.revision: "49"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 815aac693686dc59d6934b00fb456c3a1afce72c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 830748be6f2cedf57b94a9824bc0912820067718
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-menus-and-commands"></a>확장 메뉴 및 명령
 주석은 Visual Studio에 작업 및 프로세스를 추가 하는 방법은 있습니다. 대부분의 경우에서 명령은 메뉴 또는 도구 모음에 표시 됩니다. VSPackage 프로젝트 템플릿으로 매우 기본적인 명령을 구현 하는 방법을 보여 줍니다. 시간이 약간 더는 여전히 기본적인 구현에 대 한 참조 [메뉴 명령을 사용 하 여 확장을 만드는](../extensibility/creating-an-extension-with-a-menu-command.md)합니다.  

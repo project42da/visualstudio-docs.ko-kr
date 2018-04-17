@@ -1,27 +1,23 @@
 ---
-title: "MSBuild 프로젝트 파일에 데이터를 유지 | Microsoft Docs"
-ms.custom: 
+title: MSBuild 프로젝트 파일에 데이터를 유지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project files, persisting data in
 ms.assetid: 6a920cb7-453d-4ffd-af1c-6f3084bd03f7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: b2bb73602a6cba07fe9cbde4ddae4219f5a2b350
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 324f9dfd4e381e9580e4940f06f652ef64d9d3ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="persisting-data-in-the-msbuild-project-file"></a>MSBuild 프로젝트 파일에 데이터를 유지
 프로젝트 하위 형식 하위 형식의 특정 데이터를 나중에 사용할 프로젝트 파일에 유지 해야 합니다. 프로젝트 하위 형식에서는 다음 요구 사항을 충족 하기 위해 프로젝트 파일 지 속성을 사용 합니다.  
@@ -30,7 +26,7 @@ ms.lasthandoff: 12/22/2017
   
     1.  구성에 관계 없이 데이터입니다. 즉, 비어 있거나 누락 된 조건 사용 하 여 MSBuild 요소에 저장 된 데이터입니다.  
   
-    2.  구성에 종속 된 데이터입니다. 즉, 특정 프로젝트 구성에 대 한 조건 MSBuild 요소에 저장 된 데이터입니다. 예:  
+    2.  구성에 종속 된 데이터입니다. 즉, 특정 프로젝트 구성에 대 한 조건 MSBuild 요소에 저장 된 데이터입니다. 예를 들어:  
   
         ```  
         <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">  
@@ -45,7 +41,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="persisting-build-related-information"></a>빌드 관련 정보를 유지합니다.  
  프로젝트를 빌드하기 위한 유용한 데이터의 지 속성은 MSBuild를 통해 처리 됩니다. MSBuild 시스템은 마스터 테이블의 빌드 관련 정보를 유지 관리합니다. 프로젝트 하위 형식 속성 값을 설정 하 고 가져오는이 데이터에 액세스 하는 것에 대 한 책임이 있습니다. 또한 프로젝트 하위 형식은 지속할 추가 속성을 추가 하 고 유지 되지 않습니다 속성을 제거 하 여 빌드 관련 데이터 테이블을 강화할 수 있습니다.  
   
- MSBuild 데이터를 수정 하려면 프로젝트 하위 형식에 대 한 책임이 MSBuild 속성 개체를 통해 기본 프로젝트 시스템에서 검색 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>합니다. <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>실행 하 여에 대 한 집계 프로젝트 하위 쿼리 및 핵심 프로젝트 시스템에 구현 된 인터페이스는 `QueryInterface`합니다.  
+ MSBuild 데이터를 수정 하려면 프로젝트 하위 형식에 대 한 책임이 MSBuild 속성 개체를 통해 기본 프로젝트 시스템에서 검색 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>합니다. <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage> 실행 하 여에 대 한 집계 프로젝트 하위 쿼리 및 핵심 프로젝트 시스템에 구현 된 인터페이스는 `QueryInterface`합니다.  
   
  다음 절차를 사용 하 여 속성을 제거 하기 위한 단계를 간략하게 설명 <xref:Microsoft.VisualStudio.Shell.Interop.IVsBuildPropertyStorage>합니다.  
   

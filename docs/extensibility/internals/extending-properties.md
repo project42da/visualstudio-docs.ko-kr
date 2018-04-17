@@ -1,27 +1,23 @@
 ---
-title: "속성 확장 | Microsoft Docs"
-ms.custom: 
+title: 속성 확장 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Properties window, providing support
 ms.assetid: 68e2cbd4-861c-453f-8c9f-4ab6afc80e67
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 26cf161259736dbd2b2e26279842571d62f69352
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: d1a34edfbc6cede24f3238068549412d630827cd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extending-properties"></a>속성 확장
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **속성** 창은 COM 및 COM + 구성 요소에 대 한 유니버설 속성 브라우저 이며 모든 지원 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 제품입니다. **속성** 창이 연동 `ITypeInfo` 정보 및 COM + 통합된 개발 환경 (IDE)에서 다른 창에 현재 선택 된 개체에 대 한 디자인 타임 속성을 나열할 메타 데이터를 입력 합니다.  

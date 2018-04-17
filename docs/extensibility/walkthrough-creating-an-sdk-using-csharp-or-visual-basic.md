@@ -1,23 +1,21 @@
 ---
-title: "연습: C# 또는 Visual Basic을 사용 하 여 SDK 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: C# 또는 Visual Basic을 사용 하 여 SDK 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: ef96a249-5eef-402a-a8d5-d74cb49239bd
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a8b0b8452fb20b9b6da4e8ad58c221010f23c9ed
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2106c26e8320e64a641197528c6b91223ef20342
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-an-sdk-using-c-or-visual-basic"></a>연습: C# 또는 Visual Basic을 사용 하 여 SDK 만들기
 이 연습에서는 Visual C#을 사용 하 여 단순한 수학 라이브러리 SDK를 만들고 다음 SDK는 Visual Studio 확장 (VSIX)로 패키지 하는 방법을 설명 합니다. 다음 절차를 완료 합니다.  
@@ -28,10 +26,10 @@ ms.lasthandoff: 12/22/2017
   
 -   [클래스 라이브러리를 사용 하는 샘플 앱을 만들려면](../extensibility/walkthrough-creating-an-sdk-using-csharp-or-visual-basic.md#createSample)  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행하려면 Visual Studio SDK를 설치해야 합니다. 자세한 내용은 참조 [Visual Studio SDK](../extensibility/visual-studio-sdk.md)합니다.  
   
-##  <a name="createClassLibrary"></a>SimpleMath Windows 런타임 구성 요소를 만들려면  
+##  <a name="createClassLibrary"></a> SimpleMath Windows 런타임 구성 요소를 만들려면  
   
 1.  메뉴 모음에서 **파일**, **새로**, **새 프로젝트**합니다.  
   
@@ -59,7 +57,7 @@ ms.lasthandoff: 12/22/2017
   
 9. **솔루션 탐색기**에 대 한 바로 가기 메뉴를 열고는 **SimpleMath** 프로젝트 노드를 선택한 후 **빌드**합니다.  
   
-##  <a name="createVSIX"></a>SimpleMathVSIX 확장 프로젝트를 만들려면  
+##  <a name="createVSIX"></a> SimpleMathVSIX 확장 프로젝트를 만들려면  
   
 1.  에 대 한 바로 가기 메뉴는 **솔루션 'SimpleMath'** 노드를 선택 **추가**, **새 프로젝트**합니다.  
   
@@ -154,7 +152,7 @@ ms.lasthandoff: 12/22/2017
   
 30. 선택 된 **설치** 단추 설치가 완료 되기를 기다린 후 다음 Visual Studio를 다시 시작 합니다.  
   
-##  <a name="createSample"></a>클래스 라이브러리를 사용 하는 샘플 앱을 만들려면  
+##  <a name="createSample"></a> 클래스 라이브러리를 사용 하는 샘플 앱을 만들려면  
   
 1.  메뉴 모음에서 **파일**, **새로**, **새 프로젝트**합니다.  
   
@@ -168,7 +166,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  세부 정보 창에서 선택 된 **단순한 수학 SDK** 확장 합니다.  
   
-     해당 SDK에 대 한 추가 정보가 나타납니다. 선택할 수 있습니다는 **추가 정보** 이 연습의 앞부분에서 SDKManifest.xml 파일에 지정 된 대로 http://www.msdn.microsoft.com, 열기 위한 링크입니다.  
+     해당 SDK에 대 한 추가 정보가 나타납니다. 선택할 수 있습니다는 **추가 정보** 를 열기 위한 링크 http://www.msdn.microsoft.com이 연습의 앞부분에서 SDKManifest.xml 파일에 지정 된 대로 합니다.  
   
 7.  에 **참조 관리자** 대화 상자는 **단순한 수학 SDK** 확인란을 선택한 후는 **확인** 단추입니다.  
   
@@ -237,7 +235,7 @@ ms.lasthandoff: 12/22/2017
   
 12. 앱을 실행 하려면 F5 키를 선택 합니다.  
   
-13. 앱에서 다음을 있는 두 숫자를 입력 하 여 작업을 선택한 다음 선택에서  **=**  단추입니다.  
+13. 앱에서 다음을 있는 두 숫자를 입력 하 여 작업을 선택한 다음 선택에서 **=** 단추입니다.  
   
      올바른 결과가 나타납니다.  
   

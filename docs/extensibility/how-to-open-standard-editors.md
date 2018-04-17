@@ -1,26 +1,24 @@
 ---
-title: "방법: 표준 편집기를 열어 | Microsoft Docs"
-ms.custom: 
+title: '방법: 표준 편집기를 열어 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], opening
 - projects [Visual Studio SDK], opening standard editors
 ms.assetid: d5ce10f9-047a-4b74-aa1d-295128898b89
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: dcf36dc8f4ef818a84719bc534a09ecf30baf76f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2adcdc0f2d05061c412c5233a16e21a1b9fb252a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-open-standard-editors"></a>방법: 표준 편집기 열기
 표준 편집기를 열면 IDE 파일에 대 한 프로젝트 관련 편집기를 지정 하는 대신 지정 된 파일 형식에 대해 표준 편집기를 결정 하도록 할 수 있습니다.  

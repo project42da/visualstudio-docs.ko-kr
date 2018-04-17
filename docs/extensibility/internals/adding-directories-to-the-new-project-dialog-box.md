@@ -1,27 +1,23 @@
 ---
-title: "새 프로젝트 대화 상자에 디렉터리를 추가 합니다. | Microsoft Docs"
-ms.custom: 
+title: 새 프로젝트 대화 상자에 디렉터리를 추가 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - New Project dialog box, extending
 ms.assetid: 53b328f5-20bb-49a3-bf9e-1818f4fbdf50
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 881979b54fb8f8f07a7ffeb2f3648b690fe2bf78
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c4ad992785fdf8ab5ffdd3faa7043e2a0ee5411b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-directories-to-the-new-project-dialog-box"></a>새 프로젝트 대화 상자에 디렉터리를 추가합니다.
 새 프로젝트 형식을 만들 때도 등록할 수 있는 새 디렉터리에는 **새 프로젝트** 대화 상자를 사용 하기 위해 템플릿으로 표시 합니다. 다음 코드 예제에서는 노드라고도 함 새 디렉터리를 등록 하는 방법을 설명 합니다. 예제에서는 VSPackage CLSID_Package에 의해 노출 되는 템플릿 등록 됩니다. 왼쪽 결과적으로는 **새 프로젝트** 대화 상자에서는 Folder_Label_ResID 리소스에 따른 이름으로 추가 된 노드를 제공 합니다. 이 리소스는 VSPackage 위성 DLL에서에서 로드 됩니다.  

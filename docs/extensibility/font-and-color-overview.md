@@ -1,26 +1,24 @@
 ---
-title: "글꼴 및 색 개요 | Microsoft Docs"
-ms.custom: 
+title: 글꼴 및 색 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], font and color
 - font and color control [Visual Studio SDK], editors
 ms.assetid: 2203e4e7-8b7f-44ec-8884-6ff718d4f278
-caps.latest.revision: "22"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 09597130864ae0c1e79ef7470c58b25dde8a9263
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 8185d5c931ccf0b3b15fba10405cf050eb7c6241
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="font-and-color-overview"></a>글꼴 및 색 개요
 이 항목의 텍스트 글꼴 및 색 설정에 설명 된 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE). 또한 범주 및 표시 항목의 개념을 소개 하 고 Vspackage 및 코어 편집기 텍스트 특성을 사용 방법에 대해 설명 합니다.  

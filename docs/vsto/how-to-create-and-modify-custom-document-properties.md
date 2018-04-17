@@ -1,12 +1,10 @@
 ---
-title: "방법: 사용자 지정 문서 속성 만들기 및 수정 | Microsoft Docs"
-ms.custom: 
+title: '방법: 사용자 지정 문서 속성 만들기 및 수정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - document properties [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 5d081beb3422126f6ccf7484cb08e7fa43da8874
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 8c997fbe764ba355d16def278c9beda8c177faed
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-and-modify-custom-document-properties"></a>방법: 사용자 지정 문서 속성 만들기 및 수정
   위에 나열된 Microsoft Office 응용 프로그램은 문서와 함께 저장되는 기본 제공 속성을 제공합니다. 문서와 함께 저장하려는 추가 정보가 있는 경우 사용자 지정 문서 속성을 만들고 수정할 수 있습니다.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/10/2018
   
  ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 속성 액세스 및 조작 사용자 지정 문서 Microsoft Word에서?](http://go.microsoft.com/fwlink/?LinkId=136772)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-vb[Trin_VstcoreProgramming#6](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/ThisWorkbook.vb#6)]
  [!code-csharp[Trin_VstcoreProgramming#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/ThisWorkbook.cs#6)]  
   

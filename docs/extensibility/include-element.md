@@ -1,30 +1,26 @@
 ---
-title: "요소를 포함 합니다. | Microsoft Docs"
-ms.custom: 
+title: 요소를 포함 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Include
 helpviewer_keywords:
 - Include element (VSCT XML schema)
 - VSCT XML schema elements, Include
 ms.assetid: c923dfe6-084a-4105-aec1-f0a3f8399c54
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: de947d7d6bf6688381f5026d68d4a007dd40e026
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 189bac6ed410177a615c85abb5be02302030d19b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="include-element"></a>요소를 포함 합니다.
 찾을 수 있는 파일을 지정 하는 Include 요소에 제공 된 현재 파일에 삽입할 수 있도록 경로 포함 합니다.  기호 및 정의 된 형식의 모든 컴파일된 결과에 포함 됩니다.  
@@ -57,7 +53,7 @@ ms.lasthandoff: 12/22/2017
 |-------------|-----------------|  
 |[CommandTable 요소](../extensibility/commandtable-element.md)|모든 명령을 나타내는 요소 정의-메뉴 항목, 메뉴, 도구 모음 및 콤보 상자 즉,-IDE에 VSPackage를 제공 하 합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 <Include href="PackagePlacements.vsct"/>  

@@ -1,30 +1,26 @@
 ---
-title: "Extern 요소 | Microsoft Docs"
-ms.custom: 
+title: Extern 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - Extern
 helpviewer_keywords:
 - VSCT XML schema elements, Extern
 - Extern element (VSCT XML schema)
 ms.assetid: db6c3ddd-a1ba-450a-897a-bb568a5377fc
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ff198f5c4b574bf3a27ae1ee8fb6ffdd482c7f71
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ea14d985265d02c3e60ee12c8b46deafba2bcd72
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extern-element"></a>Extern 요소
 Extern 요소는 컴파일 타임에.vsct 파일에 병합 하려면 외부 헤더 (.h) 파일을 참조 합니다. 병합할 파일은 VSCT 컴파일러에 지정 되거나에 의해 참조 포함 경로에 있어야 합니다.는 [포함 요소](../extensibility/include-element.md)합니다. 다른.vsct 파일 또는 c + + 헤더 파일의 파일 수 있습니다.  
@@ -63,7 +59,7 @@ Extern 요소
 |-------------|-----------------|  
 |[CommandTable 요소](../extensibility/commandtable-element.md)|모든 명령을 나타내는 요소 정의-메뉴 항목, 메뉴, 도구 모음 및 콤보 상자 즉,-IDE에 VSPackage를 제공 하 합니다.|  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
   
 ```  
 <?xml version="1.0" encoding="utf-8"?>  

@@ -1,26 +1,24 @@
 ---
-title: "프로젝트를 추가 하 고 프로젝트 항목 템플릿 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트를 추가 하 고 프로젝트 항목 템플릿 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], adding
 - project items [Visual Studio], adding
 ms.assetid: 8c59217f-56e5-4540-a73b-cd10de189373
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1d0c9e684312468011f63bdfbb72d1cdadba6b08
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 94d521d288b470db56736668f11d47dab71d2533
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-project-and-project-item-templates"></a>프로젝트 및 프로젝트 항목 템플릿 추가
 표준을 사용 하 여 새 프로젝트 및 프로젝트 항목을 추가 하는 것에 대 한 지원을 제공 해야 사용자 고유의 프로젝트 형식을 만들 때 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합 개발 환경 (IDE) 대화 상자. 다음 항목에는 프로젝트와 프로젝트 항목을 추가 하기 위한 다양 한 기술을 설명 합니다.  

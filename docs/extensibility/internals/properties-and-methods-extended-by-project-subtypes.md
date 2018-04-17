@@ -1,26 +1,24 @@
 ---
-title: "속성 및 메서드 확장 프로젝트 하위 형식 | Microsoft Docs"
-ms.custom: 
+title: 속성 및 메서드 확장 프로젝트 하위 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, extended methods
 - project subtypes, extended properties
 ms.assetid: 2b9833bf-8551-4ae1-93db-197ba645c65e
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 288e8f680d12aeffb2979c3f0d89b44b0553b62e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 23510ffbb42e0c0c37c07e0ee80ae15f99e5df00
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-and-methods-extended-by-project-subtypes"></a>속성 및 프로젝트 하위 형식에 의해 확장 메서드
 프로젝트 하위 형식에는 전원 기본 프로젝트의 집계로 생성 된 때문에 프로젝트의 동작에 영향을 줍니다. 이 섹션에는 프로젝트 하위 형식에 의해 수정 되거나 향상 될 수 있는 기능 중 일부를 요약 합니다.  

@@ -1,27 +1,25 @@
 ---
-title: "방법: 프로젝트 관련 편집기 열기 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로젝트 관련 편집기 열기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project types, opening a project-specific editor
 - editors [Visual Studio SDK], opening project-specific editors
 - projects [Visual Studio SDK], opening folders
 ms.assetid: 83e56d39-c97b-4c6b-86d6-3ffbec97e8d1
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 66ac0837649b42dc238eac57829c713b2bf83e3a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ae2e634d36c13632619d01cc97d5726dc5576819
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-open-project-specific-editors"></a>방법: 프로젝트 관련 편집기 열기
 프로젝트에서 열리는 항목 파일에는 기본적으로 해당 프로젝트에 대 한 특정 편집기에 바인딩되어 있는 경우 프로젝트 프로젝트 관련 편집기를 사용 하 여 파일을 열어야 합니다. 편집기를 선택 하기 위한에서 IDE의 메커니즘으로 파일을 위임할 수 없습니다. 예를 들어 표준 비트맵 편집기를 사용 하는 대신 프로젝트에 고유한 파일의 정보를 인식 하는 특정 비트맵 편집기를 지정 하려면이 프로젝트 관련 편집기 옵션을 사용할 수 있습니다.  

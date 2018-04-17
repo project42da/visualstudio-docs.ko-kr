@@ -1,27 +1,23 @@
 ---
-title: "언어 서비스 및 편집기 확장 시작 | Microsoft Docs"
-ms.custom: 
+title: 언어 서비스 및 편집기 확장 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], new - extensions
 ms.assetid: 6b151891-c06d-40b1-9867-42298caa8492
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 5f7b7440ff2f42eba1d138872071d4e51d2402c1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5e36f4a6b0f8cb37a5ede782c24c7593285b7705
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-language-service-and-editor-extensions"></a>언어 서비스 및 편집기 확장 시작
 언어 서비스 기능 개요, 중괄호 일치, IntelliSense, 전구 등 선택한 프로그래밍 언어에 어떤 콘텐츠 형식 추가 하려면 편집기 확장을 사용할 수 있습니다. 모양 및 동작의 예를 들어 텍스트 색 지정, 여백, 장식, 및 기타 시각적 요소 Visual Studio 편집기에서 사용자 지정할 수도 있습니다. 사용자 고유의 유형의 콘텐츠를 정의 하 고 모양 및 동작 콘텐츠에 표시 되는 텍스트 뷰를 지정할 수도 있습니다.  

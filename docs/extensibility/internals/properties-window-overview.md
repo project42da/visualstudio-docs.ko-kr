@@ -2,26 +2,22 @@
 title: 속성 창 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Properties window
 ms.assetid: 289ed4f2-02ac-4899-855e-42dfe57ee05f
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1f766fe903df4f7a7ea36fb4ec1654b889457f65
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e255795a52064723477eda4e1aca532adedb6be1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="properties-window-overview"></a>속성 창 개요
 **속성** 창을 사용 하는 두 가지 주요 유형의에서 사용할 수 있는 windows에서 선택한 개체에 대 한 속성을 표시 하는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE). 이러한 두 창의 유형은 다음과 같습니다.  
@@ -44,7 +40,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.ICategorizeProperties>|범주를의 목록을 제공는 **속성** 창 범주를 각 속성에 매핑합니다.|  
 |[IDispatch 인터페이스](https://msdn.microsoft.com/library/windows/desktop/ms221608.aspx)|개체의 메서드 및 속성 프로그래밍 도구 및 자동화를 지 원하는 기타 응용 프로그램을 노출 합니다.|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IProvidePropertyBuilder>|호출 하는 줄임표 (...) 단추를 제공 *빌더* 개체 자체에서 구현 하는 모달 대화 상자 창을 열입니다. 값을 텍스트 필드에 사용자가 쉽게 형식화 되지 않은 때 사용 됩니다. 예를 들어, RGB 값을 결정 하는 색 선택을 열을 사용할 수 있습니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|에 표시 된 정보를 업데이트 하는 데 사용 되는 개체에 대 한 액세스를 제공는 **속성** 창. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>관련된 표시할 속성을 사용 하 여 선택할 수 있는 개체를 포함 하는 각 창에 대 한 Vspackage에 의해 구현 됩니다.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer>|에 표시 된 정보를 업데이트 하는 데 사용 되는 개체에 대 한 액세스를 제공는 **속성** 창. <xref:Microsoft.VisualStudio.Shell.Interop.ISelectionContainer> 관련된 표시할 속성을 사용 하 여 선택할 수 있는 개체를 포함 하는 각 창에 대 한 Vspackage에 의해 구현 됩니다.|  
 |<xref:Microsoft.VisualStudio.OLE.Interop.ITypeInfo>|구조체의 필드 및 인터페이스의 메서드는 등 개체의 유형에 대 한 정보를 제공합니다.|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsMonitorSelection>|Vspackage를 선택 이벤트에 대 한 알림을 수신 하 고 현재 프로젝트 계층 구조, 항목, 요소 값 및 명령 UI 컨텍스트 하는 방법에 대 한 정보를 검색할 수 있습니다.|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsMultiItemSelect>|여러 선택 항목에 액세스할 수 있는 환경을 제공합니다.|  

@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio에 대 한 UX Essentials | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대 한 UX Essentials | Microsoft Docs
+ms.custom: ''
 ms.date: 04/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: a793cf7a-f230-43ce-88d0-fa5d6f1aa9c7
-caps.latest.revision: "7"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: f9d04da421b3b59609269b4f91a487d22adc80e3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 52081c5a7f88a39ab25cf868164bd0258dd37885
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ux-essentials-for-visual-studio"></a>Visual Studio에 대 한 UX Essentials
 ## <a name="best-practices"></a>최선의 구현 방법  
@@ -108,7 +106,7 @@ ms.lasthandoff: 12/22/2017
 사용자가 UI를 해제 하기 전에 설명 텍스트를 읽을 하는 것은 Visual Studio 내에서 바이러스는 패턴입니다. 올바르게 디자인 된, 비디오 링크가 hover에 및 클릭 하면 추가 정보와 함께 도구 설명이 표시 되는 "&times;" 더 이상의 상호 작용에 대 한 필요 없이 메시지를 해제 해야 합니다.
 
 
- ![설명 텍스트 anti #45 패턴 &; #45 잘못 된](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />잘못 된 비디오 링크가 패턴
+ ![설명 텍스트 anti&#45;패턴 &#45; 잘못](../../extensibility/ux-guidelines/media/incorrectuseofmultipleclicks.png "Incorrectuseofmultipleclicks")<br />잘못 된 비디오 링크가 패턴
   
 #### <a name="result"></a>결과  
  닫기 단추 (한 번의 클릭)는 단순 하지 않고 사용자는 단순히 비디오 링크가 표시 되는 모든 곳에서 UI를 해제 하려면를 두 번 클릭을 사용 하도록 강제 합니다.  
@@ -116,7 +114,7 @@ ms.lasthandoff: 12/22/2017
 #### <a name="alternatives"></a>대체 방법  
  이러한 상황에 대 한 올바른 디자인 Internet Explorer, Office 및 Visual Studio를 일반 패턴을 따를 것: 가리키기, 사용자가 도구 설명을 볼 수와 한 번의 클릭 UI를 숨깁니다.  
   
- ![설명 텍스트 anti #45 패턴 &; #45 올바른](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti 패턴 해결")<br />올바른 비디오 링크가 패턴
+ ![설명 텍스트 anti&#45;패턴 &#45; 올바른](../../extensibility/ux-guidelines/media/explanatorytextanti-pattern-correct.png "Explanatorytextanti 패턴 해결")<br />올바른 비디오 링크가 패턴
   
 ### <a name="using-command-bars-for-settings"></a>명령 모음 설정에 대 한 사용  
  **그림 A** 이 안티패턴 나타냅니다: 보다 더 명령에 적용 되는 명령 단추 아래 설정을 추가 합니다. 이 스케치에서은 외에도 디버깅 시작 명령-브라우저, 디버깅 하지 않고 시작 및 한 단계씩 코드 실행에서 보기와 같은-선택한 설정 존중입니다.  

@@ -1,27 +1,25 @@
 ---
-title: "Vspackage의 리소스 | Microsoft Docs"
-ms.custom: 
+title: Vspackage의 리소스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - managed VSPackages, resources in
 - resources, managed VSPackages
 - VSPackages, managed resources
 ms.assetid: cc8c17a6-b190-4856-b001-0c1104f104b2
-caps.latest.revision: "23"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ee9d108e7a7a6a5bd971b20c12858edf28ac0cf3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d252f61a9f634f4bb8435626c41c586bbe5cb839
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-in-vspackages"></a>Vspackage의 리소스
 자체 관리 되는 VSPackage 또는 네이티브 위성 UI Dll에 관리 되는 위성 Dll에서에서 지역화 된 리소스를 포함할 수 있습니다.  
@@ -51,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
  설정 <xref:Microsoft.VisualStudio.Shell.PackageRegistrationAttribute> 이런이 방식으로 나타내는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 검색 되는 경우 리소스에 대 한 예를 들어를 사용 하 여 관리 되지 않는 위성 Dll을 무시 해야 <xref:Microsoft.VisualStudio.Shell.Interop.IVsShell.LoadPackageString%2A>합니다. 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 동일한 리소스 ID를 포함 하는 둘 이상의 리소스가 발견 찾은 첫 번째 리소스를 사용 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제는 도구 창 아이콘의 관리 되는 표현입니다.  
   
 ```  
@@ -85,7 +83,7 @@ type="System.Resources.ResXFileRef,System.Windows.Forms">
 ```  
   
 ## <a name="implementation-notes"></a>구현 참고 사항  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]가능 하면 Vspackage 지연 로드 합니다. 결과는 VSPackage에 CTO 파일을 포함 하는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 병합된 명령 테이블을 작성 하는 경우 설치 하는 동안 메모리에 이러한 모든 Vspackage를 로드 해야 합니다. VSPackage에서 코드를 실행 하지 않고 메타 데이터를 검사 하 여 VSPackage에서 리소스를 추출할 수 있습니다. 성능 저하는 최소한의 VSPackage,이 이번에 초기화 되지 않았습니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 가능 하면 Vspackage 지연 로드 합니다. 결과는 VSPackage에 CTO 파일을 포함 하는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 병합된 명령 테이블을 작성 하는 경우 설치 하는 동안 메모리에 이러한 모든 Vspackage를 로드 해야 합니다. VSPackage에서 코드를 실행 하지 않고 메타 데이터를 검사 하 여 VSPackage에서 리소스를 추출할 수 있습니다. 성능 저하는 최소한의 VSPackage,이 이번에 초기화 되지 않았습니다.  
   
  때 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 설치 후에 VSPackage에서 리소스는 요청을 해당 패키지는 이미 로드 되어 초기화 가능성이 이므로 성능이 저하 최소화 합니다.  
   

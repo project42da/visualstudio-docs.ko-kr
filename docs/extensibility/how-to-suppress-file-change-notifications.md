@@ -1,27 +1,23 @@
 ---
-title: "방법: 파일 변경 알림 표시 안 함 | Microsoft Docs"
-ms.custom: 
+title: '방법: 파일 변경 알림 표시 안 함 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - suppress file change notification
 ms.assetid: 891c1eb4-f6d0-4073-8df0-2859dbd417ca
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 209006129bcb2cfaaf88233768df1d9597cd09a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 95821baec7f2f46a65e2ab0f0b0b78b0e397f2ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-suppress-file-change-notifications"></a>방법: 파일 변경 알림 표시 안 함
 메시지와 함께 대화 상자는 표시 텍스트 버퍼를 나타내는 물리적 파일 변경 되었을 때 **다음 항목에 변경 내용을 저장 하 시겠습니까?** 이 파일 변경 알림을 라고 합니다. 하지만 많은 변경 하는 경우 파일을 되도록이 대화 상자를 반복 해 서 다시 표시 될 수 있습니다 신속 하 게 번거로울.  
@@ -46,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
      예를 들어 파일을 다시 작성 한 다음 타임 스탬프를 변경 하는 경우 다시 작성 및 timestample 작업은 각 계산할 별도 파일 변경 이벤트 파일 변경 알림의 일시 중지 해야 합니다. 대신 호출 해야 하는 기본 파일 변경 알림을 활성화는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFileChangeEx.IgnoreFile%2A> 메서드.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 파일 변경 알림을 표시 하지 않는 방법을 보여 줍니다.  
   
 ```cpp  

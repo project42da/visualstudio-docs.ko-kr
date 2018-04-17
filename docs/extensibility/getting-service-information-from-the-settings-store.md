@@ -1,23 +1,21 @@
 ---
-title: "설정 저장소에서 서비스 정보 가져오기 | Microsoft Docs"
-ms.custom: 
+title: 설정 저장소에서 서비스 정보 가져오기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 7028d440-d16d-4b08-9b94-eb8cc93b25fc
-caps.latest.revision: "4"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: fdb7e95a4a4379dfbab3e56cc21e9515bb23ec0d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 11731e36517ae6245dddd1ebdd3b002fb3c37391
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-service-information-from-the-settings-store"></a>설정 저장소에서 서비스 정보 가져오기
 모든 사용 가능한 서비스를 확인 하거나 특정 서비스가 설치 되어 있는지 여부를 확인 하려면 설정 저장소를 사용할 수 있습니다. 서비스 클래스의 형식을 알고 있어야 합니다.  

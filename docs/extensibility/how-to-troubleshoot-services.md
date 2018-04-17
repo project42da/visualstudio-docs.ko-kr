@@ -1,27 +1,23 @@
 ---
-title: "방법: 서비스 문제 해결 | Microsoft Docs"
-ms.custom: 
+title: '방법: 서비스 문제 해결 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - services, troubleshooting
 ms.assetid: 001551da-4847-4f59-a0b2-fcd327d7f5ca
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 71ac3cda8e3df935ab743fed7aa94a5152c152a5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d9efe3c1c7032f1db41272a03cf689e015a79522
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-troubleshoot-services"></a>방법: 서비스 문제 해결
 서비스 가져오기 하려고 할 때 발생할 수 있는 몇 가지 일반적인 문제가 있습니다.  
@@ -62,7 +58,7 @@ if (log == null) return;
   
     2.  GUID가 인터페이스를 명시적으로 할당 됩니다. 따라서 시스템 필요에 따라 개체에 대 한 기본 GUID를 생성 합니다.  
   
-3.  해당 서비스를 요청 하는 VSPackage 요소가 배치 된 확인 해야 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]VSPackage를 호출 하기 전에 및 것을 생성 한 후 사이트 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>합니다.  
+3.  해당 서비스를 요청 하는 VSPackage 요소가 배치 된 확인 해야 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] VSPackage를 호출 하기 전에 및 것을 생성 한 후 사이트 <xref:Microsoft.VisualStudio.Shell.Package.Initialize%2A>합니다.  
   
      서비스를 필요로 하는 VSPackage 생성자에서 코드를 있는 경우 Initialize 메서드를 이동 합니다.  
   

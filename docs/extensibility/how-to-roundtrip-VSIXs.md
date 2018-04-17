@@ -1,23 +1,21 @@
 ---
-title: "방법: Visual Studio에 대 한 왕복 확장 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Studio에 대 한 왕복 확장 | Microsoft Docs'
+ms.custom: ''
 ms.date: 06/25/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 ms.assetid: 2d6cf53c-011e-4c9e-9935-417edca8c486
-caps.latest.revision: "1"
 author: willbrown
 ms.author: willbrown
 manager: justinclareburt
-ms.workload: willbrown
-ms.openlocfilehash: b51673daa7a8c3526ad7de7f7cfdeac6a91d3b4b
-ms.sourcegitcommit: 7ae502c5767a34dc35e760ff02032f4902c7c02b
+ms.workload:
+- willbrown
+ms.openlocfilehash: 9d8d0dc2e5c8c95b5f2502ef5a48e6f97c26e289
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-make-extensions-compatible-with-visual-studio-2017-and-visual-studio-2015"></a>방법: 확장을 Visual Studio 2017 및 Visual Studio 2015와 호환 되도록
 
@@ -32,7 +30,7 @@ ms.lasthandoff: 01/09/2018
 1. 올바른 NuGet 패키지를 가져옵니다.
 2. 확장 매니페스트를 업데이트 합니다.
     * 설치 대상
-    * 필수 구성 요소
+    * 전제 조건
 3. CSProj를 업데이트 합니다.
     * 업데이트 `<MinimumVisualStudioVersion>`합니다.
     * 추가 `<VsixType>` 속성입니다.
@@ -166,7 +164,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 
 * 에 추가 조건부 문을 추가 하는 `<import>` Microsoft.VSSDK.BuildTools 참조 하는 태그입니다.  삽입 하 여이 작업을 수행 `'$(VisualStudioVersion)' != '14.0' And` 조건 문으로 앞에 있습니다.  이러한 문은 머리글 및 csproj 파일의 바닥글에 표시 됩니다.
 
-예:
+예를 들어:
 
 ```xml
 <Import Project="packages\Microsoft.VSSDK.BuildTools.15.0.26201…" Condition="'$(VisualStudioVersion)' != '14.0' And Exists(…" />
@@ -174,7 +172,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 
 * 에 추가 조건부 문을 추가 하는 `<import>` 는 Microsoft.VisualStudio.Sdk.BuildTasks.14.0 있는 태그입니다.  삽입 하 여이 작업을 수행 `'$(VisualStudioVersion)' == '14.0' And` 조건 문으로 앞에 있습니다. 이러한 문은 머리글 및 csproj 파일의 바닥글에 표시 됩니다.
 
-예:
+예를 들어:
 
 ```xml
 <Import Project="packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" Condition="'$(VisualStudioVersion)' == '14.0' And Exists(…" />
@@ -182,7 +180,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 
 * 에 추가 조건부 문을 추가 하는 `<Error>` Microsoft.VSSDK.BuildTools 참조 하는 태그입니다.  삽입 하 여이 작업을 수행 `'$(VisualStudioVersion)' != '14.0' And` 조건 문으로 앞에 있습니다. 이러한 문은 csproj 파일의 바닥글에 표시 됩니다.
 
-예:
+예를 들어:
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' != '14.0' And Exists('packages\Microsoft.VSSDK.BuildTools.15.0.26201…" />
@@ -190,7 +188,7 @@ Visual Studio는 VSIX를 구축 하기 위한 대상으로 어떤 버전에 지�
 
 * 에 추가 조건부 문을 추가 하는 `<Error>` 는 Microsoft.VisualStudio.Sdk.BuildTasks.14.0 있는 태그입니다.  삽입 하 여이 작업을 수행 `'$(VisualStudioVersion)' == '14.0' And` 조건 문으로 앞에 있습니다. 이러한 문은 csproj 파일의 바닥글에 표시 됩니다.
 
-예:
+예를 들어:
 
 ```xml
 <Error Condition="'$(VisualStudioVersion)' == '14.0' And Exists('packages\Microsoft.VisualStudio.Sdk.BuildTasks.14.0.14.0…" />

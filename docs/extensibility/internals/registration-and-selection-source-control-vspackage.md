@@ -1,26 +1,24 @@
 ---
-title: "등록 및 선택 (소스 제어 VSPackage) | Microsoft Docs"
-ms.custom: 
+title: 등록 및 선택 (소스 제어 VSPackage) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - registration, source control packages
 - source control packages, registration
 ms.assetid: 7d21fe48-489a-4f55-acb5-73da64c4e155
-caps.latest.revision: "34"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: b0f02abe4cad58db27700aee3c29ec8d2dd7a7e2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1d7bcdb8f930430ac00335777e2c088ce52a34bb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registration-and-selection-source-control-vspackage"></a>등록 및 선택 (소스 제어 VSPackage)
 에 노출 하려면 VSPackage를 등록 해야 하는 소스 제어는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. 둘 이상의 소스 제어 VSPackage를 등록 하는 경우 적절 한 시간에 로드 하는 VSPackage 선택할 수 있습니다. 참조 [Vspackage](../../extensibility/internals/vspackages.md) Vspackage 및 등록 하는 방법에 대 한 자세한 내용은 합니다.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="selecting-a-source-control-package"></a>소스 제어 패키지를 선택합니다.  
  여러 가지 소스 제어 플러그 인 API 기반 플러그 인 및 소스 제어 Vspackage를 동시에 등록 될 수 있습니다. 소스 제어 플러그 인 또는 VSPackage를 선택 하는 프로세스를 확인 해야 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 플러그 인을 로드 또는 적절 한 시간에 VSPackage 불필요 한 구성 요소를 로드 하 여 필요한 될 때까지 연기할 수 있습니다. 또한 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 메뉴 항목과 대화 상자, 도구 모음을 포함 하는 다른 비활성 Vspackage에서 모든 UI를 제거 하 고 현재 VSPackage에 대 한 UI를 표시 해야 합니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]다음 작업 중 하나를 수행 하는 경우 소스 제어 VSPackage를 로드 합니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 다음 작업 중 하나를 수행 하는 경우 소스 제어 VSPackage를 로드 합니다.  
   
 -   (소스 제어에서 솔루션은) 하는 경우 솔루션이 열릴 수 있습니다.  
   
@@ -64,14 +62,14 @@ ms.lasthandoff: 12/22/2017
  VSPackage는 실제로 되도록 하려는 경우에 필요한 모든 구성 요소를 로드 해야 하는 소스 제어 사용 (그렇지 않으면이 라고 지연된 로드).  
   
 ### <a name="automatic-solution-based-vspackage-swapping"></a>자동 솔루션 기반 VSPackage 교환  
- 소스 제어 Vspackage를 수동으로 바꿀 수 있습니다를 통해는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **옵션** 대화 상자는 **소스 제어** 범주입니다. 자동 솔루션을 기반으로 패키지를 교환 하는 특정 솔루션에 대 한 지정 된 소스 제어 패키지를 해당 솔루션을 열 때 자동으로 활성으로 설정 되 고 있다는 것을 의미 합니다. 모든 소스 제어 패키지를 구현 해야 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]전환 둘 다 처리 소스 제어 플러그 인 (소스 제어 플러그 인 API 구현) 및 소스 Vspackage를 제어 합니다.  
+ 소스 제어 Vspackage를 수동으로 바꿀 수 있습니다를 통해는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] **옵션** 대화 상자는 **소스 제어** 범주입니다. 자동 솔루션을 기반으로 패키지를 교환 하는 특정 솔루션에 대 한 지정 된 소스 제어 패키지를 해당 솔루션을 열 때 자동으로 활성으로 설정 되 고 있다는 것을 의미 합니다. 모든 소스 제어 패키지를 구현 해야 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetActive%2A> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSccProvider.SetInactive%2A>합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 전환 둘 다 처리 소스 제어 플러그 인 (소스 제어 플러그 인 API 구현) 및 소스 Vspackage를 제어 합니다.  
   
  소스 제어 어댑터 패키지는 모든 소스 제어 플러그 인 API를 기반으로 전환 하는 데 사용은 플러그 인 합니다. 중간 소스 제어 어댑터 패키지도 전환 하 고 어떤 소스 제어 플러그 인을 결정 하는 프로세스를 사용자에 게는 활성 또는 비활성으로 설정 되어 있어야 합니다. 소스 제어 플러그 인 활성화 된 경우에 항상 어댑터 패키지 활성화 되어 있습니다. 두 소스 제어 플러그 인 금액 단순히을 로드 하 고 플러그 인 DLL 언로드를 전환 합니다. 그러나 소스 제어 VSPackage 전환할에서는 적절 한 VSPackage를 로드 IDE와의 상호 작용 합니다.  
   
  소스 제어 VSPackage는 솔루션을 열 때 솔루션 파일에는 VSPackage에 대 한 레지스트리 키가 호출 됩니다. 솔루션을 열면 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 레지스트리 값을 찾아서 적절 한 소스 제어 VSPackage를 로드 합니다. 모든 소스 제어 Vspackage 위에 설명 된 레지스트리 항목이 있어야 합니다. 소스 제어에서 사용 중인 솔루션 연결 된 특정 소스 제어 VSPackage 것으로 표시 되어 있습니다. 소스 제어 Vspackage를 구현 해야 합니다는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionPersistence> 자동 솔루션 기반 VSPackage 교환 수 있도록 합니다.  
   
 ### <a name="visual-studio-ui-for-package-selection-and-switching"></a>Visual Studio 패키지 선택 및 전환에 대 한 UI  
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]제공 하는 소스 제어 VSPackage에 대 한 UI 및 플러그 인 선택에는 **옵션** 대화 상자는 **소스 제어** 범주입니다. 현재 소스 제어 플러그 인을 선택 하는 사용자 또는 VSPackage 수 있습니다. 드롭다운 목록에 있습니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 제공 하는 소스 제어 VSPackage에 대 한 UI 및 플러그 인 선택에는 **옵션** 대화 상자는 **소스 제어** 범주입니다. 현재 소스 제어 플러그 인을 선택 하는 사용자 또는 VSPackage 수 있습니다. 드롭다운 목록에 있습니다.  
   
 -   모든 소스 제어 패키지 설치  
   

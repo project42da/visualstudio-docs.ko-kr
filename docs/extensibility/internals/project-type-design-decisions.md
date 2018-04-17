@@ -1,28 +1,26 @@
 ---
-title: "프로젝트 형식 디자인 관련 결정 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 형식 디자인 관련 결정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project types, project file persistence
 - project types, commitment mechanics
 - project types, items
 - project types, design decisions
 ms.assetid: f68671fe-fd7a-4e56-a0b5-330b0f1fedb1
-caps.latest.revision: "10"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a6649bd45aba299514b40e74b5683368bfd92b41
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: c28c6f29454feed94407d6e37c3432247b9a4a26
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-type-design-decisions"></a>프로젝트 형식에 대 한 디자인 관련 결정
 새 프로젝트 형식을 만들기 전에 프로젝트 형식에 대 한 몇 가지 디자인 결정 해야 합니다. 사용할 항목을 프로젝트에 포함 됩니다, 프로젝트 파일은 지속 방법, 및 어떤 약정 모델의 유형을 결정 해야 합니다.  

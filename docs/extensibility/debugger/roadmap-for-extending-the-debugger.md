@@ -1,31 +1,29 @@
 ---
-title: "디버거에서 확장에 대 한 로드맵 | Microsoft Docs"
-ms.custom: 
+title: 디버거에서 확장에 대 한 로드맵 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], roadmap
 - Debugging SDK, roadmap
 ms.assetid: 1f4096a8-f7aa-4dfa-84e1-6d59263e70bb
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 612017888c78f0994a83a10e3628fc10b667f8d0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 46c5a8a995644d6876457836674152eb3b3ccad7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="roadmap-for-extending-the-debugger"></a>디버거에서 확장에 대 한 로드맵
 확장 하기 위한 가이드 및 참조 정보를 제공 하는이 설명서는 [!INCLUDE[vs_current_short](../../code-quality/includes/vs_current_short_md.md)] 으로 디버거는 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)]합니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]설명서 디버깅 샘플과 포괄적인 참조는 디버거를 사용자 지정 하는 일반적인 방법을 보여 주는 몇 가지 대표 시나리오에 포함 됩니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 설명서 디버깅 샘플과 포괄적인 참조는 디버거를 사용자 지정 하는 일반적인 방법을 보여 주는 몇 가지 대표 시나리오에 포함 됩니다.  
   
  컴파일러 및 출력에는 제품에서 디버깅을 구현 하기 위해 필요한를 결정 합니다. 하는 경우 컴파일러:  
   

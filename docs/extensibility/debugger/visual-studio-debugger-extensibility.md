@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio 디버거 확장성 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 디버거 확장성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Visual Studio], Debugging SDK
 - Debugging SDK
 ms.assetid: c088b6a2-c3ad-446b-830d-9c6f41b2934b
-caps.latest.revision: "32"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: c5b5943dc8087a22e1bdfb94ae6d0d10335c174a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e5bb01c093fda068dfbc7dfa705914a8bdef4d2b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-debugger-extensibility"></a>Visual Studio 디버거 확장성
 Visual Studio에는 프로그램에서 버그를 추적 하기 위한 강력 하 고 사용 하기 쉬운 도구를 제공 하는 완전 한 대화형 소스 코드 디버거 포함 되어 있습니다. 디버거는 완전히 지원 Visual Basic, C#, C/c + + 및 JavaScript에 있습니다. 그러나는 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], 즉에서 사용할 수는 [Microsoft 다운로드 센터](http://go.microsoft.com/fwlink/?LinkId=214453), 같은 다양 한 기능으로는 디버거에서 다른 프로그래밍 언어를 지원할 수 있습니다.  

@@ -1,28 +1,26 @@
 ---
-title: "중첩 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: 중첩 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project nesting
 - nested projects
 - projects [Visual Studio SDK], child projects
 - projects [Visual Studio SDK], nesting
 ms.assetid: 12cce037-9840-4761-845e-5abd5fb317b0
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5b91f9dc00b9130f2c239bd3254f78376bc0fdf3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 35d0f4f8906acc08733894d1c24b6d8c2199e1f7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="nesting-projects"></a>중첩 프로젝트
 VS 패키지를 사용 하는 엔터프라이즈 응용 프로그램 개발자 비슷한 형식의 프로젝트에서 함께 그룹화 편리 하 게 수 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 를 사용 하 여 *중첩 프로젝트*합니다. 예를 들어, 엔터프라이즈 템플릿 프로젝트 범주로 그룹 프로젝트에 대 한 중첩 된 프로젝트를 사용합니다. 비즈니스 외관 프로젝트, 웹 UI 프로젝트 및에 하나의 범주에 함께 그룹화 됩니다.  

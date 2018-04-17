@@ -1,27 +1,23 @@
 ---
-title: "XML 명령 테이블 디자인 (합니다. Vsct) 파일 | Microsoft Docs"
-ms.custom: 
+title: XML 명령 테이블 디자인 (합니다. Vsct) 파일 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT files, designing
 ms.assetid: bb87a322-bac4-4258-92bc-9a876f05d653
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: fcb8533dda001d447fd10fcb69b3cccd6d2d91a1
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 865baa3f7b4b0fe4cbbaf2cdf34e9e8041d5c121
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="designing-xml-command-table-vsct-files"></a>XML 명령 테이블 디자인 (합니다. Vsct) 파일
 레이아웃 및 VSPackage에 대 한 명령 항목의 모양을 XML 명령 테이블 (.vsct) 파일에 설명합니다. 명령 항목 단추, 콤보 상자, 메뉴, 도구 모음 및 명령 항목 그룹에 포함 됩니다. 이 항목에서는 XML 명령 테이블 파일에 미치는 영향 명령 항목 및 메뉴, 및를 만드는 방법을 설명 합니다.

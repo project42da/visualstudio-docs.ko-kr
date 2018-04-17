@@ -1,26 +1,24 @@
 ---
-title: "라우팅 알고리즘이 명령 | Microsoft Docs"
-ms.custom: 
+title: 라우팅 알고리즘이 명령 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands, routing
 - command routing
 ms.assetid: 998b616b-bd08-45cb-845f-808efb8c33bc
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e1463fe22d4b08933112ca1ad0cf28f38a4e102c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: aba7ddcdda4dd4eabbb9266e0fa89c916bb028f6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="command-routing-algorithm"></a>명령 라우팅 알고리즘
 Visual Studio에서 명령은 여러 가지 서로 다른 구성 요소에 의해 처리 됩니다. 명령 (global 라고도 함)은 가장 바깥쪽 컨텍스트를 현재 선택 영역을 기반으로 하는 가장 안쪽의 컨텍스트에서 라우팅됩니다. 자세한 내용은 참조 [가용성](../../extensibility/internals/command-availability.md)합니다.  

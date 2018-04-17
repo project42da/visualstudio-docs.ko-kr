@@ -1,30 +1,28 @@
 ---
-title: "소스 제어 통합 Essentials | Microsoft Docs"
-ms.custom: 
+title: 소스 제어 통합 Essentials | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Source Control Integration, essentials
 - Source Control Integration,overview
 - essentials, Source Control Integration
 ms.assetid: 442057cb-fd54-4283-96f8-2f6dc8bf2de7
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5d474e00186cf2110dd8e701d980a1a4562beb8c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 0c3e93eb86fdc252f162331033207db5bdaa1569
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-integration-essentials"></a>소스 제어 통합 Essentials
-[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서는 두 가지 소스 제어 통합: (이전의 MSSCCI API), 소스 제어 플러그 인 API 및 VSPackage 기반 소스 제어 통합 솔루션을 사용 하 여 만들어집니다 및 기본 기능을 제공 하는 소스 제어 플러그 인입니다 보다 강력한 기능을 제공 합니다.  
+[!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 에서는 두 가지 소스 제어 통합: (이전의 MSSCCI API), 소스 제어 플러그 인 API 및 VSPackage 기반 소스 제어 통합 솔루션을 사용 하 여 만들어집니다 및 기본 기능을 제공 하는 소스 제어 플러그 인입니다 보다 강력한 기능을 제공 합니다.  
   
 ## <a name="source-control-plug-in"></a>소스 제어 플러그 인  
  소스 제어 플러그 인 소스 제어 플러그 인 API를 구현 하는 DLL로 기록 됩니다. 등록 및 소스 제어 통합 기능은 API를 통해 제공 됩니다. 이 방법은 소스 제어 VSPackage 보다 구현 하기가 사용 하는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 대부분 소스 제어 작업에 대 한 사용자 인터페이스 (UI).  

@@ -2,34 +2,30 @@
 title: EnableLocationBrowseButton 요소 (Visual Studio 템플릿) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#EnableLocationBrowseButton
 helpviewer_keywords:
 - EnableLocationBrowseButton [Visual Studio project templates]
 ms.assetid: a12d10d8-af49-482a-af77-e084fd07a47d
-caps.latest.revision: 11
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 538dfce45136b6a8d55c9c3c8aab1931b3a6df27
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 7d3573a1359cf7cc6347ede28b5361b01bbb7efb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="enablelocationbrowsebutton-element-visual-studio-templates"></a>EnableLocationBrowseButton 요소(Visual Studio 템플릿)
 지정 여부는 **찾아보기** 단추를 사용할 수는 **새 프로젝트** 대화 상자 사용자가 새 프로젝트 저장 되는 기본 디렉터리를 쉽게 수정할 수 있도록 합니다.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<EnableLocationBrowseButton >  
   
 ## <a name="syntax"></a>구문  
@@ -63,7 +59,7 @@ ms.lasthandoff: 12/22/2017
   
  에 **새 프로젝트** 대화 상자는 **위치** 텍스트 상자는 새 프로젝트 저장 된 디렉터리를 지정 합니다. **찾아보기** 단추를 표시 하 여이 디렉터리를 수정할 수 있습니다는 **프로젝트 위치** 컴퓨터에서 사용할 수 있는 다른 디렉터리에 쉽게 탐색할 수 있는 대화 상자 및 다음 새 프로젝트 저장 된 디렉터리 이름으로 선택 합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  

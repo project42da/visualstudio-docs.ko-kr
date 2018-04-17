@@ -2,26 +2,22 @@
 title: 레거시 언어 서비스의 모델 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - language services, model
 ms.assetid: d8ae1c0c-ee3d-4937-a581-ee78d0499793
-caps.latest.revision: 20
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: dc652f9eb4428e1d4d7297ed8b588c7f81a07b2d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 943f0f013045e3082af3069ed4d45aaed1096869
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="model-of-a-legacy-language-service"></a>레거시 언어 서비스의 모델
 언어 서비스는 요소와는 특정 언어에 대 한 기능을 정의 하 고 해당 언어에 관련 정보 편집기를 제공 하는 데 사용 됩니다. 예를 들어 편집기 구문 색 지정을 지원 하기 위해 요소 및 언어의 키워드를 알고 있어야 합니다.  
@@ -52,7 +48,7 @@ ms.lasthandoff: 12/22/2017
 |코드 창|<xref:Microsoft.VisualStudio.TextManager.Interop.VsCodeWindow>|하나 이상의 텍스트 뷰를 포함 하는 문서 창입니다. 때 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 는 코드 창 (MDI) 다중 문서 인터페이스 모드로 MDI 자식입니다.|  
 |텍스트 보기|<xref:Microsoft.VisualStudio.TextManager.Interop.VsTextView>|사용자가 이동 하 고 키보드 및 마우스를 사용 하 여 텍스트를 볼 수 있는 창입니다. 텍스트 보기는 사용자에 게 편집기로 나타납니다. 일반 편집기 창과 출력 창에서 직접 실행 창에서 텍스트 뷰를 사용할 수 있습니다. 또한 코드 창 내에서 하나 이상의 텍스트 보기를 구성할 수 있습니다.|  
 |텍스트 관리자|관리는 <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager> 가져와야 하에서 서비스는 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsTextManager> 포인터|앞에서 설명한 모든 구성 요소에서 공유 하는 일반적인 정보를 유지 관리 하는 구성 요소입니다.|  
-|언어 서비스|구현에 따라 다릅니다. 구현<xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>|편집기 구문 강조 표시, 문 완성, 중괄호 일치 등 언어 관련 정보를 제공 하는 개체입니다.|  
+|언어 서비스|구현에 따라 다릅니다. 구현 <xref:Microsoft.VisualStudio.TextManager.Interop.IVsLanguageInfo>|편집기 구문 강조 표시, 문 완성, 중괄호 일치 등 언어 관련 정보를 제공 하는 개체입니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [사용자 지정 편집기의 문서 데이터 및 문서 보기](../../extensibility/document-data-and-document-view-in-custom-editors.md)

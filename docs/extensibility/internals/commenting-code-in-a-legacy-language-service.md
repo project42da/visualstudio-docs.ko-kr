@@ -1,26 +1,24 @@
 ---
-title: "레거시 언어 서비스의 코드를 주석 | Microsoft Docs"
-ms.custom: 
+title: 레거시 언어 서비스의 코드를 주석 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - comments, supporting in language services [managed package framework]
 - language services [managed package framework], commenting code
 ms.assetid: 9600d6f0-e2b6-4fe0-b935-fb32affb97a4
-caps.latest.revision: "14"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: e6dfeb31ab062d5182b56ba450450d41a6dab807
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 5b573b464c26c3864cece697191cf03545ada779
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="commenting-code-in-a-legacy-language-service"></a>레거시 언어 서비스의 코드를 주석 달기
 프로그래밍 언어에는 일반적으로 코드를 주석 처리 하거나 주석을 달 수 있는 방법을 제공 합니다. 주석을 코드에 대 한 추가 정보를 제공 하지만 컴파일 또는 해석 하는 동안 무시 하는 텍스트의 섹션입니다.  
@@ -43,7 +41,7 @@ ms.lasthandoff: 12/22/2017
   
  도 재정의 해야 합니다는 <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> 반환 하는 메서드는 <xref:Microsoft.VisualStudio.Package.CommentInfo> 주석 문자 언어에 대 한 포함 된 구조입니다. C#-스타일 줄 주석 문자는 기본값입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  다음의 예제 구현은는 <xref:Microsoft.VisualStudio.Package.Source.GetCommentFormat%2A> 메서드.  
   
 ```csharp  

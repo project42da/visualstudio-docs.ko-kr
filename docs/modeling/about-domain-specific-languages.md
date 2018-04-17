@@ -1,23 +1,21 @@
 ---
-title: "도메인 특정 언어에 대 한 | Microsoft Docs"
-ms.custom: 
+title: 도메인 특정 언어에 대 한 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Domain-Specific Language
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 9357c55b204d521eb5cd77af328636485c490ff4
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 89293e0b684881767b6357b88469dc69ddc71902
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="about-domain-specific-languages"></a>도메인별 언어 정보
 
@@ -81,7 +79,7 @@ DSL를 정의한 경우에 자신의 컴퓨터에 설치할 수 있는 다른 �
   
 ### <a name="domain-model"></a>도메인 모델
 
-도메인 특정 언어 요소와 일관 된 문법에 이들 간의 관계의 집합을 결합 해야 합니다. 요소 및 관계의 조합을 유효한 지 여부를 정의 해야 합니다. 예를 들어 프로그래밍 언어는 일반적으로 두 번째 클래스에서 파생 클래스가 두 개 및 첫 번째 클래스에서 파생 된 두 번째 클래스는 순환 상속을 방지 합니다. 예를 들어 한 사람이 자신의 종속 안, 비즈니스 논리를 표현 하 제약 조건을 사용할 수 있습니다. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]도메인 특정 언어에 가장 필요로 하는 제한의 종류를 표현 하 제약 조건을 사용 합니다.  
+도메인 특정 언어 요소와 일관 된 문법에 이들 간의 관계의 집합을 결합 해야 합니다. 요소 및 관계의 조합을 유효한 지 여부를 정의 해야 합니다. 예를 들어 프로그래밍 언어는 일반적으로 두 번째 클래스에서 파생 클래스가 두 개 및 첫 번째 클래스에서 파생 된 두 번째 클래스는 순환 상속을 방지 합니다. 예를 들어 한 사람이 자신의 종속 안, 비즈니스 논리를 표현 하 제약 조건을 사용할 수 있습니다. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 도메인 특정 언어에 가장 필요로 하는 제한의 종류를 표현 하 제약 조건을 사용 합니다.  
   
 ### <a name="artifact-generation"></a>아티팩트 생성
 
@@ -89,7 +87,7 @@ DSL를 정의한 경우에 자신의 컴퓨터에 설치할 수 있는 다른 �
   
 ### <a name="serialization"></a>Serialization
 
-도메인 특정 언어 수 편집, 저장, 종료 하 고 다시 로드 하는 어떤 형태로 유지 해야 합니다. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]정의 하 고 도메인 특정 언어 serialize 되거나 유지 방법을 사용자 지정할 수 있는 XML 형식을 사용 합니다.  
+도메인 특정 언어 수 편집, 저장, 종료 하 고 다시 로드 하는 어떤 형태로 유지 해야 합니다. [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 정의 하 고 도메인 특정 언어 serialize 되거나 유지 방법을 사용자 지정할 수 있는 XML 형식을 사용 합니다.  
   
 ### <a name="integration-with-visual-studio"></a>Visual Studio와의 통합
 

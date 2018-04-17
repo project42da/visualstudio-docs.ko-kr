@@ -1,27 +1,25 @@
 ---
-title: "레거시 언어 서비스에 대 한 요약 정보 | Microsoft Docs"
-ms.custom: 
+title: 레거시 언어 서비스에 대 한 요약 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Quick Info, supporting in language services [managed package framework]
 - IntelliSense, Quick Info
 - language services [managed package framework], IntelliSense Quick Info
 ms.assetid: 159ccb0b-f5d6-4912-b88b-e9612924ed5e
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 8e0fa4a65960d0324a4be19db61648be48b08349
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: ffdfe9bfb9063828a90dd9cdf3452ca3684ff0a5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-info-in-a-legacy-language-service"></a>레거시 언어 서비스에 대 한 요약 정보
 사용자 중 하나는 식별자에 캐럿 배치를 선택 하는 경우 IntelliSense 요약 정보 원본에는 식별자에 대 한 정보를 표시 **요약 정보** 에서 **IntelliSense** 메뉴 또는 마우스를 보유 합니다. 커서 식별자입니다. 이렇게 하면 식별자에 대 한 정보에 표시 될 도구 설명 됩니다. 이 정보는 식별자 형식을 일반적으로 구성 됩니다. 디버그 엔진 활성화 되 면 현재 값이이 정보에 포함 될 수 있습니다. 디버그 엔진은 언어 서비스 식별자만 처리 하는 동안 식 값을 제공 합니다.  

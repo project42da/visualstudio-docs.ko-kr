@@ -1,27 +1,25 @@
 ---
-title: "파일 열기 명령을 사용 하 여 표시 | Microsoft Docs"
-ms.custom: 
+title: 파일 열기 명령을 사용 하 여 표시 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project types, supporting Open With command
 - Open With command
 - persistence, supporting Open With command
 ms.assetid: 53794bc3-1b73-4d40-954e-cfade1abddcf
-caps.latest.revision: "12"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: a1631632a2ceb66380d1d0c41e54b5a4244a31a3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 9c708bb5a510748b08cac5b46b6829b908e74e0a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="displaying-files-by-using-the-open-with-command"></a>파일 열기 명령을 사용 하 여 표시
 프로젝트를 표시 하려면 IDE를 요청할 수는 **프로그램** 대화 상자. 이 요청 라는 표준 편집기는 선택 항목에 있는 파일을 열 수입니다. 다음 단계는이 프로세스를 설명 합니다.  

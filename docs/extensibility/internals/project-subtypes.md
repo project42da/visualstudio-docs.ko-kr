@@ -1,32 +1,30 @@
 ---
-title: "프로젝트 하위 형식 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 하위 형식 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - projects [Visual Studio SDK], subtypes
 - project subtypes [Visual Studio SDK]
 ms.assetid: d235b47b-cf11-4d47-a63f-e33d9d16105d
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 21d7f013989607f7f5416a57829bc9b2b29b61d2
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e91a16ad11f7089230138919519922d58f3cc472
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-subtypes"></a>프로젝트 하위 형식
 프로젝트 하위 형식을 사용 하면 사용자 지정 하거나의 프로젝트 시스템의 동작을 flavor [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]합니다. 사용자 지정 항목 포함 추가 항목에서 필터링 하거나 프로젝트 파일에 저장 하는 추가 데이터는 **새 항목 추가** 어셈블리는 디버깅 및 배포 하는 방법을 제어 하는 대화 상자에서 프로젝트를 확장 하 고 **속성 페이지** 대화 상자. Vspackage는 프로젝트 하위 형식 COM 집계를 사용 하 여 구현 합니다.  
   
 > [!NOTE]
->  Visual c + + 프로젝트 시스템에서 프로젝트 하위 형식을 지원 하지 않습니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]자체 프로젝트 하위 형식을 사용 하 여 SQL Server 및 스마트 장치 프로젝트를 구현 합니다.  
+>  Visual c + + 프로젝트 시스템에서 프로젝트 하위 형식을 지원 하지 않습니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 자체 프로젝트 하위 형식을 사용 하 여 SQL Server 및 스마트 장치 프로젝트를 구현 합니다.  
   
 ## <a name="in-this-section"></a>섹션 내용  
  [프로젝트 하위 형식 디자인](../../extensibility/internals/project-subtypes-design.md)  

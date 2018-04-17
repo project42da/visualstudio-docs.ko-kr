@@ -2,26 +2,22 @@
 title: 드롭다운 표시줄 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - drop-down bar
 ms.assetid: 4bb621bd-72f5-43d5-916f-9f66617da049
-caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7058c0b93cd0ff4afb2a13b625cd7ef034b03699
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 0cf01e8a416407c570076812bf18aa6b21c21583
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="drop-down-bar"></a>드롭다운 표시줄
 드롭다운 표시줄 코드 창 위쪽에 제공 하며 드롭 다운 목록 두 개를 포함 합니다.  
@@ -29,7 +25,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="drop-down-bar-interfaces"></a>드롭다운 표시줄 인터페이스  
  [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)], 드롭 다운 표시줄에 대 한 목록을 포함 하는 예를 들어 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 항목 및 [!INCLUDE[vcprvc](../code-quality/includes/vcprvc_md.md)] 항목 멤버 함수를 다음 그림에 나와 있는 것 처럼 합니다.  
   
- ![Drop &#45; 막대를 아래로](../extensibility/media/vsdropdown_bar.gif "vsDropdown_bar")  
+ ![Drop&#45;막대를 아래로](../extensibility/media/vsdropdown_bar.gif "vsDropdown_bar")  
 드롭다운 표시줄  
   
  드롭다운 표시줄을 구현할 때 가지 가장 중요 네 가지 인터페이스가 있습니다.  

@@ -1,26 +1,24 @@
 ---
-title: "옵션 페이지에 대 한 자동화 지원 | Microsoft Docs"
-ms.custom: 
+title: 옵션 페이지에 대 한 자동화 지원 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], automation support
 - automation [Visual Studio SDK], creating Tools Options pages
 ms.assetid: 0b25b82c-7432-4e0a-9e84-350269ba8260
-caps.latest.revision: "29"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: ffc56e4b36814a8bed7a0f93d66cc87c0b6fc466
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d27ad706d4203a3573a734a1cd11b19e3c9df6a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="automation-support-for-options-pages"></a>옵션 페이지에 대 한 자동화 지원
 Vspackage는 사용자 지정을 제공할 수 **옵션** 대화 상자에 **도구** 메뉴 (도구 옵션 페이지)에서 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 있습니다 사용할 수 있도록 자동화 모델을 합니다.  

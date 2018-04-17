@@ -1,26 +1,24 @@
 ---
-title: "서비스 제공 (소스 제어 VSPackage) | Microsoft Docs"
-ms.custom: 
+title: 서비스 제공 (소스 제어 VSPackage) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - services, source control packages
 - source control packages, services
 ms.assetid: 9db07d70-87d2-4401-bc88-e3a49d81e9a2
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 6951881e915b44c0cb0c85685280f2b770647f3a
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6a52ffa7067a91582d8bfe31e09d6b03be54c4ea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="services-provided-source-control-vspackage"></a>서비스 제공 (소스 제어 VSPackage)
 서비스는 있는 기능 및 Visual Studio 통합된 개발 환경 (IDE)와 해당 설치 된 Vspackage Vspackage 간에 공유 되는 기본 메커니즘입니다. 서비스 및 Visual Studio IDE에서 중요도 자세한 설명을 참조 하십시오.[사용 및 서비스 제공](../../extensibility/using-and-providing-services.md)합니다.  

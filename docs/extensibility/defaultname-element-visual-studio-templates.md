@@ -1,35 +1,31 @@
 ---
-title: "DefaultName 요소 (Visual Studio 템플릿) | Microsoft Docs"
-ms.custom: 
+title: DefaultName 요소 (Visual Studio 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#DefaultName
 helpviewer_keywords:
 - DefaultName element [Visual Studio project templates]
 ms.assetid: 0ff056c8-b9d2-4747-9308-92adf1811491
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6a20bd878e9c6f85e03ff0738ed2a92d274f6232
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e67d8970859906e839abf89e85e38c24c2d88066
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="defaultname-element-visual-studio-templates"></a>DefaultName 요소(Visual Studio 템플릿)
 만들 때 프로젝트 또는 항목에 대 한 Visual Studio 프로젝트 시스템에서 생성 하는 이름을 지정 합니다.  
   
- \<VSTemplate >  
- \<TemplateData >  
+ \<VSTemplate>  
+ \<TemplateData>  
  \<DefaultName >  
   
 ## <a name="syntax"></a>구문  
@@ -69,7 +65,7 @@ ms.lasthandoff: 12/22/2017
   
  프로젝트 시스템에는 프로젝트 또는 항목에 대 한 기본 이름을 생성 하지 않으려면 다음 설정의 [ProvideDefaultName](../extensibility/providedefaultname-element-visual-studio-templates.md) 요소의 `False`합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한 표준 항목 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 클래스입니다.  
   
 ```  

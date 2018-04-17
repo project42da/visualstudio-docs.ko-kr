@@ -1,12 +1,10 @@
 ---
-title: "Office 솔루션에서 데이터로 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션에서 데이터로 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - datasets [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 63725a87cbd758a7b2d6c02f1eb7a20e4e4e7de0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9b67ef7bec9b44510711c07195a8114b730d87dc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="data-in-office-solutions"></a>Office 솔루션의 데이터
   많은 Office 솔루션에서 사용자는 데이터를 검색하거나 수정할 수 있도록 합니다. Visual Studio를 사용하여 Office 솔루션을 만드는 경우 데이터로 작업할 수 있는 여러 가지 방법이 있습니다.  

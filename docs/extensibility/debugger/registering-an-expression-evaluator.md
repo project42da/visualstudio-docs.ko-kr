@@ -1,26 +1,24 @@
 ---
-title: "식 계산기를 등록 하는 중 | Microsoft Docs"
-ms.custom: 
+title: 식 계산기를 등록 하는 중 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], expression evaluation
 - expression evaluators, registering
 ms.assetid: 236be234-e05f-4ad8-9200-24ce51768ecf
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 9a8aa71d6c529aa4d06acf1d887f10a58cd8367e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: a34278ecca071c31e62ff4e405e9d7ada112d425
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="registering-an-expression-evaluator"></a>식 계산기를 등록 하는 중
 > [!IMPORTANT]
@@ -35,7 +33,7 @@ ms.lasthandoff: 12/22/2017
   
  EE; 비관리 코드로 작성 된 경우와 동일한 레지스트리 항목 내용이 유일한 차이점은 한지 도우미 함수가 같은 `SetEEMetric` 있습니다에 대 한 작업을 수행 하도록 합니다. 이 등록/등록 취소 프로세스의 예는 다음과 같습니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 함수는 EE 관리 되는 코드를 등록 하 고 Visual Studio와 함께 자체 등록을 취소 하는 방법을 보여 줍니다.  
   
 ```csharp  
@@ -117,7 +115,7 @@ namespace EEMC
   
     |메트릭|설명|  
     |------------|-----------------|  
-    |`metricCLSID`|`CLSID`EE 클래스 팩터리|  
+    |`metricCLSID`|`CLSID` EE 클래스 팩터리|  
     |`metricName`|표시할 수 있는 문자열로 EE의 이름|  
     |`metricLanguage`|평가 하도록 디자인 되는 EE는 언어의 이름|  
     |`metricEngine`|`GUID`이 EE를 사용 하는 디버그 엔진 (DE)의 s|  
@@ -127,7 +125,7 @@ namespace EEMC
   
 3.  HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VisualStudio 아래에 있는 키를 만들어 Visual Studio와 함께 등록\\*X.Y*여기서 *X.Y* 를 등록 하려면 Visual Studio의 버전입니다.  
   
-### <a name="example"></a>예  
+### <a name="example"></a>예제  
  이 함수는 비관리 코드 (c + +) EE 등록 하 고 Visual Studio와 함께 자체 등록을 취소 하는 방법을 보여 줍니다.  
   
 ```cpp  

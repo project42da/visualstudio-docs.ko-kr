@@ -1,27 +1,25 @@
 ---
-title: "언어 서비스에 대 한 지원을 명시 제공 | Microsoft Docs"
-ms.custom: 
+title: 언어 서비스에 대 한 지원을 명시 제공 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], outlining support
 - language services, supporting outlining
 - outlining, supporting
 ms.assetid: df759e89-8193-418c-8038-6626304d387b
-caps.latest.revision: "16"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1133166560fa371bbb5a2b008175034d48a2a7b5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 6467a1e3386daedc4a67aa420c06cf01187b8d22
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-provide-expanded-outlining-support-in-a-legacy-language-service"></a>방법: 레거시 언어 서비스에서 개요를 지 원하는 확장
 해당 언어를 지원할에 대 한 개요 지원을 확장 하기 위한 다음과 같은 **정의 부분만** 명령입니다. 편집기 제어 개요 영역을 추가 하 고 클라이언트에서 제어 되는 개요 영역 수 있습니다.  
@@ -31,7 +29,7 @@ ms.lasthandoff: 12/22/2017
   
 #### <a name="to-implement-an-editor-controlled-outline-region"></a>한 편집기 제어 개요 영역을 구현 하려면  
   
-1.  호출 `QueryService` 에 대 한<xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>  
+1.  호출 `QueryService` 에 대 한 <xref:Microsoft.VisualStudio.TextManager.Interop.SVsTextManager>  
   
      에 대 한 포인터를 반환 합니다. <xref:Microsoft.VisualStudio.TextManager.Interop.IVsHiddenTextManager>합니다.  
   

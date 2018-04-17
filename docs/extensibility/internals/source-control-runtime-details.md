@@ -2,26 +2,22 @@
 title: 소스 제어 런타임 세부 정보 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], runtime details
 ms.assetid: 1acd30e0-f98c-4bde-b9cd-4076845887df
-caps.latest.revision: 12
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 9b27aa56cdcf48ded56f9a43e40a1e65f3491536
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: b972218258ded1ebf2f9f606927ba351e77afa01
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-runtime-details"></a>소스 제어에 대 한 런타임 세부 정보
 사용자는 마법사와 같은 자동화 컨트롤러를 통해 또는 소스 제어에 파일을 프로젝트에 추가 하는 경우 프로젝트를 소스 제어에 추가 됩니다. 프로젝트를 지정 하지 않습니다 자체에 대 한 소스 제어; 인지 이 원본 제어를 지원 하지만 수동으로에 추가 해야 합니다.  

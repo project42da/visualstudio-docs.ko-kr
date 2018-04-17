@@ -1,29 +1,25 @@
 ---
 title: PROVIDER_FLAGS | Microsoft Docs
-ms.custom: 
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - PROVIDER_FLAGS
 helpviewer_keywords:
 - PROVIDER_FLAGS enumeration
 ms.assetid: 8cbd2312-ed2f-4477-b192-c3f25c6098c3
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f6f2a1b57c627425ebf63c6068f358cb8be0d3c1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 340531f9c943052c1abd51203f3937ccd111e314
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="providerflags"></a>PROVIDER_FLAGS
 프로그램 공급자에서 가져와야 원하는 속성을 지정 합니다.  
@@ -66,10 +62,10 @@ public enum enum_PROVIDER_FLAGS {
  프로세스의이 인스턴스에서 현재 디버깅 중인 [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]합니다.  
   
  PFLAG_ATTACH_TODEBUGGEE  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]디버깅 중인 프로그램에 연결 되어 있지만 시작 하지 못했습니다.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 디버깅 중인 프로그램에 연결 되어 있지만 시작 하지 못했습니다.  
   
  PFLAG_REASON_WATCH  
- [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)]가 이벤트를 감시 합니다.  
+ [!INCLUDE[vsprvs](../../../code-quality/includes/vsprvs_md.md)] 가 이벤트를 감시 합니다.  
   
  PFLAG_GET_PROGRAM_NODES  
  호출자가는 `ProgramNodes` 필드는 [PROVIDER_PROCESS_DATA](../../../extensibility/debugger/reference/provider-process-data.md) 구조입니다.  
@@ -93,7 +89,7 @@ public enum enum_PROVIDER_FLAGS {
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [열거형](../../../extensibility/debugger/reference/enumerations-visual-studio-debugging.md)   

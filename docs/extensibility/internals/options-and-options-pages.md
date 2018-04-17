@@ -1,12 +1,10 @@
 ---
-title: "옵션 및 옵션 페이지 | Microsoft Docs"
-ms.custom: 
+title: 옵션 및 옵션 페이지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], managed package framework support
 - managed package framework, Tools Options pages support
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - Tools Options pages [Visual Studio SDK], layouts
 - Tools Options pages [Visual Studio SDK], attributes
 ms.assetid: e6c0e636-5ec3-450e-b395-fc4bb9d75918
-caps.latest.revision: "34"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 1177a9a4df1f07c93540fa039117c5fa81289e17
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d85b900779a5df8af077b292b2e2f70b0592e35c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="options-and-options-pages"></a>옵션 및 옵션 페이지
 클릭 하면 **옵션** 에 **도구** 메뉴가 열립니다는 **옵션** 대화 상자. 이 대화 상자에서 옵션 전체적으로 옵션 페이지 라고 합니다. 탐색 창에서 트리 컨트롤 옵션 범주를 포함 되 고 모든 범주 옵션 페이지를 포함 합니다. 페이지를 선택 하면 해당 옵션이 오른쪽 창에 나타납니다. 이러한 페이지에는 VSPackage의 상태를 결정 하는 옵션의 값을 변경할 수 있습니다.  
@@ -56,11 +54,11 @@ ms.lasthandoff: 12/22/2017
 ## <a name="option-attributes-and-layout"></a>옵션 특성 및 레이아웃  
  이 페이지에 제공 하는 사용자 인터페이스 (UI)에 사용자 지정 옵션 페이지의 옵션의 모양을 결정 합니다. 레이아웃, 레이블 지정 및 설명의 일반 옵션 페이지의 옵션은 다음 특성으로 결정 됩니다.  
   
--   <xref:System.ComponentModel.CategoryAttribute>옵션의 범주를 결정합니다.  
+-   <xref:System.ComponentModel.CategoryAttribute> 옵션의 범주를 결정합니다.  
   
--   <xref:System.ComponentModel.DisplayNameAttribute>옵션의 표시 이름을 결정합니다.  
+-   <xref:System.ComponentModel.DisplayNameAttribute> 옵션의 표시 이름을 결정합니다.  
   
--   <xref:System.ComponentModel.DescriptionAttribute>옵션의 설명에 따라 결정 됩니다.  
+-   <xref:System.ComponentModel.DescriptionAttribute> 옵션의 설명에 따라 결정 됩니다.  
   
     > [!NOTE]
     >  해당 특성, SRCategory, LocDisplayName, SRDescription, 지역화에 대 한 문자열 리소스를 사용 하 여 및에 정의 된는 [관리 되는 프로젝트 샘플](http://go.microsoft.com/fwlink/?LinkId=122774)합니다.  

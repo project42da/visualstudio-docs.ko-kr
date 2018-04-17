@@ -2,28 +2,24 @@
 title: SccAdd 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - SccAdd
 helpviewer_keywords:
 - SccAdd function
 ms.assetid: 545268f3-8e83-446a-a398-1a9db9e866e8
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 52137da9d14920a2fd5213f1110a74d895e51c7f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2933d00b7450f946a5fd5409bcaeecc2527a9f64
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sccadd-function"></a>SccAdd 함수
 이 함수는 소스 제어 시스템에 새 파일을 추가합니다.  

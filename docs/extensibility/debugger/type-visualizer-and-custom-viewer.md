@@ -1,26 +1,24 @@
 ---
-title: "시각화 도우미와 사용자 지정 뷰어를 입력 합니다. | Microsoft Docs"
-ms.custom: 
+title: 시각화 도우미와 사용자 지정 뷰어를 입력 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - debugging [Debugging SDK], custom viewer
 - debugging [Debugging SDK], type visualizer
 ms.assetid: fd3691e6-9c78-4767-846f-43f85ada4375
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 91aa122c96230c7fd34ce2b65925b9166883def6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: d419130cd93c6cc2f7dcff132fdafc8986bfd30a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="type-visualizer-and-custom-viewer"></a>사용자 지정 뷰어와 형식 시각화 도우미
 형식 시각화 도우미는 매우 구체적인 형식으로 데이터를 표시 하는 구성 요소입니다. 이 형식은 전적으로 시각화 도우미의 구현자에 따라, 최종 사용자 또는 타사 공급 업체가 제공한 시각화 도우미의 수입니다.  

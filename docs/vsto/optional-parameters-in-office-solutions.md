@@ -1,12 +1,10 @@
 ---
-title: "Office 솔루션의 선택적 매개 변수 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션의 선택적 매개 변수 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,20 +18,21 @@ helpviewer_keywords:
 - parameters [Office development in Visual Studio], optional
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fe40b6bc0af9df294408079c8a27dfac42df97b0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d417b5126989736c6126ae7c80bfcbc86f336a09
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office 솔루션의 선택적 매개 변수
   Microsoft Office 응용 프로그램의 개체 모델에 있는 메서드 중 상당수가 선택적 매개 변수를 허용합니다. Visual Studio에서 Visual Basic을 사용하여 Office 솔루션을 개발하는 경우 없는 매개 변수마다 기본값이 자동으로 사용되기 때문에 선택적 매개 변수의 값을 전달할 필요가 없습니다. 대부분의 경우에서 Visual C# 프로젝트에서 선택적 매개 변수를 생략할 수 있습니다. 그러나 선택적 생략할 수 없습니다 **ref** 의 매개 변수는 `ThisDocument` 문서 수준 Word 프로젝트의 클래스.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
- Visual C# 및 Visual Basic 프로젝트에서 선택적 매개 변수 사용에 대 한 자세한 내용은 참조 [이름 및 선택적 인수 &#40; &#35; 프로그래밍 가이드 &#41; ](/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments) 및 [선택적 매개 변수 사용 &#40; Visual Basic &#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/optional-parameters).  
+ Visual C# 및 Visual Basic 프로젝트에서 선택적 매개 변수 사용에 대 한 자세한 내용은 참조 [명명 된 인수와 선택적 인수 &#40;C&#35; 프로그래밍 가이드&#41; ](/dotnet/csharp/programming-guide/classes-and-structs/named-and-optional-arguments) 및 [ &#40;Visual Basic&#41;](/dotnet/visual-basic/programming-guide/language-features/procedures/optional-parameters)합니다.  
   
 > [!NOTE]  
 >  이전 버전의 Visual Studio에서는 Visual C# 프로젝트에서 모든 선택적 매개 변수의 값을 전달해야 합니다. 편의를 위해 이러한 프로젝트에는 매개 변수의 기본값을 사용하려고 할 때 선택적 매개 변수에 전달할 수 있는 `missing`이라는 전역 변수가 포함되어 있습니다. Visual Studio에서 Office 용 visual C# 프로젝트를 계속 포함할는 `missing` 변수를 일반적으로 필요가 없습니다의 Office 솔루션을 개발할 때 사용할 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], 옵션을 사용 하 여 메서드를 호출 하는 경우를 제외 하 고 **ref** 매개 변수는 `ThisDocument` Word 용 문서 수준 프로젝트의 클래스.  
@@ -69,7 +68,7 @@ ms.lasthandoff: 01/10/2018
   
  [!code-csharp[Trin_VstrefGeneralWord#5](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#5)]  
   
- 값 및 참조 형식 매개 변수에 대 한 자세한 내용은 참조 하세요. [및 참조 &#40; 값으로 인수 전달 Visual Basic &#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic)에 대 한 및 [매개 변수 사용 &#40; 전달 합니다. &#35; 프로그래밍 가이드 &#41; ](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).  
+ 값 및 참조 형식 매개 변수에 대 한 자세한 내용은 참조 하십시오. [참조 및 값으로 인수 전달 &#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic의 경우)에 대 한 및 [매개 변수 전달 &#40;C&#35; 프로그래밍 가이드&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Office 솔루션 개발](../vsto/developing-office-solutions.md)   

@@ -1,12 +1,10 @@
 ---
-title: "방법: 프로그래밍 방식으로 검색 후 선택 영역 복원 | Microsoft Docs"
-ms.custom: 
+title: '방법: 프로그래밍 방식으로 검색 후 선택 영역 복원 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,13 +14,14 @@ helpviewer_keywords:
 - selections, restoring after a search
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: adbc31968b74dd6cb47f06e6feb2cd7d2848f7e7
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 7d1f4181a1ce9431ecbdb69a4b4f00a70f8259d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-programmatically-restore-selections-after-searches"></a>방법: 프로그래밍 방식으로 검색 후 선택 영역 복원
   검색 하 고 문서에서 텍스트를 바꿀 경우 검색이 완료 된 후 사용자의 원래 선택 항목을 복원 해야 할 수 있습니다.  
@@ -50,7 +49,7 @@ ms.lasthandoff: 01/10/2018
   
  다음 예제에서는 전체 메서드를 보여 줍니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  [!code-vb[Trin_VstcoreWordAutomation#82](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#82)]
  [!code-csharp[Trin_VstcoreWordAutomation#82](../vsto/codesnippet/CSharp/Trin_VstcoreWordAutomationCS/ThisDocument.cs#82)]  
   

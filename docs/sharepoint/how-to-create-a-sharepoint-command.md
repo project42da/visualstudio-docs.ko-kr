@@ -1,13 +1,10 @@
 ---
-title: "방법: SharePoint 명령 만들기 | Microsoft Docs"
-ms.custom: 
+title: '방법: SharePoint 명령 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint commands [SharePoint development in Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9afdf3c26d059a7593d21eb7844f8a1b45cc9d01
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: fbfaeba966a2608f67ff63b0de39f13669a7169f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>방법: SharePoint 명령 만들기
   사용자 지정 SharePoint 도구 확장에서 서버 개체 모델을 사용 하려는 경우 만들어야 *SharePoint 명령* API를 호출 합니다. SharePoint 명령 서버 개체 모델을 직접 호출할 수 있는 어셈블리를 정의 합니다.  
@@ -64,7 +61,7 @@ ms.lasthandoff: 01/10/2018
   
      SharePoint 도구 확장에서 명령을 호출 하면 동일한 고유 식별자를 지정 해야 합니다. 자세한 내용은 참조 [하는 방법: SharePoint 명령 실행](../sharepoint/how-to-execute-a-sharepoint-command.md)합니다.  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 코드 예제는 식별자를 가진 SharePoint 명령을 `Contoso.Commands.UpgradeSolution`합니다. 이 명령은 서버 개체 모델에서 Api를 사용 하 여 배포 된 솔루션으로 업그레이드 합니다.  
   
  [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]

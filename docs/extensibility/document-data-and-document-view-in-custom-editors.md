@@ -1,27 +1,23 @@
 ---
-title: "사용자 지정 편집기에서 문서 데이터 및 문서를 볼 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 편집기에서 문서 데이터 및 문서를 볼 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document data and document view
 ms.assetid: 71eea623-f566-4feb-84cd-ca1ba71bc493
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 7c7e24ed2db4538ab0fd38dbb85930452611f0ee
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: bb445ca70ac74cf2601e9f1035549bb686fca798
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="document-data-and-document-view-in-custom-editors"></a>문서 데이터와 사용자 지정 편집기에서 문서 보기
 사용자 지정 편집기 두 부분으로 이루어져: 문서 데이터 개체와 문서 뷰 개체입니다. 이름을 통해 알으로 문서 데이터 개체로 텍스트 데이터를 표시할 수를 나타내며 문서 뷰 개체 (또는 "view") 문서 데이터 개체로 표시 하는 하나 이상의 창.  
@@ -29,9 +25,9 @@ ms.lasthandoff: 12/22/2017
 ## <a name="document-data-object"></a>문서 데이터 개체  
  문서 데이터 개체에는 텍스트 버퍼의 텍스트 데이터 표현입니다. 문서 텍스트 및 기타 정보 저장, 처리 하는 문서 지 속성 및 해당 데이터의 여러 뷰를 사용 하도록 설정 하는 COM 개체 이므로 합니다. 자세한 내용은 다음 항목을 참조하세요.  
   
- <xref:EnvDTE80.Window2.DocumentData%2A>및 [문서](../extensibility/internals/document-windows.md)합니다.  
+ <xref:EnvDTE80.Window2.DocumentData%2A> 및 [문서](../extensibility/internals/document-windows.md)합니다.  
   
- 사용자 지정 편집기 및 디자이너를 사용 하도록 선택할 수는 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> 개체 또는 고유한 사용자 지정 하는 버퍼입니다. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer>표준 편집기에 대 한 포함 하는 간단한 모델을 따릅니다 여러 뷰를 지원 하며 여러 보기를 관리 하는 데 사용 되는 이벤트 인터페이스를 제공 합니다.  
+ 사용자 지정 편집기 및 디자이너를 사용 하도록 선택할 수는 <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> 개체 또는 고유한 사용자 지정 하는 버퍼입니다. <xref:Microsoft.VisualStudio.TextManager.Interop.VsTextBuffer> 표준 편집기에 대 한 포함 하는 간단한 모델을 따릅니다 여러 뷰를 지원 하며 여러 보기를 관리 하는 데 사용 되는 이벤트 인터페이스를 제공 합니다.  
   
 ## <a name="document-view-object"></a>문서 뷰 개체  
  코드 및 기타 텍스트를 표시 하는 창을 문서 라고 보기 또는 보기입니다. 편집기를 만들 때 텍스트는 하나의 창에 표시 되는 단일 뷰를 또는 여러 개 창에 표시 되는 텍스트를 여러 보기를 선택할 수 있습니다. 선택한 응용 프로그램에 따라 달라 집니다. 예를 들어-나란히 편집 필요한 경우에 여러 보기를 선택 합니다. 각 보기는 통합된 개발 환경에서의 (IDE) document 테이블 (RDT) 실행 항목으로 연결 됩니다. 프로젝트에 속하는 보기 창 또는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy> 개체입니다.  

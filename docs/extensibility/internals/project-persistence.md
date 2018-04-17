@@ -1,26 +1,24 @@
 ---
-title: "프로젝트 지 속성 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 지 속성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - persistence, projects
 - projects [Visual Studio SDK], persistance
 ms.assetid: 42907bcf-4e27-46bd-a8cb-01c2ccd2bde5
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d77c307ec7b732ba727b7210b4f4eaacb44584aa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: b85bb6155ca25abec67b582dc4d877dbd8290501
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-persistence"></a>프로젝트 지 속성
 지 속성은 프로젝트에 대 한 중요 한 설계 고려 합니다. 대부분의 프로젝트 파일; 나타내는 프로젝트 항목 사용 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 도 데이터가 파일 기반이 아닌 된 프로젝트를 지원 합니다. 프로젝트 및 프로젝트 파일을 소유한 파일 모두 유지 해야 합니다. IDE 자체 또는 프로젝트 항목을 저장 하려면 프로젝트에 지시 합니다.  

@@ -1,26 +1,24 @@
 ---
-title: "Vspackage에 대 한 자동화를 제공 합니다. | Microsoft Docs"
-ms.custom: 
+title: Vspackage에 대 한 자동화를 제공 합니다. | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, automation [Visual Studio SDK]
 - automation [Visual Studio SDK], VSPackages
 ms.assetid: 104c4c55-78b8-42f4-b6b0-9a334101aaea
-caps.latest.revision: "15"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 63912603a888f3d2c45b8b08a7aba93af0694ab8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: fb5f3393443e41c9bd99a8890b53bedae006d7a5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="providing-automation-for-vspackages"></a>Vspackage에 대 한 자동화를 제공합니다.
 사용자 Vspackage에 대 한 자동화를 제공 하는 방법에 두 가지가: VSPackage와 관련 된 개체를 구현 하 여 및 표준 자동화 개체를 구현 하 여 합니다. 일반적으로 이러한 함께 사용 됩니다 환경의 자동화 모델을 확장 합니다.  

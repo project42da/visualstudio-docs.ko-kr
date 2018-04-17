@@ -2,26 +2,22 @@
 title: 문서 창 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio SDK, document windows
 ms.assetid: 50081d48-987f-43db-8bf9-51b7cf76e9c0
-caps.latest.revision: 17
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 03e61b80aaf4c5c8b0e25f5b2a4a42f13d75d305
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: f2fd5b77bfc853da1c6098c00110e75b9d9acb75
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="document-windows"></a>문서 창
 Visual Studio에서는 *문서 창* 프레임된 자식 창 (MDI) 다중 문서 인터페이스 기간과 연결 된입니다. 문서 기간을 표시 하 고의 소스 코드 또는 텍스트를 수정할 일반적으로 사용 하지만 다른 기능 형식의 호스트할 수 있습니다. 문서 창:  

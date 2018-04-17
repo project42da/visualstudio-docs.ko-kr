@@ -1,8 +1,8 @@
 ---
-title: "Visual Basic 6.0에 대 한 지원 정책 | Microsoft Docs"
+title: Visual Basic 6.0에 대 한 지원 정책 | Microsoft Docs
 ms.date: 08/28/2017
 ms.technology: devlang-vb
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 helpviewer_keywords:
@@ -13,11 +13,11 @@ author: paulyuk
 ms.author: paulyuk
 ms.workload:
 - paulyuk
-ms.openlocfilehash: cb25f85be6c77dfbef6969435d14f2cae61debf2
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: cc55dec5960717e3807602bc76031f7502ec90c9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="support-statement-for-visual-basic-60-on-windows"></a>Visual Basic 6.0에서 Windows에 대 한 지원 정책
 
@@ -33,7 +33,7 @@ Visual Basic 팀은 다음과 같은 지원 되는 Windows 운영 체제에서 V
 - Windows Server 2012 r 2를 포함 합니다.
 - Windows Server 2008 r 2를 포함 하 여
 
-Visual Basic 팀의 목표는 Visual Basic 6.0 응용 프로그램에서 계속 실행 지원 되는 Windows 버전입니다. 단계에서 설명한 대로이 문서를 Visual Basic 6.0 핵심 런타임을 지원 됩니다 지원 되는 Windows 버전의 전체 수명 동안 변수인 5 년간의 기본 지원의 확장된 지원 (http://support.microsoft.com/gp/lifepolicy) 5 년이 옵니다. 지원 모음 기존 응용 프로그램에 대 한 중요 한 보안 문제 및 심각한 재발으로 제한 됩니다.
+Visual Basic 팀의 목표는 Visual Basic 6.0 응용 프로그램에서 계속 실행 지원 되는 Windows 버전입니다. 이 문서에 설명 된,으로 핵심 Visual Basic 6.0 런타임은 5 년간의 확장된 지원 5 년 뒤 기본 지원의 지원 되는 Windows 버전의 전체 수명 동안 지원 됩니다 (http://support.microsoft.com/gp/lifepolicy)합니다. 지원 모음 기존 응용 프로그램에 대 한 중요 한 보안 문제 및 심각한 재발으로 제한 됩니다.
 
 ## <a name="technical-summary"></a>기술 요약
 
@@ -61,7 +61,7 @@ Visual Basic 6.0 런타임 Visual Basic 6.0에 대 한 재배포 목록에 포�
 
 - 지원 되는 런타임 파일 –-확장 응용 프로그램과 함께 배포할 파일
 
-   이 확장된 목록은 주요 제어, 라이브러리 및 IDE 미디어 또는 Microsoft.com 개발자 컴퓨터에 설치 된 도구는 구성 됩니다. 일반적으로 VB6 IDE 이러한 컨트롤 개발자 컴퓨터에 기본적으로 설치 합니다. 개발자는 여전히 응용 프로그램을 사용 하 여 이러한 파일을 재배포 해야 합니다. 파일의 지원 되는 버전은 사용할 수 있는 온라인 Microsoft 다운로드 센터 (http://go.microsoft.com/fwlink/?LinkID=142927) 합니다.
+   이 확장된 목록은 주요 제어, 라이브러리 및 IDE 미디어 또는 Microsoft.com 개발자 컴퓨터에 설치 된 도구는 구성 됩니다. 일반적으로 VB6 IDE 이러한 컨트롤 개발자 컴퓨터에 기본적으로 설치 합니다. 개발자는 여전히 응용 프로그램을 사용 하 여 이러한 파일을 재배포 해야 합니다. 지원 되는 파일 버전 ´ ï ´ 온라인 Microsoft 다운로드 센터 (http://go.microsoft.com/fwlink/?LinkID=142927)합니다.
 
 - 지원 되지 않는 런타임 파일
 
@@ -73,8 +73,8 @@ Visual Basic 6.0 런타임 Visual Basic 6.0에 대 한 재배포 목록에 포�
 
 지원 및/또는 Visual Basic 6.0 런타임 이진 파일을 전달 지원 되는 Windows 버전에 변경 되지 않습니다 지원 정책 Visual Basic 6.0 IDE 또는 Visual Studio 6.0 IDE에 대 한 전체. 이러한 제품에서 2008 년 4 월 8 일에 대 한 추가 지원 벗어납니다.
 
-Microsoft 제품 지원 기간에 대 한 내용은 http://support.microsoft.com/gp/lifepolicy에서 찾을 수 있습니다. 이 지원 수명 주기의 일부로 Microsoft는 이러한 운영 체제의 지원 수명에 대 한 Visual Basic 6.0 런타임 지원 되는 Windows 버전에서 지 원하는 데 계속 합니다. 즉, 예를 들어 2008 년 6 월에 대 한 기본 지원 및 확장 지원에 대 한 2013 년 6 월 일 까지만 Visual Basic 6.0 런타임은 Windows Server 2003에서 지원 됩니다 됩니다.
-자세한 내용은 지원 수명 주기 또는 추가 지원 옵션에 자세히 알아보려면 http://www.microsoft.com/support에 지원 페이지를 방문 하십시오.
+Microsoft 제품 지원 기간에 대 한 내용은에서 확인할 수 있습니다 http://support.microsoft.com/gp/lifepolicy합니다. 이 지원 수명 주기의 일부로 Microsoft는 이러한 운영 체제의 지원 수명에 대 한 Visual Basic 6.0 런타임 지원 되는 Windows 버전에서 지 원하는 데 계속 합니다. 즉, 예를 들어 2008 년 6 월에 대 한 기본 지원 및 확장 지원에 대 한 2013 년 6 월 일 까지만 Visual Basic 6.0 런타임은 Windows Server 2003에서 지원 됩니다 됩니다.
+자세한 내용은 지원 수명 주기 또는 추가 지원 옵션에 자세히 알아보려면 가격 지원 페이지에서 링크 참조 http://www.microsoft.com/support합니다.
 
 ## <a name="64-bit-windows"></a>64 비트 Windows
 
@@ -149,7 +149,7 @@ VB6 런타임 배송 됩니다 및 운영 체제의 수명에 대 한 Windows Se
 
 
 > [!NOTE]
-> &#42;  VB6 런타임에서 지원 되는 Windows 지원 기간으로 제한 됩니다.  예를 들어 대상 OS 지원이 연장 이면 VB6 지원이 연장 보다 더 높은 수준의 지원 가질 수 없습니다.  [창은 지원 수명 주기 팩트 시트](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) 이전 및 현재 Windows 버전에 대 한 수명 주기 추가 정보를 포함 합니다.
+> &#42;VB6 런타임에서 지원 되는 Windows 지원 기간으로 제한 됩니다.  예를 들어 대상 OS 지원이 연장 이면 VB6 지원이 연장 보다 더 높은 수준의 지원 가질 수 없습니다.  [창은 지원 수명 주기 팩트 시트](https://support.microsoft.com/en-us/help/13853/windows-lifecycle-fact-sheet) 이전 및 현재 Windows 버전에 대 한 수명 주기 추가 정보를 포함 합니다.
 
 ## <a name="visual-basic-60-runtime-usage-inside-vba-and-office"></a>VBA 및 Office Visual Basic 6.0 런타임 사용
 

@@ -1,23 +1,19 @@
 ---
-title: "방법: 비동기 Visual Studio 서비스를 제공 | Microsoft Docs"
-ms.custom: 
+title: '방법: 비동기 Visual Studio 서비스를 제공 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 0448274c-d3d2-4e12-9d11-8aca78a1f3f5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: ea22a30d6f31099ca5d69d9cd8178188577febfe
-ms.sourcegitcommit: a80e7ef2f0a0f6d906a44f4d696aeb208bc1ad70
+ms.openlocfilehash: b4754ccf4a7a66151ad8fb351996c1520dc9483c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-provide-an-asynchronous-visual-studio-service"></a>방법: 비동기 Visual Studio 서비스를 제공 합니다.
 UI 스레드를 차단 하지 않고 서비스를 가져올 하려는 경우 비동기 서비스 만들고 백그라운드 스레드에서 패키지를 로드 해야 합니다. 이 목적을 위해 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Shell.AsyncPackage> 아닌 <xref:Microsoft.VisualStudio.Shell.Package>, 비동기 패키지의 특별 한 비동기 메서드 사용 하 여 서비스를 추가 합니다.

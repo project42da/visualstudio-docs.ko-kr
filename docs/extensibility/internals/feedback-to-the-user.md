@@ -1,28 +1,26 @@
 ---
-title: "사용자에 게 피드백 | Microsoft Docs"
-ms.custom: 
+title: 사용자에 게 피드백 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - user model feedback
 - environment, context
 - IDE, context
 - IDE, user feedback
 ms.assetid: 2d472a24-3813-4f5f-9783-b491ad8a71ad
-caps.latest.revision: "8"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 3a5e31eb2acb50d9803bedd77e48d0821cbaea61
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 629d12974a52bca30c0db96e838c5c731ae1abf7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="feedback-to-the-user"></a>사용자에 게 피드백
 에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 통합된 개발 환경 (IDE) 시각적 피드백을 사용할 수 있는 기능에 대 한 사용자의 현재 선택 영역 및 글로벌 선택 항목 컨텍스트 기반입니다. 다음 표에서 다른 선택 컨텍스트에서 사용할 수 있는 기능을 나열 합니다.  

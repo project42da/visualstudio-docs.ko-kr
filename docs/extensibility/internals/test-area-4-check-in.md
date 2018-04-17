@@ -1,26 +1,24 @@
 ---
-title: "테스트 영역 4: 체크 인 | Microsoft Docs"
-ms.custom: 
+title: '테스트 영역 4: 체크 인 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], checking items in
 - source control plug-ins, checking items in
 ms.assetid: d0329fa8-7a8d-4d30-b67b-6f2a97b75a30
-caps.latest.revision: "11"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 698b46c7ccb0a3fb13c799349d36de0cadf80af1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: e7f3e8a343823016f391735aae59e58dfefe1a5f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="test-area-4-check-in"></a>테스트 영역 4: 체크 인
 이 소스 제어 플러그 인 테스트 기능은 업데이트 된 항목을 통해 버전 저장소로 보내는 **체크 인** 명령입니다.  

@@ -1,32 +1,30 @@
 ---
-title: "구문 색 지정을 구현 | Microsoft Docs"
-ms.custom: 
+title: 구문 색 지정을 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - syntax coloring, implementing
 - editors [Visual Studio SDK], colorizing text
 - text, colorizing in editors
 ms.assetid: 96e762ca-efd0-41e7-8958-fda4897c8c7a
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 5c05bbabc77de22edc71fb05a5962138a78d11a9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 5502bd30378130e5977d427acb9df5b73226a05b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implementing-syntax-coloring"></a>구문 색 지정을 구현합니다.
-언어 서비스 제공 구문 색 지정, 파서가 색 항목 배열에 텍스트 줄을 변환한 색 이러한 항목에 해당 하는 토큰 형식을 반환 합니다. 파서가 색 항목 목록에 속해 있는 토큰 유형을 반환 해야 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]토큰 유형이 적절 한 색 지정 기 개체에 의해 할당 된 속성에 따라 코드 창에서 각 색 항목을 표시 합니다.  
+언어 서비스 제공 구문 색 지정, 파서가 색 항목 배열에 텍스트 줄을 변환한 색 이러한 항목에 해당 하는 토큰 형식을 반환 합니다. 파서가 색 항목 목록에 속해 있는 토큰 유형을 반환 해야 합니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 토큰 유형이 적절 한 색 지정 기 개체에 의해 할당 된 속성에 따라 코드 창에서 각 색 항목을 표시 합니다.  
   
- [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]파서 인터페이스를 지정 하지 않는 및 파서 구현으로 완전히 사용자 자신이 결정 합니다. 그러나 Visual Studio 언어 패키지를 프로젝트에 기본 파서 구현이 제공 됩니다. 관리 코드에 대 한 관리 되는 패키지 프레임 워크 MPF ()는 텍스트의 색을 지정 하는 것에 대 한 완전히 지원 합니다.  
+ [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 파서 인터페이스를 지정 하지 않는 및 파서 구현으로 완전히 사용자 자신이 결정 합니다. 그러나 Visual Studio 언어 패키지를 프로젝트에 기본 파서 구현이 제공 됩니다. 관리 코드에 대 한 관리 되는 패키지 프레임 워크 MPF ()는 텍스트의 색을 지정 하는 것에 대 한 완전히 지원 합니다.  
   
  레거시 언어 서비스는 VSPackage의 일부로 구현 된 하지만 MEF 확장을 사용 하는 언어 서비스 기능을 구현 하는 최신 방법입니다. 구문 색 지정을 구현 하는 새로운 방법에 대해 자세히 알아보려면 참조 [연습: 텍스트 강조 표시](../../extensibility/walkthrough-highlighting-text.md)합니다.  
   

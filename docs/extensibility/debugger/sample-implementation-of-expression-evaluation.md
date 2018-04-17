@@ -1,33 +1,31 @@
 ---
-title: "샘플 식 계산의 구현 | Microsoft Docs"
-ms.custom: 
+title: 샘플 식 계산의 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - expression evaluators
 - debugging [Debugging SDK], expression evaluators
 - expression evaluation, examples
 ms.assetid: 2a5f04b8-6c65-4232-bddd-9093653a22c4
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: fe39048edb15e3997b74ca3a7047085da6f042fc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 9edc31a8bc403f4f6dfcb16847d3cfce5d99b526
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-implementation-of-expression-evaluation"></a>식 계산의 샘플 구현
 > [!IMPORTANT]
 >  Visual Studio 2015에서 구현 하는 식 계산기의 이러한 방식으로 사용 되지 않습니다. CLR 식 계산기를 구현 하는 방법에 대 한 정보를 참조 하십시오 [CLR 식 계산기](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/CLR-Expression-Evaluators) 및 [관리 되는 식 계산기 샘플](https://github.com/Microsoft/ConcordExtensibilitySamples/wiki/Managed-Expression-Evaluator-Sample)합니다.  
   
- 에 대 한는 **조사식** 창 식, Visual Studio 호출 [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 생성 하는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 개체입니다. `IDebugExpressionContext2::ParseText`식 계산기 (EE) 및 호출을 인스턴스화합니다 [구문 분석](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 얻으려고는 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) 개체입니다.  
+ 에 대 한는 **조사식** 창 식, Visual Studio 호출 [ParseText](../../extensibility/debugger/reference/idebugexpressioncontext2-parsetext.md) 생성 하는 [IDebugExpression2](../../extensibility/debugger/reference/idebugexpression2.md) 개체입니다. `IDebugExpressionContext2::ParseText` 식 계산기 (EE) 및 호출을 인스턴스화합니다 [구문 분석](../../extensibility/debugger/reference/idebugexpressionevaluator-parse.md) 얻으려고는 [IDebugParsedExpression](../../extensibility/debugger/reference/idebugparsedexpression.md) 개체입니다.  
   
  이 구현 `IDebugExpressionEvaluator::Parse` 다음 작업을 수행 합니다.  
   

@@ -1,27 +1,23 @@
 ---
-title: "프로젝트 및 편집기에 대 한 추가 소스 제어 지침 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 및 편집기에 대 한 추가 소스 제어 지침 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], guidelines for projects and editors
 ms.assetid: 2483cce5-321c-4d3c-9c5c-ee8385263f74
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 308de182e604f06fff9ad25cb65428b2d48ff257
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e39c8fcc78712f0f8d9b799789751c16f343ada6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-source-control-guidelines-for-projects-and-editors"></a>프로젝트 및 편집기에 대 한 추가 소스 제어 지침
 프로젝트 및 편집기를 소스 제어를 지원 하기 위해 준수 해야 하는 지침의 여러 가지가 있습니다.  

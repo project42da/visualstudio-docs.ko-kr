@@ -1,26 +1,24 @@
 ---
-title: "구성 요소 관리 | Microsoft Docs"
-ms.custom: 
+title: 구성 요소 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - installation [Visual Studio SDK], components
 - installation [Visual Studio SDK], file management
 ms.assetid: 029bffa2-6841-4caa-a41a-442467e1aedc
-caps.latest.revision: "13"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 398986499732a36819808b07f05f7d6b46787a94
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2798d820249f0a1c4310569d22d8510710ca13ee
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="component-management"></a>구성 요소 관리
 Windows Installer에서 작업의 단위는 Windows Installer 구성 요소가 (WICs 또는 정당한 구성 요소 라고도 함) 라고 합니다. GUID는 설치 및 Windows Installer를 사용 하 여 설치를 사용한 참조의 기본 단위를 각 WIC를 식별 합니다.  

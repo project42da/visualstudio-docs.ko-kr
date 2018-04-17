@@ -2,28 +2,24 @@
 title: IEnumDebugErrorBreakpoints2 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - IEnumDebugErrorBreakpoints2
 helpviewer_keywords:
 - IEnumDebugErrorBreakpoints2
 ms.assetid: ffdad73d-969a-45ef-9ad1-7f5d3b814018
-caps.latest.revision: 9
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 072068a252214fdf9a2542b88bba94a1b12bcffa
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1860b1baf5f5c42b5cf27d4521b29230d447ceae
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="ienumdebugerrorbreakpoints2"></a>IEnumDebugErrorBreakpoints2
 이 인터페이스는 보류 중인 중단점와 관련 된 오류 중단점을 열거 합니다.  
@@ -59,7 +55,7 @@ IEnumDebugErrorBreakpoints2 : IUnknown
   
  Namespace: Microsoft.VisualStudio.Debugger.Interop  
   
- 어셈블리: Microsoft.VisualStudio.Debugger.Interop.dll  
+ Assembly: Microsoft.VisualStudio.Debugger.Interop.dll  
   
 ## <a name="see-also"></a>참고 항목  
  [코어 인터페이스](../../../extensibility/debugger/reference/core-interfaces.md)   

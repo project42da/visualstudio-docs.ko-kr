@@ -1,27 +1,25 @@
 ---
-title: "Vspackage에 대 한 보안 모범 사례 | Microsoft Docs"
-ms.custom: 
+title: Vspackage에 대 한 보안 모범 사례 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - security [Visual Studio SDK]
 - security best practices, VSPackages
 - best practices, security
 ms.assetid: 212a0504-cf6c-4e50-96b0-f2c1c575c0ff
-caps.latest.revision: "19"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 71f06fdd67e4f1789637c2d935f0d25a06eb9863
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 689c85e090e44612a87474e8c77dc0e146706e84
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="best-practices-for-security-in-vspackages"></a>Vspackage에 대 한 보안 모범 사례
 설치 하는 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)] 컴퓨터에 관리 자격 증명으로 컨텍스트 실행 되어야 합니다. 보안 및 배포의 기본 단위는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 응용 프로그램은는 [Vspackage](../../extensibility/internals/vspackages.md)합니다. 사용 하 여 VSPackage를 등록 해야 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)], 관리 자격 증명이 필요 합니다.  

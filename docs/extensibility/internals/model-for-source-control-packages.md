@@ -2,31 +2,27 @@
 title: 소스 제어 패키지에 대 한 모델 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control [Visual Studio SDK], model
 ms.assetid: 6164b2d3-a622-4de8-bef3-a6de985e9ebd
-caps.latest.revision: 13
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 1960b5fe7b7c507b5b3275315ea6ae1715c27f76
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa0dcdd930412e4e53c59509848f0b7c1503c47b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="model-for-source-control-packages"></a>소스 제어 패키지에 대 한 모델
 다음과 같은 모델의 소스 제어 구현 예를 나타냅니다. 모델에 구현 해야 하는 인터페이스 및 환경 서비스 호출 해야 하는 것이 표시 됩니다. 모든 서비스와 마찬가지로 실제로 서비스를 통해 얻을 특정 인터페이스의 메서드를 호출 합니다. 클래스의 이름은 쉽게 소스 제어 수행 방법을 볼 수 있도록 식별 됩니다.  
   
- ![SCC &#95; TUP 예제](../../extensibility/internals/media/scc_tup.gif "SCC_TUP")  
+ ![SCC&#95;TUP 예제](../../extensibility/internals/media/scc_tup.gif "SCC_TUP")  
 예제에서는 소스 제어 프로젝트  
   
 ## <a name="interfaces"></a>인터페이스  

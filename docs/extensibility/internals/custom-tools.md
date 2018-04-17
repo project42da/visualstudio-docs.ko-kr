@@ -1,27 +1,25 @@
 ---
-title: "사용자 지정 도구 | Microsoft Docs"
-ms.custom: 
+title: 사용자 지정 도구 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSPackages, custom tools
 - tools [Visual Studio], custom
 - custom tools
 ms.assetid: d669f154-9b23-48b6-b9f6-7419c8dd61a6
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 7589c9a2aedf987af79689e8babccb554fbb4ccc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 5f215cfbd5113377e7a98439976a7f44215eee02
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="custom-tools"></a>사용자 지정 도구
 *사용자 지정 도구* 도구 항목을 프로젝트에 연결 하 고 해당 도구를 실행 하 여 파일을 저장할 때마다 수 있도록 합니다. 특정 사용자 지정 도구 라고도 *단일 파일 생성기*, 자주 그 반대의 데이터에서 코드를 생성 하는 변환기를 구현 하는 데 사용 됩니다. 예를 들어, 단일 파일 생성기 만들 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 및 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 소스.settings 및.resx 파일에서 코드입니다. 생성 된 소스 코드.settings 및.resx 파일의 데이터에 대 한 강력한 형식의 액세스를 제공합니다. [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 및 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 프로젝트 형식; 사용자 지정 도구를 지원 합니다. [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 프로젝트 형식은 그렇지 않습니다. 사용자 고유의 프로젝트 형식을 사용자 지정 도구도 지원할 수 있습니다.  

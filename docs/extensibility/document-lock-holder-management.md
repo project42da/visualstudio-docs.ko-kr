@@ -1,27 +1,23 @@
 ---
-title: "문서 잠금 소유자 관리 | Microsoft Docs"
-ms.custom: 
+title: 문서 잠금 소유자 관리 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], custom - document locking
 ms.assetid: fa1ce513-eb7d-42bc-b6e8-cb2433d051d5
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: df782cd974adcd589824e8a47cd0249842bd8d48
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 65f5a38f5d4da0986b7f95c9287a94e657efa9c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="document-lock-holder-management"></a>문서 잠금 소유자 관리
 실행 중인 문서 테이블 (RDT) 열려 있는 문서와 있는 모든 편집 잠금을의 개수를 유지 합니다. 문서 창에 열려 있는 문서를 표시 하는 사용자 없이 백그라운드에서 프로그래밍 방식으로 편집 될 때 문서는 RDT에 대해 편집 잠금을 배치할 수 있습니다. 이 기능은 그래픽 사용자 인터페이스를 통해 여러 파일을 수정 하는 디자이너에서 자주 사용 됩니다.  

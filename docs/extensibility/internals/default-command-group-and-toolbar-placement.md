@@ -1,12 +1,10 @@
 ---
-title: "기본 명령, 그룹 및 도구 모음 배치 | Microsoft Docs"
-ms.custom: 
+title: 기본 명령, 그룹 및 도구 모음 배치 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands [Visual Studio], default groups
 - toolbars [Visual Studio], default
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - commands [Visual Studio], default IDE
 - commands [Visual Studio], default product
 ms.assetid: 35342110-d639-4577-8367-00b21dcc6f07
-caps.latest.revision: "30"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 84e850d44162a964ce6ef8b64be92ce4eeacb86e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 0753a29e323f18ad40bcc62a70cf8e9b1123b728
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="default-command-group-and-toolbar-placement"></a>기본 명령, 그룹 및 도구 모음 배치
 제품 통일성 및 안정성에 대 한 UI 기본적으로 특정 명령 그룹을 표시 하 고 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 명령과 명령 그룹에 대 한 정의 제공 합니다. 표준 명령 및 명령 그룹 Vspackage를 사용할 수도 있습니다.  

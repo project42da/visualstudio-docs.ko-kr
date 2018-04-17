@@ -1,23 +1,21 @@
 ---
-title: "텍스트 템플릿 변환 프로세스 | Microsoft Docs"
-ms.custom: 
+title: 텍스트 템플릿 변환 프로세스 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - text templates, transformation process
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: e350b123f1945bdeafa7f3ff2ae3da55037922cf
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 1ef32254764594d66738510c7c455f992d3a7318
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="the-text-template-transformation-process"></a>텍스트 템플릿 변형 프로세스
 텍스트 템플릿 변환 프로세스의 입력으로는 텍스트 템플릿 파일을 새 텍스트 파일 출력을 생성 합니다. 예를 들어 텍스트 템플릿을 사용 하 여 Visual Basic 또는 C# 코드를 생성 하거나 HTML 보고서를 생성할 수 있습니다.  
@@ -31,7 +29,7 @@ ms.lasthandoff: 02/09/2018
 |구성 요소|설명|사용자 지정 가능한 (Yes/No)|  
 |---------------|-----------------|------------------------------|  
 |엔진|텍스트 템플릿 변환 프로세스를 제어 하는 엔진 구성 요소|아니요.|  
-|호스트|호스트는 엔진은 사용자 환경 간의 인터페이스입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]텍스트 변환 프로세스의 호스트가입니다.|예. 사용자 지정 호스트를 작성할 수 있습니다.|  
+|호스트|호스트는 엔진은 사용자 환경 간의 인터페이스입니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 텍스트 변환 프로세스의 호스트가입니다.|예. 사용자 지정 호스트를 작성할 수 있습니다.|  
 |지시문 프로세서|지시문 프로세서는 텍스트 템플릿에서 지시문을 처리 하는 클래스입니다. 텍스트 서식 파일에 입력된 원본에서 데이터를 제공 하도록 지시문을 사용할 수 있습니다.|예. 사용자 지정 지시문 프로세서를 작성할 수 있습니다.|  
   
 ## <a name="the-engine"></a>엔진  

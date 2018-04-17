@@ -1,34 +1,30 @@
 ---
-title: "Folder 요소 (Visual Studio 프로젝트 템플릿) | Microsoft Docs"
-ms.custom: 
+title: Folder 요소 (Visual Studio 프로젝트 템플릿) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - http://schemas.microsoft.com/developer/vstemplate/2005#Folder
 helpviewer_keywords:
 - Folder element [Visual Studio project templates]
 ms.assetid: 558e3d41-0db5-4c44-82bb-6bb87892b093
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 2c561564f75d4e5557c64f94adfb9caed6abce83
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c2ecf9c2973a5fb09cf1a217bd700882dce41626
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="folder-element-visual-studio-project-templates"></a>Folder 요소(Visual Studio 프로젝트 템플릿)
 프로젝트에 추가 될 폴더를 지정 합니다.  
   
- \<VSTemplate >  
+ \<VSTemplate>  
  \<TemplateContent >  
  \<Project>  
  \<폴더 >  
@@ -56,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 |요소|설명|  
 |-------------|-----------------|  
-|`Folder`|프로젝트에 추가할 폴더를 지정 합니다. `Folder`요소에는 자식 포함 될 수 있습니다 `Folder` 요소입니다.|  
+|`Folder`|프로젝트에 추가할 폴더를 지정 합니다. `Folder` 요소에는 자식 포함 될 수 있습니다 `Folder` 요소입니다.|  
 |[프로젝트 항목](../extensibility/projectitem-element-visual-studio-item-templates.md)|프로젝트에 추가할 파일을 지정 합니다.|  
   
 ### <a name="parent-elements"></a>부모 요소  
@@ -66,11 +62,11 @@ ms.lasthandoff: 12/22/2017
 |[프로젝트](../extensibility/project-element-visual-studio-templates.md)|선택적 자식 요소 [TemplateContent](../extensibility/templatecontent-element-visual-studio-templates.md)합니다.|  
   
 ## <a name="remarks"></a>설명  
- `Folder`선택적 자식은 `Project`합니다.  
+ `Folder` 선택적 자식은 `Project`합니다.  
   
  프로젝트 항목 폴더에 구성 하는 서식 파일에는 다음 방법 중 하나를 사용할 수 있습니다.  
   
--   템플릿.zip 파일에는 폴더를 포함 하 고에서 파일의 경로를 지정 하 여.vstemplate 파일에서 프로젝트에 추가 된 `ProjectItem` 요소 없이 `Folder` 요소입니다. 이것이 권장된 방법입니다. 예:  
+-   템플릿.zip 파일에는 폴더를 포함 하 고에서 파일의 경로를 지정 하 여.vstemplate 파일에서 프로젝트에 추가 된 `ProjectItem` 요소 없이 `Folder` 요소입니다. 이것이 권장된 방법입니다. 예를 들어:  
   
      `...`  
   
@@ -80,7 +76,7 @@ ms.lasthandoff: 12/22/2017
   
      `...`  
   
--   템플릿.zip 파일에는 폴더를 포함 하 고 사용 하 여.vstemplate 파일에서 프로젝트에 추가할 `Folder` 요소입니다. 예:  
+-   템플릿.zip 파일에는 폴더를 포함 하 고 사용 하 여.vstemplate 파일에서 프로젝트에 추가할 `Folder` 요소입니다. 예를 들어:  
   
      `...`  
   
@@ -94,7 +90,7 @@ ms.lasthandoff: 12/22/2017
   
      `...`  
   
--   템플릿.zip 파일의 폴더를 포함 하지 않지만 사용 하 여 폴더를 추가 `TargetFileName` 의 특성은 `ProjectItem` 요소입니다. 예:  
+-   템플릿.zip 파일의 폴더를 포함 하지 않지만 사용 하 여 폴더를 추가 `TargetFileName` 의 특성은 `ProjectItem` 요소입니다. 예를 들어:  
   
      `...`  
   
@@ -104,7 +100,7 @@ ms.lasthandoff: 12/22/2017
   
      `...`  
   
-## <a name="example"></a>예  
+## <a name="example"></a>예제  
  다음 예제에 대 한 프로젝트 템플릿에 대 한 메타 데이터는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] Windows 응용 프로그램입니다.  
   
 ```  

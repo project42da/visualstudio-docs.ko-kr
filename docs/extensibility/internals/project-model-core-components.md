@@ -1,26 +1,24 @@
 ---
-title: "모델의 핵심 구성 요소 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: 모델의 핵심 구성 요소 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - project models, objects and interfaces
 - project models, services
 ms.assetid: b2f572d3-b26d-4846-92d1-84055fac141a
-caps.latest.revision: "17"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: d2de7b73238589786c1e8a4ba42389201123c2b1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 2cfb9db9c354eb4c10ece0f5a8259f3d4a104e28
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-model-core-components"></a>프로젝트 모델에 대 한 핵심 구성 요소
 다음 표에서 프로젝트 모델에서 확장 됩니다. 테이블에는 인터페이스 및 모델, 인터페이스 및 특정 개체와 연결 된 서비스에서 식별 된 서비스에 대 한 간략 한 설명이 제공 합니다. 또한 테이블에는 다른 인터페이스는 프로젝트 생성 및 특정 프로젝트 형식이 요구 사항에 따라 유지 관리에서 선택적 요소를 자세히 설명 합니다.  
@@ -101,7 +99,7 @@ ms.lasthandoff: 12/22/2017
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIShell>|만들고 열거 도구 창 또는 문서 창 또는 사용자에 게 오류를 보고 하는 기능과 같은 기본 UI와 관련 된 IDE 기능을 제공 합니다.|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.SVsStatusbar>|IDE의 상태 표시줄에 대 한 액세스를 제공합니다.|  
 |<xref:Microsoft.VisualStudio.Shell.Interop.IVsExtensibility3>|자동화 모델을 구현 하는 데 사용 합니다. 프로젝트 모델에서 반환 됩니다 수 있는 속성 개체를 해당 개체의 인스턴스를 만듭니다.|  
-|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|프로젝트 개체 계층 구조에서 클립보드 이벤트를 구현 하는 데 사용 합니다. `SVsUIHierWinClipboardHelper`하면 올바르게 핸들 잘라내기, 복사 및 붙여넣기 작업.|  
+|<xref:Microsoft.VisualStudio.Shell.Interop.SVsUIHierWinClipboardHelper>|프로젝트 개체 계층 구조에서 클립보드 이벤트를 구현 하는 데 사용 합니다. `SVsUIHierWinClipboardHelper` 하면 올바르게 핸들 잘라내기, 복사 및 붙여넣기 작업.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.VisualStudio.OLE.Interop.IOleCommandTarget>   

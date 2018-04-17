@@ -1,12 +1,10 @@
 ---
-title: "연습: 서버 탐색기 확장의 SharePoint 클라이언트 개체 모델 호출 | Microsoft Docs"
-ms.custom: 
+title: '연습: 서버 탐색기 확장의 SharePoint 클라이언트 개체 모델 호출 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - SharePoint commands [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 68836c8e95d7a9a53a1e1c2b90f7ee48e91106e6
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 4951d9960a3027e8d72bb0fbc72d551f123993ce
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension"></a>연습: 서버 탐색기 확장의 SharePoint 클라이언트 개체 모델 호출
   이 연습에 대 한 확장에서 SharePoint 클라이언트 개체 모델을 호출 하는 방법을 보여 줍니다는 **SharePoint 연결** 노드에서 **서버 탐색기**합니다. SharePoint 클라이언트 개체 모델을 사용 하는 방법에 대 한 자세한 내용은 참조 [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)합니다.  
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  이 연습에서 만든 확장 프로그램에서 만드는 확장 유사한 [연습: 디스플레이 웹 파트를 서버 탐색기 확장](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)합니다. 해당 연습에서는 SharePoint 서버 개체 모델을 사용 하지만이 연습에서는 클라이언트 개체 모델을 사용 하 여 동일한 작업을 수행 합니다.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
   
 -   지원 되는 Windows, SharePoint 및 Visual Studio의 버전입니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  에 **이름** 상자에 입력 합니다 **WebPartNode**를 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **WebPartNode** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **WebPartNode** 프로젝트를 **솔루션 탐색기**합니다.  
   
 #### <a name="to-create-the-extension-project"></a>확장 프로젝트를 만들려면  
   
@@ -96,7 +95,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  에 **이름** 상자에 입력 **WebPartNodeExtension**, 선택한 후는 **확인** 단추입니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **WebPartNodeExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **WebPartNodeExtension** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
 6.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
@@ -287,6 +286,6 @@ ms.lasthandoff: 01/10/2018
  [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   
  [연습: 웹 파트를 표시 하는 서버 탐색기 확장](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
  [아이콘에 대한 이미지 편집기](/cpp/windows/image-editor-for-icons)   
- [아이콘 &#41;에 대 한 아이콘 또는 다른 이미지 &#40; 이미지 편집기 만들기](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
+ [아이콘 또는 다른 이미지 만들기 &#40;아이콘에 대 한 이미지 편집기&#41;](/cpp/windows/creating-an-icon-or-other-image-image-editor-for-icons)  
   
   

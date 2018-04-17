@@ -2,26 +2,22 @@
 title: 편집기와 언어 서비스 확장 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK]
 ms.assetid: 5653bac9-724f-4948-a820-68ce6aa96365
-caps.latest.revision: 10
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 59de764dfcb976dfac303f44a67340e117ae5e06
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d2fceb0487c23dc34d3f4f4937d7a5998340ae3d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="editor-and-language-service-extensions"></a>편집기와 언어 서비스 확장
 Visual Studio code 편집기의 기능을 대부분을 확장할 수 있습니다. 편집기는 Windows Presentation Foundation (WPF)에 기반 하 고 관리 코드에 기록 됩니다. 이전 버전의 Visual Studio의 디자인에서이 디자인 다른 하지만 대부분의 동일한 기능을 제공 합니다. 편집기를 확장 하는 프레임 워크 MEF (Managed Extensibility)를 사용 합니다.  

@@ -1,27 +1,23 @@
 ---
-title: "코어 편집기 안에 | Microsoft Docs"
-ms.custom: 
+title: 코어 편집기 안에 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editors [Visual Studio SDK], legacy - core editor
 ms.assetid: 8265f31c-c45b-4858-882c-6d9f1e3b9083
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: e4612f5779d6177d58cef7f087ef6e11bbe4ebd9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 95745cbef015e9f6ceddb9b84d75b52ec9805dea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="inside-the-core-editor"></a>코어 편집기 내
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 코어 편집기는 집합을 수정 하 고 텍스트 정보를 쿼리할 수 있는 몇 가지 구성 요소입니다. 코어 편집기 레거시 API를 사용 하 여 사용자 지정, 편집기 어댑터를 통해 라우팅되는 이러한 사용자 지정을 사용 하려면 계속 수 있습니다. 그러나 것, 사용자 지정 항목을 새 편집기 API 조정 합니다.  

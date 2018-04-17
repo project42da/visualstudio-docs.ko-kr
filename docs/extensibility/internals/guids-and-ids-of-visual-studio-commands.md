@@ -1,12 +1,10 @@
 ---
-title: "Guid 및 Id를 Visual Studio 명령 | Microsoft Docs"
-ms.custom: 
+title: Guid 및 Id를 Visual Studio 명령 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - commands
 - id
@@ -14,16 +12,16 @@ helpviewer_keywords:
 - visual studio command
 - guid
 ms.assetid: 2ea4bee2-0259-4675-8e65-2023b312b516
-caps.latest.revision: "6"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 44ae5ff7e9095d6c88d753342da30983b30b7364
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 1566b7e252867779e2bf7cbf26e2a6cbcb8b009f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="guids-and-ids-of-visual-studio-commands"></a>Guid 및 Id를 Visual Studio 명령
 Visual Studio 통합된 개발 환경 (IDE)에 포함 된 명령의 GUID 및 ID 값은 Visual Studio SDK의 일부로 설치 되는.vsct 파일에서 정의 됩니다. 자세한 내용은 참조 [IDE-Defined 명령, 메뉴 및 그룹](../../extensibility/internals/ide-defined-commands-menus-and-groups.md)합니다.  

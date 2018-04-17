@@ -1,27 +1,23 @@
 ---
-title: "항목에 추가 된 새 항목 추가 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 항목에 추가 된 새 항목 추가 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Add New Item dialog box, adding items
 ms.assetid: 2f70863b-425b-4e65-86b4-d6a898e29dc7
-caps.latest.revision: 
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: f7058d097ab3eb6faeb8acf96b98ae6346887361
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a24a6d531812a170768f8c100f14ad64ab1e68c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="adding-items-to-the-add-new-item-dialog-boxes"></a>항목에 추가 된 새 항목 추가 대화 상자
 항목을 추가 하기 위한 프로세스는 **새 항목 추가** 레지스트리 키를 가진 대화 상자를 시작 합니다. 경로 이름에서 사용할 수 있게 하는 항목에 있는 디렉터리의 AddItemTemplates 섹션에 포함 되어 다음 레지스트리 항목에 나와 있는 것 처럼는 **새 항목 추가** 대화 상자에 배치 됩니다.  
@@ -41,7 +37,7 @@ ms.lasthandoff: 12/22/2017
   
  "SortPriority" dword:00000064 =  
   
-|name|형식|데이터 (.rgs 파일)|설명|  
+|이름|형식|데이터 (.rgs 파일)|설명|  
 |----------|----------|-----------------------------|-----------------|  
 |@ (기본값)|REG_SZ|#% IDS_ADDITEM_TEMPLATES_ENTRY %|에 대 한 리소스 ID **항목 추가** 템플릿.|  
 |Val TemplatesDir|REG_SZ|%TEMPLATE_PATH%\ SomeProjectItems|에 대 한 대화 상자에 표시 되는 프로젝트 항목의 경로 **새 항목 추가** 마법사.|  
@@ -69,7 +65,7 @@ ms.lasthandoff: 12/22/2017
  예를 들어 Visual Basic 프로젝트에서 해야할 웹 프로젝트와 클라이언트 프로젝트입니다. Web forms은 클라이언트 프로젝트에 추가할 항목 유용 하지 않으며 windows forms 없습니다 유용에 추가할 항목을 웹 서버 프로젝트. 따라서 두 유형의 프로젝트에 대 한 모든 파일을 포함 한 템플릿 디렉터리를 만들 수 있습니다. 구현 하 여 다음 <xref:Microsoft.VisualStudio.Shell.Interop.IVsFilterAddProjectItemDlg2>, 프로젝트 또는 프로젝트의 프로젝트 설정의 형식을 기반으로 표시 되지 않아야 하는 항목을 숨길 수 있습니다.  
   
 ## <a name="filtering-project-items"></a>프로젝트 항목 필터링  
- `IVsFilterAddProjectItemDlg2`다음과 같은 방법으로 트리 (왼쪽된 창) 및 프로젝트 파일 (오른쪽 창)에서 요소를 필터링 하기 위해 제공 합니다.  
+ `IVsFilterAddProjectItemDlg2` 다음과 같은 방법으로 트리 (왼쪽된 창) 및 프로젝트 파일 (오른쪽 창)에서 요소를 필터링 하기 위해 제공 합니다.  
   
 -   지역화 된 이름 (캡션.vsdir 파일에 포함 된 대화 상자에 표시)으로 제공 하 여 `IVsFilterAddProjectItemDlg`합니다.  
   

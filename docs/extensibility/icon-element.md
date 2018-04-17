@@ -1,26 +1,24 @@
 ---
-title: "Icon 요소 | Microsoft Docs"
-ms.custom: 
+title: Icon 요소 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - VSCT XML schema elements, Icon
 - Icon element (VSCT XML schema)
 ms.assetid: 73c58fe3-d53c-4f4e-b025-29567c6cbb7c
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2787798afe9554601d44a965ae3f12d5ebeab8bb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: f15dcfec5c89c6bf2b2ae68ea29e18890dc9187e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="icon-element"></a>Icon 요소
 아이콘 태그의 guid 특성은 정의 된 비트맵의 guid입니다.  Id 특성 비트맵 스트립의 슬롯을 선택합니다. 이 요소는 선택적입니다.  이 요소를 생략 하면 값 **guidOfficeIcon:msotcidNoIcon** 암시 됩니다.  

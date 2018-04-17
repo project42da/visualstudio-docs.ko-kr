@@ -1,13 +1,10 @@
 ---
-title: "API 참조 (SharePoint 도구 확장성) | Microsoft Docs"
-ms.custom: 
+title: API 참조 (SharePoint 도구 확장성) | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, reference for project and tools extensibility
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a44f54e80ec3b4c91198666ed7066e6308d3e602
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 0aca731f3f57b7c7024135a3d06d7b17481ba924
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="api-reference-sharepoint-tools-extensibility"></a>API 참조(SharePoint 도구 확장성)
   이 섹션에는 Visual Studio에서 SharePoint 도구 확장에 대 한 API 참조 설명서 포함 되어 있습니다.  
@@ -62,7 +59,7 @@ ms.lasthandoff: 01/10/2018
  SharePoint 프로젝트의 기능 및 패키지 유효성 검사 동작을 사용자 지정하는 데 사용하는 형식을 포함합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [참조 &#40; SharePoint 도구 확장성 &#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
+ [참조 &#40;SharePoint 도구 확장성&#41;](../sharepoint/reference-sharepoint-tools-extensibility.md)   
  [도구 확장의 SharePoint 프로그래밍 모델 개요](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
  [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)   
  [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   

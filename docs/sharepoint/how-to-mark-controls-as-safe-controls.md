@@ -1,12 +1,10 @@
 ---
-title: "방법: 부호 안전 컨트롤로 | Microsoft Docs"
-ms.custom: 
+title: '방법: 부호 안전 컨트롤로 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - safe controls [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 9d34722f7dc9b9975429fac64311dd0b63c30fbe
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d703beb24821663b08ed69238fcf27e2a752d64b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-mark-controls-as-safe-controls"></a>방법: 컨트롤을 안전 컨트롤로 표시
   보안을 위해 SharePoint를 스크립트 삽입 으로부터 보호 되는 웹 컨트롤 및 되지 않는 구분 합니다. 컨트롤, 보호 또는 *안전 컨트롤*, 신뢰할 수 없는 사용자가 액세스할 수 있습니다. SharePoint 프로젝트 항목의 또는 안전 컨트롤 항목 속성에 안전한 것으로 컨트롤을 표시할 수 있습니다는 **패키지 디자이너** 패키지에 어셈블리를 추가 하면 됩니다. 자세한 내용은 다음 항목을 참조하세요.  

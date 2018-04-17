@@ -2,26 +2,22 @@
 title: 소스 제어 VSPackage 디자인 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - source control packages, design elements
 ms.assetid: edd3f2ff-ca32-4465-8ace-4330493b67bb
-caps.latest.revision: 15
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 234346aba360d70d3bbc673067d2634a5112d0f6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: eb741a7dc7423c27baed2cd79476239f4e41a170
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="source-control-vspackage-design-elements"></a>소스 제어 VSPackage 디자인 요소
 이 단원의 항목에서는 VSPackage 긴밀 한 통합에 대 한 구현 해야 소스 제어 구조를 간략하게 설명 합니다. 또한 인터페이스를 나열 하 고 소스 VSPackage를 제어 하는 서비스를 구현할 수 있습니다, 다른 소스 제어 VSPackage 사용할 수 인터페이스 및 서비스 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 을 해당 소스를 지 원하는 모델 및 기능을 제어 합니다.  

@@ -2,26 +2,22 @@
 title: 프로젝트 하위 형식의 초기화 순서 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-sdk
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - project subtypes, initialization sequence
 ms.assetid: f657f8c3-5e68-4308-9971-e81e3099ba29
-caps.latest.revision: ''
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
+manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 6f34825430d7233d99fc78f18ac7078b94020c2c
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: fe7e7a574d04ec9a49252e32e0fbb8b5685778aa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="initialization-sequence-of-project-subtypes"></a>프로젝트 하위 형식의 초기화 순서
 기본 프로젝트 팩터리 구현을 호출 하 여 프로젝트를 생성 하는 환경 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory.CreateProject%2A>합니다. 프로젝트 파일의 확장에 대 한 프로젝트 형식 GUID 목록 비어 있지는 환경에 따라 결정 프로젝트 하위 형식 생성이 시작 됩니다. 프로젝트 파일 확장명과 프로젝트 GUID 프로젝트 인지 지정는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 또는 [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)] 프로젝트 유형입니다. 예를 들어.vbproj 확장 및 식별 하는 {F184B08F-C81C-45F6-A57F-5ABD9991F28F}는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 프로젝트.

@@ -1,31 +1,29 @@
 ---
-title: "모델링 프로젝트 | Microsoft Docs"
-ms.custom: 
+title: 모델링 프로젝트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - automation [Visual Studio SDK], implementing project objects
 - project models, automation
 ms.assetid: c8db8fdb-88c1-4b12-86fe-f3c30a18f9ee
-caps.latest.revision: "9"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 31c3d87a44838ead7663ff4c156985ab1b8e98eb
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: adb0204afd889ab487070578d136aea736bb63a3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-modeling"></a>모델링 프로젝트
 표준 프로젝트 개체를 구현 하는 프로젝트에 대 한 자동화를 제공 하는 다음 단계:는 <xref:EnvDTE.Projects> 및 `ProjectItems` 컬렉션; `Project` 및 <xref:EnvDTE.ProjectItem> 개체; 및 나머지 개체 구현에 고유 합니다. 이러한 표준 개체 Dteinternal.h 파일에 정의 됩니다. 표준 개체의 구현은 BscPrj 샘플에 제공 됩니다. 나란히 구분할 수 있도록 표준 프로젝트 개체를 직접 만드는를 모델으로 이러한 클래스를 사용할 수 있습니다 다른 프로젝트 형식에서 프로젝트 개체와 사용 합니다.  
   
- 자동화 소비자를 호출 하려면 가정 <xref:EnvDTE.Solution>("`<UniqueProjName>")` 및 <xref:EnvDTE.ProjectItems> (`n`) 여기서 n은 솔루션의 특정 프로젝트 가져오기에 대 한 인덱스 번호입니다. 호출할 환경을 사용 하면이 자동화 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.GetProperty%2A> VSITEMID_ROOT ItemID 매개 변수 및 VSHPROPID_ExtObject VSHPROPID 매개 변수로 전달 하는 적절 한 프로젝트 계층 구조에 있습니다. `IVsHierarchy::GetProperty`반환 된 `IDispatch` 핵심을 제공 하는 자동화 개체에 대 한 포인터 `Project` 인터페이스를 구현 합니다.  
+ 자동화 소비자를 호출 하려면 가정 <xref:EnvDTE.Solution>("`<UniqueProjName>")` 및 <xref:EnvDTE.ProjectItems> (`n`) 여기서 n은 솔루션의 특정 프로젝트 가져오기에 대 한 인덱스 번호입니다. 호출할 환경을 사용 하면이 자동화 호출 <xref:Microsoft.VisualStudio.Shell.Interop.IVsUIHierarchy.GetProperty%2A> VSITEMID_ROOT ItemID 매개 변수 및 VSHPROPID_ExtObject VSHPROPID 매개 변수로 전달 하는 적절 한 프로젝트 계층 구조에 있습니다. `IVsHierarchy::GetProperty` 반환 된 `IDispatch` 핵심을 제공 하는 자동화 개체에 대 한 포인터 `Project` 인터페이스를 구현 합니다.  
   
  다음은 구문의 `IVsHierarchy::GetProperty`합니다.  
   

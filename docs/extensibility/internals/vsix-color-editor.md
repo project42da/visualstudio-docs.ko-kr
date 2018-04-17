@@ -1,22 +1,19 @@
 ---
-title: "VSIX 색 편집기 | Microsoft Docs"
-ms.custom: 
+title: VSIX 색 편집기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 70879c5d-e0f0-4845-993c-2f4229869706
-caps.latest.revision: "5"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: aa699e0c6d4d23ec6e5cdc347627a98efb623672
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 3404505da4b006327aebb5b8cd7b69fc69e218d0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vsix-color-editor"></a>VSIX 색 편집기
 Visual Studio 확장 색 편집기 도구를 만들고 Visual Studio에 대 한 사용자 지정 색을 편집할 수 있습니다. 또한 도구는 코드에서 색을 사용할 수 있도록 테마 리소스 키를 생성 해야 합니다. 이 도구는 Visual Studio 확장을 지 원하는 테마 설정에 대 한 색을 만드는 데 유용 합니다. 이 도구는.pkgdef 및.xml 파일을 열 수 있습니다. Visual Studio 테마 (.vstheme 파일)를.xml으로 파일 확장명을 변경 하 여 Visual Studio 확장 색 편집기와 사용할 수 있습니다. 또한 현재.xml 파일로.vstheme 파일을 가져올 수 있습니다.  

@@ -1,26 +1,24 @@
 ---
-title: "Windows Installer 패키지를 authoring | Microsoft Docs"
-ms.custom: 
+title: Windows Installer 패키지를 authoring | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - .msi files, VSPackages
 - msi files, VSPackages
 ms.assetid: 0ce7c21d-0d3f-47fe-a0bb-eed506e32609
-caps.latest.revision: "20"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 2055f57e78c348f3f8e53187126588f382f0b944
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 215e1496d35059448cf11457658b7d1270b5677d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="authoring-a-windows-installer-package"></a>Windows Installer 패키지를 작성합니다.
 데이터 드라이브는 Windows Installer 모델. 레지스트리 항목을 쓰고 파일을 복사 하는 절차적 스크립트를 작성 하는 대신 예를 들어 작성 파일 및 레지스트리 데이터를 포함 하는 데이터베이스 테이블의 행과 열입니다.  
@@ -49,9 +47,9 @@ ms.lasthandoff: 12/22/2017
   
 -   Windows Installer XML 도구 집합  
   
-     도구 집합은 XML 소스 파일에서 Windows Installer 패키지를 작성합니다. 도구 집합에는 Microsoft 오픈 소스 프로젝트입니다. 소스 코드와에서 실행 파일을 다운로드할 수 있습니다 [http://sourceforge.net/projects/wix](http://sourceforge.net/projects/wix)합니다.  
+     도구 집합은 XML 소스 파일에서 Windows Installer 패키지를 작성합니다. 도구 집합에는 Microsoft 오픈 소스 프로젝트입니다. 소스 코드와에서 실행 파일을 다운로드할 수 있습니다 [ http://sourceforge.net/projects/wix ](http://sourceforge.net/projects/wix)합니다.  
   
- 에 통합 하는 상업용 제품에 대 한 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 를 사용 하 여는 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], 참조 [http://visualstudiogallery.com](http://visualstudiogallery.com/)합니다.  
+ 에 통합 하는 상업용 제품에 대 한 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 를 사용 하 여는 [!INCLUDE[vsipsdk](../../extensibility/includes/vsipsdk_md.md)], 참조 [ http://visualstudiogallery.com ](http://visualstudiogallery.com/)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [Windows Installer를 사용하여 VSPackage 설치](../../extensibility/internals/installing-vspackages-with-windows-installer.md)

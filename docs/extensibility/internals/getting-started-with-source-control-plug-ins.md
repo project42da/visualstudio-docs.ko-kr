@@ -1,26 +1,24 @@
 ---
-title: "소스 제어 플러그 인 시작 | Microsoft Docs"
-ms.custom: 
+title: 소스 제어 플러그 인 시작 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-sdk
+ms.topic: conceptual
 helpviewer_keywords:
 - source control plug-ins, getting started
 - getting started, source control plug-ins
 ms.assetid: 46ac1f9f-4ecc-4a72-88d3-4c7e1647e1cb
-caps.latest.revision: "21"
 author: gregvanl
 ms.author: gregvanl
-manager: ghogen
-ms.workload: vssdk
-ms.openlocfilehash: 197cc0f0997e80d6cae277c4b19c5bbc82dce805
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- vssdk
+ms.openlocfilehash: 3f5c88d932fd2915273c86924d2df8f1233baeed
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-source-control-plug-ins"></a>소스 제어 플러그 인 시작
 소스 제어 플러그 인을 만들려면 소스 제어 플러그 인 API에 정의 된 함수를 구현 하는 DLL 만들어야 DLL을 등록 한 다음 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 소스 코드 버전 제어에서 사용 하기 위해 사용할 수 있도록 합니다.  
