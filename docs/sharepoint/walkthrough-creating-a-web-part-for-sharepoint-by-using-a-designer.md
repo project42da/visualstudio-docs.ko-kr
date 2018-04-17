@@ -1,13 +1,10 @@
 ---
-title: "연습: 디자이너를 사용 하 여 SharePoint를 위한 웹 파트 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 디자이너를 사용 하 여 SharePoint를 위한 웹 파트 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], designing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 54902d93dac10ed06103932a87157e8b5a2a2a22
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: edc9665882caae64e0548a00507022f32f3b2bd5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-web-part-for-sharepoint-by-using-a-designer"></a>연습: 디자이너를 사용하여 SharePoint를 위한 웹 파트 만들기
 
@@ -44,7 +41,7 @@ SharePoint 사이트에 대 한 웹 파트를 만드는 경우 사용자가 직�
     > [!NOTE]
     > 컴퓨터는 다음 지침에 설명 된 다른 이름이 나 for Visual Studio 사용자 인터페이스의 몇 가지 요소에 대 한 위치 표시 될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
@@ -192,7 +189,7 @@ SharePoint 사이트에 대 한 웹 파트를 만드는 경우 사용자가 직�
 
 사용자가 지정한 모든 일정의 이벤트는 월별 일정 보기에 표시 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [SharePoint를 위한 웹 파트 만들기](../sharepoint/creating-web-parts-for-sharepoint.md)  
 [방법: SharePoint 웹 파트 만들기](../sharepoint/how-to-create-a-sharepoint-web-part.md)  

@@ -1,12 +1,10 @@
 ---
-title: "항목 템플릿 및 프로젝트 템플릿 만들기 SharePoint 프로젝트 항목에 대 한 | Microsoft Docs"
-ms.custom: 
+title: 항목 템플릿 및 프로젝트 템플릿 만들기 SharePoint 프로젝트 항목에 대 한 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,13 +17,14 @@ helpviewer_keywords:
 - project items [SharePoint development in Visual Studio], creating custom templates
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7f64abf2327d4e7702020a53c88d0d2c640e0756
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 3f71352dad7b77b2ce92816e84a7c90ec16710ed
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint 프로젝트 항목에 대한 항목 템플릿 및 프로젝트 템플릿 만들기
   사용자 지정 SharePoint 프로젝트 항목 형식을 정의한 경우 다른 개발자가 Visual Studio에서 프로젝트 항목을 사용할 수 있도록 항목 템플릿을 또는 프로젝트 템플릿에 연결할 수 있습니다. 템플릿에 대해 마법사를 만들 수 있습니다.  
@@ -34,7 +33,7 @@ ms.lasthandoff: 01/10/2018
   
  항목 템플릿 및 프로젝트 템플릿에 Visual Studio에서 프로젝트 항목 또는 프로젝트를 만드는 데 사용 되는 파일을 포함 하는.zip 파일입니다. 항목 템플릿 및 프로젝트 템플릿의 기본 사항에 대 한 자세한 내용은 참조 [프로젝트 만들기 및 항목 템플릿](/visualstudio/ide/creating-project-and-item-templates)합니다.  
   
-##  <a name="creatingitemtemplates"></a>항목 템플릿 만들기  
+##  <a name="creatingitemtemplates"></a> 항목 템플릿 만들기  
  SharePoint 프로젝트 항목에 대 한 항목 템플릿을 만들 때 몇 가지 사항은 항상 파일 및 특정 종류의 프로젝트 항목에서 사용 될 수 있는 선택적 파일입니다. SharePoint 프로젝트 항목 형식 정의 및 항목 템플릿을 만드는 방법을 보여 주는 연습을 참조 하십시오. [연습: 항목 템플릿, 1 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)합니다.  
   
  다음 표에 SharePoint 프로젝트 항목에 대 한 항목 템플릿을 만드는 데 필요한 파일이 있습니다.  

@@ -1,11 +1,10 @@
 ---
-title: "훌륭한 마이그레이션 Studio (gmStudio) | Microsoft Docs"
-description: "확장성, 사용자 지정 VB6/ASP/통신.NET 업그레이드 솔루션에 대 한 훌륭한 마이그레이션 도구"
+title: 훌륭한 마이그레이션 Studio (gmStudio) | Microsoft Docs
+description: 확장성, 사용자 지정 VB6/ASP/통신.NET 업그레이드 솔루션에 대 한 훌륭한 마이그레이션 도구
 ms.date: 09/05/2017
 ms.technology:
 - devlang-vb
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - visual-basic
 author: rpetrusha
@@ -13,11 +12,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8478f4f7cd3bc342f19b84a085b1889405ca6676
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8e44bf6d4287ff1a82aec3342f089e44e776da6b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="great-migrations-studio-gmstudio"></a>훌륭한 마이그레이션 Studio (gmStudio)
 
@@ -87,7 +86,7 @@ Microsoft 및 훌륭한 마이그레이션을 관계를 맺고 무료 gmStudio �
 
 - **성능 우선**: 시스템 매우 큰 경우에 다양 한 업그레이드 규칙을 테스트 합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - **자세한 내용은**: 방문 [좋은 마이그레이션 설명서 홈](https://www.greatmigrations.com/resources/documentation.aspx) 백서, 사례 연구, 비디오 및 웹캐스트에 대 한 합니다.
 

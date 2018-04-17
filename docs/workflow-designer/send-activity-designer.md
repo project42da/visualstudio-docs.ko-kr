@@ -1,5 +1,5 @@
 ---
-title: "활동 디자이너를 보내기 | Microsoft Docs"
+title: 활동 디자이너를 보내기 | Microsoft Docs
 ms.date: 11/04/2016
 ms.topic: reference
 f1_keywords:
@@ -7,14 +7,14 @@ f1_keywords:
 ms.assetid: b514f2e4-767c-4b94-ac61-dd3a54d4b96d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22ad913623480599f8d299cba438b108a4511ae7
-ms.sourcegitcommit: 37c87118f6f41e832da96f21f6b4cc0cf8fee046
+ms.openlocfilehash: 13cc79a498ca25e6aada15e4efd20c1928b4379a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/12/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="send-activity-designer"></a>Sent 활동 디자이너
 
@@ -46,13 +46,13 @@ ms.lasthandoff: 03/12/2018
 |<xref:System.ServiceModel.Activities.Send.KnownTypes%2A>|False|이 <xref:System.ServiceModel.Activities.Send> 활동으로 호출되는 서비스 작업에 대한 알려진 형식의 컬렉션입니다. 이 속성은 <xref:System.ServiceModel.Activities.Receive.SerializerOption%2A>로 설정된 <xref:System.Runtime.Serialization.DataContractSerializer> 속성과 함께 사용해야 합니다. <xref:System.Xml.Serialization.XmlSerializer>를 사용하는 경우 무시됩니다.<br /><br /> 옆에 있는 줄임표 단추를 클릭 합니다.는 **KnownTypes** 필드에 표시 하려면 속성 표는 **형식 컬렉션 편집기** 관련 형식을 추가할 수 있는 대화 상자.<br /><br /> 옆에 있는 줄임표 단추를 클릭 합니다.는 **KnownTypes** 필드에 표시 하려면 속성 표는 **형식 컬렉션 편집기** 관련 형식을 추가할 수 있는 대화 상자. 이 상자를 사용 하는 방법에 대 한 자세한 내용은 참조는 [형식 컬렉션 편집기 대화 상자](../workflow-designer/type-collection-editor-dialog-box.md) 항목입니다.|
 |<xref:System.ServiceModel.Activities.Send.ProtectionLevel%2A>|True|메시지의 <xref:System.Net.Security.ProtectionLevel>을 지정합니다.<br /><br /> 1. <xref:System.Net.Security.ProtectionLevel> 인증만 의미 합니다.<br />2. <xref:System.Net.Security.ProtectionLevel> 의미 전송 된 데이터의 무결성을 보장 하는 데이터에 서명 합니다.<br />3. <xref:System.Net.Security.ProtectionLevel> 의미를 암호화 및 전송 된 데이터의 무결성 및 기밀성을 위해 데이터에 서명 합니다.|
 |<xref:System.ServiceModel.Activities.Send.SerializerOption%2A>|True|<xref:System.ServiceModel.Activities.Send> 활동으로 호출되는 서비스 작업에 사용할 serializer입니다. 기본값은 <xref:System.Runtime.Serialization.DataContractSerializer>이며, 제공된 데이터 계약을 사용하여 형식 인스턴스를 XML 스트림 또는 문서로 serialize 및 deserialize합니다.|
-|<xref:System.ServiceModel.Activities.Send.Action%2A>|False|메시지의 동작 헤더를 지정합니다. 명시적으로 설정 되지 않은 경우 기본값: https://tempuri.org/ {서비스 계약 네임 스페이스} / {서비스 계약 이름} / {/{operation name}. <xref:System.ServiceModel.Activities.Send> 활동에 지정하는 경우 메시지를 받는 <xref:System.ServiceModel.Activities.Receive> 활동에 동일한 값이 있어야 메시지가 올바르게 배달됩니다.|
-|<xref:System.ServiceModel.Activities.Send.TokenImpersonationLevel%2A>||메시지 수신자에게 허용되는 <xref:System.Security.Principal.TokenImpersonationLevel>입니다. 클라이언트 프로세스 대신 서버 프로세스 수행할 수 있는 정도 제어 하는 보안 가장 수준을 정의 합니다. <xref:System.Security.Principal.TokenImpersonationLevel> 는 가장 수준이 지정 되지 않습니다 나타냅니다. <xref:System.Security.Principal.TokenImpersonationLevel>는 서버 프로세스에서 클라이언트의 식별 정보를 확보할 수 없어 해당 클라이언트를 가장할 수 없음을 의미합니다. <xref:System.Security.Principal.TokenImpersonationLevel>은 서버 프로세스에서 보안 식별자 및 권한과 같은 클라이언트 관련 정보를 확보할 수 있지만 해당 클라이언트를 가장할 수 없음을 의미합니다. 이 기능은 자체 개체를 내보내는 서버(예: 테이블과 뷰를 내보내는 데이터베이스 제품)에 유용합니다. 서버는 검색된 클라이언트 보안 정보를 사용하여 클라이언트의 보안 컨텍스트를 사용하는 다른 서비스를 사용할 수는 없지만 액세스 위반 결정을 내릴 수 있습니다. <xref:System.Security.Principal.TokenImpersonationLevel>은 서버 프로세스에서 로컬 시스템의 클라이언트 보안 컨텍스트를 가장할 수 있음을 의미합니다. 원격 시스템에서는 서버가 클라이언트를 가장할 수 없습니다. <xref:System.Security.Principal.TokenImpersonationLevel>은 서버 프로세스에서 원격 시스템의 클라이언트 보안 컨텍스트를 가장할 수 있음을 의미합니다.|
+|<xref:System.ServiceModel.Activities.Send.Action%2A>|False|메시지의 동작 헤더를 지정합니다. 명시적으로 설정 되지 않은 경우 기본값: https://tempuri.org/{service 계약 네임 스페이스} / {서비스 계약 이름} / {/{operation name}. <xref:System.ServiceModel.Activities.Send> 활동에 지정하는 경우 메시지를 받는 <xref:System.ServiceModel.Activities.Receive> 활동에 동일한 값이 있어야 메시지가 올바르게 배달됩니다.|
+|<xref:System.ServiceModel.Activities.Send.TokenImpersonationLevel%2A>||메시지 수신자에게 허용되는 <xref:System.Security.Principal.TokenImpersonationLevel>입니다. 클라이언트 프로세스 대신 서버 프로세스 수행할 수 있는 정도 제어 하는 보안 가장 수준을 정의 합니다.<xref:System.Security.Principal.TokenImpersonationLevel> 가장 수준이 할당 되지 않은 것을 나타냅니다. <xref:System.Security.Principal.TokenImpersonationLevel>는 서버 프로세스에서 클라이언트의 식별 정보를 확보할 수 없어 해당 클라이언트를 가장할 수 없음을 의미합니다. <xref:System.Security.Principal.TokenImpersonationLevel>은 서버 프로세스에서 보안 식별자 및 권한과 같은 클라이언트 관련 정보를 확보할 수 있지만 해당 클라이언트를 가장할 수 없음을 의미합니다. 이 기능은 자체 개체를 내보내는 서버(예: 테이블과 뷰를 내보내는 데이터베이스 제품)에 유용합니다. 서버는 검색된 클라이언트 보안 정보를 사용하여 클라이언트의 보안 컨텍스트를 사용하는 다른 서비스를 사용할 수는 없지만 액세스 위반 결정을 내릴 수 있습니다. <xref:System.Security.Principal.TokenImpersonationLevel>은 서버 프로세스에서 로컬 시스템의 클라이언트 보안 컨텍스트를 가장할 수 있음을 의미합니다. 원격 시스템에서는 서버가 클라이언트를 가장할 수 없습니다. <xref:System.Security.Principal.TokenImpersonationLevel>은 서버 프로세스에서 원격 시스템의 클라이언트 보안 컨텍스트를 가장할 수 있음을 의미합니다.|
 |<xref:System.ServiceModel.Activities.Send.Endpoint%2A>||<xref:System.ServiceModel.Endpoint> 활동에서 메시지를 보내는 <xref:System.ServiceModel.Activities.Send>입니다. 이 속성을 설정 하는 경우는 <xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A> 속성 해야 **null**합니다.|
 |<xref:System.ServiceModel.Activities.Send.EndpointAddress%2A>||메시지가 전달될 <xref:System.ServiceModel.EndpointAddress>입니다.|
 |<xref:System.ServiceModel.Activities.Send.EndpointConfigurationName%2A>||끝점 구성의 이름입니다. 이 속성은 구성 파일에서 끝점을 구성할 때 설정됩니다. 이 속성에 지정 된 이름으로 설정 해야는  **\<끝점 >** 구성 파일의 요소입니다. 이 속성을 설정 하는 경우는 <xref:System.ServiceModel.Activities.Send.Endpoint%2A> 속성 해야 **null**합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [InitializeCorrelation](../workflow-designer/initializecorrelation-activity-designer.md)
 - [CorrelationScope](../workflow-designer/correlationscope-activity-designer.md)

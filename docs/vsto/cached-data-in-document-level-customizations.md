@@ -1,12 +1,10 @@
 ---
-title: "문서 수준 사용자 지정에서 캐시 된 데이터 | Microsoft Docs"
-ms.custom: 
+title: 문서 수준 사용자 지정에서 캐시 된 데이터 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -20,13 +18,14 @@ helpviewer_keywords:
 - document-level customizations [Office development in Visual Studio], data model
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 1fe9465c3f238941ace0d5b6fc438c7d5d93ec64
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 0919e046f9e50578df46853c6db9f60cea2f71e3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cached-data-in-document-level-customizations"></a>문서 수준 사용자 지정의 캐시된 데이터
   문서 수준 사용자 지정의 기본 목적은 Office 문서에서 보기에서 데이터를 분리 하는 것입니다. 데이터는 숫자와 텍스트를 포함 하는 문서에 저장 된 정보를 나타냅니다. 보기는 사용자 인터페이스 및 Microsoft Office Word 및 Microsoft Office Excel의 개체 모델을 가리킵니다.  
@@ -35,7 +34,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- 문서 수준 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)합니다.  
+ 문서 수준 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)합니다.  
   
 ## <a name="understanding-the-cached-data-programming-model"></a>캐시 된 데이터 프로그래밍 모델 이해  
  데이터 아일랜드는 특정 요구 사항을 충족 하는 솔루션의 모든 개체를 포함할 수 있습니다. 이러한 개체에는 <xref:System.Data.DataSet> 개체 <xref:System.Data.DataTable> 개체 및에서 serialize 할 수 있는 다른 모든 개체는 <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다. 자세한 내용은 참조 하십시오. 참조 [데이터 캐싱](../vsto/caching-data.md)합니다.  

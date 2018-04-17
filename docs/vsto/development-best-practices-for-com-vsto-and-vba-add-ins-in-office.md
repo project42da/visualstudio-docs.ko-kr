@@ -1,23 +1,24 @@
 ---
-title: "Office 추가 기능 COM, VSTO 및 VBA에 대 한 개발 모범 사례 | Microsoft Docs"
-ms.custom: 
+title: Office 추가 기능 COM, VSTO 및 VBA에 대 한 개발 모범 사례 | Microsoft Docs
+ms.custom: ''
 ms.date: 07/25/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
-dev_langs: 
-helpviewer_keywords: 
+ms.technology:
+- office-development
+ms.topic: conceptual
+dev_langs:
+- ''
+helpviewer_keywords:
+- ''
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 2a1b6b9270207b3d0f8d415655231af4456e61b4
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 6da083b12717606233d4c8dd9bc175b42722d53e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>Office에서 COM, VSTO 및 VBA 추가 기능에 대 한 개발 모범 사례
   Office에 대 한 COM 이거나 VBA VSTO 추가 기능을 개발 하는 경우에이 문서에 설명 된 개발 모범 사례를 준수 합니다.   이렇게 하면 확인 하는 데 도움이 됩니다.
@@ -62,7 +63,7 @@ VBA 코드를 작성할 때 사용 하 여 64 비트 safe는 declare 문 및 변
 
 Office 클라이언트 응용 프로그램 (예를 들어 Word 또는 Excel)에 대 한 지원 정보와 제공 하려면 먼저 추가 기능이 현재 Office 버전에서 실행 및 커밋의 이후 릴리스에서 중단에 추가 되 면 업데이트를 제공 하는 것을 확인 합니다. Microsoft Office에 대 한 업데이트 또는 새 빌드를 놓을 때 추가 기능을 테스트할 필요가 없습니다. Microsoft office에서는 COM, VSTO 및 VBA 확장성 플랫폼을 거의 변경 되 고 이러한 변경 내용을 잘 문서화 됩니다.
 
->중요: Microsoft 준비 보고서 및 ISV 연락처 정보에 대 한 지원 되는 추가 기능 목록을 유지 관리 합니다. 참조 추가 기능에 나열 된 가져오려는 [https://aka.ms/readyforwindows](https://aka.ms/readyforwindows)합니다.
+>중요: Microsoft 준비 보고서 및 ISV 연락처 정보에 대 한 지원 되는 추가 기능 목록을 유지 관리 합니다. 참조 추가 기능에 나열 된 가져오려는 [ https://aka.ms/readyforwindows ](https://aka.ms/readyforwindows)합니다.
 
 ## <a name="use-process-monitor-to-help-debug-installation-or-loading-issues"></a>프로세스 모니터를 사용 하 여 설치 또는 로드 하는 문제를 디버깅 하는 데
 추가 기능을 설치 또는 로드 하는 동안에 호환성 문제가, 파일 또는 레지스트리 액세스 문제를 관련 수 있습니다. 사용 하 여 [프로세스 모니터](/sysinternals/downloads/procmon) 또는 유사한 디버깅 도구 로그인 하 여 문제를 식별할 수 있도록 작업 환경에 대 한 동작을 비교 합니다.

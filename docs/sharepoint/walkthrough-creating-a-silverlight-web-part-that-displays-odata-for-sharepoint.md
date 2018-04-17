@@ -1,13 +1,10 @@
 ---
-title: "연습: SharePoint 용 OData를 표시 하는 Silverlight 웹 파트 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: SharePoint 용 OData를 표시 하는 Silverlight 웹 파트 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.SPE.SilverlightWebPart
 dev_langs:
@@ -15,24 +12,24 @@ dev_langs:
 - CSharp
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3c2c66490e0eb46508fce0f346fe44563548b407
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 019c1d4b20f1d7a53fc68ef561d45989e93eee28
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-silverlight-web-part-that-displays-odata-for-sharepoint"></a>연습: SharePoint용 OData를 표시하는 Silverlight 웹 파트 만들기
   SharePoint 2010 OData를 사용 하 여 해당 목록 데이터를 제공합니다. SharePoint, OData 서비스 ListData.svc RESTful 서비스에 의해 구현 됩니다. 이 연습에서는 Silverlight 응용 프로그램을 호스팅하는 SharePoint 웹 파트를 만드는 방법을 보여 줍니다. Silverlight 응용 프로그램 ListData.svc를 사용 하 여 SharePoint 알림 목록 정보를 표시 합니다. 자세한 내용은 참조 [SharePoint Foundation REST 인터페이스](http://go.microsoft.com/fwlink/?LinkId=225999) 및 [개방형 데이터 프로토콜](http://go.microsoft.com/fwlink/?LinkId=226000)합니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
--   지원되는 Microsoft Windows 및 SharePoint 버전. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)][SharePoint 솔루션 개발을 위한 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
+-   지원되는 Microsoft Windows 및 SharePoint 버전. [!INCLUDE[crdefault](../sharepoint/includes/crdefault-md.md)] [SharePoint 솔루션 개발을 위한 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
   
 -   [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)].  
   
@@ -82,7 +79,7 @@ ms.lasthandoff: 01/10/2018
   
 3.  주소 상자에는 **서비스 참조 추가** 대화 상자와 같은 SharePoint 사이트의 URL을 입력 합니다 **http://MySPSite**를 선택한 후는 **이동** 단추입니다.  
   
-     Silverlight ListData.svc SharePoint OData 서비스를 찾으면 주소를 전체 서비스 URL로 바꿉니다. 예를 들어 http://myserver http://myserver/_vti_bin/ListData.svc 됩니다.  
+     Silverlight ListData.svc SharePoint OData 서비스를 찾으면 주소를 전체 서비스 URL로 바꿉니다. 예를 들어 http://myserver 되 http://myserver/_vti_bin/ListData.svc합니다.  
   
 4.  선택 된 **확인** 을 프로젝트에 서비스 참조 추가 단추 및 ServiceReference1 기본 서비스 이름을 사용 합니다.  
   

@@ -1,13 +1,10 @@
 ---
-title: "연습: IntelliTrace를 사용 하 여 SharePoint 응용 프로그램을 디버깅 | Microsoft Docs"
-ms.custom: 
+title: '연습: IntelliTrace를 사용 하 여 SharePoint 응용 프로그램을 디버깅 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - IntelliTrace
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d9f3e5ae5997f7ae4f7c7f94bc61dc526404f144
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 173dbc74a24166f69ca97da6d5f68332345b90ea
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-debugging-a-sharepoint-application-by-using-intellitrace"></a>연습: IntelliTrace를 사용하여 SharePoint 응용 프로그램 디버깅
 
@@ -50,7 +47,7 @@ IntelliTrace를 사용 하 여 SharePoint 솔루션을 보다 쉽게 디버깅�
 
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
@@ -58,7 +55,7 @@ IntelliTrace를 사용 하 여 SharePoint 솔루션을 보다 쉽게 디버깅�
 
 - Visual Studio Enterprise.
 
-## <a name="BKMK_CreateReceiver">기능 수신기 만들기</a>
+## <a name="BKMK_CreateReceiver"></a> 기능 수신기 만들기
 
 첫째, 기능 수신기가 빈 SharePoint 프로젝트를 만듭니다.
 
@@ -76,7 +73,7 @@ IntelliTrace를 사용 하 여 SharePoint 솔루션을 보다 쉽게 디버깅�
 
 4. Feature1.feature를에 대 한 바로 가기 메뉴를 연 다음 선택 **이벤트 수신기 추가** 기능에 코드 모듈을 추가 합니다.
 
-## <a name="BKMK_AddCode">기능 수신기에 코드 추가</a>
+## <a name="BKMK_AddCode"></a> 기능 수신기에 코드 추가
 
 기능 수신기에서 두 개의 메서드를 다음으로 코드를 추가: `FeatureActivated` 및 `FeatureDeactivating`합니다. 이러한 메서드는 기능을 활성화 또는 비활성화 되어 있는 SharePoint 각각 때마다 트리거됩니다.
 
@@ -250,7 +247,7 @@ IntelliTrace를 사용 하 여 SharePoint 솔루션을 보다 쉽게 디버깅�
     }
     ```
 
-## <a name="BKMK_Test1">프로젝트 테스트</a>
+## <a name="BKMK_Test1"></a> 프로젝트 테스트
 
 기능 수신기에는 코드가 추가 하 고 데이터 수집기가 실행 되 고, 배포 하 고 올바르게 작동 하는지 여부를 테스트 하려면 SharePoint 솔루션을 실행 합니다.
 
@@ -277,7 +274,7 @@ IntelliTrace를 사용 하 여 SharePoint 솔루션을 보다 쉽게 디버깅�
 
      FeatureDeactivating() 이벤트 처리기에서 오류가 발생 합니다.
 
-## <a name="BKMK_CollectDiagnosticData">Microsoft Monitoring Agent를 사용 하 여 IntelliTrace 데이터 수집</a>
+## <a name="BKMK_CollectDiagnosticData"></a> Microsoft Monitoring Agent를 사용 하 여 IntelliTrace 데이터 수집
 
 SharePoint를 실행 하는 시스템에서 Microsoft Monitoring Agent를 설치 하는 경우에 IntelliTrace 반환 하는 일반 정보는 보다 구체적인 데이터를 사용 하 여 SharePoint 솔루션을 디버깅할 수 있습니다. 에이전트는 프로그램 SharePoint 솔루션을 실행 하는 동안 디버그 정보를 캡처하려면 PowerShell cmdlet을 사용 하 여 Visual Studio 외부에서 작동 합니다.
 
@@ -302,7 +299,7 @@ SharePoint를 실행 하는 시스템에서 Microsoft Monitoring Agent를 설치
 
      **Stop-WebApplicationMonitoring**  *"\<SharePointSite>\\<SharePointAppName\>"*
 
-## <a name="BKMK_DebugSolution">디버깅 하 고 SharePoint 솔루션을 수정 합니다.</a>
+## <a name="BKMK_DebugSolution"></a> 디버깅 하 고 SharePoint 솔루션을 수정 합니다.
 
 이제를 찾아 SharePoint 솔루션의 오류를 해결 하는 Visual Studio에서 IntelliTrace 로그 파일을 볼 수 있습니다.
 
@@ -334,7 +331,7 @@ SharePoint를 실행 하는 시스템에서 Microsoft Monitoring Agent를 설치
 
      이제 코드가 제대로 실행 됩니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [SharePoint 코드 확인 및 디버깅](../sharepoint/verifying-and-debugging-sharepoint-code.md)  
 [IntelliTrace](/visualstudio/debugger/intellitrace)  

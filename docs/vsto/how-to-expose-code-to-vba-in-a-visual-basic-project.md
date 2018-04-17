@@ -1,12 +1,10 @@
 ---
-title: "방법: Visual Basic 프로젝트에서 VBA로 코드 노출 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Basic 프로젝트에서 VBA로 코드 노출 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,20 +16,21 @@ helpviewer_keywords:
 - host items [Office development in Visual Studio], exposing code to VBA
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 8d3d007024cdca160c194285da8f0a741100253d
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 39dc659f7c8841bcf350249332278091232a32d2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-expose-code-to-vba-in-a-visual-basic-project"></a>How to: Expose Code to VBA in a Visual Basic Project
   코드에 노출할 수 있습니다는 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] 두 가지 유형의 서로 상호 작용 하는 코드를 원하는 경우 VBA 코드에 대 한 Visual basic 프로젝트.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
- Visual Basic 프로세스는 Visual C# 프로세스와에서 다릅니다. 자세한 내용은 참조 [하는 방법: Visual C# 35; 및 답변에서 VBA로 코드 노출 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)합니다.  
+ Visual Basic 프로세스는 Visual C# 프로세스와에서 다릅니다. 자세한 내용은 참조 [하는 방법: Visual C에서 VBA로 코드 노출&#35; 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)합니다.  
   
  프로세스는 다른 클래스에 코드의 경우 코드는 호스트 항목 클래스에 대 한 다릅니다.  
   
@@ -41,7 +40,7 @@ ms.lasthandoff: 01/10/2018
   
  ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 호출 VSTO 코드 VBA에서?](http://go.microsoft.com/fwlink/?LinkId=136757)합니다.  
   
-##  <a name="HostItemCode"></a>호스트 항목 클래스에 코드 노출  
+##  <a name="HostItemCode"></a> 호스트 항목 클래스에 코드 노출  
  호스트 항목 클래스에는 Visual Basic 코드를 호출 하는 VBA 코드를 사용 하려면 설정는 **EnableVbaCallers** 호스트 항목의 속성 **True**합니다.  
   
  호스트 항목 클래스의 메서드를 노출 하 고 VBA에서 호출 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: Visual Basic 프로젝트에서 vba의 코드 호출](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)합니다. 호스트 항목에 대한 자세한 내용은 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md)를 참조하세요.  
@@ -76,7 +75,7 @@ ms.lasthandoff: 01/10/2018
   
 6.  프로젝트를 빌드합니다.  
   
-##  <a name="NonHostItem"></a>호스트 항목 클래스에 없는 코드 노출  
+##  <a name="NonHostItem"></a> 호스트 항목 클래스에 없는 코드 노출  
  호스트 항목 클래스에 없는 Visual Basic 코드를 호출 하는 VBA 코드를 사용 하려면 VBA에 표시 되므로 코드를 수정 합니다.  
   
 #### <a name="to-expose-code-that-is-not-in-a-host-item-class-to-vba"></a>호스트 항목 클래스를 VBA에 있지 않은 코드에 노출 하려면  
@@ -123,8 +122,8 @@ ms.lasthandoff: 01/10/2018
 ## <a name="see-also"></a>참고 항목  
  [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)   
  [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
- [Combining VBA and Document-Level Customizations](../vsto/combining-vba-and-document-level-customizations.md)   
+ [VBA 및 문서 수준 사용자 지정 결합](../vsto/combining-vba-and-document-level-customizations.md)   
  [연습: Visual Basic 프로젝트에서 vba의 코드 호출](../vsto/walkthrough-calling-code-from-vba-in-a-visual-basic-project.md)   
- [방법: Visual C# 35; 및 답변에서 VBA로 코드 노출 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)  
+ [방법: Visual C에서 VBA로 코드 노출&#35; 프로젝트](../vsto/how-to-expose-code-to-vba-in-a-visual-csharp-project.md)  
   
   

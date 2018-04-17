@@ -1,13 +1,10 @@
 ---
-title: "VSTO 추가 기능 아키텍처 | Microsoft Docs"
-ms.custom: 
+title: VSTO 추가 기능 아키텍처 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -19,14 +16,14 @@ helpviewer_keywords:
 - add-ins [Office development in Visual Studio], architecture
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a8abb77978731a9fa5cd43acdcb4928944c605b1
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 94c8a9fa83cd4a37918c22ae0e38ab23c3ca94d7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="architecture-of-vsto-add-ins"></a>VSTO 추가 기능의 아키텍처
   Visual Studio에서 Office 개발자 도구를 사용하여 만든 VSTO 추가 기능에는 안정성과 보안을 강조하고 Microsoft Office와 긴밀하게 작업할 수 있도록 하는 아키텍처 기능이 있습니다. 이 항목에서는 다음과 같은 VSTO 추가 기능의 측면에 대해 설명합니다.  
@@ -39,12 +36,12 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
   
- VSTO 추가 기능 만들기에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [시작 VSTO 추가 기능 프로그래밍](../vsto/getting-started-programming-vsto-add-ins.md)합니다.  
+ VSTO 추가 기능 만들기에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [가져오기 시작 VSTO 추가 기능 프로그래밍](../vsto/getting-started-programming-vsto-add-ins.md)합니다.  
   
 ##  <a name="UnderstandingAddIns"></a> VSTO 추가 기능 이해  
  Visual Studio에서 Office 개발자 도구를 사용하여 VSTO 추가 기능을 만들 때 Microsoft Office 응용 프로그램에 의해 로드되는 관리 코드 어셈블리를 만듭니다. 어셈블리가 로드된 후 VSTO 추가 기능은 응용 프로그램에서 발생하는 이벤트(예: 사용자가 메뉴 항목을 클릭할 때)에 응답할 수 있습니다. VSTO 추가 기능은 응용 프로그램을 자동화하고 확장하기 위해 개체 모델을 호출할 수도 있으며 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)]의 클래스 중 하나를 사용할 수 있습니다.  
   
- 어셈블리는 응용 프로그램의 주 interop 어셈블리를 통해 응용 프로그램의 COM 구성 요소와 통신합니다. 자세한 내용은 참조 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md) 및 [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
+ 어셈블리는 응용 프로그램의 주 interop 어셈블리를 통해 응용 프로그램의 COM 구성 요소와 통신합니다. 자세한 내용은 참조 [Office 주 Interop 어셈블리](../vsto/office-primary-interop-assemblies.md) 및 [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)합니다.  
   
  여러 VSTO 추가 기능이 한 응용 프로그램에 대해 설치된 경우 각 VSTO 추가 기능은 서로 다른 응용 프로그램 도메인에서 로드됩니다. 즉, 한 VSTO 추가 기능이 잘못 동작해도 다른 VSTO 추가 기능이 실패할 수 없습니다. 이는 응용 프로그램이 닫힐 때 모든 VSTO 추가 기능 어셈블리가 메모리에서 언로드되도록 하는 데도 도움이 됩니다. 응용 프로그램 도메인에 대 한 자세한 내용은 참조 [응용 프로그램 도메인](/dotnet/framework/app-domains/application-domains)합니다.  
   

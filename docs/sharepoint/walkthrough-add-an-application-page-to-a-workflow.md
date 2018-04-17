@@ -1,12 +1,10 @@
 ---
-title: "연습: 워크플로에 응용 프로그램 페이지 추가 | Microsoft Docs"
-ms.custom: 
+title: '연습: 워크플로에 응용 프로그램 페이지 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - application page [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 86b402e1f8b8be3adf477d67eb11387fa3091afd
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 97c720ded65e46e85f8d9f20f9f509b31f2cebbb
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>연습: 워크플로에 응용 프로그램 페이지 추가
   이 연습에는 워크플로 프로젝트에는 워크플로에서 파생 된 데이터를 표시 하는 응용 프로그램 페이지를 추가 하는 방법을 보여 줍니다. 이 항목에서 설명 하는 프로젝트에 기반 [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)합니다.  
@@ -38,7 +37,7 @@ ms.lasthandoff: 01/10/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   지원 되는 버전 [!INCLUDE[TLA#tla_win](../sharepoint/includes/tlasharptla-win-md.md)] 및 SharePoint 합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
@@ -337,7 +336,7 @@ ms.lasthandoff: 01/10/2018
   
 14. 공유 문서 목록에 다른 문서와 함께 11-13 단계를 반복 합니다. (문서의 정확한 수 중요 하지 않습니다.)  
   
-15. 웹 브라우저에서 다음 URL을 열어 경비 보고서 요약 응용 프로그램 페이지를 표시: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**.  
+15. 웹 브라우저에서 다음 URL을 열어 경비 보고서 요약 응용 프로그램 페이지를 표시: **http://***SystemName***/_layouts/ExpenseReport/ApplicationPage1.aspx**합니다.  
   
      경비 보고서 요약 페이지에 할당 된 금액을 초과 하는 경비 보고서, by, 초과 금액 및 모든 보고서에 대 한 총 금액 모두 나열 합니다.  
   

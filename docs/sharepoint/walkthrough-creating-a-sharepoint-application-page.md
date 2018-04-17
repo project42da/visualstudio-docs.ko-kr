@@ -1,13 +1,10 @@
 ---
-title: "연습: SharePoint 응용 프로그램 페이지 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: SharePoint 응용 프로그램 페이지 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,14 +15,14 @@ helpviewer_keywords:
 - application pages [SharePoint development in Visual Studio], creating
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 33c718707ce284179b69e33677d5b29f0d4433c7
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 21191ec585b83099aefad4f1c43949ba94cfc4ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-sharepoint-application-page"></a>연습: SharePoint 응용 프로그램 페이지 만들기
  
@@ -44,7 +41,7 @@ ms.lasthandoff: 02/21/2018
 > [!NOTE]
 > 일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - Windows 및 SharePoint 버전의 지원. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.
 
@@ -158,7 +155,7 @@ SharePoint 응용 프로그램 페이지에 대 한 자세한 내용은 참조 [
 
 - [웹 파트 또는 응용 프로그램 페이지에 대 한 재사용 가능한 컨트롤 만들기](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 [방법: 응용 프로그램 페이지 만들기](../sharepoint/how-to-create-an-application-page.md)  
 [응용 프로그램 _layouts 유형 페이지](http://go.microsoft.com/fwlink/?LinkID=169274)

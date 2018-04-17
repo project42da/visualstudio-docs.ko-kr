@@ -1,12 +1,10 @@
 ---
-title: "도구 확장의 SharePoint 프로그래밍 모델 개요 | Microsoft Docs"
-ms.custom: 
+title: 도구 확장의 SharePoint 프로그래밍 모델 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -16,19 +14,20 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, extending tools
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 8eaa1f5d1cfe8120ec6a01c2fe7f646cf90be44a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: a52d05dd22ae88deecc2d79d3ab3de7d3c3b6344
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="overview-of-the-programming-model-of-sharepoint-tools-extensions"></a>SharePoint 도구 확장의 프로그래밍 모델 개요
   Visual Studio에서 SharePoint 도구의 확장을 만드는 경우 SharePoint 도구에서 노출하는 확장성 인터페이스를 하나 이상 구현하여 시작합니다. 대부분의 경우 SharePoint 도구에서 제공하는 다른 형식을 사용하여 확장에서 기능도 구현합니다. 일부 시나리오에서는 Visual Studio 및 SharePoint에서 제공하는 다른 개체 모델의 형식을 사용할 수도 있습니다. 각 개체 모델의 용도 이해 하 고 SharePoint 도구의 확장을 만드는 서로 사용 하는 방법을 알고 해야 합니다.  
   
 ## <a name="extending-the-sharepoint-tools-by-implementing-extensibility-interfaces"></a>확장성 인터페이스를 구현하여 SharePoint 도구 확장  
- Visual Studio에서는 .NET Framework 4의 MEF(Managed Extensibility Framework)를 사용하여 SharePoint 도구에 대한 확장성 모델을 제공합니다. MEF는 System.ComponentModel.Composition 어셈블리에서 구현된 API로, 응용 프로그램에서 확장성 지점을 노출하고 런타임에 확장을 검색하고 로드할 수 있도록 합니다. MEF에 대 한 자세한 내용은 참조 하세요. [Managed Extensibility Framework &#40; MEF &#41; ](/dotnet/framework/mef/index).  
+ Visual Studio에서는 .NET Framework 4의 MEF(Managed Extensibility Framework)를 사용하여 SharePoint 도구에 대한 확장성 모델을 제공합니다. MEF는 System.ComponentModel.Composition 어셈블리에서 구현된 API로, 응용 프로그램에서 확장성 지점을 노출하고 런타임에 확장을 검색하고 로드할 수 있도록 합니다. MEF에 대 한 자세한 내용은 참조 [Managed Extensibility Framework &#40;MEF&#41;](/dotnet/framework/mef/index)합니다.  
   
  SharePoint 도구를 확장하려면 Visual Studio에서 노출하는 확장성 인터페이스를 하나 이상 구현합니다. 또한 <xref:System.ComponentModel.Composition.ExportAttribute>와 필요에 따라 추가 SharePoint 도구 관련 특성을 인터페이스 구현에 적용해야 합니다. 다음 표에는 SharePoint 도구를 확장하기 위해 구현할 수 있는 인터페이스가 나와 있습니다.  
   

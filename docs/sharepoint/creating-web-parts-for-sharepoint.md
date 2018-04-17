@@ -1,12 +1,10 @@
 ---
-title: "SharePoint를 위한 웹 파트 만들기 | Microsoft Docs"
-ms.custom: 
+title: SharePoint를 위한 웹 파트 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - Microsoft.SharePoint.WebControls.DateTimeControl
 - Microsoft.SharePoint.WebControls.CssLink
@@ -27,13 +25,14 @@ helpviewer_keywords:
 - Web Parts [SharePoint development in Visual Studio], designing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: d0c5acfac06702894f67a8bfc1547462a0069e15
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 52f35f095c91422f8882724074c54ad48edd88f9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-web-parts-for-sharepoint"></a>SharePoint를 위한 웹 파트 만들기
   웹 파트를 사용 하 여 브라우저를 사용 하 여 콘텐츠, 모양 및 SharePoint 사이트의 페이지의 동작을 수정할 수 있습니다. 웹 파트는 웹 파트 페이지 내에서 실행 되는 서버 쪽 컨트롤: SharePoint 사이트에 표시 되는 페이지의 구성 요소를 수 있습니다. 참조 [문서 블록: 웹 파트](http://go.microsoft.com/fwlink/?LinkID=182097)합니다.  
@@ -105,7 +104,7 @@ ms.lasthandoff: 01/10/2018
  샌드박스 솔루션에 대 한 자세한 내용은 참조 [차이점 샌드박스 솔루션과 팜 솔루션 간](../sharepoint/differences-between-sandboxed-and-farm-solutions.md)합니다.  
   
 ## <a name="creating-older-style-sharepoint-based-web-parts"></a>이전 스타일 Sharepoint 웹 파트 만들기  
- 사용자 지정을 만드는 데 Visual Studio에서 서식 파일을 사용할 수 있습니다 [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] SharePoint에 대 한 웹 파트입니다. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)]웹 파트의 맨 위에 빌드됩니다는 [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] 파트 인프라를 구성 하 고 새 프로젝트에 대해이 좋습니다.  
+ 사용자 지정을 만드는 데 Visual Studio에서 서식 파일을 사용할 수 있습니다 [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] SharePoint에 대 한 웹 파트입니다. [!INCLUDE[vstecasplong](../sharepoint/includes/vstecasplong-md.md)] 웹 파트의 맨 위에 빌드됩니다는 [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] 파트 인프라를 구성 하 고 새 프로젝트에 대해이 좋습니다.  
   
  매우 드문 경우에는 이전 스타일 sharepoint 웹 파트를 사용 하 여 웹 파트를 만들어야 할 수도 있습니다. Visual Studio를 사용 하 여 이러한 종류의 웹 파트를 만들 수 있지만 Visual Studio에 만들 수 있도록 특별히 고안 된 템플릿을 제공 하지 않습니다.  
   

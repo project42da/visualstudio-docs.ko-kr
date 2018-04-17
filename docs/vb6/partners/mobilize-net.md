@@ -1,11 +1,10 @@
 ---
-title: ".NET의 Visual Basic 업그레이드 도우미 (VBUC) 동원 | Microsoft Docs"
-description: "Visual Basic 6에서 Visual Basic.NET 및 C#으로 마이그레이션.Net의 도구 동원"
+title: .NET의 Visual Basic 업그레이드 도우미 (VBUC) 동원 | Microsoft Docs
+description: Visual Basic 6에서 Visual Basic.NET 및 C#으로 마이그레이션.Net의 도구 동원
 ms.date: 09/05/2017
 ms.technology:
 - devlang-vb
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - visual-basic
 author: rpetrusha
@@ -13,11 +12,11 @@ ms.author: ronpet
 manager: wpickett
 ms.workload:
 - dotnet
-ms.openlocfilehash: b7fa2a16143368b829f29f43a4c8f60536b55c52
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d80fa0e2f00ec9ea834483e8dd2c5c262a5eea0c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="mobilizenets-visual-basic-upgrade-companion-vbuc"></a>.NET의 Visual Basic 업그레이드 도우미 (VBUC) 동원
 
@@ -87,9 +86,9 @@ Visual Basic 업그레이드 도우미의 고유 특성 중 일부입니다.
 업데이트 되 고 더 자세한 기능 목록에 대 한 방문 하십시오는 [VBUC의 기술 사이트](http://www.vbtonet.com/?msdn)합니다.
 
 ## <a name="learn-more-and-try-it-for-yourself"></a>자세한 정보 및 직접 체험해 보세요
-VBUC에 대 한 자세한 하 고 액세스 백서, 비디오 및 웹캐스트 고객 사례 읽거나 http://www.mobilize.net/solution/msdn에 무료 평가판을 다운로드 합니다.
+VBUC에 대 한 자세한 정보, 고객 사례 읽기, 흰색 문서, 비디오 및 웹캐스트를 액세스 또는에 무료 평가판을 다운로드 http://www.mobilize.net/solution/msdn합니다.
 
-## <a name="additional-resources"></a>추가 리소스
+## <a name="additional-resources"></a>추가 자료
 
 - [**VB/ASP Assessment Tool**](https://www.mobilize.net/modernization-assessment-tool): 응용 프로그램 구성 요소 및 요소를 고려 하는 마이그레이션 관점에서 이들 간의 관계를 분석 하 여 업그레이드 과정에 대 한 측정 수단으로 사용할 수 있는 무료 제품 구조체와 업그레이드 된 프로젝트 중 많은 리소스를 사용 하는 기능입니다.
 

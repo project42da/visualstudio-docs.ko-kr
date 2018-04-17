@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 워크플로 솔루션 만들기 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 워크플로 솔루션 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VSTO.NewSharePointWorkflowWizard.Page3
 - VS.SharePointTools.Workflow.WorkflowName
@@ -22,16 +20,17 @@ helpviewer_keywords:
 - workflows [SharePoint development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: bb0dce0aa162260ca784593ec34ee5c39acd1f31
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 6eef7953a767e08febcb3e8dc42ad4f55e73889c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-sharepoint-workflow-solutions"></a>SharePoint 워크플로 솔루션 만들기
-  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]문서 및 SharePoint 웹 사이트에서 목록 항목의 수명 주기를 관리 하는 사용자 지정 워크플로 만드는 데 도움이 되는 도구를 제공 합니다. 제공되는 항목에는 디자이너, 작업 컨트롤 집합 및 필수 어셈블리 참조가 있습니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]도 포함 되어는 **SharePoint 사용자 지정 마법사**를 만들고 워크플로 구성 합니다.  
+  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 문서 및 SharePoint 웹 사이트에서 목록 항목의 수명 주기를 관리 하는 사용자 지정 워크플로 만드는 데 도움이 되는 도구를 제공 합니다. 제공되는 항목에는 디자이너, 작업 컨트롤 집합 및 필수 어셈블리 참조가 있습니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 도 포함 되어는 **SharePoint 사용자 지정 마법사**를 만들고 워크플로 구성 합니다.  
   
  목록에서 SharePoint 프로젝트를 만들기 위한 필수 구성 요소에 대해 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다. SharePoint에 대 한 자세한 내용은 참조 [Microsoft SharePoint 제품 및 기술](http://go.microsoft.com/fwlink/?LinkId=178470)합니다.  
   
@@ -124,12 +123,12 @@ ms.lasthandoff: 01/10/2018
  SharePoint 라이브러리 또는 목록에 있는 항목의 속성을 사용 하 여 사용자 로부터 정보를 수집할 수 있습니다. 주 코드 파일 (Workflow1.cs 또는 Workflow1.vb) 라는 Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties.WorkflowProperties 클래스의 인스턴스를 선언 `workflowProperties`합니다. 사용 된 `workflowProperties` 라이브러리 또는 목록에서 코드의 속성에 액세스 하는 개체입니다. 예를 들어 참조 [연습: 만들기 및 SharePoint 워크플로 솔루션을 디버깅](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)합니다.  
   
 ## <a name="debugging-a-sharepoint-workflow-template"></a>SharePoint 워크플로 템플릿 디버깅  
- 디버깅할 수 SharePoint 워크플로 프로젝트를 동일한 다른를 디버깅할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 웹 기반 프로젝트입니다. 시작 하는 경우는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서 지정 하는 설정을 사용 하 여는 **SharePoint 사용자 지정 마법사** 를 적절 한 SharePoint 웹 사이트를 열고 워크플로 템플릿을 자동으로 연결 적절 한 라이브러리 또는 목록입니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]또한 연결 된 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 하도록 설정할 디버거는 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 이라는 w3wp.exe 프로세스입니다.  
+ 디버깅할 수 SharePoint 워크플로 프로젝트를 동일한 다른를 디버깅할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 웹 기반 프로젝트입니다. 시작 하는 경우는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서 지정 하는 설정을 사용 하 여는 **SharePoint 사용자 지정 마법사** 를 적절 한 SharePoint 웹 사이트를 열고 워크플로 템플릿을 자동으로 연결 적절 한 라이브러리 또는 목록입니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 또한 연결 된 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 하도록 설정할 디버거는 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 이라는 w3wp.exe 프로세스입니다.  
   
  워크플로 테스트 하려면 수동으로 시작 해야 것입니다. 자세한 내용은 "워크플로에 디버깅" 섹션을 참조 [SharePoint 솔루션 디버깅](../sharepoint/debugging-sharepoint-solutions.md)합니다. 에 대 한 자세한 내용은 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 웹 응용 프로그램 디버깅, 참조 [웹 응용 프로그램 디버깅 및 스크립트](/visualstudio/debugger/debugging-web-applications-and-script)합니다.  
   
 ## <a name="deploying-a-sharepoint-workflow-template"></a>SharePoint 워크플로 템플릿을 배포합니다.  
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]SharePoint 워크플로 프로젝트를 다른와 동일 하 게 배포 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 프로젝트. 자세한 내용은 참조 [패키징 및 SharePoint 솔루션 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)합니다.  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 워크플로 프로젝트를 다른와 동일 하 게 배포 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 프로젝트. 자세한 내용은 참조 [패키징 및 SharePoint 솔루션 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)합니다.  
   
 ## <a name="importing-globally-reusable-workflows"></a>전역으로 재사용 가능한 워크플로 가져오기  
  사이트별 재사용 가능한 워크플로 만들 뿐만 아니라 SharePoint Designer 만들 수 있습니다 *전체적으로 재사용 가능한 워크플로*, 모든 SharePoint 사이트에서 사용할 수 있는 워크플로 합니다. 재사용 가능한 워크플로 가져오기 프로젝트 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 현재 전역으로 재사용 가능한 워크플로 가져오지 않습니다. 그러나 SharePoint Designer를 사용 하 여 전역적으로 다시 사용할 수 있는 워크플로 다시 사용할 수 있는 워크플로로 변환할 하거나 변환 되지 않은 선언적 워크플로로 워크플로 가져옵니다. 자세한 내용은 참조 [기존 SharePoint 사이트에서 항목 가져오기](../sharepoint/importing-items-from-an-existing-sharepoint-site.md)합니다.  

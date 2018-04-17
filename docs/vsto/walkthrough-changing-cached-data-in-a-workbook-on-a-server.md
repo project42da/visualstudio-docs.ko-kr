@@ -1,12 +1,10 @@
 ---
-title: "연습: 서버의 통합 문서에서 데이터를 캐시 변경 | Microsoft Docs"
-ms.custom: 
+title: '연습: 서버의 통합 문서에서 데이터를 캐시 변경 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - documents [Office development in Visual Studio], server-side data access
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: fcea73cfbd87a4e541654b91463091b08c47b8c0
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: d9303c165b0c04d36a873ee2ff2aae22365b24e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-changing-cached-data-in-a-workbook-on-a-server"></a>연습: 서버의 통합 문서에서 캐시된 데이터 변경
   이 연습에서는 Microsoft Office Excel 통합 문서에 사용 하 여 Excel을 시작 하지 않고 캐시 된 데이터 집합을 수정 하는 방법의 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스입니다.  
@@ -48,7 +47,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -82,7 +81,7 @@ ms.lasthandoff: 01/10/2018
   
 8.  **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **AdventureWorksDataSet** 프로젝트를 **솔루션 탐색기** 열립니다는 **Class1.cs** 또는 **Class1.vb** 코드 파일.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **AdventureWorksDataSet** 프로젝트를 **솔루션 탐색기** 열립니다는 **Class1.cs** 또는 **Class1.vb** 코드 파일.  
   
 9. **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 **Class1.cs** 또는 **Class1.vb**, 클릭 하 고 **삭제**합니다. 이 연습에 대 한이 파일이 필요가 없습니다.  
   
@@ -144,7 +143,7 @@ ms.lasthandoff: 01/10/2018
   
 7.  되도록 **새 문서** 을 선택한 클릭 **확인**합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]열립니다는 **AdventureWorksReport** 디자이너에서 통합 문서 추가 **AdventureWorksReport** 프로젝트를 **솔루션 탐색기**합니다.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 열립니다는 **AdventureWorksReport** 디자이너에서 통합 문서 추가 **AdventureWorksReport** 프로젝트를 **솔루션 탐색기**합니다.  
   
 ## <a name="adding-the-dataset-to-data-sources-in-the-excel-workbook-project"></a>Excel 통합 문서 프로젝트에서 데이터 원본에 데이터 집합 추가  
  Excel 통합 문서에서 데이터 집합을 표시할 수 있습니다, 전에 Excel 통합 문서 프로젝트에서 데이터 원본에 데이터 집합을 먼저 추가 해야 합니다.  
@@ -239,7 +238,7 @@ ms.lasthandoff: 01/10/2018
   
 5.  **확인**을 클릭합니다.  
   
-     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]추가 **DataWriter** 프로젝트를 **솔루션 탐색기** 열립니다는 **Program.cs** 또는 **Module1.vb** 코드 파일.  
+     [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **DataWriter** 프로젝트를 **솔루션 탐색기** 열립니다는 **Program.cs** 또는 **Module1.vb** 코드 파일.  
   
 ## <a name="changing-data-in-the-cached-dataset-by-using-the-console-application"></a>콘솔 응용 프로그램을 사용 하 여 캐시 된 데이터 집합에서 데이터를 변경 합니다.  
  사용 하 여는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스를 로컬에 데이터를 읽을 콘솔 응용 프로그램에서 `AdventureWorksLTDataSet` 개체,이 데이터를 수정 하 고, 캐시 된 데이터 집합에 다시 저장 합니다.  

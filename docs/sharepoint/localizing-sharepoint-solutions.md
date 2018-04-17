@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 솔루션 지역화 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 솔루션 지역화 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 f1_keywords:
 - VS.SharePointTools.Project.GlobalAndFeatureResource
 - VS.SharePoint.Project.AddResourceDialog
@@ -21,13 +19,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, localizing
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 7a1ca2b08bda0a3336b573da7df910872e13470b
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 86ffb2795d5e2a9b9583360146c4bb1d2556b9a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="localizing-sharepoint-solutions"></a>SharePoint 솔루션 지역화
   전 세계적으로 사용 될 수 있도록 응용 프로그램을 준비 하는 과정을 지역화 라고 합니다. 지역화를 특정 문화권 리소스를 번역 됩니다. 자세한 내용은 참조 [전역화 및 지역화 응용 프로그램](/visualstudio/ide/globalizing-and-localizing-applications)합니다. 이 항목 SharePoint 솔루션 지역화 하는 방법에 대 한 개요를 제공 합니다.  
@@ -90,7 +89,7 @@ $Resources:String ID
 <asp:<class> runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
- 예:  
+ 예를 들어:  
   
 ```  
 <asp:Button ID="btn1" runat="server" onclick="btn1_Click" Text="<%$Resources:Resource1,String7%>"></asp:Button>  
@@ -102,7 +101,7 @@ $Resources:String ID
 <asp:literal ID="<ID>" runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
- 예:  
+ 예를 들어:  
   
 ```  
 <asp:literal ID="Literal1" runat="server" Text="<%$Resources:Resource1, String9%>" />  
@@ -113,7 +112,7 @@ $Resources:String ID
 ### <a name="localizing-code"></a>코드 지역화  
  문자열 기능을 지역화 하는 것 외에도 및 [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] 태그 있습니다 메시지 문자열 및 솔루션 코드에 표시 된 오류 문자열 필드를 지역화 합니다. 지역화 된 정보 및 오류 메시지는 위성 어셈블리에 포함 되어 있습니다. 위성 어셈블리와 같은 사용자에 게 표시 되는 문자열이 포함 [!INCLUDE[TLA2#tla_ui](../sharepoint/includes/tla2sharptla-ui-md.md)] 텍스트와 출력 메시지 예외를 선택 합니다.  
   
- [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]표준.NET Framework 허브 및 스포크 모델을 사용합니다. 허브 또는 주 프로그램 어셈블리에는 기본 언어 리소스가 포함 되어 있습니다. 스포크 또는 위성 어셈블리 언어 관련 리소스를 포함합니다. 자세한 내용은 [리소스 패키지 및 배포](http://go.microsoft.com/fwlink/?LinkId=179280)를 참조하세요. 위성 어셈블리는 리소스 (.resx) 파일에서 컴파일됩니다. 프로젝트 및 솔루션 패키지 언어 관련 리소스 파일을 추가 하면 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 명명 된 위성 어셈블리에 리소스 파일을 컴파일합니다 *프로젝트 이름을*. resources.dll 합니다.  
+ [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 표준.NET Framework 허브 및 스포크 모델을 사용합니다. 허브 또는 주 프로그램 어셈블리에는 기본 언어 리소스가 포함 되어 있습니다. 스포크 또는 위성 어셈블리 언어 관련 리소스를 포함합니다. 자세한 내용은 [리소스 패키지 및 배포](http://go.microsoft.com/fwlink/?LinkId=179280)를 참조하세요. 위성 어셈블리는 리소스 (.resx) 파일에서 컴파일됩니다. 프로젝트 및 솔루션 패키지 언어 관련 리소스 파일을 추가 하면 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 명명 된 위성 어셈블리에 리소스 파일을 컴파일합니다 *프로젝트 이름을*. resources.dll 합니다.  
   
  ASPX 태그와 마찬가지로; 프로젝트에 별도 리소스 파일의 프로젝트 항목을 추가 하 여 SharePoint 응용 프로그램 코드 지역화 기본 언어 마다 하나씩 지역화 된 언어입니다. 그러나 ASPX 태그 지역화를 위한 리소스 파일이 이미 있는 경우 이전에 언급 했 듯이 재사용할 수 있습니다 코드 지역화에 대 한 합니다. 리소스 파일을 만들도록 해야 할 경우 기본 언어 리소스 파일을.resx 확장명을 추가 하거나 원하는 이름을 지정 합니다. 지역화 된 리소스 파일의 이름을 언어별로 문화권이 추가 된 동일한 이름과 이름 [!INCLUDE[TLA2#tla_id](../sharepoint/includes/tla2sharptla-id-md.md)]합니다. 포함 리소스 위성 리소스 어셈블리를 만들 수 있도록 하려면 각 리소스 파일의 빌드 작업 속성을 설정 합니다.  
   

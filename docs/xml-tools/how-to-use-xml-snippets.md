@@ -1,19 +1,19 @@
 ---
-title: "Microsoft Visual Studio에서 XML 조각을 사용 하는 방법 | Microsoft Docs"
+title: Microsoft Visual Studio에서 XML 조각을 사용 하는 방법 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 3a27375b-81cc-48f6-a884-e1cb8c4f78f5
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e8e94b799db6572b3aafcbd6bacf826b4a22861
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 5751293124edab5c8415cd60d79aba9947fb94bf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-use-xml-snippets"></a>방법: 사용 하 여 XML 조각
 
@@ -110,7 +110,7 @@ XML 조각을 선택하면 코드 조각의 텍스트가 커서 위치에 자동
 
 코드 조각 필드 설정을 수정 하 여 편집할 수 있는 코드 조각 필드에 대 한 기본 색을 변경할 수 있습니다는 **글꼴 및 색** 의 창 고 **옵션** 대화 상자. 자세한 내용은 참조 [하는 방법: 글꼴 및 색 편집기에서 변경](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 조각](../xml-tools/xml-snippets.md)
 - [방법: XML 스키마에서 XML 조각 생성](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)

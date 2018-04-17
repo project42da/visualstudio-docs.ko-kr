@@ -1,12 +1,10 @@
 ---
-title: "SharePoint 솔루션 패키징 및 배포 | Microsoft Docs"
-ms.custom: 
+title: SharePoint 솔루션 패키징 및 배포 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -18,13 +16,14 @@ helpviewer_keywords:
 - SharePoint development in Visual Studio, packaging and deploying
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: e25d0829305f414712590296b6121d62583736a2
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 8faeb21b7c32f1af91a9149b1b9f6bcadafeed7c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="packaging-and-deploying-sharepoint-solutions"></a>SharePoint 솔루션 패키징 및 배포
   일반적으로 SharePoint 솔루션 솔루션 패키지 (.wsp) 파일을 사용 하 여 SharePoint 서버에 배포 됩니다. SharePoint 프로젝트 항목 기능으로 구성 하 고 SharePoint 기능을 배포할 패키지를 만들려면 Visual Studio를 사용할 수 있습니다.  
@@ -39,12 +38,12 @@ ms.lasthandoff: 01/10/2018
   
 -   [SharePoint 솔루션에 파일을 배포](#DeployingFiles)  
   
-##  <a name="Creating"></a>기능 및 패키지 만들기  
+##  <a name="Creating"></a> 기능 및 패키지 만들기  
  Visual Studio를 사용 하 여 관련된 SharePoint 요소를 그룹화 하는 *기능*합니다. 예를 들어 연락처 목록 정의 대 한 기능 목록 인스턴스 및 목록 정의 포함할 수 있습니다. 이 두 요소를 하나의 기능 배포 목적으로 결합할 수 있습니다. 기능에 대 한 자세한 내용은 참조 [문서 블록: 기능](http://go.microsoft.com/fwlink/?LinkID=169183)합니다.  
   
  다음으로, SharePoint 솔루션 패키지 (.wsp)를 단일 패키지에 여러 기능, 사이트 정의 어셈블리 및 기타 파일을 번들로 묶는 SharePoint 서버에 파일을 배포 하는 데 필요한 형식으로 파일을 저장 하는 만들 수 있습니다. 자세한 내용은 참조 [문서 블록: 솔루션](http://go.microsoft.com/fwlink/?LinkID=169186)합니다.  
   
-##  <a name="Tools"></a>기능 및 패키징 도구 지원  
+##  <a name="Tools"></a> 기능 및 패키징 도구 지원  
  신속 하 게 기능 및 솔루션 패키지를 쉽게 배포할으로 SharePoint 파일을 구성 하는 Visual Studio에서 SharePoint 개발 도구를 사용할 수 있습니다. 기능 및 솔루션 패키지를 구성 하려면 다음 도구를 사용할 수 있습니다.  
   
 -   기능 디자이너 및 패키지 디자이너를 제공 합니다.  
@@ -88,12 +87,12 @@ ms.lasthandoff: 01/10/2018
 ### <a name="solution-explorer"></a>솔루션 탐색기  
  솔루션 탐색기를 사용 하 여 탐색 하 고 SharePoint 프로젝트의 파일을 열 수 있습니다. 솔루션 탐색기에서 상황에 맞는 메뉴를 사용 하 여 기능 이벤트 수신자 기능을 추가 하 고 기능 리소스. 또한 디자이너 기능 및 패키지 디자이너 기능 및 배포에 대 한 패키지를 구성 하는 열 수 있습니다.  
   
-##  <a name="Deploying"></a>SharePoint 솔루션 배포  
+##  <a name="Deploying"></a> SharePoint 솔루션 배포  
  기능 및 Visual Studio에서 패키지를 사용자 지정한 후에 SharePoint 서버를 배포 하려면.wsp 파일을 만들 수 있습니다. Visual Studio 디버깅 하 고 개발 컴퓨터에 SharePoint 서버에만.wsp 테스트에 사용할 수 있습니다. 원격 SharePoint 서버에 SharePoint 솔루션을 배포 하는 방법에 대 한 자세한 내용은 참조 [솔루션 배포](http://go.microsoft.com/fwlink/?LinkID=169194)합니다.  
   
  또한 개발 컴퓨터에서 배포 단계를 사용자 지정할 수 있습니다. 자세한 내용은 참조 [배포, 게시 및 SharePoint 솔루션 패키지 업그레이드](../sharepoint/deploying-publishing-and-upgrading-sharepoint-solution-packages.md)합니다.  
   
-##  <a name="DeployingFiles"></a>SharePoint 솔루션에 파일을 배포  
+##  <a name="DeployingFiles"></a> SharePoint 솔루션에 파일을 배포  
  일반적으로 SharePoint 솔루션을 SharePoint 프로젝트 항목을 추가할 때 필요한 모든 파일이 포함 됩니다. 수 있는 파일 (코드 파일) 컴파일된 솔루션의 출력 어셈블리에 기본 제공 됩니다. 그러나 SharePoint 프로젝트에 호환 파일을.xml,.txt 또는 리소스 파일 추가 할 수 있습니다. 이러한 파일은 자동으로 솔루션에 패키지 되지 않습니다. 패키지를 보장 하려면 SharePoint 프로젝트 항목 또는 매핑된 폴더에 파일 추가 합니다.  
   
  솔루션을 배포할 때 SharePoint 하이브에 매핑된 폴더에 추가 된 파일 자동으로 복사 됩니다. SharePoint 프로젝트 항목에 추가 된 파일에 지정 된 위치에 배포 되는 **배포 위치** 부분적으로 설정 되는 각 파일에 대 한 속성에 따라는 **배포 유형을** 속성입니다. 기본적으로는 **배포 유형을** 속성 값은 **NoDeployment**, 솔루션 파일 배포 되지 않은 의미 합니다. 패키지에 파일을 포함 하도록 속성에 대 한 다른 값을 설정 해야 합니다.  

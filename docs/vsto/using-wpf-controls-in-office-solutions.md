@@ -1,13 +1,10 @@
 ---
-title: "Office 솔루션에서 WPF 컨트롤을 사용 하 여 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션에서 WPF 컨트롤을 사용 하 여 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - WPF [Office development in Visual Studio]
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 74ee8c574f6f654aca166844d85a30f2d3d9d4c3
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: d4aa0fce1700f6608d36231a3ab38db97e5ce826
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-wpf-controls-in-office-solutions"></a>Office 솔루션에서 WPF 컨트롤 사용
   Visual Studio에서 Office 개발 도구를 사용하여 만든 솔루션은 Windows Forms 컨트롤에서 직접 작동하도록 설계되었지만 솔루션에서 WPF 컨트롤을 사용할 수도 있습니다. WPF(Windows Presentation Foundation)는 Windows Forms 대신 사용자 인터페이스를 디자인하는 데 사용됩니다. WPF는 XAML(Extensible Application Markup Language)이라는 태그 언어를 사용하여 UI, 미디어 및 문서를 통합하기 위한 새로운 기술을 제공합니다. 자세한 내용은 참조 [Visual Studio 2015의 WPF 소개](/dotnet/framework/wpf/getting-started/introduction-to-wpf-in-vs)합니다.  
@@ -86,7 +83,7 @@ ms.lasthandoff: 01/10/2018
   
      Visual Studio에서 자동으로 Windows Forms 사용자 정의 컨트롤에 WPF 사용자 정의 컨트롤을 호스트하는 <xref:System.Windows.Forms.Integration.ElementHost> 개체를 만듭니다.  
   
-8.  프로그래밍 방식으로 문서 또는 통합 문서에 Windows Forms 사용자 정의 컨트롤을 추가하는 코드를 작성합니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
+8.  프로그래밍 방식으로 문서 또는 통합 문서에 Windows Forms 사용자 정의 컨트롤을 추가하는 코드를 작성합니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.  
   
     > [!NOTE]  
     >  디자이너에서 Windows Forms 사용자 정의 컨트롤을 문서 또는 워크시트로 끌 수 없습니다.  

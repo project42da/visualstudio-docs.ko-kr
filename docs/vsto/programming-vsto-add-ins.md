@@ -1,13 +1,10 @@
 ---
-title: "VSTO 추가 기능 프로그래밍 | Microsoft Docs"
-ms.custom: 
+title: VSTO 추가 기능 프로그래밍 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.ProjectItem.Addin
 - VST.ProjectItem.AddinProject
@@ -35,14 +32,14 @@ helpviewer_keywords:
 - ThisAddIn_Shutdown
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 58b6d40e2da962587b44e4b73c8331b3fba5590f
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: 192b366b4d41fed0baf0cca4af8e57fa00dc249a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="programming-vsto-add-ins"></a>VSTO 추가 기능 프로그래밍
   VSTO 추가 기능을 만들어 Microsoft Office 응용 프로그램을 확장하는 경우 프로젝트의 `ThisAddIn` 클래스에 대해 직접 코드를 작성합니다. 이 클래스를 사용하여 Microsoft Office 호스트 응용 프로그램의 개체 모델 액세스, 응용 프로그램의 UI(사용자 인터페이스) 사용자 지정, 다른 Office 솔루션에 VSTO 추가 기능의 개체 표시 등의 작업을 수행할 수 있습니다.  
@@ -51,7 +48,7 @@ ms.lasthandoff: 01/10/2018
   
  VSTO 추가 기능 프로젝트에서 코드 작성의 일부 측면은 Visual Studio의 다른 프로젝트 유형과 다릅니다. 이러한 차이점 대부분은 Office 개체 모델이 관리 코드에 표시되는 방식에 기인합니다. 자세한 내용은 [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)을 참조하세요.  
   
- Visual Studio에서 Office 개발 도구를 사용 하 여 만들 수 있는 VSTO 추가 기능 및 다른 유형의 솔루션에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40; VSTO &#41; ](../vsto/office-solutions-development-overview-vsto.md).  
+ Visual Studio에서 Office 개발 도구를 사용 하 여 만들 수 있는 VSTO 추가 기능 및 다른 유형의 솔루션에 대 한 일반 정보를 참조 하십시오. [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)합니다.  
   
 ## <a name="using-the-thisaddin-class"></a>ThisAddIn 클래스 사용  
  `ThisAddIn` 클래스에서 VSTO 추가 기능 코드 작성을 시작할 수 있습니다. Visual Studio는 VSTO 추가 기능 프로젝트의 ThisAddIn.vb( [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)]) 또는 ThisAddIn.cs(C#) 코드 파일에 이 클래스를 자동으로 생성합니다. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 은 Microsoft Office 응용 프로그램에서 VSTO 추가 기능을 로드할 때 이 클래스를 자동으로 인스턴스화합니다.  

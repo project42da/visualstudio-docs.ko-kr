@@ -1,12 +1,10 @@
 ---
-title: "연습: 작업 창에서 문서로 텍스트 삽입 | Microsoft Docs"
-ms.custom: 
+title: '연습: 작업 창에서 문서로 텍스트 삽입 | Microsoft Docs'
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- office-development
+ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
@@ -17,13 +15,14 @@ helpviewer_keywords:
 - actions panes [Office development in Visual Studio], adding controls
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: office
-ms.openlocfilehash: 26d79087a4dbf7fc176ab3deb2c98cd5fdb5ba8a
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+manager: douge
+ms.workload:
+- office
+ms.openlocfilehash: 9e562f66dd43b4adc45727c8de1457a24ddf97b3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-inserting-text-into-a-document-from-an-actions-pane"></a>연습: 작업 창에서 문서로 텍스트 삽입
   이 연습에서는 Microsoft Office Word 문서에서 작업 창을 만드는 방법을 보여 줍니다. 작업 창에는 입력을 수집 하 고 다음 텍스트 문서를 보냅니다는 두 개의 컨트롤이 포함 됩니다.  
@@ -39,7 +38,7 @@ ms.lasthandoff: 01/10/2018
 > [!NOTE]  
 >  일부 Visual Studio 사용자 인터페이스 요소의 경우 다음 지침에 설명된 것과 다른 이름 또는 위치가 시스템에 표시될 수 있습니다. 이러한 요소는 사용하는 Visual Studio 버전 및 설정에 따라 결정됩니다. 자세한 내용은 [Visual Studio IDE 개인 설정](../ide/personalizing-the-visual-studio-ide.md)을 참조하세요.  
   
-## <a name="prerequisites"></a>필수 구성 요소  
+## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료하려면 다음 구성 요소가 필요합니다.  
   
 -   [!INCLUDE[vsto_vsprereq](../vsto/includes/vsto-vsprereq-md.md)]  
@@ -114,7 +113,7 @@ ms.lasthandoff: 01/10/2018
   
     |속성|값|  
     |--------------|-----------|  
-    |**이름**|**getName**|  
+    |**이름**|**GetName**|  
     |**Size**|**130, 20**|  
   
 5.  두 번째 추가 **레이블** 작업 창 컨트롤을 제어 하 고 변경 된 **텍스트** 속성을 **주소**합니다.  
@@ -123,7 +122,7 @@ ms.lasthandoff: 01/10/2018
   
     |속성|값|  
     |--------------|-----------|  
-    |**이름**|**getAddress**|  
+    |**이름**|**GetAddress**|  
     |**반환 허용**|**True**|  
     |**Multiline**|**True**|  
     |**Size**|**130, 40**|  

@@ -1,13 +1,10 @@
 ---
-title: "Office 솔루션에서 코드 작성 | Microsoft Docs"
-ms.custom: 
+title: Office 솔루션에서 코드 작성 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - office-development
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VST.Project.RefactoringCancelled
 dev_langs:
@@ -36,14 +33,14 @@ helpviewer_keywords:
 - managed code extensions [Office development in Visual Studio], writing code
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e9670bb35023b2a2cf4147d3d30008243203c9c8
-ms.sourcegitcommit: f9fbf1f55f9ac14e4e5c6ae58c30dc1800ca6cda
+ms.openlocfilehash: c6119db86fdd67079b63434a6bb494cb04cd31d6
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="writing-code-in-office-solutions"></a>Office 솔루션에서 코드 작성
   Visual Studio의 Office 프로젝트에는 기타 유형의 프로젝트와 다른 코드 작성의 몇 가지 측면이 있습니다. 이러한 차이점 중 상당수는 Office 개체 모델이 관리 코드에 노출되는 방식과 관련되어 있으며, 다른 차이점은 Office 프로젝트의 디자인과 관련되어 있습니다.  
@@ -56,7 +53,7 @@ ms.lasthandoff: 01/10/2018
 ### <a name="understanding-primary-interop-assemblies"></a>주 Interop 어셈블리 이해  
  Microsoft Office 응용 프로그램은 기능의 상당 부분을 자동화에 노출합니다. 그러나 Visual Basic 또는 C#과 같은 관리 코드를 직접 사용하여 Office 응용 프로그램을 자동화할 수 없습니다. 관리 코드를 사용하여 Office 응용 프로그램을 자동화하려면 Office PIA(주 interop 어셈블리)를 사용해야 합니다. 주 interop 어셈블리를 사용하면 관리 코드가 Office 응용 프로그램의 COM 기반 개체 모델과 상호 작용할 수 있습니다.  
   
- 모든 Microsoft Office 응용 프로그램에는 PIA가 있습니다. Visual Studio에서 Office 프로젝트를 만들 때 적절한 PIA에 대한 참조가 프로젝트에 자동으로 추가됩니다. 프로젝트에서 다른 Office 응용 프로그램의 기능을 자동화하려면 적절한 PIA에 대한 참조를 수동으로 추가해야 합니다. 자세한 내용은 [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)을 참조하세요.  
+ 모든 Microsoft Office 응용 프로그램에는 PIA가 있습니다. Visual Studio에서 Office 프로젝트를 만들 때 적절한 PIA에 대한 참조가 프로젝트에 자동으로 추가됩니다. 프로젝트에서 다른 Office 응용 프로그램의 기능을 자동화하려면 적절한 PIA에 대한 참조를 수동으로 추가해야 합니다. 자세한 내용은 [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)을 참조하세요.  
   
 ### <a name="using-primary-interop-assemblies-at-design-time-and-run-time"></a>디자인 타임과 런타임에 주 Interop 어셈블리 사용  
  대부분의 개발 작업을 수행하려면 개발 컴퓨터의 전역 어셈블리 캐시에서 Office PIA를 설치하고 등록해야 합니다. 자세한 내용은 [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)을 참조하세요.  
@@ -88,7 +85,7 @@ ms.lasthandoff: 01/10/2018
  자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
   
 ### <a name="namespace-considerations-in-office-solutions"></a>Office 솔루션의 네임스페이스 고려 사항  
- Office 프로젝트를 만든 후 프로젝트의 *기본 네임스페이스* (또는 Visual Basic에서는 *루트 네임스페이스* )를 변경할 수 없습니다. 기본 네임스페이스는 프로젝트를 만들 때 지정한 프로젝트 이름과 항상 일치합니다. 프로젝트의 이름을 변경하는 경우 기본 네임스페이스는 변경되지 않습니다. 프로젝트에서 기본 네임 스페이스에 대 한 자세한 내용은 참조 하십시오. [응용 프로그램 페이지, 프로젝트 디자이너 &#40; C# 35; &#41; ](/visualstudio/ide/reference/application-page-project-designer-csharp) 및 [응용 프로그램 페이지, 프로젝트 디자이너 &#40; Visual Basic &#41; ](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
+ Office 프로젝트를 만든 후 프로젝트의 *기본 네임스페이스* (또는 Visual Basic에서는 *루트 네임스페이스* )를 변경할 수 없습니다. 기본 네임스페이스는 프로젝트를 만들 때 지정한 프로젝트 이름과 항상 일치합니다. 프로젝트의 이름을 변경하는 경우 기본 네임스페이스는 변경되지 않습니다. 프로젝트에서 기본 네임 스페이스에 대 한 자세한 내용은 참조 [응용 프로그램 페이지, 프로젝트 디자이너 &#40;C&#35; &#41; ](/visualstudio/ide/reference/application-page-project-designer-csharp) 및 [응용 프로그램 페이지, 프로젝트 디자이너 &#40;Visual Basic&#41; ](/visualstudio/ide/reference/application-page-project-designer-visual-basic).  
   
 ### <a name="changing-the-namespace-of-host-item-classes-in-c-projects"></a>C# 프로젝트에서 호스트 항목 클래스의 네임스페이스 변경  
  Visual C# Office 프로젝트에서 호스트 항목 클래스(예: `ThisAddIn`, `ThisWorkbook`또는 `ThisDocument` 클래스)에는 고유한 네임스페이스가 있습니다. 기본적으로 프로젝트에서 호스트 항목의 네임스페이스는 프로젝트를 만들 때 지정한 프로젝트 이름과 일치합니다.  
@@ -110,7 +107,7 @@ ms.lasthandoff: 01/10/2018
 |기능|설명|Visual Basic 지원|Visual C# 지원|  
 |-------------|-----------------|--------------------------|------------------------|  
 |선택적 매개 변수|많은 Microsoft Office 메서드에는 메서드를 호출할 때 필요하지 않은 매개 변수가 있습니다. 매개 변수의 값이 전달되지 않는 경우 기본값이 사용됩니다.|Visual Basic에서는 선택적 매개 변수를 지원합니다.|Visual C#에서는 대부분의 경우 선택적 매개 변수를 지원합니다. 자세한 내용은 참조 [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)합니다.|  
-|참조로 매개 변수 전달|대부분의 Microsoft Office 주 interop 어셈블리에서 선택적 매개 변수는 값으로 전달할 수 있습니다. 그러나 일부 주 interop 어셈블리에서 참조 형식을 사용하는 선택적 매개 변수는 참조로 전달해야 합니다.<br /><br /> 값 및 참조 형식 매개 변수에 대 한 자세한 내용은 참조 하세요. [및 참조 &#40; 값으로 인수 전달 Visual Basic &#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic)에 대 한 및 [매개 변수 사용 &#40; 전달 합니다. &#35; 프로그래밍 가이드 &#41; ](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters).|참조로 매개 변수를 전달하는 데는 추가 작업이 필요하지 않습니다. Visual Basic 컴파일러는 필요한 경우 자동으로 매개 변수를 참조로 전달합니다.|대부분의 경우 Visual C# 컴파일러는 필요한 경우 자동으로 매개 변수를 참조로 전달합니다. 자세한 내용은 참조 [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)합니다.|  
+|참조로 매개 변수 전달|대부분의 Microsoft Office 주 interop 어셈블리에서 선택적 매개 변수는 값으로 전달할 수 있습니다. 그러나 일부 주 interop 어셈블리에서 참조 형식을 사용하는 선택적 매개 변수는 참조로 전달해야 합니다.<br /><br /> 값 및 참조 형식 매개 변수에 대 한 자세한 내용은 참조 하십시오. [참조 및 값으로 인수 전달 &#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic의 경우)에 대 한 및 [매개 변수 전달 &#40;C&#35; 프로그래밍 가이드&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)합니다.|참조로 매개 변수를 전달하는 데는 추가 작업이 필요하지 않습니다. Visual Basic 컴파일러는 필요한 경우 자동으로 매개 변수를 참조로 전달합니다.|대부분의 경우 Visual C# 컴파일러는 필요한 경우 자동으로 매개 변수를 참조로 전달합니다. 자세한 내용은 참조 [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)합니다.|  
 |매개 변수가 있는 속성|일부 속성은 매개 변수를 받아들이고 읽기 전용 함수로 작동합니다.|Visual Basic에서는 매개 변수를 받아들이는 속성을 지원합니다.|Visual C#에서는 매개 변수를 받아들이는 속성을 지원합니다.|  
 |런타임에 바인딩|런타임에 바인딩에서는 디자인 타임에 변수를 개체 형식으로 캐스팅하는 대신 런타임에 개체의 속성을 결정합니다.|Visual Basic에서는 **Option Strict** 가 off일 때 런타임에 바인딩을 수행합니다. 때 **Option Strict** 개체와의 형식을 사용 하 여 명시적으로 변환 해야이 설정의 <xref:System.Reflection> 런타임에 바인딩된 멤버에 액세스 하는 네임 스페이스입니다. 자세한 내용은 [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)을 참조하세요.|Visual C#에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)]을 대상으로 하는 프로젝트에서 런타임에 바인딩을 수행합니다. 자세한 내용은 [Late Binding in Office Solutions](../vsto/late-binding-in-office-solutions.md)을 참조하세요.|  
   
@@ -119,13 +116,13 @@ ms.lasthandoff: 01/10/2018
   
 |기능|설명|Visual Basic 및 Visual C# 지원|  
 |-------------|-----------------|-----------------------------------------|  
-|배열 인덱스|Microsoft Office 응용 프로그램에서 컬렉션의 배열 하한은 1부터 시작합니다. Visual Basic 및 Visual C#에서는 0부터 시작하는 배열을 사용합니다. 자세한 내용은 참조 [배열 &#40; &#35; 프로그래밍 가이드 &#41; ](/dotnet/csharp/programming-guide/arrays/index) 및 [Visual Basic의 배열](/dotnet/visual-basic/programming-guide/language-features/arrays/index)합니다.|Microsoft Office 응용 프로그램의 개체 모델에서 컬렉션의 첫 번째 항목에 액세스하려면 인덱스 0 대신 1을 사용합니다.|  
+|배열 인덱스|Microsoft Office 응용 프로그램에서 컬렉션의 배열 하한은 1부터 시작합니다. Visual Basic 및 Visual C#에서는 0부터 시작하는 배열을 사용합니다. 자세한 내용은 참조 [배열 &#40;C&#35; 프로그래밍 가이드&#41; ](/dotnet/csharp/programming-guide/arrays/index) 및 [Visual Basic의 배열](/dotnet/visual-basic/programming-guide/language-features/arrays/index)합니다.|Microsoft Office 응용 프로그램의 개체 모델에서 컬렉션의 첫 번째 항목에 액세스하려면 인덱스 0 대신 1을 사용합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)   
  [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)   
  [Office 프로젝트의 이벤트](../vsto/events-in-office-projects.md)   
- [How to: Target Office Applications Through Primary Interop Assemblies](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+ [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [방법: Office 프로젝트의 이벤트 처리기 만들기](../vsto/how-to-create-event-handlers-in-office-projects.md)   
  [Office 솔루션에서 런타임에 바인딩](../vsto/late-binding-in-office-solutions.md)   
  [Office 솔루션 공동 개발](../vsto/collaborative-development-of-office-solutions.md)  
