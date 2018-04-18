@@ -25,7 +25,7 @@ ms.workload:
 - aspnet
 ms.openlocfilehash: 036b5b5df360631ad10deaff7f63b51cf55cbd3a
 ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---

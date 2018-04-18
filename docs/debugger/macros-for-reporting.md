@@ -27,7 +27,7 @@ ms.workload:
 - multiple
 ms.openlocfilehash: d6c35a2487e2917f62e35d6e819f899ee2151ffd
 ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: MT
+ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 04/16/2018
 ---
