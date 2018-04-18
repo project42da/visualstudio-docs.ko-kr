@@ -184,7 +184,7 @@ ms.lasthandoff: 04/16/2018
 
 -   [코드 맵 찾아보기 및 다시 정렬](../modeling/browse-and-rearrange-code-maps.md)  
 
--   [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)  
+-   [DGML 파일을 편집하여 코드 맵 사용자 지정](../modeling/customize-code-maps-by-editing-the-dgml-files.md)  
 
 -   [분석기를 실행](../modeling/find-potential-problems-using-code-map-analyzers.md)하여 코드에서 발생할 수 있는 문제를 찾습니다.  
 
@@ -328,7 +328,7 @@ ms.lasthandoff: 04/16/2018
 
 -   코드 맵 도구 모음에서 **부모 포함** 단추를 사용하여 부모 항목의 자동 추가를 해제합니다.  
 
--   코드 맵 파일을 직접 편집하여 필요하지 않은 노드 및 링크를 제거합니다. 맵을 변경해도 기본 코드에 영향을 미치지 않습니다. [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)을 참조하세요.  
+-   코드 맵 파일을 직접 편집하여 필요하지 않은 노드 및 링크를 제거합니다. 맵을 변경해도 기본 코드에 영향을 미치지 않습니다. [DGML 파일을 편집하여 코드 맵 사용자 지정](../modeling/customize-code-maps-by-editing-the-dgml-files.md)을 참조하세요.  
 
  ![빌드 건너뛰기 및 상위 포함 단추](../modeling/media/codemapsfilterskipbuildicons.png "CodeMapsFilterSkipBuildIcons")  
 
@@ -384,4 +384,4 @@ ms.lasthandoff: 04/16/2018
 
 -   [코드 맵 찾아보기 및 다시 정렬](../modeling/browse-and-rearrange-code-maps.md)  
 
--   [Customize code maps by editing the DGML files](../modeling/customize-code-maps-by-editing-the-dgml-files.md)
+-   [DGML 파일을 편집하여 코드 맵 사용자 지정](../modeling/customize-code-maps-by-editing-the-dgml-files.md)

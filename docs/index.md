@@ -4,11 +4,11 @@ hide_bc: true
 title: Visual Studio 설명서 | Microsoft Docs
 description: Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다.
 ms.topic: hub-page
-ms.openlocfilehash: dfd72526fc24ae3b0a33014b8b8ac23e350fb6cf
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 4dcf3ff02db54d1a0d6b2e45d3418caf1d908783
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -265,6 +265,25 @@ ms.lasthandoff: 03/08/2018
                                                 <div class="cardText">
                                                     <h3>데이터</h3>
                                                     <p>로컬이든 클라우드든 어디서나 모든 데이터베이스 또는 서비스와 연결하는 데이터 앱을 만듭니다. </p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="https://go.microsoft.com/fwlink/?linkid=872032">
+                                    <div class="cardSize">
+                                        <div class="cardPadding">
+                                            <div class="card">
+                                                <div class="cardImageOuter">
+                                                    <div class="cardImage bgdAccent1">
+                                                        <img data-scaleimage="./images/live-share.svg" src="./images/live-share.svg" alt="" />
+                                                    </div>
+                                                </div>
+                                                <div class="cardText">
+                                                    <h3>공동 작업</h3>
+                                                    <p>실시간 공동 작업 환경에서 코드를 공유, 편집, 디버그합니다. </p>
                                                 </div>
                                             </div>
                                         </div>
