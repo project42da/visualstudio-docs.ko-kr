@@ -2,8 +2,7 @@
 title: 기호 위치 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a8eef21d7b5b22bab161383ef99902ca0b0bd598
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 021911c01a7cd98e157f6c216ae28feffcaf7096
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="symbol-locations"></a>기호 위치
 대부분 기호는 이미지 파일 내에서 정의 된 위치는 있습니다. 값으로 지정 된 기호 위치는 [LocationType 열거형](../../debugger/debug-interface-access/locationtype.md) 열거 합니다. 기호 위치에 따라 추가 속성을 지원할 수 있습니다.  

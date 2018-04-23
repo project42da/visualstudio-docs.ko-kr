@@ -2,8 +2,7 @@
 title: 명령줄에서 ClickOnce 응용 프로그램을 구축 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - publishing
 - publishing, ClickOnce
 ms.assetid: d9bc6212-c584-4f72-88c9-9a4b998c555e
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 183cb81798841c6640ea1b17d8db3820e0229769
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4488f32b135d766f494bc94946fbf77d42eb1e95
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="building-clickonce-applications-from-the-command-line"></a>명령줄에서 ClickOnce 응용 프로그램 빌드
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], 통합된 개발 환경 (IDE)에서 만들어진 경우에 명령줄에서 프로젝트를 빌드할 수 있습니다. 사용 하 여 만든 프로젝트를 다시 작성할 수는 실제로 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 만 있는 다른 컴퓨터에는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 설치 합니다. 이 자동화 된 프로세스를 사용 하 여 빌드를 재현할 수 있습니다, 그리고 예를 들어 중앙의 빌드 랩 또는 사용 하 여 고급 스크립팅 기술을 자체 프로젝트의 범위를 벗어납니다.  
@@ -162,9 +161,9 @@ msbuild /target:publish /property:BootstrapperEnabled=false
 |URL 옵션|설명|  
 |----------------|-----------------|  
 |`PublishURL`|ClickOnce 응용 프로그램 웹 사이트에 게시 하는 경우 필요 합니다.|  
-|`InstallURL`|선택적 요소. 설치 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `InstallURL` 웹 URL로 합니다.|  
-|`SupportURL`|선택적 요소. 지원 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `SupportURL` 회사의 고객 지원 웹 사이트입니다.|  
-|`UpdateURL`|선택적 요소. 업데이트 위치과 다른 경우이 URL 옵션을 설정 합니다.는 `InstallURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `UpdateURL` 웹 URL로 합니다.|  
+|`InstallURL`|선택 사항입니다. 설치 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `InstallURL` 웹 URL로 합니다.|  
+|`SupportURL`|선택 사항입니다. 지원 사이트과 다른 경우이 URL 옵션을 설정 합니다.는 `PublishURL`합니다. 예를 들어 설정할 수 있습니다는 `SupportURL` 회사의 고객 지원 웹 사이트입니다.|  
+|`UpdateURL`|선택 사항입니다. 업데이트 위치과 다른 경우이 URL 옵션을 설정 합니다.는 `InstallURL`합니다. 예를 들어 설정할 수 있습니다는 `PublishURL` 을 설정 하 고는 FTP 경로 `UpdateURL` 웹 URL로 합니다.|  
   
 ## <a name="see-also"></a>참고 항목  
  <xref:Microsoft.Build.Tasks.GenerateBootstrapper>   

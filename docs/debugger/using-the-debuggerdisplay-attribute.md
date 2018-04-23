@@ -2,8 +2,7 @@
 title: DebuggerDisplay 특성을 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 08/09/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - attributes [C#], debugger
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 70cf3801477ccf70a44cf87e672c8be7142f9b07
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 06a41f0843b33e1f73d9a2449fe954d8673350fc
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-the-debuggerdisplay-attribute"></a>DebuggerDisplay 특성 사용
 [DebuggerDisplayAttribute 클래스](/dotnet/api/system.diagnostics.debuggerdisplayattribute) 개체, 속성 또는 필드가 디버거 변수 창에 표시 되는 방식을 제어 합니다. 이 특성은 형식, 대리자, 속성, 필드 및 어셈블리에 적용할 수 있습니다.  
@@ -37,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 |특성|값 열에 표시 되는 출력|  
 |---------------|------------------------------------------------|  
-|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> `x` 및 `y` 필드가 있는 형식에서 사용됩니다.|`x = 5 y = 18`|  
+|`[DebuggerDisplay("x = {x} y = {y}")]`<br /><br /> `x` 및 `y`필드가 있는 형식에서 사용됩니다.|`x = 5 y = 18`|  
 |`[DebuggerDisplay("String value is {getString()}")]`매개 변수 구문은 언어에 따라 다를 수 있으므로 주의하여 사용하십시오.|`String value is [5, 6, 6]`|  
   
  `DebuggerDisplay` 는 명명된 매개 변수도 받아들일 수 있습니다.  
@@ -94,7 +93,7 @@ public sealed class MyClass
   
 |**이름**|**값**|**Type**|  
 |--------------|---------------|--------------|  
-|키|"three"|object {string}|  
+|Key|"three"|object {string}|  
 |값|3|object {int}|  
   
 ```csharp  

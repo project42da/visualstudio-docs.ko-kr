@@ -2,8 +2,7 @@
 title: 창 경로 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Window Search
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7b0839047b0e6113a72d4c96ebfe1add984fdc0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ce03cbf4b361bf341f98f46b4a67871ee9994177
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="window-search-dialog-box"></a>창 경로 대화 상자
 특정 창에 대 한 노드를 선택 합니다.를이 대화 상자를 사용 하 여 [창 뷰](../debugger/windows-view.md)합니다. 이 대화 상자를 표시 하려면 창 뷰 창에 포커스를 이동 합니다. 그런 다음 선택 **창 찾기** 에서 **검색** 메뉴.  

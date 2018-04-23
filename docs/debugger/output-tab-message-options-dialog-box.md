@@ -2,8 +2,7 @@
 title: 메시지 옵션 대화 상자, 출력 탭 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - message options, Output
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0b4fe186396f9434c36865c0b864dcebf23cd10c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e559edf5028d339b6086a413fb2dcb040aafb355
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="output-tab-message-options-dialog-box"></a>메시지 옵션 대화 상자, 출력 탭
 사용 하 여는 **출력** 탭의 목록에 각 메시지에서 데이터를 지정할 수 [메시지 뷰](../debugger/messages-view.md)합니다. 표시 하는 [메시지 옵션 대화 상자](../debugger/message-options-dialog-box.md), 선택 **로그 메시지** 에서 **Spy** 메뉴.  

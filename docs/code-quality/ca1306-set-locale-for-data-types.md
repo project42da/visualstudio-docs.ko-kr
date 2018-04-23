@@ -1,10 +1,8 @@
 ---
-title: 'CA1306: 데이터 형식에 대 한 로캘을 설정 | Microsoft Docs'
-ms.custom: ''
+title: 'CA1306: 데이터 형식에 맞는 로캘을 설정하십시오.'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1306
 - SetLocaleForDataTypes
@@ -17,40 +15,36 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 344b93f6c48ba1848c272522b4580b03ec4f0b5d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d7c95c72978e3828d566598e6076bde904169f4b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1306-set-locale-for-data-types"></a>CA1306: 데이터 형식에 맞는 로캘을 설정하십시오.
-|||  
-|-|-|  
-|TypeName|SetLocaleForDataTypes|  
-|CheckId|CA1306|  
-|범주|Microsoft.Globalization|  
-|변경 수준|주요 변경 아님|  
-  
-## <a name="cause"></a>원인  
- 메서드 또는 생성자 만든 하나 이상의 <xref:System.Data.DataTable?displayProperty=fullName> 또는 <xref:System.Data.DataSet?displayProperty=fullName> 인스턴스 및 locale 속성을 명시적으로 설정 되지 않은 (<xref:System.Data.DataTable.Locale%2A?displayProperty=fullName> 또는 <xref:System.Data.DataSet.Locale%2A?displayProperty=fullName>).  
-  
-## <a name="rule-description"></a>규칙 설명  
- 로캘은 숫자 값, 통화 기호 및 정렬 순서에 사용 된 포멧을 등의 데이터에 대 한 문화권별 표현 요소를 결정 합니다. 만들 때 한 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>, 로캘을 명시적으로 설정 해야 합니다. 기본적으로 이러한 형식에 대 한 로캘을 현재 문화권. 데이터베이스 또는 파일에 저장 되 고 전역 공유 하는 데이터에 대 한 로캘을 일반적으로로 설정 해야 고정 문화권 (<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>). 문화권에 걸쳐 데이터를 공유 하면에서 기본 로캘을 사용 하면이의 내용을 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet> 표시 되거나 올바르게 해석 합니다.  
-  
-## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결 하려면에 대 한 로캘을 명시적으로 설정 된 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>합니다.  
-  
-## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
- 라이브러리 또는 응용 프로그램은 제한 된 로컬 사용자를 대상, 데이터 공유 되지 않습니다 또는 기본 설정은 지원 되는 모든 시나리오에서 원하는 동작을 수행할 때이 규칙에서 경고를 표시 하지 않으려면 안전 합니다.  
-  
-## <a name="example"></a>예제  
- 다음 예제에서는 두 개의 <xref:System.Data.DataTable> 인스턴스.  
-  
- [!code-csharp[FxCop.Globalization.DataTable#1](../code-quality/codesnippet/CSharp/ca1306-set-locale-for-data-types_1.cs)]  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Data.DataTable?displayProperty=fullName>   
- <xref:System.Data.DataSet?displayProperty=fullName>   
- <xref:System.Globalization.CultureInfo?displayProperty=fullName>   
- <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName>   
- <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>
+|||
+|-|-|
+|TypeName|SetLocaleForDataTypes|
+|CheckId|CA1306|
+|범주|Microsoft.Globalization|
+|변경 수준|주요 변경 아님|
+
+## <a name="cause"></a>원인
+ 메서드 또는 생성자 만든 하나 이상의 <xref:System.Data.DataTable?displayProperty=fullName> 또는 <xref:System.Data.DataSet?displayProperty=fullName> 인스턴스 및 locale 속성을 명시적으로 설정 되지 않은 (<xref:System.Data.DataTable.Locale%2A?displayProperty=fullName> 또는 <xref:System.Data.DataSet.Locale%2A?displayProperty=fullName>).
+
+## <a name="rule-description"></a>규칙 설명
+ 로캘은 숫자 값, 통화 기호 및 정렬 순서에 사용 된 포멧을 등의 데이터에 대 한 문화권별 표현 요소를 결정 합니다. 만들 때 한 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>, 로캘을 명시적으로 설정 해야 합니다. 기본적으로 이러한 형식에 대 한 로캘을 현재 문화권. 데이터베이스 또는 파일에 저장 되 고 전역 공유 하는 데이터에 대 한 로캘을 일반적으로로 설정 해야 고정 문화권 (<xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>). 문화권에 걸쳐 데이터를 공유 하면에서 기본 로캘을 사용 하면이의 내용을 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet> 표시 되거나 올바르게 해석 합니다.
+
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
+ 이 규칙 위반 문제를 해결 하려면에 대 한 로캘을 명시적으로 설정 된 <xref:System.Data.DataTable> 또는 <xref:System.Data.DataSet>합니다.
+
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우
+ 라이브러리 또는 응용 프로그램은 제한 된 로컬 사용자를 대상, 데이터 공유 되지 않습니다 또는 기본 설정은 지원 되는 모든 시나리오에서 원하는 동작을 수행할 때이 규칙에서 경고를 표시 하지 않으려면 안전 합니다.
+
+## <a name="example"></a>예제
+ 다음 예제에서는 두 개의 <xref:System.Data.DataTable> 인스턴스.
+
+ [!code-csharp[FxCop.Globalization.DataTable#1](../code-quality/codesnippet/CSharp/ca1306-set-locale-for-data-types_1.cs)]
+
+## <a name="see-also"></a>참고 항목
+ <xref:System.Data.DataTable?displayProperty=fullName> <xref:System.Data.DataSet?displayProperty=fullName> <xref:System.Globalization.CultureInfo?displayProperty=fullName> <xref:System.Globalization.CultureInfo.CurrentUICulture%2A?displayProperty=fullName> <xref:System.Globalization.CultureInfo.InvariantCulture%2A?displayProperty=fullName>

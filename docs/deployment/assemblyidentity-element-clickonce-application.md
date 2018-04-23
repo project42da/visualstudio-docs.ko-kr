@@ -2,9 +2,8 @@
 title: '&lt;assemblyIdentity&gt; 요소 (ClickOnce 응용 프로그램) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
-ms.topic: conceptual
+ms.technology: vs-ide-deployment
+ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#assemblyIdentity
 dev_langs:
@@ -14,16 +13,16 @@ dev_langs:
 helpviewer_keywords:
 - <assemblyIdentity> element [ClickOnce application manifest]
 ms.assetid: f48e9531-efac-4d11-8166-f63a5ece1ac5
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86a9aedcd3f21d4dbc1cc4f09106421542b188f8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e1bea363e9d0a3880fbbaa34bb4af4fec88149c2
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltassemblyidentitygt-element-clickonce-application"></a>&lt;assemblyIdentity&gt; 요소 (ClickOnce 응용 프로그램)
 에 배포 된 응용 프로그램을 식별 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 합니다.  
@@ -46,11 +45,11 @@ ms.lasthandoff: 04/16/2018
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수 요소. 응용 프로그램의 이름을 식별합니다.<br /><br /> 경우 `Name` 특수 문자가 포함 된 작은따옴표 또는 큰따옴표와 같은 응용 프로그램 활성화에 실패할 수 있습니다.|  
-|`Version`|필수 요소. 다음 형식으로 응용 프로그램의 버전 번호를 지정합니다. `major.minor.build.revision`|  
-|`publicKeyToken`|선택적 요소. 마지막 8 바이트를 나타내는 16 자 16 진수 문자열을 지정 된 `SHA-1` 응용 프로그램이 나 어셈블리 서명에 사용 된 공개 키의 해시 값입니다. 카탈로그에 서명 하는 데 사용 되는 공개 키에 2048 비트 이어야 합니다. 큰 합니다.<br /><br /> 어셈블리 서명 하는 것이 좋지만 선택 사항,이 특성은 필요 합니다. 어셈블리 서명 되지 않은 경우에 자체 서명 된 어셈블리에서 값을 복사 하거나 "dummy" 모두 0 값을 사용 해야 합니다.|  
-|`processorArchitecture`|필수 요소. 프로세서를 지정합니다. 유효한 값은 `msil` 모든 프로세서에 대해 `x86` 32 비트 Windows에 대 한 `IA64` 64 비트 Windows에 대 한 및 `Itanium` Intel 64 비트 Itanium 프로세서에 대 한 합니다.|  
-|`language`|필수 요소. 두 부분 언어 코드를 식별 합니다. (예를 들어 `en-US`)의 어셈블리. 이 요소는는 `asmv2` 네임 스페이스입니다. 기본값은 지정 하지 않으면 `neutral`합니다.|  
+|`Name`|필수. 응용 프로그램의 이름을 식별합니다.<br /><br /> 경우 `Name` 특수 문자가 포함 된 작은따옴표 또는 큰따옴표와 같은 응용 프로그램 활성화에 실패할 수 있습니다.|  
+|`Version`|필수. 다음 형식으로 응용 프로그램의 버전 번호를 지정합니다. `major.minor.build.revision`|  
+|`publicKeyToken`|선택 사항입니다. 마지막 8 바이트를 나타내는 16 자 16 진수 문자열을 지정 된 `SHA-1` 응용 프로그램이 나 어셈블리 서명에 사용 된 공개 키의 해시 값입니다. 카탈로그에 서명 하는 데 사용 되는 공개 키에 2048 비트 이어야 합니다. 큰 합니다.<br /><br /> 어셈블리 서명 하는 것이 좋지만 선택 사항,이 특성은 필요 합니다. 어셈블리 서명 되지 않은 경우에 자체 서명 된 어셈블리에서 값을 복사 하거나 "dummy" 모두 0 값을 사용 해야 합니다.|  
+|`processorArchitecture`|필수. 프로세서를 지정합니다. 유효한 값은 `msil` 모든 프로세서에 대해 `x86` 32 비트 Windows에 대 한 `IA64` 64 비트 Windows에 대 한 및 `Itanium` Intel 64 비트 Itanium 프로세서에 대 한 합니다.|  
+|`language`|필수. 두 부분 언어 코드를 식별 합니다. (예를 들어 `en-US`)의 어셈블리. 이 요소는는 `asmv2` 네임 스페이스입니다. 기본값은 지정 하지 않으면 `neutral`합니다.|  
   
 ## <a name="examples"></a>예제  
   

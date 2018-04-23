@@ -2,8 +2,7 @@
 title: '방법: 보기를 새로 고쳐 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - refreshing views
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 795df7290d4c06b213850c74fffad540d3c13953
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: a3da7466f7f1ac569378d5ce5053c72c55d4ae68
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-refresh-the-view"></a>방법: 뷰 새로 고침
 Spy + + 시스템 테이블의 "스냅숏" 하 고이 정보에 따라 보기를 새로 고칩니다. 주기적으로 시스템 뷰를 새로 고치는 것입니다. Spy + + 보기를 열고 뷰가 새로 고쳐지지를 설정한 경우 프로세스, 스레드 및 나중에 만들어진 windows 되지 표시 됩니다. 또한 더 이상 존재 하는 항목을 볼 수 없습니다. **새로 고침** 메시지 뷰를 제외한 모든 보기에 사용할 수 있는 명령입니다.  

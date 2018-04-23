@@ -2,8 +2,7 @@
 title: 메시지 검색 대화 상자가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - message options, Search
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65639b25cccc88d8159d1e91eddb0b99c06c19bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9c125e2659e586d728a18293b9811a4e69743558
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="message-search-dialog-box"></a>메시지 검색 대화 상자
 이 대화 상자를 사용 하 여 특정 메시지에 대 한 노드를 선택 합니다.를 [메시지 뷰](../debugger/messages-view.md)합니다. 이 대화 상자를 표시 하려면 메시지 보기 창에 포커스를 이동 합니다. 그런 다음 선택 **메시지 찾기** 에서 **검색** 메뉴.  

@@ -2,8 +2,7 @@
 title: Spy + + 뷰 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - views, Spy++
@@ -14,16 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5bdd0f49bb96b03aeb112b8db9decb61b3cc37da
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e444d839336f16287201b6ec043212f401ed75be
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="spy-views"></a>Spy++ 뷰
 Spy + + 트리 뷰 창, 메시지, 프로세스 및 사용할 수 있는 스레드를 컴퓨터에 표시 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [창 뷰](../debugger/windows-view.md)  
  사용 가능한 창과 컨트롤의 트리 뷰를 표시합니다.  
   

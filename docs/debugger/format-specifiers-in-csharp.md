@@ -2,8 +2,7 @@
 title: 형식 지정자 (C#) 디버거에서 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -28,11 +27,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c4b238833ecf96a80c66d6751b9a9afa772e2fee
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 447d1c1d9a60e1ff2a360790abe2c3c89f174fa6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서의 C#의 형식 지정자
 형식 지정자를 사용하여 **조사식** 창에 값이 표시되는 형식을 변경할 수 있습니다. 형식 지정자를 사용할 수도 있습니다는 **직접 실행** 창은 **명령** 창, [추적점](../debugger/using-breakpoints.md#BKMK_Print_to_the_Output_window_with_tracepoints), 및 소스 창 에서도 합니다. 이러한 창에서 식을 일시 중지하면 결과가 DataTip에 나타납니다. DataTip 보기에는 형식 지정자에 맞는 DataTip이 표시됩니다.  
@@ -57,10 +56,10 @@ ms.lasthandoff: 04/16/2018
 ## <a name="format-specifiers"></a>형식 지정자  
  다음 표에서는 디버거에서 인식할 수 있는 C# 형식 지정자를 보여 줍니다.  
   
-|지정자|서식|원래 조사식 값|표시|  
+|지정자|형식|원래 조사식 값|표시|  
 |---------------|------------|--------------------------|--------------|  
 |ac|식을 계산합니다. 암시적 속성 확인과 암시적 함수 호출이 해제된 경우에 유용할 수 있습니다.|"암시적 함수 실행은 해제 되어 사용자가" 메시지|\<value>|  
-|일|10진수 정수|0x0065|101|  
+|d|10진수 정수|0x0065|101|  
 |dynamic|동적 뷰를 사용하여 지정된 개체를 표시합니다.|동적 뷰를 포함하여 개체의 모든 멤버를 표시합니다.|동적 뷰만 표시합니다.|  
 |h|16진수 정수|61541|0x0000F065|  
 |nq|따옴표 없는 문자열|"My String"|My String|  

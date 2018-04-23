@@ -2,8 +2,7 @@
 title: Visual Studio에서 UWP 앱에 대 한 디버깅 세션을 시작 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 01/04/2018
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - VC.Project.IVCAppHostRemoteDebugPageObject.MachineName
@@ -37,11 +36,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 667fa5294f813a59425516e7e6d97177ca681365
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b298e2b17f1aa8805e0ab896c6978744c6c3bd53
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="start-a-debugging-session-for-a-uwp-app-in-visual-studio"></a>Visual Studio에서 UWP 앱에 대 한 디버깅 세션을 시작 합니다.
   
@@ -198,7 +197,7 @@ F5 키를 사용하여 디버깅을 시작할 때 Visual Studio에서는 응용 
   
 1.  앱을 설치 하는 장치에 Visual Studio 용 원격 도구를 설치 합니다. 참조 [원격 도구 설치](../debugger/remote-debugging.md)합니다.  
   
-2.  시작 화면에서 `Debuggable Package Manager`를 검색한 다음 시작합니다.  
+2.  시작 화면에서 `Debuggable Package Manager` 를 검색한 다음 시작합니다.  
   
      AppxDebug cmdlet에 맞게 올바르게 구성된 PowerShell 창이 나타납니다.  
   

@@ -2,8 +2,7 @@
 title: Visual Studio에서 변수에 대 한 조사식 설정 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/04/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.watch
@@ -19,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 264ac3f21dd7799bc4aa1f36909801eac854b755
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 187c9e682877a0f0633e7d3210454d40cae9de0f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="set-a-watch-on-variables-using-the-watch-and-quickwatch-windows-in-visual-studio"></a>조사식 및 간략 한 조사식 창에서 Visual Studio를 사용 하 여 변수에 대 한 조사식을 설정
 디버깅 하는 동안 사용할 수 있습니다는 **조사식** 및 **간략 한 조사식** 변수 및 식을 조사 하려면 windows 합니다.  차이점은 **조사식** 창에는 여러 변수가 표시될 수 있는 반면 **간략한 조사식** 창에는 한 번에 하나의 변수가 표시된다는 것입니다. 
@@ -151,7 +150,7 @@ static void Main(string[] args)
  실과 유사한 두 개의 물결선이 있는 원 아이콘이 나타나면 잠재적 크로스 스레드 종속성으로 인해 식이 계산되지 않은 것입니다. 즉, 코드를 확인할 때 응용 프로그램의 다른 스레드를 임시로 실행해야 함을 의미합니다. 중단 모드에서는 일반적으로 응용 프로그램의 모든 스레드가 중지됩니다. 다른 스레드를 임시로 실행할 수 있게 하면 프로그램 상태에 예기치 않은 영향이 있을 수 있으며 디버거가 중단점 및 해당 스레드에서 발생한 예외와 같은 이벤트를 무시하게 됩니다.  
   
 ##  <a name="bkmk_sideEffects"></a> Side Effects and Expressions  
- 일부 경우에는 식을 계산하면 변수 값이 바뀌거나 프로그램 상태에 영향이 미칠 수 있습니다. 예를 들어, 다음 식을 계산하면 `var1`의 값이 변경됩니다.  
+ 일부 경우에는 식을 계산하면 변수 값이 바뀌거나 프로그램 상태에 영향이 미칠 수 있습니다. 예를 들어 다음 식을 계산하면 `var1`의 값이 변경됩니다.  
   
 ```  
 var1 = var2  

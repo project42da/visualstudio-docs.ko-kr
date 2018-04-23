@@ -2,8 +2,7 @@
 title: 프로젝트는 c + + 디버그 구성에 대 한 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - VC.Project.VCDebugSettings.WebBrowser.DebuggerType
@@ -114,11 +113,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 2a18ec0d33ce66d62b71aedb4d15ef4273df957f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6b323ab51f4be02faaddc1df7ab2dd6902323d63
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="project-settings-for-a-c-debug-configuration"></a>C + + 디버그 구성에 대 한 프로젝트 설정
 C 또는 Visual c + + 디버그 구성에 대 한 프로젝트 설정을 변경할 수 있습니다는 **속성 페이지** 대화 상자에 설명 된 대로 [하는 방법: 디버그 설정 및 릴리스 구성](../debugger/how-to-set-debug-and-release-configurations.md)합니다. 다음 표에에서 디버거 관련 설정을 확인할 수 있는 위치는 **속성 페이지** 대화 상자.  

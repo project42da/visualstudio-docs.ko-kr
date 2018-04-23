@@ -2,8 +2,7 @@
 title: 속성 대화 상자를 처리 합니다. | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Spy++. process properties
@@ -14,18 +13,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11bf3460d0c38aa2b259c48da48cfb1d7cb76bd2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9d14805f0815c7645ff54352cda218edc44efa4
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="process-properties-dialog-box"></a>프로젝트 속성 대화 상자
 이 대화 상자를 사용 하 여 특정 프로세스에 대 한 자세한 내용을 찾을 수 있습니다. 이 대화 상자를 표시 하려면 포커스를 이동 하는 [프로세스 뷰](../debugger/processes-view.md) 창. 트리에서 프로세스 노드를 선택한 후 선택 **속성** 에서 **보기** 메뉴.  
   
  Windows 98 및 Windows 95 운영 체제에서는 수정된 된 버전의는 **일반** 탭이 표시 됩니다.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [프로세스 속성 대화 상자, 일반 탭](../debugger/general-tab-thread-properties-dialog-box.md)  
  이 대화 상자 찾기 선택한 프로세스에 대 한 자세한 정보를 사용 합니다.  
   

@@ -2,8 +2,7 @@
 title: 메시지 뷰 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.externaltools.spyplus.messagesview
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 206c0197d73e3bb95975309bdce84887dee283e1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 31baccc88b25979dfc92fed6217bec3b0ef16a55
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="messages-view"></a>메시지 뷰
 각 창에는 관련된 메시지 스트림을 합니다. 메시지 보기 창에는이 메시지 스트림을 표시 됩니다. 창 핸들, 메시지 코드 및 메시지 표시 됩니다. 스레드 또는 프로세스에 대 한 메시지 보기를 만들 수 있습니다. 이 옵션을 사용 하면 특정 프로세스 또는 스레드는 창 초기화 메시지를 캡처하는 데 특히 유용가 소유 하는 모든 창에 보낸 메시지를 볼 수 있습니다.  
@@ -49,7 +48,7 @@ Spy++ 메시지 뷰
   
 6.  충분 한 메시지를 사용 하는 경우 선택 **로깅 중지** 에서 **메시지** 메뉴.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [메시지 뷰 제어](../debugger/how-to-control-messages-view.md)  
  메시지 보기를 관리 하는 방법에 설명 합니다.  
   

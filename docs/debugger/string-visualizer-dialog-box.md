@@ -2,8 +2,7 @@
 title: 문자열 시각화 도우미에 문자열을 보기 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/11/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.stringviewer
@@ -23,11 +22,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 637e046ff99bfaee01ec2484c784d69734ff5118
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: a3a0575b02422bf83dd560d3eae5724b0a50d3f3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-strings-in-a-string-visualizer-in-visual-studio"></a>Visual Studio에서 문자열 시각화 도우미에 문자열을 봅니다.
 디버깅 하는 동안 너무 길어 데이터 팁 또는 디버거 창에서 볼 수 있는 보기 문자열을 문자열 시각화 도우미를 열 수 있습니다. 대부분의 시나리오에서 시각화 도우미 하는 데 도움이 잘못 된 형식의 문자열을 식별 합니다.

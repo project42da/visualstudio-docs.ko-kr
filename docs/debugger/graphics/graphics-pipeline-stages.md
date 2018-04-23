@@ -2,8 +2,7 @@
 title: 그래픽 파이프라인 단계 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/09/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.graphics.pipeline
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 662171e76253dd96b756d69b6da4646ae0f0b1b8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c708320442c32158ef193ccf7f08669882135d82
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="graphics-pipeline-stages"></a>그래픽 파이프라인 단계
 그래픽 파이프라인 단계 창에서는 개별 그리기 호출이 Direct3D 그래픽 파이프라인의 각 단계에서 변형되는 방식을 이해할 수 있습니다.  

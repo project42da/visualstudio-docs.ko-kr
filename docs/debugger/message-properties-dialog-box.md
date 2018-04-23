@@ -2,8 +2,7 @@
 title: 메시지 속성 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - message options
@@ -14,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6d1264638a911d332929265f5f154d390eba2566
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0b241550d2bb9c72240b68c7b6e338cd9f56043c
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="message-properties-dialog-box"></a>메시지 속성 대화 상자
 이 대화 상자를 사용 하 여 특정 메시지에 대 한 자세한 내용을 찾을 수 있습니다. 이 대화 상자를 표시 하려면 포커스를 이동 하는 [메시지 뷰](../debugger/messages-view.md) 창. 트리에서 메시지 노드를 선택한 후 선택 **속성** 에서 **보기** 메뉴.  

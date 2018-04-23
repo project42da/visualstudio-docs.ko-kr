@@ -2,8 +2,7 @@
 title: 편집 하며 계속 하기 대화 상자 (c + +) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.ENC.failed.commit
@@ -22,11 +21,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 1088829f6798c6a091a6fd878885b262455cce3f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e8ae9efb799c508c1ca086799e1ee444743a8d20
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="edit-and-continue-dialog-box-c"></a>편집하며 계속하기 대화 상자(C++)
 편집하며 계속하기에서 네이티브 코드에 변경 내용을 적용할 수 없습니다. 일시적인 현상일 수 있습니다. 편집하며 계속하기에서 네이티브 코드 변경 내용을 즉시 적용할 수 없지만 디버깅 세션 중에 이후에 적용할 수 있는 경우가 있습니다(예: 지금 실행되는 프로시저에 대한 현재 호출을 완료한 후). 자세한 내용은 참조 [편집 하며 계속 하기](../debugger/edit-and-continue.md)합니다.  

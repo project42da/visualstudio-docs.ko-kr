@@ -2,8 +2,7 @@
 title: '방법: 찾기 도구를 사용 하 여 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Window Finder Tool
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8feed3e948c6dba91edccb36162656589539a0a8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f358adbd8721a55d278c392018463d49e5a8a60e
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-use-the-finder-tool"></a>방법: 찾기 도구 사용
 찾기 도구를 사용할 수는 **창 찾기** 대화 상자를 창 속성이 나 메시지를 표시 합니다. 찾기 도구 사용 안 함된 자식 창을 찾을 수 있고 구분 하는 경우를 강조 표시 하는 창을 비활성화 자식 기간이 겹칩니다.  

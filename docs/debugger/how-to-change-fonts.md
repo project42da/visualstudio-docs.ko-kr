@@ -2,8 +2,7 @@
 title: '방법: 글꼴 변경 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - fonts, SpyHelp
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2939d14f9f2cf5e2abff5e75403b5aea0b1670e7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e79893e7f06afead4a327ce9a342b77f6acb8ca9
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-change-fonts"></a>방법: 글꼴 변경
 글꼴, 글꼴 스타일 및 Spy + + 창에 대 한 글꼴 크기를 변경할 수 있습니다.  

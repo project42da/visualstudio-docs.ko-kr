@@ -2,8 +2,7 @@
 title: Visual Studio에서 JavaScript 콘솔 명령 | Microsoft Docs
 ms.custom: ''
 ms.date: 07/17/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - JavaScript Console commands [UWP apps]
@@ -15,11 +14,11 @@ manager: douge
 ms.workload:
 - uwp
 - cordova
-ms.openlocfilehash: df4055790cf715b3a521b6ccc09d5c6920a47136
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2c0151bb0810529f0dad36d72b80a13ae519e8b0
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="javascript-console-commands-in-visual-studio"></a>Visual Studio의 JavaScript 콘솔 명령
   
@@ -43,15 +42,15 @@ ms.lasthandoff: 04/16/2018
 |`assert(expression, message)`|`expression` 이 **false**가 되면 메시지를 보냅니다.|`console.assert((x == 1), "assert message: x != 1");`|  
 |`clear()`|콘솔 창에서 스크립트 오류 메시지를 비롯한 메시지를 지우고 콘솔 창에 나타나는 스크립트도 지웁니다. 콘솔 입력 프롬프트에 입력한 스크립트는 지우지 않습니다.|`console.clear();`|  
 |`count(title)`|count 명령이 콘솔 창에 호출된 횟수를 보냅니다. 계산되는 각 호출은 `title`(선택 사항)으로 고유하게 식별됩니다.<br /><br /> 콘솔 창의 기존 항목은 `title` 매개 변수(있는 경우)로 식별되고 count 명령으로 업데이트됩니다. 새 항목이 만들어지지 않습니다.|`console.count();`<br /><br /> `console.count("inner loop");`|  
-|`debug(message)`|콘솔 창에 `message`를 보냅니다.<br /><br /> 이 명령은 console.log와 동일합니다.<br /><br /> 명령을 사용하여 전달된 개체는 문자열 값으로 전환됩니다.|`console.debug("logging message");`|  
+|`debug(message)`|콘솔 창에 `message` 를 보냅니다.<br /><br /> 이 명령은 console.log와 동일합니다.<br /><br /> 명령을 사용하여 전달된 개체는 문자열 값으로 전환됩니다.|`console.debug("logging message");`|  
 |`dir(object)`|지정한 개체를 콘솔 창에 보내고 개체 시각화 도우미에 표시합니다. 시각화 도우미를 사용하여 콘솔 창에서 속성을 검사할 수 있습니다.|`console.dir(obj);`|  
 |`dirxml(object)`|지정한 XML 노드 `object` 를 콘솔 창에 보내고 XML 노드 트리로 표시합니다.|`console.dirxaml(xmlNode);`|  
 |`error(message)`|콘솔 창에 `message` 를 보냅니다. 메시지 텍스트는 빨간색이며 이 텍스트 앞에 오류 기호가 옵니다.<br /><br /> 명령을 사용하여 전달된 개체는 문자열 값으로 전환됩니다.|`console.error("error message");`|  
-|`group(title)`|콘솔 창에 전송된 메시지의 그룹화를 시작하고 `title`(선택 사항)을 그룹 레이블로 보냅니다. 그룹은 중첩될 수 있고 콘솔 창이 트리 뷰에 나타납니다.<br /><br /> 그룹* 명령을 사용하면 구성 요소 모델이 사용 중인 경우와 같은 일부 시나리오에서 콘솔 창 출력을 더욱 쉽게 볼 수 있습니다.|`console.group("Level 2 Header");` <br /> `console.log("Level 2");` <br /> `console.group();` <br /> `console.log("Level 3");` <br /> `console.warn("More of level 3");` <br /> `console.groupEnd();` <br /> `console.log("Back to level 2");` <br /> `console.groupEnd();` <br /> `console.debug("Back to the outer level");`|  
-|`groupCollapsed(title)`|콘솔 창에 전송된 메시지의 그룹화를 시작하고 `title`(선택 사항)을 그룹 레이블로 보냅니다. `groupCollapsed`를 사용하여 전송된 그룹은 기본적으로 축소된 뷰에 나타납니다. 그룹은 중첩될 수 있고 콘솔 창이 트리 뷰에 나타납니다.|사용 방법은 `group` 명령과 동일합니다.<br /><br /> `group` 명령의 예를 참조하세요.|  
+|`group(title)`|콘솔 창에 전송된 메시지의 그룹화를 시작하고 `title` (선택 사항)을 그룹 레이블로 보냅니다. 그룹은 중첩될 수 있고 콘솔 창이 트리 뷰에 나타납니다.<br /><br /> 그룹* 명령을 사용하면 구성 요소 모델이 사용 중인 경우와 같은 일부 시나리오에서 콘솔 창 출력을 더욱 쉽게 볼 수 있습니다.|`console.group("Level 2 Header");` <br /> `console.log("Level 2");` <br /> `console.group();` <br /> `console.log("Level 3");` <br /> `console.warn("More of level 3");` <br /> `console.groupEnd();` <br /> `console.log("Back to level 2");` <br /> `console.groupEnd();` <br /> `console.debug("Back to the outer level");`|  
+|`groupCollapsed(title)`|콘솔 창에 전송된 메시지의 그룹화를 시작하고 `title` (선택 사항)을 그룹 레이블로 보냅니다. `groupCollapsed` 를 사용하여 전송된 그룹은 기본적으로 축소된 뷰에 나타납니다. 그룹은 중첩될 수 있고 콘솔 창이 트리 뷰에 나타납니다.|사용 방법은 `group` 명령과 동일합니다.<br /><br /> `group` 명령의 예를 참조하세요.|  
 |`groupEnd()`|현재 그룹을 종료합니다.<br /><br /> 요구 사항:<br /><br /> Visual Studio 2013|`group` 명령의 예를 참조하세요.|  
-|`info(message)`|콘솔 창에 `message`를 보냅니다. 메시지 앞에 정보 기호가 옵니다.|`console.info("info message");`<br /><br /> 추가 예제는 이 항목의 뒷부분에 나오는 [Formatting console.log output](#ConsoleLog) 을 참조하세요.|  
-|`log(message)`|콘솔 창에 `message`를 보냅니다.<br /><br /> 개체를 전달하는 경우 이 명령은 해당 개체를 콘솔 창으로 보내고 개체 시각화 도우미에 표시합니다. 시각화 도우미를 사용하여 콘솔 창에서 속성을 검사할 수 있습니다.|`console.log("logging message");`|  
+|`info(message)`|콘솔 창에 `message` 를 보냅니다. 메시지 앞에 정보 기호가 옵니다.|`console.info("info message");`<br /><br /> 추가 예제는 이 항목의 뒷부분에 나오는 [Formatting console.log output](#ConsoleLog) 을 참조하세요.|  
+|`log(message)`|콘솔 창에 `message` 를 보냅니다.<br /><br /> 개체를 전달하는 경우 이 명령은 해당 개체를 콘솔 창으로 보내고 개체 시각화 도우미에 표시합니다. 시각화 도우미를 사용하여 콘솔 창에서 속성을 검사할 수 있습니다.|`console.log("logging message");`|  
 |`msIsIndependentlyComposed(element)`|웹 앱에서 사용됩니다. JavaScript를 사용 하는 UWP 앱에서 지원 되지 않습니다.|지원되지 않습니다.|  
 |`profile(reportName)`|웹 앱에서 사용됩니다. JavaScript를 사용 하는 UWP 앱에서 지원 되지 않습니다.|지원되지 않습니다.|  
 |`profileEnd()`|웹 앱에서 사용됩니다. JavaScript를 사용 하는 UWP 앱에서 지원 되지 않습니다.|지원되지 않습니다.|  
@@ -107,7 +106,7 @@ console.log(user.first, user.last);
 -   %s - 문자열  
      %i - 정수  
      %d - 정수  
-     %f - 부동  
+     %f - float  
      %o - 개체  
      %b - 이진  
      %x - 16진수  

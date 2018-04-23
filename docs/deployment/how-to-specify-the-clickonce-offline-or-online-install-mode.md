@@ -2,8 +2,7 @@
 title: '방법: ClickOnce 오프 라인 지정 또는 온라인 설치 모드 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - offline applications
 - ClickOnce install mode
 ms.assetid: 0aee5fc1-e966-4bda-9b8f-d9997aeaa779
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 666273ddb251057ede1788747411111f997e5d39
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 18e758def9a92bc4402812dc0e2d665d8acae848
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-the-clickonce-offline-or-online-install-mode"></a>방법: ClickOnce 오프라인 또는 온라인 설치 모드 지정
 `Install Mode` 에 대 한 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 않을 것인지를 응용 프로그램이 사용할 수 있는 오프 라인 또는 온라인 결정 합니다. 선택 하는 경우 **응용 프로그램을 온라인만**, 사용자에 액세스할 수 있어야 합니다.는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 위치 (웹 페이지 또는 파일 공유) 응용 프로그램을 실행 하기 위해 게시 합니다. 선택 하는 경우 **응용 프로그램을 오프 라인으로**, 응용 프로그램 항목을 추가 하는 **시작** 메뉴 및 **프로그램 추가 / 제거** 대화 상자, 사용자가 연결 되어 있지 않은 경우 응용 프로그램을 실행할 수 있습니다.  

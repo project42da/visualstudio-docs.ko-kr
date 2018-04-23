@@ -2,8 +2,7 @@
 title: IntelliTrace 독립 실행형 수집기를 사용 하 여 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.historicaldebug.collectdataoutsideVS
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9533c2a79a8fb692e970cf2f59d4be6feaaefc5f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 410b8a979334edd1c333a43851f996da2b69bd03
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="using-the-intellitrace-stand-alone-collector"></a>IntelliTrace 독립 실행형 수집기 사용
 **IntelliTrace 독립 실행형 수집기** 를 사용하면 대상 컴퓨터에 Visual Studio를 설치하거나 대상 시스템 환경을 변경하지 않고도 프로덕션 서버 또는 기타 환경에서 앱에 대해 IntelliTrace 진단 데이터를 수집할 수 있습니다. IntelliTrace 독립 실행형 수집기는 웹, SharePoint, WPF 및 Windows Forrms 앱에서 작동합니다. 데이터 수집을 마쳤으면 컬렉터를 삭제하여 제거하면 됩니다.  
@@ -171,7 +170,7 @@ ms.lasthandoff: 04/16/2018
   
     > [!NOTE]
     >  -   앱 속도 저하를 방지 하려면 매우 활성화 되지 않은 로컬 고속 디스크의 위치를 선택 합니다.  
-    > -   .ITrace 파일과 수집기 파일은 같은 위치에 배치할 수 있습니다. 그러나 웹 앱 또는 SharePoint 응용 프로그램이 있는 경우에는 이 위치가 응용 프로그램을 호스트하는 디렉터리 외부에 있어야 합니다.  
+    > -   .ITrace 파일과 수집기 파일은 같은 위치에 배치할 수 있습니다. 그러나 웹앱 또는 SharePoint 응용 프로그램이 있는 경우에는 이 위치가 응용 프로그램을 호스트하는 디렉터리 외부에 있어야 합니다.  
   
     > [!IMPORTANT]
     >  -   .ITrace 파일 디렉터리는 수집기에서 사용해야 하는 ID만으로 제한합니다. IntelliTrace는 메서드 매개 변수로 또는 반환 값으로 전달되는 데이터를 기록할 수 있으므로 .iTrace 파일은 사용자, 데이터베이스, 기타 소스 정보 및 연결 문자열의 데이터와 같은 중요한 정보를 포함할 수 있습니다.  
@@ -226,7 +225,7 @@ ms.lasthandoff: 04/16/2018
     |-|-|  
     |*ApplicationPool*|응용 프로그램이 실행되는 응용 프로그램 풀의 이름입니다.|  
     |*PathToCollectionPlan*|수집 계획(수집기의 설정을 구성하는 .xml 파일)의 경로입니다.<br /><br /> 수집기와 함께 제공되는 계획을 지정할 수 있습니다. 다음 계획은 웹앱 및 SharePoint 응용 프로그램에 대해 사용할 수 있습니다.<br /><br /> -collection_plan.ASP.NET.default.xml<br />     예외, 데이터베이스 호출 및 웹 서버 요청을 포함한 IntelliTrace 이벤트 및 SharePoint 이벤트만 수집합니다.<br />-   collection_plan.ASP.NET.trace.xml<br />     함수 호출과 collection_plan.ASP.NET.default.xml의 모든 데이터를 수집합니다. 이 계획은 상세 분석의 경우에는 효율적이지만 collection_plan.ASP.NET.default.xml에 비해 앱의 속도는 더 느려질 수 있습니다.<br /><br /> 앱 속도 저하를 방지하려면 이러한 계획을 사용자 지정하거나 계획을 직접 만듭니다. 보안을 유지하려면 수집기 파일과 같은 안전한 위치에 사용자 지정 계획을 저장합니다. [IntelliTrace 수집 계획 만들기 및 사용자 지정](http://go.microsoft.com/fwlink/?LinkId=227871) 및 [앱 속도를 그대로 유지하면서 데이터를 최대한 수집하는 방법](#Minimizing) **참고:** 기본적으로.iTrace 파일의 최대 크기는 100MB입니다. .ITrace 파일이이 한도 도달 하면 수집기는 파일의 최신 항목을 위한 공간 확보 하기 위해 가장 오래 된 항목을 삭제 합니다. 이 제한을 변경 하려면 수집 계획 편집 `MaximumLogFileSize` 특성입니다. <br /><br /> *수집 계획의 지역화된 버전을 찾을 수 있는 위치*<br /><br /> 수집기 하위 폴더에서 지역화된 계획을 찾을 수 있습니다.|  
-    |*FullPathToITraceFileDirectory*|.ITrace 파일 디렉터리의 전체 경로입니다. **보안 정보:** 상대 경로가 아닌 전체 경로 제공 합니다.|  
+    |*FullPathToITraceFileDirectory*|.iTrace 파일 디렉터리의 전체 경로입니다. **보안 정보:** 상대 경로가 아닌 전체 경로 제공 합니다.|  
   
      수집기는 응용 프로그램 풀에 연결되어 데이터 수집을 시작합니다.  
   
@@ -238,7 +237,7 @@ ms.lasthandoff: 04/16/2018
   
      `Checkpoint-IntelliTraceCollection` `"` *\<ApplicationPool>* `"`  
   
-4.  컬렉션 상태를 확인하려면 다음 구문을 사용합니다.  
+4.  수집 상태를 확인하려면 다음 구문을 사용합니다.  
   
      `Get-IntelliTraceCollectionStatus`  
   
@@ -293,7 +292,7 @@ ms.lasthandoff: 04/16/2018
   
 -   하거나 문제를 재현할 수 있다고 생각 문제가 있는 경우에 수집기를 실행 합니다.  
   
-     컬렉션을 시작하고 문제를 재현한 다음 컬렉션을 중지합니다. Visual Studio Enterprise에서 .iTrace 파일을 열고 데이터를 검사합니다. 참조 [Visual Studio Enterprise에서.iTrace 파일을 열고](#BKMK_View_IntelliTrace_Log_Files)합니다.  
+     수집을 시작하고 문제를 재현한 다음 수집을 중지합니다. Visual Studio Enterprise에서 .iTrace 파일을 열고 데이터를 검사합니다. 참조 [Visual Studio Enterprise에서.iTrace 파일을 열고](#BKMK_View_IntelliTrace_Log_Files)합니다.  
   
 -   웹앱 및 SharePoint 응용 프로그램의 경우 수집기는 지정한 응용 프로그램 풀을 공유하는 모든 앱에 대한 데이터를 기록합니다. 수집 계획에서는 단일 앱에 대한 모듈만 지정할 수 있지만, 이로 인해 같은 응용 프로그램 풀을 공유하는 앱의 속도가 느려질 수 있습니다.  
   
@@ -366,17 +365,17 @@ ms.lasthandoff: 04/16/2018
   
 -   *IntelliTrace에서 수집하지 않는 데이터*  
   
-     성능에 대한 영향을 줄이기 위해 IntelliTrace는 데이터 컬렉션 시 메서드에서 전달 및 반환되는 기본 데이터 형식의 값과 메서드에서 전달 및 반환되는 최상위 개체의 필드에 포함된 기본 데이터 형식의 값만 수집합니다.  
+     성능에 대한 영향을 줄이기 위해 IntelliTrace는 데이터 수집 시 메서드에서 전달 및 반환되는 기본 데이터 형식의 값과 메서드에서 전달 및 반환되는 최상위 개체의 필드에 포함된 기본 데이터 형식의 값만 수집합니다.  
   
      예를 들어 `AlterEmployee` 메서드 서명이 정수 `id` 및 `Employee` 개체 `oldemployee`를 허용한다고 가정해 보겠습니다.  
   
      `public Employee AlterEmployee(int id, Employee oldemployee)`  
   
-     `Employee` 형식에는 `Id`, `Name` 및 `HomeAddress` 특성이 있습니다. 그리고 `Employee` 및 `Address` 형식 간에는 연결 관계가 있습니다.  
+     `Employee` 형식에는 `Id`, `Name`및 `HomeAddress`특성이 있습니다. 그리고 `Employee` 및 `Address` 형식 간에는 연결 관계가 있습니다.  
   
      ![직원과 주소의 관계](../debugger/media/employeeaddressrelationship.png "EmployeeAddressRelationship")  
   
-     수집기는 `id` 메서드에서 반환되는 `Employee.Id`, `Employee.Name`, `Employee` 및 `AlterEmployee` 개체의 값을 기록합니다. 그러나 `Address` 개체에 대한 정보는 null인지 여부를 제외하고는 기록하지 않습니다. 또한 `AlterEmployee` 메서드의 로컬 변수에 대한 데이터도 기록하지 않습니다. 단, 다른 메서드가 해당 로컬 변수를 매개 변수로 사용하는 경우에는 로컬 변수가 메서드 매개 변수로 기록됩니다.  
+     수집기는 `id`메서드에서 반환되는 `Employee.Id`, `Employee.Name` , `Employee` 및 `AlterEmployee` 개체의 값을 기록합니다. 그러나 `Address` 개체에 대한 정보는 null인지 여부를 제외하고는 기록하지 않습니다. 또한 `AlterEmployee` 메서드의 로컬 변수에 대한 데이터도 기록하지 않습니다. 단, 다른 메서드가 해당 로컬 변수를 매개 변수로 사용하는 경우에는 로컬 변수가 메서드 매개 변수로 기록됩니다.  
   
 ##  <a name="WhereElse"></a> IntelliTrace 데이터를 가져올 수 있는 다른 위치  
   

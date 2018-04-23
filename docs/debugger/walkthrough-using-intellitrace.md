@@ -2,8 +2,7 @@
 title: IntelliTrace로 ग द ृ | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: e1c9c91a-0009-4c4e-9b4f-c9ab3a6022a7
 author: mikejo5000
@@ -11,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb117eeaf972788118b9b7284bfd2ae6aca44936
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3fd43297dcf6a15e7d064809a5c4b5091f51ac63
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="view-events-with-intellitrace-in-visual-studio"></a>Visual Studio에서 IntelliTrace로 이벤트 보기
 IntelliTrace를 사용하여 특정 이벤트 또는 이벤트 범주나 이벤트 외에 개별 함수 호출에 대한 정보를 수집할 수 있습니다. 다음 절차에서는 이 작업을 수행하는 방법을 보여 줍니다.  
@@ -35,7 +34,7 @@ IntelliTrace를 사용하여 특정 이벤트 또는 이벤트 범주나 이벤�
     using System.IO;  
     ```  
   
-2.  Main 메서드에서 <xref:System.IO.FileStream>을 만들고 여기에서 읽고 닫고 파일을 삭제합니다. 다른 줄을 추가하여 중단점을 설정할 위치 지정합니다.  
+2.  Main 메서드에서 <xref:System.IO.FileStream> 을 만들고 여기에서 읽고 닫고 파일을 삭제합니다. 다른 줄을 추가하여 중단점을 설정할 위치 지정합니다.  
   
     ```csharp  
     static void Main(string[] args)  
@@ -49,7 +48,7 @@ IntelliTrace를 사용하여 특정 이벤트 또는 이벤트 범주나 이벤�
     }  
     ```  
   
-3.  `Console.WriteLine("done");`에서 중단점 설정  
+3.  `Console.WriteLine("done");`  
 
 ## <a name="start-debugging-and-view-intellitrace-events"></a>디버깅을 시작 하 고 IntelliTrace 이벤트를 표시
   

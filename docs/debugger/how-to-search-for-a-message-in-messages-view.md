@@ -2,8 +2,7 @@
 title: '방법: 메시지 뷰에서 메시지 검색 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Message Search dialog box
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ec04e45d1383e767e2fe1079ac8a38c8b4d7ec0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 368d10f2285c94f053e536da77966e9b2fb26da9
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-search-for-a-message-in-messages-view"></a>방법: 메시지 뷰에서 메시지 검색
 검색 조건으로 핸들, 형식 또는 메시지 ID를 사용 하 여 메시지 보기에서 특정 메시지를 검색할 수 있습니다. 이러한-또는 조합-유효한 검색 조건이 됩니다. 검색의 초기 방향의 지정할 수도 있습니다. 현재 선택 된 메시지의 특성으로 대화 상자의 필드에에서 미리 로드 됩니다.  

@@ -2,8 +2,7 @@
 title: 여러 프로세스 디버깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.programs
@@ -22,11 +21,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51028578d6bcdfc8d5c1ad0d7825b3d91c339c1e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08a089feceb6ba66791358096e3c4663df06494e
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-multiple-processes"></a>여러 프로세스 디버깅
 프로세스 디버깅 시작, 프로세스 간 전환, 중단 및 계속 실행, 소스 단계별, 디버깅을 중지 하 고 프로세스 종료 또는 프로세스에서 분리 하는 방법은 다음과 같습니다.  

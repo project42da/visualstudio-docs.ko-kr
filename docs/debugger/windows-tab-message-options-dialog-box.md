@@ -2,8 +2,7 @@
 title: 메시지 옵션 대화 상자, 창 탭 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - message options, Windows
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af1abe91f7e3553b1516009c0b9c919c22457ab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ad738a03b63284abc9ad2d922a51f140228e4ed7
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="windows-tab-message-options-dialog-box"></a>메시지 옵션 대화 상자, 창 탭
 사용 하 여는 **Windows** 탭에 나열 된 메시지의 범위를 설정 하려면 [메시지 뷰](../debugger/messages-view.md)합니다. 표시 하는 [메시지 옵션 대화 상자](../debugger/message-options-dialog-box.md), 선택 **로그 메시지** 에서 **Spy** 메뉴.  

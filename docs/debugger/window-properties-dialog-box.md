@@ -2,8 +2,7 @@
 title: 창 속성 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Window Properties dialog box
@@ -13,16 +12,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1caaad297eea6eea11dd3ff002254c8435b0270a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8adfd0e1981f38540f2b682eddf991c4193af849
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="window-properties-dialog-box"></a>창 속성 대화 상자
 이 대화 상자를 사용 하 여 특정 창에 대 한 자세한 내용을 찾을 수 있습니다. 이 대화 상자를 표시 하려면 포커스를 이동 하 여 [창 뷰](../debugger/windows-view.md) 창. 트리에서 창 노드를 선택한 후 선택 **속성** 에서 **보기** 메뉴.  
   
-## <a name="in-this-section"></a>단원 내용  
+## <a name="in-this-section"></a>섹션 내용  
  [일반 탭 합니다. 창 속성 대화 상자](../debugger/general-tab-window-properties-dialog-box.md)  
  선택한 기간에 대 한 정보가 표시 됩니다.  
   

@@ -2,8 +2,7 @@
 title: '방법: ClickOnce 응용 프로그램에 대 한 기본 웹 페이지를 사용자 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - deploying applications [ClickOnce], publishing
 - publishing, ClickOnce
 ms.assetid: 418de18c-bee9-4f24-9cd9-0252d175070d
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4cfbe5ac94f2c740b1424f9bdc5a215ee571ef5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 743d7f259da4129eda578808d1ce04619104a3f1
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-customize-the-default-web-page-for-a-clickonce-application"></a>방법: ClickOnce 응용 프로그램의 기본 웹 페이지 사용자 지정
 ClickOnce 응용 프로그램 웹에 게시, 웹 페이지 자동으로 생성 되 고 응용 프로그램과 함께 게시 합니다. 기본 페이지에는 응용 프로그램 및 응용 프로그램을 설치, 필수 구성 요소를 설치 하거나 MSDN에서 도움말에 액세스 하는 링크의 이름을 포함 합니다.  
@@ -47,7 +46,7 @@ ClickOnce 응용 프로그램 웹에 게시, 웹 페이지 자동으로 생성 �
   
 3.  필요에 따라 페이지를 사용자 지정 하 고 저장 합니다.  
   
-4.  선택적 요소. Visual Studio를에서 지정 된 게시 웹 페이지를 덮어쓰지 않도록 하려면 선택을 취소 **자동으로 배포 웹 페이지 생성 모든 게시** 게시 옵션 대화 상자에서 합니다.  
+4.  선택 사항입니다. Visual Studio를에서 지정 된 게시 웹 페이지를 덮어쓰지 않도록 하려면 선택을 취소 **자동으로 배포 웹 페이지 생성 모든 게시** 게시 옵션 대화 상자에서 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [ClickOnce 보안 및 배포](../deployment/clickonce-security-and-deployment.md)   

@@ -2,8 +2,7 @@
 title: '방법: 자체 호스팅된 WCF 서비스 디버깅 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb1fcd61c65b29a0ccb262b31a10847ebb80539d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 19ce90effca21f6079cc7b569fa6e58f94553627
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-debug-a-self-hosted-wcf-service"></a>방법: 자체 호스팅 WCF 서비스 디버깅
 A *자체 호스팅 서비스* 는 IIS, WCF 서비스 호스트 내에서 실행 되지 않는 WCF 서비스 또는 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 개발 서버. 구성 하는 것 자체 호스팅된 WCF 디버깅 하는 가장 쉬운 방법은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 선택 하면 클라이언트와 서버를 시작 하려면 **디버깅 시작** 에 **디버그** 메뉴.  

@@ -1,10 +1,8 @@
 ---
-title: 'CA2228: 릴리스되지 않은 리소스 형식을 제공 하지 마십시오 | Microsoft Docs'
-ms.custom: ''
+title: 'CA2228: 릴리스되지 않은 리소스 형식을 제공하지 마십시오.'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - DoNotShipUnreleasedResourceFormats
 - CA2228
@@ -17,28 +15,28 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b244dda388e5044b910259a4e92266671722e562
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1928cb4626ea5d5af15ecf800a8842d66f3e244d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2228-do-not-ship-unreleased-resource-formats"></a>CA2228: 릴리스되지 않은 리소스 형식을 제공하지 마십시오.
-|||  
-|-|-|  
-|TypeName|DoNotShipUnreleasedResourceFormats|  
-|CheckId|CA2228|  
-|범주|Microsoft.Usage|  
-|변경 수준|주요 변경 아님|  
-  
-## <a name="cause"></a>원인  
- 리소스 파일의 버전을 사용 하 여 빌드된는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 는 현재 지원 되지 않습니다.  
-  
-## <a name="rule-description"></a>규칙 설명  
- 시험판 버전을 사용 하 여 빌드된 리소스 파일은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 지원 되는 버전의.NET Framework에서 사용할 수 있습니다.  
-  
-## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결 하려면 지원 되는 버전을 사용 하 여 리소스를 작성은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]k.  
-  
-## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
+|||
+|-|-|
+|TypeName|DoNotShipUnreleasedResourceFormats|
+|CheckId|CA2228|
+|범주|Microsoft.Usage|
+|변경 수준|주요 변경 아님|
+
+## <a name="cause"></a>원인
+ 리소스 파일의 버전을 사용 하 여 빌드된는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 는 현재 지원 되지 않습니다.
+
+## <a name="rule-description"></a>규칙 설명
+ 시험판 버전을 사용 하 여 빌드된 리소스 파일은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 지원 되는 버전의.NET Framework에서 사용할 수 있습니다.
+
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
+ 이 규칙 위반 문제를 해결 하려면 지원 되는 버전을 사용 하 여 리소스를 작성은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]k.
+
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우
  이 규칙에서는 경고를 표시해야 합니다.

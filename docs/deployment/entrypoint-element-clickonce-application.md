@@ -2,9 +2,8 @@
 title: '&lt;entryPoint&gt; 요소 (ClickOnce 응용 프로그램) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
-ms.topic: conceptual
+ms.technology: vs-ide-deployment
+ms.topic: reference
 f1_keywords:
 - urn:schemas-microsoft-com:asm.v2#commandLine
 - urn:schemas-microsoft-com:asm.v2#entryPoint
@@ -16,16 +15,16 @@ helpviewer_keywords:
 - <entryPoint> element [ClickOnce application manifest]
 - manifests [ClickOnce], entryPoint element
 ms.assetid: 10ad3083-10c1-4189-a870-9bba2eab244f
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cd263d8137b380519477d16079e8ed8b1547fbbe
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: beb140a64a415ab1a42f8157e2fafb1d20f9569a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltentrypointgt-element-clickonce-application"></a>&lt;entryPoint&gt; 요소 (ClickOnce 응용 프로그램)
 되어야 하는 어셈블리를 식별 될 때 실행이 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램이 클라이언트 컴퓨터에서 실행 됩니다.  
@@ -59,32 +58,32 @@ ms.lasthandoff: 04/16/2018
   
 |특성|설명|  
 |---------------|-----------------|  
-|`name`|선택적 요소. 이 값은.NET Framework에서 사용 되지 않습니다.|  
+|`name`|선택 사항입니다. 이 값은.NET Framework에서 사용 되지 않습니다.|  
   
  `entryPoint` 에 다음 요소가 있습니다.  
   
 ## <a name="assemblyidentity"></a>assemblyIdentity  
- 필수 요소. 역할 `assemblyIdentity` 및 해당 특성에 정의 되었는지 [ \<y y > 요소](../deployment/assemblyidentity-element-clickonce-application.md)합니다.  
+ 필수. 역할 `assemblyIdentity` 및 해당 특성에 정의 되었는지 [ \<y y > 요소](../deployment/assemblyidentity-element-clickonce-application.md)합니다.  
   
  `processorArchitecture` 이 요소의 특성 및 `processorArchitecture` 에 정의 된 특성과 `assemblyIdentity` 다른 위치에서 응용 프로그램 매니페스트 일치 해야 합니다.  
   
 ## <a name="commandline"></a>명령줄  
- 필수 요소. 자식 이어야 합니다는 `entryPoint` 요소입니다. 자식 요소가 없는 하 고 다음과 같은 특성이 있습니다.  
+ 필수. 자식 이어야 합니다는 `entryPoint` 요소입니다. 자식 요소가 없는 하 고 다음과 같은 특성이 있습니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
-|`file`|필수 요소. 에 대 한 시작 어셈블리에 대 한 로컬 참조는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다. 이 값 앞에 슬래시 (/) 또는 백슬래시를 포함할 수 없습니다 (\\) 경로 구분 기호입니다.|  
-|`parameters`|필수 요소. 진입점에서 수행할 동작을 설명 합니다. 유일한 유효 값은 `run`빈 문자열로 제공 되는 경우; `run` 것으로 간주 됩니다.|  
+|`file`|필수. 에 대 한 시작 어셈블리에 대 한 로컬 참조는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다. 이 값 앞에 슬래시 (/) 또는 백슬래시를 포함할 수 없습니다 (\\) 경로 구분 기호입니다.|  
+|`parameters`|필수. 진입점에서 수행할 동작을 설명 합니다. 유일한 유효 값은 `run`빈 문자열로 제공 되는 경우; `run` 것으로 간주 됩니다.|  
   
 ## <a name="customhostrequired"></a>customHostRequired  
- 선택적 요소. 포함 하는 경우이 배포 사용자 지정 호스트 내부에 배포 하는 구성 요소에 포함 되도록 지정 하 고 독립 실행형 응용 프로그램을 되지 않습니다.  
+ 선택 사항입니다. 포함 하는 경우이 배포 사용자 지정 호스트 내부에 배포 하는 구성 요소에 포함 되도록 지정 하 고 독립 실행형 응용 프로그램을 되지 않습니다.  
   
  이 요소가 없으면는 `assemblyIdentity` 및 `commandLine` 요소 하지도 있어야 합니다. 인 경우 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 설치 하는 동안 유효성 검사 오류를 발생 시킵니다.  
   
  이 요소에는 특성과 하위 항목이 없습니다.  
   
 ## <a name="customux"></a>customUX  
- 선택적 요소. 응용 프로그램 설치는 사용자 지정 설치 관리자에서 유지 관리 및 시작 메뉴 항목, 만드는 바로 가기를 추가 되거나 않는 프로그램 항목을 제거를 지정 합니다.  
+ 선택 사항입니다. 응용 프로그램 설치는 사용자 지정 설치 관리자에서 유지 관리 및 시작 메뉴 항목, 만드는 바로 가기를 추가 되거나 않는 프로그램 항목을 제거를 지정 합니다.  
   
 ```  
 <customUX xmlns="urn:schemas-microsoft-com:clickonce.v1" />  

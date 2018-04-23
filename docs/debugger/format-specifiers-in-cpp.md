@@ -2,8 +2,7 @@
 title: 형식 지정자 (c + +) 디버거에서 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug
@@ -30,11 +29,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: f1b6151350faa55b3e2918a45908111ab96edf6a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f8d9d2ecc00e0d29f39cb82dab997fb28704f518
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="format-specifiers-in-c-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서의 c + +에서 형식 지정자
 형식 지정자를 사용하여 **조사식** 창에 값이 표시되는 형식을 변경할 수 있습니다.  
@@ -65,12 +64,12 @@ int main() {
 ##  <a name="BKMK_Visual_Studio_2012_format_specifiers"></a> 형식 지정자  
  다음 표에서는 Visual Studio에서 사용할 수 있는 형식 지정자를 보여 줍니다. 굵게 표시된 지정자는 C++/CLI를 사용하는 interop 디버깅에 대해 지원되지 않습니다.  
   
-|지정자|서식|원래 조사식 값|표시되는 값|  
+|지정자|형식|원래 조사식 값|표시되는 값|  
 |---------------|------------|--------------------------|---------------------|  
 |일|10진수 정수|0x00000066|102|  
 |o|부호 없는 8진수 정수|0x00000066|000000000146|  
 |x<br /><br /> **h**|16진수 정수|102|0xcccccccc|  
-|X<br /><br /> **H**|16진수 정수|102|0xCCCCCCCC|  
+|X<br /><br /> **H**|16진수 정수|102|0xcccccccc|  
 |c|단일 문자|0x0065, c|101 'e'|  
 |s|const char* 문자열|\<위치 > "hello world"|"hello world"|  
 |**sb**|const char * 문자열 (인용 부호 제외)|\<위치 > "hello world"|hello world|  
@@ -97,7 +96,7 @@ int main() {
 ###  <a name="BKMK_Size_specifiers_for_pointers_as_arrays_in_Visual_Studio_2012"></a> 배열로 사용되는 포인터에 대한 크기 지정자  
  배열로 표시할 개체에 대한 포인터가 있는 경우 다음과 같이 정수 또는 식을 사용하여 배열 요소의 수를 지정할 수 있습니다.  
   
-|지정자|서식|원래 조사식 값|표시되는 값|  
+|지정자|형식|원래 조사식 값|표시되는 값|  
 |---------------|------------|---------------------------|---------------------|  
 |n|10진수 또는 **16진수** 정수|pBuffer,[32]<br /><br /> pBuffer,**[0x20]**|`pBuffer` 를 요소가 32개인 배열로 표시합니다.|  
 |**[exp]**|정수로 확인되는 유효한 C++ 식입니다.|pBuffer,[bufferSize]|PBuffer를 `bufferSize` 요소의 배열로 표시합니다.|  
@@ -106,7 +105,7 @@ int main() {
 ##  <a name="BKMK_Format_specifiers_for_interop_debugging_and_C___edit_and_continue"></a> C++/CLI를 사용하는 interop 디버깅의 형식 지정자  
  **굵게** 표시된 지정자는 네이티브 및 C++/CLI 코드 디버깅에 대해서만 지원됩니다.  
   
-|지정자|서식|원래 조사식 값|표시되는 값|  
+|지정자|형식|원래 조사식 값|표시되는 값|  
 |---------------|------------|--------------------------|---------------------|  
 |**d,i**|부호 있는 10진수 정수|0xF000F065|-268373915|  
 |**u**|부호 없는 10진수 정수|0x0065|101|  

@@ -2,8 +2,7 @@
 title: 중단점 적중 횟수 대화 상자를가 하는 경우 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.whenbreakpointishit
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 627fe393d235f6d0392181cf2370cda71737a4f2
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2d2d0940764e64f9179eb8346c271afa6136b72f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="when-breakpoint-is-hit-dialog-box"></a>중단점이 적중될 때 대화 상자
 이 대화 상자는 중단점이 적중 될 때 발생 하는 동작을 사용자 지정할 수 있습니다.  

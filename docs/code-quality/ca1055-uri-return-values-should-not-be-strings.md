@@ -1,10 +1,8 @@
 ---
-title: 'CA1055: URI 반환 값은 문자열이 면 안 됩니다. | Microsoft Docs'
-ms.custom: ''
+title: 'CA1055: URI 반환 값은 문자열이면 안 됩니다.'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA1055
 - UriReturnValuesShouldNotBeStrings
@@ -17,44 +15,44 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe6473c6307651c91e279c44d5c2644d3b44fff1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6474579cef909a7e05435b5aac1336d24c875c37
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca1055-uri-return-values-should-not-be-strings"></a>CA1055: URI 반환 값은 문자열이면 안 됩니다.
-|||  
-|-|-|  
-|TypeName|UriReturnValuesShouldNotBeStrings|  
-|CheckId|CA1055|  
-|범주|Microsoft.Design|  
-|변경 수준|주요 변경|  
-  
-## <a name="cause"></a>원인  
- "Uri", "Uri", "urn", "Urn", "url" 또는 "Url"는 메서드의 이름을 포함 하 고 메서드가 문자열을 반환 합니다.  
-  
-## <a name="rule-description"></a>규칙 설명  
- 이 규칙 메서드 이름은 파스칼식 대/소문자 규칙에 따라 토큰으로 분할 하 고 각 토큰 "uri", "Uri", "urn", "Urn", "url" 또는 "Url"와 같은지 여부를 확인 합니다. 일치 하는 경우 규칙 메서드가 uniform resource identifier (URI)를 반환 한다고 가정 합니다. URI의 문자열 표현은 구문 분석 및 인코딩 오류를 발생시키기 쉬우며 보안 문제를 일으킬 수 있습니다. <xref:System.Uri?displayProperty=fullName> 클래스 안전한 방식으로 이러한 서비스를 제공 합니다.  
-  
-## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결 하려면 반환 형식을 변경 하는 <xref:System.Uri>합니다.  
-  
-## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
- 반환 값은 URI를 나타내지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.  
-  
-## <a name="example"></a>예제  
- 다음 예제에서는 형식 `ErrorProne`,이 규칙을 위반 하는 형식 하 `SaferWay`, 규칙을 충족 하 합니다.  
-  
+|||
+|-|-|
+|TypeName|UriReturnValuesShouldNotBeStrings|
+|CheckId|CA1055|
+|범주|Microsoft.Design|
+|변경 수준|주요 변경|
+
+## <a name="cause"></a>원인
+ "Uri", "Uri", "urn", "Urn", "url" 또는 "Url"는 메서드의 이름을 포함 하 고 메서드가 문자열을 반환 합니다.
+
+## <a name="rule-description"></a>규칙 설명
+ 이 규칙 메서드 이름은 파스칼식 대/소문자 규칙에 따라 토큰으로 분할 하 고 각 토큰 "uri", "Uri", "urn", "Urn", "url" 또는 "Url"와 같은지 여부를 확인 합니다. 일치 하는 경우 규칙 메서드가 uniform resource identifier (URI)를 반환 한다고 가정 합니다. URI의 문자열 표현은 구문 분석 및 인코딩 오류를 발생시키기 쉬우며 보안 문제를 일으킬 수 있습니다. <xref:System.Uri?displayProperty=fullName> 클래스 안전한 방식으로 이러한 서비스를 제공 합니다.
+
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
+ 이 규칙 위반 문제를 해결 하려면 반환 형식을 변경 하는 <xref:System.Uri>합니다.
+
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우
+ 반환 값은 URI를 나타내지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다.
+
+## <a name="example"></a>예제
+ 다음 예제에서는 형식 `ErrorProne`,이 규칙을 위반 하는 형식 하 `SaferWay`, 규칙을 충족 하 합니다.
+
  [!code-csharp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CSharp/ca1055-uri-return-values-should-not-be-strings_1.cs)]
  [!code-vb[FxCop.Design.UriNotString#1](../code-quality/codesnippet/VisualBasic/ca1055-uri-return-values-should-not-be-strings_1.vb)]
- [!code-cpp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CPP/ca1055-uri-return-values-should-not-be-strings_1.cpp)]  
-  
-## <a name="related-rules"></a>관련된 규칙  
- [CA1056: URI 속성은 문자열이면 안 됩니다.](../code-quality/ca1056-uri-properties-should-not-be-strings.md)  
-  
- [CA1054: URI 매개 변수는 문자열이면 안 됩니다.](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)  
-  
- [CA2234: 문자열 대신 System.Uri 개체를 전달하십시오.](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)  
-  
+ [!code-cpp[FxCop.Design.UriNotString#1](../code-quality/codesnippet/CPP/ca1055-uri-return-values-should-not-be-strings_1.cpp)]
+
+## <a name="related-rules"></a>관련된 규칙
+ [CA1056: URI 속성은 문자열이면 안 됩니다.](../code-quality/ca1056-uri-properties-should-not-be-strings.md)
+
+ [CA1054: URI 매개 변수는 문자열이면 안 됩니다.](../code-quality/ca1054-uri-parameters-should-not-be-strings.md)
+
+ [CA2234: 문자열 대신 System.Uri 개체를 전달하십시오.](../code-quality/ca2234-pass-system-uri-objects-instead-of-strings.md)
+
  [CA1057: 문자열 URI 오버로드는 System.Uri 오버로드를 호출합니다.](../code-quality/ca1057-string-uri-overloads-call-system-uri-overloads.md)

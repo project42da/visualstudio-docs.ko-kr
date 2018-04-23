@@ -1,10 +1,8 @@
 ---
-title: 'CA2103: 명령적 보안을 검토 | Microsoft Docs'
-ms.custom: ''
+title: 'CA2103: 명령적 보안을 검토하십시오.'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2103
 - ReviewImperativeSecurity
@@ -17,34 +15,33 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f5a46629efacc37af593e4cd7487b69031cf6bb1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d107690e8835f118861832da99b4aef92e86a5cc
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2103-review-imperative-security"></a>CA2103: 명령적 보안을 검토하십시오.
-|||  
-|-|-|  
-|TypeName|ReviewImperativeSecurity|  
-|CheckId|CA2103|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경|  
-  
-## <a name="cause"></a>원인  
- 메서드가 명령적 보안을 사용하고, 요청이 활성 상태인 동안 변경될 수 있는 반환 값 또는 상태 정보를 사용하여 권한을 구성하고 있습니다.  
-  
-## <a name="rule-description"></a>규칙 설명  
- 명령적 보안을 관리 되는 개체를 사용 하 여 특성을 사용 하 여 메타 데이터에 사용 권한 및 작업을 저장 하 여 선언적 보안을 비교 하는 코드 실행 하는 동안 권한 및 보안 동작을 지정 합니다. 명령적 보안은 사용 권한 개체의 상태를 설정 하 고 런타임이 될 때까지 사용할 수 없는 정보를 사용 하 여 보안 동작을 선택할 수 있으므로 매우 유연 합니다. 함께 유연성으로는 작업이 적용 되는 사용 권한의 상태 유지 되지 않는다는 결정 하는 데 사용 하는 런타임 정보가 그대로 위험이 따릅니다.  
-  
- 가능하면 선언적 보안을 사용합니다. 선언적 요청은 이해 하기 쉽습니다.  
-  
-## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- 명령적 보안 요청으로 사용 되 고 사용 권한을 변경할 수 있는 정보에는 사용 권한의 상태 의존 하지 않는 있는지 검토 합니다.  
-  
-## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
- 사용 권한을 변경 되는 데이터에 의존 하지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 그러나 해당 하는 선언적 명령적 요청을 변경 하는 것이 좋습니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines)   
- [데이터 및 모델링](/dotnet/framework/data/index)
+|||
+|-|-|
+|TypeName|ReviewImperativeSecurity|
+|CheckId|CA2103|
+|범주|Microsoft.Security|
+|변경 수준|주요 변경|
+
+## <a name="cause"></a>원인
+ 메서드가 명령적 보안을 사용하고, 요청이 활성 상태인 동안 변경될 수 있는 반환 값 또는 상태 정보를 사용하여 권한을 구성하고 있습니다.
+
+## <a name="rule-description"></a>규칙 설명
+ 명령적 보안을 관리 되는 개체를 사용 하 여 특성을 사용 하 여 메타 데이터에 사용 권한 및 작업을 저장 하 여 선언적 보안을 비교 하는 코드 실행 하는 동안 권한 및 보안 동작을 지정 합니다. 명령적 보안은 사용 권한 개체의 상태를 설정 하 고 런타임이 될 때까지 사용할 수 없는 정보를 사용 하 여 보안 동작을 선택할 수 있으므로 매우 유연 합니다. 함께 유연성으로는 작업이 적용 되는 사용 권한의 상태 유지 되지 않는다는 결정 하는 데 사용 하는 런타임 정보가 그대로 위험이 따릅니다.
+
+ 가능하면 선언적 보안을 사용합니다. 선언적 요청은 이해 하기 쉽습니다.
+
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
+ 명령적 보안 요청으로 사용 되 고 사용 권한을 변경할 수 있는 정보에는 사용 권한의 상태 의존 하지 않는 있는지 검토 합니다.
+
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우
+ 사용 권한을 변경 되는 데이터에 의존 하지 않는 경우이 규칙에서 경고를 표시 하지 않아도 안전 합니다. 그러나 해당 하는 선언적 명령적 요청을 변경 하는 것이 좋습니다.
+
+## <a name="see-also"></a>참고 항목
+ [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines) [데이터 및 모델링](/dotnet/framework/data/index)

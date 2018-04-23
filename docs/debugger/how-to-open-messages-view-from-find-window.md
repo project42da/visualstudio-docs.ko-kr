@@ -2,8 +2,7 @@
 title: '방법: 창 찾기에서 메시지 뷰 열기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - Messages View in Spy++, opening
@@ -14,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c711b7a9e8fd40b2b45e1f2c70c31f35df5b1135
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 4af7e15605915849aa57d73b6e3f59ce89500575
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-open-messages-view-from-find-window"></a>방법: 창 찾기에서 메시지 뷰 열기
 사용 하기 어려운 찾을 수 있습니다는 **창 찾기** 대화 상자의 대상 창을 선택 하 고 다음 해당 창 메시지 뷰를 엽니다.  

@@ -2,9 +2,8 @@
 title: '오류: 디버깅 큰&#39;t 가능한 때문에 시스템에 커널 디버거가 사용 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
-ms.topic: reference
+ms.technology: vs-ide-debug
+ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.error.kernel_dbg_enabled
 dev_langs:
@@ -19,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ce2526adc75e7b42ee0aadac5c716b1d0382f35e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: ba943057da003a0fafee6d6fb8c6082d228779f9
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="error-debugging-isn39t-possible-because-a-kernel-debugger-is-enabled-on-the-system"></a>오류: 디버깅 큰&#39;t 가능한 때문에 시스템에 커널 디버거가 사용 중
 관리 코드를 디버깅할 때 다음 오류 메시지가 나타날 수 있습니다.  

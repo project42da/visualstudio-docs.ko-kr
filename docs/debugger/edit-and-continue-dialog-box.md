@@ -2,8 +2,7 @@
 title: 편집 하며 계속 하기 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.ENC.welcome
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 75c47d29e274b93957e35ef516090b42337ef923
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c2b8e9051a127a7338bc5d1ae6bd82b2e65ba3f4
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="edit-and-continue-dialog-box"></a>편집하며 계속하기 대화 상자
 (네이티브 전용) 디버깅 하는 동안 코드를 편집 하는 경우이 대화 상자가 나타납니다 및 **편집 하며 계속 하기** 코드 변경 내용을 적용할 수 있다고 인식 합니다. 자세한 내용은 참조 [편집 하며 계속 하기](../debugger/edit-and-continue.md)합니다.  

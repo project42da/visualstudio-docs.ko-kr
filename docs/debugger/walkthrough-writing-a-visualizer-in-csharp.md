@@ -2,8 +2,7 @@
 title: '연습: C#에서 시각화 도우미 작성 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -16,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7520072d719d7941acff57b871b8b1d1c69d0d7d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 490c2c2b15eff701cee751b57bbf55024910beab
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="walkthrough-writing-a-visualizer-in-c"></a>연습: C#에서 시각화 도우미 작성 #
 이 연습에서는 C#을 사용 하 여 간단한 시각화 도우미를 작성 하는 방법을 보여 줍니다. 이 연습에서 만들 시각화 도우미는 Windows forms 메시지 상자를 사용 하 여 문자열의 내용을 표시 합니다. 이 간단한 문자열 시각화 도우미 자체에서 특히 유용 하지 않습니다. 하지만 다른 데이터 형식에 대 한 보다 유용한 시각화 도우미를 만들기 위해 수행 해야 하는 기본 단계를 보여 줍니다.  

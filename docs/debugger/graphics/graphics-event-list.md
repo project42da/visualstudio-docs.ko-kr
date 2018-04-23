@@ -2,8 +2,7 @@
 title: 그래픽 이벤트 목록 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.graphics.eventlist
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 244f7dd8c89eb1dcb15b81bcb20c0db9cb6cf617
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b3640a1bbb06de7b05eeb62f847504690921b324
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="graphics-event-list"></a>그래픽 이벤트 목록
 Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 게임 또는 앱의 프레임 렌더링 중 기록된 Direct3D 이벤트를 살펴봅니다.  
@@ -56,7 +55,7 @@ Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 �
 -   에 **그래픽 이벤트 목록** 창의 이벤트 목록 위에 **보기** 드롭다운 중에서 선택할는 **타임 라인** 보기 또는 **GPU작업** 보기.  
   
 ### <a name="filtering-events"></a>이벤트 필터링  
- **그래픽 이벤트 목록** 창의 오른쪽 맨 위 모퉁이에 있는 검색 상자를 사용하여 이름에 특정 키워드가 포함된 이벤트만 포함하도록 이벤트 목록을 필터링할 수 있습니다. 이전 그림에서처럼 `Vertex`와 같은 키워드 하나를 지정하거나 `Draw;Primitive`와 같이 세미콜론으로 구분된 목록을 사용하여 여러 키워드를 지정할 수 있습니다. 그러면 이름에 `Draw` 또는 `Primitive` 가 포함된 이벤트를 찾게 됩니다. 검색어는 공백을 구분합니다. 예를 들어 `VSSet`와 `VS Set`는 다른 검색어입니다. 따라서 검색어는 주의 깊게 입력해야 합니다.  
+ **그래픽 이벤트 목록** 창의 오른쪽 맨 위 모퉁이에 있는 검색 상자를 사용하여 이름에 특정 키워드가 포함된 이벤트만 포함하도록 이벤트 목록을 필터링할 수 있습니다. 이전 그림에서처럼 `Vertex`와 같은 키워드 하나를 지정하거나 `Draw;Primitive`와 같이 세미콜론으로 구분된 목록을 사용하여 여러 키워드를 지정할 수 있습니다. 그러면 이름에 `Draw` 또는 `Primitive` 가 포함된 이벤트를 찾게 됩니다. 검색어는 공백을 구분합니다. 예를 들어 `VSSet` 와 `VS Set` 는 다른 검색어입니다. 따라서 검색어는 주의 깊게 입력해야 합니다.  
   
 ### <a name="moving-between-draw-calls"></a>그리기 호출 간에 이동  
  `Draw` 호출 검사는 특히 중요하므로 **그래픽 이벤트 목록** 창의 왼쪽 맨 아래 모퉁이에 있는 **다음 그리기 호출로 이동** 및 **이전 그리기 호출로 이동** 단추를 사용하여 그리기 호출을 찾으면 그리기 호출 간에 신속하게 이동할 수 있습니다.  
@@ -98,7 +97,7 @@ Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 �
 |이벤트 그룹 종료|`EndEventInt`|`EndEvent`|`D3DPerf_EndEvent`|  
 |이벤트 표식 만들기|`SetMarkerInt`|`SetMarker`|`D3DPerf_SetMarker`|  
   
- 사용 중인 Direct3D 버전에서 지원하는 API 중 하나를 사용할 수 있습니다. 예를 들어 Direct3D 11.1 API를 대상으로 하는 경우 `SetMarker` 또는 `D3DPerf_SetMarker`를 사용하여 이벤트 표식을 만들 수 있지만 `SetMarkerInt`는 Direct3D 11.2에서만 사용할 수 있으므로 사용하지 마세요. 그리고 다른 버전의 Direct3D를 지원하는 API를 동일한 앱에서 함께 사용할 수 있습니다.  
+ 사용 중인 Direct3D 버전에서 지원하는 API 중 하나를 사용할 수 있습니다. 예를 들어 Direct3D 11.1 API를 대상으로 하는 경우 `SetMarker` 또는 `D3DPerf_SetMarker` 를 사용하여 이벤트 표식을 만들 수 있지만 `SetMarkerInt` 는 Direct3D 11.2에서만 사용할 수 있으므로 사용하지 마세요. 그리고 다른 버전의 Direct3D를 지원하는 API를 동일한 앱에서 함께 사용할 수 있습니다.  
 
 <!-- VERSIONLESS -->
 <a name="resource-history"></a>
@@ -108,7 +107,7 @@ Visual Studio Graphics Analyzer의 그래픽 이벤트 목록을 사용하여 �
 
 이 창에는 이벤트 목록에서 선택한 항목의 기록을 볼 수 있습니다.  맨 위에 있는 드롭다운의 기록을 보려면 다른 항목을 선택 데 사용할 수 있습니다.  위쪽 창에 포함 된 **프레임 설치 이벤트**합니다.  이 이벤트에 해당을 *만들기* 범주를 입력 하 고 일반적으로 초기화 하 고 리소스를 만들지 여부를 지정 하는 호출 됩니다.  포함 하 고 창 아래쪽에서 **프레임 이벤트** 섹션.  이러한 일반적인 읽기 되었으며 리소스의 사용 하는 동안 발생 하는 이벤트를 작성 합니다.  
 
-Column|설명
+열|설명
 ---|---
 **Type** | 일반적으로 항목의 형식을 보여 줍니다 *만들기*, *읽기* 및 *쓰기*합니다.  
 **보기** | 리소스의 미리 보기에 표시 됩니다.  당시에는 리소스의 자세히 보기를 열려면 미리 보기를 두 번 클릭 합니다.  

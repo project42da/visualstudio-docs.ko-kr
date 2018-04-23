@@ -2,8 +2,7 @@
 title: '방법: ASP.NET 예외 디버깅 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -20,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 1f6babfc3312ca746f64c888b569110d70dedb0e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5923818e93170ded1f857ac20d42cd6134aed5d3
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-debug-aspnet-exceptions"></a>방법: ASP.NET 예외 디버깅
 예외 디버깅은 강력한 개발의 중요 한 부분이 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램입니다. 예외를 디버깅 하는 방법에 대 한 일반 정보는 [디버거를 사용한 예외 관리](../debugger/managing-exceptions-with-the-debugger.md)합니다.  

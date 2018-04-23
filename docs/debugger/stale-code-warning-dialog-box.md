@@ -2,8 +2,7 @@
 title: 부실 코드 경고 대화 상자가 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.ENC.stalecode
@@ -23,11 +22,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2aa5d05695f56721a25d8a1b55c983e85f17356
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ec80baa04529bcc6a9705d1c8df03e120e6bc64e
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="stale-code-warning-dialog-box"></a>부실 코드 경고 대화 상자
 이 대화 상자가 나타납니다 했으면 변경 내용을 네이티브 코드에 **편집 하며 계속 하기** 즉시 적용 하지 못했습니다. 그 결과 현재 스택 프레임의 일부 네이티브 코드가 만료되어 부실 코드가 됩니다. 자세한 내용은 참조 [하는 방법: 부실 코드 작업](http://msdn.microsoft.com/en-us/c7536e95-66a6-44a0-995d-3fe5035250b4)합니다.  

@@ -1,6 +1,5 @@
 ---
-title: '방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트 | Microsoft Docs'
-ms.custom: ''
+title: '방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트'
 ms.date: 11/04/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -13,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c9d6a28c5dd0ae8d72f11c76d33ff15268d4dda4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: eb0642828daa96d7904d4e4bb967afc5f1c563d9
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트
 
@@ -50,10 +49,10 @@ ms.lasthandoff: 04/16/2018
 
 선택 하거나 다음 옵션을 선택 취소 합니다.
 
-    |옵션|설명|  
-    |------------|-----------------|  
-    |**체크 인 적용 현재 솔루션의 일부인 파일만 포함 하도록 합니다.**|코드 분석 솔루션 및 프로젝트 구성 파일에 지정 된 파일에 대해서만 실행할 수 있습니다. 이 정책을 솔루션의 일부인 모든 코드를 분석 하는 것을 보장 합니다.|  
-    |**C/c + + 코드 분석 적용 (/analyze)**|모든 C 또는 c + + 프로젝트를 빌드할 수 필요는 /analyze 컴파일러 옵션 검사 하기 전에 코드 분석 실행을 합니다.|  
+    |옵션|설명|
+    |------------|-----------------|
+    |**체크 인 적용 현재 솔루션의 일부인 파일만 포함 하도록 합니다.**|코드 분석 솔루션 및 프로젝트 구성 파일에 지정 된 파일에 대해서만 실행할 수 있습니다. 이 정책을 솔루션의 일부인 모든 코드를 분석 하는 것을 보장 합니다.|
+    |**C/c + + 코드 분석 적용 (/analyze)**|모든 C 또는 c + + 프로젝트를 빌드할 수 필요는 /analyze 컴파일러 옵션 검사 하기 전에 코드 분석 실행을 합니다.|
     |**관리 코드에 대 한 코드 분석을 적용**|에서는 모든 관리 되는 프로젝트 코드 분석을 실행 하 고 빌드 전에 체크 인할 수 있습니다.|
 
 ### <a name="to-specify-a-managed-rule-set"></a>관리 되는 규칙 집합을 지정 하려면

@@ -2,8 +2,7 @@
 title: 응용 프로그램 디버깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -16,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2239b51b721b74d25f7c361b0484afbdcd44fe5d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 3d1ed00ca584bc9dce703585e4a1630c62d6496f
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debugging-applications"></a>응용 프로그램 디버깅
 다음 섹션에서는 특정 유형의 응용 프로그램에 대한 디버그를 설명합니다. 다른 응용 프로그램 종류와 다른 언어는 다른 설정과 기술을 필요로 하며, 디버그해야 하는 다양한 문제를 발생시킵니다.  

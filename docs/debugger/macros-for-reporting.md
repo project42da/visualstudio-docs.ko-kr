@@ -2,8 +2,7 @@
 title: 보고서 매크로 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.macros
@@ -25,11 +24,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d6c35a2487e2917f62e35d6e819f899ee2151ffd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: dd2dbb0651aa35243090fb554fa9142573e04e04
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="macros-for-reporting"></a>보고서 매크로
 사용할 수는 **_RPTn**, 및 **_RPTFn** crtdbg 매크로입니다. 사용 하 여 H `printf` 문을 디버깅 합니다. 이러한 매크로 사용 중인 버전에 자동으로 나타나지 않지만 빌드에서 **_DEBUG** 로 둘러쌀 필요가 없습니다 이므로 정의 되지 않은 **#ifdef**s입니다.  

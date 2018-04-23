@@ -2,8 +2,7 @@
 title: 기호 및 기호 태그 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69d2f5c2182f32a95ca95d24c5319b164f27f1ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 72f4cb4b6ed35e880e1cb26980420f4e951ffc16
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="symbols-and-symbol-tags"></a>기호 및 기호 태그
 컴파일된 프로그램에 대 한 디버그 정보 기호 디버그 인터페이스 액세스 (DIA) SDK Api를 사용 하 여 액세스할 수 있는 프로그램 데이터베이스 (.pdb) 파일에 저장 됩니다. 모든 기호는 [idiasymbol:: Get_symtag](../../debugger/debug-interface-access/idiasymbol-get-symtag.md) 및 [idiasymbol:: Get_symindexid](../../debugger/debug-interface-access/idiasymbol-get-symindexid.md) 속성입니다. `symTag` 속성에 정의 된 대로 기호의 종류를 나타내는 [SymTagEnum 열거형](../../debugger/debug-interface-access/symtagenum.md) 열거 합니다. `symIndexId` 속성은 한 `DWORD` 기호의 모든 인스턴스에 대해 고유 식별자를 포함 하는 값입니다.  

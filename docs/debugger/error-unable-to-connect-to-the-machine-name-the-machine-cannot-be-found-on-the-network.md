@@ -1,10 +1,9 @@
 ---
-title: '오류: 컴퓨터에 연결할 수 없습니다 &lt;이름&gt;합니다. 네트워크에서 컴퓨터를 찾을 수 없습니다. | Microsoft Docs'
+title: '오류: 컴퓨터에 연결할 수 없습니다 &lt;이름&gt;합니다. 네트워크에서 컴퓨터를 찾을 수 없습니다. | Microsoft 문서'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
-ms.topic: reference
+ms.technology: vs-ide-debug
+ms.topic: troubleshooting
 f1_keywords:
 - vs.debug.remote.dcom_disabled
 dev_langs:
@@ -19,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cf8716602469eccb40dabda15e91d6198fa9b489
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3e0654148823d40277bdd9c6b6d8ec5b881fdb80
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="error-unable-to-connect-to-the-machine-ltnamegt-the-machine-cannot-be-found-on-the-network"></a>오류: 컴퓨터에 연결할 수 없습니다 &lt;이름&gt;합니다. 네트워크에서 컴퓨터를 찾을 수 없습니다.
 이 오류는 다음과 같은 경우에 발생합니다.  

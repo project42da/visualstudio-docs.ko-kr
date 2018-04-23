@@ -2,8 +2,7 @@
 title: '방법: Visual Studio 솔루션에 포함 되지 않은 실행 파일 디버깅 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -21,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d73b122bf882ee1ccf7ce7e35e8a36cd91f2eb07
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e16a938eda683a607dbf7d9418b2a7bd4455a0da
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-debug-an-executable-that-is-not-part-of-a-visual-studio-solution"></a>방법: Visual Studio 솔루션에 포함 되지 않은 실행 파일 디버깅
 경우에 따라 프로그램 (.exe 파일) 되지 않은 실행 파일을 디버깅 하려면 수의 일부로 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트. 예를 들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 외부에서 만든 실행 파일이나 다른 사용자로부터 받은 실행 파일이 이러한 경우입니다.  

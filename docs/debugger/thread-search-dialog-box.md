@@ -2,8 +2,7 @@
 title: 스레드 검색 대화 상자 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Thread Search
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47fd8c0cfa6f9acbe95af58e10f1e709ecf7c7d3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 44ce2c01bc943945439e0682b9462f24c7d9c5fd
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="thread-search-dialog-box"></a>스레드 검색 대화 상자
 이 대화 상자를 사용 하 여 선택 합니다. 파일에 지정 된 스레드에 대 한 노드를 [스레드 뷰](../debugger/threads-view.md)합니다. 이 대화 상자를 표시 하려면 포커스를 이동 하는 **스레드** 뷰 창. 그런 다음 선택 **스레드 찾기** 에서 **검색** 메뉴.  

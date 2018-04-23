@@ -1,9 +1,8 @@
 ---
-title: C + + 액세스 위반을 어떻게 디버깅할 수 있습니까? | Microsoft Docs
+title: C + + 액세스 위반을 어떻게 디버깅할 수 있습니까? | Microsoft 문서
 ms.custom: ''
 ms.date: 05/23/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.access
@@ -21,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a28de01a6284c7b0c382b73b9f1842fe2e24afc5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b131ba4acf761a11aa9f39807d1db3202b021c9d
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-can-i-debug-a-c-access-violation"></a>C + + 액세스 위반을 어떻게 디버깅할 수 있습니까?
 ## <a name="problem-description"></a>문제 설명  

@@ -1,6 +1,5 @@
 ---
-title: 새 연결 추가 | Microsoft Docs
-ms.custom: ''
+title: 새 연결 추가
 ms.date: 11/04/2016
 ms.topic: conceptual
 author: gewarren
@@ -9,11 +8,11 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0355b4fe3c05fb089e6feaac5bb52ff7f3f56da0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 28633fcc4c744269a2a90cc72c8136afbda6f561
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="add-new-connections"></a>새 연결 추가
 
@@ -37,9 +36,9 @@ ms.lasthandoff: 04/16/2018
 
 ![서버 탐색기 새 연결 아이콘](../data-tools/media/raddata-server-explorer-new-connection-icon.png "raddata 서버 탐색기에 대 한 새 연결 상태 아이콘")
 
-그러면는 **연결 추가** 대화 상자. 여기에서 SQL Server LocalDB 인스턴스의 이름을 입력 했습니다 했습니다.  
+그러면는 **연결 추가** 대화 상자. 여기에서 SQL Server LocalDB 인스턴스의 이름을 입력 했습니다 했습니다.
 
-![새 연결 추가](../data-tools/media/raddata-add-new-connection-dialog.png "raddata 추가 새 연결 대화 상자")  
+![새 연결 추가](../data-tools/media/raddata-add-new-connection-dialog.png "raddata 추가 새 연결 대화 상자")
 
 ## <a name="change-the-provider"></a>공급자 변경
 
@@ -57,4 +56,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="see-also"></a>참고자료
 
-[.NET용 Visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)
+- [.NET용 Visual Studio 데이터 도구](../data-tools/visual-studio-data-tools-for-dotnet.md)

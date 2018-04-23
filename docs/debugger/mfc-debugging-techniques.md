@@ -2,8 +2,7 @@
 title: MFC 디버깅 기술 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - AfxEnableMemoryTracking
@@ -28,11 +27,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f7f0dd5511640fe9ebb95dbdfb213ce7f37f6c8c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fe2ae47be54f175f798e321da7644540f8ea5049
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="mfc-debugging-techniques"></a>MFC 디버깅 기술
 다음은 MFC 프로그램을 디버깅하는 데 유용한 디버깅 기술입니다.  
@@ -76,9 +75,9 @@ AfxDebugBreak( );
 _asm int 3  
 ```  
   
- 다른 플랫폼에서는 `AfxDebugBreak`가 `DebugBreak`를 단순히 호출할 뿐입니다.  
+ 다른 플랫폼에서는 `AfxDebugBreak` 가 `DebugBreak`를 단순히 호출할 뿐입니다.  
   
- 릴리스 빌드를 만들 때 `AfxDebugBreak` 문을 제거하거나 `#ifdef _DEBUG`를 사용하여 이 문을 포함시키십시오.  
+ 릴리스 빌드를 만들 때 `AfxDebugBreak` 문을 제거하거나 `#ifdef _DEBUG` 를 사용하여 이 문을 포함시키십시오.  
   
  [항목 내용](#BKMK_In_this_topic)  
   
@@ -147,7 +146,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
     |값|설명|  
     |-----------|-----------------|  
     |**allocMemDF**|진단 메모리 할당자를 사용합니다(기본값).|  
-    |**delayFreeMemDF**|`delete` 또는 `free`를 호출할 경우 프로그램이 종료될 때까지 메모리 해제를 지연시킵니다. 이렇게 하면 프로그램이 가능한 최대 메모리를 할당하게 됩니다.|  
+    |**delayFreeMemDF**|`delete` 또는 `free` 를 호출할 경우 프로그램이 종료될 때까지 메모리 해제를 지연시킵니다. 이렇게 하면 프로그램이 가능한 최대 메모리를 할당하게 됩니다.|  
     |**checkAlwaysMemDF**|호출 [AfxCheckMemory](/cpp/mfc/reference/diagnostic-services#afxcheckmemory) 될 때마다 메모리를 할당 하거나 해제 합니다.|  
   
      논리적 OR 연산을 수행하면 다음과 같이 이 값들을 조합하여 사용할 수 있습니다.  
@@ -162,7 +161,7 @@ TRACE( _T("This is a test of the TRACE macro that uses a TCHAR string: %s %d\n")
   
 1.  만들기는 [CMemoryState](http://msdn.microsoft.com/en-us/8fade6e9-c6fb-4b2a-8565-184a912d26d2) 개체와 호출 된 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Checkpoint) 멤버 함수입니다. 그러면 첫 번째 메모리 스냅숏이 만들어집니다.  
   
-2.  프로그램이 메모리 할당 작업과 할당 취소 작업을 수행하면 다른 `CMemoryState` 개체를 만들고 해당 개체에 대해 `Checkpoint`를 호출합니다. 그러면 메모리 사용에 대한 두 번째 스냅숏이 만들어집니다.  
+2.  프로그램이 메모리 할당 작업과 할당 취소 작업을 수행하면 다른 `CMemoryState` 개체를 만들고 해당 개체에 대해 `Checkpoint` 를 호출합니다. 그러면 메모리 사용에 대한 두 번째 스냅숏이 만들어집니다.  
   
 3.  세 번째 `CMemoryState` 개체를 만들고 이전의 두 [CMemoryState::Difference](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Difference) 개체를 인수로 제공하여 `CMemoryState` 멤버 함수를 호출합니다. 두 메모리 상태가 서로 다르면 `Difference` 함수가 0이 아닌 값을 반환합니다. 이것은 할당이 취소되지 않은 메모리 블록이 있음을 나타냅니다.  
   
@@ -218,20 +217,20 @@ Largest number used: 67 bytes
 Total allocations: 67 bytes  
 ```  
   
- free 블록은 `afxMemDF`가 `delayFreeMemDF`로 설정되면 할당 취소가 연기되는 블록입니다.  
+ free 블록은 `afxMemDF` 가 `delayFreeMemDF`로 설정되면 할당 취소가 연기되는 블록입니다.  
   
  두 번째 줄에 표시된 보통 개체 블록은 계속 힙에 할당되어 있습니다.  
   
  비개체 블록에는 `new`로 할당된 배열 및 구조체가 포함됩니다. 이 경우 할당이 취소되지 않는 비개체 블록 네 개가 힙에 할당되어 있습니다.  
   
- `Largest number used`를 사용하면 프로그램은 언제라도 최대 메모리를 사용할 수 있습니다.  
+ `Largest number used` 를 사용하면 프로그램은 언제라도 최대 메모리를 사용할 수 있습니다.  
   
  `Total allocations` 를 사용하면 프로그램이 사용하는 총 메모리를 알 수 있습니다.  
   
  [항목 내용](#BKMK_In_this_topic)  
   
 ###  <a name="BKMK_Taking_object_dumps"></a> 개체 덤프 수행  
- MFC 프로그램에서 사용할 수 있습니다 [cmemorystate:: Dumpallobjectssince](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince) 할당이 취소 되지 않은 힙에서 모든 개체에 대 한 설명을 덤프할 합니다. `DumpAllObjectsSince` 는 마지막 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Checkpoint)를 단순히 호출할 뿐입니다. `Checkpoint`를 호출할 수 없는 경우 `DumpAllObjectsSince`가 현재 메모리에 있는 모든 개체와 비개체를 덤프합니다.  
+ MFC 프로그램에서 사용할 수 있습니다 [cmemorystate:: Dumpallobjectssince](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__DumpAllObjectsSince) 할당이 취소 되지 않은 힙에서 모든 개체에 대 한 설명을 덤프할 합니다. `DumpAllObjectsSince` 는 마지막 [CMemoryState::Checkpoint](/cpp/mfc/reference/cmemorystate-structure.md#cmemorystate__Checkpoint)를 단순히 호출할 뿐입니다. `Checkpoint` 를 호출할 수 없는 경우 `DumpAllObjectsSince` 가 현재 메모리에 있는 모든 개체와 비개체를 덤프합니다.  
   
 > [!NOTE]
 >  MFC 개체를 덤프하려면 먼저 [진단 추적을 활성화](#BKMK_Enabling_Memory_Diagnostics)해야 합니다.  
@@ -268,9 +267,9 @@ Phone #: 581-0215
   
  대개의 경우 줄 맨 앞의 중괄호에 있는 번호는 개체가 할당된 순서를 나타냅니다. 가장 최근에 할당된 개체는 가장 큰 번호를 가지며 덤프 맨 위에 나타납니다.  
   
- 개체 덤프에서 최대한의 정보를 얻기 위해 모든 `Dump` 파생 개체의 `CObject` 멤버 함수를 재정의하여 개체 덤프를 사용자 지정할 수 있습니다.  
+ 개체 덤프에서 최대한의 정보를 얻기 위해 모든 `Dump` 파생 개체의 `CObject`멤버 함수를 재정의하여 개체 덤프를 사용자 지정할 수 있습니다.  
   
- 전역 변수 `_afxBreakAlloc`을 중괄호 안에 있는 번호에 설정하여 특정 메모리 할당에 중단점을 설정할 수 있습니다. 프로그램을 다시 실행하면 할당할 때 디버거가 실행을 중단합니다. 그러면 호출 스택에서 프로그램이 해당 지점에 도달한 방법을 알 수 있습니다.  
+ 전역 변수 `_afxBreakAlloc` 을 중괄호 안에 있는 번호에 설정하여 특정 메모리 할당에 중단점을 설정할 수 있습니다. 프로그램을 다시 실행하면 할당할 때 디버거가 실행을 중단합니다. 그러면 호출 스택에서 프로그램이 해당 지점에 도달한 방법을 알 수 있습니다.  
   
  C 런타임 라이브러리에는 C 런타임 할당에 사용할 수 있는 유사한 함수인 [_CrtSetBreakAlloc](/cpp/c-runtime-library/reference/crtsetbreakalloc)이 있습니다.  
   
@@ -339,7 +338,7 @@ Phone #: 581-0215
   
  **비개체 할당**  
   
- 일부 할당은 `CPerson` 과 같은 개체이며 일부는 비개체 할당입니다. "비개체 할당" 이란 개체에서 파생 되지 않은 `CObject` 또는와 같은 기본 C 형식의 할당 `char`, `int`, 또는 `long`합니다. **CObject**파생 클래스가 내부 버퍼와 같은 추가 공간을 할당하는 경우 해당 개체는 개체 할당과 비개체 할당을 모두 표시합니다.  
+ 일부 할당은 `CPerson`과 같은 개체이며 일부는 비개체 할당입니다. "비개체 할당" 이란 개체에서 파생 되지 않은 `CObject` 또는와 같은 기본 C 형식의 할당 `char`, `int`, 또는 `long`합니다. **CObject**파생 클래스가 내부 버퍼와 같은 추가 공간을 할당하는 경우 해당 개체는 개체 할당과 비개체 할당을 모두 표시합니다.  
   
  **메모리 누수 방지**  
   
@@ -400,7 +399,7 @@ void CPerson::Dump( CDumpContext& dc ) const
 #endif  
 ```  
   
- `CDumpContext` 인수를 추가하여 어디로 덤프 출력할지 지정해야 합니다. MFC의 디버그 버전에서는 미리 정의된 `CDumpContext` 개체인 `afxDump`를 사용하여 출력을 디버거로 보냅니다.  
+ `CDumpContext` 인수를 추가하여 어디로 덤프 출력할지 지정해야 합니다. MFC의 디버그 버전에서는 미리 정의된 `CDumpContext` 개체인 `afxDump` 를 사용하여 출력을 디버거로 보냅니다.  
   
 ```  
 CPerson* pMyPerson = new CPerson;  

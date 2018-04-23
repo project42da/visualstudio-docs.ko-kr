@@ -1,6 +1,5 @@
 ---
-title: '방법: 코드 분석 체크 인 정책 사용 하 여 유지 관리 가능한 코드를 적용 합니다. | Microsoft Docs'
-ms.custom: ''
+title: '방법: 코드 분석 체크 인 정책을 통해 유지 관리할 수 있는 코드 적용'
 ms.date: 11/04/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -12,11 +11,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9c89971795c3785b26ad455583d63326bf7c5d70
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 339308675350bb6e4445b1dd068eb07d66f34164
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-enforce-maintainable-code-with-a-code-analysis-check-in-policy"></a>방법: 코드 분석 체크 인 정책 사용 하 여 유지 관리 가능한 코드 적용
 

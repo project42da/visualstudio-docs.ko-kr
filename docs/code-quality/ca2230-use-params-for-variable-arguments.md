@@ -1,10 +1,8 @@
 ---
-title: 'CA2230: 가변 인수에 대 한 매개 변수를 사용 하 여 | Microsoft Docs'
-ms.custom: ''
+title: 'CA2230: 가변 인수로 params를 사용하십시오.'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - UseParamsForVariableArguments
 - CA2230
@@ -17,39 +15,38 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b227f4eeb769f81a07a9a065df214722876a4b50
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4496173284eef595097148046f727c844da39f2
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2230-use-params-for-variable-arguments"></a>CA2230: 가변 인수로 params를 사용하십시오.
-|||  
-|-|-|  
-|TypeName|UseParamsForVariableArguments|  
-|CheckId|CA2230|  
-|범주|Microsoft.Usage|  
-|변경 수준|주요 변경|  
-  
-## <a name="cause"></a>원인  
- Public 또는 protected 형식이 사용 하는 public 또는 protected 메서드가 들어는 `VarArgs` 호출 규칙입니다.  
-  
-## <a name="rule-description"></a>규칙 설명  
- `VarArgs` 가변 개수의 매개 변수를 사용 하는 특정 메서드 정의 호출 규칙이 사용 됩니다. 사용 하는 메서드는 `VarArgs` CLS 규격이 아닙니다. 공용 언어 사양 () 호출 규칙 및 여러 프로그래밍 언어 액세스할 수 없습니다.  
-  
- C#에서 `VarArgs` 메서드 매개 변수 목록으로 종료 될 때 호출 규칙이 사용 됩니다는 `__arglist` 키워드입니다. Visual Basic을 지원 하지 않습니다는 `VarArgs` 타원을 사용 하는 관리 되지 않는 코드에만 사용할 수 있습니다 호출 규칙, 및 Visual c + + `...` 표기법입니다.  
-  
-## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- C#에서이 규칙 위반을 해결 하려면 사용 된 [params](/dotnet/csharp/language-reference/keywords/params) 키워드 대신 `__arglist`합니다.  
-  
-## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
-  
-## <a name="example"></a>예제  
- 다음 예제에서는 두 가지 방법, 규칙을 위반 하 고 다른 하나는 규칙을 만족 보여 줍니다.  
-  
- [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]  
-  
-## <a name="see-also"></a>참고 항목  
- <xref:System.Reflection.CallingConventions?displayProperty=fullName>   
- [언어 독립성 및 언어 독립적 구성 요소](/dotnet/standard/language-independence-and-language-independent-components)
+|||
+|-|-|
+|TypeName|UseParamsForVariableArguments|
+|CheckId|CA2230|
+|범주|Microsoft.Usage|
+|변경 수준|주요 변경|
+
+## <a name="cause"></a>원인
+ Public 또는 protected 형식이 사용 하는 public 또는 protected 메서드가 들어는 `VarArgs` 호출 규칙입니다.
+
+## <a name="rule-description"></a>규칙 설명
+ `VarArgs` 가변 개수의 매개 변수를 사용 하는 특정 메서드 정의 호출 규칙이 사용 됩니다. 사용 하는 메서드는 `VarArgs` CLS 규격이 아닙니다. 공용 언어 사양 () 호출 규칙 및 여러 프로그래밍 언어 액세스할 수 없습니다.
+
+ C#에서 `VarArgs` 메서드 매개 변수 목록으로 종료 될 때 호출 규칙이 사용 됩니다는 `__arglist` 키워드입니다. Visual Basic을 지원 하지 않습니다는 `VarArgs` 타원을 사용 하는 관리 되지 않는 코드에만 사용할 수 있습니다 호출 규칙, 및 Visual c + + `...` 표기법입니다.
+
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
+ C#에서이 규칙 위반을 해결 하려면 사용 된 [params](/dotnet/csharp/language-reference/keywords/params) 키워드 대신 `__arglist`합니다.
+
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우
+ 이 규칙에서는 경고를 표시해야 합니다.
+
+## <a name="example"></a>예제
+ 다음 예제에서는 두 가지 방법, 규칙을 위반 하 고 다른 하나는 규칙을 만족 보여 줍니다.
+
+ [!code-csharp[FxCop.Usage.UseParams#1](../code-quality/codesnippet/CSharp/ca2230-use-params-for-variable-arguments_1.cs)]
+
+## <a name="see-also"></a>참고 항목
+ <xref:System.Reflection.CallingConventions?displayProperty=fullName> [언어 독립성 및 언어 독립적 구성 요소](/dotnet/standard/language-independence-and-language-independent-components)

@@ -2,9 +2,8 @@
 title: '&lt;fileAssociation&gt; 요소 (ClickOnce 응용 프로그램) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
-ms.topic: conceptual
+ms.technology: vs-ide-deployment
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -13,16 +12,16 @@ helpviewer_keywords:
 - <fileAssociation> element [ClickOnce application manifest]
 - manifests [ClickOnce], fileAssociation element
 ms.assetid: 8f951b4f-54f9-412e-a9e5-af4e379fcf08
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4da80f852526afa4692b7ecd6eefea3cc3c3de7e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1f59ef1d00951d4c49c1bcb19c6c9122e281c3ca
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltfileassociationgt-element-clickonce-application"></a>&lt;fileAssociation&gt; 요소 (ClickOnce 응용 프로그램)
 응용 프로그램에 연결할 파일 확장명을 식별 합니다.  
@@ -44,10 +43,10 @@ ms.lasthandoff: 04/16/2018
   
 |특성|설명|  
 |---------------|-----------------|  
-|`extension`|필수 요소. 응용 프로그램에 연결할 파일 확장명입니다.|  
-|`description`|필수 요소. 셸에서 사용 하기 위해 파일 형식을 설명 합니다.|  
-|`progid`|필수 요소. 파일 형식을 고유 하 게 식별 하는 이름입니다.|  
-|`defaultIcon`|필수 요소. 이 확장을 사용 하 여 파일에 대해 사용할 아이콘을 지정 합니다. 아이콘 파일을 사용 하 여 지정 해야 합니다는 [ \<파일 > 요소](../deployment/file-element-clickonce-application.md) 내에서 [ \<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md) 이 요소를 포함 하 합니다.|  
+|`extension`|필수. 응용 프로그램에 연결할 파일 확장명입니다.|  
+|`description`|필수. 셸에서 사용 하기 위해 파일 형식을 설명 합니다.|  
+|`progid`|필수. 파일 형식을 고유 하 게 식별 하는 이름입니다.|  
+|`defaultIcon`|필수. 이 확장을 사용 하 여 파일에 대해 사용할 아이콘을 지정 합니다. 아이콘 파일을 사용 하 여 지정 해야 합니다는 [ \<파일 > 요소](../deployment/file-element-clickonce-application.md) 내에서 [ \<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md) 이 요소를 포함 하 합니다.|  
   
 ## <a name="remarks"></a>설명  
  이 요소에 대 한 XML 네임 스페이스 참조를 포함 해야 합니다 ":-microsoft-com:clickonce.v1"입니다. 경우는 `<fileAssociation>` 요소는 사용, 뒤에 야는 `<application>` 부모에서 요소 [ \<어셈블리 > 요소](../deployment/assembly-element-clickonce-application.md)합니다.  

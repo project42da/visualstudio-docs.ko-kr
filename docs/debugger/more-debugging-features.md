@@ -2,8 +2,7 @@
 title: 더 디버깅 기능 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -16,14 +15,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f315a12c9dbe724643f05e17e752a4adfa173ee
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a46c62c05b762bee3233062a5b84e3ffca20e15a
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="more-debugging-features"></a>추가 디버그 기능
-이 섹션에는 Visual Studio 디버거와 함께 사용할 수 있는 추가 기능이 포함되어있습니다.  
+이 섹션에는 Visual Studio 디버거와 함께 사용할 수 있는 추가 기능이 포함되어 있습니다.  
   
  디버그를 더 빠르고 쉽게 해주는 팁과 요령 목록이 필요하면 [디버그 팁과 요령](http://blogs.msdn.com/b/visualstudio/archive/2015/05/22/debugging-tips-and-tricks.aspx)을 참조하세요.  
   

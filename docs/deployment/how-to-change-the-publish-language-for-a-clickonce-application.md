@@ -2,8 +2,7 @@
 title: '방법: 변경 된 ClickOnce 응용 프로그램에 대 한 게시 언어 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, changing publish language
 - publishing, ClickOnce
 ms.assetid: ef5024c4-cda1-4970-bc75-32a2a10c92c3
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f6b1590eb45950cb0e8b9de668b7eabe62d13c3b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d39535138b8b6e6be0c3384c73ab660d368c9b0c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-change-the-publish-language-for-a-clickonce-application"></a>방법: ClickOnce 응용 프로그램의 게시 언어 변경
 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 개발 컴퓨터의 culture 및 언어에 대 한 설치 기본값 중 표시 되는 사용자 인터페이스가 있습니다. 지역화 된 응용 프로그램을 게시 하는 경우에 언어와 문화권 지역화 된 버전과 일치 하도록 지정 해야 합니다. 결정 된 `Publish language` 프로젝트에 대 한 속성입니다.  

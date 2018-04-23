@@ -2,8 +2,7 @@
 title: '방법: 활성화 및 편집을 사용 하지 않도록 설정 하 고, (C#, VB, + +)를 계속 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -28,11 +27,11 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: c63f629bd0ba67156395b7bf1f1e142355ae9981
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9070913d1106eb5e2ca04160ad95c6a6fd46f752
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="how-to-enable-and-disable-edit-and-continue-c-vb-c"></a>방법: 활성화 및 편집을 사용 하지 않도록 설정 하 고, (C#, VB, + +)를 계속 합니다.
 편집 하며 계속 하기에서 사용 하거나 사용 하지 않도록 설정할 수는 **옵션** 디자인 타임에 대화 상자. 디버깅 중에는 이 설정을 변경할 수 없습니다.  
