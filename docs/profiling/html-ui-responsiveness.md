@@ -1,13 +1,9 @@
 ---
-title: "UWP 앱의 HTML UI 응답성 분석 | Microsoft Docs"
+title: UWP 앱의 HTML UI 응답성 분석 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - JavaScript
 helpviewer_keywords:
@@ -16,17 +12,16 @@ helpviewer_keywords:
 - UI Responsiveness Profiler [JavaScript]
 - profiler, UI responsiveness [JavaScript]
 - profiler, JavaScript [UWP apps]
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 71e8c18401b341ef1e1b24c35dc39e80758c31d2
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: 7dd31d94552895d42c803df81e1e66cd9a3947f0
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-html-ui-responsiveness-in-universal-windows-apps"></a>유니버설 Windows 앱의 HTML UI 응답성 분석
 이 항목에서는 유니버설 Windows 앱에 사용할 수 있는 성능 도구인 UI 응답성 프로파일러를 사용하여 앱에서 성능 문제를 격리하는 방법에 대해 설명합니다.  
@@ -44,7 +39,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 **로컬 컴퓨터** 또는 **장치**와 같은 배포 대상을 선택합니다.  
   
-2.  **디버그** 메뉴에서 **성능 프로파일러...**를 선택합니다.  
+2.  **디버그** 메뉴에서 **성능 프로파일러...** 를 선택합니다.  
   
      프로파일러의 분석 대상을 변경하려면**대상 변경**을 선택합니다.  
   

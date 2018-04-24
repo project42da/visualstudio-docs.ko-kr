@@ -1,24 +1,21 @@
 ---
-title: "Visual C++ 코드 조각 | Microsoft 문서"
-ms.custom: 
+title: Visual C++ 코드 조각 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: b2a8b1c99d1b084a6f8d3c050302e16ea40d64ac
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: fa6057f45c3c9030264f6a795caece6ed8a3b28e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ 코드 조각
 
@@ -68,7 +65,7 @@ Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 �
 
 ## <a name="where-can-i-find-a-complete-list-of-the-c-code-snippets"></a>C++ 코드 조각의 전체 목록이 있는 위치
 
-C++ 코드 조각의 전체 목록을 찾으려면 **도구** 메뉴에서 **코드 조각 관리자**로 이동하고 **언어**를 **Visual C++**로 설정합니다. 아래 창에서 **Visual C++**를 확장합니다. 모든 C++ 코드 조각의 이름이 사전순으로 표시되어야 합니다.
+C++ 코드 조각의 전체 목록을 찾으려면 **도구** 메뉴에서 **코드 조각 관리자**로 이동하고 **언어**를 **Visual C++** 로 설정합니다. 아래 창에서 **Visual C++** 를 확장합니다. 모든 C++ 코드 조각의 이름이 사전순으로 표시되어야 합니다.
 
 대부분 코드 조각의 이름은 이름 자체로 설명되지만 일부 이름은 혼동될 수 있습니다.
 

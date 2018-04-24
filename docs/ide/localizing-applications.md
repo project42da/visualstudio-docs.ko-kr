@@ -1,13 +1,10 @@
 ---
-title: "응용 프로그램 지역화 | Microsoft 문서"
-ms.custom: 
+title: 응용 프로그램 지역화 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Basic code, international applications
 - globalization [Visual Studio], localizing applications
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - applications [Visual Studio], localizing
 - localization [.NET Framework], applications
 ms.assetid: 879c20e0-8301-4f44-b520-97283848c965
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 92a7e56d05d0f9d71d51aa80fcc5d545b3baf061
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: b7920e0c6c7ffca6f694b35a6dd770727aef48d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="localizing-applications"></a>응용 프로그램 지역화
 *지역화*란 지정된 문화권이나 로캘로 응용 프로그램을 사용자 지정하는 프로세스입니다. 지역화는 주로 사용자 인터페이스 번역으로 구성됩니다.  

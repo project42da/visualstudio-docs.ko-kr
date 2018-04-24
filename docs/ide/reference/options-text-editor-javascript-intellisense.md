@@ -1,29 +1,27 @@
 ---
-title: "옵션, 텍스트 편집기, JavaScript, IntelliSense | Microsoft Docs"
-ms.custom: 
+title: 옵션, 텍스트 편집기, JavaScript, IntelliSense | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Intellisense.References
 - VS.ToolsOptionsPages.Text_Editor.JavaScript.Intellisense.General
 ms.assetid: b4a9816d-cf87-4dc6-a8d4-1591d6a48103
-caps.latest.revision: "20"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: d43a783bc070e5903af35c780bb9fc1ff3737295
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: fe387287b9b46e6fdd2972ce1a3f77e4f5349414
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="options-text-editor-javascript-intellisense"></a>옵션, 텍스트 편집기, JavaScript, IntelliSense
-**옵션** 대화 상자의 **IntelliSense** 페이지를 사용하여 JavaScript용 IntelliSense의 동작에 영향을 주는 설정을 수정합니다. 메뉴 모음에서 **도구** , **옵션**, **텍스트 편집기** , **IntelliSense**, **IntelliSense**, **도구.**페이지에 액세스할 수 있습니다.  
+**옵션** 대화 상자의 **IntelliSense** 페이지를 사용하여 JavaScript용 IntelliSense의 동작에 영향을 주는 설정을 수정합니다. 메뉴 모음에서 **도구** , **옵션**, **텍스트 편집기** , **IntelliSense**, **IntelliSense**, **도구.** 페이지에 액세스할 수 있습니다.  
   
 [!INCLUDE[note_settings_general](../../data-tools/includes/note_settings_general_md.md)]  
   

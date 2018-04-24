@@ -2,11 +2,8 @@
 title: FileClassifier 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - non-localizable resources [WPF MSBuild], classifying to embed in an assembly
 - FileClassifier task [WPF MSBuild]
 ms.assetid: 14e03310-fcc0-4bb2-a84d-cda12be66367
-caps.latest.revision: 7
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f9eaf8655bba29fc0b56108c2ad62db6e3b6d48
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: a754f5aef53eed581deb9ccafa0bf5c453d8086d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="fileclassifier-task"></a>FileClassifier 작업
 <xref:Microsoft.Build.Tasks.Windows.FileClassifier> 작업은 소스 리소스 집합을 어셈블리에 포함될 항목으로 분류합니다. 리소스를 지역화할 수 없는 경우 주 응용 프로그램 어셈블리에 포함되고, 그렇지 않으면 위성 어셈블리에 포함합니다.  
@@ -48,7 +44,7 @@ ms.lasthandoff: 04/10/2018
 ## <a name="remarks"></a>설명  
  **Culture** 매개 변수를 설정하지 않으면 **SourceFiles** 매개 변수를 사용하여 지정된 모든 리소스는 지역화할 수 없고, 그렇지 않고 이러한 리소스가 **false**로 설정된 **Localizable** 특성과 연결되어 있지 않는 한, 지역화할 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 단일 소스 파일을 리소스로 분류한 다음 프랑스어-캐나다(fr-CA) 문화권에 대한 위성 어셈블리에 포함합니다.  
   
 ```xml  

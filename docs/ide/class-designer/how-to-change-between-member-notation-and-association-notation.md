@@ -1,28 +1,26 @@
 ---
-title: "방법: 멤버 표기법과 연결 표기법 간 변경(클래스 디자이너) | Microsoft Docs"
-ms.custom: 
+title: '방법: 멤버 표기법과 연결 표기법 간 변경(클래스 디자이너) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - notation, member
 - association notation
 - member notation
 - notation, association
 ms.assetid: 65881c5a-d251-4a36-ad0d-73d088436092
-caps.latest.revision: "21"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 24b073c5dddea390972438ad9730f46aba97a85c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ef4216cb18ee46ded66c482749b39715f7f0e252
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-change-between-member-notation-and-association-notation-class-designer"></a>방법: 멤버 표시와 연결 표시 간 변경(클래스 디자이너)
 클래스 디자이너에서 클래스 다이어그램이 두 형식 사이의 연결 관계를 나타내는 방법을 멤버 표기법에서 연결 표기법으로, 또는 그 반대로 변경할 수 있습니다. 형식 연결 선으로 표시된 멤버는 형식이 어떻게 관련되어 있는지 효과적으로 시각화하여 보여 주는 경우가 많습니다.  

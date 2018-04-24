@@ -1,20 +1,20 @@
 ---
 title: Visual Studio에서 웹 성능 테스트용 요청 수준 플러그 인 만들기 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - request-level plug-in, creating
 - Web performance tests, requests
 ms.assetid: d0b5b23c-7e94-4637-be6c-2620a5442d46
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 59ca0964b72631b8ad5620f351cd57c85099a4ff
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: ea574f2f0c9b4d3f0f6da029433b5b600a400702
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-request-level-plug-in"></a>방법: 요청 수준 플러그 인 만들기
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/19/2018
 
      **새 프로젝트 추가** 대화 상자가 표시됩니다.
 
-2.  **설치된 템플릿**에서 **Visual C#**을 선택합니다.
+2.  **설치된 템플릿**에서 **Visual C#** 을 선택합니다.
 
 3.  템플릿 목록에서 **클래스 라이브러리**를 선택합니다.
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 03/19/2018
     >
     > **요청 실패: \<플러그 인> 이벤트: 파일 또는 어셈블리 '\<"플러그 인 이름".dll 파일>, 버전=\<n.n.n.n >, Culture = neutral, PublicKeyToken = null' 또는 해당 종속성 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.**
     >
-    > 이 오류는 플러그 인의 코드를 변경하고 새 DLL 버전 **(버전=0.0.0.0)**을 만들었지만 해당 플러그 인이 계속해서 원래 플러그 인 버전을 참조하는 경우에 발생합니다. 이 문제를 해결하려면 다음 단계를 수행합니다.
+    > 이 오류는 플러그 인의 코드를 변경하고 새 DLL 버전 **(버전=0.0.0.0)** 을 만들었지만 해당 플러그 인이 계속해서 원래 플러그 인 버전을 참조하는 경우에 발생합니다. 이 문제를 해결하려면 다음 단계를 수행합니다.
     >
     > 1.  웹 성능 및 부하 테스트 프로젝트에서는 참조에 경고가 표시됩니다. 참조를 제거했다가 플러그 인 DLL에 다시 추가합니다.
     > 2.  테스트 또는 적절한 위치에서 플러그 인을 제거했다가 다시 추가합니다.

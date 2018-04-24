@@ -1,26 +1,23 @@
 ---
-title: "성능 도구 보고서 뷰 사용자 지정 | Microsoft 문서"
-ms.custom: 
+title: 성능 도구 보고서 뷰 사용자 지정 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools, customizing report views
 - reports, customizing profiling report views
 ms.assetid: 5224ac52-0fc2-4269-8eb2-ead7fda3afd4
-caps.latest.revision: "16"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b31f426720cf410d45bf28be3b0278fe6af2bc38
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 691723e27cc2927733fe82aa1f79e9fd1d9d663d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="customizing-performance-tools-report-views"></a>성능 도구 보고서 뷰 사용자 지정
 이 섹션에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구를 통해 생성되는 보고서를 사용자 지정하는 방법을 설명합니다.  

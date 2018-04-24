@@ -2,17 +2,17 @@
 title: Visual Studio에서 코드 검사 분석 사용자 지정 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 4038b5837503910e46cb1d59a54b4a8038d4699c
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 54536e5e59f52a4051c715e5dc385672dc22721e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-code-coverage-analysis"></a>코드 검사 분석 사용자 지정
 
@@ -98,17 +98,17 @@ ms.lasthandoff: 03/19/2018
 
 Include 및 exclude 노드는 정규식을 사용합니다. 자세한 내용은 [Visual Studio에서 정규식 사용](../ide/using-regular-expressions-in-visual-studio.md)을 참조하세요. 정규식은 와일드 카드와 다릅니다. 특히 다음과 같습니다.
 
-- **.\***은(는) 모든 문자의 문자열과 일치합니다.
+- **.\*** 은(는) 모든 문자의 문자열과 일치합니다.
 
 - **\\.** 점 “.”과 일치합니다.
 
-- **\\(   \\)**는 괄호 “(  )”와 일치합니다.
+- **\\(   \\)** 는 괄호 “(  )”와 일치합니다.
 
-- **\\\\**파일 경로 구분 기호 “\\”와 일치합니다.
+- **\\\\** 파일 경로 구분 기호 “\\”와 일치합니다.
 
-- **^**는 문자열의 시작과 일치합니다.
+- **^** 는 문자열의 시작과 일치합니다.
 
-- **$**는 문자열의 끝과 일치합니다.
+- **$** 는 문자열의 끝과 일치합니다.
 
 모든 일치 항목은 대소문자를 구분하지 않습니다.
 
@@ -202,7 +202,7 @@ Include 및 exclude 노드는 정규식을 사용합니다. 자세한 내용은 
 3. **프로세스** 페이지에서 **자동화된 테스트** > **테스트 소스** > **실행 설정**을 확장합니다. *.runsettings* 파일을 선택합니다.
 
    > [!TIP]
-   > **테스트 어셈블리**가 **테스트 소스** 대신 표시되고 *.testsettings* 파일만 선택할 수 있는 경우 다음과 같이 **Test Runner** 속성을 설정합니다. **자동화된 테스트**에서 **테스트 어셈블리**를 선택한 다음, 줄 끝에서 **[...]**를 선택합니다. **테스트 실행 추가/편집** 대화 상자에서 **Test Runner**를 **Visual Studio Test Runner**로 설정합니다.
+   > **테스트 어셈블리**가 **테스트 소스** 대신 표시되고 *.testsettings* 파일만 선택할 수 있는 경우 다음과 같이 **Test Runner** 속성을 설정합니다. **자동화된 테스트**에서 **테스트 어셈블리**를 선택한 다음, 줄 끝에서 **[...]** 를 선택합니다. **테스트 실행 추가/편집** 대화 상자에서 **Test Runner**를 **Visual Studio Test Runner**로 설정합니다.
 
 빌드 보고서의 요약 섹션에 결과가 표시됩니다.
 

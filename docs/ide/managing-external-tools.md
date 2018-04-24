@@ -1,27 +1,24 @@
 ---
-title: "외부 도구 관리 | Microsoft 문서"
-ms.custom: 
+title: 외부 도구 관리 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/20/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.externaltools
 helpviewer_keywords:
 - external tools [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78a3e1ee549a42681d6f15b432d0c6bb608976fd
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: ea718d2170d058897db4bfa7a9a2cfc32da563a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="manage-external-tools"></a>외부 도구 관리
 
@@ -41,7 +38,7 @@ ms.lasthandoff: 02/09/2018
 
 **도구** 메뉴에 표시할 외부 도구를 추가할 수 있습니다.
 
-1. **도구** > **외부 도구...**를 선택하여 **외부 도구** 대화 상자를 엽니다.
+1. **도구** > **외부 도구...** 를 선택하여 **외부 도구** 대화 상자를 엽니다.
 
 1. **추가**를 클릭한 다음 정보를 입력합니다. 예를 들어 다음 항목은 현재 Visual Studio에서 열려 있는 파일의 디렉터리를 Windows 탐색기에서 엽니다.
 

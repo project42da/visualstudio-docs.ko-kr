@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트를 위한 테스트 반복 구성 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, scenarios, iterations
 - load test, iterations
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: ac480fb7-f4f7-47dc-9ae5-98be3aca4fba
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9d714723bdd19fae443b19ef293e66c21929c32d
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 6aac1f950bcfaf4c8308913d389d6fd3dec15c2d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="configure-test-iterations-in-a-load-test-scenario"></a>부하 테스트 시나리오에서 테스트 반복 구성
 
@@ -28,7 +28,7 @@ ms.lasthandoff: 03/19/2018
 **최대 테스트 반복 횟수** 속성은 시나리오에 대해 실행할 최대 테스트 반복 횟수를 제어합니다. 이 수치는 부하 테스트 실행 설정의 **테스트 반복** 속성과 마찬가지로 한 사용자에 대한 설정이 아니라 모든 에이전트에서 모든 사용자가 실행할 수 있는 최대값입니다.
 
 > [!NOTE]
-> 부하 테스트 시나리오 속성의 전체 목록과 해당 설명을 보려면 [부하 테스트 시나리오 속성](../test/load-test-scenario-properties.md)을 참조하세요.
+> 부하 테스트 시나리오 속성과 해당 설명의 전체 목록을 보려면 [부하 테스트 시나리오 속성](../test/load-test-scenario-properties.md)을 참조하세요.
 
  순차적인 테스트 조합의 경우에는 조합 내 모든 테스트가 실행되어야 한 번의 반복으로 계산됩니다. 다른 모든 테스트 조합에서는 한 번의 테스트 실행이 한 번의 반복으로 계산됩니다. 자세한 내용은 [목록 컨트롤 정보](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)를 참조하십시오.
 

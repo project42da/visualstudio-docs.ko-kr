@@ -1,30 +1,25 @@
 ---
-title: "방법: 기호 정보 직렬화 | Microsoft 문서"
-ms.custom: 
+title: '방법: 기호 정보 직렬화 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Performance.General
 helpviewer_keywords:
 - profiling tools, serializing symbol information
 - performance tools, serializing symbol information
 ms.assetid: 9e0da706-6325-4073-83d1-aeab3b7c137a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4941d3b5225a1d9c6b22eda3c8f79ef009f2b169
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 69c59395eb74f2c79c6a7d7e1b9c56f420e9705a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-serialize-symbol-information"></a>방법: 기호 정보 직렬화
 응용 프로그램을 분석하기 위해 포함해야 하는 기호를 직렬화할 수 있습니다. 기호를 직렬화하면 기호가 .vsp 파일에 추가됩니다. 기호 정보를 .vsp 파일에 추가하면 다른 사용자가 원래 기호에 대한 액세스 권한이 없어도 성능 보고서를 분석할 수 있습니다. 기호가 직렬화되지 않은 경우 .vsp 파일을 분석하려면 원래 계측된 .exe 및 .pdb 파일이 있어야 합니다.  

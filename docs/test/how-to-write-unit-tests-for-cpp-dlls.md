@@ -2,17 +2,17 @@
 title: Visual Studio에서 C++ DLL에 대한 단위 테스트 작성 | Microsoft Docs
 ms.date: 11/04/2017
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 519d1ae3c38e3366eb898ff1fe050533f1b5e221
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 6dd3ad0f38887e7c4458835f62dcb245804b8568
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="write-unit-tests-for-c-dlls-in-visual-studio"></a>Visual Studio에서 C++ DLL에 대한 단위 테스트 작성
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 03/19/2018
 
     2.  **구성 속성 | 일반**을 선택합니다.
 
-    3.  **구성 형식**을 **정적 라이브러리(.lib)**로 설정합니다.
+    3.  **구성 형식**을 **정적 라이브러리(.lib)** 로 설정합니다.
 
  [개체 또는 라이브러리 파일에 테스트를 연결하려면](#objectRef) 절차를 계속 진행합니다.
 

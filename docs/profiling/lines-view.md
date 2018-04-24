@@ -1,13 +1,9 @@
 ---
-title: "줄 뷰 | Microsoft 문서"
-ms.custom: 
+title: 줄 뷰 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.lines
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - profiling tools, Line view
 - Lines view
 ms.assetid: 71ec0781-6031-4e17-af09-f50226018437
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3b645a6cee08f1b27e353f01aaedcbc258d6d98f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 433bcbc46814c49a30836d8a7f0d9ec10e571ea6
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="lines-view"></a>줄 뷰
 줄 뷰는 샘플링 방법을 사용하여 수집한 프로파일러 데이터에만 사용할 수 있습니다. 이 뷰는 계측을 사용하여 수집한 데이터에 사용할 수 없습니다.  

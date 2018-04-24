@@ -1,13 +1,10 @@
 ---
-title: "VC++ 프로젝트 설정, 프로젝트 및 솔루션, 옵션 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: VC++ 프로젝트 설정, 프로젝트 및 솔루션, 옵션 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Projects.VCBuild
 helpviewer_keywords:
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - extensions, files built by C or C++ compiler
 - BuildLog.htm
 ms.assetid: 56420efd-6a95-464e-b890-e2b38c48d66a
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 7f24c1cd65d4669f326f866fbc04160d32daa4a1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 875dc15434be8d21a9bcee66d4091ecda9a4375a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>옵션 대화 상자, 프로젝트 및 솔루션, VC++ 프로젝트 설정
 이 대화 상자를 사용하면 로깅, 성능 및 지원 파일 형식과 관련된 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 빌드 및 프로젝트 설정을 정의할 수 있습니다.  

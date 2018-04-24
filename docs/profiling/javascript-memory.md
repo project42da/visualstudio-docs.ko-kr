@@ -1,13 +1,9 @@
 ---
-title: "UWP 앱에서 JavaScript 메모리 사용량 분석 | Microsoft Docs"
+title: UWP 앱에서 JavaScript 메모리 사용량 분석 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - JavaScript
 helpviewer_keywords:
@@ -19,17 +15,16 @@ helpviewer_keywords:
 - JavaScript Memory Analyzer
 - analyzing memory, JavaScript
 - memory analyzer, JavaScript
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 00162ab0ad516391b98ee0a17fa9c9f7294c92b3
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: e82ceb7879fcfca709ff6e94de81ae76ef908e07
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP 앱에서 JavaScript 메모리 사용량 분석
 Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 JavaScript를 사용하여 Windows용으로 작성된 UWP 앱의 메모리 사용량을 파악하고 메모리 누수를 찾을 수 있습니다. 지원되는 앱으로는 유니버설 Windows 앱을 위한 앱이 있습니다.
@@ -55,7 +50,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 
   
 2.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 프로젝트에 대한 디버그 대상을 **로컬 컴퓨터** 또는 **장치** 중에서 선택합니다.  
   
-3.  메뉴 모음에서 **디버그**, **성능 프로파일러...**를 차례로 선택합니다.  
+3.  메뉴 모음에서 **디버그**, **성능 프로파일러...** 를 차례로 선택합니다.  
   
      기본적으로 현재 시작 프로젝트를 분석합니다. 분석 대상을 변경하려면 **대상 변경**을 선택합니다.  
   
@@ -259,14 +254,14 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 
   
  스냅숏 간의 차이 정보를 필터링하려면 차이 뷰 상단에 있는 **범위** 필터 중 하나를 선택합니다.  
   
--   **스냅숏 #\<number>**에서 남은 개체. 이 필터는 기본 스냅숏 및 이전 스냅숏과 비교하여 힙에 추가된 개체와 힙에서 제거된 개체 간의 차이를 보여줍니다. 예를 들어 스냅숏 요약에서 개체 수가 +205/-195로 표시된 경우 이 필터는 제거된 것이 아닌 추가된 개체 10개를 보여줍니다.  
+-   **스냅숏 #\<number>** 에서 남은 개체. 이 필터는 기본 스냅숏 및 이전 스냅숏과 비교하여 힙에 추가된 개체와 힙에서 제거된 개체 간의 차이를 보여줍니다. 예를 들어 스냅숏 요약에서 개체 수가 +205/-195로 표시된 경우 이 필터는 제거된 것이 아닌 추가된 개체 10개를 보여줍니다.  
   
     > [!TIP]
     >  이 필터에서 가장 유용한 정보를 표시하려면 [Isolate a memory leak](#Isolate)에 설명된 단계를 따르세요.  
   
 -   **스냅숏 #\<number> 및 #\<number>** 사이에 추가된 개체. 이 필터는 이전 스냅숏에서 힙에 추가된 모든 개체를 보여줍니다.  
   
--   **스냅숏 #\<number>**의 모든 개체. 이 필터 설정은 힙에서 어떤 개체도 필터링하지 않습니다.  
+-   **스냅숏 #\<number>** 의 모든 개체. 이 필터 설정은 힙에서 어떤 개체도 필터링하지 않습니다.  
   
  현재 **범위** 필터와 일치하지 않는 개체 참조를 표시하려면 창의 오른쪽 상단에 있는 설정 목록 ![메모리 분석기의 설정 드롭다운 목록](../profiling/media/js_mem_settings.png "JS_Mem_Settings")에서 **일치하지 않는 참조 표시**를 선택합니다. 이 설정을 사용하도록 설정하는 경우 일치하지 않는 참조가 회색 텍스트로 표시됩니다.  
   

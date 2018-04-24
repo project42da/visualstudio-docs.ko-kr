@@ -1,26 +1,24 @@
 ---
-title: "CPU 사용량 데이터(C++) 분석 | Microsoft Docs"
-ms.custom: 
+title: CPU 사용량 데이터(C++) 분석 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/05/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
 ms.topic: quickstart
-f1_keywords: 
+f1_keywords:
+- ''
 helpviewer_keywords:
 - Profiling Tools, quick start
 - Diagnostics Tools, CPU Usage
-caps.latest.revision: "1"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: cplusplus
-ms.openlocfilehash: 7540203c395d51d6372aad908ec028180f41bd7c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: 52483a920d47b5728645ae195bc1837c7ccc565b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-cpu-usage-data-in-visual-studio-c"></a>Visual Studio에서 CPU 사용량 데이터(C++) 분석
 
@@ -32,7 +30,7 @@ Visual Studio는 응용 프로그램에서 성능 문제를 분석할 수 있도
 
 1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
-2. **Visual C++**에서 **Windows 데스크톱**을 선택한 다음, 가운데 창에서 **Windows 콘솔 응용 프로그램**을 선택합니다.
+2. **Visual C++** 에서 **Windows 데스크톱**을 선택한 다음, 가운데 창에서 **Windows 콘솔 응용 프로그램**을 선택합니다.
 
 3. **Diagnostics_Get_Started_Native** 같은 이름을 입력하고 **확인**을 클릭합니다.
 

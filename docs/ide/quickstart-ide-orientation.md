@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio IDE 둘러보기 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio IDE 둘러보기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/15/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 66ff5933a1a3e2623df706f0f3e7446e750f173b
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 7c9dfa3ba8f4e87b842d2ba8677f76aabd4931d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-first-look-at-the-visual-studio-ide"></a>빠른 시작: 먼저 Visual Studio IDE 살펴보기
 
@@ -37,7 +34,7 @@ Visual Studio를 시작한 후 처음으로 보게 되는 것은 시작 페이�
 
 IDE를 계속 살펴보기 위해 새 프로젝트를 만들어 보겠습니다.
 
-1. **시작 페이지**에서 **새 프로젝트** 아래의 검색 상자에 `console`을 입력하여 프로젝트 형식 목록을 필터링합니다. C# 또는 VB **콘솔 앱(.NET Framework)**을 선택합니다. (또는 C++, Javascript나 기타 언어 개발자인 경우 해당 언어 중 하나로 프로젝트를 만들 수 있습니다. 표시되는 UI는 모든 언어에서 비슷합니다.)
+1. **시작 페이지**에서 **새 프로젝트** 아래의 검색 상자에 `console`을 입력하여 프로젝트 형식 목록을 필터링합니다. C# 또는 VB **콘솔 앱(.NET Framework)** 을 선택합니다. (또는 C++, Javascript나 기타 언어 개발자인 경우 해당 언어 중 하나로 프로젝트를 만들 수 있습니다. 표시되는 UI는 모든 언어에서 비슷합니다.)
 
 1. **새 프로젝트** 대화 상자에서 기본 프로젝트 이름을 그대로 사용하고 **확인**을 선택합니다.
 
@@ -51,7 +48,7 @@ IDE를 계속 살펴보기 위해 새 프로젝트를 만들어 보겠습니다.
 
 ## <a name="menus"></a>메뉴
 
-IDE 위쪽을 따라 있는 메뉴 모음은 명령을 범주로 그룹화합니다. 예를 들어 **프로젝트** 메뉴에는 작업 중인 프로젝트와 관련된 명령이 포함되어 있습니다. **도구** 메뉴에서 **옵션**을 선택하여 IDE를 사용자 지정하거나, **도구 및 기능 가져오기...**를 선택하여 설치에 기능을 추가할 수 있습니다.
+IDE 위쪽을 따라 있는 메뉴 모음은 명령을 범주로 그룹화합니다. 예를 들어 **프로젝트** 메뉴에는 작업 중인 프로젝트와 관련된 명령이 포함되어 있습니다. **도구** 메뉴에서 **옵션**을 선택하여 IDE를 사용자 지정하거나, **도구 및 기능 가져오기...** 를 선택하여 설치에 기능을 추가할 수 있습니다.
 
 ![메뉴 모음](media/quickstart-IDE-menu-bar.png)
 

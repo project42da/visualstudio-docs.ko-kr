@@ -1,25 +1,21 @@
 ---
-title: "6단계: 단추 컨트롤 이름 지정 | Microsoft 문서"
-ms.custom: 
+title: '6단계: 단추 컨트롤 이름 지정 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 56b3baa3-651e-4ad4-8942-e334c5c57158
-caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d1981e8003941f14295cd137ba238808ec49229a
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 0d5c402439ccb30b4803a4b1863254287bc7c2dd
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-6-name-your-button-controls"></a>6단계: 단추 컨트롤 이름 지정
 폼에 **pictureBox1**이라는 PictureBox와 **checkBox1**이라는 CheckBox가 각각 하나씩만 있습니다. 이러한 이름은 해당 컨트롤이 추가될 때 IDE에 의해 자동으로 지정되었습니다. 이제 CheckBox 및 PictureBox를 참조하는 코드를 작성하면 이러한 컨트롤은 하나씩만 있기 때문에 코드에서 **pictureBox1** 또는 **checkBox1** 이 무엇을 의미하는지 알 수 있습니다.  

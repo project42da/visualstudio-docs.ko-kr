@@ -1,13 +1,10 @@
 ---
-title: "컴파일 페이지, 프로젝트 디자이너(Visual Basic) | Microsoft Docs"
-ms.custom: 
+title: 컴파일 페이지, 프로젝트 디자이너(Visual Basic) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vb.ProjectPropertiesCompile
 helpviewer_keywords:
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - Project Designer, Compile page
 - Compile page in Project Designer
 ms.assetid: b2a80230-906e-4e85-b3e0-fcd9c40426e1
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 32a883c1a04dc6ab5189cd5b2e5173406c098f6d
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 56efec5b538e2e84862549f6b5c7b7f30d9de75d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="compile-page-project-designer-visual-basic"></a>프로젝트 디자이너, 컴파일 페이지(Visual Basic)
 프로젝트 디자이너의 **컴파일** 페이지를 사용하여 컴파일 지침을 지정합니다. 또한 이 페이지에서 고급 컴파일러 옵션 및 빌드 전 또는 빌드 후 이벤트를 지정할 수 있습니다.  
@@ -100,7 +96,7 @@ ms.lasthandoff: 01/29/2018
   
 **Option Strict**를 **On**으로 설정하는 경우 이러한 세 가지 경고 구성 설정은 모두 **Error**로 설정됩니다. **Option Strict**를 **Off**로 설정하는 경우 세 가지 설정은 모두 **None**으로 설정됩니다.  
   
-각 경고 구성 설정은 **None**, **Warning** 또는 **Error**로 개별적으로 변경할 수 있습니다. 세 가지 경고 구성 설정이 모두 **Error**로 설정된 경우 `On`이 `Option strict` 상자에 표시됩니다. 세 가지 모두 **None**으로 설정된 경우 `Off`가 이 상자에 표시됩니다. 이러한 설정의 다른 조합의 경우 **(사용자 지정)**이 나타납니다.  
+각 경고 구성 설정은 **None**, **Warning** 또는 **Error**로 개별적으로 변경할 수 있습니다. 세 가지 경고 구성 설정이 모두 **Error**로 설정된 경우 `On`이 `Option strict` 상자에 표시됩니다. 세 가지 모두 **None**으로 설정된 경우 `Off`가 이 상자에 표시됩니다. 이러한 설정의 다른 조합의 경우 **(사용자 지정)** 이 나타납니다.  
   
 **Option Compare**  
 사용할 문자열 비교 형식을 지정합니다. 이진, 대/소문자 구분 문자열 비교를 사용하도록 컴파일러에 지시하려면 **Binary**를 선택합니다. 로캘별 대/소문자 구분 문자열 비교를 사용하려면 **Text**를 선택합니다.  

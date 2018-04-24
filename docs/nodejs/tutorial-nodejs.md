@@ -3,28 +3,24 @@ title: Node.js 및 Express 앱 만들기 - Visual Studio | Microsoft Docs
 description: 이 자습서에서는 Visual Studio에서 Node.js 및 Express 앱 만들기
 ms.custom: ''
 ms.date: 03/13/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
+ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f7d0774753178c9cb0dbcae1800da6b00ab02a0e
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 47bf06fabba9197029831382b6ad6e9068e7829c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>자습서: Visual Studio에서 Node.js 및 Express 앱 만들기
-Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.  
+Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
 
 이 자습서에서는 다음 방법을 학습합니다.
 > [!div class="checklist"]
@@ -51,13 +47,13 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
 ## <a name="create-a-project"></a>프로젝트 만들기
 먼저 Node.js 웹 응용 프로그램 프로젝트를 만듭니다.
 
-1. Visual Studio 2017을 엽니다.  
+1. Visual Studio 2017을 엽니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.  
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.
 
-1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **기본 Azure Node.js Express 4 응용 프로그램**을 선택한 후 **확인**을 선택합니다.   
+1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **기본 Azure Node.js Express 4 응용 프로그램**을 선택한 후 **확인**을 선택합니다.
 
-     **기본 Azure Node.js Express 4 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 먼저 **Node.js 개발** 워크로드를 설치해야 합니다. 
+     **기본 Azure Node.js Express 4 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 먼저 **Node.js 개발** 워크로드를 설치해야 합니다.
 
     Visual Studio가 새 솔루션을 만들고 프로젝트를 엽니다. *app.js* 프로젝트 파일이 편집기에 열립니다(왼쪽 창).
 
@@ -130,11 +126,11 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
 
 1. `data` 문자열 다음에 `: get`을 입력하면 IntelliSense가 `getData` 함수를 표시합니다. `getData`를 선택합니다.
 
-    ![IntelliSense 사용](../nodejs/media/tutorial-nodejs-intellisense.png) 
+    ![IntelliSense 사용](../nodejs/media/tutorial-nodejs-intellisense.png)
 
 1. `"data"` 앞의 쉼표(`,`)를 제거하면 해당 식에 녹색의 구문 강조 표시가 나타납니다. 구문 강조 표시 위에 마우스를 가져갑니다.
 
-    ![구문 오류 보기](../nodejs/media/tutorial-nodejs-syntax-checking.png) 
+    ![구문 오류 보기](../nodejs/media/tutorial-nodejs-syntax-checking.png)
 
     이 메시지의 마지막 줄에 JavaScript 인터프리터가 쉼표(`,`)를 예상했다는 메시지가 나타납니다.
 
@@ -152,15 +148,15 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
 
     `res.render('index', { title: 'Express', "data": getData() });`
 
-    중단점은 신뢰할 수 있는 디버깅의 가장 기본적이 고 필수적인 기능입니다. 중단점은 변수의 값, 메모리의 동작 또는 코드 분기의 실행 여부를 확인할 수 있도록 Visual Studio에서 실행 중인 코드를 일시 중단해야 하는 위치를 나타냅니다. 
+    중단점은 신뢰할 수 있는 디버깅의 가장 기본적이 고 필수적인 기능입니다. 중단점은 변수의 값, 메모리의 동작 또는 코드 분기의 실행 여부를 확인할 수 있도록 Visual Studio에서 실행 중인 코드를 일시 중단해야 하는 위치를 나타냅니다.
 
-    ![중단점 설정](../nodejs/media/tutorial-nodejs-set-breakpoint.png) 
+    ![중단점 설정](../nodejs/media/tutorial-nodejs-set-breakpoint.png)
 
 ## <a name="run-the-application"></a>응용 프로그램 실행
 
 1. 디버그 도구 모음에서의 디버그 대상을 선택합니다.
 
-    ![디버그 대상 선택](../nodejs/media/tutorial-nodejs-deploy-target.png) 
+    ![디버그 대상 선택](../nodejs/media/tutorial-nodejs-deploy-target.png)
 
 1. **F5**(**디버그** > **디버깅 시작**) 키를 눌러 응용 프로그램을 실행합니다.
 
@@ -178,15 +174,15 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
 
 1. 단추를 클릭하면 다른 이미지가 표시됩니다.
 
-    ![브라우저에서 실행 중인 앱](../nodejs/media/tutorial-nodejs-running-in-browser.png)  
+    ![브라우저에서 실행 중인 앱](../nodejs/media/tutorial-nodejs-running-in-browser.png)
 
-1. 웹 브라우저를 닫습니다.  
+1. 웹 브라우저를 닫습니다.
 
 ## <a name="optional-publish-to-azure-app-service"></a>(선택 사항) Azure App Service에 게시
 
 1. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
 
-   ![Azure App Service에 게시](../nodejs/media/tutorial-nodejs-publish-to-azure.png)  
+   ![Azure App Service에 게시](../nodejs/media/tutorial-nodejs-publish-to-azure.png)
 
 1. **Microsoft Azure App Service**를 선택합니다.
 
@@ -198,11 +194,11 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
 
     제대로 배포되면 Azure App Service를 실행하는 브라우저에서 앱이 열립니다. 단추를 클릭하면 이미지가 표시됩니다.
 
-   ![Azure App Service에서 실행 중인 앱](../nodejs/media/tutorial-nodejs-running-in-azure.png)  
+   ![Azure App Service에서 실행 중인 앱](../nodejs/media/tutorial-nodejs-running-in-azure.png)
 
 축하합니다. 이 자습서를 마쳤습니다.
 
-## <a name="next-steps"></a>다음 단계 
+## <a name="next-steps"></a>다음 단계
 
 이 자습서에서는 Express를 사용하여 Node.js 앱을 만들고 실행하는 방법 및 디버거를 사용하여 중단점을 적중하는 방법을 배웠습니다.
 

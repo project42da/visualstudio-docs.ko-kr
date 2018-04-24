@@ -2,22 +2,22 @@
 title: Visual Studio에서 UWP 앱에 대한 단위 테스트 만들기 및 실행 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unit tests, creating
 - unit tests
 - unit tests, UWP apps
 - unit tests, running
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: ec857cb2bf0aa8e5453180249ddeccf47236dcf1
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: bbb1da5474dcb36e9b102f85f21c4945b3ebb33c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-uwp-apps"></a>연습: UWP 앱의 유닛 테스트 만들기 및 실행
 
@@ -34,7 +34,7 @@ Visual Studio에는 단위 테스트 UWP(유니버설 Windows 플랫폼) 앱에 
 
      새 프로젝트 대화 상자가 표시됩니다.
 
-2.  템플릿에서 단위 테스트를 만들 프로그래밍 언어를 선택하고 연결된 Windows 유니버설 단위 테스트 라이브러리를 선택합니다. 예를 들면 **Visual C#**를 선택하고 **Windows 유니버셜**을 선택한 다음 **단위 테스트 라이브러리(유니버셜 Windows)**를 선택합니다.
+2.  템플릿에서 단위 테스트를 만들 프로그래밍 언어를 선택하고 연결된 Windows 유니버설 단위 테스트 라이브러리를 선택합니다. 예를 들면 **Visual C#** 를 선택하고 **Windows 유니버셜**을 선택한 다음 **단위 테스트 라이브러리(유니버셜 Windows)** 를 선택합니다.
 
 3.  (선택 사항) **이름** 텍스트 상자에 프로젝트에 사용할 이름을 입력합니다.
 
@@ -87,7 +87,7 @@ Visual Studio에는 단위 테스트 UWP(유니버설 Windows 플랫폼) 앱에 
 3.  테스트 탐색기에서 만든 단위 테스트를 선택합니다.
 
     > [!TIP]
-    > 테스트 탐색기는 **소스:**옆의 소스 코드에 대한 링크를 제공합니다.
+    > 테스트 탐색기는 **소스:** 옆의 소스 코드에 대한 링크를 제공합니다.
 
 4.  **모두 실행**을 선택합니다.
 

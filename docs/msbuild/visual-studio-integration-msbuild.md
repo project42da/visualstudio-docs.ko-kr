@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio 통합(MSBuild) | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 통합(MSBuild) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, reference resolution
 - MSBuild, well-known target names
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - MSBuild, in-process compilers
 - MSBuild, design-time target execution
 ms.assetid: 06cd6d7f-8dc1-4e49-8a72-cc9e331d7bca
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f1495fa1ae7408874f2c1cfcede2ed495fea3f5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: dd9dd101508fc55ff6287af534ee57e53e95d4e8
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="visual-studio-integration-msbuild"></a>Visual Studio 통합(MSBuild)
 Visual Studio는 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 를 호스팅하여 관리되는 프로젝트를 로드하고 빌드합니다. [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 에서 프로젝트를 관리하므로 프로젝트가 다른 도구에서 작성되어 사용자 지정된 빌드 프로세스를 가지더라도 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 형식의 프로젝트는 대부분 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 사용될 수 있습니다.  
@@ -57,7 +53,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
  [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 이를 위해 `PropertyGroup`, `ItemGroup`, `Import`, 속성 및 항목 요소에서 조건을 확인합니다.  
   
 ## <a name="additional-build-actions"></a>추가 빌드 작업  
- [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] [파일 속성](http://msdn.microsoft.com/en-us/013c4aed-08d6-4dce-a124-ca807ca08959) 창의 **빌드 작업** 속성을 사용하여 프로젝트에 있는 파일의 항목 형식 이름을 변경할 수 있습니다. `Compile`, `EmbeddedResource`, `Content`, `None` 등의 항목 형식 이름은 프로젝트에 이미 있는 다른 모든 항목 형식 이름과 함께 항상 이 메뉴에 표시됩니다. 사용자 지정 항목 형식 이름이 항상 이 메뉴에 표시되도록 하려면 `AvailableItemName`이라는 항목 형식에 해당 이름을 추가하면 됩니다. 예를 들어, 프로젝트 파일에 다음을 추가하면 해당 파일을 가져오는 모든 프로젝트에 대해 `JScript` 사용자 지정 형식이 이 메뉴에 추가됩니다.  
+ [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 에서는 **파일 속성** 창의 [빌드 작업](http://msdn.microsoft.com/en-us/013c4aed-08d6-4dce-a124-ca807ca08959) 속성을 사용하여 프로젝트에 있는 파일의 항목 형식 이름을 변경할 수 있습니다. `Compile`, `EmbeddedResource`, `Content`, `None` 등의 항목 형식 이름은 프로젝트에 이미 있는 다른 모든 항목 형식 이름과 함께 항상 이 메뉴에 표시됩니다. 사용자 지정 항목 형식 이름이 항상 이 메뉴에 표시되도록 하려면 `AvailableItemName`이라는 항목 형식에 해당 이름을 추가하면 됩니다. 예를 들어, 프로젝트 파일에 다음을 추가하면 해당 파일을 가져오는 모든 프로젝트에 대해 `JScript` 사용자 지정 형식이 이 메뉴에 추가됩니다.  
   
 ```xml  
 <ItemGroup>  
@@ -136,9 +132,9 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
   
 1.  **솔루션 탐색기**에서 프로젝트의 바로 가기 메뉴를 열고 **프로젝트 언로드**를 선택합니다.  
   
-     해당 프로젝트가 **(사용할 수 없음)**으로 표시됩니다.  
+     해당 프로젝트가 **(사용할 수 없음)** 으로 표시됩니다.  
   
-2.  **솔루션 탐색기**에서 사용할 수 없는 프로젝트의 바로 가기 메뉴를 열고 **편집 \<프로젝트 파일>**을 선택합니다.  
+2.  **솔루션 탐색기**에서 사용할 수 없는 프로젝트의 바로 가기 메뉴를 열고 **편집 \<프로젝트 파일>** 을 선택합니다.  
   
      해당 프로젝트 파일이 Visual Studio XML 편집기에 열립니다.  
   
@@ -147,7 +143,7 @@ Condition=" '$(Something)|$(Configuration)|$(SomethingElse)' == 'xxx|Debug|yyy' 
 4.  **솔루션 탐색기**에서 사용할 수 없는 프로젝트의 바로 가기 메뉴를 열고 **프로젝트 다시 로드**를 선택합니다.  
   
 ## <a name="intellisense-and-validation"></a>IntelliSense 및 유효성 검사  
- XML 편집기를 사용하여 프로젝트 파일을 편집할 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 스키마 파일에서 IntelliSense 및 유효성 검사를 실행합니다. 이러한 스키마 파일은 *\<Visual Studio 설치 디렉터리>*\Xml\Schemas\1033\MSBuild에 있는 스키마 캐시에 설치됩니다.  
+ XML 편집기를 사용하여 프로젝트 파일을 편집할 경우 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 스키마 파일에서 IntelliSense 및 유효성 검사를 실행합니다. 이러한 스키마 파일은 *\<Visual Studio 설치 디렉터리>* \Xml\Schemas\1033\MSBuild에 있는 스키마 캐시에 설치됩니다.  
   
  핵심 [!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 형식은 Microsoft.Build.Core.xsd에 정의되고 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 사용되는 일반 형식은 Microsoft.Build.CommonTypes.xsd에 정의됩니다. 사용자 지정 항목 형식 이름, 속성, 작업 등에 대해 IntelliSense 및 유효성 검사를 적용하도록 스키마를 사용자 지정하려면 Microsoft.Build.xsd를 편집하거나 CommonTypes 또는 핵심 스키마를 포함하는 스키마를 직접 만들면 됩니다. 스키마를 직접 만들 경우 **속성** 창을 사용하여 해당 스키마를 찾도록 XML 편집기에 지시해야 합니다.  
   

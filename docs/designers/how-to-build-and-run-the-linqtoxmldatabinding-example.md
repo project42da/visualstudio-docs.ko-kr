@@ -1,22 +1,18 @@
 ---
-title: "방법: LinqToXmlDataBinding 예제 빌드 및 실행 | Microsoft Docs"
-ms.custom: 
+title: '방법: LinqToXmlDataBinding 예제 빌드 및 실행'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 57f4259e51650b9af1788195b39fc8a72becbfde
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: de5515d96d5aa0dff30082207e7f20fd7981fc89
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-build-and-run-the-linqtoxmldatabinding-example"></a>방법: LinqToXmlDataBinding 예제 빌드 및 실행
 
@@ -82,6 +78,6 @@ LinqToXmlDataBinding 프로그램을 사용하여 포함된 XML 요소로 저장
 
 ## <a name="see-also"></a>참고 항목
 
-[LINQ to XML 예제를 사용한 WPF 데이터 바인딩](../designers/wpf-data-binding-using-linq-to-xml-example.md)  
-[연습: LinqToXmlDataBinding 예제](../designers/walkthrough-linqtoxmldatabinding-example.md)  
-[Visual Studio IDE 개요](../ide/visual-studio-ide.md)
+- [LINQ to XML 예제를 사용한 WPF 데이터 바인딩](../designers/wpf-data-binding-using-linq-to-xml-example.md)
+- [연습: LinqToXmlDataBinding 예제](../designers/walkthrough-linqtoxmldatabinding-example.md)
+- [Visual Studio IDE 개요](../ide/visual-studio-ide.md)

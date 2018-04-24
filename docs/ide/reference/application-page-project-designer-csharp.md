@@ -1,13 +1,10 @@
 ---
-title: "프로젝트 디자이너, 응용 프로그램 페이지(C#) | Microsoft 문서"
-ms.custom: 
+title: 프로젝트 디자이너, 응용 프로그램 페이지(C#) | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - cs.ProjectPropertiesApplicationWPF
 - cs.ProjectPropertiesApplication
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - Application page in Project Designer
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7f9b348ad39b26b22e1678e76a1310e2c3f9b863
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 4ea0e0f38b96f7ba48a8a88ebf41986350fe73f5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="application-page-project-designer-c"></a>프로젝트 디자이너, 응용 프로그램 페이지(C#)
 
@@ -72,13 +69,13 @@ ms.lasthandoff: 01/29/2018
  이 단추를 클릭하면 [어셈블리 정보 대화 상자](../../ide/reference/assembly-information-dialog-box.md)가 표시됩니다.  
   
  **시작 개체**  
- 응용 프로그램 로드 시 호출할 진입점을 정의합니다. 일반적으로 응용 프로그램의 기본 폼이나 응용 프로그램 시작 시 실행되어야 하는 `Main` 프로시저로 설정됩니다. 클래스 라이브러리에 진입점이 없기 때문에 이 속성의 유일한 옵션은 **(설정 안 함)**입니다.  
+ 응용 프로그램 로드 시 호출할 진입점을 정의합니다. 일반적으로 응용 프로그램의 기본 폼이나 응용 프로그램 시작 시 실행되어야 하는 `Main` 프로시저로 설정됩니다. 클래스 라이브러리에 진입점이 없기 때문에 이 속성의 유일한 옵션은 **(설정 안 함)** 입니다.  
   
- 기본적으로, WPF 브라우저 응용 프로그램 프로젝트에서 이 옵션은 **(설정 안 함)**입니다. 다른 옵션은 *Projectname*.App입니다. 이러한 종류의 프로젝트에서는 응용 프로그램을 시작할 때 UI 리소스를 로드하도록 시작 URI를 설정해야 합니다. 이렇게 하려면 프로젝트에서 Application.xaml 파일을 열고 `StartupUri` 속성을 프로젝트의 .xaml 파일(예: Window1.xaml)로 설정합니다. 허용되는 루트 요소 목록은 <xref:System.Windows.Application.StartupUri%2A>를 참조하세요. 또한 프로젝트의 클래스에서 `public static void Main()` 메서드를 정의해야 합니다. 이 클래스는 **시작 개체** 목록에 *ProjectName.ClassName*으로 나타납니다. 그런 다음 클래스를 시작 개체로 선택할 수 있습니다.  
+ 기본적으로, WPF 브라우저 응용 프로그램 프로젝트에서 이 옵션은 **(설정 안 함)** 입니다. 다른 옵션은 *Projectname*.App입니다. 이러한 종류의 프로젝트에서는 응용 프로그램을 시작할 때 UI 리소스를 로드하도록 시작 URI를 설정해야 합니다. 이렇게 하려면 프로젝트에서 Application.xaml 파일을 열고 `StartupUri` 속성을 프로젝트의 .xaml 파일(예: Window1.xaml)로 설정합니다. 허용되는 루트 요소 목록은 <xref:System.Windows.Application.StartupUri%2A>를 참조하세요. 또한 프로젝트의 클래스에서 `public static void Main()` 메서드를 정의해야 합니다. 이 클래스는 **시작 개체** 목록에 *ProjectName.ClassName*으로 나타납니다. 그런 다음 클래스를 시작 개체로 선택할 수 있습니다.  
   
  자세한 내용은 [/main(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/main-compiler-option)을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.StartupObject%2A>을 참조하세요.  
   
-## <a name="resources"></a>리소스  
+## <a name="resources"></a>자료  
  다음 옵션을 사용하여 응용 프로그램에 대한 일반 설정을 구성할 수 있습니다.  
   
  **아이콘 및 매니페스트**  

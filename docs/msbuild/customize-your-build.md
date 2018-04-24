@@ -1,27 +1,23 @@
 ---
-title: "빌드 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: 빌드 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 06/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, transforms
 - transforms [MSBuild]
 ms.assetid: d0bceb3b-14fb-455c-805a-63acefa4b3ed
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b11acd4360aa86d4727a4c697a56eaa753d522c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: dae51959313a7108c54466dff08b3641525818cd
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="customize-your-build"></a>빌드 사용자 지정
 MSBuild 15 이전 버전에서는 솔루션의 프로젝트에 대한 새로운 사용자 지정 속성을 제공하려면 해당 속성에 대한 참조를 솔루션의 모든 프로젝트 파일에 수동으로 추가해야 했습니다. 또는 *.props* 파일에서 속성을 정의하고 나서 무엇보다 솔루션의 모든 프로젝트에서 *.props* 파일을 명시적으로 가져와야 했습니다.
@@ -80,7 +76,7 @@ c:\
     \Project2Tests
 ````
 
-모든 프로젝트 *(1)*의 공통 속성, *src* 프로젝트*(2-src)*의 공통 속성 및 *test* 프로젝트*(2-test)*의 공통 속성이 있는 것이 바람직할 수도 있습니다.
+모든 프로젝트 *(1)* 의 공통 속성, *src* 프로젝트 *(2-src)* 의 공통 속성 및 *test* 프로젝트 *(2-test)* 의 공통 속성이 있는 것이 바람직할 수도 있습니다.
 
 MSBuild에서 “내부” 파일(*2-src* 및 *2-test*)을 “외부” 파일(*1*)과 올바르게 병합하려면 MSBuild가 *Directory.Build.props* 파일을 찾으면 추가 검사를 중지하도록 고려해야 합니다. 계속 검사하고 외부 파일에 병합하려면 해당 항목을 모든 내부 파일에 배치합니다.
 

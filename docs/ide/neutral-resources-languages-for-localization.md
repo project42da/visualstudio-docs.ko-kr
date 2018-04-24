@@ -1,12 +1,10 @@
 ---
-title: "지역화를 위한 중립 리소스 언어 | Microsoft Docs"
-ms.custom: 
+title: 지역화를 위한 중립 리소스 언어 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - localization [Visual Studio], resources
 - NeutralResourcesLanguageAttribute class
@@ -15,16 +13,16 @@ helpviewer_keywords:
 - culture, locating resources
 - neutral resources
 ms.assetid: ef064995-3b84-4698-a708-9689b7723533
-caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 755be1dac065f2a8cd9ee769557f0a48e72ce03f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0bbddac532d242ce42330c955a797603b2d7e4a0
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="neutral-resources-languages-for-localization"></a>지역화를 위한 중립 리소스 언어
 <xref:System.Resources.NeutralResourcesLanguageAttribute> 클래스는 주 어셈블리에 포함된 리소스의 문화권을 지정합니다. 이 특성은 성능 향상으로 사용되므로 <xref:System.Resources.ResourceManager> 개체는 주 어셈블리에 포함된 리소스를 검색하지 않습니다.  

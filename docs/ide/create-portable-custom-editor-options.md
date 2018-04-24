@@ -2,21 +2,18 @@
 title: Visual Studio에서 EditorConfig 설정 사용 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/13/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - editorconfig [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-general
-ms.openlocfilehash: e9ea6cde08724c00c4595774decea35b2bce44f4
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: fe1653df6fc1d71dc4497c6e7e0a9adae9fa0b44
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-portable-custom-editor-settings-with-editorconfig"></a>EditorConfig를 사용하여 휴대용, 사용자 지정 편집기 설정 만들기
 
@@ -60,7 +57,7 @@ EditorConfig 파일을 프로젝트나 코드베이스에 추가해도 기존 �
 
 1. Visual Studio에서 프로젝트 또는 솔루션을 엽니다. *.editorconfig* 설정을 솔루션의 모든 프로젝트에 적용할지 아니면 하나에만 적용할지에 따라 프로젝트 또는 솔루션 노드 중 하나를 선택합니다. 프로젝트 또는 솔루션에서 폴더를 선택하여 *.editorconfig* 파일을 추가할 수 있습니다.
 
-1. 메뉴 모음에서 **프로젝트** > **새 항목 추가...**를 선택하거나 **Ctrl**+**Shift**+**A**를 누릅니다.
+1. 메뉴 모음에서 **프로젝트** > **새 항목 추가...** 를 선택하거나 **Ctrl**+**Shift**+**A**를 누릅니다.
 
    **새 항목 추가** 대화 상자가 열립니다.
 

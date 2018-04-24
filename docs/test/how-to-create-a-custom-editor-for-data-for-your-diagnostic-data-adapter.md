@@ -1,19 +1,19 @@
 ---
 title: Visual Studio에서 진단 데이터 어댑터에 대한 사용자 지정 데이터 편집기 만들기 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Diagnostic Data Adapter, creating custom editor
 ms.assetid: 24970227-d1ea-4f6d-9839-e911478848ba
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: d1426d6e51ac132ee766913e69827df1d9558fba
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 58c0a4e764edd27e2059175e170a9e542c285a89
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-custom-editor-for-data-for-your-diagnostic-data-adapter"></a>방법: 진단 데이터 어댑터 데이터용 사용자 지정 편집기 만들기
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/19/2018
 
     1.  진단 데이터 어댑터 클래스가 포함되어 있는 코드 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음, **사용자 정의 컨트롤**을 가리킵니다.
 
-    2.  이 예제에서는 **Data File Name:**이라는 텍스트가 있는 레이블과 **FileTextBox**라는 텍스트 상자를 양식에 추가하여 사용자가 필요한 데이터를 입력할 수 있도록 합니다.
+    2.  이 예제에서는 **Data File Name:** 이라는 텍스트가 있는 레이블과 **FileTextBox**라는 텍스트 상자를 양식에 추가하여 사용자가 필요한 데이터를 입력할 수 있도록 합니다.
 
     > [!NOTE]
     > 현재 Windows Forms 사용자 정의 컨트롤만 지원됩니다.

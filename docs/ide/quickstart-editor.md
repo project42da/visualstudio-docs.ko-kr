@@ -1,24 +1,21 @@
 ---
-title: "Visual Studio의 편집 개요 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio의 편집 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/30/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 082a89453d76ac70edfbd39681d33b6af2700cc7
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 46f627d7157972e277589d2edf07309190c6430d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-use-the-code-editor"></a>빠른 시작: 코드 편집기 사용
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 03/09/2018
 
 새 파일을 만들고 일부 코드를 추가하여 시작합니다. 편집기에서 제공하는 이점 중 일부를 사용하기 위해 프로젝트를 만들 필요가 없습니다.
 
-1. Visual Studio를 열고, 메뉴 모음의 **파일** 메뉴에서 **새로 만들기** > **파일...**을 선택합니다.
+1. Visual Studio를 열고, 메뉴 모음의 **파일** 메뉴에서 **새로 만들기** > **파일...** 을 선택합니다.
 
 1. **새 파일** 대화 상자의 **일반** 범주 아래에서 **Visual C# 클래스**를 선택한 다음 **열기**를 선택합니다.
 
@@ -52,7 +49,7 @@ Visual Studio에서는 일반적으로 사용되는 코드 블록을 쉽고 빠�
 
    `static void Main()` 메서드 서명이 파일에 추가됩니다. `Main()` 메서드는 C# 응용 프로그램의 진입점입니다.
 
-사용 가능한 코드 조각은 언어마다 다릅니다. **편집**, **IntelliSense**, **코드 조각 삽입...**을 선택한 다음 언어의 폴더를 선택하여 프로그래밍 언어에 사용 가능한 코드 조각에서 확인할 수 있습니다. C#의 경우 목록은 다음과 같습니다.
+사용 가능한 코드 조각은 언어마다 다릅니다. **편집**, **IntelliSense**, **코드 조각 삽입...** 을 선택한 다음 언어의 폴더를 선택하여 프로그래밍 언어에 사용 가능한 코드 조각에서 확인할 수 있습니다. C#의 경우 목록은 다음과 같습니다.
 
 ![C# 코드 조각 목록](media/quickstart-code-snippet-list.png)
 
@@ -143,7 +140,7 @@ Visual Studio 편집기를 사용하면 형식, 메서드 등 정의를 쉽게 �
 
 누구도 처음부터 제대로 코딩할 수 없습니다. 변경할 수 있는 작업 중 하나는 변수 또는 메서드의 이름입니다. Visual Studio의 [리팩터링](../ide/refactoring-in-visual-studio.md) 기능을 사용하여 `_words` 변수 이름을 `words`로 변경해 보겠습니다.
 
-1. `words` 변수의 정의 위에 커서를 두거나, 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **이름 바꾸기...**를 선택하거나, **Ctrl**+**R**, **Ctrl**+**R** 키를 누릅니다.
+1. `words` 변수의 정의 위에 커서를 두거나, 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **이름 바꾸기...** 를 선택하거나, **Ctrl**+**R**, **Ctrl**+**R** 키를 누릅니다.
 
    편집기의 오른쪽 위에 팝업 **이름 바꾸기** 대화 상자가 나타납니다.
 

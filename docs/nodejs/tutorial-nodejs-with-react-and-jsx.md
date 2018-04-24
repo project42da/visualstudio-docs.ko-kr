@@ -3,28 +3,24 @@ title: Node.js 및 React app 앱 만들기 - Visual Studio | Microsoft Docs
 description: 이 자습서에서는 Visual Studio에서 Node.js 및 React 앱 만들기 학습
 ms.custom: mvc
 ms.date: 02/19/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
+ms.technology: vs-nodejs
 ms.topic: tutorial
 ms.devlang: javascript
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: f99b1bef93fcbe968f23f0bb63653d825235385e
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 21debd24f69b79cb2dbbf9e9ceea928ac9dd851e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>자습서: Visual Studio에서 Node.js 및 React 앱 만들기
-Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSense 및 Node.js를 지원하는 다른 기본 제공 기능을 활용할 수 있습니다. Visual Studio용 이 자습서에서는 Visual Studio 템플릿에서 Node.js 웹 응용 프로그램 프로젝트를 만듭니다. 그런 다음, React를 사용하여 간단한 앱을 만듭니다. 
+Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSense 및 Node.js를 지원하는 다른 기본 제공 기능을 활용할 수 있습니다. Visual Studio용 이 자습서에서는 Visual Studio 템플릿에서 Node.js 웹 응용 프로그램 프로젝트를 만듭니다. 그런 다음, React를 사용하여 간단한 앱을 만듭니다.
 
 이 자습서에서는 다음 방법을 학습합니다.
 > [!div class="checklist"]
@@ -51,17 +47,17 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 ## <a name="create-a-project"></a>프로젝트 만들기
 먼저 Node.js 웹 응용 프로그램 프로젝트를 만듭니다.
 
-1. Visual Studio 2017을 엽니다.  
+1. Visual Studio 2017을 엽니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.  
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.
 
-1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **빈 Node.js 웹 응용 프로그램**을 선택하고 **NodejsWebAppBlank**의 이름을 입력한 다음, **확인**을 선택합니다.   
+1. **새 프로젝트** 대화 상자의 왼쪽 창에서 **JavaScript**를 확장한 후 **Node.js**를 선택합니다. 가운데 창에서 **빈 Node.js 웹 응용 프로그램**을 선택하고 **NodejsWebAppBlank**의 이름을 입력한 다음, **확인**을 선택합니다.
 
-     **빈 Node.js 웹 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 먼저 Node.js 개발 워크로드를 설치해야 합니다. 
+     **빈 Node.js 웹 응용 프로그램** 프로젝트 템플릿이 표시되지 않으면 먼저 Node.js 개발 워크로드를 설치해야 합니다.
 
     Visual Studio가 새 솔루션을 만들고 프로젝트를 엽니다.
 
-    ![솔루션 탐색기에서 Node.js 프로젝트](../nodejs/media/tutorial-nodejs-react-project-structure.png)  
+    ![솔루션 탐색기에서 Node.js 프로젝트](../nodejs/media/tutorial-nodejs-react-project-structure.png)
 
     - 굵게 강조 표시된 것은 **새 프로젝트** 대화 상자에서 지정한 이름을 사용하는 프로젝트입니다. 파일 시스템에서 이 프로젝트는 프로젝트 폴더의 *.njsproj* 파일로 표시됩니다. 속성을 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하여 프로젝트와 연결된 환경 변수와 속성을 설정할 수 있습니다. 프로젝트 파일이 Node.js 프로젝트 소스에 사용자 지정 변경을 하지 않으므로 다른 개발 도구와 라운드트립을 수행할 수 있습니다.
 
@@ -117,7 +113,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
     설치된 후 솔루션 탐색기에 표시된 대로 여기 npm 모듈이 있습니다.
 
-    ![NPM 패키지](../nodejs/media/tutorial-nodejs-react-npm-modules.png) 
+    ![NPM 패키지](../nodejs/media/tutorial-nodejs-react-npm-modules.png)
 
     > [!NOTE]
     > 명령줄을 사용하여 npm 패키지를 설치하려면 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **여기서 명령 프롬프트 열기**를 선택합니다. 표준 Node.js 명령을 사용하여 패키지를 설치합니다.
@@ -171,7 +167,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
     ```javascript
     declare var require: any
-    
+
     var React = require('react');
     var ReactDOM = require('react-dom');
 
@@ -267,7 +263,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
     명령 프롬프트 창에 결과가 표시됩니다.
 
-    ![webpack 실행](../nodejs/media/tutorial-nodejs-react-run-webpack.png) 
+    ![webpack 실행](../nodejs/media/tutorial-nodejs-react-run-webpack.png)
 
     위의 출력 대신 오류를 참조하면 앱이 작동하기 전에 해당 오류를 해결해야 합니다. npm 패키지 버전이이 자습서에 표시된 버전과 다른 경우 오류의 원인이 될수 있습니다. 오류를 수정하는 한 방법은 이전 단계에서 표시된 정확한 버전을 사용하는 것입니다. 또한 이러한 패키지 버전 중 하나 이상이 사용되지 않아 오류를 일으킬 경우 오류를 수정하려면 최신 버전을 설치해야 합니다.
 
@@ -279,7 +275,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
 1. 외부에서 수정된 파일을 다시 로드하라는 메시지가 나타나면 **모두 예**를 클릭합니다.
 
-    ![수정한 파일 로드](../nodejs/media/tutorial-nodejs-react-reload-files.png) 
+    ![수정한 파일 로드](../nodejs/media/tutorial-nodejs-react-reload-files.png)
 
 *app.tsx*를 변경할 때마다 webpack 명령을 다시 실행해야 합니다.
 
@@ -287,7 +283,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
 1. 크롬이 현재 디버그 대상으로 선택되었는지 확인 합니다.
 
-    ![디버그 대상으로 크롬 선택](../nodejs/media/tutorial-nodejs-react-debug-target.png)  
+    ![디버그 대상으로 크롬 선택](../nodejs/media/tutorial-nodejs-react-debug-target.png)
 
 1. 앱을 실행하려면 **F5**(**디버그** > **디버깅 시작**) 키 또는 녹색 화살표 단추를 누릅니다.
 
@@ -295,7 +291,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
     Visual Studio는 *server.js* 시작 파일을 시작하여 앱을 시작합니다.
 
-    ![브라우저에서 React 실행](../nodejs/media/tutorial-nodejs-react-running-react.png) 
+    ![브라우저에서 React 실행](../nodejs/media/tutorial-nodejs-react-running-react.png)
 
 1. 브라우저 창을 닫습니다.
 
@@ -305,9 +301,9 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
 1. *server.js*에서 `staticPath` 선언 왼쪽의 여백을 클릭해 중단점을 설정합니다.
 
-    ![중단점 설정](../nodejs/media/tutorial-nodejs-react-set-breakpoint.png) 
+    ![중단점 설정](../nodejs/media/tutorial-nodejs-react-set-breakpoint.png)
 
-    중단점은 신뢰할 수 있는 디버깅의 가장 기본적이 고 필수적인 기능입니다. 중단점은 변수의 값, 메모리의 동작 또는 코드 분기의 실행 여부를 확인할 수 있도록 Visual Studio에서 실행 중인 코드를 일시 중단해야 하는 위치를 나타냅니다. 
+    중단점은 신뢰할 수 있는 디버깅의 가장 기본적이 고 필수적인 기능입니다. 중단점은 변수의 값, 메모리의 동작 또는 코드 분기의 실행 여부를 확인할 수 있도록 Visual Studio에서 실행 중인 코드를 일시 중단해야 하는 위치를 나타냅니다.
 
 1. 앱을 실행하려면 **F5**(**디버그** > **디버깅 시작**) 키를 누릅니다.
 
@@ -333,7 +329,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
 1. 다음 그림에 표시된 것처럼 Visual Studio로 전환하고 `render()` 기능의 *app-bundle.js* 코드에서 중단점을 설정합니다.
 
-    ![중단점 설정](../nodejs/media/tutorial-nodejs-react-set-breakpoint-client-code.png) 
+    ![중단점 설정](../nodejs/media/tutorial-nodejs-react-set-breakpoint-client-code.png)
 
 1. Visual Studio에서 디버그 대상으로 선택된 크롬을 사용하여 **Ctrl + F5**(**디버그** > **디버깅하지 않고 시작**) 키를 눌러 브라우저에서 앱을 실행합니다.
 
@@ -345,7 +341,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
 1. 올바른 호스트 포트(이 예제에서는 1337)를 사용하여 크롬 프로세스를 선택하고 **연결**을 클릭합니다.
 
-    ![프로세스에 연결](../nodejs/media/tutorial-nodejs-react-attach-to-process.png) 
+    ![프로세스에 연결](../nodejs/media/tutorial-nodejs-react-attach-to-process.png)
 
     DOM 탐색기와 JavaScript 콘솔이 Visual Studio에서 열릴 때 디버거가 올바르게 연결됐는지 알 수 있습니다. 이러한 디버깅 도구는 크롬 개발자 도구 및 F12 Tools for Edge와 유사합니다.
 
@@ -367,7 +363,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
     > [!TIP]
     > 이러한 단계를 수행하여 처음으로 프로세스에 연결할 때 **디버그** > **프로세스에 다시 연결**을 선택하여 Visual Studio 2017에서 동일 프로세스에 신속하게 다시 연결할 수 있습니다.
 
-## <a name="next-steps"></a>다음 단계 
+## <a name="next-steps"></a>다음 단계
 
 이 자습서에서는 Node.js 및 React 앱을 만들고 JSX 및 디버그를 트랜스파일하는 방법을 배웠습니다. Visual Studio용 Node.js 도구에 대해 자세히 알려면 Wiki 페이지를 참조하세요.
 

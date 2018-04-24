@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio에서 추상 클래스 구현 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 추상 클래스 구현 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 775175f5492bb8f1dd7ee2111a35ff24b273c3af
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: f91c0a056cb17d1eaf2788c3c7111e2ddbbace2e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="implement-an-abstract-class-in-visual-studio"></a>Visual Studio에서 추상 클래스 구현
 
@@ -46,7 +44,7 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 빨간색 구부러진 곡선 위로 마우스를 이동하고 표시되는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.

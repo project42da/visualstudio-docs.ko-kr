@@ -1,4 +1,12 @@
-1. Visual Studio를 시작하고 **[파일] > [새로 만들기] > [프로젝트]**를 선택합니다.
+---
+ms.topic: include
+ms.openlocfilehash: 37079cfaa1204cd8ce7a77e1e2f5aa91ea844ea5
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/19/2018
+---
+1. Visual Studio를 시작하고 **[파일] > [새로 만들기] > [프로젝트]** 를 선택합니다.
 
 1. **새 프로젝트** 대화 상자에서 "Python"을 검색하고 [기존 Python 코드에서] 템플릿을 선택하고 프로젝트의 이름 및 위치를 지정하고 **확인**을 선택합니다.
 

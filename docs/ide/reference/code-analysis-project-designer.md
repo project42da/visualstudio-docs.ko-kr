@@ -1,30 +1,26 @@
 ---
-title: "프로젝트 디자이너, 코드 분석 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 디자이너, 코드 분석 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs29106
 helpviewer_keywords:
 - Code Analysis page in Project Designer
 - Project Designer, Code Analysis page
 ms.assetid: 71743d26-4da5-4f7d-a403-7ab96cf2ef2e
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e1fc85dbd4fa5f4a8fe757b279826a81705dfd0
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: e28b53e9237f3c368b1d25238f4fb271630f5e44
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="code-analysis-project-designer"></a>프로젝트 디자이너, 코드 분석
 코드에서 실행할 수 있는 코드 분석 도구가 들어 있습니다. 이 도구는 Microsoft .NET Framework 디자인 지침에 명시된 프로그래밍 및 디자인 규칙의 위반과 같은 어셈블리 관련 정보를 보고합니다.  

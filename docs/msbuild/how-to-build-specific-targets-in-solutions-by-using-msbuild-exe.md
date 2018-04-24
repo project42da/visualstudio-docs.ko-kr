@@ -1,28 +1,24 @@
 ---
-title: "방법: MSBuild.exe를 사용하여 솔루션의 특정 대상 빌드 | Microsoft 문서"
-ms.custom: 
+title: '방법: MSBuild.exe를 사용하여 솔루션의 특정 대상 빌드 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, building specific targets in a solution
 - msbuild.exe, building specific targets in a solution
 - MSBuild, msbuild.exe
 ms.assetid: f46feb9b-4c16-4fec-b6e1-36a959692ba3
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4437c8030f66ae24d94a83d796c0d0edf7e59c79
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 89c14c73a4ed49f8fa78422d151d526990359a15
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-build-specific-targets-in-solutions-by-using-msbuildexe"></a>방법: MSBuild.exe를 사용하여 솔루션의 특정 대상 빌드
 MSBuild.exe를 사용하여 솔루션에서 특정 프로젝트의 특정 대상을 빌드할 수 있습니다.  

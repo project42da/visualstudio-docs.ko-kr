@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트 가상 사용자 동작 분석 | Microsoft Docs
 ms.date: 10/03/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.load.monitor.activitychart
 helpviewer_keywords:
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 63f4bd42-3cfb-4eee-af68-e8334976539e
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 149c56f5100c8a9e92108970d29d502a359181b0
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 5f874b070e726374a20e821508115b5798f40b80
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="analyzing-load-test-virtual-user-activity-in-the-details-view-of-the-load-test-analyzer"></a>부하 테스트 분석기의 세부 정보 뷰에서 부하 테스트 가상 사용자 동작 분석
 
@@ -43,7 +43,7 @@ ms.lasthandoff: 03/19/2018
 
  필터 결과 패널은 가상 사용자 동작 차트에 표시됩니다. 필터 결과 패널에서는 다음과 같이 항목을 필터링할 수 있습니다.
 
--   **로그 포함 결과만 표시** 테스트 로그가 연결되어 있는 테스트 결과만 표시합니다.
+-   **로그 포함 결과만 표시** 테스트 로그가 연결되어 있는 테스트 결과만 표시합니다.
 
 -   **성공적인 결과 표시** 성공적인 결과를 표시합니다.
 

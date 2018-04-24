@@ -1,26 +1,24 @@
 ---
-title: "바로 가기 키(도움말 뷰어) | Microsoft Docs"
-ms.custom: 
+title: 바로 가기 키(도움말 뷰어) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-help-viewer
+ms.topic: conceptual
 helpviewer_keywords:
 - shortcut keys [Help Viewer]
 - Help Viewer, shortcut keys
 ms.assetid: ec14c85d-7efb-441c-a46b-bee34a227e39
-caps.latest.revision: "22"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 17f71324031bfdf01b32151288257b97c036056b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 72325d21437d06c3e119da14c6fa34f5d8416e33
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="shortcut-keys-help-viewer"></a>바로 가기 키(도움말 뷰어)
 다음 표의 바로 가기 키를 사용하여 Microsoft 도움말 뷰어에서 이동할 수 있습니다.  

@@ -1,15 +1,14 @@
 ---
-title: "Mac용 Visual Studio Tools for Unity 설정 | Microsoft Docs"
+title: Mac용 Visual Studio Tools for Unity 설정
 author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
-ms.topic: article
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 97620ef9c556705cc358d19a956bddb6dca6a3db
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a1d6d523de9a5a57cf6b4c696a68dbdde1428156
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setup-visual-studio-for-mac-tools-for-unity"></a>Mac용 Visual Studio Tools for Unity 설정
 
@@ -27,7 +26,7 @@ Mac용 Visual Studio를 다운로드하여 설치합니다. Mac용 Visual Studio
 
 Mac용 Visual Studio Tools for Unity 확장은 기본적으로 사용 가능하지만, 이를 확인하고 설치된 버전 번호를 확인할 수 있습니다.
 
-1.  Visual Studio 메뉴에서 **확장...**을 선택합니다.
+1.  Visual Studio 메뉴에서 **확장...** 을 선택합니다.
 
   ![확장 선택](media/setup-vsmac-tools-unity-image1.png)
 
@@ -48,17 +47,17 @@ Mac용 Visual Studio Tools for Unity를 사용하려면 Unity 버전 5.6.1 이�
 
 Visual Studio를 Unity의 외부 스크립트 편집기로 설정해야 합니다.
 
-1.  Unity 메뉴에서 **기본 설정...**을 선택합니다.
+1.  Unity 메뉴에서 **기본 설정...** 을 선택합니다.
 
   ![기본 설정 선택](media/setup-vsmac-tools-unity-image4.png)
 
 2.  기본 설정 대화 상자에서 **외부 도구** 탭을 선택합니다.
 
-3.  외부 스크립트 편집기 드롭다운 목록에서 **Visual Studio**가 있을 경우 이를 선택하고, 그렇지 않을 경우 **찾아보기...**를 선택합니다.
+3.  외부 스크립트 편집기 드롭다운 목록에서 **Visual Studio**가 있을 경우 이를 선택하고, 그렇지 않을 경우 **찾아보기...** 를 선택합니다.
 
   ![Visual Studio 선택](media/setup-vsmac-tools-unity-image5.png)
 
-4.  **찾아보기...**를 선택한 경우 응용 프로그램 디렉터리로 이동하여 Visual Studio를 선택하고 **열기**를 클릭합니다.
+4.  **찾아보기...** 를 선택한 경우 응용 프로그램 디렉터리로 이동하여 Visual Studio를 선택하고 **열기**를 클릭합니다.
 
   ![열기 선택](media/setup-vsmac-tools-unity-image6.png)
 

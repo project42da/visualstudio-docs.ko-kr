@@ -1,20 +1,20 @@
 ---
 title: Visual Studio에서 부하 테스트에 대한 가상 사용자 동작 차트 사용 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, virtual user activity chart
 - virtual user activity chart, isolating performance issues
 ms.assetid: d1c10fb9-cfeb-4e7f-9991-2d1e1103699e
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: f7063775f093b08b859343fbc314399d0cc9fdd4
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 7cf4d2d31bb037aba8af95caf5ffab1d7be2c132
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-using-the-virtual-user-activity-chart-to-isolate-issues"></a>연습: 가상 사용자 동작 차트를 사용하여 문제 격리
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 03/19/2018
 
 3.  **가상 사용자 동작 차트** 아래의 **특정 기간 확대** 도구에서 왼쪽 슬라이더와 오른쪽 슬라이더를 임계값 위반 아이콘에 가까워질 때까지 조정합니다. 그러면 **가상 사용자 동작 차트**에서 시간 범위가 변경됩니다.
 
-4.  **정보 범례**에서 **(오류 강조 표시)**에 대한 확인란을 선택합니다. 임계값 위반을 유발한 가상 사용자가 강조 표시됩니다.
+4.  **정보 범례**에서 **(오류 강조 표시)** 에 대한 확인란을 선택합니다. 임계값 위반을 유발한 가상 사용자가 강조 표시됩니다.
 
 5.  **필터 결과** 창에서 **성공적인 결과 표시** 및 **HttpError**에 대한 확인란의 선택을 취소하고 **ValidationRuleError** 확인란은 선택된 채로 둡니다.
 

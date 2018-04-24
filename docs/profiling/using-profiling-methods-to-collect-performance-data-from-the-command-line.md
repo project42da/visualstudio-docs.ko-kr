@@ -1,23 +1,20 @@
 ---
-title: "명령줄에서 프로파일링 방법을 사용하여 성능 데이터 수집 | Microsoft Docs"
-ms.custom: 
+title: 명령줄에서 프로파일링 방법을 사용하여 성능 데이터 수집 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 5613fafc-f298-4e7a-9a2d-a853b61cdf9c
-caps.latest.revision: "14"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e7acfa376ea805553b931925a2fac0a33b44bb83
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2117fc729ef7e7190e5f1a46fe05d0d91daf63c6
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="using-profiling-methods-to-collect-performance-data-from-the-command-line"></a>명령줄에서 프로파일링 방법을 사용하여 성능 데이터 수집
 프로파일링하는 응용 프로그램의 유형, 사용하려는 프로파일링 방법, 그리고 대상 응용 프로그램이 네이티브 코드로 작성되었는지 아니면 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 코드로 작성되었는지에 따라 선택하는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구 및 옵션이 달라집니다.  
@@ -58,7 +55,7 @@ ms.lasthandoff: 12/22/2017
   
 -   [정적으로 컴파일된 ASP.NET 웹 응용 프로그램](../profiling/how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)  
   
--   [동적으로 컴파일된 ASP.NET 웹 응용 프로그램](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler-by-using-the-command-line.md)  
+-   [동적으로 컴파일된 ASP.NET 웹 응용 프로그램](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-detailed-timing-data-with-the-profiler.md)  
   
 -   [.NET 서비스](../profiling/how-to-instrument-a-dotnet-service-and-collect-detailed-timing-data-by-using-the-profiler-command-line.md)  
   
@@ -73,7 +70,7 @@ ms.lasthandoff: 12/22/2017
 |----------|-----------------------------|  
 |**응용 프로그램 시작**|-   [독립 실행형.NET Framework 응용 프로그램](../profiling/how-to-launch-a-stand-alone-dotnet-framework-application-with-the-profiler-to-collect-memory-data-by-using-the-command-line.md)|  
 |**실행 중인 프로세스에 연결**|-   [.NET framework 독립 실행형 응용 프로그램](../profiling/how-to-attach-the-profiler-to-a-dotnet-framework-stand-alone-application-to-collect-memory-data-by-using-the-command-line.md)<br />-   [ASP.NET 웹 응용 프로그램](../profiling/how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line.md)<br />-   [.NET 서비스](../profiling/how-to-attach-the-profiler-to-a-dotnet-service-to-collect-memory-data-by-using-the-command-line.md)|  
-|**계측 모듈**|-   [.NET Framework 독립 실행형 구성 요소](../profiling/how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line.md)<br />-   [정적으로 컴파일된 ASP.NET 웹 응용 프로그램](../profiling/how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md)<br />-   [동적으로 컴파일된 ASP.NET 웹 응용 프로그램](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md)<br />-   [.NET 서비스](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|  
+|**계측 모듈**|-   [.NET Framework 독립 실행형 구성 요소](../profiling/how-to-instrument-a-stand-alone-dotnet-framework-component-and-collect-memory-data-with-the-profiler-by-using-the-command-line.md)<br />-   [정적으로 컴파일된 ASP.NET 웹 응용 프로그램](../profiling/how-to-instrument-a-statically-compiled-aspnet-web-application-and-collect-memory-data-by-using-the-profiler-command-line.md)<br />-   [동적으로 컴파일된 ASP.NET 웹 응용 프로그램](../profiling/how-to-instrument-a-dynamically-compiled-aspnet-web-application-and-collect-memory-data.md)<br />-   [.NET 서비스](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|  
   
 ##  <a name="BKMK_Using_the_concurrency_method_to_collect_resource_contention_and_thread_activity_data"></a> 동시성 방법을 사용하여 리소스 경합 및 스레드 작업 데이터 수집  
  프로파일링 도구의 동시성 방법을 사용하면 다중 스레딩 응용 프로그램에서 리소스 경합 및 스레드/프로세스 작업 데이터를 수집할 수 있습니다.  

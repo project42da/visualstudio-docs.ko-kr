@@ -1,25 +1,21 @@
 ---
-title: "방법: 작업의 오류 무시 | Microsoft 문서"
-ms.custom: 
+title: '방법: 작업의 오류 무시 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-sdk
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: msbuild - "vs-ide-sdk"
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, ignoring errors
 - ContinueOnError attribute [MSBuild]
 ms.assetid: e2f1ca4f-787b-44bd-bc64-81a036025e96
-caps.latest.revision: "18"
-author: kempb
-ms.author: kempb
-manager: ghogen
-ms.openlocfilehash: 6fbdf661b49fb60ec6b1e18c6886b9bdcc946437
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.openlocfilehash: 348a026815d0d48390fed5741e6dba741fda9937
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-ignore-errors-in-tasks"></a>방법: 작업의 오류 무시
 경우에 따라 빌드에서 특정 작업의 폴트 발생을 허용하고자 합니다. 중요하지 않은 작업이 실패할 경우 필요한 출력이 계속 생성될 수 있으므로 빌드를 계속 진행하고자 합니다. 예를 들어 각 구성 요소가 빌드된 후 프로젝트에서 `SendMail` 작업을 사용하여 전자 메일 메시지를 보낸다면 메일 서버를 사용할 수 없고 상태 메시지를 보낼 수 없는 경우에도 완료될 때까지 빌드를 진행하도록 허용할 수 있습니다. 또는 예를 들어 일반적으로 빌드 중에 중간 파일이 삭제된다면 해당 파일을 삭제할 수 없는 경우에도 완료될 때까지 빌드를 진행하도록 허용할 수 있습니다.  
@@ -45,7 +41,7 @@ ms.lasthandoff: 10/31/2017
   
      `<Delete Files="@(Files)" ContinueOnError="WarnAndContinue"/>`  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 `Delete` 작업이 실패하더라도 `Build` 대상이 계속 실행되고 빌드가 성공한 것으로 간주됨을 보여 줍니다.  
   
 ```xml  

@@ -1,13 +1,9 @@
 ---
-title: "방법: 계측 전 명령 및 계측 후 명령 지정 | Microsoft 문서"
-ms.custom: 
+title: '방법: 계측 전 명령 및 계측 후 명령 지정 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.property.instrument
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - events [Visual Studio], pre-instrument
 - pre-instrument events, performance tools
 ms.assetid: 6a8d5340-1d1b-4d81-88dd-8e1f435eb828
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 641b03b0740cc05275135753eb525fde271239e9
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 65c6bd02ae2a89f8ea8e66cb6d7b943344450375
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-pre--and-post-instrument-commands"></a>방법: 계측 전 명령 및 계측 후 명령 지정
 
@@ -64,7 +59,7 @@ ms.lasthandoff: 02/21/2018
 3. **계측 전 이벤트** 아래 **명령줄** 텍스트 상자에 명령을 입력합니다.
 
     > [!NOTE]
-    > **명령줄** 상자에 인접한 줄임표 단추**(...)**를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.
+    > **명령줄** 상자에 인접한 줄임표 단추 **(...)** 를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.
 
 4. **확인**을 클릭합니다.
 
@@ -83,7 +78,7 @@ ms.lasthandoff: 02/21/2018
 3. **계측 후 이벤트** 아래 **명령줄** 텍스트 상자에 명령을 입력합니다.
 
     > [!NOTE]
-    > **명령줄** 상자에 인접한 줄임표 단추**(...)**를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.
+    > **명령줄** 상자에 인접한 줄임표 단추 **(...)** 를 클릭하여 해당하는 .exe, .cmd 또는 .bat 파일로 이동하고 파일을 선택합니다.
 
 4. **확인**을 클릭합니다.
 

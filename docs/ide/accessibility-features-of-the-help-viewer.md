@@ -1,26 +1,24 @@
 ---
-title: "Visual Studio 도움말 뷰어의 접근성 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 도움말 뷰어의 접근성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-help-viewer
+ms.topic: conceptual
 helpviewer_keywords:
 - accessibility features [Help Viewer]
 - Help Viewer, accessibility features
 ms.assetid: 94a3225c-d2cb-4565-8453-855d1cdc1acf
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: f706ca6fcaba9d1f5423fee3f32eefdaca163b1b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: af1187e43e5839b284af227d1fdbcb8c055d6c85
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>도움말 뷰어의 접근성 기능
 Microsoft는 제품과 서비스를 모든 사용자가 사용하기 더욱 쉽게 만들기 위해 최선을 다하고 있습니다. 이 항목에는 Microsoft 도움말 뷰어를 다양한 범위의 기능을 가진 사람들이 액세스할 수 있도록 도와주는 기능, 제품 및 서비스에 대한 정보가 포함되어 있습니다.  

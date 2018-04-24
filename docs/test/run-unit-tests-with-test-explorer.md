@@ -2,19 +2,19 @@
 title: 테스트 탐색기를 사용하여 단위 테스트 실행 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.unittesting.testexplorer.overview
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ff1f101ba9c4335ca694d8bc13f6f17701d0974c
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: eda6a63b8d6e10b3eec3139ffa29143b0b5733ba
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="run-unit-tests-with-test-explorer"></a>테스트 탐색기를 사용하여 단위 테스트 실행
 
@@ -118,7 +118,7 @@ Visual Studio에는 관리 코드 및 네이티브 코드에 대한 Microsoft �
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestCategoryAttribute>|TestCategory 특성을 사용하면 값이 없는 범주를 제공할 수 있습니다. TestCategory 특성으로 정의된 범주는 TestProperty 특성의 범주도 될 수 있습니다.|
 |<xref:Microsoft.VisualStudio.TestTools.UnitTesting.TestPropertyAttribute>|TestProperty 특성을 사용하여 특성(trait) 범주/값 쌍을 정의할 수 있습니다.|
 
- **C++용 Microsoft 단위 테스트 프레임워크 특성(trait)**에 대해서는 [C++용 Microsoft 단위 테스트 프레임워크 사용 방법](how-to-use-microsoft-test-framework-for-cpp.md)을 참조합니다.
+ **C++용 Microsoft 단위 테스트 프레임워크 특성(trait)** 에 대해서는 [C++용 Microsoft 단위 테스트 프레임워크 사용 방법](how-to-use-microsoft-test-framework-for-cpp.md)을 참조합니다.
 
 ### <a name="search-and-filter-the-test-list"></a>테스트 목록 검색 및 필터링
 

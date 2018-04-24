@@ -1,13 +1,10 @@
 ---
-title: "방법: 형식 간의 연결 만들기(클래스 디자이너) | Microsoft Docs"
-ms.custom: 
+title: '방법: 형식 간의 연결 만들기(클래스 디자이너) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.associationline
 helpviewer_keywords:
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - associations, types
 - association lines
 ms.assetid: adccb9c8-2f8a-4086-9fa9-f70f99fb6e00
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aa4c994ffadf04c3205762d0018d18ad14ffd6c5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4d81e2f3bb671f5c88b08bf1cb26db42a6c4383a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-associations-between-types-class-designer"></a>방법: 형식 간의 연결 만들기(클래스 디자이너)
 클래스 디자이너의 연결 선은 다이어그램에서 클래스가 어떻게 연결되어 있는지 보여 줍니다. 연결 선은 해당 프로젝트에서 다른 클래스의 필드 또는 속성의 형식인 클래스를 나타냅니다. 일반적으로 연결 선은 프로젝트에서 클래스 간에 가장 중요한 관계를 보여 주는 데 사용됩니다.  

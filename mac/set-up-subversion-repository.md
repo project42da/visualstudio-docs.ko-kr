@@ -1,16 +1,15 @@
 ---
-title: "Mac용 Visual Studio에서 Subversion 리포지토리 설정 | Microsoft Docs"
-description: "Mac용 Visual Studio에서 Git 및 Subversion 사용"
+title: Mac용 Visual Studio에서 Subversion 리포지토리 설정하기
+description: Mac용 Visual Studio에서 Git 및 Subversion 사용
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: 0757ad29b8614a86f059f525f6ffe3100595d09b
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: e6b6fd600d3f32c77651b9a4fbb0dff2cd754bcb
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setting-up-a-subversion-repository"></a>Subversion 리포지토리 설정
 
@@ -26,7 +25,7 @@ Subversion을 사용하기 전에 올바른 svn 패키지를 포함하도록 Xco
 
 2. Mac용 Visual Studio 프로젝트를 열거나 만듭니다.
 
-3. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **버전 제어 > 버전 제어에서 게시...**를 선택합니다. 
+3. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **버전 제어 > 버전 제어에서 게시...** 를 선택합니다. 
 
     ![프로젝트 게시 시작](media/version-control-subversion2.png)
 

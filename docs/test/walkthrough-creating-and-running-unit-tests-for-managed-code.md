@@ -2,7 +2,7 @@
 title: '연습: Visual Studio에서 관리 코드에 대한 단위 테스트 만들기 및 실행 | Microsoft 문서'
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unit tests, walkthrough
 - unit tests, creating
@@ -10,15 +10,15 @@ helpviewer_keywords:
 - unit tests, running
 - unit tests, authoring
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 74e364b9ea3660c8daa58b75bb6ba74f9af26c69
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: a34fded72a0d04f3920e0d7a76f9550993b520e7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>연습: 관리 코드에 대한 단위 테스트 만들기 및 실행
 
@@ -62,7 +62,7 @@ ms.lasthandoff: 03/19/2018
 
      **새 프로젝트** 대화 상자가 나타납니다.
 
-3.  **설치된 템플릿**에서 **Visual C#**을 클릭합니다.
+3.  **설치된 템플릿**에서 **Visual C#** 을 클릭합니다.
 
 4.  응용 프로그램 형식 목록에서 **클래스 라이브러리**를 클릭합니다.
 
@@ -109,9 +109,9 @@ public void Debit(double amount)
 
 ### <a name="to-create-a-unit-test-project"></a>단위 테스트 프로젝트를 만들려면
 
-1.  **파일** 메뉴에서 **추가**를 선택한 다음 **새 프로젝트...**를 선택합니다.
+1.  **파일** 메뉴에서 **추가**를 선택한 다음 **새 프로젝트...** 를 선택합니다.
 
-2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C#**을 확장한 다음 **테스트**를 선택합니다.
+2.  새 프로젝트 대화 상자에서 **설치됨**, **Visual C#** 을 확장한 다음 **테스트**를 선택합니다.
 
 3.  템플릿 목록에서 **단위 테스트 프로젝트**를 선택합니다.
 

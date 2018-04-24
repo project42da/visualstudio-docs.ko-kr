@@ -2,26 +2,22 @@
 title: '연습: C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 10/03/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 dev_langs:
 - VB
 - CSharp
 ms.assetid: f84339c7-d617-4f56-bfcd-af2215c347ba
-caps.latest.revision: 19
 author: TerryGLee
 ms.author: tglee
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 05397e8dc965b23f0a60b9d7cbfcbb40621821a9
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 369b94cb19344bc3a58545f26643ec7d5d78a246
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-create-a-simple-application-with-c-or-visual-basic"></a>연습: C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기
 이 연습을 완료하면 Visual Studio를 사용하여 응용 프로그램을 개발할 때 사용할 수 있는 여러 도구, 대화 상자 및 디자이너에 익숙해집니다. IDE(통합 개발 환경)의 작업에 대해 배우면서 간단한 “Hello, World” 응용 프로그램을 만들고, UI를 디자인하고, 코드를 추가하고, 오류를 디버그하게 됩니다.
@@ -42,11 +38,11 @@ Visual Studio에서 응용 프로그램을 만들 때 먼저 프로젝트와 솔
 
 #### <a name="to-create-the-wpf-project"></a>WPF 프로젝트를 만들려면  
 
-1.  새 프로젝트를 만듭니다. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트...**를 차례로 선택합니다.  
+1.  새 프로젝트를 만듭니다. 메뉴 모음에서 **파일**, **새로 만들기**, **프로젝트...** 를 차례로 선택합니다.  
 
      ![메뉴 모음에서 파일, 새로 만들기, 프로젝트를 차례로 선택합니다.](../ide/media/exploreide-filenewproject.png "ExploreIDE-FileNewProject")  
 
-2.  예를 들어 왼쪽 창에서 **설치됨**, **Visual C#**, **Windows Classic Desktop**을 차례로 선택한 다음 가운데 창에서 **WPF 앱(.NET Framework)**을 선택하여 Visual Basic 또는 Visual C# WPF 앱 템플릿을 선택합니다.  새 프로젝트 대화 상자 아래쪽의 프로젝트 이름을 HelloWPFApp으로 지정합니다.  
+2.  예를 들어 왼쪽 창에서 **설치됨**, **Visual C#**, **Windows Classic Desktop**을 차례로 선택한 다음 가운데 창에서 **WPF 앱(.NET Framework)** 을 선택하여 Visual Basic 또는 Visual C# WPF 앱 템플릿을 선택합니다.  새 프로젝트 대화 상자 아래쪽의 프로젝트 이름을 HelloWPFApp으로 지정합니다.  
 
      ![C# WPF 프로젝트, HelloWPFApp 만들기](../ide/media/exploreide-newprojectcsharp.png "ExploreIDE-NewProjectcsharp")  
 

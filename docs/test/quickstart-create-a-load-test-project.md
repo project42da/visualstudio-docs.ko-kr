@@ -6,13 +6,13 @@ helpviewer_keywords:
 - load testing, quickstart
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: be2a60cad77f2806c3be59e86509ff96d9c416ed
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: dbd89b92ec3ca5059fbbf91680db660825cdec8f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-create-a-load-test-project"></a>빠른 시작: 부하 테스트 프로젝트 만들기
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 03/19/2018
 
 웹 성능 및 부하 테스트 도구 구성 요소를 아직 설치하지 않은 경우 Visual Studio 설치 관리자를 통해 설치해야 합니다.
 
-1. Windows 시작 메뉴에서 Visual Studio 설치 관리자를 엽니다. **새 프로젝트** 대화 상자에서 Visual Studio로 액세스하거나 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...**를 선택하여 액세스할 수도 있습니다.
+1. Windows 시작 메뉴에서 Visual Studio 설치 관리자를 엽니다. **새 프로젝트** 대화 상자에서 Visual Studio로 액세스하거나 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...** 를 선택하여 액세스할 수도 있습니다.
 
 1. Visual Studio 설치 관리자에서 **개별 구성 요소** 탭을 선택하고 **디버깅 및 테스트** 섹션까지 아래로 스크롤합니다. **웹 성능 및 부하 테스트 도구**를 선택합니다.
 
@@ -39,11 +39,11 @@ ms.lasthandoff: 03/19/2018
 
 이 섹션에서는 C# 부하 테스트 프로젝트를 만듭니다. 원하는 경우 Visual Basic 부하 테스트 프로젝트를 만들 수도 있습니다.
 
-1. Visual Studio를 열고 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 선택합니다.
+1. Visual Studio를 열고 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
 
    **새 프로젝트** 대화 상자가 열립니다.
 
-1. **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#**을 확장한 다음, **테스트** 범주를 선택합니다. **웹 성능 및 부하 테스트 프로젝트** 템플릿을 선택합니다.
+1. **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#** 을 확장한 다음, **테스트** 범주를 선택합니다. **웹 성능 및 부하 테스트 프로젝트** 템플릿을 선택합니다.
 
    ![웹 성능 및 부하 테스트 프로젝트 템플릿](media/web-perf-load-test-project-template.png)
 
@@ -53,7 +53,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="add-a-load-test-to-the-project"></a>프로젝트에 부하 테스트 추가
 
-1. **솔루션 탐색기**에서 프로젝트 노드의 오른쪽 클릭 메뉴 또는 상황에 맞는 메뉴에서 **추가** > **부하 테스트...**를 선택합니다.
+1. **솔루션 탐색기**에서 프로젝트 노드의 오른쪽 클릭 메뉴 또는 상황에 맞는 메뉴에서 **추가** > **부하 테스트...** 를 선택합니다.
 
    **부하 테스트 새로 만들기 마법사**가 열립니다.
 

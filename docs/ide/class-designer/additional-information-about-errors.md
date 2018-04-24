@@ -1,12 +1,10 @@
 ---
-title: "클래스 디자이너 오류에 대한 추가 정보 | Microsoft Docs"
-ms.custom: 
+title: 클래스 디자이너 오류에 대한 추가 정보 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.CPlusPlusViewInDiagramNoTypeFound
 - vs.classdesigner.CPlusPlusNoTypeFound
@@ -28,19 +26,19 @@ helpviewer_keywords:
 - error messages, class diagrams
 - class diagrams, errors
 ms.assetid: 79d70e70-704c-4255-ab68-c10d6949470e
-caps.latest.revision: "10"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 53b61b1fa49ffcbc047d47dd26586b45ae883c5f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8cd6223786db06506c1fa4ac9b6bd3118eb5e3d7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="additional-information-about-class-designer-errors"></a>클래스 디자이너 오류에 대한 추가 정보
-클래스 디자이너는 소스 파일 위치를 추적하지 않으므로 프로젝트 구조를 수정하거나 프로젝트에서 소스 파일을 이동하면 클래스 디자이너가 해당 형식을 찾지 못할 수 있습니다(특히 소스 형식이 typedef, 기본 클래스 또는 연결 형식인 경우). **클래스 디자이너에서 이 형식을 표시할 수 없습니다.**와 같은 오류가 발생할 수 있습니다. 이러한 오류가 발생하면 수정되거나 위치가 변경된 소스 코드를 클래스 다이어그램으로 끌어서 다시 표시합니다.  
+클래스 디자이너는 소스 파일 위치를 추적하지 않으므로 프로젝트 구조를 수정하거나 프로젝트에서 소스 파일을 이동하면 클래스 디자이너가 해당 형식을 찾지 못할 수 있습니다(특히 소스 형식이 typedef, 기본 클래스 또는 연결 형식인 경우). **클래스 디자이너에서 이 형식을 표시할 수 없습니다.** 와 같은 오류가 발생할 수 있습니다. 이러한 오류가 발생하면 수정되거나 위치가 변경된 소스 코드를 클래스 다이어그램으로 끌어서 다시 표시합니다.  
   
 다음 리소스에서 다른 오류 및 경고에 대한 도움말을 찾을 수 있습니다.  
   

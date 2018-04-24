@@ -1,26 +1,22 @@
 ---
-title: "플랫폼 간 모바일 개발 예제 | Microsoft 문서"
-ms.custom: 
+title: 플랫폼 간 모바일 개발 예제 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: bc384c12-fccc-45d7-9fb9-b90d536aa663
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 8a6c2ba508afdd209713c8c1a514377e8e322868
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9fc4b9df68890caee9d8f79b8ecf2080c408db2e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="cross-platform-mobile-development-examples"></a>플랫폼 간 모바일 개발 예제
 플랫폼 간 모바일 개발용 Visual C++에 의해 설치된 템플릿 중 일부는 학습에 사용할 수 전체 예제를 생성합니다. 또한 Windows 개발자 센터에는 다운로드하여 Visual Studio에서 사용해 볼 수 있는 여러 가지 예제 응용 프로그램이 있습니다.  

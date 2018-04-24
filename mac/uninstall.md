@@ -1,17 +1,16 @@
 ---
-title: Mac용 Visual Studio 제거 | Microsoft Docs
+title: Mac용 Visual Studio 제거
 description: Mac용 Visual Studio 및 관련 도구를 제거하는 방법을 안내합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.technology: vs-ide-install
 ms.assetid: 4EB95F75-BC2E-4982-9564-2975805712D8
-ms.openlocfilehash: 985905c81acc5816c2b7a37debb4f5af3d93e94f
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: b3da59c949204f7363276ce9631604af9fadcad6
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="uninstalling-visual-studio-for-mac"></a>Mac용 Visual Studio 제거
 
@@ -32,7 +31,7 @@ Mac용 Visual Studio와 같은 독립형 앱을 포함하여 플랫폼 간 응�
 
 스크립트를 실행하려면 다음 단계를 수행하십시오.
 
-1. 스크립트를 마우스 오른쪽 단추로 클릭하고 **다른 이름으로 저장...**을 선택하여 Mac에 파일을 저장합니다.
+1. 스크립트를 마우스 오른쪽 단추로 클릭하고 **다른 이름으로 저장...** 을 선택하여 Mac에 파일을 저장합니다.
 2. 터미널을 열고 스크립트를 다운로드한 위치로 작업 디렉터리를 변경합니다.
 
     ```bash
@@ -100,7 +99,7 @@ sudo rm -rf /Library/Frameworks/Xamarin.Android.framework
 
 ### <a name="uninstall-android-sdk-and-java-sdk"></a>Android SDK 및 Java SDK 제거
 
-Android SDK는 Android 응용 프로그램 개발에 필요합니다. Android SDK의 모든 부분을 완전히 제거하려면 **~/Library/Developer/Xamarin/**에서 해당 파일을 찾아 **휴지통**으로 이동합니다.
+Android SDK는 Android 응용 프로그램 개발에 필요합니다. Android SDK의 모든 부분을 완전히 제거하려면 **~/Library/Developer/Xamarin/** 에서 해당 파일을 찾아 **휴지통**으로 이동합니다.
 
 Java SDK(JDK)는 이미 Mac OS X/macOS에 포함되어 있으므로 제거할 필요가 없습니다.
 

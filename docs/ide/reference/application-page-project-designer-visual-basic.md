@@ -2,12 +2,9 @@
 title: 프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic) | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vb.ProjectPropertiesApplicationWPF
 - vb.ProjectPropertiesApplication
@@ -16,14 +13,14 @@ helpviewer_keywords:
 - Application page in Project Designer
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a84db9a4e1d2617fd38229cfca6ebe6d20a1d3f
-ms.sourcegitcommit: 627708d128a91656e34ce5d8e061102da4c66b4d
+ms.openlocfilehash: 9372f915fb1914bea971ffb287fa5788a9372449
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/04/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="application-page-project-designer-visual-basic"></a>Application Page, Project Designer (Visual Basic)
 
@@ -82,7 +79,7 @@ ms.lasthandoff: 04/04/2018
 
 ### <a name="icon"></a>아이콘
 
-프로그램 아이콘으로 사용할 .ico 파일을 설정합니다. **\<찾아보기...>**를 선택하여 기존 그래픽을 찾습니다. 자세한 내용은 [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)(또는 [/win32icon(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option))을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>을 참조하세요.
+프로그램 아이콘으로 사용할 .ico 파일을 설정합니다. **\<찾아보기...>** 를 선택하여 기존 그래픽을 찾습니다. 자세한 내용은 [/win32icon](/dotnet/visual-basic/reference/command-line-compiler/win32icon)(또는 [/win32icon(C# 컴파일러 옵션)](/dotnet/csharp/language-reference/compiler-options/win32icon-compiler-option))을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.ApplicationIcon%2A>을 참조하세요.
 
 ### <a name="startup-form--startup-object--startup-uri"></a>시작 폼/시작 개체/시작 URI
 
@@ -94,7 +91,7 @@ ms.lasthandoff: 04/04/2018
 
 **응용 프로그램 프레임워크 사용**의 선택이 취소된 경우 이 목록은 **시작 개체**가 되고 `Sub Main`을 포함하는 폼과 클래스 또는 모듈을 둘 다 표시합니다.
 
-**시작 개체**는 응용 프로그램 로드 시 호출할 진입점을 정의합니다. 일반적으로 응용 프로그램의 기본 폼이나 응용 프로그램 시작 시 실행되어야 하는 `Sub Main` 프로시저로 설정됩니다. 클래스 라이브러리에 진입점이 없기 때문에 이 속성의 유일한 옵션은 **(없음)**입니다. 자세한 내용은 [/main](/dotnet/visual-basic/reference/command-line-compiler/main)을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.StartupObject%2A>을 참조하세요.
+**시작 개체**는 응용 프로그램 로드 시 호출할 진입점을 정의합니다. 일반적으로 응용 프로그램의 기본 폼이나 응용 프로그램 시작 시 실행되어야 하는 `Sub Main` 프로시저로 설정됩니다. 클래스 라이브러리에 진입점이 없기 때문에 이 속성의 유일한 옵션은 **(없음)** 입니다. 자세한 내용은 [/main](/dotnet/visual-basic/reference/command-line-compiler/main)을 참조하세요. 프로그래밍 방식으로 이 속성에 액세스하려면 <xref:VSLangProj.ProjectProperties.StartupObject%2A>을 참조하세요.
 
 ### <a name="assembly-information"></a>어셈블리 정보
 
@@ -150,7 +147,7 @@ Windows 인증을 사용하여 현재 로그온한 사용자를 식별하도록 
 
 ### <a name="splash-screen"></a>시작 화면
 
-시작 화면으로 사용할 폼을 선택합니다. 이전에 폼 또는 템플릿을 사용하여 시작 화면을 만든 상태여야 합니다. 기본값은 **(없음)**입니다.
+시작 화면으로 사용할 폼을 선택합니다. 이전에 폼 또는 템플릿을 사용하여 시작 화면을 만든 상태여야 합니다. 기본값은 **(없음)** 입니다.
 
 ### <a name="view-application-events"></a>응용 프로그램 이벤트 보기
 

@@ -1,25 +1,23 @@
 ---
-title: "Visual Studio 2017 개요 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 2017 개요 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/05/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 f1_keywords:
 - vs.startpage
 - VS.StartPage.HowDoI
 - MSDNSTART
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dd54f6f26a76f750454db06c16c3b04c08a873eb
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 6525b9d0bd0d5b394f09f0acd01b40a73bfc3bf2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE 개요
 
@@ -95,11 +93,11 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 무언가를 자세히 알아보는 좋은 방법 중 하나는 사용해 보는 것입니다! 이제 새롭고 간단한 프로그램을 만들어 보겠습니다.
 
-1. Visual Studio를 엽니다. 메뉴에서 **파일** > **새로 만들기** > **프로젝트...**를 선택합니다.
+1. Visual Studio를 엽니다. 메뉴에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
 
   ![메뉴 모음의 파일 > 새 프로젝트](../ide/media/VSIDE_Tour_NewProject1.png)
 
-1. **새 프로젝트** 대화 상자에는 여러 프로젝트 템플릿이 표시됩니다. **Visual C#**에서 **.NET Core** 범주를 선택한 다음 **콘솔 앱(.NET Core)** 템플릿을 선택합니다. **이름** 텍스트 상자에 "HelloWorld"를 입력합니다. **확인** 단추를 선택합니다.
+1. **새 프로젝트** 대화 상자에는 여러 프로젝트 템플릿이 표시됩니다. **Visual C#** 에서 **.NET Core** 범주를 선택한 다음 **콘솔 앱(.NET Core)** 템플릿을 선택합니다. **이름** 텍스트 상자에 "HelloWorld"를 입력합니다. **확인** 단추를 선택합니다.
 
   ![.NET Core 앱 템플릿](../ide/media/overview-new-project-dialog.png)
 

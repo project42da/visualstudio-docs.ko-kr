@@ -1,14 +1,12 @@
 ---
-title: "Visual Studio에서 인터페이스 추출 리팩터링 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 인터페이스 추출 리팩터링 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 f1_keywords:
 - vs.csharp.refactoring.extractinterface
 dev_langs:
@@ -16,11 +14,11 @@ dev_langs:
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: e735b194da008de83fddac564194f8bb008c66bb
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 7abdc017c4d57e17685671539a4b053e6241b424
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extract-an-interface-refactoring"></a>인터페이스 추출 리팩터링
 
@@ -52,7 +50,7 @@ ms.lasthandoff: 02/28/2018
 
    - **키보드**
      - **Ctrl+R**을 누른 다음 **Ctrl+I**를 누릅니다. 바로 가기 키는 선택한 프로필에 따라 다를 수 있습니다.
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **인터페이스 추출**을 선택합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **인터페이스 추출**을 선택합니다.
    - **마우스**
      - **편집 > 리팩터링 > 인터페이스 추출**을 선택합니다.
      - 클래스 이름을 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 **인터페이스 추출**을 선택합니다.

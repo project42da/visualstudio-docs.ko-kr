@@ -1,23 +1,20 @@
 ---
-title: "방법: 명령줄을 통해 ASP.NET 웹 응용 프로그램에 프로파일러를 연결하여 메모리 데이터 수집 | Microsoft Docs"
-ms.custom: 
+title: '방법: 명령줄을 통해 ASP.NET 웹 응용 프로그램에 프로파일러를 연결하여 메모리 데이터 수집 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d608f85a-41ae-4ca7-85e6-b96624dbc83c
-caps.latest.revision: "31"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: aspnet
-ms.openlocfilehash: 115b8faf48a45181394c4fc954e5d83348bc7224
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- aspnet
+ms.openlocfilehash: e45eb3e1ac874343de5a3076a62b89e541f20d75
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-attach-the-profiler-to-an-aspnet-web-application-to-collect-memory-data-by-using-the-command-line"></a>방법: 명령줄을 통해 ASP.NET 웹 응용 프로그램에 프로파일러를 연결하여 메모리 데이터 수집
 이 항목은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 프로파일러를 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램에 연결하고 .NET Framework 메모리 할당의 수와 크기에 대한 데이터를 수집하는 방법을 설명합니다. .NET Framework 메모리 개체의 수명에 대한 데이터를 수집할 수도 있습니다.  

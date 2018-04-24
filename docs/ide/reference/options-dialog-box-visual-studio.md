@@ -1,13 +1,10 @@
 ---
-title: "옵션 대화 상자(Visual Studio) | Microsoft Docs"
-ms.custom: 
+title: 옵션 대화 상자(Visual Studio) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolsoptionspages
 helpviewer_keywords:
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - Options dialog box, development environment
 - tools [Visual Studio], customizing
 ms.assetid: 02b09877-1df1-4531-a0d1-a4ca17c7f857
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cc5a5013b402d01db8aa84134c9a2740d0ff6304
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: df56cdef77c8f189a27d52ea624359bb8dfe3bca
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="options-dialog-box-visual-studio"></a>옵션 대화 상자(Visual Studio)
 **옵션** 대화 상자에서는 필요에 맞게 IDE(통합 개발 환경)를 구성할 수 있습니다. 예를 들어 프로젝트의 기본 저장 위치를 설정하고, 창의 기본 모양과 동작을 변경하고, 일반적으로 사용되는 명령의 바로 가기를 만들 수 있습니다. 개발 언어 및 플랫폼에 관련된 옵션도 있습니다. **도구** 메뉴에서 **옵션**에 액세스할 수 있습니다.  

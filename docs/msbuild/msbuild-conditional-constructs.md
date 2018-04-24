@@ -1,12 +1,9 @@
 ---
-title: "MSBuild 조건부 구문 | Microsoft Docs"
-ms.custom: 
+title: MSBuild 조건부 구문 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -22,20 +19,19 @@ helpviewer_keywords:
 - Otherwise Element [MSBuild]
 - When Element [MSBuild]
 ms.assetid: dd54258e-f4fb-448f-9da4-d1817e0cbaf2
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f018ec733248f6663e2cf2292599df9d2afdc81c
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 46426fd77e86962762f8ac3beaf8aa6a490bc6ae
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="msbuild-conditional-constructs"></a>MSBuild 조건부 구문
-[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] [Choose](../msbuild/choose-element-msbuild.md), [When](../msbuild/when-element-msbuild.md) 및 [Otherwise](../msbuild/otherwise-element-msbuild.md) 요소를 포함하는 / 또는 처리에 메커니즘을 제공합니다.  
+[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)]는 [Choose](../msbuild/choose-element-msbuild.md), [When](../msbuild/when-element-msbuild.md) 및 [Otherwise](../msbuild/otherwise-element-msbuild.md) 요소를 포함하는 / 또는 처리에 메커니즘을 제공합니다.  
   
 ## <a name="using-the-choose-element"></a>Choose 요소 사용  
  `Choose` 요소에는 `true`로 계산될 때까지 위쪽에서 아래쪽 순서로 테스트되는 `Condition` 특성을 포함한 일련의 `When` 요소가 포함됩니다. 하나 이상의 `When` 요소가 `true`로 계산되면 첫 번째 요소만 사용합니다. `Otherwise` 요소가 있는 경우 `When` 요소에 대한 조건이 `true`로 계산되는지를 평가합니다.  

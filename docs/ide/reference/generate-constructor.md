@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio에서 생성자 생성| Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 생성자 생성| Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: kuhlenh
 ms.author: kaseyu
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0767b47fcf4456e1ac198674ece6c9de31850279
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 8ab26fd6ccc8359c2699154ae6fa5821040ce9ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="generate-a-constructor-in-visual-studio"></a>Visual Studio에서 생성자 생성
 
@@ -48,14 +46,14 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 텍스트 커서가 이미 구부러진 빨간 곡선이 있는 줄 위에 있으면 왼쪽 여백에 나타나는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.
 
    ![생성자 생성 미리 보기](media/constructor1-preview-cs.png)
 
-1. 드롭다운 메뉴에서 **생성자 생성...**을 선택합니다.
+1. 드롭다운 메뉴에서 **생성자 생성...** 을 선택합니다.
 
    **멤버 선택** 대화 상자가 열립니다.
 
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 텍스트 커서가 이미 구부러진 빨간 곡선이 있는 줄 위에 있으면 왼쪽 여백에 나타나는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.
@@ -107,7 +105,7 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 빨간색 구부러진 곡선 위로 마우스를 이동하고 표시되는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.
@@ -141,7 +139,7 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 빨간색 구부러진 곡선 위로 마우스를 이동하고 표시되는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.
@@ -166,7 +164,7 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 텍스트 커서가 이미 구부러진 빨간 곡선이 있는 줄 위에 있으면 왼쪽 여백에 나타나는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.

@@ -1,23 +1,21 @@
 ---
-title: "3단계: 카운트다운 타이머 추가 | Microsoft 문서"
-ms.custom: 
+title: '3단계: 카운트다운 타이머 추가 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-acquisition
+ms.topic: conceptual
 ms.assetid: 62670a2b-efdc-45c6-9646-9b17eeb33dcb
-caps.latest.revision: "23"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 09d956f897e81d5e785c561a69cc8b716375676d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 15f398aa90ea4565fea5645abeb1b2570a7ffc29
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-3-add-a-countdown-timer"></a>3단계: 카운트다운 타이머 추가
 이 자습서의 3단계에서는 퀴즈를 푸는 사람이 퀴즈를 마칠 때까지 남은 시간(초)을 추적하도록 카운트다운 타이머를 추가합니다.  
@@ -53,7 +51,7 @@ ms.lasthandoff: 12/22/2017
   
      추가한 문을 기반으로 타이머는 1초 간격으로 **timeLeft** 정수 변수가 0보다 큰지 확인하여 시간이 다 되었는지 여부를 확인합니다. 이 값이 0보다 크면 시간이 남은 것입니다. 타이머는 먼저 timeLeft에서 1을 뺀 다음 퀴즈를 푸는 사람에게 남은 시간(초)을 표시하도록 `timeLabel` 컨트롤의 **Text** 속성을 업데이트합니다.  
   
-     남은 시간이 없으면 타이머가 중지되고 `timeLabel` 컨트롤의 텍스트가 **Time's up!**으로 변경되어 표시됩니다. 퀴즈가 끝났다는 메시지 상자가 나타나고 답(이 경우, addend1과 addend2를 더한 값)이 표시됩니다. 퀴즈를 푸는 사람이 다른 퀴즈를 시작할 수 있도록 `startButton` 컨트롤의 **Enabled** 속성이 `true`로 설정됩니다.  
+     남은 시간이 없으면 타이머가 중지되고 `timeLabel` 컨트롤의 텍스트가 **Time's up!** 으로 변경되어 표시됩니다. 퀴즈가 끝났다는 메시지 상자가 나타나고 답(이 경우, addend1과 addend2를 더한 값)이 표시됩니다. 퀴즈를 푸는 사람이 다른 퀴즈를 시작할 수 있도록 `startButton` 컨트롤의 **Enabled** 속성이 `true`로 설정됩니다.  
   
      이제 프로그램에서 결정을 내리도록 지시하는 방법인 `if else` 문을 추가했습니다. `if else` 문은 다음과 같습니다.  
   

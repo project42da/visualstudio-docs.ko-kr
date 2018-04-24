@@ -1,15 +1,14 @@
 ---
-title: "ASP.NET Core 시작"
+title: ASP.NET Core 시작
 author: asb3993
 ms.author: amburns
 ms.date: 07/13/2017
-ms.topic: article
 ms.assetid: 6E8B0C90-33D6-4546-8207-CE0787584565
-ms.openlocfilehash: b494128a26691f9916a0fe2380a5f403e61d21d4
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: 998bd304f287fffdf53dd9c53cb3be1d83a407f3
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="getting-started-with-aspnet-core"></a>ASP.NET Core 시작
 
@@ -21,7 +20,7 @@ ms.lasthandoff: 10/27/2017
 
 ## <a name="creating-an-aspnet-core-app-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 ASP.NET Core 앱 만들기
 
-Mac용 Visual Studio를 엽니다. 시작 페이지에서 **새 프로젝트...**를 선택합니다.
+Mac용 Visual Studio를 엽니다. 시작 페이지에서 **새 프로젝트...** 를 선택합니다.
 
 ![새 프로젝트 대화 상자](media/asp-net-core-image1.png)
 
@@ -164,7 +163,7 @@ MVC 사용 방법에 대한 자세한 내용은 [ASP.NET Core MVC 개요](https:
     }
     ```
 
-3. **종속성** 폴더를 마우스 오른쪽 단추로 클릭하고 **패키지 추가...**를 선택하여 `Microsoft.AspNetCore.Mvc` 종속성을 프로젝트에 추가합니다.
+3. **종속성** 폴더를 마우스 오른쪽 단추로 클릭하고 **패키지 추가...** 를 선택하여 `Microsoft.AspNetCore.Mvc` 종속성을 프로젝트에 추가합니다.
 
 4. 검색 상자를 사용하여 `Microsoft.AspNetCore.Mvc`의 NuGet 라이브러리를 찾은 다음 **패키지 추가**를 선택합니다. 설치하는 데 몇 분 정도 걸릴 수 있으며, 필수 종속성에 대한 다양한 라이선스에 동의하라는 메시지가 표시될 수도 있습니다.
 

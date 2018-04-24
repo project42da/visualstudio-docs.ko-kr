@@ -1,25 +1,21 @@
 ---
-title: "1단계: 프로젝트 만들기 및 폼에 테이블 추가 | Microsoft Docs"
-ms.custom: 
+title: '1단계: 프로젝트 만들기 및 폼에 테이블 추가 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 1cac4ba4-f3cd-43bd-ad5d-50fc599234e8
-caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dc8def9bb088275cef9f15e4e643d6811feab462
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 59afec50a1889b62e6115be44caa116b475a95c5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-create-a-project-and-add-a-table-to-your-form"></a>1단계: 프로젝트 만들기 및 폼에 테이블 추가
 일치 게임을 만들 때 첫 번째 단계에서는 프로젝트를 만들고 폼에 테이블을 추가합니다. 테이블을 사용하면 4x4 모눈에 순서대로 아이콘을 정렬할 수 있습니다. 또한 게임 보드의 모양을 개선하는 몇 가지 속성을 설정할 수 있습니다.  

@@ -2,10 +2,8 @@
 title: Visual Studio IntelliSense | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vc.tools.intellisense
 helpviewer_keywords:
@@ -16,14 +14,14 @@ helpviewer_keywords:
 - IntelliSense [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 88ee47502d0aa15e391155cae918c8e579e72194
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: d6e87113f8c8a703a6eb4d893c0ca54a90bfb8d1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-intellisense-in-visual-studio"></a>Visual Studio에서 IntelliSense 사용
 
@@ -99,7 +97,7 @@ MessageBox( hWnd, "String literal|")
 
 **자동 옵션이 꺼져 있습니다.** 기본적으로 IntelliSense는 자동으로 작동하지만 비활성화할 수 있습니다. 자동 문 완성을 비활성화한 경우에도 IntelliSense 기능을 호출할 수 있습니다.
 
-## <a name="see-also"></a>참고자료
+## <a name="see-also"></a>참고 항목
 
 [Visual Basic IntelliSense](../ide/visual-basic-specific-intellisense.md)  
 [C# IntelliSense](../ide/visual-csharp-intellisense.md)  

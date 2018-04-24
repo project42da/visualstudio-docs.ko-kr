@@ -1,26 +1,23 @@
 ---
-title: "표준 및 사용자 지정 도구 집합 구성 | Microsoft Docs"
-ms.custom: 
+title: 표준 및 사용자 지정 도구 집합 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/31/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, custom toolset configurations
 - MSBuild, msbuild.exe.config
 ms.assetid: 15a048c8-5ad3-448e-b6e9-e3c5d7147ed2
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 19e01346c8af84faad2ac1877091a395db3fd3ce
-ms.sourcegitcommit: f219ef323b8e1c9b61f2bfd4d3fad7e3d5fb3561
+ms.openlocfilehash: 855bd7af4372f5216abab3d6ddd45ec8f7809baa
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/14/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="standard-and-custom-toolset-configurations"></a>표준 및 사용자 지정 도구 집합 구성
 MSBuild 도구 집합은 응용 프로그램 프로젝트를 빌드하는 데 사용할 수 있는 작업, 대상 및 도구에 대한 참조를 포함합니다. MSBuild는 표준 도구 집합을 포함하지만 사용자 지정 도구 집합을 만들 수도 있습니다. 도구 집합을 지정하는 방법에 대한 내용은 [도구 집합(ToolsVersion)](../msbuild/msbuild-toolset-toolsversion.md)을 참조하세요.  
@@ -93,7 +90,7 @@ MSBuild 도구 집합은 응용 프로그램 프로젝트를 빌드하는 데 �
   
  다음 속성은 프로젝트에 사용되는 `ToolsVersion`의 값에 관련됩니다.  
   
--   **$(MSBuildBinPath)**는 레지스트리 또는 `ToolsVersion`이 정의된 구성 파일에 지정된 `ToolsPath` 값으로 설정됩니다. 레지스트리 또는 구성 파일의 `$(MSBuildToolsPath)` 설정은 핵심 작업 및 대상의 위치를 지정합니다. 프로젝트 파일에서 $(MSBuildBinPath) 속성 및 $(MSBuildToolsPath) 속성에 매핑됩니다.  
+-   **$(MSBuildBinPath)** 는 레지스트리 또는 `ToolsVersion`이 정의된 구성 파일에 지정된 `ToolsPath` 값으로 설정됩니다. 레지스트리 또는 구성 파일의 `$(MSBuildToolsPath)` 설정은 핵심 작업 및 대상의 위치를 지정합니다. 프로젝트 파일에서 $(MSBuildBinPath) 속성 및 $(MSBuildToolsPath) 속성에 매핑됩니다.  
   
 -   `$(MSBuildToolsPath)`는 구성 파일에 지정된 MSBuildToolsPath 속성에서 제공되는 예약된 속성입니다. (이 속성은 `$(MSBuildBinPath)`를 대체합니다. 그러나 `$(MSBuildBinPath)`가 호환성을 위해 전달됩니다.) 사용자 지정 도구 집합은 `$(MSBuildToolsPath)` 및 `$(MSBuildBinPath)`가 동일한 값을 갖지 않는 한 둘 모두가 아닌 둘 중 하나를 정의해야 합니다.  
   

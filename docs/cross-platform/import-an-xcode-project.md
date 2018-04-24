@@ -1,23 +1,20 @@
 ---
-title: "XCode 프로젝트 가져오기 | Microsoft 문서"
-ms.custom: 
+title: XCode 프로젝트 가져오기 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: aa4b8161-d98f-4a1a-9db3-520133bfc82f
 ms.technology: vs-ide-mobile
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: 339c634277d6f53a54bcb428f80ae21b82d76797
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 500dce15e695cf53a061f8405919e808b8f7c493
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="import-an-xcode-project"></a>XCode 프로젝트 가져오기
 플랫폼 간 모바일 개발용 Microsoft Visual C++에서는 Visual Studio로 XCode 프로젝트 이동을 지원하여 플랫폼 간 라이브러리를 만들고 다른 프로젝트와 코드를 공유할 수 있습니다. XCode에서 가져오기 마법사를 사용하면 정적 라이브러리 또는 공유 코드 프로젝트로 사용하기 위해 프로젝트를 가져오고 XCode 대상에서 C++ 코드를 분할하는 프로세스가 간단해집니다. Visual Studio에서 iOS 관련 코드를 관리할 수 있으며 XCode를 계속 사용하여 스토리보드 및 빌드를 수행할 수 있습니다. Visual Studio와 XCode 간에 코드를 쉽게 이동하는 방법에 대한 자세한 내용은 XCode와 Visual Studio 간에 변경 내용 이동을 참조하세요.  

@@ -2,24 +2,19 @@
 title: Visual Studio에서 CPU 사용량 분석 | Microsoft Docs| Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 7501a20d-04a1-480f-a69c-201524aa709d
-caps.latest.revision: 8
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2324c857807f2f15762ce36539df3d7c2ad01b4b
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 267d0a55ae648c68ed4228b3ad4a206bad1f5148
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-cpu-usage"></a>CPU 사용 분석
 앱 성능 문제를 검토해야 하는 경우 앱에서 CPU를 사용하는 방식을 파악하는 것부터 시작하는 것이 좋습니다. **CPU 사용량** 도구는 CPU에서 Visual C++, Visual C#/Visual Basic 및 JavaScript 코드 실행에 시간을 소모하는 상황을 보여 줍니다. Visual Studio 2015 업데이트 1부터 디버거를 종료하지 않고 CPU 사용의 기능별 분석 결과를 볼 수 있습니다. 디버그하는 동안 CPU 프로파일링을 켜고 끌 수 있으며, 실행이 중지되면(예: 중단점에서) 결과를 볼 수 있습니다.  
@@ -45,7 +40,7 @@ ms.lasthandoff: 03/15/2018
   
     -   Windows Phone 앱의 경우 **장치** 에서 직접 데이터를 수집하면 가장 정확한 데이터가 제공됩니다.  
   
-2.  **디버그** 메뉴에서 **성능 프로파일러...**를 선택합니다.  
+2.  **디버그** 메뉴에서 **성능 프로파일러...** 를 선택합니다.  
   
 3.  **CPU 사용량** 을 선택한 다음 **시작**을 선택합니다.  
   
@@ -83,7 +78,7 @@ ms.lasthandoff: 03/15/2018
   
  ![필터 뷰 선택 후 외부 코드 표시](../profiling/media/cpu_use_wt_filterview.png "CPU_USE_WT_FilterView")  
   
- 여러 외부 코드 호출 체인은 깊이 중첩되어 있으므로 함수 이름 열의 너비가 컴퓨터 모니터의 거의 최대 화면 너비를 초과할 수 있습니다. 이런 경우 함수 이름은 다음과 같이 **[…]**로 표시됩니다.  
+ 여러 외부 코드 호출 체인은 깊이 중첩되어 있으므로 함수 이름 열의 너비가 컴퓨터 모니터의 거의 최대 화면 너비를 초과할 수 있습니다. 이런 경우 함수 이름은 다음과 같이 **[…]** 로 표시됩니다.  
   
  ![호출 트리에 중첩된 외부 코드](../profiling/media/cpu_use_wt_showexternalcodetoowide.png "CPU_USE_WT_ShowExternalCodeTooWide")  
   

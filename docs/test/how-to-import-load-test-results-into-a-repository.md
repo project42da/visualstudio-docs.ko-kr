@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 리포지토리의 부하 테스트 결과 가져오기 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - results, load test
 - load test results, importing
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: a955b3d2-c8ad-40dd-8ea3-9f1a271e1eed
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1d9f94641fe3249e6aa36b01b408abd66781b81f
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 5a4646578299895c0988522d871ba727d80f063c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-import-load-test-results-into-a-repository"></a>방법: 리포지토리로 부하 테스트 결과 가져오기
 
@@ -32,7 +32,7 @@ ms.lasthandoff: 03/19/2018
 
      **부하 테스트 결과 열기 및 관리** 대화 상자가 표시됩니다.
 
-3.  **부하 테스트 결과를 찾을 컨트롤러 이름 입력**에서 컨트롤러를 선택합니다. **\<로컬>**을 선택하여 로컬로 저장된 결과에 액세스합니다.
+3.  **부하 테스트 결과를 찾을 컨트롤러 이름 입력**에서 컨트롤러를 선택합니다. **\<로컬>** 을 선택하여 로컬로 저장된 결과에 액세스합니다.
 
      사용 가능한 부하 테스트 결과는 **부하 테스트 결과** 목록에 나타납니다. 여기에는 **시간**, **지속 시간**, **사용자**, **결과**, **테스트** 및 **설명** 열이 있습니다. **테스트**에는 테스트의 이름이 들어 있고 **설명**에는 테스트를 실행하기 전에 추가한 설명(선택 사항)이 들어 있습니다.
 

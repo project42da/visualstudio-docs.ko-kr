@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트 시나리오의 Virtual Network 형식 지정 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, scenarios
 - load tests, adding networks
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 3c4f7874-081a-4ec4-9510-4d6d7d863a11
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: c301a8d72228ed450479fd39b010db5682ae6adc
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: f40c1d26d1b8f28fd72bbcc5eb4842724e2d1e89
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-virtual-network-types-in-a-load-test-scenario"></a>부하 테스트 시나리오에서 Virtual Network 형식 지정
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 03/19/2018
 
  목록 컨트롤을 통해 시나리오의 네트워크 분포를 쉽게 조정할 수 있습니다.
 
- 자세한 내용은 [조합 제어 정보](../test/specify-virtual-network-types-in-a-load-test-scenario.md)를 참조하세요.
+ 자세한 내용은 [목록 컨트롤 정보](../test/specify-virtual-network-types-in-a-load-test-scenario.md)를 참조하십시오.
 
 ## <a name="true-network-emulation"></a>진정한 네트워크 에뮬레이션
 
@@ -66,7 +66,7 @@ ms.lasthandoff: 03/19/2018
 
 2.  **네트워크 형식** 열에서 새 항목에 대한 화살표를 선택합니다. 원하는 네트워크 형식을 선택합니다.
 
-3.  (선택 사항) 목록 컨트롤을 조정하여 테스트 분포를 조정합니다. 자세한 내용은 [조합 제어 정보](../test/specify-virtual-network-types-in-a-load-test-scenario.md)를 참조하세요.
+3.  (선택 사항) 목록 컨트롤을 조정하여 테스트 분포를 조정합니다. 자세한 내용은 [목록 컨트롤 정보](../test/specify-virtual-network-types-in-a-load-test-scenario.md)를 참조하십시오.
 
 4.  네트워크 추가를 완료했으면 **확인**을 선택합니다.
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/19/2018
 
 3.  눈금에서 네트워크를 선택한 다음, **제거**를 선택합니다.
 
-4.  (선택 사항) 목록 컨트롤을 조정하여 테스트 분포를 조정합니다. 자세한 내용은 [조합 제어 정보](../test/specify-virtual-network-types-in-a-load-test-scenario.md)를 참조하세요.
+4.  (선택 사항) 목록 컨트롤을 조정하여 테스트 분포를 조정합니다. 자세한 내용은 [목록 컨트롤 정보](../test/specify-virtual-network-types-in-a-load-test-scenario.md)를 참조하십시오.
 
 5.  네트워크 제거를 완료했으면 **확인**을 선택합니다.
 

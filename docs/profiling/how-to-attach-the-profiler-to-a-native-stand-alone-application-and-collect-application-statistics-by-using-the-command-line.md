@@ -1,43 +1,26 @@
 ---
-title: "방법: 명령줄을 통해 네이티브 독립 실행형 응용 프로그램에 프로파일러를 연결하여 응용 프로그램 통계 수집 | Microsoft Docs"
-ms.custom: 
+title: '방법: 명령줄을 통해 네이티브 독립 실행형 응용 프로그램에 프로파일러를 연결하여 응용 프로그램 통계 수집 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: df44fe42-281b-4398-b3fc-277b62ae41f1
-caps.latest.revision: 31
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: db3a61e77cb4f74f538ef6781701df03ae593b46
-ms.lasthandoff: 02/22/2017
-
+manager: douge
+ms.workload:
+- cplusplus
+ms.openlocfilehash: c9ef8415aaa9a5004528841c2fc9c466a8374459
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-attach-the-profiler-to-a-native-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>방법: 명령줄을 통해 네이티브 독립 실행형 응용 프로그램에 프로파일러를 연결하여 응용 프로그램 통계 수집
 이 항목은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 실행 중인 네이티브 독립 실행형(클라이언트) 응용 프로그램에 프로파일러를 연결하고 샘플링 방법을 사용하여 성능 통계를 수집하는 방법을 설명합니다.  
   
 > [!NOTE]
->  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. Windows 스토어 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
+>  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 또한 UWP 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
   
 > [!NOTE]
 >  프로파일링 도구의 명령줄 도구는 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)] 설치 디렉터리의 \Team Tools\Performance Tools 하위 디렉터리에 있습니다. 64비트 컴퓨터에서는 도구의 64비트 및 32비트 버전을 둘 다 사용할 수 있습니다. 프로파일러 명령줄 도구를 사용하려면 도구 경로를 명령 프롬프트 창의 PATH 환경 변수에 추가하거나 명령 자체에 추가해야 합니다. 자세한 내용은 [명령줄 도구의 경로 지정](../profiling/specifying-the-path-to-profiling-tools-command-line-tools.md)을 참조하세요.  
@@ -51,7 +34,7 @@ ms.lasthandoff: 02/22/2017
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  프로파일러를 시작합니다. 형식:  
+2.  프로파일러를 시작합니다. 유형:  
   
      **VSPerfCmd /start:sample /output:** `OutputFile` [`Options`]  
   
@@ -84,7 +67,7 @@ ms.lasthandoff: 02/22/2017
     |[/sys](../profiling/sys-vsperfcmd.md) [**:**`Interval`]|샘플링 이벤트를 운영 체제 커널에 대한 프로세스의 시스템 호출로 변경합니다(syscalls). `Interval`이 지정되면 샘플 간의 호출 수를 설정합니다. 기본값은 10입니다.|  
     |[/counter](../profiling/counter.md) **:** `Config`|샘플링 이벤트 및 간격을 `Config`에 지정된 프로세서 성능 카운터 및 간격으로 변경합니다.|  
   
-## <a name="controlling-data-collection"></a>데이터 수집 제어  
+## <a name="controlling-data-collection"></a>데이터 컬렉션 제어  
  대상 응용 프로그램이 실행 중이면 VSPerfCmd.exe 옵션을 사용하여 프로파일러 데이터 파일에 대한 데이터 쓰기를 시작하고 중지할 수 있습니다. 데이터 수집을 제어하면 응용 프로그램의 시작 또는 종료와 같이 프로그램 실행의 특정 부분에 대한 데이터를 수집할 수 있습니다.  
   
 #### <a name="to-start-and-stop-data-collection"></a>데이터 수집을 시작 및 중지하려면  
@@ -110,7 +93,7 @@ ms.lasthandoff: 02/22/2017
   
     -   대상 응용 프로그램을 닫습니다.  
   
-2.  프로파일러를 종료합니다. 형식:  
+2.  프로파일러를 종료합니다. 유형:  
   
      **VSPerfCmd**  [/shutdown](../profiling/shutdown.md)  
   

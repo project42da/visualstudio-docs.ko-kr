@@ -2,11 +2,8 @@
 title: MIDL 작업 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - VC.Project.VCMidlTool.ServerStubFile
 - VC.Project.VCMidlTool.ApplicationConfigurationMode
@@ -26,17 +23,16 @@ helpviewer_keywords:
 - MSBuild (Visual C++), MIDL task
 - MIDL task (MSBuild (Visual C++))
 ms.assetid: 727efa8c-3336-40b8-8bef-ae6cbd77a422
-caps.latest.revision: 8
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 51ed6c8c34fd5aa37eebffabcda077ca8554c498
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: b46e4dc771ad5bb95185647a4769359427886f24
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="midl-task"></a>MIDL 작업
 MIDL(Microsoft 인터페이스 정의 언어) 컴파일러 도구인 midl.exe를 래핑합니다. 자세한 내용은 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 웹 사이트에서 "MIDL 명령줄 참조"를 참조하세요.  
@@ -262,7 +258,7 @@ MIDL(Microsoft 인터페이스 정의 언어) 컴파일러 도구인 midl.exe를
   
      선택적 **String[]** 매개 변수입니다.  
   
-     하나 이상의 *defines*;를 지정합니다. 즉, 이름 및 선택적 값이 `#define` 지시문을 사용하는 것처럼 C 전처리기에 전달 되도록 지정합니다. 각 define의 형식은 *name[=value]*입니다.  
+     하나 이상의 *defines*;를 지정합니다. 즉, 이름 및 선택적 값이 `#define` 지시문을 사용하는 것처럼 C 전처리기에 전달 되도록 지정합니다. 각 define의 형식은 *name[=value]* 입니다.  
   
      자세한 내용은 [MSDN](http://go.microsoft.com/fwlink/?LinkId=737) 웹 사이트의 "MIDL 명령줄 참조"에서 **/D** 옵션을 참조하세요. 이 표의 **UndefinePreprocessorDefinitions** 매개 변수도 참조하세요.  
   

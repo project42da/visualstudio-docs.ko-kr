@@ -1,27 +1,22 @@
 ---
-title: "호출 트리 뷰 - 계측 데이터 | Microsoft 문서"
-ms.custom: 
+title: 호출 트리 뷰 - 계측 데이터 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Call Tree view
 ms.assetid: 306bd176-0ce9-4a10-89ca-20b043d37d4e
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d528c4161b2fcdf61a7357e74e64caa124f995de
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: eaf8e9176c389aecf2844f3e4bcaeea9bcaa5803
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="call-tree-view---instrumentation-data"></a>호출 트리 뷰 - 계측 데이터
 호출 트리의 함수 값은 호출 트리의 부모 함수가 호출한 함수 인스턴스의 시간을 나타냅니다. 비율 값은 프로파일링 실행 시 모든 함수의 총 경과된 포괄 시간과 함수 인스턴스 값을 비교하여 계산됩니다.  

@@ -1,19 +1,19 @@
 ---
 title: Visual Studio에서 부하 테스트 실행 설정 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, run settings
 ms.assetid: de10dabb-02ed-403b-9e6f-0b735524988c
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: d278323bd816a801d94d2d1c18755111afa43eed
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 498c581d1918fbd4565f821bf516a5301534d733
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-test-run-settings-properties"></a>부하 테스트 실행 설정 속성
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 03/19/2018
 |--------------|----------------|
 |**휴지 기간**|hh:mm:ss 형식으로 표시되는 테스트 휴지 기간입니다. 부하 테스트 시간 내의 개별 테스트는 부하 테스트가 완료되어도 계속 실행됩니다. 이러한 테스트는 휴지 기간 동안에도 완료되거나 휴지 기간이 끝날 때까지 계속 진행할 수 있습니다. 기본적으로는 휴지 기간이 없으며 개별 테스트는 실행 지속 시간 설정에 따라 부하 테스트가 완료되면 종료됩니다.|
 |**실행 지속 시간**|테스트 길이이며 hh:mm:ss 형식입니다.|
-|**샘플 속도**|성능 카운터 값을 캡처할 간격이며 hh:mm:ss 형식입니다.<br /><br /> 자세한 내용은 [방법: 샘플 속도 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요.|
+|**샘플 속도**|성능 카운터 값을 캡처할 간격이며 hh:mm:ss 형식입니다.<br /><br /> 자세한 내용은 [방법: 샘플링 주기 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요.|
 |**준비 시간**|테스트가 시작되는 시점과 데이터 샘플 기록이 시작되는 시점 사이의 시간이며 hh:mm:ss 형식입니다. 샘플 값을 기록하기 전에 특정 부하 수준에 도달하는 가상 사용자의 단계 부하에 주로 사용됩니다. 준비 기간이 끝나기 전에 캡처된 샘플 값이 **부하 테스트 분석기**에 표시됩니다.|
 
 ## <a name="webtest-connections-properties"></a>WebTest 연결 속성

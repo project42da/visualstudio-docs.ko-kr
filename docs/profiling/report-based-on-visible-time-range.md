@@ -1,29 +1,24 @@
 ---
-title: "표시되는 시간 범위를 기반으로 하는 보고서 | Microsoft Docs"
-ms.custom: 
+title: 표시되는 시간 범위를 기반으로 하는 보고서 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.reportnav.profile
 helpviewer_keywords:
 - Concurrency Visualizer, Report Based on Visible Time Range
 ms.assetid: ef4f6259-a110-43b6-a325-364154e1ba00
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7ea4f4593f40ae08cd865d65550f6316baaee618
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 76c7217b9b4159a368575d5acef92b03775478b4
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="report-based-on-visible-time-range"></a>표시되는 시간 범위를 기반으로 하는 보고서
 프로필 뷰는 현재 표시된 시간 범위 및 채널을 기반으로 하는 보고서를 표시합니다. 다른 데이터 하위 집합에 대한 세부 정보를 보려면 범례에서 항목을 클릭합니다.  

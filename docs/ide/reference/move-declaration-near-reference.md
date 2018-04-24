@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio에서 참조 근처로 변수 선언 이동| Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 참조 근처로 변수 선언 이동| Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
 ms.topic: reference
 author: kuhlenh
 ms.author: kaseyu
-manager: ghogen
+manager: douge
 dev_langs:
 - csharp
 ms.workload:
 - dotnet
-ms.openlocfilehash: a76e6024a2b61bcae08fb8db169483bcee6e5d19
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 7c78904123da54fd2259558f29832742d9a103d2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="move-declaration-near-reference-refactoring"></a>참조 리팩터링 근처로 선언 이동
 
@@ -38,7 +36,7 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **참조 근처로 선언 이동**을 선택합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **참조 근처로 선언 이동**을 선택합니다.
    - **마우스**
      - 코드를 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 **참조 근처로 선언 이동**을 선택합니다.
 

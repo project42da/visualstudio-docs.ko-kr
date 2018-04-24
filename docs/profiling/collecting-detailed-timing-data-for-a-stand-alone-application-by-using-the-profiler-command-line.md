@@ -1,26 +1,23 @@
 ---
-title: "프로파일러 명령줄을 사용하여 독립 실행형 응용 프로그램에 대한 자세한 타이밍 데이터 수집 | Microsoft 문서"
-ms.custom: 
+title: 프로파일러 명령줄을 사용하여 독립 실행형 응용 프로그램에 대한 자세한 타이밍 데이터 수집 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - profiling tools,instrumentation method
 - instrumentation profiling method
 ms.assetid: 4017d9d1-d609-4f41-8e4e-976abae746b3
-caps.latest.revision: "15"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 07bb6cf6a0426f0287c01c431e4b3d05f79b5d39
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: c4edc21357e9ffac539a21416a815868702ceabd
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="collecting-detailed-timing-data-for-a-stand-alone-application-by-using-the-profiler-command-line"></a>프로파일러 명령줄을 사용하여 독립 실행형 응용 프로그램에 대한 자세한 타이밍 데이터 수집
 이 섹션에서는 명령줄 도구에서 계측 방법을 사용하여 클라이언트(독립 실행형) 구성 요소에 대한 자세한 성능 데이터를 수집하기 위한 절차 및 옵션을 설명합니다.  
@@ -47,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 |작업|관련 내용|  
 |----------|---------------------|  
-|**ASP.NET 응용 프로그램 프로파일링**|-   [계측을 사용하여 자세한 타이밍 데이터 수집](../profiling/collecting-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method-from-the-command-line.md)|  
+|**ASP.NET 응용 프로그램 프로파일링**|-   [계측을 사용하여 자세한 타이밍 데이터 수집](../profiling/collecting-detailed-timing-data-for-an-aspnet-web-application-using-the-profiler-instrumentation-method.md)|  
 |**서비스 프로파일링**|-   [계측을 사용하여 자세한 타이밍 데이터 수집](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method-from-the-profiler-command-line.md)|  
   
 ### <a name="analyzing-instrumentation-data-views-and-reports"></a>계측 데이터 뷰 및 보고서 분석  

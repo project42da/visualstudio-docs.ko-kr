@@ -2,11 +2,8 @@
 title: '빠른 시작: XAML 및 C#을 사용하여 Visual Studio에서 첫 번째 유니버설 Windows 플랫폼 응용 프로그램 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/04/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 ms.devlang: CSharp
 author: TerryGLee
@@ -16,11 +13,11 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 7caba5278ec415aec036c501d4911bcd5c7f3c77
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: d1263b752a27522b9a551d8015689f60422984ad
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>빠른 시작: XAML 및 C&#35를 사용하여 Visual Studio에서 첫 번째 유니버설 Windows 플랫폼 응용 프로그램 만들기
 
@@ -34,9 +31,9 @@ ms.lasthandoff: 04/06/2018
 
 1. Visual Studio 2017을 엽니다.
 
-2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.
 
-3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C#**을 확장하고 **Windows 유니버설**을 선택합니다. 중간 창에서 **빈 앱(유니버설 Windows)**을 선택합니다. 프로젝트 이름을 *HelloWorld*로 지정하고 **확인**을 선택합니다.
+3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C#** 을 확장하고 **Windows 유니버설**을 선택합니다. 중간 창에서 **빈 앱(유니버설 Windows)** 을 선택합니다. 프로젝트 이름을 *HelloWorld*로 지정하고 **확인**을 선택합니다.
 
    ![Visual Studio IDE의 새 프로젝트 대화 상자의 Windows 유니버설 프로젝트 템플릿](../ide/media/new-project-csharp-uwp-helloworld.png)
 

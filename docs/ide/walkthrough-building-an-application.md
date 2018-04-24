@@ -1,21 +1,19 @@
 ---
-title: "연습: 응용 프로그램 빌드 | Microsoft 문서"
-ms.custom: 
+title: '연습: 응용 프로그램 빌드 | Microsoft 문서'
+ms.custom: ''
 ms.date: 09/25/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 485c8445f24dbd0aaec501649885df50d173347a
-ms.sourcegitcommit: d6327b978661c0a745bf4b59f32d8171607803a3
+ms.openlocfilehash: b94f9b9ba60279c359ce7c6cc3c9646bfbbe7c5a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/01/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-building-an-application"></a>연습: 응용 프로그램 빌드
 
@@ -37,13 +35,13 @@ ms.lasthandoff: 02/01/2018
 
    ![빌드 메뉴, 구성 관리자 명령](../ide/media/buildwalk_configurationmanagerdialogbox.png "BuildWalk_ConfigurationManagerDialogBox")  
 
-1. **활성 솔루션 구성** 목록에서 **\<새로 만들기...\>**를 선택합니다.
+1. **활성 솔루션 구성** 목록에서 **\<새로 만들기...\>** 를 선택합니다.
 
 1. **새 솔루션 구성** 대화 상자에서 새 구성의 이름을 `Test`로 지정하고, 기존 디버그 구성에서 설정을 복사하고, **확인** 단추를 선택합니다.
 
    ![새 솔루션 구성 대화 상자](../ide/media/buildwalk_newsolutionconfigdlgbox.png "BuildWalk_NewSolutionConfigDlgBox")  
 
-1. **활성 솔루션 플랫폼** 목록에서 **\<새로 만들기...\>**를 선택합니다.
+1. **활성 솔루션 플랫폼** 목록에서 **\<새로 만들기...\>** 를 선택합니다.
 
 1. **새 솔루션 플랫폼** 대화 상자에서 **x64**를 선택하지만 x86 플랫폼에서 설정을 복사하지 않습니다.
 
@@ -79,7 +77,7 @@ ms.lasthandoff: 02/01/2018
 
     또는
 
-    Visual Basic 프로젝트에서 **ExpenseReportPage.xaml.vb** 파일을 엽니다. 사용자 지정 생성자 **Public Sub New...**에서 다음 코드를 추가합니다. `Dim i`
+    Visual Basic 프로젝트에서 **ExpenseReportPage.xaml.vb** 파일을 엽니다. 사용자 지정 생성자 **Public Sub New...** 에서 다음 코드를 추가합니다. `Dim i`
 
 1. 솔루션을 빌드합니다.
 

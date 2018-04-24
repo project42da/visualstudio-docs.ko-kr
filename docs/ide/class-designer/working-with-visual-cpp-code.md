@@ -1,13 +1,10 @@
 ---
-title: "Visual C++ 코드 사용(클래스 디자이너) | Microsoft Docs"
-ms.custom: 
+title: Visual C++ 코드 사용(클래스 디자이너) | Microsoft Docs
+ms.custom: ''
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.cpplimitation
 helpviewer_keywords:
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - C++, class diagrams
 - C++, Class Designer
 ms.assetid: f5b40921-2ef7-4de0-b595-45b44c79ffa6
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: e0861f6e97ea5cc2321befce8cdf6c460c7ec6cc
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 490ab617e52e78681f6fdd427548c5e1cbd59957
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="working-with-visual-c-code-class-designer"></a>Visual C++ 코드 사용(클래스 디자이너)
 클래스 디자이너에는 프로젝트의 코드 요소를 시각적으로 나타내 주는 *클래스 다이어그램*이라는 시각적 디자인 화면이 표시됩니다. 클래스 다이어그램을 사용하여 프로젝트의 클래스 및 기타 형식을 디자인하고 시각화할 수 있습니다.  
@@ -56,7 +52,7 @@ ms.lasthandoff: 12/22/2017
 ## <a name="troubleshooting-type-resolution-and-display-issues"></a>형식 확인 및 표시 문제 해결  
 
 ### <a name="location-of-source-files"></a>소스 파일의 위치  
-클래스 디자이너에서는 소스 파일의 위치를 추적하지 않습니다. 따라서 프로젝트 구조를 수정하거나 프로젝트의 소스 파일을 이동하면 특히 형식 정의, 기본 클래스 또는 형식 연결의 소스 형식에 대해 클래스 디자이너에서 해당 형식을 추적할 수 없게 됩니다. **클래스 디자이너에서 이 형식을 표시할 수 없습니다.**와 같은 오류가 발생할 수 있습니다. 이러한 오류가 발생하면 수정되거나 위치가 변경된 소스 코드를 클래스 다이어그램으로 끌어서 다시 표시합니다.  
+클래스 디자이너에서는 소스 파일의 위치를 추적하지 않습니다. 따라서 프로젝트 구조를 수정하거나 프로젝트의 소스 파일을 이동하면 특히 형식 정의, 기본 클래스 또는 형식 연결의 소스 형식에 대해 클래스 디자이너에서 해당 형식을 추적할 수 없게 됩니다. **클래스 디자이너에서 이 형식을 표시할 수 없습니다.** 와 같은 오류가 발생할 수 있습니다. 이러한 오류가 발생하면 수정되거나 위치가 변경된 소스 코드를 클래스 다이어그램으로 끌어서 다시 표시합니다.  
 
 ### <a name="update-and-performance-issues"></a>업데이트 및 성능 문제  
 Visual C++ 프로젝트의 경우 소스 파일의 변경 내용이 클래스 다이어그램에 나타나는 데는 30~60초가 소요될 수 있습니다. 이 시간 지연으로 인해 클래스 디자이너에서 **선택한 항목에서 형식을 찾을 수 없습니다.** 오류를 throw할 수도 있습니다. 이와 같은 오류가 발생하면 오류 메시지에서 **취소**를 클릭하고 클래스 뷰에 해당 코드 요소가 나타날 때까지 기다립니다. 그런 후에 클래스 디자이너에서 해당 형식이 표시될 수 있습니다.  
@@ -74,7 +70,7 @@ Visual C++ 프로젝트의 경우 소스 파일의 변경 내용이 클래스 �
 
 -   형식은 #import 지시문을 사용하여 참조되는 라이브러리에 있습니다. 가능한 해결 방법은 생성된 코드(.tlh 파일)를 헤더 파일에 대한 #include 지시문에 수동으로 추가하는 것입니다.  
 
-형식 확인 문제의 경우 가장 발생하기 쉬운 오류는 **클래스 다이어그램 ‘\<element>’에서 하나 이상의 모양에 대한 코드를 찾을 수 없습니다.**입니다. 이 오류 메시지가 반드시 코드에 오류가 있음을 나타내지 않습니다. 클래스 디자이너는 코드를 표시할 수 없습니다 것을 나타냅니다. 다음과 같은 방법을 시도해 보세요.  
+형식 확인 문제의 경우 가장 발생하기 쉬운 오류는 **클래스 다이어그램 ‘\<element>’에서 하나 이상의 모양에 대한 코드를 찾을 수 없습니다.** 입니다. 이 오류 메시지가 반드시 코드에 오류가 있음을 나타내지 않습니다. 클래스 디자이너는 코드를 표시할 수 없습니다 것을 나타냅니다. 다음과 같은 방법을 시도해 보세요.  
 
 -   해당 형식이 존재하는지 확인합니다. 실수로 주석으로 처리했거나 소스 코드를 삭제했는지 확인합니다.  
 

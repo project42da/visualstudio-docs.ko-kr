@@ -1,13 +1,9 @@
 ---
-title: "HPC(고성능 컴퓨팅) 클러스터에서 프로파일링 | Microsoft Docs"
-ms.custom: 
+title: HPC(고성능 컴퓨팅) 클러스터에서 프로파일링 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.hpc.wizard.exeoptions
 - vs.performance.hpc.wizard.summary
@@ -22,20 +18,20 @@ helpviewer_keywords:
 - HPC profiling
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 148610eadf05c26247ad813f7be733fade6d4a48
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: e4542289e0d9dceeeadf972db714148d4e1bec4d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="profiling-on-hpc-high-performance-computing-clusters"></a>HPC(High Performance Computing) 클러스터에서 프로파일링
 
 Visual Studio 프로파일링 도구의 샘플링 방법을 사용하여 Microsoft Windows HPC 클러스터의 컴퓨터 노드에서 프로파일링을 수행할 수 있습니다. HPC에 대한 자세한 내용은 Microsoft 웹 사이트에서 [Windows HPC](http://go.microsoft.com/fwlink/?LinkId=165393)를 참조하세요.
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 HPC 컴퓨터 노드에서 프로파일링하려면 다음을 수행해야 합니다.
 
@@ -105,7 +101,7 @@ HPC 성능 마법사를 사용하여 HPC 클러스터 및 대상 정보를 지�
 
 9. 마법사의 다섯 번째 페이지에서는 프로파일러 및 프로파일링 프로세스를 즉시 시작하거나 성능 탐색기를 사용하여 프로파일링을 나중에 시작하도록 선택할 수 있습니다.
 
-    - 프로파일링을 즉시 시작하려면 **마법사를 완료한 후 프로파일링을 시작합니다.**를 선택하고, 수동으로 프로파일링을 시작하려면 확인란 선택을 취소합니다.
+    - 프로파일링을 즉시 시작하려면 **마법사를 완료한 후 프로파일링을 시작합니다.** 를 선택하고, 수동으로 프로파일링을 시작하려면 확인란 선택을 취소합니다.
 
 10. **마침**을 클릭합니다.
 

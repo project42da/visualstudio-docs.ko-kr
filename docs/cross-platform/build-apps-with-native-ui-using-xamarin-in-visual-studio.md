@@ -2,23 +2,19 @@
 title: Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/30/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 30f137e6-595d-4ce7-b8f5-415b07c1caa2
-caps.latest.revision: 31
 author: charlespetzold
 ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 0ec6529e6a9c41d1b9a4fa99a79d756754df1f45
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: a8602915827c442fa2fc4cbddf4db2a25ef21749
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드
 
@@ -67,17 +63,17 @@ ms.lasthandoff: 04/05/2018
 
 Visual Studio에는 .NET Standard 라이브러리를 공유하는 네이티브 UI 응용 프로그램을 만들기 위한 솔루션 템플릿이 없습니다. 그러나 이러한 솔루션을 개별 프로젝트에서 빌드하는 것은 어렵지 않습니다. 이러한 단계에서 응용 프로그램 플랫폼의 각 형식에 대한 프로젝트와 공유 코드에 대한 .NET Standard 라이브러리를 사용하여 Xamarin 솔루션을 만듭니다.  
   
-1.  Visual Studio에서 새 **클래스 라이브러리(.NET Standard)** 솔루션을 만들고 **WeatherApp**으로 이름을 지정합니다. 이 템플릿은 왼쪽에서 **Visual C#**을 선택한 다음, **.NET Standard**를 선택하면 가장 쉽게 찾을 수 있습니다. 
+1.  Visual Studio에서 새 **클래스 라이브러리(.NET Standard)** 솔루션을 만들고 **WeatherApp**으로 이름을 지정합니다. 이 템플릿은 왼쪽에서 **Visual C#** 을 선택한 다음, **.NET Standard**를 선택하면 가장 쉽게 찾을 수 있습니다. 
 
     ![.NET Standard 솔루션 만들기](../cross-platform/media/cross-plat-xamarin-build-2.png "플랫폼 간 Xamarin 빌드 2")
 
     확인을 클릭하면 **WeatherApp** 솔루션은 **WeatherApp**이라는 이름의 단일 프로젝트로 구성됩니다. 
 
-2.  iOS를 대상으로 지정하려는 경우 솔루션에 iOS 프로젝트를 추가합니다. **솔루션 탐색기**에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **추가** 및 **새 프로젝트**를 차례로 선택합니다.  **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C#**을 선택한 다음, **iOS** 및 **유니버설**을 차례로 선택합니다. (템플릿이 이 위치에 없으면 Xamarin을 설치하거나 Visual Studio 2017 기능을 사용하도록 설정해야 합니다. [설정 및 설치](../cross-platform/setup-and-install.md)를 참조하세요.) 템플릿 목록에서 **단일 뷰 앱(iOS)**을 선택합니다. 이름을 **WeatherApp.iOS**로 지정합니다.
+2.  iOS를 대상으로 지정하려는 경우 솔루션에 iOS 프로젝트를 추가합니다. **솔루션 탐색기**에서 솔루션 이름을 마우스 오른쪽 단추로 클릭하고 **추가** 및 **새 프로젝트**를 차례로 선택합니다.  **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C#** 을 선택한 다음, **iOS** 및 **유니버설**을 차례로 선택합니다. (템플릿이 이 위치에 없으면 Xamarin을 설치하거나 Visual Studio 2017 기능을 사용하도록 설정해야 합니다. [설정 및 설치](../cross-platform/setup-and-install.md)를 참조하세요.) 템플릿 목록에서 **단일 뷰 앱(iOS)** 을 선택합니다. 이름을 **WeatherApp.iOS**로 지정합니다.
 
-3.  Android를 대상으로 지정하려는 경우 솔루션에 Android 프로젝트를 추가합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C#** 및 **Android**를 차례로 선택합니다. 템플릿 목록에서 **비어 있는 앱(Android)**을 선택합니다. 이름을 **WeatherApp.Android**로 지정합니다. 
+3.  Android를 대상으로 지정하려는 경우 솔루션에 Android 프로젝트를 추가합니다. **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C#** 및 **Android**를 차례로 선택합니다. 템플릿 목록에서 **비어 있는 앱(Android)** 을 선택합니다. 이름을 **WeatherApp.Android**로 지정합니다. 
 
-4. 유니버설 Windows 플랫폼을 대상으로 하려는 경우 **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C#** 및 **Windows 유니버설**을 차례로 선택합니다. 템플릿 목록에서 **비어 있는 앱(유니버설 Windows)**을 선택하고 이름을 **WeatherApp.UWP**로 지정합니다.
+4. 유니버설 Windows 플랫폼을 대상으로 하려는 경우 **새 프로젝트** 대화 상자에서 왼쪽에 있는 **Visual C#** 및 **Windows 유니버설**을 차례로 선택합니다. 템플릿 목록에서 **비어 있는 앱(유니버설 Windows)** 을 선택하고 이름을 **WeatherApp.UWP**로 지정합니다.
   
 5. 각 응용 프로그램 프로젝트(iOS, Android 및 UWP)의 경우 **솔루션 탐색기**의 **참조** 섹션을 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. **참조 관리자** 대화 상자에서 왼쪽에 있는 **프로젝트** 및 **솔루션**을 선택합니다. 사용자가 관리 중인 참조가 있는 프로젝트를 제외한 솔루션의 모든 프로젝트 목록이 표시됩니다.
 
@@ -89,7 +85,7 @@ Visual Studio에는 .NET Standard 라이브러리를 공유하는 네이티브 U
   
 6. **Newtonsoft.Json** NuGet 패키지를 .NET Standard 프로젝트에 추가합니다. 이 프로젝트는 날씨 데이터 서비스에서 검색된 정보를 처리하는 데 사용됩니다.  
   
-    -   **솔루션 탐색기**에서 **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리...**를 선택합니다.  
+    -   **솔루션 탐색기**에서 **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **NuGet 패키지 관리...** 를 선택합니다.  
   
          NuGet 창에서 **찾아보기** 탭을 선택하고 **Newtonsoft**를 검색합니다.  
   
@@ -113,7 +109,7 @@ Visual Studio에는 .NET Standard 라이브러리를 공유하는 네이티브 U
   
 1.  먼저 [http://openweathermap.org/appid](http://openweathermap.org/appid)에서 무료 날씨 API 키에 등록합니다. 이 API 키를 사용하면 응용 프로그램에서 모든 미국 우편 번호에 대한 날씨를 가져올 수 있습니다. (미국 이외의 우편 번호에 대해서는 작동하지 않습니다.)
   
-2.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 클래스...**를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름을 **Weather.cs**로 지정합니다. 이 클래스는 날씨 데이터 서비스의 데이터를 저장하는 데 사용합니다.  
+2.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 클래스...** 를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름을 **Weather.cs**로 지정합니다. 이 클래스는 날씨 데이터 서비스의 데이터를 저장하는 데 사용합니다.  
   
 3.  **Weather.cs**의 전체 콘텐츠를 다음 코드로 바꿉니다.  
   

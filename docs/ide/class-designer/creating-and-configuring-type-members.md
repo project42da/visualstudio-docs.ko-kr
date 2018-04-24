@@ -1,13 +1,10 @@
 ---
-title: "형식 멤버 만들기 및 구성(클래스 디자이너) | Microsoft Docs"
-ms.custom: 
+title: 형식 멤버 만들기 및 구성(클래스 디자이너) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.classdetails.method
 - vs.classdetails.property
@@ -30,17 +27,16 @@ helpviewer_keywords:
 - Class Details window
 - Class Details window, member creation
 ms.assetid: 42af8738-3738-4ca7-82ff-edf573a68f96
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 71e0a1cb8a656e967186dd4b6bc99a7214e26a18
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 910860ce3362dd6d87a43df28e0221b404567666
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="creating-and-configuring-type-members-class-designer"></a>형식 멤버 만들기 및 구성(클래스 디자이너)
 이러한 멤버를 클래스 다이어그램의 형식에 추가하고 **클래스 세부 내용** 창에서 해당 멤버를 구성할 수 있습니다.
@@ -107,7 +103,7 @@ ms.lasthandoff: 03/02/2018
 
      해당 형식이 활성화되고 그 내용이 클래스 세부 내용 창에 표시됩니다.
 
-2.  클래스 세부 내용 창의 도구 모음에서 상단의 아이콘을 클릭하고 드롭 목록에서 **새 \<멤버>**를 선택합니다.
+2.  클래스 세부 내용 창의 도구 모음에서 상단의 아이콘을 클릭하고 드롭 목록에서 **새 \<멤버>** 를 선택합니다.
 
      추가하려는 멤버 종류에 대한 행에서 커서가 **이름** 필드로 이동합니다. 예를 들어 **새 속성**을 클릭하면 클래스 세부 내용 창의 **속성** 섹션에서 커서가 새 행으로 이동합니다.
 
@@ -123,7 +119,7 @@ ms.lasthandoff: 03/02/2018
 
      해당 형식이 활성화되고 그 내용이 클래스 세부 내용 창에 표시됩니다.
 
-2.  추가할 멤버 종류가 포함된 클래스 세부 내용 창의 섹션에서 **\<멤버 추가>**를 클릭합니다. 예를 들어, 필드를 추가하려면 **\<필드 추가>**를 클릭합니다.
+2.  추가할 멤버 종류가 포함된 클래스 세부 내용 창의 섹션에서 **\<멤버 추가>** 를 클릭합니다. 예를 들어, 필드를 추가하려면 **\<필드 추가>** 를 클릭합니다.
 
 3.  만들려는 멤버의 이름을 입력하고 Enter 키를 누릅니다.
 
@@ -162,7 +158,7 @@ ms.lasthandoff: 03/02/2018
 
 -   **\<멤버 추가>**
 
-     클래스 세부 내용 창의 마지막 행에는 **이름** 셀에 **\<멤버 추가>**라는 텍스트가 포함됩니다. 이 셀을 클릭하면 새 멤버를 만들 수 있습니다. 자세한 내용은 [멤버 만들기](creating-and-configuring-type-members.md#CreateMembers)를 참조하세요.
+     클래스 세부 내용 창의 마지막 행에는 **이름** 셀에 **\<멤버 추가>** 라는 텍스트가 포함됩니다. 이 셀을 클릭하면 새 멤버를 만들 수 있습니다. 자세한 내용은 [멤버 만들기](creating-and-configuring-type-members.md#CreateMembers)를 참조하세요.
 
 -   **속성 창의 멤버 속성**
 
@@ -212,7 +208,7 @@ ms.lasthandoff: 03/02/2018
 
 -   **\<매개 변수 추가>**
 
-     멤버의 마지막 매개 변수 행에는 **이름** 셀에 **<add parameter>**라는 텍스트가 나타납니다. 이 셀을 클릭하여 새 매개 변수를 만들 수 있습니다. 자세한 내용은 [메서드에 매개 변수를 추가하려면](creating-and-configuring-type-members.md#HowToAddParameterToMethod)을 참조하세요.
+     멤버의 마지막 매개 변수 행에는 **이름** 셀에 **<add parameter>** 라는 텍스트가 나타납니다. 이 셀을 클릭하여 새 매개 변수를 만들 수 있습니다. 자세한 내용은 [메서드에 매개 변수를 추가하려면](creating-and-configuring-type-members.md#HowToAddParameterToMethod)을 참조하세요.
 
 **속성 창의 매개 변수 속성**
 
@@ -232,7 +228,7 @@ ms.lasthandoff: 03/02/2018
 
 2.  클래스 세부 내용 창에서 매개 변수를 추가할 메서드의 행을 확장합니다.
 
-     괄호 쌍과 **\<매개 변수 추가>**라는 단어가 있는 들여쓰기된 매개 변수 행이 나타납니다.
+     괄호 쌍과 **\<매개 변수 추가>** 라는 단어가 있는 들여쓰기된 매개 변수 행이 나타납니다.
 
 3.  **\<매개 변수 추가>를** 클릭하고 새 매개 변수의 이름을 입력한 다음 **Enter** 키를 누릅니다.
 
@@ -248,7 +244,7 @@ ms.lasthandoff: 03/02/2018
 
 2.  클래스 세부 내용 창에서 선택적 매개 변수를 추가할 메서드의 행을 확장합니다.
 
-     괄호 쌍과 **\<매개 변수 추가>**라는 단어가 있는 들여쓰기된 매개 변수 행이 나타납니다.
+     괄호 쌍과 **\<매개 변수 추가>** 라는 단어가 있는 들여쓰기된 매개 변수 행이 나타납니다.
 
 3.  **\<매개 변수 추가>를** 클릭하고 새 매개 변수의 이름을 입력한 다음 **Enter** 키를 누릅니다.
 

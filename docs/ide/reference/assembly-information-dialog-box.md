@@ -1,29 +1,25 @@
 ---
-title: "어셈블리 정보 대화 상자 | Microsoft 문서"
-ms.custom: 
+title: 어셈블리 정보 대화 상자 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vb.ProjectPropertiesAssemblyInfo
 helpviewer_keywords:
 - Assembly Information dialog box
 ms.assetid: 8f1f6449-e03d-4a5b-9076-d3b1f84ada48
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: febf90633994dd825bd6ce84de8ecdc97d469e84
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 07c81e392a4513ffa97a384e9aa60147c3a71290
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assembly-information-dialog-box"></a>어셈블리 정보 대화 상자
 **어셈블리 정보** 대화 상자는 프로젝트에서 자동으로 만들어진 AssemblyInfo 파일에 저장된 [!INCLUDE[dnprdnshort](../../code-quality/includes/dnprdnshort_md.md)] 전역 어셈블리 특성의 값을 지정하는 데 사용됩니다. **솔루션 탐색기**에서 파일은 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)]의 **내 프로젝트** 노드에 있고(파일을 보려면 **모든 파일 표시** 클릭). [!INCLUDE[csprcs](../../data-tools/includes/csprcs_md.md)]의 **속성** 아래에 있습니다. 어셈블리 특성에 대한 자세한 내용은 [특성(C# 및 Visual Basic)](http://msdn.microsoft.com/Library/ae334cee-d96c-4243-a5e3-06dd7fcaf205)을 참조하세요.  
@@ -59,7 +55,7 @@ ms.lasthandoff: 12/22/2017
  어셈블리를 식별하는 고유 GUID입니다. 프로젝트를 만들면 Visual Studio에서 어셈블리의 GUID를 생성합니다. <xref:System.Guid>에 해당합니다.  
   
  **중립 언어**  
- 어셈블리에서 지원하는 문화권을 지정합니다. <xref:System.Resources.NeutralResourcesLanguageAttribute>에 해당합니다. 기본값은 **(없음)**입니다.  
+ 어셈블리에서 지원하는 문화권을 지정합니다. <xref:System.Resources.NeutralResourcesLanguageAttribute>에 해당합니다. 기본값은 **(없음)** 입니다.  
   
  **어셈블리를 COM에 노출**  
  어셈블리 내의 형식을 COM에서 사용할 수 있는지 여부를 지정합니다. <xref:System.Runtime.InteropServices.ComVisibleAttribute>에 해당합니다.  

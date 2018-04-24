@@ -2,10 +2,7 @@
 title: Visual Studio에서 Xamarin.Forms를 사용한 앱 빌드 기본 사항 알아보기 | Microsoft 문서
 ms.custom: ''
 ms.date: 03/30/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: d22b5186-9e03-4e85-afc9-7cbe28522a6d
 ms.technology: vs-ide-mobile
 author: charlespetzold
@@ -13,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 6982768950ffe0e4afb664f1cfeb7423e65bbbc4
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 608eebc113c9df7a8978299cc69907e28d81a16f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio에서 Xamarin.Forms를 사용한 앱 빌드 기본 사항 알아보기
 
@@ -117,7 +114,7 @@ ms.lasthandoff: 04/05/2018
   
 다음 단계에서는 날씨 서비스의 데이터를 액세스하고 저장하기 위한 코드를 .NET Standard 라이브러리에 추가합니다.  
   
-1.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 클래스...**를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름을 **Weather.cs**로 지정합니다. 이 클래스는 날씨 데이터 서비스의 데이터를 저장하는 데 사용합니다.  
+1.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 클래스...** 를 선택합니다. **새 항목 추가** 대화 상자에서 파일 이름을 **Weather.cs**로 지정합니다. 이 클래스는 날씨 데이터 서비스의 데이터를 저장하는 데 사용합니다.  
   
 2.  **Weather.cs**의 전체 콘텐츠를 다음 코드로 바꿉니다.  
   
@@ -226,7 +223,7 @@ ms.lasthandoff: 04/05/2018
 
 Xamarin.Forms를 사용하여 .NET Standard 라이브러리에서 공유 UI 코드를 구현할 수 있습니다. 이 단계에서는 단추를 사용하여 프로젝트에 페이지를 추가합니다. 이 단추는 이전 섹션에서 살펴본 날씨 서비스에서 반환된 데이터가 있는 페이지의 텍스트를 업데이트합니다.  
   
-1.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택하여 **WeatherPage**라는 **콘텐츠 페이지**를 추가합니다. **새 항목 추가** 대화 상자에서 **콘텐츠 페이지**를 선택합니다. **콘텐츠 페이지(C#)** 또는 **콘텐츠 보기**를 선택하지 않도록 주의하세요. 이름을 **WeatherPage.xaml**로 지정합니다.  
+1.  **WeatherApp** 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...** 을 선택하여 **WeatherPage**라는 **콘텐츠 페이지**를 추가합니다. **새 항목 추가** 대화 상자에서 **콘텐츠 페이지**를 선택합니다. **콘텐츠 페이지(C#)** 또는 **콘텐츠 보기**를 선택하지 않도록 주의하세요. 이름을 **WeatherPage.xaml**로 지정합니다.  
   
     ![새 Xamarin.Forms XAML 페이지 추가](../cross-platform/media/crossplat-xamarin-formsguide-6.png "CrossPlat Xamarin FormsGuide 6")  
   

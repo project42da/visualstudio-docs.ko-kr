@@ -1,29 +1,24 @@
 ---
-title: "VS 디버거 없이 메모리 사용 분석 | Microsoft Docs"
+title: VS 디버거 없이 메모리 사용 분석 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
 - FSharp
 - C++
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1d2f023900735b2e8f3f2235850ab55ec6237efc
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: b51d2be6e2ec45b55b04c906a9db71843c98f427
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-memory-usage-without-the-visual-studio-debugger"></a>Visual Studio 디버거 없이 메모리 사용 분석
 디버그하지 않고 **메모리 사용량** 도구를 사용하여 다음을 수행할 수 있습니다.  
@@ -118,7 +113,7 @@ ms.lasthandoff: 01/19/2018
  **필터** 상자에 문자열을 입력하여 지정한 텍스트가 포함된 형식으로 트리 표시를 제한합니다. 필터는 대/소문자를 구분하지 않고 유형 이름의 모든 부분에서 지정한 문자열을 인식합니다.  
   
 ####  <a name="BKMK_Collapse_Small_Objects"></a> 작은 개체 축소  
- 이 필터를 적용하면 **크기(바이트)**가 총 스냅숏 메모리 크기의 0.5%보다 작은 형식이 **관리되는 힙** 목록에서 숨겨집니다.  
+ 이 필터를 적용하면 **크기(바이트)** 가 총 스냅숏 메모리 크기의 0.5%보다 작은 형식이 **관리되는 힙** 목록에서 숨겨집니다.  
   
 ####  <a name="BKMK_Just_My_Code"></a> 내 코드만  
  **내 코드만** 필터는 외부 코드로 생성된 인스턴스를 대부분 숨깁니다. 외부 유형은 운영 체제 또는 프레임워크 구성 요소에서 소유하거나 컴파일러에서 생성합니다.  
@@ -183,7 +178,7 @@ ms.lasthandoff: 01/19/2018
 |**개체 형식**|유형 이름 또는 개체 인스턴스입니다.|  
 |**개수**|기본 스냅숏에 있는 유형의 인스턴스 수입니다. 인스턴스의 경우 **개수**는 항상 1입니다.|  
 |**개수 차이**|유형의 경우 기본 스냅숏과 이전 스냅숏 간 유형의 인스턴스 수 차이입니다. 인스턴스의 경우 이 필드는 비어 있습니다.|  
-|**크기(바이트)**|개체에 포함된 개체의 크기를 제외한 기본 스냅숏의 개체 크기입니다. 형식의 경우 **크기(바이트)** 및 **포함 크기(바이트)**는 형식 인스턴스의 총 크기입니다.|  
+|**크기(바이트)**|개체에 포함된 개체의 크기를 제외한 기본 스냅숏의 개체 크기입니다. 형식의 경우 **크기(바이트)** 및 **포함 크기(바이트)** 는 형식 인스턴스의 총 크기입니다.|  
 |**총 크기 차이(바이트)**|유형의 경우 인스턴스에 포함된 개체 크기를 제외한 기본 스냅숏과 이전 스냅숏 간 유형의 총 인스턴스 크기의 차이를 나타냅니다. 인스턴스의 경우 이 필드는 비어 있습니다.|  
 |**포함 크기(바이트)**|개체에 포함된 개체의 크기를 비롯한 기본 스냅숏의 개체 크기입니다.|  
 |**포함 크기 차이(바이트)**|유형의 경우 개체에 포함된 개체 크기를 비롯한 기본 스냅숏과 이전 스냅숏 간 유형의 모든 인스턴스 크기 차이를 나타냅니다. 인스턴스의 경우 이 필드는 비어 있습니다.|  

@@ -1,25 +1,21 @@
 ---
-title: "6단계: 빼기 문제 추가 | Microsoft 문서"
-ms.custom: 
+title: '6단계: 빼기 문제 추가 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 59204ef9-24bd-4f81-b85f-e3168e518a3e
-caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d13e5a8e7bb1e15b1eef57fc6bcff55ef21cc729
-ms.sourcegitcommit: d16c6812b114a8672a58ce78e6988b967498c747
+ms.openlocfilehash: 4660d4b1ad5f4aa5200fb8c64cfa24f6a02d49a2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/02/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-6-add-a-subtraction-problem"></a>6단계: 빼기 문제 추가
 이 자습서의 6단계에서는 빼기 문제를 추가하고 다음 작업을 수행하는 방법을 알아봅니다.
@@ -57,7 +53,7 @@ ms.lasthandoff: 03/02/2018
 
      ![IntelliSense 창 도구 설명](../ide/media/express_overloads.png "Express_Overloads") IntelliSense 창 도구 설명
 
-     도구 설명에 **(+2개 오버로드)**가 표시되며, 이는 `Next()` 메서드를 두 가지 다른 방법으로 호출할 수 있음을 나타냅니다. 오버로드에는 저마다 다른 개수와 형식의 인수가 포함되어 있으므로 작동 방식도 서로 조금씩 다릅니다. 예를 들어 메서드는 단일 정수 인수를 사용하고 메서드 오버로드 중 하나는 정수 하나와 문자열 하나를 사용할 수 있습니다. 수행하려는 작업을 기반으로 올바른 오버로드를 선택합니다. `StartTheQuiz()` 메서드에 코드를 추가할 때 `randomizer.Next(`를 입력하는 즉시 IntelliSense 창에 추가 정보가 나타납니다. 오버로드를 순환하려면 다음 그림과 같이 위쪽 화살표 키와 아래쪽 화살표 키를 선택합니다.
+     도구 설명에 **(+2개 오버로드)** 가 표시되며, 이는 `Next()` 메서드를 두 가지 다른 방법으로 호출할 수 있음을 나타냅니다. 오버로드에는 저마다 다른 개수와 형식의 인수가 포함되어 있으므로 작동 방식도 서로 조금씩 다릅니다. 예를 들어 메서드는 단일 정수 인수를 사용하고 메서드 오버로드 중 하나는 정수 하나와 문자열 하나를 사용할 수 있습니다. 수행하려는 작업을 기반으로 올바른 오버로드를 선택합니다. `StartTheQuiz()` 메서드에 코드를 추가할 때 `randomizer.Next(`를 입력하는 즉시 IntelliSense 창에 추가 정보가 나타납니다. 오버로드를 순환하려면 다음 그림과 같이 위쪽 화살표 키와 아래쪽 화살표 키를 선택합니다.
 
      ![IntelliSense에서 Next() 메서드의 오버로드](../ide/media/express_nextoverload.png "Express_NextOverload") IntelliSense에서 Next() 메서드의 오버로드
 

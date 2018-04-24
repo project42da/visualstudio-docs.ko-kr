@@ -1,23 +1,20 @@
 ---
-title: "명령줄에서 이식 가능한 프로파일링 데이터 파일 만들기 | Microsoft Docs"
-ms.custom: 
+title: 명령줄에서 이식 가능한 프로파일링 데이터 파일 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: 2ceb63a7-b835-4988-b756-2afc3fcc4808
-caps.latest.revision: "6"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 95302666d8bd5c5738f93a2fb0a8ec698c5bb7d9
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: dd329df74c88f5edadef27444bf3b3c89ee1b30d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="creating-portable-profiling-data-files-from-the-command-line"></a>명령줄에서 이식 가능한 프로파일링 데이터 파일 만들기
 프로파일링 데이터를 더 쉽게 공유하기 위해 [VSPerfReport](../profiling/vsperfreport.md) 명령줄 도구를 사용하여 프로파일링 실행에 대한 기호를 .vsp 파일로 포함할 수 있습니다.  
@@ -35,7 +32,7 @@ ms.lasthandoff: 12/22/2017
   
 -   명령 프롬프트 창에서 다음 명령을 입력합니다.  
   
-     \<Path>**VSPerfReport \<**VSP File> **/PackSymbols**  
+     \<Path>**VSPerfReport \<** VSP File> **/PackSymbols**  
   
      기본적으로 .vsps 파일은 .vsp 파일의 기본 이름으로 지정됩니다. **출력** 옵션을 사용하여 다른 이름을 지정할 수 있습니다.  
   
@@ -43,6 +40,6 @@ ms.lasthandoff: 12/22/2017
   
 -   명령 프롬프트 창에서 다음 명령을 입력합니다.  
   
-     \<Path>**VSPerfReport \<**VSP File> **/SummaryFile** [**/Output:**\<File Name>]  
+     \<Path>**VSPerfReport \<** VSP File> **/SummaryFile** [**/Output:**\<File Name>]  
   
      기본적으로 .vsps 파일은 .vsp 파일의 기본 이름으로 지정됩니다. **출력** 옵션을 사용하여 다른 이름을 지정할 수 있습니다.

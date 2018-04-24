@@ -2,7 +2,7 @@
 title: Visual Studio 2017에서 Live Unit Test로 코드를 테스트하는 방법 알아보기 | Microsoft Docs
 ms.date: 08/31/2017
 ms.technology: vs-ide-test
-ms.topic: get-started-article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio ALM
 - Live Unit Testing
@@ -10,11 +10,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: fe41dab64bcb0d2d33075759287dbacb99bd996f
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: bd2bc43081418844f03b5cb58af46f6888d57652
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-live-unit-testing-in-visual-studio"></a>Visual Studio에서 Live Unit Testing 시작
 
@@ -305,7 +305,7 @@ Live Unit Testing에서 확인해야 할 주요 문제점은 불완전한 코드
 
    ![실패한 테스트에 대한 Live Unit Testing 옵션.](media/lut-start/test-failure-options.png)
 
-1. **Debug Selected(디버그 선택됨)**를 선택하여 실패한 테스트를 디버깅합니다.
+1. **Debug Selected(디버그 선택됨)** 를 선택하여 실패한 테스트를 디버깅합니다.
 
 1. Visual Studio는 디버그 모드에서 테스트를 실행합니다. 테스트에서는 배열의 각 문자열을 `phrase`라는 변수에 할당하고 이를 `HasEmbeddedSpaces` 메서드에 전달합니다. 어설션 문이 처음으로 `false`일 때 프로그램 실행이 일시 중지되고 디버거를 호출합니다. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) 메서드 호출의 예기치 않은 값으로 생성되는 예외 대화 상자가 다음 그림에 표시됩니다.
 
@@ -338,7 +338,7 @@ Live Unit Testing에서 확인해야 할 주요 문제점은 불완전한 코드
 
    ![실패한 테스트에 대한 Live Unit Testing 옵션.](media/lut-start/test-failure-options.png)
 
-1. **Debug Selected(디버그 선택됨)**를 선택하여 실패한 테스트를 디버깅합니다.
+1. **Debug Selected(디버그 선택됨)** 를 선택하여 실패한 테스트를 디버깅합니다.
 
 1. Visual Studio는 디버그 모드에서 테스트를 실행합니다. 테스트에서는 배열의 각 문자열을 `phrase`라는 변수에 할당하고 이를 `HasEmbeddedSpaces` 메서드에 전달합니다. 어설션 문이 처음으로 `false`일 때 프로그램 실행이 일시 중지되고 디버거를 호출합니다. [`Microsoft.VisualStudio.TestTools.UnitTesting.Assert.IsTrue`](/dotnet/api/microsoft.visualstudio.testtools.unittesting.assert.istrue) 메서드 호출의 예기치 않은 값으로 생성되는 예외 대화 상자가 다음 그림에 표시됩니다.
 

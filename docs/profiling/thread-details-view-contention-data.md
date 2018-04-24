@@ -1,29 +1,24 @@
 ---
-title: "스레드 정보 뷰 - 경합 데이터 | Microsoft Docs"
-ms.custom: 
+title: 스레드 정보 뷰 - 경합 데이터 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.threaddetails
 helpviewer_keywords:
 - Thread Details view
 ms.assetid: 874c3b1c-88d8-479a-bb35-1291d9aa8e67
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd9df48aca48d86be6e4df8d2296b2b156093e3c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: d45d2da94535f4f017fab838a661a3c3e4bc438d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="thread-details-view---contention-data"></a>스레드 정보 뷰 - 경합 데이터
 스레드 정보 뷰에는 리소스 간의 경합으로 인해 프로파일링 실행의 선택한 스레드에서 발생한 차단 이벤트의 시간 표시 막대 그래프가 표시됩니다. 다른 스레드가 리소스에 대한 액세스를 잠가 스레드가 실행을 일시 중단해야 했던 경우 차단 이벤트가 발생합니다.  

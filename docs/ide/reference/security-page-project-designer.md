@@ -1,12 +1,10 @@
 ---
-title: "프로젝트 디자이너, 보안 페이지 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트 디자이너, 보안 페이지 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vb.ProjectPropertiesSecurity
 - vb.XBAPProjectPropertiesSecurity
@@ -15,13 +13,14 @@ helpviewer_keywords:
 - Security page in Project Designer
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 3d7a0f5651171d8c3b361d9e8b30b004a4e3136c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 749cf38a70f8d6ab4c53c6c198a42412a4aa3f90
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="security-page-project-designer"></a>프로젝트 디자이너, 보안 페이지
 **프로젝트 디자이너**의 **보안** 페이지는 [!INCLUDE[ndptecclick](../../deployment/includes/ndptecclick_md.md)] 배포를 사용하여 배포된 응용 프로그램에 대한 코드 액세스 보안을 구성하는 데 사용됩니다. 자세한 내용은 [ClickOnce 응용 프로그램의 코드 액세스 보안](../../deployment/code-access-security-for-clickonce-applications.md)을 참조하세요.  
@@ -55,7 +54,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="clickonce-security-permissions"></a>ClickOnce 보안 권한  
  **설치할 응용 프로그램을 가져올 영역**  
- 코드 액세스 보안 권한의 기본 집합을 지정합니다. 제한된 권한 집합에 **인터넷** 또는 **로컬 인트라넷**을 선택하거나 **(사용자 지정)**을 선택하여 사용자 지정 권한 집합을 구성합니다. 응용 프로그램이 영역에 부여된 것보다 많은 권한을 요청할 경우 추가 권한을 부여할 최종 사용자에게 ClickOnce 신뢰 프롬프트가 표시됩니다. 보안 권한을 구성하는 방법에 대한 자세한 내용은 [ClickOnce 응용 프로그램의 코드 액세스 보안](../../deployment/code-access-security-for-clickonce-applications.md)을 참조하세요.  
+ 코드 액세스 보안 권한의 기본 집합을 지정합니다. 제한된 권한 집합에 **인터넷** 또는 **로컬 인트라넷**을 선택하거나 **(사용자 지정)** 을 선택하여 사용자 지정 권한 집합을 구성합니다. 응용 프로그램이 영역에 부여된 것보다 많은 권한을 요청할 경우 추가 권한을 부여할 최종 사용자에게 ClickOnce 신뢰 프롬프트가 표시됩니다. 보안 권한을 구성하는 방법에 대한 자세한 내용은 [ClickOnce 응용 프로그램의 코드 액세스 보안](../../deployment/code-access-security-for-clickonce-applications.md)을 참조하세요.  
   
  WPF 웹 브라우저 응용 프로그램 프로젝트의 경우 이 옵션은 기본적으로 **인터넷**으로 설정됩니다.  
   

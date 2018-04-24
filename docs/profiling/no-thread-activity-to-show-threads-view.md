@@ -1,29 +1,24 @@
 ---
-title: "표시할 스레드 작업 없음(스레드 뷰) | Microsoft Docs"
-ms.custom: 
+title: 표시할 스레드 작업 없음(스레드 뷰) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.nothreadreport
 helpviewer_keywords:
 - Concurrency Visualizer, No Thread Activity to Show (Threads View)
 ms.assetid: aa5ae9d0-561d-4ef8-b36b-258ce553d50a
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6f002ec676ab74f9fa135ebba9270a724f3e8c1
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1ab1aab1be9fa8ebb8667a7cf7c524da71fa013d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="no-thread-activity-to-show-threads-view"></a>표시할 스레드 작업 없음(스레드 뷰)
 이 영역은 현재 표시된 시간 범위에서 숨겨지지 않은 스레드에 대한 데이터를 보여 줍니다.  

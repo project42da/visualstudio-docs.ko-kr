@@ -1,27 +1,22 @@
 ---
-title: "함수 뷰 - 계측 데이터 | Microsoft 문서"
-ms.custom: 
+title: 함수 뷰 - 계측 데이터 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Function view
 ms.assetid: 595d91c8-a42b-4644-85b8-39e8140a5dfe
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d58d317099f840a81a4a4e2eedd0d55d6032469
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 1ddbffefe729f0b4c5b89b46b96b32a90f05f297
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="functions-view---instrumentation-data"></a>함수 뷰 - 계측 데이터
 함수 보고서 뷰는 함수 이름별로 프로파일링 데이터를 나열합니다.  

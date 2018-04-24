@@ -1,18 +1,19 @@
 ---
-title: "Xamarin Studio 대비 Mac용 Visual Studio의 이점 | Microsoft Docs"
+title: Xamarin Studio 대비 Mac용 Visual Studio의 이점
+description: ''
+ms.topic: overview
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 6ACF5FD4-D5C1-4050-95E3-467C753F25F1
-ms.openlocfilehash: 08e693e92d6d07da21f8230f9c1de49f071c05e5
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: db4a328bceb79c1b99fdea95da89cc6cc7451523
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="benefits-of-visual-studio-for-mac-over-xamarin-studio"></a>Xamarin Studio 대비 Mac용 Visual Studio의 이점 
- 
+
 Mac용 Visual Studio는 모든 기능을 갖춘 Mac의 IDE로 Xamarin Studio를 대체했습니다. 웹 응용 프로그램 및 서비스, 플랫폼 간 모바일 및 데스크톱 앱, 게임을 개발할 수 있는 기능을 제공합니다. 또한 Azure에 게시, Azure Functions 생성 등 Azure와 쉽게 통합되도록 합니다. Mac용 Visual Studio에는 모든 기능을 갖춘 소스 편집기, 효과적인 디버거, 사용자 지정 가능한 작업 영역, Git 통합, 풍부한 확장 시스템 등 최신 IDE에서 기대하는 모든 기능이 포함되어 있습니다. 기본적으로 모든 기능이 Mac용으로 디자인되었습니다. 
 
 이러한 기능에는 다음이 포함됩니다. 

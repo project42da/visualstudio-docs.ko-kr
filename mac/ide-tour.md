@@ -1,16 +1,15 @@
 ---
-title: "Mac용 Visual Studio 둘러보기 | Microsoft Docs"
-description: "Mac용 Visual Studio에서는 iOS, Android, Mac, Xamarin.Forms용 Xamarin 프로젝트와 ASP.NET Core 웹 사이트를 비롯하여 macOS에서 .NET 응용 프로그램을 빌드하기 위한 통합 개발 환경을 제공합니다."
+title: Mac용 Visual Studio 둘러보기
+description: Mac용 Visual Studio에서는 iOS, Android, Mac, Xamarin.Forms용 Xamarin 프로젝트와 ASP.NET Core 웹 사이트를 비롯하여 macOS에서 .NET 응용 프로그램을 빌드하기 위한 통합 개발 환경을 제공합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 7DC64A52-AA41-4F3A-A8A1-8A20BCD81CC7
-ms.openlocfilehash: 5fdac97248ce76157012ef913ea9057a4076e3c5
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: f81ae65090e79c7ab758be5c080b91e4b3bd8dfc
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="visual-studio-for-mac-tour"></a>Mac용 Visual Studio 둘러보기
 

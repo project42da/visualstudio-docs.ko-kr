@@ -1,34 +1,30 @@
 ---
-title: "옵션, 텍스트 편집기, C/C++, 실험적 | Microsoft 문서"
-ms.custom: 
+title: 옵션, 텍스트 편집기, C/C++, 실험적 | Microsoft 문서
+ms.custom: ''
 ms.date: 08/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Text_Editor.C/C++.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C%2FC%2B%2B.Experimental
 - VS.ToolsOptionsPages.Text_Editor.C\C++.Experimental
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology:
 - vs-ide-general
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 78fe2950a0d708b32d5e3f8f9415b2e51af9687b
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 205626b3778b056018d8803b41890fcd242a6015
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="options-text-editor-cc-experimental"></a>옵션, 텍스트 편집기, C/C++, 실험적
 
 이러한 옵션을 변경하면 C 또는 C++에서 프로그래밍할 때 IntelliSense 및 검색 데이터베이스 관련 동작을 변경할 수 있습니다. 이러한 기능은 실험적이며 향후 릴리스의 Visual Studio에서 수정되거나 제거될 수 있습니다. 이 항목에서는 Visual Studio 2017의 옵션을 설명합니다. Visual Studio 2015의 경우 [옵션, 텍스트 편집기, C/C++, 실험적](https://msdn.microsoft.com/library/mt591979.aspx)을 참조하세요.
 
-이 속성 페이지에 액세스하려면 **Ctrl+Q**를 눌러 `Quick Launch`를 활성화한 다음 "실험적"을 입력합니다. 빠른 실행에서 처음 몇 글자 페이지 다음의 페이지를 찾습니다. **도구 | 옵션**을 선택하고 **텍스트 편집기**, **C/C++**를 차례로 확장한 다음 **실험적**을 선택하여 액세스할 수도 있습니다.
+이 속성 페이지에 액세스하려면 **Ctrl+Q**를 눌러 `Quick Launch`를 활성화한 다음 "실험적"을 입력합니다. 빠른 실행에서 처음 몇 글자 페이지 다음의 페이지를 찾습니다. **도구 | 옵션**을 선택하고 **텍스트 편집기**, **C/C++** 를 차례로 확장한 다음 **실험적**을 선택하여 액세스할 수도 있습니다.
 
 이러한 기능은 Visual Studio 2017 설치에서 사용할 수 있습니다.
 

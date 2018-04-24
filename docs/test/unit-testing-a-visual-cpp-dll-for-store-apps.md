@@ -2,17 +2,17 @@
 title: Visual Studio에서 UWP 앱용 Visual C++ DLL 테스트 방법 | Microsoft 문서
 ms.date: 02/15/2018
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: mblome
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: c92e8a1b362bf6593897de526ef1791603292a29
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 56bd0acf242f0fac4ccb2d73063e8ee73d234a0c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL 테스트 방법
 
@@ -24,9 +24,9 @@ ms.lasthandoff: 03/19/2018
 
 ##  <a name="Create_the_solution_and_the_unit_test_project"></a> 솔루션 및 단위 테스트 프로젝트 만들기
 
-1.  **파일** 메뉴에서 **새로 만들기** > **새 프로젝트...**를 선택합니다.
+1.  **파일** 메뉴에서 **새로 만들기** > **새 프로젝트...** 를 선택합니다.
 
-2.  새 프로젝트 대화 상자에서 **설치됨** > **Visual C++**를 확장하고 **Windows 유니버설**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **유닛 테스트 앱(유니버설 Windows)**을 선택합니다.
+2.  새 프로젝트 대화 상자에서 **설치됨** > **Visual C++** 를 확장하고 **Windows 유니버설**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **유닛 테스트 앱(유니버설 Windows)** 을 선택합니다.
 
 3.  프로젝트 이름을 `RooterLibTests`로 지정하고 위치를 지정합니다. 솔루션 이름을 `RooterLib`로 지정하고 **솔루션용 디렉터리 만들기**가 선택되어 있는지 확인합니다.
 
@@ -71,7 +71,7 @@ ms.lasthandoff: 03/19/2018
 
      ![RooterLib 프로젝트 만들기](../test/media/ute_cpp_windows_rooterlib_create.png "UTE_Cpp_windows_RooterLib_Create")
 
-2.  **새 프로젝트 추가** 대화 상자에서 **DLL(UWP 앱)**을 선택합니다.
+2.  **새 프로젝트 추가** 대화 상자에서 **DLL(UWP 앱)** 을 선택합니다.
 
 3.  **RooterLib.h** 파일에 다음 코드를 추가합니다.
 
@@ -105,9 +105,9 @@ ms.lasthandoff: 03/19/2018
 
          ![전처리기 기호 정의 추가](../test/media/ute_cpp_windows_addpreprocessorsymbol.png "UTE_Cpp_windows_AddPreprocessorSymbol")
 
-    2.  RooterLib 속성 페이지 대화 상자에서 **구성 속성**, **C++**를 차례로 확장하고 **전처리기**를 선택합니다.
+    2.  RooterLib 속성 페이지 대화 상자에서 **구성 속성**, **C++** 를 차례로 확장하고 **전처리기**를 선택합니다.
 
-    3.  **전처리기 정의** 목록에서 **\<편집...>**을 선택하고 전처리기 정의 대화 상자에서 `ROOTERLIB_EXPORTS`를 추가합니다.
+    3.  **전처리기 정의** 목록에서 **\<편집...>** 을 선택하고 전처리기 정의 대화 상자에서 `ROOTERLIB_EXPORTS`를 추가합니다.
 
 5.  선언된 함수의 최소 구현을 추가합니다. **RooterLib.cpp**를 열고 다음 코드를 추가합니다.
 
@@ -129,11 +129,11 @@ ms.lasthandoff: 03/19/2018
 
 1.  RooterLibTests 프로젝트에 RooterLib를 추가합니다.
 
-    1.  솔루션 탐색기에서 **RooterLibTests** 프로젝트를 선택한 다음 바로 가기 메뉴에서 **참조...**를 선택합니다.
+    1.  솔루션 탐색기에서 **RooterLibTests** 프로젝트를 선택한 다음 바로 가기 메뉴에서 **참조...** 를 선택합니다.
 
     2.  RooterLib 프로젝트 속성 대화 상자에서 **공용 속성**을 확장하고 **프레임워크 및 참조**를 선택합니다.
 
-    3.  **새 참조 추가...**를 선택합니다.
+    3.  **새 참조 추가...** 를 선택합니다.
 
     4.  **참조 추가** 대화 상자에서 **솔루션**을 확장한 다음 **프로젝트**를 선택합니다. 그런 다음 **RouterLib** 항목을 선택합니다.
 

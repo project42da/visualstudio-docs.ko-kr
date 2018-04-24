@@ -1,13 +1,9 @@
 ---
-title: "방법: 보고서 뷰에서 노이즈 감소 구성 | Microsoft 문서"
-ms.custom: 
+title: '방법: 보고서 뷰에서 노이즈 감소 구성 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.noisereduction.dialog
 helpviewer_keywords:
@@ -15,17 +11,16 @@ helpviewer_keywords:
 - profiling tools, report noise reduction
 - profiling tools, folding
 ms.assetid: b07e0375-bb73-47e3-8d1d-b9b492fb16c9
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c0648336f4ba6be42de7253c27703fe544fb58d7
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: fa2ec4a797b7018a7a9e017760afd8849912cd35
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-configure-noise-reduction-in-report-views"></a>방법: 보고서 뷰에서 노이즈 감소 구성
 호출 트리 뷰 및 할당 뷰에 제공되는 데이터 양을 제한하여 노이즈 감소를 위한 성능 보고서를 구성할 수 있습니다. 노이즈 감소를 사용하면 성능 문제가 더 두드러집니다. 성능 보고서를 분석할 경우 이 방법이 유용합니다.  
@@ -53,7 +48,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  **임계값** 텍스트 상자에 백분율 값을 입력하여 원하는 임계값 설정을 구성합니다.  
   
-    4.  생성된 보고서에서 노이즈 감소 경고를 사용하도록 설정하려면 **노이즈 감소를 사용하도록 설정한 경우 경고를 표시합니다.**를 선택합니다. 이것이 기본 설정입니다.  
+    4.  생성된 보고서에서 노이즈 감소 경고를 사용하도록 설정하려면 **노이즈 감소를 사용하도록 설정한 경우 경고를 표시합니다.** 를 선택합니다. 이것이 기본 설정입니다.  
   
 3.  잘라내기를 사용하지 않도록 설정하려면 **잘라내기 사용**을 선택 취소합니다.  
   
@@ -76,7 +71,7 @@ ms.lasthandoff: 12/22/2017
   
     3.  **임계값** 텍스트 상자에 백분율 값을 입력하여 원하는 임계값 설정을 구성합니다.  
   
-    4.  생성된 보고서에서 노이즈 감소 경고를 사용하도록 설정하려면 **노이즈 감소를 사용하도록 설정한 경우 경고를 표시합니다.**를 선택합니다. 이것이 기본 설정입니다.  
+    4.  생성된 보고서에서 노이즈 감소 경고를 사용하도록 설정하려면 **노이즈 감소를 사용하도록 설정한 경우 경고를 표시합니다.** 를 선택합니다. 이것이 기본 설정입니다.  
   
 3.  접기를 사용하지 않도록 설정하려면 **접기 사용**을 선택 취소합니다.  
   

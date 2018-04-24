@@ -1,19 +1,19 @@
 ---
 title: Visual Studio에서 웹 성능 테스트 편집기에 대한 사용자 지정 HTTP 본문 편집기 만들기 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Web performance tests, custom HTTP body editor
 ms.assetid: a0b2d8ff-3e2a-487e-9172-90047174f336
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: b291f2cb15760c42231eedf502c3de398a7db726
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: c53d4db3f413ad8cf4f0b615db18bd5fb6368128
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-custom-http-body-editor-for-the-web-performance-test-editor"></a>방법: 웹 성능 테스트 편집기에 대한 사용자 지정 HTTP 본문 편집기 만들기
 
@@ -35,7 +35,7 @@ SOAP, REST, asmx, wcf, RIA 및 기타 웹 서비스 요청 형식과 같은 웹 
 
      **새 프로젝트** 대화 상자가 표시됩니다.
 
-2.  **설치된 템플릿**에서 원하는 프로그래밍 언어에 따라 **Visual Basic** 또는 **Visual C#**을 선택한 다음, **Windows**를 선택합니다.
+2.  **설치된 템플릿**에서 원하는 프로그래밍 언어에 따라 **Visual Basic** 또는 **Visual C#** 을 선택한 다음, **Windows**를 선택합니다.
 
     > [!NOTE]
     > 이 샘플에서는 Visual C#을 사용합니다.

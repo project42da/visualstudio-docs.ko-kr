@@ -1,29 +1,24 @@
 ---
-title: "내 코드만(스레드 뷰) | Microsoft Docs"
-ms.custom: 
+title: 내 코드만(스레드 뷰) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.jmc
 helpviewer_keywords:
 - Concurrency Visualizer, Just My Code (Threads View)
 ms.assetid: a9ac8a2c-9d99-4207-8ed4-e87f033f440d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9993e31b29e25b95d475d15bd8c1190d1ffae6c3
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ee84fdab07bd88027dc00be80b1acc009658d8ad
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="just-my-code-threads-view"></a>내 코드만(스레드 뷰)
 이 옵션을 선택하는 경우 호출 스택을 필터링하여 사용자 코드와 호출된 함수의 한 수준만을 표시합니다.  

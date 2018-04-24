@@ -2,28 +2,24 @@
 title: AssignProjectConfiguration 작업 | Microsoft 문서
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
 - C++
 - jsharp
 ms.assetid: 09633a0b-8f6f-4aba-8058-7cb4d13ce2c0
-caps.latest.revision: 7
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a4a803647afac9de77096e4a16d41987ff70c4f
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: d771117829ab8ef37ea495b4862ffa492e686770
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="assignprojectconfiguration-task"></a>AssignProjectConfiguration 작업
 이 작업은 목록 구성 문자열을 허용하고 여기에 지정된 프로젝트를 할당합니다.  
@@ -34,8 +30,8 @@ ms.lasthandoff: 04/10/2018
 |매개 변수|설명|  
 |---------------|-----------------|  
 |`SolutionConfigurationContents`|선택적 `string` 출력 매개 변수입니다.<br /><br /> 각 프로젝트에 대한 프로젝트 구성을 포함하는 XML 문자열을 포함합니다. 구성은 명명된 프로젝트에 할당됩니다.|  
-|`DefaultToVcxPlatformMapping`|선택적 `string` 출력 매개 변수입니다.<br /><br /> 대부분의 형식에 사용된 플랫폼 이름에서 .vcxproj 파일에 사용된 이름으로의<br /><br /> 매핑 목록을 세미콜론으로 구분하여 포함합니다.<br /><br /> 예를 들어:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|  
-|`VcxToDefaultPlatformMapping`|Optional<br /><br /> `string` 출력 매개 변수입니다.<br /><br /> .vcxproj 플랫폼 이름에서 대부분의 형식에 사용되는 플랫폼 이름으로의 매핑 목록을 세미콜론으로 구분하여 포함합니다.<br /><br /> 예를 들어:<br /><br /> `"Win32=AnyCPU;X64=X64"`|  
+|`DefaultToVcxPlatformMapping`|선택적 `string` 출력 매개 변수입니다.<br /><br /> 대부분의 형식에 사용된 플랫폼 이름에서 .vcxproj 파일에 사용된 이름으로의<br /><br /> 매핑 목록을 세미콜론으로 구분하여 포함합니다.<br /><br /> 예:<br /><br /> `"AnyCPU=Win32;X86=Win32;X64=X64"`|  
+|`VcxToDefaultPlatformMapping`|Optional<br /><br /> `string` 출력 매개 변수입니다.<br /><br /> .vcxproj 플랫폼 이름에서 대부분의 형식에 사용되는 플랫폼 이름으로의 매핑 목록을 세미콜론으로 구분하여 포함합니다.<br /><br /> 예:<br /><br /> `"Win32=AnyCPU;X64=X64"`|  
 |`CurrentProjectConfiguration`|선택적 `string` 출력 매개 변수입니다.<br /><br /> 현재 프로젝트에 대한 구성을 포함합니다.|  
 |`CurrentProjectPlatform`|선택적 `string` 출력 매개 변수입니다.<br /><br /> 현재 프로젝트에 대한 플랫폼을 포함합니다.|  
 |`OnlyReferenceAndBuildProjectsEnabledInSolutionConfiguration`|선택적 `bool` 출력 매개 변수입니다.<br /><br /> 프로젝트 구성에서 사용되지 않은 경우에도 참조를 빌드해야 함을 나타내는 플래그를 포함합니다.|  

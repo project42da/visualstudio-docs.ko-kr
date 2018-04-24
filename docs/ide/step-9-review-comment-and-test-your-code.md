@@ -1,23 +1,21 @@
 ---
-title: "9단계: 코드 검토, 주석 처리 및 테스트 | Microsoft Docs"
-ms.custom: 
+title: '9단계: 코드 검토, 주석 처리 및 테스트 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-acquisition
+ms.topic: conceptual
 ms.assetid: f26f79ba-c91b-4164-b87f-679a1b231c09
-caps.latest.revision: "29"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: af541817ec73cf81aa339f9a57a584286e843e46
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b46e51ac48ffab06bf17508f6c99ccc2fd7fa7c3
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-9-review-comment-and-test-your-code"></a>9단계: 코드 검토, 주석 처리 및 테스트
 다음으로 코드에 주석을 추가합니다. 주석은 프로그램 동작에 영향을 주지 않는 일종의 메모로서 코드를 읽는 사용자가 코드에서 수행하는 작업을 보다 쉽게 이해할 수 있도록 도와줍니다. 코드에 주석을 추가하는 것은 좋은 습관입니다. Visual C#에서는 두 개의 슬래시(//)를 사용하여 주석 줄을 표시하고, Visual Basic에서는 작은따옴표(')를 사용하여 주석 줄을 표시합니다. 주석을 추가한 후에는 프로그램을 테스트합니다. 프로젝트에서 작업하는 동안 자주 코드를 실행하고 테스트하는 것은 좋은 습관이며, 코드가 더 복잡해지기 전에 조기에 문제를 파악하고 해결할 수 있습니다. 이를 *반복적 테스트*라고 합니다.  
@@ -61,7 +59,7 @@ ms.lasthandoff: 12/22/2017
     > [!TIP]
     >  IDE는 사용자가 코드를 손쉽게 작성할 수 있도록 하기 위한 것으로, *코드 조각*이라는 기능을 제공합니다. 조각은 작은 코드 블록으로 확장되는 바로 가기입니다.  
     >   
-    >  사용 가능한 모든 코드 조각을 볼 수 있습니다. 메뉴 모음에서 **도구**, **코드 조각 관리자**를 차례로 선택합니다. Visual C#의 경우 `if` 코드 조각이 **Visual C#**에 있습니다. Visual Basic의 경우 `if` 코드 조각이 **조건 및 루프**, **코드 패턴**에 있습니다. 이 관리자를 사용하여 기존 조각을 찾거나 사용자 고유의 조각을 추가할 수 있습니다.  
+    >  사용 가능한 모든 코드 조각을 볼 수 있습니다. 메뉴 모음에서 **도구**, **코드 조각 관리자**를 차례로 선택합니다. Visual C#의 경우 `if` 코드 조각이 **Visual C#** 에 있습니다. Visual Basic의 경우 `if` 코드 조각이 **조건 및 루프**, **코드 패턴**에 있습니다. 이 관리자를 사용하여 기존 조각을 찾거나 사용자 고유의 조각을 추가할 수 있습니다.  
     >   
     >  코드를 입력할 때 코드 조각을 활성화하려면 코드를 입력하고 Tab 키를 선택합니다. **IntelliSense** 창에 여러 코드 조각이 표시되므로 Tab 키를 두 번 선택해야 하는데, 첫 번째는 **IntelliSense** 창에서 코드 조각을 선택하기 위한 것이고 두 번째는 이 코드 조각을 사용하도록 IDE에 지시하기 위한 것입니다. IntelliSense에서는 `if` 조각은 지원하지만 `ifelse` 조각은 지원하지 않습니다.  
   

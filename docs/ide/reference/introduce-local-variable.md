@@ -1,21 +1,19 @@
 ---
-title: "Visual Studio에서 지역 변수 소개 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 지역 변수 소개 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: a100cd5dfef6dcb36f6ce845000db31d82173a2d
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: b7af958e923c6af7929b8e4a9309c210dbf8ced5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduce-a-local-variable-in-visual-studio"></a>Visual Studio에서 지역 변수 소개
 
@@ -46,14 +44,14 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거합니다.
    - **마우스**
      - 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링** 메뉴를 선택합니다.
      - 텍스트 커서가 이미 구부러진 빨간 곡선이 있는 줄 위에 있으면 왼쪽 여백에 나타나는 ![전구](media/bulb-cs.png) 아이콘을 클릭합니다.
 
    ![로컬 미리 보기 소개](media/local-preview-cs.png)
 
-1. 드롭다운 메뉴에서 **'*expression*(모든 항목)에 대해 지역 변수 소개'**를 선택합니다.
+1. 드롭다운 메뉴에서 **'*expression*(모든 항목)에 대해 지역 변수 소개'** 를 선택합니다.
 
    > [!TIP]
    > 미리 보기 창 맨 아래에 있는 **변경 내용 미리 보기** 링크를 사용하여 선택하기 전에 적용될 [모든 변경 내용을 확인](../../ide/preview-changes.md)합니다.

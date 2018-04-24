@@ -1,27 +1,21 @@
 ---
-title: Python 코드 서식 지정 | Microsoft Docs
+title: Python 코드 서식 지정
 description: 간격, 문, 래핑 및 주석을 포함하여 Visual Studio에서 Python 코드의 서식을 자동으로 다시 지정하는 방법입니다.
-ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6b43ad38f3fc1b09f96e751b8b244ac1e52735b1
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 36879efbb7fe95c33d73529e3438350a87226700
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="formatting-python-code"></a>Python 코드 서식 지정
 

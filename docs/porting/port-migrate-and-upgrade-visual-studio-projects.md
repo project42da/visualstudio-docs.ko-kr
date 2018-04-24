@@ -1,13 +1,8 @@
 ---
-title: Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드
 ms.date: 03/14/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - Win8ExpressDesktopBlock
 - w8trefactor
@@ -20,14 +15,14 @@ helpviewer_keywords:
 - projects, conversion
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65d1a8edac3de969528b6d27ed540d791d3d08f6
-ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
+ms.openlocfilehash: 82c92365d3e77631dd2cbbce4079ac982d80ef14
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드
 
@@ -52,7 +47,7 @@ ms.lasthandoff: 03/17/2018
 | .NET Core 프로젝트(.xproj) | Visual Studio 2015로 만든 프로젝트는 xproj 프로젝트 파일을 포함하는 미리 보기 도구를 사용했습니다. Visual Studio 2017에서 xproj 파일을 열면 파일을 csproj 형식으로 마이그레이션(xproj 파일의 백업이 생성됨)하라는 메시지가 표시됩니다. .NET Core 프로젝트의 이 csproj 형식은 Visual Studio 2015 및 이전 버전에서 지원되지 않습니다.  xproj 형식은 csproj로 마이그레이션해야만 Visual Studio 2017에서 지원됩니다. 자세한 내용은 [csproj 형식으로 .NET Core 프로젝트 마이그레이션](/dotnet/core/migration/#visual-studio-2017)을 참조하세요.|
 | Application Insights를 사용하도록 지정한 ASP.NET 웹 응용 프로그램 및 ASP.NET Core 웹 응용 프로그램 | 각 Visual Studio 사용자의 리소스 정보가 사용자 인스턴스별 레지스트리에 저장됩니다. 이 정보는 사용자가 프로젝트를 열지 않고 Azure Application Insights 데이터를 검색하려는 경우에 사용됩니다. Visual Studio 2015에서는 Visual Studio 2017과 다른 레지스트리 위치를 사용하므로 충돌하지 않습니다.<br/><br/>사용자가 ASP.NET 웹 응용 프로그램 또는 ASP.NET Core 웹 응용 프로그램을 만들면 리소스가 .suo 파일에 저장됩니다. 사용자는 Visual Studio 2015 또는 2017에서 프로젝트를 열 수 있으며, Visual Studio에서 두 버전 간 사용 중인 프로젝트 및 솔루션이 지원될 경우 두 버전 모두에서 리소스 정보가 사용됩니다. 사용자는 각 제품에 대해 한 번 인증해야 합니다. 예를 들어 Visual Studio 2015에서 프로젝트를 만든 다음 Visual Studio 2017에서 열 경우 사용자는 Visual Studio 2017에서 인증해야 합니다. |
 | C#/Visual Basic Webform 또는 Windows Form | Visual Studio 2017 및 Visual Studio 2015에서 프로젝트를 열 수 있습니다. |
-| 데이터베이스 유닛 테스트 프로젝트(csproj, .vbproj) | 이전 데이터 유닛 테스트 프로젝트는 Visual Studio 2017에 로드되지만 GAC 종속성 버전을 사용합니다. 최신 종속성을 사용하도록 단위 테스트 프로젝트를 업그레이드하려면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **SQL Server 단위 테스트 프로젝트로 변환...**을 선택합니다. |
+| 데이터베이스 유닛 테스트 프로젝트(csproj, .vbproj) | 이전 데이터 유닛 테스트 프로젝트는 Visual Studio 2017에 로드되지만 GAC 종속성 버전을 사용합니다. 최신 종속성을 사용하도록 단위 테스트 프로젝트를 업그레이드하려면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **SQL Server 단위 테스트 프로젝트로 변환...** 을 선택합니다. |
 | F# | Visual Studio 2017에서는 Visual Studio 2013 및 2015에서 만든 프로젝트를 열 수 있습니다. 이러한 프로젝트에서 Visual Studio 2017 기능을 사용하려면 프로젝트 속성을 열고 대상 fsharp.core를 F# 4.1로 변경합니다. Visual Studio 설치 관리자의 **F# 언어 지원** 옵션은 기본적으로 .NET 워크로드와 함께 선택되지 않습니다. 워크로드에 대해 해당 옵션을 선택하거나 **개발 작업** 아래 **개별 구성 요소** 탭에서 해당 옵션을 선택하여 포함해야 합니다. |
 | InstallShield<br/>MSI 설정 | Visual Studio 2010에서 만든 설치 관리자 프로젝트는 [Visual Studio 설치 관리자 프로젝트 확장](https://marketplace.visualstudio.com/items?itemName=UnniRavindranathan-MSFT.MicrosoftVisualStudio2013InstallerProjects)을 사용하여 이후 버전에서 열 수 있습니다. 또한 [WiX 도구 집합 Visual Studio 2017 확장](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)을 참조하세요. InstallShield Limited Edition은 더 이상 Visual Studio에 포함되지 않습니다. Visual Studio 2017에 대한 가용성은 [Flexera Software](http://learn.flexerasoftware.com/content/IS-EVAL-InstallShield-Limited-Edition-Visual-Studio)에서 확인하세요. |
 | LightSwitch | LightSwitch는 Visual Studio 2017에서 더 이상 지원되지 않습니다. Visual Studio 2012 이전 버전에서 만들고 Visual Studio 2013 또는 Visual Studio 2015에서 연 프로젝트는 업그레이드되며 이후에는 Visual Studio 2013 또는 Visual Studio 2015에서만 열 수 있습니다. |

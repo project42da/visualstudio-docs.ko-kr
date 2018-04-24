@@ -2,11 +2,8 @@
 title: UsingTask 요소(MSBuild) | Microsoft Docs
 ms.custom: ''
 ms.date: 03/13/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#UsingTask
 dev_langs:
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - UsingTask element [MSBuild]
 - <UsingTask> element [MSBuild]
 ms.assetid: 20247902-9446-4a1f-8253-5c7a17e4fe43
-caps.latest.revision: 23
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 79d87029365d5e527f886dc3c86ff260a0cbb612
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: f95e09639e9236b64f9c18c9bd90e6850ee13d86
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 요소(MSBuild)
 [Task](../msbuild/task-element-msbuild.md) 요소에서 참조하는 작업을 작업의 구현이 포함된 어셈블리에 매핑합니다.  
@@ -79,7 +75,7 @@ ms.lasthandoff: 04/10/2018
 
  MSBuild 4.0에서는 작업 사용을 .overridetask 파일에서 로드할 수 있습니다.  
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `AssemblyName` 특성에서 `UsingTask` 요소를 사용하는 방법을 보여 줍니다.  
 
 ```xml  
@@ -95,7 +91,7 @@ ms.lasthandoff: 04/10/2018
 </UsingTask>  
 ```  
 
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `AssemblyFile` 특성에서 `UsingTask` 요소를 사용하는 방법을 보여 줍니다.  
 
 ```xml  

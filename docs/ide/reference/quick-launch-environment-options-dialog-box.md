@@ -1,13 +1,10 @@
 ---
-title: "빠른 실행, 환경, 옵션 대화 상자 | Microsoft Docs"
-ms.custom: 
+title: 빠른 실행, 환경, 옵션 대화 상자 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.QuickLaunch
 - vs.quicklaunch
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - searching IDE
 - IDE, searching
 ms.assetid: 4200f297-d065-4723-9a30-d91ff2e26c9d
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f71cca51a27c8ed9d6467d99425d4d3b721d195
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ebc5f8374befec666a35977fc73f4dc7df3d71e5
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quick-launch-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 빠른 실행
 **빠른 실행**을 사용하면 옵션, 템플릿, 메뉴 등의 IDE 자산에 대해 신속하게 검색하고 동작을 실행할 수 있습니다. 코드 및 기호를 검색하는 데는 **빠른 실행**을 사용할 수 없습니다. **빠른 실행** 검색 상자는 메뉴 모음의 오른쪽 위 모서리에 있으며 Ctrl+Q 키를 선택하여 액세스할 수 있습니다. 간단히 상자에 검색 문자열을 입력합니다. @ 이 포함된 문자열을 검색하려면 ”@@” 을 사용합니다.   

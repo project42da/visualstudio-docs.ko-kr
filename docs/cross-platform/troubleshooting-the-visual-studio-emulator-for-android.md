@@ -2,23 +2,19 @@
 title: Visual Studio Emulator for Android 문제 해결 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f3fb5df4-3aae-40e4-9450-bbe15b0c5af5
-caps.latest.revision: ''
 author: mgmclemore
 ms.author: mamcle
 manager: crdun
 ms.workload:
 - multiple
-ms.openlocfilehash: 7d333295461617eb8a85f0970bc82e33f5a2ec68
-ms.sourcegitcommit: fb1fede41d8c5e459dd222755b0497b9d361bc51
+ms.openlocfilehash: ae4478b711581e332c8da980ddac9fd4d369d8e7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="troubleshooting-the-visual-studio-emulator-for-android"></a>Troubleshooting the Visual Studio Emulator for Android
 이 항목에는 Android용 Visual Studio 에뮬레이터를 사용하는 동안 발생할 수 있는 문제를 해결하는 데 도움이 되는 정보가 들어 있습니다.  
@@ -288,7 +284,7 @@ ms.lasthandoff: 03/22/2018
   
 2.  오른쪽 아래에 있는 **저장된 상태 삭제**를 선택합니다.  
   
-3.  **설정...**을 선택합니다.  
+3.  **설정...** 을 선택합니다.  
   
 4.  프로세서 노드를 확장하고 **호환성**을 선택합니다.  
   

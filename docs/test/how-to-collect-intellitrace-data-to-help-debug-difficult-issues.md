@@ -1,7 +1,7 @@
 ---
 title: Visual Studio의 IntelliTrace 데이터 | Microsoft Docs
 ms.date: 10/13/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTrace, configuring test settings
 - Diagnostic Data Adapter, InteliTrace
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 02b6716f-569e-4961-938a-e790a0c74b5c
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 04c4c1cd4429228ffa90e06ac9675901602c3cd0
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: e1f36aefaad2e43d8875c9c0164ac938b004999d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-collect-intellitrace-data-to-help-debug-difficult-issues"></a>방법: 어려운 문제 디버깅에 도움이 되는 IntelliTrace 데이터 수집
 
@@ -71,7 +71,7 @@ IntelliTrace 데이터는 확장명이 .iTrace인 파일에 저장됩니다. 테
 
 5.  **일반** 탭을 선택합니다. 테스트할 때 성능에 미치는 영향을 최소화하기 위해 중요 진단 이벤트만 기록하려면 **IntelliTrace 이벤트만**을 선택합니다.
 
-     **-**또는
+     **-** 또는
 
      호출 정보를 표시하는 메서드 수준 추적 정보와 진단 이벤트를 모두 기록하려면 **IntelliTrace 이벤트 및 호출 정보**를 선택합니다. 이 수준의 추적을 사용하면 테스트를 실행할 때 성능이 저하될 수 있습니다.
 

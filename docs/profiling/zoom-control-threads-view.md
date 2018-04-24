@@ -1,29 +1,24 @@
 ---
-title: "확대/축소 컨트롤(스레드 뷰) | Microsoft 문서"
-ms.custom: 
+title: 확대/축소 컨트롤(스레드 뷰) | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.tools.zoom
 helpviewer_keywords:
 - Concurrency Visualizer, Zoom Control (Threads View)
 ms.assetid: 7f9bda07-53a8-4f11-9846-a3e31064c596
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0e9d240defd8788408a585d5ff33b2561e517027
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 5d9a0392e13c74f36b3a9d30610cc101d3c078f9
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="zoom-control-threads-view"></a>확대/축소 컨트롤(스레드 뷰)
 확대/축소 컨트롤은 특정 관심 영역을 중점적으로 확인하기 위해 시간 표시 막대를 확대/축소하는 데 사용할 수 있는 슬라이더입니다. 이 컨트롤은 시간 표시 막대 뷰의 가운데를 확대하므로, 확대하기 전에 관심 영역을 가운데에 맞춰야 합니다.  

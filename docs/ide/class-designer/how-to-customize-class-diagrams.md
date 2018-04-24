@@ -1,28 +1,26 @@
 ---
-title: "방법: 클래스 다이어그램 사용자 지정(클래스 디자이너) | Microsoft Docs"
-ms.custom: 
+title: '방법: 클래스 다이어그램 사용자 지정(클래스 디자이너) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - class diagrams, customizing
 - shapes, removing type from class diagrams
 - type shapes, removing from class diagrams
 - class diagrams, removing type shapes
 ms.assetid: e9030aea-c77d-4cc1-b8f6-b6ca469b692d
-caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: ab6776ccdf8f3abe98190855ec41dc226677db61
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 5a2f58626008ba50f436f7836fe13ca92fcce155
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-customize-class-diagrams-class-designer"></a>방법: 클래스 다이어그램 사용자 지정(클래스 디자이너)
 클래스 다이어그램에서 정보가 표시되는 방법을 변경할 수 있습니다. 디자인 화면의 전체 다이어그램 또는 개별 형식을 사용자 지정할 수 있습니다.  

@@ -2,11 +2,8 @@
 title: Visual Studio에서 C# 및 ASP.NET Core 시작 | Microsoft Docs
 ms.custom: ''
 ms.date: 12/11/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
 ms.devlang: CSharp
 author: TerryGLee
@@ -17,11 +14,11 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 0835c2e33dcd3c8ffa2556a406cdbd8e2d2ff265
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: b3760c922e540837d0e9452efc8d44762eeeb3af
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="getting-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio에서 C# 및 ASP.NET 시작
 Visual Studio를 사용하여 ASP.NET Core로 C#을 개발하기 위한 이 자습서에서는 C# ASP.NET Core 웹앱을 만들고, 해당 앱에 코드를 추가하며, IDE의 일부 기능을 살펴보고 앱을 실행합니다. 
@@ -45,7 +42,7 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
 
 1. Visual Studio 2017을 엽니다.
 
-2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.
 
 3. 왼쪽 창의 **새 프로젝트** 대화 상자에서 **Visual C#**, **Web**을 차례로 확장한 후 **.NET Core**를 선택합니다. 가운데 창에서 **ASP.NET Core 웹 응용 프로그램**을 선택하고 파일 이름을 *MyCoreApp*으로 정한 다음 **확인**을 선택합니다.   
 
@@ -64,7 +61,7 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
    ![Visual Studio Installer에서 .NET Core 플랫폼 간 개발 워크로드](../ide/media/asp-dot-net-web-dev-workload.png)
 
 ##### <a name="option-2-use-the-tools-menu-bar"></a>옵션 2: 도구 메뉴 모음 사용
-1. **새 프로젝트** 대화 상자를 취소하고 나가 상단 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...**를 선택합니다.
+1. **새 프로젝트** 대화 상자를 취소하고 나가 상단 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...** 를 선택합니다.
 
 2. Visual Studio 설치 관리자가 시작됩니다. **ASP.NET 및 웹 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.   
 
@@ -78,9 +75,9 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
 ### <a name="about-your-solution"></a>솔루션 정보
 이 솔루션은 앱을 다음과 같이 세 가지 주요 구성 요소로 구분하는 MVC(모델-뷰-컨트롤러) 아키텍처 패턴을 따릅니다. 
 
-* **M(모델)**은 앱 데이터를 나타내는 클래스를 포함합니다. 모델 클래스는 유효성 검사 논리를 사용하여 해당 데이터의 비즈니스 규칙을 적용합니다. 일반적으로 모델 개체는 모델 상태를 검색하고 데이터베이스에 저장합니다.
-* **V(뷰)**는 앱의 UI(사용자 인터페이스)를 표시하는 구성 요소입니다. 일반적으로 이 UI는 모델 데이터를 표시합니다.
-* **C(컨트롤러)**는 브라우저 요청을 처리하는 클래스를 포함합니다. 모델 데이터를 검색하고 응답을 반환하는 뷰 템플릿을 호출합니다. MVC 앱에서 뷰는 정보만 표시합니다. 즉 컨트롤러가 사용자 입력 및 상호 작용을 처리하고 응답합니다.
+* **M(모델)** 은 앱 데이터를 나타내는 클래스를 포함합니다. 모델 클래스는 유효성 검사 논리를 사용하여 해당 데이터의 비즈니스 규칙을 적용합니다. 일반적으로 모델 개체는 모델 상태를 검색하고 데이터베이스에 저장합니다.
+* **V(뷰)** 는 앱의 UI(사용자 인터페이스)를 표시하는 구성 요소입니다. 일반적으로 이 UI는 모델 데이터를 표시합니다.
+* **C(컨트롤러)** 는 브라우저 요청을 처리하는 클래스를 포함합니다. 모델 데이터를 검색하고 응답을 반환하는 뷰 템플릿을 호출합니다. MVC 앱에서 뷰는 정보만 표시합니다. 즉 컨트롤러가 사용자 입력 및 상호 작용을 처리하고 응답합니다.
 
 MVC 패턴을 통해 기존 모놀리식 응용 프로그램보다 테스트 및 업데이트가 용이한 앱을 만들 수 있습니다.
 
@@ -155,7 +152,7 @@ MVC 패턴을 통해 기존 모놀리식 응용 프로그램보다 테스트 및
 
  ![솔루션 탐색기에서 About.cshtml 선택](../ide/media/csharp-aspnet-solution-explorer-view-about.png)
 
-1. **"additional"** 텍스트를 **"changed"**으로 변경하여 파일을 저장합니다.
+1. **"additional"** 텍스트를 **"changed"** 으로 변경하여 파일을 저장합니다.
 
  !["additional" 텍스트를 "changed"로 표시되게 변경](../ide/media/csharp-aspnet-about-cshtml-code-change.png)
 

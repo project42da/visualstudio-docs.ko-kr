@@ -1,8 +1,8 @@
 ---
-title: "Live Unit Testing의 새로운 기능 | Microsoft Docs"
+title: Live Unit Testing의 새로운 기능 | Microsoft Docs
 ms.date: 10-11-2017
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio ALM
 - Live Unit Testing
@@ -11,11 +11,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5f979970b926e3a1a3d0ef7aee53f1e71e7fc0dc
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: cda0426397afd1ce36a122c06eb010f30a671879
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="whats-new-in-live-unit-testing"></a>Live Unit Testing의 새로운 기능
 
@@ -55,7 +55,7 @@ Visual Studio 2017 버전 15.3부터 시작하는 Live Unit Testing은 두 가�
 
 - [도구]/[옵션]/[Live Unit Testing]/[일반]에 구성 가능한 옵션이 여러 가지 더 추가되었습니다. Live Unit Testing에 사용되는 메모리를 제한할 수 있습니다. 열려 있는 솔루션의 지속형 Live Unit Testing 데이터에 대한 파일 경로도 지정할 수 있습니다. 
 
-- [테스트]/[Live Unit Testing]의 메뉴 모음 아래에 여러 가지 메뉴 항목이 더 추가되었습니다. **Reset Clean(정리 다시 설정)**은 지속형 데이터를 삭제하고 다시 생성합니다. **옵션**을 선택하면 [도구]/[옵션]/[Live Unit Testing]/[일반]으로 이동합니다.
+- [테스트]/[Live Unit Testing]의 메뉴 모음 아래에 여러 가지 메뉴 항목이 더 추가되었습니다. **Reset Clean(정리 다시 설정)** 은 지속형 데이터를 삭제하고 다시 생성합니다. **옵션**을 선택하면 [도구]/[옵션]/[Live Unit Testing]/[일반]으로 이동합니다.
   
 - 이제 다음 특성을 사용하여 Live Unit Testing에서 제외하려는 대상 테스트 메서드를 소스 코드에 지정할 수 있습니다.
    - xUnit: `[Trait("Category", "SkipWhenLiveUnitTesting")]`

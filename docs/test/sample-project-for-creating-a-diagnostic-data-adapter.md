@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 진단 데이터 어댑터를 만들기 위한 샘플 프로젝트 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Diagnostic Data Adapter [Visual Studio ALM]
 - samples. Diagnostic Data Adapter [Visual Studio ALM]
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 548bdc5e-338f-4be7-a555-e6a2efb1df6b
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0b37512405442b327bb4b9688a39bfc4c99ea594
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 98606c5afbeed035392f35d71de60bb4d4bbb5a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-project-for-creating-a-diagnostic-data-adapter"></a>진단 데이터 어댑터를 만들기 위한 샘플 프로젝트
 
@@ -364,7 +364,7 @@ namespace MyCompany.DiagnosticDataAdapters.ConfigurationEditors
 
 9. 프로젝트에 사용자 정의 컨트롤을 추가하려면 솔루션 탐색기에서 MyDataCollector 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음, **사용자 정의 컨트롤**을 선택합니다. **추가**를 선택합니다.
 
-10. 도구 상자를 사용하여 사용자 정의 컨트롤에 레이블을 추가하고 텍스트 속성을 **파일 이름:**으로 변경합니다.
+10. 도구 상자를 사용하여 사용자 정의 컨트롤에 레이블을 추가하고 텍스트 속성을 **파일 이름:** 으로 변경합니다.
 
 11. 도구 상자를 사용하여 사용자 정의 컨트롤에 텍스트 상자를 추가하고 이름을 **textBoxFileName**으로 변경합니다.
 

@@ -1,13 +1,10 @@
 ---
-title: ".NET Framework 기반의 국가별 응용 프로그램 소개 | Microsoft 문서"
-ms.custom: 
+title: .NET Framework 기반의 국가별 응용 프로그램 소개 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - strings [Visual Studio], localizing
 - Web applications [.NET Framework], globalization
@@ -26,17 +23,16 @@ helpviewer_keywords:
 - resource files, fallback processes
 - user interface, culture setting
 ms.assetid: b0788993-e62d-4f68-8235-5f87b1d48525
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 20eefe3933767e357d977e2f3a5a0626aa555c39
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: f2bbf16622e0f4bf1ca1478521881c42c34af56d
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="introduction-to-international-applications-based-on-the-net-framework"></a>.NET Framework 기반의 국가별 응용 프로그램 소개
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에는 지역화 대비 응용 프로그램을 만드는 두 개의 부분으로, 다양한 문화권에 맞게 조정할 수 있는 응용 프로그램을 디자인하는 프로세스인 전역화 및 특정 문화권에 맞게 리소스를 변환하는 프로세스인 지역화가 있습니다. 전 세계 대상을 위한 응용 프로그램을 디자인하는 방법에 대한 일반 정보는 [지역화 대비 응용 프로그램 개발을 위한 최선의 구현 방법](http://msdn.microsoft.com/Library/f08169c7-aad8-4ec3-9a21-9ebd3b89986c)을 참조하세요.  

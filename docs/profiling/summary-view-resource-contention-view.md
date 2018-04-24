@@ -1,27 +1,22 @@
 ---
-title: "요약 뷰 - 리소스 경합 뷰 | Microsoft Docs"
-ms.custom: 
+title: 요약 뷰 - 리소스 경합 뷰 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Summary view
 ms.assetid: 6da57b83-7b42-4d7c-9aea-8e0a830faf6b
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7a6e681c703847c970d79c1523ab12ce89e68d28
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: ed1db5bd560c32cdb40ddc728b3ede63c70dbc88
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="summary-view---resource-contention-view"></a>요약 뷰 - 리소스 경합 뷰
 요약 뷰에는 스레드 또는 프로세스가 리소스 액세스를 대기하던 중 일시 중단된 응용 프로그램의 이벤트에 대한 정보가 표시됩니다.  

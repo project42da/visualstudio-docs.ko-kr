@@ -1,10 +1,11 @@
 ---
-title: "Dotfuscator CE(Community Edition) 업그레이드 | Microsoft 문서"
+title: Dotfuscator CE(Community Edition) 업그레이드 | Microsoft 문서
 ms.date: 2017-02-08
 ms.devlang: dotnet
-ms.technology: vs-ide-general
-ms.topic: article
-keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017, 업그레이드, 명령줄"
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
+keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017, 업그레이드, 명령줄
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -19,15 +20,15 @@ helpviewer_keywords:
 - registering Dotfuscator
 - Dotfuscator command line
 - Dotfuscator Professional
-description: "Visual Studio 2017에 포함된 무료 Dotfuscator Community Edition을 업그레이드하는 방법을 알아봅니다."
+description: Visual Studio 2017에 포함된 무료 Dotfuscator Community Edition을 업그레이드하는 방법을 알아봅니다.
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
-manager: ghogen
-ms.openlocfilehash: 261fc98312914f5a80d2302a90e360dfde2ca17f
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+manager: douge
+ms.openlocfilehash: 03fdaae7a152db2af4ca042d14748e6508185b78
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition) 업그레이드
 

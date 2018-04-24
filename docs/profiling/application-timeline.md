@@ -1,23 +1,20 @@
 ---
-title: "Visual Studio에서 XAML 앱의 리소스 소비량 분석 | Microsoft Docs"
+title: Visual Studio에서 XAML 앱의 리소스 소비량 분석 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: df7d854b-0a28-45a9-8a64-c015a4327701
-caps.latest.revision: "11"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: uwp
-ms.openlocfilehash: 340ef03d7b9449f6fc9ee50a4c24afff03120e6f
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+manager: douge
+ms.workload:
+- uwp
+ms.openlocfilehash: d1b8a01671ed37d8e83ca97218a3666cad40c60b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="analyze-resource-consumption-and-ui-thread-activity-xaml"></a>리소스 소비량 및 UI 스레드 활동 분석(XAML)
 **응용 프로그램 타임라인** 프로파일러를 사용하여 XAML 응용 프로그램에서 응용 프로그램 상호 작용 관련 성능 문제를 찾으세요. 이 도구를 사용하면 응용 프로그램의 리소스 소비에 대해 자세히 알 수 있어서 XAML 응용 프로그램의 성능을 개선하는 데 도움이 됩니다. 응용 프로그램 UI 프레임(레이아웃 및 렌더링)을 준비하고, 네트워크 및 디스크 요청을 처리하여, 응용 프로그램 시작, 페이지 로드 및 창 크기 조정과 같은 시나리오에서 응용 프로그램이 보낸 시간을 분석할 수 있습니다.  
@@ -49,7 +46,7 @@ ms.lasthandoff: 01/19/2018
   
 1.  XAML 앱을 엽니다.  
   
-2.  **디버그 / 성능 프로파일러...**를 클릭합니다. diagsession 창에 프로파일링 도구 목록이 표시되어야 합니다.  
+2.  **디버그 / 성능 프로파일러...** 를 클릭합니다. diagsession 창에 프로파일링 도구 목록이 표시되어야 합니다.  
   
 3.  **응용 프로그램 타임라인** 을 선택한 다음 창 하단의 **시작** 을 클릭합니다.  
   

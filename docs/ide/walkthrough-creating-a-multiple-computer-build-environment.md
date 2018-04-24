@@ -1,26 +1,23 @@
 ---
-title: "연습: 여러 컴퓨터 빌드 환경 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 여러 컴퓨터 빌드 환경 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, building on multiple computers
 - build environment, MSBuild
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 65b4394b0f06dbcf995e8924833870a455bba348
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: d4c2efa01078cb089055cb48fbb80e9c1ffcde0f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>연습: 여러 컴퓨터 빌드 환경 만들기
 
@@ -62,7 +59,7 @@ ms.lasthandoff: 02/21/2018
 
 - [소스 컨트롤로 체크 인할 수 있도록 빌드 환경 만들기](../ide/walkthrough-creating-a-multiple-computer-build-environment.md#CreatingForSourceControl)
 
-## <a name="prerequisites"></a>필수 구성 요소
+## <a name="prerequisites"></a>전제 조건
 
 - .NET 데스크톱 개발 워크로드가 설치된 Visual Studio.
 

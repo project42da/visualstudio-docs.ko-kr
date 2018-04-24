@@ -1,12 +1,10 @@
 ---
-title: "속성 페이지, JavaScript | Microsoft Docs"
-ms.custom: 
+title: 속성 페이지, JavaScript | Microsoft Docs
+ms.custom: ''
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - javascript.project.property.debugging.debuggertype
 - javascript.project.property.debugging.requireauthentication
@@ -16,16 +14,16 @@ f1_keywords:
 - javascript.project.property.debugging.machinename
 - javascript.project.property.debugging.allowlocalnetworkloopback
 ms.assetid: a05ab01f-3d5d-4675-a845-eab51807d3a3
-caps.latest.revision: "17"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 4e4f01a74a3246a326c1695371a303472901c9ea
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 338ddfe5253c5d4ab148234e8345275620ecac3f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="property-pages-javascript"></a>속성 페이지, JavaScript
 **속성 페이지**에서 프로젝트 설정에 액세스할 수 있습니다. **속성 페이지**에 표시되는 페이지를 사용하여 프로젝트 속성을 변경할 수 있습니다.  
@@ -78,7 +76,7 @@ ms.lasthandoff: 01/22/2018
 F5 키를 누르거나 **디버그**, **디버깅 시작**을 클릭하면 응용 프로그램을 시작하는지 여부를 지정합니다. 응용 프로그램을 시작하려면 **예**를 선택하고, 그렇지 않은 경우 **아니요**를 선택합니다. **아니요**를 선택하더라도 응용 프로그램을 시작하는 다른 방법을 사용하는 경우 응용 프로그램을 디버그할 수 있습니다.  
 
 **디버거 형식**  
-디버그할 코드 형식을 지정합니다. JavaScript 코드를 디버그하려면 **스크립트만**을 선택합니다. 공용 언어 런타임에 의해 관리되는 코드를 디버그하려면 **관리 전용**을 선택합니다. C++ 코드를 디버그하려면 **네이티브 전용**을 선택합니다. C++ 및 JavaScript를 디버그하려면 **스크립트가 포함된 네이티브 코드**를 선택합니다. 관리 코드와 C++ 코드를 모두 디버그하려면 **혼합(관리/네이티브)**을 선택합니다.  
+디버그할 코드 형식을 지정합니다. JavaScript 코드를 디버그하려면 **스크립트만**을 선택합니다. 공용 언어 런타임에 의해 관리되는 코드를 디버그하려면 **관리 전용**을 선택합니다. C++ 코드를 디버그하려면 **네이티브 전용**을 선택합니다. C++ 및 JavaScript를 디버그하려면 **스크립트가 포함된 네이티브 코드**를 선택합니다. 관리 코드와 C++ 코드를 모두 디버그하려면 **혼합(관리/네이티브)** 을 선택합니다.  
 
 **로컬 네트워크 루프백 허용**  
 앱 테스트를 위해 IP 루프백 주소에 대한 액세스가 허용되는지 여부를 지정합니다. 클라이언트 앱이 서버 응용 프로그램이 실행 중인 컴퓨터와 동일한 컴퓨터에 있는 경우 루프백 주소 사용을 허용하려면 **예**를 선택하고, 그렇지 않은 경우 **아니요**를 선택합니다. 이 속성은 **실행할 디버거** 속성이 **원격 컴퓨터**로 설정된 경우에만 사용할 수 있습니다.  

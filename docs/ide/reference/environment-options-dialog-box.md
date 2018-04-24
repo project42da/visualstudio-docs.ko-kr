@@ -1,26 +1,24 @@
 ---
-title: "옵션 대화 상자, 환경 | Microsoft Docs"
-ms.custom: 
+title: 옵션 대화 상자, 환경 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - VS.OptionsDialog.Environment
 - VS.ToolsOptionsPages.Environment
 ms.assetid: 3f463cf0-734b-4fdc-b4ff-b47f9bb99069
-caps.latest.revision: "29"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 567d1c8248ff00a1387ccd1c40a8c8c658b551ea
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8ca71a3dd2daa3af52969c74333d9d81ef17b016
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="environment-options-dialog-box"></a>옵션 대화 상자, 환경
 **옵션** 대화 상자의 **환경** 폴더에 있는 페이지를 사용하여 IDE(통합 개발 환경)에서 특정 요소의 표시 및 작동 방법을 설정할 수 있습니다. 메뉴 모음의 **도구**, **옵션**을 선택한 다음 **환경**을 선택하여 환경 페이지에 액세스할 수 있습니다.  

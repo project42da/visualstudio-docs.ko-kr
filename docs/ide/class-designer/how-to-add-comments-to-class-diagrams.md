@@ -1,13 +1,10 @@
 ---
-title: "방법: 클래스 다이어그램에 주석 추가(클래스 디자이너) | Microsoft Docs"
-ms.custom: 
+title: '방법: 클래스 다이어그램에 주석 추가(클래스 디자이너) | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.comment
 helpviewer_keywords:
@@ -15,17 +12,16 @@ helpviewer_keywords:
 - class diagrams, adding comment shapes
 - comment shapes
 ms.assetid: d54005d5-a29d-4c4e-b153-feb6e84dd44f
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc92b589cb956eaa31c22a84dce075d6599297d5
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: a8e2b17e0d05faf17e7d6c4e2ed65841229f2b15
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-comments-to-class-diagrams-class-designer"></a>방법: 클래스 다이어그램에 주석 추가(클래스 디자이너)
 주석 도형을 사용하여 클래스 다이어그램에 주석을 달 수 있습니다. 주석 도형에는 텍스트를 입력할 수 있는 **텍스트**라는 하나의 속성이 있습니다. 주석 도형은 다이어그램 화면에만 존재하고 코드에는 존재하지 않습니다.  

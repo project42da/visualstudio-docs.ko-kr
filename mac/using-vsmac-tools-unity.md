@@ -1,15 +1,14 @@
 ---
-title: "Mac용 Visual Studio Tools for Unity 사용 | Microsoft Docs"
+title: Mac용 Visual Studio Tools for Unity 사용
 author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
-ms.topic: article
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: b37346546f65ab6737100c65368d2955cd2260d7
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: c32b80d64e6b57667a3711e0c08455346782f75a
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="using-visual-studio-for-mac-tools-for-unity"></a>Mac용 Visual Studio Tools for Unity 사용
 
@@ -19,13 +18,13 @@ ms.lasthandoff: 10/31/2017
 
 Mac용 Visual Studio가 [Unity의 외부 스크립트 편집기로 설정](/visualstudio/mac/setup-vsmac-tools-unity#configure-unity-for-use-with-visual-studio-for-mac)되면 Unity 편집기에서 스크립트를 열 때 Mac용 Visual Studio가 자동으로 실행되거나 전환되고, 선택한 스크립트가 열립니다.
 
-또는 Unity의 **Assets**(자산) 메뉴에서 **Open C# Project(C# 프로젝트 열기)**를 선택하여 소스 편집기에 열린 스크립트가 없는 상태로 Mac용 Visual Studio를 열 수 있습니다.
+또는 Unity의 **Assets**(자산) 메뉴에서 **Open C# Project(C# 프로젝트 열기)** 를 선택하여 소스 편집기에 열린 스크립트가 없는 상태로 Mac용 Visual Studio를 열 수 있습니다.
 
 ![C# 프로젝트 열기](media/using-vsmac-tools-unity-image1.png)
 
 ## <a name="unity-documentation-access"></a>Unity 설명서 액세스
 
-Mac용 Visual Studio Tools for Unity에는 Unity API 설명서에 액세스하는 바로 가기가 포함되어 있습니다. Mac용 Visual Studio에서 Unity API 문서에 액세스하려면 알아보려는 Unity API 위에 커서를 놓고 **⌘ command+'**를 누릅니다.
+Mac용 Visual Studio Tools for Unity에는 Unity API 설명서에 액세스하는 바로 가기가 포함되어 있습니다. Mac용 Visual Studio에서 Unity API 문서에 액세스하려면 알아보려는 Unity API 위에 커서를 놓고 **⌘ command+'** 를 누릅니다.
 
 ## <a name="intellisense-for-unity-messages"></a>Unity 메시지에 대한 IntelliSense
 Unity 엔진은 MonoBehaviour 스크립트에 메시지를 전송하므로 개발자는 OnMouseDown, OnTriggerEnter 등의 메시지에 반응하는 코드를 작성할 수 있습니다. 이러한 메시지는 기본 MonoBehaviour 클래스의 가상 메서드가 아니므로 MonoDevelop와 같은 일부 IDE에는 Unity 메시지에 대한 코드 완성 기능이 없습니다.
@@ -79,7 +78,7 @@ Unity 엔진은 MonoBehaviour 스크립트에 메시지를 전송하므로 개�
 이러한 추가는 Unity 편집기의 Project(프로젝트) 창에 반영됩니다.
 
 ### <a name="to-rename-a-file-or-folder"></a>파일 또는 폴더 이름 바꾸기
-솔루션 패드에서 이름을 바꿀 항목을 **마우스 오른쪽 단추로 클릭**하고 **이름 바꾸기...**를 선택합니다.
+솔루션 패드에서 이름을 바꿀 항목을 **마우스 오른쪽 단추로 클릭**하고 **이름 바꾸기...** 를 선택합니다.
 
 > [!NOTE]
 > Mac용 Visual Studio의 새 Unity 프로젝트에 스크립트가 없으며 솔루션 패드에 자산 폴더가 표시되지 않은 경우 Unity 편집기에서 첫 번째 C# 스크립트를 추가하세요.

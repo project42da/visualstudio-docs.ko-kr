@@ -3,25 +3,22 @@ title: Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱 만들
 description: Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱을 만드는 방법을 단계별로 알아봅니다.
 ms.custom: ''
 ms.date: 12/04/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: vb
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: d3a6593a6e459b16541358a0e89dc5bc21fde982
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: d51c92307a7ac266da042d33a7669a3ac629b21e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-a-windows-forms-app-in-visual-studio-with-visual-basic"></a>Visual Studio에서 Visual Basic을 사용하여 Windows Forms 앱 만들기
 Visual Studio IDE(통합 개발 환경)에 대한 이 짧은 소개에서는 Windows 기반 UI(사용자 인터페이스)가 있는 간단한 Visual Basic 응용 프로그램을 만듭니다.
@@ -33,11 +30,11 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 짧은 소개에서는 Win
 
 1. Visual Studio 2017을 엽니다.  
 
-2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 차례로 선택합니다.  
+2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.  
 
-3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual Basic**을 확장한 후 **Windows 클래식 바탕화면**을 선택합니다. 가운데 창에서 **Windows Forms 앱(.NET Framework)**을 선택합니다. 그런 다음 파일 이름을 `HelloWorld`로 지정합니다.  
+3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual Basic**을 확장한 후 **Windows 클래식 바탕화면**을 선택합니다. 가운데 창에서 **Windows Forms 앱(.NET Framework)** 을 선택합니다. 그런 다음 파일 이름을 `HelloWorld`로 지정합니다.  
 
-     **Windows Forms 앱(.NET Framework)** 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자를 취소하고 나가 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...**를 선택합니다. Visual Studio 설치 관리자가 시작됩니다. **.NET 데스크톱 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.  
+     **Windows Forms 앱(.NET Framework)** 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자를 취소하고 나가 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...** 를 선택합니다. Visual Studio 설치 관리자가 시작됩니다. **.NET 데스크톱 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.  
 
      ![Visual Studio 설치 관리자의 .NET Core 워크로드](../ide/media/install-dot-net-desktop-env.png)  
 
@@ -93,7 +90,7 @@ Visual Basic 프로젝트 템플릿을 선택하고 파일 이름을 지정한 �
 
    몇 가지 현상이 발생합니다. Visual Studio IDE에서 **진단 도구** 창이 열리고 **출력** 창도 열립니다. 하지만 IDE 외부에서 **Form1** 대화 상자가 나타납니다. **항목 클릭** 단추 및 **Label1**이라는 텍스트가 포함됩니다.
 
-2. **Form1** 대화 상자에서 **항목 클릭** 단추를 클릭합니다. **Label1** 텍스트를 **Hello World!**로 변경합니다.
+2. **Form1** 대화 상자에서 **항목 클릭** 단추를 클릭합니다. **Label1** 텍스트를 **Hello World!** 로 변경합니다.
 
     ![Label1 텍스트를 포함하는 Form1 대화 상자 ](../ide/media/vb-form1-dialog-hello-world.png)
 

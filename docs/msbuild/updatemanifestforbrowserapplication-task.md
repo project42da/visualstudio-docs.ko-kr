@@ -2,11 +2,8 @@
 title: UpdateManifestForBrowserApplication 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - building XBAP projects [WPF MSBuild]
 - UpdateManifestForBrowserApplication task [WPF MSBuild], parameters
 ms.assetid: 653339f7-654b-4d64-a26a-5c9f27036895
-caps.latest.revision: 8
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fcc1c9fe8b28b2055c73cad626cc02ef8a56aa98
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: 0f944d8546fd9124bc881f8421943d34a86698c5
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="updatemanifestforbrowserapplication-task"></a>UpdateManifestForBrowserApplication 작업
 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 작업은 [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)] 프로젝트를 빌드할 때 응용 프로그램 매니페스트(*projectname*.exe.manifest)에 **\<hostInBrowser />** 요소를 추가하기 위해 실행합니다.  
@@ -43,7 +39,7 @@ ms.lasthandoff: 04/10/2018
 ## <a name="remarks"></a>설명  
  [!INCLUDE[TLA2#tla_xbap#plural](../msbuild/includes/tla2sharptla_xbapsharpplural_md.md)]는 [!INCLUDE[TLA#tla_clickonce](../msbuild/includes/tlasharptla_clickonce_md.md)] 배포를 통해 실행되므로 지원되는 배포 및 응용 프로그램 매니페스트를 사용하여 게시되어야 합니다. [!INCLUDE[TLA#tla_msbuild](../msbuild/includes/tlasharptla_msbuild_md.md)]는 [GenerateApplicationManifest](http://msdn2.microsoft.com/library/6wc2ccdc.aspx) 작업을 사용하여 응용 프로그램 매니페스트를 생성합니다.  
   
- 그리고 나서 다음 예제에서와 같이 브라우저에서 호스팅되도록 응용 프로그램을 구성하기 위해 **\<hostInBrowser />**라는 추가 요소를 응용 프로그램 매니페스트에 추가해야 합니다.  
+ 그리고 나서 다음 예제에서와 같이 브라우저에서 호스팅되도록 응용 프로그램을 구성하기 위해 **\<hostInBrowser />** 라는 추가 요소를 응용 프로그램 매니페스트에 추가해야 합니다.  
   
 ```xml  
 <!--MyXBAPApplication.exe.manifest-->  
@@ -61,7 +57,7 @@ ms.lasthandoff: 04/10/2018
   
  [!INCLUDE[TLA2#tla_xbap](../msbuild/includes/tla2sharptla_xbap_md.md)] 프로젝트를 빌드할 때 `<hostInBrowser />` 요소를 추가하기 위해 <xref:Microsoft.Build.Tasks.Windows.UpdateManifestForBrowserApplication> 작업이 실행됩니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 응용 프로그램 매니페스트 파일에 `<hostInBrowser />` 요소를 포함하는 방법을 보여 줍니다.  
   
 ```xml  

@@ -1,24 +1,22 @@
 ---
-title: "Visual Studio에서 형식과 일치하도록 파일 이름 바꾸기 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 형식과 일치하도록 파일 이름 바꾸기 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/26/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
 ms.topic: reference
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 - VB
 ms.workload:
 - dotnet
-ms.openlocfilehash: 29260d2f33c9debfe698cb6af30f711e9617cdd1
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: accc8e0934ca18eb72cec03de4a53bb070fedef2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sync-a-type-to-a-filename-or-a-filename-to-a-type-refactoring"></a>형식을 파일 이름에 동기화 또는 파일 이름을 형식 리팩터링에 동기화
 
@@ -49,8 +47,8 @@ ms.lasthandoff: 02/28/2018
 1. 다음 작업 중 하나를 수행합니다.
 
    - **키보드**
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 ***TypeName*.cs로 파일 이름 바꾸기**를 선택합니다. 여기서 *TypeName*은 선택한 형식의 이름입니다.
-     - 줄의 임의 위치에서 **Ctrl**+**.**를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **_Filename_으로 형식 이름 바꾸기**를 선택합니다. 여기서 *Filename*은 현재 파일의 이름입니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 ***TypeName*.cs로 파일 이름 바꾸기**를 선택합니다. 여기서 *TypeName*은 선택한 형식의 이름입니다.
+     - 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 **빠른 작업 및 리팩터링** 메뉴를 트리거하고 [미리 보기] 창 팝업에서 **_Filename_으로 형식 이름 바꾸기**를 선택합니다. 여기서 *Filename*은 현재 파일의 이름입니다.
    - **마우스**
      - 코드를 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 ***TypeName*.cs로 파일 이름 바꾸기**를 선택합니다. 여기서 *TypeName*은 선택한 형식의 이름입니다.
      - 코드를 마우스 오른쪽 단추로 클릭하고, **빠른 작업 및 리팩터링** 메뉴를 선택하고, [미리 보기] 창 팝업에서 **_Filename_으로 형식 이름 바꾸기**를 선택합니다. 여기서 *Filename*은 현재 파일의 이름입니다.

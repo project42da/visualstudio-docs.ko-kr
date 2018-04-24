@@ -1,23 +1,20 @@
 ---
-title: "프로파일링 도구 API | Microsoft Docs"
-ms.custom: 
+title: 프로파일링 도구 API | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: bd9ca972-e5bf-45a6-9a5d-ac30a4d9ee02
-caps.latest.revision: "8"
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b02eecfaaecb365519daa8cd59fd29252bc3340f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: b759d5ac7f86fe366a5a0394b4c288904ef5c589
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="profiling-tools-apis"></a>프로파일링 도구 API
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 API의 관리 또는 네이티브 메서드를 삽입하여 프로파일링 실행 시에 데이터 수집을 제어할 수 있습니다. 이 섹션에서는 API의 메서드와 사용 방법을 설명합니다.  

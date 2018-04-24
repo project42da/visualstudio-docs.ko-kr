@@ -1,13 +1,13 @@
 ---
 layout: LandingPage
-title: "Visual Studio에서 앱 배포 | Microsoft Docs"
-description: "Visual Studio 2017을 사용하여 응용 프로그램, 서비스 및 구성 요소를 배포하는 방법을 알아봅니다."
-ms.technology: vs-ide-debug
-ms.openlocfilehash: fb23cf992a3474e9bf2d128bbfb384a283fd56df
-ms.sourcegitcommit: 64c7682ec3a2cbea684e716803398d4278b591d1
+title: Visual Studio에서 앱 배포 | Microsoft Docs
+description: Visual Studio 2017을 사용하여 응용 프로그램, 서비스 및 구성 요소를 배포하는 방법을 알아봅니다.
+ms.technology: vs-ide-deployment
+ms.openlocfilehash: e711706666f3a9d3584c1adfee97f87907ecf3f3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/15/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="deployment-in-visual-studio"></a>Visual Studio에서 배포
 

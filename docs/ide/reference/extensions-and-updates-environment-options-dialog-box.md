@@ -1,27 +1,23 @@
 ---
-title: "옵션 대화 상자, 환경, 확장 및 업데이트 | Microsoft Docs"
-ms.custom: 
+title: 옵션 대화 상자, 환경, 확장 및 업데이트 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.ExtensionManager
 ms.assetid: c73859eb-3c33-4f39-86bf-6788387b5937
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb3e4307b18c7ed929672cec1dc9f7cc55f72b01
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 8d86113029c0113125457f2601d54c8a6b1eed18
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="extensions-and-updates-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 확장 및 업데이트
 이 페이지를 사용하면 Visual Studio에서 업데이트를 수행하는 방식 및 확장명을 업데이트 및 검색하는 방식에 대해 옵션을 설정할 수 있습니다.  

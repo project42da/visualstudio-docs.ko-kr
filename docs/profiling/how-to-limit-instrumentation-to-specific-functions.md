@@ -1,27 +1,22 @@
 ---
-title: "방법: 특정 함수로 계측 제한 | Microsoft 문서"
-ms.custom: 
+title: '방법: 특정 함수로 계측 제한 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, limiting instrumentation to functions
 ms.assetid: bd98d6bf-2560-4eba-b063-2facb09f87c4
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69cc476dc43562e5226ebd6564dfb2733f1d57ae
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 883059693115496ddbc58f5fccc5e36ede5be720
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-limit-instrumentation-to-specific-functions"></a>방법: 특정 함수로 계측 제한
 **성능 세션**의 **고급** 페이지 또는 대상 이진 속성 페이지에서 옵션을 설정하여 계측 및 데이터 수집을 하나 이상의 함수로 제한할 수 있습니다.  
@@ -47,7 +42,7 @@ ms.lasthandoff: 12/22/2017
   
      **/include:** `FuncSpec` **[;** `FuncSpec` **]** `...`  
   
-     `FuncSpec`는 네임스페이스 및 함수 이름입니다. 형식은 `Namespace`**::**`FunctionName`입니다. 세미콜론을 사용하여 여러 함수를 구분합니다. 별표(\*)를 사용하여 하나 이상의 문자에 대한 와일드 카드를 지정합니다. 예를 들어 **/include:MyNS::\***는 MyNS 네임스페이스에 있는 모든 함수를 지정합니다.  
+     `FuncSpec`는 네임스페이스 및 함수 이름입니다. 형식은 `Namespace`**::**`FunctionName`입니다. 세미콜론을 사용하여 여러 함수를 구분합니다. 별표(\*)를 사용하여 하나 이상의 문자에 대한 와일드 카드를 지정합니다. 예를 들어 **/include:MyNS::\*** 는 MyNS 네임스페이스에 있는 모든 함수를 지정합니다.  
   
     > [!NOTE]
     >  이진 파일의 함수를 나열하려면 프로파일링 도구 설치 디렉터리(일반적으로 [!INCLUDE[vsprvsts](../code-quality/includes/vsprvsts_md.md)] 설치 디렉터리 아래 \Team Tools\Performance Tools)에서 명령 프롬프트 창을 열고 **vsinstr /DumpFuncs**를 입력합니다.  
@@ -66,7 +61,7 @@ ms.lasthandoff: 12/22/2017
   
      **/include:** `FuncSpec` **[;** `FuncSpec` **]** `...`  
   
-     `FuncSpec`는 네임스페이스 및 함수 이름입니다. 형식은 `Namespace`**::**`FunctionName`입니다. 세미콜론을 사용하여 여러 함수를 구분합니다. 별표(\*)를 사용하여 하나 이상의 문자에 대한 와일드 카드를 지정합니다. 예를 들어 **/include:MyNS::\***는 MyNS 네임스페이스에 있는 모든 함수를 지정합니다.  
+     `FuncSpec`는 네임스페이스 및 함수 이름입니다. 형식은 `Namespace`**::**`FunctionName`입니다. 세미콜론을 사용하여 여러 함수를 구분합니다. 별표(\*)를 사용하여 하나 이상의 문자에 대한 와일드 카드를 지정합니다. 예를 들어 **/include:MyNS::\*** 는 MyNS 네임스페이스에 있는 모든 함수를 지정합니다.  
   
     > [!NOTE]
     >  이진 파일의 함수를 나열하려면 프로파일링 도구 설치 디렉터리(일반적으로 [!INCLUDE[vsprvsts](../code-quality/includes/vsprvsts_md.md)] 설치 디렉터리 아래 \Team Tools\Performance Tools)에서 명령 프롬프트 창을 열고 **vsinstr /DumpFuncs**를 입력합니다.  

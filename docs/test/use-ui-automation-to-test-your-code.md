@@ -2,7 +2,7 @@
 title: Visual Studio에서 UI 자동화를 사용하여 코드 테스트 | Microsoft 문서
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.codedUITest
 - vs.codedUITest.recorder
@@ -14,14 +14,14 @@ helpviewer_keywords:
 - coded UI test
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4424db170240714ad3a74c84107e7a794a9dad54
-ms.sourcegitcommit: 768118d470da9c7164d2f23ca918dfe26a4be72f
+ms.openlocfilehash: 9235cf218ab5eed64140f4ae1dc6e4d54ea73e1b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="use-ui-automation-to-test-your-code"></a>UI 자동화를 사용하여 코드 테스트
 
@@ -156,7 +156,7 @@ UI 컨트롤을 위한 어설션을 생성하려면 코딩된 UI 테스트 빌�
 
 이제 이 컨트롤의 속성이 **어설션 추가** 대화 상자에 나열됩니다.
 
-특정 컨트롤로 이동하는 또 다른 방법은 화살표**(<<)**를 선택하여 **UI 컨트롤 맵**의 보기를 확장하는 것입니다. 부모, 형제 또는 자식 컨트롤을 찾으려면 맵에서 아무 곳이나 클릭한 다음 화살표 키를 사용해 트리 주위를 이동할 수 있습니다.
+특정 컨트롤로 이동하는 또 다른 방법은 화살표 **(<<)** 를 선택하여 **UI 컨트롤 맵**의 보기를 확장하는 것입니다. 부모, 형제 또는 자식 컨트롤을 찾으려면 맵에서 아무 곳이나 클릭한 다음 화살표 키를 사용해 트리 주위를 이동할 수 있습니다.
 
 ![코딩된 UI 테스트 속성](../test/media/codedui_2.png "CodedUI_2")
 

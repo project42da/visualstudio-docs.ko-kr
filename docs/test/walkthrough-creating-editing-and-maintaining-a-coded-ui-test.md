@@ -2,17 +2,17 @@
 title: Visual Studio에서 코딩된 UI 테스트 만들기 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: e667f21f7c543ea0ada32d060ee27e6723d96d18
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 1861915f50961bb3b07513d69d9799717694e1be
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-editing-and-maintaining-a-coded-ui-test"></a>연습: 코딩된 UI 테스트 만들기, 편집 및 유지 관리
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 03/19/2018
 
      **새 프로젝트** 대화 상자가 나타납니다.
 
-2.  **설치됨** 창에서 **Visual C#**을 확장한 다음 **Windows 데스크톱**을 선택합니다.
+2.  **설치됨** 창에서 **Visual C#** 을 확장한 다음 **Windows 데스크톱**을 선택합니다.
 
 3.  가운데 창 위에서 대상 프레임워크 드롭다운 목록이 **.NET Framework 4.5**로 설정되어 있는지 확인합니다.
 
@@ -120,7 +120,7 @@ ms.lasthandoff: 03/19/2018
 
      **새 프로젝트 추가** 대화 상자가 나타납니다.
 
-4.  **설치됨** 창에서 **Visual C#**을 확장한 다음 **테스트**를 선택합니다.
+4.  **설치됨** 창에서 **Visual C#** 을 확장한 다음 **테스트**를 선택합니다.
 
 5.  가운데 창에서 **코딩된 UI 테스트 프로젝트** 템플릿을 선택합니다.
 
@@ -181,7 +181,7 @@ ms.lasthandoff: 03/19/2018
 
 ### <a name="edit-and-rerun-the-coded-ui-test"></a>코딩된 UI 테스트 편집 및 다시 실행
 
-1.  테스트 탐색기 창에서 실패한 테스트를 선택하고 **StackTrace** 섹션에서 **UIMap.SimpleAppTest()**에 대한 첫 번째 링크를 선택합니다.
+1.  테스트 탐색기 창에서 실패한 테스트를 선택하고 **StackTrace** 섹션에서 **UIMap.SimpleAppTest()** 에 대한 첫 번째 링크를 선택합니다.
 
 2.  UIMap.Designer.cs 파일이 열리고 코드에서 오류 지점이 강조 표시되어 있습니다.
 
@@ -293,7 +293,7 @@ ms.lasthandoff: 03/19/2018
 
 5.  도구 모음에서 **UI 컨트롤 맵에 컨트롤 추가**를 선택합니다.
 
-     창 맨 아래에 **선택한 컨트롤이 UI 컨트롤 맵에 추가되었습니다.**라는 상태가 표시되어 작업을 확인할 수 있습니다.
+     창 맨 아래에 **선택한 컨트롤이 UI 컨트롤 맵에 추가되었습니다.** 라는 상태가 표시되어 작업을 확인할 수 있습니다.
 
 6.  UIMap – 코딩된 UI 테스트 빌더에서 **코드 생성**을 선택합니다.
 

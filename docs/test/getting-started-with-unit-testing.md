@@ -2,19 +2,19 @@
 title: Visual Studio에서 단위 테스트 시작 | Microsoft Docs
 ms.date: 05/02/2017
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - unit testing, create unit test plans
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: a95891afa4a5b05dcaa238bb06fcc57268542187
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: fa3c92a2b42da7946d9f5b4b9cc0bf208704f079
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-unit-testing"></a>유닛 테스트 시작
 
@@ -108,7 +108,7 @@ Boost, Google, nUnit 등의 타사 테스트 프레임워크를 사용하여 Vis
 
 다음은 타사 테스트 프레임 워크를 사용할 수 있게 설정하는 단계입니다.
 
-1. 메뉴 모음에서 **도구** > **확장 및 업데이트...**를 선택합니다.
+1. 메뉴 모음에서 **도구** > **확장 및 업데이트...** 를 선택합니다.
 
 1. **확장명 및 업데이트** 대화 상자에서 **온라인** 범주 및 **Visual Studio Marketplace**를 차례로 확장합니다. 그런 다음, **도구** > **테스트**를 선택합니다.
 
@@ -134,7 +134,7 @@ Boost, Google, nUnit 등의 타사 테스트 프레임워크를 사용하여 Vis
 
    ![타사 단위 테스트 프레임워크에 대한 참조가 솔루션에 추가됨](media/create3rdpartyunittest6.png)
 
-1. 클래스 라이브러리 프로젝트의 **참조** 노드에서 **참조 추가...**를 선택합니다.
+1. 클래스 라이브러리 프로젝트의 **참조** 노드에서 **참조 추가...** 를 선택합니다.
 
    ![프로젝트에 참조 추가](media/createunittest6.png)
 

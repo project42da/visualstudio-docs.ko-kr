@@ -1,25 +1,20 @@
 ---
-title: "디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행 | Microsoft Docs"
-ms.custom: 
+title: 디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: 3fcdccad-c1bd-4c67-bcec-bf33a8fb5d63
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 462b164d0a6d3e9cba0f9698b7dba3b01aa5fee5
-ms.sourcegitcommit: 5d43e9590e2246084670b79269cc9d99124bb3df
+ms.openlocfilehash: d7208f687ea38475603b8bfcae7e9ee55ab3ae58
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/19/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="running-profiling-tools-with-or-without-the-debugger"></a>디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행
 Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 중 일부(예: **CPU 사용** 및 **메모리 사용**)는 디버거를 사용하거나 사용하지 않고 실행될 수 있습니다. 디버거가 없는 성능 도구는 릴리스 구성에서 실행될 수 있으며, 디버거 통합 도구는 디버그 구성에서 실행될 수 있습니다.  
@@ -77,7 +72,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
 1.  Visual Studio에서 프로젝트를 엽니다.  
   
-2.  **디버그** 메뉴에서 **성능 프로파일러...**를 선택합니다(바로 가기 키: Alt+F2).  
+2.  **디버그** 메뉴에서 **성능 프로파일러...** 를 선택합니다(바로 가기 키: Alt+F2).  
   
 3.  진단 시작 페이지에서, 세션에서 실행할 하나 이상의 도구를 선택합니다. 프로젝트 형식, 운영 체제 및 프로그래밍 언어에 적용되는 도구만 표시됩니다. 진단 도구를 선택하면 같은 진단 세션에서 실행할 수 없는 도구 선택을 사용할 수 없게 설정됩니다. C# UWP 앱의 경우 선택이 다음과 같이 표시될 수 있습니다.  
   

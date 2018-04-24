@@ -2,11 +2,8 @@
 title: GenerateApplicationManifest 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#GenerateApplicationManifest
 dev_langs:
@@ -19,17 +16,16 @@ helpviewer_keywords:
 - HostInBrowser property (MSBuild)
 - GenerateApplicationManifest task [MSBuild]
 ms.assetid: a494102b-0cb2-4755-8e2a-d2c0f39fac1d
-caps.latest.revision: 24
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 76a2fc5e184b566e0c9783f6f64beecc7ca882a2
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: e40e74dd8e7b2b83f6d4239e6b66c9852c6de604
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="generateapplicationmanifest-task"></a>GenerateApplicationManifest 작업
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트 또는 네이티브 매니페스트를 생성합니다. 네이티브 매니페스트는 구성 요소의 고유 ID를 정의하고 구성 요소를 구성하는 모든 어셈블리와 파일을 식별하는 방식으로 구성 요소를 설명합니다. [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트는 응용 프로그램의 진입점을 지정하고 응용 프로그램 보안 수준을 지정하여 네이티브 매니페스트를 확장합니다.  
@@ -86,7 +82,7 @@ ms.lasthandoff: 04/10/2018
 |`TargetPath`|생성된 매니페스트에서 경로를 정의하는 방법을 지정합니다. 이 특성은 모든 파일에 유효합니다. 이 특성을 지정하지 않으면 항목 사양이 사용됩니다. 이 특성은 `DependencyType` 값이 `Install`인 모든 파일 및 종속성에 유효합니다.|  
 |`IsDataFile`|파일이 데이터 파일인지 여부를 나타내는 `Boolean` 메타데이터 값입니다. 데이터 파일은 응용 프로그램 업데이트 간에 마이그레이션된다는 점에서 특별합니다. 이 메타데이터는 파일에만 유효합니다. 기본값은 `False`입니다.|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `GenerateApplicationManifest` 작업을 사용하여 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 매니페스트를 생성하고 `GenerateDeploymentManifest` 작업을 사용하여 단일 어셈블리가 포함된 응용 프로그램의 배포 매니페스트를 생성합니다. 그런 다음 `SignFile` 작업을 사용하여 매니페스트에 서명합니다.  
   
  다음은 단일 프로그램에 대한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트가 생성되는 가장 간단할 수 있는 매니페스트 생성 시나리오를 보여 줍니다. 기본 이름 및 ID는 매니페스트에 대한 어셈블리에서 유추됩니다.  
@@ -139,7 +135,7 @@ ms.lasthandoff: 04/10/2018
 </Project>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `GenerateApplicationManifest` 및 `GenerateDeploymentManifest` 작업을 통해 단일 어셈블리가 포함된 응용 프로그램에 대한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 및 배포 매니페스트를 생성하여 매니페스트의 이름과 ID를 지정합니다.  
   
  이 예제는 매니페스트의 이름 및 ID가 명시적으로 지정된다는 점을 제외하고 이전 예제와 비슷합니다. 또한 이 예제는 설치된 응용 프로그램이 아닌 온라인 응용 프로그램으로 구성됩니다.  
@@ -199,7 +195,7 @@ ms.lasthandoff: 04/10/2018
 </Project>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `GenerateApplicationManifest` 및 `GenerateDeploymentManifest` 작업을 통해 여러 파일 및 어셈블리가 포함된 응용 프로그램에 대한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 및 배포 매니페스트를 생성합니다.  
   
 > [!NOTE]
@@ -317,7 +313,7 @@ ms.lasthandoff: 04/10/2018
 </Project>  
 ```  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  이 예제에서는 `GenerateApplicationManifest` 작업을 통해 응용 프로그램 Test.exe에 대한 네이티브 매니페스트를 생성하여 네이티브 구성 요소 Alpha.dll 및 격리된 COM 구성 요소 Bravo.dll을 참조합니다.  
   
  이 예제에서는 Test.exe.manifest를 생성하여 등록이 필요 없는 COM을 활용하는 응용 프로그램 XCOPY를 배포 가능하도록 만듭니다.  

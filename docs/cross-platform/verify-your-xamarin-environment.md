@@ -2,10 +2,7 @@
 title: Xamarin 환경 확인 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/30/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: fd39882e-06d1-4b39-80d2-4d07b6e4f8f5
 ms.technology: vs-ide-mobile
 author: charlespetzold
@@ -13,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 401aabd0567aa48a956c1424ca48562decaa96d6
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 862af0d8912811aee8e0110b48fa8cc3e8f1c06b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="verify-your-xamarin-environment"></a>Xamarin 환경 확인
 
@@ -33,7 +30,7 @@ ms.lasthandoff: 04/05/2018
  
 Visual Studio에서 먼저 **도구 > 확장 및 업데이트**를 선택하고 Xamarin 구성 요소를 업데이트해야 하는지 확인합니다.  
   
-그런 다음, **파일 > 새 프로젝트**를 사용하여 Visual Studio에서 새 Xamarin.Forms 솔루션을 만듭니다. 대화 상자에서 **Visual C# > 플랫폼 간**을 확장하고 **모바일 앱(Xamarin.Forms)**을 선택한 후, 확인을 클릭합니다. 이어지는 대화 상자에서 **비어 있는 앱**을 선택합니다. **코드 공유 전략**에서 **.NET Standard**를 선택합니다. 확인을 클릭합니다.
+그런 다음, **파일 > 새 프로젝트**를 사용하여 Visual Studio에서 새 Xamarin.Forms 솔루션을 만듭니다. 대화 상자에서 **Visual C# > 플랫폼 간**을 확장하고 **모바일 앱(Xamarin.Forms)** 을 선택한 후, 확인을 클릭합니다. 이어지는 대화 상자에서 **비어 있는 앱**을 선택합니다. **코드 공유 전략**에서 **.NET Standard**를 선택합니다. 확인을 클릭합니다.
 
 이러한 작업으로 공유 .NET Standard 2.0 라이브러리 프로젝트와 Android, iOS 및 UWP(유니버설 Windows 플랫폼)에 대한 응용 프로그램 프로젝트의 4개 프로젝트를 사용한 솔루션이 만들어집니다.  
   

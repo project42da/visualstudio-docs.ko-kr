@@ -1,27 +1,22 @@
 ---
-title: "모듈 뷰 - 계측 데이터 | Microsoft Docs"
-ms.custom: 
+title: 모듈 뷰 - 계측 데이터 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
 ms.assetid: 895b9589-1987-4160-916f-53b898a69cf0
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 897a64f10ce7b4970f4ec0b9b631315104bcaae8
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 4c7db34fb4913e3576f286aa7c34fe3cf80296ed
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="modules-view---instrumentation-data"></a>모듈 뷰 - 계측
 모듈 뷰에는 프로파일링 데이터에 포함되었던 모듈별로 그룹화된 성능 데이터가 표시됩니다. 모듈의 함수는 모듈 노드 아래에 나열됩니다.  

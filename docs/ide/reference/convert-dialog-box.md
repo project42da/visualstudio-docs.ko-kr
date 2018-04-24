@@ -1,13 +1,10 @@
 ---
-title: "변환 대화 상자 | Microsoft 문서"
-ms.custom: 
+title: 변환 대화 상자 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - jlca_Conversion_F1_3
 - JLCA_Conversion_F1
@@ -15,17 +12,16 @@ f1_keywords:
 helpviewer_keywords:
 - Convert dialog box
 ms.assetid: 56f23ef7-17c4-4d76-9ead-982bbcd42061
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: febbc4e398fb2611a2968c2dbd9a922b12f45e5f
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 63e32c53b667667e78b38760f8d4c1ad56dc7f94
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="convert-dialog-box"></a>변환 대화 상자
 **변환** 대화 상자에서는 변환 도구를 선택하여 이전 프로젝트에서 새 프로젝트를 만들 수 있습니다(예: Visual Basic 6 프로젝트에서 [!INCLUDE[vbprvblong](../../ide/reference/includes/vbprvblong_md.md)] 프로젝트 만들기). Visual Studio의 이전 버전에서 만든 프로젝트를 업그레이드하려면 [Visual Studio 프로젝트 변환기](https://github.com/ssvaidya/VSProjectConverter)를 사용할 수도 있습니다.   

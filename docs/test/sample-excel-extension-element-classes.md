@@ -1,18 +1,18 @@
 ---
-title: "샘플 Excel 확장: Element 클래스 | Microsoft 문서"
+title: '샘플 Excel 확장: Element 클래스 | Microsoft 문서'
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 91f3e3055d2ba98052ec2fd368db9aea08b81971
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 1dce9745db1acf031c67d5221f6a176d94fb6f77
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="sample-excel-extension-element-classes"></a>샘플 Excel 확장: 요소 클래스
 확장에서는 <xref:Microsoft.VisualStudio.TestTools.UITest.Extension.UITechnologyElement>에서 파생되며 [!INCLUDE[ofprexcel](../test/includes/ofprexcel_md.md)]의 워크시트 컨트롤 및 셀 컨트롤을 나타내는 클래스를 사용합니다.
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/19/2018
 ## <a name="utilities-and-excelutilities-classes"></a>Utilities 및 ExcelUtilities 클래스
  내부 `ExcelUtilities` 클래스는 기술 이름과 같은 몇 가지 상수 값과, 제공된 창 핸들이 Excel 워크시트를 나타내는지 여부를 확인하는 메서드를 제공합니다.
 
- `Utilities` 클래스에는 UI에 대한 여러 정보를 반환하는 도우미 메서드가 있습니다. **USER32.DLL**, **OLEACC.DLL** 등의 외부 시스템 DLL을 직접 호출하여 UI에서 창 핸들을 가져오는 메서드도 있습니다**.**
+ `Utilities` 클래스에는 UI에 대한 여러 정보를 반환하는 도우미 메서드가 있습니다. **USER32.DLL**, **OLEACC.DLL** 등의 외부 시스템 DLL을 직접 호출하여 UI에서 창 핸들을 가져오는 메서드도 있습니다 **.**
 
 ## <a name="see-also"></a>참고 항목
 

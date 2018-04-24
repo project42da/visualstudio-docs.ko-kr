@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트를 위한 부하 패턴 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, load patterns
 - load tests, scenarios
@@ -9,13 +9,13 @@ helpviewer_keywords:
 ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 986b2e263a5beedf7f40ed36526365735b3ba17f
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 7a6d9054bb12290d29247c09263a3854f2ea0dad
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>모델 가상 사용자 동작에 대한 부하 패턴 편집
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 03/19/2018
 
  단계 부하 패턴은 시간의 경과에 따라 정의한 최대 사용자 부하까지 증가하는 사용자 부하를 지정하는 데 사용됩니다. 부하를 단계별로 실행하려면 **초기 사용자 수**, **최대 사용자 수**, **단계 시간(초)** 및 **단계 사용자 수**를 지정합니다.
 
- 예를 들어, **초기 사용자 수**가 1, **최대 사용자 수**가 100, **단계 시간(초)**이 10, **단계 사용자 수**가 1인 단계 부하의 경우 1에서 시작하여 사용자 수가 100이 될 때까지 10초마다 1씩 증가하는 사용자 부하 패턴이 만들어집니다.
+ 예를 들어, **초기 사용자 수**가 1, **최대 사용자 수**가 100, **단계 시간(초)** 이 10, **단계 사용자 수**가 1인 단계 부하의 경우 1에서 시작하여 사용자 수가 100이 될 때까지 10초마다 1씩 증가하는 사용자 부하 패턴이 만들어집니다.
 
 > [!NOTE]
 >  총 테스트 지속 시간이 최대 사용자 부하까지 도달하는 데 필요한 시간보다 짧은 경우 테스트는 총 테스트 지속 시간이 경과한 다음 중지되며 최대 사용자 수 목표에 도달하지 못합니다.

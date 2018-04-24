@@ -1,18 +1,18 @@
 ---
-title: "Visual Studio에서 Visual C# 코드 유닛 테스트 | Microsoft Docs"
+title: Visual Studio에서 Visual C# 코드 유닛 테스트 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: 76fc58ff012a813358957ab060b684f8d7e2b5e1
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 32f76e3ebd6827ecb9ce0c27fa69b17a3da02f4e
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="unit-testing-visual-c-code"></a>Visual C# 코드 유닛 테스트
 
@@ -24,15 +24,15 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="create-the-solution-and-the-unit-test-project"></a>솔루션 및 단위 테스트 프로젝트 만들기
 
-1. **파일** 메뉴에서 **새로 만들기** > **프로젝트...**를 선택합니다.
+1. **파일** 메뉴에서 **새로 만들기** > **프로젝트...** 를 선택합니다.
 
-2. **새 프로젝트** 대화 상자에서 **설치됨** > **Visual C#**을 확장하고 **Windows 유니버설**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **새 응용 프로그램**을 선택합니다.
+2. **새 프로젝트** 대화 상자에서 **설치됨** > **Visual C#** 을 확장하고 **Windows 유니버설**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **새 응용 프로그램**을 선택합니다.
 
 3. 프로젝트의 이름을 `Maths`로 지정하고 **솔루션용 디렉터리 만들기**가 선택되어 있는지 확인합니다.
 
 4. 솔루션 탐색기에서 솔루션 이름을 선택하고 바로 가기 메뉴에서 **추가**를 선택한 다음 **새 프로젝트**를 선택합니다.
 
-5. **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#**을 확장하고 **Windows Universal**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **유닛 테스트 앱(유니버설 Windows)**을 선택합니다.
+5. **새 프로젝트** 대화 상자에서 **설치됨** 및 **Visual C#** 을 확장하고 **Windows Universal**을 선택합니다. 그런 다음 프로젝트 템플릿 목록에서 **유닛 테스트 앱(유니버설 Windows)** 을 선택합니다.
 
 6. Visual Studio 편집기에서 *UnitTest1.cs*를 엽니다.
 
@@ -114,7 +114,7 @@ ms.lasthandoff: 03/19/2018
 
 1. Maths 응용 프로그램에 대한 참조를 RooterTests 프로젝트에 추가합니다.
 
-    1. 솔루션 탐색기에서 **RooterTests** 프로젝트를 선택한 다음 바로 가기 메뉴에서 **참조 추가...**를 선택합니다.
+    1. 솔루션 탐색기에서 **RooterTests** 프로젝트를 선택한 다음 바로 가기 메뉴에서 **참조 추가...** 를 선택합니다.
 
     2. **참조 추가 - RooterTests** 대화 상자에서 **솔루션**을 확장하고 **프로젝트**를 선택한 다음, **Maths** 항목을 선택합니다.
 

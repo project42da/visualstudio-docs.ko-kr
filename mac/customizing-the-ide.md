@@ -1,16 +1,15 @@
 ---
-title: "IDE 사용자 지정 | Microsoft Docs"
-description: "Mac용 Visual Studio를 다양한 방식으로 사용자 지정하여 사용자가 효율성과 미적 요구를 모두 충족하는 환경에서 앱을 개발하도록 할 수 있습니다. 이 항목에서는 Mac용 Visual Studio를 요구에 맞게 조정할 수 있는 여러 가지 방법을 살펴봅니다."
+title: IDE 사용자 지정
+description: Mac용 Visual Studio를 다양한 방식으로 사용자 지정하여 사용자가 효율성과 미적 요구를 모두 충족하는 환경에서 앱을 개발하도록 할 수 있습니다. 이 항목에서는 Mac용 Visual Studio를 요구에 맞게 조정할 수 있는 여러 가지 방법을 살펴봅니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: F7C2A28C-0759-4E0D-A28E-B72D5AB73DB6
-ms.openlocfilehash: bbc2f70f0d6774269f481cad5571dd9b78bac2da
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 5139f166c23f91c3c9f4174860ed8dd6fa883240
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="customizing-the-ide"></a>IDE 사용자 지정
 
@@ -103,7 +102,7 @@ Mac용 Visual Studio에서는 추가 정보, 도구, 탐색 보조 기능 등이
 
 항상 표시되는 패드는 현재 컨텍스트에 따라 달라집니다. 예를 들면 비주얼 디자이너를 사용할 때는 도구 상자 및 속성 표 패드가 가장 중요합니다. 디버그할 때는 스택 및 지역 변수를 보기 위한 디버거 패드가 있어야 유용합니다.
 
-열린 패드의 상태는 ‘레이아웃’으로 표시됩니다. 다음 이미지와 같이 보기 메뉴를 통해 수동으로 레이아웃을 전환할 수도 있고, 디버그, 스토리보드 열기 등의 작업을 수행할 때 자동으로 전환되기도 합니다.
+열린 패드의 상태는 *레이아웃*으로 표시됩니다. 다음 이미지와 같이 보기 메뉴를 통해 수동으로 레이아웃을 전환할 수도 있고, 디버그, 스토리보드 열기 등의 작업을 수행할 때 자동으로 전환되기도 합니다.
 
 ![새 레이아웃 선택](media/customizing-the-ide-image6b.png)
 

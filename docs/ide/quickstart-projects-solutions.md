@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio의 프로젝트 및 솔루션 소개 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio의 프로젝트 및 솔루션 소개 | Microsoft Docs
+ms.custom: ''
 ms.date: 12/11/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f8845ab2de127b511b9180bebbe201b777c23455
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 606b08608eea275a25a1a097ed75b7554a99f6a1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>빠른 시작: 프로젝트 및 솔루션
 
@@ -42,7 +39,7 @@ ms.lasthandoff: 03/15/2018
 
    Visual Studio가 열리면 창의 화면 대부분을 차지하는 **시작 페이지**가 표시됩니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
 
    **새 프로젝트** 대화 상자가 열립니다.
 
@@ -56,16 +53,16 @@ ms.lasthandoff: 03/15/2018
 
 이제 첫 번째 프로젝트를 솔루션에 추가해 보겠습니다. 빈 프로젝트를 시작하고 프로젝트에 필요한 항목을 추가합니다.
 
-1. **솔루션 탐색기**의 **솔루션 'QuickSolution'**을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트...**를 선택합니다.
+1. **솔루션 탐색기**의 **솔루션 'QuickSolution'** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트...** 를 선택합니다.
 
    **새 프로젝트 추가** 대화 상자가 열립니다.
 
-1. 왼쪽 창에서 **Visual C#**을 확장하고 **Windows 클래식 바탕 화면**을 선택합니다. 그런 다음 가운데 창에서 **빈 프로젝트(.NET Framework)**를 선택합니다. 프로젝트 이름을 "QuickDate"로 지정한 다음 **확인** 단추를 선택합니다.
+1. 왼쪽 창에서 **Visual C#** 을 확장하고 **Windows 클래식 바탕 화면**을 선택합니다. 그런 다음 가운데 창에서 **빈 프로젝트(.NET Framework)** 를 선택합니다. 프로젝트 이름을 "QuickDate"로 지정한 다음 **확인** 단추를 선택합니다.
 
    "QuickDate"라는 프로젝트는 **솔루션 탐색기**의 솔루션 아래에 나타납니다. 현재 **App.config**라는 단일 파일이 포함됩니다.
 
    > [!NOTE]
-   > 대화 상자의 왼쪽 창에서 **Visual C#**이 표시되지 않으면 **.NET 데스크톱 개발** 워크로드를 설치해야 합니다. 이를 수행하는 쉬운 방법은 대화 상자의 왼쪽 아래에 있는 **Visual Studio 설치 관리자 열기** 링크를 선택하는 것입니다. **Visual Studio 설치 관리자**가 실행된 후 **.NET 데스크톱 개발** 워크로드를 선택한 다음, **수정** 단추를 선택합니다.
+   > 대화 상자의 왼쪽 창에서 **Visual C#** 이 표시되지 않으면 **.NET 데스크톱 개발** 워크로드를 설치해야 합니다. 이를 수행하는 쉬운 방법은 대화 상자의 왼쪽 아래에 있는 **Visual Studio 설치 관리자 열기** 링크를 선택하는 것입니다. **Visual Studio 설치 관리자**가 실행된 후 **.NET 데스크톱 개발** 워크로드를 선택한 다음, **수정** 단추를 선택합니다.
 
    ![Visual Studio 설치 관리자 열기 링크](media/quickstart-projects-open-installer.png)
 
@@ -73,7 +70,7 @@ ms.lasthandoff: 03/15/2018
 
 빈 프로젝트가 있으므로&mdash;코드 파일을 추가해 보겠습니다.
 
-1. **솔루션 탐색기**의 **QuickDate**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 항목...**을 선택합니다.
+1. **솔루션 탐색기**의 **QuickDate**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 항목...** 을 선택합니다.
 
    **새 항목 추가** 대화 상자가 열립니다.
 
@@ -113,11 +110,11 @@ ms.lasthandoff: 03/15/2018
 
 솔루션에 단위 테스트 프로젝트를 추가해 보겠습니다. 이번에는 프로젝트에 추가 코드 파일을 추가하지 않아도 되도록 프로젝트 템플릿으로 시작하겠습니다.
 
-1. **솔루션 탐색기**의 **솔루션 'QuickSolution'**을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트...**를 선택합니다.
+1. **솔루션 탐색기**의 **솔루션 'QuickSolution'** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트...** 를 선택합니다.
 
    **새 프로젝트 추가** 대화 상자가 열립니다.
 
-1. 왼쪽 창에서 **Visual Basic**을 확장하고 **테스트** 범주를 선택합니다. 가운데 창에서 **단위 테스트 프로젝트(.NET Framework)**를 선택합니다. "QuickTest" 프로젝트 이름을 지정한 다음 **확인** 단추를 선택합니다.
+1. 왼쪽 창에서 **Visual Basic**을 확장하고 **테스트** 범주를 선택합니다. 가운데 창에서 **단위 테스트 프로젝트(.NET Framework)** 를 선택합니다. "QuickTest" 프로젝트 이름을 지정한 다음 **확인** 단추를 선택합니다.
 
    두 번째 프로젝트가 **솔루션 탐색기**에 추가되고 **UnitTest1.vb**라는 파일이 편집기에서 열립니다. **.vb**는 Visual Basic 코드 파일에 지정된 파일 확장명입니다.
 
@@ -127,7 +124,7 @@ ms.lasthandoff: 03/15/2018
 
 해당 프로젝트에 대한 참조를 추가하기 위해 새 단위 테스트 프로젝트를 사용하여 **QuickDate** 프로젝트에서 이 메서드를 테스트하려고 합니다. 그러면 두 개의 프로젝트 간에 빌드 종속성을 만듭니다. 즉, 솔루션을 빌드할 때 **QuickTest** 전에 **QuickDate**가 빌드됩니다.
 
-1. **QuickTest** 프로젝트에서 **참조** 노드를 선택하고 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **참조 추가...**를 선택합니다.
+1. **QuickTest** 프로젝트에서 **참조** 노드를 선택하고 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **참조 추가...** 를 선택합니다.
 
    ![참조 메뉴 추가](media/quickstart-projects-add-reference.png)
 

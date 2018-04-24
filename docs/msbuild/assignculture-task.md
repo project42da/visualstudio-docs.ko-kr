@@ -2,11 +2,8 @@
 title: AssignCulture 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#AssignCulture
 dev_langs:
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - MSBuild, AssignCulture task
 - AssignCulture task [MSBuild]
 ms.assetid: 8f8314cc-82a6-4f16-a62d-b9f0d1d5e274
-caps.latest.revision: 10
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 40fb47caea1b9fcb0d25d45495cf3e3c1d3e04fb
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: 26adf9bd97e10e25402db100ebb0140917ac6143
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="assignculture-task"></a>AssignCulture 작업
 이 작업은 유효한 .NET 문화권 식별자 문자열이 포함되어 있는 항목의 목록을 파일 이름의 일부로 허용하고 해당 문화권 식별자가 포함된 `Culture`라는 메타데이터가 있는 항목을 생성합니다. 예를 들어 Form1.fr-fr.resx라는 파일 이름에 포함된 문화권 식별자 "fr-fr"이 있으므로 이 작업은 `fr-fr`와 같은 `Culture` 메타데이터를 포함하는 동일한 파일 이름을 가진 항목을 생성합니다. 태스크는 파일 이름에서 제거된 문화권을 포함하는 파일 이름의 목록도 생성합니다.  
@@ -47,7 +43,7 @@ ms.lasthandoff: 04/10/2018
 ## <a name="remarks"></a>설명  
  이 작업은 위에 나와 있는 매개 변수 외에 <xref:Microsoft.Build.Utilities.Task> 클래스에서 직접 상속하는 <xref:Microsoft.Build.Tasks.TaskExtension> 클래스의 매개 변수도 상속합니다. 이러한 추가 매개 변수 및 해당 설명이 포함된 목록은 [TaskExtension Base Class](../msbuild/taskextension-base-class.md)를 참조하세요.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `ResourceFiles` 항목 컬렉션을 포함하는 `AssignCulture` 작업을 실행합니다.  
   
 ```xml  

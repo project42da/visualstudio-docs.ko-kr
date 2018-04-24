@@ -1,25 +1,21 @@
 ---
-title: "1단계: 프로젝트 만들기 및 폼에 레이블 추가 | Microsoft 문서"
-ms.custom: 
+title: '1단계: 프로젝트 만들기 및 폼에 레이블 추가 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: f44e50be-a5f5-4d77-9cff-dd52374c3f74
-caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ab50592e345a54853e9cfbd95d0b9bd1bc86d794
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 992541fe80067a6255ae0909edba0bf8f239c004
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-1-create-a-project-and-add-labels-to-your-form"></a>1단계: 프로젝트 만들기 및 폼에 레이블 추가
 이 퀴즈를 개발하는 첫 번째 단계는 프로젝트를 만들고 폼에 레이블, 단추 및 기타 컨트롤을 추가하는 것입니다. 추가한 각 컨트롤의 속성도 설정합니다. 프로젝트에 폼, 컨트롤 및 코드(자습서의 뒷부분에서 만듦)가 포함됩니다. 단추로 퀴즈를 시작하고 레이블에 퀴즈 문제를 표시하며 나머지 다른 컨트롤에 퀴즈의 답과 퀴즈 완료까지 남은 시간을 표시합니다.  
@@ -82,7 +78,7 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-add-controls-for-the-addition-problems"></a>더하기 문제의 컨트롤을 추가하려면  
   
-1.  도구 상자에서 **Label** 컨트롤을 추가한 후 **Text** 속성을 **?**로 설정합니다. 설정합니다.  
+1.  도구 상자에서 **Label** 컨트롤을 추가한 후 **Text** 속성을 **?** 로 설정합니다. 설정합니다.  
   
 2.  **AutoSize** 속성을 **False**로 설정합니다.  
   

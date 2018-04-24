@@ -1,13 +1,10 @@
 ---
-title: "연습: 코드 조각 만들기 | Microsoft Docs"
-ms.custom: 
+title: '연습: 코드 조각 만들기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 10/27/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - code snippets, creating
 - code snippets, shortcut
@@ -16,19 +13,18 @@ helpviewer_keywords:
 - code snippets, references
 - code snippets, imports
 ms.assetid: 0dcaae11-39cf-4463-9c90-2494321251c2
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 2ac4cef411bb6304e4033de1850e6c428e34285e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 59aff5d84f81b1e9dea9cd3e4c08527b14dc7f34
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-creating-a-code-snippet"></a>연습: 코드 조각 만들기
 몇 가지 단계로 코드 조각을 만들 수 있습니다. XML 파일을 만들고, 적절한 요소를 입력하고, 코드를 추가하기만 하면 됩니다. 또한 코드에 참조 및 대체 매개 변수를 추가할 수 있습니다. 코드 조각 관리자(**도구**, **코드 조각 관리자...**)에서 가져오기 단추를 사용하여 Visual Studio 설치에 코드 조각을 추가할 수 있습니다.  

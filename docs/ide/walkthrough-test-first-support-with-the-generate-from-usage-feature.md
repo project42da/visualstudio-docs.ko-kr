@@ -1,27 +1,25 @@
 ---
-title: "연습: 관례에서 생성 기능을 통한 테스트 우선 개발 | Microsoft Docs"
-ms.custom: 
+title: '연습: 관례에서 생성 기능을 통한 테스트 우선 개발 | Microsoft Docs'
+ms.custom: ''
 ms.date: 10/09/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
 dev_langs:
 - VB
 - CSharp
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Generate From Usage
 - Test-First Development
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 696396260d96e25541cbbef6bac3b4a1be93ea13
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 8bf7a4a4f78ca0de8594a95681c6a5118f1083cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>연습: 관례에서 생성 기능을 통한 테스트 우선 개발
 
@@ -74,7 +72,7 @@ ms.lasthandoff: 01/13/2018
   
 4.  빠른 작업 전구를 선택하거나 클릭합니다. `Automobile` 유형이 정의되지 않았다는 오류 메시지가 표시됩니다. 또한 몇 가지 솔루션이 표시됩니다.  
   
-5. **새 형식 생성...**을 클릭하여 **형식 생성** 대화 상자를 엽니다. 이 대화 상자는 다른 프로젝트에서 형식 생성을 포함하는 옵션을 제공합니다.  
+5. **새 형식 생성...** 을 클릭하여 **형식 생성** 대화 상자를 엽니다. 이 대화 상자는 다른 프로젝트에서 형식 생성을 포함하는 옵션을 제공합니다.  
 
 6. **프로젝트** 목록에서 **GFUDemo\_VB** 또는 **GFUDemo_CS**를 클릭하여 테스트 프로젝트 대신 클래스 라이브러리 프로젝트에 파일을 추가하도록 Visual Studio에 지시합니다. 선택되어 있지 않은 경우 **새 파일 만들기**를 선택하고 이름을 **Automobile.cs** 또는 **Automobile.vb**로 지정합니다.  
   

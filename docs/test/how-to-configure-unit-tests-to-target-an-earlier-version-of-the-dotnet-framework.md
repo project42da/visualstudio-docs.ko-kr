@@ -2,17 +2,17 @@
 title: Visual Studio에서 이전 버전의 .NET Framework를 대상으로 사용하도록 단위 테스트 구성 | Microsoft 문서
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: 92f88923ded1bd232df98328ddc6783f97c61971
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 2c0a34e3a046b840024e7dbfb4b7761fcaec5cfa
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-configure-unit-tests-to-target-an-earlier-version-of-the-net-framework"></a>방법: 이전 버전의 .NET Framework를 대상으로 사용하도록 단위 테스트 구성
 
@@ -74,7 +74,7 @@ Microsoft Visual Studio에서 테스트 프로젝트를 만들 때 .NET Framewor
 
      **새 프로젝트** 대화 상자가 표시됩니다.
 
-2.  **설치된 템플릿**에서 **Visual C#**을 클릭합니다. **테스트**를 선택하고 **테스트 프로젝트** 템플릿을 선택합니다.
+2.  **설치된 템플릿**에서 **Visual C#** 을 클릭합니다. **테스트**를 선택하고 **테스트 프로젝트** 템플릿을 선택합니다.
 
 3.  **이름** 텍스트 상자에 Visual C# 테스트 프로젝트의 이름을 입력하고 **확인**을 선택합니다.
 
@@ -95,7 +95,7 @@ Microsoft Visual Studio에서 테스트 프로젝트를 만들 때 .NET Framewor
     > [!WARNING]
     > Visual C++용 .NET Framework의 이전 버전에 대한 C++/CLI 단위 테스트를 빌드하려면 Visual Studio의 해당 버전을 사용해야 합니다. 예를 들어 .NET Framework 3.5를 대상으로 지정하려면 Visual Studio 2008 및 Visual Studio 2008 서비스 팩 1을 설치해야 합니다.
 
-2.  **설치된 템플릿**에서 **Visual C ++**를 확장합니다. **테스트**를 선택하고 **테스트 프로젝트** 템플릿을 선택합니다.
+2.  **설치된 템플릿**에서 **Visual C ++** 를 확장합니다. **테스트**를 선택하고 **테스트 프로젝트** 템플릿을 선택합니다.
 
 3.  **이름** 텍스트 상자에 Visual C++ 테스트 프로젝트의 이름을 입력하고 **확인**을 클릭합니다.
 

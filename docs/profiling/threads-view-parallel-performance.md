@@ -1,29 +1,24 @@
 ---
-title: "스레드 뷰(병렬 성능) | Microsoft Docs"
-ms.custom: 
+title: 스레드 뷰(병렬 성능) | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.performance.view.threadblocking
 helpviewer_keywords:
 - Concurrency Visualizer, Threads View (Parallel Performance)
 ms.assetid: 2e441103-a266-407b-88c3-fb58716257a3
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d2245ae466948122cbf39225043125b4feec8579
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: ccb86d36429f8695222f69fbf6d78635a338bfe5
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="threads-view-parallel-performance"></a>스레드 뷰(병렬 성능)
 **스레드 뷰**는 동시성 시각화 도우미에서 가장 자세하며 다양한 기능을 제공하는 뷰입니다(**분석** > **동시성 시각화 도우미**를 선택하여 동시성 시각화 도우미 시작). 이 보기를 사용하면 동기화, I/O 또는 기타 이유로 인해 스레드가 차단되는지 아니면 실행되고 있는지를 확인할 수 있습니다.  

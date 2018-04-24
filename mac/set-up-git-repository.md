@@ -1,16 +1,15 @@
 ---
-title: Mac용 Visual Studio에서 Git 리포지토리 설정 | Microsoft Docs
+title: Mac용 Visual Studio에서 Git 리포지토리 설정하기
 description: Mac용 Visual Studio에서 Git 및 Subversion 사용
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: E992FA1D-B2AD-4A28-ADC6-47E4FC471060
-ms.openlocfilehash: 3eb3e0874cfc46fc98209113cf60a32cdb92787d
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 97aa681762e96b8eae7f57d6f6d04c9c5b6a2984
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="setting-up-a-git-repository"></a>Git 리포지토리 설정
 
@@ -47,7 +46,7 @@ Git 리포지토리를 설정하려면 다음 단계를 수행하세요.
 
 4.  Mac용 Visual Studio의 Solution Pad에서 솔루션 이름을 선택합니다. 
 
-5. 메뉴 모음에서 **버전 제어 > 버전 제어에서 게시...**를 선택하여 **리포지토리 선택** 대화 상자를 표시합니다.
+5. 메뉴 모음에서 **버전 제어 > 버전 제어에서 게시...** 를 선택하여 **리포지토리 선택** 대화 상자를 표시합니다.
 
     ![Mac용 Visual Studio에서 체크 아웃 시작](media/version-control-git4-sml.png)
 
@@ -79,7 +78,7 @@ Git 리포지토리를 설정하려면 다음 단계를 수행하세요.
 
     ![버전 제어 메뉴](media/version-control-git10.png)
 
-13. 추가적인 변경 작업을 시작한 경우, **변경 내용 푸시...**를 선택하여 변경 내용을 **원격** 리포지토리로 푸시합니다. 이렇게 하면 github.com에서 해당하는 모든 사용자가 변경 사항을 볼 수 있습니다. 
+13. 추가적인 변경 작업을 시작한 경우, **변경 내용 푸시...** 를 선택하여 변경 내용을 **원격** 리포지토리로 푸시합니다. 이렇게 하면 github.com에서 해당하는 모든 사용자가 변경 사항을 볼 수 있습니다. 
 
     ![원격 리포지토리에 변경 사항 푸시](media/version-control-git11.png)
 
@@ -93,7 +92,7 @@ Git 리포지토리를 설정하려면 다음 단계를 수행하세요.
 
 로컬 컴퓨터에는 없고 원격에만 존재하는 GitHub 리포지토리로 작업해야 하는 경우가 많습니다. Mac용 Visual Studio를 사용하면 이 리포지토리를 신속하게 체크 아웃할 수 있습니다. 다음 단계를 수행하여 컴퓨터로 복제합니다.
 
-1. 메뉴 모음에서 **버전 제어 > 체크 아웃...**을 선택합니다.
+1. 메뉴 모음에서 **버전 제어 > 체크 아웃...** 을 선택합니다.
 
 2. 그러면 **리포지토리에 연결** 탭이 표시됩니다.
 

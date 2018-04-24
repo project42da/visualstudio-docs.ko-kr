@@ -1,19 +1,19 @@
 ---
 title: Visual Studio에서 부하 테스트에 대한 임계값 위반 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, threshold violations
 ms.assetid: 0126d7b7-0538-4ea9-9046-6556654b3b9d
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9c511bb3edf8ad8277b367733f85108d9587898e
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 6acb9eec16107134dc03765da82008a01b599e4b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-analyze-threshold-violations-using-the-counters-panel-in-load-test-analyzer"></a>방법: 부하 테스트 분석기의 카운터 패널을 사용하여 임계값 위반 분석
 
@@ -68,7 +68,7 @@ ms.lasthandoff: 03/19/2018
 
          자세한 내용은 [방법: 사용자 지정 그래프 만들기](../test/how-to-create-custom-graphs-in-load-test-results.md)를 참조하세요.
 
-5.  (선택 사항) 완료된 부하 테스트 결과에서 임계값 위반을 분석하는 경우 그래프 뷰의 확대/축소 기능을 사용하는 것이 좋습니다. 자세한 내용은 [방법: 그래프의 영역 확대](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)를 참조하세요.
+5.  (선택 사항) 완료된 부하 테스트 결과에서 임계값 위반을 분석하는 경우 그래프 뷰의 확대/축소 기능을 사용하는 것이 좋습니다. 자세한 내용은 [방법: 그래프의 영역으로 확대](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)를 참조하세요.
 
     > [!TIP]
     > 부하 테스트를 실행하는 동안 임계값 위반이 발견된 경우 "임계값 위반"이라는 링크가 위반 횟수와 함께 부하 테스트 분석기 상태 표시줄에 표시됩니다. 이 링크를 선택하여 모든 임계값 위반을 테이블 뷰의 **임계값** 테이블에 표시할 수 있습니다.

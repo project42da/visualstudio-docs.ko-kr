@@ -2,7 +2,7 @@
 title: '방법: Visual Studio에서 데이터 기반 단위 테스트 만들기 | Microsoft 문서'
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.testresults.unittest.datadriven
 - vs.test.testresults.unittest.datadriven.failure
@@ -11,15 +11,15 @@ helpviewer_keywords:
 - unit tests, data-driven
 - data-driven unit tests
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 15fb1c1398a72d325a8027bef28acdcb6f50ede9
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 4e243afbdd5df41cf3b4716cafd7c82f5d4f7984
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-data-driven-unit-test"></a>방법: 데이터 기반 단위 테스트 만들기
 
@@ -151,7 +151,7 @@ int x = Convert.ToInt32(TestContext.DataRow["FirstNumber"]);
 ```
 
 ##  <a name="BKMK_Running_the_test_and_viewing_results"></a> 테스트 실행 및 결과 보기
- 테스트 메서드 작업을 완료하면 테스트 프로젝트를 빌드합니다. 테스트 메서드는 [테스트 탐색기]에서 **테스트 실행 안 함** 그룹에 표시됩니다. 테스트를 실행, 작성 및 재실행할 때 [테스트 탐색기]에는 **실패한 테스트**, **통과한 테스트** 및 **테스트 실행 안 함** 그룹에 결과가 표시됩니다. **모두 실행**을 선택해서 모든 테스트를 실행하거나 **실행...**을 선택해서 실행할 테스트 하위 집합을 선택할 수 있습니다.
+ 테스트 메서드 작업을 완료하면 테스트 프로젝트를 빌드합니다. 테스트 메서드는 [테스트 탐색기]에서 **테스트 실행 안 함** 그룹에 표시됩니다. 테스트를 실행, 작성 및 재실행할 때 [테스트 탐색기]에는 **실패한 테스트**, **통과한 테스트** 및 **테스트 실행 안 함** 그룹에 결과가 표시됩니다. **모두 실행**을 선택해서 모든 테스트를 실행하거나 **실행...** 을 선택해서 실행할 테스트 하위 집합을 선택할 수 있습니다.
 
  테스트가 실행되면 탐색기 위쪽에 테스트 결과 표시줄에 애니메이션 효과가 적용됩니다. 테스트 실행이 끝날 때 모든 테스트가 통과했으면 표시줄이 녹색이 되고 테스트가 실패하면 빨간색이 됩니다. [테스트 탐색기] 창 아래쪽의 세부 정보 창에 테스트 실행의 요약이 표시됩니다. 테스트를 선택하면 아래쪽 창에 해당 테스트의 세부 정보가 표시됩니다.
 

@@ -1,26 +1,22 @@
 ---
-title: "플랫폼 간 모바일 개발용 Visual C++ 설치 | Microsoft 문서"
-ms.custom: 
+title: 플랫폼 간 모바일 개발용 Visual C++ 설치 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: aaea6b8d-55eb-4427-8185-c050f855c257
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: b9f87e95a2d4088bb72890ef3f9508d9c5e02abc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 64bdc654bc1bcd6721cc29052a9409e00f6afd07
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-visual-c-for-cross-platform-mobile-development"></a>플랫폼 간 모바일 개발용 Visual C++ 설치
 [플랫폼 간 모바일 개발용 Visual C++](http://go.microsoft.com/fwlink/p/?LinkId=536383) 는 Visual Studio 2015의 설치 가능한 구성 요소입니다. 플랫폼 간 Visual Studio 템플릿을 포함하며, 직접 찾아서 다운로드 및 구성하지 않고도 신속하게 시작할 수 있도록 플랫폼 간 도구 및 SDK를 설치합니다. Visual Studio에서 이러한 도구를 사용하여 플랫폼 간 프로젝트를 쉽게 만들고, 편집, 디버그 및 테스트할 수 있습니다. 이 항목에서는 Visual Studio를 사용하여 플랫폼 간 앱을 개발하는 데 필요한 도구 및 타사 소프트웨어를 설치하는 방법을 설명합니다. 구성 요소의 개요는 [Visual C++ 플랫폼 간 모바일](http://go.microsoft.com/fwlink/p/?LinkId=536387)을 참조하세요.  
@@ -66,7 +62,7 @@ ms.lasthandoff: 02/09/2018
   
      ![Visual C&#43;&#43; 모바일 개발 선택](../cross-platform/media/cppmdd_install_vcmdd.png "CPPMDD_Install_VCMDD")  
   
-     기본적으로 **Visual C++ 모바일 개발**을 선택하면 **프로그래밍 언어** 옵션은 **Visual C++**를 설치하도록 설정되고 **일반 도구와 소프트웨어 개발 키트** 옵션은 필요한 타사 구성 요소를 설치하도록 설정됩니다. 필요한 경우 추가 구성 요소를 선택할 수 있습니다. 기본적으로 **Microsoft Visual Studio Emulator for Android**도 선택됩니다. 이미 설치된 구성 요소는 목록에서 비활성 상태로 표시됩니다.  
+     기본적으로 **Visual C++ 모바일 개발**을 선택하면 **프로그래밍 언어** 옵션은 **Visual C++** 를 설치하도록 설정되고 **일반 도구와 소프트웨어 개발 키트** 옵션은 필요한 타사 구성 요소를 설치하도록 설정됩니다. 필요한 경우 추가 구성 요소를 선택할 수 있습니다. 기본적으로 **Microsoft Visual Studio Emulator for Android**도 선택됩니다. 이미 설치된 구성 요소는 목록에서 비활성 상태로 표시됩니다.  
   
      유니버설 Windows 앱을 빌드하고 해당 앱과 Android 및 iOS 프로젝트 간에 코드를 공유하려면 **기능 선택**에서 **Windows 및 웹 개발**을 확장하고 **유니버설 Windows 앱 개발 도구**를 선택합니다. 유니버설 Windows 앱을 빌드하지 않으려는 경우에는 이 옵션을 건너뛸 수 있습니다.  
   
@@ -127,7 +123,7 @@ ms.lasthandoff: 02/09/2018
   
 1.  Visual Studio 메뉴 모음에서 **도구**, **옵션**을 차례로 선택합니다.  
   
-2.  **옵션** 대화 상자에서 **플랫폼 간**, **C++**를 차례로 확장하고 **Android**를 선택합니다.  
+2.  **옵션** 대화 상자에서 **플랫폼 간**, **C++** 를 차례로 확장하고 **Android**를 선택합니다.  
   
      ![Android 도구 경로 옵션](../cross-platform/media/cppmdd_options_android.PNG "CPPMDD_Options_Android")  
   

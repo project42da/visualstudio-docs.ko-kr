@@ -1,7 +1,7 @@
 ---
 title: Visual Studio의 부하 테스트 결과 요약 개요 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.load.monitor.summary.view
 helpviewer_keywords:
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: 326b6c3c-5378-452b-8ca3-ba5a06ab3d41
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6222e5288526dd5806997b8b65f326e841b692af
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 001f7f866437807565bc83a8ad3a4dd809dd4100
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="load-test-results-summary-overview"></a>부하 테스트 결과 요약 개요
 
@@ -70,7 +70,7 @@ ms.lasthandoff: 03/19/2018
 
 가장 느린 페이지 섹션에는 부하 테스트 실행 시 가장 느린 페이지 5개가 포함됩니다. 또한 페이지별로 URL과 평균 페이지 부하 시간이 표시됩니다. 페이지는 내림차순으로 정리되어 있습니다. 페이지의 URL을 선택하면 **페이지** 테이블이 열려 해당 페이지를 좀 더 자세히 검토할 수 있습니다. 자세한 내용은 [방법: 웹 페이지 응답 보기](../test/how-to-view-web-page-response-time-in-a-load-test.md)를 참조하세요.
 
-**95% 페이지 시간(초)**의 백분위수 값은 페이지의 95%가 이 시간(초) 미만으로 완료되었음을 나타냅니다.
+**95% 페이지 시간(초)** 의 백분위수 값은 페이지의 95%가 이 시간(초) 미만으로 완료되었음을 나타냅니다.
 
 ## <a name="key-statistic-top-5-slowest-tests"></a>주요 통계: 가장 느린 테스트 5개
 

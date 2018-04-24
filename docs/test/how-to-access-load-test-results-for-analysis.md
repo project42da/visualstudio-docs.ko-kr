@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트 결과 분석 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - results, load test
 - load test results, accessing
@@ -13,13 +13,13 @@ helpviewer_keywords:
 ms.assetid: b0a3e694-2894-479b-b270-7e61e9fafacd
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2e44b6818d30c3452259b4249c047b40bd70bf43
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: d3a1e3f54544215ed89f07a64d440ae3844c996f
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-access-load-test-results-for-analysis"></a>방법: 분석을 위한 부하 테스트 결과 액세스
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 03/19/2018
 
 3.  **부하 테스트 결과를 찾을 컨트롤러 이름 입력**에서 컨트롤러를 선택합니다. **\<<로컬> – 컨트롤러 없음**을 선택하여 로컬로 저장된 결과에 액세스합니다.
 
-4.  **다음 부하 테스트의 결과 표시**에서 해당 결과를 보려는 부하 테스트를 선택합니다. 모든 테스트의 결과를 보려면 **\<모든 테스트에 대한 결과 표시>**를 선택합니다.
+4.  **다음 부하 테스트의 결과 표시**에서 해당 결과를 보려는 부하 테스트를 선택합니다. 모든 테스트의 결과를 보려면 **\<모든 테스트에 대한 결과 표시>** 를 선택합니다.
 
      사용 가능한 부하 테스트 결과는 **부하 테스트 결과** 목록에 나타납니다. 여기에는 **시간**, **지속 시간**, **사용자**, **결과**, **테스트** 및 **설명** 열이 있습니다. **테스트**에는 테스트의 이름이 들어 있고 **설명**에는 테스트를 실행하기 전에 추가한 설명(선택 사항)이 들어 있습니다.
 

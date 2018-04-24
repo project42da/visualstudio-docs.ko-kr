@@ -1,18 +1,18 @@
 ---
-title: "에뮬레이터를 사용하여 SharePoint 2010 응용 프로그램용 단위 테스트 격리 | Microsoft Docs"
+title: 에뮬레이터를 사용하여 SharePoint 2010 응용 프로그램용 단위 테스트 격리 | Microsoft Docs
 ms.date: 11/04/2016
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ffdf83bbdb60a1a5ab98665883c9f1702567ec47
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 994e13d7155dd5490d3f3f02865b14845bae498b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리
 Microsoft.SharePoint.Emulators 패키지는 Microsoft SharePoint 2010 응용 프로그램에 대한 격리된 단위 테스트를 만들도록 도와주는 라이브러리 집합을 제공합니다. 에뮬레이터는 [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 격리 프레임워크의 [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)을 사용하여 SharePoint API의 가장 일반적인 개체 및 메서드를 가장하는 간단한 메모리 내 개체를 만듭니다. SharePoint 메서드가 에뮬레이트되지 않는 경우가 에뮬레이터의 기본 동작을 변경하려면 Fakes shim을 만들어서 원하는 결과를 제공할 수 있습니다.
@@ -113,7 +113,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
 1.  솔루션 탐색기에서 테스트 프로젝트를 선택합니다.
 
-2.  바로 가기 메뉴에서 **NuGet 패키지 관리...**를 선택합니다.
+2.  바로 가기 메뉴에서 **NuGet 패키지 관리...** 를 선택합니다.
 
 3.  `Microsoft.SharePoint.Emulators`에 대한 **온라인** 범주를 검색한 다음 **설치**를 선택합니다.
 

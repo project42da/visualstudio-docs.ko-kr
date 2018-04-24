@@ -1,12 +1,10 @@
 ---
-title: "옵션 대화 상자, 환경, 국가별 설정 | Microsoft Docs"
-ms.custom: 
+title: 옵션 대화 상자, 환경, 국가별 설정 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - VS.ToolsOptionsPages.Environment.InternationalSettings
 - VS.ToolsOptionsPages.Environment.International_Settings
@@ -18,16 +16,16 @@ helpviewer_keywords:
 - Options dialog box, international settings
 - languages, specifying default
 ms.assetid: e3a8815c-6995-4099-8e88-34f91fad55b2
-caps.latest.revision: "14"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: e086111be924d1262866f882b77d821659af909d
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 33e206e4c38b4bde715d72c6b8eb4b5bdf9c5dd8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="international-settings-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 국가별 설정
 국가별 설정 페이지를 사용하면 컴퓨터에 여러 언어 버전의 IDE(통합 개발 환경)가 설치된 경우 기본 언어를 변경할 수 있습니다. **도구** 메뉴에서 **옵션**을 선택한 다음 **환경** 폴더에서 **국가별 설정**을 선택하여 이 대화 상자에 액세스할 수 있습니다. 이 페이지가 목록에 나타나지 않으면 **옵션** 대화 상자에서 **모든 설정 표시**를 선택합니다.  

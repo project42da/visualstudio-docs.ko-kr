@@ -1,10 +1,11 @@
 ---
-title: "Dotfuscator CE(Community Edition) 설치 | Microsoft 문서"
+title: Dotfuscator CE(Community Edition) 설치 | Microsoft 문서
 ms.date: 2017-06-22
 ms.devlang: dotnet
-ms.technology: vs-ide-general
-ms.topic: article
-keywords: "Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017, 설치"
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
+keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017, 설치
 helpviewer_keywords:
 - PreEmptive Protection Dotfuscator
 - Dotfuscator Community Edition
@@ -17,15 +18,15 @@ helpviewer_keywords:
 - install Dotfuscator
 - installing Dotfuscator
 - set up Dotfuscator
-description: "Visual Studio 2017에 포함된 무료 Dotfuscator Community Edition을 설치하는 방법을 알아봅니다."
+description: Visual Studio 2017에 포함된 무료 Dotfuscator Community Edition을 설치하는 방법을 알아봅니다.
 ms.assetid: f2146651-e24a-4e24-ade8-8ddee8ff4e43
 author: Joe-Sewell-PreEmptive
-manager: ghogen
-ms.openlocfilehash: 6e3151a7ce26fcc998df7fbce1cefda54249a384
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+manager: douge
+ms.openlocfilehash: 871ec8c98bac4477ef95c85688484011027e2d20
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="install-dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition) 설치
 
@@ -35,14 +36,14 @@ Visual Studio 2017에서는 새로운 영향 최소화 설치 환경을 소개�
 
 > [!NOTE]
 > Visual Studio 릴리스와 함께 제공된 Dotfuscator CE 버전 외에도 PreEmptive Solutions에서는 웹 사이트에서 정기적으로 업데이트된 버전을 제공합니다.
-> Visual Studio에서 설치하는 대신 직접 **최신 버전**을 다운로드하려면 **[여기를 클릭하여 Dotfuscator 다운로드 페이지로 이동][download]**합니다.
+> Visual Studio에서 설치하는 대신 직접 **최신 버전**을 다운로드하려면 **[여기를 클릭하여 Dotfuscator 다운로드 페이지로 이동][download]** 합니다.
 
 ## <a name="within-visual-studio"></a>Visual Studio 내에서
 
 Visual Studio IDE에서 Dotfuscator CE를 설치할 수 있습니다.
 
 1. **빠른 실행**(Ctrl+Q) 검색 창에서 `dotfuscator`를 입력합니다. <br/> <br/> ![](media/install_from_vs_12.png) <br/> <br/>
-2. 표시된 빠른 실행 결과 중 *설치* 제목 아래에서 **PreEmptive Protection - Dotfuscator(개별 구성 요소)**를 선택합니다.
+2. 표시된 빠른 실행 결과 중 *설치* 제목 아래에서 **PreEmptive Protection - Dotfuscator(개별 구성 요소)** 를 선택합니다.
   * *메뉴* 제목 아래에서 **도구 - PreEmptive Protection - Dotfuscator**를 확인하면 Dotfuscator CE가 이미 설치되어 있습니다. 사용법에 대한 자세한 내용은 [전체 Dotfuscator CE 사용자 가이드의 시작 페이지][get-started]를 참조하세요.
 3. [Visual Studio 설치 관리자] 창이 시작되고 Dotfuscator CE를 설치하도록 미리 구성되어 있습니다.
   * 계속하려면 관리자 자격 증명을 제공해야 할 수 있습니다.

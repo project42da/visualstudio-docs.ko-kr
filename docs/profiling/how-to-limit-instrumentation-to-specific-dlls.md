@@ -1,25 +1,21 @@
 ---
-title: "방법: 계측을 특정 DLL로 제한 | Microsoft 문서"
-ms.custom: 
+title: '방법: 계측을 특정 DLL로 제한 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - performance tools, runtime profiling control window
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 971cf339139302502fa8b25ffa1bd6e916456a18
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 6ca2c966c395edf189cbab04c20cdb77c6b0e4e3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-limit-instrumentation-to-specific-dlls"></a>방법: 계측을 특정 DLL로 제한
 
@@ -33,7 +29,7 @@ ms.lasthandoff: 02/21/2018
 
 3. **계측**을 프로파일링 방법으로 선택하고 **다음**을 클릭합니다.
 
-4. **다음 사용 가능한 대상 중 프로파일링할 대상을 선택하세요.**에서 .dll 프로젝트의 이름을 선택하고 **다음**을 클릭합니다.
+4. **다음 사용 가능한 대상 중 프로파일링할 대상을 선택하세요.** 에서 .dll 프로젝트의 이름을 선택하고 **다음**을 클릭합니다.
 
 5. **마침**을 클릭하여 마법사를 종료하고 **성능 탐색기** 창에 새 성능 세션을 표시합니다.
 
@@ -51,7 +47,7 @@ ms.lasthandoff: 02/21/2018
 
 2. **분석** 메뉴에서 **성능 마법사 시작**을 선택합니다.
 
-3. **다음 사용 가능한 대상 중 프로파일링할 대상을 선택하세요.**에서 **동적 연결 라이브러리 프로파일링(.DLL)**을 선택하고 **다음**을 클릭합니다.
+3. **다음 사용 가능한 대상 중 프로파일링할 대상을 선택하세요.** 에서 **동적 연결 라이브러리 프로파일링(.DLL)** 을 선택하고 **다음**을 클릭합니다.
 
 4. 마법사의 두 번째 페이지에서 다음 단계를 수행합니다.
 

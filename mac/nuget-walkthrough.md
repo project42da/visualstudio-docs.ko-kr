@@ -1,16 +1,15 @@
 ---
-title: "연습 - 프로젝트에 NuGet 패키지 포함하기 | Microsoft Docs"
-description: "이 문서에서는 Xamarin 프로젝트에 NuGet 패키지를 포함하는 방법을 다룹니다. 여기에서는 IDE 통합 기능을 소개할 뿐 아니라 패키지를 찾아 다운로드하는 방법도 살펴봅니다."
+title: 연습 - 프로젝트에 NuGet 패키지 포함하기
+description: 이 문서에서는 Xamarin 프로젝트에 NuGet 패키지를 포함하는 방법을 다룹니다. 여기에서는 IDE 통합 기능을 소개할 뿐 아니라 패키지를 찾아 다운로드하는 방법도 살펴봅니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
-ms.openlocfilehash: cb927b14e3637edd7e16c78fbed01fa4e9522652
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: 05762df8b06a69647c6c7a628db54ac499248374
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="including-a-nuget-package-in-your-project"></a>프로젝트에 NuGet 패키지 포함하기
 
@@ -32,7 +31,7 @@ NuGet 패키지 기능을 설명하기 위해 우선 새로운 응용 프로그�
 
 ## <a name="adding-a-package"></a>패키지 추가하기
 
-Mac용 Visual Studio에서 프로젝트를 연 상태에서 **Solution Pad**의 **패키지** 폴더를 마우스 오른쪽 단추로 클릭하고 **패키지 추가...**를 선택하세요.
+Mac용 Visual Studio에서 프로젝트를 연 상태에서 **Solution Pad**의 **패키지** 폴더를 마우스 오른쪽 단추로 클릭하고 **패키지 추가...** 를 선택하세요.
 
 ![새 NuGet 패키지 컨텍스트 작업 추가하기](media/nuget-walkthrough-PackagesMenu.png)
 

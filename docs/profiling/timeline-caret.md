@@ -1,29 +1,24 @@
 ---
-title: "시간 표시 막대 캐럿 | Microsoft Docs"
-ms.custom: 
+title: 시간 표시 막대 캐럿 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 f1_keywords:
 - vs.cv.threads.timeline.caret
 helpviewer_keywords:
 - Concurrency Visualizer, Timeline Caret
 ms.assetid: cc7d567f-b655-4539-810c-6506e7852121
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a0ca44152702c3669d791f67da8f41ad09f9bc72
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 2127515d74fba12a0248731c7483697f6e3afa78
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="timeline-caret"></a>시간 표시 막대 캐럿
 실행 중인 스레드 세그먼트의 타임라인에서 한 지점을 선택하면 타임라인 캐럿이 위에 표시됩니다. 현재 스택 탭에 표시되는 호출 스택은 세그먼트를 클릭한위치와 시간상 가장 가까운 스택입니다. 캐럿은 호출 스택을 연결하는 데 사용됩니다. 호출 스택은 샘플링된 시간과 함께 **현재** 탭 아래에 표시됩니다. 캐럿에는 호출 스택의 정확한 위치(사용자가 선택한 위치와 가장 가까운 호출 스택)가 표시됩니다.  

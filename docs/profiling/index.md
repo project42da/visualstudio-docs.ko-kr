@@ -1,14 +1,17 @@
 ---
 layout: LandingPage
-title: "Visual Studio로 앱 프로파일링 | Microsoft Docs"
-description: "Visual Studio 2017을 사용하여 원하는 언어로 응용 프로그램, 서비스 및 도구의 성능을 프로파일링하는 방법을 알아보세요."
+title: Visual Studio로 앱 프로파일링 | Microsoft Docs
+description: Visual Studio 2017을 사용하여 원하는 언어로 응용 프로그램, 서비스 및 도구의 성능을 프로파일링하는 방법을 알아보세요.
 ms.topic: landing-page
 ms.technology: vs-ide-debug
-ms.openlocfilehash: 1f63e9a5a42a7a64ae69f50694668030c5421872
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+author: mikejo5000
+ms.author: mikejo
+manager: douge
+ms.openlocfilehash: f574f5e1e87f8fb35a9e8333f7290a8406ede1d7
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="profiling-in-visual-studio"></a>Visual Studio의 프로파일링
 

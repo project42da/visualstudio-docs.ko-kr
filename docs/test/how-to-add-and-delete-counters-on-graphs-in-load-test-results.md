@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트 결과의 그래프에서 카운터 추가 및 삭제 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load test results graphs, adding counters
 - load test results graph
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 81536233-1962-40d9-9511-0b4633814d90
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 81d220e4c67b4fae530529ad410a9deb34692285
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 1ec02769cc3960b4b1b7f4dd7a04d3d78193c1e9
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>방법: 부하 테스트 결과의 그래프에서 카운터 추가 및 삭제
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 03/19/2018
 
  **성능 카운터 샘플링 간격 고려 사항**
 
- 부하 테스트 실행 설정에서 부하 테스트 길이를 기반으로 하는 **샘플링 주기** 속성 값을 선택합니다. 기본값인 5초와 같이 샘플링 주기 값이 작으면 부하 테스트 결과 데이터베이스에 더 많은 공간이 필요합니다. 부하 테스트가 긴 경우 샘플링 주기를 늘리면 수집되는 데이터 양이 줄어듭니다. 자세한 내용은 [방법: 샘플 속도 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요.
+ 부하 테스트 실행 설정에서 부하 테스트 길이를 기반으로 하는 **샘플링 주기** 속성 값을 선택합니다. 기본값인 5초와 같이 샘플링 주기 값이 작으면 부하 테스트 결과 데이터베이스에 더 많은 공간이 필요합니다. 부하 테스트가 긴 경우 샘플링 주기를 늘리면 수집되는 데이터 양이 줄어듭니다. 자세한 내용은 [방법: 샘플링 주기 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요.
 
  다음은 샘플링 주기에 대한 몇 가지 지침입니다.
 

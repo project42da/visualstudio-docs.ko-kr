@@ -1,20 +1,20 @@
 ---
 title: 웹 성능 테스트 결과 뷰어에 대한 Visual Studio 추가 기능 만들기 | Microsoft Docs
 ms.date: 10/20/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Web performance tests, Visual Studio Add-in
 - Visual Studio Add-in, Web performance tests
 ms.assetid: 1118c604-4b1b-4b21-a04e-45995b676fa8
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8bf0e6b4869ade2b7fc1853f75dfd83f624348a1
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: aa163381415060d189899e7defd64a8935c4ea94
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-visual-studio-add-in-for-the-web-performance-test-results-viewer"></a>방법: 웹 성능 테스트 결과 뷰어에 대한 Visual Studio 추가 기능 만들기
 
@@ -78,7 +78,7 @@ ms.lasthandoff: 03/19/2018
 
 11. **다음**을 선택합니다.
 
-12. **추가 기능 옵션 선택** 페이지에서 **호스트 응용 프로그램이 시작될 때 추가 기능을 로드합니다.**를 선택합니다.
+12. **추가 기능 옵션 선택** 페이지에서 **호스트 응용 프로그램이 시작될 때 추가 기능을 로드합니다.** 를 선택합니다.
 
 13. 나머지 확인란의 선택을 취소합니다.
 
@@ -119,7 +119,7 @@ ms.lasthandoff: 03/19/2018
 
      **새 프로젝트** 대화 상자가 표시됩니다.
 
-2.  **설치된 템플릿**에서 **Visual Basic** 또는 **Visual C#**을 확장하고 **Windows**를 선택합니다.
+2.  **설치된 템플릿**에서 **Visual Basic** 또는 **Visual C#** 을 확장하고 **Windows**를 선택합니다.
 
     > [!NOTE]
     > 이 항목의 샘플 코드에서는 Visual C#을 사용합니다.

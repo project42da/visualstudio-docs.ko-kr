@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트 결과 내보내기 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - results, load test
 - load tests, exporting results
@@ -10,13 +10,13 @@ helpviewer_keywords:
 ms.assetid: 716c2af5-8737-4d31-956f-a0273f7c5c0c
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: b7ebb49ebe4d47ad24c8c9504b69db829128f3c2
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: ce17cba842faf56205d5769bbcccfcdce8db6fec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-export-load-test-results-from-a-repository"></a>방법: 리포지토리에서 부하 테스트 결과 내보내기
 
@@ -32,9 +32,9 @@ ms.lasthandoff: 03/19/2018
 
      **부하 테스트 결과 열기 및 관리** 대화 상자가 표시됩니다.
 
-3.  **부하 테스트 결과를 찾을 컨트롤러 이름 입력**에서 컨트롤러를 선택합니다. **\<로컬 – 컨트롤러 없음>**을 선택하여 로컬로 저장된 결과에 액세스합니다.
+3.  **부하 테스트 결과를 찾을 컨트롤러 이름 입력**에서 컨트롤러를 선택합니다. **\<로컬 – 컨트롤러 없음>** 을 선택하여 로컬로 저장된 결과에 액세스합니다.
 
-4.  **다음 부하 테스트의 결과 표시**에서 해당 결과를 보려는 부하 테스트를 선택합니다. 모든 테스트의 결과를 보려면 **\<모든 테스트에 대한 결과 표시>**를 선택합니다.
+4.  **다음 부하 테스트의 결과 표시**에서 해당 결과를 보려는 부하 테스트를 선택합니다. 모든 테스트의 결과를 보려면 **\<모든 테스트에 대한 결과 표시>** 를 선택합니다.
 
      사용 가능한 부하 테스트 결과는 **부하 테스트 결과** 목록에 나타납니다. 여기에는 **시간**, **지속 시간**, **사용자**, **결과**, **테스트** 및 **설명** 열이 있습니다. **테스트**에는 테스트의 이름이 들어 있고 **설명**에는 테스트를 실행하기 전에 추가한 설명(선택 사항)이 들어 있습니다. **설명** 열에는 해당 테스트 결과에 대해 **분석 주석**에 입력한 간략한 설명이 표시됩니다.
 

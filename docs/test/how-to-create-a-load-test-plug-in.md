@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트 플러그 인 만들기 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.test.load.loadtestplugin
 helpviewer_keywords:
@@ -11,13 +11,13 @@ helpviewer_keywords:
 ms.assetid: 27806972-1b15-4388-833d-6d0632816f1f
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 2de6da0a38bd8ff7568dc102514ac24d4217bbb7
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 6e585fe66bde573f8bb133b0c8cda0900b0d6d16
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-load-test-plug-in"></a>방법: 부하 테스트 플러그 인 만들기
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 03/19/2018
 
      **새 프로젝트 추가** 대화 상자가 표시됩니다.
 
-4.  **설치된 템플릿**에서 **Visual C#**을 선택합니다.
+4.  **설치된 템플릿**에서 **Visual C#** 을 선택합니다.
 
 5.  템플릿 목록에서 **클래스 라이브러리**를 선택합니다.
 
@@ -92,7 +92,7 @@ ms.lasthandoff: 03/19/2018
     >
     > **요청 실패: \<플러그 인> 이벤트: 파일 또는 어셈블리 '\<"플러그 인 이름".dll 파일>, 버전=\<n.n.n.n >, Culture = neutral, PublicKeyToken = null' 또는 해당 종속성 중 하나를 로드할 수 없습니다. 지정한 파일을 찾을 수 없습니다.**
     >
-    > 이 오류는 플러그 인의 코드를 변경하고 새 DLL 버전 **(버전=0.0.0.0)**을 만들었지만 해당 플러그 인이 계속해서 원래 플러그 인 버전을 참조하는 경우에 발생합니다. 이 문제를 해결하려면 다음 단계를 수행합니다.
+    > 이 오류는 플러그 인의 코드를 변경하고 새 DLL 버전 **(버전=0.0.0.0)** 을 만들었지만 해당 플러그 인이 계속해서 원래 플러그 인 버전을 참조하는 경우에 발생합니다. 이 문제를 해결하려면 다음 단계를 수행합니다.
     >
     > 1.  웹 성능 및 부하 테스트 프로젝트에서는 참조에 경고가 표시됩니다. 참조를 제거했다가 플러그 인 DLL에 다시 추가합니다.
     > 2.  테스트 또는 적절한 위치에서 플러그 인을 제거했다가 다시 추가합니다.

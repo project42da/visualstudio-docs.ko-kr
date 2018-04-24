@@ -1,12 +1,9 @@
 ---
-title: "사용자 권한 및 Visual Studio | Microsoft 문서"
-ms.custom: 
+title: 사용자 권한 및 Visual Studio | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, user permissions
 - user permissions
@@ -14,14 +11,14 @@ helpviewer_keywords:
 - permissions
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6a19d67530d3cb7ac81ee00e3e65f4cce74c8d07
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: 1ba45cd360059d0ac6efbcdddbe3f1e550f3b3d8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="user-permissions-and-visual-studio"></a>사용자 권한 및 Visual Studio
 
@@ -62,7 +59,7 @@ IDE를 시작할 때마다 관리자 권한으로 Visual Studio를 실행하거�
 
 1. **Visual Studio 2017**의 마우스 오른쪽 단추 클릭 또는 상황에 맞는 메뉴에서 **추가** > **관리자 권한으로 실행**을 선택합니다.
 
-     Visual Studio가 시작되면 제목 표시줄의 제품 이름 뒤에 **(관리자)**가 나타납니다.
+     Visual Studio가 시작되면 제목 표시줄의 제품 이름 뒤에 **(관리자)** 가 나타납니다.
 
 ## <a name="see-also"></a>참고 항목
 

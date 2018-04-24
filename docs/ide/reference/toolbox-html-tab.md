@@ -1,12 +1,9 @@
 ---
-title: "도구 상자, HTML 탭 | Microsoft 문서"
-ms.custom: 
+title: 도구 상자, HTML 탭 | Microsoft 문서
+ms.custom: ''
 ms.date: 06/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.toolbox.html
 helpviewer_keywords:
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - HTML tab in Toolbox
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fc52ea4ce28c7fac6f7318eac8e835efc0f11cb1
-ms.sourcegitcommit: bd16e764134c436d2d2f46490f51234d5246ee50
+ms.openlocfilehash: ff609631cec69e0d32cb74e5857cd3bb8df5ab94
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="toolbox-html-tab"></a>도구 상자, HTML 탭
 
@@ -46,7 +43,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="button"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Button1"`은 첫 번째 단추로 삽입되고, `id="Button2"`는 두 번째 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Button)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Button)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Button1" type="button" value="Button" name="Button1">
@@ -58,7 +55,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="reset"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Reset1"`은 첫 번째 다시 설정 단추로 삽입되고, `id="Reset2"`는 두 번째 다시 설정 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Reset)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Reset)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Reset1" type="reset" value="Reset" name="Reset1">
@@ -70,7 +67,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="submit"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Submit1"`은 첫 번째 제출 단추로 삽입되고, `id="Submit2"`는 두 번째 제출 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Submit)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Submit)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Submit1" type="submit" value="Submit" name="Submit1">
@@ -82,7 +79,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="text"`의 `input` 요소를 문서에 삽입합니다. 표시되는 기본 텍스트를 변경하려면 `value` 특성을 편집합니다. 기본적으로 `id="Text1"`은 첫 번째 텍스트 필드로 삽입되고, `id="Text2"`는 두 번째 텍스트 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Text)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Text)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Text1" TYPE="text" value="Text Field" name="Text1">
@@ -97,7 +94,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="file"`의 `input` 요소를 문서에 삽입합니다. 기본적으로 `id="File1"`은 첫 번째 파일 필드로 삽입되고, `id="File2"`는 두 번째 파일 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (File)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (File)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="File1" type="file" name="File1">
@@ -112,7 +109,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="password"`의 `input` 요소를 삽입합니다. 기본적으로 `id="Password1"`은 첫 번째 암호 필드로 삽입되고, `id="Password2"`는 두 번째 암호 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Password)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Password)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Password1" type="password" name="Password1">
@@ -127,7 +124,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="checkbox"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Checkbox1"`은 첫 번째 확인란으로 삽입되고, `id="Checkbox2"`는 두 번째 확인란으로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Check box)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Check box)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Checkbox1" type="checkbox" name="Checkbox1">
@@ -139,7 +136,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="radio"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Radio1"`은 첫 번째 라디오 단추로 삽입되고, `id="Radio2"`는 두 번째 라디오 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Radio)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Radio)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Radio1" type="radio" name="Radio1">
@@ -151,7 +148,7 @@ ms.lasthandoff: 01/22/2018
 
 `type="hidden"`의 `input` 요소를 삽입합니다. 기본적으로 `id="Hidden1"`은 첫 번째 숨겨진 필드로 삽입되고, `id="Hidden2"`는 두 번째 숨겨진 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
-**Input (Hidden)**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
+**Input (Hidden)** 를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
 <input id="Hidden1" type="hidden" name="Hidden1">

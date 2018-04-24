@@ -1,19 +1,19 @@
 ---
 title: Visual Studio에서 분산 부하 테스트를 위한 테스트 설정 만들기 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - test settings, for distributed load tests
 ms.assetid: b63d4b71-3b74-4872-b2d1-f0bd1a9a8544
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 38bcbe49850929105199cef360956f29f22a8d0c
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 30b9cf45b60b108e51cc1cbe5defd5e8d8cac0e4
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-create-a-test-setting-for-a-distributed-load-test"></a>방법: 분산 부하 테스트에 대한 테스트 설정 만들기
 
@@ -56,7 +56,7 @@ Visual Studio를 통해 실행할 부하 테스트의 솔루션에서 테스트 
     > [!NOTE]
     > Visual Studio Enterprise에 표시되는 테스트 설정 목록은 **솔루션 항목** 폴더의 테스트 설정 파일 목록에서 파생됩니다. 예를 들어 **테스트 메뉴**에서 **활성 테스트 설정 선택** 옵션을 사용하면 솔루션 항목 폴더의 테스트 설정 파일이 표시됩니다. 따라서 테스트 설정 파일을 솔루션 계층 구조의 다른 위치로 옮기면 Visual Studio 통합 개발 환경 내에서 해당 파일을 더 이상 테스트 설정으로 사용할 수 없습니다.
 
-5.  **테스트 설정** 대화 상자가 표시됩니다. 기본적으로 **일반** 페이지가 선택되어 있습니다.
+5.  **테스트 설정** 대화 상자가 표시됩니다. **일반** 페이지가 선택되어 있습니다.
 
      이제 테스트 설정 값을 편집하고 저장할 수 있습니다.
 

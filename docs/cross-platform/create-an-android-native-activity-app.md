@@ -1,26 +1,22 @@
 ---
-title: "Android Native Activity 앱 만들기 | Microsoft 문서"
-ms.custom: 
+title: Android Native Activity 앱 만들기 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-mobile
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - C++
 ms.assetid: 884014b1-5208-45ec-b0da-ad0070d2c24d
-caps.latest.revision: 
 author: corob-msft
 ms.author: corob
-manager: ghogen
+manager: douge
 ms.workload:
 - xplat-cplusplus
-ms.openlocfilehash: e03fb8fd62e7f9b2e37dfc2efe8f02580c7b32f5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 51555b660b51c227dd7c80da04f2eecd699c5c96
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-an-android-native-activity-app"></a>Android Native Activity 앱 만들기
 플랫폼 간 모바일 개발용 Visual C++ 옵션을 설치하는 경우 Visual Studio 2015를 사용하여 완벽하게 작동하는 Android Native Activity 앱을 만들 수 있습니다. Android NDK(네이티브 개발 키트)는 순수 C/C++ 코드를 사용하여 Android 앱의 대부분을 구현할 수 있게 해주는 도구 집합입니다. 일부 Java JNI 코드는 C/C++ 코드가 Android와 상호 작용할 수 있게 해주는 글루 역할을 합니다. Android NDK에서는 Android API 수준 9로 Native Activity 앱을 만들 수 있는 기능이 도입되었습니다. Native Activity 코드는 Unreal Engine 또는 OpenGL을 사용하는 게임 및 그래픽 집약적인 앱을 만드는 데 널리 사용됩니다. 이 항목에서는 OpenGL을 사용하는 간단한 Native Activity 앱을 만드는 과정을 안내합니다. 추가 항목에서는 Native Activity 코드를 편집, 빌드, 디버그 및 배포하는 개발자 수명 주기를 안내합니다.  

@@ -1,26 +1,22 @@
 ---
-title: "샘플링을 사용하여 성능 통계 수집 | Microsoft 문서"
-ms.custom: 
+title: 샘플링을 사용하여 성능 통계 수집 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Profiling Tools,sampling
 - sampling profiling method
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27fc7e2ffb37129883672147ddcf460806b25cf7
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 3fea27cdfbcc843b30fbb4500dd9528df5b65c3d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="collecting-performance-statistics-by-using-sampling"></a>샘플링을 사용하여 성능 통계 수집
 
@@ -31,7 +27,7 @@ ms.lasthandoff: 02/21/2018
 
 다음 절차 중 하나를 사용하여 샘플링 방법을 지정할 수 있습니다.
 
-- 프로파일링 마법사의 첫 번째 페이지에서 **CPU 샘플링(권장)**을 클릭합니다.
+- 프로파일링 마법사의 첫 번째 페이지에서 **CPU 샘플링(권장)** 을 클릭합니다.
 - **성능 탐색기** 도구 모음의 **메서드** 목록에서 **샘플링**을 클릭합니다.
 - 성능 세션에 대한 속성 대화 상자의 **일반** 페이지에서 **샘플링**을 클릭합니다.
 

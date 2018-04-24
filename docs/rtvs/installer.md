@@ -1,26 +1,20 @@
 ---
-title: "Visual Studio용 R 도구 시작 | Microsoft Docs"
-description: "Visual Studio용 R 도구를 설치한 개발자에 대한 요약 정보입니다."
-ms.custom: 
+title: Visual Studio용 R 도구 시작
+description: Visual Studio용 R 도구를 설치한 개발자에 대한 요약 정보입니다.
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 0314bd144cc43fc6a1bf2589c4ae407258076d3d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 5370a399ba5d66a868f3804106e062c214e4fe30
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="welcome-to-r-tools-for-visual-studio"></a>Visual Studio용 R 도구 시작
 
@@ -28,7 +22,7 @@ RTVS(Visual Studio용 R 도구)를 설치해 주셔서 감사합니다. 확인�
 
 ![RTVS 스크린샷](media/installer-screenshot.png)
 
-## <a name="resources"></a>리소스
+## <a name="resources"></a>자료
 
 - [문서](index.md)
 - [설치 단계](installing-r-tools-for-visual-studio.md)

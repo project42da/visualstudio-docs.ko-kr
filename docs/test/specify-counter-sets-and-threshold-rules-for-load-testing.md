@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 부하 테스트에 대한 카운터 집합 및 임계값 규칙 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - counters, counter sets
 - load tests, thresholds
@@ -12,13 +12,13 @@ helpviewer_keywords:
 ms.assetid: 9e14d955-f3a4-4717-bbfe-7f08cdda5678
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: a573e883a4d5557a4812e6f38ae63fc1b1d71425
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: d2b80ab1aaed9f5f59399a02026c9334f38701c7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>부하 테스트에서 컴퓨터에 대한 카운터 집합 및 임계값 규칙 지정
 
@@ -44,7 +44,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="use-counter-sets"></a>카운터 집합 사용
 
-부하 테스트 도구는 카운터를 사용하여 시간에 따라 성능 데이터를 수집하여 그래프로 표시합니다. 카운터 데이터는 부하 테스트를 실행하는 동안 사용자가 지정한 간격마다 수집됩니다. 자세한 내용은 [방법: 샘플 속도 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요. 런타임에 카운터를 보거나 부하 테스트 실행 후 *부하 테스트 분석기*를 사용하여 카운터를 볼 수 있습니다.
+부하 테스트 도구는 카운터를 사용하여 시간에 따라 성능 데이터를 수집하여 그래프로 표시합니다. 카운터 데이터는 부하 테스트를 실행하는 동안 사용자가 지정한 간격마다 수집됩니다. 자세한 내용은 [방법: 샘플링 주기 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요. 런타임에 카운터를 보거나 부하 테스트 실행 후 *부하 테스트 분석기*를 사용하여 카운터를 볼 수 있습니다.
 
 카운터 데이터는 테스트가 실행되는 서버 및 모든 컴퓨터에서 수집됩니다. 테스트를 실행할 에이전트 컴퓨터 집합을 설정한 경우 이들 컴퓨터에도 카운터가 수집됩니다.
 
@@ -60,7 +60,7 @@ ms.lasthandoff: 03/19/2018
 
 ### <a name="performance-counter-sampling-interval-considerations"></a>성능 카운터 샘플링 간격 고려 사항
 
-부하 테스트 실행 설정에서 부하 테스트 길이에 따라 적절한 **샘플링 주기** 속성 값을 선택합니다. 기본값인 5초와 같이 샘플링 주기 값이 작으면 부하 테스트 결과 데이터베이스에 더 많은 공간이 필요합니다. 부하 테스트가 긴 경우 샘플링 주기를 늘리면 수집되는 데이터 양이 줄어듭니다. 자세한 내용은 [방법: 샘플 속도 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요.
+부하 테스트 실행 설정에서 부하 테스트 길이에 따라 적절한 **샘플링 주기** 속성 값을 선택합니다. 기본값인 5초와 같이 샘플링 주기 값이 작으면 부하 테스트 결과 데이터베이스에 더 많은 공간이 필요합니다. 부하 테스트가 긴 경우 샘플링 주기를 늘리면 수집되는 데이터 양이 줄어듭니다. 자세한 내용은 [방법: 샘플링 주기 지정](../test/how-to-specify-the-sample-rate-for-a-load-test.md)을 참조하세요.
 
 다음은 샘플링 주기에 대한 몇 가지 지침입니다.
 

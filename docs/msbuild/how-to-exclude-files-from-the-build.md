@@ -1,28 +1,24 @@
 ---
-title: "방법: 빌드에서 파일 제외 | Microsoft 문서"
-ms.custom: 
+title: '방법: 빌드에서 파일 제외 | Microsoft 문서'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, wildcards
 - MSBuild, excluding files
 - wildcards, MSBuild
 ms.assetid: 1be36e45-01da-451c-972d-f9fc0e7d663c
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b11f292e27c192efcbd81376a79bcd67b0d08393
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: eb8e8ba51f4aaeed0242147d46fd282b95452d91
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-exclude-files-from-the-build"></a>방법: 빌드에서 파일 제외
 프로젝트 파일에서 와일드카드를 사용하여 모든 파일을 하나의 디렉터리 또는 중첩된 디렉터리 집합에 빌드의 입력으로 포함할 수 있습니다. 그러나 해당 디렉터리 또는 중첩된 디렉터리 집합 중 하나의 디렉터리에 빌드의 입력으로 포함하지 않으려는 하나의 파일이 있을 수 있습니다. 입력 목록에서 해당 파일 또는 디렉터리를 명시적으로 제외할 수 있습니다. 특정 조건에서만 포함하려는 파일이 프로젝트에 있을 수도 있습니다. 파일을 빌드에 포함할 조건을 명시적으로 선언할 수 있습니다.  

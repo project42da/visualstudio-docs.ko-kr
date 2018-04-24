@@ -2,9 +2,6 @@
 title: 의견 보내기 | Microsoft 문서
 ms.custom: ''
 ms.date: 02/19/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 helpviewer_keywords:
 - product support [Visual Studio]
@@ -17,11 +14,11 @@ ms.technology:
 - vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: addc6e929a1a72f385189f0a0408ea26e2a3d829
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: 12f6e61a967d7d551013926dbd580c706192bf3a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="talk-to-us"></a>Talk to Us
 제품과 설명서를 개선할 수 있는 아이디어를 보내 주세요. 항상 개인적으로 회신을 드릴 수는 없지만 피드백을 담당자에게 전해 드리겠습니다.  

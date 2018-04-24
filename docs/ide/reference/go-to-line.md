@@ -1,30 +1,26 @@
 ---
-title: "줄 이동 | Microsoft Docs"
-ms.custom: 
+title: 줄 이동 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.gotoline
 helpviewer_keywords:
 - code, locating lines
 - Go To Line dialog box
 ms.assetid: 529fa251-b7b3-49cf-863c-10e0b82ac7cc
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 99197e9aa5937273b8ea21847cb6aad797464a04
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: 79b88ae959ef2fb4e63b30ced7c28d5c7c4a13ef
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="go-to-line"></a>줄 이동
 이 대화 상자를 사용하면 활성 문서의 특정 줄로 이동할 수 있습니다. 이 대화 상자에 액세스하려면 편집할 문서를 연 후 **편집** 메뉴에서 **이동**을 선택합니다.  

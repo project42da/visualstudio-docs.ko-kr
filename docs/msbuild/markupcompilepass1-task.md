@@ -1,12 +1,9 @@
 ---
-title: "MarkupCompilePass1 작업 | Microsoft Docs"
-ms.custom: 
+title: MarkupCompilePass1 작업 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -17,16 +14,16 @@ helpviewer_keywords:
 - MarkupCompilePass1 task [WPF MSBuild], parameters
 - converting XAML projects to compiled binary format [WPF MSBuild]
 - MarkupCompilePass1 task [WPF MSBuild], converting XAML to binary format
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6b15b4af1b828092504e051c7f6d1bb57b79b51
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 0abf8f5b2c77281325853f744f54513fb897ecc6
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="markupcompilepass1-task"></a>MarkupCompilePass1 작업
 
@@ -51,7 +48,7 @@ ms.lasthandoff: 02/28/2018
 |`GeneratedLocalizationFiles`|선택적 **ITaskItem** 출력 매개 변수입니다.<br /><br /> 지역화할 수 있는 각 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일에 대해 생성된 지역화 파일의 목록을 포함합니다.|
 |`HostInBrowser`|선택적 **문자열** 매개 변수입니다.<br /><br /> 생성된 어셈블리가 [!INCLUDE[TLA#tla_xbap](../msbuild/includes/tlasharptla_xbap_md.md)]인지 여부를 지정합니다. 유효한 옵션은 **true** 및 **false**입니다. **true**이면 브라우저 호스팅을 지원하기 위한 코드가 생성됩니다.|
 |`KnownReferencePaths`|선택적 **String[]** 매개 변수입니다.<br /><br /> 빌드 프로세스 중에 변경되지 않는 어셈블리에 대한 참조를 지정합니다. [!INCLUDE[TLA#tla_gac](../msbuild/includes/tlasharptla_gac_md.md)], [!INCLUDE[TLA#tla_netframewk](../misc/includes/tlasharptla_netframewk_md.md)] 설치 디렉터리 등에 있는 어셈블리를 포함합니다.|
-|`Language`|필수 **String** 매개 변수입니다.<br /><br /> 컴파일러가 지원하는 관리되는 언어를 지정합니다. 유효한 옵션은 **C#**, **VB**, **JScript** 및 **C++**입니다.|
+|`Language`|필수 **String** 매개 변수입니다.<br /><br /> 컴파일러가 지원하는 관리되는 언어를 지정합니다. 유효한 옵션은 **C#**, **VB**, **JScript** 및 **C++** 입니다.|
 |`LanguageSourceExtension`|선택적 **문자열** 매개 변수입니다.<br /><br /> 생성된 관리되는 코드 파일의 확장에 추가되는 확장명을 지정합니다.<br /><br /> `<Filename>.g<LanguageSourceExtension>`<br /><br /> **LanguageSourceExtension** 매개 변수가 특정 값으로 설정되지 않으면 언어에 대한 기본 소스 파일 이름 확장명이 사용됩니다. 즉, [!INCLUDE[TLA#tla_visualb](../msbuild/includes/tlasharptla_visualb_md.md)]의 경우 **.vb**이고, [!INCLUDE[TLA#tla_cshrp](../data-tools/includes/tlasharptla_cshrp_md.md)]의 경우 **.csharp**입니다.|
 |`LocalizationDirectivesToLocFile`|선택적 **문자열** 매개 변수입니다.<br /><br /> 각 소스 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 파일에 대한 지역화 정보를 생성하는 방법을 지정입니다. 유효한 옵션은 **None**, **CommentsOnly** 및 **All**입니다.|
 |`OutputPath`|필수 **String** 매개 변수입니다.<br /><br /> 생성된 관리 코드 파일 및 [!INCLUDE[TLA2#tla_xaml](../msbuild/includes/tla2sharptla_xaml_md.md)] 이진 형식 파일이 생성되는 디렉터리를 지정합니다.|

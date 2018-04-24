@@ -1,27 +1,22 @@
 ---
-title: "모듈 뷰 - .NET 메모리 계측 데이터 | Microsoft Docs"
-ms.custom: 
+title: 모듈 뷰 - .NET 메모리 계측 데이터 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 helpviewer_keywords:
 - Modules view
 ms.assetid: 26516139-0981-41de-917d-ad5769391b8d
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e67b1676495b6217a6134bc7e0f3f4cf74b1faf6
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: c04ecdc1de848a95ad9f5051cc9ec54da02a3625
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="modules-view---net-memory-instrumentation-data"></a>모듈 뷰 - .NET 메모리 계측 데이터
 계측 방법을 사용하여 수집되는 .NET 메모리 할당 데이터의 모듈 뷰에서는 프로파일링 실행에서 실행된 모듈을 기준으로 메모리 및 타이밍 데이터를 그룹화합니다. 모듈의 함수에 대한 프로파일링 데이터는 모듈 노드 아래에 나열됩니다.  

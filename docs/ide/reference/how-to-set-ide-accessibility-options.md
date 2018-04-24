@@ -1,26 +1,23 @@
 ---
-title: "방법: IDE 접근성 옵션 설정 | Microsoft Docs"
-ms.custom: 
+title: '방법: IDE 접근성 옵션 설정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 08/22/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accessibility [Visual Studio]
 ms.assetid: ddc96c4c-0600-46c1-8267-7dce4c44ad24
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6881e90a0035ed7c918acab924832013d9b17088
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: b44f31b03dae1c553008685553548d886a8943a2
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-set-ide-accessibility-options"></a>방법: IDE 내게 필요한 옵션 설정
 > [!TIP]
@@ -43,7 +40,7 @@ ms.lasthandoff: 01/29/2018
  창 레이아웃을 변경하는 방법에 대한 자세한 내용은 [창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md)을 참조하세요.  
 
 ### <a name="changing-the-size-of-text"></a>텍스트 크기 변경  
- **도구** 대화 상자, **환경** 옵션의 **글꼴 및 색** 창에서 **명령** 창, **직접 실행** 창 및 **출력** 창과 같은 텍스트 기반 도구 창에 대한 설정을 변경할 수 있습니다. **[모든 텍스트 도구 창]**이 **설정 표시** 드롭다운 목록에서 선택되면 기본 설정은 **항목 전경** 및 **항목 배경** 드롭다운 목록에 **기본값**으로 나열됩니다. 텍스트가 편집기에 표시되는 방식에 대한 설정을 변경할 수도 있습니다.  
+ **도구** 대화 상자, **환경** 옵션의 **글꼴 및 색** 창에서 **명령** 창, **직접 실행** 창 및 **출력** 창과 같은 텍스트 기반 도구 창에 대한 설정을 변경할 수 있습니다. **[모든 텍스트 도구 창]** 이 **설정 표시** 드롭다운 목록에서 선택되면 기본 설정은 **항목 전경** 및 **항목 배경** 드롭다운 목록에 **기본값**으로 나열됩니다. 텍스트가 편집기에 표시되는 방식에 대한 설정을 변경할 수도 있습니다.  
 
 ##### <a name="to-change-the-size-of-text-in-text-based-tool-windows-and-editors"></a>텍스트 기반 도구 창 및 편집기에서 텍스트 크기를 변경하려면  
 
@@ -55,7 +52,7 @@ ms.lasthandoff: 01/29/2018
 
      편집기에서 텍스트의 글꼴 크기를 변경하려면 **텍스트 편집기**를 선택합니다.  
 
-     텍스트 기반 도구 창에서 텍스트의 글꼴 크기를 변경하려면 **[모든 텍스트 도구 창]**을 선택합니다.  
+     텍스트 기반 도구 창에서 텍스트의 글꼴 크기를 변경하려면 **[모든 텍스트 도구 창]** 을 선택합니다.  
 
      편집기에서 도구 설명 텍스트의 글꼴 크기를 변경하려면 **편집기 도구 설명**을 선택합니다.  
 
@@ -76,7 +73,7 @@ ms.lasthandoff: 01/29/2018
  편집기에서 텍스트, 여백 표시기, 공백 및 코드 요소의 기본색을 변경할 수도 있습니다.  
 
 > [!NOTE]
->  운영 체제의 모든 응용 프로그램 창에 고대비 색을 사용하려면 왼쪽 **ALT+**왼쪽 **SHIFT+PRINT SCREEN**을 누릅니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]가 열릴 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 닫았다 열면 고대비 색이 완전히 구현됩니다.  
+>  운영 체제의 모든 응용 프로그램 창에 고대비 색을 사용하려면 왼쪽 **ALT+** 왼쪽 **SHIFT+PRINT SCREEN**을 누릅니다. [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]가 열릴 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]를 닫았다 열면 고대비 색이 완전히 구현됩니다.  
 
 ##### <a name="to-change-the-color-of-items-in-the-editor"></a>편집기에서 항목의 색을 변경하려면  
 

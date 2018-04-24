@@ -1,23 +1,21 @@
 ---
-title: "8단계: 사진 표시 단추 이벤트 처리기를 위한 코드 작성 | Microsoft Docs"
-ms.custom: 
+title: '8단계: 사진 표시 단추 이벤트 처리기를 위한 코드 작성 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-acquisition
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-acquisition
+ms.topic: conceptual
 ms.assetid: 07f4ec00-cda4-42f4-98bb-37edc7167de7
-caps.latest.revision: "24"
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: b7c76492e3d07b0c32edb4ea91a5b3c152f1a206
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: d72997e827db9842761aadbb70a7e464995d2d74
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="step-8-write-code-for-the-show-a-picture-button-event-handler"></a>8단계: 그림 단추 이벤트 처리기 표시를 위한 코드 작성
 이 단계에서는 **사진 표시** 단추가 다음과 같이 작동하도록 합니다.  

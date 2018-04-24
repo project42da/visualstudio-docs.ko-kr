@@ -1,13 +1,10 @@
 ---
-title: "프로젝트 디자이너, 서명 페이지 | Microsoft 문서"
-ms.custom: 
+title: 프로젝트 디자이너, 서명 페이지 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.AddNewStrongNameKey
 - ResolveKeySource.KeyFileForSignAssemblyNotImported
@@ -20,17 +17,16 @@ helpviewer_keywords:
 - Project Designer, Signing page
 - Signing page in Project Designer
 ms.assetid: dab3ba13-2f92-4827-92bd-1be3c35bc48b
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 53fe343002de3f89431927c95f36a0c092b36c2c
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: d5af28d3a9f40f7ee74b852fa7bd3e14dda8b3ac
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="signing-page-project-designer"></a>프로젝트 디자이너, 서명 페이지
 **프로젝트 디자이너**의 **서명** 페이지를 사용하여 응용 프로그램 및 배포 매니페스트에 서명하고 어셈블리에도 서명합니다(강력한 이름 서명).  
@@ -74,9 +70,9 @@ ms.lasthandoff: 01/29/2018
  이 옵션은 [!INCLUDE[winsdklong](/dotnet/framework/app-domains/how-to-sign-an-assembly-with-a-strong-name)에서 제공된 Al.exe 도구를 사용하여 어셈블리에 서명합니다.  
   
  **강력한 이름 키 파일 선택** 목록  
- 어셈블리 서명에 사용되는 신규 또는 기존 강력한 이름 키 파일을 지정할 수 있습니다. **\<찾아보기...>**를 선택하여 기존 키 파일을 선택합니다.  
+ 어셈블리 서명에 사용되는 신규 또는 기존 강력한 이름 키 파일을 지정할 수 있습니다. **\<찾아보기...>** 를 선택하여 기존 키 파일을 선택합니다.  
   
- **\<새로 만들기...>**를 선택하여 어셈블리 서명에 사용할 새 키 파일을 만듭니다. **강력한 이름 키 만들기** 대화 상자가 나타나고 이를 사용하여 키 파일 이름을 지정하고 암호로 키 파일을 보호할 수 있습니다. 암호 길이는 6자 이상이어야 합니다. 암호를 지정할 경우 개인 정보 교환(.pfx) 파일이 만들어집니다. 암호를 지정하지 않으면 강력한 이름 키(.snk) 파일이 만들어집니다.  
+ **\<새로 만들기...>** 를 선택하여 어셈블리 서명에 사용할 새 키 파일을 만듭니다. **강력한 이름 키 만들기** 대화 상자가 나타나고 이를 사용하여 키 파일 이름을 지정하고 암호로 키 파일을 보호할 수 있습니다. 암호 길이는 6자 이상이어야 합니다. 암호를 지정할 경우 개인 정보 교환(.pfx) 파일이 만들어집니다. 암호를 지정하지 않으면 강력한 이름 키(.snk) 파일이 만들어집니다.  
   
  **암호 변경** 단추  
  어셈블리 서명에 사용되는 개인 정보 교환(.pfx) 키 파일의 암호를 변경합니다.  

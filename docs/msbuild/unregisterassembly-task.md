@@ -2,11 +2,8 @@
 title: UnregisterAssembly 작업 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: reference
 f1_keywords:
 - http://schemas.microsoft.com/developer/msbuild/2003#UnregisterAssembly
 dev_langs:
@@ -18,17 +15,16 @@ helpviewer_keywords:
 - MSBuild, UnregisterAssembly task
 - UnregisterAssembly task [MSBuild]
 ms.assetid: 04f549dd-3591-4dda-9c3a-cf6ede9df2c3
-caps.latest.revision: 21
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f859137722c2715f81276a02a311dcbb40ec06e
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: 5fb2ef935015e7bd1058868b546543a789d7cec2
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="unregisterassembly-task"></a>UnregisterAssembly 작업
 COM interop 용도로 지정된 어셈블리의 등록을 취소합니다. [RegisterAssembly 작업](../msbuild/registerassembly-task.md)의 역작업을 수행합니다.  
@@ -47,7 +43,7 @@ COM interop 용도로 지정된 어셈블리의 등록을 취소합니다. [Regi
   
  이 작업은 위에 나와 있는 매개 변수 외에 <xref:System.MarshalByRefObject> 클래스에서 직접 상속하는 <xref:Microsoft.Build.Tasks.AppDomainIsolatedTaskExtension> 클래스의 매개 변수도 상속합니다. `MarshalByRefObject` 클래스는 <xref:Microsoft.Build.Utilities.Task> 클래스와 동일한 기능을 제공하지만 해당 응용 프로그램 도메인에서 인스턴스화될 수 있습니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 예제에서는 `UnregisterAssembly` 작업을 사용하여 `OutputPath` 및 `FileName` 속성으로 지정된 경로에서 어셈블리(있는 경우)의 등록을 취소합니다.  
   
 ```xml  

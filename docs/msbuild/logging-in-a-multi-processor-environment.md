@@ -2,26 +2,22 @@
 title: 다중 프로세서 환경에서의 로그인 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology: msbuild
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, multi-processor logging
 - MSBuild, logging
 ms.assetid: dd4dae65-ed04-4883-b48d-59bcb891c4dc
-caps.latest.revision: 9
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1bca3a76bbf64303baea36ff7dac2abacf85443
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
-ms.translationtype: MT
+ms.openlocfilehash: dedf90c51ec2cd4f1864d5573925ed17a0d69b2a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/10/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="logging-in-a-multi-processor-environment"></a>다중 프로세서 환경에서의 로깅
 MSBuild에서는 다중 프로세서를 사용할 수 있기 때문에 프로젝트 빌드 시간을 크게 줄일 수 있는 반면 로깅은 복잡해집니다. 단일 프로세서 환경에서 로거는 예측 가능하고 순차적인 방식으로 들어오는 이벤트, 메시지, 경고 및 오류를 처리할 수 있습니다. 그러나 다중 프로세서 환경에서 여러 원본의 이벤트는 동시에 또는 순서 없이 도착할 수 있습니다. MSBuild에서는 새 다중 프로세서 인식 로거가 제공되며, 사용자 지정 "전달 로거"를 만들 수 있습니다.  

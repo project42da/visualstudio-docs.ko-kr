@@ -1,22 +1,19 @@
 ---
-title: "Visual Studio 생산성 팁 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 생산성 팁 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e91411539f1e511b04fd455b8ee775fa7abccc2
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: e6b79f7d36358a875b45b7a705674060b05969cc
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
 
@@ -34,17 +31,17 @@ ms.lasthandoff: 03/08/2018
 
 - **코드를 입력할 때 IntelliSense 옵션의 자동 삽입 변경** IntelliSense를 제안 모드로 전환하여 명시적으로 선택할 경우에만 IntelliSense 옵션이 삽입되도록 지정할 수 있습니다.
 
-     제안 모드를 사용하려면 **Ctrl**+**Alt**+**스페이스바**를 선택하거나 메뉴 모음에서 **편집**,  > IntelliSense**,**  > **완료 모드 설정/해제**를 선택합니다.
+     제안 모드를 사용하려면 **Ctrl**+**Alt**+**스페이스바**를 선택하거나 메뉴 모음에서 **편집**,  > IntelliSense **,**  > **완료 모드 설정/해제**를 선택합니다.
 
 - **코드 조각 사용** 기본 제공된 코드 조각을 사용하거나 직접 코드 조각을 만들 수 있습니다.
 
      코드 조각을 삽입하려면 메뉴 모음에서 **편집** > **IntelliSense** > **코드 조각 삽입** 또는 **코드 감싸기**를 선택하거나 파일의 바로 가기 메뉴를 열고 **코드 조각** > **코드 조각 삽입** 또는 **코드 감싸기**를 선택합니다. 자세한 내용은 [코드 조각](../ide/code-snippets.md)을 참조하세요.
 
-- **코드 오류를 인라인으로 수정** 빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다. 이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Alt**+**Enter** 또는 **Ctrl**+**.**를 눌러 적용할 수 있습니다. 자세한 내용은 [빠른 작업](quick-actions.md)을 참조하세요.
+- **코드 오류를 인라인으로 수정** 빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다. 이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Alt**+**Enter** 또는 **Ctrl**+**.** 를 눌러 적용할 수 있습니다. 자세한 내용은 [빠른 작업](quick-actions.md)을 참조하세요.
 
 - **코드 요소의 정의 표시 및 편집** 멤버, 변수 또는 로컬 같은 코드 요소가 정의된 모듈을 신속하게 표시하고 편집할 수 있습니다.
 
-    팝업 창에서 정의를 열려면 요소를 강조 표시하고 **Alt**+**F12**를 선택하거나 요소의 바로 가기 메뉴를 열고 **정의 피킹(Peeking)**을 선택합니다. 별도의 코드 창에서 정의를 열려면 해당 요소의 바로 가기 메뉴를 열고 **정의로 이동**을 선택합니다.
+    팝업 창에서 정의를 열려면 요소를 강조 표시하고 **Alt**+**F12**를 선택하거나 요소의 바로 가기 메뉴를 열고 **정의 피킹(Peeking)** 을 선택합니다. 별도의 코드 창에서 정의를 열려면 해당 요소의 바로 가기 메뉴를 열고 **정의로 이동**을 선택합니다.
 
 - **샘플 응용 프로그램 사용** [Microsoft Developer Network](https://code.msdn.microsoft.com/)에서 응용 프로그램 예제를 다운로드 및 설치하여 응용 프로그램 개발 시간을 단축할 수 있습니다. 해당 영역의 샘플 팩을 다운로드 및 탐색하여 특정한 기술이나 프로그래밍 개념을 익힐 수도 있습니다.
 
@@ -112,7 +109,7 @@ ms.lasthandoff: 03/08/2018
 
 응용 프로그램을 개발할 때 여러 코드 파일로 작업하면서 여러 도구 창 사이를 이동하는 경우가 있습니다. 다음 팁을 사용하여 구성을 유지할 수 있습니다.
 
-- **자주 사용하는 파일을 편집기에 계속 표시** 편집기에 열린 파일 수와 관계없이 파일이 표시되도록 탭 왼쪽에 고정할 수 있습니다.
+- **자주 사용하는 파일을 편집기에 계속 표시** 편집기에 열린 파일 수에 관계없이 파일이 표시되도록 탭 왼쪽에 고정할 수 있습니다.
 
      파일을 고정하려면 해당 파일의 탭을 선택하고 **고정 상태 설정/해제** 단추를 선택합니다.
 

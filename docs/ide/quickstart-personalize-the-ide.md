@@ -2,22 +2,19 @@
 title: Visual Studio에서 색 테마 및 글꼴 설정 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/20/2017
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2098540adda6de1ab003a6a9d526519d1d753730
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 7024213ca383ee5934df1d413501065b383f7981
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>빠른 시작: Visual Studio IDE 및 편집기 개인 설정
 
@@ -44,7 +41,7 @@ Visual Studio 2017의 기본 색 테마는 **파랑**이라고 합니다. **어�
 
 이제 편집기의 일부 텍스트 색을 사용자 지정해 보겠습니다. 먼저 XML 파일을 열어 기본 색을 확인하겠습니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **파일...**을 차례로 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **파일...** 을 차례로 선택합니다.
 
 1. **새 파일** 대화 상자의 **일반** 범주 아래에서 **XML 파일**을 선택한 다음 **열기**를 선택합니다.
 

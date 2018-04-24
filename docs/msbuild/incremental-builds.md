@@ -1,26 +1,22 @@
 ---
-title: "증분 빌드 | Microsoft Docs"
-ms.custom: 
+title: 증분 빌드 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - msbuild, incremental builds
 ms.assetid: 325e28c7-4838-4e3f-b672-4586adc7500c
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee1e8a136937b1291950a9df71b93a1e5c90f8c2
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 17f33be85a5baf35235721c720386dd237d9ec85
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="incremental-builds"></a>증분 빌드
 증분 빌드는 해당 입력 파일과 관련하여 최신 상태인 출력 파일이 있는 대상이 실행되지 않도록 최적화된 빌드입니다. 대상 요소는 대상이 입력으로 예상하는 항목을 나타내는 `Inputs` 특성 및 출력으로 생성하는 항목을 나타내는 `Outputs` 특성을 모두 가질 수 있습니다. MSBuild는 이러한 특성의 값 사이에서 1-1 매핑을 찾으려고 시도합니다. 1-1 매핑이 존재하는 경우 MSBuild는 해당 출력 항목의 타임스탬프와 모든 입력 항목의 타임스탬프를 비교합니다. 1-1 매핑이 없는 출력 파일은 모든 입력 파일과 비교됩니다. 출력 파일이 해당 입력 파일보다 최신이거나 두 파일의 타임스탬프가 같은 경우 항목이 최신 상태인 것으로 간주됩니다.  

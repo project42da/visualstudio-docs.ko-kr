@@ -1,26 +1,21 @@
 ---
-title: 프로젝트에 대한 환경 선택 | Microsoft Docs
+title: 프로젝트에 대한 환경 선택
 description: Visual Studio 솔루션 탐색기에서 항상 지정된 프로젝트에 사용하도록 특정 Python 인터프리터(환경)를 할당하여 기본 환경을 무시할 수 있습니다. 가상 환경을 만들고 관리할 수도 있습니다.
-ms.custom: ''
 ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.devlang: python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 28070c9864162c7af5c68644dedb296107af81d0
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 72f07115aa323db15dd5680575871b8d4c4b20b4
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="selecting-a-python-interpreter-and-environment-for-use-in-a-project"></a>프로젝트에서 사용할 Python 인터프리터 및 환경 선택
 
@@ -30,7 +25,7 @@ Visual Studio의 모든 새로운 Python 프로젝트는 초기에 솔루션 탐
 
 ![솔루션 탐색기에 표시된 전역 기본 Python 환경](media/environments-project.png)
 
-프로젝트에 대한 환경을 변경하려면 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고 **Python 환경 추가/제거...**를 선택합니다. 전역, 가상 및 Conda 환경이 포함되는 표시된 목록에서 **Python 환경** 노드 아래에 표시하려는 모든 항목을 선택합니다.
+프로젝트에 대한 환경을 변경하려면 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고 **Python 환경 추가/제거...** 를 선택합니다. 전역, 가상 및 Conda 환경이 포함되는 표시된 목록에서 **Python 환경** 노드 아래에 표시하려는 모든 항목을 선택합니다.
 
 ![Python 환경 추가/제거 대화 상자](media/environments-add-remove.png)
 
@@ -68,7 +63,7 @@ Visual Studio에서 가상 환경은 **솔루션 탐색기**의 **Python 환경*
 
 다음과 같이 Visual Studio에서 직접 새 가상 환경을 만들 수 있습니다.
 
-1. 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **가상 환경 추가...**를 선택하면 다음 대화 상자가 표시됩니다.
+1. 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **가상 환경 추가...** 를 선택하면 다음 대화 상자가 표시됩니다.
 
     ![가상 환경 만들기](media/environments-add-virtual-1.png)
 
@@ -91,7 +86,7 @@ Visual Studio에서 가상 환경은 **솔루션 탐색기**의 **Python 환경*
 
 다른 곳에서 가상 환경을 이미 만든 경우 다음과 같이 프로젝트에 대해 가상 환경을 활성화할 수 있습니다.
 
-1. 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **기존 가상 환경 추가...**를 선택합니다.
+1. 솔루션 탐색기에서 **Python 환경**을 마우스 오른쪽 단추로 클릭하고 **기존 가상 환경 추가...** 를 선택합니다.
 
 1. 표시되는 **찾아보기** 대화 상자에서 가상 환경이 포함된 폴더로 이동하여 폴더를 선택하고 **확인**을 선택합니다. Visual Studio가 해당 환경에서 `requirements.txt` 파일을 검색하는 경우 해당 패키지를 설치할지 묻는 메시지가 표시됩니다.
 
@@ -109,9 +104,9 @@ Visual Studio에서 가상 환경은 **솔루션 탐색기**의 **Python 환경*
 
 ![솔루션 탐색기에서 환경에 대한 Python 패키지](media/environments-installed-packages.png)
 
-새 패키지를 설치하려면 환경을 마우스 오른쪽 단추로 클릭하고 **Python 패키지 설치...**를 선택하여 **Python 환경** 창의 **패키지** 탭으로 전환합니다. 검색 용어(대개 패키지 이름)를 입력하면 Visual Studio에서 일치하는 패키지를 표시합니다.
+새 패키지를 설치하려면 환경을 마우스 오른쪽 단추로 클릭하고 **Python 패키지 설치...** 를 선택하여 **Python 환경** 창의 **패키지** 탭으로 전환합니다. 검색 용어(대개 패키지 이름)를 입력하면 Visual Studio에서 일치하는 패키지를 표시합니다.
 
-Visual Studio 내에서 패키지(및 종속성)는 [PyPI(Python 패키지 인덱스)](https://pypi.python.org/pypi)에서 다운로드하며 여기에서 사용 가능한 패키지의 검색도 가능합니다. Visual Studio의 상태 표시줄 및 출력 창에 설치에 대한 정보가 표시됩니다. 패키지를 제거하려면 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.
+Visual Studio 내에서 패키지(및 종속성)는 [PyPI(Python 패키지 인덱스)](https://pypi.org)에서 다운로드하며 여기에서 사용 가능한 패키지의 검색도 가능합니다. Visual Studio의 상태 표시줄 및 출력 창에 설치에 대한 정보가 표시됩니다. 패키지를 제거하려면 마우스 오른쪽 단추로 클릭하고 **제거**를 선택합니다.
 
 표시된 항목은 정확하지 않을 수 있으며 설치 및 설치 제거가 안정적이지 않거나 사용 가능하지 않을 수 있음에 유의하세요. Visual Studio는 pip 패키지 관리자(가능한 경우)를 사용하며 필요할 경우 다운로드하여 설치합니다. 또한 Visual Studio는 easy_install 패키지 관리자도 사용할 수 있습니다. 명령줄에서 `pip` 또는 `easy_install`을 사용하여 설치된 패키지도 표시됩니다.
 
