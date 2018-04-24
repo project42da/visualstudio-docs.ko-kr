@@ -2,8 +2,7 @@
 title: 자동 및 지역 창에서 변수를 검사 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 04/17/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.autos
@@ -17,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b3bad753a18352ebbf68bef5f398a8039a9c4dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 223bbf3d2f59b79214cf6acbff89946750cb312d
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="inspect-variables-in-the-autos-and-locals-windows-in-visual-studio"></a>Visual Studio에서 자동에서 변수 및 지역 변수 검사
 **자동** 창 (디버깅 하는 동안 **CTRL + ALT + V, A**, 또는 **디버그 > Windows > 자동**) 및 **지역** 창 (디버깅 중 **CTRL + ALT + V, L**, 또는 **디버그 > Windows > 지역**)는 디버깅 하는 동안 변수 값을 확인 하려는 경우 매우 유용 합니다. **지역** 창에는 로컬 범위에 정의되는 변수가 표시되며, 일반적으로 현재 실행되고 있는 함수 또는 메서드입니다. **자동** 창에는 현재 줄(디버거가 중지되어 있는 위치)에 사용된 변수가 표시됩니다. 이 창에는 변수 표시 되는 정확 하 게 하는 것은 다른 언어에서는 다릅니다. 아래에서 [What variables appear in the Autos Window?](#bkmk_whatvariables) 참조하세요.  
@@ -106,7 +105,7 @@ private static int subtractVars(int i, int j)
 
  `int x = sumVars(a, b) + subtractVars(c, d);` 줄에 중단점을 설정합니다.  
   
- 디버깅을 시작하고 첫 번째 중단점에서 실행이 중단되면 **F10(프로시저 단위 실행)**키를 누릅니다. **자동** 창에서 다음을 확인해야 합니다.  
+ 디버깅을 시작하고 첫 번째 중단점에서 실행이 중단되면 **F10(프로시저 단위 실행)** 키를 누릅니다. **자동** 창에서 다음을 확인해야 합니다.  
   
  ![AutosReturnValueCSharp2](../debugger/media/autosreturnvaluecsharp2.png "AutosReturnValueCSharp2")  
   

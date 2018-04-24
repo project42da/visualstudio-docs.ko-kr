@@ -2,8 +2,7 @@
 title: IDiaStackWalkHelper | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 881fcbb4f019ad9cb6321423c12269fb6e3ad78f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 1dac563f99697a8e43b5f7db9831e075c0ed7087
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiastackwalkhelper"></a>IDiaStackWalkHelper
 프로그램 디버그 데이터베이스 (.pdb) 파일을 사용 하 여 스택을 탐색을 용이 하 게 합니다.  

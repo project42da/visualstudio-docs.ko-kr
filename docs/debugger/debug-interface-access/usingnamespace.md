@@ -2,8 +2,7 @@
 title: UsingNameSpace | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 09a91900fbcf6dac6f145c47deb2f5b323828b92
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: a47086fa63ce152b85007b493822ee84dc5d9282
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="usingnamespace"></a>UsingNameSpace
 일부 기호 네임 스페이스에 의해 참조 될 수 있습니다 및로 식별 되었을 것 이후에 `SymTagUsingNameSpace` 태그입니다.  

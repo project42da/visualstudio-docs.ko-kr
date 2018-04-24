@@ -2,8 +2,7 @@
 title: 원격 디버깅 대화 상자에 대 한 방화벽 구성 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.firewallconfiguration
@@ -23,11 +22,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8a3bef8a355b27fd5a566ccef7ac1a96223f119
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 982e677639cec6a98ae3aafe3d0ae624df588ccd
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="configure-firewall-for-remote-debugging-dialog-box"></a>원격 디버깅을 위한 방화벽 구성 대화 상자
 이 대화 상자는 Windows 방화벽에서 디버거가 네트워크를 통해 정보를 받는 것을 차단할 때 나타납니다. 원격 디버깅을 계속하려면 디버거가 정보를 받을 수 있도록 방화벽에서 한 지점을 열어야 합니다.  

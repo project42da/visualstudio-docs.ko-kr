@@ -2,8 +2,7 @@
 title: 블록 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -17,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 76af0a9730032c4f10310b915d444ec529b55031
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: ce6e33c3631d8cff9fd02b6626614babc8e6d157
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="block"></a>블록
 각 코드 블록으로 식별 되는 `SymTagBlock` 기호입니다. 블록 기호는 함수 내에서 중첩 된 범위를 식별 하는 데 사용 됩니다.  

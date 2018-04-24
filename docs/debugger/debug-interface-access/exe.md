@@ -2,8 +2,7 @@
 title: Exe | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -18,11 +17,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f6201aa125dd54cbd4f61f22e93d798957170d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 899b168428428e0e4df3330691358571d7da9ed1
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="exe"></a>Exe
 .Exe 또는.dll 파일의 전역 범위를 나타내므로 Exe는 유일한 어휘는 포함 하지 않고 기호 또는 부모 클래스. 하나의 기호가 없는 `SymTagExe` 파일당 태그입니다. [idiasession:: Get_globalscope](../../debugger/debug-interface-access/idiasession-get-globalscope.md) 메서드 기호를 반환 합니다.  

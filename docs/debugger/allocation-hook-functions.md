@@ -2,8 +2,7 @@
 title: 할당 후크 함수 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.hooks
@@ -25,11 +24,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b87c41a6a31a2c66663ed121204611b4964b9c4d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 6c46b498ea36459dff0eb538ac3e0371fd9c5707
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="allocation-hook-functions"></a>할당 후크 함수
 할당 후크 함수를 사용 하 여 설치 [_CrtSetAllocHook](/cpp/c-runtime-library/reference/crtsetallochook), 메모리 할당, 다시 할당 하거나 해제할 때마다 호출 됩니다. 이러한 후크 형식은 여러 가지 목적으로 사용할 수 있습니다. 예를 들어, 메모리가 부족할 때 응용 프로그램이 이 상황을 어떻게 처리하는지 테스트하거나 할당 패턴을 검사하거나 나중에 분석하기 위해 할당 정보를 기록하는 데 사용할 수 있습니다.  

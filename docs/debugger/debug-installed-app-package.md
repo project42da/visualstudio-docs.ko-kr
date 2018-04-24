@@ -2,8 +2,7 @@
 title: 설치 된 앱 패키지 (UWP) 디버그 | Microsoft Docs
 ms.custom: H1Hack27Feb2017
 ms.date: 07/17/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - vs.debug.installedapppackagelauncher
@@ -22,11 +21,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 9c1406637b6d1dce312b0574cfba3c9a4f7356e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: ffddb3f49f4603c6f09bb12ef81d4c45bf0210c7
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-an-installed-app-package-in-visual-studio-uwp"></a>Visual Studio (UWP) 설치 된 앱 패키지를 디버그 합니다.
 
@@ -80,7 +79,7 @@ Visual Studio를 처음으로 원격 컴퓨터에 설치 된 응용 프로그램
 
 5. 옵션을 선택 하 여 인증 하는 방법을 선택 **인증 모드**합니다.
 
-    대부분의 응용 프로그램에 대 한 기본 값을 유지 **유니버설 (암호화 되지 않은 프로토콜)**합니다.
+    대부분의 응용 프로그램에 대 한 기본 값을 유지 **유니버설 (암호화 되지 않은 프로토콜)** 합니다.
 
 6. 디버깅 하려는 응용 프로그램의 이름을 선택 **실행** 또는 **실행 되 고 있지** 선택 **시작** 또는 (실행 중인 응용 프로그램) **연결**합니다.
 

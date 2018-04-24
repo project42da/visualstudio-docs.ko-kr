@@ -2,8 +2,7 @@
 title: 시작 (디버그 인터페이스 액세스 SDK) | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -16,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0c3c6df3fc92370d939771a7e94334db7f2cfc4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 1fdfe560f22374c0b46305d096bea32a784babe6
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="getting-started-debug-interface-access-sdk"></a>시작(디버그 인터페이스 액세스 SDK)
 디버그 인터페이스 액세스 (DIA) SDK 사용 안내 설명서와 DIA API를 사용 하는 방법을 보여 주는 샘플을 제공 합니다. DIA sdk에서는 인터페이스 및 메서드를 사용 하 여.pdb 및.dbg 파일을 열고 기호, 값, 특성, 주소 및 기타 디버깅 정보에 대 한 콘텐츠를 검색 하는 사용자 지정 응용 프로그램을 개발 하 합니다. 이 SDK는 또한 c + + 응용 프로그램에 있는 기호와 연결 된 속성에 대 한 참조 테이블을 제공 합니다.  
@@ -33,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
 -   Visual Studio 통합된 개발 환경 (IDE) 예제를 컴파일하기 위해  
   
- DIA SDK는 일반적으로 Visual Studio와 함께 설치 기본 위치는 *[드라이브]*files\microsoft Visual Studio 9.0\DIA SDK입니다. 설치의 일환으로, DIA SDK, 구현 하는 msdia90.dll는 자동으로 등록 하므로 사용 하기 위해 수행 해야을 포함 하는 `dia2.h` 프로그램 및 링크를 `diaguids.lib`합니다.  
+ DIA SDK는 일반적으로 Visual Studio와 함께 설치 기본 위치는 *[드라이브]* files\microsoft Visual Studio 9.0\DIA SDK입니다. 설치의 일환으로, DIA SDK, 구현 하는 msdia90.dll는 자동으로 등록 하므로 사용 하기 위해 수행 해야을 포함 하는 `dia2.h` 프로그램 및 링크를 `diaguids.lib`합니다.  
   
  헤더: include\dia2.h  
   

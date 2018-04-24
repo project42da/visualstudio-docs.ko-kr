@@ -2,8 +2,7 @@
 title: 창 속성 대화 상자, 클래스 탭 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 helpviewer_keywords:
 - Window Properties dialog box, Class Tab
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 573eb3f9cbcaedddc67524e81b2508df2112de04
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 4afce149a2124ba8caa827b73b258fb421792c13
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="class-tab-window-properties-dialog-box"></a>창 속성 대화 상자, 클래스 탭
 사용 하 여는 **클래스** 탭을 선택된 된 창 클래스에 대 한 정보가 표시 됩니다. 표시 하는 [창 속성 대화 상자](../debugger/window-properties-dialog-box.md), 포커스를 이동 하는 [창 뷰](../debugger/windows-view.md) 창. 트리에서 창 노드를 선택한 후 선택 **속성** 에서 **보기** 메뉴.  

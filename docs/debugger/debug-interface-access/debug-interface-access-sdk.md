@@ -2,8 +2,7 @@
 title: 디버그 인터페이스 액세스 SDK | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -17,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ae5afe3b5eacaad31ae7b4fcd6aeb092aa37300c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 644827f58172b86e774330fddd207ce9ea0ed99b
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-interface-access-sdk"></a>디버그 인터페이스 액세스 SDK
 Microsoft 디버그 인터페이스 액세스 SDK 소프트웨어 개발 키트 (DIA)는 Microsoft 사후 컴파일러 도구에서 생성 한 프로그램 데이터베이스 (.pdb) 파일에 저장 된 디버그 정보에 대 한 액세스를 제공 합니다. 사후 컴파일러 도구에서 생성 한.pdb 파일의 형식에서 상수 수정 버전을 하기 때문에 형식을 노출은 바람직하지 않습니다. DIA API를 사용 하 여.pdb 파일에 저장 된 디버그 정보를 검색에 대 한를 검색 하는 응용 프로그램을 개발할 수 있습니다. 이러한 응용 프로그램 수, 예를 들어, 스택 추적 정보를 보고 하 고 성능 데이터를 분석 합니다.  

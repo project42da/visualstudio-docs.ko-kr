@@ -2,8 +2,7 @@
 title: 디버거에서 기본 개체의 사용자 지정 뷰 만들기 | Microsoft Docs
 ms.custom: ''
 ms.date: 06/27/2017
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
 - natvis
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 40a78f95ed98b0486b1ffa85eabea3ae8591b823
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 38656b9c5ce4165f2a04b5e6d76411ce7f005855
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 기본 개체의 사용자 지정 뷰 만들기
 Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 네이티브 형식을 표시 하는 방법을 사용자 지정할 수 있습니다 (예를 들어는 **조사식** 창 **지역** 창 및  **DataTips**합니다.
@@ -71,7 +70,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 ## <a name="adding-natvis-files-to-your-projects"></a>프로젝트에 .natvis 파일 추가  
  C++ 프로젝트에 .natvis 파일을 추가할 수 있습니다.  
   
- 열려 있는 c + + 프로젝트와 새.natvis 파일을 추가 하려면에서 프로젝트 노드를 선택는 **솔루션 탐색기**를 클릭 하 고 **추가 > 새 항목 > Visual c + + > 유틸리티 > 디버거 시각화 파일 (.natvis)**합니다. 디버거가 C++ 프로젝트에서 자동으로 Natvis 파일을 로드합니다. 기본적으로 프로젝트의 Natvis 파일이 프로젝트에서 빌드한 .pdb 파일에 삽입됩니다. 즉, 이 프로젝트에서 빌드한 이진을 디버그하는 경우 프로젝트가 열려 있지 않아도 디버거가 .pdb에서 Natvis 파일을 로드합니다. .natvis 파일을 .pdb에 포함하지 않으려면 **솔루션 탐색기**에서 .natvis 파일을 마우스 오른쪽 단추로 클릭하고 **구성 속성** 창에서 **빌드에서 제외** 를 **예**로 설정합니다.  
+ 열려 있는 c + + 프로젝트와 새.natvis 파일을 추가 하려면에서 프로젝트 노드를 선택는 **솔루션 탐색기**를 클릭 하 고 **추가 > 새 항목 > Visual c + + > 유틸리티 > 디버거 시각화 파일 (.natvis)** 합니다. 디버거가 C++ 프로젝트에서 자동으로 Natvis 파일을 로드합니다. 기본적으로 프로젝트의 Natvis 파일이 프로젝트에서 빌드한 .pdb 파일에 삽입됩니다. 즉, 이 프로젝트에서 빌드한 이진을 디버그하는 경우 프로젝트가 열려 있지 않아도 디버거가 .pdb에서 Natvis 파일을 로드합니다. .natvis 파일을 .pdb에 포함하지 않으려면 **솔루션 탐색기**에서 .natvis 파일을 마우스 오른쪽 단추로 클릭하고 **구성 속성** 창에서 **빌드에서 제외** 를 **예**로 설정합니다.  
   
  Natvis 파일은 Visual Studio를 사용하여 편집하는 것이 좋습니다. 디버그하는 동안 변경된 내용은 파일을 저장하면 자동으로 적용됩니다. 또한 IntelliSense의 편집 환경이 개선되었습니다.  
   
@@ -125,7 +124,7 @@ Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 �
 </Type>  
 ```  
   
- `DisplayString` 및 `ArrayItems` 요소는 기본 뷰와 simple 뷰에서 사용되는 반면 `[size]` 및 `[capacity]` 항목은 simple 뷰에서 제외됩니다. **,view** 형식 지정자를 사용하여 대체 뷰를 지정할 수 있습니다. **조사식** 창에서 **vec,view(simple)**로 simple 뷰를 지정합니다.  
+ `DisplayString` 및 `ArrayItems` 요소는 기본 뷰와 simple 뷰에서 사용되는 반면 `[size]` 및 `[capacity]` 항목은 simple 뷰에서 제외됩니다. **,view** 형식 지정자를 사용하여 대체 뷰를 지정할 수 있습니다. **조사식** 창에서 **vec,view(simple)** 로 simple 뷰를 지정합니다.  
   
  ![간단한 보기도 조사식 창이](../debugger/media/watch-simpleview.png "조사식 SimpleView")  
   

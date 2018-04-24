@@ -2,8 +2,7 @@
 title: IntelliTrace 확장성을 위한 API 참조 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliTrace, API reference
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3dfd8917c79694a719a30e78874e72db2f417a52
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 907b47aacf7ad0d63c79f22dcf992ac042dd2e7e
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="api-reference-for-intellitrace-extensibility"></a>IntelliTrace 확장성을 위한 API 참조
 이 단원의 정보는 IntelliTrace 확장성 API를 사용하여 응용 프로그램에서 .itrace 파일을 읽고 디코딩하는 데 도움을 줍니다.  

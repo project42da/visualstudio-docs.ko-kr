@@ -2,8 +2,7 @@
 title: 'Idiasymbol:: Get_haslongjump | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 252533e126075a3acee3ff4e4a6d47f7df68e079
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 79e98b5178c08f95e1da4d2bee1affc0c200d2ba
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgethaslongjump"></a>IDiaSymbol::get_hasLongJump
 사용 하는 함수에 포함 되어 있는지 여부를 지정 하는 플래그를 검색는 [longjmp](/cpp/c-runtime-library/reference/longjmp) 명령 (이루는 [setjmp](/cpp/c-runtime-library/reference/setjmp) 명령, 예외 처리의 C 스타일 메서드를 형성 하는 이러한).  

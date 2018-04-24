@@ -2,8 +2,7 @@
 title: 'Idiasymbol:: Get_isdataaligned | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - C++
@@ -15,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bc83909c398b7736c78f4eb2c3607578e40a9aa3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 2888ce16c64b12ad846289148412733b18bc2500
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="idiasymbolgetisdataaligned"></a>IDiaSymbol::get_isDataAligned
 사용자 정의 형식 (UDT)에 몇 가지 특정 메모리 경계에 정렬 되어 있는지 여부를 지정 하는 플래그를 검색 합니다.  
@@ -43,7 +42,7 @@ HRESULT get_isDataAligned(
 >  반환 값이 `S_FALSE` 속성이 해당 기호를 사용할 수 있음을 의미 합니다.  
   
 ## <a name="remarks"></a>설명  
- 이 속성은 기본이 아닌 데이터 정렬을 사용 하 여 실행 파일 컴파일될 때 일반적으로 설정 됩니다. Microsoft c + + 컴파일러 명령줄 옵션과 함께 데이터 맞춤을 변경할 수는 예를 들어 /Zp*#*여기서 *#* 는 바이트 값입니다.  
+ 이 속성은 기본이 아닌 데이터 정렬을 사용 하 여 실행 파일 컴파일될 때 일반적으로 설정 됩니다. Microsoft c + + 컴파일러 명령줄 옵션과 함께 데이터 맞춤을 변경할 수는 예를 들어 /Zp*#* 여기서 *#* 는 바이트 값입니다.  
   
 ## <a name="requirements"></a>요구 사항  
   

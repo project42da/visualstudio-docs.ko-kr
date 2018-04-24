@@ -2,8 +2,7 @@
 title: C/c + + 어설션 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: conceptual
 dev_langs:
 - CSharp
@@ -31,11 +30,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 8c5180e1ef5a75a31ff6ceb6c225480e1abba5fc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: fcef94e9333b9c1050b76744351723924baaf0ab
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="cc-assertions"></a>C/C++ 어설션
 어설션 문은 프로그램의 한 지점에서 true가 될 조건을 지정 합니다. 조건이 true가 아닐 경우 어설션이 실패, 프로그램의 실행이 중단 되 고 [어설션 오류 대화 상자](../debugger/assertion-failed-dialog-box.md) 나타납니다.  

@@ -2,8 +2,7 @@
 title: 소스 파일을 공용 속성, 솔루션 속성 페이지 대화 상자 디버그 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-debug
+ms.technology: vs-ide-debug
 ms.topic: reference
 f1_keywords:
 - vs.debug.options.FindSource
@@ -25,11 +24,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec0d60eef17a6ba92a8346ec6c7ea572aea6297e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
-ms.translationtype: HT
+ms.openlocfilehash: 844d189b9dd11945f4257b1fc9dfbd3117ac5199
+ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/18/2018
 ---
 # <a name="debug-source-files-common-properties-solution-property-pages-dialog-box"></a>솔루션 속성 페이지 대화 상자, 공용 속성, 소스 파일 디버그
 이 속성 페이지에서는 솔루션을 디버깅할 때 디버거가 소스 파일을 찾을 위치를 지정합니다.  
