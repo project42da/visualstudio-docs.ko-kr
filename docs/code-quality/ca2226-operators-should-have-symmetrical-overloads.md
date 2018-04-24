@@ -1,10 +1,8 @@
 ---
-title: 'CA2226: 연산자 대칭 오버 로드가 있어야 | Microsoft Docs'
-ms.custom: ''
+title: 'CA2226: 연산자에는 대칭 오버로드가 있어야 합니다.'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - OperatorsShouldHaveSymmetricalOverloads
 - CA2226
@@ -17,41 +15,41 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 17ce9653f5763788b8a6988994c379fc885152ad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 98f5653d326c257e46becd2d7f8ad1091dfcf0c7
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2226-operators-should-have-symmetrical-overloads"></a>CA2226: 연산자에는 대칭 오버로드가 있어야 합니다.
-|||  
-|-|-|  
-|TypeName|OperatorsShouldHaveSymmetricalOverloads|  
-|CheckId|CA2226|  
-|범주|Microsoft.Usage|  
-|변경 수준|주요 변경 아님|  
-  
-## <a name="cause"></a>원인  
- 형식이 같음 연산자 또는 같지 않음 연산자를 구현하면서 그 반대 연산자를 구현하지 않습니다.  
-  
-## <a name="rule-description"></a>규칙 설명  
- 되지 않으며 여기서 같음 또는 같지 않음은 형식 인스턴스에 적용 하 고 하면서 그 반대 연산자 정의 되지 않습니다. 일반적으로 형식은 같음 연산자의 부정된 값을 반환 하 여 같지 않음 연산자를 구현 합니다.  
-  
- C# 컴파일러는이 규칙이 위반에 대 한 오류를 발생합니다.  
-  
-## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- 이 규칙 위반 문제를 해결 하려면 같음 및 같지 않음 연산자를 구현 하거나 있는지를 제거 합니다.  
-  
-## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다. 형식이 일치 하는 방식으로 작동 하지 것입니다는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.  
-  
-## <a name="related-rules"></a>관련된 규칙  
- [CA1046: 참조 형식에 같음 연산자를 오버로드하지 마십시오.](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)  
-  
- [CA2225: 연산자 오버로드에는 명명된 대체 항목이 있습니다.](../code-quality/ca2225-operator-overloads-have-named-alternates.md)  
-  
- [CA2224: 같음 연산자를 오버로드할 때 Equals를 재정의하십시오.](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)  
-  
- [CA2218: Equals를 재정의할 때 GetHashCode를 재정의하십시오.](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)  
-  
+|||
+|-|-|
+|TypeName|OperatorsShouldHaveSymmetricalOverloads|
+|CheckId|CA2226|
+|범주|Microsoft.Usage|
+|변경 수준|주요 변경 아님|
+
+## <a name="cause"></a>원인
+ 형식이 같음 연산자 또는 같지 않음 연산자를 구현하면서 그 반대 연산자를 구현하지 않습니다.
+
+## <a name="rule-description"></a>규칙 설명
+ 되지 않으며 여기서 같음 또는 같지 않음은 형식 인스턴스에 적용 하 고 하면서 그 반대 연산자 정의 되지 않습니다. 일반적으로 형식은 같음 연산자의 부정된 값을 반환 하 여 같지 않음 연산자를 구현 합니다.
+
+ C# 컴파일러는이 규칙이 위반에 대 한 오류를 발생합니다.
+
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
+ 이 규칙 위반 문제를 해결 하려면 같음 및 같지 않음 연산자를 구현 하거나 있는지를 제거 합니다.
+
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우
+ 이 규칙에서는 경고를 표시해야 합니다. 형식이 일치 하는 방식으로 작동 하지 것입니다는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]합니다.
+
+## <a name="related-rules"></a>관련된 규칙
+ [CA1046: 참조 형식에 같음 연산자를 오버로드하지 마십시오.](../code-quality/ca1046-do-not-overload-operator-equals-on-reference-types.md)
+
+ [CA2225: 연산자 오버로드에는 명명된 대체 항목이 있습니다.](../code-quality/ca2225-operator-overloads-have-named-alternates.md)
+
+ [CA2224: 같음 연산자를 오버로드할 때 Equals를 재정의하십시오.](../code-quality/ca2224-override-equals-on-overloading-operator-equals.md)
+
+ [CA2218: Equals를 재정의할 때 GetHashCode를 재정의하십시오.](../code-quality/ca2218-override-gethashcode-on-overriding-equals.md)
+
  [CA2231: ValueType.Equals를 재정의할 때 같음 연산자를 오버로드하십시오.](../code-quality/ca2231-overload-operator-equals-on-overriding-valuetype-equals.md)

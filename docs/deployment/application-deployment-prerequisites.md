@@ -2,8 +2,7 @@
 title: 응용 프로그램 배포 필수 구성 요소 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - prerequisites, ClickOnce
 - dependencies, ClickOnce
 ms.assetid: fc6e047e-ad94-44e8-8ff5-b6d1f4ca7735
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5fdeb1d5e543216e0cbb9cab72ecd98001caff3c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 48f72640bdf8efc53b278e4600c6b262dc1a26bf
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="application-deployment-prerequisites"></a>응용 프로그램 배포 필수 구성 요소
 응용 프로그램을 올바르게 설치 및 실행하려면 응용 프로그램이 사용할 모든 구성 요소가 대상 컴퓨터에 이미 설치되어 있는지를 먼저 확인해야 합니다. 예를 들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 사용하여 만드는 대부분의 응용 프로그램은 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 사용하므로 응용 프로그램을 설치하기 전에 올바른 공용 언어 런타임 버전을 대상 컴퓨터에 설치해야 합니다.  

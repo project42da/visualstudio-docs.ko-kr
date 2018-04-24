@@ -1,5 +1,5 @@
 ---
-title: 관리 되는 Visual Studio에서 코드에 대 한 사용자 지정 코드 분석 체크 인 정책 구현 | Microsoft Docs
+title: Visual Studio에서 관리 되는 코드에 대 한 사용자 지정 코드 분석 체크 인 정책 구현
 ms.date: 11/04/2016
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 234ebb6896f358b7263f8fb7c29ad5be90102495
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c50daf82a5dc5774cae75ecab54f1455c1a1c251
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="implement-custom-code-analysis-check-in-policies-for-managed-code"></a>관리 코드에 대 한 사용자 지정 코드 분석 체크 인 정책 구현
 
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/16/2018
 
 3. 에 **체크 인 정책** 목록에서 두 번 클릭 **코드 분석**, 있는지 확인 하 고는 **관리 코드에 대 한 코드 분석 적용** 확인란을 선택 합니다.
 
-4. 에 **이 규칙 집합 실행** 목록에서 클릭  **\<소스 제어에서 규칙 집합 선택 >**합니다.
+4. 에 **이 규칙 집합 실행** 목록에서 클릭  **\<소스 제어에서 규칙 집합 선택 >** 합니다.
 
 5. 버전 제어에 체크 인 정책에 규칙 집합 파일의 경로 입력 합니다.
 
@@ -114,6 +114,6 @@ ms.lasthandoff: 04/16/2018
 
 6. 다른 회사에서 구성 요소에서 코드를 무시 하려면 선택은 **생성 된 코드 결과 표시 안 함** 확인란 합니다.
 
-7. 에 **이 규칙 집합 실행** 목록에서 클릭  **\<찾아보기... >**합니다.
+7. 에 **이 규칙 집합 실행** 목록에서 클릭  **\<찾아보기... >** 합니다.
 
 8. 체크 인 정책에 규칙 집합 파일의 로컬 버전을 지정 합니다.

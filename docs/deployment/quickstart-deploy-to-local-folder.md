@@ -2,8 +2,7 @@
 title: Visual Studio를 로컬 폴더에 배포 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2017
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, local folder
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 522ea90be402088757db7163936ca70da47ba123
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 024d191628e413f07cd510595eac5c7d9fca085b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Visual Studio 게시 도구를 사용 하 여 로컬 폴더에 웹 앱 또는.NET Core 응용 프로그램 배포
 
@@ -29,7 +28,7 @@ ms.lasthandoff: 04/16/2018
 
 1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
-1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 **콘솔 응용 프로그램 (.NET Core)**합니다.
+1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 **콘솔 응용 프로그램 (.NET Core)** 합니다.
 
 1. 같은 이름을 입력 **MyLocalApp** 클릭 **확인**합니다.
 

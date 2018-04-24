@@ -1,6 +1,5 @@
 ---
-title: '방법: 이스케이프 시퀀스를 사용 하 여 템플릿에서 템플릿 생성 | Microsoft Docs'
-ms.custom: ''
+title: '방법: 이스케이프 시퀀스를 사용하여 템플릿에서 템플릿 생성'
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,65 +10,65 @@ manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 160234b8db7f09d25b22e33fb5bc722e06187ba9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d7c53657faa23b57e3aef45ff8c404f2d326e489
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="how-to-generate-templates-from-templates-by-using-escape-sequences"></a>방법: 이스케이프 시퀀스를 사용하여 템플릿에서 템플릿 생성
-생성 된 텍스트 출력으로 다른 텍스트 템플릿을 작성 하는 텍스트 템플릿을 만들 수 있습니다. 이 작업을 수행 하려면 텍스트 템플릿 태그를 직접 지정할 필요 없이 이스케이프 시퀀스를 사용 해야 합니다. 이스케이프 시퀀스를 사용 하지 않는 경우 생성 된 텍스트 템플릿을 미리 정의 된 의미를 갖습니다. 텍스트 템플릿에서 이스케이프 시퀀스를 사용 하는 방법에 대 한 자세한 내용은 참조 [텍스트 템플릿에서 이스케이프 시퀀스를 사용 하 여](../modeling/using-escape-sequences-in-text-templates.md)합니다.  
-  
-### <a name="to-generate-a-text-template-from-within-a-text-template"></a>텍스트 템플릿 내에서 텍스트 템플릿을 생성 하려면  
-  
--   백슬래시를 사용 하 여 (\\) 지시문, 문, 식에 대 한 텍스트 템플릿 내에서 필요한 태그를 생성 하 고 별도 텍스트 템플릿 파일의 기능 클래스에 이스케이프 문자로 합니다.  
-  
-    ```  
-    \<#@ directive \#>  
-    \<# statement \#>  
-    \<#= expression \#>  
-    \<#+ classfeature \#>  
-    ```  
-  
-## <a name="example"></a>예제  
- 다음 예제에서는 텍스트 템플릿에서 텍스트 서식 파일을 생성 하기 위해 이스케이프 문자를 사용 합니다. `output` 지시문 텍스트 템플릿 파일 형식 (.tt) 대상 파일 형식으로 설정 합니다.  
-  
-```csharp  
-\<#@ output extension=".tt" \#>  
-\<#@ assembly name="System.Xml.dll" \#>  
-\<#@ import namespace="System.Xml" \#>  
-\<#  
-XmlDocument xDoc = new XmlDocument();  
-//System.Diagnostics.Debugger.Break();  
-    xDoc.Load(@"E:\CSharp\Overview.xml");  
-    XmlAttributeCollection attributes = xDoc.Attributes;  
-    if (attributes != null)  
-    {  
-       foreach (XmlAttribute attr in attributes)  
-       {\#>  
-           \<#= attr.Name \#>  
-       \<#}  
-     }  
-\#>  
-```  
-  
- 생성된 된 텍스트 출력은 텍스트 템플릿입니다.  
-  
-```  
-<#@ output extension=".tt" #>  
-<#@ assembly name="System.Xml.dll" #>  
-<#@ import namespace="System.Xml" #>  
-<#  
-XmlDocument xDoc = new XmlDocument();  
-//System.Diagnostics.Debugger.Break();  
-    xDoc.Load(@"E:\CSharp\Overview.xml");  
-    XmlAttributeCollection attributes = xDoc.Attributes;  
-    if (attributes != null)  
-    {  
-       foreach (XmlAttribute attr in attributes)  
-       {#>  
-           <#= attr.Name #>  
-       <#}  
-     }  
-#>  
+생성 된 텍스트 출력으로 다른 텍스트 템플릿을 작성 하는 텍스트 템플릿을 만들 수 있습니다. 이 작업을 수행 하려면 텍스트 템플릿 태그를 직접 지정할 필요 없이 이스케이프 시퀀스를 사용 해야 합니다. 이스케이프 시퀀스를 사용 하지 않는 경우 생성 된 텍스트 템플릿을 미리 정의 된 의미를 갖습니다. 텍스트 템플릿에서 이스케이프 시퀀스를 사용 하는 방법에 대 한 자세한 내용은 참조 [텍스트 템플릿에서 이스케이프 시퀀스를 사용 하 여](../modeling/using-escape-sequences-in-text-templates.md)합니다.
+
+### <a name="to-generate-a-text-template-from-within-a-text-template"></a>텍스트 템플릿 내에서 텍스트 템플릿을 생성 하려면
+
+-   백슬래시를 사용 하 여 (\\) 지시문, 문, 식에 대 한 텍스트 템플릿 내에서 필요한 태그를 생성 하 고 별도 텍스트 템플릿 파일의 기능 클래스에 이스케이프 문자로 합니다.
+
+    ```
+    \<#@ directive \#>
+    \<# statement \#>
+    \<#= expression \#>
+    \<#+ classfeature \#>
+    ```
+
+## <a name="example"></a>예제
+ 다음 예제에서는 텍스트 템플릿에서 텍스트 서식 파일을 생성 하기 위해 이스케이프 문자를 사용 합니다. `output` 지시문 텍스트 템플릿 파일 형식 (.tt) 대상 파일 형식으로 설정 합니다.
+
+```csharp
+\<#@ output extension=".tt" \#>
+\<#@ assembly name="System.Xml.dll" \#>
+\<#@ import namespace="System.Xml" \#>
+\<#
+XmlDocument xDoc = new XmlDocument();
+//System.Diagnostics.Debugger.Break();
+    xDoc.Load(@"E:\CSharp\Overview.xml");
+    XmlAttributeCollection attributes = xDoc.Attributes;
+    if (attributes != null)
+    {
+       foreach (XmlAttribute attr in attributes)
+       {\#>
+           \<#= attr.Name \#>
+       \<#}
+     }
+\#>
+```
+
+ 생성된 된 텍스트 출력은 텍스트 템플릿입니다.
+
+```
+<#@ output extension=".tt" #>
+<#@ assembly name="System.Xml.dll" #>
+<#@ import namespace="System.Xml" #>
+<#
+XmlDocument xDoc = new XmlDocument();
+//System.Diagnostics.Debugger.Break();
+    xDoc.Load(@"E:\CSharp\Overview.xml");
+    XmlAttributeCollection attributes = xDoc.Attributes;
+    if (attributes != null)
+    {
+       foreach (XmlAttribute attr in attributes)
+       {#>
+           <#= attr.Name #>
+       <#}
+     }
+#>
 ```

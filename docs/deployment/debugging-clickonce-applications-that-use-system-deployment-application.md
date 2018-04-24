@@ -2,8 +2,7 @@
 title: System.Deployment.Application을 사용 하는 ClickOnce 응용 프로그램을 디버깅 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,16 +14,16 @@ helpviewer_keywords:
 - debugging, System.Deployment
 - deploying applications [ClickOnce], debugging
 ms.assetid: 86f31948-2ca8-47c0-8e8b-c2b817bbf79f
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e637a8abf3255605415067d02fb474503c3de4a7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 30cbf4aab2975b95703c24462604c1a43ed3554c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="debugging-clickonce-applications-that-use-systemdeploymentapplication"></a>System.Deployment.Application을 사용하는 ClickOnce 응용 프로그램 디버깅
 [!INCLUDE[vs_current_short](../code-quality/includes/vs_current_short_md.md)], [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포를 사용 하면 응용 프로그램 업데이트 되는 방식을 구성할 수 있습니다. 그러나 사용 및 사용자 지정 해야 할 경우 고급 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 제공한 배포 개체 모델에 액세스 할 배포 기능을 <xref:System.Deployment.Application>합니다. 사용할 수는 <xref:System.Deployment.Application> 와 같은 고급 작업에 대 한 Api:  

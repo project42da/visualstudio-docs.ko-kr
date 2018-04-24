@@ -2,8 +2,7 @@
 title: Azure 앱 서비스-Visual Studio에 게시 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/22/2017
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
 - deployment, website
@@ -13,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: d6de76a3f3bd781ec8cd798eef87cce7acd01e69
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd3fa975070656f54a48452a50e51c172d51c785
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio를 사용 하 여 Azure 응용 프로그램 서비스에 ASP.NET 또는 ASP.NET Core 응용 프로그램 게시
 
@@ -29,7 +28,7 @@ Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등�
 
 1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
-1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **웹**, 한 다음 가운데 창에서 하나를 선택 하 고 **ASP.NET 웹 응용 프로그램 (.NET Framework)**또는 (C#만) **ASP.NET Core 웹 응용 프로그램**, 클릭 하 고 **확인**합니다.
+1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **웹**, 한 다음 가운데 창에서 하나를 선택 하 고 **ASP.NET 웹 응용 프로그램 (.NET Framework)** 또는 (C#만) **ASP.NET Core 웹 응용 프로그램**, 클릭 하 고 **확인**합니다.
 
 1. 선택 **MVC**, 다음 사항을 확인 **인증 안 함** 을 선택한 다음 클릭 **확인**합니다.
 

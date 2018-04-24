@@ -2,9 +2,8 @@
 title: '&lt;compatibleFrameworks&gt; 요소 (ClickOnce 배포) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
-ms.topic: conceptual
+ms.technology: vs-ide-deployment
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -12,16 +11,16 @@ dev_langs:
 helpviewer_keywords:
 - <compatibleFrameworks> element [ClickOnce deployment manifest]
 ms.assetid: f6c3ee55-9e65-403d-8664-3ebde872c7d4
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e3554a643422aa74f8896e9911f9367566ddcfda
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d406ecf058bf1c570b57ed8f50815cc3d9378cbe
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltcompatibleframeworksgt-element-clickonce-deployment"></a>&lt;compatibleFrameworks&gt; 요소 (ClickOnce 배포)
 이 응용 프로그램이 설치 및 실행할 수 있는 .NET Framework의 버전을 식별합니다.  
@@ -49,16 +48,16 @@ ms.lasthandoff: 04/16/2018
   
 |특성|설명|  
 |---------------|-----------------|  
-|`S` `upportUrl`|선택적 요소. 호환 되는 기본.NET Framework 버전을 다운로드할 수 있는 URL을 지정 합니다.|  
+|`S` `upportUrl`|선택 사항입니다. 호환 되는 기본.NET Framework 버전을 다운로드할 수 있는 URL을 지정 합니다.|  
   
 ## <a name="framework"></a>프레임워크  
- 필수 요소. 다음 표에서 특성을 나열 하는 `framework` 요소를 지원 합니다.  
+ 필수. 다음 표에서 특성을 나열 하는 `framework` 요소를 지원 합니다.  
   
 |특성|설명|  
 |---------------|-----------------|  
-|`targetVersion`|필수 요소. 대상.NET Framework의 버전 번호를 지정합니다.|  
-|`profile`|필수 요소. 대상.NET Framework의 프로필을 지정합니다.|  
-|`supportedRuntime`|필수 요소. 대상.NET Framework와 관련 된 런타임 버전 번호를 지정 합니다.|  
+|`targetVersion`|필수. 대상.NET Framework의 버전 번호를 지정합니다.|  
+|`profile`|필수. 대상.NET Framework의 프로필을 지정합니다.|  
+|`supportedRuntime`|필수. 대상.NET Framework와 관련 된 런타임 버전 번호를 지정 합니다.|  
   
 ## <a name="remarks"></a>설명  
   

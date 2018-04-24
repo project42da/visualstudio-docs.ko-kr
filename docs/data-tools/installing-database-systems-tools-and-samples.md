@@ -1,6 +1,5 @@
 ---
-title: Visual Studio 데이터베이스 호환성 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 데이터베이스 호환성
 ms.date: 09/06/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,11 +13,11 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3c8cffef6144c188fd5f53e504f6065c4e7d0c1d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e1415ec8166ae98d6178c036fec043cc473aca7d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="compatible-database-systems-for-visual-studio"></a>Visual Studio에 대 한 호환 데이터베이스 시스템
 
@@ -56,5 +55,5 @@ Firebird는 오픈 소스 SQL 데이터베이스 시스템입니다. 다운로�
 
 ## <a name="see-also"></a>참고자료
 
-[Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)  
-[버전 및 SQL Server 및 해당 구성 요소의 버전을 확인 하는 방법](http://support.microsoft.com/kb/321185)
+- [Visual Studio에서 데이터 액세스](../data-tools/accessing-data-in-visual-studio.md)
+- [버전 및 SQL Server 및 해당 구성 요소의 버전을 확인 하는 방법](http://support.microsoft.com/kb/321185)

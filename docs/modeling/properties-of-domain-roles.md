@@ -1,19 +1,18 @@
 ---
-title: 도메인 역할의 속성 | Microsoft Docs
-ms.custom: ''
+title: 도메인 역할의 속성
 ms.date: 11/04/2016
-ms.topic: conceptual
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 00ed4a86f2a00f9317f198d925fddbbc7f115481
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ead7128c998b8c4ed97acac0f6da0f08113e7bef
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="properties-of-domain-roles"></a>도메인 역할의 속성
 다음 표에 있는 속성 도메인 역할 연관 됩니다. 도메인 역할에 대 한 정보를 참조 하십시오. [이해 모델, 클래스 및 관계](../modeling/understanding-models-classes-and-relationships.md)합니다. 이러한 속성을 사용 하는 방법에 대 한 자세한 내용은 참조 [사용자 지정 및 도메인 특정 언어 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)합니다.
@@ -40,7 +39,8 @@ ms.lasthandoff: 04/16/2018
 |속성 표시 이름|생성 된 역할 속성에 대 한 생성 된 디자이너에 표시 되는 이름입니다.|속성 이름 속성의 조정 된 값입니다.|
 
 > [!NOTE]
->  표시 이름의 기본값은 소문자 문자 앞 하 고 다른 대문자 문자가 나오지 않습니다 각 대문자 문자 앞에 공백을 삽입 하 여 연결된 된 속성 값을 기반으로 합니다.
+> 표시 이름의 기본값은 소문자 문자 앞 하 고 다른 대문자 문자가 나오지 않습니다 각 대문자 문자 앞에 공백을 삽입 하 여 연결된 된 속성 값을 기반으로 합니다.
 
 ## <a name="see-also"></a>참고 항목
- [도메인 관계의 속성](../modeling/properties-of-domain-relationships.md)
+
+- [도메인 관계의 속성](../modeling/properties-of-domain-relationships.md)

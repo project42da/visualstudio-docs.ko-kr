@@ -2,8 +2,7 @@
 title: '방법: ClickOnce를 통해 게시할 파일 지정 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Publish.BaseProvider.Dialog.File
@@ -15,25 +14,25 @@ helpviewer_keywords:
 - ClickOnce deployment, file exclusion
 - files, publishing via ClickOnce
 ms.assetid: 579c134a-d50f-4e0c-8e05-2a4ff654896a
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7906801baf00c8657c4ddd4e9ffadc4e8c67eba7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5c59ffc2324f25c42b505505b0dbea9160ef023a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-specify-which-files-are-published-by-clickonce"></a>방법: ClickOnce를 통해 게시할 파일 지정
 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램, 모든 비 코드 파일이 프로젝트에 응용 프로그램과 함께 배포 됩니다. 경우에 따라 원하는 또는 특정 파일을 게시 해야 할 수 있습니다 또는 조건에 따라 특정 파일을 설치 하는 것이 좋습니다. Visual Studio를 파일을 제외 하 고 파일을 데이터 파일 또는 필수 구성 요소를 표시할 조건부 설치에 대 한 파일 그룹을 만들 수 있는 기능을 제공 합니다.  
   
  파일에 대 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에서 관리 되는 **응용 프로그램 파일** 에서 액세스할 수 있는 대화 상자는 **게시** 의 페이지는 **프로젝트 디자이너**합니다.  
   
- 처음에 명명 된 단일 파일 그룹이 **(필수)**합니다. 추가 파일 그룹을 만들고 파일을 지정할 수 있습니다. 변경할 수 없습니다는 **다운로드 그룹** 실행할 응용 프로그램에 필요한 파일에 대 한 합니다. 예, 응용 프로그램의.exe 파일 또는 파일으로 표시 된 데이터 파일에 속해야 합니다는 **(필수)** 그룹입니다.  
+ 처음에 명명 된 단일 파일 그룹이 **(필수)** 합니다. 추가 파일 그룹을 만들고 파일을 지정할 수 있습니다. 변경할 수 없습니다는 **다운로드 그룹** 실행할 응용 프로그램에 필요한 파일에 대 한 합니다. 예, 응용 프로그램의.exe 파일 또는 파일으로 표시 된 데이터 파일에 속해야 합니다는 **(필수)** 그룹입니다.  
   
- 기본 게시 상태 파일의 값은 태그로 지정 **(자동)**합니다. 예를 들어 응용 프로그램의.exe에의 게시 상태 **포함 (자동)** 기본적으로 합니다.  
+ 기본 게시 상태 파일의 값은 태그로 지정 **(자동)** 합니다. 예를 들어 응용 프로그램의.exe에의 게시 상태 **포함 (자동)** 기본적으로 합니다.  
   
  사용 하 여 파일의 **빌드 작업** 속성이로 설정 **콘텐츠** 응용 프로그램 파일로 지정 하 고 기본적으로 포함 된 것으로 표시 됩니다. 포함, 제외 하거나 수 데이터 파일로 표시 합니다. 예외는 다음과 같습니다.  
   

@@ -1,20 +1,18 @@
 ---
-title: 규칙을 사용 하 여 실행을 위해 c + + 규칙을 지정 하려면 집합 | Microsoft Docs
-ms.custom: ''
+title: 규칙 집합을 사용하여 실행할 C++ 규칙 지정
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
+ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 author: mikeblome
 ms.author: mblome
-manager: douge
+manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 9caf8b1d31ed41684e21388cc9b03594d688c40e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ad464b11538dd8a3faf2bdf26cd7e3b2bc9650dd
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용 하 여 실행을 위해 c + + 규칙을 지정 하려면
 
@@ -60,7 +58,7 @@ Visual Studio에서 있습니다 만들고 수정할 수는 사용자 지정 *�
 
 - 모든 그룹의 규칙을 축소 하려면 탭 선택 **모두 축소**합니다.
 
-- 규칙 통해 그룹화 되는 필드를 변경 하려면 필드를 선택는 **Group By** 목록입니다. 그룹 해제 된 규칙을 표시 하려면 선택  **\<없음 >**합니다.
+- 규칙 통해 그룹화 되는 필드를 변경 하려면 필드를 선택는 **Group By** 목록입니다. 그룹 해제 된 규칙을 표시 하려면 선택  **\<없음 >** 합니다.
 
 - 를 추가 하거나 규칙 열에 있는 필드를 제거 하려면 선택 **열 옵션**합니다.
 

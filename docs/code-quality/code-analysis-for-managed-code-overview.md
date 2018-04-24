@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 관리 되는 코드에 대 한 분석 코드 | Microsoft Docs
+title: Visual Studio에서 관리 되는 코드에 대 한 코드 분석
 ms.date: 03/26/2018
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 9a720a1ad65f06ca6810ce0d9f9d9fe29371d539
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 727a63d122871ff452365eea66e9a6e63a7c67b0
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="overview-of-code-analysis-for-managed-code"></a>관리 코드에 대 한 코드 분석 개요
 
@@ -33,7 +33,7 @@ Visual Studio 2017 두 가지 방법으로 관리 되는 코드 분석: 이전 *
 
 프로젝트를 빌드할 때마다 코드 분석을 실행 하려면 선택 **빌드에 코드 분석 사용** 프로젝트의 속성 페이지에 있습니다. 자세한 내용은 참조 [하는 방법: 설정 및 자동 코드 분석 사용 안 함](../code-quality/how-to-enable-and-disable-automatic-code-analysis-for-managed-code.md)합니다.
 
-프로젝트에 대해 수동으로 코드 분석을 실행 하려면 선택에 메뉴 모음에서 **분석** > **코드 분석 실행** > **에서 코드 분석 실행 \<프로젝트 >**합니다.
+프로젝트에 대해 수동으로 코드 분석을 실행 하려면 선택에 메뉴 모음에서 **분석** > **코드 분석 실행** > **에서 코드 분석 실행 \<프로젝트 >** 합니다.
 
 ## <a name="rule-sets"></a>규칙 집합
 

@@ -1,20 +1,18 @@
 ---
-title: 혼합된 권장 규칙 규칙 집합 | Microsoft Docs
-ms.custom: ''
+title: 혼합 권장 규칙 규칙 집합
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: dfecf4019244e02816686783171cb34cd0c0c1d5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b84c218ad6a369cfc5d9f06a5f5833fb277692ee
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="mixed-recommended-rules-rule-set"></a>혼합 권장 규칙 규칙 집합
 
@@ -215,7 +213,7 @@ Microsoft 혼합 권장 규칙을 지 원하는 잠재적 보안 허점, 응용 
 |[C28253](../code-quality/c28253.md)|함수에 대한 주석이 일치하지 않습니다. 이 인스턴스에 대한 다른 주석이 매개 변수에 있습니다.|
 |[C28254](../code-quality/c28254.md)|dynamic_cast<>()는 주석에서 지원되지 않습니다.|
 |[C28262](../code-quality/c28262.md)|주석에 대한 주석 구문 오류가 함수에 있습니다.|
-|[C28263](../code-quality/c28263.md)|내장 주석에 대한 조건부 주석에 구문 오류가 있습니다.| 
+|[C28263](../code-quality/c28263.md)|내장 주석에 대한 조건부 주석에 구문 오류가 있습니다.|
 |[C28267](../code-quality/c28267.md)|함수 주석에서 주석 구문 오류가 발견되었습니다.|
 |[C28272](../code-quality/c28272.md)|함수, 매개 변수에 대한 주석이 검사 시 함수 선언과 일치하지 않습니다.|
 |[C28273](../code-quality/c28273.md)|함수의 경우 단서가 함수 선언과 일치하지 않습니다.|

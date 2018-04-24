@@ -2,8 +2,7 @@
 title: '방법: CD 설치에 대 한 자동 시작 사용 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce deployment, installation on CD or DVD
 - deploying applications [ClickOnce], installation on CD or DVD
 ms.assetid: caaec619-900c-4790-90e3-8c91f5347635
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 896d0f97df444ae24e81037e49d211084e5f577e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 230f0491993b3804c3147e727900de2647ff7bda
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-enable-autostart-for-cd-installations"></a>방법: CD 설치를 위한 자동 시작 사용
 배포 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] CD-ROM 또는 DVD-ROM와 같은 이동식 미디어를 사용 하 여 응용 프로그램을 사용 가능 `AutoStart` 있도록는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 미디어를 삽입할 때 응용 프로그램이 자동으로 시작 합니다.  

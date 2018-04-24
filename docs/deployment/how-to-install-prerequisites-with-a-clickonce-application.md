@@ -2,8 +2,7 @@
 title: '방법: ClickOnce 응용 프로그램 필수 구성 요소 설치 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - prerequisites, ClickOnce
 - components, bootstrapping
 ms.assetid: e964fca5-fdfd-47cf-a1c9-7fb96b1c88b5
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6f1d71d9bbabeb5e912ba01cf6237ddd94d00b3b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d803ae651d75dd6195e4046b86a77d46d3174fc4
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-install-prerequisites-with-a-clickonce-application"></a>방법: ClickOnce 응용 프로그램을 사용하여 필수 구성 요소 설치
 모든 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에 올바른 버전의.NET Framework 실행 되기 전에 컴퓨터에 설치 되어 있는지 필요 있으며 대부분의 응용 프로그램 필수 구성 요소 뿐입니다. 게시 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 응용 프로그램과 함께 패키징되 필수 구성 요소 집합을 선택할 수 있습니다. 설치 시에는 확인을 수행 하는 경우 이미 존재 합니다; 확인 하려면 각 필수 구성 요소에 대 한 설치 하기 전에 설치 됩니다 하지 하는 경우는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다.  

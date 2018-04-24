@@ -1,5 +1,5 @@
 ---
-title: '방법: 사용 하도록 설정 하 고 관리 코드에 대 한 전체 솔루션 분석 사용 안 함 | Microsoft Docs'
+title: '방법: 설정 및 관리 코드에 대 한 전체 솔루션 분석 사용 해제'
 ms.date: 03/23/2018
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,11 +10,11 @@ manager: douge
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5221f2a97f892f272cce33b4f464a9ff223e8824
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 52b181fe58297bb10e1a2abd0f9ff7bf9c78069e
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-enable-and-disable-full-solution-analysis-for-managed-code"></a>방법: 관리 코드에 대 한 전체 솔루션 분석 활성화 및 비활성화
 

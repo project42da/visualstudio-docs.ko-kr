@@ -2,8 +2,7 @@
 title: '연습: ClickOnce 응용 프로그램을 수동으로 배포 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,21 +17,21 @@ helpviewer_keywords:
 - manual ClickOnce deployments
 - manifests [ClickOnce]
 ms.assetid: ccee6551-a1b9-4ca2-8845-9c1cf4ac2560
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 001aa8f3436e1594b198a81779c77258ca829a21
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 71ab59e09f450d1656d77c551b3f44d0a60f1a57
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application"></a>연습: ClickOnce 응용 프로그램 수동 배포
 배포 하려면 Visual Studio를 사용할 수 없는 경우 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 고급 배포 기능을 사용 해야 하는 응용 프로그램을 만드는 데 Mage.exe 명령줄 도구 사용 해야 하는 신뢰할 수 있는 응용 프로그램 배포와 같은 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 매니페스트 합니다. 이 연습을 만드는 방법을 설명는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 명령줄 버전 (Mage.exe) 또는 매니페스트 생성 및 편집 도구의 그래픽 버전 (MageUI.exe) 중 하나를 사용 하 여 배포 합니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>전제 조건  
  이 연습에서는 일부 필수 구성 요소 및 배포를 빌드하기 전에 선택 해야 하는 옵션에 있습니다.  
   
 -   Mage.exe 및 MageUI.exe를 설치 합니다.  

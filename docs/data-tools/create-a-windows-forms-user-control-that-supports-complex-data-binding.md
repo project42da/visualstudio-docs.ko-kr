@@ -1,6 +1,5 @@
 ---
-title: Windows Forms 사용자 정의 컨트롤을 데이터 바인딩 만들기 | Microsoft Docs
-ms.custom: ''
+title: Windows Forms 사용자 정의 컨트롤을 데이터 바인딩 만들기
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -16,11 +15,11 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f7dac1b763e444349f741f72dae8c41fa8087a26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0b7431ca6f0d4ac73a07a51893fd0c17c4fada57
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>복잡 한 데이터 바인딩을 지 원하는 Windows Forms 사용자 정의 컨트롤 만들기
 
@@ -111,7 +110,7 @@ Windows 응용 프로그램에서 폼에 데이터를 표시할 때의 기존 �
 ## <a name="add-the-required-data-binding-attribute"></a>필수 데이터 바인딩 특성 추가
 
 데이터 바인딩을 지원하는 복합 컨트롤에 대해 <xref:System.ComponentModel.ComplexBindingPropertiesAttribute>를 구현할 수 있습니다.
-  
+
 ### <a name="to-implement-the-complexbindingproperties-attribute"></a>ComplexBindingProperties 특성을 구현하려면
 
 1. 스위치는 **ComplexDataGridView** 컨트롤을 코드 보기로 합니다. (에 **보기** 메뉴 선택 **코드**.)
@@ -173,7 +172,7 @@ Windows 응용 프로그램에서 폼에 데이터를 표시할 때의 기존 �
 
 ### <a name="to-create-data-bound-controls-on-the-form"></a>폼에서 데이터 바인딩된 컨트롤을 만들려면
 
-주 끌어 **고객** 에서 노드는 **데이터 소스** 창에서 폼으로 합니다. 확인은 **ComplexDataGridView** 컨트롤은 테이블의 데이터를 표시 하는 데 사용 합니다.  
+주 끌어 **고객** 에서 노드는 **데이터 소스** 창에서 폼으로 합니다. 확인은 **ComplexDataGridView** 컨트롤은 테이블의 데이터를 표시 하는 데 사용 합니다.
 
 ## <a name="running-the-application"></a>응용 프로그램 실행
 
@@ -191,6 +190,6 @@ F5 키를 눌러 응용 프로그램을 실행합니다.
 
 ## <a name="see-also"></a>참고자료
 
-[Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)  
-[데이터 소스 창에서 끌어올 때 만들 컨트롤 설정](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)  
-[Windows Forms 컨트롤](/dotnet/framework/winforms/controls/index)
+- [Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩](../data-tools/bind-windows-forms-controls-to-data-in-visual-studio.md)
+- [데이터 소스 창에서 끌어올 때 만들 컨트롤 설정](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)
+- [Windows Forms 컨트롤](/dotnet/framework/winforms/controls/index)

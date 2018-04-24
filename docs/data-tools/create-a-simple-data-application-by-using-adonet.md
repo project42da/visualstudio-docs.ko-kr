@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기 | Microsoft Docs
+title: Visual Studio에서 ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기
 ms.date: 08/23/2017
 ms.topic: conceptual
 dev_langs:
@@ -12,11 +12,11 @@ manager: douge
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8bde01870a4511b261759cc7dd5dca04b211f2bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9501b9f33290f3b2116d6b84371675682e8deb05
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기
 
@@ -129,7 +129,7 @@ ms.lasthandoff: 04/16/2018
 
 2.  에 **이름** 열, 입력 `connString`합니다.
 
-3.  에 **형식** 목록에서 **(연결 문자열)**합니다.
+3.  에 **형식** 목록에서 **(연결 문자열)** 합니다.
 
 4.  에 **범위** 목록에서 **응용 프로그램**합니다.
 

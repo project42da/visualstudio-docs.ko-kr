@@ -16,11 +16,11 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 49008836057ce6e5b67a0795bc5c6572ef6f7935
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e4b36800ea291c6f1bc0948a46b67c4e3549f349
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="adding-a-shortcut-menu-in-a-tool-window"></a>도구 창에서 바로 가기 메뉴를 추가합니다.
 이 연습에서는 도구 창에서 바로 가기 메뉴를 넣습니다. 바로 가기 메뉴에 단추, 텍스트 상자 또는 창 배경 단추로 클릭할 때 표시 되는 메뉴가입니다. 바로 가기 메뉴에 명령을 다른 메뉴나 도구 모음에서 명령과 동일 하 게 동작 합니다. 바로 가기 메뉴를 지원 하려면.vsct 파일에서 지정 하 고 마우스 오른쪽 단추로 클릭에 대 한 응답에 표시 합니다.  
@@ -31,12 +31,12 @@ ms.lasthandoff: 04/16/2018
   
  또는 바로 가기 메뉴에 Visual Studio 기능을 액세스 하지 않는 경우 있습니다 사용할 수는 <xref:System.Windows.FrameworkElement.ContextMenu%2A> 사용자 정의 컨트롤에 있는 XAML 요소의 속성입니다. 자세한 내용은 참조 [ContextMenu](/dotnet/framework/wpf/controls/contextmenu)합니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-the-tool-window-shortcut-menu-package"></a>도구 창 바로 가기 메뉴 패키지 만들기  
   
-1.  라는 VSIX 프로젝트를 `TWShortcutMenu` 라는 도구 창이 서식 파일을 추가 하 고 **ShortCutMenu** 를 합니다. 도구 창을 만드는 방법에 대 한 자세한 내용은 참조 [도구 창을 사용 된 확장을 만드는](../extensibility/creating-an-extension-with-a-tool-window.md)합니다.  
+1.  라는 VSIX 프로젝트를 `TWShortcutMenu` 라는 도구 창이 서식 파일을 추가 하 고 **ShortcutMenu** 를 합니다. 도구 창을 만드는 방법에 대 한 자세한 내용은 참조 [도구 창을 사용 된 확장을 만드는](../extensibility/creating-an-extension-with-a-tool-window.md)합니다.  
   
 ## <a name="specifying-the-shortcut-menu"></a>바로 가기 메뉴를 지정합니다.  
  이 연습에 표시 된 것의 사용자 수와 같은 바로 가기 메뉴 도구 창의 배경을 채우는 데 사용 되는 색의 목록에서 선택 합니다.  
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/16/2018
     </Buttons>  
     ```  
   
-5.  ShortcutMenuPackageGuids.cs, GUID, 바로 가기 메뉴 및 메뉴 항목을 설정 하는 명령에 대 한 정의 추가 합니다.  
+5.  ShortcutMenuCommand.cs, GUID, 바로 가기 메뉴 및 메뉴 항목을 설정 하는 명령에 대 한 정의 추가 합니다.  
   
     ```csharp  
     public const string guidShortcutMenuPackageCmdSet = "00000000-0000-0000-0000-00000000"; // your GUID will differ  
@@ -143,7 +143,7 @@ ms.lasthandoff: 04/16/2018
     ```csharp  
     protected override void Initialize()  
     {  
-        commandService = (OleMenuCommandService)GetService(typeof(IMenuCommandService));  
+        var commandService = (OleMenuCommandService)GetService(typeof(IMenuCommandService));  
         Content = new ShortcutMenuControl(commandService);  
     }  
     ```  
@@ -170,12 +170,12 @@ ms.lasthandoff: 04/16/2018
         if (null !=commandService)  
         {  
             // Create an alias for the command set guid.  
-            Guid guid = new Guid(ShortcutMenuPackageGuids.guidShortcutMenuPackageCmdSet);  
+            Guid guid = new Guid(ShortcutMenuCommand.guidShortcutMenuPackageCmdSet);  
   
             // Create the command IDs.   
-            var red = new CommandID(guid, ShortcutMenuPackageGuids.cmdidRed);  
-            var yellow = new CommandID(guid, ShortcutMenuPackageGuids.cmdidYellow);  
-            var blue = new CommandID(guid, ShortcutMenuPackageGuids.cmdidBlue);  
+            var red = new CommandID(guid, ShortcutMenuCommand.cmdidRed);  
+            var yellow = new CommandID(guid, ShortcutMenuCommand.cmdidYellow);  
+            var blue = new CommandID(guid, ShortcutMenuCommand.cmdidBlue);  
   
             // Add a command for each command ID.  
             commandService.AddCommand(new MenuCommand(ChangeColor, red));  
@@ -234,8 +234,8 @@ ms.lasthandoff: 04/16/2018
         if (null != commandService)  
         {  
             CommandID menuID = new CommandID(  
-                new Guid(ShortcutMenuPackageGuids.guidShortcutMenuPackageCmdSet),  
-                ShortcutMenuPackageGuids.ColorMenu);  
+                new Guid(ShortcutMenuCommand.guidShortcutMenuPackageCmdSet),  
+                ShortcutMenuCommand.ColorMenu);  
             Point p = this.PointToScreen(e.GetPosition(this));  
             commandService.ShowContextMenu(menuID, (int)p.X, (int)p.Y);  
         }  
@@ -253,13 +253,13 @@ ms.lasthandoff: 04/16/2018
   
         switch (mc.CommandID.ID)  
         {  
-            case ShortcutMenuPackageGuids.cmdidRed:  
+            case ShortcutMenuCommand.cmdidRed:  
                 MyToolWindow.Background = Brushes.Red;  
                 break;  
-            case ShortcutMenuPackageGuids.cmdidYellow:  
+            case ShortcutMenuCommand.cmdidYellow:  
                 MyToolWindow.Background = Brushes.Yellow;  
                 break;  
-            case ShortcutMenuPackageGuids.cmdidBlue:  
+            case ShortcutMenuCommand.cmdidBlue:  
                 MyToolWindow.Background = Brushes.Blue;  
                 break;  
         }  

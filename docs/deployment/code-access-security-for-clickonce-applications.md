@@ -2,8 +2,7 @@
 title: ClickOnce 응용 프로그램에 대 한 코드 액세스 보안 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 f1_keywords:
 - vb.XBAPProjectPropertiesSecurity.HowTo
@@ -21,16 +20,16 @@ helpviewer_keywords:
 - ClickOnce applications, code access security policies
 - security, ClickOnce
 ms.assetid: 04b104d0-0bd3-4ccb-b164-1de92d234487
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 33e6e376f27dd2cb0a1ccd30a785345c8f7668dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dad9b3c8391c54c4d668a4c695f4f459664ef373
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="code-access-security-for-clickonce-applications"></a>ClickOnce 응용 프로그램의 코드 액세스 보안
 ClickOnce 응용 프로그램은 .NET Framework를 기반으로 하며 코드 액세스 보안 제약 조건의 적용을 받습니다. 따라서 코드 액세스 보안의 의미를 이해하여 ClickOnce 응용 프로그램을 적절하게 작성해야 합니다.  

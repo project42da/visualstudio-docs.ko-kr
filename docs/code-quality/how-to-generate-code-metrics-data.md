@@ -1,6 +1,5 @@
 ---
-title: Visual Studio에서 코드 메트릭 데이터를 생성 하는 방법 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio에서 코드 메트릭 데이터를 생성 하는 방법
 ms.date: 12/12/2017
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -13,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b81c8f07295005bd9888dca96bbaa89464990717
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c412c90d77534a3359eb2ae640ba3a83cfddbc8b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-generate-code-metrics-data"></a>방법: 코드 메트릭 데이터 생성
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 
 1. **솔루션 탐색기**, 하나 이상의 프로젝트를 선택 합니다.
 
-1. 메뉴 모음에서 **분석** > **코드 메트릭 계산** > **에 대 한 < 프로젝트\>**합니다.
+1. 메뉴 모음에서 **분석** > **코드 메트릭 계산** > **에 대 한 < 프로젝트\>** 합니다.
 
    결과가 생성 되 고 **코드 메트릭 결과** 창이 표시 됩니다.
 

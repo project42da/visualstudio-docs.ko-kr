@@ -1,10 +1,8 @@
 ---
-title: 이식성 경고 | Microsoft Docs
-ms.custom: ''
+title: 이식성 경고
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - vs.codeanalysis.PortabilityRules
 helpviewer_keywords:
@@ -17,19 +15,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80323aff144bde0cd2f21b0ff3ced376c18b1a33
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6fe3bcd703d7fd58d5590b755a553d8ead4c0a9
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="portability-warnings"></a>이식성 경고
-이식성 경고 서로 다른 운영 체제 간의 이식성을 지원 합니다.  
-  
-## <a name="in-this-section"></a>섹션 내용  
-  
-|규칙|설명|  
-|----------|-----------------|  
-|[CA1900: 값 형식 필드는 이식 가능해야 합니다.](../code-quality/ca1900-value-type-fields-should-be-portable.md)|이 규칙에서는 명시적 레이아웃 특성을 사용 하 여 선언 된 구조체가 64 비트 운영 체제에서 비관리 코드로 마샬링될 때 올바르게 맞춰지는지 검사 합니다.|  
-|[CA1901: P/Invoke 선언은 이식 가능 해야 합니다.](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|이 규칙은 P/Invoke의 반환 값과 각 매개 변수의 크기를 계산 하 고 크기가 32 비트 및 64 비트 운영 체제에서 비관리 코드로 마샬링될 때 정확한 지 확인 합니다.|  
+이식성 경고 서로 다른 운영 체제 간의 이식성을 지원 합니다.
+
+## <a name="in-this-section"></a>섹션 내용
+
+|규칙|설명|
+|----------|-----------------|
+|[CA1900: 값 형식 필드는 이식 가능해야 합니다.](../code-quality/ca1900-value-type-fields-should-be-portable.md)|이 규칙에서는 명시적 레이아웃 특성을 사용 하 여 선언 된 구조체가 64 비트 운영 체제에서 비관리 코드로 마샬링될 때 올바르게 맞춰지는지 검사 합니다.|
+|[CA1901: P/Invoke 선언은 이식 가능 해야 합니다.](../code-quality/ca1901-p-invoke-declarations-should-be-portable.md)|이 규칙은 P/Invoke의 반환 값과 각 매개 변수의 크기를 계산 하 고 크기가 32 비트 및 64 비트 운영 체제에서 비관리 코드로 마샬링될 때 정확한 지 확인 합니다.|
 |[CA1903: 대상 프레임워크에서 API만 사용하십시오.](../code-quality/ca1903-use-only-api-from-targeted-framework.md)|멤버 또는 형식이 프로젝트의 대상 프레임워크에 함께 포함되지 않은 서비스 팩에 도입된 멤버 또는 형식을 사용합니다.|

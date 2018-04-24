@@ -1,10 +1,8 @@
 ---
-title: 'CA2146: 형식은 최소한 기본 형식 및 인터페이스 만큼 중요 이어야 합니다 | Microsoft Docs'
-ms.custom: ''
+title: 'CA2146: 형식은 최소한 기본 형식 및 인터페이스만큼 중요해야 합니다.'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-code-analysis
-ms.topic: conceptual
+ms.technology: vs-ide-code-analysis
+ms.topic: reference
 f1_keywords:
 - CA2146
 ms.assetid: 241fb784-1f6b-46e5-8ceb-c438e341d38e
@@ -13,31 +11,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b956397818c171091e4ad982d92adc5e62370a39
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d480b3b9fc2d6d294f13b15742e79c118ffec8f6
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces"></a>CA2146: 형식은 최소한 기본 형식 및 인터페이스만큼 중요해야 합니다.
-|||  
-|-|-|  
-|TypeName|TypesMustBeAtLeastAsCriticalAsBaseTypes|  
-|CheckId|CA2146|  
-|범주|Microsoft.Security|  
-|변경 수준|주요 변경|  
-  
-## <a name="cause"></a>원인  
- 투명 형식으로 표시 되는 형식에서 파생 되는 <xref:System.Security.SecuritySafeCriticalAttribute> 또는 <xref:System.Security.SecurityCriticalAttribute>, 또는 형식으로 표시 된는 <xref:System.Security.SecuritySafeCriticalAttribute> 특성으로 표시 되는 형식에서 파생 되는 <xref:System.Security.SecurityCriticalAttribute> 특성.  
-  
-## <a name="rule-description"></a>규칙 설명  
- 이 규칙은 파생 형식에 기본 형식 또는 구현된 인터페이스만큼 중요하지 않은 보안 투명성 특성이 있을 때 적용됩니다. 중요한 기본 형식에서 파생되거나 중요한 인터페이스를 구현할 수 있는 것은 중요한 형식뿐이고, 안전에 중요한 기본 형식에서 파생되거나 안전에 중요한 인터페이스를 구현할 수 있는 것은 중요하거나 안전에 중요한 형식뿐입니다. 수준 2 투명도에이 규칙의 위반 사항이 발생 한 <xref:System.TypeLoadException> 파생된 형식에 대 한 합니다.  
-  
-## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법  
- 이 위반으로이 인해를 해결 하려면 최소한 기본 형식이 나 인터페이스 만큼 중요 한 투명도 특성 구현 또는 파생 형식을 표시 합니다.  
-  
-## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우  
- 이 규칙에서는 경고를 표시해야 합니다.  
-  
-## <a name="example"></a>예제  
+|||
+|-|-|
+|TypeName|TypesMustBeAtLeastAsCriticalAsBaseTypes|
+|CheckId|CA2146|
+|범주|Microsoft.Security|
+|변경 수준|주요 변경|
+
+## <a name="cause"></a>원인
+ 투명 형식으로 표시 되는 형식에서 파생 되는 <xref:System.Security.SecuritySafeCriticalAttribute> 또는 <xref:System.Security.SecurityCriticalAttribute>, 또는 형식으로 표시 된는 <xref:System.Security.SecuritySafeCriticalAttribute> 특성으로 표시 되는 형식에서 파생 되는 <xref:System.Security.SecurityCriticalAttribute> 특성.
+
+## <a name="rule-description"></a>규칙 설명
+ 이 규칙은 파생 형식에 기본 형식 또는 구현된 인터페이스만큼 중요하지 않은 보안 투명성 특성이 있을 때 적용됩니다. 중요한 기본 형식에서 파생되거나 중요한 인터페이스를 구현할 수 있는 것은 중요한 형식뿐이고, 안전에 중요한 기본 형식에서 파생되거나 안전에 중요한 인터페이스를 구현할 수 있는 것은 중요하거나 안전에 중요한 형식뿐입니다. 수준 2 투명도에이 규칙의 위반 사항이 발생 한 <xref:System.TypeLoadException> 파생된 형식에 대 한 합니다.
+
+## <a name="how-to-fix-violations"></a>위반 문제를 해결하는 방법
+ 이 위반으로이 인해를 해결 하려면 최소한 기본 형식이 나 인터페이스 만큼 중요 한 투명도 특성 구현 또는 파생 형식을 표시 합니다.
+
+## <a name="when-to-suppress-warnings"></a>경고를 표시하지 않는 경우
+ 이 규칙에서는 경고를 표시해야 합니다.
+
+## <a name="example"></a>예제
  [!code-csharp[FxCop.Security.CA2146.TypesMustBeAtLeastAsCriticalAsBaseTypes#1](../code-quality/codesnippet/CSharp/ca2146-types-must-be-at-least-as-critical-as-their-base-types-and-interfaces_1.cs)]

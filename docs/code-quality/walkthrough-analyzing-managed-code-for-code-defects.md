@@ -1,6 +1,5 @@
 ---
 title: 코드 오류에 대 한 관리 코드 분석 하는 연습 | Microsoft Docs
-ms.custom: ''
 ms.date: 01/29/2018
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -12,11 +11,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 3af6d4f1580313457aa553ce11f920be5376641c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 98d1bbd347870bd704a0d17d7ae559da00e9adb5
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>연습: 코드에 대 한 관리 코드 분석 오류
 
@@ -28,9 +27,9 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="to-create-a-class-library"></a>클래스 라이브러리를 만들려면
 
-1. **파일** 메뉴에서 **새로 만들기** > **프로젝트...**를 선택합니다.
+1. **파일** 메뉴에서 **새로 만들기** > **프로젝트...** 를 선택합니다.
 
-1. 에 **새 프로젝트** 대화 상자에서 **설치 됨** > **Visual C#**를 선택한 후 **클래식 Windows 데스크톱**합니다.
+1. 에 **새 프로젝트** 대화 상자에서 **설치 됨** > **Visual C#** 를 선택한 후 **클래식 Windows 데스크톱**합니다.
 
 1. 선택 된 **클래스 라이브러리 (.NET Framework)** 서식 파일입니다.
 
@@ -61,21 +60,21 @@ ms.lasthandoff: 04/16/2018
 ### <a name="to-analyze-a-managed-project-for-code-defects"></a>코드 오류에 대 한 관리 되는 프로젝트를 분석 하려면
 
 1. 에 있는 CodeAnalysisManagedDemo 프로젝트 **솔루션 탐색기**합니다.
-  
+
 1. **프로젝트** 메뉴에서 **속성**을 클릭합니다.
-  
+
      CodeAnalysisManagedDemo 속성 페이지가 표시 됩니다.
-  
+
 1. 선택 된 **코드 분석** 탭 합니다.
-  
+
 1. 다음 사항을 확인 **빌드에 코드 분석 사용** 을 선택 합니다.
-  
+
 1. **이 규칙 집합 실행** 드롭 다운 목록 **Microsoft 모든 규칙**합니다.
-  
+
 1. 에 **파일** 메뉴를 클릭 하 여 **선택한 항목 저장**, 한 다음 속성 페이지를 닫습니다.
-  
+
 1. 에 **빌드** 메뉴를 클릭 하 여 **CodeAnalysisManagedDemo 빌드**합니다.
-  
+
     CodeAnalysisManagedDemo 프로젝트 빌드 경고에 표시 되는 **오류 목록** 및 **출력** windows 합니다.
 
 ## <a name="correct-the-code-analysis-issues"></a>코드 분석 문제 해결
@@ -142,7 +141,7 @@ ms.lasthandoff: 04/16/2018
 
    1. 선택 된 **어셈블리에 서명** 확인란 합니다.
 
-   1. 에 **강력한 이름 키 파일 선택** 목록에서  **\<새로 만들기 … >**합니다.
+   1. 에 **강력한 이름 키 파일 선택** 목록에서  **\<새로 만들기 … >** 합니다.
 
       **강력한 이름 키 만들기** 대화 상자가 나타납니다.
 

@@ -2,8 +2,7 @@
 title: '&lt;일정&gt; 요소 (부트스트래퍼) | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - FSharp
@@ -13,16 +12,16 @@ dev_langs:
 helpviewer_keywords:
 - <Schedules> element [bootstrapper]
 ms.assetid: 28d094cf-64f5-42b1-bd8a-3697082aab4f
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b3cba1fcb5ac2d38b08383c8906adb2037e9651
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a4cbc6b4f5ebd400d90466ccfa353d679a766580
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="ltschedulesgt-element-bootstrapper"></a>&lt;일정&gt; 요소 (부트스트래퍼)
 `Schedules` 요소에 포함 되어 `Schedule` 특정 시간에 의해 정의 되는 명령 정의 하는 요소는 `Command` 요소를 실행 해야 합니다.  
@@ -51,7 +50,7 @@ ms.lasthandoff: 04/16/2018
   
 |특성|설명|  
 |---------------|-----------------|  
-|`Name`|필수 요소. 일정 항목의 이름입니다. 이에 해당는 `ScheduleName` 의 속성은 `Command` 요소입니다. 경우는 `Command` 명명 된 일정을 참조 하 여 지정 된 시간에 실행만 됩니다 `Schedule` 요소입니다. 일정와 연결 될 수도 `FailIf` 및 `BypassIf` 지정 된 일정에서 실행에 이러한 조건부 검사를 제한 하는 요소입니다. 자세한 내용은 참조 [ \<명령 > 요소](../deployment/commands-element-bootstrapper.md)합니다.|  
+|`Name`|필수. 일정 항목의 이름입니다. 이에 해당는 `ScheduleName` 의 속성은 `Command` 요소입니다. 경우는 `Command` 명명 된 일정을 참조 하 여 지정 된 시간에 실행만 됩니다 `Schedule` 요소입니다. 일정와 연결 될 수도 `FailIf` 및 `BypassIf` 지정 된 일정에서 실행에 이러한 조건부 검사를 제한 하는 요소입니다. 자세한 내용은 참조 [ \<명령 > 요소](../deployment/commands-element-bootstrapper.md)합니다.|  
   
  지정 된 `Schedule` 요소는 다음과 같은 자식이 하나만 있을 수 있습니다.  
   

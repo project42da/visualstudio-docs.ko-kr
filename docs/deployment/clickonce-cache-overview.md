@@ -2,8 +2,7 @@
 title: ClickOnce 캐시 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -14,16 +13,16 @@ helpviewer_keywords:
 - ClickOnce applications, cache
 - ClickOnce deployment, cache
 ms.assetid: e379921e-9ef1-4326-bbf3-53ba67925526
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 847e6cc7e84dcda2efdbaac630ce8589ff959180
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0ff72cd106f39b4573a0e1d61715dad4f8c65140
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="clickonce-cache-overview"></a>ClickOnce 캐시 개요
 모든 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 로컬로 설치 또는 온라인으로 호스팅되에 저장 된 클라이언트 컴퓨터에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]응용 프로그램 *캐시*합니다. A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 캐시는 현재 사용자의 Documents and Settings 폴더의 로컬 설정 디렉터리 아래에 있는 숨겨진된 디렉터리의 집합입니다. 이 캐시는 어셈블리, 구성 파일, 응용 프로그램 및 사용자 설정 및 데이터 디렉터리를 포함 하 여 응용 프로그램의 모든 파일을 보유 합니다. 또한이 캐시는 응용 프로그램의 데이터 디렉터리를 최신 버전으로 마이그레이션하기 위한 합니다. 데이터 마이그레이션에 대 한 자세한 내용은 참조 [로컬 액세스 및 ClickOnce 응용 프로그램의 원격 데이터](../deployment/accessing-local-and-remote-data-in-clickonce-applications.md)합니다.  

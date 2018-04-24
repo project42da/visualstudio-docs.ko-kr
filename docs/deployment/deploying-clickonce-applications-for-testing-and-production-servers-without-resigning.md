@@ -2,8 +2,7 @@
 title: 테스트를 위해 ClickOnce 응용 프로그램을 배포 하 고 다시 서명 하지 않고도 프로덕션 서버 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - deploymentProvider tag
 - manifests [ClickOnce]
 ms.assetid: 1218a98d-1ad5-4eef-95dd-0e0b3c44168c
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54474f0388ecbdbc9b1b1cb207544fd7091c1e96
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4c71e1bd6f224fdd0198ce7850c92364126d7e3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="deploying-clickonce-applications-for-testing-and-production-servers-without-resigning"></a>다시 서명하지 않고 테스트 및 프로덕션 서버용 ClickOnce 응용 프로그램 배포
 이 항목에서는.NET Framework 버전 3.5 ClickOnce 변경 하거나 다시 서명 하지 않고 여러 네트워크 위치에서 ClickOnce 응용 프로그램을 배포할 수 있도록 매니페스트에 도입 된 ClickOnce의 새로운 기능을 설명 합니다.  
