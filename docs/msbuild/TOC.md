@@ -194,4 +194,6 @@
 ##### [UidManager 작업](uidmanager-task.md)
 ##### [UpdateManifestForBrowserApplication 작업](updatemanifestforbrowserapplication-task.md)
 ### [이스케이프할 특수 문자](special-characters-to-escape.md)
+## [프로그래밍 방식으로 MSBuild 사용](msbuild-api.md)
+### [MSBuild 15로 업데이트](updating-an-existing-application.md)
 ## [MSBuild 용어](msbuild-glossary.md)
