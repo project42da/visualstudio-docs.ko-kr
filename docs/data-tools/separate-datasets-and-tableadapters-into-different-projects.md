@@ -9,14 +9,15 @@ ms.assetid: f66a3940-6227-46af-a930-9177f425f4fd
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 691ff9c46e951f32bf8652d83a218f6c1e121382
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fe7d774a9a5fa1e14cdbcb9c5d730a01fdcdeee9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="separate-datasets-and-tableadapters-into-different-projects"></a>별도 데이터 집합 및 Tableadapter 다른 프로젝트로
 형식화 된 데이터 집합 향상 된 있도록는 [Tableadapter](create-and-configure-tableadapters.md) 및 별도 프로젝트로 dataset 클래스를 생성할 수 있습니다. 따라서 빠르게 응용 프로그램 계층을 분리 하 고 n 계층 데이터 응용 프로그램을 생성할 수 있습니다.

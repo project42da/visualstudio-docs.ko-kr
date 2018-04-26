@@ -1,6 +1,7 @@
 ---
 title: 주석 적용 시기 및 위치 지정
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -14,11 +15,11 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 288d422de6d4e4c0f372820d838d0173c990f2a8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9d99ebce3adc27039763e11ed4882a20199e8469
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="specifying-when-and-where-an-annotation-applies"></a>주석 적용 시기 및 위치 지정
 주석을 이면 조건부 분석기 되도록 지정 하려면 다른 주석이 필요할 수 있습니다.  예를 들어 함수에는 동기 또는 비동기 일 수 있는 변수, 있으면 함수는 다음과 같이 동작: 동기 경우에서 항상 결국 성공 하지만 비동기 작업의 경우에 오류를 보고 즉시 성공할 수 없는 경우. 함수를 동기적으로 호출 되 면 반환 하지는 하기 때문에 코드 분석기 한 값을 제공 결과 값을 확인 합니다.  그러나 함수를 비동기적으로 호출 하는 경우 함수 결과 선택 하지 않으면 심각한 오류가 발생할 수 있습니다. 사용할 수 있는 상황을 보여 주는이 예제는 `_When_` 주석-이 문서의 뒷부분에 설명 된-확인을 사용 하 합니다.

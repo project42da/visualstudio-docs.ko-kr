@@ -11,14 +11,15 @@ ms.assetid: 6d4d15f8-4d78-42fd-af64-779ae98d62c8
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 35bcc2ed38a8330e7eb4ab38416c91a5c51ec2d4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f6c2dffe793928532d36b539ba73914ecf0c24dc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio의 데이터 바인딩된 컨트롤에 대 한 캡션을 만드는 방법을 사용자 지정
 항목을 끌면는 [데이터 소스 창](add-new-data-sources.md) 디자이너에 특별 한 고려 질문과 관련 하 여: 캡션 레이블의 열 이름을 두 보다 읽기 쉬운 문자열로 변경 또는 되도록 개 이상의 단어가 서로 연결 됩니다. 이러한 레이블을 설정 하 여 만든 하는 방법을 사용자 지정할 수 있습니다는 **SmartCaptionExpression**, **SmartCaptionReplacement**, 및 **SmartCaptionSuffix** 값 **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data 디자이너** 레지스트리 키입니다.

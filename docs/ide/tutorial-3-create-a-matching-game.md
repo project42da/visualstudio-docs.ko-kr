@@ -1,9 +1,9 @@
 ---
-title: '자습서 3: 일치 게임 만들기 | Microsoft Docs'
+title: '자습서 3: 일치 게임 만들기'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 525815c8-2845-45e8-be96-100d1f144725
 author: TerryGLee
@@ -11,39 +11,39 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3d0e538304e2d9c3fb5ca71747fd1ed2ab2a5fa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd560c6a3675617741f35f40d1fe23a70b482349
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-3-create-a-matching-game"></a>자습서 3: 일치 게임 만들기
 이 자습서에서는 플레이어가 숨겨진 아이콘의 쌍을 찾는 일치 게임을 빌드합니다. 여기에서는 다음과 같은 작업을 수행하는 방법에 대해 배우게 됩니다.  
-  
+
 -   아이콘과 같은 개체를 `List` 개체에 저장합니다.  
-  
+
 -   Visual C#의 `foreach` 루프 또는 Visual Basic의 `For Each` 루프를 사용하여 목록의 개체를 반복합니다.  
-  
+
 -   참조 변수를 사용하여 폼 상태를 추적합니다.  
-  
+
 -   여러 개체에 사용할 수 있는 이벤트에 응답하는 이벤트 처리기를 빌드합니다.  
-  
+
 -   시작된 후 카운트다운을 실시하고 단 한 번만 이벤트를 발생시키는 타이머를 만듭니다.  
-  
+
  이 자습서를 마치면 다음 그림과 같은 프로그램이 만들어집니다.  
-  
+
  ![이 자습서에서 만드는 게임](../ide/media/express_finishedgame.png "Express_FinishedGame")  
 이 자습서에서 만드는 게임  
-  
+
  샘플의 전체 버전을 다운로드하려면 [Complete Matching Game tutorial sample](http://code.msdn.microsoft.com/Complete-Matching-Game-4cffddba)(전체 일치 게임 자습서 샘플)을 참조하세요.  
-  
+
 > [!NOTE]
 >  이 자습서에는 Visual C#과 Visual Basic이 둘 다 설명되어 있으므로 사용 중인 프로그래밍 언어와 관련된 정보를 참조하십시오.  
-  
+
  어려운 점이 있거나 프로그래밍 관련 질문이 있는 경우 MSDN 포럼에 질문을 게시해 보십시오. [Visual Basic 포럼](http://social.msdn.microsoft.com/Forums/home?forum=vbgeneral) 및 [Visual C# 포럼](http://social.msdn.microsoft.com/Forums/home?forum=csharpgeneral)을 참조하세요. 또한 훌륭한 비디오 학습 자료가 무료로 제공됩니다. Visual Basic의 프로그래밍에 대한 자세한 내용은 [Visual Basic Fundamentals: Development for Absolute Beginners](http://channel9.msdn.com/Series/Visual-Basic-Development-for-Absolute-Beginners)(Visual Basic 기초: 완전 초보자를 위한 개발)를 참조하세요. Visual C#의 프로그래밍에 대한 자세한 내용은 [C# Fundamentals: Development for Absolute Beginners](http://channel9.msdn.com/Series/C-Sharp-Fundamentals-Development-for-Absolute-Beginners)(C# 기초: 완전 초보자를 위한 개발)를 참조하세요.  
-  
+
 ## <a name="related-topics"></a>관련 항목  
-  
+
 |제목|설명|  
 |-----------|-----------------|  
 |[1단계: 프로젝트 만들기 및 폼에 테이블 추가](../ide/step-1-create-a-project-and-add-a-table-to-your-form.md)|먼저 프로젝트를 만들고 `TableLayoutPanel` 컨트롤을 추가하여 컨트롤을 올바르게 정렬된 상태로 유지합니다.|  

@@ -1,18 +1,19 @@
 ---
 title: Visual Studio 연결된 환경 | Microsoft Docs
-author: johnsta
-ms.author: johnsta
+author: ghogen
+ms.author: ghogen
 ms.date: 02/20/2018
-ms.topic: get-started-article
-ms.technology: vsce-kubernetes
+ms.topic: overview
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: Azure에서 마이크로 서비스 및 컨테이너를 사용하여 신속하게 Kubernetes 개발
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
-manager: ghogen
-ms.openlocfilehash: c1ce010b6ab36c1577953ab527f3c17d5e68def8
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+manager: douge
+ms.openlocfilehash: f78a3afcf721cd9bfc5dbf3a98c932923536cffc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="vs-connected-environment-for-azure-container-service-aks-preview"></a>AKS(Azure Container Service)(미리 보기)에 대한 VS 연결된 환경
 VS 연결된 환경은 Kubernetes에서 빠르게 개발하도록 도와줍니다. Azure에서 전격 관리되고 개발에 최적화된 Kubernetes 기반 환경을 만든 다음, VS Code, Visual Studio 또는 명령줄 같은 친숙한 도구를 사용하여 클라우드에서 컨테이너를 반복적으로 개발합니다.

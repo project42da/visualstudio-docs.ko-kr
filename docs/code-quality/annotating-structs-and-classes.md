@@ -1,6 +1,7 @@
 ---
 title: 구조체 및 클래스에 주석 지정
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -24,11 +25,11 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 005cbb77fa0c2bc7c1b788b5076b425a2a8e363e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 076631860035e41451741d49843d9282ec4c15f7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="annotating-structs-and-classes"></a>구조체 및 클래스에 주석 지정
 고정 처럼 작동 하는 주석을 사용 하 여 구조체와 클래스 멤버에 주석을 달 수 있습니다-함수 진입점/종료 바깥쪽 구조는 매개 변수 또는 결과 값으로 포함 된 또는 함수 호출에서 true가 될 것으로 가정 됩니다.

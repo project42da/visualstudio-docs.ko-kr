@@ -1,6 +1,7 @@
 ---
 title: 관리 코드에 대한 기본 수정 규칙 규칙 집합
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 631f0daf-1d42-4c90-a7dc-1a6a9de64c93
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6523c532d46329f3453744caab9bc9f0935702f6
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5bbd43b47e104dc775629e0e517ba8c47c2a49ea
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basic-correctness-rules-rule-set-for-managed-code"></a>관리 코드에 대한 기본 수정 규칙 규칙 집합
 기본 수정 규칙 규칙 집합 논리 오류 및 일반적인 실수 프레임 워크 Api의 사용에서에 중점을 둡니다. 최소 권장 규칙 규칙 집합에는 규칙을 포함 하는 기본 수정 규칙입니다. 자세한 내용은 참조 [관리 코드에 대 한 관리 권장 규칙 규칙 집합](../code-quality/managed-recommended-rules-rule-set-for-managed-code.md) 이 규칙 집합의 최소 권장 규칙을 통해 보고 하는 경고의 목록에 확장을 포함 해야 합니다.

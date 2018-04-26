@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 Microsoft Unit Testing Framework for C++ 사용 | Microsoft Docs
+title: Visual Studio에서 Microsoft Unit Testing Framework for C++ 사용
 ms.date: 11/15/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: a2d0998185a7b550b22d0cbfaad43477bb036ad7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dac63faa3c34983a8ac0be9ccd7cbd9fae9a1cbe
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-the-microsoft-unit-testing-framework-for-c-in-visual-studio"></a>Visual Studio에서 Microsoft Unit Testing Framework for C++ 사용
 

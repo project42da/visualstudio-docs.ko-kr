@@ -1,5 +1,6 @@
 ---
-title: Visual Studio 디버거를 사용 하 여 관리 되는 코드를 사용 하 여 디버그 | Microsoft Docs
+title: 관리 코드를 디버깅 | Microsoft Docs
+description: C# 또는 Visual Studio 디버거를 사용 하 여 Visual Basic 디버그
 ms.custom: mvc
 ms.date: 03/18/2018
 ms.technology: vs-ide-debug
@@ -12,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e209ef4385466be1009b19dde850751695344afe
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 0e895fe9844740fbb3fdd670ff53dfe0b72dbdfb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="debug-with-managed-code-using-the-visual-studio-debugger"></a>Visual Studio 디버거를 사용 하 여 관리 되는 코드를 사용 하 여 디버그
+# <a name="quickstart-debug-with-managed-code-using-the-visual-studio-debugger"></a>빠른 시작: Visual Studio 디버거를 사용 하 여 관리 되는 코드를 사용 하 여 디버그
 
 Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 기능을 제공 합니다. 이 항목에는 기본 기능 중 일부에 대해 알아보는 빠른 방법을 제공합니다.
 
@@ -26,7 +27,7 @@ Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 �
 
 1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
-2. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 **콘솔 응용 프로그램 (.NET Core)**합니다.
+2. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 **콘솔 응용 프로그램 (.NET Core)** 합니다.
 
      **콘솔 앱(.NET Core)** 템플릿 프로젝트가 표시되지 않으면 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Open Visual Studio 설치 관리자** 링크를 클릭합니다. Visual Studio 설치 관리자가 시작됩니다. 선택 된 **.NET 데스크톱 개발** 및 **.NET Core** 작업을 선택 합니다 **수정**합니다.
 

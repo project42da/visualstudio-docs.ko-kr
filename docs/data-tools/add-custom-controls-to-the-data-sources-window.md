@@ -15,14 +15,15 @@ ms.assetid: 8c43e7d2-ba94-4d9b-96de-3aa971955afd
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5961498518d8f2a1137134f88f7961f1c9395937
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5db34de3244f7ee38ba4ef33c71b251f2bdbb6b0
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-custom-controls-to-the-data-sources-window"></a>데이터 소스 창에 사용자 지정 컨트롤 추가
 항목을 끌면는 **데이터 소스** 데이터 바인딩된 컨트롤을 만드는 디자인 화면에 창을 만드는 컨트롤의 형식을 선택할 수 있습니다. 창에서 각 항목을 선택할 수 있는 컨트롤을 표시 하는 드롭다운 목록을 있습니다. 각 항목에 연결 된 컨트롤의 집합은 데이터 형식 항목에 따라 결정 됩니다. 만들 컨트롤 목록에 나타나지 않으면 목록에 컨트롤을 추가 하려면이 항목의 지침은 따르면 됩니다.

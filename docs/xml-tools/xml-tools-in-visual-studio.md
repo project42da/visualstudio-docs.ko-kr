@@ -1,9 +1,8 @@
 ---
-title: Visual Studio의 XML 도구 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio의 XML 도구
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
 ms.topic: conceptual
 f1_keywords:
 - vb.xmldesigner
@@ -35,11 +34,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f823a42d5a89dd22fd273a2971a3b323487a525b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 279a0a73f24b2916e21293c854692ab40f444b4c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-tools-in-visual-studio"></a>Visual Studio의 XML 도구
 
@@ -51,40 +50,24 @@ XML은 Visual Studio 및.NET Framework의 여러 기능의 핵심입니다. 다�
 
 자세한 내용은 참조는 <xref:System.Xml?displayProperty=fullName> 설명서입니다.
 
-## <a name="in-this-section"></a>섹션 내용
-
-[XML 데이터 작업](../xml-tools/working-with-xml-data.md)  
-Visual Studio에서 데이터가 처리 되는 방식에는 XML의 역할에 설명 합니다.
-
-[XSLT 디버그](../xml-tools/debugging-xslt.md)  
-Visual Studio 디버거를 사용하여 XSLT를 디버그하는 방법에 대한 항목의 링크를 제공합니다.
-
 ## <a name="reference"></a>참조
 
-[Microsoft.VisualStudio.XmlEditor](http://go.microsoft.com/fwlink/?LinkID=165699)  
-노출 된 [XML 편집기](http://go.microsoft.com/fwlink/?LinkId=228249) 구문 분석 트리를 통해 [System.Xml.Linq](http://go.microsoft.com/fwlink/?LinkId=228250) 모든 XML 문서에 대 한 합니다.
+[Microsoft.VisualStudio.XmlEditor](http://go.microsoft.com/fwlink/?LinkID=165699) 노출 된 [XML 편집기](http://go.microsoft.com/fwlink/?LinkId=228249) 구문 분석 트리를 통해 [System.Xml.Linq](http://go.microsoft.com/fwlink/?LinkId=228250) 모든 XML 문서에 대 한 합니다.
 
-[XML 표준 참조](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)  
-XML, DTD(문서 종류 정의), XSD(XML 스키마 정의 언어), XSLT 등의 XML 기술에 대한 정보를 제공합니다.
+[XML 표준 참조](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) XML, 문서 형식 정의 (DTD), XML 스키마 정의 언어 (XSD) 및 XSLT를 포함 하 여 XML 기술에 대 한 정보를 제공 합니다.
 
-<xref:System.Xml?displayProperty=fullName>  
-<xref:System.Xml> 네임스페이스를 구성하는 클래스 및 기타 요소에 대해 설명하고 각 항목에 대해 보다 자세한 정보를 확인할 수 있는 링크를 제공합니다.
+<xref:System.Xml?displayProperty=fullName> 클래스 및 구성 하는 다른 요소에 설명 된 <xref:System.Xml> 네임 스페이스 및 각 항목에 대해 보다 자세한 정보에 대 한 링크를 제공 합니다.
 
-<xref:System.Xml.Serialization?displayProperty=fullName>  
-<xref:System.Xml.Serialization> 네임스페이스를 구성하는 클래스 및 기타 요소에 대해 설명하고 각 항목에 대해 보다 자세한 정보를 확인할 수 있는 링크를 제공합니다.
+<xref:System.Xml.Serialization?displayProperty=fullName> 클래스 및 구성 하는 다른 요소에 설명 된 <xref:System.Xml.Serialization> 네임 스페이스 및 각 항목에 대 한 자세한 정보에 대 한 링크를 제공 합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
-[XML DOM(문서 개체 모델)](/dotnet/standard/data/xml/xml-document-object-model-dom)  
-<xref:System.Xml.XmlDocument> 관련 클래스가 W3C 문서 개체 모델(Core) 수준 1 및 수준 2 네임스페이스 지원 사양을 준수하는 방식에 대해 설명합니다.
+[XML 문서 개체 모델 (DOM)](/dotnet/standard/data/xml/xml-document-object-model-dom) 설명 방법을 <xref:System.Xml.XmlDocument> 관련된 클래스가 W3C 문서 개체 모델 (Core) 수준 1 및 수준 2 네임 스페이스 지원 사양을 준수 합니다.
 
 [XmlReader 및 XmlWriter를 사용 하 여 XML 데이터 처리](https://msdn.microsoft.com/library/cc189001(v=vs.95).aspx)
 
-[XSLT 변환](/dotnet/standard/data/xml/xslt-transformations)  
-<xref:System.Xml.Xsl.XslCompiledTransform> 클래스가 XSLT 1.0 권장 사항을 구현하는 방법을 설명합니다.
+[XSLT 변환을](/dotnet/standard/data/xml/xslt-transformations) 설명 방법을 <xref:System.Xml.Xsl.XslCompiledTransform> 클래스는 XSLT 1.0 권장 사항 구현 합니다.
 
-[XPath 데이터 모델을 사용하여 XML 데이터 처리](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model)  
-<xref:System.Xml.XPath.XPathNavigator> 클래스가 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체에 저장된 XML 데이터를 처리하는 방법을 설명합니다. <xref:System.Xml.XPath.XPathNavigator> 클래스는 XQuery 1.0 및 XPath 2.0 데이터 모델을 기반으로 하며 XML 데이터를 탐색 및 편집하는 데 사용할 수 있습니다.
+[XPath 데이터 모델을 사용 하 여 XML 데이터 처리](/dotnet/standard/data/xml/process-xml-data-using-the-xpath-data-model) 설명 방법을 <xref:System.Xml.XPath.XPathNavigator> 클래스에 저장 된 XML 데이터를 처리할 수는 <xref:System.Xml.XPath.XPathDocument> 또는 <xref:System.Xml.XmlDocument> 개체입니다. <xref:System.Xml.XPath.XPathNavigator> 클래스는 XQuery 1.0 및 XPath 2.0 데이터 모델을 기반으로 하며 XML 데이터를 탐색 및 편집하는 데 사용할 수 있습니다.
 
-[XML SOM(스키마 개체 모델)](/dotnet/standard/data/xml/xml-schema-object-model-som)  
-스키마를 로드 및 편집하기 위한 <xref:System.Xml.Schema.XmlSchema> 클래스를 제공하여 XML 스키마를 만들고 조작하는 데 사용되는 클래스에 대해 설명합니다.
+[XML 개체 모델 SOM (스키마)](/dotnet/standard/data/xml/xml-schema-object-model-som) 만들고 제공 하 여 XML 스키마를 조작 하기 위해 사용 되는 클래스에 설명 된 <xref:System.Xml.Schema.XmlSchema> 클래스를 로드 및 스키마를 편집 합니다.

@@ -1,10 +1,9 @@
 ---
-title: 옵션 대화 상자, 환경, 일반 | Microsoft Docs
-ms.custom: ''
+title: 옵션 대화 상자, 환경, 일반
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - VS.Message.0x800a002e
 - VS.ToolsOptionsPages.Environment.General
@@ -28,11 +27,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c427752fa1b89acb2fa55afc7acd8c4535686c37
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f12249cc8d0e8bd8396e1e1ebbbfefeddbb22b60
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="general-environment-options-dialog-box"></a>옵션 대화 상자, 환경, 일반
 
@@ -67,17 +66,27 @@ Visual Studio에서 시각적 효과 조정을 자동으로 설정하는지 또�
 
 ## <a name="other"></a>기타
 
-**창 메뉴에 표시된 항목**은 **창** 메뉴의 Windows 목록에 표시되는 창 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다.
+**창 메뉴에 표시되는 항목**
 
-**최근 사용된 목록에 표시된 항목**은 **파일** 메뉴에 표시되는 가장 최근에 사용한 프로젝트 및 파일 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다. 이 방법으로 최근에 사용한 프로젝트 및 파일을 쉽게 검색할 수 있습니다.
+**창** 메뉴의 Windows 목록에 표시되는 창 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다.
 
-**상태 표시줄 표시**는 상태 표시줄을 표시합니다. 상태 표시줄은 IDE 창의 맨 아래에 있고 진행 중인 작업의 진행률에 대한 정보를 표시합니다.
+**최근 사용한 목록에 표시되는 항목**
 
-**활성 도구 창에서만 닫기 단추 수행**은 **닫기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 닫히도록 지정합니다. 기본적으로 이 옵션이 선택됩니다.
+**파일** 메뉴에 표시되는 가장 최근에 사용한 프로젝트 및 파일 수를 사용자 지정합니다. 1에서 24 사이의 숫자를 입력합니다. 기본적으로 개수는 10개입니다. 이 방법으로 최근에 사용한 프로젝트 및 파일을 쉽게 검색할 수 있습니다.
 
-**활성 도구 창에서만 자동 숨기기 단추 수행**은 **자동 숨기기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 닫히도록 지정합니다. 기본적으로 이 옵션은 선택되어 있지 않습니다.
+**상태 표시줄 표시**
+
+상태 표시줄을 표시합니다. 상태 표시줄은 IDE 창의 맨 아래에 있고 진행 중인 작업의 진행률에 대한 정보를 표시합니다.
+
+**활성 도구 창에서만 [닫기] 단추 수행**
+
+**닫기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 닫히도록 지정합니다. 기본적으로 이 옵션이 선택됩니다.
+
+**활성 도구 창에서만 [자동 숨기기] 단추 수행**
+
+**자동 숨기기** 단추를 클릭할 때 도킹된 집합의 모든 도구 창이 아니라 포커스가 있는 도구 창만 자동으로 숨겨지도록 지정합니다. 기본적으로 이 옵션은 선택되어 있지 않습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[옵션 대화 상자, 환경](../../ide/reference/environment-options-dialog-box.md)
-[이 창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md)
+- [옵션 대화 상자, 환경](../../ide/reference/environment-options-dialog-box.md)
+- [창 레이아웃 사용자 지정](../../ide/customizing-window-layouts-in-visual-studio.md)

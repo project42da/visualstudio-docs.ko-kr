@@ -6,14 +6,15 @@ ms.assetid: 1b06b573-84aa-4458-b3f5-e238df47bf45
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 906176ebf782a537dffad1deddb41c71739e8a5e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0b1d98422d9527220b54232d1180ae4b91a28e6b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="entity-framework-tools-in-visual-studio"></a>Visual Studio에서 entity Framework 도구
 Entity Framework는.NET 개발자가 도메인별 개체를 사용 하 여 관계형 데이터에 사용할 수 있는 개체-관계형 매핑 기술. 개발자들이 보통 작성해야 하는 데이터 액세스 코드가 대부분 필요하지 않게 됩니다. Entity Framework는 새로운.NET 응용 프로그램에 대 한 기술 모델링 권장된 개체-관계형 매핑을 (ORM).

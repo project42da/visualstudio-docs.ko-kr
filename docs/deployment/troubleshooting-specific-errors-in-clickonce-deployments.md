@@ -2,8 +2,7 @@
 title: ClickOnce 배포 관련 오류 문제 해결 | Microsoft Docs
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-deployment
+ms.technology: vs-ide-deployment
 ms.topic: conceptual
 f1_keywords:
 - Microsoft.VisualStudio.Publish.ClickOnceProvider.ErrorPrompt.UncRequired
@@ -17,16 +16,16 @@ helpviewer_keywords:
 - troubleshooting ClickOnce deployments
 - ClickOnce deployment, troubleshooting
 ms.assetid: 22dfe8f1-8271-4708-9c25-6bbb13920ac8
-author: stevehoag
-ms.author: shoag
-manager: wpickett
+author: mikejo5000
+ms.author: mikejo
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b52caad3b6e4c98dd78e6c6be9835c11ac4d4175
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8a9829a80916f6e18e9adaf3d0e41fe825541438
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="troubleshooting-specific-errors-in-clickonce-deployments"></a>ClickOnce 배포 관련 오류 문제 해결
 이 항목에서는 배포할 때 발생할 수 있는 다음과 같은 일반적인 오류는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 각 문제를 해결 하는 단계를 제공 합니다.  
@@ -90,7 +89,7 @@ ms.lasthandoff: 04/16/2018
 #### <a name="privatepath-settings-in-application-config-file-are-not-honored"></a>응용 프로그램 구성 파일에서 PrivatePath 설정이 적용 되지 않습니다.  
  PrivatePath (Fusion 검색 경로)를 사용 하려면 응용 프로그램이 완전 신뢰 권한을 요청 해야 합니다. 완전 신뢰를 요청 하 한 후 다시 시도 하도록 응용 프로그램 매니페스트를 변경해 보십시오.  
   
-#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>제거 하는 동안 을 "응용 프로그램을 제거 하지 못했습니다."  
+#### <a name="during-uninstall-a-message-appears-saying-failed-to-uninstall-application"></a>제거하는 동안 "응용 프로그램 제거 실패"메시지가 나타납니다.  
  이 메시지는 일반적으로 응용 프로그램이 이미 제거 또는 저장소가 손상 되었음을 나타냅니다. 클릭 한 후 **확인**, **프로그램 추가/제거** 항목이 제거 됩니다.  
   
 #### <a name="during-installation-a-message-appears-that-says-that-the-platform-dependencies-are-not-installed"></a>플랫폼 종속성이 설치 되지 않았다 하는 메시지가 나타나면을 설치 하는 동안  

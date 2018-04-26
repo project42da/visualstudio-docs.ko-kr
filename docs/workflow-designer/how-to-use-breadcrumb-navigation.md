@@ -1,18 +1,20 @@
 ---
-title: '방법: 이동 경로 탐색을 사용 하 여 | Microsoft Docs'
+title: '워크플로 디자이너-방법: 이동 경로 탐색 사용'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 4a688056-37dc-406a-9071-be2141e192fe
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 97c88a8c47bfaa2e1ccd135baec95f19a49c4e5a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 92f3e35d4182297601741bd603aa3c5a17e54d67
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-breadcrumb-navigation"></a>방법: 이동 경로 탐색 사용
 
@@ -24,22 +26,22 @@ Windows 워크플로 디자이너에 표시 되는 활동 집합을 변경 하�
 
 3.  현재 위치의 활동을 확장하거나 축소합니다.
 
-### <a name="using-breadcrumb-navigation"></a>이동 경로 탐색 사용
+## <a name="using-breadcrumb-navigation"></a>이동 경로 탐색 사용
 
-1.  [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]의 활동을 두 번 클릭하여 루트 활동을 클릭한 활동으로 변경합니다. 그러면 클릭한 활동이 루트에서 완전히 확장되고 상위 항목이 이동 경로 탐색 막대에 표시됩니다. 이를 활동 드릴인/드릴아웃이라고도 합니다.
+1.  클릭 한 활동이 루트 활동을 변경 하려면 워크플로 디자이너의 활동을 두 번 클릭 합니다. 그러면 클릭한 활동이 루트에서 완전히 확장되고 상위 항목이 이동 경로 탐색 막대에 표시됩니다. 이를 활동 드릴인/드릴아웃이라고도 합니다.
 
 2.  현재 루트 활동의 상위 항목으로 이동하려면 이동 경로 탐색 막대에서 해당 활동을 클릭합니다.
 
-### <a name="expanding-or-collapsing-an-activity-in-place"></a>현재 위치의 활동 확장 또는 축소
+## <a name="expanding-or-collapsing-an-activity-in-place"></a>현재 위치의 활동 확장 또는 축소
 
 1.  활동의 갈매기형 펼침 단추를 클릭하면 현재 위치의 활동이 확장되거나 축소됩니다.
 
 2.  이 단추를 클릭하여 확장 상태를 변경하면 확장의 새로운 상태가 XAML에 저장됩니다.
 
     > [!WARNING]
-    > 일부 활동은 현재 위치에서 확장되지 않을 수도 있습니다. 현재 위치에서 활동을 확장할 수 없는 경우는 두 가지입니다. 즉, 활동의 부모가 현재 위치에서 자식을 확장하도록 허용하지 않는 경우(예: 순서도의 활동은 현재 위치에서 확장 불가능) 또는 활동 디자이너 자체에서 현재 위치에서의 확장을 허용하지 않는 경우입니다. [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]에 포함된 활동 디자이너는 후자와 같이 작동하지 않지만 일부 사용자 지정 활동은 이와 같은 작동을 보일 수도 있습니다.
+    > 일부 활동은 현재 위치에서 확장되지 않을 수도 있습니다. 현재 위치에서 활동을 확장할 수 없는 경우는 두 가지입니다. 즉, 활동의 부모가 현재 위치에서 자식을 확장하도록 허용하지 않는 경우(예: 순서도의 활동은 현재 위치에서 확장명 불가능) 또는 활동 디자이너 자체에서 현재 위치에서의 확장을 허용하지 않는 경우입니다. 워크플로 디자이너에 포함 된 activity designer 중 두 번째 동작은 갖지만 일부 사용자 지정 활동에는이 문제가 발생할 수 있습니다.
 
-### <a name="expanding-all-or-collapsing-all-activities"></a>모든 활동 확장명 또는 축소
+## <a name="expanding-all-or-collapsing-all-activities"></a>모든 활동 확장명 또는 축소
 
 1.  사용 하 여는 **모두 확장** 및 **모두 축소** 단추는 사용자 인터페이스를 확장 하거나 축소 하는 모든 활동 현재의 이동 경로 탐색 루트 아래에 있습니다. 모두 확장명 및 모두 축소는 전역 상태입니다. 즉, 이동 경로 탐색을 모두 확장을 사용 하 여 루트 활동을 변경 또는 모두 축소 상태를 클릭할 때까지 유지 되도록 **복원**합니다.
 

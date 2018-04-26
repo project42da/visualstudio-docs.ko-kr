@@ -1,25 +1,25 @@
 ---
-title: '오류: 함수를 계산 하는 동안 대상 프로세스가 종료 된 &#39;함수&#39; | Microsoft Docs'
+title: '오류: 대상 프로세스가 종료 코드로 &#39;코드&#39; 함수를 계산 하는 동안 &#39;함수&#39; | Microsoft Docs'
 ms.custom: ''
 ms.date: 4/06/2018
 ms.topic: troubleshooting
 f1_keywords:
-- vs.debug.error.process_exit_func_eval_abort
+- vs.debug.error.process_exit_during_func_eval
 ms.technology: vs-ide-debug
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 620ff03ef364c21e20151547effe8bfbf5935fe7
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d5e9221ccf162180a89cc88b1ceebcf55be39eef
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="error-the-target-process-exited-while-evaluating-the-function-39function39"></a>오류: 함수를 계산 하는 동안 대상 프로세스가 종료 된 &#39;함수&#39;
+# <a name="error-the-target-process-exited-with-code-39code39-while-evaluating-the-function-39function39"></a>오류: 대상 프로세스가 종료 코드로 &#39;코드&#39; 함수를 계산 하는 동안 &#39;함수&#39;
 
-전체 메시지 텍스트: 'function' 함수를 평가 하는 동안 대상 프로세스가 종료 되었습니다. 대상 프로세스의 종료 코드에 대 한 출력 창을 참조 하십시오.
+전체 메시지 텍스트: 'function' 함수를 평가 하는 동안 대상 프로세스가 'code' 코드로 인해 종료 되었습니다.
 
 .NET 개체의 상태를 검사 좀 더 쉽게 디버거에서 자동으로 새로 고쳐집니다 추가 코드를 실행 하는 디버깅 된 프로세스 (일반적으로 속성 getter 메서드 및 `ToString` 함수). 대부분의 시나리오에서 이러한 함수는 성공적으로 완료 하거나 디버거를 통해 수 있는 예외를 throw 합니다. 그러나는 예외가 없습니다 찾아낼 수 커널 경계를 교차, 사용자 메시지 펌프 필요로 하거나 복구할 수 없는 하기 때문에 몇 가지 경우가 있습니다. 결과, 속성 getter 또는 코드를 실행 하는 ToString 메서드 하나라도 명시적으로 프로세스를 종료 (예를 들어 호출 `ExitProcess()`) 수 있는 처리 되지 않은 예외를 throw 할 (예를 들어 `StackOverflowException`) 종료 됩니다는 디버깅 된 프로세스를 디버그 세션을 종료 합니다. 이 오류 메시지가 발생 하는 경우이 문제가 발생 합니다.
  

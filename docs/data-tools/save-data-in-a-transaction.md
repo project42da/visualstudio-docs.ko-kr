@@ -15,14 +15,15 @@ ms.assetid: 80260118-08bc-4b37-bfe5-9422ee7a1e4e
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 6fd36ace8949774c755a7a192e201b6d9011ff8b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ec2ff00c4d355b2683c888fcdb6a333bf15e1b99
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>연습: 트랜잭션에 데이터 저장
 이 연습에서는 사용 하 여 트랜잭션에서 데이터를 저장 하는 방법을 보여 줍니다.는 <xref:System.Transactions> 네임 스페이스입니다. 이 연습에서는 Windows Forms 응용 프로그램을 만들어야 합니다. Northwind 샘플 데이터베이스의 두 테이블에 대 한 데이터 집합을 만들려면 데이터 소스 구성 마법사를 사용 합니다. 데이터 바인딩된 컨트롤을 Windows form 및 수정 하면서 간단한 BindingNavigator의 저장 단추는 TransactionScope 내에서 데이터베이스를 업데이트 하려면에 대 한 코드를 추가 합니다.

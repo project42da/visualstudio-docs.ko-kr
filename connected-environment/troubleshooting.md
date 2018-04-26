@@ -1,18 +1,19 @@
 ---
 title: 문제 해결 | Microsoft Docs
-author: johnsta
-ms.author: johnsta
+author: ghogen
+ms.author: ghogen
 ms.date: 02/20/2018
-ms.topic: article
-ms.technology: vsce-kubernetes
+ms.topic: troubleshooting
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: Azure에서 마이크로 서비스 및 컨테이너를 사용하여 신속하게 Kubernetes 개발
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
-manager: ghogen
-ms.openlocfilehash: 0f35e31e3f3a109e65565592b56b6dc4177dd7c0
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+manager: douge
+ms.openlocfilehash: b41d228bcced6149c95b09b2445dd656ed9772d6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="troubleshooting-guide"></a>문제 해결 가이드
 

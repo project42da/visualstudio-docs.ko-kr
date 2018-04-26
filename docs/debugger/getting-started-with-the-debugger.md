@@ -1,6 +1,6 @@
 ---
-title: -Visual Studio를 디버깅 하는 방법을 설명 | Microsoft Docs
-ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data
+title: 디버거 시작
+ms.description: Learn how to start the Visual Studio debugger, step through code, and inspect data.
 ms.custom: mvc
 ms.date: 03/16/2018
 ms.technology: vs-ide-debug
@@ -13,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3501f3e94fdb9b98aefc96d7a1e2fe12b4117fbb
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c62137422a4cbd7b85b4f7415e9b3fa85c2c0248
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="learn-to-debug-using-visual-studio"></a>Visual Studio를 사용 하 여 디버깅 하는 방법을 알아봅니다
+# <a name="tutorial-learn-to-debug-using-visual-studio"></a>자습서: Visual Studio를 사용 하 여 디버깅 하는 방법을 알아봅니다
 
 이 항목의 단계별 연습에서는 Visual Studio 디버거 기능을 소개 합니다. 참조의 디버거 기능을 더 자세히 분석 하려는 경우 [디버거 기능 둘러보기](../debugger/debugger-feature-tour.md)합니다.
 

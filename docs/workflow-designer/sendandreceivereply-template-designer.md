@@ -1,7 +1,9 @@
 ---
-title: SendAndReceiveReply 템플릿 디자이너 | Microsoft Docs
+title: SendAndReceiveReply 템플릿 디자이너-워크플로 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.ServiceModel.Activities.SendAndReceiveReply.UI
 - System.ServiceModel.Activities.ReceiveReply.UI
@@ -11,18 +13,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4edb5081c58772fc67bb24b4832e7068f1a0344d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4c6a4749ed138b22ac3d600befad01ef1776478e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sendandreceivereply-template-designer"></a>SendAndReceiveReply 템플릿 디자이너
 
 **SendAndReceiveReply** 서식 파일의 쌍을 만드는 데 사용 되 미리 구성 된 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 내에서 활동을 <xref:System.Activities.Statements.Sequence> 요청/응답 메시지 교환의 일환으로 상관 관계에 있는 활동 클라이언트에서 패턴입니다.
 
 ## <a name="the-sendandreceivereply-template"></a>SendAndReceiveReply 템플릿
- 추가 **SendAndReceiveReply** 만드는 것 외에도 세 가지 작업을 수행 하는 서식 파일은 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 내의 활동은 <xref:System.Activities.Statements.Sequence> 활동:
+
+추가 **SendAndReceiveReply** 만드는 것 외에도 세 가지 작업을 수행 하는 서식 파일은 <xref:System.ServiceModel.Activities.Send> 및 <xref:System.ServiceModel.Activities.ReceiveReply> 내의 활동은 <xref:System.Activities.Statements.Sequence> 활동:
 
 1.  <xref:System.ServiceModel.Activities.Send.OperationName%2A> 활동의 <xref:System.ServiceModel.Activities.Send.ServiceContractName%2A>, <xref:System.ServiceModel.Activities.Send> 속성이 구성됩니다.
 
@@ -31,16 +34,16 @@ ms.lasthandoff: 04/16/2018
 3.  부모 활동의 변수로 <xref:System.ServiceModel.Activities.CorrelationHandle>이 만들어집니다.
 
 ### <a name="using-the-sendandreceivereply-template-designer"></a>SendAndReceiveReply 템플릿 디자이너 사용
- **SendAndReceiveReply** 활동 디자이너에서 확인할 수 있습니다는 **메시징** 의 범주는 **도구 상자**를 클릭 하 여 액세스는 **도구 상자**  탭 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (또는 선택 **도구 모음** 에서 **보기** 메뉴나 CTRL + ALT + X.)
+ **SendAndReceiveReply** 활동 디자이너에서 확인할 수 있습니다는 **메시징** 의 범주는 **도구 상자**를 클릭 하 여 액세스는 **도구 상자**  워크플로 디자이너에서 탭 (또는 선택 **도구 모음** 에서 **보기** 메뉴나 CTRL + ALT + X.)
 
- **SendAndReceiveReply** 에서 활동 디자이너를 끌 수 있습니다는 **도구 상자** 끌어다는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 화면의 아무 곳에 나 활동은 일반적으로 배치 합니다. 그렇기 때문에 <xref:System.ServiceModel.Activities.Send> 활동으로 구성할 수는 **보낼** 활동 디자이너와는 상관 관계가 지정 된 <xref:System.ServiceModel.Activities.ReceiveReply> 로 구성할 수 있습니다는 **ReceiveReplyForSend** 디자이너입니다.
+ **SendAndReceiveReply** 에서 활동 디자이너를 끌 수 있습니다는 **도구 상자** 가 일반적으로 활동을 배치 하는 경우 워크플로 디자이너 화면에 끌어 놓 및 합니다. 그렇기 때문에 <xref:System.ServiceModel.Activities.Send> 활동으로 구성할 수는 **보낼** 활동 디자이너와는 상관 관계가 지정 된 <xref:System.ServiceModel.Activities.ReceiveReply> 로 구성할 수 있습니다는 **ReceiveReplyForSend** 디자이너입니다.
 
  사용에 대 한 자세한 내용은 **보낼** 구성 하는 디자이너는 <xref:System.ServiceModel.Activities.Send> 활동 참조는 [보낼](../workflow-designer/send-activity-designer.md) 항목입니다.
 
  사용 하는 방법에 대 한 자세한 내용은 **ReceiveReplyForSend** 구성 하는 디자이너는 <xref:System.ServiceModel.Activities.ReceiveReply> 활동 다음 섹션을 참조 하세요.
 
 ### <a name="properties-of-receivereply"></a>ReceiveReply의 속성
- 다음 표에서는 <xref:System.ServiceModel.Activities.ReceiveReply> 속성을 보여 주고 디자이너에서 이 속성을 사용하는 방법을 설명합니다. 이러한 속성은 속성 표에서 편집할 수 있으며 일부 속성은 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 디자이너 화면에서 편집할 수 있습니다.
+ 다음 표에서는 <xref:System.ServiceModel.Activities.ReceiveReply> 속성을 보여 주고 디자이너에서 이 속성을 사용하는 방법을 설명합니다. 이러한 속성은 속성 표에서 편집할 수 있습니다 및 일부 워크플로 Designerdesigner 화면에서 편집할 수 있습니다.
 
 |속성 이름|필수|용도|
 |-------------------|--------------|-----------|

@@ -1,6 +1,7 @@
 ---
 title: Visual Studio에서 설정 사용자 지정 코드 분석 규칙 만들기
 ms.date: 04/04/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -12,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f9297d862b0fa47ecc4f5b7b08f6b754e1b5dfc3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a3b1d9b436c3e3be4f241d18791744085be4ece9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="custom-rule-sets"></a>사용자 지정 규칙 집합
 

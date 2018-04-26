@@ -1,6 +1,7 @@
 ---
 title: 'CA1013: 더하기 및 빼기를 오버로드할 때 같음 연산자를 오버로드하십시오.'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -19,11 +20,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fd43cc3077c037b70eaa8107563bd8f40b6a096
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 11841248192bc9b726076641e1219f54ab526447
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca1013-overload-operator-equals-on-overloading-add-and-subtract"></a>CA1013: 더하기 및 빼기를 오버로드할 때 같음 연산자를 오버로드하십시오.
 |||
@@ -73,10 +74,10 @@ return left.Equals(right);
 
  이 예제의 결과는 다음과 같습니다.
 
- **잘못 된 유형: {2, 2} {2, 2} 같은지? 더**
-**좋은 유형: {3, 3} {3, 3} 같은지? 예**
-**좋은 유형: {3, 3} {3, 3}는 = =?   예**
-**형식이 잘못 되었습니다: {2, 2} {9, 9} 같은지? 더**
-**좋은 유형: {3, 3} {9, 9}는 = =?   아니요**
+ **잘못 된 유형: {2,2} {2,2} 같은지? 더**
+**올바른 형식: {3,3} {3,3} 같은지? 예**
+**올바른 형식: {3,3} {3,3} 는 = =?   예**
+**형식이 잘못 되었습니다: {2,2} {9,9} 같은지? 더**
+**올바른 형식: {3,3} {9,9} 는 = =?   아니요**
 ## <a name="see-also"></a>참고 항목
  [같음 연산자](/dotnet/standard/design-guidelines/equality-operators)

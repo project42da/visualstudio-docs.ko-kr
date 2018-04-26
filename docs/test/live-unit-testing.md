@@ -1,8 +1,8 @@
 ---
-title: "Visual Studio의 Live Unit Testing | Microsoft Docs"
+title: Visual Studio의 Live Unit Testing | Microsoft Docs
 ms.date: 2017-03-07
 ms.technology: vs-ide-test
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio ALM
 - Live Unit Testing
@@ -10,11 +10,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7ab19350529e4bd1c7edf914a8a8ca049ace6054
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 2f3eced8d8aba9adb0da652e285a594cf32711ec
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017을 사용한 Live Unit Testing
 
@@ -83,7 +83,7 @@ Live Unit Testing을 사용하면(다음 섹션 [Live Unit Testing 시작 일시
 
 ## <a name="starting-pausing-and-stopping-live-unit-testing"></a>Live Unit Testing 시작, 일시 중지 및 중지
 
-최상위 Visual Studio 메뉴에서 **테스트**, **Live Unit Testing**, **시작**을 선택하여 Live Unit Testing을 활성화합니다. Live Unit Testing을 사용하면 **Live Unit Testing** 메뉴에서 사용할 수 있는 옵션이 단일 항목에서 **시작**, **일시 중지**, **중지** 및 **Reset Clean(정리 다시 설정)**으로 변경됩니다.
+최상위 Visual Studio 메뉴에서 **테스트**, **Live Unit Testing**, **시작**을 선택하여 Live Unit Testing을 활성화합니다. Live Unit Testing을 사용하면 **Live Unit Testing** 메뉴에서 사용할 수 있는 옵션이 단일 항목에서 **시작**, **일시 중지**, **중지** 및 **Reset Clean(정리 다시 설정)** 으로 변경됩니다.
 
 > [!NOTE]
 > 단위 테스트 프로젝트를 포함하지 않는 솔루션에서 Live Unit Testing을 시작하려면 **일시 중지**, **중지**, **정리 다시 설정** 옵션이 **Live Unit Testing** 메뉴에 나타나지만 Live Unit Testing은 시작되지 않습니다. **출력** 창에는 "이 솔루션에서 참조하는 지원되는 테스트 어댑터가 없습니다..."로 시작되는 메시지가 표시됩니다.  
@@ -96,7 +96,7 @@ Live Unit Testing을 사용하면(다음 섹션 [Live Unit Testing 시작 일시
 
 - **중지**는 Live Unit Testing을 완전히 중지합니다. Live Unit Testing은 수집된 모든 데이터를 삭제합니다.
 
-- **Reset Clean(정리 다시 설정)**을 선택하면 Live Unit Testing을 중지하고 영구 데이터를 삭제하며 Live Unit Testing을 다시 시작합니다.
+- **Reset Clean(정리 다시 설정)** 을 선택하면 Live Unit Testing을 중지하고 영구 데이터를 삭제하며 Live Unit Testing을 다시 시작합니다.
 
 - **옵션**을 선택하면 [Live Unit Testing 구성](#configuring-live-unit-testing) 섹션에서 설명한 **옵션** 대화 상자가 열립니다.
  
@@ -153,7 +153,7 @@ Live Unit Testing이 테스트 결과를 자동으로 실행하고 업데이트�
 
 ## <a name="live-unit-testing-and-large-solutions"></a>Live Unit Testing 및 대규모 솔루션
 
-솔루션에 10개 이상의 프로젝트가 있고 Live Unit Testing을 시작할 때 지속형 데이터가 없는 경우 또는 최상위 Visual Studio 메뉴에서 **테스트**, **Live Unit Testing**, **Reset Clean(정리 다시 설정)**을 선택하는 경우, Visual Studio에 다음과 같은 대화 상자가 표시되어 대규모 프로젝트의 많은 테스트를 동적으로 실행 시 상당한 성능 저하가 발생할 수 있음을 경고합니다. **확인**을 선택하면 Live Unit Testing에서 솔루션의 모든 텍스트를 실행합니다. **취소**를 선택하면 실행할 테스트를 선택할 수 있습니다. 이 작업을 수행하는 방법은 다음 [테스트 프로젝트 및 테스트 메서드 포함 및 제외](#including-and-excluding-test-projects-and-test-methods) 섹션을 참조하세요.  
+솔루션에 10개 이상의 프로젝트가 있고 Live Unit Testing을 시작할 때 지속형 데이터가 없는 경우 또는 최상위 Visual Studio 메뉴에서 **테스트**, **Live Unit Testing**, **Reset Clean(정리 다시 설정)** 을 선택하는 경우, Visual Studio에 다음과 같은 대화 상자가 표시되어 대규모 프로젝트의 많은 테스트를 동적으로 실행 시 상당한 성능 저하가 발생할 수 있음을 경고합니다. **확인**을 선택하면 Live Unit Testing에서 솔루션의 모든 텍스트를 실행합니다. **취소**를 선택하면 실행할 테스트를 선택할 수 있습니다. 이 작업을 수행하는 방법은 다음 [테스트 프로젝트 및 테스트 메서드 포함 및 제외](#including-and-excluding-test-projects-and-test-methods) 섹션을 참조하세요.  
 
  ![대규모 프로젝트에 대한 Live Unit Testing 대화 상자](media/lut-large-project.png)
 
@@ -170,7 +170,7 @@ Live Unit Testing이 테스트 결과를 자동으로 실행하고 업데이트�
 
 **코드 편집기 창에서 개별 테스트 제외**
 
-코드 편집기 창을 사용하여 개별 테스트 메서드를 포함하거나 제외시킬 수 있습니다. 코드 편집기 창에서 테스트 메서드의 시그니처를 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **Include [the selected method]([선택한 메서드] 포함)**, **라이브 테스트**, **Exclude [the selected method]([선택한 메서드] 제외)** 또는 **라이브 테스트**, **Exclude All But [the selected method]([선택한 메서드]를 빼고 모두 제외)**를 선택합니다. 여기서 [선택한 메서드]는 코드 창에서 선택한 메서드의 이름입니다. 
+코드 편집기 창을 사용하여 개별 테스트 메서드를 포함하거나 제외시킬 수 있습니다. 코드 편집기 창에서 테스트 메서드의 시그니처를 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **Include [the selected method]\([선택한 메서드] 포함)**, **라이브 테스트**, **Exclude [the selected method]\([선택한 메서드] 제외)** 또는 **라이브 테스트**, **Exclude All But [the selected method]\([선택한 메서드]를 빼고 모두 제외)** 를 선택합니다. 여기서 [선택한 메서드]는 코드 창에서 선택한 메서드의 이름입니다. 
 
 **프로그래밍 방식으로 테스트 제외** 
 

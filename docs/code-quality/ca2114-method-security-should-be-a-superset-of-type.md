@@ -1,6 +1,7 @@
 ---
 title: 'CA2114: 메서드 보안은 형식의 상위 집합이어야 합니다.'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 915104e26f16005b8e0b8c4fa092be7c40d1ff7f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5d2fc6fb60dd837dd93de1db2758ee0e2c216850
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca2114-method-security-should-be-a-superset-of-type"></a>CA2114: 메서드 보안은 형식의 상위 집합이어야 합니다.
 |||
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/19/2018
  이 예제의 결과는 다음과 같습니다.
 
  **[모든 사용 권한을] 개인 정보: 6/16/1964 오전 12시: 00**
-**[(유형별 요구) 쓰기 권한이 없음] 개인 정보: 6/16/1964 오전 12시: 00**
-**[읽기 더 사용 권한 ( 요구 메서드에서)] 개인 정보에 액세스할 수 없습니다: 요청에 실패 했습니다.**
+ **[(유형별 요구) 쓰기 권한이 없음] 개인 정보: 6/16/1964 오전 12시: 00**
+ **[읽기 더 사용 권한 ( 요구 메서드에서)] 개인 정보에 액세스할 수 없습니다: 요청에 실패 했습니다.**
 ## <a name="see-also"></a>참고 항목
  [보안 코딩 지침](/dotnet/standard/security/secure-coding-guidelines) [링크 요구](/dotnet/framework/misc/link-demands) [데이터 및 모델링](/dotnet/framework/data/index)

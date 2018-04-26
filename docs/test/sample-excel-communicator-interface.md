@@ -1,18 +1,19 @@
 ---
-title: 샘플 Excel Communicator 인터페이스 | Microsoft 문서
+title: 샘플 Excel Communicator 인터페이스
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: sample
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 85d369ad7ddb468da86f3b19c070be4e125f941a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 88aa282a2e742ffff53582fd4855d06e3a06db69
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sample-excel-communicator-interface"></a>샘플 Excel Communicator 인터페이스
 샘플 `IExcelUICommunication` 인터페이스는 `ExcelAddIn` 프로젝트의 `ExcelUICommunicator` 개체에서 사용됩니다.

@@ -15,14 +15,15 @@ ms.assetid: 243338ef-41af-4cc5-aff7-1e830236f0ec
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 2a5f254e8c9f8a549d8371fefb8ed92b0d12f53f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e89a919f6f93dc70f9417a23430c960f03cf92bb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="bind-windows-forms-controls-to-data-in-visual-studio"></a>Visual Studio에서 데이터에 Windows Forms 컨트롤 바인딩
 Windows Forms에 데이터를 바인딩하여 응용 프로그램의 사용자에 게 데이터를 표시할 수 있습니다. 이러한 데이터 바인딩된 컨트롤을 만들려면에서 항목을 이동할 수는 **데이터 소스** Visual Studio에서 Windows Forms 디자이너 창.

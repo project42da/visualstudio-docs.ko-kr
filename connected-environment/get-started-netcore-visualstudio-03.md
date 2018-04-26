@@ -1,18 +1,19 @@
 ---
 title: Visual Studio가 있는 클라우드에서 Kubernetes를 사용하여 컨테이너가 있는 .NET Core 개발 환경 만들기 - 3단계 - Kubernetes 개발 환경 만들기 | Microsoft Docs
-author: johnsta
-ms.author: johnsta
+author: ghogen
+ms.author: ghogen
 ms.date: 02/20/2018
-ms.topic: get-started-article
-ms.technology: vsce-kubernetes
+ms.topic: tutorial
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: Azure에서 마이크로 서비스 및 컨테이너를 사용하여 신속하게 Kubernetes 개발
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
-manager: ghogen
-ms.openlocfilehash: 01451ca57cbd4bac5c6bf08d040905b9463b15a3
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+manager: douge
+ms.openlocfilehash: 6226340b1744e95bbb375d47213ae00bb9e76565
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-on-connected-environment-with-net-core-and-visual-studio"></a>.NET Core 및 Visual Studio를 사용하여 연결된 환경에서 시작
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 03/19/2018
 
 ![](images/LaunchSettings.png)
 
-다음에 표시되는 대화 상자에서 적절한 계정으로 로그인한 것을 확인한 다음, 기존 개발 환경을 선택하거나 **<AKS에 대한 새 연결된 환경 만들기...>**를 선택해 새로 만듭니다.
+다음에 표시되는 대화 상자에서 적절한 계정으로 로그인한 것을 확인한 다음, 기존 개발 환경을 선택하거나 **<AKS에 대한 새 연결된 환경 만들기...>** 를 선택해 새로 만듭니다.
 
 ![](images/ConnectedEnvDialog.png)
 

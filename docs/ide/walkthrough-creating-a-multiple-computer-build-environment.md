@@ -1,9 +1,8 @@
 ---
-title: '연습: 여러 컴퓨터 빌드 환경 만들기 | Microsoft Docs'
-ms.custom: ''
+title: '연습: 여러 컴퓨터 빌드 환경 만들기'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, building on multiple computers
@@ -13,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d4c2efa01078cb089055cb48fbb80e9c1ffcde0f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 52c7623aff3c2aec4753f628eb9a24ecf6937275
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-creating-a-multiple-computer-build-environment"></a>연습: 여러 컴퓨터 빌드 환경 만들기
 
@@ -415,5 +414,5 @@ MSBuild를 사용하려면 빌드 컴퓨터의 GAC에 일부 추가 어셈블리
 
 ## <a name="see-also"></a>참고 항목
 
-[디버그 실행 파일을 실행하기 위한 테스트 컴퓨터 준비](/cpp/ide/preparing-a-test-machine-to-run-a-debug-executable)  
-[명령줄 참조](../msbuild/msbuild-command-line-reference.md)
+- [디버그 실행 파일을 실행하기 위한 테스트 컴퓨터 준비](/cpp/ide/preparing-a-test-machine-to-run-a-debug-executable)
+- [명령줄 참조](../msbuild/msbuild-command-line-reference.md)

@@ -1,6 +1,7 @@
 ---
 title: Visual Studio에서 Roslyn 분석기를 설치 합니다.
 ms.date: 03/26/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 8a3b40b3b471e6bb57da561ac51f23086a0f01bd
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fb2f681de16a53c97954c8c37b8dd28b163998ee
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="install-net-compiler-platform-analyzers"></a>.NET 컴파일러 플랫폼 분석기를 설치 합니다.
 

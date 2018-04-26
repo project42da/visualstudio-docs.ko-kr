@@ -1,9 +1,9 @@
 ---
-title: Visual Studio에서 Visual Basic 시작 | Microsoft 문서
+title: Visual Studio에서 Visual Basic 시작
 ms.custom: ''
 ms.date: 12/08/2017
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: tutorial
 ms.devlang: vb
 author: TerryGLee
@@ -13,32 +13,44 @@ dev_langs:
 - vb
 ms.workload:
 - multiple
-ms.openlocfilehash: 34c3fe8351196e11073e836d875e940a9ce17d36
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80f0f5ed5049a0b7374aaf884f80b3d212330cc0
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-visual-basic-in-visual-studio"></a>Visual Studio에서 Visual Basic 시작
+
 Visual Basic(VB)에 대한 이 자습서에서는 Visual Studio를 사용하여 몇 가지 콘솔 앱을 만들어 실행하고, 그 과정에서 Visual Studio [IDE(통합 개발 환경)](visual-studio-ide.md)의 일부 기능을 살펴봅니다.
 
 아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
 ## <a name="before-you-begin"></a>시작하기 전에
+
 다음은 몇 가지 주요 개념을 소개하는 빠른 FAQ입니다.
+
 ### <a name="what-is-visual-basic"></a>Visual Basic이란?
+
 Visual Basic은 쉽게 익히도록 설계된 형식이 안전한 프로그래밍 언어입니다. BASIC, 즉 Beginner's All-purpose Symbolic Instruction Code(초보자를 위한 범용 기호 명령 코드)에서 파생되었습니다.
+
 ### <a name="what-is-visual-studio"></a>Visual Studio란?
-Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. 프로그램과 응용 프로그램을 만드는 데 사용할 수 있는 프로그램으로 생각하면 됩니다.  
+
+Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. 프로그램과 응용 프로그램을 만드는 데 사용할 수 있는 프로그램으로 생각하면 됩니다.
+
 ### <a name="what-is-a-console-app"></a>콘솔 앱이란?
+
 콘솔 앱은 입력을 받고 명령줄 창, 즉 콘솔에 출력을 표시합니다.
+
 ### <a name="what-is-net-core"></a>.NET Core란?
+
 .NET Core는 .NET Framework의 다음 진화 단계입니다. NET Framework는 프로그래밍 언어 전체에서 코드를 공유할 수 있게 했고 .NET Core는 플랫폼 간에 코드를 공유하는 기능을 더합니다. 게다가 오픈 소스입니다. .NET Framework와 .NET Core 모두에는 미리 작성된 기능과 CLR(공통 언어 런타임) 라이브러리가 포함되어 있어 코드를 실행하는 가상 머신 역할을 합니다.
 
 ## <a name="start-developing"></a>개발 시작
+
 개발을 시작할 준비가 되셨나요? 이제 시작해 보겠습니다.
 
 ### <a name="create-a-project"></a>프로젝트 만들기
+
 먼저 Visual Basic 응용 프로그램 프로젝트를 만들겠습니다. 아무 것도 추가하지 않아도 필요한 모든 템플릿 파일과 함께 프로젝트 형식이 제공됩니다.
 
 1. Visual Studio 2017을 엽니다.
@@ -62,11 +74,13 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
    ![Visual Studio Installer에서 .NET Core 플랫폼 간 개발 워크로드](../ide/media/dot-net-core-xplat-dev-workload.png)
 
 ##### <a name="option-2-use-the-tools-menu-bar"></a>옵션 2: 도구 메뉴 모음 사용
+
 1. **새 프로젝트** 대화 상자를 취소하고 나가 상단 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...** 를 선택합니다.
 
 2. Visual Studio 설치 관리자가 시작됩니다. **.NET Core 플랫폼 간 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.   
 
 ## <a name="create-a-what-is-your-name-application"></a>"What Is Your Name" 응용 프로그램 만들기
+
 사용자 이름 입력을 요청한 다음 날짜 및 시간과 함께 해당 이름을 표시하는 앱을 만들어 보겠습니다. 방법은 다음과 같습니다.
 
 1. *WhatIsYourName* 프로젝트가 열려 있지 않으면 엽니다.
@@ -93,6 +107,7 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
 5. 콘솔 창을 닫으려면 아무 키나 누릅니다.
 
 ## <a name="create-a-calculate-this-application"></a>"Calculate This" 응용 프로그램 만들기
+
 1. Visual Studio 2017을 열고 상단 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
 
 2. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual Basic**을 확장한 후 **.NET Core**를 선택합니다. 가운데 창에서 **콘솔 앱(.NET Core)** 을 선택합니다. 그런 다음 파일 이름을 *CalculateThis*로 지정합니다.  
@@ -123,6 +138,7 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
     ![수행할 작업을 선택하는 프롬프트가 포함된 CaluculateThis 앱이 표시된 콘솔 창](../ide/media/vb-console-calculate-this.png)
 
 ## <a name="next-steps"></a>다음 단계
+
 축하합니다. 이 자습서를 마쳤습니다. Visual Basic 및 Visual Studio IDE에 대해 자세히 알아보려면 다음 페이지를 참고하세요.
 
 * [Visual Basic 가이드](/dotnet/visual-basic/index)

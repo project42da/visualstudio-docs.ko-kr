@@ -1,6 +1,7 @@
 ---
 title: '방법: 코드 프로젝트 규칙 집합을 팀 프로젝트 체크 인 정책과 동기화'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -11,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1bb6f97495eec73e52751f79d92e2f078bd13b24
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bcc6fe17d9f5e7666531086549eae6ad26741a22
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-synchronize-code-project-rule-sets-with-team-project-check-in-policy"></a>방법: 코드 프로젝트 규칙 집합을 팀 프로젝트 체크 인 정책과 동기화
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/19/2018
 
 3.  클릭 **코드 분석**합니다.
 
-4.  에 **이 규칙 집합 실행** 목록에서 클릭  **\<찾아보기... >**합니다.
+4.  에 **이 규칙 집합 실행** 목록에서 클릭  **\<찾아보기... >** 합니다.
 
 5.  에 **열려** 대화 상자, 체크 인 정책에 규칙 집합 파일을 지정 합니다.
 
@@ -61,6 +62,6 @@ ms.lasthandoff: 04/19/2018
 
 5.  코드 프로젝트에 대 한 속성 대화 상자를 열고 표시 된 **코드 분석** 페이지.
 
-6.  에 **이 규칙 집합 실행** 목록에서 클릭  **\<찾아보기... >**합니다.
+6.  에 **이 규칙 집합 실행** 목록에서 클릭  **\<찾아보기... >** 합니다.
 
 7.  에 **열려** 대화 상자에서 규칙 집합 파일을 지정 합니다.

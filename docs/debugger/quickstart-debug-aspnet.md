@@ -1,5 +1,6 @@
 ---
-title: ASP.NET-Visual Studio 디버깅 | Microsoft Docs
+title: ASP.NET 디버깅
+description: Visual Studio 디버거를 사용 하 여 ASP.NET 디버깅
 ms.custom: mvc
 ms.date: 03/16/2018
 ms.technology: vs-ide-debug
@@ -12,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: c9cc8022a6080b63792cdadcc87af07e08ef749e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 5f731e5d40205776682e706aa4e32d988a76f0f0
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="debug-aspnet-with-the-visual-studio-debugger"></a>Visual Studio 디버거를 사용 하 여 ASP.NET 디버그
+# <a name="quickstart-debug-aspnet-with-the-visual-studio-debugger"></a>빠른 시작: Visual Studio 디버거를 사용 하 여 ASP.NET을 디버그
 
 Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 기능을 제공 합니다. 이 항목에는 기본 기능 중 일부에 대해 알아보는 빠른 방법을 제공합니다.
 

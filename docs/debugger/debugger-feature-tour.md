@@ -1,6 +1,6 @@
 ---
-title: Visual Studio 기능 둘러보기-디버거 | Microsoft Docs
-description: Visual Studio 디버거 둘러보기
+title: 디버거를 조사
+description: Visual Studio 디버거의 다양 한 기능 개요를 수행 합니다.
 ms.custom: mvc
 ms.date: 03/27/2018
 ms.technology: vs-ide-debug
@@ -13,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bb84fbfa4b8916b963f3f3cc35e044593c5a47e1
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 9d93994c9a0b9521049070048ec2cc38a03e9c91
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="quickstart-first-look-at-the-visual-studio-debugger"></a>빠른 시작: Visual Studio 디버거 조사
+# <a name="first-look-at-the-visual-studio-debugger"></a>Visual Studio 디버거를 조사
 
 이 항목에서는 Visual Studio 디버거 기능을 소개 합니다. Visual Studio에서 직접 앱을 열어 진행 하 시겠습니까, 그럴 수 또는 사용 하 여 샘플 앱도 함께 수행할 수는 [초보자 가이드](../debugger/getting-started-with-the-debugger.md)합니다.
 
@@ -157,7 +157,7 @@ F5 키를 누른 채 선택한 코드 줄에 도달할 때까지 **커서까지 
 
 ![조사식 창](../debugger/media/dbg-tour-watch-window.png "조사식 창")
 
-에 설정 조사식이 예에서 한는 `File` 개체 디버거를 통해 이동 변경 값을 볼 수 있습니다. 다른 변수 창과 달리는 **조사식** windows 항상 표시 변수 조사 중인 있습니다 하는 회색 때 범위를 벗어났습니다.
+에 설정 조사식이 예에서 한는 `f` 개체 디버거를 통해 이동 변경 값을 볼 수 있습니다. 다른 변수 창과 달리는 **조사식** windows 항상 표시 변수 조사 중인 있습니다 하는 회색 때 범위를 벗어났습니다.
 
 자세한 내용은 참조 하세요. [조사식 및 간략 한 조사식 창 사용 하 여 감시를 설정 합니다.](../debugger/watch-and-quickwatch-windows.md)
 
@@ -213,21 +213,9 @@ Azure 앱 서비스에서 실행 되는 ASP.NET 응용 프로그램에 대 한 �
 
 자세한 내용은 [IntelliTrace 뒤로 이동을 사용하여 스냅숏 보기](../debugger/how-to-use-intellitrace-step-back.md) 페이지를 참조하세요.
 
-## <a name="more-features-to-look-at"></a>더 많은 기능을 확인
+## <a name="next-steps"></a>다음 단계
 
--   [팁과 요령 디버거](../debugger/debugger-tips-and-tricks.md) 디버거에서 사용 하 여 생산성을 높이 방법에 알아봅니다.
+이 자습서에서는 많은 디버거 기능 개요를 했던 합니다. 샘플 응용 프로그램을 사용 하 여 이러한 기능에 대 한 심도 할 수 있습니다.
 
--   [편집 하며 계속 하기](../debugger/edit-and-continue.md) (C#, c + +, Visual Basic) 언어의 하위 집합에 대 한는 편집 하며 계속 하기 기능을 사용 하면 디버깅 세션 중에 코드를 편집할 수 있습니다.
-
--   [다중 스레드 응용 프로그램을 디버그](../debugger/debug-multithreaded-applications-in-visual-studio.md) 다중 스레드 응용 프로그램을 디버깅 하는 방법에 설명 합니다. 
-
--   [원격 디버깅](../debugger/remote-debugging.md) 다른 컴퓨터 또는 장치에서 실행 되는 응용 프로그램을 디버깅 하는 방법을 설명 합니다. 
-  
--   [IntelliTrace](../debugger/intellitrace.md) Visual Studio Enterprise에서 IntelliTrace 기능에 설명 합니다. 사용할 수 있습니다 레코드 및 추적 코드의 실행 내역입니다.
-
--   [네트워크 사용량](../profiling/network-usage.md) 웹 서비스 및 기타 네트워크 리소스에 앱 UWP (유니버설 Windows)를 디버깅 하는 데 사용할 수 있는 프로 파일링 도구에 설명 합니다. 페이로드를 검사 하는 도구를 사용 합니다.
-
--   [디버그 인터페이스 액세스 SDK](../debugger/debug-interface-access/debug-interface-access-sdk.md) Microsoft 디버그 인터페이스 액세스 소프트웨어 개발 키트 (DIA SDK)에 대해 설명 합니다. DIA SDK는 Microsoft 사후 컴파일러 도구에서 생성한 프로그램 데이터베이스(.pdb) 파일에 저장된 디버그 정보에 액세스할 수 있도록 합니다.  
-
-## <a name="see-also"></a>참고 항목  
- [Visual Studio의 디버깅](../debugger/index.md)
+> [!div class="nextstepaction"]
+> [Visual Studio를 사용하여 디버깅하는 자세한 내용](../debugger/getting-started-with-the-debugger.md)

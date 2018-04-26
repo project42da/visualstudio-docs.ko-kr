@@ -1,9 +1,9 @@
 ---
-title: 도구 상자, HTML 탭 | Microsoft 문서
-ms.custom: ''
+title: 도구 상자, HTML 탭
 ms.date: 06/21/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.toolbox.html
 helpviewer_keywords:
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ff609631cec69e0d32cb74e5857cd3bb8df5ab94
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4c47ca792c25efe6ef77f3ee3a9baad61e801624
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="toolbox-html-tab"></a>도구 상자, HTML 탭
 
@@ -163,7 +163,7 @@ ms.lasthandoff: 04/16/2018
 **Textarea**를 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
-<textarea id=" textarea 1 name=" textarea 1" rows=2 cols=20></textarea> 
+<textarea id=" textarea 1 name=" textarea 1" rows=2 cols=20></textarea>
 ```
 
 > [!IMPORTANT]
@@ -178,7 +178,7 @@ ms.lasthandoff: 04/16/2018
 **Table**을 디자인 보기 화면으로 끌어다 놓으면 다음과 같은 HTML 태그가 문서에 삽입됩니다.
 
 ```html
-<table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table> 
+<table cellspacing="1" width="75%" border=1> <tr><td></td></tr></table>
 ```
 
 **Image**
@@ -233,4 +233,4 @@ size 속성 값을 늘려 여러 줄 `select` 요소를 만들 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[도구 상자](../../ide/reference/toolbox.md)
+- [도구 상자](../../ide/reference/toolbox.md)

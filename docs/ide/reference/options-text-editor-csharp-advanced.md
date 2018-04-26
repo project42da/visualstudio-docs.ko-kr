@@ -1,6 +1,7 @@
 ---
-title: 옵션, 텍스트 편집기, C#, 고급 | Microsoft Docs
+title: 옵션, 텍스트 편집기, C#, 고급
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
 f1_keywords:
@@ -16,11 +17,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0df7b6b38f8982e92d3b7cdee3165ae19e5567a4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a7675d711a4a1df6af4643a459f49b6ef518e5b4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="options-text-editor-c-advanced"></a>옵션, 텍스트 편집기, C#, 고급
 
@@ -110,8 +111,8 @@ C#의 편집기 서식, 코드 리팩터링 및 XML 문서 주석에 대한 설�
 
 ## <a name="see-also"></a>참고 항목
 
-[방법: 문서 생성에 대한 XML 주석 삽입](../../ide/reference/generate-xml-documentation-comments.md)  
-[XML 문서 주석(C# 프로그래밍 가이드)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)  
-[XML 주석과 함께 코드 문서화(C# 가이드)](/dotnet/csharp/codedoc)  
-[언어별 편집기 옵션 설정](../../ide/reference/setting-language-specific-editor-options.md)  
-[C# IntelliSense](../../ide/visual-csharp-intellisense.md)
+- [방법: 문서 생성에 대한 XML 주석 삽입](../../ide/reference/generate-xml-documentation-comments.md)
+- [XML 문서 주석(C# 프로그래밍 가이드)](/dotnet/csharp/programming-guide/xmldoc/xml-documentation-comments)
+- [XML 주석과 함께 코드 문서화(C# 가이드)](/dotnet/csharp/codedoc)
+- [언어별 편집기 옵션 설정](../../ide/reference/setting-language-specific-editor-options.md)
+- [C# IntelliSense](../../ide/visual-csharp-intellisense.md)

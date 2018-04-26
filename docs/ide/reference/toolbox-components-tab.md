@@ -1,9 +1,8 @@
 ---
-title: 도구 상자, 구성 요소 탭 | Microsoft 문서
-ms.custom: ''
+title: 도구 상자, 구성 요소 탭
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: reference
 helpviewer_keywords:
 - Toolbox, Components tab
@@ -12,65 +11,80 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29fd00d6fdf6f973149f57a78eb1145274689a2b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8a05ea5b06e985a21fbe45882ccfb36bfe194034
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="toolbox-components-tab"></a>도구 상자, 구성 요소 탭
 
 Visual Basic 및 C# 디자이너에 추가할 수 있는 구성 요소를 표시합니다. <xref:System.Messaging.MessageQueue> 및 <xref:System.Diagnostics.EventLog> 구성 요소와 같이 Visual Studio에 함께 제공되는 .NET Framework 구성 요소 이외에 사용자 지정 또는 타사 구성 요소를 이 탭에 추가할 수 있습니다.
-  
- 이 탭을 표시하려면 **보기** 메뉴에서 **도구 상자**를 선택합니다. **도구 상자**에서 **구성 요소** 탭을 선택합니다.  
-  
- **BackgroundWorker**  
- 작업을 별도의 전용 스레드에서 실행할 수 있는 `System.ComponentModel.BackgroundWorker` 구성 요소를 만듭니다.  
-  
- **DirectoryEntry**  
- Active Directory 서비스 공급자를 조작하는 데 사용될 수 있고 Active Directory 계층 구조의 노드 또는 개체를 캡슐화하는 <xref:System.DirectoryServices.DirectoryEntry> 구성 요소 인스턴스를 만듭니다.  
-  
- **DirectorySearcher**  
- Active Directory에 대해 쿼리를 실행하는 데 사용할 수 있는 <xref:System.DirectoryServices.DirectorySearcher> 구성 요소 인스턴스를 만듭니다.  
-  
- **ErrorProvider**  
- 최종 사용자에게 양식의 컨트롤에 관련 오류가 있음을 나타내는 `System.Windows.Forms.ErrorProvider` 구성 요소 인스턴스를 만듭니다.  
-  
- **EventLog**  
+
+ 이 탭을 표시하려면 **보기** 메뉴에서 **도구 상자**를 선택합니다. **도구 상자**에서 **구성 요소** 탭을 선택합니다.
+
+ **BackgroundWorker**
+
+ 작업을 별도의 전용 스레드에서 실행할 수 있는 `System.ComponentModel.BackgroundWorker` 구성 요소를 만듭니다.
+
+ **DirectoryEntry**
+
+ Active Directory 서비스 공급자를 조작하는 데 사용될 수 있고 Active Directory 계층 구조의 노드 또는 개체를 캡슐화하는 <xref:System.DirectoryServices.DirectoryEntry> 구성 요소 인스턴스를 만듭니다.
+
+ **DirectorySearcher**
+
+ Active Directory에 대해 쿼리를 실행하는 데 사용할 수 있는 <xref:System.DirectoryServices.DirectorySearcher> 구성 요소 인스턴스를 만듭니다.
+
+ **ErrorProvider**
+
+ 최종 사용자에게 양식의 컨트롤에 관련 오류가 있음을 나타내는 `System.Windows.Forms.ErrorProvider` 구성 요소 인스턴스를 만듭니다.
+
+ **EventLog**
+
  로그에 이벤트 쓰기 및 로그 데이터 읽기와 같이 시스템 및 사용자 지정 이벤트 로그를 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.EventLog> 구성 요소 인스턴스를 만듭니다.
-  
- **FileSystemWatcher**  
+
+ **FileSystemWatcher**
+
  액세스 권한을 가진 디렉터리 또는 파일이 변경되었는지 모니터링하는 데 사용할 수 있는 <xref:System.IO.FileSystemWatcher> 구성 요소 인스턴스를 만듭니다.
-  
- **HelpProvider**  
- 컨트롤에 대한 팝업 또는 온라인 도움말을 제공하는 `System.Windows.Forms.HelpProvider` 구성 요소 인스턴스를 만듭니다.  
-  
- **ImageList**  
- `System.Drawing.Image` 개체 컬렉션을 관리하는 메서드를 제공하는 `System.Windows.Forms.ImageList` 구성 요소 인스턴스를 만듭니다.  
-  
- **MessageQueue**  
+
+ **HelpProvider**
+
+ 컨트롤에 대한 팝업 또는 온라인 도움말을 제공하는 `System.Windows.Forms.HelpProvider` 구성 요소 인스턴스를 만듭니다.
+
+ **ImageList**
+
+ `System.Drawing.Image` 개체 컬렉션을 관리하는 메서드를 제공하는 `System.Windows.Forms.ImageList` 구성 요소 인스턴스를 만듭니다.
+
+ **MessageQueue**
+
  큐에서 메시지 읽기, 큐에 메시지 쓰기, 트랜잭션 처리, 큐 관리 작업 수행과 같이 메시지 큐를 조작하는 데 사용할 수 있는 <xref:System.Messaging.MessageQueue> 구성 요소 인스턴스를 만듭니다.
 
- **PerformanceCounter**  
+ **PerformanceCounter**
+
  새 범주 및 인스턴스 만들기, 카운터에서 값 읽기, 카운터 데이터에 대한 계산 수행과 같이 Windows 성능 카운터를 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.PerformanceCounter> 구성 요소 인스턴스를 만듭니다.
-  
- **Process**  
+
+ **Process**
+
  시스템의 프로세스와 연결된 데이터를 중지, 시작, 조작하는 데 사용할 수 있는 <xref:System.Diagnostics.Process> 구성 요소 인스턴스를 만듭니다.
-  
- **SerialPort**  
- 동기 및 이벤트 구동 I/O, 핀 및 중단 상태에 대한 액세스, 직렬 드라이버 속성에 대한 액세스를 제공하는 `System.IO.Ports.SerialPort` 구성 요소 인스턴스를 만듭니다.  
-  
- **ServiceController**  
+
+ **SerialPort**
+
+ 동기 및 이벤트 구동 I/O, 핀 및 중단 상태에 대한 액세스, 직렬 드라이버 속성에 대한 액세스를 제공하는 `System.IO.Ports.SerialPort` 구성 요소 인스턴스를 만듭니다.
+
+ **ServiceController**
+
  서비스 시작 및 중지, 서비스에 명령 보내기와 같이 기존 서비스를 조작하는 데 사용할 수 있는 <xref:System.ServiceProcess.ServiceController> 구성 요소 인스턴스를 만듭니다.
-  
- **Timer**  
- Windows 기반 응용 프로그램에 시간 기반 기능을 추가하는 데 사용할 수 있는 <xref:System.Windows.Forms.Timer> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [Timer 구성 요소](/dotnet/framework/winforms/controls/timer-component-windows-forms)를 참조하세요.  
-  
+
+ **Timer**
+
+ Windows 기반 응용 프로그램에 시간 기반 기능을 추가하는 데 사용할 수 있는 <xref:System.Windows.Forms.Timer> 구성 요소 인스턴스를 만듭니다. 자세한 내용은 [Timer 구성 요소](/dotnet/framework/winforms/controls/timer-component-windows-forms)를 참조하세요.
+
 > [!NOTE]
->  **도구 상자**에 추가할 수 있는 시스템 기반 <xref:System.Timers.Timer>도 있습니다. 이 <xref:System.Timers.Timer>는 서버 응용 프로그램에 최적화되어 있고 Windows Forms <xref:System.Windows.Forms.Timer>는 Windows Forms에 가장 적합합니다.  
-  
+> **도구 상자**에 추가할 수 있는 시스템 기반 <xref:System.Timers.Timer>도 있습니다. 이 <xref:System.Timers.Timer>는 서버 응용 프로그램에 최적화되어 있고 Windows Forms <xref:System.Windows.Forms.Timer>는 Windows Forms에 가장 적합합니다.
+
+
 ## <a name="see-also"></a>참고 항목
 
-[구성 요소를 사용한 프로그래밍](http://msdn.microsoft.com/Library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)  
-[구성 요소 프로그래밍 연습](http://msdn.microsoft.com/Library/373cacf7-479e-4b05-991c-5cb18824e913)  
-[도구 상자](../../ide/reference/toolbox.md)
+- [구성 요소를 사용한 프로그래밍](http://msdn.microsoft.com/Library/d4d4fcb4-e0b8-46b3-b679-7ee0026eb9e3)
+- [구성 요소 프로그래밍 연습](http://msdn.microsoft.com/Library/373cacf7-479e-4b05-991c-5cb18824e913)
+- [도구 상자](../../ide/reference/toolbox.md)

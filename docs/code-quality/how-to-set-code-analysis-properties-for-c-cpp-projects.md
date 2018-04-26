@@ -1,6 +1,7 @@
 ---
 title: '방법: C/C++ 프로젝트의 코드 분석 속성 설정'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -19,11 +20,11 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d072d6c00ad59d886fb713c2ac98886524371031
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f2800ce4784f5a8215dfe49b00194925c3cdb588
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-set-code-analysis-properties-for-cc-projects"></a>방법: C/C++ 프로젝트의 코드 분석 속성 설정
 코드 분석 도구는 프로젝트의 각 구성에 대 한 코드 분석을 사용 하 여 규칙을 구성할 수 있습니다. 또한를 생성 하거나 타사 도구를 통해 프로젝트에 추가 하는 코드에서 발생 한 경고를 표시 하지 않는 코드 분석을 유도할 수 있습니다.

@@ -1,6 +1,7 @@
 ---
 title: 관리 코드에 대한 기본 디자인 지침 규칙 규칙 집합
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: 7eb384f5-f961-400b-b151-115d92addc6a
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 7f89418c140005e8449755eab7b217ac1c149d57
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 66c67c9c1a395c0684567acfed78c207422b59ba
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="basic-design-guideline-rules-rule-set-for-managed-code"></a>관리 코드에 대한 기본 디자인 지침 규칙 규칙 집합
 Microsoft 기본 디자인 지침 규칙 규칙 집합 코드를 보다 쉽게 이해 하 고 사용에 초점을 사용할 수 있습니다. 프로젝트에 라이브러리 코드가 있거나 유지 관리 하기 쉬운 코드에 대 한 모범 사례를 적용 하려는 경우이 규칙 집합을 포함 해야 합니다.

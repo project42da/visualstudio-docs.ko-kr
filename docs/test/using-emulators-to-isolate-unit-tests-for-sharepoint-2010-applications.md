@@ -1,6 +1,7 @@
 ---
-title: 에뮬레이터를 사용하여 SharePoint 2010 응용 프로그램용 단위 테스트 격리 | Microsoft Docs
+title: 에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 994e13d7155dd5490d3f3f02865b14845bae498b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 13f06279857897ba1562c157a7ffa1c76dd3c6c8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리
 Microsoft.SharePoint.Emulators 패키지는 Microsoft SharePoint 2010 응용 프로그램에 대한 격리된 단위 테스트를 만들도록 도와주는 라이브러리 집합을 제공합니다. 에뮬레이터는 [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 격리 프레임워크의 [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)을 사용하여 SharePoint API의 가장 일반적인 개체 및 메서드를 가장하는 간단한 메모리 내 개체를 만듭니다. SharePoint 메서드가 에뮬레이트되지 않는 경우가 에뮬레이터의 기본 동작을 변경하려면 Fakes shim을 만들어서 원하는 결과를 제공할 수 있습니다.
@@ -302,7 +303,8 @@ public string GetAppointmentsForToday(string listName, SPWeb web)
  다음은 Fakes 대리자를 구현하는 기존 테스트 메서드 `GetAppointmentsForTodayReturnsOnlyTodaysAppointments`를 수정한 결과입니다. 필요한 변경 내용은 주석으로 설명됩니다.
 
 > [!IMPORTANT]
->  Fakes shim을 명시적으로 만드는 테스트 메서드는 테스트가 `EmulationMode.Passthrough` 컨텍스트에서 실행될 때 `ShimNotSupported` 예외를 throw합니다. 이 문제를 방지하려면 변수를 사용하여 `EmulationMode` 값을 설정하고 값을 테스트하는 `if` 문으로 Fakes 코드를 래핑합니다.
+> Fakes shim을 명시적으로 만드는 테스트 메서드는 테스트가 `EmulationMode.Passthrough` 컨텍스트에서 실행될 때 `ShimNotSupported` 예외를 throw합니다. 이 문제를 방지하려면 변수를 사용하여 `EmulationMode` 값을 설정하고 값을 테스트하는 `if` 문으로 Fakes 코드를 래핑합니다.
+
 
 ```csharp
 // class level field to set emulation mode

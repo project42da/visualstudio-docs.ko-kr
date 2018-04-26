@@ -11,14 +11,15 @@ ms.assetid: 1020581d-eaaa-41a2-aca4-bf4c212895f6
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 226fe4206af9e41d1d071b34e6985e00ce4041f9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 59f273c511a24b1139b03421c2ca59871350aec3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="n-tier-data-applications-overview"></a>N 계층 데이터 응용 프로그램 개요
 *N 계층* 데이터 응용 프로그램은 여러도 분리 되어 있는 데이터 응용 프로그램 *계층*합니다. N 계층 응용 프로그램 "분산된 응용 프로그램" 및 "다중 계층 응용 프로그램" 라고도 함, 클라이언트와 서버 간에 배포 된 개별 계층으로 처리를 구분 합니다. 데이터에 액세스 하는 응용 프로그램을 개발 하는 경우 응용 프로그램을 구성 하는 다양 한 계층 간의 분리를 있어야 합니다.

@@ -15,14 +15,15 @@ ms.assetid: 78bf038b-9296-4fbf-b0e8-d881d1aff0df
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0c308169ef8a0f75821c669fb2cf6876d2b91b06
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4b8a1865dc6fce56f11faa453a4786ae799af7e3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="pass-data-between-forms"></a>폼 간에 데이터를 전달 합니다.
 이 연습에서는 폼 간에 데이터를 전달하기 위한 단계별 지침을 제공합니다. customers 및 orders 테이블에서 Northwind 사용 하 여 한 가지 형태 고객을 선택할 수 있습니다 및 두 번째 형태에 선택한 고객의 주문이 표시 됩니다. 이 연습에서는 첫 번째 형태에서 데이터를 받는 두 번째 형태에서 메서드를 만드는 방법을 보여 줍니다.

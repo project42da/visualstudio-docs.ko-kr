@@ -1,18 +1,19 @@
 ---
 title: 클라우드에서 Kubernetes를 사용하여 컨테이너가 있는 Node.js 개발 환경 만들기 - 4단계 - Kubernetes에서 컨테이터 디버그 | Microsoft Docs
-author: johnsta
-ms.author: johnsta
+author: ghogen
+ms.author: ghogen
 ms.date: 02/20/2018
-ms.topic: get-started-article
-ms.technology: vsce-kubernetes
+ms.topic: tutorial
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: Azure에서 마이크로 서비스 및 컨테이너를 사용하여 신속하게 Kubernetes 개발
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
-manager: ghogen
-ms.openlocfilehash: 8dca016f3a3feb2d1fb10a80695b82e531e48a74
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+manager: douge
+ms.openlocfilehash: 2d1ec5fe0436b394083a247faa4519505aa21ceb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-on-connected-environment-with-nodejs"></a>Node.js를 사용하여 연결된 환경에서 시작
 
@@ -25,7 +26,7 @@ ms.lasthandoff: 03/19/2018
 
 ## <a name="select-the-vsce-debug-configuration"></a>VSCE 디버그 구성 선택
 1. 디버그 보기를 열려면 VS Code의 측면에서 **작업 모음**에서 디버그 아이콘을 클릭합니다.
-1. **시작 프로그램(VSCE)**을 활성 디버그 구성으로 선택합니다.
+1. **시작 프로그램(VSCE)** 을 활성 디버그 구성으로 선택합니다.
 
 ![](media/debug-configuration-nodejs.png)
 
@@ -69,7 +70,7 @@ app.get('/api', function (req, res) {
 다음과 같이 수행해 보세요.
 1. VS Code 디버거를 중단합니다.
 1. VS Code의 측면의 **작업 모음**에서 디버그 아이콘을 클릭합니다. 
-1. **연결(VSCE)**을 활성 디버그 구성으로 선택합니다.
+1. **연결(VSCE)** 을 활성 디버그 구성으로 선택합니다.
 1. F5 키를 누릅니다.
 
 이 구성에서 컨테이너는 *nodemon*이 시작하도록 구성됩니다. 서버 코드가 편집되는 경우 *nodemon*은 로컬로 개발할 때 처럼 노드 프로세스를 자동으로 다시 시작합니다. 

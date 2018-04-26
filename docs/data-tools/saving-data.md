@@ -20,14 +20,15 @@ author: gewarren
 ms.author: gewarren
 manager: douge
 robots: noindex,nofollow
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 7983da748eeb4f008fd17bfc8b086c94c1a6731c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 98ce067f4d56a477d3521f6451202eaeab8d11f1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="saving-data"></a>데이터 저장
 데이터를 저장 하면 원래 데이터 저장소, 일반적으로 SQL Server와 같은 관계형 데이터베이스에 다시 변경 된 응용 프로그램의 데이터 모델의 데이터를 유지 하는 과정입니다.

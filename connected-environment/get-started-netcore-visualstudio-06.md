@@ -1,18 +1,19 @@
 ---
 title: Visual Studio를 사용하여 클라우드에서 Kubernetes를 사용하여 컨테이너가 있는 .NET Core 개발 환경 만들기 - 6단계 - 팀 개발 알아보기 | Microsoft Docs
-author: johnsta
-ms.author: johnsta
+author: ghogen
+ms.author: ghogen
 ms.date: 04/05/2018
-ms.topic: get-started-article
-ms.technology: vsce-kubernetes
+ms.topic: tutorial
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: Azure에서 마이크로 서비스 및 컨테이너를 사용하여 신속하게 Kubernetes 개발
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
-manager: ghogen
-ms.openlocfilehash: d8d81afbe4fbf99c52107c8afc6f1eb9938de792
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+manager: douge
+ms.openlocfilehash: b4bc1f44e63614346f4e2d149e76becabdcb8c71
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-on-connected-environment-with-net-core-and-visual-studio"></a>.NET Core 및 Visual Studio를 사용하여 연결된 환경에서 시작
 
@@ -61,7 +62,7 @@ Visual Studio에서 서비스를 F5 또는 Ctrl+F5 키를 누를 때 사용될 �
 2. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다.
 3. 연결된 환경 설정을 표시하려면 왼쪽의 **디버그** 탭을 선택합니다.
 4. 여기에서 F5 또는 Ctrl+F5 키를 누를 경우 사용될 연결된 환경 및/또는 공간을 만들거나 변경할 수 있습니다. *앞에서 만든 연결된 환경이 선택됐는지 확인합니다*.
-5. **공간** 드롭다운 목록에서 **<새 공간 만들기...>**를 선택합니다.
+5. **공간** 드롭다운 목록에서 **<새 공간 만들기...>** 를 선택합니다.
 
     ![](images/Settings.png)
 

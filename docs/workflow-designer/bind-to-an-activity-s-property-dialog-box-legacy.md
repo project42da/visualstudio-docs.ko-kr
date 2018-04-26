@@ -1,7 +1,9 @@
 ---
-title: 활동에 바인딩하려면&#39;s 속성 대화 상자 (레거시) | Microsoft Docs
+title: 워크플로 디자이너-활동에 바인딩할&#39;s 속성 대화 상자 (레거시)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.ComponentModel.Design.ActivityBindForm.UI
 helpviewer_keywords:
@@ -12,14 +14,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a799b57169116343f5d83e54ce5bd87dedfd801
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8922864a32c08d8feaed11e530314176557a785f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="bind-to-an-activity39s-property-dialog-box-legacy"></a>활동에 바인딩하려면&#39;s 속성 대화 상자 (레거시)
-이 항목에서는 설명 방법을 사용 하 여는 **활동의 속성에 바인딩할** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
+# <a name="bind-to-an-activitys-property-dialog-box-legacy"></a>활동 속성에 바인딩 대화 상자(레거시)
+
+이 항목에서는 설명 방법을 사용 하 여는 **활동의 속성에 바인딩할** 레거시 Windows 워크플로 디자이너의 대화 상자. WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 워크플로 디자이너를 사용 합니다.
 
  종속성 속성인 인스턴스 형식을 다른 활동의 public 속성이나 이벤트에 바인딩할 수 있습니다. 활동 바인딩에 대 한 자세한 내용은 참조 [종속성 속성을 사용 하 여](http://go.microsoft.com/fwlink?LinkID=65007)합니다.
 

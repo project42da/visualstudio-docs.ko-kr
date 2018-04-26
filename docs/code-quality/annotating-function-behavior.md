@@ -1,6 +1,7 @@
 ---
 title: 함수 동작에 주석 지정
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -21,11 +22,11 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 49631248d049db5fa74bed1562e348dde15c0acc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7ee46c277574b9ceec2c4b0a26685570d305990f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="annotating-function-behavior"></a>함수 동작에 주석 지정
 주석을 추가 하는 것 외에도 [함수 매개 변수 및 반환 값](../code-quality/annotating-function-parameters-and-return-values.md), 전체 함수의 속성을 주석 처리할 수 있습니다.

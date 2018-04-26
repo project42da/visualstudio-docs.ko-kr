@@ -9,14 +9,15 @@ ms.assetid: c83ba0bb-5425-4d47-8891-6b4dbf937701
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: e5819a208a54a5a4235330216e46b5e17f1260fa
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 32bbbe0aef325ee3866ec441404e30ec9f182b38
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="typed-vs-untyped-datasets"></a>형식화 되지 않은 데이터 집합과 비교 입력
 형식화 된 데이터 집합은 먼저 기본에서 파생 되는 데이터 집합 <xref:System.Data.DataSet> 클래스 하 고 다음 정보를 사용 하 여는 **데이터 집합 디자이너**, dataset 클래스를 강력한 형식의 새로운를 생성 하는.xsd 파일에 저장 되어 있습니다. 스키마 (테이블, 열 및 등)에서 정보 생성 이며 첫 번째 클래스 개체 및 속성의 집합으로이 새 데이터 집합 클래스도 컴파일됩니다. 형식화 된 데이터 집합 기본에서 상속 하기 때문에 <xref:System.Data.DataSet> 의 기능을 모두 클래스, 형식화 된 가정은 <xref:System.Data.DataSet> 클래스 및 인스턴스를 사용 하는 메서드와 함께 사용할 수는 <xref:System.Data.DataSet> 클래스를 매개 변수로 합니다.

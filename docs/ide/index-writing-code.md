@@ -1,18 +1,20 @@
 ---
 layout: LandingPage
+ms.date: 01/01/2018
 author: gewarren
 ms.author: gewarren
 ms.topic: landing-page
-title: "Visual Studio를 사용하여 코드 작성 및 관리 | Microsoft Docs"
-description: "Visual Studio의 코드 편집기 및 다른 도구를 사용하여 코드를 작성, 탐색, 관리 및 개선하는 방법에 대해 알아봅니다."
+title: Visual Studio를 사용하여 코드 작성 및 관리 | Microsoft Docs
+description: Visual Studio의 코드 편집기 및 다른 도구를 사용하여 코드를 작성, 탐색, 관리 및 개선하는 방법에 대해 알아봅니다.
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 88550be8e6d2d7e226d591a5011da5d3affbb511
-ms.sourcegitcommit: 342e5ec5cec4d07864d65379c2add5cec247f3d6
+ms.openlocfilehash: 41126bc657177067dbfe1980f47f0aa1425699d6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/27/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="write-and-manage-code-using-visual-studio"></a>Visual Studio를 사용하여 코드 작성 및 관리
 

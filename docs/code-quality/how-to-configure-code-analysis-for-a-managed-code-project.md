@@ -1,6 +1,7 @@
 ---
 title: Visual Studio에서 코드 분석 구성
 ms.date: 04/04/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 f1_keywords:
@@ -14,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 66faf26170e1e102ccbaffcb74334bdd20e4d8ae
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: afa7a75ae083133f2cff1197b2aa111a1d7bf719
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-code-analysis-for-a-managed-code-project"></a>방법: 관리 코드 프로젝트에 대한 코드 분석 구성
 
@@ -31,7 +32,7 @@ Visual Studio에서 코드 분석의 목록에서 선택할 수 있습니다 *�
 
 1. 열기는 **코드 분석** 프로젝트의 속성 페이지에서 탭 합니다. 다음 방법 중 하나로이 수행할 수 있습니다.
 
-   - **솔루션 탐색기**, 프로젝트를 선택 합니다. 메뉴 모음에서 선택 **분석** > **코드 분석 구성** > **에 대 한 \<p r o j >**합니다.
+   - **솔루션 탐색기**, 프로젝트를 선택 합니다. 메뉴 모음에서 선택 **분석** > **코드 분석 구성** > **에 대 한 \<p r o j >** 합니다.
 
    - 프로젝트를 마우스 오른쪽 단추로 클릭 **솔루션 탐색기** 선택 **속성**를 선택한 후는 **코드 분석** 탭 합니다.
 

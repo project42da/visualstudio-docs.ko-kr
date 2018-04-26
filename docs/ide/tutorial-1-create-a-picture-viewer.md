@@ -1,9 +1,9 @@
 ---
-title: '자습서 1: 사진 뷰어 만들기 | Microsoft Docs'
+title: '자습서 1: 사진 뷰어 만들기'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: 3071d6df-2b2f-4e95-ab68-bef727323136
 author: TerryGLee
@@ -11,47 +11,47 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0061ca517fd75fbfe76fbb4c47431e3438a7f614
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5be14bf68f88bc058adf3685cc30e3ab545a6354
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="tutorial-1-create-a-picture-viewer"></a>자습서 1: 사진 뷰어 만들기
 이 자습서에서는 파일에서 그림을 로드하여 창에 표시하는 프로그램을 빌드합니다. 또한 단추와 그림 상자 같은 컨트롤을 폼으로 끌어서 놓고, 이러한 컨트롤의 속성을 설정하고, 컨테이너를 사용하여 폼의 크기를 자연스럽게 조정하는 방법에 대해 배우고 코드 작성을 시작합니다. 여기에서는 다음과 같은 작업을 수행하는 방법에 대해 배우게 됩니다.  
-  
+
 -   새 프로젝트를 만듭니다.  
-  
+
 -   응용 프로그램을 테스트(디버깅)합니다.  
-  
+
 -   확인란과 단추 같은 기본 컨트롤을 폼에 추가합니다.  
-  
+
 -   레이아웃을 사용하여 폼에 컨트롤을 배치합니다.  
-  
+
 -   폼에 **파일 열기** 및 **색** 대화 상자를 추가합니다.  
-  
+
 -   IntelliSense 및 코드 조각을 사용하여 코드를 작성합니다.  
-  
+
 -   이벤트 처리기 메서드를 작성합니다.  
-  
+
  자습서 실행이 끝나면 프로그램이 다음 그림과 같이 만들어집니다.  
-  
+
  ![이 자습서에서 만드는 사진](../ide/media/express_pictureviewerdone.png "Express_PictureViewerDone")  
 이 자습서에서 만드는 사진  
-  
+
  샘플의 전체 버전을 다운로드하려면 [전체 사진 뷰어 자습서 샘플](http://code.msdn.microsoft.com/Complete-Picture-Viewer-7d91d3a8)을 참조하세요.  
-  
+
  ![비디오 링크](../data-tools/media/playvideo.gif "PlayVideo")이 항목의 비디오 버전을 보려면 [How Do I: Create a Picture Viewer in Visual Basic?](http://go.microsoft.com/fwlink/?LinkId=205207)(방법: Visual Basic에서 사진 뷰어 만들기) 또는 [How Do I: Create a Picture Viewer in C#?](http://go.microsoft.com/fwlink/?LinkId=205198)(방법: C#에서 사진 뷰어 만들기)를 참조하세요.  
-  
+
 > [!NOTE]
 >  이러한 비디오에서는 이전 버전의 Visual Studio를 사용하므로 일부 메뉴 명령과 기타 사용자 인터페이스 요소가 약간 다를 수 있습니다. 그러나 개념 및 절차는 Visual Studio의 현재 버전에서 비슷하게 작동합니다. 이 자습서에는 Visual C#과 Visual Basic이 둘 다 설명되어 있으므로 사용 중인 프로그래밍 언어와 관련된 정보를 참조하십시오.  
 >   
 >  Visual Basic의 코드를 보려면 코드 블록의 맨 위에 있는 **VB** 탭을 선택하고 Visual C#의 코드를 보려면 **C#** 탭을 선택합니다. Visual C++에 대한 자세한 내용은 [시작](../ide/getting-started-with-cpp-in-visual-studio.md) 및 [C++ Language Tutorial](http://www.cplusplus.com/doc/tutorial/)(C++ 언어 자습서)를 참조하세요.  
 >   
 >  Visual C# 또는 Visual Basic UWP 앱을 작성하는 방법을 알아보려면 [UWP 앱 빌드](https://developer.microsoft.com/windows/apps)를 참조하세요.
-  
+
 ## <a name="related-topics"></a>관련 항목  
-  
+
 |제목|설명|  
 |-----------|-----------------|  
 |[1단계: Windows Forms 응용 프로그램 프로젝트 만들기](../ide/step-1-create-a-windows-forms-application-project.md)|먼저 Windows Forms 응용 프로그램 프로젝트를 만듭니다.|  

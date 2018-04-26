@@ -1,6 +1,7 @@
 ---
 title: 코드 분석 응용 프로그램 오류
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 helpviewer_keywords:
@@ -14,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6b058612095bbb18d8e596beaecc1998be2e805a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 3a9efc0ddb207bfc027f0eee0ae0cbb5bbbca330
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-analysis-application-errors"></a>코드 분석 응용 프로그램 오류
 이 섹션은 관리 코드 분석 도구에서 생성 되는 오류 메시지의 참조입니다. 특정 오류 메시지에 대 한 도움말을 보려면 입력에 오류 번호는 **찾아보십시오** 인덱스 상자로 합니다.

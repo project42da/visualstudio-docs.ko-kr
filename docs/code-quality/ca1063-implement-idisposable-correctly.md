@@ -1,6 +1,7 @@
 ---
 title: 'CA1063: IDisposable을 올바르게 구현하십시오.'
 ms.date: 02/12/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9205c20730681969550c3a2368e6ec889056648b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ac3827dd8ed34a118bb3e4eaaed47bf7400cef90
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca1063-implement-idisposable-correctly"></a>CA1063: IDisposable을 올바르게 구현하십시오.
 
@@ -60,21 +61,21 @@ ms.lasthandoff: 04/19/2018
 
 코드를 검사 하 고이 위반 문제를 해결 하는 다음과 같은 해결 방법이 결정 합니다.
 
-- {0}에 의해 구현 되 고 대신 기본 클래스 Dispose 구현을 재정의 하는 인터페이스 목록에서 IDisposable을 제거 합니다.
+- 구현 되는 인터페이스 목록에서 IDisposable을 제거 {0} 대신 기본 클래스 Dispose 구현을 재정의 합니다.
 
-- {0} 형식에서 종료자를 제거 하 고 Dispose (bool disposing)를 재정의 '삭제'가 false 코드 경로에서 종료 논리를 배치 합니다.
+- 형식에서 종료자를 제거 {0}Dispose (bool disposing)를 재정의 하 고 '삭제'가 false 코드 경로에서 종료 논리를 배치 합니다.
 
-- Dispose (bool disposing)를 재정의 {0} 제거 입력 하 고 '삭제'가 true 코드 경로에 삭제 논리를 저장 합니다.
+- 제거 {0}Dispose (bool disposing)를 재정의 하 고 '삭제'가 true 코드 경로에 삭제 논리를 저장 합니다.
 
-- 해당 {0}는 public 및 sealed로 선언 된 것을 확인 합니다.
+- 되도록 {0} public로 선언 되 고 봉인 되어 있습니다.
 
-- 'Dispose' {0}를 바꾸고 public 및 sealed로 선언 되어 있는지 확인 합니다.
+- 이름 바꾸기 {0} 'dispose' public 및 sealed로 선언 되어 있는지 확인 합니다.
 
-- 해당 {0}는 protected로 선언 되어 있는지 확인 하 고, 가상, 봉인 되지 않은 확인 하십시오.
+- 다음 사항을 확인 {0} , 보호를 가상, 선언 되 고 봉인 해제 합니다.
 
-- Dispose(true), 호출 다음 GC 호출 되도록 {0}를 수정 합니다. 현재 개체 인스턴스에 대해 SuppressFinalize ('this' 또는 'm e'에 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])를 반환 합니다.
+- 수정 {0} Dispose(true)을 호출 되도록 GC를 호출 합니다. 현재 개체 인스턴스에 대해 SuppressFinalize ('this' 또는 'm e'에 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)])를 반환 합니다.
 
-- 다음을 반환 하 고와 있도록 {0}를 수정 합니다.
+- 수정 {0} 와 하 고 다음 반환 되도록 합니다.
 
 - 선언 및 IDisposable 인터페이스를 구현 하는 봉인 되지 않은 형식을 만드는 경우 IDisposable 구현이 단원의 앞에서 설명한 패턴을 따르는지를 확인 합니다.
 

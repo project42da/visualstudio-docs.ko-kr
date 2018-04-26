@@ -33,14 +33,15 @@ ms.assetid: d56f12cb-e139-4fec-b3e4-488383356642
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3f3a558e91496006b0d4750492f0ec9abce7333f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e9ffe8acdf64394052e89af76ef5ade833c1bee9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="windows-communication-foundation-services-and-wcf-data-services-in-visual-studio"></a>Windows Communication Foundation 서비스 및 Visual Studio의 WCF Data Services
 Visual Studio는 Windows Communication Foundation (WCF)으로 작업 하기 위한 도구를 제공 하 고 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], 분산 응용 프로그램을 만들기 위한 Microsoft 기술입니다. 이 항목에서는에서 서비스에 대 한 소개는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 관점입니다. 전체 설명서를 참조 하십시오. [WCF 데이터 서비스 4.5](/dotnet/framework/data/wcf/index)합니다.
@@ -102,7 +103,7 @@ Visual Studio는 Windows Communication Foundation (WCF)으로 작업 하기 위�
  WCF 서비스 호스트에 대 한 자세한 참조 [WCF 서비스 호스트 (WcfSvcHost.exe)](/dotnet/framework/wcf/wcf-service-host-wcfsvchost-exe)합니다.
 
 #### <a name="wcf-test-client"></a>WCF 테스트 클라이언트
- WCF 테스트 클라이언트 도구 테스트 매개 변수 입력, WCF 서비스에 해당 입력 내용을 전송 수 있으며 서비스가 다시 보내는 응답을 확인 합니다. WCF 서비스 호스트와 결합 하면 테스트 환경을 편리 하 게 서비스를 제공 합니다. 이 도구는 드라이브에 설치 된 Visual Studio 2015 용 c: 여기 \Common7\IDE 폴더에서 찾을 수 있습니다: **(x86) C:\Program Files \Microsoft Visual Studio 14.0\Common7\IDE\\**합니다.
+ WCF 테스트 클라이언트 도구 테스트 매개 변수 입력, WCF 서비스에 해당 입력 내용을 전송 수 있으며 서비스가 다시 보내는 응답을 확인 합니다. WCF 서비스 호스트와 결합 하면 테스트 환경을 편리 하 게 서비스를 제공 합니다. 이 도구는 드라이브에 설치 된 Visual Studio 2015 용 c: 여기 \Common7\IDE 폴더에서 찾을 수 있습니다: **(x86) C:\Program Files \Microsoft Visual Studio 14.0\Common7\IDE\\** 합니다.
 
  F5 키를 눌러을 WCF 서비스 프로젝트를 디버깅 하는 경우 WCF 테스트 클라이언트 열리고 구성 파일에 정의 된 서비스 끝점의 목록이 표시 됩니다. 매개 변수를 테스트 하 고 서비스를 시작 하 고 지속적으로 테스트 하 고 서비스의 유효성을 검사 하 여 해당이 프로세스를 반복 수 있습니다.
 

@@ -1,9 +1,9 @@
 ---
-title: 코드 조각 선택 | Microsoft Docs
-ms.custom: ''
+title: 코드 조각 선택
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.expansionpicker
 helpviewer_keywords:
@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fb01cfc51591264b258518f4c90276a7ece11250
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 774ee47f02fe146caade0540be5ee2fb7f59904e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-snippet-picker"></a>코드 조각 선택
 
@@ -47,15 +47,17 @@ Visual Studio 코드 편집기는 몇 번의 마우스 클릭으로 코드의 �
 
 ## <a name="uielement-list"></a>UI 요소 목록
 
-항목 이름  
+항목 이름
+
 **항목 목록**에서 선택한 항목의 이름을 표시하는 편집 가능한 텍스트 필드입니다. 원하는 항목에 대한 증분 검색을 수행하려면 이 필드에 해당 이름을 입력하기 시작합니다. **항목 목록**에서 원하는 항목이 선택될 때까지 문자를 계속 추가합니다.
 
-항목 목록  
+항목 목록
+
 삽입할 수 있는 코드 조각의 목록 또는 코드 조각을 포함하는 폴더의 목록입니다. 코드 조각을 삽입하거나 폴더를 확장하려면 원하는 항목을 선택하고 Enter 키를 누릅니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[코드 조각 사용에 대한 모범 사례](../../ide/best-practices-for-using-code-snippets.md)  
-[Visual Basic IntelliSense 코드 조각](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)  
-[코드에 책갈피 설정](../../ide/setting-bookmarks-in-code.md)  
-[방법: 코드 감싸기 코드 조각 사용](../../ide/how-to-use-surround-with-code-snippets.md)
+- [코드 조각 사용에 대한 모범 사례](../../ide/best-practices-for-using-code-snippets.md)
+- [Visual Basic IntelliSense 코드 조각](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
+- [코드에 책갈피 설정](../../ide/setting-bookmarks-in-code.md)
+- [방법: 코드 감싸기 코드 조각 사용](../../ide/how-to-use-surround-with-code-snippets.md)

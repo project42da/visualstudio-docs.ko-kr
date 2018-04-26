@@ -12,14 +12,15 @@ ms.assetid: 892ebf37-3af4-472e-8744-92837677d611
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4dba04455c4ac6ea6d124911b836d24ab2ec63ec
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9e39b28a3de5aa97ac7c0673cd16b71508ae4276
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-update-or-remove-a-wcf-data-service-reference"></a>방법: WCF 데이터 서비스 참조 추가, 업데이트 또는 제거
 A *서비스 참조* 하면 하나 이상의 액세스 하려면 프로젝트 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)]합니다. 사용 하 여는 **서비스 참조 추가** 대화 상자를 검색할 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)] 인터넷 또는 로컬 영역 네트워크에서 로컬에서 현재 솔루션의 합니다.

@@ -1,6 +1,7 @@
 ---
 title: 무명 메서드 및 코드 분석
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c219bbd3f674d564fe1341057de213b451f755f3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9e069976badeffbce04b2f245277426441d3df2f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="anonymous-methods-and-code-analysis"></a>무명 메서드 및 코드 분석
 *무명 메서드* 는 이름이 없는 메서드입니다. 무명 메서드는 코드 블록을 대리자 매개 변수로 전달 하는 데 가장 자주 사용 됩니다.
@@ -105,7 +106,7 @@ class Class
 
  클래스는 생성자를 여러 개 지정 된 필드에 값을 할당 하는 인라인 익명 메서드를 포함할 수 있습니다. 이 경우 경고 및 메트릭을 연관 된 모든 생성자 생성자 동일한 클래스에 있는 다른 생성자에 연결 하지 않는 한 합니다.
 
- 다음 클래스의 선언에 있는 모든 경고의 예를 들어 **무명 메서드** 에 대해 발생 해야 **class (int)** 및 **Class(string)** 하지만 대해서가 아니라 **Class()**합니다.
+ 다음 클래스의 선언에 있는 모든 경고의 예를 들어 **무명 메서드** 에 대해 발생 해야 **class (int)** 및 **Class(string)** 하지만 대해서가 아니라 **Class()** 합니다.
 
 ```vb
 

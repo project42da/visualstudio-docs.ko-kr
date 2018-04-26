@@ -1,7 +1,7 @@
 ---
-title: 코드 조각을 사용하는 방법에 대한 유용한 정보 | Microsoft 문서
-ms.custom: ''
+title: 코드 조각을 사용하는 방법에 대한 유용한 정보
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d11dcc87a4303937c226e5b7a4efebe8617f6f0f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 52845b2d8f08486f84422957ce8f38a95c1a4d31
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="best-practices-for-using-code-snippets"></a>코드 조각 사용에 대한 모범 사례
 
@@ -70,6 +70,6 @@ Visual Studio에 의해 설치된 IntelliSense 코드 조각 자체에는 보안
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Basic IntelliSense 코드 조각](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)  
-[응용 프로그램 보안](../ide/securing-applications.md)  
-[코드 조각](../ide/code-snippets.md)
+- [Visual Basic IntelliSense 코드 조각](/dotnet/visual-basic/developing-apps/using-ide/intellisense-code-snippets)
+- [응용 프로그램 보안](../ide/securing-applications.md)
+- [코드 조각](../ide/code-snippets.md)

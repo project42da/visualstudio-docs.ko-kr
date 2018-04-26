@@ -1,7 +1,9 @@
 ---
-title: 의견 보내기 | Microsoft 문서
+title: 의견 보내기
 ms.custom: ''
 ms.date: 02/19/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 helpviewer_keywords:
 - product support [Visual Studio]
@@ -10,17 +12,15 @@ ms.assetid: e0846d4d-2ce1-48e3-b219-674ff070bf4e
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.technology:
-- vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: 12f6e61a967d7d551013926dbd580c706192bf3a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4fa70cac665c5673416b62aed6aa6ae0a9ebd805
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="talk-to-us"></a>Talk to Us
+# <a name="talk-to-us"></a>의견 보내기
 제품과 설명서를 개선할 수 있는 아이디어를 보내 주세요. 항상 개인적으로 회신을 드릴 수는 없지만 피드백을 담당자에게 전해 드리겠습니다.  
 
 ## <a name="i-want-to-report-a-problem-with-visual-studio"></a>Visual Studio의 문제를 보고하려는 경우

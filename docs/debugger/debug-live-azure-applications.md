@@ -1,6 +1,6 @@
 ---
-title: 라이브 Azure ASP.NET 앱-Visual Studio 디버그 | Microsoft Docs
-ms.description: Learn how to set snappoints and view snapshots with the Snapshot Debugger
+title: 라이브 Azure ASP.NET 응용 프로그램을 디버깅
+ms.description: Learn how to set snappoints and view snapshots with the Snapshot Debugger.
 ms.custom: mvc
 ms.date: 03/16/2018
 ms.technology: vs-ide-debug
@@ -14,11 +14,11 @@ manager: douge
 ms.workload:
 - aspnet
 - azure
-ms.openlocfilehash: e6ef3acf3373f03249b9ffa4456195f25b9991a3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 415e2ee4da01affd2d34b2bbb1aafb5de697767e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debug-live-aspnet-azure-apps-using-the-snapshot-debugger"></a>스냅숏 디버거를 사용 하 여 라이브 Azure ASP.NET 응용 프로그램을 디버깅
 

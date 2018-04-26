@@ -1,6 +1,7 @@
 ---
 title: 'CA1810: 참조 형식 정적 필드를 인라인으로 초기화하십시오.'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 f1_keywords:
@@ -15,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d0751a4f8f4402d6ba9a3128601ad6e735ac0d3e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b31a0bbea244d5d196364517b5c5a2ca8d7a53a1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="ca1810-initialize-reference-type-static-fields-inline"></a>CA1810: 참조 형식 정적 필드를 인라인으로 초기화하십시오.
 |||
@@ -58,10 +59,10 @@ ms.lasthandoff: 04/19/2018
  추가 `beforefieldinit` 플래그에 대 한 MSIL 정의에 `NoStaticConstructor` 클래스입니다.
 
  **공용.class 자동 ansi StaticConstructor** **확장 [mscorlib]System.Object**
-**{**
-**} / 끝 / StaticConstructor클래스** 
+ **{**
+ **} / 끝 / StaticConstructor클래스** 
  **.class 공용 자동 ansi beforefieldinit NoStaticConstructor** **확장 [mscorlib]System.Object**
-**{** 
+ **{** 
  **} / 끝 / NoStaticConstructor 클래스**
 ## <a name="related-rules"></a>관련된 규칙
  [CA2207: 값 형식 정적 필드를 인라인으로 초기화하십시오.](../code-quality/ca2207-initialize-value-type-static-fields-inline.md)

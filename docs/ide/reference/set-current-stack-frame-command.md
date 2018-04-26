@@ -1,10 +1,9 @@
 ---
-title: 현재 스택 프레임 설정 명령 | Microsoft Docs
-ms.custom: ''
+title: 현재 스택 프레임 설정 명령
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - debug.setcurrentstackframe
 helpviewer_keywords:
@@ -16,33 +15,35 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f8851530dec3e5e1a2c3e829c1508155a2dbda8a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 314ee2a7dec352f4bcdcf8e7d164950a422b79d2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-current-stack-frame-command"></a>현재 스택 프레임 설정 명령
-특정 스택 프레임을 설정할 수 있습니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-Debug.SetCurrentStackFrame index  
-```  
-  
-## <a name="arguments"></a>인수  
- `index`  
- 필수. 해당 인덱스로 스택 프레임을 선택합니다.  
-  
-## <a name="example"></a>예  
-  
-```  
->Debug.SetCurrentStackFrame 1  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [Visual Studio 명령](../../ide/reference/visual-studio-commands.md)   
- [명령 창](../../ide/reference/command-window.md)   
- [찾기/명령 상자](../../ide/find-command-box.md)   
- [Visual Studio 명령 별칭](../../ide/reference/visual-studio-command-aliases.md)
+특정 스택 프레임을 설정할 수 있습니다.
+
+## <a name="syntax"></a>구문
+
+```
+Debug.SetCurrentStackFrame index
+```
+
+## <a name="arguments"></a>인수
+ `index`
+
+ 필수. 해당 인덱스로 스택 프레임을 선택합니다.
+
+## <a name="example"></a>예
+
+```
+>Debug.SetCurrentStackFrame 1
+```
+
+## <a name="see-also"></a>참고 항목
+
+- [Visual Studio 명령](../../ide/reference/visual-studio-commands.md)
+- [명령 창](../../ide/reference/command-window.md)
+- [찾기/명령 상자](../../ide/find-command-box.md)
+- [Visual Studio 명령 별칭](../../ide/reference/visual-studio-command-aliases.md)
