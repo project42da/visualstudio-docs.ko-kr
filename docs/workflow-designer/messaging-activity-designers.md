@@ -1,21 +1,24 @@
 ---
-title: 메시징 활동 디자이너 | Microsoft Docs
+title: 메시징 활동 디자이너는 워크플로 디자이너-
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 897e63cf-a42f-4edd-876f-c4ccfffaf6d6
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 38c34dea2dd0265d156bb4b379323559be4825b3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 03809ffdf421e97b993b840fe4a352b344554e47
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="messaging-activity-designers"></a>메시징 활동 디자이너
-메시징 활동 디자이너는 [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 응용 프로그램에서 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 메시지를 보내고 받는 메시징 활동을 만들고 구성하는 데 사용됩니다. [!INCLUDE[netfx40_long](../workflow-designer/includes/netfx40_long_md.md)] 5에서는 워크플로 내의 메시징을 관리할 수 있도록 하는 두 명의 새로운 템플릿 디자이너가 제공 메시징 활동 및 Windows 워크플로 디자이너입니다. 이 단원의 항목 및 아래 표의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 및 템플릿 디자이너의 사용 방법에 대한 지침을 제공합니다.
+
+메시징 활동 디자이너를 만들고 구성 하는 Windows WF (Workflow Foundation) 응용 프로그램 내에서 Windows Communication Foundation (WCF) 메시지를 주고받을 메시징 활동 사용 됩니다. .NET Framework 4는 다섯 가지 메시징 활동이 소개 하 고 Windows 워크플로 디자이너는 워크플로 내의 메시징을 관리할 수 있도록 하는 두 가지 새 템플릿 디자이너를 제공 합니다. 이 섹션에 포함 되어 있으며 다음 표에 나열 된 항목 워크플로 디자이너의 활동 및 템플릿 디자이너를 사용 하는 방법에 지침을 제공 합니다.
 
 ## <a name="reference"></a>참조
  <xref:System.Activities.Activity>

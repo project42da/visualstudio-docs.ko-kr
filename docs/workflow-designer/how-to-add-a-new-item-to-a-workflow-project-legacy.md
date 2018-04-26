@@ -1,7 +1,9 @@
 ---
-title: '방법: 워크플로 프로젝트 (레거시)에 새 항목 추가 | Microsoft Docs'
+title: '워크플로 디자이너-방법: 워크플로 프로젝트 (레거시)에 새 항목 추가'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - sequential workflows, adding to workflow projects
 - workflows, adding new items
@@ -13,16 +15,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1699b3f2d16bb481a7efb744eed58d395dbc8773
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d6e9607f4924057568849fd7eabd4567130dc2f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project-legacy"></a>방법: 워크플로 프로젝트에 새 항목 추가(레거시)
-제공 되는 레거시 Windows 워크플로 디자이너를 사용 하 여 워크플로 프로젝트를 만든 후 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 를 대상으로 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 추가할 수 있습니다 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 항목 및 다른 친숙 한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 항목을 사용자 프로젝트입니다.
 
- 다음 표에서는 워크플로 프로젝트에 추가할 수 있는 [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] 항목을 보여 줍니다.
+Windows WF (Workflow Foundation) 항목 및 다른 친숙 한 Visual Studio Windows 워크플로 디자이너는 WinFX 또는.NET Framework 버전 3.5 대상으로 하는 Visual Studio 2010에서 제공 하는 레거시를 사용 하 여 워크플로 프로젝트를 만든 후 추가할 수 있습니다. 항목을 프로젝트입니다.
+
+다음 표에서는 워크플로 프로젝트에 추가할 수 있는 Windows Workflow Foundation 항목을 보여 줍니다.
 
 |항목|설명|
 |----------|-----------------|
@@ -33,7 +36,7 @@ ms.lasthandoff: 04/16/2018
 |상태 시스템 워크플로(코드)|디자이너 코드 파일에 워크플로 정의가 있고 별도의 코드 파일에 사용자 코드가 있는 상태 시스템 워크플로|
 |상태 시스템 워크플로(코드 분리)|워크플로 정의가 워크플로 마크업으로 표현되었고 별도의 코드 파일에 사용자 코드가 있는 상태 시스템 워크플로|
 
-### <a name="to-add-a-new-item-to-a-workflow-project"></a>워크플로 프로젝트에 새 항목을 추가하려면
+## <a name="to-add-a-new-item-to-a-workflow-project"></a>워크플로 프로젝트에 새 항목을 추가하려면
 
 1.  에 **프로젝트** 메뉴를 클릭 하 여 **새 항목 추가**합니다.
 

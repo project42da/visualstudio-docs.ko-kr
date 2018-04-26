@@ -1,28 +1,30 @@
 ---
-title: '방법: WCF 워크플로 서비스 응용 프로그램 만들기 | Microsoft Docs'
+title: '워크플로 디자이너-방법: WCF 워크플로 서비스 응용 프로그램 만들기'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 12d675ac-27d8-4d86-ba16-6f7688f8c841
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d901354b4a6a5f90ef75567131540405af7c9690
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 93fb69862c228a3b6e61467facba188dd20c67c7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-wcf-workflow-service-application"></a>방법: WCF 워크플로 서비스 응용 프로그램 만들기
 
-[!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 워크플로 서비스 응용 프로그램은 프로세스 경계를 넘어 클라이언트와 메시지를 주고 받는 분산 통신 서비스입니다. 서비스 측의 서비스 계약 구현은 .NET Framework 3.5의 레거시 워크플로 서비스와 비슷한 방식으로 [!INCLUDE[netfx40_short](../workflow-designer/includes/netfx40_short_md.md)]에서 워크플로 활동을 통해 선언적으로 이루어집니다.
+Windows Communication Foundation (WCF) 워크플로 서비스 응용 프로그램은 프로세스 경계를 넘어 클라이언트와 메시지를 주고 받는 분산된 통신 서비스입니다. 서비스 쪽에서 서비스 계약 구현은.NET Framework 3.5의 레거시 워크플로 서비스와 비슷한 방식으로.NET Framework 4의 워크플로 활동을 통해 선언적으로 수행 됩니다.
 
-### <a name="to-create-a-wcf-workflow-service-application"></a>WCF 워크플로 서비스 응용 프로그램을 만들려면
+## <a name="to-create-a-wcf-workflow-service-application"></a>WCF 워크플로 서비스 응용 프로그램을 만들려면
 
-1.  [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]를 시작합니다.
+1.  Visual Studio 2010을 시작합니다.
 
-2.  에 **파일** 메뉴에서 **새로**를 선택한 후 **프로젝트...** .
+2.  **파일** 메뉴에서 **새로 만들기**를 가리킨 다음, **프로젝트**를 선택합니다.
 
      **새 프로젝트** 대화 상자가 열립니다.
 
@@ -37,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 7.  에 **솔루션** 상자에서 새 솔루션 만들기 또는 클릭 한 다음 선택 **확인**합니다.
 
     > [!NOTE]
-    > 기존 솔루션에 워크플로 콘솔 응용 프로그램을 추가 하려는 경우에서 해당 솔루션을 열고 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)], 솔루션을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기**을 선택 하 고 **추가**, 다음 **새 프로젝트...** 열려는 **새 프로젝트** 대화 상자. 그런 다음 이 절차의 윗부분에 설명된 대로 진행합니다.
+    > 기존 솔루션에 워크플로 콘솔 응용 프로그램을 추가 하려는 경우 Visual Studio 2010에서 해당 솔루션을 열고, 솔루션을 마우스 오른쪽 단추로 클릭 **솔루션 탐색기**를 선택 하 고 **추가**, 다음  **새 프로젝트** 열려는 **새 프로젝트** 대화 상자. 그런 다음 이 절차의 윗부분에 설명된 대로 진행합니다.
 
 8.  프로젝트 템플릿이 서비스 정의를 XAML로 만듭니다. Windows 워크플로 디자이너의 디자인 보기로 열립니다는 <xref:System.Activities.Statements.Sequence> 집합이 포함 된 활동 <xref:System.ServiceModel.Activities.Receive> 및 <xref:System.ServiceModel.Activities.SendReply> 활동입니다.
 

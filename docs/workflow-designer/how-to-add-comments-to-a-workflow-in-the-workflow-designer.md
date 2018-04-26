@@ -1,7 +1,9 @@
 ---
-title: '방법: 워크플로 디자이너에서 워크플로에 주석 추가 | Microsoft Docs'
+title: '워크플로 디자이너-방법: 워크플로에 주석 추가'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Presentation.Annotations.Annotation.UI
 - Annotation
@@ -11,15 +13,15 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: fb7505d773f26a26df0b31477d99f7f5636d8c40
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ba21ba5b2ce6126d29d34f5df662e9e332359ed3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-comments-to-a-workflow-in-the-workflow-designer"></a>방법: 워크플로 디자이너에서 워크플로에 주석 추가
 
-더 크고 더 복잡한 워크플로를 쉽게 만들기 위해 [!INCLUDE[net_v45](../ide/includes/net_v45_md.md)]를 사용하여 개발자는 디자이너에서 다음 형식의 항목에 주석을 추가할 수 있습니다.
+를 쉽게 크고 더 복잡 한 워크플로 만들려면.NET Framework 4.5를 사용 하면 개발자는 다음과 같은 유형의 디자이너에서 항목에 주석을 추가 하려면:
 
 -   <xref:System.Activities.Activity>
 
@@ -36,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 > [!IMPORTANT]
 > 주석 내용은 워크플로와 관련된 XAML 파일에 일반 텍스트로 저장되며 다른 사용자가 읽을 수 있습니다. 민감한 정보를 주석에 입력할 때는 주의하세요.
 
-### <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>디자이너의 활동에 주석 추가
+## <a name="adding-an-annotation-to-an-activity-in-the-designer"></a>디자이너의 활동에 주석 추가
 
 1. 워크플로 디자이너에서 마우스 오른쪽 단추로 클릭 워크플로 디자이너 및 선택 항목 **주석**, **주석 추가**합니다.
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 
    항목 주석 아이콘을 볼 수 있습니다. 주석 아이콘을 가리키면 주석 텍스트가 표시 됩니다.
 
-### <a name="displaying-an-annotation-in-an-activitys-designer"></a>활동 디자이너에 주석 표시
+## <a name="displaying-an-annotation-in-an-activitys-designer"></a>활동 디자이너에 주석 표시
 
 1.  활동 외부에 표시 하는 주석이 있는 활동 디자이너를 클릭 하 고 **Pin** 에서 주석 표시기 아이콘입니다.
 
@@ -56,7 +58,7 @@ ms.lasthandoff: 04/16/2018
 
    ![활동 디자이너 외부에 표시 되는 주석](../workflow-designer/media/annotationoutsidedesigner.png "AnnotationOutsideDesigner")
 
-### <a name="showing-or-hiding-all-annotations"></a>모든 주석 표시 또는 숨기기
+## <a name="showing-or-hiding-all-annotations"></a>모든 주석 표시 또는 숨기기
 
 1. 주석이 있는 활동을 마우스 오른쪽 단추로 클릭합니다. 선택 **주석**, **모든 주석 표시**합니다.
 
@@ -64,7 +66,7 @@ ms.lasthandoff: 04/16/2018
 
 1. 활동 디자이너 외부에 모든 주석의 표시 하려면 마우스 오른쪽 단추로 클릭 활동을 선택 **주석**, **모든 주석 숨기기**합니다.
 
-### <a name="editing-or-deleting-an-annotation-for-an-activity"></a>활동 주석 편집 또는 삭제
+## <a name="editing-or-deleting-an-annotation-for-an-activity"></a>활동 주석 편집 또는 삭제
 
 1. 주석이 있는 활동을 마우스 오른쪽 단추로 클릭합니다.
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 04/16/2018
 
 1. 디자이너 및 선택 하는 워크플로 마우스 오른쪽 단추로 클릭 한 번에 모든 주석을 삭제할 **주석**, **모든 주석 삭제**합니다.
 
-### <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>변수 또는 인수에 대한 주석 추가, 편집 및 삭제
+## <a name="adding-editing-and-deleting-an-annotation-for-a-variable-or-argument"></a>변수 또는 인수에 대한 주석 추가, 편집 및 삭제
 
 1. 변수 또는 인수를 마우스 오른쪽 단추로 클릭하고 주석 추가를 선택합니다.
 

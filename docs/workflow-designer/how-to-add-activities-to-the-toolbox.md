@@ -1,18 +1,20 @@
 ---
-title: '방법: 도구 상자에 활동 추가 | Microsoft Docs'
+title: '워크플로 디자이너-방법: 도구 상자에 활동 추가'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: b3a8a785-5928-457a-8a50-30267e29503d
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: acb101f5dff84f7e8d586ce33c63adbe30fa0dbf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4edb752ca64afd899ac9b3e463b9d29e4b3b68a1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-activities-to-the-toolbox"></a>방법: 도구 상자에 활동 추가
 
@@ -27,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 3.  프로젝트를 빌드합니다. 빌드에 성공 하면 새 범주에는 **도구 상자** 라는 "\<*프로젝트 이름을*>" 해당 범주에 포함 된 사용자 지정 활동과 함께 표시 됩니다.
 
     > [!NOTE]
-    > 도구 상자를 다시 설정하는 경우 솔루션을 다시 빌드하더라도 사용자 지정 활동은 제거됩니다. 다시 설정한 후에 도구 상자를 사용자 지정 활동으로 다시 채우려면 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]을 다시 시작합니다.
+    > 도구 상자를 다시 설정하는 경우 솔루션을 다시 빌드하더라도 사용자 지정 활동은 제거됩니다. 도구 상자 사용자 지정 작업을 다시 설정한 후 다시 채우려면 Visual Studio 2010의 다시 시작 합니다.
 
     > [!NOTE]
     > 도구 상자는 주어진 이름의 활동을 하나만 표시할 수 있습니다. 다른 어셈블리의 두 활동의 클래스 이름이 같은 경우 하나만 표시됩니다.
