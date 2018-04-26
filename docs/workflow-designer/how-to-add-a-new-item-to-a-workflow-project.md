@@ -1,23 +1,26 @@
 ---
-title: '방법: 워크플로 프로젝트에 새 항목 추가 | Microsoft Docs'
+title: '워크플로 디자이너-방법: 워크플로 프로젝트에 새 항목 추가'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 5c6180ca-af10-4513-b0cb-7d478fd84eab
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb3024573a9ca4732066610c2c29c05fa1d73891
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0aa2be7fd8ecccbd8de0aa54c2693dd6b02c7e10
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-a-new-item-to-a-workflow-project"></a>방법: 워크플로 프로젝트에 새 항목 추가
-워크플로 프로젝트를 만든 후에는 워크플로 활동, 디자이너 및 다른 친숙한 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 항목을 프로젝트에 추가할 수 있습니다.
 
- 다음 표에서는 워크플로 프로젝트에 추가할 수 있는 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 항목을 보여 줍니다.
+워크플로 프로젝트를 만든 후에 워크플로 활동, 디자이너 및 다른 친숙 한 Visual Studio 항목을 프로젝트에 추가할 수 있습니다.
+
+다음 표에서 워크플로 프로젝트에 추가할 수 있는 Windows WF (Workflow Foundation) 항목을 나열 합니다.
 
 |이름|설명|
 |----------|-----------------|
@@ -26,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 |Code 활동|코드로 작성된 실행 논리가 포함된 활동입니다. <xref:System.Activities.CodeActivity.Execute%2A> 메서드의 재정의가 포함된 소스 코드 파일이 이미 생성되어 있습니다.|
 |WCF 워크플로 서비스|워크플로 활동을 사용하여 빌드된 [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] 서비스입니다. 선택할 때와 동일한 파일이 프로젝트에 추가이 항목을 선택 하 고 **WCF 워크플로 서비스 응용 프로그램** 새 프로젝트에 대 한 템플릿을 합니다. 이 절차에 대 한 자세한 내용은 참조 [하는 방법: WCF 워크플로 서비스 응용 프로그램 만들기](../workflow-designer/how-to-create-a-wcf-workflow-service-application.md)합니다.|
 
-### <a name="to-add-a-new-item-to-a-workflow-project"></a>워크플로 프로젝트에 새 항목을 추가하려면
+## <a name="to-add-a-new-item-to-a-workflow-project"></a>워크플로 프로젝트에 새 항목을 추가하려면
 
 1.  에 **프로젝트** 메뉴를 클릭 하 여 **새 항목 추가...** .
 

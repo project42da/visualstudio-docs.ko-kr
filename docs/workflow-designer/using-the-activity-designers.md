@@ -1,7 +1,9 @@
 ---
-title: 활동 디자이너를 사용 하 여 | Microsoft Docs
+title: 활동 디자이너를 사용 하 여 워크플로 디자이너-
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - Workflow Designer [WFD], activity designer
 - Visual Studio 2010 Workflow Designer [WFD], activity designer
@@ -11,19 +13,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d246c7d88df588cfc47950bab20011d697c7175f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8dfab116d7c4d3882b4b35322a24af90f3842211
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-the-activity-designers"></a>활동 디자이너 사용
+
 Windows 워크플로 디자이너에는 다양 한 활동 및 워크플로 생성할 때 사용할 수 있는 시스템 제공 활동이 포함 되어 있습니다. 이 단원에서는 사용할 수 있는 시스템 제공 활동 및 디자이너의 범주에 대해 설명합니다. 이러한 각 범주의 개별 활동 및 개별 디자이너에 대한 항목에서는 해당 활동의 역할과 사용 방법에 대한 지침을 제공합니다.
 
 ## <a name="reference"></a>참조
- <xref:System.Activities.Presentation.Toolbox.ToolboxCategory>
+
+<xref:System.Activities.Presentation.Toolbox.ToolboxCategory>
 
 ## <a name="related-sections"></a>관련 단원
+
  [워크플로 디자이너 사용](../workflow-designer/using-the-workflow-designer.md)
 
  [워크플로 디자이너로 워크플로 디버깅](../workflow-designer/debugging-workflows-with-the-workflow-designer.md)

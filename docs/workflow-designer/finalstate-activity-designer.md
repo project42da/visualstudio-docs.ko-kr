@@ -1,27 +1,32 @@
 ---
-title: FinalState 활동 디자이너 | Microsoft Docs
+title: 워크플로 디자이너-FinalState 활동 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: aa186893-8775-40dd-981f-8593ead831d0
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 6360be9522fd8a3640780407cb5252da41515536
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d89e9f81bb7dc8237069a79784eadc0e5d375d6e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="finalstate-activity-designer"></a>FinalState 활동 디자이너
+
 <xref:System.Activities.Core.Presentation.FinalState> 디자이너는 상태 시스템 인스턴스를 종료하는 <xref:System.Activities.Statements.State>를 만드는 데 사용됩니다.
 
 ## <a name="using-the-finalstate-activity-designer"></a>FinalState 활동 디자이너 사용
- **FinalState** 디자이너를 만드는 데 사용 되는 <xref:System.Activities.Statements.State> 하는 상태 시스템에서 종료 상태로 미리 구성 합니다. A <xref:System.Activities.Statements.State> 사용 하 여 만들어진는 <xref:System.Activities.Core.Presentation.FinalState> 활동 디자이너에는 해당 <xref:System.Activities.Statements.State.IsFinal%2A> 속성이로 설정 **true**, 아무런 <xref:System.Activities.Statements.State.Exit%2A> 활동과에서 발생 되는 전환이 없는 합니다. 사용 하는 <xref:System.Activities.Core.Presentation.FinalState> 추가 위한 활동 디자이너는 <xref:System.Activities.Statements.State> 상태 시스템에서 종료 상태로 미리 구성 된 활동으로 끌어는 **FinalState** 활동 디자이너를는 **상태 시스템**의 섹션은 **도구 상자** 워크플로 디자이너에 끌어 놓습니다. <xref:System.Activities.Core.Presentation.FinalState> 활동 디자이너를 <xref:System.Activities.Statements.StateMachine>에 끌어 놓고 나중에 전환을 추가하거나 <xref:System.Activities.Core.Presentation.FinalState> 활동 디자이너를 끌어 놓을 때 전환을 만들 수 있습니다. 전환 만들기에 대 한 자세한 내용은 참조 하십시오. [전환](../workflow-designer/transition-activity-designer.md)합니다.
+
+**FinalState** 디자이너를 만드는 데 사용 되는 <xref:System.Activities.Statements.State> 하는 상태 시스템에서 종료 상태로 미리 구성 합니다. A <xref:System.Activities.Statements.State> 사용 하 여 만들어진는 <xref:System.Activities.Core.Presentation.FinalState> 활동 디자이너에는 해당 <xref:System.Activities.Statements.State.IsFinal%2A> 속성이로 설정 **true**, 아무런 <xref:System.Activities.Statements.State.Exit%2A> 활동과에서 발생 되는 전환이 없는 합니다. 사용 하는 <xref:System.Activities.Core.Presentation.FinalState> 추가 위한 활동 디자이너는 <xref:System.Activities.Statements.State> 상태 시스템에서 종료 상태로 미리 구성 된 활동으로 끌어는 **FinalState** 활동 디자이너를는 **상태 시스템**의 섹션은 **도구 상자** 워크플로 디자이너에 끌어 놓습니다. <xref:System.Activities.Core.Presentation.FinalState> 활동 디자이너를 <xref:System.Activities.Statements.StateMachine>에 끌어 놓고 나중에 전환을 추가하거나 <xref:System.Activities.Core.Presentation.FinalState> 활동 디자이너를 끌어 놓을 때 전환을 만들 수 있습니다. 전환 만들기에 대 한 자세한 내용은 참조 하십시오. [전환](../workflow-designer/transition-activity-designer.md)합니다.
 
 ### <a name="state-activity-properties-in-the-workflow-designer"></a>워크플로 디자이너의 State 활동 속성
- 다음 표에서는 <xref:System.Activities.Core.Presentation.FinalState> 디자이너를 사용하여 설정할 수 있는 속성을 보여 주고 디자이너에서 이러한 속성을 사용하는 방법을 설명합니다. 이러한 일부 속성은 속성 표에서 편집할 수 있으며 일부 속성은 디자이너 화면에서 편집할 수 있습니다.
+
+다음 표에서는 <xref:System.Activities.Core.Presentation.FinalState> 디자이너를 사용하여 설정할 수 있는 속성을 보여 주고 디자이너에서 이러한 속성을 사용하는 방법을 설명합니다. 이러한 일부 속성은 속성 표에서 편집할 수 있으며 일부 속성은 디자이너 화면에서 편집할 수 있습니다.
 
 |속성 이름|필수|용도|
 |-------------------|--------------|-----------|

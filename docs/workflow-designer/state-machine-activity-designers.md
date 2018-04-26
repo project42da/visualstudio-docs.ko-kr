@@ -1,30 +1,24 @@
 ---
-title: 상태 시스템 활동 디자이너 | Microsoft Docs
+title: 워크플로 디자이너-상태 시스템 활동 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: 97f0bff5-7e48-4914-8f04-8015a1c6bfae
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bde93d8ac1907accf4f7d14da186aa43ccb169a7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 23c09af12bc978f9b0303dc44dc4b7db6576fc8b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="state-machine-activity-designers"></a>상태 시스템 활동 디자이너
+
 Windows 워크플로 디자이너는 워크플로 생성할 때 사용할 수 있는 활동 디자이너의 수를 포함 합니다. 이 단원에서는 상태 시스템 워크플로를 만들고 관리하는 데 사용되는 시스템 제공 활동 디자이너에 대해 다룹니다. 다음 항목을 통해 이러한 디자이너에 대해 설명하고 사용 방법에 대한 지침을 제공합니다.
-
-## <a name="in-this-section"></a>섹션 내용
- [StateMachine](../workflow-designer/statemachine-activity-designer.md) 상태의 컬렉션을 포함 하 고 익숙한 상태 시스템 패러다임을 사용 하 여 워크플로 모델링 합니다.
-
- [상태](../workflow-designer/state-activity-designer.md) 상태 시스템에서 사용할 수 있는 상태를 나타냅니다.
-
- [FinalState](../workflow-designer/finalstate-activity-designer.md) 상태 시스템 인스턴스를 종료 하는 상태를 나타냅니다.
-
- [전환](../workflow-designer/transition-activity-designer.md) 두 상태 간 전환을 나타냅니다.
 
 ## <a name="reference"></a>참조
  <xref:System.Activities.Statements.StateMachine>

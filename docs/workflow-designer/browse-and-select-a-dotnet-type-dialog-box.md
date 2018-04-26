@@ -1,7 +1,9 @@
 ---
-title: .NET 유형 대화 상자를 선택 합니다. | Microsoft Docs
+title: 워크플로 디자이너-찾아.NET 유형 선택 대화 상자
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - TypeBrowser.UI
 - ActivityTypeResolver.UI
@@ -11,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 04aba24d3dffc96fb8e5288d74322258fa77ce19
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4d136c98acd2719abd07f8feb2f9def48ec6b2ec
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="browse-and-select-a-net-type-dialog-box"></a>.NET 유형 선택 대화 상자
 
@@ -34,7 +36,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="selecting-a-value-or-reference-type-from-the-type-browser"></a>형식 브라우저에서 값 또는 참조 형식 선택
 
-#### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>형식 브라우저에서 값 또는 참조 형식을 선택하려면
+### <a name="to-select-a-value-or-reference-type-from-the-type-browser"></a>형식 브라우저에서 값 또는 참조 형식을 선택하려면
 
 1.  에 **유형 이름** 상자에 사용 하려는 형식의 이름을 입력 합니다.
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 04/16/2018
 
     -   에 충분 한 문자를 입력의 **유형 이름** 고유 하 게 식별 한 다음 enter 키를 눌러 유형을 선택 하 고 사용 하려는 하는 형식을 상자
 
-#### <a name="to-select-a-generic-type-from-the-type-browser"></a>형식 브라우저에서 제네릭 형식을 선택하려면
+### <a name="to-select-a-generic-type-from-the-type-browser"></a>형식 브라우저에서 제네릭 형식을 선택하려면
 
 1.  에 **유형 이름** 상자에서 사용할 형식 이름을 입력 합니다.
 

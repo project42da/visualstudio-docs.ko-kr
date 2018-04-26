@@ -1,21 +1,23 @@
 ---
-title: 런타임 활동 디자이너 | Microsoft Docs
+title: 워크플로 디자이너-런타임 활동 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: be18aa36-7909-4dd6-a786-b46959675a58
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3069d4c5dde1235e9563c26c10af586001af007c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a519e59538501ceb9f698c89cb2f0c762c08fcd3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="runtime-activity-designers"></a>런타임 활동 디자이너
-Runtime 활동 디자이너는 워크플로 활동을 지속하고 종료하는 데 사용됩니다. 이 단원의 항목에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 활동 디자이너의 사용 방법에 대한 지침을 제공합니다.
+Runtime 활동 디자이너는 워크플로 활동을 지속하고 종료하는 데 사용됩니다. 이 섹션에 포함 된 항목 워크플로 디자이너의 활동 디자이너를 사용 하는 방법에 지침을 제공 합니다.
 
 ## <a name="related-sections"></a>관련 단원
  [제어 흐름](../workflow-designer/control-flow-activity-designers.md)

@@ -1,7 +1,9 @@
 ---
-title: '방법: PolicyActivity 규칙 집합 (레거시) 만들기 | Microsoft Docs'
+title: '워크플로 디자이너-방법: PolicyActivity 규칙 집합 (레거시) 만들기'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - PolicyActivity activity, creating rule sets
 - Rule Set Editor dialog box
@@ -14,22 +16,22 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4911912aa46f5dc8a6aea9b9b20e87c1f83e576f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 57142fc21bc9db03a338f20a27e20b8af51b48cd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-policyactivity-rule-set-legacy"></a>방법: PolicyActivity 규칙 집합 만들기(레거시)
 
-이 항목을 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 설정한 정책 활동 규칙을 만드는 방법에 설명 된 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
+이 항목에서는.NET Framework 버전 3.5 또는 WinFX를 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 설정한 정책 활동 규칙을 만드는 방법을 설명 합니다.
 
  끌어 온 후는 **정책** 활동 항목을는 **도구 상자** 워크플로 디자인 화면을 할 새 규칙에 대 한 집합을 만들거나 기존 규칙 선택은 [PolicyActivity ](http://go.microsoft.com/fwlink?LinkID=65019) 활동입니다. 사용 하 여 설정 합니다. 기존 규칙을 선택 된 [선택 규칙 설정 대화 상자 (레거시)](../workflow-designer/select-rule-set-dialog-box-legacy.md) 하 고 사용 하 여 규칙 집합을 만들면는 [규칙 집합 편집기 대화 상자 (레거시)](../workflow-designer/rule-set-editor-dialog-box-legacy.md)합니다.
 
 > [!NOTE]
 > 열 수는 [규칙 집합 편집기 대화 상자 (레거시)](../workflow-designer/rule-set-editor-dialog-box-legacy.md) 대화 상자에서 두 번 클릭 하 여 직접는 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) 워크플로 디자인 화면에는 작업입니다.
 
-### <a name="to-select-or-create-a-rule-set-for-a-policyactivity-activity"></a>PolicyActivity 활동의 규칙 집합을 선택하거나 만들려면
+## <a name="to-select-or-create-a-rule-set-for-a-policyactivity-activity"></a>PolicyActivity 활동의 규칙 집합을 선택하거나 만들려면
 
 1.  마우스 오른쪽 단추로 클릭는 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019), 클릭 하 고 **속성** 열려는 **속성** 창.
 

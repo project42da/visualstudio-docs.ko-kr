@@ -1,7 +1,9 @@
 ---
-title: 레거시 워크플로 디버깅 | Microsoft Docs
+title: 워크플로 디자이너-레거시 워크플로 디버깅
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - workflows, debugging
 - debugging, workflows
@@ -12,15 +14,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2710266446e285d9107f4450c09ffe2e8e87e090
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 33a8358c5d62b938fc64d608c9b4546ab1745aaa
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging-legacy-workflows"></a>레거시 워크플로 디버깅
 
-레거시 Windows 워크플로 디자이너를 사용 하는 경우 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] 만들려는 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 빌드하 Framework 3.0 또는 3.5를 디버깅할 수 있는 다른 프로그램과 마찬가지로 워크플로에 중단점 설정, 프로세스에 연결 및 검사 하 여 응용 프로그램 스레드 및 호출 스택을 합니다. 뿐만 아니라 원격으로 디버깅할 수도 있습니다.
+레거시 Windows 워크플로 디자이너 Visual Studio에서 Windows WF (Workflow Foundation) 응용 프로그램을 빌드하는 빌드하 Framework 3.0 또는 3.5를 사용할 경우 있습니다 워크플로 디버깅할 수 다른 프로그램과 마찬가지로, 중단점을 설정 하 여 프로세스에 연결 및 스레드 및 호출 스택을 검사 합니다. 뿐만 아니라 원격으로 디버깅할 수도 있습니다.
 
 > [!NOTE]
 > 컴퓨터에 여러 버전의 Visual Studio를 설치하고 제거한 경우 다음과 같은 두 가지 문제 중 하나로 WF3 디버깅이 실패할 수 있습니다.
@@ -32,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 >
 > .NET Framework 3.0 또는 3.5 워크플로를 디버깅할 때 이러한 경우 중 하나가 발생하면 Visual Studio 설치 복구를 수행하세요.
 
- [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)]는 다음과 같은 표준 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디버그 창과 통합됩니다.
+ Windows Workflow Foundation은 다음 표준 Visual Studio 디버그 창과 통합됩니다.
 
 -   **중단점**: 예상 대로 작동 이지만 함수 이름에 대 한 활동을 지정 합니다.
 

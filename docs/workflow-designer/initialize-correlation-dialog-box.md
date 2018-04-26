@@ -1,7 +1,9 @@
 ---
-title: 상관 관계 대화 상자를 초기화 합니다. | Microsoft Docs
+title: 워크플로 디자이너-초기화할 상관 관계 대화 상자
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - InitializeCorrelation.UI
 ms.assetid: 2a0a1cd3-7b9e-493e-9264-fcf85289ffcf
@@ -10,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: aac62d4439c2280e977ef929c79bb103348c170a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 93ce95c7a821d243af842170ba30ec82647933ab
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="initialize-correlation-dialog-box"></a>상관 관계 초기화 대화 상자
 
@@ -29,7 +31,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="to-launch-the-initialize-correlation-dialog-box"></a>상관 관계 초기화 대화 상자를 시작하려면
 
--   클릭 **보기** 에 **InitializeCorrelation** 활동 디자이너 select는 <xref:System.ServiceModel.Activities.InitializeCorrelation> 활동에 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 옆 줄임표 단추를 클릭 하 고는 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 에서 속성 속성 표입니다.
+-   클릭 **보기** 에 **InitializeCorrelation** 활동 디자이너나 선택는 <xref:System.ServiceModel.Activities.InitializeCorrelation> 줄임표 단추를 클릭 하 고 워크플로 디자이너에서 활동의 <xref:System.ServiceModel.Activities.InitializeCorrelation.CorrelationData%2A> 속성에는 속성 표입니다.
 
 ## <a name="see-also"></a>참고자료
 

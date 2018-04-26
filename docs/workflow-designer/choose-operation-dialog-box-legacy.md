@@ -1,7 +1,9 @@
 ---
-title: 작업 선택 대화 상자 (레거시) | Microsoft Docs
+title: 워크플로 디자이너-작업 선택 대화 상자 (레거시)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.Activities.Design.OperationPickerDialog.UI
 ms.assetid: bc3ec902-7797-494e-af48-e70c97eb6779
@@ -10,15 +12,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b4bd8318c4b10dab878ffd96667ce7057e653ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fed4353771edc5f9cc1bb239424b0e7015acd84a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-operation-dialog-box-legacy"></a>작업 선택 대화 상자(레거시)
 
-이 항목에서는 설명 방법을 사용 하 여는 **작업 선택** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
+이 항목에서는 설명 방법을 사용 하 여는 **작업 선택** 레거시 Windows 워크플로 디자이너의 대화 상자. WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 워크플로 디자이너를 사용 합니다.
 
  **작업 선택** 과 연결할 작업 선택 대화 상자를 사용 하는 한 <xref:System.Workflow.Activities.ReceiveActivity> 활동 또는 <xref:System.Workflow.Activities.SendActivity> 활동입니다. 이 대화 상자를 사용 하 여 해당 작업을 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: WCF 계약 작업 구현 (레거시)](../workflow-designer/how-to-implement-a-windows-communication-foundation-contract-operation-legacy.md) 및 [하는 방법: WCF 계약 작업 호출 (레거시)](../workflow-designer/how-to-invoke-a-windows-communication-foundation-contract-operation-legacy.md)합니다.
 

@@ -1,19 +1,19 @@
 ---
-title: XML 데이터 사용 | Microsoft Docs
-ms.custom: ''
+title: XML 데이터 사용
 ms.date: 11/04/2016
-ms.technology: vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1e92bd40eba56c486c95be4d85e376f80beffccf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43a58e9a0fd8522655aeed5f8539b7abefcb9cb8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-xml-data"></a>XML 데이터 사용
 
@@ -45,28 +45,16 @@ XML 스키마 디자이너는 XML 스키마 정의 언어 (XSD) 스키마를 작
 
 Visual Studio에서 XSLT 스타일시트를 디버깅할 수 있습니다. 디버거를 사용하여 XSLT 스타일시트에 중단점을 설정하고 코드에서 XSLT 스타일시트를 한 단계씩 실행하는 등의 작업을 수행할 수 있습니다.
 
-## <a name="in-this-section"></a>단원 내용
-
-[XML 편집기](../xml-tools/xml-editor.md)  
-XML 편집기를 소개합니다.
-
-[XML 스키마 디자이너](../xml-tools/xml-schema-designer.md)  
-XML 스키마 디자이너 및 XSD(XML 스키마 정의 언어) 스키마로 작업하는 방법에 대해 설명합니다.
-
 ## <a name="related-sections"></a>관련 단원
 
-[XSLT 디버그](../xml-tools/debugging-xslt.md)  
-Visual Studio 디버거를 사용하여 스타일시트를 디버깅하는 방법을 설명합니다.
+[XSLT 디버깅](../xml-tools/debugging-xslt.md) Visual Studio 디버거를 사용 하 여 스타일 시트를 디버깅 하는 방법에 설명 합니다.
 
-[XML 표준 참조](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401)  
-XML, DTD(문서 종류 정의), XSD(XML 스키마 정의 언어), XSLT 등의 XML 기술에 대한 정보를 제공합니다.
+[XML 표준 참조](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) XML, 문서 형식 정의 (DTD), XML 스키마 정의 언어 (XSD) 및 XSLT를 포함 하 여 XML 기술에 대 한 정보를 제공 합니다.
 
-[Visual Studio에서 데이터 집합 만들기 및 구성](../data-tools/create-and-configure-datasets-in-visual-studio.md)  
-데이터 집합을 만들 수 있는 디자인 타임 도구에 대해 설명합니다.
+[만들기 및 Visual Studio에서 데이터 집합을 구성](../data-tools/create-and-configure-datasets-in-visual-studio.md) 데이터 집합을 만들기 위한 디자인 타임 도구에 대 한 설명을 제공 합니다.
 
-[관리 코드에서 XML 웹 서비스](http://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196)  
-XML Web services를 만들고 배포하는 방법 및 XML Web services에 액세스하는 방법에 대해 설명합니다.
+[관리 코드에서 XML 웹 서비스](http://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196) 만들기 및 XML 웹 서비스를 배포 하는 방법 및 XML 웹 서비스에 액세스 하는 방법에 설명 합니다.
 
 ## <a name="see-also"></a>참고자료
 
-[Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)
+- [Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)

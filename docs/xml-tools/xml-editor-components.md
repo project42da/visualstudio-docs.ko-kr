@@ -1,37 +1,23 @@
 ---
-title: XML 편집기 구성 요소 | Microsoft Docs
-ms.custom: ''
+title: XML 편집기 구성 요소
 ms.date: 11/04/2016
-ms.technology: vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-xml-tools
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 99c0cdac45c2be8146ff86b7c779165f0d312fec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2da894b45cfe1822de0cf421811e00908c039fce
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="xml-editor-components"></a>XML 편집기 구성 요소
 
 이 섹션에서는 XML 편집기 창 및 대화 상자에 설명 합니다. XML 편집기를 텍스트 편집기를 기반으로 하기 때문에 일반 텍스트 편집기 설정을 사용 하 여 통합된 개발 환경 (IDE) 중 일부를 구성 됩니다.
-
-## <a name="in-this-section"></a>섹션 내용
-
-[옵션 대화 상자, 텍스트 편집기, XML, 기타](../xml-tools/miscellaneous-xml-text-editor-options-dialog-box.md)  
-XML 편집기의 자동 완성 기능 및 스키마 설정에 대해 설명합니다.
-
-[XML 문서 속성, 속성 창](../xml-tools/xml-document-properties-properties-window.md)  
-사용할 수 있는 기본 문서 정보에 대해 설명합니다.
-
-[옵션 대화 상자, 텍스트 편집기, XML, 서식](../xml-tools/formatting-xml-text-editor-options-dialog-box.md)  
-특성 서식을 지정하는 방법, 혼합 내용 처리 방법 등을 제어하는 설정에 대해 설명합니다.
-
-[XML 스키마 대화 상자](../xml-tools/xml-schemas-dialog-box.md)  
-XML 문서와 연결할 XML 스키마를 선택하는 방법에 대해 설명합니다.
 
 ## <a name="related-sections"></a>관련 단원
 
@@ -39,4 +25,4 @@ XML 문서와 연결할 XML 스키마를 선택하는 방법에 대해 설명합
 
 ## <a name="see-also"></a>참고자료
 
-[XML 편집기](../xml-tools/xml-editor.md)
+- [XML 편집기](../xml-tools/xml-editor.md)
