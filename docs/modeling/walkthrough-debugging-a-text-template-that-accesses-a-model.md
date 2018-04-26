@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: afa61e3d6158e5651fdc88969270a3bcf3af63c5
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 560849eaeefc8efd8337cbc98ad3de91e4d15fd9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-debugging-a-text-template-that-accesses-a-model"></a>연습: 모델에 액세스하는 텍스트 템플릿 디버깅
 수정 하거나 도메인 특정 언어 솔루션에서 텍스트 템플릿을 추가 하는 경우 엔진은 소스 코드에 또는 생성된 된 코드를 컴파일할 때 서식 파일을 변환 하는 경우 오류가 발생할 수 있습니다. 다음 연습에서는 텍스트 템플릿을 디버깅을 수행할 수 있는 작업의 일부를 보여 줍니다.

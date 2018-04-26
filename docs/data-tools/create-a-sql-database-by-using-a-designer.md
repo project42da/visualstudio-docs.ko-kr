@@ -10,14 +10,15 @@ ms.assetid: 99c2b06f-47aa-414e-8057-a3453712fd23
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 305374cbce519a87f1d40e09efac7f490b28fe0d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5c0cefc826c26e1f981866a3ceb16fc16d2d522b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>데이터베이스를 만들고 Visual Studio에서 테이블을 추가 합니다.
 만들고 SQL Server Express LocalDB에서 로컬 데이터베이스 파일을 업데이트 합니다. Visual Studio를 사용할 수 있습니다. TRANSACT-SQL 문을 실행 하 여 데이터베이스를 만들 수도 있습니다는 **SQL Server 개체 탐색기** Visual Studio의 도구 창입니다. 이 항목에서는.mdf 파일을 만들고 고 테이블 디자이너를 사용 하 여 테이블 및 키를 추가 합니다.

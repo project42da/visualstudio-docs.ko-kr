@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: a5b1cc36ba82d0713bc8a03fc8b0760af4f65164
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: de364760b5d7446b050cd8931ea2e95867b88e81
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="domain-path-syntax"></a>도메인 경로 구문
 DSL 정의는 XPath 유형 구문을 사용하여 모델에서 특정 요소를 찾습니다.

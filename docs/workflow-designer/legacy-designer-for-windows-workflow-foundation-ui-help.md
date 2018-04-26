@@ -1,7 +1,9 @@
 ---
-title: Windows Workflow Foundation UI 도움말에 대 한 레거시 디자이너 | Microsoft Docs
+title: 워크플로 디자이너-레거시 디자이너에 대 한 Windows Workflow Foundation UI 도움말
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - UI reference
 - Visual Studio 2005 Extensions for Windows Workflow Foundation, UI reference
@@ -12,13 +14,14 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bf5aa9e108113abe1e26226027e27a3867e28a61
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b8b3a84926f933e2e7f5d97a6e2f3562f2807560
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="legacy-designer-for-windows-workflow-foundation-ui-help"></a>Windows Workflow Foundation용 레거시 디자이너 UI 도움말
-이 섹션의 레거시 Windows 워크플로 디자이너에 대 한 상황에 맞는 도움말 항목을 포함 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]합니다. 레거시 디자이너는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
 
- 이러한 항목에 액세스할 수 있습니다는 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] 키를 눌러 사용자 인터페이스 **F1** 때 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 대화 상자를 엽니다.
+이 섹션의 레거시 Windows 워크플로 디자이너는 Visual Studio 2010에 대 한 상황에 맞는 도움말 항목을 포함합니다. WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 디자이너를 사용 합니다.
+
+키를 눌러 Visual Studio 사용자 인터페이스에서 이러한 항목에 액세스할 수 있습니다 **F1** 레거시 워크플로 디자이너 대화 상자를 연 경우.

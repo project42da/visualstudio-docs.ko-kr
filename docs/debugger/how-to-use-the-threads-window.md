@@ -1,6 +1,7 @@
 ---
-title: 스레드 창을 사용 하 여 다중 스레드 응용 프로그램 디버그 | Microsoft Docs
-ms.custom: H1HackMay2017
+title: 다중 스레드 응용 프로그램 디버깅
+description: 스레드 창 및 디버그 위치 도구 모음을 사용 하 여 Visual Studio에서 디버깅
+ms.custom: ''
 ms.date: 05/18/2017
 ms.technology: vs-ide-debug
 ms.topic: conceptual
@@ -18,11 +19,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 09fccc98f52c80a00c2c6a215742ae25b2fc7a4d
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 37a9161011031c53ed16a9ab0918eb498f5fa270
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-debug-a-multithreaded-application-in-visual-studio-using-the-threads-window"></a>연습: 스레드 창을 사용 하 여 Visual Studio에서 다중 스레드 응용 프로그램 디버깅
 Visual Studio에서 제공 된 **스레드** 창 및 기타 사용자 인터페이스 요소 다중 스레드 응용 프로그램을 디버그할 수 있도록 합니다. 사용 하는 방법을 보여 주는이 자습서는 **스레드** 창 및 **디버그 위치** 도구 모음입니다. 다른 도구에 대 한 자세한 내용은 참조 [다중 스레드 응용 프로그램 디버깅을 시작 하려면](../debugger/get-started-debugging-multithreaded-apps.md)합니다. 이 자습서에서는 몇 분 정도 걸리지만 완료에 익숙해질 수 다중 스레드 응용 프로그램 디버깅을 위한 기능입니다.   
@@ -35,7 +36,7 @@ Visual Studio에서 제공 된 **스레드** 창 및 기타 사용자 인터페�
   
      **새 프로젝트** 대화 상자가 나타납니다.  
   
-2.  에 **프로젝트 형식**s 상자에서 원하는 언어 클릭: **Visual Basic**, **Visual C#**, 또는 **Visual c + +**합니다.  
+2.  에 **프로젝트 형식**s 상자에서 원하는 언어 클릭: **Visual Basic**, **Visual C#**, 또는 **Visual c + +** 합니다.  
   
 3.  에 **템플릿** 상자 **콘솔 응용 프로그램**합니다.  
   

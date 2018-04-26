@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 668ef447673897ce02d5d988ce20839006fead09
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 34c8c26343eef22d3b36ad70d4d7d484de76d866
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to--with-text-templates"></a>텍스트 템플릿 사용 방법
 텍스트 템플릿 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 어떤 종류의 텍스트를 생성 하는 효과적인 방법을 제공 합니다. 텍스트 템플릿 텍스트를 생성 하려면 디자인 타임에 프로젝트 코드의 일부를 생성 하 고 응용 프로그램의 일부로 실행 시 사용할 수 있습니다. 이 항목에서는 가장 자주 요약 "작업 방법...?" 라는 메시지가 표시 질문 합니다.

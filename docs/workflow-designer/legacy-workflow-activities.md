@@ -1,7 +1,9 @@
 ---
-title: 레거시 워크플로 활동 | Microsoft Docs
+title: 워크플로 디자이너-레거시 워크플로 활동
 ms.date: 01/18/2017
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - workflows, activities
 - activities
@@ -12,17 +14,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2f31ff7ac208d4b06ce454ef309d35400cb79f97
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 45c24c0be518e58ce87af11a38486818ca4a3ac7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="legacy-workflow-activities"></a>레거시 워크플로 활동
 
-[!INCLUDE[wf](../workflow-designer/includes/wf_md.md)]에는 제어 흐름, 조건, 이벤트 처리, 상태 관리, 응용 프로그램 및 서비스와의 통신을 위한 기능을 제공하는 일련의 기본 활동이 포함되어 있습니다. Windows 워크플로 디자이너에서 제공 되는 시스템 제공 활동을 사용 하 고 워크플로 디자인할 때 또는 사용자 지정 작업을 만들 수 있습니다.
+Windows WF (Workflow Foundation) 응용 프로그램 및 서비스 제어 흐름, 조건, 이벤트 처리, 상태 관리 및 통신에 대 한 기능을 제공 하는 작업의 기본 집합이 포함 되어 있습니다. Windows 워크플로 디자이너에서 제공 되는 시스템 제공 활동을 사용 하 고 워크플로 디자인할 때 또는 사용자 지정 작업을 만들 수 있습니다.
 
- 다음 표에서는 기본적으로 제공되는 [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)]프레임워크 활동 집합을 보여 줍니다. 아니지만 일부, 이러한 활동의 활동 디자이너에서 액세스할 수 있는으로 표시 됩니다는 **도구 상자** 의 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]합니다. 활동을 만들려면 해당 디자이너를 끌어는 **도구 상자** 디자인 화면에 놓습니다.
+다음 표에서는 기본적으로 제공되는 Windows Workflow Foundation 프레임워크 활동 집합을 보여 줍니다. 아니지만 일부, 이러한 활동의 활동 디자이너에서 액세스할 수 있는으로 표시 됩니다는 **도구 상자** 워크플로 디자이너의 합니다. 활동을 만들려면 해당 디자이너를 끌어는 **도구 상자** 디자인 화면에 놓습니다.
 
 |활동|설명|
 |--------------|-----------------|
@@ -64,7 +66,7 @@ ms.lasthandoff: 04/16/2018
 |<xref:System.Workflow.Activities.WebServiceOutputActivity>|워크플로에 대한 웹 서비스 요청에 응답합니다. 자세한 내용은 참조 [WebServiceOutputActivity 활동을 사용 하 여](http://go.microsoft.com/fwlink?LinkID=65092)합니다.|
 |<xref:System.Workflow.Activities.WhileActivity>|조건이 충족될 때까지 워크플로가 반복될 수 있도록 합니다. 자세한 내용은 참조 [WhileActivity 활동을 사용 하 여](http://go.microsoft.com/fwlink?LinkID=65091)합니다.|
 
- 사용자 지정 활동을 만드는 방법에 대 한 자세한 내용은 참조 [사용자 지정 활동 개발](http://go.microsoft.com/fwlink?LinkID=65023) 및 [레거시 활동 디자이너를 사용 하 여](../workflow-designer/using-the-legacy-activity-designer.md)합니다.
+사용자 지정 활동을 만드는 방법에 대 한 자세한 내용은 참조 [사용자 지정 활동 개발](http://go.microsoft.com/fwlink?LinkID=65023) 및 [레거시 활동 디자이너를 사용 하 여](../workflow-designer/using-the-legacy-activity-designer.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 

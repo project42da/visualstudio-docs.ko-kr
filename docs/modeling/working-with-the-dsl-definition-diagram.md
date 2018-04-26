@@ -16,12 +16,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b9c245559622f4bfc461d592bd632a8d1b4c560d
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 45436775c2e7cd2d8ba057b9bdb2e3a3f80d7493
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="working-with-the-dsl-definition-diagram"></a>DSL 정의 다이어그램 작업
 다이어그램의는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)] 정의 도메인 특정 언어를 정의 하기 위한 중요 한 도구입니다. 도메인 모델에 요소를 추가하고 다이어그램에 대해 관계를 정의할 수 있으며 보다 읽기 쉽도록 다이어그램의 레이아웃을 수정할 수 있습니다.

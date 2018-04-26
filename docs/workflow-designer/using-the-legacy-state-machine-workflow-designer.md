@@ -1,7 +1,9 @@
 ---
-title: 레거시 상태 시스템 워크플로 디자이너를 사용 하 여 | Microsoft Docs
+title: 레거시 상태 시스템 워크플로 디자이너를 사용 하 여 워크플로 디자이너-
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - StateFinalizationActivity activity
 - StateActivity activity
@@ -17,16 +19,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16178d2f83ef9cc45ef7007350e30d2b36d6993a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d6ad09c2e999d9432b3c4e1062cb3031eb20ff56
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-the-legacy-state-machine-workflow-designer"></a>레거시 상태 시스템 워크플로 디자이너 사용
-새 상태 시스템 워크플로 프로젝트를 만드는 경우 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 를 대상으로 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 사용 하 여 선택할 수 있습니다는 **상태 시스템 워크플로 콘솔 응용 프로그램** 또는  **상태 시스템 워크플로 라이브러리** 레거시 프로젝트 템플릿을 합니다. 이러한 상태 시스템 프로젝트 템플릿 중 하나를 선택하면 상태 시스템 디자이너가 레거시 워크플로 디자이너 사용자 인터페이스로 나타납니다. 레거시 상태 시스템 프로젝트 템플릿에 대 한 정보를 참조 하십시오. [하는 방법: 만들기 상태 시스템 워크플로 콘솔 응용 프로그램 (레거시)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) 및 [하는 방법: 상태 시스템 워크플로 라이브러리 (레거시)만들기](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
 
- 상태 시스템 워크플로는 상태 집합으로 구성됩니다. 하나의 상태가 초기 상태로 표시됩니다. 각 상태는 특정 이벤트 집합을 받을 수 있으며 이벤트에 따라 다른 상태로 전환될 수 있습니다. 상태 시스템 워크플로는 최종 상태를 가질 수 있으며, 최종 상태로 전환되면 워크플로가 완료됩니다.
+중 하나를 사용 하도록 선택할 수는 WinFX 또는.NET Framework 버전 3.5 대상으로 하는 Visual Studio 2010의 새로운 상태 시스템 워크플로 프로젝트를 만들 때의 **상태 시스템 워크플로 콘솔 응용 프로그램** 또는  **상태 시스템 워크플로 라이브러리** 레거시 프로젝트 템플릿을 합니다. 이러한 상태 시스템 프로젝트 템플릿 중 하나를 선택하면 상태 시스템 디자이너가 레거시 워크플로 디자이너 사용자 인터페이스로 나타납니다. 레거시 상태 시스템 프로젝트 템플릿에 대 한 정보를 참조 하십시오. [하는 방법: 만들기 상태 시스템 워크플로 콘솔 응용 프로그램 (레거시)](../workflow-designer/how-to-create-state-machine-workflow-console-applications-legacy.md) 및 [하는 방법: 상태 시스템 워크플로 라이브러리 (레거시)만들기](../workflow-designer/how-to-create-a-state-machine-workflow-library-legacy.md).
+
+상태 시스템 워크플로는 상태 집합으로 구성됩니다. 하나의 상태가 초기 상태로 표시됩니다. 각 상태는 특정 이벤트 집합을 받을 수 있으며 이벤트에 따라 다른 상태로 전환될 수 있습니다. 상태 시스템 워크플로는 최종 상태를 가질 수 있으며, 최종 상태로 전환되면 워크플로가 완료됩니다.
 
 ## <a name="state-machine-designer-views"></a>상태 시스템 디자이너 뷰
  상태 시스템 디자이너는 자유형 디자이너로서, 디자인 화면에서 활동을 자유롭게 이동할 수 있습니다. 상태 시스템 디자이너에는 두 개의 보기가: *상태* 보기 및 *이벤트 구동* 보기.

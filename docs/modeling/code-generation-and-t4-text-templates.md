@@ -1,6 +1,7 @@
 ---
 title: 코드 생성 및 T4 텍스트 템플릿
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 f1_keywords:
@@ -16,11 +17,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d3864a1dbf468cbef19b5da4ca95577db59a02e6
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: f0a2b6ef6e73fcc4b3fe754377bdad5fdc05eef2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-generation-and-t4-text-templates"></a>코드 생성 및 T4 텍스트 템플릿
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 *T4 텍스트 템플릿* 은 텍스트 파일을 생성할 수 있는 제어 논리 및 텍스트 블록이 혼합된 것입니다. 제어 논리는 [!INCLUDE[csprcs](../data-tools/includes/csprcs_md.md)] 또는 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]에서 프로그램 코드 조각으로 작성되었습니다. Visual Studio 2015 업데이트 2 이상에서는 T4 템플릿 지시문에 C# 버전 6.0 기능을 사용할 수 있습니다. 생성된 파일은 웹 페이지, 리소스 파일 또는 임의 언어로 작성된 프로그램 소스 코드와 같은 임의 종류의 텍스트일 수 있습니다.

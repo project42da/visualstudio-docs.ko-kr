@@ -1,6 +1,7 @@
 ---
 title: SAL 이해
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
 ms.assetid: a94d6907-55f2-4874-9571-51d52d6edcfd
@@ -9,11 +10,11 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - multiple
-ms.openlocfilehash: 928ecfc2ebe652ae307d506d0747746d02c7c269
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 82d6719ee57000ebec8ad88a90543031e0d3eeb8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="understanding-sal"></a>SAL 이해
 Microsoft 소스 코드 주석 언어 (SAL)를 함수 매개 변수, 하는 것은 그에 대 한 가정 및 보장 하는 것은 완료 될 때 사용 하는 방법을 설명 하는 데 사용할 수 있는 주석 집합을 제공 합니다. 헤더 파일에 정의 된 주석은 `<sal.h>`합니다. C + +에 대 한 visual Studio 코드 분석 함수에 대 한 분석을 수정 하려면 SAL 주석을 사용 합니다. Windows 드라이버 개발에 대 한 SAL 2.0에 대 한 자세한 내용은 참조 [Windows 드라이버에 대 한 SAL 2.0 주석](http://go.microsoft.com/fwlink/?LinkId=250979)합니다.

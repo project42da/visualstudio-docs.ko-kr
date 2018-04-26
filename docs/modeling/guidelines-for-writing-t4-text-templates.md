@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 65f4ddf71c904bbe2aeecd7f86b339ac752c3698
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: f96cea682699382b55b786001a175616c877804a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="guidelines-for-writing-t4-text-templates"></a>T4 텍스트 템플릿 작성 지침
 다음 일반 지침 프로그램 코드 또는 다른 응용 프로그램 리소스에서 생성 하는 경우 유용할 수 있습니다 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이들이 하지 규칙 수정 합니다.

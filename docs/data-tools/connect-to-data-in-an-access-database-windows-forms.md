@@ -12,14 +12,15 @@ ms.assetid: 4159e815-d430-4ad0-a234-e4125fcbef18
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: da00528f7c5e2332f4aa599674f6dcb0929be125
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d15cf1d8e2d7a7178b6ffc423319fcadd8e00cad
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access 데이터베이스 (Windows Forms)의 데이터에 연결
 Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.accdb 파일)에 연결할 수 있습니다. 에 표시할 연결을 정의한 후의 데이터는 **데이터 소스** 창. 그 창에서 테이블 또는 뷰를 폼으로 끌 수 있습니다.
@@ -54,7 +55,7 @@ Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.ac
 
      **데이터 소스 변경** 대화 상자가 열립니다.
 
-8.  데이터 원본 목록에서 선택  **\<다른\>**합니다. 에 **데이터 공급자** 드롭다운 목록에서 선택 **.NET Framework Data Provider for OLE DB**를 눌러 **확인**합니다.
+8.  데이터 원본 목록에서 선택  **\<다른\>** 합니다. 에 **데이터 공급자** 드롭다운 목록에서 선택 **.NET Framework Data Provider for OLE DB**를 눌러 **확인**합니다.
 
 9. 에 **연결 추가** 대화 상자에서 **Microsoft Office 12.0 Access Database Engine OLE DB Provider** 에서 **OLE DB Provider** 드롭 다운 합니다.
 
@@ -98,7 +99,7 @@ Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.ac
 
 6.  에 **데이터 연결 선택** 페이지에서 **새 연결** 새 데이터 연결을 구성 합니다.
 
-7.  데이터 원본이 없는 경우 **Microsoft Access 데이터베이스 파일 (OLE DB)**선택, **변경** 열려는 **데이터 소스 변경** 대화 상자와 선택 **Microsoft 데이터베이스 파일에 액세스**를 선택한 후 **확인**합니다.
+7.  데이터 원본이 없는 경우 **Microsoft Access 데이터베이스 파일 (OLE DB)** 선택, **변경** 열려는 **데이터 소스 변경** 대화 상자와 선택 **Microsoft 데이터베이스 파일에 액세스**를 선택한 후 **확인**합니다.
 
 8.  에 **데이터베이스 파일 이름**, 경로 연결 하 고 다음을 선택 하려는.mdb 파일의 이름을 지정 **확인**합니다.
 

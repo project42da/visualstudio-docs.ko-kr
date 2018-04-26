@@ -1,6 +1,7 @@
 ---
 title: Visual Studio용 모델링 SDK - 도메인별 언어
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 922419a1c0b973f704fdd16273b780e6136aebc2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 6dc87ba31e1f693559384977588471af753738e7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modeling-sdk-for-visual-studio---domain-specific-languages"></a>Visual Studio용 모델링 SDK - 도메인별 언어
 에 대 한 Modeling SDK를 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]를 통합할 수 있는 모델을 기반으로 강력한 개발 도구를 만들 수 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 동일한 방식으로 하나 이상의 모델 정의를 만들고 도구 집합으로 통합할 수 있습니다.

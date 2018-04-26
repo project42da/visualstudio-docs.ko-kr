@@ -10,12 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: b7046a7c5af51d1d6c7190525b776ee46b1e41f4
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ad7f424f9c44623a2112680757598f8076358f36
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-generating-code-by-using-text-templates"></a>연습: 텍스트 템플릿을 사용하여 코드 생성
 코드 생성 기능을 사용하면 강력한 형식을 가지고 있지만 소스 모델이 변경될 때 손쉽게 변경할 수 있는 프로그램 코드를 생성할 수 있습니다. 이와 반대로, 구성 파일을 허용하는 완전한 제네릭 프로그램을 작성하는 대체 방식을 사용할 경우에는 좀 더 유연성이 있지만 코드를 읽고 변경하기가 쉽지 않으며 코드의 성능도 그렇게 좋지 않습니다. 이 연습에서는 이러한 이점을 보여 줍니다.

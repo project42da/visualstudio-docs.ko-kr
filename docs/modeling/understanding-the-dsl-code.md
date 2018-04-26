@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ced29b2936f8bec00df3907ffaf54bd06c32ad80
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: c5daaad156b2a4372ab43a19ba2f2bdd6cdb87b5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="understanding-the-dsl-code"></a>DSL 코드 이해
 DSL(Domain-Specific Language) 솔루션은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 DSL 인스턴스를 읽고 업데이트하는 데 사용할 수 있는 API를 생성합니다. 이 API는 DSL 정의에서 생성되는 코드에서 정의됩니다. 이 항목에서는 생성되는 API에 대해 설명합니다.

@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 77a33546d02738ae03e4da5180aa15e2b94f91ea
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ff0f020f2ab7558df6cc6f7865500a9910718145
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overriding-and-extending-the-generated-classes"></a>생성된 클래스 재정의 및 확장
 DSL 정의 플랫폼 도구 도메인 특정 언어를 기반으로 하는 강력한 집합을 작성할 수 있습니다. 재정의 하 고 DSL 정의에서 생성 되는 클래스를 확장 하 여 확장 하 고 조정 작업을 만들 수 있습니다. 이러한 클래스 DSL 정의 다이어그램에 명시적으로 정의 된 도메인 클래스 뿐 아니라 뿐만 아니라 도구 상자, 탐색기, serialization 및 등을 정의 하는 다른 클래스를 포함 합니다.

@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 070f49b09086d463a13470f389a4857225b7add9
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 2f2e0671229635eb3dd5fdd50aca15ce11d1ac3a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="controlling-the-visibility-of-an-icon-or-decorator"></a>아이콘 또는 데코레이터의 가시성 제어
 A *decorator* 아이콘이 나 DSL ()는 도메인 특정 언어의 모양에 표시 되는 텍스트의 줄은 합니다. Decorator 표시 하 고 모델의 속성의 상태에 따라 사라질 수 있습니다. 예를 들어 개인을 나타낼 셰이프를 개인의 성별, 자식, 수에 따라 표시 하는 서로 다른 아이콘이 있을 수 있습니다.

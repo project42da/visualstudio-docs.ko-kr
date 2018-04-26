@@ -20,12 +20,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7ee92121e57b7c3f6391d290ff0c5fde0d689e3c
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: c6f192f476b6b3adb1f8d7e664e769314bad9a46
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customize-code-maps-by-editing-the-dgml-files"></a>Customize code maps by editing the DGML files
 코드 맵을 사용자 지정하려면 맵의 Directed Graph Markup Language(.dgml) 파일을 편집할 수 있습니다. 예를 들어 요소를 편집하여 사용자 지정 스타일을 지정하거나, 코드 요소와 링크에 속성 및 범주를 할당하거나, 코드 요소 또는 링크에 문서 또는 URL을 연결할 수 있습니다. DGML 요소에 대 한 자세한 내용은 참조 [전송 그래프 DGML Markup Language () 참조](../modeling/directed-graph-markup-language-dgml-reference.md)합니다.

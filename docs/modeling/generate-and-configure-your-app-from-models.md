@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ace17c98bc0c65b2fea4daee778fdb8b278fa367
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 14909ec9b5ad989dc8042b6196e84964ffb190af
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="generate-and-configure-your-app-from-models"></a>모델에서 앱 생성 및 구성
 모델에서 응용 프로그램의 일부를 생성하거나 구성할 수 있습니다.

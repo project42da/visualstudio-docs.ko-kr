@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 397e60225740c34d1d70555ccd8294522550a3e1
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 54bd5c4989f23b1de64a17bdf8d88ccebeb65a38
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessing-models-from-text-templates"></a>텍스트 템플릿에서 모델에 액세스
 텍스트 템플릿을 사용 하 여 보고서 파일, 소스 코드 파일 및 도메인 특정 언어 모델을 기반으로 하는 기타 텍스트 파일을 만들 수 있습니다. 텍스트 템플릿에 대 한 기본 정보에 대 한 참조 [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)합니다. 텍스트 템플릿 DSL를 디버깅할 때 실험적 모드에서 작동 하며 DSL 프로그램이 배포 되는 컴퓨터에도 작동 합니다.

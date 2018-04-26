@@ -11,12 +11,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 9e3f6790ff49bbcb7b8404a7f431874a92ebaca2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 4f136f61976c3980f95977e4f93b5c57789235f6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-the-model-explorer"></a>모델 탐색기 사용자 지정
 변경할 수 있습니다 모양 및 동작 탐색기의 도메인 특정 언어 디자이너에 대 한 다음과 같습니다.

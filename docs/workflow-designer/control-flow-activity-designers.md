@@ -1,18 +1,20 @@
 ---
-title: 제어 흐름 활동 디자이너 | Microsoft Docs
+title: 워크플로 디자이너-제어 흐름 활동 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: ba74af23-5398-4e62-bd90-c50612e3bfef
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7b464f141dcda624c293a5abd5065a3263738932
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dea0806b1abc4febbdcf89c59025452c5879addb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="control-flow-activity-designers"></a>제어 흐름 활동 디자이너
 
@@ -44,7 +46,7 @@ Windows 워크플로 디자이너에는 다양 한 워크플로 생성할 때 �
 
 ## <a name="related-sections"></a>관련 단원
 
-그 밖의 활동 디자이너 형식에 대해서는 다음 항목을 참조하세요.
+다른 형식의 활동 디자이너에 대 한 다음 항목을 참조 합니다.
 
  [활동 디자이너 사용](../workflow-designer/using-the-activity-designers.md)
 

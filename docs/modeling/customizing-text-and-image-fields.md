@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5030babe9ef469dc9e580878b6fb51f64b499e33
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 01a55cbf2bf8d741594bae273389086e50dcc981
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-text-and-image-fields"></a>텍스트 및 이미지 필드 사용자 지정
 셰이프의 텍스트 데코레이터를 정의 하는 경우를 TextField로 표현 됩니다. 에 대 한 예제 TextFields 다른 ShapeFields의 초기화, DSL 솔루션에서 Dsl\GeneratedCode\Shapes.cs를 검사 합니다.

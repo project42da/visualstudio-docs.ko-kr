@@ -6,14 +6,15 @@ ms.assetid: 7c83814a-f21d-4323-ad5f-13bac40d3e38
 author: mblome
 ms.author: mblome
 manager: wpickett
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - cplusplus
-ms.openlocfilehash: da68b1ea4783ca1bd35d29218960e1c616f7c32f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a56c8bd9ac0c3745e8096dc12fbfee730ba9558a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C + + 코어 지침 검사기를 사용 하 여
 C + + 코어 지침은 휴대용 집합이 지침, 규칙 및 c + +의 c + + 전문가 디자이너에서 만든 코딩 하는 방법에 대 한 모범 사례입니다. 현재 visual Studio c + +에 대 한 코드 분석 도구는의 일부로 이러한 규칙의 하위 집합을 지원합니다. 코어 지침 검사기는 Visual Studio 2017에 기본적으로 설치 및는 [Visual Studio 2015 용 NuGet 패키지로 사용할 수 있는](#vs2015_corecheck)합니다.

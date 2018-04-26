@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 566558390e29f9198b2328463dfce26327f76565
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: cf990ea206a299c72ec55150bf2e4935b80fb473
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-element-tools"></a>요소 도구 사용자 지정
 일부 DSL 정의의 요소를 그룹으로 단일 개념을 나타냅니다. 예를 들어 구성 요소에는 고정된 포트 집합을 모델을 만들면 항상 하려는 경우 해당 부모 구성 요소와 같은 시간에 만들려는 포트. 따라서 하나가 아닌 요소의 그룹을 만듭니다 요소 작성 도구를 사용자 지정 해야 합니다. 이 위해 요소 작성 도구를 초기화 하는 방법을 사용자 지정할 수 있습니다.

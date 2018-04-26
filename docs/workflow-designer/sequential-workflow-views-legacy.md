@@ -1,7 +1,9 @@
 ---
-title: 순차 워크플로 뷰 (레거시) | Microsoft Docs
+title: 워크플로 디자이너-순차 워크플로 뷰 (레거시)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - sequential workflow views
 - sequential workflows, views
@@ -11,20 +13,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a6b42ba9c1c9f7dbe2beb4a741501967e4968508
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ce1217ea629ae0301b72b444161d61db4fe448b1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sequential-workflow-views-legacy"></a>순차 워크플로 뷰(레거시)
-[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)] 사용할 수 있는 레거시 Windows 워크플로 디자이너를 제공 합니다. 대상에는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
 
- [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]에서는 친숙한 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 사용자 인터페이스를 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 응용 프로그램을 시각적으로 만들 수 있습니다. [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 응용 프로그램은 활동이라고 하는 워크플로 프로세스 단계로 구성됩니다. 해당 활동 디자이너를 디자이너를 끌어 디자인 화면에 활동을 작성 워크플로 만들려면 **도구 상자** 디자인 화면으로 합니다.
+Visual Studio 2010의 WinFX 또는.NET Framework 버전 3.5 대상으로 사용할 수 있는 레거시 Windows 워크플로 디자이너를 제공 합니다.
 
- 순차 워크플로 만들 때는 [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040), 워크플로의 세 가지 뷰를 사용할 수 있습니다. 이러한 뷰는에서 액세스할 수는 **워크플로** 메뉴와 디자인 화면에서 상황에 맞는 메뉴에서 합니다.
+워크플로 디자이너를 그래픽으로 익숙한 Visual Studio 사용자 인터페이스를 사용 하 여 Windows WF (Workflow Foundation) 응용 프로그램을 만드는 방법을 제공 합니다. Windows WF (Workflow Foundation) 응용 프로그램은 활동 이라고 하는 워크플로 프로세스 단계로 구성 됩니다. 해당 활동 디자이너를 디자이너를 끌어 디자인 화면에 활동을 작성 워크플로 만들려면 **도구 상자** 디자인 화면으로 합니다.
 
- 다음 표에서는 각 뷰의 이름과 설명을 보여 줍니다.
+순차 워크플로 만들 때는 [SequentialWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65040), 워크플로의 세 가지 뷰를 사용할 수 있습니다. 이러한 뷰는에서 액세스할 수는 **워크플로** 메뉴와 디자인 화면에서 상황에 맞는 메뉴에서 합니다.
+
+다음 표에서는 각 뷰의 이름과 설명을 보여 줍니다.
 
 |메뉴/탭 옵션|설명|
 |----------------------|-----------------|

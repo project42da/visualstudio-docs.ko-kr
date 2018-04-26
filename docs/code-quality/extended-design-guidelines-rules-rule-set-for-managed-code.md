@@ -1,6 +1,7 @@
 ---
 title: 관리 코드에 대한 확장 디자인 지침 규칙 규칙 집합
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: reference
 ms.assetid: a338caf2-b75d-4f23-a0f9-3024fa0bceac
@@ -9,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: d03dfd0dce846bd18d35e05e30e32502f38d030b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2842db460d0a8e3a31921d80cf4a0c3ea0bbc847
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="extended-design-guidelines-rules-rule-set-for-managed-code"></a>관리 코드에 대한 확장 디자인 지침 규칙 규칙 집합
 Microsoft 확장 디자인 지침 규칙 규칙 집합을 보고 되는 유용성 및 유지 관리 문제를 최대화 하기 위해 기본 디자인 지침 규칙을 확장 합니다. 명명 지침에 주안점을 둡니다. 프로젝트에 라이브러리 코드가 있거나 유지 관리 하기 쉬운 코드를 작성 하는 데 가장 높은 표준을 적용 하려는 경우이 규칙 집합을 포함 하는 것이 좋습니다.

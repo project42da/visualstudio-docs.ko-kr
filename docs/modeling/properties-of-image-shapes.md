@@ -12,12 +12,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 474dd6e1ec655b27c9b447bcb3197c07dba56ecf
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 780c9c98bc6be110a0c8bc987a70aeea3344d0e8
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="properties-of-image-shapes"></a>이미지 모양의 속성
 도메인 클래스는 생성 된 디자이너에 표시 되는 방식을 지정 하려면 이미지 셰이프를 사용할 수 있습니다. 설정 하 여 이미지 셰이프를 정의 고 `Image` 미리 정의 된 이미지 파일에 클래스의 속성입니다. 다음과 같은 형식이 지원 됩니다.

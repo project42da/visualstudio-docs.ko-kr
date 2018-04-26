@@ -1,7 +1,9 @@
 ---
-title: 활동 디자이너를 보내기 | Microsoft Docs
+title: 워크플로 디자이너-Send 활동 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.ServiceModel.Activities.Send.UI
 ms.assetid: b514f2e4-767c-4b94-ac61-dd3a54d4b96d
@@ -10,30 +12,31 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13cc79a498ca25e6aada15e4efd20c1928b4379a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 099a512bcbca7136541c9896e32f43b9e518ed8b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="send-activity-designer"></a>Sent 활동 디자이너
 
 **보낼** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.ServiceModel.Activities.Send> 활동입니다.
 
 ## <a name="the-send-activity"></a>Send 활동
+
  <xref:System.ServiceModel.Activities.Send> 활동은 서비스에 메시지를 보내는 데 사용됩니다. <xref:System.ServiceModel.Activities.ReceiveReply> 활동은 클라이언트측에서 요청/응답 메시지 교환 패턴 중 메시지를 받는 <xref:System.ServiceModel.Activities.Send> 활동에 바인딩될 수 있습니다.
 
 ### <a name="using-the-send-activity-designer"></a>Send 활동 디자이너 사용
- **보낼** 활동 디자이너에서 확인할 수 있습니다는 **메시징** 의 범주는 **도구 상자**를 클릭 하 여 액세스는 **도구 상자** 탭에서 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (또는 선택 **도구 모음** 에서 **보기** 메뉴나 CTRL + ALT + X.)
+ **보낼** 활동 디자이너에서 확인할 수 있습니다는 **메시징** 의 범주는 **도구 상자**를 클릭 하 여 액세스는 **도구 상자** 워크플로 디자이너의 탭 (또는 선택 **도구 모음** 에서 **보기** 메뉴나 CTRL + ALT + X.)
 
- **보낼** 에서 활동 디자이너를 끌 수 있습니다는 **도구 상자** 끌어다는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 화면의 아무 곳에 나 활동은 일반적으로 배치 합니다. 그러면 기본 <xref:System.ServiceModel.Activities.Send>인 Send라는 이름의 <xref:System.Activities.Activity.DisplayName%2A> 활동이 만들어집니다. <xref:System.Activities.Activity.DisplayName%2A> 의 헤더에서 편집할 수는 **보낼** 활동 디자이너 또는 **DisplayName** 속성 표의 상자입니다.
+ **보낼** 에서 활동 디자이너를 끌 수 있습니다는 **도구 상자** 가 일반적으로 활동을 배치 하는 경우 워크플로 디자이너 화면에 끌어 놓 및 합니다. 그러면 기본 <xref:System.ServiceModel.Activities.Send>인 Send라는 이름의 <xref:System.Activities.Activity.DisplayName%2A> 활동이 만들어집니다. <xref:System.Activities.Activity.DisplayName%2A> 의 헤더에서 편집할 수는 **보낼** 활동 디자이너 또는 **DisplayName** 속성 표의 상자입니다.
 
  만들려면는 <xref:System.ServiceModel.Activities.ReceiveReply> 활동 선택한에 바인딩하려면 <xref:System.ServiceModel.Activities.Send> 활동을 마우스 오른쪽 단추로 클릭는 **보낼** 활동 디자이너, 클릭은 **ReceiveReply 만들기** 상황에 맞는 메뉴 항목 및 **ReceiveReplyForSend** 디자이너 아래에 표시 된 **보낼** 디자이너입니다. <xref:System.ServiceModel.Activities.ReceiveReply> 활동은 요청/응답 메시지 교환 패턴 중 클라이언트에서 메시지를 받는 활동입니다. 로 구성할 수 있습니다는 **ReceiveReplyForSend** 디자이너입니다.
 
  또는 **SendAndReceiveReply** 템플릿 디자이너에는 **메시징** 의 범주는 **도구 상자** 미리 구성 된 쌍을만드는데사용할수있습니다<xref:System.ServiceModel.Activities.Send>및 <xref:System.ServiceModel.Activities.ReceiveReply> 활동입니다. 사용에 대 한 자세한 내용은 **SendAndReceiveReply** 및 **ReceiveReplyForSend** 템플릿 참조는 [SendAndReceiveReply](../workflow-designer/sendandreceivereply-template-designer.md) 항목입니다.
 
 ### <a name="the-send-activity-properties"></a>Send 활동 속성
- 다음 표에서는 <xref:System.ServiceModel.Activities.Send> 속성을 보여 주고 디자이너에서 이 속성을 사용하는 방법을 설명합니다. 이러한 속성은 속성 표 또는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 화면에서 편집할 수 있습니다.
+ 다음 표에서는 <xref:System.ServiceModel.Activities.Send> 속성을 보여 주고 디자이너에서 이 속성을 사용하는 방법을 설명합니다. 이러한 속성은 속성 표에서 또는 워크플로 디자이너 화면에서 편집할 수 있습니다.
 
 |속성 이름|필수|용도|
 |-------------------|--------------|-----------|

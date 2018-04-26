@@ -1,7 +1,9 @@
 ---
-title: Visual Studio Debugger for Windows Workflow Foundation (레거시)를 호출 합니다. | Microsoft Docs
+title: Visual Studio Debugger for Windows Workflow Foundation (레거시)를 호출 하는 워크플로 디자이너-
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - stepping
 - Step Over command
@@ -19,23 +21,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e3563b175359e00a051138451292eb015958480
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a326f8b6dc482c2adfc2caba797c38094a99f8c5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="invoking-the-visual-studio-debugger-for-windows-workflow-foundation-legacy"></a>Visual Studio Debugger for Windows Workflow Foundation 호출(레거시)
-이 항목에서는 설명 방법을 사용 하 여는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 디버거를 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 레거시 Windows 워크플로 디자이너에서 응용 프로그램입니다. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
 
- 일반적으로 레거시 워크플로를 디버깅하는 과정은 다른 Visual Studio 프로그래밍 언어로 작성된 프로그램을 디버깅하는 과정과 같습니다. 다음 방법으로 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation을 시작할 수 있습니다.
+이 항목에서는 설명 방법을 레거시 Windows 워크플로 디자이너에서 Windows WF (Workflow Foundation) 응용 프로그램을 디버깅 하려면 Visual Studio 디버거를 사용 합니다. WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 워크플로 디자이너를 사용 합니다.
+
+일반적으로 레거시 워크플로를 디버깅하는 과정은 다른 Visual Studio 프로그래밍 언어로 작성된 프로그램을 디버깅하는 과정과 같습니다. 다음과 같은 방법으로 Visual Studio Debugger for Windows Workflow Foundation을 시작할 수 있습니다.
 
 -   선택 **프로세스에 연결** 에 **디버그** 메뉴를 사용 가능한 프로세스에서 실행 중인 워크플로 인스턴스를 선택 합니다.
 
 -   키를 눌러 **F5** 는 워크플로 인스턴스 실행을 시작 하거나 중단점이 적중 된 후 실행을 계속 합니다.
 
 ## <a name="stepping-through-code"></a>단계별 코드 실행
- 디버거는 가장 일반적인 디버깅 절차 중 하나인, 한 번에 한 줄씩 코드를 실행하는 단계별 실행을 지원합니다. 단계별 코드 실행 명령에는 세 가지가 있습니다.
+
+디버거는 가장 일반적인 디버깅 절차 중 하나인, 한 번에 한 줄씩 코드를 실행하는 단계별 실행을 지원합니다. 단계별 코드 실행 명령에는 세 가지가 있습니다.
 
 -   **단계에서**: 사용 하 여 활동 한 단계씩 실행할 수 **F11**합니다. 디버거는 정의된 임의의 처리기에서 한 단계씩 코드를 실행합니다. 정의된 처리기가 없으면 해당 활동을 프로시저 단위로 실행합니다. 다른 활동이 포함된 복합 활동의 경우 실행 중인 첫 번째 활동을 단계적으로 실행합니다. 디자이너에서 코드 처리기에 한 단계씩 실행에서 다음과 같은 작업에 지원 되지 않습니다: **IfElseActivity**, **WhileActivity**, **ConditionedActivityGroup**, 또는 **ReplicatorActivity**합니다. 이러한 활동과 연결된 처리기를 디버깅하려면 코드에 명시적인 중단점을 넣어야 합니다.
 
@@ -51,7 +55,7 @@ ms.lasthandoff: 04/16/2018
 
  솔루션 탐색기에서 시작 프로젝트를 설정 하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭 하 고 선택 **시작 프로젝트로 설정**합니다. 호스트에 경로 설정 하는 **시작 외부 프로그램** 속성을 워크플로 프로젝트를 두 번 클릭 **속성** 에서 솔루션 탐색기를 선택 하는 노드는 **디버그** 탭 합니다. 아래 **시작 작업**선택, **시작 외부 프로그램** 를 디버깅 하려면 워크플로 호스트 하는.exe 파일의 경로 입력 합니다.
 
- 호스트 응용 프로그램이 시작 프로젝트로 설정되는 경우 Visual Studio 디버거만 디버깅을 위해 호출됩니다. [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation은 호출되지 않습니다. Visual Studio 디버거가 사용되는 경우 C# 또는 Visual Basic 코드 중단점만 적중됩니다. Workflow Designer에 설정된 중단점은 적중되지 않습니다. 예를 들어 디자이너에서 <xref:System.Workflow.Activities.ParallelActivity> 활동에 대해 설정한 중단점은 [!INCLUDE[vs_current_long](../misc/includes/vs_current_long_md.md)] Debugger for Windows Workflow Foundation이 사용되는 경우에 적중되지만 Visual Studio 디버거 사용 시에는 적중되지 않습니다.
+ Visual Studio 디버거만 디버깅;에 대 한 호출 됩니다는 호스트 응용 프로그램을 시작 프로젝트로 설정 Visual Studio Debugger for Windows Workflow Foundation 호출 되지 않습니다. Visual Studio 디버거가 사용되는 경우 C# 또는 Visual Basic 코드 중단점만 적중됩니다. 워크플로 디자이너에 설정된 중단점은 적중되지 않습니다. 예를 들어에 설정한 중단점은 <xref:System.Workflow.Activities.ParallelActivity> 는 Visual Studio Debugger for Windows Workflow Foundation를 사용 되지만 Visual Studio 디버거를 사용할 때가 아니라 디자이너의 활동에 도달 합니다.
 
 ## <a name="see-also"></a>참고자료
 

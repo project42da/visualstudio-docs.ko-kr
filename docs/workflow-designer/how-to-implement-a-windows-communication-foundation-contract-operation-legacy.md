@@ -1,25 +1,28 @@
 ---
-title: '방법: Windows Communication Foundation 계약 작업 (레거시)를 구현 합니다. | Microsoft Docs'
+title: '워크플로 디자이너-방법: Windows Communication Foundation 계약 작업 (레거시)를 구현 합니다.'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 ms.assetid: d6aeb20e-fac8-4a9d-bd26-ae78bef96b41
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 71bf4e4e6f5abc1d2984362396f21f3c613de795
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0b069d8ca8c1adb72e2869eb59644e8abeff14ae
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-implement-a-windows-communication-foundation-contract-operation-legacy"></a>방법: Windows Communication Foundation 계약 작업 구현(레거시)
-이 항목에서는 구현 하는 방법을 설명는 [!INCLUDE[indigo1](../workflow-designer/includes/indigo1_md.md)] 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 작업 계약에서 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
 
- 끌어 놓은 후는 **ReceiveActivity** 워크플로 디자인 화면에 도구 상자의 활동을 하거나 만들게 될 새 [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] 계약 또는 기존 계약을 가져오고 작업을 구현 합니다. 선택 및 계약을 만들고 해당 작업을 통해는 [선택 작업 대화 상자 (레거시)](../workflow-designer/choose-operation-dialog-box-legacy.md)합니다.
+이 항목에서는.NET Framework 버전 3.5 또는 WinFX 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 Windows Communication Foundation (WCF) 계약 작업을 구현 하는 방법을 설명 합니다.
 
-### <a name="to-implement-a-wcf-contract-operation"></a>WCF 계약 작업을 구현하려면
+끌어 놓은 후는 **ReceiveActivity** 워크플로 디자인 화면에 도구 상자의 활동을 하거나 만들게 될 새 [!INCLUDE[indigo2](../workflow-designer/includes/indigo2_md.md)] 계약 또는 기존 계약을 가져오고 작업을 구현 합니다. 선택 및 계약을 만들고 해당 작업을 통해는 [선택 작업 대화 상자 (레거시)](../workflow-designer/choose-operation-dialog-box-legacy.md)합니다.
+
+## <a name="to-implement-a-wcf-contract-operation"></a>WCF 계약 작업을 구현하려면
 
 1.  두 번 클릭은 **ReceiveActivity** 디자이너의 활동 옆의 줄임표를 클릭 하거나는 **ServiceOperationInfo** 속성에는 **속성** 창.
 

@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 2f7da241dc6090339bd5d9d9e6f731041a27fe84
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: b1df5d53bacaaeb06a4475ab3c5da6b1ce181b8d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="model-your-app39s-architecture"></a>응용 프로그램 모델&#39;s 아키텍처
 소프트웨어 시스템 또는 응용 프로그램 사용자가을 충족 하는지 확인 하려면 필요, 전체 구조 설명 및 소프트웨어 시스템 또는 응용 프로그램의 동작의 일부로 Visual Studio에서 모델을 만들 수 있습니다. 모델을 사용하여 디자인 전체에서 사용되는 패턴을 설명할 수도 있습니다. 이러한 모델은 기존 아키텍처를 이해하고, 변경 내용을 논의하고, 의도를 명확하게 전달하는 데 도움이 됩니다.

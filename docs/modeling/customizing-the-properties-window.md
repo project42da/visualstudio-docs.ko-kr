@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 50753da026f091d541bffd664f0aa964b4cba3f0
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7020d3f49d5a693d2b64891c089138be4c073115
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="customizing-the-properties-window"></a>속성 창 사용자 지정
 사용자 지정할 수 있습니다 모양 및 동작의 속성 창에서 도메인 특정 언어 (DSL)에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. DSL 정의에서 각 도메인 클래스에서 도메인 속성을 정의합니다. 기본적으로 모델 탐색기 또는 다이어그램에서 클래스의 인스턴스를 선택 하면 속성 창에서 모든 도메인 속성이 나열 됩니다. 이렇게 하면 참조 하 고 도메인 속성의 값을 편집할 다이어그램에서 셰이프 필드에 매핑되어 있지 있을 경우에 합니다.

@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: cbb3f5c2abc6a768c69d6d375674f3d54eadee31
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 408c74dbbf23abee5d548484014e0f2ddc66963e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="understanding-models-classes-and-relationships"></a>모델, 클래스 및 관계 이해
 도메인 특정 언어 DSL ()는 작성할 수 있는 모든 사용자 지정 프로그램 코드와 함께 해당 DSL 정의 파일에 의해 정의 됩니다. DSL 솔루션에 있는 프로그램 코드의 대부분은이 파일에서 생성 됩니다.

@@ -19,14 +19,15 @@ ms.assetid: 79500596-1e4d-478e-a991-a636fd73a622
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 71d651d2e2d6c84b5858bb4687bf74aa503d014c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c8986ce9e2ee1ff171a524b0a402a1e44b70ca06
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="validate-data-in-datasets"></a>데이터 집합의 데이터 유효성 검사
 데이터 집합의 스키마 내에서 제약 조건에 따르는 데이터 개체에 입력할 값 확인 과정은 데이터 유효성을 검사 합니다. 유효성 검사 프로세스는 또한 이러한 값은 다음 응용 프로그램에 대해 설정 된 규칙을 확인 합니다. 업데이트를 내부 데이터베이스에 보내기 전에 데이터 유효성 검사는 것이 좋습니다. 이렇게 하면 오류 뿐 아니라 잠재적인 응용 프로그램과 데이터베이스 간의 왕복 수가 줄어듭니다.

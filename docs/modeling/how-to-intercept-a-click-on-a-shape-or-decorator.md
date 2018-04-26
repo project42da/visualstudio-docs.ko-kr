@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ae0910863db207e8200a2fea33be1f4e97bff5fc
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 5e78438eba52a0e5d5d826ae2fa28503733c7ea3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-intercept-a-click-on-a-shape-or-decorator"></a>방법: 모양 또는 데코레이터 클릭 가로채기
 다음 절차는 셰이프나 아이콘 decorator 클릭 가로채기 하는 방법을 보여 줍니다. 번의 클릭을 가로챌 수, 두 번 클릭할 끌기과 기타 제스처, 응답 요소를 확인 합니다.

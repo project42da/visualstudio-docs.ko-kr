@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0c17ac476e0edbec73c407090cd84e6a44d9219c
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: ccd26814b8a6f06f896c661f2ca9eddb0de8a90d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="msi-and-vsix-deployment-of-a-dsl"></a>DSL의 MSI 및 VSIX 배포
 도메인 특정 언어 또는 다른 컴퓨터 사용자의 컴퓨터에 설치할 수 있습니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 대상 컴퓨터에 이미 설치 되어 있어야 합니다.

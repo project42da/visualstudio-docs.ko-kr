@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 686adf1eb7696447a77d20d18f48527c7cfaae96
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 34330e4c4b5580c0554585ec88599e2d2e62181d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="integrating-models-by-using-visual-studio-modelbus"></a>Visual Studio Modelbus를 사용하여 모델 통합
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] ModelBus 모델로 다른 도구 및 모델 간의 링크를 만드는 방법을 제공 합니다. 예를 들어 (DSL) 도메인 특정 언어 모델 및 UML 모델을 연결할 수 있습니다. 통합 DSL 집합을 만들 수 있습니다.

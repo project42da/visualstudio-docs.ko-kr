@@ -1,7 +1,9 @@
 ---
-title: TryCatch 활동 디자이너 | Microsoft Docs
+title: 워크플로 디자이너-TryCatch 활동 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.TryCatch.UI
 - System.Activities.Statements.Catch`1.UI
@@ -11,22 +13,23 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9ae4cd4340bc30249ea649a2806afe3e027fc439
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2983dd9aa53443c616504672ef76f76ac9bd9add
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="trycatch-activity-designer"></a>TryCatch 활동 디자이너
+
 **TryCatch** 활동 디자이너는 만들고 구성 하는 데 사용 되는 <xref:System.Activities.Statements.TryCatch> 활동입니다.
 
 ## <a name="the-trycatch-activity"></a>TryCatch 활동
  <xref:System.Activities.Statements.TryCatch> 활동에 포함 한 <xref:System.Activities.Statements.TryCatch.Try%2A> 활동, 컬렉션을 **Catch\<TException >** 및 <xref:System.Activities.Statements.TryCatch.Finally%2A> 활동입니다. A <xref:System.Activities.Statements.Catch%601> 형식의 **TException** 포함 한 <xref:System.Activities.Statements.Catch%601.ExceptionType%2A> 및 <xref:System.Activities.Statements.Catch%601.Action%2A>합니다. 둘 다 일반적인 예외 기반의 오류 처리 메커니즘을 구현하는 데 사용됩니다. <xref:System.Activities.Statements.TryCatch> 활동은 <xref:System.Activities.Statements.TryCatch.Try%2A> 활동을 실행하려고 합니다. 경우는 <xref:System.Activities.Statements.TryCatch.Try%2A> 활동이 예외를 throw 된 <xref:System.Activities.Statements.TryCatch> 활동을 사용 해당 **Catch < TException\>**  예외에 맞도록 컬렉션입니다. 일치 하는 경우 다음의 <xref:System.Activities.Statements.Catch%601.Action%2A> 해당 **Catch\<TException >** 오류 처리는 예외에 대 한 논리로 실행 됩니다. <xref:System.Activities.Statements.TryCatch.Try%2A> 섹션의 활동이 성공적으로 완료되었거나 <xref:System.Activities.Statements.TryCatch.Catches%2A>의 활동이 성공적으로 완료된 경우 <xref:System.Activities.Statements.TryCatch> 활동은 해당 <xref:System.Activities.Statements.TryCatch.Finally%2A> 활동을 실행합니다. 자세한 내용은 참조 [Windows 워크플로 예외](/dotnet/framework/windows-workflow-foundation/exceptions)합니다.
 
 ### <a name="using-the-trycatch-activity-designer"></a>TryCatch 활동 디자이너 사용
- **TryCatch** 활동 디자이너에서 확인할 수 있습니다는 **의 오류 처리** 의 범주는 **도구 상자**를 클릭 하 여 액세스는 **도구상자** 탭의 왼쪽에는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] (또는 선택 **도구 모음** 에서 **보기** 메뉴 또는 보조키 + ALT + X.)
+ **TryCatch** 활동 디자이너에서 확인할 수 있습니다는 **의 오류 처리** 의 범주는 **도구 상자**를 클릭 하 여 액세스는 **도구상자** 워크플로 디자이너의 왼쪽에 탭 (또는 선택 **도구 모음** 에서 **보기** 메뉴 또는 보조키 + ALT + X.)
 
- **TryCatch** 에서 활동 디자이너를 끌 수 있습니다는 **도구 상자** 끌어다는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 화면의 아무 곳에 나 활동은 일반적으로, 등 배치는 <xref:System.Activities.Statements.Sequence>합니다. 이렇게 하면 기본 <xref:System.Activities.Statements.TryCatch>인 TryCatch라는 이름의 <xref:System.Activities.Activity.DisplayName%2A> 활동이 만들어집니다. <xref:System.Activities.Activity.DisplayName%2A> 헤더의 값을 편집할 수 있습니다는 **TryCatch** 활동 디자이너 또는 **DisplayName** 속성 표의 상자입니다. 다른 속성의 화면에서 편집 해야 합니다는 **TryCatch** 활동 디자이너입니다.
+ **TryCatch** 에서 활동 디자이너를 끌 수 있습니다는 **도구 상자** 활동은 일반적으로, 등 배치 때마다 워크플로 디자이너 화면에 끌어 놓 및는 <xref:System.Activities.Statements.Sequence>합니다. 이렇게 하면 기본 <xref:System.Activities.Statements.TryCatch>인 TryCatch라는 이름의 <xref:System.Activities.Activity.DisplayName%2A> 활동이 만들어집니다. <xref:System.Activities.Activity.DisplayName%2A> 헤더의 값을 편집할 수 있습니다는 **TryCatch** 활동 디자이너 또는 **DisplayName** 속성 표의 상자입니다. 다른 속성의 화면에서 편집 해야 합니다는 **TryCatch** 활동 디자이너입니다.
 
  오른쪽 위 모서리에 있는 확장 단추의 클릭 **TryCatch** 보려면 디자이너는 **시도**, **Catch**, 및 **마지막** 상자에 확장 된 보기입니다. Catch를 추가 하려면 클릭는 **새 캐치 추가** 단추 **TryCatch** 디자이너입니다. 단추가 형식 콤보 상자로 바뀝니다. 예외 형식을 선택하고 <ENTER> 키를 눌러 Catch를 추가합니다. 추가한 후 한 **Catch**, 하면 catch 영역이 확장 되 고 catch catch에 대 한 실행 논리를 정의로 작업을 삭제할 수 있습니다. 확장된 Catch 영역 오른쪽에는 텍스트 상자가 있습니다. 이 텍스트 상자를 사용하여 예외 변수의 이름을 지정할 수 있습니다. 동일한 작업에 대 한 예외 변수 에서만 사용할 수 있습니다 **Catch**합니다.
 

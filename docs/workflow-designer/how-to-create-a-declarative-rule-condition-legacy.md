@@ -1,7 +1,9 @@
 ---
-title: '방법: 선언적 규칙 조건 (레거시) 만들기 | Microsoft Docs'
+title: '워크플로 디자이너-방법: 선언적 규칙 조건 (레거시) 만들기'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - declarative rule conditions
 - condition statements, declarative rule conditions
@@ -12,18 +14,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e8b1d1220f11d27ee193e3e82168f4c10558d86
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 43b359040256788db240274f43f706b41f01d021
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-a-declarative-rule-condition-legacy"></a>방법: 선언적 규칙 조건 만들기(레거시)
-이 항목에서는 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 규칙 조건을 선언 하는 방법을 설명는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]합니다.
 
- 조건 문으로 계산 **True** 또는 **False**합니다. 선언적 규칙 조건을 사용 하 여 만든 조건문은는 [규칙 조건 편집기 대화 상자 (레거시)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) 워크플로와 함께 XML로 저장 합니다. 여러 조건자를 결합하는 부울 대수와 워크플로 상태를 비교하는 조건자가 포함될 수 있습니다.
+이 항목에서는.NET Framework 버전 3.5 또는 WinFX 대상으로 하는 레거시 Windows 워크플로 디자이너를 사용 하 여 규칙 조건을 선언 하는 방법을 설명 합니다.
 
- 선언적 규칙 조건은 기본적으로 제공되는 다음과 같은 Windows Workflow Foundation 활동에 사용됩니다.
+조건 문으로 계산 **True** 또는 **False**합니다. 선언적 규칙 조건을 사용 하 여 만든 조건문은는 [규칙 조건 편집기 대화 상자 (레거시)](../workflow-designer/rule-condition-editor-dialog-box-legacy.md) 워크플로와 함께 XML로 저장 합니다. 여러 조건자를 결합하는 부울 대수와 워크플로 상태를 비교하는 조건자가 포함될 수 있습니다.
+
+선언적 규칙 조건은 기본적으로 제공되는 다음과 같은 Windows Workflow Foundation 활동에 사용됩니다.
 
 -   [ConditionedActivityGroup](http://go.microsoft.com/fwlink?LinkID=65017)
 
@@ -37,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 
 -   [StateMachineWorkflowActivity](http://go.microsoft.com/fwlink?LinkID=65045)
 
-### <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>규칙 조건 편집기를 사용하여 선언적 규칙 조건을 만들려면
+## <a name="to-create-a-declarative-rule-condition-using-the-rule-condition-editor"></a>규칙 조건 편집기를 사용하여 선언적 규칙 조건을 만들려면
 
 1.  활동의에서 **속성** 창 클릭는 **조건** 속성 또는 **UntilCondition** 활동에 따라 속성입니다.
 

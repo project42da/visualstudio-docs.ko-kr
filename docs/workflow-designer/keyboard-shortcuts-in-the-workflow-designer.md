@@ -1,7 +1,9 @@
 ---
-title: 워크플로 디자이너의 바로 가기 키는 | Microsoft Docs
+title: 워크플로 디자이너-워크플로 디자이너의 바로 가기 키
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - WFDKeyboardShortcuts.UI
 ms.assetid: 9be75438-a4a3-4781-94e5-45b7ec082358
@@ -10,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 29d96eb6d738fbf23749bec601743002a451ad06
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 83664d6402c23da89adf332bc9cd34eac89384bb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="keyboard-shortcuts-in-the-workflow-designer"></a>워크플로 디자이너의 바로 가기 키
 
@@ -22,11 +24,11 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="navigating-the-workflow-designer-using-the-keyboard"></a>키보드를 사용하여 워크플로 디자이너 탐색
 
-[!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]에서는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]에 전역 바로 가기와 디버깅 바로 가기가 적용됩니다. 또한 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 고유의 바로 가기 키도 여러 가지가 있습니다. [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]에서 모든 바로 가기 키를 다시 매핑할 수 있습니다. 하지만 다시 호스트된 응용 프로그램에는 이러한 바로 가기 키가 하드 코딩되어 있습니다.
+Visual Studio 2010 내 전역 바로 가기와 디버깅 바로 가기가 워크플로 디자이너에 적용 됩니다. 또한 다양 한 워크플로 디자이너 관련 바로 가기 키를 만들었습니다. Visual Studio 2010에서 바로 가기 키의 모든 다시 매핑할 수 있습니다. 하지만 다시 호스트된 응용 프로그램에는 이러한 바로 가기 키가 하드 코딩되어 있습니다.
 
-### <a name="workflow-designer-keyboard-shortcuts"></a>Workflow Designer 바로 가기 키
+### <a name="workflow-designer-keyboard-shortcuts"></a>워크플로 디자이너 바로 가기 키
 
-다음 표에는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 명령에 할당된 기본 바로 가기 키가 요약되어 있습니다.
+다음 표에서 워크플로 디자이너 명령에 할당 된 기본 바로 가기 키를 요약 합니다.
 
 |바로 가기|용도|
 |--------------|-------------|
@@ -46,7 +48,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="flowchart"></a>Flowchart
 
-다음 목록은 키보드로 순서도를 구성하는 데 사용되는 제스처를 보여 줍니다. [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]의 나머지 부분에서와 마찬가지로 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]에 제공된 전역 도구 상자 바로 가기를 사용하여 디자이너 화면에 활동을 추가합니다.
+다음 목록은 키보드로 순서도를 구성하는 데 사용되는 제스처를 보여 줍니다. 워크플로 디자이너의 나머지 부분에서는와 같이 Visual Studio 2010와 함께 제공 되는 전역 도구 상자 바로 가기를 사용 하 여 디자이너 화면에 활동을 추가 합니다.
 
 - 활동을 이동하려면 활동을 선택하고 화살표 키를 사용하여 활동 위치를 조정합니다.
 
@@ -74,7 +76,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="expression-editing"></a>식 편집
 
-기본적으로 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)]의 식 편집기에는 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 텍스트 편집을 위한 기본 바로 가기 키가 적용되며 다음과 같은 제한 사항이 있습니다.
+기본적으로 Visual Basic 텍스트 편집에 대 한 기본 바로 가기 키의 식 편집기 워크플로 디자이너에서 다음과 같은 제한 사항이 적용 됩니다.
 
 - 다음 명령에 대한 바로 가기 키를 다시 매핑할 수 없습니다. 식을 편집할 때 이러한 명령에 액세스하기 위해서는 기본 바로 가기 키만 사용할 수 있습니다.
 
@@ -85,4 +87,4 @@ ms.lasthandoff: 04/16/2018
    - 실행 취소
    - 다시 실행
 
-- [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]의 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]에서 식 편집 명령에 대한 바로 가기 키를 다시 매핑하려면 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 범위에서 바로 가기를 편집합니다. 텍스트 편집기 범위에서 변경한 내용이 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]에 자동으로 적용되지는 않습니다. 따라서 양쪽 모두에서 바로 가기를 다시 매핑하려면 범위마다 한 번씩 변경을 두 번 적용해야 합니다.
+- Visual Studio 2010에서 워크플로 디자이너 내부에 식 편집 명령에 대 한 바로 가기 키를 다시 매핑할 워크플로 디자이너 범위에서 바로 가기를 편집 합니다. 텍스트 편집기 범위에서 변경 내용을 자동으로 워크플로 디자이너에 적용 되지 않습니다. 따라서 양쪽 모두에서 바로 가기를 다시 매핑하려면 범위마다 한 번씩 변경을 두 번 적용해야 합니다.

@@ -36,11 +36,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 80f1ad8f7b3bc4ac1a93718943803d445aa6ca9a
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 04834f335fd4c9a49a2ef4de6b55adf6443d6e7c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-breakpoints-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 중단점을 사용 합니다.
 예를 들어 코드 변수의 상태를 확인하거나 호출 스택을 검토하기 위해 디버거 실행을 중지하려는 경우 중단점을 설정할 수 있습니다. 개발자 도구 상자에 가장 중요한 디버깅 기술 중 하나가 있습니다.  
@@ -247,8 +247,7 @@ ms.lasthandoff: 04/18/2018
 |**$PNAME**|프로세스 이름|  
 |**$TID**|스레드 ID|  
 |**$TNAME**|스레드 이름|  
-|**$TICK**||  
-|**$TNAME**||  
+|**$TICK**|눈금 수 (Windows에서 `GetTickCount`)|  
   
 ##  <a name="BKMK_Set_a_breakpoint_at_a_function_return_in_the_Call_Stack_window"></a> 중단점 레이블  
  중단점 레이블은 중단점 목록을 정렬하고 필터링하기 위해 **중단점** 창에서만 사용됩니다. 중단점에 레이블을 추가하려면 중단점 행을 선택한 다음 상황에 맞는 메뉴에서 **레이블** 을 선택합니다.  

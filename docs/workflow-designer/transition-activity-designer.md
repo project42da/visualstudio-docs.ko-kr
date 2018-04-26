@@ -1,7 +1,9 @@
 ---
-title: 전환 활동 디자이너 | Microsoft Docs
+title: 전환 활동 디자이너-워크플로 디자이너
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Activities.Statements.Transition.UI
 ms.assetid: f6e8b5cc-7fb8-4699-9703-f3c9fc7cc316
@@ -10,20 +12,23 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 25b00c38110e8a97d5e5465f3e170bef9c28bb88
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0f63369c67470378856133b912e6da48f924bb45
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="transition-activity-designer"></a>전환 활동 디자이너
+
 <xref:System.Activities.Statements.Transition>은 두 상태 간 전환을 나타냅니다.
 
 ## <a name="using-the-transition-activity-designer"></a>전환 활동 디자이너 사용
- 전환 활동 디자이너를 사용하면 두 상태 간에 전환을 구성할 수 있습니다.
+
+전환 활동 디자이너를 사용하면 두 상태 간에 전환을 구성할 수 있습니다.
 
 ### <a name="transition-properties-in-the-workflow-designer"></a>Workflow Designer의 Transition 속성
- 다음 표에서는 Workflow Designer를 사용하여 설정할 수 있는 <xref:System.Activities.Statements.Transition> 속성을 보여 주고 디자이너에서 이러한 속성을 사용하는 방법을 설명합니다.
+
+다음 표에서는 Workflow Designer를 사용하여 설정할 수 있는 <xref:System.Activities.Statements.Transition> 속성을 보여 주고 디자이너에서 이러한 속성을 사용하는 방법을 설명합니다.
 
 |속성 이름|필수|용도|
 |-------------------|--------------|-----------|
@@ -35,12 +40,13 @@ ms.lasthandoff: 04/16/2018
 |**대상**|True|전환이 완료된 후 상태 시스템이 전환하는 상태를 나타냅니다. 이는 개체 모델에 있는 전환의 <xref:System.Activities.Statements.Transition.To%2A> 속성에 해당합니다. 대상 상태의 이름을 클릭하면 디자이너 보기가 해당 상태의 확장된 보기로 전환됩니다. 이 값은 전환이 만들어지면 설정되고 전환을 디자이너의 대상 상태에 연결하는 화살표를 끌어 변경할 수 있습니다.|
 
 ### <a name="creating-transitions"></a>전환 만들기
- 전환은 한 상태에서 다른 상태로 선을 끌거나 한 상태를 다른 상태 위로 끌어갈 때 나타나는 삼각형에 상태를 놓으면 만들어집니다. 끌어서 전환을 만들려면 소스 상태의 가장자리 위로 마우스를 가져가 소스 상태에서 대상 상태로 선을 끕니다. 놓아서 전환을 만들려면 대상 상태를 끌어 소스 상태 위로 가져가 소스 상태 주변에 나타나는 4개의 삼각형 중 하나에 놓습니다. 대상 상태에서 끌어온 새로운 상태 수는 **도구 상자**, 워크플로 디자이너에서 끌어온 기존 상태가 또는 합니다.
+
+전환은 한 상태에서 다른 상태로 선을 끌거나 한 상태를 다른 상태 위로 끌어갈 때 나타나는 삼각형에 상태를 놓으면 만들어집니다. 끌어서 전환을 만들려면 소스 상태의 가장자리 위로 마우스를 가져가 소스 상태에서 대상 상태로 선을 끕니다. 놓아서 전환을 만들려면 대상 상태를 끌어 소스 상태 위로 가져가 소스 상태 주변에 나타나는 4개의 삼각형 중 하나에 놓습니다. 대상 상태에서 끌어온 새로운 상태 수는 **도구 상자**, 워크플로 디자이너에서 끌어온 기존 상태가 또는 합니다.
 
 > [!NOTE]
 > 상태 시스템에서 하나의 상태는 워크플로 디자이너를 사용하여 만들어지는 전환을 76개까지 사용할 수 있습니다. 디자이너 밖에서 만들어지는 워크플로 상태의 전환에 대한 제한은 시스템 리소스로만 제한됩니다.
 
- 공유 트리거 전환은 같은 트리거 이벤트를 공유하는 전환 집합입니다. 공유 트리거를 사용하면 공통의 트리거 이벤트를 공유하는 여러 전환에 대해 구성된 식의 평가를 기준으로 대상 상태로 조건적 진행이 가능합니다. 전환에 추가 작업을 추가하고 공유 전환을 만들려면 원하는 전환의 시작을 나타내는 원을 클릭하고 원하는 상태로 끕니다. 새 전환은 초기 전환과 동일한 트리거를 공유하지만 고유한 조건과 작업을 사용합니다. 공유 전환을 만들 수도 있습니다에서 전환 디자이너 내에서 클릭 하 여 **공유 트리거 전환 추가** 전환 디자이너 한 다음 원하는 대상 상태를 선택 하 고 맨 아래에  **연결에 사용할 상태** 드롭 다운 합니다.
+공유 트리거 전환은 같은 트리거 이벤트를 공유하는 전환 집합입니다. 공유 트리거를 사용하면 공통의 트리거 이벤트를 공유하는 여러 전환에 대해 구성된 식의 평가를 기준으로 대상 상태로 조건적 진행이 가능합니다. 전환에 추가 작업을 추가하고 공유 전환을 만들려면 원하는 전환의 시작을 나타내는 원을 클릭하고 원하는 상태로 끕니다. 새 전환은 초기 전환과 동일한 트리거를 공유하지만 고유한 조건과 작업을 사용합니다. 공유 전환을 만들 수도 있습니다에서 전환 디자이너 내에서 클릭 하 여 **공유 트리거 전환 추가** 전환 디자이너 한 다음 원하는 대상 상태를 선택 하 고 맨 아래에  **연결에 사용할 상태** 드롭 다운 합니다.
 
 ## <a name="see-also"></a>참고자료
 

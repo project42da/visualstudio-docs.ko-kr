@@ -1,7 +1,9 @@
 ---
-title: '방법: (레거시) 워크플로에 중단점 설정 | Microsoft Docs'
+title: '워크플로 디자이너-방법: (레거시) 워크플로에 중단점 설정'
 ms.date: 11/04/2016
-ms.topic: reference
+ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 helpviewer_keywords:
 - breakpoints, setting in workflows
 - debugging, setting breakpoints in workflows
@@ -13,16 +15,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 71d62395a4b719827cf33eacad46a650bd057c43
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c0c70b630404830fa8c733a7310e4700da8f08b3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-set-breakpoints-in-workflows-legacy"></a>방법: 워크플로에 중단점 설정(레거시)
-이 항목에서는에 중단점을 설정 하는 방법을 설명 [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 레거시 Windows 워크플로 디자이너를 사용 하 여 응용 프로그램 작성. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] 응용 프로그램이 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
 
- [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]의 레거시 [!INCLUDE[vs2010](../misc/includes/vs2010_md.md)]를 사용하여 [!INCLUDE[wf2](../workflow-designer/includes/wf2_md.md)] 응용 프로그램을 빌드할 경우 Visual Studio에서 중단점을 설정할 때와 같이 C# 및 Visual Basic 코드에 중단점을 설정할 수 있습니다. 예상대로 설정한 각 중단점에서 워크플로 실행이 중지됩니다.
+이 항목에서는의 Windows WF (Workflow Foundation) 응용 프로그램 빌드 레거시 Windows 워크플로 디자이너를 사용 하 여 중단점을 설정 하는 방법을 설명 합니다. Windows Workflow Foundation 응용 프로그램의 WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 워크플로 디자이너를 사용 합니다.
+
+ Visual Studio 2010에서 레거시 워크플로 디자이너를 사용 하 여 Windows Workflow Foundation 응용 프로그램을 빌드하는 경우 Visual Studio에서와 마찬가지로 C# 및 Visual Basic 코드 중단점을 설정할 수 있습니다. 예상대로 설정한 각 중단점에서 워크플로 실행이 중지됩니다.
 
  중단점에 3 상태가: *보류 중인*, *바인딩된*, 및 *오류*합니다. 중단점을 설정하면 중단점이 보류 중 상태가 되고 속이 빈 빨간색 아이콘으로 표시됩니다. 런타임 시 워크플로 유형을 로드했으면 중단점이 바인딩됨 상태가 되고 속이 찬 빨간색 아이콘으로 표시됩니다. 올바르지 않은 동작 이름처럼 잘못된 형식을 중단점에 대해 지정하면 오류 창이 나타납니다. 그래도 중단점 창에 중단점이 추가되기는 하지만 소문자 "x"로 표시됩니다.
 
@@ -50,7 +53,7 @@ ms.lasthandoff: 04/16/2018
 3.  에 있는 활동의 이름을 지정는 **함수** 이 구문을 사용 하 여 텍스트 상자: `QualifiedActivityId[:[FullClassName][:InstanceId]]`합니다.
 
     > [!NOTE]
-    > 에 활동 이름을 사용 하는 대신 필요에 따라는 **함수** 텍스트 상자 워크플로 동작의 절대 경로 지정 하 여 중단점을 설정할 수 있습니다. 예를 들어, 이라는 워크플로 솔루션이 있는 **WorkflowConsoleApplication1** 및 라는 솔루션에 워크플로 **Workflow1** 이라는 활동을 사용 하는 **Delay1**. 활동 이름을 사용할 수 있습니다 **Delay1** 으로 경로 지정 하거나 **delay1: workflowconsoleapplication1.workflow1** 또는 **delay1: workflowconsoleapplication1.workflow1: { 6614886A-608E-412B-BF98-99FF1559DDDF}**합니다.
+    > 에 활동 이름을 사용 하는 대신 필요에 따라는 **함수** 텍스트 상자 워크플로 동작의 절대 경로 지정 하 여 중단점을 설정할 수 있습니다. 예를 들어, 이라는 워크플로 솔루션이 있는 **WorkflowConsoleApplication1** 및 라는 솔루션에 워크플로 **Workflow1** 이라는 활동을 사용 하는 **Delay1**. 활동 이름을 사용할 수 있습니다 **Delay1** 으로 경로 지정 하거나 **delay1: workflowconsoleapplication1.workflow1** 또는 **delay1: workflowconsoleapplication1.workflow1: { 6614886A-608E-412B-BF98-99FF1559DDDF}** 합니다.
 
 4.  선택은 **IntelliSense 사용 하 여** 확인란 함수 이름을 확인할 수 있습니다.
 

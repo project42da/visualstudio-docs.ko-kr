@@ -14,14 +14,15 @@ ms.assetid: 74a6773b-37e1-4d96-a39c-63ee0abf49b1
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: aae296898bfcddfa451875fe78b29f2ae95fc9df
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 51f855cca05d2f9f7e6a86524da6bcf866eb0856
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect 메서드 데이터 저장
 이 연습에서는 TableAdapter의 DBDirect 메서드를 사용 하 여 데이터베이스에 대해 직접 SQL 문을 실행 하는 자세한 지침을 제공 합니다. TableAdapter의 DBDirect 메서드 제어 데이터베이스 업데이트에 대 한 상세 수준을 제공합니다. 사용 하 여 개별을 호출 하 여 특정 SQL 문과 저장된 프로시저를 실행할 수 있습니다 `Insert`, `Update`, 및 `Delete` 응용 프로그램에서 필요에 따라 메서드 (오버 로드 된 달리 `Update` 업데이트를 수행 하는 메서드 INSERT 및 DELETE 문을 모두 한 번의 호출에에서).

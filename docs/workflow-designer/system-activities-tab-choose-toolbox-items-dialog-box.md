@@ -1,7 +1,9 @@
 ---
-title: System.Activities 탭, 도구 상자 항목 선택 대화 상자 | Microsoft Docs
+title: 워크플로 디자이너-System.Activities 탭, 도구 상자 항목 선택 대화 상자
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES_COMPONENTS
 - VS.CHOOSEITEMS.SYSTEM.ACTIVITIES COMPONENTS
@@ -11,14 +13,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2da5aafcc684c9af71aebc094d817c64f579d0ea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 82303d173a3d5a066919f8597e4636d63a005f02
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="systemactivities-tab-choose-toolbox-items-dialog-box"></a>System.Activities 탭, 도구 상자 항목 선택 대화 상자
-이 탭에는 **도구 상자 항목 선택** 대화 상자 목록이 표시 됩니다. [!INCLUDE[wf](../workflow-designer/includes/wf_md.md)] 활동, 템플릿 및 항목을 사용할 수 있습니다. 이 목록을 표시 하려면 선택 **도구 상자 항목 선택** 에서 **도구** 메뉴 또는 마우스 오른쪽 단추로 클릭 하 여는 **도구 상자** 선택 하 고 **항목 선택**표시 하는 **도구 상자 항목 선택** 대화 상자에서 선택한 후 해당 **System.Activities** 탭 합니다. 목록에 기본적으로 System.Activities, System.ServiceModel.Activities 및 System.Activities.Core.Presentation 어셈블리의 워크플로 활동이 포함 그러나만 시스템에서 제공한 표시 하는 활동 및 활동에 표시 된 다른 어셈블리를 통해 추가 **도구 상자** 기본적으로 선택 됩니다. 최근에 추가 된 활동을 자동으로 검사 및에 표시 된 **도구 상자** 클릭할 때 **확인** 대화 상자. 또한 이러한 항목에는 표시 된 **도구 상자** 활동/항목/템플릿이 있는 네임 스페이스에 해당 하는 새 범주입니다.
+
+이 탭에는 **도구 상자 항목 선택** 대화 상자에 게 Windows WF (Workflow Foundation) 활동, 템플릿 및 사용할 수 있는 항목 목록이 표시 됩니다. 이 목록을 표시 하려면 선택 **도구 상자 항목 선택** 에서 **도구** 메뉴 또는 마우스 오른쪽 단추로 클릭 하 여는 **도구 상자** 선택 하 고 **항목 선택**표시 하는 **도구 상자 항목 선택** 대화 상자에서 선택한 후 해당 **System.Activities** 탭 합니다. 목록에 기본적으로 System.Activities, System.ServiceModel.Activities 및 System.Activities.Core.Presentation 어셈블리의 워크플로 활동이 포함 그러나만 시스템에서 제공한 표시 하는 활동 및 활동에 표시 된 다른 어셈블리를 통해 추가 **도구 상자** 기본적으로 선택 됩니다. 최근에 추가 된 활동을 자동으로 검사 및에 표시 된 **도구 상자** 클릭할 때 **확인** 대화 상자. 또한 이러한 항목에는 표시 된 **도구 상자** 활동/항목/템플릿이 있는 네임 스페이스에 해당 하는 새 범주입니다.
 
 > [!WARNING]
 > 워크플로 활동이 없는 어셈블리를 추가하려고 하면 해당 어셈블리에 활동이 없음을 알리는 오류 대화 상자가 표시됩니다.
@@ -35,12 +38,20 @@ ms.lasthandoff: 04/16/2018
 
  이 대화 상자의 열에는 다음과 같은 정보가 포함되어 있습니다.
 
- 이름 목록은 워크플로 활동의 이름이 현재 로컬 컴퓨터에 등록 합니다.
+ 이름
 
- Namespace 활동의 구조를 정의 하는.NET Framework 클래스 라이브러리 네임 스페이스의 계층 구조를 표시 합니다.
+ 로컬 컴퓨터에 현재 등록된 워크플로 활동의 이름을 나열합니다.
 
- 어셈블리 이름 이름 및 활동을 포함 하는.NET Framework 어셈블리의 버전을 표시 합니다.
+ 네임스페이스
 
- 워크플로 활동을 포함 하는.NET Framework 어셈블리의 위치를 표시 하는 디렉터리입니다. 모든 어셈블리의 기본 위치는 전역 어셈블리 캐시(GAC)입니다.
+ 활동의 구조를 정의하는 .NET Framework 클래스 라이브러리 네임스페이스의 계층 구조를 표시합니다.
+
+ 어셈블리 이름
+
+ 활동이 포함된 .NET Framework 어셈블리의 이름과 버전을 표시합니다.
+
+ 디렉터리
+
+ 워크플로 활동이 포함된 .NET Framework 어셈블리의 위치를 표시합니다. 모든 어셈블리의 기본 위치는 전역 어셈블리 캐시(GAC)입니다.
 
  나열된 구성 요소를 정렬하려면 열 머리글을 선택합니다.

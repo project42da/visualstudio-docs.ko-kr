@@ -1,7 +1,9 @@
 ---
-title: 규칙 집합 편집기 대화 상자 (레거시) | Microsoft Docs
+title: 워크플로 디자이너-규칙 집합 편집기 대화 상자 (레거시)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.Activities.Rules.Design.RuleSetDialog.UI
 helpviewer_keywords:
@@ -12,26 +14,27 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7284b4a318f1d6c182f1d7d27e41f6c77092ad00
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77bb10e5237b33c60b0cd309c2d3c6c634182bc6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="rule-set-editor-dialog-box-legacy"></a>규칙 집합 편집기 대화 상자(레거시)
-이 항목에서는 설명 방법을 사용 하 여는 **규칙 집합 편집기** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
 
- **규칙 집합 편집기** 대화 상자 만들기 및 수정 하는 데 사용 됩니다 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) 규칙 집합을.rules 파일로 serialize 됩니다.
+이 항목에서는 설명 방법을 사용 하 여는 **규칙 집합 편집기** 레거시 Windows 워크플로 디자이너의 대화 상자. WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 워크플로 디자이너를 사용 합니다.
+
+**규칙 집합 편집기** 대화 상자 만들기 및 수정 하는 데 사용 됩니다 [PolicyActivity](http://go.microsoft.com/fwlink?LinkID=65019) 규칙 집합을.rules 파일로 serialize 됩니다.
 
 > [!NOTE]
 > .Rules 파일을 열 하려는 경우는 **XML 편집기 (인코딩 사용)**, 워크플로 또는 활동에 대 한 연결된 된 디자이너 창을 닫아야 합니다.
 
- 액세스 하는 방법에 대 한 내용은 **규칙 집합 편집기** 대화 상자, 참조 [하는 방법: PolicyActivity 규칙 집합 (레거시) 만들기](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)합니다.
+액세스 하는 방법에 대 한 내용은 **규칙 집합 편집기** 대화 상자, 참조 [하는 방법: PolicyActivity 규칙 집합 (레거시) 만들기](../workflow-designer/how-to-create-a-policyactivity-rule-set-legacy.md)합니다.
 
 > [!WARNING]
-> [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)] 또는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)]를 대상으로 하는 데 사용되는 레거시 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]의 규칙 편집기는 멀티 타게팅을 지원하지 않습니다.
+> WinFX 또는.NET Framework 버전 3.5 대상으로 사용 되는 레거시 워크플로 디자이너의 규칙 편집기는 멀티 타기 팅을 지원 하지 않습니다.
 
- 다음 표에 사용자 인터페이스 (UI) 요소는 **규칙 집합 편집기** 대화 상자.
+다음 표에 사용자 인터페이스 (UI) 요소는 **규칙 집합 편집기** 대화 상자.
 
 |UI 요소|설명|
 |----------------|-----------------|

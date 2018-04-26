@@ -1,7 +1,9 @@
 ---
-title: 찾아보기 및.NET 유형 선택 대화 상자 (레거시) | Microsoft Docs
+title: 워크플로 디자이너-찾아.NET 유형 대화 상자 (레거시)를 선택 합니다.
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.ComponentModel.Design.TypeBrowserDialog.UI
 helpviewer_keywords:
@@ -12,14 +14,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: a283caa664bb208613a695cb4afb8873caba3645
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 23e311aa8e87fe799bc8ea22a22ffd8e789b3dcd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="browse-and-select-a-net-type-dialog-box-legacy"></a>.NET 유형 선택 대화 상자(레거시)
-이 항목에서는 설명 방법을 사용 하 여는 **.NET 유형 선택** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
+
+이 항목에서는 설명 방법을 사용 하 여는 **.NET 유형 선택** 레거시 Windows 워크플로 디자이너의 대화 상자. WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 워크플로 디자이너를 사용 합니다.
 
  에 **속성** 창에서 참조 된 어셈블리는 줄임표에.NET Framework 형식을 사용 하는 속성을 선택 하면 **[...]**  속성의 텍스트 상자 끝에 나타납니다. 클릭 하 고 **[...]**  열립니다는 **.NET 유형 선택** 대화 상자. 이 대화 상자에서 참조된 어셈블리의 트리 뷰에서 형식을 선택할 수 있습니다. 예를 들어 때 사용할 활동 디자이너에는 **속성** 창 클릭는 **기본 클래스** 줄임표 **[...]**  참조 된 어셈블리 트리에서 활동에 대 한 다른 기본 클래스를 선택할 수 있습니다.
 

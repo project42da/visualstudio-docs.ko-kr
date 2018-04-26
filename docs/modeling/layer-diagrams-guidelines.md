@@ -12,12 +12,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 79c13cc878ee97968b82f86e3ba01c7eecd10b0c
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 9ce90746d89dd41c1f53d7150d83afaa2e2bad46
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="dependency-diagrams-guidelines"></a>종속성 다이어그램: 지침
 만들어 높은 수준의 응용 프로그램의 아키텍처에 설명 *종속성 다이어그램* Visual Studio에서. 코드 종속성 다이어그램을 사용 하 여 코드를 검사 하 여이 디자인의 일관성이 유지 되는지 확인 합니다. 빌드 프로세스에 레이어 유효성 검사를 포함할 수도 있습니다. 참조 [Channel 9 비디오: 디자인 종속성 다이어그램을 사용 하 여 아키텍처 및 유효성 검사](http://go.microsoft.com/fwlink/?LinkID=252073)합니다.

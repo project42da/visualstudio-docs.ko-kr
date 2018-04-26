@@ -1,7 +1,9 @@
 ---
-title: 테마 구성 대화 상자 (레거시) | Microsoft Docs
+title: 워크플로 디자이너-테마 구성 대화 상자 (레거시)
 ms.date: 11/04/2016
 ms.topic: reference
+ms.prod: visual-studio-dev15
+ms.technology: vs-workflow-designer
 f1_keywords:
 - System.Workflow.ComponentModel.Design.ThemeConfigurationDialog.UI
 helpviewer_keywords:
@@ -13,20 +15,21 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 46ec33bbce8ee8ac770607d77918547fdbd705ec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 07ae376a09afd73c5744f7d1587c637a4b55410d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="theme-configuration-dialog-box-legacy"></a>테마 구성 대화 상자(레거시)
-이 항목에서는 설명 방법을 사용 하 여는 **테마 구성** 레거시 Windows 워크플로 디자이너의 대화 상자. 레거시 [!INCLUDE[wfd2](../workflow-designer/includes/wfd2_md.md)]는 [!INCLUDE[netfx35_long](../workflow-designer/includes/netfx35_long_md.md)] 또는 [!INCLUDE[vstecwinfx](../workflow-designer/includes/vstecwinfx_md.md)]를 대상으로 해야 하는 경우에 사용합니다.
 
- 테마는 워크플로의 배경색 및 전경색, 스타일, 아이콘 및 기타 시각적 요소를 정의합니다. 테마를 저장했다가 다른 워크플로에서 다시 사용할 수 있습니다.
+이 항목에서는 설명 방법을 사용 하 여는 **테마 구성** 레거시 Windows 워크플로 디자이너의 대화 상자. WinFX 또는.NET Framework 버전 3.5 대상으로 해야 하는 경우 레거시 워크플로 디자이너를 사용 합니다.
 
- 만들고 사용 하 여 테마를 편집할 수는 **테마 구성** 대화 상자. 대화 상자를 열려면 선택 **새 테마 만들기** 에 **워크플로** 클릭 워크플로 디자인 화면을 선택 하거나 메뉴 **새 테마 만들기**합니다.
+테마는 워크플로의 배경색 및 전경색, 스타일, 아이콘 및 기타 시각적 요소를 정의합니다. 테마를 저장했다가 다른 워크플로에서 다시 사용할 수 있습니다.
 
- 다음 표에 사용자 인터페이스 (UI) 요소는 **테마 구성** 대화 상자.
+만들고 사용 하 여 테마를 편집할 수는 **테마 구성** 대화 상자. 대화 상자를 열려면 선택 **새 테마 만들기** 에 **워크플로** 클릭 워크플로 디자인 화면을 선택 하거나 메뉴 **새 테마 만들기**합니다.
+
+다음 표에 사용자 인터페이스 (UI) 요소는 **테마 구성** 대화 상자.
 
 |UI 요소|설명|
 |----------------|-----------------|

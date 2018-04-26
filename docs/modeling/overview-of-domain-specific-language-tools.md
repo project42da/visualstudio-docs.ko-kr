@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 0962ee3fb780b1634438af48766f2ba086e9f4b2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: d64c819e1d07fed44372edca2c7107d956937d58
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="overview-of-domain-specific-language-tools"></a>도메인별 언어 도구 개요
 도메인 특정 언어 도구 (DSL 도구)에서 호스팅되는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]사용 도메인 특정 언어를 디자인 하 고 다음 사용자의 언어를 기반으로 하는 모델을 만들 수 있어야 하는 모든 항목을 생성 합니다.

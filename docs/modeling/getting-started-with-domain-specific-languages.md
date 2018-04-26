@@ -7,12 +7,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7038f1d685fe0f76a9e9dff4026bcf19f9653deb
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 61fdb4b652b7fe74f3baf80c6e9d6332914a9a1e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>도메인별 언어 시작
 이 항목에서는 정의 하 고 Visual Studio에 대 한 Modeling SDK를 사용 하 여 만든 도메인 특정 언어 DSL ()를 사용 하 여 기본 개념을 설명 합니다.

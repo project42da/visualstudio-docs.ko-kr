@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 221985f8bfbac82e294422c57d684322b9036d5f
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: f0fa4a3848fedae642c6471dd001933ca1b7d011
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="text-template-control-blocks"></a>텍스트 템플릿 제어 블록
 제어 블록을 사용하면 다양한 출력을 생성하기 위해 텍스트 템플릿에 코드를 작성할 수 있습니다. 다음과 같은 세 가지 종류의 제어 블록이 있으며 각각 여는 대괄호로 구분됩니다.
