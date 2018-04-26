@@ -1,5 +1,6 @@
 ---
-title: 디버거에서 기본 개체의 사용자 지정 뷰 만들기 | Microsoft Docs
+title: 네이티브 개체의 사용자 지정 뷰 만들기
+description: Visual Studio 디버거에서 네이티브 형식을 표시 하는 방법을 사용자 지정할 Natvis 프레임 워크를 사용 하 여
 ms.custom: ''
 ms.date: 06/27/2017
 ms.technology: vs-ide-debug
@@ -14,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 38656b9c5ce4165f2a04b5e6d76411ce7f005855
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 01f051faa03e80caa672aee25a6d4abe3104faad
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-custom-views-of-native-objects-in-the-visual-studio-debugger"></a>Visual Studio 디버거에서 기본 개체의 사용자 지정 뷰 만들기
 Visual Studio Natvis 프레임 워크는 Visual Studio 디버거 변수 창에 네이티브 형식을 표시 하는 방법을 사용자 지정할 수 있습니다 (예를 들어는 **조사식** 창 **지역** 창 및  **DataTips**합니다.

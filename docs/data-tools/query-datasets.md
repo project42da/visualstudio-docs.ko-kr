@@ -9,14 +9,15 @@ ms.assetid: 7b1a91cf-8b5a-4fc0-ac36-0dc2d336fa1b
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 03b9e97ab820a65fcd5ec3cb0ea4db2b9cfbde5d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0fb1310649a1aeba7fd46acf9277ef7ea5825472
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="query-datasets"></a>쿼리 데이터 집합
 데이터 집합의 특정 레코드를 검색 하려면 FindBy 메서드를 사용 하 여 DataTable에서, 테이블의 행 컬렉션을 반복 하거나 사용 하 여 해당 하는 foreach 문을 작성 [LINQ to DataSet](/dotnet/framework/data/adonet/linq-to-dataset)합니다.

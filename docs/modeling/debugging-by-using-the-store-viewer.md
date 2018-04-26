@@ -10,12 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 05339ea36743d15e7a5b15c50a463bc7c0bbc8b8
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: c46e84caba16abbe9ba9d166076d1ee48d34fd94
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="debugging-by-using-the-store-viewer"></a>저장소 뷰어를 사용하여 디버깅
 저장 뷰어로 상태를 검사할 수는 *저장* 에서 사용 하는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]합니다. 저장 뷰어는 모든 요소 속성 및 요소 간의 링크와 함께 특정 저장소에 있는 도메인 모델 요소를 표시 합니다.

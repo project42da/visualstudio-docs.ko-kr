@@ -13,14 +13,15 @@ ms.assetid: 34ce4db6-09bb-4b46-b435-b2514aac52d3
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ed9bcb4521b5e9bdad839563aae1c566d20a5681
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8fbbf6a28d63e755929cc9d8a6c62ff7649b2f1c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="add-validation-to-an-n-tier-dataset"></a>N 계층 데이터 집합에 유효성 검사 추가
 N 계층 솔루션으로 분리 되어 있는 데이터 집합에 유효성 검사 추가 기본적으로 단일 파일 (단일 프로젝트에서 데이터 집합) 데이터 집합에 유효성 검사와 동일 합니다. 데이터에 유효성 검사를 수행 하기 위한 권장된 위치는 동안는 <xref:System.Data.DataTable.ColumnChanging> 및/또는 <xref:System.Data.DataTable.RowChanging> 데이터 테이블의 이벤트입니다.

@@ -9,12 +9,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 6ec2d2210912011e09e439f25ecaa0e21ab6e918
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: e0db20e4920f099882fd04d4ba06e65fb9c0c54c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choosing-a-domain-specific-language-solution-template"></a>도메인별 언어 솔루션 템플릿 선택
 도메인 특정 언어 솔루션을 만들려면 도메인 특정 언어 디자이너 마법사에서 사용할 수 있는 솔루션 템플릿 중 하나를 선택 합니다. 가장 유사한 만들려는 언어 서식 파일을 선택 하 여 시작 솔루션에 확인 해야 하는 수정 작업을 최소화할 수 있습니다.

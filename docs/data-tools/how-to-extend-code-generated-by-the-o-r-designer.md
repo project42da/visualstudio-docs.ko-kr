@@ -6,14 +6,15 @@ ms.assetid: d6d1122e-2f55-4607-8d8b-48c3c22600fb
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 0210037cdd554838c9fe08c424f02b081c6f2e1a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 73431c09a4e9054d30ccaef3dd1d74ac401c17e7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-extend-code-generated-by-the-or-designer"></a>방법: O/R 디자이너에서 생성된 코드 확장
 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 생성한 코드는 디자이너 화면에서 엔터티 클래스 및 다른 개체를 변경하면 다시 생성됩니다. 이러한 코드의 다시 생성으로 인해 일반적으로 디자이너에서 코드를 다시 생성하면 생성된 코드에 추가한 모든 코드를 덮어씁니다. [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서는 덮어쓸 수 없는 코드를 추가할 수 있는 partial 클래스 파일을 생성할 수 있는 기능을 제공합니다. 사용자 고유의 코드를 [!INCLUDE[vs_ordesigner_short](../data-tools/includes/vs_ordesigner_short_md.md)]에서 생성한 코드에 추가하는 예는 데이터 유효성 검사를 LINQ to SQL(엔터티) 클래스에 추가하는 것입니다. 자세한 내용은 참조 [하는 방법: 엔터티 클래스에 유효성 검사 추가](../data-tools/how-to-add-validation-to-entity-classes.md)합니다.
