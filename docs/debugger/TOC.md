@@ -295,6 +295,7 @@
 #### [프로세스에 연결할 수 없습니다.](unable-to-attach-to-the-process.md)
 #### [편집하며 계속하기 오류 메시지 대화 상자](edit-and-continue-error-message-dialog-box.md)
 #### [오류: 'function' 함수를 계산하는 중 시간이 초과되어 안전하지 않은 방식으로 중단해야 했습니다.](error-evaluating-the-function-function-timed-out-and-needed-to-be-aborted-in-an-unsafe-way.md)
+#### [오류: 대상 프로세스가 'function' 함수를 평가하는 동안 'code' 코드와 함께 종료되었습니다.](error-evaluating-the-function-process-exited.md)
 #### [오류: 원격 컴퓨터의 SQL Server에 연결할 수 없습니다.](error-unable-to-connect-to-sql-server-on-remote-machine.md)
 #### [오류: SQL Server 디버깅 인터페이스에 액세스할 수 없습니다.](error-unable-to-access-the-sql-server-debugging-interface.md)
 #### [오류: SQL에서 SSDEBUGPS를 찾을 수 없습니다.](error-sql-can-t-find-ssdebugps.md)
