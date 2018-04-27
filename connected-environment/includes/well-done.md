@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 5b1249cc083e2a7ccbfceae27da4aaf0b772bbd9
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="well-done"></a>훌륭합니다!
 이것으로 초보자를 위한 가이드를 완료했습니다! 다음과 같은 방법을 배웠습니다.
 

@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 78de57178350d4317896c41a455efbeeb553c58d
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="install-the-connected-environment-cli"></a>연결된 환경 CLI 설치
 연결된 환경에는 최소한 로컬 컴퓨터 설치가 필요합니다. 대부분의 개발 환경의 구성은 클라우드에 저장되며 다른 사용자와 공유할 수 있습니다.
 

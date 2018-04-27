@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 30d3f9da291feb52674937d4b2f1b86f3efd0386
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 지금까지 앱에서 작업하는 유일한 개발자인 것처럼 응용 프로그램의 코드를 실행했습니다. 이 섹션에서는 연결된 환경을 통해 팀 개발을 간소화하는 방법을 배우게 됩니다.
 * 동일한 개발 환경에서 작업하는 개발자 팀을 사용하도록 설정합니다.
 * 각 개발자가 다른 코드의 중단 걱정 없이 격리된 해당 코드에 대한 반복을 지원합니다.

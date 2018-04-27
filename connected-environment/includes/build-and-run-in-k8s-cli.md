@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: b10d15b90f7f413d26adf8037c6f52c711a9ed69
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="build-and-run-code-in-kubernetes"></a>Kubernetes에서 코드 실행 및 빌드
 코드를 실행해 봅시다! 터미널 창의 **루트 코드 폴더**에서 이 명령, webfrontend을 실행 합니다.
 

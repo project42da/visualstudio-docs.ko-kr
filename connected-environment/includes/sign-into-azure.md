@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 502bd8d206b43fc219c850ab870db35e6c3af1c0
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="sign-in-to-azure"></a>Azure에 로그인
 개발 환경을 만들려면 Azure에 로그인해야 합니다. 터미널 창에서 다음 명령을 입력합니다.
 ```cmd

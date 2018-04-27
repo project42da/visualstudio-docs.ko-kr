@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 394e31bf0660557c1eba571006cacf213263c07e
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="initialize-code-for-docker-and-kubernetes-development"></a>Docker 및 Kubernetes 개발을 위한 코드 초기화
 로컬로 실행할 수 있는 기본 웹앱이 있습니다. 앱의 컨테이너 및 컨테이너가 Kubernetes에 배포되는 방법을 정의하는 자산을 만들어 이제 웹앱을 컨테이너화하게 됩니다. 이렇게 하면 연결된 환경과 작업하기가 수월합니다. 
 

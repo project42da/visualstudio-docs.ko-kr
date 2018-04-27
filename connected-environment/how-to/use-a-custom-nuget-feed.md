@@ -4,14 +4,16 @@ author: ghogen
 ms.author: ghogen
 ms.date: 03/27/2018
 ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: 사용자 지정 NuGet 피드를 사용하여 연결된 환경에서 NuGet 패키지에 액세스하고 사용합니다.
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
 manager: douge
-ms.openlocfilehash: 1c4c0c53b81f29436bb7110395981071411fd6b2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 71fcf1c3cfb37d783de13514f6a048c3b3711a53
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 #  <a name="use-a-custom-nuget-feed-in-a-connected-environment"></a>연결된 환경에서 사용자 지정 NuGet 피드 사용
 
