@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: dbf7482acb02c6347c9c0d0765ef962cfb43a050
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 ## <a name="initialize-debug-assets-with-the-vs-code-extension"></a>VS Code 확장을 사용하여 디버그 자산 초기화
 VS Code가 Azure에서 개발 환경과 통신할 수 있도록 먼저 코드 프로젝트를 구성해야 합니다. 연결된 환경에 대한 VS Code 확장은 디버그 구성을 설정하기 위한 도우미 명령을 제공합니다. 
 

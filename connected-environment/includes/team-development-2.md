@@ -1,3 +1,11 @@
+---
+ms.topic: include
+ms.openlocfilehash: 9da28d29dc431f2f6ec92a01c397244147042f12
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/27/2018
+---
 2. F5 키를 누르면(또는 터미널 창에서 `vsce up`을 입력하면) 서비스가 실행됩니다. 이렇게 함으로써 새로 선택한 공간 `scott`에서 서비스를 자동으로 실행하게 됩니다. 
 1. `vsce list`을 다시 실행하여 이를 확인할 수 있습니다. 첫째, `mywebapi`의 인스턴스가 `scott` 공간에서 실행되고 있음을 확인할 수 있습니다(`mainline`에서 실행되는 버전이 여전히 실행되고 있지만 표시되지는 않습니다). 둘째, `webfrontend`에 대한 액세스 포인트에는 텍스트 "scott-"이 접두사로 추가됩니다. 이 URL은 `scott` 공간에 고유하며 "scott URL"로 전송된 요청이 `scott` 공간의 서비스에 대한 첫 번째 경로를 시도하고 `mainline` 공간의 서비스로 돌아가게 된다는 것을 뜻합니다.
 
