@@ -2,8 +2,8 @@
 title: Office 솔루션에 대 한 응용 프로그램 매니페스트 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -15,11 +15,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0fa1ee09b3218fbcb485d7c3cd23e23ec18f463c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e31eda8b1e3a1a0c311b35245f9b7690cc37aae0
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="application-manifests-for-office-solutions"></a>Office 솔루션의 응용 프로그램 매니페스트
   응용 프로그램 매니페스트는 Microsoft Office 솔루션에 로드된 어셈블리를 설명하는 XML 파일입니다. Visual Studio의 Microsoft Office 개발 도구는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 참조에 정의된 [ndptecclick](/visualstudio/deployment/clickonce-application-manifest) 응용 프로그램 매니페스트 스키마를 사용합니다.  

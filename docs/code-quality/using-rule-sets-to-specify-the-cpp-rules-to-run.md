@@ -1,6 +1,6 @@
 ---
 title: 규칙 집합을 사용하여 실행할 C++ 규칙 지정
-ms.date: 11/04/2016
+ms.date: 04/28/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.topic: conceptual
@@ -9,15 +9,19 @@ ms.author: mblome
 manager: wpickett
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 571d54bb6bdf3673da8e40d6075c5b961d248fe5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ccb64fba6a646de0974c9de6e35beb98738b7300
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="use-rule-sets-to-specify-the-c-rules-to-run"></a>규칙 집합을 사용 하 여 실행을 위해 c + + 규칙을 지정 하려면
 
-Visual Studio에서 있습니다 만들고 수정할 수는 사용자 지정 *규칙 집합* 코드 분석와 관련 된 특정 프로젝트 요구 사항에 맞게 합니다. 사용자 지정 C++ 규칙 집합을 만들기 위해서는 C/C++ 프로젝트를 Visual Studio IDE에서 열어야 합니다. 그런 다음 규칙 집합 편집기에서 표준 규칙 집합을 열고, 특정 규칙을 추가 또는 제거하고, 필요에 따라 코드 분석으로 규칙이 위반된 것으로 확인될 때 발생하는 작업을 변경합니다.
+Visual Studio에서 있습니다 만들고 수정할 수는 사용자 지정 *규칙 집합* 코드 분석와 관련 된 특정 프로젝트 요구 사항에 맞게 합니다. 기본 규칙 집합에 저장 된 `%VSINSTALLDIR%\Team Tools\Static Analysis Tools\Rule Sets`합니다.
+
+**Visual Studio 2017 버전 15.7** 만들어 모든 텍스트를 사용 하 여 사용자 지정 규칙 집합 편집기 하는 어떤 빌드 사용 하는 시스템에 관계 없이 빌드 명령줄에서에서이 적용 합니다. 자세한 내용은 참조 [/analyze: ruleset](/cpp/build/reference/analyze-code-quality)합니다.
+
+Visual Studio에서 설정 하는 사용자 지정 c + + 규칙을 만들려면 C/c + + 프로젝트를 Visual Studio IDE에서 열려 있어야 합니다. 그런 다음 규칙 집합 편집기에서 표준 규칙 집합을 열고, 특정 규칙을 추가 또는 제거하고, 필요에 따라 코드 분석으로 규칙이 위반된 것으로 확인될 때 발생하는 작업을 변경합니다.
 
 새 사용자 지정 규칙 집합을 만들려면, 새 파일 이름을 사용 하 여 저장 합니다. 사용자 지정 규칙 집합을 프로젝트에 자동으로 할당 됩니다.
 
@@ -72,3 +76,20 @@ Visual Studio에서 있습니다 만들고 수정할 수는 사용자 지정 *�
 - 할당 된 규칙 표시 / 숨김을 전환 하려면는 **None** 동작을 선택 **활성화 되지 않는 규칙 표시**합니다.
 
 - 를 추가 하거나 Microsoft 기본 규칙 집합을 현재 규칙 집합을 제거 하려면 선택 **자식 규칙 집합 추가 또는 제거**합니다.
+
+## <a name="to-create-a-rule-set-in-a-text-editor"></a>텍스트 편집기에서 설정 하는 규칙을 만들려면
+
+편집기에서 텍스트를 사용자 지정 규칙 집합을 만들고, 된 모든 위치에 저장할 수 있습니다는 `.ruleset` 확장을 사용 하 여 적용 하 고는 [/analyze: ruleset](/cpp/build/reference/analyze-code-quality) 컴파일러 옵션입니다.
+
+다음 예제는 시작 점으로 사용할 수 있는 파일을 설정 하는 기본 규칙을 보여 줍니다.
+
+```xml
+
+<?xml version="1.0" encoding="utf-8"?>
+<RuleSet Name="New Rule Set" Description=" " ToolsVersion="15.0">
+  <Rules AnalyzerId="Microsoft.Analyzers.NativeCodeAnalysis" RuleNamespace="Microsoft.Rules.Native">
+    <Rule Id="C6001" Action="Warning" />
+    <Rule Id="C26494" Action="Warning" />
+  </Rules>
+</RuleSet>
+```

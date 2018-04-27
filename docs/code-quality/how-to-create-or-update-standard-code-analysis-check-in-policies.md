@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecda4cc1ab237bed9e377f977295e19c74893673
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4897ec080bf5d268db6ac229785ac0b642753bc0
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="how-to-create-or-update-standard-code-analysis-check-in-policies"></a>방법: 표준 코드 분석 체크 인 정책 만들기 또는 업데이트
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
 - 관리 되는 코드를 지정 하 여 체크 인 정책 설정는 *규칙 집합* 코드 분석 규칙의 하위 집합을 포함 하는 합니다.
 
-- C/c + + 코드에 대 한 모든 코드 분석 규칙이 실행 됩니다. 체크 인 정책 필요 합니다. 팀 프로젝트의 개별 코드 프로젝트에 대 한 특정 규칙을 사용 하지 않도록 설정 하는 전처리기 지시문을 추가할 수 있습니다.
+- C/c + + 코드를 Visual Studio 2017 15.6 및 이전 버전을 버전에에서 대 한 모든 코드 분석 규칙이 실행 됩니다. 체크 인 정책 필요 합니다. 팀 프로젝트의 개별 코드 프로젝트에 대 한 특정 규칙을 사용 하지 않도록 설정 하는 전처리기 지시문을 추가할 수 있습니다. 사용할 수 있습니다 15.7 이상 버전에서는 **/analyze: 규칙 집합** 실행 하는 규칙을 지정 합니다. 자세한 내용은 참조 [규칙 규칙 집합 실행에 c + + 규칙 지정을 사용 하 여](using-rule-sets-to-specify-the-cpp-rules-to-run.md)합니다.
 
 관리 코드에 대 한 체크 인 정책을 지정 하면 팀 멤버가 코드 프로젝트에 팀 프로젝트 정책 설정에 대 한 코드 분석 설정을 동기화 할 수 있습니다.
 

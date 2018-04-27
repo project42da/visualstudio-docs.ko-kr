@@ -2,8 +2,8 @@
 title: 작업 창 개요 | Microsoft Docs
 ms.custom: ''
 ms.date: 02/02/2017
-ms.technology:
-- office-development
+ms.technology: office-development
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 dev_langs:
 - VB
@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 902301021a698dfd0f6e9f09b000c1e4e403e029
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0fa20f8be093ae064daba731833709fd8f54f551
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="actions-pane-overview"></a>작업 창 개요
   작업창은 사용자 지정 가능한 **문서 동작** 특정 Microsoft Office Word 문서 또는 Microsoft Office Excel 통합 문서에 연결 된 작업창입니다. 다른 기본 제공 작업창과 함께 Office 작업창 내과 같은 호스트의 **XML 원본은** Excel의 작업 창 또는 **스타일 및 서식** Word의 작업창입니다. Windows Forms 컨트롤 또는 WPF 컨트롤을 사용하여 작업 창 사용자 인터페이스를 디자인할 수 있습니다.  

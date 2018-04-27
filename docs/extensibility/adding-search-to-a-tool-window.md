@@ -13,11 +13,11 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: d4b89cbaa1afa4fd961baf139eeebcff19c8d48f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f3b5aa52968be5a2efcf88d7a31505d94f97aaec
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="adding-search-to-a-tool-window"></a>도구 창으로 검색 추가
 를 작성 하거나 확장 프로그램에서 도구 창을 업데이트할 때 Visual Studio에서 다른 위치에 표시 되는 동일한 검색 기능을 추가할 수 있습니다. 이 기능에는 다음과 같은 기능이 포함 됩니다.  
@@ -78,37 +78,6 @@ ms.lasthandoff: 04/16/2018
      에 **TestSearchControl** 클래스, 다음 코드를 추가 합니다.  
   
      이 코드는 공용 추가 <xref:System.Windows.Controls.TextBox> 라는 속성이 **SearchResultsTextBox** 및 라는 공개 문자열 속성이 **SearchContent**합니다. 생성자는 SearchResultsTextBox 텍스트 상자에 설정 되 고 SearchContent 줄 바꿈 구분 된 문자열 집합이으로 초기화 됩니다. 또한 입력란의 내용은 문자열 집합으로 초기화 됩니다.  
-  
-    ```csharp  
-    public partial class TestSearchControl : UserControl  
-    {  
-        public TextBox SearchResultsTextBox { get; set; }  
-        public string SearchContent { get; set; }  
-  
-        public TestSearchControl()  
-        {  
-            InitializeComponent();  
-  
-            this.SearchResultsTextBox = resultsTextBox;  
-            this.SearchContent = BuildContent();  
-  
-            this.SearchResultsTextBox.Text = this.SearchContent;  
-        }  
-  
-        private string BuildContent()  
-        {  
-            StringBuilder sb = new StringBuilder();  
-            sb.AppendLine("1 go");  
-            sb.AppendLine("2 good");  
-            sb.AppendLine("3 Go");  
-            sb.AppendLine("4 Good");  
-            sb.AppendLine("5 goodbye");  
-            sb.AppendLine("6 Goodbye");  
-  
-            return sb.ToString();  
-        }  
-    }  
-    ```  
   
      [!code-csharp[ToolWindowSearch#1](../extensibility/codesnippet/CSharp/adding-search-to-a-tool-window_1.cs)]
      [!code-vb[ToolWindowSearch#1](../extensibility/codesnippet/VisualBasic/adding-search-to-a-tool-window_1.vb)]  
@@ -312,7 +281,7 @@ ms.lasthandoff: 04/16/2018
     System.Threading.Thread.Sleep(100);  
     ```  
   
-5.  솔루션을 다시 빌드하면 하 debugb를 시작 하 여 새 설정을 테스트 합니다.  
+5.  솔루션을 다시 작성 및 디버깅 시작 하 여 새 설정을 테스트 합니다.  
   
      진행률 표시줄이 검색 창 (로 표시 검색 텍스트 상자 아래 파란색 선) 될 때마다 검색을 수행 합니다.  
   
@@ -353,39 +322,11 @@ ms.lasthandoff: 04/16/2018
     }  
     ```  
   
-2.  에 `TestSearchTask` 클래스 matchCase 줄의 주석 처리 제거는 `OnStartSearch` 메서드:  
+2.  에 `TestSearchTask` 클래스를 다음 주석 줄는 `OnStartSearch` 메서드:  
   
-    ```csharp  
-    private IVsEnumWindowSearchOptions m_optionsEnum;  
-    public override IVsEnumWindowSearchOptions SearchOptionsEnum  
-    {  
-        get  
-        {  
-            if (m_optionsEnum == null)  
-            {  
-                List<IVsWindowSearchOption> list = new List<IVsWindowSearchOption>();  
-  
-                list.Add(this.MatchCaseOption);  
-  
-                m_optionsEnum = new WindowSearchOptionEnumerator(list) as IVsEnumWindowSearchOptions;  
-            }  
-            return m_optionsEnum;  
-        }  
-    }  
-  
-    private WindowSearchBooleanOption m_matchCaseOption;  
-    public WindowSearchBooleanOption MatchCaseOption  
-    {  
-        get  
-         {  
-            if (m_matchCaseOption == null)  
-            {  
-                m_matchCaseOption = new WindowSearchBooleanOption("Match case", "Match case", false);  
-            }  
-            return m_matchCaseOption;  
-        }  
-    }  
-    ```  
+    ```csharp
+    matchCase = m_toolWindow.MatchCaseOption.Value;
+    ```
   
 3.  옵션을 테스트 합니다.  
   
