@@ -1,27 +1,21 @@
 ---
-title: Python을 사용하여 Azure 원격 디버깅 | Microsoft Docs
+title: Python을 사용하여 Azure 원격 디버깅
 description: Python 응용 프로그램의 원격 디버깅에 Visual Studio를 사용하도록 Azure App Service를 구성하는 방법입니다.
-ms.custom: ''
 ms.date: 07/12/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: d74e4425bfcaefbd1bb13e368ee719acaa3bae80
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 5fc6004c17614620f4ba75fb13258a685536c28b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="remotely-debugging-python-code-on-azure"></a>Azure에서 Python 코드 원격 디버깅
 
@@ -31,7 +25,7 @@ Azure 원격 디버깅에서 웹 소켓을 사용하기 때문에 [Azure Portal]
 
 ![Azure Portal에서 웹 소켓을 사용하도록 설정](media/azure-remote-debugging-enable-web-sockets.png)
 
-프로젝트가 올바르게 배포되고 웹 소켓을 사용하도록 설정한 후에는 Visual Studio의 **서버 탐색기**(**보기 > 서버 탐색기**)에서 App Service에 연결할 수 있습니다. **Azure > App Service**와 해당 리소스 그룹에서 사이트를 찾고, 마우스 오른쪽 단추로 클릭하여 **디버거 연결(Python)**을 선택합니다. **디버거 연결** 명령은 IIS에서 실행되는 .NET 응용 프로그램의 명령이므로 Python 앱과 함께 .NET 코드를 공동 호스트하는 경우에만 유용합니다.
+프로젝트가 올바르게 배포되고 웹 소켓을 사용하도록 설정한 후에는 Visual Studio의 **서버 탐색기**(**보기 > 서버 탐색기**)에서 App Service에 연결할 수 있습니다. **Azure > App Service**와 해당 리소스 그룹에서 사이트를 찾고, 마우스 오른쪽 단추로 클릭하여 **디버거 연결(Python)** 을 선택합니다. **디버거 연결** 명령은 IIS에서 실행되는 .NET 응용 프로그램의 명령이므로 Python 앱과 함께 .NET 코드를 공동 호스트하는 경우에만 유용합니다.
 
 Visual Studio는 [서버 탐색기 없이 연결](#attaching-without-server-explorer)에서 설명한 대로 직접 연결하기 위한 지침의 집합으로 바로 연결됩니다. **디버거 연결(Python)** 명령이 표시되지 않거나 Visual Studio에서 사이트에 연결되지 않으면 [Azure 원격 디버깅 문제 해결](debugging-remote-python-code-on-azure-troubleshooting.md)을 참조하세요.
 

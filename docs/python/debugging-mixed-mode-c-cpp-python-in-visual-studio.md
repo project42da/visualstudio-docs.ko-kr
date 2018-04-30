@@ -1,28 +1,21 @@
 ---
-title: Python에 대한 혼합 모드 디버깅 | Microsoft Docs
+title: Python에 대한 혼합 모드 디버깅
 description: 환경 간의 단계별 실행, 값 보기 및 식 계산을 포함하여 Visual Studio에서 C++ 및 Python을 동시에 디버그하는 방법입니다.
-ms.custom: ''
 ms.date: 01/16/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-- C++
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 4f555e24c1328a4d784e3f8c5b2d0f1a7c590f8b
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 52aca112b802789f45f0a1d667d75b53a7535919
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="debugging-python-and-c-together"></a>Python과 C++로 디버깅
 
@@ -84,7 +77,7 @@ Visual Studio 2017(15.5 이상 버전)은 C/C++ 프로젝트에서 혼합 모드
 모든 이전 버전의 Visual Studio의 경우 C/C++ 프로젝트가 네이티브 디버거만을 사용하기 때문에 Visual Studio에서 Python 프로젝트를 시작할 때 직접 혼합 모드 디버깅을 사용할 수 있습니다. 그러나 디버거를 별도로 연결할 수 있습니다.
 
 1. 디버그하지 않고 C++ 프로젝트를 시작합니다(**디버그 > 디버깅하지 않고 시작** 또는 Ctrl+F5).
-1. **디버그 > 프로세스에 연결...**을 선택합니다. 대화 상자가 나타나면 해당하는 프로세스를 선택하고, **선택...** 단추를 사용하여 **코드 형식 선택** 대화 상자를 엽니다. 여기서 Python을 선택할 수 있습니다.
+1. **디버그 > 프로세스에 연결...** 을 선택합니다. 대화 상자가 나타나면 해당하는 프로세스를 선택하고, **선택...** 단추를 사용하여 **코드 형식 선택** 대화 상자를 엽니다. 여기서 Python을 선택할 수 있습니다.
 
     ![디버거 연결 시 디버깅 형식으로 Python 선택](media/mixed-mode-debugging-attach-type.png)
 

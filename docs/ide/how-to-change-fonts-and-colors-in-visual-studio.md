@@ -2,27 +2,23 @@
 title: '방법: Visual Studio에서 글꼴 및 색 변경 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, color themes
 - color themes, Visual Studio
 ms.assetid: 60d91ba1-244b-4c43-847f-60b744f1352a
-caps.latest.revision: 13
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8b5d03f67edc604a7c2dd7e4cd32620a52812e09
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: 9dd1ce6aa91054ffee2f82386c016acc0fe5ba7c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-change-fonts-and-colors-in-visual-studio"></a>방법: Visual Studio에서 글꼴 및 색 변경
 
@@ -33,9 +29,9 @@ Visual Studio의 IDE 프레임과 도구 창의 색을 여러 가지 방식으�
 
 ## <a name="change-the-color-theme-of-the-ide"></a>IDE의 색 테마 변경
 
-1. 메뉴 모음에서 **도구**, **옵션**을 선택합니다.
+1. 메뉴 모음에서 **도구** > **옵션**을 선택합니다.
 
-1. 옵션 목록에서 **환경**, **일반**을 차례로 선택합니다.
+1. 옵션 목록에서 **환경** > **일반**을 선택합니다.
 
 1. **색 테마** 목록에서 기본 **파란색** 테마, **어둡게** 또는 **밝게** 중 하나를 선택합니다.
 
@@ -47,7 +43,7 @@ Visual Studio의 IDE 프레임과 도구 창의 색을 여러 가지 방식으�
 
 ## <a name="use-windows-high-contrast-colors"></a>Windows 고대비 색상 사용
 
-**왼쪽 Alt** + **왼쪽 Shift** + **PrtScn** 키를 선택합니다.
+**왼쪽 Alt**+**왼쪽 Shift**+**PrtScn** 키를 선택합니다.
 
 > [!WARNING]
 > 이 옵션은 모든 응용 프로그램 및 현재 컴퓨터의 UI를 고대비로 설정합니다.
@@ -58,14 +54,14 @@ IDE에서 모든 창 및 대화 상자의 글꼴 및 텍스트 크기를 변경�
 
 ### <a name="to-change-the-font-and-size-of-all-text-in-the-ide"></a>IDE에서 모든 텍스트의 글꼴과 크기를 변경하려면
 
-1. 메뉴 모음에서 **도구**, **옵션**을 선택합니다.
+1. 메뉴 모음에서 **도구** > **옵션**을 선택합니다.
 
-1. 옵션 목록에서 **환경**, **글꼴 및 색**을 차례로 선택합니다.
+1. 옵션 목록에서 **환경** > **글꼴 및 색**을 선택합니다.
 
 1. **설정 표시** 목록에서 **환경 글꼴**을 선택합니다.
 
     > [!TIP]
-    > 도구 창에서만 글꼴을 변경하려면 **설정 표시** 목록에서 **[모든 텍스트 도구 창]**을 선택합니다.
+    > 도구 창에서만 글꼴을 변경하려면 **설정 표시** 목록에서 **모든 텍스트 도구 창**을 선택합니다.
 
 1. **글꼴** 목록에서 글꼴을 선택합니다.
 
@@ -73,5 +69,6 @@ IDE에서 모든 창 및 대화 상자의 글꼴 및 텍스트 크기를 변경�
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio의 내게 필요한 옵션 기능](../ide/reference/accessibility-features-of-visual-studio.md)
-[방법: 편집기에서 글꼴 및 색 변경](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)
+[Visual Studio의 접근성 기능](../ide/reference/accessibility-features-of-visual-studio.md)  
+
+[방법: 편집기의 글꼴 및 색 변경](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)

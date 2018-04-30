@@ -1,21 +1,21 @@
 ---
-title: "문제 해결 | Microsoft Docs"
-description: 
+title: Mac용 Visual Studio 문제 해결
+description: Mac용 Visual Studio 사용자를 위한 일반적인 문제 및 해결
+ms.topic: troubleshooting
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: CE860D79-E29E-4B93-B094-BE74B35FC1C2
-ms.openlocfilehash: 4e483548e916bf00b07c472b18adac8504b6e967
-ms.sourcegitcommit: f40311056ea0b4677efcca74a285dbb0ce0e7974
+ms.openlocfilehash: a802bf950b5f759a41f88fb9260449fadcea8974
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/31/2017
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="troubleshooting"></a>문제 해결
 
 ## <a name="viewing-logs-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 로그 보기
- 
+
 로그를 확인하려면 아래 그림과 같이 **도움말 > 로그 디렉터리 열기** 메뉴 항목으로 이동합니다.
 
 ![로그 디렉터리 열기 메뉴 항목](media/troubleshooting-image1.png)

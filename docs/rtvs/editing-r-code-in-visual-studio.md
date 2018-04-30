@@ -1,26 +1,20 @@
 ---
-title: "Visual Studio용 R 도구를 사용하여 코드 편집 | Microsoft Docs"
-description: "Visual Studio는 모든 기능과 확장 사용 기능을 유지하면서 R에 맞게 조정된 편집 환경을 제공합니다."
-ms.custom: 
+title: R 코드 편집
+description: Visual Studio는 모든 기능과 확장 사용 기능을 유지하면서 R에 맞게 조정된 편집 환경을 제공합니다.
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: b318122163bf74035d19fd53c7da4be938b345f5
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: b3824f20ee74985ffa36f1cb3b397a6c6dc0e93c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="editing-r-code-in-visual-studio"></a>Visual Studio에서 R 코드 편집
 
@@ -100,7 +94,7 @@ f <- function(a) { return(a + 1) }
 
 자동 서식 지정은 실행 취소할 수 있는 별도의 작업입니다. 예를 들어 코드를 편집기에 붙여넣고 서식을 적용한 경우 **편집 > 실행 취소**를 선택하거나 Ctrl+Z를 한 번 누르면 서식 지정이 되돌려집니다. 두 번째 실행 취소는 붙여넣기 자체를 되돌립니다.
 
-서식 지정 옵션(서식 지정 끄기 포함)은 **텍스트 편집기 > R > 고급** 탭의 **도구 > 옵션**을 통해 설정됩니다. 이 페이지에는 **R 도구 > 편집기 옵션...** 명령을 사용하여 직접 이동하거나 편집기에서 마우스 오른쪽 단추를 클릭하고 **서식 지정 옵션...**을 선택하여 이동할 수 있습니다. 자세한 내용은 [편집기 옵션](#editor-options)을 참조하세요.
+서식 지정 옵션(서식 지정 끄기 포함)은 **텍스트 편집기 > R > 고급** 탭의 **도구 > 옵션**을 통해 설정됩니다. 이 페이지에는 **R 도구 > 편집기 옵션...** 명령을 사용하여 직접 이동하거나 편집기에서 마우스 오른쪽 단추를 클릭하고 **서식 지정 옵션...** 을 선택하여 이동할 수 있습니다. 자세한 내용은 [편집기 옵션](#editor-options)을 참조하세요.
 
 ## <a name="inserting-roxygen-comments"></a>Roxygen 주석 삽입
 
@@ -110,7 +104,7 @@ RTVS에서는 함수의 매개 변수 이름을 사용하여 [Roxygen](http://ro
 
 ## <a name="editor-options"></a>편집기 옵션
 
-편집기 관련 옵션은 **텍스트 편집기 > R**로 이동하여 **도구 > 옵션** 명령을 통해 설정됩니다. 또는 **R 도구 > 편집기 옵션...**을 사용하세요.
+편집기 관련 옵션은 **텍스트 편집기 > R**로 이동하여 **도구 > 옵션** 명령을 통해 설정됩니다. 또는 **R 도구 > 편집기 옵션...** 을 사용하세요.
 
 **일반**, **스크롤 막대** 및 **탭** 탭의 옵션은 R과 관계가 없고 오히려 모든 언어에 사용할 수 있지만 언어별로 적용되는 일반적인 Visual Studio 설정입니다. 자세한 내용은 다음 문서를 참조하세요.
 

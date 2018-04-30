@@ -1,13 +1,10 @@
 ---
-title: '빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기 | Microsoft Docs'
+title: '빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기'
 description: 이 빠른 시작에서 Flask 프레임워크를 사용하여 Python의 간단한 웹앱을 빌드하기 위해 Visual Studio를 사용합니다.
 ms.custom: mvc
 ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: ''
 ms.technology:
 - vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: quickstart
 dev_langs:
 - python
@@ -17,11 +14,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 71501e113bc744f430c6935dbf20bfd2ec533758
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: b3a455dc04693b70c0ae3932503aea33085b2a80
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-python-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기
 
@@ -35,13 +32,13 @@ Python IDE인 Visual Studio에 대한 5~10분 분량의 소개에서는 Flask �
 
 1. Visual Studio 2017을 엽니다.
 
-1. 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...**를 차례로 선택합니다.
+1. 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...** 를 차례로 선택합니다.
 
 1. **새 프로젝트** 대화 상자에서 오른쪽 아래의 검색 필드에 "Python 웹 프로젝트"를 입력한 다음, 중간 목록에서 **웹 프로젝트**를 선택하고, 프로젝트에 "HelloPython"과 같은 이름을 지정한 다음, **확인**을 선택합니다.
 
     ![Python 웹 프로젝트가 선택된 새 프로젝트 대화 상자](media/quickstart-python-00-web-project.png)
 
-    Python 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자를 취소하고 나가서 위쪽 메뉴 모음에서 **도구 > 도구 및 기능 가져오기...**를 선택하여 Visual Studio 설치 관리자를 엽니다. **Python 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.
+    Python 프로젝트 템플릿이 표시되지 않으면 **새 프로젝트** 대화 상자를 취소하고 나가서 위쪽 메뉴 모음에서 **도구 > 도구 및 기능 가져오기...** 를 선택하여 Visual Studio 설치 관리자를 엽니다. **Python 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.
 
     ![Visual Studio 설치 관리자의 Python 개발 작업](../python/media/installation-python-workload.png)
 
@@ -67,7 +64,7 @@ Python의 웹앱은 다수의 사용 가능한 Python 라이브러리 중 하나
 
     ![기본 환경을 보여 주는 솔루션 탐색기](media/quickstart-python-02-default-environment.png)
 
-1. 환경을 마우스 오른쪽 단추로 클릭하고 **Python 패키지 설치...**를 선택합니다. 이 명령은 **패키지** 탭에 **Python 환경** 창을 엽니다.
+1. 환경을 마우스 오른쪽 단추로 클릭하고 **Python 패키지 설치...** 를 선택합니다. 이 명령은 **패키지** 탭에 **Python 환경** 창을 엽니다.
 
 1. 검색 필드에 "flask"를 입력하고 **pip install flask from PyPI**를 선택합니다. 관리자 권한에 대한 프롬프트가 표시되면 수락하고 Visual Studio의 **출력** 창에서 진행률을 살펴봅니다. (전역 환경에 대한 패키지 폴더가 `c:\program files`와 같이 보호되는 영역 내에 있는 경우 권한 상승에 대한 프롬프트가 발생합니다.)
 
@@ -82,13 +79,13 @@ Python의 웹앱은 다수의 사용 가능한 Python 라이브러리 중 하나
 
 **질문: 어디에서 사용 가능한 다른 Python 패키지에 대해 자세히 알아볼 수 있나요?**
 
-**응답**: [Python 패키지 인덱스](https://pypi.python.org/pypi)(pypi.python.org)를 방문하세요.
+**응답**: [Python 패키지 인덱스](https://pypi.org/)(pypi.org)를 방문하세요.
 
 ## <a name="add-a-code-file"></a>코드 파일 추가
 
 이제 작은 웹앱을 구현하기 위해 약간의 Python 코드를 추가할 준비가 되었습니다.
 
-1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 차례로 선택합니다.
+1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...** 을 차례로 선택합니다.
 
 1. 대화 상자가 나타나면 **빈 Python 파일**을 선택하고 이름을 `app.py`라고 지정하고 **추가**를 선택합니다. Visual Studio의 편집기 창에서 파일이 자동으로 열립니다.
 
@@ -121,7 +118,7 @@ Python의 웹앱은 다수의 사용 가능한 Python 라이브러리 중 하나
 
 **질문: 어디에서 Flask에 대해 자세히 알아볼 수 있나요?**
 
-**대답**: [Flask 빠른 시작](https://flask.pocoo.org/docs/0.12/quickstart/)(flask.pocoo.org)부터는 Flask 설명서를 참조합니다.
+**대답**: [Flask 빠른 시작](http://flask.pocoo.org/docs/0.12/quickstart/#quickstart)(flask.pocoo.org)부터는 Flask 설명서를 참조합니다.
 
 ## <a name="run-the-application"></a>응용 프로그램 실행
 

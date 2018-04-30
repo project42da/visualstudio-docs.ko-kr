@@ -1,11 +1,9 @@
 ---
-title: "코드 조각 | Microsoft Docs"
-ms.custom: 
+title: 코드 조각 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.ExpansionManagerImport
 - vs.codesnippetmanager
@@ -14,18 +12,18 @@ helpviewer_keywords:
 - code snippets
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 dev_langs:
 - CSharp
 - VB
 - CPP
 ms.workload:
 - multiple
-ms.openlocfilehash: 514408ff2dbbde12d243a1458c380a2e17b516cc
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 520aa870f85ddc3768720eafb17b0109fb270393
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="code-snippets"></a>코드 조각
 
@@ -37,9 +35,9 @@ ms.lasthandoff: 02/09/2018
 
 코드 조각은 다음과 같은 일반적인 방법으로 액세스할 수 있습니다.
 
-- 메뉴 모음에서 **편집** > **IntelliSense** > **조각 삽입...**을 선택
+- 메뉴 모음에서 **편집** > **IntelliSense** > **조각 삽입...** 을 선택
 
-- 마우스 오른쪽 단추를 클릭하거나 코드 편집기의 상황에 맞는 메뉴에서 **코드 조각** > **조각 삽입...**을 선택
+- 마우스 오른쪽 단추를 클릭하거나 코드 편집기의 상황에 맞는 메뉴에서 **코드 조각** > **조각 삽입...** 을 선택
 
 - 키보드에서 **Ctrl**+**K**+**X**를 누름
 
@@ -60,7 +58,7 @@ finally
 }
 ```
 
-코드 창의 상황에 맞는 메뉴에서 **조각 삽입**, **Visual C#**를 차례로 클릭하여 이 조각을 삽입한 다음, `tryf`를 입력하고 나서 **Tab**을 누릅니다. 또는 `tryf`를 입력하고 **Tab**을 두 번 누를 수 있습니다.
+코드 창의 상황에 맞는 메뉴에서 **조각 삽입**, **Visual C#** 를 차례로 클릭하여 이 조각을 삽입한 다음, `tryf`를 입력하고 나서 **Tab**을 누릅니다. 또는 `tryf`를 입력하고 **Tab**을 두 번 누를 수 있습니다.
 
 코드 감싸기 조각의 예: C++에서 바로 가기 `if`는 삽입 조각 또는 코드 감싸기 조각으로 사용할 수 있습니다. 코드 줄(예: `return FALSE;`)을 선택하고 **코드 감싸기** > **if**를 선택하면 해당 줄 주위에서 조각이 확장됩니다.
 

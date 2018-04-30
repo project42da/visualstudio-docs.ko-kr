@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio에서 솔루션 및 프로젝트 만들기 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 솔루션 및 프로젝트 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/06/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.openprojectfromweb
 - vs.newproject
@@ -17,14 +14,14 @@ helpviewer_keywords:
 - projects [Visual Studio], creating
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 23e91f8c5908efb4eed942a9c2556de7778fda92
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 4bb984c1a6947438df663e228bb21bda4eea763c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="create-solutions-and-projects"></a>솔루션 및 프로젝트 만들기
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 03/08/2018
 
 ![솔루션/프로젝트 계층 구조](./media/vside-proj-soln.png)
 
-**솔루션 탐색기**라고 하는 도구 창에서 솔루션과 프로젝트를 볼 수 있습니다. 다음 스크린샷은 솔루션 탐색기에서 두 개의 프로젝트(BikeSharing.Clients.Core 및 BikeSharing.Clients.Windows)가 포함된 예제 솔루션을 보여줍니다. 각 프로젝트에는 여러 파일, 폴더 및 참조가 포함되어 있습니다. 굵게 표시된 프로젝트 이름은 *시작 프로젝트*, 즉 앱 실행 시 시작하는 프로젝트입니다. 어떤 프로젝트가 시작 프로젝트인지 지정할 수 있습니다.
+**솔루션 탐색기**라고 하는 도구 창에서 솔루션과 프로젝트를 볼 수 있습니다. 다음 스크린샷은 **솔루션 탐색기**에서 두 개의 프로젝트(**BikeSharing.Clients.Core** 및 **BikeSharing.Clients.Windows**)가 포함된 예제 솔루션(**BikeSharing.Xamarin-UWP**)을 보여줍니다. 각 프로젝트에는 여러 파일, 폴더 및 참조가 포함되어 있습니다. 굵게 표시된 프로젝트 이름은 *시작 프로젝트*, 즉 앱 실행 시 시작하는 프로젝트입니다. 어떤 프로젝트가 시작 프로젝트인지 지정할 수 있습니다.
 
 ![프로젝트와 솔루션 탐색기](./media/vside-solution-explorer-projects.png)
 
@@ -45,7 +42,7 @@ Visual Studio에서 앱을 개발하는 데 솔루션과 프로젝트는 필요�
 
 ## <a name="to-create-a-project-from-a-project-template"></a>프로젝트 템플릿에서 프로젝트를 만들려면
 
-1. Visual Studio에서 새 프로젝트를 만드는 여러 방법이 있습니다. 시작 페이지에서 **프로젝트 템플릿 검색** 상자에 프로젝트 템플릿의 이름을 입력하거나 **새 프로젝트 만들기** 링크를 선택하여 **새 프로젝트** 대화 상자를 엽니다. 또한 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 선택하거나 도구 모음에서 **새 프로젝트** 단추를 선택할 수도 있습니다.
+1. Visual Studio에서 새 프로젝트를 만드는 여러 방법이 있습니다. **시작 페이지**에서 **프로젝트 템플릿 검색** 상자에 프로젝트 템플릿의 이름을 입력하거나 **새 프로젝트 만들기** 링크를 선택하여 **새 프로젝트** 대화 상자를 엽니다. 또한 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택하거나 도구 모음에서 **새 프로젝트** 단추를 선택할 수도 있습니다.
 
   ![시작 페이지](./media/vside-newproject1.png)
 
@@ -68,7 +65,7 @@ Visual Studio에서 앱을 개발하는 데 솔루션과 프로젝트는 필요�
 
 1. **확인** 단추를 선택하여 솔루션 및 프로젝트를 만듭니다.
 
-1. 솔루션에 추가 프로젝트를 추가하려는 경우 솔루션 탐색기에서 솔루션 노드를 선택한 다음, 메뉴 모음에서 **프로젝트** > **새 항목 추가**를 선택합니다.
+1. 솔루션에 추가 프로젝트를 추가하려는 경우 **솔루션 탐색기**에서 솔루션 노드를 선택한 다음, 메뉴 모음에서 **프로젝트** > **새 항목 추가**를 선택합니다.
 
 ## <a name="create-a-project-from-existing-code-files"></a>기존 코드 파일에서 프로젝트 만들기
 
@@ -102,7 +99,7 @@ Visual Studio에서 앱을 개발하는 데 솔루션과 프로젝트는 필요�
 
 ### <a name="to-create-an-empty-solution"></a>빈 솔루션을 만들려면
 
-1. 메뉴에서 **파일** > **새로 만들기** > **프로젝트...**를 선택합니다.
+1. 메뉴에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
 
 1. 왼쪽(**템플릿**) 창의 확장된 목록에서 **기타 프로젝트 형식** > **Visual Studio 솔루션**을 선택합니다.
 
@@ -122,10 +119,10 @@ Visual Studio에서 앱을 개발하는 데 솔루션과 프로젝트는 필요�
 
 ## <a name="delete-a-solution-project-or-item"></a>솔루션, 프로젝트 또는 항목 삭제
 
-Visual Studio IDE를 사용하지 않고 솔루션 및 해당 콘텐츠를 영구적으로 삭제할 수 있습니다. Visual Studio 내에서 항목를 삭제하면 현재 솔루션 또는 프로젝트에서만 제거됩니다. 시스템에서 솔루션 또는 기타 구성 요소를 영구적으로 삭제하려면 파일 탐색기를 사용하여 .sln 및 .suo 솔루션 파일을 포함한 폴더를 삭제합니다. 그러나 솔루션을 영구적으로 삭제하기 전에 다시 필요한 경우에 대비하여 프로젝트 또는 파일을 백업하는 것이 좋습니다.
+Visual Studio IDE를 사용하지 않고 솔루션 및 해당 콘텐츠를 영구적으로 삭제할 수 있습니다. Visual Studio 내에서 항목를 삭제하면 현재 솔루션 또는 프로젝트에서만 제거됩니다. 시스템에서 솔루션 또는 기타 구성 요소를 영구적으로 삭제하려면 파일 탐색기를 사용하여 *.sln* 및 *.suo* 솔루션 파일을 포함한 폴더를 삭제합니다. 그러나 솔루션을 영구적으로 삭제하기 전에 다시 필요한 경우에 대비하여 프로젝트 또는 파일을 백업하는 것이 좋습니다.
 
 > [!NOTE]
-> .suo 파일은 파일 탐색기의 기본 설정으로는 표시되지 않는 숨김 파일입니다. 숨겨진 파일을 표시하려면 파일 탐색기의 **보기** 메뉴에서는 **숨겨진 항목** 확인란을 선택합니다.
+> *.suo* 파일은 파일 탐색기의 기본 설정으로는 표시되지 않는 숨김 파일입니다. 숨겨진 파일을 표시하려면 파일 탐색기의 **보기** 메뉴에서는 **숨겨진 항목** 확인란을 선택합니다.
 
 ### <a name="to-permanently-delete-a-solution"></a>솔루션을 영구적으로 삭제하려면
 

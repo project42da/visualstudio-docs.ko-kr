@@ -1,23 +1,22 @@
 ---
-title: Visual Studio 2017 빌드 번호 및 릴리스 날짜 | Microsoft Docs
+title: Visual Studio 2017 빌드 번호 및 릴리스 날짜
 description: 날짜별로 정렬된 Visual Studio 2017의 릴리스 버전 및 빌드 번호 목록입니다.
 keywords: ''
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.date: 04/04/2018
+ms.date: 04/18/2018
 ms.topic: reference
 helpviewer_keywords: ''
-ms.technology:
-- vs-acquisition
-ms.service: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: 7f941891c858d36d4cbe1de706d100c0b27d9c85
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: f24a293e3efe40f2003bf0ba993f7896d2d93c52
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="visual-studio-2017-build-numbers-and-release-dates"></a>Visual Studio 2017 빌드 번호 및 릴리스 날짜
 
@@ -25,6 +24,10 @@ ms.lasthandoff: 04/06/2018
 
 | **Version**| **채널** | **릴리스 날짜** | **빌드 버전** |
 | ---------------------- | ----------- | ---------------- | ----------------- |
+| 15.7.0 미리 보기 4.0 | 미리 보기 | 2018년 4월 18일 | 15.7.27617.1 |
+| 15.6.6 | 릴리스 | 2018년 4월 10일 | 15.6.27428.2037 |
+| 15.0.12 | 릴리스 | 2018년 4월 10일 | 15.0.26228.30 |
+| 15.7.0 미리 보기 3.0 | 미리 보기 | 2018년 4월 9일 | 15.7.27604.0 |
 | 15.6.5 | 릴리스 | 2018년 4월 4일 | 15.6.27428.2027 |
 | 15.6.4 | 릴리스 | 2018년 3월 22일 | 15.6.27428.2015 |
 | 15.7.0 미리 보기 2.0 | 미리 보기 | 2018년 3월 21일 | 15.7.27520.0 |
@@ -124,7 +127,7 @@ ms.lasthandoff: 04/06/2018
 
 * Visual Studio 설치 관리자와 Visual Studio IDE에 모두 표시되는 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 Microsoft에 제품 문제를 보고할 수 있습니다.
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 Microsoft와 제품 제안을 공유할 수 있습니다.
-* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다.
+* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고, 답변을 찾을 수 있습니다.
 * [Gitter 커뮤니티의 Visual Studio 관련 대화](https://gitter.im/Microsoft/VisualStudio)를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다. (이 옵션을 사용하려면 [GitHub](https://github.com/) 계정이 필요합니다.)
 
 ## <a name="see-also"></a>참고 항목

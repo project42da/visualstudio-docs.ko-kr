@@ -1,23 +1,21 @@
 ---
-title: "방법: 빌드에서 프로젝트 제외 | Microsoft Docs"
-ms.custom: 
+title: '방법: 빌드에서 프로젝트 제외 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 17a837ca-5db9-46cd-b5a7-b14ad1d2c47d
-caps.latest.revision: "6"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8392a17a1d1f0648176c6b68463102e31c61cf20
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 3a09f18ccb491474c5db20724ccea501fc94c14a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-exclude-projects-from-a-build"></a>방법: 빌드에서 프로젝트 제외
 포함된 일부 프로젝트를 빌드하지 않고도 솔루션을 빌드할 수 있습니다. 예를 들어, 빌드를 중단하는 프로젝트를 제외할 수 있습니다. 그런 다음 문제를 조사하고 해결한 후 프로젝트를 빌드할 수 있습니다.  
@@ -26,13 +24,13 @@ ms.lasthandoff: 12/22/2017
   
 -   활성 솔루션 구성에서 일시적으로 제거  
   
--   해당 프로젝트를 포함하지 않는 솔루션 구성 만들기.  
+-   해당 프로젝트를 포함하지 않는 솔루션 구성 만들기  
   
  자세한 내용은 [빌드 구성 이해](../ide/understanding-build-configurations.md)를 참조하세요.  
   
 ### <a name="to-temporarily-remove-a-project-from-the-active-solution-configuration"></a>활성 솔루션 구성에서 프로젝트를 일시적으로 제거하려면  
   
-1.  메뉴 모음에서 **빌드**, **구성 관리자**를 선택합니다.  
+1.  메뉴 모음에서 **빌드** > **구성 관리자**를 선택합니다.  
   
 2.  **프로젝트 컨텍스트** 테이블에서 빌드에서 제외할 프로젝트를 찾습니다.  
   
@@ -42,9 +40,9 @@ ms.lasthandoff: 12/22/2017
   
 ### <a name="to-create-a-solution-configuration-that-excludes-a-project"></a>프로젝트가 제외된 솔루션 구성을 만들려면  
   
-1.  메뉴 모음에서 **빌드**, **구성 관리자**를 선택합니다.  
+1.  메뉴 모음에서 **빌드** > **구성 관리자**를 선택합니다.  
   
-2.  **활성 솔루션 구성** 목록에서 **\<새로 만들기>**를 선택합니다.  
+2.  **활성 솔루션 구성** 목록에서 **\<새로 만들기>** 를 선택합니다.  
   
 3.  **이름** 상자에 솔루션 구성의 이름을 입력합니다.  
   
@@ -54,7 +52,7 @@ ms.lasthandoff: 12/22/2017
   
 6.  **표준** 도구 모음에서 새 솔루션 구성이 **솔루션 구성** 상자의 활성 구성인지 확인합니다.  
   
-7.  메뉴 모음에서 **빌드**, **솔루션 다시 빌드**를 선택합니다.  
+7.  메뉴 모음에서 **빌드** > **솔루션 다시 빌드**를 선택합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [빌드 구성 이해](../ide/understanding-build-configurations.md)   

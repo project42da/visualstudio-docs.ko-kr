@@ -1,15 +1,9 @@
 ---
-title: 빠른 시작 - 템플릿을 사용하여 Python 프로젝트 만들기 | Microsoft Docs
+title: 빠른 시작 - 템플릿을 사용하여 Python 프로젝트 만들기
 description: 이 빠른 시작에서 기본 Flask 앱의 기본 제공 템플릿을 사용하여 Python용 Visual Studio 프로젝트를 만듭니다.
-ms.custom: mvc
 ms.date: 03/22/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -17,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2d4d81676d9f63751455f4f51ae5993c46dd0f04
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: 39e4b718ab7563e086f6ca2e85c31bd53b3c371c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>빠른 시작: Visual Studio의 템플릿에서 Python 프로젝트 만들기
 
@@ -29,7 +23,7 @@ ms.lasthandoff: 03/30/2018
 
 1. Visual Studio 2017을 시작합니다.
 
-1. 상단 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...**를 선택한 다음, **새 프로젝트** 대화 상자에서 "비어 있는 Flask"를 검색하고, 중간 목록에서 "비어 있는 Flask 웹 프로젝트" 템플릿을 선택하고, 프로젝트에 이름을 지정하고, **확인**을 선택합니다.
+1. 상단 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택한 다음, **새 프로젝트** 대화 상자에서 "비어 있는 Flask"를 검색하고, 중간 목록에서 "비어 있는 Flask 웹 프로젝트" 템플릿을 선택하고, 프로젝트에 이름을 지정하고, **확인**을 선택합니다.
 
     ![비어 있는 Flask 웹 프로젝트 템플릿을 사용하여 새 프로젝트 만들기](media/quickstart-python-06-blank-flask-template.png)
 

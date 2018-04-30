@@ -1,13 +1,8 @@
 ---
-title: 프로젝트의 참조 관리 | Microsoft 문서
-ms.custom: ''
-ms.date: 10/26/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-ide-general
-ms.tgt_pltfrm: ''
-ms.topic: article
+title: 프로젝트의 참조 관리
+ms.date: 04/11/2018
+ms.technology: vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.ProjectPropertiesReferencePaths
 - cs.ProjectPropertiesReferencePaths
@@ -24,24 +19,24 @@ helpviewer_keywords:
 - objects [Visual Studio], referencing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ede31cadef7048b2f75ca652efea9b01716351e
-ms.sourcegitcommit: e01ccb5ca4504a327d54f33589911f5d8be9c35c
+ms.openlocfilehash: ef62d3ab0436ff8b20766f2ffe88506d73c8f03b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/15/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="managing-references-in-a-project"></a>프로젝트의 참조 관리
+# <a name="manage-references-in-a-project"></a>프로젝트에서 참조 관리
 
 외부 구성 요소 또는 연결된 서비스에 대해 코드를 작성하기 전에 프로젝트에 이에 대한 참조가 포함되어 있어야 합니다. 참조는 기본적으로 Visual Studio에서 구성 요소 또는 서비스를 찾기 위해 필요로 하는 정보를 포함하는 프로젝트 파일의 항목입니다.
 
-참조를 추가하려면 솔루션 탐색기에서 참조 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 자세한 내용은 [방법: 참조 관리자를 사용하여 참조 추가 또는 제거](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)를 참조하세요.
+참조를 추가하려면 **솔루션 탐색기**에서 **참조** 또는 **종속성** 노드를 마우스 오른쪽 단추로 클릭하고 **참조 추가**를 선택합니다. 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **추가** > **참조**를 선택합니다. 자세한 내용은 [방법: 참조 추가 또는 제거](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)를 참조하세요.
 
-![Visual C&#43;&#43;에서 참조 추가](../ide/media/vs2015_cpp_add_reference.png "vs2015_cpp_add_reference")
+![Visual C&#43;&#43;에서 참조 추가](../ide/media/vs2015_cpp_add_reference.png)
 
-다음 형식의 구성 요소 및 서비스에 대한 참조를 만들 수 있습니다.
+다음 형식의 구성 요소 및 서비스에 대한 참조를 추가할 수 있습니다.
 
 - .NET Framework 클래스 라이브러리 또는 어셈블리
 
@@ -81,11 +76,11 @@ Windows 8.1 프로젝트의 대상을 Windows 10으로 다시 지정하도록 �
 
 1. Visual Studio를 다시 시작하고 앱을 엽니다.
 
-1. 오류가 발생한 프로젝트에서 **참조** 노드를 마우스 오른쪽 단추로 클릭한 다음 **참조 추가**를 선택합니다.
+1. 오류가 발생한 프로젝트에서 **참조** 또는 **종속성** 노드를 마우스 오른쪽 단추로 클릭한 다음, **참조 추가**를 선택합니다.
 
 1. **Windows** 탭과 **확장** 하위 탭을 차례로 클릭한 다음 이전 확장 SDK에 대한 확인란의 선택을 취소하고 새 확장 SDK에 대한 확인란을 선택합니다. **확인**을 클릭합니다.
 
-## <a name="adding-a-reference-at-design-time"></a>디자인 타임에 참조 추가
+## <a name="add-a-reference-at-design-time"></a>디자인 타임에 참조 추가
 
 프로젝트에서 어셈블리에 대한 참조를 만들면 Visual Studio가 다음 위치에서 어셈블리를 검색합니다.
 
@@ -94,7 +89,9 @@ Windows 8.1 프로젝트의 대상을 Windows 10으로 다시 지정하도록 �
 - 같은 솔루션에 있는 다른 프로젝트 디렉터리. 이러한 어셈블리는 **프로젝트** 탭에서 찾을 수 있습니다.
 
 > [!NOTE]
-> 모든 프로젝트에는 mscorlib에 대한 암시적 참조가 포함되어 있습니다. Visual Basic 프로젝트에는 `Microsoft.VisualBasic`에 대한 암시적 참조가 포함되어 있습니다. `System.Core`가 참조 목록에서 제거되더라도 모든 프로젝트에 `System.Core`에 대한 암시적 참조가 포함됩니다.
+> - 모든 프로젝트에는 mscorlib에 대한 암시적 참조가 포함되어 있습니다.
+> - `System.Core`가 참조 목록에서 제거되더라도 모든 프로젝트에 `System.Core`에 대한 암시적 참조가 포함됩니다.
+> - Visual Basic 프로젝트에는 `Microsoft.VisualBasic`에 대한 암시적 참조가 포함되어 있습니다.
 
 ## <a name="references-to-shared-components-at-run-time"></a>런타임의 공유 구성 요소에 대한 참조
 
@@ -104,9 +101,9 @@ GAC에 등록되어 있는 사용자 지정 구성 요소에 대한 참조가 �
 
 어셈블리 또는 구성 요소를 전역 어셈블리 캐시 내에 있거나 프레임워크 구성 요소인 경우 기본적으로 <xref:Microsoft.VisualStudio.VCProjectEngine.VCProjectReference.CopyLocal%2A> 속성은 **False** 입니다. 그렇지 않으면 이 속성의 값은 **True**로 설정됩니다. 프로젝트 간 참조는 항상 **True**로 설정됩니다.
 
-## <a name="referencing-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>다른 버전의 .NET Framework를 대상으로 하는 프로젝트 또는 어셈블리 참조
+## <a name="reference-a-project-or-assembly-that-targets-a-different-version-of-the-net-framework"></a>다른 버전의 .NET Framework를 대상으로 하는 프로젝트 또는 어셈블리 참조
 
-다른 .NET Framework 버전을 대상으로 하는 프로젝트나 어셈블리를 참조하는 응용 프로그램을 만들 수 있습니다. 예를 들어 [!INCLUDE[net_client_v40_long](../deployment/includes/net_client_v40_long_md.md)]을 대상으로 하고, [!INCLUDE[dnprdnext](../ide/includes/dnprdnext_md.md)]을 대상으로 하는 어셈블리를 참조하는 응용 프로그램을 만들 수 있습니다. 이전 버전의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)]를 대상으로 하는 프로젝트를 만드는 경우 해당 프로젝트에서 새 버전을 대상으로 하는 프로젝트나 어셈블리에 대한 참조를 설정할 수 없습니다.
+다른 .NET Framework 버전을 대상으로 하는 프로젝트나 어셈블리를 참조하는 응용 프로그램을 만들 수 있습니다. 예를 들어 .NET Framework 4.5를 대상으로 하는 어셈블리를 참조하고 .NET Framework 4.6을 대상으로 하는 응용 프로그램을 만들 수 있습니다. 이전 버전의 .NET Framework를 대상으로 하는 프로젝트를 만드는 경우 해당 프로젝트에서 새 버전을 대상으로 하는 프로젝트나 어셈블리에 대한 참조를 설정할 수 없습니다.
 
 자세한 내용은 [멀티 타기팅 개요](../ide/visual-studio-multi-targeting-overview.md)를 참조하세요.
 
@@ -125,5 +122,5 @@ GAC에 등록되어 있는 사용자 지정 구성 요소에 대한 참조가 �
 
 ## <a name="see-also"></a>참고 항목
 
-[끊어진 참조 문제 해결](../ide/troubleshooting-broken-references.md)
-[방법: 참조 관리자를 사용하여 참조 추가 또는 제거](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)
+- [끊어진 참조 문제 해결](../ide/troubleshooting-broken-references.md)
+- [방법: 참조 추가 또는 제거](../ide/how-to-add-or-remove-references-by-using-the-reference-manager.md)

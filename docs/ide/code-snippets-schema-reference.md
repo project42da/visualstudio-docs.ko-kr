@@ -1,48 +1,29 @@
 ---
-title: "코드 조각 스키마 참조 | Microsoft Docs"
-ms.custom: 
+title: 코드 조각 스키마 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - schema reference [Visual Studio]
 - snippets [Visual Studio], schema reference
 - code snippets [Visual Studio], schema reference
 - IntelliSense Code Snippets, XML Schema
 ms.assetid: 58a60621-725f-4763-93b7-62ea5424ef88
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c267b110b67a69b526bb7efc985bb22bb954b3a1
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 91002c27f37918b0db4b4ca4fb2dd5ab5211efe7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="code-snippets-schema-reference"></a>코드 조각 스키마 참조
 IntelliSense 코드 조각은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 응용 프로그램에 삽입되도록 미리 작성된 코드 부분입니다. 코드 조각을 제공함으로써 반복 코드를 입력하거나 샘플 검색에 드는 시간을 줄여 생산성을 높일 수 있습니다. IntelliSense 코드 조각 XML 스키마를 사용하여 사용자 지정 코드 조각을 만들어 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에 이미 포함되어 있는 코드 조각에 추가할 수 있습니다.  
-  
-## <a name="intellisense-code-snippets-schema-elements"></a>IntelliSense 코드 조각 스키마 요소  
-  
-||||  
-|-|-|-|  
-|[Assembly 요소](../ide/code-snippets-schema-reference.md#assembly)|[HelpUrl 요소](../ide/code-snippets-schema-reference.md#helpurl)|[References 요소](../ide/code-snippets-schema-reference.md#references)|  
-|[Author 요소](../ide/code-snippets-schema-reference.md#author)|[ID 요소](../ide/code-snippets-schema-reference.md#id)|[Shortcut 요소](../ide/code-snippets-schema-reference.md#shortcut)|  
-|[Code 요소](../ide/code-snippets-schema-reference.md#code)|[Import 요소](../ide/code-snippets-schema-reference.md#import)|[Snippet 요소](../ide/code-snippets-schema-reference.md#snippet)|  
-|[CodeSnippet 요소](../ide/code-snippets-schema-reference.md#codesnippet)|[Imports 요소](../ide/code-snippets-schema-reference.md#imports)|[SnippetType 요소](../ide/code-snippets-schema-reference.md#snippettype)|  
-|[CodeSnippets 요소](../ide/code-snippets-schema-reference.md#codesnippets)|[Keyword 요소](../ide/code-snippets-schema-reference.md#keyword)|[SnippetTypes 요소](../ide/code-snippets-schema-reference.md#snippettypes)|  
-|[Declarations 요소](../ide/code-snippets-schema-reference.md#declarations)|[Keywords 요소](../ide/code-snippets-schema-reference.md#keywords)|[Title 요소](../ide/code-snippets-schema-reference.md#title)|  
-|[Default 요소](../ide/code-snippets-schema-reference.md#default)|[Literal 요소](../ide/code-snippets-schema-reference.md#literal)|[ToolTip 요소](../ide/code-snippets-schema-reference.md#tooltip)|  
-|[Description 요소](../ide/code-snippets-schema-reference.md#description)|[Namespace 요소](../ide/code-snippets-schema-reference.md#namespace)|[Type 요소](../ide/code-snippets-schema-reference.md#type)|  
-|[Function 요소](../ide/code-snippets-schema-reference.md#function)|[Object 요소](../ide/code-snippets-schema-reference.md#object)|[Url 요소](../ide/code-snippets-schema-reference.md#url)|  
-|[Header 요소](../ide/code-snippets-schema-reference.md#header)|[Reference 요소](../ide/code-snippets-schema-reference.md#reference)||  
   
 ##  <a name="assembly"></a> Assembly 요소  
  코드 조각이 참조하는 어셈블리의 이름을 지정합니다.
@@ -176,7 +157,7 @@ $selected$ is a great color. I love $selected$.
 |[CodeSnippets 요소](../ide/code-snippets-schema-reference.md#codesnippets)|코드 조각 XML 스키마의 루트 요소입니다.|  
   
 ##  <a name="codesnippets"></a> CodeSnippets 요소  
- [CodeSnippet 요소](../ide/code-snippets-schema-reference.md#codesnippet)를 그룹화합니다. `CodeSnippets` 요소는 코드 조각 XML 스키마의 루트 요소입니다.  
+ [CodeSnippet](../ide/code-snippets-schema-reference.md#codesnippet) 요소를 그룹화합니다. `CodeSnippets` 요소는 코드 조각 XML 스키마의 루트 요소입니다.  
   
 ```xml  
 <CodeSnippets>  
@@ -305,7 +286,7 @@ $selected$ is a great color. I love $selected$.
  텍스트 값은 선택적입니다. 이 텍스트는 코드 조각에 대한 추가 정보를 얻기 위해 방문할 URL을 지정합니다.  
   
 ##  <a name="id"></a> ID 요소  
- `Literal` 또는 `Object` 요소에 대한 고유 식별자를 지정합니다. 같은 코드 조각에서 두 개의 리터럴 또는 개체는 해당 `ID` 요소에 같은 텍스트 값을 가질 수 없습니다. 리터럴과 개체는 end 값을 가진 `ID` 요소를 포함할 수 없습니다. `$end$` 값은 예약되어 있으며, 코드 조각을 삽입하고 나서 커서를 놓을 위치를 표시하는 데 사용됩니다.  
+ `Literal` 또는 `Object` 요소에 대한 고유 식별자를 지정합니다. 동일한 코드 조각에서 두 개의 리터럴 또는 개체는 해당 `ID` 요소에 같은 텍스트 값을 가질 수 없습니다. 리터럴 및 개체는 end 값인 `ID` 요소를 포함할 수 없습니다. `$end$` 값은 예약되어 있으며, 코드 조각을 삽입하고 나서 커서를 놓을 위치를 표시하는 데 사용됩니다.  
   
 ```xml  
 <ID>  

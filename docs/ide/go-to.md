@@ -1,12 +1,10 @@
 ---
-title: "이동 명령을 사용하여 코드 찾기 | Microsoft Docs"
-ms.custom: 
+title: 이동 명령을 사용하여 코드 찾기 | Microsoft Docs
+ms.custom: ''
 ms.date: 09/26/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 ms.assetid: 509b2107-23d1-4fb3-987f-ab99ef45b72e
 helpviewer_keywords:
 - code editor, go to
@@ -15,23 +13,24 @@ helpviewer_keywords:
 - go to
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 9309a143760aab5b59355b4cea6cd214aaa49812
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 90d54e509b0f5cadb4fc1eeff2c2b667916c0220
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-code-using-go-to-commands"></a>이동 명령을 사용하여 코드 찾기  
 Visual Studio의 **이동** 명령은 지정한 항목을 찾기 쉽도록 포커스가 있는 코드 검색을 수행합니다. 간단한 통합 인터페이스에서 특정 줄, 형식, 기호, 파일 및 멤버로 이동할 수 있습니다. 이 기능은 Visual Studio 2017 이상에 있습니다.  
 
-### <a name="how-to-use-it"></a>사용 방법  
+## <a name="how-to-use-it"></a>사용 방법  
 
 입력        | 함수 
 ------------ | ---
-**키보드** | **Ctrl + t** 또는 **Ctrl +,** 키를 누릅니다.     
-**마우스**    | **편집**, **이동**, **전체로 이동**을 선택합니다.  
+**키보드** | **Ctrl + t** 또는 **Ctrl +,** 키를 누름     
+**마우스**    | **편집** > **이동** > **전체로 이동**을 선택  
 
 이렇게 하면 기본적으로 코드 편집기의 오른쪽 위에 작은 창이 표시됩니다.  
 
@@ -41,27 +40,27 @@ Visual Studio의 **이동** 명령은 지정한 항목을 찾기 쉽도록 포�
 
 ![탐색 창](../ide/media/vside_navigatetowindow.png "탐색 창")  
 
-물음표(?)를 입력하여 추가 도움말을 확인할 수도 있습니다.  
+물음표(**?**)를 입력하여 추가 도움말을 확인할 수도 있습니다.  
 
   ![전체로 이동 도움말](media/gotoall_help.png)
 
-### <a name="filtered-searches"></a>필터링된 검색  
-기본적으로 모든 솔루션 항목에서 지정된 항목만 검색됩니다. 그러나 검색 용어 앞에 특정한 문자를 넣어 코드 검색을 구체적인 요소 유형으로 제한할 수 있습니다. [이동] 대화 상자 도구 모음에서 단추를 선택하여 검색 필터를 빠르게 변경할 수도 있습니다. 형식 필터를 변경하는 단추는 왼쪽에 있고 검색 범위를 변경하는 단추는 오른쪽에 있습니다.  
+## <a name="filtered-searches"></a>필터링된 검색  
+기본적으로 모든 솔루션 항목에서 지정된 항목만 검색됩니다. 그러나 검색 용어 앞에 특정한 문자를 넣어 코드 검색을 구체적인 요소 유형으로 제한할 수 있습니다. **이동** 대화 상자 도구 모음에서 단추를 선택하여 검색 필터를 빠르게 변경할 수도 있습니다. 형식 필터를 변경하는 단추는 왼쪽에 있고 검색 범위를 변경하는 단추는 오른쪽에 있습니다.  
 
 ![멤버 이동](../ide/media/vside_navigation_toolbar.png)
 
-#### <a name="filter-to-a-specific-type-of-code-element"></a>특정 형식의 코드 요소를 필터링합니다.  
+### <a name="filter-to-a-specific-type-of-code-element"></a>특정 형식의 코드 요소를 필터링합니다.  
 특정 형식의 코드 요소로 검색을 제한하려면 검색 상자에서 접두사를 지정하거나 다섯 개의 필터 아이콘 중 하나를 선택합니다.  
 
 접두사 | 아이콘 | 바로 가기 | 설명
 :----: | ---- | -------- | ---
-\#      | ![기호 아이콘](media/gotoall_symbolicon.png) | Ctrl+1, Ctrl+S | 지정된 기호로 이동합니다.
-f      | ![파일 아이콘](media/gotoall_fileicon.png)     | Ctrl+1, Ctrl+F | 지정된 파일로 이동합니다.
-분      | ![멤버 아이콘](media/gotoall_membericon.png) | Ctrl+1, Ctrl+M | 지정된 멤버로 이동합니다.
-t      | ![형식 아이콘](media/gotoall_typeicon.png)     | Ctrl+1, Ctrl+T | 지정된 형식으로 이동합니다.
-:      | ![줄 아이콘](media/gotoall_lineicon.png)     | Ctrl+G         | 지정된 줄 번호로 이동합니다.
+\#      | ![기호 아이콘](media/gotoall_symbolicon.png) | **Ctrl+1, Ctrl+S** | 지정된 기호로 이동합니다.
+f      | ![파일 아이콘](media/gotoall_fileicon.png)     | **Ctrl+1, Ctrl+F** | 지정된 파일로 이동합니다.
+분      | ![멤버 아이콘](media/gotoall_membericon.png) | **Ctrl+1, Ctrl+M** | 지정된 멤버로 이동합니다.
+t      | ![형식 아이콘](media/gotoall_typeicon.png)     | **Ctrl+1, Ctrl+T** | 지정된 형식으로 이동합니다.
+:      | ![줄 아이콘](media/gotoall_lineicon.png)     | **Ctrl+G**         | 지정된 줄 번호로 이동합니다.
 
-#### <a name="filter-to-a-specific-location"></a>특정 위치로 필터링합니다.    
+### <a name="filter-to-a-specific-location"></a>특정 위치로 필터링합니다.    
 특정 위치로 검색을 제한하려면 두 개의 문서 아이콘 중 하나를 선택합니다.  
 
 아이콘 | 설명
@@ -69,12 +68,12 @@ t      | ![형식 아이콘](media/gotoall_typeicon.png)     | Ctrl+1, Ctrl+T | 
 ![현재 문서](media/gotoall_currentdocument.png) | 현재 문서에서만 검색합니다.
 ![외부 문서](media/gotoall_external.png) | 프로젝트/솔루션에 있는 문서와 외부 문서를 검색합니다.  
 
-### <a name="camel-casing"></a>카멜식 대/소문자  
-코드에서 [카멜식 대/소문자](https://en.wikipedia.org/wiki/Camel_case)를 사용하는 경우 코드 요소 이름의 대문자만 입력하여 코드 요소를 더 빠르게 찾을 수 있습니다. 예를 들어 코드에 `CredentialViewModel`이라는 형식이 있는 경우에는 형식 필터(“t”)를 선택한 다음 [이동] 대화 상자에서 이름을 대문자로만 입력하여(`CVM`) 검색 범위를 좁힐 수 있습니다. 이 기능은 코드 이름이 긴 경우에 유용합니다.  
+## <a name="camel-casing"></a>카멜식 대/소문자  
+코드에서 [카멜식 대/소문자](https://en.wikipedia.org/wiki/Camel_case)를 사용하는 경우 코드 요소 이름의 대문자만 입력하여 코드 요소를 더 빠르게 찾을 수 있습니다. 예를 들어 코드에 `CredentialViewModel`이라는 형식이 있는 경우에는 **형식** 필터(**t**)를 선택한 다음, 이동 대화 상자에서 이름을 대문자로만 입력하여(`CVM`) 검색 범위를 좁힐 수 있습니다. 이 기능은 코드 이름이 긴 경우에 유용합니다.  
 
 ![창 탐색 - 대문자를 사용한 검색](../ide/media/vside_capitalsearch.png)
 
-### <a name="settings"></a>설정  
+## <a name="settings"></a>설정  
 기어 아이콘 선택 ![기어 아이콘](media/gotoall_gear.png) 을 클릭하면 이 기능의 작동 방식을 변경할 수 있습니다.  
 
 설정 | 설명

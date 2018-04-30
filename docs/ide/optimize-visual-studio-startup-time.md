@@ -1,10 +1,7 @@
 ---
-title: "Visual Studio 성능 최적화 | Microsoft Docs"
+title: Visual Studio 시작 시간 향상 | Microsoft 문서
 ms.date: 11/15/2017
-ms.reviewer: 
-ms.suite: 
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - startup time [Visual Studio]
 - optimizing performance [Visual Studio]
@@ -12,19 +9,19 @@ helpviewer_keywords:
 ms.assetid: d1508121-8499-4084-8eb5-fa89fa7b17d3
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 f1_keywords:
 - vs.performancecenter
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: 403bbfff74cfe969a26e12aeb1f4b54ef0473195
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: ab8098e52f0045c913495dce81d5005772eac836
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="optimize-visual-studio-performance"></a>Visual Studio 성능 최적화
+# <a name="optimize-visual-studio-startup-time"></a>Visual Studio 시작 시간 최적화
 
 Visual Studio는 최대한 신속하고 효율적으로 시작되도록 설계되었습니다. 그러나 특정 Visual Studio 확장명 및 도구 창이 로드 될 때 시작 시간에 부정적 영향을 미칠 수 있습니다. **Visual Studio 성능 관리** 대화 상자에서 느린 확장 및 도구 창이라는 동작을 제어할 수 있습니다. 성능 향상에 대한 더 일반적인 팁은 [Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)을 참조하세요.
 
@@ -32,17 +29,17 @@ Visual Studio는 최대한 신속하고 효율적으로 시작되도록 설계�
 
 시작 시간이 확장되지 않도록 방지하려면 Visual Studio 2017에서는 _요청 시_ 접근 방식을 사용하여 확장을 로드합니다. 이 동작은 Visual Studio가 시작된 후 즉시 확장이 열리지 않고 필요에 따라 열리도록 합니다. 또한 이전 Visual Studio 세션에서 열려 있는 도구 창으로 인해 시작 시간이 느려질 수 있으므로 Visual Studio는 시작 시간에 영향을 주지 않도록 보다 지능적인 방식으로 도구 창을 엽니다.
 
-Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를 초래하는 확장이나 도구 창을 알려주는 팝업 메시지가 나타납니다. 이 메시지는 **Visual Studio 성능 관리** 대화 상자에 대한 링크를 제공합니다. 메뉴 모음에서 **도움말**, **Visual Studio 성능 관리**를 선택하여 이 대화 상자에 액세스할 수도 있습니다.
+Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를 초래하는 확장이나 도구 창을 알려주는 팝업 메시지가 나타납니다. 이 메시지는 **Visual Studio 성능 관리** 대화 상자에 대한 링크를 제공합니다. 메뉴 모음에서 **도움말** > **Visual Studio 성능 관리**를 선택하여 이 대화 상자에 액세스할 수도 있습니다.
 
 ![Visual Studio 성능 관리에 ‘... 확장으로 인해 Visual Studio가 느려집니다’라는 팝업이 나타납니다.](../ide/media/vside_perfdialog_popup.png)
 
 이 대화 상자에는 시작 성능에 영향을 미치는 확장 및 도구 창이 나열됩니다. 확장 및 도구 창 설정을 변경하여 시작 성능을 향상할 수 있습니다.
 
-## <a name="to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a>시작, 솔루션 로드 및 성능 입력을 개선하기 위해 확장 설정을 변경하려면
+## <a name="a-nameextensions-to-change-extension-settings-to-improve-startup-solution-load-and-typing-performance"></a><a name="extensions" />시작, 솔루션 로드 및 성능 입력을 개선하기 위해 확장 설정을 변경하려면
 
-1. 메뉴 모음에서 **도움말**, **Visual Studio 성능 관리**를 차례로 선택하여 **Visual Studio 성능 관리** 대화 상자를 엽니다.
+1. 메뉴 모음에서 **도움말** > **Visual Studio 성능 관리**를 차례로 선택하여 **Visual Studio 성능 관리** 대화 상자를 엽니다.
 
-    확장으로 인해 Visual Studio 시작, 솔루션 로딩 또는 입력 속도가 느려지는 경우 **확장**, **시작**(또는 **솔루션 로드** 또는 **입력**) 아래에서 **Visual Studio 성능 관리** 대화 상자에 해당 확장이 나타납니다.
+    확장으로 인해 Visual Studio 시작, 솔루션 로딩 또는 입력 속도가 느려지는 경우 **확장** > **시작**(또는 **솔루션 로드** 또는 **입력**) 아래에서 **Visual Studio 성능 관리** 대화 상자에 해당 확장이 표시됩니다.
 
     ![Visual Studio 성능 관리 - 확장 보기](../ide/media/vside_perfdialog_extensions.png)
 
@@ -50,11 +47,11 @@ Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를
 
 확장 관리자 또는 Visual Studio 성능 관리 대화 상자를 통해 이후 세션에 확장을 언제든 다시 사용할 수 있습니다.
 
-## <a name="to-change-tool-window-settings-to-improve-startup-time"></a>시작 시간을 개선하도록 도구 창 설정을 변경하려면
+## <a name="a-nametool-windows-to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />시작 시간을 개선하도록 도구 창 설정을 변경하려면
 
-1. 메뉴 모음에서 **도움말**, **Visual Studio 성능 관리**를 차례로 선택하여 **Visual Studio 성능 관리** 대화 상자를 엽니다.
+1. 메뉴 모음에서 **도움말** > **Visual Studio 성능 관리**를 차례로 선택하여 **Visual Studio 성능 관리** 대화 상자를 엽니다.
 
-    도구 창에서 Visual Studio 시작 속도가 느려지면 도구 창이 **도구 창**, **시작** 아래의 **Visual Studio 성능 관리** 대화 상자에 나타납니다.
+    도구 창에서 Visual Studio 시작 속도가 느려지면 도구 창이 **도구 창** > **시작** 아래의 **Visual Studio 성능 관리** 대화 상자에 나타납니다.
 
 2. 동작을 변경하려는 도구 창을 선택합니다.
 
@@ -73,4 +70,6 @@ Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를
 
 ## <a name="see-also"></a>참고 항목
 
+- [Visual Studio 성능 최적화](../ide/optimize-visual-studio-performance.md)
 - [Visual Studio 성능 팁과 요령](../ide/visual-studio-performance-tips-and-tricks.md)
+- [Visual Studio 블로그 - Visual Studio 2017 버전 15.6으로 더 빠르게 솔루션 로드](https://blogs.msdn.microsoft.com/visualstudio/2018/04/04/load-solutions-faster-with-visual-studio-2017-version-15-6/)

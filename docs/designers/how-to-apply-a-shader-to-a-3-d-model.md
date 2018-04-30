@@ -1,50 +1,43 @@
 ---
-title: "방법: 3D 모델에 셰이더 적용 | Microsoft 문서"
-ms.custom: 
+title: '방법: 3D 모델에 셰이더 적용'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: a3877bd6-abd8-4a9d-842c-6848b6c2f335
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 852baa1c8a2b627e5426411d8c156ab28d5c6614
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 2c01b8921d851a5410923b84959f12131349535d
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="how-to-apply-a-shader-to-a-3-d-model"></a>방법: 3차원 모델에 셰이더 적용
-이 문서에서는 모델 편집기를 사용하여 DGSL(Directed Graph Shader Language) 셰이더를 3D 모델에 적용하는 방법을 보여 줍니다.  
-  
- 이 문서는 다음 활동을 보여 줍니다.  
-  
--   3D 모델에 셰이더 적용  
-  
-## <a name="applying-a-shader-to-a-3-d-model"></a>3D 모델에 셰이더 적용  
- 3D 모델에 셰이더 효과를 적용하여 흥미로운 모양을 제공할 수 있습니다.  
-  
- 시작하기 전에 **속성** 창이 표시되는지 확인하세요.  
-  
-#### <a name="to-apply-a-shader-to-a-3-d-model"></a>3D 모델에 셰이더를 적용하려면  
-  
-1.  하나 이상의 모델이 포함된 3D 장면으로 시작합니다. 적합한 3D 장면이 없으면 [방법: 기본 3D 모델 만들기](../designers/how-to-create-a-basic-3-d-model.md)에 설명된 대로 장면을 만듭니다. 모델에 적용할 수 있는 DGSL 셰이더가 준비되어 있어야 합니다. 적합한 셰이더가 없으면 [방법: 기본 색 셰이더 만들기](../designers/how-to-create-a-basic-color-shader.md)에 설명된 대로 셰이더를 만들고 계속하기 전에 파일에 저장했는지 확인합니다.  
-  
-2.  **선택** 모드에서 셰이더를 적용할 모델을 선택하고 **속성** 창에 있는 **효과** 속성 그룹의 **파일 이름** 속성에서 모델에 적용할 DGSL 셰이더를 지정합니다.  
-  
- 다음은 기본 색 효과가 적용된 모델입니다.  
-  
- ![기본 색 효과를 보여 주는 3D 장면](../designers/media/digit-3d-model-effect.png "Digit-3D-Model-Effect")  
-  
- 모델에 셰이더를 적용한 후 모델을 선택하고 **속성** 창에 있는 **효과** 속성 그룹의 **(고급)** 속성에서 말줄임표(**...**) 단추를 선택하여 셰이더 디자이너에서 모델을 열 수 있습니다.  
-  
-## <a name="see-also"></a>참고 항목  
- [방법: 기본 3D 모델 만들기](../designers/how-to-create-a-basic-3-d-model.md)   
- [방법: 기본 색 셰이더 만들기](../designers/how-to-create-a-basic-color-shader.md)   
- [모델 편집기](../designers/model-editor.md)   
- [셰이더 디자이너](../designers/shader-designer.md)
+# <a name="how-to-apply-a-shader-to-a-3d-model"></a>방법: 3D 모델에 셰이더 적용
+
+이 문서에서는 모델 편집기를 사용하여 DGSL(Directed Graph Shader Language) 셰이더를 3D 모델에 적용하는 방법을 보여 줍니다.
+
+## <a name="apply-a-shader-to-a-3d-model"></a>3D 모델에 셰이더 적용
+
+3D 모델에 셰이더 효과를 적용하여 흥미로운 모양을 제공할 수 있습니다.
+
+시작하기 전에 **속성** 창이 표시되는지 확인하세요.
+
+1. 하나 이상의 모델이 포함된 3D 장면으로 시작합니다. 적합한 3D 장면이 없으면 [방법: 기본 3D 모델 만들기](../designers/how-to-create-a-basic-3-d-model.md)에 설명된 대로 장면을 만듭니다. 모델에 적용할 수 있는 DGSL 셰이더가 준비되어 있어야 합니다. 적합한 셰이더가 없으면 [방법: 기본 색 셰이더 만들기](../designers/how-to-create-a-basic-color-shader.md)에 설명된 대로 셰이더를 만들고 계속하기 전에 파일에 저장했는지 확인합니다.
+
+2. **선택** 모드에서 셰이더를 적용할 모델을 선택하고 **속성** 창에 있는 **효과** 속성 그룹의 **파일 이름** 속성에서 모델에 적용할 DGSL 셰이더를 지정합니다.
+
+다음은 기본 색 효과가 적용된 모델입니다.
+
+![기본 색 효과를 보여 주는 3D 장면](../designers/media/digit-3d-model-effect.png)
+
+모델에 셰이더를 적용한 후 모델을 선택하고 **속성** 창에 있는 **효과** 속성 그룹의 **(고급)** 속성에서 말줄임표(**...**) 단추를 선택하여 셰이더 디자이너에서 모델을 열 수 있습니다.
+
+## <a name="see-also"></a>참고 항목
+
+- [방법: 기본 3D 모델 만들기](../designers/how-to-create-a-basic-3-d-model.md)
+- [방법: 기본 색 셰이더 만들기](../designers/how-to-create-a-basic-color-shader.md)
+- [모델 편집기](../designers/model-editor.md)
+- [셰이더 디자이너](../designers/shader-designer.md)

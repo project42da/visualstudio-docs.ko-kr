@@ -1,25 +1,22 @@
 ---
-title: "Visual Studio에서 대상 .NET Framework 버전 지정 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 대상 .NET Framework 버전 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/06/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - targeting .NET Framework [Visual Studio]
 - .NET Framework version [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 03d8b734833fad5a47f0d5517b21a7851d9258a6
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: c00c36bd9273423b4625ea67aa9875f9c49446c2
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-target-a-version-of-the-net-framework"></a>방법: 대상 .NET Framework 버전 지정
 
@@ -32,7 +29,7 @@ ms.lasthandoff: 03/08/2018
 
 프로젝트를 만들 때 사용 가능한 .NET Framework 버전은 설치된 버전과 **새 프로젝트** 대화 상자에서 선택한 템플릿에 따라 달라집니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...**를 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
 
 1. 설치된 템플릿 목록에서 만들려는 프로젝트 형식을 선택하고 프로젝트 이름을 입력합니다.
 
@@ -54,7 +51,7 @@ C++ 프로젝트의 대상 버전을 변경하는 방법에 대한 자세한 내
 
     ![Visual Studio 솔루션 탐색기 속성](../ide/media/vs_slnexplorer_properties.png "vs_slnExplorer_Properties")
 
-1. [속성] 창의 왼쪽 열에서 **응용 프로그램** 탭을 선택합니다.
+1. **속성** 창의 왼쪽 열에서 **응용 프로그램** 탭을 선택합니다.
 
     ![Visual Studio 응용 프로그램 속성 응용 프로그램 탭](../ide/media/vs_slnexplorer_properties_applicationtab.png "vs_slnExplorer_Properties_ApplicationTab")
 
@@ -73,7 +70,7 @@ C++ 프로젝트의 대상 버전을 변경하는 방법에 대한 자세한 내
 ## <a name="see-also"></a>참고 항목
 
 [Visual Studio 멀티 타기팅 개요](../ide/visual-studio-multi-targeting-overview.md)  
-[.NET Framework 타기팅 오류 문제 해결](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)  
-[프로젝트 디자이너, 응용 프로그램 페이지(C#)](../ide/reference/application-page-project-designer-csharp.md)  
-[프로젝트 디자이너, 응용 프로그램 페이지(Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)  
+[.NET Framework 대상 지정 오류 문제 해결](../msbuild/troubleshooting-dotnet-framework-targeting-errors.md)  
+[응용 프로그램 페이지, 프로젝트 디자이너(C#)](../ide/reference/application-page-project-designer-csharp.md)  
+[응용 프로그램 페이지, 프로젝트 디자이너(Visual Basic)](../ide/reference/application-page-project-designer-visual-basic.md)  
 [방법: 대상 프레임워크 및 플랫폼 도구 집합 수정(C++)](/cpp/build/how-to-modify-the-target-framework-and-platform-toolset)

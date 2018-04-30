@@ -1,38 +1,33 @@
 ---
-title: "응용 프로그램 전역화 | Microsoft 문서"
-ms.custom: 
+title: 응용 프로그램 전역화 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Basic code, international applications
 - globalization [Visual Studio], international applications
 - C#, international applications
 ms.assetid: 8e1b9920-e1ac-4691-928e-cd95bfc6550b
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f3654b68f3ba12160947c465f8511127136b3103
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 8dfcdb9d78b58c4079664dfa3824c852ff9b43ce
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="globalizing-applications"></a>응용 프로그램 전역화
-전역화는 여러 문화권에서 작동하도록 소프트웨어를 디자인하고 개발하는 프로세스입니다. 이 섹션은 Windows Forms 및 Web Forms 페이지에 둘 다 적용됩니다.  
+전역화는 여러 문화권에서 작동하도록 소프트웨어를 디자인하고 개발하는 프로세스입니다. 다음 문서는 Windows Forms 및 Web Forms 페이지에 둘 다 적용됩니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
  [전역 Windows Forms 및 Web Forms을 위한 문화권 관련 클래스](../ide/culture-specific-classes-for-global-windows-forms-and-web-forms.md)  
  문화권 설정에 따라 날짜, 시간, 숫자, 통화 및 기타 정보의 서식을 지정하는 클래스를 설명합니다.  
   
-## <a name="related-sections"></a>관련 단원  
+### <a name="see-also"></a>참고 항목  
  [Windows Forms 전역화](/dotnet/framework/winforms/advanced/globalizing-windows-forms)  
  Windows Forms 전역화에 대한 도움말 페이지의 링크를 제공합니다.  
   

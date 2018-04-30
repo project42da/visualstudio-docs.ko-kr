@@ -1,16 +1,15 @@
 ---
-title: "Mac용 Visual Studio에서 구독 사용 | Microsoft Docs"
-description: "이 문서에서는 Microsoft 계정을 통해 Mac용 Visual Studio에서 구독 및 잠금 해제 기능을 사용하도록 설정하는 방법을 설명합니다."
+title: Mac용 Visual Studio에서 구독 사용
+description: 이 문서에서는 Microsoft 계정을 통해 Mac용 Visual Studio에서 구독 및 잠금 해제 기능을 사용하도록 설정하는 방법을 설명합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: 9202229c1562c89e0ddd9852113d63dc85e0bcd2
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 4d4e2485b1fe536cae92a419b3d0f1a9e20556c8
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="enable-subscription"></a>구독 사용
 
@@ -28,7 +27,7 @@ Mac용 Visual Studio는 선택할 수 있는 세 가지 구독 수준을 제공�
 
 구독이 만료된 경우 다음 두 가지 옵션이 있습니다.
 
-1. 구독을 갱신합니다. [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/)으로 이동하면 구독을 갱신할 수 있습니다.
+1. 구독을 갱신합니다. [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/)으로 이동하여 구독을 갱신할 수 있습니다.
 
 2. 활성 구독이 포함된 다른 계정이 있는 경우 [여러 사용자 계정 추가](~/signing-in.md) 문서의 설명에 따라 Mac용 Visual Studio에 추가할 수 있습니다. Mac용 Visual Studio는 추가한 모든 계정에서 사용 가능한 최상의 라이선스를 검색합니다. 
 

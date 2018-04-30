@@ -1,12 +1,9 @@
 ---
-title: "Visual Studio에서 사용자 지정 시작 페이지 설치 또는 시작 항목 변경 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 사용자 지정 시작 페이지 설치 또는 시작 항목 변경 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/01/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.ToolsOptionsPages.Startup
 helpviewer_keywords:
@@ -15,14 +12,14 @@ helpviewer_keywords:
 - Visual Studio Start Page
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ecc22bd23b5b245173321ed3a12379c6fe5622af
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 9863fdfbfb73e49d0539ba1060f1e1c56888599c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-the-start-page-for-visual-studio"></a>Visual Studio 시작 페이지 사용자 지정
 
@@ -30,7 +27,7 @@ ms.lasthandoff: 02/09/2018
 
 ## <a name="to-change-the-startup-item"></a>시작 항목을 변경하려면
 
-1. 메뉴 모음에서 **도구**, **옵션**을 선택합니다.
+1. 메뉴 모음에서 **도구** > **옵션**을 선택합니다.
 
 1. **환경**을 확장한 다음 **시작**을 선택합니다.
 
@@ -40,11 +37,11 @@ ms.lasthandoff: 02/09/2018
 
 Visual Studio SDK를 사용하여 [사용자 지정 시작 페이지를 만들거나](../extensibility/creating-a-custom-start-page.md), 다른 사용자가 이미 만든 시작 페이지를 사용할 수 있습니다. 예를 들어 [Visual Studio Marketplace](https://marketplace.visualstudio.com/search?target=VS&category=Tools&vsVersion=&subCategory=Start%20Pages&sortBy=Downloads)에서 사용자 지정 시작 페이지를 찾을 수 있습니다.
 
-사용자 지정 시작 페이지를 설치하려면 .vsix 파일을 열거나 시작 페이지 파일을 복사하여 컴퓨터의 **%USERPROFILE%\Documents\Visual Studio 2017\StartPages** 폴더에 붙여넣습니다.
+사용자 지정 시작 페이지를 설치하려면 *.vsix* 파일을 열거나 시작 페이지 파일을 복사하여 컴퓨터의 *%USERPROFILE%\Documents\Visual Studio 2017\StartPages* 폴더에 붙여넣습니다.
 
 ### <a name="to-select-which-custom-start-page-to-display"></a>표시할 사용자 지정 시작 페이지를 선택하려면
 
-1. 메뉴 모음에서 **도구**, **옵션**을 선택합니다.
+1. 메뉴 모음에서 **도구** > **옵션**을 선택합니다.
 
 1. **환경**을 확장한 다음 **시작**을 선택합니다.
 

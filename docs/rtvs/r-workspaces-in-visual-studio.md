@@ -1,26 +1,20 @@
 ---
-title: "Visual Studio용 R 도구의 작업 영역 | Microsoft Docs"
-description: "Visual Studio에서 작업 영역을 사용하여 R 코드가 실행되는 위치를 제어하는 방법입니다."
-ms.custom: 
+title: R 작업 영역
+description: Visual Studio에서 작업 영역을 사용하여 R 코드가 실행되는 위치를 제어하는 방법입니다.
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: bb520f317eb285bcc278ff9f37bb2dc25c91e950
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: 8a562b26dbe48df33928409b518dc6a9ceed6eb0
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="controlling-where-r-code-runs-with-workspaces"></a>작업 영역에서 R 코드가 실행되는 위치 제어
 
@@ -131,7 +125,7 @@ Visual Studio에서 R 프로젝트를 사용할 경우 원격 작업 영역을 �
 > [!Note]
 > RTVS가 모든 R 함수 호출을 확실히 가로챌 수는 없으므로 대화형 창 내에서 `source()` 또는 `runApp()`(Shiny 응용 프로그램의 경우) 등의 함수를 호출하면 파일이 원격 작업 영역으로 복사되지 *않습니다*.
 
-[프로젝트 속성](r-projects-in-visual-studio.md#project-properties)은 프로젝트가 실행될 때 RTVS가 파일을 복사할지 여부, 그리고 정확히 복사되는 파일을 제어합니다. 이 페이지를 열려면 **프로젝트 > (이름) 속성...** 메뉴 명령을 선택하거나 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성...**을 선택합니다.
+[프로젝트 속성](r-projects-in-visual-studio.md#project-properties)은 프로젝트가 실행될 때 RTVS가 파일을 복사할지 여부, 그리고 정확히 복사되는 파일을 제어합니다. 이 페이지를 열려면 **프로젝트 > (이름) 속성...** 메뉴 명령을 선택하거나 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성...** 을 선택합니다.
 
 ![파일 전송 설정이 있는 프로젝트 속성 실행 탭](media/workspaces-remote-file-transfer-filter-settings.png)
 

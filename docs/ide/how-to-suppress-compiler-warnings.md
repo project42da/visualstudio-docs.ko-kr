@@ -1,27 +1,25 @@
 ---
-title: "Visual Studio에서 프로젝트 및 NuGet 패키지에 대한 컴파일러 경고 표시 안 함 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 프로젝트 및 NuGet 패키지에 대한 컴파일러 경고 표시 안 함 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3af162101eb20e018be44480c862192c0c59276a
-ms.sourcegitcommit: 9a2f937e42305db6e3eaa7aadc235b0ba9aafc83
+ms.openlocfilehash: 25fc8d4412410c2687593661760dcf94512c972b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-suppress-compiler-warnings"></a>방법: 컴파일러 경고 표시 안 함
 
-하나 이상 종류의 컴파일러 경고를 필터링하여 빌드 로그를 정리할 수 있습니다. 예를 들어 빌드 로그 세부 정보 표시를 일반, 자세히 또는 진단으로 설정할 때 생성되는 출력 중 일부만 검토할 수 있습니다. 세부 정보 표시에 대한 자세한 내용은 [방법: 빌드 로그 파일 보기, 저장 및 구성](../ide/how-to-view-save-and-configure-build-log-files.md)을 참조하세요.
+하나 이상 종류의 컴파일러 경고를 필터링하여 빌드 로그를 정리할 수 있습니다. 예를 들어 빌드 로그 세부 정보 표시를 **일반**, **자세히** 또는 **진단**으로 설정할 때 생성되는 출력 중 일부만 검토할 수 있습니다. 세부 정보 표시에 대한 자세한 내용은 [방법: 빌드 로그 파일 보기, 저장 및 구성](../ide/how-to-view-save-and-configure-build-log-files.md)을 참조하세요.
 
-## <a name="suppressing-specific-warnings-for-visual-c-or-f"></a>C# 또는 F#에 대한 특정 경고 표시 안 함 #
+## <a name="suppress-specific-warnings-for-visual-c-or-f"></a>Visual C# 또는 F#에 대한 특정 경고 표시 안 함 #
 
 **빌드** 속성 페이지를 사용하여 C# 및 F# 프로젝트에 대한 특정 경고를 표시하지 않습니다.
 
@@ -35,7 +33,7 @@ ms.lasthandoff: 01/29/2018
 
 1. 솔루션을 다시 빌드합니다.
 
-## <a name="suppressing-specific-warnings-for-visual-c"></a>Visual C++에 대한 특정 경고 표시 안 함
+## <a name="suppress-specific-warnings-for-visual-c"></a>Visual C++에 대한 특정 경고 표시 안 함
 
 **구성 속성** 속성 페이지를 사용하여 C++ 프로젝트에 대한 특정 경고를 표시하지 않습니다.
 
@@ -53,7 +51,7 @@ ms.lasthandoff: 01/29/2018
 
 1. **확인** 단추를 선택한 다음 솔루션을 다시 빌드합니다.
 
-## <a name="suppressing-warnings-for-visual-basic"></a>Visual Basic에 대한 경고 표시 안 함
+## <a name="suppress-warnings-for-visual-basic"></a>Visual Basic에 대한 경고 표시 안 함
 
 프로젝트의 *.vbproj* 파일을 편집하여 Visual Basic에 대한 특정 컴파일러 경고를 숨길 수 있습니다. *범주*별로 경고를 표시하지 않으려면 [컴파일 속성 페이지](../ide/reference/compile-page-project-designer-visual-basic.md)를 사용합니다. 자세한 내용은 [Visual Basic에서 경고 구성](../ide/configuring-warnings-in-visual-basic.md)을 참조하세요.
 
@@ -65,7 +63,7 @@ ms.lasthandoff: 01/29/2018
 
 1. 메뉴 모음에서 **프로젝트** > **프로젝트 언로드**를 선택합니다.
 
-1. **솔루션 탐색기**에서 프로젝트의 오른쪽 클릭 메뉴 또는 바로 가기 메뉴를 열고 **편집** *ProjectName* **.vbproj**를 선택합니다.
+1. **솔루션 탐색기**에서 프로젝트의 오른쪽 클릭 메뉴 또는 바로 가기 메뉴를 열고 **편집 <ProjectName>.vbproj**를 선택합니다.
 
     XML 프로젝트 파일이 코드 편집기에서 열립니다.
 
@@ -114,7 +112,7 @@ ms.lasthandoff: 01/29/2018
 
 자세한 내용은 Visual Basic 명령줄 컴파일러에 대한 [/nowarn 컴파일러 옵션](/dotnet/visual-basic/reference/command-line-compiler/nowarn)을 참조하세요.
 
-## <a name="suppressing-warnings-for-nuget-packages"></a>NuGet 패키지에 대한 경고 표시 안 함
+## <a name="suppress-warnings-for-nuget-packages"></a>NuGet 패키지에 대한 경고 표시 안 함
 
 경우에 따라 전체 프로젝트 대신 단일 NuGet 패키지에 대한 NuGet 컴파일러 경고를 표시하지 않을 수 있습니다. 경고는 목적이 있으므로 프로젝트 수준에서 경고를 표시하는 것이 좋습니다. 예를 들어 NuGet 경고 중 하나는 패키지가 프로젝트와 완전히 호환되지 않을 수 있음을 나타냅니다. 프로젝트 수준에서 경고를 표시하지 않고 나중에 다른 NuGet 패키지를 추가하는 경우 호환성 경고가 생성되는지 알 수 없습니다.
 

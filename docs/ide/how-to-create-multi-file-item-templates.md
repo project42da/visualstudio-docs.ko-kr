@@ -1,24 +1,22 @@
 ---
-title: "Visual Studio에 대한 다중 파일 항목 템플릿 만들기 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대한 다중 파일 항목 템플릿 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, creating multi-file item templates
 - multi-file item templates
 - item templates, creating multi-file item templates
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: f1d5b11c97b7f214a13225b5605f47e3d3a45966
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.openlocfilehash: fc494f7fa3134984ccb2330e835332fb3e711c19
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-multi-file-item-templates"></a>방법: 다중 파일 항목 템플릿 만들기
 
@@ -40,7 +38,7 @@ ms.lasthandoff: 01/05/2018
 
 1. 단일 파일 항목 템플릿을 수동으로 만들 때처럼 항목 템플릿을 만들되, 다중 파일 항목을 구성 하는 각 파일을 포함합니다.
 
-1. .vstemplate XML 파일에서 각 개별 파일에 대한 `ProjectItem` 요소를 추가하고 이 요소에 `TargetFileName` 특성을 추가합니다. `TargetFileName` 특성 값을 $fileinputname$.*FileExtension*으로 설정합니다. 여기서 *FileExtension*은 템플릿에 포함될 파일의 파일 확장명입니다. 예:
+1. *.vstemplate* XML 파일에서 각 개별 파일에 대한 `ProjectItem` 요소를 추가하고 이 요소에 `TargetFileName` 특성을 추가합니다. `TargetFileName` 특성 값을 *$fileinputname$.FileExtension*으로 설정합니다. 여기서 *FileExtension*은 템플릿에 포함될 파일의 파일 확장명입니다. 예:
 
     ```xml
     <ProjectItem TargetFileName="$fileinputname$.vb">
@@ -59,13 +57,13 @@ ms.lasthandoff: 01/05/2018
 
 1. 템플릿에 포함할 파일을 선택하고 마우스 오른쪽 단추를 클릭한 다음 **보내기** > **압축(ZIP) 폴더**를 선택합니다.
 
-   선택한 파일이 .zip 파일로 압축됩니다.
+   선택한 파일이 *.zip* 파일로 압축됩니다.
 
-1. .zip 파일을 사용자 항목 템플릿 위치에 복사합니다. 기본적으로 이 디렉터리는 %USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ItemTemplates입니다. 자세한 내용은 [방법: 템플릿 찾기 및 구성](../ide/how-to-locate-and-organize-project-and-item-templates.md)을 참조하세요.
+1. *.zip* 파일을 사용자 항목 템플릿 위치에 복사합니다. 기본적으로 이 디렉터리는 *%USERPROFILE%\Documents\Visual Studio \<버전\>\Templates\ItemTemplates*입니다. 자세한 내용은 [방법: 템플릿 찾기 및 구성](../ide/how-to-locate-and-organize-project-and-item-templates.md)을 참조하세요.
 
 1. Visual Studio를 종료한 다음 다시 엽니다.
 
-1. 새 프로젝트를 만들거나 기존 프로젝트를 연 다음 **프로젝트** > **새 항목 추가...**를 선택하거나 **Ctrl** + **Shift** + **A**를 누릅니다.
+1. 새 프로젝트를 만들거나 기존 프로젝트를 연 다음, **프로젝트** > **새 항목 추가**를 선택하거나 **Ctrl**+**Shift**+**A**를 누릅니다.
 
    **새 항목 추가** 대화 상자에 다중 파일 항목 템플릿이 나타납니다.
 
@@ -98,7 +96,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
+[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
 [방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)  
 [템플릿 매개 변수](../ide/template-parameters.md)  
 [방법: 템플릿 매개 변수 대체](../ide/how-to-substitute-parameters-in-a-template.md)

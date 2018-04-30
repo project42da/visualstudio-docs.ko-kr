@@ -1,13 +1,10 @@
 ---
 title: 방화벽 또는 프록시 서버 배후에서 Visual Studio와 Azure 서비스 설치 및 사용 | Microsoft Docs
-description: ''
+description: 조직에서 방화벽 또는 프록시 서버를 사용하는 경우 허용 목록에 추가하거나 열려는 도메인 URL, 포트 및 프로토콜을 검토합니다.
 ms.custom: ''
 ms.date: 02/12/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - network installation, Visual Studio
@@ -20,13 +17,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13f9f83c89e09e07d6024b779a89b9a6c4374112
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: 5a3f866410afd0ca70080dcc15b1f01b78146890
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="install-and-use-visual-studio-and-azure-services-behind-a-firewall-or-proxy-server"></a>방화벽 또는 프록시 서버 배후에서 Visual Studio와 Azure 서비스 설치 및 사용
+
 사용자 또는 사용자 조직에서 방화벽 또는 프록시 서버와 같은 보안 조치를 사용하는 경우 Visual Studio와 Azure 서비스를 설치 및 사용할 때 최상의 경험을 얻으려면 특정 포트 및 프로토콜을 열고 특정 도메인 URL을 “허용 목록”에 추가하는 것이 좋습니다.
 
 * **[Visual Studio 설치](#install-visual-studio)**: 이 표에는 원하는 모든 구성 요소 및 워크로드에 액세스할 수 있도록 허용 목록에 추가할 도메인 URL이 나와 있습니다.
@@ -34,10 +32,13 @@ ms.lasthandoff: 04/03/2018
 * **[Visual Studio 및 Azure 서비스 사용](#use-visual-studio-and-azure-services)**: 이 표에는 원하는 모든 기능과 서비스에 액세스할 수 있도록 허용 목록에 추가할 도메인 URL과 열려는 포트 및 프로토콜이 나와 있습니다.
 
 ## <a name="install-visual-studio"></a>Visual Studio 설치
+
 ### <a name="urls-to-whitelist"></a>허용 목록에 추가할 URL
+
 Visual Studio 설치 관리자는 다양한 도메인과 다운로드 서버에서 파일을 다운로드하기 때문에 UI 또는 배포 스크립트에서 다음 도메인 URL을 신뢰할 수 있는 도메인으로 허용 목록에 추가하는 것이 좋습니다.
 
 #### <a name="microsoft-domains"></a>Microsoft 도메인
+
 | 도메인 | 용도 |
 | ------ | ------- |
 | go.microsoft.com | 설치 URL 확인 |
@@ -57,6 +58,7 @@ Visual Studio 설치 관리자는 다양한 도메인과 다운로드 서버에�
 |  |  | |
 
 #### <a name="non-microsoft-domains"></a>타사 도메인
+
 | 도메인 | 이러한 워크로드 설치 |
 | ------ | ------- |
 | archive.apache.org |  JavaScript를 사용한 모바일 개발(Cordova) |
@@ -72,7 +74,9 @@ Visual Studio 설치 관리자는 다양한 도메인과 다운로드 서버에�
 |  |  | |
 
 ## <a name="use-visual-studio-and-azure-services"></a>Visual Studio 및 Azure 서비스 사용
+
 ### <a name="urls-to-whitelist-and-ports-and-protocols-to-open"></a>허용 목록에 추가할 URL 및 여는 포트와 프로토콜
+
 방화벽이나 프록시 서버 배후에서 Visual Studio 또는 Azure 서비스를 사용할 때 필요한 모든 요소에 액세스할 수 있도록 하려면 다음 URL을 허용 목록에 추가하고 다음 포트와 프로토콜을 여는 것이 좋습니다.
 
 | 서비스 또는 시나리오 | DNS 끝점 | 프로토콜 | 포트 | 설명 |
@@ -116,18 +120,21 @@ Visual Studio 설치 관리자는 다양한 도메인과 다운로드 서버에�
 |패키징 서비스 | [계정].visualstudio.com <br/> [계정].*.visualstudio.com <br/> *.blob.core.windows.net <br/> registry.npmjs.org </br> nodejs.org <br/> dist.nuget.org <br/> nuget.org | https | 443 | *.npmjs.org, *.nuget.org 및 *.nodejs.org는 특정 빌드 작업 시나리오(예: NuGet 도구 설치 관리자, 노드 도구 설치 관리자) 또는 피드와 함께 공용 업스트림을 사용하려는 경우에만 필요합니다.  다른 세 가지 도메인은 패키징 서비스의 핵심 기능에 필요합니다. |
 |||||||
 
-
 ## <a name="troubleshoot-network-related-errors"></a>네트워크 관련 오류 문제 해결
+
 때로는 방화벽 또는 프록시 서버 배후에서 Visual Studio를 설치하거나 사용할 때 네트워크 또는 프록시 관련 오류가 발생할 수 있습니다. 이러한 오류 메시지의 솔루션에 대한 자세한 내용은 [Visual Studio 설치 또는 사용 시의 네트워크 관련 오류 문제 해결](troubleshooting-network-related-errors-in-visual-studio.md) 페이지를 참조하세요.
 
 ## <a name="get-support"></a>지원 받기
+
 몇 가지 추가 지원 옵션은 다음과 같습니다.
+
 * Visual Studio 설치 관리자와 Visual Studio IDE에 모두 표시되는 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 Microsoft에 제품 문제를 보고할 수 있습니다.
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 Microsoft와 제품 제안을 공유할 수 있습니다.
-* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다.
-* [Gitter 커뮤니티의 Visual Studio 관련 대화](https://gitter.im/Microsoft/VisualStudio)를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다.  (이 옵션을 사용하려면 [GitHub](https://github.com/) 계정이 필요합니다.)
+* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고, 답변을 찾을 수 있습니다.
+* [Gitter 커뮤니티의 Visual Studio 관련 대화](https://gitter.im/Microsoft/VisualStudio)를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다. (이 옵션을 사용하려면 [GitHub](https://github.com/) 계정이 필요합니다.)
 
 ## <a name="see-also"></a>참고 항목
+
 * [Visual Studio에서 네트워크 관련 오류 문제 해결](troubleshooting-network-related-errors-in-visual-studio.md)
 * [Visual Studio 관리자 가이드](visual-studio-administrator-guide.md)
 * [Visual Studio 2017 설치](install-visual-studio.md)

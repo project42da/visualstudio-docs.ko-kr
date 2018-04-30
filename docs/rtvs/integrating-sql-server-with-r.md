@@ -1,27 +1,20 @@
 ---
-title: "SQL Server 및 Visual Studio용 R 도구 통합 | Microsoft Docs"
-description: "Visual Studio는 R에서 SQL 쿼리를 만들고 실행하는 기능과 R을 통해 저장 프로시저를 사용하는 기능을 지원합니다."
-ms.custom: 
+title: SQL Server와 R 통합
+description: Visual Studio는 R에서 SQL 쿼리를 만들고 실행하는 기능과 R을 통해 저장 프로시저를 사용하는 기능을 지원합니다.
 ms.date: 01/24/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-- SQL
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 4733d51d40b0aabffa108a1f99e4e492599b67c2
-ms.sourcegitcommit: 36ab8429333b31f03992a9fe8fc669db8e09c968
+ms.openlocfilehash: 31d02ffb64539f906d91f68d18c6ad52b347e4e6
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/21/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-sql-server-and-r"></a>SQL Server 및 R 사용
 
@@ -40,7 +33,7 @@ Visual Studio의 뛰어난 SQL Server 지원은 SQL 쿼리를 생성 및 실행�
 
 RTVS에서는 R 제품에 SQL 쿼리를 추가하는 기능을 지원하므로 찾고 있는 결과를 얻을 때까지 별도의 컨텍스트에서 SQL 쿼리를 반복해서 개발할 수 있습니다.
 
-SQL 쿼리 파일을 추가하려면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...**을 선택하고, **SQL 쿼리** 파일 형식을 선택합니다.
+SQL 쿼리 파일을 추가하려면 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...** 을 선택하고, **SQL 쿼리** 파일 형식을 선택합니다.
 
 ![프로젝트에 SQL 쿼리 항목 추가](media/sql-add-item.png)
 
@@ -81,7 +74,7 @@ RTVS는 다음 섹션의 설명대로 SQL 및 R 코드를 단일 SQL 문으로 �
 
 ### <a name="write-and-test-a-sql-stored-procedure"></a>SQL 저장 프로시저 작성 및 테스트
 
-새 SQL 저장 프로시저를 추가하려면 **추가 > 새 항목...**을 선택하고, 템플릿 목록에서 **SQL 저장 프로시저(R 사용)**를 선택하고, 파일 이름(이 예제에서는 `StoredProcedure.R`)을 입력하고, **확인**을 클릭합니다.
+새 SQL 저장 프로시저를 추가하려면 **추가 > 새 항목...** 을 선택하고, 템플릿 목록에서 **SQL 저장 프로시저(R 사용)** 를 선택하고, 파일 이름(이 예제에서는 `StoredProcedure.R`)을 입력하고, **확인**을 클릭합니다.
 
 RTVS는 R 코드용 `.R` 파일, SQL 코드용 `.Query.sql` 파일, 두 파일을 결합하는 `.Template.sql` 파일 등 저장 프로시저용 파일 3개를 만듭니다. 뒤의 두 파일은 솔루션 탐색기에 `.R` 파일의 자식으로 표시됩니다.
 
@@ -152,7 +145,7 @@ WITH RESULT SETS ((medallion NVARCHAR(max), hack_license NVARCHAR(max)));
 ### <a name="publish-a-sql-stored-procedure"></a>SQL 저장 프로시저 게시
 
 1. **R 도구 > 데이터 > 옵션과 함께 게시...** 메뉴 명령을 선택합니다.
-1. 표시된 대화 상자에서 **게시 위치:**를 **데이터베이스**로 변경하고, 대상을 지정하고, **게시**를 선택하면 RTVS가 저장 프로시저를 빌드하고 게시합니다.
+1. 표시된 대화 상자에서 **게시 위치:** 를 **데이터베이스**로 변경하고, 대상을 지정하고, **게시**를 선택하면 RTVS가 저장 프로시저를 빌드하고 게시합니다.
 
     ![저장 프로시저 게시 대화 상자](media/sql-publish-with-options.png)
 

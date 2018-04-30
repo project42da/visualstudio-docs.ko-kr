@@ -1,25 +1,25 @@
 ---
-title: "Visual Studio의 코드 생성 기능 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio의 코드 생성 기능 | Microsoft Docs
 ms.date: 01/11/2018
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 33a2d18615885fea10f3fd64077b2f9438097a7d
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: c9c370a0ac169abe68da44d3c2e0438f9fbf15a5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="code-generation-features-in-visual-studio"></a>Visual Studio의 코드 생성 기능
 
 Visual Studio가 코드 생성, 수정 및 리팩터링하도록 도울 수 있는 여러 가지 방법이 있습니다.
+
+## <a name="features"></a>기능
 
 - [코드 조각](../ide/code-snippets.md)을 사용하여 [switch](/dotnet/csharp/language-reference/keywords/switch) 블록 또는 [enum](/dotnet/csharp/language-reference/keywords/enum) 선언과 같은 템플릿을 삽입할 수 있습니다.
 
@@ -32,7 +32,7 @@ Visual Studio가 코드 생성, 수정 및 리팩터링하도록 도울 수 있�
 
 ## <a name="see-also"></a>참고 항목
 
-[코드 조각](../ide/code-snippets.md)  
-[빠른 작업](../ide/quick-actions.md)  
-[리팩터링](../ide/refactoring-in-visual-studio.md)  
-[코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)
+- [코드 조각](../ide/code-snippets.md)
+- [빠른 작업](../ide/quick-actions.md)
+- [리팩터링](../ide/refactoring-in-visual-studio.md)
+- [코드 생성 및 T4 텍스트 템플릿](../modeling/code-generation-and-t4-text-templates.md)

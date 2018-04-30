@@ -1,27 +1,21 @@
 ---
-title: Python 작업, 2단계, 코드 작성 및 실행 | Microsoft Docs
+title: Python 작업, 2단계, 코드 작성 및 실행
 description: 간단한 Hello World 프로그램을 편집하여 실행하는 방법을 설명하고 이어서 Visual Studio의 편집 및 IntelliSense 기능을 보여 주는 더 흥미로운 코드를 제공하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 2단계입니다.
-ms.custom: mvc
 ms.date: 01/16/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6045b385754eebfe7b754b9d213f860a199b1824
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 607903093735c1ab49886afcf292121e0b7bafb8
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="step-2-writing-and-running-code"></a>2단계 - 코드 작성 및 실행
 

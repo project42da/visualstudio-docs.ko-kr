@@ -1,30 +1,26 @@
 ---
-title: "내게 필요한 옵션을 제공하는 응용 프로그램 설계를 위한 리소스 | Microsoft 문서"
-ms.custom: 
+title: 내게 필요한 옵션을 제공하는 응용 프로그램 설계를 위한 리소스 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - accessibility, Windows applications
 - Windows applications, accessibility
 - Web applications, accessibility
 - accessibility, Web applications
 ms.assetid: 426bf023-bb34-43c4-9edb-c307191c8170
-caps.latest.revision: 
 author: TerryGLee
 ms.author: tglee
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6df23292ef3ae5016d2ddd48f0ced93e3a577a2f
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 7a82f8d07a8206931601d6e9024a2ef306934e82
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="resources-for-designing-accessible-applications"></a>내게 필요한 옵션을 제공하는 응용 프로그램 설계를 위한 리소스
 다음 링크를 사용하면 내게 필요한 옵션이 있는 Windows 응용 프로그램과 웹 사이트 개발을 위한 팁과 예제뿐만 아니라 내게 필요한 옵션이 있는 응용 프로그램 디자인을 지원하는 기술 관련 정보를 찾을 수 있습니다. 내게 필요한 옵션에 대한 일반적인 내용은 [http://www.microsoft.com/enable/](http://www.microsoft.com/enable/)에서 온라인으로 찾을 수 있습니다.  

@@ -9,11 +9,11 @@ description: 관리자가 구독자에게 라이선스를 할당하는 방법을
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: b035f748f6d99595bc2570b54a4d6413cab72af5
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 62336656e551a085c6c8753e6baea06730f49510
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="assigning-licenses-in-the-visual-studio-subscriptions-administrator-portal"></a>Visual Studio 구독 관리자 포털에서 라이선스 할당
 
@@ -32,10 +32,12 @@ Visual Studio 구독에 사용 가능한 라이선스가 있는 경우 해당 �
 
     조직에서 로그인하는 데 사용하는 전자 메일과 다른 전자 메일을 수신하는 데 사용하는 경우 여기에 입력할 수 있는 옵션이 있습니다. "통신에 로그인 전자 메일과 다른 전자 메일을 사용하십니까?"를 나타내는 하이퍼링크를 선택합니다. 
 
-    구독자가 [Visual Studio 구독 포털](https:/my.visualstudio.com?wt.mc_id=o~msft~docs)에 로그인할 때 소프트웨어 다운로드에 액세스할 수 있도록 하도록 하려면 [다운로드] 상자를 선택한 상태로 두세요. 이 확인란을 선택 취소하면 사용자는 소프트웨어 다운로드에 액세스할 수 없지만 구독에 포함된 다른 모든 혜택에는 계속 액세스할 수 있습니다. 완료되면 **추가**를 클릭합니다.
+    **다운로드 액세스 권한:**  
+    구독자가 [Visual Studio 구독 포털](https://my.visualstudio.com?wt.mc_id=o~msft~docs)에 로그인할 때 소프트웨어 다운로드에 액세스할 수 있도록 하도록 하려면 [다운로드] 상자를 선택한 상태로 두세요. 이 확인란을 선택 취소하면 사용자는 소프트웨어 다운로드에 액세스할 수 없지만 구독에 포함된 다른 모든 혜택에는 계속 액세스할 수 있습니다. 
+    
+    구독자에 대한 옵션 선택을 완료하면 **추가**를 클릭합니다.
 
     ![구독자 정보 입력](_img\assign-license-add\add-subscriber-1.png)
-
     ![구독자 정보 입력](_img\assign-license-add\add-subscriber-2.png)
 
 4.  구독자가 추가되면 새 구독자에게 추가 지침이 있는 할당 전자 메일을 자동으로 보냅니다. 구독자를 선택하고 위쪽 메뉴의 **다시 보내기** 단추를 클릭하여 할당 전자 메일을 다시 보낼 수 있습니다.
@@ -55,9 +57,7 @@ Visual Studio 구독에 사용 가능한 라이선스가 있는 경우 해당 �
 **원활한 업로드를 보장하기 위해 다음 모범 사례를 준수합니다.**
     - 양식 필드에 쉼표가 없는지 확인합니다.
     - 사용자 이름과 같은 양식 필드 앞뒤의 공백을 제거합니다.
-    - 두 부분으로 이루어진 사용자 이름에서 첫 번째 이름과 마지막 이름 사이에 여분의 공백이 포함되지 않아야 합니다(예: 시스템에서 여분의 공백을 제거하지 않으므로 "Maggie May"와 같이 두 부분으로 이루어진 이름은 "Maggie  May"로 입력하면 안 됨)
-
-    ![대량 추가 템플릿](_img\assign-license-add\bulk-template.png)
+    - 두 부분으로 이루어진 사용자 이름에서 첫 번째 이름과 마지막 이름 사이에 여분의 공백이 포함되지 않아야 합니다(예: 시스템에서 여분의 공백을 제거하지 않으므로 "Maggie May"와 같이 두 부분으로 이루어진 이름은 "Maggie  May"로 입력하면 안 됨) ![대량 추가 템플릿](_img\assign-license-add\bulk-template.png)
 
 4.  Visual Studio 구독 관리 포털로 돌아가고, [여러 구독자 업로드] 대화 상자에서 **찾아보기**를 클릭합니다. 저장한 Excel 파일로 이동하고 **확인**을 클릭합니다. 업로드 진행률이 화면에 표시됩니다. 
 

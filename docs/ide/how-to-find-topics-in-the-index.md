@@ -1,12 +1,10 @@
 ---
-title: "Visual Studio 도움말 뷰어 인덱스 사용 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 도움말 뷰어 인덱스 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-help-viewer
+ms.topic: conceptual
 helpviewer_keywords:
 - Index tab [Help Viewer]
 - Help Viewer, using the index
@@ -15,18 +13,18 @@ helpviewer_keywords:
 - index filtering [Help Viewer]
 - Help Viewer, index filtering
 ms.assetid: cb071e93-f297-459c-a6fa-8ae0dabc42a4
-caps.latest.revision: "15"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e6c9df2254108b778eb1478311ddaa386f70d74
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: ee913682452e94bb0e973dff9e98e496b8cb3c70
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="finding-topics-by-using-the-help-viewer-index"></a>도움말 뷰어 인덱스를 사용하여 항목 찾기
+# <a name="find-topics-by-using-the-help-viewer-index"></a>도움말 뷰어 인덱스를 사용하여 항목 찾기
 색인에는 설치된 콘텐츠 항목과 연결된 키워드 목록이 포함되어 있습니다. 각 항목에 둘 이상의 키워드가 연결되어 있을 수 있으며, 각 키워드가 둘 이상의 항목에 연결되어 있을 수도 있습니다. 책의 색인과 동일한 방식으로 이 색인을 사용합니다.  
   
 ## <a name="to-find-a-topic-by-using-the-index"></a>색인을 사용하여 항목을 찾으려면  

@@ -1,12 +1,9 @@
 ---
-title: "파일에서 찾기 | Microsoft Docs"
-ms.custom: 
+title: 파일에서 찾기
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - vs.findreplace.findinfiles
 - vs.findinfiles
@@ -21,13 +18,14 @@ helpviewer_keywords:
 - Find in Files tab, Find and Replace window
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 0e87022cb3159e48a92e35ee07987bef6ce68f9e
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: e1470868e207687a7b35f46724b80b0da0a0e71c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="find-in-files"></a>파일에서 찾기
 
@@ -37,7 +35,7 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="to-display-find-in-files"></a>파일에서 찾기를 표시하려면
 
-1. 메뉴 모음에서 **편집**, **찾기 및 바꾸기**를 선택합니다.
+1. 메뉴 모음에서 **편집** > **찾기 및 바꾸기**를 선택합니다.
 
 1. **파일에서 찾기**를 선택합니다.
 
@@ -71,16 +69,20 @@ ms.lasthandoff: 12/22/2017
 
 **찾기 옵션** 섹션을 확장하거나 축소할 수 있습니다. 다음 옵션을 선택하거나 선택 취소할 수 있습니다.
 
-대/소문자 구분  
+**대/소문자 구분**
+
 선택하면 **찾기 결과** 검색에서 대/소문자를 구분합니다.
 
-단어 단위로  
+**단어 단위로**
+
 선택하면 **찾기 결과** 창에 단어 단위로 일치하는 항목만 반환됩니다.
 
-정규식 사용  
+**정규식 사용**
+
 이 확인란을 선택하면 특수 표기법을 사용하여 **찾을 내용** 또는 **바꿀 내용** 텍스트 상자에서 일치시킬 텍스트 패턴을 정의할 수 있습니다. 이러한 표기법 목록은 [Visual Studio에서 정규식 사용](../ide/using-regular-expressions-in-visual-studio.md)을 참조하세요.
 
-이 파일 형식 보기  
+**이 파일 형식 보기**
+
 이 목록은 **찾는 위치** 디렉터리에서 검색할 파일 형식을 나타냅니다. 이 필드를 비워 두면 **찾는 위치** 디렉터리의 모든 파일이 검색됩니다.
 
 목록에서 항목을 선택하여 이러한 특정 형식의 파일을 찾을 미리 구성된 검색 문자열을 입력합니다.
@@ -89,20 +91,24 @@ ms.lasthandoff: 12/22/2017
 
 **결과 옵션** 섹션을 확장하거나 축소할 수 있습니다. 다음 옵션을 선택하거나 선택 취소할 수 있습니다.
 
-찾기 결과 1 창  
+**찾기 결과 1 창**
+
 이 옵션을 선택하면 현재 검색 결과로 **찾기 결과 1** 창 내용이 바뀝니다. 이 창은 자동으로 열려 검색 결과를 표시합니다. 이 창을 수동으로 열려면 **보기** 메뉴에서 **다른 창**을 선택하고 **찾기 결과 1**을 선택합니다.
 
-찾기 결과 2 창  
+**찾기 결과 2 창**
+
 이 옵션을 선택하면 현재 검색 결과로 **찾기 결과 2** 창 내용이 바뀝니다. 이 창은 자동으로 열려 검색 결과를 표시합니다. 이 창을 수동으로 열려면 **보기** 메뉴에서 **다른 창**을 선택하고 **찾기 결과 2**를 선택합니다.
 
-파일 이름만 표시  
+**파일 이름만 표시**
+
 검색 일치 항목 자체를 표시하는 대신 검색 일치 항목을 포함하는 파일 목록을 표시합니다.
 
-Append results  
+**결과 추가**
+
 검색 결과를 이전 검색 결과에 추가합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[텍스트 찾기 및 바꾸기](../ide/finding-and-replacing-text.md)  
-[파일에서 바꾸기](../ide/replace-in-files.md)  
-[Visual Studio 명령](../ide/reference/visual-studio-commands.md)
+- [텍스트 찾기 및 바꾸기](../ide/finding-and-replacing-text.md)
+- [파일에서 바꾸기](../ide/replace-in-files.md)
+- [Visual Studio 명령](../ide/reference/visual-studio-commands.md)

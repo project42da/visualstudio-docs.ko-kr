@@ -1,25 +1,21 @@
 ---
-title: "Visual Studio에서 디버깅 시작 | Microsoft 문서"
-ms.custom: 
+title: Visual Studio에서 디버깅 시작 | Microsoft 문서
+ms.custom: ''
 ms.date: 12/14/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 ms.assetid: c3a14d28-d811-4ff3-bd09-21dce14025ca
-caps.latest.revision: 
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e858d24a37fec49468981b44d450212ba2fa3654
-ms.sourcegitcommit: 3285243d6c0521266053340fe06505885d12178b
+ms.openlocfilehash: 085ea00f95124eb6ae2ed7ccc96eed692be0d649
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/09/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="get-started-with-debugging-in-visual-studio"></a>Visual Studio에서 디버깅 시작
 Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통합 집합을 제공합니다. 이 항목에서는 가장 기본적인 디버깅 UI 기능 집합을 사용하여 시작하는 방법을 알아봅니다.  
@@ -49,7 +45,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  ![Visual Studio 출력 및 오류 목록](../ide/media/vs_ide_gs_debug_bad_build_error_list.PNG "Vs_ide_gs_debug_bad_build_error_list")  
 
- **오류 목록** 창에서 오류 코드 줄을 클릭하여 오류가 발생한 줄로 이동합니다. 또는 오른쪽 위에서 **빠른 실행** 표시줄을 클릭하고 “줄 번호”를 입력한 다음 Enter 키를 눌러 줄 번호를 설정합니다. 이는 줄 번호를 설정할 수 있는 **옵션** 창 항목에 액세스하는 가장 빠른 방법입니다. **빠른 실행** 표시줄을 사용하여 UI 클릭 수를 줄이는 방법을 알아봅니다.  
+ **오류 목록** 창에서 오류 코드 줄을 클릭하여 오류가 발생한 줄로 이동합니다. 또는 오른쪽 위에서 **빠른 실행** 표시줄을 클릭하고 “줄 번호”를 입력한 다음, **Enter** 키를 눌러 줄 번호를 설정합니다. 이는 줄 번호를 설정할 수 있는 **옵션** 창 항목에 액세스하는 가장 빠른 방법입니다. **빠른 실행** 표시줄을 사용하여 UI 클릭 수를 줄이는 방법을 알아봅니다.  
 
  ![줄 번호가 있는 Visual Studio 편집기](../ide/media/vs_ide_gs_debug_line_numbers.png "Vs_ide_gs_debug_line_numbers")  
 
@@ -87,7 +83,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  ![Visual Studio 전구 '옵션 없음' 텍스트](../ide/media/vs_ide_gs_debug_light_bulb_no_options.PNG "Vs_ide_gs_debug_light_bulb_no_options")  
 
- 경험을 바탕으로 화살표 키와 **Ctrl+**. 를 빠르게 사용하여 빠른 옵션 리팩터링 기회를 확인하고 코드를 정리할 수 있습니다.  
+ 경험을 바탕으로 화살표 키와 **Ctrl+**. 빠른 옵션 리팩터링 기회를 확인하고 코드를 정리할 수 있습니다.  
 
  전구에 대한 자세한 내용은 [전구를 사용하여 빠른 작업 수행](../ide/perform-quick-actions-with-light-bulbs.md)을 참조하세요.  
 
@@ -132,7 +128,7 @@ Visual Studio에서는 프로젝트 빌드 및 디버깅 도구의 강력한 통
 
  변수 위로 마우스를 가져가서 현재 포함된 값 및 참조를 확인합니다. 예상하지 않은 값이 표시되는 경우 이전 또는 호출하는 코드 줄에 버그가 있을 가능성이 큽니다.  자세한 정보를 알아보려면 디버거 사용해 대해 [알아보세요](../debugger/getting-started-with-the-debugger.md).
 
- 또한 Visual Studio에서는 앱의 시간별 CPU 및 메모리 사용량을 관찰할 수 있는 진단 도구 창을 표시합니다. 나중에 앱 개발 시 이러한 도구를 사용하여 예기치 않은 과도한 CPU 사용량이나 메모리 할당을 찾을 수 있습니다. **조사식** 창 및 중단점과 함께 사용하여 예기치 않은 높은 사용량이나 해제되지 않은 리소스의 원인을 확인합니다.  자세한 내용은 [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)를 참조하세요.
+ 또한 Visual Studio에서는 앱의 시간별 CPU 및 메모리 사용량을 관찰할 수 있는 **진단 도구** 창을 표시합니다. 나중에 앱 개발 시 이러한 도구를 사용하여 예기치 않은 과도한 CPU 사용량이나 메모리 할당을 찾을 수 있습니다. **조사식** 창 및 중단점과 함께 사용하여 예기치 않은 높은 사용량이나 해제되지 않은 리소스의 원인을 확인합니다.  자세한 내용은 [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)를 참조하세요.
 
 ### <a name="run-unit-tests"></a>단위 테스트 실행  
  단위 테스트는 코드 버그에 대한 첫 번째 방어선입니다. 올바르게 수행되면, 일반적으로 단일 함수인 단일 코드 "단위"를 테스트하며 이렇게 디버깅하는 것이 전체 프로그램을 디버깅하는 것보다 훨씬 쉽기 때문입니다. Visual Studio에서는 관리 코드 및 네이티브 코드에 대한 Microsoft 유닛 테스트 프레임워크를 설치합니다. 유닛 테스트 프레임워크를 사용하여 유닛 테스트를 만들고, 실행하고, 이러한 테스트 결과를 보고합니다. 변경 시 단위 테스트를 다시 실행하여 코드가 여전히 제대로 작동하는지 테스트합니다. Visual Studio Enterprise Edition을 사용하는 경우 빌드할 때마다 테스트를 자동으로 실행할 수 있습니다.  

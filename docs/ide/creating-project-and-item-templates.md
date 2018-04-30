@@ -1,12 +1,9 @@
 ---
-title: "프로젝트와 파일에 대한 Visual Studio 템플릿 | Microsoft Docs"
-ms.custom: 
+title: 프로젝트와 파일에 대한 Visual Studio 템플릿 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - templates [Visual Studio], project
 - templates [Visual Studio], item
@@ -14,12 +11,12 @@ helpviewer_keywords:
 - project templates [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 3959b01fdfc0ff77bdd5a3ffa0c96366b9da87d7
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.openlocfilehash: 900b750df391029a1bed15b2da003f94c085148a
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="project-and-item-templates"></a>프로젝트 및 항목 템플릿
 
@@ -29,7 +26,7 @@ ms.lasthandoff: 01/05/2018
 
 미리 정의된 많은 프로젝트 템플릿과 항목 템플릿이 Visual Studio와 함께 설치됩니다. 예를 들어 **새 프로젝트** 대화 상자에 표시되는 Visual Basic 및 C# **Windows Forms 앱** 및 **클래스 라이브러리** 템플릿은 프로젝트 템플릿입니다. 항목 템플릿은 **새 항목 추가** 대화 상자에 표시되며 코드 파일, XML 파일, HTML 페이지 및 스타일 시트와 같은 항목을 포함합니다.
 
-이러한 템플릿은 사용자에게 프로젝트를 만들거나 기존 프로젝트를 확장하기 위한 시작 지점을 제공합니다. 프로젝트 템플릿은 특정 프로젝트 형식에 필요한 파일을 제공하고 표준 어셈블리 참조를 포함하며 기본 프로젝트 속성과 컴파일러 옵션을 설정합니다. 정확한 파일 확장명이 있는 하나의 빈 파일에서부터 스텁 코드가 있는 소스 코드 파일, 디자이너 정보 파일, 포함된 리소스 등이 포함된 다중 파일 항목에 이르기까지 항목 템플릿의 범위는 다양합니다.
+이러한 템플릿은 사용자에게 프로젝트를 만들거나 기존 프로젝트를 확장하기 위한 시작 지점을 제공합니다. 프로젝트 템플릿은 특정 프로젝트 형식에 필요한 파일을 제공하고 표준 어셈블리 참조를 포함하며 기본 프로젝트 속성과 컴파일러 옵션을 설정합니다. 정확한 파일 확장명이 있는 하나의 빈 파일에서부터 스텁 코드가 있는 여러 소스 코드 파일, 디자이너 정보 파일 및 포함 리소스에 이르기까지 항목 템플릿의 범위는 다양합니다.
 
 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 있는 설치된 템플릿 외에도 직접 템플릿을 작성하거나 커뮤니티에서 만든 템플릿을 다운로드하여 사용할 수 있습니다. 자세한 내용은 [방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md) 및 [방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)를 참조하세요.
 
@@ -37,11 +34,11 @@ ms.lasthandoff: 01/05/2018
 
 모든 프로젝트 템플릿과 항목 템플릿은 Visual Studio와 함께 설치되었는지 직접 만들었는지에 상관없이 동일한 원칙으로 작동하며 비슷한 내용으로 구성됩니다. 모든 템플릿에는 다음과 같은 항목이 포함됩니다.
 
-- 템플릿이 사용될 때 만들어지는 파일입니다. 여기에는 소스 코드 파일, 포함 리소스, 프로젝트 파일 등이 있습니다.
+- 템플릿이 사용될 때 만들어지는 파일입니다. 이러한 파일에는 소스 코드 파일, 포함 리소스, 프로젝트 파일 등이 있습니다.
 
-- .vstemplate 파일을 엽니다. 이 파일에는 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 템플릿을 표시하고 템플릿에서 프로젝트 또는 항목을 만드는 데 필요한 정보를 제공하는 메타데이터가 들어 있습니다. .vstemplate 파일에 대한 자세한 내용은 [템플릿 매개 변수](../ide/template-parameters.md)를 참조하세요.
+- 메타데이터를 포함한 하나의 *.vstemplate* 파일은 **새 프로젝트** 및 **새 항목 추가** 대화 상자에 템플릿을 표시하고 템플릿에서 프로젝트 또는 항목을 만들 필요가 있습니다. *.vstemplate* 파일에 대한 자세한 내용은 [템플릿 매개 변수](../ide/template-parameters.md)를 참조하세요.
 
-이러한 파일이 .zip 파일로 압축되어 올바른 폴더에 배치되면 Visual Studio에서는 다음 위치에 이를 자동으로 표시합니다.
+이러한 파일이 *.zip* 파일로 압축되어 올바른 폴더에 배치되면 Visual Studio에서는 다음 위치에 이를 자동으로 표시합니다.
 
 - 프로젝트 템플릿은 **새 프로젝트** 대화 상자에 표시됩니다.
 
@@ -51,7 +48,7 @@ ms.lasthandoff: 01/05/2018
 
 ## <a name="starter-kits"></a>시작 키트
 
-시작 키트는 커뮤니티의 다른 멤버와 공유 가능한 향상된 템플릿입니다. 시작 키트에는 유용한 실제 응용 프로그램을 빌드하는 동안 새로운 도구와 프로그래밍 기술을 익히는 데 도움이 되는 컴파일할 코드 샘플, 설명서 및 기타 리소스가 포함되어 있습니다. 시작 키트에 대한 기본 내용과 절차는 템플릿에서와 동일합니다. 자세한 내용은 [방법: 시작 키트 만들기](../ide/how-to-create-starter-kits.md)를 참조하세요.
+시작 키트는 커뮤니티의 다른 멤버와 공유 가능한 향상된 템플릿입니다. 시작 키트에는 유용한 실제 응용 프로그램을 빌드하는 동안 새로운 도구와 프로그래밍 기술을 익히는 데 도움이 되는 컴파일 가능한 코드 샘플, 설명서 및 기타 리소스가 포함되어 있습니다. 시작 키트에 대한 기본 내용과 절차는 템플릿에서와 동일합니다. 자세한 내용은 [방법: 시작 키트 만들기](../ide/how-to-create-starter-kits.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

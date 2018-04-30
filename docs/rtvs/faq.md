@@ -1,26 +1,20 @@
 ---
-title: "Visual Studio용 R 도구 FAQ | Microsoft Docs"
-description: "Visual Studio의 R에 대한 질문과 대답"
-ms.custom: 
+title: Visual Studio용 R 도구 FAQ
+description: Visual Studio의 R에 대한 질문과 대답
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: reference
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 5d6ede092549a3f055c15b1f7deafe0421797c44
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: a8b9dd119aba9a5c28b450db11b2eb380b1872a0
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="frequently-asked-questions"></a>질문과 대답
 
@@ -56,7 +50,7 @@ ms.lasthandoff: 02/09/2018
 
 **질문: 실제로 저는 현재 Visual Studio 설정을 좋아하지만 새 데이터 과학 설정을 사용해 보고 싶습니다. 어떻게 할까요?**
 
-대답: **도구 > 설정 가져오기 및 내보내기...**를 사용하여 현재 Visual Studio 설정을 저장하고 데이터 과학 설정으로 전환합니다. 저장된 설정을 복원하려면 **설정 가져오기 및 내보내기...** 명령을 다시 사용합니다.
+대답: **도구 > 설정 가져오기 및 내보내기...** 를 사용하여 현재 Visual Studio 설정을 저장하고 데이터 과학 설정으로 전환합니다. 저장된 설정을 복원하려면 **설정 가져오기 및 내보내기...** 명령을 다시 사용합니다.
 
 **질문: 네트워크 공유에 내 Visual Studio 프로젝트를 저장할 수 있나요?**
 

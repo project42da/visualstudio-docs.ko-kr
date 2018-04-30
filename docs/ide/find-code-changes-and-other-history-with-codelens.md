@@ -1,23 +1,20 @@
 ---
-title: "CodeLens에서 코드 변경 내용 및 기타 기록 찾기 | Microsoft 문서"
-ms.custom: 
+title: CodeLens에서 코드 변경 내용 및 기타 기록 찾기 | Microsoft 문서
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a1123d1c557f6e7f01eb98e668b4f13785ee6893
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 1e20081320109e5334360d0cc1f38b187f05d574
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="find-code-changes-and-other-history-with-codelens"></a>CodeLens에서 코드 변경 내용 및 기타 기록 찾기
 
@@ -34,7 +31,7 @@ ms.lasthandoff: 01/29/2018
 
 ![CodeLens &#45; 팀에 문의](../ide/media/codelensovervew2.png "CodeLensOvervew2")  
 
-확인하려는 지표를 선택하거나 CodeLens를 설정 또는 해제하려면 **도구**, **옵션**, **텍스트 편집기**, **모든 언어**, **CodeLens**로 이동합니다.  
+확인하려는 지표를 선택하거나 CodeLens를 설정 또는 해제하려면 **도구** > **옵션** > **텍스트 편집기** > **모든 언어** > **CodeLens**로 이동합니다.  
 
 ## <a name="FindReferences"></a> 코드에 대한 참조 찾기
 
@@ -44,7 +41,7 @@ ms.lasthandoff: 01/29/2018
 
 -  C# 또는 Visual Basic 코드
 
-**참조** 지표를 선택합니다(**Alt + 2**). **0 참조**가 표시된 경우 C# 또는 Visual Basic 코드의 참조가 없습니다. 여기에 XAML, ASPX 파일 등 다른 항목의 참조는 포함되지 않습니다.
+**참조** 지표를 선택합니다(**Alt + 2**). **0 참조**가 표시된 경우 C# 또는 Visual Basic 코드의 참조가 없습니다. 여기에 **.xaml** 및 **.aspx** 파일 등 다른 항목의 참조는 포함되지 않습니다.
 
 ![CodeLens &#45; 참조 지표 선택](../ide/media/codelensviewreferenceslist.png "CodeLensViewReferencesList")  
 
@@ -94,7 +91,7 @@ Visual Studio 편집기에서 열 수 있는 기타 모든 파일 형식의 경�
 
 ![모든 코드 변경 내용 표시](../ide/media/codelensshowsallchanges.png "CodeLensShowsAllChanges")  
 
-그러면 변경 집합에 대한 기록 창이 열립니다.  
+그러면 변경 집합에 대한 **기록** 창이 열립니다.  
 
 ![모든 코드 변경 내용에 대한 기록 창](../ide/media/codelenscodechangeshistory.png "CodeLensCodeChangesHistory")  
 
@@ -191,7 +188,7 @@ Visual Studio 편집기에서 열 수 있는 기타 모든 파일 형식의 경�
 
 ##  <a name="FindRunUnitTests"></a> 코드에 대한 단위 테스트 찾기
 
-테스트 탐색기를 열지 않고 코드에 대한 단위 테스트 관련 추가 정보를 확인할 수 있습니다. 필요한 사항:  
+**테스트 탐색기**를 열지 않고 코드에 대한 단위 테스트 관련 추가 정보를 확인할 수 있습니다. 필요한 사항:  
 
 -   Visual Studio Enterprise 또는 Visual Studio Professional  
   
@@ -223,7 +220,7 @@ Visual Studio 편집기에서 열 수 있는 기타 모든 파일 형식의 경�
 
 ###  <a name="ChangeOrTurnOff"></a> Q: CodeLens를 설정하거나 해제하려면 어떻게 하나요? 또는 확인할 지표는 어떻게 선택하나요?
 
-**A:**  참조 지표를 제외하고, 지표를 설정하거나 해제할 수 있습니다. 그렇게 하려면 **도구**, **옵션**, **텍스트 편집기**, **모든 언어**, **CodeLens**로 이동합니다.  
+**A:**  참조 지표를 제외하고, 지표를 설정하거나 해제할 수 있습니다. **도구** > **옵션** > **텍스트 편집기** > **모든 언어**  >  **CodeLens**로 이동합니다.  
   
  지표가 설정되어 있으면 해당 지표에서 CodeLens 옵션을 열 수도 있습니다.  
   
@@ -265,7 +262,7 @@ CodeLens는 다른 버전의 Lync 또는 Skype가 설치되는 것을 지원하�
 
 ### <a name="q-how-do-i-change-the-font-and-color-for-codelens"></a>Q: CodeLens의 글꼴과 색을 변경하려면 어떻게 해야 하나요?
 
-**A:** **도구**, **옵션**, **환경**, **글꼴 및 색**으로 이동합니다.  
+**A:** **도구** > **옵션** > **환경** > **글꼴 및 색**으로 이동합니다.  
 
 ![CodeLens &#45; 글꼴 및 색 설정 변경](../ide/media/codelensoptionsfontscolorssettings.png "CodeLensOptionsFontsColorsSettings")  
 
@@ -277,7 +274,7 @@ CodeLens는 다른 버전의 Lync 또는 Skype가 설치되는 것을 지원하�
 
 3.  **아래쪽 화살표** 를 눌러 **글꼴 및 색**으로 이동합니다.  
 
-4.  **Tab** 을 눌러 **설정 표시** 목록으로 이동한 다음 **아래쪽 화살표** 를 눌러 **CodeLens**를 선택합니다.  
+4.  **Tab**을 눌러 **설정 표시** 목록으로 이동한 다음, **아래쪽 화살표** 를 눌러 **CodeLens**를 선택합니다.  
 
 ### <a name="q-can-i-move-the-codelens-heads-up-display"></a>Q: CodeLens 헤드업 표시를 이동할 수 있습니까?
 
@@ -311,4 +308,4 @@ CodeLens는 다른 버전의 Lync 또는 Skype가 설치되는 것을 지원하�
 
 ## <a name="see-also"></a>참고 항목
 
-[편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+[편집기에서코 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)

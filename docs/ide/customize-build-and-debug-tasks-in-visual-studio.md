@@ -1,8 +1,8 @@
 ---
-title: "tasks.vs.json 및 launch.vs.json을 사용하여 Visual Studio에서 빌드 및 디버그 작업 사용자 지정 | Microsoft Docs"
+title: tasks.vs.json 및 launch.vs.json을 사용하여 Visual Studio에서 빌드 및 디버그 작업 사용자 지정 | Microsoft Docs
 ms.date: 02/21/2018
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - NMAKE [Visual Studio]
 - makefiles [Visual Studio]
@@ -12,20 +12,20 @@ helpviewer_keywords:
 - vsworkspacesettings.json file [Visual Studio]
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d40bd35d893afeb8e76e18d46185b3d63add1c5
-ms.sourcegitcommit: 3abca1c733af876c8146daa43a62e829833be280
+ms.openlocfilehash: bc193c8c54c09a7d2950cd80994d62512d9232d7
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/23/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>“폴더 열기” 개발에 대한 빌드 및 디버그 작업 사용자 지정
 
 Visual Studio는 여러 다른 언어 및 코드베이스를 실행하는 방법을 알고 있지만, 모든 것을 실행하는 방법은 알고 있지 않습니다. Visual Studio에서 [코드 폴더를 열었고](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md) Visual Studio에서 코드 실행 방법을 아는 경우에는 아무런 추가 구성 없이 바로 코드를 실행할 수 있습니다.
 
-코드베이스가 Visual Studio에서 인식하지 못하는 사용자 지정 빌드 도구를 사용하는 경우 Visual Studio에서 코드를 실행하고 디버그하려면 몇 가지 구성 세부 정보를 제공해야 할 수 있습니다. ‘빌드 작업’을 정의하여 코드 빌드 방법을 Visual Studio에 알립니다. 코드를 빌드하고 실행할 수 있도록 언어에 필요한 모든 항목을 지정하는 하나 이상의 빌드 작업을 만들 수 있습니다. 또한 원하는 거의 모든 작업을 수행할 수 있는 임의의 작업을 만들 수도 있습니다. 예를 들어 폴더의 내용을 나열하거나 파일의 이름을 바꾸는 작업을 만들 수 있습니다.
+코드베이스가 Visual Studio에서 인식하지 못하는 사용자 지정 빌드 도구를 사용하는 경우 Visual Studio에서 코드를 실행하고 디버그하려면 몇 가지 구성 세부 정보를 제공해야 할 수 있습니다. *빌드 작업*을 정의하여 코드 빌드 방법을 Visual Studio에 알립니다. 코드를 빌드하고 실행할 수 있도록 언어에 필요한 모든 항목을 지정하는 하나 이상의 빌드 작업을 만들 수 있습니다. 또한 원하는 거의 모든 작업을 수행할 수 있는 임의의 작업을 만들 수도 있습니다. 예를 들어 폴더의 내용을 나열하거나 파일의 이름을 바꾸는 작업을 만들 수 있습니다.
 
 다음 *.json* 파일을 사용하여 프로젝트 없는 코드베이스를 사용자 지정합니다.
 
@@ -38,7 +38,7 @@ Visual Studio는 여러 다른 언어 및 코드베이스를 실행하는 방법
 이러한 *.json* 파일은 코드베이스의 루트 폴더에 있는 *.vs*라는 숨겨진 폴더에 있습니다. **솔루션 탐색기**에서 파일이나 폴더에 대한 **작업 구성** 또는 **디버그 및 시작 설정**을 선택하면 Visual Studio에서 *tasks.vs.json* 및 *launch.vs.json* 파일이 필요에 따라 만들어집니다. 사용자는 일반적으로 이러한 *.json* 파일을 소스 제어로 체크 인하지 않으므로 파일이 숨겨져 있습니다. 그러나 소스 제어로 체크 인할 수 있도록 파일을 코드베이스의 루트로 끌어서 놓으면 파일이 표시됩니다.
 
 > [!TIP]
-> Visual Studio에서 숨겨진 파일을 보려면 [솔루션 탐색기] 도구 모음에서 **모든 파일 표시** 단추를 선택합니다.
+> Visual Studio에서 숨겨진 파일을 보려면 **솔루션 탐색기** 도구 모음에서 **모든 파일 표시** 단추를 선택합니다.
 
 ## <a name="define-tasks-with-tasksvsjson"></a>tasks.vs.json으로 작업 정의
 
@@ -52,9 +52,9 @@ Visual Studio는 여러 다른 언어 및 코드베이스를 실행하는 방법
 
 ### <a name="define-custom-build-tasks"></a>사용자 지정 빌드 작업 정의
 
-코드베이스가 Visual Studio에서 인식하지 못하는 사용자 지정 빌드 도구를 사용하는 경우 몇 가지 구성 단계를 완료할 때까지 Visual Studio에서 코드를 실행하고 디버그할 수 없습니다. Visual Studio는 코드를 빌드, 다시 빌드 및 정리하는 방법을 Visual Studio에 알릴 수 있는 ‘빌드 작업’을 제공합니다. *tasks.vs.json* 빌드 작업 파일은 Visual Studio 내부 개발 루프를 코드베이스에서 사용하는 사용자 지정 빌드 도구에 연결합니다.
+코드베이스가 Visual Studio에서 인식하지 못하는 사용자 지정 빌드 도구를 사용하는 경우 몇 가지 구성 단계를 완료할 때까지 Visual Studio에서 코드를 실행하고 디버그할 수 없습니다. Visual Studio는 코드를 빌드, 다시 빌드 및 정리하는 방법을 Visual Studio에 알릴 수 있는 *빌드 작업*을 제공합니다. *tasks.vs.json* 빌드 작업 파일은 Visual Studio 내부 개발 루프를 코드베이스에서 사용하는 사용자 지정 빌드 도구에 연결합니다.
 
-*hello.cs*라는 단일 C# 파일로 구성된 코드베이스를 고려하세요. 이러한 코드베이스에 대한 메이크파일은 다음과 같이 표시됩니다.
+*hello.cs*라는 단일 C# 파일로 구성된 코드베이스를 고려하세요. 이러한 코드베이스에 대한 *메이크파일*은 다음과 같이 표시됩니다.
 
 ```makefile
 build: directory hello.exe
@@ -73,7 +73,7 @@ bin:
     md bin
 ```
 
-빌드, 정리 및 다시 빌드 대상이 포함된 이러한 메이크파일의 경우 다음 *tasks.vs.json* 파일을 정의할 수 있습니다. NMAKE를 빌드 도구로 사용하여 코드베이스를 빌드, 다시 빌드 및 정리하기 위한 세 가지 빌드 작업을 포함합니다.
+빌드, 정리 및 다시 빌드 대상이 포함된 이러한 *메이크파일*의 경우 다음 *tasks.vs.json* 파일을 정의할 수 있습니다. NMAKE를 빌드 도구로 사용하여 코드베이스를 빌드, 다시 빌드 및 정리하기 위한 세 가지 빌드 작업을 포함합니다.
 
 ```json
 {
@@ -117,7 +117,7 @@ bin:
 }
 ```
 
-*tasks.vs.json*에서 빌드 작업을 정의한 후 **솔루션 탐색기**의 해당 파일에 추가적인 상황에 맞는 메뉴 항목이 추가됩니다. 이 예제의 경우 **빌드**, **다시 빌드** 및 **정리** 옵션이 ‘메이크파일’ 파일의 상황에 맞는 메뉴에 추가됩니다.
+*tasks.vs.json*에서 빌드 작업을 정의한 후 **솔루션 탐색기**의 해당 파일에 추가적인 상황에 맞는 메뉴 항목이 추가됩니다. 이 예제의 경우 “빌드”, “다시 빌드” 및 “정리” 옵션이 *메이크파일* 파일의 상황에 맞는 메뉴에 추가됩니다.
 
 ![빌드, 다시 빌드 및 정리가 포함된 메이크파일 상황에 맞는 메뉴](media/customize-build-rebuild-clean.png)
 
@@ -203,25 +203,25 @@ bin:
 
 |||
 |-|-|
-|`"*"`| 작업 영역의 모든 파일 및 폴더에서 작업을 사용할 수 있습니다.|
-|`"*/"`| 작업 영역의 모든 폴더에서 작업을 사용할 수 있습니다.|
-|`"*.js"`| 작업 영역의 확장명이 .js인 모든 파일에서 작업을 사용할 수 있습니다.|
-|`"/*.js"`| 작업 영역 루트의 확장명이 .js인 모든 파일에서 작업을 사용할 수 있습니다.|
-|`"src/*/"`| “src” 폴더의 모든 하위 폴더에서 작업을 사용할 수 있습니다.|
-|`"makefile"`| 작업 영역의 모든 메이크파일 파일에서 작업을 사용할 수 있습니다.|
-|`"/makefile"`| 작업 영역 루트의 메이크파일에만 작업을 사용할 수 있습니다.|
+|`"*"`| 작업 영역의 모든 파일 및 폴더에서 작업을 사용할 수 있음|
+|`"*/"`| 작업 영역의 모든 폴더에서 작업을 사용할 수 있음|
+|`"*.js"`| 작업 영역의 확장명이 *.js*인 모든 파일에서 작업을 사용할 수 있음|
+|`"/*.js"`| 작업 영역 루트의 확장명이 *.js*인 모든 파일에서 작업을 사용할 수 있음|
+|`"src/*/"`| *src* 폴더의 모든 하위 폴더에서 작업을 사용할 수 있음|
+|`"makefile"`| 작업 영역의 모든 *메이크파일* 파일에서 작업을 사용할 수 있음|
+|`"/makefile"`| 작업 영역 루트의 *메이크파일*에만 작업을 사용할 수 있음|
 
 #### <a name="macros-for-tasksvsjson"></a>tasks.vs.json의 매크로
 
 |||
 |-|-|
 |`${env.<VARIABLE>}`| 개발자 명령 프롬프트에 대해 설정된 환경 변수(예: ${env.PATH}, ${env.COMSPEC} 등)를 지정합니다. 자세한 내용은 [Visual Studio용 개발자 명령 프롬프트](/dotnet/framework/tools/developer-command-prompt-for-vs)를 참조하세요.|
-|`${workspaceRoot}`| 작업 영역 폴더의 전체 경로(예: “C:\sources\hello”)|
-|`${file}`| 이 작업을 실행하도록 선택된 파일 또는 폴더의 전체 경로(예: “C:\sources\hello\src\hello.js”)|
-|`${relativeFile}`| 파일 또는 폴더의 상대 경로(예: “src\hello.js”)|
-|`${fileBasename}`| 경로 또는 확장명이 없는 파일 이름(예: “hello”)|
-|`${fileDirname}`| 파일 이름을 제외한 파일의 전체 경로(예: “C:\sources\hello\src”)|
-|`${fileExtname}`| 선택한 파일의 확장명(예: “.js”)|
+|`${workspaceRoot}`| 작업 영역 폴더의 전체 경로(예: *C:\sources\hello*)|
+|`${file}`| 이 작업을 실행하도록 선택된 파일 또는 폴더의 전체 경로(예: *C:\sources\hello\src\hello.js*)|
+|`${relativeFile}`| 파일 또는 폴더의 상대 경로(예: *src\hello.js*)|
+|`${fileBasename}`| 경로 또는 확장명이 없는 파일 이름(예: *hello*)|
+|`${fileDirname}`| 파일 이름을 제외한 파일의 전체 경로(예: *C:\sources\hello\src*)|
+|`${fileExtname}`| 선택한 파일의 확장명(예: *.js*)|
 
 ## <a name="configure-debugging-with-launchvsjson"></a>launch.vs.json을 사용하여 디버깅 구성
 
@@ -286,7 +286,7 @@ bin:
 ![디버그 구성 드롭다운 목록](media/customize-debug-configurations.png)
 
 > [!NOTE]
-> *launch.vs.json*의 `configurations` 배열 속성은 두 개의 파일 위치인 코드베이스의 루트 디렉터리 및 *.vs* 디렉터리에서 읽습니다. 충돌이 있으면 *.vs\launch.vs.json*의 값에 우선 순위가 제공됩니다.
+> *launch.vs.json*의 `configurations` 배열 속성은 두 개의 파일 위치인&mdash;코드베이스의 루트 디렉터리 및 *.vs* 디렉터리에서 읽습니다. 충돌이 있으면 *.vs\launch.vs.json*의 값에 우선 순위가 제공됩니다.
 
 ## <a name="define-workspace-settings-in-vsworkspacesettingsjson"></a>VSWorkspaceSettings.json에서 작업 영역 설정 정의
 

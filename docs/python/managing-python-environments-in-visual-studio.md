@@ -1,26 +1,21 @@
 ---
-title: Python 환경 및 인터프리터를 관리하는 방법 | Microsoft Docs
+title: Python 환경 및 인터프리터를 관리하는 방법
 description: Visual Studio에서 Python 환경 창을 사용하여 전역 및 가상 환경을 관리하며, Python 인터프리터 설치, 패키지 설치, 검색 경로 설정, Visual Studio 프로젝트의 환경 관리를 위한 사용자 지정 환경을 설정하는 방법입니다.
-ms.custom: ''
 ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.devlang: python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a1bf9c9c016a71c816ed8cc40b675c520e9c9397
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 422503cf1e9332ce2b42674f7a6293e844401772
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="managing-python-environments-in-visual-studio"></a>Visual Studio에서 Python 환경 관리
 
@@ -102,7 +97,7 @@ Visual Studio에서 인식하는 환경이 **Python 환경** 창에 표시됩니
 
 Conda 환경을 포함하여 비표준 위치에 설치된 환경을 식별하려면 다음 단계를 수행합니다.
 
-1. **Python 환경** 창에서 **+ 사용자 지정...**을 선택하면 **구성** 탭이 열립니다.
+1. **Python 환경** 창에서 **+ 사용자 지정...** 을 선택하면 **구성** 탭이 열립니다.
 
     ![새 사용자 지정 환경의 기본 보기](media/environments-custom-1.png)
 

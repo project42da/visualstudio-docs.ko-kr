@@ -1,28 +1,26 @@
 ---
-title: "방법: 인코딩을 사용하여 파일 저장 및 열기 | Microsoft 문서"
-ms.custom: 
+title: '방법: 인코딩을 사용하여 파일 저장 및 열기 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Unicode, bi-directional language support
 - files, encoding
 - bi-directional language support, encoded files
 - file encoding, bi-directional languages
 ms.assetid: cb52b732-b395-4ba1-a3ef-104b3942a12a
-caps.latest.revision: "8"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 25ec36e6b124f47c4bb13be8f7affd9b7ee54553
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 117f82cca454a4d82e6789c17486e808912387be
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-save-and-open-files-with-encoding"></a>방법: 인코딩을 사용하여 파일 저장 및 열기
 양방향 언어를 지원하기 위해 특정 문자 인코딩을 사용하여 파일을 저장할 수 있습니다. Visual Studio에 파일이 제대로 표시되도록 파일을 열 때 인코딩을 지정할 수 있습니다.  
@@ -61,5 +59,5 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="see-also"></a>참고 항목
 [인코딩 및 줄 바꿈](encodings-and-line-breaks.md)  
-[인코딩 및 Windows Forms 전역화](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)   
-[응용 프로그램 전역화 및 지역화](../ide/globalizing-and-localizing-applications.md)
+[인코딩 및 Windows Forms 세계화](/dotnet/framework/winforms/advanced/encoding-and-windows-forms-globalization)   
+[세계화 및 지역화 응용 프로그램](../ide/globalizing-and-localizing-applications.md)

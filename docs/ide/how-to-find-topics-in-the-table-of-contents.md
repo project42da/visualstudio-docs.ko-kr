@@ -1,13 +1,10 @@
 ---
-title: "Visual Studio 도움말 뷰어 목차 사용 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio 도움말 뷰어 목차 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/02/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - hv_contents
 helpviewer_keywords:
@@ -16,17 +13,16 @@ helpviewer_keywords:
 - Contents tab [Help Viewer]
 - table of contents filtering [Help Viewer]
 ms.assetid: 8b98464d-2b05-4710-ad68-5647e78c6b7b
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fdb49d915871bd9ac955ed61cdc7850bf35d6f41
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+ms.openlocfilehash: db53125c30a2136500b6c99818b7143511bd2788
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-find-topics-in-the-table-of-contents"></a>방법: 목차에서 항목 찾기
 **콘텐츠** 탭에서 목차를 사용하여 정보를 찾을 수 있습니다. 목차는 설치된 책의 모든 항목을 포함하는 확장명 가능한 목록입니다. 목차를 탐색하는 방법에 대한 내게 필요한 옵션 정보를 보려면 [바로 가기 키(도움말 뷰어)](../ide/shortcut-keys-help-viewer.md)를 참조하세요.  
@@ -35,7 +31,7 @@ ms.lasthandoff: 12/22/2017
 >  목차에서 사용할 수 있는 항목의 범위는 선택한 필터에 따라 다릅니다.  
   
 ## <a name="filter-the-toc"></a>목차 필터링  
-목차를 필터링하여 **콘텐츠** 탭에 나타나는 항목의 범위를 좁힐 수 있습니다. 제목은 지정한 어구의 어근을 포함하는 경우에만 목록에 나타납니다. 예를 들어 필터로 "문제 해결하기"를 지정하는 경우 "문제 해결" 또는 “문제 해결하기"가 포함된 제목만 나타납니다. 제목에 해당 어구가 포함되지 않은 노드는 줄임표(...)가 있는 단일 노드로 축소됩니다.  
+목차를 필터링하여 **콘텐츠** 탭에 나타나는 항목의 범위를 좁힐 수 있습니다. 제목은 지정한 어구의 어근을 포함하는 경우에만 목록에 나타납니다. 예를 들어 필터로 "문제 해결하기"를 지정하는 경우 "문제 해결" 또는 “문제 해결하기"가 포함된 제목만 나타납니다. 제목에 해당 어구가 포함되지 않은 노드는 줄임표(**...**)가 있는 단일 노드로 축소됩니다.  
   
 #### <a name="to-filter-the-toc"></a>목차를 필터링하려면  
   
@@ -53,7 +49,7 @@ ms.lasthandoff: 12/22/2017
   
 1.  항목을 봅니다.  
   
-2.  도구 모음에서 **콘텐츠에 항목 표시** 단추를 클릭하거나 **Ctrl+S**를 누릅니다.  
+2.  도구 모음에서 **콘텐츠에 항목 표시** 단추를 클릭하거나 **Ctrl**+**S**를 누릅니다.  
   
      **콘텐츠** 탭이 열리고 목차에서 항목의 위치가 표시됩니다.  
   

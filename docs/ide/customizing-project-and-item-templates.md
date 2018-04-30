@@ -1,23 +1,21 @@
 ---
-title: "Visual Studio에서 프로젝트 및 항목 템플릿 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 프로젝트 및 항목 템플릿 사용자 지정 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - customizing templates [Visual Studio]
 - Visual Studio templates, customizing
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: cd0a1f9fd9bf9885fa52e86ea443eaa3164d321e
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.openlocfilehash: 04ab5e9648f95946208b71e3b3739630f594cb0b
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="customizing-project-and-item-templates"></a>프로젝트 템플릿 및 항목 템플릿 사용자 지정
 
@@ -37,9 +35,9 @@ ms.lasthandoff: 01/05/2018
 
    자세한 내용은 [방법: 프로젝트 템플릿에 마법사 사용(확장성)](../extensibility/how-to-use-wizards-with-project-templates.md)을 참조하세요.
 
-## <a name="related-sections"></a>관련 단원
+### <a name="see-also"></a>참고 항목
 
-[프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
+[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
 [방법: 템플릿 문제 해결](../ide/how-to-troubleshoot-templates.md)  
 [방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)  
 [방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)  

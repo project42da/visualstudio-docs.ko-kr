@@ -1,8 +1,9 @@
 ---
-title: Azure Virtual Machine에서 Visual Studio 사용 | Microsoft Docs
+title: Azure Virtual Machine에서 Visual Studio 사용
 description: Azure Virtual Machine에서 Visual Studio를 사용하는 방법에 대한 자세한 정보
 ms.date: 03/03/2018
 ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 helpviewer_keywords:
 - azure services
@@ -14,18 +15,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a7e1a3646e2e30302548f2445b0ab657f8e3ec4
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: f0c87d482c2bc7ad174f7074091767fb6127bf70
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a id="top"> </a> Azure의 Visual Studio 이미지
+
 사전 구성된 Azure VM(가상 머신)에서 Visual Studio를 사용하는 것이 제대로 실행되는 개발 환경을 처음부터 구현하는 쉽고 빠른 방법입니다. 다양한 Visual Studio 구성을 포함하는 시스템 이미지가 [Azure Marketplace](https://azuremarketplace.microsoft.com/marketplace/apps?search=%22visual%20studio%202017%22&page=1)에서 제공됩니다.
 
 Azure를 처음 사용하는 경우 [체험 Azure 계정을 만드세요](https://azure.microsoft.com/free).
 
 ## <a name="what-configurations-and-versions-are-available"></a>사용 가능한 구성 및 버전은 무엇인가요?
+
 Azure Marketplace에서 최신 주 버전(Visual Studio 2017 및 Visual Studio 2015)용 이미지를 찾을 수 있습니다. 주 버전마다 원래 릴리스된 (RTW) 버전과 최신 업데이트 버전이 표시됩니다. 각 버전은 Visual Studio Enterprise 및 Visual Studio Community 버전을 제공합니다. 이러한 이미지는 최신 Visual Studio 및 Windows 업데이트를 포함하도록 매달 한 번 이상 업데이트됩니다. 이미지 이름은 동일하지만 각 이미지의 설명에 설치된 제품 버전과 이미지의 “기준” 날짜가 포함되어 있습니다.
 
 | 릴리스 버전                                              | 버전                     |     제품 버전     |
@@ -42,6 +45,7 @@ Azure Marketplace에서 최신 주 버전(Visual Studio 2017 및 Visual Studio 2
 자세한 내용은 [Visual Studio 서비스 정책](/visualstudio/productinfo/vs-servicing-vs)을 참조하세요.
 
 ## <a name="what-features-are-installed"></a>설치된 기능은 무엇인가요?
+
 각 이미지에는 해당 Visual Studio 버전에 권장되는 기능 집합이 포함되어 있습니다. 일반적으로 설치에는 다음이 포함됩니다.
 
 * 각 워크로드에 권장되는 선택적 구성 요소를 포함하는 사용 가능한 모든 워크로드
@@ -67,6 +71,7 @@ Azure Marketplace에서 최신 주 버전(Visual Studio 2017 및 Visual Studio 2
 이미지에 필요한 Visual Studio 기능이 없는 경우 페이지의 오른쪽 위에 있는 피드백 도구를 통해 피드백을 제공하세요.
 
 ## <a name="what-size-vm-should-i-choose"></a>어떤 크기의 VM을 선택해야 하나요?
+
 Azure는 전체 범위의 가상 머신 크기를 제공합니다. Visual Studio는 강력한 다중 스레드 응용 프로그램이므로 최소한 프로세서 2개와 7GB 메모리가 포함된 VM 크기를 선택하는 것이 좋습니다. Visual Studio 이미지에 권장되는 VM 크기는 다음과 같습니다.
 
    * Standard_D2_v3
@@ -82,6 +87,7 @@ Azure는 전체 범위의 가상 머신 크기를 제공합니다. Visual Studio
 Azure를 사용하면 VM의 크기를 조정하여 초기 선택 항목을 다시 조정할 수 있습니다. 새 VM을 더 적합한 크기로 프로비전하거나 기존 VM의 크기를 다른 기본 하드웨어로 조정할 수 있습니다. 자세한 내용은 [Windows VM 크기 조정](/azure/virtual-machines/windows/resize-vm)을 참조하세요.
 
 ## <a name="after-the-vm-is-running-whats-next"></a>VM을 실행한 후 다음 작업은 무엇인가요?
+
 Visual Studio는 Azure의 “사용자 라이선스 필요” 모델을 따릅니다. 독점 하드웨어의 설치와 마찬가지로, 첫 번째 단계 중 하나는 Visual Studio 설치에 대한 라이선스를 부여하는 것입니다. Visual Studio 잠금을 해제하려면 다음 중 하나를 수행합니다.
 - Visual Studio 구독과 연결된 Microsoft 계정으로 로그인
 - 초기 구입 시 제공된 제품 키로 Visual Studio 잠금 해제
@@ -107,6 +113,7 @@ Visual Studio는 Azure의 “사용자 라이선스 필요” 모델을 따릅�
 또한 개발 작업 또는 기술은 다양한 개발 구성 및 여러 컴퓨터 구성과 같은 추가 확장성이 필요할 수 있습니다. Azure DevTest Labs를 사용하여 “골든 이미지”의 구성을 자동화하는 ‘레시피’를 만들 수 있습니다. DevTest Labs를 사용하여 팀이 실행 중인 VM에 대한 정책을 관리할 수도 있습니다. [개발자용 Azure DevTest Labs 사용](/azure/devtest-lab/devtest-lab-developer-lab)에서 DevTest Labs에 대한 자세한 정보를 확인할 수 있습니다.
 
 ## <a name="next-steps"></a>다음 단계
+
 이제 사전 구성된 Visual Studio 이미지에 대해 살펴보았으며, 다음 단계에서는 새 VM을 만들겠습니다.
 
 * [Azure Portal을 통해 VM 만들기](/azure/virtual-machines/windows/quick-create-portal)

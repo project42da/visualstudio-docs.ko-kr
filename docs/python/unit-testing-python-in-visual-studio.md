@@ -1,27 +1,21 @@
 ---
-title: Python에서 유닛 테스트 | Microsoft Docs
+title: Python에 대한 단위 테스트
 description: Visual Studio에서 Python 코드에 대해 유닛 테스트를 설정하면 테스트 탐색기 기능을 최대한 활용하여 테스트를 검색, 실행 및 디버그할 수 있습니다.
-ms.custom: ''
 ms.date: 07/13/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: eee1ec05a46050c5a994aa2d774a5be0090171f3
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: e75a689f3c03d7ad358da6dc9413f70aaf2c4eab
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="setting-up-unit-testing-for-python-code"></a>Python 코드에 대해 단위 테스트 설정
 
@@ -39,7 +33,7 @@ Python은 단위 테스트를 광범위하게 사용하여 프로그램을 설�
 
 규칙에 따라 Visual Studio는 이름이 `test`로 시작하는 메서드로 테스트를 식별합니다. 이 동작을 확인하려면 다음을 수행합니다.
 
-1. Visual Studio에 로드된 [Python 프로젝트](managing-python-projects-in-visual-studio.md)를 열고 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**을 선택한 후 **Python 단위 테스트**, **추가**를 선택합니다.
+1. Visual Studio에 로드된 [Python 프로젝트](managing-python-projects-in-visual-studio.md)를 열고 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...** 을 선택한 후 **Python 단위 테스트**, **추가**를 선택합니다.
 
 1. 이 작업은 표준 `unittest` 모듈을 가져오고 `unittest.TestCase`에서 테스트 클래스를 파생하며 스크립트를 직접 실행하는 경우 `unittest.main()`을 호출하는 코드가 있는 `test1.py` 파일을 만듭니다.
 

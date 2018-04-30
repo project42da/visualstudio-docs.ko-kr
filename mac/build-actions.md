@@ -1,17 +1,16 @@
 ---
-title: "빌드 작업"
+title: 빌드 작업
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
-ms.topic: article
 ms.assetid: 5399BCB1-E317-4C7B-87B1-C531E985DE6E
-ms.openlocfilehash: 78b0e715ca44c613b6a7ee839c0656e301308588
-ms.sourcegitcommit: ebe9fb5eda724936f7a059d35d987c29dffdb50d
+ms.openlocfilehash: 3e876bbc20f2f2e86ba7ec4806f67f4a2573a089
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/07/2017
+ms.lasthandoff: 04/20/2018
 ---
-# <a name="build-actions"></a>빌드 작업 
+# <a name="build-actions"></a>빌드 작업
 
 Mac용 Visual Studio 프로젝트의 모든 파일에는 빌드 중 파일에 발생하는 작업을 제어하는 빌드 작업이 있습니다. 아래 그림과 같이 파일을 마우스 오른쪽 단추로 클릭하고 **빌드 작업**으로 이동하면 이러한 빌드 작업을 설정할 수 있습니다.
 
@@ -26,4 +25,4 @@ C# 프로젝트에 대한 몇 가지 일반적인 빌드 작업은 다음과 같
 
 솔루션 탐색기에서 둘 이상의 파일을 선택하여 한 번에 여러 파일에 빌드 작업을 설정할 수 있습니다.
 
-또한 특정 프로젝트에 대한 빌드 작업이 있습니다. 예를 들어 Xamarin.iOS 프로젝트에는 앱 번들의 일부로 파일을 추가하는 **BundleResource** 빌드 작업이 있습니다. Xamarin.Android 특정 빌드 작업에 대한 정보는 developer.xamarin.com의 [빌드 프로세스](https://developer.xamarin.com/guides/android/under_the_hood/build_process/#Build_Actions) 가이드에서 확인할 수 있습니다.
+또한 특정 프로젝트에 대한 빌드 작업이 있습니다. 예를 들어 Xamarin.iOS 프로젝트에는 앱 번들의 일부로 파일을 추가하는 **BundleResource** 빌드 작업이 있습니다. Xamarin.Android 특정 빌드 작업에 대한 정보는 [빌드 프로세스](/xamarin/android/deploy-test/building-apps/build-process#Build_Actions) 가이드에서 확인할 수 있습니다.

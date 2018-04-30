@@ -1,26 +1,20 @@
 ---
-title: Visual Studio에서 R 시작 | Microsoft 문서
+title: R 시작
 description: 프로젝트 만들기, 대화형 창, 코드 편집 및 디버깅을 포함하여 Visual Studio에서 R을 사용하는 연습입니다.
-ms.custom: ''
 ms.date: 06/29/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
 ms.topic: tutorial
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 1a76b5df7a85fa86d6f0597be2f0316a4960b6ec
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: c4ec2ce9a399c363427ef80087c1db1e8ef68d2c
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="getting-started-with-r-tools-for-visual-studio"></a>Visual Studio용 R 도구 시작
 
@@ -29,7 +23,7 @@ RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installing-r-tools-for
 ## <a name="create-an-r-project"></a>R 프로젝트 만들기
 
 1. Visual Studio를 시작합니다.
-1. **파일 > 새로 만들기 > 프로젝트...**를 선택합니다. (Ctrl+Shift+N)
+1. **파일 > 새로 만들기 > 프로젝트...** 를 선택합니다. (Ctrl+Shift+N)
 1. **템플릿 > R** 아래에서 “R 프로젝트”를 선택하고, 프로젝트의 이름과 위치를 입력한 후 **확인**을 선택합니다.
 
    ![Visual Studio의 R(VS2017의 RTVS)에 대한 새 프로젝트 대화 상자](media/getting-started-01-new-project.png)

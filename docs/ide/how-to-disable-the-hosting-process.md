@@ -1,30 +1,26 @@
 ---
-title: "방법: 호스팅 프로세스 비활성화 | Microsoft Docs"
-ms.custom: 
+title: '방법: 호스팅 프로세스 비활성화 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - hosting process, disabling
 - vshost.exe, disabling the hosting process
 ms.assetid: 9157488d-737f-454b-8d8d-36f99de38bb0
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b43e285c35601cb0d50536a5f4c499d09ae9bbad
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 47264ef7f1a6a2bd1a4ad3da59f53836f9ebb902
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/19/2018
 ---
-# <a name="how-to-disable-the-hosting-process"></a>How to: Disable the Hosting Process
+# <a name="how-to-disable-the-hosting-process"></a>방법: 호스팅 프로세스 비활성화
 호스팅 프로세스를 사용하면 특정 API에 대한 호출에 영향이 있을 수 있습니다. 이 경우 올바른 결과를 반환하기 위해 호스팅 프로세스를 사용하지 않도록 설정해야 합니다.  
   
 ### <a name="to-disable-the-hosting-process"></a>호스팅 프로세스를 사용하지 않도록 설정하려면  
@@ -37,7 +33,7 @@ ms.lasthandoff: 01/29/2018
   
 4.  **Visual Studio 호스팅 프로세스 사용** 확인란을 선택 취소합니다.  
   
- 호스팅 프로세스가 사용하지 않도록 설정되면 여러 디버깅 기능을 사용할 수 없으며 성능 저하가 발생합니다. 자세한 내용은 [디버깅 및 호스팅 프로세스](../debugger/debugging-and-the-hosting-process.md)를 참조하세요.  
+ 호스팅 프로세스가 사용하지 않도록 설정되면 여러 디버깅 기능을 사용할 수 없으며 성능 저하가 발생합니다. 자세한 내용은 [디버그 및 호스팅 프로세스](../debugger/debugging-and-the-hosting-process.md)를 참조하세요.  
   
  일반적으로 호스팅 프로세스는 사용하지 않습니다.  
   
@@ -49,5 +45,5 @@ ms.lasthandoff: 01/29/2018
   
 ## <a name="see-also"></a>참고 항목
 
-[디버깅 및 호스팅 프로세스](../debugger/debugging-and-the-hosting-process.md)   
+[디버그 및 호스팅 프로세스](../debugger/debugging-and-the-hosting-process.md)   
 [호스팅 프로세스(vshost.exe)](../ide/hosting-process-vshost-exe.md)

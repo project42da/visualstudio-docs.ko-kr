@@ -1,6 +1,7 @@
 ---
-title: Visual Studio의 Live Unit Testing | Microsoft Docs
+title: Visual Studio에서 Live Unit Testing
 ms.date: 2017-03-07
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,11 +11,11 @@ author: rpetrusha
 ms.author: ronpet
 ms.workload:
 - dotnet
-ms.openlocfilehash: 2f3eced8d8aba9adb0da652e285a594cf32711ec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 577ebebec7de0599675f60d764dec52d0d8babd6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="live-unit-testing-with-visual-studio-2017"></a>Visual Studio 2017을 사용한 Live Unit Testing
 
@@ -170,7 +171,7 @@ Live Unit Testing이 테스트 결과를 자동으로 실행하고 업데이트�
 
 **코드 편집기 창에서 개별 테스트 제외**
 
-코드 편집기 창을 사용하여 개별 테스트 메서드를 포함하거나 제외시킬 수 있습니다. 코드 편집기 창에서 테스트 메서드의 시그니처를 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **Include [the selected method]\([선택한 메서드] 포함)**, **라이브 테스트**, **Exclude [the selected method]\([선택한 메서드] 제외)** 또는 **라이브 테스트**, **Exclude All But [the selected method]\([선택한 메서드]를 빼고 모두 제외)** 를 선택합니다. 여기서 [선택한 메서드]는 코드 창에서 선택한 메서드의 이름입니다. 
+코드 편집기 창을 사용하여 개별 테스트 메서드를 포함하거나 제외시킬 수 있습니다. 코드 편집기 창에서 테스트 메서드의 시그니처를 마우스 오른쪽 단추로 클릭하고 **라이브 테스트**, **Include [the selected method]/([선택한 메서드] 포함)**, **라이브 테스트**, **Exclude [the selected method]/([선택한 메서드] 제외)** 또는 **라이브 테스트**, **Exclude All But [the selected method]/([선택한 메서드]를 빼고 모두 제외)** 를 선택합니다. 여기서 [선택한 메서드]는 코드 창에서 선택한 메서드의 이름입니다. 
 
 **프로그래밍 방식으로 테스트 제외** 
 

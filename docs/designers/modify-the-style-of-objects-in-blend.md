@@ -1,22 +1,19 @@
 ---
-title: "Blend에서 개체 스타일 수정 | Microsoft Docs"
-ms.custom: 
+title: Blend에서 개체 스타일 수정
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3073255564f81273fb6c6001538abf98d78766f7
-ms.sourcegitcommit: 69b898d8d825c1a2d04777abf6d03e03fefcd6da
+ms.openlocfilehash: 4ae494a82e92086cfa0e8e2a69b7f7eee022807a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/25/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="modify-the-style-of-objects-in-blend"></a>Blend에서 개체 스타일 수정
 
@@ -27,8 +24,6 @@ ms.lasthandoff: 01/25/2018
 ## <a name="brushes-modify-the-appearance-of-an-object"></a>브러시: 개체의 모양 수정
 
 모양을 변경하려는 경우 브러시를 개체에 적용합니다.
-
-**짧은 비디오 보기:** ![재생 단추](../designers/media/bldadminconsoleinitialconfigicon.PNG) [Brushes Editor](http://www.popscreen.com/v/6A4mO/Microsoft-Expression-Blend-The-Brushes-Editor)(브러시 편집기).
 
 ### <a name="paint-a-repeating-image-or-pattern-on-an-object"></a>개체에 반복되는 이미지 또는 패턴 그리기
 
@@ -47,8 +42,6 @@ ms.lasthandoff: 01/25/2018
 컨트롤에서 단추 등과 같은 비주얼 브러시를 만듭니다. 다음 그림은 비주얼 브러시, 바둑판식 비주얼 브러시를 보여 줍니다.
 
 ![비주얼 브러시](../designers/media/fb6c90e0-153c-48fe-b563-e601beac6227.png) ![비주얼 브러시 바둑판식](../designers/media/e261b99f-7d8f-4d91-bc84-19c7beccc255.png)
-
-**짧은 비디오 보기:** ![재생 단추](../designers/media/bldadminconsoleinitialconfigicon.PNG) [Tile Brushes](http://www.popscreen.com/v/6A4iM/Microsoft-Expression-Blend-Tile-Brushes)(타일 브러시).
 
 ## <a name="styles-and-templates-create-a-consistent-look-and-feel-across-controls"></a>스타일 및 템플릿: 컨트롤 간 일관된 모양과 느낌 만들기
 
@@ -82,7 +75,7 @@ ms.lasthandoff: 01/25/2018
 
 > [!NOTE]
 > 일부 유형의 컨트롤에 대해서는 스타일이나 템플릿을 만들 수는 없습니다. 컨트롤에서 스타일이나 템플릿을 지원하지 않는 경우 아트보드 위에 이동 경로 탐색 단추가 표시되지 않습니다.
-> 기본 문서의 편집 범위로 돌아오려면 **범위 되돌리기** ![](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)를 클릭합니다.
+> 기본 문서의 편집 범위로 돌아오려면 **범위 되돌리기** ![범위 되돌리기 아이콘](../designers/media/55844eb3-ed98-4f20-aa66-a6f5b23eeb2b.png)을 클릭합니다.
 
 ### <a name="apply-a-style-or-template-to-a-control"></a>컨트롤에 스타일이나 템플릿 적용
 
@@ -92,7 +85,7 @@ ms.lasthandoff: 01/25/2018
 
 ### <a name="restore-the-default-style-or-template-of-a-control"></a>컨트롤의 기본 스타일이나 템플릿 복원
 
-컨트롤을 선택하고 [속성](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#tour-of-the-properties-panel) 패널에서 **스타일**이나 **템플릿** 속성을 찾습니다. **고급 옵션** ![](../designers/media/12e06962-5d8a-480d-a837-e06b84c545bb.png)을 선택하고 나서 바로 가기 메뉴에서 **다시 설정**을 클릭합니다.
+컨트롤을 선택하고 [속성](../designers/creating-a-ui-by-using-blend-for-visual-studio.md#tour-of-the-properties-panel) 패널에서 **스타일**이나 **템플릿** 속성을 찾습니다. **고급 옵션**을 선택한 다음, 바로 가기 메뉴에서 **다시 설정**을 클릭합니다.
 
 ## <a name="visual-states-change-the-appearance-of-a-control-based-on-its-state"></a>시각적 상태: 해당 상태에 따라 컨트롤의 모양 변경
 
@@ -102,14 +95,12 @@ ms.lasthandoff: 01/25/2018
 
 **짧은 비디오 보기:** ![재생 단추](../designers/media/bldadminconsoleinitialconfigicon.PNG) [Manage the state of your WPF controls](https://www.youtube.com/watch?v=m0PlkF5i6uw)(WPF 컨트롤 상태 관리).
 
-##  <a name="Resources"></a> 리소스: 색, 스타일 및 템플릿을 만들고 나중에 다시 사용
+## <a name="resources-create-colors-styles-and-templates-and-reuse-them-later"></a>리소스: 색, 스타일 및 템플릿을 만들고 나중에 다시 사용
 
 프로젝트의 모든 항목을 리소스로 변환할 수 있습니다. 리소스는 응용 프로그램의 다른 위치에 다시 사용할 수 있는 단순한 개체입니다. 예를 들어 색을 한 번 만들어 리소스로 만든 후 해당 색을 여러 개체에 사용할 수 있습니다. 이러한 모든 개체의 색을 변경하려면 색 리소스를 변경하기만 하면 됩니다.
 
 ![색을 리소스로 변환 단추](../designers/media/89203705-cf66-46e0-b153-52a23cd744f7.png) ![색 리소스 만들기 대화 상자](../designers/media/6bff8b19-3cd5-41a0-bbf9-ff65532d5aae.png)
 
-**짧은 비디오 보기:** ![재생 단추](../designers/media/bldadminconsoleinitialconfigicon.PNG) [A brief touch on resources](http://www.popscreen.com/v/6A4k7/Microsoft-Expression-Blend-Brief-Touch-on-Resources)(리소스에 대한 간략한 터치).
-
 ## <a name="see-also"></a>참고 항목
 
-[Blend for Visual Studio를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)
+- [Blend for Visual Studio를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-blend-for-visual-studio.md)

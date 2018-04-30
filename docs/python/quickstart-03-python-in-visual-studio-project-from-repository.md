@@ -1,15 +1,9 @@
 ---
-title: 빠른 시작 - Python 코드의 리포지토리 복제 | Microsoft Docs
+title: 빠른 시작 - Python 코드의 리포지토리 복제
 description: 이 빠른 시작에서는 Visual Studio 팀 탐색기를 사용하는 Python koans 리포지토리를 복제하여 Visual Studio에서 Python 프로젝트를 만듭니다.
-ms.custom: mvc
 ms.date: 03/21/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: quickstart
 author: kraigb
 ms.author: kraigb
@@ -17,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9acad900f31d3579156cd266ebc10c244a1de39c
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: d66c3b5b62edc6963d92e27bcf6a94889741b27f
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="quickstart-clone-a-repository-of-python-code-in-visual-studio"></a>빠른 시작: Visual Studio에서 Python 코드의 리포지토리 복제
 
@@ -31,7 +25,7 @@ ms.lasthandoff: 03/30/2018
 
 2. Visual Studio를 실행합니다.
 
-3. **보기 > 팀 탐색기...**를 선택하여 GitHub 또는 Visual Studio Team Services에 연결하거나 리포지토리를 복제할 수 있는 **팀 탐색기** 창을 엽니다. (**연결** 페이지가 아래에 표시되지 않으면 해당 페이지로 이동시키는 맨 위의 도구 모음에 있는 플러그 아이콘을 선택합니다.)
+3. **보기 > 팀 탐색기**를 선택하여 GitHub 또는 Visual Studio Team Services에 연결하거나 리포지토리를 복제할 수 있는 **팀 탐색기** 창을 엽니다. (**연결** 페이지가 아래에 표시되지 않으면 해당 페이지로 이동시키는 맨 위의 도구 모음에 있는 플러그 아이콘을 선택합니다.)
 
     ![Visual Studio Team Services, GitHub 및 리포지토리 복제를 보여 주는 팀 탐색기 창](media/team-explorer.png)
 
@@ -42,7 +36,7 @@ ms.lasthandoff: 03/30/2018
 
 5. 복제가 완료되면 리포지토리가 **로컬 Git 리포지토리** 목록에 나타납니다. 해당 이름을 두 번 클릭하여 **팀 탐색기**의 리포지토리 대시보드로 이동합니다.
 
-6. **솔루션** 아래에서 **새로 만들기...**를 선택합니다.
+6. **솔루션** 아래에서 **새로 만들기**를 선택합니다.
 
     ![팀 탐색기 창, 복제에서 새 프로젝트 만들기](media/team-explorer-new-project.png)
 
@@ -52,7 +46,7 @@ ms.lasthandoff: 03/30/2018
 
 9. **솔루션 탐색기**에서 `python3` 노드를 확장하고, `contemplate_koans.py`를 마우스 오른쪽 단추로 클릭하고, **시작 파일로 설정**을 선택합니다. 이 단계는 Visual Studio에서 프로젝트를 실행할 때 사용해야 하는 파일을 지정합니다.
 
-10. 메뉴에서 **프로젝트 > Koans 속성...**을 선택하고, **일반** 탭을 선택하고, **작업 디렉터리**를 "python3"으로 설정합니다. 기본적으로 Visual Studio는 작업 디렉터리를 시작 파일의 위치 대신 프로젝트 루트로 설정하기 때문에 이 단계가 필요합니다(`python3\contemplate_koans.py`는 프로젝트 속성에 표시됨). 프로그램 코드는 작업 폴더에서 `koans.txt` 파일을 찾기 때문에 이 값을 변경하지 않으면 런타임 오류가 표시됩니다.
+10. 메뉴에서 **프로젝트 > Koans 속성**을 선택하고, **일반** 탭을 선택하고, **작업 디렉터리**를 "python3"으로 설정합니다. 기본적으로 Visual Studio는 작업 디렉터리를 시작 파일의 위치 대신 프로젝트 루트로 설정하기 때문에 이 단계가 필요합니다(`python3\contemplate_koans.py`는 프로젝트 속성에 표시됨). 프로그램 코드는 작업 폴더에서 `koans.txt` 파일을 찾기 때문에 이 값을 변경하지 않으면 런타임 오류가 표시됩니다.
 
     ![Python 프로젝트에 대한 작업 디렉터리 설정](media/projects-set-working-directory.png)
 

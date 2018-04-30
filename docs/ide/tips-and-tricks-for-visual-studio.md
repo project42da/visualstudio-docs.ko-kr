@@ -1,26 +1,25 @@
 ---
-title: "Visual Studio 바로 가기 키 | Microsoft Docs"
+title: Visual Studio 바로 가기 키 | Microsoft Docs
 ms.date: 06/21/2017
 ms.technology: vs-ide-general
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 81c4c0957642b97b3d6e88107d98b293a5d09328
-ms.sourcegitcommit: 39c525ec200c6c4ea94815567b3fad7ab14fb7b3
+ms.openlocfilehash: a4d53ec38ee006e73f7d3f0d454e928527cc0120
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/08/2018
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="keyboard-tips-for-visual-studio"></a>Visual Studio 키보드 팁
+# <a name="keyboard-shortcuts-for-visual-studio"></a>Visual Studio의 바로 가기 키
 
 이 문서에 있는 바로 가기 키를 사용하여 Visual Studio에서 쉽게 이동할 수 있습니다.
 
-여기에 나열된 바로 가기 키는 사용 가능한 바로 가기 키의 하위 집합일 뿐입니다. 더 자세한 목록은 [Visual Studio의 기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
-
-접근성을 위해 Visual Studio를 최적화하는 방법에 대한 자세한 내용은 [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)을 참조하세요.
+> [!TIP]
+> 여기에 나열된 바로 가기 키는 사용 가능한 바로 가기 키의 하위 집합일 뿐입니다. 자세한 목록은 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
 
 ## <a name="window-management"></a>창 관리
 
@@ -39,9 +38,9 @@ ms.lasthandoff: 03/08/2018
 |-|-|
 |부동 창 이동/도킹|Win+왼쪽 화살표/Win+오른쪽 화살표|
 |창 최대화/최소화|Win+위쪽 화살표/Win+아래쪽 화살표|
-|점프 목록 표시|Win+Alt+n|
-|새 인스턴스 시작|Win+Shift+n|
-|창 간 전환|Win+n|
+|점프 목록 표시|Win+Alt+N|
+|새 인스턴스 시작|Win+Shift+N|
+|창 간 전환|Win+N|
 
 ## <a name="visual-studio-search"></a>Visual Studio 검색
 
@@ -78,10 +77,10 @@ ms.lasthandoff: 03/08/2018
 |코드 조각 선택|Ctrl+K,X 또는 ?,Tab(VB)||
 |포함|Ctrl+K,S||
 |요약 정보 표시|Ctrl+K,I||
-|탐색|Ctrl+,||
+|탐색|**Ctrl**+**,**||
 |강조 표시 참조 탐색|Ctrl+Shift+위쪽 화살표(이전), Ctrl+Shift+아래쪽 화살표(다음)||
-|편집기 확대/축소|Ctrl+Shift+>(확대), Ctrl+Shift+<(축소)||
-|블록 선택|Alt 키를 누른 채 마우스를 끌기, Shift+Alt+화살표 키||
+|편집기 확대/축소|**Ctrl**+**Shift**+**>**(In), **Ctrl**+**Shift**+**<**(Out)||
+|블록 선택|**Alt** 키를 누른 채 마우스를 끌기, Shift+Alt+화살표 키||
 |위/아래로 줄 이동|Alt+위쪽 화살표/Alt+아래쪽 화살표||
 |중복된 줄|Ctrl+E,V|Visual Studio 2017 버전 15.6|
 |선택 영역 확장|**Shift**+**Alt**+**=**|Visual Studio 2017 15.5 버전|
@@ -91,16 +90,16 @@ ms.lasthandoff: 03/08/2018
 |정의로 이동 스택|Ctrl+Shift+8(뒤로), Ctrl+Shift+7(앞으로)||
 |정의 피킹(Peeking) 창 닫기|Esc||
 |정의 피킹(Peeking) 창을 일반 문서 탭으로 승격|Ctrl+Alt+Home||
-|여러 정의 피킹(Peeking) 창 간에 이동|Ctrl+Alt+- 및 Ctrl+Alt+=||
-|여러 결과 피킹 간에 이동|F8 및 Shift+F8||
+|여러 정의 피킹(Peeking) 창 간에 이동|**Ctrl**+**Alt**+**-** 및 **Ctrl**+**Alt**+**=**||
+|여러 결과 피킹 간에 이동|**F8** 및 **Shift**+**F8**||
 |코드 편집기 창 및 정의 피킹(Peeking) 창 간에 전환|Shift+Esc||
 
 ## <a name="toolbars"></a>도구 모음
 
 |||
 |-|-|
-|단추 추가|도구 모음 오버플로 단추 클릭|
-|표준 도구 모음의 찾기 콤보 상자|Ctrl+D|
+|단추 추가|도구 모음 오버플로 단추 선택|
+|표준 도구 모음의 찾기 콤보 상자|**Ctrl**+**D**|
 |찾기 텍스트 상자 명령 모드|“>” 입력|
 |새 별칭 만들기|>별칭 NewAlias 명령|
 
@@ -125,9 +124,6 @@ ms.lasthandoff: 03/08/2018
 
 ## <a name="see-also"></a>참고 항목
 
+- [접근성 팁과 요령](../ide/reference/accessibility-tips-and-tricks.md)
 - [바로 가기 키(VSTS 및 TFS)](/vsts/collaborate/keyboard-shortcuts)
-- [Visual Studio 블로그](http://blogs.msdn.com/b/visualstudio)
 - [Visual Studio 팁과 요령 블로그](http://blogs.msdn.com/b/zainnab)
-- [Channel 9의 Visual Studio 도구 상자](http://channel9.msdn.com/Shows/Visual-Studio-Toolbox)
-- [Visual Studio UserVoice](http://visualstudio.uservoice.com/forums/121579-visual-studio)
-- [Visual Studio Connect 버그](http://connect.microsoft.com/VisualStudio)

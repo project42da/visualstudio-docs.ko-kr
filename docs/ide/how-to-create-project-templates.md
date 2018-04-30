@@ -1,28 +1,25 @@
 ---
-title: "Visual Studio에 대한 프로젝트 템플릿 만들기 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에 대한 프로젝트 템플릿 만들기 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/02/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 f1_keywords:
 - VS.ExportTemplateWizard
 helpviewer_keywords:
 - project templates [Visual Studio], creating
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.openlocfilehash: 0da7a7979b4fed6f58cdda6f1eafa55517e4df9b
-ms.sourcegitcommit: 9357209350167e1eb7e50b483e44893735d90589
+manager: douge
+ms.openlocfilehash: a18b756b38a810915ea49e9f3208e9349afda7ef
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-create-project-templates"></a>방법: 프로젝트 템플릿 만들기
 
-이 항목에서는 템플릿을 .zip 파일로 패키징하는 **템플릿 내보내기 마법사**를 사용하여 템플릿을 만드는 방법을 보여줍니다.
+이 항목에서는 템플릿을 *.zip* 파일로 패키징하는 **템플릿 내보내기 마법사**를 사용하여 템플릿을 만드는 방법을 보여줍니다.
 
 ## <a name="to-create-a-user-project-template-by-using-the-export-template-wizard"></a>템플릿 내보내기 마법사를 사용하여 사용자 프로젝트 템플릿을 만들려면
 
@@ -33,7 +30,7 @@ ms.lasthandoff: 01/05/2018
 
 1. 템플릿으로 내보낼 준비가 될 때까지 프로젝트를 편집합니다. 예를 들어 매개 변수를 대체해야 하는 위치를 나타내도록 코드 파일을 편집할 수 있습니다. [방법: 템플릿 매개 변수 대체](../ide/how-to-substitute-parameters-in-a-template.md)를 참조하세요.
 
-1. **프로젝트** 메뉴에서 **템플릿 내보내기...**를 선택합니다.
+1. **프로젝트** 메뉴에서 **템플릿 내보내기**를 선택합니다.
 
    **템플릿 내보내기 마법사**가 열립니다.
 
@@ -41,19 +38,19 @@ ms.lasthandoff: 01/05/2018
 
 1. **템플릿 옵션 선택** 페이지에서 템플릿의 이름 및 설명(옵션), 아이콘, 미리 보기 이미지를 입력합니다. 이러한 항목은 **새 프로젝트** 대화 상자에 나타납니다. **마침**을 선택합니다.
 
-  프로젝트는 .zip 파일로 내보내고 지정된 출력 위치에 배치되며 선택할 경우 Visual Studio로 가져옵니다.
+  프로젝트는 *.zip* 파일로 내보내고 지정된 출력 위치에 배치되며 선택할 경우 Visual Studio로 가져옵니다.
 
 >[!NOTE]
-> **새 프로젝트** 대화 상자에서 템플릿을 찾고 **설치됨**을 확장한 후 .vstemplate 파일의 `ProjectType` 요소에 해당하는 범주를 확장합니다. 예를 들어 `<ProjectType>CSharp</ProjectType>`을 포함하는 .vstemplate 파일은 기본적으로 **설치됨** > **Visual C#** 아래에 나타납니다. 해당 디렉터리에 폴더를 만들고 그 안에 템플릿의 .zip 파일을 추가하여 프로젝트 형식의 하위 디렉터리에 템플릿을 구성할 수 있습니다. 자세한 내용은 [방법: 템플릿 찾기 및 구성](../ide/how-to-locate-and-organize-project-and-item-templates.md)을 참조하세요.
+> **새 프로젝트** 대화 상자에서 템플릿을 찾고 **설치됨**을 확장한 후 *.vstemplate* 파일의 `ProjectType` 요소에 해당하는 범주를 확장합니다. 예를 들어 `<ProjectType>CSharp</ProjectType>`을 포함하는 *.vstemplate* 파일은 기본적으로 **설치됨** > **Visual C#** 아래에 나타납니다. 해당 디렉터리에 폴더를 만들고 그 안에 템플릿의 *.zip* 파일을 추가하여 프로젝트 형식의 하위 디렉터리에 템플릿을 구성할 수 있습니다. 자세한 내용은 [방법: 템플릿 찾기 및 구성](../ide/how-to-locate-and-organize-project-and-item-templates.md)을 참조하세요.
 
 ## <a name="other-ways-to-create-project-templates"></a>프로젝트 템플릿을 만드는 다른 방법
 
-프로젝트를 구성하는 파일을 폴더에 수집한 후 적절한 메타데이터로 .vstemplate XML 파일을 만들어 수동으로 프로젝트 템플릿을 만들 수 있습니다. 자세한 내용은 [방법: 수동으로 웹 템플릿 만들기](../ide/how-to-manually-create-web-templates.md)를 참조하세요.
+프로젝트를 구성하는 파일을 폴더에 수집한 후 적절한 메타데이터로 *.vstemplate* XML 파일을 만들어 수동으로 프로젝트 템플릿을 만들 수 있습니다. 자세한 내용은 [방법: 수동으로 웹 템플릿 만들기](../ide/how-to-manually-create-web-templates.md)를 참조하세요.
 
 Visual Studio SDK를 설치한 경우 **VSIX 프로젝트** 템플릿을 사용하여 완료된 템플릿을 .vsix 파일로 래핑하여 배포할 수 있습니다. 자세한 내용은 [VSIX 프로젝트 템플릿 시작](../extensibility/getting-started-with-the-vsix-project-template.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-[프로젝트 템플릿 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
+[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
 [방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)  
 [VSIX 프로젝트 템플릿 시작](../extensibility/getting-started-with-the-vsix-project-template.md)

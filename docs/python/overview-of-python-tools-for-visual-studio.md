@@ -1,15 +1,9 @@
 ---
-title: Windows에서 Visual Studio의 Python 지원 개요 | Microsoft Docs
+title: Windows의 Visual Studio에서 Python 지원 개요
 description: Windows에서 최상의 Python IDE(PTVS(Visual Studio용 Python 도구)로도 알려짐)로 만드는 Visual Studio의 기능 요약
-ms.custom: ''
 ms.date: 04/06/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: overview
 author: kraigb
 ms.author: kraigb
@@ -17,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 6b76c83db283a2cb0940d8817c04e6052157ada4
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 31ffd868eeab4638344cfafc2723b6a60608f232
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio에서 Python 작업(Windows)
 
@@ -174,13 +168,15 @@ Visual Studio는 Azure에 웹앱 및 클라우드 서비스를 게시하기 위�
 [설치 가이드](installing-python-support-in-visual-studio.md)에 설명된 대로 Visual Studio의 다음 버전(edition)에 Python 기능을 설치할 수 있습니다.
 
 - [Visual Studio 2017(모든 버전)](https://www.visualstudio.com/vs/)
-- [Visual Studio 2015(모든 버전)](https://www.visualstudio.com/downloads/visual-studio-2015-downloads-vs)
+- Visual Studio 2015(모든 버전)
 - Visual Studio 2013 Community Edition
 - Visual Studio 2013 Express for Web 업데이트 2 이상
 - Visual Studio 2013 Express for Desktop 업데이트 2 이상
 - Visual Studio 2013(Pro 버전 이상)
 - Visual Studio 2012(Pro 버전 이상)
 - Visual Studio 2010 SP1(Pro 버전 이상, .NET 4.5 필요)
+
+Visual Studio 2015 및 이전 버전은 [visualstudio.com/vs/older-downloads/](https://www.visualstudio.com/vs/older-downloads/)에서 제공됩니다.
 
 > [!Important]
 > 기능이 Visual Studio의 최신 버전에 대해서만 완전하게 지원 및 유지 관리됩니다. 기능이 이전 버전에서 사용할 수 있지만 적극적으로 유지 관리되지 않습니다.
@@ -301,6 +297,6 @@ Visual Studio는 Azure에 웹앱 및 클라우드 서비스를 게시하기 위�
 
 ## <a name="additional-resources"></a>추가 자료
 
-- [IIS 및 Python 간 WFastCGI 브리지](https://pypi.python.org/pypi/wfastcgi)(영문)(python.org)
+- [IIS 및 Python 간 WFastCGI 브리지](https://pypi.org/p/wfastcgi)(pypi.org)
 - [Microsoft Virtual Academy의 무료 Python 코스](https://mva.microsoft.com/search/SearchResults.aspx#!q=python)
 - [Microsoft Virtual Academy의 상위 Python 질문](https://aka.ms/mva-top-python-questions)

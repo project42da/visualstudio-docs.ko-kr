@@ -1,27 +1,21 @@
 ---
-title: Python 프로젝트에 대한 사용자 지정 메뉴 명령을 정의하는 방법| Microsoft Docs
+title: Python 프로젝트에 대한 사용자 지정 메뉴 명령을 정의하는 방법
 description: Visual Studio에서 프로젝트 및 대상 파일을 편집하여 Python 프로젝트 상황에 맞는 메뉴에 사용자 지정 명령을 추가하는 방법을 보여 줍니다. 명령은 실행 프로그램, 스크립트, 모듈, 인라인 코드 조각 및 pip에서 호출할 수 있습니다.
-ms.custom: ''
 ms.date: 02/02/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-dev_langs:
-- python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a8e7f1f05ba6a93e696ee13e2f28305b8784d7c2
-ms.sourcegitcommit: 3b692c9bf332b7b9150901e16daf99a64b599fee
+ms.openlocfilehash: 93d7e01037712d633ed4c23534163924647183f4
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/08/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="defining-custom-commands-for-python-projects"></a>Python 프로젝트에 대한 사용자 지정 명령 정의
 
@@ -42,7 +36,7 @@ Visual Studio의 특정 Python 프로젝트 템플릿은 이미 자체의 `.targ
 > [!Tip]
 > 텍스트 편집기에서 프로젝트 파일을 변경할 때마다 Visual Studio에서 프로젝트를 다시 로드하여 해당 변경 내용을 적용해야 합니다. 예를 들어 프로젝트의 상황에 맞는 메뉴에 표시할 명령에 대해 사용자 지정 명령 정의를 추가한 후 프로젝트를 다시 로드해야 합니다.
 >
-> 아시다시피 Visual Studio는 프로젝트 파일을 직접 편집하는 수단을 제공합니다. 먼저 프로젝트 파일을 마우스 오른쪽 단추로 클릭하고 **프로젝트 언로드**를 선택한 다음, 다시 마우스 오른쪽 단추로 클릭하고 **편집(프로젝트 이름)**을 선택하여 Visual Studio 편집기에서 프로젝트를 엽니다. 그런 다음, 편집을 하고 편집 내용을 저장하고 프로젝트를 한 번 더 마우스 오른쪽 단추로 클릭하고 **프로젝트 다시 로드**를 선택하며, 이때 편집기의 프로젝트 파일을 닫았는지 확인하라는 메시지도 나타납니다.
+> 아시다시피 Visual Studio는 프로젝트 파일을 직접 편집하는 수단을 제공합니다. 먼저 프로젝트 파일을 마우스 오른쪽 단추로 클릭하고 **프로젝트 언로드**를 선택한 다음, 다시 마우스 오른쪽 단추로 클릭하고 **편집(프로젝트 이름)** 을 선택하여 Visual Studio 편집기에서 프로젝트를 엽니다. 그런 다음, 편집을 하고 편집 내용을 저장하고 프로젝트를 한 번 더 마우스 오른쪽 단추로 클릭하고 **프로젝트 다시 로드**를 선택하며, 이때 편집기의 프로젝트 파일을 닫았는지 확인하라는 메시지도 나타납니다.
 >
 > 그러나 사용자 지정 명령을 개발할 때 이러한 모든 클릭은 지루할 수 있습니다. 더 효율적인 워크플로를 위해 Visual Studio에서 프로젝트를 로드하고 별도의 편집기에서 `'.pyproj` 파일을 함께 엽니다(Visual Studio의 다른 인스턴스, Visual Studio Code, 메모장 등). 편집기에서 변경 내용을 저장하고 Visual Studio로 전환하면 Visual Studio가 변경 내용을 검색하고 프로젝트를 다시 로드할지 묻습니다(“프로젝트(이름)가 환경 외부에서 수정되었습니다.”). **다시 로드**를 선택하면 변경 내용이 한 단계 만에 즉시 적용됩니다.
 

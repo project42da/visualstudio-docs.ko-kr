@@ -1,34 +1,32 @@
 ---
-title: "도움말 콘텐츠 관리자 재정의 | Microsoft Docs"
-ms.custom: 
+title: 도움말 콘텐츠 관리자 재정의 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/01/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-help-viewer
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-help-viewer
+ms.topic: conceptual
 ms.assetid: 95fe6396-276b-4ee5-b03d-faacec42765f
-caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 35bc6ae23fdbc89f6bdeaa57bd37d5d961d87286
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 7a943724d10241b5f0d7abb236964be51c38b79c
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="help-content-manager-overrides"></a>도움말 콘텐츠 관리자 재정의
 Visual Studio IDE에서 도움말 뷰어와 도움말 관련 기능의 기본 동작을 변경할 수 있습니다. 일부 옵션은 [.pkgdef](https://blogs.msdn.microsoft.com/visualstudio/2009/12/18/whats-a-pkgdef-and-why/) 파일을 만들어 다양한 레지스트리 키 값을 설정하여 지정됩니다. 다른 옵션은 레지스트리에서 직접 설정됩니다.
 
 ## <a name="how-to-control-help-viewer-behavior-by-using-a-pkgdef-file"></a>.pkgdef 파일을 사용하여 도움말 뷰어 동작을 제어하는 방법
 
-1. 첫 번째 줄이 `[$RootKey$\Help]`로 포함된 .pkgdef 파일을 만듭니다.
+1. 첫 번째 줄이 `[$RootKey$\Help]`으로 포함된 *.pkgdef* 파일을 만듭니다.
 
 2. 별도의 줄에서 아래 표에 설명된 레지스트리 키 값의 일부 또는 전체를 추가합니다(예: `“UseOnlineHelp”=dword:00000001`).
 
-3. 파일을 %ProgramFiles(x86)%\Microsoft Visual Studio\2017\\<edition\>\Common7\IDE\CommonExtensions에 복사합니다.
+3. 파일을 *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\\<edition\>\Common7\IDE\CommonExtensions*에 복사합니다.
 
 4. 개발자 명령 프롬프트에서 `devenv /updateconfiguration`를 실행합니다.
 
@@ -39,7 +37,7 @@ Visual Studio IDE에서 도움말 뷰어와 도움말 관련 기능의 기본 �
 |UseOnlineHelp|dword|로컬 도움말을 지정하려면 `0`, 온라인 도움말을 지정하려면 `1`|온라인 또는 오프라인 도움말 기본값 정의|
 |OnlineBaseUrl|string|\<서비스 끝점에 대한 http URL\>|고유한 F1 끝점 정의|
 |OnlineHelpPreferenceDisabled|dword|온라인 도움말 기본 설정 옵션을 사용하려고 설정하려면 `0` 또는 사용하지 않도록 설정하려면 `1`|온라인 도움말 기본 설정 옵션을 사용하지 않도록 설정|
-|DisableManageContent|dword|도움말 뷰어에서 **콘텐츠 관리** 탭을 사용하도록 설정하려면 `0` 또는 사용하도록 설정하지 않으려면 `1`|콘텐츠 관리 탭 사용 안 함|
+|DisableManageContent|dword|도움말 뷰어에서 **콘텐츠 관리** 탭을 사용하도록 설정하려면 `0` 또는 사용하도록 설정하지 않으려면 `1`|**콘텐츠 관리** 탭 사용 안 함|
 |DisableFirstRunHelpSelection|dword|처음으로 시작될 때 구성된 도움말 기능을 사용하도록 설정하려면 `0` 또는 사용하지 않도록 설정하려면 `1`|Visual Studio 처음 시작 시 콘텐츠 설치 사용 안 함|
 
 ### <a name="example-pkgdef-file-contents"></a>예제:.pkgdef 파일 콘텐츠

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 EditorConfig에 대한 .NET Coding 규칙 설정 | Microsoft Docs
 ms.date: 02/28/2018
-ms.topic: article
+ms.topic: conceptual
 dev_langs:
 - CSharp
 - VB
@@ -12,16 +12,16 @@ helpviewer_keywords:
 - formatting conventions [EditorConfig]
 author: kuhlenh
 ms.author: kaseyu
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: e69d7e291d1b13a5205aa4798c78c6a4e337db50
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+ms.openlocfilehash: b313271e29bba660af1aa48654bfdfefb81e39f1
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig에 대한 .NET 코딩 규칙 설정
 
@@ -113,7 +113,7 @@ suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 
 
 이 섹션의 스타일 규칙은 C# 및 Visual Basic 모두에 적용됩니다. 원하는 프로그래밍 언어의 코드 예제를 보려면 브라우저 창의 상단 오른쪽 모서리에 있는 **언어** 메뉴 드롭다운에서 선택합니다.
 
-#### <a name="this_and_me">"This." 및 "Me." 한정자</a>
+#### <a name="this_and_me"></a>"This." 그리고 "Me." 한정자
 
 이 스타일 규칙(규칙 ID IDE0003 및 IDE0009)은 필드, 속성, 메서드 또는 이벤트에 적용할 수 있습니다. 값이 **true**이면 C#에서 `this.` 또는 Visual Basic에서 `Me.`를 코드 기호 앞에 추가하는 것이 좋습니다. 값이 **false**이면 `this.` 또는 `Me.`을 코드 요소 앞에 추가하지 _않는_ 것이 좋습니다.
 
@@ -218,7 +218,7 @@ AddHandler Me.Elapsed, AddressOf Handler
 AddHandler Elapsed, AddressOf Handler
 ```
 
-이러한 규칙은 .editorconfig 파일에서 다음과 같이 표시될 수 있습니다.
+이러한 규칙은 *.editorconfig* 파일에서 다음과 같이 표시될 수 있습니다.
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -229,7 +229,7 @@ dotnet_style_qualification_for_method = false:suggestion
 dotnet_style_qualification_for_event = false:suggestion
 ```
 
-#### <a name="language_keywords">형식 참조를 위한 프레임워크 형식 이름 대신 언어 키워드</a>
+#### <a name="language_keywords"></a>형식 참조를 위한 프레임워크 형식 이름 대신 언어 키워드
 
 지역 변수, 메서드 매개 변수 및 클래스 멤버 또는 멤버 액세스 식을 입력할 별도 규칙으로 이 스타일 규칙을 적용할 수 있습니다. 값이 **true**인 경우 자신을 나타내는 키워드를 가진 형식에 형식 이름(예: `Int32`) 대신 언어 키워드(예: `int` 또는 `Integer`)를 사용하는 것이 좋습니다. 값이 **false**인 경우 언어 키워드 대신 형식 이름을 사용하는 것이 좋습니다.
 
@@ -286,7 +286,7 @@ Dim local = Integer.MaxValue
 Dim local = Int32.MaxValue
 ```
 
-이러한 규칙은 .editorconfig 파일에서 다음과 같이 표시될 수 있습니다.
+이러한 규칙은 *.editorconfig* 파일에서 다음과 같이 표시될 수 있습니다.
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -295,7 +295,7 @@ dotnet_style_predefined_type_for_locals_parameters_members = true:suggestion
 dotnet_style_predefined_type_for_member_access = true:suggestion
 ```
 
-#### <a name="normalize_modifiers">한정자 기본 설정</a>
+#### <a name="normalize_modifiers"></a>한정자 기본 설정
 
 이 섹션의 스타일 규칙은 액세스 가능성 한정자 요구 및 원하는 한정자 정렬 순서 지정을 비롯한 한정자 기본 설정과 관련이 있습니다.
 
@@ -363,7 +363,7 @@ Public Class MyClass
 End Class
 ```
 
-이러한 규칙은 .editorconfig 파일에서 다음과 같이 표시될 수 있습니다.
+이러한 규칙은 *.editorconfig* 파일에서 다음과 같이 표시될 수 있습니다.
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -379,7 +379,7 @@ csharp_preferred_modifier_order = public,private,protected,internal,static,exter
 visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public,Friend,NotOverridable,Overridable,MustOverride,Overloads,Overrides,MustInherit,NotInheritable,Static,Shared,Shadows,ReadOnly,WriteOnly,Dim,Const,WithEvents,Widening,Narrowing,Custom,Async:suggestion
 ```
 
-#### <a name="expression_level">식 수준 기본 설정</a>
+#### <a name="expression_level"></a>식 수준 기본 설정
 
 이 섹션의 스타일 규칙은 개체 이니셜라이저, 컬렉션 이니셜라이저, 명시적 또는 유추된 튜플 이름 및 유추된 익명의 형식을 사용하는 식 수준 기본 설정에 대해 다룹니다.
 
@@ -505,7 +505,7 @@ var anon = new { age = age, name = name };
 
 ```
 
-이러한 규칙은 .editorconfig 파일에서 다음과 같이 표시될 수 있습니다.
+이러한 규칙은 *.editorconfig* 파일에서 다음과 같이 표시될 수 있습니다.
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -517,7 +517,7 @@ dotnet_style_prefer_inferred_tuple_names = true:suggestion
 dotnet_style_prefer_inferred_anonymous_type_member_names = true:suggestion
 ```
 
-#### <a name="null_checking">Null 검사 기본 설정</a>
+#### <a name="null_checking"></a>Null 검사 기본 설정
 
 이 섹션에서 스타일 규칙은 Null 검사 기본 설정과 관련이 있습니다.
 
@@ -578,7 +578,7 @@ Dim v = If(o Is Nothing, Nothing, o.ToString()) ' or
 Dim v = If(o IsNot Nothing, o.ToString(), Nothing)
 ```
 
-이러한 규칙은 .editorconfig 파일에서 다음과 같이 표시될 수 있습니다.
+이러한 규칙은 *.editorconfig* 파일에서 다음과 같이 표시될 수 있습니다.
 
 ```EditorConfig
 # CSharp and Visual Basic code style settings:
@@ -591,7 +591,7 @@ dotnet_style_null_propagation = true:suggestion
 
 이 섹션의 스타일 규칙은 C#에만 적용됩니다.
 
-#### <a name="var">암시적 및 명시적 형식</a>
+#### <a name="var"></a>암시적 및 명시적 형식
 
 이 섹션의 스타일 규칙(규칙 ID IDE0007 및 IDE0008)은 [var](/dotnet/csharp/language-reference/keywords/var) 키워드 및 변수 선언에서 명시적 형식을 사용하는 방법을 다룹니다. 이 규칙은 형식이 명확할 때 기본 제공 형식 및 다른 위치에 개별적으로 적용할 수 있습니다.
 
@@ -648,7 +648,7 @@ var f = this.Init();
 bool f = this.Init();
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -658,7 +658,7 @@ csharp_style_var_when_type_is_apparent = true:suggestion
 csharp_style_var_elsewhere = true:suggestion
 ```
 
-#### <a name="expression_bodied_members">식 본문 멤버</a>
+#### <a name="expression_bodied_members"></a>식 본문 멤버
 
 이 섹션의 스타일 규칙은 논리가 단일 식으로 구성되는 경우 [식 본문 멤버](/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members)를 사용하는 방법을 다룹니다. 이 규칙은 메서드, 생성자, 연산자, 속성, 인덱서 및 접근자에 적용할 수 있습니다.
 
@@ -795,7 +795,7 @@ public int Age { get => _age; set => _age = value; }
 public int Age { get { return _age; } set { _age = value; } }
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -808,7 +808,7 @@ csharp_style_expression_bodied_indexers = true:suggestion
 csharp_style_expression_bodied_accessors = true:suggestion
 ```
 
-#### <a name="pattern_matching">패턴 일치</a>
+#### <a name="pattern_matching"></a>패턴 일치
 
 이 섹션의 스타일 규칙은 C#에서 [패턴 일치](/dotnet/csharp/pattern-matching)를 사용하는 방법을 다룹니다.
 
@@ -850,7 +850,7 @@ var s = o as string;
 if (s != null) {...}
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -859,7 +859,7 @@ csharp_style_pattern_matching_over_is_with_cast_check = true:suggestion
 csharp_style_pattern_matching_over_as_with_null_check = true:suggestion
 ```
 
-#### <a name="inlined_variable_declarations">인라인 변수 선언</a>
+#### <a name="inlined_variable_declarations"></a>인라인 변수 선언
 
 이 스타일 규칙은 `out` 변수가 인라인을 선언했는지 여부에 대해 다룹니다. C# 7부터 별도 변수 선언이 아니라 [메서드 호출의 인수 목록에서 out 변수를 선언](/dotnet/csharp/language-reference/keywords/out-parameter-modifier#calling-a-method-with-an-out-argument)할 수 있습니다.
 
@@ -885,7 +885,7 @@ int i;
 if (int.TryParse(value, out i) {...}
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -893,7 +893,7 @@ if (int.TryParse(value, out i) {...}
 csharp_style_inlined_variable_declaration = true:suggestion
 ```
 
-#### <a name="expression_level_csharp">식 수준 기본 설정</a>
+#### <a name="expression_level_csharp"></a>식 수준 기본 설정
 
 이 섹션의 스타일 규칙은 [기본 식](/dotnet/csharp/programming-guide/statements-expressions-operators/default-value-expressions#default-literal-and-type-inference), 분해된 변수 및 익명 함수에 대한 로컬 함수의 사용을 비롯한 식 수준 기본 설정과 관련이 있습니다.
 
@@ -967,7 +967,7 @@ fibonacci = (int n) =>
 };
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -977,7 +977,7 @@ csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_style_pattern_local_over_anonymous_function = true:suggestion
 ```
 
-#### <a name="null_checking_csharp">"Null" 검사 기본 설정</a>
+#### <a name="null_checking_csharp"></a>"Null" 검사 기본 설정
 
 이러한 스타일 규칙은 `throw` 식 또는 `throw` 문 사용을 비롯한 `null` 검사 관련 구문 및 [람다 식](/dotnet/csharp/lambda-expressions)을 호출할 때를 null 검사를 수행하거나 조건부 병합 연산자(`?.`)를 사용할지에 대해 다룹니다.
 
@@ -1019,7 +1019,7 @@ func?.Invoke(args);
 if (func != null) { func(args); }
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -1028,7 +1028,7 @@ csharp_style_throw_expression = true:suggestion
 csharp_style_conditional_delegate_call = false:suggestion
 ```
 
-#### <a name="code_block">코드 블록 기본 설정</a>
+#### <a name="code_block"></a>코드 블록 기본 설정
 
 이 스타일 규칙은 코드 블록을 묶는 데 중괄호 `{ }`를 사용하는 방법을 다룹니다.
 
@@ -1053,7 +1053,7 @@ if (test) { this.Display(); }
 if (test) this.Display();
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp code style settings:
@@ -1072,7 +1072,7 @@ csharp_prefer_braces = true:none
 다음 목록은 Visual Studio에서 사용할 수 있는 서식 지정 규칙을 보여줍니다.
 
 - .NET 서식 지정 설정
-    - [Using 구성](#usings)
+    - [using 구성](#usings)
         - dotnet_sort_system_directives_first
 - C# 서식 지정 설정
     - [줄 바꿈 옵션](#newline)
@@ -1101,7 +1101,7 @@ csharp_prefer_braces = true:none
 
 이 섹션의 서식 설정 규칙은 C# 및 Visual Basic에 적용됩니다.
 
-#### <a name="usings">using 구성</a>
+#### <a name="usings"></a>using 구성
 
 이 서식 설정 규칙은 다른 using 지시문과 관련하여 System.* using 지시문의 배치를 다룹니다.
 
@@ -1130,7 +1130,7 @@ using Octokit;
 using System.Threading.Tasks;
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # .NET formatting settings:
@@ -1142,7 +1142,7 @@ dotnet_sort_system_directives_first = true
 
 이 섹션의 서식 설정 규칙은 C# 코드에만 적용됩니다.
 
-#### <a name="newline">줄 바꿈 옵션</a>
+#### <a name="newline"></a>줄 바꿈 옵션
 
 이러한 서식 지정 규칙은 코드의 서식을 지정하기 위해 새 줄을 사용합니다.
 
@@ -1327,7 +1327,7 @@ var q = from a in e from b in e
         select a * b;
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp formatting settings:
@@ -1341,7 +1341,7 @@ csharp_new_line_before_members_in_anonymous_types = true
 csharp_new_line_between_query_expression_clauses = true
 ```
 
-#### <a name="indent">들여쓰기 옵션</a>
+#### <a name="indent"></a>들여쓰기 옵션
 
 이러한 서식 지정 규칙은 코드의 서식을 지정하기 위해 들여쓰기를 사용합니다.
 
@@ -1476,7 +1476,7 @@ class C
 }
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp formatting settings:
@@ -1486,7 +1486,7 @@ csharp_indent_switch_labels = true
 csharp_indent_labels = flush_left
 ```
 
-#### <a name="spacing">간격 옵션</a>
+#### <a name="spacing"></a>간격 옵션
 
 이러한 서식 지정 규칙은 코드의 서식을 지정하기 위해 공백 문자를 사용합니다.
 
@@ -1585,7 +1585,7 @@ var z = ( x * y ) - ( ( y - x ) * 3 );
 int y = ( int )x;
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp formatting settings:
@@ -1597,7 +1597,7 @@ csharp_space_between_method_call_parameter_list_parentheses = true
 csharp_space_between_parentheses = control_flow_statements, type_casts
 ```
 
-#### <a name="wrapping">래핑 옵션</a>
+#### <a name="wrapping"></a>래핑 옵션
 
 이러한 서식 설정 규칙은 문 및 코드 블록에 단일 줄 및 별도 줄을 사용하는 것을 다룹니다.
 
@@ -1642,7 +1642,7 @@ public int MyProperty
 }
 ```
 
-예제 .editorconfig 파일:
+예제 *.editorconfig* 파일:
 
 ```EditorConfig
 # CSharp formatting settings:

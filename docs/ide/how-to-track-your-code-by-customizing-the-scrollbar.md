@@ -1,23 +1,21 @@
 ---
-title: "방법: 스크롤 막대를 사용자 지정하여 코드 추적 | Microsoft Docs"
-ms.custom: 
+title: '방법: 스크롤 막대를 사용자 지정하여 코드 추적'
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 8f56e834e6c2b80706e4ed1d1a91583e1015791b
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 0262dd7573eb990fb56f03bfa668a4b8e9d95878
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>How to: Track Your Code by Customizing the Scrollbar
+# <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>방법: 스크롤 막대를 사용자 지정하여 코드 추적
 
 긴 코드 파일을 사용하는 경우 모든 내용을 기억하기 어려울 수 있습니다. 코드에서 수행되는 작업을 간략하게 볼 수 있도록 코드 창의 스크롤 막대를 사용자 지정할 수 있습니다.
 
@@ -25,7 +23,7 @@ ms.lasthandoff: 12/22/2017
 
 1. 코드 변경 내용, 중단점, 오류 및 책갈피를 표시하도록 스크롤 막대를 설정할 수 있습니다.
 
-    **도구** > **옵션** > **텍스트 편집기**  >  **모든 언어** 또는 특정 언어를 선택하거나 빠른 실행 창에서 **스크롤 막대**를 입력하여 **스크롤 막대** 옵션 페이지를 엽니다.
+    **도구** > **옵션** > **텍스트 편집기** > **모든 언어** 또는 특정 언어를 선택하거나 **빠른 실행** 창에서 **스크롤 막대**를 입력하여 **스크롤 막대** 옵션 페이지를 엽니다.
 
 2. **세로 스크롤 막대 위에 주석 표시**를 선택한 다음 표시할 주석을 선택합니다.
 
@@ -47,7 +45,7 @@ ms.lasthandoff: 12/22/2017
 
     **스크롤 막대** 옵션 페이지에서 **세로 스크롤 막대에 막대 모드 사용** 또는 **세로 스크롤 막대에 지도 모드 사용**을 선택합니다. **원본 개요** 드롭다운에서 너비를 선택할 수 있습니다.
 
-    지도 모드가 설정되고 너비가 보통으로 설정된 경우 검색 예제가 표시되는 모양은 다음과 같습니다.
+    지도 모드가 설정되고 너비가 **보통**으로 설정된 경우 검색 예제가 표시되는 모양은 다음과 같습니다.
 
     ![지도 모드의 스크롤 막대](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
 
@@ -59,4 +57,4 @@ ms.lasthandoff: 12/22/2017
 
 ## <a name="see-also"></a>참고 항목
 
-[편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+- [편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)

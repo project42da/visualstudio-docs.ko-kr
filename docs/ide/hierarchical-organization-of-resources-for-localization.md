@@ -1,13 +1,10 @@
 ---
-title: "지역화를 위한 리소스의 계층적 구성 | Microsoft 문서"
-ms.custom: 
+title: 지역화를 위한 리소스의 계층적 구성 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology:
 - vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - resource files, localized
 - localization [Visual Studio], resources
@@ -19,32 +16,31 @@ helpviewer_keywords:
 - resources [Visual Studio], fallback system
 - resource files, fallback processes
 ms.assetid: dadf8f2c-f74c-44d7-bec0-a1e956d8d38d
-caps.latest.revision: 
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cc663c02d3151e6dd55c1c35388ac7b33f049bb1
-ms.sourcegitcommit: b18844078a30d59014b48a9c247848dea188b0ee
+ms.openlocfilehash: 704282bc169971e0ecd62285c748af75bed41c41
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/29/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="hierarchical-organization-of-resources-for-localization"></a>지역화를 위한 리소스의 계층적 구성
 Visual Studio에서 지역화된 리소스(각 문화권에 적절한 문자열 및 이미지와 같은 데이터)는 별도의 파일에 저장되며 UI 문화권 설정에 따라 로드됩니다. 지역화된 리소스가 로드되는 방식을 이해하려면 이러한 리소스를 계층 구조 방식으로 구성된 것으로 생각하는 것이 좋습니다.  
   
 ## <a name="kinds-of-resources-in-the-hierarchy"></a>계층 구조 내 리소스의 종류  
   
--   계층 구조의 맨 위에는 기본 문화권에 대한 대체 리소스가 있습니다(예: 영어("en")). 이는 자체 파일이 없는 유일한 리소스이며, 주 어셈블리에 저장됩니다.  
+-   계층 구조의 맨 위에는 기본 문화권에 대한 대체 리소스가 있습니다(예: 영어("en")). 이러한 대체 리소스는 자체 파일이 없는 유일한 리소스이며, 주 어셈블리에 저장됩니다.  
   
--   대체 리소스 아래에는 모든 중립 문화권에 대한 리소스가 있습니다. 중립 문화권은 언어와 연관이 있지만 국가/지역과는 연관이 없습니다. 예를 들어 프랑스("fr")는 중립 문화권입니다. 대체 리소스도 중립 문화권에 사용되지만 이는 특수한 경우입니다.  
+-   대체 리소스 아래에는 모든 중립 문화권에 대한 리소스가 있습니다. 중립 문화권은 언어와 연관이 있지만 국가/지역과는 연관이 없습니다. 예를 들어 프랑스("fr")는 중립 문화권입니다. (대체 리소스도 중립 문화권에 사용되지만 이는 특수한 경우입니다.)  
   
--   중립 문화권의 리소스 아래에는 특정 문화권에 대한 리소스가 있습니다. 특정 문화권은 언어 및 국가/지역과 연관이 있습니다. 예를 들어 프랑스어(캐나다)("fr-CA")는 특정 문화권입니다.  
+-   중립 문화 리소스 아래에는 모든 특정 문화권에 대한 리소스가 있습니다. 특정 문화권은 언어 및 국가/지역과 연관이 있습니다. 예를 들어 프랑스어(캐나다)("fr-CA")는 특정 문화권입니다.  
   
  응용 프로그램에서 문자열과 같은 지역화된 리소스를 로드하려는데 찾지 못한 경우 요청한 리소스가 포함된 리소스 파일을 찾을 때까지 계층 구조 위로 이동합니다.  
   
- 리소스를 저장하는 가장 좋은 방법은 가급적 일반화하는 것입니다. 즉, 지역화된 문자열, 이미지 등을 가능하면 특정 문화권이 아니라 중립 문화권에 대한 리소스 파일에 저장합니다. 예를 들어 프랑스어(벨기에)("fr-BE") 문화권에 대한 리소스가 있고 그 바로 위의 리소스가 영어로 된 대체 리소스인 경우 다른 사람이 프랑스어(캐나다) 문화권용으로 구성된 시스템에서 사용자의 응용 프로그램을 사용하려고 하면 문제가 발생할 수 있습니다. 즉, 시스템에서는 "fr-CA"에 대한 위성 어셈블리를 찾다가 못 찾은 경우 프랑스 리소스를 로드하는 대신 대체 리소스(영어)가 포함된 주 어셈블리를 로드합니다. 다음 그림에서는 이 바람직하지 않은 시나리오를 보여 줍니다.  
+ 리소스를 저장하는 가장 좋은 방법은 가급적 일반화하는 것입니다. 즉, 지역화된 문자열, 이미지 등을 가능하면 특정 문화권이 아니라 중립 문화권에 대한 리소스 파일에 저장합니다. 예를 들어 프랑스어(벨기에)("fr-BE") 문화권에 대한 리소스가 있고 그 바로 위의 리소스가 영어로 된 대체 리소스인 경우 다른 사람이 프랑스어(캐나다) 문화권용으로 구성된 시스템에서 사용자의 응용 프로그램을 사용하려고 하면 문제가 발생할 수 있습니다. 시스템에서는 "fr-CA"에 대한 위성 어셈블리를 찾다가 못 찾은 경우 프랑스 리소스를 로드하는 대신 대체 리소스(영어)가 포함된 주 어셈블리를 로드합니다. 다음 그림에서는 이 바람직하지 않은 시나리오를 보여 줍니다.  
   
  ![특정 리소스 전용](../ide/media/vbspecificresourcesonly.gif "vbSpecificResourcesOnly")  
   

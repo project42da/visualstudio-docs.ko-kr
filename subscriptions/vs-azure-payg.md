@@ -1,30 +1,30 @@
 ---
-title: "Azure PAYG(종량제) 혜택"
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 10/3/2017
-Ms.topic: Get-Started-Article
-Description: Learn how to set up your Azure Pay-As-You-Go account.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 4add5862ba05a588a3320b3f2530787ff153c974
-ms.sourcegitcommit: b7d3b90d0be597c9d01879338dd2678c881087ce
+title: Azure PAYG(종량제) 혜택
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 10/03/2017
+ms.topic: Get-Started-Article
+description: Azure 종량제(Pay-As-You-Go) 계정을 설정하는 방법을 알아봅니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: cd1b545e4b3f6300431c6bfd7c28c9998572dacf
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/01/2017
+ms.lasthandoff: 04/16/2018
 ---
-# <a name="setting-up-azure-devtest-pay-as-you-go-subscription"></a>Azure 개발/테스트 종량제 구독 설정
+# <a name="setting-up-an-azure-devtest-pay-as-you-go-subscription"></a>Azure 개발/테스트 종량제 구독 설정
 클라우드에서 팀과 공동으로 작업해 보세요.  여러 개발 및 테스트 종량제(PAYG, Pay-As-You-Go) 구독을 만들면 다른 구독자와 공동 작업을 가능하게 하는 한편 팀과 환경 간의 격리를 제공합니다.  Azure에서 구독 소프트웨어의 개발/테스트 및 클라우드 사용권에 대한 시간당 요금이 독점적으로 할인됩니다.
 
-1.  Azure 종량제 구독 혜택을 사용하려면 혜택 타일의 아래쪽에 있는 **활성화** 링크를 클릭합니다.   
+1.  Azure 종량제 구독 혜택을 사용하려면 [https://my.visualstudio.com/benefits](https://my.visualstudio.com/benefits?wt.mc_id=o~msft~docs)에 로그인하고 혜택 타일의 아래쪽에 있는 **활성화** 링크를 클릭합니다.   
 
     ![Azure 종량제 타일](_img\vs-azure-payg\vs-azure-payg-tile.png) 
 
 2.  Azure 계정이 구독 혜택의 일부로 이미 활성화되어 있는 경우(예: Enterprise 구독이 있고 $150의 월간 Azure 크레딧이 활성화되어 있는 경우) 5단계로 건너뜁니다.
 
-3.  Microsoft Azure 등록 페이지에서 종량제 개발/테스트 제안을 설정하거나 Visual Studio Enterprise 제품으로 업그레이드할 수 있습니다.  업그레이드하지 않으려면 **현재 제안 계속 사용(종량제 개발/테스트)**을 클릭합니다. 
+3.  Microsoft Azure 등록 페이지에서 종량제 개발/테스트 제안을 설정하거나 Visual Studio Enterprise 제품으로 업그레이드할 수 있습니다.  업그레이드하지 않으려면 **현재 제안 계속 사용(종량제 개발/테스트)** 을 클릭합니다. 
 
     ![Azure 종량제 등록](_img\vs-azure-payg\vs-azure-payg-signup-cropped.png) 
 

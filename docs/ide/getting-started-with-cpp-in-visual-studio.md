@@ -1,22 +1,23 @@
 ---
-title: Visual Studio에서 C++ 시작 | Microsoft Docs
+title: Visual Studio에서 C++ 시작
+description: ''
 ms.custom: mvc
 ms.date: 12/04/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
-ms.tgt_pltfrm: ''
 ms.topic: tutorial
 author: corob-msft
 ms.author: tglee
-manager: ghogen
+manager: douge
 dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: ce0d48a4390ee1c008f889e45760fcef92538cb2
-ms.sourcegitcommit: 064f8678f4a918e1dce60285090a9803d37dc34b
+ms.openlocfilehash: 65cbfd23c1467988f720822cd68361f5acca23b9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/30/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-with-c-in-visual-studio"></a>Visual Studio에서 C++ 시작
 
@@ -44,7 +45,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
    ![메뉴 모음에서 파일 > 새로 만들기 > 프로젝트를 선택합니다.](../ide/media/get-started-cpp-file-new-project-menu.png "메뉴 모음에서 파일 > 새로 만들기 > 프로젝트를 선택합니다.")
 
-1. 아직 선택하지 않은 경우 **새 프로젝트** 대화 상자에서 **설치됨 > Visual C++**를 선택합니다. 가운데 창에서 **Windows 콘솔 응용 프로그램** 템플릿을 선택합니다. **이름** 편집 상자에서 *HelloApp*을 입력합니다.
+1. 아직 선택하지 않은 경우 **새 프로젝트** 대화 상자에서 **설치됨 > Visual C++** 를 선택합니다. 가운데 창에서 **Windows 콘솔 응용 프로그램** 템플릿을 선택합니다. **이름** 편집 상자에서 *HelloApp*을 입력합니다.
 
    ![새 프로젝트 대화 상자를 사용하여 앱 프로젝트를 만듭니다.](../ide/media/get-started-cpp-new-project-dialog.png "새 프로젝트 대화 상자를 사용하여 앱 프로젝트를 만듭니다.")
 
@@ -52,7 +53,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 1. **확인** 단추를 선택하여 앱 프로젝트 및 솔루션을 만듭니다.
 
-   Windows 콘솔 앱의 기본 파일과 함께 HelloApp 프로젝트 및 솔루션을 만들고 **솔루션 탐색기**에 자동으로 로드합니다. HelloApp.cpp 파일이 코드 편집기에서 열립니다. 다음 항목이 **솔루션 탐색기**에 나타납니다.
+   Windows 콘솔 앱의 기본 파일과 함께 HelloApp 프로젝트 및 솔루션을 만들고 **솔루션 탐색기**에 자동으로 로드합니다. *HelloApp.cpp* 파일이 코드 편집기에서 열립니다. 다음 항목이 **솔루션 탐색기**에 나타납니다.
 
    ![솔루션 탐색기의 솔루션 파일](../ide/media/get-started-cpp-solution-explorer.png "솔루션 탐색기의 솔루션 파일")
 
@@ -62,7 +63,7 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
 ### <a name="to-edit-code-in-the-editor"></a>편집기에서 코드를 편집하려면
 
-1. HelloApp.cpp 파일에서 `return 0;` 줄 앞에 빈 줄을 입력하고 다음 코드를 입력합니다.
+1. *HelloApp.cpp* 파일에서 `return 0;` 줄 앞에 빈 줄을 입력하고 다음 코드를 입력합니다.
 
    ```cpp
    cout << "Hello\n";
@@ -76,9 +77,9 @@ Visual Studio는 *프로젝트*를 사용하여 앱에 대한 코드를 구성�
 
    ![오류 목록 창의 오류](../ide/media/get-started-cpp-error-list.png "오류 목록 창의 오류")
 
-   코드는 \<iostream > 헤더 파일에서 찾을 수 있는 [std::cout](/cpp/standard-library/iostream)에 대한 선언을 누락했습니다.
+   코드는 *\<iostream>* 헤더 파일에서 찾을 수 있는 [std::cout](/cpp/standard-library/iostream)에 대한 선언을 누락했습니다.
 
-1. Iostream 헤더를 포함하려면 `#include "stdafx.h"` 뒤에 다음 코드를 입력합니다.
+1. *iostream* 헤더를 포함하려면 `#include "stdafx.h"` 뒤에 다음 코드를 입력합니다.
 
    ```cpp
    #include <iostream>
@@ -105,11 +106,11 @@ HelloApp을 디버그하여 단어 "Hello"가 콘솔 창에 표시되는지 여�
 
 ### <a name="to-debug-the-app"></a>앱을 디버깅하려면
 
-1. 디버거를 시작하려면 메뉴 모음에서 **디버그 > 디버깅 시작**을 선택합니다.
+디버거를 시작하려면 메뉴 모음에서 **디버그 > 디버깅 시작**을 선택합니다.
 
-   ![디버그 메뉴의 디버깅 시작 명령](../ide/media/get-started-cpp-start-debugging-menu.png "디버그 메뉴의 디버깅 시작 명령")
+![디버그 메뉴의 디버깅 시작 명령](../ide/media/get-started-cpp-start-debugging-menu.png "디버그 메뉴의 디버깅 시작 명령")
 
-   디버거가 시작되고 코드가 실행됩니다. 콘솔 창(명령 프롬프트외 비슷한 별도의 창)이 몇 초간 나타나지만 디버거에서 실행이 중지되면 바로 닫힙니다. 텍스트를 보려면 중단점을 설정하여 프로그램 실행을 중지해야 합니다.
+디버거가 시작되고 코드가 실행됩니다. 콘솔 창(명령 프롬프트외 비슷한 별도의 창)이 몇 초간 나타나지만 디버거에서 실행이 중지되면 바로 닫힙니다. 텍스트를 보려면 중단점을 설정하여 프로그램 실행을 중지해야 합니다.
 
 ### <a name="to-add-a-breakpoint"></a>중단점을 추가하려면
 
@@ -153,8 +154,8 @@ HelloApp을 디버그하여 단어 "Hello"가 콘솔 창에 표시되는지 여�
 
 ## <a name="see-also"></a>참고 항목
 
-[C++ 데스크톱 개발에 Visual Studio IDE 사용](/cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development)  
-[연습: C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)  
-[Visual Studio 생산성 팁](../ide/productivity-tips-for-visual-studio.md)  
-[Visual Studio 샘플](../ide/visual-studio-samples.md)  
-[Visual Studio에서 개발 시작](../ide/get-started-developing-with-visual-studio.md)
+- [C++ 데스크톱 개발에 Visual Studio IDE 사용](/cpp/ide/using-the-visual-studio-ide-for-cpp-desktop-development)
+- [연습: C# 또는 Visual Basic으로 간단한 응용 프로그램 만들기](../ide/walkthrough-create-a-simple-application-with-visual-csharp-or-visual-basic.md)
+- [Visual Studio 생산성 팁](../ide/productivity-tips-for-visual-studio.md)
+- [Visual Studio 샘플](../ide/visual-studio-samples.md)
+- [Visual Studio에서 개발 시작](../ide/get-started-developing-with-visual-studio.md)

@@ -1,20 +1,20 @@
 ---
 title: Visual Studio에서 부하 테스트 실행 설정에 컨텍스트 매개 변수 추가 | Microsoft Docs
 ms.date: 10/19/2016
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - load tests, run settings, context parameters
 - load tests, context parameters
 ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
 author: gewarren
 ms.author: gewarren
-manager: ghogen
+manager: douge
 ms.technology: vs-ide-test
-ms.openlocfilehash: 03db08b701574a4e910b96c843d0f2638e71a4f7
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+ms.openlocfilehash: 0d563adc5e6b43aa5371fe08f410880a6aba0a09
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>방법: 부하 테스트 실행 설정에 컨텍스트 매개 변수 추가
 
@@ -62,9 +62,9 @@ ms.lasthandoff: 03/19/2018
 
      실행 설정에 이미 **컨텍스트 매개 변수** 폴더가 있는 경우 이 폴더를 마우스 오른쪽 단추로 클릭하고 **컨텍스트 매개 변수 추가**를 선택합니다.
 
-4.  속성 창에서 **이름** 값을 적절한 값(예: WebServer1)으로 변경합니다. 속성 창에서 **Value**를 사용할 매개 변수(예: http://CorporateStagingWebServer)로 변경합니다.
+4.  속성 창에서 **이름** 값을 적절한 값(예: WebServer1)으로 변경합니다. 속성 창에서 **Value**를 사용할 매개 변수(예: http://CorporateStagingWebServer))로 변경합니다.
 
-5.  (선택 사항) **Value** 속성에 다른 문자열(예: http://CorporateProductionWebServer)을 사용하여 3-5단계를 반복합니다.
+5.  (선택 사항) **Value** 속성에 다른 문자열(예: http://CorporateProductionWebServer))을 사용하여 3-5단계를 반복합니다.
 
 6.  활성 상태로 설정할 실행 설정을 선택합니다. 실행 설정에 대한 바로 가기 메뉴를 열고 **활성 상태로 설정**을 선택합니다.
 

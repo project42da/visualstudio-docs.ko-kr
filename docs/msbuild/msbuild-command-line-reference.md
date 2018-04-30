@@ -1,12 +1,9 @@
 ---
-title: "MSBuild 명령줄 참조 | Microsoft Docs"
-ms.custom: 
+title: MSBuild 명령줄 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: reference
 dev_langs:
 - VB
 - CSharp
@@ -17,17 +14,16 @@ helpviewer_keywords:
 - MSBuild, command line reference
 - msbuild.exe
 ms.assetid: edaa65ec-ab8a-42a1-84cb-d76d5b2f4584
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 47179698fe7a65552c10ddf24c2f49733f60fd97
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 536a19e26fa935f26201692d539c6ecd51270d32
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="msbuild-command-line-reference"></a>MSBuild 명령줄 참조
 MSBuild.exe를 사용하여 프로젝트 또는 솔루션 파일을 빌드할 경우 여러 스위치를 포함하여 프로세스의 다양한 측면을 지정할 수 있습니다.  
@@ -73,7 +69,7 @@ MSBuild.exe [Switches] [ProjectFile]
 |/distributedlogger:<br /><br /> `central logger`*<br /><br /> `forwarding logger`|/dl:`central logger`*`forwarding logger`|MSBuild의 이벤트를 로그하고 각 노드에 다른 로거 인스턴스를 연결합니다. 여러 로거를 지정하려면 각 로거를 개별적으로 지정합니다.<br /><br /> 로거 구문을 사용하여 로거를 지정합니다. 로거 구문에 대해서는 아래의 **/logger** 스위치를 참조하세요.<br /><br /> 다음 예에서는 이 스위치의 사용 방법을 보여 줍니다.<br /><br /> `/dl:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `/dl:MyLogger,C:\My.dll*ForwardingLogger,C:\Logger.dll`|  
 |/fileLogger<br /><br /> *[number]*|/fl[`number`]|현재 디렉터리의 단일 파일에 빌드 출력을 로깅합니다. `number`를 지정하지 않으면 출력 파일 이름은 msbuild.log로 지정됩니다. `number`를 지정하는 경우 출력 파일 이름은 msbuild`n`.log로 지정됩니다. 여기서 n은 `number`입니다. `Number`는 1에서 9의 숫자일 수 있습니다.<br /><br /> **/fileLoggerParameters** 스위치를 사용하여 파일 위치 및 fileLogger의 기타 매개 변수를 지정할 수 있습니다.|  
 |/fileloggerparameters:[number]<br /><br /> `parameters`|/flp:[ `number`] `parameters`|파일 로거 및 분산된 파일 로거에 대해 추가 매개 변수를 지정합니다. 이 스위치가 있으면 해당 /**filelogger[**`number`**]** 스위치가 있다는 것을 의미합니다. `Number`는 1에서 9의 숫자일 수 있습니다.<br /><br /> **/consoleloggerparameters**에 대해 나열된 모든 매개 변수를 사용할 수 있습니다. 다음 매개 변수 중 하나 이상을 사용할 수도 있습니다.<br /><br /> -   **LogFile**. 빌드 로그가 기록되는 로그 파일의 경로입니다. 분산된 파일 로거는 해당 로그 파일의 이름 앞에 이 경로를 추가합니다.<br />-   **Append**. 빌드 로그가 로그 파일에 추가될지 또는 로그 파일을 덮어쓸지를 결정합니다. 이 스위치를 설정하면 빌드 로그가 로그 파일에 추가됩니다. 이 스위치가 없으면 기존 로그 파일의 내용을 덮어씁니다.<br />     append 스위치를 포함하면 true 또는 false의 설정에 관계없이 로그가 추가됩니다. append 스위치를 포함하지 않으면 로그를 덮어씁니다.<br />     이 경우 파일을 덮어씁니다. `msbuild myfile.proj /l:FileLogger,Microsoft.Build.Engine;logfile=MyLog.log`<br />     이 경우 파일에 추가됩니다. `msbuild myfile.proj /l:FileLogger,Microsoft.Build.Engine;logfile=MyLog.log;append=true`<br />     이 경우 파일에 추가됩니다. `msbuild myfile.proj /l:FileLogger,Microsoft.Build.Engine;logfile=MyLog.log;append=false`<br />-   **Encoding**. 파일에 대한 인코딩을 지정합니다(예: UTF-8, 유니코드 또는 ASCII).<br /><br /> 다음 예제에서는 경고 및 오류에 대한 별도의 로그 파일을 생성합니다.<br /><br /> `/flp1:logfile=errors.txt;errorsonly /flp2:logfile=warnings.txt;warningsonly`<br /><br /> 다음 예제에서는 다른 가능성을 보여 줍니다.<br /><br /> `/fileLoggerParameters:LogFile=MyLog.log;Append; Verbosity=diagnostic;Encoding=UTF-8`<br /><br /> `/flp:Summary;Verbosity=minimal;LogFile=msbuild.sum`<br /><br /> `/flp1:warningsonly;logfile=msbuild.wrn`<br /><br /> `/flp2:errorsonly;logfile=msbuild.err`|  
-|/binaryLogger[:[LogFile=]`output.binlog`[;ProjectImports=[None,Embed,ZipFile]]]|/bl|모든 빌드 이벤트를 압축된 이진 파일로 직렬화합니다. 기본적으로 이 파일은 현재 디렉터리에 있고 이름이 `msbuild.binlog`입니다. 이진 로그는 빌드 프로세스를 자세히 설명하는 것으로, 나중에 텍스트 로그를 다시 구성하기 위해 사용할 수 있고 기타 분석 도구에서 사용될 수 있습니다. 이진 로그는 일반적으로 가장 상세한 텍스트 진단 수준 로그보다 10~20배 작지만, 더 자세한 정보를 포함하고 있습니다.<br /><br />기본적으로 이진 로거는 빌드 중 가져온 모든 프로젝트와 발생한 대상 파일을 비롯한 프로젝트 파일을 소스 텍스트를 수집합니다. 선택적 `ProjectImports` 스위치로 이 동작을 제어합니다.<br /><br /> -   **ProjectImports=None**. 프로젝트 가져오기를 수집하지 않습니다.<br /> -   **ProjectImports=Embed**. 로그 파일에 프로젝트 가져오기를 포함합니다(기본값).<br /> -   **ProjectImports=ZipFile**. 프로젝트 파일을 `output.projectimports.zip`에 저장합니다. 여기서 `output`은 이진 로그 파일 이름과 같은 이름입니다.<br /><br />ProjectImports의 기본 설정은 Embed입니다.<br />**참고**: 로거는 `.cs`, `.cpp` 등과 같이 MSBuild가 아닌 소스 파일을 수집하지 않습니다.<br />`.binlog` 파일을 프로젝트/솔루션 대신 인수로 `msbuild.exe`에 전달하여 “재생”할 수 있습니다. 다른 로거는 원래 빌드가 발생하고 있는 것처럼 로그 파일에 포함된 정보를 받게 됩니다. 이진 로그 및 해당 사용법에 대한 자세한 내용은 https://github.com/Microsoft/msbuild/wiki/Binary-Log에서 확인할 수 있습니다. <br /><br />**예**:<br /> -   `/bl`<br /> -    `/bl:output.binlog`<br /> -   `/bl:output.binlog;ProjectImports=None`<br /> -   `/bl:output.binlog;ProjectImports=ZipFile`<br /> -   `/bl:..\..\custom.binlog`<br /> -   `/binaryLogger`|
+|/binaryLogger[:[LogFile=]`output.binlog`[;ProjectImports=[None,Embed,ZipFile]]]|/bl|모든 빌드 이벤트를 압축된 이진 파일로 직렬화합니다. 기본적으로 이 파일은 현재 디렉터리에 있고 이름이 `msbuild.binlog`입니다. 이진 로그는 빌드 프로세스를 자세히 설명하는 것으로, 나중에 텍스트 로그를 다시 구성하기 위해 사용할 수 있고 기타 분석 도구에서 사용될 수 있습니다. 이진 로그는 일반적으로 가장 상세한 텍스트 진단 수준 로그보다 10~20배 작지만, 더 자세한 정보를 포함하고 있습니다.<br /><br />기본적으로 이진 로거는 빌드 중 가져온 모든 프로젝트와 발생한 대상 파일을 비롯한 프로젝트 파일을 소스 텍스트를 수집합니다. 선택적 `ProjectImports` 스위치로 이 동작을 제어합니다.<br /><br /> -   **ProjectImports=None**. 프로젝트 가져오기를 수집하지 않습니다.<br /> -   **ProjectImports=Embed**. 로그 파일에 프로젝트 가져오기를 포함합니다(기본값).<br /> -   **ProjectImports=ZipFile**. 프로젝트 파일을 `output.projectimports.zip`에 저장합니다. 여기서 `output`은 이진 로그 파일 이름과 같은 이름입니다.<br /><br />ProjectImports의 기본 설정은 Embed입니다.<br />**참고**: 로거는 `.cs`, `.cpp` 등과 같이 MSBuild가 아닌 소스 파일을 수집하지 않습니다.<br />`.binlog` 파일을 프로젝트/솔루션 대신 인수로 `msbuild.exe`에 전달하여 “재생”할 수 있습니다. 다른 로거는 원래 빌드가 발생하고 있는 것처럼 로그 파일에 포함된 정보를 받게 됩니다. 이진 로그 및 해당 사용법에 대해 https://github.com/Microsoft/msbuild/wiki/Binary-Log에서 자세히 알아볼 수 있습니다. <br /><br />**예**:<br /> -   `/bl`<br /> -    `/bl:output.binlog`<br /> -   `/bl:output.binlog;ProjectImports=None`<br /> -   `/bl:output.binlog;ProjectImports=ZipFile`<br /> -   `/bl:..\..\custom.binlog`<br /> -   `/binaryLogger`|
 |/logger:<br /><br /> `logger`|/l:`logger`|MSBuild의 이벤트를 로그하는 데 사용할 로거를 지정합니다. 여러 로거를 지정하려면 각 로거를 개별적으로 지정합니다.<br /><br /> `logger`에 대해 다음 구문을 사용합니다. `[``LoggerClass``,]``LoggerAssembly``[;``LoggerParameters``]`<br /><br /> `LoggerClass`에 대해 다음 구문을 사용합니다. `[``PartialOrFullNamespace``.]``LoggerClassName`<br /><br /> 어셈블리가 정확히 하나의 로거를 포함하는 경우 로거 클래스를 지정할 필요가 없습니다.<br /><br /> `LoggerAssembly`에 대해 다음 구문을 사용합니다. `{``AssemblyName``[,``StrongName``] &#124;` `AssemblyFile``}`<br /><br /> 로거 매개 변수는 선택적이며 정확히 입력한 대로 로거에 전달됩니다.<br /><br /> 다음 예제에서는 **/logger** 스위치를 사용합니다.<br /><br /> `/logger:XMLLogger,MyLogger,Version=1.0.2,Culture=neutral`<br /><br /> `/logger:XMLLogger,C:\Loggers\MyLogger.dll;OutputAsHTML`|  
 |/noconsolelogger|/noconlog|기본 콘솔 로거를 사용하지 않도록 설정하고 콘솔에 이벤트를 로깅하지 않습니다.|  
   

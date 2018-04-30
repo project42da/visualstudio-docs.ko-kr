@@ -1,26 +1,21 @@
 ---
-title: Python 검색 경로를 적용하는 방법 | Microsoft Docs
+title: Python 검색 경로를 적용하는 방법
 description: Visual Studio가 환경 및 프로젝트 모두에서 Python 검색 경로를 사용하는 방법 개요.
-ms.custom: ''
 ms.date: 03/05/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- devlang-python
-ms.devlang: python
-ms.tgt_pltfrm: ''
+ms.prod: visual-studio-dev15
+ms.technology: vs-python
 ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9ebb5ac043253db76cc9613ac67e5d980d911bd3
-ms.sourcegitcommit: 29ef88fc7d1511f05e32e9c6e7433e184514330d
+ms.openlocfilehash: 94770d1591d1f4d80fadd2a0f868dfedfd84999a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/28/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-visual-studio-uses-python-search-paths"></a>Visual Studio에서 Python 검색 경로를 사용하는 방법
 
@@ -34,9 +29,9 @@ ms.lasthandoff: 03/28/2018
 
 따라서 Visual Studio에서는 환경 및 프로젝트 모두에서 검색 경로를 직접 지정하는 방법을 제공합니다. Visual Studio에서 실행하거나 디버그하는 코드는 `PYTHONPATH` 값으로 검색 경로(및 기타 동등한 변수)를 받습니다. Visual Studio는 검색 경로를 추가하여 해당 위치의 라이브러리를 검사하고 필요한 경우(Visual Studio 2017 버전 15.5 및 이전 버전) 라이브러리에 대한 IntelliSense 데이터베이스를 빌드합니다(라이브러리 수에 따라 데이터베이스를 구성하는 데 다소 시간이 걸릴 수 있음).
 
-검색 경로를 추가하려면 솔루션 탐색기에서 **검색 경로** 항목을 마우스 오른쪽 단추로 클릭하고 **검색 경로에 폴더 추가...**를 선택하고 포함할 폴더를 선택합니다. 이 경로는 프로젝트와 연결된 환경에 사용됩니다. (환경이 Python 3을 기반으로 하고 Python 2.7 모듈에 검색 경로를 추가하려는 경우 오류가 표시될 수 있습니다.)
+검색 경로를 추가하려면 솔루션 탐색기에서 **검색 경로** 항목을 마우스 오른쪽 단추로 클릭하고 **검색 경로에 폴더 추가...** 를 선택하고 포함할 폴더를 선택합니다. 이 경로는 프로젝트와 연결된 환경에 사용됩니다. (환경이 Python 3을 기반으로 하고 Python 2.7 모듈에 검색 경로를 추가하려는 경우 오류가 표시될 수 있습니다.)
 
-`.zip` 또는 `.egg` 확장명이 있는 파일도 **검색 경로에 Zip 보관 파일 추가...**를 선택하여 검색 경로로 추가할 수 있습니다. 폴더와 마찬가지로 이러한 폴더의 내용을 검색하고 IntelliSense에 제공합니다.
+`.zip` 또는 `.egg` 확장명이 있는 파일도 **검색 경로에 Zip 보관 파일 추가...** 를 선택하여 검색 경로로 추가할 수 있습니다. 폴더와 마찬가지로 이러한 폴더의 내용을 검색하고 IntelliSense에 제공합니다.
 
 정기적으로 동일한 검색 경로를 사용하고 그 내용이 자주 변경되지 않는 경우 site-packages 폴더에 설치하는 것이 더 효율적일 수 있습니다. 검색 경로가 분석되어 IntelliSense 데이터베이스에 저장되며 항상 의도한 환경과 연결되고 각 프로젝트에 대해 검색 경로를 추가할 필요가 없습니다.
 

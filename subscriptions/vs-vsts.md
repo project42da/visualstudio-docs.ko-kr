@@ -1,19 +1,19 @@
 ---
 title: Visual Studio 구독자용 VSTS 혜택 | Microsoft Docs
-Author: evanwindom
-Ms.author: jaunger
-Manager: evelynp
-Ms.date: 3/15/2018
-Ms.topic: Get-Started-Article
-Description: Understand how you can use Visual Studio Team Services (VSTS) as a Visual Studio subscriber.
-Ms.prod: vs-subscription
-Ms.technology: vs-subscriptions
-Searchscope: VS Subscription
-ms.openlocfilehash: 7fbfdd5a23196afeeb24b2ce380fce44d457fb99
-ms.sourcegitcommit: 67374acb6d24019a434d96bf705efdab99d335ee
+author: evanwindom
+ms.author: jaunger
+manager: evelynp
+ms.date: 03/15/2018
+ms.topic: Get-Started-Article
+description: VSTS(Visual Studio 팀 서비스)를 Visual Studio 구독자로 사용할 수 있는 방법을 파악합니다.
+ms.prod: vs-subscription
+ms.technology: vs-subscriptions
+searchscope: VS Subscription
+ms.openlocfilehash: ae0f8c27d7f82493c4ce247ee1399e4e16fb88f8
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/22/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="visual-studio-team-services-vsts-benefits-for-visual-studio-subscribers"></a>Visual Studio 구독자용 VSTS(Visual Studio Team Services) 혜택
 
@@ -26,12 +26,14 @@ Visual Studio 구독을 활성화하는 데 사용한 것과 동일한 ID 또는
 ## <a name="eligibility"></a>자격
 | 구독 수준                                                 |     채널                                            | 이점                                                          | 갱신 가능?    |
 |--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
-| Visual Studio Enterprise(표준, 연간 클라우드, 월간 클라우드)   | VL, Azure, Retail, MPN, BizSpark, NFR<sup>1</sup>, FTE  | 기본, 테스트 관리자, 패키지 관리, 자체 호스트된 CI/CD       |  예          |
-| Visual Studio Professional(표준, 연간 클라우드, 월간 클라우드) | VL, Azure, 일반 정품                                       | Basic                                                            |  예          |
+| Visual Studio Enterprise(표준, 연간 클라우드, 월간 클라우드)   | VL, Azure, 일반 정품, 선택한 NFR<sup>1</sup>, FTE  | 기본, 테스트 관리자, 패키지 관리, 자체 호스트된 CI/CD       |  예          |
+| Visual Studio Professional(표준, 연간 클라우드, 월간 클라우드) | VL, Azure, 일반 정품,                                        | Basic                                                            |  예          |
 | Visual Studio Test Professional(표준)                         | VL, 일반 정품                                              | 기본, 테스트 관리자                                              |  예          |
 | MSDN 플랫폼(표준)                                          | VL, 일반 정품                                              | 기본, 테스트 관리자                                              |  예          |
 
-<sup>1</sup> 포함: NFR(전매 금지), MVP(Microsoft Valued Partner), RD(Region Director), VSIP(Visual Studio Industry Partner)
+<sup>1</sup> *포함: NFR(전매금지), MVP(Microsoft Valued Partner), RD(Region Director), VSIP(Visual Studio 업계 파트너), Microsoft 파트너 네트워크(Enterprise), BizSpark, MCT Software & Services Developer. 제외: MCT Software & Services, Imagine.*
+
+
 
 VSTS 기능에 대해 알아봅니다.
 - [기본](https://www.visualstudio.com/team-services/compare-features/)

@@ -1,10 +1,7 @@
 ---
-title: Visual Studio 2017의 문제를 보고하는 방법 | Microsoft 문서
+title: Visual Studio 2017의 문제를 보고하는 방법 | Microsoft Docs
 ms.custom: ''
 ms.date: 03/11/2018
-ms.reviewer: ''
-ms.suite: ''
-ms.tgt_pltfrm: ''
 ms.topic: conceptual
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: TerryGLee
@@ -13,11 +10,11 @@ manager: douge
 ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: 809f9121be867785e6d92966ccf92b012740daab
-ms.sourcegitcommit: a0a49cceb0fdc1465ddf76d131c6575018b628b8
+ms.openlocfilehash: eacb6ba97f79f2c66444bc79b11c51ef01a50672
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/05/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017의 문제를 보고하는 방법
 
@@ -73,7 +70,7 @@ Visual Studio에 문제가 발생하는 경우와 관련하여 자세히 알려�
 
 ### <a name="report-a-problem-by-using-the-visual-studio-installer"></a>Visual Studio 설치 관리자를 사용하여 문제 보고
 
-Visual Studio 설치를 완료할 수 없거나 Visual Studio 내에서 피드백 도구에 액세스할 수 없는 경우 Visual Studio 설치 관리자를 사용하여 문제를 보고할 수 있습니다. 이렇게 하려면 Visual Studio 설치 관리자의 오른쪽 위에서 피드백 아이콘을 선택합니다.
+Visual Studio 설치를 완료할 수 없거나 Visual Studio 내에서 피드백 도구에 액세스할 수 없는 경우 **Visual Studio 설치 관리자**를 사용하여 문제를 보고할 수 있습니다. 이렇게 하려면 **Visual Studio 설치 관리자**의 오른쪽 위에서 피드백 아이콘을 선택합니다.
 
  ![Visual Studio 설치 관리자의 피드백 제공 단추를 탭하여 피드백 도구를 열 수 있습니다.](../install/media/report-a-problem.png)
 

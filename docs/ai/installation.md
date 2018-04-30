@@ -1,22 +1,22 @@
 ---
-title: "AI Tools for Visual Studio 설치"
-description: "AI Tools for Visual Studio 설치"
+title: AI Tools for Visual Studio 설치
+description: AI Tools for Visual Studio 설치
 keywords: AI, Visual Studio
 author: lisawong19
 ms.author: liwong
 manager: routlaw
 ms.date: 11/13/2017
-ms.topic: article
+ms.topic: conceptual
 ms.devlang: multiple
 ms.service: multiple
 ms.technology: vs-ai-tools
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e182a000dc9c8aaeb721b81036f878430260618
-ms.sourcegitcommit: 8cbe6b38b810529a6c364d0f1918e5c71dee2c68
+ms.openlocfilehash: 93e28558b1d09ded8de5bc6c4eb45230435cb807
+ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/28/2018
+ms.lasthandoff: 04/16/2018
 ---
 # <a name="installation"></a>설치
 
@@ -124,7 +124,7 @@ Python은 확장을 통해 Visual Studio에서 완전히 지원됩니다.
 
 - **NumPy**는 작은 다차원 배열 처리를 위한 대규모 속도 저하 없이 임의 레코드의 대형 다차원 배열을 효율적으로 조작하도록 설계된 범용 배열 처리 패키지입니다.
 
-- **SciPy("싸이파이"로 읽음)**는 NumPy 기반의 수학, 과학, 공학용 오픈 소스 소프트웨어입니다.
+- **SciPy("싸이파이"로 읽음)** 는 NumPy 기반의 수학, 과학, 공학용 오픈 소스 소프트웨어입니다.
 버전 1.0.0부터 SciPy에는 Windows용으로 미리 작성된 공식 휠 패키지가 있습니다.
 
 NumPy 및 SciPy를 설치하려면 터미널에서 다음 명령을 실행합니다.

@@ -1,12 +1,10 @@
 ---
-title: "방법: Visual Basic 개발자 설정을 적용하여 빌드 구성 관리 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Basic 개발자 설정을 적용하여 빌드 구성 관리 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio, building with Visual Basic settings
 - MSBuild, debug build
@@ -16,21 +14,21 @@ helpviewer_keywords:
 - MSBuild, release build
 - release builds
 ms.assetid: eaea6e0b-6c61-4869-8d63-d372c745a23c
-caps.latest.revision: "9"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 094f87ca4a56f71cbecfa9b6b1dc9189244c0c57
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 954a968de9840e6f23c3e8ff5ab0ff4d0fa761cb
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-manage-build-configurations-with-visual-basic-developer-settings-applied"></a>방법: Visual Basic 개발자 설정을 적용하여 빌드 구성 관리
 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 개발자 설정이 적용되면 기본적으로 모든 고급 빌드 구성 옵션이 숨겨집니다. 이 항목에서는 이러한 설정을 수동으로 사용하도록 설정하는 방법을 설명합니다.  
   
-## <a name="enabling-advanced-build-configurations"></a>고급 빌드 구성 사용  
+## <a name="enable-advanced-build-configurations"></a>고급 빌드 구성 활성화  
  기본적으로 [!INCLUDE[vbprvb](../code-quality/includes/vbprvb_md.md)] 개발자 설정은 [프로젝트 디자이너](..//ide/reference/application-page-project-designer-visual-basic.md)의 **구성** 및 **플랫폼** 목록과 **구성 관리자** 대화 상자를 여는 옵션을 숨깁니다.  
   
 #### <a name="to-enable-advanced-build-configurations"></a>고급 빌드 구성을 사용하도록 설정하려면  
@@ -46,7 +44,7 @@ ms.lasthandoff: 12/22/2017
   
 4.  **확인**을 클릭합니다.  
   
-     **빌드** 메뉴에서 현재 **구성 관리자**를 사용할 수 있고 **구성** 및 **플랫폼** 목록이 프로젝트 디자이너에 표시됩니다.  
+     **빌드** 메뉴에서 현재 **구성 관리자**를 사용할 수 있고 **구성** 및 **플랫폼** 목록이 **프로젝트 디자이너**에 표시됩니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [빌드 구성 이해](../ide/understanding-build-configurations.md)   

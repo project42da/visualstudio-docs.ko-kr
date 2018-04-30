@@ -1,26 +1,20 @@
 ---
-title: "Visual Studio용 R 도구를 사용한 원격 작업 영역 | Microsoft Docs"
-description: "원격 R 작업 영역을 설정하고 Visual Studio에서 이 작업 영역에 연결하는 방법입니다."
-ms.custom: 
+title: R에 대한 원격 작업 영역
+description: 원격 R 작업 영역을 설정하고 Visual Studio에서 이 작업 영역에 연결하는 방법입니다.
 ms.date: 12/04/2017
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- devlang-r
-dev_langs:
-- R
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.prod: visual-studio-dev15
+ms.technology: vs-rtvs
+ms.topic: conceptual
 author: kraigb
 ms.author: kraigb
-manager: ghogen
+manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: 52122b3b3a92ff7df292764e75175070e0b6b1db
-ms.sourcegitcommit: 205d15f4558315e585c67f33d5335d5b41d0fcea
+ms.openlocfilehash: 84a9c2bddb74402711217427b3471713562cce0a
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 02/09/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="setting-up-remote-workspaces"></a>원격 작업 영역 설정
 

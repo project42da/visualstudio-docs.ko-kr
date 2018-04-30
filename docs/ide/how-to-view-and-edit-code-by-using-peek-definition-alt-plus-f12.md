@@ -1,33 +1,31 @@
 ---
-title: "Visual Studio에서 정의 피킹(Peeking) 사용 | Microsoft Docs"
-ms.custom: 
+title: Visual Studio에서 정의 피킹(Peeking) 사용 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/10/2018
-ms.reviewer: 
-ms.suite: 
 ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: 5a7465b8432d00df83638dbfa98a36cf8dee469a
-ms.sourcegitcommit: f89ed5fc2e5078213e30a6ade4604e34df48181f
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 316b49a08d5a2cddf92a09e583f432db96ce730b
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 01/13/2018
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-view-and-edit-code-by-using-peek-definition-altf12"></a>방법: 정의 피킹(Peeking)을 사용하여 코드 보기 및 편집(Alt+F12)
 
-**정의 피킹(Peeking)** 명령을 사용하여 작성하고 있는 코드에서 전환하지 않고 코드를 보고 편집할 수 있습니다. **정의 피킹(Peeking)** 및 **정의로 이동**은 같은 정보를 표시하지만 **정의 피킹(Peeking)**은 팝업 창에 표시하고 **정의로 이동**은 별도의 코드 창에 코드를 표시합니다. **정의로 이동**을 사용하면 컨텍스트(즉, 활성 코드 창, 현재 줄 및 커서 위치)를 정의 코드 창으로 전환합니다. **정의 피킹(Peeking)**을 사용하면 정의를 보고 편집하며 정의 파일 내부로 이동하여 원래 코드 파일을 유지할 수 있습니다.
+**정의 피킹(Peeking)** 명령을 사용하여 작성하고 있는 코드에서 전환하지 않고 코드를 보고 편집할 수 있습니다. **정의 피킹(Peeking)** 및 **정의로 이동**은 같은 정보를 표시하지만 **정의 피킹(Peeking)** 은 팝업 창에 표시하고 **정의로 이동**은 별도의 코드 창에 코드를 표시합니다. **정의로 이동**을 사용하면 컨텍스트(즉, 활성 코드 창, 현재 줄 및 커서 위치)를 정의 코드 창으로 전환합니다. **정의 피킹(Peeking)** 을 사용하면 정의를 보고 편집하며 정의 파일 내부로 이동하여 원래 코드 파일을 유지할 수 있습니다.
 
-**정의 피킹(Peeking)**은 C#, Visual Basic 및 C++ 코드에서 사용할 수 있습니다. Visual Basic에서 **정의 피킹(Peeking)**은 정의 메타데이터가 없는 기호에 대한 **개체 브라우저** 링크를 보여 줍니다(예: 기본 제공되는 .NET Framework 형식).
+**정의 피킹(Peeking)** 은 C#, Visual Basic 및 C++ 코드에서 사용할 수 있습니다. Visual Basic에서 **정의 피킹(Peeking)** 은 정의 메타데이터가 없는 기호에 대한 **개체 브라우저** 링크를 보여 줍니다(예: 기본 제공되는 .NET Framework 형식).
 
 ## <a name="working-with-peek-definition"></a>정의 피킹(Peeking)으로 작업
 
 ### <a name="to-open-a-peek-definition-window"></a>정의 피킹(Peeking) 창을 열려면
 
-1. 탐색하려는 형식 또는 멤버에 대한 상황에 맞는 메뉴에서 **정의 피킹(Peeking)**을 선택하여 정의를 피킹할 수 있습니다. Visual Studio 2017 버전 15.4 이상에서 이 옵션을 설정하는 경우, **Ctrl** 키(또는 다른 한정자)를 누르고 멤버 이름을 클릭하여 마우스를 사용하는 정의를 피킹할 수 있습니다. 또는 키보드에서 **Alt**+**F12**를 누릅니다.
+1. 탐색하려는 형식 또는 멤버에 대한 상황에 맞는 메뉴에서 **정의 피킹(Peeking)** 을 선택하여 정의를 피킹할 수 있습니다. Visual Studio 2017 버전 15.4 이상에서 이 옵션을 설정하는 경우, **Ctrl** 키(또는 다른 한정자)를 누르고 멤버 이름을 클릭하여 마우스를 사용하는 정의를 피킹할 수 있습니다. 또는 키보드에서 **Alt**+**F12**를 누릅니다.
 
      이 그림은 `Print()`라는 메서드에 대한 **정의 피킹(Peeking)** 창을 보여 줍니다.
 
@@ -43,13 +41,13 @@ ms.lasthandoff: 01/13/2018
 
 ### <a name="open-a-peek-definition-window-from-within-a-peek-definition-window"></a>정의 피킹(Peeking) 창 내에서 정의 피킹(Peeking) 창 열기
 
-이미 **정의 피킹(Peeking)** 창이 열려 있는 경우 해당 창에 있는 코드에서 **정의 피킹(Peeking)**을 다시 호출할 수 있습니다. 다른 정의 창이 열립니다. 일련의 breadcrumb 점은 정의 창 사이를 탐색하는 데 사용할 수 있는 정의 창 탭 옆에 나타납니다. 각 점의 도구 설명에는 점이 나타내는 파일 이름 및 정의 파일의 경로가 나와 있습니다.
+이미 **정의 피킹(Peeking)** 창이 열려 있는 경우 해당 창에 있는 코드에서 **정의 피킹(Peeking)** 을 다시 호출할 수 있습니다. 다른 정의 창이 열립니다. 일련의 breadcrumb 점은 정의 창 사이를 탐색하는 데 사용할 수 있는 정의 창 탭 옆에 나타납니다. 각 점의 도구 설명에는 점이 나타내는 파일 이름 및 정의 파일의 경로가 나와 있습니다.
 
    ![Peek 창 내부의 Peek 창](../ide/media/peekwithinpeek.png "PeekWithinPeek")
 
 ### <a name="peek-definition-with-multiple-results"></a>여러 결과에서 정의 피킹
 
-둘 이상의 정의가 있는 코드에서 **정의 피킹(Peeking)**을 사용하는 경우(예: 부분 클래스) 결과 목록이 코드 정의 보기 오른쪽에 나타납니다. 목록에서 결과를 선택하여 해당 정의를 표시할 수 있습니다.
+둘 이상의 정의가 있는 코드에서 **정의 피킹(Peeking)** 을 사용하는 경우(예: 부분 클래스) 결과 목록이 코드 정의 보기 오른쪽에 나타납니다. 목록에서 결과를 선택하여 해당 정의를 표시할 수 있습니다.
 
    ![여러 결과의 Peek 창](../ide/media/peekmultiple.png "PeekMultiple")
 
@@ -75,12 +73,12 @@ ms.lasthandoff: 01/13/2018
 
 |기능|바로 가기 키|
 |-------------------|:-----------------------:|
-|정의 창 열기|Alt+F12|
-|정의 창 닫기|Esc|
-|정의 창을 일반 문서 탭으로 승격|Shift+Alt+Home|
-|정의창 사이 탐색|Ctrl+Alt+- 및 Ctrl+Alt+=|
-|여러 결과 사이 이동|F8 및 Shift+F8|
-|코드 편집기 창 또는 정의 창으로 전환|Shift+Esc|
+|정의 창 열기|**Alt**+**F12**|
+|정의 창 닫기|**Esc**|
+|정의 창을 일반 문서 탭으로 승격|**Shift**+**Alt**+**Home**|
+|정의창 사이 탐색|**Ctrl**+**Alt**+**-** 및 **Ctrl**+**Alt**+**=**|
+|여러 결과 사이 이동|**F8** 및 **Shift**+**F8**|
+|코드 편집기 창 또는 정의 창으로 전환|**Shift**+**Esc**|
 
 > [!NOTE]
 > **정의 피킹(Peeking)** 창에서 코드를 편집하기 위해 Visual Studio의 다른 위치에서 사용할 때와 같은 바로 가기 키를 사용할 수도 있습니다.

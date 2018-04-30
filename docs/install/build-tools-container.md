@@ -1,12 +1,10 @@
 ---
-title: Build Tools를 컨테이너에 설치 | Microsoft Docs
+title: Visual Studio Build Tools를 컨테이너에 설치
+description: Visual Studio Build Tools를 Windows 컨테이너에 설치하여 CI/CD(연속 통합/지속적인 업데이트) 워크플로를 지원하는 방법을 알아봅니다.
 ms.custom: ''
-ms.date: 10/18/2017
-ms.reviewer: ''
-ms.suite: ''
-ms.technology:
-- vs-acquisition
-ms.tgt_pltfrm: ''
+ms.date: 04/18/2018
+ms.technology: vs-acquisition
+ms.prod: visual-studio-dev15
 ms.topic: conceptual
 ms.assetid: d5c038e2-e70d-411e-950c-8a54917b578a
 author: heaths
@@ -14,11 +12,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 50a63b954c87e6b5308e499be2422948fa865964
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+ms.openlocfilehash: d9dc5b1add4f81e91d0ea0e2cdc20e2581116525
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="install-build-tools-into-a-container"></a>Build Tools를 컨테이너에 설치
 
@@ -46,7 +44,7 @@ Hyper-V는 기본적으로 사용되지 않습니다. 현재 Windows 10에서 Hy
 
 ## <a name="step-2-install-docker-for-windows"></a>2단계. Windows용 Docker 설치
 
-Windows 10을 사용하는 경우 [Windows용 Docker Community Edition](https://www.docker.com/docker-windows)을 다운로드하여 설치할 수 있습니다. PowerShell을 사용하여 DSC(Desired State Configuration) 또는 간단한 단일 설치용 [패키지 공급자](https://docs.microsoft.com/virtualization/windowscontainers/deploy-containers/deploy-containers-on-server)를 통해 [Windows Server 2016용 Docker Enterprise Edition을 설치](https://docs.docker.com/engine/installation/windows/docker-ee)할 수 있습니다.
+Windows 10을 사용하는 경우 [Docker Community Edition을 다운로드하여 설치](https://docs.docker.com/docker-for-windows/install)할 수 있습니다. Windows Server 2016을 사용하는 경우 [지침을 따라 Docker Enterprise Edition을 설치합니다](https://docs.docker.com/install/windows/docker-ee).
 
 ## <a name="step-3-switch-to-windows-containers"></a>3단계. Windows 컨테이너로 전환
 
@@ -58,7 +56,7 @@ Visual Studio Build Tools(및 상위 수준의 Visual Studio)에서 설치하는
 
 **Windows 10**:
 
-1. 시스템 트레이에 있는 [Windows용 Docker 아이콘을 마우스 오른쪽 단추로 클릭](https://docs.docker.com/docker-for-windows/#docker-settings)하고 **설정...**을 클릭합니다.
+1. 시스템 트레이에 있는 [Windows용 Docker 아이콘을 마우스 오른쪽 단추로 클릭](https://docs.docker.com/docker-for-windows/#docker-settings)하고 **설정...** 을 클릭합니다.
 2. [디먼 섹션을 클릭](https://docs.docker.com/docker-for-windows/#docker-daemon)합니다.
 3. [**기본** 단추를 **고급**으로 전환](https://docs.docker.com/docker-for-windows/#edit-the-daemon-configuration-file)합니다.
 4. 다음 JSON 배열 속성을 추가하여 디스크 공간을 120GB(Build Tools의 확장도 수용할 만큼 충분한 크기 이상)로 늘립니다.
@@ -116,7 +114,7 @@ Visual Studio Build Tools(및 상위 수준의 Visual Studio)에서 설치하는
 
 ## <a name="step-5-create-and-build-the-dockerfile"></a>5단계. Dockerfile 만들기 및 빌드
 
-다음 예제 Dockerfile을 디스크의 새 파일에 저장해야 합니다. 파일 이름이 단순히 "Dockerfile"이면 기본적으로 인식됩니다.
+다음 예제 Dockerfile을 디스크의 새 파일에 저장합니다. 파일 이름이 단순히 "Dockerfile"이면 기본적으로 인식됩니다.
 
 > [!NOTE]
 > 이 Dockerfile 예제는 컨테이너에 설치할 수 없는 이전 버전의 Windows SDK만 제외합니다. 이전 릴리스에서는 빌드 명령이 실패하게 됩니다.
@@ -137,22 +135,22 @@ Visual Studio Build Tools(및 상위 수준의 Visual Studio)에서 설치하는
 3. 다음 내용을 C:\BuildTools\Dockerfile에 저장합니다.
 
    ```dockerfile
-   # Use the latest Windows Server Core image.
-   FROM microsoft/windowsservercore
+   # escape=`
 
-   # Download useful tools to C:\Bin.
-   ADD https://dist.nuget.org/win-x86-commandline/v4.1.0/nuget.exe C:\\Bin\\nuget.exe
+   # Use the latest Windows Server Core image with .NET Framework 4.7.1.
+   FROM microsoft/dotnet-framework:4.7.1
 
-   # Download the Build Tools bootstrapper outside of the PATH.
-   ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\\TEMP\\vs_buildtools.exe
+   # Download the Build Tools bootstrapper.
+   ADD https://aka.ms/vs/15/release/vs_buildtools.exe C:\TEMP\vs_buildtools.exe
 
-   # Add C:\Bin to PATH and install Build Tools excluding workloads and components with known issues.
-   RUN setx /m PATH "%PATH%;C:\Bin" \
-    && C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache --installPath C:\BuildTools --all \
-       --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 \
-       --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 \
-       --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 \
-       --remove Microsoft.VisualStudio.Component.Windows81SDK \
+   # Install Build Tools excluding workloads and components with known issues.
+   RUN C:\TEMP\vs_buildtools.exe --quiet --wait --norestart --nocache `
+       --installPath C:\BuildTools `
+       --all `
+       --remove Microsoft.VisualStudio.Component.Windows10SDK.10240 `
+       --remove Microsoft.VisualStudio.Component.Windows10SDK.10586 `
+       --remove Microsoft.VisualStudio.Component.Windows10SDK.14393 `
+       --remove Microsoft.VisualStudio.Component.Windows81SDK `
     || IF "%ERRORLEVEL%"=="3010" EXIT 0
 
    # Start developer command prompt with any other commands specified.
@@ -161,6 +159,9 @@ Visual Studio Build Tools(및 상위 수준의 Visual Studio)에서 설치하는
    # Default to PowerShell if no other command specified.
    CMD ["powershell.exe", "-NoLogo", "-ExecutionPolicy", "Bypass"]
    ```
+
+   > [!NOTE]
+   > microsoft/windowsservercore에 이미지를 직접 베이스하는 경우 .NET Framework는 제대로 설치되지 않을 수 있으며 설치 오류가 표시되지 않습니다. 관리 코드는 설치가 완료된 후 실행되지 않을 수 있습니다. 대신, [microsoft/dotnet-framework:4.7.1](https://hub.docker.com/r/microsoft/dotnet-framework) 이상에서 이미지를 베이스합니다.
 
 4. 해당 디렉터리 내에서 다음 명령을 실행합니다.
 
@@ -186,12 +187,14 @@ Visual Studio Build Tools(및 상위 수준의 Visual Studio)에서 설치하는
 이 이미지를 CI/CD 워크플로에 사용하려면 자신의 [Azure Container Registry](https://azure.microsoft.com/services/container-registry) 또는 다른 내부 [Docker 레지스트리](https://docs.docker.com/registry/deploying)에 게시하여 서버에서 끌어오기만 하면 됩니다.
 
 ## <a name="get-support"></a>지원 받기
+
 때로는 무엇인가 잘못될 수도 있습니다. Visual Studio 설치에 실패하는 경우에는 [Visual Studio 2017 설치 및 업그레이드 문제 해결](troubleshooting-installation-issues.md) 페이지를 참조하세요. 문제 해결 단계가 도움이 되지 않는 경우 라이브 채팅을 통해 Microsoft에 설치 지원을 문의할 수 있습니다(영어만 가능). 자세한 내용은 [Visual Studio 지원 페이지](https://www.visualstudio.com/vs/support/#talktous)를 참조하세요.
 
 몇 가지 추가 지원 옵션은 다음과 같습니다.
+
 * Visual Studio 설치 관리자와 Visual Studio IDE에 모두 표시되는 [문제 보고](../ide/how-to-report-a-problem-with-visual-studio-2017.md) 도구를 통해 Microsoft에 제품 문제를 보고할 수 있습니다.
 * [UserVoice](https://visualstudio.uservoice.com/forums/121579)에서 Microsoft와 제품 제안을 공유할 수 있습니다.
-* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고 질문을 하고 답을 찾을 수 있습니다.
+* [Visual Studio 개발자 커뮤니티](https://developercommunity.visualstudio.com/)에서 제품 문제를 추적하고, 답변을 찾을 수 있습니다.
 * [Gitter 커뮤니티의 Visual Studio 관련 대화](https://gitter.im/Microsoft/VisualStudio)를 통해 Microsoft 및 다른 Visual Studio 개발자와 소통할 수도 있습니다.  (이 옵션을 사용하려면 [GitHub](https://github.com/) 계정이 필요합니다.)
 
 ## <a name="see-also"></a>참고 항목

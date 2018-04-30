@@ -1,12 +1,10 @@
 ---
-title: "방법: Visual Studio에서 메뉴 및 도구 모음 사용자 지정 | Microsoft Docs"
-ms.custom: 
+title: '방법: Visual Studio에서 메뉴 및 도구 모음 사용자 지정 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology: vs-ide-general
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology:
+- vs-ide-general
+ms.topic: conceptual
 f1_keywords:
 - vs.renametoolbar
 - vs.customize.toolbars
@@ -27,16 +25,16 @@ helpviewer_keywords:
 - toolbars [Visual Studio], customizing
 - toolbars [Visual Studio], customizing in the IDE
 ms.assetid: b570ae2f-5302-45dc-9cc9-8d4d1ad50603
-caps.latest.revision: "28"
 author: gewarren
 ms.author: gewarren
-manager: ghogen
-ms.workload: multiple
-ms.openlocfilehash: c7c852033d5835c4da4cc7f1e3bdf5d20472439c
-ms.sourcegitcommit: 32f1a690fc445f9586d53698fc82c7debd784eeb
+manager: douge
+ms.workload:
+- multiple
+ms.openlocfilehash: 9de1cef61395e6b2fd4c1a38000ead2367143e4e
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 12/22/2017
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-customize-menus-and-toolbars-in-visual-studio"></a>방법: Visual Studio에서 메뉴 및 도구 모음 사용자 지정
 메뉴 모음의 도구 모음 및 메뉴를 추가 및 제거하는 방법뿐만 아니라 지정된 도구 모음 또는 메뉴의 명령을 제거하여 Visual Studio를 사용자 지정할 수 있습니다.  
@@ -44,9 +42,9 @@ ms.lasthandoff: 12/22/2017
 > [!WARNING]
 >  도구 모음 또는 메뉴를 사용자 지정한 후 확인란이 **사용자 지정** 대화 상자에서 선택되었는지 확인합니다. 그렇지 않으면 Visual Studio를 닫았다가 다시 연 후 변경 사항이 유지되지 않습니다.
   
-## <a name="adding-removing-or-moving-a-menu-on-the-menu-bar"></a>메뉴 모음의 메뉴 추가, 제거 또는 이동  
+## <a name="add-remove-or-move-a-menu-on-the-menu-bar"></a>메뉴 모음의 메뉴 추가, 제거 또는 이동  
   
-1.  메뉴 모음에서 **도구**, **사용자 지정**을 선택합니다.  
+1.  메뉴 모음에서 **도구** > **사용자 지정**을 선택합니다.  
   
      **사용자 지정** 대화 상자가 열립니다.  
   
@@ -60,9 +58,9 @@ ms.lasthandoff: 12/22/2017
   
     -   메뉴 모음에서 메뉴를 이동하려면 **컨트롤** 목록에서 메뉴를 선택한 다음 **위로 이동** 또는 **아래로 이동** 단추를 선택합니다.  
   
-## <a name="adding-removing-or-moving-a-toolbar"></a>도구 모음 추가, 제거 또는 이동  
+## <a name="add-remove-or-move-a-toolbar"></a>도구 모음 추가, 제거 또는 이동  
   
-1.  메뉴 모음에서 **도구**, **사용자 지정**을 선택합니다.  
+1.  메뉴 모음에서 **도구** > **사용자 지정**을 선택합니다.  
   
      **사용자 지정** 대화 상자가 열립니다.  
   
@@ -86,7 +84,7 @@ ms.lasthandoff: 12/22/2017
   
 ## <a name="customizing_menu">메뉴 또는 도구 모음 사용자 지정</a>
   
-1.  메뉴 모음에서 **도구**, **사용자 지정**을 선택합니다.  
+1.  메뉴 모음에서 **도구** > **사용자 지정**을 선택합니다.  
   
     **사용자 지정** 대화 상자가 열립니다.  
   
@@ -106,9 +104,9 @@ ms.lasthandoff: 12/22/2017
   
     -   가로 선 아래로 명령을 그룹화하려면 **컨트롤** 목록에서 첫 명령을 선택하고 **선택 사항 수정** 버튼을 선택한 다음 나타나는 메뉴에서 **그룹 시작**을 선택합니다.  
   
-## <a name="resetting-a-menu-or-a-toolbar"></a>메뉴 또는 도구 모음 다시 설정  
+## <a name="reset-a-menu-or-a-toolbar"></a>메뉴 또는 도구 모음 다시 설정  
   
-1.  메뉴 모음에서 **도구**, **사용자 지정**을 선택합니다.  
+1.  메뉴 모음에서 **도구** > **사용자 지정**을 선택합니다.  
   
     **사용자 지정** 대화 상자가 열립니다.  
   

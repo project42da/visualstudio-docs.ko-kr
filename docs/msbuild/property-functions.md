@@ -1,26 +1,22 @@
 ---
-title: "속성 함수 | Microsoft Docs"
-ms.custom: 
+title: 속성 함수 | Microsoft Docs
+ms.custom: ''
 ms.date: 02/21/2017
-ms.reviewer: 
-ms.suite: 
 ms.technology: msbuild
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.topic: conceptual
 helpviewer_keywords:
 - MSBuild, property functions
 ms.assetid: 2253956e-3ae0-4bdc-9d3a-4881dfae4ddb
-caps.latest.revision: 
-author: Mikejo5000
+author: mikejo5000
 ms.author: mikejo
-manager: ghogen
+manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c3bd5d35e3d996a1507a5ce14d40fbb59c24cbdb
-ms.sourcegitcommit: 236c250bb97abdab99d00c6525d106fc0035d7d0
+ms.openlocfilehash: 62b214e5ceefa691787b9dee2a5b3332c6fcbee6
+ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/17/2018
+ms.lasthandoff: 04/20/2018
 ---
 # <a name="property-functions"></a>속성 함수
 .NET Framework 버전 4 및 4.5에서는 속성 함수를 사용하여 MSBuild 스크립트를 평가할 수 있습니다. 속성 함수는 속성이 나타나는 곳마다 사용할 수 있습니다. 작업과 달리 속성 함수는 대상 외부에서 사용할 수 있으며, 대상이 실행되기 전에 평가됩니다.  
@@ -50,7 +46,7 @@ ms.lasthandoff: 03/17/2018
 
  `<Today>$([System.DateTime]::Now)</Today>`  
 
- 정적 메서드를 호출하려면 다음 구문을 사용합니다. 여기서 *Class*는 시스템 클래스의 이름이고 *Method*는 메서드의 이름이며 *(Parameters)*는 메서드의 매개 변수 목록입니다.  
+ 정적 메서드를 호출하려면 다음 구문을 사용합니다. 여기서 *Class*는 시스템 클래스의 이름이고 *Method*는 메서드의 이름이며 *(Parameters)* 는 메서드의 매개 변수 목록입니다.  
 
  `$([Class]::Method(Parameters))`  
 
@@ -108,6 +104,10 @@ ms.lasthandoff: 03/17/2018
 
 -   System.Text.RegularExpressions.Regex  
 
+-   System.UriBuilder
+
+-   System.Version
+
 -   Microsoft.Build.Utilities.ToolLocationHelper  
 
  또한 다음 정적 메서드 및 속성을 사용할 수 있습니다.  
@@ -147,7 +147,7 @@ ms.lasthandoff: 03/17/2018
 -   System.IO.File::ReadAllText  
 
 ### <a name="calling-instance-methods-on-static-properties"></a>정적 속성에 대한 인스턴스 메서드 호출  
- 개체 인스턴스를 반환하는 정적 속성에 액세스하는 경우 해당 개체의 인스턴스 메서드를 호출할 수 있습니다. 인스턴스 메서드를 호출하려면 다음 구문을 사용합니다. 여기서 *Class*는 시스템 클래스의 이름이고 *Property*는 속성의 이름이며 *Method*는 메서드의 이름이고, *(Parameters)*는 메서드의 매개 변수 목록입니다.  
+ 개체 인스턴스를 반환하는 정적 속성에 액세스하는 경우 해당 개체의 인스턴스 메서드를 호출할 수 있습니다. 인스턴스 메서드를 호출하려면 다음 구문을 사용합니다. 여기서 *Class*는 시스템 클래스의 이름이고 *Property*는 속성의 이름이며 *Method*는 메서드의 이름이고, *(Parameters)* 는 메서드의 매개 변수 목록입니다.  
 
  `$([Class]::Property.Method(Parameters))`  
 
