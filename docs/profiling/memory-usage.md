@@ -1,19 +1,20 @@
 ---
-title: Visual Studio에서 메모리 사용 분석 | Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: 앱에서 메모리 사용량 측정
+description: 디버거 통합 진단 도구를 사용하여 디버그하는 동안 메모리 누수 및 비효율적인 메모리를 찾습니다.
+ms.custom: mvc
 ms.date: 04/25/2017
 ms.technology: vs-ide-debug
-ms.topic: conceptual
+ms.topic: tutorial
 author: mikejo5000
 ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de4cf17e02391db4430bcd41fb8cfa2ea09b98f7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7f12caeb35e2c5c100069c3a5df066775beb5af3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="profile-memory-usage-in-visual-studio"></a>Visual Studio에서 프로필 메모리 사용량
 디버거 통합 **메모리 사용량** 진단 도구를 사용하여 디버그하는 동안 메모리 누수 및 비효율적인 메모리를 찾습니다. 메모리 사용량 도구를 통해 관리되는 메모리 및 네이티브 메모리 힙의 *스냅숏*을 하나 이상 만들어 개체 유형이 메모리 사용에 미치는 영향을 이해할 수 있습니다. .NET, 네이티브 또는 혼합 모드(.NET 및 네이티브) 앱의 스냅숏을 수집할 수 있습니다.  

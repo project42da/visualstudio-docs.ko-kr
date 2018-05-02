@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 응용 프로그램 보안 유지 관리 | Microsoft Docs
+title: Visual Studio에서 응용 프로그램 보안 유지 관리
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +17,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6fb75bfe3c9e479e67c766137ee84e919f9a6710
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ee7a90804c2161fe927bebc2b2f1af45862b8ccd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="maintaining-security"></a>보안 유지 관리
+# <a name="maintain-security"></a>보안 유지
 
 지속적인 경계가 보안의 대가라는 말이 있습니다. 응용 프로그램을 디자인하고 개발하는 동안 보안 문제에 최대한 신경을 많이 써도 배포 후에 보안 결함이 나타날 수 있습니다. 응용 프로그램을 감사하고 이벤트 로그를 분석하면 이전에 몰랐던 결함을 발견할 수도 있습니다.
 

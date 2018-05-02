@@ -1,9 +1,9 @@
 ---
-title: 도구 상자 항목 선택, WPF 구성 요소 | Microsoft 문서
-ms.custom: ''
+title: 도구 상자 항목 선택, WPF 구성 요소
 ms.date: 06/21/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: reference
 f1_keywords:
 - vs.chooseitems.wpfcomponents
 helpviewer_keywords:
@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 955d0ab74d59606e63a4772aee5de96c920544ed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d05e69acb414c08e752593fbfdb08246c3d14a2
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="choose-toolbox-items-wpf-components"></a>도구 상자 항목 선택, WPF 구성 요소
 
@@ -36,16 +36,20 @@ ms.lasthandoff: 04/16/2018
 
 **WPF 구성 요소** 탭에는 다음 정보가 포함됩니다.
 
-name  
+**이름**
+
 컴퓨터의 레지스트리에 있는 항목에 대한 WPF 컨트롤의 이름을 나열합니다.
 
-네임스페이스  
+**네임스페이스**
+
 구성 요소 구조를 정의하는 [.NET Framework 클래스 API](/dotnet/api/?view=netframework-4.7) 네임스페이스의 계층 구조를 표시합니다. 컴퓨터에 설치된 각 .NET Framework 네임스페이스 내에서 사용 가능한 구성 요소를 나열하려면 이 열을 기준으로 정렬합니다.
 
-어셈블리 이름  
+**어셈블리 이름**
+
 각 구성 요소의 네임스페이스가 포함된 .NET Framework 어셈블리의 이름을 표시합니다. 컴퓨터에 설치된 각 .NET Framework 어셈블리에 포함된 네임스페이스를 나열하려면 이 열을 기준으로 정렬합니다.
 
-디렉터리  
+**디렉터리**
+
 .NET Framework 어셈블리의 위치를 표시합니다. 모든 어셈블리의 기본 위치는 전역 어셈블리 캐시(GAC)입니다. 전역 어셈블리 캐시에 대한 자세한 내용은 [어셈블리 및 전역 어셈블리 캐시 사용](/dotnet/framework/app-domains/working-with-assemblies-and-the-gac)을 참조하세요.
 
 ## <a name="uielement-list"></a>UI 요소 목록
@@ -54,15 +58,15 @@ name
 
 입력란에 제공하는 문자열을 기준으로 WPF 컨트롤 목록을 필터링합니다. 4개 열에서 모든 일치 항목이 표시됩니다.
 
-### <a name="clear"></a>지우기
+**지우기**
 
 필터 문자열을 지웁니다.
 
-### <a name="browse"></a>찾아보기
+**찾아보기**
 
 WPF 컨트롤이 포함된 어셈블리로 이동할 수 있는 **열기** 대화 상자를 엽니다. 전역 어셈블리 캐시에 없는 어셈블리를 로드하려면 이 요소를 사용합니다.
 
-### <a name="language"></a>언어
+**언어**
 
 선택된 WPF 컨트롤이 포함된 어셈블리의 지역화된 언어를 표시합니다.
 
@@ -80,5 +84,5 @@ WPF 컨트롤이 포함된 어셈블리로 이동할 수 있는 **열기** 대�
 
 ## <a name="see-also"></a>참고 항목
 
-[도구 상자](../../ide/reference/toolbox.md)  
-[WPF 시작](../../designers/getting-started-with-wpf.md)
+- [도구 상자](../../ide/reference/toolbox.md)
+- [WPF 시작](../../designers/getting-started-with-wpf.md)

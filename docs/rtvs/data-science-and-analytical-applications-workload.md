@@ -1,22 +1,23 @@
 ---
 title: 데이터 과학 및 분석 응용 프로그램 워크로드
-description: Visual Studio의 데이터 과학 및 분석 응용 프로그램 워크로드는 Python, R, F# 및 Anaconda를 비롯한 해당 런타임 배포를 통합합니다.
+description: Visual Studio 워크로드는 Python, R, F# 및 Anaconda를 비롯한 해당 런타임 배포를 통합합니다.
 ms.date: 01/24/2018
 ms.prod: visual-studio-dev15
-ms.technology: vs-rtvs - vs-python
+ms.technology: vs-rtvs
 ms.topic: overview
 author: kraigb
 ms.author: kraigb
 manager: douge
 ms.workload:
+- python
 - data-science
-ms.openlocfilehash: dc6d1548a95dd60f2dc05dc1a04953525c4b3b4a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ecbd5d1fce685243d889b39017efed24ca4492a0
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="data-science-and-analytical-applications-workload"></a>데이터 과학 및 분석 응용 프로그램 워크로드
+# <a name="install-data-science-support-in-visual-studio"></a>Visual Studio에서 데이터 과학 지원 설치
 
 Visual Studio 설치 관리자를 통해 선택하고 설치한 데이터 과학 및 분석 응용 프로그램 워크로드는 세 언어 및 해당 런타임 분포와 함께 제공됩니다.
 

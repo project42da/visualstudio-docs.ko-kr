@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트에 대한 실행 설정 선택 | Microsoft Docs
+title: Visual Studio에서 부하 테스트에 대한 실행 설정 선택
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,13 @@ ms.assetid: ed6ff546-acfa-4dd8-b3a2-6e7455930ca4
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: dc521cf8e0218fabd691493fdb65fb46471e05bd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8566964ab8dd3fbfa1fca15ce8362218c99c27e6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-select-the-active-run-setting-for-a-load-test"></a>방법: 부하 테스트에 대한 활성 실행 설정 선택
 
@@ -43,7 +44,8 @@ ms.lasthandoff: 04/16/2018
      선택한 실행 설정은 활성화되고 다른 실행 설정을 선택하여 활성화할 때까지 활성 상태로 유지됩니다.
 
 > [!NOTE]
->  `Test.UseRunSetting=<run setting name>`이라는 환경 변수를 설정하면 활성 실행 설정을 재정의할 수 있습니다. 이 방법은 명령줄이나 배치 파일을 통해 부하 테스트를 실행하는 경우에 유용합니다. 이렇게 하면 부하 테스트를 열지 않고도 다른 실행 설정을 선택할 수 있습니다.
+> `Test.UseRunSetting=<run setting name>`이라는 환경 변수를 설정하면 활성 실행 설정을 재정의할 수 있습니다. 이 방법은 명령줄이나 배치 파일을 통해 부하 테스트를 실행하는 경우에 유용합니다. 이렇게 하면 부하 테스트를 열지 않고도 다른 실행 설정을 선택할 수 있습니다.
+
 
 ## <a name="specifying-the-run-setting-to-use-from-the-command-line"></a>명령줄에서 사용할 실행 설정 지정
  명령줄에서 환경 변수를 설정하여 부하 테스트의 기본 실행 설정을 재정의할 수 있습니다.

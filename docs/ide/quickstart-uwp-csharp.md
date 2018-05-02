@@ -2,6 +2,7 @@
 title: '빠른 시작: XAML 및 C#을 사용하여 Visual Studio에서 첫 번째 유니버설 Windows 플랫폼 응용 프로그램 만들기 | Microsoft Docs'
 ms.custom: ''
 ms.date: 04/04/2018
+ms.prod: visual-studio-dev15
 ms.technology:
 - vs-acquisition
 ms.topic: quickstart
@@ -13,11 +14,11 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: d1263b752a27522b9a551d8015689f60422984ad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a653dd6488a366f229311c3541c37cf5e984fc99
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-create-your-first-universal-windows-platform-application-in-visual-studio-with-xaml-and-c35"></a>빠른 시작: XAML 및 C&#35를 사용하여 Visual Studio에서 첫 번째 유니버설 Windows 플랫폼 응용 프로그램 만들기
 
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
 
 1. Visual Studio 2017을 엽니다.
 
-2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 차례로 선택합니다.
 
 3. **새 프로젝트** 대화 상자의 왼쪽 창에서 **Visual C#** 을 확장하고 **Windows 유니버설**을 선택합니다. 중간 창에서 **빈 앱(유니버설 Windows)** 을 선택합니다. 프로젝트 이름을 *HelloWorld*로 지정하고 **확인**을 선택합니다.
 
@@ -54,7 +55,7 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="add-a-button-to-the-design-canvas"></a>디자인 캔버스에 단추 추가
 
-1. **솔루션 탐색기**에서 **MainPage.xaml**을 두 번 클릭하여 분할 보기를 엽니다.
+1. **솔루션 탐색기**에서 *MainPage.xaml*을 두 번 클릭하여 분할 보기를 엽니다.
 
   ![솔루션 탐색기에서 MainPage.xaml 열기 ](../ide/media/uwp-solution-explorer-MainPage-xaml.png)
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
 
   ![도구 상자를 클릭하여 도구 상자 플라이아웃 창 열기](../ide/media/uwp-toolbox.png)
 
-  (도구 상자 옵션이 표시되지 않으면 메뉴 모음에서 열 수 있습니다. 그러려면 **보기** > **도구 모음**을 선택합니다. 또는 **Ctrl**+**Alt**+**X** 키를 누릅니다.)
+  (**도구 상자** 옵션이 표시되지 않으면 메뉴 모음에서 열 수 있습니다. 그러려면 **보기** > **도구 모음**을 선택합니다. 또는 **Ctrl**+**Alt**+**X** 키를 누릅니다.)
 
 3. **Pin** 아이콘을 클릭하여 도구 상자 창을 고정합니다.
 
@@ -76,17 +77,17 @@ ms.lasthandoff: 04/16/2018
 
    ![단추 컨트롤을 클릭해 디자인 캔버스로 끌어오기](../ide/media/uwp-toolbox-add-button-control.png)
 
-  XAML 편집기에 코드가 표시되면 단추가 추가된 것도 확인할 수 있습니다.
+  **XAML 편집기**에 코드가 표시되면 단추가 추가된 것도 확인할 수 있습니다.
 
   ![단추 컨트롤을 클릭해 디자인 캔버스로 끌어오기](../ide/media/uwp-xaml-control-code-window.png)
 
 ### <a name="add-a-label-to-the-button"></a>단추에 레이블 추가
 
-1. XAML 편집기에서 단추 콘텐츠 값을 "단추"에서 "Hello World"로 변경합니다!
+1. **XAML 편집기**에서 단추 콘텐츠 값을 "단추"에서 "Hello World"로 변경합니다!
 
    ![Hello World로 단추 콘텐츠 값 변경](../ide/media/uwp-change-button-text-in-xaml-code-window.png)
 
-2. XAML 디자이너에서도 단추가 변경되는지 확인합니다.
+2. **XAML 디자이너**에서도 단추가 변경되는지 확인합니다.
 
    ![단추가 디자인 캔버스에서 Hello World로 변경됨](../ide/media/uwp-button-text-change-in-design-canvas.png)
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 
 1. 디자인 캔버스에서 단추 컨트롤을 두 번 클릭합니다.
 
-2.  코드 숨김 페이지, *MainPage.xaml.cs*에서 이벤트 처리기 코드를 편집합니다.
+2. 코드 숨김 페이지, *MainPage.xaml.cs*에서 이벤트 처리기 코드를 편집합니다.
 
  지금부터가 흥미로운 부분입니다. 기본 이벤트 처리기는 다음과 같습니다.
 
@@ -121,7 +122,7 @@ ms.lasthandoff: 04/16/2018
 
 #### <a name="what-did-we-just-do"></a>무엇을 했습니까?
 
-코드는 일부 Windows API를 사용하여 음성 합성 개체를 만든 다음, 텍스트를 제공하여 읽게 합니다. (SpeechSynthesis 사용에 대한 자세한 내용은 <xref:System.Speech.Synthesis>을 참조 합니다.)
+코드는 일부 Windows API를 사용하여 음성 합성 개체를 만든 다음, 텍스트를 제공하여 읽게 합니다. (`SpeechSynthesis`을 사용하는 방법에 대한 자세한 내용은 <xref:System.Speech.Synthesis>를 참하세요.)
 
 ## <a name="run-the-application"></a>응용 프로그램 실행
 

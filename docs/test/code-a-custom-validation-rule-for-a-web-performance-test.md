@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 웹 성능 테스트에 대한 사용자 지정 유효성 검사 규칙 코딩 | Microsoft Docs
+title: Visual Studio에서 웹 성능 테스트에 대한 사용자 지정 유효성 검사 규칙 코딩
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -15,12 +15,13 @@ dev_langs:
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0c2e3eb6d9b0411a078c5d7531105230dfc82457
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c95e461f99a78a3241a091f7b590137e4dbc7066
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="coding-a-custom-validation-rule-for-a-web-performance-test"></a>웹 성능 테스트에 대한 사용자 지정 유효성 검사 규칙 코딩
 
@@ -59,7 +60,7 @@ ms.lasthandoff: 04/16/2018
 다음 코드에서는 사용자 지정 유효성 검사 규칙의 구현을 보여 줍니다. 이 유효성 검사 규칙은 미리 정의된 필요한 태그 유효성 검사 규칙의 동작을 모방합니다. 이 예제를 출발점으로 삼아 사용자 지정 유효성 검사 규칙을 직접 만들 수 있습니다.
 
 > [!WARNING]
->  사용자 지정 유효성 검사기에 대한 코드에서 public 속성은 null 값이 아니어야 합니다.
+> 사용자 지정 유효성 검사기에 대한 코드에서 public 속성은 null 값이 아니어야 합니다.
 
 ```csharp
 using System;

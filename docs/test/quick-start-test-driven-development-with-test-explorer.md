@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 테스트 탐색기를 사용한 테스트 기반 개발 | Microsoft Docs
+title: Visual Studio에서 테스트 탐색기를 사용한 테스트 기반 개발
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: b40ec7940e3c070bb1a29bd1753ed183bf67e22c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d16f3d3ede9c4ad72b8aacec6da00090d7bd5ef6
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-test-driven-development-with-test-explorer"></a>빠른 시작: 테스트 탐색기를 사용한 테스트 기반 개발
 
@@ -60,10 +61,12 @@ ms.lasthandoff: 04/16/2018
  **테스트를 디버깅하려면** 하나 이상의 테스트에 대한 바로 가기를 열고 나서 **선택한 테스트 디버그**를 선택합니다.
 
 > [!IMPORTANT]
->  표시되는 결과는 최근 실행에 대한 결과입니다. 결과 색상 막대에는 실행된 테스트에 대한 결과만 표시됩니다. 예를 들어, 여러 테스트를 실행했지만 그 중 일부가 실패하고 성공한 테스트만 실행할 경우 결과 모음에 모두 녹색으로 표시됩니다.
+> 표시되는 결과는 최근 실행에 대한 결과입니다. 결과 색상 막대에는 실행된 테스트에 대한 결과만 표시됩니다. 예를 들어, 여러 테스트를 실행했지만 그 중 일부가 실패하고 성공한 테스트만 실행할 경우 결과 모음에 모두 녹색으로 표시됩니다.
+
 
 > [!NOTE]
->  테스트가 표시되지 않으면 어댑터를 설치하여 테스트 탐색기를 사용 중인 테스트 프레임워크에 연결했는지 확인하십시오. 자세한 내용은 [테스트 탐색기에서 다양한 테스트 프레임워크 사용](#frameworks)을 참조하십시오.
+> 테스트가 표시되지 않으면 어댑터를 설치하여 테스트 탐색기를 사용 중인 테스트 프레임워크에 연결했는지 확인하십시오. 자세한 내용은 [테스트 탐색기에서 다양한 테스트 프레임워크 사용](#frameworks)을 참조하십시오.
+
 
 ##  <a name="walkthrough"></a> 연습: 단위 테스트를 사용하여 메서드 개발
  이 연습에서는 Microsoft 단위 테스트 프레임워크를 사용하여 C#에서 테스트 메서드를 개발하는 방법을 보여 줍니다. 다른 언어에 맞게 쉽게 조정할 수 있으며 NUnit과 같은 다른 테스트 프레임워크에도 사용할 수 있습니다. 자세한 내용은 [다양한 테스트 프레임워크 사용](#frameworks)을 참조하십시오.

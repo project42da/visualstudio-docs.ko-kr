@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 스텁을 사용하여 단위 테스트를 위한 응용 프로그램 부분 격리 | Microsoft Docs
+title: Visual Studio에서 스텁을 사용하여 단위 테스트를 위한 응용 프로그램 부분 격리
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -11,11 +12,11 @@ author: gewarren
 dev_langs:
 - CSharp
 - VB
-ms.openlocfilehash: b406bbe6a32334f76f91d8fdc2d43f7dd2b46c91
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 68ee12b330d6b82307de7d590c09259a559716b7
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-stubs-to-isolate-parts-of-your-application-from-each-other-for-unit-testing"></a>스텁을 사용하여 단위 테스트를 위한 응용 프로그램의 여러 부분을 서로 격리
 

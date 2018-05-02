@@ -1,7 +1,7 @@
 ---
-title: 프로젝트 및 솔루션 속성 관리 | Microsoft Docs
-ms.custom: ''
+title: 프로젝트 및 솔루션 속성 관리
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,15 +9,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2a68cc558a52f7c8d66f76600cd68309ad67769c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b4b39c4d1e515530f50d086cb107d4ec0d297d48
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="managing-project-and-solution-properties"></a>프로젝트 및 솔루션 속성 관리
+# <a name="manage-project-and-solution-properties"></a>프로젝트 및 솔루션 속성 관리
 
-프로젝트에는 컴파일, 디버깅, 테스트 및 배포의 다양한 측면을 제어하는 속성이 있습니다. 일부 속성은 모든 프로젝트 형식 간에 공통적으로 적용되고 일부 속성은 특정 언어 또는 플랫폼에 고유합니다. 솔루션 탐색기에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 메뉴 모음의 **빠른 실행** 검색 상자에 "속성"을 입력하여 프로젝트 속성에 액세스합니다.
+프로젝트에는 컴파일, 디버깅, 테스트 및 배포의 다양한 측면을 제어하는 속성이 있습니다. 일부 속성은 모든 프로젝트 형식 간에 공통적으로 적용되고 일부 속성은 특정 언어 또는 플랫폼에 고유합니다. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택하거나 메뉴 모음의 **빠른 실행** 검색 상자에 "속성"을 입력하여 프로젝트 속성에 액세스합니다.
 
 ![프로젝트 상황에 맞는 메뉴](../ide/media/vs2015_proj_prop_menu.gif "vs2015_proj_prop_menu")
 
@@ -31,11 +31,11 @@ ms.lasthandoff: 04/16/2018
 
 ### <a name="c-visual-basic-and-f-projects"></a>C#, Visual Basic 및 F# 프로젝트
 
-C#, Visual Basic 및 F# 프로젝트에서는 속성이 **프로젝트 디자이너**에 노출됩니다. 다음 그림에서는 C# WPF 프로젝트에 대한 빌드 속성 페이지를 보여 줍니다.
+C#, Visual Basic 및 F# 프로젝트에서는 속성이 **프로젝트 디자이너**에 노출됩니다. 다음 그림에서는 C# WPF 프로젝트에 대한 **빌드** 속성 페이지를 보여 줍니다.
 
 ![Visual Studio 프로젝트 디자이너](../ide/media/vs2015_proppage_build.png "VS2015_PropPage_Build")
 
-프로젝트 디자이너의 각 속성 페이지에 대한 자세한 내용은 [프로젝트 속성 참조](../ide/reference/project-properties-reference.md)를 참조하세요.
+**프로젝트 디자이너**의 각 속성 페이지에 대한 자세한 내용은 [프로젝트 속성 참조](../ide/reference/project-properties-reference.md)를 참조하세요.
 
 > [!TIP]
 > 솔루션에는 몇 가지 속성이 있으며 프로젝트 항목도 마찬가지입니다. 이러한 속성은 **프로젝트 디자이너**가 아니라 [속성 창](../ide/reference/properties-window.md)에서 액세스합니다.
@@ -50,8 +50,8 @@ C++ 프로젝트 속성에 대한 자세한 내용은 [프로젝트 속성 작�
 
 ## <a name="solution-properties"></a>솔루션 속성
 
-솔루션에 대한 속성에 액세스하려면 **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 대화 상자에서 디버그 또는 릴리스 빌드에 대한 프로젝트 구성을 설정하고, F5 키를 누를 때 시작 프로젝트여야 하는 프로젝트를 선택하고, 코드 분석 옵션을 설정할 수 있습니다.
+솔루션에 대한 속성에 액세스하려면 **솔루션 탐색기**에서 솔루션 노드를 마우스 오른쪽 단추로 클릭하고 **속성**을 선택합니다. 대화 상자에서 **디버그** 또는 **릴리스** 빌드에 대한 프로젝트 구성을 설정하고, **F5** 키를 누를 때 시작 프로젝트여야 하는 프로젝트를 선택하고, 코드 분석 옵션을 설정할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)
+- [Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)

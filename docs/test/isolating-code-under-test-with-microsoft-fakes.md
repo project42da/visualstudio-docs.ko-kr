@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 Microsoft Fakes를 사용하여 테스트 중인 코드 격리 | Microsoft Docs
+title: Visual Studio에서 Microsoft Fakes를 사용하여 테스트 중인 코드 격리
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -11,11 +12,11 @@ author: gewarren
 dev_langs:
 - VB
 - CSharp
-ms.openlocfilehash: ed5e8844234f6dfde52408ecd4c814b725816eb7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: af87fe6c71ceee98c54e2bd1dd6bae24bc58df97
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="isolating-code-under-test-with-microsoft-fakes"></a>Microsoft Fakes를 사용하여 테스트 중인 코드 격리
 
@@ -32,6 +33,10 @@ Fakes는 두 가지 버전이 있습니다.
 **요구 사항**
 
 -   Visual Studio Enterprise
+-   .NET Framework 프로젝트
+
+> [!NOTE]
+> .NET Standard 프로젝트는 지원되지 않습니다.
 
 ## <a name="choosing-between-stub-and-shim-types"></a>스텁 및 shim 형식 중에 선택
 일반적으로 이러한 클래스를 동시에 개발하고 업데이트했으므로 Visual Studio 프로젝트를 구성 요소라고 생각할 수 있습니다. 프로젝트가 솔루션의 다른 프로젝트에 대해 만드는 호출 또는 프로젝트가 참조하는 다른 어셈블리에 대해 만드는 호출에 스텁 또는 shim을 사용하는 것을 고려할 수 있습니다.

@@ -1,6 +1,7 @@
 ---
-title: '연습: Visual Studio에서 구성 파일을 통한 데이터 소스 정의 | Microsoft Docs'
+title: '연습: Visual Studio에서 구성 파일을 통한 데이터 소스 정의'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 569aa39e9c5c749ac4497e4e6e08a9d5b34c657f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0fee742129d852ff3793b2a7dd367fc157367750
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>연습: 구성 파일을 통한 데이터 소스 정의
 
@@ -71,7 +72,8 @@ ms.lasthandoff: 04/16/2018
 ```
 
 > [!NOTE]
->  어셈블리 이름은 사용 중인 Microsoft Visual Studio .NET Framework 빌드와 일치해야 합니다. Visual Studio .NET Framework 3.5를 사용 중인 경우 버전을 9.0.0.0으로 설정합니다. Visual Studio .NET Framework 2.0을 사용 중인 경우 버전을 8.0.0.0으로 설정합니다.
+> 어셈블리 이름은 사용 중인 Microsoft Visual Studio .NET Framework 빌드와 일치해야 합니다. Visual Studio .NET Framework 3.5를 사용 중인 경우 버전을 9.0.0.0으로 설정합니다. Visual Studio .NET Framework 2.0을 사용 중인 경우 버전을 8.0.0.0으로 설정합니다.
+
 
 ## <a name="define-connection-strings"></a>연결 문자열 정의
  연결 문자열은 데이터 소스 액세스를 위한 공급자 특정 정보를 정의합니다. 구성 파일에 정의된 연결 문자열은 응용 프로그램 전체에서 재사용 가능한 데이터 공급자 정보를 제공합니다. 이 섹션에서는 사용자 지정 구성 섹션에 정의된 데이터 원본에서 사용되는 두 개의 연결 문자열을 만듭니다.

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 테스트 실패에 대한 부하 테스트 로그 저장 | Microsoft Docs
+title: Visual Studio에서 테스트 실패에 대한 부하 테스트 로그 저장
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,19 +9,21 @@ ms.assetid: 08a7fe98-a7f7-4b8d-94a3-ec82b65a2aaf
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 17b8792a98473658ae6ac47cd418028ce2cfcf6f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e184fbab591698404bde4593f4ad7b61fa1815ae
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-specify-if-test-failures-are-saved-to-test-logs-using-the-load-test-editor"></a>방법: 부하 테스트 편집기를 사용하여 테스트 실패를 테스트 로그에 저장할지 여부 지정
 
 **부하 테스트 새로 만들기 마법사**를 사용하여 부하 테스트를 만든 다음, **부하 테스트 편집기**를 사용하여 부하 테스트 속성을 테스트 요구 사항 및 목표에 맞게 변경할 수 있습니다. [연습: 부하 테스트 생성 및 실행](../test/walkthrough-create-and-run-a-load-test.md)을 참조합니다. **테스트 실패 시 로그 저장** 속성을 변경하여 부하 테스트에서 테스트가 실패할 경우 테스트 로그가 저장되도록 할 것인지 여부를 지정할 수 있습니다.
 
 > [!NOTE]
->  실행 설정 속성의 전체 목록과 해당 설명을 보려면 [부하 테스트 실행 설정 속성](../test/load-test-run-settings-properties.md)을 참조하세요.
+> 실행 설정 속성의 전체 목록과 해당 설명을 보려면 [부하 테스트 실행 설정 속성](../test/load-test-run-settings-properties.md)을 참조하세요.
+
 
 ## <a name="to-specify-if-the-test-log-is-saved-when-a-test-fails-in-a-scenario"></a>시나리오에서 테스트가 실패할 때 테스트 로그가 저장되는지 여부를 지정하려면
 

@@ -1,6 +1,7 @@
 ---
-title: '방법: C++ DLL에 대한 단위 테스트 작성 | Microsoft Docs'
+title: '방법: C++ DLL에 대한 단위 테스트 작성'
 ms.date: 11/04/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: e4ff7d931b614d6d3c243539efc42bf051878fb0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 290eebefbe02284222278fd665ce87fb0db0e010
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-write-unit-tests-for-c-dlls"></a>C/C++ DLL에 대한 단위 테스트 작성
 
@@ -293,7 +294,8 @@ ms.lasthandoff: 04/16/2018
      ![모든 테스트 통과](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")
 
 > [!TIP]
->  개별 테스트에 종속성이 없어 임의 순서로 실행할 수 있는 경우 도구 모음의 ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") 토글 단추를 사용하여 병렬 테스트 실행을 켭니다. 이렇게 하면 모든 테스트를 실행하는 데 걸리는 시간을 훨씬 줄일 수 있습니다.
+> 개별 테스트에 종속성이 없어 임의 순서로 실행할 수 있는 경우 도구 모음의 ![UTE&#95;parallelicon&#45;small](../test/media/ute_parallelicon-small.png "UTE_parallelicon-small") 토글 단추를 사용하여 병렬 테스트 실행을 켭니다. 이렇게 하면 모든 테스트를 실행하는 데 걸리는 시간을 훨씬 줄일 수 있습니다.
+
 
 ##  <a name="refactor"></a> 테스트를 변경하지 않고 코드 리팩터링
 

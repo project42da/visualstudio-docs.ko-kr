@@ -1,7 +1,9 @@
 ---
-title: Visual Studio를 사용하여 C#으로 ASP.NET Core 웹앱 만들기 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio를 사용하여 C#으로 ASP.NET Core 웹앱 만들기
+description: C#을 사용하여 단계별로 Visual Studio에서 ASP.NET Core 웹앱을 만드는 방법을 알아봅니다.
+ms.custom: mvc
 ms.date: 10/10/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: quickstart
 author: TerryGLee
@@ -12,11 +14,11 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 0f1a1397de407a4497961920762b0084069b3764
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e030a3e3870746cda7ae98f5c4b45d29c8ba4885
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-use-visual-studio-to-create-your-first-aspnet-core-web-app"></a>빠른 시작: Visual Studio를 사용하여 첫 번째 ASP.NET Core 웹앱 만들기
 
@@ -30,7 +32,7 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개
 
 1. Visual Studio 2017을 엽니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 차례로 선택합니다.
 
 1. **새 프로젝트** 대화 상자의 왼쪽 차에서 **Visual C#** 을 확장한 후 **.NET Core**를 선택합니다. 가운데 창에서 **ASP.NET Core 웹 응용 프로그램**을 선택한 후 **확인**을 선택합니다.
 
@@ -68,7 +70,7 @@ Visual Studio IDE(통합 개발 환경)에 대한 이 5 ~ 10분 분량의 소개
 
    ![오류 목록](../ide/media/quickstart-aspnet-errorlist.png)
 
-1. 편집기 창에서 오류가 있는 줄에 커서를 놓고 왼쪽 여백에서 빠른 작업 전구 메뉴를 선택합니다. 드롭다운 메뉴에서 **using System;** 을 선택하여 이 지시문을 파일 맨 위에 추가하고 오류를 해결합니다.
+1. 편집기 창에서 오류가 있는 줄에 커서를 놓고 왼쪽 여백에서 **빠른 작업 전구 메뉴**를 선택합니다. 드롭다운 메뉴에서 **using System;** 을 선택하여 이 지시문을 파일 맨 위에 추가하고 오류를 해결합니다.
 
 ## <a name="run-the-application"></a>응용 프로그램 실행
 

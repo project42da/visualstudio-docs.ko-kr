@@ -1,10 +1,9 @@
 ---
-title: -Out(devenv.exe) | Microsoft Docs
-ms.custom: ''
+title: -Out(devenv.exe)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 helpviewer_keywords:
 - errors [Visual Studio], builds
 - Devenv, /out switch
@@ -21,40 +20,42 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af8d41a8a401e3087845e6d698163626f120a52e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fa180f4cec8fb072ca6d69dc096b714f30e06c0c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="out-devenvexe"></a>/Out (devenv.exe)
-솔루션을 실행, 빌드, 다시 빌드 또는 배포하는 경우 오류를 저장하고 표시할 파일을 지정합니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-devenv /out FileName  
-```  
-  
-## <a name="arguments"></a>인수  
- `FileName`  
- 필수. 실행 파일을 빌드할 때 오류를 수신할 파일의 경로 및 이름입니다.  
-  
-## <a name="remarks"></a>설명  
- 존재하지 않는 파일 이름을 지정하는 경우 파일이 자동으로 만들어집니다. 파일이 이미 있는 경우 결과는 파일의 기존 내용에 추가됩니다.  
-  
- 명령줄 빌드 오류는 **명령** 창 및 **출력** 창의 솔루션 작성기 보기에 표시됩니다. 이 옵션은 무인 빌드를 실행하고 결과를 봐야 하는 경우에 유용합니다.  
-  
-## <a name="example"></a>예  
- 이 예제에서는 `MySolution`을 실행하고 `MyErrorLog.txt` 파일에 오류를 기록합니다.  
-  
-```  
-devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [Devenv 명령줄 스위치](../../ide/reference/devenv-command-line-switches.md)   
- [/Run(devenv.exe)](../../ide/reference/run-devenv-exe.md)   
- [/Build(devenv.exe)](../../ide/reference/build-devenv-exe.md)   
- [/Rebuild(devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)   
- [/Deploy (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)
+솔루션을 실행, 빌드, 다시 빌드 또는 배포하는 경우 오류를 저장하고 표시할 파일을 지정합니다.
+
+## <a name="syntax"></a>구문
+
+```
+devenv /out FileName
+```
+
+## <a name="arguments"></a>인수
+ `FileName`
+
+ 필수. 실행 파일을 빌드할 때 오류를 수신할 파일의 경로 및 이름입니다.
+
+## <a name="remarks"></a>설명
+ 존재하지 않는 파일 이름을 지정하는 경우 파일이 자동으로 만들어집니다. 파일이 이미 있는 경우 결과는 파일의 기존 내용에 추가됩니다.
+
+ 명령줄 빌드 오류는 **명령** 창 및 **출력** 창의 솔루션 작성기 보기에 표시됩니다. 이 옵션은 무인 빌드를 실행하고 결과를 봐야 하는 경우에 유용합니다.
+
+## <a name="example"></a>예
+ 이 예제에서는 `MySolution`을 실행하고 `MyErrorLog.txt` 파일에 오류를 기록합니다.
+
+```
+devenv /run "C:\Documents and Settings\someuser\My Documents\Visual Studio\Projects\MySolution\MySolution.sln" /out "C:\MyErrorLog.txt"
+```
+
+## <a name="see-also"></a>참고 항목
+
+- [Devenv 명령줄 스위치](../../ide/reference/devenv-command-line-switches.md)
+- [/Run(devenv.exe)](../../ide/reference/run-devenv-exe.md)
+- [/Build (devenv.exe)](../../ide/reference/build-devenv-exe.md)
+- [/Rebuild (devenv.exe)](../../ide/reference/rebuild-devenv-exe.md)
+- [/Deploy (devenv.exe)](../../ide/reference/deploy-devenv-exe.md)

@@ -1,8 +1,9 @@
 ---
-title: Visual Studio에서 단위 테스트를 위한 Assert 클래스 사용 | Microsoft Docs
+title: Visual Studio에서 단위 테스트를 위한 Assert 클래스 사용
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - Assert classes
 - Assert statements
@@ -13,17 +14,18 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: ff40f25e9beffa848185fe2c1f95df96928543d6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2d56477822fa2d965902d9442d47e2c3ab24d656
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="use-the-assert-classes"></a>Assert 클래스 사용
 
 UnitTestingFramework 네임스페이스의 Assert 클래스를 사용하여 특정 기능을 확인합니다. 단위 테스트 메서드는 개발 코드에서 메서드 코드를 실행하지만, Assert 문을 포함하는 경우에만 코드의 동작이 정확한지 여부를 보고합니다.
 
 ## <a name="kinds-of-asserts"></a>Assert의 종류
+
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting> 네임스페이스는 다음과 같은 여러 종류의 Assert 클래스를 제공합니다.
 
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.Assert>
@@ -47,7 +49,7 @@ UnitTestingFramework 네임스페이스의 Assert 클래스를 사용하여 특�
  테스트 결과 Inconclusive 결과가 생성될 때마다 AssertInconclusiveException 예외가 throw됩니다. 일반적으로는 아직 작업 중엔 테스트에 Assert.Inconclusive 문을 추가하여 해당 테스트가 아직 실행할 준비가 되지 않았음을 나타냅니다.
 
 > [!NOTE]
->  Ignore 특성을 사용하여 테스트 실행 준비가 되지 않았음을 표시하는 전략을 사용할 수도 있습니다. 그러나 이 전략을 사용하는 경우 구현 과정이 남아 있는 테스트 수에 대한 보고서를 쉽게 생성할 수 없다는 단점이 있습니다.
+> Ignore 특성을 사용하여 테스트 실행 준비가 되지 않았음을 표시하는 전략을 사용할 수도 있습니다. 그러나 이 전략을 사용하는 경우 구현 과정이 남아 있는 테스트 수에 대한 보고서를 쉽게 생성할 수 없다는 단점이 있습니다.
 
  <xref:Microsoft.VisualStudio.TestTools.UnitTesting.UnitTestAssertException>
 

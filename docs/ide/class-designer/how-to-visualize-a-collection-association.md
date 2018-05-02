@@ -1,9 +1,8 @@
 ---
-title: '방법: 컬렉션 형식 연결 시각화(클래스 디자이너) | Microsoft Docs'
-ms.custom: ''
+title: '방법: 컬렉션 형식 연결 시각화(클래스 디자이너)'
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.classdesigner.collectionassociationline
@@ -18,26 +17,28 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ebf7f8c7971b78247e87def172eca169b38b6b80
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 472eef35c781c027c39b99326e097db7ca249c29
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-visualize-a-collection-association-class-designer"></a>방법: 컬렉션 형식 연결 시각화(클래스 디자이너)
-다른 형식의 컬렉션에 해당하는 속성 및 필드를 컬렉션 형식 연결로 클래스 다이어그램에 표시할 수 있습니다. 일반 연결은 필드 또는 속성을 소유 클래스와 필드 형식을 연결하는 선으로 표시하지만, 컬렉션 형식 연결은 소유 클래스와 수집된 형식을 연결하는 선으로 표시합니다.  
-  
-### <a name="to-create-a-collection-association"></a>컬렉션 형식 연결을 만들려면  
-  
-1.  코드에서 해당 형식이 강력한 형식의 컬렉션인 속성 또는 필드를 만듭니다.  
-  
-2.  클래스 다이어그램에서 속성 및 필드가 표시되도록 클래스를 확장합니다.  
-  
-3.  클래스에서 필드나 속성을 마우스 오른쪽 단추로 클릭하고 **컬렉션 형식 연결로 표시**를 선택합니다.  
-  
-     속성 또는 필드가 수집된 형식과 연결된 형식 연결 선으로 표시됩니다.  
-  
+
+다른 형식의 컬렉션에 해당하는 속성 및 필드를 컬렉션 형식 연결로 클래스 다이어그램에 표시할 수 있습니다. 일반 연결은 필드 또는 속성을 소유 클래스와 필드 형식을 연결하는 선으로 표시하지만, 컬렉션 형식 연결은 소유 클래스와 수집된 형식을 연결하는 선으로 표시합니다.
+
+## <a name="to-create-a-collection-association"></a>컬렉션 형식 연결을 만들려면
+
+1.  코드에서 해당 형식이 강력한 형식의 컬렉션인 속성 또는 필드를 만듭니다.
+
+2.  클래스 다이어그램에서 속성 및 필드가 표시되도록 클래스를 확장합니다.
+
+3.  클래스에서 필드나 속성을 마우스 오른쪽 단추로 클릭하고 **컬렉션 형식 연결로 표시**를 선택합니다.
+
+     속성 또는 필드가 수집된 형식과 연결된 형식 연결 선으로 표시됩니다.
+
 ## <a name="see-also"></a>참고 항목
-[방법: 형식 간에 연결 만들기](how-to-create-associations-between-types.md)   
-[클래스 및 형식 디자인](designing-classes-and-types.md)   
-[형식 및 관계 보기](viewing-types-and-relationships.md)
+
+- [방법: 형식 간에 연결 만들기](how-to-create-associations-between-types.md)
+- [클래스 및 형식 디자인](designing-and-viewing-classes-and-types.md)
+- [형식 및 관계 보기](viewing-types-and-relationships.md)

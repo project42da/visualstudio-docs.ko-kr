@@ -1,20 +1,19 @@
 ---
-title: Visual Studio IDE 사용자 지정 | Microsoft 문서
-ms.custom: ''
+title: Visual Studio IDE 사용자 지정
 ms.date: 11/20/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cecb3d9d1c221fc35f9a0c16ff7d5f685a85978e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 609c1656fbea78bf23480f35e9f70802d5cb1098
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Visual Studio IDE 개인 설정
 
@@ -24,7 +23,7 @@ ms.lasthandoff: 04/16/2018
 
 다수의 개인 설정 옵션이 [환경 옵션](../ide/reference/environment-options-dialog-box.md) 대화 상자를 통해 표시됩니다. 이러한 대화 상자에 액세스하는 방법은 두 가지입니다.
 
-- 메뉴 모음에서 **도구**, **옵션**을 선택하고, **환경** 노드가 아직 확장되지 않은 경우 확장합니다.
+- 메뉴 모음에서 **도구** > **옵션**을 선택하고, **환경** 노드가 아직 확장되지 않은 경우 확장합니다.
 
 - **빠른 실행** 상자에 `environment`를 입력하고 결과 목록에서 **환경--> 일반**을 선택합니다.
 
@@ -41,7 +40,7 @@ ms.lasthandoff: 04/16/2018
 
 주 메뉴 대/소문자 구분을 **단어의 첫 글자를 대문자로**("File")와 **모두 대문자로**(예: "FILE") 사이에서 변경할 수 있습니다. **빠른 실행**에 `environment`를 입력하고 **환경 > 일반**을 선택한 다음 **메뉴 모음에 제목 대/소문자 스타일 적용** 옵션을 변경합니다.
 
-### <a name="customzing-menus-and-toolbars"></a>명령 및 도구 모음 사용자 지정
+### <a name="customze-menus-and-toolbars"></a>메뉴 및 도구 모음 사용자 지정
 
 메뉴 또는 도구 모음 항목을 추가하거나 제거하려면 [방법: 메뉴 및 도구 모음 사용자 지정](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)을 참조하세요.
 
@@ -55,9 +54,9 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="external-tools"></a>외부 도구
 
-**도구** 메뉴를 사용자 지정하여 외부 도구를 시작할 수 있습니다. 자세한 내용은 [외부 도구 관리](../ide/managing-external-tools.md)를 참조하십시오.
+외부 도구를 시작하려면 **도구** 메뉴를 사용자 지정할 수 있습니다. 자세한 내용은 [외부 도구 관리](../ide/managing-external-tools.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio IDE 개요](../ide/visual-studio-ide.md)  
-[빠른 시작: 먼저 Visual Studio IDE 살펴보기](../ide/quickstart-ide-orientation.md)
+- [Visual Studio IDE 개요](../ide/visual-studio-ide.md)
+- [빠른 시작: 먼저 Visual Studio IDE 살펴보기](../ide/quickstart-ide-orientation.md)

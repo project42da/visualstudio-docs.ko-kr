@@ -1,9 +1,9 @@
 ---
-title: Dotfuscator CE(Community Edition) 업그레이드 | Microsoft 문서
-ms.date: 2017-02-08
+title: Dotfuscator CE(Community Edition) 업그레이드
+ms.date: 02/08/2017
 ms.devlang: dotnet
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 keywords: Dotfuscator, Dotfuscator CE, PreEmptive, PreEmptive Solutions, PreEmptive Protection, 보호, community edition, obfuscation, .NET, 무료, Visual Studio 2017, 업그레이드, 명령줄
 helpviewer_keywords:
@@ -23,12 +23,13 @@ helpviewer_keywords:
 description: Visual Studio 2017에 포함된 무료 Dotfuscator Community Edition을 업그레이드하는 방법을 알아봅니다.
 ms.assetid: c7c60904-27f9-4f1f-b79b-ddf65041b810
 author: Joe-Sewell-PreEmptive
+ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 03fdaae7a152db2af4ca042d14748e6508185b78
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f842eb9573f2519525f122dd58d23559df37e54c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="upgrade-dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition) 업그레이드
 
@@ -37,23 +38,21 @@ Dotfuscator CE(Dotfuscator Community Edition)는 Microsoft Visual Studio를 사�
 
 ## <a name="registering-dotfuscator-ce"></a>Dotfuscator CE 등록
 
-Dotfuscator CE의 등록된 사용자는 [명령줄 지원][cli]과 같은 추가 기능에 액세스할 수 있어 Dotfuscator CE를 자동화된 빌드 프로세스에 쉽게 통합할 수 있습니다.
-또한 등록은 [난독 처리된 스택 추적 디코딩][decode-obfuscated]을 위한 기본 제공 도구인 Lucidator에 대한 액세스 권한을 부여합니다.
+Dotfuscator CE의 등록된 사용자는 [명령줄 지원][cli]과 같은 추가 기능에 액세스할 수 있어 Dotfuscator CE를 자동화된 빌드 프로세스에 쉽게 통합할 수 있습니다. 등록은 [난독 처리된 스택 추적 디코딩][decode-obfuscated]을 위한 기본 제공 도구인 Lucidator에 대한 액세스 권한을 부여합니다.
 
 등록은 빠르고 간단하며 무료입니다.
 Dotfuscator CE를 등록하려면 [전체 Dotfuscator CE 사용자 가이드의 Getting Started(시작) 페이지에 있는 Registering Dotfuscator CE(Dotfuscator CE 등록) 섹션][register-ce]을 참조하세요.
 
 ## <a name="dotfuscator-professional"></a>Dotfuscator Professional
 
-Dotfuscator Community Edition은 기본적인 보호를 제공하지만 **_PreEmptive Protection - Dotfuscator_ Professional Edition**에는 향상된 난독 변환 및 보호 기능이 포함됩니다.
-여기에는 다음이 포함됩니다.
+Dotfuscator Community Edition은 기본적인 보호를 제공하지만 **_PreEmptive Protection - Dotfuscator_ Professional Edition**에는 향상된 난독 변환 및 보호 기능이 포함됩니다. 향상된 변환 및 기능은 다음과 같습니다.
 
 * *지적 재산권 보호*
   * Enhanced Overload Induction™ 및 임의 식별자 선택을 포함한 추가적인 이름 바꾸기 옵션.
   * 난독 처리된 스택 추적을 디코딩하기 위한 도구.
   * [자동화된 코드 디컴파일을 방지하기 위한 변환][control-flow]을 포함하여 엔터프라이즈급 난독 변환에 액세스.
   * 디컴파일된 코드를 단순 검색하지 못하도록 [중요한 문자열을 가리는][string-encryption] 기능.
-  * 권한이 없는 소프트웨어 누수의 원인을 파악할 수 있도록 [소유권 및 배포 문자열을 어셈블리에 신중하게 포함][watermarking](소프트웨어 워터마크 처리)하는 기능.
+  * 권한이 없는 소프트웨어 누수의 원인을 파악할 수 있도록 [소유권 및 배포 문자열을 어셈블리에 신중하게 포함][watermarking]하는 기능.
   * 중요한 부분이 분리되지 않아 공격자가 코드 요소의 역할을 확인하기가 훨씬 더 어렵도록 [어셈블리 여러 개를 하나로 결합][linking]하는 기능.
   * 전달되는 중요한 코드의 양을 줄이도록 [자동으로 응용 프로그램에서 사용되지 않는 코드를 제거][pruning]하는 기능.
 * *응용 프로그램 무결성 보호*
@@ -72,32 +71,32 @@ Dotfuscator Community Edition은 기본적인 보호를 제공하지만 **_PreEm
 Dotfuscator Professional은 산업 표준 [.NET Obfuscator][net-obfuscator]이고 지속적인 지원, 유지 관리 및 제품 업데이트가 필요한 엔터프라이즈 개발자에게 적합합니다.
 또한 Dotfuscator Professional은 Visual Studio와 더 밀접하게 통합되고 상업적으로 사용이 허가됩니다.
 
-Dotfuscator Professional의 고급 응용 프로그램 보호 기능에 대한 자세한 내용은 PreEmptive Solutions의 [Dotfuscator Overview(Dotfuscator 개요) 페이지][product-about]를 방문해서 [Community Edition과 비교][product-compare]해 보세요.
-[preemptive.com][eval]에서 요청 시 전체 기능이 지원되는 평가판을 사용할 수 있습니다.
+Dotfuscator Professional의 고급 응용 프로그램 보호 기능에 대한 자세한 내용은 PreEmptive Solutions의 [Dotfuscator 개요 페이지][product-about]를 방문해서 [Community Edition과 비교][product-compare]해 보세요.
+[preemptive.com][eval]에서 전체 기능이 지원되는 평가판을 사용할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[전체 Dotfuscator CE 사용자 가이드의 이 항목][full]
+[전체 Dotfuscator CE 사용자 가이드의 이 문서][full]
 
 <!-- Copyright © 2017 PreEmptive Solutions, LLC -->
 
-[control-flow]: https://www.preemptive.com/products/dotfuscator/features#controlflow
-[string-encryption]: https://www.preemptive.com/products/dotfuscator/features#string
-[watermarking]: https://www.preemptive.com/products/dotfuscator/features#watermarking
-[linking]: https://www.preemptive.com/products/dotfuscator/features#linking
-[pruning]: https://www.preemptive.com/products/dotfuscator/features#pruning
+- [control-flow]: https://www.preemptive.com/products/dotfuscator/features#controlflow
+- [string-encryption]: https://www.preemptive.com/products/dotfuscator/features#string
+- [watermarking]: https://www.preemptive.com/products/dotfuscator/features#watermarking
+- [linking]: https://www.preemptive.com/products/dotfuscator/features#linking
+- [pruning]: https://www.preemptive.com/products/dotfuscator/features#pruning
 
-[check-actions]: https://www.preemptive.com/dotfuscator/pro/userguide/en/protection_checks_overview.html#actions
-[features]: https://www.preemptive.com/dotfuscator/pro/userguide/en/instrumentation_features.html
+- [check-actions]: https://www.preemptive.com/dotfuscator/pro/userguide/en/protection_checks_overview.html#actions
+- [features]: https://www.preemptive.com/dotfuscator/pro/userguide/en/instrumentation_features.html
 
-[net-obfuscator]: https://www.preemptive.com/products/dotfuscator/overview
-[eval]: https://www.preemptive.com/eval-request
+- [net-obfuscator]: https://www.preemptive.com/products/dotfuscator/overview
+- [eval]: https://www.preemptive.com/eval-request
 
-[product-about]: https://www.preemptive.com/products/dotfuscator/overview
-[product-compare]: https://www.preemptive.com/products/dotfuscator/compare-editions
+- [product-about]: https://www.preemptive.com/products/dotfuscator/overview
+- [product-compare]: https://www.preemptive.com/products/dotfuscator/compare-editions
 
-[cli]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_cli.html
-[register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html#register
+- [cli]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_cli.html
+- [register-ce]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_getstarted.html#register
 
-[full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_upgrades.html
-[decode-obfuscated]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_decode_stack_trace.html
+- [full]: https://www.preemptive.com/dotfuscator/ce/docs/help/intro_upgrades.html
+- [decode-obfuscated]: https://www.preemptive.com/dotfuscator/ce/docs/help/gui_decode_stack_trace.html

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트를 위한 속도 지연에 분포 적용 | Microsoft Docs
+title: Visual Studio에서 부하 테스트를 위한 속도 지연에 분포 적용
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -8,12 +8,13 @@ ms.assetid: ae8b35f9-d465-4d72-8d7d-7b56ae6ffd22
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 5140a3ca9cb8274a9b6d9f74260adadfed6201ad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 25b22ff696fb12e4924587313cde8fe387900fe9
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-apply-distribution-to-pacing-delay-when-using-a-user-pace-test-mix-model"></a>방법: 사용자 속도 테스트 조합 모델을 사용할 때 속도 지연에 분포 적용
 

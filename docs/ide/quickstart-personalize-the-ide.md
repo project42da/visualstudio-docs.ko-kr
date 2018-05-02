@@ -1,24 +1,23 @@
 ---
-title: Visual Studio에서 색 테마 및 글꼴 설정 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio에서 색 테마 및 글꼴 설정
 ms.date: 11/20/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: quickstart
 author: gewarren
 ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7024213ca383ee5934df1d413501065b383f7981
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 56d40211b7d69d46bfbb24f6c1e0de8855809cda
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-personalize-the-visual-studio-ide-and-editor"></a>빠른 시작: Visual Studio IDE 및 편집기 개인 설정
 
-이 5~10분이 걸리는 빠른 시작에서는 텍스트 편집기에서 Visual Studio 색 테마 및 두 개의 텍스트 색을 사용자 지정합니다.
+이 5~10분이 걸리는 빠른 시작에서는 **텍스트 편집기**에서 Visual Studio 색 테마 및 두 개의 텍스트 색을 사용자 지정합니다.
 
 아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
@@ -35,13 +34,13 @@ Visual Studio 2017의 기본 색 테마는 **파랑**이라고 합니다. **어�
    ![어두운 테마의 VS](media/quickstart-personalize-dark-theme.png)
 
 > [!TIP]
-> [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)에서 **Visual Studio 색 테마 편집기**를 설치하여 미리 정의된 추가 테마를 설치할 수 있습니다. 이 도구를 설치하면 색 테마 드롭다운 목록에 추가 색 테마가 나타납니다.
+> [Visual Studio 마켓플레이스](https://marketplace.visualstudio.com/items?itemName=VisualStudioPlatformTeam.VisualStudio2017ColorThemeEditor)에서 **Visual Studio 색 테마 편집기**를 설치하여 미리 정의된 추가 테마를 설치할 수 있습니다. 이 도구를 설치하면 **색 테마** 드롭다운 목록에 추가 색 테마가 나타납니다.
 
 ## <a name="change-text-color"></a>텍스트 색 변경
 
 이제 편집기의 일부 텍스트 색을 사용자 지정해 보겠습니다. 먼저 XML 파일을 열어 기본 색을 확인하겠습니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **파일...** 을 차례로 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **파일**을 차례로 선택합니다.
 
 1. **새 파일** 대화 상자의 **일반** 범주 아래에서 **XML 파일**을 선택한 다음 **열기**를 선택합니다.
 
@@ -73,7 +72,7 @@ Visual Studio 2017의 기본 색 테마는 **파랑**이라고 합니다. **어�
    </Catalog>
    ```
 
-   줄 번호는 옥색이며, xml 특성은 연한 파랑색입니다. 이러한 항목의 텍스트 색을 변경해 보겠습니다.
+   줄 번호는 옥색이며, XML 특성은 연한 파랑색입니다. 이러한 항목의 텍스트 색을 변경해 보겠습니다.
 
    ![XML 파일 글꼴 색](media/quickstart-personalize-xml-file.png)
 

@@ -1,6 +1,7 @@
 ---
-title: 테스트 생성 | Microsoft IntelliTest 개발자 테스트 도구 | Microsoft Docs
+title: 테스트 생성 | Microsoft IntelliTest 개발자 테스트 도구
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,15 +11,21 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 259ff0818cebde6d7c603428c6cdb88cd51ca293
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f621520f6303e72bdb4cd778218378af9ebd2323
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="test-generation"></a>테스트 생성
 
-기존 유닛 테스트에서는 여러 요소를 하나의 테스트로 결합해야 합니다.
+기존 유닛 테스트에서 테스트는 몇 가지 항목으로 구성됩니다.
+
+* [메서드 호출의 시퀀스](test-generation.md#test-generators)
+* 메서드와 함께 호출된 인수, 인수는 [테스트 입력](input-generation.md)입니다.
+* [어설션](#assumptions-and-assertions) 집합을 명시하여 테스트된 응용 프로그램의 의도한 동작에 대한 유효성 검사
+
+다음은 예제 테스트 구조입니다.
 
 ```
 [Test]
@@ -34,12 +41,6 @@ void MyTest() {
     Assert.AreEqual(a[0], 5);
 }
 ```
-
-테스트는 다양한 요소로 구성됩니다.
-
-* [메서드 호출의 시퀀스](test-generation.md#test-generators)를 수정합니다.
-* 메서드와 함께 호출된 인수를 수정합니다. 인수는 [테스트 입력](input-generation.md)입니다.
-* [어설션](#assumptions-and-assertions) 집합을 명시하여 테스트된 응용 프로그램의 의도한 동작에 대한 유효성을 검사합니다.
 
 IntelliTest는 메서드 호출 및 어설션의 시퀀스를 제공하는 더욱 일반적인 [매개 변수가 있는 단위 테스트](#parameterized-unit-testing)에 대한 관련 인수 값을 자동으로 결정할 수 있습니다.
 
@@ -243,4 +244,4 @@ namespace MyTests
 
 ## <a name="got-feedback"></a>피드백이 있으신가요?
 
-아이디어와 기능 요청을 **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)** 에 게시하세요.
+아이디어와 기능 요청을 [UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)에 게시하세요.

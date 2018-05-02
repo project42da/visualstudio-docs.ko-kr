@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 테스트를 위해 UWP 컨트롤에 대한 고유 자동화 속성 설정 | Microsoft Docs
+title: Visual Studio에서 테스트를 위해 UWP 컨트롤에 대한 고유 자동화 속성 설정
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: gewarren
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - uwp
 author: gewarren
-ms.openlocfilehash: a27b3472080f1b22f0b07b01e92d6a0e5326396e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ce916f181a6694eabc91cdb7c6a7dec9a8f5e5ac
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="set-a-unique-automation-property-for-uwp-controls-for-testing"></a>테스트를 위해 UWP 컨트롤에 대한 고유 자동화 속성 설정
 
@@ -75,7 +76,8 @@ XAML에서 컨트롤에 대한 콘텐츠 속성을 사용하여 AutomationProper
  **Blend for Visual Studio:** 다음 방법 중 하나를 사용하여 Blend for Visual Studio에서 이 작업을 수행할 수 있습니다.
 
 > [!NOTE]
->  XAML을 사용하여 정적으로 만든 컨트롤에 대해서는 이 방법만 사용할 수 있습니다.
+> XAML을 사용하여 정적으로 만든 컨트롤에 대해서는 이 방법만 사용할 수 있습니다.
+
 
  **기존 컨트롤에 고유한 이름을 지정하려면**
 

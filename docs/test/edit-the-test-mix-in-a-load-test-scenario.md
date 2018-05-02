@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트 시나리오에 대한 테스트 조합 | Microsoft Docs
+title: Visual Studio에서 부하 테스트 시나리오에 대한 테스트 조합
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -11,12 +11,13 @@ ms.assetid: 303e1d70-5d98-424a-b51e-e0898e16d3f8
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 9c7f0cb4c25c99c7ab68400d63e1ec52253a5f61
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 228805d37f24e19a83b141ad2312ab60c29d5cf0
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>테스트 조합을 편집하여 부하 테스트 시나리오에 포함할 웹 성능 테스트, 단위 테스트 및 코딩된 UI 테스트 지정
 
@@ -77,12 +78,14 @@ ms.lasthandoff: 04/16/2018
  **분포** 단추를 사용하면 모든 항목에 백분율이 동일하게 할당됩니다. 예를 들어 항목이 세 개인 경우 **분포**를 선택하면 백분율 값이 34, 33, 33으로 설정됩니다.
 
 > [!WARNING]
->  **균등 맞춤** 단추는 잠긴 모든 항목을 재정의합니다.
+> **균등 맞춤** 단추는 잠긴 모든 항목을 재정의합니다.
+
 
  슬라이더를 사용하는 대신 백분율 값을 직접 **%** 열에 입력할 수도 있습니다. 백분율 값을 직접 입력하는 경우에는 다른 항목이 자동으로 조정되지 않습니다.
 
 > [!NOTE]
->  합계가 100%가 되지 않거나 **%** 열에 입력된 백분율 값이 소수일 경우 슬라이더는 비활성화됩니다.
+> 합계가 100%가 되지 않거나 **%** 열에 입력된 백분율 값이 소수일 경우 슬라이더는 비활성화됩니다.
+
 
  백분율 값을 직접 입력할 때는 모든 항목을 더한 값이 100%인지 확인해야 합니다. 목록을 저장할 때 합계가 100%가 아니면 현재 백분율을 그대로 사용할지 또는 이전 단계로 돌아가서 백분율 값을 조정할지 선택하라는 메시지가 표시됩니다. 현재 백분율을 그대로 사용하도록 선택하면 각 값이 100%를 기준으로 조정됩니다.  예를 들어 두 개의 항목이 있고 두 항목의 값을 80%와 40%로 직접 설정한 경우 첫 번째 항목은 80을 120으로 나눈 값인 66.67%로, 두 번째 항목은 40을 120으로 나눈 값인 33.33%로 설정됩니다.
 

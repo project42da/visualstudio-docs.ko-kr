@@ -1,8 +1,9 @@
 ---
-title: 정적 도우미 클래스 | Microsoft IntelliTest 개발자 테스트 도구 | Microsoft Docs
+title: 정적 도우미 클래스 | Microsoft IntelliTest 개발자 테스트 도구
 ms.date: 05/02/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - IntelliTest, Static helper classes
 ms.author: gewarren
@@ -10,11 +11,11 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: bd414382889e02f209e9cd64155f9e9baad75534
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e83d964cf4c17542f8741a03963f317e234bca01
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="static-helper-classes"></a>정적 도우미 클래스
 
@@ -32,8 +33,7 @@ IntelliTest는 [매개 변수가 있는 단위 테스트](test-generation.md#par
 <a name="pexassume"></a>
 ## <a name="pexassume"></a>PexAssume
 
-가정(예: [매개 변수가 있는 단위 테스트](test-generation.md#parameterized-unit-testing)의 [사전 조건](test-generation.md#precondition))을 표현하는 데 사용되는 정적 클래스입니다.
-이 클래스의 메서드는 부적절한 테스트 입력을 필터링하는 데 사용할 수 있습니다.
+가정(예: [매개 변수가 있는 단위 테스트](test-generation.md#parameterized-unit-testing)의 [사전 조건](test-generation.md#precondition))을 표현하는 데 사용되는 정적 클래스입니다. 이 클래스의 메서드는 부적절한 테스트 입력을 필터링하는 데 사용할 수 있습니다.
 
 가정된 조건이 일부 테스트 입력에 적용되지 않으면 **PexAssumeFailedException**이 throw됩니다. 이로 인해 테스트가 자동으로 무시됩니다.
 
@@ -173,4 +173,4 @@ public static void AreElementsNotNull<T>(T[] value)
 
 ## <a name="got-feedback"></a>피드백이 있으신가요?
 
-아이디어와 기능 요청을 **[UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)** 에 게시하세요.
+아이디어와 기능 요청을 [UserVoice](https://visualstudio.uservoice.com/forums/121579-visual-studio-2015/category/157869-test-tools?query=IntelliTest)에 게시하세요.

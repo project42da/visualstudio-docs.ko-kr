@@ -1,6 +1,7 @@
 ---
-title: 빠른 작업 | Microsoft 문서
+title: 빠른 작업
 ms.date: 03/28/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -11,11 +12,11 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 941980eff8fc2474df9555b326278abdb9b26dac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 90ec61924a9a08fc01c54f04bd8a7cc82fcc9525
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quick-actions"></a>빠른 작업
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="to-see-potential-fixes"></a>잠재적 해결 방법을 보려면
 
-아래쪽 화살표나 잠재적 해결 방법 표시 링크를 클릭하여 전구가 수행할 수 있는 빠른 작업 목록을 표시합니다.
+아래쪽 화살표나 **잠재적 해결 방법 표시** 링크를 클릭하여 전구가 수행할 수 있는 빠른 작업 목록을 표시합니다.
 
 ![확장된 전구](../ide/media/vs2015_lightbulb_hover_expanded.png)
 
@@ -51,4 +52,4 @@ ms.lasthandoff: 04/16/2018
 - [Visual Studio에서 코드 생성](../ide/code-generation-in-visual-studio.md)
 - [일반적인 빠른 작업](../ide/common-quick-actions.md)
 - [코드 스타일 및 빠른 작업](../ide/code-styles-and-quick-actions.md)
-- [코드 작성 및 리팩터링(C++)](/cpp/ide/writing-and-refactoring-code-cpp)
+- [코드(C++) 쓰기 및 리팩터링](/cpp/ide/writing-and-refactoring-code-cpp)

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트를 위한 부하 패턴 | Microsoft Docs
+title: Visual Studio에서 부하 테스트를 위한 부하 패턴
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,12 +10,13 @@ ms.assetid: 0ba0363b-7f50-4bde-a919-0e3bce7bc115
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 7a6d9054bb12290d29247c09263a3854f2ea0dad
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e9babedd5920f81dd4a0e2bc244acb21f0965d22
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-load-patterns-to-model-virtual-user-activities"></a>모델 가상 사용자 동작에 대한 부하 패턴 편집
 
@@ -43,7 +44,8 @@ ms.lasthandoff: 04/16/2018
  예를 들어, **초기 사용자 수**가 1, **최대 사용자 수**가 100, **단계 시간(초)** 이 10, **단계 사용자 수**가 1인 단계 부하의 경우 1에서 시작하여 사용자 수가 100이 될 때까지 10초마다 1씩 증가하는 사용자 부하 패턴이 만들어집니다.
 
 > [!NOTE]
->  총 테스트 지속 시간이 최대 사용자 부하까지 도달하는 데 필요한 시간보다 짧은 경우 테스트는 총 테스트 지속 시간이 경과한 다음 중지되며 최대 사용자 수 목표에 도달하지 못합니다.
+> 총 테스트 지속 시간이 최대 사용자 부하까지 도달하는 데 필요한 시간보다 짧은 경우 테스트는 총 테스트 지속 시간이 경과한 다음 중지되며 최대 사용자 수 목표에 도달하지 못합니다.
+
 
  단계 부하를 사용하여 서버가 성능이 현저히 저하되는 지점에 도달할 때까지 부하를 증가시킬 수 있습니다. 부하가 증가하면 서버에서는 결국 리소스가 부족하게 됩니다. 단계 부하는 이러한 상황이 발생하는 시점의 사용자 수를 결정할 때 유용합니다. 또한 단계 부하를 사용하는 경우 에이전트에서 필요한 부하를 생성할 수 있는지 에이전트 리소스도 자세히 모니터링해야 합니다.
 
@@ -117,12 +119,14 @@ ms.lasthandoff: 04/16/2018
  **부하 테스트 새로 만들기 마법사**를 사용하여 부하 테스트를 만든 다음, **부하 테스트 편집기**를 사용하여 시나리오에 연결된 부하 패턴 속성을 테스트 목표에 맞게 변경할 수 있습니다.
 
 > [!NOTE]
->  부하 테스트 시나리오 속성과 해당 설명의 전체 목록을 보려면 [부하 테스트 시나리오 속성](../test/load-test-scenario-properties.md)을 참조하세요.
+> 부하 테스트 시나리오 속성과 해당 설명의 전체 목록을 보려면 [부하 테스트 시나리오 속성](../test/load-test-scenario-properties.md)을 참조하세요.
+
 
  부하 패턴은 부하 테스트 도중 활성화되는 가상 사용자 수와 새 사용자가 추가되는 비율을 지정합니다. 단계 패턴, 일정 패턴 및 목표 기반 패턴의 세 가지 패턴 중에서 선택할 수 있습니다. 자세한 내용은 [부하 테스트 시나리오에서 부하 패턴을 사용하여 가상 사용자 수 지정](../test/edit-load-patterns-to-model-virtual-user-activities.md)을 참조하세요.
 
 > [!NOTE]
->  부하 테스트 플러그 인을 사용하여 프로그래밍 방식으로 부하 속성을 변경할 수도 있습니다. 자세한 내용은 [방법: 부하 테스트 플러그 인 만들기](../test/how-to-create-a-load-test-plug-in.md)를 참조하세요.
+> 부하 테스트 플러그 인을 사용하여 프로그래밍 방식으로 부하 속성을 변경할 수도 있습니다. 자세한 내용은 [방법: 부하 테스트 플러그 인 만들기](../test/how-to-create-a-load-test-plug-in.md)를 참조하세요.
+
 
 ### <a name="to-change-the-load-pattern"></a>부하 패턴을 변경하려면
 

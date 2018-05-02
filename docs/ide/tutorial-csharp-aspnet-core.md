@@ -1,9 +1,9 @@
 ---
-title: Visual Studio에서 C# 및 ASP.NET Core 시작 | Microsoft Docs
+title: Visual Studio에서 C# 및 ASP.NET Core 시작
 ms.custom: ''
 ms.date: 12/11/2017
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: tutorial
 ms.devlang: CSharp
 author: TerryGLee
@@ -14,11 +14,11 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: b3760c922e540837d0e9452efc8d44762eeeb3af
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 80ca583b3cd773121cda7b0311fcf551472cb2d4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="getting-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio에서 C# 및 ASP.NET 시작
 Visual Studio를 사용하여 ASP.NET Core로 C#을 개발하기 위한 이 자습서에서는 C# ASP.NET Core 웹앱을 만들고, 해당 앱에 코드를 추가하며, IDE의 일부 기능을 살펴보고 앱을 실행합니다. 

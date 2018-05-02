@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트에 대한 가상 사용자의 전체 정보 수집 | Microsoft Docs
+title: Visual Studio에서 부하 테스트에 대한 가상 사용자의 전체 정보 수집
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,13 @@ ms.assetid: cb22e43b-af4d-4e09-9389-3c3fa00786f7
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d18a93fad0d113369f48e21ae74a08484b99485c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: cac171d6f0e1bcd91a89be799497b84dc15fc5a5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-configure-load-tests-to-collect-full-details-to-enable-virtual-user-activity-in-test-results"></a>방법: 전체 정보를 수집하여 테스트 결과에서 가상 사용자 동작을 활성화하도록 부하 테스트 구성
 

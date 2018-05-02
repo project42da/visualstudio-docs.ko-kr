@@ -1,9 +1,8 @@
 ---
-title: 응용 프로그램 리소스 관리(.NET) | Microsoft 문서
-ms.custom: ''
+title: 응용 프로그램 리소스 관리(.NET)
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - msvse_resedit.dlg.SetCustomTool
@@ -20,19 +19,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5515796d34b12e95fe6c9a545e7a81e98a8f6a9a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fe35a9a0e9b1e4b2e04e978f2b32cb38439b76cd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="managing-application-resources-net"></a>응용 프로그램 리소스 관리(.NET)
+# <a name="manage-application-resources-net"></a>응용 프로그램 리소스 관리(.NET)
 
 리소스 파일은 응용 프로그램의 일부이지만 컴파일되지 않는 파일입니다(예: 아이콘 파일 또는 오디오 파일). 이러한 파일은 컴파일 프로세스에 포함되지 않으므로 이진 파일을 다시 컴파일할 필요 없이 변경할 수 있습니다. 응용 프로그램을 지역화할 계획인 경우 모든 문자열 및 응용 프로그램을 지역화할 때 변경해야 하는 다른 리소스에 대해 리소스 파일을 사용해야 합니다.
 
-.NET 데스크톱 앱의 리소스에 대한 자세한 내용은 [Resources in Desktop Apps](/dotnet/framework/resources/index)를 참조하세요.
+.NET 데스크톱 앱의 리소스에 대한 자세한 내용은 [데스크톱 앱의 리소스](/dotnet/framework/resources/index)를 참조하세요.
 
-## <a name="working-with-resources"></a>리소스 작업
+## <a name="work-with-resources"></a>리소스 작업
 
 관리 코드 프로젝트에서 프로젝트 속성 창을 엽니다. 다음 방법 중 하나로 속성 창을 열 수 있습니다.
 
@@ -40,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 - **빠른 실행** 창에 "프로젝트 속성" 입력
 - **솔루션 탐색기** 창에서 **Alt**+**Enter** 선택
 
-**리소스** 탭을 선택합니다. 프로젝트에 .resx 파일이 포함되지 않은 경우 하나를 추가하고, 다른 종류의 리소스를 추가 및 삭제하고, 기존 리소스를 수정할 수 있습니다.
+**리소스** 탭을 선택합니다. 프로젝트에 *.resx* 파일이 포함되지 않은 경우 하나를 추가하고, 다른 종류의 리소스를 추가 및 삭제하고, 기존 리소스를 수정할 수 있습니다.
 
 ## <a name="resources-in-other-project-types"></a>다른 프로젝트 형식의 리소스
 
@@ -51,4 +50,4 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[데스크톱 앱의 리소스(.NET Framework)](/dotnet/framework/resources/index)
+- [데스크톱 앱의 리소스(.NET Framework)](/dotnet/framework/resources/index)

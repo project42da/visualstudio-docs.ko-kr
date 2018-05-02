@@ -1,9 +1,9 @@
 ---
-title: Visual Studio에 로그인 | Microsoft 문서
+title: Visual Studio에 로그인
 ms.custom: ''
 ms.date: 11/16/2017
-ms.technology:
-- vs-acquisition
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: b9531c25-e4cf-43ae-b331-a9f31a8cd171
 author: TerryGLee
@@ -11,11 +11,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e33d59be1be9049d8abdaf4f43dac221569cb7b4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bdfa8e854049e7de6c6edd49454d1efa55e2a05b
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="sign-in-to-visual-studio"></a>Visual Studio에 로그인
 
@@ -43,7 +43,7 @@ IDE에 로그인하여 개인 설정 계정을 설정하면 Visual Studio의 개
 
 Visual Studio를 처음 시작할 때 로그인할지 묻는 메시지가 나타나고 기본적인 등록 정보를 제공합니다. 자신을 가장 잘 나타내는 Microsoft 계정이나 회사 또는 학교 계정을 선택해야 합니다. 이러한 계정이 없으면 무료로 Microsoft 계정을 만들 수 있습니다. [Microsoft 계정을 등록하려면 어떻게 하나요?](http://windows.microsoft.com/windows-live/sign-up-create-account-how)를 참조하세요.
 
-그런 다음 Visual Studio에서 사용할 UI 설정과 색 테마를 선택합니다. Visual Studio가 이러한 설정을 기억하고 로그인한 모든 Visual Studio 환경에서 이 설정을 동기화합니다. 동기화된 설정 목록은 [동기화된 설정](../ide/synchronized-settings-in-visual-studio.md)을 참조하세요. 나중에 Visual Studio에서 **도구**, **옵션** 메뉴를 열어 설정을 변경할 수 있습니다.
+그런 다음 Visual Studio에서 사용할 UI 설정과 색 테마를 선택합니다. Visual Studio가 이러한 설정을 기억하고 로그인한 모든 Visual Studio 환경에서 이 설정을 동기화합니다. 동기화된 설정 목록은 [동기화된 설정](../ide/synchronized-settings-in-visual-studio.md)을 참조하세요. 나중에 Visual Studio에서 **도구** > **옵션** 메뉴를 열어 설정을 변경할 수 있습니다.
 
 설정을 제공한 후 Visual Studio가 시작되고 로그인되면 시작할 수 있습니다. 로그인되어 있는지 여부를 확인하려면 Visual Studio 환경의 오른쪽 위 모서리에서 이름을 찾습니다.
 
@@ -53,7 +53,7 @@ Visual Studio를 처음 시작할 때 로그인할지 묻는 메시지가 나타
 
 ## <a name="to-change-your-profile-information"></a>프로필 정보를 변경하려면
 
-1. **파일**, **계정 설정**으로 이동하여 **Visual Studio 프로필 관리** 링크를 선택합니다.
+1. **파일** > **계정 설정**으로 이동하여 **Visual Studio 프로필 관리** 링크를 선택합니다.
 
 1. 브라우저 창에서 **프로필 편집**을 선택하고 원하는 대로 설정을 변경합니다.
 
@@ -65,5 +65,5 @@ Visual Studio를 처음 시작할 때 로그인할지 묻는 메시지가 나타
 
 ## <a name="see-also"></a>참고 항목
 
-[Visual Studio 잠금을 해제하는 방법](../ide/how-to-unlock-visual-studio.md)  
-[Visual Studio IDE 개요](../ide/visual-studio-ide.md)
+* [Visual Studio 잠금을 해제하는 방법](../ide/how-to-unlock-visual-studio.md)  
+* [Visual Studio IDE 개요](../ide/visual-studio-ide.md)

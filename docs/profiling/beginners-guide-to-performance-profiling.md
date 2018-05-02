@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 응용 프로그램 성능 프로파일링 | Microsoft Docs
-ms.custom: H1Hack27Feb2017
+title: 앱에서 CPU 사용량 측정
+description: 디버거 통합 진단 도구를 사용하여 응용 프로그램에서 CPU 성능 문제를 분석합니다.
+ms.custom: mvc
 ms.date: 02/27/2017
 ms.technology: vs-ide-debug
 ms.topic: tutorial
@@ -17,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f4415956aaa819881584b4298285ff878c1d7ccf
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e2e3aee55728f312aaa1ff7d8c44a6bbd6c04bfd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="profile-application-performance-in-visual-studio"></a>Visual Studio에서 응용 프로그램 성능 프로파일링
 Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성능 문제를 분석할 수 있습니다. 이 절차에서는 진단 도구의 **CPU 사용량** 탭을 사용하여 앱의 성능 데이터를 가져오는 방법을 보여 줍니다. 진단 도구는 ASP.NET을 포함한 Visual Studio의 .NET 개발 및 네이티브/C++ 개발에 사용할 수 있습니다.

@@ -1,5 +1,5 @@
 ---
-title: Microsoft Word를 사용하여 Visual Studio 부하 테스트 성능 보고서 만들기 | Microsoft Docs
+title: Microsoft Word를 사용하여 Visual Studio 부하 테스트 성능 보고서 만들기
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,13 @@ ms.assetid: 3b864c75-2699-48c1-a2b4-9651f108c267
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6b7c48d46cfb795c4eb5f61cc970676816d568a0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8d25e93c0c5fefeae2d7891d458373d81d5ff370
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>방법: Microsoft Word를 사용하여 수동으로 부하 테스트 성능 보고서 만들기
 

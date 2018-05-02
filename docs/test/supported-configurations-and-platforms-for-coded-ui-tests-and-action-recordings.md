@@ -1,8 +1,9 @@
 ---
-title: Visual Studio에서 코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼 | Microsoft Docs
+title: Visual Studio에서 코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼
 ms.date: 2015-10-04
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.topic: conceptual
+ms.topic: reference
 helpviewer_keywords:
 - coded UI tests
 ms.author: gewarren
@@ -10,18 +11,19 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 82d44d08353ed048ff51c90ea9a4b5c061a2dc2d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: caa1fd5317cf7f5bfd7a7f5a309734002112cc6a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="supported-configurations-and-platforms-for-coded-ui-tests-and-action-recordings"></a>코딩된 UI 테스트 및 작업 기록에 지원되는 구성 및 플랫폼
 
 아래의 표에는 Visual Studio Enterprise의 코딩된 UI 테스트에 지원되는 구성 및 플랫폼이 나와 있습니다. 이러한 구성은 [!INCLUDE[MTRlong](../test/includes/mtrlong_md.md)]를 사용하여 만든 작업 기록에도 적용됩니다.
 
 > [!NOTE]
->  코딩된 UI 테스트 프로세스는 테스트 대상 응용 프로그램으로 동일한 권한이 있어야 합니다.
+> 코딩된 UI 테스트 프로세스는 테스트 대상 응용 프로그램으로 동일한 권한이 있어야 합니다.
+
 
  **요구 사항**
 
@@ -37,7 +39,8 @@ ms.lasthandoff: 04/16/2018
 |.NET|.NET 2.0, 3.0, 3.5, 4 및 4.5. **참고:**  [!INCLUDE[TCMext](../misc/includes/tcmext_md.md)] 및 Visual Studio를 작동하려면 .NET 4가 필요합니다. 그러나 여기 나열된 .NET 버전을 사용하여 개발한 응용 프로그램은 모두 지원됩니다.|
 
 > [!NOTE]
->  *UI 동기화* 는 각 컨트롤의 메시지 큐에서 재생을 확인할 수 있는 기능입니다. 컨트롤에 이벤트를 보내도 컨트롤이 응답하지 않으면 이벤트가 다시 전달됩니다.
+> *UI 동기화* 는 각 컨트롤의 메시지 큐에서 재생을 확인할 수 있는 기능입니다. 컨트롤에 이벤트를 보내도 컨트롤이 응답하지 않으면 이벤트가 다시 전달됩니다.
+
 
 ## <a name="platform-support"></a>플랫폼 지원
 

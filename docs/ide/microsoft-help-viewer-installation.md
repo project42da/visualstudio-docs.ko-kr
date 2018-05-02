@@ -1,7 +1,7 @@
 ---
-title: Visual Studio 오프라인 도움말 설치 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 오프라인 도움말 설치
 ms.date: 11/01/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-help-viewer
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +12,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b44a96bd0386fdcec7740b8cafdcd9f328b64892
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6eedfe24b1f7ff7243cb9856bd1ae1942b1dbc53
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="microsoft-help-viewer-installation"></a>Microsoft 도움말 뷰어 설치
 
@@ -24,7 +24,7 @@ ms.lasthandoff: 04/16/2018
 
 도움말 뷰어는 Visual Studio의 선택적 설치 구성 요소입니다. Visual Studio 설치 관리자를 통해 설치하려면 다음 단계를 따르세요.
 
-1. 시작 메뉴에서 **Visual Studio 설치 관리자**를 열거나 Visual Studio가 열려 있는 경우 **도구**, **도구 및 기능 가져오기...** 를 선택하여 Visual Studio 설치 관리자를 열 수 있습니다.
+1. 시작 메뉴에서 **Visual Studio 설치 관리자**를 열거나 Visual Studio가 열려 있는 경우 **도구** > **도구 및 기능 가져오기**를 선택하여 Visual Studio 설치 관리자를 열 수 있습니다.
 
 1. **개별 구성 요소** 탭을 선택한 다음, **코드 도구** 섹션에서 **도움말 뷰어**를 선택합니다.
 
@@ -38,7 +38,7 @@ Microsoft 도움말 뷰어를 쉽게 설치하는 다른 방법은 **빠른 실�
 
    ![빠른 실행 상자](media/help_viewer_quick_launch.png)
 
-1. **도움말 뷰어(개별 구성 요소)** 라고 하는 설치 결과를 선택합니다.
+1. **도움말 뷰어(개별 구성 요소)** 라는 결과를 선택합니다.
 
 1. 대화 상자가 열리면 **설치** 단추를 선택합니다.
 
@@ -50,5 +50,5 @@ Microsoft 도움말 뷰어를 쉽게 설치하는 다른 방법은 **빠른 실�
 
 ## <a name="see-also"></a>참고 항목
 
-[Microsoft 도움말 뷰어](../ide/microsoft-help-viewer.md)  
-[SQL Server에 대한 도움말 보기 및 오프라인 콘텐츠](/sql/sql-server/sql-server-help-installation)
+- [Microsoft 도움말 뷰어](../ide/microsoft-help-viewer.md)
+- [SQL Server에 대한 도움말 보기 및 오프라인 콘텐츠](/sql/sql-server/sql-server-help-installation)

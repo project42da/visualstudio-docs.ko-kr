@@ -1,9 +1,8 @@
 ---
-title: JavaScript IntelliSense | Microsoft 문서
-ms.custom: ''
+title: JavaScript IntelliSense
 ms.date: 06/28/2017
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - IntelliSense [JavaScript]
@@ -27,11 +26,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: eb4d95dcc53926f7ae8b0b295b7552185a4a934c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2aeabb8953d76b38dfa612e701eaeeb872cb64c3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
@@ -53,7 +52,7 @@ TypeScript는 여러 소스를 사용하여 이 정보를 구성합니다.
 - [TypeScript 선언 파일 기반 IntelliSense](#TsDeclFiles)
 - [형식 정의의 자동 획득](#Auto)
 
-### <a name="TypeInference"></a>형식 유추 기반 IntelliSense
+### <a name="intellisense-based-on-type-inference"></a>형식 유추 기반 IntelliSense
 
 JavaScript에서는 일반적으로 명시적 형식 정보를 사용할 수 없습니다. 다행히도 주변 코드 컨텍스트가 있는 경우 일반적으로 형식을 쉽게 알아낼 수 있습니다.
 이 프로세스를 형식 유추라고 합니다.
@@ -70,7 +69,7 @@ nextItem; // now we know nextItem is a string
 
 함수의 반환 형식은 return 문에서 유추할 수 있습니다.
 
-함수 매개 변수의 경우 현재 유추가 없지만 JSDoc 또는 TypeScript `.d.ts` 파일을 사용하여 이 문제를 해결할 수 있습니다(이후 섹션 참조).
+함수 매개 변수의 경우 현재 유추가 없지만 JSDoc 또는 TypeScript *.d.ts* 파일을 사용하여 이 문제를 해결할 수 있습니다(이후 섹션 참조).
 
 또한 다음에 대한 특수 유추가 있습니다.
 
@@ -89,7 +88,7 @@ exports.Foo = Foo;
 // Note that assigning a value to "module.exports" is also supported.
 ```
 
-### <a name="JsDoc"></a> JSDoc 기반 IntelliSense
+### <a name="intellisense-based-on-jsdoc"></a>JSDoc 기반 IntelliSense
 
 형식 유추에서 원하는 형식 정보(또는 지원 문서 정보)가 제공되지 않으면 JSDoc 주석을 통해 명시적으로 형식 정보를 제공할 수 있습니다.  예를 들어 부분적으로 선언된 개체에 특정 형식을 제공하려면 다음과 같이 `@type` 태그를 사용할 수 있습니다.
 
@@ -113,29 +112,29 @@ function Foo(param1) {
 }
 ```
 
-현재 지원되는 JsDoc 주석은 [이 문서](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript)를 참조하세요.
+현재 지원되는 JsDoc 주석은 [JavaScript에서 JSDoc 지원](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript)을 참조합니다.
 
-### <a name="TsDeclFiles"></a> TypeScript 선언 파일 기반 IntelliSense
+### <a name="intellisense-based-on-typescript-declaration-files"></a>TypeScript 선언 파일 기반 IntelliSense
 
-JavaScript 및 TypeScript는 이제 같은 언어 서비스에 기반을 두므로 더 다양한 방법으로 조작할 수 있습니다. 예를 들어 JavaScript IntelliSense는 `.d.ts` 파일에 선언된 값에 대해 제공될 수 있고([추가 정보](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html)) TypeScript에 선언된 인터페이스 및 클래스 등의 형식은 JsDoc 주석에서 형식으로 사용할 수 있습니다. 
+JavaScript 및 TypeScript는 이제 같은 언어 서비스에 기반을 두므로 더 다양한 방법으로 조작할 수 있습니다. 예를 들어 JavaScript IntelliSense는 *.d.ts* 파일에 선언된 값에 대해 제공될 수 있고([TypeScript 설명서](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) 참조), TypeScript에 선언된 인터페이스 및 클래스 등의 형식은 JsDoc 주석에서 형식으로 사용할 수 있습니다.
 
-다음 내용은 JsDoc 태그를 사용하는 같은 프로젝트에서 인터페이스를 통해 이 형식 정보를 JavaScript 파일에 제공하는 TypeScript 정의 파일의 간단한 예제입니다.
+다음 내용은 `JsDoc` 태그를 사용하는 같은 프로젝트에서 인터페이스를 통해 이 형식 정보를 JavaScript 파일에 제공하는 TypeScript 정의 파일의 간단한 예제입니다.
 
 <img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png" height="400" width="640"/>
 
-### <a name="Auto"></a> 형식 정의의 자동 획득
+### <a name="automatic-acquisition-of-type-definitions"></a>형식 정의의 자동 획득
 
-TypeScript 환경에서 가장 인기 있는 JavaScript 라이브러리에는 `.d.ts` 파일을 통해 설명되는 API가 있고 해당 정의의 가장 일반적인 리포지토리는 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)에 있습니다.
+TypeScript 환경에서 가장 인기 있는 JavaScript 라이브러리에는 *.d.ts* 파일을 통해 설명되는 API가 있고 해당 정의의 가장 일반적인 리포지토리는 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)에 있습니다.
 
-기본적으로 Salsa 언어 서비스는 어떤 JavaScript 라이브러리가 사용 중인지 검색하고, 더 다양한 IntelliSense를 제공하기 위해 라이브러리를 설명하는 해당 `.d.ts` 파일을 자동으로 다운로드하여 참조합니다. 파일은 `%LOCALAPPDATA%\Microsoft\TypeScript`의 사용자 폴더 아래에 있는 캐시에 다운로드됩니다.
+기본적으로 Salsa 언어 서비스는 어떤 JavaScript 라이브러리가 사용 중인지 검색하고, 더 다양한 IntelliSense를 제공하기 위해 라이브러리를 설명하는 해당 *.d.ts* 파일을 자동으로 다운로드하여 참조합니다. 파일은 *%LOCALAPPDATA%\Microsoft\TypeScript*의 사용자 폴더 아래에 있는 캐시에 다운로드됩니다.
 
 > [!NOTE]
-> `tsconfig.json` 구성 파일을 사용할 경우 이 기능은 기본적으로 **사용되지 않지만** 아래 추가로 설명된 대로 사용되도록 설정할 수 있습니다.
+> *tsconfig.json* 구성 파일을 사용할 경우 이 기능은 기본적으로 **사용되지 않지만** 아래 추가로 설명된 대로 사용되도록 설정할 수 있습니다.
 
-현재 자동 검색은 npm에서 다운로드된 종속성(`package.json` 파일 읽기 수행), Bower(`bower.json` 파일 읽기 수행) 및 대략 상위 400개의 가장 인기 있는 JavaScript 라이브러리 목록과 일치하는 프로젝트의 느슨한 파일에 적용됩니다. 예를 들어 프로젝트에 `jquery-1.10.min.js`가 있는 경우 더 나은 편집 환경을 제공하기 위해 `jquery.d.ts` 파일이 페치 및 다운로드됩니다. 이 `.d.ts` 파일은 프로젝트에 영향을 미치지 않습니다.
+현재 자동 검색은 npm에서 다운로드된 종속성(*package.json* 파일 읽기 수행), Bower(*bower.json* 파일 읽기 수행) 및 대략 상위 400개의 가장 인기 있는 JavaScript 라이브러리 목록과 일치하는 프로젝트의 느슨한 파일에 적용됩니다. 예를 들어 프로젝트에 *jquery-1.10.min.js*가 있는 경우 더 나은 편집 환경을 제공하기 위해 *jquery.d.ts* 파일이 페치 및 다운로드됩니다. 이 *.d.ts* 파일은 프로젝트에 영향을 미치지 않습니다.
 
 자동 획득을 사용하지 않으려면 다음 설명대로 구성 파일을 추가하여 기능을 사용하지 않도록 설정합니다. 사용할 정의 파일을 직접 프로젝트 내에 수동으로 배치할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 
-[IntelliSense 사용](../ide/using-intellisense.md)
+- [IntelliSense 사용](../ide/using-intellisense.md)

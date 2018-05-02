@@ -1,10 +1,9 @@
 ---
-title: 조사식 명령 | Microsoft Docs
-ms.custom: ''
+title: 조사식 명령
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
-ms.topic: conceptual
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
+ms.topic: reference
 f1_keywords:
 - debug.watch
 helpviewer_keywords:
@@ -16,38 +15,40 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a82816acfbb995b47dfb34337b20488ad3787f04
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 97fe1c6865b8934d2c0329547e98323c75bf3ec0
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="watch-command"></a>조사식 명령
-**조사식** 창의 지정된 인스턴스를 만들고 엽니다. **조사식** 창을 사용하여 변수, 식 및 레지스터의 값을 계산하고, 이러한 값을 편집하고, 결과를 저장할 수 있습니다.  
-  
-## <a name="syntax"></a>구문  
-  
-```  
-Debug.Watch[index]  
-```  
-  
-## <a name="arguments"></a>인수  
- `index`  
- 필수. 조사식 창의 인스턴스 번호입니다.  
-  
-## <a name="remarks"></a>설명  
- `index`는 정수여야 합니다. 유효한 값은 1, 2, 3 또는 4입니다.  
-  
-## <a name="example"></a>예  
-  
-```  
->Debug.Watch1  
-```  
-  
-## <a name="see-also"></a>참고 항목  
- [자동 및 지역 창](../../debugger/autos-and-locals-windows.md)   
- [Visual Studio에서 조사식 및 간략한 조사식 창을 사용하여 변수에 대한 조사식 설정](../../debugger/watch-and-quickwatch-windows.md)   
- [Visual Studio 명령](../../ide/reference/visual-studio-commands.md)   
- [명령 창](../../ide/reference/command-window.md)   
- [찾기/명령 상자](../../ide/find-command-box.md)   
- [Visual Studio 명령 별칭](../../ide/reference/visual-studio-command-aliases.md)
+**조사식** 창의 지정된 인스턴스를 만들고 엽니다. **조사식** 창을 사용하여 변수, 식 및 레지스터의 값을 계산하고, 이러한 값을 편집하고, 결과를 저장할 수 있습니다.
+
+## <a name="syntax"></a>구문
+
+```
+Debug.Watch[index]
+```
+
+## <a name="arguments"></a>인수
+ `index`
+
+ 필수. 조사식 창의 인스턴스 번호입니다.
+
+## <a name="remarks"></a>설명
+ `index`는 정수여야 합니다. 유효한 값은 1, 2, 3 또는 4입니다.
+
+## <a name="example"></a>예
+
+```
+>Debug.Watch1
+```
+
+## <a name="see-also"></a>참고 항목
+
+- [자동 및 지역 창](../../debugger/autos-and-locals-windows.md)
+- [Visual Studio에서 조사식 및 간략한 조사식 창을 사용하여 변수에 대한 조사식 설정](../../debugger/watch-and-quickwatch-windows.md)
+- [Visual Studio 명령](../../ide/reference/visual-studio-commands.md)
+- [명령 창](../../ide/reference/command-window.md)
+- [찾기/명령 상자](../../ide/find-command-box.md)
+- [Visual Studio 명령 별칭](../../ide/reference/visual-studio-command-aliases.md)

@@ -1,9 +1,8 @@
 ---
-title: 클래스 디자이너의 Visual C++ 구조체 | Microsoft Docs
-ms.custom: ''
+title: 클래스 디자이너의 Visual C++ 구조체
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Class Designer [Visual Studio], structures
@@ -13,33 +12,35 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d0621b5a2a82786a41e8d566954f03341affa905
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 36d9e78a1944817d9384d0c55b9584e58a758ccc
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="visual-c-structures-in-class-designer"></a>클래스 디자이너의 Visual C++ 구조체
-클래스 디자이너는 `struct` 키워드로 선언된 C++ 구조체를 지원합니다. 예를 들면 다음과 같습니다.  
-  
+
+**클래스 디자이너**는 `struct` 키워드로 선언된 C++ 구조체를 지원합니다. 예를 들면 다음과 같습니다.
+
 ```cpp
-struct MyStructure  
-{  
-   char a;  
-   int i;  
-   long j;  
-};  
-```  
-  
-`struct` 형식을 사용하는 방법에 대한 자세한 내용은 [구조체](/cpp/cpp/struct-cpp)를 참조하세요.  
-  
-레이블이 **구조체**를 읽고 둥근 모서리 대신 사각형 모서리를 갖고 있다는 점을 제외하고, 클래스 다이어그램에서 C++ 구조체 모양은 클래스 모양처럼 보이고 실제 그러한 작용을 합니다.  
-  
-|코드 요소|클래스 디자이너 보기|  
-|------------------|-------------------------|  
-|`struct StructureName {};`|**StructureName**<br /><br /> 구조체|  
-  
+struct MyStructure
+{
+   char a;
+   int i;
+   long j;
+};
+```
+
+`struct` 형식을 사용하는 방법에 대한 자세한 내용은 [구조체](/cpp/cpp/struct-cpp)를 참조하세요.
+
+레이블이 **구조체**를 읽고 둥근 모서리 대신 사각형 모서리를 갖고 있다는 점을 제외하고, 클래스 다이어그램에서 C++ 구조체 모양은 클래스 모양처럼 보이고 실제 그러한 작용을 합니다.
+
+|코드 요소|클래스 디자이너 보기|
+|------------------|-------------------------|
+|`struct StructureName {};`|**StructureName**<br /><br /> 구조체|
+
 ## <a name="see-also"></a>참고 항목
-[Visual C++ 코드 작업](working-with-visual-cpp-code.md)   
-[클래스 및 구조체](/cpp/cpp/classes-and-structs-cpp)   
-[struct](/cpp/cpp/struct-cpp)
+
+- [Visual C++ 코드 작업](working-with-visual-cpp-code.md)
+- [클래스 및 구조체](/cpp/cpp/classes-and-structs-cpp)
+- [struct](/cpp/cpp/struct-cpp)

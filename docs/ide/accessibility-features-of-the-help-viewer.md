@@ -1,9 +1,8 @@
 ---
-title: Visual Studio 도움말 뷰어의 접근성 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 도움말 뷰어의 접근성
 ms.date: 11/02/2017
-ms.technology:
-- vs-help-viewer
+ms.prod: visual-studio-dev15
+ms.technology: vs-help-viewer
 ms.topic: conceptual
 helpviewer_keywords:
 - accessibility features [Help Viewer]
@@ -14,27 +13,28 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af1187e43e5839b284af227d1fdbcb8c055d6c85
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1f7af46b64392c01340c7cb65633939443ffd799
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="accessibility-features-of-the-help-viewer"></a>도움말 뷰어의 접근성 기능
-Microsoft는 제품과 서비스를 모든 사용자가 사용하기 더욱 쉽게 만들기 위해 최선을 다하고 있습니다. 이 항목에는 Microsoft 도움말 뷰어를 다양한 범위의 기능을 가진 사람들이 액세스할 수 있도록 도와주는 기능, 제품 및 서비스에 대한 정보가 포함되어 있습니다.  
-  
-## <a name="keyboard-access"></a>키보드 액세스  
-키보드를 사용하여 도움말 뷰어의 모든 기능에 액세스할 수 있습니다. 자세한 내용은 [바로 가기 키(도움말 뷰어)](../ide/shortcut-keys-help-viewer.md)를 참조하세요.  
-  
-## <a name="font-size"></a>글꼴 크기  
-문서 창에 나타나는 항목 텍스트의 글꼴 크기를 수정할 수 있습니다. 자세한 내용은 [도움말 뷰어 사용자 지정](../ide/customize-the-help-viewer.md)을 참조하세요.  
-  
-## <a name="window-size"></a>창 크기  
-두 창 간의 구분선을 가리켜서 탐색 또는 문서 창의 너비를 변경할 수 있습니다. 커서가 양방향 화살표로 변경되면 기본 마우스 단추를 사용하여 구분선을 오른쪽이나 왼쪽으로 끕니다.  
-  
-## <a name="help-viewer-position"></a>도움말 뷰어 위치  
-제목 표시줄을 다른 위치로 끌어서 도움말 뷰어의 위치를 변경할 수 있습니다.  
-  
+Microsoft는 제품과 서비스를 모든 사용자가 사용하기 더욱 쉽게 만들기 위해 최선을 다하고 있습니다. 이 항목에는 Microsoft 도움말 뷰어를 다양한 범위의 기능을 가진 사람들이 액세스할 수 있도록 도와주는 기능, 제품 및 서비스에 대한 정보가 포함되어 있습니다.
+
+## <a name="keyboard-access"></a>키보드 액세스
+키보드를 사용하여 도움말 뷰어의 모든 기능에 액세스할 수 있습니다. 자세한 내용은 [바로 가기 키(도움말 뷰어)](../ide/shortcut-keys-help-viewer.md)를 참조하세요.
+
+## <a name="font-size"></a>글꼴 크기
+문서 창에 나타나는 항목 텍스트의 글꼴 크기를 수정할 수 있습니다. 자세한 내용은 [도움말 뷰어 사용자 지정](../ide/customize-the-help-viewer.md)을 참조하세요.
+
+## <a name="window-size"></a>창 크기
+두 창 간의 구분선을 가리켜서 탐색 또는 문서 창의 너비를 변경할 수 있습니다. 커서가 양방향 화살표로 변경되면 기본 마우스 단추를 사용하여 구분선을 오른쪽이나 왼쪽으로 끕니다.
+
+## <a name="help-viewer-position"></a>도움말 뷰어 위치
+제목 표시줄을 다른 위치로 끌어서 도움말 뷰어의 위치를 변경할 수 있습니다.
+
 ## <a name="see-also"></a>참고 항목
-[Microsoft 도움말 뷰어](../ide/microsoft-help-viewer.md)  
-[바로 가기 키(도움말 뷰어)](../ide/shortcut-keys-help-viewer.md)
+
+- [Microsoft 도움말 뷰어](../ide/microsoft-help-viewer.md)
+- [바로 가기 키(도움말 뷰어)](../ide/shortcut-keys-help-viewer.md)

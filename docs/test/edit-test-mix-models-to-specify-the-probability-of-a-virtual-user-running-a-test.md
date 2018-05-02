@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 텍스트 조합 모델 편집 | Microsoft Docs
+title: Visual Studio에서 텍스트 조합 모델 편집
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,13 @@ ms.assetid: e3b7d952-9012-400a-8131-3444390a6066
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ebcb58ea848bbb04dd4fdb132a87c66707bc4af8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d3f06eac67207209932073899ae0277f9a156b54
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="edit-text-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>텍스트 조합 모델을 편집하여 가상 사용자의 테스트 실행 가능성 지정
 

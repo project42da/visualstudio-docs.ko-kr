@@ -1,18 +1,19 @@
 ---
 title: Visual Studio가 있는 클라우드에서 Kubernetes를 사용하여 컨테이너가 있는 .NET Core 개발 환경 만들기 - 5단계 - 다른 컨테이너 호출 | Microsoft Docs
-author: johnsta
-ms.author: johnsta
+author: ghogen
+ms.author: ghogen
 ms.date: 02/20/2018
-ms.topic: get-started-article
-ms.technology: vsce-kubernetes
+ms.topic: tutorial
+ms.prod: visual-studio-dev15
+ms.technology: vs-azure
 description: Azure에서 마이크로 서비스 및 컨테이너를 사용하여 신속하게 Kubernetes 개발
 keywords: Docker, Kubernetes, Azure, AKS, Azure Container Service, 컨테이너
-manager: ghogen
-ms.openlocfilehash: 8b0a0c78496b8f57764383d737e2a1cebb2dd6b9
-ms.sourcegitcommit: 900ed1e299cd5bba56249cef8f5cf3981b10cb1c
+manager: douge
+ms.openlocfilehash: ab3934e6f7f013dd21309dc8c98461983bdfe30a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 03/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="get-started-on-connected-environment-with-net-core-and-visual-studio"></a>.NET Core 및 Visual Studio를 사용하여 연결된 환경에서 시작
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 03/19/2018
 1. *별도 Visual Studio 창*에서 프로젝트 `mywebapi`을 엽니다.
 1. 이전에 `webfrontend` 프로젝트에 대해 그랬던 것처럼 시작 설정 드롭다운 목록에서 **AKS에 대한 연결된 환경**을 선택합니다. 이번에 새 개발 환경을 만들기보다는 이미 만든 동일한 환경을 선택합니다. 전과 마찬가지로 공간이 `mainline`로 기본 설정되게 하고 **확인**을 클릭합니다. 디버깅을 시작하면 작업 속도를 높이기 위해 Visual Studio가 개발 환경에서 이 새로운 서비스 "준비"를 시작하는 것이 출력 창에 표시됩니다.
 1. F5 키를 누르고 서비스가 빌드 및 배포되는 것을 기다립니다. Visual Studio 상태줄이 주황색으로 변할 때 준비가 된 것이 표시됨
-1. **출력** 창의 **AKS에 대한 연결된 환경** 창에 표시된 끝점 URL에 유의하십시오. 이는 http://localhost:\<portnumber\> 같이 나타납니다. 컨테이너가 로컬로 실행되는 것 같지만 실제로는 Azure의 개발 환경에서 실행 중입니다.
+1. **출력** 창의 **AKS에 대해 연결된 환경** 창에 표시된 엔드포인트 URL에 유의하십시오. 이는 http://localhost:\<portnumber\> 같이 나타납니다. 컨테이너가 로컬로 실행되는 것 같지만 실제로는 Azure의 개발 환경에서 실행 중입니다.
 1. `mywebapi`이 준비된 경우 브라우저를 localhost 주소에서 열고 `/api/values`를 URL에 추가해 `ValuesController`에 대한 기본 API 가져오기를 호출합니다. 
 1. 모든 단계가 정상적인 경우 이와 같이 보이는 `mywebapi` 서비스에서 응답을 확인할 수 있어야 합니다.
 

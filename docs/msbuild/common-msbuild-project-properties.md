@@ -20,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bd3483a47946d51890708186a38fc05ae2576ed1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 61fa8f0f447bddcfb1c8e468ca6d88bbdf503f5c
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="common-msbuild-project-properties"></a>일반적인 MSBuild 프로젝트 속성
 다음 표에서는 Visual Studio 프로젝트 파일에 정의되거나 MSBuild가 제공하는 .targets 파일에 포함된 자주 사용하는 속성을 보여 줍니다.  
@@ -69,9 +69,10 @@ ms.lasthandoff: 04/19/2018
 |FileAlignment|출력 파일의 섹션에 맞출 위치(바이트)를 지정합니다. 올바른 값은 512, 1024, 2048, 4096, 8192입니다. 이 속성은 `/filealignment` 컴파일러 스위치와 동일합니다.|  
 |FrameworkPathOverride|mscorlib.dll 및 microsoft.visualbasic.dll의 위치를 지정합니다. 이 매개 변수는 vbc.exe 컴파일러의 `/sdkpath` 스위치와 동일합니다.|  
 |GenerateDocumentation|(Visual Basic만 해당) 빌드 시 문서의 생성 여부를 나타내는 부울 매개 변수입니다. `true`이면 빌드 시 문서 정보를 생성하여 이 정보를 빌드 작업에서 만든 실행 파일이나 라이브러리의 이름과 함께 .xml 파일에 배치합니다.|
-|IntermediateOutputPath|경로가 지정되지 않은 경우 `BaseIntermediateOutputPath`에서 파생된 것과 같은 전체 중간 출력 경로입니다. 예를 들어 \obj\debug\\입니다. 이 속성이 재정의되면 `BaseIntermediateOutputPath`를 설정해도 아무런 효과가 없습니다.|  
+|IntermediateOutputPath|경로가 지정되지 않은 경우 `BaseIntermediateOutputPath`에서 파생된 것과 같은 전체 중간 출력 경로입니다. 예를 들어 \obj\debug\\입니다.|  
 |KeyContainerName|강력한 이름 키 컨테이너의 이름입니다.|  
 |KeyOriginatorFile|강력한 이름 키 파일의 이름입니다.|  
+|MSBuildProjectExtensionsPath|프로젝트 확장명이 있는 경로를 지정합니다. 기본적으로 `BaseIntermediateOutputPath`와 동일한 값을 사용합니다.|  
 |ModuleAssemblyName|컴파일된 모듈이 통합되어야 하는 어셈블리의 이름입니다. 이 속성은 `/moduleassemblyname` 컴파일러 스위치와 동일합니다.|  
 |NoLogo|컴파일러 로고를 해제할지 여부를 나타내는 부울 값입니다. 이 속성은 `/nologo` 컴파일러 스위치와 동일합니다.|  
 |NoStdLib|표준 라이브러리(mscorlib.dll)를 참조하지 않을지 여부를 나타내는 부울 값입니다. 기본값은 `false`입니다.|  

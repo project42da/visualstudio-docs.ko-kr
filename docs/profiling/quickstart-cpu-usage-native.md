@@ -1,5 +1,6 @@
 ---
-title: CPU 사용량 데이터(C++) 분석 | Microsoft Docs
+title: CPU 사용량 데이터 분석(C++)
+description: CPU 사용량 진단 도구를 사용하여 C++에서 앱 성능 측정
 ms.custom: ''
 ms.date: 12/05/2017
 ms.technology: vs-ide-debug
@@ -14,13 +15,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 52483a920d47b5728645ae195bc1837c7ccc565b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6d5b4d67e5b23e9d875f700f9f7e5171469952c5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="analyze-cpu-usage-data-in-visual-studio-c"></a>Visual Studio에서 CPU 사용량 데이터(C++) 분석
+# <a name="quickstart-analyze-cpu-usage-data-in-visual-studio-c"></a>빠른 시작: Visual Studio에서 CPU 사용량 데이터 분석(C++)
 
 Visual Studio는 응용 프로그램에서 성능 문제를 분석할 수 있도록 여러 강력한 기능을 제공합니다. 이 항목에는 기본 기능 중 일부에 대해 알아보는 빠른 방법을 제공합니다. 여기에서는 높은 CPU 사용량으로 인한 성능 병목 상태를 식별하는 도구를 살펴봅니다. 진단 도구는 ASP.NET을 포함한 Visual Studio의 .NET 개발 및 네이티브/C++ 개발에 사용할 수 있습니다.
 

@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 웹 성능 테스트 API | Microsoft Docs
+title: Visual Studio에서 웹 성능 테스트 API
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,13 @@ ms.assetid: 93a6a1dd-663b-4ab5-8760-7d6b081561d3
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: ed7cbc7375cbf416d82a56c140479925569dad8d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 330e0aa9bcf51b0ce9d57ea93a13303b7a356982
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-use-the-web-performance-test-api"></a>방법: 웹 성능 테스트 API 사용
 
@@ -23,7 +24,8 @@ ms.lasthandoff: 04/16/2018
  또한 웹 성능 테스트 API를 사용하여 프로그래밍 방식으로 선언적 웹 성능 테스트를 만들고 저장할 수도 있습니다. 이렇게 하려면 <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTest> 및 <xref:Microsoft.VisualStudio.TestTools.WebTesting.DeclarativeWebTestSerializer> 클래스를 사용합니다.
 
 > [!TIP]
->  개체 브라우저를 사용하여 <xref:Microsoft.VisualStudio.TestTools.WebTesting> 네임스페이스를 검사합니다. Visual C# 및 Visual Basic 편집기는 모두 네임스페이스의 클래스를 사용하여 코딩하기 위한 IntelliSense 지원을 제공합니다.
+> 개체 브라우저를 사용하여 <xref:Microsoft.VisualStudio.TestTools.WebTesting> 네임스페이스를 검사합니다. Visual C# 및 Visual Basic 편집기는 모두 네임스페이스의 클래스를 사용하여 코딩하기 위한 IntelliSense 지원을 제공합니다.
+
 
  부하 테스트에 대한 플러그 인도 만들 수 있습니다. 자세한 내용은 [방법: 부하 테스트 API 사용](../test/how-to-use-the-load-test-api.md) 및 [방법: 부하 테스트 플러그 인 만들기](../test/how-to-create-a-load-test-plug-in.md)를 참조하세요.
 

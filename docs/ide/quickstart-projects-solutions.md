@@ -1,7 +1,7 @@
 ---
-title: Visual Studio의 프로젝트 및 솔루션 소개 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio의 프로젝트 및 솔루션 소개
 ms.date: 12/11/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: quickstart
 author: gewarren
@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 606b08608eea275a25a1a097ed75b7554a99f6a1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3904dfd4a8217a800fb1decf55386142096a2a9a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="quickstart-projects-and-solutions"></a>빠른 시작: 프로젝트 및 솔루션
 
@@ -39,7 +39,7 @@ ms.lasthandoff: 04/16/2018
 
    Visual Studio가 열리면 창의 화면 대부분을 차지하는 **시작 페이지**가 표시됩니다.
 
-1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 선택합니다.
+1. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 선택합니다.
 
    **새 프로젝트** 대화 상자가 열립니다.
 
@@ -53,13 +53,13 @@ ms.lasthandoff: 04/16/2018
 
 이제 첫 번째 프로젝트를 솔루션에 추가해 보겠습니다. 빈 프로젝트를 시작하고 프로젝트에 필요한 항목을 추가합니다.
 
-1. **솔루션 탐색기**의 **솔루션 'QuickSolution'** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트...** 를 선택합니다.
+1. **솔루션 탐색기**의 **솔루션 'QuickSolution'** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트**를 선택합니다.
 
    **새 프로젝트 추가** 대화 상자가 열립니다.
 
 1. 왼쪽 창에서 **Visual C#** 을 확장하고 **Windows 클래식 바탕 화면**을 선택합니다. 그런 다음 가운데 창에서 **빈 프로젝트(.NET Framework)** 를 선택합니다. 프로젝트 이름을 "QuickDate"로 지정한 다음 **확인** 단추를 선택합니다.
 
-   "QuickDate"라는 프로젝트는 **솔루션 탐색기**의 솔루션 아래에 나타납니다. 현재 **App.config**라는 단일 파일이 포함됩니다.
+   "QuickDate"라는 프로젝트는 **솔루션 탐색기**의 솔루션 아래에 나타납니다. 현재 *App.config*라는 단일 파일이 포함됩니다.
 
    > [!NOTE]
    > 대화 상자의 왼쪽 창에서 **Visual C#** 이 표시되지 않으면 **.NET 데스크톱 개발** 워크로드를 설치해야 합니다. 이를 수행하는 쉬운 방법은 대화 상자의 왼쪽 아래에 있는 **Visual Studio 설치 관리자 열기** 링크를 선택하는 것입니다. **Visual Studio 설치 관리자**가 실행된 후 **.NET 데스크톱 개발** 워크로드를 선택한 다음, **수정** 단추를 선택합니다.
@@ -70,15 +70,15 @@ ms.lasthandoff: 04/16/2018
 
 빈 프로젝트가 있으므로&mdash;코드 파일을 추가해 보겠습니다.
 
-1. **솔루션 탐색기**의 **QuickDate**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 항목...** 을 선택합니다.
+1. **솔루션 탐색기**의 **QuickDate**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 항목**을 선택합니다.
 
    **새 항목 추가** 대화 상자가 열립니다.
 
 1. **Visual C# 항목**을 확장하고 **코드**를 선택합니다. 가운데 창에서 **클래스**를 선택합니다. 클래스 이름을 "Calendar"로 지정한 다음 **추가** 단추를 선택합니다.
 
-   "Calendar.cs"라는 파일을 프로젝트에 추가합니다. 끝의 **.cs**는 C# 코드 파일에 지정된 파일 확장명입니다. **솔루션 탐색기**의 Visual 프로젝트 계층 구조에 파일이 표시되고 편집기에서 내용이 열립니다.
+   *Calendar.cs*라는 파일을 프로젝트에 추가합니다. 끝의 *.cs*는 C# 코드 파일에 지정된 파일 확장명입니다. **솔루션 탐색기**의 Visual 프로젝트 계층 구조에 파일이 표시되고 편집기에서 내용이 열립니다.
 
-1. **Calendar.cs** 파일의 내용을 다음 코드로 바꿉니다.
+1. *Calendar.cs* 파일의 내용을 다음 코드로 바꿉니다.
 
    ```csharp
    using System;
@@ -110,13 +110,13 @@ ms.lasthandoff: 04/16/2018
 
 솔루션에 단위 테스트 프로젝트를 추가해 보겠습니다. 이번에는 프로젝트에 추가 코드 파일을 추가하지 않아도 되도록 프로젝트 템플릿으로 시작하겠습니다.
 
-1. **솔루션 탐색기**의 **솔루션 'QuickSolution'** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트...** 를 선택합니다.
+1. **솔루션 탐색기**의 **솔루션 'QuickSolution'** 을 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **추가** > **새 프로젝트**를 선택합니다.
 
    **새 프로젝트 추가** 대화 상자가 열립니다.
 
 1. 왼쪽 창에서 **Visual Basic**을 확장하고 **테스트** 범주를 선택합니다. 가운데 창에서 **단위 테스트 프로젝트(.NET Framework)** 를 선택합니다. "QuickTest" 프로젝트 이름을 지정한 다음 **확인** 단추를 선택합니다.
 
-   두 번째 프로젝트가 **솔루션 탐색기**에 추가되고 **UnitTest1.vb**라는 파일이 편집기에서 열립니다. **.vb**는 Visual Basic 코드 파일에 지정된 파일 확장명입니다.
+   두 번째 프로젝트가 **솔루션 탐색기**에 추가되고 *UnitTest1.vb*라는 파일이 편집기에서 열립니다. *.vb*는 Visual Basic 코드 파일에 지정된 파일 확장명입니다.
 
    ![두 개의 프로젝트와 솔루션 탐색기](media/quickstart-projects-solution-explorer.png)
 
@@ -124,7 +124,7 @@ ms.lasthandoff: 04/16/2018
 
 해당 프로젝트에 대한 참조를 추가하기 위해 새 단위 테스트 프로젝트를 사용하여 **QuickDate** 프로젝트에서 이 메서드를 테스트하려고 합니다. 그러면 두 개의 프로젝트 간에 빌드 종속성을 만듭니다. 즉, 솔루션을 빌드할 때 **QuickTest** 전에 **QuickDate**가 빌드됩니다.
 
-1. **QuickTest** 프로젝트에서 **참조** 노드를 선택하고 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **참조 추가...** 를 선택합니다.
+1. **QuickTest** 프로젝트에서 **참조** 노드를 선택하고 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **참조 추가**를 선택합니다.
 
    ![참조 메뉴 추가](media/quickstart-projects-add-reference.png)
 
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="add-test-code"></a>테스트 코드 추가
 
-1. 이제 Visual Basic 코드 파일에 테스트 코드를 추가합니다. **UnitTest1.vb**의 내용을 다음 코드로 바꿉니다.
+1. 이제 Visual Basic 코드 파일에 테스트 코드를 추가합니다. *UnitTest1.vb*의 내용을 다음 코드로 바꿉니다.
 
    ```vb
    <TestClass()> Public Class UnitTest1
@@ -150,7 +150,7 @@ ms.lasthandoff: 04/16/2018
 
    일부 코드에서 빨간색 "물결선"이 표시됩니다. 테스트 프로젝트를 [friend 어셈블리](/dotnet/csharp/programming-guide/concepts/assemblies-gac/friend-assemblies)에서 **QuickDate** 프로젝트로 만들어서 이 오류를 수정합니다.
 
-1. **QuickDate** 프로젝트에서 **Calendar.cs** 파일이 아직 열려 있지 않으면 열어서, 다음 using 문 및 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 추가하여 테스트 프로젝트에서 오류를 해결합니다.
+1. **QuickDate** 프로젝트에서 *Calendar.cs* 파일이 아직 열려 있지 않으면 열어서, 다음 using 문 및 <xref:System.Runtime.CompilerServices.InternalsVisibleToAttribute> 특성을 추가하여 테스트 프로젝트에서 오류를 해결합니다.
 
    ```csharp
    using System.Runtime.CompilerServices;
@@ -168,7 +168,7 @@ ms.lasthandoff: 04/16/2018
 
 1. **솔루션 탐색기**에서 **QuickTest** 프로젝트를 선택합니다. 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴에서 **속성**을 선택하거나 **Alt**+**Enter** 키를 누릅니다.
 
-   프로젝트의 속성 페이지가 **응용 프로그램** 탭에서 열립니다. **QuickTest** 프로젝트의 어셈블리의 이름은 실제로 "QuickTest"입니다. 변경하려는 경우 여기에서 변경할 수 있습니다. 그런 다음 테스트 프로젝트를 빌드할 때 결과 실행 파일의 이름이 **QuickTest.exe**에서 선택한 이름으로 변경됩니다.
+   프로젝트의 속성 페이지가 **응용 프로그램** 탭에서 열립니다. **QuickTest** 프로젝트의 어셈블리의 이름은 실제로 "QuickTest"입니다. 변경하려는 경우 여기에서 변경할 수 있습니다. 그런 다음 테스트 프로젝트를 빌드할 때 결과 실행 파일의 이름이 *QuickTest.exe*에서 선택한 이름으로 변경됩니다.
 
    ![프로젝트 속성](media/quickstart-projects-properties.png)
 
@@ -178,7 +178,7 @@ ms.lasthandoff: 04/16/2018
 
 단위 테스트가 작동하는지 확인하려면 메뉴 모음에서 **테스트** > **실행** > **모든 테스트**를 선택합니다. **테스트 탐색기**라는 창이 열리면 **TestGetCurrentDate** 테스트에 통과했다고 표시됩니다.
 
-이 빠른 시작을 완료한 것을 축하 드립니다! 다음으로 Visual Studio에 대한 다른 빠른 시작 중 일부를 탐색하거나 [프로젝트 및 솔루션 만들기](../ide/creating-solutions-and-projects.md)에 대해 자세히 알아봅니다.
+이 빠른 시작을 완료한 것을 축하 드립니다! 다음으로 Visual Studio에 대한 다른 빠른 시작 중 일부를 탐색하거나 [프로젝트 및 솔루션을 만드는](../ide/creating-solutions-and-projects.md) 방법에 대해 자세히 알아봅니다.
 
 ## <a name="see-also"></a>참고 항목
 
@@ -186,6 +186,6 @@ ms.lasthandoff: 04/16/2018
 - [빠른 시작: Visual Studio IDE 및 편집기 개인 설정](../ide/quickstart-personalize-the-ide.md)
 - [빠른 시작: 편집기에서 코딩](../ide/quickstart-editor.md)
 - [프로젝트 및 솔루션 속성 관리](../ide/managing-project-and-solution-properties.md)
-- [프로젝트의 참조 관리](../ide/managing-references-in-a-project.md)
+- [프로젝트에서 참조 관리](../ide/managing-references-in-a-project.md)
 - [프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발](../ide/develop-code-in-visual-studio-without-projects-or-solutions.md)
 - [Visual Studio IDE 개요](../ide/visual-studio-ide.md)

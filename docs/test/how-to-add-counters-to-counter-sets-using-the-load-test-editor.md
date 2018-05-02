@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트에 대한 카운터 집합에 대한 카운터 추가 | Microsoft Docs
+title: Visual Studio에서 부하 테스트에 대한 카운터 집합에 대한 카운터 추가
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,19 +10,21 @@ ms.assetid: e17d0e71-f982-4fc1-a2df-a1065d37473d
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 153e7369397b961338b4c4c495cfd953f5271c0d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 871ba69d088e58ac1d662f254c72c406c79f86fd
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-counters-to-counter-sets-using-the-load-test-editor"></a>방법: 부하 테스트 편집기를 사용하여 카운터 집합에 카운터 추가
 
 **부하 테스트 마법사**를 사용하여 부하 테스트를 만들 때 초기 카운터 집합을 추가합니다. 이때 부하 테스트에 사용할 미리 정의된 카운터 집합이 제공됩니다. 자세한 내용은 [부하 테스트에서 컴퓨터에 대한 카운터 집합 및 임계값 규칙 지정](../test/specify-counter-sets-and-threshold-rules-for-load-testing.md)을 참조하세요.
 
 > [!NOTE]
->  부하 테스트가 원격 컴퓨터에 분산된 경우 컨트롤러 및 에이전트 카운터가 컨트롤러 및 에이전트 카운터 집합에 매핑됩니다. 부하 테스트에서 원격 컴퓨터를 사용하는 방법에 대한 자세한 내용은 [테스트 컨트롤러 및 테스트 에이전트](configure-test-agents-and-controllers-for-load-tests.md)를 참조하세요.
+> 부하 테스트가 원격 컴퓨터에 분산된 경우 컨트롤러 및 에이전트 카운터가 컨트롤러 및 에이전트 카운터 집합에 매핑됩니다. 부하 테스트에서 원격 컴퓨터를 사용하는 방법에 대한 자세한 내용은 [테스트 컨트롤러 및 테스트 에이전트](configure-test-agents-and-controllers-for-load-tests.md)를 참조하세요.
+
 
  **부하 테스트 편집기**에서 카운터를 관리합니다. 테스트에 이미 추가된 카운터 집합은 부하 테스트의 **카운터 집합** 노드에 표시됩니다. 부하 테스트를 만든 후 기존 카운터 집합에 새 카운터를 추가할 수 있습니다.
 

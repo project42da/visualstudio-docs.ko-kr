@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 UWP 앱용 Visual C++ DLL 테스트 방법 | Microsoft 문서
+title: Visual Studio에서 UWP 앱용 Visual C++ DLL 테스트 방법
 ms.date: 02/15/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 ms.author: mblome
@@ -8,11 +9,11 @@ manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: 56bd0acf242f0fac4ccb2d73063e8ee73d234a0c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 717786fea5d0ae355af5b8ea4993932a95d01196
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL 테스트 방법
 
@@ -236,7 +237,8 @@ ms.lasthandoff: 04/16/2018
      두 테스트가 모두 통과합니다.
 
 > [!TIP]
->  한 번에 하나씩 테스트를 추가하여 코드를 개발합니다. 각 반복 후 모든 테스트가 통과하는지 확인합니다.
+> 한 번에 하나씩 테스트를 추가하여 코드를 개발합니다. 각 반복 후 모든 테스트가 통과하는지 확인합니다.
+
 
 ##  <a name="Debug_a_failing_test"></a> 실패한 테스트 디버그
 

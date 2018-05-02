@@ -1,9 +1,8 @@
 ---
-title: Visual Studio에서 코드 구조 보기 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio에서 코드 구조 보기
 ms.date: 11/04/2016
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
 - vs.documentoutline.window
@@ -28,11 +27,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 52c924b56a1f33c0e1cbfef567442dd521db79e8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 44e0d6527227dfb638452337d1978bcbede29ef4
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="view-the-structure-of-code"></a>코드 구조 보기
 
@@ -221,4 +220,4 @@ XAML 페이지용 디자이너 또는 Windows Forms 디자이너와 같은 디�
 
 ## <a name="see-also"></a>참고 항목
 
-[클래스 뷰 및 개체 브라우저 아이콘](../ide/class-view-and-object-browser-icons.md)
+- [클래스 뷰 및 개체 브라우저 아이콘](../ide/class-view-and-object-browser-icons.md)

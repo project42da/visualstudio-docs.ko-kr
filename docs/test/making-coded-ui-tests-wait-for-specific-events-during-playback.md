@@ -1,6 +1,7 @@
 ---
-title: Visual Studio에서 코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정 | Microsoft 문서
+title: Visual Studio에서 코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 author: gewarren
@@ -8,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5c288958ba2864c9db962b050ad3139dbb4f7ccf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7503bc77f9cd857a0a551ff3862e2aa9824583ce
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="making-coded-ui-tests-wait-for-specific-events-during-playback"></a>코딩된 UI 테스트가 재생 중 특정 이벤트를 기다리도록 지정
 
@@ -23,7 +24,8 @@ ms.lasthandoff: 04/16/2018
  Visual Studio Enterprise
 
 > [!TIP]
->  또한 코딩된 UI 테스트 편집기를 사용해서 작업을 수행하기 전에 지연을 추가할 수도 있습니다. 자세한 내용은 [방법: 코딩된 UI 테스트 편집기를 사용하여 UI 작업 전에 지연 삽입](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)을 참조하세요.
+> 또한 코딩된 UI 테스트 편집기를 사용해서 작업을 수행하기 전에 지연을 추가할 수도 있습니다. 자세한 내용은 [방법: 코딩된 UI 테스트 편집기를 사용하여 UI 작업 전에 지연 삽입](http://msdn.microsoft.com/Library/509f8ef7-e105-4049-b11b-d64549e055b0)을 참조하세요.
+
 
  **UITestControl.WaitForControlXXX() 메서드**
 

@@ -1,7 +1,7 @@
 ---
-title: Visual Studio에서 테스트 컨트롤러 및 테스트 에이전트 문제 해결 | Microsoft Docs
+title: Visual Studio에서 테스트 컨트롤러 및 테스트 에이전트 문제 해결
 ms.date: 10/20/2016
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - load tests, test controllers
 - load tests, troubleshooting
@@ -11,12 +11,13 @@ ms.assetid: 77329348-3a5d-43de-b6cb-90f93296a081
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 3d785a559ff59a96861798a7c96bfdcb4147b7ec
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f218d571d8b747b5dfcfbe8c807d3a2779a99345
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="strategies-for-troubleshooting-test-controllers-and-test-agents-in-load-tests"></a>부하 테스트에서 테스트 컨트롤러 및 테스트 에이전트 문제를 해결하기 위한 전략
 
@@ -27,7 +28,8 @@ ms.lasthandoff: 04/16/2018
  부하 테스트를 실행할 때 테스트 에이전트 컴퓨터에 연결하여 성능 카운터를 수집하려고 하면 오류가 발생하는 경우가 있습니다. 성능 카운터 데이터를 원격 컴퓨터에 제공하는 서비스는 원격 레지스트리 서비스입니다. 일부 운영 체제에서는 원격 레지스트리 서비스가 자동으로 시작되지 않습니다. 이 문제를 해결하려면 원격 레지스트리 서비스를 수동으로 시작하십시오.
 
 > [!NOTE]
->  **제어판**에서 원격 레지스트리 서비스에 액세스할 수 있습니다. **관리 도구**를 선택한 다음, **서비스**를 선택합니다.
+> **제어판**에서 원격 레지스트리 서비스에 액세스할 수 있습니다. **관리 도구**를 선택한 다음, **서비스**를 선택합니다.
+
 
  성능 카운터를 읽는 데 필요한 권한이 부족하여 이 문제가 발생할 수도 있습니다. 테스트를 로컬에서 실행하는 경우 테스트를 실행하는 사용자의 계정이 Power Users 그룹 또는 보다 권한이 많은 그룹이나 Performance Monitor Users 그룹에 속해 있어야 합니다. 테스트를 원격에서 실행하는 경우 컨트롤러 실행 자격으로 구성된 계정이 Power Users 그룹 또는 보다 권한이 많은 그룹이나 Performance Monitor Users 그룹에 속해 있어야 합니다.
 
@@ -87,7 +89,8 @@ ms.lasthandoff: 04/16/2018
  네트워크 어댑터가 둘 이상인 컴퓨터에 테스트 컨트롤러를 설치하는 경우 이 오류가 발생할 수 있습니다.
 
 > [!NOTE]
->  테스트 에이전트가 정상적으로 설치된 후 테스트를 실행할 때 비로소 이 문제가 발생할 수도 있습니다.
+> 테스트 에이전트가 정상적으로 설치된 후 테스트를 실행할 때 비로소 이 문제가 발생할 수도 있습니다.
+
 
  이 오류를 해결하려면 테스트 컨트롤러를 네트워크 어댑터 중 하나에 바인딩해야 합니다. 테스트 컨트롤러의 `BindTo` 속성을 설정한 다음 이름 대신 IP 주소에 따라 테스트 컨트롤러를 참조하도록 테스트 에이전트를 변경해야 합니다. 다음 절차에서는 이러한 단계를 보여 줍니다.
 

@@ -1,6 +1,6 @@
 ---
-title: 프로젝트에 대한 환경 선택
-description: Visual Studio 솔루션 탐색기에서 항상 지정된 프로젝트에 사용하도록 특정 Python 인터프리터(환경)를 할당하여 기본 환경을 무시할 수 있습니다. 가상 환경을 만들고 관리할 수도 있습니다.
+title: 프로젝트에 대한 Python 인터프리터 및 환경 선택
+description: Visual Studio 프로젝트와 가상 환경 만들기에 대한 지침에 사용하도록 Python 환경을 할당하는 방법입니다.
 ms.date: 03/21/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,13 +11,13 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 72f07115aa323db15dd5680575871b8d4c4b20b4
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 85ac0ab5fe06db5af677290a99f914616e3ed064
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="selecting-a-python-interpreter-and-environment-for-use-in-a-project"></a>프로젝트에서 사용할 Python 인터프리터 및 환경 선택
+# <a name="how-to-assign-which-python-environment-is-used-for-a-project"></a>프로젝트에 사용되는 Python 환경을 할당하는 방법
 
 Python 프로젝트의 모든 코드는 특정 환경의 컨텍스트 내에서 실행됩니다. Visual Studio는 디버깅, 가져오기 및 멤버 완성, 구문 검사 및 환경이 필요한 기타 모든 작업에도 해당 환경을 사용합니다.
 

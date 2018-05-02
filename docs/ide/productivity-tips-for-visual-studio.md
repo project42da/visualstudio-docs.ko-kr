@@ -1,7 +1,7 @@
 ---
-title: Visual Studio 생산성 팁 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 생산성 팁
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 author: gewarren
@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e6b79f7d36358a875b45b7a705674060b05969cc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 34206b9c41802063cb1d29fd3bc5f8984a5581ca
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
 
@@ -21,7 +21,7 @@ ms.lasthandoff: 04/16/2018
 
 일반 바로 가기 키에 대한 자세한 내용은 [키보드 팁](../ide/tips-and-tricks-for-visual-studio.md)을 참조하세요. 전체 키보드 바로 가기 키 목록은 [바로 가기 키 식별 및 사용자 지정](../ide/identifying-and-customizing-keyboard-shortcuts-in-visual-studio.md) 및 [기본 바로 가기 키](../ide/default-keyboard-shortcuts-in-visual-studio.md)를 참조하세요.
 
-## <a name="writing-code"></a>코드 작성
+## <a name="write-code"></a>코드 작성
 
 다음 기능을 사용하여 더욱 신속하게 코드를 작성합니다.
 
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/16/2018
 
 - **샘플 응용 프로그램 사용** [Microsoft Developer Network](https://code.msdn.microsoft.com/)에서 응용 프로그램 예제를 다운로드 및 설치하여 응용 프로그램 개발 시간을 단축할 수 있습니다. 해당 영역의 샘플 팩을 다운로드 및 탐색하여 특정한 기술이나 프로그래밍 개념을 익힐 수도 있습니다.
 
-## <a name="navigating-within-your-code"></a>코드 내에서 탐색
+## <a name="navigate-within-your-code"></a>코드 내에서 탐색
 
  다양한 기술을 사용하여 코드에서 특정 위치를 신속하게 찾고 이동할 수 있습니다.
 
@@ -59,21 +59,21 @@ ms.lasthandoff: 04/16/2018
 
 - **코드의 전체 구조 찾아보기** **솔루션 탐색기**에서 프로젝트의 클래스와 해당 형식 및 멤버를 검색하고 찾아볼 수 있습니다. 기호를 검색하고 메서드의 호출 계층 구조를 확인하며 기호 참조를 찾아 다른 작업을 수행할 수도 있습니다. **솔루션 탐색기**에서 코드 요소를 선택할 경우 **미리 보기** 탭에 관련 파일이 열리고 커서가 파일의 요소로 이동합니다. 자세한 내용은 [코드 구조 보기](../ide/viewing-the-structure-of-code.md)를 참조하세요.
 
-## <a name="finding-items-faster"></a>작업 항목 더 빨리 찾기
+## <a name="find-items-faster"></a>항목 더 빨리 찾기
 
 현재 작업에 대한 관련 정보만 표시하도록 도구 창의 내용을 필터링하는 것 외에 IDE에서 명령, 파일 및 옵션을 검색할 수 있습니다.
 
 - **도구 창의 내용 필터링** **도구 상자**, **속성** 창 및 **솔루션 탐색기** 같은 여러 도구 창의 내용을 검색할 수 있지만 이름에 지정된 문자가 있는 항목만 표시할 수 있습니다.
 
-- **해결하려는 오류만 표시** **오류 목록** 도구 모음에서 **필터** 단추를 선택하면 **오류 목록** 창에 나타나는 오류 수를 줄일 수 있습니다. 편집기에서 열려 있는 파일의 오류만, 현재 파일의 오류만 또는 현재 프로젝트의 오류만 표시할 수 있습니다. 특정 오류를 찾기 위해 오류 목록 창 내에서 검색할 수도 있습니다.
+- **해결하려는 오류만 표시** **오류 목록** 도구 모음에서 **필터** 단추를 선택하면 **오류 목록** 창에 나타나는 오류 수를 줄일 수 있습니다. 편집기에서 열려 있는 파일의 오류만, 현재 파일의 오류만 또는 현재 프로젝트의 오류만 표시할 수 있습니다. 특정 오류를 찾기 위해 **오류 목록** 창 내에서 검색할 수도 있습니다.
 
 - **대화 상자, 메뉴 명령 및 옵션 찾기** [빠른 실행](../ide/reference/quick-launch-environment-options-dialog-box.md) 상자에 검색하려는 항목의 키워드나 문구를 입력합니다. 예를 들어 `new project`를 입력하면 다음 옵션이 나타납니다.
 
     !['새 프로젝트'의 빠른 실행 결과](../ide/media/productivity_quicklaunch.png "Productivity_QuickLaunch")
 
-    **빠른 실행**에는 **새 프로젝트** 대화 상자, **새 항목 추가** 대화 상자 및 **옵션** 대화 상자의 프로젝트 및 솔루션 페이지에 대한 링크가 표시됩니다. 빠른 실행 결과에 프로젝트 파일 및 도구 창이 포함될 수 있습니다.
+    **빠른 실행**에는 **새 프로젝트** 대화 상자, **새 항목 추가** 대화 상자 및 **옵션** 대화 상자의 **프로젝트 및 솔루션** 페이지에 대한 링크가 표시됩니다. 빠른 실행 결과에 프로젝트 파일 및 도구 창이 포함될 수 있습니다.
 
-## <a name="debugging-code"></a>코드 디버그
+## <a name="debug-code"></a>코드 디버그
 
 디버깅은 시간이 오래 걸릴 수 있지만 다음 팁을 참고하여 처리 시간을 줄일 수 있습니다.
 
@@ -97,7 +97,7 @@ ms.lasthandoff: 04/16/2018
 
      추가 명령에 대한 자세한 내용은 [Visual Studio 명령 별칭](../ide/reference/visual-studio-command-aliases.md)을 참조하세요.
 
-## <a name="accessing-visual-studio-tools"></a>Visual Studio Tools 액세스
+## <a name="access-visual-studio-tools"></a>Visual Studio 도구에 액세스
 
 개발자 명령 프롬프트 또는 다른 Visual Studio 도구를 시작 화면이나 작업 표시줄에 고정하여 더욱 신속하게 액세스할 수 있습니다.
 
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/16/2018
 
 1. **개발자 명령 프롬프트**를 마우스 오른쪽 단추로 클릭하거나 상황에 맞는 메뉴를 열고 **시작 화면에 고정** 또는 **작업 표시줄에 고정**을 선택합니다.
 
-## <a name="managing-files-toolbars-and-windows"></a>파일, 도구 모음 및 창 관리
+## <a name="manage-files-toolbars-and-windows"></a>파일, 도구 모음 및 창 관리
 
 응용 프로그램을 개발할 때 여러 코드 파일로 작업하면서 여러 도구 창 사이를 이동하는 경우가 있습니다. 다음 팁을 사용하여 구성을 유지할 수 있습니다.
 

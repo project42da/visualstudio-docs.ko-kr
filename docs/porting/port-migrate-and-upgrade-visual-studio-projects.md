@@ -1,8 +1,14 @@
 ---
-title: Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드
+title: 프로젝트 포팅, 마이그레이션 및 업그레이드
+description: 이전 버전의 Visual Studio에서 만든 프로젝트에 대한 Visual Studio 2017의 지원에 대한 참조 및 Visual Studio에서 프로젝트 마이그레이션이 필요한 경우를 결정하는 방법입니다.
 ms.date: 03/14/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
+author: kraigb
+ms.author: kraigb
+manager: douge
+ms.workload: multiple
 f1_keywords:
 - Win8ExpressDesktopBlock
 - w8trefactor
@@ -13,18 +19,13 @@ helpviewer_keywords:
 - conversion, projects
 - asset compatibility
 - projects, conversion
-author: kraigb
-ms.author: kraigb
-manager: douge
-ms.workload:
-- multiple
-ms.openlocfilehash: 82c92365d3e77631dd2cbbce4079ac982d80ef14
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 28b2f4df3cba1c0dd56cda6c8ba4e6c7f5cbe495
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="port-migrate-and-upgrade-visual-studio-projects"></a>Visual Studio 프로젝트 포팅, 마이그레이션, 업그레이드
+# <a name="project-migration-and-upgrade-reference-for-visual-studio-2017"></a>프로젝트 마이그레이션 및 Visual Studio 2017에 대한 업그레이드 참조
 
 새 버전의 Visual Studio에서는 일반적으로 이전 형식의 프로젝트, 파일 및 기타 자산을 대부분 지원합니다. 이러한 항목을 [이전처럼](../ide/solutions-and-projects-in-visual-studio.md) 사용할 수 있습니다. 최신 기능에 의존하지 않을 경우 Visual Studio에서는 일반적으로 Visual Studio 2015, Visual Studio 2013, Visual Studio 2012 등과 같은 이전 버전과의 호환성을 유지하려 합니다. 버전별로 특정한 기능은 [릴리스 정보](https://www.visualstudio.com/vs/release-notes/)를 참조하세요.
 

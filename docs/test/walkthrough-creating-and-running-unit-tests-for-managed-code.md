@@ -1,6 +1,7 @@
 ---
-title: '연습: Visual Studio에서 관리 코드에 대한 단위 테스트 만들기 및 실행 | Microsoft 문서'
+title: '연습: Visual Studio에서 관리 코드에 대한 단위 테스트 만들기 및 실행'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
 ms.topic: conceptual
 helpviewer_keywords:
@@ -14,11 +15,11 @@ manager: douge
 ms.workload:
 - dotnet
 author: gewarren
-ms.openlocfilehash: a34fded72a0d04f3920e0d7a76f9550993b520e7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7b60317f46fc8676d51618e5c79545e752008072
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="walkthrough-create-and-run-unit-tests-for-managed-code"></a>연습: 관리 코드에 대한 단위 테스트 만들기 및 실행
 
@@ -45,10 +46,12 @@ ms.lasthandoff: 04/16/2018
  [단위 테스트를 사용하여 코드 개선](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#BKMK_Use_unit_tests_to_improve_your_code)
 
 > [!NOTE]
->  이 연습에서는 관리 코드에 Microsoft 단위 테스트 프레임워크를 사용합니다. 테스트 탐색기에서는 테스트 탐색기용 어댑터가 포함된 타사 단위 테스트 프레임워크의 테스트도 실행할 수 있습니다. 자세한 내용은 [타사 단위 테스트 프레임워크 설치](../test/install-third-party-unit-test-frameworks.md)를 참조하세요.
+> 이 연습에서는 관리 코드에 Microsoft 단위 테스트 프레임워크를 사용합니다. 테스트 탐색기에서는 테스트 탐색기용 어댑터가 포함된 타사 단위 테스트 프레임워크의 테스트도 실행할 수 있습니다. 자세한 내용은 [타사 단위 테스트 프레임워크 설치](../test/install-third-party-unit-test-frameworks.md)를 참조하세요.
+
 
 > [!NOTE]
->  명령줄에서 테스트를 실행하는 방법에 대한 자세한 내용은 [연습: 명령줄 테스트 유틸리티 사용](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)을 참조하세요.
+> 명령줄에서 테스트를 실행하는 방법에 대한 자세한 내용은 [연습: 명령줄 테스트 유틸리티 사용](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867)을 참조하세요.
+
 
 ## <a name="prerequisites"></a>전제 조건
 
