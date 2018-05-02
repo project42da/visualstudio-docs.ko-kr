@@ -8,10 +8,10 @@
 #### [구독 관리](manage-vs-subscriptions.md)
 ### [소프트웨어 다운로드](subscriber-downloads.md)
 #### [사용 가능한 소프트웨어 다운로드 목록](software-download-list.md)
-### [제품 키 가져오기 및 관리](product-keys.md)
+### [제품 키 받기 및 관리](product-keys.md)
 ### Visual Studio Dev Essentials
 #### [Visual Studio Dev Essentials 가입](join-dev-essentials.md)
-#### [Visual Studio Dev Essentials 옵트아웃(opt out)](leave-vsde.md)
+#### [Visual Studio Dev Essentials 옵트아웃](leave-vsde.md)
 ### [구독자 혜택](subscriber-benefits.md)
 ## 구독자 혜택 사용
 ### 도구

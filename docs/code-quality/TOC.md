@@ -34,7 +34,7 @@
 #### [주석 적용 시기 및 위치 지정](specifying-when-and-where-an-annotation-applies.md)
 #### [내장 함수](intrinsic-functions.md)
 #### [모범 사례 및 예제(SAL)](best-practices-and-examples-sal.md)
-### [__analysis_assume을 사용하여 추가 코드 정보 지정](how-to-specify-additional-code-information-by-using-analysis-assume.md)
+### [_Analysis_assume을 사용하여 추가 코드 정보 지정](how-to-specify-additional-code-information-by-using-analysis-assume.md)
 ## [규칙 집합](using-rule-sets-to-group-code-analysis-rules.md)
 ### [관리 코드에 대한 규칙 집합](how-to-configure-code-analysis-for-a-managed-code-project.md)
 #### [ASP.NET 웹 응용 프로그램에 대한 코드 분석 구성](how-to-configure-code-analysis-for-an-aspnet-web-application.md)
