@@ -1,37 +1,20 @@
 ---
-title: "방법: 명령줄을 통해 .NET Framework 독립 실행형 응용 프로그램에 프로파일러를 연결하여 동시성 데이터 수집 | Microsoft Docs"
-ms.custom: 
+title: '방법: 명령줄을 통해 .NET Framework 독립 실행형 응용 프로그램에 프로파일러를 연결하여 동시성 데이터 수집 | Microsoft Docs'
+ms.custom: ''
 ms.date: 11/04/2016
-ms.reviewer: 
-ms.suite: 
-ms.technology:
-- vs-ide-debug
-ms.tgt_pltfrm: 
-ms.topic: article
+ms.technology: vs-ide-debug
+ms.topic: conceptual
 ms.assetid: fdd41576-797e-4312-8520-fee7bb767e4a
-caps.latest.revision: 29
 author: mikejo5000
 ms.author: mikejo
-manager: ghogen
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-translationtype: Human Translation
-ms.sourcegitcommit: 5db97d19b1b823388a465bba15d057b30ff0b3ce
-ms.openlocfilehash: e868a344d9b5c068f845b2005a85aaca2607140c
-ms.lasthandoff: 02/22/2017
-
+manager: douge
+ms.workload:
+- dotnet
+ms.openlocfilehash: 710c0a8bbfacc0e1edca3a1852cd8b51218a5ce3
+ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.translationtype: HT
+ms.contentlocale: ko-KR
+ms.lasthandoff: 04/19/2018
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-to-collect-concurrency-data-by-using-the-command-line"></a>방법: 명령줄을 통해 .NET Framework 독립 실행형 응용 프로그램에 프로파일러를 연결하여 동시성 데이터 수집
 이 항목은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 프로파일러를 실행 중인 .NET Framework 독립 실행형(클라이언트) 응용 프로그램에 연결하고 프로세스 및 스레드 동시성 데이터를 수집하는 방법을 설명합니다.  
@@ -47,7 +30,7 @@ ms.lasthandoff: 02/22/2017
   
 1.  명령 프롬프트 창을 엽니다.  
   
-2.  프로파일러를 시작합니다. 형식:  
+2.  프로파일러를 시작합니다. 유형:  
   
      [VSPerfCmd](../profiling/vsperfcmd.md) **/start:concurrency  /output:** `OutputFile` [`Options`]  
   
@@ -71,9 +54,9 @@ ms.lasthandoff: 02/22/2017
   
     -   [/lineoff](../profiling/lineoff.md)는 줄 번호 데이터의 컬렉션을 사용하지 않도록 설정합니다.  
   
-    -   [/targetclr](../profiling/targetclr.md) **:** `Version`은 한 응용 프로그램에 두 개 이상의 런타임 버전이 로드된 경우 프로파일링할 CLR(공용 언어 런타임) 버전을 지정합니다. 선택적 요소.  
+    -   [/targetclr](../profiling/targetclr.md) **:** `Version`은 한 응용 프로그램에 두 개 이상의 런타임 버전이 로드된 경우 프로파일링할 CLR(공용 언어 런타임) 버전을 지정합니다. 선택 사항입니다.  
   
-## <a name="controlling-data-collection"></a>데이터 수집 제어  
+## <a name="controlling-data-collection"></a>데이터 컬렉션 제어  
  대상 응용 프로그램이 실행 중이면 VSPerfCmd.exe 옵션을 사용하여 파일에 대한 데이터 쓰기를 시작하고 중지하는 방식으로 데이터 수집을 제어할 수 있습니다. 데이터 수집을 제어하면 응용 프로그램의 시작 또는 종료와 같이 프로그램 실행의 특정 부분에 대한 데이터를 수집할 수 있습니다.  
   
 #### <a name="to-start-and-stop-data-collection"></a>데이터 수집을 시작 및 중지하려면  
