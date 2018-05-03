@@ -12,11 +12,11 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 7f3755e1bd397cf2eb06254c1913e1243dfce978
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: abac68ff371040a7f121a885065c8c3eaf9af8ff
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="template-parameters"></a>템플릿 매개 변수
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="to-enable-parameter-substitution-in-templates"></a>템플릿에서 매개 변수 대체를 사용하려면
 
-1. 템플릿의 .vstemplate 파일에서 매개 변수 대체를 활성화하려는 항목에 해당하는 `ProjectItem` 요소를 찾습니다.
+1. 템플릿의 *.vstemplate* 파일에서 매개 변수 대체를 활성화하려는 항목에 해당하는 `ProjectItem` 요소를 찾습니다.
 
 1. `ReplaceParameters` 요소의 `ProjectItem` 특성을 `true`로 설정합니다.
 
@@ -73,7 +73,7 @@ ms.lasthandoff: 04/26/2018
 
 매개 변수를 대체하는 동안 사용되는 예약된 기본 템플릿 매개 변수 외에 템플릿 매개 변수와 값을 직접 지정할 수 있습니다. 자세한 내용은 [CustomParameters 요소(Visual Studio 템플릿)](../extensibility/customparameters-element-visual-studio-templates.md)를 참조하세요.
 
-## <a name="example-using-the-project-name-for-a-file-name"></a>예: 파일 이름에 프로젝트 이름 사용
+## <a name="example-use-the-project-name-for-a-file-name"></a>예: 파일 이름에 프로젝트 이름 사용
 
 `TargetFileName` 특성에 매개 변수를 사용하여 프로젝트 항목에 대한 변수 파일 이름을 지정할 수 있습니다.
 
@@ -90,7 +90,7 @@ ms.lasthandoff: 04/26/2018
 </TemplateContent>
 ```
 
-## <a name="example-using-the-safe-project-name-for-the-namespace-name"></a>예: 네임스페이스 이름에 안전한 프로젝트 이름 사용
+## <a name="example-use-the-safe-project-name-for-the-namespace-name"></a>예: 네임스페이스 이름에 안전한 프로젝트 이름 사용
 
 C# 클래스 파일에서 네임스페이스에 프로젝트 이름을 사용하려면 다음 구문을 사용합니다.
 
@@ -105,7 +105,7 @@ namespace $safeprojectname$
 }
 ```
 
-프로젝트 템플릿의 .vstemplate 파일에서 이 파일을 참조할 때 `ReplaceParameters="true"` 특성을 포함합니다.
+프로젝트 템플릿의 *.vstemplate* 파일에서 이 파일을 참조할 때 `ReplaceParameters="true"` 특성을 포함합니다.
 
 ```xml
 <TemplateContent>

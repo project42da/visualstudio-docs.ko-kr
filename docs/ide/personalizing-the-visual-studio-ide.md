@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 609c1656fbea78bf23480f35e9f70802d5cb1098
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fd4f00313cbbb7f082934bddff338f77f117fd5c
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="personalize-the-visual-studio-ide"></a>Visual Studio IDE 개인 설정
 
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/26/2018
 
 주 메뉴 대/소문자 구분을 **단어의 첫 글자를 대문자로**("File")와 **모두 대문자로**(예: "FILE") 사이에서 변경할 수 있습니다. **빠른 실행**에 `environment`를 입력하고 **환경 > 일반**을 선택한 다음 **메뉴 모음에 제목 대/소문자 스타일 적용** 옵션을 변경합니다.
 
-### <a name="customze-menus-and-toolbars"></a>메뉴 및 도구 모음 사용자 지정
+### <a name="customize-menus-and-toolbars"></a>메뉴 및 도구 모음 사용자 지정
 
 메뉴 또는 도구 모음 항목을 추가하거나 제거하려면 [방법: 메뉴 및 도구 모음 사용자 지정](../ide/how-to-customize-menus-and-toolbars-in-visual-studio.md)을 참조하세요.
 

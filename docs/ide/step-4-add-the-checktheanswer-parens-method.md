@@ -11,29 +11,29 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d5fa5cdbd526eaa5ab84baf903f352697f9e01a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ff11913b854ede1c20c0670b89c4ea2f50fd326e
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="step-4-add-the-checktheanswer-method"></a>4단계: CheckTheAnswer() 메서드 추가
 이 자습서의 4단계에서는 수학 문제의 답이 맞는지 여부를 확인하는 `CheckTheAnswer()` 메서드를 작성합니다. 이 항목은 기본 코딩 개념에 대해 설명하는 자습서 시리즈의 일부입니다. 자습서에 대한 개요는 [자습서 2: 시간이 지정된 수학 퀴즈 만들기](../ide/tutorial-2-create-a-timed-math-quiz.md)를 참조하세요.  
-
+  
 > [!NOTE]
 >  이 메서드는 값을 반환하기 때문에 Visual Basic 사용자는 일반적인 `Function` 키워드 대신 `Sub` 키워드를 사용합니다. 논리는 간단합니다. sub는 값을 반환하지 않고 function은 값을 반환합니다.  
 
-### <a name="to-verify-whether-the-answers-are-correct"></a>답이 맞는지 여부를 확인하려면  
+## <a name="to-verify-whether-the-answers-are-correct"></a>답이 맞는지 여부를 확인하려면  
 
 1.  `CheckTheAnswer()` 메서드를 추가합니다.  
-
-     이 메서드를 호출하면 addend1과 addend2의 값을 더하고 그 결과를 sum `NumericUpDown` 컨트롤의 값과 비교합니다. 두 값이 서로 같으면 이 메서드는 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다. 이 코드는 다음과 같습니다.  
-
+  
+     이 메서드를 호출하면 addend1과 addend2의 값을 더하고 그 결과를 sum <xref:System.Windows.Forms.NumericUpDown> 컨트롤의 값과 비교합니다. 두 값이 서로 같으면 이 메서드는 `true`를 반환하고 그렇지 않으면 `false`를 반환합니다. 이 코드는 다음과 같습니다.  
+  
      [!code-vb[VbExpressTutorial3Step4#8](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_1.vb)]
      [!code-csharp[VbExpressTutorial3Step4#8](../ide/codesnippet/CSharp/step-4-add-the-checktheanswer-parens-method_1.cs)]  
-
-     다음으로 새 `CheckTheAnswer()` 메서드를 호출하도록 타이머의 Tick 이벤트 처리기에 대한 메서드에서 코드를 업데이트합니다.  
-
+  
+     다음으로 새 `CheckTheAnswer()` 메서드를 호출하도록 타이머의 <xref:System.Windows.Forms.Timer.Tick> 이벤트 처리기에 대한 메서드에서 코드를 업데이트합니다.  
+  
 2.  `if else` 문에 다음 코드를 추가합니다.  
 
      [!code-vb[VbExpressTutorial3Step4#10](../ide/codesnippet/VisualBasic/step-4-add-the-checktheanswer-parens-method_2.vb)]
@@ -48,8 +48,8 @@ ms.lasthandoff: 04/26/2018
 
      올바른 답을 입력하면 메시지 상자가 열리고 **시작** 단추를 사용할 수 있게 되며 타이머가 중지됩니다.  
 
-### <a name="to-continue-or-review"></a>계속하거나 검토하려면  
-
+## <a name="to-continue-or-review"></a>계속하거나 검토하려면  
+  
 -   다음 자습서 단계로 이동하려면 [5단계: NumericUpDown 컨트롤에 대한 Enter 이벤트 처리기 추가](../ide/step-5-add-enter-event-handlers-for-the-numericupdown-controls.md)를 참조하세요.  
-
+  
 -   이전 자습서 단계로 돌아가려면 [3단계: 카운트다운 타이머 추가](../ide/step-3-add-a-countdown-timer.md)를 참조하세요.

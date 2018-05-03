@@ -14,13 +14,13 @@ dev_langs:
 ms.workload:
 - aspnet
 - dotnetcore
-ms.openlocfilehash: 80ca583b3cd773121cda7b0311fcf551472cb2d4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a896047ad8141bc7edf797066df9d309bf7eb72c
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
-# <a name="getting-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio에서 C# 및 ASP.NET 시작
+# <a name="get-started-with-c-and-aspnet-in-visual-studio"></a>Visual Studio에서 C# 및 ASP.NET 시작
 Visual Studio를 사용하여 ASP.NET Core로 C#을 개발하기 위한 이 자습서에서는 C# ASP.NET Core 웹앱을 만들고, 해당 앱에 코드를 추가하며, IDE의 일부 기능을 살펴보고 앱을 실행합니다. 
 
 아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
@@ -42,7 +42,7 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
 
 1. Visual Studio 2017을 엽니다.
 
-2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트...** 를 차례로 선택합니다.
+2. 메뉴 모음에서 **파일** > **새로 만들기** > **프로젝트**를 차례로 선택합니다.
 
 3. 왼쪽 창의 **새 프로젝트** 대화 상자에서 **Visual C#**, **Web**을 차례로 확장한 후 **.NET Core**를 선택합니다. 가운데 창에서 **ASP.NET Core 웹 응용 프로그램**을 선택하고 파일 이름을 *MyCoreApp*으로 정한 다음 **확인**을 선택합니다.   
 
@@ -61,7 +61,7 @@ Visual Studio는 개발자를 위한 통합 개발 생산성 도구입니다. �
    ![Visual Studio Installer에서 .NET Core 플랫폼 간 개발 워크로드](../ide/media/asp-dot-net-web-dev-workload.png)
 
 ##### <a name="option-2-use-the-tools-menu-bar"></a>옵션 2: 도구 메뉴 모음 사용
-1. **새 프로젝트** 대화 상자를 취소하고 나가 상단 메뉴 모음에서 **도구** > **도구 및 기능 가져오기...** 를 선택합니다.
+1. **새 프로젝트** 대화 상자를 취소하고 나가 상단 메뉴 모음에서 **도구** > **도구 및 기능 가져오기**를 선택합니다.
 
 2. Visual Studio 설치 관리자가 시작됩니다. **ASP.NET 및 웹 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.   
 
@@ -86,15 +86,15 @@ MVC 패턴을 통해 기존 모놀리식 응용 프로그램보다 테스트 및
 
     ![Visual Studio의 ASP.NET 솔루션 탐색기](../ide/media/csharp-aspnet-solution-explorer-mycoreapp.png)
 
-1. **컨트롤러** 폴더에서 **HomeController.cs** 파일을 엽니다.
+1. **컨트롤러** 폴더에서 *HomeController.cs* 파일을 엽니다.
 
       ![Visual Studio 솔루션 탐색기의 HomeController.cs 파일](../ide/media/csharp-aspnet-solution-explorer-home-controller.png)
 
-2. **HomeController.cs** 보기
+2. *HomeController.cs* 보기
 
   ![Visual Studio 코드 창의 HomeController.cs](../ide/media/csharp-aspnet-home-controller-code.png)
 
-4. 이 프로젝트에는 각 컨트롤러에 매핑되는 다른 폴더를 포함하는 **Views** 폴더도 있습니다(**Shared** 뷰에 대한 폴더 1개 포함). 예를 들어 **/Home/About** 경로에 대한 뷰 CSHTML 파일(HTML 확장)은 **Views/Home/About.cshtml**에 있습니다. 해당 파일을 엽니다.
+4. 이 프로젝트에는 각 컨트롤러에 매핑되는 다른 폴더를 포함하는 **Views** 폴더도 있습니다(**Shared** 뷰에 대한 폴더 1개 포함). 예를 들어 */Home/About* 경로에 대한 뷰 CSHTML 파일(HTML 확장)은 *Views/Home/About.cshtml*에 있습니다. 해당 파일을 엽니다.
 
   ![Visual Studio 솔루션 탐색기의 About.cshtml 파일](../ide/media/csharp-aspnet-solution-explorer-view-about.png)
 
@@ -105,11 +105,11 @@ MVC 패턴을 통해 기존 모놀리식 응용 프로그램보다 테스트 및
  >[!NOTE]
  > 이에 대한 자세한 내용은 [Razor 구문을 사용하여 C# 및 ASP.NET 시작](/aspnet/web-pages/overview/getting-started/introducing-razor-syntax-c) 페이지를 참조하세요.
 
-6. 솔루션에는 웹 사이트의 루트인 **wwwroot** 폴더도 포함됩니다. CSS, 이미지 및 JavaScript 라이브러리 같은 정적 사이트 콘텐츠를 사이트 배포 시점에 놓으려는 경로에 직접 배치할 수 있습니다.
+6. 솔루션에는 웹 사이트의 루트인 *wwwroot* 폴더도 포함됩니다. CSS, 이미지 및 JavaScript 라이브러리 같은 정적 사이트 콘텐츠를 사이트 배포 시점에 놓으려는 경로에 직접 배치할 수 있습니다.
 
  ![Visual Studio 솔루션 탐색기의 wwwroot 폴더](../ide/media/csharp-aspnet-solution-wwwroot.png)
 
-7. 런타임 시 프로젝트, 그 패키지 및 응용 프로그램의 관리를 지원하는 다양한 구성 파일도 있습니다. 예를 들어 기본 응용 프로그램 [구성](/aspnet/core/fundamentals/configuration)은 **appsettings.json**에 저장됩니다. 그러나 **Development** 환경에 대해 **appsettings.Development.json** 파일을 제공하는 등의 방식으로 환경을 기준으로 이 설정의 일부/전체를 재정의할 수 있습니다.
+7. 런타임 시 프로젝트, 그 패키지 및 응용 프로그램의 관리를 지원하는 다양한 구성 파일도 있습니다. 예를 들어 기본 응용 프로그램 [구성](/aspnet/core/fundamentals/configuration)은 *appsettings.json*에 저장됩니다. 그러나 **Development** 환경에 대해 *appsettings.Development.json* 파일을 제공하는 등의 방식으로 환경을 기준으로 이 설정의 일부/전체를 재정의할 수 있습니다.
 
  ![Visual Studio 솔루션 탐색기의 구성 파일](../ide/media/csharp-aspnet-solution-explorer-config-files.png)
 
@@ -126,21 +126,21 @@ MVC 패턴을 통해 기존 모놀리식 응용 프로그램보다 테스트 및
 
  ![앱의 브라우저 창에서 About 선택](../ide/media/csharp-aspnet-browser-page.png)
 
- 무엇보다 브라우저의 About 페이지는 HomeController.cs 파일에서 설정된 텍스트를 렌더링합니다.
+ 무엇보다 브라우저의 **About** 페이지는 *HomeController.cs* 파일에서 설정된 텍스트를 렌더링합니다.
 
    ![About 페이지에서 텍스트 보기](../ide/media/csharp-aspnet-browser-page-about.png)
 
-1. 브라우저 창을 열어둔 상태에서 Visual Studio로 돌아갑니다. 아직 열려 있지 않으면 **Controllers/HomeController.cs**를 엽니다.
+1. 브라우저 창을 열어둔 상태에서 Visual Studio로 돌아갑니다. 아직 열려 있지 않으면 *Controllers/HomeController.cs*를 엽니다.
 
  ![Visual Studio 솔루션 탐색기에서 HomeController.cs 파일 열기](../ide/media/csharp-aspnet-solution-explorer-home-controller.png)
 
 1. **About** 메서드의 첫 줄에 중단점을 설정합니다. 이를 위해 여백을 클릭하거나 줄에 커서를 두고 **F9**를 누릅니다.
 
-  이 줄은 **Views/Home/About.cshtml**의 CSHTML 페이지에서 렌더링되는 **ViewData** 컬렉션에 일부 데이터를 설정합니다.
+  이 줄은 *Views/Home/About.cshtml*의 CSHTML 페이지에서 렌더링되는 **ViewData** 컬렉션에 일부 데이터를 설정합니다.
 
  ![About.cshtml에서 About 메서드의 첫 줄에 중단점을 설정합니다.  ](../ide/media/csharp-aspnet-home-controller-code-set-breakpoint.png)
 
-1. 브라우저로 돌아가 About 페이지를 새로 고칩니다. 이렇게 하면 Visual Studio에서 중단점이 트리거됩니다.
+1. 브라우저로 돌아가 **About** 페이지를 새로 고칩니다. 이렇게 하면 Visual Studio에서 중단점이 트리거됩니다.
 
 1. Visual Studio에서 **ViewData** 멤버 위에 마우스를 가져가 데이터를 확인합니다.
 
@@ -148,7 +148,7 @@ MVC 패턴을 통해 기존 모놀리식 응용 프로그램보다 테스트 및
 
 1. 중단점을 추가하는 데 사용한 것과 같은 방법으로 응용 프로그램 중단점을 제거합니다.
 
-1. **Views/Home/About.cshtml**을 엽니다.
+1. *Views/Home/About.cshtml*을 엽니다.
 
  ![솔루션 탐색기에서 About.cshtml 선택](../ide/media/csharp-aspnet-solution-explorer-view-about.png)
 
