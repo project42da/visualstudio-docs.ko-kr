@@ -9,6 +9,7 @@
 ## [Visual Studio를 사용하여 디버깅하는 자세한 내용](getting-started-with-the-debugger.md)
 ## [디버거에서 Python 코드 실행...](../python/tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
 ## [라이브 Azure 앱 디버그](debug-live-azure-applications.md)
+## [관리 및 네이티브 코드 디버그](how-to-debug-managed-and-native-code.md)
 ## [IntelliTrace step-back을 사용하여 스냅숏 보기](how-to-use-intellitrace-step-back.md)
 # 방법 가이드
 ## [디버거로 코드 탐색](navigating-through-code-with-the-debugger.md)
