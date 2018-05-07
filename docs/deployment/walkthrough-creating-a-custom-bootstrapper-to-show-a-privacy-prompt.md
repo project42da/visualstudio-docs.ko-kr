@@ -1,5 +1,5 @@
 ---
-title: '연습: 개인정보 취급 방침 프롬프트 표시 하도록 사용자 지정 부트스트래퍼를 만들어 | Microsoft Docs'
+title: '연습: 개인 정보 보호 표시할 메시지를 사용자 지정 부트스트래퍼를 만드는 | Microsoft Docs'
 ms.custom: ''
 ms.date: 11/04/2016
 ms.technology: vs-ide-deployment
@@ -21,13 +21,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bfc6b6e5b5a3c72a47f479f9b54fd5f4ba0d09c5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 73694df5b6e9e5d4c8b4ad40f16cf60998e9fc82
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt"></a>연습: 사용자 지정 부트스트래퍼를 만들어 개인 정보 취급 방침 프롬프트 표시
+# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>연습: 개인 정보 보호 표시할 메시지를 사용자 지정 부트스트래퍼 만들기
 최신 파일 버전 및 어셈블리 버전으로 어셈블리를 사용할 수 있을 때 자동으로 업데이트 하도록 ClickOnce 응용 프로그램을 구성할 수 있습니다. 을 고객에 게가이 동작에 동의 확인 하기 위해 개인 정보 프롬프트를 표시할 수 있습니다. 그런 다음는 응용 프로그램을 자동으로 업데이트할 수 있는 권한을 부여할지 여부를 선택할 수 있습니다. 응용 프로그램에 자동으로 업데이트 하도록 허용 되지 않습니다 설치 하지 않습니다.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/19/2018
   
 -   Visual Studio 2010  
   
-## <a name="creating-an-update-consent-dialog-box"></a>업데이트 승인 대화 상자 만들기  
+## <a name="create-an-update-consent-dialog-box"></a>업데이트 승인 대화 상자 만들기  
  개인 정보 보호 프롬프트를 표시 하려면 응용 프로그램에 대해 자동 업데이트에 동의 하는지에 게 요청 하는 응용 프로그램을 만듭니다.  
   
 #### <a name="to-create-a-consent-dialog-box"></a>동의 대화 상자를 만들려면  
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/19/2018
   
 26. 에 **빌드** 메뉴를 클릭 하 여 **솔루션 빌드**합니다.  
   
-## <a name="creating-the-custom-bootstrapper-package"></a>사용자 지정 부트스트래퍼 패키지 만들기  
+## <a name="create-the-custom-bootstrapper-package"></a>사용자 지정 부트스트래퍼 패키지 만들기  
  최종 사용자에 게 개인 정보 보호 프롬프트를 표시 하려면 업데이트 동의 대화 상자가 응용 프로그램에 대 한 사용자 지정 부트스트래퍼 패키지를 만들고 모든 ClickOnce 응용 프로그램에 필수 구성 요소로 포함 합니다.  
   
  이 절차에는 다음 문서를 만들어 사용자 지정 부트스트래퍼 패키지를 만드는 방법을 보여 줍니다.  
@@ -228,7 +228,7 @@ ms.lasthandoff: 04/19/2018
   
 6.  필요한 경우 각 로캘에 대 한 소프트웨어 사용 조건에 대 한 새 매니페스트 package.xml 파일 및 새 eula.rtf 문서를 만듭니다. 예를 들어 fr 및 de 로캘에 대 한 하위 디렉터리를 만든 경우 package.xml 별도 매니페스트 파일을 만들고 소프트웨어 사용 조건 및 fr 및 de 하위 디렉터리에 저장 합니다.  
   
-## <a name="setting-the-update-consent-application-as-a-prerequisite"></a>필수 구성 요소로 업데이트 동의 응용 프로그램 설정  
+## <a name="set-the-update-consent-application-as-a-prerequisite"></a>필수 구성 요소로 업데이트 동의 응용 프로그램 설정  
  Visual Studio에서 필수 구성 요소로 업데이트 동의 응용 프로그램을 설정할 수 있습니다.  
   
 #### <a name="to-set-the-update-consent-application-as-a-prerequisite"></a>필수 구성 요소로 업데이트 동의 응용 프로그램을 설정 하려면  
@@ -246,7 +246,7 @@ ms.lasthandoff: 04/19/2018
   
 5.  **확인**을 클릭합니다.  
   
-## <a name="creating-and-testing-the-setup-program"></a>만들기 및 설치 프로그램을 테스트  
+## <a name="create-and-test-the-setup-program"></a>만들기 및 설치 프로그램을 테스트  
  필수 구성 요소 업데이트 동의 응용 프로그램을 설정한 후 응용 프로그램에 대 한 설치 관리자와 부트스트래퍼를 생성할 수 있습니다.  
   
 #### <a name="to-create-and-test-the-setup-program-by-not-clicking-i-agree"></a>동의 만들고 클릭 하지 않는 경우 설치 프로그램을 테스트 하려면  

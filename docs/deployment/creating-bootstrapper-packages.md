@@ -1,7 +1,7 @@
 ---
-title: 부트스트래퍼 패키지 만들기 | Microsoft Docs
+title: 부트스트래퍼 패키지 만들기
 ms.custom: ''
-ms.date: 11/04/2016
+ms.date: 05/02/2018
 ms.technology: vs-ide-deployment
 ms.topic: conceptual
 dev_langs:
@@ -22,81 +22,64 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 794d569504e46627c9387046b381fdb843a7818e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 29faeafb56c5c077602a3dbcba5ecbb6bb2ab118
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/04/2018
 ---
-# <a name="creating-bootstrapper-packages"></a>부트스트래퍼 패키지 만들기
-설치 프로그램은 일반 설치 관리자로서 Windows Installer(.msi) 파일 및 실행 프로그램과 같은 재배포 가능 구성 요소를 검색 및 설치하도록 구성할 수 있습니다. 설치 관리자를 부트스트래퍼라고도 합니다. 구성 요소 설치를 관리하는 메타데이터를 지정하는 XML 매니페스트 집합을 통해 설치 프로그램을 프로그래밍합니다.  
+# <a name="create-bootstrapper-packages"></a>부트스트래퍼 패키지 만들기
+설치 프로그램은 일반 설치 관리자로서 Windows Installer(.msi) 파일 및 실행 프로그램과 같은 재배포 가능 구성 요소를 검색 및 설치하도록 구성할 수 있습니다. 설치 관리자를 부트스트래퍼라고도 합니다. 구성 요소 설치를 관리하는 메타데이터를 지정하는 XML 매니페스트 집합을 통해 설치 프로그램을 프로그래밍합니다.  각 재배포 가능 구성 요소 또는 필수 구성 요소는 부트스트래퍼 패키지입니다. 부트스트래퍼 패키지는 필수 구성 요소를 설치해야 하는 방법을 설명하는 매니페스트 파일이 포함된 파일과 디렉터리 그룹입니다. 
   
- 부트스트래퍼는 먼저 필수 구성 요소가 이미 설치되었는지를 검색합니다. 필수 구성 요소가 설치되지 않은 경우 부트스트래퍼는 먼저 사용권 계약을 표시합니다. 그런 다음 최종 사용자가 사용권 계약에 동의하면 필수 구성 요소 설치가 시작됩니다. 그렇지 않고 모든 필수 구성 요소가 검색되면 부트스트래퍼는 응용 프로그램 설치 관리자만 시작합니다.  
+부트스트래퍼는 먼저 필수 구성 요소가 이미 설치되었는지를 검색합니다. 필수 구성 요소가 설치되지 않은 경우 부트스트래퍼는 먼저 사용권 계약을 표시합니다. 그런 다음 최종 사용자가 사용권 계약에 동의하면 필수 구성 요소 설치가 시작됩니다. 그렇지 않고 모든 필수 구성 요소가 검색되면 부트스트래퍼는 응용 프로그램 설치 관리자만 시작합니다.  
   
-## <a name="creating-custom-packages"></a>사용자 지정 패키지 만들기  
- Visual Studio에서 XML 편집기를 사용하여 매니페스트를 생성할 수 있습니다. 자세한 내용은 [How to: Create a Package Manifest](../deployment/how-to-create-a-package-manifest.md) 및 [How to: Create a Product Manifest](../deployment/how-to-create-a-product-manifest.md)를 참조하세요. 부트스트래퍼 패키지를 만드는 예제를 확인하려면 [연습: 사용자 지정 부트스트래퍼를 만들어 개인 정보 취급 방침 프롬프트 표시](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)를 참조하세요.  
+## <a name="create-custom-bootstrapper-packages"></a>사용자 지정 부트스트래퍼 패키지 만들기  
+Visual Studio에서 XML 편집기를 사용 하 여 부트스트래퍼 매니페스트를 생성할 수 있습니다. 부트스트래퍼 패키지를 만드는 예를 보려면 [연습: 개인 정보 보호 표시할 메시지를 사용자 지정 부트스트래퍼를 만드는](../deployment/walkthrough-creating-a-custom-bootstrapper-to-show-a-privacy-prompt.md)합니다.  
   
- 부트스트래퍼 패키지를 만들려면 EXE 또는 MSI 파일 형식의 재배포 가능 파일을 부트스트래퍼 매니페스트 생성기에 제공해야 합니다. 그러면 부트스트래퍼 매니페스트 생성기에서 다음 파일을 만듭니다.  
+부트스트래퍼 패키지를 만들려면 제품 매니페스트를 만드는 있고, 각 지역화 된 버전의 패키지 매니페스트도 구성 합니다.
   
--   언어와 무관한 패키지용 메타데이터가 포함된 제품 매니페스트 product.xml. 여기에는 재배포 가능 구성 요소의 지역화된 모든 버전에 공통적으로 적용되는 메타데이터가 포함됩니다.  
+* 제품 매니페스트 *product.xml*, 패키지에 대 한 언어 중립적인 메타 데이터를 포함 합니다. 여기에는 재배포 가능 구성 요소의 지역화된 모든 버전에 공통적으로 적용되는 메타데이터가 포함됩니다.  이 파일을 만들려면 참조 [하는 방법: 제품 매니페스트 만들기](../deployment/how-to-create-a-product-manifest.md)합니다.
   
--   언어별 메타데이터가 포함된 패키지 매니페스트 package.xml. 일반적으로 지역화된 오류 메시지가 포함됩니다. 구성 요소에는 해당 구성 요소의 각 지역화된 버전에 대한 패키지 매니페스트가 하나 이상 있어야 합니다.  
+* 패키지 매니페스트를 *package.xml*, 언어 관련 메타 데이터를 포함 합니다. 일반적으로 지역화 된 오류 메시지를 포함 합니다. 구성 요소에는 해당 구성 요소의 각 지역화된 버전에 대한 패키지 매니페스트가 하나 이상 있어야 합니다. 이 파일을 만들려면 참조 [하는 방법: 패키지 매니페스트 만들기](../deployment/how-to-create-a-package-manifest.md)합니다.
   
- 이러한 파일을 만든 후 제품 매니페스트 파일을 사용자 지정 부트스트래퍼에 대해 이름이 지정된 폴더에 저장합니다. 패키지 매니페스트 파일은 로캘에 대해 이름이 지정된 폴더에 저장합니다. 예를 들어 영어 재배포용 패키지 매니페스트 파일은 en 폴더에 저장합니다. 각 로캘(예: 일본어는 ja, 독일어는 de)에 대해 이 프로세스를 반복합니다. 최종 사용자 지정 부트스트래퍼 패키지는 다음과 같은 폴더 구조일 수 있습니다.  
+이러한 파일을 만든 후 제품 매니페스트 파일을 사용자 지정 부트스트래퍼에 대해 이름이 지정된 폴더에 저장합니다. 패키지 매니페스트 파일은 로캘에 대해 이름이 지정된 폴더에 저장합니다. 예를 들어 영어 재배포용 패키지 매니페스트 파일은 en 폴더에 저장합니다. 각 로캘(예: 일본어는 ja, 독일어는 de)에 대해 이 프로세스를 반복합니다. 최종 사용자 지정 부트스트래퍼 패키지는 다음과 같은 폴더 구조일 수 있습니다.  
+
+    ```
+    CustomBootstrapperPackage
+      product.xml
+      CustomBootstrapper.msi
+      de
+        eula.rtf
+        package.xml
+      en
+        eula.rtf
+        package.xml
+      ja
+        eula.rtf
+        package.xml
+    ```
   
- `CustomBootstrapperPackage`  
+이제 재배포 가능 파일을 부트스트래퍼 폴더 위치에 복사 합니다. 자세한 내용은 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)을 참조하세요.
+ 
+    *\Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
+    
+또는  
+    
+    *\Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages*
   
- `product.xml`  
+다음 레지스트리 키의 **경로** 값에서 부트스트래퍼 폴더 위치를 확인할 수도 있습니다.  
   
- `CustomBootstrapper.msi`  
+    *HKLM\Software\Microsoft\GenericBootstrapper\11.0*
   
- `de`  
+64 비트 시스템에서 다음 레지스트리 키를 사용 합니다.  
   
- `eula.rtf`  
+    *HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0*
   
- `package.xml`  
+각 재배포 가능 구성 요소는 packages 디렉터리 아래의 고유 하위 폴더에 표시됩니다. 제품 매니페스트 및 재배포 가능 파일을 반드시가 하위이 폴더에 배치 합니다. 지역화 된 버전의 구성 요소 및 패키지 매니페스트는 문화권 이름에 따라 이라는 하위 폴더에 넣어야 합니다.  
   
- `en`  
+부트스트래퍼 패키지가 Visual Studio에서 자동으로 표시 이러한 파일을 부트스트래퍼 폴더에 복사 하는 **필수 구성 요소** 대화 상자. 사용자 지정 부트스트래퍼 패키지가 표시 되지 않으면 경우 닫은 후의 **필수 구성 요소** 대화 상자. 자세한 내용은 [Prerequisites Dialog Box](../ide/reference/prerequisites-dialog-box.md)을 참조하세요.  
   
- `eula.rtf`  
-  
- `package.xml`  
-  
- `ja`  
-  
- `eula.rtf`  
-  
- `package.xml`  
-  
- 마지막으로 재배포 가능 파일을 부트스트래퍼 폴더 위치에 복사합니다. 자세한 내용은 [How to: Create a Localized Bootstrapper Package](../deployment/how-to-create-a-localized-bootstrapper-package.md)을 참조하세요.  
-  
-```  
-\Program Files\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  
-```  
-  
- 또는  
-  
-```  
-\Program Files (x86)\Microsoft Visual Studio 14.0\SDK\Bootstrapper\Packages  
-```  
-  
- 다음 레지스트리 키의 **경로** 값에서 부트스트래퍼 폴더 위치를 확인할 수도 있습니다.  
-  
-```  
-HKLM\Software\Microsoft\GenericBootstrapper\11.0  
-```  
-  
- 64비트 시스템에서는 다음 레지스트리 키를 사용합니다.  
-  
-```  
-HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0  
-```  
-  
- 각 재배포 가능 구성 요소는 packages 디렉터리 아래의 고유 하위 폴더에 표시됩니다. 제품 매니페스트 및 재배포 가능 파일은 이 하위 폴더에 저장됩니다. 구성 요소의 지역화된 버전과 패키지 매니페스트는 문화권 이름에 따라 이름이 지정된 하위 폴더에 저장됩니다.  
-  
- 이러한 파일을 부트스트래퍼 폴더에 복사하면 부트스트래퍼 패키지가 Visual Studio 필수 구성 요소 대화 상자에 자동으로 표시됩니다. 사용자 지정 부트스트래퍼 패키지가 표시되지 않으면 필수 구성 요소 대화 상자를 닫았다가 다시 엽니다. 자세한 내용은 [Prerequisites Dialog Box](../ide/reference/prerequisites-dialog-box.md)을 참조하세요.  
-  
- 다음 테이블에는 부트스트래퍼가 자동으로 채우는 속성이 나와 있습니다.  
+다음 테이블에는 부트스트래퍼가 자동으로 채우는 속성이 나와 있습니다.  
   
 |속성|설명|  
 |--------------|-----------------|  
@@ -109,11 +92,11 @@ HKLM\Software\Wow6432Node\Microsoft\GenericBootstrapper\11.0
 |InstallMode|설치 모드는 구성 요소 설치를 시작해야 하는 위치를 나타냅니다. 여기에는 다음 값이 포함됩니다.<br /><br /> 필수 구성 요소-HomeSite-공급 업체의 웹 사이트에서 설치 됩니다.<br />필수 구성 요소-SpecificSite-선택한 위치에서 설치 됩니다.<br />-SameSite-필수 구성 요소는 응용 프로그램과 동일한 위치에서 설치 됩니다.|  
   
 ## <a name="separating-redistributables-from-application-installations"></a>응용 프로그램 설치에서 재배포 가능 파일 분리  
- 설치 프로젝트에서 재배포 가능 파일이 배포되지 않도록 지정할 수 있습니다. 이렇게 하려면 .NET Framework 디렉터리의 RedistList 폴더에 재배포 가능 파일 목록을 만듭니다.  
+설치 프로젝트에서 재배포 가능 파일이 배포되지 않도록 지정할 수 있습니다. 이렇게 하려면 .NET Framework 디렉터리의 RedistList 폴더에 재배포 가능 파일 목록을 만듭니다.  
   
- `%ProgramFiles%\Microsoft.NET\RedistList`  
+`%ProgramFiles%\Microsoft.NET\RedistList`  
   
- 재배포 가능 파일 목록은 *회사 이름*.*구성 요소 이름*.RedistList.xml 형식을 사용하여 이름을 지정해야 하는 XML 파일입니다. 예를 들어 Acme에서 만든 Datawidgets 구성 요소의 경우 Acme.DataWidgets.RedistList.xml을 사용합니다. 아래에는 재배포 가능 파일 목록 내용의 예제가 나와 있습니다.  
+재배포 가능 파일 목록은 *회사 이름*.*구성 요소 이름*.RedistList.xml 형식을 사용하여 이름을 지정해야 하는 XML 파일입니다. 따라서 예를 들어 구성 요소에는 Acme에서 만든 datawidgets, 하는 경우 사용 하 여 *Acme.DataWidgets.RedistList.xml*합니다. 아래에는 재배포 가능 파일 목록 내용의 예제가 나와 있습니다.  
   
 ```  
 <?xml version="1.0" encoding="UTF-8"?>  
