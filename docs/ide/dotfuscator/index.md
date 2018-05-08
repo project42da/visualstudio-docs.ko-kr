@@ -18,11 +18,11 @@ ms.assetid: d9550502-0a82-49a6-b005-2caa791fbe02
 author: Joe-Sewell-PreEmptive
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 22243a8d837e584df64c9fabc28405951f481b26
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a81d640e2ecebe46a20f7a3661584cb5c7423691
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="dotfuscator-community-edition-ce"></a>Dotfuscator CE(Community Edition)
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 이 프로그램을 사용하여 데스크톱, 모바일, 서버 및 포함된 응용 프로그램을 강화, 보호 및 정리함으로써 거래 비밀 및 기타 IP(지적 재산권)를 보호하고, 불법 복제 및 위조를 줄이고, 변조 및 무단 디버깅으로부터 보호하는 데 도움을 얻을 수 있습니다.
 Dotfuscator는 추가적인 프로그래밍이나 소스 코드 액세스 없이도 컴파일된 어셈블리에 작동합니다.
 
-![](media/header.svg)
+![PreEmptive Protection - Dotfuscator](media/header.svg)
 
 ## <a name="why-protection-matters"></a>보호가 중요한 이유
 
