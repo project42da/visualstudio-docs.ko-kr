@@ -1,15 +1,14 @@
 ---
-title: Mac용 Visual Studio의 프로젝트 및 솔루션
+title: 프로젝트 및 솔루션
 description: 이 문서에서는 Mac용 Visual Studio의 프로젝트 및 솔루션에 대한 개요를 제공합니다.
 author: asb3993
-ms.author: amburns
-ms.date: 04/14/2017
+ms.author: amburns05/06/201804/14/2017
 ms.assetid: 8254505D-D96E-48BD-8A5E-CF6A917897EA
-ms.openlocfilehash: a2936427ffa1f6c225d8a84754084287e2ab72c2
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 4a9ad4794b75590287df63ba11ba64316531db27
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="projects-and-solutions"></a>프로젝트 및 솔루션
 
@@ -22,7 +21,3 @@ Mac용 Visual Studio는 열린 솔루션 전체의 트리 뷰를 표시하는 _S
 ## <a name="project-and-solution-options"></a>프로젝트 및 솔루션 옵션
 
 프로젝트/솔루션 이름을 두 번 클릭하거나, 마우스 오른쪽 단추를 클릭하고 **옵션**으로 이동하여 프로젝트와 솔루션의 속성을 관리할 수 있습니다. 이러한 옵션에 대한 자세한 내용은 [솔루션 및 프로젝트 속성 관리](~/managing-solutions-and-project-properties.md) 문서를 참조하세요.
-
-
-
-

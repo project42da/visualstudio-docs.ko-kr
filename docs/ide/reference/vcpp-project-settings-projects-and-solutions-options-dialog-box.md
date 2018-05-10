@@ -20,11 +20,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 17618aa39a5487ed90fc39f414b0f08233f48b2f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 966b51c0522a65641edc2f602bb27849bfabfe77
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="vc-project-settings-projects-and-solutions-options-dialog-box"></a>옵션 대화 상자, 프로젝트 및 솔루션, VC++ 프로젝트 설정
 이 대화 상자를 사용하면 로깅, 성능 및 지원 파일 형식과 관련된 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 빌드 및 프로젝트 설정을 정의할 수 있습니다.
@@ -71,10 +71,10 @@ ms.lasthandoff: 04/26/2018
 ## <a name="extensions-to-hide"></a>숨길 확장명
   **모든 파일 표시**를 사용 설정한 경우 **솔루션 탐색기**에 표시하지 않을 파일의 파일 이름 확장명을 지정합니다.
 
- ## <a name="build-customization-search-path"></a>빌드 사용자 지정 검색 경로
+## <a name="build-customization-search-path"></a>빌드 사용자 지정 검색 경로
   프로젝트에 대한 빌드 규칙을 정의하는 데 도움이 되는 .rules 파일을 포함하는 디렉터리 목록을 지정합니다.
 
-# <a name="solution-explorer-mode"></a>솔루션 탐색기 모드
+## <a name="solution-explorer-mode"></a>솔루션 탐색기 모드
  **프로젝트에 포함된 파일만 표시**
 
   프로젝트의 파일만 표시하도록 **솔루션 탐색기**를 구성합니다.

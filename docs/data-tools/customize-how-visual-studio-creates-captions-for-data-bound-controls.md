@@ -15,13 +15,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: f6c2dffe793928532d36b539ba73914ecf0c24dc
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 60d2e181d0438f6ce180efe1cec2dd64dd8f2f5e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="customize-how-visual-studio-creates-captions-for-data-bound-controls"></a>Visual Studio의 데이터 바인딩된 컨트롤에 대 한 캡션을 만드는 방법을 사용자 지정
+
 항목을 끌면는 [데이터 소스 창](add-new-data-sources.md) 디자이너에 특별 한 고려 질문과 관련 하 여: 캡션 레이블의 열 이름을 두 보다 읽기 쉬운 문자열로 변경 또는 되도록 개 이상의 단어가 서로 연결 됩니다. 이러한 레이블을 설정 하 여 만든 하는 방법을 사용자 지정할 수 있습니다는 **SmartCaptionExpression**, **SmartCaptionReplacement**, 및 **SmartCaptionSuffix** 값 **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\15.0\Data 디자이너** 레지스트리 키입니다.
 
 > [!NOTE]
@@ -48,15 +49,15 @@ ms.lasthandoff: 04/26/2018
 > [!CAUTION]
 > 레지스트리 편집기에서 작업을 수행 하는 경우에 매우 주의 해야 합니다. 편집 하기 전에 레지스트리를 백업 합니다. 레지스트리 편집기를 잘못 사용 하면 운영 체제를 다시 설치 해야 하는 심각한 문제가 발생할 수 있습니다. Microsoft은 레지스트리 편집기를 잘못 사용 하 여 발생 하는 문제를 해결할 수 있음을 보장 하지 않습니다. 레지스트리 편집기 사용에 따른 결과는 사용자의 책임입니다.
 >
->  다음 기술 자료 문서를 백업, 편집 및 레지스트리 복원에 대 한 지침이 포함 되어: [Microsoft Windows 레지스트리 설명](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb; en-us; 256986)
+> 다음 기술 자료 문서를 백업, 편집 및 레지스트리 복원에 대 한 지침이 포함 되어: [Microsoft Windows 레지스트리 설명](http://support.microsoft.com/default.aspx?scid=kb;en-us;256986) (http://support.microsoft.com/default.aspx?scid=kb; en-us; 256986)
 
-### <a name="to-modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>데이터 소스 창에서의 스마트 캡션 동작을 수정 하려면
+## <a name="modify-the-smart-captioning-behavior-of-the-data-sources-window"></a>데이터 소스 창에서의 스마트 캡션 동작 수정
 
 1.  클릭 하 여 명령 창을 열고 **시작** 차례로 **실행**합니다.
 
 2.  형식 `regedit` 에 **실행** 대화 상자와 클릭 **확인**합니다.
 
-3.  확장 된 **HKEY_CURRENT_USER**, **소프트웨어*, **Microsoft**, **VisualStudio** 노드.
+3.  확장 된 **HKEY_CURRENT_USER**, **소프트웨어**, **Microsoft**, **VisualStudio** 노드.
 
 7.  마우스 오른쪽 단추로 클릭는 **15.0** 노드를 새 고 **키** 라는 `Data Designers`합니다.
 
@@ -80,7 +81,7 @@ ms.lasthandoff: 04/26/2018
 
     항목을 끌어 다음에 **데이터 소스** 창에서 캡션 레이블이 만들어집니다 제공 된 새 레지스트리 값을 사용 하 여 합니다.
 
-### <a name="to-turn-off-the-smart-captioning-feature"></a>스마트 캡션 기능 해제 하려면
+## <a name="turn-off-the-smart-captioning-feature"></a>스마트 캡션 기능 해제
 
 1.  클릭 하 여 명령 창을 열고 **시작** 차례로 **실행**합니다.
 

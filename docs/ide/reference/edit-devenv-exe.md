@@ -13,18 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c071d225ebd2ac5032da3b5aed095bef6cafe352
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 22c5aeffae35a4202577cf8065b76b1968616355
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="edit-devenvexe"></a>/Edit (devenv.exe)
 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]의 기존 인스턴스에 지정된 파일을 엽니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 Devenv /edit [file1[ file2]]
 ```
 
@@ -45,7 +45,7 @@ Devenv /edit [file1[ file2]]
 ## <a name="example"></a>예
  이 예제에서는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]의 기존 인스턴스로 `MyFile.cs` 파일을 열거나 없는 경우 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]의 새 인스턴스로 파일을 엽니다.
 
-```
+```cmd
 devenv /edit MyFile.cs
 ```
 

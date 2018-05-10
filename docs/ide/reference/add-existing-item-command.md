@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ec281b508842424fbfb74bbe0726bb2ec47abe2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b4647fd5ca2cc5199c1f9b85e5237dd57d95dbbd
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="add-existing-item-command"></a>기존 항목 추가 명령
 현재 솔루션에 기존 파일을 추가하고 엽니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 File.AddExistingItem filename [/e:editorname]
 ```
 
@@ -38,7 +38,7 @@ File.AddExistingItem filename [/e:editorname]
 
  /e:`editorname` 인수 구문은 **연결 프로그램 대화 상자**에 따옴표로 묶여 나타나는 순서대로 편집기 이름을 사용합니다. 예를 들어 소스 코드 편집기에서 스타일시트를 열려면 /e:`editorname` 인수에 대해 다음과 같이 입력합니다.
 
-```
+```cmd
 /e:"Source Code (text) Editor"
 ```
 
@@ -48,7 +48,7 @@ File.AddExistingItem filename [/e:editorname]
 ## <a name="example"></a>예
  이 예제에서는 Form1.frm 파일을 현재 솔루션에 추가합니다.
 
-```
+```cmd
 >File.AddExistingItem "C:\public\solution files\Form1.frm"
 ```
 

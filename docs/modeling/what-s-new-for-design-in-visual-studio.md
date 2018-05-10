@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3f2e36bbd95146f8a8b1095fefaa7882ff5f88d2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c25d89ae3ab3d25e415b4407a46fc903b1c05266
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="whats-new-for-design-in-visual-studio"></a>Visual Studio의 디자인에 대한 새로운 기능
 
@@ -64,18 +64,13 @@ UML 디자이너의 중요 한 사용자 인 경우에 UML 요구에 따라 다�
 
 [!INCLUDE[modeling_sdk_info](includes/modeling_sdk_info.md)]
 
-<a name="VersionSupport"></a>
-## <a name="version-support-for-architecture-and-modeling-tools"></a>아키텍처 및 모델링 도구에 대한 버전 지원
+## <a name="a-nameversionsupport-version-support-for-architecture-and-modeling-tools"></a><a name="VersionSupport" />아키텍처 및 모델링 도구에 대 한 버전 지원
 
-Visual Studio는 여러 버전에서 사용할 수 있습니다. 모든 버전에서 아키텍처 및 모델링 도구가 지원되는 것은 아닙니다. 다음 표에서는 각 도구의 사용 가능 여부를 보여 줍니다.
+Visual Studio 2015는 여러 버전에서 사용할 수 있습니다. 이러한 일부 아키텍처 및 모델링 도구에 대 한 지원을 제공 합니다. 다음 표에서는 각 도구의 사용 가능 여부를 보여 줍니다.
 
 |**기능**|**Enterprise**|**Professional**|**커뮤니티**|**Express**|
 |-----------------|--------------------|----------------------|-------------------|-----------------|
-|**코드 맵**|예|참고 (1)를 참조 하십시오.|-|-|
-|**종속성 다이어그램**|예|참고 (2)를 참조 하십시오.|참고 (2)를 참조 하십시오.|-|
+|**코드 맵**|예|코드 맵 읽기를 지원, 필터링 코드에 매핑합니다, 새 제네릭 노드를 추가 하 고 선택 영역에서 새 전송 그래프를 만듭니다.|-|-|
+|**종속성 다이어그램**|예|종속성 다이어그램 읽기 지원만 합니다.|종속성 다이어그램 읽기 지원만 합니다.|-|
 |**전송 그래프** (DGML 다이어그램)|예|예|예|-|
 |**코드 복제본**|예|-|-|-|
-
-참고 (1): 코드 맵 읽기, 코드 맵 필터링, 새 제네릭 노드 추가, 선택 영역에서 새 전송 그래프 만들기만 지원합니다.
-
-종속성 다이어그램 읽기 참고 (2):만 지원 합니다.

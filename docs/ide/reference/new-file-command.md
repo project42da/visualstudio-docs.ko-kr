@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69e57e348692d57baabb0d4f13290913d45f814c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a519de555f35df4fac91a9960993a0f163c4de5a
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="new-file-command"></a>새 파일 명령
 새 파일을 만들고 엽니다. 파일은 기타 파일 폴더 아래에 나타납니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 File.NewFile [filename] [/t:templatename] [/editor:editorname]
 ```
 
@@ -44,7 +44,7 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 
  예를 들어 새 [!INCLUDE[vcprvc](../../code-quality/includes/vcprvc_md.md)] 원본 파일을 만들려면 /t:`templatename` 인수에 대해 다음과 같이 입력합니다.
 
-```
+```cmd
 /t:"Visual C++\C++ File (.cpp)"
 ```
 
@@ -58,14 +58,14 @@ File.NewFile [filename] [/t:templatename] [/editor:editorname]
 
  예를 들어 소스 코드 편집기에서 파일을 열려면 /e:`editorname` 인수에 다음과 같이 입력합니다.
 
-```
+```cmd
 /e:"Source Code (text) Editor"
 ```
 
 ## <a name="example"></a>예
  이 예제에서는 "test1.htm"이라는 새 웹 페이지를 만들고 소스 코드 편집기에서 엽니다.
 
-```
+```cmd
 >File.NewFile test1 /t:"General\HTML Page" /e:"Source Code (text) Editor"
 ```
 

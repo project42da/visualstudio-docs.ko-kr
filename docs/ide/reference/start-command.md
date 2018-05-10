@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c1e5ade7d02882633504ac5615ee751b2533adde
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bbd2d64d8103afe1e303052c9b27fc2cc85cab58
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="start-command"></a>시작 명령
 시작 프로젝트 디버깅을 시작합니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 Debug.Start [address]
 ```
 
@@ -41,7 +41,7 @@ Debug.Start [address]
 ## <a name="example"></a>예
  이 예제에서는 디버거를 시작하고 발생하는 모든 예외를 무시합니다.
 
-```
+```cmd
 >Debug.Start
 ```
 

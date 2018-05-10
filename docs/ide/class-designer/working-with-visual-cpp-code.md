@@ -20,11 +20,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: eb3dfce4f4e1596e21853c1ef645bd4ef107186e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0850fed22caf4b34fcb74aa11eb63f9338b0d5e5
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="work-with-visual-c-code-class-designer"></a>Visual C++ 코드 사용(클래스 디자이너)
 
@@ -73,7 +73,7 @@ Visual C++ 프로젝트의 경우 소스 파일의 변경 내용이 클래스 �
 
 -   형식은 #import 지시문을 사용하여 참조되는 라이브러리에 있습니다. 가능한 해결 방법은 생성된 코드(.tlh 파일)를 헤더 파일에 대한 #include 지시문에 수동으로 추가하는 것입니다.
 
--   입력한 형식이 **클래스 디자이너**에서 지원되는지 확인합니다. [C++ 코드 요소에 대한 제한 사항](#limitations)을 참조하세요.
+-   입력한 형식이 **클래스 디자이너**에서 지원되는지 확인합니다. [C++ 코드 요소에 대한 제한 사항](#limitations-for-c-code-elements)을 참조하세요.
 
 형식 확인 문제의 경우 가장 발생하기 쉬운 오류는 **클래스 다이어그램 ‘\<element>’에서 하나 이상의 모양에 대한 코드를 찾을 수 없습니다.** 입니다. 이 오류 메시지가 반드시 코드에 오류가 있음을 나타내지 않습니다. 클래스 디자이너는 코드를 표시할 수 없습니다 것을 나타냅니다. 다음과 같은 방법을 시도해 보세요.
 

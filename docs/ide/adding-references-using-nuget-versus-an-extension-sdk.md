@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 49854e401bdefa4da776f888fff8cff6fdb0d136
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6956ebbd1220be17037b3c9a3d7bd3174872134d
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="adding-references-using-nuget-versus-an-extension-sdk"></a>NuGet을 사용한 참조 추가와 확장 SDK를 사용한 참조 추가
 
@@ -50,7 +50,7 @@ Visual Studio에 대한 NuGet 확장 또는 SDK(소프트웨어 개발 키트)�
 |메커니즘이 앱 매니페스트와 통합됩니다.|Y|패키징 및 F5 키가 [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)]를 통해 제공되는 SDK에서 제대로 작동하도록 SDK가 [!INCLUDE[win8_appstore_short](../ide/includes/win8_appstore_short_md.md)] 관련 개념을 전달해야 합니다.|Y|NuGet 콘텐츠는 프로젝트의 일부가 됩니다. F5 키를 특별히 고려하지 않아도 됩니다.|
 |메커니즘에서 비참조 파일을 배포합니다(예: [!INCLUDE[win8_appname_long](../debugger/includes/win8_appname_long_md.md)] 앱 테스트를 실행할 테스트 프레임워크 배포).|Y|*\redist* 폴더에 파일을 넣는 경우 파일이 자동으로 배포됩니다.|Y||
 |메커니즘에서 플랫폼 SDK를 Visual Studio IDE에 자동으로 추가합니다.|Y|[!INCLUDE[win8](../debugger/includes/win8_md.md)] SDK 또는 Windows Phone SDK를 특정 위치에 특정 레이아웃으로 넣는 경우 SDK가 모든 Visual Studio 기능과 자동으로 통합됩니다.|N||
-|메커니즘에서 클린 개발자 컴퓨터를 지원합니다. 즉, 설치할 필요가 없으며 소스 코드 제어에서 간단하게 검색할 수 있습니다.|N|SDK를 참조하기 때문에 솔루션과 SDK를 별도로 체크 인해야 합니다. MSBuild가 SDK를 반복하는, 레지스트리가 아닌 두 개의 기본 위치에서 SDK를 체크 인할 수 있습니다(자세한 내용은 [소프트웨어 개발 키트 만들기](../extensibility/creating-a-software-development-kit.md) 참조). 또는 사용자 지정 위치가 SDK로 구성된 경우 프로젝트 파일에서 다음 코드를 지정할 수 있습니다.<br /><br /> `<PropertyGroup>    <SDKReferenceDirectoryRoot>C:\MySDKs</SDKReferenceDirectoryRoot>   </PropertyGroup>`<br /><br /> 그런 다음 해당 위치에 SDK를 체크 인합니다.|Y|솔루션을 체크 아웃하면 Visual Studio에서 즉시 파일을 인식하고 작업을 수행합니다.|
+|메커니즘에서 클린 개발자 컴퓨터를 지원합니다. 즉, 설치할 필요가 없으며 소스 코드 제어에서 간단하게 검색할 수 있습니다.|N|SDK를 참조하기 때문에 솔루션과 SDK를 별도로 체크 인해야 합니다. MSBuild가 SDK를 반복하는, 레지스트리가 아닌 두 개의 기본 위치에서 SDK를 체크 인할 수 있습니다(자세한 내용은 [소프트웨어 개발 키트 만들기](../extensibility/creating-a-software-development-kit.md) 참조). 또는 사용자 지정 위치가 SDK로 구성된 경우 프로젝트 파일에서 다음 코드를 지정할 수 있습니다.<br /><br />`<PropertyGroup>`<br />&nbsp;&nbsp;`<SDKReferenceDirectoryRoot>`<br />&nbsp;&nbsp;`C:\MySDKs`<br />&nbsp;&nbsp;`</SDKReferenceDirectoryRoot>`<br />`</PropertyGroup>`<br /><br /> 그런 다음 해당 위치에 SDK를 체크 인합니다.|Y|솔루션을 체크 아웃하면 Visual Studio에서 즉시 파일을 인식하고 작업을 수행합니다.|
 |기존의 대규모 패키지 작성자 커뮤니티에 연결할 수 있습니다.|N/A|커뮤니티는 새로운 기능입니다.|Y||
 |기존의 대규모 패키지 소비자 커뮤니티에 연결할 수 있습니다.|N/A|커뮤니티는 새로운 기능입니다.|Y||
 |파트너 에코시스템(사용자 지정 갤러리, 리포지토리 등)에 연결할 수 있습니다.|N/A|사용 가능한 리포지토리로는 Visual Studio Marketplace, Microsoft 다운로드 센터, [!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)] 등이 있습니다.|Y||

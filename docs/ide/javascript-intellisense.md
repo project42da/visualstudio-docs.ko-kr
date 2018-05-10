@@ -26,11 +26,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2aeabb8953d76b38dfa612e701eaeeb872cb64c3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 16e0efd8393d6324321a505247a3dad171a81a57
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="javascript-intellisense"></a>JavaScript IntelliSense
 
@@ -52,6 +52,7 @@ TypeScript는 여러 소스를 사용하여 이 정보를 구성합니다.
 - [TypeScript 선언 파일 기반 IntelliSense](#TsDeclFiles)
 - [형식 정의의 자동 획득](#Auto)
 
+<a name="TypeInference"></a>
 ### <a name="intellisense-based-on-type-inference"></a>형식 유추 기반 IntelliSense
 
 JavaScript에서는 일반적으로 명시적 형식 정보를 사용할 수 없습니다. 다행히도 주변 코드 컨텍스트가 있는 경우 일반적으로 형식을 쉽게 알아낼 수 있습니다.
@@ -88,6 +89,7 @@ exports.Foo = Foo;
 // Note that assigning a value to "module.exports" is also supported.
 ```
 
+<a name="JsDoc"></a>
 ### <a name="intellisense-based-on-jsdoc"></a>JSDoc 기반 IntelliSense
 
 형식 유추에서 원하는 형식 정보(또는 지원 문서 정보)가 제공되지 않으면 JSDoc 주석을 통해 명시적으로 형식 정보를 제공할 수 있습니다.  예를 들어 부분적으로 선언된 개체에 특정 형식을 제공하려면 다음과 같이 `@type` 태그를 사용할 수 있습니다.
@@ -114,14 +116,16 @@ function Foo(param1) {
 
 현재 지원되는 JsDoc 주석은 [JavaScript에서 JSDoc 지원](https://github.com/Microsoft/TypeScript/wiki/JsDoc-support-in-JavaScript)을 참조합니다.
 
+<a name="TsDeclFiles"></a>
 ### <a name="intellisense-based-on-typescript-declaration-files"></a>TypeScript 선언 파일 기반 IntelliSense
 
 JavaScript 및 TypeScript는 이제 같은 언어 서비스에 기반을 두므로 더 다양한 방법으로 조작할 수 있습니다. 예를 들어 JavaScript IntelliSense는 *.d.ts* 파일에 선언된 값에 대해 제공될 수 있고([TypeScript 설명서](https://www.typescriptlang.org/docs/handbook/declaration-files/introduction.html) 참조), TypeScript에 선언된 인터페이스 및 클래스 등의 형식은 JsDoc 주석에서 형식으로 사용할 수 있습니다.
 
 다음 내용은 `JsDoc` 태그를 사용하는 같은 프로젝트에서 인터페이스를 통해 이 형식 정보를 JavaScript 파일에 제공하는 TypeScript 정의 파일의 간단한 예제입니다.
 
-<img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png" height="400" width="640"/>
+<img src="https://raw.githubusercontent.com/wiki/Microsoft/TypeScript/images/decl1.png" height="400" width="640" alt="TypeScript definition file" />
 
+<a name="Auto"></a>
 ### <a name="automatic-acquisition-of-type-definitions"></a>형식 정의의 자동 획득
 
 TypeScript 환경에서 가장 인기 있는 JavaScript 라이브러리에는 *.d.ts* 파일을 통해 설명되는 API가 있고 해당 정의의 가장 일반적인 리포지토리는 [DefinitelyTyped](https://github.com/DefinitelyTyped/DefinitelyTyped)에 있습니다.

@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 72ce42ae8a13decd48e4e41a02b18f5baeb875d6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c030358eb071613e98d473845708b01235683ded
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="add-existing-project-command"></a>기존 프로젝트 추가 명령
 현재 솔루션에 기존 프로젝트를 추가합니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 File.AddExistingProject filename
 ```
 
@@ -43,7 +43,7 @@ File.AddExistingProject filename
 ## <a name="example"></a>예
  이 예제에서는 [!INCLUDE[vbprvb](../../code-quality/includes/vbprvb_md.md)] 프로젝트인 TestProject1을 현재 솔루션에 추가합니다.
 
-```
+```cmd
 >File.AddExistingProject "c:\visual studio projects\TestProject1.vbproj"
 ```
 

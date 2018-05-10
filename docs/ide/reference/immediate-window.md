@@ -18,11 +18,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f27b11142880f71ed653371bd23ae01e51f50b3b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ee4789bc8ca7359af2df6cf2ff9fbcdd8ba7d6b9
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="immediate-window"></a>직접 실행 창
 **직접 실행** 창은 식을 디버깅 및 계산하고 문을 실행하며 가변 값을 인쇄하는 등에 사용됩니다. 디버깅 중에 개발 언어에 따라 실행되거나 계산되는 식을 입력할 수 있습니다. **직접 실행** 창을 표시하려면 편집할 프로젝트를 연 다음, **디버그** 메뉴에서 **창**을 선택하고 **즉시 실행**을 선택하거나 CTRL+ALT+I를 누릅니다.
@@ -32,13 +32,13 @@ ms.lasthandoff: 04/26/2018
 ## <a name="displaying-the-values-of-variables"></a>변수 값 표시
  이 창은 응용 프로그램을 디버깅할 때 특히 유용할 수 있습니다. 예를 들어, `varA` 변수의 값을 확인하려면 [인쇄 명령](../../ide/reference/print-command.md)을 사용할 수 있습니다.
 
-```
+```cmd
 >Debug.Print varA
 ```
 
  물음표(?)는 `Debug.Print`에 사용되는 별칭이므로 이 명령은 다음과 같이 기록될 수도 있습니다.
 
-```
+```cmd
 >? varA
 ```
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 04/26/2018
 
  **직접 실행** 창에서는 같음 기호(=)가 대입 연산자로 해석됩니다. 따라서 예를 들면
 
-```
+```cmd
 >Debug.EvaluateStatement(varA=varB)
 ```
 
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/26/2018
 
  이와 달리 **명령** 창에서 같음 기호(=)는 비교 연산자로 해석됩니다. **명령** 창에서는 대입 연산자를 사용할 수 없습니다. 따라서 예를 들면 `varA` 및 `varB` 변수 값이 다른 경우
 
-```
+```cmd
 >Debug.EvaluateStatement(varA=varB)
 ```
 

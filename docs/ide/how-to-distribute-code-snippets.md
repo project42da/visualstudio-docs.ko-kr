@@ -14,11 +14,11 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: e867bafff9c41aff525557484189693950b7b468
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1841dc30fce8e3799191ff9e2d91b94c7d8ac96b
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-distribute-code-snippets"></a>방법: 코드 조각 배포
 
@@ -74,7 +74,7 @@ Visual Studio 확장을 만들려면 Visual Studio SDK를 설치해야 합니다
 
 2.  파일에 다음 줄을 추가합니다.
 
-    ```
+    ```txt
     // Visual Basic
     [$RootKey$\Languages\CodeExpansions\Basic\Paths]
     "HelloWorldVB"="$PackageFolder$"

@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a0c854fabdc18337b806cd64733de1d0c88758c5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8ce99a4e4c4899502bf1f63edf2dbc1ad0c93cd0
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="visual-c-typedefs-in-class-designer"></a>클래스 디자이너의 Visual C++ 형식 정의
 
@@ -49,7 +49,7 @@ typedef class coord
 };
 ```
 
-`typedef` 형식을 사용하는 방법에 대한 자세한 내용은 [Typedefs](/cpp/aliases-and-typedefs-cpp#typedefs)를 참조하세요.
+`typedef` 형식을 사용하는 방법에 대한 자세한 내용은 [Typedefs](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)를 참조하세요.
 
 C++ typedef 도형은 typedef에 지정된 형식의 도형입니다. 예를 들어 소스에서 `typedef class`를 선언하는 경우 도형에 둥근 모서리와 **클래스** 레이블이 있습니다. `typedef struct`의 경우 도형에 사각형 모서리와 **구조체** 레이블이 있습니다.
 
@@ -199,6 +199,8 @@ class A {
 
 -> MyIntVect
 
-## <a name="see-also"></a>참고 항목
+### <a name="see-also"></a>참고 항목
 
-- [Visual C++ 코드 작업](working-with-visual-cpp-code.md)
+- [Visual C++ 코드 작업](working-with-visual-cpp-code.md)  
+- [Typedefs](/cpp/cpp/aliases-and-typedefs-cpp#typedefs)
+

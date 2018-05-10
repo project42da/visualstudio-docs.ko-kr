@@ -16,7 +16,7 @@ ms.lasthandoff: 02/28/2018
 
 2. Visual Studio를 실행합니다.
 
-3. **보기 > 팀 탐색기...**를 선택하여 GitHub 또는 Visual Studio Team Services에 연결하거나 리포지토리를 복제할 수 있는 **팀 탐색기** 창을 엽니다.
+3. **보기 > 팀 탐색기...** 를 선택하여 GitHub 또는 Visual Studio Team Services에 연결하거나 리포지토리를 복제할 수 있는 **팀 탐색기** 창을 엽니다.
 
     ![Visual Studio Team Services, GitHub 및 리포지토리 복제를 보여 주는 팀 탐색기 창](media\create-project-repo\team-explorer.png)
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 02/28/2018
     > [!Tip]
     > 팀 탐색기에서 지정하는 폴더는 복제된 파일을 받을 특정 폴더입니다. `git clone` 명령과 달리 팀 탐색기에서 복제본을 만드는 것은 리포지토리의 이름으로 하위 폴더를 자동으로 만들지 않습니다.
 
-5. 복제가 완료되면 팀 탐색기의 맨 아래에 있는 리포지토리 폴더를 두 번 클릭하여 리포지토리 대시보드로 이동합니다. **솔루션** 아래에서 **새로 만들기...**를 선택합니다.
+5. 복제가 완료되면 팀 탐색기의 맨 아래에 있는 리포지토리 폴더를 두 번 클릭하여 리포지토리 대시보드로 이동합니다. **솔루션** 아래에서 **새로 만들기...** 를 선택합니다.
 
     ![팀 탐색기 창, 복제에서 새 프로젝트 만들기](media\create-project-repo\team-explorer-new-project.png)
 

@@ -260,17 +260,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 0ffa56023aecc327f78b4b1d860c14fa96e04e45
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 69bc5492413a48ddde501bdba893fd880f2851cb
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="code-analysis-warnings-for-managed-code-by-checkid"></a>관리 코드의 CheckId 별 코드 분석 경고
 
 다음 표에서는 관리 코드에 대한 코드 분석 경고를 경고의 CheckId 식별자별로 보여 줍니다.
-
-## <a name="warnings"></a>경고
 
 |CheckId|경고|설명|
 |-------------|-------------|-----------------|

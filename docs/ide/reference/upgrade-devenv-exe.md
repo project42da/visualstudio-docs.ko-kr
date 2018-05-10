@@ -14,18 +14,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6e4366235973a3e4aa090f5a2c65b346d40067c7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 25fe5a4e75ddf349210a936f47d99c94ec70c240
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="upgrade-devenvexe"></a>/Upgrade (devenv.exe)
 솔루션 파일 및 모든 프로젝트 파일이나 지정한 프로젝트 파일을 이러한 파일의 현재 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 형식으로 업데이트합니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 devenv SolutionFile | ProjectFile /upgrade
 ```
 
@@ -48,7 +48,7 @@ devenv SolutionFile | ProjectFile /upgrade
 ## <a name="example"></a>예
  이 예제에서는 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 솔루션에 대한 기본 폴더에서 “MyProject.sln”이라는 솔루션 파일을 업그레이드합니다.
 
-```
+```cmd
 devenv "MyProject.sln" /upgrade
 ```
 

@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cdec487781928c22a34e5e7586700ed0e91a31a7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3c3d3a6ef558b510cfde716716daf97a549fbba4
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="resetsettings-devenvexe"></a>/ResetSettings(devenv.exe)
 
@@ -28,7 +28,7 @@ Visual Studio 기본 설정을 복원하고 자동으로 Visual Studio IDE를 �
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 Devenv /ResetSettings SettingsFile
 ```
 
@@ -48,7 +48,7 @@ Visual Studio에 적용할 *.vssettings* 파일의 전체 경로 및 이름.
 
 다음 명령줄은 `MySettings.vssettings` 파일에 저장된 설정을 적용합니다.
 
-```
+```cmd
 Devenv.exe /ResetSettings "C:\My Files\MySettings.vssettings"
 ```
 

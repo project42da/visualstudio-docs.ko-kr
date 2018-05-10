@@ -14,18 +14,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 065648588b51ad6c71ae1a10235da4f096470abe
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 07dfcbb6064d0f1043c0621534b953a5f5c63e82
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="debugexe-devenvexe"></a>/DebugExe(devenv.exe)
 디버깅하도록 지정된 실행 파일을 엽니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 Devenv /debugexe ExecutableFile
 ```
 
@@ -42,7 +42,7 @@ Devenv /debugexe ExecutableFile
 ## <a name="example"></a>예
  다음 예제는 디버깅을 위해 `MyApplication.exe` 파일을 엽니다.
 
-```
+```cmd
 Devenv.exe /debugexe MyApplication.exe
 ```
 

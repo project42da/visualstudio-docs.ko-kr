@@ -14,21 +14,22 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c90434fd8deae2f5f71c150759fc836b9ed43077
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dffef39d735b95cff01ead7087aa8b6286e39004
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-implement-nested-projects"></a>방법: 중첩 된 프로젝트를 구현 합니다.
+
 만들 때 구현 해야 하는 몇 가지 추가 단계는 중첩 된 프로젝트 형식에는 합니다. 부모 프로젝트는 솔루션의 중첩 된 (자식) 프로젝트에 있는 동일한 책임이 있는 몇 가지에 적용 됩니다. 부모 프로젝트는 솔루션에 유사한 프로젝트의 컨테이너입니다. 특히, 중첩 된 프로젝트의 계층 구조를 빌드하는 부모 프로젝트 및 솔루션에서 발생 해야 하는 여러 가지 이벤트 있습니다. 이러한 이벤트는 중첩 된 프로젝트를 만들기 위한 다음 프로세스에 설명 되어 있습니다.
 
-### <a name="to-create-nested-projects"></a>중첩 된 프로젝트를 만들려면
+## <a name="create-nested-projects"></a>중첩 된 프로젝트 만들기
 
 1.  호출 하 여 부모 프로젝트의 프로젝트 파일 및 시작 정보를 로드 하는 통합된 개발 환경 (IDE)는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProjectFactory> 인터페이스입니다. 부모 프로젝트 생성 되어 솔루션에 추가 합니다.
 
     > [!NOTE]
-    >  이 시점에서 하위 프로젝트를 만들기 전에 부모 프로젝트를 만들어야 하기 때문에 중첩 된 프로젝트를 만들려면 부모 프로젝트에 대 한 프로세스에는 너무 이릅니다. 이 시퀀스는 부모 프로젝트 하위 프로젝트에 설정을 적용할 수 및 필요한 경우 하위 프로젝트 부모 프로젝트에서 정보를 얻을 수 있습니다. 이 순서는 경우 필요에에 따라 소스 코드 제어 (SCC), 솔루션 탐색기 등의 클라이언트입니다.
+    > 이 시점에서 하위 프로젝트를 만들기 전에 부모 프로젝트를 만들어야 하기 때문에 중첩 된 프로젝트를 만들려면 부모 프로젝트에 대 한 프로세스에는 너무 이릅니다. 이 시퀀스는 부모 프로젝트 하위 프로젝트에 설정을 적용할 수 및 필요한 경우 하위 프로젝트 부모 프로젝트에서 정보를 얻을 수 있습니다. 이 순서는 경우 필요에에 따라 소스 코드 제어 (SCC), 솔루션 탐색기 등의 클라이언트입니다.
 
      부모 프로젝트에 대해 기다려야는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.OpenChildren%2A> 프로젝트 또는 프로젝트의 중첩 된 (자식)을 만들 수 있습니다는 IDE에 의해 호출 될 메서드입니다.
 
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/16/2018
      부모 프로젝트를 호출 하 여 중첩 된 각 프로젝트에 대 한 GUID를 만들고 이미 존재 하지 않는 경우 `CoCreateGuid`합니다.
 
     > [!NOTE]
-    >  `CoCreateGuid` GUID는 만들 때에 COM API 호출 됩니다. 자세한 내용은 참조 `CoCreateGuid` 및 MSDN 라이브러리의 Guid입니다.
+    > `CoCreateGuid` GUID는 만들 때에 COM API 호출 됩니다. 자세한 내용은 참조 `CoCreateGuid` 및 MSDN 라이브러리의 Guid입니다.
 
      부모 프로젝트 다음에 IDE에서 열려 있는 검색할 해당 프로젝트 파일에이 GUID를 저장 합니다. 호출에 관련 된 자세한 내용은 4 단계를 참조 `AddVirtualProjectEX` 검색 하는 `guidProjectID` 자식 프로젝트에 대 한 합니다.
 
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
      부모 및 자식 프로젝트 프로그래밍 방식으로 인스턴스화됩니다 때문에 시점에서 중첩 된 프로젝트에 대 한 속성을 설정할 수 있습니다.
 
     > [!NOTE]
-    >  컨텍스트 정보는 중첩 된 프로젝트에서 수신지 않습니다 뿐 아니라 부모 프로젝트 있는지 확인 하 여 해당 항목에 대 한 컨텍스트를 요청할 수도 있습니다 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>합니다. 이런 방식으로 개별 중첩 된 프로젝트에 추가 동적 도움말 특성 및 관련 된 메뉴 옵션을 추가할 수 있습니다.
+    > 컨텍스트 정보는 중첩 된 프로젝트에서 수신지 않습니다 뿐 아니라 부모 프로젝트 있는지 확인 하 여 해당 항목에 대 한 컨텍스트를 요청할 수도 있습니다 <xref:Microsoft.VisualStudio.Shell.Interop.__VSHPROPID>합니다. 이런 방식으로 개별 중첩 된 프로젝트에 추가 동적 도움말 특성 및 관련 된 메뉴 옵션을 추가할 수 있습니다.
 
 10. 계층을 호출 하 여 솔루션 탐색기에 표시 하기 위해 만들어집니다는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsHierarchy.GetNestedHierarchy%2A> 메서드.
 
@@ -78,17 +79,14 @@ ms.lasthandoff: 04/16/2018
 
      사용자 솔루션 닫혀 있지 않거나 특정 프로젝트 자체는 또 다른 방법은에 때문에 중첩 된 프로젝트를 닫을 때 `IVsParentProject`, <xref:Microsoft.VisualStudio.Shell.Interop.IVsParentProject.CloseChildren%2A>, 호출 됩니다. 부모 프로젝트에 대 한 호출을 래핑하는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolution.RemoveVirtualProject%2A> 메서드는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnBeforeClosingChildren%2A> 및 <xref:Microsoft.VisualStudio.Shell.Interop.IVsSolutionEvents3.OnAfterClosingChildren%2A> 중첩된 프로젝트 종결 되 고 솔루션 이벤트를 수신기에 알리기 위해 메서드.
 
- 다음 항목은 중첩 된 프로젝트를 구현할 때 고려해 야 할 다른 몇 가지 개념을 다루는:
+다음 항목은 중첩 된 프로젝트를 구현할 때 고려해 야 할 다른 몇 가지 개념을 다루는:
 
- [중첩된 프로젝트 언로드 및 다시 로드에 대한 고려 사항](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)
+- [중첩된 프로젝트 언로드 및 다시 로드에 대한 고려 사항](../../extensibility/internals/considerations-for-unloading-and-reloading-nested-projects.md)
+- [중첩된 프로젝트에 대한 마법사 지원](../../extensibility/internals/wizard-support-for-nested-projects.md)
+- [중첩된 프로젝트에 대한 명령 처리 구현](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
+- [중첩된 프로젝트에 대한 AddItem 필터링 대화 상자](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
 
- [중첩된 프로젝트에 대한 마법사 지원](../../extensibility/internals/wizard-support-for-nested-projects.md)
-
- [중첩된 프로젝트에 대한 명령 처리 구현](../../extensibility/internals/implementing-command-handling-for-nested-projects.md)
-
- [중첩된 프로젝트에 대한 AddItem 필터링 대화 상자](../../extensibility/internals/filtering-the-additem-dialog-box-for-nested-projects.md)
-
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [새 항목 추가 대화 상자에 항목 추가](../../extensibility/internals/adding-items-to-the-add-new-item-dialog-boxes.md)
 - [프로젝트 템플릿 및 항목 템플릿 등록](../../extensibility/internals/registering-project-and-item-templates.md)

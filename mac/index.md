@@ -1,15 +1,15 @@
 ---
 title: Mac용 Visual Studio 소개
-description: ''
+description: 이 문서에서는 Mac용 Visual Studio의 기능을 소개합니다.
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: 3A130EC1-DD8C-4125-9034-B08D7AF7EA65
-ms.openlocfilehash: 4b4b8e9cb55e3a4cf2d81e7cf7234ea47ad06f0e
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 918c0532140369bfc6790be2306830b5f160ebdf
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="introducing-visual-studio-for-mac"></a>Mac용 Visual Studio 소개
 
@@ -72,7 +72,7 @@ Visual Studio에는 통합된 자체 Android SDK 관리자가 있습니다.
 
 Android 응용 프로그램의 경우 Mac용 Visual Studio에는 Android `.axml` 파일과 함께 작동하여 사용자 인터페이스를 시각적으로 구성하는 자체 디자이너가 포함됩니다. Mac용 Visual Studio는 다음 이미지와 같이 Android Designer에서 이러한 파일을 엽니다.
 
-![](media/intro-image31.png)
+![Android UI Designer](media/intro-image31.png)
 
 Android Designer에 대한 자세한 내용은 [디자이너 개요](https://developer.xamarin.com/Android/Guides/User_Interface/Designer_Overview) 문서를 참조하세요.
 
@@ -80,7 +80,7 @@ Android Designer에 대한 자세한 내용은 [디자이너 개요](https://dev
 
 iOS 디자이너는 Mac용 Visual Studio와 완벽하게 통합되었으며 .xib 파일 및 Storyboard 파일을 시각적으로 편집하여 iOS, tvOS, WatchOS UI 및 전환을 만들 수 있도록 합니다. 도구 상자와 Design Surface 간에 끌어서 놓기 기능을 사용하는 한편 직관적인 이벤트 처리 방식을 사용하여 전체 사용자 인터페이스를 빌드할 수 있습니다. iOS 디자이너는 디자인 타임 렌더링 기능이 추가된 [사용자 지정 컨트롤](https://developer.xamarin.com/guides/ios/user_interface/designer/ios_designable_controls_overview/)도 지원합니다.
 
-![](media/intro-image30.png)
+![iOS Storyboard 디자이너](media/intro-image30.png)
 
 iOS 디자이너 사용에 대한 자세한 내용은 [디자이너](https://developer.xamarin.com/guides/ios/user_interface/designer) 문서를 참조하세요.
 
@@ -109,7 +109,7 @@ Xamarin Profiler에는 프로파일링에 사용할 수 있는 세 가지 기기
 
 Xamarin Inspector는 도구가 포함된 대화형 C# 콘솔 도구를 사용자에게 제공하고, 라이브 응용 프로그램을 검사할 때 디버깅이나 진단 도구로 사용할 수 있을뿐만 아니라 강의 도구, 설명서 도구 또는 실험 도구로도 사용할 수 있습니다.
 
-![](media/intro-inspector.png)
+![Xamarin Inspector](media/intro-inspector.png)
 
 또한 Xamarin Inspector는 IDE의 디버깅 워크플로에 통합되고 다양한 프로그래밍 플랫폼(Android, iOS, Mac 및 Windows)을 대상으로 하는 고급 C# 콘솔을 제공하는 독립 실행형 응용 프로그램으로 구성됩니다.
 

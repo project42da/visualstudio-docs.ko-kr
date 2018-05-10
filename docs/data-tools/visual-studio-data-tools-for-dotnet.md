@@ -11,21 +11,23 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - dotnet
-ms.openlocfilehash: d2db4210085e3dc16d9c4b9e00653312ae0d5a82
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2b7fc572541e0c2f0f5aa04c6e676d1e2913ff9f
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="visual-studio-data-tools-for-net"></a>.NET 용 visual Studio data tools
 
-Visual Studio 및.NET Framework에는 광범위 한 API와 도구를 데이터베이스에 연결, 데이터를 메모리에 모델링 및 데이터의 사용자 인터페이스에 표시에 대 한 지원 제공 함께 합니다. 데이터 액세스 기능을 제공 하는.NET Framework 클래스 라고 [ADO.NET](/dotnet/framework/data/adonet/index)합니다. Visual Studio에서 도구는 데이터와 함께 ADO.NET 관계형 데이터베이스 및 XML을 지원 하기 위해 주로 원래 설계 되었습니다. 많은 NoSQL 데이터베이스 공급 업체 또는 제 3 자가 이러한 일 전 부터는 ADO.NET 공급자에 제공합니다.
+Visual Studio 및.NET Framework에는 광범위 한 API와 도구를 데이터베이스에 연결, 데이터를 메모리에 모델링 및 데이터의 사용자 인터페이스에 표시에 대 한 지원 제공 함께 합니다. 데이터 액세스 기능을 제공 하는.NET Framework 클래스 라고 [ADO.NET](/dotnet/framework/data/adonet/index)합니다. Visual Studio에서 도구는 데이터와 함께 ADO.NET 주로 관계형 데이터베이스 및 XML을 지원 하기 위해 설계 되었습니다. 많은 NoSQL 데이터베이스 공급 업체 또는 제 3 자가 이러한 일 전 부터는 ADO.NET 공급자에 제공합니다.
 
 [.NET core](/dotnet/core/) ADO.NET 데이터 집합 및 관련 된 형식을 제외 하 고 지원 합니다. .NET Core 대상으로 하는 개체-관계형 매핑 (ORM) 계층을 필요로 하는 경우 사용 하 여 [Entity Framework Core](/ef/core/)합니다.
 
 다음 다이어그램에서는 기본 아키텍처의 대략적인된 개요를 보여 줍니다.
 
 ![ADO.NET 아키텍처](../data-tools/media/raddata-ado-net-architecture-diagram.png)
+
+## <a name="typical-workflow"></a>일반적인 워크플로
 
 일반적인 과정은 다음과 같습니다.
 

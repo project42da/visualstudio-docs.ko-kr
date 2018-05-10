@@ -15,18 +15,18 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 16eb42011a15539193e9d69724d299c73e5cecc4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2de9b21f55765706a56110aee84959b2003e994e
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="log-command-window-output-command"></a>명령 창 출력 로그 명령
 **명령** 창의 모든 입력 및 출력을 파일로 복사합니다.
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ```
 
@@ -58,19 +58,19 @@ Tools.LogCommandWindowOutput [filename] [/on|/off] [/overwrite]
 ## <a name="examples"></a>예제
  이 예제에서는 cmdlog라는 새 로그 파일을 만들고 명령 로그를 시작합니다.
 
-```
+```cmd
 >Tools.LogCommandWindowOutput cmdlog
 ```
 
  이 예제에서는 로깅 명령을 중지합니다.
 
-```
+```cmd
 >Tools.LogCommandWindowOutput /off
 ```
 
  이 예제에서는 이전에 사용된 로그 파일에서 명령의 로깅을 다시 시작합니다.
 
-```
+```cmd
 >Tools.LogCommandWindowOutput /on
 ```
 

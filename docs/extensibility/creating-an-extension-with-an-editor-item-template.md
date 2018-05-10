@@ -13,16 +13,16 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 60f10479e0ce6fa08e888d92556ff47b5d82af66
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9fd58c1ada38f8d79402bb08564bf91de23fb086
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="creating-an-extension-with-an-editor-item-template"></a>편집기 항목 템플릿을 사용 하 여 확장 만들기
 편집기 분류자, 장식 및 안쪽 여백을 추가 된 기본 편집기 확장을 만드는 Visual Studio SDK에 포함 된 항목 템플릿을 사용할 수 있습니다. 편집기 항목 템플릿은 Visual C# 또는 Visual Basic VSIX 프로젝트에 사용할 수 있습니다.  
   
-## <a name="prerequisites"></a>필수 조건  
+## <a name="prerequisites"></a>전제 조건  
  Visual Studio 2015를 시작 하면 설치 하지 마십시오 Visual Studio SDK 다운로드 센터에서. Visual Studio 설치 프로그램에서 선택적 기능으로 포함 됩니다. 또한 VS SDK를 나중에 설치할 수 있습니다. 자세한 내용은 참조 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다.  
   
 ## <a name="creating-a-classifier-extension"></a>분류자 확장 만들기  
@@ -36,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
     -   EditorClassifier1.cs 포함는 `EditorClassifier1` 클래스입니다.  
   
-    -   EditorClassifier1ClassificationDefinition.cs 포함는 `OEditorClassifier1ClassificationDefinition` 클래스입니다.  
+    -   EditorClassifier1ClassificationDefinition.cs 포함는 `EditorClassifier1ClassificationDefinition` 클래스입니다.  
   
     -   EditorClassifier1Format.cs 포함는 `EditorClassifier1Format` 클래스입니다.  
   
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/16/2018
   
     -   TextAdornment1.cs 포함는 `TextAdornment1` 클래스입니다.  
   
-    -   extAdornment1TextViewCreationListener.cs 포함는 `TextAdornment1TextViewCreationListener` 클래스입니다.  
+    -   TextAdornment1TextViewCreationListener.cs 포함는 `TextAdornment1TextViewCreationListener` 클래스입니다.  
   
 4.  프로젝트를 빌드하고 디버깅을 시작합니다. 실험적 인스턴스가 표시 됩니다. 텍스트 파일을 열면 텍스트 'a' 문자는 빨간색 파란색 배경을 바탕으로 요약 되어 있습니다.  
   
@@ -88,7 +88,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  에 **새 프로젝트** 대화 상자에서 **Visual C#** 또는 **Visual Basic** 클릭 하 고 **확장성**합니다. 에 **템플릿** 창 선택 **VSIX 프로젝트**합니다. **이름** 상자에 `MarginExtension`을 입력합니다. **확인**을 클릭합니다.  
   
-2.  에 **솔루션 탐색기**프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 / 새 항목**합니다. 이동에 Visual C# **확장성** 노드 선택한 **편집기 뷰포트 장식**합니다. 기본 파일 이름 (EditorMargin1.cs/vb)을 그대로 둡니다.  
+2.  에 **솔루션 탐색기**프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **추가 / 새 항목**합니다. 이동에 Visual C# **확장성** 노드 선택한 **편집기 여백**합니다. 기본 파일 이름 (EditorMargin1.cs/vb)을 그대로 둡니다.  
   
 3.  두 코드 파일은 다음과 같습니다.  
   

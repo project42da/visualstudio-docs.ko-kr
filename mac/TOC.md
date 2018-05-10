@@ -3,6 +3,7 @@
 # [IDE 둘러보기](ide-tour.md)
 
 # [설치](installation.md)
+## [미리 보기 설치](install-preview.md)
 ## [업데이트](update.md)
 ## [제거](uninstall.md)
 
@@ -30,6 +31,7 @@
 ## [조각](snippets.md)
 ## [블록 선택](block-selection.md)
 ## [편집기 테마](editor-themes.md)
+## [EditorConfig](editorconfig.md)
 ## [일반적인 바로 가기 키](keyboard-shortcuts.md)
 
 # [디버깅](debugging.md)
@@ -43,6 +45,7 @@
 ### [구성 만들기 및 편집](create-and-edit-configurations.md)
 
 # [버전 제어](version-control.md)
+## [TF 버전 제어](tf-version-control.md)
 ## [Git 리포지토리 설정](set-up-git-repository.md)
 ## [Git 작업](working-with-git.md)
 ## [Subversion 리포지토리 설정](set-up-subversion-repository.md)
@@ -50,7 +53,11 @@
 
 # [작업](workloads.md)
 ## [ASP.NET Core](asp-net-core.md)
+### [Razor](razor.md)
+### [Javascript](javascript.md)
 ## [Azure](azure-workload.md)
+### [Azure Functions 소개](azure-functions.md)
+### [자습서: Azure Functions](azure-functions-lab.md)
 ### [연결된 서비스](connected-services.md)
 ## [Unity 게임 개발](unity-tools.md)
 ### [설정](setup-vsmac-tools-unity.md)

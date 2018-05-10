@@ -18,11 +18,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e72c848ff9a0234040e60391be8baa05e23791a5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 41bddec00866f7c10140abc40c5ff12c623310d3
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="alias-command"></a>별칭 명령
 전체 명령에 대한 새 별칭, 전체 명령 및 인수에 대한 새 별칭, 또 다른 별칭을 만듭니다.
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="syntax"></a>구문
 
-```
+```cmd
 Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 ```
 
@@ -57,19 +57,19 @@ Tools.Alias [/delete] [/reset] [aliasname] [aliasstring]
 ## <a name="examples"></a>예제
  이 예제에서는 Edit.MakeUpperCase 전체 명령에 대해 `upper`라는 새 별칭을 만듭니다.
 
-```
+```cmd
 >Tools.Alias upper Edit.MakeUpperCase
 ```
 
  이 예제에서는 별칭 `upper`를 삭제합니다.
 
-```
+```cmd
 >Tools.alias /delete upper
 ```
 
  이 예제에서는 모든 최신 별칭 및 정의 목록을 표시합니다.
 
-```
+```cmd
 >Tools.Alias
 ```
 
