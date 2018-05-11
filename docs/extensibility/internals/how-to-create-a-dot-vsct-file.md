@@ -63,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Perl 언어의 복사본을 가져옵니다.  
   
-2.  일반적으로에 있는 Perl 스크립트 ConvertCTCToVSCT.pl의 복사본을 가져올는  *\<Visual Studio SDK 설치 경로 >*\VisualStudioIntegration\Tools\bin 폴더입니다.  
+2.  일반적으로에 있는 Perl 스크립트 ConvertCTCToVSCT.pl의 복사본을 가져올는  *\<Visual Studio SDK 설치 경로 >* \VisualStudioIntegration\Tools\bin 폴더입니다.  
   
 3.  변환하려는 .ctc 소스 파일의 복사본을 가져옵니다.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Studio 명령 프롬프트에서 .cto 및 .ctsym 파일이 들어 있는 디렉터리로 이동합니다.  
   
-4.  형식 **vsct.exe** *ctofilename * * *.cto** * vsctfilename***.vsct-S***symfilename ***.ctsym**합니다.  
+4.  형식 **vsct.exe** *ctofilename * * *.cto** * vsctfilename ***.vsct-S***symfilename ***.ctsym**합니다.  
   
      `ctofilename` .cto 파일의 이름인 `vsctfilename` , 만들려는 vsct 파일의 이름 및 `symfilename` .ctsym 파일의 이름입니다.  
   

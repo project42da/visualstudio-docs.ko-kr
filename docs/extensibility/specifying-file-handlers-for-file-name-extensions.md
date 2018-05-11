@@ -49,7 +49,7 @@ HKEY_CLASSES_ROOT\
 |--------------------|----------------------|  
 |.extension|제품 이름입니다. extension.versionMajor.versionMinor|  
   
- 특정 파일 확장명 값으로는 HKEY_CLASSES_ROOT에 버전이 지정 된 Progid를 추가 하 여 열 수 있는 응용 프로그램을 등록할 수 있습니다\\*\<확장 >*\OpenWithProgids 키입니다. 이 레지스트리 키에는 파일 확장명과 연결 된 대체 Progid의 목록이 포함 되어 있습니다. 나열 된 Progid와 관련 된 응용 프로그램에 표시 된 **프로그램 * * * 제품 이름* 하위 메뉴입니다. 동일한 응용 프로그램 모두에 지정 된 경우는 `OpenWithList` 및 `OpenWithProgids` 키, 운영 체제는 중복을 병합 합니다.  
+ 특정 파일 확장명 값으로는 HKEY_CLASSES_ROOT에 버전이 지정 된 Progid를 추가 하 여 열 수 있는 응용 프로그램을 등록할 수 있습니다\\*\<확장 >* \OpenWithProgids 키입니다. 이 레지스트리 키에는 파일 확장명과 연결 된 대체 Progid의 목록이 포함 되어 있습니다. 나열 된 Progid와 관련 된 응용 프로그램에 표시 된 **프로그램 * * * 제품 이름* 하위 메뉴입니다. 동일한 응용 프로그램 모두에 지정 된 경우는 `OpenWithList` 및 `OpenWithProgids` 키, 운영 체제는 중복을 병합 합니다.  
   
 > [!NOTE]
 >  `OpenWithProgids` 키만 Windows XP에서 지원 됩니다. 다른 운영 체제의이 키를 무시 하기 때문에 사용 하지 마십시오 것만 등록으로 파일 처리기에 대 한. 이 키를 사용 하 여 Windows XP에서 더 나은 사용자 환경을 제공 합니다.  

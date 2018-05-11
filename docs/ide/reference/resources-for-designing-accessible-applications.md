@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5d042ddd88ce4711d16ce963dbf7326c84097f52
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c151c371346287ce27814d11540d7227bc058c86
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="resources-for-designing-accessible-applications"></a>액세스 가능한 응용 프로그램 설계를 위한 리소스
 
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="third-party-resources"></a>타사 리소스
 
--   **W3C의 웹 콘텐츠에 대한 내게 필요한 옵션 지침** 이 웹 사이트에는 내게 필요한 옵션이 있는 웹 사이트 개발에 필요한 지침 및 기술이 있습니다. 자세한 내용은 [http://www.w3.org/WAI/GL/](http://www.w3.org/WAI/GL/)를 참조하세요.
+-   **W3C의 웹 콘텐츠에 대한 내게 필요한 옵션 지침** 이 웹 사이트에는 내게 필요한 옵션이 있는 웹 사이트 개발에 필요한 지침 및 기술이 있습니다. 자세한 내용은 [https://www.w3.org/WAI/GL/](https://www.w3.org/WAI/GL/)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

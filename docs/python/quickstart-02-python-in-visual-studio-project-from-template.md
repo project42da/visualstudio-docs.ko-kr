@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e352f8a0fffb3972f326edc767b799295b2c802e
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: a033d8b2709a6eaf871758d1bd46a3ad34f7a08f
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>빠른 시작: Visual Studio의 템플릿에서 Python 프로젝트 만들기
 
@@ -23,11 +23,11 @@ ms.lasthandoff: 04/27/2018
 
 1. Visual Studio 2017을 시작합니다.
 
-1. 상단 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택한 다음, **새 프로젝트** 대화 상자에서 “비어 있는 Flask”를 검색하고, 중간 목록에서 “비어 있는 Flask 웹 프로젝트” 템플릿을 선택하고, 프로젝트에 이름을 지정하고, **확인**을 선택합니다.
+1. 상단 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택한 다음, **새 프로젝트** 대화 상자에서 "비어 있는 Flask"를 검색하고, 중간 목록에서 "비어 있는 Flask 웹 프로젝트" 템플릿을 선택하고, 프로젝트에 이름을 지정하고, **확인**을 선택합니다.
 
     ![비어 있는 Flask 웹 프로젝트 템플릿을 사용하여 새 프로젝트 만들기](media/quickstart-python-06-blank-flask-template.png)
 
-1. Visual Studio에서는 “이 프로젝트에는 외부 패키지가 필요합니다.”라는 대화 상자를 포함한 메시지를 표시합니다. 템플릿에 Flask에 대한 종속성을 지정하는 `requirements.txt` 파일이 포함되기 때문에 이 대화 상자가 나타납니다. Visual Studio에서는 패키지를 자동으로 설치하고 *가상 환경*을 설치하는 옵션을 제공할 수 있습니다. 전역 환경에 설치하는 것보다 가상 환경을 사용하는 것이 좋습니다. 따라서 **가상 환경에 설치**를 선택하여 계속합니다.
+1. Visual Studio에서는 "이 프로젝트에는 외부 패키지가 필요합니다."라는 대화 상자를 포함한 메시지를 표시합니다. 템플릿에 Flask에 대한 종속성을 지정하는 `requirements.txt` 파일이 포함되기 때문에 이 대화 상자가 나타납니다. Visual Studio에서는 패키지를 자동으로 설치하고 *가상 환경*을 설치하는 옵션을 제공할 수 있습니다. 전역 환경에 설치하는 것보다 가상 환경을 사용하는 것이 좋습니다. 따라서 **가상 환경에 설치**를 선택하여 계속합니다.
 
     ![가상 환경에 Flask 설치](media/quickstart-python-07-install-into-virtual-environment.png)
 
@@ -74,6 +74,6 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="see-also"></a>참고 항목
 
-- [기존 Python 인터프리터 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment).
+- [기존 Python 인터프리터 수동 식별](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment).
 - [Visual Studio 2015 이하 버전에서 Python 지원 설치](installing-python-support-in-visual-studio.md)
 - [설치 위치](installing-python-support-in-visual-studio.md#install-locations).

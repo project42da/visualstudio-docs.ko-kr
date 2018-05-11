@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 849a0b14e5b4453a2e4bd60fc25a59b04add224b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2f2c371f50accf52c3c2702c3f09770f0bbe9b49
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-specify-build-events-visual-basic"></a>방법: 빌드 이벤트 지정(Visual Basic)
 
@@ -69,7 +69,7 @@ Visual Basic의 빌드 이벤트는 스크립트, 매크로 또는 기타 작업
 
 3.  *Module1.vb*에서 파일 맨 위의 다른 `Imports` 문에 다음 줄을 추가합니다.
 
-    ```
+    ```vb
     Imports System.Xml
     ```
 

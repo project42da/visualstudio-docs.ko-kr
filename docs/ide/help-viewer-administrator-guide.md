@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 19fde51de5e63a0cde9adebd28ad29fc295c6e9e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bccbd4f1365ea42b3e0331283a5659502038e133
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="help-viewer-administrator-guide"></a>도움말 뷰어 관리자 가이드
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/26/2018
 
 **도움말 콘텐츠 관리자**(*HlpCtntMgr.exe*)를 사용하여 인터넷에서 클라이언트 컴퓨터로 로컬 도움말 콘텐츠를 배포할 수 있습니다. 다음 구문을 사용합니다.
 
-```
+```cmd
 \\%ProgramFiles(x86)%\Microsoft Help Viewer\v2.3\HlpCtntmgr.exe /operation \<*name*> /catalogname \<*catalog name*> /locale \<*locale*>
 ```
 
@@ -137,7 +137,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  도움말 콘텐츠에 대한 배포 스크립트를 포함할 *.bat* 파일을 만듭니다. 클라이언트에서 푸시의 일부로 삭제될 파일에 대한 읽기 잠금이 있을 수 있으므로 업데이트를 푸시하기 전에 클라이언트를 종료해야 합니다. 예:
 
-    ```
+    ```cmd
     REM - copy pre-ripped content to ProgramData
     Xcopy %~dp0HelpLibrary2 %SYSTEMDRIVE%\ProgramData\Microsoft\HelpLibrary2\ /y /e /k /o
     if ERRORLEVEL 1 ECHO *** ERROR COPYING Help Library files to ProgramData (%ERRORLEVEL%)

@@ -40,7 +40,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  에 **리소스 추가** 대화 상자에서 리소스 파일의 예: 영어 (미국) 문화권을 선택 합니다.  
   
-     이 단계는 전역 리소스 파일 형식으로 리소스 솔루션에 추가 * x***.*** 문화권 ***.** resx Resource1.en US.resx 등입니다.  
+     이 단계는 전역 리소스 파일 형식으로 리소스 솔루션에 추가 * x ***.*** 문화권 ***.** resx Resource1.en US.resx 등입니다.  
   
 5.  경우는 **리소스 편집기** 열립니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 리소스 파일에 리소스를 추가 합니다.  
   
@@ -50,7 +50,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **솔루션 탐색기**, 아래에 있는 기능이 이름에 대 한 바로 가기 메뉴를 열고는 **기능** 노드를 선택한 후 **기능 리소스 추가**합니다.  
   
-     이 단계는 리소스 파일 형식으로의 기능으로 추가 * ResourceFileName***.*** 문화권 ***.** resx Feature1.en US.resx 등입니다.  
+     이 단계는 리소스 파일 형식으로의 기능으로 추가 * ResourceFileName ***.*** 문화권 ***.** resx Feature1.en US.resx 등입니다.  
   
 3.  경우는 **리소스 편집기** 열립니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 리소스 파일에 리소스를 추가 합니다.  
   
