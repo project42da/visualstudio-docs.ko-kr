@@ -1,5 +1,5 @@
 ---
-title: Visual Studio 시작 시간 향상 | Microsoft 문서
+title: Visual Studio 시작 시간 향상
 ms.date: 11/15/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,14 +12,15 @@ ms.author: gewarren
 manager: douge
 f1_keywords:
 - vs.performancecenter
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.workload:
 - multiple
-ms.openlocfilehash: ab8098e52f0045c913495dce81d5005772eac836
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b7ba4e3d3a32aa7921d23b8719ec63733b9e239e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="optimize-visual-studio-startup-time"></a>Visual Studio 시작 시간 최적화
 
@@ -45,7 +46,7 @@ Visual Studio에서 시작 속도가 느린 것을 감지하면 속도 저하를
 
 2. 사용하지 않으려는 확장을 선택한 다음 **사용하지 않음** 단추를 선택합니다.
 
-확장 관리자 또는 Visual Studio 성능 관리 대화 상자를 통해 이후 세션에 확장을 언제든 다시 사용할 수 있습니다.
+**확장 관리자** 또는 **Visual Studio 성능 관리** 대화 상자를 통해 이후 세션에 확장을 언제든지 다시 사용할 수 있습니다.
 
 ## <a name="a-nametool-windows-to-change-tool-window-settings-to-improve-startup-time"></a><a name="tool-windows" />시작 시간을 개선하도록 도구 창 설정을 변경하려면
 

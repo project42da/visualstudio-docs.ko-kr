@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 39e4b718ab7563e086f6ca2e85c31bd53b3c371c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e352f8a0fffb3972f326edc767b799295b2c802e
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="quickstart-create-a-python-project-from-a-template-in-visual-studio"></a>빠른 시작: Visual Studio의 템플릿에서 Python 프로젝트 만들기
 
@@ -23,11 +23,11 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio 2017을 시작합니다.
 
-1. 상단 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택한 다음, **새 프로젝트** 대화 상자에서 "비어 있는 Flask"를 검색하고, 중간 목록에서 "비어 있는 Flask 웹 프로젝트" 템플릿을 선택하고, 프로젝트에 이름을 지정하고, **확인**을 선택합니다.
+1. 상단 메뉴 모음에서 **파일 > 새로 만들기 > 프로젝트...** 를 선택한 다음, **새 프로젝트** 대화 상자에서 “비어 있는 Flask”를 검색하고, 중간 목록에서 “비어 있는 Flask 웹 프로젝트” 템플릿을 선택하고, 프로젝트에 이름을 지정하고, **확인**을 선택합니다.
 
     ![비어 있는 Flask 웹 프로젝트 템플릿을 사용하여 새 프로젝트 만들기](media/quickstart-python-06-blank-flask-template.png)
 
-1. Visual Studio에서는 "이 프로젝트에는 외부 패키지가 필요합니다."라는 대화 상자를 포함한 메시지를 표시합니다. 템플릿에 Flask에 대한 종속성을 지정하는 `requirements.txt` 파일이 포함되기 때문에 이 대화 상자가 나타납니다. Visual Studio에서는 패키지를 자동으로 설치하고 *가상 환경*을 설치하는 옵션을 제공할 수 있습니다. 전역 환경에 설치하는 것보다 가상 환경을 사용하는 것이 좋습니다. 따라서 **가상 환경에 설치**를 선택하여 계속합니다.
+1. Visual Studio에서는 “이 프로젝트에는 외부 패키지가 필요합니다.”라는 대화 상자를 포함한 메시지를 표시합니다. 템플릿에 Flask에 대한 종속성을 지정하는 `requirements.txt` 파일이 포함되기 때문에 이 대화 상자가 나타납니다. Visual Studio에서는 패키지를 자동으로 설치하고 *가상 환경*을 설치하는 옵션을 제공할 수 있습니다. 전역 환경에 설치하는 것보다 가상 환경을 사용하는 것이 좋습니다. 따라서 **가상 환경에 설치**를 선택하여 계속합니다.
 
     ![가상 환경에 Flask 설치](media/quickstart-python-07-install-into-virtual-environment.png)
 
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/19/2018
 
 **응답**: Python 워크로드를 설치하면 Visual Studio에서는 [Flask, Bottle 및 Django 웹 프레임워크](../python/python-web-application-project-templates.md), Azure 클라우드 서비스, 다른 기계 학습 시나리오 및 Python 앱을 포함하는 기존 폴더 구조에서 프로젝트를 만드는 템플릿을 비롯한 다양한 프로젝트 템플릿을 제공합니다. **Python** 언어 노드 및 해당 자식 노드를 선택하여 **파일 > 새로 만들기 > 프로젝트...** 대화 상자를 통해 이러한 항목에 액세스합니다.
 
-또한 Visual Studio에서는 다양한 파일 또는 *항목 템플릿*을 제공하여 Python 클래스, Python 패키지, Python 단위 테스트, web.config 파일 등을 신속하게 만듭니다. Python 프로젝트가 열려 있는 경우 **프로젝트 > 새 항목 추가...** 메뉴 명령을 통해 항목 템플릿에 액세스합니다.
+또한 Visual Studio에서는 다양한 파일 또는 ‘항목 템플릿’을 제공하여 Python 클래스, Python 패키지, Python 단위 테스트, `web.config` 파일 등을 신속하게 만듭니다. Python 프로젝트가 열려 있는 경우 **프로젝트 > 새 항목 추가** 메뉴 명령을 통해 항목 템플릿에 액세스합니다. [항목 템플릿](python-item-templates.md) 참조를 참조하세요.
 
 템플릿을 사용하면 프로젝트를 시작하거나 파일을 만들 때 상당한 시간을 절약할 수 있고, 다른 앱 형식 및 코드 구조에 대해 알아볼 수 있습니다. 제공되는 기능에 익숙해지도록 다양한 템플릿으로 프로젝트 및 항목을 만드는 데 몇 분이 걸릴 수 있습니다.
 

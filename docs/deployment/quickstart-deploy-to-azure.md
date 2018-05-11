@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: dd3fa975070656f54a48452a50e51c172d51c785
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c5c172ff3ec3033b50815efdb0b4ee293853ab1e
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio를 사용 하 여 Azure 응용 프로그램 서비스에 ASP.NET 또는 ASP.NET Core 응용 프로그램 게시
 
@@ -24,13 +24,19 @@ ms.lasthandoff: 04/19/2018
 
 Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등록](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)합니다.
 
+## <a name="prerequisites"></a>전제 조건
+
+* Visual Studio 2017 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
+
+    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 
 1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
 1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **웹**, 한 다음 가운데 창에서 하나를 선택 하 고 **ASP.NET 웹 응용 프로그램 (.NET Framework)** 또는 (C#만) **ASP.NET Core 웹 응용 프로그램**, 클릭 하 고 **확인**합니다.
 
-1. 선택 **MVC**, 다음 사항을 확인 **인증 안 함** 을 선택한 다음 클릭 **확인**합니다.
+1. 선택 **MVC** (선택 또는 **웹 응용 프로그램 (모델-뷰-컨트롤러)** .NET Core에 대 한), 다음 사항을 확인 **인증 안 함** 을 선택한 다음 클릭 **확인** .
 
 1. 같은 이름을 입력 **MyWebApp** 클릭 **확인**합니다.
 
@@ -44,7 +50,9 @@ Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등�
 
     ![선택 게시](../deployment/media/quickstart-publish-aspnet.png "선택 게시")
 
-1. 에 **게시** 창 선택 **Microsoft Azure 앱 서비스**합니다.
+1. 모든 게시 프로필을 이전에 구성한 경우는 **게시** 창이 나타납니다. 클릭 **새 프로필 만들기**합니다.
+
+1. 에 **게시 대상 선택** 대화 상자에서 선택 **앱 서비스**합니다.
 
     ![Azure 앱 서비스 선택](../deployment/media/quickstart-publish-azure.png "Azure 앱 서비스 선택")
 
@@ -70,5 +78,7 @@ Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등�
 
 ## <a name="next-steps"></a>다음 단계
 
-- [Azure에 ASP.NET Core 응용 프로그램을 배포 합니다.](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
-- [Git를 사용하여 Azure에 ASP.NET Core 연속 배포](/aspnet/core/publishing/azure-continuous-deployment)
+이 빠른 시작에서는 Azure에 배포에 대 한 게시 프로필을 만들려면 Visual Studio를 사용 하는 방법을 알아보았습니다. 게시를 구성할 수도 있습니다를 가져와서 프로필 게시 Azure 앱 서비스에서 설정 합니다.
+
+> [!div class="nextstepaction"]
+> [게시 설정 하 고 Azure에 배포 하는 가져오기](tutorial-import-publish-settings-azure.md)

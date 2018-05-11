@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: 4e8d28bb96fa17a82d758f5708fd592128296e7d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e28d306ede93cc4552e085e07e5ac5e977158386
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="publishing-to-azure-app-service"></a>Azure App Service에 게시
 
@@ -78,7 +78,7 @@ Visual Studio 2017에서 Azure App Service에 게시하려면 프로젝트의 �
 
 1. Visual Studio **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...* 을 선택합니다. 나타나는 대화 상자에서 “Azure web.config(빠른 CGI)” 템플릿을 선택하고 확인을 선택합니다. 그러면 프로젝트 루트에 `web.config` 파일이 만들어집니다.
 
-1. 경로가 서버의 Python 설치와 일치하도록 `web.config`의 `PythonHandler` 항목을 수정합니다. 예를 들어 Python 3.6.1 x64의 경우 항목은 다음과 같아야 합니다.
+1. 경로가 서버의 Python 설치와 일치하도록 `web.config`에서 `PythonHandler` 항목을 수정합니다. 정확한 정보는 [IIS 구성 참조](https://www.iis.net/configreference)(iis.net)를 참조하세요. 예를 들어 Python 3.6.1 x64의 경우 항목은 다음과 같아야 합니다.
 
     ```xml
     <system.webServer>
@@ -106,7 +106,7 @@ Visual Studio 2017에서 Azure App Service에 게시하려면 프로젝트의 �
         <add key="WSGI_HANDLER" value="FlaskAzurePublishExample.app"/>
         ```
 
-    - **Django**: Django 앱에 대한 `web.config`에서 두 가지 사항을 변경해야 합니다. 먼저, `WSGI_HANDLER` 값을 `django.core.wsgi.get_wsgi_application()`으로 변경합니다(개체가 `wsgi.py` 파일에 있음).
+    - **Django**: Django 프로젝트에 대한 `web.config`에서 두 가지 사항을 변경해야 합니다. 먼저, `WSGI_HANDLER` 값을 `django.core.wsgi.get_wsgi_application()`으로 변경합니다(개체가 `wsgi.py` 파일에 있음).
 
         ```xml
         <!-- Django apps only -->
@@ -119,7 +119,7 @@ Visual Studio 2017에서 Azure App Service에 게시하려면 프로젝트의 �
         <add key="DJANGO_SETTINGS_MODULE" value="DjangoAzurePublishExample.settings" />
         ```
 
-1. **Django 앱만 해당**: 프로젝트 이름이 일치하는 폴더에서 `settings.py`를 열고, 아래와 같이 ‘vspython-test-02.azurewebsites.net’을 사용자의 URL로 대체하여 사이트 URL 도메인을 `ALLOWED_HOSTS`에 추가합니다.
+1. **Django 앱만 해당**: Django 프로젝트의 `settings.py` 파일에서 아래와 같이 사이트 URL 도메인을 `ALLOWED_HOSTS`에 추가하고 ‘vspython-test-02.azurewebsites.net’을 다음 URL로 바꿉니다.
 
     ```python
     # Change the URL to your specific site
@@ -128,9 +128,13 @@ Visual Studio 2017에서 Azure App Service에 게시하려면 프로젝트의 �
 
     다음 오류에서 배열 결과에 사용자 URL을 추가하지 못했습니다. “DisallowedHost at / Invalid HTTP_HOST header: ‘\<site URL\>’ ‘\<사이트 URL\>’을 ALLOWED_HOSTS에 추가해야 할 수도 있습니다.”
 
+    배열이 비어 있으면 Django는 ‘localhost’를 자동으로 허용하지만 프로덕션 URL을 추가하면 해당 기능이 제거됩니다. 이러한 이유로 `settings.py`의 개별 개발 및 프로덕션 복사본을 유지 관리하거나, 환경 변수를 사용하여 런타임 값을 제어할 수 있습니다.
+
 1. **솔루션 탐색기**에서 이름이 사용자의 프로젝트와 동일한 폴더를 확장하고, `static` 폴더를 마우스 오른쪽 단추로 클릭하고, **추가 > 새 항목...** 을 선택하고, “Azure 정적 파일 web.config” 템플릿을 선택하고, **확인**을 선택합니다. 그러면 해당 폴더에 대해 Python 프로세스를 비활성화하는 `static` 폴더에 `web.config`가 만들어집니다. 이 구성은 Python 응용 프로그램을 사용하지 않고 기본 웹 서버에 정적 파일에 대한 요청을 보냅니다.
 
 1. 프로젝트를 저장한 다음, Visual Studio **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
+
+    ![프로젝트의 상황에 맞는 메뉴에서 게시 명령](media/template-web-publish-command.png)
 
 1. 표시되는 **게시** 탭에서 게시 대상을 선택합니다.
 
@@ -166,8 +170,8 @@ Visual Studio 2017에서 Azure App Service에 게시하려면 프로젝트의 �
 
     e. 새 패키지를 설치한 후 App Service를 다시 시작합니다. App Service는 `web.config`가 변경될 때마다 자동 다시 시작을 수행하므로 `web.config`를 변경하는 경우 다시 시작할 필요가 없습니다.
 
-    > [!Tip] 
-    > 앱의 `requirements.txt` 파일을 변경하는 경우 다시 Kudu 콘솔을 사용하여 해당 파일에 현재 나열되어 있는 모든 패키지를 설치하도록 합니다. 
+    > [!Tip]
+    > 앱의 `requirements.txt` 파일을 변경하는 경우 다시 Kudu 콘솔을 사용하여 해당 파일에 현재 나열되어 있는 모든 패키지를 설치하도록 합니다.
 
 1. 서버 환경을 완전히 구성한 후 브라우저에서 페이지를 새로 고치면 웹앱이 표시됩니다.
 
@@ -175,7 +179,7 @@ Visual Studio 2017에서 Azure App Service에 게시하려면 프로젝트의 �
 
 ## <a name="publishing-to-app-service---visual-studio-2015"></a>App Service에 게시 - Visual Studio 2015
 
-> [!Note] 
+> [!Note]
 > 이 프로세스의 짧은 동영상은 [Visual Studio Python 자습서: 웹 사이트 빌드](https://www.youtube.com/watch?v=FJx5mutt1uk&list=PLReL099Y5nRdLgGAdrb_YeTdEnd23s6Ff&index=6)(youtube.com, 3분 10초)에서 찾을 수 있습니다.
 
 1. **솔루션 탐색기**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
@@ -195,7 +199,7 @@ Visual Studio 2017에서 Azure App Service에 게시하려면 프로젝트의 �
 
 1. 추가 설정을 검토하는 데 필요하면 **다음 >** 을 선택합니다. [Azure에서 Python 코드를 원격으로 디버그](debugging-remote-python-code-on-azure.md)하려는 경우 **구성**을 **디버그**로 설정해야 합니다.
 
-1. **게시**를 선택합니다. 응용 프로그램을 Azure에 배포하면 해당 사이트에서 기본 브라우저가 열립니다. 
+1. **게시**를 선택합니다. 응용 프로그램을 Azure에 배포하면 해당 사이트에서 기본 브라우저가 열립니다.
 
 이 프로세스의 일환으로, Visual Studio는 다음 단계도 수행합니다.
 

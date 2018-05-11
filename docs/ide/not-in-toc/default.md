@@ -1,5 +1,5 @@
 ---
-title: Visual Studio의 F1 기본 페이지 | Microsoft Docs
+title: F1 도움말의 기본 페이지
 ms.date: 02/28/2018
 ms.topic: conceptual
 robots: noindex,nofollow
@@ -9,12 +9,13 @@ f1_keywords:
 manager: douge
 author: gewarren
 ms.author: gewarren
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: 2d5b027041e9b5ff31126af5e44e22415240ea55
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3856987971f74c8caa7210fa2284812f802c2b9d
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # F1 도움말
 
@@ -36,4 +37,4 @@ ms.lasthandoff: 04/16/2018
 
 ## 기능 향상 지원 F1
 
-**F1**을 눌렀을 때 찾는 내용에 관한 피드백을 남겨서 F1 도움말 환경을 개선하도록 도와 주십시오. 예를 들어 커서가 무슨 기호 또는 창에 있었습니까? 아래의 **설명서에 대한 사용자 의견 제공** 단추를 사용하십시오. 감사합니다!
+**F1** 키을 눌렀을 때 찾는 내용에 관한 피드백을 남겨서 F1 도움말 환경을 개선하도록 도와주세요. 예를 들어 커서가 무슨 기호 또는 창에 있었습니까? 아래의 **설명서에 대한 사용자 의견 제공** 단추를 사용하세요. 감사합니다!

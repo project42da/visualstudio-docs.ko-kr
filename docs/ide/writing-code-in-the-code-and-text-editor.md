@@ -1,7 +1,7 @@
 ---
-title: Visual Studio의 코드 편집기 기능 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio의 코드 편집기 기능
 ms.date: 02/23/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,17 +12,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a7aacedac2045dcf069ea2d8a0f406d6322d7ca6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3803a8ffb95aae59846b468b41f04eaa96f324f1
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="features-of-the-code-editor"></a>코드 편집기의 기능
 
 Visual Studio 편집기에서는 코드 및 텍스트를 더 쉽게 작성 및 관리할 수 있는 다양한 기능을 제공합니다. 개요를 사용하여 여러 코드 블록을 확장 및 축소할 수 있습니다. IntelliSense, **개체 브라우저**및 호출 계층 구조를 사용하여 코드에 대해 자세히 알아볼 수 있습니다. **이동**, **정의로 이동**, 및 **모든 참조 찾기** 등의 기능을 사용하여 코드를 찾을 수 있습니다. 코드 조각이 있는 코드 블록을 삽입할 수 있고 **사용법에서 생성**과 같은 기능을 사용하여 코드를 생성할 수 있습니다. 이전에 Visual Studio 편집기를 사용한 적이 없을 경우 빠른 개요를 보려면 [코드 편집](https://www.visualstudio.com/features/ide-vs) 을 참조하세요.
 
-다양한 방법으로 코드를 볼 수 있습니다. 기본적으로 **솔루션 탐색기**는 파일별로 구성된 코드를 보여 줍니다. 창 아래쪽의 **클래스 뷰** 탭을 클릭하여 클래스별로 구성된 코드를 볼 수 있습니다.
+다양한 방법으로 코드를 볼 수 있습니다. 기본적으로 **솔루션 탐색기**는 파일별로 구성된 코드를 보여줍니다. 창 아래쪽의 **클래스 뷰** 탭을 클릭하여 클래스별로 구성된 코드를 볼 수 있습니다.
 
 단일 파일이나 여러 파일에서 텍스트를 검색하고 바꿀 수 있습니다. 자세한 내용은 [Finding and Replacing Text](../ide/finding-and-replacing-text.md)를 참조하세요. 정규식을 사용하여 텍스트를 찾고 바꿀 수 있습니다. 자세한 내용은 [Visual Studio에서 정규식 사용](../ide/using-regular-expressions-in-visual-studio.md)을 참조하세요.
 

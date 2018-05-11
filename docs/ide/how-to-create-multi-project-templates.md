@@ -1,9 +1,8 @@
 ---
-title: Visual Studio에 대한 다중 프로젝트 템플릿 만들기 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio에 대한 다중 프로젝트 템플릿 만들기
 ms.date: 01/02/2018
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - Visual Studio templates, creating multi-project
@@ -12,11 +11,11 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: b3902dd2b6f4dfac72d61d2c4d81937dcbbfdd07
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8f28e451da90d9709eda1886a549819b4d46415f
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-multi-project-templates"></a>방법: 다중 프로젝트 템플릿 만들기
 
@@ -26,15 +25,15 @@ ms.lasthandoff: 04/19/2018
 
 또한 다중 프로젝트 템플릿은 단일 프로젝트 템플릿 다르게 작동합니다. 다음과 같은 고유한 특징이 있습니다.
 
-- 다중 프로젝트 템플릿에 있는 개별 프로젝트는 **새 프로젝트** 대화 상자에서 이름을 할당할 수 없습니다. 대신 *.vstemplate* 파일에 있는 `ProjectTemplateLink` 요소의 `ProjectName` 특성을 사용하여 각 프로젝트의 이름을 지정합니다.
+- 다중 프로젝트 템플릿에 있는 개별 프로젝트는 **새 프로젝트** 대화 상자에서 이름을 할당할 수 없습니다. 대신 *vstemplate* 파일에 있는 `ProjectTemplateLink` 요소의 `ProjectName` 특성을 사용하여 각 프로젝트의 이름을 지정합니다.
 
-- 다중 프로젝트 템플릿에는 다른 언어로 작성된 프로젝트가 포함될 수 있지만 전체 템플릿 자체는 하나의 범주에만 배치될 수 있습니다. *.vstemplate* 파일에 있는 `ProjectType` 요소에서 템플릿 범주를 지정합니다.
+- 다중 프로젝트 템플릿에는 다른 언어로 작성된 프로젝트가 포함될 수 있지만 전체 템플릿 자체는 하나의 범주에만 배치될 수 있습니다. *vstemplate* 파일에 있는 `ProjectType` 요소에서 템플릿 범주를 지정합니다.
 
 다중 프로젝트 템플릿에는 *.zip* 파일로 압축된 다음, 항목이 포함되어야 합니다.
 
-- 전체 다중 프로젝트 템플릿에 대한 루트 *.vstemplate* 파일입니다. 이 루트 *.vstemplate* 파일은 **새 프로젝트** 대화 상자에서 표시하는 메타데이터를 포함하고, 이 템플릿에서 프로젝트의 *.vstemplate* 파일을 찾을 위치를 지정합니다. 이 파일은 *.zip* 파일의 루트에 있어야 합니다.
+- 전체 다중 프로젝트 템플릿에 대한 루트 *vstemplate* 파일입니다. 이 루트 *vstemplate* 파일은 **새 프로젝트** 대화 상자에 표시되는 메타데이터를 포함하고, 템플릿의 프로젝트에 대한 *vstemplate* 파일을 찾을 위치를 지정합니다. 이 파일은 *.zip* 파일의 루트에 있어야 합니다.
 
-- 전체 프로젝트 템플릿에 필요한 파일이 포함된 둘 이상의 폴더입니다. 폴더에는 프로젝트의 모든 코드 파일 및 프로젝트의 *.vstemplate* 파일이 포함됩니다.
+- 전체 프로젝트 템플릿에 필요한 파일이 포함된 둘 이상의 폴더입니다. 폴더에는 프로젝트에 대한 모든 코드 파일이 포함되고 프로젝트에 대한 *vstemplate* 파일도 포함됩니다.
 
 예를 들어 두 개의 프로젝트가 포함된 다중 프로젝트 템플릿 *.zip* 파일에는 다음 파일 및 디렉터리가 있을 수 있습니다.
 
@@ -46,7 +45,7 @@ ms.lasthandoff: 04/19/2018
 - *\Project2\Project2.vbproj*
 - *\Project2\Class.vb*
 
-다중 프로젝트 템플릿의 루트 *.vstemplate* 파일은 다음과 같은 점에서 단일 프로젝트 템플릿과 다릅니다.
+다중 프로젝트 템플릿에 대한 루트 *vstemplate* 파일은 다음과 같은 점에서 단일 프로젝트 템플릿과 다릅니다.
 
 - `VSTemplate` 요소의 `Type` 특성에는 `Project` 대신 `ProjectGroup` 값이 포함됩니다. 예:
 
@@ -55,7 +54,7 @@ ms.lasthandoff: 04/19/2018
         xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
     ```
 
-- `TemplateContent` 요소에는 포함된 프로젝트의 *.vstemplate* 파일에 대한 경로를 정의하는 하나 이상의 `ProjectTemplateLink` 요소를 가진 `ProjectCollection` 요소가 포함됩니다. 예:
+- `TemplateContent` 요소에는 포함된 프로젝트의 *vstemplate* 파일에 대한 경로를 정의하는 `ProjectTemplateLink` 요소가 하나 이상 있는 `ProjectCollection` 요소가 포함됩니다. 예:
 
     ```xml
     <TemplateContent>
@@ -93,7 +92,7 @@ ms.lasthandoff: 04/19/2018
 
 1. 만든 해당 하위 디렉터리에 각 프로젝트의 *.zip* 파일 콘텐츠의 압축을 풉니다.
 
-1. 기본 디렉터리에 파일 확장명이 *.vstemplate*인 XML 파일을 만듭니다. 이 파일은 다중 프로젝트 템플릿에 대한 메타데이터를 포함합니다. 파일의 구조를 따르는 예제를 참조하세요. 각 프로젝트의 *.vstemplate* 파일에 상대 경로를 지정해야 합니다.
+1. 기본 디렉터리에 파일 확장명이 *.vstemplate*인 XML 파일을 만듭니다. 이 파일은 다중 프로젝트 템플릿에 대한 메타데이터를 포함합니다. 파일의 구조를 따르는 예제를 참조하세요. 각 프로젝트의 *vstemplate* 파일에 대한 상대 경로를 지정해야 합니다.
 
 1. 기본 디렉터리를 선택하고, 마우스 오른쪽 단추를 클릭하면 나타나는 메뉴, 즉 바로 가기 메뉴에서 **보내기** > **압축(ZIP) 폴더**를 선택합니다.
 
@@ -105,10 +104,10 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="two-project-example"></a>두 프로젝트 예제
 
-이 예제에서는 기본 다중 프로젝트 루트 *.vstemplate* 파일을 보여줍니다. 이 예제에서 템플릿에는 `My Windows Application` 프로젝트와 `My Class Library` 프로젝트가 있습니다. `ProjectTemplateLink` 요소에서 `ProjectName` 특성은 프로젝트에 지정된 이름을 지정합니다.
+이 예제에서는 기본 다중 프로젝트 루트 *vstemplate* 파일을 보여줍니다. 이 예제에서 템플릿에는 `My Windows Application` 프로젝트와 `My Class Library` 프로젝트가 있습니다. `ProjectTemplateLink` 요소에서 `ProjectName` 특성은 프로젝트에 지정된 이름을 지정합니다.
 
 > [!TIP]
-> `ProjectName` 특성이 지정되지 않았으면 *.vstemplate* 파일의 이름이 프로젝트 이름으로 사용됩니다.
+> `ProjectName` 특성을 지정하지 않으면 *vstemplate* 파일의 이름이 프로젝트 이름으로 사용됩니다.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="ProjectGroup"
@@ -170,8 +169,8 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
-[방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)  
-[Visual Studio 템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)  
-[SolutionFolder 요소(Visual Studio 템플릿)](../extensibility/solutionfolder-element-visual-studio-templates.md)  
-[ProjectTemplateLink 요소(Visual Studio 템플릿)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)
+- [프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)
+- [방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)
+- [Visual Studio 템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)
+- [SolutionFolder 요소(Visual Studio 템플릿)](../extensibility/solutionfolder-element-visual-studio-templates.md)
+- [ProjectTemplateLink 요소(Visual Studio 템플릿)](../extensibility/projecttemplatelink-element-visual-studio-templates.md)

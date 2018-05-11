@@ -1,6 +1,6 @@
 ---
-title: Python 작업, 2단계, 코드 작성 및 실행
-description: 간단한 Hello World 프로그램을 편집하여 실행하는 방법을 설명하고 이어서 Visual Studio의 편집 및 IntelliSense 기능을 보여 주는 더 흥미로운 코드를 제공하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 2단계입니다.
+title: Python 작업 자습서, 2단계, 코드 작성 및 실행
+description: Visual Studio의 Python 기능에 대한 핵심 연습의 2단계로, 코드 편집 및 프로젝트 실행을 포함합니다.
 ms.date: 01/16/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 607903093735c1ab49886afcf292121e0b7bafb8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0769005bbf3715ae46a70e5461a6e34e50830c94
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="step-2-writing-and-running-code"></a>2단계 - 코드 작성 및 실행
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/19/2018
 
 프로젝트 파일은 솔루션 탐색기에서 관리하더라도 일반적으로 소스 코드와 같은 파일의 *콘텐츠*는 *편집기* 창에서 작업합니다. 편집기는 컨텍스트에 따라 프로그래밍 언어(파일 확장명에 따라)를 포함한 편집 중인 파일의 유형을 파악하고, IntelliSense를 사용한 구문 색 지정 및 자동 완성과 같이 해당 언어에 적절한 기능을 제공합니다.
 
-1. 새로운 "Python 응용 프로그램" 프로젝트를 만들면 Visual Studio 편집기에 `PythonApplication1.py`라는 기본 빈 파일이 열립니다.
+1. 새로운 “Python 응용 프로그램” 프로젝트를 만들면 Visual Studio 편집기에 `PythonApplication1.py`라는 기본 빈 파일이 열립니다.
 
 1. 편집기에서 `print("Hello, Visual Studio")`를 입력하기 시작하면 Visual Studio IntelliSense가 입력 도중에 자동 완성 옵션을 어떻게 표시하는지 알 수 있습니다. 드롭다운 목록에서 윤곽선이 있는 옵션은 Tab 키를 누르면 사용되는 기본 완성입니다. 완성 기능은 더 긴 문이나 식별자가 포함된 경우에 가장 유용합니다.
 
@@ -54,17 +54,17 @@ ms.lasthandoff: 04/19/2018
 
 1. IntelliSense는 명령문 및 함수 완성 외에 Python `import` 및 `from` 문 완성 기능도 제공합니다. 이러한 완성 기능을 사용하면 사용자 환경에서 사용할 수 있는 모듈과 해당 모듈의 멤버를 손쉽게 확인할 수 있습니다. 편집기에서 `print` 줄을 삭제하고 `import ` 입력을 시작합니다. 공백을 입력하면 모듈의 목록이 표시됩니다.
 
-    ![import 문에 사용할 수 있는 모듈을 보여 주는 IntellSense](media/vs-getting-started-python-08-import1.png)
+    ![import 문에 사용할 수 있는 모듈을 보여주는 IntellSense](media/vs-getting-started-python-08-import1.png)
 
 1. `sys`를 입력하거나 선택하여 줄을 완성합니다.
 
 1. 다음 줄에 `from`을 입력하면 모듈 목록을 다시 볼 수 있습니다.
 
-    ![from 문에 사용할 수 있는 모듈을 보여 주는 IntellSense](media/vs-getting-started-python-09-import2.png)
+    ![from 문에 사용할 수 있는 모듈을 보여주는 IntellSense](media/vs-getting-started-python-09-import2.png)
 
 1. `math`를 선택하거나 입력한 후 계속해서 공백과 `import`를 입력하면 모듈 멤버가 표시됩니다.
 
-    ![모듈 멤버를 보여 주는 IntellSense](media/vs-getting-started-python-10-import3.png)
+    ![모듈 멤버를 보여주는 IntellSense](media/vs-getting-started-python-10-import3.png)
 
 1. `sin`, `cos` 및 `radians` 멤버를 가져오고 각각에 사용 가능한 자동 완성을 확인하여 완료합니다. 완료되면 코드가 다음과 같이 표시됩니다.
 
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/19/2018
 
 1. Ctrl + F5 또는 **디버그 > 디버깅하지 않고 시작**을 사용하여 프로그램을 다시 실행합니다. 완료되면 출력 창을 닫습니다.
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-step"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [대화형 REPL 창 사용](tutorial-working-with-python-in-visual-studio-step-03-interactive-repl.md)

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio를 로컬 폴더에 배포 | Microsoft Docs
 ms.custom: ''
-ms.date: 11/22/2017
+ms.date: 05/08/2018
 ms.technology: vs-ide-deployment
 ms.topic: quickstart
 helpviewer_keywords:
@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 024d191628e413f07cd510595eac5c7d9fca085b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a3b54a8fa30ef5eafcc5ebce5c81cc7b80be6fb6
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Visual Studio 게시 도구를 사용 하 여 로컬 폴더에 웹 앱 또는.NET Core 응용 프로그램 배포
 
@@ -24,11 +24,17 @@ ms.lasthandoff: 04/19/2018
 
 이 단계는 ASP.NET, ASP.NET Core,.NET Core 및 Visual Studio에서 Python 응용 프로그램에 적용 합니다. Node.js에 대 한 단계는 지원 되지만 사용자 인터페이스는 다릅니다.
 
+## <a name="prerequisites"></a>전제 조건
+
+* Visual Studio 2017 설치 되어 있어야 합니다 및 **.NET Framework** 및 **.NET Core** 개발 작업을 설치 합니다.
+
+    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 
 1. Visual Studio에서 **파일 > 새 프로젝트**를 선택합니다.
 
-1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 **콘솔 응용 프로그램 (.NET Core)** 합니다.
+1. 아래 **Visual C#** 또는 **Visual Basic**, 선택 **.NET Core**를 선택한 다음 가운데 창에서 메뉴 **콘솔 응용 프로그램 (.NET Core)** 합니다.
 
 1. 같은 이름을 입력 **MyLocalApp** 클릭 **확인**합니다.
 
@@ -40,7 +46,9 @@ ms.lasthandoff: 04/19/2018
 
     ![선택 게시](../deployment/media/quickstart-publish.png "선택 게시")
 
-1. 에 **게시** 창 선택 **폴더**합니다.
+1. 모든 게시 프로필을 이전에 구성한 경우는 **게시** 창이 나타납니다. 클릭 **새 프로필 만들기**합니다.
+
+1. 에 **게시 대상 선택** 대화 상자에서 선택 **폴더**합니다.
 
     ![폴더를 선택](../deployment/media/quickstart-publish-folder.png "폴더를 선택 합니다.")
 

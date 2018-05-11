@@ -1,6 +1,6 @@
 ---
-title: Python 작업, 6단계, Git 작업
-description: Visual Studio의 Git 관련 기능을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 6단계입니다.
+title: Python 작업 자습서, 6단계, Git 작업
+description: Visual Studio의 Python에 대한 핵심 연습의 6단계로, Visual Studio의 Git 관련 기능을 설명합니다.
 ms.date: 01/16/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 93c8ba2ecaaacdd8dd2b0bbf9972df5d5f514c10
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c428082a061224f5bb8f3703d6ab4bed2b33aa76
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="step-6-working-with-git"></a>6단계: Git 작업
 
@@ -37,7 +37,7 @@ Visual Studio는 로컬 Git 리포지토리 및 원격 리포지토리(예: GitH
 
 1. **변경 내용**(또는 연필 아이콘을 포함한 Git 컨트롤)을 선택하여 커밋되지 않은 변경 내용을 검토하고 필요한 경우 커밋합니다.
 
-    ![커밋되지 않은 변경 내용을 보여 주는 Visual Studio의 팀 탐색기](media/working-with-git-03.png)
+    ![커밋되지 않은 변경 내용을 보여주는 Visual Studio의 팀 탐색기](media/working-with-git-03.png)
 
     **변경** 목록에서 파일을 두 번 클릭하여 해당 파일에 대한 차이 보기를 엽니다.
 
@@ -45,9 +45,9 @@ Visual Studio는 로컬 Git 리포지토리 및 원격 리포지토리(예: GitH
 
 1. **분기**(또는 분기 이름을 포함한 Git 컨트롤)를 선택하여 분기를 검사하고 병합을 수행하고 작업을 다시 지정합니다.
 
-    ![분기를 보여 주는 Visual Studio의 팀 탐색기](media/working-with-git-04.png)
+    ![분기를 보여주는 Visual Studio의 팀 탐색기](media/working-with-git-04.png)
 
-1. 리포지토리 이름(이전 이미지에서 "CosineWave")을 포함한 Git 컨트롤을 선택하면 **팀 탐색기**는 다른 리포지토리로 신속하고 완전하게 전환할 수 있는 **연결** 인터페이스를 보여줍니다.
+1. 리포지토리 이름(이전 이미지에서 “CosineWave”)을 포함한 Git 컨트롤을 선택하면 **팀 탐색기**는 다른 리포지토리로 신속하고 완전하게 전환할 수 있는 **연결** 인터페이스를 보여줍니다.
 
 1. 로컬 저장소를 사용하는 경우 커밋된 변경 내용은 리포지토리로 직접 이동합니다. 원격 리포지토리에 연결된 경우 **팀 탐색기**에서드 롭다운 헤더를 선택하고, **동기화**를 선택하여 **동기화** 섹션으로 전환하고 거기에 표시되는 끌어오기 및 페치 명령으로 작업합니다.
 

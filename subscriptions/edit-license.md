@@ -9,11 +9,11 @@ description: 관리자가 구독 할당을 편집하는 방법을 알아봅니�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: fa700e62f6491321aae2696739f85b7cfd4cecd3
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 9ea5f6bc562ce520be08728facfb6099df95ca4c
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="editing-visual-studio-subscription-assignments"></a>Visual Studio 구독 할당 편집
 
@@ -21,8 +21,6 @@ ms.lasthandoff: 04/06/2018
 
 ## <a name="making-changes-to-subscriber-information"></a>구독자 정보 변경
 구독자 정보를 편집하여 오류를 수정하거나 정보를 업데이트할 수 있습니다. 
-> [!NOTE]
-> 구독자의 이메일 주소를 편집하면 기존 혜택이 다시 설정됩니다.
 
 구독자를 편집하려면 마우스로 위를 가리킬 때 구독자의 이메일 주소 옆에 나타나는 줄임표(...)를 선택합니다. 드롭다운이 표시됩니다.  **편집**을 선택하여 구독자 세부 정보를 수정합니다. 또한 그리드에서 구독자의 행을 두 번 클릭하여 편집 창을 열 수도 있습니다.
 

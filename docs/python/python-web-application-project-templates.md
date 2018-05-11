@@ -1,7 +1,7 @@
 ---
 title: Python용 웹 응용 프로그램 템플릿
 description: 디버깅 구성 및 Azure App Service에 게시를 포함하여 Bottle, Flask 및 Django 프레임워크를 사용하는, Python으로 작성된 웹 응용 프로그램용 Visual Studio 템플릿에 대한 개요입니다.
-ms.date: 07/13/2017
+ms.date: 04/17/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,27 +11,67 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0abb3752972e90347de2f296c11c86d8335fbb9a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 6d76bc7868c78b1def09376cb2382aa39cff1cda
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="python-web-application-project-templates"></a>Python 웹 응용 프로그램 프로젝트 템플릿
 
-Visual Studio의 Python은 다양한 프레임워크를 처리하도록 구성할 수 있는 디버그 시작 관리자 및 프로젝트 템플릿을 통해 Bottle, Flask 및 Django 프레임워크에서 웹 프로젝트 개발을 지원합니다. Pyramid와 같은 다른 프레임워크에 대한 일반 **웹 프로젝트** 템플릿을 사용할 수도 있습니다.
+Visual Studio의 Python은 다양한 프레임워크를 처리하도록 구성할 수 있는 디버그 시작 관리자 및 프로젝트 템플릿을 통해 Bottle, Flask 및 Django 프레임워크에서 웹 프로젝트 개발을 지원합니다. 이러한 템플릿에는 필요한 종속성을 선언하는 `requirements.txt` 파일이 포함됩니다. 이러한 템플릿 중 하나에서 프로젝트를 만들 때 Visual Studio에서 해당 패키지를 설치하라는 메시지가 표시됩니다. 이 문서의 뒷부분에 나오는 [프로젝트 요구 사항 설치](#installing-project-requirements)를 참조하세요.
 
-Visual Studio는 자체 프레임워크를 포함하지 않습니다. 프레임워크는 프로젝트를 마우스 오른쪽 단추로 클릭하고 **Python > 프레임워크 설치/업그레이드...** 를 선택하여 별도로 설치해야 합니다.
+Pyramid와 같은 다른 프레임워크에 대한 일반 “웹 프로젝트” 템플릿을 사용할 수도 있습니다. 이 경우, 프레임워크가 템플릿과 함께 설치되지 않습니다. 대신 프로젝트에 사용 중인 환경에 필요한 패키지를 설치합니다. [Python 환경 관리](managing-python-environments-in-visual-studio.md)를 참조하세요.
 
-실행할 때 템플릿에서 만든 프로젝트(**파일 > 새로 만들기 > 프로젝트...** 를 통해 액세스됨)는 임의로 선택된 로컬 포트로 웹 서버를 시작하며 디버그 시 기본 브라우저를 열고 Microsoft Azure로 직접 게시를 허용합니다.
+## <a name="using-a-project-template"></a>프로젝트 템플릿 사용
 
-![새 웹 프로젝트 템플릿](media/template-web-new-project.png)
+**파일** > **새로 만들기** > **프로젝트**를 사용하여 템플릿에서 프로젝트를 만듭니다. 웹 프로젝트에 대한 템플릿을 보려면 대화 상자의 왼쪽에서 **Python** > **웹**를 선택합니다. 그런 다음, 원하는 템플릿을 선택하여 프로젝트 및 솔루션의 이름을 제공하고 솔루션 디렉터리와 Git 리포지토리에 대한 옵션을 설정한 후 **확인**을 선택합니다.
 
-Bottle, Flask 및 Django의 각 템플릿은 몇 가지 페이지 및 정적 파일이 있는 시작 사이트를 포함합니다. 이 코드를 통해 서버를 로컬(일부 설정을 해당 환경에서 가져와야 함)에서 충분히 실행하고 디버깅하며 Microsoft Azure에 배포([WSGI 앱](http://www.python.org/dev/peps/pep-3333/) 개체에 제공해야 함)할 수 있습니다.
+![웹앱의 새 프로젝트 대화 상자](media/projects-new-project-dialog-web.png)
+
+앞에서 설명한 일반 “웹 프로젝트” 템플릿은 코드가 없고 Python 프로젝트라는 사실 외에 다른 가정이 없는 빈 Visual Studio 프로젝트만 제공합니다. “Azure Cloud Service” 템플릿에 대한 자세한 내용은 [Python용 Azure Cloud Service 프로젝트](python-azure-cloud-service-project-template.md)를 참조하세요.python-azure-cloud-service-project-template.md
+
+다른 모든 템플릿은 Bottle, Flask 또는 Django 웹 프레임워크를 기반으로 하며, 다음 섹션에 설명된 대로 세 개의 일반 그룹으로 나뉩니다. 이러한 템플릿으로 만든 앱에는 충분한 코드가 포함되어 로컬에서 앱을 실행하고 디버그할 수 있습니다. 또한 각 항목은 [Azure App Service에 배포](publishing-python-web-applications-to-azure-from-visual-studio.md)하는 데 필요한.[WSGI 앱 개체](http://www.python.org/dev/peps/pep-3333/)(python.org)를 제공합니다.
+
+### <a name="blank-group"></a>빈 그룹
+
+모든 “빈 (프레임워크) 웹 프로젝트” 템플릿은 `requirements.txt` 파일에 선언된 거의 최소한의 상용구 코드와 필요한 종속성을 사용하여 프로젝트를 만듭니다.
+
+| 템플릿 | 설명 |
+| --- | --- |
+| 빈 Bottle 웹 프로젝트 | 매우 짧은 인라인 페이지 템플릿을 사용하여 `<name>`을 에코하는 `/hello/<name>` 페이지 및 `/`에 대한 홈페이지를 사용하여 `app.py`에 최소 앱을 생성합니다. |
+| 빈 Django 웹 프로젝트 | 코어 Django 사이트 구조를 사용하지만 Django 앱은 포함되지 않은 Django 프로젝트를 생성합니다. 자세한 내용은 [Django 템플릿](python-django-web-application-project-template.md) 및 [Django 알아보기 1단계](learn-django-in-visual-studio-step-01-project-and-solution.md)를 참조하세요. |
+| 빈 Flask 웹 프로젝트 | 최소 앱을 `/`에 대한 단일 “Hello World!” 페이지로 생성합니다. 이 앱은 [빠른 시작: Visual Studio를 사용하여 첫 번째 Python 웹앱 만들기](../ide/quickstart-python.md?context=visualstudio/python/default)의 자세한 단계를 수행한 결과와 유사합니다.
+
+### <a name="web-group"></a>웹 그룹
+
+모든 “(프레임워크) 웹 프로젝트” 템플릿은 선택한 프레임워크와 관계없이 동일한 디자인으로 시작 웹앱을 만듭니다. 이 앱에는 부트스트랩을 사용하는 탐색 모음 및 반응형 디자인과 함께 홈, 정보 및 연락처 페이지가 포함됩니다. 각 앱은 정적 파일(CSS, JavaScript 및 글꼴)을 제공하도록 적절하게 구성되며, 프레임워크에 적합한 페이지 템플릿 메커니즘을 사용합니다.
+
+| 템플릿 | 설명 |
+| --- | --- |
+| Bottle 웹 프로젝트 | 정적 파일이 `static` 폴더에 포함되고 `app.py`의 코드를 통해 처리되는 앱을 생성합니다. 개별 페이지에 대한 라우팅은 `routes.py`에 포함되며, `views` 폴더에는 페이지 템플릿이 포함되어 있습니다.|
+| Django 웹 프로젝트 | 세 개의 페이지, 인증 지원 및 SQLite 데이터베이스(데이터 모델 없음)를 사용하여 Django 프로젝트 및 Django 앱을 생성합니다. 자세한 내용은 [Django 템플릿](python-django-web-application-project-template.md) 및 [Django 알아보기 4단계](learn-django-in-visual-studio-step-04-full-django-project-template.md)를 참조하세요. |
+| Flask 웹 프로젝트 | 정적 파일이 `static` 폴더에 포함되는 앱을 생성합니다. `views.py`의 코드는 `templates` 폴더에 포함된 Jinja 엔진을 사용하는 페이지 템플릿을 사용하여 라우팅을 처리합니다. `runserver.py` 파일은 시작 코드를 제공합니다. |
+| Flask/Jade 웹 프로젝트 | “Flask 웹 프로젝트” 템플릿과 동일한 앱을 생성하지만 Jade 템플릿 엔진을 사용합니다. |
+
+### <a name="polls-group"></a>설문 조사 그룹
+
+“설문 조사 (프레임워크) 웹 프로젝트” 템플릿은 사용자가 다양한 설문 조사 질문에 투표할 수 있는 시작 웹앱을 만듭니다. 각 앱은 데이터베이스를 사용하여 설문 조사 및 사용자 응답을 관리하는 “웹” 프로젝트 템플릿의 구조를 기반으로 합니다. 앱에는 적절한 데이터 모델과 `samples.json` 파일에서 설문 조사를 로드하는 특수한 앱 페이지(“/seed”)가 포함됩니다.
+
+| 템플릿 | 설명 |
+| --- | --- |
+| 설문 조사 Bottle 웹 프로젝트 | 메모리 내 데이터베이스, MongoDB 또는 Azure Table Storage에 대해 실행할 수 있는 앱을 생성하며, `REPOSITORY_NAME` 환경 변수를 사용하여 구성합니다. 데이터 모델 및 데이터 저장소 코드는 `models` 폴더에 포함되고 `settings.py` 파일에는 사용되는 데이터 저장소를 확인하는 코드가 포함되어 있습니다. |
+| 설문 조사 Django 웹 프로젝트 | 세 개의 페이지와 SQLite 데이터베이스를 사용하여 Django 프로젝트 및 Django 앱을 생성합니다. 인증된 관리자가 설문 조사를 만들고 관리할 수 있도록 하는 Django 관리 인터페이스에 대한 사용자 지정을 포함합니다. 자세한 내용은 [Django 템플릿](python-django-web-application-project-template.md) 및 [Django 알아보기 6단계](learn-django-in-visual-studio-step-06-polls-django-web-project-template.md)를 참조하세요. |
+| 설문 조사 Flask 웹 프로젝트 | 메모리 내 데이터베이스, MongoDB 또는 Azure Table Storage에 대해 실행할 수 있는 앱을 생성하며, `REPOSITORY_NAME` 환경 변수를 사용하여 구성합니다. 데이터 모델 및 데이터 저장소 코드는 `models` 폴더에 포함되고 `settings.py` 파일에는 사용되는 데이터 저장소를 확인하는 코드가 포함되어 있습니다. 앱은 페이지 템플릿에 Jinja 엔진을 사용합니다. |
+| 설문 조사 Flask/Jade 웹 프로젝트 | “설문 조사 Flask 웹 프로젝트” 템플릿과 동일한 앱을 생성하지만 Jade 템플릿 엔진을 사용합니다. |
+
+## <a name="installing-project-requirements"></a>프로젝트 요구 사항 설치
 
 프레임워크별 템플릿에서 프로젝트를 만들 때 pip를 사용하여 필요한 패키지를 설치할 수 있는 대화 상자가 나타납니다. 웹 프로젝트에 대해 [가상 환경](selecting-a-python-environment-for-a-project.md#using-virtual-environments)을 사용하여 웹 사이트를 게시할 때 올바른 종속성이 포함되도록 하는 것이 좋습니다.
 
 ![프로젝트 템플릿에 대해 필요한 패키지를 설치하는 대화 상자](media/template-web-requirements-txt-wizard.png)
+
+소스 제어를 사용하는 경우 가상 환경은 `requirements.txt`만 사용하여 다시 만들 수 있기 때문에 일반적으로 가상 환경 폴더를 생략합니다. 폴더를 제외하는 가장 좋은 방법은 먼저 위에 표시된 프롬프트에서 **직접 설치**를 선택한 다음, 가상 환경을 만들기 전에 자동 커밋을 사용하지 않도록 설정하는 것입니다. 자세한 내용은 [Django 알아보기 자습서 - 1-2 및 1-3단계](learn-django-in-visual-studio-step-01-project-and-solution.md#step-1-2-examine-the-git-controls-and-publish-to-a-remote-repository)를 참조하세요.
 
 Microsoft Azure App Service에 배포할 때는 [사이트 확장](https://aka.ms/PythonOnAppService)으로 Python 버전을 선택하고 패키지를 수동으로 설치합니다. 또한 Azure App Service는 Visual Studio에서 배포할 때 `requirements.txt` 파일에서 패키지를 자동으로 설치하지 **않으므로** [aka.ms/PythonOnAppService](https://aka.ms/PythonOnAppService)의 구성 세부 정보를 따릅니다.
 
@@ -39,9 +79,9 @@ Microsoft Azure Cloud Services는 `requirements.txt` 파일을 *지원합니다*
 
 ## <a name="debugging"></a>디버깅
 
-디버깅을 위해 웹 프로젝트가 시작되면 Visual Studio는 로컬에서 웹 서버를 시작하고 해당 주소 및 포트에 기본 브라우저를 엽니다. 추가 옵션을 지정하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**를 선택하고 **웹 시작 관리자** 탭을 선택합니다.
+디버깅을 위해 웹 프로젝트가 시작되면 Visual Studio는 임의 포트에서 로컬 웹 서버를 시작하고 해당 주소 및 포트로 기본 브라우저를 엽니다. 추가 옵션을 지정하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **속성**를 선택하고 **웹 시작 관리자** 탭을 선택합니다.
 
-  ![일반 웹 템플릿에 대한 웹 시작 관리자 속성](media/template-web-launcher-properties.png)
+![일반 웹 템플릿에 대한 웹 시작 관리자 속성](media/template-web-launcher-properties.png)
 
 **디버그** 그룹에서:
 
@@ -87,84 +127,23 @@ Pyramid 앱은 현재 `pcreate` 명령줄 도구를 사용하여 최적으로 �
   - 인수: `Production.ini`
 
 - **서버 디버그 명령** 그룹:
-    - 명령: `..\env\scripts\pserve-script.py`(스크립트)
-    - 인수: `Development.ini`
+  - 명령: `..\env\scripts\pserve-script.py`(스크립트)
+  - 인수: `Development.ini`
 
 > [!Tip]
-> 일반적으로 Pyramid 앱은 소스 트리의 최상위 디렉터리보다 한 수준 더 깊기 때문에 프로젝트의 **작업 디렉터리** 속성을 구성해야 합니다.
+> Pyramid 앱은 일반적으로 프로젝트 루트 아래의 폴더이므로 프로젝트의 **작업 디렉터리** 속성을 구성해야 할 수 있습니다.
 
 ### <a name="other-configurations"></a>기타 구성
 
 공유하려는 다른 프레임워크 설정이 있거나 다른 프레임워크 설정을 요청하려면 [GitHub에서 문제](https://github.com/Microsoft/PTVS/issues)를 엽니다.
 
-## <a name="publishing-to-azure-app-service"></a>Azure App Service에 게시
-
-Azure App Service에 게시하는 기본적인 두 가지 방법이 있습니다. 첫째, [Azure 설명서](http://azure.microsoft.com/en-us/documentation/articles/web-sites-publish-source-control/)에 설명된 대로 소스 제어에서 배포를 다른 언어와 동일한 방식으로 사용할 수 있습니다. Visual Studio에서 직접 게시하려면 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
-
-![프로젝트의 상황에 맞는 메뉴에서 게시 명령](media/template-web-publish-command.png)
-
-명령을 선택하면 마법사가 웹 사이트 만들기 또는 게시 설정 가져오기, 수정된 파일 미리 보기 및 원격 서버에 게시 과정을 안내합니다.
-
-App Service에서 사이트를 만들 때는 Python 및 사이트가 종속된 모든 패키지를 설치해야 합니다. 사이트를 먼저 게시할 수 있지만 Python을 구성할 때까지는 실행되지 않습니다.
-
-App Service에 Python을 설치하려면 [사이트 확장](http://www.siteextensions.net/packages?q=Tags%3A%22python%22)(siteextensions.net)을 사용하는 것이 좋습니다. 이러한 확장은 Python [공식 릴리스](https://www.python.org)의 복사본이며 Azure App Service용으로 최적화되어 다시 패키지되었습니다.
-
-[Azure Portal](https://portal.azure.com/)을 통해 사이트 확장을 배포할 수 있습니다. App Service에 대한 **개발 도구 > 확장** 블레이드를 선택하고 **추가**를 선택한 다음 목록을 스크롤하여 Python 항목을 찾습니다.
-
-![Azure Portal에서 사이트 확장 추가](media/template-web-site-extensions.png)
-
-JSON 배포 템플릿을 사용하는 경우 사이트 리소스로 사이트 확장을 지정할 수 있습니다.
-
-```json
-{
-    "resources": [
-    {
-        "apiVersion": "2015-08-01",
-        "name": "[parameters('siteName')]",
-        "type": "Microsoft.Web/sites",
-        ...
-    },
-    "resources": [
-    {
-        "apiVersion": "2015-08-01",
-        "name": "python352x64",
-        "type": "siteextensions",
-        "properties": { },
-        "dependsOn": [
-            "[resourceId('Microsoft.Web/sites', parameters('siteName'))]"
-        ]
-    },
-    ...
-}
-```
-
-마지막으로, [개발 콘솔](https://github.com/projectkudu/kudu/wiki/Kudu-console)을 통해 로그인하고 여기에서 사이트 확장을 설치할 수 있습니다.
-
-현재, 패키지 설치에 권장되는 방법은 사이트 확장을 설치하고 pip를 직접 실행한 후 배포 콘솔을 사용하는 것입니다. Python의 전체 경로를 사용하는 것이 중요하며, 그렇지 않으면 잘못된 경로를 실행할 수 있으며 일반적으로 가상 환경을 사용할 필요가 없습니다. 예:
-
-```command
-c:\Python35\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
-
-c:\Python27\python.exe -m pip install -r D:\home\site\wwwroot\requirements.txt
-```
-
-Azure App Service에 배포하면 사이트가 Microsoft IIS 뒤에서 실행됩니다. 사이트가 IIS와 함께 작동하도록 하려면 최소한 `web.config` 파일을 추가해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 새 항목...**(아래 대화 상자 참조)을 선택하면 사용할 수 있는 일반적인 배포 대상에 제공되는 템플릿이 있으며 이러한 구성을 다른 용도로 쉽게 수정할 수 있습니다. 사용 가능한 구성 설정에 대한 자세한 내용은 [IIS 구성 참조](https://www.iis.net/configreference)를 참조하세요.
-
-![Azure 항목 템플릿](media/template-web-azure-items.png)
-
-사용 가능한 항목은 다음과 같습니다.
-
-- Azure web.config(FastCGI): 앱이 들어오는 연결을 처리하기 위해 [WSGI](https://wsgi.readthedocs.io/en/latest/) 개체를 제공할 때 `web.config` 파일을 추가합니다.
-- Azure web.config(HttpPlatformHandler): 앱이 들어오는 연결에 대한 소켓을 수신할 때 `web.config` 파일을 추가합니다.
-- Azure 정적 파일 web.config: 위의 `web.config` 파일 중 하나가 있을 경우 해당 파일을 하위 디렉터리에 추가하여 앱에서 처리하지 않도록 합니다.
-- Azure의 원격 디버깅 web.config: WebSocket을 통해 원격 디버깅에 필요한 파일을 추가합니다.
-- 웹 역할 지원 파일: Cloud Service 웹 역할에 대한 기본 배포 스크립트를 포함합니다.
-- 작업자 역할 지원 파일: Cloud Service 작업자 역할에 대한 기본 배포 및 시작 스크립트를 포함합니다.
-
-프로젝트에 디버깅 `web.config` 템플릿을 추가하고 Python 원격 디버깅을 사용하려는 경우 “디버그” 구성에서 사이트를 게시해야 합니다. 이 설정은 현재 활성 솔루션 구성과 별개이며 항상 기본값인 “릴리스”로 설정됩니다. 이를 변경하려면 게시 마법사에서 **설정** 탭을 열고 **구성** 콤보 상자를 사용합니다(Azure Web Apps를 만들고 배포하는 방법에 대한 자세한 내용은 [Azure 설명서](https://azure.microsoft.com/develop/python/) 참조).
-
-![게시 구성 변경](media/template-web-publish-config.png)
+## <a name="convert-a-project-to-azure-cloud-service"></a>프로젝트를 Azure Cloud Service로 변환
 
 **Microsoft Azure 클라우드 서비스 프로젝트로 변환** 명령(아래 이미지)은 클라우드 서비스 프로젝트를 솔루션에 추가합니다. 이 프로젝트에는 사용되는 가상 컴퓨터 및 서비스에 대한 배포 설정 및 구성이 포함됩니다. 클라우드 서비스에 배포하려면 클라우드 프로젝트에서 **Publish** 명령을 사용합니다. Python 프로젝트에서 **Publish** 명령을 사용하면 여전히 웹 사이트에 배포됩니다. 자세한 내용은 [Azure Cloud Service 프로젝트](python-azure-cloud-service-project-template.md)를 참조하세요.
 
 ![Microsoft Azure Cloud Service 프로젝트 명령으로 변환](media/template-web-convert-menu.png)
+
+## <a name="see-also"></a>참고 항목
+
+- [Python 항목 템플릿 참조](python-item-templates.md)
+- [Azure App Service에 게시](publishing-python-web-applications-to-azure-from-visual-studio.md)

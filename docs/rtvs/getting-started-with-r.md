@@ -1,5 +1,5 @@
 ---
-title: R 시작
+title: R 시작 자습서
 description: 프로젝트 만들기, 대화형 창, 코드 편집 및 디버깅을 포함하여 Visual Studio에서 R을 사용하는 연습입니다.
 ms.date: 06/29/2017
 ms.prod: visual-studio-dev15
@@ -10,13 +10,13 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: c4ec2ce9a399c363427ef80087c1db1e8ef68d2c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: af2074770a97dbef1f9c8598ec8b6560bdd7f344
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="getting-started-with-r-tools-for-visual-studio"></a>Visual Studio용 R 도구 시작
+# <a name="get-started-with-r-tools-for-visual-studio"></a>Visual Studio용 R 도구 시작
 
 RTVS(Visual Studio용 R 도구)를 설치한 후([설치](installing-r-tools-for-visual-studio.md) 참조) 해당 도구가 제공하는 환경을 빠르게 경험할 수 있습니다. 
 

@@ -1,7 +1,7 @@
 ---
-title: Visual Studio에서 솔루션 및 프로젝트 만들기 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio에서 솔루션 및 프로젝트 만들기
 ms.date: 02/06/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 f1_keywords:
@@ -17,11 +17,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4bb984c1a6947438df663e228bb21bda4eea763c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d92cc8bcbc160dbc5cab10bffe30b08ba1cca7be
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="create-solutions-and-projects"></a>솔루션 및 프로젝트 만들기
 
@@ -134,7 +134,7 @@ Visual Studio IDE를 사용하지 않고 솔루션 및 해당 콘텐츠를 영�
 
 ## <a name="see-also"></a>참고 항목
 
-[솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)  
-[GitHub에 있는 Microsoft의 오픈 소스 리포지토리](https://github.com/Microsoft)  
-[Visual Studio 샘플](../ide/visual-studio-samples.md)  
-[개발자 코드 샘플](https://code.msdn.microsoft.com/)
+- [솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md)
+- [GitHub에 있는 Microsoft의 오픈 소스 리포지토리](https://github.com/Microsoft)
+- [Visual Studio 샘플](../ide/visual-studio-samples.md)
+- [개발자 코드 샘플](https://code.msdn.microsoft.com/)

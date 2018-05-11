@@ -1,6 +1,6 @@
 ---
-title: Python 작업, 4단계, 디버깅
-description: 디버거에서 Python 코드를 실행하는 방법을 보여 주는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 4단계입니다.
+title: Python 작업 자습서, 4단계, 디버깅
+description: Visual Studio의 Python 기능에 대한 핵심 연습의 4단계로, 디버거에서 Python 코드를 실행하는 방법을 설명합니다.
 ms.date: 03/08/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c3241adb4afdc18a8ca9a6d4c75f0ee8c80be7b7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 8f354c9209a7180db616a7ccc622df2809cfebe9
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="step-4-running-code-in-the-debugger"></a>4단계: 디버거에서 코드 실행
 
@@ -100,7 +100,7 @@ Visual Studio는 프로젝트 관리, 풍부한 편집 환경 제공 및 대화�
 > [!Tip]
 > Python 인터프리터를 시작하지 못할 때와 같이 일부 상황에서는 어떠한 오류 메시지도 확인하지 못할 정도로 출력 창이 아주 잠시 동안만 표시되었다가 자동으로 닫힙니다. 이러한 경우 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고, **속성**을 선택하고, **디버그** 탭을 선택한 다음 `-i`를 **인터프리터 인수** 필드에 추가합니다. 이 인수를 사용하면 프로그램이 완료된 후 인터프리터가 대화형 모드로 전환되어 창이 열린 상태로 유지되며 Ctrl+Z, Enter 키를 누르면 종료됩니다.
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-step"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [Python 환경에서 패키지 설치](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)

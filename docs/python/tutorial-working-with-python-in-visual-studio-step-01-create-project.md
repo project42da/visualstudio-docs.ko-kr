@@ -1,6 +1,6 @@
 ---
-title: Python 작업, 1단계, 프로젝트 만들기
-description: 전체 자습서를 개략적으로 설명하고, 필수 구성 요소를 설명하고, 새 Python 프로젝트를 만드는 프로세스를 연습하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 1단계입니다.
+title: Python 작업 자습서, 1단계, 프로젝트 만들기
+description: 필수 구성 요소 및 새 Python 프로젝트 만들기를 포함하여 Visual Studio의 Python 기능에 대한 핵심 연습의 개요 및 1단계입니다.
 ms.date: 01/16/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 5857f06deea3bc4e7c8af481330e6c66162e2f2a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4c7c4f0174b81c8f527c02da951c7e58de8752ec
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="working-with-python-in-visual-studio"></a>Visual Studio에서 Python 작업
 
@@ -31,9 +31,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 - [5단계: 패키지 설치 및 Python 환경 관리](tutorial-working-with-python-in-visual-studio-step-05-installing-packages.md)
 - [6단계: Git 작업](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)
 
-## <a name="prerequisites"></a>전제 조건
-
-- Python 작업이 설치된 Visual Studio 2017 지침은 [0단계](tutorial-working-with-python-in-visual-studio-step-00-installation.md)를 참조하세요.
+[!INCLUDE[tutorial-prereqs](includes/tutorial-prereqs.md)]
 
 ## <a name="step-1-create-a-new-python-project"></a>1단계: 새 Python 프로젝트 만들기
 
@@ -43,7 +41,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 
 1. Visual Studio에서 **파일 > 새로 만들기 > 프로젝트**(Ctrl+Shift+N)를 선택하면 **새 프로젝트** 대화 상자가 표시됩니다. 여기에서 다른 언어에서 템플릿을 찾아본 다음 프로젝트에 대한 템플릿을 선택하고 Visual Studio에서 파일을 삽입하는 위치를 지정합니다.
 
-1. Python 템플릿을 보려면 왼쪽의 **설치됨 > Python**을 선택하거나 "Python"을 검색합니다. 검색을 사용하는 것은 언어 트리에서 해당 위치를 기억할 수 없는 경우 템플릿을 찾을 수 있는 좋은 방법입니다.
+1. Python 템플릿을 보려면 왼쪽의 **설치됨 > Python**을 선택하거나 “Python”을 검색합니다. 검색을 사용하는 것은 언어 트리에서 해당 위치를 기억할 수 없는 경우 템플릿을 찾을 수 있는 좋은 방법입니다.
 
     ![Python 프로젝트가 표시된 새 프로젝트 대화 상자](media/vs-getting-started-python-01-new-project.png)
 
@@ -51,7 +49,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 
 1. **Python 응용 프로그램** 템플릿을 선택하고, 프로젝트 이름을 지정하고, **확인**을 선택합니다.
 
-1. 몇 분 후에 Visual Studio는 **솔루션 탐색기** 창(1)에 프로젝트 구조를 표시합니다. 기본 코드 파일은 편집기(2)에 열립니다. 디스크에서의 정확한 위치를 포함하여 솔루션 탐색기에서 선택한 모든 항목에 대한 추가 정보를 보여 주는 속성 창(3)도 표시됩니다.
+1. 몇 분 후에 Visual Studio는 **솔루션 탐색기** 창(1)에 프로젝트 구조를 표시합니다. 기본 코드 파일은 편집기(2)에 열립니다. 디스크에서의 정확한 위치를 포함하여 솔루션 탐색기에서 선택한 모든 항목에 대한 추가 정보를 보여주는 속성 창(3)도 표시됩니다.
 
     ![Python 프로젝트와 솔루션 탐색기](media/vs-getting-started-python-02-windows.png)
 
@@ -69,7 +67,7 @@ Visual Studio는 Python에 대한 고급 언어 지원을 제공합니다. 이 �
 
     솔루션 탐색기에서 노드 또는 항목을 마우스 오른쪽 단추로 클릭하여 해당 명령의 메뉴에 액세스합니다. 예를 들어 **Rename** 명령을 통해 프로젝트와 솔루션을 포함하여 노드 또는 항목의 이름을 변경할 수 있습니다.
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-step"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [코드 작성 및 실행](tutorial-working-with-python-in-visual-studio-step-02-writing-code.md)

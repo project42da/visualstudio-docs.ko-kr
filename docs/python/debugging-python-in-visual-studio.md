@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 576a8ffdd025667e811e96a712368de98bbe4cb4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b521c85bd2a4fb8c29674a51e5e13ded2aba3fec
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="debugging-your-python-code"></a>Python 코드 디버깅
 
@@ -125,7 +125,7 @@ HTML, XML 및 JSON 시각화는 구문 강조 표시 및 트리 보기가 있는
 
 각 예외의 확인란은 예외가 발생했을 때 디버거가 *항상* 중단되는지 여부를 제어합니다. 특정 예외에 대해 더 자주 중단하려는 경우 이 상자를 선택합니다.
 
-기본적으로 소스 코드에서 예외 처리기를 찾을 수 없는 경우 대부분의 예외로 인해 중단됩니다. 이 동작을 변경하려면 예외를 마우스 오른쪽 단추로 클릭하고 **사용자 코드에서 처리되지 않은 경우 계속**을 선택하거나 선택 취소합니다. 예외로 인해 발생하는 중단을 줄이려면 이 상자를 선택 취소합니다.
+기본적으로 소스 코드에서 예외 처리기를 찾을 수 없는 경우 대부분의 예외로 인해 중단됩니다. 이 동작을 변경하려면 예외를 마우스 오른쪽 단추로 클릭하고 **사용자 코드에서 처리되지 않은 경우 계속** 옵션을 수정합니다. 예외로 인해 발생하는 중단을 줄이려면 이 상자를 선택 취소합니다.
 
 이 목록에 표시되지 않은 예외를 구성하려면 **추가** 단추를 클릭하여 추가합니다. 이름은 예외의 전체 이름과 일치해야 합니다.
 

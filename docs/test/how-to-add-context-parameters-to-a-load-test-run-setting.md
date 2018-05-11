@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트 실행 설정에 컨텍스트 매개 변수 추가 | Microsoft Docs
+title: Visual Studio에서 부하 테스트 실행 설정에 컨텍스트 매개 변수 추가
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,12 +9,13 @@ ms.assetid: a8a0b97e-8040-4711-85ab-36548b130ed2
 author: gewarren
 ms.author: gewarren
 manager: douge
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0d563adc5e6b43aa5371fe08f410880a6aba0a09
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd19f945dec052ad2c90784252c0c85eba6889ea
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-add-context-parameters-to-a-load-test-run-setting"></a>방법: 부하 테스트 실행 설정에 컨텍스트 매개 변수 추가
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 04/16/2018
 예를 들어 부하 테스트에 포함된 웹 성능 테스트에서 이미 컨텍스트 매개 변수를 사용하여 매개 변수가 있는 웹 서버 URL을 사용하고 있다고 가정합니다. 이 경우 웹 성능 테스트에 사용되는 것과 동일한 이름 값을 사용하는 컨텍스트 매개 변수를 부하 테스트 실행 설정에 추가할 수 있습니다. 그러면 부하 테스트를 실행할 때 웹 성능 테스트가 다른 서버에 매핑됩니다. 예를 들어 부하 테스트에 포함된 웹 성능 테스트에서 URL의 웹 서버 이름에 WebServer1이라는 컨텍스트 매개 변수를 사용하는 경우, 부하 테스트 실행 설정에도 WebServer1이라는 컨텍스트 매개 변수를 지정하면 부하 테스트 시 부하 테스트 실행 설정에 할당한 컨텍스트 매개 변수가 사용됩니다. 정리하면, 부하 테스트의 웹 성능 테스트에서 부하 테스트의 컨텍스트 매개 변수와 동일한 컨텍스트 매개 변수 이름을 사용하는 경우, 부하 테스트의 컨텍스트 매개 변수가 웹 성능 테스트에 사용되는 컨텍스트 매개 변수를 재정의합니다.
 
 > [!WARNING]
-> 실행 설정에 컨텍스트 매개 변수를 사용하는 경우에는 실수로 웹 성능 테스트의 컨텍스트 매개 변수를 재정의하지 않도록 주의하십시오. 필요한 경우가 아니면 동일한 컨텍스트 매개 변수 이름을 사용하지 않는 것이 좋습니다.
+> 실행 설정에 컨텍스트 매개 변수를 사용하는 경우에는 실수로 웹 성능 테스트의 컨텍스트 매개 변수를 재정의하지 않도록 주의하세요. 필요한 경우가 아니면 동일한 컨텍스트 매개 변수 이름을 사용하지 않는 것이 좋습니다.
 
 `http://CorporateStagingWebServer`에 Webserver1 컨텍스트 매개 변수 값을 할당하면 부하 테스트 전체에 `WebServer1`을 사용할 수 있으며 언제든지 이 값을 다른 웹 서버로 쉽게 변경할 수 있습니다.
 

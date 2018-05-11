@@ -1,6 +1,6 @@
 ---
 title: Python 지원 설치
-description: 옵션 및 설치 위치를 포함하여 Visual Studio 2017, 2015, 2013, 2012 및 2010에서 PTVS(Visual Studio용 Python 도구)를 설치하는 방법에 대한 자세한 지침입니다.
+description: 옵션 및 설치 위치를 포함하여 Visual Studio 2017, 2015, 2013, 2012 및 2010에서 PTVS(Visual Studio용 Python 도구)를 설치하는 방법입니다.
 ms.date: 02/15/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,13 +11,13 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: a998a2a62915d1ce998e30202f4b4fd0838975a3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c93a0c4d8fd312c9b7b6367043fc35b183d022bb
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="installing-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치
+# <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치 방법
 
 Visual Studio용 Python 지원(Visual Studio용 Python 도구 또는 PTVS라고도 함)을 설치하려면 Visual Studio 버전과 일치하는 섹션의 지침을 따릅니다.
 
@@ -67,7 +67,7 @@ Visual Studio 2015 및 이전 버전의 경우 별도로 원하는 [Python 인�
     | Python 네이티브 개발 도구 | C++ 컴파일러 및 Python에 대한 기본 확장을 개발하는 데 필요한 기타 구성 요소를 설치합니다. [Python용 C++ 확장 만들기](working-with-c-cpp-python-in-visual-studio.md)를 참조하세요. 또한 전체 C++ 지원을 사용하려면 **C++를 사용한 데스크톱 개발** 워크로드를 설치하세요. |
     | Azure Cloud Services 핵심 도구 | Python에서 개발자 Azure Cloud Services에 대한 추가 지원을 제공합니다. [Azure Cloud Service 프로젝트](python-azure-cloud-service-project-template.md)를 참조하세요. |
 
-1. 설치가 끝나면 설치 관리자는 Visual Studio를 수정, 실행, 복구 또는 제거하는 옵션을 제공합니다. **수정** 단추는 설치된 구성 요소에 업데이트를 사용할 수 있는 경우 Visual Studio에 대한 업데이트가 있는 경우 **업데이트**로 변경됩니다. (수정 옵션은 드롭다운 메뉴에서 사용할 수 있습니다.) "Visual Studio"를 검색하여 Windows 시작 메뉴에서 Visual Studio 및 설치 관리자를 시작할 수도 있습니다.
+1. 설치가 끝나면 설치 관리자는 Visual Studio를 수정, 실행, 복구 또는 제거하는 옵션을 제공합니다. **수정** 단추는 설치된 구성 요소에 업데이트를 사용할 수 있는 경우 Visual Studio에 대한 업데이트가 있는 경우 **업데이트**로 변경됩니다. (수정 옵션은 드롭다운 메뉴에서 사용할 수 있습니다.) “Visual Studio”를 검색하여 Windows 시작 메뉴에서 Visual Studio 및 설치 관리자를 시작할 수도 있습니다.
 
     ![설치 관리자에서 Visual Studio 시작, 수정 또는 제거](media/installation-vs-launch.png)
 

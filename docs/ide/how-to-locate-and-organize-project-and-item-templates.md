@@ -1,7 +1,7 @@
 ---
-title: '방법: Visual Studio에서 템플릿 구성 | Microsoft Docs'
-ms.custom: ''
+title: Visual Studio에서 템플릿 구성
 ms.date: 01/02/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -13,11 +13,11 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 68ba015c1a1eb125f02e65c8a19c6f516e48f72a
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 65d4940e7a7969fe28fe115ec7ef42cfdc645c9a
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-locate-and-organize-project-and-item-templates"></a>방법: 프로젝트 템플릿과 항목 템플릿 찾기 및 구성
 
@@ -121,8 +121,8 @@ Visual Studio에서 인식할 수 있는 위치에 템플릿 파일이 있어야
 
 ## <a name="see-also"></a>참고 항목
 
-[템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)  
-[Visual Studio 템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)  
-[NumberOfParentCategoriesToRollUp(Visual Studio 템플릿)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)  
-[방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)  
-[방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)
+- [템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)
+- [Visual Studio 템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)
+- [NumberOfParentCategoriesToRollUp(Visual Studio 템플릿)](../extensibility/numberofparentcategoriestorollup-visual-studio-templates.md)
+- [방법: 프로젝트 템플릿 만들기](../ide/how-to-create-project-templates.md)
+- [방법: 항목 템플릿 만들기](../ide/how-to-create-item-templates.md)

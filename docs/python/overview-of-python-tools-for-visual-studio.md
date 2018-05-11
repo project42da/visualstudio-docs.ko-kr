@@ -1,6 +1,6 @@
 ---
 title: Windows의 Visual Studio에서 Python 지원 개요
-description: Windows에서 최상의 Python IDE(PTVS(Visual Studio용 Python 도구)로도 알려짐)로 만드는 Visual Studio의 기능 요약
+description: Windows에서 최상의 Python IDE(PTVS(Visual Studio용 Python 도구)로도 알려짐)로 만드는 Visual Studio의 Python 기능에 대한 요약입니다.
 ms.date: 04/06/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,13 +11,13 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 31ffd868eeab4638344cfafc2723b6a60608f232
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 47cbba613461fac86b1e619e8164e9765c071975
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="working-with-python-in-visual-studio-windows"></a>Visual Studio에서 Python 작업(Windows)
+# <a name="working-with-python-in-visual-studio-on-windows"></a>Visual Studio에서 Python 작업(Windows)
 
 Python은 안정적이고 유연하며 배우기 쉬울뿐만 아니라 모든 운영 체제에서 무료로 사용할 수 있으며, 유용한 개발자 커뮤니티와 다양한 무료 라이브러리에서 지원되며 널리 사용되는 프로그래밍 언어입니다. Python은 웹 응용 프로그램, 웹 서비스, 데스크톱 앱, 스크립팅 및 과학적 컴퓨팅 등 모든 방식의 개발을 지원하며 대학, 과학자, 아마추어 개발자 및 전문 개발자 등 많은 분야에 사용됩니다. [python.org](https://www.python.org) 및 [Python for Beginners](https://www.python.org/about/gettingstarted/)(초보자를 위한 Python)에서 이 언어에 대해 자세히 알아볼 수 있습니다.
 
@@ -65,7 +65,7 @@ Visual Studio에 알려진 모든 Python 환경의 경우 별도 명령 프롬�
 
 ![Visual Studio의 Python 대화형 창](media/interactive-window.png)
 
-또한 Visual Studio는 Python 코드 편집기와 대화형 창 사이의 긴밀한 통합을 제공합니다. **Ctrl + Enter** 키보드 바로 가기 키는 간편하게 편집기에서 현재 코드 줄(또는 코드 블록)을 대화형 창으로 보낸 다음, 다음 줄(또는 블록)로 이동합니다. **Ctrl + Enter** 키를 사용하면 디버거를 실행할 필요 없이 쉽게 한 단계씩 코드를 실행할 수 있습니다. 또한 같은 키 입력으로 대화형 창에 선택한 코드를 보내고 쉽게 대화형 창에서 편집기에 코드를 붙여 넣을 수 있습니다. 이러한 기능을 함께 사용하면 대화형 창에서 코드의 세그먼트에 대한 세부 정보를 파악하고 편집기에서 결과를 파일에 쉽게 저장할 수 있습니다.
+또한 Visual Studio는 Python 코드 편집기와 대화형 창 사이의 긴밀한 통합을 제공합니다. **Ctrl + Enter** 키보드 바로 가기 키는 간편하게 편집기에서 현재 코드 줄(또는 코드 블록)을 대화형 창으로 보낸 다음, 다음 줄(또는 블록)로 이동합니다. **Ctrl + Enter** 키를 사용하면 디버거를 실행할 필요 없이 쉽게 한 단계씩 코드를 실행할 수 있습니다. 또한 같은 키 입력으로 대화형 창에 선택한 코드를 보내고 쉽게 대화형 창에서 편집기에 코드를 붙여넣을 수 있습니다. 이러한 기능을 함께 사용하면 대화형 창에서 코드의 세그먼트에 대한 세부 정보를 파악하고 편집기에서 결과를 파일에 쉽게 저장할 수 있습니다.
 
 또한 Visual Studio는 인라인 플롯, .NET 및 WPF(Windows Presentation Foundation)을 포함한 REPL의 IPython/Jupyter를 지원합니다.
 
@@ -88,6 +88,7 @@ Visual Studio에서는 시간이 지남에 따라 커지는 프로젝트의 복�
 추가 정보
 
 - Docs: [Python 프로젝트 관리](managing-python-projects-in-visual-studio.md)
+- Docs: [항목 템플릿 참조](python-item-templates.md)
 - Docs: [Python 프로젝트 템플릿](managing-python-projects-in-visual-studio.md#project-templates)
 - Docs: [C++ 및 Python 작업](working-with-c-cpp-python-in-visual-studio.md)
 - 일반 Visual Studio 기능 docs: [프로젝트 및 항목 템플릿](../ide/creating-project-and-item-templates.md#visual-studio-templates)

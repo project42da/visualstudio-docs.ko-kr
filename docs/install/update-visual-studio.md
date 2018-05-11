@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 2017 업데이트
 description: 가장 최신 릴리스로 Visual Studio를 업데이트하는 방법을 단계별로 알아봅니다.
-ms.date: 03/06/2018
+ms.date: 04/23/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a524fa630fbe9ea8e1cf4474cab2b7180fe582a8
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 0d528c8ec235ceb1b9c8b23de0874ebe42c472ce
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017을 최신 릴리스 버전으로 업데이트
 
@@ -53,6 +53,9 @@ IDE 내에서 바로 사용하기 쉽도록 설치 및 업데이트 환경이 �
 
      업데이트가 계속됩니다. 업데이트가 완료되면 Visual Studio가 다시 시작됩니다.
 
+     > [!NOTE]
+     > Visual Studio를 관리자 모드로 실행하는 경우에는 업데이트 후 Visual Studio를 수동으로 다시 시작해야 합니다.    
+
 ### <a name="use-the-ide"></a>IDE 사용
 
 업데이트를 확인한 다음, Visual Studio의 메뉴 표시줄에서 업데이트를 설치할 수 있습니다.
@@ -66,6 +69,9 @@ IDE 내에서 바로 사용하기 쉽도록 설치 및 업데이트 환경이 �
 3. **업데이트** 대화 상자가 열리면 **지금 업데이트**를 선택합니다.
 
    이전 섹션에서 설명한 대로 업데이트가 진행되고, 업데이트가 완료되면 Visual Studio가 다시 시작됩니다.
+
+   > [!NOTE]
+   > Visual Studio를 관리자 모드로 실행하는 경우에는 업데이트 후 Visual Studio를 수동으로 다시 시작해야 합니다.  
 
 ### <a name="use-the-visual-studio-installer"></a>Visual Studio 설치 관리자 사용
 

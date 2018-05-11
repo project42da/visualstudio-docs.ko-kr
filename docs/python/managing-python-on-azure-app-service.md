@@ -1,5 +1,5 @@
 ---
-title: Azure App Service에 Python 인터프리터 및 라이브러리 설치
+title: Azure App Service에서 Python 구성
 description: Azure App Service에 Python 인터프리터 및 라이브러리를 설치하고 해당 인터프리터를 제대로 참조하도록 웹 응용 프로그램을 구성하는 방법입니다.
 ms.date: 09/13/2017
 ms.prod: visual-studio-dev15
@@ -12,13 +12,13 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: cd3be2ee5d62c687fab1c822e3469d9523624047
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e77c155565830827ff6c30e48aee89152e07a80e
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
-# <a name="managing-python-on-azure-app-service"></a>Azure App Service에서 Python 관리
+# <a name="how-to-set-up-a-python-environment-on-azure-app-service"></a>Azure App Service에서 Python 환경을 설정하는 방법
 
 [Azure App Service](https://azure.microsoft.com/services/app-service/)는 브라우저를 통해 액세스한 사이트, 고유한 클라이언트에서 사용된 REST API, 이벤트 트리거된 처리 등 웹앱용 Platform-as-a-Service 제품입니다. App Service는 Python을 사용한 앱 구현을 완벽하게 지원합니다.
 
@@ -154,7 +154,7 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
 </configuration>
 ```
 
-여기에 표시된 `HTTP_PLATFORM_PORT` 환경 변수에는 로컬 서버가 localhost의 연결을 수신 대기해야 하는 포트가 포함됩니다. 이 예제에서는 원하는 경우 다른 환경 변수(이 경우 `SERVER_PORT`)를 만드는 방법도 보여 줍니다.
+여기에 표시된 `HTTP_PLATFORM_PORT` 환경 변수에는 로컬 서버가 localhost의 연결을 수신 대기해야 하는 포트가 포함됩니다. 이 예제에서는 원하는 경우 다른 환경 변수(이 경우 `SERVER_PORT`)를 만드는 방법도 보여줍니다.
 
 ## <a name="installing-packages"></a>패키지 설치
 

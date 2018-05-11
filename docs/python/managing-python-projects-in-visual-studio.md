@@ -1,6 +1,6 @@
 ---
 title: Python 응용 프로그램 프로젝트 관리
-description: Visual Studio의 프로젝트 용도를 설명하고, Python 코드용 프로젝트를 만들고 관리하는 방법을 보여 주고, Python에 사용할 수 있는 다양한 프로젝트 템플릿을 간략하게 설명합니다.
+description: Visual Studio의 프로젝트 용도, Python 코드용 프로젝트를 만들고 관리하는 방법 및 Python에 사용할 수 있는 다양한 프로젝트 템플릿에 대해 설명합니다.
 ms.date: 03/05/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,13 +11,13 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 7dcefe4a9d303c6d52fa88f478dc59c9c2cafe3d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: a0609b23ef0ed6847fa73b0144201f70e76252e4
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
-# <a name="python-projects"></a>Python 프로젝트
+# <a name="python-projects-in-visual-studio"></a>Visual Studio의 Python 프로젝트
 
 일반적으로 Python 응용 프로그램은 폴더 및 파일만 사용하여 정의되지만 응용 프로그램이 커질수록 이 구조는 복잡해질 수 있으며 자동 생성된 파일, 웹 응용 프로그램용 JavaScript 등을 포함할 수 있습니다. Visual Studio 프로젝트는 이러한 복잡성을 관리하는 데 도움이 됩니다. 프로젝트(`.pyproj` 파일)는 프로젝트와 관련된 모든 소스 및 콘텐츠 파일을 식별하며 각 파일에 대한 빌드 정보를 포함하고 소스 제어 시스템과 통합할 정보를 유지 관리하며 응용 프로그램을 논리 구성 요소로 구성하는 데 도움을 줍니다.
 
@@ -41,9 +41,9 @@ Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿�
 
 ## <a name="adding-files-assigning-a-startup-file-and-setting-environments"></a>파일 추가. 시작 파일 할당. 환경 설정
 
-응용 프로그램을 개발할 때 일반적으로 다양한 유형의 새 파일을 프로젝트에 추가해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가 > 기존 항목...** 을 선택하여 추가할 파일을 찾거나 **추가 > 새 항목...** 을 선택하여 다양한 항목 템플릿이 들어 있는 대화 상자를 표시하면 이러한 파일을 쉽게 추가할 수 있습니다. 템플릿에는 빈 python 파일, python 클래스, 단위 테스트, 웹 응용 프로그램과 관련된 다양한 파일이 포함됩니다. 테스트 프로젝트를 통해 이러한 옵션을 시도해 보고 사용자의 Visual Studio 버전에서 사용 가능한 항목을 알아볼 수 있습니다.
+응용 프로그램을 개발할 때 일반적으로 다양한 유형의 새 파일을 프로젝트에 추가해야 합니다. 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가** > **기존 항목**을 선택하여 추가할 파일을 찾거나 **추가** > **새 항목**을 선택하여 다양한 항목 템플릿이 들어 있는 대화 상자를 표시하면 이러한 파일을 추가할 수 있습니다. [항목 템플릿](python-item-templates.md) 참조에 설명된 대로 옵션에는 빈 Python 파일, Python 클래스, 단위 테스트 및 웹 응용 프로그램과 관련된 다양한 파일이 포함됩니다. 테스트 프로젝트를 통해 이러한 옵션을 시도해 보고 사용자의 Visual Studio 버전에서 사용 가능한 항목을 알아볼 수 있습니다.
 
-각 Python 프로젝트에는 솔루션 탐색기에서 굵게 표시된 시작 파일이 하나씩 할당되어 있습니다. 시작 파일은 디버깅을 시작하거나(F5 또는  **디버그 > 디버깅 시작**) 대화형 창에서 프로젝트를 실행할 때(Shift+Alt+F5 또는 **디버그 > Python Interactive에서 프로젝트 실행**) 실행됩니다. 파일을 변경하려면 새 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
+각 Python 프로젝트에는 솔루션 탐색기에서 굵게 표시된 시작 파일이 하나씩 할당되어 있습니다. 시작 파일은 디버깅을 시작하거나(F5 또는 **디버그** > **디버깅 시작**) 대화형 창에서 프로젝트를 실행할 때(Shift+Alt+F5 또는 **디버그** > **Python Interactive에서 프로젝트 실행**) 실행됩니다. 파일을 변경하려면 새 파일을 마우스 오른쪽 단추로 클릭하고 **시작 파일로 설정**을 선택합니다.
 
 > [!Tip]
 > 프로젝트에서 선택한 시작 파일을 제거하고 새 시작 파일을 선택하지 않으면 프로젝트를 실행하려고 할 때 Visual Studio에서 시작할 Python 파일을 알 수 없습니다. 이 경우 Visual Studio 2017 버전 15.6 이상에서는 오류가 표시되고, 이전 버전에서는 Python 인터프리터를 실행하는 출력 창이 열리거나 출력 창이 표시된 후 거의 즉시 사라집니다. 이러한 동작이 발생할 경우 할당된 시작 파일이 있는지 확인합니다.
@@ -58,18 +58,18 @@ Visual Studio는 기존 폴더 트리에서 프로젝트를 만드는 템플릿�
 
 ## <a name="project-templates"></a>프로젝트 템플릿
 
-Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 등 Python 프로젝트를 설정하는 다양한 방법을 제공합니다. 템플릿을 사용하려면 **파일 > 새로 만들기 > 프로젝트...** 메뉴 명령을 선택하거나 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가 > 새 프로젝트...** 를 선택합니다. 두 방법 모두 아래 **새 프로젝트** 대화 상자가 표시됩니다. Python 관련 템플릿을 보려면 “Python”을 검색하거나 **설치됨 > Python** 노드를 선택합니다.
+Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 등 Python 프로젝트를 설정하는 다양한 방법을 제공합니다. 템플릿을 사용하려면 **파일** > **새로 만들기** > **프로젝트** 메뉴 명령을 선택하거나 솔루션 탐색기에서 솔루션을 마우스 오른쪽 단추로 클릭하고 **추가** > **새 프로젝트**를 선택합니다. 두 방법 모두 아래의 **새 프로젝트** 대화 상자가 표시됩니다. Python 관련 템플릿을 보려면 “Python”을 검색하거나 **설치됨** > **Python** 노드를 선택합니다.
 
 ![Python 템플릿이 있는 새 프로젝트 대화 상자](media/projects-new-project-dialog.png)
 
-다음 표에서는 Visual Studio 2017에서 사용 가능한 템플릿을 요약하여 보여 줍니다(일부 템플릿만 이전 모든 버전에서 사용 가능).
+다음 표에서는 Visual Studio 2017에서 사용 가능한 템플릿을 요약하여 보여줍니다(일부 템플릿만 이전 모든 버전에서 사용 가능).
 
 | 템플릿 | 설명 |
 | --- | --- |
 | [기존 Python 코드에서](#creating-a-project-from-existing-files) | 폴더 구조의 기존 Python 코드에서 Visual Studio 프로젝트를 만듭니다.  |
 | Python 응용 프로그램 | 하나의 비어있는 소스 파일을 포함하는 새로운 Python 응용 프로그램에 대한 기본 프로젝트 구조입니다. 기본적으로 프로젝트는 기본 글로벌 환경의 콘솔 인터프리터에서 실행되며 [서로 다른 환경을 할당](selecting-a-python-environment-for-a-project.md)하여 변경할 수 있습니다. |
 | [Azure Cloud Service](python-azure-cloud-service-project-template.md) | Python으로 작성된 Azure Cloud Service에 대한 프로젝트입니다. |
-| [웹 프로젝트](python-web-application-project-templates.md) | Bottle, Django, Flask 및 Flask/Jade를 비롯한 다양한 프레임워크를 기반으로 한 웹 서버에 대한 프로젝트입니다. |
+| [웹 프로젝트](python-web-application-project-templates.md) | Bottle, Django 및 Flask를 비롯한 다양한 프레임워크를 기반으로 하는 웹앱에 대한 프로젝트입니다. |
 | IronPython 응용 프로그램 | Python 응용 프로그램 템플릿과 유사하지만 .NET interop 및 .NET 언어로 혼합 모드 디버깅을 기본적으로 사용하는 IronPython을 사용합니다. |
 | IronPython WPF 응용 프로그램 | 응용 프로그램의 사용자 인터페이스에 대한 Windows Presentation Foundation XAML 파일에 IronPython을 사용하는 프로젝트 구조입니다. Visual Studio는 XAML UI 디자이너를 제공하고 코드 숨김은 Python으로 작성할 수 있으며 응용 프로그램은 콘솔을 표시하지 않고 실행됩니다. |
 | IronPython Silverlight 웹 페이지 | Silverlight를 사용하여 브라우저에서 실행되는 IronPython 프로젝트입니다. 응용 프로그램의 Python 코드는 웹 페이지에 스크립트로 포함됩니다. 상용구 스크립트 태그는 Silverlight 내부에서 실행되는 IronPython을 초기화하는 일부 JavaScript 코드를 가져오며, 여기서 Python 코드가 DOM과 상호 작용할 수 있습니다. |
@@ -80,7 +80,7 @@ Visual Studio는 처음부터 작성하거나 기존 코드에서 작성하는 �
 > [!Note]
 > Python은 해석된 언어이므로 Visual Studio의 Python 프로젝트는 다른 컴파일된 언어 프로젝트(예: C#)와 같은 독립 실행형 실행 파일을 생성하지 않습니다. 자세한 내용은 [질문 및 답변](overview-of-python-tools-for-visual-studio.md#questions-and-answers)을 참조하세요.
 
-<a name="create-project-from-existing-files"</a>
+<a name="create-project-from-existing-files"></a>
 
 ### <a name="creating-a-project-from-existing-files"></a>기존 파일에서 프로젝트 만들기
 

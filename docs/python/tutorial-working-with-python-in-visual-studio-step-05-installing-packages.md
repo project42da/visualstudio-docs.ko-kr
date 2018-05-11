@@ -1,6 +1,6 @@
 ---
-title: Python 작업, 5단계, 패키지 설치
-description: Python 환경에서 패키지를 관리하는 Visual Studio의 기능을 보여 주는 Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 5단계입니다.
+title: Python 작업 자습서, 5단계, 패키지 설치
+description: Visual Studio의 Python 기능에 대한 핵심 연습의 5단계로, Python 환경에서 패키지를 관리하는 Visual Studio의 기능을 보여줍니다.
 ms.date: 03/05/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 73de2a4c58a24a603f1d5d54138d5762e3ae9971
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 205af005071c86b7e86dcc465918fccc7243690c
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="step-5-installing-packages-in-your-python-environment"></a>5단계: Python 환경에서 패키지 설치
 
@@ -66,7 +66,7 @@ Python 개발자 커뮤니티에서는 사용자 소유의 프로젝트에 통�
 
   ![matplotlib의 출력 예제](media/environments-add-matplotlib3.png)
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-step"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [Git 작업](tutorial-working-with-python-in-visual-studio-step-06-working-with-git.md)

@@ -1,7 +1,7 @@
 ---
-title: Visual Studio에 대한 항목 템플릿 만들기 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio에 대한 항목 템플릿 만들기
 ms.date: 01/02/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -9,11 +9,11 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: c5c29dde308c4e3720195924bd40db4e880e4b2e
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 342b7ebd17280c47296fae43c6541a5e969ad5f3
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-create-item-templates"></a>방법: 항목 템플릿 만들기
 
@@ -86,7 +86,7 @@ Windows, Office, 대시보드 또는 웹과 같은 특정 프로젝트 하위 �
 
 예: `<ProjectSubType>Database</ProjectSubType>`
 
-다음 예제에서는 **Office** 프로젝트용 항목 템플릿을 보여 줍니다.
+다음 예제에서는 **Office** 프로젝트용 항목 템플릿을 보여줍니다.
 
 ```xml
 <VSTemplate Version="2.0.0" Type="Item" Version="2.0.0">
@@ -126,6 +126,6 @@ Windows, Office, 대시보드 또는 웹과 같은 특정 프로젝트 하위 �
 
 ## <a name="see-also"></a>참고 항목
 
-[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
-[방법: 다중 파일 항목 템플릿 만들기](../ide/how-to-create-multi-file-item-templates.md)  
-[Visual Studio 템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)
+- [프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)
+- [방법: 다중 파일 항목 템플릿 만들기](../ide/how-to-create-multi-file-item-templates.md)
+- [Visual Studio 템플릿 스키마 참조(확장성)](../extensibility/visual-studio-template-schema-reference.md)

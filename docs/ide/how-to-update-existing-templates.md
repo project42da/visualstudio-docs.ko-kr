@@ -1,9 +1,8 @@
 ---
-title: Visual Studio에서 기존 프로젝트 및 항목 템플릿 업데이트 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio에서 기존 프로젝트 및 항목 템플릿 업데이트
 ms.date: 01/02/2018
-ms.technology:
-- vs-ide-general
+ms.prod: visual-studio-dev15
+ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
 - item templates, updating
@@ -13,11 +12,11 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 9465c098144f14db496bc1dbc382d6a30c8882cb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f5cf764f76d72b17128c46f2b7ec16ffcf4153cf
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-update-existing-templates"></a>방법: 기존 템플릿 업데이트
 
@@ -69,8 +68,8 @@ Visual Studio에서는 기존 템플릿을 업데이트하는 데 사용할 수 
 
 ## <a name="see-also"></a>참고 항목
 
-[템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)  
-[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
-[Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)  
-[템플릿 매개 변수](../ide/template-parameters.md)  
-[방법: 시작 키트 만들기](../ide/how-to-create-starter-kits.md)
+- [템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)
+- [프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)
+- [Visual Studio 템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)
+- [템플릿 매개 변수](../ide/template-parameters.md)
+- [방법: 시작 키트 만들기](../ide/how-to-create-starter-kits.md)

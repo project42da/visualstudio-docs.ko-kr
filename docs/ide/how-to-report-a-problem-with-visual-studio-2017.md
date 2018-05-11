@@ -1,20 +1,22 @@
 ---
-title: Visual Studio 2017의 문제를 보고하는 방법 | Microsoft Docs
+title: Visual Studio 2017의 문제를 보고하는 방법
+description: Visual Studio 2017의 문제를 진단하고 수정할 수 있도록 Microsoft에 보고하는 방법을 알아봅니다.
 ms.custom: ''
 ms.date: 03/11/2018
+ms.prod: visual-studio-dev15
+ms.technology: vs-acquisition
 ms.topic: conceptual
 ms.assetid: bee01179-cde5-4419-9095-190ee0ba5902
 author: TerryGLee
 ms.author: tglee
 manager: douge
-ms.technology: vs-acquisition
 ms.workload:
 - multiple
-ms.openlocfilehash: eacb6ba97f79f2c66444bc79b11c51ef01a50672
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: edf3a7eaecfbd133a2bd087620929cf6e3290b79
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-report-a-problem-with-visual-studio-2017"></a>Visual Studio 2017의 문제를 보고하는 방법
 
@@ -28,12 +30,12 @@ Visual Studio에 문제가 발생하는 경우와 관련하여 자세히 알려�
 2. 로그인되지 않은 경우 다음 스크린샷과 같이 도구 오른쪽에 있는 **로그인**을 선택합니다.
 3. 화면의 지침에 따라 로그인합니다.
 
- ![문제 보고를 위한 로그인](../ide/media/sign-in-new-ux.png "문제 보고를 위한 로그인")  
+ ![문제 보고를 위한 로그인](../ide/media/sign-in-new-ux.png "문제 보고를 위한 로그인")
 
 ## 유사한 문제 검색 및 투표<a name="search_and_vote"></a>
 
 1. 문제를 검색하고 다른 사용자가 이미 보고했는지 확인합니다.
-2. 다른 사용자가 이미 보고한 경우 "투표"하여 알려 주시기 바랍니다.
+2. 다른 사용자가 이미 보고한 경우 “투표”하여 알려 주시기 바랍니다.
 
   ![검색 및 유사한 문제에 투표](../ide/media/search-and-vote.png "검색 및 유사한 문제에 투표")
 
@@ -56,7 +58,7 @@ Visual Studio에 문제가 발생하는 경우와 관련하여 자세히 알려�
 1. **레코드** 탭을 선택합니다.
 2. **기록 시작**을 선택합니다. 도구를 실행할 수 있는 권한을 제공합니다.
 
-  ![추적 및 힙 덤프 파일을 제공하도록 "기록 시작" 선택] (../ide/media/record-dialog-box.png "추적 및 힙 덤프 파일 제공")
+  ![추적 및 힙 덤프 파일을 제공하도록 “기록 시작” 선택] (../ide/media/record-dialog-box.png "추적 및 힙 덤프 파일 제공")
 
 3. **단계 레코더** 도구가 나타나면 문제를 재현하는 단계를 수행합니다.
 4. 완료되면 **기록 중지** 단추를 선택합니다.

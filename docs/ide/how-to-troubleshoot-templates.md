@@ -1,29 +1,29 @@
 ---
-title: Visual Studio 프로젝트 템플릿 및 항목 템플릿의 로드 문제 해결 | Microsoft Docs
-ms.custom: ''
+title: Visual Studio 프로젝트 템플릿 및 항목 템플릿의 로드 문제 해결
 ms.date: 01/02/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.topic: conceptual
+ms.topic: troubleshooting
 helpviewer_keywords:
 - templates [Visual Studio], troubleshooting
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: f7e952f8eb445787a2a574ae3431ba6ad8728248
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4bb6a10e92bf8f26ffbcb81796b3c5c8371600b5
+ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/26/2018
 ---
 # <a name="how-to-troubleshoot-templates"></a>방법: 템플릿 문제 해결
 
 개발 환경에서 템플릿을 로드할 수 없는 경우 여러 가지 방법으로 문제를 찾을 수 있습니다.
 
-## <a name="validate-the-vstemplate-file"></a>.vstemplate 파일 유효성 검사
+## <a name="validate-the-vstemplate-file"></a>vstemplate 파일의 유효성 검사
 
-템플릿에서 *.vstemplate* 파일이 Visual Studio 템플릿 스키마를 따르지 않으면 해당 템플릿은 **새 프로젝트** 대화 상자에 표시되지 않을 수 있습니다.
+템플릿에서 *vstemplate* 파일이 Visual Studio 템플릿 스키마를 따르지 않으면 해당 템플릿은 **새 프로젝트** 대화 상자에 표시되지 않을 수 있습니다.
 
-### <a name="to-validate-the-vstemplate-file"></a>.vstemplate 파일의 유효성을 검사하려면
+### <a name="to-validate-the-vstemplate-file"></a>vstemplate 파일의 유효성을 검사하려면
 
 1. 템플릿을 포함하는 *.zip* 파일을 찾습니다.
 
@@ -31,14 +31,14 @@ ms.lasthandoff: 04/19/2018
 
 1. Visual Studio의 **파일** 메뉴에서 **열기** > **파일**을 선택합니다.
 
-1. 템플릿에 *.vstemplate* 파일을 선택하고 **열기**를 선택합니다.
+1. 템플릿에 대한 *vstemplate* 파일을 선택하고 **열기**를 선택합니다.
 
-1. *.vstemplate* 파일의 XML이 템플릿 스키마에 부합하는지 확인합니다. *.vstemplate* 스키마에 대한 자세한 내용은 [템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)를 참조하세요.
+1. *vstemplate* 파일의 XML이 템플릿 스키마를 따르는지 확인합니다. *vstemplate* 스키마에 대한 자세한 내용은 [템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)를 참조하세요.
 
     > [!NOTE]
-    > *.vstemplate* 파일을 제작하는 동안 IntelliSense 지원을 가져오려면 `xmlns` 특성을 `VSTemplate` 요소에 추가하고 http://schemas.microsoft.com/developer/vstemplate/2005의 값을 할당합니다.
+    > *vstemplate* 파일을 제작하는 동안 IntelliSense 지원을 가져오려면 `xmlns` 특성을 `VSTemplate` 요소에 추가하고 http://schemas.microsoft.com/developer/vstemplate/2005의 값을 할당합니다.
 
-1. *.vstemplate* 파일을 저장한 다음, 닫습니다.
+1. *vstemplate* 파일을 저장한 다음, 닫습니다.
 
 1. 템플릿에 포함되어 있는 파일을 선택하고 마우스 오른쪽 단추를 클릭한 다음 **보내기** > **압축(ZIP) 폴더**를 선택합니다. 선택한 파일이 *.zip* 파일로 압축됩니다.
 
@@ -52,7 +52,7 @@ ms.lasthandoff: 04/19/2018
 
 ## <a name="see-also"></a>참고 항목
 
-[템플릿 검색 문제 해결(확장성)](../extensibility/troubleshooting-template-discovery.md)  
-[템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)  
-[프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)  
-[템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)
+- [템플릿 검색 문제 해결(확장성)](../extensibility/troubleshooting-template-discovery.md)
+- [템플릿 사용자 지정](../ide/customizing-project-and-item-templates.md)
+- [프로젝트 및 항목 템플릿 만들기](../ide/creating-project-and-item-templates.md)
+- [템플릿 스키마 참조](../extensibility/visual-studio-template-schema-reference.md)

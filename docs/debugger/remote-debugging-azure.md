@@ -12,11 +12,11 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: fc8e657f6fb67884bd12de3f8e65c78077fa9b2e
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 3a6e25d98c2560c9cfd6901d30a7a5252398f6fc
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017에는 Azure에서 IIS에서 ASP.NET Core 원격 디버그
 
@@ -83,18 +83,19 @@ Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응
 
 Windows 서버에 대 한 Azure VM 만들 지정 하 고 설치 및 IIS 및 기타 필수 소프트웨어 구성 요소를 구성 합니다. 이 Azure 응용 프로그램 서비스를 배포 하는 보다 많은 시간이 소요 되며이 자습서의 나머지 단계를 수행 해야 합니다.
 
-먼저에 설명 된 모든 단계에 따라 [설치 및 실행된 IIS](/azure/virtual-machines/virtual-machines-windows-hero-role)합니다.
+먼저에 설명 된 모든 단계에 따라 [설치 및 실행된 IIS](/azure/virtual-machines/windows/quick-create-portal)합니다.
 
 네트워크 보안 그룹에 포트 80을 여는 경우 원격 디버거에 대 한 포트 4022를 열 수도 있습니다. 이런 방식으로 나중에 열 필요가 없습니다.
 
 ### <a name="update-browser-security-settings-on-windows-server"></a>Windows Server에서 브라우저 보안 설정을 업데이트합니다
 
-브라우저 보안 설정에 따라이 자습서에 설명 된 소프트웨어를 쉽게 다운로드할 수 있도록 브라우저에 다음 신뢰할 수 있는 사이트를 추가 하는 데 시간이 저장 될 수 있습니다. 이러한 사이트에 대 한 액세스를 필요할 수 있습니다.
+브라우저 보안 설정에 따라이 자습서에 설명 된 소프트웨어를 더 빠르게 다운로드할 수 있도록 브라우저에 다음 신뢰할 수 있는 사이트를 추가 하는 데 시간이 저장 될 수 있습니다. 이러한 사이트에 대 한 액세스를 필요할 수 있습니다.
 
 - microsoft.com
 - go.microsoft.com
 - download.microsoft.com
 - visualstudio.com
+- iis.net
 
 Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있는 사이트를 추가할 수 있습니다 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트**합니다. 이러한 단계는 다른 브라우저도 서로 다릅니다. (My.visualstudio.com에서 이전 버전의 원격 디버거를 다운로드 해야 할 경우 신뢰할 수 있는 사이트 추가로 몇 가지는 로그인 해야 합니다.)
 
@@ -200,7 +201,7 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
 7. **연결**을 클릭합니다.
 
-8. 원격 컴퓨터의 웹 사이트를 엽니다. 브라우저에서로 이동 **http://\<원격 컴퓨터 이름 >**합니다.
+8. 원격 컴퓨터의 웹 사이트를 엽니다. 브라우저에서로 이동 **http://\<원격 컴퓨터 이름 >** 합니다.
     
     ASP.NET 웹 페이지가 표시됩니다.
 9. 실행 중인 ASP.NET 응용 프로그램에서 링크를 클릭 하 여 **에 대 한** 페이지.

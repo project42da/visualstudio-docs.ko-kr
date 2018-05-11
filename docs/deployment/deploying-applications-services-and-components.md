@@ -24,11 +24,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f47ac4ff9eee0a3e5cc1d339f5e5def1d6e3b175
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f1ecd96b8541145cfd5d36686f7ceaf04e7544b1
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>빠른 시작: Visual Studio에서 배포 시 소개
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="deploy-to-local-folder"></a>로컬 폴더에 배포
 
-- **ASP.NET**, **ASP.NET Core**, **Node.js**, **Python**, 및 **.NET Core**: 게시 도구를 사용 하 여 로컬 폴더에 배포 되도록 합니다. 사용 가능한 옵션은 응용 프로그램 형식에 따라 달라 집니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**를 선택한 후 **폴더**합니다. 자세한 내용은 참조 [로컬 폴더에 배포](quickstart-deploy-to-local-folder.md)합니다.
+- **ASP.NET**, **ASP.NET Core**, **Node.js**, **Python**, 및 **.NET Core**: 게시 도구를 사용 하 여 로컬 폴더에 배포 되도록 합니다. 사용 가능한 옵션은 응용 프로그램 형식에 따라 달라 집니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다. (이전에 게시 프로필을 구성 하는 경우 클릭 해야 **새 프로필 만들기**.) 다음으로, 선택 **폴더**합니다. 자세한 내용은 참조 [로컬 폴더에 배포](quickstart-deploy-to-local-folder.md)합니다.
 
     ![선택 게시](../deployment/media/quickstart-publish.png)
 
@@ -48,9 +48,11 @@ ms.lasthandoff: 04/26/2018
 
 - **ASP.NET**, **ASP.NET Core**, **Node.js**, **Python**, 및 **.NET Core**: 게시 도구를 사용 하 여를 배포 하는 FTP 나 Web Deploy를 사용 하 여 웹 사이트입니다. 자세한 내용은 참조 [웹 사이트로 배포](quickstart-deploy-to-a-web-site.md)합니다.
 
-    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다. 게시 도구에는 구성 단계에 따라 원하는 옵션을 선택 합니다.
+    솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다. (이전에 게시 프로필을 구성 하는 경우 클릭 해야 **새 프로필 만들기**.) 게시 도구에는 구성 단계에 따라 원하는 옵션을 선택 합니다.
 
     ![IIS, FTP 등을 선택 합니다.](../deployment/media/quickstart-publish-iis-ftp.png)
+
+    Visual Studio에서 게시 프로필 가져오기에 대 한 자세한 내용은 참조 하십시오. [게시 설정을 가져와서 IIS에 배포](../deployment/tutorial-import-publish-settings-iis.md)합니다.
 
     ASP.NET 응용 프로그램 및 서비스는 여러 가지 다른 방법으로 배포할 수 있습니다. 자세한 내용은 참조 [배포 ASP.NET 웹 응용 프로그램 및 서비스](http://www.asp.net/aspnet/overview/deployment)합니다.
 
@@ -60,18 +62,16 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="publish-to-azure"></a>Azure에 게시
 
-- **ASP.NET, ASP.NET Core, Python, Node.js, 및.NET Core** 웹 응용 프로그램: Azure 앱 서비스 또는 Azure 가상 컴퓨터를 신속 하 게 앱을 배포 하려면 게시 도구를 사용할 수 있습니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다. 게시 대화 상자에서 선택 하거나 **Microsoft Azure 앱 서비스** 또는 **Microsoft Azure 가상 컴퓨터**, 한 다음 구성 단계를 따릅니다.
+- **ASP.NET, ASP.NET Core, Python, Node.js, 및.NET Core** 웹 응용 프로그램: Azure 앱 서비스 또는 Azure 가상 컴퓨터를 신속 하 게 앱을 배포 하려면 게시 도구를 사용할 수 있습니다. 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다. (이전에 게시 프로필을 구성 하는 경우 클릭 해야 **새 프로필 만들기**.) 게시 대화 상자에서 선택 하거나 **Microsoft Azure 앱 서비스** 또는 **Microsoft Azure 가상 컴퓨터**, 한 다음 구성 단계를 따릅니다.
 
     ![Azure 앱 서비스 선택](../deployment/media/quickstart-publish-azure.png "Azure 앱 서비스 선택")
 
-    Azure 가상 컴퓨터에를 게시 하려면 오른쪽 스크롤하여 선택 **Microsoft Azure 가상 컴퓨터**합니다.
+    Visual Studio로 Azure 앱 서비스에서 게시 프로필 가져오기에 대 한 자세한 내용은 참조 하십시오. [게시 설정을 가져와서 Azure에 배포](../deployment/tutorial-import-publish-settings-azure.md)합니다.
 
     간략 한 소개를 참조 하십시오. [Azure에 게시](quickstart-deploy-to-azure.md)합니다. 참고: [ASP.NET Core 응용 프로그램을 Azure에 게시](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다. Git를 사용 하 여 배포를 참조 하십시오. [Git 사용 하 여 Azure에 ASP.NET Core의 연속 배포](/aspnet/core/publishing/azure-continuous-deployment)합니다.
 
     > [!NOTE]
     > Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등록](https://azure.microsoft.com/free/?ref=microsoft.com&utm_source=microsoft.com&utm_medium=doc&utm_campaign=visualstudio)합니다.
-
-- 다른 **Azure 서비스**: 특정 참조 [Azure 서비스](/azure/#pivot=products) Visual Studio에서 지원 될 수 있는 다양 한 배포 옵션에 대 한 설명서입니다.
 
 ### <a name="publish-to-microsoft-store"></a>Microsoft 스토어에 게시
 

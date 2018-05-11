@@ -5,8 +5,6 @@ ms.date: 01/15/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-rtvs
 ms.topic: conceptual
-dev_langs:
-- R
 f1_keywords:
 - vs.toolsoptionspages.text_editor.r.lint
 author: kraigb
@@ -14,15 +12,15 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: d8b88e327af895d39335695b16b44bf17efdb18b
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e5494283fdf759ddc664207d62d40f7f83993632
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="linting-r-code-in-visual-studio"></a>Visual Studio에서 R 코드 Lint
 
-Lint는 잠재적 오류, 서식 지정 문제 및 기타 코드 노이즈(예: 잘못된 공백)를 표시하기 위해 코드를 분석하는 프로세스입니다. 또한 Lint는 식별자 이름을 지정하는 방법과 같은 특정 코딩 규칙에 도움이 될 수 있습니다. 팀 및 기타 협력 상황 내에서 매우 유용합니다.
+Lint는 잠재적 오류, 서식 지정 문제 및 기타 코드 노이즈(예: 잘못된 공백)를 표시하기 위해 코드를 분석합니다. 또한 Lint는 식별자의 이름 지정 방법과 같은 특정 코딩 규칙을 권장하는 데에도 도움이 됩니다. 이러한 규칙은 팀 및 기타 공동 작업 상황에서 유용합니다.
 
 RTVS(Visual Studio용 R 도구)는 R에 대해 이 문서에 설명된 다양한 옵션을 통해 동작을 제어하는 기본 제공 Lint를 제공합니다. 이러한 옵션은 **도구 > 옵션 > 텍스트 편집기 > R > Lint**에 있습니다.
 
@@ -32,7 +30,7 @@ Lint를 사용하도록 설정하면 입력 중에 Lint를 편집기에 적용�
 
 ![R 코드에 대한 Lint 예제](media/linting-01.png)
 
-프로젝트 또는 파일의 필요에 따라 Lint 옵션을 변경할 수 있습니다. 예를 들어 온라인 과정의 샘플 코드는 파스칼식 대/소문자 식별자와 함께 `<-` 대신 `=`를 사용할 수 있습니다. 기본 Lint 옵션은 이러한 경우에 플래그를 지정하므로 해당 코드는 빈번한 Lint 경고를 표시합니다. 해당 코드로 작업하는 동안 각 인스턴스를 수정하는 데 시간을 보내는 대신 간단히 옵션을 사용하지 않도록 설정할 수 있습니다.
+프로젝트 또는 파일의 필요에 따라 Lint 옵션을 변경할 수 있습니다. 예를 들어 온라인 과정의 샘플 코드는 파스칼식 대/소문자 식별자와 함께 `<-` 대신 `=`를 사용할 수 있습니다. 기본 Lint 옵션은 이러한 경우에 플래그를 지정하므로 해당 코드는 빈번한 Lint 경고를 표시합니다. 해당 코드로 작업하는 동안 각 인스턴스를 수정하는 데 시간을 보내는 대신 옵션을 사용하지 않도록 설정할 수 있습니다.
 
 ## <a name="assignment-group"></a>할당 그룹
 
@@ -47,12 +45,12 @@ Lint를 사용하도록 설정하면 입력 중에 Lint를 편집기에 적용�
 | 옵션 | 기본값 | Lint 효과 |
 | --- | --- | --- |
 | camelCase에 플래그 지정 | `False` | camelCase를 사용하는 식별자에 플래그를 지정합니다. |
-| 긴 이름에 플래그 지정 | `False` | "최대 이름 길이" 설정을 초과하도록 명명된 식별자에 플래그를 지정합니다. |
+| 긴 이름에 플래그 지정 | `False` | “최대 이름 길이” 설정을 초과하도록 명명된 식별자에 플래그를 지정합니다. |
 | 여러 점에 플래그 지정 | `True` | 여러 개의 점을 사용하는 식별자에 플래그를 지정합니다. |
 | PascalCase에 플래그 지정 | `True` | PascalCase를 사용하는 식별자에 플래그를 지정합니다. |
 | snake_case에 플래그 지정 | `False` | 믿줄을 사용하는 식별자에 플래그를 지정합니다. |
 | UPPERCASE에 플래그 지정 | `True` | 모든 대문자를 사용하는 식별자에 플래그를 지정합니다. |
-| 최대 이름 길이 | 32 | "긴 이름에 플래그 지정" 설정을 적용하는 길이입니다. |
+| 최대 이름 길이 | 32 | “긴 이름에 플래그 지정” 설정을 적용하는 길이입니다. |
 
 ## <a name="spacing-group"></a>그룹 간격 지정
 
@@ -69,8 +67,8 @@ Lint를 사용하도록 설정하면 입력 중에 Lint를 편집기에 적용�
 
 | 옵션 | 기본값 | Lint 효과 |
 | --- | --- | --- |
-| 줄 길이 제한 | `False` | Linter가 "최대 줄 길이" 옵션보다 긴 줄에 플래그를 지정하는지를 설정합니다. |
-| 최대 줄 길이 | 80 | "줄 길이 제한" 옵션을 적용한 줄 길이를 설정합니다. |
+| 줄 길이 제한 | `False` | Linter가 “최대 줄 길이” 옵션보다 긴 줄에 플래그를 지정하는지를 설정합니다. |
+| 최대 줄 길이 | 80 | “줄 길이 제한” 옵션을 적용한 줄 길이를 설정합니다. |
 
 ## <a name="whitespace-group"></a>공백 그룹
 

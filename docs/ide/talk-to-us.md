@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4fa70cac665c5673416b62aed6aa6ae0a9ebd805
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 81eafb383be9f687bdc16bd8241e396849b8894a
+ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 04/28/2018
 ---
 # <a name="talk-to-us"></a>의견 보내기
 제품과 설명서를 개선할 수 있는 아이디어를 보내 주세요. 항상 개인적으로 회신을 드릴 수는 없지만 피드백을 담당자에게 전해 드리겠습니다.  
@@ -53,4 +53,4 @@ Microsoft 지원 서비스는 현재 가격, 약관 및 조건에 따라 다를 
 페이지 아래쪽의 **이 페이지가 도움이 되었나요?** 피드백 단추를 사용하세요. 이 단추는 모든 설명서 페이지에 있습니다. 또는 페이지 아래쪽에 있는 **설명서 피드백을 제공하려면 로그인하세요.** 단추를 사용하여 [docs.microsoft.com](https://docs.microsoft.com/visualstudio/)의 Visual Studio 페이지에 피드백을 추가할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
- [Visual Studio의 문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md)
+[Visual Studio의 문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md)

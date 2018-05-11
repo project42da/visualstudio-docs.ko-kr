@@ -1,6 +1,6 @@
 ---
-title: Python 작업, 3단계, 대화형 REPL 창
-description: Python 대화형 REPL 창을 설명하는 Visual Studio 내 Python 작업에 대한 핵심 자습서의 3단계입니다.
+title: Python 작업 자습서, 3단계, 대화형 REPL 창
+description: Visual Studio의 Python 기능에 대한 핵심 연습의 3단계로, Python 대화형 REPL 창을 설명합니다.
 ms.date: 01/16/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 0a0cbe766f1b31166185275989bfa0678ed50690
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: eb52d2ac655c406121adb60a3b823bac22e89963
+ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 04/27/2018
 ---
 # <a name="step-3-using-the-interactive-repl-window"></a>3단계: 대화형 REPL 창 사용
 
@@ -23,7 +23,7 @@ ms.lasthandoff: 04/19/2018
 
 Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 주기를 크게 단축하는 풍부한 REPL(읽기-평가-인쇄-루프) 경험을 제공합니다. 대화형 창은 Python 명령줄의 REPL 환경의 모든 기능을 제공합니다. 또한 Visual Studio 편집기에서 코드를 원본 파일과 쉽게 교환할 수 있습니다. 그렇지 않으면 명령줄을 사용하여 다루기 어렵습니다.
 
-1. 솔루션 탐색기(예: 이전 그래픽에서 표시된 "Python 3.6(32비트)")에서 프로젝트의 Python 환경을 마우스 오른쪽 단추로 클릭하고 **대화형 창 열기**를 선택하여 대화형 창을 엽니다. Visual Studio 주 메뉴에서 **보기 > 다른 창 > Python 대화형 창**을 선택할 수도 있습니다.
+1. 솔루션 탐색기(예: 이전 그래픽에서 표시된 “Python 3.6(32비트)”)에서 프로젝트의 Python 환경을 마우스 오른쪽 단추로 클릭하고 **대화형 창 열기**를 선택하여 대화형 창을 엽니다. Visual Studio 주 메뉴에서 **보기 > 다른 창 > Python 대화형 창**을 선택할 수도 있습니다.
 
 1. 대화형 창은 표준 `>>>` Python REPL 프롬프트와 함께 편집기 아래에 열립니다. **환경** 드롭다운 목록을 사용하여 작업할 특정 인터프리터를 선택할 수 있습니다. 대화형 창을 더 크게 만들려는 경우도 있습니다. 이 경우 두 창 사이에 있는 구분 기호를 끌면 됩니다.
 
@@ -50,7 +50,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
         return ' ' * int(20 * cos(radians(x)) + 20) + 'o'
     ```
 
-1. `.py` 파일의 `import` 및 `from` 문만을 선택하고, 마우스 오른쪽 단추로 클릭하고, **Interactive로 보내기**(또는 Ctrl+Enter 키 누르기)를 선택합니다. 코드 조각을 대화형 창에 즉시 붙여 넣고 실행합니다. 이제 `make_dot_string` 기능을 선택하고 해당 코드 조각을 다시 실행하는 동일한 명령을 반복합니다. 코드는 함수를 정의하므로 해당 함수를 여러 번 호출하여 신속하게 테스트할 수 있습니다.
+1. `.py` 파일의 `import` 및 `from` 문만을 선택하고, 마우스 오른쪽 단추로 클릭하고, **Interactive로 보내기**(또는 Ctrl+Enter 키 누르기)를 선택합니다. 코드 조각을 대화형 창에 즉시 붙여넣고 실행합니다. 이제 `make_dot_string` 기능을 선택하고 해당 코드 조각을 다시 실행하는 동일한 명령을 반복합니다. 코드는 함수를 정의하므로 해당 함수를 여러 번 호출하여 신속하게 테스트할 수 있습니다.
 
     ![대화형 창에 코드 보내기 및 테스트](media/vs-getting-started-python-14-interactive4.png)
 
@@ -73,7 +73,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
 1. 프로세스를 반복하여 가장 마음에 드는 값을 찾을 때까지 다른 단계 설정으로 실험합니다. 범위를 늘려(예: `range(0, 1800, 12)`) 웨이브 반복을 만들 수도 있습니다.
  
-1. 대화형 창에서 작성한 코드에 만족할 경우 해당 코드를 선택하고, 마우스 오른쪽 단추를 클릭하고 **코드 복사**(Ctrl+Shift+C)를 선택한 다음 편집기에 붙여넣습니다. Visual Studio의 이 특별한 기능이 모든 출력과 `>>>` 및 `...` 프롬프트를 자동으로 생략하는 방식을 확인합니다. 예를 들어 아래 이미지는 프롬프트 및 출력을 포함하는 선택 영역에서 **코드 복사** 명령을 사용하는 것을 보여 줍니다.
+1. 대화형 창에서 작성한 코드에 만족할 경우 해당 코드를 선택하고, 마우스 오른쪽 단추를 클릭하고 **코드 복사**(Ctrl+Shift+C)를 선택한 다음 편집기에 붙여넣습니다. Visual Studio의 이 특별한 기능이 모든 출력과 `>>>` 및 `...` 프롬프트를 자동으로 생략하는 방식을 확인합니다. 예를 들어 아래 이미지는 프롬프트 및 출력을 포함하는 선택 영역에서 **코드 복사** 명령을 사용하는 것을 보여줍니다.
 
     ![프롬프트 및 출력이 있는 선택 영역에서 대화형 창 코드 복사 명령](media/vs-getting-started-python-17-interactive7.png)
 
@@ -89,7 +89,7 @@ Python용 Visual Studio *대화형 창*은 일반적인 편집-빌드-디버그 
 
 1. 방금 수행한 것은 대화형 창의 신속한 REPL 환경을 사용하여 코드의 작은 부분에 대한 세부 정보를 파악한 다음 프로젝트의 원본 파일에 해당 코드를 편리하게 추가한 것입니다. 이제 Ctrl+F5(또는 **디버그 > 디버깅하지 않고 시작**) 키를 사용하여 코드를 다시 실행하면 원하는 정확한 결과가 표시됩니다.
 
-## <a name="next-steps"></a>다음 단계
+## <a name="next-step"></a>다음 단계
 
 > [!div class="nextstepaction"]
 > [디버거에서 코드 실행](tutorial-working-with-python-in-visual-studio-step-04-debugging.md)
