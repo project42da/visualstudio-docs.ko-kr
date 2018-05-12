@@ -11,17 +11,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a0fcc9f6ec4143a757139a9e013f1a1f4dbe666e
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 3e844e2177d01d5b308472eae5661b25798f0838
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Azure 앱 서비스에 응용 프로그램을 가져와서 게시 Visual Studio에서 게시 설정
 
 사용할 수는 **게시** 가져오도록 게시 설정 하 고 다음 앱을 배포 합니다. 이 문서에서는 사용 하 여 Azure 앱 서비스에 대 한 설정을 게시 하지만 사용할 수 있습니다를 가져오려면 유사한 단계 게시 설정에서 [IIS](../deployment/tutorial-import-publish-settings-iis.md)합니다. 일부 시나리오에서 사용 하 여의 게시 설정 프로필을 수동으로 Visual Studio의 각 설치에 대 한 서비스에 대 한 배포를 구성할 때 보다 더 빠를 수 있습니다.
 
-이 단계는 Visual Studio에서 ASP.NET, ASP.NET Core 및.NET Core 응용 프로그램에 적용 합니다. Visual Studio 2017 15.6 버전에 해당 하는 단계입니다.
+이 단계는 Visual Studio에서 ASP.NET, ASP.NET Core 및.NET Core 응용 프로그램에 적용 합니다. 가져올 수도 있습니다 게시에 대 한 설정 [Python](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio) 앱. Visual Studio 2017 15.6 버전에 해당 하는 단계입니다.
 
 이 자습서에서 다음을 수행합니다.
 
@@ -30,10 +30,10 @@ ms.lasthandoff: 05/10/2018
 > * Visual Studio에 게시 설정 파일 가져오기
 > * Azure 앱 서비스에 앱을 배포 합니다.
 
-게시 설정 파일 (*.publishsettings)은 게시 프로필 다릅니다 (*.pubxml) Visual Studio에서 만든 합니다. 게시 설정 파일을 Azure 앱 서비스에 의해 만들어지고 Visual Studio로 가져올 수 있습니다.
+게시 설정 파일 (*\*.publishsettings*)은 게시 프로필 다릅니다 (*\*.pubxml*) Visual Studio에서 만든 합니다. 게시 설정 파일을 Azure 앱 서비스에 의해 만들어지고 Visual Studio로 가져올 수 있습니다.
 
 > [!NOTE]
-> Visual Studio 게시 프로필을 복사 해야 하는 경우 (\*.pubxml 파일)를 다른 Visual Studio의 한 설치에서 게시 프로필을 찾을 수 있습니다  *\<profilename\>.pubxml*, 에  *\\< p r o j\>\Properties\PublishProfiles* 관리 되는 프로젝트 형식에 대 한 폴더입니다. 웹 사이트의 경우에서 찾아봅니다는 *\App_Data* 폴더입니다. 게시 프로필에는 MSBuild XML 파일입니다.
+> Visual Studio 게시 프로필을 복사 해야 하는 경우 (*\*.pubxml* 파일)를 다른 Visual Studio의 한 설치에서 게시 프로필을 찾을 수 있습니다  *\<profilename\>.pubxml*에  *\\< p r o j\>\Properties\PublishProfiles* 관리 되는 프로젝트 형식에 대 한 폴더입니다. 웹 사이트의 경우에서 찾아봅니다는 *\App_Data* 폴더입니다. 게시 프로필에는 MSBuild XML 파일입니다.
 
 ## <a name="prerequisites"></a>전제 조건
 

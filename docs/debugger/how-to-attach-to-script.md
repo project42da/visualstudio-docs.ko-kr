@@ -20,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6769c4061487dc4b9279ff6ef9dffd36c2614775
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: c38e965c5d424c7a3a6ffe4047e9422f1f9bb4f0
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="how-to-attach-to-script"></a>방법: 스크립트에 연결
 이 항목에서는 디버깅을 위해 스크립트 파일에 Visual Studio 디버거를 수동으로 연결하는 방법에 대해 설명합니다.  
@@ -62,12 +62,12 @@ ms.lasthandoff: 04/18/2018
  모든 **디버그** 메뉴 실행 명령이 활성 프로그램을 적용 합니다. 프로세스 대화 상자에서 디버깅된 된 프로그램을 중단할 수 있습니다. 참조 [중단점을 사용 하 여](../debugger/using-breakpoints.md)합니다.  
   
 > [!NOTE]
->  신뢰할 수 없는 사용자 계정에서 소유한 프로세스에 연결하면 보안 경고 확인 대화 상자가 나타납니다. 자세한 내용은 참조 [보안 경고: 신뢰할 수 없는 사용자가 소유한 프로세스에 연결 위험할 수 있습니다. 다음 정보가 의심 스 럽 확실 하지 않은 경우이 프로세스에 연결 하지 마십시오](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)합니다.  
+>  신뢰할 수 없는 사용자 계정에서 소유한 프로세스에 연결하면 보안 경고 확인 대화 상자가 나타납니다. 자세한 내용은 참조 [보안 경고: 신뢰할 수 없는 사용자가 소유한 프로세스에 연결 위험할 수 있습니다. 다음 정보가 의심 스 럽 확실 하지 않은 경우이 프로세스에 연결 하지 마십시오](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)합니다.  
   
  터미널 서비스(원격 데스크톱) 세션에서 디버깅할 때 사용 가능한 프로세스 목록에 사용 가능한 프로세스 중 일부가 표시되지 않는 경우가 있습니다. [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 이상 버전에서 사용자 계정이 제한된 사용자로 Visual Studio를 실행하는 경우 서비스 및 w3wp.exe를 비롯한 다른 서버 프로세스에 사용되는 세션 0에서 실행되는 프로세스는 사용 가능한 프로세스 목록에 표시되지 않습니다. 관리자 계정으로 Visual Studio를 실행하거나 터미널 서비스 세션 대신 서버 콘솔에서 Visual Studio를 실행하여 이 문제를 해결할 수 있습니다. 세 번째 방법은 vsjitdebugger.exe를 입력 하 여 프로세스에 연결할 수 경우 이러한 해결 방법을 둘 다 Windows 명령줄에서-p ProcessId 합니다. 프로세스 ID는 tlist.exe를 사용하여 확인할 수 있습니다. Tlist.exe를 얻으려면 다운로드 하 고 디버깅 도구에 대 한에서 Windows를 설치 [Windows 하드웨어 개발자 센터](http://go.microsoft.com/fwlink/?linkid=1651)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클라이언트 쪽 스크립트 디버깅](../debugger/client-side-script-debugging.md)   
  [실행 중인 프로세스에 연결](../debugger/attach-to-running-processes-with-the-visual-studio-debugger.md)   
- [보안 경고: 신뢰할 수 없는 사용자가 소유한 프로세스에 연결하면 위험할 수 있습니다. 다음 정보가 의심 스 럽 확실 하지 않은 경우이 프로세스에 연결 하지 마십시오](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user-can-be-dangerous-if-the-following-information-looks-suspicious-or-you-are-unsure-do-not-attach-to-this-process.md)   
+ [보안 경고: 신뢰할 수 없는 사용자가 소유한 프로세스에 연결하면 위험할 수 있습니다. 다음 정보가 의심 스 럽 확실 하지 않은 경우이 프로세스에 연결 하지 마십시오](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)   
  [디버거 보안](../debugger/debugger-security.md)

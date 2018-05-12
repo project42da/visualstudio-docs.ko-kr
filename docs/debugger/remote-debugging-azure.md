@@ -12,11 +12,11 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: 3a6e25d98c2560c9cfd6901d30a7a5252398f6fc
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: c95a91ecd057bfec7af5e9b932d4326cdcab9270
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017에는 Azure에서 IIS에서 ASP.NET Core 원격 디버그
 
@@ -110,11 +110,17 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
 3. 시스템을 다시 시작 (실행 또는 **net stop가 /y** 뒤 **net 시작 w3svc** 시스템 경로에 대 한 변경을 선택 하기 위해 명령 프롬프트에서).
 
+## <a name="optional-install-web-deploy-36-for-hosting-servers-on-windows-server"></a>(선택 사항) 설치 웹 배포 Windows 서버에서 서버를 호스팅하기 위한 3.6
+
+일부 시나리오에서는 빠르게 수 게시 설정 가져오기 Visual Studio의 배포 옵션을 수동으로 구성 하는 대신 합니다. 게시 설정 Visual Studio에서 게시 프로필을 구성 하는 대신, 참조를 가져오려면 선호 하는 경우 [게시 설정 하 고 IIS에 배포 하는 가져오기](../deployment/tutorial-import-publish-settings-iis.md)합니다. 그렇지 않은 경우이 항목의 상태를 유지 하 고 계속 읽어보세요. 가져오기에 대 한 문서를 완료 하는 경우 게시 설정 및 응용 프로그램을 성공적으로 배포 그런 다음이 항목으로 돌아와서을에서 섹션에서 시작 [원격 도구 다운로드](#BKMK_msvsmon)합니다.
+
 ### <a name="BKMK_install_webdeploy"></a> (선택 사항) 설치 웹 배포 Windows Server에서 3.6
 
 [!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
 
 ### <a name="BKMK_deploy_asp_net"></a> Windows Server 컴퓨터에 ASP.NET 웹 사이트를 구성 합니다.
+
+가져오는 경우 게시 설정,이 섹션을 건너뛸 수 있습니다.
 
 1. **IIS(인터넷 정보 서비스) 관리자** 를 열고 **사이트**로 이동합니다.
 

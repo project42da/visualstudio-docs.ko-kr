@@ -18,11 +18,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0013b9f7ae004b709a1651af0e32e36dd45f909c
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 08025ed5d5e3806e04501c46a96e1df5f85b31fb
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="choosing-a-clickonce-update-strategy"></a>ClickOnce 업데이트 전략 선택
 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]는 자동 응용 프로그램 업데이트를 제공할 수 있습니다. A [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램은 배포 매니페스트 파일을 응용 프로그램 업데이트를 사용할 수 있는지 여부를 확인 하려면를 주기적으로 읽어서 합니다. 사용 가능한 경우 새 버전의 응용 프로그램을 다운로드하여 실행합니다. 효율성을 위해 변경된 파일만 다운로드합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/19/2018
 >  응용 프로그램 업데이트를 사용하려면 네트워크 연결이 필요합니다. 네트워크에 연결되어 있지 않으면 선택한 업데이트 전략에 관계없이 응용 프로그램은 업데이트를 확인하지 않고 실행됩니다.  
   
 > [!NOTE]
->  .NET Framework 2.0 및 .NET Framework 3.0에서는 시작 전이나 후에 사용자 응용 프로그램에서 업데이트를 확인하거나 <xref:System.Deployment.Application> API를 사용하여 배포 매니페스트의 `deploymentProvider`를 설정해야 합니다. `deploymentProvider` 에 Visual Studio에서 해당 하는 요소는 **위치를 업데이트** 필드에 **업데이트** 의 대화 상자는 **게시** 탭 합니다. 이 규칙은 .NET Framework 3.5에서 완화되었습니다. 자세한 내용은 참조 [배포 ClickOnce 응용 프로그램에 대 한 테스트 및 프로덕션 서버 Resigning 없이](../deployment/deploying-clickonce-applications-for-testing-and-production-servers-without-resigning.md)합니다.  
+>  .NET Framework 2.0 및 .NET Framework 3.0에서는 시작 전이나 후에 사용자 응용 프로그램에서 업데이트를 확인하거나 <xref:System.Deployment.Application> API를 사용하여 배포 매니페스트의 `deploymentProvider`를 설정해야 합니다. `deploymentProvider` 에 Visual Studio에서 해당 하는 요소는 **위치를 업데이트** 필드에 **업데이트** 의 대화 상자는 **게시** 탭 합니다. 이 규칙은 .NET Framework 3.5에서 완화되었습니다. 자세한 내용은 참조 [배포 ClickOnce 응용 프로그램에 대 한 테스트 및 프로덕션 서버 Resigning 없이](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)합니다.  
   
 ## <a name="checking-for-updates-after-application-startup"></a>응용 프로그램 시작 후 업데이트 확인  
  이 전략을 사용하면 응용 프로그램에서는 실행 중 백그라운드에서 배포 매니페스트 파일을 찾아 읽으려고 합니다. 사용 가능한 업데이트가 있을 경우 다음 번에 사용자가 응용 프로그램을 실행하면 업데이트를 다운로드하여 설치할지 묻는 메시지가 표시됩니다.  

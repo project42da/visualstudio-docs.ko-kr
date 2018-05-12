@@ -11,11 +11,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1db8ca68453cff105f2bbefcd384b8afa9efea9d
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: b023349454f71835e13e7cc891b8be92b90c153f
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>IIS에 응용 프로그램을 가져와서 게시 Visual Studio에서 게시 설정
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/10/2018
 > * Visual Studio에 게시 설정 파일 가져오기
 > * IIS에 응용 프로그램 배포
 
-게시 설정 파일 (\*.publishsettings)은 게시 프로필 다릅니다 (\*.pubxml) Visual Studio에서 만든 합니다. 게시 설정 파일을 IIS 또는 Azure 앱 서비스 또는 수동으로 작성할 수 있습니다, 만들어지고 Visual Studio로 가져올 수 있습니다.
+게시 설정 파일 (*\*.publishsettings*)은 게시 프로필 다릅니다 (*\*.pubxml*) Visual Studio에서 만든 합니다. 게시 설정 파일을 IIS 또는 Azure 앱 서비스 또는 수동으로 작성할 수 있습니다, 만들어지고 Visual Studio로 가져올 수 있습니다.
 
 > [!NOTE]
 > Visual Studio 게시 프로필을 복사 해야 하는 경우 (\*.pubxml 파일)를 다른 Visual Studio의 한 설치에서 게시 프로필을 찾을 수 있습니다  *\<profilename\>.pubxml*, 에  *\\< p r o j\>\Properties\PublishProfiles* 관리 되는 프로젝트 형식에 대 한 폴더입니다. 웹 사이트의 경우에서 찾아봅니다는 *\App_Data* 폴더입니다. 게시 프로필에는 MSBuild XML 파일입니다.
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/10/2018
 
     이 문서의 단계는 Visual Studio 2017 기반
 
-* ASP.NET Core 설치 또는 IIS에서 게시 설정 파일을 생성 하려면 올바르게 구성 하는 IIS 8.0 웹 서버 역할 및 ASP.NET 4.5를 사용 하거나 사용 하 여 Windows Server 2012를 실행 하는 다른 컴퓨터 있어야 합니다. ASP.NET Core 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다. ASP.NET 4.5에 대해 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
+* IIS 8.0 웹 서버 역할이 제대로 구성 되어 있는 Windows Server 2012를 실행 하는 컴퓨터를 IIS에서 게시 설정 파일을 생성 하려면 있어야 하며 ASP.NET Core 또는 ASP.NET 4.5를 설치 합니다. ASP.NET Core 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다. ASP.NET 4.5에 대해 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>Visual Studio에서 새 ASP.NET 프로젝트 만들기
 

@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: ade15b950e5fc6ab0dd277a26640a7ecb7825e62
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: fec5b041a6fb0f16c35d0f9f16a8171c5e95224b
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>원격 IIS 컴퓨터에 ASP.NET 원격 디버그
 IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 응용 프로그램을 배포한 컴퓨터에서 원격 도구를 실행 하 고 Visual Studio에서 실행 중인 앱에 연결 합니다.
@@ -74,11 +74,17 @@ IIS에서 ASP.NET을 설치 하는 데 필요한 자세한 정보 참조 [IIS 8.
 
 2. 시스템을 다시 시작 (실행 또는 **net stop가 /y** 뒤 **net 시작 w3svc** 시스템 경로에 대 한 변경을 선택 하기 위해 명령 프롬프트에서).
 
+## <a name="optional-install-web-deploy-36-for-hosting-servers-on-windows-server"></a>(선택 사항) 설치 웹 배포 Windows 서버에서 서버를 호스팅하기 위한 3.6
+
+일부 시나리오에서는 빠르게 수 게시 설정 가져오기 Visual Studio의 배포 옵션을 수동으로 구성 하는 대신 합니다. 게시 설정 Visual Studio에서 게시 프로필을 구성 하는 대신, 참조를 가져오려면 선호 하는 경우 [게시 설정 하 고 IIS에 배포 하는 가져오기](../deployment/tutorial-import-publish-settings-iis.md)합니다. 그렇지 않은 경우이 항목의 상태를 유지 하 고 계속 읽어보세요. 가져오기에 대 한 문서를 완료 하는 경우 게시 설정 및 응용 프로그램을 성공적으로 배포 그런 다음이 항목으로 돌아와서을에서 섹션에서 시작 [원격 도구 다운로드](#BKMK_msvsmon)합니다.
+
 ## <a name="BKMK_install_webdeploy"></a> (선택 사항) 설치 웹 배포 Windows Server에서 3.6
 
 [!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
 
 ## <a name="BKMK_deploy_asp_net"></a> Windows Server 컴퓨터에 ASP.NET 웹 사이트를 구성 합니다.
+
+가져오는 경우 게시 설정,이 섹션을 건너뛸 수 있습니다.
 
 1. Windows 탐색기를 열고 새 폴더를 만들 **C:\Publish**, ASP.NET 프로젝트를 나중에 배포 됩니다 있습니다.
 
