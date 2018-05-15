@@ -1,7 +1,7 @@
 ---
 title: 자습서 - Visual Studio의 Django 알아보기, 1단계
 description: Visual Studio 프로젝트 컨텍스트에서 Django 기본 사항을 검토하는 연습 과정으로, Django 개발을 위해 Visual Studio에서 제공하는 지원을 설명합니다.
-ms.date: 04/25/2018
+ms.date: 05/03/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: tutorial
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 97f801d111f7fcb2aaeb207c3f3fcf1784a04f30
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 389bd7a3dedfcc400e9cf3d56d26723a5fc9aa7e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="tutorial-step-1-get-started-with-the-django-web-framework-in-visual-studio"></a>자습서 1단계: Visual Studio에서 Django 웹 프레임워크 시작
 
@@ -33,7 +33,9 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="prerequisites"></a>전제 조건
 
-- Python 작업이 설치된 Visual Studio 2017 자세한 내용은 [Visual Studio에서 Python 지원 설치](installing-python-support-in-visual-studio.md)를 참조하세요.
+- 다음 옵션을 포함하는 Visual Studio 2017:
+  - **Python 개발** 워크로드(설치 관리자의 **워크로드**) 자세한 내용은 [Visual Studio에서 Python 지원 설치](installing-python-support-in-visual-studio.md)를 참조하세요.
+  - **코드 도구**의 **개별 구성 요소** 탭에 있는 **Git for Windows** 및 **Visual Studio용 GitHub 확장**
 
 Django 프로젝트 템플릿은 Visual Studio용 Python 도구의 모든 이전 버전에도 포함되어 있지만 세부 정보는 이 자습서에 설명된 내용과 다를 수 있으며 특히 이전 버전의 Django 프레임워크와 다릅니다.
 
@@ -89,7 +91,7 @@ Visual Studio 프로젝트에는 여러 앱과 함께 Django 프로젝트가 포
 
     ![소스 제어에 사용 가능한 Git 리포지토리 옵션을 보여주는 팀 탐색기 창](media/django/step01-team-explorer.png)
 
-    자신만의 프로젝트에 원하는 서비스를 선택할 수 있습니다. 이 자습서에서는 자습서에 대해 완료된 샘플 코드가 [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django) 리포지토리에서 유지 관리되는 GitHub의 사용을 보여줍니다.
+    자신만의 프로젝트에 원하는 서비스를 선택할 수 있습니다. 이 자습서에서는 자습서에 대해 완료된 샘플 코드가 [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django) 리포지토리에서 유지 관리되는 GitHub의 사용을 보여줍니다.
 
 1. **게시** 컨트롤 중 하나를 선택하면 **팀 탐색기**에서 추가 정보를 묻는 메시지가 표시됩니다. 예를 들어 이 자습서에 대한 샘플을 게시하려면 먼저 리포지토리 자체를 만들어야 했습니다. 이 경우 **원격 리포지토리에 푸시** 옵션이 리포지토리의 URL과 함께 사용되었습니다.
 
@@ -206,4 +208,4 @@ Visual Studio 프로젝트에는 여러 앱과 함께 Django 프로젝트가 포
 
 - Django 프로젝트 코드: [Writing your first Django app, part 1](https://docs.djangoproject.com/en/2.0/intro/tutorial01/)(첫 번째 Django 앱 작성, 1부)(docs.djangoproject.com)
 - 관리 유틸리티: [django-admin and manage.py](https://docs.djangoproject.com/en/2.0/ref/django-admin/)(django-admin 및 manage.py)(docs.djangoproject.com)
-- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

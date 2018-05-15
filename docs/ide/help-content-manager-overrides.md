@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0610178a6249d262169abbe32f3f6a93cdd0e935
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8baf096a0ead512cddf9f33801c4504c2a5a4502
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="help-content-manager-overrides"></a>도움말 콘텐츠 관리자 재정의
 
@@ -24,7 +24,7 @@ Visual Studio IDE에서 도움말 뷰어와 도움말 관련 기능의 기본 �
 
 1. 첫 번째 줄이 `[$RootKey$\Help]`으로 포함된 *.pkgdef* 파일을 만듭니다.
 
-2. 별도의 줄에서 아래 표에 설명된 레지스트리 키 값의 일부 또는 전체를 추가합니다(예: `“UseOnlineHelp”=dword:00000001`).
+2. 별도의 줄에서 아래 표에 설명된 레지스트리 키 값의 일부 또는 전체를 추가합니다(예: `"UseOnlineHelp"=dword:00000001`).
 
 3. 파일을 *%ProgramFiles(x86)%\Microsoft Visual Studio\2017\\<edition\>\Common7\IDE\CommonExtensions*에 복사합니다.
 
@@ -45,12 +45,12 @@ Visual Studio IDE에서 도움말 뷰어와 도움말 관련 기능의 기본 �
 
 ```
 [$RootKey$\Help]
-“NewContentAndUpdateService”=”https://some.service.endpoint”
-“UseOnlineHelp”=dword:00000001
-“OnlineBaseUrl”=”https://some.service.endpoint”
-“OnlineHelpPreferenceDisabled”=dword:00000000
-“DisableManageContent”=dword:00000000
-“DisableFirstRunHelpSelection”=dword:00000001
+"NewContentAndUpdateService"="https://some.service.endpoint"
+"UseOnlineHelp"=dword:00000001
+"OnlineBaseUrl"="https://some.service.endpoint"
+"OnlineHelpPreferenceDisabled"=dword:00000000
+"DisableManageContent"=dword:00000000
+"DisableFirstRunHelpSelection"=dword:00000001
 ```
 
 ## <a name="use-registry-editor-to-change-help-viewer-behavior"></a>레지스트리 편집기를 사용하여 도움말 뷰어 동작 변경
@@ -60,7 +60,7 @@ Visual Studio IDE에서 도움말 뷰어와 도움말 관련 기능의 기본 �
 |작업|레지스트리 키|값|데이터|
 |----------|-----|------|----|
 |BITS 작업 우선 순위 재정의|HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node (on a 64-bit machine)\Microsoft\Help\v2.3|BITSPriority|**전경**, **높음**, **보통** 또는 **낮음**|
-|네트워크 공유의 로컬 콘텐츠 저장소 가리키기|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\v2.3\Catalogs\VisualStudio15|LocationPath|“*ContentStoreNetworkShare*”|
+|네트워크 공유의 로컬 콘텐츠 저장소 가리키기|HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Help\ v2.3\Catalogs\VisualStudio15|LocationPath|"*ContentStoreNetworkShare*"|
 
 ## <a name="see-also"></a>참고 항목
 

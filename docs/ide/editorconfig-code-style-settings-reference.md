@@ -18,11 +18,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 1996edee476525ec73839fc22dd2fa39de03098a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2a6642b03d5e49763cd18bccae8f88ff1f7c5bd4
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig에 대한 .NET 코딩 규칙 설정
 
@@ -40,7 +40,7 @@ Visual Studio 2017에서는 [EditorConfig](../ide/create-portable-custom-editor-
 
 - [명명 규칙](../ide/editorconfig-naming-conventions.md)
 
-   코드 요소의 명명과 관련된 규칙입니다. 예를 들어 `async` 메서드가 “Async”로 끝나야 하는지를 지정할 수 있습니다.
+   코드 요소의 명명과 관련된 규칙입니다. 예를 들어 `async` 메서드가 "Async"로 끝나야 하는지를 지정할 수 있습니다.
 
 ## <a name="language-conventions"></a>언어 규칙
 
@@ -54,7 +54,7 @@ Visual Studio 2017에서는 [EditorConfig](../ide/create-portable-custom-editor-
 
 심각도 | 효과
 :------- | ------
-none or silent | 이 규칙을 위반하는 경우 사용자에게 아무것도 표시되지 않습니다. 그러나 코드 생성 기능은 이 스타일의 코드를 생성합니다.
+none or silent | 이 규칙을 위반하는 경우 사용자에게 아무 것도 표시되지 않습니다. 그러나 코드 생성 기능은 이 스타일의 코드를 생성합니다.
 suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 제안으로 표시합니다. 제안은 처음 두 개의 문자 아래에 세 개의 회색 점으로 표시됩니다.
 경고 | 이 스타일 규칙을 위반하는 경우 컴파일러 경고가 표시됩니다.
 오류 | 이 스타일 규칙을 위반하는 경우 컴파일러 오류가 표시됩니다.
@@ -62,7 +62,7 @@ suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 
 다음 목록에서는 허용되는 언어 규칙을 보여줍니다.
 
 - .NET 코드 스타일 설정
-    - [“This.” 및 “Me.” 한정자](#this_and_me)
+    - ["This." 및 "Me." 한정자](#this_and_me)
         - dotnet\_style\_qualification\_for_field
         - dotnet\_style\_qualification\_for_property
         - dotnet\_style\_qualification\_for_method
@@ -80,7 +80,7 @@ suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 
         - dotnet\_style\_explicit\_tuple_names
         - dotnet\_prefer\_inferred\_tuple_names
         - dotnet\_prefer\_inferred\_anonymous\_type\_member_names
-    - [“Null” 검사 기본 설정](#null_checking)
+    - ["Null" 검사 기본 설정](#null_checking)
         - dotnet\_style\_coalesce_expression
         - dotnet\_style\_null_propagation
 - C# 코드 스타일 설정
@@ -104,7 +104,7 @@ suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 
         - csharp\_prefer\_simple\_default_expression
         - csharp\_style\_deconstructed\_variable_declaration
         - csharp\_style\_pattern\_local\_over\_anonymous_function
-    - [“Null” 검사 기본 설정](#null_checking_csharp)
+    - ["Null" 검사 기본 설정](#null_checking_csharp)
         - csharp\_style\_throw_expression
         - csharp\_style\_conditional\_delegate_call
     - [코드 블록 기본 설정](#code_block)
@@ -114,7 +114,7 @@ suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 
 
 이 섹션의 스타일 규칙은 C# 및 Visual Basic 모두에 적용됩니다. 원하는 프로그래밍 언어의 코드 예제를 보려면 브라우저 창의 상단 오른쪽 모서리에 있는 **언어** 메뉴 드롭다운에서 선택합니다.
 
-#### <a name="this_and_me"></a>“This.” 그리고 “Me.” 한정자
+#### <a name="this_and_me"></a>"This." 그리고 "Me." 한정자
 
 이 스타일 규칙(규칙 ID IDE0003 및 IDE0009)은 필드, 속성, 메서드 또는 이벤트에 적용할 수 있습니다. 값이 **true**이면 C#에서 `this.` 또는 Visual Basic에서 `Me.`를 코드 기호 앞에 추가하는 것이 좋습니다. 값이 **false**이면 `this.` 또는 `Me.`을 코드 요소 앞에 추가하지 _않는_ 것이 좋습니다.
 
@@ -238,7 +238,7 @@ dotnet_style_qualification_for_event = false:suggestion
 
 | 규칙 이름 | 규칙 ID | 해당 언어 | Visual Studio 기본값 |
 | --------- | ------- | -------------------- | ----------------------|
-| dotnet_style_predefined_type_for_locals_parameters_members | IDE0012 및 IDE0014 | C# 및 Visual Basic | true:none |
+| dotnet_style_predefined_type_for_locals_ parameters_members | IDE0012 및 IDE0014 | C# 및 Visual Basic | true:none |
 | dotnet_style_predefined_type_for_member_access | IDE0013 및 IDE0015 | C# 및 Visual Basic | true:none |
 
 **dotnet\_style\_predefined\_type\_for\_locals\_parameters_members**
@@ -304,7 +304,7 @@ dotnet_style_predefined_type_for_member_access = true:suggestion
 
 | 규칙 이름 | 규칙 ID | 해당 언어 | Visual Studio 기본값 | Visual Studio 2017 버전 |
 | --------- | ------- | -------------------- | ----------------------| ----------------  |
-| dotnet_style_require_accessibility_modifiers | IDE0040 | C# 및 Visual Basic | for_non_interface_members:none | 15.5 |
+| dotnet_style_require_ accessibility_modifiers | IDE0040 | C# 및 Visual Basic | for_non_interface_members:none | 15.5 |
 | csharp_preferred_modifier_order | IDE0036 | C# | 공용, 개인, 보호됨, 내부, 고정, 외부, 새로운, 가상, 추상, 봉인됨, 재정의, 읽기 전용, 안전하지 않음, 변동, 비동기: 없음 | 15.5 |
 | visual_basic_preferred_modifier_order | IDE0036 | Visual Basic | 부분, 기본, 개인, 보호됨, 공용, 친구, NotOverridable, 재정의 가능, MustOverride, 오버로드, 재정의, MustInherit, NotInheritable, 고정, 공유, 그림자, 읽기 전용, 쓰기 전용, 차원, Const, WithEvents, 확대, 축소, 사용자 지정, 비동기: 없음 | 15.5 |
 
@@ -392,7 +392,7 @@ visual_basic_preferred_modifier_order = Partial,Default,Private,Protected,Public
 | dotnet_style_collection_initializer | IDE0028 | C# 및 Visual Basic | true:suggestion | 첫 번째 릴리스 |
 | dotnet_style_explicit_tuple_names | IDE0033 | C# 7.0+ 및 Visual Basic 15+ | true:suggestion | 첫 번째 릴리스 |
 | dotnet_style_prefer_inferred_tuple_names | IDE0037 | C# 7.1+ 및 Visual Basic 15+ | true:suggestion | 15.6 |
-| dotnet_style_prefer_inferred_anonymous_type_member_names | IDE0037 | C# 및 Visual Basic | true:suggestion | 15.6 |
+| dotnet_style_prefer_inferred_anonymous_ type_member_names | IDE0037 | C# 및 Visual Basic | true:suggestion | 15.6 |
 
 **dotnet\_style\_object_initializer**
 
@@ -978,7 +978,7 @@ csharp_style_deconstructed_variable_declaration = true:suggestion
 csharp_style_pattern_local_over_anonymous_function = true:suggestion
 ```
 
-#### <a name="null_checking_csharp"></a>“Null” 검사 기본 설정
+#### <a name="null_checking_csharp"></a>"Null" 검사 기본 설정
 
 이러한 스타일 규칙은 `throw` 식 또는 `throw` 문 사용을 비롯한 `null` 검사 관련 구문 및 [람다 식](/dotnet/csharp/lambda-expressions)을 호출할 때를 null 검사를 수행하거나 조건부 병합 연산자(`?.`)를 사용할지에 대해 다룹니다.
 
@@ -1147,7 +1147,7 @@ dotnet_sort_system_directives_first = true
 
 이러한 서식 지정 규칙은 코드의 서식을 지정하기 위해 새 줄을 사용합니다.
 
-다음 표에서는 “새 줄” 규칙 이름, 적용 가능한 언어, 기본값 및 먼저 지원되는 Visual Studio의 버전을 보여줍니다.
+다음 표에서는 "새 줄" 규칙 이름, 적용 가능한 언어, 기본값 및 먼저 지원되는 Visual Studio의 버전을 보여줍니다.
 
 | 규칙 이름 | 해당 언어 | Visual Studio 기본값 | Visual Studio 2017 버전 |
 | ----------- | -------------------- | ----------------------| ----------------  |
@@ -1165,9 +1165,9 @@ dotnet_sort_system_directives_first = true
 
 | 값 | 설명
 | ------------- |:-------------|
-| accessors, anonymous_methods, anonymous_types, control_blocks, events, indexers, lambdas, local_functions, methods, object_collection, properties, types.<br>(여러 경우에 ‘,’로 구분합니다.) | 지정된 코드 요소(“Allman” 스타일이라고도 함)의 경우 새 줄에 중괄호가 필요합니다. |
-| 모두 | 모든 식(“Allman” 스타일)의 경우 새 줄에 중괄호가 필요합니다. |
-| 없음 | 모든 식(“K&R”)의 경우 동일한 줄에 중괄호가 필요합니다. |
+| accessors, anonymous_methods, anonymous_types, control_blocks, events, indexers, lambdas, local_functions, methods, object_collection, properties, types.<br>(여러 경우에 ','로 구분합니다.) | 지정된 코드 요소("Allman" 스타일이라고도 함)의 경우 새 줄에 중괄호가 필요합니다. |
+| 모두 | 모든 식("Allman" 스타일)의 경우 새 줄에 중괄호가 필요합니다. |
+| 없음 | 모든 식("K&R")의 경우 동일한 줄에 중괄호가 필요합니다. |
 
 코드 예제:
 
@@ -1497,7 +1497,7 @@ csharp_indent_labels = flush_left
 | ----------- | -------------------- | ----------------------| ----------------  |
 | csharp_space_after_cast |  C# | False | 15.3  |
 | csharp_space_after_keywords_in_control_flow_statements |  C# | true | 15.3  |
-| csharp_space_between_method_declaration_parameter_list_parentheses |  C# | False | 15.3  |
+| csharp_space_between_method_declaration_parameter_ list_parentheses |  C# | False | 15.3  |
 | csharp_space_between_method_call_parameter_list_parentheses |  C# | False | 15.3  |
 | csharp_space_between_parentheses |  C# | False | 15.3  |
 

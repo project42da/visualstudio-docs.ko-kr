@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 97e0b1e58a1a3a490d97d49410f04b4b08eb844b
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: dc5260c50fde7137ed2c598483fd2647d73f4112
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-6-use-the-polls-django-web-project-template"></a>자습서 6단계: 설문 조사 Django 웹 프로젝트 템플릿 사용
 
@@ -361,7 +361,7 @@ admin.site.register(Poll, PollAdmin)
 ## <a name="next-steps"></a>다음 단계
 
 > [!Note]
-> 이 자습서를 진행하는 동안 Visual Studio 솔루션을 소스 제어에 커밋했으면 다른 커밋을 수행할 수 있습니다. 솔루션이 GitHub의 자습서 소스 코드([Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django))와 일치해야 합니다.
+> 이 자습서를 진행하는 동안 Visual Studio 솔루션을 소스 제어에 커밋했으면 다른 커밋을 수행할 수 있습니다. 솔루션이 GitHub의 자습서 소스 코드([Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django))와 일치해야 합니다.
 
 이제 Visual Studio에서 “빈 Django 웹 프로젝트”, “Django 웹 프로젝트” 및 “설문 조사 Django 웹 프로젝트” 템플릿 전체를 살펴보았습니다. 보기 및 템플릿 사용과 같은 Django의 모든 기본 사항을 학습했으며 라우팅, 인증 및 데이터베이스 모델 사용을 검토했습니다. 이제 필요한 모든 보기 및 모델을 사용하여 웹앱을 직접 작성할 수 있어야 합니다.
 

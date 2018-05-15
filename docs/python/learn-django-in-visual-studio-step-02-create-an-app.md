@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 2904e329e26fe588553745f3a9d6ca8a572b5c83
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 4050694685302eb527b33d8810bc7f92974bc305
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-2-create-a-django-app-with-views-and-page-templates"></a>자습서 2단계: 보기 및 페이지 템플릿을 사용하여 Django 앱 만들기
 
@@ -278,4 +278,4 @@ Django 페이지 템플릿은 `{{ content }}`에서처럼 `{{` 및 `}}`로 표�
 - [Writing your first Django app, part 1 - views](https://docs.djangoproject.com/en/2.0/intro/tutorial01/#write-your-first-view)(첫 번째 Django 앱 작성, 1부 - 보기)(docs.djangoproject.com)
 - 포함 및 상속과 같은 Django 템플릿의 추가 기능은 [The Django template language](https://docs.djangoproject.com/en/2.0/ref/templates/language/)(Django 템플릿 언어)(docs.djangoproject.com)를 참조하세요.
 - [Regular expression training on inLearning](https://www.linkedin.com/learning/topics/regular-expressions)(inLearning의 정규식 교육)(LinkedIn)
-- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

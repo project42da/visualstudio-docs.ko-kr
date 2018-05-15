@@ -12,11 +12,11 @@ ms.workload:
 - python
 - data-science
 - azure
-ms.openlocfilehash: e77c155565830827ff6c30e48aee89152e07a80e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9a71ea2210bfc6c56a235f194354c3279c8e7370
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-set-up-a-python-environment-on-azure-app-service"></a>Azure App Service에서 Python 환경을 설정하는 방법
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="choosing-a-python-version-through-the-azure-resource-manager"></a>Azure Resource Manager를 통해 Python 버전 선택
 
-Azure Resource Manager 템플릿을 사용하여 App Service를 배포하는 경우 사이트 확장을 리소스로 추가합니다. 확장은 `siteextensions` 형식과 [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22)의 이름을 사용하여 중첩된 리소스로 표시됩니다.
+Azure Resource Manager 템플릿을 사용하여 App Service를 배포하는 경우 사이트 확장을 리소스로 추가합니다. 특히 확장은 `siteextensions` 형식과 [siteextensions.net](https://www.siteextensions.net/packages?q=Tags%3A%22python%22)의 이름을 사용하여 중첩된 리소스(`resources` 아래의 `resources` 개체)로 표시됩니다.
 
 예를 들어 `python361x64`(Python 3.6.1 x64)에 참조를 추가한 후 템플릿이 다음과 같이 표시될 수 있습니다(일부 속성 생략됨).
 
@@ -154,7 +154,7 @@ HttpPlatform 모듈은 소켓 연결을 독립 실행형 Python 프로세스에 
 </configuration>
 ```
 
-여기에 표시된 `HTTP_PLATFORM_PORT` 환경 변수에는 로컬 서버가 localhost의 연결을 수신 대기해야 하는 포트가 포함됩니다. 이 예제에서는 원하는 경우 다른 환경 변수(이 경우 `SERVER_PORT`)를 만드는 방법도 보여줍니다.
+여기에 표시된 `HTTP_PLATFORM_PORT` 환경 변수에는 로컬 서버가 localhost의 연결을 수신 대기해야 하는 포트가 포함됩니다. 이 예제에서는 원하는 경우 다른 환경 변수(이 경우 `SERVER_PORT`)를 만드는 방법도 보여 줍니다.
 
 ## <a name="installing-packages"></a>패키지 설치
 

@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 205af005071c86b7e86dcc465918fccc7243690c
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 18a4f274de38bab160144a9e13d6a6963168fff1
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="step-5-installing-packages-in-your-python-environment"></a>5단계: Python 환경에서 패키지 설치
 
@@ -43,7 +43,7 @@ Python 개발자 커뮤니티에서는 사용자 소유의 프로젝트에 통�
 
   ![환경에 matplotlib 설치 완료](media/environments-add-matplotlib2.png)
 
-  환경 아래에 있는 작은 진행률 표시줄은 Visual Studio에서 새로 설치된 패키지에 대한 IntelliSense 데이터베이스를 빌드 중임을 나타냅니다. **IntelliSense** 탭에 더 자세한 정보가 표시됩니다. 해당 데이터베이스가 완료될 때까지 자동 완성 및 구문 검사와 같은 IntelliSense 기능은 해당 패키지에 대한 편집기에서 활성화되지 않습니다.
+  작은 진행률 표시줄은 환경 아래에 표시되어 Visual Studio에서 새로 설치된 패키지에 대한 IntelliSense 데이터베이스를 빌드 중임을 나타낼 수 있습니다. **IntelliSense** 탭에 더 자세한 정보가 표시됩니다. 해당 데이터베이스가 완료될 때까지 자동 완성 및 구문 검사와 같은 IntelliSense 기능은 해당 패키지에 대한 편집기에서 활성화되지 않습니다.
 
   **Visual Studio 2017 버전 15.6** 이상에서는 IntelliSense 작업에 다른 더 빠른 방법을 사용하며, 그러한 목적으로 **IntelliSense** 탭에 메시지를 표시합니다.
 

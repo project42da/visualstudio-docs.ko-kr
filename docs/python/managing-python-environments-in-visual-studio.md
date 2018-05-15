@@ -11,24 +11,24 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: f3a3fa14a2772171b2968514867d35ea4ad126f1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fbefd6a09537227f9b2343d2311dd1e68b9f0a23
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-create-and-manage-python-environments-in-visual-studio"></a>Visual Studio에서 Python 환경을 만들고 관리하는 방법
 
 Python ‘환경’은 Python 코드를 실행할 컨텍스트이며 전역, 가상 및 conda 환경을 포함합니다. 환경은 인터프리터, 라이브러리(일반적으로 Python 표준 라이브러리) 및 설치된 패키지 집합으로 구성됩니다. 이러한 모든 구성 요소에 따라, 어떤 언어로 구성되고 구문이 유효한지, 어떤 운영 체제 기능에 액세스할 수 있으며 어떤 패키지를 사용할 수 있는지가 결정됩니다.
 
-Windows의 Visual Studio에서는 이 문서에 설명된 대로 [Python 환경](#managing-python-environments-in-visual-studio) 창에서 이러한 환경을 관리하고 새 프로젝트의 기본값으로 환경을 선택합니다. 지정된 프로젝트의 경우 기본값을 사용하는 대신 특정 환경을 선택할 수도 있습니다.
+Windows의 Visual Studio에서는 이 아티클에 설명된 대로 [Python 환경 창](#the-python-environments-window) 창에서 이러한 환경을 관리하고 새 프로젝트의 기본값으로 환경을 선택합니다. 지정된 프로젝트의 경우 기본값을 사용하는 대신 특정 환경을 선택할 수도 있습니다.
 
 **참고**: Visual Studio에서 Python을 처음 사용하는 경우 필요한 배경은 다음 문서를 참조하세요.
 
 - [Visual Studio에서 Python 작업](overview-of-python-tools-for-visual-studio.md)
 - [Visual Studio에서 Python 지원 설치](installing-python-support-in-visual-studio.md)
 
-또한 **파일 > 열기 > 폴더** 명령을 사용하여 폴더로만 열리는 Python 코드의 환경을 관리할 수 없습니다. 대신 Visual Studio의 환경 기능을 사용하기 위해 [기존 코드에서 Python 프로젝트를 만듭니다](quickstart-01-python-in-visual-studio-project-from-existing-code.md).
+또한 **파일** > **열기** > **폴더** 명령을 사용하여 폴더로만 열리는 Python 코드의 환경을 관리할 수 없습니다. 대신 Visual Studio의 환경 기능을 사용하기 위해 [기존 코드에서 Python 프로젝트를 만듭니다](quickstart-01-python-in-visual-studio-project-from-existing-code.md).
 
 환경에 패키지를 설치하려는 경우 [패키지 탭](python-environments-window-tab-reference.md#packages-tab)을 참조합니다.
 
@@ -48,15 +48,35 @@ Visual Studio에서는 프로젝트의 하위 폴더에 저장된 특정 프로�
 
 ### <a name="conda-environments"></a>Conda 환경
 
-Conda 환경은 `conda` 도구를 사용하여 만든 환경입니다. 일반적으로 Conda 환경은 Anaconda 설치 내의 `envs` 폴더에 저장되므로 전역 환경과 비슷하게 작동합니다. 예를 들어 새 패키지를 conda 환경에 설치하면 해당 환경을 사용하는 모든 프로젝트에서 해당 패키지를 사용할 수 있습니다.
+Conda 환경은 `conda` 도구를 사용하거나 Visual Studio 버전 2017 15.7 이상에서 통합 Conda 관리를 사용하여 만듭니다. Anaconda 또는 Miniconda가 필요합니다. Anaconda는 Visual Studio 설치 관리자를 통해 지원됩니다. [설치 - Visual Studio 2017](installing-python-support-in-visual-studio.md#visual-studio-2017)을 참조하세요.
 
-현재 Visual Studio에서는 conda 환경을 자동으로 검색하지 않지만 Visual Studio에서 conda 환경을 수동으로 지정할 수 있습니다. [기존 환경 수동 식별](#manually-identifying-an-existing-environment)을 참조하세요.
+> [!Note]
+> Conda 환경을 사용하는 최상의 결과는 Conda 4.4.8 이상을 사용합니다(Conda 버전은 Anaconda 버전과 다름). Visual Studio 2017 설치 관리자에서 Anaconda 5.1 설치
+
+Conda 환경이 저장된 Conda 버전 및 기타 정보를 보려면 Anaconda 명령 프롬프트(즉, Anaconda가 경로에 있는 명령 프롬프트)에서 `conda info`를 실행합니다.
+
+```bash
+conda info
+```
+Conda 환경 폴더가 다음과 같이 표시됩니다.
+
+```output
+       envs directories : c:\anaconda3\envs
+                          C:\Users\user\AppData\Local\conda\conda\envs
+                          C:\Users\user\.conda\envs
+```
+
+Conda 환경을 프로젝트와 저장하지 않았기 때문에 글로벌 환경에서 비슷하게 작동합니다. 예를 들어 새 패키지를 conda 환경에 설치하면 해당 환경을 사용하는 모든 프로젝트에서 해당 패키지를 사용할 수 있습니다.
+
+Visual Studio 2017 버전 15.6 이전의 경우 [기존 환경 수동 식별](#manually-identify-an-existing-environment) 아래에 설명된 대로 수동으로 지정하여 Conda 환경을 사용할 수 있습니다.
+
+Visual Studio 2017 버전 15.7 이상에서는 Conda 환경을 자동으로 검색하고 다음 섹션에 설명된 대로 **Python 환경** 창을 표시합니다.
 
 ## <a name="the-python-environments-window"></a>Python 환경 창
 
 Visual Studio에서 인식하는 환경이 **Python 환경** 창에 표시됩니다. 창을 열려면 다음 방법 중 하나를 사용합니다.
 
-- **보기> Other Windows(다른 창) > Python 환경** 메뉴 명령을 선택합니다.
+- **보기** > **다른 창** > **Python 환경** 메뉴 명령을 선택합니다.
 - 솔루션 탐색기에서 프로젝트의 **Python 환경** 노드를 마우스 오른쪽 단추로 클릭하고 **모든 Python 환경 보기**를 선택합니다.
 
     ![솔루션 탐색기에서 모든 환경 명령 보기](media/environments-view-all.png)
@@ -65,15 +85,17 @@ Visual Studio에서 인식하는 환경이 **Python 환경** 창에 표시됩니
 
 ![Python 환경 창](media/environments-default-view.png)
 
-위의 이미지는 Visual Studio에서 Anaconda 5.0.0과 함께 Python 3.6(32비트)의 설치 두 개를 발견했음을 보여줍니다.
+굵게 표시된 기본 환경은 Python 3.6이며 Visual Studio에서는 새로운 프로젝트에 사용합니다. 모든 형식의 나열된 환경은 기본값으로 사용할 수 있습니다.
 
-굵게 표시된 기본 환경은 Python 3.6(이 경우 Anaconda 설치의 일부)으로, Visual Studio가 모든 새로운 프로젝트에 사용하는 환경입니다. 창의 하단 부분에 있는 명령은 선택된 Python 3.6 인터프리터에 적용되며, 여기서 볼 수 있듯이 이 인터프리터는 `C:\Python36-32`에 있는 특정 설치입니다. 원하는 환경이 표시되지 않으면 [기존 환경 수동 식별](#manually-identifying-an-existing-environment)을 참조하세요.
+창의 하단 부분에 있는 명령은 선택된 인터프리터에 적용되며, 여기서 볼 수 있듯이 이 인터프리터는 `C:\Python36-32`에 있는 특정 설치입니다(굵게 표시된 기본 환경은 Anaconda 설치의 일부임). 원하는 환경이 표시되지 않으면 [기존 환경 수동 식별](#manually-identify-an-existing-environment)을 참조하세요.
 
-나열된 각 환경의 오른쪽에는 해당 환경에 대한 대화형 창을 여는 컨트롤이 있습니다. 해당 환경의 IntelliSense 데이터베이스를 새로 고치는 다른 컨트롤이 표시될 수도 있습니다(데이터베이스에 대한 자세한 내용은 [환경 창 참조](python-environments-window-tab-reference.md#intellisense-tab) 확인).
+나열된 각 환경의 오른쪽에는 해당 환경에 대한 대화형 창을 여는 컨트롤이 있습니다. Visual Studio 2017 15.5 이전에서 해당 환경의 IntelliSense 데이터베이스를 새로 고치는 다른 컨트롤이 표시됩니다. 데이터베이스에 대한 세부 정보는 [환경 창 참조](python-environments-window-tab-reference.md#intellisense-tab)를 참조하세요.
 
 환경 목록 아래에는 [Python 환경 창 탭 참조](python-environments-window-tab-reference.md)에 설명된 **개요**, **패키지** 및 **IntelliSense** 옵션에 대한 드롭다운 선택기가 있습니다. 또한 **Python 환경** 창을 적당히 넓게 확장하면 이러한 옵션이 탭으로 표시되어 작업하기가 더 편리할 수 있습니다.
 
 ![Python 환경 창 확장된 보기](media/environments-expanded-view.png)
+
+위 이미지에서 환경을 만드는 추가 명령과 함께 이 특정 컴퓨터에서 전체 환경 목록을 볼 수 있습니다.
 
 > [!Note]
 > Visual Studio에서는 system-site-packages 옵션을 적용하지만 Visual Studio 내에 이를 변경하는 방법은 제공하지 않습니다.
@@ -86,18 +108,20 @@ Visual Studio에서 인식하는 환경이 **Python 환경** 창에 표시됩니
 
 환경이 나타나지 않으면 Visual Studio가 표준 위치에서 Python 설치를 검색하지 못한 것입니다. 예를 들어 Visual Studio 2017을 설치했지만 Python 워크로드에 대한 설치 관리자 옵션에서 모든 인터프리터 옵션을 선택 취소했을 수 있습니다. 마찬가지로 Visual Studio 2015 이하를 설치했지만 인터프리터를 수동으로 설치하지 않았을 수 있습니다([Python 인터프리터 설치](installing-python-interpreters.md) 참조).
 
-컴퓨터에 Python 인터프리터가 있는 것을 알지만 Visual Studio(모든 버전)가 이를 검색하지 못하는 경우 **+ 사용자 지정...** 명령을 사용하여 해당 위치를 수동으로 지정합니다. 다음 섹션 [기존 환경 수동 식별](#manually-identifying-an-existing-environment)을 참조하세요.
+컴퓨터에 Python 인터프리터가 있는 것을 알지만 Visual Studio(모든 버전)가 이를 검색하지 못하는 경우 **+ 사용자 지정...** 명령을 사용하여 해당 위치를 수동으로 지정합니다. 다음 섹션인 [기존 환경 수동 식별](#manually-identify-an-existing-environment)을 참조하세요.
 
 > [!Tip]
 > Visual Studio는 python.org의 설치 관리자를 사용하여 Python2.7.11을 2.7.14로 업그레이드하는 경우와 같은 기존 인터프리터의 업데이트를 검색합니다. 설치 과정에서 **Python 환경** 목록에서 이전 환경이 사라진 후 업데이트가 그 자리에 나타납니다.
 >
 > 그러나 파일 시스템을 사용하여 인터프리터 및 해당 환경을 수동으로 이동할 경우 Visual Studio에서는 새 위치를 알 수 없습니다. 자세한 내용은 [인터프리터 이동](installing-python-interpreters.md#moving-an-interpreter)을 참조하세요.
 
-## <a name="manually-identifying-an-existing-environment"></a>기존 환경 수동 식별
+<a name="manually-identifying-an-existing-environment></a>
 
-Conda 환경을 포함하여 비표준 위치에 설치된 환경을 식별하려면 다음 단계를 수행합니다.
+## <a name="manually-identify-an-existing-environment"></a>기존 환경 수동 식별
 
-1. **Python 환경** 창에서 **+ 사용자 지정...** 을 선택하면 **구성** 탭이 열립니다.
+Visual Studio 2017 버전 15.6 이전의 Conda 환경을 포함하여 비표준 위치에 설치된 환경을 식별하려면 다음 단계를 수행합니다.
+
+1. **Python 환경** 창에서 **+ 사용자 지정**을 선택하면 **구성** 탭이 열립니다.
 
     ![새 사용자 지정 환경의 기본 보기](media/environments-custom-1.png)
 
@@ -114,6 +138,24 @@ Conda 환경을 포함하여 비표준 위치에 설치된 환경을 식별하�
 1. 필드에 원하는 값이 포함되면 **적용**을 선택하여 구성을 저장합니다. 이제 Visual Studio 내에서 다른 환경과 같이 해당 환경을 사용할 수 있습니다.
 
 1. 수동으로 식별된 환경을 제거해야 하는 경우 **구성** 탭에서 **제거** 명령을 선택합니다. 자동 감지 환경에서는 이 옵션을 제공하지 않습니다. 자세한 내용은 [구성 탭](python-environments-window-tab-reference.md#configure-tab)을 참조하세요.
+
+## <a name="create-a-conda-environment"></a>Conda 환경 만들기
+
+*Visual Studio 2017 버전 15.7 이상*
+
+1. **Python 환경** 창에서 **+ Conda 환경 만들기**를 선택하면 **새 Conda 환경 만들기** 탭이 열립니다.
+
+    ![새 Conda 환경의 탭 만들기](media/environments-conda-1.png)
+
+1. **이름** 필드에서 환경의 이름을 입력하고, **Python** 필드에서 기본 Python 인터프리터를 선택하고 **만들기**를 선택합니다.
+
+1. **출력** 창에서는 생성이 완료되면 몇 가지 CLI 지침을 사용하여 새 환경에 대한 진행률을 보여줍니다.
+
+    ![성공적으로 Conda 환경 만들기](media/environments-conda-2.png)
+
+1. 다른 환경처럼 [프로젝트의 환경 선택](selecting-a-python-environment-for-a-project.md)에 설명된 대로 Visual Studio 내에서 프로젝트에서 Conda 환경을 활성화할 수 있습니다.
+
+1. 환경에서 패키지를 설치하려면 [패키지 탭](python-environments-window-tab-reference.md#packages-tab)을 사용합니다.
 
 ## <a name="see-also"></a>참고 항목
 

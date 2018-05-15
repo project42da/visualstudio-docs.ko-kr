@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: c93a0c4d8fd312c9b7b6367043fc35b183d022bb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6f4af615091751f1076a5fe8659a8749fc41ca37
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="how-to-install-python-support-in-visual-studio-on-windows"></a>Windows의 Visual Studio에서 Python 지원 설치 방법
 
@@ -67,7 +67,7 @@ Visual Studio 2015 및 이전 버전의 경우 별도로 원하는 [Python 인�
     | Python 네이티브 개발 도구 | C++ 컴파일러 및 Python에 대한 기본 확장을 개발하는 데 필요한 기타 구성 요소를 설치합니다. [Python용 C++ 확장 만들기](working-with-c-cpp-python-in-visual-studio.md)를 참조하세요. 또한 전체 C++ 지원을 사용하려면 **C++를 사용한 데스크톱 개발** 워크로드를 설치하세요. |
     | Azure Cloud Services 핵심 도구 | Python에서 개발자 Azure Cloud Services에 대한 추가 지원을 제공합니다. [Azure Cloud Service 프로젝트](python-azure-cloud-service-project-template.md)를 참조하세요. |
 
-1. 설치가 끝나면 설치 관리자는 Visual Studio를 수정, 실행, 복구 또는 제거하는 옵션을 제공합니다. **수정** 단추는 설치된 구성 요소에 업데이트를 사용할 수 있는 경우 Visual Studio에 대한 업데이트가 있는 경우 **업데이트**로 변경됩니다. (수정 옵션은 드롭다운 메뉴에서 사용할 수 있습니다.) “Visual Studio”를 검색하여 Windows 시작 메뉴에서 Visual Studio 및 설치 관리자를 시작할 수도 있습니다.
+1. 설치가 끝나면 설치 관리자는 Visual Studio를 수정, 실행, 복구 또는 제거하는 옵션을 제공합니다. **수정** 단추는 설치된 구성 요소에 업데이트를 사용할 수 있는 경우 Visual Studio에 대한 업데이트가 있는 경우 **업데이트**로 변경됩니다. (수정 옵션은 드롭다운 메뉴에서 사용할 수 있습니다.) "Visual Studio"를 검색하여 Windows 시작 메뉴에서 Visual Studio 및 설치 관리자를 시작할 수도 있습니다.
 
     ![설치 관리자에서 Visual Studio 시작, 수정 또는 제거](media/installation-vs-launch.png)
 
@@ -95,7 +95,7 @@ Visual Studio에서 Python 설치 또는 실행 문제가 발생하는 경우 �
 
     ![Visual Studio 2015 설치 관리자의 PTVS 옵션](media/installation-vs2015.png)
 
-1. Visual Studio 설치가 완료되면 [원하는 Python 인터프리터를 설치](installing-python-interpreters.md)합니다. 이미 인터프리터가 설치되어 있고 Visual Studio에서 이를 자동으로 검색하지 않는 경우 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)을 참조하세요.
+1. Visual Studio 설치가 완료되면 [원하는 Python 인터프리터를 설치](installing-python-interpreters.md)합니다. 이미 인터프리터가 설치되어 있고 Visual Studio에서 이를 자동으로 검색하지 않는 경우 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)을 참조하세요.
 
 ## <a name="visual-studio-2013-and-earlier"></a>Visual Studio 2013 및 이전 버전
 
@@ -105,7 +105,7 @@ Visual Studio에서 Python 설치 또는 실행 문제가 발생하는 경우 �
     - Visual Studio 2012: [Visual Studio 2012용 PTVS 2.1](https://pytools.codeplex.com/downloads/get/920478)
     - Visual Studio 2010: [Visual Studio 2010용 PTVS 2.1](https://pytools.codeplex.com/downloads/get/920479)
 
-1. [원하는 Python 인터프리터를 설치합니다](installing-python-interpreters.md). 이미 인터프리터가 설치되어 있고 Visual Studio에서 이를 자동으로 검색하지 않는 경우 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)을 참조하세요.
+1. [원하는 Python 인터프리터를 설치합니다](installing-python-interpreters.md). 이미 인터프리터가 설치되어 있고 Visual Studio에서 이를 자동으로 검색하지 않는 경우 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)을 참조하세요.
 
 ## <a name="install-locations"></a>설치 위치
 

@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 47cbba613461fac86b1e619e8164e9765c071975
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 44d2e6c20173c075f1a3e5aac4881f12f5b46e1f
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="working-with-python-in-visual-studio-on-windows"></a>Visual Studio에서 Python 작업(Windows)
 
@@ -46,7 +46,7 @@ Visual Studio의 **Python 환경** 창(넓게 확장된 뷰에서 아래에 표�
 
 ## <a name="rich-editing-intellisense-and-code-comprehension"></a>다양한 편집 기능, IntelliSense 및 코드 이해
 
-Visual Studio에서는 구문 색 지정, 모든 코드 및 라이브러리에 대한 자동 완성 기능, 코드 서식 지정, 서명 도움말, 리팩터링, 형식 힌트 및 Lint(Lint는 아래 참조)를 포함하는 고급 Python 편집기를 제공합니다. Visual Studio에서 클래스 뷰, 정의로 이동, 모든 참조 찾기 및 코드 조각 등의 고유한 기능을 제공합니다. [대화형 창](#interactive-window)과 직접 통합하여 파일에 이미 저장되어 있는 Python 코드를 신속히 개발할 수 있습니다.
+Visual Studio에서는 구문 색 지정, 모든 코드 및 라이브러리에 대한 자동 완성 기능, 코드 서식 지정, 서명 도움말, 리팩터링, Lint(아래 참조) 및 형식 힌트를 포함하는 고급 Python 편집기를 제공합니다. Visual Studio에서 클래스 뷰, 정의로 이동, 모든 참조 찾기 및 코드 조각 등의 고유한 기능을 제공합니다. [대화형 창](#interactive-window)과 직접 통합하여 파일에 이미 저장되어 있는 Python 코드를 신속히 개발할 수 있습니다.
 
 ![Visual Studio에서 Python 코드에 대한 코드 완성](media/code-editing-completions-simple.png)
 
@@ -65,7 +65,7 @@ Visual Studio에 알려진 모든 Python 환경의 경우 별도 명령 프롬�
 
 ![Visual Studio의 Python 대화형 창](media/interactive-window.png)
 
-또한 Visual Studio는 Python 코드 편집기와 대화형 창 사이의 긴밀한 통합을 제공합니다. **Ctrl + Enter** 키보드 바로 가기 키는 간편하게 편집기에서 현재 코드 줄(또는 코드 블록)을 대화형 창으로 보낸 다음, 다음 줄(또는 블록)로 이동합니다. **Ctrl + Enter** 키를 사용하면 디버거를 실행할 필요 없이 쉽게 한 단계씩 코드를 실행할 수 있습니다. 또한 같은 키 입력으로 대화형 창에 선택한 코드를 보내고 쉽게 대화형 창에서 편집기에 코드를 붙여넣을 수 있습니다. 이러한 기능을 함께 사용하면 대화형 창에서 코드의 세그먼트에 대한 세부 정보를 파악하고 편집기에서 결과를 파일에 쉽게 저장할 수 있습니다.
+또한 Visual Studio는 Python 코드 편집기와 대화형 창 사이의 긴밀한 통합을 제공합니다. **Ctrl + Enter** 키보드 바로 가기 키는 간편하게 편집기에서 현재 코드 줄(또는 코드 블록)을 대화형 창으로 보낸 다음, 다음 줄(또는 블록)로 이동합니다. **Ctrl + Enter** 키를 사용하면 디버거를 실행할 필요 없이 쉽게 한 단계씩 코드를 실행할 수 있습니다. 또한 같은 키 입력으로 대화형 창에 선택한 코드를 보내고 쉽게 대화형 창에서 편집기에 코드를 붙여 넣을 수 있습니다. 이러한 기능을 함께 사용하면 대화형 창에서 코드의 세그먼트에 대한 세부 정보를 파악하고 편집기에서 결과를 파일에 쉽게 저장할 수 있습니다.
 
 또한 Visual Studio는 인라인 플롯, .NET 및 WPF(Windows Presentation Foundation)을 포함한 REPL의 IPython/Jupyter를 지원합니다.
 

@@ -11,11 +11,11 @@ author: gewarren
 ms.author: gewarren
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
-ms.openlocfilehash: 3856987971f74c8caa7210fa2284812f802c2b9d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: adf65277f4ec7566464f737bf8b4ab5913043bcc
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # F1 도움말
 
@@ -37,4 +37,4 @@ ms.lasthandoff: 04/26/2018
 
 ## 기능 향상 지원 F1
 
-**F1** 키을 눌렀을 때 찾는 내용에 관한 피드백을 남겨서 F1 도움말 환경을 개선하도록 도와주세요. 예를 들어 커서가 무슨 기호 또는 창에 있었습니까? 아래의 **설명서에 대한 사용자 의견 제공** 단추를 사용하세요. 감사합니다!
+F1 도움말 환경을 개선할 수 있도록 도와주세요. 아래 **제품 피드백 제공** 단추를 클릭하여 제품 도움말 문제를 작성합니다. 예를 들어 커서가 위치한 기호 또는 창 등 **F1**을 누를 때 도움말을 포함합니다. 감사합니다!

@@ -381,7 +381,7 @@
 ##### [이 컴퓨터에 Microsoft Office가 설치되어 있지 않습니다.](microsoft-office-is-not-installed-on-this-computer.md)
 ##### [이 프로젝트를 만드는 데 사용된 통합 문서에 디자이너에서 로드할 수 없는 ActiveX 컨트롤이 있습니다.](the-workbook-used-to-create-this-project-contains-activex-controls-that-the-designer-cannot-load.md)
 ##### [.ofs 파일에 있는 하나 이상의 속성을 선택한 메시지 클래스에 사용할 수 없습니다.](one-or-more-properties-in-the-dot-ofs-file-are-not-valid-for-the-message-class-selected.md)
-##### [Visual Studio Tools for the Microsoft Office System 프로젝트를 만들거나 열려면 우선 Microsoft Office Visual Basic for Applications 프로젝트에 대한 액세스를 명시적으로 활성화해야 합니다.](you-must-explicitly-enable-access-to-the-microsoft-office-visual-basic-for-applications-project-system-before-you-can-create-or-open-a-----for-the-microsoft-office-system-project.md)
+##### [Microsoft Office System 프로젝트용 Visual Studio Tools를 만들거나 열기 위해 VBA에 대한 액세스를 사용하도록 설정합니다.](enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-office-system-project.md)
 ### [관리되는 참조(Visual Studio에서 Office 개발)](managed-reference-office-development-in-visual-studio.md)
 ### [관리되지 않는 API 참조(Visual Studio에서 Office 개발)](unmanaged-api-reference-office-development-in-visual-studio.md)
 #### [EnsureVSTOComponent 함수](ensurevstocomponent-function.md)

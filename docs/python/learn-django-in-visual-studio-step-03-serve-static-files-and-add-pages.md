@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 8dba33c4ff90f3066c8333870c5d18c371b5fb2a
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: b267c4963eede53f433bd929eb7944ad53e9a8ba
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-3-serve-static-files-add-pages-and-use-template-inheritance"></a>자습서 3단계: 정적 파일 제공, 페이지 추가 및 템플릿 상속 사용
 
@@ -283,4 +283,4 @@ Django의 템플릿 시스템은 여러 템플릿에서 특정 요소를 다시 
 - [Writing your first Django app, part 3 (views)](https://docs.djangoproject.com/en/2.0/intro/tutorial03/)(첫 번째 Django 앱 작성, 3부(보기))(docs.djangoproject.com)
 - 제어 흐름과 같은 Django 템플릿의 추가 기능은 [The Django template language](https://docs.djangoproject.com/en/2.0/ref/templates/language/)(Django 템플릿 언어)(docs.djangoproject.com)를 참조하세요.
 - `{% url %}` 태그 사용에 대한 자세한 내용은 [Built-in template tags and filters for Django templates reference](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/)(Django 템플릿 참조용 기본 제공 템플릿 태그 및 필터)(docs.djangoproject.com)에서 [url](https://docs.djangoproject.com/en/2.0/ref/templates/builtins/#url)을 참조하세요.
-- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)

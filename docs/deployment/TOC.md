@@ -14,6 +14,8 @@
 ### [명령줄에서 ClickOnce 응용 프로그램 빌드](building-clickonce-applications-from-the-command-line.md)
 ## ASP.NET
 ### [Azure에 ASP.NET Core 앱 게시](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
+### [게시 설정 가져오기 및 Azure에 배포](tutorial-import-publish-settings-azure.md)
+### [게시 설정 가져오기 및 IIS에 배포](tutorial-import-publish-settings-iis.md)
 ### [Git를 사용하여 Azure에 ASP.NET Core 연속 배포](/aspnet/core/publishing/azure-continuous-deployment)
 ### [IIS에 ASP.NET 배포](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)
 ## 네이티브

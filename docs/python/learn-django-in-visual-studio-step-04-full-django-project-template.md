@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 9d48c8f86d29c990d254b2ed1d0adf471c24d6b8
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 387077f8845d4e070d4ad0a07f6549a97552a233
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="tutorial-step-4-use-the-full-django-web-project-template"></a>자습서 4단계: 전체 Django 웹 프로젝트 템플릿 사용
 
@@ -217,4 +217,4 @@ urlpatterns = [
 ## <a name="going-deeper"></a>자세히 알아보기
 
 - [Writing your first Django app, part 4 - forms and generic views](https://docs.djangoproject.com/en/2.0/intro/tutorial04/)(첫 번째 Django 앱 작성, 4부 - 양식 및 일반 보기)(docs.djangoproject.com)
-- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learn-django](https://github.com/Microsoft/python-sample-vs-learn-django)
+- GitHub의 자습서 소스 코드: [Microsoft/python-sample-vs-learning-django](https://github.com/Microsoft/python-sample-vs-learning-django)
