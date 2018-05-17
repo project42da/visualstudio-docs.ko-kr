@@ -1,15 +1,15 @@
 ---
 title: 빌드 시스템 사용자 지정
-description: ''
+description: 이 아티클에서는 Mac용 Visual Studio에서 사용하는 MSBuild 빌드 시스템을 간략히 소개합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: 649289700aa984235f432528a59b970762d26be0
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: e999c9c68a534611aa1db6e571594d11fc20201e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="customizing-the-build-system"></a>빌드 시스템 사용자 지정
 

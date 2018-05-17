@@ -15,17 +15,17 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9d0e459fe1bd9960c46a1816add1f79e4d5507d5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: fc032fc89b6dee609fa3c69ebd210aa8adefd17c
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="vsperfclrenv"></a>VSPerfCLREnv
 
 VSPerfCLREnv 도구는 .NET Framework 응용 프로그램을 프로파일링하는 데 필요한 환경 변수를 설정하는 데 사용됩니다. 이 도구는 다음 구문을 사용합니다.
 
-```
+```cmd
 VsPerfCLREnv [/option]
 ```
 
@@ -45,7 +45,7 @@ VsPerfCLREnv [/option]
 
 다음 예제에는 샘플링 방법을 사용하는 프로파일링 실행의 계층 상호 작용 데이터가 포함되어 있습니다.
 
-```
+```cmd
 VSPerfCLREnv /SampleOn
 VSPerfCLREnv /InteractionOn
 VSPerfCmd /Start:Sample /Output:MyApp.exe.vsp /Launch:MyApp.exe
@@ -53,7 +53,7 @@ VSPerfCmd /Start:Sample /Output:MyApp.exe.vsp /Launch:MyApp.exe
 
 다음 예제에는 Windows 서비스에 대한 프로파일링 실행의 계층 상호 작용 데이터가 포함되어 있습니다.
 
-```
+```cmd
 VSPerfCLREnv /GlobalSampleOn
 VSPerfCLREnv /GlobalInteractionOn
 REM Restart the computer and start the service

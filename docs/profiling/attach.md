@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 98e18456ad4665359e33d7a9b5f064585f8195be
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f5a135115dc6d004e8b853822d4fc6024d5aec84
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="attach"></a>연결
 VSPerfCmd.exe **Attach** 옵션은 PID(프로세스 ID)로 지정된 실행 중인 프로세스의 샘플 프로파일링을 시작합니다.  
@@ -26,7 +26,7 @@ VSPerfCmd.exe **Attach** 옵션은 PID(프로세스 ID)로 지정된 실행 중�
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cmd  
 VSPerfCmd.exe /Attach:ProcessID [Options]  
 ```  
   
@@ -69,7 +69,7 @@ VSPerfCmd.exe /Attach:ProcessID [Options]
 ## <a name="example"></a>예  
  이 예제에서는 12345의 프로세스 ID로 응용 프로그램의 실행 중인 인스턴스에 연결하는 방법을 보여 줍니다.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Attach:12345  
 ```  

@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6d96d547c3558c9c1e5ce4d11904a0c8cce048e7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b9d494b1fb6465c1cf246f6becb9b812115e6076
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="c-code-snippets"></a>C# 코드 조각
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/26/2018
 
  커서 위치에 코드 조각을 삽입하거나, 현재 선택한 코드 주위에 코드 감싸기 코드 조각을 삽입할 수 있습니다. 코드 조각 삽입기는 **IntelliSense**메뉴의 **코드 조각 삽입** 또는 **코드 감싸기** 명령을 통해 또는 각각 키보드 바로 가기 **Ctrl**+**K**,**X** 또는 **Ctrl**+**K**,**S**를 사용하여 호출됩니다.
 
- 코드 조각 삽입기에 사용 가능한 모든 코드 조각에 대한 코드 조각 이름이 표시됩니다. 또한 코드 조각 삽입기에는 코드 조각의 이름이나 코드 조각 이름의 일부를 입력할 수 있는 입력 대화 상자가 포함되어 있습니다. 코드 조각 삽입기에서 코드 조각 이름과 가장 일치하는 항목이 강조 표시됩니다. 언제든지 **Tab** 키를 누르면 코드 조각 삽입기가 해제되고 현재 선택한 코드 조각이 삽입됩니다. **Esc** 키를 입력하거나 코드 편집기에서 마우스를 클릭하면 코드 조각을 삽입하지 않고 코드 조각 삽입기가 해제됩니다.
+ **코드 조각 삽입기**에 사용 가능한 모든 코드 조각에 대한 코드 조각 이름이 표시됩니다. 또한 코드 조각 삽입기에는 코드 조각의 이름이나 코드 조각 이름의 일부를 입력할 수 있는 입력 대화 상자가 포함되어 있습니다. 코드 조각 삽입기에서 코드 조각 이름과 가장 일치하는 항목이 강조 표시됩니다. 언제든지 **Tab** 키를 누르면 코드 조각 삽입기가 해제되고 현재 선택한 코드 조각이 삽입됩니다. **Esc** 키를 입력하거나 코드 편집기에서 마우스를 클릭하면 코드 조각을 삽입하지 않고 코드 조각 삽입기가 해제됩니다.
 
 ## <a name="default-code-snippets"></a>기본 코드 조각
 
@@ -57,7 +57,7 @@ ms.lasthandoff: 04/26/2018
 |iterator|반복기를 만듭니다.|클래스 또는 구조체 내부|
 |iterindex|중첩된 클래스를 사용하여 "명명된" 반복기 및 인덱서 쌍을 만듭니다.|클래스 또는 구조체 내부|
 |잠금|[lock](/dotnet/csharp/language-reference/keywords/lock-statement) 블록을 만듭니다.|메서드, 인덱서, 속성 접근자 또는 이벤트 접근자 내부|
-|mbox|<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> 호출을 만듭니다. System.Windows.Forms.dll에 대한 참조를 추가해야 할 수도 있습니다.|메서드, 인덱서, 속성 접근자 또는 이벤트 접근자 내부|
+|mbox|<xref:System.Windows.Forms.MessageBox.Show%2A?displayProperty=fullName> 호출을 만듭니다. *System.Windows.Forms.dll*에 대한 참조를 추가해야 할 수도 있습니다.|메서드, 인덱서, 속성 접근자 또는 이벤트 접근자 내부|
 |namespace|[namespace](/dotnet/csharp/language-reference/keywords/namespace) 선언을 만듭니다.|네임스페이스(전역 네임스페이스 포함) 내부|
 |prop|[자동 구현 속성](/dotnet/csharp/programming-guide/classes-and-structs/auto-implemented-properties) 선언을 만듭니다.|클래스 또는 구조체 내부|
 |propfull|`get` 및 `set` 접근자를 사용하여 속성 선언을 만듭니다.|클래스 또는 구조체 내부|

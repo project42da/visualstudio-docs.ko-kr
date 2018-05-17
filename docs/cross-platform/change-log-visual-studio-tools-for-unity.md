@@ -5,16 +5,16 @@ ms.date: 03/23/2018
 ms.technology: vs-unity-tools
 ms.topic: conceptual
 ms.assetid: ea490b7e-fc0d-44b1-858a-a725ce20e396
-author: dantogno
-ms.author: v-davian
+author: TerryGLee
+ms.author: tglee
 manager: crdun
 ms.workload:
 - unity
-ms.openlocfilehash: 4d7f965cd2a0cd34ea3cb889f25809d32bee2270
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 86ccb5f78f939fa617216fb84cb71a934e314b1d
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="change-log-visual-studio-tools-for-unity-windows"></a>변경 로그(Visual Studio Tools for Unity, Windows)
 Visual Studio Tools for Unity에 대한 변경 로그입니다.
@@ -84,7 +84,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 -   **통합:**
 
     -   외부 변경 시에만 프로젝트를 다시 로드합니다(제한 있음).
- 
+
 ## <a name="3601"></a>3.6.0.1
  릴리스됨 2018-01-24
 
@@ -93,9 +93,9 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 -   **통합:**
 
     -   자동 pdb에서 mdb로의 디버그 기호 변환을 수정했습니다.
-    
+
     -   배열 크기를 변경하는 동안 검사기에 영향을 주는 EditorPrefs.GetBool에 대한 간접 호출이 수정되었습니다.
- 
+
 ## <a name="3600"></a>3.6.0.0
  릴리스됨 2018-01-10
 
@@ -112,7 +112,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 -   **디버거:**
 
     -   새 Unity 런타임에 DebuggerHidden/DebuggerStepThrough 특성에 대한 지원이 추가되었습니다.
-    
+
 -   **마법사:**
 
     -   ‘최신’ 버전의 마법사가 도입되었습니다.
@@ -126,7 +126,7 @@ Visual Studio Tools for Unity에 대한 변경 로그입니다.
 -   **디버거:**
 
     -   중단 이벤트 처리 경합이 수정되었습니다.
-    
+
 -   **마법사:**
 
     -   메서드를 삽입하기 전에 roslyn 컨텍스트를 새로 고칩니다.

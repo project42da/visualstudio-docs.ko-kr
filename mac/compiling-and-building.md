@@ -1,15 +1,15 @@
 ---
-title: Mac용 Visual Studio에서 컴파일 및 빌드
-description: ''
+title: 컴파일 및 빌드
+description: 이 문서에서는 Mac용 Visual Studio에서 프로젝트와 솔루션을 컴파일 및 빌드하는 방법을 설명합니다.
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 7a7dfaeca45ae157dc9e82b9f8eff54244cbd7ca
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 28127fec86f839110ff53de3e6d7d2466adc3489
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 컴파일 및 빌드
 

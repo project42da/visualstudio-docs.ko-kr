@@ -31,11 +31,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d62cc3aff0eb714f142502d30712c8cc289087cd
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ce62e2d2723c38d933c9efc4c8d910ac418dcb4f
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="creating-and-configuring-type-members-class-designer"></a>형식 멤버 만들기 및 구성(클래스 디자이너)
 이러한 멤버를 클래스 다이어그램의 형식에 추가하고 **클래스 세부 내용** 창에서 해당 멤버를 구성할 수 있습니다.
@@ -57,8 +57,8 @@ ms.lasthandoff: 04/26/2018
 
 |작업|지원 내용|
 |----------|------------------------|
-|**시작:** 형식 멤버를 만들고 구성하기 전에 **클래스 세부 내용** 창을 열어야 합니다.|-   [ 클래스 세부 내용 창 열기](creating-and-configuring-type-members.md#OpenClassDetails)<br />-   [클래스 세부 내용 사용 정보](creating-and-configuring-type-members.md#ClassDetailsUsageNotes)<br />-   [읽기 전용 정보 표시](creating-and-configuring-type-members.md#ReadOnlyInfo)<br />-   [클래스 다이어그램 및 클래스 세부 내용 창의 키보드 및 마우스 바로 가기](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)|
-|**만들기 및 형식 멤버 수정:** **클래스 세부 내용** 창을 사용하여 새 멤버를 만들고, 멤버를 수정하고, 메서드에 매개 변수를 추가할 수 있습니다.|-   [멤버 만들기](creating-and-configuring-type-members.md#CreateMembers)<br />-   [형식 멤버 수정](creating-and-configuring-type-members.md#ModifyTypeMembers)<br />-   [메서드에 매개 변수 추가](creating-and-configuring-type-members.md#AddMethodParams)|
+|**시작:** 형식 멤버를 만들고 구성하기 전에 **클래스 세부 내용** 창을 열어야 합니다.|-   [클래스 세부 내용 창 열기](creating-and-configuring-type-members.md#open-the-class-details-window)<br />-   [클래스 세부 내용 사용 정보](creating-and-configuring-type-members.md#class-details-usage-notes)<br />-   [읽기 전용 정보 표시](creating-and-configuring-type-members.md#display-of-read-only-information)<br />-   [클래스 다이어그램 및 클래스 세부 내용 창의 키보드 및 마우스 바로 가기](keyboard-and-mouse-shortcuts-in-the-class-diagram-and-class-details-window.md)|
+|**만들기 및 형식 멤버 수정:** **클래스 세부 내용** 창을 사용하여 새 멤버를 만들고, 멤버를 수정하고, 메서드에 매개 변수를 추가할 수 있습니다.|-   [멤버 만들기](creating-and-configuring-type-members.md#create-members)<br />-   [형식 멤버 수정](creating-and-configuring-type-members.md#modify-type-members)<br />-   [메서드에 매개 변수 추가](creating-and-configuring-type-members.md#add-parameters-to-methods)|
 
 ## <a name="open-the-class-details-window"></a>클래스 세부 내용 창 열기
 기본적으로 **클래스 세부 내용** 창은 새 클래스 다이어그램을 열 때 자동으로 표시됩니다. [방법: 프로젝트에 새 클래스 다이어그램 추가](how-to-add-class-diagrams-to-projects.md)를 참조하세요. 다음과 같은 방법으로 **클래스 세부 내용** 창을 명시적으로 열 수 있습니다.
@@ -157,7 +157,7 @@ ms.lasthandoff: 04/26/2018
 
 -   **\<멤버 추가>**
 
-     **클래스 세부 내용** 창의 마지막 행에는 **이름** 셀에 **\<멤버 추가>** 라는 텍스트가 포함됩니다. 이 셀을 클릭하면 새 멤버를 만들 수 있습니다. 자세한 내용은 [멤버 만들기](creating-and-configuring-type-members.md#CreateMembers)를 참조하세요.
+     **클래스 세부 내용** 창의 마지막 행에는 **이름** 셀에 **\<멤버 추가>** 라는 텍스트가 포함됩니다. 이 셀을 클릭하면 새 멤버를 만들 수 있습니다. 자세한 내용은 [멤버 만들기](creating-and-configuring-type-members.md#create-members)를 참조하세요.
 
 -   **속성 창의 멤버 속성**
 
@@ -207,14 +207,14 @@ ms.lasthandoff: 04/26/2018
 
 -   **\<매개 변수 추가>**
 
-     멤버의 마지막 매개 변수 행에는 **이름** 셀에 **<add parameter>** 라는 텍스트가 나타납니다. 이 셀을 클릭하여 새 매개 변수를 만들 수 있습니다. 자세한 내용은 [메서드에 매개 변수를 추가하려면](creating-and-configuring-type-members.md#HowToAddParameterToMethod)을 참조하세요.
+     멤버의 마지막 매개 변수 행에는 **이름** 셀에 **<add parameter>** 라는 텍스트가 나타납니다. 이 셀을 클릭하여 새 매개 변수를 만들 수 있습니다. 자세한 내용은 [메서드에 매개 변수를 추가하려면](creating-and-configuring-type-members.md#add-parameters-to-methods)을 참조하세요.
 
 **속성 창의 매개 변수 속성**
 
 속성 창에는 **이름**, **형식**, **한정자**, **요약** 및 **선택적 기본값** 속성과 같이 **클래스 세부 내용** 창에 표시되는 것과 동일한 매개 변수 속성이 표시됩니다. 특정 위치에서 속성을 변경하면 해당 속성의 값이 전역으로 업데이트되어 다른 위치에 있는 해당 값에도 반영됩니다.
 
 > [!NOTE]
-> 대리자에 매개 변수를 추가하려면 [멤버 만들기](creating-and-configuring-type-members.md#CreateMembers)를 참조하세요.
+> 대리자에 매개 변수를 추가하려면 [멤버 만들기](creating-and-configuring-type-members.md#create-members)를 참조하세요.
 
 
 > [!NOTE]

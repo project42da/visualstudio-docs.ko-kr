@@ -1,7 +1,7 @@
 ---
 title: Visual Studio 2017의 새로운 기능
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 05/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-acquisition
 ms.topic: conceptual
@@ -16,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a523933dbc18d6fdc107415c6f7faefa9fc5135
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5ae8a0424f822b4b84aed01badc5bc625aacdde8
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="what39s-new-in-visual-studio-2017"></a>Visual Studio 2017의 새로운 기능
-#### <a name="updated-for-the-156-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.6 릴리스](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)용으로 업데이트됨
+#### <a name="updated-for-the-157-releasehttpswwwvisualstudiocomnewsreleasenotesvs2017-relnotes"></a>[15.7 릴리스](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)용으로 업데이트됨
 Visual Studio의 이전 버전에서 업그레이드하려고 하십니까? Visual Studio 2017에서 제공하는 기능 소개: 모든 개발, 앱 및 플랫폼에서 탁월한 생산성 Visual Studio 2017를 사용하여 Android, iOS, Windows, Linux, 웹 및 클라우드용 앱을 개발합니다. 빠르게 코딩하고, 간단하게 디버그 및 진단하고, 자주 테스트하며, 안심하고 릴리스하세요. 개발자 고유의 확장을 빌드하여 Visual Studio를 확장하고 사용자 지정할 수도 있습니다. 이 릴리스로 버전 제어를 사용하고, 민첩하게 대처하고, 효율적으로 공동 작업하세요.
 
 이전 버전 Visual Studio 2015부터 적용해 온 변경을 높은 수준에서 요약한 사항입니다.
@@ -55,7 +55,11 @@ Visual Studio 2017에서 가장 두드러진 개선 사항과 새로운 기능�
 
  ![Visual Studio 2017 설치 대화 상자](../install/media/install-visual-studio-enterprise.png "Visual Studio 2017 설치 화면")
 
-작업을 사용하는 대신 사용자 고유의 구성 요소를 선택하고 싶으세요? 설치 관리자에서 **개별 구성 요소** 탭을 선택합니다. 또한 Windows 언어 옵션을 변경하지 않고도 언어 팩을 설치하고 싶으세요? 설치 관리자의 **언어 팩** 탭을 선택합니다.  
+또한 설치를 상세 조정하는 옵션도 있습니다.
+
+* 작업을 사용하는 대신 사용자 고유의 구성 요소를 선택하고 싶으세요? 설치 관리자에서 **개별 구성 요소** 탭을 선택합니다.
+* 또한 Windows 언어 옵션을 변경하지 않고도 언어 팩을 설치하고 싶으세요? 설치 관리자의 **언어 팩** 탭을 선택합니다.
+* **15.7의 새로운 기능**: Visual Studio를 설치한 위치를 변경하려는 경우 선택 관리자의 **설치 옵션** 탭을 선택합니다.
 
 단계별 지침을 포함하여 새로운 설치 환경에 대한 자세한 내용은 [Visual Studio 설치](../install/install-visual-studio.md) 페이지를 참조하세요.
 
@@ -74,14 +78,14 @@ Visual Studio 2017에서 가장 두드러진 개선 사항과 새로운 기능�
 새로운 Visual Studio 성능 센터는 IDE 시작 시간을 최적화하는 데 유용합니다. 성능 센터에는 IDE 시작을 늦출 수 있는 모든 확장 및 도구 창이 나열됩니다. 성능 센터를 사용하여 확장 시작 시간 또는 시작 시 도구 창을 열지 여부를 결정하여 시작 성능을 개선할 수 있습니다.
 
 ### <a name="faster-on-demand-loading-of-extensions"></a>요청 시 더 빠르게 확장 로드
-Visual Studio는 IDE 시작이 아닌 요청 시에 로드되도록 확장을 전환하고 있습니다(타사 확장과도 작업). 어떤 확장이 시작, 솔루션 로드 및 입력 성능에 영향을 주는지 궁금하세요? 이 정보는 도움말-> Visual Studio 성능 관리에서 확인할 수 있습니다.
+Visual Studio는 IDE 시작이 아닌 요청 시에 로드되도록 확장을 전환하고 있습니다(타사 확장과도 작업). 어떤 확장이 시작, 솔루션 로드 및 입력 성능에 영향을 주는지 궁금하세요? 이 정보는 **도움말** > **Visual Studio 성능 관리**에서 확인할 수 있습니다.
 
   ![Visual Studio 2017의 옵션 대화 상자](../ide/media/vs2017ide-manage-vs-perf.png "Visual Studio 도움말 대화 상자 - 성능 관리")
 
 #### <a name="manage-your-extensions-with-roaming-extensions-manager"></a>로밍 중인 확장 관리자를 사용하여 확장 관리
 Visual Studio에 로그인할 때 즐겨찾는 확장으로 각 개발 환경을 더 쉽게 설정할 수 있습니다. 새로운 [로밍 중인 확장 관리자]는 클라우드에 동기화된 목록을 만들어 즐겨찾는 확장을 모두 추적합니다.  
 
-Visual Studio의 확장 목록을 보려면 도구 > 확장 및 업데이트를 클릭한 다음 로밍 중인 확장 관리자를 클릭합니다.
+Visual Studio의 확장 목록을 보려면 **도구** > **확장 및 업데이트**를 클릭한 다음, **로밍 중인 확장 관리자**를 클릭합니다.
 
 ![Visual Studio 2017 - 확장 및 업데이트 대화 상자](../ide/media/vs2017ide-extensions-and-updates.png "Visual Studio 2017 - 도구 > 확장 및 업데이트 대화 상자")
 
@@ -106,7 +110,7 @@ Visual Studio Enterprise 2017에서 라이브 단위 테스트는 코딩하는 �
 
 자세한 내용은 [Live Unit Testing 소개](../test/live-unit-testing-intro.md)를 참조하세요. Visual Studio Enterprise 2017의 각 릴리스에 추가된 새로운 기능 목록은 [Live Unit Testing의 새로운 기능](../test/live-unit-testing-whats-new.md)을 참조하세요.
 
-#### <a name="setting-up-a-cicd-pipeline"></a>CI/CD 파이프라인 설정
+#### <a name="set-up-a-cicd-pipeline"></a>CI/CD 파이프라인 설정
 #### <a name="automated-testing"></a>자동화된 테스트
 자동화된 테스트는 DevOps 파이프라인의 핵심 부분입니다. 자동화된 테스트를 통해 솔루션을 일관되고 안정적으로 테스트하고 더 짧은 주기로 릴리스할 수 있습니다. CI/CD(연속 통합 및 지속적인 업데이트) 흐름은 이 프로세스의 효율성을 더 높일 수 있습니다.
 
@@ -137,15 +141,15 @@ Visual Studio에서 프로젝트를 작업할 때 코드를 설정하고 빠르�
 #### <a name="experience-improved-navigation-controls"></a>향상된 컨트롤 탐색 환경
 A에서 B로 이동하는 데 도움이 되는 탐색 환경을 새로 고쳐 자신감 있게 더욱 집중할 수 있게 했습니다.
 
-* **15.4의 새로운 기능**: **정의로 이동(Ctrl+클릭 또는 F12)** &ndash; 마우스 사용자는 **Ctrl** 키를 누르고 해당 멤버를 클릭하여 멤버 정의로 이동할 수 있는 더 쉬운 방법이 있습니다. **Ctrl** 키를 누르고 코드 기호에 마우스를 올려 놓으면 밑줄이 쳐지고 링크로 바뀝니다. 자세한 내용은 [정의로 이동 및 정의 피킹(Peeking)](../ide/go-to-and-peek-definition.md)을 참조하세요.  
+* **15.4의 새로운 기능**: **정의로 이동**(**Ctrl**+**클릭** 또는 **F12**)&ndash;마우스 사용자는 **Ctrl** 키를 누르고 해당 멤버를 클릭하여 멤버 정의로 이동할 수 있는 더 쉬운 방법이 있습니다. **Ctrl** 키를 누르고 코드 기호에 마우스를 올려 놓으면 밑줄이 쳐지고 링크로 바뀝니다. 자세한 내용은 [정의로 이동 및 정의 피킹(Peeking)](../ide/go-to-and-peek-definition.md)을 참조하세요.  
 
-* **구현으로 이동(Ctrl+F12)** &ndash; 모든 베이스 형식 또는 멤버에서 다양한 구현으로 이동합니다.
+* **구현으로 이동** (**Ctrl**+**F12**)&ndash; 모든 베이스 형식 또는 멤버에서 다양한 구현으로 이동합니다.
 
-* **전체로 이동(Ctrl+T or Ctrl+,)** &ndash; 모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 “f searchTerm”, 형식의 경우 “t searchTerm”).
+* **전체로 이동**(**Ctrl**+**T** 또는 **Ctrl**+**,**) &ndash;모든 파일/형식/멤버/기호 선언으로 직접 이동합니다. 결과 목록을 필터링하거나 쿼리 구문을 사용할 수 있습니다(예: 파일의 경우 “f searchTerm”, 형식의 경우 “t searchTerm”).
 
  ![향상된 모두로 이동](../ide/media/vs2017ide-navigation-go-to.png "향상된 모두로 이동 기능의 예")
 
-* **모든 참조 찾기(Shift+F12)** &ndash; 구문 색 지정을 사용하면 프로젝트, 정의 및 경로의 조합에 따라 [모든 참조 찾기] 결과를 그룹화할 수 있습니다. 또한 결과를 “잠그면” 원래 결과를 잃지 않고 다른 참조를 계속 찾을 수 있습니다.
+* **모든 참조 찾기(Shift+F12)** (**Shift**+**F12**) &ndash; 구문 색 지정을 사용하면 프로젝트, 정의 및 경로의 조합에 따라 [모든 참조 찾기] 결과를 그룹화할 수 있습니다. 또한 결과를 “잠그면” 원래 결과를 잃지 않고 다른 참조를 계속 찾을 수 있습니다.
 
  ![새로운 모든 참조 찾기 도구](../ide/media/vs2017ide-find-all-references.png "새로운 모든 참조 찾기 도구의 예")
 
@@ -178,7 +182,7 @@ Visual Studio에서 C++ 핵심 지침을 배포하고, C++11 및 C++ 기능에 �
 #### <a name="snapshots-and-intellitrace-step-back"></a>스냅숏 및 IntelliTrace 뒤로 이동:
 **15.5의 새로운 기능**: IntelliTrace 뒤로 이동은 모든 중단점 및 디버거 단계 이벤트에서 응용 프로그램의 스냅숏을 자동으로 생성합니다. 기록된 스냅숏을 통해 이전 중단점 또는 단계로 돌아가서 응용 프로그램의 과거 상태를 볼 수 있습니다. IntelliTrace 뒤로 이동을 사용하면 이전 응용 프로그램 상태를 보고 싶지만 디버깅을 다시 시작하거나 원하는 앱 상태를 다시 만들지 않으려는 경우에 시간을 절약할 수 있습니다.
 
-디버그 도구 모음의 **뒤로 가기**와 **앞으로 가기** 단추를 사용하여 이동하고 스냅숏을 볼 수 있습니다. 이 단추를 사용하여 **진단 도구** 창의 **이벤트** 탭에 나타나는 이벤트를 탐색할 수 있습니다. 이벤트의 앞이나 뒤로 이동하면 선택한 이벤트에 대한 기록 디버깅이 자동으로 활성화됩니다.
+**디버그** 도구 모음의 **뒤로 가기**와 **앞으로 가기** 단추를 사용하여 이동하고 스냅숏을 볼 수 있습니다. 이 단추를 사용하여 **진단 도구** 창의 **이벤트** 탭에 나타나는 이벤트를 탐색할 수 있습니다. 이벤트의 앞이나 뒤로 이동하면 선택한 이벤트에 대한 기록 디버깅이 자동으로 활성화됩니다.
 
 ![Visual Studio의 새 예외 도우미 대화 상자](../debugger/media/intellitrace-step-back-icons-description.png  "뒤로 가기 및 앞으로 가기 단추")
 
@@ -233,12 +237,12 @@ UWP에 대한 자세한 내용은 [UWP(유니버설 Windows 플랫폼)용 앱 �
 자세한 내용은 [Visual Studio 및 Xamarin](../cross-platform/visual-studio-and-xamarin.md) 페이지를 참조하세요.
 
 ### <a name="entitlements-editor"></a>자격 편집기
-**15.3의 새로운 기능**: iOS 개발 요구 사항을 해결하기 위해 독립 실행형 자격 편집기를 추가했습니다. 이 편집기에는 쉽게 검색할 수 있는 사용자에게 친숙한 UI가 포함되어 있습니다. 시작하려면 entitlements.plist 파일을 두 번 클릭합니다.
+**15.3의 새로운 기능**: iOS 개발 요구 사항을 해결하기 위해 독립 실행형 자격 편집기를 추가했습니다. 이 편집기에는 쉽게 검색할 수 있는 사용자에게 친숙한 UI가 포함되어 있습니다. 시작하려면 *entitlements.plist* 파일을 두 번 클릭합니다.
 
 ![Xamarin용 자격 편집기](../ide/media/xamarin-entitlements-editor.png "Xamarin용 자격 편집기")
 
 ### <a name="visual-studio-tools-for-xamarin"></a>Visual Studio Tools for Xamarin
-**15.4의 새로운 기능**: Xamarin Live를 사용하면 개발자가 iOS 및 Android 장치에서 직접 자신의 앱을 계속해서 배포, 테스트 및 디버그할 수 있습니다. &mdash;앱 스토어 또는 Google Play에서 사용할 수 있는&mdash; Xamarin Live Player를 다운로드한 후 장치를 Visual Studio와 연결하고 모바일 앱을 빌드하는 방법을 혁신적으로 개선할 수 있습니다. 이 기능은 이제 Visual Studio에 포함되었으며 도구 > 옵션 > Xamarin > 기타 > Xamarin Live Player 사용으로 이동하여 사용하도록 설정할 수 있습니다.
+**15.4의 새로운 기능**: Xamarin Live를 사용하면 개발자가 iOS 및 Android 장치에서 직접 자신의 앱을 계속해서 배포, 테스트 및 디버그할 수 있습니다. &mdash;앱 스토어 또는 Google Play에서 사용할 수 있는&mdash; Xamarin Live Player를 다운로드한 후 장치를 Visual Studio와 연결하고 모바일 앱을 빌드하는 방법을 혁신적으로 개선할 수 있습니다. 이 기능은 이제 Visual Studio에 포함되었으며 **도구** > **옵션** > **Xamarin** > **기타** > **Xamarin Live Player 사용**으로 이동하여 사용하도록 설정할 수 있습니다.
 
 ![Xamarin Live Player 쌍, 배포 및 라이브 편집 모드의 애니메이션](../ide/media/xamarinliveplayer.gif)
 
@@ -288,7 +292,7 @@ Visual Studio 2017의 모든 버전에는 다음이 포함되어 있습니다.
 자세한 내용은 [Visual Studio Tools for AI](../ai/about-ai-tools.md) 페이지를 참조하세요.
 
 
-## <a name="talk-to-us"></a>의견 보내기  
+## <a name="contact-us"></a>문의처  
  피드백을 보낼 때는 Visual Studio 팀에 피드백을 보내는 이유도 함께 알려 주세요. Microsoft는 고객 여러분의 피드백을 소중하게 생각하며, Microsoft에서 추진하는 업무에 큰 역할을 합니다.  
 
 Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려는 경우 [의견 보내기](../ide/talk-to-us.md) 페이지를 참조하세요.  
@@ -297,7 +301,7 @@ Visual Studio를 개선하는 방법을 제안하거나 문제를 보고하려�
  발생한 문제의 전반적인 영향을 메시지만으로 전달할 수 없는 경우도 있습니다. 시스템 중단, 충돌 또는 기타 성능 문제가 발생하는 경우 **문제 보고** 도구를 사용하여 쉽게 재현 단계 및 지원 파일(예: 스크린샷, 추적 및 힙 덤프 파일)을 공유할 수 있습니다. 이 도구를 사용하는 방법에 대한 자세한 내용은 [문제를 보고하는 방법](how-to-report-a-problem-with-visual-studio-2017.md) 페이지를 참조하세요.  
 
 ### <a name="track-your-issue-in-connect"></a>Connect에서 문제 추적  
- Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 보고하세요. 버그를 신고한 후에는 Connect로 돌아와 상태를 추적할 수 있습니다.  
+ Visual Studio 피드백의 상태를 추적하려는 경우 [Connect](http://connect.microsoft.com/)로 이동하여 버그를 보고하세요. 버그를 신고한 후에는 **Connect**로 돌아와 상태를 추적할 수 있습니다.  
 
 ## <a name="see-also"></a>참고 항목
 * [Visual Studio 2017 릴리스 정보](https://www.visualstudio.com/news/releasenotes/vs2017-relnotes)

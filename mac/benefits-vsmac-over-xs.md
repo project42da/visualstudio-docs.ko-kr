@@ -1,46 +1,43 @@
 ---
 title: Xamarin Studio 대비 Mac용 Visual Studio의 이점
-description: ''
-ms.topic: overview
+description: 이 문서에서는 Mac용 Visual Studio가 Xamarin Studio에 비해 더 나은 기능과 이점을 설명합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.assetid: 6ACF5FD4-D5C1-4050-95E3-467C753F25F1
-ms.openlocfilehash: db4a328bceb79c1b99fdea95da89cc6cc7451523
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 63f8e0f03797f08383ad3a1ec2b9303a405ed236
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="benefits-of-visual-studio-for-mac-over-xamarin-studio"></a>Xamarin Studio 대비 Mac용 Visual Studio의 이점 
+ 
+Mac용 Visual Studio는 모든 기능을 갖춘 Mac의 IDE로 Xamarin Studio를 대체했습니다. 웹 응용 프로그램 및 서비스, 플랫폼 간 모바일 및 데스크톱 앱, 게임을 개발할 수 있는 기능을 제공합니다. 또한 Azure에 게시, Azure Functions 생성 등 Azure와 쉽게 통합되도록 합니다. Mac용 Visual Studio에는 모든 기능을 갖춘 소스 편집기, 효과적인 디버거, 사용자 지정 가능한 작업 영역, Git 통합, 풍부한 확장 시스템 등 최신 IDE에서 기대하는 모든 기능이 포함되어 있습니다. 기본적으로 모든 기능이 Mac용으로 디자인되었습니다.
 
-Mac용 Visual Studio는 모든 기능을 갖춘 Mac의 IDE로 Xamarin Studio를 대체했습니다. 웹 응용 프로그램 및 서비스, 플랫폼 간 모바일 및 데스크톱 앱, 게임을 개발할 수 있는 기능을 제공합니다. 또한 Azure에 게시, Azure Functions 생성 등 Azure와 쉽게 통합되도록 합니다. Mac용 Visual Studio에는 모든 기능을 갖춘 소스 편집기, 효과적인 디버거, 사용자 지정 가능한 작업 영역, Git 통합, 풍부한 확장 시스템 등 최신 IDE에서 기대하는 모든 기능이 포함되어 있습니다. 기본적으로 모든 기능이 Mac용으로 디자인되었습니다. 
+이러한 기능에는 다음이 포함됩니다.
 
-이러한 기능에는 다음이 포함됩니다. 
+* Roslyn 기반 C# IntelliSense, 리팩터링, 분석기 및 코드 수정
+* NuGet 기반 패키지 관리
+* Visual Studio 호환 가능한 프로젝트 형식
+* MSBuild 빌드 엔진
+* 통합 유닛 테스트
+* F#에 대한 기본 제공 지원
 
-* Roslyn 기반 C# IntelliSense, 리팩터링, 분석기 및 코드 수정 
-* NuGet 기반 패키지 관리 
-* Visual Studio 호환 가능한 프로젝트 형식 
-* MSBuild 빌드 엔진 
-* 통합 유닛 테스트 
-* F#에 대한 기본 제공 지원 
-
-이 가이드에서 **미리 보기**로 표시된 이점은 [알파 채널](https://docs.microsoft.com/visualstudio/mac/update#Changing_the_Updater_channel)에서만 사용할 수 있습니다. 
-
-## <a name="language-support"></a>언어 지원 
+## <a name="language-support"></a>언어 지원
 
 Mac에서 C# 7 코드를 작성하는 기능은 Mac용 Visual Studio에서만 제공됩니다.
 
-## <a name="net-core"></a>.NET Core  
+## <a name="net-core"></a>.NET Core
 
-[.NET Core](https://www.microsoft.com/net/core#macos)는 Windows, Linux 및 Mac에서 실행되는 응용 프로그램을 만들기 위한 플랫폼입니다. Mac용 Visual Studio에서는 .NET Core 프로젝트의 로드, 생성, 실행 및 디버그를 지원합니다. 
+[.NET Core](https://www.microsoft.com/net/core#macos)는 Windows, Linux 및 Mac에서 실행되는 응용 프로그램을 만들기 위한 플랫폼입니다. Mac용 Visual Studio에서는 .NET Core 프로젝트의 로드, 생성, 실행 및 디버그를 지원합니다.
 
 .NET Core는 Mac용 Visual Studio와 함께 설치되며 바로 작동 가능합니다.
 
-.NET Core 지원에는 다음이 포함됩니다. 
+.NET Core 지원에는 다음이 포함됩니다.
 
-* C# 및 F# IntelliSense 
-* 콘솔, 라이브러리 및 웹 응용 프로그램용 .NET Core 프로젝트 템플릿 
+* C# 및 F# IntelliSense
+* 콘솔, 라이브러리 및 웹 응용 프로그램용 .NET Core 프로젝트 템플릿
 * 중단점, 호출 스택, 조사식 창 등을 포함하는 전체 디버깅 지원 
 * NuGet 패키지 참조 및 MSBuild 기반 복원 
 * .NET Core SDK에 포함된 Visual Studio 테스트 플랫폼을 사용하여 테스트를 실행 및 디버그하기 위한 통합 유닛 테스트 지원 
@@ -94,11 +91,11 @@ Mac용 Visual Studio를 사용하면 ASP.NET Core 웹앱과 서비스를 Azure A
 
 ![Azure에 게시](media/benefits-vsmac-over-xs-image1.png)
 
-### <a name="azure-functions-preview"></a>Azure Functions(**미리 보기**)
+### <a name="azure-functions"></a>Azure Functions
 
 Azure Functions는 클라우드에서 소량의 코드 또는 함수를 쉽게 실행하기 위한 솔루션입니다. Mac용 Visual Studio를 사용하면 Azure Functions를 코딩하고 로컬에서 디버그할 수 있습니다. 시작하려면 새 프로젝트 대화 상자의 클라우드 아래에서 Azure Functions를 찾습니다. 
 
-### <a name="docker-support-preview"></a>Docker 지원(**미리 보기**)
+### <a name="docker-support"></a>Docker 지원
 
 이제 Docker 컨테이너에 ASP.NET Core 앱을 게시하고 Azure App Service에서 실행할 수 있습니다. 
 
@@ -164,6 +161,4 @@ Xamarin 플랫폼 간 기능은 Xamarin Studio에서 항상 최고 수준의 기
 
 ### <a name="cross-platform"></a>플랫폼 간 
 
-* [Xamarin Live Player](https://developer.xamarin.com/guides/cross-platform/live/)(**미리 보기**) 
-* [Xamarin IoT](https://developer.xamarin.com/guides/cross-platform/iot/)(**미리 보기**) 
- 
+* [Xamarin Live Player](https://developer.xamarin.com/guides/cross-platform/live/)

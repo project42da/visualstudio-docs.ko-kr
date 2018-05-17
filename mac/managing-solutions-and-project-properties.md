@@ -1,14 +1,15 @@
 ---
 title: 프로젝트 및 솔루션 속성 관리
+description: 이 문서에서는 Mac용 Visual Studio에서 프로젝트와 솔루션의 속성을 관리하는 방법을 설명합니다.
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: 75247EB8-323A-4AFD-A451-6703A03D5D1F
-ms.openlocfilehash: c4d4366843a6ea07286c73810f821b41f95e44b9
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7eec0bdecd09a0776df4ab0a9cb21ea37fbabf0b
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="managing-project-and-solution-properties"></a>프로젝트 및 솔루션 속성 관리
 

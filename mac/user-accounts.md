@@ -1,15 +1,15 @@
 ---
 title: 사용자 계정
-description: ''
+description: Mac용 Visual Studio에 로그인하고 Mac용 Visual Studio에서 구독을 활성화하는 방법에 대한 정보
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: 17AB4F31-4921-4B4E-8D9D-95FB84294521
-ms.openlocfilehash: 8326362b9a6aed4bdab3478534bea9aea414b499
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: c5f829a9b2f828e4f7b2ef0cf1a410a607bf86b9
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="user-accounts"></a>사용자 계정
 
@@ -19,5 +19,5 @@ Mac용 Visual Studio를 다운로드하여 설치한 후 Mac용 Visual Studio의
 
 ## <a name="in-this-section"></a>단원 내용
 
-* [Visual Studio에 로그인](signing-in.md)
+* [Mac용 Visual Studio에 로그인](signing-in.md)
 * [사용할 수 있는 구독](activation.md)

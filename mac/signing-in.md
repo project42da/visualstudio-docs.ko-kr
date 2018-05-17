@@ -1,15 +1,15 @@
 ---
 title: Mac용 Visual Studio에 로그인
-description: ''
+description: Mac용 Visual Studio에 로그인하는 방법
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.assetid: E4CFD03C-03AF-48CA-B409-6DB1CA45E991
-ms.openlocfilehash: 52727912877ddfa4a71ced858461083d924503b1
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 60af04ec6a26e5f60ba2b1d95cf8e9e17e868e8a
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="signing-in-to-visual-studio-for-mac"></a>Mac용 Visual Studio에 로그인
 
@@ -25,17 +25,17 @@ Mac용 Visual Studio에 로그인하려면 다음 단계를 따르세요.
 
 1. 홈페이지에서 [로그인] 링크를 클릭하여 [계정] 대화 상자를 표시한 다음 **로그인** 단추를 누릅니다.
 
-    ![](media/signing-in-image12.png)
+    ![Mac용 Visual Studio의 계정 대화 상자](media/signing-in-image12.png)
 
 2. Microsoft 자격 증명을 입력합니다.
 
-    ![](media/signing-in-image13.png)
+    ![Microsoft 자격 증명 대화 상자](media/signing-in-image13.png)
 
     Xamarin 자격 증명으로는 Mac용 Visual Studio에 로그인할 수 없습니다.
 
 3.  로그인에 성공하면 라이선스 형식이 표시됩니다. 이 대화 상자에서 사용할 Microsoft 계정을 더 추가할 수 있습니다.
 
-    ![](media/signing-in-image14.png)
+    ![로그인 성공](media/signing-in-image14.png)
 
 ## <a name="adding-multiple-user-accounts"></a>여러 사용자 계정 추가
 

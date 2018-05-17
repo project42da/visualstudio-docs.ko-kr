@@ -21,11 +21,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 01a27861287bcc5fe419a9be1784177742cda815
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3104266e92bc05f82a4d97fb62fc20bc9e79c0eb
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="refactoring-classes-and-types-class-designer"></a>클래스 및 형식 리팩터링(클래스 디자이너)
 
@@ -40,8 +40,9 @@ ms.lasthandoff: 04/26/2018
 |----------|------------------------|
 |**클래스 리팩터링:** 리팩터링 작업을 통해 클래스를 부분 클래스로 분할하거나 추상 기본 클래스를 구현할 수 있습니다.|-   [방법: 클래스를 부분 클래스로 분할](how-to-split-a-class-into-partial-classes.md)|
 |**인터페이스 사용:** 클래스 디자이너에서는 인터페이스 메서드의 코드를 제공하는 클래스에 인터페이스를 연결하여 클래스 다이어그램에서 인터페이스를 구현할 수 있습니다.|-   [방법: 인터페이스 구현](how-to-implement-an-interface.md)|
-|**형식, 형식 구성원 및 매개 변수 리팩터링:** 클래스 디자이너를 사용하여 형식 이름을 바꾸거나, 형식 구성원을 재정의하거나, 한 형식에서 다른 형식으로 이동할 수 있습니다. nullable 형식을 만들 수도 있습니다.|-   [형식 및 형식 멤버 이름 바꾸기](refactoring-classes-and-types.md#RenamingTypesAndMembers)<br />-   [형식 간에 형식 멤버 이동](refactoring-classes-and-types.md#MovingTypeMembers)<br />-   [방법: Nullable 형식 만들기](how-to-create-a-nullable-type.md)|
+|**형식, 형식 구성원 및 매개 변수 리팩터링:** 클래스 디자이너를 사용하여 형식 이름을 바꾸거나, 형식 구성원을 재정의하거나, 한 형식에서 다른 형식으로 이동할 수 있습니다. nullable 형식을 만들 수도 있습니다.|-   [형식 및 형식 멤버 이름 바꾸기](refactoring-classes-and-types.md#rename)<br />-   [형식 간에 형식 멤버 이동](refactoring-classes-and-types.md#move)<br />-   [방법: Nullable 형식 만들기](how-to-create-a-nullable-type.md)|
 
+<a name="rename"></a>
 ### <a name="rename-types-and-type-members"></a>형식 및 형식 멤버 이름 바꾸기
 
 클래스 디자이너에서는 클래스 다이어그램이나 속성 창에서 형식 또는 형식의 멤버 이름을 바꿀 수 있습니다. 클래스 세부 내용 창에서는 형식이 아닌 멤버의 이름을 변경할 수 있습니다. 형식 또는 형식 멤버의 이름을 바꾸면 이전 이름이 표시되었던 모든 창과 코드 위치로 변경 내용이 전파됩니다.
@@ -77,6 +78,7 @@ ms.lasthandoff: 04/26/2018
 
      새 이름은 현재 프로젝트에서 이전 이름이 표시되었던 모든 창 및 코드 위치로 전파됩니다.
 
+<a name="move"></a>
 ### <a name="move-type-members-from-one-type-to-another"></a>형식 간에 형식 멤버 이동
 
 **클래스 디자이너**를 사용하면 형식 멤버를 현재 클래스 다이어그램에 표시되어 있는 형식 간에 이동할 수 있습니다.

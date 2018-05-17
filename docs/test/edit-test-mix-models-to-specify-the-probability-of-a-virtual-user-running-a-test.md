@@ -11,18 +11,19 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: d3f06eac67207209932073899ae0277f9a156b54
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 591bdaa84d143dc3b639990530a68246dc00385a
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="edit-text-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>텍스트 조합 모델을 편집하여 가상 사용자의 테스트 실행 가능성 지정
+# <a name="edit-test-mix-models-to-specify-the-probability-of-a-virtual-user-running-a-test"></a>테스트 조합 모델을 편집하여 가상 사용자의 테스트 실행 가능성 지정
 
 *테스트 조합 모델*은 가상 사용자가 부하 테스트 시나리오에서 지정된 테스트를 실행할 확률을 지정합니다. 이렇게 하면 부하를 보다 사실적으로 시뮬레이션할 수 있습니다. 응용 프로그램에서 워크플로를 하나만 사용하는 대신 여러 워크플로를 사용하면 최종 사용자가 응용 프로그램과 상호 작용하는 방식을 보다 가깝게 테스트할 수 있습니다.
 
 ## <a name="test-mix-model-options"></a>테스트 조합 모델 옵션
- 부하 테스트 시나리오에 다음 테스트 조합 모델 옵션 중 하나를 지정할 수 있습니다.
+
+부하 테스트 시나리오에 다음 테스트 조합 모델 옵션 중 하나를 지정할 수 있습니다.
 
 -   **총 테스트 횟수 기반:** 가상 사용자가 테스트 반복을 시작할 때 실행되는 웹 성능 또는 단위 테스트를 결정합니다. 부하 테스트가 끝날 때 특정 테스트가 실행된 횟수는 할당된 테스트 배포와 일치합니다. IIS 로그 또는 프로덕션 데이터의 트랜잭션 백분율을 테스트 조합의 기반으로 사용하는 경우 이 테스트 조합 모델을 사용합니다.
 

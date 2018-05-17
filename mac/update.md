@@ -3,14 +3,14 @@ title: Mac용 Visual Studio 업데이트
 description: Mac용 Visual Studio 업데이트 및 미리 보기 릴리스 이용 방법을 안내합니다.
 author: asb3993
 ms.author: amburns
-ms.date: 04/14/2017
+ms.date: 05/06/2018
 ms.technology: vs-ide-install
 ms.assetid: DB8DC9FE-FF21-4061-8A96-3F9FC08A4F8F
-ms.openlocfilehash: eeda1afa2e9cd311c09660f2af5190b224b9c341
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 7f93a76f3b054755a385696a6cfc8649a608a58b
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/08/2018
 ---
 # <a name="updating-visual-studio-for-mac"></a>Mac용 Visual Studio 업데이트
 
@@ -19,8 +19,7 @@ Mac용 Visual Studio는 IDE 및 지원되는 프레임워크에 대한 업데이
 Mac용 Visual Studio는 다음 세 가지 채널을 통해 최신 버전을 제공합니다.
 
 * **안정** - 철저한 테스트를 거친 업데이트를 제공합니다. 원활한 개발 환경을 위해 안정 채널이 권장됩니다.
-* **베타** - 안정 채널로 릴리스될 후보 업데이트를 미리 제공합니다.
-* **알파** - 새로운 기능을 추가하는 업데이트를 미리 제공하지만 본격적으로 사용하기에는 안정성이 떨어질 수 있습니다.
+* **베타** / **알파** - 안정 채널로 릴리스될 후보 업데이트를 미리 제공합니다. 이러한 릴리스는 매일 사용할 경우 안정적으로 작동하지 않을 수 있습니다.
 
 ## <a name="checking-for-updates"></a>업데이트 확인
 

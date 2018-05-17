@@ -1,15 +1,15 @@
 ---
-title: 연습 - 프로젝트에 NuGet 패키지 포함하기
+title: 프로젝트에 NuGet 패키지 포함하기
 description: 이 문서에서는 Xamarin 프로젝트에 NuGet 패키지를 포함하는 방법을 다룹니다. 여기에서는 IDE 통합 기능을 소개할 뿐 아니라 패키지를 찾아 다운로드하는 방법도 살펴봅니다.
 author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.assetid: 5C800815-0B13-4B27-B017-95FCEF1A0EA2
-ms.openlocfilehash: 05762df8b06a69647c6c7a628db54ac499248374
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: f251080351f1e448d250798c4f9a758114a6e5ab
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="including-a-nuget-package-in-your-project"></a>프로젝트에 NuGet 패키지 포함하기
 
@@ -26,8 +26,6 @@ NuGet 패키지 기능을 설명하기 위해 우선 새로운 응용 프로그�
 먼저 아래 그림과 같이 `HelloNuget`이라는 이름의 프로젝트를 만듭니다. 이 예제에서는 iOS Single View Application 템플릿을 보여주지만, 지원되는 모든 프로젝트 형식을 사용할 수 있습니다.
 
 ![새 iOS 프로젝트 만들기](media/nuget-walkthrough-NewProject.png)
-
-<a name="Adding_a_Package" class="injected"></a>
 
 ## <a name="adding-a-package"></a>패키지 추가하기
 
@@ -50,9 +48,9 @@ Mac용 Visual Studio에서 프로젝트를 연 상태에서 **Solution Pad**의 
 
 다운로드된 패키지는 프로젝트에 추가되며 솔루션은 다음과 같이 변경됩니다.
 
-*   **참조** 노드는 NuGet 패키지의 일부인 모든 어셈블리의 목록을 포함합니다.
-*   **패키지** 노드는 다운로드한 각 NuGet 패키지를 표시합니다. 이 목록에서 패키지를 업데이트하거나 제거할 수 있습니다.
-*   **packages.config** 파일이 프로젝트에 추가됩니다. 이 XML 파일은 이 프로젝트에서 참조하는 패키지 버전을 IDE에서 추적하는 데 사용됩니다. 이 파일은 직접 편집해서는 안 되며, 버전 제어를 통해 보관해야 합니다. packages.config 파일 대신 project.json 파일을 사용할 수 있습니다. project.json 파일은 NuGet 3에 도입된 새로운 패키지 파일 형식으로, 전이적 복원을 지원합니다. project.json에 대한 자세한 내용은 [NuGet 설명서](http://docs.microsoft.com/NuGet/Schema/Project-Json)에서 확인할 수 있습니다. project.json 파일은 수동으로 추가해야 하고 Mac용 Visual Studio에서 project.json 파일을 사용하려면 프로젝트를 닫은 후 다시 열어야 합니다.
+* **참조** 노드는 NuGet 패키지의 일부인 모든 어셈블리의 목록을 포함합니다.
+* **패키지** 노드는 다운로드한 각 NuGet 패키지를 표시합니다. 이 목록에서 패키지를 업데이트하거나 제거할 수 있습니다.
+* **packages.config** 파일이 프로젝트에 추가됩니다. 이 XML 파일은 이 프로젝트에서 참조하는 패키지 버전을 IDE에서 추적하는 데 사용됩니다. 이 파일은 직접 편집해서는 안 되며, 버전 제어를 통해 보관해야 합니다. packages.config 파일 대신 project.json 파일을 사용할 수 있습니다. project.json 파일은 NuGet 3에 도입된 새로운 패키지 파일 형식으로, 전이적 복원을 지원합니다. project.json에 대한 자세한 내용은 [NuGet 설명서](http://docs.microsoft.com/NuGet/Schema/Project-Json)에서 확인할 수 있습니다. project.json 파일은 수동으로 추가해야 하고 Mac용 Visual Studio에서 project.json 파일을 사용하려면 프로젝트를 닫은 후 다시 열어야 합니다.
 
 ## <a name="using-nuget-packages"></a>NuGet 패키지 사용하기
 
@@ -60,8 +58,9 @@ NuGet 패키지를 추가하고 프로젝트 참조를 업데이트한 다음에
 
 파일 상단에 필요한 `using` 지시문을 추가했는지 확인하세요.
 
-
-    using Newtownsoft.json;
+```csharp
+using Newtownsoft.json;
+```
 
 대부분의 NuGet은 NuGet 소스에 대한 README 또는 프로젝트 페이지 링크와 같은 추가 정보를 제공합니다. 이에 대한 링크는 일반적으로 [패키지 추가] 페이지의 패키지 안내에서 찾을 수 있습니다.
 

@@ -9,15 +9,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 6dd4284e242f91525e14630375d5ea624968f60c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0d82b40c7f0f06925be0fc6f55c5a01a4114946e
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-intellisense"></a>Visual C++ IntelliSense
 
-IntelliSense for C++는 C++ 프로젝트의 일부인 파일의 경우와 마찬가지로 독립 실행형 파일에도 사용할 수 있습니다. 플랫폼 간 프로젝트에서는 Android 또는 iOS 컨텍스트에 있는 경우에도 공유 코드 프로젝트의 .cpp 및 .c 파일에서 일부 IntelliSense 기능을 사용할 수 있습니다.
+IntelliSense for C++는 C++ 프로젝트의 일부인 파일의 경우와 마찬가지로 독립 실행형 파일에도 사용할 수 있습니다. 플랫폼 간 프로젝트에서는 Android 또는 iOS 컨텍스트에 있는 경우에도 공유 코드 프로젝트의 *.cpp* 및 *.c* 파일에서 일부 IntelliSense 기능을 사용할 수 있습니다.
 
 ## <a name="intellisense-features-in-c"></a>C++의 IntelliSense 기능
 
@@ -73,23 +73,23 @@ IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 
 
 다음 사항을 참고하십시오.
 
-- Android 프로젝트에 대해 __ANDROID\_\_가 정의되어 있으므로 8줄의 #else 분기가 비활성 지역을 나타내기 위해 회색으로 표시되어 있습니다.
+- Android 프로젝트에 대해 `__ANDROID__`가 정의되어 있으므로 8줄의 `#else` 분기가 비활성 지역을 나타내기 위해 회색으로 표시되어 있습니다.
 
-- 11줄의 인사말 변수는 자주색 물결 기호가 있는 HELLO 식별자로 초기화됩니다. 이는 현재 비활성 iOS 프로젝트에 정의된 HELLO 식별자가 없기 때문입니다. Android에서 프로젝트 줄 11이 컴파일되는 동안에는 iOS에 없습니다. 공유 코드이므로 현재 활성 구성에서 컴파일되더라도 변경해야 합니다.
+- 11줄의 인사말 변수는 자주색 물결 기호가 있는 `HELLO` 식별자로 초기화됩니다. 이는 현재 비활성 iOS 프로젝트에 정의된 `HELLO` 식별자가 없기 때문입니다. Android에서 프로젝트 줄 11이 컴파일되는 동안에는 iOS에 없습니다. 공유 코드이므로 현재 활성 구성에서 컴파일되더라도 변경해야 합니다.
 
-- 줄 12에는 BYE 식별자에 빨간색 물결 기호가 있습니다. 이 식별자는 현재 선택한 활성 프로젝트에 정의되어 있지 않습니다.
+- 12줄에는 `BYE` 식별자에 빨간색 물결 기호가 있습니다. 이 식별자는 현재 선택한 활성 프로젝트에 정의되어 있지 않습니다.
 
-이제, 활성 프로젝트를 iOS.StaticLibrary로 변경하고 물결 기호 변경 방법에 대해 살펴보겠습니다.
+이제, 활성 프로젝트를 **iOS.StaticLibrary**로 변경하고 물결 기호 변경 방법에 대해 살펴보겠습니다.
 
 ![iOS가 활성 프로젝트로 선택됩니다.](../ide/media/intellisensecppcrossplatform2.png "IntelliSenseCppCrossPlatform2")
 
 다음 사항을 참고하십시오.
 
-- __ANDROID\_\_가 iOS 프로젝트에 대해 정의되지 않았으므로 6줄 #ifdef 분기가 회색으로 표시되어 비활성 지역을 나타냅니다.
+- iOS 프로젝트에 대해 `__ANDROID__`가 정의되어 있으므로 6줄의 `#ifdef` 분기가 비활성 지역을 나타내기 위해 회색으로 표시되어 있습니다.
 
-- 11줄의 인사말 변수는 HELLO 식별자로 초기화되어 이제 빨간색 물결 기호가 표시되었습니다. 이는 HELLO 식별자가 현재 활성 iOS 프로젝트에 정의되어 있지 않기 때문입니다.
+- 11줄의 인사말 변수는 `HELLO` 식별자로 초기화되어 이제 빨간색 물결 기호가 표시되었습니다. 이는 현재 활성 iOS 프로젝트에 정의된 `HELLO` 식별자가 없기 때문입니다.
 
-- 12줄에는 BYE 식별자에 자주색 물결 기호가 있습니다. 이 식별자는 현재 비활성 Android.NativeActivity 프로젝트에 정의되어 있지 않았습니다.
+- 12줄에는 `BYE` 식별자에 자주색 물결 기호가 있습니다. 이 식별자는 현재 비활성 **Android.NativeActivity** 프로젝트에 정의되어 있지 않았습니다.
 
 ### <a name="intellisense-for-stand-alone-files"></a>독립 실행형 파일의 IntelliSense
 
@@ -97,7 +97,7 @@ IntelliSense는 코딩을 보다 편리하게 하는 기능 집합에 지정된 
 
 ![Visual C&#43;&#43; 단일 파일 IntelliSense](../ide/media/vs2015_cpp_single_file_intellisense.png "vs2015_cpp_single_file_intellisense")
 
-기본적으로 단일 파일 IntelliSense는 표준 포함 디렉터리만 사용하여 헤더 파일을 찾습니다. 디렉터리를 추가하려면 다음 그림에 표시된 것처럼 솔루션 노드에서 바로 가기 메뉴를 열고 해당 디렉터리를 **소스 코드 디버그** 목록에 추가합니다.
+기본적으로 단일 파일 IntelliSense는 표준 포함 디렉터리만 사용하여 헤더 파일을 찾습니다. 디렉터리를 추가하려면 다음 그림에 표시된 것처럼 **솔루션** 노드에서 바로 가기 메뉴를 열고 해당 디렉터리를 **소스 코드 디버그** 목록에 추가합니다.
 
 ![헤더 파일에 경로를 추가하는 중입니다.](../ide/media/intellisensedebugyourcode.jpg "IntelliSenseDebugYourCode")
 

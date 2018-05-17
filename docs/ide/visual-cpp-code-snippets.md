@@ -1,5 +1,5 @@
 ---
-title: Visual C# 코드 조각
+title: Visual C++ 코드 조각
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -11,11 +11,11 @@ dev_langs:
 - CPP
 ms.workload:
 - cplusplus
-ms.openlocfilehash: 0eca50a938312f6c463ff661c83fd90c9218b5ec
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bb091701384d36ca5aa8154701d94cda5fb34a5b
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-c-code-snippets"></a>Visual C++ 코드 조각
 
@@ -23,9 +23,9 @@ Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 �
 
 코드의 특정 위치에 코드 조각을 추가하거나(삽입) 몇몇 선택된 코드를 코드 조각으로 감쌀 수 있습니다.
 
-## <a name="inserting-a-code-snippet"></a>코드 조각 삽입
+## <a name="insert-a-code-snippet"></a>코드 조각 삽입
 
-코드 조각을 삽입하려면 C++ 코드 파일(.cpp or .h)을 열고, 파일 내에서 아무 곳이나 클릭하고, 다음의 하나를 수행합니다.
+코드 조각을 삽입하려면 C++ 코드 파일(*.cpp* 또는 *.h*)을 열고, 파일 내에서 아무 곳이나 클릭하고, 다음의 하나를 수행합니다.
 
 - 마우스 오른쪽 단추를 클릭하여 상황에 맞는 메뉴를 표시하고 **코드 조각 삽입**을 선택합니다.
 
@@ -41,9 +41,9 @@ Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 �
 #endif // 0
 ```
 
-0을 올바른 조건으로 바꿀 수 있습니다.
+**0**을 올바른 조건으로 바꿀 수 있습니다.
 
-## <a name="using-a-code-snippet-to-surround-selected-code"></a>코드 조각을 사용하여 선택한 코드 감싸기
+## <a name="use-a-code-snippet-to-surround-selected-code"></a>코드 조각을 사용하여 선택한 코드 감싸기
 
 코드 조각을 사용하여 선택한 코드를 감싸려면 한 줄이나 여러 줄을 선택하고 다음의 하나를 수행합니다.
 
@@ -51,7 +51,7 @@ Visual Studio에서 코드 조각을 사용하여 일반적으로 사용되는 �
 
 - **편집** > **IntelliSense** 메뉴에서 **코드 감싸기**를 선택
 
-- 키보드를 사용하여 누름: **CTRL**+**K**+**S**
+- 키보드를 사용하여 누름: **Ctrl**+**K**+**S**
 
 **#if**를 선택합니다. 다음과 같이 표시되어야 합니다.
 
@@ -71,7 +71,7 @@ C++ 코드 조각의 전체 목록을 찾으려면 **도구** 메뉴에서 **코
 
 ## <a name="class-vs-classi"></a>class 및 classi
 
-**class** 코드 조각은 MyClass 클래스의 정의를 해당하는 기본 생성자 및 소멸자와 함께 제공합니다. 여기서 생성자와 소멸자는 클래스 외부에 있습니다.
+**class** 코드 조각은 `MyClass` 클래스의 정의를 해당하는 기본 생성자 및 소멸자와 함께 제공합니다. 여기서 생성자와 소멸자는 클래스 외부에 있습니다.
 
 ```cpp
 class MyClass
@@ -93,7 +93,7 @@ MyClass::~MyClass()
 }
 ```
 
-**classi** 코드 조각도 MyClass 클래스의 정의를 제공하지만 기본 생성자 및 소멸자는 클래스 정의 내부에 정의됩니다.
+**classi** 코드 조각도 `MyClass` 클래스의 정의를 제공하지만 기본 생성자 및 소멸자는 클래스 정의 내부에 정의됩니다.
 
 ```cpp
 class MyClass
@@ -153,7 +153,7 @@ class SomeClass {
 };
 ```
 
-소멸자 조각을 삽입하면 이 조각이 SomeClass에 대한 소멸자를 제공합니다.
+소멸자 조각을 삽입하면 이 조각이 `SomeClass`에 대한 소멸자를 제공합니다.
 
 ```cpp
 class SomeClass {

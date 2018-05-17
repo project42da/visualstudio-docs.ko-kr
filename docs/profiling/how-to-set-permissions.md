@@ -15,11 +15,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b1f3cf4ca3cb79a6b58d4f3549d05d355764148f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d8c5b6e7878e4000b8263cc772d59ee197f0b62e
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="how-to-set-permissions"></a>방법: 권한 설정
 
@@ -58,7 +58,7 @@ ms.lasthandoff: 04/19/2018
 
      이 폴더의 경로는 다음과 같습니다.
 
-    ```
+    ```cmd
     D:\ourProject
     ```
 
@@ -82,13 +82,13 @@ ms.lasthandoff: 04/19/2018
 
 2. 디렉터리를 다음으로 변경합니다.
 
-    ```
+    ```cmd
     <drive>:\Program Files\Microsoft Visual Studio 10\Team Tools\Performance Tools
     ```
 
 3. 다음 명령을 실행합니다.
 
-    ```
+    ```cmd
     vsperfcmd /admin:driver,start /admin:service,start
     ```
 
@@ -100,7 +100,7 @@ ms.lasthandoff: 04/19/2018
 
 4. 명령을 실행하여 컴퓨터에 대한 관리자 권한이 없는 사용자 또는 그룹이 프로파일링 드라이버 기능에 액세스하도록 허용합니다.
 
-    ```
+    ```cmd
     vsperfcmd /admin:security,allow,<right[,right],<user name|group name>
     ```
 
@@ -114,7 +114,7 @@ ms.lasthandoff: 04/19/2018
 
 5. (선택 사항) 컴퓨터가 다시 시작된 후 이전 단계의 결과를 보존하려면 다음 명령을 실행합니다.
 
-    ```
+    ```cmd
     vsperfcmd /admin:driver,autostart,on
     ```
 

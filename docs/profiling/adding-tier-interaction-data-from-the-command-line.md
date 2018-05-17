@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 6ac35c99b9e75be50d00e560e9c8899420685f7f
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bcb969201d484aabc01c7c5cc66e3656fbb29fb9
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="adding-tier-interaction-data-from-the-command-line"></a>명령줄에서 계층 상호 작용 데이터 추가
 
@@ -54,20 +54,20 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 2. .NET 프로파일링 및 TIP 환경 변수를 초기화합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfclrenv /traceon
     vsperfclrenv /interactionon
     ```
 
 3. 프로파일러를 시작합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfcmd /start:trace /output:Desktop_tip.vsp 
     ```
 
 4. VSPerfCmd로 응용 프로그램을 시작합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfcmd /launch:DesktopApp.exe
     ```
 
@@ -75,7 +75,7 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 6. TIP 환경 변수를 지웁니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfclrenv /off
     ```
 
@@ -97,13 +97,13 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 3. .NET 프로파일링 환경 변수를 초기화합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfclrenv /globaltraceon
     ```
 
 4. TIP 환경 변수를 초기화합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfclrenv /globalinteractionon
     ```
 
@@ -113,7 +113,7 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 7. 프로파일러를 시작합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfcmd /start:trace /output:MiddleTier_tip.vsp /user:SYSTEM /crosssession 
     ```
 
@@ -121,7 +121,7 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 9. 프로파일러를 서비스에 연결합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfcmd /attach:MiddleTier.exe /output:MyService_tip.vsp /user:SYSTEM /crosssession 
     ```
 
@@ -133,7 +133,7 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 12. .NET 및 TIP 프로파일링 환경 변수를 지웁니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     vsperfclrenv /globaloff
     ```
 
@@ -151,7 +151,7 @@ VSPerfASPNETCmd 명령줄 도구를 사용하면 [!INCLUDE[vstecasp](../code-qua
 
 VSPerfASPNETCmd를 사용하여 수집한 프로파일링 데이터에 계층 상호 작용을 추가하려면 명령줄에 **/TIP** 옵션을 추가합니다. 예를 들어 계측 방법을 사용하여 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램에 대한 계층 상호 작용 데이터를 수집하려면 다음 명령줄을 사용합니다.
 
-```
+```cmd
 vsperfaspnetcmd /tip /trace http://localhost/MyWebApp
 ```
 

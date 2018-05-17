@@ -1,5 +1,6 @@
 ---
-title: Visual Studio에서 단위 테스트를 만들기 위한 샘플 프로젝트
+title: 단위 테스트를 만들기 위한 예제 코드
+description: 이 문서에서는 Visual Studio에서 단위 테스트로 테스트할 수 있는 샘플 코드를 제공합니다.
 ms.date: 11/04/2016
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
@@ -12,19 +13,20 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0f6ab04990292715932c652e2e275787447761ca
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 93a6627b96daefa48c9a72fd84726775fc449bde
+ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/07/2018
 ---
-# <a name="sample-project-for-creating-unit-tests"></a>단위 테스트를 만들기 위한 샘플 프로젝트
+# <a name="sample-code-for-testing"></a>테스트를 위한 샘플 코드
 
-이 샘플 코드는 다음 연습에서 사용할 수 있도록 제공됩니다.
+이 샘플 코드에는 단위 테스트를 통해 테스트할 수 있는 *BankAccount* 클래스가 포함되어 있습니다.
 
-- [연습: 관리 코드에 대한 단위 테스트 만들기 및 실행](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md). 이 연습에서는 단위 테스트를 작성, 사용자 지정 및 실행하고 테스트 결과를 검사하는 단계를 안내합니다.
+이 코드는 다음 연습에서 사용됩니다.
 
-- [연습: 명령줄 테스트 유틸리티 사용](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867). 이 연습에서는 MSTest.exe 명령줄 유틸리티를 사용하여 테스트를 실행하고 결과를 확인합니다.
+- [관리 코드에 대한 단위 테스트 만들기 및 실행](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md). 이 연습에서는 단위 테스트를 작성, 사용자 지정 및 실행하고 테스트 결과를 검사하는 단계를 안내합니다.
+- [명령줄 테스트 유틸리티 사용](http://msdn.microsoft.com/Library/52c11992-9e94-4067-a4b7-59f19d69d867). 이 연습에서는 MSTest.exe 명령줄 유틸리티를 사용하여 테스트를 실행하고 결과를 확인합니다.
 
 ## <a name="sample-code"></a>샘플 코드
 
@@ -125,9 +127,9 @@ namespace BankAccountNS
 
 /* 이 문서에 사용된 예제 회사, 조직, 제품, 도메인 이름, 전자 메일 주소, 로고, 사람, 장소 및 이벤트는 실제 데이터가 아닙니다. 어떠한 실제 회사, 기관, 제품, 도메인 이름, 전자 메일 주소, 로고, 사람, 장소 또는 이벤트와도 연관시킬 의도가 없으며 그렇게 유추해서도 안 됩니다. \*/
 
-## <a name="working-with-the-code"></a>코드 작업
+## <a name="create-the-project"></a>프로젝트를 만듭니다.
 
-이 코드로 작업하려면 먼저 Visual Studio에서 이를 위한 프로젝트를 만들어야 합니다. [연습: 관리 코드에 대한 단위 테스트 만들기 및 실행](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md)에서 "연습 준비" 섹션의 단계를 따르세요.
+이 코드로 작업하려면 먼저 Visual Studio에서 이를 위한 프로젝트를 만듭니다. [연습: 관리 코드에 대한 단위 테스트 만들기 및 실행](../test/walkthrough-creating-and-running-unit-tests-for-managed-code.md#create-a-project-to-test)에서 프로젝트를 만드는 단계를 수행합니다.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: ed5ac9e470b55281d1273bfe665be0813b37bf55
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4bf9c65d44739dd1b9164731f1097ce29050e6d8
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="installing-python-interpreters"></a>Python 인터프리터 설치
 
@@ -27,7 +27,7 @@ Visual Studio 설치 관리자 외부에서 아래 표에 나열된 인터프리
 
 Visual Studio(모든 버전)는 레지스트리를 확인하여 각 설치된 Python 인터프리터 및 해당 환경을 자동으로 검색합니다([Windows 레지스트리의 PEP 514 - Python 등록](https://www.python.org/dev/peps/pep-0514/)에 따라).
 
-Visual Studio가 설치된 환경을 검색하지 않으면 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)을 참조하세요.
+Visual Studio가 설치된 환경을 검색하지 않으면 [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)을 참조하세요.
 
 Visual Studio는 [Python 환경 창](managing-python-environments-in-visual-studio.md)에서 알려진 모든 환경을 표시하고 기존 인터프리터의 업데이트를 자동으로 검색합니다.
 
@@ -45,7 +45,7 @@ Python 환경에 대한 새로운 검색 양식을 제공하려는 개발자인 
 
 파일 시스템을 사용하여 새 위치로 기존 인터프리터를 이동하는 경우 Visual Studio는 변경 내용을 자동으로 검색하지 않습니다.
 
-- 원래 **Python 환경** 창을 통해 인터프리터의 위치를 지정한 경우 해당 창의 **구성** 탭을 사용하여 새 위치를 식별하도록 환경을 편집합니다. [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identifying-an-existing-environment)을 참조하세요.
+- 원래 **Python 환경** 창을 통해 인터프리터의 위치를 지정한 경우 해당 창의 **구성** 탭을 사용하여 새 위치를 식별하도록 환경을 편집합니다. [기존 환경 수동 식별](managing-python-environments-in-visual-studio.md#manually-identify-an-existing-environment)을 참조하세요.
 
 - 설치 관리자 프로그램을 사용하여 인터프리터를 설치한 경우 다음 단계에 따라 새 위치에 인터프리터를 다시 설치합니다.
 

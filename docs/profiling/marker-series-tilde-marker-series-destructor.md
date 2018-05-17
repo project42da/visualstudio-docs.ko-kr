@@ -14,18 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 069d51e8264a98fac8f02d6000044ce61cee2fcb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 84bdb0b1eb5c875bb1fe30595c59e97c0338b37f
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="markerseriesmarkerseries-destructor"></a>marker_series::~marker_series 소멸자
 marker_series 개체를 삭제하고 할당된 모든 리소스를 해제합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 ~marker_series();  
 ```  
   

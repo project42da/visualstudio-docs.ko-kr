@@ -2,7 +2,7 @@
 title: Visual Studio 2017 설치 | Microsoft Docs
 description: Visual Studio를 설치하는 방법을 단계별로 알아봅니다.
 ms.custom: ''
-ms.date: 12/04/2017
+ms.date: 05/07/2018
 ms.technology: vs-acquisition
 ms.prod: visual-studio-dev15
 ms.topic: conceptual
@@ -19,11 +19,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c39496b09c72c6c5eb72fb1c5bedb59285d01347
-ms.sourcegitcommit: 4c0bc21d2ce2d8e6c9d3b149a7d95f0b4d5b3f85
+ms.openlocfilehash: 27bcbb12ac8111ad76b5b71c486081d9e075365e
+ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/20/2018
+ms.lasthandoff: 05/07/2018
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 설치
 
@@ -119,7 +119,15 @@ Visual Studio 2017과 함께 이전 버전의 Visual Studio를 나란히 실행�
 
 기본 언어를 변경할 수 있는 다른 방법은 명령줄에서 설치 관리자를 실행하는 것입니다. 예를 들어 `vs_installer.exe --locale en-US` 명령을 사용하여 설치 관리자를 영어로 강제 실행할 수 있습니다. 설치 관리자는 다음에 실행될 때 이 설정을 기억합니다. 설치 관리자는 zh-cn, zh-tw, cs-cz, en-us, es-es, fr-fr, de-de, it-it, ja-jp, ko-kr, pl-pl, pt-br, ru-ru, and tr-tr과 같은 언어 토큰을 지원합니다.
 
-## <a name="step-7---start-developing"></a>7단계 - 개발 시작
+## <a name="step-7---change-the-installation-location-optional"></a>7단계 - 설치 위치 변경(선택 사항)
+
+**15.7의 새로운 기능**: 시스템 드라이브에서 Visual Studio의 설치 공간을 줄일 수 있습니다. 다운로드 캐시, 공유 구성 요소, SDK 및 도구를 다른 드라이브로 이동하고 Visual Studio를 가장 빠르게 실행되는 드라이브에 유지하도록 선택할 수 있습니다.
+
+  ![Visual Studio 2017 - 설치 위치 변경](media/installation-options-by-location.png "설치 위치 변경")
+
+자세한 내용은 [Visual Studio에서의 설치 위치 변경](change-installation-locations.md) 페이지를 참조하세요.
+
+## <a name="step-8---start-developing"></a>8단계 - 개발 시작
 
 1. Visual Studio 설치가 완료되면 **시작** 단추를 클릭하여 [Visual Studio에서 개발을 시작](../ide/get-started-developing-with-visual-studio.md)합니다.
 

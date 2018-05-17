@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 941597abd21d62501546860cf9cc8adc8fc6de2d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 76f843133a31dd62129bb45e58337ca4a612cc01
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="walkthrough-command-line-profiling-using-sampling"></a>연습: 샘플링을 사용하여 명령줄 프로파일링
 
@@ -54,13 +54,13 @@ ms.lasthandoff: 04/19/2018
 
 4. 다음 명령을 입력하여 적절한 환경 변수를 설정합니다.
 
-    ```
+    ```cmd
     VSPerfCLREnv /sampleon
     ```
 
 5. 프로파일러를 제어하는 명령줄 도구인 VSPerfCmd.exe를 실행하여 프로파일링을 시작합니다. 다음 명령은 샘플링 모드에서 응용 프로그램 및 프로파일러를 시작합니다.
 
-    ```
+    ```cmd
     VsPerfCmd /start:sample /output:PeopleTraxReport.vsp /launch:PeopleTrax.exe
     ```
 
@@ -76,13 +76,13 @@ ms.lasthandoff: 04/19/2018
 
 9. 프로파일러를 종료합니다. 다음 명령을 입력합니다.
 
-    ```
+    ```cmd
     VSPerfCmd /shutdown
     ```
 
 10. 다음 명령을 사용하여 환경 변수를 다시 설정합니다.
 
-    ```
+    ```cmd
     VSPerfCLREnv /sampleoff
     ```
 
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/19/2018
 
     - VSPerfReport.exe 명령줄 도구를 사용하여 쉼표로 구분된 값 (.csv) 파일을 생성합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] IDE 외부에서 사용할 보고서를 생성하려면 다음 명령을 사용합니다.
 
-        ```
+        ```cmd
         VSPerfReport <dir> PeopleTraxReport.vsp /output:<dir> /summary:all
         ```
 

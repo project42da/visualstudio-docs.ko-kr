@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: e44ed988c15a77511d880f1877c1038579a360b5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: cba93b86d6ecebf249e11d18bd6e4b6b86e59fda
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="visual-studio-multi-targeting-overview"></a>Visual Studio 멀티 타기팅 개요
 
@@ -50,7 +50,7 @@ Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework�
 
 - **도구 상자**에서 사용자 지정 컨트롤을 필터링하여 대상 버전에서 사용할 수 없는 컨트롤을 제거하고 여러 컨트롤을 사용할 수 있을 경우에는 가장 최신 컨트롤만 표시합니다.
 
-- IntelliSense를 필터링하여 대상 버전에서 사용할 수 없는 언어 기능을 생략합니다.
+- **IntelliSense**를 필터링하여 대상 버전에서 사용할 수 없는 언어 기능을 생략합니다.
 
 - **속성** 창에서 속성을 필터링하여 대상 버전에서 사용할 수 없는 속성을 생략합니다.
 
@@ -61,7 +61,7 @@ Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework�
 > [!NOTE]
 > 프레임워크 대상 지정을 수행해도 응용 프로그램이 제대로 실행되지 않을 수 있습니다. 응용 프로그램을 테스트하여 대상 버전에 대해 실행되는지 확인해야 합니다. .NET Framework 2.0 이전의 프레임워크 버전은 대상으로 지정할 수 없습니다.
 
-## <a name="selecting-a-target-framework-version"></a>대상 프레임워크 버전 선택
+## <a name="select-a-target-framework-version"></a>대상 프레임워크 버전 선택
 
 프로젝트를 만들 때 **새 프로젝트** 대화 상자에서 대상 .NET Framework 버전을 선택합니다. 사용 가능한 프레임워크 목록에는 선택한 템플릿 유형에 적용 가능한 설치된 프레임워크 버전이 포함됩니다. .NET Framework가 필요하지 않은 템플릿 유형의 경우(예: .NET Core 템플릿), **Framework** 드롭다운 목록이 숨겨집니다.
 
@@ -69,17 +69,17 @@ Visual Studio에서는 프로젝트에서 대상으로 하려는 .NET Framework�
 
 기존 프로젝트의 경우 [프로젝트 속성] 대화 상자에서 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전을 변경할 수 있습니다. 자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.
 
-## <a name="resolving-system-and-user-assembly-references"></a>시스템 및 사용자 어셈블리 참조 확인
+## <a name="resolve-system-and-user-assembly-references"></a>시스템 및 사용자 어셈블리 참조 확인
 
 .NET Framework 버전을 대상으로 지정하려면 먼저 적절한 어셈블리 참조를 설치해야 합니다. [.NET 다운로드](https://www.microsoft.com/net/download/windows) 페이지에서 다양한 버전의 .NET Framework 개발자 팩을 다운로드할 수 있습니다.
 
-**참조 추가** 대화 상자에서는 실수로 프로젝트에 추가될 수 없도록 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 관련이 없는 시스템 어셈블리가 사용되지 않습니다. 시스템 어셈블리는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 포함된 .dll 파일입니다. 대상 버전 이후의 프레임워크 버전에 속한 참조는 확인되지 않고 이런 참조에 따라 결정되는 컨트롤을 추가할 수 없습니다. 해당 참조를 사용하도록 설정하려면 프로젝트의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 대상을 참조가 포함된 대상으로 다시 설정합니다.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.
+**참조 추가** 대화 상자에서는 실수로 프로젝트에 추가될 수 없도록 대상 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 관련이 없는 시스템 어셈블리가 사용되지 않습니다. 시스템 어셈블리는 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 버전에 포함된 *.dll* 파일입니다. 대상 버전 이후의 프레임워크 버전에 속한 참조는 확인되지 않고 이런 참조에 따라 결정되는 컨트롤을 추가할 수 없습니다. 해당 참조를 사용하도록 설정하려면 프로젝트의 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 대상을 참조가 포함된 대상으로 다시 설정합니다.  자세한 내용은 [방법: 한 버전의 .NET Framework를 대상으로 지정](../ide/how-to-target-a-version-of-the-dotnet-framework.md)을 참조하세요.
 
 어셈블리 참조에 대한 자세한 내용은 [디자인 타임에 어셈블리 확인](../msbuild/resolving-assemblies-at-design-time.md)을 참조하세요.
 
-## <a name="enabling-linq"></a>LINQ 사용
+## <a name="enable-linq"></a>LINQ 사용
 
-.NET Framework 3.5 이상을 대상으로 지정하면 System.Core에 대한 참조 및 System.Linq에 대한 프로젝트 수준 가져오기(Visual Basic에서만)가 자동으로 추가됩니다. LINQ 기능을 사용하려면 Option Infer도 켜야 합니다(Visual Basic에서만). 대상을 이전 .NET Framework 버전으로 변경하면 참조 및 가져오기가 자동으로 제거됩니다. 자세한 내용은 [LINQ 작업](/dotnet/csharp/tutorials/working-with-linq)을 참조하세요.
+.NET Framework 3.5 이상을 대상으로 지정하면 **System.Core**에 대한 참조 및 <xref:System.Linq>에 대한 프로젝트 수준 가져오기(Visual Basic에서만)가 자동으로 추가됩니다. LINQ 기능을 사용하려면 `Option Infer`도 켜야 합니다(Visual Basic에서만). 대상을 이전 .NET Framework 버전으로 변경하면 참조 및 가져오기가 자동으로 제거됩니다. 자세한 내용은 [LINQ 작업](/dotnet/csharp/tutorials/working-with-linq)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -16,13 +16,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3a0fb071186d816e852c695ffe1cceed29d23ff8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4a82663fe397488ee78a82d4fab5d38bfec4ae37
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
-# <a name="using-the-task-list"></a>작업 목록 사용
+# <a name="use-the-task-list"></a>작업 목록 사용
 
 **작업 목록** 을 사용하여 `TODO` 및 `HACK`같은 토큰 또는 사용자 지정 토큰을 사용하는 코드 주석을 추적하고 코드에서 미리 정의된 위치로 직접 연결되는 바로 가기를 관리합니다. 목록의 항목을 클릭하면 소스 코드의 해당 위치로 이동합니다.
 
@@ -30,29 +30,29 @@ ms.lasthandoff: 04/26/2018
 
 **작업 목록** 이 열리면서 응용 프로그램 창의 아래쪽에 나타납니다.
 
-### <a name="to-open-the-task-list"></a>작업 목록을 열려면
+### <a name="open-the-task-list"></a>작업 목록 열기
 
-- **보기** 메뉴에서 **작업 목록**(키보드: Ctrl+\\,T)을 선택합니다.
+- **보기** 메뉴에서 **작업 목록**(키보드: **Ctrl**+**\\**,**T**)을 선택합니다.
 
     ![작업 목록 창](../ide/media/vs2015_task_list.png "vs2015_task_list")
 
-### <a name="to-change-the-sort-order-of-the-list"></a>목록의 정렬 순서를 변경하려면
+### <a name="change-the-sort-order-of-the-list"></a>목록의 정렬 순서 변경
 
 - 열 머리글을 클릭합니다. 검색 결과를 더 구체화하려면 Shift 키를 누르고 두 번째 열 머리글을 클릭합니다.
 
-     또는 바로 가기 메뉴에서 **정렬 기준**을 선택하고 머리글을 선택합니다. 검색 결과를 더 구체화하려면 Shift 키를 누르고 두 번째 머리글을 선택합니다.
+     또는 바로 가기 메뉴에서 **정렬 기준**을 선택하고 머리글을 선택합니다. 검색 결과를 더 구체화하려면 **Shift** 키를 누르고 두 번째 머리글을 선택합니다.
 
-### <a name="to-show-or-hide-columns"></a>열을 표시하거나 숨기려면
+### <a name="show-or-hide-columns"></a>열 표시 또는 숨기기
 
 - 바로 가기 메뉴에서 **열 표시**를 선택합니다. 표시하거나 숨길 열을 선택합니다.
 
-### <a name="to-change-the-order-of-the-columns"></a>열 순서를 변경하려면
+### <a name="change-the-order-of-the-columns"></a>열 순서 변경
 
 - 열 머리글을 원하는 위치로 끕니다.
 
 ## <a name="user-tasks"></a>사용자 작업
 
-사용자 작업 기능은 Visual Studio 2015부터 제거되었습니다. Visual Studio 2013 이전 버전의 사용자 작업 데이터가 포함된 솔루션을 열 경우 .suo 파일의 사용자 작업 데이터는 영향을 받지 않지만, 사용자 작업이 작업 목록에 표시되지 않습니다.
+사용자 작업 기능은 Visual Studio 2015부터 제거되었습니다. Visual Studio 2013 이전 버전의 사용자 작업 데이터가 포함된 솔루션을 열 경우 *.suo* 파일의 사용자 작업 데이터는 영향을 받지 않지만, 사용자 작업이 작업 목록에 표시되지 않습니다.
 
 사용자 작업 데이터에 계속 액세스하여 업데이트하려면 Visual Studio 2013에서 프로젝트를 열고 사용자 작업 내용을 기본 프로젝트 관리 도구(예: Team Foundation Server)에 복사해야 합니다.
 
@@ -74,11 +74,11 @@ ms.lasthandoff: 04/26/2018
 
 ###  <a name="customTokens"></a> 사용자 지정 토큰
 
-기본적으로 Visual Studio에는 HACK, TODO, UNDONE, NOTE 토큰이 포함됩니다. 이러한 토큰은 대/소문자를 구분하지 않습니다.
+기본적으로 Visual Studio에는 다음 토큰이 포함됩니다. `HACK`, `TODO`, `UNDONE`, `NOTE`. 이러한 토큰은 대/소문자를 구분하지 않습니다.
 
 또한 사용자가 직접 토큰을 만들 수도 있습니다.
 
-#### <a name="to-create-a-custom-token"></a>사용자 지정 토큰을 만들려면
+#### <a name="create-a-custom-token"></a>사용자 지정 토큰 만들기
 
 1. **도구** 메뉴에서 **옵션**을 선택합니다.
 
@@ -96,7 +96,7 @@ ms.lasthandoff: 04/26/2018
 
 기본적으로 C++ TODO 주석은 **작업 목록** 창에 표시됩니다. 이 동작을 변경할 수 있습니다.
 
-#### <a name="to-turn-off-c-todo-comments"></a>C++ TODO 주석을 끄려면
+#### <a name="turn-off-c-todo-comments"></a>C++ TODO 주석 끄기
 
 **도구** 메뉴에서 **옵션** > **텍스트 편집기** > **C/C++** > **보기** > **주석 작업 열거**로 이동한 다음 값을 false로 설정합니다.
 
@@ -106,12 +106,12 @@ ms.lasthandoff: 04/26/2018
 
 ![Visual Studio 작업 목록 바로 가기 아이콘](../ide/media/vs2015_task_list_bookmark.png "vs2015_task_list_bookmark")
 
-### <a name="to-create-a-shortcut"></a>바로 가기를 만들려면
+### <a name="create-a-shortcut"></a>바로 가기 만들기
 
-바로 가기를 만들려면 바로 가기를 저장할 코드에 포인터를 삽입합니다. **편집** > **책갈피** > **작업 목록 바로 가기 추가**를 선택하거나 **Ctrl** + **K** 및 **Ctrl** + **H** 키를 누릅니다.
+바로 가기를 만들려면 바로 가기를 저장할 코드에 포인터를 삽입합니다. **편집** > **책갈피** > **작업 목록 바로 가기 추가**를 선택하거나 **Ctrl**+**K** 및 **Ctrl**+**H** 키를 누릅니다.
 
 코드에서 바로 가기를 탐색하려면 목록에서 바로 가기를 선택한 다음 바로 가기 메뉴에서 **다음 작업** 또는 **이전 작업** 을 선택합니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [옵션 대화 상자, 환경, 작업 목록](../ide/reference/task-list-environment-options-dialog-box.md)
+- [작업 목록, 환경, 옵션 대화 상자](../ide/reference/task-list-environment-options-dialog-box.md)

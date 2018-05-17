@@ -14,18 +14,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 54824ee12c06d18a0d6ded0dfc378a131377cab0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c8e3b082c57e48d7c70fdda22c68c1a9d8980f71
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="cvinitprovider-function"></a>CvInitProvider 함수
 표식 공급자를 초기화합니다. 여타의 동시성 시각화 도우미 SDK 함수 앞에 호출되어야 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```C  
 HRESULT CvInitProvider(  
    _In_ const GUID* pGuid,  
    _Out_ PCV_PROVIDER* ppProvider  

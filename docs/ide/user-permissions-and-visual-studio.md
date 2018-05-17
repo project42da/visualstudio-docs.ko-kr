@@ -14,11 +14,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 96835e0f884494f4a6b94aa1a311b40e8a9d8ad9
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 08b12e09348a28276d0c5d2f375b26e75c1ac3c5
+ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/04/2018
 ---
 # <a name="user-permissions-and-visual-studio"></a>사용자 권한 및 Visual Studio
 
@@ -33,7 +33,7 @@ Visual Studio IDE에서는 일반 사용자로 거의 모든 작업을 할 수 �
 |----------|----------|--------------------------|
 |설치|Visual Studio를 설치합니다.|[Visual Studio 설치](../install/install-visual-studio.md)|
 ||로컬 도움말 콘텐츠 설치, 업데이트 또는 제거|[로컬 콘텐츠 설치 및 관리](../ide/install-and-manage-local-content.md)|
-|응용 프로그램 종류|SharePoint용 솔루션 개발|[SharePoint 솔루션 개발 요구 사항](/office-dev/office-dev/requirements-for-developing-sharepoint-solutions)|
+|응용 프로그램 종류|SharePoint용 솔루션 개발|[SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)|  
 ||[!INCLUDE[win8_appstore_long](../debugger/includes/win8_appstore_long_md.md)]의 개발자 라이선스 취득|[개발자 라이선스 얻기](http://go.microsoft.com/fwlink/?LinkID=241313)|
 |도구 상자|**도구 상자**에 클래식 COM 컨트롤 추가.|[도구 상자](../ide/reference/toolbox.md)|
 |추가 기능|IDE에서 기본 COM을 사용하여 작성한 추가 기능 설치 및 사용|[추가 기능 및 마법사 만들기](http://msdn.microsoft.com/Library/c5a47c21-6668-4de3-898d-afa969317e73)|
@@ -42,16 +42,17 @@ Visual Studio IDE에서는 일반 사용자로 거의 모든 작업을 할 수 �
 |디버깅|높은 권한으로 실행되는 응용 프로그램 디버깅|[디버거 설정 및 준비](../debugger/debugger-settings-and-preparation.md)|
 ||ASP.NET 웹 사이트와 같이 다른 사용자 계정으로 실행되는 응용 프로그램 디버깅|[ASP.NET 및 AJAX 응용 프로그램 디버그](../debugger/debugging-aspnet-and-ajax-applications.md)|
 ||XBAP(XAML 브라우저 응용 프로그램) 영역에서 디버깅|[WPF 호스트(PresentationHost.exe)](/dotnet/framework/wpf/app-development/wpf-host-presentationhost-exe)|
-||에뮬레이터를 사용하여 Microsoft Azure용 클라우드 서비스 프로젝트 디버깅|[Visual Studio에서 Azure 클라우드 서비스 또는 가상 컴퓨터 디버깅](http://go.microsoft.com/fwlink/?LinkId=266725)|
+||에뮬레이터를 사용하여 Microsoft Azure용 클라우드 서비스 프로젝트 디버깅|[Visual Studio에서 클라우드 서비스 디버깅](http://go.microsoft.com/fwlink/?LinkId=266725)|
 ||원격 디버깅을 위한 방화벽 구성|[원격 디버깅](../debugger/remote-debugging.md)|
 |성능 도구|응용 프로그램 프로파일링|[초보자를 위한 성능 프로파일링 지침](../profiling/beginners-guide-to-performance-profiling.md)|
-|배포|로컬 컴퓨터에서 IIS(인터넷 정보 서비스)에 웹 응용 프로그램 배포|[Deploying an ASP.NET Web Application to a Hosting Provider using Visual Studio or Visual Web Developer: Deploying to IIS as a Test Environment](http://go.microsoft.com/fwlink/?LinkId=266478)(Visual Studio 또는 Visual Web Developer를 사용하여 호스팅 제공업체에 ASP.NET 웹 응용 프로그램 배포: IIS에 테스트 환경으로 배포)|
+|배포|로컬 컴퓨터에서 IIS(인터넷 정보 서비스)에 웹 응용 프로그램 배포|[isual Studio 또는 Visual Web Developer를 사용하여 호스팅 제공업체에 ASP.NET 웹 응용 프로그램 배포: IIS에 테스트 환경으로 배포](http://go.microsoft.com/fwlink/?LinkId=266478)|
+>>>>>>> 346075117af3d2bd1fddd9c3aca24516a39fa6a3
 
-## <a name="running-visual-studio-as-an-administrator"></a>관리자로 Visual Studio 실행
+## <a name="run-visual-studio-as-an-administrator"></a>관리자 권한으로 Visual Studio 실행
 
 IDE를 시작할 때마다 관리자 권한으로 Visual Studio를 실행하거나 응용 프로그램 바로 가기를 수정하여 항상 관리자 권한으로 실행할 수 있습니다. 자세한 내용은 Windows 도움말을 참조하십시오.
 
-### <a name="to-run-visual-studio-with-administrative-permissions"></a>관리자 권한으로 Visual Studio를 실행하려면
+### <a name="run-visual-studio-with-administrative-permissions"></a>관리자 권한으로 Visual Studio 실행
 
 이러한 지침은 Windows 10에 대한 것입니다. 다른 버전의 Windows와 유사합니다.
 

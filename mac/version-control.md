@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
-ms.openlocfilehash: 9d19edb4801ee8af6a18f3e458cd06d0499e0273
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: c26cb512f0beb0dcfd47801d7a619ec78eb3cd32
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="version-control"></a>버전 제어
 
@@ -23,7 +23,7 @@ Subversion은 중앙 집중화된 버전 제어 시스템이므로, 모든 파�
 
 Git은 모든 팀원이 동일한 문서를 동시에 작업할 수 있는 분산형 버전 제어 시스템입니다. Git을 사용하는 경우 모든 파일을 포함하는 단일 서버가 있더라도 이 중앙 소스에서 리포지토리를 체크 아웃할 때마다 리포지토리 전체가 로컬 컴퓨터에 복제됩니다.
 
-# <a name="basic-concepts"></a>기본 개념 
+## <a name="basic-concepts"></a>기본 개념 
 
 Mac용 Visual Studio는 Git 및 Subversion 버전 제어 시스템을 모두 지원합니다. 다음 문서에서는 Mac용 Visual Studio를 통해 Git 및 Subversion 리포지토리를 설정하는 방법 및 변경 내용 검토, 커밋, 푸시 등의 간단한 기능을 살펴봅니다.
 

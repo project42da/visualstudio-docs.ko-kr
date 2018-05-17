@@ -13,59 +13,59 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fee742129d852ff3793b2a7dd367fc157367750
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0de562e1000c7c1fe8976252c046b27f4751b871
+ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/03/2018
 ---
 # <a name="walkthrough-using-a-configuration-file-to-define-a-data-source"></a>연습: 구성 파일을 통한 데이터 소스 정의
 
 이 연습에서는 *app.config* 파일에 정의된 데이터 원본을 유닛 테스트에 사용하는 방법을 설명합니다. <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 클래스에 사용될 수 있는 데이터 원본을 정의하는 app.config 파일을 만드는 방법을 알아봅니다. 이 연습에서 수행할 작업은 다음과 같습니다.
 
--   app.config 파일 만들기
+- app.config 파일 만들기
 
--   사용자 지정 구성 섹션 정의
+- 사용자 지정 구성 섹션 정의
 
--   연결 문자열 정의
+- 연결 문자열 정의
 
--   데이터 원본 정의
+- 데이터 원본 정의
 
--   <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 클래스를 사용하여 데이터 원본 액세스
+- <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute> 클래스를 사용하여 데이터 원본 액세스
 
 ## <a name="prerequisites"></a>전제 조건
- 이 연습을 완료하려면 다음 사항이 필요합니다.
 
--   Visual Studio Enterprise
+이 연습을 완료하려면 다음 사항이 필요합니다.
 
--   하나 이상의 테스트 메서드를 위한 데이터를 제공할 Microsoft Access 또는 Microsoft Excel
+- Visual Studio Enterprise
 
--   테스트 프로젝트가 포함된 Visual Studio 솔루션
+- 하나 이상의 테스트 메서드를 위한 데이터를 제공할 Microsoft Access 또는 Microsoft Excel
 
-## <a name="create-the-appconfig-file"></a>App.config 파일 만들기
+- 테스트 프로젝트가 포함된 Visual Studio 솔루션
 
-### <a name="to-add-an-appconfig-file-to-the-project"></a>프로젝트에 app.config 파일을 추가하려면
+## <a name="add-an-appconfig-file-to-the-project"></a>프로젝트에 app.config 파일 추가
 
-1.  테스트 프로젝트에 이미 app.config 파일이 있는 경우 [사용자 지정 구성 섹션 정의](#DefineCustomConfigurationSection)로 이동합니다.
+1. 테스트 프로젝트에 이미 app.config 파일이 있는 경우 [사용자 지정 구성 섹션 정의](#DefineCustomConfigurationSection)로 이동합니다.
 
-2.  **솔루션 탐색기**에서 테스트 프로젝트를 마우스 오른쪽 단추로 클릭하고 **추가**를 가리킨 다음 **새 항목**을 클릭합니다.
+2. **솔루션 탐색기**에서 테스트 프로젝트를 마우스 오른쪽 단추로 클릭한 다음, **추가** > **새 항목**을 선택합니다.
 
      **새 항목 추가** 창이 열립니다.
 
-3.  **응용 프로그램 구성 파일** 템플릿을 선택하고 **추가**를 클릭합니다.
+3. **응용 프로그램 구성 파일** 템플릿을 선택하고 **추가**를 클릭합니다.
 
 ##  <a name="DefineCustomConfigurationSection"></a> 사용자 지정 구성 섹션 정의 Section
- app.config 파일을 검토합니다. XML 선언과 루트 요소는 반드시 포함되어야 합니다.
+
+*app.config* 파일을 검토합니다. XML 선언과 루트 요소는 반드시 포함되어야 합니다.
 
 ### <a name="to-add-the-custom-configuration-section-to-the-appconfig-file"></a>app.config 파일에 사용자 지정 구성 섹션을 추가하려면
 
-1.  app.config의 루트 요소는 `configuration` 요소여야 합니다. `configuration` 요소 내에 `configSections` 요소를 만듭니다. `configSections`는 app.config 파일의 첫 번째 요소여야 합니다.
+1. app.config의 루트 요소는 **configuration** 요소여야 합니다. **configuration** 요소 내에 **configSections** 요소를 만듭니다. **configSections**는 *app.config* 파일의 첫 번째 요소여야 합니다.
 
-2.  `configSections` 요소 내에 `section` 요소를 만듭니다.
+2. **configSections** 요소 내에 **section** 요소를 만듭니다.
 
-3.  `section` 요소에서 `name`이라는 특성을 추가하고 여기에 `microsoft.visualstudio.testtools` 값을 할당합니다. `type`이라는 다른 특성을 추가하고 여기에 `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a` 값을 할당합니다.
+3. **section** 요소에서 `name`이라는 특성을 추가하고 여기에 `microsoft.visualstudio.testtools` 값을 할당합니다. `type`이라는 다른 특성을 추가하고 여기에 `Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a` 값을 할당합니다.
 
- `section` 요소는 다음과 유사하게 표시됩니다.
+**section** 요소는 다음과 유사하게 표시됩니다.
 
 ```
 <section name="microsoft.visualstudio.testtools" type="Microsoft.VisualStudio.TestTools.UnitTesting.TestConfigurationSection, Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a"/>
@@ -74,17 +74,17 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 > 어셈블리 이름은 사용 중인 Microsoft Visual Studio .NET Framework 빌드와 일치해야 합니다. Visual Studio .NET Framework 3.5를 사용 중인 경우 버전을 9.0.0.0으로 설정합니다. Visual Studio .NET Framework 2.0을 사용 중인 경우 버전을 8.0.0.0으로 설정합니다.
 
-
 ## <a name="define-connection-strings"></a>연결 문자열 정의
- 연결 문자열은 데이터 소스 액세스를 위한 공급자 특정 정보를 정의합니다. 구성 파일에 정의된 연결 문자열은 응용 프로그램 전체에서 재사용 가능한 데이터 공급자 정보를 제공합니다. 이 섹션에서는 사용자 지정 구성 섹션에 정의된 데이터 원본에서 사용되는 두 개의 연결 문자열을 만듭니다.
+
+연결 문자열은 데이터 소스 액세스를 위한 공급자 특정 정보를 정의합니다. 구성 파일에 정의된 연결 문자열은 응용 프로그램 전체에서 재사용 가능한 데이터 공급자 정보를 제공합니다. 이 섹션에서는 사용자 지정 구성 섹션에 정의된 데이터 원본에서 사용되는 두 개의 연결 문자열을 만듭니다.
 
 ### <a name="to-define-connection-strings"></a>연결 문자열을 정의하려면
 
-1.  `configSections` 요소 다음에 `connectionStrings` 요소를 만듭니다.
+1. **configSections** 요소 뒤에 **connectionStrings** 요소를 만듭니다.
 
-2.  `connectionStrings` 내에 두 개의 `add` 요소를 만듭니다.
+2. **connectionStrings** 요소 내에 두 개의 **add** 요소를 만듭니다.
 
-3.  첫 번째 `add` 요소에서 Microsoft Access 데이터베이스에 연결하기 위한 다음과 같은 특성 및 값을 만듭니다.
+3. 첫 번째 **add** 요소에서 Microsoft Access 데이터베이스에 연결하기 위한 다음과 같은 특성 및 값을 만듭니다.
 
 |특성|값|
 |---------------|------------|
@@ -92,45 +92,46 @@ ms.lasthandoff: 04/26/2018
 |`connectionString`|`"Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;"`|
 |`providerName`|`"System.Data.OleDb"`|
 
- 두 번째 `add` 요소에서 Microsoft Excel 스프레드시트에 연결하기 위한 다음과 같은 특성 및 값을 만듭니다.
+두 번째 **add** 요소에서 Microsoft Excel 스프레드시트에 연결하기 위한 다음과 같은 특성 및 값을 만듭니다.
 
 |||
 |-|-|
 |`name`|`"MyExcelConn"`|
-|`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5"`|
+|`connectionString`|`"Dsn=Excel Files;dbq=data.xlsx;defaultdir=.\; driverid=790;maxbuffersize=2048;pagetimeout=5"`|
 |`providerName`|`"System.Data.Odbc"`|
 
- `connectionStrings` 요소는 다음과 유사하게 표시됩니다.
+**connectionStrings** 요소는 다음과 유사하게 표시됩니다.
 
 ```
 <connectionStrings>
     <add name="MyJetConn" connectionString="Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;" providerName="System.Data.OleDb" />
-    <add name="MyExcelConn" connectionString="Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5" providerName="System.Data.Odbc" />
+    <add name="MyExcelConn" connectionString="Dsn=Excel Files;dbq=data.xlsx;defaultdir=.\; driverid=790;maxbuffersize=2048;pagetimeout=5" providerName="System.Data.Odbc" />
 </connectionStrings>
 ```
 
 ## <a name="define-data-sources"></a>데이터 원본 정의
- 데이터 원본 섹션에는 테스트 엔진이 데이터 원본에서 데이터를 검색할 때 사용하는 4개의 특성이 포함되어 있습니다.
 
--   `name`은 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>가 사용할 데이터 원본을 지정하는 데 사용하는 ID를 정의합니다.
+데이터 원본 섹션에는 테스트 엔진이 데이터 원본에서 데이터를 검색할 때 사용하는 4개의 특성이 포함되어 있습니다.
 
--   `connectionString`은 이전 연결 문자열 정의 섹션에서 만든 연결 문자열을 식별합니다.
+- `name`은 <xref:Microsoft.VisualStudio.TestTools.UnitTesting.DataSourceAttribute>가 사용할 데이터 원본을 지정하는 데 사용하는 ID를 정의합니다.
 
--   `dataTableName`은 테스트에 사용할 데이터가 들어 있는 테이블 또는 시트를 정의합니다.
+- `connectionString`은 이전 연결 문자열 정의 섹션에서 만든 연결 문자열을 식별합니다.
 
--   `dataAccessMethod`는 데이터 원본에 있는 데이터 값에 액세스하는 기술을 정의합니다.
+- `dataTableName`은 테스트에 사용할 데이터가 들어 있는 테이블 또는 시트를 정의합니다.
 
- 이 섹션에서는 단위 테스트에 사용할 두 개의 데이터 원본을 정의합니다.
+- `dataAccessMethod`는 데이터 원본에 있는 데이터 값에 액세스하는 기술을 정의합니다.
+
+이 섹션에서는 단위 테스트에 사용할 두 개의 데이터 원본을 정의합니다.
 
 ### <a name="to-define-data-sources"></a>데이터 원본을 정의하려면
 
-1.  `connectionStrings` 요소 다음에 `microsoft.visualstudio.testtools` 요소를 만듭니다. 이 섹션은 사용자 지정 구성 섹션 정의에서 만들어졌습니다.
+1. **connectionStrings** 요소 뒤에 **microsoft.visualstudio.testtools** 요소를 만듭니다. 이 섹션은 사용자 지정 구성 섹션 정의에서 만들어졌습니다.
 
-2.  `microsoft.visualstudio.testtools` 요소 내에 `dataSources` 요소를 만듭니다.
+2. **microsoft.visualstudio.testtools** 요소 내에서 **dataSources** 요소를 만듭니다.
 
-3.  `dataSources` 내에 두 개의 `add` 요소를 만듭니다.
+3. **dataSources** 요소 내에 두 개의 **add** 요소를 만듭니다.
 
-4.  첫 번째 `add` 요소에서 Microsoft Access 데이터 원본에 대해 다음과 같은 특성 및 값을 만듭니다.
+4. 첫 번째 **add** 요소에서 Microsoft Access 데이터 원본에 대해 다음과 같은 특성 및 값을 만듭니다.
 
 |특성|값|
 |---------------|------------|
@@ -139,7 +140,7 @@ ms.lasthandoff: 04/26/2018
 |`dataTableName`|`"MyDataTable"`|
 |`dataAccessMethod`|`"Sequential"`|
 
- 두 번째 `add` 요소에서 Microsoft Excel 데이터 원본에 대해 다음과 같은 특성 및 값을 만듭니다.
+두 번째 **add** 요소에서 Microsoft Excel 데이터 원본에 대해 다음과 같은 특성 및 값을 만듭니다.
 
 |||
 |-|-|
@@ -148,7 +149,7 @@ ms.lasthandoff: 04/26/2018
 |`dataTableName`|`"Sheet1$"`|
 |`dataAccessMethod`|`"Sequential"`|
 
-`microsoft.visualstudio.testtools` 요소는 다음과 유사하게 표시됩니다.
+**microsoft.visualstudio.testtools** 요소는 다음과 유사하게 표시됩니다.
 
 ```xml
 <microsoft.visualstudio.testtools>
@@ -159,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 </microsoft.visualstudio.testtools>
 ```
 
-최종 app.config 파일은 다음과 유사하게 표시됩니다.
+최종 *app.config* 파일은 다음과 유사하게 표시됩니다.
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -169,7 +170,7 @@ ms.lasthandoff: 04/26/2018
     </configSections>
     <connectionStrings>
         <add name="MyJetConn" connectionString="Provider=Microsoft.Jet.OLEDB.4.0; Data Source=C:\testdatasource.accdb; Persist Security Info=False;" providerName="System.Data.OleDb" />
-        <add name="MyExcelConn" connectionString="Dsn=Excel Files;dbq=data.xlsx;defaultdir=.; driverid=790;maxbuffersize=2048;pagetimeout=5" providerName="System.Data.Odbc" />
+        <add name="MyExcelConn" connectionString="Dsn=Excel Files;dbq=data.xlsx;defaultdir=.\; driverid=790;maxbuffersize=2048;pagetimeout=5" providerName="System.Data.Odbc" />
     </connectionStrings>
     <microsoft.visualstudio.testtools>
         <dataSources>
@@ -180,46 +181,47 @@ ms.lasthandoff: 04/26/2018
 </configuration>
 ```
 
-## <a name="create-a-unit-test-using-data-sources-defined-in-appconfig"></a>app.config에 정의된 데이터 원본을 사용하여 단위 테스트 만들기
- app.config 파일을 정의했으며, 이제 app.config 파일에 정의된 데이터 원본에 있는 데이터를 사용하는 단위 테스트를 만듭니다. 이 섹션에서는 다음을 수행합니다.
+## <a name="create-a-unit-test-that-uses-data-sources-defined-in-appconfig"></a>app.config에 정의된 데이터 원본을 사용하는 단위 테스트 만들기
 
--   app.config 파일에 있는 데이터 원본을 만듭니다.
+app.config 파일을 정의했으며, 이제 app.config 파일에 정의된 데이터 원본에 있는 데이터를 사용하는 단위 테스트를 만듭니다. 이 섹션에서는 다음을 수행합니다.
 
--   각 데이터 원본의 값을 비교하는 두 개의 테스트 메서드에서 데이터 원본을 사용합니다.
+- app.config 파일에 있는 데이터 원본을 만듭니다.
+
+- 각 데이터 원본의 값을 비교하는 두 개의 테스트 메서드에서 데이터 원본을 사용합니다.
 
 ### <a name="to-create-a-microsoft-access-data-source"></a>Microsoft Access 데이터 원본을 만들려면
 
-1.  `testdatasource.accdb`라는 Microsoft Access 데이터베이스를 만듭니다.
+1. *testdatasource.accdb*라는 Microsoft Access 데이터베이스를 만듭니다.
 
-2.  `testdatasource.accdb`에서 테이블을 만들고 이름을 `MyDataTable`로 지정합니다.
+2. *testdatasource.accdb*에 테이블을 만들고 이름을 `MyDataTable`로 지정합니다.
 
-3.  `Number` 데이터 형식을 사용하여 이름이 `Arg1` 및 `Arg2`인 두 개의 필드를 `MyDataTable`에 만듭니다.
+3. `Number` 데이터 형식을 사용하여 이름이 `Arg1` 및 `Arg2`인 두 개의 필드를 `MyDataTable`에 만듭니다.
 
-4.  `Arg1`과 `Arg2`에 다음과 같은 값을 사용한 5개의 엔터티를 `MyDataTable`에 추가합니다. (10,50), (3,2), (6,0), (0,8), (12312,1000)
+4. `Arg1`과 `Arg2`에 다음과 같은 값을 사용한 5개의 엔터티를 `MyDataTable`에 추가합니다. (10,50), (3,2), (6,0), (0,8), (12312,1000)
 
-5.  데이터베이스를 저장한 후 닫습니다.
+5. 데이터베이스를 저장한 후 닫습니다.
 
-6.  데이터베이스의 위치를 가리키도록 연결 문자열을 변경합니다. 데이터베이스의 위치를 반영하여 `Data Source`의 값을 변경합니다.
+6. 데이터베이스의 위치를 가리키도록 연결 문자열을 변경합니다. 데이터베이스의 위치를 반영하여 `Data Source`의 값을 변경합니다.
 
 ### <a name="to-create-a-microsoft-excel-data-source"></a>Microsoft Excel 데이터 원본을 만들려면
 
-1.  `data.xlsx`라는 Microsoft Excel 스프레드시트를 만듭니다.
+1. *data.xlsx*라는 Microsoft Excel 스프레드시트를 만듭니다.
 
-2.  `data.xlsx`에 없는 경우 `Sheet1`이라는 시트를 만듭니다.
+2. *data.xlsx*에 없는 경우 `Sheet1`이라는 시트를 만듭니다.
 
-3.  `Sheet1`에 두 개의 열 머리글을 만들고 `Val1` 및 `Val2`로 이름을 지정합니다.
+3. `Sheet1`에 두 개의 열 머리글을 만들고 `Val1` 및 `Val2`로 이름을 지정합니다.
 
-4.  `Val1`과 `Val2`에 다음과 같은 값을 사용한 5개의 엔터티를 `Sheet1`에 추가합니다. (1,1), (2,2), (3,3), (4,4), (5,0)
+4. `Val1`과 `Val2`에 다음과 같은 값을 사용한 5개의 엔터티를 `Sheet1`에 추가합니다. (1,1), (2,2), (3,3), (4,4), (5,0)
 
-5.  스프레드시트를 저장한 후 닫습니다.
+5. 스프레드시트를 저장한 후 닫습니다.
 
-6.  스프레드시트의 위치를 가리키도록 연결 문자열을 변경합니다. 스프레드시트의 위치를 반영하여 `dbq`의 값을 변경합니다.
+6. 스프레드시트의 위치를 가리키도록 연결 문자열을 변경합니다. 스프레드시트의 위치를 반영하여 `dbq`의 값을 변경합니다.
 
 ### <a name="to-create-a-unit-test-using-the-appconfig-data-sources"></a>app.config 데이터 원본을 사용하여 단위 테스트를 만들려면
 
-1.  테스트 프로젝트에 단위 테스트를 추가합니다.
+1. 테스트 프로젝트에 단위 테스트를 추가합니다.
 
-2.  자동 생성된 단위 테스트 콘텐츠를 다음 코드로 바꿉니다.
+2. 자동 생성된 단위 테스트 콘텐츠를 다음 코드로 바꿉니다.
 
     ```csharp
     using System;
@@ -259,9 +261,9 @@ ms.lasthandoff: 04/26/2018
     }
     ```
 
-3.  DataSource 특성을 검토합니다. app.config 파일에서 설정 이름을 확인합니다.
+3. DataSource 특성을 검토합니다. app.config 파일에서 설정 이름을 확인합니다.
 
-4.  솔루션을 빌드하고 MyTestMethod 및 MyTestMethod2 테스트를 실행합니다.
+4. 솔루션을 빌드하고 MyTestMethod 및 MyTestMethod2 테스트를 실행합니다.
 
 > [!IMPORTANT]
 > 테스트에서 배포 디렉터리를 통해 액세스할 수 있도록 데이터 원본과 같은 항목을 배포합니다.
