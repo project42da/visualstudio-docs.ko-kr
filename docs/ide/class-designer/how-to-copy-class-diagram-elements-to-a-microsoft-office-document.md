@@ -13,29 +13,29 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 64c03af9c65b6263164c1e8b697fcf2d5708505a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2b34328a4bff4abdd2db29e9a41e9d04ba43d4f9
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document-class-designer"></a>방법: 클래스 다이어그램 요소를 Microsoft Office 문서에 복사(클래스 디자이너)
+# <a name="how-to-copy-class-diagram-elements-to-a-microsoft-office-document"></a>방법: 클래스 다이어그램 요소를 Microsoft Office 문서에 복사
 
-.NET 클래스 다이어그램(.cd 파일)에서 다른 문서로 셰이프를 복사할 수 있습니다. 붙여넣는 문서 종류에 따라 셰이프 복사본 또는 해당 기본 코드를 얻게 됩니다. 모델링 프로젝트에서 UML 클래스 다이어그램의 도형을 복사하려면 [다이어그램을 이미지로 내보내기](../../modeling/export-diagrams-as-images.md)를 참조하세요.
+.NET 클래스 다이어그램(*.cd* 파일)에서 다른 문서로 도형을 복사할 수 있습니다. 붙여 넣는 문서 종류에 따라 도형 복사본 또는 해당 기본 코드를 얻게 됩니다. 모델링 프로젝트에서 UML 클래스 다이어그램의 도형을 복사하려면 [다이어그램을 이미지로 내보내기](../../modeling/export-diagrams-as-images.md)를 참조하세요.
 
-## <a name="to-copy-a-single-element"></a>단일 요소를 복사하려면
+## <a name="copy-a-single-element"></a>단일 요소 복사
 
--   도형을 마우스 오른쪽 단추로 클릭하고 **이미지 복사**를 선택합니다.
+도형을 마우스 오른쪽 단추로 클릭하고 **이미지 복사**를 선택합니다.
 
-## <a name="to-copy-several-elements"></a>여러 요소를 복사하려면
+## <a name="copy-several-elements"></a>여러 요소 복사
 
-1.  다이어그램에서 복사할 셰이프를 선택합니다.
+1.  다이어그램에서 복사할 도형을 선택합니다.
 
 2.  선택 항목을 마우스 오른쪽 단추로 클릭하고 **이미지 복사**를 선택합니다.
 
-## <a name="to-copy-all-the-elements-in-a-class-diagram"></a>클래스 다이어그램에 있는 모든 요소를 복사하려면
+## <a name="copy-all-the-elements-in-a-class-diagram"></a>클래스 다이어그램에 있는 모든 요소 복사
 
-1.  다이어그램 화면을 마우스 오른쪽 단추로 클릭하고 **모두 선택**을 선택합니다. (키보드: **Ctrl + A**)
+1.  다이어그램 화면을 마우스 오른쪽 단추로 클릭하고 **모두 선택**을 선택하거나 **Ctrl + A**를 누릅니다.
 
 2.  **편집** 메뉴에서 **이미지 복사**를 선택합니다.
 

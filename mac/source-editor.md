@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: A018A314-C1C4-4F36-BCB6-2D434208FCFE
-ms.openlocfilehash: c617ed1bae10569291b88d038e8d875ca966ad43
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 8660ee0de90813e95a221c3b4ea3a50528b4307a
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="source-editor"></a>소스 편집기
 
@@ -24,7 +24,6 @@ Mac용 Visual Studio의 소스 편집기에서는 디버깅, 리팩터링, 버�
 코드 전체를 효율적으로 보면서 탐색하는 작업은 개발 워크플로에서 필수적인 부분입니다. 코드를 살펴보고 유지 관리하는 방법은 개발자 개인마다 다르며, 프로젝트마다 다르기도 합니다.
 
 Mac용 Visual Studio는 플랫폼 간 개발을 최대한 편리하고 실용적으로 진행할 수 있도록 하는 효과적인 기능을 다양하게 제공합니다. 다음 섹션에서는 몇 가지 주요 사항에 대해 설명합니다.
-
 
 ## <a name="code-folding"></a>코드 접기
 
@@ -62,25 +61,20 @@ Mac용 Visual Studio는 플랫폼 간 개발을 최대한 편리하고 실용적
 
  ![공백 표시](media/source-editor-image22.png)
 
-
 ## <a name="ruler"></a>눈금자
 
 열 눈금자는 줄의 길이를 확인할 때, 특히 줄 길이를 규정해 놓은 팀에서 작업할 때 특히 유용합니다. 다음 이미지와 같이 **Visual Studio > 기본 설정... > 텍스트 편집기 > 표식 및 눈금자**로 이동한 다음, **열 눈금자 표시**를 선택하거나 취소하여 열 눈금자를 켜고 끌 수 있습니다.
 
- ![](media/source-editor-image5.png)
+ !["열 눈금자 표시"가 강조 표시된 기본 설정 대화 상자](media/source-editor-image5.png)
 
  눈금자는 소스 편집기에서 연한 회색 선으로 표시됩니다.
-
 
 ## <a name="highlight-identifier-references"></a>식별자 참조 강조 표시
 
 “식별자 참조 강조 표시” 옵션을 사용하면 소스 코드에서 기호를 선택할 때 소스 편집기에서 해당 파일의 다른 모든 참조를 시각적으로 알려줍니다. 이 옵션을 켜려면 다음 이미지와 같이 **Visual Studio > 기본 설정... > 텍스트 편집기 > 표식 및 눈금자**로 이동한 다음, _식별자 참조 강조 표시_를 선택합니다.
 
-![](media/source-editor-image6.png)
+!["식별자 참조 강조 표시"가 강조 표시된 기본 설정 대화 상자](media/source-editor-image6.png)
 
 강조 표시의 색으로 할당 또는 참조 여부를 구분할 수도 있습니다. 할당은 빨간색으로, 참조는 파란색으로 강조 표시됩니다.
 
-![](media/source-editor-image7.png)
-
-
-
+![강조 표시의 색을 표시하는 예](media/source-editor-image7.png)

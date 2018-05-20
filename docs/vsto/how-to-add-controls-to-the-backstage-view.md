@@ -1,5 +1,5 @@
 ---
-title: '방법: Backstage 보기에 컨트롤 추가 | Microsoft Docs'
+title: '방법: Backstage 보기에 컨트롤 추가 '
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -23,11 +23,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1cdda3960363ba87e9434cd14077c7182a9f56c4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d72cd3371a1465faa1dd505f71c5fe8c9e2e181d
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="how-to-add-controls-to-the-backstage-view"></a>방법: Backstage 보기에 컨트롤 추가
   리본 디자이너를 사용 하 여 컨트롤을 클릭할 때 열리는 메뉴에 추가 하 고 **파일** 탭 컨트롤에 추가 하는 응용 프로그램을 실행 하면는 **파일** 라는 그룹 탭이 나타나지  **추가 기능**합니다.  
@@ -64,11 +64,11 @@ ms.lasthandoff: 04/16/2018
   
 4.  컨트롤을 끌어 메뉴에서 새 위치로 이동 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [리본 개요](../vsto/ribbon-overview.md)   
  [리본 디자이너](../vsto/ribbon-designer.md)   
  [리본 XML](../vsto/ribbon-xml.md)   
  [방법: 리본 메뉴 사용자 지정 시작](../vsto/how-to-get-started-customizing-the-ribbon.md)   
- [연습: 리본 디자이너를 사용하여 사용자 지정 탭 만들기](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
+ [연습: 리본 디자이너를 사용 하 여 사용자 지정 탭 만들기](../vsto/walkthrough-creating-a-custom-tab-by-using-the-ribbon-designer.md)  
   
   

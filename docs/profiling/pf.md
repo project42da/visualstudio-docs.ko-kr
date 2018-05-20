@@ -10,19 +10,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5a872745208b1f97065cc073920273dd90f4fa60
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 523140a4ffdc8e1eae07e3ae7dcffee5709067a2
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="pf"></a>PF
 VSPerfCmd.exe **PF** 옵션은 페이지 폴트로 샘플링되는 프로파일링 이벤트를 설정하고 경우에 따라 샘플링 간격의 페이지 폴트 수를 기본값 10에서 변경합니다.  
   
 > [!NOTE]
->  PF는 64비트 시스템에서 사용할 수 없습니다.  
+>  **PF**는 64비트 시스템에서 사용할 수 없습니다.  
   
- **PF**는 64비트 컴퓨터에서 지원되지 않습니다. **PF**는 **Launch** 또는 **Attach** 옵션도 포함하는 명령줄에만 사용할 수 있습니다.  
+**PF**는 **Launch** 또는 **Attach** 옵션도 포함하는 명령줄에서만 사용할 수 있습니다.  
   
  기본적으로 샘플링 이벤트는 무중단 프로세서 클록 주기로 설정되어 있고 샘플링 간격은 10,000,000으로 설정되어 있습니다. **Timer**, **PF**, **Sys** 및 **Counter** 옵션을 사용하여 샘플 이벤트와 샘플링 간격을 설정할 수 있습니다. **GC** 옵션은 각 할당 및 가비지 컬렉션 이벤트에서 .NET 메모리 데이터를 수집합니다. 명령줄에서는 이러한 옵션 중 하나만 지정할 수 있습니다.  
   
@@ -30,7 +30,7 @@ VSPerfCmd.exe **PF** 옵션은 페이지 폴트로 샘플링되는 프로파일�
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cmd  
 VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /PF[:Events] [Options]  
 ```  
   
@@ -65,7 +65,7 @@ VSPerfCmd.exe {/Launch:AppName|/Attach:PID} /PF[:Events] [Options]
 ## <a name="example"></a>예  
  이 예제는 프로파일링 샘플 이벤트를 페이지 폴트로 설정하고 샘플링 간격을 20 페이지 폴트로 설정하는 방법을 보여 줍니다.  
   
-```  
+```cmd  
 VSPerfCmd.exe /Start:Sample /Output:TestApp.exe.vsp  
 VSPerfCmd.exe /Launch:TestApp.exe /PF:20  
 ```  

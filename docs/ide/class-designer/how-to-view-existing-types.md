@@ -16,13 +16,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7fc5180d770575ae92c65b4124d928da5a518799
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6f477f64188c9592db65d0a82c8a1b8b3ec5b776
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-view-existing-types-class-designer"></a>방법: 기존 형식 보기(클래스 디자이너)
+# <a name="how-to-view-existing-types-in-class-designer"></a>방법: 클래스 디자이너에서 기존 형식 보기
 
 기존 형식 및 해당 멤버를 보려면 클래스 다이어그램에 해당 모양을 추가합니다.
 
@@ -36,13 +36,13 @@ ms.lasthandoff: 04/26/2018
 
 2.  **솔루션 탐색기**의 프로젝트에서 소스 코드 파일을 클래스 다이어그램으로 끌어 놓습니다.
 
-    > [!WARNING]
+    > [!NOTE]
     > 여러 앱 간에 코드를 공유하는 프로젝트가 솔루션에 포함되어 있는 경우 다음 소스에서만 파일이나 코드를 클래스 다이어그램으로 끌어 올 수 있습니다.
     >
-    > -   다이어그램을 포함하는 앱 프로젝트
-    > -   앱 프로젝트로 가져온 공유 프로젝트
-    > -   참조된 프로젝트
-    > -   어셈블리
+    > - 다이어그램을 포함하는 앱 프로젝트
+    > - 앱 프로젝트로 가져온 공유 프로젝트
+    > - 참조된 프로젝트
+    > - 어셈블리
 
     소스 코드 파일에 정의된 형식을 나타내는 모양은 다이어그램에서 파일을 끌어 놓은 위치에 표시됩니다.
 
@@ -60,9 +60,7 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="to-display-the-contents-of-a-project-in-a-class-diagram"></a>클래스 다이어그램에서 프로젝트 내용을 표시하려면
 
-- **솔루션 탐색기**나 **클래스 뷰**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **보기**, **클래스 다이어그램 보기**를 차례로 선택합니다.
-
-     자동으로 채워진 클래스 다이어그램이 만들어집니다.
+**솔루션 탐색기**나 **클래스 뷰**에서 프로젝트를 마우스 오른쪽 단추로 클릭하고 **보기**, **클래스 다이어그램 보기**를 차례로 선택합니다. 자동으로 채워진 클래스 다이어그램이 만들어집니다.
 
 ## <a name="see-also"></a>참고 항목
 

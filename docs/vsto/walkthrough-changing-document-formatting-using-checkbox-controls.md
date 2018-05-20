@@ -1,5 +1,5 @@
 ---
-title: '연습: CheckBox 컨트롤을 사용 하 여 문서 서식 변경 | Microsoft Docs'
+title: '연습: CheckBox 컨트롤을 사용 하 여 문서 서식 변경'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,13 +19,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ecbb0036fc74cf5d0d27ea61283ec5b733dca1a5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 459253c6a84add4fcca68565d5bf082dc0931f22
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="walkthrough-changing-document-formatting-using-checkbox-controls"></a>연습: CheckBox 컨트롤을 사용하여 문서 서식 변경
+# <a name="walkthrough-change-document-formatting-using-checkbox-controls"></a>연습: CheckBox 컨트롤을 사용 하 여 문서 서식 변경
   이 연습에서는 Microsoft Office Word 용 문서 수준 사용자 지정에서 Windows Forms 컨트롤을 사용 하 여 텍스트 서식을 변경 하는 방법을 보여 줍니다.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
@@ -47,21 +47,21 @@ ms.lasthandoff: 04/16/2018
   
 -   [!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)] 또는 [!INCLUDE[Word_14_short](../vsto/includes/word-14-short-md.md)]  
   
-## <a name="creating-the-project"></a>프로젝트 만들기  
+## <a name="create-the-project"></a>프로젝트를 만듭니다.  
  첫 번째 단계에서는 Word 문서 프로젝트를 만듭니다.  
   
-#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
+### <a name="create-a-new-project"></a>새 프로젝트 만들기  
   
 1.  이름으로 한 Word 문서 프로젝트 만들기 **My Word 서식을**합니다. 마법사에서 선택 **새 문서**합니다.  
   
-     자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
+     자세한 내용은 참조 [하는 방법: Visual Studio에서 Office 만들기 프로젝트](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
      Visual Studio 디자이너에서 새 Word 문서가 열리고 추가 **My Word 서식** 프로젝트를 **솔루션 탐색기**합니다.  
   
-## <a name="adding-text-and-controls-to-the-word-document"></a>Word 문서에 텍스트 및 컨트롤 추가  
+## <a name="add-text-and-controls-to-the-word-document"></a>Word 문서에 텍스트와 컨트롤 추가  
  이 연습에 대 한 확인란 세 개 및 일부 텍스트에 추가 <xref:Microsoft.Office.Tools.Word.Bookmark> Word 문서에 컨트롤입니다. 확인란 텍스트 서식 지정에 대 한 사용자에 게 옵션을 제공 합니다.  
   
-#### <a name="to-add-three-check-boxes"></a>확인란 세 개를 추가 하려면  
+### <a name="add-three-check-boxes"></a>확인란 세 개를 추가 합니다.  
   
 1.  Visual Studio 디자이너에서 문서가 열려 있는지 확인합니다.  
   
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/16/2018
     |**이름**|**applyUnderlineFont**|  
     |**텍스트**|**밑줄**|  
   
-#### <a name="to-add-text-and-a-bookmark-control"></a>텍스트 및 책갈피 컨트롤 추가 하려면  
+### <a name="add-text-and-a-bookmark-control"></a>텍스트 및 책갈피 컨트롤 추가  
   
 1.  Check box 컨트롤 아래 삽입 지점을 이동 하 고 다음 텍스트를 입력 합니다.  
   
@@ -110,10 +110,10 @@ ms.lasthandoff: 04/16/2018
   
  그런 다음 확인란을 선택 하거나 취소 하는 경우 텍스트의 서식을 지정 하려면 코드를 작성 합니다.  
   
-## <a name="formatting-the-text-when-a-check-box-is-checked-or-cleared"></a>서식의 텍스트 때 확인란을 선택 또는 선택 취소  
+## <a name="format-the-text-when-a-check-box-is-checked-or-cleared"></a>확인란을 선택 하거나 취소 하는 경우 텍스트의 서식을 지정합니다  
  문서에 있는 텍스트의 서식을 변경 하는 사용자가 서식 옵션을 선택 합니다.  
   
-#### <a name="to-change-formatting-when-a-check-box-is-selected"></a>선택한 경우 확인란 서식을 변경 하려면  
+### <a name="change-formatting-when-a-check-box-is-selected"></a>확인란을 선택 하는 서식 변경  
   
 1.  마우스 오른쪽 단추로 클릭 `ThisDocument` 에 **솔루션 탐색기**, 클릭 하 고 **코드 보기** 바로 가기 메뉴.  
   
@@ -140,12 +140,12 @@ ms.lasthandoff: 04/16/2018
   
      [!code-csharp[Trin_VstcoreProgrammingControlsWord#6](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingControlsWordCS/ThisDocument.cs#6)]  
   
-## <a name="testing-the-application"></a>응용 프로그램 테스트  
+## <a name="test-the-application"></a>응용 프로그램 테스트  
  이제 선택 하거나 확인란의 선택을 취소 하면 텍스트 올바르게 포맷 되어 있는지 확인 하려면 문서를 테스트할 수 있습니다.  
   
-#### <a name="to-test-your-document"></a>문서를 테스트하려면  
+### <a name="test-your-document"></a>테스트 하 여 문서  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  키를 눌러 **F5** 프로젝트를 실행 합니다.  
   
 2.  선택 하거나 확인란의 선택을 취소 합니다.  
   
@@ -154,16 +154,15 @@ ms.lasthandoff: 04/16/2018
 ## <a name="next-steps"></a>다음 단계  
  이 확인란을 사용 하 여 프로그래밍 방식으로 Word 문서에서 텍스트를 변경 하는 기본적인 방법을 보여 줍니다. 다음으로 수행할 수 있는 몇 가지 작업은 다음과 같습니다.  
   
--   단추를 사용 하 여 텍스트 상자를 채웁니다. 자세한 내용은 참조 [연습:는 단추를 사용 하는 문서에서 텍스트 상자에 텍스트 표시](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)합니다.  
+-   단추를 사용 하 여 텍스트 상자를 채웁니다. 자세한 내용은 참조 [연습: 단추를 사용 하 여 문서에서 텍스트 상자에 텍스트 표시](../vsto/walkthrough-displaying-text-in-a-text-box-in-a-document-using-a-button.md)합니다.  
   
--   라디오 단추를 사용하여 차트 스타일 선택. 자세한 내용은 참조 [연습: 문서를 사용 하 여 라디오 단추에서 차트 업데이트](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)합니다.  
+-   라디오 단추를 사용하여 차트 스타일 선택. 자세한 내용은 참조 [연습: 라디오 단추를 사용 하 여 문서에서 차트를 업데이트](../vsto/walkthrough-updating-a-chart-in-a-document-using-radio-buttons.md)합니다.  
   
--  
-  
-## <a name="see-also"></a>참고 항목  
+
+## <a name="see-also"></a>참고자료  
  [Word를 사용한 연습](../vsto/walkthroughs-using-word.md)   
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)   
  [NamedRange 컨트롤](../vsto/namedrange-control.md)   
- [Office 문서에서 Windows Forms 컨트롤에 대한 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
+ [Office 문서의 Windows Forms 컨트롤의 제한 사항](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)  
   
   

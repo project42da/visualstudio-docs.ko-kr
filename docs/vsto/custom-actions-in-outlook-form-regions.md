@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 작업 Outlook에서 양식 영역 | Microsoft Docs
+title: Outlook 양식 영역의 사용자 지정 작업
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1e81528aa5008b7d6f78f560d0bc0139a1e0799a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ec4c6a0ce361102ab216bc0c9f460a0bdd7a4a0d
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="custom-actions-in-outlook-form-regions"></a>Outlook 양식 영역의 사용자 지정 작업
   작업은 사용자가 Microsoft Office Outlook 항목에 응답할 수 있도록 하는 단추를 표시 합니다. 예를 들어 메일 항목에 응답, 사용자가 클릭는 **회신**, **전체 회신**, 또는 **앞으로** 실행 단추입니다. 이러한 각 작업을 새 메일 항목을 만들고 원본 항목의 정보를 사용 하 여 항목의 필드를 채웁니다.  
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/16/2018
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="adding-custom-actions-to-a-form-region"></a>양식 영역에 사용자 지정 작업 추가  
+## <a name="add-custom-actions-to-a-form-region"></a>양식 영역에 사용자 지정 작업 추가  
  양식 영역에 사용자 지정 작업을 추가 하려면 사용 된 **사용자 지정 작업** 대화 상자. 열 수는 **사용자 지정 작업** 대화 상자에서 **솔루션 탐색기** 를 확장 하 여는 **매니페스트** 노드를 선택 하는 **CustomActions**속성과 줄임표 단추를 클릭 한 다음 (![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표")).  
   
  사용할 수는 **사용자 지정 작업** 지정 하려면 대화 상자는 *양식의 대상*합니다. 대상 형식은 사용자 지정 작업을 실행할 때 표시 되는 양식입니다.  
@@ -50,10 +50,10 @@ ms.lasthandoff: 04/16/2018
 |**TargetForm**|대상 폼의 메시지 클래스 이름을 지정합니다. 예를 들어 입력 **IPM 합니다. 작업** 태스크 폼을 엽니다.|  
 |**제목**|사용자 지정 작업 단추의 레이블을 지정합니다.|  
   
-## <a name="customizing-a-custom-action-at-run-time"></a>런타임 시 사용자 지정 작업을 사용자 지정  
+## <a name="customize-a-custom-action-at-runtime"></a>런타임 시 사용자 지정 작업을 사용자 지정  
  또한 코드를 사용 하 여 사용자 지정 작업으로 동작을 추가할 수 있습니다. 예를 들어 전자 메일 받는 사람 이름을 사용 하 고 새 약속 항목에 있는 참석자도 이러한 이름을 추가 하는 코드를 추가할 수 있습니다. 이 작업을 수행 하려면 처리는 [사용자 지정](http://msdn.microsoft.com/library/office/ff862186.aspx) 의 이벤트는 [MailItem 개체](http://msdn.microsoft.com/library/office/ff861332.aspx)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)   
  [연습: Outlook 양식 영역 디자인](../vsto/walkthrough-designing-an-outlook-form-region.md)   
  [Outlook 메시지 클래스에 양식 영역 연결](../vsto/associating-a-form-region-with-an-outlook-message-class.md)  

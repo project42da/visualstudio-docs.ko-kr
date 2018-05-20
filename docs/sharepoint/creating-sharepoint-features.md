@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b0a8de8b36d41684e00c9b679672d90909540107
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 16c7405cfe889808f27dbb274f7f685e949889dd
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="creating-sharepoint-features"></a>SharePoint 기능 만들기
   쉽게 배포를 위한 관련된 SharePoint 프로젝트 항목을 그룹화 하는 SharePoint 기능을 사용할 수 있습니다. 기능을 만드는, 범위를 설정 하 고 SharePoint 기능 디자이너를 사용 하 여 다른 기능 종속성으로 표시할 수 있습니다. 또한이 디자이너는 각 기능을 설명 하는 XML 파일 매니페스트를 생성 합니다.  
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 |속성|설명|  
 |--------------|-----------------|  
-|제목|선택 사항입니다. 로 설정 되는 기능의 기본 제목 *SolutionName * * FeatureName*합니다.|  
+|제목|선택 사항입니다. 로 설정 되는 기능의 기본 제목 *SolutionName* *FeatureName*합니다.|  
 |설명|선택 사항입니다. SharePoint의 기능 설명입니다.|  
 |범위|필수. 기능을 사용 하 여 만들면 **솔루션 탐색기**, 범위는 웹에 기본적으로 설정 됩니다.<br /><br /> -팜: 전체 서버 팜에 대 한 기능을 활성화 합니다.<br /><br /> 간: 사이트 사이트 모음에서 모든 웹 사이트에 대 한 기능을 활성화 합니다.<br /><br /> -웹: 특정 웹 사이트에 대 한 기능을 활성화 합니다.<br /><br /> -웹 응용 프로그램: 웹 응용 프로그램에서 모든 웹 사이트에 대 한 기능을 활성화 합니다.|  
 |솔루션에서 항목|기능에 추가할 수 있는 모든 SharePoint 항목입니다.|  

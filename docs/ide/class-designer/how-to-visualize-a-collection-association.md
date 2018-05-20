@@ -17,13 +17,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 472eef35c781c027c39b99326e097db7ca249c29
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 24dc8b21fbdacb5da2795b215cd8503b08cf3449
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-visualize-a-collection-association-class-designer"></a>방법: 컬렉션 형식 연결 시각화(클래스 디자이너)
+# <a name="how-to-visualize-a-collection-association-in-class-designer"></a>방법: 클래스 디자이너에서 컬렉션 형식 연결 시각화
 
 다른 형식의 컬렉션에 해당하는 속성 및 필드를 컬렉션 형식 연결로 클래스 다이어그램에 표시할 수 있습니다. 일반 연결은 필드 또는 속성을 소유 클래스와 필드 형식을 연결하는 선으로 표시하지만, 컬렉션 형식 연결은 소유 클래스와 수집된 형식을 연결하는 선으로 표시합니다.
 
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  클래스에서 필드나 속성을 마우스 오른쪽 단추로 클릭하고 **컬렉션 형식 연결로 표시**를 선택합니다.
 
-     속성 또는 필드가 수집된 형식과 연결된 형식 연결 선으로 표시됩니다.
+속성 또는 필드가 수집된 형식과 연결된 형식 연결 선으로 표시됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

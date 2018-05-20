@@ -1,5 +1,5 @@
 ---
-title: 문서 수준 사용자 지정에서 캐시 된 데이터 | Microsoft Docs
+title: 문서 수준 사용자 지정의 캐시 된 데이터
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,13 +21,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0919e046f9e50578df46853c6db9f60cea2f71e3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bd93d985b72f945e7a1c70199d6ff3aacf5f0229
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="cached-data-in-document-level-customizations"></a>문서 수준 사용자 지정의 캐시된 데이터
+# <a name="cached-data-in-document-level-customizations"></a>문서 수준 사용자 지정의 캐시 된 데이터
   문서 수준 사용자 지정의 기본 목적은 Office 문서에서 보기에서 데이터를 분리 하는 것입니다. 데이터는 숫자와 텍스트를 포함 하는 문서에 저장 된 정보를 나타냅니다. 보기는 사용자 인터페이스 및 Microsoft Office Word 및 Microsoft Office Excel의 개체 모델을 가리킵니다.  
   
  Visual Studio의 문서 수준 사용자 지정 보기에서 데이터를로 포함할 수 있도록 하 여 데이터를 분리 한 *데이터 아일랜드*라고도 하는 *데이터 캐시*합니다. Word 또는 Excel을 시작 하지 않고 직접 데이터를 수정 하거나 읽을 수 있습니다. Microsoft Office가 설치 되지 않은 서버에 있는 문서의 데이터를 수정 해야 하는 경우에 유용 합니다. Word 및 Excel 클라이언트 환경;에 사용할 목적 서버에서 실행 되도록 설계 되지 않습니다.  
@@ -36,15 +36,15 @@ ms.lasthandoff: 04/16/2018
   
  문서 수준 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40;VSTO&#41; ](../vsto/office-solutions-development-overview-vsto.md) 및 [문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)합니다.  
   
-## <a name="understanding-the-cached-data-programming-model"></a>캐시 된 데이터 프로그래밍 모델 이해  
- 데이터 아일랜드는 특정 요구 사항을 충족 하는 솔루션의 모든 개체를 포함할 수 있습니다. 이러한 개체에는 <xref:System.Data.DataSet> 개체 <xref:System.Data.DataTable> 개체 및에서 serialize 할 수 있는 다른 모든 개체는 <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다. 자세한 내용은 참조 하십시오. 참조 [데이터 캐싱](../vsto/caching-data.md)합니다.  
+## <a name="understand-the-cached-data-programming-model"></a>캐시 된 데이터 프로그래밍 모델을 이해  
+ 데이터 아일랜드는 특정 요구 사항을 충족 하는 솔루션의 모든 개체를 포함할 수 있습니다. 이러한 개체에는 <xref:System.Data.DataSet> 개체 <xref:System.Data.DataTable> 개체 및에서 serialize 할 수 있는 다른 모든 개체는 <xref:System.Xml.Serialization.XmlSerializer> 클래스입니다. 자세한 내용은 참조 하십시오. 참조 [데이터 캐시](../vsto/caching-data.md)합니다.  
   
  캐시 된 데이터에 대 한 보기를 제공 하려면 Windows Forms 컨트롤을 바인딩할 수 있습니다 및 *호스트 컨트롤* 문서 데이터 아일랜드에 개체를 합니다. 데이터 아일랜드와 데이터 바인딩된 컨트롤 간의 데이터 바인딩은 동기화를 유지 합니다. 컨트롤에 종속 되는 데이터 유효성 검사 코드를 추가할 수도 있습니다. 자세한 내용은 참조 [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)합니다.  
   
- 호스트 컨트롤은 Excel 및 Word 개체 모델의 네이티브 개체의 버전을 확장 합니다. 네이티브 개체와 달리 호스트 컨트롤은 관리 되는 데이터 개체에 직접 바인딩할 수 있습니다. 자세한 내용은 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md) 및 [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)를 참조하세요.  
+ 호스트 컨트롤은 Excel 및 Word 개체 모델의 네이티브 개체의 버전을 확장 합니다. 네이티브 개체와 달리 호스트 컨트롤은 관리 되는 데이터 개체에 직접 바인딩할 수 있습니다. 자세한 내용은 참조 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md) 및 [Office 문서 개요에 Windows Forms 컨트롤](../vsto/windows-forms-controls-on-office-documents-overview.md)합니다.  
   
-## <a name="accessing-cached-data-on-the-server"></a>서버에서 캐시 된 데이터에 액세스  
- 문서에서 캐시 된 데이터에 액세스 하려면 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스입니다. 이 클래스는의 일부는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], 실행 중인 Excel 또는 Word 없이 서버에서 사용할 수 있습니다. 사용자가 열 때 문서에서 캐시 된 데이터를 수정 하 고 데이터에 바인딩된 모든 컨트롤의 변경 내용을 자동으로 동기화 됩니다 사용자가 업데이트 된 데이터로 표시 됩니다. 자세한 내용은 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)을 참조하세요.  
+## <a name="access-cached-data-on-the-server"></a>캐시 된 서버에는 데이터 액세스  
+ 문서에서 캐시 된 데이터에 액세스 하려면 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스입니다. 이 클래스는의 일부는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], 실행 중인 Excel 또는 Word 없이 서버에서 사용할 수 있습니다. 사용자가 열 때 문서에서 캐시 된 데이터를 수정 하 고 데이터에 바인딩된 모든 컨트롤의 변경 내용을 자동으로 동기화 됩니다 사용자가 업데이트 된 데이터로 표시 됩니다. 자세한 내용은 참조 [서버에서 문서 데이터에에서 액세스](../vsto/accessing-data-in-documents-on-the-server.md)합니다.  
   
  Excel 및 Word 클라이언트에서 볼 수만 서버에 데이터를 쓰지 필요 하지 않습니다. Excel 및 Word도 않아도를 서버에 설치 됩니다. 데이터 아일랜드를 포함 하는 문서 빠르게 일괄 처리를 수행 하는 기능과 향상 된 확장성을 제공 합니다.  
   
@@ -59,11 +59,11 @@ ms.lasthandoff: 04/16/2018
 ||데이터 캐시|사용자 지정 XML 부분|  
 |-|----------------|----------------------|  
 |Office 응용 프로그램에는 이러한 사용할 수 있습니까?|다음 응용 프로그램에 대 한 문서 수준 사용자 지정:<br /><br /> -Excel<br />단어|다음 응용 프로그램에 대 한 문서 수준 및 응용 프로그램 수준 솔루션:<br /><br /> -Excel<br />-PowerPoint<br />단어|  
-|어떤 유형의 데이터를 저장할 수 있습니다?|특정 요구 사항을 충족 하는 사용자 지정 어셈블리의 모든 공용 개체입니다. 자세한 내용은 [Caching Data](../vsto/caching-data.md)을 참조하세요.|모든 XML 데이터입니다.|  
+|어떤 유형의 데이터를 저장할 수 있습니다?|특정 요구 사항을 충족 하는 사용자 지정 어셈블리의 모든 공용 개체입니다. 자세한 내용은 참조 [데이터 캐시](../vsto/caching-data.md)합니다.|모든 XML 데이터입니다.|  
 |Microsoft Office 응용 프로그램을 시작 하지 않고 데이터를 액세스할 수 있습니까?|사용 하 여 예,는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 클래스에서 제공 되는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다.|예,의 클래스를 사용 하 여는 <xref:System.IO.Packaging> 네임 스페이스 또는 Open XML 형식 SDK를 사용 하 여 합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)   
- [Visual Studio의 Office 솔루션 아키텍처](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
+ [Visual Studio에서 Office 솔루션의 아키텍처](../vsto/architecture-of-office-solutions-in-visual-studio.md)  
   
   

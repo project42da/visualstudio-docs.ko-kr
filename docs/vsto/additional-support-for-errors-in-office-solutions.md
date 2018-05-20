@@ -1,5 +1,5 @@
 ---
-title: Office 솔루션 오류에에서 대 한 추가 지원 | Microsoft Docs
+title: Office 솔루션 오류에에서 대 한 추가 지원
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -59,30 +59,27 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 13e0520df662b1a48c3f2a603356d46e21c2f4f2
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: bbb9c5676ec3d9f06802f071c842f9e2a396703e
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="additional-support-for-errors-in-office-solutions"></a>Office 솔루션 오류에 대한 추가 지원
+# <a name="additional-support-for-errors-in-office-solutions"></a>Office 솔루션 오류에에서 대 한 추가 지원
   Visual Studio에서 Office 솔루션을 만들 때 발생 한 문제에 대 한 답을 찾는 데 도움이 되는 다음 리소스를 사용할 수 있습니다.  
   
-## <a name="troubleshooting-specific-errors"></a>특정 오류 문제 해결  
+## <a name="troubleshoot-specific-errors"></a>특정 오류 문제 해결  
  Office 솔루션의 몇 가지 일반적인 오류에 도움이 필요 하면, 다음 항목을 참조 합니다.  
   
--   [Office 솔루션에서 런타임 오류 문제 해결](../vsto/troubleshooting-errors-in-office-solutions.md)  
+-   [Office 솔루션의 오류 문제 해결](../vsto/troubleshooting-errors-in-office-solutions.md)  
   
 -   [Office 솔루션 보안 문제 해결](../vsto/troubleshooting-office-solution-security.md)  
   
 -   [Office 솔루션 배포 문제 해결](../vsto/troubleshooting-office-solution-deployment.md)  
   
 ## <a name="other-resources"></a>기타 리소스  
- [Visual Studio Tools for Office 포럼](http://go.microsoft.com/fwlink/?LinkId=149744)  
+ [Visual Studio tools for Office 포럼](http://go.microsoft.com/fwlink/?LinkId=149744)  
  Visual Studio에서 Office 개발자 도구에 대 한 질문에 대 한 포럼을 제공 합니다.  
-  
- [Office 토론 그룹](http://go.microsoft.com/fwlink/?LinkId=63585)  
- Office 응용 프로그램에 대 한 질문에 대 한 뉴스 그룹 경험을 제공합니다. Office 응용 프로그램의 개체 모델에 관련 된 특정 작업에 대 한 질문에 대 한 여기 프로그래밍 뉴스 그룹을 사용 합니다.  
   
  [Microsoft 도움말 및 지원](http://go.microsoft.com/fwlink/?LinkID=108287)  
  기술 자료 문서, 다운로드 및 업데이트 자료, 지원 웹캐스트와 기타 서비스에 액세스할 수 있습니다.  
@@ -90,7 +87,7 @@ ms.lasthandoff: 04/27/2018
  [Office 솔루션 개발을 위한 추가 리소스](../vsto/additional-resources-for-developing-office-solutions.md)  
  Visual Studio에서 Office 개발을 Office 솔루션 개발에 대 한 좀 더에 대 한 추가 리소스에 대 한 링크를 제공 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션의 오류 문제 해결](../vsto/troubleshooting-errors-in-office-solutions.md)   
  [Office 솔루션 보안 문제 해결](../vsto/troubleshooting-office-solution-security.md)   
  [Office 솔루션 배포 문제 해결](../vsto/troubleshooting-office-solution-deployment.md)   

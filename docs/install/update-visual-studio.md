@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0d528c8ec235ceb1b9c8b23de0874ebe42c472ce
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c0a53ca3a5b7eb292a2b2bdd1e95b9319205bcf3
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="update-visual-studio-2017-to-the-most-recent-release"></a>Visual Studio 2017을 최신 릴리스 버전으로 업데이트
 
@@ -54,7 +54,7 @@ IDE 내에서 바로 사용하기 쉽도록 설치 및 업데이트 환경이 �
      업데이트가 계속됩니다. 업데이트가 완료되면 Visual Studio가 다시 시작됩니다.
 
      > [!NOTE]
-     > Visual Studio를 관리자 모드로 실행하는 경우에는 업데이트 후 Visual Studio를 수동으로 다시 시작해야 합니다.    
+     > Visual Studio를 관리자 모드로 실행하는 경우에는 업데이트 후 Visual Studio를 수동으로 다시 시작해야 합니다.
 
 ### <a name="use-the-ide"></a>IDE 사용
 
@@ -71,7 +71,7 @@ IDE 내에서 바로 사용하기 쉽도록 설치 및 업데이트 환경이 �
    이전 섹션에서 설명한 대로 업데이트가 진행되고, 업데이트가 완료되면 Visual Studio가 다시 시작됩니다.
 
    > [!NOTE]
-   > Visual Studio를 관리자 모드로 실행하는 경우에는 업데이트 후 Visual Studio를 수동으로 다시 시작해야 합니다.  
+   > Visual Studio를 관리자 모드로 실행하는 경우에는 업데이트 후 Visual Studio를 수동으로 다시 시작해야 합니다.
 
 ### <a name="use-the-visual-studio-installer"></a>Visual Studio 설치 관리자 사용
 

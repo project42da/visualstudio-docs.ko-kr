@@ -25,10 +25,10 @@ manager: douge
 ms.workload:
 - multiple
 ms.openlocfilehash: 0584aac376345bc508e5f2088decd45b8c64783b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="walkthrough-manually-deploying-a-clickonce-application-that-does-not-require-re-signing-and-that-preserves-branding-information"></a>연습: 다시 서명할 필요가 없고 브랜드 정보가 유지되는 ClickOnce 응용 프로그램 수동 배포
 만들 때 한 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램 및 게시 하는 고객 수 있도록 제공 및 배포, 배포 매니페스트를 업데이트 하 고 다시 서명 해야 하는 고객 전에 했습니다. .NET Framework 3.5 만들 수 있습니다 여전히 대부분의 경우에는 이러한 방식이 사용 되 고 있지만, [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 새 배포 매니페스트를 다시 생성 하지 않고도 고객이 배포할 수 있는 배포입니다. 자세한 내용은 참조 [배포 ClickOnce 응용 프로그램에 대 한 테스트 및 프로덕션 서버 Resigning 없이](../deployment/deploying-clickonce-applications-for-testing-and-production-without-resigning.md)합니다.  

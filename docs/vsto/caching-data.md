@@ -1,5 +1,5 @@
 ---
-title: 데이터 캐싱 | Microsoft Docs
+title: 데이터 캐시
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,24 +17,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 094a4e6c639007fcf09ce28f0be2e398b8245858
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77b92b721f2c8b47bcb878aaa9f4cbf411015ccc
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="caching-data"></a>데이터 캐싱
+# <a name="cache-data"></a>데이터 캐시
   오프 라인으로 또는 Microsoft Office Word 또는 Microsoft Office Excel을 열지 않고 데이터를 액세스할 수 있도록 문서 수준 사용자 지정에서 데이터 개체를 캐시할 수 있습니다. 개체를 캐시 하려면 개체는 특정 요구 사항을 충족 하는 데이터 형식이 있어야 합니다. .NET Framework의 많은 일반 데이터 형식을 포함 하는 이러한 요구 사항을 충족 <xref:System.String>, <xref:System.Data.DataSet>, 및 <xref:System.Data.DataTable>합니다.  
   
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]  
   
  두 가지 방법으로 데이터 캐시에 개체를 추가 하려면:  
   
--   를 추가 하려면 개체 데이터 캐시에는 솔루션을 빌드할 때 적용 된 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 특성을 개체 선언 합니다. 자세한 내용은 참조 [하는 방법: 캐시 데이터는 서버 또는 오프 라인으로 사용에 대 한](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)합니다.  
+-   를 추가 하려면 개체 데이터 캐시에는 솔루션을 빌드할 때 적용 된 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 특성을 개체 선언 합니다. 자세한 내용은 참조 [하는 방법: 오프 라인 상태가 되거나 서버에 사용 하기 위해 데이터를 캐시](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)합니다.  
   
 -   런타임에 프로그래밍 방식으로 데이터 캐시에 개체 추가 하려면 사용는 `StartCaching` 와 같은 메서드는 호스트의 항목은 `ThisDocument` 또는 `ThisWorkbook` 클래스입니다. 자세한 내용은 참조 [하는 방법: 프로그래밍 방식으로 Office 문서에 데이터 소스를 캐싱](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)합니다.  
   
- 데이터 캐시에 개체를 추가한 후에 액세스 하 고 Word 또는 Excel을 시작 하지 않고 캐시 된 데이터를 수정할 수 있습니다. 자세한 내용은 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)을 참조하세요.  
+ 데이터 캐시에 개체를 추가한 후에 액세스 하 고 Word 또는 Excel을 시작 하지 않고 캐시 된 데이터를 수정할 수 있습니다. 자세한 내용은 참조 [서버에서 문서 데이터에에서 액세스](../vsto/accessing-data-in-documents-on-the-server.md)합니다.  
   
 ## <a name="requirements-for-data-objects-to-be-cached"></a>데이터 개체를 캐시에 대 한 요구 사항  
  솔루션의 데이터 개체를 캐시 하려면 개체에는 이러한 요구 사항을 충족 해야 합니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 -   구현 하지 <xref:System.Collections.IDictionary> 경우 컬렉션입니다.  
   
- 데이터 개체를 캐시 하는 경우는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 된 개체에 저장 된 XML 문자열에 serialize 한 *사용자 지정 XML 부분* 문서에 있습니다. 자세한 내용은 [Custom XML Parts Overview](../vsto/custom-xml-parts-overview.md)을 참조하세요.  
+ 데이터 개체를 캐시 하는 경우는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 된 개체에 저장 된 XML 문자열에 serialize 한 *사용자 지정 XML 부분* 문서에 있습니다. 자세한 내용은 참조 [사용자 지정 XML 부분 개요](../vsto/custom-xml-parts-overview.md)합니다.  
   
 ## <a name="cached-data-size-limits"></a>캐시 된 데이터 크기 제한  
  데이터는 문서에서 데이터 캐시에 및 데이터 캐시의 개별 개체의 크기를 추가할 수는 총 크기에 몇 가지 제한이 있습니다. 이러한 한도 초과 하면 응용 프로그램 데이터 캐시에 데이터를 저장할 때 예기치 않게 닫힐 수 있습니다.  
@@ -72,23 +72,23 @@ ms.lasthandoff: 04/16/2018
   
  이들은 대략적인 값입니다. 정확한 제한 값 사용 가능한 RAM 및 실행 중인 프로세스의 수를 포함 하는 여러 가지 요인에 따라 달라 집니다.  
   
-## <a name="controlling-the-behavior-of-cached-objects"></a>캐시 된 개체의 동작을 제어합니다.  
+## <a name="control-the-behavior-of-cached-objects"></a>캐시 된 개체의 동작을 제어  
  캐시 된 개체의 동작을 보다 잘 제어할 수 구현할 수 있습니다는 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType> 캐시 된 개체의 형식에 대 한 인터페이스입니다. 예를 들어 개체가 변경 되 면 사용자가 알림을 하는 방법을 제어 하려면이 인터페이스를 구현할 수 있습니다. 구현 하는 방법을 보여 주는 코드 예제에 대 한 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.ICachedType>, 참조는 `ControlCollection` 동적 컨트롤 샘플 Excel 및 Word에서 동적 컨트롤 샘플 클래스 [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)합니다.  
   
-## <a name="persisting-changes-to-cached-data-in-password-protected-documents"></a>암호로 보호 된 문서에서 캐시 된 데이터에 대 한 변경 내용 지속  
+## <a name="persist-changes-to-cached-data-in-password-protected-documents"></a>암호로 보호 된 문서에서 캐시 된 데이터에 변경 내용을 유지합니다  
  암호로 보호 된 문서에서 데이터 개체를 캐시 하는 경우에 캐시 된 데이터의 변경 내용은 저장 되지 않습니다. 두 개의 메서드를 재정의 하 여 캐시 된 데이터 변경 내용을 저장할 수 있습니다. 일시적으로 보호를 제거 하는 문서를 저장 하는 경우 이러한 메서드를 재정의 하 고 저장 한 후 보호를 다시 적용 한 다음 작업이 완료 되었습니다.  
   
  자세한 내용은 참조 [하는 방법: 암호로 보호 된 문서에서 데이터를 캐시](../vsto/how-to-cache-data-in-a-password-protected-document.md)합니다.  
   
-## <a name="preventing-data-loss-when-adding-null-values-to-the-data-cache"></a>데이터 캐시에 Null 값을 추가할 때 데이터 손실 방지  
+## <a name="prevent-data-loss-when-adding-null-values-to-the-data-cache"></a>데이터 캐시에 null 값을 추가할 때 데이터 손실을 방지합니다  
  데이터 캐시에 개체를 추가할 때 캐시 된 개체를 모두 초기화 해야 아닌**null** 이전의 문서를 저장 하 고 종료 합니다. 이 경우는 **null** 문서를 저장 하 고 닫을 때 값은 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 자동으로 데이터 캐시에서 캐시 된 개체를 모두 제거 됩니다.  
   
- 가진 개체를 추가 하는 경우는 **null** 값을 사용 하 여 데이터 캐시는 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 특성 디자인 타임에 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 문서를 열기 전에 캐시 된 데이터를 초기화 하기 위해 클래스 개체입니다. Word 또는 Excel이 설치는 최종 사용자가 문서를 열기 전에 하지 않고 서버에 캐시 된 데이터를 초기화 하려는 경우에 유용 합니다. 자세한 내용은 [Accessing Data in Documents on the Server](../vsto/accessing-data-in-documents-on-the-server.md)을 참조하세요.  
+ 가진 개체를 추가 하는 경우는 **null** 값을 사용 하 여 데이터 캐시는 <xref:Microsoft.VisualStudio.Tools.Applications.Runtime.CachedAttribute> 특성 디자인 타임에 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.Tools.Applications.ServerDocument> 문서를 열기 전에 캐시 된 데이터를 초기화 하기 위해 클래스 개체입니다. Word 또는 Excel이 설치는 최종 사용자가 문서를 열기 전에 하지 않고 서버에 캐시 된 데이터를 초기화 하려는 경우에 유용 합니다. 자세한 내용은 참조 [서버에서 문서 데이터에에서 액세스](../vsto/accessing-data-in-documents-on-the-server.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [방법: 오프 라인 상태가 되거나 서버에 사용할 데이터 캐싱](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
+## <a name="see-also"></a>참고자료  
+ [방법: 오프 라인 상태가 되거나 서버에 사용 하기 위해 데이터를 캐시 합니다.](../vsto/how-to-cache-data-for-use-offline-or-on-a-server.md)   
  [방법: 프로그래밍 방식으로 Office 문서에 데이터 소스를 캐싱](../vsto/how-to-programmatically-cache-a-data-source-in-an-office-document.md)   
  [방법: 암호로 보호 된 문서에서 데이터를 캐시 합니다.](../vsto/how-to-cache-data-in-a-password-protected-document.md)   
- [연습: 캐시된 데이터 집합을 사용하여 마스터-세부 관계 만들기](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)  
+ [연습: 캐시 된 데이터 집합을 사용 하 여 마스터-세부 관계 만들기](../vsto/walkthrough-creating-a-master-detail-relation-using-a-cached-dataset.md)  
   
   

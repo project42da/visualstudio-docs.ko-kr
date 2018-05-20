@@ -1,5 +1,5 @@
 ---
-title: Office 추가 기능 COM, VSTO 및 VBA에 대 한 개발 모범 사례 | Microsoft Docs
+title: Office에서 COM, VSTO 및 VBA 추가 기능에 대 한 개발 모범 사례
 ms.custom: ''
 ms.date: 07/25/2017
 ms.technology:
@@ -14,13 +14,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6da083b12717606233d4c8dd9bc175b42722d53e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 020faeb330348049dcf12431fadfa6ab099d1584
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="development-best-practices-for-com-vsto-and-vba--add-ins-in-office"></a>Office에서 COM, VSTO 및 VBA 추가 기능에 대 한 개발 모범 사례
+# <a name="development-best-practices-for-com-vsto-and-vba-add-ins-in-office"></a>Office에서 COM, VSTO 및 VBA 추가 기능에 대 한 개발 모범 사례
   Office에 대 한 COM 이거나 VBA VSTO 추가 기능을 개발 하는 경우에이 문서에 설명 된 개발 모범 사례를 준수 합니다.   이렇게 하면 확인 하는 데 도움이 됩니다.
 
 -  추가 기능이 다른 버전 및 Office의 배포에서의 호환 됩니다.
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/16/2018
  Office 추가 기능 설치 프로세스 중 설치 여부 검색 추가 기능에 필요 하지 않는 것이 좋습니다. Office 설치 되어 있지 않으면에서 추가 기능을 설치할 수 있습니다 및 사용자는 Office가 설치 된 후에 액세스할 수 있습니다. 
   
 ## <a name="use-embedded-interop-types-nopia"></a>포함 된 Interop 형식 (NoPIA)를 사용 하 여  
-솔루션.NET 4.0을 사용 하거나 나중에 사용 하는 경우 포함 된 interop 형식 (NoPIA) 대신에 따라는 Office 주 Interop 어셈블리 (PIA) 재배포 가능 합니다. 포함 하는 형식을 사용 하 여 솔루션의 설치 크기를 줄이는 및 이후 버전과 호환성을 보장 합니다. Office 2010의 Office PIA 재배포 가능 패키지를 함께 제공 되는 마지막 버전 이었습니다. 자세한 내용은 참조 [연습: Microsoft Office 어셈블리의 형식 정보 포함](https://msdn.microsoft.com/en-us/library/ee317478.aspx) 및 [동일 형식 및 포함 된 Interop 형식](/windows/uwp/porting/desktop-to-uwp-root)합니다.
+솔루션.NET 4.0을 사용 하거나 나중에 사용 하는 경우 포함 된 interop 형식 (NoPIA) 대신에 따라는 Office 주 Interop 어셈블리 (PIA) 재배포 가능 합니다. 포함 하는 형식을 사용 하 여 솔루션의 설치 크기를 줄이는 및 이후 버전과 호환성을 보장 합니다. Office 2010의 Office PIA 재배포 가능 패키지를 함께 제공 되는 마지막 버전 이었습니다. 자세한 내용은 참조 [연습: Microsoft Office 어셈블리의 형식 정보를 포함](https://msdn.microsoft.com/en-us/library/ee317478.aspx) 및 [동일 형식 및 포함 된 interop 형식](/windows/uwp/porting/desktop-to-uwp-root)합니다.
 
 솔루션에는 이전 버전의.NET을 사용 하는 경우.NET 4.0 이상을 사용 하 여 솔루션을 업데이트 하는 것이 좋습니다. .NET 4.0 이상을 사용 하 여 최신 버전의 Windows에 런타임 필수 구성 요소를 줄입니다.
   

@@ -11,15 +11,18 @@ ms.assetid: 84673a89-3f6d-4668-919e-1c0f56182fe5
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 1780fb0ce6d96cb516060437a4d3ea22dd86dba0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5ef167e83bc8f27a53405ef6ab7a3f9271863b4d
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-create-a-nullable-type-class-designer"></a>방법: Nullable 형식 만들기(클래스 디자이너)
+# <a name="how-to-create-a-nullable-type-in-class-designer"></a>방법: 클래스 디자이너에서 Nullable 형식 만들기
 
 특정 값 형식에 항상 정의된 값이 포함되거나 필요한 것은 아닙니다. 이는 일부 필드에 값이 할당되지 않을 수 있는 데이터베이스에서 일반적인 경우입니다. 예를 들어 데이터베이스 필드에 null 값을 할당하여 아직 값이 할당되지 않았음을 나타낼 수 있습니다.
 

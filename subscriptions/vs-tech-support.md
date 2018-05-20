@@ -9,11 +9,11 @@ description: Visual Studio 구독에 포함된 기술 지원 혜택을 활성화
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: ef77e784ccaad30413ad81716b55df8e2de45fea
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7c04132540477bcd94880cdb55b71493cbb1a347
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="activating-the-technical-support-benefit-in-visual-studio-subscriptions"></a>Visual Studio 구독에서 기술 지원 혜택 활성화
 
@@ -75,6 +75,20 @@ Azure와 관련된 문제에 대해 Visual Studio 구독 기술 지원 혜택을
 3.  “지원”에서 “지원 계약 연결”을 클릭합니다.
 4.  위의 1번에서 제공된 “액세스 ID” 및 “계약 ID”를 입력합니다.
 이러한 단계를 완료하면 Visual Studio 구독 혜택과 연결된 지원 플랜을 선택할 수 있습니다.  (플랜 이름에 “MSDN”"이 포함될 수 있습니다.)
+
+## <a name="eligibility"></a>자격
+| 구독 수준                                                 |     채널                                            | 이점                                                          | 갱신 가능?    |
+|--------------------------------------------------------------------|---------------------------------------------------------|------------------------------------------------------------------|---------------|
+| Visual Studio Enterprise(표준, 연간 클라우드)   | VL, Azure, 일반 정품, 선택한 NFR<sup>1</sup> | 인시던트 4개       |  예|
+| Visual Studio Professional(표준, 연간 클라우드) | VL, Azure, 일반 정품, 선택한 NFR<sup>2</sup>                                        | 인시던트 2개                                                          |예         |
+| Visual Studio Test Professional(표준)                         | VL, 일반 정품                                              | 인시던트 2개                                             |  예         |
+| MSDN 플랫폼(표준)                                          | VL, 일반 정품                                              | 인시던트 2개                                               | 예         |
+| Visual Studio Dev Essentials | 해당 없음  | 사용할 수 없음 |해당 없음|
+| Visual Studio Enterprise, Visual Studio Professional(월간 클라우드) | Azure                                       | 사용할 수 없음                                                           |해당 없음|
+
+<sup>1</sup>  *포함: Imagine Premium. 제외: NFR(전매금지), VSIP(Visual Studio 업계 파트너), MPN(Microsoft 파트너 네트워크), FTE, MCT Software & Services Developer, BizSpark, Imagine Standard, MVP(Microsoft Valued Partner), RD(Region Director), MCT Software & Services.*
+
+<sup>2</sup>  *포함: Imagine Standard.*
 
  
 

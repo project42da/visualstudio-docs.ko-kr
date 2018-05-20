@@ -15,13 +15,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 13f89a15b0ec734e29e27fe652ee7e71b791db50
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e8151020294f4fd5574a1de886509c5b11f0a326
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-create-inheritance-between-types-class-designer"></a>방법: 형식 간의 상속 만들기(클래스 디자이너)
+# <a name="how-to-create-inheritance-between-types-in-class-designer"></a>방법: 클래스 디자이너에서 형식 간의 상속 만들기
 
 **클래스 디자이너**를 사용하여 클래스 다이어그램의 두 형식 간에 상속 관계를 만들려면 기본 형식을 하나 이상의 파생 형식과 연결합니다. 두 클래스, 클래스와 인터페이스 또는 두 인터페이스 간에 상속 관계를 적용할 수 있습니다.
 

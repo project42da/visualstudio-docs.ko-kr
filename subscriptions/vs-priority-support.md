@@ -3,21 +3,21 @@ title: Visual Studio 구독의 우선 순위 지원 혜택 | Microsoft Docs
 author: evanwindom
 ms.author: jaunger
 manager: evelynp
-ms.date: 01/16/2018
+ms.date: 05/07/2018
 ms.topic: Get-Started-Article
 description: Visual Studio 구독에 포함된 우선 순위 지원 혜택을 알아봅니다.
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: e2cad13b3904779bfaca86f7d3e66ac5dbbcfbb8
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5353bb4dda9da754db7b00d96450df162c5a6d38
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="priority-support-in-visual-studio-subscriptions"></a>Visual Studio 구독의 우선 순위 지원
 
-우선 순위 지원 혜택은 기존 게시물을 검색하거나 새 질문을 할 수 있는 다양한 지원 커뮤니티 포럼에 대한 액세스 권한을 제공합니다.  커뮤니티에서 이틀 동안 질문에 대한 답변이 없으면 Microsoft 지원 팀에서 답변을 제공합니다.  
+우선 순위 지원 혜택은 기존 게시물을 검색하거나 새 질문을 할 수 있는 다양한 지원 커뮤니티 포럼에 대한 액세스 권한을 제공합니다.  커뮤니티에서 이틀 내에 귀하의 질문에 응답하지 않으면 Microsoft의 지원팀에서 응답을 제공할 것입니다.  
 
 선택한 Visual Studio 구독이 있는 구독자는 다양한 주제를 포함하는 많은 포럼을 통해 우선 순위 지원을 받을 수 있습니다.
 

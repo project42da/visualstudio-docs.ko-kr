@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cf4e6f10d76b29c5bf70ce01d99a2103672ae213
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2269a457ee8466a5c119659e048f506cd85e4ed3
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="developing-sharepoint-solutions"></a>SharePoint 솔루션 개발
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 여러 가지 SharePoint 프로젝트 형식 템플릿을 사용하여 SharePoint 사이트와 사이트 요소를 만들 수 있습니다. 목록이 사용 가능한 프로젝트 형식에 대 한 참조 [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)합니다. SharePoint 프로젝트의 요소와 속성에 대한 설명은 다음과 같습니다.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/16/2018
  기능이 SharePoint 프로젝트에 추가되면 **솔루션 탐색기** 에 기본 이름인 Feature*x*.feature를 사용한 노드로 표시됩니다. 여기서 *x* 는 고유 번호입니다. 기능이 SharePoint 서버에 배포되고 나면 SharePoint 관리자가 기능을 활성화하여 SharePoint 사이트 사용자가 사용 가능하도록 설정할 수 있습니다.  
   
 #### <a name="package-node"></a>패키지 노드  
- **패키지** 노드에는 SharePoint 프로젝트에 대한 배포 메커니즘으로 사용하는 단일 파일이 포함됩니다. 라고도 하는이 파일을 *솔루션 * * 패키지*, 됩니다. CAB에 기반을 합니다. WSP 확장 합니다. 솔루션 패키지는 SharePoint 사이트에 적용되는 기능 집합, 사이트 정의 및 어셈블리가 포함되고 개별적으로 사용하거나 사용하지 않도록 설정할 수 있는 배포 가능하고 재사용 가능한 파일입니다. **패키지** 노드는 항상 Package.wspdef 라는 파일이 파일을 포함 한 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 패키지에 대 한 정의 파일입니다. 패키지가 SharePoint를 실행하는 서버에 배포되고 나면 SharePoint 관리자가 패키지를 설치하고 해당 기능을 활성화할 수 있습니다.  
+ **패키지** 노드에는 SharePoint 프로젝트에 대한 배포 메커니즘으로 사용하는 단일 파일이 포함됩니다. 라고도 하는이 파일을 *솔루션 패키지*, 됩니다. CAB에 기반을 합니다. WSP 확장 합니다. 솔루션 패키지는 SharePoint 사이트에 적용되는 기능 집합, 사이트 정의 및 어셈블리가 포함되고 개별적으로 사용하거나 사용하지 않도록 설정할 수 있는 배포 가능하고 재사용 가능한 파일입니다. **패키지** 노드는 항상 Package.wspdef 라는 파일이 파일을 포함 한 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 패키지에 대 한 정의 파일입니다. 패키지가 SharePoint를 실행하는 서버에 배포되고 나면 SharePoint 관리자가 패키지를 설치하고 해당 기능을 활성화할 수 있습니다.  
   
  보거나 패키지 노드를 두 번 클릭 하거나 바로 가기 메뉴를 열고 선택 하 여 패키지 디자이너에서 패키지의 콘텐츠를 변경할 수 **열려**합니다. 자세한 내용은 참조 [SharePoint 솔루션 패키지 만들기](../sharepoint/creating-sharepoint-solution-packages.md)합니다.  
   

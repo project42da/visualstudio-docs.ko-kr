@@ -16,13 +16,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 372e92c2edb9110d6fdde45cb5381c7b420b4b03
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a3b850741793f1b0f1d358aca9ea3161e12a46b9
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-add-comments-to-class-diagrams-class-designer"></a>방법: 클래스 다이어그램에 주석 추가(클래스 디자이너)
+# <a name="how-to-add-comments-to-class-diagrams"></a>방법: 클래스 다이어그램에 주석 추가
 
 주석 도형을 사용하여 클래스 다이어그램에 주석을 달 수 있습니다. 주석 도형에는 텍스트를 입력할 수 있는 **텍스트**라는 하나의 속성이 있습니다. 주석 도형은 다이어그램 화면에만 존재하고 코드에는 존재하지 않습니다.
 

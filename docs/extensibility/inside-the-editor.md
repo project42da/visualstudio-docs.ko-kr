@@ -13,11 +13,11 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: 181a414d4cf1b9def941f32560d41158c0ed92fb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ace9e405b52873d08c578c2af8e7005249e7d58c
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="inside-the-editor"></a>편집기 내부에서
 편집기는 다양 한 텍스트 보기 및 사용자 인터페이스에서 텍스트 모델 별도로 편집기를 관리 하도록 설계 된 다른 하위 시스템 구성 됩니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
  텍스트 모델 하위 시스템은 무료 사용자 인터페이스 (UI) 개념입니다. 예를 들어 텍스트 레이아웃 또는 텍스트 서식 지정에 대 한 책임이 없을 있고 텍스트와 연결할 수 있는 시각적 장식 인식 하지 못합니다.  
   
- 텍스트 모델 하위 시스템의 public 형식은.NET Framework 기본 클래스 라이브러리 및는 프레임 워크 MEF (Managed Extensibility)에 종속 될 Microsoft.VisualStudio.Text.Data.dll 및 Microsoft.VisualStudio.CoreUtilitiy.dll에 포함 됩니다.  
+ 텍스트 모델 하위 시스템의 public 형식은.NET Framework 기본 클래스 라이브러리 및는 프레임 워크 MEF (Managed Extensibility)에 종속 될 Microsoft.VisualStudio.Text.Data.dll 및 Microsoft.VisualStudio.CoreUtility.dll에 포함 됩니다.  
   
 ### <a name="text-view-subsystem"></a>텍스트 보기 하위 시스템  
  텍스트 보기 하위 시스템은 서식 및 텍스트를 표시 하는 일을 담당 합니다. 이 하위 시스템에 있는 형식 형식 Windows Presentation Foundation (WPF)에 의존 하는 여부에 따라 두 계층으로 나뉩니다. 가장 중요 한 형식은 <xref:Microsoft.VisualStudio.Text.Editor.ITextView> 및 <xref:Microsoft.VisualStudio.Text.Editor.IWpfTextView>, 집합을 표시 하도록 텍스트 줄의 캐럿, 선택 영역 및 WPF UI 요소를 사용 하 여 텍스트를 표시 하기 위한 기능을 제어 하 합니다. 이 하위 시스템 제공 텍스트 주위의 여백 영역을 표시 합니다. 이러한 여백 확장 될 수 있습니다 및 다른 종류의 콘텐츠 및 시각적 효과 포함할 수 있습니다. 여백에 줄 번호 표시 및 스크롤 막대는 있습니다.  

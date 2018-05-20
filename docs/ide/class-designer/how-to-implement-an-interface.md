@@ -13,13 +13,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5ccfde67a46ac1ae1b74a031a9ec030942d12b3d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a8905fe471d022ff7772ded2e5e3e571b1b74968
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-implement-an-interface-class-designer"></a>방법: 인터페이스 구현(클래스 디자이너)
+# <a name="how-to-implement-an-interface-in-class-designer"></a>방법: 클래스 디자이너에서 인터페이스 구현
 
 **클래스 디자이너**에서는 인터페이스 메서드의 코드를 제공하는 클래스에 인터페이스를 연결하여 클래스 다이어그램에서 인터페이스를 구현할 수 있습니다. **클래스 디자이너**는 인터페이스 구현을 생성하고 인터페이스와 클래스 간의 관계를 상속 관계로 표시합니다. 인터페이스와 클래스 간의 상속 줄을 그리거나 클래스 뷰에서 인터페이스를 끌어와서 인터페이스를 구현할 수 있습니다.
 
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/26/2018
 
      롤리팝이 클래스에 연결되도록 표시되고 인터페이스 이름을 가진 레이블은 상속 관계를 식별합니다. Visual Studio는 모든 인터페이스 멤버에 대한 스텁을 생성합니다.
 
- 자세한 내용은 [방법: 형식 간의 상속 만들기](how-to-create-inheritance-between-types.md)를 참조하세요.
+자세한 내용은 [방법: 형식 간의 상속 만들기](how-to-create-inheritance-between-types.md)를 참조하세요.
 
 ## <a name="to-implement-an-interface-from-the-class-view-window"></a>클래스 뷰 창에서 인터페이스를 구현하려면
 

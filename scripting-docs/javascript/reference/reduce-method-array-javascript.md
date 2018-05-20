@@ -1,12 +1,13 @@
 ---
-title: "reduce 메서드 (Array) (JavaScript) | Microsoft Docs"
-ms.custom: 
+title: reduce 메서드 (Array) (JavaScript) | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
-ms.technology: devlang-javascript
-ms.tgt_pltfrm: 
+ms.reviewer: ''
+ms.suite: ''
+ms.technology:
+- devlang-javascript
+ms.tgt_pltfrm: ''
 ms.topic: language-reference
 dev_langs:
 - JavaScript
@@ -17,15 +18,15 @@ helpviewer_keywords:
 - arrays [JavaScript], reduce method
 - reduce method [JavaScript]
 ms.assetid: 48d069e0-e083-494f-86d5-d459d2377dc5
-caps.latest.revision: "21"
+caps.latest.revision: 21
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
-ms.openlocfilehash: 76279f66f8e3180fdebd73b83eb31c7368cefc75
-ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
+ms.openlocfilehash: d99f92d90885f26b19392b476ee64ae17bd40aed
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 10/27/2017
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="reduce-method-array-javascript"></a>reduce 메서드(Array)(JavaScript)
 배열의 모든 요소에 대해 지정 된 콜백 함수를 호출합니다. 호출 함수의 반환 값은 누적된 결과이며, 호출 함수에 대한 다음 호출에서 인수로 제공됩니다.  
@@ -41,8 +42,8 @@ array1.reduce(callbackfn[, initialValue])
   
 |매개 변수|정의|  
 |---------------|----------------|  
-|`array1`|필수 요소. 배열 개체입니다.|  
-|`callbackfn`|필수 요소. 최대 4 개의 인수를 허용 하는 함수입니다. `reduce` 메서드는 배열에 있는 각 요소마다 한 번씩 `callbackfn` 함수를 호출합니다.|  
+|`array1`|필수. 배열 개체입니다.|  
+|`callbackfn`|필수. 최대 4 개의 인수를 허용 하는 함수입니다. `reduce` 메서드는 배열에 있는 각 요소마다 한 번씩 `callbackfn` 함수를 호출합니다.|  
 |`initialValue`|선택 사항입니다. 경우 `initialValue` 을 지정 누적을 시작 하는 초기 값으로 사용 됩니다. 첫 번째 호출에서 `callbackfn` 함수는 배열 값 대신 인수로 서이 값을 제공 합니다.|  
   
 ## <a name="return-value"></a>반환 값  
@@ -58,7 +59,7 @@ array1.reduce(callbackfn[, initialValue])
 ## <a name="remarks"></a>설명  
  경우는 `initialValue` 제공 되는 `reduce` 메서드 호출의 `callbackfn` 오름차순 인덱스 순서로 배열에 있는 각 요소에 대해 한 번씩 작동 합니다. 경우는 `initialValue` 를 제공 하지 않으면는 `reduce` 메서드 호출의 `callbackfn` 두 번째 요소부터 각 요소에 대해 함수입니다.  
   
- 콜백 함수의 반환 값으로 제공 되는 `previousValue` 다음 콜백 함수 호출의 인수입니다. 콜백 함수에 대 한 마지막 호출의 반환 값은의 반환 값은 `reduce` 메서드.  
+ 콜백 함수의 반환 값으로 제공 되는 `accumulator` 다음 콜백 함수 호출의 인수입니다. 콜백 함수에 대 한 마지막 호출의 반환 값은의 반환 값은 `reduce` 메서드.  
   
  배열의 누락된 요소에 대해 콜백 함수를 호출하지 않습니다.  
   
@@ -68,15 +69,15 @@ array1.reduce(callbackfn[, initialValue])
 ## <a name="callback-function-syntax"></a>호출 함수 구문  
  호출 함수의 구문은 다음과 같습니다.  
   
- `function callbackfn(previousValue, currentValue, currentIndex, array1)`  
+ `function callbackfn(accumulator, currentValue, currentIndex, array1)`  
   
  최대 4 개의 매개 변수를 사용 하 여 콜백 함수를 선언할 수 있습니다.  
   
  다음 표에는 콜백 함수 매개 변수가 나열되어 있습니다.  
   
-|콜백 인수|정의|  
+|호출 인수|정의|  
 |-----------------------|----------------|  
-|`previousValue`|콜백 함수에 대 한 이전 호출에서 값입니다. 경우는 `initialValue` 에 제공 되는 `reduce` 메서드를는 `previousValue` 은 `initialValue` 처음으로 함수를 호출 합니다.|  
+|`accumulator`|콜백 함수에 대 한 이전 호출에서 값입니다. 경우는 `initialValue` 에 제공 되는 `reduce` 메서드를는 `accumulator` 은 `initialValue` 처음으로 함수를 호출 합니다.|  
 |`currentValue`|현재 배열 요소의 값입니다.|  
 |`currentIndex`|현재 배열 요소의 숫자 인덱스입니다.|  
 |`array1`|요소가 포함된 배열 개체입니다.|  
@@ -86,13 +87,13 @@ array1.reduce(callbackfn[, initialValue])
   
  경우는 `initialValue` reduce 메서드에 제공 됩니다.  
   
--   `previousValue` 인수가 `initialValue`인 경우  
+-   `accumulator` 인수가 `initialValue`인 경우  
   
 -   `currentValue` 인수는 배열에 있는 첫 번째 요소 값입니다.  
   
  경우는 `initialValue` 제공 되지 않습니다.  
   
--   `previousValue` 인수는 배열에 있는 첫 번째 요소 값입니다.  
+-   `accumulator` 인수는 배열에 있는 첫 번째 요소 값입니다.  
   
 -   `currentValue` 인수는 배열에 있는 두 번째 요소 값입니다.  
   
@@ -109,12 +110,12 @@ array1.reduce(callbackfn[, initialValue])
 |요소가 배열에서 삭제됩니다.|아니요, 해당 요소가 콜백 함수에 아직 전달되지 않은 경우 그렇습니다.|  
   
 ## <a name="example"></a>예제  
- 배열 값으로 값을 구분 하는 문자열에 연결 하 여 다음 예제에서는 "::". 초기 값을 제공 되기 때문에 `reduce` 메서드를 콜백 함수에 대 한 첫 번째 호출 자기 "abc"는 `previousValue` 인수와 "def"로 `currentValue` 인수입니다.  
+ 배열 값으로 값을 구분 하는 문자열에 연결 하 여 다음 예제에서는 "::". 초기 값을 제공 되기 때문에 `reduce` 메서드를 콜백 함수에 대 한 첫 번째 호출 자기 "abc"는 `accumulator` 인수와 "def"로 `currentValue` 인수입니다.  
   
 ```JavaScript  
 // Define the callback function.  
-function appendCurrent (previousValue, currentValue) {  
-    return previousValue + "::" + currentValue;  
+function appendCurrent (accumulator, currentValue) {  
+    return accumulator + "::" + currentValue;  
     }  
   
 // Create an array.  
@@ -136,8 +137,8 @@ document.write(result);
   
 ```JavaScript  
 // Define the callback function.  
-function addRounded (previousValue, currentValue) {  
-    return previousValue + Math.round(currentValue);  
+function addRounded (accumulator, currentValue) {  
+    return accumulator + Math.round(currentValue);  
     }  
   
 // Create an array.  
@@ -154,10 +155,10 @@ document.write (result);
  다음 예제에서는 배열의 값을 추가합니다. `currentIndex` 및 `array1` 매개 변수는 콜백 함수에 사용 됩니다.  
   
 ```JavaScript  
-function addDigitValue(previousValue, currentDigit, currentIndex, array) {  
+function addDigitValue(accumulator, currentDigit, currentIndex, array) {  
     var exponent = (array.length - 1) - currentIndex;  
     var digitValue = currentDigit * Math.pow(10, exponent);  
-    return previousValue + digitValue;  
+    return accumulator + digitValue;  
     }  
   
 var digits = [4, 1, 2, 5];  
@@ -173,17 +174,17 @@ document.write (result);
  다음 예제에는 1에서 다른 배열에서 10 사이의 값만 포함 하는 배열을 가져옵니다. 에 제공 된 초기 값은 `reduce` 메서드는 빈 배열입니다.  
   
 ```JavaScript  
-function Process(previousArray, currentValue) {  
+function Process(accumulatedArray, currentValue) {  
     // If currentValue is between 1 and 10,   
     // append currentValue to the array.  
     var nextArray;  
     if (currentValue >= 1 && currentValue <= 10)  
-        nextArray = previousArray.concat(currentValue);  
+        nextArray = accumulatedArray.concat(currentValue);  
     else  
-        nextArray = previousArray;  
+        nextArray = accumulatedArray;  
   
     // If this is not the last call by the reduce method,  
-    // the returned array is previousArray on the next call.  
+    // the returned array is accumulatedArray on the next call.  
     // If this is the last call by the reduce method, the  
     // returned array is the return value of the reduce method.  
     return nextArray;  

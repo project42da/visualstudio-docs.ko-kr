@@ -9,11 +9,11 @@ description: Visual Studio 구독에 포함된 혜택 알아보기
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 7e174253601de47de50f8abe17758d18466b236d
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 6898ff004d9ab8a020ea17d90b97769d456e1553
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="benefits-included-in-your-visual-studio-subscription"></a>Visual Studio 구독에 포함된 혜택
 
@@ -40,5 +40,8 @@ Visual Studio 구독자는 궁금한 점이 있거나 기술 지원이 필요한
 - 우선 순위 지원 포럼에서 커뮤니티 멤버의 도움을 받을 수 있습니다.  커뮤니티 멤버가 질문에 대답할 수 없는 경우 Microsoft 전문가가 답변을 제공합니다. 
 - Azure와 관련해서 궁금한 점이 있는 경우  Azure 커뮤니티 및 Azure Advisory Chat 서비스를 확인하세요.  
 
-구독에 포함된 혜택에 대한 자세한 내용은 Visual Studio 가격 책정 페이지를 참조하세요.  혜택을 제공하는 구독을 포함하여 특정 혜택에 대한 자세한 내용은 아래의 **구독자 혜택 사용** 항목에서 확인할 수 있습니다. 
+> [!NOTE] 
+> 구독하면 소프트웨어 다운로드에 액세스할 수도 있습니다.  구독에 포함된 다운로드를 포함하여 다운로드에 대한 자세한 내용은 [https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)를 방문하세요.
+
+구독에 포함된 혜택에 대한 자세한 내용은 [Visual Studio 가격 책정 페이지](https://www.visualstudio.com/vs/pricing/)를 참조하세요.  혜택을 제공하는 구독을 포함하여 특정 혜택에 대한 자세한 내용은 아래의 **구독자 혜택 사용** 항목에서 확인할 수 있습니다. 
 

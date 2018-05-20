@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 34206b9c41802063cb1d29fd3bc5f8984a5581ca
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 51e4376b791e6d65a53069e1d483497009c94ed5
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="productivity-tips-for-visual-studio"></a>Visual Studio 생산성 팁
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/26/2018
 
      코드 조각을 삽입하려면 메뉴 모음에서 **편집** > **IntelliSense** > **코드 조각 삽입** 또는 **코드 감싸기**를 선택하거나 파일의 바로 가기 메뉴를 열고 **코드 조각** > **코드 조각 삽입** 또는 **코드 감싸기**를 선택합니다. 자세한 내용은 [코드 조각](../ide/code-snippets.md)을 참조하세요.
 
-- **코드 오류를 인라인으로 수정** 빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다. 이러한 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png "VS2017_LightBulbSmall")을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Alt**+**Enter** 또는 **Ctrl**+**.** 를 눌러 적용할 수 있습니다. 자세한 내용은 [빠른 작업](quick-actions.md)을 참조하세요.
+- **코드 오류를 인라인으로 수정** 빠른 작업을 사용하면 단일 작업으로 쉽게 코드를 리팩터링하거나, 생성하거나, 수정할 수 있습니다. 이 작업은 스크루드라이버![스크루드라이버 아이콘](media/screwdriver-icon.png) 또는 전구![전구 아이콘](media/light-bulb-icon.png) 아이콘을 사용하거나 커서가 적절한 코드 줄에 있을 때 **Alt**+**Enter** 또는 **Ctrl**+**.** 를 눌러 적용할 수 있습니다. 자세한 내용은 [빠른 작업](quick-actions.md)을 참조하세요.
 
 - **코드 요소의 정의 표시 및 편집** 멤버, 변수 또는 로컬 같은 코드 요소가 정의된 모듈을 신속하게 표시하고 편집할 수 있습니다.
 

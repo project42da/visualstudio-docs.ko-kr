@@ -1,5 +1,5 @@
 ---
-title: Office 솔루션 공동 개발 | Microsoft Docs
+title: Office 솔루션 공동 개발
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 10415a6983c158ae1c117a5b3f9a8b2e1c546a0e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9bf85dd1ba39df35e337f1b6b80099e3d5bcd774
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="collaborative-development-of-office-solutions"></a>Office 솔루션 공동 개발
   여러 개발자가 다른 Visual Studio 프로젝트에서 공동으로 작업 하는 동일한 방식으로 Office 프로젝트를 작업할 수 있습니다. Visual Studio 서로 다른 위치에 Office가 설치 된 경우에 각 컴퓨터에 Microsoft Office 설치를 제대로 찾습니다. 그러나 알아두어야 할 몇 가지 중요 한 고려 사항이 있습니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/16/2018
  프로젝트 소스 제어 아닌 네트워크 공유에 보관 됩니다, 솔루션을 열고는 어셈블리를 테스트 하는 공동 개발자가 사용할 수 있도록 몇 가지 추가 단계가 기울여야 합니다.  
   
 ## <a name="source-control-requires-checking-out-all-files"></a>소스 컨트롤을 사용 하려면 모든 파일을 체크 아웃  
- 프로젝트에 대 한 소스 제어를 사용 하는 경우 체크 아웃 해야에서 코드 파일에서 파일을 모두 **솔루션 탐색기** (예: ThisDocument, ThisWorkbook 또는 ThisAddIn 코드 파일) 코드 파일을 변경할 때마다도 기본적으로 숨겨져 있는 파일입니다. 을 체크 아웃 최상위 코드 파일에만 변경 내용이 손실 될 수 있습니다.  
+ 프로젝트에 대 한 소스 제어를 사용 하는 경우 체크 아웃 해야에서 코드 파일에서 파일을 모두 **솔루션 탐색기** (예:는 *ThisDocument*, *ThisWorkbook*, 또는 *ThisAddIn* 코드 파일) 코드 파일을 변경 될 때마다 기본적으로 숨겨져 있는 파일에도 합니다. 을 체크 아웃 최상위 코드 파일에만 변경 내용이 손실 될 수 있습니다.  
   
  변경 내용을 변경한 후의 모든 파일을 다시 체크 인 합니다. 프로젝트의 숨김된 코드 파일에 대 한 자세한 내용은 참조 [Visual Studio 환경의 Office 프로젝트](../vsto/office-projects-in-the-visual-studio-environment.md)합니다.  
   
@@ -44,9 +44,9 @@ ms.lasthandoff: 04/16/2018
   
  빌드 시간에 자동으로 생성 되는 임시 인증서는 암호로 보호 되지 않습니다. 인증서는 개발자의 로그인 이름 및 기타 개인 정보를 포함 합니다. 임시 인증서로 서명 하는 사용자 지정 배포 하는 경우 다른 사용자에이 정보에 액세스할 수 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션 보안](../vsto/securing-office-solutions.md)   
- [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
+ [디자인 하 고 Office 솔루션을 만들려면](../vsto/designing-and-creating-office-solutions.md)   
  [Office 솔루션 빌드](../vsto/building-office-solutions.md)  
   
   

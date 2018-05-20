@@ -11,15 +11,18 @@ ms.assetid: 6f6b0b30-3996-4569-9200-20482b3adf90
 author: gewarren
 ms.author: gewarren
 manager: douge
+dev_langs:
+- CSharp
+- VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 3d0aa5b844b3743ab80c11971caa26340effe671
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: da7a14d781f4af79d6d1d68141c3d5de1c08d304
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-split-a-class-into-partial-classes-class-designer"></a>방법: 클래스를 부분 클래스로 분할(클래스 디자이너)
+# <a name="how-to-split-a-class-into-partial-classes-in-class-designer"></a>방법: 클래스 디자이너에서 클래스를 부분 클래스로 분할
 
 `partial` 키워드(Visual Basic에서는 `Partial`)를 사용하여 여러 선언에서 클래스 또는 구조체의 선언을 나눌 수 있습니다. 원하는 만큼 Partial 선언을 사용할 수 있습니다.
 
@@ -36,30 +39,11 @@ partial 메서드는 두 가지 종류가 있습니다. C#에서는 선언(decla
 > [!NOTE]
 > Visual Basic에서는 partial 클래스 정의를 사용하여 Visual Studio 생성 코드와 사용자 작성 코드를 구분합니다. 코드는 별도의 소스 파일로 구분됩니다. 예를 들어, **Windows Form 디자이너**에서는 `Form`과 같은 컨트롤에 대해 partial 클래스를 정의합니다. 이런 컨트롤에서 생성된 코드를 수정해서는 안 됩니다.
 
-
 Visual Basic의 부분 형식(Partial Type)에 대한 자세한 내용은 [Partial](/dotnet/visual-basic/language-reference/modifiers/partial)을 참조하세요.
 
-## <a name="visual-basic-example"></a>Visual Basic 예제
+## <a name="example"></a>예
 
-Visual Basic의 클래스 정의를 분할하려면 다음 예제와 같이 `Partial` 키워드를 사용합니다.
-
-```vb
-' First part of class definition.
-Partial Public Class Employee
-    Public Sub CalculateWorkHours()
-    End Sub
-End Class
-
-' Second part of class definition.
-Partial Public Class Employee
-    Public Sub CalculateTaxes()
-    End Sub
-End Class
-```
-
-## <a name="c-example"></a>C# 예제
-
-C#에서 클래스 정의를 분할하려면 다음 예제와 같이 `partial` 키워드를 사용합니다.
+클래스 정의를 분할하려면 다음 예제와 같이 `partial` 키워드(Visual Basic의 `Partial`)를 사용합니다.
 
 ```csharp
 // First part of class definition.
@@ -79,9 +63,23 @@ public partial class Employee
 }
 ```
 
+```vb
+' First part of class definition.
+Partial Public Class Employee
+    Public Sub CalculateWorkHours()
+    End Sub
+End Class
+
+' Second part of class definition.
+Partial Public Class Employee
+    Public Sub CalculateTaxes()
+    End Sub
+End Class
+```
+
 ## <a name="see-also"></a>참고 항목
 
 - [Partial 클래스 및 메서드](/dotnet/csharp/programming-guide/classes-and-structs/partial-classes-and-methods)
-- [partial(형식)](/dotnet/csharp/language-reference/keywords/partial-type)
+- [partial(형식)(C# 참조)](/dotnet/csharp/language-reference/keywords/partial-type)
 - [partial(메서드)(C# 참조)](/dotnet/csharp/language-reference/keywords/partial-method)
-- [부분](/dotnet/visual-basic/language-reference/modifiers/partial)
+- [Partial(Visual Basic)](/dotnet/visual-basic/language-reference/modifiers/partial)

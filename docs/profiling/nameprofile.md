@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f0b717882e943a37857bbdadf3d318f94b4900dc
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 4f7f3b6ddfd52863585e26a1972f00e55515996d
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="nameprofile"></a>NameProfile
 `NameProfile` 함수는 지정된 프로세스 또는 스레드에 문자열을 할당합니다.  
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="syntax"></a>구문  
   
-```  
+```cpp  
 PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(  
                                    LPCTSTR pszName,   
                                    PROFILE_CONTROL_LEVEL Level,  
@@ -44,7 +44,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
   
 -   pszName의 문자열 데이터에 공백이 포함된 경우  
   
--   pszName의 문자열 데이터에 ,;.`~!@#$%^&*()=[]{}&#124;\\?/<> 문자 중 하나가 포함된 경우  
+-   pszName의 문자열 데이터에 ,;.`~!@#$%^&*()=[]{}&#124;\\?/<>> 문자 중 하나가 포함된 경우  
   
  `Level`  
   
@@ -98,7 +98,7 @@ PROFILE_COMMAND_STATUS PROFILERAPI NameProfile(
 ## <a name="example"></a>예  
  다음 코드에서는 NameProfile 함수 호출을 보여 줍니다. 예제에서는 코드에서 ANSI 사용 함수를 호출할지 여부를 결정하도록 Win32 문자열 매크로 및 ANSI에 대한 컴파일러 설정의 사용을 가정합니다.  
   
-```  
+```cpp  
 void ExerciseNameProfile()  
 {  
     // Variables used to print output.  

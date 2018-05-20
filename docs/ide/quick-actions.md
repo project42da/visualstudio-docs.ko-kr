@@ -1,5 +1,5 @@
 ---
-title: 빠른 작업
+title: 빠른 작업, 전구 및 스크루드라이버
 ms.date: 03/28/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
@@ -12,11 +12,11 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 43198f5722de1bd983991df8ff19b17fcaea9e83
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: d413d5b440c39c3603e1e909fb0c4645719f188b
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="quick-actions"></a>빠른 작업
 
@@ -29,21 +29,27 @@ ms.lasthandoff: 04/28/2018
 - 리팩터링 적용(예: [임시 변수 인라인](../ide/reference/inline-temporary-variable.md))
 - 코드 생성(예: [지역 변수 도입](../ide/reference/introduce-local-variable.md))
 
-빠른 작업은 전구 아이콘 ![작은 전구 아이콘](media/vs2015_lightbulbsmall.png)을 사용하거나 **Ctrl**+**.** 를 눌러 적용할 수 있습니다. 동작을 사용할 수 있는 코드 줄에 커서가 있는 경우입니다. 빨간색 오류 표시선이 나타나는 경우 전구가 표시되며 Visual Studio에서는 문제 해결 방법에 대한 제안이 나타납니다. 예를 들어 빨간색 오류 표시선으로 나타난 오류가 있는 경우 해당 오류에 대한 해결 방법을 사용할 수 있을 때 전구가 나타납니다.
+전구![전구 아이콘](media/light-bulb-icon.png) 또는 스크루드라이버![스크루드라이버 아이콘](media/screwdriver-icon.png) 아이콘을 사용하거나 **Ctrl**+**을 눌러 빠른 작업을 적용 할 수 있습니다.** 동작을 사용할 수 있는 코드 줄에 커서가 있는 경우입니다. 오류를 나타내는 빨간 물결 무늬가 있는 경우 오류 전구![오류 전구 아이콘](media/error-light-bulb-icon.png)가 표시되고 Visual Studio에는 해당 오류에 사용할 수 있는 해결 방법이 있습니다.
 
 어떤 언어든지 타사에서 SDK에 포함하는 방식 등을 통해 사용자 지정 진단 및 제안을 제공할 수 있으며 Visual Studio 전구는 이러한 규칙을 기반으로 켜집니다.
 
-## <a name="to-see-a-light-bulb"></a>전구를 표시하려면
+## <a name="icons"></a>아이콘
 
-1. 대부분의 경우 전구는 오류 지점에 마우스를 가져갈 때 자연스럽게 나타나거나 오류가 포함된 줄로 캐럿을 이동할 때 편집기의 왼쪽 여백에 자동으로 나타납니다. 빨간색 오류 표시선이 보이면 마우스로 가리켜 전구를 표시할 수 있습니다. 줄에서 오류가 발생한 위치로 이동하기 위해 마우스나 키보드를 사용할 때 전구가 표시되도록 할 수도 있습니다.
+빠른 작업을 사용할 수 있을 때 나타나는 아이콘은 사용 가능한 해결 방법 또는 리팩터링 형식을 나타냅니다. *스크루드라이버*![스크루드라이버 아이콘](media/screwdriver-icon.png) 아이콘은 코드를 변경하는 데 사용할 수 있는 작업이 있음을 나타내지만 반드시 사용해야 하는 것은 아닙니다. *노란색 전구*![전구 아이콘](media/light-bulb-icon.png) 아이콘은 코드 개선을 위해 *해야 하는* 작업이 있음을 나타냅니다. *오류 전구*![오류 전구 아이콘](media/error-light-bulb-icon.png) 아이콘은 코드에서 오류를 수정하는 데 사용할 수 있는 작업이 있음을 나타냅니다.
 
-1. 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 줄의 임의 위치를 눌러 전구를 호출하고 잠재적 해결 방법 목록으로 바로 이동합니다.
+## <a name="to-see-a-light-bulb-or-screwdriver"></a>전구 또는 스크루드라이버를 표시하려면
+
+- 해결 방법을 사용할 수 있는 경우 오류 위치를 마우스로 가리킬 때 전구가 자동으로 나타납니다.
 
    ![마우스로 가리킨 전구](../ide/media/vs2015_lightbulb_hover.png)
 
+- 빠른 작업을 사용할 수 있는 코드 줄로 캐럿을 옮기면 전구 및 스크루드라이버가 편집기의 왼쪽 여백에 나타납니다.
+
+- 줄의 임의 위치에서 **Ctrl**+**.** 를 눌러 사용 가능한 빠른 작업 및 리팩토링 목록을 볼 수 있습니다.
+
 ## <a name="to-see-potential-fixes"></a>잠재적 해결 방법을 보려면
 
-아래쪽 화살표나 **잠재적 해결 방법 표시** 링크를 클릭하여 전구가 수행할 수 있는 빠른 작업 목록을 표시합니다.
+전구 옆에 있는 아래쪽 화살표 또는 **잠재적 해결 방법 표시** 링크를 선택하여 사용 가능한 빠른 작업 목록을 표시합니다.
 
 ![확장된 전구](../ide/media/vs2015_lightbulb_hover_expanded.png)
 

@@ -1,5 +1,5 @@
 ---
-title: '&lt;설명&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+title: '&lt;설명&gt; 요소 (Visual Studio에서 Office 개발)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 13755a20b091696bf741c1f25360941e01b65945
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9fcdac1e950d98394b5703322f40dd1823b246f6
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="ltdescriptiongt-element-office-development-in-visual-studio"></a>&lt;설명&gt; 요소 (Visual Studio에서 Office 개발)
   `description` 네임스페이스의 `vstov4` 요소는 Microsoft Office 응용 프로그램의 COM 추가 기능 대화 상자에 나타나는 Office 솔루션에 대한 설명을 저장합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <description>  
 </description>  
 ```  
@@ -40,21 +40,21 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="vsto-add-in-example"></a>VSTO 추가 기능 예제  
   
-### <a name="description"></a>vstov4  
- 다음 코드 예제에서는 `description` 를 사용하여 배포된 응용 프로그램 수준 솔루션의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+### <a name="description"></a>설명  
+ 다음 코드 예제에서는 `description` 를 사용하여 배포된 응용 프로그램 수준 솔루션의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는에 제공 된 큰 예제의 일부 [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)합니다.  
   
 ### <a name="code"></a>코드  
   
-```  
+```xml  
 <vstov4:description>  
   ContosoOutlookAddIn - Outlook add-in   
   created with Visual Studio Tools for Office  
 </vstov4:description>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office 솔루션에 대 한 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
+## <a name="see-also"></a>참고자료  
+ [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)   
+ [Office 솔루션의 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)  
   
   

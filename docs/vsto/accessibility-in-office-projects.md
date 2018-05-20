@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 786926ff7608a487ea9fcd732e1457bb382a4bab
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 34a1ea090e85168b5fd0bf2e55c22d0a38ff331f
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="accessibility-in-office-projects"></a>Office 프로젝트의 내게 필요한 옵션
   Microsoft Visual Studio 및 Microsoft Office 내게 필요한 옵션 표준 요구 사항을 충족 하는 사용자 지정 솔루션을 구축할 수 있도록 하는 여러 접근성 기능이 포함 됩니다. Microsoft는 웹에서 내게 필요한 옵션에 대 한 지침을 게시합니다. 자세한 내용은 참조는 [내게 필요한 옵션 웹 사이트](http://go.microsoft.com/fwlink/?LinkID=37113)합니다.  
@@ -33,13 +33,13 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="accessibility-at-design-time"></a>디자인 타임에 내게 필요한 옵션  
 
-### <a name="using-shortcut-keys-in-document-level-projects"></a>문서 수준 프로젝트의 바로 가기 키를 사용 하 여  
- Microsoft Office Word 문서 또는 Microsoft Office Excel 통합 문서를 연 Visual Studio에서 바로 가기 키 명령을 한 번에 하나의 응용 프로그램을 받습니다. 기본적으로 Visual Studio 모든 바로 가기 키 명령을 받지만 Word 또는 Excel을 선택 하 여 문서에 포커스가 있을 때 수신 정확해 **동적 키보드 구성표** 에 **키보드 설정** 페이지 **옵션** 대화 상자. 자세한 내용은 참조 [Microsoft Office Word 키보드, Microsoft Office 키보드 설정, 옵션 대화 상자](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md) 및 [MicrosoftOfficeExcel키보드,MicrosoftOffice키보드설정,옵션대화상자](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md).  
+### <a name="use-shortcut-keys-in-document-level-projects"></a>문서 수준 프로젝트의 바로 가기 키를 사용 하 여  
+ Microsoft Office Word 문서 또는 Microsoft Office Excel 통합 문서를 연 Visual Studio에서 바로 가기 키 명령을 한 번에 하나의 응용 프로그램을 받습니다. 기본적으로 Visual Studio 모든 바로 가기 키 명령을 받지만 Word 또는 Excel을 선택 하 여 문서에 포커스가 있을 때 수신 정확해 **동적 키보드 구성표** 에 **키보드 설정** 페이지 **옵션** 대화 상자. 자세한 내용은 참조 [Microsoft Office 키보드 설정, 옵션 대화 상자, Microsoft Office Word 키보드](../vsto/microsoft-office-word-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md) 및 [Microsoft Office 키보드 설정, 옵션 대화 상자,MicrosoftOfficeExcel키보드](../vsto/microsoft-office-excel-keyboard-microsoft-office-keyboard-settings-options-dialog-box.md).  
 
-### <a name="displaying-shortcut-keys-for-the-ribbon-in-document-level-projects"></a>문서 수준 프로젝트에서 리본 메뉴에 대 한 바로 가기 키 표시  
- Word 문서 또는 Excel 통합 문서를 연 Visual Studio에서 탭 및 리본 메뉴에 컨트롤에 대 한 바로 가기 키를 보려면 Alt 키를 누를 수 있습니다. 바로 가기 키를 보려면 디자이너에에서 열려 있는 문서나 통합 문서는 다음 단계를 수행 합니다.  
+### <a name="display-shortcut-keys-for-the-ribbon-in-document-level-projects"></a>문서 수준 프로젝트에서 리본 메뉴에 대 한 바로 가기 키 표시  
+ 누를 수 Word 문서 또는 Excel 통합 문서를 Visual Studio에서 연는 **Alt** 탭 및 리본 메뉴에 컨트롤에 대 한 바로 가기 키를 보려면 키입니다. 바로 가기 키를 보려면 디자이너에에서 열려 있는 문서나 통합 문서는 다음 단계를 수행 합니다.  
 
-##### <a name="to-view-shortcut-keys-for-ribbon-tabs-and-controls-in-the-designer"></a>디자이너에서 리본 탭 및 컨트롤에 대 한 바로 가기 키를 보려면  
+#### <a name="to-view-shortcut-keys-for-ribbon-tabs-and-controls-in-the-designer"></a>디자이너에서 리본 탭 및 컨트롤에 대 한 바로 가기 키를 보려면  
 
 1.  Visual Studio에서에 **도구** 메뉴를 클릭 하 여 **옵션**합니다.  
 
@@ -55,22 +55,22 @@ ms.lasthandoff: 04/26/2018
 
 6.  프로젝트에 대 한 문서 또는 통합 문서 디자이너를 엽니다.  
 
-7.  리본 메뉴에 대 한 바로 가기 키를 표시 하려면 F6 키를 누릅니다.  
+7.  키를 눌러 **F6** 리본 메뉴에 대 한 바로 가기 키를 표시 합니다.  
 
-## <a name="accessibility-at-run-time"></a>런타임 시 내게 필요한 옵션  
+## <a name="accessibility-at-runtime"></a>런타임 시 내게 필요한 옵션  
 
-### <a name="windows-forms-controls-on-office-documents"></a>Windows Forms Office 문서의 컨트롤  
- Windows Forms 컨트롤 내게 필요한 옵션 화면 판독기와 같은 내게 필요한 옵션 보조 기능을 제어 하는 방법에 대 한 정보를 제공 하는 속성을 노출 합니다. 문서 수준 사용자 지정에서 Office 문서에는 컨트롤이 있을 때 이러한 내게 필요한 옵션 속성을 사용할을 걸릴 수 있습니다. 자세한 내용은 참조 [Windows Form의 컨트롤에 대 한 내게 필요한 옵션 정보 제공](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)합니다.  
+### <a name="windows-forms-controls-on-office-documents"></a>Office 문서의 Windows Forms 컨트롤  
+ Windows Forms 컨트롤 내게 필요한 옵션 화면 판독기와 같은 내게 필요한 옵션 보조 기능을 제어 하는 방법에 대 한 정보를 제공 하는 속성을 노출 합니다. 문서 수준 사용자 지정에서 Office 문서에는 컨트롤이 있을 때 이러한 내게 필요한 옵션 속성을 사용할을 걸릴 수 있습니다. 자세한 내용은 참조 [Windows Form의 컨트롤에 내게 필요한 옵션 정보 제공](/dotnet/framework/winforms/controls/providing-accessibility-information-for-controls-on-a-windows-form)합니다.  
 
- 그러나 Excel 통합 문서 또는 Word 문서에 Windows Forms 컨트롤은 호스트 하는 경우 런타임 시 가지 내게 필요한 옵션 제한이 몇 가지 있습니다.  
+ 그러나 Windows Forms 컨트롤은 Excel 통합 문서 또는 Word 문서에 호스팅되는 런타임 시 같은 내게 필요한 옵션 제한이 있습니다.  
 
 -   다른 한 컨트롤에서 탭 수 없습니다.  
 
 -   문서에서 컨트롤은 문서 확대/축소 설정을 100% 이외의 값으로 변경 하는 경우 비활성화 됩니다.  
 
- 문서의 Windows Forms 컨트롤의 제한 사항에 대 한 정보를 참조 하십시오. [제한 Windows Forms 컨트롤의 Office 문서에](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)합니다.  
+ 문서의 Windows Forms 컨트롤의 제한 사항에 대 한 정보를 참조 하십시오. [Office 문서의 Windows Forms의 제한 사항 제어](../vsto/limitations-of-windows-forms-controls-on-office-documents.md)합니다.  
 
-### <a name="actions-panes-and-custom-task-panes"></a>작업창 및 사용자 지정 작업창  
+### <a name="actions-panes-and-custom-task-panes"></a>작업창 및 사용자 지정 작업 창  
  작업 창 또는 사용자 지정 작업창에 포커스가 있을 때 컨트롤 Windows Forms 응용 프로그램에 액세스 하는 것 같은 방법으로 컨트롤 액세스할 수 있습니다. 작업 창 및 문서 간의 커서를 이동 하려면 누르면 **F6**합니다.  
 
  작업창 및 사용자 지정 작업창에 대 한 자세한 내용은 참조 [작업 창 개요](../vsto/actions-pane-overview.md) 및 [사용자 지정 작업창](../vsto/custom-task-panes.md)합니다.  
@@ -84,7 +84,7 @@ ms.lasthandoff: 04/26/2018
 
  이러한 제한을 극복할 수 돋보기를 사용할 수 있습니다. 돋보기는 화면의 확대 부분이 표시 하는 별도 창을 만드는 windows 디스플레이 유틸리티입니다.  
 
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션 개발](../vsto/developing-office-solutions.md)   
  [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)   
  [장애가 있는 사용자를 위한 접근성](/visualstudio/ide/reference/accessibility-for-people-with-disabilities)   

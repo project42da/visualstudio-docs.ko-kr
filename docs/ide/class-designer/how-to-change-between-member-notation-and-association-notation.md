@@ -15,13 +15,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 9f1aa969b3c40f4b653b45bbb0da0e5ad3d56bb5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bdb4f28fc367b309a015a3faa8f749e2512db879
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-change-between-member-notation-and-association-notation-class-designer"></a>방법: 멤버 표시와 연결 표시 간 변경(클래스 디자이너)
+# <a name="how-to-change-between-member-notation-and-association-notation-in-class-designer"></a>방법: 클래스 디자이너에서 멤버 표시와 연결 표시 간 변경
 
 **클래스 디자이너**에서 클래스 다이어그램이 두 형식 사이의 연결 관계를 나타내는 방법을 멤버 표기법에서 연결 표기법으로, 또는 그 반대로 변경할 수 있습니다. 형식 연결 선으로 표시된 멤버는 형식이 어떻게 관련되어 있는지 효과적으로 시각화하여 보여 주는 경우가 많습니다.
 
@@ -41,9 +41,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="to-change-association-notation-to-member-notation"></a>연결 표기법을 멤버 표기법으로 변경하려면
 
--   클래스 다이어그램에서 형식 연결 선을 마우스 오른쪽 단추로 클릭하고 **속성으로 표시** 또는 **필드로 표시**를 적절하게 선택합니다.
-
-     형식 연결 선이 사라지고 다이어그램의 해당 형식 도형 내 적합한 구획에 속성이 표시됩니다.
+클래스 다이어그램에서 형식 연결 선을 마우스 오른쪽 단추로 클릭하고 **속성으로 표시** 또는 **필드로 표시**를 적절하게 선택합니다. 형식 연결 선이 사라지고 다이어그램의 해당 형식 도형 내 적합한 구획에 속성이 표시됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

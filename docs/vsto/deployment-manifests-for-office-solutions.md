@@ -1,5 +1,5 @@
 ---
-title: Office 솔루션의 배포 매니페스트 | Microsoft Docs
+title: Office 솔루션의 배포 매니페스트
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e1276650d38f16f8ccc36720f7e273472e609367
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 41f0e6b484ae61d53913c51e3d51b123a5d054a2
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="deployment-manifests-for-office-solutions"></a>Office 솔루션의 배포 매니페스트
   배포 매니페스트는 Office 솔루션의 배포 설정에 설명 하 고 현재 응용 프로그램 버전을 식별 하는 XML 파일입니다.  
@@ -30,15 +30,15 @@ ms.lasthandoff: 04/16/2018
  Visual Studio에서 Office 개발에 사용 하 여는 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 에 정의 된 배포 매니페스트 스키마는 [ClickOnce 배포 매니페스트](/visualstudio/deployment/clickonce-deployment-manifest) 참조 합니다.  
   
 ## <a name="remarks"></a>설명  
- Office 솔루션에 대 한 배포 매니페스트 파일에는 현재 버전 및 기타 배포 설정을 식별합니다. 솔루션과 모든 솔루션에 포함 된 파일의 현재 버전을 설명 하는 응용 프로그램 매니페스트를 참조 합니다.  
+ Office 솔루션에 대 한 배포 매니페스트 파일에는 현재 버전 및 기타 배포 설정을 식별 합니다. 응용 프로그램 매니페스트를 참조 하 고 솔루션과 솔루션에서 내의 모든 파일의 현재 버전에 설명 합니다.  
   
 ## <a name="file-name-syntax"></a>파일 이름 구문  
- 배포 매니페스트 파일의 이름은.vsto 확장명으로 끝나야 합니다. 이것은 표준 있지만 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 배포 매니페스트는 Visual Studio Tools for Office runtime 파일을 처리할 수 있도록 확장 달라 집니다.  
+ 배포 매니페스트 파일의 이름으로 끝나야 합니다.는 *.vsto* 확장 합니다. 이것은 표준 있지만 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)] 배포 매니페스트는 Visual Studio Tools for Office runtime 파일을 처리할 수 있도록 확장 달라 집니다.  
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 Office 솔루션에 대 한 Visual Studio Tools에 대 한 배포 매니페스트를 보여 줍니다.  
   
-```  
+```xml
 <?xml version="1.0" encoding="utf-8"?>  
 <asmv1:assembly   
   xsi:schemaLocation=  
@@ -185,7 +185,7 @@ ms.lasthandoff: 04/16/2018
 </asmv1:assembly>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Office 솔루션의 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)  
+## <a name="see-also"></a>참고자료  
+ [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)  
   
   

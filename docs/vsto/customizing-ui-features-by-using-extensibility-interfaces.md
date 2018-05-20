@@ -1,5 +1,5 @@
 ---
-title: 확장성 인터페이스를 사용 하 여 UI 기능 사용자 지정 | Microsoft Docs
+title: 확장성 인터페이스를 사용 하 여 UI 기능 사용자 지정
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -23,13 +23,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 59a2eb15dcb21158df33b2f4a8ae138c424795cc
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6d9fd69cb747c235f78be8065d07f03f5b39d66b
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="customizing-ui-features-by-using-extensibility-interfaces"></a>확장성 인터페이스를 사용하여 UI 기능 사용자 지정
+# <a name="customize-ui-features-by-using-extensibility-interfaces"></a>확장성 인터페이스를 사용 하 여 UI 기능 사용자 지정
   Visual Studio의 Office 개발 도구에는 많은 구현 세부 사항을 처리하는 클래스와 디자이너가 제공되며, 이를 사용하여 VSTO 추가 기능에 사용자 지정 작업창, 리본 사용자 지정, Outlook 양식 영역을 만들 수 있습니다. 하지만 특별한 요구 사항이 있는 경우 각각의 기능에 대한 *확장성 인터페이스* 를 직접 구현할 수도 있습니다.  
   
  [!INCLUDE[appliesto_allapp](../vsto/includes/appliesto-allapp-md.md)]  
@@ -39,9 +39,9 @@ ms.lasthandoff: 04/16/2018
   
  Visual Studio의 Office 프로젝트 템플릿을 사용하여 VSTO 추가 기능을 만드는 경우에는 리본 같은 기능을 사용자 지정하기 위해 확장성 인터페이스를 구현할 필요가 없습니다. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 은 이러한 인터페이스를 자동으로 구현합니다. 대신 Visual Studio에서 제공하는 보다 직관적인 클래스와 디자이너를 사용할 수 있습니다. 하지만 원하는 경우에는 여전히 VSTO 추가 기능에 바로 확장성 인터페이스를 구현할 수도 있습니다.  
   
- 클래스 및 이러한 기능에 대 한 Visual Studio에서 제공 하는 디자이너에 대 한 자세한 내용은 참조 [사용자 지정 작업창](../vsto/custom-task-panes.md), [리본 디자이너](../vsto/ribbon-designer.md), 및 [Outlook 양식 영역을만들기](../vsto/creating-outlook-form-regions.md).  
+ 클래스 및 이러한 기능에 대 한 Visual Studio에서 제공 하는 디자이너에 대 한 자세한 내용은 참조 [사용자 지정 작업창](../vsto/custom-task-panes.md), [리본 디자이너](../vsto/ribbon-designer.md), 및 [만들Outlook양식영역](../vsto/creating-outlook-form-regions.md).  
   
-## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>VSTO 추가 기능에 구현할 수 있는 확장성 인터페이스  
+## <a name="extensibility-interfaces-you-can-implement-in-a-vsto-add-in"></a>VSTO 추가 기능에서 구현할 수 있는 확장성 인터페이스  
  다음 표에는 구현할 수 있는 확장성 인터페이스와 이러한 인터페이스를 지원하는 응용 프로그램이 나와 있습니다.  
   
 |인터페이스|설명|응용 프로그램|  
@@ -52,10 +52,10 @@ ms.lasthandoff: 04/16/2018
   
  <xref:Microsoft.Office.Core.IBlogExtensibility>, <xref:Microsoft.Office.Core.EncryptionProvider>, <xref:Microsoft.Office.Core.SignatureProvider>같은 Microsoft Office에 정의된 그 밖의 여러 확장성 인터페이스도 있습니다. Visual Studio에서는 Office 프로젝트 템플릿을 사용하여 만든 VSTO 추가 기능에 이러한 인터페이스를 구현하는 기능을 지원하지 않습니다.  
   
-## <a name="using-extensibility-interfaces"></a>확장성 인터페이스 사용  
+## <a name="use-extensibility-interfaces"></a>확장성 인터페이스를 사용 하 여  
  확장성 인터페이스를 사용하여 UI 기능을 사용자 지정하려면 VSTO 추가 기능 프로젝트에 적절한 인터페이스를 구현합니다. 그런 다음 <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> 메서드를 재정의하여 인터페이스를 구현하는 클래스의 인스턴스를 반환합니다.  
   
- Outlook용 VSTO 추가 기능에 <xref:Microsoft.Office.Core.IRibbonExtensibility>, <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>및 <xref:Microsoft.Office.Interop.Outlook.FormRegionStartup> 인터페이스를 구현하는 방법을 보여 주는 응용 프로그램 예제는 [Office Development Samples](../vsto/office-development-samples.md)를 참조하세요.  
+ 구현 하는 방법을 보여 주는 샘플 응용 프로그램에 대 한는 <xref:Microsoft.Office.Core.IRibbonExtensibility>, <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>, 및 <xref:Microsoft.Office.Interop.Outlook.FormRegionStartup> 인터페이스에는 VSTO 추가 기능에 outlook에서 UI Manager 샘플을 참조 [Office 개발 샘플](../vsto/office-development-samples.md)합니다.  
   
 ### <a name="example-of-implementing-an-extensibility-interface"></a>확장성 인터페이스 구현 예제  
  다음 코드 예제에서는 사용자 지정 작업창을 만들기 위한 <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer> 인터페이스의 간단한 구현을 보여 줍니다. 이 예제에서는 다음 두 개의 클래스를 정의합니다.  
@@ -70,7 +70,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#1)]
  [!code-csharp[Trin_SimpleExtensibilityInterface#1](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#1)]  
   
- <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>를 구현하는 방법에 대한 자세한 내용은 Microsoft Office 설명서에서 [2007 Office System에서 사용자 지정 작업창 만들기](http://msdn.microsoft.com/en-us/256313db-18cc-496c-a961-381ed9ca94be) 를 참조하세요.  
+ 구현에 대 한 자세한 내용은 <xref:Microsoft.Office.Core.ICustomTaskPaneConsumer>, 참조 [2007 Office system에서 사용자 지정 작업창을 만드는](http://msdn.microsoft.com/en-us/256313db-18cc-496c-a961-381ed9ca94be) Microsoft Office 설명서에서.  
   
 ### <a name="example-of-overriding-the-requestservice-method"></a>RequestService 메서드 재정의 예제  
  다음 코드 예제에서는 <xref:Microsoft.Office.Tools.AddInBase.RequestService%2A> 메서드를 재정의하여 이전 코드 예제의 `TaskPaneHelper` 클래스 인스턴스를 반환하는 방법을 보여 줍니다. 또한 *serviceGuid* 매개 변수 값을 확인하여 요청되는 인터페이스를 파악한 후 이 인터페이스를 구현하는 개체를 반환합니다.  
@@ -78,9 +78,9 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/VisualBasic/Trin_SimpleExtensibilityInterface/ThisAddIn.vb#2)]
  [!code-csharp[Trin_SimpleExtensibilityInterface#2](../vsto/codesnippet/CSharp/Trin_SimpleExtensibilityInterface/ThisAddIn.cs#2)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 개발 샘플 및 연습](../vsto/office-development-samples-and-walkthroughs.md)   
- [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
+ [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)   
  [Office 솔루션 개발](../vsto/developing-office-solutions.md)   
  [다른 Office 솔루션에서 VSTO 추가 기능의 코드 호출](../vsto/calling-code-in-vsto-add-ins-from-other-office-solutions.md)   
  [방법: Visual Studio에서 Office 프로젝트 만들기](../vsto/how-to-create-office-projects-in-visual-studio.md)   

@@ -1,5 +1,5 @@
 ---
-title: Outlook 메시지 클래스에 양식 영역 연결 | Microsoft Docs
+title: Outlook 메시지 클래스에 양식 영역 연결
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -18,45 +18,45 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e3e3deeb55fb93b1a393d0489213f1d0e7acd85b
-ms.sourcegitcommit: 04a717340b4ab4efc82945fbb25dfe58add2ee4c
+ms.openlocfilehash: d6f48be189b7d7a35f713c224553dc9ad7c8a5c3
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/28/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="associating-a-form-region-with-an-outlook-message-class"></a>Associating a Form Region with an Outlook Message Class
-  각 항목의 메시지 클래스와 양식 영역을 연결 하 여 양식 영역을 표시 하는 Microsoft Office Outlook 항목을 지정할 수 있습니다. 예를 들어 메일 항목 맨 아래에 양식 영역을 추가 하려는 경우 ipm 양식 영역을 연결할 수 있습니다. Message 클래스를 note 합니다.  
+# <a name="associate-a-form-region-with-an-outlook-message-class"></a>Outlook 메시지 클래스에 양식 영역 연결
+  각 항목의 메시지 클래스와 양식 영역을 연결 하 여 양식 영역을 표시 하는 Microsoft Office Outlook 항목을 지정할 수 있습니다. 예를 들어 메일 항목 맨 아래에 양식 영역을 추가 하려는 경우 양식 영역을 연결할 수는 `IPM.Note` message 클래스입니다.  
   
  메시지 클래스 이름을 지정 메시지 클래스에 양식 영역을 연결 하려면는 **새 Outlook 양식 영역** 마법사 또는 양식 영역 팩터리 클래스에 특성을 적용 합니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
   
-## <a name="understanding-outlook-message-classes"></a>Outlook 메시지 클래스 이해  
+## <a name="understand-outlook-message-classes"></a>Outlook 메시지 클래스 이해  
  Outlook 메시지 클래스에는 Outlook 항목의 형식을 식별합니다. 다음 표에서 이러한 8 개 표준 항목 형식 및 해당 메시지 클래스 이름을 나열합니다.  
   
 |Outlook 항목 형식|메시지 클래스 이름|  
 |-----------------------|------------------------|  
-|AppointmentItem|IPM 합니다. 약속|  
-|ContactItem|IPM 합니다. 연락처|  
-|메일 그룹 항목|IPM 합니다. 삭제|  
-|JournalItem|IPM 합니다. 활동|  
-|MailItem|IPM 합니다. 참고|  
-|PostItem|IPM 합니다. Post 또는 IPM 합니다. Post.RSS|  
-|TaskItem|IPM 합니다. 작업|  
+|AppointmentItem|`IPM.Appointment`|  
+|ContactItem|`IPM.Contact`|  
+|메일 그룹 항목|`IPM.DistList`|  
+|JournalItem|`IPM.Activity`|  
+|MailItem|`IPM.Note`|  
+|PostItem|`IPM.Post` 또는 `IPM.Post.RSS`|  
+|TaskItem|`IPM.Task`|  
   
  또한 사용자 지정 메시지 클래스의 이름을 지정할 수 있습니다. 사용자 지정 메시지 클래스에는 Outlook에서 정의 하는 사용자 지정 양식을 식별 합니다.  
   
 > [!NOTE]  
->  대체 및 모두 대체 양식 영역에 대 한 새 사용자 지정 메시지 클래스 이름을 지정할 수 있습니다. 기존 사용자 지정 폼의 메시지 클래스 이름을 사용 하 여 필요가 없습니다. 사용자 지정 메시지 클래스의 이름은 고유 해야 합니다. 이름이 고유한 지 확인 하는 한 가지 방법은 다음과 비슷한 명명 규칙을 사용 하는: \< *StandardMessageClassName*>.\< *회사*>.\< *MessageClassName*> (예: IPM 합니다. Note.Contoso.MyMessageClass)입니다.  
+>  대체 및 모두 대체 양식 영역에 대 한 새 사용자 지정 메시지 클래스 이름을 지정할 수 있습니다. 기존 사용자 지정 폼의 메시지 클래스 이름을 사용 하 여 필요가 없습니다. 사용자 지정 메시지 클래스의 이름은 고유 해야 합니다. 이름이 고유한 지 확인 하는 한 가지 방법은 다음과 비슷한 명명 규칙을 사용 하는: \< *StandardMessageClassName*>.\< *회사*>.\< *MessageClassName*> (예: `IPM.Note.Contoso.MyMessageClass`).  
   
-## <a name="associating-a-form-region-with-an-outlook-message-class"></a>Associating a Form Region with an Outlook Message Class  
+## <a name="associate-a-form-region-with-an-outlook-message-class"></a>Outlook 메시지 클래스에 양식 영역 연결  
  메시지 클래스에 양식 영역을 연결 하는 방법은 두 가지가 있습니다.  
   
 -   사용 하 여 **새 Outlook 양식 영역** 마법사.  
   
 -   클래스 특성을 적용 합니다.  
   
-### <a name="using-the-new-outlook-form-region-wizard"></a>새 Outlook 양식 영역 마법사를 사용 하 여  
+### <a name="use-the-new-outlook-form-region-wizard"></a>새 Outlook 양식 영역 마법사를 사용 하 여  
  마지막 페이지에는 **새 Outlook 양식 영역** 마법사에서는 표준 메시지 클래스를 선택 하 고 양식 영역이 있는 연결할 사용자 지정 메시지 클래스의 이름을 입력 합니다.  
   
  표준 메시지 클래스는 양식 영역 전체 양식 또는 양식의 기본 페이지를 교체 하도록 디자인 된 경우에 사용할 수 없습니다. 폼에 새 페이지를 추가 하는 수정 하거나 양식의 맨 아래에 추가 된 양식에 대 한 표준 메시지 클래스 이름을 지정할 수 있습니다. 자세한 내용은 참조 [하는 방법: Outlook 추가 기능 프로젝트에 양식 영역 추가](../vsto/how-to-add-a-form-region-to-an-outlook-add-in-project.md)합니다.  
@@ -82,7 +82,7 @@ ms.lasthandoff: 04/28/2018
   
  마법사를 완료 하는 경우는 **새 Outlook 양식 영역** 마법사는 지정 된 메시지 클래스 이름을 포함 하는 양식 영역 클래스에 특성을 적용 합니다. 또한 이러한 특성을 수동으로 적용할 수 있습니다.  
   
-### <a name="applying-class-attributes"></a>클래스 특성 적용  
+### <a name="apply-class-attributes"></a>클래스 특성을 적용  
  완료 한 후 Outlook 메시지 클래스에 양식 영역을 연결할 수는 **새 Outlook 양식 영역** 마법사. 이 작업을 수행 하려면 양식 영역 팩터리 클래스에 특성을 적용 합니다.  
   
  다음 예제에서는 두 개의 <xref:Microsoft.Office.Tools.Outlook.FormRegionMessageClassAttribute> 라는 양식 영역 팩터리 클래스에 적용 된 특성 `myFormRegion`합니다. 첫 번째 특성 메일 메시지 형식에 대 한 표준 메시지 클래스에 양식 영역을 연결합니다. 두 번째 특성 라는 사용자 지정 메시지 클래스에 양식 영역 연결 `IPM.Task.Contoso`합니다.  
@@ -105,11 +105,11 @@ ms.lasthandoff: 04/28/2018
 > [!NOTE]  
 >  Visual Studio에서 제공 하는 메시지 클래스 이름 올 바르 거 나 유효한 지 확인 하지 않습니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [런타임에 양식 영역 액세스](../vsto/accessing-a-form-region-at-run-time.md)   
  [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)   
  [연습: Outlook 양식 영역 디자인](../vsto/walkthrough-designing-an-outlook-form-region.md)   
- [Outlook 양식 영역 만들기 지침](../vsto/guidelines-for-creating-outlook-form-regions.md)   
+ [Outlook 양식 영역을 만드는 지침](../vsto/guidelines-for-creating-outlook-form-regions.md)   
  [형식 이름 및 메시지 클래스 개요](http://msdn.microsoft.com/library/office/ff867629.aspx)   
  [Outlook 양식 항목과 함께 작동](http://msdn.microsoft.com/library/office/ff869706.aspx)  
   

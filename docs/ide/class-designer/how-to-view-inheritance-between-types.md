@@ -16,13 +16,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d8f44279baea33333c21bfadfd9fec21a2045aea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3398a5096934397556ae1b20845153bd45a78528
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-view-inheritance-between-types-class-designer"></a>방법: 형식 간의 상속 보기(클래스 디자이너)
+# <a name="how-to-view-inheritance-between-types-in-class-designer"></a>방법: 클래스 디자이너에서 형식 간의 상속 보기
 
 **클래스 디자이너**의 클래스 다이어그램에서 기본 형식과 파생 형식 간에 상속 관계(있는 경우)를 찾을 수 있습니다. 두 형식 간에 상속 관계가 없는 경우 새로 만들려면 [방법: 형식 간의 상속 만들기](how-to-create-inheritance-between-types.md)를 참조하세요.
 

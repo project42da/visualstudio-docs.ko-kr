@@ -1,5 +1,5 @@
 ---
-title: ClickOnce를 사용 하 여 Office 솔루션 배포 | Microsoft Docs
+title: ClickOnce를 사용 하 여 Office 솔루션 배포
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0b5e1b9437412f343874b8cca6513a551d9900d0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 29c0e6691f31c6092b9d2222064c59d7fb8839db
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="deploying-an-office-solution-by-using-clickonce"></a>ClickOnce를 사용하여 Office 솔루션 배포
-  ClickOnce를 사용하면 Office 솔루션을 더 적은 단계로 배포할 수 있습니다. 업데이트를 게시하는 경우 솔루션에서 자동으로 이를 감지하여 설치합니다. 그러나 ClickOnce에서는 컴퓨터의 각 사용자에 대해 별도로 솔루션을 설치하도록 합니다. 따라서 둘 이상의 사용자가 같은 컴퓨터에서 솔루션을 실행하는 경우 Windows Installer(.msi)를 사용하는 것이 좋습니다.  
+# <a name="deploy-an-office-solution-by-using-clickonce"></a>ClickOnce를 사용 하 여 Office 솔루션 배포
+  ClickOnce를 사용하면 Office 솔루션을 더 적은 단계로 배포할 수 있습니다. 업데이트를 게시하는 경우 솔루션에서 자동으로 이를 감지하여 설치합니다. 그러나 ClickOnce에서는 컴퓨터의 각 사용자에 대해 별도로 솔루션을 설치하도록 합니다. Windows Installer를 사용 하 여 고려해 야 따라서 (*.msi*) 둘 이상의 사용자는 동일한 컴퓨터에 솔루션을 실행 하는 경우.  
   
 ## <a name="in-this-topic"></a>항목 내용  
   
@@ -85,7 +85,7 @@ ms.lasthandoff: 04/16/2018
 9. 솔루션은.NET Framework 4.5를 대상으로 하는 경우 선택 된 **Visual Studio 2010 Tools for Office Runtime** 확인란 합니다.  
   
     > [!NOTE]  
-    >  이 확인란은 기본적으로 표시 되지 않습니다. 이 확인란을 표시하려면 부트스트래퍼 패키지를 만들어야 합니다. 참조 [Visual Studio 2012를 사용한 Office 2013 VSTO 추가 기능에서 용 부트스트래퍼 패키지를 만드는](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx)합니다.  
+    >  이 확인란은 기본적으로 표시 되지 않습니다. 이 확인란을 표시하려면 부트스트래퍼 패키지를 만들어야 합니다. 참조 [Visual Studio 2012를 사용한 Office 2013 VSTO 추가 기능에서 용 부트스트래퍼 패키지를 만들려면](http://blogs.msdn.com/b/vsto/archive/2012/12/21/creating-a-bootstrapper-package-for-an-office-2013-vsto-add-in-with-visual-studio-2012.aspx)합니다.  
   
 10. 아래 **필수 구성 요소에 대 한 설치 위치 지정**을 표시 한 다음를 선택 하는 옵션 중 하나를 선택 하는 **확인** 단추입니다.  
   
@@ -131,12 +131,12 @@ ms.lasthandoff: 04/16/2018
      ![게시 폴더 구조](../vsto/media/publishfolderstructure.png "게시 폴더 구조")  
   
     > [!NOTE]  
-    >  ClickOnce에서는 인터넷 정보 서비스 (IIS)의 보안된 설치 안전 하지 않은 확장명 때문에 파일을 차단 하지 않도록 어셈블리에.deploy 확장명을 추가 합니다. 사용자가 솔루션을 설치하면 .deploy 확장명이 제거됩니다.  
+    >  추가 되는데는 *.deploy* 어셈블리에 확장을 인터넷 정보 서비스 (IIS)의 보안된 설치 안전 하지 않은 확장명 때문에 파일을 차단 하지 않도록 합니다. 사용자가 솔루션을 설치 제거는 *.deploy* 확장 합니다.  
   
 14. 이 절차의 앞부분에서 지정한 설치 위치에 솔루션 파일을 복사합니다.  
   
 ##  <a name="Trust"></a> 솔루션에 신뢰를 부여 하는 방법을 결정합니다  
- 사용자 컴퓨터에서 솔루션을 실행하려면 먼저 관리자가 신뢰를 부여하거나 사용자가 솔루션을 설치할 때 신뢰 프롬프트에 응답해야 합니다. 솔루션에 신뢰를 부여하려면 신뢰할 수 있고 확인된 게시자를 식별하는 인증서를 사용하여 매니페스트에 서명합니다. 참조 [매니페스트 응용 프로그램 및 배포에 서명 하 여 솔루션 신뢰](../vsto/granting-trust-to-office-solutions.md#Signing)합니다.  
+ 사용자 컴퓨터에서 솔루션을 실행하려면 먼저 관리자가 신뢰를 부여하거나 사용자가 솔루션을 설치할 때 신뢰 프롬프트에 응답해야 합니다. 솔루션에 신뢰를 부여하려면 신뢰할 수 있고 확인된 게시자를 식별하는 인증서를 사용하여 매니페스트에 서명합니다. 참조 [응용 프로그램 및 배포 매니페스트에 서명 하 여 솔루션을 신뢰](../vsto/granting-trust-to-office-solutions.md#Signing)합니다.  
   
  문서 수준 사용자 지정을 배포 하는 경우 사용자의 컴퓨터에는 폴더에 문서를 저장 하거나 SharePoint 사이트에서 문서를 사용할 수 있도록 하려면 Office에서 문서의 위치를 신뢰 해야 합니다. 참조 [문서에 신뢰 부여](../vsto/granting-trust-to-documents.md)합니다.  
   
@@ -148,16 +148,16 @@ ms.lasthandoff: 04/16/2018
   
  가장 좋은 방법은 여러 사용자가 동시에 동일한 복사본을 열려고 시도하지 않도록 사용자가 자신의 컴퓨터에서 문서의 복사본을 여는 것입니다. 이 방법을 적용하려면 사용자 컴퓨터에 문서를 복사하도록 설치 프로그램을 구성하면 됩니다. 참조 [최종 사용자의 컴퓨터 (문서 수준 사용자 지정에만 해당)에 솔루션 문서 저장](#Put)합니다.  
   
-### <a name="installing-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>IIS 웹 사이트에서 배포 매니페스트를 열어서 솔루션 설치  
- 사용자는 웹에서 배포 매니페스트를 열어 Office 솔루션을 설치할 수 있습니다. 그러나 IIS(인터넷 정보 서비스)의 보안 설치 기능에서는 확장명이 .vsto인 파일을 차단합니다. 따라서 IIS를 사용하여 Office 솔루션을 배포하려면 먼저 IIS에서 MIME 형식을 정의해야 합니다.  
+### <a name="install-the-solution-by-opening-the-deployment-manifest-from-an-iis-website"></a>IIS 웹 사이트에서 배포 매니페스트를 열어 솔루션을 설치 합니다.  
+ 사용자는 웹에서 배포 매니페스트를 열어 Office 솔루션을 설치할 수 있습니다. 그러나, 인터넷 정보 서비스 (IIS)의 보안된 설치에서 파일을 차단 합니다는 *.vsto* 확장 합니다. 따라서 IIS를 사용하여 Office 솔루션을 배포하려면 먼저 IIS에서 MIME 형식을 정의해야 합니다.  
   
 ##### <a name="to-add-the-vsto-mime-type-to-iis-60"></a>IIS 6.0에 .vsto MIME 형식을 추가하려면  
   
-1.  IIS 6.0을 실행 하는 서버의 선택 **시작**, **모든 프로그램**, **관리 도구**, **인터넷정보서비스(IIS)관리자**.  
+1.  IIS 6.0을 실행 하는 서버의 선택 **시작** > **모든 프로그램** > **관리 도구**  >   **인터넷 정보 서비스 (IIS) 관리자**합니다. 
   
 2.  컴퓨터 이름을 선택 된 **웹사이트** 폴더 또는 웹 사이트를 구성 하는 합니다.  
   
-3.  메뉴 모음에서 **동작**, **속성**합니다.  
+3.  메뉴 모음에서 **동작** > **속성**합니다.  
   
 4.  에 **HTTP 헤더** 탭, 선택는 **MIME 형식을** 단추입니다.  
   
@@ -166,28 +166,28 @@ ms.lasthandoff: 04/16/2018
 6.  에 **MIME 형식을** 창 입력 **.vsto** 확장명으로 입력 **응용 프로그램/x-ms-vsto** MIME로 입력 한 다음 새로운 설정을 적용 합니다.  
   
     > [!NOTE]  
-    >  변경 내용이 적용되려면 World Wide Web Publishing 서비스를 다시 시작하거나 작업자 프로세스가 재생될 때까지 기다려야 합니다. 그런 다음 브라우저의 디스크 캐시를 플러시하고 .vsto 파일을 다시 열어 봅니다.  
+    >  변경 내용이 적용되려면 World Wide Web Publishing 서비스를 다시 시작하거나 작업자 프로세스가 재생될 때까지 기다려야 합니다. 그런 다음 브라우저의 디스크 캐시를 플러시하고 열려고는 *.vsto* 파일을 다시 합니다.  
   
 ##### <a name="to-add-the-vsto-mime-type-to-iis-70"></a>IIS 7.0에 .vsto MIME 형식을 추가하려면  
   
-1.  IIS 7.0을 실행 하는 서버의 선택 **시작**, **모든 프로그램**, **액세서리**합니다.  
+1.  IIS 7.0을 실행 하는 서버의 선택 **시작** > **모든 프로그램** > **액세서리**합니다.  
   
 2.  에 대 한 바로 가기 메뉴를 열고 **명령 프롬프트**를 선택한 후 **관리자 권한으로 실행 합니다.**  
   
 3.  에 **열려** 상자에 다음 경로 입력 한 다음 선택에서 **확인** 단추입니다.  
   
-    ```  
+    ```cmd
     %windir%\system32\inetsrv   
     ```  
   
 4.  다음 명령을 입력한 다음 새로운 설정을 적용합니다.  
   
-    ```  
+    ```cmd
     set config /section:staticContent /+[fileExtension='.vsto',mimeType='application/x-ms-vsto']  
     ```  
   
     > [!NOTE]  
-    >  변경 내용이 적용되려면 World Wide Web Publishing 서비스를 다시 시작하거나 작업자 프로세스가 재생될 때까지 기다려야 합니다. 그런 다음 브라우저의 디스크 캐시를 플러시하고 .vsto 파일을 다시 열어 봅니다.  
+    >  변경 내용이 적용되려면 World Wide Web Publishing 서비스를 다시 시작하거나 작업자 프로세스가 재생될 때까지 기다려야 합니다. 그런 다음 브라우저의 디스크 캐시를 플러시하고 열려고는 *.vsto* 파일을 다시 합니다.  
   
 ##  <a name="Put"></a> 최종 사용자의 컴퓨터 (문서 수준 사용자 지정에만 해당)에 솔루션 문서 저장  
  배포 후 작업을 만들어 최종 사용자의 컴퓨터에 솔루션의 문서에 복사할 수 있습니다. 이런 방식으로 사용자는 수동으로 복사 문서 설치 위치에서 자신의 컴퓨터에 솔루션을 설치한 후 필요가 없습니다. 배포 후 작업을 정의 하는 클래스를 생성, 빌드 및 솔루션을 게시할 응용 프로그램 매니페스트를 수정 및 응용 프로그램 및 배포 매니페스트에 다시 서명 해야 합니다.  
@@ -196,7 +196,7 @@ ms.lasthandoff: 04/16/2018
   
 ### <a name="create-a-class-that-defines-the-post-deployment-action"></a>배포 후 작업을 정의하는 클래스를 만듭니다.  
   
-1.  메뉴 모음에서 **파일**, **추가**, **새 프로젝트**를 차례로 선택합니다.  
+1.  메뉴 모음에서 **파일** > **추가** > **새 프로젝트**합니다.  
   
 2.  에 **새 프로젝트 추가** 대화 상자는 **설치 된 템플릿** 창에서 선택 된 **Windows** 폴더.  
   
@@ -206,9 +206,9 @@ ms.lasthandoff: 04/16/2018
   
 5.  **솔루션 탐색기**, 선택는 **FileCopyPDA** 프로젝트.  
   
-6.  메뉴 모음에서 **프로젝트**, **참조 추가**를 선택합니다.  
+6.  메뉴 모음에서 **프로젝트** > **참조 추가**합니다.  
   
-7.  에 **.NET** 탭에서 Microsoft.VisualStudio.Tools.Applications.Runtime 및 Microsoft.VisualStudio.Tools.Applications.ServerDocument에 대 한 참조를 추가 합니다.  
+7.  에 **.NET** 탭에 대 한 참조를 추가 합니다 `Microsoft.VisualStudio.Tools.Applications.Runtime` 및 `Microsoft.VisualStudio.Tools.Applications.ServerDocument`합니다.  
   
 8.  클래스 이름을 `FileCopyPDA`로 바꾼 다음 파일의 내용을 이 코드로 바꿉니다. 이 코드는 다음 작업을 수행합니다.  
   
@@ -233,13 +233,13 @@ ms.lasthandoff: 04/16/2018
   
 5.  **솔루션 탐색기**, 선택는 **ExcelWorkbook** 프로젝트.  
   
-6.  메뉴 모음에서 **프로젝트**, **새 폴더**합니다.  
+6.  메뉴 모음에서 **프로젝트** > **새 폴더**합니다.  
   
-7.  Enter **데이터**, Enter 키를 선택 합니다.  
+7.  Enter **데이터**를 선택한 후는 **Enter** 키입니다.  
   
 8.  **솔루션 탐색기**, 선택는 **데이터** 폴더입니다.  
   
-9. 메뉴 모음에서 **프로젝트**, **기존 항목 추가**합니다.  
+9. 메뉴 모음에서 **프로젝트** > **기존 항목 추가**합니다.  
   
 10. 에 **기존 항목 추가** 대화 상자에 대 한 출력 디렉터리를 찾습니다는 **ExcelWorkbook** 프로젝트는 **ExcelWorkbook.xlsx** 파일을 선택한 다음는 선택 **추가** 단추입니다.  
   
@@ -263,7 +263,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  `</vstav3:update>` 요소 뒤에 다음 코드를 추가합니다. 클래스 특성에 대 한는 `<vstav3:entryPoint>` 요소를 다음 구문을 사용: *NamespaceName.ClassName*합니다. 다음 예제에서는 네임스페이스 및 클래스 이름이 같기 때문에 결과 진입점 이름은 `FileCopyPDA.FileCopyPDA`입니다.  
   
-    ```  
+    ```xml
     <vstav3:postActions>  
       <vstav3:postAction>  
         <vstav3:entryPoint  
@@ -288,7 +288,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  다음 명령을 실행하여 수정된 응용 프로그램 매니페스트에 서명합니다.  
   
-    ```  
+    ```cmd
     mage -sign ExcelWorkbook.dll.manifest -certfile ExcelWorkbook_TemporaryKey.pfx  
     ```  
   
@@ -296,7 +296,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  변경 된 **c:\publish** 다음 명령을 실행 하 여 폴더를 다음 업데이트 및 기호 배포 매니페스트:  
   
-    ```  
+    ```cmd
     mage -update ExcelWorkbook.vsto -appmanifest "Application Files\Ex  
     celWorkbookMostRecentVersionNumber>\ExcelWorkbook.dll.manifest" -certfile "Application Files\ExcelWorkbookMostRecentVersionNumber>\ExcelWorkbook_TemporaryKey.pfx"  
     ```  
@@ -306,7 +306,7 @@ ms.lasthandoff: 04/16/2018
   
      "ExcelWorkbook.vsto에 서명했습니다."라는 메시지가 나타납니다.  
   
-5.  ExcelWorkbook.vsto 파일을 복사는 **c:\publish\Application Files\ExcelWorkbook**\__MostRecentVersionNumber_ 디렉터리입니다.  
+5.  복사는 *ExcelWorkbook.vsto* 파일을 여 **c:\publish\Application Files\ExcelWorkbook**\__MostRecentVersionNumber_ 디렉터리입니다.  
   
 ##  <a name="SharePoint"></a> (문서 수준 사용자 지정에만 해당) SharePoint를 실행 하는 서버에 솔루션 문서 저장  
  SharePoint를 사용하여 최종 사용자에게 문서 수준 사용자 지정을 게시할 수 있습니다. 사용자가 SharePoint 사이트에서 문서를 열면 런타임에 자동으로 공유 네트워크 폴더의 솔루션을 사용자의 로컬 컴퓨터에 설치합니다. 솔루션이 로컬로 설치된 후, 문서가 바탕 화면과 같은 다른 위치에 복사되는 경우에도 사용자 지정은 계속 작동합니다.  
@@ -331,7 +331,7 @@ ms.lasthandoff: 04/16/2018
   
         4.  에 **경로** 상자에 업로드 한 문서가 포함 된 SharePoint 문서 라이브러리의 URL을 입력 합니다 (예를 들어 *http://SharePointServerName/TeamName/ProjectName/DocumentLibraryName*).  
   
-             Default.aspx 나 AllItems.aspx와 같은 기본 웹 페이지의 이름을 추가 하지 마십시오.  
+             와 같은 기본 웹 페이지의 이름을 추가 하지 마십시오 *default.aspx* 또는 *AllItems.aspx*합니다.  
   
         5.  선택 된 **이 위치의 하위 폴더도 신뢰할 수 있는 사항도** 확인란을 선택한 다음 선택는 **확인** 단추입니다.  
   
@@ -340,13 +340,13 @@ ms.lasthandoff: 04/16/2018
 ##  <a name="Custom"></a> 사용자 지정 설치 관리자 만들기  
  솔루션을 게시할를 생성 하는 설치 프로그램을 사용 하는 대신 Office 솔루션에 필요한 사용자 지정 설치 관리자를 만들 수 있습니다. 예를 들어 로그온 스크립트를 사용하여 설치를 시작하거나 사용자 상호 작업 없이 배치 파일을 사용하여 솔루션을 설치할 수 있습니다. 이러한 시나리오는 최종 사용자의 컴퓨터에 필수 구성 요소가 이미 설치된 경우에 가장 적합합니다.  
   
- 사용자 지정 설치 프로세스의 일부로, 다음 위치에 기본적으로 설치되어 있는 Office 솔루션용 설치 관리자 도구(VSTOInstaller.exe)가 호출됩니다.  
+ 사용자 지정 설치 프로세스의 일부로 Office 솔루션용 설치 관리자 도구를 호출 (*VSTOInstaller.exe*), 기본적으로 다음 위치에 설치 된:  
   
- %commonprogramfiles%\microsoft shared\VSTO\10.0\VSTOInstaller.exe  
+ *%commonprogramfiles%\microsoft shared\VSTO\10.0\VSTOInstaller.exe*  
   
- 이 도구가 해당 위치에 없는 경우, HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\VSTO Runtime Setup\v4\InstallerPath 레지스트리 키나 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4\InstallerPath 레지스트리 키를 사용하여 이 도구의 경로를 찾을 수 있습니다.  
+ 이 도구를 해당 위치에 없는 경우 사용할 수 있습니다는 **이 Runtime Setup\v4\InstallerPath** 또는 **HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\VSTO Runtime Setup\v4 \InstallerPath** 레지스트리 키 해당 도구의 경로를 찾을 수 있습니다.  
   
- VSTOinstaller.exe와 함께 다음 매개 변수를 사용할 수 있습니다.  
+ 다음 매개 변수를 사용할 수 있습니다 *VSTOinstaller.exe*합니다.  
   
 |매개 변수|정의|  
 |---------------|----------------|  
@@ -355,18 +355,18 @@ ms.lasthandoff: 04/16/2018
 |/Silent 또는 /S|입력에 대한 메시지나 그 밖의 메시지를 사용자에게 표시하지 않고 설치 또는 제거합니다. 신뢰 프롬프트가 필요한 경우 사용자 지정 설치 또는 업데이트 되지 않습니다.|  
 |/Help 또는 /?|도움말 정보를 표시합니다.|  
   
- VSTOinstaller.exe를 실행하면 다음과 같은 오류 코드가 나타날 수 있습니다.  
+ 실행 하는 경우 *VSTOinstaller.exe*, 다음과 같은 오류 코드가 나타날 수 있습니다.  
   
 |오류 코드|정의|  
 |----------------|----------------|  
 |0|솔루션이 성공적으로 설치되었거나 제거되었습니다. 또는 VSTOInstaller 도움말이 표시되었습니다.|  
-|-100|하나 이상의 명령줄 옵션이 잘못되었거나 두 번 이상 설정되었습니다. 입력에 대 한 자세한 내용은 "vstoinstaller /?" 참조 또는 [ClickOnce Office 솔루션에 대 한 사용자 지정 설치 관리자를 만드는](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)합니다.|  
+|-100|하나 이상의 명령줄 옵션이 잘못되었거나 두 번 이상 설정되었습니다. 입력에 대 한 자세한 내용은 "vstoinstaller /?" 참조 또는 [ClickOnce Office 솔루션에 대 한 사용자 지정 설치 관리자 만들기](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)합니다.|  
 |-101|하나 이상의 명령줄 옵션이 잘못 되었습니다. 자세한 내용을 보려면 "vstoinstaller /?"를 입력하세요.|  
 |-200|배포 매니페스트 URI는 유효 하지 않습니다. 자세한 내용을 보려면 "vstoinstaller /?"를 입력하세요.|  
 |-201|배포 매니페스트가 잘못 되었으므로 솔루션을 설치할 수 없습니다. 참조 [Office 솔루션의 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)합니다.|  
 |-202|Visual Studio Tools for Office 섹션이 응용 프로그램 매니페스트의 잘못 되었으므로 솔루션을 설치할 수 없습니다. 참조 [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)합니다.|  
 |-203|다운로드 오류가 발생 했기 때문에 솔루션을 설치할 수 없습니다. 배포 매니페스트의 URI 또는 네트워크 파일 위치를 확인한 다음 다시 시도하세요.|  
-|-300|보안 예외가 발생 했기 때문에 솔루션을 설치할 수 없습니다. 참조 [Office 솔루션 보안](../vsto/securing-office-solutions.md)합니다.|  
+|-300|보안 예외가 발생 했기 때문에 솔루션을 설치할 수 없습니다. 참조 [Secure Office 솔루션](../vsto/securing-office-solutions.md)합니다.|  
 |-400|솔루션을 설치할 수 없습니다.|  
 |-401|솔루션을 제거할 수 없습니다.|  
 |-500|솔루션을 설치 또는 제거할 수 없거나 배포 매니페스트를 다운로드할 수 없어 작업이 취소되었습니다.|  
@@ -398,7 +398,7 @@ ms.lasthandoff: 04/16/2018
   
      다음 예제에서는 Fabrikam 웹 사이트에 있는 위치로 설치 경로를 변경하는 방법을 보여 주지만, 해당 URL을 원하는 경로로 바꿀 수 있습니다.  
   
-    ```  
+    ```cmd  
     setup.exe /url="http://www.fabrikam.com/newlocation"  
     ```  
   
@@ -441,7 +441,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  솔루션의 설치 위치를 엽니다.  
   
-2.  최상위 게시 폴더에서 배포 매니페스트(.vsto 파일)를 삭제합니다.  
+2.  최상위 게시 폴더의 배포 매니페스트를 삭제 합니다 (의 *.vsto* 파일).  
   
 3.  롤백할 버전의 하위 폴더를 찾습니다.  
   
@@ -456,14 +456,14 @@ ms.lasthandoff: 04/16/2018
      다음에 사용자가 응용 프로그램 또는 사용자 지정 문서를 열면 배포 매니페스트 변경 사항이 검색됩니다. 이전 버전의 Office 솔루션은 ClickOnce 캐시에서 실행됩니다.  
   
 > [!NOTE]  
->  로컬 데이터는 이전 버전의 솔루션 하나에 대해서만 저장됩니다. 두 버전을 롤백하는 경우 로컬 데이터는 유지 되지 않습니다. 로컬 데이터에 대 한 자세한 내용은 참조 [로컬 액세스 및 ClickOnce 응용 프로그램의 원격 데이터](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)합니다.  
+>  로컬 데이터는 이전 버전의 솔루션 하나에 대해서만 저장됩니다. 두 버전을 롤백하는 경우 로컬 데이터는 유지 되지 않습니다. 로컬 데이터에 대 한 자세한 내용은 참조 [ClickOnce 응용 프로그램의 로컬 및 원격 데이터에 액세스](/visualstudio/deployment/accessing-local-and-remote-data-in-clickonce-applications)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
  [Office 솔루션 게시](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [방법: ClickOnce를 사용 하 여 Office 솔루션 게시](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)   
  [방법: ClickOnce Office 솔루션 설치](http://msdn.microsoft.com/en-us/14702f48-9161-4190-994c-78211fe18065)   
- [방법: ClickOnce를 사용 하 여 문서 수준 Office 솔루션을 SharePoint 서버에 게시 합니다.](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58)   
- [ClickOnce Office 솔루션에 대 한 사용자 지정 설치 관리자 만들기](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)  
+ [방법: ClickOnce를 사용 하 여 SharePoint 서버에 문서 수준의 Office 솔루션 게시](http://msdn.microsoft.com/en-us/2408e809-fb78-42a1-9152-00afa1522e58)   
+ [ClickOnce office 솔루션에 대 한 사용자 지정 설치 관리자 만들기](http://msdn.microsoft.com/en-us/3e5887ed-155f-485d-b8f6-3c02c074085e)  
   
   

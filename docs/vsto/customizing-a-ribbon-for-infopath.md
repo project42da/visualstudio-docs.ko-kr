@@ -1,5 +1,5 @@
 ---
-title: InfoPath에 대 한 리본 메뉴 사용자 지정 | Microsoft Docs
+title: InfoPath에 대 한 리본을 사용자 지정
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,13 +16,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a3e5121285f66059a898ce64fc4107903f371485
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 82238cc29504b3ad2b757e94efa89a3c521bca90
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="customizing-a-ribbon-for-infopath"></a>InfoPath에 대해 리본 메뉴 사용자 지정
+# <a name="customize-a-ribbon-for-infopath"></a>InfoPath에 대 한 리본을 사용자 지정
   Microsoft Office InfoPath에서 리본을 사용자 지정할 경우 응용 프로그램에서 사용자 지정 리본이 나타나는 위치를 고려해야 합니다. [!INCLUDE[InfoPath_14_short](../vsto/includes/infopath-14-short-md.md)] 에서는 다음 세 가지 유형의 InfoPath 응용 프로그램 창에서 리본을 표시할 수 있습니다.  
   
 -   디자인 모드에서 열린 양식 템플릿을 표시하는 창입니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/16/2018
   
 -   인쇄 미리 보기 창입니다.  
   
- **적용 대상:** 이 항목의 정보는 InfoPath 2010의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 [Office 응용 프로그램 및 프로젝트 형식에 따라 사용 가능한 기능](../vsto/features-available-by-office-application-and-project-type.md)을 참조하세요.  
+ **적용 대상:** 이 항목의 정보는 InfoPath 2010의 VSTO 추가 기능 프로젝트에 적용됩니다. 자세한 내용은 참조 [Office 응용 프로그램 및 프로젝트 형식으로 사용할 수 있는 기능](../vsto/features-available-by-office-application-and-project-type.md)합니다.  
   
  사용자와 디자이너는 디자이너 모드에서 양식 템플릿을 열고 템플릿의 모양과 레이아웃을 수정합니다. 사용자는 양식 템플릿에 기반을 둔 양식을 열고 콘텐츠를 추가합니다.  
   
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
  리본을 표시할 각 창의 리본 형식을 지정해야 합니다.  
   
-## <a name="specifying-the-ribbon-type-in-the-ribbon-designer"></a>리본 디자이너에서 리본 형식 지정  
+## <a name="specify-the-ribbon-type-in-the-ribbon-designer"></a>리본 디자이너에서 리본 형식 지정  
  **리본(비주얼 디자이너)** 항목을 사용할 경우 **속성** 창에서 리본의 **RibbonType** 속성을 클릭하고 다음 표에 설명된 리본 ID를 선택합니다.  
   
 |리본 ID|프로젝트를 실행할 때 리본이 표시되는 창입니다.|  
@@ -51,9 +51,9 @@ ms.lasthandoff: 04/16/2018
 |**Microsoft.InfoPath.Editor**|양식 템플릿에 기반을 둔 양식을 표시하는 창입니다.|  
 |**Microsoft.InfoPath.PrintPreview**|인쇄 미리 보기 창입니다.|  
   
- 프로젝트에 리본을 두 개 이상 추가할 수 있습니다. 둘 이상의 리본이 리본 ID를 공유 하는 경우 프로젝트 메서드를 재정의 `ThisAddin` 런타임에 표시할 리본을 지정 하려면 프로젝트의 클래스입니다. 자세한 내용은 참조 [리본 개요](../vsto/ribbon-overview.md)합니다.  
+ 프로젝트에 리본을 두 개 이상 추가할 수 있습니다. 리본 두 개 이상이 리본 ID를 공유하면 프로젝트의 `ThisAddin` 클래스에서 런타임에 표시할 `CreateRibbonExtensibilityObject` 메서드를 재정의합니다. 자세한 내용은 참조 [리본 개요](../vsto/ribbon-overview.md)합니다.  
   
-## <a name="specifying-the-ribbon-type-by-using-ribbon-xml"></a>리본 XML을 사용하여 리본 형식 지정  
+## <a name="specify-the-ribbon-type-by-using-ribbon-xml"></a>리본 XML을 사용 하 여 리본 형식 지정  
  사용 하는 경우는 **리본 (XML)** 항목의 값을 확인는 *ribbonID* 에서 매개 변수는 <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 메서드와 적절 한 리본을 반환 합니다.  
   
  <xref:Microsoft.Office.Core.IRibbonExtensibility.GetCustomUI%2A> 메서드는 Visual Studio를 통해 리본 코드 파일에서 자동으로 생성됩니다. *ribbonID* 매개 변수는 열려 있는 InfoPath 창의 형식을 식별하는 문자열입니다.  
@@ -63,8 +63,8 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/CSharp/myinfopathproject/ribbon.cs#1)]
  [!code-vb[Trin_RibbonInfoPathBasic#1](../vsto/codesnippet/VisualBasic/myinfopathproject/ribbon.vb#1)]  
   
-## <a name="see-also"></a>참고 항목  
- [Accessing the Ribbon at Run Time](../vsto/accessing-the-ribbon-at-run-time.md)   
+## <a name="see-also"></a>참고자료  
+ [런타임에 리본 메뉴에 액세스](../vsto/accessing-the-ribbon-at-run-time.md)   
  [리본 개요](../vsto/ribbon-overview.md)   
  [리본 디자이너](../vsto/ribbon-designer.md)   
  [리본 XML](../vsto/ribbon-xml.md)  

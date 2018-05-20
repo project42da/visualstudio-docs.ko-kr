@@ -19,11 +19,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8d59c158bf8f532fa73a4eb2c22309218f80718e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c7c41f7c5a9fb9540661440a19462ee12b1aadd9
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="how-to-create-types-by-using-class-designer"></a>방법: 클래스 디자이너를 사용하여 형식 만들기
 
@@ -76,7 +76,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  하나 이상의 사용자 지정 특성을 한 줄에 하나씩 추가합니다. 중괄호로 묶지 마십시오.
 
-     완료되면 사용자 지정 특성이 해당 형식에 적용됩니다.
+   사용자 지정 특성이 해당 형식에 적용됩니다.
 
 ##  <a name="CustAttributeMember"></a> 형식 멤버에 사용자 지정 특성 적용
 
@@ -86,7 +86,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  하나 이상의 사용자 지정 특성을 한 줄에 하나씩 추가합니다. 중괄호로 묶지 마십시오.
 
-     완료되면 사용자 지정 특성이 해당 형식에 적용됩니다.
+   사용자 지정 특성이 해당 형식에 적용됩니다.
 
 ## <a name="see-also"></a>참고 항목
 

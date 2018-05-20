@@ -24,11 +24,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 50739bfde7578a49226e5396c8eeb78e56c4b0ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 29e84c08241bba09ab7923fa5997333f2371270d
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="how-to-create-office-projects-in-visual-studio"></a>방법: Visual Studio에서 Office 프로젝트 만들기
   사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 만들고 VSTO 추가 기능을 문서 수준 사용자 지정 Microsoft Office 응용 프로그램에 대 한 합니다. 이러한 유형의 프로젝트에 대 한 자세한 내용은 참조 [Office 솔루션 개발 개요 &#40;VSTO&#41;](../vsto/office-solutions-development-overview-vsto.md)합니다.  
@@ -61,29 +61,29 @@ ms.lasthandoff: 04/16/2018
   
      위치 형식은 다음과 같습니다.  
   
-    -   [*드라이브*\]: \ \  
+      * [*드라이브*\]\:  
   
-    -   \\\\*서버*\\*공유*  
+      * \\\\*서버*\\*공유*  
   
      위치에 다음 문자를 사용하지 마세요.  
   
-    -   *(별표)  
+      * *(별표)  
   
-    -   세로 막대(|)  
+      * 세로 막대(|)  
   
-    -   콜론(:)(드라이브 문자 뒤에는 제외)  
+      * 콜론(:)(드라이브 문자 뒤에는 제외)  
   
-    -   큰따옴표(")(공백이 포함된 경로에는 따옴표가 필요하지 않음)  
+      * 큰따옴표(")(공백이 포함된 경로에는 따옴표가 필요하지 않음)  
   
-    -   보다 작은 (\<)  
+      * 보다 작은 (\<)  
   
-    -   보다 큼(>)  
+      * 보다 큼(>)  
   
-    -   물음표(?)  
+      * 물음표(?)  
   
-    -   백분율 기호(%)  
+      * 백분율 기호(%)  
   
-7.  **확인** 단추를 선택합니다.  
+7. **확인** 단추를 선택합니다.
   
     > [!NOTE]  
     >  추가 기능 프로젝트는 생성될 때 항상 저장됩니다. 이 프로젝트를 임시 프로젝트로 만들 수 없습니다. 임시 프로젝트에 대 한 자세한 내용은 참조 [임시 프로젝트](http://msdn.microsoft.com/en-us/9cf1944c-7045-44cc-8701-7b0eb4099f2b)합니다.  
@@ -123,7 +123,7 @@ ms.lasthandoff: 04/16/2018
   
      위치 형식은 다음과 같습니다.  
   
-    -   [*드라이브*\]: \ \  
+    -   [*드라이브*\]\:  
   
     -   \\\\*서버*\\*공유*  
   

@@ -14,17 +14,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe5f6e5e285ef6d5551ac94a9eb7b0b8df132b7b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9c18fa28d52115d2666e2098a56a78658bebdc8f
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/10/2018
 ---
-# <a name="how-to-export-class-diagrams-as-images-class-designer"></a>방법: 클래스 다이어그램을 이미지로 내보내기(클래스 디자이너)
+# <a name="how-to-export-class-diagrams-as-images"></a>방법: 클래스 다이어그램을 이미지로 내보내기
 
 프로젝트의 코드에서 만든 클래스 다이어그램을 내보내려면 해당 다이어그램을 이미지로 저장합니다. UML 클래스 다이어그램을 대신 내보내려면 [다이어그램을 이미지로 내보내기](../../modeling/export-diagrams-as-images.md)를 참조하세요.
 
-1.  클래스 다이어그램(.cd) 파일을 엽니다.
+## <a name="export-a-diagram"></a>다이어그램 내보내기
+
+1.  클래스 다이어그램(*.cd*) 파일을 엽니다.
 
 2.  **클래스 다이어그램** 메뉴 또는 다이어그램 화면 바로 가기 메뉴에서 **다이어그램을 이미지로 내보내기**를 선택합니다.
 
@@ -34,9 +36,9 @@ ms.lasthandoff: 04/26/2018
 
 5.  **내보내기**를 선택하여 내보내기를 마칩니다.
 
-     다른 문서에서 연결된 내보낸 이미지를 자동으로 업데이트하려면 Visual Studio에서 다이어그램을 다시 내보냅니다.
+다른 문서에서 연결된 내보낸 이미지를 자동으로 업데이트하려면 Visual Studio에서 다이어그램을 다시 내보냅니다.
 
-### <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고 항목
 
 - [방법: 클래스 다이어그램 인쇄](how-to-print-class-diagrams.md)
 - [클래스 다이어그램 작업](working-with-class-diagrams.md)

@@ -1,5 +1,5 @@
 ---
-title: 콘텐츠 컨트롤 | Microsoft Docs
+title: 콘텐츠 컨트롤
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -41,24 +41,24 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a1c56b7e48ce42699330e8eb40595d9cc761736e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0874ab1c883b7a56b7a031dc861949b05d9add56
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="content-controls"></a>콘텐츠 컨트롤
   콘텐츠 컨트롤은 다음과 같은 기능이 있는 문서와 템플릿을 디자인하는 방법을 제공합니다.  
   
 -   양식과 같은 제어된 입력이 있는 UI(사용자 인터페이스).  
   
--   사용자가 문서 또는 템플릿의 보호된 섹션을 편집하지 못하도록 하는 제한. 자세한 내용은 참조 [콘텐츠 컨트롤을 사용 하 여 문서의 일부 보호](#Protection)합니다.  
+-   사용자가 문서 또는 템플릿의 보호된 섹션을 편집하지 못하도록 하는 제한. 자세한 내용은 참조 [콘텐츠 컨트롤을 사용 하 여 문서 부분 보호](#Protection)합니다.  
   
 -   데이터 소스에 대한 데이터 바인딩. 자세한 내용은 참조 [콘텐츠 컨트롤에 데이터 바인딩](#DataBinding)합니다.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
- ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [Word 2007 콘텐츠 컨트롤 사용 하 여 Visual Studio Tools for Office System (3.0)에 데이터 바인딩](http://go.microsoft.com/fwlink/?LinkId=136785)합니다.  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [바인딩 데이터를 Word 2007 콘텐츠 컨트롤 Visual Studio Tools for Office system (3.0) 사용 하 여](http://go.microsoft.com/fwlink/?LinkId=136785)합니다.  
   
 ## <a name="overview-of-content-controls"></a>콘텐츠 컨트롤 개요  
  콘텐츠 컨트롤은 사용자 입력 및 인쇄 둘 다에 최적화된 UI를 제공합니다. 문서에 콘텐츠 컨트롤을 추가하는 경우 컨트롤은 테두리, 제목 및 사용자에게 지침을 제공할 수 있는 임시 텍스트로 식별됩니다. 컨트롤의 테두리와 제목은 인쇄 버전의 문서에 표시되지 않습니다.  
@@ -74,20 +74,20 @@ ms.lasthandoff: 04/16/2018
  문서 수준 프로젝트에서는 디자인 타임 또는 런타임에 콘텐츠 컨트롤을 문서에 추가할 수 있습니다. VSTO 추가 기능 프로젝트에서는 런타임에 열려 있는 임의 문서에 콘텐츠 컨트롤을 추가할 수 있습니다. 자세한 내용은 참조 [하는 방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)합니다.  
   
 > [!NOTE]  
->  Open XML 형식으로 저장된 문서에서만 콘텐츠 컨트롤을 사용할 수 있습니다. Word 97-2003 문서(.doc) 형식으로 저장된 문서에서는 콘텐츠 컨트롤을 사용할 수 없습니다.  
+>  Open XML 형식으로 저장 된 문서 에서만에서 콘텐츠 컨트롤을 사용할 수 있습니다. Word 97-2003 문서에 저장 된 문서에 콘텐츠 컨트롤을 사용할 수 없습니다 (*.doc*) 형식입니다.  
   
 ## <a name="types-of-content-controls"></a>콘텐츠 컨트롤 형식  
- 문서에 추가할 수 있는 9가지 형식의 콘텐츠 컨트롤이 있습니다. 대부분의 콘텐츠 컨트롤은 <xref:Microsoft.Office.Tools.Word> 네임스페이스에 해당 형식이 있습니다. 사용 가능한 콘텐츠 컨트롤 중 하나를 나타낼 수 있는 제네릭 <xref:Microsoft.Office.Tools.Word.ContentControl>을 사용할 수도 있습니다. 각각의 사용 가능한 콘텐츠 컨트롤을 사용 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 템플릿을 사용 하 여 콘텐츠 컨트롤을 여 만들기](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)합니다.  
+ 문서에 추가할 수 있는 9가지 형식의 콘텐츠 컨트롤이 있습니다. 대부분의 콘텐츠 컨트롤은 <xref:Microsoft.Office.Tools.Word> 네임스페이스에 해당 형식이 있습니다. 사용 가능한 콘텐츠 컨트롤 중 하나를 나타낼 수 있는 제네릭 <xref:Microsoft.Office.Tools.Word.ContentControl>을 사용할 수도 있습니다. 각각의 사용 가능한 콘텐츠 컨트롤을 사용 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 콘텐츠 컨트롤을 사용 하 여 템플릿을 만드는](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)합니다.  
   
-### <a name="building-block-gallery"></a>문서 블록 갤러리  
+### <a name="build-block-gallery"></a>빌드 블록 갤러리  
  문서 블록 갤러리의 목록에서 선택할 수 있도록 *문서 블록* 는 문서에 삽입할 수 있습니다. 문서 블록은 일반적인 표지, 서식이 지정된 표 또는 머리글과 같이 여러 번 사용하기 위해 생성된 콘텐츠입니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.BuildingBlockGalleryContentControl> 형식을 참조하세요. 구성 요소에 대 한 자세한 내용은 참조 [Word 2007의 개발자를 위한 새로운](http://msdn.microsoft.com/en-us/74aa6688-65b3-4167-997d-131f26ad8f84)합니다.  
   
 ### <a name="check-box"></a>확인란  
  확인란은 이진 상태(선택됨 또는 선택 취소됨)를 나타내는 UI를 제공합니다.  
   
- 다른 형식의 콘텐츠 컨트롤과 달리 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]은 확인란 콘텐츠 컨트롤을 나타내는 특정 형식을 제공하지 않습니다. 즉, CheckBoxContentControl 형식이 있습니다. 그러나 프로그래밍 방식으로 문서에 제네릭 <xref:Microsoft.Office.Tools.Word.ContentControl>을 추가하여 확인란 콘텐츠 컨트롤을 만들 수 있습니다. 자세한 내용은 참조 [Word 프로젝트의 확인란 콘텐츠 컨트롤](#checkbox)합니다.  
+ 다른 형식의 콘텐츠 컨트롤과 달리 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]은 확인란 콘텐츠 컨트롤을 나타내는 특정 형식을 제공하지 않습니다. 즉, `CheckBoxContentControl` 형식이 없습니다. 그러나 프로그래밍 방식으로 문서에 제네릭 <xref:Microsoft.Office.Tools.Word.ContentControl>을 추가하여 확인란 콘텐츠 컨트롤을 만들 수 있습니다. 자세한 내용은 참조 [Word 프로젝트의 확인란 콘텐츠 컨트롤](#checkbox)합니다.  
   
-### <a name="combo-box"></a>Combo Box  
+### <a name="combo-box"></a>콤보 상자  
  콤보 상자에는 사용자가 선택할 수 있는 항목 목록이 표시됩니다. 드롭다운 목록과 달리 콤보 상자를 사용하면 사용자가 고유한 항목을 추가할 수 있습니다. 자세한 내용은 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl> 형식을 참조하세요.  
   
 ### <a name="date-picker"></a>날짜 선택  
@@ -141,7 +141,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  포함된 콘텐츠 컨트롤을 포함하는 <xref:Microsoft.Office.Tools.Word.GroupContentControl>을 만드는 경우 포함된 콘텐츠 컨트롤은 자동으로 보호되지 않습니다. 사용 해야 합니다는 **LockContents** 각 속성에 포함 된 사용자가 내용을 편집 하지 못하도록는 컨트롤입니다.  
   
- 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 문서 부분 보호 콘텐츠 컨트롤을 사용 하 여](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)합니다.  
+ 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)합니다.  
   
 ##  <a name="DataBinding"></a> 콘텐츠 컨트롤에 데이터 바인딩  
  데이터 소스에 콘텐츠 컨트롤을 바인딩하여 문서의 데이터를 표시할 수 있습니다. 데이터 소스가 업데이트되면 콘텐츠 컨트롤에 변경 내용이 반영됩니다. 변경 내용을 데이터 소스에 다시 저장할 수도 있습니다.  
@@ -154,8 +154,8 @@ ms.lasthandoff: 04/16/2018
   
  Office 솔루션에서 호스트 컨트롤에서 데이터 바인딩 개요를 참조 하십시오. [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)합니다.  
   
-### <a name="using-the-windows-forms-data-binding-model"></a>Windows Forms 데이터 바인딩 모델 사용  
- 대부분의 콘텐츠 컨트롤은 Windows Forms에서 사용하는 단순 데이터 바인딩 모델을 지원합니다. 단순 데이터 바인딩은 컨트롤이 데이터 테이블의 열 값과 같은 단일 데이터 요소에 바인딩됨을 의미합니다. 자세한 내용은 [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)을 참조하세요.  
+### <a name="use-the-windows-forms-data-binding-model"></a>Windows Forms 데이터 바인딩 모델 사용  
+ 대부분의 콘텐츠 컨트롤은 Windows Forms에서 사용하는 단순 데이터 바인딩 모델을 지원합니다. 단순 데이터 바인딩은 컨트롤이 데이터 테이블의 열 값과 같은 단일 데이터 요소에 바인딩됨을 의미합니다. 자세한 내용은 참조 [데이터 바인딩 및 Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)합니다.  
   
  문서 수준 프로젝트에서 데이터 바인딩할 수 있습니다 콘텐츠 컨트롤에 사용 하 여는 **데이터 원본** 창을 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다. 문서에 데이터 바인딩된 콘텐츠 컨트롤을 추가 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: 데이터베이스의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-a-database.md) 및 [하는 방법: 개체의 데이터로 문서 채우기](../vsto/how-to-populate-documents-with-data-from-objects.md)합니다.  
   
@@ -169,12 +169,12 @@ ms.lasthandoff: 04/16/2018
   
  문서 수준 및 VSTO 추가 기능 프로젝트에서 컨트롤 <xref:System.Windows.Forms.IBindableComponent.DataBindings%2A> 속성의 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드를 사용하여 프로그래밍 방식으로 콘텐츠 컨트롤을 데이터 소스에 바인딩할 수 있습니다. 이 작업을 수행 하는 경우 문자열에 전달 **텍스트** 에 *propertyName* 의 매개 변수는 <xref:System.Windows.Forms.ControlBindingsCollection.Add%2A> 메서드. **텍스트** 속성은 콘텐츠 컨트롤의 기본 데이터 바인딩 속성입니다.  
   
- 또한 콘텐츠 컨트롤은 컨트롤의 변경 내용이 데이터 소스에 업데이트되는 양방향 데이터 바인딩을 지원합니다. 자세한 내용은 [방법: 호스트 컨트롤의 데이터로 데이터 원본 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)을 참조하세요.  
+ 또한 콘텐츠 컨트롤은 컨트롤의 변경 내용이 데이터 소스에 업데이트되는 양방향 데이터 바인딩을 지원합니다. 자세한 내용은 참조 [하는 방법: 호스트 컨트롤의 데이터로 데이터 소스 업데이트](../vsto/how-to-update-a-data-source-with-data-from-a-host-control.md)합니다.  
   
 > [!NOTE]  
 >  콘텐츠 컨트롤은 복잡한 데이터 바인딩을 지원하지 않습니다. Windows Forms 데이터 모델을 사용하여 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> 또는 <xref:Microsoft.Office.Tools.Word.ComboBoxContentControl>을 데이터 소스에 바인딩하는 경우 사용자가 컨트롤을 클릭하면 단일 값만 표시됩니다. 사용자가 선택할 수 있는 데이터 값 집합에 이러한 컨트롤을 바인딩하려는 경우 사용자 지정 XML 부분의 요소에 해당 컨트롤을 바인딩할 수 있습니다.  
   
-### <a name="binding-content-controls-to-custom-xml-parts"></a>콘텐츠 컨트롤을 사용자 지정 XML 부분에 바인딩  
+### <a name="bind-content-controls-to-custom-xml-parts"></a>사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩  
  문서에 포함된 사용자 지정 XML 부분의 요소에 일부 콘텐츠 컨트롤을 바인딩할 수 있습니다. 사용자 지정 XML 부분에 대 한 자세한 내용은 참조 [사용자 지정 XML 부분 개요](../vsto/custom-xml-parts-overview.md)합니다.  
   
  사용 하 여 사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤을 바인딩하는 **XMLMapping** 컨트롤의 속성입니다. 다음 코드 예제에서는 이미 문서에 추가된 사용자 지정 XML 부분에서 `Product` 노드 아래의 `Price` 요소에 <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>을 바인딩하는 방법을 보여 줍니다.  
@@ -203,7 +203,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
   
 -   <xref:Microsoft.Office.Tools.Word.PlainTextContentControl>  
   
-### <a name="data-binding-events-for-content-controls"></a>콘텐츠 컨트롤에 대한 데이터 바인딩 이벤트  
+### <a name="data-bind-events-for-content-controls"></a>데이터 바인딩 콘텐츠 컨트롤에 대 한 이벤트  
  모든 콘텐츠 컨트롤은 데이터 소스가 업데이트되기 전에 컨트롤의 텍스트가 특정 조건을 충족하는지 확인하는 작업과 같은 데이터 관련 작업을 수행하기 위해 처리할 수 있는 이벤트 집합을 제공합니다. 다음 표에서는 데이터 바인딩과 관련된 콘텐츠 컨트롤 이벤트를 보여 줍니다.  
   
 |작업|이벤트(event)|  
@@ -216,7 +216,7 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
 ## <a name="limitations-of-content-controls"></a>콘텐츠 컨트롤의 제한 사항  
  Office 프로젝트에서 콘텐츠 컨트롤을 사용하는 경우 다음과 같은 제한 사항에 주의하세요.  
   
-### <a name="behavior-differences-between-design-time-and-run-time"></a>디자인 타임 및 런타임 간의 동작 차이  
+### <a name="behavior-differences-between-design-time-and-runtime"></a>디자인 타임 및 런타임 간의 동작 차이  
  Microsoft Office Word에서 런타임에 콘텐츠 컨트롤에 적용하는 제한 사항은 대부분 디자인 타임에 적용되지 않습니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 문서 수준 솔루션의 UI를 디자인하는 경우 런타임에 지원되는 방식으로만 콘텐츠 컨트롤을 수정해야 합니다.  
   
  런타임에 컨트롤이 지원하지 않는 방법으로 디자인 타임에 콘텐츠 컨트롤을 수정하는 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에서 지원되지 않는 변경 내용을 경고하지 않습니다. 그러나 프로젝트를 디버그 또는 실행하거나 프로젝트를 저장한 후 다시 여는 경우 Word에서 오류 메시지를 표시하고 문서를 복구할 수 있는 권한을 요청합니다. 문서를 복구하면 컨트롤에서 지원되지 않는 콘텐츠 및 서식이 모두 제거됩니다.  
@@ -236,10 +236,10 @@ plainTextContentControl1.XMLMapping.SetMapping("/Product/Price", String.Empty, n
  [!code-vb[Trin_ContentControlReference#800](../vsto/codesnippet/VisualBasic/trin_contentcontrolreference/checkbox.vb#800)]
  [!code-csharp[Trin_ContentControlReference#800](../vsto/codesnippet/CSharp/trin_wordcontentcontrolreference/checkbox.cs#800)]  
   
-## <a name="see-also"></a>참고 항목  
- [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
+## <a name="see-also"></a>참고자료  
+ [확장 된 개체를 사용 하 여 Word를 자동화 합니다.](../vsto/automating-word-by-using-extended-objects.md)   
  [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [연습: 콘텐츠 컨트롤을 사용 하 여 서식 파일 만들기](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)   
  [Office 솔루션의 데이터](../vsto/data-in-office-solutions.md)   
  [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍 방식으로 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)  

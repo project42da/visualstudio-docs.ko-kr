@@ -26,18 +26,18 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5e069b13f3ceda00383bda8d0c33d74059e785f0
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 48f8d5ac3b53650398f707f67f1d5806b72bce58
+ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/14/2018
 ---
 # <a name="cventerspan-function"></a>CvEnterSpan 함수
 새 범위의 시작을 표시합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```C  
 HRESULT CvEnterSpanW(  
     _In_reads_bytes_(16) PCV_MARKERSERIES pMarkerSeries,   
     _Out_ PCV_SPAN* ppSpan,   
@@ -116,7 +116,7 @@ HRESULT CvEnterSpanExVA(
  유효한 표식 계열 컨텍스트입니다. NULL일 수 없습니다.  
   
  `pMessage`  
- 메시지 형식 문자열입니다. NULL일 수 없습니다.  
+ 메시지 서식 문자열입니다. NULL일 수 없습니다.  
   
  `ppSpan`  
  결과 범위 개체를 저장할 변수의 주소입니다. 주소는 NULL일 수 없으며, 변수는 임의의 값을 포함할 수 있습니다.  

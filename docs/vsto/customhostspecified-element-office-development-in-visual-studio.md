@@ -1,5 +1,5 @@
 ---
-title: '&lt;customHostSpecified&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+title: '&lt;customHostSpecified&gt; 요소 (Visual Studio에서 Office 개발)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9d74dac27e4d4a5735dc73ebb069d985d17022d4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d4eaf874a259251c35a6b01c08f544993092ff4d
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="ltcustomhostspecifiedgt-element-office-development-in-visual-studio"></a>&lt;customHostSpecified&gt; 요소 (Visual Studio에서 Office 개발)
   `customHostSpecified` 요소는이 솔루션 독립 실행형 응용 프로그램 하지 않음을 나타냅니다. Office 솔루션에는 Microsoft Office 응용 프로그램 내에서 호스팅되는 구성 요소가 포함 됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml
 <customHostSpecified />  
 ```  
   
@@ -40,17 +40,17 @@ ms.lasthandoff: 04/16/2018
  이 요소에는 특성과 자식 요소가 없습니다.  
   
 ## <a name="example"></a>예제  
- 다음 코드 예제는 `customHostSpecified` Office 솔루션에 대 한 응용 프로그램 매니페스트에 요소입니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+ 다음 코드 예제는 `customHostSpecified` Office 솔루션에 대 한 응용 프로그램 매니페스트에 요소입니다. 이 코드 예제는에 제공 된 큰 예제의 일부 [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)합니다.  
   
-```  
+```xml
 <entryPoint>  
     <co.v1:customHostSpecified />  
 </entryPoint>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office 솔루션에 대 한 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
+## <a name="see-also"></a>참고자료  
+ [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)   
+ [Office 솔루션의 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)  
   
   

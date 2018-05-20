@@ -1,5 +1,5 @@
 ---
-title: 사용자 지정 문서 속성 개요 | Microsoft Docs
+title: 사용자 지정 문서 속성 개요
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,15 +20,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c5ca93d7a761ca8757f0e43ab88cb6586c203160
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b85dfe077f73a26eadf173197de2ca514ff44679
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="custom-document-properties-overview"></a>Custom Document Properties Overview
+# <a name="custom-document-properties-overview"></a>사용자 지정 문서 속성 개요
 
-문서 수준 프로젝트를 빌드할 때 Visual Studio 프로젝트의 문서에 추가 두 개의 사용자 지정 속성: \_AssemblyLocation 및 \_AssemblyName 합니다. 사용자가 문서를 Microsoft Office 응용 프로그램 이러한 사용자 지정 문서 속성을 확인 합니다. 문서에 있는 경우 로드 하 고는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], 시작 되는 사용자 지정 합니다. 자세한 내용은 참조 [Visual Studio 아키텍처의 Office 솔루션](../vsto/architecture-of-office-solutions-in-visual-studio.md)합니다.
+문서 수준 프로젝트를 빌드할 때 Visual Studio 프로젝트의 문서에 추가 두 개의 사용자 지정 속성: \_AssemblyLocation 및 \_AssemblyName 합니다. 사용자가 문서를 Microsoft Office 응용 프로그램 이러한 사용자 지정 문서 속성을 확인 합니다. 문서에 있는 경우 로드 하 고는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)], 시작 되는 사용자 지정 합니다. 자세한 내용은 참조 [Visual Studio에서 Office 아키텍처 솔루션](../vsto/architecture-of-office-solutions-in-visual-studio.md)합니다.
 
  [!INCLUDE[appliesto_alldoc](../vsto/includes/appliesto-alldoc-md.md)]
 
@@ -38,7 +38,7 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="assemblylocation"></a>\_AssemblyLocation
 
-이 속성에 대 한 사용자 지정 배포 매니페스트에 대 한 세부 정보를 제공 하는 문자열을 포함 합니다. 매니페스트에 대 한 자세한 내용은 참조 하십시오. [응용 프로그램 및 Office 솔루션의 배포 매니페스트](../vsto/application-and-deployment-manifests-in-office-solutions.md)합니다.
+이 속성에 대 한 사용자 지정 배포 매니페스트에 대 한 세부 정보를 제공 하는 문자열을 포함 합니다. 매니페스트에 대 한 자세한 내용은 참조 하십시오. [Office 솔루션에서 응용 프로그램 및 배포 매니페스트](../vsto/application-and-deployment-manifests-in-office-solutions.md)합니다.
 
  The_AssemblyLocation 속성 값에는 솔루션은 배포 하는 방법에 따라 서로 다른 형식으로 가질 수 있습니다.
 
@@ -54,8 +54,8 @@ ms.lasthandoff: 04/16/2018
 
 ## <a name="see-also"></a>참고자료
 
-[Visual Studio에서 Office 솔루션의 아키텍처](../vsto/architecture-of-office-solutions-in-visual-studio.md)
-[문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)
-[Office 솔루션에서 응용 프로그램 및 배포 매니페스트 ](../vsto/application-and-deployment-manifests-in-office-solutions.md) 
- [하는 방법: ClickOnce를 사용 하 여 Office 솔루션 게시](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
-[하는 방법: 사용자 지정 문서 속성 만들기 및 수정](../vsto/how-to-create-and-modify-custom-document-properties.md)
+- [Visual Studio에서 Office 솔루션의 아키텍처](../vsto/architecture-of-office-solutions-in-visual-studio.md)
+- [문서 수준 사용자 지정 아키텍처](../vsto/architecture-of-document-level-customizations.md)
+- [Office 솔루션에서 응용 프로그램 및 배포 매니페스트](../vsto/application-and-deployment-manifests-in-office-solutions.md)
+- [방법: ClickOnce를 사용 하 여 Office 솔루션 게시](http://msdn.microsoft.com/en-us/2b6c247e-bc04-4ce4-bb64-c4e79bb3d5b8)
+- [방법: 사용자 지정 문서 속성 만들기 및 수정](../vsto/how-to-create-and-modify-custom-document-properties.md)

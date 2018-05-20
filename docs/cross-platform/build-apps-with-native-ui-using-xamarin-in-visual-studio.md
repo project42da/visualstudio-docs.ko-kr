@@ -10,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: a8602915827c442fa2fc4cbddf4db2a25ef21749
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3d813226dfa79a65da85a2b17e54306d12a4ed09
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="build-apps-with-native-ui-using-xamarin-in-visual-studio"></a>Visual Studio에서 Xamarin을 사용하여 네이티브 UI로 앱 빌드
 
@@ -95,7 +95,7 @@ Visual Studio에는 .NET Standard 라이브러리를 공유하는 네이티브 U
   
     -   **설치**를 클릭합니다.  
   
-7.  7단계를 반복하여 .NET Standard 프로젝트에서 **Microsoft.CSharp** 패키지를 찾아서 설치합니다. 이 라이브러리는 .NET Standard 라이브러리에서 C# `dynamic` 데이터 형식을 사용하는 데 필요합니다.
+7.  6단계를 반복하여 .NET Standard 프로젝트에서 **Microsoft.CSharp** 패키지를 찾아서 설치합니다. 이 라이브러리는 .NET Standard 라이브러리에서 C# `dynamic` 데이터 형식을 사용하는 데 필요합니다.
   
 8.  솔루션을 빌드하고 빌드 오류가 없는지 확인합니다.  
   
