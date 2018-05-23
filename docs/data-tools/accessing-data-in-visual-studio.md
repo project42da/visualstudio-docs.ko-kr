@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 데이터 액세스
+title: 데이터 액세스 및 도구
 ms.date: 11/04/2016
 ms.topic: conceptual
 f1_keywords:
@@ -16,19 +16,23 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4b43463dc35fa3f9703162817f6a8d63f44a87b8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fbfd4227a2a4acfd8e21703cc29ff13ec36bd986
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/23/2018
 ---
-# <a name="accessing-data-in-visual-studio"></a>Visual Studio에서 데이터 액세스
+# <a name="access-data-in-visual-studio"></a>Visual Studio에서 데이터 액세스
 
 Visual Studio에서 거의 모든 데이터베이스 제품 또는 서비스의 형식으로 모든 위치에서 데이터에 연결 하는 응용 프로그램을 만들 수 있습니다-로컬 컴퓨터에서 로컬 영역 네트워크에서 또는 public, private 또는 하이브리드 클라우드에 있습니다.
 
 JavaScript, Python, PHP, Ruby, 또는 c + +에서 응용 프로그램의 경우에 연결한 데이터 때와 마찬가지로 다른 것 라이브러리 구해서 코드를 작성 합니다. Visual Studio.NET 응용 프로그램에 대 한 데이터 원본을 탐색 하 고 저장과 데이터를 메모리에 조작 사용자 인터페이스에 데이터 바인딩 개체 모델을 만들어 사용할 수 있는 도구를 제공 합니다. Microsoft Azure는 Azure 저장소에 연결 하기 위한.NET, Java, Node.js, PHP, Python, Ruby, 모바일 앱 및 Visual Studio의 도구에 대 한 Sdk를 제공 합니다.
 
-다음 목록에서는 Visual Studio에서 사용할 수 있는 많은 데이터베이스 및 저장소 시스템의 일부를 보여 줍니다. [Microsoft Azure](https://azure.microsoft.com/) 제공은 모든 프로 비전 및 관리의 기본 데이터 저장소를 포함 하는 데이터 서비스입니다.  [Azure Tools for Visual Studio](https://www.visualstudio.com/features/azure-tools-vs.aspx) Visual Studio에서 직접 Azure 데이터 저장소로 작업할 수 있도록 선택적 구성 요소입니다. 대부분의 다른 SQL 및 NoSQL 데이터베이스 제품을 여기에 나열 되는 로컬 컴퓨터에서 로컬 네트워크에서 또는 Microsoft Azure에서 가상 컴퓨터에 호스팅할 수 있습니다. 이 시나리오에서는 있습니다은 데이터베이스 자체를 관리 하는 일을 담당 합니다.
+다음 목록에서는 Visual Studio에서 사용할 수 있는 많은 데이터베이스 및 저장소 시스템의 일부를 보여 줍니다. [Microsoft Azure](https://azure.microsoft.com/) 제공은 모든 프로 비전 및 관리의 기본 데이터 저장소를 포함 하는 데이터 서비스입니다. **Azure 개발** 작업량 [Visual Studio 2017](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) Visual Studio에서 직접 Azure 데이터 저장소로 작업할 수 있습니다.
+
+![Azure 개발 작업](media/azure-development-workload.png)
+
+대부분의 다른 SQL 및 NoSQL 데이터베이스 제품을 여기에 나열 되는 로컬 컴퓨터에서 로컬 네트워크에서 또는 Microsoft Azure에서 가상 컴퓨터에 호스팅할 수 있습니다. Microsoft Azure 가상 컴퓨터에서 데이터베이스를 호스트 하는 경우 데이터베이스 자체 관리를 담당 합니다.
 
 **Microsoft Azure**
 
@@ -68,7 +72,7 @@ JavaScript, Python, PHP, Ruby, 또는 c + +에서 응용 프로그램의 경우�
 
 .NET Core에서는 포함 하 여 모든.NET 데이터 액세스 ADO.NET에서는 어떤 유형의 관계형 / 비관계형 데이터 원본에 액세스 하기 위한 인터페이스를 정의 하는 클래스의 집합을 기반으로 합니다. Visual Studio에 여러 가지 도구와 데이터베이스에 연결할 수 있도록 ADO.NET을 사용 하는 디자이너에 데이터를 조작 하 고 사용자에 게 데이터를 표시 합니다. 이 섹션의 설명서에는 이러한 도구를 사용 하는 방법을 설명 합니다. ADO.NET 명령 개체에 대해 직접 프로그래밍할 수 있습니다. ADO.NET Api를 직접 호출 하는 방법에 대 한 자세한 내용은 참조 [ADO.NET](/dotnet/framework/data/adonet/index)합니다.
 
-ASP.NET과 특별히 관련 된 데이터 액세스 설명서를 참조 하십시오. [데이터로 작업](http://www.asp.net/web-forms/overview/presenting-and-managing-data) ASP.NET 사이트의 합니다. Entity Framework를 사용 하 여 ASP.NET mvc에 대 한 자습서를 참조 하십시오. [Entity Framework 6 Code First MVC 5를 사용 하 여 시작](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)합니다.
+ASP.NET과 관련 된 데이터 액세스 설명서를 참조 하십시오. [데이터로 작업](http://www.asp.net/web-forms/overview/presenting-and-managing-data) ASP.NET 사이트의 합니다. Entity Framework를 사용 하 여 ASP.NET mvc에 대 한 자습서를 참조 하십시오. [Entity Framework 6 Code First MVC 5를 사용 하 여 시작](/aspnet/mvc/overview/getting-started/getting-started-with-ef-using-mvc/creating-an-entity-framework-data-model-for-an-asp-net-mvc-application)합니다.
 
 C# 또는 Visual Basic의 유니버설 Windows 플랫폼 (UWP) 앱 Microsoft Azure SDK for.NET을 사용 하 여 Azure 저장소 및 기타 Azure 서비스에 액세스할 수 있습니다. Windows.Web.HttpClient 클래스 RESTful 서비스와 통신할 수 있도록 합니다. 자세한 내용은 참조 [Windows.Web.Http를 사용 하 여 HTTP 서버에 연결 하는 방법을](https://msdn.microsoft.com/library/windows/apps/dn469430.aspx)합니다.
 

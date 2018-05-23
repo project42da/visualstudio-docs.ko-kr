@@ -20,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c38e965c5d424c7a3a6ffe4047e9422f1f9bb4f0
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 4192460ca7825947c88170b7bd36898595504438
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-attach-to-script"></a>방법: 스크립트에 연결
 이 항목에서는 디버깅을 위해 스크립트 파일에 Visual Studio 디버거를 수동으로 연결하는 방법에 대해 설명합니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 05/11/2018
   
 2.  에 **프로세스에 연결** 대화 상자, 참조는 **사용 가능한 프로세스** 목록과 스크립트 프로세스를 찾기를 연결 하려면. 확인 하 여 스크립트 프로세스를 확인할 수는 **형식** 열입니다.  
   
-    1.  디버깅할 프로세스가 다른 컴퓨터에서 실행되고 있으면 먼저 원격 컴퓨터를 선택해야 합니다. 자세한 내용은 참조 [하는 방법: 원격 컴퓨터를 선택](http://msdn.microsoft.com/en-us/4332ba8e-2f0b-4f62-b96a-e762b9f3c3ba)합니다.  
+    1.  디버깅할 프로세스가 다른 컴퓨터에서 실행되고 있으면 먼저 원격 컴퓨터를 선택해야 합니다.
   
     2.  프로세스가 다른 사용자 계정으로 실행되고 있으면 **모든 사용자의 프로세스 표시** 확인란을 선택합니다.  
   
@@ -64,7 +64,7 @@ ms.lasthandoff: 05/11/2018
 > [!NOTE]
 >  신뢰할 수 없는 사용자 계정에서 소유한 프로세스에 연결하면 보안 경고 확인 대화 상자가 나타납니다. 자세한 내용은 참조 [보안 경고: 신뢰할 수 없는 사용자가 소유한 프로세스에 연결 위험할 수 있습니다. 다음 정보가 의심 스 럽 확실 하지 않은 경우이 프로세스에 연결 하지 마십시오](../debugger/security-warning-attaching-to-a-process-owned-by-an-untrusted-user.md)합니다.  
   
- 터미널 서비스(원격 데스크톱) 세션에서 디버깅할 때 사용 가능한 프로세스 목록에 사용 가능한 프로세스 중 일부가 표시되지 않는 경우가 있습니다. [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 이상 버전에서 사용자 계정이 제한된 사용자로 Visual Studio를 실행하는 경우 서비스 및 w3wp.exe를 비롯한 다른 서버 프로세스에 사용되는 세션 0에서 실행되는 프로세스는 사용 가능한 프로세스 목록에 표시되지 않습니다. 관리자 계정으로 Visual Studio를 실행하거나 터미널 서비스 세션 대신 서버 콘솔에서 Visual Studio를 실행하여 이 문제를 해결할 수 있습니다. 세 번째 방법은 vsjitdebugger.exe를 입력 하 여 프로세스에 연결할 수 경우 이러한 해결 방법을 둘 다 Windows 명령줄에서-p ProcessId 합니다. 프로세스 ID는 tlist.exe를 사용하여 확인할 수 있습니다. Tlist.exe를 얻으려면 다운로드 하 고 디버깅 도구에 대 한에서 Windows를 설치 [Windows 하드웨어 개발자 센터](http://go.microsoft.com/fwlink/?linkid=1651)합니다.  
+ 터미널 서비스(원격 데스크톱) 세션에서 디버깅할 때 사용 가능한 프로세스 목록에 사용 가능한 프로세스 중 일부가 표시되지 않는 경우가 있습니다. [!INCLUDE[WinXPSvr](../debugger/includes/winxpsvr_md.md)] 이상 버전에서 사용자 계정이 제한된 사용자로 Visual Studio를 실행하는 경우 서비스 및 w3wp.exe를 비롯한 다른 서버 프로세스에 사용되는 세션 0에서 실행되는 프로세스는 사용 가능한 프로세스 목록에 표시되지 않습니다. 관리자 계정으로 Visual Studio를 실행하거나 터미널 서비스 세션 대신 서버 콘솔에서 Visual Studio를 실행하여 이 문제를 해결할 수 있습니다. 세 번째 방법은 vsjitdebugger.exe를 입력 하 여 프로세스에 연결할 수 경우 이러한 해결 방법을 둘 다 Windows 명령줄에서-p ProcessId 합니다. 프로세스 ID는 tlist.exe를 사용하여 확인할 수 있습니다. Tlist.exe를 얻으려면 다운로드 하 고 디버깅 도구에 대 한에서 Windows를 설치 [Windows 하드웨어 개발자 센터](/windows-hardware/drivers/dashboard/)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [클라이언트 쪽 스크립트 디버깅](../debugger/client-side-script-debugging.md)   

@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c506e12fc8e6637e2b53852587e6a37c57cbf5ce
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1b97e2d6b9ca269a86c3b66ffbcc4bb441051f29
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="how-to-respond-to-the-just-in-time-debugger"></a>방법:-Just-in-time 디버거에 응답
 
@@ -25,7 +25,7 @@ ms.lasthandoff: 04/18/2018
 
 #### <a name="if-you-want-to-fix-or-debug-the-error-visual-studio-users"></a>수정 하거나 오류 (Visual Studio 사용자)를 디버깅.
 
-- 있어야 [Visual Studio가 설치 되어](https://www.microsoft.com/en-us/download/details.aspx?id=48146) 의 오류에 대 한 자세한 정보를 보려면 하 고 디버그 하려고 합니다. 자세한 내용은 참조 [Just-In-Time 디버거를 사용 하 여 디버깅](../debugger/debug-using-the-just-in-time-debugger.md)합니다. 이 오류를 해결 응용 프로그램을 해결할 수 없는 경우 오류를 해결 하려면 응용 프로그램의 소유자에 게 문의 합니다.
+- 있어야 [Visual Studio가 설치 되어](http://www.visualstudio.com) 의 오류에 대 한 자세한 정보를 보려면 하 고 디버그 하려고 합니다. 자세한 내용은 참조 [Just-In-Time 디버거를 사용 하 여 디버깅](../debugger/debug-using-the-just-in-time-debugger.md)합니다. 이 오류를 해결 응용 프로그램을 해결할 수 없는 경우 오류를 해결 하려면 응용 프로그램의 소유자에 게 문의 합니다.
 
 #### <a name="if-you-want-to-prevent-the-just-in-time-debugger-dialog-box-from-appearing"></a>Just-In-Time 디버거 대화 상자를 표시 하지 않으려면 원하는 경우
 

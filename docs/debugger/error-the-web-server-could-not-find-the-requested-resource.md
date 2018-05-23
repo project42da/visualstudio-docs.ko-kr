@@ -16,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 48d4a5845dd5e5f364d34544f57e1ef7bdfe6052
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 1e6fec89a151525a84349b7019c7569eb752172e
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="error-the-web-server-could-not-find-the-requested-resource"></a>오류: 요청한 리소스를 웹 서버에서 찾지 못했습니다.
 보안 고려 사항 때문에 IIS에서 일반 오류를 반환했습니다.  
@@ -29,8 +29,7 @@ ms.lasthandoff: 04/18/2018
   
  이 오류의 가능한 원인은 매우 다양합니다. 가장 일반적인 원인 중 몇 가지는 IIS 설치 또는 구성 문제, 웹 사이트 구성 문제 또는 파일 시스템의 사용 권한 문제입니다. 브라우저를 사용하여 리소스에 액세스할 수 있습니다. IIS가 구성된 방식에 따라 자세한 오류 메시지를 얻으려면 서버에서 로컬 브라우저를 사용하거나 IIS 오류 로그를 검사해야 할 수 있습니다.  
   
- IIS 문제 해결에 대 한 자세한 내용은 참조 하십시오. [IIS 관리 및 관리](http://go.microsoft.com/fwlink/?LinkId=255872)합니다.  
+ IIS 문제 해결에 대 한 자세한 내용은 참조 하십시오. [IIS 관리 및 관리](/iis/manage/provisioning-and-managing-iis/iis-management-and-administration)합니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [UrlScan 보안 도구](http://www.microsoft.com/technet/security/tools/urlscan.mspx)   
  [오류: 웹 서버가 잠겨 있기 때문에 디버깅을 사용하기 위해 필요한 DEBUG 동사를 사용할 수 없습니다.](../debugger/error-the-web-server-has-been-locked-down-and-is-blocking-the-debug-verb.md)

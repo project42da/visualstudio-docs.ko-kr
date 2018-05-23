@@ -15,11 +15,11 @@ ms.author: gregvanl
 manager: douge
 ms.workload:
 - vssdk
-ms.openlocfilehash: c56ad565dfffd454eeca465aa4097c077fdc0a65
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: fbe291c838d006bea62450f7e397cde7e5d09ee3
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="providedefaultname-element-visual-studio-templates"></a>ProvideDefaultName 요소(Visual Studio 템플릿)
 지정 여부는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 시스템에서 서식 파일에 대 한 기본 이름이 생성 됩니다는 **새 항목 추가** 또는 **새 프로젝트** 대화 상자.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
  경우는 `ProvideDefaultName` 요소는 `false`, **이름** 의 상자는 **새 항목 추가** 및 **새 프로젝트** 대화 상자에 값이 포함 되어 `<Enter_name>`합니다.  
   
- 사용 하 여는 [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) 요소를 프로젝트의 기본 이름을 지정 하거나 항목에 **새 항목 추가** 및 **새 프로젝트** 대화 상자.  
+ 사용 하 여는 [DefaultName](../extensibility/defaultname-element-visual-studio-templates.md) 요소를 프로젝트의 기본 이름을 지정 하거나 항목에 **새 항목 추가** 및 **새 프로젝트** 대화 상자. 때의 값은 `ProvideDefaultName` 요소는 `true`, 생략은 `DefaultName` 프로젝트에 대 한 요소에서 값 즉, 서식 파일의 이름이 대화 상자를 채웁니다는 [이름](../extensibility/name-element-visual-studio-templates.md) 요소입니다.
   
 ## <a name="example"></a>예제  
  다음 코드 예제에서는 `ProvideDefaultName` 요소의 `false`합니다.  

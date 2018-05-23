@@ -24,11 +24,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f1ecd96b8541145cfd5d36686f7ceaf04e7544b1
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 0136fb8f7b1075d2eadeaed10ab26026395b9671
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="quickstart-first-look-at-deployment-in-visual-studio"></a>빠른 시작: Visual Studio에서 배포 시 소개
 
@@ -86,6 +86,8 @@ Visual Studio에서 Microsoft 저장소에 배포에 대 한 응용 프로그램
     ![데스크톱 브리지](../deployment/media/feature-tour-desktop-bridge.png)
 
 ### <a name="create-an-installer-package-windows-client"></a>프로그램 설치 관리자 패키지 (Windows 클라이언트) 만들기
+
+필요한 경우 더 보다는 데스크톱 응용 프로그램의 복잡 한 설치 [ClickOnce](how-to-publish-a-clickonce-application-using-the-publish-wizard.md) 는 설치 관리자 패키지, 설치 프로젝트 또는 사용자 지정 부트스트래퍼를 만들 수 있습니다 제공할 수 있습니다.
 
 - MSI 기반 WiX 설치 관리자를 사용 하 여 만들 수 있습니다는 [WiX 도구 집합 Visual Studio 2017 확장](https://marketplace.visualstudio.com/items?itemName=RobMensching.WixToolsetVisualStudio2017Extension)합니다.
 
