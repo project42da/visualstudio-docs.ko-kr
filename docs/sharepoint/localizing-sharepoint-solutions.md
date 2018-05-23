@@ -22,11 +22,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 86ffb2795d5e2a9b9583360146c4bb1d2556b9a1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 89cc146a64e1e74c2682163ba3bebc16ed5a84e7
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="localizing-sharepoint-solutions"></a>SharePoint 솔루션 지역화
   전 세계적으로 사용 될 수 있도록 응용 프로그램을 준비 하는 과정을 지역화 라고 합니다. 지역화를 특정 문화권 리소스를 번역 됩니다. 자세한 내용은 참조 [전역화 및 지역화 응용 프로그램](/visualstudio/ide/globalizing-and-localizing-applications)합니다. 이 항목 SharePoint 솔루션 지역화 하는 방법에 대 한 개요를 제공 합니다.  
@@ -63,7 +63,7 @@ ms.lasthandoff: 04/16/2018
   
  기능 리소스 파일을 만든 후에 번역 된 문자열을 추가 합니다. 다음과 같은 형식의 식으로 지역화 된 문자열에 액세스 합니다.  
   
-```  
+```aspx-csharp  
 $Resources:String ID  
 ```  
   
@@ -85,25 +85,25 @@ $Resources:String ID
   
  ASPX 페이지 및 컨트롤 태그에 있는 모든 속성 하드 코드 된 문자열을 다음과 같은 형식의 식으로 바꿉니다.  
   
-```  
+```aspx-csharp  
 <asp:<class> runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
  예를 들어:  
   
-```  
+```aspx-csharp  
 <asp:Button ID="btn1" runat="server" onclick="btn1_Click" Text="<%$Resources:Resource1,String7%>"></asp:Button>  
 ```  
   
  텍스트로 ASPX에 대 한 다음과 같은 형식의 식을 사용 합니다.  
   
-```  
+```aspx-csharp  
 <asp:literal ID="<ID>" runat="server" Text="<%$Resources:<Resource File Name>, <String ID>%>" />  
 ```  
   
  예를 들어:  
   
-```  
+```aspx-csharp  
 <asp:literal ID="Literal1" runat="server" Text="<%$Resources:Resource1, String9%>" />  
 ```  
   
@@ -120,7 +120,7 @@ $Resources:String ID
   
  코드를 바꿉니다 하드 코드 된 문자열에 대 한 호출에서 <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> 다음 구문을 사용 하 여 메서드:  
   
-```  
+```aspx-csharp  
 HttpContext.GetGlobalResourceObject("<Resource File Name>", "<String ID>")  
 ```  
   

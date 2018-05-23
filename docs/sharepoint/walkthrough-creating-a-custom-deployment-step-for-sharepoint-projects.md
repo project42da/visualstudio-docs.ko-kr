@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1538e68d29667eb7a1b3f0c976ddc5d77dab825b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a9052136a58b0c6cd3246b7c7b61c89bf637a8cf
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects"></a>연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기
   SharePoint 프로젝트를 배포 하면 Visual Studio는 일련의 배포 단계는 특정 순서로 실행 합니다. Visual Studio에는 많은 기본 제공 배포 단계가 포함 하지만 있습니다 수, 직접 만들 수도 있습니다.  
@@ -161,9 +161,7 @@ ms.lasthandoff: 04/16/2018
   
 #### <a name="to-create-the-deployment-configuration"></a>배포 구성을 만들려면  
   
-1.  
-  
-2.  에 **DeploymentStepExtension** 프로젝트 DeploymentConfigurationExtension 코드 파일을 연 후 다음 코드를 붙여 넣습니다.  
+1.  에 **DeploymentStepExtension** 프로젝트 DeploymentConfigurationExtension 코드 파일을 연 후 다음 코드를 붙여 넣습니다.  
   
      [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/deploymentstepextension/deploymentconfigurationextension.cs#2)]
      [!code-vb[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#2](../sharepoint/codesnippet/VisualBasic/upgradedeploymentstep/deploymentstepextension/deploymentconfigurationextension.vb#2)]  
@@ -306,7 +304,7 @@ ms.lasthandoff: 04/16/2018
   
 15. Elements.xml 파일에서 기본 XML이이 파일에 다음 XML로 대체 합니다. 목록의 이름을 변경 하는이 XML **직원** Jim 중 배에 이름이 지정 하는 직원이 대 한 정보를 추가 합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <ListInstance Title="Employees"  
@@ -357,7 +355,7 @@ ms.lasthandoff: 04/16/2018
   
      완료 하면 다음 XML 파일에 포함 되어야 합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <ListInstance Title="Employees"  

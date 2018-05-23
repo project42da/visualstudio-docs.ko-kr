@@ -26,11 +26,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 95dfd93433fc70895baa9056ce1b1522845bf497
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 22487077a355d51725258f37c03e5fd2bb58ab9b
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="troubleshooting-sharepoint-packaging-and-deployment"></a>SharePoint 패키징 및 배포 문제 해결
   이 항목에서는 SharePoint 솔루션을 패키지하고 배포할 때 발생할 수 있는 다양한 문제에 대해 설명합니다.
@@ -79,7 +79,7 @@ ms.lasthandoff: 04/16/2018
 
 2.  Web.config 파일에 다음 코드를 추가합니다.
 
-    ```
+    ```xml
     <compilation batch="false" optimizeCompilations="true">
     ```
 
