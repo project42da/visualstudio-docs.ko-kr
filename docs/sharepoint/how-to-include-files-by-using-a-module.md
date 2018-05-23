@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6af9ef6114a3ac187c50d17f16c39c89b08370dd
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: daea134298e84e7ddddf419da2124924fe9ef121
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-include-files-by-using-a-module"></a>방법: 모듈을 사용하여 파일 포함
   *모듈* (으로 다름 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] 모듈)은 SharePoint에 ASPX 마스터 페이지 파일, 텍스트 파일 또는 이미지를 배포할 수 있도록 하는 컨테이너입니다.  
@@ -59,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 8.  문서 라이브러리에 표시 하려는 모든 파일에 대 한 추가 `Type="GhostableInLibrary"` Elements.xml에 입력 되는 특성입니다. 예를 들어 개체에 적용된  
   
-    ```  
+    ```xml  
     <File Path="Module1\Some Folder\SomePage.aspx" Url="Module1/Some Folder/SomePage.aspx" Type="GhostableInLibrary" />  
     ```  
   

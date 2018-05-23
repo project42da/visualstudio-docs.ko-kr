@@ -17,11 +17,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fea1719eb80515a97a1b18336f1653cb535359e9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 90358624f5de8fc7c90e3424f04617acab4388a4
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-customize-a-sharepoint-solution-package-by-using-msbuild-targets"></a>방법: MSBuild 대상을 사용하여 SharePoint 솔루션 패키지 사용자 지정
   명령 프롬프트에서 MSBuild 대상을 사용하여 Visual Studio에서 SharePoint 패키지 파일(.wsp)을 만드는 방법을 사용자 지정할 수 있습니다. 예를 들어 MSBuild 속성을 사용자 지정하여 패키징 중간 디렉터리 및 열거되는 파일을 지정하는 MSBuild 항목 그룹을 변경할 수 있습니다.  
@@ -33,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  메모장과 같은 편집기를 열고 다음 코드를 추가합니다.  
   
-    ```  
+    ```xml  
     <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
       <Target Name="BeforeLayout">  
         <Message Importance="high" Text="In the BeforeLayout Target"></Message>  
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  프로젝트 파일의 끝 부분에 있는 `Import` 행 뒤에 다음 줄을 추가합니다.  
   
-    ```  
+    ```xml  
     <Import Project="CustomLayout.SharePoint.targets" />  
     ```  
   
@@ -69,7 +69,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  `</Project>` 태그 바로 앞에 다음 코드를 추가합니다.  
   
-    ```  
+    ```xml  
     <Target Name="AfterLayout">  
       <Message Importance="high" Text="In the AfterLayout Target"></Message>  
     </Target>  

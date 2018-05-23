@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 264decc53d8ba2d818562a9513ecfa2aab6f882c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b617230c7a30ee437ac1d1120793e567e14c7814
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>연습: 항목 템플릿을 사용하여 사용자 지정 작업 프로젝트 항목 만들기, 2부
   사용자 지정 형식의 SharePoint 프로젝트 항목을 정의 하 고 Visual Studio에서 항목 템플릿을 사용 하 여 연결 하는 마법사를 제공 수도 있습니다. 서식 파일 프로젝트에 프로젝트 항목의 새 인스턴스를 추가 하는 데 사용할 사용자 로부터 정보를 수집 하는 마법사를 사용할 수 있습니다. 수집 하는 정보는 프로젝트 항목을 초기화 데 사용할 수 있습니다.  
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ItemTemplateWizard` 에서 네임 스페이스는 `WizardWindow` 클래스 이름에는 `x:Class` 특성은 `Window` 요소입니다. XAML의 첫 번째 줄에 있는이 요소가입니다. 완료 되 면 첫 번째 줄에 다음 코드는 유사 합니다.  
   
-    ```  
+    ```xml  
     <Window x:Class="WizardWindow"  
     ```  
   
@@ -177,7 +177,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  에 **서명** 탭을는 **어셈블리에 서명** 확인란 합니다.  
   
-3.  에 **강력한 이름 키 파일 선택** 목록에서 선택  **\<새로 만들기 … >**합니다.  
+3.  에 **강력한 이름 키 파일 선택** 목록에서 선택  **\<새로 만들기 … >** 합니다.  
   
 4.  에 **강력한 이름 키 만들기** 대화 상자 선택을 취소 한 이름을 입력 합니다는 **암호로 내 키 파일 보호** 확인란을 선택한 후는 **확인** 단추입니다.  
   
@@ -187,7 +187,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Visual Studio 명령 프롬프트 창에서 다음 실행 명령을 *PathToWizardAssembly* ItemTemplateWizard 프로젝트 개발에 빌드된 ItemTemplateWizard.dll 어셈블리의 전체 경로와 컴퓨터입니다.  
   
-    ```  
+    ```xml  
     sn.exe -T PathToWizardAssembly  
     ```  
   
@@ -201,7 +201,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  파일의 끝에 다음 추가 `WizardExtension` 사이 요소는 `</TemplateContent>` 및 `</VSTemplate>` 태그입니다. 대체는 *YourToken* 의 값은 `PublicKeyToken` 이전 절차에서 가져온 공개 키 토큰을 사용 하 여 특성입니다.  
   
-    ```  
+    ```xml  
     <WizardExtension>  
       <Assembly>ItemTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=YourToken</Assembly>  
       <FullClassName>ItemTemplateWizard.CustomActionWizard</FullClassName>  
@@ -221,7 +221,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  ItemTemplate 프로젝트에서 Elements.xml 파일의 내용을 다음 XML로 대체 합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <Elements Id="$guid8$" xmlns="http://schemas.microsoft.com/sharepoint/">  
       <CustomAction Id="$IdValue$"  

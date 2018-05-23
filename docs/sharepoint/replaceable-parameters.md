@@ -20,17 +20,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 696388ca89102d588bd1a291b6f5689dc08e26a9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 86d6b08d209703f73901d7a839c731e1a9a63fdd
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="replaceable-parameters"></a>대체 가능 매개 변수
   대체 가능 매개 변수 또는 *토큰*, 실제 값을 갖는 디자인 타임에 알 수 없는 SharePoint 솔루션 항목에 대 한 값을 제공 합니다. 프로젝트 파일 내 사용할 수 있습니다. 이러한 매개 변수는 기능적으로 표준 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 템플릿 토큰과 유사합니다. 자세한 내용은 참조 [템플릿 매개 변수](/visualstudio/ide/template-parameters)합니다.  
   
 ## <a name="token-format"></a>토큰 형식  
- 토큰 시작 하 고 달러 기호 ($) 문자로 끝나야 합니다. 프로젝트 배포 시에는 SharePoint 솔루션 패키지 (.wsp) 파일에 패키지가 될 때 사용 된 모든 토큰에 실제 값으로 바뀝니다. 예를 들어 토큰 **$SharePoint.Package.Name$** 문자열 "테스트 SharePoint 패키지"으로 확인 될 수  
+ 토큰 시작 하 고 달러 기호 ($) 문자로 끝나야 합니다. 배포에서 SharePoint 솔루션 패키지 (.wsp 파일)에 프로젝트는 패키지 될 때 사용 된 모든 토큰 실제 값으로 바뀝니다. 예를 들어 토큰 **$SharePoint.Package.Name$** 문자열 "테스트 SharePoint 패키지"으로 확인 될 수  
   
 ## <a name="token-rules"></a>토큰 규칙  
  토큰에는 다음 규칙이 적용 됩니다.  
@@ -45,7 +45,7 @@ ms.lasthandoff: 04/16/2018
   
  이러한 규칙을 따르지 않는 토큰은 경고나 오류를 제공 하지 않고 무시 됩니다.  
   
- 토큰이 문자열 값으로 대체 사용자 토큰을 사용 하 여 매니페스트 템플릿을 편집할 수 있도록 매니페스트 변환 후 즉시 수행 됩니다.  
+ 토큰이 문자열 값으로 대체 매니페스트 변환 후 즉시 수행 됩니다. 이 대체 토큰을 사용 하 여 매니페스트 템플릿을 편집할 수 있습니다.  
   
 ### <a name="token-name-resolution"></a>토큰 이름 확인  
  대부분의 경우 토큰이 포함 된 위치에 관계 없이 특정 값으로 확인 됩니다. 그러나 패키지 또는 기능에 연결 되어, 토큰의 값은 포함 된 위치에 따라 다릅니다. 예를 들어 기능에 있으면 패키지, 토큰 `$SharePoint.Package.Name$` "패키지 A." 값으로 확인 동일한 기능이 인지 패키지 b에서 다음 `$SharePoint.Package.Name$` "패키지 B."를 확인 합니다.  
@@ -88,14 +88,14 @@ ms.lasthandoff: 04/16/2018
   
  이러한 확장명은 `<TokenReplacementFileExtensions>` 에 있는 Microsoft.VisualStudio.SharePoint.targets 파일의 요소는 중... \\< 프로그램 파일\>\MSBuild\Microsoft\VisualStudio\v11.0\SharePointTools 폴더입니다.  
   
- 그러나 목록에 추가 파일 확장명을 추가할 수, 있습니다. 이 작업을 수행 하려면 추가 `<TokenReplacementFileExtensions>` 앞에 정의 된 SharePoint 프로젝트 파일에서 임의의 PropertyGroup 요소는 \<가져오기 > SharePoint 대상 파일의 합니다.  
+ 그러나 목록에 추가 파일 확장명을 추가할 수, 있습니다. 추가 `<TokenReplacementFileExtensions>` 앞에 정의 된 SharePoint 프로젝트 파일에서 임의의 PropertyGroup 요소는 \<가져오기 > SharePoint 대상 파일의 합니다.  
   
 > [!NOTE]  
 >  프로젝트를 컴파일한 후 토큰 바꾸기 나타나므로.cs,.vb,.resx 등 컴파일되는 파일 형식에 대 한 파일 확장명 추가 하지 말아야 합니다. 토큰 컴파일되지 않는 파일에만 대체 됩니다.  
   
- 예를 들어 파일 이름 확장명 ".myextension" 및 ".yourextension" 토큰 대체 파일 이름 확장명의 목록에 추가 하려면 다음에 추가한.csproj 파일:  
+ 예를 들어 파일 이름 확장명 ".myextension" 및 ".yourextension" 토큰 대체 파일 이름 확장명의 목록에 추가 하려면 추가할 때 다음을는 `.csproj` 파일:  
   
-```  
+```xml  
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
   <PropertyGroup>  
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>  
@@ -108,7 +108,7 @@ ms.lasthandoff: 04/16/2018
 </PropertyGroup>  
 ```  
   
- 또는.targets 파일에 직접 확장을 추가할 수 있습니다. 그러나 확장명 목록 뿐 아니라 로컬 시스템에 패키지 하는 모든 SharePoint 프로젝트에 대 한 변경이 직접 합니다. 시스템에서 유일한 개발자 또는 대부분의 프로젝트에서 필요한 경우 편리할 수 있습니다. 그러나 이며 때문에 시스템 관련,이 방법은 매우 이식 가능 하지 않습니다. 따라서는 것이 좋습니다 추가한 확장 프로젝트 파일을 대신 합니다.  
+ .Targets 파일에 직접 확장을 추가할 수 있습니다. 그러나 확장명 목록 뿐 아니라 로컬 시스템에 패키지 하는 모든 SharePoint 프로젝트에 대 한 변경이 직접 합니다. 시스템에서 유일한 개발자 또는 대부분의 프로젝트에서 필요한 경우 편리할 수 있습니다. 그러나 이며 때문에 시스템 관련,이 방법은 매우 이식 가능 하지 않습니다. 따라서는 것이 좋습니다 추가한 확장 프로젝트 파일을 대신 합니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [SharePoint 솔루션 개발](../sharepoint/developing-sharepoint-solutions.md)  

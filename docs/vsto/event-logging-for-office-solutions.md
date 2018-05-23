@@ -1,5 +1,5 @@
 ---
-title: Office 솔루션에 대 한 이벤트 로깅을 | Microsoft Docs
+title: Office 솔루션에 대 한 이벤트 로깅
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,21 +18,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4b1319e906060a1fe4d94fbd2e6bb0a3f9d53eb9
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ef1db4f88e13575f77a88d0e2ceee7ef0621b202
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="event-logging-for-office-solutions"></a>Office 솔루션에 대한 이벤트 로깅
+# <a name="event-logging-for-office-solutions"></a>Office 솔루션에 대 한 이벤트 로깅
   Windows에서 이벤트 뷰어를 사용하여 Office 솔루션을 설치하거나 제거할 때 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 에서 캡처되는 예외 메시지를 확인할 수 있습니다. 이벤트 로거에서 이러한 메시지를 사용하여 설치 및 배포 문제를 해결할 수 있습니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="reading-the-event-log"></a>이벤트 로그 읽기  
+## <a name="read-the-event-log"></a>이벤트 로그 읽기  
  **이벤트 뷰어** 를 열고 확인하려는 이벤트를 필터링합니다.  
   
-#### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Windows Server 2003 및 Windows XP에서 이벤트 로그를 읽으려면  
+### <a name="to-read-the-event-log-in-windows-server-2003-and-windows-xp"></a>Windows Server 2003 및 Windows XP에서 이벤트 로그를 읽으려면  
   
 1.  제어판에서 **관리 도구**를 엽니다.  
   
@@ -76,15 +76,15 @@ ms.lasthandoff: 04/16/2018
   
  Office 솔루션을 제거한 후에도 예외 메시지는 이벤트 로그에 남아있습니다.  
   
- 참조를 표시 하거나 Office 솔루션을 실행 중일 때 예외 메시지 기록 [Office 프로젝트 디버깅](../vsto/debugging-office-projects.md) 및 [Office 프로젝트 디버깅](../vsto/debugging-office-projects.md)합니다.  
+ 참조를 표시 하거나 Office 솔루션을 실행 중일 때 예외 메시지 기록 [디버그 Office 프로젝트](../vsto/debugging-office-projects.md) 및 [디버그 Office 프로젝트](../vsto/debugging-office-projects.md)합니다.  
   
 ### <a name="localization"></a>지역화  
  예외 메시지의 언어는 Visual Studio Tools for Office Runtime 도구에 의해 결정됩니다. 예를 들어 최종 사용자의 컴퓨터에 일본어 언어 팩이 설치되어 있다면 예외 메시지는 일본어로 이벤트 로그에 기록됩니다.  
   
-## <a name="disabling-the-event-logger"></a>이벤트 로거를 사용하지 않도록 설정  
+## <a name="disable-the-event-logger"></a>이벤트로 거를 사용 하지 않도록 설정  
  기본적으로 이벤트 로거는 Office 솔루션을 설치하거나 제거할 때 사용됩니다. VSTO_EVENTLOGDISABLED 환경 변수를 “1”로 설정하여 이벤트 로거를 사용하지 않도록 설정할 수 있습니다.  
   
-#### <a name="to-disable-the-event-log"></a>이벤트 로그를 사용하지 않도록 설정하려면  
+### <a name="to-disable-the-event-log"></a>이벤트 로그를 사용하지 않도록 설정하려면  
   
 1.  제어판에서 **시스템**을 엽니다.  
   
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  **확인**을 클릭합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)   
  [Office 솔루션 배포 문제 해결](../vsto/troubleshooting-office-solution-deployment.md)  
   

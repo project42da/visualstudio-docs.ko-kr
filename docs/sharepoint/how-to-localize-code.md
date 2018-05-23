@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 07c9347bbfb42e3c2e20a1b4ecf6d852c567edbf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3b559239b537be4a57ff0815f67d8c50acb8b1ed
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-localize-code"></a>방법: 코드 지역화
   지역화 되지 않은 코드 하드 코드 된 문자열 값을 사용합니다. 에 대 한 호출으로 대체 코드 문자열을 지역화 하려면 <xref:System.Web.HttpContext.GetGlobalResourceObject%2A>, 지역화 된 리소스를 참조 하는 방법인 합니다.  
@@ -62,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
 11. 사용자에게 표시되는 코드에서 UI 텍스트, 오류 및 메시지 텍스트와 같은 하드 코딩된 모든 문자열을 찾습니다. 다음 구문을 사용하여 <xref:System.Web.HttpContext.GetGlobalResourceObject%2A> 메서드를 호출하여 이러한 문자열을 바꿉니다.  
   
-    ```  
+    ```csharp  
     HttpContext.GetGlobalResourceObject("Resource File Name", "String ID")  
     ```  
   

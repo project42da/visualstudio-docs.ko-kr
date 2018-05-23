@@ -15,18 +15,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 991d2c57da8a1fc45fba266cdafe38000cd3d594
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 30f466b1dd849f7c0288de38ead481dfa19995af
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="featureproperties-element"></a>FeatureProperties 요소
-  SharePoint에 배포 될 때 기능과 함께 제공 되는 속성 값의 컬렉션을 나타냅니다. 기능이 배포 된 후에 코드에서 속성 값을 액세스할 수 있습니다.  
+  SharePoint에 배포 될 때 기능과 함께 제공 되는 속성 값의 컬렉션입니다. 기능이 배포 된 후에 코드에서 속성 값을 액세스할 수 있습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <FeatureProperties>  
   <FeatureProperty.../>  
 </FeatureProperties>  
@@ -48,7 +48,7 @@ ms.lasthandoff: 04/16/2018
   
 |요소|설명|  
 |-------------|-----------------|  
-|[프로젝트 항목](../sharepoint/projectitem-element.md)|SharePoint 프로젝트 항목을 나타냅니다. .Spdata 파일의 필수 루트 요소입니다.|  
+|[프로젝트 항목](../sharepoint/projectitem-element.md)|SharePoint 프로젝트 항목을 나타냅니다. 이 요소는 필요한 루트 요소에는 `.spdata` 파일입니다.|  
   
 ## <a name="remarks"></a>설명  
  기능 속성에 대 한 자세한 내용은 참조 [패키징 및 배포 프로젝트 항목에는 정보 제공](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)합니다.  

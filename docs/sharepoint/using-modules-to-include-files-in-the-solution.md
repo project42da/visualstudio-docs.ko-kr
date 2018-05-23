@@ -17,11 +17,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9c11dd4ebd17b1ebef91c3d7752df7c15dd50da4
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f9389e5928c74e5ee60bee90b375671777f1b807
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="using-modules-to-include-files-in-the-solution"></a>모듈을 사용하여 솔루션에 파일 포함
   파일을 새 마스터 페이지 등의 파일 형식에 관계 없이 SharePoint 서버에 배포 하려는 경우가 있을 수 있습니다. 이 위해 사용할 수 있습니다 *모듈* (으로 다름 [!INCLUDE[vbprvb](../sharepoint/includes/vbprvb-md.md)] 코드 모듈). 모듈은 파일을 SharePoint 솔루션에 대 한 컨테이너입니다. 솔루션을 배포할 때 모듈에 있는 파일에는 SharePoint 서버에 지정 된 폴더에 복사 됩니다.  
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/16/2018
   
  모듈에 대 한 Elements.xml 파일의 예는 다음과 같습니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8"?>  
 <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
     <Module Name="Module1">  

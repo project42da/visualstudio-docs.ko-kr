@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 34975f93b719c759707110907a3c19dabbd661c1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 688c4d8d9193ec33f0dcb63923673826a453c9be
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-extending-server-explorer-to-display-web-parts"></a>연습: 서버 탐색기를 확장하여 웹 파트 표시
   Visual Studio에서 사용할 수 있습니다는 **SharePoint 연결** 의 노드 **서버 탐색기** SharePoint 사이트에서 구성 요소를 확인 합니다. 그러나 **서버 탐색기** 기본적으로 일부 구성 요소를 표시 하지 않습니다. 이 연습에서는 연장 됩니다 **서버 탐색기** SharePoint 사이트 각각 연결 된 웹 파트 갤러리에 표시 되도록 합니다.  
@@ -107,13 +107,11 @@ ms.lasthandoff: 04/16/2018
   
 3.  선택 대화 상자 맨 위에 있는 **.NET Framework 3.5** 버전의.NET Framework의 목록에 있습니다.  
   
-4.  
-  
-5.  프로젝트 템플릿 목록에서 선택 **클래스 라이브러리**, 프로젝트 이름을 **WebPartCommands**를 선택한 후는 **확인** 단추입니다.  
+4.  프로젝트 템플릿 목록에서 선택 **클래스 라이브러리**, 프로젝트 이름을 **WebPartCommands**를 선택한 후는 **확인** 단추입니다.  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 추가 **WebPartCommands** 프로젝트를 솔루션 기본 Class1 코드 파일을 엽니다.  
   
-6.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
+5.  프로젝트에서 Class1 코드 파일을 삭제 합니다.  
   
 ## <a name="configuring-the-projects"></a>프로젝트 구성  
  확장을 만드는 데 코드를 작성 하기 전에 코드 파일 및 어셈블리 참조를 추가 하 고 프로젝트 설정을 구성 해야 합니다.  

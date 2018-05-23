@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0fdd9df0d7c5b88b3fc4f19170be8494437fb2b7
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 3369fde3a9363951bf08b7af04ed35afc38a45c5
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="use-command-line-parameters-to-install-visual-studio-2017"></a>명령줄 매개 변수를 사용하여 Visual Studio 2017 설치
 
@@ -84,8 +84,8 @@ ms.lasthandoff: 05/07/2018
 | `--includeRecommended` | **선택 사항**: 설치된 모든 작업에 대한 권장 구성 요소를 포함하지만, 선택적 구성 요소는 포함하지 않습니다. 워크로드는 `--allWorkloads` 또는 `--add`를 사용하여 지정됩니다. |
 | `--includeOptional` | **선택 사항**: 레이아웃에 포함되는 모든 워크로드에 대한 권장 *및* 선택적 명령을 포함합니다. 워크로드는 `--add`를 사용하여 지정됩니다.  |
 | `--keepLayoutVersion` | **15.3의 새로운 기능, 선택 사항**: 레이아웃의 버전을 업데이트하지 않고 레이아웃에 변경 내용을 적용합니다. |
-| `--verify` | **15.3의 새로운 기능, 선택 사항**: 레이아웃의 콘텐츠를 확인합니다.  손상되거나 누락된 파일이 모두 나열됩니다. |
-| `--fix` | **15.3의 새로운 기능, 선택 사항**: 레이아웃의 콘텐츠를 확인합니다.  손상되거나 누락된 파일이 있는 경우 다시 다운로드됩니다.  레이아웃을 수정하려면 인터넷 액세스가 필요합니다. |
+| `--verify` | **15.3의 새로운 기능, 선택 사항**: 레이아웃의 콘텐츠를 확인합니다. 손상되거나 누락된 파일이 모두 나열됩니다. |
+| `--fix` | **15.3의 새로운 기능, 선택 사항**: 레이아웃의 콘텐츠를 확인합니다.  손상되거나 누락된 파일이 있는 경우 다시 다운로드됩니다. 레이아웃을 수정하려면 인터넷 액세스가 필요합니다. |
 | `--clean <one or more paths to catalogs>` | **15.3의 새로운 기능, 선택 사항**: 최신 버전으로 업데이트된 레이아웃에서 이전 버전의 구성 요소를 제거합니다. |
 
 | **고급 설치 옵션** | **설명** |
@@ -103,7 +103,7 @@ ms.lasthandoff: 05/07/2018
 | `--noWeb` | **15.3의 새로운 기능, 선택 사항**: 설치 프로그램이 이제 설치하는 콘텐츠를 인터넷에서 다운로드합니다.  설치되는 모든 콘텐츠를 오프라인 레이아웃에서 사용할 수 있어야 합니다.  레이아웃에 콘텐츠에 없으면 설치에 실패합니다.  자세한 내용은 [네트워크 설치에서 배포](create-a-network-installation-of-visual-studio.md)를 참조하세요. |
 | `--path <name>=<path>` | **15.7의 새로운 기능, 선택 사항**: 설치에 대해 사용자 지정 설치 경로를 지정하는 데 사용합니다. 지원되는 경로 이름은 공유, 캐시 및 설치입니다. |
 | `--path cache=<path>` | **15.7의 새로운 기능, 선택 사항**: 설치 파일을 다운로드하는 데 사용자가 지정한 위치를 사용합니다. 이 위치는 처음 Visual Studio를 설치할 때만 설정할 수 있습니다. 예: `--path cache="C:\VS\cache"` |
-| `--path shared=<path>` | **15.7의 새로운 기능, 선택 사항**: Visual Studio 병렬 설치를 위한 공유 파일을 포함합니다. 일부 도구 및 SDK가 이 드라이브의 위치에 설치되지만 나머지는 이 설정을 재정의하고 다른 드라이브에 설치될 수 있습니다. 예: `--path shared="C:\VS\shared"` |
+| `--path shared=<path>` | **15.7의 새로운 기능, 선택 사항**: Visual Studio 병렬 설치를 위한 공유 파일을 포함합니다. 일부 도구 및 SDK가 이 드라이브의 위치에 설치되지만 나머지는 이 설정을 재정의하고 다른 드라이브에 설치될 수 있습니다. 예: `--path shared="C:\VS\shared"` <br><br>중요: 이는 Visual Studio를 설치 처음으로 설치할 때 한 번만 설정하면 됩니다. |
 | `--path install=<path>` | **15.7의 새로운 기능, 선택 사항**: `–-installPath`에 해당합니다. 특히 `--installPath "C:\VS"`와 `--path install="C:\VS"`는 같습니다. 이 중 하나만 한 번에 사용할 수 있습니다. |
 
 ## <a name="list-of-workload-ids-and-component-ids"></a>작업 ID 및 구성 요소 ID 목록
@@ -114,20 +114,20 @@ Visual Studio 제품별로 정렬된 워크로드 및 구성 요소 ID 목록은
 
 | **언어 로캘** | **언어** |
 | ----------------------- | --------------- |
-| cs-CZ | 체코어 |
-| de-DE | 독일어 |
-| ko-KR | 영어 |
-| es-ES | 스페인어 |
-| fr-FR | 프랑스어 |
-| it-IT | 이탈리아어 |
-| ja-JP | 일본어 |
-| ko-KR | 한국어 |
-| pl-PL | 폴란드어 |
-| pt-BR | 포르투갈어 - 브라질 |
-| ru-RU | 러시아어 |
-| tr-TR | 터키어 |
-| zh-CN | 중국어 - 간체 |
-| zh-TW | 중국어 - 번체 |
+| Cs-cz | 체코어 |
+| De-de | 독일어 |
+| En-us | 영어 |
+| Es-es | 스페인어 |
+| Fr-fr | 프랑스어 |
+| It-it | 이탈리아어 |
+| Ja-jp | 일본어 |
+| Ko-kr | 한국어 |
+| Pl-pl | 폴란드어 |
+| Pt-br | 포르투갈어 - 브라질 |
+| Ru-ru | 러시아어 |
+| Tr-tr | 터키어 |
+| Zh-cn | 중국어 - 간체 |
+| Zh-tw | 중국어 - 번체 |
 
 ## <a name="error-codes"></a>오류 코드
 

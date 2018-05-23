@@ -15,18 +15,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 14e5d2cfd526d228d84ac6ff084e3873224c08c7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e8cf6d3d168e3d12d74a9773ccfb3312a29046f7
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="safecontrol-element"></a>SafeControl 요소
   ASPX 컨트롤 또는 SharePoint 사이트에서 모든 ASPX 페이지에 액세스 하려면 모든 사용자에 대 한 안전한 것으로 지정 하는 웹 파트를 나타냅니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <SafeControl Assembly = "Name of assembly that contains the safe control"  
     IsSafe = "true/false"  
     IsSafeAgainstScript = "true/false"  

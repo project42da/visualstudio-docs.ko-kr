@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e690d18bae72b59234f2f90cbcf903b9941df7d6
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6b1d81f200fde885a25aa367e700e61399af5bab
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>연습: 항목 템플릿, 1 부와 사용자 지정 작업 프로젝트 항목 만들기
   항목 형식 사용자 고유의 프로젝트를 만들어 Visual Studio에서 SharePoint 프로젝트 시스템을 확장할 수 있습니다. 이 연습에서는 SharePoint 사이트에서 사용자 지정 동작을 만들려면 SharePoint 프로젝트에 추가할 수 있는 프로젝트 항목을 만듭니다. 메뉴 항목을 추가 하는 사용자 지정 작업은 **사이트 작업** SharePoint 사이트의 메뉴.  
@@ -201,7 +201,7 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  Visual C# 항목 템플릿에 대 한 다음 XML은입니다. Visual Basic 항목 템플릿을 만드는 경우의 값을 바꿉니다는 `ProjectType` 요소 `VisualBasic`합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <VSTemplate Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" Type="Item">  
       <TemplateData>  
@@ -230,7 +230,7 @@ ms.lasthandoff: 04/16/2018
   
 7.  CustomAction.spdata 파일에 다음 XML을 추가 하 고 저장 하 고 파일을 닫습니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <ProjectItem Type="Contoso.CustomAction" DefaultFile="Elements.xml"   
      xmlns="http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel">  
@@ -250,7 +250,7 @@ ms.lasthandoff: 04/16/2018
   
 11. Elements.xml 파일의 내용을 다음 XML로 바꿉니다 하 고 저장 하 고 파일을 닫습니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8" ?>  
     <Elements Id="$guid8$" xmlns="http://schemas.microsoft.com/sharepoint/">  
       <CustomAction Id="Replace this with a GUID or some other unique string"  
@@ -274,13 +274,13 @@ ms.lasthandoff: 04/16/2018
   
 15. 다음 찾기 `VSTemplate` 프로젝트 파일의 요소입니다.  
   
-    ```  
+    ```xml  
     <VSTemplate Include="ItemTemplate.vstemplate">  
     ```  
   
 16. 이 대체 `VSTemplate` 다음 XML 및 저장 한 다음 닫기를 파일 요소입니다.  
   
-    ```  
+    ```xml  
     <VSTemplate Include="ItemTemplate.vstemplate">  
       <OutputSubPath>SharePoint\SharePoint14</OutputSubPath>  
     </VSTemplate>  
@@ -400,25 +400,25 @@ ms.lasthandoff: 04/16/2018
   
     -   에 `CustomAction` 요소를 설정의 `Id` 다음 예제와 같이 특성을 GUID 또는 다른 고유 문자열:  
   
-        ```  
+        ```xml  
         Id="cd85f6a7-af2e-44ab-885a-0c795b52121a"  
         ```  
   
     -   에 `CustomAction` 요소를 설정의 `Title` 다음 예제와 같이 특성:  
   
-        ```  
+        ```xml  
         Title="SharePoint Developer Center"  
         ```  
   
     -   에 `CustomAction` 요소를 설정의 `Description` 다음 예제와 같이 특성:  
   
-        ```  
+        ```xml  
         Description="Opens the SharePoint Developer Center Web site."  
         ```  
   
     -   에 `UrlAction` 요소를 설정의 `Url` 다음 예제와 같이 특성:  
   
-        ```  
+        ```xml  
         Url="http://msdn.microsoft.com/sharepoint/default.aspx"  
         ```  
   

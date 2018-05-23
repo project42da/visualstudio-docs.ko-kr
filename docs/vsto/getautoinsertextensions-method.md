@@ -1,5 +1,5 @@
 ---
-title: GetAutoInsertExtensions 메서드 | Microsoft Docs
+title: GetAutoInsertExtensions 메서드
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,11 +13,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 67f6bfcb0ee38acf9abb604f28fa95eeaa605fde
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f8573576b40afabb5ec568a0c471e7b1d79560ba
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getautoinsertextensions-method"></a>GetAutoInsertExtensions 메서드
   디버깅 하는 동안 자동으로 삽입 될 Office 용 앱에 대 한 정보를 가져옵니다.  
@@ -26,13 +26,13 @@ ms.lasthandoff: 04/16/2018
   
 ## <a name="syntax"></a>구문  
   
-```  
+```c  
 HRESULT GetAutoInsertExtensions(  
     [out, retval] SAFEARRAY(BSTR)* psaExtensionNames  
 );  
 ```  
   
-#### <a name="parameters"></a>매개 변수  
+### <a name="parameters"></a>매개 변수  
   
 |매개 변수|설명|  
 |---------------|-----------------|  
@@ -42,6 +42,6 @@ HRESULT GetAutoInsertExtensions(
  메서드가 성공적으로 완료되었는지 여부를 나타내는 HRESULT 값입니다.  
   
 ## <a name="remarks"></a>설명  
- 각 응용 프로그램을 삽입할 수 있는 Office 용 HKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer 아래에 있는 값에 해당 하는 Office 응용 프로그램 확장 이름으로 반환 됩니다. 호스트는 이러한 레지스트리 값을 조회 하 고 확장을 자동으로 삽입 해야 합니다.  
+ 삽입 될 Office에 대 한 각 응용 프로그램 아래에 있는 값에 해당 하는 Office 응용 프로그램 확장 이름으로 반환 됩니다 **HKEY_CURRENT_USER\Software\Microsoft\Office\WEF\Developer**합니다. 호스트는 이러한 레지스트리 값을 조회 하 고 확장을 자동으로 삽입 해야 합니다.  
   
   

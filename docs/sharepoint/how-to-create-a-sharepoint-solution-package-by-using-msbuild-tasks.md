@@ -17,11 +17,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 629b63b8645f1b5ebd84d25a04a4cec4e8bca6a3
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 392724510e3145450cbea8ee70d23037ded073a1
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-create-a-sharepoint-solution-package-by-using-msbuild-tasks"></a>방법: MSBuild 작업을 사용하여 SharePoint 솔루션 패키지 만들기
   빌드, 정리 및 명령줄 MSBuild 작업을 사용 하 여 개발 컴퓨터에서 SharePoint 패키지 (.wsp) 유효성을 검사할 수 있습니다. 또한 빌드 컴퓨터에서 Team Foundation Server를 사용 하 여 빌드 프로세스를 자동화 하기 이러한 명령을 사용할 수 있습니다.  
@@ -36,13 +36,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  프로젝트에 대 한 패키지를 만들려면 다음 명령을 입력 합니다. 대체 *ProjectFileName* 프로젝트의 이름으로 합니다.  
   
-    ```  
+    ```cmd  
     msbuild /t:Package ProjectFileName  
     ```  
   
      예를 들어 ListDefinition1 라는 SharePoint 프로젝트를 패키지 하려면 다음 명령 중 하나를 실행할 수 있습니다.  
   
-    ```  
+    ```cmd  
     msbuild /t:Package ListDefinition1.vbproj  
     msbuild /t:Package ListDefinition1.csproj  
     ```  
@@ -57,13 +57,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  프로젝트에 대 한 패키지를 정리 하려면 다음 명령을 입력 합니다. 대체 *ProjectFileName* 프로젝트의 이름으로 합니다.  
   
-    ```  
+    ```cmd  
     msbuild /t:CleanPackage ProjectFileName  
     ```  
   
      예를 들어 ListDefinition1 라는 SharePoint 프로젝트를 정리 하려면 다음 명령 중 하나를 실행할 수 있습니다.  
   
-    ```  
+    ```cmd  
     msbuild /t:CleanPackage ListDefinition1.vbproj  
     msbuild /t:CleanPackage ListDefinition1.csproj  
     ```  
@@ -78,13 +78,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  프로젝트에 대 한 패키지의 유효성을 검사 하려면 다음 명령을 입력 합니다. 대체 *ProjectFileName* 프로젝트의 이름으로 합니다.  
   
-    ```  
+    ```cmd  
     msbuild /t:ValidatePackage ProjectFileName  
     ```  
   
      예를 들어 ListDefinition1 라는 SharePoint 프로젝트의 유효성을 검사 하려면 다음 명령 중 하나를 실행할 수 있습니다.  
   
-    ```  
+    ```cmd  
     msbuild /t:ValidatePackage ListDefinition1.vbproj  
     msbuild /t:ValidatePackage ListDefinition1.csproj  
     ```  
@@ -99,13 +99,13 @@ ms.lasthandoff: 04/16/2018
   
 3.  프로젝트에 대 한 패키지의 속성을 설정 하려면 다음 명령을 입력 합니다. 대체 *PropertyName* 속성을 설정 하려면을 사용 합니다.  
   
-    ```  
+    ```cmd  
     msbuild /property:PropertyName=Value  
     ```  
   
      예를 들어 경고 수준을 설정 하려면 다음 명령을 실행할 수 있습니다.  
   
-    ```  
+    ```cmd  
     msbuild /property:WarningLevel = 2  
     ```  
   

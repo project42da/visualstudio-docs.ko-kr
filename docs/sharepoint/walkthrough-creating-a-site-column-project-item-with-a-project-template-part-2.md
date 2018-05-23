@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: e080c981715e746b8d24e2b2959fa1d5bd97029b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0027b49cd371aaec00d2bcfb609a694f14dc4869
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부
   사용자 지정 형식의 SharePoint 프로젝트 항목을 정의 하 고 Visual Studio에서 프로젝트 템플릿을 사용 하 여 연결 하는 마법사를 제공 수도 있습니다. 서식 파일 프로젝트 항목이 포함 된 새 프로젝트를 만들려면 사용할 때 사용자 로부터 정보를 수집 하는 마법사를 사용할 수 있습니다. 수집 하는 정보는 프로젝트 항목을 초기화 데 사용할 수 있습니다.  
@@ -239,7 +239,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ProjectTemplateWizard` 에서 네임 스페이스는 `WizardWindow` 클래스 이름에는 `x:Class` 특성은 `Window` 요소입니다. XAML의 첫 번째 줄에 있는이 요소가입니다. 완료 되 면 첫 번째 줄은 다음 예제에서는 같습니다.  
   
-    ```  
+    ```xml  
     <Window x:Class="WizardWindow"  
     ```  
   
@@ -260,7 +260,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ProjectTemplateWizard` 에서 네임 스페이스는 `Page1` 클래스 이름에는 `x:Class` 특성은 `UserControl` 요소입니다. XAML의 첫 번째 줄에입니다. 완료 되 면 첫 번째 줄은 다음과 같습니다.  
   
-    ```  
+    ```xml  
     <UserControl x:Class="Page1"  
     ```  
   
@@ -281,7 +281,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  Visual Basic 프로젝트를 개발 하는 경우 제거는 `ProjectTemplateWizard` 에서 네임 스페이스는 `Page2` 클래스 이름에는 `x:Class` 특성은 `UserControl` 요소입니다. XAML의 첫 번째 줄에입니다. 완료 되 면 첫 번째 줄은 다음과 같습니다.  
   
-    ```  
+    ```xml  
     <UserControl x:Class="Page2"  
     ```  
   
@@ -332,7 +332,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  아래는 **SiteColumnProjectTemplate** 노드를 SiteColumnProjectTemplate.vstemplate 파일을 연 후 여기에서 다음 요소를 제거 합니다.  
   
-    ```  
+    ```xml  
     <ProjectItem ReplaceParameters="false" TargetFileName="key.snk">key.snk</ProjectItem>  
     ```  
   
@@ -340,16 +340,16 @@ ms.lasthandoff: 04/16/2018
   
 5.  아래는 **SiteColumnProjectTemplate** 노드를 ProjectTemplate.csproj 또는 ProjectTemplate.vbproj 파일을 연 후 다음을 제거 `PropertyGroup` 여기에서 요소입니다.  
   
-    ```  
+    ```xml  
     <PropertyGroup>  
       <SignAssembly>true</SignAssembly>  
       <AssemblyOriginatorKeyFile>key.snk</AssemblyOriginatorKeyFile>  
     </PropertyGroup>  
-    ```  
+    ``` 
   
 6.  다음 제거 `None` 요소입니다.  
   
-    ```  
+    ```xml  
     <None Include="key.snk" />  
     ```  
   
@@ -370,7 +370,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  에 **서명** 탭을는 **어셈블리에 서명** 확인란 합니다.  
   
-3.  에 **강력한 이름 키 파일 선택** 목록에서 선택  **\<새로 만들기 … >**합니다.  
+3.  에 **강력한 이름 키 파일 선택** 목록에서 선택  **\<새로 만들기 … >** 합니다.  
   
 4.  에 **강력한 이름 키 만들기** 대화 상자 선택을 취소 새 키 파일에 대 한 이름을 입력 합니다는 **암호로 내 키 파일 보호** 확인란을 선택한 후는 **확인** 단추입니다.  
   
@@ -384,7 +384,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  다음 명령을 실행 대체 *PathToWizardAssembly* 빌드된 ProjectTemplateWizard.dll 어셈블리 개발 컴퓨터에 ProjectTemplateWizard 프로젝트에 대 한 전체 경로:  
   
-    ```  
+    ```cmd  
     sn.exe -T PathToWizardAssembly  
     ```  
   
@@ -398,7 +398,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  파일의 끝에 다음 추가 `WizardExtension` 사이 요소는 `</TemplateContent>` 및 `</VSTemplate>` 태그입니다. 대체는 *토큰* 의 값은 `PublicKeyToken` 이전 절차에서 가져온 공개 키 토큰을 사용 하 여 특성입니다.  
   
-    ```  
+    ```xml  
     <WizardExtension>  
       <Assembly>ProjectTemplateWizard, Version=1.0.0.0, Culture=neutral, PublicKeyToken=your token</Assembly>  
       <FullClassName>ProjectTemplateWizard.SiteColumnProjectWizard</FullClassName>  
@@ -418,7 +418,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  SiteColumnProjectTemplate 프로젝트에서 Elements.xml 파일의 내용을 다음 XML로 대체 합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?>  
     <Elements xmlns="http://schemas.microsoft.com/sharepoint/">  
       <Field ID="{$guid5$}"   

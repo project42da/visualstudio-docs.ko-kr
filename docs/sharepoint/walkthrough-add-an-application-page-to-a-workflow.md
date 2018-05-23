@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 97c720ded65e46e85f8d9f20f9f509b31f2cebbb
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8ed3278a237633cbf7f15806fa0efa9b3bc33bb6
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-add-an-application-page-to-a-workflow"></a>연습: 워크플로에 응용 프로그램 페이지 추가
   이 연습에는 워크플로 프로젝트에는 워크플로에서 파생 된 데이터를 표시 하는 응용 프로그램 페이지를 추가 하는 방법을 보여 줍니다. 이 항목에서 설명 하는 프로젝트에 기반 [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)합니다.  
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  에 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 의 ApplicationPage1.aspx, 대체 된 `PlaceHolderMain` 섹션을 다음:  
   
-    ```  
+    ```aspx-csharp  
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">  
         <asp:Label ID="Label1" runat="server" Font-Bold="True"   
             Text="Expenses that exceeded allotted amount" Font-Size="Medium"></asp:Label>  
@@ -92,7 +92,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  대체 하 여 응용 프로그램 페이지에 제목 추가 `PlaceHolderPageTitleInTitleArea` 섹션을 다음:  
   
-    ```  
+    ```aspx-csharp  
     <asp:Content ID="PageTitleInTitleArea" ContentPlaceHolderID="PlaceHolderPageTitleInTitleArea" runat="server" >  
         Expense Report Summary  
     </asp:Content>  

@@ -17,11 +17,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2e887109c1edb6bad2ee130c6623d5b7538167ca
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 48d18ef87bdda3abb147310bd49738a10d31040f
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="getting-started-sharepoint-development-in-visual-studio"></a>시작(Visual Studio에서의 SharePoint 개발)
   이 섹션은 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 를 사용하여 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 및 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)]을 활용하는 SharePoint 솔루션 개발을 시작하는 데 도움이 됩니다.  
@@ -36,7 +36,6 @@ ms.lasthandoff: 04/16/2018
 |-----------|-----------------|  
 |[SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)|SharePoint용으로 개발하기 위한 소프트웨어 요구 사항을 보여 줍니다.|  
 |[SharePoint 오류에 대한 추가 정보](../sharepoint/additional-information-for-sharepoint-errors.md)|SharePoint 개발 및 문제 해결 중에 도움말을 찾을 수 있는 위치를 설명합니다.|  
-|||  
   
 ## <a name="related-sections"></a>관련 단원  
   

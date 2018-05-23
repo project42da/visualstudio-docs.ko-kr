@@ -12,17 +12,21 @@ dev_langs:
 - VB
 ms.workload:
 - multiple
-ms.openlocfilehash: 70de979f1af431b85bc9fb2f07feec93486624ee
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: becddc01dbe668fbdb129fd6e350f28e054408b7
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="common-quick-actions"></a>일반적인 빠른 작업
 
 이 항목의 섹션에는 C# 및 Visual Basic 코드 모두에 적용할 수 있는 일반적인 **빠른 작업** 중 일부가 나와 있습니다. 이러한 작업은 컴파일러 진단 또는 Visual Studio의 기본 제공 [.NET Compiler Platform 분석기](../code-quality/roslyn-analyzers-overview.md)에 대한 *코드 수정*입니다.
 
 ## <a name="actions-that-fix-errors"></a>오류를 수정하는 작업
+
+이 섹션의 빠른 작업은 빌드 실패를 유발하는 코드 오류를 수정합니다. 빠른 작업을 사용하여 코드 줄의 오류를 해결할 수 있는 경우 여백이나 빨간색 물결선 아래에 빨간색 'x' 표시가 있는 전구 모양 아이콘이 표시됩니다.
+
+![빠른 작업 오류 아이콘 및 메뉴](media/error-light-bulb-with-code.png)
 
 ### <a name="correct-misspelled-symbol-or-keyword"></a>철자가 틀린 기호 또는 키워드 수정
 
@@ -94,44 +98,6 @@ private void MyMethod()
 |  오류 ID | 해당 언어 |  지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | CS8300, BC37284  | C# 및 Visual Basic | Visual Studio 2017 15.3 버전 |
-
-### <a name="make-method-synchronous"></a>메서드 동기화
-
-메서드에서 `async` 또는 `Async` 키워드를 사용하면 해당 메서드 내 어딘가에서 `await` 또는 `Await` 키워드도 사용될 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 `async` 또는 `Async` 키워드를 제거하고 반환 형식을 변경하여 메서드를 동기화할 수 있음을 나타냅니다. [빠른 작업] 메뉴에서 **Make method synchronous**(메서드 동기화) 옵션을 사용합니다.
-
-```csharp
-// Before
-async Task<int> MyAsyncMethod()
-{
-    return 3;
-}
-
-// Make method synchronous
-
-// After
-int MyAsyncMethod()
-{
-    return 3;
-}
-```
-
-```vb
-' Before
-Async Function MyAsyncMethod() As Task(Of Integer)
-    Return 3
-End Function
-
-' Make method synchronous
-
-' After
-Function MyAsyncMethod() As Integer
-    Return 3
-End Function
-```
-
-|  오류 ID | 해당 언어 |  지원되는 버전 |
-| ------- | -------------------- | ----------------  |
-| CS1998, BC42356 | C# 및 Visual Basic | Visual Studio 2015 업데이트 2 |
 
 ### <a name="make-method-asynchronous"></a>메서드 비동기화
 
@@ -953,6 +919,44 @@ Console.WriteLine($"{x} {y}");
 | 진단 ID | 해당 언어 | 지원되는 버전 |
 | ------- | -------------------- | ----------------  |
 | IDE0042 | C# 7.0+ | Visual Studio 2017 v. 15.5 |
+
+### <a name="make-method-synchronous"></a>메서드 동기화
+
+메서드에서 `async` 또는 `Async` 키워드를 사용하면 해당 메서드 내 어딘가에서 `await` 또는 `Await` 키워드도 사용될 것으로 예상됩니다.  그러나 그렇지 않을 경우 빠른 작업은 `async` 또는 `Async` 키워드를 제거하고 반환 형식을 변경하여 메서드를 동기화할 수 있음을 나타냅니다. [빠른 작업] 메뉴에서 **Make method synchronous**(메서드 동기화) 옵션을 사용합니다.
+
+```csharp
+// Before
+async Task<int> MyAsyncMethod()
+{
+    return 3;
+}
+
+// Make method synchronous
+
+// After
+int MyAsyncMethod()
+{
+    return 3;
+}
+```
+
+```vb
+' Before
+Async Function MyAsyncMethod() As Task(Of Integer)
+    Return 3
+End Function
+
+' Make method synchronous
+
+' After
+Function MyAsyncMethod() As Integer
+    Return 3
+End Function
+```
+
+|  오류 ID | 해당 언어 |  지원되는 버전 |
+| ------- | -------------------- | ----------------  |
+| CS1998, BC42356 | C# 및 Visual Basic | Visual Studio 2015 업데이트 2 |
 
 ## <a name="see-also"></a>참고 항목
 

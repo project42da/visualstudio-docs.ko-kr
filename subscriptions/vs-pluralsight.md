@@ -9,11 +9,11 @@ description: Visual Studio 구독에 포함된 Pluralsight 교육 구독에 대�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: e3c640bff98f0ff8453ef1df62f594639b69c243
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: b4782c1da48b21fffcb0ebc5abc05b56a8116ae0
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="pluralsight-training-benefits-in-visual-studio-subscriptions"></a>Visual Studio 구독의 Pluralsight 교육 혜택
 
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/04/2018
 | Visual Studio Enterprise(NFR<sup>1</sup>) | 프로그램                                       | 사용할 수 없음                                  |해당 없음|
 <sup>1</sup> *포함: NFR(전매금지), VSIP(Visual Studio 업계 파트너), BizSpark, MCT Software & Services Developer, MCT Software & Services, MVP(Microsoft Valued Partner), RD(Region Director), MPN(Microsoft Partner Network), FTE, Imagine.*
 
-<sup>2</sup>  *Pluralsight 구독이 만료된 후에는 세 가지 학습 영역 중 하나의 50개 Pluralsight 강좌에 대한 12개월 액세스 권한을 받을 수 있습니다.  Pluralsight 혜택은 개인에 한해 일회용이라는 점입니다.  구독자가 이 혜택을 사용하면 다시 설정되지 않습니다. 자세한 내용은 아래 질문과 대답을 참조 하십시오.*
+<sup>2</sup>  *Pluralsight 혜택은 개인에 한해 일회용이라는 점입니다.  구독자가 이 혜택을 사용하면 다시 설정되지 않습니다. 자세한 내용은 아래 질문과 대답을 참조하세요.  Pluralsight 구독이 만료된 후에는 세 가지 학습 영역 중 하나의 50개 Pluralsight 강좌에 대한 12개월 액세스 권한을 받을 수 있습니다.*
 
 어떤 구독을 사용하고 있는지 확실하지 않나요?  자신의 이메일 주소에 할당된 모든 구독을 보려면 [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)에 연결합니다. 일부 구독이 표시되지 않으면 하나 이상이 다른 전자 메일 주소에 할당되어 있을 수 있습니다.  해당 구독을 보려면 해당 전자 메일 주소로 로그인해야 합니다. 
 

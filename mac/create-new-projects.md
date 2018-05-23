@@ -1,15 +1,15 @@
 ---
-title: Mac용 Visual Studio에서 새 프로젝트 및 솔루션 만들기
+title: 새 프로젝트 및 솔루션 만들기
 description: 이 문서에서는 Mac용 Visual Studio에서 프로젝트와 솔루션을 만드는 방법을 설명합니다.
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 5880BB10-0A12-47E2-8A82-7A2D59C4D579
-ms.openlocfilehash: 327d0a51efd312c1a2b2909c90ff7668a1083529
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 948d5d5bba49571d4b4a73d4ba47a77b377d8b11
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="creating-new-projects-and-solutions"></a>새 프로젝트 및 솔루션 만들기
 
@@ -33,7 +33,7 @@ ms.lasthandoff: 05/07/2018
 
 Visual Studio의 방문 페이지에는 작업 중인 최근 프로젝트 목록이 표시됩니다.
 
- ![](media/create-new-projects-recent.png)
+ ![시작 페이지의 최신 솔루션 섹션](media/create-new-projects-recent.png)
 
 필터 상자를 사용하여 이 목록을 필터링하거나 목록에서 개별 항목을 제거할 수 있습니다. 
  

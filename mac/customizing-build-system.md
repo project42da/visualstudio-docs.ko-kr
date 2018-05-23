@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 04/14/2017
 ms.assetid: 6958B102-8527-4B40-BC65-3505DB63F9D3
-ms.openlocfilehash: e999c9c68a534611aa1db6e571594d11fc20201e
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 16f14d1acb31612d2997937b9aa34f918b6376d6
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="customizing-the-build-system"></a>빌드 시스템 사용자 지정
 
@@ -28,17 +28,17 @@ MSBuild는 프로젝트 파일이라는 XML 파일을 사용합니다. 이 파�
 
 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **찾기에 표시**를 선택하여 MSBuild 파일을 찾습니다. 찾기 창에는 다음 이미지와 같이 `.csproj` 파일을 비롯하여 프로젝트와 관련된 모든 파일과 폴더가 표시됩니다.
 
-![](media/customizing-build-system-image1.png)
+![Finder에서 csproj 위치](media/customizing-build-system-image1.png)
 
 Mac용 Visual Studio의 새 탭에서 `.csproj`를 표시하려면 프로젝트 이름을 마우스 오른쪽 단추로 클릭하고 **도구 > 파일 편집**으로 이동합니다.
 
-![](media/customizing-build-system-image2.png)
+![원본 편집기에서 csproj 열기](media/customizing-build-system-image2.png)
 
 ### <a name="composition-of-the-msbuild-file"></a>MSBuild 파일의 컴퍼지션
 
 모든 MSBuild 파일에는 다음과 같이 필수 루트 `Project` 요소가 포함되어 있습니다.
 
-```
+```xml
 <?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 </Project>
@@ -46,7 +46,7 @@ Mac용 Visual Studio의 새 탭에서 `.csproj`를 표시하려면 프로젝트 
 
 일반적으로 프로젝트는 `.targets` 파일도 가져옵니다. 이 파일에는 다양한 파일을 처리하고 빌드하는 방법을 설명하는 많은 규칙이 포함되어 있습니다. 가져오기는 일반적으로 `proj` 파일의 아래쪽에 표시되며, C# 프로젝트의 경우 다음과 같이 표시됩니다.
 
-```
+```xml
 <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
 ```
 
@@ -64,7 +64,7 @@ PropertyGroup을 사용하여 설정되며, 임의 개수의 속성을 포함하
 
 예를 들어, 간단한 콘솔 응용 프로그램의 PropertyGroup은 다음 XML과 같이 표시될 수 있습니다.
 
-```
+```xml
 <PropertyGroup>
         <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
         <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
@@ -86,7 +86,7 @@ PropertyGroup을 사용하여 설정되며, 임의 개수의 속성을 포함하
 
 예를 들어, 다음 코드 조각은 iOS 시작 화면을 만듭니다. 시작 화면에는 사양이 이미지 경로로 지정된 빌드 형식 `BundleResource`가 있습니다.
 
-```
+```xml
  <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
     <BundleResource Include="Resources\Default%402x.png" />
@@ -96,7 +96,7 @@ PropertyGroup을 사용하여 설정되며, 임의 개수의 속성을 포함하
     <BundleResource Include="Resources\Default-Landscape%402x.png" />
   </ItemGroup>
  ```
- 
+
  `@()` 구문을 사용하여 식에서 항목 집합을 참조할 수 있습니다. 예를 들어 `@(BundleResource)`는 모든 BundleResource 항목을 의미하는 BundleResource 항목 집합으로 평가됩니다. 이 형식의 항목이 없는 경우 오류 없이 비어 있습니다.
 
 ## <a name="resources-for-learning-msbuild"></a>MSBuild 학습용 리소스
@@ -105,5 +105,3 @@ PropertyGroup을 사용하여 설정되며, 임의 개수의 속성을 포함하
 
 * [MSDN - 개요](https://msdn.microsoft.com/library/dd393574.aspx)
 * [MSDN - 개념](https://msdn.microsoft.com/library/dd637714.aspx)
-
-

@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3b54a8fa30ef5eafcc5ebce5c81cc7b80be6fb6
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: a68e7d039fe0b60faf42ea319bb3a3bd4f888d3b
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Visual Studio 게시 도구를 사용 하 여 로컬 폴더에 웹 앱 또는.NET Core 응용 프로그램 배포
 
@@ -72,6 +72,6 @@ ms.lasthandoff: 05/10/2018
 
 ## <a name="next-steps"></a>다음 단계
 
-- [게시 도구를 사용하여 .NET Core 응용 프로그램 배포](/dotnet/core/deploying/deploy-with-vs)
-- [Microsoft Store(데스크톱 브리지)의 데스크톱 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
-- (.NET) [.NET Framework 및 응용 프로그램 배포](/dotnet/framework/deployment/)
+- [게시 도구를 사용하여 .NET Core 응용 프로그램 배포](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- [Microsoft Store(데스크톱 브리지)의 데스크톱 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+- (.NET) [.NET Framework 및 응용 프로그램 배포...](/dotnet/framework/deployment/)

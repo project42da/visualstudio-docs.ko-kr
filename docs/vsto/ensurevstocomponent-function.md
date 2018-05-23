@@ -1,5 +1,5 @@
 ---
-title: EnsureVSTOComponent 함수 | Microsoft Docs
+title: EnsureVSTOComponent 함수
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -13,18 +13,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5561d3c046c083c1495b858d36f6c867050ed842
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 20c4e363b11647609b67a898878dd4b4e59ba180
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ensurevstocomponent-function"></a>EnsureVSTOComponent 함수
   이 API는 Office 인프라를 지원 하며 사용자 코드에서 직접 사용할 되지 않습니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```c  
 HRESULT EnsureVSTOComponent(  
     IVSTProject *pProject  
 );  

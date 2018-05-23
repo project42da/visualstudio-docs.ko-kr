@@ -1,27 +1,39 @@
 ---
 title: Subversion 리포지토리 설정
-description: Mac용 Visual Studio에서 Git 및 Subversion 사용
+description: Mac용 Visual Studio에서 Subversion 사용
 author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 0D58FB37-530E-495B-BED6-FD499477A9B6
-ms.openlocfilehash: f21106ea020118eb1facef9f7ac64a080015d621
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: e5f395511ad3b2b3cc4568a4d701ca5dbcc02736
+ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/10/2018
 ---
 # <a name="setting-up-a-subversion-repository"></a>Subversion 리포지토리 설정
 
-Subversion은 중앙 버전 제어 시스템입니다. 즉, 모든 파일과 수정 버전을 포함하는 단일 서버가 있으며 사용자는 여기에서 임의의 파일 버전을 체크 아웃할 수 있습니다. 원격 Subversion 리포지토리에서 파일을 체크 아웃하면 사용자는 해당 시점을 기준으로 리포지토리의 스냅숏을 가져옵니다.
+Subversion은 중앙 집중화된 _버전 제어 시스템_이므로, 모든 파일과 수정 버전을 포함하는 단일 서버가 있으며 사용자는 여기에서 임의의 파일 버전을 체크 아웃할 수 있습니다. 원격 Subversion 리포지토리에서 파일을 체크 아웃하면 사용자는 해당 시점을 기준으로 리포지토리의 스냅숏을 가져옵니다.
 
-Subversion을 사용하기 전에 올바른 svn 패키지를 포함하도록 Xcode 명령줄 도구를 설치해야 합니다. 다음 명령을 사용하면 SVN이 터미널에 설치되었는지 확인할 수 있습니다.
+버전 제어를 위해 Subversion을 사용하려면 Subversion이 컴퓨터에 설치되어 있어야 합니다. 컴퓨터에 Subversion이 설치되어 있는지 확인하려면 터미널에서 다음 명령을 사용합니다.
 
-`svn h`
+```bash
+svn --version
+```
+
+이 명령은 버전 번호를 반환합니다.
+
+Subversion이 아직 설치되어 있지 않은 경우 Subversion을 받는 가장 쉬운 방법은 _Xcode 명령줄 도구_를 설치하는 것입니다. 아래 명령을 사용하여 Xcode 명령줄 도구 및 Subversion을 설치합니다.
+
+```bash
+xcode-select --install
+```
+
+Subversion이 컴퓨터에 설치되면 SVN에서 다음 단계를 사용하여 프로젝트를 게시합니다.
 
 1. 온라인으로 무료 SVN 리포지토리를 만듭니다. 이 예제에서는 [Assembla](https://app.assembla.com/)를 사용했습니다. 리포지토리가 만들어지면 연결에 사용되는 URL이 제공됩니다. 
 
-    ![SVN URL 획득 및 복사](media/version-control-subversion1-sml.png)
+    ![SVN URL 복사](media/version-control-subversion1-sml.png)
 
 2. Mac용 Visual Studio 프로젝트를 열거나 만듭니다.
 
@@ -31,15 +43,15 @@ Subversion을 사용하기 전에 올바른 svn 패키지를 포함하도록 Xco
 
 4. **리포지토리에 연결** 탭의 상단 드롭다운에서 **Subversion**을 선택합니다.
 
-5. 1단계에서 제공된 URL을 입력합니다. 이렇게 하면 기본적으로 나머지 필드가 채워집니다. 
+5. 1단계에서 제공된 URL을 입력합니다. URL이 입력되면 다른 필드는 기본적으로 채워집니다. 
 
     ![리포지토리 선택 및 세부 정보 입력 대화 상자](media/version-control-subversion3.png)
 
 7. **확인**을 클릭한 다음 **게시**를 눌러 확인합니다.
 
-7. 리포지토리를 만든 사이트에 대한 자격 증명을 입력하라는 메시지가 표시될 수 있습니다. 아래 그림과 같이 입력합니다.
+7. 아래 그림과 같은 메시지가 표시되면 리포지토리를 만든 사이트에 대한 자격 증명을 입력합니다.
 
-    ![](media/version-control-subversion5.png)
+    ![Subversion 리포지토리에 대한 자격 증명 입력](media/version-control-subversion5.png)
 
 8.  이제 사용할 수 있는 모든 버전 제어 명령이 버전 제어 메뉴에 표시됩니다.
 

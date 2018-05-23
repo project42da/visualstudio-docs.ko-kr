@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d54b3ea7c32230a683359ee466b03e8954fec2ab
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 77c8d2151380c48b80b53ec3f0ef671daa92dbaa
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-create-a-basic-site-definition-project"></a>연습: 기본 사이트 정의 프로젝트 만들기
   이 연습에서는 일부 컨트롤에 비주얼 웹 파트를 포함 하는 기본 사이트 정의 만드는 방법을 보여 줍니다. 명확 하 게 설명를 만들면 비주얼 웹 파트 컨트롤 몇 가지에 있습니다. 그러나 더 많은 기능을 포함 하는 보다 복잡 한 SharePoint 사이트 정의 만들 수 있습니다.  
@@ -98,7 +98,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  VisualWebPart1.ascx 맨 아래에 세 개의 컨트롤을 폼에 추가 하려면 다음 태그를 추가: 텍스트 상자, 단추 및 레이블:  
   
-    ```  
+    ```aspx-csharp  
     <table>  
       <tr>  
         <td>  
@@ -128,7 +128,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  Default.aspx 페이지를 열고 아래에 다음 줄을 추가 합니다는 `WebPartPages` 태그:  
   
-    ```  
+    ```aspx-csharp  
     <%@ Register Tagprefix="MyWebPartControls" Namespace="TestSiteDef.VisualWebPart1" Assembly="$SharePoint.Project.AssemblyFullName$" %>  
     ```  
   
@@ -136,7 +136,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  이후에 `</asp:Content>` 요소 전체를 바꿉니다 `ContentPlaceHolderId="PlaceHolderMain"` 섹션과 그 내용을 다음 코드로:  
   
-    ```  
+    ```aspx-csharp  
     <asp:Content ID="Content1" ContentPlaceHolderId="PlaceHolderMain" runat="server">  
         <MyWebPartControls:VisualWebPart1 runat="server" />      
     </asp:Content>  

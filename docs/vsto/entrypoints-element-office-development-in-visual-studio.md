@@ -1,5 +1,5 @@
 ---
-title: '&lt;t r y p&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+title: '&lt;t r y p&gt; 요소 (Visual Studio에서 Office 개발)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,18 +15,18 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a620dae22e6fd67e3d880cbd87e8883911f28845
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bec51fd4d9e6a140d274f028a0e0286a161ac147
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="ltentrypointsgt-element-office-development-in-visual-studio"></a>&lt;t r y p&gt; 요소 (Visual Studio에서 Office 개발)
   `entryPoints` 네임스페이스의 `vstav3` 요소에는 Office 솔루션과 관련된 모든 `entryPoint` 요소가 포함됩니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <entryPoints>  
     <entryPoint>  
     </entryPoint>  
@@ -54,11 +54,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="document-level-customization-example"></a>문서 수준 사용자 지정 예제  
   
 ### <a name="description"></a>설명  
- 다음 코드 예제에서는 `entryPoints` 을 사용하여 배포된 문서 수준 솔루션에 대한 응용 프로그램 매니페스트의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+ 다음 코드 예제에서는 `entryPoints` 을 사용하여 배포된 문서 수준 솔루션에 대한 응용 프로그램 매니페스트의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는에 제공 된 큰 예제의 일부 [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)합니다.  
   
 ### <a name="code"></a>코드  
   
-```  
+```xml  
 <vstav3:entryPoints>  
   <vstav3:entryPoint   
     class="ContosoExcelWorkbook.ThisWorkbook">  
@@ -98,11 +98,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="vsto-add-in-example"></a>VSTO 추가 기능 예제  
   
 ### <a name="description"></a>설명  
- 다음 코드 예제에서는 `entryPoints` 을 사용하여 배포된 응용 프로그램 수준 솔루션에 대한 응용 프로그램 매니페스트의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+ 다음 코드 예제에서는 `entryPoints` 을 사용하여 배포된 응용 프로그램 수준 솔루션에 대한 응용 프로그램 매니페스트의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는에 제공 된 큰 예제의 일부 [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)합니다.  
   
 ### <a name="code"></a>코드  
   
-```  
+```xml  
 <vstav3:entryPoints>  
   <vstav3:entryPoint   
     class="ContosoOutlookAddIn.ThisAddIn">  
@@ -118,11 +118,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="multi-project-deployment-example"></a>다중 프로젝트 배포 예제  
   
 ### <a name="description"></a>설명  
- 다음 코드 예제에서는 다중 프로젝트 배포에 대한 응용 프로그램 매니페스트의 `entryPoints` 요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+ 다음 코드 예제에서는 다중 프로젝트 배포에 대한 응용 프로그램 매니페스트의 `entryPoints` 요소를 보여 줍니다. 이 코드 예제는에 제공 된 큰 예제의 일부 [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)합니다.  
   
 ### <a name="code"></a>코드  
   
-```  
+```xml  
 <vstav3:entryPoints   
   id="ContosoExcel">  
   <vstav3:entryPoint   
@@ -171,9 +171,9 @@ ms.lasthandoff: 04/16/2018
 </vstav3:entryPoints>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office 솔루션에 대 한 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
+## <a name="see-also"></a>참고자료  
+ [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)   
+ [Office 솔루션의 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)  
   
   

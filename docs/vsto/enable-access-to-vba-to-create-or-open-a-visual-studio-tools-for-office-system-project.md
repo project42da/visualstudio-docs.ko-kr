@@ -1,6 +1,6 @@
 ---
-title: VBA 만들거나 Microsoft Office System 프로젝트에 대 한 Visual Studio Tools 열에 대 한 액세스를 사용 하도록 설정
-decsprition: You must explicitly enable access to the Office VBA project system before you can create or open a Visual Studio Tools for Office System project
+title: VBA 만들거나 Microsoft Office system 프로젝트에 대 한 Visual Studio Tools 열에 대 한 액세스를 사용 하도록 설정
+decsprition: You must explicitly enable access to the Office VBA project system before you can create or open a Visual Studio Tools for Office system project
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology: office-development
@@ -20,15 +20,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 05c7296412ffd3f87433f4790617f4b27ca75ae3
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: f17c4e1481e7f33034e16d1e60a285b25c6f8230
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>VBA 만들거나 Microsoft Office System 프로젝트에 대 한 Visual Studio Tools 열에 대 한 액세스를 사용 하도록 설정
+# <a name="enable-access-to-vba-to-create-or-open-a-visual-studio-tools-for-the-microsoft-office-system-project"></a>VBA 만들거나 Microsoft Office system 프로젝트에 대 한 Visual Studio Tools 열에 대 한 액세스를 사용 하도록 설정
 
-전에 작성 하거나 Microsoft Office System 프로젝트에 대 한 Visual Studio Tools를 열 수 있습니다에 명시적으로 Microsoft office에서 VBA 프로젝트 시스템에 대 한 Visual Basic에 대 한 액세스를 사용 해야 합니다.
+전에 작성 하거나 Microsoft Office system 프로젝트에 대 한 Visual Studio Tools를 열 수 있습니다에 명시적으로 Microsoft office에서 VBA 프로젝트 시스템에 대 한 Visual Basic에 대 한 액세스를 사용 해야 합니다.
 
  Microsoft Office 개발 프로젝트의 프로젝트 응용 프로그램에 대 한 Visual Basic을 사용 하지 않으므로 경우에 Microsoft Office Word 및 Microsoft Office Excel의 VBA 프로젝트 시스템에 대 한 Visual Basic에 대 한 액세스를 해야 합니다. Visual Basic 및 C# 프로젝트의 디자인 타임 컨트롤 지원은 Visual Basic for Applications 프로젝트 시스템에 따라 달라집니다.
 
@@ -47,7 +47,7 @@ ms.lasthandoff: 05/10/2018
 
  VBA 또는 COM 오류가 발생하는 경우에는 Office 설치를 복구할 수 있습니다.
 
-## <a name="to-enable-or-disable-access-to-visual-basic-projects"></a>Visual Basic 프로젝트에 액세스하거나 할 수 없도록 설정하려면
+## <a name="to-enable-or-disable-access-to-visual-basic-projects"></a>Visual Basic 프로젝트에 대 한 액세스를 사용 하지 않도록 설정 하거나 설정 하려면
 
 1. **파일** 탭을 클릭합니다.
 

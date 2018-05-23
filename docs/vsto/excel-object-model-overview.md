@@ -1,5 +1,5 @@
 ---
-title: Excel 개체 모델 개요 | Microsoft Docs
+title: Excel 개체 모델 개요
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -22,13 +22,13 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6b700d3834cf432ff9af2ec17e1daa3011763cac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c1626b7f363c5b6d71e26d7b42d9a57d7b775ee
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="excel-object-model-overview"></a>Excel Object Model Overview
+# <a name="excel-object-model-overview"></a>Excel 개체 모델 개요
   Microsoft Office Excel을 사용하는 솔루션을 개발하려면 Excel 개체 모델에서 제공하는 개체와 상호 작용할 수 있습니다. 이 항목에서는 가장 중요한 개체를 소개합니다.  
   
 -   <xref:Microsoft.Office.Interop.Excel.Application>  
@@ -43,14 +43,14 @@ ms.lasthandoff: 04/16/2018
   
  개체 모델은 사용자 인터페이스와 매우 유사합니다. <xref:Microsoft.Office.Interop.Excel.Application> 개체는 전체 응용 프로그램을 나타내고, 각 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체에는 `Worksheet` 개체의 컬렉션이 포함됩니다. 여기에서 셀을 나타내는 주요 추상화는 <xref:Microsoft.Office.Interop.Excel.Range> 개체이며, 이 개체를 통해 개별 셀 또는 셀 그룹에서 작업할 수 있습니다.  
   
- Visual Studio에서 Office 프로젝트에서는 Excel 개체 모델 외에도 다음을 제공 합니다. *호스트 항목* 및 *호스트 컨트롤* Excel 개체 모델에서 일부 개체를 확장 하는입니다. 호스트 항목 및 호스트 컨트롤은 확장되는 Excel 개체처럼 동작하지만 데이터 바인딩 기능과 같은 추가 기능 및 추가 이벤트도 제공합니다. 자세한 내용은 참조 [확장 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md) 및 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)합니다.  
+ Visual Studio에서 Office 프로젝트에서는 Excel 개체 모델 외에도 다음을 제공 합니다. *호스트 항목* 및 *호스트 컨트롤* Excel 개체 모델에서 일부 개체를 확장 하는입니다. 호스트 항목 및 호스트 컨트롤은 확장되는 Excel 개체처럼 동작하지만 데이터 바인딩 기능과 같은 추가 기능 및 추가 이벤트도 제공합니다. 자세한 내용은 참조 [확장 된 개체를 사용 하 여 Excel 자동화](../vsto/automating-excel-by-using-extended-objects.md) 및 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)합니다.  
   
  이 항목에서는 Excel 개체 모델에 대한 간략한 개요를 제공합니다. 전체 Excel 개체 모델에 대해 자세히 알아볼 수 있는 리소스에 대 한 참조 [Excel 개체 모델 설명서 사용](#ExcelOMDocumentation)합니다.  
   
- ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [어떻게 수행 할까요 사용 하 여 이벤트 처리기는 Excel 2007 추가 기능에서?](http://go.microsoft.com/fwlink/?LinkID=130291), 및 [어떻게 수행 할까요?: 도형을 사용 하 여 거품형 차트 만들기 excel? ](http://go.microsoft.com/fwlink/?LinkID=130313).  
+ ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [이벤트 처리기는 Excel 2007 추가 기능에서 i: 사용 하는 방법?](http://go.microsoft.com/fwlink/?LinkID=130291), 및 [거품형 차트 만들기 도형을 i: 사용 하 여 하는 방법 excel? ](http://go.microsoft.com/fwlink/?LinkID=130313).  
   
-## <a name="accessing-objects-in-an-excel-project"></a>Excel 프로젝트의 개체 액세스  
- Excel에 대한 새 VSTO 추가 기능 프로젝트를 만들면 Visual Studio에서 자동으로 ThisAddIn.vb 또는 ThisAddIn.cs 코드 파일을 만듭니다. `Me.Application` 또는 `this.Application`을 사용하여 응용 프로그램 개체에 액세스할 수 있습니다.  
+## <a name="access-objects-in-an-excel-project"></a>Excel 프로젝트에서 개체 액세스  
+ Excel에 대 한 새 VSTO 추가 기능에서 프로젝트를 만들 때 자동으로 만들어지고는 *ThisAddIn.vb* 또는 *ThisAddIn.cs* 코드 파일. `Me.Application` 또는 `this.Application`을 사용하여 응용 프로그램 개체에 액세스할 수 있습니다.  
   
  Excel에 대한 새 문서 수준 프로젝트를 만들면 새 Excel 통합 문서 또는 Excel 서식 파일 프로젝트를 만들 수 있습니다. Visual Studio는 통합 문서 및 서식 파일 프로젝트에 대한 새 Excel 프로젝트에서 다음과 같은 코드 파일을 자동으로 만듭니다.  
   
@@ -78,7 +78,7 @@ ms.lasthandoff: 04/16/2018
   
  Excel에서 수행되는 대부분의 작업은 이 네 가지 개체와 해당 멤버를 중심으로 합니다.  
   
-### <a name="application-object"></a>응용 프로그램 개체입니다.  
+### <a name="application-object"></a>Application 개체  
  Excel <xref:Microsoft.Office.Interop.Excel.Application> 개체는 Excel 응용 프로그램 자체를 나타냅니다. <xref:Microsoft.Office.Interop.Excel.Application> 개체는 실행 중인 응용 프로그램, 해당 인스턴스에 적용된 옵션 및 인스턴스 내에서 열려 있는 현재 사용자 개체에 대한 많은 정보를 표시합니다.  
   
 > [!NOTE]  
@@ -87,14 +87,14 @@ ms.lasthandoff: 04/16/2018
 ### <a name="workbook-object"></a>통합 문서 개체  
  <xref:Microsoft.Office.Interop.Excel.Workbook> 개체는 Excel 응용 프로그램 내에서 단일 통합 문서를 나타냅니다.  
   
- Visual Studio의 Office 개발 도구는 <xref:Microsoft.Office.Tools.Excel.Workbook> 형식을 제공하여 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체를 확장합니다. 이 형식은 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체의 모든 기능에 액세스할 수 있습니다. 자세한 내용은 [Workbook Host Item](../vsto/workbook-host-item.md)을 참조하십시오.  
+ Visual Studio의 Office 개발 도구는 <xref:Microsoft.Office.Tools.Excel.Workbook> 형식을 제공하여 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체를 확장합니다. 이 형식은 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체의 모든 기능에 액세스할 수 있습니다. 자세한 내용은 참조 [통합 문서 호스트 항목](../vsto/workbook-host-item.md)합니다.  
   
-### <a name="worksheet-object"></a>워크시트 개체  
+### <a name="worksheet-object"></a>Worksheet 개체  
  <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체는 <xref:Microsoft.Office.Interop.Excel.Worksheets> 컬렉션의 멤버입니다. <xref:Microsoft.Office.Interop.Excel.Worksheet>의 속성, 메서드 및 이벤트 대부분은 <xref:Microsoft.Office.Interop.Excel.Application> 또는 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체에서 제공하는 멤버와 동일하거나 유사합니다.  
   
  Excel에서는 <xref:Microsoft.Office.Interop.Excel.Sheets> 컬렉션을 <xref:Microsoft.Office.Interop.Excel.Workbook> 개체의 속성으로 제공합니다. <xref:Microsoft.Office.Interop.Excel.Sheets> 컬렉션의 각 멤버는 <xref:Microsoft.Office.Interop.Excel.Worksheet> 또는 <xref:Microsoft.Office.Interop.Excel.Chart> 개체입니다.  
   
- Visual Studio의 Office 개발 도구는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 형식을 제공하여 <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체를 확장합니다. 이 형식은 <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체의 모든 기능뿐만 아니라 관리되는 컨트롤을 호스트하고 새 이벤트를 처리하는 기능과 같은 새 기능에 액세스할 수 있습니다. 자세한 내용은 [Worksheet Host Item](../vsto/worksheet-host-item.md)을 참조하십시오.  
+ Visual Studio의 Office 개발 도구는 <xref:Microsoft.Office.Tools.Excel.Worksheet> 형식을 제공하여 <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체를 확장합니다. 이 형식은 <xref:Microsoft.Office.Interop.Excel.Worksheet> 개체의 모든 기능뿐만 아니라 관리되는 컨트롤을 호스트하고 새 이벤트를 처리하는 기능과 같은 새 기능에 액세스할 수 있습니다. 자세한 내용은 참조 [워크시트 호스트 항목](../vsto/worksheet-host-item.md)합니다.  
   
 ### <a name="range-object"></a>Range 개체  
  <xref:Microsoft.Office.Interop.Excel.Range> 개체는 Excel 응용 프로그램 내에서 가장 많이 사용되는 개체입니다. Excel 내에서 영역을 조작하려면 먼저 <xref:Microsoft.Office.Interop.Excel.Range> 개체로 표현하고 해당 범위의 메서드 및 속성을 사용해야 합니다. <xref:Microsoft.Office.Interop.Excel.Range> 개체는 셀, 행, 열, 하나 이상의 셀 블록을 포함하는 셀 선택 영역(인접하거나 인접하지 않을 수 있음) 또는 여러 시트에 있는 셀 그룹을 나타냅니다.  
@@ -105,7 +105,7 @@ ms.lasthandoff: 04/16/2018
  Excel 개체 모델에 대한 자세한 내용은 Excel PIA(주 interop 어셈블리) 참조 및 VBA 개체 모델 참조를 참조할 수 있습니다.  
   
 ### <a name="primary-interop-assembly-reference"></a>주 interop 어셈블리 참조  
- Excel PIA 참조 설명서에서는 Excel에 대한 주 interop 어셈블리의 형식에 대해 설명합니다. 이 설명서는 다음 위치에서 사용할 수 있는: [Excel 2010 주 Interop 어셈블리 참조](http://go.microsoft.com/fwlink/?LinkId=189585)합니다.  
+ Excel PIA 참조 설명서에서는 Excel에 대한 주 interop 어셈블리의 형식에 대해 설명합니다. 이 설명서는 다음 위치에서 사용할 수 있는: [Excel 2010 주 interop 어셈블리 참조](http://go.microsoft.com/fwlink/?LinkId=189585)합니다.  
   
  PIA의 이벤트 구현 방식 PIA에서 클래스와 인터페이스의 차이점 등 Excel PIA의 디자인에 대 한 자세한 내용은 참조 [의 클래스 및 인터페이스 개요 Office 주 Interop 어셈블리](http://go.microsoft.com/fwlink/?LinkId=189592).  
   
@@ -119,7 +119,7 @@ ms.lasthandoff: 04/16/2018
 |제목|설명|  
 |-----------|-----------------|  
 |[Excel 솔루션](../vsto/excel-solutions.md)|Microsoft Office Excel용 문서 수준 사용자 지정 및 VSTO 추가 기능을 만드는 방법에 대해 설명합니다.|  
-|[범위 작업](../vsto/working-with-ranges.md)|범위와 관련된 일반적인 작업을 수행하는 방법을 보여 주는 예제를 제공합니다.|  
+|[범위와 관련 된 작업](../vsto/working-with-ranges.md)|범위와 관련된 일반적인 작업을 수행하는 방법을 보여 주는 예제를 제공합니다.|  
 |[워크시트 작업](../vsto/working-with-worksheets.md)|워크시트와 관련된 일반적인 작업을 수행하는 방법을 보여 주는 예제를 제공합니다.|  
 |[통합 문서 사용](../vsto/working-with-workbooks.md)|통합 문서와 관련된 일반적인 작업을 수행하는 방법을 보여 주는 예제를 제공합니다.|  
   

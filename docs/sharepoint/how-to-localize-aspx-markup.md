@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9dd127fea21a53b9a29082f536ac8c0404299c63
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: b43a8833ea84c4f6d191200bcf3af80815deb03a
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-localize-aspx-markup"></a>방법: ASPX 태그 지역화
   [!INCLUDE[vstecasp](../sharepoint/includes/vstecasp-md.md)] (.aspx) 페이지는 일반적으로 하드 코드 된 문자열 값을 사용합니다. 이러한 문자열을 지역화 하려면 지역화 된 리소스를 참조 하는 식으로 대체 합니다.  
@@ -52,13 +52,13 @@ ms.lasthandoff: 04/16/2018
   
 6.  에 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] ASPX 페이지 또는 컨트롤에 대 한 태그 형식을 사용 하는 값으로 하드 코드 된 문자열을 바꿉니다.  
   
-    ```  
+    ```aspx-csharp  
     <%$Resources:Resource File Name, String ID%>  
     ```  
   
      예를 들어 응용 프로그램 페이지에서 레이블 컨트롤에 대 한 텍스트를 지역화 하려면 다음과 같이 변경  
   
-    ```  
+    ```aspx-csharp  
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">  
     <asp:Label ID="lbl" runat="server" Text="Label text"></asp:Label>  
     </asp:Content>  
@@ -66,7 +66,7 @@ ms.lasthandoff: 04/16/2018
   
      다음으로 변경:  
   
-    ```  
+    ```aspx-csharp  
     <asp:Content ID="Main" ContentPlaceHolderID="PlaceHolderMain" runat="server">  
     <asp:Label ID="lbl" runat="server" Text="<%$Resources:MyAppResources,String1%>"></asp:Label>  
     </asp:Content>  

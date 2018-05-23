@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 4d6d01b9f9ed0db8588124b71c982b2d37aa86ae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4e5c68db8d1c9809e487fc8f64159d8b385a96a2
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-create-an-event-receiver-for-a-specific-list-instance"></a>방법: 특정 목록 인스턴스에 대한 이벤트 수신기 만들기
   목록 인스턴스 이벤트 수신자 목록 정의의 모든 인스턴스에서 발생 하는 이벤트에 응답 합니다. 이벤트 수신기 서식 파일의 특정 목록 인스턴스에 대상으로 사용 하지 않는, 있지만 특정 목록 인스턴스에의 이벤트에 응답 하는 목록 정의 범위 지정 된 이벤트 수신기를 수정할 수 있습니다.  
@@ -55,13 +55,13 @@ ms.lasthandoff: 04/16/2018
   
      이벤트 수신기가 다음 코드 줄을 사용하여 알림 목록 정의를 현재 참조합니다.  
   
-    ```  
+    ```xml  
     <Receivers ListTemplateId="104">  
     ```  
   
      이 줄을 다음 텍스트로 변경합니다.  
   
-    ```  
+    ```xml  
     <Receivers ListUrl="Lists/TestAnnouncements">  
     ```  
   

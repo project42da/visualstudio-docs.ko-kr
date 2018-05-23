@@ -11,11 +11,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1aa3d2412bfeabcaa3a66be7470367fcaaf0bfbc
-ms.sourcegitcommit: fe5a72bc4c291500f0bf4d6e0778107eb8c905f5
+ms.openlocfilehash: 320615daa95ba9fad69fe48490f83c19ccf8e1ce
+ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/11/2018
 ---
 # <a name="make-code-work-in-visual-studio"></a>Visual Studio에서 코드를 작동하게 하기
 
@@ -91,17 +91,15 @@ IDE 아래쪽에 있는 **오류 목록** 탭에 새로운 경고나 업데이�
 
 ## <a name="use-light-bulbs-to-fix-or-refactor-code"></a>전구를 사용하여 코드 수정 또는 리팩터링
 
-[전구](../ide/quick-actions.md)는 인라인에서 코드를 리팩터링할 수 있게 해주는 상대적으로 새로운 Visual Studio 기능입니다. 전구를 통해 일반적인 경고를 C#, C++ 및 Visual Basic에서 빠르고 효율적으로 수정할 수 있습니다. 액세스하려면 경고 물결선을 마우스 오른쪽 단추로 클릭하고 **빠른 작업**을 선택하거나 **Ctrl**+**를 누릅니다.** 커서가 색 있는 물결선 위에 있을 때 해당 코드 줄에 적용할 수 있는 가능한 수정 또는 리팩터링 목록이 표시됩니다.
+전구 또는 스크루 드라이버 아이콘에서 사용할 수 있는 [빠른 작업](../ide/quick-actions.md)을 통해 인라인으로 코드를 리팩터링할 수 있습니다. 전구를 통해 일반적인 경고를 C#, C++ 및 Visual Basic에서 빠르고 효율적으로 수정할 수 있습니다. 액세스하려면 경고 물결선을 마우스 오른쪽 단추로 클릭하고 **빠른 작업 및 리팩터링**을 선택합니다. 또는 커서가 색 있는 물결선 위에 있을 때 **Ctrl**+ **키를 누릅니다.** 또는 여백에서 전구 또는 스크루 드라이버 아이콘을 선택합니다. 해당 코드 줄에 적용할 수 있는 가능한 수정 또는 리팩터링 목록이 표시됩니다.
 
 ![Visual Studio 전구 미리 보기](../ide/media/quick-actions-options.png)
 
-코드 분석기에서 수정, 리팩터링 또는 코드 개선 기회가 있다고 결정하는 위치마다 전구를 사용할 수 있습니다. 코드 줄을 클릭하고 마우스 오른쪽 단추를 클릭하여 상황에 맞는 메뉴를 연 다음, **바로 가기**를 선택합니다(또는 효율성을 원하는 경우 **Ctrl**+**를 누름).** 사용 가능한 리팩터링 또는 개선 옵션이 있으면 표시됩니다. 그렇지 않으면 **여기에 사용할 수 있는 빠른 옵션 없음** 메시지가 IDE의 왼쪽 아래 모서리에 표시됩니다.
+코드 분석기에서 수정, 리팩터링 또는 코드 개선 기회가 있다고 결정하는 위치마다 빠른 작업을 사용할 수 있습니다. 코드 줄을 클릭하고 마우스 오른쪽 단추를 클릭하여 바로 가기 메뉴를 연 다음, **빠른 작업 및 리팩터링**을 선택합니다. 사용 가능한 리팩터링 또는 개선 옵션이 있으면 표시됩니다. 그렇지 않으면 **여기에 사용할 수 있는 빠른 작업 없음** 메시지가 IDE의 왼쪽 아래 모서리에 표시됩니다.
 
-![Visual Studio 전구 '옵션 없음' 텍스트](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
+![사용할 수 있는 빠른 작업 없음 텍스트](../ide/media/vs_ide_gs_debug_light_bulb_no_options.png)
 
-경험이 생기면 화살표 키와 **Ctrl**+**를 신속하게 사용할 수 있습니다.** 빠른 옵션 리팩터링 기회를 확인하고 코드를 정리할 수 있습니다.
-
-전구에 대한 자세한 내용은 [빠른 작업](../ide/quick-actions.md)을 참조하세요.
+경험이 생기면 화살표 키와 **Ctrl**+**를 신속하게 사용할 수 있습니다.** 빠른 옵션 리팩터링 기회를 쉽게 확인하고 코드를 정리할 수 있습니다.
 
 ## <a name="debug-your-running-code"></a>실행 중인 코드 디버그
 

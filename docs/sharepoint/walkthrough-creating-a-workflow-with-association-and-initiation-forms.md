@@ -22,11 +22,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 92aefd2292976bd9dcb50603e93b460cdf2bf991
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0c232d541e985944fe64d9eb40da7e344b32c0cc
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-creating-a-workflow-with-association-and-initiation-forms"></a>연습: 연결 및 초기화 폼이 있는 워크플로 만들기
   이 연습에는 연결 및 초기화 폼의 사용을 통합 하는 기본적인 순차 워크플로 만드는 방법을 보여 줍니다. 이들은 (연결 양식) SharePoint 관리자가 처음 연결할 때 및 워크플로 (시작 양식) 사용자가 시작 될 때 워크플로에 추가할 매개 변수를 사용 하도록 설정 하는 ASPX 폼입니다.  
@@ -94,7 +94,7 @@ ms.lasthandoff: 04/16/2018
   
      **SharePoint 사용자 지정 마법사** 나타납니다.  
   
-10. 에 **디버깅에 대 한 워크플로 이름을 지정** 페이지에서 기본 이름을 적용 (**경비 보고서-Workflow1**). 기본 워크플로 템플릿 형식 값을 유지 (**목록 워크플로)**합니다. **다음** 단추를 선택합니다.  
+10. 에 **디버깅에 대 한 워크플로 이름을 지정** 페이지에서 기본 이름을 적용 (**경비 보고서-Workflow1**). 기본 워크플로 템플릿 형식 값을 유지 (**목록 워크플로)** 합니다. **다음** 단추를 선택합니다.  
   
 11. 에 **Visual Studio 디버그 세션에서 워크플로 자동으로 연결 하 시겠습니까?** 페이지에서 선택 하는 경우 워크플로 템플릿을 자동으로 연결 하는 확인란의 선택을 취소 합니다.  
   
@@ -128,7 +128,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  이 콘텐츠 요소의 첫 번째 줄으로 바로 뒤 레이블 및 비용 승인 한도를 묻는를 만들려면 다음 코드를 추가 (*AutoApproveLimit*):  
   
-    ```  
+    ```aspx-csharp  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
   
     <asp:TextBox ID="AutoApproveLimit" runat="server" />  
@@ -189,7 +189,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  바로이 콘텐츠 요소의 첫 번째 줄 뒤 레이블 및 비용 승인 한도 표시 하는 텍스트 상자를 만들려면 다음 코드를 추가 (*AutoApproveLimit*) 연결 양식을 및 다른 레이블을 입력 한 및 비용 합계에 대 한 메시지를 표시 하는 입력란 (*ExpenseTotal*):  
   
-    ```  
+    ```aspx-csharp  
     <asp:Label ID="lblAutoApproveLimit" Text="Auto Approval Limit:" runat="server" />  
   
     <asp:TextBox ID="AutoApproveLimit" ReadOnly="true" runat="server" />  

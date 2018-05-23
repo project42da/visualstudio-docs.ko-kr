@@ -1,5 +1,5 @@
 ---
-title: Outlook을 만들기 위한 지침 양식 영역 | Microsoft Docs
+title: Outlook 양식 영역 만들기 지침
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -16,20 +16,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dae7f03c49223c9919dc67b1c6a13768c597698d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d00c0aac83714e3a0906c38d13a705158cdfea9c
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="guidelines-for-creating-outlook-form-regions"></a>Outlook 양식 영역 만들기 지침
   다음 정보를 통해 양식 영역을 최적화하고 잠재적인 문제를 방지할 수 있습니다.  
   
--   [양식 영역 이름 사용](#UsingFormRegions)  
+-   [양식 영역 이름을 사용 하 여](#UsingFormRegions)합니다.  
   
--   [양식 영역 상속을 사용하지 않도록 설정](#DisablingInheritance)  
+-   [양식 영역 상속을 사용 하지 않도록 설정](#DisablingInheritance)합니다.  
   
--   [형식 및 메시지 클래스 이름 이해](#ClassNames)  
+-   [종류를 이해 하 고 메시지 클래스 이름](#ClassNames)합니다.  
   
 -   [읽기 창의 인접 양식 영역 디자인](#ReadingPane)  
   

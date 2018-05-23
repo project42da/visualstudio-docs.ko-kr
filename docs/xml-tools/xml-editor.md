@@ -9,11 +9,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ba02c3ff7d87daeda71c872e67df25ad345c6989
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0ac3c30f0db4c2aa1dc606348604efce3bb3ddac
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="xml-editor"></a>XML 편집기
 
@@ -53,11 +53,8 @@ XML 편집기는.xml,.xsd,.xsl, 및.config 등의 잘 알려진 파일 확장명
 
 [XSLT 계층 구조 도구](../xml-tools/walkthrough-using-xslt-hierarchy.md) 포함 된 스타일 시트 및/또는 기본 제공 템플릿 규칙에서 중단점을 추가할 수 있습니다.
 
-## <a name="related-sections"></a>관련 단원
-
-- [편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md) 텍스트 편집기에 대 한 정보를 제공 합니다.
-- [XML 표준 참조](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) XML, 문서 형식 정의 (DTD), XML 스키마 정의 언어 (XSD) 및 XSLT를 포함 하 여 XML 기술에 대 한 정보를 제공 합니다.
-
 ## <a name="see-also"></a>참고자료
 
+- [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md) 텍스트 편집기에 대 한 정보를 제공 합니다.
+- [XML 표준 참조](http://msdn.microsoft.com/79c78508-c9d0-423a-a00f-672e855de401) XML, 문서 형식 정의 (DTD), XML 스키마 정의 언어 (XSD) 및 XSLT를 포함 하 여 XML 기술에 대 한 정보를 제공 합니다.
 - [Visual Studio의 XML 도구](../xml-tools/xml-tools-in-visual-studio.md)
