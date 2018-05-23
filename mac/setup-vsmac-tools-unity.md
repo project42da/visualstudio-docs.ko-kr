@@ -5,11 +5,11 @@ author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 4ad938530131a725e353a38cd481c871cb53bc9b
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: f9a6da6c30132d6303705019919dfcad9f8cd484
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="setup-visual-studio-for-mac-tools-for-unity"></a>Mac용 Visual Studio Tools for Unity 설정
 
@@ -21,7 +21,7 @@ Mac용 Visual Studio를 다운로드하여 설치합니다. Mac용 Visual Studio
 
 * [visualstudio.com](https://www.visualstudio.com/)에서 Mac용 Visual Studio를 다운로드합니다.
 * Mac용 Visual Studio 설치 프로세스에서 Mac용 Visual Studio Tools for Unity가 자동으로 설치됩니다.
-* 설치에 관한 추가 도움을 받으려면 [설치 가이드](/visualstudio/mac/installation)의 단계를 따릅니다.
+* 설치에 관한 추가 도움을 받으려면 [설치 가이드](installation.md)의 단계를 따릅니다.
 
 ## <a name="confirm-that-the-visual-studio-for-mac-tools-for-unity-extension-is-enabled"></a>Mac용 Visual Studio Tools for Unity 확장이 사용 가능한지 확인
 

@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 2400ED9C-6236-4C0A-A3AB-9D7CBE1F0CF4
-ms.openlocfilehash: 1c03c4fac50c34cb96583a1fc8c16a403b7bbe1b
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 9514db72dd72e616f45670ffdf8c0b468bfb81cc
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="working-with-subversion"></a>Subversion 작업
 
@@ -29,7 +29,7 @@ Subversion은 여러 사용자가 같은 리포지토리에서 동시에 작업�
 
 원격 Subversion 리포지토리를 사용하려면 리포지토리를 체크 아웃하여 로컬 컴퓨터에 해당 디렉터리의 작업 복사본을 만듭니다.
 
-Mac용 Visual Studio에서 **체크 아웃** 기능을 사용하는 방법을 알아보려면 [Subversion 리포지토리 설정](~/set-up-subversion-repository.md) 섹션의 단계를 따르세요.
+Mac용 Visual Studio에서 **체크 아웃** 기능을 사용하는 방법을 알아보려면 [Subversion 리포지토리 설정](set-up-subversion-repository.md) 섹션의 단계를 따르세요.
 
 ## <a name="update-solution"></a>솔루션 업데이트
 

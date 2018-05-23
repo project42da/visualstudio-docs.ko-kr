@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: FB253757-DB00-4889-A6BF-E44722E25BD1
-ms.openlocfilehash: 28127fec86f839110ff53de3e6d7d2466adc3489
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 29c6baaa4da4eae4a2302ec3916a156b59a49272
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="compiling-and-building-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 컴파일 및 빌드
 
@@ -21,7 +21,7 @@ Mac용 Visual Studio를 사용하면 빌드 기능을 제어하는 동시에 즉
 
 IDE에서 만든 모든 프로젝트와 솔루션에는 빌드 컨텍스트를 정의하는 기본 빌드 구성이 있습니다. 이러한 구성을 편집하거나 직접 만들 수 있습니다. 구성을 만들거나 수정하면 프로젝트 파일이 자동으로 업데이트되며, MSBuild에서 프로젝트를 빌드하는 데 사용됩니다.  
 
-IDE에서 프로젝트와 솔루션을 빌드하는 방법에 대한 자세한 내용은 [프로젝트 및 솔루션 빌드 및 정리](~/building-and-cleaning-projects-and-solutions.md) 가이드를 참조하세요.
+IDE에서 프로젝트와 솔루션을 빌드하는 방법에 대한 자세한 내용은 [프로젝트 및 솔루션 빌드 및 정리](building-and-cleaning-projects-and-solutions.md) 가이드를 참조하세요.
 
 Mac용 Visual Studio를 사용하여 다음 작업을 수행할 수도 있습니다.
 

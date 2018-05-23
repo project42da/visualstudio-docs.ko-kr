@@ -81,7 +81,6 @@
 ##### [방법: 혼합 모드에서 디버그](how-to-debug-in-mixed-mode.md)
 #### [디버깅 준비: 콘솔 프로젝트](debugging-preparation-console-projects.md)
 #### [방법: Visual Studio 솔루션의 일부가 아닌 실행 파일 디버그](how-to-debug-an-executable-not-part-of-a-visual-studio-solution.md)
-#### [방법: Code Center Premium 소스로 디버그](how-to-debug-with-code-center-premium-source.md)
 #### [디버깅 및 호스팅 프로세스](debugging-and-the-hosting-process.md)
 #### [방법: 디버깅을 위한 .NET Framework 버전 지정](how-to-specify-a-dotnet-framework-version-for-debugging.md)
 ### [데이터의 사용자 지정 뷰 만들기](viewing-data-in-the-debugger.md)

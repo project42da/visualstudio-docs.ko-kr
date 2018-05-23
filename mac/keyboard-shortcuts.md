@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 48E06A61-7294-4EC8-A09D-1763C32AD910
-ms.openlocfilehash: aaf2f4605470464f3122faf95b541f4a71cb75f3
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 39cbe0eb3ba8d99c81119256773cc76f4699b7bd
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="common-keyboard-shortcuts-in-visual-studio-for-mac"></a>Mac용 Visual Studio의 일반적인 바로 가기 키
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 05/07/2018
 
 ## <a name="quick-fixes-and-actions"></a>빠른 수정 및 작업
 
-[리팩터링](~/refactoring.md) 컨텍스트 작업을 표시합니다.
+[리팩터링](refactoring.md) 컨텍스트 작업을 표시합니다.
 
 `option + enter`
 

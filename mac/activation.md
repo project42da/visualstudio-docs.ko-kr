@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 898DFEB8-5757-4CCE-8AD2-8BC7706F5855
-ms.openlocfilehash: dcfaee4d086fd5cd9d8ce85f365e63fbb21f8a9e
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: d1bb23d03ac613c12df54f1a11e19ee5a8c2edb0
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="enable-subscription"></a>구독 사용
 
@@ -19,7 +19,7 @@ Mac용 Visual Studio는 선택할 수 있는 세 가지 구독 수준을 제공�
 * Mac용 Visual Studio Professional
 * Mac용 Visual Studio Community
 
-구독 사용을 시작하려면 [Mac용 Visual Studio에 로그인](~/signing-in.md) 가이드의 단계에 따라 Mac용 Visual Studio에 로그인합니다. 로그인하면 구독이 활성화되고 계정 대화 상자에 표시됩니다.
+구독 사용을 시작하려면 [Mac용 Visual Studio에 로그인](signing-in.md) 가이드의 단계에 따라 Mac용 Visual Studio에 로그인합니다. 로그인하면 구독이 활성화되고 계정 대화 상자에 표시됩니다.
 
 ![사용자 라이선스 대화 상자 표시](media/user-accounts-login.png)
 
@@ -29,11 +29,11 @@ Mac용 Visual Studio는 선택할 수 있는 세 가지 구독 수준을 제공�
 
 1. 구독을 갱신합니다. [https://www.visualstudio.com/vs/pricing/](https://www.visualstudio.com/vs/pricing/)으로 이동하여 구독을 갱신할 수 있습니다.
 
-2. 활성 구독이 포함된 다른 계정이 있는 경우 [여러 사용자 계정 추가](~/signing-in.md) 문서의 설명에 따라 Mac용 Visual Studio에 추가할 수 있습니다. Mac용 Visual Studio는 추가한 모든 계정에서 사용 가능한 최상의 라이선스를 검색합니다. 
+2. 활성 구독이 포함된 다른 계정이 있는 경우 [여러 사용자 계정 추가](signing-in.md) 문서의 설명에 따라 Mac용 Visual Studio에 추가할 수 있습니다. Mac용 Visual Studio는 추가한 모든 계정에서 사용 가능한 최상의 라이선스를 검색합니다. 
 
 ## <a name="product-key-usage"></a>제품 키 ID 사용법
 
-현재 Mac용 Visual Studio를 위한 Professional 또는 Enterprise 자격을 활성화하는 제품 키를 활용할 수 있는 방법은 없습니다. Mac용 Visual Studio Enterprise 또는 Mac용 Visual Studio Professional을 사용하려면 관련 [구독](https://www.visualstudio.com/subscriptions/)이 있어야 하며 IDE에 [로그인](~/signing-in.md)해야 합니다.
+현재 Mac용 Visual Studio를 위한 Professional 또는 Enterprise 자격을 활성화하는 제품 키를 활용할 수 있는 방법은 없습니다. Mac용 Visual Studio Enterprise 또는 Mac용 Visual Studio Professional을 사용하려면 관련 [구독](https://www.visualstudio.com/subscriptions/)이 있어야 하며 IDE에 [로그인](signing-in.md)해야 합니다.
 
 ## <a name="offline-activation"></a>오프라인 정품 인증
 

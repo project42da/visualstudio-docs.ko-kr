@@ -11,11 +11,11 @@ ms.author: crdun
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: abeac53d6907603d6158c483095152d0f4ab2c5e
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: 921faa49690b641fda0e864d27705040a1b97f1e
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="learn-about-mobile-development-with-xamarin"></a>Xamarin을 사용한 모바일 개발에 대해 알아보기
 
@@ -101,7 +101,7 @@ Xamarin.Forms는 모든 플랫폼에 대한 공유 UI 계층을 .NET Standard �
   
 ### <a name="microsofts-android-emulator"></a>Microsoft의 Android 에뮬레이터 
 
-Visual Studio와 함께 설치되는 Microsoft의 [Visual Studio Emulator for Android](~/cross-platform/visual-studio-emulator-for-android.md)를 사용하는 것이 좋습니다.  [Visual Studio Emulator for Android](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/711) 비디오(영문)(Channel9, 5분 55초)에서는 개요 및 데모를 제공합니다.  
+Visual Studio와 함께 설치되는 Microsoft의 [Visual Studio Emulator for Android](visual-studio-emulator-for-android.md)를 사용하는 것이 좋습니다.  [Visual Studio Emulator for Android](https://channel9.msdn.com/events/Visual-Studio/Connect-event-2015/711) 비디오(영문)(Channel9, 5분 55초)에서는 개요 및 데모를 제공합니다.  
   
 ### <a name="apples-ios-simulator"></a>Apple의 iOS 시뮬레이터
 

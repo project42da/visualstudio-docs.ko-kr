@@ -19,11 +19,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 27bcbb12ac8111ad76b5b71c486081d9e075365e
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: ee4a75ba456184ffe48cb59f77668625acf673d1
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="install-visual-studio-2017"></a>Visual Studio 2017 설치
 
@@ -78,7 +78,7 @@ Visual Studio 2017과 함께 이전 버전의 Visual Studio를 나란히 실행�
 
 1. **Visual Studio 설치** 화면에서 원하는 작업을 찾습니다.
 
- ![Visual Studio 2017 설정 대화 상자에서 작업을 선택합니다.](../install/media/install-visual-studio-enterprise.png)
+ ![Visual Studio 2017 설정 대화 상자에서 작업을 선택합니다.](../install/media/install-visual-studio-community.png)
 
      예를 들어 ".NET 데스크톱 개발" 작업을 선택합니다. 20개가 넘는 언어에 대한 기본 코드 편집 기능, 프로젝트 없이도 폴더에서 코드를 열어 편집할 수 있는 기능 및 통합 소스 코드 제어 기능이 포함된 기본 핵심 편집기가 제공됩니다.  
 

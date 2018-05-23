@@ -10,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: c16898fa94bcdb051b215f3ff89cf4d42cbe7fe7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 723518fa837803a5245eef2b227e6d593e8f4447
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="visual-studio-and-xamarin"></a>Visual Studio 및 Xamarin
 
@@ -30,7 +30,7 @@ C#, .NET 및 Visual Studio에 익숙한 개발자는 모바일 앱용 Xamarin으
   
 -   설치가 완료되면 [Xamarin 환경 확인](../cross-platform/verify-your-xamarin-environment.md)을 수행합니다.  
   
--   그리고 마지막으로 [Visual Studio에서 Xamarin.Forms를 사용한 앱 빌드 기본 사항 알아보기](/learn-app-building-basics-with-xamarin-forms-in-visual-studio.md) 자습서를 진행합니다.  
+-   그리고 마지막으로 [Visual Studio에서 Xamarin.Forms를 사용한 앱 빌드 기본 사항 알아보기](learn-app-building-basics-with-xamarin-forms-in-visual-studio.md) 자습서를 진행합니다.  
   
 [모든 Visual Studio 2017 버전](https://www.visualstudio.com/vs)(Community, Professional 및 Enterprise)을 사용하여 모든 Xamarin 기능으로 작업할 수 있습니다. 별도의 라이선스는 필요하지 않습니다.  
   

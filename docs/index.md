@@ -4,11 +4,11 @@ hide_bc: true
 title: Visual Studio 설명서 | Microsoft Docs
 description: Visual Studio 2017을 사용하여 플랫폼 및 장치에 대해 선택한 언어로 응용 프로그램, 서비스 및 도구를 개발하는 방법에 대해 알아봅니다.
 ms.topic: hub-page
-ms.openlocfilehash: 3e97752779c09c89107e784a0001737a8f5d77e2
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 6e7ff54f516f8b6ab500f6605d6418d6674a48dd
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/22/2018
 ---
 <div id="main" class="v2">
     <div class="container">
@@ -854,7 +854,7 @@ ms.lasthandoff: 05/17/2018
                 <a href="https://go.microsoft.com/fwlink/?linkid=833103"> Stack Overflow </a>
             </li>
             <li>
-                <a href="https://go.microsoft.com/fwlink/?linkid=833104"> 문제 보고 </a>
+                <a href="https://go.microsoft.com/fwlink/?linkid=874480"> 문제 보고 </a>
             </li>
             <li>
                 <a href="https://go.microsoft.com/fwlink/?linkid=833105"> 사용자 의견 </a>

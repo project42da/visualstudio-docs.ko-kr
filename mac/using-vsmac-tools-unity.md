@@ -5,11 +5,11 @@ author: dantogno
 ms.author: v-davian
 ms.date: 07/17/2017
 ms.assetid: 83FDD7A3-5D16-4B4B-9080-078E3FB5C623
-ms.openlocfilehash: 4044169508b177ff5524ee024479244595661eab
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: ab605b3a8505ac189bc0f628b717c6863f9fd902
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/08/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="using-visual-studio-for-mac-tools-for-unity"></a>Mac용 Visual Studio Tools for Unity 사용
 
@@ -17,7 +17,7 @@ ms.lasthandoff: 05/08/2018
 
 ## <a name="opening-unity-scripts-in-visual-studio-for-mac"></a>Mac용 Visual Studio에서 Unity 스크립트 열기
 
-Mac용 Visual Studio가 [Unity의 외부 스크립트 편집기로 설정](/visualstudio/mac/setup-vsmac-tools-unity#configure-unity-for-use-with-visual-studio-for-mac)되면 Unity 편집기에서 스크립트를 열 때 Mac용 Visual Studio가 자동으로 실행되거나 전환되고, 선택한 스크립트가 열립니다.
+Mac용 Visual Studio가 [Unity의 외부 스크립트 편집기로 설정](setup-vsmac-tools-unity.md#configure-unity-for-use-with-visual-studio-for-mac)되면 Unity 편집기에서 스크립트를 열 때 Mac용 Visual Studio가 자동으로 실행되거나 전환되고, 선택한 스크립트가 열립니다.
 
 또는 Unity의 **Assets**(자산) 메뉴에서 **Open C# Project(C# 프로젝트 열기)** 를 선택하여 소스 편집기에 열린 스크립트가 없는 상태로 Mac용 Visual Studio를 열 수 있습니다.
 

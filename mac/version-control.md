@@ -5,11 +5,11 @@ author: asb3993
 ms.author: amburns
 ms.date: 05/06/2018
 ms.assetid: 49917483-28AA-4598-A847-71F1F2E0DCB5
-ms.openlocfilehash: c26cb512f0beb0dcfd47801d7a619ec78eb3cd32
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: b09e776b1cf6726cd13ca8810ed528be12dd969a
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="version-control"></a>버전 제어
 
@@ -27,7 +27,7 @@ Git은 모든 팀원이 동일한 문서를 동시에 작업할 수 있는 분�
 
 Mac용 Visual Studio는 Git 및 Subversion 버전 제어 시스템을 모두 지원합니다. 다음 문서에서는 Mac용 Visual Studio를 통해 Git 및 Subversion 리포지토리를 설정하는 방법 및 변경 내용 검토, 커밋, 푸시 등의 간단한 기능을 살펴봅니다.
 
-* [Git 리포지토리 설정](~/set-up-git-repository.md) 
-* [Git 작업](~/working-with-git.md)
-* [Subversion 리포지토리 설정](~/set-up-subversion-repository.md)
-* [Subversion 작업](~/working-with-subversion.md)
+* [Git 리포지토리 설정](set-up-git-repository.md) 
+* [Git 작업](working-with-git.md)
+* [Subversion 리포지토리 설정](set-up-subversion-repository.md)
+* [Subversion 작업](working-with-subversion.md)
