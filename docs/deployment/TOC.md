@@ -8,26 +8,26 @@
 ## [Azure에 배포](quickstart-deploy-to-azure.md)
 # 자습서
 ## .NET
-### [게시 도구를 사용하여 .NET Core 응용 프로그램 배포](/dotnet/core/deploying/deploy-with-vs)
-### [Microsoft Store(데스크톱 브리지)의 데스크톱 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
+### [게시 도구를 사용하여 .NET Core 응용 프로그램 배포](/dotnet/core/deploying/deploy-with-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+### [Microsoft Store(데스크톱 브리지)의 데스크톱 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ### [ClickOnce를 사용하여 데스크톱 앱 배포](how-to-publish-a-clickonce-application-using-the-publish-wizard.md)
 ### [명령줄에서 ClickOnce 응용 프로그램 빌드](building-clickonce-applications-from-the-command-line.md)
 ## ASP.NET
-### [Azure에 ASP.NET Core 앱 게시](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)
+### [Azure에 ASP.NET Core 앱 게시](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ### [게시 설정 가져오기 및 Azure에 배포](tutorial-import-publish-settings-azure.md)
 ### [게시 설정 가져오기 및 IIS에 배포](tutorial-import-publish-settings-iis.md)
-### [Git를 사용하여 Azure에 ASP.NET Core 연속 배포](/aspnet/core/publishing/azure-continuous-deployment)
-### [IIS에 ASP.NET 배포](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)
+### [Git를 사용하여 Azure에 ASP.NET Core 연속 배포](/aspnet/core/publishing/azure-continuous-deployment?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+### [IIS에 ASP.NET 배포](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ## 네이티브
-### [Visual C++의 개발](/cpp/ide/deployment-in-visual-cpp)
-### [Microsoft Store(데스크톱 브리지)의 데스크톱 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net)
-### [ClickOnce를 사용하여 네이티브 앱 배포](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)
+### [Visual C++에서 배포...](/cpp/ide/deployment-in-visual-cpp)
+### [Microsoft Store(데스크톱 브리지)의 데스크톱 앱 패키지](/windows/uwp/porting/desktop-to-uwp-packaging-dot-net?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
+### [ClickOnce를 사용하여 네이티브 앱 배포...](/cpp/ide/clickonce-deployment-for-visual-cpp-applications)
 ## UWP
-### [Visual Studio를 사용하여 UWP 앱 패키지](/windows/uwp/packaging/packaging-uwp-apps)
+### [Visual Studio를 사용하여 UWP 앱 패키지](/windows/uwp/packaging/packaging-uwp-apps?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ## Node.js
-### [웹 배포를 사용하여 Azure 웹 사이트에 게시](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy)
+### [웹 배포를 사용하여 Azure 웹 사이트에 게시](https://github.com/Microsoft/nodejstools/wiki/Publish-to-Azure-Website-using-Web-Deploy?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 ## Python
-### [Azure App Service에 게시](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio)
+### [Azure App Service에 게시](/visualstudio/python/publishing-python-web-applications-to-azure-from-visual-studio?toc=/visualstudio/deployment/toc.json&bc=/visualstudio/deployment/_breadcrumb/toc.json)
 # 방법 가이드
 ## [ClickOnce 보안 및 배포](clickonce-security-and-deployment.md)
 ### [ClickOnce 배포 전략 선택](choosing-a-clickonce-deployment-strategy.md)

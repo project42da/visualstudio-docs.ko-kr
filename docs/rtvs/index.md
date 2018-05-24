@@ -10,11 +10,11 @@ ms.author: kraigb
 manager: douge
 ms.workload:
 - data-science
-ms.openlocfilehash: d571252c34a286e26fbf97537c5fe4a527743d72
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9e34fd9c343261626e8296488acf55214cf539ad
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="working-with-r-in-visual-studio"></a>Visual Studio에서 R 작업
 
@@ -32,12 +32,12 @@ Visual Studio에서 R을 사용해 보려면
 
 그런 후 아래 링크에 따라 R 관련 기능과 Visual Studio 자체의 일반 기능에 대해 알아보세요.
 
-| 기능 | 설명 | 일반 Visual Studio 설명서 | 
+| 기능 | 설명 | 일반 Visual Studio 설명서 |
 | --- | --- | --- |
 | [Visual Studio 프로젝트 시스템](r-projects-in-visual-studio.md) | 관련 파일을 편리한 구조로 구성하고 관리하며, R 코드, R 설명서, R Markdown, SQL 쿼리 및 저장 프로시저와 같은 항목에 대한 유용한 템플릿을 사용할 수 있습니다. 또한 [패키지 관리자](r-package-manager-in-visual-studio.md) 및 [SQL Server Integration](integrating-sql-server-with-r.md) 기능도 사용해볼 수 있습니다.  | [Visual Studio의 솔루션 및 프로젝트](../ide/solutions-and-projects-in-visual-studio.md) |
 | [작업 영역](r-workspaces-in-visual-studio.md) | RTVS는 로컬 및 원격 작업 영역에 바인딩되어 좀 더 작은 데이터 집합으로 로컬로 R 코드를 개발한 다음, 훨씬 더 큰 데이터 집합을 사용해서 더욱 강력한 클라우드 기반 컴퓨터에서 코드를 쉽게 실행할 수 있도록 합니다. | N/A |
 | [R Tools 옵션](options-for-r-tools-in-visual-studio.md) | RTVS의 다양한 측면을 제어합니다. | [옵션 대화 상자](../ide/reference/options-dialog-box-visual-studio.md) |
-| [다양한 편집 기능, IntelliSense 및 코드 조각](editing-r-code-in-visual-studio.md) | 구문 색 지정, 모든 코드 및 라이브러리에 대한 [IntelliSense](r-intellisense.md), 코드 서식 지정, 시그니처 도움말, 정의로 이동, 모든 참조 찾기, [코드 조각](code-snippets-for-r.md) 등을 포함합니다. | [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md) |
+| [다양한 편집 기능, IntelliSense 및 코드 조각](editing-r-code-in-visual-studio.md) | 구문 색 지정, 모든 코드 및 라이브러리에 대한 [IntelliSense](r-intellisense.md), 코드 서식 지정, 시그니처 도움말, 정의로 이동, 모든 참조 찾기, [코드 조각](code-snippets-for-r.md) 등을 포함합니다. | [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md) |
 | [R Markdown](rmarkdown-with-r-in-visual-studio.md) | R Markdown 문서는 데이터 결과를 markdown 코드 블록 내에 통합된 R 코드와 공유하도록 도와줍니다. | N/A |
 | [대화형 창](interactive-repl-for-r-in-visual-studio.md) | R에 대한 전체 REPL 환경에 대화형 창에서 소스 파일의 코드를 쉽게 실행할 수 있는 기능을 제공합니다. | N/A |
 | [코드 시각화](visualizing-data-with-r-in-visual-studio.md) | 도표는 R 환경의 통합 부분이며, RTVS는 각각이 자체적인 기록과 창 간에 도표를 이동하는 기능을 갖춘 여러 개의 독립적인 도표 창을 지원합니다. 도표는 비트맵 및 PDF 파일에 저장되거나 비트맵 또는 메타파일로 클립보드에 복사될 수 있습니다.  | N/A |
