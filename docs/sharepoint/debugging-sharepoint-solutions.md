@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1be963dec8eee77efe4855c2e810af0fd1e72f1b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9acec4af35fd194007ec13724bd07ceb366fc044
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="debugging-sharepoint-solutions"></a>SharePoint 솔루션 디버깅
   사용 하 여 SharePoint 솔루션을 디버그할 수는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거 합니다. 디버깅을 시작할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 서버에 프로젝트 파일을 배포 하 고 다음 웹 브라우저에서 SharePoint 사이트의 인스턴스를 엽니다. 다음 섹션에서 SharePoint 응용 프로그램을 디버깅 하는 방법을 설명 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  
@@ -128,11 +128,11 @@ ms.lasthandoff: 04/16/2018
  워크플로 프로젝트를 디버깅할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (해당 유형에 따라)에서 워크플로 템플릿으로 라이브러리에 목록을 추가 합니다. 그런 다음 수동으로 또는 추가 하거나 업데이트 하 여 항목에서 워크플로 템플릿으로 시작할 수 있습니다. 사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 워크플로 디버깅할 수 있습니다.  
   
 > [!NOTE]  
->  다른 어셈블리에 대 한 참조를 추가 하는 경우 해당 어셈블리가 전역 어셈블리 캐시에 설치 되어 있는 ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]). 그렇지 않으면 워크플로 솔루션은 실패 합니다. 어셈블리를 설치 하는 방법에 대 한 정보를 참조 하십시오. [문서 또는 항목에서 워크플로 수동으로 시작](http://go.microsoft.com/fwlink/?LinkID=79938)합니다.  
+>  다른 어셈블리에 대 한 참조를 추가 하는 경우 해당 어셈블리가 전역 어셈블리 캐시에 설치 되어 있는 ([!INCLUDE[TLA2#tla_gac](../sharepoint/includes/tla2sharptla-gac-md.md)]). 그렇지 않으면 워크플로 솔루션은 실패 합니다. 어셈블리를 설치 하는 방법에 대 한 정보를 참조 하십시오. [문서 또는 항목에서 워크플로 수동으로 시작](https://support.office.com/article/Manually-start-a-workflow-on-a-document-or-item-5C106E0E-6FF2-4A75-AF99-F01653BC7963)합니다.  
   
  그러나 배포 프로세스는 워크플로 시작 하지 않습니다. SharePoint 웹 사이트에서 워크플로 시작 해야 합니다. 또한 Microsoft Office Word 2010와 같은 클라이언트 응용 프로그램을 사용 하 여 또는 별도 서버 쪽 코드를 사용 하 여 워크플로 시작할 수 있습니다. 에 지정 된 방법 중 하나를 사용 하 여는 **SharePoint 사용자 지정 마법사**합니다.  
   
- 예를 들어 워크플로 수동으로 시작할 수 있음을 지정 하는 경우 라이브러리 또는 목록에 있는 항목에서 직접 워크플로 시작 합니다. 워크플로 수동으로 시작 하는 방법에 대 한 자세한 내용은 참조 하십시오. [문서 항목에는 워크플로 수동으로 시작할](http://go.microsoft.com/fwlink/?LinkID=79938)합니다.  
+ 예를 들어 워크플로 수동으로 시작할 수 있음을 지정 하는 경우 라이브러리 또는 목록에 있는 항목에서 직접 워크플로 시작 합니다. 워크플로 수동으로 시작 하는 방법에 대 한 자세한 내용은 참조 하십시오. [문서 항목에는 워크플로 수동으로 시작할](https://support.office.com/article/Manually-start-a-workflow-on-a-document-or-item-5C106E0E-6FF2-4A75-AF99-F01653BC7963)합니다.  
   
 ##  <a name="FeatureEvents"></a> 디버깅 기능 이벤트 수신자  
  실행 하면 기본적으로는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 응용 프로그램을 SharePoint 서버에서 사용자에 대 한 해당 기능이 자동으로 활성화 합니다. 그러나 되므로 문제가 발생 기능 이벤트 수신자를 디버깅할 때에서 기능을 활성화 하는 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 디버거에서 다른 프로세스에서 실행 합니다. 즉, 중단점, 등의 몇 가지 디버깅 기능을 제대로 작동 하지 않습니다.  

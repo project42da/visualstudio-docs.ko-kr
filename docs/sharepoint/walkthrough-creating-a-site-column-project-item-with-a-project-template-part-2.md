@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0027b49cd371aaec00d2bcfb609a694f14dc4869
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 0aa938d41540229d6cd91598968f104b3fa3a7be
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2"></a>연습: 프로젝트 템플릿을 사용하여 사이트 열 프로젝트 항목 만들기, 2부
   사용자 지정 형식의 SharePoint 프로젝트 항목을 정의 하 고 Visual Studio에서 프로젝트 템플릿을 사용 하 여 연결 하는 마법사를 제공 수도 있습니다. 서식 파일 프로젝트 항목이 포함 된 새 프로젝트를 만들려면 사용할 때 사용자 로부터 정보를 수집 하는 마법사를 사용할 수 있습니다. 수집 하는 정보는 프로젝트 항목을 초기화 데 사용할 수 있습니다.  
@@ -40,7 +40,7 @@ ms.lasthandoff: 05/22/2018
 -   디버깅 하 고 마법사를 테스트 합니다.  
   
 > [!NOTE]  
->  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [ http://go.microsoft.com/fwlink/?LinkId=191369 ](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
+> 샘플 워크플로의 계열에 대 한 참조 [SharePoint 워크플로 샘플](https://docs.microsoft.com/sharepoint/dev/general-development/sharepoint-workflow-samples)합니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행 하려면 먼저 만들어야 합니다 SiteColumnProjectItem 솔루션을 완료 하 여 [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)합니다.  

@@ -23,11 +23,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6eef7953a767e08febcb3e8dc42ad4f55e73889c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 08daee9f9b8a7bdfbe71b4787eaaaeb3baa178d9
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="creating-sharepoint-workflow-solutions"></a>SharePoint 워크플로 솔루션 만들기
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 문서 및 SharePoint 웹 사이트에서 목록 항목의 수명 주기를 관리 하는 사용자 지정 워크플로 만드는 데 도움이 되는 도구를 제공 합니다. 제공되는 항목에는 디자이너, 작업 컨트롤 집합 및 필수 어셈블리 참조가 있습니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 도 포함 되어는 **SharePoint 사용자 지정 마법사**를 만들고 워크플로 구성 합니다.  
@@ -37,7 +37,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="workflows-in-sharepoint"></a>SharePoint에서 워크플로  
  SharePoint 라이브러리 또는 목록에는 워크플로 추가 하는 경우에 비즈니스 프로세스 라이브러리 또는 목록에 있는 모든 항목에 적용 합니다. 워크플로 시스템 또는 사용자가을 편집 하 고 검토 한 다음 항목을 보내는 등의 각 항목에 수행 해야 하는 작업을 설명 합니다. 라고 하는 이러한 동작을 *활동*, 워크플로의 구성 요소입니다.  
   
- SharePoint 워크플로 만들 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 웹 사이트를 배포 합니다. 워크플로 SharePoint에 배포 된 후에 라이브러리 또는 목록으로 연결 합니다. 또는 수동으로 사용자 프로세스에 의해 자동으로 시작 후 하려면. 워크플로 작업에 대 한 자세한 내용은 참조 [워크플로 사용 하 여 프로세스를 관리할](http://go.microsoft.com/fwlink/?LinkId=79757)합니다.  
+ SharePoint 워크플로 만들 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 웹 사이트를 배포 합니다. 워크플로 SharePoint에 배포 된 후에 라이브러리 또는 목록으로 연결 합니다. 또는 수동으로 사용자 프로세스에 의해 자동으로 시작 후 하려면. 워크플로 작업에 대 한 자세한 내용은 참조 [Visual Studio를 사용 하 여 개발 하는 SharePoint 워크플로](https://docs.microsoft.com/sharepoint/dev/general-development/develop-sharepoint-workflows-using-visual-studio)합니다.  
   
 ## <a name="creating-custom-sharepoint-workflows"></a>사용자 지정 SharePoint 워크플로 만들기  
  2 개의 SharePoint 워크플로 프로젝트에서 사용할 수는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]: **순차 워크플로** 및 **상태 시스템 워크플로**합니다.  

@@ -14,11 +14,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b617230c7a30ee437ac1d1120793e567e14c7814
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 86e176ba2b6b4da026e5ecfc341ac535d9a32f84
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2"></a>연습: 항목 템플릿을 사용하여 사용자 지정 작업 프로젝트 항목 만들기, 2부
   사용자 지정 형식의 SharePoint 프로젝트 항목을 정의 하 고 Visual Studio에서 항목 템플릿을 사용 하 여 연결 하는 마법사를 제공 수도 있습니다. 서식 파일 프로젝트에 프로젝트 항목의 새 인스턴스를 추가 하는 데 사용할 사용자 로부터 정보를 수집 하는 마법사를 사용할 수 있습니다. 수집 하는 정보는 프로젝트 항목을 초기화 데 사용할 수 있습니다.  
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/22/2018
 -   디버깅 하 고 마법사를 테스트 합니다.  
   
 > [!NOTE]  
->  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [SharePoint 도구 확장성 연습에 대 한 프로젝트 파일](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
+>  샘플을 다운로드할 수 있습니다 [Github](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) 워크플로에 대 한 사용자 지정 활동을 만드는 방법을 보여 주는 합니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 수행 하려면 먼저 만들어야 합니다 CustomActionProjectItem 솔루션을 완료 하 여 [연습: 항목 템플릿, 1 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)합니다.  

@@ -18,11 +18,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6b1d81f200fde885a25aa367e700e61399af5bab
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 02f3311b96d8f1287f2c2f2a81f9b37e51d4f7f6
+ms.sourcegitcommit: cc88ccc6aacebe497899fab05d243a65053e194c
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1"></a>연습: 항목 템플릿, 1 부와 사용자 지정 작업 프로젝트 항목 만들기
   항목 형식 사용자 고유의 프로젝트를 만들어 Visual Studio에서 SharePoint 프로젝트 시스템을 확장할 수 있습니다. 이 연습에서는 SharePoint 사이트에서 사용자 지정 동작을 만들려면 SharePoint 프로젝트에 추가할 수 있는 프로젝트 항목을 만듭니다. 메뉴 항목을 추가 하는 사용자 지정 작업은 **사이트 작업** SharePoint 사이트의 메뉴.  
@@ -46,7 +46,7 @@ ms.lasthandoff: 05/22/2018
  독립 실행형 연습입니다. 이 연습을 완료 한 후 마법사 항목 템플릿을 추가 하 여 프로젝트 항목을 개선할 수 있습니다. 자세한 내용은 참조 [연습: 항목 템플릿, 2 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)합니다.  
   
 > [!NOTE]  
->  완료 된 프로젝트, 코드 및이 연습에서는 다음 위치에서 다른 파일을 포함 하는 샘플을 다운로드할 수 있습니다: [ http://go.microsoft.com/fwlink/?LinkId=191369 ](http://go.microsoft.com/fwlink/?LinkId=191369)합니다.  
+>  샘플을 다운로드할 수 있습니다 [Github](https://github.com/SharePoint/PnP/tree/master/Samples/Workflow.Activities) 워크플로에 대 한 사용자 지정 활동을 만드는 방법을 보여 주는 합니다.  
   
 ## <a name="prerequisites"></a>전제 조건  
  이 연습을 완료 하려면 개발 컴퓨터에 다음 구성 요소가 필요 합니다.  
