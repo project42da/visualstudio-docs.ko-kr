@@ -10,15 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a9b260c6b0e63801134c3f15eabab5b13e2926e2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f6629aef7549a78f7cfdb73bb6d7ee0be3ac7412
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-add-schema-set-search-result-nodes-to-the-workspace"></a>방법: 작업 영역에 스키마 집합 검색 결과 노드 추가
 
-이 항목에서는 작업 영역에서 키워드 검색을 수행한 결과로 XML 스키마 탐색기에서 강조 표시되는 노드를 추가하는 방법에 대해 설명합니다.
+이 항목으로 표시 된 노드를 추가 하는 방법에 설명 된 **XML 스키마 탐색기** 작업 영역에서 키워드 검색의 결과로 합니다.
 
 > [!NOTE]
 > 전역 노드만에 추가할 수는 [작업 영역](../xml-tools/xml-schema-designer-workspace.md)합니다.
@@ -34,7 +34,7 @@ ms.lasthandoff: 04/26/2018
 
      ![XML 스키마 탐색기 키워드 검색](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")
 
-     또한 검색 결과가 XML 스키마 탐색기에서 강조 표시되고 세로 스크롤 막대의 눈금 표시로 나타납니다.
+     검색 결과에서 강조 표시 됩니다는 **XML 스키마 탐색기** 세로 스크롤 막대의 눈금 표시로 하 고 있습니다.
 
 3.  검색 결과 클릭 하 여 작업 영역에 추가 된 **작업 영역에 선택한 노드 추가** 요약 결과 창에서 단추입니다.
 

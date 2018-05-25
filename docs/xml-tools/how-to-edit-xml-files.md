@@ -10,15 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e35baa6d6d7c5cba696ab7b5e0bb57dd722b5d7b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3754bcf87d77a3a67801ef7f9df8e07dc687b052
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-edit-xml-files"></a>방법: XML 파일 편집
 
-XML 편집기는 XML 파일을 위한 새 편집기입니다. 이 편집기는 독립 실행형 XML 파일 또는 Visual Studio 프로젝트에 연결된 파일에 사용할 수 있습니다. XML 편집기는 .config, .dtd, .xml, .xsd, .xdr, .xsl, .xslt 및 .vssettings 파일 확장명과 연결됩니다. 또한 특정 편집기가 등록되지 않은 파일 형식과 XML 또는 DTD 내용이 포함된 파일 형식과도 연결되어 있습니다.
+XML 편집기는 XML 파일을 위한 새 편집기입니다. 이 편집기는 독립 실행형 XML 파일 또는 Visual Studio 프로젝트에 연결된 파일에 사용할 수 있습니다. XML 편집기는 다음 파일 확장명과 연결: *.config*, *.dtd*, *.xml*, *.xsd*, *.xdr*, *.xsl*, *.xslt*, 및 *.vssettings*합니다. 또한 특정 편집기가 등록되지 않은 파일 형식과 XML 또는 DTD 내용이 포함된 파일 형식과도 연결되어 있습니다.
 
 > [!NOTE]
 > XHTML 문서는 HTML 편집기에서 처리됩니다.
@@ -67,7 +67,7 @@ XML 편집기는 XML 파일을 위한 새 편집기입니다. 이 편집기는 �
 
      XML 편집기에서는 이 프로젝트에 추가한 스키마를 찾아서 이 프로젝트를 연 상태에서 편집하는 모든 XML, 스키마 또는 XSLT 파일의 유효성 검사 및 IntelliSense에 사용합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 편집기](../xml-tools/xml-editor.md)
 - [XML 문서 속성, 속성 창](../xml-tools/xml-document-properties-properties-window.md)

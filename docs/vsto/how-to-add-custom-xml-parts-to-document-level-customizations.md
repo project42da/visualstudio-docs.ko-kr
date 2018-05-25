@@ -20,11 +20,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ad9e78d6b87f85e09cbba68a4fd4297e09acf18e
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: d29515e9e8a1320975fb343ae101db21924d9767
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-add-custom-xml-parts-to-document-level-customizations"></a>방법: 문서 수준 사용자 지정에 사용자 지정 XML 부분 추가
   문서 수준 사용자 지정에서 사용자 지정 XML 부분을 만들어 Microsoft Office Excel 통합 문서 또는 Microsoft Office Word 문서에 XML 데이터를 저장할 수 있습니다. 자세한 내용은 참조 [사용자 지정 XML 부분 개요](../vsto/custom-xml-parts-overview.md)합니다.  
@@ -62,5 +62,4 @@ ms.lasthandoff: 05/17/2018
 ## <a name="see-also"></a>참고자료  
  [사용자 지정 XML 부분 개요](../vsto/custom-xml-parts-overview.md)   
  [방법: VSTO 추가 기능을 사용 하 여 문서에 사용자 지정 XML 부분 추가](../vsto/how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins.md)  
-  
   

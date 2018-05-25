@@ -1,5 +1,5 @@
 ---
-title: '방법: Word 문서에 책갈피 컨트롤 추가 | Microsoft Docs'
+title: '방법: Word 문서에 책갈피 컨트롤 추가'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,14 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a33160ba534a1ee6bd56238cffaa2064e4332ec1
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: c2814847270df70126cb8f286acdc152ddbed046
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-add-bookmark-controls-to-word-documents"></a>방법: Word 문서에 책갈피 컨트롤 추가
-  문서 수준 프로젝트에서 디자인 타임 또는 런타임에 프로젝트의 문서에 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가할 수 있습니다. VSTO 추가 기능 프로젝트에서는 런타임에 열려 있는 임의 문서에 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가할 수 있습니다.  
+  문서 수준 프로젝트에서 추가할 수 있습니다 <xref:Microsoft.Office.Tools.Word.Bookmark> 디자인 타임 또는 런타임에 프로젝트의 문서에 컨트롤을 합니다. VSTO 추가 기능을 프로젝트에 추가할 수 있습니다 <xref:Microsoft.Office.Tools.Word.Bookmark> 런타임에 열려 있는 문서에 컨트롤입니다.  
   
  [!INCLUDE[appliesto_wdalldocapp](../vsto/includes/appliesto-wdalldocapp-md.md)]  
   
@@ -34,13 +34,13 @@ ms.lasthandoff: 04/16/2018
   
 -   [디자인 타임에 책갈피 컨트롤 추가](#designtime)  
   
--   [런타임에 문서 수준 프로젝트에 책갈피 컨트롤 추가](#runtimedoclevel)  
+-   [문서 수준 프로젝트에서 런타임에 책갈피 컨트롤 추가](#runtimedoclevel)  
   
--   [런타임에 VSTO 추가 기능 프로젝트에서 책갈피 컨트롤 추가](#runtimeaddin)  
+-   [프로그램에서 VSTO 추가 기능 프로젝트에서 런타임에 책갈피 컨트롤 추가](#runtimeaddin)  
   
- 에 대 한 자세한 내용은 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤 참조 [책갈피 컨트롤](../vsto/bookmark-control.md)합니다.  
+ 에 대 한 자세한 내용은 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤 참조 [Bookmark 컨트롤](../vsto/bookmark-control.md)합니다.  
   
-##  <a name="designtime"></a> Adding Bookmark Controls at Design Time  
+##  <a name="designtime"></a> 디자인 타임에 책갈피 컨트롤 추가  
  디자인 타임에 문서 수준 프로젝트의 문서에 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가하는 여러 가지 방법이 있습니다.  
   
 -   Visual Studio **도구 상자**에서.  
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/16/2018
   
 -   **데이터 소스** 창에서.  
   
-     <xref:Microsoft.Office.Tools.Word.Bookmark> 데이터 소스 **창에서** 컨트롤을 문서로 끌어올 수 있습니다. 이 기능은 동시에 컨트롤을 데이터에 바인딩하려는 경우에 유용합니다. **데이터 소스** 창에서 Windows Form 컨트롤을 추가하는 것과 동일한 방법으로 호스트 컨트롤을 추가할 수 있습니다. 자세한 내용은 [Data Binding and Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)을 참조하십시오.  
+     <xref:Microsoft.Office.Tools.Word.Bookmark> 데이터 소스 **창에서** 컨트롤을 문서로 끌어올 수 있습니다. 이 기능은 동시에 컨트롤을 데이터에 바인딩하려는 경우에 유용합니다. **데이터 소스** 창에서 Windows Form 컨트롤을 추가하는 것과 동일한 방법으로 호스트 컨트롤을 추가할 수 있습니다. 자세한 내용은 참조 [데이터 바인딩 및 Windows Forms](/dotnet/framework/winforms/data-binding-and-windows-forms)합니다.  
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
@@ -79,14 +79,14 @@ ms.lasthandoff: 04/16/2018
   
 3.  **책갈피** 대화 상자에서 새 책갈피의 이름을 입력하고 **추가**를 클릭합니다.  
   
-##  <a name="runtimedoclevel"></a> Adding Bookmark Controls at Run Time in a Document-Level Project  
- 프로젝트에서 <xref:Microsoft.Office.Tools.Word.Bookmark> 클래스의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 속성 메서드를 사용하여 프로그래밍 방식으로 런타임에 문서에 `ThisDocument` 컨트롤을 추가할 수 있습니다. 다음과 같은 방법으로 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가하는 데 사용할 수 있는 두 개의 메서드 오버로드가 있습니다.  
+##  <a name="runtimedoclevel"></a> 문서 수준 프로젝트에서 런타임에 책갈피 컨트롤 추가  
+ 추가할 수 있습니다 <xref:Microsoft.Office.Tools.Word.Bookmark> 메서드를 사용 하 여 프로그래밍 방식으로 런타임에 문서에 컨트롤는 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 의 속성은 `ThisDocument` 프로젝트에서 클래스. 다음과 같은 방법으로 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가하는 데 사용할 수 있는 두 개의 메서드 오버로드가 있습니다.  
   
 -   지정된 범위에 <xref:Microsoft.Office.Tools.Word.Bookmark> 를 추가합니다.  
   
 -   문서의 네이티브 책갈피(즉, <xref:Microsoft.Office.Tools.Word.Bookmark> )를 기반으로 하는 <xref:Microsoft.Office.Interop.Word.Bookmark>를 추가합니다.  
   
- 동적으로 생성된 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 <xref:Microsoft.Office.Interop.Word.Bookmark> 는 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 책갈피를 기반으로 하는 <xref:Microsoft.Office.Tools.Word.Bookmark> 를 다시 만들 수 있습니다. 자세한 내용은 [Adding Controls to Office Documents at Run Time](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하십시오.  
+ 동적으로 생성된 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 <xref:Microsoft.Office.Interop.Word.Bookmark> 는 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 책갈피를 기반으로 하는 <xref:Microsoft.Office.Tools.Word.Bookmark> 를 다시 만들 수 있습니다. 자세한 내용은 참조 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)합니다.  
   
 #### <a name="to-add-a-bookmark-control-to-a-document-programmatically"></a>프로그래밍 방식으로 문서에 책갈피 컨트롤을 추가하려면  
   
@@ -98,16 +98,16 @@ ms.lasthandoff: 04/16/2018
     > [!NOTE]  
     >  기존 <xref:Microsoft.Office.Tools.Word.Bookmark> 에서 <xref:Microsoft.Office.Interop.Word.Bookmark>컨트롤을 만들려는 경우 <xref:Microsoft.Office.Tools.Word.ControlCollection.AddBookmark%2A> 메서드를 사용하고 기존 <xref:Microsoft.Office.Interop.Word.Bookmark>를 전달합니다.  
   
-##  <a name="runtimeaddin"></a> Adding Bookmark Controls at Run Time in an VSTO Add-in project  
- VSTO 추가 기능을 사용하여 프로그래밍 방식으로 런타임에 열려 있는 문서에 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가할 수 있습니다. 이렇게 하려면 열려 있는 문서를 기반으로 하는 <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목을 생성한 다음 이 호스트 항목의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 속성 메서드를 사용합니다. 다음과 같은 방법으로 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가하는 데 사용할 수 있는 두 개의 메서드 오버로드가 있습니다.  
+##  <a name="runtimeaddin"></a> 프로그램에서 VSTO 추가 기능 프로젝트에서 런타임에 책갈피 컨트롤 추가  
+ 추가할 수 있습니다 <xref:Microsoft.Office.Tools.Word.Bookmark> VSTO 추가 기능을 사용 하 여 런타임에 열려 있는 임의 문서에 프로그래밍 방식으로 제어 합니다. 이렇게 하려면 열려 있는 문서를 기반으로 하는 <xref:Microsoft.Office.Tools.Word.Document> 호스트 항목을 생성한 다음 이 호스트 항목의 <xref:Microsoft.Office.Tools.Word.Document.Controls%2A> 속성 메서드를 사용합니다. 다음과 같은 방법으로 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤을 추가하는 데 사용할 수 있는 두 개의 메서드 오버로드가 있습니다.  
   
 -   지정된 범위에 <xref:Microsoft.Office.Tools.Word.Bookmark> 를 추가합니다.  
   
 -   문서의 네이티브 책갈피(즉, <xref:Microsoft.Office.Tools.Word.Bookmark> )를 기반으로 하는 <xref:Microsoft.Office.Interop.Word.Bookmark>를 추가합니다.  
   
- 동적으로 생성된 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 <xref:Microsoft.Office.Interop.Word.Bookmark> 는 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 책갈피를 기반으로 하는 <xref:Microsoft.Office.Tools.Word.Bookmark> 를 다시 만들 수 있습니다. 자세한 내용은 [Persisting Dynamic Controls in Office Documents](../vsto/persisting-dynamic-controls-in-office-documents.md)을 참조하세요.  
+ 동적으로 생성된 <xref:Microsoft.Office.Tools.Word.Bookmark> 컨트롤은 문서를 닫을 때 문서에 유지되지 않습니다. 그러나 네이티브 <xref:Microsoft.Office.Interop.Word.Bookmark> 는 문서에 남아 있습니다. 다음에 문서를 열 때 네이티브 책갈피를 기반으로 하는 <xref:Microsoft.Office.Tools.Word.Bookmark> 를 다시 만들 수 있습니다. 자세한 내용은 참조 [Office 문서에서 동적 컨트롤 유지](../vsto/persisting-dynamic-controls-in-office-documents.md)합니다.  
   
- VSTO 추가 기능 프로젝트에서 호스트 항목을 생성 하는 방법에 대 한 자세한 내용은 참조 [런타임에 Word 문서 및 Excel 통합 문서 런타임에 VSTO 추가 기능에서](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)합니다.  
+ VSTO 추가 기능 프로젝트에서 호스트 항목을 생성 하는 방법에 대 한 자세한 내용은 참조 [확장 Word 문서 및 Excel VSTO 추가 기능에서 런타임에 통합](../vsto/extending-word-documents-and-excel-workbooks-in-vsto-add-ins-at-run-time.md)합니다.  
   
 #### <a name="to-add-a-bookmark-control-at-a-specified-range"></a>지정된 범위에 책갈피 컨트롤을 추가하려면  
   
@@ -127,13 +127,13 @@ ms.lasthandoff: 04/16/2018
      [!code-vb[Trin_WordAddInDynamicControls#5](../vsto/codesnippet/VisualBasic/trin_wordaddindynamiccontrols/ThisAddIn.vb#5)]
      [!code-csharp[Trin_WordAddInDynamicControls#5](../vsto/codesnippet/CSharp/Trin_WordAddInDynamicControls/ThisAddIn.cs#5)]  
   
-## <a name="see-also"></a>참고 항목  
- [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
+## <a name="see-also"></a>참고자료  
+ [확장 된 개체를 사용 하 여 Word를 자동화 합니다.](../vsto/automating-word-by-using-extended-objects.md)   
  [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
  [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
- [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍 방식으로 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [VSTO 추가 기능 프로그래밍](../vsto/programming-vsto-add-ins.md)   
  [문서 수준 사용자 지정 프로그래밍](../vsto/programming-document-level-customizations.md)   
- [방법: Bookmark 컨트롤 크기 조정](../vsto/how-to-resize-bookmark-controls.md)  
+ [방법: 책갈피 컨트롤 크기 조정](../vsto/how-to-resize-bookmark-controls.md)  
   
   

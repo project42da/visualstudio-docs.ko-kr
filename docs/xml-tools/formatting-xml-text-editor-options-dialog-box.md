@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f1046655812bf88f51af7590fd1b39ccea11f8eb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5f92ced5ca5ac007969a06cec7f253617ee293e3
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="formatting-xml-text-editor-options-dialog-box"></a>서식 지정, XML, 텍스트 편집기, 옵션 대화 상자
 
@@ -42,7 +42,7 @@ ms.lasthandoff: 04/26/2018
 </item>
 ```
 
-## <a name="auto-reformat"></a>자동 서식 다시 지정
+## <a name="auto-reformat"></a>자동 서식 다시 설정
  **클립보드에서 붙여넣기 시**
 
  클립보드에서 붙여넣은 XML 텍스트의 서식을 다시 지정합니다.
@@ -51,7 +51,7 @@ ms.lasthandoff: 04/26/2018
 
  끝 태그가 완료될 때 요소의 서식을 다시 지정합니다.
 
-## <a name="mixed-content"></a>혼합 내용
+## <a name="mixed-content"></a>혼합 된 콘텐츠
  **기본값으로 혼합 된 콘텐츠 유지**
 
  편집기에서 혼합 내용 서식을 다시 지정하는지 여부를 결정합니다. 혼합 내용이 `xml:space="preserve"` 범위에 있는 경우를 제외하고 기본적으로 편집기에서는 혼합 내용의 서식을 다시 지정하려고 시도합니다.
@@ -65,7 +65,7 @@ ms.lasthandoff: 04/26/2018
 </dir>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 문서 속성, 속성 창](../xml-tools/xml-document-properties-properties-window.md)
 - [XML 편집기 구성 요소](../xml-tools/xml-editor-components.md)

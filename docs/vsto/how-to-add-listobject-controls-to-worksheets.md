@@ -16,11 +16,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3ab95f3929b556f6ece0d3b44ee12bad6f21a361
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 5af88022529263446c82fc27aee9d781d7da945f
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-add-listobject-controls-to-worksheets"></a>방법: 워크시트에 ListObject 컨트롤 추가
   추가할 수 있습니다 <xref:Microsoft.Office.Tools.Excel.ListObject> 디자인 타임 및 런타임에 문서 수준 프로젝트에서 Microsoft Office Excel 워크시트에 컨트롤입니다.  
@@ -44,7 +44,7 @@ ms.lasthandoff: 05/17/2018
   
  [!INCLUDE[note_settings_general](../sharepoint/includes/note-settings-general-md.md)]  
   
-#### <a name="to-use-the-ribbon-in-excel"></a>Excel에서 리본을 사용하려면  
+### <a name="to-use-the-ribbon-in-excel"></a>Excel에서 리본을 사용하려면  
   
 1.  **삽입** 탭의 **테이블** 그룹에서 **테이블**을 클릭합니다.  
   

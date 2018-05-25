@@ -10,19 +10,19 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4feb40ba843da5c3f2e5f7de9b8d554debf6fcc6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8be2666316bdc4d64d4f3dd4ec52c5104a1af5cc
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>방법: 그래프 뷰를 사용하여 스키마 집합의 개요 가져오기
+# <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>방법: 그래프 뷰를 사용 하 여 설정 하는 스키마의 개요
 
 이 항목에서는 사용 하는 방법을 설명는 [그래프 보기](../xml-tools/graph-view.md) 노드 간 관계 및 스키마 집합에 있는 노드의 상위 수준으로 볼 수 있습니다.
 
 ## <a name="to-create-a-new-xsd-file-and-display-the-root-element-in-the-content-model-view"></a>콘텐츠 모델 뷰에서 새 XSD 파일을 만들고 루트 요소를 표시하려면
 
-1.  새 XML 스키마 파일을 만들고 파일을 Relationships.xsd로 저장합니다.
+1.  새 XML 스키마 파일을 만들고로 파일을 저장 *Relationships.xsd*합니다.
 
 2.  클릭는 **기본 XML 스키마 파일 표시 및 편집 하려면 XML 편집기를 사용 하 여** 시작 보기에서 링크 합니다.
 
@@ -30,9 +30,9 @@ ms.lasthandoff: 04/26/2018
 
 4.  XML 편집기에서 마우스 오른쪽 단추로 클릭 하 고 선택 **뷰 디자이너**합니다.
 
-5.  XSD 도구 모음에서 그래프 뷰를 선택합니다.
+5.  그래프 보기에서 선택 하 고 **XSD 도구 모음**합니다.
 
-6.  선택 **스키마 집합** XML 스키마 탐색기 및 노드 드래그 뷰의 그래프 뷰의 디자인 화면에서 노드. 모든 전역 노드 및 관계가 설정된 노드를 연결하는 화살표를 볼 수 있어야 합니다.
+6.  선택 **스키마 집합** 에서 노드는 **XML 스키마 탐색기** 뷰의 그래프 뷰의 디자인 화면 노드를 끕니다. 모든 전역 노드 및 관계가 설정된 노드를 연결하는 화살표를 볼 수 있어야 합니다.
 
      ![그래프 보기](../xml-tools/media/relationshipingraphview.gif "RelationshipInGraphView")
 

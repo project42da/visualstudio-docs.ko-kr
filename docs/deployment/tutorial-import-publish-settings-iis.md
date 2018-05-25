@@ -11,11 +11,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b023349454f71835e13e7cc891b8be92b90c153f
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 907fecd348dba46f6d3375d2d994b04ec1cf1eb5
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>IIS에 응용 프로그램을 가져와서 게시 Visual Studio에서 게시 설정
 
@@ -38,13 +38,11 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio가 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
+* Visual Studio 2017 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
 
     아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
 
-    이 문서의 단계는 Visual Studio 2017 기반
-
-* IIS 8.0 웹 서버 역할이 제대로 구성 되어 있는 Windows Server 2012를 실행 하는 컴퓨터를 IIS에서 게시 설정 파일을 생성 하려면 있어야 하며 ASP.NET Core 또는 ASP.NET 4.5를 설치 합니다. ASP.NET Core 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다. ASP.NET 4.5에 대해 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
+* IIS에서 게시 설정 파일을 생성 하려면 Windows Server 2012 또는 Windows Server 2016을 실행 하는 컴퓨터 있어야 하며 올바르게 구성 하는 IIS 웹 서버 역할에 있어야 합니다. ASP.NET 4.5 또는 ASP.NET Core도 설치 해야 합니다. ASP.NET Core 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다. ASP.NET 4.5에 대해 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
 
 ## <a name="create-a-new-aspnet-project-in-visual-studio"></a>Visual Studio에서 새 ASP.NET 프로젝트 만들기
 
@@ -68,62 +66,13 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server에는 IIS에서 게시 설정 파일 만들기
 
-1. IIS에서 마우스 오른쪽 단추로 클릭는 **기본 웹 사이트**, 선택 **배포** > **구성할 웹 배포 게시**합니다.
-
-    ![웹 배포 구성을 구성합니다](../deployment/media/tutorial-configure-web-deploy-publishing.png)
-
-1. 에 **구성할 웹 배포 게시** 대화 상자에서 설정을 검토 합니다.
-
-1. 클릭 **설치**합니다.
-
-    에 **결과** 패널 권한 액세스 하는 출력에 표시 된에 부여 되어 있고 지정된 된 사용자 파일을는 *.publishsettings* 에 표시 된 위치에 생성 된 파일 확장명은 대화 상자입니다.
-
-    ```xml
-    <?xml version="1.0" encoding="utf-8"?>
-    <publishData>
-      <publishProfile
-        publishUrl="https://myhostname:8172/msdeploy.axd"
-        msdeploySite="Default Web Site"
-        destinationAppUrl="http://myhostname:80/"
-        mySQLDBConnectionString=""
-        SQLServerDBConnectionString=""
-        profileName="Default Settings"
-        publishMethod="MSDeploy"
-        userName="myhostname\myusername" />
-    </publishData>
-    ```
-
-    Windows Server 및 IIS 구성에 따라 다른 값이 표시 됩니다. 표시 되는 값에 대 한 몇 가지 세부 사항은 다음과 같습니다.
-
-    * *msdeploy.axd* 파일에서 참조 되는 `publishUrl` 특성이 웹 배포에 대 한 동적으로 생성 된 HTTP 처리기 파일입니다. (테스트 목적으로 `http://myhostname:8172` 은 일반적으로 작동 합니다.)
-    * `publishUrl` 포트는 일반적으로 웹 배포에 대 한 기본값, 8172 포트로 설정 됩니다.
-    * `destinationAppUrl` 포트는 일반적으로 IIS에 대 한 기본값은 포트 80로 설정 됩니다.
-    * 이후 단계에서 호스트 이름을 사용 하 여 Visual Studio에서 원격 호스트에 연결할 수 없는 경우 호스트 이름 대신 IP 주소를 테스트 합니다.
-
-    > [!NOTE]
-    > Azure VM에서 실행 되는 IIS에 게시 하는 경우 웹 배포 및 IIS 포트를 네트워크 보안 그룹에 열려 있어야 합니다. 자세한 내용은 참조 [설치 및 실행된 IIS](/azure/virtual-machines/windows/quick-create-portal#open-port-80-for-web-traffic)합니다.
-
-1. Visual Studio를 실행 중인 컴퓨터에이 파일을 복사 합니다.
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio에서 게시 설정 가져오기 및 배포
 
-1. ASP.NET 프로젝트가 Visual Studio에서 열려 있는 컴퓨터에서 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다.
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
-1. 모든 게시 프로필을 이전에 구성한 경우는 **게시** 창이 나타납니다. 클릭 **새 프로필 만들기**합니다.
-
-1. 에 **게시 대상 선택** 대화 상자를 클릭 **프로필 가져오기**합니다.
-
-    ![선택 게시](../deployment/media/tutorial-publish-tool-import-profile.png)
-
-1. 이전 섹션에서 만든 게시 설정 파일의 위치로 이동 합니다.
-
-1. 에 **게시 설정 파일 가져오기** 대화 상자, 탐색 하 고 이전 섹션에서 만든 프로필을 선택한 클릭 **열려**합니다.
-
-    Visual Studio는 배포 프로세스를 시작 하 고 진행률 및 결과 출력 창에 표시 합니다.
-
-    모든 배포 오류가 발생 하면 클릭 **설정을** 설정을 편집할 수 있습니다. 설정을 수정 하 고 클릭 **유효성 검사** 새 설정을 테스트 합니다.
-
-    ![게시 도구에는 설정 편집](../deployment/media/tutorial-configure-publish-settings-in-tool.png)
+응용 프로그램을 성공적으로 배포 후 자동으로 시작 해야 합니다. Visual Studio에서 시작 되지 않으면, IIS에서 앱을 시작 합니다. ASP.NET Core 응용 프로그램 풀 필드에 있는지 확인 해야는 **DefaultAppPool** 로 설정 된 **관리 코드 없음**합니다.
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11ec095bd3228eb2291f77bf9fadceb0b74d8a37
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6d3da2e6b5b0c9ea2701524c0fb2fde1e1313687
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>방법: XSD 스키마를 기반으로 XML 문서 만들기
+# <a name="how-to-create-an-xml-document-based-on-an-xsd-schema"></a>방법: XSD 스키마에 따라 XML 문서 만들기
 
 **샘플 XML 생성** 기능은 XSD (XML 스키마) 파일에 따라 샘플 XML 파일을 생성 합니다.
 
@@ -46,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  에 [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md)를 마우스 오른쪽 단추로 클릭는 `PurchaseOrder` 전역 요소입니다. 선택 **샘플 XML 생성**합니다.
 
-     이 옵션을 선택하면 다음 샘플 XML 콘텐츠를 포함하는 PurchaseOrder.xml 파일이 XML 편집기에서 생성되고 열립니다.
+     PurchaseOrder이이 옵션을 선택 합니다. *xml* 다음 샘플 XML 내용 만으로도 파일 생성 되며 XML 편집기에서 열립니다.
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -75,6 +75,6 @@ ms.lasthandoff: 04/26/2018
     </PurchaseOrder>
     ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [XML 데이터 작업](../xml-tools/working-with-xml-data.md)
+- [XML 데이터 사용](../xml-tools/working-with-xml-data.md)

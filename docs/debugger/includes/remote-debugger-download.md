@@ -1,32 +1,26 @@
 ---
-translation.priority.ht:
-- cs-cz
-- de-de
-- es-es
-- fr-fr
-- it-it
-- ja-jp
-- ko-kr
-- pl-pl
-- pt-br
-- ru-ru
-- tr-tr
-- zh-cn
-- zh-tw
-ms.openlocfilehash: 273f67b997da80b27c124d3119ec0871f0a061b8
-ms.sourcegitcommit: efd8c8e0a9ba515d47efcc7bd370eaaf4771b5bb
+title: 원격 디버거 다운로드
+description: 원격 디버거에 대 한 다운로드 링크
+services: ''
+author: mikejo5000
+ms.service: ''
+ms.topic: include
+ms.date: 05/23/2018
+ms.author: mikejo
+ms.custom: include file
+ms.openlocfilehash: 358dc0b457381bb56532e6cae1156aac9ea2dba2
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 1.  장치 또는 서버 디버깅 하려는 컴퓨터 (을 하지 않고 Visual Studio를 실행 하는 컴퓨터)에서 올바른 버전을의 원격 도구를 가져옵니다.
 
     |버전|링크|노트|
     |-|-|-|
-    |Visual Studio 2017 (최신 버전)|[원격 도구](https://www.visualstudio.com/downloads/?q=remote+tools#remote-tools-for-visual-studio-2017)|항상 장치 운영 체제 (x86 또는 x64)를 일치 하는 버전을 다운로드 합니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
-    |Visual Studio 2017 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|Visual Studio 2017의 이전 릴리스에 대 한 원격 도구가 My.VisualStudio.com에서 제공 됩니다. 메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
-    |Visual Studio 2015 업데이트 3|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
-    |Visual Studio 2015 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. 향상 된 보안 모드 설정 (Windows Server) 메시지가 표시 되 면 새 신뢰할 수 있는 사이트 추가 해야 합니다.|
+    |Visual Studio 2017 (최신 버전)|[원격 도구](https://www.visualstudio.com/downloads/?q=remote+tools#remote-tools-for-visual-studio-2017)|항상 장치 운영 체제 (x86 또는 x64)를 일치 하는 버전을 다운로드 합니다. Windows Server에서 참조 [파일 다운로드를 차단 해제](../../debugger/remote-debugging.md#unblock_msvsmon) 에 대 한 도움말을 원격 도구를 다운로드 합니다.|
+    |Visual Studio 2017 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202017)|Visual Studio 2017의 이전 릴리스에 대 한 원격 도구가 My.VisualStudio.com에서 제공 됩니다. 메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. Windows Server에서 참조 [파일 다운로드를 차단 해제](../../debugger/remote-debugging.md#unblock_msvsmon) 에 대 한 도움말을 원격 도구를 다운로드 합니다.|
+    |Visual Studio 2015 (구)|[원격 도구](https://my.visualstudio.com/Downloads?q=remote%20tools%20visual%20studio%202015)|메시지가 표시 되 면 조인 무료 Visual Studio Dev Essentials 그룹 또는 Visual Studio 구독을 사용 하 여 로그인 id입니다. Windows Server에서 참조 [파일 다운로드를 차단 해제](../../debugger/remote-debugging.md#unblock_msvsmon) 에 대 한 도움말을 원격 도구를 다운로드 합니다.|
     |Visual Studio 2013|[원격 도구](https://msdn.microsoft.com/library/bt727f1t(v=vs.120).aspx#BKMK_Installing_the_Remote_Tools)|Visual Studio 2013 설명서에서 페이지를 다운로드 합니다.|
     |Visual Studio 2012|[원격 도구](https://msdn.microsoft.com/library/bt727f1t(v=vs.110).aspx#BKMK_Installing_the_Remote_Tools)|Visual Studio 2012 설명서에서 페이지를 다운로드 합니다.|
   

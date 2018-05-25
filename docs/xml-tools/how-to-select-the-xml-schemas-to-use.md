@@ -10,30 +10,30 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: edda7ab4875381b6213e893169fc8bc837427757
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d835a8592108b549a109f7bb7e128a8ae5b01611
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="how-to-select-the-xml-schemas-to-use"></a>방법: 사용할 XML 스키마 선택
+# <a name="how-to-select-the-xml-schemas-to-use"></a>방법: 사용할 XML 스키마를 선택 합니다.
 
-XML 편집기에서는 %InstallDir%\Xml\Schemas 디렉터리에 있는 스키마 캐시를 제공합니다. 이 스키마 캐시에는 잘 알려진 XML 스키마가 포함되어 있으며 이 스키마는 IntelliSense 및 XML 문서 유효성 검사에 사용됩니다.
+XML 편집기에 있는 스키마 캐시 제공에서 *%InstallDir%\Xml\Schemas* 디렉터리입니다. 이 스키마 캐시에는 잘 알려진 XML 스키마가 포함되어 있으며 이 스키마는 IntelliSense 및 XML 문서 유효성 검사에 사용됩니다.
 
 **스키마** 문서 속성은 하나 이상의 XML 스키마 정의 언어 (XSD) 스키마를 사용 하 여 선택 하는 데 사용 합니다. 즉, 이 속성을 사용하면 스키마 캐시에서 스키마를 선택하거나 캐시에 없는 스키마를 지정할 수 있습니다.
 
-지정한 스키마는 다른 모든 XML 문서 속성과 함께 숨겨진 솔루션 사용자 옵션 파일(.suo)에 저장됩니다. 그러므로 다음 번에 솔루션을 열 때 이러한 값을 다시 입력하지 않아도 됩니다.
+지정한 스키마의 숨겨진된 솔루션 사용자 옵션 파일에 저장 됩니다 (. *suo*), 다른 모든 XML 함께 문서 속성입니다. 그러므로 다음 번에 솔루션을 열 때 이러한 값을 다시 입력하지 않아도 됩니다.
 
 > [!NOTE]
 > 편집기에서는 인라인 스키마 또는 `xsd:schemaLocation` 특성이 참조하는 스키마를 사용하여 유효성을 검사할 수 있습니다. 자세한 내용은 참조 [XML 문서 유효성 검사](../xml-tools/xml-document-validation.md)합니다.
 
-## <a name="to-select-an-xml-schema-from-the-schema-cache"></a>스키마 캐시에서 XML 스키마를 선택하려면
+## <a name="to-select-an-xml-schema-from-the-schema-cache"></a>스키마 캐시에서 XML 스키마를 선택 하려면
 
 1.  XML 편집기에서 파일을 엽니다.
 
 2.  문서 속성 창에서 단추를 클릭는 **스키마** 필드입니다.
 
-     **XML 스키마** 대화 상자가 표시 됩니다. 대화 상자 (catalog.xml 파일에서 참조 하는 스키마 포함), 스키마 캐시에서 확장명이.xsd 인 모든 스키마를 나열 하 고 현재 솔루션에 있는 모든 스키마에서 참조 하는 Visual Studio에서 열 수도 있는 `xsd:schemaLocation` 특성 또는 참조 **스키마** 속성입니다.
+     **XML 스키마** 대화 상자가 표시 됩니다. 대화 상자에 나열 된 모든 스키마는 합니다. *xsd* 스키마 캐시에서 확장명이 (스키마에서 참조를 포함 하는 *catalog.xml* 파일), 및 Visual Studio에서 열려 있는 현재 솔루션에서 참조 되는 모든 스키마도는 `xsd:schemaLocation` 특성 또는에서 참조 되는 **스키마** 속성입니다.
 
 3.  다음 중 하나를 수행하여 유효성 검사에 사용할 스키마를 선택합니다.
 
@@ -47,7 +47,7 @@ XML 편집기에서는 %InstallDir%\Xml\Schemas 디렉터리에 있는 스키마
 
      선택한 스키마 목록에 다시 복사 되 고 **스키마** 문서 속성입니다.
 
-## <a name="to-add-an-xml-schema-to-the-schema-cache"></a>스키마 캐시에 XML 스키마를 추가하려면
+## <a name="to-add-an-xml-schema-to-the-schema-cache"></a>스키마 캐시에 XML 스키마를 추가 하려면
 
 1.  문서 속성 창에서 단추를 클릭는 **스키마** 필드입니다.
 
@@ -61,7 +61,7 @@ XML 편집기에서는 %InstallDir%\Xml\Schemas 디렉터리에 있는 스키마
 
      스키마에 추가 스키마 캐시 하 고이 **사용** 열 값으로 설정 됩니다 **이 스키마를 사용 하 여**합니다.
 
-## <a name="to-delete-an-xml-schema-from-the-schema-cache"></a>스키마 캐시에서 XML 스키마를 삭제하려면
+## <a name="to-delete-an-xml-schema-from-the-schema-cache"></a>스키마 캐시에서 XML 스키마를 삭제 하려면
 
 1.  문서 속성 창에서 단추를 클릭는 **스키마** 필드입니다.
 
@@ -72,7 +72,7 @@ XML 편집기에서는 %InstallDir%\Xml\Schemas 디렉터리에 있는 스키마
     > [!NOTE]
     > 통해 스키마에 대 한 참조가 아직 남아 있으면는 `schemaLocation` 특성 또는 일치 하는 `targetNamespace` 다음 **제거** 자동 연결으로 인해 이러한 상황에서 작동 하지 것입니다. 이 경우에 것으로 스키마를 표시 하는 **선택한 스키마를 사용 하지 않는** 에 **사용** 열입니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [스키마 캐시](../xml-tools/schema-cache.md)
 - [XML 스키마 대화 상자](../xml-tools/xml-schemas-dialog-box.md)

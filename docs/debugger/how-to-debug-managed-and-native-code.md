@@ -16,11 +16,11 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: aeb74bac5196450ec98426727a1456a009adb5c1
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 548b86406ba36a6f46a2dfb3d4d894b5621c298c
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="tutorial-debug-managed-and-native-code-in-visual-studio"></a>자습서: Visual Studio에서 관리 및 네이티브 코드를 디버깅 합니다.
 
@@ -116,7 +116,7 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
 
 1. *Program.cs*, 기본 코드를 다음 코드로 바꿉니다.
 
-    ```c#
+    ```csharp
     using System;
     using System.Runtime.InteropServices;
     
@@ -183,7 +183,7 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
 
 1. C# 프로젝트를 열고 *Program.cs* 왼쪽된 여백을 클릭 하 여 코드의 다음 줄에서 중단점을 설정 합니다.
 
-    ```c#
+    ```csharp
     int result = Multiply(7, 7);
     ```
 

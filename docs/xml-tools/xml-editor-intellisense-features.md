@@ -10,15 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1c2b87f9d1b850ce93851d78a8b43420ae473c41
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 82d05e481d313a7ba9010fe253756d3f21c345e2
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="xml-editor-intellisense-features"></a>XML 편집기 IntelliSense 기능
 
-XML 편집기에서는 Visual Studio에서 제공하는 다른 언어 편집기에 버금가는 완전한 IntelliSense 기능을 제공합니다. 이 단원에서는 XSD(XML 스키마 정의 언어) 및 XSLT 문서와 함께 IntelliSense를 사용하는 방법에 대해 설명합니다.
+XML 편집기에서는 Visual Studio에서 제공하는 다른 언어 편집기와 비교할 수 있는 완전한 IntelliSense 기능을 제공합니다. 이 단원에서는 XSD(XML 스키마 정의 언어) 및 XSLT 문서와 함께 IntelliSense를 사용하는 방법에 대해 설명합니다.
 
 ## <a name="intellisense-in-an-xsd-document"></a>XSD 문서의 IntelliSense
  스키마 문서에 연결한 후 얻게 예상 되는 요소의 드롭다운 목록이 입력 언제 든 지 `"<"` 하거나 클릭 하 고 **개체 멤버 목록 표시** XML 편집기 도구 모음에서 단추 합니다. XML 문서와 스키마를 연결 하는 방법에 대 한 정보를 참조 하십시오. [XML 문서 유효성 검사](../xml-tools/xml-document-validation.md)합니다.
@@ -73,14 +73,14 @@ XML 편집기에서는 Visual Studio에서 제공하는 다른 언어 편집기�
 
 -   DTD 선언 종료: `>`
 
-IntelliSense 목록에서 정규화된 네임스페이스 요소 또는 특성을 선택한 경우 해당 요소 또는 특성에 대한 네임스페이스가 아직 범위 내에 없으면 XML 편집기에서 네임스페이스 선언을 삽입할 수 있습니다.
+XML 편집기에는 네임 스페이스를 삽입 하는 기능 또한 선언 또는 네임 스페이스의 정규화 된 요소를 선택 하면 IntelliSense 목록 및 해당 요소 또는 특성에 대 한 네임 스페이스에서 특성 범위에는 아직입니다.
 
 예를 들어, 문서에서 선언하지 않은 `e:Book` 네임스페이스에 접두사가 바인딩된 IntelliSense 목록에서 `http://books` 요소를 선택한 경우 XML 편집기에서 필수 네임스페이스 선언이 자동으로 삽입됩니다. 다음은 결과 XML 텍스트입니다.
 
 `<e:Book xmlns:e="http://books"`
 
 ## <a name="brace-matching"></a>중괄호 일치
- XML 편집기에서는 중괄호 강조 기능을 제공하므로 방금 닫은 요소에 대한 피드백을 즉시 얻을 수 있습니다. 바로 가기 키(Ctrl+])를 사용하여 한 중괄호에서 짝이 되는 중괄호로 이동할 수 있습니다.
+ XML 편집기에서는 중괄호 강조 기능을 제공하므로 방금 닫은 요소에 대한 피드백을 즉시 얻을 수 있습니다. 바로 가기 키를 사용할 수도 있습니다 (**Ctrl**+**]**)의 한 중괄호에서 짝이 되는 중괄호로 이동할 수 있습니다.
 
  XML 편집기에서는 다음 항목에 대해 이 작업을 수행합니다.
 
@@ -98,8 +98,8 @@ IntelliSense 목록에서 정규화된 네임스페이스 요소 또는 특성�
 
 -   특성의 여는 따옴표와 닫는 따옴표
 
-## <a name="modifying-the-intellisense-options"></a>IntelliSense 옵션 수정
- IntelliSense 및 자동 완성 기능은 기본적으로 활성화되어 있습니다. 그러나 도구-옵션 설정을 수정하여 이를 변경할 수 있습니다.
+## <a name="modify-the-intellisense-options"></a>IntelliSense 옵션 수정
+ IntelliSense 및 자동 완성 기능은 기본적으로 활성화되어 있습니다. 그러나이 변경할 수 있습니다를 수정 하 여 프로그램 **도구** > **옵션** 설정 합니다.
 
  **자동 삽입** 의 섹션은 **기타** 다음과 같은 동작을 제어 하는 페이지:
 
@@ -109,7 +109,7 @@ IntelliSense 목록에서 정규화된 네임스페이스 요소 또는 특성�
 |특성 따옴표|새 특성 이름을 입력할 때 특성 값 따옴표를 삽입합니다.|
 |기타 태그|주석, CDATA, DOCTYPE, 처리 명령 및 기타 태그 선언을 완성합니다.|
 
-#### <a name="to-change-the-auto-completion-behavior"></a>자동 완성 동작을 변경하려면
+### <a name="to-change-the-auto-completion-behavior"></a>자동 완성 동작을 변경하려면
 
 1.  **도구** 메뉴에서 **옵션**을 선택합니다.
 
@@ -117,7 +117,7 @@ IntelliSense 목록에서 정규화된 네임스페이스 요소 또는 특성�
 
 3.  아무 것도 변경 된 **자동 삽입** 섹션 및 클릭 **확인**합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 편집기](../xml-tools/xml-editor.md)
 - [IntelliSense 사용](../ide/using-intellisense.md)

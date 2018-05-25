@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b1638e888f1185df63b1c536a0c63b374587d7b4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 4932f6761ecb8c915d9d919318af6403680eedaf
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="start-view"></a>시작 뷰
 
@@ -26,7 +26,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="watermark"></a>워터마크
 
-워터마크 창에는 모든 XSD 디자이너 뷰, XML 편집기 및 XML 스키마 탐색기에 대한 링크 목록이 있습니다. 스키마 집합에 오류가 있는 경우 목록 끝에 "오류 목록을 사용하여 스키마 집합의 오류 표시 및 수정"이라는 텍스트가 표시됩니다.
+워터 마크 창에는 모든 XSD 디자이너 뷰, XML 편집기에 대 한 링크 목록을 포함 하 고 **XML 스키마 탐색기**합니다. 스키마 집합에 오류가 있는 경우 목록 끝에 "오류 목록을 사용하여 스키마 집합의 오류 표시 및 수정"이라는 텍스트가 표시됩니다.
 
 ## <a name="schema-set-details"></a>스키마 집합 정보
 
@@ -42,11 +42,11 @@ ms.lasthandoff: 04/26/2018
 
 |옵션|설명|
 |------------|-----------------|
-|**시작 뷰 표시**|시작 뷰로 전환합니다. 바로 가기 키를 사용 하 여이 뷰에 액세스할 수 있습니다: **CTRL + 1**합니다.|
-|**콘텐츠 모델 뷰 표시**|콘텐츠 모델 뷰로 전환합니다. 바로 가기 키를 사용 하 여이 뷰에 액세스할 수 있습니다: **CTRL + 2**합니다.|
-|**그래프 뷰 표시**|그래프 뷰로 전환합니다. 바로 가기 키를 사용 하 여이 뷰에 액세스할 수 있습니다: **CTRL + 3**합니다.|
+|**시작 뷰 표시**|시작 뷰로 전환합니다. 바로 가기 키를 사용 하 여이 뷰에 액세스할 수 있습니다: **Ctrl**+**1**합니다.|
+|**콘텐츠 모델 뷰 표시**|콘텐츠 모델 뷰로 전환합니다. 바로 가기 키를 사용 하 여이 뷰에 액세스할 수 있습니다: **Ctrl**+**2**합니다.|
+|**그래프 뷰 표시**|그래프 뷰로 전환합니다. 바로 가기 키를 사용 하 여이 뷰에 액세스할 수 있습니다: **Ctrl**+**3**합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md)
 - [그래프 뷰](../xml-tools/graph-view.md)
