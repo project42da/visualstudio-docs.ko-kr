@@ -66,4 +66,5 @@
 # [액세스 가능성](accessibility.md)
 
 # [문제 해결](troubleshooting.md)
+## [Visual Studio 사용자 환경 개선 프로그램](visual-studio-experience-improvement-program.md)
 ## [문제 보고](report-a-problem.md)
