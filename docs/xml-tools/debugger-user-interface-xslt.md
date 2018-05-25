@@ -10,17 +10,17 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 56b2767a952c566359b1c61bbdc83060bf905e99
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 6f3d9dafc2911e05fd76aadd5b08ad2327969839
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
-# <a name="debugger-user-interface-xslt"></a>디버거 사용자 인터페이스(XSLT)
+# <a name="debugger-user-interface-xslt"></a>디버거 사용자 인터페이스 (XSLT)
 
 이 항목에서는 디버거 창과 대화 상자에 대해 설명합니다. XSLT 관련 디버깅 동작이 있는 사용자 인터페이스 부분에 대해서만 설명합니다.
 
-자세한 내용은 참조는 [사용자 인터페이스 참조 디버깅](../debugger/debugging-user-interface-reference.md)합니다.
+자세한 내용은 참조는 [사용자 인터페이스 참조 디버그](../debugger/debugging-user-interface-reference.md)합니다.
 
 ## <a name="locals-window"></a>지역 창
  지역 창에는 스타일시트에 정의되어 있는 변수에 대한 정보가 표시됩니다. 지역 창에는 다음 세 개의 정보 열이 있습니다.
@@ -51,12 +51,12 @@ ms.lasthandoff: 04/26/2018
  XSLT 디버거는 별도의 창을 사용하여 디버거 출력을 표시합니다. 이 출력을 표시 하는 데 사용 하 여 동일한 창은 **XSL 출력 표시** 명령입니다.
 
 ## <a name="task-list"></a>작업 목록
- 작업 목록에는 스타일시트의 모든 컴파일 오류가 나열됩니다. 오류를 두 번 클릭하면 오류가 발생한 줄에 커서가 놓입니다.
+ **작업 목록** 스타일 시트의 모든 컴파일 오류가 나열 합니다. 오류를 두 번 클릭하면 오류가 발생한 줄에 커서가 놓입니다.
 
- 작업 목록에는 XSLT 파일의 스크립트 블록에서 발생한 모든 오류가 포함됩니다.
+ **작업 목록** XSLT 파일의 스크립트 블록에서 발생 하는 모든 오류가 포함 됩니다.
 
 > [!NOTE]
-> XSLT 디버거에는 경고가 없으므로 작업 목록에 절대로 표시되지 않습니다.
+> XSLT 디버거에 경고가 없으므로에 절대로 표시는 **작업 목록**합니다.
 
 ## <a name="breakpoints-window"></a>중단점 창
  중단점 창에는 현재 프로젝트에 설정된 모든 중단점이 표시됩니다. 창이 표시되어 있는 동안 중단점을 추가하면 자동으로 창이 업데이트되어 새 중단점을 표시합니다.
@@ -72,9 +72,9 @@ ms.lasthandoff: 04/26/2018
  조사식 창에 표시된 변수는 현재 컨텍스트(호출 스택에서 맨 위에 있는 항목)에 대한 변수입니다. 컨텍스트를 변경하면 조사식 창이 업데이트되어 해당 컨텍스트에 대해 설정된 변수를 표시합니다.
 
 ## <a name="call-stack-window"></a>호출 스택 창
- 호출 스택 창을 사용하여 호출 스택, 매개 변수 형식 및 매개 변수 값의 함수 이름을 볼 수 있습니다. 디버깅 중인 프로그램이 중단 상태인 경우에만 호출 스택 정보가 표시됩니다.
+ **호출 스택** 창 함수 이름의 호출 스택, 매개 변수 형식 및 매개 변수 값에 보는 데 사용 됩니다. 디버깅 중인 프로그램이 중단 상태인 경우에만 호출 스택 정보가 표시됩니다.
 
- 호출 스택은 XSLT 실행의 다양한 컨텍스트를 나타냅니다. 예를 들어, "a" 템플릿에서 "b" 템플릿으로 호출이 있는 경우 "a" 템플릿과 "b" 템플릿이 호출 스택 창의 목록 맨 위에 현재 컨텍스트와 함께 나타납니다. 사용자는 현재 실행 중인 쿼리를 볼 수 있습니다.
+ 호출 스택은 XSLT 실행의 다양한 컨텍스트를 나타냅니다. 예를 들어, 서식 파일에서 호출 하는 경우 "a" 템플릿과 "b", 템플릿 "a" 템플릿 "b"에 표시는 **호출 스택** 창 목록의 맨 위쪽에 현재 컨텍스트와 합니다. 사용자는 현재 실행 중인 쿼리를 볼 수 있습니다.
 
  XSLT 파일에 템플릿 이름이 없을 경우 XSLT 프로세서에서 생성된 이름이 사용됩니다.
 
@@ -98,8 +98,8 @@ ms.lasthandoff: 04/26/2018
 
  자세한 내용은 [하는 방법: 디스어셈블리 창을 사용 하 여](../debugger/how-to-use-the-disassembly-window.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XSLT 디버그](../xml-tools/debugging-xslt.md)
 - [디버거 기본 사항](../debugger/debugger-basics.md)
-- [Visual Studio에서 자동에서 변수 및 지역 변수 검사](../debugger/autos-and-locals-windows.md)
+- [Visual Studio에서 자동 및 지역 창에서 변수 검사](../debugger/autos-and-locals-windows.md)

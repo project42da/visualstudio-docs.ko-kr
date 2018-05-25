@@ -10,13 +10,13 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 79f128968d810120c40b797715bd0df325116414
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: faf28fc44acd530cbc379c4a400c3488f98405ea
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
-# <a name="context-menus-xml-schema-explorer"></a>상황에 맞는 메뉴(XML 스키마 탐색기)
+# <a name="context-menus-xml-schema-explorer"></a>상황에 맞는 메뉴 (XML 스키마 탐색기)
 
 다음의 상황에 맞는 메뉴 항목을 사용하여 스키마 관련 검색 및 기타 작업을 수행할 수 있습니다.
 
@@ -31,7 +31,7 @@ ms.lasthandoff: 04/26/2018
 |**전역 요소 표시**|스키마 집합에서 모든 전역 요소를 찾아서 강조 표시합니다.|
 |**속성 창**|열립니다는 **속성** 창 (아직 열지 않은) 하는 경우. 이 창에서 노드에 대한 정보를 표시합니다.|
 
-## <a name="node-type-namespace"></a>노드 형식: 네임스페이스
+## <a name="node-type-namespace"></a>노드 형식: Namespace
  다음 표에서는 네임스페이스 노드에 사용할 수 있는 옵션에 대해 설명합니다.
 
 |옵션|설명|
@@ -104,7 +104,7 @@ ms.lasthandoff: 04/26/2018
 |**모든 멤버 표시**|특성 그룹의 모든 멤버를 찾아서 강조 표시합니다.|
 |**모든 참조 표시**|선택된 특성 그룹에 대한 모든 참조(`ref="selectedAttributeGroup"`이 있는 특성 그룹)를 찾아서 강조 표시합니다.|
 
-## <a name="node-type-named-group"></a>노드 형식: 명명된 그룹
+## <a name="node-type-named-group"></a>노드 형식: 명명 된 그룹
  명명된 그룹 노드에 대한 상황에 맞는 메뉴에는 위에서 설명한 전역 노드 옵션 이외에도 다음 옵션이 있습니다.
 
 |옵션|설명|
@@ -113,7 +113,7 @@ ms.lasthandoff: 04/26/2018
 |**모든 멤버 표시**|명명된 그룹의 모든 멤버를 찾아서 강조 표시합니다.|
 |**모든 참조 표시**|선택된 그룹에 대한 모든 참조(`ref="selectedGroup"`이 있는 그룹)를 찾아서 강조 표시합니다.|
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md)
 - [스키마 집합 검색](../xml-tools/searching-the-schema-set.md)

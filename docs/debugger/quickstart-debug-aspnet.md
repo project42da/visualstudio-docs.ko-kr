@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 5f731e5d40205776682e706aa4e32d988a76f0f0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b3cfe8d0af7bebac5bce48e82b4237de071a41d8
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="quickstart-debug-aspnet-with-the-visual-studio-debugger"></a>빠른 시작: Visual Studio 디버거를 사용 하 여 ASP.NET을 디버그
 
@@ -41,7 +41,7 @@ Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 �
 
 1. 솔루션 탐색기에서 Pages/About.cshtml) (아래 About.cshtml.cs 열고 다음 코드를 대체 합니다.
 
-    ```c#
+    ```csharp
     public void OnGet()
     {
         Message = "Your application description page.";
@@ -50,7 +50,7 @@ Visual Studio 디버거는 앱을 디버그할 수 있도록 여러 강력한 �
 
     이 코드로 바꿉니다.
 
-    ```c#
+    ```csharp
     public void OnGet()
     {
         LinkedList<int> result = doWork();

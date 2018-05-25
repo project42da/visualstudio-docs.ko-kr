@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f2956e0c19e7cf50fdde39765bc5b26112986b84
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 02492f2e1760df3ce5cd6751808303bae75577e2
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-evaluate-an-xpath-expression"></a>방법: XPath 식 계산
 
@@ -29,7 +29,7 @@ ms.lasthandoff: 04/26/2018
 -   사용자 정의 함수는 지원되지 않습니다.
 
 > [!NOTE]
-> 다음 절차에서 belowAvg.xsl 및 books.xml 파일을 사용 하는 [연습: XSLT 스타일 시트를 디버깅](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) 항목입니다.
+> 다음 절차를 사용 하 여는 *belowAvg.xsl* 및 *books.xml* 에서 파일의 [연습: XSLT 스타일 시트를 디버깅](../xml-tools/walkthrough-debug-an-xslt-style-sheet.md) 항목입니다.
 
 ## <a name="to-evaluate-an-xpath-expression"></a>XPath 식을 계산하려면
 
@@ -51,6 +51,6 @@ ms.lasthandoff: 04/26/2018
 
      **값** 상자 XPath 식은로 평가 되었음이 나타납니다 `true`합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XSLT 디버그](../xml-tools/debugging-xslt.md)

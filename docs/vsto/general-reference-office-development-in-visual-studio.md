@@ -15,11 +15,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 91c8f8003f610e9cf4aa440fa0175bb13267896e
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: f32dedf1b0f431f3385c14f7c0d4d5ddd27982a9
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="general-reference-office-development-in-visual-studio"></a>일반 참조 (Visual Studio에서 Office 개발)
   이 섹션에는 Visual Studio의 Microsoft Office 프로젝트에 대 한 기술 정보가 포함 됩니다.  

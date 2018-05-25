@@ -10,15 +10,15 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1f598f01116d7ce2aec5759c411e456083f6932b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0ac437bbbe876d81acc917f011a3051c9c264b6a
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
-# <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>방법: XML 스키마에서 XML 조각 생성
+# <a name="how-to-generate-an-xml-snippet-from-an-xml-schema"></a>방법: XML 스키마에서 XML 조각을 생성
 
-XML 편집기에는 XSD(XML 스키마 정의 언어) 스키마에서 XML 조각을 생성할 수 있는 기능이 있습니다. 예를 들어, XML 파일을 만들 때 요소 이름 옆에서 Tab 키를 눌러 해당 요소의 스키마 정보에서 생성된 XML 데이터로 요소를 채울 수 있습니다.
+XML 편집기에는 XSD(XML 스키마 정의 언어) 스키마에서 XML 조각을 생성할 수 있는 기능이 있습니다. 예를 들어, 요소 이름 옆에 배치 하는 동안 XML 파일을 제작 하는 대로 누르면 **탭** 해당 요소에 대 한 스키마 정보에서 생성 된 XML 데이터로 요소를 채울 합니다.
 
 이 기능은 요소에서만 사용할 수 있으며 다음 규칙이 적용됩니다.
 
@@ -44,12 +44,12 @@ XML 편집기에는 XSD(XML 스키마 정의 언어) 스키마에서 XML 조각�
 
 ## <a name="example"></a>예제
 
- 이 단원의 단계에서는 XML 편집기의 스키마에 의해 생성된 XML 조각 기능을 사용하는 방법을 보여 줍니다.
+ 이 섹션의 단계 스키마에서 생성 된 XML 조각 기능 XML 편집기를 사용 하는 방법을 보여 줍니다.
 
 > [!NOTE]
 > 이 프로시저를 시작하기 전에 스키마 파일을 로컬 컴퓨터에 저장합니다.
 
-### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>새 XML 파일을 만들어 XML 스키마와 연결하려면
+### <a name="to-create-a-new-xml-file-and-associate-it-with-an-xml-schema"></a>새 XML 파일을 만들고 XML 스키마와 연결 하려면
 
 1.  에 **파일** 메뉴에서 **새로**를 클릭 하 고 **파일**합니다.
 
@@ -69,7 +69,7 @@ XML 편집기에는 XSD(XML 스키마 정의 언어) 스키마에서 XML 조각�
 
 6.  **확인**을 클릭합니다.
 
-     이제 XML 스키마가 XML 문서와 연결되었습니다.
+     XML 스키마는 이제에서 XML 문서와 연결 합니다.
 
 ### <a name="to-generate-an-xml-snippet"></a>XML 조각을 생성하려면
 
@@ -85,11 +85,11 @@ XML 편집기에는 XSD(XML 스키마 정의 언어) 스키마에서 XML 조각�
 
      **연락처** 루트 요소를 추가 합니다.
 
-3.  선택 **연락처** 멤버 목록 및 ENTER 키를 누릅니다.
+3.  선택 **연락처** 멤버 목록 및 키를 눌러 **Enter**합니다.
 
      시작 태그 `<Contact`가 추가되고 요소 이름 뒤에 커서가 놓입니다.
 
-4.  Tab 키를 눌러 스키마 정보를 기반으로 `Contact` 요소에 대한 XML 데이터를 생성합니다.
+4.  키를 눌러 **탭** XML 데이터를 생성 하는 `Contact` 요소는 스키마 정보를 기반으로 합니다.
 
 ## <a name="input"></a>입력
 
@@ -155,7 +155,7 @@ XML 편집기에는 XSD(XML 스키마 정의 언어) 스키마에서 XML 조각�
 </Contact>
 ```
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 조각](../xml-tools/xml-snippets.md)
-- [방법: XML 조각 사용](../xml-tools/how-to-use-xml-snippets.md)
+- [방법: 사용 하 여 XML 조각](../xml-tools/how-to-use-xml-snippets.md)

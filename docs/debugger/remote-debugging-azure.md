@@ -1,7 +1,7 @@
 ---
 title: 원격 디버깅 IIS와 Azure에서 ASP.NET Core | Microsoft Docs
 ms.custom: remotedebugging
-ms.date: 08/14/2017
+ms.date: 05/21/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 ms.assetid: a6c04b53-d1b9-4552-a8fd-3ed6f4902ce6
@@ -12,11 +12,11 @@ ms.workload:
 - aspnet
 - dotnetcore
 - azure
-ms.openlocfilehash: c95a91ecd057bfec7af5e9b932d4326cdcab9270
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 202e9ce6e0a53c6967ebe1bacaa6553a1241298e
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="remote-debug-aspnet-core-on-iis-in-azure-in-visual-studio-2017"></a>Visual Studio 2017에는 Azure에서 IIS에서 ASP.NET Core 원격 디버그
 
@@ -67,13 +67,17 @@ Visual Studio에서 게시 하 고 IIS의 완전 하 게 된 인스턴스를 응
 
 1. Visual Studio에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다.
 
-2. 선택 **Microsoft Azure 앱 서비스** 에서 **게시** 대화 상자에서 **새로 만들기**를 게시 하려면 프롬프트를 따릅니다.
+    모든 게시 프로필을 이전에 구성한 경우는 **게시** 창이 나타납니다. 클릭 **새 프로필**합니다.
+
+1. 선택 **Azure 앱 서비스** 에서 **게시** 대화 상자에서 **새로 만들기**를 게시 하려면 프롬프트를 따릅니다.
 
     자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다.
 
-3. 열기 **서버 탐색기** (**보기** > **서버 탐색기**) 응용 프로그램 서비스 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **디버거연결**.
+    ![Azure App Service에 게시](../debugger/media/remotedbg_azure_app_service_profile.png)
 
-4. 실행 중인 ASP.NET 응용 프로그램에서 링크를 클릭 하 여 **에 대 한** 페이지.
+1. 열기 **서버 탐색기** (**보기** > **서버 탐색기**) 응용 프로그램 서비스 인스턴스를 마우스 오른쪽 단추로 클릭 하 고 선택 **디버거연결**.
+
+1. 실행 중인 ASP.NET 응용 프로그램에서 링크를 클릭 하 여 **에 대 한** 페이지.
 
     Visual Studio에서 중단점이 적중됩니다.
 
@@ -87,19 +91,24 @@ Windows 서버에 대 한 Azure VM 만들 지정 하 고 설치 및 IIS 및 기�
 
 네트워크 보안 그룹에 포트 80을 여는 경우 원격 디버거에 대 한 포트 4022를 열 수도 있습니다. 이런 방식으로 나중에 열 필요가 없습니다.
 
+### <a name="app-already-running-in-iis-on-the-azure-vm"></a>IIS에서 Azure VM에서 이미 실행 하는 응용 프로그램?
+
+이 문서는 Windows 서버에 IIS의 기본 구성 설정 하 고 Visual Studio에서 앱을 배포 하는 단계를 포함 합니다. 이러한 단계는 서버 응용 프로그램을 제대로 실행할 수 있는지와 원격 디버그에 준비가 설치 필수 구성 요소에 있는지 확인 하기 위해 포함 합니다.
+
+* 응용 프로그램은 IIS에서 실행 되 고 원격 디버거를 다운로드 하 고 디버깅을 시작로 이동 하 려 할 경우 [다운로드 하 여 Windows Server에서 원격 도구 설치](#BKMK_msvsmon)합니다.
+
+* 앱 설정 되어 있는지, 배포 되었는지 확인 하는 데 도움이 필요 하 고이 항목의 모든 단계에 따라 디버그할 수 있도록 IIS에서 올바르게 실행 합니다.
+
 ### <a name="update-browser-security-settings-on-windows-server"></a>Windows Server에서 브라우저 보안 설정을 업데이트합니다
 
-브라우저 보안 설정에 따라이 자습서에 설명 된 소프트웨어를 더 빠르게 다운로드할 수 있도록 브라우저에 다음 신뢰할 수 있는 사이트를 추가 하는 데 시간이 저장 될 수 있습니다. 이러한 사이트에 대 한 액세스를 필요할 수 있습니다.
+(기본적으로 사용 됩니다) Internet Explorer에서 보안 강화 구성을 사용 하면 일부 도메인을 웹 서버 구성 요소 중 일부를 다운로드할 수 있도록를 신뢰할 수 있는 사이트로 추가 해야 할 수 있습니다. 로 이동 하 여 신뢰할 수 있는 사이트 추가 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트**합니다. 다음 도메인을 추가 합니다.
 
 - microsoft.com
 - go.microsoft.com
 - download.microsoft.com
-- visualstudio.com
 - iis.net
 
-Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있는 사이트를 추가할 수 있습니다 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트**합니다. 이러한 단계는 다른 브라우저도 서로 다릅니다. (My.visualstudio.com에서 이전 버전의 원격 디버거를 다운로드 해야 할 경우 신뢰할 수 있는 사이트 추가로 몇 가지는 로그인 해야 합니다.)
-
-소프트웨어를 다운로드 하는 경우에 다양 한 웹 사이트 스크립트 및 리소스를 로드할 수 있는 권한을 부여 하는 요청 발생할 수 있습니다. 대부분의 경우에서 이러한 추가 리소스는 소프트웨어를 설치 하지 않아도 됩니다.
+소프트웨어를 다운로드 하는 경우에 다양 한 웹 사이트 스크립트 및 리소스를 로드할 수 있는 권한을 부여 하는 요청 발생할 수 있습니다. 필요 하지 않지만 프로세스를 간소화 하기 위해 클릭 이러한 리소스 중 일부 **추가** 대화 상자가 나타나면 합니다.
 
 ### <a name="install-aspnet-core-on-windows-server"></a>Windows Server에 ASP.NET Core를 설치 합니다.
 
@@ -110,13 +119,45 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
 3. 시스템을 다시 시작 (실행 또는 **net stop가 /y** 뒤 **net 시작 w3svc** 시스템 경로에 대 한 변경을 선택 하기 위해 명령 프롬프트에서).
 
-## <a name="optional-install-web-deploy-36-for-hosting-servers-on-windows-server"></a>(선택 사항) 설치 웹 배포 Windows 서버에서 서버를 호스팅하기 위한 3.6
+## <a name="choose-a-deployment-option"></a>배포 옵션을 선택 합니다.
 
-일부 시나리오에서는 빠르게 수 게시 설정 가져오기 Visual Studio의 배포 옵션을 수동으로 구성 하는 대신 합니다. 게시 설정 Visual Studio에서 게시 프로필을 구성 하는 대신, 참조를 가져오려면 선호 하는 경우 [게시 설정 하 고 IIS에 배포 하는 가져오기](../deployment/tutorial-import-publish-settings-iis.md)합니다. 그렇지 않은 경우이 항목의 상태를 유지 하 고 계속 읽어보세요. 가져오기에 대 한 문서를 완료 하는 경우 게시 설정 및 응용 프로그램을 성공적으로 배포 그런 다음이 항목으로 돌아와서을에서 섹션에서 시작 [원격 도구 다운로드](#BKMK_msvsmon)합니다.
+IIS에 앱을 배포 하는 데 도움이 필요, 이러한 옵션을 고려 합니다.
 
-### <a name="BKMK_install_webdeploy"></a> (선택 사항) 설치 웹 배포 Windows Server에서 3.6
+* IIS에서 게시 설정 파일을 만들고 Visual Studio의 설정을 가져올 배포 합니다. 일부 시나리오에서 앱을 배포 하는 빠른 방법을 이것이입니다. 게시 설정 파일을 만들 때 사용 권한은 자동으로 설정 됩니다 IIS에서.
 
-[!INCLUDE [remote-debugger-install-web-deploy](../debugger/includes/remote-debugger-install-web-deploy.md)]
+* 로컬 폴더에 게시 하 고 IIS에서 준비 된 응용 프로그램 폴더를 기본 방법으로 출력을 복사 하 여 배포 합니다.
+
+## <a name="optional-deploy-using-a-publish-settings-file"></a>(선택 사항) 게시 설정 파일을 사용 하 여 배포
+
+이 옵션을 사용 하려면 게시 설정 파일을 만들고 Visual Studio로 가져옵니다.
+
+> [!NOTE]
+> 이 배포 방법은 웹 배포를 사용합니다. 웹 배포를 수동으로 구성 Visual Studio에서 설정을 가져오지 않고 하려는 경우에 호스팅 서버에 대 한 웹 배포 3.6 대신 웹 배포 3.6를 설치할 수 있습니다. 그러나 수동으로 웹 배포을 구성 해야 합니다는 응용 프로그램 폴더가 서버에 올바른 값 및 사용 권한으로 구성 되어 있는지 확인 하십시오 (참조 [구성할 ASP.NET 웹 사이트](#BKMK_deploy_asp_net)).
+
+### <a name="install-and-configure-web-deploy-for-hosting-servers-on-windows-server"></a>설치 및 Windows Server에서 호스팅 서버에 대 한 웹 배포를 구성 합니다.
+
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/install-web-deploy-with-hosting-server.md)]
+
+### <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server에는 IIS에서 게시 설정 파일 만들기
+
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
+
+### <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio에서 게시 설정 가져오기 및 배포
+
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
+
+응용 프로그램을 성공적으로 배포 후 자동으로 시작 해야 합니다. Visual Studio에서 앱 시작 되지 않으면, IIS에서 앱을 시작 합니다. ASP.NET Core 응용 프로그램 풀 필드에 있는지 확인 해야는 **DefaultAppPool** 로 설정 된 **관리 코드 없음**합니다.
+
+1. 에 **설정** 대화 상자, 클릭 하 여 디버깅 사용 **다음**, 선택는 **디버그** 구성을 선택한 후 **에서 추가 파일 제거 대상** 아래는 **파일 게시** 옵션입니다.
+
+    > [!NOTE]
+    > 디버깅을 비활성화 하는 릴리스 구성을 선택 하면는 *web.config* 게시할 때 파일입니다.
+
+1. 클릭 **저장** 한 다음 응용 프로그램을 다시 게시 합니다.
+
+## <a name="optional-deploy-by-publishing-to-a-local-folder"></a>(선택 사항) 로컬 폴더에 게시 하 여 배포
+
+RoboCopy Powershell을 사용 하 여 IIS에 응용 프로그램을 복사 하려면 또는 파일을 복사 하려는 경우 앱을 배포 하려면이 옵션을 사용할 수 있습니다.
 
 ### <a name="BKMK_deploy_asp_net"></a> Windows Server 컴퓨터에 ASP.NET 웹 사이트를 구성 합니다.
 
@@ -132,40 +173,6 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 
     액세스 권한이 있는이 사용자 중 하나가 표시 되지 않으면, IUSR 읽기 및 실행 권한이 있는 사용자로 추가 하는 단계를 통해 이동 합니다.
 
-### <a name="bkmk_webdeploy"></a> (선택 사항) Visual Studio에서 Web Deploy를 사용 하 여 앱을 배포 및 게시
-
-웹 플랫폼 설치 관리자를 사용 하 여 웹 배포를 설치한 경우 Visual Studio에서 직접 앱을 배포할 수 있습니다.
-
-1. 상승 된 권한으로 Visual Studio를 시작 하 고 프로젝트를 엽니다.
-
-    이 웹 배포를 사용 하 여 앱을 배포 하려면 필요할 수 있습니다.
-
-2. **솔루션 탐색기**에서 프로젝트 노드를 마우스 오른쪽 단추로 클릭하고 **게시**를 선택합니다.
-
-3. 에 대 한 **게시 대상 선택**선택, **Microsoft Azure 가상 컴퓨터** 클릭 **게시**합니다.
-
-    ![RemoteDBG_Publish_IISl](../debugger/media/remotedbg_azure_vm_profile.png "RemoteDBG_Publish_IIS")
-
-4. 대화 상자에서 이전에 만든 Azure VM을 선택 합니다.
-
-4. Azure VM 및 IIS 설치에 대 한 수정 사항을 구성 매개 변수를 입력 합니다.
-
-    ![RemoteDBG_Publish_WebDeployl](../debugger/media/remotedbg_iis_webdeploy_config.png "RemoteDBG_Publish_WebDeploy")
-
-    다음 단계는 호스트 이름에서 유효성을 검사 하려고 하면 해결 되지 않으면는 **서버** 텍스트 상자에서 IP 주소를 지정 하십시오. 에 포트 80을 사용 하면는 **서버** 텍스트 상자의 하 고 포트 80이 고 방화벽에서 열려 있는지 확인 합니다.
-
-6. 클릭 **다음**, 선택는 **디버그** 구성을 선택 하 고 **대상에서 추가 파일 제거** 아래는 **파일 게시** 옵션.
-
-5. 클릭 **Prev**를 선택한 후 **유효성 검사**합니다. 연결 설정의 유효성을 검사 하는 경우에 게시 하도록 시도할 수 있습니다.
-
-6. 클릭 **게시** 에서는 앱을 게시 합니다.
-
-    출력 탭 게시 성공 하 고 브라우저 앱을 열고는 경우를 설명 합니다.
-
-    웹 배포에 대해 언급 오류가 발생할 경우 웹 배포 설치 단계를 다시 확인 하 고 있는지는 [올바른 포트가 열려 있는지](#bkmk_openports) 서버에 있습니다.
-
-    성공적으로 배포 응용 프로그램 제대로 실행 되지 않는 경우는 IIS와 Visual Studio 프로젝트를 모두 사용 하는 동일한 버전의 ASP.NET 다시 확인 합니다. 즉 하지 문제가, IIS 구성 또는 웹 사이트 구성에 문제가 있을 수 있습니다. Windows 서버에서 웹 사이트에서 IIS 더 구체적인 오류 메시지에 대 한 연 후 이전 단계를 다시 확인 합니다.
-
 ### <a name="optional-publish-and-deploy-the-app-by-publishing-to-a-local-folder-from-visual-studio"></a>(선택 사항) Visual Studio에서 로컬 폴더에 게시 하 여 앱을 배포 및 게시
 
 웹 배포는 사용 하지 않는 경우에 게시 하 고 파일 시스템 또는 기타 도구를 사용 하 여 앱을 배포 해야 합니다. 파일 시스템을 사용 하 여 패키지를 만드는 작업부터 시작 하 고 패키지를 수동으로 배포 하거나 XCopy, RoboCopy, PowerShell 등 다른 도구를 사용 합니다. 이 섹션에서는 웹 배포를 사용 하지 않는 경우 패키지를 수동으로 복사 하려는 한다고 가정 합니다.
@@ -173,6 +180,10 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
 [!INCLUDE [remote-debugger-deploy-app-local](../debugger/includes/remote-debugger-deploy-app-local.md)]
 
 ### <a name="BKMK_msvsmon"></a> 다운로드 하 여 Windows Server에서 원격 도구 설치
+
+이 자습서에서는 Visual Studio 2017 사용 했습니다.
+
+원격 디버거 다운로드 페이지를 여는 데 문제가 있는 경우 참조 [파일 다운로드를 차단 해제](../debugger/remote-debugging.md#unblock_msvsmon) 에 대 한 도움말입니다.
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
   
@@ -200,8 +211,10 @@ Internet Explorer를 사용 하는 경우으로 이동 하 여 신뢰할 수 있
     사용 하려는 경우는 **찾을** 단추를 해야 할 수 있습니다 [UDP 포트 3702 열고](#bkmk_openports) 서버의 합니다.
 
 5. **모든 사용자의 프로세스 표시**를 선택합니다.
-6. 빠르게 찾기 위해 프로세스 이름의 첫 글자를 입력 **dotnet.exe** (용 ASP.NET Core).
-    >참고: ASP.NET Core 응용 프로그램에 대 한 이전 프로세스 이름이 dnx.exe 이었습니다.
+
+6. 빠르게 찾기 위해 프로세스 이름의 첫 글자를 입력 *dotnet.exe* (용 ASP.NET Core).
+   
+   ASP.NET Core 응용 프로그램에 대 한 이전 프로세스 이름을 *dnx.exe*합니다.
 
     ![RemoteDBG_AttachToProcess](../debugger/media/remotedbg_attachtoprocess_aspnetcore.png "RemoteDBG_AttachToProcess")
 

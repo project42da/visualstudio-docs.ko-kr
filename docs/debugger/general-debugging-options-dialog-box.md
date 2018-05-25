@@ -23,11 +23,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b153f5e411cabc8975ad1a2dca1ed212372b63ee
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: d49d2b2b4f69cb20a87c50a0a7e0dc9791eb42ec
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="general-debugging-options-dialog-box"></a>옵션 대화 상자, 디버깅, 일반
 **도구 > 옵션 > 디버깅 > 일반** 페이지에서는 다음 옵션을 설정할 수 있습니다.  
@@ -94,11 +94,11 @@ SrcSrv(`srcsrv.dll`) 프로토콜을 구현하는 소스 서버로부터 소스 
 - **부분 신뢰 어셈블리 (관리 전용)에 대 한 소스 서버 허용**  
     소스 서버 지원이 활성화된 경우 이 설정은 부분 신뢰 어셈블리의 소스를 검색하지 않는 기본 동작을 재정의합니다.  
 
-- **소스 링크 지원 사용**  
+**소스 링크 지원을 사용 하도록 설정**  
     원본 연결 정보를 포함 하는.pdb 파일에 대 한 소스 파일을 다운로드 하도록 Visual Studio 디버거에 지시 합니다. 소스 링크에 대 한 자세한 내용은 참조는 [소스 링크 사양](https://github.com/dotnet/core/blob/master/Documentation/diagnostics/source_link.md)합니다.
 
     > [!IMPORTANT]
-    >  소스 링크는 http 또는 https를 사용 하 여 파일을 다운로드 하기 때문에.pdb 파일의 신뢰할 수 있는지 확인 합니다.  
+    >  Because Source Link will download files using http or https, make sure you trust the .pdb file.  
   
 **중단점과 현재 문의 (c + + 전용)에 대 한 전체 줄 강조 표시**  
 디버거가 중단점이나 현재 문을 강조 표시할 때 전체 줄을 강조 표시합니다.  

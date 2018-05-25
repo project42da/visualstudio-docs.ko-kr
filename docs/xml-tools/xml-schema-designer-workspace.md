@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c787431cbdf9f6a9bcb70a87b99b0a566fd0e5ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 317588e4d6c81a13a18c036a040508a1adebafcb
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="xml-schema-designer-workspace"></a>XML 스키마 디자이너 작업 영역
 
@@ -22,19 +22,19 @@ XML 스키마 디자이너(XSD 디자이너)는 XML 스키마를 탐색하는 �
 
 관심 있는 노드 탐색을 시작하려면 해당 노드를 작업 영역에 추가해야 합니다. 작업 영역은 모든 뷰 간에 공유됩니다.
 
-## <a name="adding-nodes-to-the-workspace"></a>작업 영역에 노드 추가
+## <a name="add-nodes-to-the-workspace"></a>작업 영역에 노드 추가
 
 다음 방법으로 작업 영역에 노드를 추가할 수 있습니다.
 
 -   "스키마 집합 정보" 섹션에는 [시작 뷰](../xml-tools/start-view.md), 클릭는 **추가** 전역 노드 형식 옆에 있는 링크입니다.
 
--   전역 노드, 파일 노드 및 네임스페이스 노드를 XML 스키마 탐색기에서 세 개의 뷰로 끌어서 놓습니다. 자세한 내용은의 "노드 드래그 및 삭제" 섹션을 참조 하십시오. [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md)합니다.
+-   전역 노드, 파일 노드 및 네임 스페이스 노드를 끌어서는 **XML 스키마 탐색기** 세 개의 뷰로 끌어다 합니다. 자세한 내용은의 "노드 드래그 및 삭제" 섹션을 참조 하십시오. [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md)합니다.
 
--   XML 스키마 탐색기에서 상황에 맞는 메뉴를 사용합니다. 자세한 내용은 참조 [상황에 맞는 메뉴](../xml-tools/context-menus-xml-schema-explorer.md)합니다.
+-   상황에 맞는 메뉴를 사용 하 여는 **XML 스키마 탐색기**합니다. 자세한 내용은 참조 [상황에 맞는 메뉴](../xml-tools/context-menus-xml-schema-explorer.md)합니다.
 
 -   XSD 탐색기에서 검색을 수행 하 고 클릭는 **작업 영역에 선택한 노드 추가** 요약 결과 창에서 단추입니다. 자세한 내용은 참조 [스키마 집합 검색](../xml-tools/searching-the-schema-set.md)합니다.
 
-## <a name="view-switching"></a>뷰 전환
+## <a name="switch-views"></a>보기를 전환
 
 뷰를 전환하려면 다음 중 하나를 사용합니다.
 
@@ -44,4 +44,4 @@ XML 스키마 디자이너(XSD 디자이너)는 XML 스키마를 탐색하는 �
 
 -   시작 뷰 페이지의 워터마크, 빈 콘텐츠 모델 뷰 또는 그래프 뷰의 워터마크
 
--   바로 가기 키: 시작 뷰의 경우 Ctrl+1, 그래프 뷰의 경우 Ctrl+2, 콘텐츠 모델 뷰의 경우 Ctrl+3
+-   바로 가기 키: **Ctrl**+**1** 시작 뷰의 경우, **Ctrl**+**2** 그래프 보기에 대 한 및  **Ctrl**+**3** 콘텐츠 모델 뷰에 대 한 합니다.

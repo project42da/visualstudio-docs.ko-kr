@@ -11,11 +11,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3e844e2177d01d5b308472eae5661b25798f0838
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 2cf6c17f3017bb1021423b19b32b36749fe0744d
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Azure 앱 서비스에 응용 프로그램을 가져와서 게시 Visual Studio에서 게시 설정
 
@@ -37,7 +37,7 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio가 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
+* Visual Studio 2017 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
 
     아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
 
@@ -92,21 +92,7 @@ ms.lasthandoff: 05/11/2018
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio에서 게시 설정 가져오기 및 배포
 
-1. ASP.NET 프로젝트가 Visual Studio에서 열려 있는 컴퓨터에서 솔루션 탐색기에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 고 선택 **게시**합니다.
-
-1. 모든 게시 프로필을 이전에 구성한 경우는 **게시** 창이 나타납니다. 클릭 **새 프로필 만들기**합니다.
-
-1. 에 **게시 대상 선택** 대화 상자를 클릭 **프로필 가져오기**합니다.
-
-    ![선택 게시](../deployment/media/tutorial-publish-tool-import-profile.png)
-
-1. 이전 섹션에서 만든 게시 설정 파일의 위치로 이동 합니다.
-
-1. 에 **게시 설정 파일 가져오기** 대화 상자에서, 위의 섹션에서 만든 프로필을 선택 하 고 클릭 **열려**합니다.
-
-1. 두 개의 가져온된 프로필 중 하나를 선택 하 고 클릭 **게시**합니다.
-
-    Visual Studio는 배포 프로세스를 시작 하 고 진행률 및 결과 출력 창에 표시 합니다.
+[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
 
 ## <a name="next-steps"></a>다음 단계
 

@@ -28,11 +28,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f2c74fe2b6f145dd88acbc3bc11d66201acbffd5
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 4dff9c5f8602f1e11ef020400a11d7d165b23b04
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="custom-task-panes"></a>사용자 지정 작업창
   작업창은 일반적으로 Microsoft Office 응용 프로그램에서 창의 한쪽에 도킹된 사용자 인터페이스 패널입니다. 사용자 지정 작업창을 사용하면 사용자 고유의 작업창을 만들고 사용자에게 솔루션 기능에 액세스하기 위한 친숙한 인터페이스를 제공할 수 있습니다. 예를 들어 인터페이스에는 문서를 수정하거나 데이터 소스의 데이터를 표시하는 코드를 실행하는 컨트롤이 포함될 수 있습니다.  
@@ -48,7 +48,7 @@ ms.lasthandoff: 05/17/2018
 ### <a name="familiar-user-interface"></a>친숙 한 사용자 인터페이스  
  Microsoft Office system 응용 프로그램의 사용자가 이미 익숙한과 같은 작업창 사용 하 여 **스타일 및 서식** Word의 작업창입니다. 사용자 지정 작업창은 Microsoft Office System의 다른 작업창처럼 동작합니다. 사용자는 응용 프로그램 창의 원하는 쪽에 사용자 지정 작업창을 도킹하거나 창에서 임의의 위치로 사용자 지정 작업창을 끌 수 있습니다. 동시에 여러 사용자 지정 작업창을 표시하는 VSTO 추가 기능을 만들 수 있으며 사용자가 각 작업창을 개별적으로 제어할 수 있습니다.  
   
-### <a name="windows-forms-support"></a>Windows Forms 지원  
+### <a name="windows-forms-support"></a>Windows forms 지원  
  Visual Studio에서 Office 개발 도구를 사용하여 만든 사용자 지정 작업창의 사용자 인터페이스는 Windows Forms 컨트롤을 기반으로 합니다. 친숙한 Windows Forms 디자이너를 사용하여 사용자 지정 작업창에 대한 사용자 인터페이스를 디자인할 수 있습니다. Windows Forms의 데이터 바인딩 지원을 사용하여 데이터 소스를 작업창의 컨트롤에 바인딩할 수도 있습니다.  
   
 ## <a name="create-a-custom-task-pane"></a>사용자 지정 작업창 만들기  
@@ -85,7 +85,7 @@ ms.lasthandoff: 05/17/2018
 ## <a name="access-the-application-from-the-task-pane"></a>작업창에서 응용 프로그램에 액세스  
  사용자 정의 컨트롤에서 응용 프로그램을 자동화하려는 경우 코드에서 `Globals.ThisAddIn.Application`을 사용하여 개체 모델에 직접 액세스할 수 있습니다. 정적 `Globals` 클래스는 `ThisAddIn` 개체에 대한 액세스를 제공합니다. 이 개체의 `Application` 필드는 응용 프로그램의 개체 모델에 대한 진입점입니다.  
   
- 에 대 한 자세한 내용은 `Application` 필드는 `ThisAddIn` 개체, 참조 [프로그램 VSTO 추가 기능](../vsto/programming-vsto-add-ins.md)합니다. 사용자 지정 작업창에서 응용 프로그램을 자동화 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 사용자 지정 작업창에서 응용 프로그램을 자동화](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)합니다. 에 대 한 자세한 내용은 `Globals` 클래스를 참조 하십시오. [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
+ 에 대 한 자세한 내용은 `Application` 필드는 `ThisAddIn` 개체, 참조 [프로그램 VSTO 추가 기능](../vsto/programming-vsto-add-ins.md)합니다. 사용자 지정 작업창에서 응용 프로그램을 자동화 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 사용자 지정 작업창에서 응용 프로그램 자동](../vsto/walkthrough-automating-an-application-from-a-custom-task-pane.md)합니다. 에 대 한 자세한 내용은 `Globals` 클래스를 참조 하십시오. [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
   
 ## <a name="manage-the-user-interface-of-the-task-pane"></a>작업창의 사용자 인터페이스 관리  
  작업창을 만든 후 <xref:Microsoft.Office.Tools.CustomTaskPane> 개체의 속성 및 이벤트를 사용하여 작업창의 사용자 인터페이스를 제어하고 사용자가 작업창을 변경할 때 응답할 수 있습니다.  
@@ -142,16 +142,11 @@ ms.lasthandoff: 05/17/2018
  ![비디오에 링크](../vsto/media/playvideo.gif "비디오에 링크") 관련된 동영상 데모를 참조 하십시오. [Word VSTO 추가 기능에서 작업창 i: 관리 하는 방법?](http://go.microsoft.com/fwlink/?LinkId=136781)합니다.  
   
 ##  <a name="Outlook"></a> Outlook  
- Outlook에 대한 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창이 특정 탐색기 또는 검사기 창에 연결됩니다. 탐색기는 폴더 내용을 표시하는 창이고, 검사기는 메일 메시지 또는 작업과 같은 항목을 표시하는 창입니다.  
+ Outlook에 대한 사용자 지정 작업창을 만드는 경우 사용자 지정 작업창이 특정 탐색기 또는 검사기 창에 연결됩니다. 탐색기는 폴더의 내용을 표시 하는 창 고 및 검사기는 메일 메시지 또는 작업과 같은 항목을 표시 하는 창입니다.  
   
  여러 탐색기 또는 검사기 창이 포함된 사용자 지정 작업창을 표시하려는 경우 탐색기 또는 검사기 창이 열릴 때 사용자 지정 작업창의 새 인스턴스를 만들어야 합니다. 이렇게 하려면 탐색기 또는 검사기 창을 만들 때 발생하는 이벤트를 처리한 다음 이벤트 처리기에서 작업창을 만듭니다. 표시되는 창에 따라 탐색기 및 검사기 이벤트를 처리하여 작업창을 숨기거나 표시할 수도 있습니다.  
   
  작업창을 특정 탐색기 또는 검사기를 연결 하려면 사용는 <xref:Microsoft.Office.Tools.CustomTaskPaneCollection.Add%2A> 작업창을 만들고 전달 하는 메서드는 <xref:Microsoft.Office.Interop.Outlook.Explorer> 또는 <xref:Microsoft.Office.Interop.Outlook.Inspector> 개체는 *창* 매개 변수입니다. 사용자 지정 작업창을 만드는 방법에 대 한 자세한 내용은 참조 [사용자 지정 작업창 개요](../vsto/custom-task-panes.md)합니다.  
-  
- 열려 있는 모든 전자 메일 메시지에 대 한 작업창을 만드는 방법을 보여 주는 연습을 참조 하십시오. [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)합니다.  
-  
-### <a name="outlook-events"></a>Outlook 이벤트  
- 탐색기 창의 상태를 모니터링하기 위해 탐색기와 관련된 다음 이벤트를 처리할 수 있습니다.  
   
 -   <xref:Microsoft.Office.Interop.Outlook.ExplorersEvents_Event.NewExplorer>  
   

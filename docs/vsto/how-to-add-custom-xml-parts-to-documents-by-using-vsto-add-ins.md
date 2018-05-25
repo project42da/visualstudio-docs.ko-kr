@@ -22,11 +22,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d652f0890b32197bb13a3f73221f9ee2a92bcfc8
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 803a0c146bbf17ee79f79fe5de95fdf2ee2151da
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-add-custom-xml-parts-to-documents-by-using-vsto-add-ins"></a>방법: VSTO 추가 기능을 사용 하 여 문서에 사용자 지정 XML 부분 추가
   VSTO 추가 기능에서 사용자 지정 XML 부분을 만들어 다음과 같은 형식의 문서에 XML 데이터를 저장할 수 있습니다.  
@@ -41,7 +41,7 @@ ms.lasthandoff: 05/17/2018
   
  **적용 대상:** 이 항목의 정보는 Excel, PowerPoint 및 Word의 응용 프로그램 수준 프로젝트에 적용됩니다. 자세한 내용은 참조 [Office 응용 프로그램 및 프로젝트 형식으로 사용할 수 있는 기능](../vsto/features-available-by-office-application-and-project-type.md)합니다.  
   
-### <a name="to-add-a-custom-xml-part-to-an-excel-workbook"></a>Excel 통합 문서에 사용자 지정 XML 부분을 추가하려면  
+## <a name="to-add-a-custom-xml-part-to-an-excel-workbook"></a>Excel 통합 문서에 사용자 지정 XML 부분을 추가하려면  
   
 1.  통합 문서의 <xref:Microsoft.Office.Core.CustomXMLPart> 컬렉션에 새 <xref:Microsoft.Office.Interop.Excel._Workbook.CustomXMLParts%2A> 개체를 추가합니다. <xref:Microsoft.Office.Core.CustomXMLPart>에는 통합 문서에 저장하려는 XML 문자열이 들어 있습니다.  
   
@@ -54,7 +54,7 @@ ms.lasthandoff: 05/17/2018
   
 3.  프로젝트의 다른 코드에서 메서드를 호출합니다. 예를 들어 사용자가 통합 문서를 열 때 사용자 지정 XML 부분을 만들려면 <xref:Microsoft.Office.Interop.Excel.AppEvents_Event.WorkbookOpen> 이벤트에 대한 이벤트 처리기에서 메서드를 호출합니다.  
   
-### <a name="to-add-a-custom-xml-part-to-a-word-document"></a>Word 문서에 사용자 지정 XML 부분을 추가하려면  
+## <a name="to-add-a-custom-xml-part-to-a-word-document"></a>Word 문서에 사용자 지정 XML 부분을 추가하려면  
   
 1.  문서의 <xref:Microsoft.Office.Core.CustomXMLPart> 컬렉션에 새 <xref:Microsoft.Office.Interop.Word._Document.CustomXMLParts%2A> 개체를 추가합니다. <xref:Microsoft.Office.Core.CustomXMLPart>에는 문서에 저장하려는 XML 문자열이 들어 있습니다.  
   
@@ -67,7 +67,7 @@ ms.lasthandoff: 05/17/2018
   
 3.  프로젝트의 다른 코드에서 메서드를 호출합니다. 예를 들어 사용자가 문서를 열 때 사용자 지정 XML 부분을 만들려면 <xref:Microsoft.Office.Interop.Word.ApplicationEvents4_Event.DocumentOpen> 이벤트에 대한 이벤트 처리기에서 메서드를 호출합니다.  
   
-### <a name="to-add-a-custom-xml-part-to-a-powerpoint-presentation"></a>PowerPoint 프레젠테이션에 사용자 지정 XML 부분을 추가하려면  
+## <a name="to-add-a-custom-xml-part-to-a-powerpoint-presentation"></a>PowerPoint 프레젠테이션에 사용자 지정 XML 부분을 추가하려면  
   
 1.  프레젠테이션의 <xref:Microsoft.Office.Core.CustomXMLPart> 컬렉션에 새 <xref:Microsoft.Office.Interop.PowerPoint._Presentation.CustomXMLParts%2A> 개체를 추가합니다. <xref:Microsoft.Office.Core.CustomXMLPart> 에는 프레젠테이션에 저장하려는 XML 문자열이 들어 있습니다.  
   

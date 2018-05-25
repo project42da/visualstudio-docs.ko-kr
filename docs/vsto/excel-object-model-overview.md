@@ -22,11 +22,11 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0c1626b7f363c5b6d71e26d7b42d9a57d7b775ee
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: f7f15cc3ce8396e4cd10a49a1427f1ba1be76b50
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="excel-object-model-overview"></a>Excel 개체 모델 개요
   Microsoft Office Excel을 사용하는 솔루션을 개발하려면 Excel 개체 모델에서 제공하는 개체와 상호 작용할 수 있습니다. 이 항목에서는 가장 중요한 개체를 소개합니다.  
@@ -107,7 +107,7 @@ ms.lasthandoff: 05/22/2018
 ### <a name="primary-interop-assembly-reference"></a>주 interop 어셈블리 참조  
  Excel PIA 참조 설명서에서는 Excel에 대한 주 interop 어셈블리의 형식에 대해 설명합니다. 이 설명서는 다음 위치에서 사용할 수 있는: [Excel 2010 주 interop 어셈블리 참조](http://go.microsoft.com/fwlink/?LinkId=189585)합니다.  
   
- PIA의 이벤트 구현 방식 PIA에서 클래스와 인터페이스의 차이점 등 Excel PIA의 디자인에 대 한 자세한 내용은 참조 [의 클래스 및 인터페이스 개요 Office 주 Interop 어셈블리](http://go.microsoft.com/fwlink/?LinkId=189592).  
+ PIA의 이벤트 구현 방식 PIA에서 클래스와 인터페이스의 차이점 등 Excel PIA의 디자인에 대 한 자세한 내용은 참조 [Office 주 interop 어셈블리의에서클래스와인터페이스의개요](http://go.microsoft.com/fwlink/?LinkId=189592).  
   
 ### <a name="vba-object-model-reference"></a>VBA 개체 모델 참조  
  VBA 개체 모델 참조에서는 VBA(Visual Basic for Applications) 코드로 표시되는 Excel 개체 모델에 대해 설명합니다. 자세한 내용은 참조 [Excel 2010 개체 모델 참조](http://go.microsoft.com/fwlink/?LinkId=199768)합니다.  

@@ -1,7 +1,7 @@
 ---
 title: Visual Studio에서 원격 디버깅 | Microsoft Docs
 ms.custom: remotedebugging
-ms.date: 08/14/2017
+ms.date: 05/21/2018
 ms.technology: vs-ide-debug
 ms.topic: conceptual
 f1_keywords:
@@ -20,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 422714c1180ef94d32d8d323c796ed2c84258bf3
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: db20b62c5ef409f523253c5ba19e2c68213743be
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="remote-debugging"></a>Remote Debugging
 다른 컴퓨터에 배포된 Visual Studio 응용 프로그램을 디버그할 수 있습니다. 이렇게 하려면 Visual Studio 원격 디버거를 사용합니다.
@@ -47,22 +47,63 @@ ms.lasthandoff: 04/18/2018
 
 [!INCLUDE [remote-debugger-download](../debugger/includes/remote-debugger-download.md)]
 
+## <a name="unblock_msvsmon"></a> Windows Server에서 원격 도구를 다운로드 하는 차단 해제
+
+Windows Server에서 Internet Explorer의 기본 보안 설정 하기가 더 원격 도구와 같은 구성 요소를 다운로드 하는 데 많은 시간이 소요 됩니다.
+
+* 향상 된 보안 구성을 사용할 것을 방지 하는 리소스를 포함 하는 도메인 명시적으로 허용 하지 않는 한 웹 리소스에 액세스 하 고 웹 사이트를 열어 Internet Explorer에서 (즉, 신뢰할 수 있음).
+
+* Windows Server 2016에서 설정 하는 기본 **인터넷 옵션** > **보안** > **인터넷**  >   **사용자 지정 수준** > **다운로드** 도 다운로드 파일을 사용 하지 않도록 설정 합니다. Windows 서버에서 직접 원격 도구를 다운로드 하려는 파일을 다운로드 사용 하도록 설정 해야 합니다.
+
+Windows Server에서 도구를 다운로드 하려면 권장 다음 중 하나:
+
+* 하나의 실행 중인 Visual Studio와 같은 다른 컴퓨터에서 원격 도구를 다운로드 한 후 복사는 *.exe* 파일을 Windows 서버입니다.
+
+* 원격 디버거 실행 [파일 공유에서](#fileshare_msvsmon) Visual Studio 컴퓨터에 있습니다.
+
+* Windows 서버에서 직접 원격 도구를 다운로드 하 고 신뢰할 수 있는 사이트를 추가 하려면 표시 되는 메시지를 적용 합니다. 최신 웹 사이트 종종 많은 타사 리소스를 포함 시켜 서이 많이 표시 되는 메시지에서 발생할 수 있습니다. 또한 모든 리디렉션된 링크를 수동으로 추가 해야 합니다. 다운로드를 시작 하기 전에 신뢰할 수 있는 사이트의 일부를 추가할 수 있습니다. 로 이동 **인터넷 옵션 > 보안 > 신뢰할 수 있는 사이트 > 사이트** 다음 사이트를 추가 합니다.
+
+  * visualstudio.com
+  * download.visualstudio.microsoft.com
+  * 에 대 한: 빈
+
+  My.visualstudio.com에 디버거의 이전 버전에 대 한 해당 로그인이 성공 하 고 있는지 확인 하기 위해 이러한 추가 사이트를 추가 합니다.
+
+  * microsoft.com
+  * go.microsoft.com
+  * download.microsoft.com
+  * my.visualstudio.com
+  * login.microsoftonline.com
+  * login.live.com
+  * secure.aadcdn.microsoftonline p.com
+  * msft.sts.microsoft.com
+  * auth.gfx.ms
+  * app.vssps.visualstudio.com
+  * vlscppe.microsoft.com
+  * query.prod.cms.rt.microsoft.com
+
+    원격 도구를 다운로드 하는 동안 이러한 도메인을 추가 하도록 선택 하면 다음 선택 하는 경우 **추가** 대화 상자가 나타나면 합니다.
+
+    ![차단 된 콘텐츠 대화 상자](../debugger/media/remotedbg-blocked-content.png)
+
+    소프트웨어를 다운로드 하는 경우 다양 한 웹 사이트 스크립트 및 리소스를 로드할 수 있는 권한을 부여 요청을 일부 추가적인 가져옵니다. My.visualstudio.com, 해당 로그인이 성공 되도록 추가 도메인을 추가 하는 것이 좋습니다.
+
 ### <a name="fileshare_msvsmon"></a> (선택 사항) 파일 공유에서 원격 디버거를 실행 하려면
 
-원격 디버거를 찾을 수 있습니다 (**msvsmon.exe**) Visual Studio Community, Professional 또는 Enterprise를 이미 설치 된 컴퓨터에 있습니다. 일부 시나리오에 대 한 원격 디버깅을 설정 하는 가장 쉬운 방법은 파일 공유에서 원격 디버거 (msvsmon.exe)를 실행 하는 합니다. 사용 제한 사항에 대 한 원격 디버거의 도움말 페이지를 참조 (**도움말 > 사용량** 원격 디버거에서).
+원격 디버거를 찾을 수 있습니다 (*msvsmon.exe*) Visual Studio Community, Professional 또는 Enterprise를 이미 설치 된 컴퓨터에 있습니다. 일부 시나리오에 대 한 원격 디버깅을 설정 하는 가장 쉬운 방법은 파일 공유에서 원격 디버거 (msvsmon.exe)를 실행 하는 합니다. 사용 제한 사항에 대 한 원격 디버거의 도움말 페이지를 참조 (**도움말 > 사용량** 원격 디버거에서).
 
-1. 찾을 **msvsmon.exe** Visual Studio 버전에 일치 하는 디렉터리에 있습니다. Visual Studio Enterprise 2017에 대 한:
+1. 찾을 *msvsmon.exe* Visual Studio 버전에 일치 하는 디렉터리에 있습니다. Visual Studio Enterprise 2017에 대 한:
 
-      **Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe**
+      *Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x86\msvsmon.exe*
       
-      **Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe**
+      *Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\Remote Debugger\x64\msvsmon.exe*
 
 2. 공유는 **원격 디버거** Visual Studio 컴퓨터의 폴더에 있습니다.
 
-3. 원격 컴퓨터에서 실행 **msvsmon.exe**합니다. 에 따라는 [설정 지침](#bkmk_setup)합니다.
+3. 원격 컴퓨터에서 실행 *msvsmon.exe*합니다. 에 따라는 [설정 지침](#bkmk_setup)합니다.
 
 > [!TIP] 
-> 명령줄 설치 및 명령줄 참조에 대 한 도움말 페이지를 참조 하십시오. **msvsmon.exe** 입력 하 여 ``msvsmon.exe /?`` Visual Studio가 설치 된 컴퓨터에서 명령 줄에서 (하거나 **도움말 >사용**원격 디버거에서).
+> 명령줄 설치 및 명령줄 참조에 대 한 도움말 페이지를 참조 하십시오. *msvsmon.exe* 입력 하 여 ``msvsmon.exe /?`` Visual Studio가 설치 된 컴퓨터에서 명령 줄에서 (하거나 **도움말 >사용**원격 디버거에서).
   
 ## <a name="requirements_msvsmon"></a> 요구 사항
 
@@ -80,7 +121,7 @@ ms.lasthandoff: 04/18/2018
      > [!IMPORTANT] 
      > Visual Studio 컴퓨터에서 사용 하는 사용자 계정에서 다른 사용자 계정으로 원격 디버거를 실행할 수 있지만 원격 디버거의 사용 권한에 다른 사용자 계정을 추가 해야 있습니다. 
 
-     또는 사용 하 여 명령줄에서 원격 디버거를 시작할 수 있습니다는 **허용 / \<사용자 이름 >** 매개 변수: **msvsmon /allow \< username@computer>**합니다.
+     또는 사용 하 여 명령줄에서 원격 디버거를 시작할 수 있습니다는 **허용 / \<사용자 이름 >** 매개 변수: **msvsmon /allow \< username@computer>** 합니다.
   
 -   인증 모드 또는 포트 번호를 변경 하거나 원격 도구에 대 한 제한 시간 값을 지정 해야 할 경우: 선택 **도구 > 옵션**합니다.  
   
@@ -106,7 +147,7 @@ ASP.NET 및 기타 서버 환경에서 디버깅을 관리자 권한으로 원�
   
 5.  원격 도구가 통신하는 데 사용할 네트워크 유형을 선택합니다. 하나 이상의 네트워크 형식을 선택해야 합니다. 컴퓨터가 도메인을 통해 연결된 경우 첫 번째 항목을 선택해야 합니다. 컴퓨터가 작업 그룹 또는 홈 그룹을 통해 연결된 경우 두 번째 또는 세 번째 항목을 선택해야 합니다. **다음**을 클릭합니다.  
   
-6.  서비스를 시작할 수 있는 경우 **Visual Studio 원격 디버거 구성 마법사를 성공적으로 완료했습니다.**가 표시됩니다. 서비스를 시작할 수 없는 경우 **Visual Studio 원격 디버거 구성 마법사 완료 실패**가 표시됩니다. 이 페이지에서는 서비스를 시작하기 위해 수행할 몇 가지 팁도 제공합니다.  
+6.  서비스를 시작할 수 있는 경우 **Visual Studio 원격 디버거 구성 마법사를 성공적으로 완료했습니다.** 가 표시됩니다. 서비스를 시작할 수 없는 경우 **Visual Studio 원격 디버거 구성 마법사 완료 실패**가 표시됩니다. 이 페이지에서는 서비스를 시작하기 위해 수행할 몇 가지 팁도 제공합니다.  
   
 7.  **마침**을 클릭합니다.  
   

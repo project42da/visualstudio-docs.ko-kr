@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 298cb342b83dd512f591e03a6922a099c127cb3a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: db635a9bc18a00bcb723a7bf8b66a557434e3e9a
+ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/24/2018
 ---
 # <a name="how-to-create-and-edit-an-xsd-schema-file"></a>방법: XSD 스키마 파일 만들기 및 편집
 
@@ -22,11 +22,11 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="to-create-a-new-xml-schema-file"></a>새 XML 스키마 파일을 만들려면
 
-1. Visual Studio에서 열고는 **파일** 메뉴와 선택 **새로** > **파일**합니다. 또는 Ctrl+N 바로 가기 키를 사용합니다.
+1. Visual Studio에서 열고는 **파일** 메뉴와 선택 **새로** > **파일**합니다. 또는 사용 하 여는 **Ctrl**+**N** 바로 가기 키입니다.
 
 2. 에 **새 파일** 대화 상자에서 **XML 스키마** 선택한 후 **열려**합니다.
 
-   새 파일이 만들어집니다. 시작 뷰 및 빈 XML 스키마 탐색기 창이 Visual Studio에 나타납니다.
+   새 파일이 만들어집니다. 시작 뷰 및 빈 **XML 스키마 탐색기** 창이 Visual Studio에 표시 합니다.
 
 ## <a name="to-edit-a-file"></a>파일을 편집하려면
 
@@ -36,8 +36,8 @@ ms.lasthandoff: 04/26/2018
 
 2. XML 스키마 샘플 코드를 복사 [구매 주문 스키마](../xml-tools/sample-xsd-file-simple-schema.md) 기본적으로 새 XSD 파일에 추가 된 코드를 붙여 넣습니다.
 
-   XML 스키마 탐색기는 새 스키마 집합으로 업데이트됩니다.
+   **XML 스키마 탐색기** 새 스키마 집합으로 업데이트 됩니다.
 
 ## <a name="see-also"></a>참고자료
 
-- [XML 데이터 작업](../xml-tools/working-with-xml-data.md)
+- [XML 데이터 사용](../xml-tools/working-with-xml-data.md)
