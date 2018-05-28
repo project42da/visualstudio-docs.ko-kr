@@ -15,11 +15,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 624e66486dfd2c4e75b12cfdce1d3758ab37de60
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 866c4e1762efe6bb94586fc1c7258ffaa309eea8
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-test-first-development-with-the-generate-from-usage-feature"></a>연습: 관례에서 생성 기능을 통한 테스트 우선 개발
 
@@ -160,7 +160,7 @@ ms.lasthandoff: 05/03/2018
 ## <a name="see-also"></a>참고 항목
 
 - [관례에서 생성](../ide/visual-csharp-intellisense.md#generate-from-usage)
-- [코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+- [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md)
 - [IntelliSense 사용](../ide/using-intellisense.md)
 - [코드 단위 테스트](../test/unit-test-your-code.md)
 - [빠른 작업](../ide/quick-actions.md)

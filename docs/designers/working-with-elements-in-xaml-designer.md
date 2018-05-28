@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 3a3b45d8714c72e588f64cd5c1830cc97b9f136e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 676c8767691610349cc2eee4c09970318feda9f5
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="working-with-elements-in-xaml-designer"></a>Working with elements in XAML Designer
 코드의 XAML에 또는 XAML 디자이너를 사용하여 컨트롤, 레이아웃 및 모양과 같은 요소를 추가할 수 있습니다. 이 항목에서는 Visual Studio 또는 Blend for Visual Studio의 XAML 디자이너에서 요소에 대해 작업하는 방법을 설명합니다.
@@ -53,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 
         -   **맨 뒤로 보내기** - 요소를 순서의 맨 뒤로 보냅니다.
 
-     [속성] 창의 **레이아웃** 섹션에서 **ZIndex** 속성을 변경합니다. 겹치는 요소의 경우 **ZIndex** 속성이 [문서 개요] 창에 표시되는 요소의 순서보다 우선합니다. 요소가 겹치는 경우 **ZIndex** 값이 더 낮은 요소가 앞에 표시됩니다.
+     [속성] 창의 **레이아웃** 섹션에서 **ZIndex** 속성을 변경합니다. 겹치는 요소의 경우 **ZIndex** 속성이 [문서 개요] 창에 표시되는 요소의 순서보다 우선합니다. 요소가 겹치는 경우 **Z 인덱스** 값이 더 큰 요소가 앞에 표시됩니다.
 
 ## <a name="changing-the-alignment-of-an-element"></a>요소의 맞춤 변경
  메뉴 명령을 사용하거나 맞춤선에 요소를 끌어 아트 보드에서 요소를 맞출 수 있습니다.
@@ -74,7 +74,7 @@ ms.lasthandoff: 04/26/2018
 
      가장자리가 맞춰지는 경우 *맞춤 경계선*이 표시되어 맞춤을 나타냅니다. 맞춤 경계선은 빨간색 파선입니다. **맞춤선에 맞추기** 를 사용하도록 설정한 경우에만 맞춤 경계선이 나타납니다. 맞춤 경계선을 표시하는 아트보드의 그림은 [XAML 디자이너를 사용하여 UI 만들기](../designers/creating-a-ui-by-using-xaml-designer-in-visual-studio.md)를 참조하세요.
 
-## <a name="changing-the-an-elements-margins"></a>요소의 여백 변경
+## <a name="changing-an-elements-margins"></a>요소의 여백 변경
  XAML 디자이너의 여백이 아트 보드에서 요소 주위에 있는 빈 공간의 크기를 결정합니다. 예를 들어 여백은 요소의 바깥쪽 가장자리와 요소가 포함된 `Grid` 패널 경계 사이의 공백 양을 지정합니다. 여백은 `StackPanel`에 포함된 요소 간의 공백을 지정합니다.
 
 #### <a name="to-change-an-elements-margins-in-the-properties-window"></a>속성 창에서 요소의 여백을 변경하려면

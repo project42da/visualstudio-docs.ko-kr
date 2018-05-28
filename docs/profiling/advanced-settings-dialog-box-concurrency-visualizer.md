@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e0cde5d1ddd5dabfd42a6a7d31284736e24fa302
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e06d85d879a99386c5e2e4894a56e52918cd964f
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="advanced-settings-dialog-box-concurrency-visualizer"></a>고급 설정 대화 상자(동시성 시각화 도우미)
 동시성 시각화 도우미의 **고급 설정** 대화 상자에서는 추적 수집 방법을 제어할 수 있습니다.  이 대화 상자에는 기호, 내 코드만, 버퍼링, 필터링, CLR 이벤트, 표식, 공급자 및 파일에 대한 탭이 포함됩니다.  
@@ -65,10 +65,10 @@ ms.lasthandoff: 04/19/2018
   
  중요도 수준 목록을 사용해서 중요도 또는 ETW 수준이 지정된 값보다 낮은 이벤트를 필터링할 수 있습니다.  
   
-### <a name="configuring-an-existing-provider"></a>기존 공급자 구성  
+### <a name="configure-an-existing-provider"></a>기존 공급자 구성  
  기존 공급자와 연관된 설정을 편집하려면 목록에서 선택한 후 **공급자 편집** 단추를 선택합니다.  이름, GUID 및 필터 설정을 변경할 수 있습니다.  
   
-### <a name="filter-marker-data-out-of-concurrency-visualizer-reports"></a>동시성 시각화 보고서에서 표식 데이터 필터링  
+### <a name="filter-marker-data-out-of-concurrency-visualizer-reports"></a>동시성 시각화 도우미 보고서에서 표식 데이터 필터링  
  이후 추적에 특정 공급자에 대한 데이터를 표시하지 않으려면 제거하려는 공급자 옆에 있는 확인란의 선택을 취소합니다.  
   
 ## <a name="files"></a>파일  

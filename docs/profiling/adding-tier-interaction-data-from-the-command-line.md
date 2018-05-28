@@ -12,13 +12,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bcb969201d484aabc01c7c5cc66e3656fbb29fb9
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: 42bc9219b3e1af5b1ae25ee2049b7293e2f4c344
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="adding-tier-interaction-data-from-the-command-line"></a>명령줄에서 계층 상호 작용 데이터 추가
+# <a name="add-tier-interaction-data-from-the-command-line"></a>명령줄에서 계층 상호 작용 데이터 추가
 
 계층 상호 작용 프로파일링은 하나 이상의 데이터베이스와 통신하는 다중 계층 응용 프로그램의 함수에서 동기 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 호출의 실행 시간에 대한 추가 정보를 제공합니다.
 
@@ -38,17 +38,17 @@ Windows 8 데스크톱 앱 및 Windows Server 2012 앱에서 계층 상호 작�
 
 계층 상호 작용 데이터는 Visual Studio Enterprise에서만 볼 수 있습니다. [VSPerfReport](../profiling/vsperfreport.md)를 통한 파일 기반 계층 상호 작용 보고서는 사용할 수 없습니다.
 
-## <a name="adding-tier-interaction-data-with-vsperfcmd"></a>VSPerfCmd를 사용하여 계층 상호 작용 데이터 추가
+## <a name="add-tier-interaction-data-with-vsperfcmd"></a>VSPerfCmd를 사용하여 계층 상호 작용 데이터 추가
 
 VSPerfASPNETCmd 명령줄 도구를 사용하면 프로파일링 도구에서 사용할 수 있는 전체 기능에 액세스할 수 있습니다. VSPerfCmd를 사용하여 수집된 프로파일링 데이터에 계층 상호 작용을 추가하려면 **VSPerfCLREnv** 유틸리티를 사용하여 계층 상호 작용 데이터를 사용하도록 설정하는 환경 변수를 설정 및 제거해야 합니다. 지정하는 옵션 및 데이터 수집에 필요한 절차는 프로파일링하는 응용 프로그램의 유형에 따라 다릅니다.
 
-## <a name="profiling-stand-alone-applications"></a>독립 실행형 응용 프로그램 프로파일링
+## <a name="profile-stand-alone-applications"></a>독립 실행형 응용 프로그램 프로파일링
 
 SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 호출을 수행하는 Windows 데스크톱 응용 프로그램과 같이 다른 프로세스에 의해 실행되지 않는 응용 프로그램에 계층 상호 작용 데이터를 추가하려면 **VSPerfClrEnv /InteractionOn** 옵션을 사용하여 환경 변수를 설정하고 **VSPerfClrEnv /InteractionOff** 옵션을 사용하여 제거합니다.
 
 다음 예제에서는 계측 방법을 사용하여 Windows 데스크톱 응용 프로그램을 프로파일링하고 계층 상호 작용 데이터를 수집합니다.
 
-### <a name="profiling-a-windows-desktop-application-example"></a>Windows 데스크톱 응용 프로그램 예제 프로파일링
+### <a name="profile-a-windows-desktop-application-example"></a>Windows 데스크톱 응용 프로그램 프로파일링 예제
 
 1. 관리자 권한으로 명령 프롬프트 창을 엽니다. **시작**을 클릭하고 **모든 프로그램**, **보조 프로그램**을 차례로 가리킵니다. **명령 프롬프트**를 마우스 오른쪽 단추로 클릭하고 **관리자 권한으로 실행**을 클릭합니다.
 
@@ -81,7 +81,7 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 자세한 내용은 [독립 실행형 응용 프로그램 프로파일링](../profiling/command-line-profiling-of-stand-alone-applications.md)을 참조하세요.
 
-## <a name="profiling-services"></a>서비스 프로파일링
+## <a name="profile-services"></a>서비스 프로파일링
 
 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 응용 프로그램을 포함하여 서비스를 프로파일링하려면 **VSPerfClrEnv /GlobalInteractionOn** 옵션을 사용하여 환경 변수를 설정하고 **VSPerfClrEnv /GlobalInteractionOff** 옵션을 사용하여 제거합니다.
 
@@ -89,7 +89,7 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 다음 예제에서는 계측 방법을 사용하여 Windows 서비스를 프로파일링하고 계층 상호 작용 데이터를 수집합니다.
 
-### <a name="profiling-a-windows-service-example"></a>Windows 서비스 프로파일링 예제
+### <a name="profile-a-windows-service-example"></a>Windows 서비스 프로파일링 예제
 
 1. 필요한 경우 서비스를 설치합니다.
 
@@ -145,7 +145,7 @@ SQLServer 데이터베이스에 대해 동기 [!INCLUDE[vstecado](../data-tools/
 
 [서비스 프로파일링](../profiling/command-line-profiling-of-services.md)
 
-## <a name="adding-tier-interaction-data-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd를 사용하여 계층 상호 작용 데이터 추가
+## <a name="add-tier-interaction-data-with-vsperfaspnetcmd"></a>VSPerfASPNETCmd를 사용하여 계층 상호 작용 데이터 추가
 
 VSPerfASPNETCmd 명령줄 도구를 사용하면 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램을 손쉽게 프로파일링할 수 있습니다. **VSPerfCmd** 명령줄 도구와 비교하면 옵션 수가 더 적고, 환경 변수를 설정할 필요가 없으며, 컴퓨터를 다시 부팅하지 않아도 됩니다. VSPerfASPNETCmd의 이러한 기능 덕분에 계층 상호 작용 데이터를 매우 쉽게 수집할 수 있습니다.
 

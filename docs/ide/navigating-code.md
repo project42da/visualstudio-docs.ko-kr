@@ -20,11 +20,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78c983943f7cf99bf9dbe7ee60df06b033404719
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9293565b4a238b1486f491c5a343d83364fba088
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="navigate-code"></a>코드 탐색
 
@@ -149,5 +149,5 @@ Visual Basic 코드 파일에서 이들 명령을 사용하여 삽입 지점을 
 
 ## <a name="see-also"></a>참고 항목
 
-- [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+- [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md)
 - [호출 계층 구조 보기](../ide/reference/call-hierarchy.md)

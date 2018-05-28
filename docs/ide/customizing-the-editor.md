@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 246e1ad9d63b272350c461ead804dca1b6a2b062
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a397932e23386356757ca96dc86dee7222947431
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="customize-the-editor"></a>편집기 사용자 지정
 
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="see-also"></a>참고 항목
 
 - [빠른 시작: Visual Studio IDE 및 편집기 개인 설정](../ide/quickstart-personalize-the-ide.md)
-- [코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+- [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md)
 - [코드에 책갈피 설정](../ide/setting-bookmarks-in-code.md)
 - [일반, 환경, 옵션 대화 상자](../ide/reference/general-environment-options-dialog-box.md)
 - [문서, 환경, 옵션 대화 상자](../ide/reference/documents-environment-options-dialog-box.md)

@@ -14,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: cb49d47dbd01b1d84228e1f01dc4cbf7f49dfc8d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9f730824c217e9909196b5889e2c032c66bb0001
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="utilization-view"></a>사용률 뷰
 **사용률 뷰**에는 현재 프로세스에 사용되는 CPU, GPU 및 기타 시스템 리소스에 대한 정보가 표시됩니다(**분석** > **동시성 시각화 도우미**를 선택하여 동시성 시각화 도우미 시작). 이 뷰에서는 분석된 프로세스, 유휴 프로세스, 시스템 프로세스 및 시스템에서 실행되고 있는 기타 프로세스의 시간별 평균 코어 사용률을 보여 줍니다. 지정된 시간에 활성 상태인 특정 코어는 표시되지 않습니다. 예를 들어 특정 시간 동안 두 개의 코어가 각각 50% 용량으로 실행되는 경우 이 뷰에서는 하나의 논리 코어가 사용되고 있는 것으로 표시됩니다. 이 뷰는 프로파일링 시간을 짧은 시간 세그먼트 여러 개로 구분하는 방식으로 생성됩니다. 각 세그먼트에 대해 그래프에는 해당 간격 동안 논리 코어에서 실행 중인 프로세스 스레드의 평균 수가 그려집니다.  
@@ -50,5 +50,5 @@ ms.lasthandoff: 04/19/2018
  CPU 사용률 그래프 또는 GPU 활동 그래프에서 확대하려면 특정 섹션을 선택하거나 그래프 위쪽에 있는 확대/축소 슬라이더 도구를 사용합니다. 확대/축소 설정은 다른 뷰로 전환해도 유지됩니다. 다시 축소하려면 확대/축소 슬라이더 도구를 사용합니다. Ctrl 키를 누른 상태로 스크롤하여 확대/축소할 수도 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
- [Concurrency 시각화](../profiling/concurrency-visualizer.md)   
+ [동시성 시각화 도우미](../profiling/concurrency-visualizer.md)   
  [코어 뷰](../profiling/cores-view.md)

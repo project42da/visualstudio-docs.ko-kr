@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b755e79daa0ebb48c8218252c78eb1a3675e6218
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: d49b5076076b61d0234bf8e252b62684a67e79b3
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="walkthrough-using-profiler-apis"></a>연습: 프로파일러 API 사용
 연습에서는 C# 응용 프로그램을 사용하여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 API를 사용하는 방법을 보여 줍니다. 프로파일러 API를 사용하여 계측 프로파일링 동안 수집되는 데이터 양을 제한합니다.  
@@ -51,7 +51,7 @@ DataCollection.CurrentId);
   
  API 호출을 사용하지 않고 명령줄에서 데이터 수집을 해제할 수 있습니다. 다음 단계에서는 명령줄 빌드 환경이 프로파일링 도구를 실행하고 개발 도구로 구성되었다고 가정합니다. 여기에는 VSInstr 및 VSPerfCmd에 필요한 설정이 포함됩니다. 명령줄 프로파일링 도구를 참조하세요.  
   
-## <a name="limiting-data-collection-using-profiler-apis"></a>프로파일러 API를 사용하여 데이터 수집 제한  
+## <a name="limit-data-collection-using-profiler-apis"></a>프로파일러 API를 사용하여 데이터 수집 제한  
   
 #### <a name="to-create-the-code-to-profile"></a>프로파일링할 코드를 만들려면  
   

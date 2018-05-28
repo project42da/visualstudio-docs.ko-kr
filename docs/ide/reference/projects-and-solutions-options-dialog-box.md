@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 606af4d08ffaec87c46c394f55ffe4e37b2a940d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 631b9fc17345d5d0c00d36e42a9d3b1db633c114
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="projects-and-solutions-options-dialog-box"></a>프로젝트 및 솔루션, 옵션 대화 상자
 프로젝트 및 솔루션과 관련된 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)] 동작을 설정합니다. 이러한 옵션에 액세스하려면 **도구 > 옵션**을 선택하고 **프로젝트 및 솔루션**을 확장한 후 **일반**을 클릭합니다.
@@ -70,6 +70,12 @@ ms.lasthandoff: 04/26/2018
 **파일을 새 위치로 이동하기 전에 확인**
 
 이 옵션을 선택하면 솔루션 탐색기에서 작업을 통해 파일 위치를 변경하기 전에 [!INCLUDE[vsprvs](../../code-quality/includes/vsprvs_md.md)]에서 확인 메시지 상자를 표시합니다.
+
+**솔루션 로드 시 문서 다시 열기(Visual Studio 2017 버전 15.8 미리 보기 2 이상)**
+ 
+솔루션을 로드하는 동안 이전 세션에서 열린 문서를 자동으로 다시 엽니다. 이 옵션을 선택하면 이 솔루션이 닫힐 때 열려 있던 문서가 솔루션이 로드될 때 자동으로 열립니다.
+
+특정 유형의 파일 또는 디자이너를 다시 열면 솔루션 로드가 지연될 수 있습니다. 솔루션의 이전 컨텍스트를 복원하지 않으려면 이 옵션을 선택 취소하여 솔루션 로드 성능을 개선합니다.
 
 ## <a name="locations-tab-options"></a>위치 탭 옵션
 

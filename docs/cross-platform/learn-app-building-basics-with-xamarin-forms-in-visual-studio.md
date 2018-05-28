@@ -10,11 +10,11 @@ ms.author: chape
 manager: crdun
 ms.workload:
 - xamarin
-ms.openlocfilehash: 608eebc113c9df7a8978299cc69907e28d81a16f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e25f75d0a1cd5e1b9989172a76d8cf8139957e2c
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="learn-app-building-basics-with-xamarinforms-in-visual-studio"></a>Visual Studio에서 Xamarin.Forms를 사용한 앱 빌드 기본 사항 알아보기
 
@@ -22,7 +22,7 @@ ms.lasthandoff: 04/16/2018
 
 일반적으로 이 공통 코드에 대한 공유 프로젝트보다는 .NET Standard 라이브러리를 사용하는 것이 좋습니다. .NET Standard 라이브러리는 모든 대상 플랫폼에서 실행할 수 있는 많은 .NET API를 포함합니다.  
 
-다음은 빌드할 응용 프로그램입니다. iOS와 Android 휴대폰, Windows 10의 UWP(유니버설 Windows 플랫폼)에서 실행됩니다(왼쪽부터 작성).
+다음은 빌드할 응용 프로그램입니다. iOS와 Android 휴대폰, Windows 10의 UWP(유니버설 Windows 플랫폼)에서 실행됩니다(왼쪽에서 오른쪽으로).
   
 [![iOS, Android 및 UWP의 날씨 앱 샘플](../cross-platform/media/crossplat-xamarin-formsguide-1.png "CrossPlat Xamarin FormsGuide 1")](../cross-platform/media/crossplat-xamarin-formsguide-1-Large.png#lightbox)
   

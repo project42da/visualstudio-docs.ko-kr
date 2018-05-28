@@ -13,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d4ae0813b2405fe81b5c6c92fbd2cfed0a6faee2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 156e3c45c0ccbc9ad9393a2baf7536bf317335bc
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="collecting-detailed-timing-data-by-using-instrumentation"></a>계측을 사용하여 자세한 타이밍 데이터 수집
+# <a name="collect-detailed-timing-data-by-using-instrumentation"></a>계측을 사용하여 자세한 타이밍 데이터 수집
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 계측 방법은 모듈의 복사본에 프로파일링 코드를 삽입합니다. 코드는 프로파일링 실행 중 모듈의 각 함수 시작, 종료 및 함수 호출을 기록합니다. 계측 방법은 코드의 한 섹션에 대한 자세한 타이밍 정보를 수집하고 입력 및 출력 작업이 응용 프로그램 성능에 미치는 영향을 이해하는 데 유용합니다.  
   
  다음 절차 중 하나를 사용하여 계측 방법을 지정할 수 있습니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 04/19/2018
   
 -   성능 세션에 대한 속성 대화 상자의 **일반** 페이지에서 **계측**을 선택합니다.  
   
-## <a name="common-tasks"></a>일반 작업  
+## <a name="common-tasks"></a>일반 작업
  ‘성능 세션***속성 페이지’* 대화 상자에서 추가 옵션을 지정할 수 있습니다. 이 대화 상자를 열려면  
   
 -   **성능 탐색기**에서 성능 세션 이름을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.  

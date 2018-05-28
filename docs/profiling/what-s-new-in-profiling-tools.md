@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ec85de208c7761b69a73cc17a72bdb4a59fe6bb4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2da6c16aa0db88fefa1824d2ecabb35cc1539951
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="whats-new-in-profiling-tools-in-includevsdev15miscincludesvsdev15mdmd"></a>[!include[vs_dev15](../misc/includes/vs_dev15_md.md)]에 포함된 프로파일링 도구의 새로운 기능
 진단 도구에는 수정해야 하는 앱의 문제를 식별하는 데 사용할 수 있는 새로운 시각화가 포함되어 있습니다. 이제는 진단 도구에 ASP.NET 앱 지원이 포함됩니다.
@@ -30,8 +30,8 @@ ms.lasthandoff: 04/19/2018
 
 CPU 사용량 도구에는 성능 문제를 발생시킬 가능성이 가장 높은 기능을 식별하는 데 사용할 수 있는 [새로운 시각화](../profiling/Beginners-Guide-to-Performance-Profiling.md)가 포함되어 있습니다. 새로운 **호출자/호출 수신자** 뷰에서는 선택한 함수와의 함수 호출 비용을 조사할 수 있습니다.
 
-![진단 도구 호출자/호출 수신자 뷰](../profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
+![진단 도구 호출자 호출 수신자 뷰](../profiling/media/DiagToolsCallerCallee.png "DiagToolsCallerCallee")
   
 ## <a name="see-also"></a>참고 항목  
- [Visual Studio의 프로파일링](../profiling/index.md)  
- [프로파일링 기능 둘러보기](../profiling/profiling-feature-tour.md)
+ [Visual Studio의 프로필](../profiling/index.md)  
+ [프로필 기능 둘러보기](../profiling/profiling-feature-tour.md)

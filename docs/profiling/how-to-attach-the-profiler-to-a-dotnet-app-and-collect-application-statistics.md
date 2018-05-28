@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 5912e6704a50884df2000afb7c12f82f7a8aa69f
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: c51b981e7863db371d8e50ae13e48afbc7f270fc
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/15/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="how-to-attach-the-profiler-to-a-net-framework-stand-alone-application-and-collect-application-statistics-by-using-the-command-line"></a>방법: 명령줄을 통해 .NET Framework 독립 실행형 응용 프로그램에 프로파일러를 연결하여 응용 프로그램 통계 수집
 이 항목은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 실행 중인 .NET Framework 독립 실행형(클라이언트) 응용 프로그램에 프로파일러를 연결하고 샘플링 방법을 사용하여 성능 통계를 수집하는 방법을 설명합니다.  
@@ -30,7 +30,7 @@ ms.lasthandoff: 05/15/2018
   
  프로파일링 세션을 종료하려면 프로파일러가 응용 프로그램에 연결되어 있으면 안 되고 프로파일러가 명시적으로 종료되어야 합니다. 대부분의 경우 프로파일링 세션 종료 시 프로파일링 환경 변수를 지우는 것이 좋습니다.  
   
-## <a name="attaching-the-profiler"></a>프로파일러 연결  
+## <a name="attach-the-profiler"></a>프로파일러 연결  
   
 #### <a name="to-attach-the-profiler-to-a-running-net-framework-application"></a>실행 중인 .NET Framework 응용 프로그램에 프로파일러를 연결하려면  
   
@@ -80,9 +80,9 @@ ms.lasthandoff: 05/15/2018
     |[/sys](../profiling/sys-vsperfcmd.md) [**:**`Interval`]|샘플링 이벤트를 운영 체제 커널에 대한 프로세스의 시스템 호출로 변경합니다(syscalls). `Interval`이 지정되면 샘플 간의 호출 수를 설정합니다. 기본값은 10입니다.|  
     |[/counter](../profiling/counter.md) **:** `Config`|샘플링 이벤트 및 간격을 `Config`에 지정된 프로세서 성능 카운터 및 간격으로 변경합니다.|  
   
-    -  
+     
   
-## <a name="controlling-data-collection"></a>데이터 컬렉션 제어  
+## <a name="control-data-collection"></a>데이터 수집 제어  
  대상 응용 프로그램이 실행 중이면 **VSPerfCmd.exe** 옵션을 사용하여 프로파일러 데이터 파일에 대한 데이터 쓰기를 시작하고 중지하는 방식으로 데이터 수집을 제어할 수 있습니다. 데이터 수집을 제어하면 응용 프로그램의 시작 또는 종료와 같이 프로그램 실행의 특정 부분에 대한 데이터를 수집할 수 있습니다.  
   
 #### <a name="to-start-and-stop-data-collection"></a>데이터 수집을 시작 및 중지하려면  
@@ -95,7 +95,7 @@ ms.lasthandoff: 05/15/2018
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|`PID`에 지정된 프로세스에 대한 데이터 수집을 시작(**/processon**) 또는 중지(**/processoff**)합니다.|  
     |[/attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/attach**는 `PID` 또는 프로세스 이름(ProcName)으로 지정된 프로세스에 대한 데이터 수집을 시작합니다. **/detach**는 지정된 프로세스 또는 모든 프로세스(특정 프로세스가 지정되지 않은 경우)에 대한 데이터 수집을 중지합니다.|  
   
-## <a name="ending-the-profiling-session"></a>프로파일링 세션 종료  
+## <a name="end-the-profiling-session"></a>프로파일링 세션 종료  
  프로파일링 세션을 종료하려면 프로파일러가 모든 프로파일링된 프로세스에서 분리되어야 하고 프로파일러가 명시적으로 종료되어야 합니다. 응용 프로그램을 닫거나 **VSPerfCmd /detach** 옵션을 호출하여 샘플링 방법으로 프로파일링된 응용 프로그램에서 프로파일러를 분리할 수 있습니다. 그러고 나서 **VSPerfCmd /shutdown** 옵션을 호출하여 프로파일러를 끄고 프로파일링 데이터 파일을 닫습니다. **VSPerfClrEnv /off** 명령은 프로파일링 환경 변수를 지웁니다.  
   
 #### <a name="to-end-a-profiling-session"></a>프로파일링 세션을 종료하려면  

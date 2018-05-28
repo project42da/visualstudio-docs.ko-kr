@@ -13,11 +13,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - cplusplus
-ms.openlocfilehash: d79399ebea9fd5dedd645b148910d6a4ced47902
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 53c8caa101b51a9d26d555787e710408cf315a0e
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="visual-studio-profiler-api-reference-native"></a>Visual Studio 프로파일러 API 참조(네이티브)
 Visual Studio 프로파일러 API를 사용하여 수집된 데이터의 양을 프로그래밍 방식으로 제어하고 프로파일링 동안 타임스탬프 및 프로필 표시를 삽입할 수 있습니다. 네이티브 API를 사용하려면 프로젝트에 VSPerf.h 헤더 파일을 포함하고 VSPerf.lib를 추가합니다.  
@@ -25,7 +25,7 @@ Visual Studio 프로파일러 API를 사용하여 수집된 데이터의 양을 
 > [!NOTE]
 >  기본적으로 VSPerf.h 및 VSPerf.lib는 PerfSDK라는 폴더에 있습니다. 예: \<드라이브>:\Program Files\Microsoft Visual Studio 14.0\Team Tools\Performance Tools\PerfSDK 디렉터리  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [CommentMarkAtProfile](../profiling/commentmarkatprofile.md)  
   
  [CommentMarkProfile](../profiling/commentmarkprofile.md)  

@@ -9,13 +9,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 038922f5d9acd67b33c3e5a3a4d54d8be94e80c3
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 562f1cf090ffe169ead30b3bd7c4bdce515d3b22
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="collecting-additional-performance-data"></a>추가 성능 데이터 수집
+# <a name="collect-additional-performance-data"></a>추가 성능 데이터 수집
 
 프로파일링 방법을 사용하여 수집하는 데이터 외에도 Visual Studio 프로파일링 도구를 사용하여 추가 데이터를 기록하고 볼 수 있습니다.
 

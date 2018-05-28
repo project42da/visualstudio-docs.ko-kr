@@ -9,11 +9,11 @@ manager: douge
 ms.workload:
 - cplusplus
 author: mikeblome
-ms.openlocfilehash: 227b12f2da07d3d610f3d043348dc59680fc17ab
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ea1253144c245c8706cf96e6cb5d1462e302afea
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="write-unit-tests-for-cc-in-visual-studio"></a>Visual Studio에서 C/C++에 대한 단위 테스트 작성
 
@@ -74,7 +74,7 @@ Google Test 어댑터와 Boost.Test 어댑터 확장은 Visual Studio Marketplac
 
 ![include 지시문 추가](media/cpp-write-test-methods.png "C++ 테스트: 헤더 파일에 대해 include 추가")
 
-TEST_CLASS 및 TEST_METHOD는 [Microsoft 기본 테스트 프레임워크]((microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)의 일부입니다. **테스트 탐색기**는 유사한 방식으로 다른 지원되는 프레임워크에서 테스트 메서드를 검색합니다.
+TEST_CLASS 및 TEST_METHOD는 [Microsoft Native Test Framework](microsoft-visualstudio-testtools-cppunittestframework-api-reference.md)의 일부입니다. **테스트 탐색기**는 유사한 방식으로 다른 지원되는 프레임워크에서 테스트 메서드를 검색합니다.
 
 TEST_METHOD는 void를 반환합니다. 테스트 결과를 내려면 `Assert` 클래스에서 고정 메서드를 사용하여 예상되는 항목에 대해 실제 결과를 테스트합니다. 다음 예제에서는 `MyClass`에 `std::string`을 취하는 생성자가 있다고 가정합니다. 생성자가 예상대로 클래스를 초기화하는지 테스트할 수 있습니다.
 

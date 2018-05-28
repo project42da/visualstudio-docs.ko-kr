@@ -13,11 +13,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 86522beb978dee5722a919c4fa0e3a9030d5f3ad
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 0fdc6acd2c14331d34ccb3f3435b1ee5fcc44a14
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="visual-studio-ide-overview"></a>Visual Studio IDE 개요
 
@@ -169,7 +169,7 @@ Visual Studio를 처음 시작하면 필요에 따라 Microsoft 계정이나 회
 
 - [솔루션 탐색기](../ide/solutions-and-projects-in-visual-studio.md) - 코드 파일을 보고, 탐색하고, 관리할 수 있습니다. 솔루션 탐색기에서 파일을 솔루션 및 프로젝트로 그룹화하여 코드를 구성할 수 있습니다.
 
-- 대부분의 시간을 보낼 가능성이 있는 [편집기](../ide/writing-code-in-the-code-and-text-editor.md) 창은 코드를 보여 주고 이를 통해 소스 코드를 편집하고 UI를 디자인할 수 있습니다.
+- 대부분의 시간을 보낼 가능성이 있는 [편집기](../ide/writing-code-in-the-code-and-text-editor.md) 창은 코드를 보여주고 이를 통해 소스 코드를 편집하고 UI를 디자인할 수 있습니다.
 
 - [출력](../ide/reference/output-window.md) 창에는 디버깅 및 오류 메시지, 컴파일러 경고, 게시 상태 메시지 등의 Visual Studio 알림이 표시됩니다. 각 메시지 원본에 해당하는 탭이 있습니다.
 

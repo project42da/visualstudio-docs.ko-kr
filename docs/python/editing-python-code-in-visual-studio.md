@@ -1,7 +1,7 @@
 ---
 title: Python 코드 편집
 description: Visual Studio에서 Python을 편집하는 경우 서식, Lint, 리팩터링과 함께 IntelliSense, 코드 조각 및 탐색 기능이 제공됩니다.
-ms.date: 03/05/2018
+ms.date: 05/07/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-python
 ms.topic: conceptual
@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: 173dc59190eb89517a4fb38f68299ae2e37064dd
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 90f73daad0c4ea9184337050d77a53b14e289614
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="editing-python-code"></a>Python 코드 편집
 
@@ -27,7 +27,7 @@ ms.lasthandoff: 05/07/2018
 |---|---|
 | ![비디오에 대한 비디오 카메라 아이콘](../install/media/video-icon.png "비디오 보기") | Python 코드 편집 데모 [비디오(Microsoft Virtual Academy)를 시청](https://mva.microsoft.com/en-US/training-courses-embed/python-tools-for-visual-studio-2017-18121/Video-Editing-Python-Code-r2iQH5LWE_4605918567)하세요(2분 30초).|
 
-Visual Studio에서 코드 편집에 대한 일반적 설명서는 [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요. 또한 코드의 특정 섹션에 집중하는 데 도움이 되는 [Visual Studio 개요](../ide/outlining.md)도 참조하세요.
+Visual Studio의 코드 편집에 대한 일반적인 설명서는 [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md)을 참조하세요. 또한 코드의 특정 섹션에 집중하는 데 도움이 되는 [Visual Studio 개요](../ide/outlining.md)도 참조하세요.
 
 Visual Studio 개체 브라우저(**보기 > 다른 창 > 개체 브라우저** 또는 Ctrl+W, J)를 사용하여 각 모듈에 정의된 Python 클래스와 해당 클래스에 정의된 함수를 검사할 수도 있습니다.
 

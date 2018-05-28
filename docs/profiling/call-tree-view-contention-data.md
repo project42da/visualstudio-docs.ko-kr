@@ -12,23 +12,23 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b4e21b91ceda5b51a26633b7595aed4e0ee12059
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 40e28eb246b2c4611a15dc4ce2cf6b1b02dd0100
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="call-tree-view---contention-data"></a>호출 트리 뷰 - 경합 데이터
 호출 트리 뷰에는 프로파일링 된 응용 프로그램에서 이동한 함수 실행 경로가 표시됩니다. 트리의 루트는 응용 프로그램 또는 구성 요소에 대한 진입점입니다. 각 함수 노드는 호출한 모든 함수, 다른 스레드 또는 프로세스와 리소스에 대해 경합하기 때문에 함수가 차단된 횟수 및 함수가 차단된 시간을 나열합니다.  
   
  호출 트리 뷰의 값은 호출 트리의 부모 함수가 호출한 함수 인스턴스에 대한 값입니다. 비율 값은 프로파일링 실행 시 총 경합 수와 함수 인스턴스 값을 비교하여 계산됩니다.  
   
-## <a name="highlighting-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
+## <a name="highlight-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
  호출 트리 뷰에서는 가장 많은 경합을 만든 프로세스 또는 함수의 실행 경로를 확장하고 강조 표시할 수 있습니다.  
   
 -   최대 활성 경로를 표시하려면 프로세스 또는 함수를 마우스 오른쪽 단추로 클릭한 후 **실행 부하 과다 경로 확장**을 클릭합니다.  
   
-## <a name="setting-the-call-tree-root-node"></a>호출 트리 루트 노드 설정  
+## <a name="set-the-call-tree-root-node"></a>호출 트리 루트 노드 설정  
  프로파일링 실행 시 각 프로세스는 루트 노드로 표시됩니다. 호출 트리 뷰의 시작 노드를 설정하려면 시작 노드로 설정하려는 노드를 마우스 오른쪽 단추로 클릭하고 **루트 설정**을 클릭합니다.  
   
  루트 노드를 설정하면 선택한 노드의 하위 트리를 제외한 다른 모든 항목이 뷰에서 제거됩니다. 루트 노드를 원래 노드로 다시 설정하려면 호출 트리 뷰를 마우스 오른쪽 단추로 클릭하고 **루트 다시 설정**을 클릭합니다.  

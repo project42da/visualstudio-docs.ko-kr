@@ -12,13 +12,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c613e4b200df0153827fb10013416211a2eb2062
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9a85d5cd2fc1a6b86b209cad7de08f60f01fd0c9
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="filtering-report-views"></a>보고서 뷰 필터링
+# <a name="filter-report-views"></a>보고서 뷰 필터링
 프로파일링 데이터 파일에 필터를 적용하여 성능 보고서 뷰에 표시되고 보고서 파일로 내보내는 프로파일링 데이터를 제한할 수 있습니다. 타임스탬프 값 사이의 데이터로 보고서를 제한하고, 특정 프로세스 및 스레드로 데이터를 제한할 수 있습니다. 파일에 필터를 저장한 다음 저장된 필터를 가져와서 다른 프로파일링 데이터 파일에서 필터를 만들 수 있습니다.  
   
  요약 뷰에서 그래픽 타임라인을 사용하여 보고서를 시간 세그먼트로 제한할 수도 있습니다. [방법: 요약 타임라인에서 보고서 뷰 필터링](../profiling/how-to-filter-report-views-from-the-summary-timeline.md)을 참조하세요.  
@@ -42,7 +42,6 @@ ms.lasthandoff: 04/19/2018
     |**Operator**|필드와 값 간의 절에 원하는 관계를 지정하는 연산자를 선택합니다.<br /><br /> =    같음<br /><br /> <>  같지 않음<br /><br /> <    보다 작음<br /><br /> >    보다 큼<br /><br /> <=  작거나 같음<br /><br /> >=  크거나 같음|  
     |**값**|찾을 값을 선택하거나 입력합니다. 필드에 대해 사용 가능한 값이 나열되는 필드도 있습니다.|  
   
-3.  
   
 #### <a name="to-create-a-profiler-report-filter-from-the-marks-report-view"></a>표시 보고서 뷰에서 프로파일러 보고서 필터를 만들려면  
   

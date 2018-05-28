@@ -9,11 +9,11 @@ description: 선택한 Visual Studio 구독에 포함된 DataCamp Training 구�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 552e82651937be61e333f9fc07e9e47b9723b360
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 67b79e711cb18f894cd9ae8ee23e049bf84bf9c3
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="the-datacamp-training-benefit-in-visual-studio-subscriptions"></a>Visual Studio 구독의 DataCamp Training 혜택
 
@@ -83,6 +83,7 @@ DataCamp 혜택 기간은 Visual Studio 구독에 따라 다릅니다.
 ## <a name="support-resources"></a>지원 리소스
 -  DataCamp와 관련하여 도움이 필요하세요?  다음 리소스를 확인하세요.
     - 포럼 및 자습서를 제공하는 [DataCamp 커뮤니티](https://www.datacamp.com/community/tutorials).
-    - [FAQ](https://datacamp.groovehq.com/help_center).  FAQ 페이지에서 전자 메일 지원 요청을 제출할 기회도 있습니다.
+    - 지원 항목을 검색하고 사용자 질문을 요청하는 [DataCamp 도움말 센터](https://support.datacamp.com/hc)  
+    - [지원 요청 제출](https://support.datacamp.com/hc/requests/new)
 -  Visual Studio 구독에 대한 판매, 구독, 계정 및 요금 청구에 대한 지원을 받으려면 Visual Studio [구독 지원](https://www.visualstudio.com/subscriptions/support/)에 문의하세요.
 -  Visual Studio IDE, Visual Studio Team Services 또는 기타 Visual Studio 제품 또는 서비스와 관련하여 궁금한 점이 있나요?  [Visual Studio 지원](https://www.visualstudio.com/support/)을 참조하세요. 

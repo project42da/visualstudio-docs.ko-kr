@@ -21,15 +21,15 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e4542289e0d9dceeeadf972db714148d4e1bec4d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 80f6d697cecdc63dd013ae91631b350c51fc0e90
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="profiling-on-hpc-high-performance-computing-clusters"></a>HPC(High Performance Computing) 클러스터에서 프로파일링
+# <a name="profile-on-hpc-high-performance-computing-clusters"></a>HPC(고성능 컴퓨팅) 클러스터에서 프로파일링
 
-Visual Studio 프로파일링 도구의 샘플링 방법을 사용하여 Microsoft Windows HPC 클러스터의 컴퓨터 노드에서 프로파일링을 수행할 수 있습니다. HPC에 대한 자세한 내용은 Microsoft 웹 사이트에서 [Windows HPC](http://go.microsoft.com/fwlink/?LinkId=165393)를 참조하세요.
+Visual Studio 프로파일링 도구의 샘플링 방법을 사용하여 Microsoft Windows HPC 클러스터의 컴퓨터 노드에서 프로파일링을 수행할 수 있습니다. HPC에 대한 자세한 내용은 Microsoft 웹 사이트에서 [Windows HPC](https://azure.microsoft.com/solutions/big-compute/)를 참조하세요.
 
 ## <a name="prerequisites"></a>전제 조건
 
@@ -57,7 +57,7 @@ HPC 컴퓨터 노드에서 프로파일링하려면 다음을 수행해야 합�
 |*%FxPath%*|[!INCLUDE[net_v40_long](../code-quality/includes/net_v40_long_md.md)] 설치 관리자의 경로입니다. Visual Studio 설치 미디어에서 경로는 WCU\dotNetFramework\dotNetFx40_Full_x86_x64.exe입니다.|
 |*%ProfilerPath%*|프로파일링 도구 설치 관리자의 독립 실행형 버전 경로입니다. Visual Studio 설치 미디어에서 경로는 Standalone Profiler\x64\vs_profiler.exe입니다.|
 
-## <a name="profiling-on-an-hpc-compute-node"></a>HPC 컴퓨터 노드에서 프로파일링
+## <a name="profile-on-an-hpc-compute-node"></a>HPC 계산 노드에서 프로파일링
 
 HPC 성능 마법사를 사용하여 HPC 클러스터 및 대상 정보를 지정하는 방식으로 프로파일링 세션을 구성합니다. 성능 세션 속성 페이지에서 추가 옵션을 설정할 수 있습니다. 프로파일링 도구는 필요한 대상 이진 파일을 자동으로 배포하고 프로파일러 및 HPC 응용 프로그램을 시작합니다.
 
@@ -105,7 +105,7 @@ HPC 성능 마법사를 사용하여 HPC 클러스터 및 대상 정보를 지�
 
 10. **마침**을 클릭합니다.
 
-## <a name="setting-hpc-profiling-properties-by-using-performance-session-property-pages"></a>성능 세션 속성 페이지를 사용하여 HPC 프로파일링 속성 설정
+## <a name="set-hpc-profiling-properties-by-using-performance-session-property-pages"></a>성능 세션 속성 페이지를 사용하여 HPC 프로파일링 속성 설정
 
 성능 세션 속성 페이지의 HPC 시작 속성 페이지에서 HPC 프로파일링 마법사에 대해 설정한 성능 세션 속성을 변경할 수 있습니다. HPC 고급 속성 페이지에서 추가 옵션을 설정합니다.
 

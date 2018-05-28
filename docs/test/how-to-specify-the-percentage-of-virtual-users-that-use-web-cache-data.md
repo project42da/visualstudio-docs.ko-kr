@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 66b6ccc1d62cdbf163a67d5c76d310f896766819
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1bf1c0ce47e96438df768776244cc26bc9ea8929
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="how-to-specify-the-percentage-of-virtual-users-that-use-web-cache-data"></a>방법: 웹 캐시 데이터를 사용하는 가상 사용자 비율 지정
 
@@ -29,21 +29,21 @@ ms.lasthandoff: 04/26/2018
 
 이미지 등의 캐시 가능한 콘텐츠가 로컬에 캐시되어 있을 가능성이 큰 재방문 사용자가 많은 웹 사이트의 부하를 테스트하는 경우 **새 사용자의 백분율** 속성의 설정이 100%이면 실제 사용 환경에서 발생하는 것보다 많은 다운로드 요청이 생성됩니다. 이 경우 웹 사이트의 전체 방문자 중 처음으로 방문하는 사용자의 백분율을 예측하여 이에 따라 **새 사용자의 백분율** 속성을 적절하게 설정해야 합니다.
 
-## <a name="to-specify-the-agents-to-use-for-a-scenario"></a>시나리오에 사용할 에이전트를 지정하려면
+## <a name="to-specify-the-percentage-of-new-users-for-a-scenario"></a>시나리오에 대한 새 사용자의 백분율을 지정하려면
 
-1.  부하 테스트를 엽니다.
+1. 부하 테스트를 엽니다.
 
      **부하 테스트 편집기**가 나타납니다. 부하 테스트 트리가 표시됩니다.
 
-2.  부하 테스트 트리 **시나리오** 폴더에서 사용할 에이전트를 지정할 시나리오 노드를 선택합니다.
+2. 부하 테스트 트리 **시나리오** 폴더에서 새 사용자의 백분율 값을 변경할 시나리오 노드를 선택합니다.
 
-3.  **보기** 메뉴에서 **속성 창**을 선택합니다.
+3. **보기** 메뉴에서 **속성 창**을 선택합니다.
 
      시나리오의 범주와 속성이 속성 창에 표시됩니다.
 
-4.  새 사용자의 백분율을 나타내는 숫자를 입력하여 **새 사용자의 백분율** 속성 값을 설정합니다.
+4. 새 사용자의 백분율을 나타내는 숫자를 입력하여 **새 사용자의 백분율** 속성 값을 설정합니다.
 
-5.  속성 변경을 마친 다음, **파일** 메뉴에서 **저장**을 선택합니다. 그러면 **새 사용자의 백분율**의 새 값을 사용하여 부하 테스트를 실행할 수 있습니다.
+5. 속성 변경을 마친 다음, **파일** 메뉴에서 **저장**을 선택합니다. 그러면 **새 사용자의 백분율**의 새 값을 사용하여 부하 테스트를 실행할 수 있습니다.
 
 ## <a name="see-also"></a>참고 항목
 

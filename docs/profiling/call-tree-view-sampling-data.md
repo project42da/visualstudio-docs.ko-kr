@@ -13,14 +13,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b7c15cb1e363a00f3d330a0c5cc5c9927c7e2b7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 90035daf13008122e7d529408a6de0389b311628
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="call-tree-view---sampling-data"></a>호출 트리 뷰 - 샘플링 데이터
-호출 트리 뷰는 프로파일링된 응용 프로그램에서 트래버스된 함수 실행 경로를 표시합니다.  
+호출 트리 뷰에는 프로파일링 된 응용 프로그램에서 이동한 함수 실행 경로가 표시됩니다.  
   
 > [!NOTE]
 >  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 또한 UWP 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
@@ -29,10 +29,10 @@ ms.lasthandoff: 04/19/2018
   
  호출 트리 뷰의 값은 호출 트리의 부모 함수가 호출한 함수 인스턴스에 대한 값입니다. 비율 값은 프로파일링 실행 시 총 샘플 수와 함수 인스턴스 값을 비교하여 계산됩니다.  
   
-## <a name="highlighting-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
+## <a name="highlight-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
  호출 트리 뷰에서는 가장 자주 샘플링된 프로세스 또는 함수의 실행 경로를 확장하고 강조 표시할 수 있습니다. 최대 활성 경로를 표시하려면 프로세스 또는 함수를 마우스 오른쪽 단추로 클릭한 후 **실행 부하 과다 경로 확장**을 클릭합니다.  
   
-## <a name="setting-the-call-tree-root-node"></a>호출 트리 루트 노드 설정  
+## <a name="set-the-call-tree-root-node"></a>호출 트리 루트 노드 설정  
  프로파일링 실행 시 각 프로세스는 루트 노드로 표시됩니다. 호출 트리 뷰의 시작 노드를 설정하려면 시작 노드로 설정하려는 노드를 마우스 오른쪽 단추로 클릭하고 **루트 설정**을 선택합니다.  
   
  루트 노드를 설정하면 선택한 노드의 하위 트리를 제외한 다른 모든 항목이 뷰에서 제거됩니다. 루트 노드를 원래 노드로 다시 설정하려면 호출 트리 뷰 창에서 마우스 오른쪽 단추로 클릭하고 **루트 다시 설정**을 선택합니다.  
@@ -55,7 +55,7 @@ ms.lasthandoff: 04/19/2018
   
 ## <a name="see-also"></a>참고 항목  
  [방법: 보고서 뷰 열 사용자 지정](../profiling/how-to-customize-report-view-columns.md)   
- [호출 트리 뷰 - 프로파일러 샘플링 데이터](../profiling/call-tree-view-sampling-data.md)   
+ [호출 트리 뷰 - 프로파일러 샘플링 데이터](../profiling/call-Tree-view-sampling-data.md)   
  [호출 트리 뷰 - 샘플링](../profiling/call-tree-view-dotnet-memory-sampling-data.md)   
  [호출 트리 뷰 - 계측](../profiling/call-tree-view-dotnet-memory-instrumentation-data.md)   
  [호출 트리 뷰](../profiling/call-tree-view-instrumentation-data.md)

@@ -20,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f95e09639e9236b64f9c18c9bd90e6850ee13d86
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 486ca90ac2a8a4b3b289b0896e2cd81239502558
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="usingtask-element-msbuild"></a>UsingTask 요소(MSBuild)
 [Task](../msbuild/task-element-msbuild.md) 요소에서 참조하는 작업을 작업의 구현이 포함된 어셈블리에 매핑합니다.  
@@ -68,10 +68,10 @@ ms.lasthandoff: 04/19/2018
 |[프로젝트](../msbuild/project-element-msbuild.md)|[!INCLUDE[vstecmsbuild](../extensibility/internals/includes/vstecmsbuild_md.md)] 프로젝트 파일의 필수 루트 요소입니다.|  
 
 ## <a name="remarks"></a>설명  
- 환경 변수, 명령줄 속성 및 프로젝트 수준 속성은 `UsingTask` 요소가 명시적으로 또는 가져온 프로젝트 파일을 통해 프로젝트 파일 안에 표시되는 한 이 요소 내에서 위치에 상관없이 참조할 수 있습니다. 자세한 내용은 [작업](../msbuild/msbuild-tasks.md)을 참조하세요.  
+ 환경 변수, 명령줄 속성, 프로젝트 수준 속성 및 프로젝트 수준 항목은 직접 또는 가져온 프로젝트 파일을 통해 프로젝트 파일에 포함된 `UsingTask` 요소에서 참조할 수 있습니다. 자세한 내용은 [작업](../msbuild/msbuild-tasks.md)을 참조하세요.  
 
 > [!NOTE]
->  MSBuild 엔진을 통해 전역으로 등록된 .tasks 파일 중 하나에서 `UsingTask` 요소를 가져오는 경우 프로젝트 수준 속성에는 의미가 없습니다. 프로젝트 수준의 속성은 MSBuild에 대해 전역이 아닙니다.  
+>  MSBuild 엔진을 통해 전역으로 등록된 .tasks 파일 중 하나에서 `UsingTask` 요소를 가져오는 경우 프로젝트 수준 속성 또는 항목에는 의미가 없습니다. 프로젝트 수준 값은 MSBuild에 대해 전역이 아닙니다.  
 
  MSBuild 4.0에서는 작업 사용을 .overridetask 파일에서 로드할 수 있습니다.  
 
