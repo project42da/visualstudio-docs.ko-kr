@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b820820a42814eb7169287408200bedd73435ff7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ae09c578eac5a4acbfa9c169ba175fe557872da5
+ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/25/2018
 ---
 # <a name="how-to-create-xml-snippets"></a>방법: XML 조각 만들기
 
@@ -30,7 +30,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
 
 3.  편집기 창에서 마우스 오른쪽 단추로 클릭 하 고 선택 **조각 삽입**합니다.
 
-4.  선택 **조각** 목록 및 ENTER 키를 누릅니다.
+4.  선택 **조각** 목록 및 키를 눌러 **Enter**합니다.
 
 5.  원하는 대로 새 조각을 변경합니다.
 
@@ -40,7 +40,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
 
 7.  새 조각의 이름을 입력 하 고 선택 **조각 파일** 에서 **파일 형식** 드롭다운 창.
 
-8.  사용 하 여는 **저장** 하는 파일 위치를 My Documents\Visual Studio 2005 \code Snippets\XML\My XML Snippets 폴더로 변경 하 고 다음 키를 누릅니다 드롭 다운 목록 **저장**합니다.
+8.  사용 하 여는 **저장** 파일 위치를 변경 하려면 드롭다운 목록에서 *My Documents\Visual Studio 2005 \code Snippets\XML\My XML Snippets* 폴더 및 다음 키를 누릅니다 **저장**합니다.
 
 ## <a name="snippet-description"></a>조각 설명
 
@@ -83,7 +83,7 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
 
 -   $selected$는 미리 정의된 변수입니다. 이 변수는 조각을 호출하기 전에 XML 편집기에서 선택한 텍스트를 나타냅니다. 이 변수는 선택한 텍스트를 포함하는 코드 조각에서 이 텍스트가 나타나는 위치를 결정합니다.
 
--   $end$는 미리 정의된 변수입니다. Enter 키를 눌러 코드 조각 필드 편집을 마치면 이 변수는 캐럿(^)이 이동되는 위치를 결정합니다.
+-   $end$는 미리 정의된 변수입니다. 사용자가 누르면 **Enter** 이 변수는 코드 조각 필드 편집을 마치려면 캐럿 (^)이 이동 되는 위치를 결정 합니다.
 
  위의 `Code` 요소는 다음 XML 텍스트를 삽입합니다.
 
@@ -117,8 +117,8 @@ XML 편집기를 사용하여 새 XML 조각을 만들 수 있습니다. 이 편
 
  그런 다음 XML 조각에서 $prefix$ 변수를 사용할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 조각](../xml-tools/xml-snippets.md)
-- [방법: XML 조각 사용](../xml-tools/how-to-use-xml-snippets.md)
-- [방법: XML 스키마에서 XML 조각 생성](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
+- [방법: 사용 하 여 XML 조각](../xml-tools/how-to-use-xml-snippets.md)
+- [방법: XML 스키마에서 XML 조각을 생성](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
