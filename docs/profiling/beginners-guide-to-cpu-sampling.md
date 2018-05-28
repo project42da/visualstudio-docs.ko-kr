@@ -16,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ee85f9946e16b0ecaafa196e1b197304ccde3bd9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d1461e90ebbd32483eb6d8e2925e1e226faf5ea4
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="beginners-guide-to-cpu-sampling"></a>CPU 샘플링 초보자를 위한 지침
 Visual Studio 프로파일링 도구를 사용하여 응용 프로그램의 성능 문제를 분석할 수 있습니다. 다음 절차에서는 **샘플링** 데이터 사용 방법을 보여 줍니다.

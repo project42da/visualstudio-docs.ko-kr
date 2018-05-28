@@ -19,25 +19,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c6c32fc1a7fbd82d1ac9604396dc2ea118efbad2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: acb96e598128060563d12809a300318ccb929aaf
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
-# <a name="encodings-and-line-breaks"></a>인코딩 및 줄 바꿈
+# <a name="encodings-and-line-endings"></a>인코딩 및 줄 끝
 
 Visual Studio에서 다음 문자는 줄 바꿈으로 해석됩니다.
 
--   CR LF: 캐리지 리턴 + 줄 바꿈, 유니코드 문자 000D + 000A
+- CR LF: 캐리지 리턴 + 줄 바꿈, 유니코드 문자 000D + 000A
 
--   LF: 줄 바꿈, 유니코드 문자 000A
+- LF: 줄 바꿈, 유니코드 문자 000A
 
--   NEL: 다음 줄, 유니코드 문자 0085
+- NEL: 다음 줄, 유니코드 문자 0085
 
--   LS: 줄 구분 기호, 유니코드 문자 2028
+- LS: 줄 구분 기호, 유니코드 문자 2028
 
--   PS: 단락 구분 기호, 유니코드 문자 2029
+- PS: 단락 구분 기호, 유니코드 문자 2029
 
 다른 응용 프로그램에서 복사되는 텍스트는 원래 인코딩 및 줄 바꿈 문자를 유지합니다. 예를 들어 메모장에서 텍스트를 복사하고 Visual Studio의 텍스트 파일로 붙여넣으면 텍스트에는 메모장의 텍스트와 같은 설정이 포함됩니다.
 
@@ -56,4 +56,4 @@ Visual Studio에서 다음 문자는 줄 바꿈으로 해석됩니다.
 
 ## <a name="see-also"></a>참고 항목
 
-- [편집기에서코 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+- [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md)

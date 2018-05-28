@@ -13,13 +13,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 69c9fe7ac91b8e4015204ee157f30c65583dc1df
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 951c65672f3b5aa6bb9555ace4622cfb60b04fc6
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="collecting-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line"></a>프로파일러 명령줄을 사용하여 독립 실행형 응용 프로그램에 대한 응용 프로그램 통계 수집
+# <a name="collect-application-statistics-for-stand-alone-applications-by-using-the-profiler-command-line"></a>프로파일러 명령줄을 사용하여 독립 실행형 응용 프로그램에 대한 응용 프로그램 통계 수집
 이 섹션에서는 명령줄 도구에서 샘플링 방법을 사용하여 클라이언트(독립 실행형) 응용 프로그램에 대한 성능 통계를 수집하기 위한 절차 및 옵션을 설명합니다.  
   
 > [!NOTE]
@@ -36,7 +36,7 @@ ms.lasthandoff: 05/11/2018
   
 ## <a name="related-tasks"></a>관련 작업  
   
-### <a name="profiling-stand-alone-applications"></a>독립 실행형 응용 프로그램 프로파일링  
+### <a name="profile-stand-alone-applications"></a>독립 실행형 응용 프로그램 프로파일링  
   
 |작업|관련 콘텐츠|  
 |----------|---------------------|  
@@ -44,12 +44,13 @@ ms.lasthandoff: 05/11/2018
 |**.NET 메모리 할당 및 가비지 수집 데이터**|-   [.NET Framework 메모리 데이터 수집](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|  
 |**리소스 경합 및 스레드 실행 데이터 수집**|-   [동시성 데이터 수집](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
   
-### <a name="profiling-by-using-the-sampling-method"></a>샘플링 방법을 사용하여 프로파일링  
+### <a name="profile-by-using-the-sampling-method"></a>샘플링 방법을 사용하여 프로파일링  
   
 |작업|관련 콘텐츠|  
 |----------|---------------------|  
 |**ASP.NET 웹 응용 프로그램 프로파일링**|-   [샘플링을 사용하여 응용 프로그램 통계 수집](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|  
-|**서비스 프로파일링**|-   [샘플링을 사용하여 응용 프로그램 통계 수집](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md). 샘플링 방법을 사용하여 Windows 서비스에서 성능 통계를 수집하는 방법을 설명합니다.|  
+|**서비스 프로파일링**|-   [샘플링을 사용하여 응용 프로그램 통계 수집](../profiling/collecting-application-statistics-for-services-by-using-the-profiler-sampling-method.md) 샘플링 방법을 사용하여 Windows 서비스에서 성능 통계를 수집하는 방법을 설명합니다.|  
   
-### <a name="analyzing-sampling-data-views-and-reports"></a>샘플링 데이터 뷰 및 보고서 분석  
+### <a name="analyze-sampling-data-views-and-reports"></a>샘플링 데이터 뷰 및 보고서 분석  
  [샘플링 방법 데이터 뷰](../profiling/profiler-sampling-method-data-views.md)
+

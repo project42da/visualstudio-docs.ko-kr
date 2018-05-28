@@ -11,13 +11,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 61d4506f4b9ee68e7920fa4bbb4c463d00cceb73
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 5268e6821714dc6850541c319dba450bcc04490b
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="setting-general-performance-session-options"></a>일반 성능 세션 옵션 설정
+# <a name="set-general-performance-session-options"></a>일반 성능 세션 옵션 설정
 
 성능 세션에 대한 속성 대화 상자의 **일반** 페이지에서 Visual Studio 프로파일링 도구 성능 세션에 대한 수집 방법 및 프로파일링 데이터 명명 규칙을 설정할 수 있습니다. **성능 탐색기**에서 이 대화 상자를 열려면 성능 세션을 마우스 오른쪽 단추로 클릭한 다음 **속성**을 클릭합니다.
 
@@ -35,13 +35,14 @@ ms.lasthandoff: 04/19/2018
 
 |||
 |-|-|
-|**.NET 개체 할당 정보를 수집합니다**. 기본적으로 데이터에 할당된 개체의 크기와 수가 포함됩니다. 이 확인란을 선택하거나 선택을 취소하여 .NET 메모리 데이터 수집을 활성화하거나 비활성화합니다.<br /><br /> **또한 .NET 개체 수명 정보도 수집합니다**. 이 확인란을 선택하여 메모리 개체를 회수하는 데 사용된 가비지 수집 세대에 대한 데이터를 포함합니다.|- [.NET 메모리 할당 및 수명 데이터 수집](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|
+|**.NET 개체 할당 정보를 수집합니다**. 기본적으로 데이터에 할당된 개체의 크기와 수가 포함됩니다. 이 확인란을 선택하거나 선택을 취소하여 .NET 메모리 데이터 수집을 활성화하거나 비활성화합니다. |- [.NET 메모리 할당 및 수명 데이터 수집](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)|
+|**또한 .NET 개체 수명 정보도 수집합니다**. 이 확인란을 선택하여 메모리 개체를 회수하는 데 사용된 가비지 수집 세대에 대한 데이터를 포함합니다.|- [.NET 메모리 할당 및 수명 데이터 수집](../profiling/collecting-dotnet-memory-allocation-and-lifetime-data.md)  |
 
  프로파일링 세션 페이지는 응용 프로그램에 대한 프로파일링을 시작할 때 나타납니다. 여기에서는 프로파일링을 일시 중지, 다시 시작 및 중지할 수 있습니다.
 
  ![프로파일링 세션 시작](../profiling/media/prof_profilingsessionpage.png "PROF_ProfilingSessionPage")
 
-## <a name="setting-profiling-data-file-options"></a>프로파일링 데이터 파일 옵션 설정
+## <a name="set-profiling-data-file-options"></a>프로파일링 데이터 파일 옵션 설정
 
 |||
 |-|-|

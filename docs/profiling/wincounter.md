@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4751d44afc2f54ea57866e3674a5bc150444088b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 9778504cb95371a95e6e25ca6a76c7d96a648a62
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="wincounter"></a>WinCounter
 **WinCounter** 옵션은 Windows 또는 응용 프로그램 성능 카운터를 지정하여 프로파일링 실행 동안 설정한 간격에 따라 수집합니다. Windows 및 응용 프로그램 성능 카운터는 프로파일링 데이터 파일에 표시로 나열됩니다. 여러 성능 카운터를 지정하여 별도 옵션에 수집할 수 있습니다.  

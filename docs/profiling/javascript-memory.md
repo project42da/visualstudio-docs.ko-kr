@@ -20,11 +20,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: e82ceb7879fcfca709ff6e94de81ae76ef908e07
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9c4ef7fa41cd9d4cdd0bfeda7d7745ad16d47536
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="analyze-javascript-memory-usage-in-uwp-apps"></a>UWP 앱에서 JavaScript 메모리 사용량 분석
 Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 JavaScript를 사용하여 Windows용으로 작성된 UWP 앱의 메모리 사용량을 파악하고 메모리 누수를 찾을 수 있습니다. 지원되는 앱으로는 유니버설 Windows 앱을 위한 앱이 있습니다.
@@ -50,7 +50,7 @@ Visual Studio에서 제공하는 JavaScript 메모리 분석기를 사용하면 
   
 2.  Visual Studio에서 앱을 실행하는 경우 **표준** 도구 모음의 **디버깅 시작** 목록에서 프로젝트에 대한 디버그 대상을 **로컬 컴퓨터** 또는 **장치** 중에서 선택합니다.  
   
-3.  메뉴 모음에서 **디버그**, **성능 프로파일러...** 를 차례로 선택합니다.  
+3.  메뉴 모음에서 **디버그** > **성능 프로파일러**를 선택합니다.  
   
      기본적으로 현재 시작 프로젝트를 분석합니다. 분석 대상을 변경하려면 **대상 변경**을 선택합니다.  
   

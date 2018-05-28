@@ -20,11 +20,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 22fc0004d076a36675ff6e9f8a9405d9062446d0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d746426a5db9a3b71ba3fd3703887f9e4c894ef9
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="text-editor-options-dialog-box"></a>옵션 대화 상자, 텍스트 편집기
 
@@ -32,4 +32,4 @@ ms.lasthandoff: 04/26/2018
 
 ### <a name="see-also"></a>참고 항목
 
-[코드 작성](../../ide/writing-code-in-the-code-and-text-editor.md)은 코드 편집기를 사용하는 여러 가지 방법에 대해 설명합니다.
+[코드 편집기의 기능](../../ide/writing-code-in-the-code-and-text-editor.md)은 코드 편집기를 사용하는 여러 가지 방법에 대해 설명합니다.

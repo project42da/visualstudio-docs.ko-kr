@@ -18,11 +18,11 @@ ms.technology: vs-ide-general
 ms.workload:
 - dotnet
 - dotnetcore
-ms.openlocfilehash: 2a6642b03d5e49763cd18bccae8f88ff1f7c5bd4
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: a61f2cd0e961aaa726f9a56cf75c4efb0ed77ae9
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="net-coding-convention-settings-for-editorconfig"></a>EditorConfig에 대한 .NET 코딩 규칙 설정
 
@@ -84,7 +84,7 @@ suggestion | 이 스타일 규칙을 위반하는 경우 이를 사용자에게 
         - dotnet\_style\_coalesce_expression
         - dotnet\_style\_null_propagation
 - C# 코드 스타일 설정
-    - [암시적 및 명시적 형식](#var)
+    - [암시적 및 명시적 형식](#implicit-and-explicit-types)
         - csharp\_style\_var\_for\_built\_in_types
         - csharp\_style\_var\_when\_type\_is_apparent
         - csharp\_style\_var_elsewhere
@@ -592,7 +592,7 @@ dotnet_style_null_propagation = true:suggestion
 
 이 섹션의 스타일 규칙은 C#에만 적용됩니다.
 
-#### <a name="var"></a>암시적 및 명시적 형식
+#### <a name="implicit-and-explicit-types"></a>암시적 및 명시적 형식
 
 이 섹션의 스타일 규칙(규칙 ID IDE0007 및 IDE0008)은 [var](/dotnet/csharp/language-reference/keywords/var) 키워드 및 변수 선언에서 명시적 형식을 사용하는 방법을 다룹니다. 이 규칙은 형식이 명확할 때 기본 제공 형식 및 다른 위치에 개별적으로 적용할 수 있습니다.
 

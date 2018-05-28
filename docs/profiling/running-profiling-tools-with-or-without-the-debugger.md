@@ -10,13 +10,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d7208f687ea38475603b8bfcae7e9ee55ab3ae58
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 64ea0d4d51a7dfbd9a7e1fb58e6297d0842d83b3
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="running-profiling-tools-with-or-without-the-debugger"></a>디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행
+# <a name="run-profiling-tools-with-or-without-the-debugger"></a>디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행
 Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 중 일부(예: **CPU 사용** 및 **메모리 사용**)는 디버거를 사용하거나 사용하지 않고 실행될 수 있습니다. 디버거가 없는 성능 도구는 릴리스 구성에서 실행될 수 있으며, 디버거 통합 도구는 디버그 구성에서 실행될 수 있습니다.  
   
 ## <a name="should-i-run-the-tool-with-or-without-the-debugger"></a>디버거를 사용하여 도구를 실행할지 여부 선택  
@@ -39,9 +39,9 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
 ##  <a name="BKMK_Quick_start__Collect_diagnostic_data"></a> 디버깅하는 동안 프로파일링 데이터 수집  
  다음 섹션에서는 로컬 디버그에 대해 설명합니다. 장치에서의 디버그 또는 원격 디버그에 대해서는 뒤의 섹션에서 확인할 수 있습니다.  
   
-1.  디버그할 프로젝트를 연 다음 **디버그 / 디버깅 시작** 을 클릭합니다(또는 도구 모음에서 **시작** 을 클릭하거나 **F5**사용).  
+1.  디버그할 프로젝트를 연 다음, **디버그** > **디버깅 시작**을 클릭합니다(또는 도구 모음의 **시작** 또는 **F5** 키 사용).  
   
-2.  끄지 않았다면 **진단 도구** 가 자동으로 나타납니다. 창을 다시 표시하려면 **디버그/Windows/진단 도구 표시**를 클릭합니다.  
+2.  끄지 않았다면 **진단 도구** 가 자동으로 나타납니다. 창을 다시 표시하려면 **디버그** > **Windows** > **진단 도구 표시**를 클릭합니다.  
   
 3.  데이터를 수집할 시나리오를 실행합니다.  
   
@@ -51,7 +51,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
      ![DiagnosticTools&#45;Update1](../profiling/media/diagnostictools-update1.png "DiagnosticTools-Update1")  
   
-4.  도구 모음의 **도구 선택** 설정을 사용하여 **메모리 사용** 또는 **CPU 사용** 중 하나를 표시하거나 둘 다 표시하도록 선택할 수 있습니다. Visual Studio Enterprise를 실행 중인 경우 **도구/옵션/IntelliTrace**에서 IntelliTrace를 사용하거나 사용하지 않도록 설정할 수 있습니다.  
+4.  도구 모음의 **도구 선택** 설정을 사용하여 **메모리 사용** 또는 **CPU 사용** 중 하나를 표시하거나 둘 다 표시하도록 선택할 수 있습니다. Visual Studio Enterprise를 실행 중인 경우 **도구** > **옵션** > **IntelliTrace**에서 IntelliTrace를 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   
 5.  디버그를 중지하면 진단 세션이 종료됩니다.  
   
@@ -72,7 +72,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
   
 1.  Visual Studio에서 프로젝트를 엽니다.  
   
-2.  **디버그** 메뉴에서 **성능 프로파일러...** 를 선택합니다(바로 가기 키: Alt+F2).  
+2.  **디버그** 메뉴에서 **성능 프로파일러...** 를 선택합니다(바로 가기 키: **Alt**+**F2**).  
   
 3.  진단 시작 페이지에서, 세션에서 실행할 하나 이상의 도구를 선택합니다. 프로젝트 형식, 운영 체제 및 프로그래밍 언어에 적용되는 도구만 표시됩니다. 진단 도구를 선택하면 같은 진단 세션에서 실행할 수 없는 도구 선택을 사용할 수 없게 설정됩니다. C# UWP 앱의 경우 선택이 다음과 같이 표시될 수 있습니다.  
   
@@ -106,7 +106,7 @@ Visual Studio에서는 이제 성능 도구를 선택할 수 있습니다. 그 �
 |![5단계](../profiling/media/procguid_6.png "ProcGuid_6")|데이터에 여러 도구의 정보가 포함되어 있으면 도구에 대한 세부 정보는 탭 아래에 수집됩니다.|  
 |![6단계](../profiling/media/procguid_6a.png "ProcGuid_6a")|도구에는 세부 정보 뷰가 하나 이상 있을 수 있습니다. 뷰는 타임라인의 선택된 부분으로 필터링됩니다.|  
   
-## <a name="setting-the-analysis-target-to-another-device"></a>다른 장치로 분석 대상 설정  
+## <a name="set-the-analysis-target-to-another-device"></a>분석 대상을 다른 장치로 설정  
  Visual Studio 프로젝트에서 앱을 시작할 수 있는 것 외에, 다른 대상에서 진단 세션을 실행할 수도 있습니다. 예를 들어 Windows 앱 스토어에서 설치된 앱 버전의 성능 문제를 진단할 수 있습니다.  
   
  ![진단 도구 분석 대상 선택](../profiling/media/pdhub_chooseanalysistarget.png "PDHUB_ChooseAnalysisTarget")  

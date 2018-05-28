@@ -10,11 +10,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a41e41b4448bcec34a24464f4f62e85d0765436d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1a74db80b0b13a01fbd58412666e66097971d467
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="analyze-network-usage-in-uwp-apps"></a>UWP 앱에서 네트워크 사용 분석
 Visual Studio **네트워크** 진단 도구는 [Windows.Web.Http API](/uwp/api/windows.web.http)를 사용하여 수행된 네트워크 작업에 대한 데이터를 수집합니다. 데이터를 분석하면 액세스 및 인증 문제, 잘못된 캐시 사용 및 저하된 디스플레이와 다운로드 성능을 해결하는 데 도움이 될 수 있습니다.  
@@ -24,12 +24,12 @@ Visual Studio **네트워크** 진단 도구는 [Windows.Web.Http API](/uwp/api/
 > [!NOTE]
 >  네트워크 도구에 대한 자세한 설명은 [Introducing Visual Studio's network tool](http://blogs.msdn.com/b/visualstudio/archive/2015/05/04/introducing-visual-studios-network-tool.aspx)(Visual Studio 네트워크 도구 소개)을 참조하세요.  
   
-## <a name="collecting-network-tool-data"></a>네트워크 도구 데이터 수집  
+## <a name="collect-network-tool-data"></a>네트워크 도구 데이터 수집  
  Visual Studio가 설치된 컴퓨터에 열려 있는 Visual Studio 프로젝트로 **네트워크** 도구를 실행해야 합니다.  
   
 1.  Visual Studio에서 프로젝트를 엽니다.  
   
-2.  메뉴에서 **디버그/성능 프로파일러...** 를 클릭합니다. **네트워크**를 선택한 다음 **시작**을 선택합니다.  
+2.  메뉴에서 **디버그/성능 프로파일러**를 클릭합니다. **네트워크**를 선택한 다음 **시작**을 선택합니다.  
   
 3.  네트워크 도구에서 앱의 HTTP 트래픽 수집을 시작합니다.  
   
@@ -41,7 +41,7 @@ Visual Studio **네트워크** 진단 도구는 [Windows.Web.Http API](/uwp/api/
   
  ![네트워크 창](../profiling/media/network_fullwindow.png "NETWORK_FullWindow")  
   
-## <a name="analyzing-data"></a>데이터 분석  
+## <a name="analyze-data"></a>데이터 분석  
  앱이 실행되는 동안 또는 앱을 닫은 후에도, 요약 보기에 표시된 네트워크 작업 중에서 선택하여 캡처된 HTTP 트래픽을 분석할 수 있습니다.  
   
  **네트워크** 요약 보기에는 앱을 실행하는 동안의 각 네트워크 작업에 대한 데이터가 표시됩니다. 열 머리글을 선택하여 목록을 정렬하거나, **콘텐츠 형식** 필터 보기에 표시할 콘텐츠 형식을 선택합니다.  
@@ -69,7 +69,7 @@ Visual Studio **네트워크** 진단 도구는 [Windows.Web.Http API](/uwp/api/
   
 2.  오류 응답(4xx 또는 5xx)은 빨간색 상태 코드로 **결과** 열에 표시되며 요약 막대에도 강조 표시됩니다. 따라서 응용 프로그램에서 많은 잠재적 요청 중 오류를 쉽게 파악할 수 있습니다.  
   
-3.  예쁜 응답 인쇄 단추(본문 탭 내부)를 사용하면 콘텐츠 가독성을 높여 JSON, XML, HTML, CSS, JavaScript 및 TypeScript 응답 페이로드를 통해 구문 분석하는 데 도움이 될 수 있습니다.  
+3.  응답 자동 서식 지정 단추(본문 탭 내부)를 사용하면 콘텐츠 가독성을 높여 JSON, XML, HTML, CSS, JavaScript 및 TypeScript 응답 페이로드를 통해 구문 분석하는 데 도움이 될 수 있습니다.  
   
 ## <a name="see-also"></a>참고 항목  
  [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)  

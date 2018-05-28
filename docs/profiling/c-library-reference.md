@@ -12,11 +12,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 077ae868561f58596955ce39a9335f845f00f8b5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e48a9b5f601994a7a32aae38bdafbfdce6da22e7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="c-library-reference"></a>C 라이브러리 참조
 이 섹션에는 동시성 시각화 도우미 SDK에 대한 참조 정보가 포함되어 있습니다.  
@@ -24,27 +24,3 @@ ms.lasthandoff: 04/19/2018
 > [!NOTE]
 >  C 언어 표준에는 라이브러리와 같은 구현을 위해 밑줄(`_`) 문자로 시작하는 식별자의 사용이 예약되어 있습니다. 코드에 밑줄로 시작하는 이름을 사용하지 마세요. 해당 이름이 이 규칙을 따르는 코드 요소의 동작은 보장되지 않으며 이후 릴리스에서 변경될 수 있습니다. 이러한 이유로 이 설명서에서는 해당 코드 요소가 생략되었습니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
- [CvCreateDefaultMarkerSeriesOfDefaultProvider 함수](../profiling/cvcreatedefaultmarkerseriesofdefaultprovider-function.md)  
-  
- [CvCreateMarkerSeries 함수](../profiling/cvcreatemarkerseries-function.md)  
-  
- [CvCreateMarkerSeriesWithCodePageA 함수](../profiling/cvcreatemarkerserieswithcodepagea-function.md)  
-  
- [CvEnterSpan 함수](../profiling/cventerspan-function.md)  
-  
- [CvInitProvider 함수](../profiling/cvinitprovider-function.md)  
-  
- [CvIsEnabled 함수](../profiling/cvisenabled-function.md)  
-  
- [CvLeaveSpan 함수](../profiling/cvleavespan-function.md)  
-  
- [CvReleaseMarkerSeries 함수](../profiling/cvreleasemarkerseries-function.md)  
-  
- [CvReleaseProvider 함수](../profiling/cvreleaseprovider-function.md)  
-  
- [CvWriteAlert 함수](../profiling/cvwritealert-function.md)  
-  
- [CvWriteFlag 함수](../profiling/cvwriteflag-function.md)  
-  
- [CvWriteMessage 함수](../profiling/cvwritemessage-function.md)

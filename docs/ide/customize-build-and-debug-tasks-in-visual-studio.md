@@ -16,11 +16,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 859a3687e2dde0d5bedb9f4084bb83b844ca28e1
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3c4b915f632179ff118247e8c046ce980a824ea2
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="customize-build-and-debug-tasks-for-open-folder-development"></a>“폴더 열기” 개발에 대한 빌드 및 디버그 작업 사용자 지정
 
@@ -315,4 +315,4 @@ Visual Studio는 *.vscode*라는 디렉터리에 있는 *settings.json* 파일�
 - [C++의 폴더 열기 프로젝트](/cpp/ide/non-msbuild-projects)
 - [C++의 CMake 프로젝트](/cpp/ide/cmake-tools-for-visual-cpp)
 - [NMAKE 참조](/cpp/build/nmake-reference)
-- [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+- [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md)

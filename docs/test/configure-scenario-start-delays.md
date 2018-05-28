@@ -1,5 +1,5 @@
 ---
-title: Visual Studio에서 부하 테스트에 대한 시나리오 시작 시간 지연 구성
+title: 부하 테스트의 시나리오 시작 시간 지연 구성
 ms.date: 10/19/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -10,11 +10,11 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 519efd059cbac4aca3ea281fe6c4ad042ee1ddea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b098fac29652fdb843301f780e1c7cdc6b32aabc
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="configure-scenario-start-delays-in-load-tests"></a>부하 테스트에서 시나리오 시작 시간 지연 구성
 
@@ -72,11 +72,11 @@ ms.lasthandoff: 04/26/2018
 
      **부하 테스트 편집기**가 나타납니다. 부하 테스트 트리가 표시됩니다.
 
-2. 부하 테스트 트리 **시나리오** 폴더에서 사용할 에이전트를 지정할 시나리오 노드를 선택합니다.
+2. 부하 테스트 트리 **시나리오** 폴더에서 준비 동작을 변경할 시나리오 노드를 선택합니다.
 
 3. **보기** 메뉴에서 **속성 창**을 선택합니다.
 
-     시나리오의 범주와 속성이 속성 창에 표시됩니다.
+     시나리오의 범주와 속성이 **속성** 창에 표시됩니다.
 
      **준비 시간 동안 사용 안 함** 속성에서 **True** 또는 **False**를 선택합니다.
 

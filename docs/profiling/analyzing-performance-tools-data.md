@@ -18,13 +18,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: fe9ddcc2a374661525744e064929ca20daa83c97
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 36b5f5000ab18360d5146603862381e056b37284
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="analyzing-performance-tools-data"></a>성능 도구 데이터 분석
+# <a name="analyze-performance-tools-data"></a>성능 도구 데이터 분석
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구의 성능 보고서를 사용하면 응용 프로그램 성능 문제를 확인하고 분석할 수 있습니다. 이 섹션에서는 성능 데이터를 검사하는 데 사용할 수 있는 성능 보고서 및 뷰에 대한 개요를 제공합니다.  
   
 ## <a name="common-tasks"></a>일반 작업  

@@ -14,11 +14,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b51d2be6e2ec45b55b04c906a9db71843c98f427
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e1b31fde9497438b6abbcbd314462daf4c23f5e7
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="analyze-memory-usage-without-the-visual-studio-debugger"></a>Visual Studio 디버거 없이 메모리 사용 분석
 디버그하지 않고 **메모리 사용량** 도구를 사용하여 다음을 수행할 수 있습니다.  
@@ -35,7 +35,7 @@ ms.lasthandoff: 04/19/2018
   
 1.  Visual Studio에서 C# 유니버설 Windows 프로젝트를 엽니다.  
   
-2.  메뉴 모음에서 **디버그 / 성능 프로파일러...** 를 선택합니다.  
+2.  메뉴 모음에서 **디버그** > **성능 프로파일러**를 선택합니다.  
   
 3.  **메모리 사용량**을 선택한 다음 페이지 맨 아래에서 **시작** 단추를 선택합니다.  
   

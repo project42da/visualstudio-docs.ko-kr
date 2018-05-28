@@ -13,16 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: de4d9fb3d0d90c5832620e8ab8642b491c0b68f1
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 1d1582560611a5c47e3b5e24767d9a2b9c03f5a9
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="instrumentation-method-data-views"></a>계측 방법 데이터 뷰
 이 섹션에서는 계측 방법을 사용하여 생성된 프로파일러 데이터 파일의 뷰와 보고서에 대한 참조 정보를 제공합니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [요약 뷰](../profiling/summary-view-instrumentation-data.md)  
  가장 많은 시간을 소비한 함수와 가장 많은 개별 작업을 수행한 함수를 나열합니다.  
   

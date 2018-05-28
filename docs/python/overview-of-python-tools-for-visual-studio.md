@@ -11,11 +11,11 @@ manager: douge
 ms.workload:
 - python
 - data-science
-ms.openlocfilehash: e86f8f856963a979b8e64ba0e613cdb73685a9a0
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: 587517bdeabf9755e2678b03206059ef5b403255
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="working-with-python-in-visual-studio-on-windows"></a>Visual Studio에서 Python 작업(Windows)
 
@@ -57,7 +57,7 @@ Visual Studio에서는 구문 색 지정, 모든 코드 및 라이브러리에 �
 - Docs: [코드 서식 지정](formatting-python-code.md)
 - Docs: [리팩터링](refactoring-python-code.md)
 - Docs: [Lint](linting-python-code.md)
-- 일반 Visual Studio 기능 docs: [코드 및 텍스트 편집기에서 코드 작성](../ide/writing-code-in-the-code-and-text-editor.md)
+- 일반 Visual Studio 기능 문서: [코드 편집기의 기능](../ide/writing-code-in-the-code-and-text-editor.md)
 
 ## <a name="interactive-window"></a>대화형 창
 

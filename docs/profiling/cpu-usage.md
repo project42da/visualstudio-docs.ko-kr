@@ -10,13 +10,13 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 267d0a55ae648c68ed4228b3ad4a206bad1f5148
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 70ecd6517878800a6ad43221556c367137a64a71
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="analyze-cpu-usage"></a>CPU 사용 분석
+# <a name="analyze-cpu-usage"></a>CPU 사용량 분석
 앱 성능 문제를 검토해야 하는 경우 앱에서 CPU를 사용하는 방식을 파악하는 것부터 시작하는 것이 좋습니다. **CPU 사용량** 도구는 CPU에서 Visual C++, Visual C#/Visual Basic 및 JavaScript 코드 실행에 시간을 소모하는 상황을 보여 줍니다. Visual Studio 2015 업데이트 1부터 디버거를 종료하지 않고 CPU 사용의 기능별 분석 결과를 볼 수 있습니다. 디버그하는 동안 CPU 프로파일링을 켜고 끌 수 있으며, 실행이 중지되면(예: 중단점에서) 결과를 볼 수 있습니다.  
   
 진단 세션을 실행 및 관리하기 위한 다양한 옵션이 있습니다. 예를 들어 로컬이나 원격 컴퓨터에서 또는 시뮬레이터나 에뮬레이터에서 **CPU 사용량** 도구를 실행할 수 있습니다. 실행 중인 앱에 연결되고 Visual Studio에서 열려 있는 프로젝트의 성능을 분석하거나 Microsoft Store에서 설치한 앱을 시작할 수 있습니다. 자세한 내용은 [디버거를 사용하거나 사용하지 않고 프로파일링 도구 실행](../profiling/running-profiling-tools-with-or-without-the-debugger.md)을 참조하세요.
@@ -40,7 +40,7 @@ ms.lasthandoff: 04/19/2018
   
     -   Windows Phone 앱의 경우 **장치** 에서 직접 데이터를 수집하면 가장 정확한 데이터가 제공됩니다.  
   
-2.  **디버그** 메뉴에서 **성능 프로파일러...** 를 선택합니다.  
+2.  **디버그** 메뉴에서 **성능 프로파일러**를 선택합니다.  
   
 3.  **CPU 사용량** 을 선택한 다음 **시작**을 선택합니다.  
   

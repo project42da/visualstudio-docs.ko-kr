@@ -10,16 +10,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: b03973767088951d62620cfb5846dda6fa7a5f82
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 4e94932749523cea906cd60442971b93160b6c13
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/17/2018
 ---
-# <a name="collecting-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>프로파일러 명령줄을 사용하여 .NET Framework 서비스에서 메모리 데이터 수집
+# <a name="collect-memory-data-from-net-framework-services-by-using-the-profiler-command-line"></a>프로파일러 명령줄을 사용하여 .NET Framework 서비스에서 메모리 데이터 수집
 이 섹션에서는 명령줄 도구에서 샘플링 방법을 사용하여 [!INCLUDE[dnprdnshort](../code-quality/includes/dnprdnshort_md.md)] 서비스에 대한 메모리 할당 및 개체 수명 데이터를 수집하기 위한 절차 및 옵션을 설명합니다.  
   
-## <a name="common-tasks"></a>일반 작업  
+## <a name="common-tasks"></a>일반 작업
   
 |작업|관련 내용|  
 |----------|---------------------|  
@@ -27,9 +27,9 @@ ms.lasthandoff: 05/11/2018
 |**.NET 서비스 계측 및 .NET 메모리 데이터 수집**|-   [방법: .NET Framework 서비스 계측 및 메모리 데이터 수집](../profiling/how-to-instrument-a-dotnet-framework-service-and-collect-memory-data-by-using-the-profiler-command-line.md)|  
 |**계층 상호 작용 데이터 추가**|-   [계층 상호 작용 데이터 수집](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 작업
   
-### <a name="profiling-services"></a>서비스 프로파일링  
+### <a name="profile-services"></a>서비스 프로파일링  
   
 |작업|관련 내용|  
 |----------|---------------------|  
@@ -37,14 +37,14 @@ ms.lasthandoff: 05/11/2018
 |**계측 방법을 사용하여 프로파일링**|-   [계측을 사용하여 자세한 타이밍 데이터 수집](../profiling/collecting-detailed-timing-data-for-services-by-using-the-instrumentation-method.md)|  
 |**리소스 경합 및 스레드 작업 프로파일링**|-   [동시성 데이터 수집](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
-### <a name="profiling-net-framework-memory-data"></a>.NET Framework 메모리 데이터 프로파일링  
+### <a name="profile-net-framework-memory-data"></a>.NET Framework 메모리 데이터 프로파일링  
   
 |작업|관련 내용|  
 |----------|---------------------|  
 |**독립 실행형(클라이언트) 응용 프로그램 프로파일링**|-   [.NET Framework 메모리 데이터 수집](../profiling/collecting-dotnet-framework-memory-data-for-stand-alone-applications.md)|  
 |**ASP.NET 웹 응용 프로그램 프로파일링**|-   [메모리 데이터 수집](../profiling/collecting-memory-data-from-an-aspnet-web-application.md)|  
   
-### <a name="analyzing-net-memory-data-views-and-reports"></a>.NET 메모리 데이터 뷰 및 보고서 분석  
+### <a name="analyze-net-memory-data-views-and-reports"></a>.NET 메모리 데이터 뷰 및 보고서 분석  
  [.NET 메모리 데이터 뷰](../profiling/dotnet-memory-data-views.md)  
   
 ## <a name="reference"></a>참조  

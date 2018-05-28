@@ -17,11 +17,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 34920cfd91c236df4fc88d671d3cac48ebf02252
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 973c65927e3732cff44ab8eecb684f3c75af8614
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="callercallee-view"></a>호출자/호출 수신자 뷰
 호출자/호출 수신자 뷰는 선택한 함수와 해당 부모 및 자식 함수에 대한 프로파일링 정보를 표시합니다. 호출자/호출 수신자 뷰에는 다음과 같은 세 개의 표가 포함되어 있습니다.  

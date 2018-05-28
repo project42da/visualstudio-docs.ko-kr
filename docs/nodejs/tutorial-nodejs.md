@@ -13,11 +13,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: 259524aa8f4bb20097f5f5504c890ee7f4cc3b78
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 1d5cbc7287c77e08bb2ddabbf31615c4b2d0075c
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-express-app-in-visual-studio"></a>자습서: Visual Studio에서 Node.js 및 Express 앱 만들기
 Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자습서에서는 Node.js 웹 응용 프로그램을 만들고, 일부 코드를 추가하며, IDE의 일부 기능을 살펴보고, 앱을 실행합니다. 아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
@@ -32,7 +32,7 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Node.js 개발 워크로드와 Visual Studio가 설치되어 있어야 합니다.
+* Node.js 개발 워크로드와 Visual Studio 2017이 설치되어 있어야 합니다.
 
     아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
 
@@ -95,6 +95,8 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
       a: img(id='myImage' height='200' width='200' src='')
     ```
 
+    앞의 코드는 제목 및 환영 메시지가 있는 HTML 페이지를 동적으로 생성하기 위해 변경 내용을 추가합니다. 페이지에는 단추를 누를 때마다 변경되는 이미지를 표시하는 코드도 포함됩니다.
+
 1. Routes 폴더에서 *index.js*를 엽니다.
 
 1. `router.get` 호출 앞에 다음 코드를 추가합니다.
@@ -110,6 +112,8 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
     }
     ````
 
+    이 코드는 동적으로 생성된 HTML 페이지에 전달할 데이터 개체를 만듭니다.
+
 1. `router.get` 함수 호출을 다음 코드로 바꿉니다.
 
     ```js
@@ -117,14 +121,16 @@ Node.js 및 Express를 사용하여 Visual Studio를 개발하기 위한 이 자
         res.render('index', { title: 'Express', "data" });
     });
     ```
+    
+    앞의 코드는 Express 라우터 개체를 사용하여 현재 페이지를 설정하고 페이지를 렌더링하여 제목 및 데이터 개체를 페이지에 전달합니다.
 
-    `res.render`를 포함하는 코드 줄에 오류가 있습니다. 이 오류를 해결해야만 앱을 실행할 수 있습니다. 다음 섹션에서 이 오류를 해결합니다.
+    Visual Studio의 여러 기능을 보여주기 위해 `res.render`가 포함된 코드 줄에 오류를 포함했습니다. 앱을 실행하려면 먼저 오류를 수정해야 합니다. 다음 섹션에서 이 오류를 해결합니다.
 
 ## <a name="use-intellisense"></a>IntelliSense 사용
 
 1. *index.js*에서 `res.render`을 포함한 코드 줄으로 이동합니다.
 
-1. `data` 문자열 다음에 `: get`을 입력하면 IntelliSense가 `getData` 함수를 표시합니다. `getData`를 선택합니다.
+1. `data` 문자열 뒤에 커서를 놓고 `: get`을 입력하면 IntelliSense가 `getData` 함수를 표시합니다. `getData`를 선택합니다.
 
     ![IntelliSense 사용](../nodejs/media/tutorial-nodejs-intellisense.png)
 

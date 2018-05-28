@@ -18,11 +18,11 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4cdc89faaebff31981e7cece07c8530600f32454
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: c4e4cf8e21f3f053783b1f7b70dcc51f2fd4ef2a
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="design-and-view-classes-and-types-with-class-designer"></a>Class Designer를 사용하여 클래스와 형식 디자인 및 보기
 
@@ -58,5 +58,5 @@ Visual Studio에서 **클래스 디자이너**를 사용하여 코드의 클래�
 
 ## <a name="see-also"></a>참고 항목
 
-- [편집기에서 코드 작성](../writing-code-in-the-code-and-text-editor.md)
+- [코드 편집기의 기능](../writing-code-in-the-code-and-text-editor.md)
 - [솔루션 전체의 종속성 매핑](../../modeling/map-dependencies-across-your-solutions.md)

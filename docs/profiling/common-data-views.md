@@ -13,16 +13,16 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 32039843f3aef60f6e7087b0d26f8b5e1efd1df8
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 21ccf237bec0b3ab7bf3ad96f6f4d24df240db0e
+ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/17/2018
 ---
 # <a name="common-data-views"></a>공통 데이터 뷰
 이 섹션에는 모든 프로파일링 방법에 공통적인 프로파일러 데이터 파일의 뷰와 보고서에 대한 참조 정보가 포함되어 있습니다.  
   
-## <a name="in-this-section"></a>섹션 내용  
+## <a name="in-this-section"></a>단원 내용  
  [요약 뷰](../profiling/summary-view.md)  
  요약 뷰 및 보고서를 설명합니다. 데이터 열은 프로파일링 방법에 따라 달라집니다.  
   

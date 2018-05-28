@@ -1,6 +1,6 @@
 ---
 title: 줄 이동
-ms.date: 11/04/2016
+ms.date: 05/18/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: reference
@@ -15,22 +15,25 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: af3db0e322a89188d2f767652f0bc30b79619d11
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bfbe70232537556bee826653d533bab8728e3d1c
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="go-to-line-dialog-box"></a>행 이동 대화 상자
 
-이 대화 상자를 사용하면 활성 문서의 특정 줄로 이동할 수 있습니다. 이 대화 상자에 액세스하려면 편집할 문서를 연 후 **편집** 메뉴에서 **이동**을 선택합니다.
+**줄 이동** 대화 상자를 사용하면 활성 문서의 특정 줄로 이동할 수 있습니다. 이 대화 상자에 액세스하려면 편집할 문서를 열고 **편집** > **이동** > **줄 이동**을 선택하거나 **Ctrl**+**G**를 누릅니다.
 
-## <a name="line-number-1---n"></a>줄 번호(1 - `n`)
+![Visual Studio의 줄 이동 대화 상자](media/go-to-line-dialog-box.png)
 
-이동할 활성 문서의 줄 번호를 입력할 수 있습니다. 입력한 숫자는 1과 `n`(현재 문서의 줄 수) 사이여야 합니다.
+## <a name="line-number-1---n"></a>줄 번호(1 - \<)
+
+**줄 번호(1 - \<n>)** 상자에 이동할 활성 문서의 줄 번호를 입력합니다. 입력한 번호는 1과 현재 문서의 마지막 줄 번호 사이여야 합니다.
 
 ## <a name="see-also"></a>참고 항목
 
+- [이동 명령을 사용하여 코드 찾기](../../ide/go-to.md)
 - [코드에 책갈피 설정](../../ide/setting-bookmarks-in-code.md)
 - [텍스트 찾기 및 바꾸기](../../ide/finding-and-replacing-text.md)
-- [코드 작성](../../ide/writing-code-in-the-code-and-text-editor.md)
+- [코드 편집기의 기능](../../ide/writing-code-in-the-code-and-text-editor.md)

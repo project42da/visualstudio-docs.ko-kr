@@ -13,11 +13,11 @@ dev_langs:
 - JavaScript
 ms.workload:
 - nodejs
-ms.openlocfilehash: bf9e3d470c18651d769b94805ea4a17bbf531884
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 9958711ea64daee9876d3b16330685786b6d5825
+ms.sourcegitcommit: b400528a83bea06d208d95c77282631ae4a93091
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 05/23/2018
 ---
 # <a name="tutorial-create-a-nodejs-and-react-app-in-visual-studio"></a>자습서: Visual Studio에서 Node.js 및 React 앱 만들기
 Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSense 및 Node.js를 지원하는 다른 기본 제공 기능을 활용할 수 있습니다. Visual Studio용 이 자습서에서는 Visual Studio 템플릿에서 Node.js 웹 응용 프로그램 프로젝트를 만듭니다. 그런 다음, React를 사용하여 간단한 앱을 만듭니다.
@@ -32,7 +32,7 @@ Visual Studio를 사용하면 쉽게 Node.js 프로젝트를 만들고 IntelliSe
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Node.js 개발 워크로드와 Visual Studio가 설치되어 있어야 합니다.
+* Node.js 개발 워크로드와 Visual Studio 2017이 설치되어 있어야 합니다.
 
     아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
 

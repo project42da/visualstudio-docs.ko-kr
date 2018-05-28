@@ -16,11 +16,11 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: df1982f0f5f1739d514dcedd32291bd765a5680b
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 86aada9d28300a2fdb2cd20072afa383c6f3f9e1
+ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/22/2018
 ---
 # <a name="vsperfcmd"></a>VSPerfCmd
 **VSPerfCmd.exe** 도구는 성능 데이터 수집을 시작하고 중지하는 데 사용됩니다. 이 도구는 다음 구문을 사용합니다.  
@@ -54,7 +54,7 @@ VSPerfCmd [/U] [/options]
 |[ThreadOn 및 ThreadOff](../profiling/threadon-and-threadoff.md) **:** *tid*|지정된 스레드에 대한 프로파일링을 일시 중지합니다. 계측 방법으로 프로파일링하는 경우에만 **ThreadOff**를 사용합니다.|  
 |[Mark](../profiling/mark.md) **:** *MarkNum*[**,***MarkText***]**|선택적 텍스트와 함께 표시를 프로파일링 데이터 파일에 삽입합니다.|  
   
-## <a name="sampling-method-options"></a>샘플링 방법 옵션  
+## <a name="sample-method-options"></a>샘플 메서드 옵션  
  다음 옵션은 샘플링 프로파일링 방법을 사용하는 경우에만 사용할 수 있습니다.  
   
 |옵션|설명|  
@@ -66,7 +66,7 @@ VSPerfCmd [/U] [/options]
 |[Detach](../profiling/detach.md)[**:***PID*[,*PID*]]|지정된 프로세스의 프로파일링을 중지합니다. 프로세스는 프로세스 ID 또는 프로세스 이름으로 식별할 수 있습니다. 프로세스가 지정되지 않은 경우 모든 프로세스의 프로파일링이 중지됩니다.|  
 |[GC](../profiling/gc-vsperfcmd.md)[**:**{**Allocation**`&#124;`**Lifetime**}]|.NET 메모리 할당 및 개체 수명 데이터를 수집합니다. **VSPerfCmdLaunch** 옵션과 함께 사용하는 것만 가능합니다.|  
   
-### <a name="sampling-interval-options"></a>샘플링 간격 옵션  
+### <a name="sample-interval-options"></a>샘플 간격 옵션  
  다음 옵션은 샘플링 간격의 형식과 기간을 지정합니다. 기본값은 **Timer**입니다. **Counter** 옵션을 사용하여 CPU 카운터를 간격으로 지정할 수도 있습니다. 이러한 옵션은 프로파일링 세션의 첫 번째 **Attach** 또는 **Launch**와 함께 사용하는 경우에만 지정할 수 있습니다.  
   
 |옵션|설명|  
