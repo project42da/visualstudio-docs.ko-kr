@@ -9,17 +9,18 @@ description: Visual Studio 구독 포털에서 사용할 수 있는 이점의 �
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: cb6e33e442a5b4d63f4c1950df382da9a439643f
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 1fc8c77e71f32e2bb559426b3447d0bbc293e785
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335933"
 ---
 # <a name="using-the-subscriber-portal---myspanspanvisualstudiospanspancom"></a>구독자 포털 사용 - my.<span></span>visualstudio<span></span>.com
 
 Visual Studio 구독 포털인 [https://my.visualstudio.com](https://my.visualstudio.com?wt.mc_id=o~msft~docs)은 Visual Studio 구독을 통해 제공되는 전체 혜택을 활용할 수 있는 일체형 리소스입니다. 
 
-포털을 사용하려면 구독에 연결된 ID로 로그인해야 합니다.  이 ID는 Microsoft 계정(MSA) 또는 회사 또는 학교와 같은 조직에서 제공하는 전자 메일 주소일 수 있습니다.  [로그인](/visualstudio/subscriptions/signing-in)에 대해 알아봅니다.
+포털을 사용하려면 구독에 연결된 ID로 로그인해야 합니다.  이 ID는 Microsoft 계정(MSA) 또는 회사 또는 학교와 같은 조직에서 제공하는 전자 메일 주소일 수 있습니다.  [로그인](signing-in.md)에 대해 알아봅니다.
 
 포털은 6개 페이지로 구성됩니다.  각 페이지에서는 구독에 포함된 여러 제품 또는 서비스에 액세스할 수 있습니다.  6개의 페이지는 혜택, 다운로드, 제품 키, 구독, 지원 및 Marketplace입니다.  
 
