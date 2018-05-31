@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3ef57d2fb81ef88d15c3ad0fa3ebfc6f520fc674
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: b2e1ca6816a0c2d65d00e29c0e7c350f80aa8f50
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335855"
 ---
 # <a name="command-line-profiling-of-stand-alone-applications"></a>독립 실행형 응용 프로그램의 명령줄 프로파일링
 이 섹션에서는 명령줄에서 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구를 사용하여 독립 실행형(클라이언트) 응용 프로그램의 성능 데이터를 수집하기 위한 절차 및 옵션을 설명합니다.  
@@ -32,6 +33,7 @@ ms.lasthandoff: 05/11/2018
 |**동시성 데이터 수집:** 동시성 방법을 사용하여 CPU 사용률, 스레드 경합, 스레드 마이그레이션, 동기화 지연, 겹친 I/O 영역 및 기타 시스템 이벤트를 보여 주는 리소스 경합 데이터 및 스레드 작업 데이터를 수집할 수 있습니다.|-   [동시성 데이터 수집](../profiling/collecting-concurrency-data-for-stand-alone-applications.md)|  
 |**계층 상호 작용 데이터 추가:** 응용 프로그램에서 Microsoft [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 데이터베이스에 실행하는 동기 ADO.NET 호출에 대한 성능 데이터를 추가할 수 있습니다. 프로파일링 실행에 계층 상호 작용 데이터를 추가하려면 명령줄 프로파일링 도구를 사용해서 특정 절차를 수행해야 합니다.|-   [계층 상호 작용 데이터 수집](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
 |**사용해 보기:** 단계별 절차에 따라 샘플링 또는 계측 방법을 사용하여 샘플 클라이언트 응용 프로그램을 프로파일링합니다.|-   [연습: 샘플링을 사용하여 명령줄 프로파일링](../profiling/walkthrough-command-line-profiling-using-sampling.md)<br />-   [연습: 계측을 사용하여 명령줄 프로파일링](../profiling/walkthrough-command-line-profiling-using-instrumentation.md)|  
+
   
 ## <a name="related-tasks"></a>관련 작업  
   

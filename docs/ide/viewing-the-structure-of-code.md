@@ -1,6 +1,6 @@
 ---
-title: Visual Studio에서 코드 구조 보기
-ms.date: 11/04/2016
+title: 클래스 뷰, 호출 계층 구조, 개체 브라우저 및 코드 정의 창을 사용하여 코드 구조 보기
+ms.date: 05/18/2018
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
@@ -13,7 +13,7 @@ f1_keywords:
 - vs.componentpicker
 - vs.callbrowser
 helpviewer_keywords:
-- document outline window.
+- document outline window
 - Visual Studio, object browser
 - call hierarchy
 - Visual Studio, document outline window
@@ -27,26 +27,24 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f66d9972202005d1aa1ff102f105d99a82825713
-ms.sourcegitcommit: a8e01952be5a539104e2c599e9b8945322118055
+ms.openlocfilehash: 9a271dfaba8fe533fee84799a0585a29d97e9c70
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/03/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336141"
 ---
-# <a name="view-the-structure-of-code"></a>코드 구조 보기
+# <a name="view-the-structure-of-code-using-different-tool-windows"></a>다른 도구 창을 사용하여 코드 구조 보기
 
-Visual Studio 프로젝트의 개체 및 멤버, .NET Framework 구성 요소, COM 구성 요소, DLL(동적 연결 라이브러리) 및 TLB(형식 라이브러리)를 검사할 수 있습니다.
+**클래스 뷰**, **호출 계층 구조**, **개체 브라우저** 및 **코드 정의**(C++에만 해당)를 포함하여 다양한 도구 창을 사용하여 Visual Studio에서 클래스 및 해당 멤버를 검사할 수 있습니다. 이러한 도구 창에서는 Visual Studio 프로젝트의 코드, .NET Framework 구성 요소, COM 구성 요소, DLL(동적 연결 라이브러리) 및 TLB(형식 라이브러리)를 검사할 수 있습니다.
 
-또한 **솔루션 탐색기**를 사용하면 이전에 나열한 여러 도구 창 간에 전환하지 않고도 프로젝트의 형식 및 멤버를 찾아보고 기호를 검색하고 메서드의 호출 계층 구조를 확인하고 기호 참조를 찾는 등의 작업을 수행할 수 있습니다.
+또한 **솔루션 탐색기**를 사용하면 여러 도구 창 간에 전환하지 않고도 프로젝트의 형식 및 멤버를 찾아보고 기호를 검색하고 메서드의 호출 계층 구조를 확인하고 기호 참조를 찾는 등의 작업을 수행할 수 있습니다.
 
-Visual Studio Enterprise가 있는 경우 코드 맵을 사용하여 코드의 구조와 전체 솔루션에서의 해당 종속성을 시각화하고 관심이 있는 코드 부분으로 드릴다운할 수 있습니다. 자세한 내용은 [솔루션 간 종속성 매핑](../modeling/map-dependencies-across-your-solutions.md)을 참조하세요.
-
-> [!NOTE]
-> 사용 중인 Visual Studio 버전 및 설정이 IDE의 기능에 영향을 줄 수 있습니다. 이 항목에 설명된 내용과 다를 수 있습니다.
+Visual Studio Enterprise Edition이 있는 경우 ‘코드 맵’을 사용하여 코드의 구조와 전체 솔루션에서의 해당 종속성을 시각화할 수 있습니다. 자세한 내용은 [코드 맵으로 종속성 매핑](../modeling/map-dependencies-across-your-solutions.md)을 참조하세요.
 
 ## <a name="class-view-visual-basic-c-c"></a>클래스 뷰(Visual Basic, C#, C++)
 
-**클래스 뷰**는 **솔루션 탐색기**의 일부로 표시되며, 별도의 창으로 표시됩니다. **클래스 뷰** 창에는 응용 프로그램의 요소가 표시됩니다. 위쪽 창에는 네임스페이스, 형식, 인터페이스, 열거 및 클래스가 표시되고, 아래쪽 창에는 위쪽 창에서 선택한 형식에 속하는 멤버가 표시됩니다. 이 창을 사용하여 소스 코드(또는 요소가 솔루션의 외부에서 정의된 경우 **개체 브라우저**)의 멤버 정의로 이동할 수 있습니다.
+**클래스 뷰**는 **솔루션 탐색기**의 일부로 표시되며 별도의 창으로 표시됩니다. **클래스 뷰**에는 응용 프로그램의 요소가 표시됩니다. 위쪽 창에는 네임스페이스, 형식, 인터페이스, 열거 및 클래스가 표시되고, 아래쪽 창에는 위쪽 창에서 선택한 형식에 속하는 멤버가 표시됩니다. 이 창을 사용하여 소스 코드(또는 요소가 솔루션의 외부에서 정의된 경우 **개체 브라우저**)의 멤버 정의로 이동할 수 있습니다.
 
 **클래스 뷰**에서 해당 요소를 보기 위해 프로젝트를 컴파일할 필요가 없습니다. 프로젝트에서 코드를 수정하면 창이 새로 고쳐집니다.
 
@@ -103,11 +101,11 @@ Visual Studio Enterprise가 있는 경우 코드 맵을 사용하여 코드의 �
 
 ## <a name="call-hierarchy-window-visual-basic-c-c"></a>호출 계층 구조 창(Visual Basic, C#, C++)
 
-**호출 계층 구조** 창은 지정된 메서드(또는 속성 또는 생성자)가 호출되는 위치를 보여 주고 해당 메서드에서 호출된 메서드를 나열합니다. 지정된 범위의 메서드 중 호출자/호출 수신자 관계를 보여 주는 호출 그래프의 여러 수준을 볼 수 있습니다.
+**호출 계층 구조** 창에는 지정된 메서드 또는 속성이 호출되는 위치가 표시됩니다. 해당 메서드에서 호출되는 메서드도 나열합니다. 지정된 범위의 메서드 중 호출자-호출 수신자 관계를 보여주는 호출 그래프의 여러 수준을 볼 수 있습니다.
 
-메서드(또는 속성 또는 생성자)를 선택한 후 바로 가기 메뉴에서 **클래스 계층 구조 보기**를 선택하여 **호출 계층 구조** 창을 표시할 수 있습니다. 디스플레이는 다음 그림과 유사합니다.
+편집기에서 메서드(또는 속성 또는 생성자)를 선택한 후 바로 가기 메뉴에서 **호출 계층 구조 보기**를 선택하여 **호출 계층 구조** 창을 표시할 수 있습니다. 다음 이미지와 같이 표시됩니다.
 
-![여러 노드가 열린 호출 계층 구조](../ide/media/multiplenodes.png "MultipleNodes")
+![Visual Studio의 호출 계층 구조 창](../ide/media/multiplenodes.png)
 
 도구 모음에서 드롭다운 목록을 사용하여 솔루션, 현재 프로젝트 또는 현재 문서와 같이 계층 구조의 범위를 지정할 수 있습니다.
 
@@ -123,7 +121,7 @@ Visual Studio Enterprise가 있는 경우 코드 맵을 사용하여 코드의 �
 |**루트 제거**|트리 뷰 창에서 선택한 루트 노드를 제거합니다.|
 |**정의로 이동**|메서드의 원래 정의로 이동합니다.|
 |**모든 참조 찾기**|선택한 메서드에 대한 모든 참조를 프로젝트에서 찾습니다.|
-|**복사**|선택한 노드(하지만 해당 하위 노드는 아님)를 복사합니다.|
+|**복사**|선택한 노드(해당 하위 노드 제외)를 복사합니다.|
 |**새로 고침**|정보를 새로 고칩니다.|
 
 ## <a name="BKMK_ObjectBrowser"></a> 개체 브라우저
@@ -214,9 +212,9 @@ Visual Studio Enterprise가 있는 경우 코드 맵을 사용하여 코드의 �
 |**정의 편집**|코드 창에서 정의로 삽입 지점을 이동합니다.|
 |**인코딩 선택**|파일에 대한 인코딩을 설정할 수 있도록 **인코딩** 창을 엽니다.|
 
-### <a name="document-outline-window"></a>문서 개요 창
+## <a name="document-outline-window"></a>문서 개요 창
 
-XAML 페이지용 디자이너 또는 Windows Forms 디자이너와 같은 디자이너 뷰와 함께 또는 HTML 페이지와 함께 **문서 개요** 창을 사용할 수 있습니다. 이 창은 폼 또는 페이지의 논리 구조를 확인하고 깊이 포함되거나 숨겨진 컨트롤을 찾을 수 있도록 트리 뷰에 요소를 표시합니다.
+XAML 페이지용 디자이너 또는 Windows Forms 디자이너와 같은 디자이너 뷰와 함께 또는 HTML 페이지와 함께 **문서 개요** 창을 사용할 수 있습니다. 이 창은 양식 또는 페이지의 논리 구조를 확인하고 깊이 포함되거나 숨겨진 컨트롤을 찾을 수 있도록 트리 뷰에 요소를 표시합니다.
 
 ## <a name="see-also"></a>참고 항목
 
