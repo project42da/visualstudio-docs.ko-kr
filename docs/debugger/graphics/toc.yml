@@ -1,0 +1,98 @@
+- name: Visual Studio 그래픽 진단
+  href: visual-studio-graphics-diagnostics.md
+- name: Visual Studio 그래픽 진단 개요
+  href: overview-of-visual-studio-graphics-diagnostics.md
+- name: Visual Studio 그래픽 진단 시작
+  href: getting-started-with-visual-studio-graphics-diagnostics.md
+- name: 그래픽 정보 캡처
+  href: capturing-graphics-information.md
+- name: 그래픽 로그 문서
+  href: graphics-log-document.md
+- name: 그래픽 프레임 분석
+  href: graphics-frame-analysis.md
+  items:
+    - name: 1x1 뷰포트 크기 변형
+      href: 1x1-viewport-size-variant.md
+    - name: 0x-2x-4x MSAA 변형
+      href: 0x-2x-4x-msaa-variants.md
+    - name: 'Point, Bilinear, Trilinear 및 Anisotropic 텍스처 필터링 변형'
+      href: point-bilinear-trilinear-and-anisotropic-texture-filtering-variants.md
+    - name: 16bpp 렌더링 대상 형식 변형
+      href: 16bpp-render-target-format-variant.md
+    - name: MIP 맵 생성 변형
+      href: mip-map-generation-variant.md
+    - name: 절반/분기 텍스처 크기 변형
+      href: half-quarter-texture-dimensions-variant.md
+    - name: BC 텍스처 압축 변형
+      href: bc-texture-compression-variant.md
+- name: 이벤트 목록
+  href: graphics-event-list.md
+- name: 그래픽 상태
+  href: graphics-state.md
+- name: 파이프라인 단계
+  href: graphics-pipeline-stages.md
+- name: 이벤트 호출 스택
+  href: graphics-event-call-stack.md
+- name: 픽셀 기록
+  href: graphics-pixel-history.md
+- name: 개체 테이블
+  href: graphics-object-table.md
+- name: API 및 메모리 통계
+  href: graphics-api-and-memory-statistics.md
+- name: 프레임 유효성 검사
+  href: graphics-frame-validation.md
+- name: HLSL 셰이더 디버거
+  href: hlsl-shader-debugger.md
+- name: 명령줄 캡처 도구
+  href: command-line-capture-tool.md
+- name: 그래픽 진단 예제
+  href: graphics-diagnostics-examples.md
+  items:
+    - name: '연습: 그래픽 정보 캡처'
+      href: walkthrough-capturing-graphics-information.md
+    - name: '연습: 프로그래밍 방식으로 그래픽 정보 캡처'
+      href: walkthrough-capturing-graphics-information-programmatically.md
+    - name: '연습: 장치 상태로 인해 누락된 개체'
+      href: walkthrough-missing-objects-due-to-device-state.md
+    - name: '연습: 꼭짓점 음영으로 인해 누락된 개체'
+      href: walkthrough-missing-objects-due-to-vertex-shading.md
+    - name: '연습: 잘못 구성된 파이프라인으로 인해 누락된 개체'
+      href: walkthrough-missing-objects-due-to-misconfigured-pipeline.md
+    - name: '연습: 음영으로 인한 렌더링 오류 디버깅'
+      href: walkthrough-debugging-rendering-errors-due-to-shading.md
+    - name: '연습: 그래픽 진단을 사용하여 계산 셰이더 디버깅'
+      href: walkthrough-using-graphics-diagnostics-to-debug-a-compute-shader.md
+    - name: '방법: 그래픽 진단 재생 컴퓨터 변경'
+      href: how-to-change-the-graphics-diagnostics-playback-machine.md
+- name: 참조(프로그램 방식 캡처)
+  href: reference-programmatic-capture.md
+  items:
+    - name: VsgDbg 클래스
+      href: vsgdbg-class.md
+      items:
+        - name: 'VsgDbg::VsgDbg(생성자)'
+          href: vsgdbg-vsgdbg-constructor.md
+        - name: 'VsgDbg::~VsgDbg(소멸자)'
+          href: vsgdbg-tilde-vsgdbg-destructor.md
+        - name: AddMessage
+          href: addmessage.md
+        - name: BeginCapture
+          href: begincapture.md
+        - name: CaptureCurrentFrame
+          href: capturecurrentframe.md
+        - name: 복사(프로그램 방식 캡처)
+          href: copy-programmatic-capture.md
+        - name: EndCapture
+          href: endcapture.md
+        - name: Init
+          href: init.md
+        - name: ToggleHUD
+          href: togglehud.md
+        - name: UnInit
+          href: uninit.md
+    - name: DONT_SAVE_VSGLOG_TO_TEMP
+      href: dont-save-vsglog-to-temp.md
+    - name: VSG_DEFAULT_RUN_FILENAME
+      href: vsg-default-run-filename.md
+    - name: VSG_NODEFAULT_INSTANCE
+      href: vsg-nodefault-instance.md
