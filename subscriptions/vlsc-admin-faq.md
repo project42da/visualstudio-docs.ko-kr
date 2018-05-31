@@ -9,11 +9,12 @@ description: 볼륨 라이선스 서비스 센터 관리자 마이그레이션 F
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 014564880dcc7587a1f94e3815d6f36edb36cee3
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: e4dda4264ae48903e98166346f9e2569ab1e4da0
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336128"
 ---
 # <a name="visual-studio-subscriptions-administration-migration"></a>Visual Studio 구독 관리 마이그레이션
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 04/06/2018
 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)에 로그인하여 **구독** > **Visual Studio 구독** 경로로 이동합니다. PCN은 **계약/공용 고객 번호 결과** 아래에 있습니다. 이 [도움말 문서](/find-pcn/)에서 PCN 찾기에 대한 단계별 지침을 가져옵니다. 
 
 ### <a name="how-do-i-find-out-who-my-primary-or-notices-contact-is"></a>기본 또는 알림 연락처 담당자는 어떻게 찾습니까?
-[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)에 로그인하여 **라이선스 > 관계 요약** 경로로 이동해 **라이선스 ID > 연락처**를 선택합니다. 이 [도움말 문서](/find-primary-contact/)에서 기본 또는 알림 연락처 담당자를 찾는 방법에 대한 단계별 지침을 가져옵니다. 
+[VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)에 로그인하여 **라이선스 > 관계 요약** 경로로 이동해 **라이선스 ID > 연락처**를 선택합니다. 이 [도움말 문서](find-primary-contact.md)에서 기본 또는 알림 연락처 담당자를 찾는 방법에 대한 단계별 지침을 가져옵니다. 
 
 ### <a name="what-if-my-primary-or-notices-contact-is-gone-no-longer-with-the-company-or-not-available-to-complete-onboarding"></a>기본 또는 알림 연락처 담당자가 사라져 더 이상 회사에 근무하지 않거나 온보딩을 완료할 수 없을 경우는 어떻게 합니까?
 [지원에 문의](https://www.visualstudio.com/subscriptions/support/#talktous)하고 구독 관리를 위해 VLSC에서 사용한 이메일을 제공해야 합니다. 확인되면 온보딩 프로세스에 도움이 되는 지원이 가능합니다. 
@@ -106,8 +107,8 @@ ms.lasthandoff: 04/06/2018
 
 - Visual Studio 구독 및 관리 [지원](https://www.visualstudio.com/subscriptions/support/) 
 
-- [PCN 찾는 방법](/find-pcn/)
+- [PCN 찾는 방법](find-pcn.md)
 
-- [기본 또는 알림 연락처 찾는 방법](/find-primary-contact/) 
+- [기본 또는 알림 연락처 찾는 방법](find-primary-contact.md) 
 
 - 관리자 관리 및 조직 온보딩을 위한 [비디오](https://www.youtube.com/watch?v=ZmnywYGSFMg&list=PLReL099Y5nRfDyvvwzNDBaZe7qTxmuM2T&index=1&t=0s) 

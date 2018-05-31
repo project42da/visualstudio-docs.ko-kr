@@ -12,21 +12,22 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c50e27ef43acc62c1dcf13403ce510064c986541
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c3c7c70057380289272e86cf7187680746dafdd2
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336047"
 ---
 # <a name="call-tree-view---net-memory-sampling-data"></a>호출 트리 뷰 - .NET 메모리 샘플링 데이터
 호출 트리 뷰에는 프로파일링 된 응용 프로그램에서 이동한 함수 실행 경로가 표시됩니다. 트리의 루트는 응용 프로그램 또는 구성 요소에 대한 진입점입니다. 각 함수 노드에는 호출한 모든 함수 및 이러한 함수 호출에 대한 .NET 메모리 할당 데이터가 나열됩니다.  
   
  호출 트리 뷰의 값은 호출 트리의 부모 함수가 호출한 함수 인스턴스에 대한 값입니다. 비율 값은 프로파일링 실행 시 총 할당 수 또는 크기와 함수 인스턴스 값을 비교하여 계산됩니다.  
   
-## <a name="highlighting-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
+## <a name="highlight-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
  호출 트리 뷰에서는 가장 크거나 대부분의 메모리 개체를 만든 프로세스 또는 함수의 실행 경로를 확장하고 강조 표시할 수 있습니다. 최대 활성 경로를 표시하려면 프로세스 또는 함수를 마우스 오른쪽 단추로 클릭한 후 **실행 부하 과다 경로 확장**을 클릭합니다.  
   
-## <a name="setting-the-call-tree-root-node"></a>호출 트리 루트 노드 설정  
+## <a name="set-the-call-tree-root-node"></a>호출 트리 루트 노드 설정  
  프로파일링 실행 시 각 프로세스는 루트 노드로 표시됩니다. 호출 트리 뷰의 시작 노드를 다른 노드로 설정하려면 시작 노드로 설정하려는 노드를 마우스 오른쪽 단추로 클릭하고 **루트 설정**을 선택합니다.  
   
  루트 노드를 설정하면 선택한 노드의 하위 트리를 제외한 다른 모든 항목이 뷰에서 제거됩니다. 호출 트리 뷰 창에서 마우스 오른쪽 단추로 클릭하고 **루트 다시 설정**을 선택하여 루트 노드를 보고 있던 노드로 다시 설정할 수 있습니다.  

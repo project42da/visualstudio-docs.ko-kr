@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: 40b5dad29562d1b370f9988467183ef05c26fd85
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 032a2084ea70d6afb22de63d829a89362ad72dd7
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335660"
 ---
 # <a name="command-line-profiling-of-aspnet-web-applications"></a>ASP.NET 웹 응용 프로그램의 명령줄 프로파일링
 이 섹션에서는 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 명령줄에서 프로파일링 도구를 사용하여 [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램의 성능 데이터를 수집하기 위한 절차 및 옵션을 설명합니다.  
@@ -25,7 +26,7 @@ ms.lasthandoff: 05/11/2018
 > [!NOTE]
 >  Windows 8 및 Windows Server 2012의 강화된 보안 기능을 위해 Visual Studio 프로파일러가 이러한 플랫폼에서 데이터를 수집하는 방법을 상당히 변경해야 했습니다. 또한 UWP 앱에는 새로운 수집 기술도 필요합니다. [Windows 8 및 Windows Server 2012 응용 프로그램의 성능 도구](../profiling/performance-tools-on-windows-8-and-windows-server-2012-applications.md)를 참조하세요.  
   
-## <a name="common-tasks"></a>일반 작업  
+## <a name="common-tasks"></a>일반 작업
   
 |작업|관련 내용|  
 |----------|---------------------|  
@@ -36,7 +37,8 @@ ms.lasthandoff: 05/11/2018
 |**동시성 데이터 수집:** 동시성 방법을 사용하여 리소스 경합 데이터를 수집합니다. **참고:**  웹 응용 프로그램에 대해서는 스레드 작업 및 시각화 데이터를 수집할 수 없습니다.|-   [동시성 데이터 수집](../profiling/collecting-concurrency-data-for-an-aspnet-web-application.md)|  
 |**계층 상호 작용 데이터 추가:** [!INCLUDE[vstecasp](../code-quality/includes/vstecasp_md.md)] 웹 응용 프로그램에서 Microsoft [!INCLUDE[ssNoVersion](../data-tools/includes/ssnoversion_md.md)] 데이터베이스에 실행하는 동기 [!INCLUDE[vstecado](../data-tools/includes/vstecado_md.md)] 호출에 대한 성능 데이터를 추가할 수 있습니다.|-   [계층 상호 작용 데이터 수집](../profiling/adding-tier-interaction-data-from-the-command-line.md)|  
   
-## <a name="related-tasks"></a>관련 작업  
+## <a name="related-tasks"></a>관련 작업
+
   
 |작업|관련 내용|  
 |----------|---------------------|  

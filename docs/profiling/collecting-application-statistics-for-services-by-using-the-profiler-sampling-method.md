@@ -10,13 +10,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0a66a9209f306c8a7c6872c886c96a09f4323ccc
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: bb6e5fe61e6210826ce0b37ae2650da8d6af86c9
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335608"
 ---
-# <a name="collecting-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>프로파일러 샘플링 방법을 사용하여 서비스에 대한 응용 프로그램 통계 수집
+# <a name="collect-application-statistics-for-services-by-using-the-profiler-sampling-method"></a>프로파일러 샘플링 방법을 사용하여 서비스에 대한 응용 프로그램 통계 수집
 이 섹션에서는 명령줄에서 샘플링 방법을 사용하여 Windows 서비스에 대한 성능 통계를 수집하기 위한 절차 및 옵션을 설명합니다.  
   
 > [!NOTE]
@@ -32,7 +33,7 @@ ms.lasthandoff: 05/11/2018
   
 ## <a name="related-tasks"></a>관련 작업  
   
-### <a name="profiling-windows-services"></a>Windows 서비스 프로파일링  
+### <a name="profile-windows-services"></a>Windows 서비스 프로파일링  
   
 |작업|관련 내용|  
 |----------|---------------------|  
@@ -40,12 +41,15 @@ ms.lasthandoff: 05/11/2018
 |**.NET 메모리 할당 및 가비지 수집 프로파일링**|-   [.NET 메모리 데이터 수집](../profiling/collecting-memory-data-from-dotnet-framework-services-by-using-the-profiler-command-line.md)|  
 |**리소스 경합 및 스레드 작업 프로파일링**|-   [동시성 데이터 수집](../profiling/collecting-concurrency-data-for-a-service-by-using-the-profiler-command-line.md)|  
   
-### <a name="profiling-by-using-the-sampling-method"></a>샘플링 방법을 사용하여 프로파일링  
+
+### <a name="profile-by-using-the-sampling-method"></a>샘플링 방법을 사용하여 프로파일링  
   
 |작업|관련 내용|  
 |----------|---------------------|  
 |**독립 실행형(클라이언트) 응용 프로그램 프로파일링**|-   [샘플링을 사용하여 응용 프로그램 통계 수집](../profiling/collecting-application-statistics-for-stand-alone-applications.md)|  
 |**ASP.NET 웹 응용 프로그램 프로파일링**|-   [샘플링을 사용하여 응용 프로그램 통계 수집](../profiling/collecting-application-statistics-for-aspnet-using-the-profiler-sampling-method.md)|  
   
-### <a name="analyzing-sampling-data-views-and-reports"></a>샘플링 데이터 뷰 및 보고서 분석  
+### <a name="analyze-sampling-data-views-and-reports"></a>샘플링 데이터 뷰 및 보고서 분석  
  [샘플링 방법 데이터 뷰](../profiling/profiler-sampling-method-data-views.md)
+
+  
