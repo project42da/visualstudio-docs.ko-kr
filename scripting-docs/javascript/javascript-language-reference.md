@@ -1,13 +1,13 @@
----
-title: "JavaScript 언어 참조 | Microsoft Docs"
-ms.custom: 
+﻿---
+title: JavaScript 언어 참조 | Microsoft Docs
+ms.custom: ''
 ms.date: 01/18/2017
 ms.prod: windows-client-threshold
-ms.reviewer: 
-ms.suite: 
+ms.reviewer: ''
+ms.suite: ''
 ms.technology:
 - devlang-javascript
-ms.tgt_pltfrm: 
+ms.tgt_pltfrm: ''
 ms.topic: article
 f1_keywords:
 - VS.WebClient.Help.General
@@ -18,7 +18,7 @@ dev_langs:
 helpviewer_keywords:
 - JavaScript
 ms.assetid: 1c457e66-a6b2-4545-b2dd-33a59d8661e8
-caps.latest.revision: 
+caps.latest.revision: 62
 author: mikejo5000
 ms.author: mikejo
 manager: ghogen
@@ -27,6 +27,7 @@ ms.sourcegitcommit: aadb9588877418b8b55a5612c1d3842d4520ca4c
 ms.translationtype: HT
 ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2017
+ms.locfileid: "24569303"
 ---
 # <a name="javascript-language-reference"></a>JavaScript 언어 참조
 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] 는 웹 페이지 및 기타 응용 프로그램에 포함할 수 있는 스크립트 언어입니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 10/27/2017
   
 -   DOM에 대한 자세한 내용은 [DOM(문서 개체 모델)](http://go.microsoft.com/fwlink/p/?LinkId=251009)을 참조하세요.  
   
- [!INCLUDE[win8](../javascript/includes/win8-md.md)]와 [!INCLUDE[win81](../javascript/includes/win81-md.md)]에서 실행되는 Windows 스토어 앱 및 Windows 10에서 실행되는 UWP(유니버설 Windows 플랫폼) 앱에서도 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] 코드를 사용할 수 있습니다. Windows 스토어 앱은 [!INCLUDE[vs_dev11_long](../javascript/includes/vs-dev11-long-md.md)], [!INCLUDE[vs_dev12](../javascript/includes/vs-dev12-md.md)] 및 [!INCLUDE[vs_dev14](../javascript/includes/vs-dev14-md.md)]에서 개발할 수 있고 UWP 앱은 [!INCLUDE[vs_dev14](../javascript/includes/vs-dev14-md.md)]에서 개발할 수 있습니다.
+ [!INCLUDE[win8](../javascript/includes/win8-md.md)]와 [!INCLUDE[win81](../javascript/includes/win81-md.md)]에서 실행되는 Windows 스토어 앱 및 Windows 10에서 실행되는 UWP(유니버설 Windows 플랫폼) 앱에서도 [!INCLUDE[javascript](../javascript/includes/javascript-md.md)] 코드를 사용할 수 있습니다. Windows 스토어 앱은 [!INCLUDE[vs_dev11_long](../javascript/includes/vs-dev11-long-md.md)], [!INCLUDE[vs_dev12](../javascript/includes/vs-dev12-md.md)] 및 [!INCLUDE[vs_dev14](../javascript/includes/vs-dev14-md.md)]에서 개발할 수 있고 UWP 앱은 [!INCLUDE[vs_dev14](../javascript/includes/vs-dev14-md.md)]에서 개발할 수 있습니다.  
   
 -   [!INCLUDE[win8_appname_long](../javascript/includes/win8-appname-long-md.md)] 앱의 JavaScript에 대한 자세한 내용은 [JavaScript 로드맵](https://msdn.microsoft.com/en-us/library/windows/apps/hh465037.aspx)을 참조하세요.  
   

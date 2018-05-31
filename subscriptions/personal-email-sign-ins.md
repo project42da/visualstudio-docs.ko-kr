@@ -9,11 +9,12 @@ description: Visual Studio 구독 - 구독자의 Hotmail 또는 Gmail 주소가 
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 3ac8a86bae706b4a68b8e3ccde94a9ee84d608a9
-ms.sourcegitcommit: 928885ace538bef5b25961358d4f166d648f196a
+ms.openlocfilehash: a9b0e02acd0c362759997938cec91983a5d48547
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/27/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335722"
 ---
 # <a name="visual-studio-subscriptions--why-am-i-seeing-hotmail-or-gmail-addresses-for-my-subscribers"></a>Visual Studio 구독 - 구독자의 Hotmail 또는 Gmail 주소가 보이는 이유는 무엇인가요? 
 
@@ -34,6 +35,6 @@ ms.lasthandoff: 04/27/2018
 
 ## <a name="solution"></a>솔루션
 
-문제를 해결하려면 구독자 정보를 편집하여 로그인 전자 메일 주소를 업데이트해야 합니다.  개별 구독자를 편집하거나 일괄적으로 편집할 수 있습니다. 자세한 내용은 [구독 편집](/visualstudio/subscriptions/edit-license)을 참조하세요.  
+문제를 해결하려면 구독자 정보를 편집하여 로그인 전자 메일 주소를 업데이트해야 합니다.  개별 구독자를 편집하거나 일괄적으로 편집할 수 있습니다. 자세한 내용은 [구독 편집](edit-license.md)을 참조하세요.  
 
 구독자 전자 메일 주소를 업데이트한 후 로그인 정보가 변경되었음을 구독자에게 알려야 할 수 있습니다.  또한 업데이트된 정보가 포함된 전자 메일을 받게 됩니다.   
