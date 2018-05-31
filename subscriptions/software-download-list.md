@@ -9,11 +9,12 @@ description: Visual Studio 구독에 포함된 소프트웨어 다운로드 목�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: c59565e903947df54ec0ae593421ee0cc447e8c5
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 7958ccedb28a14763264cd590e83d5e8e7fbbcdf
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335842"
 ---
 # <a name="how-do-i-know-what-software-is-available-for-download"></a>어떤 소프트웨어를 다운로드할 수 있는지 어떻게 알 수 있나요?
 
@@ -21,7 +22,7 @@ ms.lasthandoff: 04/06/2018
 
 이미 Visual Studio 구독이 있는 경우: 
 1. [https://my.visualstudio.com/downloads](https://my.visualstudio.com/downloads?wt.mc_id=o~msft~docs)로 이동합니다.
-2. 구독에 로그인합니다.  ([로그인](/visualstudio/subscriptions/signing-in)에 대한 도움말을 봅니다.)
+2. 구독에 로그인합니다.  ([로그인](signing-in.md)에 대한 도움말을 봅니다.)
 3. 로그인에 성공하면 원하는 다운로드를 검색할 수 있습니다.  몇 가지 기준으로 정렬할 수 있는 인기 다운로드 목록을 볼 수도 있습니다. 
 
 제품을 빠르게 찾으려면 페이지 위쪽에서 “검색” 기능을 사용하거나 왼쪽에 있는 다른 제품 유형을 클릭합니다.
