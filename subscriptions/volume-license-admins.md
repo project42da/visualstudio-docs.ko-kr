@@ -9,11 +9,12 @@ description: 구독 관리자가 관리 포털에 액세스하여 VL(볼륨 라�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 mearchscope: VS Subscription
-ms.openlocfilehash: 33ed7f26e146efffb66b7fabde65dc45276d085d
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: e403e1d8282b3f0a18058105bca0150938a956cf
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335894"
 ---
 # <a name="accessing-the-portal-and-managing-administrators---for-subscriptions-acquired-through-volume-licensing-vl"></a>포털에 액세스 및 관리자 관리 - VL(볼륨 라이선스)을 통해 획득한 구독의 경우
 
@@ -36,7 +37,7 @@ Visual Studio 구독 관리 포털에 조직을 등록할 준비가 되면 온�
 
      a. 전자 메일에는 고유한 링크 및 해당 PCN(공용 고객 번호)의 마지막 세 자리와 함께 기본/통지 연락처 담당자가 제공됩니다.  (기본 또는 통지 연락처 담당자가 둘 이상의 이메일을 받는 경우 이는 둘 이상의 PCN이 있음을 의미합니다. 각 이메일에서 참조된 PCN에 대한 고유한 링크를 사용하여 프로세스를 완료해야 합니다.)
 
-     b. 전체 PCN을 가져오려면 기본 연락처 담당자가 VLSC에 로그인해야 합니다. [PCN를 찾기 위한 지침](/find-pcn/) 
+     b. 전체 PCN을 가져오려면 기본 연락처 담당자가 VLSC에 로그인해야 합니다. [PCN를 찾기 위한 지침](find-pcn.md) 
 
      c. PCN을 얻은 후에 로그인하도록 요구하는 메시지가 표시될 고유한 링크를 선택해야 합니다. 조직에 AAD가 없는 경우 회사/학교 계정(AAD에 속한 조직인 경우) 또는 MSA(Microsoft 계정)를 사용하여 로그인할 수 있습니다. 
 
@@ -46,6 +47,6 @@ Visual Studio 구독 관리 포털에 조직을 등록할 준비가 되면 온�
 
 3.  새 구독 관리 포털에 액세스합니다. 조직이 마이그레이션되면 새 포털에 액세스하고 구독 관리를 시작하도록 초대하는 전자 메일을 새로 추가된 슈퍼 관리자와 관리자에게 보냅니다.  
 
-새 Visual Studio 구독 관리 포털에 사용자를 추가해야 하는 경우 기본/통지 연락처 담당자가 누구인지 확실하지 않으면 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)에 로그인한 후에 이 정보를 찾을 수 있습니다. VLSC에서 기본/통지 연락처 담당자를 찾는 단계는 [기본 연락처 담당자 찾기](/find-primary-contact/) 토픽을 살펴보세요.
+새 Visual Studio 구독 관리 포털에 사용자를 추가해야 하는 경우 기본/통지 연락처 담당자가 누구인지 확실하지 않으면 [VLSC](https://www.microsoft.com/Licensing/servicecenter/default.aspx)에 로그인한 후에 이 정보를 찾을 수 있습니다. VLSC에서 기본/통지 연락처 담당자를 찾는 단계는 [기본 연락처 담당자 찾기](find-primary-contact.md) 토픽을 살펴보세요.
 
 이미 관리자로 설정된 경우 Visual Studio 구독 관리 포털([https://manage.visualstudio.com](https://manage.visualstudio.com))로 직접 이동할 수 있습니다. 
