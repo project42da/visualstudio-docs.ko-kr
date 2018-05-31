@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: 6d194ddfb83570b4e2a5461dc70a0368215aaca5
-ms.sourcegitcommit: 046a9adc5fa6d6d05157204f5fd1a291d89760b7
+ms.openlocfilehash: 5cece8a5b97f3a9c78bdda8c5e841661d2b4d58d
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/11/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335582"
 ---
 # <a name="how-to-launch-a-stand-alone-net-framework-application-with-the-profiler-to-collect-concurrency-data-by-using-the-command-line"></a>방법: 명령줄을 통해 프로파일러와 함께 독립 실행형 .NET Framework 응용 프로그램을 시작하여 동시성 데이터 수집
 이 항목은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로파일링 도구 명령줄 도구를 사용하여 .NET Framework 독립 실행형(클라이언트) 응용 프로그램을 시작하고 프로세스 및 스레드 동시성 데이터를 수집하는 방법을 설명합니다.  
@@ -24,7 +25,7 @@ ms.lasthandoff: 05/11/2018
   
  프로파일러가 응용 프로그램에 연결되면 데이터 수집을 일시 중지하고 다시 시작할 수 있습니다. 프로파일링 세션을 종료하려면 프로파일러가 응용 프로그램에 연결되어 있으면 안 되고 프로파일러가 명시적으로 종료되어야 합니다.  
   
-## <a name="starting-the-application-with-the-profiler"></a>프로파일러를 사용하여 응용 프로그램 시작  
+## <a name="start-the-application-with-the-profiler"></a>프로파일러를 사용하여 응용 프로그램 시작  
  프로파일러를 사용하여 .NET Framework 대상 응용 프로그램을 시작하려면 VSPerfClrEnv.exe를 사용하여 .NET Framework 프로파일링 변수를 설정합니다. 그런 다음, VSPerfCmd **/start** 및 **/launch** 옵션을 사용하여 프로파일러를 초기화하고 응용 프로그램을 시작합니다. **/start** 및 **/launch**와 해당 개별 옵션을 단일 명령줄에서 지정할 수 있습니다. 명령줄에 **/globaloff** 옵션을 추가하여 대상 응용 프로그램 시작 시 데이터 수집을 일시 중지할 수도 있습니다. 그런 다음, 별도의 명령줄에서 **/globalon**을 사용하여 데이터 수집을 시작합니다.  
   
 #### <a name="to-start-an-application-with-the-profiler"></a>프로파일러를 사용하여 응용 프로그램을 시작하려면  
@@ -67,7 +68,7 @@ ms.lasthandoff: 05/11/2018
     |[/console](../profiling/console.md)|대상 명령줄 응용 프로그램을 별도의 창에서 시작합니다.|  
     |[/targetclr](../profiling/targetclr.md) **:** `Version`|한 응용 프로그램에 두 개 이상의 런타임 버전이 로드된 경우 프로파일링할 CLR(공용 언어 런타임) 버전을 지정합니다.|  
   
-## <a name="controlling-data-collection"></a>데이터 컬렉션 제어  
+## <a name="control-data-collection"></a>데이터 수집 제어  
  대상 응용 프로그램이 실행 중이면 VSPerfCmd.exe 옵션을 사용하여 파일에 대한 데이터 쓰기를 시작하고 중지하는 방식으로 데이터 수집을 제어할 수 있습니다. 데이터 수집을 제어하면 응용 프로그램의 시작 또는 종료와 같이 프로그램 실행의 특정 부분에 대한 데이터를 수집할 수 있습니다.  
   
 #### <a name="to-start-and-stop-data-collection"></a>데이터 수집을 시작 및 중지하려면  
@@ -80,7 +81,7 @@ ms.lasthandoff: 05/11/2018
     |[/processon](../profiling/processon-and-processoff.md) **:** `PID` [/processoff](../profiling/processon-and-processoff.md) **:** `PID`|프로세스 ID(`PID`)로 지정된 프로세스에 대한 데이터 수집을 시작(**/processon**) 또는 중지(**/processoff**)합니다.|  
     |[/attach](../profiling/attach.md) **:**{`PID`&#124;`ProcName`} [/detach](../profiling/detach.md)[**:**{`PID`&#124;`ProcName`}]|**/attach**는 프로세스 ID(`PID`) 또는 프로세스 이름(ProcName)으로 지정된 프로세스에 대한 데이터 수집을 시작합니다. **/detach**는 지정된 프로세스 또는 모든 프로세스(특정 프로세스가 지정되지 않은 경우)에 대한 데이터 수집을 중지합니다.|  
   
-## <a name="ending-the-profiling-session"></a>프로파일링 세션 종료  
+## <a name="end-the-profiling-session"></a>프로파일링 세션 종료  
  프로파일링 세션을 종료하려면 프로파일러가 데이터를 수집하고 있지 않아야 합니다. 프로파일링된 응용 프로그램을 닫거나 **VSPerfCmd /detach** 옵션을 호출하여 동시성 데이터 수집을 중지할 수 있습니다. 그러고 나서 **VSPerfCmd /shutdown** 옵션을 호출하여 프로파일러를 끄고 프로파일링 데이터 파일을 닫습니다. **VSPerfClrEnv /off** 명령은 프로파일링 환경 변수를 지웁니다.  
   
 #### <a name="to-end-a-profiling-session"></a>프로파일링 세션을 종료하려면  

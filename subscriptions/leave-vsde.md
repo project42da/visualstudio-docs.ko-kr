@@ -9,18 +9,19 @@ description: Visual Studio Dev Essentials 프로그램을 종료하는 방법 �
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 4a24547d29513d0e06531041b51d0dea897acace
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 383216b898e9eef62fbe825454cda4ed6c11ea2c
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335868"
 ---
 # <a name="how-do-i-leave-the-visual-studio-dev-essentials-program"></a>Visual Studio Dev Essentials 프로그램을 종료하려면 어떻게 해야 하나요? 
 
 Visual Studio Dev Essentials 프로그램을 종료하려면 다음 단계를 따르세요.
 
 1. [https://my.visualstudio.com/subscriptions](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs)로 이동합니다.
-2. 구독에 로그인합니다.  ([로그인](/visualstudio/subscriptions/signing-in)에 대한 도움말을 봅니다.)
+2. 구독에 로그인합니다.  ([로그인](signing-in.md)에 대한 도움말을 봅니다.)
 3. 로그인에 성공하면 현재 구독 목록이 표시됩니다.
 4. Visual Studio Dev Essentials에 연결된 행의 맨 오른쪽 링크 열에서 **프로그램 나가기**를 클릭합니다.
 5. 팝업 창이 표시됩니다. **확인**을 선택합니다. 
