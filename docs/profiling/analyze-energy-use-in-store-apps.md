@@ -15,11 +15,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 0efe4fe685a0a75438cb68590722ea6748a15f23
-ms.sourcegitcommit: eefffa7ebe339d1297cdc12f51a813e7849d7e95
+ms.openlocfilehash: 187f6c7cdbbcb99d5c1ac336e922c4a2fedbb44d
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/14/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34336060"
 ---
 # <a name="analyze-energy-use-in-uwp-apps"></a>UWP 앱의 에너지 사용 분석
 Visual Studio **에너지 소비** 프로파일러를 사용하면 자체 배터리로 전부 또는 일부의 시간 동안 실행하는 저전력 태블릿 장치에서 UWP 앱의 전력 및 에너지 소비를 분석할 수 있습니다. 배터리로 구동하는 장치에서 앱이 너무 많은 에너지를 사용할 경우 고객 불만족을 일으킬 수 있고, 결과적으로 고객이 설치를 제거할 수도 있습니다. 에너지 사용을 최적화하면 고객이 앱을 채택하고 사용하는 사례가 증가할 수 있습니다.  
@@ -61,7 +62,7 @@ Visual Studio **에너지 소비** 프로파일러를 사용하면 자체 배터
 >  -   Windows.Foundation.Diagnostics LoggingChannel은 [Windows.Foundation.IClosable](/uwp/api/windows.foundation.iclosable) 인터페이스를 구현합니다(C# 및 VB에서 [System.IDisposable](/dotnet/api/system.idisposable) 로 프로젝션됨). 운영 체제 리소스 누수를 방지하려면 로깅 채널이 완료될 때 [LoggingChannel.Close](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel)(C# 및 VB에서는 [Windows.Foundation.Diagnostics.LoggingChannel.Dispose](/uwp/api/Windows.Foundation.Diagnostics.LoggingChannel))를 호출합니다.  
 > -   열린 각 로깅 채널의 이름은 고유해야 합니다. 동일한 이름의 새 로깅 채널을 삭제되지 않은 채널로 만들려고 하면 예외가 발생합니다.  
   
- 예제는 Windows SDK 샘플 [LoggingSession 샘플](http://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336) 을 참조하세요.  
+ 예제는 Windows SDK 샘플 [LoggingSession 샘플](http://code.msdn.microsoft.com/windowsapps/LoggingSession-Sample-ccd52336)을 참조하세요.  
   
  **JavaScript 코드에 표시 추가**  
   
@@ -150,7 +151,7 @@ if (performance && performance.mark) {
   
      UWP 앱에 대한 Visual Studio 시뮬레이터를 사용하여 네트워크 정보 API의 데이터 연결 속성을 시뮬레이션할 수 있습니다. [시뮬레이터에서 UWP 앱 실행](../debugger/run-windows-store-apps-in-the-simulator.md)을 참조하세요.  
   
--   **JavaScript 함수 타이밍** 및 **CPU 사용** 도구를 사용하면 비효율적 함수 때문에 발생하는 CPU 로드를 줄일 수 있습니다. [CPU 사용 분석](../profiling/analyze-cpu-usage-in-a-windows-universal-app.md)을 참조하세요.
+-   **JavaScript 함수 타이밍** 및 **CPU 사용** 도구를 사용하면 비효율적 함수 때문에 발생하는 CPU 로드를 줄일 수 있습니다. [CPU 사용량 분석](../profiling/analyze-cpu-usage-in-a-windows-universal-app.md)을 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
  [Visual Studio의 프로파일링](../profiling/index.md)  

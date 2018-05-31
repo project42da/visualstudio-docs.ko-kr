@@ -1,0 +1,61 @@
+- name: 개요
+  items:
+    - name: R Tools for Visual Studio
+      href: index.md
+    - name: 데이터 과학 및 분석 응용 프로그램 워크로드
+      href: data-science-and-analytical-applications-workload.md
+- name: 빠른 시작
+  items:
+    - name: 설치
+      href: installing-r-tools-for-visual-studio.md
+    - name: 도움말 보기
+      href: getting-started-help.md
+- name: 자습서
+  items:
+    - name: R 시작
+      href: getting-started-with-r.md
+- name: 샘플
+  href: getting-started-samples.md
+- name: 방법 가이드
+  items:
+    - name: R 프로젝트
+      href: r-projects-in-visual-studio.md
+      items:
+        - name: 패키지 관리자
+          href: r-package-manager-in-visual-studio.md
+        - name: SQL Server 통합
+          href: integrating-sql-server-with-r.md
+    - name: 코드 편집
+      href: editing-r-code-in-visual-studio.md
+      items:
+        - name: IntelliSense
+          href: r-intellisense.md
+        - name: Lint
+          href: linting-r-code.md
+        - name: 코드 조각
+          href: code-snippets-for-r.md
+    - name: 작업 영역(로컬 및 원격)
+      href: r-workspaces-in-visual-studio.md
+      items:
+        - name: 원격 작업 영역 설정
+          href: setting-up-remote-r-workspaces.md
+        - name: Linux용 원격 R 서비스
+          href: setting-up-remote-r-service-on-linux.md
+        - name: Docker 컨테이너 사용
+          href: using-docker-containers-with-r.md
+    - name: R Markdown
+      href: rmarkdown-with-r-in-visual-studio.md
+    - name: Interactive REPL
+      href: interactive-repl-for-r-in-visual-studio.md
+    - name: 데이터 시각화
+      href: visualizing-data-with-r-in-visual-studio.md
+    - name: 변수 탐색기
+      href: variable-explorer.md
+    - name: 디버깅
+      href: debugging-r-in-visual-studio.md
+- name: 참조
+  items:
+    - name: 옵션
+      href: options-for-r-tools-in-visual-studio.md
+    - name: 질문과 대답
+      href: faq.md

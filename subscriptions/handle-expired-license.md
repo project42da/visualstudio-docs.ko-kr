@@ -9,11 +9,12 @@ description: 관리자가 만료된 Visual Studio 구독을 처리하는 방법�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: f4f1e049ce5f236fc1bce958d698b15637cb265d
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 8fa500e5909a855884975653417c3e61976f9f01
+ms.sourcegitcommit: 37144589d9f850ff81ec7bfb884429989925a43d
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 05/19/2018
+ms.locfileid: "34335621"
 ---
 # <a name="handling-expired-subscriptions"></a>만료된 구독 처리
 
@@ -25,4 +26,4 @@ ms.lasthandoff: 04/06/2018
 1.  볼륨 라이선스 재판매인 또는 Microsoft 판매자에게 문의하세요. 
 2.  계약 번호와 구매 계정 번호를 알려줍니다. 
 
-대리점 또는 Microsoft 판매자가 갱신하거나 추가 구독 프로세스를 구매할 수 있도록 안내해 줄 것입니다. 주문하거나 계약이 갱신되면 새 구독은 사용 가능 상태가 되며 [사용자의 구독자에 할당](/assign-license/)할 수 있습니다. 
+대리점 또는 Microsoft 판매자가 갱신하거나 추가 구독 프로세스를 구매할 수 있도록 안내해 줄 것입니다. 주문하거나 계약이 갱신되면 새 구독은 사용 가능 상태가 되며 [사용자의 구독자에 할당](assign-license.md)할 수 있습니다. 
