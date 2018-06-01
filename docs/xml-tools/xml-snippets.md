@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f92b96f09353bf8e432d6a3931a534064ad7c446
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 07ddb1dd64e5d972c23a032cb1eb752515d92ab6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693853"
 ---
 # <a name="xml-snippets"></a>XML 조각
 
@@ -40,18 +41,18 @@ XML 편집기에는 몇 가지 일반 작업을 포괄하는 많은 조각이 �
 
  두 가지 방법으로 조각을 삽입할 수 있습니다. **조각 삽입** 명령은 커서 위치에 XML 조각을 삽입 합니다. **감싸기** 명령을 사용 하면 선택한 텍스트 주위의 XML 조각을 래핑합니다. 두 명령 모두 사용할 수 있습니다에서 **IntelliSense** 아래의 하위 메뉴는 **편집** 메뉴 또는 편집기 바로 가기 메뉴.
 
- 자세한 내용은 참조 [하는 방법: XML 조각 사용](../xml-tools/how-to-use-xml-snippets.md)합니다.
+ 자세한 내용은 참조 [하는 방법: 사용 하 여 XML 조각](../xml-tools/how-to-use-xml-snippets.md)합니다.
 
-## <a name="schema-generated-xml-snippets"></a>스키마에 의해 생성된 XML 조각
+## <a name="schema-generated-xml-snippets"></a>스키마 생성 된 XML 조각
  XML 편집기에서는 XML 스키마에서 XML 조각을 생성할 수 있는 기능을 제공합니다. 이 기능을 사용하면 요소의 스키마 정보에서 생성된 XML 요소로 해당 요소를 채울 수 있습니다.
 
- 자세한 내용은 참조 [하는 방법: XML 조각에서 an XML 스키마를 생성할](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)합니다.
+ 자세한 내용은 참조 [하는 방법: XML 스키마에서 XML 조각을 생성](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)합니다.
 
 ## <a name="create-new-xml-snippets"></a>새 XML 조각 만들기
  기본적으로 [!INCLUDE[msCoName](../xml-tools/includes/msconame_md.md)] Visual Studio에 포함된 조각 외에도 사용자가 직접 XML 조각을 만들어 사용할 수 있습니다.
 
- 자세한 내용은 참조 [하는 방법: XML 조각 만들기](../xml-tools/how-to-create-xml-snippets.md)합니다.
+ 자세한 내용은 참조 [하는 방법: 만드는 XML 조각](../xml-tools/how-to-create-xml-snippets.md)합니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 편집기](../xml-tools/xml-editor.md)

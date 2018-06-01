@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a3240868ce8f749bf97a12054aac4760018c71d6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 86a71a70296a3b4e49f2cf7c596a7f71063c8297
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693525"
 ---
 # <a name="walkthrough-using-xslt-intellisense"></a>연습: XSLT IntelliSense 사용
 
@@ -46,7 +47,7 @@ ms.lasthandoff: 04/26/2018
     </xsl:stylesheet>
     ```
 
-2.  커서를 `<xsl:template name="msg23" match="msg23">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:call-template` 요소 입력을 시작합니다.
+2.  커서 삽입 `<xsl:template name="msg23" match="msg23">` 누릅니다 **Enter**합니다. 그리고 나서 다음 `xsl:call-template` 요소 입력을 시작합니다.
 
     ```xml
     <xsl:call-template name="localized-message">
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/26/2018
 
      입력할 때 템플릿 이름의 목록이 `name=""` 요소의 `xsl:call-template` 특성에 나타납니다.
 
-3.  커서를 `<xsl:call-template name="localized-message">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:with-param` 요소 입력을 시작합니다.
+3.  커서 삽입 `<xsl:call-template name="localized-message">` 누릅니다 **Enter**합니다. 그리고 나서 다음 `xsl:with-param` 요소 입력을 시작합니다.
 
     ```xml
     <xsl:with-param name="msgcode">msg23</xsl:with-param>
@@ -112,7 +113,7 @@ ms.lasthandoff: 04/26/2018
     </xsl:stylesheet>
     ```
 
-2.  커서를 `<xsl:apply-templates select="phone" />` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl: apply-templates` 요소 입력을 시작합니다.
+2.  커서 삽입 `<xsl:apply-templates select="phone" />` 누릅니다 **Enter**합니다. 그리고 나서 다음 `xsl: apply-templates` 요소 입력을 시작합니다.
 
     ```xml
     <xsl:apply-templates select="phone"  mode="accountNumber">
@@ -153,7 +154,7 @@ ms.lasthandoff: 04/26/2018
     </xsl:stylesheet>
     ```
 
-2.  커서를 `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` 다음에 놓고 Enter 키를 누릅니다. 그리고 나서 다음 `xsl:namespace-alias` 요소 입력을 시작합니다.
+2.  커서 삽입 `<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" xmlns:alt="http://www.w3.org/1999/XSL/Transform-alternate" version="1.0">` 누릅니다 **Enter**합니다. 그리고 나서 다음 `xsl:namespace-alias` 요소 입력을 시작합니다.
 
     ```xml
     <xsl:namespace-alias stylesheet-prefix="alt" result-prefix="xsl"/>
