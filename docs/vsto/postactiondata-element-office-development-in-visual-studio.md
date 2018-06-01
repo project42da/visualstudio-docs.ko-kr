@@ -1,5 +1,5 @@
 ---
-title: '&lt;postActionData&gt; 요소 (Visual Studio에서 Office 개발) | Microsoft Docs'
+title: '&lt;postActionData&gt; 요소 (Visual Studio에서 Office 개발)'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -17,18 +17,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c33e2bae7214252f0d0a871ed5a21a62d3fb9372
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9f96ecf7f7f6c0d465a9506edff41c4305d8d25e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692950"
 ---
 # <a name="ltpostactiondatagt-element-office-development-in-visual-studio"></a>&lt;postActionData&gt; 요소 (Visual Studio에서 Office 개발)
   `postActionData` 네임스페이스의 `vstav3` 요소는 Office 솔루션이 설치된 후 실행되는 배포 후 작업과 관련된 데이터를 지정합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <postActionData>  
 </postActionData>  
 ```  
@@ -43,19 +44,19 @@ ms.lasthandoff: 04/16/2018
 ## <a name="post-deployment-action-example"></a>배포 후 작업 예제  
   
 ### <a name="description"></a>설명  
- 다음 코드 예제에서는 `postAction` 을 사용하여 배포된 Office 솔루션에 대한 응용 프로그램 매니페스트의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는 [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)에서 제공하는 보다 큰 예제의 일부입니다.  
+ 다음 코드 예제에서는 `postAction` 을 사용하여 배포된 Office 솔루션에 대한 응용 프로그램 매니페스트의 [!INCLUDE[ndptecclick](../vsto/includes/ndptecclick-md.md)]요소를 보여 줍니다. 이 코드 예제는에 제공 된 큰 예제의 일부 [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)합니다.  
   
 ### <a name="code"></a>코드  
   
-```  
+```xml  
 <vstav3:postActionData>  
   data in any format  
 </vstav3:postActionData>  
 ```  
   
-## <a name="see-also"></a>참고 항목  
- [Application Manifests for Office Solutions](../vsto/application-manifests-for-office-solutions.md)   
- [Office 솔루션에 대 한 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
+## <a name="see-also"></a>참고자료  
+ [Office 솔루션에 대 한 응용 프로그램 매니페스트](../vsto/application-manifests-for-office-solutions.md)   
+ [Office 솔루션의 배포 매니페스트](../vsto/deployment-manifests-for-office-solutions.md)   
  [ClickOnce 응용 프로그램 매니페스트](/visualstudio/deployment/clickonce-application-manifest)  
   
   

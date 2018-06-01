@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f4610a2574fbd822e4468436655668cff3892270
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e7c29a6e106381e23007f8cb3d899cb3b3c0e387
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693567"
 ---
 # <a name="xml-document-properties-properties-window"></a>XML 문서 속성, 속성 창
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/26/2018
 
  다른 스타일 시트 되어야 함을 지정 하려면이 속성을 사용할 수는 XSLT 파일을 편집할 때 때 사용 되는 **XSLT 출력 표시** 또는 **XSLT 디버깅** 명령을 선택 합니다. 예를 들어, 부모 스타일시트에 포함된 스타일시트를 편집할 때 이 작업을 수행할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 편집기](../xml-tools/xml-editor.md)
 - [XML 편집기 구성 요소](../xml-tools/xml-editor-components.md)

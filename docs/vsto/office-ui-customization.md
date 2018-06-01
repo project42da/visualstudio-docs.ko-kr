@@ -1,5 +1,5 @@
 ---
-title: Office UI 사용자 지정 | Microsoft Docs
+title: Office UI 사용자 지정
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -19,11 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9a35ca6a868aa1fff2a4bd4bfbd3ec466d5a2107
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0152fea139d6351c947412260247c47f79bb6b66
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692462"
 ---
 # <a name="office-ui-customization"></a>Office UI 사용자 지정
   Visual Studio에서 Office 개발자 도구를 사용하여 Microsoft Office 응용 프로그램의 UI(사용자 인터페이스)를 사용자 지정할 수 있습니다. 이 항목에서는 다음 섹션에서 사용자 지정할 수 있는 UI 기능에 대해 설명합니다.  
@@ -85,27 +86,27 @@ ms.lasthandoff: 04/16/2018
   
  Outlook UI의 다양한 영역을 차지하는 양식 영역을 만들 수 있습니다. 예를 들어 인접 양식 영역은 양식의 첫 페이지 아래쪽에 표시되며 각 인접 양식 영역은 축소 가능합니다. 또한 전체 추가 양식 페이지로 표시되고 기존 표준 양식 또는 사용자 지정 양식에 나타날 수 있는 별도의 양식 영역을 추가할 수도 있습니다.  
   
- 자세한 내용은 [Creating Outlook Form Regions](../vsto/creating-outlook-form-regions.md)을 참조하세요.  
+ 자세한 내용은 참조 [만들 Outlook 양식 영역](../vsto/creating-outlook-form-regions.md)합니다.  
   
 ##  <a name="Controls"></a> 문서의 컨트롤  
  다양한 컨트롤을 Word 문서와 Excel 워크시트에 추가할 수 있습니다. 예를 들어 사용자가 표준 형식으로 날짜를 입력하거나 데이터베이스에 데이터를 보내기 위해 워크시트에 단추를 배치할 수 있도록 날짜 선택 컨트롤을 문서에 추가하려고 할 수 있습니다.  
   
- Excel 또는 Word의 문서 수준 프로젝트를 개발하는 경우 디자인 타임에 Visual Studio 디자이너를 사용하여 프로젝트의 문서나 통합 문서에 컨트롤을 추가하거나 런타임에 프로그래밍 방식으로 컨트롤을 추가할 수 있습니다. Excel 또는 Word의 VSTO 추가 기능 프로젝트를 개발하는 경우 런타임에 열려 있는 문서나 통합 문서에 프로그래밍 방식으로 컨트롤을 추가할 수 있습니다.  
+ Excel 또는 Word 용 문서 수준 프로젝트를 개발할 때에 컨트롤을 추가할 문서 또는 통합 문서 프로젝트에서 디자인 타임에 Visual Studio 디자이너를 사용 하거나 런타임에 프로그래밍 방식으로 컨트롤을 추가할 수 있습니다. Excel 또는 Word 용 VSTO 추가 기능 프로젝트를 개발할 때 열려 있는 문서나 런타임에 통합 문서에 컨트롤을 프로그래밍 방식으로 추가할 수 있습니다.  
   
- 자세한 내용은 [Host Items and Host Controls Overview](../vsto/host-items-and-host-controls-overview.md) 및 [Windows Forms Controls on Office Documents Overview](../vsto/windows-forms-controls-on-office-documents-overview.md)를 참조하세요.  
+ 자세한 내용은 참조 [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md) 및 [Windows forms 컨트롤 Office 문서 개요](../vsto/windows-forms-controls-on-office-documents-overview.md)합니다.  
   
 ##  <a name="Shortcut"></a> 바로 가기 메뉴  
  바로 가기 메뉴는 문서 또는 응용 프로그램 창에서 마우스 오른쪽 단추를 클릭할 때 나타납니다. 사용자가 문서, 통합 문서 또는 호스트 컨트롤을 마우스 오른쪽 단추로 클릭할 때와 같이 이벤트가 발생한 후 나타나도록 바로 가기 메뉴를 설정할 수 있습니다. 바로 가기 메뉴에 다양한 수의 메뉴 명령 또는 컨트롤을 추가할 수 있습니다. XML을 사용하여 바로 가기 메뉴를 만들 수 있습니다. 추가 하는 경우는 **리본 (XML)** 항목을 Office 프로젝트 바로 가기 메뉴를 만드는 리본 XML 파일에 XML을 추가할 수 있습니다. XML을 사용 하 여 바로 가기 메뉴를 만드는 방법에 대 한 자세한 내용은 참조 [하는 방법: 바로 가기 메뉴에 명령 추가](../vsto/how-to-add-commands-to-shortcut-menus.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [리본 개요](../vsto/ribbon-overview.md)   
- [Windows Forms 컨트롤 Office 문서 개요](../vsto/windows-forms-controls-on-office-documents-overview.md)   
+ [Windows forms 컨트롤 Office 문서 개요](../vsto/windows-forms-controls-on-office-documents-overview.md)   
  [작업 창 개요](../vsto/actions-pane-overview.md)   
  [Outlook 양식 영역 만들기](../vsto/creating-outlook-form-regions.md)   
  [사용자 지정 작업 창](../vsto/custom-task-panes.md)   
  [Office 솔루션에서 WPF 컨트롤 사용](../vsto/using-wpf-controls-in-office-solutions.md)   
  [방법: 리본에 개발자 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)   
- [방법: 추가 기능 사용자 인터페이스 오류 표시](../vsto/how-to-show-add-in-user-interface-errors.md)   
- [연습: Windows Form을 사용하여 데이터 수집](../vsto/walkthrough-collecting-data-using-a-windows-form.md)  
+ [방법: 사용자 인터페이스 오류 표시 추가 기능](../vsto/how-to-show-add-in-user-interface-errors.md)   
+ [연습: Windows form을 사용 하 여 데이터를 수집 합니다.](../vsto/walkthrough-collecting-data-using-a-windows-form.md)  
   
   

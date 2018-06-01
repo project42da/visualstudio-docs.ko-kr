@@ -7,13 +7,14 @@ ms.topic: conceptual
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: 3155eeaafdd419687b9111ef3e353f7a517aa10e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 20223a18fa422facc7d7a0a74336402d6d391b0a
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693447"
 ---
-# <a name="walkthrough-using-xslt-hierarchy"></a>연습: XSLT 계층 구조 사용
+# <a name="walkthrough-use-xslt-hierarchy"></a>연습: 사용 하 여 XSLT 계층 구조
 
 XSLT 계층 구조 도구를 사용하면 많은 XML 개발 작업을 간단하게 수행할 수 있습니다. XSLT 스타일시트에서는 `includes` 및 `imports` 명령을 사용하는 경우가 자주 있습니다. 컴파일은 주 스타일시트에서 시작하지만 XSLT 스타일시트를 컴파일했을 때 오류가 발생하는 경우 이러한 오류는 주 스타일시트와 다른 소스에서 발생된 것일 수 있습니다. 오류를 해결하거나 스타일시트를 편집하려면 포함되거나 가져온 스타일시트에 액세스할 수 있어야 합니다. 디버거에서 스타일시트를 단계별로 실행하면 포함되거나 가져온 스타일시트가 열릴 수 있으며 하나 이상의 포함된 스타일시트의 일부 지점에 중단점을 추가할 수 있습니다.
 
@@ -47,7 +48,7 @@ XSLT 계층 구조 도구가 유용한 다른 시나리오는 기본 제공 템�
     </COLLECTION>
     ```
 
-1. 다음 `xslincludefile.xsl`을 추가합니다.
+1. 다음 추가 *xslincludefile.xsl*:
 
     ```xml
     <?xml version='1.0'?>
@@ -70,7 +71,7 @@ XSLT 계층 구조 도구가 유용한 다른 시나리오는 기본 제공 템�
     </xsl:stylesheet>
     ```
 
-3.  다음 `xslinclude.xsl` 파일을 추가합니다.
+3.  다음 추가 *xslinclude.xsl* 파일:
 
     ```xml
     <?xml version='1.0'?>

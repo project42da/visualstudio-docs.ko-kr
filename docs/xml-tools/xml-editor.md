@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0ac3c30f0db4c2aa1dc606348604efce3bb3ddac
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: e2111286afde9e60391f1a7410fec2778b3ed673
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693788"
 ---
 # <a name="xml-editor"></a>XML 편집기
 
@@ -39,7 +40,7 @@ XML 편집기는 Visual Studio 텍스트 편집기에 근거 하며 XML 언어�
 
 - 와 통합은 [XML 스키마 탐색기](../xml-tools/xml-schema-explorer.md)합니다. XML 스키마를 계층적으로 표시를 제공합니다.
 
-XML 편집기는.xml,.xsd,.xsl, 및.config 등의 잘 알려진 파일 확장명에 대해 호출 됩니다. 또한 파일에 XML이 포함된 경우 알려지지 않은 파일 확장명에 대해서도 호출됩니다. 사용 하 여 XML 편집기와 모든 파일을 열 수도 있습니다는 **연결** 옵션을 목록에서 XML 편집기를 선택 합니다.
+XML 편집기와 같은 잘 알려진 파일 확장명에 대해 호출 됩니다 *.xml*, *.xsd*, *.xsl*, 및 *.config*합니다. 또한 파일에 XML이 포함된 경우 알려지지 않은 파일 확장명에 대해서도 호출됩니다. 사용 하 여 XML 편집기와 모든 파일을 열 수도 있습니다는 **연결** 옵션을 목록에서 XML 편집기를 선택 합니다.
 
 ## <a name="xslt-intellisense"></a>XSLT IntelliSense
 

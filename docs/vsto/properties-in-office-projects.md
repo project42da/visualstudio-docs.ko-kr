@@ -1,5 +1,5 @@
 ---
-title: Office 프로젝트의 속성 | Microsoft Docs
+title: Office 프로젝트의 속성
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,19 +21,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 47af1dae914528a3a338503989e53f081dfffde5
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2b5c5e0719f7b619fa00a3a0f4333ae0080c0715
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692774"
 ---
 # <a name="properties-in-office-projects"></a>Office 프로젝트의 속성
   Visual Studio에서 Office 프로젝트에 사용할 수 있는 몇 가지 중요한 속성이 있습니다. 이러한 속성은 **속성** 창에서 액세스할 수 있습니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="namespace-for-host-item"></a>호스트 항목의 네임스페이스  
- Visual C# 프로젝트에서 **호스트 항목의 네임스페이스** 속성을 사용하여 호스트 항목 클래스(예: `ThisAddIn`, `ThisWorkbook`또는 `ThisDocument` 클래스)의 네임스페이스를 변경할 수 있습니다. 이 속성은 **솔루션 탐색기** 에서 문서 수준 프로젝트의 문서 노드(예: ExcelWorkbook1.xlsx 또는 WordDocument1.docx)를 선택하거나 VSTO 추가 기능 프로젝트(예: Excel 또는 Word)의 응용 프로그램 노드를 선택하면 **속성**창에 나타납니다.  
+## <a name="namespace-for-host-item"></a>호스트 항목에 대 한 Namespace  
+ Visual C# 프로젝트에서 **호스트 항목의 네임스페이스** 속성을 사용하여 호스트 항목 클래스(예: `ThisAddIn`, `ThisWorkbook`또는 `ThisDocument` 클래스)의 네임스페이스를 변경할 수 있습니다. 이 속성에 표시는 **속성** 문서 수준 프로젝트에서 문서 노드를 선택 하는 경우 창 (같은 *: ExcelWorkbook1.xlsx* 또는 *WordDocument1.docx* ) 또는에서 VSTO 추가 기능 프로젝트에서 (예: Excel 또는 Word)의 응용 프로그램 노드 **솔루션 탐색기**합니다.  
   
  Visual C# Office 프로젝트를 만들 때 프로젝트의 이름에 따라 호스트 항목에 네임스페이스가 제공됩니다. 코드 파일을 직접 편집하는 대신 **호스트 항목의 네임스페이스** 속성을 사용하여 네임스페이스를 변경하는 것이 좋습니다. 이 속성을 사용하는 경우 네임스페이스는 표시된 코드 파일뿐만 아니라 생성된(숨겨진) 코드 파일에서 변경됩니다.  
   
@@ -46,15 +47,15 @@ ms.lasthandoff: 04/16/2018
   
 -   문서에서 데이터 집합을 캐시하지 않으려면 **false** 를 선택합니다.  
   
- 데이터 캐싱에 대한 자세한 내용은 [Cached Data in Document-Level Customizations](../vsto/cached-data-in-document-level-customizations.md)를 참조하세요.  
+ 데이터를 캐시 하는 방법에 대 한 자세한 내용은 참조 [문서 수준 사용자 지정에서 캐시 된 데이터](../vsto/cached-data-in-document-level-customizations.md)합니다.  
   
 ## <a name="value2"></a>Value2  
  **Value2** 속성은 Excel 통합 문서 또는 서식 파일 프로젝트에만 사용할 수 있습니다. 이 속성은 워크시트 디자이너에서 **컨트롤을 선택할 때** 속성 **창에서** Databindings <xref:Microsoft.Office.Tools.Excel.NamedRange> 속성 노드 아래에 표시됩니다.  
   
  **속성** 창에서 **Value2** 속성을 사용하여 <xref:Microsoft.Office.Tools.Excel.NamedRange.Value2%2A> 의 <xref:Microsoft.Office.Tools.Excel.NamedRange> 속성을 데이터 원본의 필드에 바인딩할 수 있습니다.  
   
-## <a name="see-also"></a>참고 항목  
- [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)   
+## <a name="see-also"></a>참고자료  
+ [디자인 하 고 Office 솔루션을 만들려면](../vsto/designing-and-creating-office-solutions.md)   
  [Office 프로젝트 템플릿 개요](../vsto/office-project-templates-overview.md)   
  [Office 프로젝트의 이벤트](../vsto/events-in-office-projects.md)  
   

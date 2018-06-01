@@ -10,15 +10,16 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f4354e58e8de2d877e726b4615bac3832bfc37d2
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2a3e281f8e3995cf22100d328089f1993110f756
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693671"
 ---
-# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>정렬, 필터링 및 그룹화(XML 스키마 탐색기)
+# <a name="sorting-filtering-and-grouping-xml-schema-explorer"></a>정렬, 필터링 및 그룹화 (XML 스키마 탐색기)
 
-통해 사용할 수 있는 옵션을 설명 하는이 항목의 **정렬, 필터링 및 그룹화 옵션** XML 스키마 탐색기 도구 모음에서 메뉴.
+통해 사용할 수 있는 옵션을 설명 하는이 항목의 **정렬, 필터링 및 그룹화 옵션** 메뉴에는 **XML 스키마 탐색기** 도구 모음입니다.
 
 ## <a name="filter-options"></a>필터 옵션
 
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="sorting-options"></a>정렬 옵션
 
- 사용할 수 있는 정렬 옵션은 다음과 같습니다. 기본값은 **유형별 정렬**합니다. 정렬 기준 옵션은 파일 및 네임스페이스에 적용되지 않습니다.
+ 사용할 수 있는 정렬 옵션은 다음과 같습니다. 기본값은 **유형별 정렬**합니다. **정렬 기준** 옵션 파일 및 네임 스페이스에 적용 되지 않습니다.
 
 -   **유형별 정렬**합니다.
 

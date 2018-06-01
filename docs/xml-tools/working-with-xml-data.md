@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 43a58e9a0fd8522655aeed5f8539b7abefcb9cb8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 20488e1e6da6b6bcc0bf3cdab875d6c19631521c
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693723"
 ---
 # <a name="working-with-xml-data"></a>XML 데이터 사용
 
@@ -35,7 +36,7 @@ XML 편집기는 XML 문서를 편집 하는 데 사용 됩니다. 이 편집기
 
 - IntelliSense 지원을 포함하여 XSLT 스타일시트 편집 지원
 
-- XML 스키마 탐색기
+- **XML 스키마 탐색기**합니다.
 
 ## <a name="xml-schema-designer"></a>XML 스키마 디자이너
 
@@ -53,7 +54,7 @@ Visual Studio에서 XSLT 스타일시트를 디버깅할 수 있습니다. 디�
 
 [만들기 및 Visual Studio에서 데이터 집합을 구성](../data-tools/create-and-configure-datasets-in-visual-studio.md) 데이터 집합을 만들기 위한 디자인 타임 도구에 대 한 설명을 제공 합니다.
 
-[관리 코드에서 XML 웹 서비스](http://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196) 만들기 및 XML 웹 서비스를 배포 하는 방법 및 XML 웹 서비스에 액세스 하는 방법에 설명 합니다.
+[관리 코드에서 XML Web services](http://msdn.microsoft.com/c9a7dc25-3e68-4723-bfb7-de4320830196) 만들기 및 XML 웹 서비스를 배포 하는 방법 및 XML 웹 서비스에 액세스 하는 방법에 설명 합니다.
 
 ## <a name="see-also"></a>참고자료
 

@@ -18,11 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3795b7c920415ee733e08132234de381cf610aba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 795fd4a146aaedbfb4035cfc028bd37e0b0282fd
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691715"
 ---
 # <a name="calling-into-the-sharepoint-object-models"></a>SharePoint 개체 모델 호출
   Visual Studio에서 SharePoint 도구의 확장을 만들 때 특정 작업을 수행 하는 SharePoint Api를 호출 해야 할 수 있습니다. 예를 들어 SharePoint 프로젝트용 사용자 지정 배포 단계를 만드는 경우 SharePoint 솔루션을 배포 하기 위해 작업 중 일부를 수행 하는 Api를 호출 해야 할 수 있습니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
  SharePoint 개체 모델의 개요를 참조 하십시오. [프로그래밍 모델의 SharePoint 도구 확장의 개요](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)합니다.  
   
-## <a name="using-the-client-object-model-in-extension-projects"></a>확장 프로젝트에서 클라이언트 개체 모델 사용  
+## <a name="using-the-client-object-model-in-extension-projects"></a>확장 프로젝트에서 클라이언트 개체 모델 사용
  SharePoint 도구의 확장을 개발 하는 경우 다른 관리 되는 Api 집합이 마찬가지로 프로젝트에는 클라이언트 개체 모델을 사용할 수 있습니다. 프로젝트에 클라이언트 개체 모델에서 어셈블리에 대 한 참조를 추가할 수 있습니다 및 사용자 코드에서 직접 클라이언트 개체 모델 Api를 호출할 수 있습니다.  
   
  그러나 클라이언트 개체 모델에 SharePoint 도구 확장의 컨텍스트에서 두 가지 단점이 있습니다.  
@@ -42,9 +43,9 @@ ms.lasthandoff: 04/16/2018
   
  Visual Studio에서 SharePoint 도구 확장에서 클라이언트 개체 모델을 사용 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 서버 탐색기 확장의 SharePoint 클라이언트 개체 모델 호출](../sharepoint/walkthrough-calling-into-the-sharepoint-client-object-model-in-a-server-explorer-extension.md)합니다.  
   
-## <a name="using-the-server-object-model-in-extension-projects"></a>확장 프로젝트에서 서버 개체 모델 사용  
+## <a name="using-the-server-object-model-in-extension-projects"></a>확장 프로젝트에서 서버 개체 모델 사용
  서버 개체 모델에는 클라이언트 개체 모델의 상위 집합입니다. 서버 개체 모델을 사용 하는 경우에 모든 기능을 사용할 수 있습니다는 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 및 [!INCLUDE[moss_14_long](../sharepoint/includes/moss-14-long-md.md)] 프로그래밍 방식으로 노출 합니다.  
-  
+
  SharePoint 도구 확장에서 서버 개체 모델 Api를 사용할 수 있지만 Api를 직접 호출할 수 없습니다. 서버 개체 모델은.NET Framework 3.5를 대상으로 하는 64 비트 프로세스를 통해서만 호출할 수 있습니다. 그러나 SharePoint 도구 확장 필요는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 32 비트 Visual Studio 프로세스에서 실행 됩니다. 따라서 SharePoint 도구 확장을에서 SharePoint 서버 개체 모델에서 어셈블리를 직접 참조 수 없습니다.  
   
  사용자 지정 SharePoint 도구 확장에서 서버 개체 모델을 사용 하려는 경우 만들어야 *SharePoint 명령* API를 호출 합니다. SharePoint 명령 서버 개체 모델을 직접 호출할 수 있는 보조 어셈블리를 정의 합니다. 확장 프로젝트에서 직접 호출할 있습니다 하지 SharePoint 명령 ExecuteCommand 메서드를 사용 하 여 프로그램 <xref:Microsoft.VisualStudio.SharePoint.ISharePointConnection> 개체입니다.  
@@ -53,12 +54,11 @@ ms.lasthandoff: 04/16/2018
   
  SharePoint 명령 만들기 및 사용 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: SharePoint 프로젝트용 사용자 지정 배포 단계 만들기](../sharepoint/walkthrough-creating-a-custom-deployment-step-for-sharepoint-projects.md) 및 [연습: 디스플레이 웹 서버 탐색기 확장 파트](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)합니다.  
   
-### <a name="understanding-how-sharepoint-commands-are-executed"></a>이해 어떻게 SharePoint 명령 실행  
+### <a name="understand-how-sharepoint-commands-are-executed"></a>SharePoint 명령 실행 방법 이해
  SharePoint 명령을 정의 하는 어셈블리가 vssphost4.exe 라는 64 비트 호스트 프로세스에서 로드 됩니다. SharePoint 명령은 SharePoint 도구 확장에서를 호출한 후 32 비트 Visual Studio 프로세스 (devenv.exe) 대신 vssphost4.exe 명령이 실행 됩니다. 레지스트리에서 값을 설정 하 여 SharePoint 명령 실행 방법의 일부 측면을 제어할 수 있습니다. 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구에 대 한 확장 디버깅](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [방법: SharePoint 명령 만들기](../sharepoint/how-to-create-a-sharepoint-command.md)   
  [방법: SharePoint 명령 실행](../sharepoint/how-to-execute-a-sharepoint-command.md)   
  [SharePoint 도구 확장의 프로그래밍 모델 개요](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)  
-  
   

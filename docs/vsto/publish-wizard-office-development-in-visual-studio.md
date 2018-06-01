@@ -1,5 +1,5 @@
 ---
-title: 게시 마법사 (Visual Studio에서 Office 개발) | Microsoft Docs
+title: 게시 마법사 (Visual Studio에서 Office 개발)
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,13 +21,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 67e3222c6f1deeca58b84aca4ba73d2826483b26
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 2481557d1d75d64b5eb3f52f2755953ca344d323
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692722"
 ---
-# <a name="publish-wizard-office-development-in-visual-studio"></a>게시 마법사(Visual Studio에서는 Office 개발)
+# <a name="publish-wizard-office-development-in-visual-studio"></a>게시 마법사 (Visual Studio에서 Office 개발)
   사용 하 여는 **게시 마법사** 솔루션 파일을 지정 된 위치에 복사 하려면 매니페스트 파일을 만들고 설치 프로그램을 만듭니다.  
   
  이 마법사에 액세스 하려면는 **빌드** 메뉴 선택 **게시** *SolutionName*합니다. 에 액세스할 수도 있습니다는 **게시 마법사** 에서 **솔루션 탐색기**합니다. 프로젝트 노드에 대 한 바로 가기 메뉴를 연 다음 선택 **게시**합니다.  
@@ -40,9 +41,9 @@ ms.lasthandoff: 04/16/2018
   
  디스크 경로, 파일 공유, FTP 사이트 또는 웹 사이트 URL로 위치를 입력 하거나 클릭 하 고 **찾아보기** 위치를 검색 하는 단추입니다. 이러한 형식의 경로일 수 있습니다.  
   
--   C:\Deploy\MyApplication \MyApplication 등의 표준 Windows 형식의 상대 또는 절대 경로입니다.  
+-   표준에 대 한 상대 또는 절대 경로 포맷할와 같은 *C:\Deploy\MyApplication* 또는 *\MyApplication*합니다.  
   
--   범용 명명 규칙 (UNC) 경로 같은 \\\ServerName\MyApplication\\합니다.  
+-   범용 명명 규칙 (UNC) 경로 같은  *\\\ServerName\MyApplication\\*합니다.  
   
 -   URL을 웹 사이트와 같은 http://www.microsoft.com/MyApplication합니다.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
  CD 또는 DVD에는 visual Studio 진행 되지 않습니다. 출력을 CD 또는 DVD에 수동으로 복사 해야 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [ClickOnce를 사용 하 여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-clickonce.md)   
  [프로젝트 디자이너, 게시 페이지 &#40;Visual Studio에서 Office 개발&#41;](../vsto/publish-page-project-designer-office-development-in-visual-studio.md)   
  [Office 솔루션 배포](../vsto/deploying-an-office-solution.md)  

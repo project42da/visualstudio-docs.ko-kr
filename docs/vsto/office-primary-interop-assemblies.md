@@ -17,11 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2ab565dfbc4fec21c646aa72b54f3694d99e6a1f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: d1851fd05999bfc2d925cbe4a079be3a9f4139db
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693473"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office 주 Interop 어셈블리
   Office 프로젝트에서 Microsoft Office 응용 프로그램의 기능을 사용하려면 응용 프로그램용 PIA(주 interop 어셈블리)를 사용해야 합니다. PIA를 사용하면 관리 코드가 Microsoft Office 응용 프로그램의 COM 기반 개체 모델과 상호 작용할 수 있습니다.  
@@ -32,13 +33,13 @@ ms.lasthandoff: 04/16/2018
   
 -   [프로젝트 빌드 및 실행을 위한 개별 주 interop 어셈블리](#separateassemblies)  
   
--   [단일 프로젝트에서 여러 Microsoft Office 응용 프로그램의 기능 사용](#usingfeatures)  
+-   [단일 프로젝트에서 여러 Microsoft Office 응용 프로그램의 기능을 사용 합니다.](#usingfeatures)  
   
 -   [Microsoft Office 응용 프로그램용 주 interop 어셈블리의 전체 목록](#pialist)  
   
- 주 interop 어셈블리에 대한 자세한 내용은 [주 Interop 어셈블리](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)를 참조하세요.  
+ 주 interop 어셈블리에 대 한 자세한 내용은 참조 [주 interop 어셈블리](http://msdn.microsoft.com/en-us/b977a8be-59a0-40a0-a806-b11ffba5c080)합니다.  
   
-##  <a name="separateassemblies"></a> Separate Primary Interop Assemblies for Building and Running Projects  
+##  <a name="separateassemblies"></a> 빌드 및 실행을 위한 개별 주 interop 어셈블리  
  Visual Studio에서는 개발 컴퓨터의 여러 PIA 집합을 사용합니다. 이러한 여러 어셈블리 집합은 다음 위치에 있습니다.  
   
 -   프로그램 파일 디렉터리의 폴더  
@@ -56,30 +57,30 @@ ms.lasthandoff: 04/16/2018
   
  Visual Studio는 이러한 PIA 복사본을 개발 컴퓨터의 다음 위치에 설치합니다.  
   
--   %ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office14  
+-   *%ProgramFiles%\Microsoft visual Studio 12.0\Visual Studio Tools for Office\PIA\Office14*  
   
-     또는 64비트 시스템의 경우 %ProgramFiles(x86)%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office14  
+     (또는 *%ProgramFiles (x86) %\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office14* 64 비트 운영 체제에서)  
   
--   %ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15  
+-   *%ProgramFiles%\Microsoft visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15*  
   
-     또는 64비트 시스템의 경우 %ProgramFiles(x86)%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15  
+     (또는 *%ProgramFiles (x86) %\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\Office15* 64 비트 운영 체제에서)  
   
 ### <a name="primary-interop-assemblies-in-the-global-assembly-cache"></a>전역 어셈블리 캐시의 주 interop 어셈블리  
- 특정 개발 작업을 수행하려면 개발 컴퓨터의 전역 어셈블리 캐시에 PIA를 설치하고 등록해야 합니다. 일반적으로는 개발 컴퓨터에 Office를 설치할 때 PIA가 자동으로 설치됩니다. 자세한 내용은 [Configuring a Computer to Develop Office Solutions](../vsto/configuring-a-computer-to-develop-office-solutions.md)을 참조하세요.  
+ 특정 개발 작업을 수행하려면 개발 컴퓨터의 전역 어셈블리 캐시에 PIA를 설치하고 등록해야 합니다. 일반적으로는 개발 컴퓨터에 Office를 설치할 때 PIA가 자동으로 설치됩니다. 자세한 내용은 참조 [Office 솔루션을 개발 하도록 컴퓨터 구성](../vsto/configuring-a-computer-to-develop-office-solutions.md)합니다.  
   
- 최종 사용자 컴퓨터에서는 Office 솔루션을 실행하는 데 Office PIA가 필요하지 않습니다. 자세한 내용은 [Designing and Creating Office Solutions](../vsto/designing-and-creating-office-solutions.md)을 참조하세요.  
+ 최종 사용자 컴퓨터에서는 Office 솔루션을 실행하는 데 Office PIA가 필요하지 않습니다. 자세한 내용은 참조 [디자인 Office 솔루션을 만들 및](../vsto/designing-and-creating-office-solutions.md)합니다.  
   
-##  <a name="usingfeatures"></a> Using Features of Multiple Microsoft Office Applications in a Single Project  
+##  <a name="usingfeatures"></a> 단일 프로젝트에서 여러 Microsoft Office 응용 프로그램의 기능을 사용 합니다.  
  Visual Studio의 각 Office 프로젝트 템플릿은 단일 Microsoft Office 응용 프로그램에서 사용하도록 설계되어 있습니다. 여러 Microsoft Office 응용 프로그램에서 기능을 사용하거나 Visual Studio에 프로젝트가 없는 응용 프로그램 또는 구성 요소에서 기능을 사용하려면 필요한 PIA에 대한 참조를 추가해야 합니다.  
   
- 대부분의 경우에는 PIA에 대한 참조를 Visual Studio under the %ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools for Office\PIA\ 디렉터리에 추가해야 합니다. 이러한 어셈블리 버전은 **참조 관리자** 대화 상자의 **프레임워크** 탭에 표시됩니다. 자세한 내용은 [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)을 참조하세요.  
+ 대부분의 경우에서 Visual Studio에서 Office\PIA *%ProgramFiles%\Microsoft Visual Studio 12.0\Visual Studio Tools에 설치 되어 있는 Pia에 대 한 참조를 추가 해야\* 디렉터리입니다. 이러한 어셈블리 버전은 **참조 관리자** 대화 상자의 **프레임워크** 탭에 표시됩니다. 자세한 내용은 참조 [하는 방법: 주 interop 어셈블리를 통해 대상 Office 응용 프로그램](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)합니다.  
   
  전역 어셈블리 캐시에서 PIA를 설치 및 등록한 경우 이러한 어셈블리 버전은 **참조 관리자** 대화 상자의 **COM** 탭에 표시됩니다. 이러한 어셈블리 버전에 대한 참조는 추가해서는 안 됩니다. 해당 버전을 사용하는 경우 몇 가지 개발 문제가 발생할 수 있습니다. 예를 들어 전역 어셈블리 캐시에 여러 PIA 버전을 등록한 경우에는 **참조 관리자** 대화 상자의 **COM** 탭에서 다른 어셈블리 버전을 지정하더라도 프로젝트는 마지막으로 등록된 어셈블리 버전에 자동으로 바인딩됩니다.  
   
 > [!NOTE]  
->  일부 어셈블리는 해당 어셈블리를 참조하는 어셈블리를 추가할 때 프로젝트에 자동으로 추가됩니다. 예를 들어 Word, Excel, Outlook, Microsoft Forms 또는 Graph 어셈블리에 대한 참조를 추가하면 Office.dll 및 Microsoft.Vbe.Interop.dll 어셈블리에 대한 참조가 자동으로 추가됩니다.  
+>  일부 어셈블리는 해당 어셈블리를 참조하는 어셈블리를 추가할 때 프로젝트에 자동으로 추가됩니다. 예를 들어에 대 한 참조는 *Office.dll* 및 *Microsoft.Vbe.Interop.dll* Word, Excel, Outlook, Microsoft Forms 또는 Graph에 대 한 참조를 추가 하면 어셈블리가 자동으로 추가 됩니다 어셈블리입니다.  
   
-##  <a name="pialist"></a> Microsoft Office 응용 프로그램용 주 interop 어셈블리  
+##  <a name="pialist"></a> Microsoft Office 응용 프로그램에 대 한 주 interop 어셈블리  
  다음 테이블에는 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 및 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)]에 사용 가능한 주 interop 어셈블리가 나와 있습니다.  
   
 |Office 응용 프로그램 또는 구성 요소|주 interop 어셈블리 이름|  
@@ -106,10 +107,10 @@ ms.lasthandoff: 04/16/2018
 |Microsoft Visual Basic for Applications Extensibility 5.3|Microsoft.Vbe.Interop.dll|  
   
 ### <a name="binding-redirect-assemblies"></a>바인딩 리디렉션 어셈블리  
- Office PIA를 Office와 함께 또는 PIA의 재배포 가능 패키지를 설치하여 전역 어셈블리 캐시에 설치 및 등록하면 바인딩 리디렉션 어셈블리도 전역 어셈블리 캐시에만 설치됩니다. 이러한 어셈블리를 통해 주 interop 어셈블리의 올바른 버전이 런타임에 로드되도록 할 수 있습니다. 예를 들어 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] 어셈블리를 참조하는 솔루션이 같은 주 interop 어셈블리의 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 버전이 설치된 컴퓨터에서 실행되면 바인딩 리디렉션 어셈블리는 주 interop 어셈블리의 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] 버전을 로드하도록 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 런타임에 명령합니다. 자세한 내용은 [방법: 자동 바인딩 리디렉션 사용 설정 및 해제](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)를 참조하십시오.  
+ Office PIA를 Office와 함께 또는 PIA의 재배포 가능 패키지를 설치하여 전역 어셈블리 캐시에 설치 및 등록하면 바인딩 리디렉션 어셈블리도 전역 어셈블리 캐시에만 설치됩니다. 이러한 어셈블리는 주 interop 어셈블리의 올바른 버전이 런타임에 로드는 있는지 확인할 수 있습니다. 예를 들어 [!INCLUDE[office14_long](../vsto/includes/office14-long-md.md)] 어셈블리를 참조하는 솔루션이 같은 주 interop 어셈블리의 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 버전이 설치된 컴퓨터에서 실행되면 바인딩 리디렉션 어셈블리는 주 interop 어셈블리의 [!INCLUDE[dnprdnshort](../sharepoint/includes/dnprdnshort-md.md)] 버전을 로드하도록 [!INCLUDE[Office_15_short](../vsto/includes/office-15-short-md.md)] 런타임에 명령합니다. 자세한 내용은 참조 [하는 방법: 자동 바인딩 리디렉션 사용 안 함 및 사용 하도록 설정](/dotnet/framework/configure-apps/how-to-enable-and-disable-automatic-binding-redirection)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [방법: 주 Interop 어셈블리를 통한 Office 응용 프로그램 대상 선택](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
+## <a name="see-also"></a>참고자료  
+ [방법: 주 interop 어셈블리를 통해 대상 Office 응용 프로그램](../vsto/how-to-target-office-applications-through-primary-interop-assemblies.md)   
  [Excel 개체 모델 개요](../vsto/excel-object-model-overview.md)   
  [InfoPath 솔루션](../vsto/infopath-solutions.md)   
  [Outlook 개체 모델 개요](../vsto/outlook-object-model-overview.md)   

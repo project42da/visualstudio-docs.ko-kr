@@ -20,16 +20,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f823c8c67750dec31c6c2b534ecc7500e20defaf
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6c6fc0b1169ff906d7cda36eeeb5a74410cf46a9
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691498"
 ---
 # <a name="creating-a-business-data-connectivity-model"></a>비즈니스 데이터 연결 모델 만들기
   BDC 비즈니스 데이터 연결 () 모델을 만들거나 Visual Studio를 사용 하 여 기존 BDC 모델을 사용자 지정할 수 있습니다. 각 SharePoint 프로젝트에 모델 하나만 포함할 수 있습니다. 자세한 내용은 참조 [를 SharePoint에 비즈니스 데이터 통합](../sharepoint/integrating-business-data-into-sharepoint.md)합니다.  
   
-## <a name="creating-a-new-model"></a>새 모델 만들기  
+## <a name="create-a-new-model"></a>새 모델 만들기
  새 모델을 만들려면 만들기는 **비즈니스 데이터 연결 모델** 프로젝트 또는 추가 **비즈니스 데이터 연결 모델** 항목의 **빈 SharePoint 프로젝트**합니다.  
   
 > [!NOTE]  
@@ -53,7 +54,7 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Visual Studio 프로젝트를 디버깅할 때 로컬 컴퓨터에 두 위치 모두에 어셈블리를 복사 합니다.  
   
-## <a name="adding-an-existing-model"></a>기존 모델 추가  
+## <a name="add-an-existing-model"></a>기존 모델 추가
  SharePoint Designer와 같은 다른 도구를 사용 하 여 만든 모델을 가져올 수 있습니다. 다음과 같은 경우 프로젝트에 기존 모델을 가져올 수 있습니다.  
   
 -   SharePoint 서버 팜에 이미 배포 된 모델을 사용자 지정 합니다.  
@@ -64,7 +65,7 @@ ms.lasthandoff: 04/16/2018
   
  옵션을 선택 하 여 가져온된 모델에 형식이.NET Framework 어셈블리의 LOB 시스템을 추가할 수 있습니다는 **추가.NET 어셈블리 LobSystem**합니다. 이 사용자 지정 코드를 작성 및 디자이너를 사용 하 여 가져온된 모델에 대 한 메타 데이터를 정의할 수 있습니다.  
   
-## <a name="related-topics"></a>관련 항목  
+## <a name="related-topics"></a>관련 항목
   
 |제목|설명|  
 |-----------|-----------------|  
@@ -73,4 +74,4 @@ ms.lasthandoff: 04/16/2018
 |[방법: 리소스 파일을 사용하여 지역화된 이름, 속성 및 사용 권한 지정](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)|웹 파트 또는 웹 페이지에서 모델을 사용할 때 모델 메타 데이터와 병합 될 문자열을 제공 하는 방법에 설명 합니다.|  
 |[방법: BDC 기능에 사용자 지정 어셈블리 포함](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)|기능에 있는 사용자 지정 어셈블리를 포함 하는 방법을 보여 줍니다.|  
   
-  
+ 
