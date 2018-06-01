@@ -20,20 +20,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 3f71352dad7b77b2ce92816e84a7c90ec16710ed
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 94f93d58933ad0aba6cde985dc260fe3341aa5d2
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691965"
 ---
-# <a name="creating-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint 프로젝트 항목에 대한 항목 템플릿 및 프로젝트 템플릿 만들기
+# <a name="creating-item-templates-and-project-templates-for-sharepoint-project-items"></a>SharePoint 프로젝트 항목에 대 한 프로젝트 템플릿과 항목 템플릿 만들기
   사용자 지정 SharePoint 프로젝트 항목 형식을 정의한 경우 다른 개발자가 Visual Studio에서 프로젝트 항목을 사용할 수 있도록 항목 템플릿을 또는 프로젝트 템플릿에 연결할 수 있습니다. 템플릿에 대해 마법사를 만들 수 있습니다.  
   
  예를 들어 Visual Studio 프로젝트 템플릿 또는 SharePoint 사이트에 필드를 추가 하기 위한 항목 템플릿을 포함 되지 않습니다. SharePoint 프로젝트 항목 형식 필드를 나타내는 정의 하 고 다른 개발자가 SharePoint 프로젝트에 필드 항목을 추가 하는 데 사용할 수 있는 항목 템플릿을 작성 수 있습니다. 또는 개발자가 필드 항목이 포함 된 새로운 SharePoint 프로젝트를 만들 수 있도록 프로젝트 템플릿을 생성할 수 있습니다. 두 경우 모두 개발자가 사용자 템플릿을 사용 하는 경우 표시 되는 마법사를 제공할 수 있습니다. 이 마법사는 새 항목 또는 프로젝트를 구성 하는 개발자 로부터 정보를 수집할 수 있습니다.  
   
  항목 템플릿 및 프로젝트 템플릿에 Visual Studio에서 프로젝트 항목 또는 프로젝트를 만드는 데 사용 되는 파일을 포함 하는.zip 파일입니다. 항목 템플릿 및 프로젝트 템플릿의 기본 사항에 대 한 자세한 내용은 참조 [프로젝트 만들기 및 항목 템플릿](/visualstudio/ide/creating-project-and-item-templates)합니다.  
   
-##  <a name="creatingitemtemplates"></a> 항목 템플릿 만들기  
+## <a name="create-item-templates"></a>항목 템플릿 만들기
  SharePoint 프로젝트 항목에 대 한 항목 템플릿을 만들 때 몇 가지 사항은 항상 파일 및 특정 종류의 프로젝트 항목에서 사용 될 수 있는 선택적 파일입니다. SharePoint 프로젝트 항목 형식 정의 및 항목 템플릿을 만드는 방법을 보여 주는 연습을 참조 하십시오. [연습: 항목 템플릿, 1 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)합니다.  
   
  다음 표에 SharePoint 프로젝트 항목에 대 한 항목 템플릿을 만드는 데 필요한 파일이 있습니다.  
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/16/2018
 |.aspx|ASP.NET 페이지 파일입니다. 이 파일에는 응용 프로그램 페이지를 정의 하는 XML 태그가 포함 됩니다.|  
 |.cs 또는.vb 파일|이러한 코드 파일의 Visual C# 또는 Visual Basic 코드, 응용 프로그램 페이지, 웹 파트 워크플로 등에서 액세스할 수 있는 프로그래밍 모델을 가져야 하는 SharePoint 사용자 지정 동작을 정의 합니다.|  
   
-## <a name="creating-project-templates"></a>프로젝트 템플릿 만들기  
+## <a name="create-project-templates"></a>프로젝트 템플릿 만들기
  SharePoint 프로젝트 템플릿을 만들 때에 다음과 같은 일부 파일은 항상 특정 종류의 프로젝트에서 사용할 수 있는 필수 및 선택적 파일입니다. 일반적으로 SharePoint 프로젝트는 SharePoint 프로젝트 항목을 하나 이상 포함 됩니다. 그러나 필요 하지 않습니다. 예를 들어 다른 프로젝트에서 만든 SharePoint 솔루션을 배포 하는 데에 사용 되는 SharePoint 프로젝트 템플릿을 정의할 수 있습니다.  
   
  SharePoint 프로젝트 항목 형식 정의 대 한 프로젝트 템플릿을 작성 하는 방법을 보여 주는 연습을 참조 하십시오. [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)합니다.  
@@ -77,12 +78,12 @@ ms.lasthandoff: 04/16/2018
 |*featureName*.feature|이 파일은 배포에 대 한 여러 프로젝트 항목을 그룹화 하는 데 사용 되는 SharePoint 기능을 정의 합니다. 기능 디자이너를 사용 하 여 프로젝트의 기능을 사용자 지정 Visual Studio 기능에 대 한 데이터를이 파일에 저장 합니다. 다른 기능으로 프로젝트 항목을 그룹화 하려는 경우에 여러.feature 파일을 포함할 수 있습니다.<br /><br /> 사용자 지정 SharePoint 프로젝트 템플릿을 만들 때 좋습니다 각.feature 파일에 최소 필수 콘텐츠를 포함 하 고의 Api를 사용 하 여 기능을 구성 하는 <xref:Microsoft.VisualStudio.SharePoint.Features> 네임 스페이스와 연결 된 확장에는 프로젝트 템플릿입니다. 이 작업을 수행 하는 경우 프로젝트 템플릿은.feature 파일의 구조에 나중에 변경 내용에서 보호 됩니다. 콘텐츠는 권한이 있어야 사용.feature 파일을 만들 방법을 보여 주는 예제를 보려면 [연습: 1 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-1.md)합니다.<br /><br /> .Feature 파일을 직접 수정 하려면 % Program Files (Visual Studio 11.0\Xml\Schemas\FeatureModelSchema.xsd x86)%\Microsoft 스키마를 사용 하 여 콘텐츠를 확인할 수 있습니다.|  
 |*featureName*합니다. Template.xml 파일|이 파일은 프로젝트에서 생성 되는 각 기능에 대해 기능 매니페스트 파일 (Feature.xml)에 대 한 기본을 제공 합니다. 프로젝트 형식의 사용자가 변경할 수는 사용 되지 않는 몇 가지 동작을 지정 하려는 경우이 파일에 콘텐츠를 추가할 수 있습니다. 자세한 내용은 참조 [문서 블록: 기능](http://go.microsoft.com/fwlink/?LinkId=169183) 및 [Feature.xml](http://go.microsoft.com/fwlink/?LinkId=177795) 파일입니다.<br /><br /> 프로젝트에서 솔루션 패키지를 빌드할 때 Visual Studio의 각 쌍의 콘텐츠를 병합 하는 *featureName*.feature 파일 및 *featureName*합니다. 기능 매니페스트 파일에 template.xml 파일 파일입니다. 솔루션 패키지를 작성 하는 방법에 대 한 자세한 내용은 참조 [하는 방법: SharePoint 솔루션 패키지 (wsp) 만들기](http://msdn.microsoft.com/en-us/b24be45c-e91d-49bb-afb0-7b265404214b)합니다.|  
   
-## <a name="creating-wizards-for-item-templates-and-project-templates"></a>항목 템플릿 및 프로젝트 템플릿 만들기 마법사  
+## <a name="create-wizards-for-item-templates-and-project-templates"></a>항목 템플릿 및 프로젝트 템플릿에 대 한 마법사 만들기
  SharePoint 프로젝트 항목 형식을 정의 하 고 항목이 나 프로젝트 템플릿을 사용 하 여 연결 하는 마법사도 만들 수 있습니다. 개발자는 프로젝트에 SharePoint 프로젝트 항목을 추가 하려면 항목 템플릿을 사용 하거나 개발자가 SharePoint 프로젝트 항목을 포함 하는 새 프로젝트를 만드는 프로젝트 템플릿을 사용 마법사에 표시 됩니다. 개발자 로부터 정보를 수집 하 고 새 SharePoint 프로젝트 항목을 초기화 하는 마법사를 사용할 수 있습니다.  
   
  항목 템플릿 및 프로젝트 템플릿에 대 한 마법사를 만드는 방법을 보여 주는 연습을 참조 하십시오. [연습: 항목 템플릿, 2 부를 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md) 및 [연습: 사이트 만들기 프로젝트 템플릿 사용 하 여 열 프로젝트 항목 2 부](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [사용자 지정 SharePoint 프로젝트 항목 형식 정의](../sharepoint/defining-custom-sharepoint-project-item-types.md)   
  [연습: 항목 템플릿, 1 부와 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [연습: 항목 템플릿을 사용 하 여 사용자 지정 작업 프로젝트 항목 만들기, 2 부](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-2.md)   
@@ -90,4 +91,4 @@ ms.lasthandoff: 04/16/2018
  [연습: 2 부 프로젝트 템플릿을 사용 하 여 사이트 열 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-site-column-project-item-with-a-project-template-part-2.md)   
  [프로젝트 템플릿 및 항목 템플릿 만들기](/visualstudio/ide/creating-project-and-item-templates)  
   
-  
+ 

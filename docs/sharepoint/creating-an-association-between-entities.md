@@ -24,29 +24,30 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 293441e93c38a65ca343b021b2bf19c5a56ac7c7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 3d0475653fe3c5950e39e9f8293d5179e9380db6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692173"
 ---
 # <a name="creating-an-association-between-entities"></a>엔터티 간 연결 만들기
   연결을 만들어 데이터 BDC (비즈니스 연결) 모델의 엔터티 간 관계를 정의할 수 있습니다. Visual Studio의 각 연결에 대 한 정보는 모델의 소비자가 제공 하는 메서드를 생성 합니다. 이러한 메서드는 SharePoint 웹 파트, 목록 또는 사용자 지정 응용 프로그램에서 사용되어 UI(사용자 인터페이스)에 데이터 관계를 표시할 수 있습니다.  
   
-## <a name="creating-an-association"></a>연결 만들기  
+## <a name="create-an-association"></a>연결 만들기
  선택 하 여 연결을 만듭니다는 **연결** Visual Studio에서 제어 **도구 상자**, (소스 엔터티 라고 함) 첫 번째 엔터티를 선택한 다음 두 번째 엔터티를 선택 (라는 대상 엔터티)입니다. 연결 정보를 정의할 수는 **연결 편집기**합니다. 자세한 내용은 참조 [하는 방법: 엔터티 간 연결 만들기](../sharepoint/how-to-create-an-association-between-entities.md)합니다.  
   
-## <a name="association-methods"></a>연결 메서드  
+## <a name="association-methods"></a>연결 메서드
  SharePoint 비즈니스 데이터 웹 파트와 같은 응용 프로그램 엔터티 서비스 클래스의 메서드를 호출 하 여 연결을 사용 합니다. 선택 하 여 엔터티 서비스 클래스에 메서드를 추가할 수 있습니다는 **연결 편집기**합니다.  
   
  기본적으로는 **연결 편집기** 연결 탐색 메서드는 원본 및 대상 엔터티를 추가 합니다. 소스 엔터티에 연관 탐색 메서드 소비자를의 대상 엔터티 목록을 검색할 수 있습니다. 대상 엔터티에 연관 탐색 메서드는 대상 엔터티에 관련 된 소스 엔터티를 검색 하는 소비자를 활성화 합니다.  
   
  이러한 각 방법의 적절 한 정보를 반환 하는 코드를 추가 해야 합니다. 또한 다른 유형의 더 고급 시나리오를 지 원하는 메서드를 추가할 수 있습니다. 이러한 각 방법에 대 한 자세한 내용은 참조 [지원 되는 작업](http://go.microsoft.com/fwlink/?LinkId=169286)합니다.  
   
-## <a name="types-of-associations"></a>유형의 연결  
+## <a name="types-of-associations"></a>유형의 연결
  BDC 디자이너에서 두 가지 유형의 연결을 만들 수 있습니다: 외래 키 기반 연관 및 외래 키가 없는 연결 합니다.  
   
-### <a name="foreign-key-based-association"></a>외래 키 기반 연결  
+### <a name="foreign-key-based-association"></a>외래 키 기반 연결
  대상 엔터티에 정의 된 형식 설명자를 소스 엔터티 식별자와 관련 하 여 외래 키 기반 연결을 만들 수 있습니다. 이 관계는 모델의 소비자가 사용자를 위한 향상된 된 UI를 제공 하기를 사용 합니다. 예를 들어 Outlook의 양식에서 드롭 다운 목록의 고객을 표시할 수 있는 판매 주문을 만들 수 있는 또는 사용자가을 고객에 대 한 프로필 페이지를 열 수 있도록 하는 SharePoint에서 판매 주문 목록입니다.  
   
  외래 키 기반 연결을 만들려면 식별자와 같은 이름과 형식을 공유 하는 설명자를 입력 합니다. 예를 들어 간의 외래 키 기반 연결을 만들 수 있습니다는 `Contact` 엔터티 및 `SalesOrder` 엔터티. `SalesOrder` 반환은 `ContactID` 반환 매개 변수 찾기 또는 Specificfinder 메서드 중 일부로 설명자를 입력 합니다. 두 형식 설명자에 표시 된 **연결 편집기**합니다. 간의 외래 키 기반 관계를 만들려면는 `Contact` 엔터티 및 `SalesOrder` 엔터티를 선택는 `ContactID` 각이 필드 옆에 있는 id입니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[SP_BDC#8](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderservice.cs#8)]
  [!code-vb[SP_BDC#8](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderservice.vb#8)]  
   
-### <a name="foreign-keyless-association"></a>외래 키가 없는 연결  
+### <a name="foreign-keyless-association"></a>외래 키가 없는 연결
  형식 설명자 필드 식별자 매핑 없이 연결을 만들 수 있습니다. 소스 엔터티가 대상 엔터티는 직접적인 관계가 없는 경우 이러한 종류의 연결을 만듭니다. 예를 들어 한 `SalesOrderDetail` 테이블에 외래 키에서 기본 키에 매핑되는 없는 `Contact` 테이블입니다.  
   
  정보를 표시 하려는 경우는 `SalesOrderDetail` 에 관련 된 테이블을 `Contact`, 간의 외래 키가 없는 연결을 만들 수 있습니다는 `Contact` 엔터티 및 `SalesOrderDetail` 엔터티.  
@@ -78,8 +79,8 @@ ms.lasthandoff: 04/16/2018
  [!code-csharp[SP_BDC#10](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/salesorderdetailservice.cs#10)]
  [!code-vb[SP_BDC#10](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/salesorderdetailservice.vb#10)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [방법: 엔터티 간 연결 만들기](../sharepoint/how-to-create-an-association-between-entities.md)  
   
-  
+ 

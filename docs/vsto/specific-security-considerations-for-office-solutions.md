@@ -1,5 +1,5 @@
 ---
-title: Office 솔루션에 대 한 특정 보안 고려 사항 | Microsoft Docs
+title: Office 솔루션에 대 한 특정 보안 고려 사항
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -21,18 +21,19 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: f799a0ef393def5c77249f51a26278bd419ac523
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7da9446a4a5e4538164b09d1f11733f7bde3de24
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693359"
 ---
-# <a name="specific-security-considerations-for-office-solutions"></a>Office 솔루션에 대한 특정 보안 고려 사항
+# <a name="specific-security-considerations-for-office-solutions"></a>Office 솔루션에 대 한 특정 보안 고려 사항
   Microsoft .NET Framework 및 Microsoft Office에서 제공된 보안 기능을 통해 다양한 보안 위협에 대해 Office 솔루션을 보호할 수 있습니다. 이 항목에서는 이러한 위협 중 일부에 대해 설명하고 이러한 위협으로부터 보호하기 위한 권장 사항을 제공합니다. 또한 Office 솔루션에 영향을 주는 Microsoft Office 보안 설정에 대한 정보를 포함합니다.  
   
  [!INCLUDE[appliesto_all](../vsto/includes/appliesto-all-md.md)]  
   
-## <a name="trusted-code-is-repurposed-in-a-new-malicious-document"></a>신뢰할 수 있는 코드가 악의적인 새 문서에서 다른 용도로 재사용됨  
+## <a name="trusted-code-is-repurposed-in-a-new-malicious-document"></a>신뢰할 수 있는 코드가 악의적인 새 문서에서 다른 용도로 재사용 됨  
  공격자는 입사 지원을 위한 개인 정보를 다운로드하는 등 특정 용도를 위한 신뢰할 수 있는 코드를 가져와서 워크시트 등의 다른 문서에서 재사용할 수 있습니다. 코드 쪽에서는 원본 문서가 실행되고 있지 않다는 것을 알지 못하므로 다른 사용자가 열 때 개인 정보 노출 또는 높은 권한으로 코드 실행 등 다른 위협이 발생할 수 있습니다. 또는 희생자에게 전송될 때 예기치 않게 동작하도록 공격자가 워크시트의 데이터를 수정할 수 있습니다. 악의적인 사용자가 코드에 연결된 워크시트에서 값, 수식 또는 문자 표시를 변경한 다음 수정된 파일을 보내 다른 사용자를 공격할 수 있습니다. 워크시트의 값을 수정하여 보기 권한이 없는 사용자가 정보에 액세스할 수도 있습니다.  
   
  어셈블리 위치 및 문서 위치 모두에 대해 충분한 실행 증거가 있어야 하므로 이 공격은 실행하기가 쉽지 않습니다. 예를 들어 메일 첨부 파일의 문서 또는 신뢰할 수 없는 인트라넷 서버에는 충분한 실행 권한이 없습니다.  
@@ -49,28 +50,28 @@ ms.lasthandoff: 04/16/2018
   
 -   응용 프로그램에서 권한 있는 작업을 수행하는 경우 문서를 열 때 경고를 표시하는 것도 좋은 방법입니다. 예를 들어 응용 프로그램이 개인 정보에 액세스하려고 하며 계속할지 또는 취소할지 선택하라는 시작 대화 상자나 시작 화면을 사용자에게 표시할 수 있습니다. 문제 없는 문서에서 이러한 경고가 나타나는 경우 최종 사용자는 손상되기 전에 응용 프로그램을 종료할 수 있습니다.  
   
-## <a name="code-is-blocked-by-the-outlook-object-model-guard"></a>Outlook 개체 모델 보호에 의해 코드가 차단됨  
- Microsoft Office에서는 코드에서 개체 모델의 특정 속성, 메서드 및 개체를 사용하지 못하도록 제한할 수 있습니다. Outlook에서는 이러한 개체에 대한 액세스를 제한하여 메일 웜 및 바이러스가 악의적인 용도로 개체 모델을 사용하는 것을 방지할 수 있습니다. 이 보안 기능을 Outlook 개체 모델 보호라고 합니다. 개체 모델 보호 사용 중 VSTO 추가 기능에서 제한된 속성이나 메서드를 사용하려고 하면 사용자가 작업을 중지하거나, 제한된 기간 동안 해당 속성 또는 메서드에 액세스를 허용할 수 있도록 Outlook에서 보안 경고를 표시합니다. 사용자가 작업을 중지한 경우 Visual Studio의 Office 솔루션을 사용하여 만들어진 Outlook VSTO 추가 기능에서 <xref:System.Runtime.InteropServices.COMException>을 throw합니다.  
+## <a name="code-is-blocked-by-the-outlook-object-model-guard"></a>Outlook 개체 모델 보호에 의해 코드가 차단 됨  
+ Microsoft Office에서는 코드에서 개체 모델의 특정 속성, 메서드 및 개체를 사용하지 못하도록 제한할 수 있습니다. 이러한 개체에 대 한 액세스를 제한 하 여 Outlook 전자 메일 웜 및 바이러스가 악의적인 용도로 개체 모델을 사용 하지 않도록 수 있습니다. 이 보안 기능을 Outlook 개체 모델 보호라고 합니다. 개체 모델 보호 사용 중 VSTO 추가 기능에서 제한된 속성이나 메서드를 사용하려고 하면 사용자가 작업을 중지하거나, 제한된 기간 동안 해당 속성 또는 메서드에 액세스를 허용할 수 있도록 Outlook에서 보안 경고를 표시합니다. 사용자가 작업을 중지한 경우 Visual Studio의 Office 솔루션을 사용하여 만들어진 Outlook VSTO 추가 기능에서 <xref:System.Runtime.InteropServices.COMException>을 throw합니다.  
   
  개체 모델 보호는 Outlook이 Microsoft Exchange Server와 함께 사용되는지 여부에 따라 여러 가지 방법으로 VSTO 추가 기능에 영향을 줄 수 있습니다.  
   
 -   Outlook이 Exchange와 함께 사용되지 않는 경우 관리자는 컴퓨터의 모든 VSTO 추가 기능에 대해 개체 모델 보호를 사용하거나 사용하지 않도록 설정할 수 있습니다.  
   
--   Outlook이 Exchange와 함께 사용되는 경우 관리자는 컴퓨터의 모든 VSTO 추가 기능에 대해 개체 모델 보호를 사용 또는 사용하지 않도록 설정하거나, 개체 모델 보호 발생 없이 특정 VSTO 추가 기능을 실행할 수 있도록 지정할 수 있습니다. 또한 관리자는 개체 모델의 특정 영역에 대해 개체 모델 보호 동작을 수정할 수도 있습니다. 예를 들어 관리자는 개체 모델 보호가 설정된 경우에도 VSTO 추가 기능에서 프로그래밍 방식으로 메일을 보내도록 자동으로 허용할 수 있습니다.  
+-   Outlook이 Exchange와 함께 사용되는 경우 관리자는 컴퓨터의 모든 VSTO 추가 기능에 대해 개체 모델 보호를 사용 또는 사용하지 않도록 설정하거나, 개체 모델 보호 발생 없이 특정 VSTO 추가 기능을 실행할 수 있도록 지정할 수 있습니다. 또한 관리자는 개체 모델의 특정 영역에 대해 개체 모델 보호 동작을 수정할 수도 있습니다. 예를 들어 관리자는 개체 모델 보호가 설정 된 경우에 전자 메일을 보내는 프로그래밍 방식으로 VSTO 추가 기능을 자동으로 허용할 수 있습니다.  
   
- Outlook 2007부터 Outlook 보안을 유지하면서 개발자 및 사용자 환경을 개선하도록 개체 모델 보호 동작이 변경되었습니다. 자세한 내용은 [Outlook 2007의 코드 보안 변경 내용](http://go.microsoft.com/fwlink/?LinkId=73429)을 참조하세요.  
+ Outlook 2007부터 Outlook 보안을 유지하면서 개발자 및 사용자 환경을 개선하도록 개체 모델 보호 동작이 변경되었습니다. 자세한 내용은 참조 [Outlook 2007의 보안 변경 내용 코드](http://go.microsoft.com/fwlink/?LinkId=73429)합니다.  
   
-### <a name="minimizing-object-model-guard-warnings"></a>개체 모델 보호 경고 최소화  
- 제한된 속성 및 메서드 사용 시 보안 경고가 표시되지 않도록 하려면 VSTO 추가 기능에서 프로젝트에 `Application` 클래스의 `ThisAddIn` 필드에서 Outlook 개체를 가져와야 합니다. 이 필드에 대한 자세한 내용은 [Programming VSTO Add-Ins](../vsto/programming-vsto-add-ins.md)을 참조하세요.  
+### <a name="minimize-object-model-guard-warnings"></a>개체 모델 보호 경고 최소화  
+ 제한된 속성 및 메서드 사용 시 보안 경고가 표시되지 않도록 하려면 VSTO 추가 기능에서 프로젝트에 `Application` 클래스의 `ThisAddIn` 필드에서 Outlook 개체를 가져와야 합니다. 이 필드에 대 한 자세한 내용은 참조 [프로그램 VSTO 추가 기능](../vsto/programming-vsto-add-ins.md)합니다.  
   
- 이 개체에서 가져온 Outlook 개체만 개체 모델 보호에서 신뢰할 수 있습니다. 반면,와 신뢰할 수 없는 새 Microsoft.Office.Interop.Outlook.Application 개체에서 가져온 개체 및 제한 된 속성 및 메서드는 개체 모델 보호가 설정 된 경우 보안 경고를 발생 합니다.  
+ 이 개체에서 가져온 Outlook 개체만 개체 모델 보호에서 신뢰할 수 있습니다. 새에서 가져온 하는 반면, 개체 `Microsoft.Office.Interop.Outlook.Application` 개체 이며, 신뢰할 수 있는 제한 된 속성 및 메서드는 개체 모델 보호가 설정 된 경우 보안 경고를 발생 합니다.  
   
- 개체 모델 보호를 사용하도록 설정할 경우 다음 코드 예제는 보안 경고를 표시합니다. To 속성 Microsoft.Office.Interop.Outlook.MailItem 클래스의 개체 모델 보호에 의해 제한 됩니다. Microsoft.Office.Interop.Outlook.MailItem 개체 신뢰할 수 없는 코드를 사용 하 여 만든 Microsoft.Office.Interop.Outlook.Application에서 가져온 것 이므로 **새** 연산자는 에서얻은것이아니라`Application` 필드입니다.  
+ 개체 모델 보호를 사용하도록 설정할 경우 다음 코드 예제는 보안 경고를 표시합니다. `To` 의 속성은 `Microsoft.Office.Interop.Outlook.MailItem` 클래스 개체 모델 보호에 의해 제한 됩니다. `Microsoft.Office.Interop.Outlook.MailItem` 개체 신뢰할 수 없는 코드에서 가져오기 때문에 `Microsoft.Office.Interop.Outlook.Application` 사용 하 여 만들어진는 **새** 연산자에서 얻는 것 보다는 `Application` 필드입니다.  
   
  [!code-csharp[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#1)]
  [!code-vb[Trin_VstcoreOutlookSecurity#1](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#1)]  
   
- 다음 코드 예제에서는 개체 모델 보호에 의해 신뢰할 수 있는 Microsoft.Office.Interop.Outlook.MailItem 개체의 속성에는 제한 된 사용 하는 방법을 보여 줍니다. 코드를 사용 하 여 신뢰할 수 있는 `Application` 는 Microsoft.Office.Interop.Outlook.MailItem 가져올 필드입니다.  
+ 다음 코드 예제에서는 제한 된 속성을 사용 하는 방법을 보여 줍니다는 `Microsoft.Office.Interop.Outlook.MailItem` 개체 모델 보호에 의해 신뢰할 수 있는 개체입니다. 코드를 사용 하 여 신뢰할 수 있는 `Application` 가져올 필드의 `Microsoft.Office.Interop.Outlook.MailItem`합니다.  
   
  [!code-csharp[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/CSharp/Trin_VstcoreOutlookSecurity/ThisAddIn.cs#2)]
  [!code-vb[Trin_VstcoreOutlookSecurity#2](../vsto/codesnippet/VisualBasic/Trin_VstcoreOutlookSecurity/ThisAddIn.vb#2)]  
@@ -78,17 +79,17 @@ ms.lasthandoff: 04/16/2018
 > [!NOTE]  
 >  Outlook을 Exchange와 함께 사용할 경우 `ThisAddIn.Application` 에서 모든 Outlook 개체를 가져와도 VSTO 추가 기능에서 전체 Outlook 개체 모델에 액세스하지 못할 수 있습니다. 예를 들어 Exchange 관리자 자동으로 Outlook을 설정 하는 경우 거부 Outlook 개체 모델을 사용 하 여 주소 정보에 액세스할 수 있는 모든 시도 Outlook To 속성에 액세스 하려면 이전 코드 예제에서는 코드 예제에서는 사용 하는 경우에 다음 신뢰할 수 있는 `ThisAddIn.Application` 필드입니다.  
   
-### <a name="specifying-which-add-ins-to-trust-when-using-exchange"></a>Exchange 사용 시 신뢰할 수 있는 추가 기능 지정  
+### <a name="specify-which-add-ins-to-trust-when-using-exchange"></a>Exchange를 사용 하는 경우 신뢰할 수 있는 추가 기능 지정  
  Outlook을 Exchange와 함께 사용하는 경우 관리자는 개체 모델 보호 발생 없이 특정 VSTO 추가 기능을 실행할 수 있도록 지정할 수 있습니다. Visual Studio의 Office 솔루션을 사용하여 만들어진 Outlook VSTO 추가 기능은 개별적으로 신뢰할 수 없으며 그룹으로만 신뢰할 수 있습니다.  
   
- Outlook에서는 VSTO 추가 기능에 있는 진입점 DLL의 해시 코드를 기반으로 VSTO 추가 기능을 신뢰합니다. [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 을 대상으로 하는 모든 Outlook VSTO 추가 기능은 동일한 진입점 DLL(VSTOLoader.dll)을 사용합니다. 즉, 관리자가 개체 모델 보호 발생 없이 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 을 대상으로 실행하도록 설정한 모든 VSTO 추가 기능을 신뢰하는 경우 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 을 대상으로 하는 다른 모든 VSTO 추가 기능도 신뢰할 수 있습니다. 개체 모델 보호 발생 없이 실행하도록 VSTO 추가 기능을 신뢰하는 방법에 대한 자세한 내용은 [Outlook에서 바이러스 예방 기능을 관리하는 데 사용되는 방법 지정](http://go.microsoft.com/fwlink/?LinkId=128773)을 참조하세요.  
+ Outlook에서는 VSTO 추가 기능에 있는 진입점 DLL의 해시 코드를 기반으로 VSTO 추가 기능을 신뢰합니다. 모든 Outlook VSTO 추가 기능을 대상으로 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 동일한 진입점 DLL을 사용 하 여 (*VSTOLoader.dll*). 즉, 관리자가 개체 모델 보호 발생 없이 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 을 대상으로 실행하도록 설정한 모든 VSTO 추가 기능을 신뢰하는 경우 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)] 을 대상으로 하는 다른 모든 VSTO 추가 기능도 신뢰할 수 있습니다. 개체 모델 보호 발생 없이 실행하도록 VSTO 추가 기능을 신뢰하는 방법에 대한 자세한 내용은 [Outlook에서 바이러스 예방 기능을 관리하는 데 사용되는 방법 지정](http://go.microsoft.com/fwlink/?LinkId=128773)을 참조하세요.  
   
-## <a name="permission-changes-do-not-take-effect-immediately"></a>사용 권한의 변경 내용이 즉시 적용되지 않음  
+## <a name="permission-changes-do-not-take-effect-immediately"></a>사용 권한의 변경 내용을 적용 하려면 즉시  
  관리자가 문서 또는 어셈블리에 대한 사용 권한을 조정한 경우 변경 내용을 적용하려면 사용자가 모든 Office 응용 프로그램을 종료했다가 다시 시작해야 합니다.  
   
  Microsoft Office 응용 프로그램을 호스트하는 기타 응용 프로그램도 새 권한이 적용되는 것을 방해할 수 있습니다. 보안 정책을 변경한 후에는 호스트인지 또는 독립 실행형인지 관계없이 Office를 사용하는 모든 응용 프로그램을 종료해야 합니다.  
   
-## <a name="trust-center-settings-in-the-microsoft-office-system-do-not-affect-add-ins-or-document-level-customizations"></a>Microsoft Office 시스템의 보안 센터 설정이 추가 기능 또는 문서 수준 사용자 지정에 영향을 주지 않음  
+## <a name="trust-center-settings-in-the-microsoft-office-system-do-not-affect-add-ins-or-document-level-customizations"></a>Microsoft Office system의 보안 센터 설정 추가 기능 또는 문서 수준 사용자 지정에 영향을 주지 않는  
  사용자는 **보안 센터**의 옵션을 설정하여 VSTO 추가 기능이 로드되지 않도록 방지할 수 있습니다. 그러나 Visual Studio의 Office 솔루션을 사용하여 만든 문서 수준 사용자 지정 및 VSTO 추가 기능은 이러한 신뢰 설정에 의해 영향을 받지 않습니다.  
   
  사용자가 **보안 센터**를 사용하여 VSTO 추가 기능이 로드되지 않도록 방지한 경우 다음 형식의 VSTO 추가 기능이 로드되지 않습니다.  
@@ -117,7 +118,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  세부 정보 창에서 **응용 프로그램 추가 기능에 신뢰할 수 있는 게시자의 서명 필요** 또는 **모든 응용 프로그램 추가 기능 사용 안 함**을 선택합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션 보안](../vsto/securing-office-solutions.md)  
   
   

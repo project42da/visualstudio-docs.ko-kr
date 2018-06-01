@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c36b1e079027bd0513a7396e703db610dd737639
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 14abf52e65a796325d4af8bd95f5434c105c3fa3
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34693801"
 ---
 # <a name="walkthrough-xslt-profiler"></a>연습: XSLT 프로파일러
 
@@ -88,7 +89,7 @@ XSLT 프로파일러는 XSLT 코드의 성능 관련 문제를 측정 및 평가
 
 5.  열 이름을 클릭하면 데이터를 정렬할 수도 있습니다.
 
-### <a name="select-calltree-view"></a>호출 트리 뷰 선택
+### <a name="select-call-tree-view"></a>호출 트리 뷰를 선택 합니다.
 
 1.  선택 **호출 트리 뷰** 에 **현재 보기** 드롭 다운 목록입니다. 이 뷰는 프로그램 실행의 트리 뷰입니다.
 
@@ -108,6 +109,6 @@ XSLT 프로파일러는 XSLT 코드의 성능 관련 문제를 측정 및 평가
 
 4.  프로세스 보기를 포함 하는 테이블 표시는 **프로세스 ID**, **프로세스 이름**, **시작 시간**, 및 **종료 시간**합니다. 열 이름을 클릭하면 데이터를 정렬할 수 있습니다.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
-- [연습: XSLT 계층 구조 사용](../xml-tools/walkthrough-using-xslt-hierarchy.md)
+- [연습: XSLT 계층 구조를 사용 하 여](../xml-tools/walkthrough-using-xslt-hierarchy.md)

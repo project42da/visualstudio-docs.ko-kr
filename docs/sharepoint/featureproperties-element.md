@@ -15,11 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 30f466b1dd849f7c0288de38ead481dfa19995af
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 7ee33d880a56103ea024f22038350ec36021561b
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691790"
 ---
 # <a name="featureproperties-element"></a>FeatureProperties 요소
   SharePoint에 배포 될 때 기능과 함께 제공 되는 속성 값의 컬렉션입니다. 기능이 배포 된 후에 코드에서 속성 값을 액세스할 수 있습니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/22/2018
   
 |요소|설명|  
 |-------------|-----------------|  
-|**네임스페이스**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
+|**네임스페이스**|http<nolink>: //schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|  
 |**스키마 이름**|SharePoint 프로젝트 항목 스키마|  
 |**유효성 검사 파일**|ProjectItemModelSchema.xsd|  
 |**비어 있을 수 있습니다.**|아니요|  

@@ -15,11 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 99235ad0852ab211a93fa2241d0d86ccb2fd8b51
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 85b0d1884812c4846d78804b34d50986140bf29e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34692030"
 ---
 # <a name="safecontrols-element"></a>SafeControls 요소
   ASPX 컨트롤 및 모든 사용자는 SharePoint 사이트에서 ASPX 페이지에 액세스할 수에 대 한 안전 하 게 지정 된 웹 파트의 컬렉션입니다.  
@@ -57,7 +58,7 @@ ms.lasthandoff: 05/22/2018
   
 |||  
 |-|-|  
-|**네임스페이스**|http://schemas.microsoft.com/VisualStudio/2010/SharePointTools/SharePointProjectItemModel|  
+|**네임스페이스**|http<nolink>: //schemas.microsoft.com/VisualStudio/<br>2010/SharePointTools/SharePointProjectItemModel|  
 |**스키마 이름**|SharePoint 프로젝트 항목 스키마|  
 |**유효성 검사 파일**|ProjectItemModelSchema.xsd|  
 |**비어 있을 수 있습니다.**|아니요|  
