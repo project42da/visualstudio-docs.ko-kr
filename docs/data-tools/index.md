@@ -10,11 +10,12 @@ ms.technology: vs-data-tools
 ms.topic: landing-page
 ms.workload:
 - data-storage
-ms.openlocfilehash: 03f82da87bc546eea7d2b20100e11ca32ab72aad
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
-ms.translationtype: HT
+ms.openlocfilehash: 87a928f1d987d496bee40c4236f53b5e14cb034d
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691068"
 ---
 # <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Visual Studio에서 데이터 도구를 사용하여 데이터 솔루션 개발
 
@@ -28,7 +29,7 @@ Visual Studio에서 데이터 도구를 사용하여 SQL Server, Azure Data Lake
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_VS.svg" alt="" />
+                            <img src="../data-tools/media/logo_VS.svg" alt="Use Visual Studio and .NET framework tooling to develop your data applications" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -46,11 +47,11 @@ Visual Studio에서 데이터 도구를 사용하여 SQL Server, Azure Data Lake
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-sql-database.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-sql-database.svg" alt="Use SQL Server Data Tools to design, deploy, and maintain your databases" />
                         </div>
                     </div>
                     <div class="cardText">
-                        <h3>SQL Server Data Tools를 사용하여 데이터베이스 디자인, 배포 및 유지 관리에 대한 자세한 정보</h3>
+                        <h3>디자인, 배포 및 SQL Server Data tools는 데이터베이스 유지 관리 하는 방법에 대 한 자세한 내용은</h3>
                     </div>
                 </div>
             </div>
@@ -64,7 +65,7 @@ Visual Studio에서 데이터 도구를 사용하여 SQL Server, Azure Data Lake
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-datalake.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-datalake.svg" alt="Use Azure Data Lake to develop Big Data applications with U-SQL and .NET" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -82,7 +83,7 @@ Visual Studio에서 데이터 도구를 사용하여 SQL Server, Azure Data Lake
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-hd-insight.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-hd-insight.svg" alt="Run Hive queries on Azure HDInsight with Hadoop" />
                         </div>
                     </div>
                     <div class="cardText">
@@ -100,7 +101,7 @@ Visual Studio에서 데이터 도구를 사용하여 SQL Server, Azure Data Lake
                 <div class="card">
                     <div class="cardImageOuter">
                         <div class="cardImage">
-                            <img src="../data-tools/media/logo_azure-stream-analytics.svg" alt="" />
+                            <img src="../data-tools/media/logo_azure-stream-analytics.svg" alt="Use Azure Streaming Analytics to develop near-real time, big data solutions" />
                         </div>
                     </div>
                     <div class="cardText">

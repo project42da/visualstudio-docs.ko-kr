@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합에 WPF 컨트롤 바인딩
+title: 데이터 집합으로 WPF 컨트롤 바인딩
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -17,13 +17,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: bd0aa9ae269da4cfd4ae5ab3dfb45e96052d75fe
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 917bf166057ef304f3d045898838b7074d76c467
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34690720"
 ---
-# <a name="bind-wpf-controls-to-a-dataset"></a>데이터 집합에 WPF 컨트롤 바인딩
+# <a name="bind-wpf-controls-to-a-dataset"></a>데이터 집합으로 WPF 컨트롤 바인딩
 이 연습에서는 데이터 바인딩된 컨트롤을 포함하는 WPF 응용 프로그램을 만듭니다. 이러한 컨트롤은 데이터 집합에서 캡슐화된 제품 레코드에 바인딩됩니다. 또한 제품을 찾아보고 제품 레코드 변경 내용을 저장할 수 있는 단추도 추가합니다.
 
 이 연습에서는 다음 작업을 수행합니다.
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/26/2018
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>전제 조건
+## <a name="prerequisites"></a>필수 조건
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]
@@ -116,7 +117,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  에 **SQL 문을 입력** 페이지 뒤에 다음 WHERE 절을 추가 합니다는 `SELECT` 텍스트 상자에 문의 합니다.
 
-    ```
+    ```sql
     WHERE ThumbnailPhotoFileName <> 'no_image_available_small.gif'
     ```
 
