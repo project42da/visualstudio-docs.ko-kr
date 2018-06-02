@@ -19,11 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 106f6a828035393273d7157c4b3e5bd898322e46
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 0507fe16dd910fe61c4816594125b690c350a1a6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691372"
 ---
 # <a name="associating-custom-data-with-sharepoint-tools-extensions"></a>SharePoint 도구 확장과 사용자 지정 데이터 연결
   SharePoint 도구 확장에서 특정 개체를 사용자 지정 데이터를 추가할 수 있습니다. 데이터 확장 프로그램의 다른 코드에서 나중에 액세스 하려면 확장 프로그램의 한 부분에 있는 경우에 유용 합니다. 데이터 저장 및 액세스 하는 사용자 지정 방법을 구현 하는 대신 확장에 데이터 개체와 연결할 수 있으며 나중에 동일한 개체에서 데이터를 한 다음 검색할 수 있습니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/16/2018
   
  SharePoint 프로젝트 시스템의 확장을 확장이 로드 된 후에 유지 하는 문자열 데이터를 저장할 수 있습니다. 자세한 내용은 참조 [SharePoint 프로젝트 시스템의 확장에 대 한 데이터 저장](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)합니다.  
   
-## <a name="objects-that-can-contain-custom-data"></a>사용자 지정 데이터를 포함할 수 있는 개체  
+## <a name="objects-that-can-contain-custom-data"></a>사용자 지정 데이터를 포함할 수 있는 개체
  사용자 지정 데이터를 구현 하는 SharePoint 도구 개체 모델의 모든 개체를 추가할 수는 <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject> 인터페이스입니다. 이 인터페이스의 속성을 하나 정의 <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A>, 사용자 지정 데이터 개체의 컬렉션입니다. 다음 형식은 구현 <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject>:  
   
 -   <xref:Microsoft.VisualStudio.SharePoint.IMappedFolder>  
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/16/2018
   
 -   <xref:Microsoft.VisualStudio.SharePoint.Explorer.IExplorerNodeTypeDefinition>  
   
-## <a name="adding-and-retrieving-custom-data"></a>추가 및 사용자 지정 데이터를 검색 합니다.  
+## <a name="add-and-retrieve-custom-data"></a>추가 및 사용자 지정 데이터를 검색 합니다.
  SharePoint 도구 확장의 개체에 사용자 지정 데이터를 추가 하려면는 <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> 데이터를 추가 하 고 다음 사용 하려는 개체의 속성에서 <xref:Microsoft.VisualStudio.SharePoint.IAnnotationDictionary.Add%2A> 데이터 개체를 추가 하는 메서드.  
   
  에서 SharePoint 도구 확장의 개체를 사용자 지정 데이터를 검색 하려면 가져오기는 <xref:Microsoft.VisualStudio.SharePoint.IAnnotatedObject.Annotations%2A> 개체 및 다음 방법 중 하나를 사용 하는 속성:  
@@ -81,10 +82,10 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/VisualBasic/projectitemmenuandproperty/extension/projectitemtypeproperty.vb#13)]
  [!code-csharp[SPExtensibility.ProjectItemExtension.MenuAndProperty#13](../sharepoint/codesnippet/CSharp/projectitemmenuandproperty/extension/projectitemtypeproperty.cs#13)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 도구 확장의 프로그래밍 개념 및 기능](../sharepoint/programming-concepts-and-features-for-sharepoint-tools-extensions.md)   
  [연습: 항목 템플릿, 1 부와 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [연습: 웹 파트를 표시 하는 서버 탐색기 확장](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
  [방법: SharePoint 프로젝트에 속성 추가](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)   
  [방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 속성 추가] (.. /sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md   
-  
+ 

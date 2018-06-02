@@ -1,5 +1,5 @@
 ---
-title: 데이터베이스에 다시 데이터를 저장 합니다.
+title: 데이터를 다시 데이터베이스에 저장
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -22,13 +22,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ee004af6cb130167789cac022ae1c04beef8dbe6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3ef60be5002c5d99f8947bfa770665fa3535a20e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34691136"
 ---
-# <a name="save-data-back-to-the-database"></a>데이터베이스에 다시 데이터를 저장 합니다.
+# <a name="save-data-back-to-the-database"></a>데이터를 다시 데이터베이스에 저장
 데이터 집합은 데이터의 메모리 내 복사본입니다. 해당 데이터를 수정 하면 인지 다시 데이터베이스에 변경 내용을 저장 하는 것이 좋습니다. 다음 세 가지 방법 중 하나에서 이렇게합니다.
 
 -   TableAdapter의 업데이트 방법 중 하나를 호출 하 여
@@ -221,7 +222,7 @@ Tableadapter에 익숙한 경우에 다음이 항목 중 하나에 직접 이동
 
  업데이트를 적용 하는 방법을의 예시의 경우 응용 프로그램에서 단일 데이터 테이블을 포함 하는 데이터 집합을 사용 한다고 가정 합니다. 응용 프로그램 데이터베이스에서 두 개의 행을 인출합니다. 검색이 수행 된 후 메모리에 데이터 테이블은 다음과 같습니다.
 
-```
+```sql
 (RowState)     CustomerID   Name             Status
 (Unchanged)    c200         Robert Lyon      Good
 (Unchanged)    c400         Nancy Buchanan    Pending
@@ -229,7 +230,7 @@ Tableadapter에 익숙한 경우에 다음이 항목 중 하나에 직접 이동
 
  "기본"를 Nancy 선하라 상태를 변경 하는 응용 프로그램 값이이 변경으로 인해는 <xref:System.Data.DataRow.RowState%2A> 에서 해당 행에 대 한 속성 변경 <xref:System.Data.DataRowState.Unchanged> 를 <xref:System.Data.DataRowState.Modified>합니다. 값은 <xref:System.Data.DataRow.RowState%2A> 첫 번째 행에 대 한 속성은 <xref:System.Data.DataRowState.Unchanged>합니다. 데이터 테이블은 이제 다음과 같이 보입니다.
 
-```
+```sql
 (RowState)     CustomerID   Name             Status
 (Unchanged)    c200         Robert Lyon      Good
 (Modified)     c400         Nancy Buchanan    Preferred

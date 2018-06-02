@@ -33,11 +33,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8e2eb30d50be7348802518b7cc1b945aa88a26bd
-ms.sourcegitcommit: 3d10b93eb5b326639f3e5c19b9e6a8d1ba078de1
+ms.openlocfilehash: 6ae43c5cab67d79450cea1dc024da98fe25c5375
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/18/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34690668"
 ---
 # <a name="how-to-set-debug-and-release-configurations-in-visual-studio"></a>방법: 디버그 및 릴리스 Visual Studio의 구성 설정
 Visual Studio 프로젝트에는 사용하는 프로그램에 대한 별도의 릴리스 및 디버그 구성이 있습니다. 이름이 의미하는 것처럼 디버그 버전은 디버깅용으로 빌드하고 릴리스 버전은 최종 릴리스 배포용으로 빌드합니다.  
@@ -60,7 +61,7 @@ Visual Studio 프로젝트에는 사용하는 프로그램에 대한 별도의 �
   
      이 도구 모음은 Express Edition에서 사용할 수 없습니다. 사용할 수는 **솔루션 빌드 F6** 및 **디버깅 시작 F5** 메뉴 항목 구성을 선택할 수 있습니다.
 
-## <a name="BKMK_symbols_release"></a>빌드에 대 한 기호 (.pbd) 파일을 생성 합니다.
+## <a name="BKMK_symbols_release"></a>빌드에 대 한 기호 (.pdb) 파일을 생성 합니다.
 
 대부분의 프로젝트 형식에 대 한.pdb 파일 모두 디버그에 대해 기본적으로 생성 되 고 릴리스 빌드, 하지만 기본 설정은 특정 프로젝트 형식 및 Visual Studio 버전에 따라 다릅니다. 구성할 수 있습니다 컴파일러에서.pdb 파일을 생성 하는 여부와 어떤 종류의 디버그 정보를 포함 하도록 합니다.
 
