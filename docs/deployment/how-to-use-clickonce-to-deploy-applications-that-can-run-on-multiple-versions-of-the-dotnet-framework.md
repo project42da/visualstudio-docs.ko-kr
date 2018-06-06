@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: c05d1317c2b8040baf23c98cff8a032f14f47798
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0ea5606913a4afb082fda09644dad7af8031a7e2
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815076"
 ---
 # <a name="how-to-use-clickonce-to-deploy-applications-that-can-run-on-multiple-versions-of-the-net-framework"></a>방법: ClickOnce를 사용하여 여러 버전의 .NET Framework에서 실행할 수 있는 응용 프로그램 배포
 ClickOnce 배포 기술을 사용 하 여 여러 버전의.NET Framework를 대상으로 하는 응용 프로그램을 배포할 수 있습니다. 그러려면 생성 하 고 응용 프로그램 및 배포 매니페스트를 업데이트 합니다.  
@@ -85,13 +86,13 @@ ClickOnce 배포 기술을 사용 하 여 여러 버전의.NET Framework를 대�
   
 2.  추가 `group="framework"` sentinel 어셈블리에 대 한 종속성 XML (`System.Core`, `WindowsBase`, `Sentinel.v3.5Client`, 및 `System.Data.Entity`). 예를 들어 XML은 다음과 같이 표시 됩니다.  
   
-    ```  
+    ```xml  
     <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true" group="framework">  
     ```  
   
 3.  업데이트의 버전 번호는 `<assemblyIdentity>` 요소 Microsoft.Windows.CommonLanguageRuntime에 대 한 최저 공통 분모는.NET Framework의 버전 번호입니다. 예를 들어 응용 프로그램이.NET Framework 3.5를 대상으로 하는 경우 및 [!INCLUDE[net_v40_short](../code-quality/includes/net_v40_short_md.md)], 2.0.50727.0 사용 하 여 버전 번호와 XML은 다음과 같습니다.  
   
-    ```  
+    ```xml  
     <dependency>  
       <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">  
         <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="2.0.50727.0" />  

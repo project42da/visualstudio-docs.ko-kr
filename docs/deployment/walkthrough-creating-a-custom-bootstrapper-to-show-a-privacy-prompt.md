@@ -21,13 +21,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 73694df5b6e9e5d4c8b4ad40f16cf60998e9fc82
-ms.sourcegitcommit: 56018fb1f52f17bf35ae2ce71c50c763486e6173
+ms.openlocfilehash: 22feab436d701124b7e3843a0e6855d2830d570d
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/04/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34816044"
 ---
-# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>연습: 개인 정보 보호 표시할 메시지를 사용자 지정 부트스트래퍼 만들기
+# <a name="walkthrough-create-a-custom-bootstrapper-with-a-privacy-prompt"></a>연습: 개인정보처리방침 프롬프트가 포함된 사용자 지정 부트스트래퍼 만들기
 최신 파일 버전 및 어셈블리 버전으로 어셈블리를 사용할 수 있을 때 자동으로 업데이트 하도록 ClickOnce 응용 프로그램을 구성할 수 있습니다. 을 고객에 게가이 동작에 동의 확인 하기 위해 개인 정보 프롬프트를 표시할 수 있습니다. 그런 다음는 응용 프로그램을 자동으로 업데이트할 수 있는 권한을 부여할지 여부를 선택할 수 있습니다. 응용 프로그램에 자동으로 업데이트 하도록 허용 되지 않습니다 설치 하지 않습니다.  
   
  [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]  
@@ -165,7 +166,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  Product.xml 파일에 다음 XML 코드를 추가 합니다. 기존 XML 코드를 덮어쓰지 않도록 있는지 확인 합니다.  
   
-    ```  
+    ```xml  
     <Product  
       xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
       ProductCode="Microsoft.Sample.EULA">  
@@ -197,7 +198,7 @@ ms.lasthandoff: 05/04/2018
   
 2.  Package.xml 파일에서 정의 하는 로캘 고 소프트웨어 사용 조건이 포함 다음 XML 코드를 추가 합니다. 기존 XML 코드를 덮어쓰지 않도록 있는지 확인 합니다.  
   
-    ```  
+    ```xml  
     <Package   
       xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
       Name="DisplayName"  

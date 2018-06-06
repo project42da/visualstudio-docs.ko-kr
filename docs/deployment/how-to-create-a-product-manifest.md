@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7cac17f0b4ca7a2dd4e5c4cf6f1f2da9e4dc5f54
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bdb95f417cadac04a04e30b1e965392f2492d864
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815771"
 ---
 # <a name="how-to-create-a-product-manifest"></a>방법: 제품 매니페스트 만들기
 응용 프로그램에 대 한 필수 구성 요소를 배포 하려면 부트스트래퍼 패키지를 만들 수 있습니다. 부트스트래퍼 패키지는 각 로캘에 대 한 패키지 매니페스트를 제외한 단일 제품 매니페스트 파일을 포함합니다. 패키지 매니페스트의 패키지의 지역화 관련 항목이 포함 되어 있습니다. 문자열, 최종 사용자 사용권 계약 및 언어 팩이 포함 됩니다.  
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/19/2018
   
 3.  패키지에 대 한 XML 네임 스페이스 및 제품 코드를 설명 하는 다음 XML을 추가 합니다. 패키지에 대 한 고유 식별자가 있는 제품 코드를 바꿉니다.  
   
-    ```  
+    ```xml  
     <Product  
     xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"   
     ProductCode="Custom.Bootstrapper.Package">  
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/19/2018
   
 4.  패키지에 종속 되어 있는지를 지정 하는 XML을 추가 합니다. 이 예제에서는 Microsoft Windows Installer 3.1에 종속성을 사용 합니다.  
   
-    ```  
+    ```xml  
     <RelatedProducts>  
         <DependsOnProduct Code="Microsoft.Windows.Installer.3.1" />  
       </RelatedProducts>  
@@ -57,7 +58,7 @@ ms.lasthandoff: 04/19/2018
   
 5.  부트스트래퍼 패키지에 있는 모든 파일을 나열 하는 XML을 추가 합니다. 이 예제에서는 CorePackage.msi 패키지 파일 이름을 사용 합니다.  
   
-    ```  
+    ```xml  
     <PackageFiles>  
         <PackageFile Name="CorePackage.msi"/>  
     </PackageFiles>  
@@ -67,14 +68,14 @@ ms.lasthandoff: 04/19/2018
   
 7.  부트스트래퍼 명령을 사용 하 여 패키지를 설치 하는 XML을 추가 합니다. 부트스트래퍼가 자동으로 추가 **/qn** 자동으로 설치 하는.msi 파일을 플래그 합니다. 파일 확장명이.exe 인 경우 부트스트래퍼 셸을 사용 하 여.exe 파일을 실행 합니다. 다음 XML CorePackage.msi를 인수 없이 보여주지만 인수 특성에 명령줄 인수를 삽입할 수 있습니다.  
   
-    ```  
+    ```xml  
     <Commands>  
         <Command PackageFile="CorePackage.msi" Arguments="">  
     ```  
   
 8.  부트스트래퍼 패키지가 설치 되어 있는지 확인 하려면 다음 XML을 추가 합니다. 재배포 가능 구성 요소에 대 한 GUID를 가진 제품 코드를 바꿉니다.  
   
-    ```  
+    ```xml  
     <InstallChecks>  
         <MsiProductCheck   
             Property="IsMsiInstalled"   
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/19/2018
   
 9. 부트스트래퍼 구성 요소를 이미 설치한 경우에 따라 부트스트래퍼 동작을 변경 하는 XML을 추가 합니다. 요소를 설치 하면 부트스트래퍼 패키지가 실행 되지 않습니다. 다음 XML이 구성이 요소 관리자 권한이 필요 하므로 현재 사용자가 관리자 인지 확인 합니다.  
   
-    ```  
+    ```xml  
     <InstallConditions>  
         <BypassIf   
            Property="IsMsiInstalled"   
@@ -97,7 +98,7 @@ ms.lasthandoff: 04/19/2018
   
 10. 성공적으로 설치 하 고 다시 시작이 필요한 경우 종료 코드를 설정 하는 XML을 추가 합니다. 다음 XML 실패 하 고 FailReboot 부트스트래퍼 패키지 설치 계속 되지 것입니다 나타냅니다는 코드를 종료 하는 방법을 보여 줍니다.  
   
-    ```  
+    ```xml  
     <ExitCodes>  
         <ExitCode Value="0" Result="Success"/>  
         <ExitCode Value="1641" Result="SuccessReboot"/>  
@@ -108,17 +109,17 @@ ms.lasthandoff: 04/19/2018
   
 11. 부트스트래퍼 명령에 대 한 섹션을 종료 하려면 다음 XML을 추가 합니다.  
   
-    ```  
+    ```xml  
         </Command>  
     </Commands>  
     ```  
   
 12. Visual Studio 부트스트래퍼 디렉터리로 C:\package 폴더를 이동 합니다. Visual Studio 2010 files\microsoft SDKs\Windows\v7.0A\Bootstrapper\Packages 디렉터리입니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  제품 매니페스트는 사용자 지정 필수 구성 요소에 대 한 설치 지침을 포함합니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
 <Product  
   xmlns="http://schemas.microsoft.com/developer/2004/01/bootstrapper"  
