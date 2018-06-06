@@ -11,11 +11,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: c4b8bb09795f35e3ae67065322e926a09dda0f19
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 89d09a8b01dc4179f3b9de4cbdbf1905846f7002
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34691861"
 ---
 # <a name="developer-testing-tools-scenarios-and-capabilities"></a>개발자 테스트 도구, 시나리오 및 호환성
 
@@ -47,8 +48,7 @@ IntelliTest를 사용하여 검사를 개선하고 재발을 방지합니다. In
 
 * [UI 자동화를 사용하여 코드 테스트](use-ui-automation-to-test-your-code.md)
 * [코딩된 UI 테스트 만들기, 편집 및 유지 관리 시작](walkthrough-creating-editing-and-maintaining-a-coded-ui-test.md)
-* [코딩된 UI 테스트를 사용하여 UWP 앱 테스트](test-windows-store-8-1-apps-with-coded-ui-tests.md)
-* [코딩된 UI 테스트를 사용하여 Windows Phone 앱 테스트](test-windows-phone-8-1-apps-with-coded-ui-tests.md)
+* [코딩된 UI 테스트를 사용하여 UWP 앱 테스트](test-uwp-app-with-coded-ui-test.md)
 * [코딩된 UI 테스트를 사용하여 SharePoint 응용 프로그램 테스트](testing-sharepoint-2010-applications-with-coded-ui-tests.md)
 * [Introduction to Coded UI Tests with Visual Studio Enterprise (Lab)](http://download.microsoft.com/download/6/2/B/62B60ECE-B9DC-4E8A-A97C-EA261BFB935E/Docs/Introduction%20to%20Coded%20UI%20Tests%20with%20Visual%20Studio%20Enterprise%202015.docx)(Visual Studio Enterprise의 코딩된 UI 테스트 소개(랩))
 

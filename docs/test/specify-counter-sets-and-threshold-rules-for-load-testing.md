@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 13fcfac02761a8661195f6f888a9280b468e5de3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7e5e6919dbc37294ef677f3c512c51d53aea0e2f
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751344"
 ---
 # <a name="specify-counter-sets-and-threshold-rules-for-computers-in-a-load-test"></a>부하 테스트에서 컴퓨터에 대한 카운터 집합 및 임계값 규칙 지정
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/26/2018
 
 세 가지 카운터 범주는 백분율, 횟수 및 평균입니다. 일부 예제에서는 % CPU 사용량, SQL Server 잠금 횟수 및 초 당 IIS 요청 수입니다.
 
-![부하 테스트 카운터 집합](../test/media/loadtestcountersets.png "LoadTestCounterSets")
+![부하 테스트 카운터 집합](../test/media/loadtestcountersets.png)
 
 개별 HTTP 요청에 대한 성능 데이터는 에이전트 컴퓨터와 같은 테스트를 실행하는 컴퓨터에 의해 보고됩니다. 요청의 경우 첫 번째 바이트 평균 시간, 응답 시간 및 초 당 요청 수와 같은 데이터를 모니터링할 수 있습니다.
 

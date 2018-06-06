@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - uwp
 author: mikeblome
-ms.openlocfilehash: 717786fea5d0ae355af5b8ea4993932a95d01196
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ac32063f61baa33b9b28eea51988b95edde579eb
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751873"
 ---
 # <a name="how-to-test-a-visual-c-dll"></a>Visual C++ DLL 테스트 방법
 
@@ -31,11 +32,11 @@ ms.lasthandoff: 04/26/2018
 
 3.  프로젝트 이름을 `RooterLibTests`로 지정하고 위치를 지정합니다. 솔루션 이름을 `RooterLib`로 지정하고 **솔루션용 디렉터리 만들기**가 선택되어 있는지 확인합니다.
 
-     ![솔루션 및 프로젝트 이름과 위치 지정](../test/media/ute_cpp_windows_unittestlib_createspecs.png "UTE_Cpp_windows_UnitTestLib_CreateSpecs")
+     ![솔루션, 프로젝트 이름 및 위치 지정](../test/media/ute_cpp_windows_unittestlib_createspecs.png)
 
 4.  새 프로젝트에서 **unittest1.cpp**를 엽니다.
 
-     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png "UTE_Cpp_windows_unittest1_cpp")
+     ![unittest1.cpp](../test/media/ute_cpp_windows_unittest1_cpp.png)
 
      다음 사항에 유의합니다.
 
@@ -64,13 +65,13 @@ ms.lasthandoff: 04/26/2018
 
      테스트 프로젝트가 빌드되고 실행됩니다. 테스트 탐색기 창이 나타나고 테스트가 **통과한 테스트** 아래에 나열됩니다. 창의 아래쪽에 있는 요약 창은 선택된 테스트에 대한 추가 정보를 제공합니다.
 
-     ![테스트 탐색기](../test/media/ute_cpp_testexplorer_testmethod1.png "UTE_Cpp_TestExplorer_TestMethod1")
+     ![테스트 탐색기](../test/media/ute_cpp_testexplorer_testmethod1.png)
 
 ##  <a name="Add_the_DLL_project_to_the_solution"></a> 솔루션에 DLL 프로젝트 추가
 
 1.  솔루션 탐색기에서 솔루션 이름을 선택합니다. 바로 가기 메뉴에서 **추가**를 선택한 다음 **새 프로젝트 추가**를 선택합니다.
 
-     ![RooterLib 프로젝트 만들기](../test/media/ute_cpp_windows_rooterlib_create.png "UTE_Cpp_windows_RooterLib_Create")
+     ![RooterLib 프로젝트 만들기](../test/media/ute_cpp_windows_rooterlib_create.png)
 
 2.  **새 프로젝트 추가** 대화 상자에서 **DLL(UWP 앱)** 을 선택합니다.
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/26/2018
 
     1.  솔루션 탐색기에서 **RooterLib** 프로젝트를 선택한 다음 바로 가기 메뉴에서 **속성**을 선택합니다.
 
-         ![전처리기 기호 정의 추가](../test/media/ute_cpp_windows_addpreprocessorsymbol.png "UTE_Cpp_windows_AddPreprocessorSymbol")
+         ![전처리기 기호 정의 추가](../test/media/ute_cpp_windows_addpreprocessorsymbol.png)
 
     2.  RooterLib 속성 페이지 대화 상자에서 **구성 속성**, **C++** 를 차례로 확장하고 **전처리기**를 선택합니다.
 
@@ -175,7 +176,7 @@ ms.lasthandoff: 04/26/2018
 
 5.  테스트 탐색기에서 **모두 실행**을 선택합니다.
 
-     ![기본 테스트 통과](../test/media/ute_cpp_testexplorer_basictest.png "UTE_Cpp_TestExplorer_BasicTest")
+     ![기본 테스트 통과](../test/media/ute_cpp_testexplorer_basictest.png)
 
  테스트 및 코드 프로젝트를 설정하고 코드 프로젝트에서 함수를 실행하는 테스트를 실행할 수 있는지 확인했습니다. 이제 실제 테스트 및 코드 작성을 시작할 수 있습니다.
 
@@ -206,7 +207,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  테스트가 실패합니다.
 
-     ![RangeTest 실패](../test/media/ute_cpp_testexplorer_rangetest_fail.png "UTE_Cpp_TestExplorer_RangeTest_Fail")
+     ![RangeTest 실패](../test/media/ute_cpp_testexplorer_rangetest_fail.png)
 
     > [!TIP]
     > 테스트 작성 후 즉시 각 테스트가 실패하는지 확인합니다. 이렇게 하면 결코 실패하지 않는 테스트를 작성하게 되는 간단한 실수를 방지하는 데 도움이 됩니다.
@@ -278,7 +279,7 @@ ms.lasthandoff: 04/26/2018
 
      테스트가 실패합니다. 테스트 탐색기에서 테스트 이름을 선택합니다. 실패한 어설션이 강조 표시됩니다. 오류 메시지는 테스트 탐색기의 세부 정보 창에 표시됩니다.
 
-     ![NegativeRangeTest 실패](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png "UTE_Cpp_TestExplorer_NegativeRangeTest_Fail")
+     ![NegativeRangeTests 실패](../test/media/ute_cpp_testexplorer_negativerangetest_fail.png)
 
 3.  테스트가 실패한 이유를 확인하려면 함수를 단계별로 실행합니다.
 
@@ -308,7 +309,7 @@ ms.lasthandoff: 04/26/2018
 
  이제 모든 테스트가 통과합니다.
 
- ![모든 테스트 통과](../test/media/ute_ult_alltestspass.png "UTE_ULT_AllTestsPass")
+ ![모든 테스트 통과](../test/media/ute_ult_alltestspass.png)
 
 ##  <a name="Refactor_the_code_without_changing_tests"></a> 테스트를 변경하지 않고 코드 리팩터링
 

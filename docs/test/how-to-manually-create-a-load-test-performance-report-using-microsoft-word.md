@@ -11,11 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8d25e93c0c5fefeae2d7891d458373d81d5ff370
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 257377ae84249f6e55c52223478d0f4aa0c12e59
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750885"
 ---
 # <a name="how-to-manually-create-a-load-test-performance-report-using-microsoft-word"></a>방법: Microsoft Word를 사용하여 수동으로 부하 테스트 성능 보고서 만들기
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  (선택 사항) 다음 그림과 같이 Microsoft Word 문서에 복사할 특정 그래프를 확대합니다. 자세한 내용은 [방법: 그래프의 영역으로 확대](../test/how-to-zoom-in-on-a-region-of-the-graph-in-load-test-results.md)를 참조하세요.
 
-     ![그래프 뷰 확대/축소 컨트롤](../test/media/ltest_zoomcontrol.png "LTest_ZoomControl")
+     ![그래프 뷰 확대/축소 컨트롤](../test/media/ltest_zoomcontrol.png)
 
 3.  Microsoft Word 문서에 복사할 그래프에서 마우스 오른쪽 단추를 클릭하고 **복사**를 선택합니다.
 

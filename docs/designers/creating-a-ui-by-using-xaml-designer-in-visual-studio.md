@@ -1,6 +1,7 @@
 ---
 title: Visual Studio에서 XAML 디자이너를 사용하여 UI 만들기
 ms.date: 07/17/2017
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
@@ -14,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: 9eadc306b0b2f7c53dffc01d27590bc5d4cf4b52
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 707fdd9c1ea0712d743bb62276599783507f0739
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745752"
 ---
 # <a name="creating-a-ui-by-using-xaml-designer-in-visual-studio"></a>Visual Studio에서 XAML 디자이너를 사용하여 UI 만들기
 Visual Studio의 XAML 디자이너는 XAML 기반 Windows 앱과 웹앱을 디자인하는 데 도움이 되는 그래픽 인터페이스를 제공합니다. **도구 상자** 에서 컨트롤을 끌고 **속성** 창에서 속성을 설정하여 앱에 대한 사용자 인터페이스를 만들 수 있습니다. XAML 뷰에서 직접 XAML을 편집할 수도 있습니다.
@@ -33,7 +35,7 @@ Visual Studio의 XAML 디자이너는 XAML 기반 Windows 앱과 웹앱을 디�
 
  디자인 뷰에서 *아트 보드* 포함하는 창이 활성 창이고 이를 기본 작업 화면으로 사용할 수 있습니다. 이 창에서 요소를 추가하거나 그린 다음 수정하여 앱에서 페이지를 시각적으로 디자인할 수 있습니다. 자세한 내용은 [Working with elements in XAML Designer](../designers/working-with-elements-in-xaml-designer.md)을 참조하세요. 이 그림은 디자인 뷰에서 아트보드를 보여 줍니다.
 
- ![XAML 디자이너의 디자인 뷰](../designers/media/xaml_editor_design_view.png "xaml_editor_design_view")
+ ![XAML 디자이너의 디자인 뷰](../designers/media/xaml_editor_design_view.png)
 
  이러한 기능은 아트보드에서 사용할 수 있습니다.
 
@@ -55,7 +57,7 @@ Visual Studio의 XAML 디자이너는 XAML 기반 Windows 앱과 웹앱을 디�
 
  디자인 뷰에서 다음과 같이 화면의 왼쪽 아래 영역에서 추가 아트보드 명령을 사용할 수 있습니다.
 
- ![디자인 뷰 명령](../designers/media/xaml_editor_design_controls.png "xaml_editor_design_controls")
+ ![디자인 뷰 명령](../designers/media/xaml_editor_design_controls.png)
 
  이러한 명령은 이 도구 모음에서 사용할 수 있습니다.
 
@@ -69,7 +71,7 @@ Visual Studio의 XAML 디자이너는 XAML 기반 Windows 앱과 웹앱을 디�
 
  XAML 뷰에서 XAML 편집기가 포함된 창이 활성 창이며 XAML 편집기는 기본 제작 도구입니다. XAML(Extensible Application Markup Language)은 응용 프로그램의 사용자 인터페이스를 지정하는 데 사용할 수 있는 선언적인 XML 기반 어휘를 제공합니다. XAML 뷰에는 IntelliSense, 자동 서식 지정, 구문 강조 표시 및 태그 탐색이 포함됩니다. 이 그림에서는 XAML 뷰를 보여 줍니다.
 
- ![XAML 뷰](../designers/media/xaml_editor.png "xaml_editor")
+ ![XAML 뷰](../designers/media/xaml_editor.png)
 
  **분할 뷰 구분선** XAML 편집기가 아래쪽 창에 있을 때 분할 뷰 구분선이 XAML 뷰의 맨 위에 나타납니다. 분할 뷰 구분선을 사용하여 디자인 뷰 및 XAML 뷰의 상대적 크기를 제어할 수 있습니다. 뷰의 위치를 바꾸고( **창 바꾸기** 단추 사용), 뷰를 가로 또는 세로로 정렬할지 여부를 지정하고, 뷰 중 하나를 축소할 수 있습니다.
 
@@ -78,7 +80,7 @@ Visual Studio의 XAML 디자이너는 XAML 기반 Windows 앱과 웹앱을 디�
 ## <a name="device-window"></a>장치 창
  XAML 디자이너의 장치 창을 사용하면 디자인 타임에 프로젝트의 다양한 뷰, 표시 및 표시 옵션을 시뮬레이션할 수 있습니다. 장치 창은  XAML 디자이너에서 작업할 때 **디자인** 메뉴에서 사용할 수 있습니다. 다음과 같이 나타납니다.
 
- ![장치 창](../designers/media/xaml_editor_device_panel.png "xaml_editor_device_panel")
+ ![장치 창](../designers/media/xaml_editor_device_panel.png)
 
  다음은 장치 창에서 사용할 수 있는 옵션입니다.
 
@@ -113,7 +115,7 @@ Visual Studio의 XAML 디자이너는 XAML 기반 Windows 앱과 웹앱을 디�
 
  문서 개요 창을 보려면 메뉴 모음에서 **보기**, **다른 창**, **문서 개요**를 선택합니다.
 
- ![문서 개요 창](../designers/media/xaml_editor_doc_outline.png "xaml_editor_doc_outline")
+ ![문서 개요 창](../designers/media/xaml_editor_doc_outline.png)
 
  다음은 문서 개요 창에서 사용할 수 있는 옵션입니다.
 
@@ -128,7 +130,7 @@ Visual Studio의 XAML 디자이너는 XAML 기반 Windows 앱과 웹앱을 디�
 ## <a name="properties-window"></a>속성 창
  속성 창을 사용하면 컨트롤에 대한 속성 값을 설정할 수 있습니다. 다음과 같이 나타납니다.
 
- ![속성 창](../designers/media/xaml_editor_prop_window.png "xaml_editor_prop_window")
+ ![속성 창](../designers/media/xaml_editor_prop_window.png)
 
  속성 창의 위쪽에는 다양한 옵션이 있습니다. **이름** 상자를 사용하여 현재 선택된 요소의 이름을 변경할 수 있습니다. 왼쪽 위 모서리에 현재 선택한 요소를 나타내는 아이콘이 있습니다. 속성을 범주별로 또는 사전순으로 정렬하려면 **정렬 기준**목록에서 **범주**, **이름** 또는 **소스** 를 클릭합니다. 컨트롤에 대한 이벤트의 목록을 보려면 번개 기호를 표시하는 **이벤트** 단추를 클릭합니다. 속성을 검색하려면 먼저 **검색 속성** 상자에서 속성의 이름을 입력합니다. 속성 창에 입력할 때 검색 조건과 일치하는 속성이 표시됩니다. 일부 속성에서는 아래쪽 화살표 단추를 선택하여 고급 속성을 설정할 수 있습니다. 속성 사용 및 이벤트 처리에 대한 자세한 내용은 [빠른 시작: 컨트롤 추가 및 이벤트 처리](http://go.microsoft.com/fwlink/?LinkID=247983)를 참조하세요.
 

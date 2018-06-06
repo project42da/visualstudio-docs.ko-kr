@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 13f06279857897ba1562c157a7ffa1c76dd3c6c8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 020bdb53a62d49eeaf3431c7cca45198c9a2266d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751782"
 ---
 # <a name="using-emulators-to-isolate-unit-tests-for-sharepoint-2010-applications"></a>에뮬레이터를 사용하여 Sharepoint 2010 응용 프로그램용 단위 테스트 격리
 Microsoft.SharePoint.Emulators 패키지는 Microsoft SharePoint 2010 응용 프로그램에 대한 격리된 단위 테스트를 만들도록 도와주는 라이브러리 집합을 제공합니다. 에뮬레이터는 [Microsoft Fakes](../test/isolating-code-under-test-with-microsoft-fakes.md) 격리 프레임워크의 [shim](../test/using-shims-to-isolate-your-application-from-other-assemblies-for-unit-testing.md)을 사용하여 SharePoint API의 가장 일반적인 개체 및 메서드를 가장하는 간단한 메모리 내 개체를 만듭니다. SharePoint 메서드가 에뮬레이트되지 않는 경우가 에뮬레이터의 기본 동작을 변경하려면 Fakes shim을 만들어서 원하는 결과를 제공할 수 있습니다.
@@ -33,7 +34,7 @@ Microsoft.SharePoint.Emulators 패키지는 Microsoft SharePoint 2010 응용 프
 ##  <a name="BKMK_The_AppointmentsWebPart_example"></a> AppointmentsWebPart 예제
  AppointmentsWebPart를 사용하여 약속의 SharePoint 목록을 보고 관리할 수 있습니다.
 
- ![약속 웹 파트](../test/media/ut_emulators_appointmentswebpart.png "UT_EMULATORS_AppointmentsWebPart")
+ ![약속 웹 파트](../test/media/ut_emulators_appointmentswebpart.png)
 
  이 예제에서는 웹 파트의 두 가지 메서드를 테스트해 보겠습니다.
 
@@ -118,7 +119,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
 3.  `Microsoft.SharePoint.Emulators`에 대한 **온라인** 범주를 검색한 다음 **설치**를 선택합니다.
 
- ![SharePoint 에뮬레이터 NuGet 패키지](../test/media/ut_emulators_nuget.png "UT_EMULATORS_Nuget")
+ ![Sharepoint 에뮬레이터 NuGet 패키지](../test/media/ut_emulators_nuget.png)
 
 ###  <a name="BKMK__Running_a_test_method_in_the_emulation_context"></a> 에뮬레이션을 통해 테스트 메서드 실행
  패키지를 설치하면 필요한 라이브러리에 대한 참조가 프로젝트에 추가됩니다. 기존 테스트 클래스에서 에뮬레이터를 쉽게 사용하려면 네임스페이스 `Microsoft.SharePoint.Emulators` 및 `Microsoft.QualityTools.Testing.Emulators`를 추가합니다.
@@ -155,7 +156,7 @@ public void ScheduleAppointmentReturnsTrueWhenNewAppointmentIsCreated()
 
  테스트 메서드가 실행되면 에뮬레이터 런타임에서는 Microsoft Fakes를 호출하여 SharePoint 메서드에 코드를 동적으로 주입하고 이들 메서드에 대한 호출을 Microsoft.SharePoint.Fakes.dll에 선언된 대리자로 전환합니다. Microsoft.SharePoint.Emulators.dll은 에뮬레이트된 메서드에 대한 대리자를 구현하여 실제 SharePoint 동작을 매우 비슷하게 가장합니다. 테스트 중인 구성 요소 또는 테스트 메서드가 SharePoint 메서드를 호출하면 에뮬레이션의 동작이 생성됩니다.
 
- ![에뮬레이터 실행 흐름](../test/media/ut_emulators_flowchart.png "UT_EMULATORS_FlowChart")
+ ![에뮬레이터 실행 흐름](../test/media/ut_emulators_flowchart.png)
 
 ##  <a name="BKMK_Creating_dual_use_classes_and_methods"></a> 이중 사용할 클래스 및 메서드 만들기
  실제 SharePoint API에 대한 통합 테스트 및 에뮬레이터를 사용하는 격리된 단위 테스트에 둘 다 사용할 수 있는 메서드를 만들려면 오버로드된 생성자 `SharePointEmulationScope(EmulationMode)`를 사용하여 테스트 메서드 코드를 래핑합니다. `EmulationMode` 열거형의 두 값은 범위에서 에뮬레이터를 사용할지 여부(`EmulationMode.Enabled`) 또는 범위에서 SharePoint API를 사용할지 여부(`EmulationMode.Passthrough`)를 지정합니다.
@@ -266,11 +267,11 @@ namspace MySPAppTests
 
 1.  에뮬레이트되지 않은 SharePoint 클래스를 shim하려면 Microsoft.SharePoint.fakes 파일을 편집하고 shim된 클래스 목록에 클래스를 추가합니다. [Microsoft Fakes의 코드 생성, 컴파일 및 명명 규칙](../test/code-generation-compilation-and-naming-conventions-in-microsoft-fakes.md)의 [스텁 및 shim의 코드 생성 구성](http://msdn.microsoft.com/library/hh708916.aspx#bkmk_configuring_code_generation_of_stubs) 섹션을 참조하세요.
 
-     ![솔루션 탐색기의 Fakes 폴더](../test/media/ut_emulators_fakesfilefolder.png "UT_EMULATORS_FakesFileFolder")
+     ![솔루션 탐색기의 Fakes 폴더](../test/media/ut_emulators_fakesfilefolder.png)
 
 2.  Microsoft SharePoint Emulators 패키지를 설치한 후와 Microsoft.SharePoint.Fakes 파일을 편집한 경우 테스트 프로젝트를 한 번 이상 다시 빌드해야 합니다. 프로젝트를 빌드하면 디스크에 있는 프로젝트 루트 폴더에 **FakesAssembly** 폴더가 만들어지고 채워집니다.
 
-     ![FakesAssembly 폴더](../test/media/ut_emulators_fakesassemblyfolder.png "UT_EMULATORS_FakesAssemblyFolder")
+     ![FakesAssembly 폴더](../test/media/ut_emulators_fakesassemblyfolder.png)
 
 3.  **FakesAssembly** 폴더에 위치한 **Microsoft.SharePoint.14.0.0.0.Fakes.dll**에 대한 참조를 추가합니다.
 

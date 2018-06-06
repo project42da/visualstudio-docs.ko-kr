@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 483a591e190efa557ffff42c958c18171269e7ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: fdb54122344ce91fe873d854768d0890a83f198a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751808"
 ---
 # <a name="how-to-analyze-threshold-violations-using-the-counters-panel-in-load-test-analyzer"></a>방법: 부하 테스트 분석기의 카운터 패널을 사용하여 임계값 위반 분석
 
@@ -22,21 +23,21 @@ ms.lasthandoff: 04/26/2018
 
  임계값 위반은 특정 성능 카운터와 연결되며, 성능 카운터가 설정된 임계값을 초과했거나 그 아래로 떨어졌음을 나타냅니다. 카운터 패널의 아이콘을 통해 임계값 위반이 표시됩니다.
 
- ![카운터 패널의 컴퓨터 노드](../test/media/ltest_compnode.png "LTest_CompNode")
+ ![카운터 패널의 컴퓨터 노드](../test/media/ltest_compnode.png)
 
  임계값 위반에 대한 아이콘은 오류가 발생한 카운터가 있는 트리 노드에서 루트로 전파됩니다. 이러한 아이콘을 통해 사용자는 트리를 확장하지 않아 트리에 카운터가 표시되지 않은 경우에도 카운터에서 위반이 발생했음을 확인할 수 있습니다. 이 아이콘의 예는 위 그림의 카운터 패널에 있는 **컴퓨터 노드**에서 볼 수 있습니다.
 
  이러한 아이콘은 다음 중 하나입니다.
 
- ![임계값 위반 없음](../test/media/icon_ltest_1.gif "Icon_LTest_1") 임계값 위반이 없습니다.
+ ![임계값 위반 없음](../test/media/icon_ltest_1.gif) 임계값 위반 없음
 
- ![마지막 기간에서 중요 임계값 위반](../test/media/icon_ltest_2.gif "Icon_LTest_2") 마지막 기간에서 중요 임계값 위반이 발생했습니다.
+ ![마지막 기간에서 중요한 임계값 위반 발생](../test/media/icon_ltest_2.gif) 마지막 간격에서 중요 임계값 위반이 발생함
 
- ![이전 기간에서 중요 임계값 위반](../test/media/icon_ltest_3.gif "Icon_LTest_3") 이전 기간에서 중요 임계값 위반이 발생했습니다.
+ ![이전 기간에서 중요한 임계값 위반 발생](../test/media/icon_ltest_3.gif) 이전 간격에서 중요 임계값 위반이 발생함
 
- ![마지막 기간에서 경고 임계값 위반](../test/media/icon_ltest_4.gif "Icon_LTest_4") 마지막 기간에서 경고 임계값 위반이 발생했습니다.
+ ![마지막 기간에서 경고 임계값 위반 발생](../test/media/icon_ltest_4.gif) 마지막 간격에서 경고 임계값 위반이 발생함
 
- ![이전 기간에서 경고 임계값 위반](../test/media/icon_ltest_5.gif "Icon_LTest_5") 이전 기간에서 경고 임계값 위반이 발생했습니다.
+ ![이전 기간에서 경고 임계값 위반 발생](../test/media/icon_ltest_5.gif) 이전 간격에서 경고 임계값 위반이 발생함
 
 ## <a name="to-analyze-threshold-violations-in-the-counters-panel"></a>카운터 패널에서 임계값 위반을 분석하려면
 

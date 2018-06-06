@@ -1,6 +1,7 @@
 ---
 title: 이미지 편집기
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
@@ -12,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2d04172387f0fcbecfb3277bd5dc1208a4e05b66
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 92d82cfaf2f06018ce93e6c1fce1abd0b63809f6
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747312"
 ---
 # <a name="image-editor"></a>이미지 편집기
 
@@ -91,7 +93,7 @@ ms.lasthandoff: 04/19/2018
 
  **이미지 편집기 모드** 도구 모음은 다음과 같습니다.
 
- ![이미지 편집기 모드 도구 모음](../designers/media/digit-tre-modal-toolbar.png "Digit-TRE-Modal-Toolbar")
+ ![이미지 편집기 모달 도구 모음.](../designers/media/digit-tre-modal-toolbar.png)
 
  다음 표에서는 **이미지 편집기 모드** 도구 모음에 있는 항목을 설명하며, 왼쪽에서 오른쪽으로 표시된 순서대로 나열되어 있습니다.
 
@@ -115,7 +117,7 @@ ms.lasthandoff: 04/19/2018
 
  **이미지 편집기** 도구 모음은 다음과 같습니다.
 
- ![이미지 편집기 도구 모음](../designers/media/digit-tre-toolbar.png "Digit-TRE-Toolbar")
+ ![이미지 편집기 도구 모음](../designers/media/digit-tre-toolbar.png)
 
  다음 표에서는 **이미지 편집기** 도구 모음에 있는 항목을 설명하며, 위쪽에서 아래쪽으로 표시된 순서대로 나열되어 있습니다.
 

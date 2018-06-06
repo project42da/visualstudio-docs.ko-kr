@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4ced3059b516c7285d525666a69d2c63a654a83a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a9ac84cce32c6de0310257cb62c29f93726ecb6c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748038"
 ---
 # <a name="walkthrough-create-a-realistic-3d-billiard-ball"></a>연습: 사실적인 3D 당구공 만들기
 
@@ -56,11 +57,11 @@ ms.lasthandoff: 04/26/2018
 
      질감은 다음과 같이 표시됩니다.
 
-     ![당구공 질감](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png "gfx_shader_demo_billiard_art_ball_texture")
+     ![당구공 질감](../designers/media/gfx_shader_demo_billiard_art_ball_texture.png)
 
 4.  필요한 경우 이 질감의 저장소 요구 사항을 줄여야 할 수 있습니다. 질감의 너비를 높이에 맞게 줄이면 됩니다. 그러면 너비에 따라 질감이 압축되지만 질감이 구에 매핑된 방식으로 인해 당구공이 렌더링될 때 질감이 확장됩니다. 크기를 조정한 후 질감은 다음과 같이 표시됩니다.
 
-     ![사각형으로 압축된 당구공 질감](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png "gfx_shader_demo_billiard_art_ball_texture_square")
+     ![사각형으로 압축된 당구공 질감](../designers/media/gfx_shader_demo_billiard_art_ball_texture_square.png)
 
  이제 이 질감을 모델에 적용하는 셰이더를 만들 수 있습니다.
 
@@ -70,11 +71,11 @@ ms.lasthandoff: 04/26/2018
 
      기본적으로 셰이더 그래프는 다음과 같이 표시됩니다.
 
-     ![기본 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_0.png "gfx_shader_demo_billiard_step_0")
+     ![기본 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_0.png)
 
 2.  질감 샘플 값을 현재 픽셀에 적용하도록 기본 셰이더를 수정합니다. 셰이더 그래프는 다음과 같이 표시됩니다.
 
-     ![질감을 개체에 적용한 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_1.png "gfx_shader_demo_billiard_step_1")
+     ![질감을 개체에 적용한 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_1.png)
 
 3.  질감 속성을 구성하여 이전 절차에서 만든 질감을 적용합니다. **질감 샘플** 노드의 **질감** 속성 값을 **Texture1**로 설정하고 같은 속성 창에서 **Texture1** 속성 그룹의 **파일 이름** 속성을 사용하여 질감 파일을 지정합니다.
 
@@ -82,7 +83,7 @@ ms.lasthandoff: 04/26/2018
 
  이제 당구공이 다음과 같이 표시됩니다.
 
- ![질감이 있는 당구공 클로즈업](../designers/media/gfx_shader_demo_.png "gfx_shader_demo_")
+ ![질감이 있는 당구공 클로즈업](../designers/media/gfx_shader_demo_.png)
 
 ## <a name="create-depth-with-the-lambert-lighting-model"></a>램버트 조명 모델을 사용하여 깊이 만들기
 
@@ -96,7 +97,7 @@ ms.lasthandoff: 04/26/2018
 
 -   램버트 조명 값으로 질감 샘플 값을 조정하도록 셰이더를 수정합니다. 셰이더 그래프는 다음과 같이 표시됩니다.
 
-     ![램버트 조명이 추가된 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_2.png "gfx_shader_demo_billiard_step_2")
+     ![램버트 조명이 추가된 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_2.png)
 
 -   선택적으로 셰이더 그래프의 **MaterialDiffuse** 속성을 구성하여 조명 동작 방식을 조정할 수 있습니다. 셰이더 그래프의 속성에 액세스하려면 디자인 화면의 빈 영역을 선택하고 **속성** 창에서 액세스할 속성을 찾습니다.
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/26/2018
 
  램버트 조명이 적용되면 당구공이 다음과 같이 표시됩니다.
 
- ![질감이 있고 빛나는 당구공 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_2.png "gfx_shader_demo_billiard_ball_2")
+ ![질감이 있고 빛나는 당구공 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_2.png)
 
 ## <a name="enhance-the-basic-appearance-with-specular-highlights"></a>반사 하이라이트를 사용하여 기본 모양 개선
 
@@ -118,7 +119,7 @@ ms.lasthandoff: 04/26/2018
 
 1.  추가 혼합을 사용하여 반사 기여도를 포함하도록 셰이더를 수정합니다. 셰이더 그래프는 다음과 같이 표시됩니다.
 
-     ![반사광이 추가된 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_3.png "gfx_shader_demo_billiard_step_3")
+     ![반사광이 추가된 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_3.png)
 
 2.  필요한 경우 셰이더 그래프의 반사 속성(**MaterialSpecular** 및 **MaterialSpecularPower**)을 구성하여 반사 하이라이트 동작 방식을 조정할 수 있습니다. 셰이더 그래프의 속성에 액세스하려면 디자인 화면의 빈 영역을 선택하고 **속성** 창에서 액세스할 속성을 찾습니다.
 
@@ -126,7 +127,7 @@ ms.lasthandoff: 04/26/2018
 
  반사광이 적용되면 당구공이 다음과 같이 표시됩니다.
 
- ![반사광이 추가된 당구공 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_3.png "gfx_shader_demo_billiard_ball_3")
+ ![반사광이 추가된 당구공 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_3.png)
 
 ## <a name="create-a-sense-of-space-by-reflecting-the-environment"></a>환경을 반영하여 공간감 만들기
 
@@ -150,13 +151,13 @@ ms.lasthandoff: 04/26/2018
 
 4.  첫 번째와 같은 크기로 두 번째 질감을 만듭니다. 이 질감은 당구대의 표면 및 측면과 당구대 주변 영역에 해당하는 큐브 맵의 4개 측면에서 반복됩니다. 아래쪽 질감과 같은 색을 사용하여 이 질감으로 당구대 표면을 그려야 합니다. 질감은 다음과 같이 표시됩니다.
 
-     ![큐브 맵 측면의 질감](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png "gfx_shader_demo_billiard_art_env_texture_side")
+     ![큐브 맵 측면의 질감](../designers/media/gfx_shader_demo_billiard_art_env_texture_side.png)
 
      반사 맵의 효과는 사진처럼 정확할 필요가 없습니다. 예를 들어 이 문서에서 이미지를 만드는 데 사용된 큐브 맵에는 6개가 아닌 4개 포켓만 포함됩니다.
 
 5.  다른 질감과 크기가 같은 세 번째 질감을 만듭니다. 이 질감은 당구대 위의 천장에 해당하는 큐브 맵의 상단이 됩니다. 이 반사 부분을 더 눈에 띄게 만들려면 위쪽 조명을 그려 이전 절차의 셰이더에 추가한 반사 하이라이트를 강화합니다. 질감은 다음과 같이 표시됩니다.
 
-     ![큐브 맵 위쪽의 질감](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png "gfx_shader_demo_billiard_art_env_texture_top2")
+     ![큐브 맵 위쪽의 질감](../designers/media/gfx_shader_demo_billiard_art_env_texture_top2.png)
 
  이제 큐브 맵 측면의 개별 질감을 만들었으므로 도구를 사용하여 단일 .dds 질감에 저장될 수 있는 큐브 맵으로 질감을 어셈블할 수 있습니다. 프로그램이 큐브 맵을 .dds 질감 형식으로 저장할 수 있다면 큐브 맵을 만드는 데 원하는 모든 프로그램을 사용할 수 있습니다. 이 연습에서는 June 2010 DirectX SDK에 포함된 DirectX Texture Tool을 사용하여 질감을 만드는 방법을 보여 줍니다.
 
@@ -180,7 +181,7 @@ ms.lasthandoff: 04/26/2018
 
  큐브 맵 레이아웃이 다음과 같다고 가정할 수 있습니다.
 
- ![환경 큐브 맵의 레이아웃](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png "gfx_shader_demo_billiard_art_env_texture_top")
+ ![환경 큐브 맵의 레이아웃](../designers/media/gfx_shader_demo_billiard_art_env_texture_top.png)
 
  위쪽의 이미지는 양의 Y(+Y) 큐브 면이고, 중간에, 왼쪽에서 오른쪽까지 이미지는 -X, +Z, +X 및 -Z 큐브 면이고, 아래쪽의 이미지는 -Y 큐브 면입니다.
 
@@ -190,13 +191,13 @@ ms.lasthandoff: 04/26/2018
 
 1.  추가 혼합을 사용하여 환경 매핑 기여도를 포함하도록 셰이더를 수정합니다. 셰이더 그래프는 다음과 같이 표시됩니다.
 
-     ![두 종류의 반사 셰이더 노드 클로즈업](../designers/media/gfx_shader_demo_billiard_step_4b.png "gfx_shader_demo_billiard_step_4b")
+     ![두 종류의 반사 셰이더 노드 클로즈업](../designers/media/gfx_shader_demo_billiard_step_4b.png)
 
      **곱셈-덧셈** 노드를 사용하여 셰이더 그래프를 단순화할 수 있습니다.
 
      다음은 환경 매핑을 구현하는 셰이더 노드의 더 자세한 보기입니다.
 
-     ![환경 매핑이 추가된 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_4a.png "gfx_shader_demo_billiard_step_4a")
+     ![환경 매핑이 추가된 셰이더 그래프](../designers/media/gfx_shader_demo_billiard_step_4a.png)
 
 2.  큐브 맵의 질감 속성을 구성하여 이전 절차에서 만든 질감을 적용합니다. **Cubemap Sample**(큐브 맵 샘플) 노드의 **질감** 값을 **Texture2**로 설정하고, **Texture2** 속성 그룹의 **파일 이름** 속성을 사용하여 질감 파일을 지정합니다.
 
@@ -204,7 +205,7 @@ ms.lasthandoff: 04/26/2018
 
  환경 매핑이 적용되면 당구공이 다음과 같이 표시됩니다.
 
- ![환경에 매핑된 당구공의 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_4.png "gfx_shader_demo_billiard_ball_4")
+ ![환경이 매핑된 클로즈업](../designers/media/gfx_shader_demo_billiard_ball_4.png)
 
  이 마지막 이미지에서 추가한 효과가 어떻게 결합되어 매우 사실적인 당구공을 만드는지 알 수 있습니다. 도형, 질감 및 조명은 3D 개체의 기본 모양을 만들고 반사 하이라이트 및 반사는 당구공을 더 눈에 띠고 환경의 일부처럼 보이게 만듭니다.
 

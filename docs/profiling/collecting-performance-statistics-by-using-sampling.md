@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 3fea27cdfbcc843b30fbb4500dd9528df5b65c3d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 7fef6883056affd6ee47da86d8f2860c8c9ca047
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548260"
 ---
-# <a name="collecting-performance-statistics-by-using-sampling"></a>샘플링을 사용하여 성능 통계 수집
+# <a name="collect-performance-statistics-by-using-sampling"></a>샘플링을 사용하여 성능 통계 수집
 
 기본적으로는 Visual Studio 프로파일링 도구 샘플링 방법은 10,000,000 프로세서 주기마다(1GHz 컴퓨터에서 약 1/100초마다) 프로파일링 정보를 수집합니다. 샘플링 방법은 프로세서 사용률 문제를 찾는 데 유용하며, 대부분의 성능 조사를 시작할 수 있는 방법으로 제안됩니다.
 

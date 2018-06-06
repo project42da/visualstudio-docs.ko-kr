@@ -13,17 +13,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 110aa964c6163f508ba9cd5f26409d0a9912a17e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3293b526b3380d3052123d45f3fb7f6599f7b5f7
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751977"
 ---
 # <a name="how-to-add-and-delete-counters-on-graphs-in-load-test-results"></a>방법: 부하 테스트 결과의 그래프에서 카운터 추가 및 삭제
 
 카운터 패널을 사용하여 그래프에 성능 카운터를 추가할 수 있습니다.
 
- ![그래프에 추가된 카운터](../test/media/ltest_selectcounter.png "LTest_SelectCounter")
+ ![그래프에 추가된 카운터](../test/media/ltest_selectcounter.png)
 
  **성능 카운터 샘플링 간격 고려 사항**
 

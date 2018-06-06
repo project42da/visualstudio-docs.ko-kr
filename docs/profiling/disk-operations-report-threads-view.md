@@ -14,11 +14,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: afe999ea56dbbdfd2179307f69ec12df92c612e9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: d145b57b2cacce68b609ddc7aea5cef41cf69762
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764620"
 ---
 # <a name="disk-operations-report-threads-view"></a>디스크 작업 보고서(스레드 뷰)
 디스크 작업 보고서에는 디스크 채널의 디스크 I/O 작업이 표시됩니다.  

@@ -11,11 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 6245647ca0af639bdd960e43f2c1adeed3982562
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d8e1b983dc9ec690396b7e4a8494a02f188ef77e
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750827"
 ---
 # <a name="add-a-data-source-to-a-web-performance-test"></a>웹 성능 테스트에 데이터 소스 추가
 
@@ -143,11 +144,11 @@ ms.lasthandoff: 04/26/2018
 
 1. 프로젝트 데이터베이스 아티팩트를 구성하고 항목을 추가하려면 폴더를 만듭니다.
 
-     ![데이터 폴더에 새 항목 추가](../test/media/web_test_databinding_foldernewitem.png "Web_Test_DataBinding_FolderNewItem")
+     ![Data 폴더에 새 항목 추가](../test/media/web_test_databinding_foldernewitem.png)
 
 2. 텍스트 파일을 만듭니다.
 
-     ![새 텍스트 파일 이름을 ColorData.csv로 지정](../test/media/web_test_databinding_foldernewitemtextfile.png "Web_Test_DataBinding_FolderNewItemTextFile")
+     ![새 텍스트 파일 이름을 ColorData.csv로 지정](../test/media/web_test_databinding_foldernewitemtextfile.png)
 
 3. 텍스트 파일을 편집하여 다음을 추가합니다.
 
@@ -159,7 +160,7 @@ ms.lasthandoff: 04/26/2018
 
 4. [SQL 데이터 바인딩](#AddingDataBindingWebTest_BindSQLData)의 단계를 따르지만 사용자의 데이터 소스에 맞게 CSV 파일을 선택합니다.
 
-     ![이름을 입력하고 CSV 파일을 선택](../test/media/web_test_databinding_adddatasourcedialog.png "Web_Test_DataBinding_AddDataSourceDialog")
+     ![이름을 입력하고 CSV 파일을 선택](../test/media/web_test_databinding_adddatasourcedialog.png)
 
 ### <a name="q-what-if-my-existing-csv-file-does-not-contain-column-headers"></a>Q: 기존 CSV 파일에 열 머리글이 없으면 어떻게 됩니까?
 
@@ -167,7 +168,7 @@ ms.lasthandoff: 04/26/2018
 
 1. schema.ini라는 새 텍스트 파일을 추가합니다.
 
-     ![schema.ini 파일 추가](../test/media/web_test_databinding_schemafile.png "Web_Test_DataBinding_SchemaFile")
+     ![schema.ini 파일 추가](../test/media/web_test_databinding_schemafile.png)
 
 2. schema.ini 파일을 편집하여 데이터 구조를 설명하는 정보를 추가합니다. 예를 들어, CSV 파일을 설명하는 스키마 파일은 다음과 같습니다.
 
@@ -178,39 +179,39 @@ ms.lasthandoff: 04/26/2018
 
 3. 테스트에 데이터 소스를 추가합니다.
 
-     ![웹 성능 테스트에 데이터 소스 추가](../test/media/web_test_databinding_sql_adddatasource.png "Web_Test_DataBinding_SQL_AddDataSource")
+     ![웹 성능 테스트에 데이터 소스 추가](../test/media/web_test_databinding_sql_adddatasource.png)
 
 4. schema.ini 파일을 사용하는 경우 데이터베이스(CSV 파일이 아님)를 데이터 소스로 선택하고 이름을 지정합니다.
 
-     ![데이터베이스 데이터 소스 추가](../test/media/web_test_databinding_adddatasourcecolortext.png "Web_Test_DataBinding_AddDataSourceColorText")
+     ![데이터베이스 데이터 소스 추가](../test/media/web_test_databinding_adddatasourcecolortext.png)
 
 5. 새 연결을 만듭니다.
 
-     ![새 연결 선택](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png "Web_Test_DataBinding_SQL_AddDataSourceDialogConnectionNew")
+     ![새 연결 선택](../test/media/web_test_databinding_sql_adddatasourcedialogconnectionnew.png)
 
 6. .NET Framework Data Provider for OLE DB를 선택합니다.
 
-     ![.NET Framework OLE DB 데이터 공급자 선택](../test/media/web_test_databinding_adddatasourcecolortext2.png "Web_Test_DataBinding_AddDataSourceColorText2")
+     ![.NET Framework OLE DB 데이터 공급자 선택](../test/media/web_test_databinding_adddatasourcecolortext2.png)
 
 7. 고급을 선택합니다.
 
-     ![고급 선택](../test/media/web_test_databinding_advanced.png "Web_Test_DataBinding_Advanced")
+     ![고급 선택](../test/media/web_test_databinding_advanced.png)
 
 8. 공급자 속성의 경우 Microsoft.Jet.OLEDB.4.0을 선택한 다음 확장 속성을 Text;HDR=NO로 설정합니다.
 
-     ![고급 속성 적용](../test/media/web_test_databinding_advancedproperties.png "Web_Test_DataBinding_AdvancedProperties")
+     ![고급 속성 적용](../test/media/web_test_databinding_advancedproperties.png)
 
 9. 스키마 파일이 포함된 폴더 이름을 입력하고 연결을 테스트합니다.
 
-     ![데이터 폴더의 경로 입력](../test/media/web_test_databinding_adddatasourcecolortext5.png "Web_Test_DataBinding_AddDataSourceColorText5")
+     ![데이터 폴더의 경로 입력](../test/media/web_test_databinding_adddatasourcecolortext5.png)
 
 10. 사용할 CSV 파일을 선택합니다.
 
-     ![텍스트 파일 선택](../test/media/web_test_databinding_adddatasourcecolortext6.png "Web_Test_DataBinding_AddDataSourceColorText6")
+     ![텍스트 파일 선택](../test/media/web_test_databinding_adddatasourcecolortext6.png)
 
      마친 후, CSV 파일이 테이블로 나타납니다.
 
-     ![테스트에 추가된 데이터 소스](../test/media/web_test_databinding_adddatasourcecolortext7.png "Web_Test_DataBinding_AddDataSourceColorText7")
+     ![테스트에 추가된 데이터 소스](../test/media/web_test_databinding_adddatasourcecolortext7.png)
 
 ### <a name="q-how-do-i-use-an-xml-file-as-a-data-source"></a>Q: XML 파일을 데이터 소스로 사용하려면 어떻게 할까요?
 
@@ -218,11 +219,11 @@ ms.lasthandoff: 04/26/2018
 
 1. 프로젝트 데이터베이스 아티팩트를 구성하고 항목을 추가하려면 폴더를 만듭니다.
 
-     ![데이터 폴더에 새 항목 추가](../test/media/web_test_databinding_foldernewitem.png "Web_Test_DataBinding_FolderNewItem")
+     ![Data 폴더에 새 항목 추가](../test/media/web_test_databinding_foldernewitem.png)
 
 2. XML 파일을 만듭니다.
 
-     ![ColorData.xml 파일 추가](../test/media/web_test_databinding_additemxmlfile.png "Web_Test_DataBinding_AddItemXMLFile")
+     ![Add ColorData.xml 파일 추가](../test/media/web_test_databinding_additemxmlfile.png)
 
 3. XML 파일을 편집하고 데이터를 추가합니다.
 
@@ -242,7 +243,7 @@ ms.lasthandoff: 04/26/2018
 
 4. [SQL 데이터 바인딩](#AddingDataBindingWebTest_BindSQLData)의 단계를 따르지만 사용자의 데이터 소스에 맞게 XML 파일을 선택합니다.
 
-     ![이름을 입력하고 XML 파일을 선택](../test/media/web_test_databinding_adddatasourcedialogxml.png "Web_Test_DataBinding_AddDataSourceDialogXML")
+     ![이름을 입력하고 XML 파일을 선택](../test/media/web_test_databinding_adddatasourcedialogxml.png)
 
 ### <a name="q-can-i-add-data-binding-to-a-web-service-request-that-uses-soap"></a>Q: SOAP을 사용한 웹 서비스 요청에 데이터 바인딩을 추가할 수 있습니까?
 
@@ -250,7 +251,7 @@ ms.lasthandoff: 04/26/2018
 
 1. 요청 트리 및 속성 창에서 웹 서비스 요청을 선택하고 문자열 본문 속성에서 줄임표(…)를 선택합니다.
 
-     ![웹 서비스 문자열 본문 편집](../test/media/web_test_databinding_webservicerequest.png "Web_Test_DataBinding_WebServiceRequest")
+     ![웹 서비스 문자열 본문 편집](../test/media/web_test_databinding_webservicerequest.png)
 
 2. 다음 구문을 사용하여 SOAP 본문의 값을 데이터 바인딩된 값으로 바꿉니다.
 

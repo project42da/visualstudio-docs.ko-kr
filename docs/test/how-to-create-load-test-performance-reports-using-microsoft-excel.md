@@ -11,11 +11,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: b82a35ed56c0930b8d9c0ff8ec7bfcbd008a7648
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 3be74e81bcd8cebc5f102fbc6f1acb7f58f51f9f
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751535"
 ---
 # <a name="how-to-create-load-test-performance-reports-using-microsoft-excel"></a>방법: Microsoft Excel을 사용하여 부하 테스트 성능 보고서 만들기
 
@@ -39,7 +40,7 @@ ms.lasthandoff: 04/26/2018
 
  다음 그림에서는 트랜잭션(UpdateCart) 속도 저하와 % Processor 카운터 감소 간의 상관 관계를 나타내는 보고서의 예를 보여 줍니다. 이 보고서는 데이터베이스나 네트워크가 아니라 응용 프로그램 코드에 잠재적 문제가 있음을 나타내므로 ASP.NET 프로파일러를 사용하여 이를 진단하는 것이 좋습니다.
 
- ![응용 프로그램 코드의 잠재적 문제](../test/media/lt_excel.png "LT_Excel")
+ ![응용 프로그램 코드의 잠재적 문제](../test/media/lt_excel.png)
 
  부하 테스트 분석기에서 도구 모음의 **Excel 보고서 만들기** 단추를 사용하거나, Excel에서 Office 리본 메뉴의 **부하 테스트** 탭에 있는 **부하 테스트 보고서** 옵션을 사용하여 Excel 보고서를 생성할 수 있습니다.
 

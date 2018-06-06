@@ -1,6 +1,7 @@
 ---
 title: '방법: 기본 퐁 셰이더 만들기'
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 ms.assetid: c7c69da8-142b-4d3b-9be9-4be0d5970b25
@@ -9,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: f81d6e34a6fe0932a8bccae2202c1640b8befb76
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 9208879400846d7acfa2cb89d1c30efaa65631a0
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746587"
 ---
 # <a name="how-to-create-a-basic-phong-shader"></a>방법: 기본 퐁 셰이더 만들기
 
@@ -44,7 +46,7 @@ ms.lasthandoff: 04/19/2018
 > [!NOTE]
 > 이 그림에서 셰이더의 효과를 더 잘 보여 주기 위해 셰이더의 **MaterialDiffuse** 매개 변수를 사용하여 주황색이 지정되었고, **MaterialSpecular** 및 **MaterialSpecularPower** 매개 변수를 사용하여 금속 재질 마감이 지정되었습니다. 재질 매개 변수에 대한 자세한 내용은 [셰이더 디자이너](../designers/shader-designer.md)의 셰이더 미리 보기 섹션을 참조하세요.
 
- ![셰이더 그래프 및 효과 미리 보기](../designers/media/digit-lighting-graph.png "Digit-Lighting-Graph")
+ ![셰이더 그래프 및 효과 미리 보기](../designers/media/digit-lighting-graph.png)
 
  일부 셰이더의 경우 특정 도형을 사용하면 미리 보기가 더 잘 표시될 수 있습니다. 셰이더 디자이너에서 셰이더를 미리 보는 방법에 대한 자세한 내용은 [셰이더 디자이너](../designers/shader-designer.md)의 셰이더 미리 보기 섹션을 참조하세요.
 
@@ -55,7 +57,7 @@ ms.lasthandoff: 04/19/2018
 >
 > **MaterialSpecularPower** 속성은 반사 강조 표시의 강도를 결정합니다. 높은 반사 강도는 더 무디고 더 집중적인 강조 표시를 시뮬레이트합니다. 매우 낮은 반사 강도는 전체 표면의 색을 과포화시키고 숨길 수 있는 강도가 높고 포괄적인 강조 표시를 시뮬레이트합니다.
 
- ![모델에 적용된 퐁 조명](../designers/media/digit-lighting-model.png "Digit-Lighting-Model")
+ ![모델에 적용된 퐁 조명](../designers/media/digit-lighting-model.png)
 
  3D 모델에 셰이더를 적용하는 방법에 대한 자세한 내용은 [방법: 3D 모델에 셰이더 적용](../designers/how-to-apply-a-shader-to-a-3-d-model.md)을 참조하세요.
 

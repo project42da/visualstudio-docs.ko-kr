@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: e37b39d504059491318913f6eb1345d73ef3074b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bc7beb1100b5e1bfe3fd554da53520ffc9888e64
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751886"
 ---
 # <a name="how-to-analyze-errors-using-the-counters-panel"></a>방법: 카운터 패널을 사용하여 오류 분석
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 04/26/2018
 
  카운터 패널의 **오류** 노드에는 부하 테스트 시 발견된 모든 오류가 포함됩니다. 오류 노드에는 여러 다른 종류의 오류(예: **예외** 및 **HTTP 오류**)와 관련된 여러 하위 범주 오류 노드가 포함되어 있습니다.
 
- ![카운터 패널의 오류 노드](../test/media/ltest_errornode.png "LTest_ErrorNode")
+ ![카운터 패널의 오류 노드](../test/media/ltest_errornode.png)
 
 ## <a name="to-analyze-errors-in-the-counters-panel"></a>카운터 패널에서 오류를 분석하려면
 

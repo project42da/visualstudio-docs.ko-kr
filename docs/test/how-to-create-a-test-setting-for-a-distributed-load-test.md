@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 1b9ffd7206023885fc45e66af585ca34f75ce67f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 29517fcf0f788150db43988fdacf54b3b8b5800c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751821"
 ---
 # <a name="how-to-create-a-test-setting-for-a-distributed-load-test"></a>방법: 분산 부하 테스트에 대한 테스트 설정 만들기
 
@@ -74,7 +75,7 @@ Visual Studio를 통해 실행할 부하 테스트의 솔루션에서 테스트 
 
      **역할** 페이지가 표시됩니다.
 
-     ![테스트 설정 역할](../test/media/load_testtestrole.png "Load_TestTestRole")
+     ![테스트 설정 역할](../test/media/load_testtestrole.png)
 
 10. 테스트를 원격으로 실행하거나, 테스트를 원격으로 실행하고 데이터를 원격으로 수집하려면 **테스트 실행 방법** 드롭다운 목록을 사용하고 **원격 실행**을 선택합니다.
 
@@ -108,7 +109,7 @@ Visual Studio를 통해 실행할 부하 테스트의 솔루션에서 테스트 
 
      **데이터 및 진단** 페이지가 표시됩니다.
 
-     ![테스트 설정 데이터 및 진단](../test/media/load_testtest.png "Load_TestTest")
+     ![테스트 설정 데이터 및 진단](../test/media/load_testtest.png)
 
 18. **데이터 및 진단** 페이지에서 역할이 데이터를 수집하는 데 사용할 *진단 데이터 어댑터*를 선택하여 역할이 수행하는 작업을 정의합니다. 따라서 역할에 사용할 수 있는 진단 데이터 어댑터가 하나 이상인 경우 테스트 컨트롤러는 역할에 대해 사용자가 정의한 특성을 기준으로 사용 가능한 테스트 에이전트 컴퓨터를 선택하여 지정된 진단 데이터 어댑터에 대한 데이터를 수집합니다. 각 역할에 대해 수집할 데이터 및 진단 데이터 어댑터를 선택하려면 역할을 선택합니다. 각 역할에 대해 테스트 필요성에 따라 진단 데이터 어댑터를 선택합니다. 각 역할에 대해 선택한 각 진단 데이터 어댑터를 구성하려면 **구성**을 선택합니다.
 

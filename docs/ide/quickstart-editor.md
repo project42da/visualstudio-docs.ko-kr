@@ -11,11 +11,12 @@ dev_langs:
 - CSharp
 ms.workload:
 - multiple
-ms.openlocfilehash: 44eb805a50e7518aa346b35a8aaba5202244ec76
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8231b36f2fe44a04e16b420eb13bfcc4eb30c696
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573286"
 ---
 # <a name="quickstart-use-the-code-editor"></a>빠른 시작: 코드 편집기 사용
 
@@ -23,7 +24,7 @@ ms.lasthandoff: 04/26/2018
 
 아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://aka.ms/vsdownload?utm_source=mscom&utm_campaign=msdocs) 페이지로 이동하여 체험용으로 설치합니다.
 
-이 빠른 시작에서는 프로그래밍 언어에 이미 친숙하다고 가정합니다. 친숙하지 않은 경우에는 먼저 [Python](../ide/quickstart-python.md) 또는 [C#](../ide/tutorial-csharp-aspnet-core.md)으로 웹앱 만들기나 [Visual Basic](../ide/quickstart-visual-basic-console.md) 또는 [C++](../ide/quickstart-cpp.md)로 콘솔 앱 만들기에 대한 프로그래밍 빠른 시작 중 하나를 살펴보는 것이 좋습니다.
+이 빠른 시작에서는 프로그래밍 언어에 이미 친숙하다고 가정합니다. 친숙하지 않은 경우에는 먼저 [Python](../ide/quickstart-python.md) 또는 [C#](../ide/tutorial-csharp-aspnet-core.md)으로 웹앱 만들기나 [Visual Basic](../ide/quickstart-visual-basic-console.md) 또는 [C++](../ide/getting-started-with-cpp-in-visual-studio.md)로 콘솔 앱 만들기에 대한 프로그래밍 빠른 시작 중 하나를 살펴보는 것이 좋습니다.
 
 ## <a name="create-a-new-code-file"></a>새 코드 파일 만들기
 

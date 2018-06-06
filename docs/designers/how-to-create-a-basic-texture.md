@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d58cbb439eb370af16ee68ca03a4d1db467861f0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 40eb0ce15ade3162fecbda16469c5efa382afb28
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745632"
 ---
 # <a name="how-to-create-a-basic-texture"></a>방법: 기본 질감 만들기
 이 문서에서는 이미지 편집기를 사용하여 기본 질감을 만드는 방법을 설명합니다.
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/26/2018
 
  다음 단계에서는 "bullseye" 대상을 나타내는 질감을 만드는 방법을 보여 줍니다. 작업을 마치면 질감이 다름 그림과 같이 표시됩니다. 질감에서 투명도를 더 잘 보여 주기 위해 [이미지 편집기]는 질감을 표시하는 데 녹색 체크무늬 패턴을 사용하도록 구성되었습니다.
 
- ![녹색으로 표시된 투명도가 있는 "Bullseye" 대상](../designers/media/digit-bullseye-texture-in-editor.png "Digit-Bullseye-Texture-In-Editor")
+ ![녹색으로 표시된 투명도가 있는 "Bullseye" 대상](../designers/media/digit-bullseye-texture-in-editor.png)
 
  시작하기 전에 **속성** 창이 표시되는지 확인하세요. **속성** 창을 사용하여 이미지 크기를 설정하고, 도구 속성을 변경하고, 작업 중에 색을 지정합니다.
 
@@ -84,7 +85,7 @@ ms.lasthandoff: 04/26/2018
 
  "bullseye" 대상 질감이 완료되었습니다. 다음 그림은 투명도가 적용된 최종 이미지입니다.
 
- ![전체 "bullseye" 대상 질감](../designers/media/gfx_image_demo_bullseye.png "gfx_image_demo_bullseye")
+ ![전체 "bullseye" 대상 질감](../designers/media/gfx_image_demo_bullseye.png)
 
  다음 단계로 이 질감에 대한 MIP 수준을 생성할 수 있습니다. 자세한 내용은 [방법: MIP 수준 만들기 및 수정](../designers/how-to-create-and-modify-mip-levels.md)을 참조하세요.
 
