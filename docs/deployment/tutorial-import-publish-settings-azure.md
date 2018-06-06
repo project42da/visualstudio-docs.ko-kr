@@ -11,11 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2cf6c17f3017bb1021423b19b32b36749fe0744d
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 88dc37e555f6ceb30584d4a1c17b96506219631a
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766742"
 ---
 # <a name="publish-an-application-to-azure-app-service-by-importing-publish-settings-in-visual-studio"></a>Azure 앱 서비스에 응용 프로그램을 가져와서 게시 Visual Studio에서 게시 설정
 
@@ -37,9 +38,9 @@ ms.lasthandoff: 05/24/2018
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio 2017 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
+* Visual Studio 2017 설치 되어 있어야 하며 **ASP.NET** 및. **NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해에서 합니다. **NET 코어** 작업 합니다.
 
-    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+    아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지로 이동하여 체험용으로 설치합니다.
 
 * Azure 앱 서비스를 만듭니다. 자세한 내용은 참조 [Visual Studio를 사용 하 여 Azure에 ASP.NET Core 웹 앱을 배포](/aspnet/core/tutorials/publish-to-azure-webapp-using-vs)합니다. 
 
@@ -92,11 +93,11 @@ ms.lasthandoff: 05/24/2018
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio에서 게시 설정 가져오기 및 배포
 
-[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
+[!INCLUDE [import publish settings](../deployment/includes/import-publish-settings-vs.md)]
 
 ## <a name="next-steps"></a>다음 단계
 
-게시 설정 파일을 만든이 자습서에서는 Visual Studio로 가져올 및 Azure 앱 서비스에 ASP.NET 응용 프로그램을 배포 합니다.
+게시 설정 파일을 만든이 자습서에서는 Visual Studio로 가져올 및 Azure 앱 서비스에 ASP.NET 응용 프로그램을 배포 합니다. Visual Studio에서 게시 옵션의 개요를 할 수 있습니다.
 
 > [!div class="nextstepaction"]
 > [배포 소개](../deployment/deploying-applications-services-and-components.md)

@@ -18,11 +18,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 8b2fc6b7a729be412b48c331eb5029df617d35c4
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7c9fd9337682abbcd7325a849b95846be3af118d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747182"
 ---
 # <a name="walkthrough-creating-a-simple-wcf-service-in-windows-forms"></a>연습: Windows Forms에서 간단한 WCF 서비스 만들기
 이 연습에서는 간단한 [!INCLUDE[vsindigo](../data-tools/includes/vsindigo_md.md)] 서비스를 만들고 테스트한 다음 Windows Forms 응용 프로그램에서 액세스하는 방법을 보여 줍니다.
@@ -37,12 +38,12 @@ ms.lasthandoff: 04/26/2018
 
 2.  에 **새 프로젝트** 대화 상자에서 **Visual Basic** 또는 **Visual C#** 노드와 클릭 **WCF**옵니다 **WCF 서비스 라이브러리**합니다. 클릭 **확인** 여 프로젝트를 엽니다.
 
-     ![WCF 서비스 라이브러리 프로젝트](../data-tools/media/wcf1.PNG "wcf1")
+     ![WCF 서비스 라이브러리 프로젝트](../data-tools/media/wcf1.png)
 
     > [!NOTE]
     >  이렇게 하면 테스트 및 액세스할 수 있는 작업 서비스가 만들어집니다. 다음 두 단계는 다른 데이터 형식을 사용하도록 기본 메서드를 수정하는 방법을 보여 줍니다. 실제 응용 프로그램에서는 서비스에 사용자 고유의 함수를 추가할 수도 있습니다.
 
-3.  ![IService1 파일](../data-tools/media/wcf2.png "wcf2")
+3.  ![IService1 파일](../data-tools/media/wcf2.png)
 
      **솔루션 탐색기**IService1.vb 또는 IService1.cs를 두 번 클릭 하 고 다음 줄을 찾습니다.
 
@@ -56,7 +57,7 @@ ms.lasthandoff: 04/26/2018
 
      위의 코드에서 `<OperationContract()>` 또는 `[OperationContract]` 특성을 확인합니다. 이러한 특성은 서비스에서 노출하는 모든 메서드에 필요합니다.
 
-4.  ![Service1 파일](../data-tools/media/wcf3.png "wcf3")
+4.  ![Service1 파일](../data-tools/media/wcf3.png)
 
      **솔루션 탐색기**Service1.vb 또는 Service1.cs를 두 번 클릭 하 고 다음 줄을 찾습니다.
 
@@ -76,15 +77,15 @@ ms.lasthandoff: 04/26/2018
 
 2.  에 **WCF 테스트 클라이언트** 양식에서 두 번 클릭은 **getdata ()** 아래 메서드의 **IService1**합니다. **GetData** 탭이 표시 됩니다.
 
-     ![GetData&#40; &#41; 메서드](../data-tools/media/wcf4.png "wcf4")
+     ![GetData&#40; &#41; 메서드](../data-tools/media/wcf4.png)
 
 3.  에 **요청** 상자는 **값** 필드와 형식 `Hello`합니다.
 
-     ![값 필드](../data-tools/media/wcf5.png "wcf5")
+     ![값 필드](../data-tools/media/wcf5.png)
 
 4.  클릭는 **Invoke** 단추입니다. 경우는 **보안 경고** 대화 상자가 표시 됩니다, 클릭 **확인**합니다. 결과에 표시 됩니다는 **응답** 상자입니다.
 
-     ![응답 상자의 결과](../data-tools/media/wcf6.png "wcf6")
+     ![응답 상자의 결과](../data-tools/media/wcf6.png)
 
 5.  에 **파일** 메뉴를 클릭 하 여 **종료** 테스트 폼을 닫습니다.
 
@@ -96,13 +97,13 @@ ms.lasthandoff: 04/26/2018
 
 2.  에 **새 프로젝트** 대화 상자에서 **Visual Basic** 또는 **Visual C#** 노드 선택한 **Windows**를 선택한 후 **Windows Forms 응용 프로그램**합니다. 클릭 **확인** 여 프로젝트를 엽니다.
 
-     ![Windows Forms 응용 프로그램 프로젝트](../data-tools/media/wcf7.png "wcf7")
+     ![Windows Forms 응용 프로그램 프로젝트](../data-tools/media/wcf7.png)
 
 3.  마우스 오른쪽 단추로 클릭 **WindowsApplication1** 클릭 **서비스 참조 추가**합니다. **서비스 참조 추가** 대화 상자가 표시 됩니다.
 
 4.  에 **서비스 참조 추가** 대화 상자를 클릭 **Discover**합니다.
 
-     ![서비스 참조 추가 대화 상자](../data-tools/media/wcf8.png "wcf8")
+     ![서비스 참조 추가 대화 상자](../data-tools/media/wcf8.png)
 
      **Service1** 에 표시 됩니다는 **서비스** 창.
 
@@ -114,7 +115,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  **도구 상자**를 끌어는 `TextBox` 컨트롤은 `Label` 컨트롤 및 `Button` 컨트롤을 폼으로 합니다.
 
-     ![폼에 컨트롤 추가](../data-tools/media/wcf9.png "wcf9")
+     ![폼에 컨트롤 추가](../data-tools/media/wcf9.png)
 
 3.  `Button`을 두 번 클릭하고 다음 코드를 `Click` 이벤트 처리기에 추가합니다.
 
@@ -125,7 +126,7 @@ ms.lasthandoff: 04/26/2018
 
 5.  키를 눌러 **F5** 프로젝트를 실행 합니다. 텍스트를 입력하고 단추를 클릭합니다. 레이블에 "입력한 내용:"과 입력한 텍스트가 표시됩니다.
 
-     ![결과 보여 주는 폼](../data-tools/media/wcf10.png "wcf10")
+     ![결과가 표시된 폼](../data-tools/media/wcf10.png)
 
 ## <a name="see-also"></a>참고자료
 

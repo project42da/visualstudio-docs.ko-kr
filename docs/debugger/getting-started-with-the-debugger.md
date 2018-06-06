@@ -13,11 +13,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c62137422a4cbd7b85b4f7415e9b3fa85c2c0248
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0f3d4c27f0aedf879137b3ef7a154fb7dd6f9164
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766261"
 ---
 # <a name="tutorial-learn-to-debug-using-visual-studio"></a>자습서: Visual Studio를 사용 하 여 디버깅 하는 방법을 알아봅니다
 
@@ -39,6 +40,14 @@ ms.lasthandoff: 04/26/2018
 > * 데이터 팁 및 디버거 창에 변수 검사
 > * 호출 스택을 검사합니다
 > * 예외 도우미 사용
+
+## <a name="prerequisites"></a>전제 조건
+
+* Visual Studio 2017 설치 되어 있어야 하며 합니다. **NET 데스크톱 개발** 작업 합니다.
+
+    아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지로 이동하여 체험용으로 설치합니다.
+
+    작업 부하를 설치 하 고 이미 Visual Studio를 클릭 해야 하는 경우는 **Open Visual Studio 설치 관리자** 의 왼쪽된 창에서 링크는 **새 프로젝트** 대화 상자 (선택 **파일**  >  **새** > **프로젝트**). Visual Studio 설치 관리자가 시작됩니다. 선택 된 합니다. **NET 데스크톱 개발** 워크 로드를 눌러 **수정**합니다.
 
 ## <a name="start-the-debugger"></a>디버거를 시작!
 

@@ -21,15 +21,15 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5631699f324451034d0d5c66161c004c793add37
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 8d19dc2cb621cc99b94524806d63eebba137668a
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691419"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765858"
 ---
-# <a name="browsing-sharepoint-connections-that-use-server-explorer"></a>서버 탐색기를 사용 하 여 SharePoint 연결 찾아보기
-  로컬 SharePoint 연결에서 검색할 수 있습니다 **서버 탐색기**합니다. 이 방법을 사용하면 시스템에서 SharePoint 사이트의 구성 요소를 탐색할 수 있습니다. SharePoint 사이트 구성 요소 목록 정의 콘텐츠 형식 등 명명 된 노드에 표시 **SharePoint 연결** 의 트리 보기에서 **서버 탐색기**합니다. 표시 하려면 **서버 탐색기**, 메뉴 모음에서 **보기**, **서버 탐색기**합니다. SharePoint 사이트 구성 요소를 표시하는 것 외에도 바로 가기 메뉴의 명령을 사용하여 항목을 제거하거나, 속성을 보거나, 트리 뷰를 새로 고칠 수 있습니다.  
+# <a name="browse-sharepoint-connections-by-using-server-explorer"></a>서버 탐색기를 사용 하 여 SharePoint 연결 찾아보기
+  로컬 SharePoint 연결에서 검색할 수 있습니다 **서버 탐색기**합니다. 이 방법을 사용하면 시스템에서 SharePoint 사이트의 구성 요소를 탐색할 수 있습니다. SharePoint 사이트 구성 요소 목록 정의 콘텐츠 형식 등 명명 된 노드에 표시 **SharePoint 연결** 의 트리 보기에서 **서버 탐색기**합니다. 표시 하려면 **서버 탐색기**, 메뉴 모음에서 **보기** > **서버 탐색기**합니다. SharePoint 사이트 구성 요소를 표시하는 것 외에도 바로 가기 메뉴의 명령을 사용하여 항목을 제거하거나, 속성을 보거나, 트리 뷰를 새로 고칠 수 있습니다.  
   
 > [!IMPORTANT]  
 >  SharePoint 사이트를 탐색하려면 SharePoint 사이트 컬렉션의 관리자여야 하고 로컬 컴퓨터의 관리자로서 Visual Studio를 실행해야 합니다. 사이트에 표시 되는 그렇지 않은 경우 **서버 탐색기**, 해당 노드를 확장할 수 없습니다. 사이트 컬렉션의 관리자 인 여부를 확인 하려면 웹 브라우저를 열고에서 사이트를 엽니다는 **사이트 작업** 메뉴 선택 **사이트 사용 권한**를 선택한 후의 **사용 권한: 팀 사이트** 페이지를 선택 합니다는 **사이트 모음 관리자** 명령을 **관리** 리본 메뉴에 그룹화 합니다. 사이트 모음 관리자 사용자 이름 텍스트 상자에 나타납니다. 경우는 **사이트 모음 관리자** 명령이 리본 메뉴에서 관리 그룹에 표시 되지 않으면 사이트 컬렉션의 관리자가 아니라면 하 고 사이트 관리자에 게 적절 한 사용 권한을 얻어야 합니다.  

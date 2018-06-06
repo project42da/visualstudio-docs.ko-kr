@@ -9,16 +9,17 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: ce2fa2f067b72d051aa21eba0db2b8f0eda8b43f
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8f4cfe9549880646fe9ba0a487045b005366c075
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749478"
 ---
 # <a name="creating-a-windows-forms-based-domain-specific-language"></a>Windows Forms 기반 도메인별 언어 만들기
 Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도메인 특정 언어 (DSL) 모델의 상태를 표시 합니다. 이 항목에서는 Windows Form DSL에 바인딩, 사용 하 여 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK입니다.
 
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2") A DSL 인스턴스를 모델 탐색기 및 Windows 폼 UI를 표시 합니다.
+ ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png) A DSL 인스턴스를 모델 탐색기 및 Windows 폼 UI를 표시 합니다.
 
 ## <a name="creating-a-windows-forms-dsl"></a>Windows Forms DSL 만들기
  **최소 WinForm 디자이너** DSL 서식 파일은 고유한 요구 사항에 맞게 수정할 수 있는 최소 DSL를 만듭니다.
@@ -68,7 +69,7 @@ Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도�
 ## <a name="updating-the-dsl-definition"></a>DSL 정의 업데이트
  DSL 정의이 연습에서 사용 되는 다음과 같은 있습니다.
 
- ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png "DSL-Wpf-1")
+ ![DSL&#45;Wpf&#45;1](../modeling/media/dsl-wpf-1.png)
 
 #### <a name="to-update-the-dsl-definition"></a>DSL 정의 업데이트 하려면
 
@@ -127,7 +128,7 @@ Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도�
 
      속성 및 관계 모델 클래스의 데이터 소스 창에 나타납니다.
 
-     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png "DslWpf-3")
+     ![DslWpf&#45;3](../modeling/media/dslwpf-3.png)
 
 #### <a name="to-connect-your-model-to-a-form"></a>폼에 모델에 연결 하려면
 
@@ -172,7 +173,7 @@ Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도�
 
 -   사용자가 행을 선택 하면 속성 창 데이터 표 행 대신 해당 모델 요소와의 속성을 표시, 되도록 조정 합니다.
 
- ![DslWpf4](../modeling/media/dslwpf4.png "DslWpf4") 스키마 데이터 원본 및 뷰 사이 링크 합니다.
+ ![DslWpf4](../modeling/media/dslwpf4.png) 스키마 데이터 원본 및 뷰 사이 링크 합니다.
 
 #### <a name="to-complete-the-bindings-to-the-dsl"></a>DSL에 대 한 바인딩을 완료 하려면
 
@@ -301,7 +302,7 @@ Windows Forms를 사용 하 여 DSL 다이어그램을 사용 하는 대신 도�
 
      데이터 그리드 보기에 있는 요소의 이름을 편집할 수 있습니다. 여기에서 삭제할 수 있습니다.
 
- ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png "DSL-Wpf-2")
+ ![DSL&#45;Wpf&#45;2](../modeling/media/dsl-wpf-2.png)
 
 ### <a name="about-the-code-to-add-an-element"></a>요소를 추가 하는 코드에 대 한
  새 요소 단추에 대 한 다음과 같은 대체 코드를 좀 더 간단 합니다.

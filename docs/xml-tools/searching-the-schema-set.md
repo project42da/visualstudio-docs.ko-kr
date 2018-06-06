@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c110344499281243628d633d005506af5cd801d0
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 1133d6a67442bde5a9f949553efcffd07e2d3ffe
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751743"
 ---
 # <a name="search-the-schema-set"></a>스키마 집합 검색
 
@@ -28,7 +29,7 @@ ms.lasthandoff: 05/24/2018
 
  하위 문자열을 입력 하 여 키워드 검색을 수행할는 **스키마 집합 검색** 텍스트 상자에는 **XML 스키마 탐색기** 도구 모음입니다.
 
- ![XML 스키마 탐색기 키워드 검색](../xml-tools/media/schemaexplorersearch.gif "SchemaExplorerSearch")
+ ![XML 스키마 탐색기 키워드 검색](../xml-tools/media/schemaexplorersearch.gif)
 
  **XML 스키마 탐색기** 다음 특성에 대해 설정 된 스키마를 검색 합니다.
 
@@ -48,7 +49,7 @@ ms.lasthandoff: 05/24/2018
 
  검색 결과 클릭 하 여 작업 영역에 추가할 수 있습니다는 **작업 영역에 선택한 노드 추가** 요약 결과 창에서 단추입니다.
 
- ![XML 스키마 탐색기 검색 결과](../xml-tools/media/schemaexplorersearchresult.gif "SchemaExplorerSearchResult")
+ ![XML 스키마 탐색기 검색 결과](../xml-tools/media/schemaexplorersearchresult.gif)
 
 ## <a name="clear-search-results"></a>검색 결과 지우기
 

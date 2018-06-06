@@ -12,11 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c46e84caba16abbe9ba9d166076d1ee48d34fd94
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5424fc8e3bdf80f5a6f19086f4e73360af95dad7
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748412"
 ---
 # <a name="debugging-by-using-the-store-viewer"></a>저장소 뷰어를 사용하여 디버깅
 저장 뷰어로 상태를 검사할 수는 *저장* 에서 사용 하는 [!INCLUDE[dsl](../modeling/includes/dsl_md.md)]합니다. 저장 뷰어는 모든 요소 속성 및 요소 간의 링크와 함께 특정 저장소에 있는 도메인 모델 요소를 표시 합니다.
@@ -44,7 +45,7 @@ Microsoft.VisualStudio.Modeling.Diagnostics.StoreViewer.Show(mystore);
 ### <a name="using-store-viewer"></a>저장소 뷰어를 사용 하 여
  저장소 뷰어를 열면 모덜리스 Windows Forms 창이 나타납니다 다음 그림과 같이 합니다.
 
- ![](../modeling/media/storeviewer2.png "storeviewer2") 저장소 뷰어
+ ![](../modeling/media/storeviewer2.png) 저장소 뷰어
 
  저장소 뷰어에 세 개의 창이: 왼쪽 창과 오른쪽 창에서 오른쪽 아래 창. 왼쪽된 창에 있는 형식의 트리 뷰입니다는 `DomainDataDirectory` 저장소의 구성원입니다. 파티션 노드를 확장 하 고 요소를 클릭 하면 오른쪽 창에서 요소의 속성이 나타납니다. 요소가 다른 요소에 들어 연결 된 경우 추가 요소 오른쪽 아래 창에 나타납니다. 오른쪽 아래 창에서에서 요소를 두 번 클릭 하면 요소가 왼쪽된 창에서 강조 표시 됩니다.
 

@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - aspnet
-ms.openlocfilehash: dddbe20c36aac6bc1c21cc2e29e59231c5b8feaf
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 759615311478f1b428edc2a800c61b9252a3a84a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746860"
 ---
 # <a name="remote-debug-aspnet-on-a-remote-iis-computer"></a>원격 IIS 컴퓨터에 ASP.NET 원격 디버그
 IIS에 배포 된 ASP.NET 응용 프로그램을 디버깅 하려면 설치 및 응용 프로그램을 배포한 컴퓨터에서 원격 도구를 실행 하 고 Visual Studio에서 실행 중인 앱에 연결 합니다.
@@ -183,14 +184,14 @@ RoboCopy Powershell을 사용 하 여 IIS에 응용 프로그램을 복사 하�
 
 ## <a name="BKMK_attach"></a> Visual Studio 컴퓨터에서 ASP.NET 응용 프로그램에 연결
 
-1. Visual Studio 컴퓨터에서 열고는 **MyASPApp** 솔루션입니다.
+1. Visual Studio 컴퓨터에서 디버깅을 시도 하 고 있는 솔루션을 엽니다 (**MyASPApp** 이 문서의 단계를 따르는 경우).
 2. Visual Studio에서 클릭 **디버그 > 프로세스에 연결** (Ctrl + Alt + P).
 
     > [!TIP]
     > Visual Studio 2017에 다시 연결할 수 있습니다 이전에 사용 하 여 연결할 동일한 프로세스에 **디버그 > 프로세스에 다시 연결 중...** (Shift+Alt+P). 
 
 3. 한정자 필드를 설정  **\<원격 컴퓨터 이름 >: 4022**합니다.
-4. **새로 고침**가 있어야 합니다.
+4. 클릭 **새로 고침**합니다.
     일부 프로세스가 **사용 가능한 프로세스** 창에 표시됩니다.
 
     모든 프로세스가 표시 되지 않으면, (포트는 필수) 원격 컴퓨터 이름 대신 IP 주소를 사용해 보십시오. 사용할 수 있습니다 `ipconfig` IPv4 주소를 얻기 위해 명령줄에 있습니다.

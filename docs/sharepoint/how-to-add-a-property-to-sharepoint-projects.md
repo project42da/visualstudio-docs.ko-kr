@@ -17,11 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fe3b94d7f2072565b2adc2ab7c3c9825ca21ad57
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 44e82b15ff2d4bdfaac5e8e9eca672ecdc1780a9
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767623"
 ---
 # <a name="how-to-add-a-property-to-sharepoint-projects"></a>방법: SharePoint 프로젝트에 속성 추가
   모든 SharePoint 프로젝트에 속성을 추가 하려면 프로젝트 확장을 사용할 수 있습니다. 에 해당 속성이 표시는 **속성** 창에서 프로젝트를 선택한 경우 **솔루션 탐색기**합니다.  
@@ -36,8 +37,8 @@ ms.lasthandoff: 04/16/2018
   
 3.  에 대 한 이벤트 처리기에는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectPropertiesRequested> 이벤트 속성 클래스의 인스턴스를 추가 <xref:Microsoft.VisualStudio.SharePoint.SharePointProjectPropertiesRequestedEventArgs.PropertySources%2A> 이벤트 인수 매개 변수 컬렉션입니다.  
   
-## <a name="example"></a>예제  
- 다음 코드 예제에서는 두 개의 속성을 SharePoint 프로젝트에 추가 하는 방법을 보여 줍니다. 프로젝트 사용자 옵션 파일에 해당 데이터를 유지 하는 하나의 속성 (에서. csproj.user 파일 또는. vbproj.user 파일). 다른 속성이 프로젝트 파일 (.csproj 또는.vbproj)에 해당 데이터를 유지합니다.  
+## <a name="example"></a>예  
+ 다음 코드 예제에서는 두 개의 속성을 SharePoint 프로젝트에 추가 하는 방법을 보여 줍니다. 프로젝트 사용자 옵션 파일에 해당 데이터를 유지 하는 하나의 속성 (의 *. csproj.user* 파일 또는 *. vbproj.user* 파일). 프로젝트 파일에서 해당 데이터를 유지 하는 다른 속성 (*.csproj* 파일 또는 *.vbproj* 파일).  
   
  [!code-vb[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/VisualBasic/customspproperty/customproperty.vb#1)]
  [!code-csharp[SpExt_SPCustomPrjProperty#1](../sharepoint/codesnippet/CSharp/customspproperty/customproperty.cs#1)]  
@@ -69,20 +70,20 @@ ms.lasthandoff: 04/16/2018
 ## <a name="compiling-the-code"></a>코드 컴파일  
  이 예제에는 다음 어셈블리에 대 한 참조가 필요합니다.  
   
--   Microsoft.VisualStudio.SharePoint  
-  
--   Microsoft.VisualStudio.Shell  
-  
--   Microsoft.VisualStudio.Shell.Interop  
-  
--   Microsoft.VisualStudio.Shell.Interop.8.0  
-  
+-   Microsoft.VisualStudio.SharePoint
+-    
+-   Microsoft.VisualStudio.Shell
+-     
+-   Microsoft.VisualStudio.Shell.Interop
+-     
+-   Microsoft.VisualStudio.Shell.Interop.8.0
+-     
 -   System.ComponentModel.Composition  
   
 ## <a name="deploying-the-extension"></a>확장 배포  
  확장을 배포 하려면 만듭니다는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 어셈블리 및 확장과 함께 하려는 다른 파일에 대 한 패키지 (VSIX) 확장 합니다. 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구에 대 한 확장명 배포](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 프로젝트 확장](../sharepoint/extending-sharepoint-projects.md)   
  [방법: SharePoint 프로젝트 확장 만들기](../sharepoint/how-to-create-a-sharepoint-project-extension.md)   
  [방법: SharePoint 프로젝트에 바로 가기 메뉴 항목 추가](../sharepoint/how-to-add-a-shortcut-menu-item-to-sharepoint-projects.md)   

@@ -18,14 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 06a5aa5d7f97f56bfbb21941ab996628b689c86a
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 1fae92a9ca958f3d6702ec0f2d1678b33d471bab
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691806"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765494"
 ---
-# <a name="creating-site-definitions-for-sharepoint"></a>SharePoint 용 사이트 정의 만들기
+# <a name="create-site-definitions-for-sharepoint"></a>SharePoint 용 사이트 정의 만들기
   SharePoint 사이트 정의 프로젝트에 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 만들 수 있습니다는 *사이트 정의*를 새 SharePoint 사이트에 대 한 기반으로 제공 되 합니다. 이러한 정의 모양 및 동작의 SharePoint 사이트에 있지만 해당 기본 콘텐츠 및 기능 뿐만 아니라 결정합니다. 정의에 미리 구성 된 목록, 콘텐츠 형식, 이벤트 수신기, 이미지 및 기타 항목을 넣을 수 있습니다. SharePoint에는 블로그 등의 사이트 정의가 포함되어 있습니다. 블로그 사이트 정의에 따라 사이트를 만들 때 해당 사이트 목록, 웹 파트 및 블로그 사이트에 필요한 기타 항목을 포함 합니다.  
   
  사이트 정의 대 한 자세한 내용은 참조 [사이트 템플릿 및 정의](http://go.microsoft.com/fwlink/?LinkId=179134)합니다.  
@@ -41,11 +41,11 @@ ms.locfileid: "34691806"
   
 |파일 이름|설명|  
 |---------------|-----------------|  
-|default.aspx|새 SharePoint 사이트에 대 한 기본 ASPX 홈 페이지입니다.|  
-|onet.xml|사이트 정의 서식 파일 및 기본 동작의 구성 요소, 새 사이트의 구성을 지정합니다. 이러한 설정은 콘텐츠 형식 설정 된 기본 목록 보기 문서 서식 파일 등의 특성이 포함 하 고 웹 사이트에 포함 된 파트 수 있습니다. 기본적으로는 `Modules` 섹션에서는 SharePoint 사이트 및 구성 방법에 추가할 파일을 나열 합니다.|  
-|webtemp_*SiteDefinitionName*.xml|에 표시 되는 사이트 정의 구성을 지정는 **서식 파일 선택** 의 섹션은 **새 SharePoint 사이트** 페이지.|  
+|*default.aspx*|새 SharePoint 사이트에 대 한 기본 ASPX 홈 페이지입니다.|  
+|*onet.xml*|사이트 정의 서식 파일 및 기본 동작의 구성 요소, 새 사이트의 구성을 지정합니다. 이러한 설정은 콘텐츠 형식 설정 된 기본 목록 보기 문서 서식 파일 등의 특성이 포함 하 고 웹 사이트에 포함 된 파트 수 있습니다. 기본적으로는 `Modules` 섹션에서는 SharePoint 사이트 및 구성 방법에 추가할 파일을 나열 합니다.|  
+|*webtemp_ {SiteDefinitionName}.xml*|에 표시 되는 사이트 정의 구성을 지정는 **서식 파일 선택** 의 섹션은 **새 SharePoint 사이트** 페이지.|  
   
- 기본적으로 모든 사이트 정의에 저장 됩니다는 *드라이브:* files\common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\SiteTemplates 폴더입니다. 각 사이트 정의 고유한 해당 하위 폴더를 있습니다.  
+ 기본적으로 모든 사이트 정의에 저장 됩니다는 *{드라이브:} files\common Files\Microsoft Shared\Web Server Extensions\14\TEMPLATE\SiteTemplates* 폴더입니다. 각 사이트 정의 고유한 해당 하위 폴더를 있습니다.  
   
 ## <a name="related-topics"></a>관련 항목
   
@@ -53,7 +53,7 @@ ms.locfileid: "34691806"
 |-----------|-----------------|  
 |[연습: 기본 사이트 정의 프로젝트 만들기](../sharepoint/walkthrough-create-a-basic-site-definition-project.md)|기본 사이트 정의 프로젝트를 만드는 과정을 단계별로 안내 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.|  
 |[방법: 사용자 지정 사이트 정 및 구성 만들기](http://go.microsoft.com/fwlink/?LinkId=183309)|기존 사이트 정의 복사한 다음이 사본을 수정 하 여 SharePoint에서 사용자 지정 사이트 정의 만드는 방법을 설명 합니다.|  
-|[WebTemp.xml](http://go.microsoft.com/fwlink/?LinkId=183310)|사용할 수 있는 사이트 정의 지정 하는 원본 파일에 설명는 **서식 파일 선택** 의 섹션은 **새 SharePoint 사이트** 페이지.|  
+|[*WebTemp.xml*](http://go.microsoft.com/fwlink/?LinkId=183310)|사용할 수 있는 사이트 정의 지정 하는 원본 파일에 설명는 **서식 파일 선택** 의 섹션은 **새 SharePoint 사이트** 페이지.|  
 |[SharePoint 솔루션 지역화](../sharepoint/localizing-sharepoint-solutions.md)|전역 사용에 대 한 SharePoint 솔루션을 준비 하는 방법에 설명 합니다.|  
 |[SharePoint를 위한 웹 파트 만들기](../sharepoint/creating-web-parts-for-sharepoint.md)|사용자가 수정할 수 있는 SharePoint 페이지의 일부를 만드는 방법을 설명 합니다.|  
 |[웹 파트 또는 응용 프로그램 페이지를 위해 재사용 가능한 컨트롤 만들기](../sharepoint/creating-reusable-controls-for-web-parts-or-application-pages.md)|응용 프로그램 페이지 및 웹 파트에서 실행 되는 재사용 가능한 컨트롤을 만드는 방법에 대해 설명 합니다.|  

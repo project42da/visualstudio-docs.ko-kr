@@ -12,11 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 89b5a5130264dc46e953ee87f048a768d756ce9c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a8f79e80b5b4e4e14772548ad92e8886150749b7
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749059"
 ---
 # <a name="model-user-requirements"></a>사용자 요구 사항 모델링
 
@@ -63,7 +64,7 @@ Visual Studio는 사용자 동작 및 목표 달성을 위해 시스템이 수�
 
  대부분의 비즈니스 규칙은 개념적 클래스 간의 관계에 대한 제약 조건입니다. 이 작성할 수 있습니다 *정적 * * 비즈니스 규칙* 개념적 클래스 다이어그램에 관련 클래스와 연결 된 주석으로 합니다. 예를 들어:
 
- ![Order 클래스에 연결 된 주석의 규칙입니다. ] (../modeling/media/uml_reqmcd2.png "UML_ReqmCD2")
+ ![Order 클래스에 연결된 주석의 규칙](../modeling/media/uml_reqmcd2.png)
 
  *동적 비즈니스 규칙* 은 허용되는 이벤트 시퀀스를 제한합니다. 예를 들어 시퀀스 또는 동작 다이어그램을 사용하여 사용자가 시스템에서 다른 작업을 수행하기 전에 로그인해야 함을 표시합니다.
 

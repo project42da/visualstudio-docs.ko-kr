@@ -19,7 +19,7 @@ ms.openlocfilehash: 9d47ee32f23ca0eb856b2a8f618d60fae552a027
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34693073"
 ---
 # <a name="the-workbook-used-to-create-this-project-contains-activex-controls-that-the-designer-cannot-load"></a>이 프로젝트를 만드는 데 사용된 통합 문서에 디자이너에서 로드할 수 없는 ActiveX 컨트롤이 있습니다.

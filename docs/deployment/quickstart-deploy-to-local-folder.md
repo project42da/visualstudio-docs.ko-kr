@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a68e7d039fe0b60faf42ea319bb3a3bd4f888d3b
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 016538bded47a5186294c161cc7f310b26818d15
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764221"
 ---
 # <a name="deploy-a-web-app-or-net-core-app-to-a-local-folder-using-the-visual-studio-publish-tool"></a>Visual Studio 게시 도구를 사용 하 여 로컬 폴더에 웹 앱 또는.NET Core 응용 프로그램 배포
 
@@ -26,9 +27,9 @@ ms.lasthandoff: 05/22/2018
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio 2017 설치 되어 있어야 합니다 및 **.NET Framework** 및 **.NET Core** 개발 작업을 설치 합니다.
+* Visual Studio 2017 설치 되어 있어야 하며 합니다. **NET 데스크톱 개발** 작업 부하 및. **NET 코어** 작업 합니다.
 
-    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+    아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지로 이동하여 체험용으로 설치합니다.
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 

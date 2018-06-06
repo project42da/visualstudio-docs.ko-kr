@@ -21,7 +21,7 @@ ms.openlocfilehash: 917bf166057ef304f3d045898838b7074d76c467
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34690720"
 ---
 # <a name="bind-wpf-controls-to-a-dataset"></a>데이터 집합으로 WPF 컨트롤 바인딩
@@ -39,7 +39,7 @@ ms.locfileid: "34690720"
 
 [!INCLUDE[note_settings_general](../data-tools/includes/note_settings_general_md.md)]
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>전제 조건
 이 연습을 완료하려면 다음 구성 요소가 필요합니다.
 
 -   [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]

@@ -15,12 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 48c29cb41c80d75c6f873171b7e9c758a2513612
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: eb88c8adc3f32e428543e2bf1e0e80e9538678a2
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691939"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766509"
 ---
 # <a name="extensiondataitem-element"></a>ExtensionDataItem 요소
   연결 된 SharePoint 프로젝트 항목 키/값 형식에는 사용자 지정 데이터 항목입니다. 키와 값 모두 문자열 이어야 합니다.  
@@ -32,8 +32,8 @@ ms.locfileid: "34691939"
     Value = "Value of the data item" />  
 ```  
   
-## <a name="attributes-and-elements"></a>특성 및 요소  
- 다음 섹션에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
+## <a name="attributes-and-elements"></a>특성 및 요소
+ 다음 단원에서는 특성, 자식 요소 및 부모 요소에 대해 설명합니다.  
   
 ### <a name="attributes"></a>특성  
   
@@ -42,10 +42,10 @@ ms.locfileid: "34691939"
 |**키**|필요한 **xs: string** 특성입니다.<br /><br /> 데이터 저장과 데이터 항목을 검색 하는 데 사용 되는 키입니다.|  
 |**값**|필요한 **xs: string** 특성입니다.<br /><br /> 데이터 항목의 값입니다.|  
   
-### <a name="child-elements"></a>자식 요소  
+### <a name="child-elements"></a>자식 요소
  없음  
   
-### <a name="parent-elements"></a>부모 요소  
+### <a name="parent-elements"></a>부모 요소
   
 |요소|설명|  
 |-------------|-----------------|  
@@ -54,7 +54,7 @@ ms.locfileid: "34691939"
 ## <a name="remarks"></a>설명  
  사용 하 여 SharePoint 프로젝트 항목으로 사용자 지정 데이터를 연결 하는 경우는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem.ExtensionData%2A> 속성의는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectItem> 개체를 새 데이터를 저장 하는 Visual Studio **ExtensionDataItem** 요소에는 `.spdata` 파일에서 프로젝트 항목입니다. 자세한 내용은 참조 [SharePoint 프로젝트 시스템의 확장에 대 한 데이터 저장](../sharepoint/saving-data-in-extensions-of-the-sharepoint-project-system.md)합니다.  
   
-## <a name="element-information"></a>요소 정보  
+## <a name="element-information"></a>요소 정보
   
 |||  
 |-|-|  
@@ -63,7 +63,7 @@ ms.locfileid: "34691939"
 |**유효성 검사 파일**|ProjectItemModelSchema.xsd|  
 |**비어 있을 수 있습니다.**|아니요|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 프로젝트 항목 스키마 참조](../sharepoint/sharepoint-project-item-schema-reference.md)  
   
   

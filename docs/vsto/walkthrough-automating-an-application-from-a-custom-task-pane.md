@@ -1,5 +1,5 @@
 ---
-title: '연습: 사용자 지정 작업창에서 응용 프로그램을 자동화 | Microsoft Docs'
+title: '연습: 사용자 지정 작업창에서 응용 프로그램 자동화'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,13 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c7269690e9ab7835f355939340d6c91dc56dd008
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7af399ca55c1fc2355da508662fe67314a519070
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768081"
 ---
-# <a name="walkthrough-automating-an-application-from-a-custom-task-pane"></a>연습: 사용자 지정 작업 창을 사용하여 응용 프로그램 자동화
+# <a name="walkthrough-automate-an-application-from-a-custom-task-pane"></a>연습: 사용자 지정 작업창에서 응용 프로그램 자동화
   이 연습에서는 PowerPoint를 자동화하는 사용자 지정 작업창을 만드는 방법을 보여 줍니다. 사용자 지정 작업창은 사용자가 사용자 지정 작업창에 있는 <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 클릭할 때 날짜를 슬라이드에 삽입합니다.  
   
  [!INCLUDE[appliesto_olkallapp](../vsto/includes/appliesto-olkallapp-md.md)]  
@@ -51,16 +52,16 @@ ms.lasthandoff: 04/16/2018
   
 -   Microsoft PowerPoint 2010 또는 [!INCLUDE[PowerPoint_15_short](../vsto/includes/powerpoint-15-short-md.md)]입니다.  
   
-## <a name="creating-the-add-in-project"></a>추가 기능 프로젝트 만들기  
+## <a name="create-the-add-in-project"></a>추가 기능 프로젝트 만들기  
  첫 번째 단계는 PowerPoint용 VSTO 추가 기능 프로젝트를 만드는 것입니다.  
   
-#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
+### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
-1.  PowerPoint 추가 기능 프로젝트 템플릿을 사용하여 이름이 **MyAddIn**인 PowerPoint VSTO 추가 기능 프로젝트를 만듭니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
+1.  PowerPoint 추가 기능 프로젝트 템플릿을 사용하여 이름이 **MyAddIn**인 PowerPoint VSTO 추가 기능 프로젝트를 만듭니다. 자세한 내용은 참조 [하는 방법: Visual Studio에서 Office 만들기 프로젝트](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서는 **ThisAddIn.cs** 또는 **ThisAddIn.vb** 코드 파일을 열고 **MyAddIn** 프로젝트를 **솔루션 탐색기**에 추가합니다.  
   
-## <a name="designing-the-user-interface-of-the-custom-task-pane"></a>사용자 지정 작업창의 사용자 인터페이스 디자인  
+## <a name="design-the-user-interface-of-the-custom-task-pane"></a>사용자 지정 작업창의 사용자 인터페이스 디자인  
  사용자 지정 작업창을 위한 비주얼 디자이너는 없지만 원하는 레이아웃을 사용하여 사용자 정의 컨트롤을 디자인할 수 있습니다. 이 연습 뒷부분에서는 사용자 지정 작업창에 사용자 정의 컨트롤을 추가합니다.  
   
 #### <a name="to-design-the-user-interface-of-the-custom-task-pane"></a>사용자 지정 작업창의 사용자 인터페이스를 디자인하려면  
@@ -75,10 +76,10 @@ ms.lasthandoff: 04/16/2018
   
      **MonthCalendar** 컨트롤이 사용자 정의 컨트롤의 디자인 화면보다 큰 경우 사용자 정의 컨트롤의 크기를 조정하여 **MonthCalendar** 컨트롤에 맞춥니다.  
   
-## <a name="automating-powerpoint-from-the-custom-task-pane"></a>사용자 지정 작업창에서 PowerPoint 자동화  
+## <a name="automate-powerpoint-from-the-custom-task-pane"></a>사용자 지정 작업창에서 PowerPoint를 자동화 합니다.  
  VSTO 추가 기능의 목적은 선택한 날짜를 활성 프레젠테이션의 첫 번째 슬라이드에 넣는 것입니다. 컨트롤의 <xref:System.Windows.Forms.MonthCalendar.DateChanged> 이벤트를 사용하여 변경될 때마다 선택한 날짜를 추가합니다.  
   
-#### <a name="to-automate-powerpoint-from-the-custom-task-pane"></a>사용자 지정 작업창에서 PowerPoint를 자동화하려면  
+### <a name="to-automate-powerpoint-from-the-custom-task-pane"></a>사용자 지정 작업창에서 PowerPoint를 자동화하려면  
   
 1.  디자이너에서 <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 두 번 클릭합니다.  
   
@@ -101,10 +102,10 @@ ms.lasthandoff: 04/16/2018
   
 5.  **솔루션 탐색기**에서 **MyAddIn** 프로젝트를 마우스 오른쪽 단추로 클릭한 다음 **빌드**를 클릭합니다. 프로젝트가 오류 없이 빌드되는지 확인합니다.  
   
-## <a name="displaying-the-custom-task-pane"></a>사용자 지정 작업창 표시  
+## <a name="display-the-custom-task-pane"></a>사용자 지정 작업창 표시  
  VSTO 추가 기능이 시작할 때 사용자 지정 작업창을 표시하려면 VSTO 추가 기능의 <xref:Microsoft.Office.Tools.AddIn.Startup> 이벤트 처리기에 있는 작업창에 사용자 정의 컨트롤을 추가합니다.  
   
-#### <a name="to-display-the-custom-task-pane"></a>사용자 지정 작업창을 표시하려면  
+### <a name="to-display-the-custom-task-pane"></a>사용자 지정 작업창을 표시하려면  
   
 1.  **솔루션 탐색기**에서 **PowerPoint**를 확장합니다.  
   
@@ -120,12 +121,12 @@ ms.lasthandoff: 04/16/2018
      [!code-vb[Trin_TaskPaneMonthCalendar#5](../vsto/codesnippet/VisualBasic/Trin_TaskPaneMonthCalendar/ThisAddIn.vb#5)]
      [!code-csharp[Trin_TaskPaneMonthCalendar#5](../vsto/codesnippet/CSharp/Trin_TaskPaneMonthCalendar/ThisAddIn.cs#5)]  
   
-## <a name="testing-the-add-in"></a>추가 기능 테스트  
+## <a name="test-the-add-in"></a>추가 기능을 테스트합니다  
  프로젝트를 실행하면 PowerPoint가 열리고 VSTO 추가 기능에서 사용자 지정 작업창을 표시합니다. <xref:System.Windows.Forms.MonthCalendar> 컨트롤을 클릭하여 코드를 테스트합니다.  
   
-#### <a name="to-test-your-vsto-add-in"></a>VSTO 추가 기능을 테스트하려면  
+### <a name="to-test-your-vsto-add-in"></a>VSTO 추가 기능을 테스트하려면  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  키를 눌러 **F5** 프로젝트를 실행 합니다.  
   
 2.  사용자 지정 작업창이 표시되는지 확인합니다.  
   
@@ -138,14 +139,14 @@ ms.lasthandoff: 04/16/2018
   
 -   다른 응용 프로그램용 VSTO 추가 기능의 사용자 지정 작업창을 만듭니다. 사용자 지정 작업창을 지 원하는 응용 프로그램에 대 한 자세한 내용은 참조 [사용자 지정 작업창](../vsto/custom-task-panes.md)합니다.  
   
--   사용자 지정 작업창을 숨기거나 표시하는 데 사용할 수 있는 리본 단추를 만듭니다. 자세한 내용은 [연습: 사용자 지정 작업 창과 리본 단추 동기화](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)을 참조하세요.  
+-   사용자 지정 작업창을 숨기거나 표시하는 데 사용할 수 있는 리본 단추를 만듭니다. 자세한 내용은 참조 [연습: 사용자 지정 작업창과 리본 단추 동기화](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)합니다.  
   
--   Outlook에서 열린 모든 메일 메시지에 대해 사용자 지정 작업창을 만듭니다. 자세한 내용은 [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)을 참조하세요.  
+-   Outlook에서 열린 모든 메일 메시지에 대해 사용자 지정 작업창을 만듭니다. 자세한 내용은 참조 [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [사용자 지정 작업 창](../vsto/custom-task-panes.md)   
  [방법: 응용 프로그램에 사용자 지정 작업창 추가](../vsto/how-to-add-a-custom-task-pane-to-an-application.md)   
  [연습:는 사용자 지정 작업창과 리본 단추 동기화](../vsto/walkthrough-synchronizing-a-custom-task-pane-with-a-ribbon-button.md)   
- [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  
+ [연습: Outlook에서 전자 메일 메시지와 함께 사용자 지정 작업 창 표시](../vsto/walkthrough-displaying-custom-task-panes-with-e-mail-messages-in-outlook.md)  
   
   

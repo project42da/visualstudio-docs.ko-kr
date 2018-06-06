@@ -9,11 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 5d9b900e47febb9e75b825fdb662c942fce7188b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e6a12bdbb45c5cdfdf0abb8fb738ae87bf67c45c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748376"
 ---
 # <a name="customizing-copy-behavior"></a>복사 동작 사용자 지정
 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] Visualization and Modeling SDK를 사용하여 만든 DSL(Domain-Specific Language)에서는 사용자가 요소를 복사하고 붙여넣을 때 수행되는 작업을 변경할 수 있습니다.
@@ -29,7 +30,7 @@ ms.lasthandoff: 04/26/2018
 
  이 규칙은 복사한 요소와 링크에 재귀적으로 적용됩니다.
 
- ![복사 하 여 요소를 붙여](../modeling/media/dslcopypastedefault.png "DslCopyPasteDefault")
+ ![복사하여 붙여넣은 요소](../modeling/media/dslcopypastedefault.png)
 
  복사한 요소와 링크는 serialize되어 클립보드에 배치되는 EGP(<xref:Microsoft.VisualStudio.Modeling.ElementGroupPrototype>)에 저장됩니다.
 
@@ -217,7 +218,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 ##  <a name="customizeLinks"></a> 링크 복사 동작 사용자 지정
  사용자가 요소를 복사할 때의 표준 동작은 포함된 요소도 모두 복사하는 것입니다. 이러한 표준 복사 동작을 수정할 수 있습니다. DSL 정의에서 속성 창 설정 및 관계의 한 쪽에서 역할을 선택 된 **전파 복사** 값입니다.
 
- ![도메인 역할의 복사 속성 전파](../modeling/media/dslpropagatescopy.png "DslPropagatesCopy")
+ ![도메인 역할의 복사 속성 전파](../modeling/media/dslpropagatescopy.png)
 
  다음과 같은 세 가지 값이 있습니다.
 
@@ -227,7 +228,7 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 
 -   Propagate copy to link and opposite role player - 복사한 그룹에 링크 반대쪽의 요소 복사본이 포함됩니다.
 
- ![PropagateCopyToLinkOnly를 효과](../modeling/media/dslpropagatecopy.png "DslPropagateCopy")
+ ![PropagateCopyToLinkOnly를 사용하여 복사한 결과](../modeling/media/dslpropagatecopy.png)
 
  수행하는 변경 내용은 복사된 이미지와 요소에 모두 적용됩니다.
 
@@ -237,9 +238,9 @@ partial class MyDslClipboardCommandSet // EDIT NAME
 > [!TIP]
 >  프로그램 코드를 사용 하 여 모델을 사용자 지정 하는 방법에 대 한 자세한 내용은 참조 [탐색 및 프로그램 코드에서 모델 업데이트](../modeling/navigating-and-updating-a-model-in-program-code.md)합니다.
 
- ![복사 작업에 대 한 시퀀스 다이어그램](../modeling/media/dslcopyseqdiagram.png "dslCopySeqDiagram")
+ ![복사 작업의 시퀀스 다이어그램](../modeling/media/dslcopyseqdiagram.png)
 
- ![붙여넣기 작업의 시퀀스 다이어그램](../modeling/media/dslpasteseqdiagram.png "dslPasteSeqDiagram")
+ ![붙여넣기 작업의 시퀀스 다이어그램](../modeling/media/dslpasteseqdiagram.png)
 
 #### <a name="to-define-your-own-elementoperations"></a>고유 ElementOperations를 정의하려면
 

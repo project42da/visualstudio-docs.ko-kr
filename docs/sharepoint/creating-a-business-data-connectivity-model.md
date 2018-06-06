@@ -20,14 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 6c6fc0b1169ff906d7cda36eeeb5a74410cf46a9
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: c80d6f3e76d20e4b5a15af162ea4581b03999e61
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691498"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765192"
 ---
-# <a name="creating-a-business-data-connectivity-model"></a>비즈니스 데이터 연결 모델 만들기
+# <a name="create-a-business-data-connectivity-model"></a>비즈니스 데이터 연결 모델 만들기
   BDC 비즈니스 데이터 연결 () 모델을 만들거나 Visual Studio를 사용 하 여 기존 BDC 모델을 사용자 지정할 수 있습니다. 각 SharePoint 프로젝트에 모델 하나만 포함할 수 있습니다. 자세한 내용은 참조 [를 SharePoint에 비즈니스 데이터 통합](../sharepoint/integrating-business-data-into-sharepoint.md)합니다.  
   
 ## <a name="create-a-new-model"></a>새 모델 만들기

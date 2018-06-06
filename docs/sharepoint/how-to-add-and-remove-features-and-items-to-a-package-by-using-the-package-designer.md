@@ -19,13 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: c6f807394497bff99e12546f7a1a913adffbff41
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: bf59736e4cdeb8ddba256b24bc7c12984d288071
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767167"
 ---
-# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>방법: 패키지 디자이너를 사용하여 패키지에 기능과 항목 추가 및 제거
+# <a name="how-to-add-and-remove-features-and-items-to-a-package-by-using-the-package-designer"></a>방법: 추가 및 패키지 디자이너를 사용 하 여 패키지에 기능과 항목 제거
   SharePoint 솔루션을 만들 때 Visual Studio는 솔루션의 패키지에 기본 SharePoint 기능을 추가 합니다. 최종 배포 하기 전에 추가 하 고 SharePoint 프로젝트 항목 및 SharePoint 패키지를 수정 하는 기능을 제거할 수 있습니다.  
   
  또는 SharePoint 프로젝트 항목 추가 및 제거를 패키징 탐색기를 사용할 수 있습니다. 볼 수 있으며 SharePoint 프로젝트 항목 및 패키지 (.wsp)에 포함 되는 기능 계층을 변경할 수도 있습니다. 자세한 내용은 참조 [하는 방법: 패키징 탐색기를 사용 하 여 패키지에 기능과 항목을 제거 하 고 추가](../sharepoint/how-to-add-and-remove-features-and-items-to-a-package-by-using-the-packaging-explorer.md)합니다.  
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/16/2018
 ## <a name="adding-features-to-a-sharepoint-package"></a>SharePoint 패키지에 기능 추가  
  SharePoint 패키지에 기능을 추가 하려면 패키지 디자이너를 사용할 수 있습니다.  
   
-#### <a name="to-add-sharepoint-features-with-the-package-designer"></a>패키지 디자이너와 SharePoint 기능을 추가 하려면  
+#### <a name="to-add-sharepoint-features-with-the-package-designer"></a>패키지 디자이너와 SharePoint 기능을 추가 하려면
   
 1.  열기는 **패키지 디자이너**합니다.  
   
@@ -54,15 +55,14 @@ ms.lasthandoff: 04/16/2018
 ## <a name="removing-features-from-a-sharepoint-package"></a>SharePoint 패키지에서 기능 제거  
  SharePoint 패키지에 기능을 제거 하 여 패키지 디자이너를 사용할 수 있습니다.  
   
-#### <a name="to-remove-sharepoint-features-with-the-package-designer"></a>패키지 디자이너와 SharePoint 기능을 제거 하려면  
+#### <a name="to-remove-sharepoint-features-with-the-package-designer"></a>패키지 디자이너와 SharePoint 기능을 제거 하려면
   
 1.  에 **패키지의 항목** 목록에서 제거한 다음 선택 하려는 항목을 선택는 **제거** (<) 단추를 선택 하거나는 **모두 제거** 단추 (<<)를 제거 하려면 모든 항목입니다.  
   
      SharePoint 항목에 표시 된 **솔루션에서 항목** 목록입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 솔루션 패키지 만들기](../sharepoint/creating-sharepoint-solution-packages.md)   
  [방법: SharePoint 솔루션 패키지 사용자 지정](../sharepoint/how-to-customize-a-sharepoint-solution-package.md)  
  [방법: 패키지 만들기](http://msdn.microsoft.com/en-us/b24be45c-e91d-49bb-afb0-7b265404214b)  
-  
   

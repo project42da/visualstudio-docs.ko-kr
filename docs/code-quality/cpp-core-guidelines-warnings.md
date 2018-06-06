@@ -10,11 +10,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-ide-code-analysis
 ms.workload:
 - cplusplus
-ms.openlocfilehash: a56c8bd9ac0c3745e8096dc12fbfee730ba9558a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: ef0b06be65322dc6a15f92b1d808d585960f0331
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746068"
 ---
 # <a name="using-the-c-core-guidelines-checkers"></a>C + + 코어 지침 검사기를 사용 하 여
 C + + 코어 지침은 휴대용 집합이 지침, 규칙 및 c + +의 c + + 전문가 디자이너에서 만든 코딩 하는 방법에 대 한 모범 사례입니다. 현재 visual Studio c + +에 대 한 코드 분석 도구는의 일부로 이러한 규칙의 하위 집합을 지원합니다. 코어 지침 검사기는 Visual Studio 2017에 기본적으로 설치 및는 [Visual Studio 2015 용 NuGet 패키지로 사용할 수 있는](#vs2015_corecheck)합니다.
@@ -25,11 +26,11 @@ C + + 코어 지침은 휴대용 집합이 지침, 규칙 및 c + +의 c + + 전
 ## <a name="enable-the-c-core-check-guidelines-in-code-analysis"></a>코드 분석에서 c + + 코어 확인 지침을 사용 하도록 설정
  선택 하 여 프로젝트에서 코드 분석을 사용할 수 있습니다는 **빌드에 코드 분석 사용** 확인란을 선택은 **코드 분석** 의 섹션은 **속성 페이지** 대화 상자 프로젝트입니다.
 
- ![코드 분석 일반 설정에 대 한 속성 페이지](../code-quality/media/cppcorecheck_codeanalysis_general.png "CPPCoreCheck_CodeAnalysis_General")
+ ![코드 분석 일반 설정에 대 한 속성 페이지](../code-quality/media/cppcorecheck_codeanalysis_general.png)
 
  C + + 코어 확인 규칙은 코드 분석을 사용 하는 실행 하는 기본 규칙 집합에 대 한 확장입니다. C + + 코어 확인 규칙은 개발 중인 이기 때문에 몇 가지 규칙은 잘 구성 및 일부 모든 코드에서 사용할 준비가 되지 않을 수 있지만 여전히 되지 않는 정보를 제공 합니다. 규칙은 두 개의 그룹으로 나뉩니다: 해제 한 후 실험적. 프로젝트에 대 한 속성에서 해제 또는 실험적 규칙을 실행할 것인지를 선택할 수 있습니다.
 
- ![코드 분석 확장 설정에 대 한 속성 페이지](../code-quality/media/cppcorecheck_codeanalysis_extensions.png "CPPCoreCheck_CodeAnalysis_Extensions")
+ ![코드 분석 확장 설정에 대 한 속성 페이지](../code-quality/media/cppcorecheck_codeanalysis_extensions.png)
 
  C + + 코어 확인 규칙 집합을 사용 하지 않도록 설정 하거나, 엽니다는 **속성 페이지** 프로젝트에 대 한 대화 상자. 아래 **구성 속성**를 확장 하 고 **코드 분석**, **확장**합니다. 옆에 드롭다운 제어 **(릴리스됨)를 확인 c + + 코어를 사용 하도록 설정** 또는 **사용 c + + 코어 확인 (합니다 실험적)**, 선택 **예** 또는 **아니요**합니다. 선택 **확인** 또는 **적용** 변경 내용을 저장 합니다.
 
@@ -228,7 +229,7 @@ MSBuild에 의존 하지 않고 빌드 시스템을 사용 하는 경우, 검사
 
 2.  에 **NuGet 패키지 관리자** 창, Microsoft.CppCoreCheck 검색 합니다.
 
-     ![Nuget 패키지 관리자 창 표시 CppCoreCheck 패키지](../code-quality/media/cppcorecheck_nuget_window.PNG "CPPCoreCheck_Nuget_Window")
+     ![Nuget 패키지 관리자 창 CppCoreCheck 패키지를 보여 줍니다.](../code-quality/media/cppcorecheck_nuget_window.png)
 
 3.  Microsoft.CppCoreCheck 패키지를 선택한 다음 선택에서 **설치** 프로젝트에 규칙을 추가 하려면 단추입니다.
 

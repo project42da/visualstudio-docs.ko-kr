@@ -23,14 +23,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: bc78726146b67a39f8e8988dda6c7d2baf5c49b3
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 0c496c6d460b11efc4ccb6e1d8e7b5489efacd93
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691926"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766443"
 ---
-# <a name="creating-sharepoint-workflow-solutions"></a>SharePoint 워크플로 솔루션 만들기
+# <a name="create-sharepoint-workflow-solutions"></a>SharePoint 워크플로 솔루션 만들기
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 문서 및 SharePoint 웹 사이트에서 목록 항목의 수명 주기를 관리 하는 사용자 지정 워크플로 만드는 데 도움이 되는 도구를 제공 합니다. 제공되는 항목에는 디자이너, 작업 컨트롤 집합 및 필수 어셈블리 참조가 있습니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 도 포함 되어는 **SharePoint 사용자 지정 마법사**를 만들고 워크플로 구성 합니다.  
   
  목록에서 SharePoint 프로젝트를 만들기 위한 필수 구성 요소에 대해 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다. SharePoint에 대 한 자세한 내용은 참조 [Microsoft SharePoint 제품 및 기술](http://go.microsoft.com/fwlink/?LinkId=178470)합니다.  
@@ -53,7 +53,7 @@ ms.locfileid: "34691926"
   
  워크플로 형식에 대 한 자세한 내용은 참조 [워크플로 유형](http://go.microsoft.com/fwlink/?LinkId=178995)합니다.  
   
-### <a name="using-the-wizard"></a>마법사를 사용 하 여
+### <a name="use-the-wizard"></a>마법사를 사용 하 여
  SharePoint 워크플로 프로젝트를 만들 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 먼저의 설정에 지정 된 **SharePoint 사용자 지정 마법사**합니다. 마법사에서 프로젝트를 만드는 이러한 설정을 사용 **솔루션 탐색기**합니다. 이 프로젝트에는 사용자 지정 SharePoint 워크플로 만드는 데 필요한 어셈블리에 대 한 참조 및 코드 파일, 워크플로 배포 하는 데 사용 되는 여러 파일을 포함 합니다.  
   
  워크플로 만든 후 속성 창에서 해당 속성을 수정할 수 있습니다. 속성 창에서 직접 대부분의 워크플로 속성을 변경할 수 있지만 일부 해야 줄임표 단추를 클릭 하 여 (![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.gif "ASP.NET 모바일 디자이너 줄임표"))를 해당 값을 변경 합니다. 이 단추를 다시 시작은 **SharePoint 사용자 지정 마법사**합니다. 값이 변경을 선택 하는 속성을 변경한 후는 **마침** 단추 하 여 종료 합니다.  
@@ -124,7 +124,7 @@ ms.locfileid: "34691926"
  SharePoint 라이브러리 또는 목록에 있는 항목의 속성을 사용 하 여 사용자 로부터 정보를 수집할 수 있습니다. 주 코드 파일 (Workflow1.cs 또는 Workflow1.vb) 라는 Microsoft.SharePoint.Workflow.SPWorkflowActivationProperties.WorkflowProperties 클래스의 인스턴스를 선언 `workflowProperties`합니다. 사용 된 `workflowProperties` 라이브러리 또는 목록에서 코드의 속성에 액세스 하는 개체입니다. 예를 들어 참조 [연습: 만들기 및 SharePoint 워크플로 솔루션을 디버깅](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)합니다.  
   
 ## <a name="debug-a-sharepoint-workflow-template"></a>SharePoint 워크플로 템플릿을 디버깅합니다
- 디버깅할 수 SharePoint 워크플로 프로젝트를 동일한 다른를 디버깅할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 웹 기반 프로젝트입니다. 시작 하는 경우는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서 지정 하는 설정을 사용 하 여는 **SharePoint 사용자 지정 마법사** 를 적절 한 SharePoint 웹 사이트를 열고 워크플로 템플릿을 자동으로 연결 적절 한 라이브러리 또는 목록입니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 또한 연결 된 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 하도록 설정할 디버거는 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 이라는 w3wp.exe 프로세스입니다.  
+ 디버깅할 수 SharePoint 워크플로 프로젝트를 동일한 다른를 디버깅할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 웹 기반 프로젝트입니다. 시작 하는 경우는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거, [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 에서 지정 하는 설정을 사용 하 여는 **SharePoint 사용자 지정 마법사** 를 적절 한 SharePoint 웹 사이트를 열고 워크플로 템플릿을 자동으로 연결 적절 한 라이브러리 또는 목록입니다. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 또한 연결 된 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 하도록 설정할 디버거는 [!INCLUDE[wss_14_long](../sharepoint/includes/wss-14-long-md.md)] 라는 프로세스가 *w3wp.exe*합니다.  
   
  워크플로 테스트 하려면 수동으로 시작 해야 것입니다. 자세한 내용은 "워크플로에 디버깅" 섹션을 참조 [SharePoint 솔루션 디버깅](../sharepoint/debugging-sharepoint-solutions.md)합니다. 에 대 한 자세한 내용은 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 웹 응용 프로그램 디버깅, 참조 [웹 응용 프로그램 디버깅 및 스크립트](/visualstudio/debugger/debugging-web-applications-and-script)합니다.  
   
@@ -140,7 +140,7 @@ ms.locfileid: "34691926"
 |-----------|-----------------|  
 |[연습: SharePoint 워크플로 솔루션 만들기 및 디버깅](../sharepoint/walkthrough-creating-and-debugging-a-sharepoint-workflow-solution.md)|만들기 및 단순 디버깅 과정을 단계별로 안내 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 워크플로 합니다.|  
 |[연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md)|완벽 한 기능의 만드는을 단계별로 안내 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 연결 및 초기화 폼으로 워크플로 완료 합니다.|  
-|[연습: 워크플로에 응용 프로그램 페이지 추가](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|항목 [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) 워크플로로 입력 된 데이터를 보고 하는 추가.aspx 응용 프로그램 페이지를 추가 하 여 합니다.|  
+|[연습: 워크플로에 응용 프로그램 페이지 추가](../sharepoint/walkthrough-add-an-application-page-to-a-workflow.md)|항목 [연습: 연결 및 초기화 폼이 있는 워크플로 만들기](../sharepoint/walkthrough-creating-a-workflow-with-association-and-initiation-forms.md) 더 추가 하 여 *.aspx* 워크플로로 입력 된 데이터를 보고 하는 응용 프로그램 페이지입니다.|  
 |[연습: 사용자 지정 사이트 워크플로 작업 만들기](../sharepoint/walkthrough-create-a-custom-site-workflow-activity.md)|두 가지 중요 작업을 수행 하는 방법을 보여 줍니다: 사이트 수준 워크플로 만들고 사용자 지정 워크플로 활동을 만듭니다.|  
 |[연습: Visual Studio에 SharePoint Designer의 다시 사용 가능한 워크플로 가져오기](../sharepoint/walkthrough-import-a-sharepoint-designer-reusable-workflow-into-visual-studio.md)|에 SharePoint Designer 2010에서 만든 다시 사용할 수 있는 선언적 워크플로 가져오는 방법을 보여 줍니다.는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 프로젝트.|  
   

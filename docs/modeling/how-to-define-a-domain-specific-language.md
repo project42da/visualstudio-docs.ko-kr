@@ -18,11 +18,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 4aea2750e3900beb0aaa62156c215376ff16d1ea
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f870bce3abea444d6a04c0076d7110345c55ea7c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750430"
 ---
 # <a name="how-to-define-a-domain-specific-language"></a>도메인별 언어 정의 방법
 도메인 특정 언어 DSL ()를 정의 하려면 서식 파일에서 Visual Studio 솔루션을 만듭니다. 이 솔루션의 중요한 요소는 DslDefinition.dsl에 저장되는 DSL 정의 다이어그램입니다. DSL 정의는 DSL의 클래스와 모양을 정의합니다. 이러한 요소를 수정하고 필요한 내용을 추가한 후에 프로그램 코드를 추가하여 DSL을 보다 자세하게 사용자 지정할 수 있습니다.
@@ -48,7 +49,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
 1.  사용 하 여 솔루션을 만들기는 **도메인 특정 언어** 에서 찾을 수 있는 템플릿을 **기타 프로젝트 형식/확장성** 에 **새 프로젝트** 대화 상자.
 
-     ![DSL 만들기 대화 상자](../modeling/media/create_dsldialog.png "Create_DSLDialog")
+     ![DSL 만들기 대화 상자](../modeling/media/create_dsldialog.png)
 
      클릭할 때 **확인**, **도메인 특정 언어 마법사** 열리고 템플릿 DSL 솔루션의 목록이 표시 됩니다.
 
@@ -86,7 +87,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  이제 사용자 인터페이스는 다음 그림과 같이 표시됩니다.
 
- ![dsl 디자이너](../modeling/media/dsl_designer.png "dsl_designer")
+ ![DSL 디자이너](../modeling/media/dsl_designer.png)
 
  이 솔루션은 DSL을 정의합니다. 자세한 내용은 참조 [도메인 특정 언어 도구 사용자 인터페이스 개요](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)합니다.
 
@@ -99,7 +100,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  만든 하는 솔루션을 실행 하는 경우는 **최소 언어** 서식 파일을 Visual Studio 실험적 다음 예와 비슷하게 표시 됩니다.
 
- ![](../modeling/media/dsl_min.png "DSL_min")
+ ![](../modeling/media/dsl_min.png)
 
  도구를 사용해 보고 요소를 만들어 서로 연결합니다.
 
@@ -139,11 +140,11 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  다음 그림에는 이 항목에서 예로 사용되는 DSL의 클래스 및 관계 부분이 나와 있습니다.
 
- ![포함 및 참조 관계](../modeling/media/music_classes.png "Music_Classes")
+ ![관계 포함 및 참조](../modeling/media/music_classes.png)
 
  그리고 다음 그림에는 이 DSL의 예제 모델이 나와 있습니다.
 
- ![생성 된 DSL의 인스턴스 모델](../modeling/media/music_instance.png "Music_Instance")
+ ![생성된 DSL의 인스턴스 모델](../modeling/media/music_instance.png)
 
 > [!NOTE]
 >  여기서 "모델"은 사용자가 만드는 DSL 인스턴스를 지칭하며 대개 다이어그램으로 표시됩니다. 이 항목에서는 DSL 사용 시에 표시되는 DSL 정의 다이어그램 및 모델 다이어그램 둘 다에 대해 설명합니다.
@@ -235,7 +236,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
 #### <a name="to-define-a-class-of-elements-that-appear-as-shapes-on-a-diagram"></a>다이어그램에 모양으로 표시되는 요소 클래스를 정의하려면
 
-1.  **정의에 설명 된 대로 도메인 클래스를 테스트 하 고**[도메인 클래스 정의](#classes) **합니다.** 
+1.  **정의에 설명 된 대로 도메인 클래스를 테스트 하 고**[도메인 클래스 정의](#classes) **합니다.**
 
     -   클래스의 부모는 루트 클래스여야 합니다. 즉 루트 클래스와 새 도메인 클래스 간에 포함 관계가 있어야 합니다.
 
@@ -285,7 +286,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
     4.  각 Decorator 이름 옆에 확인 표시가 나타나는지 확인합니다.
 
-     ![셰이프 매핑 및 DSL 세부 정보 창](../modeling/media/dsldetailswindow.png "DslDetailsWindow")
+     ![셰이프 매핑 및 DSL 세부 정보 창](../modeling/media/dsldetailswindow.png)
 
 7.  **도메인 클래스의 요소를 만들기 위한 도구 상자 항목을 확인 합니다.**
 
@@ -331,7 +332,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  예를 들어 음악 앨범 및 아티스트가 다이어그램에 모양으로 표시되는 경우에는 아티스트를 참여 앨범에 연결하는 ArtistsAppearedOnAlbums 관계를 정의할 수 있습니다. 아래 그림의 예를 참조하세요.
 
- ![생성 된 DSL의 인스턴스 모델](../modeling/media/music_instance.png "Music_Instance")
+ ![생성된 DSL의 인스턴스 모델](../modeling/media/music_instance.png)
 
  참조 관계는 같은 유형의 요소를 연결할 수도 있습니다. 예를 들어 가족 구성도를 나타내는 DSL에서는 부모와 자식의 관계가 개인 간 참조 관계입니다.
 
@@ -348,7 +349,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  **관계의 복제 허용 속성을 설정** 동일한 클래스의 여러 개의 링크 한 쌍의 모델 요소 간에 존재 하는 경우. 예를 들어 교사 한 명이 같은 학생에게 둘 이상의 과목을 가르치도록 허용할 수 있습니다.
 
- ![커넥터에 대 한 맵을 셰이프](../modeling/media/music_connector.png "Music_Connector")
+ ![커넥터에 대한 모양 맵](../modeling/media/music_connector.png)
 
  자세한 내용은 참조 [도메인 관계의 속성](../modeling/properties-of-domain-relationships.md) 및 [도메인 역할 속성](../modeling/properties-of-domain-roles.md)합니다.
 
@@ -411,11 +412,11 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 ##  <a name="compartments"></a> 목록이 포함 된 셰이프를 정의: 모양 구획
  구획 모양은 항목 목록을 하나 이상 포함합니다. 예를 들어 MusicLibrary DSL에서는 구획 모양을 사용하여 음악 Album을 표시할 수 있습니다. 각 Album에는 노래 목록이 있습니다.
 
- ![구획 모양](../modeling/media/compartmentshape.png "CompartmentShape")
+ ![구획 모양](../modeling/media/compartmentshape.png)
 
  DSL 정의에서 이러한 모양을 적용하는 가장 간단한 방법은 컨테이너와 각 목록에 대해 도메인 클래스를 하나씩 정의하는 것입니다. 컨테이너 클래스는 구획 모양에 매핑됩니다.
 
- ![도형 맵](../modeling/media/music_mapcomp.png "Music_MapComp")
+ ![모양 맵](../modeling/media/music_mapcomp.png)
 
  자세한 내용은 참조 [구획 모양 속성](../modeling/properties-of-compartment-shapes.md)합니다.
 
@@ -505,7 +506,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
 7.  언어 탐색기를 엽니다. 내부에 목록 항목 노드가 포함된 컨테이너 노드가 표시되는지 확인합니다.
 
- ![생성 된 DSL 탐색기](../modeling/media/music_explorer.png "Music_Explorer")
+ ![생성된 DSL 탐색기](../modeling/media/music_explorer.png)
 
  구획 모양을 처음으로 테스트한 후에 일부 속성을 조정하고 몇 가지 고급 기능을 더 추가할 수 있습니다. 자세한 내용은 참조 [사용자 지정 및 도메인 특정 언어 확장](../modeling/customizing-and-extending-a-domain-specific-language.md)합니다.
 

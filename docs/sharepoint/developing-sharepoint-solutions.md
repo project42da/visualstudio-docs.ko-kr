@@ -18,32 +18,32 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 2269a457ee8466a5c119659e048f506cd85e4ed3
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 622ac8b6fd9f003c8bfccbd953f4b5f51cd00332
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766287"
 ---
-# <a name="developing-sharepoint-solutions"></a>SharePoint 솔루션 개발
+# <a name="develop-sharepoint-solutions"></a>SharePoint 솔루션 개발
   [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 여러 가지 SharePoint 프로젝트 형식 템플릿을 사용하여 SharePoint 사이트와 사이트 요소를 만들 수 있습니다. 목록이 사용 가능한 프로젝트 형식에 대 한 참조 [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)합니다. SharePoint 프로젝트의 요소와 속성에 대한 설명은 다음과 같습니다.  
   
  SharePoint 2013 및 SharePoint 추가 기능에 대한 자세한 내용은 [SharePoint 2013](http://msdn.microsoft.com/library/jj162979.aspx) 및 [SharePoint 추가 기능 빌드](http://msdn.microsoft.com/library/office/apps/jj163230%28v=office.15%29.aspx)를 참조하세요.  
   
-## <a name="elements-of-a-sharepoint-project"></a>SharePoint 프로젝트 요소  
+## <a name="elements-of-a-sharepoint-project"></a>SharePoint 프로젝트 요소
  SharePoint 프로젝트 아래에 있는 노드를 *SharePoint 항목*이라고 합니다. SharePoint 항목으로 하나 이상의 하위 포함 될 수도 있습니다 *SharePoint 항목 파일*와 같은 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 구성 파일,.aspx 양식 등입니다.  
   
  프로젝트 항목 파일로 채워져 있는 프로젝트 템플릿을 사용하여 프로젝트를 만드는 대신, **빈 프로젝트** 템플릿을 사용하여 빈 SharePoint 프로젝트를 만들고 프로젝트 항목을 수동으로 추가할 수 있습니다. SharePoint 프로젝트에는 선택적으로 SharePoint에서 활성화에 사용되는 기능 파일 하나 이상과 프로젝트를 배포할 패키지 파일이 포함될 수 있습니다.  
   
-### <a name="special-nodes"></a>특수 노드  
+### <a name="special-nodes"></a>특수 노드
  모든 SharePoint 프로젝트에는 프로젝트에서 이름을 바꾸거나, 삭제하거나, 잘라내거나, 복사하거나, 끌어서 놓을 수 없는 노드 두 개가 포함됩니다. 이들 노드는 다음과 같습니다.  
   
--   기능  
-  
+-   기능    
 -   Package  
   
  프로젝트에 대한 기능이나 패키지가 정의되지 않더라도 두 노드는 모두 항상 모든 SharePoint 프로젝트에 표시됩니다.  
   
-#### <a name="features-node"></a>기능 노드  
+#### <a name="features-node"></a>기능 노드
  **기능** 노드에는 SharePoint 프로젝트 기능이 하나 이상 포함됩니다. 기능은 SharePoint용 확장의 컨테이너입니다. 기능이 SharePoint 서버에 배포되고 나면 SharePoint 사이트에서 SharePoint 관리자가 기능을 사이트 정의에 포함하거나 개별적으로 활성화할 수 있습니다. 자세한 내용은 [기능 작업](http://go.microsoft.com/fwlink/?LinkID=147704)을 참조하세요.  
   
  콘텐츠 형식이나 목록 인스턴스와 같은 항목을 SharePoint 프로젝트에 추가하면 해당 항목은 **기능** 노드의 기능에 추가됩니다. 항목 범위에 따라 새 기능 또는 기존 기능에 추가되는지 결정됩니다. 새 항목의 범위가 기존 기능 범위와 같으면 새 항목은 기존 기능에 추가됩니다. 그러지 않으면 항목이 새 기능에 추가됩니다.  
@@ -52,17 +52,17 @@ ms.lasthandoff: 05/17/2018
   
  기능이 SharePoint 프로젝트에 추가되면 **솔루션 탐색기** 에 기본 이름인 Feature*x*.feature를 사용한 노드로 표시됩니다. 여기서 *x* 는 고유 번호입니다. 기능이 SharePoint 서버에 배포되고 나면 SharePoint 관리자가 기능을 활성화하여 SharePoint 사이트 사용자가 사용 가능하도록 설정할 수 있습니다.  
   
-#### <a name="package-node"></a>패키지 노드  
+#### <a name="package-node"></a>패키지 노드
  **패키지** 노드에는 SharePoint 프로젝트에 대한 배포 메커니즘으로 사용하는 단일 파일이 포함됩니다. 라고도 하는이 파일을 *솔루션 패키지*, 됩니다. CAB에 기반을 합니다. WSP 확장 합니다. 솔루션 패키지는 SharePoint 사이트에 적용되는 기능 집합, 사이트 정의 및 어셈블리가 포함되고 개별적으로 사용하거나 사용하지 않도록 설정할 수 있는 배포 가능하고 재사용 가능한 파일입니다. **패키지** 노드는 항상 Package.wspdef 라는 파일이 파일을 포함 한 [!INCLUDE[TLA2#tla_xml](../sharepoint/includes/tla2sharptla-xml-md.md)] 패키지에 대 한 정의 파일입니다. 패키지가 SharePoint를 실행하는 서버에 배포되고 나면 SharePoint 관리자가 패키지를 설치하고 해당 기능을 활성화할 수 있습니다.  
   
  보거나 패키지 노드를 두 번 클릭 하거나 바로 가기 메뉴를 열고 선택 하 여 패키지 디자이너에서 패키지의 콘텐츠를 변경할 수 **열려**합니다. 자세한 내용은 참조 [SharePoint 솔루션 패키지 만들기](../sharepoint/creating-sharepoint-solution-packages.md)합니다.  
   
-## <a name="sharepoint-project-and-project-item-properties"></a>SharePoint 프로젝트 및 프로젝트 항목 템플릿  
+## <a name="sharepoint-project-and-project-item-properties"></a>SharePoint 프로젝트 및 프로젝트 항목 템플릿
  SharePoint 프로젝트는 다른 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 프로젝트와 마찬가지로 속성 창과 속성 페이지에 속성이 표시됩니다. 표시되는 속성은 선택된 노드에 따라 달라집니다.  
   
  **솔루션 탐색기**에서 SharePoint 프로젝트, 프로젝트 항목 또는 프로젝트 항목 파일 노드를 선택하면 속성 창이나 속성 페이지에 다음 속성이 표시됩니다.  
   
-### <a name="project-properties"></a>프로젝트 속성  
+### <a name="project-properties"></a>프로젝트 속성
   
 |속성 이름|설명|  
 |-------------------|-----------------|  
@@ -82,7 +82,7 @@ ms.lasthandoff: 05/17/2018
   
  SharePoint 항목 파일(예: 기능 노드의 기능 또는 워크플로)을 선택하면 다음 속성이 속성 창에 표시됩니다.  
   
-### <a name="project-item-properties"></a>프로젝트 항목 속성  
+### <a name="project-item-properties"></a>프로젝트 항목 속성
   
 |속성 이름|설명|  
 |-------------------|-----------------|  
@@ -93,7 +93,7 @@ ms.lasthandoff: 05/17/2018
 |프로젝트 출력 참조|프로젝트 항목이 실행해야 하는 어셈블리 등의 종속성을 지정합니다. 자세한 내용은 참조 [패키징 및 배포 프로젝트 항목에는 정보 제공](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)합니다.|  
 |안전 컨트롤 항목|신뢰할 수 없는 사용자가 편집할 안전한 컨트롤을 지정합니다. 자세한 내용은 참조 [패키징 및 배포 프로젝트 항목에는 정보 제공](../sharepoint/providing-packaging-and-deployment-information-in-project-items.md)합니다.|  
   
-### <a name="project-item-file-properties"></a>프로젝트 항목 파일 속성  
+### <a name="project-item-file-properties"></a>프로젝트 항목 파일 속성
   
 |속성 이름|설명|  
 |-------------------|-----------------|  
@@ -104,11 +104,11 @@ ms.lasthandoff: 05/17/2018
 |배포 위치|SharePoint 서버에서 파일의 정규화된 경로입니다. 이 경로는 배포 루트 및 배포 경로 하위 속성으로 구성됩니다.|  
 |배포 경로|Workflow1 같은 SharePoint 서버 파일에 있는 파일의 상대 경로\\합니다. 파일에 대한 정규화된 경로는 *Deployment Path* 값을 *Deployment Root* 값의 끝에 연결해서 만듭니다.<br /><br /> 값을 선택 하면 *RootFile* 에 대 한는 *배포 유형을* 속성이 변경 된 *배포 루트* 속성이 {SharePointRoot}\\때문에 정규화 된 경로 {SharePointRoot} \Workflow1의\\합니다. 자세한 내용은 참조 [패키징 및 SharePoint 솔루션 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)합니다.|  
 |Deployment Root|문자열. SharePoint 서버에서 파일이 배포되는 루트 폴더입니다. 예를 들어 {SharePointRoot} \Template\Features\\{FeatureName}\\합니다.<br /><br /> *Deployment Root* 속성 값은 *Deployment Type* 설정에 따라 결정됩니다.|  
-|RootFile|*Deployment Root* 값을 결정하는 파일의 배포 유형입니다. 다음 값 중 하나입니다.<br /><br /> NoDeployment: \<값 없음 ><br /><br /> ElementManifest: {SharePointRoot} \Template\Features\\{FeatureName}\\<br /><br /> ElementFile: {SharePointRoot} \Template\Features\\{FeatureName}\\<br /><br /> TemplateFile: {SharePointRoot} \Template\\<br /><br /> RootFile: {SharePointRoot}\\<br /><br /> GlobalResource: {SharePointRoot} \Resources\\<br /><br /> ClassResource: {ClassResourcePath}\\<br /><br /> 자세한 내용은 <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>을 참조하세요.|  
+|RootFile|*Deployment Root* 값을 결정하는 파일의 배포 유형입니다. 다음 값 중 하나입니다.<br /><br /> NoDeployment:  *\<값 없음 >*<br /><br /> ElementManifest: *{SharePointRoot} \Template\Features\\{FeatureName}*\\<br /><br /> ElementFile: *{SharePointRoot} \Template\Features\\{FeatureName}\\*<br /><br /> TemplateFile: *{SharePointRoot} \Template\\*<br /><br /> RootFile: *{SharePointRoot}\\*<br /><br /> GlobalResource: *{SharePointRoot} \Resources\\*<br /><br /> ClassResource: *{ClassResourcePath}\\*<br /><br /> 자세한 내용은 <xref:Microsoft.VisualStudio.SharePoint.DeploymentType>을 참조하세요.|  
 |파일 이름|항목 파일에 대한 파일 또는 폴더의 이름입니다.|  
 |전체 경로|항목에 대한 파일의 위치입니다. 읽기 전용입니다.|  
   
-## <a name="related-topics"></a>관련 항목  
+## <a name="related-topics"></a>관련 항목
   
 |제목|설명|  
 |-----------|-----------------|  
@@ -131,7 +131,7 @@ ms.lasthandoff: 05/17/2018
 |[SharePoint 솔루션 보안](../sharepoint/security-for-sharepoint-solutions.md)|[!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 SharePoint 솔루션을 개발하기 위한 보안 고려 사항을 설명합니다.|  
 |[URL 선택기 대화 상자 &#40;Visual Studio에서 SharePoint 개발&#41;](../sharepoint/url-picker-dialog-box-sharepoint-development-in-visual-studio.md)|프로젝트 또는 로컬 SharePoint 서버의 리소스에 경로 참조를 추가하는 데 사용할 수 있는 대화 상자에 대해 설명합니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [시작 하기 &#40;Visual Studio에서 SharePoint 개발&#41;](../sharepoint/getting-started-sharepoint-development-in-visual-studio.md)   
  [서버 탐색기를 사용 하 여 SharePoint 연결 찾아보기](../sharepoint/browsing-sharepoint-connections-using-server-explorer.md)   
  [SharePoint 솔루션 빌드 및 디버깅](../sharepoint/building-and-debugging-sharepoint-solutions.md)   

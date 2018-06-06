@@ -17,11 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 829fd8ed601eae28d367e4b2f3de0a5c7b709985
-ms.sourcegitcommit: 33c954fbc8e05f7ba54bfa2c0d1bc1f9bbc68876
+ms.openlocfilehash: 7784bcfc8db3c8f2709bde045622c747a326ddcc
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/07/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750170"
 ---
 # <a name="scenario-change-your-design-using-visualization-and-modeling"></a>시나리오: 시각화 및 모델링을 사용하여 디자인 변경
 
@@ -150,13 +151,13 @@ Dinner Now는 새 요구 사항을 충족하기 위한 비용을 예측해야 �
 
  예를 들어 개발자는 코드 맵을 만듭니다. 범위를 조정하여 새 시나리오가 영향을 미치는 영역에 초점을 맞춥니다. 맵에서 다음 영역이 선택되고 강조 표시됩니다.
 
- ![Namespace 종속성 그래프](../modeling/media/namespace_reviewsystem.png "Namespace_ReviewSystem")
+ ![네임스페이스 종속성 그래프](../modeling/media/namespace_reviewsystem.png)
 
  **네임스페이스 코드 맵**
 
  개발자는 선택된 네임스페이스를 확장하여 클래스, 메서드 및 관계를 표시합니다.
 
- ![확장 된 네임 스페이스 종속성 그래프](../modeling/media/dep_reviewsystem.png "Dep_ReviewSystem")
+ ![확장된 네임스페이스 종속성 그래프](../modeling/media/dep_reviewsystem.png)
 
  **그룹 간 링크가 표시된 확장된 네임스페이스 코드 맵**
 
@@ -177,7 +178,7 @@ Dinner Now는 새 요구 사항을 충족하기 위한 비용을 예측해야 �
 
  예를 들어 다음 종속성 다이어그램에서는 레이어 간 종속성 및 각 레이어와 연결 된 아티팩트의 수를 설명 합니다:
 
- ![통합된 지불 시스템의 종속성 다이어그램](../modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")
+ ![통합된 지불 시스템의 종속성 다이어그램](../modeling/media/layer_integrated_dnlucerne.png)
 
  **종속성 다이어그램**
 
@@ -277,19 +278,19 @@ Lucerne과 Dinner Now는 결제 시스템을 통합해야 합니다. 다음 섹�
 
 다음 맵은 PaymentProcessing 클래스와 선택된 것으로 표시되는 Dinner Now 시스템 다른 파트 간의 종속성을 보여 줍니다.
 
-![Dinner Now 결제 시스템에 대 한 종속성 그래프](../modeling/media/dep_dnpayment.png "Dep_DNPayment")
+![Dinner Now 지불 시스템의 종속성 그래프](../modeling/media/dep_dnpayment.png)
 
 **Dinner Now 결제 시스템에 대한 코드 맵**
 
 개발자는 PaymentProcessing 클래스를 확장하고 해당 구성원을 선택하여 영향을 받을 수 있는 영역을 확인하는 방식으로 맵을 살펴봅니다.
 
-![PaymentProcessing 내부 메서드 및 종속성](../modeling/media/depgraph_expandeddn.png "DepGraph_ExpandedDN")
+![PaymentProcessing 내부 메서드 및 종속성](../modeling/media/depgraph_expandeddn.png)
 
 **PaymentProcessing 클래스 내부 메서드 및 해당 종속성**
 
 Lucerne 결제 시스템에 대한 다음 맵을 생성하여 클래스, 메서드 및 종속성을 검사합니다. 팀에서는 Lucerne 시스템에 Dinner Now의 다른 부분과 상호 작용하기 위해 작업이 필요한지를 확인합니다.
 
-![Lucerne 결제 시스템에 대 한 종속성 그래프](../modeling/media/depgraph_lucernepay.png "DepGraph_LucernePay")
+![Lucerne 지불 시스템의 종속성 그래프](../modeling/media/depgraph_lucernepay.png)
 
 **Lucerne 결제 시스템에 대한 코드 맵**
 
@@ -297,7 +298,7 @@ Lucerne 결제 시스템에 대한 다음 맵을 생성하여 클래스, 메서�
 
 코드를 재구성하고 나서 팀에서는 새 코드 맵을 생성하여 업데이트된 구조와 관계를 확인합니다.
 
-![종속성 그래프를 재구성된 한 코드](../modeling/media/depgraph_integrated.png "DepGraph_Integrated")
+![코드를 재구성한 종속성 그래프](../modeling/media/depgraph_integrated.png)
 
 **코드를 재구성한 코드 맵**
 
@@ -338,7 +339,7 @@ Lucerne 결제 시스템에 대한 다음 맵을 생성하여 클래스, 메서�
 
  Lucerne은 Process Payment 사용 사례에 참가하는 엔터티를 설명하고 논의하는 데 도움이 되도록 다음 클래스 다이어그램을 그립니다.
 
- ![클래스 다이어그램의 process Payment 엔터티](../modeling/media/uml_payentities.png "UML_PayEntities")
+ ![클래스 다이어그램의 Process Payment 엔터티](../modeling/media/uml_payentities.png)
 
  **클래스 다이어그램의 Process Payment 엔터티**
 
@@ -346,7 +347,7 @@ Lucerne 결제 시스템에 대한 다음 맵을 생성하여 클래스, 메서�
 
  개발 중에 Lucerne은 다음 클래스 다이어그램을 사용하여 각 클래스의 세부 정보를 설명하고 논의합니다.
 
- ![Process Payment 엔터티 세부 정보를 클래스 다이어그램에](../modeling/media/uml_payment.png "UML_Payment")
+ ![클래스 다이어그램의 Process Payment 엔터티 세부 정보](../modeling/media/uml_payment.png)
 
  **클래스 다이어그램의 Process Payment 세부 정보**
 
@@ -407,7 +408,7 @@ Lucerne 결제 시스템에 대한 다음 맵을 생성하여 클래스, 메서�
 
  코드와 디자인의 일관성을 유지 하기 위해 Dinner Now 및 Lucerne 발전 함에 따라 코드의 유효성을 검사 하려면 다음 종속성 다이어그램을 사용 합니다:
 
- ![통합된 지불 시스템의 종속성 다이어그램](../modeling/media/layer_integrated_dnlucerne.png "Layer_Integrated_DNLucerne")
+ ![통합된 지불 시스템의 종속성 다이어그램](../modeling/media/layer_integrated_dnlucerne.png)
 
  **Lucerne과 Dinner Now에 대 한 종속성 다이어그램 통합**
 
@@ -417,13 +418,13 @@ Lucerne 결제 시스템에 대한 다음 맵을 생성하여 클래스, 메서�
 
  다음 코드 맵은 Dinner Now와 PaymentApprover 간의 새로운 호출을 보여 줍니다.
 
- ![통합된 시스템으로 업데이트 된 종속성 그래프](../modeling/media/depgraph_intsystem.png "DepGraph_IntSystem")
+ ![통합 시스템으로 업데이트된 종속성 그래프](../modeling/media/depgraph_intsystem.png)
 
  **메서드 호출이 업데이트된 코드 맵**
 
  시스템이 예상대로 작동하는지 확인하고 나서 Dinner Now는 PaymentProcessing 코드를 주석으로 처리합니다. 레이어 유효성 검사 보고서는 분명하며, 결과 코드 맵은 PaymentProcessing 종속성이 존재하지 않음을 보여 줍니다.
 
- ![PaymentProcessing 없는 종속성 그래프](../modeling/media/depgraph_nomore.png "DepGraph_NoMore")
+ ![PaymentProcessing 없는 종속성 그래프](../modeling/media/depgraph_nomore.png)
 
  **PaymentProcessing이 없는 코드 맵**
 

@@ -1,5 +1,5 @@
 ---
-title: 만들기 및 Tableadapter를 구성 합니다.
+title: TableAdapter 만들기 및 구성
 ms.date: 09/01/2017
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +16,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: c59128fe0ed0c1053c044431bbde68fb5906de31
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 76c00f33bfcf277dcad9fdda32661b29e08bbfc3
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748959"
 ---
-# <a name="create-and-configure-tableadapters"></a>만들기 및 Tableadapter를 구성 합니다.
+# <a name="create-and-configure-tableadapters"></a>TableAdapter 만들기 및 구성
 Tableadapter 응용 프로그램과 데이터베이스 간에 통신을 제공합니다. 데이터베이스, 실행된 된 쿼리 또는 저장된 프로시저에 연결 하 고 새 데이터를 반환 하거나 테이블 또는 기존 채우기 <xref:System.Data.DataTable> 반환 된 데이터를 사용 합니다. Tableadapter는 데이터베이스에 다시 응용 프로그램에서 업데이트 된 데이터를 보낼 수도 있습니다.
 
 Tableadapter는 다음 작업 중 하나를 수행할 때 사용자에 대 한 생성 됩니다.
@@ -40,7 +41,7 @@ Tableadapter에 대 한 소개를 참조 하십시오. [Tableadapter를 사용 �
 ## <a name="use-the-tableadapter-configuration-wizard"></a>TableAdapter 구성 마법사를 사용 하 여
 실행 된 **TableAdapter 구성 마법사** 만들거나 Tableadapter 및 관련된 Datatable 편집 합니다. 마우스 오른쪽 단추로 클릭 하 여 기존 TableAdapter를 구성할 수 있습니다는 **데이터 집합 디자이너**합니다.
 
-![테이블 어댑터 구성 마법사 raddata](../data-tools/media/raddata-table-adapter-configuration-wizard.png "raddata 테이블 어댑터 구성 마법사")
+![raddata 테이블 어댑터 구성 마법사](../data-tools/media/raddata-table-adapter-configuration-wizard.png)
 
 도구 상자에서 새 TableAdapter를 끌면 때는 **데이터 집합 디자이너** 이며에 초점을 맞추고 마법사가 시작 표시 되는 TableAdapter를 원본 데이터를 지정할 수 있습니다 메시지에 연결 해야 합니다. 다음 페이지에서 마법사는 SQL 문 또는 저장된 프로시저는 데이터베이스와 통신에 사용할 명령의 종류 요청 합니다. (표시 되지 않습니다이 이미 데이터 원본에 연결 되어 있는 TableAdapter를 구성 하는 경우.)
 
@@ -63,7 +64,7 @@ Tableadapter에 대 한 소개를 참조 하십시오. [Tableadapter를 사용 �
 ## <a name="configure-a-tableadapters-fill-method"></a>TableAdapter의 Fill 메서드를 구성 합니다.
 경우에 따라 다음 TableAdapter의 테이블의 스키마를 변경 하는 것이 좋습니다. 이 작업을 수행 하려면 TableAdapter의 기본 수정 `Fill` 메서드. Tableadapter 주를 사용 하 여 만들어진 `Fill` 관련된 데이터 테이블의 스키마를 정의 하는 방법입니다. 주 `Fill` 메서드 기반 쿼리 또는 저장된 프로시저를 TableAdapter를 처음 구성할 때 입력 했던으로 합니다. 이것은 데이터 집합 디자이너에서 데이터 테이블에서 첫 번째 (최상위) 메서드입니다.
 
-![여러 개의 쿼리를 사용 하 여 TableAdapter](../data-tools/media/tableadapter.gif "TableAdapter")
+![쿼리가 여러 개 포함된 TableAdapter](../data-tools/media/tableadapter.gif)
 
 TableAdapter에 수행한 모든 변경 내용을 주 `Fill` 메서드는 연결 된 데이터 테이블의 스키마에 반영 됩니다. 예를 들어 기본에서 쿼리에서 열이 제거 `Fill` 메서드도 연결 된 데이터 테이블에서 열을 제거 합니다. 또한 주에서 열을 제거 `Fill` 메서드 쿼리에서 해당 TableAdapter에 대 한 열을 제거 합니다.
 

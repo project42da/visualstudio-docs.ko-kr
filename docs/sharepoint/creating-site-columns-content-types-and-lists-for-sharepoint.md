@@ -21,20 +21,20 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8c1869f11d4202237d628ff3f15f73906822ec47
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: e2108ce50cca32be707931f5bcf11d4501e8d3d3
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34692524"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764922"
 ---
-# <a name="creating-site-columns-content-types-and-lists-for-sharepoint"></a>SharePoint 용 사이트 열, 콘텐츠 형식 및 목록 만들기
+# <a name="create-site-columns-content-types-and-lists-for-sharepoint"></a>SharePoint 용 사이트 열, 콘텐츠 형식 및 목록 만들기
   Visual Studio는 다양 한 기본 SharePoint 항목을 포함 하 여에 대 한 프로젝트 항목 템플릿을 제공 *나열* 및 *콘텐츠 형식을*, 사이트 열을 통합할 수 있는 (또는  *필드*). 콘텐츠 형식 및 목록에 대한 새로운 디자이너를 사용하면 이러한 항목을 이전보다 쉽게 만들 수 있습니다.  
   
 ## <a name="site-columns"></a>사이트 열
  사이트 열은 SharePoint 프로젝트에 추가할 수 있는 가장 기본적인 요소 중 하나입니다. 사이트 열은 연락처 목록의 연락처에 대한 전화 번호, 설명 또는 도시 이름과 같은 데이터의 형식을 나타냅니다.  
   
- 새로운 사이트 열 프로젝트 항목 템플릿을 사용하면 이전 Visual Studio 버전의 경우보다 쉽게 사이트 열을 만들 수 있습니다. 새 사이트 열을 만든 후 표시 이름, 데이터 형식 및 SharePoint에서 사이트 열이 표시될 그룹과 같은 원하는 정보를 포함하도록 사이트 열의 Elements.xml 파일에서 XML을 수정할 수 있습니다. 사이트 열에 대 한 자세한 내용은 참조 [열 소개](http://go.microsoft.com/fwlink/?LinkId=224996)합니다.  
+ 새로운 사이트 열 프로젝트 항목 템플릿을 사용하면 이전 Visual Studio 버전의 경우보다 쉽게 사이트 열을 만들 수 있습니다. 새 사이트 열을 만든 후 사이트 열에서 XML을 수정할 수 있습니다 *Elements.xml* 에 표시 되도록 사이트 열 그룹의 표시 이름, 데이터 형식 등의 원하는 정보를 포함 하도록 파일 SharePoint 합니다. 사이트 열에 대 한 자세한 내용은 참조 [열 소개](http://go.microsoft.com/fwlink/?LinkId=224996)합니다.  
   
 ## <a name="content-types-and-lists"></a>콘텐츠 형식 및 목록
  콘텐츠 형식과 목록은 SharePoint에서 가장 자주 사용되는 요소입니다.  

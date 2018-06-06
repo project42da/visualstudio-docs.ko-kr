@@ -1,5 +1,5 @@
 ---
-title: '연습: Excel 작업 창의 컨트롤에 데이터 바인딩 | Microsoft Docs'
+title: '연습: Excel 작업 창의 컨트롤에 데이터 바인딩'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,13 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 87d960c01d8ac28b2a148e2f48ee51a877d97c20
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9d450a9c52ae8558167bf4cb581ce2e36f44f4e9
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767912"
 ---
-# <a name="walkthrough-binding-data-to-controls-on-an-excel-actions-pane"></a>연습: Excel 작업 창의 컨트롤에 데이터 바인딩
+# <a name="walkthrough-bind-data-to-controls-on-an-excel-actions-pane"></a>연습: Excel 작업 창의 컨트롤에 데이터 바인딩
   이 연습에서는 Microsoft Office Excel의 작업 창에서 컨트롤에 데이터 바인딩을 보여 줍니다. 컨트롤은 SQL Server 데이터베이스의 테이블 간 마스터/세부 관계를 보여 줍니다.  
   
  [!INCLUDE[appliesto_xlalldoc](../vsto/includes/appliesto-xlalldoc-md.md)]  
@@ -55,20 +56,20 @@ ms.lasthandoff: 04/16/2018
   
 -   사용 권한에서 읽기 / 쓰기를 SQL Server 데이터베이스입니다.  
   
-## <a name="creating-the-project"></a>프로젝트 만들기  
+## <a name="create-the-project"></a>프로젝트를 만듭니다.  
  첫 번째 단계에서 Excel 통합 문서 프로젝트를 만듭니다.  
   
-#### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
+### <a name="to-create-a-new-project"></a>새 프로젝트를 만들려면  
   
-1.  이름의 Excel 통합 문서 프로젝트를 만들 **내 Excel 작업 창의**합니다. 마법사에서 선택 **새 문서**합니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
+1.  이름의 Excel 통합 문서 프로젝트를 만들 **내 Excel 작업 창의**합니다. 마법사에서 선택 **새 문서**합니다. 자세한 내용은 참조 [하는 방법: Visual Studio에서 Office 만들기 프로젝트](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
      Visual Studio 디자이너에서 새 Excel 통합 문서를 열고 추가 된 **내 Excel 작업 창의** 프로젝트를 **솔루션 탐색기**합니다.  
   
-## <a name="adding-a-new-data-source-to-the-project"></a>프로젝트에 새 데이터 소스 추가  
+## <a name="add-a-new-data-source-to-the-project"></a>새 데이터 원본을 프로젝트에 추가  
   
-#### <a name="to-add-a-new-data-source-to-the-project"></a>프로젝트에 새 데이터 원본을 추가 하려면  
+### <a name="to-add-a-new-data-source-to-the-project"></a>프로젝트에 새 데이터 원본을 추가 하려면  
   
-1.  **데이터 소스** 창이 표시되지 않으면 메뉴 모음에서 **보기**, **다른 창**, **데이터 소스**를 차례로 선택하여 이를 표시합니다.  
+1.  경우는 **데이터 원본** 창이 표시 되지 않으면 메뉴 모음에서 선택에 의해 표시, **보기** > **다른 창**  >   **데이터 원본**합니다.  
   
 2.  **새 데이터 소스 추가** 를 선택하여 **데이터 소스 구성 마법사**를 시작합니다.  
   
@@ -90,10 +91,10 @@ ms.lasthandoff: 04/16/2018
   
  마법사에서 추가 **Suppliers** 테이블 및 **제품** 테이블는 **데이터 소스** 창. 또한 형식화 된 데이터 집합에 표시 되는 프로젝트에 추가 **솔루션 탐색기**합니다.  
   
-## <a name="adding-controls-to-the-worksheet"></a>워크시트에 컨트롤 추가  
+## <a name="add-controls-to-the-worksheet"></a>워크시트에 컨트롤 추가  
  다음에 추가 <xref:Microsoft.Office.Tools.Excel.NamedRange> 제어 및 <xref:Microsoft.Office.Tools.Excel.ListObject> 첫 번째 워크시트를 제어 합니다.  
   
-#### <a name="to-add-a-namedrange-control-and-a-listobject-control"></a>NamedRange 컨트롤 및 ListObject 컨트롤을 추가 하려면  
+### <a name="to-add-a-namedrange-control-and-a-listobject-control"></a>NamedRange 컨트롤 및 ListObject 컨트롤을 추가 하려면  
   
 1.  되어 있는지 확인는 **내 Excel 작업 Pane.xlsx** Visual Studio 디자이너에 통합 문서가 열려 있는 `Sheet1` 표시 합니다.  
   
@@ -113,10 +114,10 @@ ms.lasthandoff: 04/16/2018
   
 7.  C#에 해당, 선택 **suppliersBindingSource** 변경 되며 구성 요소 트레이 **한정자** 속성을 **내부** 에 **속성** 창.  
   
-## <a name="adding-controls-to-the-actions-pane"></a>작업 창에 컨트롤 추가  
- 다음으로, 콤보 상자를 포함 하는 작업 창 컨트롤을 해야 합니다.  
+## <a name="add-controls-to-the-actions-pane"></a>작업 창에 컨트롤 추가  
+ 다음으로, 콤보 상자에 있는 작업 창 컨트롤을 해야 합니다.  
   
-#### <a name="to-add-an-actions-pane-control"></a>작업 창 컨트롤을 추가 하려면  
+### <a name="to-add-an-actions-pane-control"></a>작업 창 컨트롤을 추가 하려면  
   
 1.  선택 된 **내 Excel 작업 창의** 프로젝트에서 **솔루션 탐색기**합니다.  
   
@@ -124,7 +125,7 @@ ms.lasthandoff: 04/16/2018
   
 3.  에 **새 항목 추가** 대화 상자에서 **작업 창 컨트롤**, 이름을 **actionscontrol로 지정한**를 클릭 하 고 **추가**합니다.  
   
-#### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>작업 창 컨트롤에 데이터 바인딩된 Windows Forms 컨트롤을 추가 하려면  
+### <a name="to-add-data-bound-windows-forms-controls-to-an-actions-pane-control"></a>작업 창 컨트롤에 데이터 바인딩된 Windows Forms 컨트롤을 추가 하려면  
   
 1.  **공용 컨트롤** 의 탭은 **도구 상자**, 끌어는 <xref:System.Windows.Forms.ComboBox> 작업 창 컨트롤을 제어 합니다.  
   
@@ -132,10 +133,10 @@ ms.lasthandoff: 04/16/2018
   
 3.  콤보 상자에 맞게 사용자 정의 컨트롤의 크기를 조정 합니다.  
   
-## <a name="binding-the-control-on-the-actions-pane-to-data"></a>작업 창의 컨트롤에서 데이터 바인딩  
- 이 섹션의 데이터 원본 설정에서 <xref:System.Windows.Forms.ComboBox> 로 동일한 데이터 원본에는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 워크시트에 컨트롤.  
+## <a name="bind-the-control-on-the-actions-pane-to-data"></a>데이터에 작업 창에 컨트롤 바인딩  
+ 이 섹션에서는 데이터 원본 설정에서 <xref:System.Windows.Forms.ComboBox> 로 동일한 데이터 원본에는 <xref:Microsoft.Office.Tools.Excel.NamedRange> 워크시트에 컨트롤.  
   
-#### <a name="to-set-data-binding-properties-of-the-control"></a>컨트롤의 데이터 바인딩 속성을 설정 하려면  
+### <a name="to-set-data-binding-properties-of-the-control"></a>컨트롤의 데이터 바인딩 속성을 설정 하려면  
   
 1.  작업 창 컨트롤을 마우스 오른쪽 단추로 누른 **코드 보기**합니다.  
   
@@ -148,12 +149,12 @@ ms.lasthandoff: 04/16/2018
   
      [!code-csharp[Trin_VstcoreActionsPaneExcel#2](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ActionsControl.cs#2)]  
   
-## <a name="showing-the-actions-pane"></a>작업 창 표시  
- 작업 창에서 런타임에 컨트롤을 추가할 때 까지는 표시 되지 않습니다.  
+## <a name="show-the-actions-pane"></a>작업 창 표시  
+ 작업 창에서 런타임에 컨트롤을 추가할 때까지 표시 되지 않습니다.  
   
 #### <a name="to-show-the-actions-pane"></a>작업 창을 표시 하려면  
   
-1.  **솔루션 탐색기**ThisWorkbook.vb 또는 ThisWorkbook.cs, 마우스 오른쪽 단추로 클릭 한 다음 클릭 **코드 보기**합니다.  
+1.  **솔루션 탐색기**를 마우스 오른쪽 단추로 클릭 *ThisWorkbook.vb* 또는 *ThisWorkbook.cs*, 클릭 하 고 **코드 보기**합니다.  
   
 2.  사용자 정의 컨트롤의 새 인스턴스를 만들고는 `ThisWorkbook` 클래스입니다.  
   
@@ -165,12 +166,12 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/CSharp/Trin_VstcoreActionsPaneExcelCS/ThisWorkbook.cs#4)]
      [!code-vb[Trin_VstcoreActionsPaneExcel#4](../vsto/codesnippet/VisualBasic/Trin_VstcoreActionsPaneExcelVB/ThisWorkbook.vb#4)]  
   
-## <a name="testing-the-application"></a>응용 프로그램 테스트  
+## <a name="test-the-application"></a>응용 프로그램 테스트  
  이제 문서를 열 때 작업 창이 열리고 있는지 및 컨트롤은 마스터/세부 관계를가지고 있는지 확인 하 여 문서를 테스트할 수 있습니다.  
   
-#### <a name="to-test-your-document"></a>문서를 테스트하려면  
+### <a name="to-test-your-document"></a>문서를 테스트하려면  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  키를 눌러 **F5** 프로젝트를 실행 합니다.  
   
 2.  작업 창이 표시 되는지 확인 합니다.  
   
@@ -181,11 +182,11 @@ ms.lasthandoff: 04/16/2018
 ## <a name="next-steps"></a>다음 단계  
  다음으로 수행할 수 있는 몇 가지 작업은 다음과 같습니다.  
   
--   Word에서 컨트롤에 데이터 바인딩 자세한 내용은 참조 [연습: Word 작업 창의 컨트롤에 데이터 바인딩](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)합니다.  
+-   Word에서 컨트롤에 데이터 바인딩 자세한 내용은 참조 [연습: Word 작업 창의 컨트롤에 데이터를 바인딩할](../vsto/walkthrough-binding-data-to-controls-on-a-word-actions-pane.md)합니다.  
   
 -   프로젝트를 배포 합니다. 자세한 내용은 참조 [ClickOnce를 사용 하 여 Office 솔루션 배포](../vsto/deploying-an-office-solution-by-using-clickonce.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [작업 창 개요](../vsto/actions-pane-overview.md)   
  [방법: 작업 창에서 컨트롤 레이아웃 관리](../vsto/how-to-manage-control-layout-on-actions-panes.md)   
  [Office 솔루션의 컨트롤에 데이터 바인딩](../vsto/binding-data-to-controls-in-office-solutions.md)  

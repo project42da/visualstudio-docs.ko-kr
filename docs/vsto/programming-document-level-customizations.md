@@ -34,7 +34,7 @@ ms.openlocfilehash: 512952a27e2b1c22df256e36f8cbea59f04a3295
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34692833"
 ---
 # <a name="program-document-level-customizations"></a>문서 수준 사용자 지정 프로그래밍

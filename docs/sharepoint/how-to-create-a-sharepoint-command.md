@@ -15,11 +15,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fbfaeba966a2608f67ff63b0de39f13669a7169f
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 026c15241ace87a3d7454afb2439e045d06ce67b
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767665"
 ---
 # <a name="how-to-create-a-sharepoint-command"></a>방법: SharePoint 명령 만들기
   사용자 지정 SharePoint 도구 확장에서 서버 개체 모델을 사용 하려는 경우 만들어야 *SharePoint 명령* API를 호출 합니다. SharePoint 명령 서버 개체 모델을 직접 호출할 수 있는 어셈블리를 정의 합니다.  
@@ -61,7 +62,7 @@ ms.lasthandoff: 04/16/2018
   
      SharePoint 도구 확장에서 명령을 호출 하면 동일한 고유 식별자를 지정 해야 합니다. 자세한 내용은 참조 [하는 방법: SharePoint 명령 실행](../sharepoint/how-to-execute-a-sharepoint-command.md)합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제는 식별자를 가진 SharePoint 명령을 `Contoso.Commands.UpgradeSolution`합니다. 이 명령은 서버 개체 모델에서 Api를 사용 하 여 배포 된 솔루션으로 업그레이드 합니다.  
   
  [!code-csharp[SPExtensibility.ProjectExtension.UpgradeDeploymentStep#5](../sharepoint/codesnippet/CSharp/UpgradeDeploymentStep/SharePointCommands/Commands.cs#5)]
@@ -77,11 +78,10 @@ ms.lasthandoff: 04/16/2018
 -   Microsoft.SharePoint  
   
 ## <a name="deploying-the-command"></a>명령 배포  
- 명령을 배포 하려면 동일한 명령 어셈블리를 포함 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 명령을 사용 하는 확장 프로그램 어셈블리와 함께 패키지 (VSIX) 확장 합니다. 또한 extension.vsixmanifest 파일에서 명령 어셈블리에 대 한 항목을 추가 해야 합니다. 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구에 대 한 확장명 배포](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)합니다.  
+ 명령을 배포 하려면 동일한 명령 어셈블리를 포함 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 확장 (*vsix*) 명령을 사용 하는 확장 어셈블리를 사용 하 여 패키지 합니다. 또한 extension.vsixmanifest 파일에서 명령 어셈블리에 대 한 항목을 추가 해야 합니다. 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구에 대 한 확장명 배포](../sharepoint/deploying-extensions-for-the-sharepoint-tools-in-visual-studio.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 개체 모델 호출](../sharepoint/calling-into-the-sharepoint-object-models.md)   
  [방법: SharePoint 명령 실행](../sharepoint/how-to-execute-a-sharepoint-command.md)   
  [연습: 서버 탐색기를 확장하여 웹 파트 표시](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)  
-  
   

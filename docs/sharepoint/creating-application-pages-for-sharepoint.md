@@ -21,14 +21,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 8bc73918a2af82acab1fd465f5f80755cc594ba9
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 9fab7bbed25d3f308eef02b7f975e71af6fa8183
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691981"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765007"
 ---
-# <a name="creating-application-pages-for-sharepoint"></a>SharePoint 용 응용 프로그램 페이지 만들기
+# <a name="create-application-pages-for-sharepoint"></a>SharePoint 용 응용 프로그램 페이지 만들기
   *응용 프로그램 페이지* SharePoint 웹 사이트에서 사용 하기 위해 설계 된 ASP.NET 웹 페이지입니다. 응용 프로그램 페이지는 ASP.NET 페이지의 특수화 된 형식입니다. 응용 프로그램 페이지 및 ASP.NET 페이지를 표준 간의 주요 차이점은 응용 프로그램 페이지를 SharePoint 마스터 페이지 콘텐츠를 포함 합니다. 마스터 페이지를 응용 프로그램 페이지를 사이트의 다른 페이지와 동일한 모양 및 동작을 공유할 수 있습니다.  
   
  Visual Studio를 사용 하면 디자이너를 사용 하 여 응용 프로그램 페이지를 디자인할 수 있습니다. 디자이너는 마스터 페이지에 정의 된 각 콘텐츠 자리 표시자에 대 한 콘텐츠 영역을 표시 합니다. 이러한 콘텐츠 영역에 컨트롤을 끌어 페이지에 응용 프로그램을 디자인할 수 있습니다.  
@@ -55,7 +55,7 @@ ms.locfileid: "34691981"
   
 |파일|설명|  
 |----------|-----------------|  
-|ASP.NET 페이지 파일 (.aspx)|페이지를 정의 하는 XML 태그를 포함 합니다.|  
+|ASP.NET 페이지 파일 (*.aspx*)|페이지를 정의 하는 XML 태그를 포함 합니다.|  
 |응용 프로그램 페이지 코드 파일|코드 숨김 응용 프로그램 페이지를 포함합니다. 이 파일에 이벤트를 처리 하는 코드를 추가 합니다.|  
 |응용 프로그램 페이지 디자이너 코드 파일|디자이너에서 생성 되는 코드를 포함 합니다. 이 파일을 직접 편집 하지 마십시오.|  
   

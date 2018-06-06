@@ -10,11 +10,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 4b5dfdd4b4d05969406f93801bcf87880949e41a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d3b5863e6273e96d7e0047f89cd16a69358c49cc
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751665"
 ---
 # <a name="how-to-use-search-in-the-workflow-designer"></a>방법: 워크플로 디자이너에서 검색 사용
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 04/26/2018
 
 3.  검색 조건은 현재 워크플로에 있습니다. 다음 스크린 샷은 디자이너에 있는 활동 표시 이름을 보여 줍니다.
 
-     ![워크플로 디자이너에서 검색 결과](../workflow-designer/media/designersearch.png "DesignerSearch")
+     ![워크플로 디자이너의 검색 결과](../workflow-designer/media/designersearch.png)
 
 ## <a name="find-in-files"></a>파일에서 찾기
 

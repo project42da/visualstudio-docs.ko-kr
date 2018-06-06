@@ -16,11 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4a1922c3b79a718b3a239280561bf954165332e6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e48e6a3a5694a518f30b3d9ec749d01b1e7127b8
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746506"
 ---
 # <a name="create-a-windows-forms-user-control-that-supports-complex-data-binding"></a>복잡 한 데이터 바인딩을 지 원하는 Windows Forms 사용자 정의 컨트롤 만들기
 
@@ -80,7 +81,7 @@ Windows 응용 프로그램에서 폼에 데이터를 표시할 때의 기존 �
 
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .
 
-1. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.
+1. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **Windows 바탕 화면**합니다.
 
 1. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.
 

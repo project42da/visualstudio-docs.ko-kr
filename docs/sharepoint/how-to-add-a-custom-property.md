@@ -22,11 +22,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: ecc7bba2cd33f0c7f4d78ef8607d078eb7f752a0
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 85b37d275f2e8c63afff6f301c21794ba2742eaf
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767951"
 ---
 # <a name="how-to-add-a-custom-property"></a>방법: 사용자 지정 속성 추가
   사용 하 여 모델에 사용자 지정 속성을 추가할 수 있습니다는 **속성 편집기**합니다. 예: 연결 문자열 정보 및 기타 데이터에서 런타임에 검색 하는 코드에서 이러한 속성에 액세스할 수 있습니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  에 **BDC 탐색기**, 사용자 지정 속성을 적용할 모델 요소를 나타내는 노드를 선택 합니다.  
   
-2.  메뉴 모음에서 **보기**, **속성 창**합니다.  
+2.  메뉴 모음에서 **보기** > **속성 창**합니다.  
   
 3.  에 **속성** 창, 선택는 **사용자 지정 속성** 속성을 다음 줄임표 단추를 선택 하 고 (![ASP.NET 모바일 디자이너 줄임표](../sharepoint/media/mwellipsis.gif "ASP 합니다. NET 모바일 디자이너 줄임표")).  
   
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  에 대 한는 **값** 필드 사용자 지정 속성의 값을 지정 하 고 눌러는 **확인** 단추입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [비즈니스 데이터 연결 모델 만들기](../sharepoint/creating-a-business-data-connectivity-model.md)   

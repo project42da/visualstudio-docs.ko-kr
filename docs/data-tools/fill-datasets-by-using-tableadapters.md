@@ -21,11 +21,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 87639a4ebb123415014994dcc1bfa7af1d7fb301
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a3f3dd16bef85ebe8b90dd5f456f4e386113a8b6
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745700"
 ---
 # <a name="fill-datasets-by-using-tableadapters"></a>Tableadapter를 사용 하 여 데이터 집합 채우기
 TableAdapter 구성 요소는 데이터 집합 쿼리 또는 사용자가 지정한 저장된 프로시저를 하나 이상에 따라 데이터베이스의 데이터로 채웁니다. Tableadapter를 수행할 수도 추가, 업데이트 및 데이터 집합에 수행한 변경 내용을 유지 하려면 데이터베이스에서 삭제 합니다. 또한 특정 테이블에 관련 되지 않은 전역 명령을 실행할 수 있습니다.
@@ -49,7 +50,7 @@ TableAdapter 구성 요소는 데이터 집합 쿼리 또는 사용자가 지정
 ## <a name="tableadapter-overview"></a>TableAdapter 개요
  Tableadapter 디자이너에서 생성 된 구성 요소는 데이터베이스, 실행된 된 쿼리 또는 저장된 프로시저에 연결 하 고 반환된 된 데이터의 DataTable을 채웁니다. Tableadapter는 데이터베이스에 다시 응용 프로그램에서 업데이트 된 데이터도 보냅니다. TableAdapter에 연결 된 테이블의 스키마에 맞는 데이터를 반환 한다면 TableAdapter에 원하는 만큼 많은 쿼리를 실행할 수 있습니다. 다음 다이어그램에서는 Tableadapter 데이터베이스 및 메모리의 다른 개체 상호 작용 하는 방법을 보여 줍니다.
 
- ![클라이언트 응용 프로그램의 데이터 흐름](../data-tools/media/clientdatadiagram.gif "ClientDataDiagram")
+ ![클라이언트 응용 프로그램의 데이터 흐름](../data-tools/media/clientdatadiagram.gif)
 
  Tableadapter로 설계 되어는 **데이터 집합 디자이너**, TableAdapter 클래스의 중첩 된 클래스로 생성 되지 않은 <xref:System.Data.DataSet>합니다. 각 데이터 집합에만 적용 되는 별도 네임 스페이스에 있습니다. 예를 들어, 라는 데이터 집합이 있는 경우 `NorthwindDataSet`, 연관 된 Tableadapter <xref:System.Data.DataTable>에서 s는 `NorthwindDataSet` 것에 `NorthwindDataSetTableAdapters` 네임 스페이스입니다. 특정 TableAdapter에 프로그래밍 방식으로 액세스 하려면 TableAdapter의 새 인스턴스를 선언 해야 합니다. 예를 들어:
 
@@ -63,7 +64,7 @@ TableAdapter 구성 요소는 데이터 집합 쿼리 또는 사용자가 지정
  TableAdapter의 업데이트 기능 TableAdapter 마법사에서 주 쿼리에서 사용할 수 있는 정보를 어느 정도에 따라 달라 집니다. 예를 들어 여러 테이블 (조인)의 값, 스칼라 값, 뷰 또는 집계 함수의 결과 인출 하도록 구성 된 Tableadapter 처음 업데이트 기본 데이터베이스를 다시 보내는 수 만들어지지 않습니다. 그러나, INSERT, UPDATE 및 DELETE 명령에서 수동으로 구성할 수 있습니다는 **속성** 창.
 
 ## <a name="tableadapter-queries"></a>TableAdapter 쿼리
- ![여러 개의 쿼리를 사용 하 여 TableAdapter](../data-tools/media/tableadapter.gif "TableAdapter")
+ ![쿼리가 여러 개 포함된 TableAdapter](../data-tools/media/tableadapter.gif)
 
  Tableadapter의 관련된 데이터 테이블을 채우는 여러 개의 쿼리를 포함할 수 있습니다. 각 쿼리는 연결 된 데이터 테이블과 같은 스키마를 따르는 데이터를 반환 한다면 응용 프로그램에 필요한 만큼의 쿼리는 TableAdapter에 대 한을 정의할 수 있습니다. 이 기능을 사용 하면 TableAdapter를 서로 다른 기준에 따라 다른 결과 로드 합니다.
 

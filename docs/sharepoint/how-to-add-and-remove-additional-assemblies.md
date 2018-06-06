@@ -19,11 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: cadfffb2dbf977e23a0edb082065125aea4f5940
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: ddfdc09f27d5c94445064c064772e812779dcf08
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767779"
 ---
 # <a name="how-to-add-and-remove-additional-assemblies"></a>방법: 추가 어셈블리 추가 및 제거
   SharePoint 패키지 기능이 나 데이터를 위한 다른 어셈블리에 의존 하는 경우에 솔루션 패키지 (.wsp)에 어셈블리를 추가할 수 있습니다. 이러한 방식으로 SharePoint 서버에서는 사용자 지정 어셈블리는 패키지와 함께 설치 해야 합니다.  
@@ -112,9 +113,8 @@ ms.lasthandoff: 04/16/2018
   
 3.  Delete 키를 선택 합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 기능 만들기](../sharepoint/creating-sharepoint-features.md)   
  [방법: SharePoint 기능을 사용자 지정](../sharepoint/how-to-customize-a-sharepoint-feature.md)   
  [방법: SharePoint 기능에 항목 추가 및 제거](../sharepoint/how-to-add-and-remove-items-to-sharepoint-features.md)   
-  
   

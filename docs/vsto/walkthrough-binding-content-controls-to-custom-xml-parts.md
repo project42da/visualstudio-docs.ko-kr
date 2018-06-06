@@ -1,5 +1,5 @@
 ---
-title: '연습: 사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩 | Microsoft Docs'
+title: '연습: 사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩'
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -20,13 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7ca9c3e049d29874419327ec4ac7d71e0537466c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 71fc9f944ec8861503f5518eec9edf33170bf050
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768094"
 ---
-# <a name="walkthrough-binding-content-controls-to-custom-xml-parts"></a>연습: 콘텐츠 컨트롤을 사용자 지정 XML 부분에 바인딩
+# <a name="walkthrough-bind-content-controls-to-custom-xml-parts"></a>연습: 사용자 지정 XML 부분에 콘텐츠 컨트롤 바인딩
   이 연습에서는 문서에 저장된 XML 데이터에 Word에 대한 문서 수준 사용자 지정의 콘텐츠 컨트롤을 바인딩하는 방법을 보여 줍니다.  
   
  [!INCLUDE[appliesto_wdalldoc](../vsto/includes/appliesto-wdalldoc-md.md)]  
@@ -41,7 +42,7 @@ ms.lasthandoff: 04/16/2018
   
 -   디자인 타임에 문서에 XML 스키마 연결  
   
--   런타임에 문서의 사용자 지정 XML 부분에 XML 파일의 내용 추가  
+-   런타임에 문서에 사용자 지정 XML 부분에 XML 파일의 내용을 추가 합니다.  
   
 -   사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤 바인딩  
   
@@ -56,19 +57,19 @@ ms.lasthandoff: 04/16/2018
   
 -   Microsoft Word  
   
-## <a name="creating-a-new-word-document-project"></a>새 Word 문서 프로젝트 만들기  
+## <a name="create-a-new-word-document-project"></a>새 Word 문서 프로젝트 만들기  
  연습에서 사용할 Word 문서를 만듭니다.  
   
-#### <a name="to-create-a-new-word-document-project"></a>새 Word 문서 프로젝트를 만들려면  
+### <a name="to-create-a-new-word-document-project"></a>새 Word 문서 프로젝트를 만들려면  
   
-1.  이름으로 한 Word 문서 프로젝트 만들기 **EmployeeControls**합니다. 솔루션에 대한 새 문서를 만듭니다. 자세한 내용은 [How to: Create Office Projects in Visual Studio](../vsto/how-to-create-office-projects-in-visual-studio.md)을 참조하세요.  
+1.  이름으로 한 Word 문서 프로젝트 만들기 **EmployeeControls**합니다. 솔루션에 대한 새 문서를 만듭니다. 자세한 내용은 참조 [하는 방법: Visual Studio에서 Office 만들기 프로젝트](../vsto/how-to-create-office-projects-in-visual-studio.md)합니다.  
   
      [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너에서 새 Word 문서가 열리고 추가 **EmployeeControls** 프로젝트를 **솔루션 탐색기**합니다.  
   
-## <a name="adding-content-controls-to-the-document"></a>문서에 콘텐츠 컨트롤 추가  
+## <a name="add-content-controls-to-the-document"></a>문서에 콘텐츠 컨트롤 추가  
  사용자가 직원에 대한 정보를 보거나 편집할 수 있는 세 가지 형식의 콘텐츠 컨트롤을 포함하는 테이블을 만듭니다.  
   
-#### <a name="to-add-content-controls-to-the-document"></a>문서에 콘텐츠 컨트롤을 추가하려면  
+### <a name="to-add-content-controls-to-the-document"></a>문서에 콘텐츠 컨트롤을 추가하려면  
   
 1.  에 호스트 된 Word 문서에는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디자이너 리본에서 선택 된 **삽입** 탭 합니다.  
   
@@ -87,7 +88,7 @@ ms.lasthandoff: 04/16/2018
 5.  리본에서 선택 된 **개발자** 탭 합니다.  
   
     > [!NOTE]  
-    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 [방법: 리본 메뉴에 개발 도구 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)을 참조하세요.  
+    >  **개발자** 탭이 표시되지 않는 경우 먼저 개발자 탭을 표시해야 합니다. 자세한 내용은 참조 [하는 방법: 리본에 개발자 탭 표시](../vsto/how-to-show-the-developer-tab-on-the-ribbon.md)합니다.  
   
 6.  에 **컨트롤** 그룹에서 선택 된 **텍스트** 단추 ![PlainTextContentControl](../vsto/media/plaintextcontrol.gif "PlainTextContentControl") 는 를추가하려면<xref:Microsoft.Office.Tools.Word.PlainTextContentControl>첫 번째 셀에 전달 합니다.  
   
@@ -101,7 +102,7 @@ ms.lasthandoff: 04/16/2018
   
  이 프로젝트에 대한 전체 사용자 인터페이스입니다. 지금 프로젝트를 실행하는 경우 첫 번째 행에 텍스트를 입력하고 두 번째 행에서 날짜를 선택할 수 있습니다. 다음 단계는 XML 파일의 문서에 표시하려는 데이터를 연결하는 것입니다.  
   
-## <a name="creating-the-xml-data-file"></a>XML 데이터 파일 만들기  
+## <a name="create-the-xml-data-file"></a>XML 데이터 파일 만들기  
  일반적으로 파일 또는 데이터베이스와 같은 외부 소스에서 사용자 지정 XML 부분에 저장할 XML 데이터를 가져옵니다. 이 연습에서는 문서의 콘텐츠 컨트롤에 바인딩할 요소로 표시된, 직원 데이터를 포함하는 XML 파일을 만듭니다. 런타임에 데이터를 사용할 수 있게 하려면 사용자 지정 어셈블리에 XML 파일을 리소스로 포함합니다.  
   
 #### <a name="to-create-the-data-file"></a>데이터 파일을 만들려면  
@@ -118,7 +119,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  내용을 대체는 **employees.xml** 파일 다음 텍스트를 포함 합니다.  
   
-    ```  
+    ```xml 
     <?xml version="1.0" encoding="utf-8" ?>  
     <employees xmlns="http://schemas.microsoft.com/vsto/samples">  
       <employee>  
@@ -133,9 +134,9 @@ ms.lasthandoff: 04/16/2018
   
 6.  에 **속성** 창에서는 **빌드 작업** 속성을 다음 값을 변경 하 고 **포함 리소스**합니다.  
   
-     이 단계에서는 프로젝트를 빌드할 때 XML 파일을 어셈블리에 리소스로 포함합니다. 이렇게 하면 런타임에 XML 파일의 내용에 액세스할 수 있습니다.  
+     이 단계에서는 프로젝트를 빌드할 때 XML 파일을 어셈블리에 리소스로 포함합니다. 이렇게 하면 런타임 시 XML 파일의 내용에 액세스할 수 있습니다.  
   
-## <a name="creating-an-xml-schema"></a>XML 스키마 만들기  
+## <a name="create-an-xml-schema"></a>XML 스키마 만들기  
  사용자 지정 XML 부분의 단일 요소에 콘텐츠 컨트롤을 바인딩하려는 경우 XML 스키마를 사용할 필요가 없습니다. 그러나 값 집합에 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>을 바인딩하려면 앞에서 만든 XML 데이터 파일의 유효성을 검사하는 XML 스키마를 만들어야 합니다. XML 스키마는 `title` 요소에 대한 가능한 값을 정의합니다. 이 연습의 뒷부분에서 이 요소에 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>을 바인딩합니다.  
   
 #### <a name="to-create-an-xml-schema"></a>XML 스키마를 만들려면  
@@ -154,7 +155,7 @@ ms.lasthandoff: 04/16/2018
   
 5.  내용을 대체는 **employees.xsd** 다음 스키마가 포함 됩니다.  
   
-    ```  
+    ```xml
     <?xml version="1.0" encoding="utf-8" ?>  
     <xs:schema xmlns="http://schemas.microsoft.com/vsto/samples"   
         targetNamespace="http://schemas.microsoft.com/vsto/samples"  
@@ -185,10 +186,10 @@ ms.lasthandoff: 04/16/2018
   
 6.  에 **파일** 메뉴를 클릭 하 여 **모두 저장** 에 변경 내용을 저장 하는 **employees.xml** 및 **employees.xsd** 파일.  
   
-## <a name="attaching-the-xml-schema-to-the-document"></a>문서에 XML 스키마 연결  
+## <a name="attach-the-xml-schema-to-the-document"></a>XML 스키마 문서에 연결  
  `title` 요소의 유효한 값에 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl>을 바인딩하려면 문서에 XML 스키마를 연결해야 합니다.  
   
-#### <a name="to-attach-the-xml-schema-to-the-document-includeword15shortvstoincludesword-15-short-mdmd"></a>문서에 XML 스키마를 연결하려면([!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)])  
+### <a name="to-attach-the-xml-schema-to-the-document-includeword15shortvstoincludesword-15-short-mdmd"></a>문서에 XML 스키마를 연결하려면([!INCLUDE[Word_15_short](../vsto/includes/word-15-short-md.md)])  
   
 1.  활성화 **EmployeeControls.docx** 디자이너에서 합니다.  
   
@@ -202,7 +203,7 @@ ms.lasthandoff: 04/16/2018
   
 6.  선택 된 **확인** 닫기 단추를는 **템플릿 및 추가 기능** 대화 상자.  
   
-#### <a name="to-attach-the-xml-schema-to-the-document-word-2010"></a>문서에 XML 스키마를 연결하려면(Word 2010)  
+### <a name="to-attach-the-xml-schema-to-the-document-word-2010"></a>문서에 XML 스키마를 연결하려면(Word 2010)  
   
 1.  활성화 **EmployeeControls.docx** 디자이너에서 합니다.  
   
@@ -222,10 +223,10 @@ ms.lasthandoff: 04/16/2018
   
 8.  닫기는 **XML 구조** 작업창입니다.  
   
-## <a name="adding-a-custom-xml-part-to-the-document"></a>문서에 사용자 지정 XML 부분 추가  
+## <a name="add-a-custom-xml-part-to-the-document"></a>문서에 사용자 지정 XML 부분 추가  
  XML 파일의 요소에 콘텐츠 컨트롤을 바인딩하려면 먼저 문서의 새 사용자 지정 XML 부분에 XML 파일의 내용을 추가해야 합니다.  
   
-#### <a name="to-add-a-custom-xml-part-to-the-document"></a>문서에 사용자 지정 XML 부분을 추가하려면  
+### <a name="to-add-a-custom-xml-part-to-the-document"></a>문서에 사용자 지정 XML 부분을 추가하려면  
   
 1.  **솔루션 탐색기**, 바로 가기 메뉴를 열고 **ThisDocument.cs** 또는 **ThisDocument.vb**를 선택한 후 **코드 보기**합니다.  
   
@@ -246,32 +247,32 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#4)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#4](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#4)]  
   
-## <a name="binding-the-content-controls-to-elements-in-the-custom-xml-part"></a>사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤 바인딩  
+## <a name="bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤을 바인딩하십시오.  
  사용 하 여 사용자 지정 XML 부분에 있는 요소에 각 콘텐츠 컨트롤을 바인딩하는 **XMLMapping** 각 콘텐츠 컨트롤의 속성입니다.  
   
-#### <a name="to-bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤을 바인딩하려면  
+### <a name="to-bind-the-content-controls-to-elements-in-the-custom-xml-part"></a>사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤을 바인딩하려면  
   
 1.  다음 메서드를 `ThisDocument` 클래스에 추가합니다. 이 메서드는 사용자 지정 XML 부분의 요소에 각 콘텐츠 컨트롤을 바인딩하고 <xref:Microsoft.Office.Tools.Word.DatePickerContentControl>의 날짜 표시 형식을 설정합니다.  
   
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#5)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#5](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#5)]  
   
-## <a name="running-your-code-when-the-document-is-opened"></a>문서를 열 때 코드 실행  
+## <a name="run-your-code-when-the-document-is-opened"></a>문서를 열 때 코드 실행  
  문서를 열 때 사용자 지정 XML 부분을 만들고 사용자 지정 컨트롤을 데이터에 바인딩합니다.  
   
-#### <a name="to-run-your-code-when-the-document-is-opened"></a>문서를 열 때 코드를 실행하려면  
+### <a name="to-run-your-code-when-the-document-is-opened"></a>문서를 열 때 코드를 실행하려면  
   
 1.  `ThisDocument` 클래스의 `ThisDocument_Startup` 메서드에 다음 코드를 추가합니다. 이 코드에서 XML 문자열을 가져오고는 **employees.xml** 파일을 문서에 새 사용자 지정 XML 부분에 XML 문자열을 추가 하 고 사용자 지정 XML 부분의 요소에 콘텐츠 컨트롤을 바인딩합니다.  
   
      [!code-csharp[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/CSharp/EmployeeControls/ThisDocument.cs#2)]
      [!code-vb[Trin_ContentControlXmlPartWalkthrough#2](../vsto/codesnippet/VisualBasic/EmployeeControls/ThisDocument.vb#2)]  
   
-## <a name="testing-the-project"></a>프로젝트 테스트  
+## <a name="test-the-project"></a>프로젝트 테스트  
  문서를 열면 콘텐츠 컨트롤이 사용자 지정 XML 부분에 있는 요소의 데이터를 표시합니다. 클릭할 수는 <xref:Microsoft.Office.Tools.Word.DropDownListContentControl> 에 대 한 세 가지 유효한 값 중 하나를 선택는 `title` 요소에 정의 되는 **employees.xsd** 파일입니다. 콘텐츠 컨트롤의 데이터를 편집하는 경우 문서의 사용자 지정 XML 부분에 새 값이 저장됩니다.  
   
-#### <a name="to-test-the-content-controls"></a>콘텐츠 컨트롤을 테스트하려면  
+### <a name="to-test-the-content-controls"></a>콘텐츠 컨트롤을 테스트하려면  
   
-1.  F5 키를 눌러 프로젝트를 실행합니다.  
+1.  키를 눌러 **F5** 프로젝트를 실행 합니다.  
   
 2.  문서의 테이블이 다음 테이블과 유사한지 확인합니다. 두 번째 열의 각 문자열은 문서의 사용자 지정 XML 부분에 있는 요소에서 가져옵니다.  
   
@@ -289,13 +290,13 @@ ms.lasthandoff: 04/16/2018
   
 6.  문서를 저장한 후 닫습니다.  
   
-7.  파일 탐색기에서 프로젝트 위치 아래에 있는 \bin\Debug 폴더를 엽니다.  
+7.  파일 탐색기에서 열고는 *\bin\Debug* 프로젝트 위치 아래에 폴더입니다.  
   
 8.  에 대 한 바로 가기 메뉴를 열고 **EmployeeControls.docx** 선택한 후 **이름 바꾸기**합니다.  
   
 9. 파일 이름을 **EmployeeControls.docx.zip**합니다.  
   
-     **EmployeeControls.docx** 문서가 Open XML 형식으로 저장 됩니다. 이 문서의 이름을 .zip 파일 이름 확장명으로 바꾸면 문서 내용을 검사할 수 있습니다. Open XML에 대 한 자세한 내용은 기술 문서를 참조 하십시오. [Office (2007) Open XML 파일 형식 소개](http://msdn.microsoft.com/en-us/96018532-f62c-4da7-bbff-16b96a483fbf)합니다.  
+     **EmployeeControls.docx** 문서가 Open XML 형식으로 저장 됩니다. 이 문서의으로 바꾸면는 *.zip* 파일 이름 확장명을 문서 내용을 검사할 수 있습니다. Open XML에 대 한 자세한 내용은 기술 문서를 참조 하십시오. [소개 Office (2007) Open XML 파일 형식](http://msdn.microsoft.com/en-us/96018532-f62c-4da7-bbff-16b96a483fbf)합니다.  
   
 10. 열기는 **EmployeeControls.docx.zip** 파일입니다.  
   
@@ -312,19 +313,19 @@ ms.lasthandoff: 04/16/2018
 ## <a name="next-steps"></a>다음 단계  
  다음 항목에서 콘텐츠 컨트롤을 사용하는 방법에 대해 자세히 알아볼 수 있습니다.  
   
--   사용 가능한 모든 콘텐츠 컨트롤을 사용하여 서식 파일을 만듭니다. 자세한 내용은 참조 [연습: 템플릿을 사용 하 여 콘텐츠 컨트롤을 여 만들기](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)합니다.  
+-   사용 가능한 모든 콘텐츠 컨트롤을 사용하여 서식 파일을 만듭니다. 자세한 내용은 참조 [연습: 콘텐츠 컨트롤을 사용 하 여 템플릿을 만드는](../vsto/walkthrough-creating-a-template-by-using-content-controls.md)합니다.  
   
 -   문서가 닫혀 있는 동안 사용자 지정 XML 부분의 데이터를 수정합니다. 다음에 사용자가 문서를 열면 XML 요소에 바인딩된 콘텐츠 컨트롤이 새 데이터를 표시합니다.  
   
--   콘텐츠 컨트롤을 사용하여 문서 부분을 보호합니다. 자세한 내용은 [방법: 콘텐츠 컨트롤을 사용하여 문서 부분 보호](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)을 참조하십시오.  
+-   콘텐츠 컨트롤을 사용하여 문서 부분을 보호합니다. 자세한 내용은 참조 [하는 방법: 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
- [확장 된 개체를 사용 하 여 Word 자동화](../vsto/automating-word-by-using-extended-objects.md)   
+## <a name="see-also"></a>참고자료  
+ [확장 된 개체를 사용 하 여 Word를 자동화 합니다.](../vsto/automating-word-by-using-extended-objects.md)   
  [콘텐츠 컨트롤](../vsto/content-controls.md)   
  [방법: Word 문서에 콘텐츠 컨트롤 추가](../vsto/how-to-add-content-controls-to-word-documents.md)   
  [방법: 콘텐츠 컨트롤을 사용 하 여 문서 부분 보호](../vsto/how-to-protect-parts-of-documents-by-using-content-controls.md)   
  [호스트 항목 및 호스트 컨트롤 개요](../vsto/host-items-and-host-controls-overview.md)   
- [호스트 항목 및 호스트 컨트롤의 프로그래밍에 대한 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
+ [호스트 항목 및 호스트 컨트롤의 프로그래밍 방식으로 제한 사항](../vsto/programmatic-limitations-of-host-items-and-host-controls.md)   
  [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)  
   
   

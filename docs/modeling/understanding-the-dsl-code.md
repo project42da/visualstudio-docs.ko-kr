@@ -11,11 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c5daaad156b2a4372ab43a19ba2f2bdd6cdb87b5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 27581387b9775d2e2cf4401c811dab09b15c3722
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748675"
 ---
 # <a name="understanding-the-dsl-code"></a>DSL 코드 이해
 DSL(Domain-Specific Language) 솔루션은 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]에서 DSL 인스턴스를 읽고 업데이트하는 데 사용할 수 있는 API를 생성합니다. 이 API는 DSL 정의에서 생성되는 코드에서 정의됩니다. 이 항목에서는 생성되는 API에 대해 설명합니다.
@@ -28,7 +29,7 @@ DSL(Domain-Specific Language) 솔루션은 [!INCLUDE[vsprvs](../code-quality/inc
 
  이 솔루션 템플릿을 사용해 본 적이 없다면 F5 키를 누르고 해당 기능을 사용해 봅니다. 특히 구성 요소로 포트 도구를 끌어 포트를 만들고 포트를 연결할 수 있는지 확인합니다.
 
- ![구성 요소와 상호 연결 된 포트](../modeling/media/componentsample.png "ComponentSample")
+ ![구성 요소 및 상호 연결된 포트](../modeling/media/componentsample.png)
 
 ## <a name="the-structure-of-the-dsl-solution"></a>DSL 솔루션의 구조
  **Dsl** DSL에 대 한 API를 정의 하는 프로젝트입니다. **DslPackage** 와 통합 하는 방법 정의 하는 프로젝트 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 모델에서 생성되는 코드를 포함할 수도 있는 프로젝트를 직접 추가할 수도 있습니다.

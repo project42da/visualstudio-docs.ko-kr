@@ -21,7 +21,7 @@ ms.openlocfilehash: d1851fd05999bfc2d925cbe4a079be3a9f4139db
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34693473"
 ---
 # <a name="office-primary-interop-assemblies"></a>Office 주 Interop 어셈블리

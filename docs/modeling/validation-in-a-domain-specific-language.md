@@ -12,11 +12,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 63d3153bfcc38b28ace3db5ad976a2c2a6a650fd
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 2f0d7962446d5cf21822a101354284c63a7df98c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749930"
 ---
 # <a name="validation-in-a-domain-specific-language"></a>도메인별 언어에서 유효성 검사
 DSL(Domain-Specific Language) 작성자는 사용자가 만든 모델이 적절한지를 확인하는 유효성 검사 제약 조건을 정의할 수 있습니다. 예를 들어 DSL에서 여러 세대를 포함하는 가족 구성도 그리기를 허용하는 경우 자녀의 생년월일을 부모의 생년월일 이후로 지정하도록 하는 제약 조건을 작성할 수 있습니다.
@@ -140,7 +141,7 @@ public partial class ParentsHaveChildren
 
  아래 예는 다음 도메인 모델에 적용됩니다. ParentsHaveChildren 관계에는 Child와 Parent라는 역할이 있습니다.
 
- ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png "FamilyT_Person")
+ ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png)
 
 ## <a name="validation-categories"></a>유효성 검사 범주
  <xref:Microsoft.VisualStudio.Modeling.Validation.ValidationMethodAttribute> 특성에서는 유효성 검사 메서드를 실행할 시기를 지정합니다.

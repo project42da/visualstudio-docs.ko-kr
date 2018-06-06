@@ -19,11 +19,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: ec2ff00c4d355b2683c888fcdb6a333bf15e1b99
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c1f035fc56cd673f12ba694d6a94ec57aea1d93b
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745531"
 ---
 # <a name="walkthrough-save-data-in-a-transaction"></a>연습: 트랜잭션에 데이터 저장
 이 연습에서는 사용 하 여 트랜잭션에서 데이터를 저장 하는 방법을 보여 줍니다.는 <xref:System.Transactions> 네임 스페이스입니다. 이 연습에서는 Windows Forms 응용 프로그램을 만들어야 합니다. Northwind 샘플 데이터베이스의 두 테이블에 대 한 데이터 집합을 만들려면 데이터 소스 구성 마법사를 사용 합니다. 데이터 바인딩된 컨트롤을 Windows form 및 수정 하면서 간단한 BindingNavigator의 저장 단추는 TransactionScope 내에서 데이터베이스를 업데이트 하려면에 대 한 코드를 추가 합니다.
@@ -52,7 +53,7 @@ ms.lasthandoff: 04/26/2018
 
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .
 
-2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.
+2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **Windows 바탕 화면**합니다.
 
 3. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/26/2018
 
     -   Northwind 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 선택합니다.
 
-         -또는-
+         또는
 
     -   선택 **새 연결** 시작 하는 **연결 추가/수정** 대화 상자 및 Northwind 데이터베이스에 연결을 만듭니다.
 

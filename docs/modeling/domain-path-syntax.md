@@ -11,11 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: de364760b5d7446b050cd8931ea2e95867b88e81
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 984b27b65b251a1e87c72962e488fd0d4036a4d0
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34749546"
 ---
 # <a name="domain-path-syntax"></a>도메인 경로 구문
 DSL 정의는 XPath 유형 구문을 사용하여 모델에서 특정 요소를 찾습니다.
@@ -26,7 +27,7 @@ DSL 정의는 XPath 유형 구문을 사용하여 모델에서 특정 요소를 
 
  *RelationshipName.PropertyName/!Role*
 
- ![CommentReferencesSubjects 참조 관계](../modeling/media/dsl_reference.png "dsl_reference")
+ ![CommentReferencesSubjects 참조 관계](../modeling/media/dsl_reference.png)
 
  구문은 모델 트리를 트래버스합니다. 예를 들어 도메인 관계 **CommentReferencesSubjects** 위의 그림에는 **주제** 역할입니다. 경로 세그먼트 **/! Subjectt** 지정는 경로 통해 액세스 하는 요소에서 끝나는 **주제** 역할입니다.
 

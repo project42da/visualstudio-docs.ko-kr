@@ -17,25 +17,26 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7d5ad6f27574fcb7bd8a859bcd21ac65e159596e
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 6b63e332ba5cc079ac50f2ef3c4fee84727d95f5
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765338"
 ---
-# <a name="extending-the-sharepoint-tools-in-visual-studio"></a>Visual Studio에서 SharePoint 도구 확장
+# <a name="extend-the-sharepoint-tools-in-visual-studio"></a>Visual Studio에서 SharePoint 도구 확장
   Visual Studio에서 SharePoint 도구에는 많은 응용 프로그램 개발 시나리오의 요구 사항을 충족합니다. 그러나 또는 다른 개발자가 필요로 하는 기능 제공 하지 않는 경우를 발견할 수 있습니다. 이러한 경우에 필요한 기능을 만들려면 SharePoint 도구를 확장할 수 있습니다.  
   
-## <a name="how-to-extend-the-sharepoint-tools"></a>SharePoint 도구 확장 하는 방법  
+## <a name="how-to-extend-the-sharepoint-tools"></a>SharePoint 도구 확장 하는 방법
  SharePoint 프로젝트 시스템을 확장할 수 있습니다 및 **SharePoint 연결** 에서 노드는 **서버 탐색기** 창.  
   
-### <a name="extending-the-sharepoint-project-system"></a>SharePoint 프로젝트 시스템 확장  
+### <a name="extend-the-sharepoint-project-system"></a>SharePoint 프로젝트 시스템 확장
  Visual Studio 프로젝트 템플릿 및 SharePoint 솔루션을 만드는 데 사용할 수 있는 항목 템플릿 집합이 포함 되어 있습니다. 예를 들어, 이벤트 수신기, 목록 정의 워크플로 및 웹 파트에 대 한 템플릿이 있습니다. 그러나 고유한 필드 또는 사용자 지정 작업 등과 같이 SharePoint 구성 요소를 만들기 위한 SharePoint 프로젝트 항목 형식을 정의할 수 있습니다. Visual Studio에서 이미 설치 되어 있는 SharePoint 프로젝트 항목 형식에 대 한 확장을 만들 수 있습니다 및 SharePoint 프로젝트에 대 한 확장을 만들 수 있습니다.  
   
  자세한 내용은 참조 [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)합니다.  
   
-### <a name="extending-the-sharepoint-connections-node-in-server-explorer"></a>서버 탐색기에서 SharePoint 연결 노드 확장  
- Visual Studio에서 사용할 수 있습니다는 **SharePoint 연결** 에서 노드는**서버 탐색기** 계층적 트리 보기에서 많은 구성 요소 중 하나 이상의 로컬 SharePoint 사이트를 창. 확장할 수도 있습니다는 **SharePoint 연결** 다음과 같은 방법으로 노드:  
+### <a name="extend-the-sharepoint-connections-node-in-server-explorer"></a>서버 탐색기에서 SharePoint 연결 노드 확장
+ Visual Studio에서 사용할 수 있습니다는 **SharePoint 연결** 에서 노드는 **서버 탐색기** 계층적 트리 보기에서 많은 구성 요소 중 하나 이상의 로컬 SharePoint 사이트를 창. 확장할 수도 있습니다는 **SharePoint 연결** 다음과 같은 방법으로 노드:  
   
 -   사용자 고유의 노드를 추가 합니다. 기본적으로 표시 되지 않는 SharePoint 사이트의 구성 요소를 표시 하려는 경우에 유용 합니다.  
   
@@ -43,14 +44,14 @@ ms.lasthandoff: 04/16/2018
   
  자세한 내용은 참조 [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)합니다.  
   
-## <a name="development-computer-requirements"></a>개발 컴퓨터 요구 사항  
+## <a name="development-computer-requirements"></a>개발 컴퓨터 요구 사항
  SharePoint 도구의 확장을 만들려면 개발 컴퓨터에 Visual Studio에서 SharePoint 솔루션을 만들기 위한 동일한 요구 사항을 충족 해야 합니다. 자세한 내용은 참조 [SharePoint 솔루션 개발 요구 사항](../sharepoint/requirements-for-developing-sharepoint-solutions.md)합니다.  
   
  설치 하는 것이 좋습니다는 [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)]합니다. SDK는 Visual Studio를 확장 하는 데 사용할 수 있는 도구와 프로젝트 템플릿이 포함 되어 있습니다. 특히, SDK 쉽게 확장 VSIX (Visual Studio) 패키지를 만드는 데 사용할 수 있는 프로젝트 템플릿을 포함 되어 있습니다. VSIX 패키지는 Visual Studio에서 Visual Studio 확장을 배포 하는 것이 좋습니다. 모든 SharePoint 도구 확장 VSIX 패키지를 사용 하 여 배포 되어야 합니다. 모든이 설명서의 연습에서는 있다고 가정은 [!INCLUDE[vssdk_current_long](../sharepoint/includes/vssdk-current-long-md.md)] 설치 합니다.  
   
  Visual Studio SDK를 설치 하려면 [Visual Studio SDK 설치](../extensibility/installing-the-visual-studio-sdk.md)합니다. Visual Studio 확장에 대 한 자세한 내용은 참조 [Visual Studio 확장명 개발 하기 시작](../extensibility/starting-to-develop-visual-studio-extensions.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [도구 확장의 SharePoint 프로그래밍 모델 개요](../sharepoint/overview-of-the-programming-model-of-sharepoint-tools-extensions.md)   
  [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)   
  [서버 탐색기에서 SharePoint 연결 노드 확장](../sharepoint/extending-the-sharepoint-connections-node-in-server-explorer.md)   

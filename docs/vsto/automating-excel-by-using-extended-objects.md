@@ -23,13 +23,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5a2de66896a734839c7018f48f904c79e80abcaa
-ms.sourcegitcommit: 209c2c068ff0975994ed892b62aa9b834a7f6077
+ms.openlocfilehash: 234436b0c8b81d4de83e00b1bb3635916eb459b8
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/17/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767756"
 ---
-# <a name="automate-excel-by-using-etended-objects"></a>Etended 개체를 사용 하 여 Excel 자동화
+# <a name="automate-excel-by-using-extended-objects"></a>확장 된 개체를 사용 하 여 Excel 자동화
   Visual Studio에서 Excel 솔루션을 개발하는 경우 솔루션에서 *호스트 항목* 및 *호스트 컨트롤*을 사용할 수 있습니다. Excel 개체 모델, 즉 Excel용 주 interop 어셈블리가 노출하는 개체 모델에서 일반적으로 사용되는 특정 개체(예: <xref:Microsoft.Office.Interop.Excel.Worksheet> 및 <xref:Microsoft.Office.Interop.Excel.Range> )를 확장하는 개체입니다. 확장된 개체는 기반이 되는 Excel 개체처럼 동작하지만 개체에 새 이벤트 및 데이터 바인딩 기능 등을 더 추가합니다.  
   
  [!INCLUDE[appliesto_xlalldocapp](../vsto/includes/appliesto-xlalldocapp-md.md)]  

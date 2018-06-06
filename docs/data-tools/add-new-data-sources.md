@@ -15,11 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 1c7df62a0801534f8a23f7b5cde984c75742406a
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d88ba8b5648135d361a145dbc98a82dee6836e50
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745596"
 ---
 # <a name="add-new-data-sources"></a>새 데이터 원본 추가
 Visual Studio에서.NET 데이터 도구의 컨텍스트에서 용어 *데이터 소스* 는 데이터 저장소에 연결 하 고.NET 응용 프로그램에 데이터를 노출 하는.NET 개체를 나타냅니다. Visual Studio 디자이너에서 데이터베이스 개체를 끌어서 폼에 데이터를 바인딩하는 상용구 코드를 생성 하는 데이터 원본의 출력을 사용할 수는 **데이터 소스** 창. 이 종류의 데이터 원본이 될 수 있습니다.
@@ -39,11 +40,11 @@ Visual Studio에서.NET 데이터 도구의 컨텍스트에서 용어 *데이터
 
  만들고 사용 하 여 데이터 원본 편집는 **데이터 소스 구성 마법사** Windows Forms 또는 Windows Presentation Foundation 응용 프로그램에서 합니다. Entity Framework에 대 한 먼저 엔터티 클래스를 만들고 다음을 선택 하 여 마법사를 시작 **프로젝트** > **새 데이터 소스 추가** (이 문서의 뒷부분에 보다 자세히 설명).
 
- ![데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png "데이터 소스 구성 마법사")
+ ![데이터 소스 구성 마법사](../data-tools/media/data-source-configuration-wizard.png)
 
  데이터 원본을 만든 후에 저장 되는 **데이터 원본** 도구 창 (Shift + Alt + D 또는 **보기** > **다른 창**  >  **데이터 소스**). 데이터 소스를 끌 수는 **데이터 소스** 창 컨트롤 또는 양식 디자인 화면으로 합니다. 이 인해 상용구 코드를 생성-사용자에 게 데이터 저장소에서 발생 하는 데이터를 표시 하는 코드입니다. 다음 그림에서는 Windows form으로 삭제 된 데이터 집합을 보여 줍니다. 응용 프로그램에서 f5 키를 선택한 경우 기본 데이터베이스의 데이터 폼의 컨트롤에 나타납니다.
 
- ![데이터 원본으로 작업을 끌어](../data-tools/media/raddata-data-source-drag-operation.png "raddata 데이터 소스 끌기 작업")
+ ![데이터 원본 끌기 작업](../data-tools/media/raddata-data-source-drag-operation.png)
 
 ## <a name="data-source-for-a-database-or-a-database-file"></a>데이터베이스 또는 데이터베이스 파일에 대 한 데이터 원본
 
@@ -53,15 +54,15 @@ Visual Studio에서.NET 데이터 도구의 컨텍스트에서 용어 *데이터
 ### <a name="entity-classes"></a>엔터티 클래스
  데이터 원본으로는 Entity Framework 모델을 만들려면 먼저 실행 하는 **엔터티 데이터 모델 마법사** 엔터티 클래스를 만드는 (**프로젝트** > **새 항목 추가**  >  **ADO.NET 엔터티 데이터 모델**).
 
- ![새 Entity Framework 모델 프로젝트 항목](../data-tools/media/raddata-new-entity-framework-model-project-item.png "raddata 새 Entity Framework 모델 프로젝트 항목")
+ ![새 Entity Framework 모델 프로젝트 항목](../data-tools/media/raddata-new-entity-framework-model-project-item.png)
 
  모델을 생성 하려는 방법을 선택 합니다.
 
- ![엔터티 데이터 모델 마법사](../data-tools/media/raddata-entity-data-model-wizard.png "raddata 엔터티 데이터 모델 마법사")
+ ![엔터티 데이터 모델 마법사](../data-tools/media/raddata-entity-data-model-wizard.png)
 
  데이터 원본으로 모델을 추가 합니다. 에 생성 된 클래스가 표시는 **데이터 소스 구성 마법사** 선택 하는 경우는 **개체** 범주입니다.
 
- ![엔터티 클래스와 데이터 소스 구성 마법사](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png "raddata 엔터티 클래스와 데이터 소스 구성 마법사")
+ ![엔터티 클래스와 데이터 소스 구성 마법사](../data-tools/media/raddata-data-source-configuration-wizard-with-entity-classes.png)
 
 ## <a name="data-source-for-a-service"></a>서비스에 대 한 데이터 원본
  실행 서비스에서 데이터 원본을 만들려면는 **데이터 소스 구성 마법사** 선택 하 고는 **서비스** 데이터 원본 유형입니다. 이 실제로에 바로 가기는 **서비스 참조 추가** 대화 상자에서 프로젝트를 마우스 오른쪽 단추로 클릭 하 여 액세스할 수도 있습니다를 **솔루션 탐색기** 선택 하 고 **서비스 참조 추가** .

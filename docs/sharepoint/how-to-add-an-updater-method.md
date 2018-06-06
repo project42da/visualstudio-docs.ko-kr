@@ -22,11 +22,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fc7c946a89c8ba05ffed443816d6ce4e9056b88b
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 808e37b6d172a63288751c28dfdcd1e43d466c08
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767423"
 ---
 # <a name="how-to-add-an-updater-method"></a>방법: Updater 메서드 추가
   사용자가을 만들어서 외부 SharePoint 목록의 비즈니스 데이터를 업데이트할 사용 하도록 설정할 수는 *Updater* 메서드. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/16/2018
   
 1.  BDC 디자이너에서 엔터티를 선택 합니다.  
   
-2.  메뉴 모음에서 **보기**, **다른 창**, **BDC 메서드 세부 정보**합니다.  
+2.  메뉴 모음에서 **보기** > **다른 창** > **BDC 메서드 세부 정보**합니다.  
   
      BDC 메서드 세부 정보 창이 열립니다. 이 창에 대 한 자세한 내용은 참조 [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)합니다.  
   
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/16/2018
   
 4.  **솔루션 탐색기**, 엔터티에 대해 생성 된 서비스 코드 파일의 바로 가기 메뉴를 열고 선택한 후 **코드 보기**합니다.  
   
-     엔터티 서비스 코드 파일에는 코드 편집기에서 열립니다. 해당 파일에 대 한 자세한 내용은 참조 [비즈니스 데이터 연결 모델을 만드는](../sharepoint/creating-a-business-data-connectivity-model.md)합니다.  
+     엔터티 서비스 코드 파일이 열립니다는 **코드 편집기**합니다. 해당 파일에 대 한 자세한 내용은 참조 [비즈니스 데이터 연결 모델을 만드는](../sharepoint/creating-a-business-data-connectivity-model.md)합니다.  
   
 5.  데이터를 업데이트 하면 Update 메서드를 코드를 추가 합니다. 다음 예제에서는 SQL Server에 대 한 AdventureWorks 예제 데이터베이스에 있는 연락처에 대 한 정보를 업데이트합니다.  
   
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#5](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#5)]
      [!code-vb[SP_BDC#5](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#5)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [방법: Finder 메서드 추가](../sharepoint/how-to-add-a-finder-method.md)   
  [방법: 특정 Finder 메서드 추가](../sharepoint/how-to-add-a-specific-finder-method.md)   
@@ -79,4 +80,4 @@ ms.lasthandoff: 04/16/2018
  [방법: 메서드에 매개 변수를 추가 합니다.](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
  [방법: 메서드 인스턴스 정의](../sharepoint/how-to-define-a-method-instance.md)  
   
-  
+ 
