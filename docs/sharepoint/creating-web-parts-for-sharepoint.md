@@ -28,14 +28,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 882c2edfc097b8da57cc26c431cbaaa72ba200b6
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 2a9cb18d1b9de7f4f67f8c3d153a9dfa4598612d
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691534"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765728"
 ---
-# <a name="creating-web-parts-for-sharepoint"></a>SharePoint를 위한 웹 파트 만들기
+# <a name="create-web-parts-for-sharepoint"></a>SharePoint에 대 한 웹 파트 만들기
   웹 파트를 사용 하 여 브라우저를 사용 하 여 콘텐츠, 모양 및 SharePoint 사이트의 페이지의 동작을 수정할 수 있습니다. 웹 파트는 웹 파트 페이지 내에서 실행 되는 서버 쪽 컨트롤: SharePoint 사이트에 표시 되는 페이지의 구성 요소를 수 있습니다. 참조 [문서 블록: 웹 파트](http://go.microsoft.com/fwlink/?LinkID=182097)합니다.  
   
  만들 하 고 Visual Studio에서 템플릿을 사용 하 여 SharePoint 사이트에서 웹 파트를 디버그할 수 있습니다.  
@@ -50,7 +50,7 @@ ms.locfileid: "34691534"
   
 |파일|설명|  
 |----------|-----------------|  
-|Elements.xml|웹 파트를 배포 하 여 프로젝트의 기능 정의 파일을 사용 하는 정보가 포함 됩니다.|  
+|*Elements.xml*|웹 파트를 배포 하 여 프로젝트의 기능 정의 파일을 사용 하는 정보가 포함 됩니다.|  
 |.webpart 파일|SharePoint 웹 파트 갤러리에서 웹 파트를 표시 하는 정보를 제공 합니다.|  
 |코드 파일|웹 파트에 컨트롤을 추가 하 고 웹 파트 내 사용자 지정 콘텐츠를 생성 하는 메서드가 포함 됩니다.|  
   
@@ -65,14 +65,14 @@ ms.locfileid: "34691534"
 |컨트롤 이름|설명|  
 |------------------|-----------------|  
 |[AspMenu](http://go.microsoft.com/fwlink/?LinkId=235307)|ASP 메뉴를 삽입합니다. 자세한 내용은 참조 [메뉴 컨트롤 개요](http://go.microsoft.com/fwlink/?LinkId=235316)합니다.|  
-|[CssLink](http://go.microsoft.com/fwlink/?LinkId=235308)|삽입 한 **링크** 요소.aspx 페이지에 의해 정의 된 하나 이상의 외부 스타일 시트를 적용 하 고 **CssRegistration**합니다.|  
-|[DateTimeControl](http://go.microsoft.com/fwlink/?LinkId=235306)|.Aspx 페이지에는 DateTime 컨트롤을 삽입합니다.|  
-|[FormDigest](http://go.microsoft.com/fwlink/?LinkId=235309)|.Aspx 페이지에 보안 유효성 검사를 삽입합니다.|  
+|[CssLink](http://go.microsoft.com/fwlink/?LinkId=235308)|삽입 된 **링크** 요소에는 *.aspx* 페이지에 정의 된 하나 이상의 외부 스타일 시트를 적용 하 고 **CssRegistration**합니다.|  
+|[DateTimeControl](http://go.microsoft.com/fwlink/?LinkId=235306)|날짜/시간 컨트롤에 컨트롤 삽입은 *.aspx* 페이지.|  
+|[FormDigest](http://go.microsoft.com/fwlink/?LinkId=235309)|삽입에 보안 유효성 검사는 *.aspx* 페이지|  
 |[ListProperty](http://go.microsoft.com/fwlink/?LinkId=235310)|지정 된 목록의 속성을 반환합니다.|  
 |[ProjectProperty](http://go.microsoft.com/fwlink/?LinkId=235311)|현재 웹 사이트의 전역 속성을 반환 합니다.|  
-|[RssLink](http://go.microsoft.com/fwlink/?LinkId=235312)|RSS 피드.aspx 페이지에 대 한 링크를 삽입 합니다.|  
+|[RssLink](http://go.microsoft.com/fwlink/?LinkId=235312)|RSS 피드에 대 한 링크를 삽입 하는 *.aspx* 페이지.|  
 |[ScriptLink](http://go.microsoft.com/fwlink/?LinkId=235313)|페이지를 렌더링할 때 요청할 수 있도록 페이지에서 스크립트와 같은 리소스를 등록 하기 위한 메서드와 속성을 제공 합니다.|  
-|[테마](http://go.microsoft.com/fwlink/?LinkId=235314)|.Aspx 페이지에는 테마를 적용합니다.|  
+|[테마](http://go.microsoft.com/fwlink/?LinkId=235314)|테마를 적용 하는 *.aspx* 페이지.|  
   
 ## <a name="debug-a-web-part"></a>웹 파트를 디버그 합니다.
  다른 Visual Studio 프로젝트를 디버그할 때와 마찬가지로 웹 파트를 포함 하는 SharePoint 프로젝트를 디버깅할 수 있습니다. Visual Studio 디버거를 시작할 때 Visual Studio는 SharePoint 사이트를 엽니다.  

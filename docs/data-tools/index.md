@@ -14,7 +14,7 @@ ms.openlocfilehash: 87a928f1d987d496bee40c4236f53b5e14cb034d
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34691068"
 ---
 # <a name="use-data-tools-in-visual-studio-to-develop-data-solutions"></a>Visual Studio에서 데이터 도구를 사용하여 데이터 솔루션 개발

@@ -15,11 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: c4851577a62db08e2c759f7140895e15b230ec60
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 49d33858970eebd9231eac35d4e4e58999771ae1
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748900"
 ---
 # <a name="how-to-create-a-domain-specific-language-solution"></a>방법: 도메인별 언어 솔루션 만들기
 도메인 특정 언어 DSL ()는 특수화 된를 사용 하 여 만들어집니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 솔루션입니다.
@@ -58,7 +59,7 @@ ms.lasthandoff: 04/26/2018
         > [!NOTE]
         >  문구를 입력 하는 이름은 코드 생성에 사용할 수 있으므로는 유효한 Visual C# 식별자를 해야 합니다.
 
-     ![DSL 만들기 대화 상자](../modeling/media/create_dsldialog.png "Create_DSLDialog")
+     ![DSL 만들기 대화 상자](../modeling/media/create_dsldialog.png)
 
 2.  DSL 템플릿을 선택 합니다.
 

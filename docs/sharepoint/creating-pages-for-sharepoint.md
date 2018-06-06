@@ -20,14 +20,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d4cfbe0a7ae0a27e41053457774217f049d5caf3
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 0532025fdb090c3811f09cb823745bd50e8d91c5
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34694048"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765530"
 ---
-# <a name="creating-pages-for-sharepoint"></a>SharePoint에 대 한 페이지 만들기
+# <a name="create-pages-for-sharepoint"></a>SharePoint에 대 한 페이지 만들기
   응용 프로그램 페이지, 사이트 페이지, 마스터 페이지 및 SharePoint 사이트에 대 한 페이지 레이아웃을 만들 수 있습니다.  
   
  Visual Studio에서 템플릿을 사용 하 여 응용 프로그램 페이지를 만들 수 있습니다. SharePoint Designer를 사용 하 여 사이트 페이지, 마스터 페이지 및 페이지 레이아웃을 만듭니다. 그런 다음 SharePoint 프로젝트에서 사용 하는 Visual Studio에이 페이지를 가져올 수 있습니다.  
@@ -67,7 +67,7 @@ ms.locfileid: "34694048"
   
 |제목|설명|  
 |-----------|-----------------|  
-|[SharePoint를 위한 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)|응용 프로그램 페이지를 추가 하는 방법에 설명 합니다: SharePoint 마스터 페이지와 병합 하는.aspx 콘텐츠입니다.|  
+|[SharePoint를 위한 응용 프로그램 페이지 만들기](../sharepoint/creating-application-pages-for-sharepoint.md)|응용 프로그램 페이지를 추가 하는 방법에 설명: *.aspx* SharePoint 마스터 페이지와 병합 하는 콘텐츠입니다.|  
 |[방법: 응용 프로그램 페이지 만들기](../sharepoint/how-to-create-an-application-page.md)|SharePoint 사이트에서 실행 되는 ASP.NET 페이지를 만드는 방법을 보여 줍니다.|  
 |[연습: SharePoint 응용 프로그램 페이지 만들기](../sharepoint/walkthrough-creating-a-sharepoint-application-page.md)|디자인 및 SharePoint 사이트에 대 한 ASP.NET 웹 페이지를 디버깅 하는 방법을 보여 줍니다.|  
   

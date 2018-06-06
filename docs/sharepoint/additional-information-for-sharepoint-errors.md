@@ -25,7 +25,7 @@ ms.openlocfilehash: 9c4585ace17669205345554477cafefb7965dd15
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34691357"
 ---
 # <a name="additional-information-for-sharepoint-errors"></a>SharePoint 오류에 대 한 추가 정보

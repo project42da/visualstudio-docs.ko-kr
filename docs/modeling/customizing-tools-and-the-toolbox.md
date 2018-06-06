@@ -15,11 +15,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 357101a9430eb8d22aeab39179a0a4f70f0dc1bf
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f39ddf910f120c30cf8ef55e77d4fe09f645e148
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748529"
 ---
 # <a name="customizing-tools-and-the-toolbox"></a>도구 및 도구 상자 사용자 지정
 사용자가 모델에 추가할 수 있도록 할 요소에 대해 도구 상자 항목을 정의해야 합니다. 도구에는 요소 도구와 연결 도구의 두 가지 종류가 있습니다. 사용자는 생성된 디자이너에서 요소 도구를 선택해 도형을 다이어그램으로 끌고 연결 도구를 선택해 도형 간에 링크를 그릴 수 있습니다. 일반적으로 요소 도구를 사용하면 도메인 클래스 인스턴스를 모델에 추가할 수 있으며 연결 도구를 사용하면 도메인 관계 인스턴스를 추가할 수 있습니다.
@@ -199,17 +200,17 @@ using Microsoft.VisualStudio.Modeling.Diagrams;
 
  **OutPort에 중첩된 된 구성 요소에서 들어오는 연결**
 
- ![연결 작성기](../modeling/media/connectionbuilder_3.png "ConnectionBuilder_3")
+ ![연결 작성기](../modeling/media/connectionbuilder_3.png)
 
  따라서 중첩된 구성 요소에서 OutPort로의 연결이 가능하도록 지정할 수 있습니다. 이러한 연결을 지정 하려면 설정 **사용 하 여 사용자 지정 허용** 에 **InPort** 원본 역할 유형 및 **OutPort** 형식에서 대상 역할로 **DSL 세부 정보**  다음 그림에 나와 있는 것 처럼 창:
 
  **링크 연결할 DSL 탐색기에서 지시문**
 
- ![연결 작성기 이미지](../modeling/media/connectionbuilder_4a.png "ConnectionBuilder_4a")
+ ![연결 작성기 이미지](../modeling/media/connectionbuilder_4a.png)
 
  **링크 연결할 DSL 세부 정보 창에서 지시문**
 
- ![](../modeling/media/connectionbuilder_4b.png "ConnectionBuilder_4b")
+ ![](../modeling/media/connectionbuilder_4b.png)
 
  그런 다음 ConnectionBuilder 클래스에서 메서드를 입력해야 합니다.
 

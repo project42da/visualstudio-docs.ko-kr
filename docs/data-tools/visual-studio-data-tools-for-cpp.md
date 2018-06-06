@@ -12,11 +12,12 @@ ms.technology: vs-data-tools
 ms.workload:
 - data-storage
 - cplusplus
-ms.openlocfilehash: fa732c8b2fbf55b1cb2c8b80a06cf1ab18d6b50c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d2e74fca7109a19c789215424526eef6190b568c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752400"
 ---
 # <a name="visual-studio-data-tools-for-c"></a>C + + 용 visual Studio data tools
 
@@ -34,11 +35,11 @@ SQL Server 2005에서 사용자 지정 기능을 활용 하 고 나중에 사용
 
 3.  SQL Server Management Studio를 사용 하 여 localDB에 압축 푼된 Northwind.mdf 파일을 첨부 합니다. SQL Server Management Studio가 시작 되 면 (localdb) \MSSQLLocalDB에 연결 합니다.
 
-     ![SSMS 연결 대화 상자](../data-tools/media/raddata-ssms-connect-dialog.png "raddata SSMS 연결 대화 상자")
+     ![SSMS 연결 대화 상자](../data-tools/media/raddata-ssms-connect-dialog.png)
 
      그런 다음 왼쪽된 창에서 localdb 노드를 마우스 오른쪽 단추로 클릭 하 고 선택 **연결**합니다.
 
-     ![데이터베이스 연결 SSMS](../data-tools/media/raddata-ssms-attach-database.png "raddata SSMS 연결할 데이터베이스")
+     ![데이터베이스 SSMS 연결](../data-tools/media/raddata-ssms-attach-database.png)
 
 4.  ODBC Windows SDK 샘플을 다운로드 하 고 새 위치에 압축을 풉니다. 이 예제 데이터베이스 및 문제 쿼리와 명령에 연결 하는 데 사용 되는 기본 ODBC 명령을 보여 줍니다. 이러한 기능에 대해 자세히 알아볼 수 있습니다는 [Microsoft ODBC Open Database Connectivity ()](/sql/odbc/microsoft-open-database-connectivity-odbc)합니다. (C + + 폴더에는) 솔루션을 처음 로드할 때 Visual Studio는 현재 버전의 Visual Studio 솔루션을 업그레이드 하려면 제공 합니다. **예**를 클릭합니다.
 
@@ -67,7 +68,7 @@ SQL Server 2005에서 사용자 지정 기능을 활용 하 고 나중에 사용
 
 8.  F5 키를 눌러 응용 프로그램을 빌드하고 실행합니다. 데이터베이스를 입력 하 라는 메시지가 표시 되는 드라이버에서 대화 상자가 나타납니다. 입력 `(localdb)\MSSQLLocalDB`, 확인 및 **트러스트 된 연결 사용**합니다. Press **OK**. 성공적으로 연결을 나타내는 메시지를 콘솔에 표시 됩니다. 또한 표시 명령 프롬프트에서 SQL 문을 입력할 수 있습니다. 다음 화면에서는 예제 쿼리 및 결과 보여 줍니다.
 
-     ![ODBC 예제 쿼리 출력](../data-tools/media/raddata-odbc-sample-query-output.png "raddata ODBC 샘플 쿼리 출력")
+     ![ODBC 예제 쿼리 출력](../data-tools/media/raddata-odbc-sample-query-output.png)
 
 ## <a name="see-also"></a>참고자료
 

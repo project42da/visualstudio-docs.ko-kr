@@ -11,13 +11,14 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7e98be1dd16705be00f388419013686f861f3753
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 18f4153db019dd6ded97337d4599f02a6b02ef49
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748936"
 ---
-# <a name="navigate-and-update-a-model-in-program-code"></a>탐색 및 프로그램 코드에서 모델 업데이트
+# <a name="navigate-and-update-a-model-in-program-code"></a>프로그램 코드에서 모델 탐색 및 업데이트
 
 만들기 및 삭제 모델 요소, 해당 속성을 설정 하 고 만들기 및 요소 간의 연결을 삭제 하는 코드를 작성할 수 있습니다. 트랜잭션 내에서 모든 변경 해야 합니다. 요소는 다이어그램을 볼 경우 다이어그램 됩니다 "수정" 자동으로 트랜잭션이 끝날 때.
 
@@ -55,11 +56,11 @@ ms.lasthandoff: 04/26/2018
 ##  <a name="example"></a> 예제 DSL 정의
  다음은이 항목의 예제에 대 한 DslDefinition.dsl의 주요 부분입니다.
 
- ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png "FamilyT_Person")
+ ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png)
 
  이 모델은이 DSL의 인스턴스:
 
- ![Tudor 패밀리 트리 모델](../modeling/media/tudor_familytreemodel.png "Tudor_FamilyTreeModel")
+ ![Tudor 패밀리 트리 모델](../modeling/media/tudor_familytreemodel.png)
 
 ### <a name="references-and-namespaces"></a>참조 및 네임 스페이스
  이 항목의 코드를 실행 하려면 참조 해야 합니다.
@@ -350,7 +351,7 @@ using (Transaction t = targetDiagram.Store.
  를 사용 하는 DSL에서 사람이 나 노래 같은 개념을 나타내는 도메인 모델 요소를 다이어그램에 표시 된 내용을 나타내는 셰이프 요소에서 분리 됩니다. 도메인 모델 요소는 중요 한 속성 및 개념의 관계를 저장합니다. 셰이프 요소는 크기, 위치 및 다이어그램에서 개체의 보기의 색 및 레이아웃 해당 구성 요소 부분을 저장합니다.
 
 ### <a name="presentation-elements"></a>프레젠테이션 요소
- ![기본 모양 및 요소 형식의 클래스 다이어그램](../modeling/media/dslshapesandelements.png "DSLshapesAndElements")
+ ![기본 모양 및 요소 형식의 클래스 다이어그램](../modeling/media/dslshapesandelements.png)
 
  DSL 정의 지정 하는 각 요소는 다음과 같은 표준 클래스 중 하나에서 파생 된 클래스를 만듭니다.
 
@@ -509,7 +510,7 @@ partial class MyDiagram
  셰이프와 연결선 다이어그램의 하위 형식을 <xref:Microsoft.VisualStudio.Modeling.ModelElement> 와 사용 중인 저장소에 있습니다. 따라서 변경 해야 할 트랜잭션 내에 합니다. 자세한 내용은 참조 [하는 방법: 모델을 업데이트 하려면 트랜잭션을 사용 하 여](../modeling/how-to-use-transactions-to-update-the-model.md)합니다.
 
 ##  <a name="docdata"></a> 문서 데이터와 문서 보기
- ![표준 다이어그램 형식의 클래스 다이어그램](../modeling/media/dsldiagramsanddocs.png "DSLDiagramsandDocs")
+ ![표준 다이어그램 형식의 클래스 다이어그램](../modeling/media/dsldiagramsanddocs.png)
 
 ## <a name="store-partitions"></a>파티션을 저장합니다
  모델 로드 될 때 해당 다이어그램 동시에 로드 됩니다. 일반적으로 모델 Store.DefaultPartition를 로드 하 고 다이어그램 내용을 다른 파티션으로 로드 됩니다. 일반적으로 각 파티션의 콘텐츠 로드 되 고 별도 파일로 저장 합니다.

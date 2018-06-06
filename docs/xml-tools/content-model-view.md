@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 355fe0485327c5c92441cd54d42253d022c7bb6e
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 0d7f04c482149cbc063a3788dd6be44c643bae6a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751795"
 ---
 # <a name="content-model-view"></a>콘텐츠 모델 뷰
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/24/2018
 
  다음 그림에는 **작업 영역** 패널에 6 개의 스키마 노드가 포함 되어 있습니다. `purchaseOrder` 에서 노드를 선택는 **작업 영역** 패널 및 디자인 화면에 표시 됩니다.
 
- ![XML 스키마 디자이너 콘텐츠 모델 뷰](../xml-tools/media/xsddesigner_contentmodelview.gif "XSDDesigner_ContentModelView")
+ ![XML 스키마 디자이너 콘텐츠 모델 뷰](../xml-tools/media/xsddesigner_contentmodelview.gif)
 
 ## <a name="workspace-panel"></a>작업 영역 패널
 
@@ -78,7 +79,7 @@ ms.lasthandoff: 05/24/2018
 
  콘텐츠 모델 뷰가 활성화되면 다음 XSD 디자이너 도구 모음 단추가 사용됩니다.
 
- ![XML 스키마 디자이너 도구 모음](../xml-tools/media/xsdcontentmodelviewtoolbar.gif "XSDContentModelViewToolbar")
+ ![XML 스키마 디자이너 도구 모음](../xml-tools/media/xsdcontentmodelviewtoolbar.gif)
 
 |옵션|설명|
 |------------|-----------------|

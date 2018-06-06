@@ -19,14 +19,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0507fe16dd910fe61c4816594125b690c350a1a6
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 051285d1a2b3fc1c32a813fbfd8aa778befa0545
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691372"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764877"
 ---
-# <a name="associating-custom-data-with-sharepoint-tools-extensions"></a>SharePoint 도구 확장과 사용자 지정 데이터 연결
+# <a name="associate-custom-data-with-sharepoint-tools-extensions"></a>SharePoint 도구 확장과 사용자 지정 데이터 연결
   SharePoint 도구 확장에서 특정 개체를 사용자 지정 데이터를 추가할 수 있습니다. 데이터 확장 프로그램의 다른 코드에서 나중에 액세스 하려면 확장 프로그램의 한 부분에 있는 경우에 유용 합니다. 데이터 저장 및 액세스 하는 사용자 지정 방법을 구현 하는 대신 확장에 데이터 개체와 연결할 수 있으며 나중에 동일한 개체에서 데이터를 한 다음 검색할 수 있습니다.  
   
  Visual Studio에서 특정 항목에 관련 된 데이터를 보존 하려는 경우 사용자 지정 데이터 개체에 추가 유용 합니다. SharePoint 도구 확장은 Visual Studio에서 하므로 확장 작업할 수도 있습니다 여러 다른 항목 번만 로드 됩니다 (프로젝트 같은 프로젝트 항목 또는 **서버 탐색기** 노드) 언제 든 지 합니다. 특정 항목에만 관련 된 사용자 지정 데이터를 설정한 경우 해당 항목을 나타내는 개체에 데이터를 추가할 수 있습니다.  
@@ -87,5 +87,6 @@ ms.locfileid: "34691372"
  [연습: 항목 템플릿, 1 부와 사용자 지정 작업 프로젝트 항목 만들기](../sharepoint/walkthrough-creating-a-custom-action-project-item-with-an-item-template-part-1.md)   
  [연습: 웹 파트를 표시 하는 서버 탐색기 확장](../sharepoint/walkthrough-extending-server-explorer-to-display-web-parts.md)   
  [방법: SharePoint 프로젝트에 속성 추가](../sharepoint/how-to-add-a-property-to-sharepoint-projects.md)   
- [방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 속성 추가] (.. /sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md   
+ [방법: 사용자 지정 SharePoint 프로젝트 항목 형식에 속성 추가](../sharepoint/how-to-add-a-property-to-a-custom-sharepoint-project-item-type.md)
+   
  

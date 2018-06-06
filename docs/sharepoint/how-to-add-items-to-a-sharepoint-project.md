@@ -17,11 +17,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 41d36dc5c7f4f2d904a69d9053ed0f669b1a86c7
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 1a64da6c7289aa8af67436ca38404ef3d050b5ab
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34768107"
 ---
 # <a name="how-to-add-items-to-a-sharepoint-project"></a>방법: SharePoint 프로젝트에 항목 추가
   SharePoint 솔루션에 하나 이상의 프로젝트를 각각 포함 하는 SharePoint 프로젝트 항목이 여러 개 포함 됩니다. 열거나 SharePoint 솔루션 만들기 후에 이러한 프로젝트 신규 또는 기존 항목을 추가할 수 있습니다. 예를 들어 새 워크플로 프로젝트 default.aspx를 이라는 기본 폼을 함께 제공 되지만 새로운 또는 다른 형식으로 바꿀 하거나 다른 ASPX 폼을 추가할 수 있습니다.  
@@ -32,7 +33,7 @@ ms.lasthandoff: 04/16/2018
   
 2.  **솔루션 탐색기**, 프로젝트 노드를 선택 합니다.  
   
-3.  메뉴 모음에서 **프로젝트**, **새 항목 추가** 표시 하는 **새 항목 추가** 대화 상자.  
+3.  메뉴 모음에서 **프로젝트** > **새 항목 추가** 표시 하는 **새 항목 추가** 대화 상자.  
   
 4.  에 **설치 된 템플릿** 목록는 **SharePoint** 노드를 선택한 후는 **2010** 노드.  
   
@@ -46,12 +47,11 @@ ms.lasthandoff: 04/16/2018
   
 2.  **솔루션 탐색기**, 프로젝트 노드를 선택 합니다.  
   
-3.  메뉴 모음에서 **프로젝트**, **기존 항목 추가** 표시 하는 **기존 항목 추가** 대화 상자.  
+3.  메뉴 모음에서 **프로젝트** > **기존 항목 추가** 표시 하는 **기존 항목 추가** 대화 상자.  
   
 4.  추가 선택한 다음를 선택 하려는 항목이 포함 된 폴더를 찾아는 **추가** 단추입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)   
  [SharePoint 솔루션 개발](../sharepoint/developing-sharepoint-solutions.md)  
-  
   

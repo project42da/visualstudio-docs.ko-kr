@@ -19,12 +19,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: db1d993d745ea4dd1861dd086cea73cb16a08c81
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 5a6f1aca4b0a97211cfcc1d5559868c95b856e5c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691214"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746180"
 ---
 # <a name="pass-data-between-forms"></a>폼 간에 데이터 전달
 이 연습에서는 폼 간에 데이터를 전달하기 위한 단계별 지침을 제공합니다. customers 및 orders 테이블에서 Northwind 사용 하 여 한 가지 형태 고객을 선택할 수 있습니다 및 두 번째 형태에 선택한 고객의 주문이 표시 됩니다. 이 연습에서는 첫 번째 형태에서 데이터를 받는 두 번째 형태에서 메서드를 만드는 방법을 보여 줍니다.
@@ -48,7 +48,7 @@ ms.locfileid: "34691214"
 
 -   폼 간에 데이터를 전달합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>전제 조건
 이 연습에서는 Northwind 샘플 데이터베이스 및 SQL Server Express LocalDB를 사용 합니다.
 
 1.  SQL Server Express LocalDB가 없는 경우 설치에서 [SQL Server Express 다운로드 페이지](https://www.microsoft.com/sql-server/sql-server-editions-express), 또는 **Visual Studio 설치 관리자**합니다. Visual Studio 설치 관리자 SQL Server Express LocalDB의 일부로 설치할 수 있습니다는 **데이터 저장 및 처리** 작업 또는 개별 구성 요소입니다.
@@ -71,7 +71,7 @@ ms.locfileid: "34691214"
 
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .
 
-2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.
+2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **Windows 바탕 화면**합니다.
 
 3. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.
 

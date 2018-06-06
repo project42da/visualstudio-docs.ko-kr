@@ -20,11 +20,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 24338b2a6bc49a9a1a2a77e6395f60013c4465b7
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c68a093effe39597fc2802bc54f471dbce8b1bf5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752335"
 ---
 # <a name="handle-a-concurrency-exception"></a>동시성 예외 처리
 동시성 예외 (<xref:System.Data.DBConcurrencyException>)는 두 명의 사용자가 동시에 데이터베이스에 동일한 데이터를 변경 하려고 할 때 발생 합니다. Catch 하는 방법을 보여 주는 Windows 응용 프로그램을 만들면이 연습에서는 한 <xref:System.Data.DBConcurrencyException>를 오류를 발생 하는 행 키를 찾아 처리 하는 방법에 대 한 전략에 알아봅니다.
@@ -72,7 +73,7 @@ ms.lasthandoff: 04/26/2018
 
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .
 
-2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.
+2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **Windows 바탕 화면**합니다.
 
 3. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.
 

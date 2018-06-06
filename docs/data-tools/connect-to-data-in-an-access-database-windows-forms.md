@@ -16,11 +16,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d15cf1d8e2d7a7178b6ffc423319fcadd8e00cad
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 233527e92a6d0d20294769d070e8dc81b33753b4
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746818"
 ---
 # <a name="connect-to-data-in-an-access-database-windows-forms"></a>Access 데이터베이스 (Windows Forms)의 데이터에 연결
 Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.accdb 파일)에 연결할 수 있습니다. 에 표시할 연결을 정의한 후의 데이터는 **데이터 소스** 창. 그 창에서 테이블 또는 뷰를 폼으로 끌 수 있습니다.
@@ -37,7 +38,7 @@ Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.ac
 
 2.  에 **보기** 메뉴 선택 **다른 창** > **데이터 소스**합니다.
 
-     ![다른 창 데이터 소스 보기](../data-tools/media/viewdatasources.png "ViewDataSources")
+     ![다른 창 데이터 소스 보기](../data-tools/media/viewdatasources.png)
 
 3.  **데이터 소스** 창에서 **새 데이터 소스 추가**를 클릭합니다.
 
@@ -59,7 +60,7 @@ Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.ac
 
 9. 에 **연결 추가** 대화 상자에서 **Microsoft Office 12.0 Access Database Engine OLE DB Provider** 에서 **OLE DB Provider** 드롭 다운 합니다.
 
-     ![OLE DB 공급자 Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png "dataOLEDBProviderOffice12Access")
+     ![OLE DB 공급자 Microsoft Office 12.0 Access](../data-tools/media/dataoledbprovideroffice12access.png)
 
      > [!NOTE]
      >  표시 되지 않으면 **Microsoft Office 12.0 Access Database Engine OLE DB Provider** 드롭다운 목록에는 OLE DB 공급자에 설치 해야 할 수 있습니다는 [2007 Office System 드라이버: 데이터 연결 구성 요소](https://www.microsoft.com/download/confirmation.aspx?id=23734)합니다.
@@ -87,7 +88,7 @@ Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.ac
 
 2.  에 **보기** 메뉴 선택 **다른 창** > **데이터 소스**합니다.
 
-     ![다른 창 데이터 소스 보기](../data-tools/media/viewdatasources.png "ViewDataSources")
+     ![다른 창 데이터 소스 보기](../data-tools/media/viewdatasources.png)
 
 3.  **데이터 소스** 창에서 **새 데이터 소스 추가**를 클릭합니다.
 
@@ -103,7 +104,7 @@ Visual Studio를 사용 하 여 Access 데이터베이스 (.mdf 파일 또는.ac
 
 8.  에 **데이터베이스 파일 이름**, 경로 연결 하 고 다음을 선택 하려는.mdb 파일의 이름을 지정 **확인**합니다.
 
-     ![연결 액세스 데이터베이스 파일을 추가](../data-tools/media/dataaddconnectionaccessmdb.png "dataAddConnectionAccessMDB")
+     ![연결 액세스 데이터베이스 파일 추가](../data-tools/media/dataaddconnectionaccessmdb.png)
 
 9. 선택 **다음** 에 **데이터 연결 선택** 페이지.
 

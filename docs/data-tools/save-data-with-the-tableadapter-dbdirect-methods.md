@@ -1,5 +1,5 @@
 ---
-title: TableAdapter DBDirect 메서드 데이터 저장
+title: TableAdapter DBDirect 메서드를 사용하여 데이터 저장
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -18,13 +18,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 51f855cca05d2f9f7e6a86524da6bcf866eb0856
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 68842160d3ad7bf7e96d22f58607866c34f9ceb5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747549"
 ---
-# <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect 메서드 데이터 저장
+# <a name="save-data-with-the-tableadapter-dbdirect-methods"></a>TableAdapter DBDirect 메서드를 사용하여 데이터 저장
 이 연습에서는 TableAdapter의 DBDirect 메서드를 사용 하 여 데이터베이스에 대해 직접 SQL 문을 실행 하는 자세한 지침을 제공 합니다. TableAdapter의 DBDirect 메서드 제어 데이터베이스 업데이트에 대 한 상세 수준을 제공합니다. 사용 하 여 개별을 호출 하 여 특정 SQL 문과 저장된 프로시저를 실행할 수 있습니다 `Insert`, `Update`, 및 `Delete` 응용 프로그램에서 필요에 따라 메서드 (오버 로드 된 달리 `Update` 업데이트를 수행 하는 메서드 INSERT 및 DELETE 문을 모두 한 번의 호출에에서).
 
  이 연습에서는 다음 작업을 수행하는 방법을 배웁니다.
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/26/2018
 
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .
 
-2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.
+2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **Windows 바탕 화면**합니다.
 
 3. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.
 
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/26/2018
 
     -   Northwind 샘플 데이터베이스에 대한 데이터 연결이 드롭다운 목록에 표시되면 해당 연결을 선택합니다.
 
-         -또는-
+         또는
 
     -   선택 **새 연결** 시작 하는 **연결 추가/수정** 대화 상자.
 
@@ -115,7 +116,7 @@ ms.lasthandoff: 04/26/2018
 
 2.  다음 설정 **이름** 및 **텍스트** 각 단추에 대해 속성입니다.
 
-    |이름|텍스트|
+    |name|텍스트|
     |----------|----------|
     |`InsertButton`|**삽입**|
     |`UpdateButton`|**업데이트**|

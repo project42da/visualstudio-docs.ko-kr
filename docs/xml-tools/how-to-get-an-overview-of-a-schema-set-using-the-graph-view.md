@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8be2666316bdc4d64d4f3dd4ec52c5104a1af5cc
-ms.sourcegitcommit: 697162f54d3c4e30df702fd0289e447e211e3a85
+ms.openlocfilehash: 05f690d76d61ffd52abbc7b73cf162d7f6609708
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/25/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751899"
 ---
 # <a name="how-to-get-an-overview-of-a-schema-set-using-the-graph-view"></a>방법: 그래프 뷰를 사용 하 여 설정 하는 스키마의 개요
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/25/2018
 
 6.  선택 **스키마 집합** 에서 노드는 **XML 스키마 탐색기** 뷰의 그래프 뷰의 디자인 화면 노드를 끕니다. 모든 전역 노드 및 관계가 설정된 노드를 연결하는 화살표를 볼 수 있어야 합니다.
 
-     ![그래프 보기](../xml-tools/media/relationshipingraphview.gif "RelationshipInGraphView")
+     ![그래프 뷰](../xml-tools/media/relationshipingraphview.gif)
 
 7.  디자인 화면의 노드를 클릭하고 이동 경로 탐색 막대를 확인하여 스키마 집합에서 선택한 노드가 위치한 곳을 봅니다.
 

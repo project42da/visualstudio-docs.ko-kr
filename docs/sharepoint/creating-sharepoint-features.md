@@ -16,14 +16,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d119e84bba07c68e8d0466902d52d4ed9d151123
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: ec6f0ef523733a0737b6d762d2835073ed1f3c06
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34692017"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766391"
 ---
-# <a name="creating-sharepoint-features"></a>SharePoint 기능 만들기
+# <a name="create-sharepoint-features"></a>SharePoint 기능 만들기
   쉽게 배포를 위한 관련된 SharePoint 프로젝트 항목을 그룹화 하는 SharePoint 기능을 사용할 수 있습니다. 기능을 만드는, 범위를 설정 하 고 SharePoint 기능 디자이너를 사용 하 여 다른 기능 종속성으로 표시할 수 있습니다. 또한이 디자이너는 각 기능을 설명 하는 XML 파일 매니페스트를 생성 합니다.  
   
 ## <a name="add-features-to-the-sharepoint-solution"></a>SharePoint 솔루션에 기능 추가

@@ -18,14 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: dfa72bab32aa6af2188f8f6c04411b768b441e92
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 4937bcdef14cadccfa940b2176cf002a976fa16d
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34692215"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766417"
 ---
-# <a name="debugging-sharepoint-solutions"></a>SharePoint 솔루션 디버깅
+# <a name="debug-sharepoint-solutions"></a>SharePoint 솔루션 디버깅
   사용 하 여 SharePoint 솔루션을 디버그할 수는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거 합니다. 디버깅을 시작할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 서버에 프로젝트 파일을 배포 하 고 다음 웹 브라우저에서 SharePoint 사이트의 인스턴스를 엽니다. 다음 섹션에서 SharePoint 응용 프로그램을 디버깅 하는 방법을 설명 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]합니다.  
   
 -   [디버깅 사용](#EnableDebug)  
@@ -40,7 +40,7 @@ ms.locfileid: "34692215"
   
 -   [향상 된 디버깅 정보를 사용 하도록 설정](#EnhancedDebug)  
   
-##  <a name="EnableDebug"></a> 디버깅 사용  
+## <a name="enable-debugging"></a>디버깅 사용
  먼저 SharePoint 솔루션을 디버그할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 대화 상자 알려 web.config 파일 디버깅을 사용 하도록 구성 되지 됩니다. (Web.config 파일은 SharePoint 서버를 설치할 때 생성 됩니다. 자세한 내용은 참조 [Web.config 파일을 작업할](http://go.microsoft.com/fwlink/?LinkID=149266).) 대화 상자는 디버깅을 사용 하려면 web.config 파일을 수정 하거나 디버깅 하지 않고 프로젝트를 실행 하는의 옵션을 제공 합니다. 첫 번째 옵션을 선택하면 프로젝트가 정상적으로 실행됩니다. 두 번째 옵션을 선택하면 web.config 파일이 다음과 같이 구성됩니다.  
   
 -   호출 스택에 설정 (`CallStack="true"`)  
@@ -86,7 +86,7 @@ ms.locfileid: "34692215"
   
 -   컴파일 디버깅 사용 안 함 (`<compilation debug="false">`)  
   
-##  <a name="Deployment"></a> F5 디버깅 및 배포 프로세스  
+## <a name="f5-debug-and-deployment-process"></a>F 5를 눌러 디버그 및 배포 프로세스
  디버그 모드에서 SharePoint 프로젝트를 실행 하는 경우 SharePoint 배포 프로세스는 다음과 같은 작업을 수행 합니다.  
   
 1.  사용자 지정 가능한 배포 전 명령이 실행 됩니다.  
@@ -110,7 +110,7 @@ ms.locfileid: "34692215"
   
 9. 사용자 지정 가능한 배포 후 명령을 실행합니다.  
   
-10. [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 디버거를 [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 프로세스(w3wp.exe)에 연결합니다. 해당 프로젝트 형식을 변경할 수 있도록 하는 경우는 *샌드박스 솔루션* 속성 및 해당 값은로 설정 되어 **true**, 디버거는 다른 프로세스 (SPUCWorkerProcess.exe)에 연결 합니다. 자세한 내용은 참조 [샌드박스 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)합니다.  
+10. 연결 된 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 하도록 설정할 디버거는 [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] 프로세스 (*w3wp.exe*). 해당 프로젝트 형식을 변경할 수 있도록 하는 경우는 *샌드박스 솔루션* 속성 및 해당 값은로 설정 되어 **true**, 디버거는 다른 프로세스에 연결 (*SPUCWorkerProcess.exe*). 자세한 내용은 참조 [샌드박스 솔루션 고려 사항](../sharepoint/sandboxed-solution-considerations.md)합니다.  
   
 11. SharePoint 솔루션은 팜 솔루션은 JavaScript 디버거를 시작 합니다.  
   
@@ -118,14 +118,14 @@ ms.locfileid: "34692215"
   
  [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 각 작업이 완료 된 후 출력 창에 상태 메시지를 표시 합니다. 작업을 완료할 수 없는 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 오류 목록 창에 오류 메시지를 표시 합니다.  
   
-##  <a name="Features"></a> SharePoint 프로젝트 기능  
+## <a name="sharepoint-project-features"></a>SharePoint 프로젝트 기능
  기능은 기능 사이트 정의 사용 하 여 사이트 수정을 간소화 하는 이식 가능한 모듈식 단위입니다. 패키지 이기도 [!INCLUDE[sharepointShort](../sharepoint/includes/sharepointshort-md.md)] (WSS) 요소의 특정 범위에 활성화 될 수 있고 사용자가 특정 목표 또는 작업을 수행 합니다. 서식 파일은 기능으로 배포 됩니다.  
   
- 디버그 모드에서 프로젝트를 실행 하는 경우 배포 프로세스에 폴더를 만듭니다는 *기능* %COMMONPROGRAMFILES%\Microsoft Shared\web server extensions\14\TEMPLATE\FEATURES에 디렉터리입니다. 기능 이름 않은 형식이 *프로젝트 이름*_Feature*x*, TestProject_Feature1 등입니다.  
+ 디버그 모드에서 프로젝트를 실행 하는 경우 배포 프로세스에 폴더를 만듭니다는 *기능* 에 디렉터리 *%COMMONPROGRAMFILES%\Microsoft Shared\web server extensions\14\TEMPLATE\FEATURES*합니다. 기능 이름 않은 형식이 *프로젝트 이름*_Feature*x*, TestProject_Feature1 등입니다.  
   
- 기능 디렉터리에 솔루션 폴더를 포함 한 *기능 정의* 파일 및 *워크플로 정의* 파일입니다. 파일을 설명 하는 기능 정의 파일 (Feature.xml) 프로젝트의 기능의 프로젝트 정의 파일 (Elements.xml) 프로젝트 템플릿을 설명 합니다. Elements.xml을 확인할 수 있습니다 **솔루션 탐색기**, 되지만 Feature.xml는 솔루션 패키지를 만들 때 생성 됩니다. 이러한 파일에 대 한 자세한 내용은 참조 [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)합니다.  
+ 기능 디렉터리에 솔루션 폴더를 포함 한 *기능 정의* 파일 및 *워크플로 정의* 파일입니다. 프로젝트의 기능의 프로젝트 정의 파일에 파일을 설명 하는 기능 정의 파일 (Feature.xml) (*Elements.xml*) 프로젝트 템플릿을 설명 합니다. *Elements.xml* 있습니다 **솔루션 탐색기**, 되지만 Feature.xml는 솔루션 패키지를 만들 때 생성 됩니다. 이러한 파일에 대 한 자세한 내용은 참조 [SharePoint 프로젝트 및 프로젝트 항목 템플릿](../sharepoint/sharepoint-project-and-project-item-templates.md)합니다.  
   
-##  <a name="Workflow"></a> 워크플로 디버깅  
+## <a name="debug-workflows"></a>워크플로 디버깅
  워크플로 프로젝트를 디버깅할 때 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (해당 유형에 따라)에서 워크플로 템플릿으로 라이브러리에 목록을 추가 합니다. 그런 다음 수동으로 또는 추가 하거나 업데이트 하 여 항목에서 워크플로 템플릿으로 시작할 수 있습니다. 사용할 수 있습니다 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] 워크플로 디버깅할 수 있습니다.  
   
 > [!NOTE]  
@@ -135,15 +135,15 @@ ms.locfileid: "34692215"
   
  예를 들어 워크플로 수동으로 시작할 수 있음을 지정 하는 경우 라이브러리 또는 목록에 있는 항목에서 직접 워크플로 시작 합니다. 워크플로 수동으로 시작 하는 방법에 대 한 자세한 내용은 참조 하십시오. [문서 항목에는 워크플로 수동으로 시작할](https://support.office.com/article/Manually-start-a-workflow-on-a-document-or-item-5C106E0E-6FF2-4A75-AF99-F01653BC7963)합니다.  
   
-##  <a name="FeatureEvents"></a> 디버깅 기능 이벤트 수신자  
+## <a name="debug-feature-event-receivers"></a>디버그 기능 이벤트 수신자
  실행 하면 기본적으로는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 응용 프로그램을 SharePoint 서버에서 사용자에 대 한 해당 기능이 자동으로 활성화 합니다. 그러나 되므로 문제가 발생 기능 이벤트 수신자를 디버깅할 때에서 기능을 활성화 하는 경우 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)], 디버거에서 다른 프로세스에서 실행 합니다. 즉, 중단점, 등의 몇 가지 디버깅 기능을 제대로 작동 하지 않습니다.  
   
  자동으로 SharePoint에서 기능 활성화를 사용 하지 않도록 설정 하 고 기능 이벤트 수신자의 디버깅이 올바르게 작동 하도록 하려면 프로젝트의 값 설정 **활성 배포 구성** 속성을 **활성화없음** 디버깅 하기 전에. 그런 다음 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)]에서 SharePoint 응용 프로그램의 디버깅을 시작한 후 SharePoint에서 수동으로 기능을 활성화합니다. 기능을 활성화 하려면 엽니다는 **사이트 작업** sharepoint에서 메뉴 선택 **사이트 설정**, 선택는 **사이트 기능 관리** 링크를 선택한 후는 **Activate** 정상적으로 디버깅을 계속 하려면 기능 옆에 있는 단추입니다.  
   
-##  <a name="EnhancedDebug"></a> 향상 된 디버깅 정보를 사용 하도록 설정  
- 간의 복잡 한 상호 작용으로 인해는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (devenv.exe) 프로세스는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 호스트 프로세스 (vssphost4.exe), SharePoint 및 WCF 계층 빌드, 배포 및 기타 하는 동안 발생 하는 오류를 진단 수 있습니다는 해야 합니다. 이러한 오류를 해결 하기 위해 향상 된 디버깅 정보를 사용할 수 있습니다. 이렇게 하려면 Windows 레지스트리에서 다음 레지스트리 키로 이동:  
+## <a name="enable-enhanced-debug-information"></a>향상 된 디버그 정보를 사용 하도록 설정
+ 간의 복잡 한 상호 작용으로 인해는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] (devenv.exe) 프로세스는 [!INCLUDE[vsprvs](../sharepoint/includes/vsprvs-md.md)] SharePoint 호스트 프로세스 (*vssphost4.exe*), SharePoint, WCF 계층 발생 하는 오류를 진단 하는 동안 빌드, 배포 및 등은 어려울 수 있습니다. 이러한 오류를 해결 하기 위해 향상 된 디버깅 정보를 사용할 수 있습니다. 이렇게 하려면 Windows 레지스트리에서 다음 레지스트리 키로 이동:  
   
- [HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools]  
+ **HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\11.0\SharePointTools**  
   
  경우 "EnableDiagnostics" **REG_DWORD** 값 않습니다 하지이 값을 직접 만들어야 합니다. "EnableDiagnostics" 값을 "1"로 설정  
   
@@ -151,7 +151,6 @@ ms.locfileid: "34692215"
   
  다른 SharePoint 레지스트리 키에 대 한 자세한 내용은 참조 [Visual Studio에서 SharePoint 도구에 대 한 확장 디버깅](../sharepoint/debugging-extensions-for-the-sharepoint-tools-in-visual-studio.md)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 솔루션 문제 해결](../sharepoint/troubleshooting-sharepoint-solutions.md)  
-  
   

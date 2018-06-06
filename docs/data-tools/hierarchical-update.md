@@ -23,11 +23,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 31bee5d824b612ddaeb264fe2f944746cdda68fa
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 442d6cd60597219c25b41f26ad8c2dc2151248ee
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747471"
 ---
 # <a name="hierarchical-update"></a>계층적 업데이트
 *계층적 업데이트* 규칙 참조 무결성을 유지 하면서 데이터베이스에 다시 (두 개 이상의 관련 테이블 집합)의 업데이트 된 데이터를 저장 하는 프로세스를 말합니다. *참조 무결성* 삽입, 업데이트 및 삭제 관련된 레코드의 동작을 제어 하는 데이터베이스에서 제약 조건이 제공 일관성 규칙을 가리킵니다. 예를 들어 이며 해당 고객에 대 한 주문을 만들 수 있도록 허용 하기 전에 customer 레코드를 만들을 적용 하는 참조 무결성  데이터 집합에 있는 관계에 대 한 자세한 내용은 참조 [데이터 집합의 관계](../data-tools/relationships-in-datasets.md)
@@ -39,12 +40,12 @@ ms.lasthandoff: 04/26/2018
 ## <a name="enable-hierarchical-update-in-a-dataset"></a>데이터 집합에서 계층적 업데이트를 사용 하도록 설정
  계층적 업데이트는 기본적으로 추가 되거나 프로젝트에서 생성 된 모든 새 데이터 집합에 대해 설정 됩니다. 설정 하 여 계층적 업데이트를 켜거나 끄려면는 **계층적 업데이트** 데이터 집합의 형식화 된 데이터 집합 속성 **True** 또는 **False**:
 
- ![계층적 업데이트 설정을](../data-tools/media/hierarchical-update-setting.png "계층적 업데이트 설정")
+ ![계층적 업데이트 설정](../data-tools/media/hierarchical-update-setting.png)
 
 ## <a name="create-a-new-relation-between-tables"></a>테이블 간에 새 관계 만들기
  두 테이블 간에 새 관계를 만들려면 데이터 집합 디자이너에서 각 테이블의 제목 표시줄을 선택, 한 다음 마우스 오른쪽 단추로 클릭 하 고 선택 **관계 추가**합니다.
 
- ![계층적 업데이트 관계 메뉴 추가](../data-tools/media/hierarchical-update-add-relation-menu.png "계층적 업데이트 관계 메뉴 추가")
+ ![계층적 업데이트 관계 메뉴 추가](../data-tools/media/hierarchical-update-add-relation-menu.png)
 
 ## <a name="understand-foreign-key-constraints-cascading-updates-and-deletes"></a>외래 키 제약 조건, 연속 업데이트 및 삭제를 이해 합니다.
  어떻게 foreign key 제약 조건 이해 해야 하 고 생성 된 데이터 집합 코드로 생성 되는 데이터베이스에 동작을 연계 합니다.

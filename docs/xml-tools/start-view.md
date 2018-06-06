@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4932f6761ecb8c915d9d919318af6403680eedaf
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 813f637f3bb12c3f3f4eec75abf1423de06f9707
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751847"
 ---
 # <a name="start-view"></a>시작 뷰
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/24/2018
 
 시작 뷰에 2 개의 주 섹션의 *워터 마크* 및 **스키마 집합 정보** 창. 또한 모든 XSD 디자이너 뷰에서 사용할 수 있는 도구 모음이 있습니다.
 
-![XML 스키마 디자이너 시작 뷰](../xml-tools/media/xsddesigner_startview.gif "XSDDesigner_StartView")
+![XML 스키마 디자이너 시작 뷰](../xml-tools/media/xsddesigner_startview.gif)
 
 ## <a name="watermark"></a>워터마크
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 05/24/2018
 
 시작 뷰 간에 탐색할 수 있습니다는 [콘텐츠 모델 뷰](../xml-tools/content-model-view.md) 및 [그래프 보기](../xml-tools/graph-view.md) XML 스키마 디자이너 도구 모음에서 합니다.
 
-![XML 스키마 디자이너 도구 모음](../xml-tools/media/xsdstartviewtoolbar.gif "XSDStartViewToolbar")
+![XML 스키마 디자이너 도구 모음](../xml-tools/media/xsdstartviewtoolbar.gif)
 
 시작 뷰가 활성화되면 XSD 디자이너 도구 모음에서 다음 단추가 사용됩니다.
 

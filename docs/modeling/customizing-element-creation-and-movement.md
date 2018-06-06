@@ -13,11 +13,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 7d86dd961a5192d63cee9501eb16aaf51b3fd629
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 8f4563756e42b5c0bdc1a56e938ca6326e04b104
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748661"
 ---
 # <a name="customizing-element-creation-and-movement"></a>요소 만들기 및 이동 사용자 지정
 요소를 도구 상자 또는 붙여넣기 후에 다른 끌어 놓을 수 또는 이동 작업을 허용할 수 있습니다. 지정한 관계를 사용 하 여 대상 요소에 연결 하는 이동된 된 요소를 포함할 수 있습니다.
@@ -38,7 +39,7 @@ ms.lasthandoff: 04/26/2018
 
  EMD의 책임 모델의 특정 위치에 개체 또는 개체 그룹 해야 병합 하는 방법을 결정 하는 것입니다. 특히, 모델으로 병합 된 그룹을 연결 하기 위해 어떤 관계는 인스턴스화할 수를 결정 합니다. 속성을 설정 하 고 다른 개체를 만들을 지정할 수 있습니다.
 
- ![DSL&#45;EMD&#95;병합](../modeling/media/dsl-emd_merge.png "DSL EMD_Merge") 요소 병합 지시문의 역할
+ ![DSL&#45;EMD&#95;병합](../modeling/media/dsl-emd_merge.png) 요소 병합 지시문의 역할
 
  EMD 포함 관계를 정의할 때 자동으로 생성 됩니다. 사용자가 부모에 새 자식 인스턴스를 추가할 때이 기본 EMD 관계의 인스턴스를 만듭니다. 예를 들어에 사용자 지정 코드를 추가 하 여 이러한 기본 EMDs 수정할 수 있습니다.
 
@@ -47,7 +48,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="defining-an-element-merge-directive"></a>정의 요소 병합 지시문
  도메인 클래스, 도메인 관계, 셰이프, 커넥터 및 다이어그램을 병합 지시문 요소를 추가할 수 있습니다. 추가 하거나 수신 도메인 클래스 아래 DSL 탐색기에서 찾을 수 있습니다. 받는 클래스는 이미 및 새 또는 복사 된 요소의 병합할 수에 모델에 있는 요소의 도메인 클래스입니다.
 
- ![DSL&#45;EMD&#95;세부 정보](../modeling/media/dsl-emd_details.png "DSL EMD_Details")
+ ![DSL&#45;EMD&#95;세부 정보](../modeling/media/dsl-emd_details.png)
 
  **인덱싱 클래스** 도메인 클래스 받는 클래스의 구성원으로 병합 될 수 있는 요소입니다. 설정 하지 않으면 인덱싱 클래스의 서브 클래스의 인스턴스에서이 EMD로 병합 될 수도 **하위 클래스에 적용 됩니다.** False로 합니다.
 

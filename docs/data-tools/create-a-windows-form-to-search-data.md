@@ -1,5 +1,5 @@
 ---
-title: 데이터를 검색 하도록 Windows Form 만들기
+title: 데이터 검색을 위한 Windows Form 만들기
 ms.date: 11/04/2016
 ms.topic: conceptual
 helpviewer_keywords:
@@ -16,13 +16,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4e04b0e4ef2f77381e305b992c5457bc46dc8261
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d4fe1106556e94155a0d01d3d7c9983d5ed122ad
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746730"
 ---
-# <a name="create-a-windows-form-to-search-data"></a>데이터를 검색 하도록 Windows Form 만들기
+# <a name="create-a-windows-form-to-search-data"></a>데이터 검색을 위한 Windows Form 만들기
 일반적인 응용 프로그램 시나리오에서는 선택한 데이터를 폼에 표시합니다. 특정 고객의 주문이나 특정 주문의 정보를 표시하려는 경우를 예로 들 수 있습니다. 이 시나리오에서는 사용자가 폼에 정보를 입력하면 해당 사용자의 입력을 매개 변수로 사용하여 쿼리가 실행됩니다. 즉 매개 변수가 있는 쿼리를 기준으로 데이터가 선택됩니다. 쿼리는 사용자가 입력한 기준을 만족하는 데이터만 반환합니다. 이 연습에서는 특정 구/군/시의 고객을 반환하는 쿼리를 만들고 사용자 인터페이스를 수정하여, 사용자가 구/군/시 이름을 입력한 후 단추를 눌러 쿼리를 실행할 수 있도록 하는 방법을 보여줍니다.
 
  매개 변수가 있는 쿼리를 사용하면 데이터베이스가 레코드를 빠르게 필터링하도록 함으로써 응용 프로그램의 효율성을 높일 수 있습니다. 반면 전체 데이터베이스 테이블을 요청 하 고 네트워크를 통해 전송 하는 데 한 다음 응용 프로그램 논리를 사용 하 여 원하는 레코드를 찾는 경우 응용 프로그램 느리고 비효율적인 될 수 있습니다.
@@ -70,7 +71,7 @@ ms.lasthandoff: 04/26/2018
 
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .
 
-2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.
+2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **Windows 바탕 화면**합니다.
 
 3. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.
 

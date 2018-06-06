@@ -22,22 +22,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 9d00159a8c944944348e4eec5fb98aaa4d6e9bae
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 451784c052ee656686bf40315b809dcce58c6aaf
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767652"
 ---
-# <a name="how-to-add-a-specific-finder-method"></a>방법: SpecificFinder 메서드 추가
+# <a name="how-to-add-a-specific-finder-method"></a>방법: 특정 Finder 메서드 추가
   단일 엔터티 인스턴스를 만들어 반환할 수 있습니다는 *Specificfinder* 메서드. BDC 비즈니스 데이터 연결 () 서비스는 사용자가 비즈니스 데이터 웹 파트 또는 외부 목록에서 엔터티를 선택할 때 특정 Finder 메서드를 실행 합니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
   
-### <a name="to-create-a-specific-finder-method"></a>특정 Finder 메서드를 만들려면  
+### <a name="to-create-a-specific-finder-method"></a>특정 Finder 메서드를 만들려면
   
-1.  BDC 디자이너에서 엔터티를 선택 합니다.  
+1.  에 **BDC 디자이너**, 엔터티를 선택 합니다.  
   
-     Visual Studio에서 BDC 디자이너에 엔터티를 추가 하는 방법에 대 한 정보를 참조 하십시오. [하는 방법: 모델에 엔터티 추가](../sharepoint/how-to-add-an-entity-to-a-model.md)합니다.  
+     엔터티를 추가 하는 방법에 대 한 내용은 **BDC 디자이너** Visual Studio에서 참조 [하는 방법: 모델에 엔터티 추가](../sharepoint/how-to-add-an-entity-to-a-model.md)합니다.  
   
-2.  메뉴 모음에서 **보기**, **다른 창**, **BDC 메서드 세부 정보**합니다.  
+2.  메뉴 모음에서 **보기** > **다른 창**, **BDC 메서드 세부 정보**합니다.  
   
      **BDC 메서드 세부 정보** 창이 열립니다. 해당 창에 대 한 자세한 내용은 참조 [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)합니다.  
   
@@ -89,7 +90,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#3](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#3)]
      [!code-vb[SP_BDC#3](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#3)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [방법: Finder 메서드 추가](../sharepoint/how-to-add-a-finder-method.md)   
  [방법: Creator 메서드 추가](../sharepoint/how-to-add-a-creator-method.md)   
@@ -98,5 +99,4 @@ ms.lasthandoff: 04/16/2018
  [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)   
  [방법: 메서드에 매개 변수를 추가 합니다.](../sharepoint/how-to-add-a-parameter-to-a-method.md)   
  [방법: 메서드 인스턴스 정의](../sharepoint/how-to-define-a-method-instance.md)  
-  
   

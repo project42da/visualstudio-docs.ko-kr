@@ -22,12 +22,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3ef60be5002c5d99f8947bfa770665fa3535a20e
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 6ecbf8e67b2c8db1b33fa1c5228d9d94f98e48c5
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34691136"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748061"
 ---
 # <a name="save-data-back-to-the-database"></a>데이터를 다시 데이터베이스에 저장
 데이터 집합은 데이터의 메모리 내 복사본입니다. 해당 데이터를 수정 하면 인지 다시 데이터베이스에 변경 내용을 저장 하는 것이 좋습니다. 다음 세 가지 방법 중 하나에서 이렇게합니다.
@@ -60,7 +60,7 @@ Tableadapter에 익숙한 경우에 다음이 항목 중 하나에 직접 이동
 
  를 다시 데이터베이스에 변경 내용을 보내는 경우는 두 번째 단계는 필요 합니다. 데이터 바인딩된 컨트롤을 사용 하지 않는 경우 수동으로 데이터 집합을 채우는 데 사용 하는 같은 TableAdapter (또는 데이터 어댑터)의 Update 메서드를 호출 해야 합니다. 그러나 하나의 데이터 원본에서 데이터 이동 하거나 여러 데이터 원본을 업데이트 하려면 예를 들어 서로 다른 어댑터를 사용할 수도 있습니다. 데이터 바인딩을 사용 하지 않는 관련된 테이블에 대 한 변경 내용을 저장 하는 경우 수동으로 TableAdapterManager 자동 생성 된 클래스의 변수 인스턴스화하고 다음 UdpateAll 메서드를 호출 해야 합니다.
 
- ![Visual Basic 데이터 집합 업데이트](../data-tools/media/vbdatasetupdates.gif "vbDatasetUpdates") 2 단계 프로세스 및 성공적으로 업데이트에서 DataRowVersion 역할 업데이트
+ ![Visual Basic 데이터 집합 업데이트](../data-tools/media/vbdatasetupdates.gif) 2 단계 프로세스 및 성공적으로 업데이트에서 DataRowVersion 역할 업데이트
 
  데이터 집합 행의 컬렉션을 포함 된 테이블의 컬렉션을 포함 합니다. 나중에 데이터 원본 업데이트 하려는 경우에 행 추가 또는 제거 하는 경우이 DataTable.DataRowCollection 속성에서 메서드를 사용 해야 합니다. 이러한 메서드는 데이터 소스 업데이트에 대 한 필요한 변경 내용 추적을 수행 합니다. 행 속성에 RemoveAt 컬렉션을 호출 하는 경우 삭제는 데이터베이스에 다시 전달 되지 않습니다.
 

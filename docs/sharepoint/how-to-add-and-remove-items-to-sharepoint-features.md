@@ -19,11 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7d097562ecf1abe021d78440bc6c96019d2eb97d
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: e6155aa13c8b05036dbb5fb2d9f895ed38719741
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767376"
 ---
 # <a name="how-to-add-and-remove-items-to-sharepoint-features"></a>방법: SharePoint 기능에 항목 추가 및 제거
   SharePoint 솔루션을 만들 때 Visual Studio 기능에 기본 SharePoint 프로젝트 항목을 추가 합니다. 배포 하기 전에 추가할 수 있으며 SharePoint 기능을 수정 하려면 SharePoint 프로젝트 항목을 제거 키를 누릅니다.  
@@ -46,9 +47,9 @@ ms.lasthandoff: 04/16/2018
   
      SharePoint 프로젝트 항목에 표시 된 **기능에 있는 항목** 목록입니다.  
   
-## <a name="removing-sharepoint-project-items-from-a-feature"></a>기능에서 SharePoint 프로젝트 항목 제거  
+## <a name="removing-sharepoint-project-items-from-a-feature"></a>기능에서 SharePoint 프로젝트 항목을 제거합니다.  
   
-#### <a name="to-remove-sharepoint-items-with-the-feature-designer"></a>기능 디자이너와 SharePoint 항목을 제거 하려면  
+#### <a name="to-remove-sharepoint-items-with-the-feature-designer"></a>기능 디자이너와 SharePoint 항목을 제거 하려면
   
 1.  항목을 하나 이상 선택 된 **기능에 있는 항목** 목록입니다.  
   
@@ -56,8 +57,7 @@ ms.lasthandoff: 04/16/2018
   
      SharePoint 프로젝트 항목에 표시 된 **솔루션에서 항목** 목록입니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [SharePoint 기능 만들기](../sharepoint/creating-sharepoint-features.md)   
  [SharePoint 솔루션 패키징 및 배포](../sharepoint/packaging-and-deploying-sharepoint-solutions.md)  
-  
   

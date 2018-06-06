@@ -22,20 +22,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 0424c6561b063b17f384215021a1300122dcbb1c
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: dd566eacba7f94cfe7617e9396440c90dc32f51e
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767139"
 ---
 # <a name="how-to-add-a-creator-method"></a>방법: Creator 메서드 추가
-  Creator 메서드는 엔터티 데이터 원본에 새 데이터를 추가합니다. BDC 비즈니스 데이터 연결 () 서비스는 사용자가 선택 하면이 메서드를 호출는 **새 항목** 모델을 기반으로 하는 목록의 리본에 단추입니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
+  Creator 메서드는 엔터티 데이터 원본에 새 데이터를 추가합니다. BDC 비즈니스 데이터 연결 () 서비스는 사용자가 선택 하면이 메서드를 호출는 **새 항목** 단추는 **리본** 모델을 기반으로 하는 목록입니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
   
 ### <a name="to-add-a-creator-method"></a>Creator 메서드를 추가 하려면  
   
-1.  BDC 디자이너에서 엔터티를 선택 합니다.  
+1.  에 **BDC 디자이너**, 엔터티를 선택 합니다.  
   
-2.  메뉴 모음에서 **보기**, **다른 창**, **BDC 메서드 세부 정보**합니다.  
+2.  메뉴 모음에서 **보기** > **다른 창** >**BDC 메서드 세부 정보**합니다.  
   
      **BDC 메서드 세부 정보** 창이 열립니다. 해당 창에 대 한 자세한 내용은 참조 [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)합니다.  
   
@@ -67,7 +68,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#4](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#4)]
      [!code-vb[SP_BDC#4](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#4)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [방법: Finder 메서드 추가](../sharepoint/how-to-add-a-finder-method.md)   
  [방법: 특정 Finder 메서드 추가](../sharepoint/how-to-add-a-specific-finder-method.md)   

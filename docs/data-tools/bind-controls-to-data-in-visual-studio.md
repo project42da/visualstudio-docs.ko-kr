@@ -15,11 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 4100066d6c6b86bf319cad3bc123098835807acb
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: d27975cf387c92e5afcc61bd267f383a6bed414a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747393"
 ---
 # <a name="bind-controls-to-data-in-visual-studio"></a>Visual Studio에서 데이터에 컨트롤 바인딩
 데이터를 컨트롤에 바인딩하여 응용 프로그램 사용자에게 데이터를 표시할 수 있습니다. 항목을 끌어 데이터 바인딩된 컨트롤을 만들 수 있습니다는 **데이터 소스** 창 디자인 화면 또는 Visual Studio에서 화면에 컨트롤에 있습니다.
@@ -33,7 +34,7 @@ ms.lasthandoff: 04/26/2018
 |-----------------|---------------------------------------------------------------|-----------------------------------------------------|-------------------------------------------------------------|
 |데이터 집합|예|예|아니요|
 |엔터티 데이터 모델|예<sup>1</sup>|예|예|
-|LINQ to SQL 클래스|더<sup>2</sup>|더<sup>2</sup>|더<sup>2</sup>|
+|LINQ to SQL 클래스|No<sup>2</sup>|No<sup>2</sup>|No<sup>2</sup>|
 |서비스 (포함 하 여 [!INCLUDE[ssAstoria](../data-tools/includes/ssastoria_md.md)], WCF 서비스 및 웹 서비스)|예|예|예|
 |Object|예|예|예|
 |SharePoint|예|예|예|
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 ## <a name="data-sources-window"></a>데이터 소스 창
  에 항목으로 데이터 소스는 프로젝트에서 사용할 수는 **데이터 소스** 창. 이 창 표시 또는에서 액세스할 수는 **보기** 양식 디자인 화면이 프로젝트의 활성 창 메뉴. 기본 데이터에 바인딩되는 컨트롤을 만들려면이 창에서 항목을 끌어 하 고 마우스 오른쪽 단추로 클릭 하 여 데이터 소스를 구성할 수도 있습니다.
 
- ![데이터 소스 창](../data-tools/media/raddata-data-sources-window.png "raddata 데이터 소스 창")
+ ![데이터 소스 창](../data-tools/media/raddata-data-sources-window.png)
 
  에 표시 되는 각 데이터 형식에는 **데이터 원본** 창 디자이너로 항목을 끌면 기본 컨트롤을 만들 된다 합니다. 항목을 끌어 오기 전에 **데이터 소스** 창 생성 되는 컨트롤을 변경할 수 있습니다. 자세한 내용은 참조 [데이터 소스 창에서 끌어 올 때 만들 컨트롤 설정](../data-tools/set-the-control-to-be-created-when-dragging-from-the-data-sources-window.md)합니다.
 

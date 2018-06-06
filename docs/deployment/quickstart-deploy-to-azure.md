@@ -12,11 +12,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - azure
-ms.openlocfilehash: c5c172ff3ec3033b50815efdb0b4ee293853ab1e
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: f91fd6e8c101b674b745c120978a47adb17c9b91
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765377"
 ---
 # <a name="publish-an-aspnet-or-aspnet-core-app-to-azure-app-service-using-visual-studio"></a>Visual Studio를 사용 하 여 Azure 응용 프로그램 서비스에 ASP.NET 또는 ASP.NET Core 응용 프로그램 게시
 
@@ -26,9 +27,9 @@ Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등�
 
 ## <a name="prerequisites"></a>전제 조건
 
-* Visual Studio 2017 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
+* 설치 된 Visual Studio 2017 있어야 및 **ASP.NET 및 웹 개발** 작업 부하 및. **NET 데스크톱 개발** 작업 합니다. .NET Core 앱에 대 한 필요한는 합니다. **NET 코어** 작업 합니다.
 
-    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+    아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지로 이동하여 체험용으로 설치합니다.
 
 ## <a name="create-a-new-project"></a>새 프로젝트 만들기 
 
@@ -81,4 +82,4 @@ Azure 계정이 아직 없는 경우 다음을 할 수 있습니다 [여기 등�
 이 빠른 시작에서는 Azure에 배포에 대 한 게시 프로필을 만들려면 Visual Studio를 사용 하는 방법을 알아보았습니다. 게시를 구성할 수도 있습니다를 가져와서 프로필 게시 Azure 앱 서비스에서 설정 합니다.
 
 > [!div class="nextstepaction"]
-> [게시 설정 하 고 Azure에 배포 하는 가져오기](tutorial-import-publish-settings-azure.md)
+> [게시 설정 가져오기 및 Azure에 배포](tutorial-import-publish-settings-azure.md)

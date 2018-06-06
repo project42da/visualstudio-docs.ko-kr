@@ -22,20 +22,21 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: a8a6b42a9cff28cc57365081bc4a041524ece7fa
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 4ca7f4befcb75a48e5b03637c143edfdd81b428a
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767743"
 ---
 # <a name="how-to-add-an-existing-bdc-model-file-to-a-sharepoint-project"></a>방법: SharePoint 프로젝트에 기존 BDC 모델 파일 추가
-  패키지를 사용자 지정할 수 있으며 BDC 비즈니스 데이터 연결 () 모델을 SharePoint 팜에 프로젝트 모델 파일 (.bdcm)를 추가 하려면 Visual Studio를 사용 하 여 다시 배포할 수 있습니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델을 만드는](../sharepoint/creating-a-business-data-connectivity-model.md)합니다.  
+  사용자 지정, 패키지 및 모델 파일을 추가 하려면 Visual Studio를 사용 하 여 비즈니스 데이터 BDC (연결) 모델을 다시 배포할 수 있습니다 (*.bdcm*)을 SharePoint 팜에 프로젝트. 자세한 내용은 참조 [비즈니스 데이터 연결 모델을 만드는](../sharepoint/creating-a-business-data-connectivity-model.md)합니다.  
   
 ### <a name="to-add-a-bdc-model-file-to-a-sharepoint-project"></a>BDC 모델 파일을 SharePoint 프로젝트에 추가 하려면  
   
 1.  **솔루션 탐색기**을 SharePoint 프로젝트에 대 한 폴더를 선택 합니다.  
   
-2.  메뉴 모음에서 **프로젝트**, **기존 항목 추가**합니다.  
+2.  메뉴 모음에서 **프로젝트** > **기존 항목 추가**합니다.  
   
 3.  에 **기존 항목 추가** 대화 상자, 프로젝트에 추가할 파일을 선택한 다음 선택 하려는 모델 정의 파일의 위치로 이동 하 여 **추가** 단추입니다.  
   
@@ -49,11 +50,11 @@ ms.lasthandoff: 04/16/2018
   
      **비즈니스 데이터 연결 모델** 항목이 프로젝트에 추가 됩니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [비즈니스 데이터 연결 모델 만들기](../sharepoint/creating-a-business-data-connectivity-model.md)   
  [방법: BDC 모델 만들기](../sharepoint/how-to-create-a-bdc-model.md)   
  [방법: 리소스 파일을 사용 하 여 지역화 된 이름, 속성 및 사용 권한을 지정 합니다.](../sharepoint/how-to-use-a-resource-file-to-specify-localized-names-properties-and-permissions.md)   
  [방법: BDC 기능에 사용자 지정 어셈블리 포함](../sharepoint/how-to-include-a-custom-assembly-in-a-bdc-feature.md)   
  [SharePoint에 비즈니스 데이터 통합](../sharepoint/integrating-business-data-into-sharepoint.md)  
   
-  
+ 

@@ -9,11 +9,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 61fdb4b652b7fe74f3baf80c6e9d6332914a9a1e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 77fe0d04b49cf12401c38b4a8842a14d6f84ccd2
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750261"
 ---
 # <a name="getting-started-with-domain-specific-languages"></a>도메인별 언어 시작
 이 항목에서는 정의 하 고 Visual Studio에 대 한 Modeling SDK를 사용 하 여 만든 도메인 특정 언어 DSL ()를 사용 하 여 기본 개념을 설명 합니다.
@@ -28,7 +29,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  DSL를 디자인 하는 경우에 VSIX Visual Studio Integration Extension () 패키지의 일부로 배포할 수 있습니다. Visual Studio에서 DSL을 사용 하는 사용자.
 
- ![패밀리 트리 다이어그램, 도구 상자 및 탐색기](../modeling/media/familyt_instance.png "FamilyT_Instance")
+ ![패밀리 트리 다이어그램, 도구 상자 및 탐색기](../modeling/media/familyt_instance.png)
 
  표기법은 DSL의 일부일 뿐입니다. VSIX 패키지 라는 표시와 함께 사용자가 편집 하 고 해당 모델에서 생성 하는 데 도움이 적용할 수 있는 도구를 포함 합니다.
 
@@ -60,7 +61,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
 3.  클릭 **도메인 특정 언어 디자이너**합니다.
 
-     ![DSL 만들기 대화 상자](../modeling/media/create_dsldialog.png "Create_DSLDialog")
+     ![DSL 만들기 대화 상자](../modeling/media/create_dsldialog.png)
 
 4.  에 **이름** 상자에서 입력 **FamilyTree**합니다. **확인**을 클릭합니다.
 
@@ -87,7 +88,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  이제 사용자 인터페이스는 다음 그림과 같이 표시됩니다.
 
- ![dsl 디자이너](../modeling/media/dsl_designer.png "dsl_designer")
+ ![DSL 디자이너](../modeling/media/dsl_designer.png)
 
  이 솔루션은 DSL을 정의합니다. 자세한 내용은 참조 [도메인 특정 언어 도구 사용자 인터페이스 개요](../modeling/overview-of-the-domain-specific-language-tools-user-interface.md)합니다.
 
@@ -136,7 +137,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
  Visual Studio 실험적 다음 예와 비슷하게 표시 됩니다.
 
- ![](../modeling/media/dsl_min.png "DSL_min")
+ ![](../modeling/media/dsl_min.png)
 
 ### <a name="the-content-of-a-model"></a>모델의 콘텐츠
  DSL의 인스턴스는 파일의 내용을 라고는 *모델*합니다. 모델에 포함 된 *모델 * * 요소* 및 *링크* 않은 요소 사이 있습니다. DSL 정의 어떤 유형의 모델 요소를 지정 하 고 링크 된 모델에 존재할 수 있습니다. 예를 들어 최소 언어 서식 파일을 생성 하는 DSL의 한 가지 유형의 모델 요소 및가 한 가지 유형의 링크
@@ -196,7 +197,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
 1.  DslDefinition 다이어그램 이름 바꾸기 **ExampleModel** 를 **FamilyTreeModel**, **ExampleElement** 를 **사람**,  **대상** 를 **부모**, 및 **소스** 를 **자식**합니다. 각 레이블을 변경 하려면 클릭 수 있습니다.
 
-     ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png "FamilyT_Person")
+     ![DSL 정의 다이어그램 &#45; 패밀리 트리 모델](../modeling/media/familyt_person.png)
 
 2.  요소 및 커넥터 도구를 이름을 바꿉니다.
 
@@ -255,7 +256,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
     4.  각 새 데코레이터를 선택 하 고 속성 창에서 설정 된 **위치** 필드입니다. 도메인 속성 값 모양에 표시할 위치를 결정 합니다. 예를 들어 설정 **InnerBottomLeft** 및 **InnerBottomRight**합니다.
 
-         ![구획 모양 정의](../modeling/media/familyt_compartment.png "FamilyT_Compartment")
+         ![구획 모양 정의](../modeling/media/familyt_compartment.png)
 
 3.  속성에는 데코레이터를 매핑하십시오.
 
@@ -271,7 +272,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
 6.  .Tt 파일을 각 사용자의 속성을 가져오는 코드를 추가할 수 있습니다.
 
- ![패밀리 트리 다이어그램, 도구 상자 및 탐색기](../modeling/media/familyt_instance.png "FamilyT_Instance")
+ ![패밀리 트리 다이어그램, 도구 상자 및 탐색기](../modeling/media/familyt_instance.png)
 
 ### <a name="define-new-classes"></a>새 클래스를 정의 하며
  모델에 도메인 클래스 및 관계를 추가할 수 있습니다. 예를 들어 도심지, 및를 개인은 동에 수명이 있는지를 나타내는 새 관계를 나타내는 새 클래스를 만들 수 있습니다.
@@ -297,7 +298,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
     1.  클릭는 **참조 관계** 도구, 개인을 클릭 한 다음 동을 클릭 합니다.
 
-         ![DSL 정의 조각: 패밀리 트리 루트](../modeling/media/familyt_root.png "FamilyT_Root")
+         ![DSL 정의 조각: 패밀리 트리 루트](../modeling/media/familyt_root.png)
 
         > [!NOTE]
         >  참조 관계를 다른 모델 트리의 한 부분에서 상호 참조를 나타냅니다.
@@ -322,7 +323,7 @@ Dsl을 처음 접하는 경우 통해 작업 하는 것이 좋습니다는 **DSL
 
     2.  사용 하 여는 **다이어그램 요소 맵** 사람 및 도시 간의 관계에 새 커넥터를 연결 하는 도구입니다.
 
-         ![추가 된 모양 맵 사용 하 여 패밀리 트리 정의](../modeling/media/familyt_shapemap.png "FamilyT_ShapeMap")
+         ![추가된 모양 맵을 사용하여 패밀리 트리 정의](../modeling/media/familyt_shapemap.png)
 
 6.  새로운 지역 하기 위한 요소 도구를 만듭니다.
 

@@ -1,5 +1,5 @@
 ---
-title: .NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 Office 프로젝트에서 리본 메뉴 사용자 지정 업데이트 | Microsoft Docs
+title: .NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 Office 프로젝트에서 리본 메뉴 사용자 지정 업데이트
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -15,29 +15,30 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 98c5dee34fd40506289cf4a9f31488c3acc710ba
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 8da42ad20a42e24ee826a559c6d1d38efb172100
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767639"
 ---
-# <a name="updating-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 또는 .NET Framework 4.5로 마이그레이션하는 Office 프로젝트에서 리본 메뉴 사용자 지정 업데이트
+# <a name="update-ribbon-customizations-in-office-projects-that-you-migrate-to-the-net-framework-4-or-the-net-framework-45"></a>.NET Framework 4 또는.NET Framework 4.5로 마이그레이션하는 Office 프로젝트에서 리본 메뉴 사용자 지정 업데이트
   프로젝트가 사용 하 여 만든 리본 사용자 지정을 포함 하는 경우는 **리본 (비주얼 디자이너)** 프로젝트 항목, 대상 프레임 워크를 변경 하면 프로젝트 코드를 다음과 같이 변경을 확인 해야는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 나중에 있습니다.  
   
 -   생성된 리본 코드를 수정합니다.  
   
 -   런타임에 리본 컨트롤을 인스턴스화하거나, 리본 이벤트를 처리하거나, 리본 구성 요소의 위치를 프로그래밍 방식으로 설정하는 모든 코드를 수정합니다.  
   
-## <a name="updating-the-generated-ribbon-code"></a>생성된 리본 코드 업데이트  
+## <a name="update-the-generated-ribbon-code"></a>생성된 된 리본 코드 업데이트  
  프로젝트의 대상 프레임워크가 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상으로 변경된 경우 다음 단계를 수행하여 리본 항목에 대해 생성된 코드를 변경해야 합니다. 업데이트해야 하는 코드 파일은 프로그래밍 언어 및 프로젝트를 만든 방법에 따라 달라집니다.  
   
 -   Visual Basic 프로젝트에서 또는 중 하나에서 만든 Visual C# 프로젝트에서 [!INCLUDE[vs_dev11_long](../sharepoint/includes/vs-dev11-long-md.md)] 또는 [!INCLUDE[vs_dev10_long](../sharepoint/includes/vs-dev10-long-md.md)] 리본 코드 숨김 파일에서 모든 단계를 수행 (*YourRibbonItem*합니다. Designer.cs 또는 *YourRibbonItem*합니다. Designer.vb)입니다. Visual Basic 프로젝트에서 코드 숨김 파일을 보려면 클릭는 **모든 파일 표시** 단추 **솔루션 탐색기**합니다.  
   
 -   Visual Studio 2008에서 만들고로 업그레이드 하는 Visual C# 프로젝트에서 [!INCLUDE[vs_dev12](../vsto/includes/vs-dev12-md.md)], 리본 코드 파일의 처음 두 단계를 수행 (*YourRibbonItem*.cs 또는 *YourRibbonItem*.vb), 및 리본 코드 숨김 파일에서 나머지 단계를 수행 합니다.  
   
-#### <a name="to-change-the-generated-ribbon-code"></a>생성된 리본 코드를 변경하려면  
+### <a name="to-change-the-generated-ribbon-code"></a>생성된 리본 코드를 변경하려면  
   
-1.  파생 되도록 Ribbon 클래스의 선언을 수정 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase> Microsoft.Office.Tools.Ribbon.OfficeRibbon 대신 합니다.  
+1.  `Microsoft.Office.Tools.Ribbon.OfficeRibbon` 대신 <xref:Microsoft.Office.Tools.Ribbon.RibbonBase>에서 파생되도록 Ribbon 클래스의 선언을 수정합니다.  
   
 2.  아래와 같이 Ribbon 클래스의 생성자를 수정합니다. 사용자 고유의 코드를 생성자에 추가한 경우 코드를 변경하지 마세요. Visual Basic 프로젝트에서 매개 변수가 없는 생성자만 수정합니다. 다른 생성자는 무시하세요.  
   
@@ -99,28 +100,28 @@ ms.lasthandoff: 04/16/2018
     this.button1 = this.Factory.CreateRibbonButton();  
     ```  
   
-     리본 컨트롤에 대 한 도우미 메서드의 전체 목록을 참조 하십시오. [리본 컨트롤 인스턴스화](#ribboncontrols)합니다.  
+     리본 컨트롤에 대 한 도우미 메서드의 전체 목록을 참조 하십시오. [인스턴스화할 리본 제어](#ribboncontrols)합니다.  
   
 4.  Visual C# 프로젝트에서 <xref:System.EventHandler%601> 대리자를 사용하는 `InitializeComponent` 메서드의 코드 줄을 특정 리본 대리자를 대신 사용하도록 수정합니다.  
   
      예를 들어 파일에 .NET Framework 3.5를 대상으로 하는 프로젝트에서 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click> 이벤트를 처리하는 다음 코드 줄이 있다고 가정합니다.  
   
-<CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
+    <CodeContentPlaceHolder>8</CodeContentPlaceHolder>  
      [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서는 다음 코드를 대신 사용해야 합니다.  
   
-<CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
-     리본 대리자의 전체 목록을 참조 하십시오. [리본 이벤트 처리](#ribbonevents)합니다.  
+    <CodeContentPlaceHolder>9</CodeContentPlaceHolder>  
+     리본 대리자의 전체 목록을 참조 하십시오. [처리 리본 이벤트](#ribbonevents)합니다.  
   
-5.  Visual Basic 프로젝트에서 파일의 끝에 있는 `ThisRibbonCollection` 클래스를 찾습니다. 이 클래스의 선언을 수정 하도록 Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection에서 더 이상 상속 합니다.  
+5.  Visual Basic 프로젝트에서 파일의 끝에 있는 `ThisRibbonCollection` 클래스를 찾습니다. 더 이상 `Microsoft.Office.Tools.Ribbon.RibbonReadOnlyCollection`에서 상속하지 않도록 이 클래스의 선언을 수정합니다.  
   
-##  <a name="ribboncontrols"></a> 리본 컨트롤 인스턴스화  
+##  <a name="ribboncontrols"></a> 리본 컨트롤을 인스턴스화합니다  
  리본 컨트롤을 동적으로 인스턴스화하는 코드를 수정해야 합니다. .NET Framework 3.5를 대상으로 프로젝트에서 리본 컨트롤은 특정 시나리오에서 직접 인스턴스화할 수 있는 클래스입니다. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 이러한 컨트롤은 직접 인스턴스화할 수 없는 인터페이스입니다. <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 개체가 제공하는 메서드를 사용하여 컨트롤을 만들어야 합니다.  
   
  <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 개체에 액세스하는 방법에는 다음 두 가지가 있습니다.  
   
 -   Ribbon 클래스의 팩터리 속성을 사용 합니다. Ribbon 클래스의 코드에서 이 방법을 사용합니다.  
   
--   Globals.Factory.GetRibbonFactory 메서드를 사용 하 합니다. Ribbon 클래스 외부 코드에서 이 방법을 사용합니다. Globals 클래스에 대 한 자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
+-   `Globals.Factory.GetRibbonFactory` 메서드 사용. Ribbon 클래스 외부 코드에서 이 방법을 사용합니다. Globals 클래스에 대 한 자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
   
  다음 코드 예제에서는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서 Ribbon 클래스에 <xref:Microsoft.Office.Tools.Ribbon.RibbonButton>을 만드는 방법을 보여 줍니다.  
   
@@ -159,16 +160,16 @@ ms.lasthandoff: 04/16/2018
 |<xref:Microsoft.Office.Tools.Ribbon.OfficeRibbon.Load>|<xref:Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler>|  
 |<xref:Microsoft.Office.Tools.Ribbon.RibbonButton.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonCheckBox.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonComboBox.TextChanged><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ButtonClick><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonDropDown.SelectionChanged><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonEditBox.TextChanged><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ButtonClick><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGallery.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonGroup.DialogLauncherClick><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonMenu.ItemsLoading><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonSplitButton.Click><br /><br /> <xref:Microsoft.Office.Tools.Ribbon.RibbonToggleButton.Click>|<xref:Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler>|  
   
-## <a name="setting-the-position-of-a-ribbon-component-programmatically"></a>프로그래밍 방식으로 리본 구성 요소의 위치 설정  
- 리본 그룹, 탭 또는 컨트롤의 위치를 설정하는 코드를 수정해야 합니다. 프로젝트에서.NET Framework 3.5를 대상으로 사용할 수 있습니다 정적 Microsoft.Office.Tools.Ribbon.RibbonPosition 클래스의 AfterOfficeId 및 BeforeOfficeId 메서드 그룹, 탭 또는 컨트롤의 위치 속성을 할당 하려면. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서는 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 개체가 제공하는 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.RibbonPosition%2A> 속성을 사용하여 이러한 메서드에 액세스해야 합니다.  
+## <a name="set-the-position-of-a-ribbon-component-programmatically"></a>프로그래밍 방식으로 리본 구성 요소의 위치 설정  
+ 리본 그룹, 탭 또는 컨트롤의 위치를 설정하는 코드를 수정해야 합니다. .NET Framework 3.5를 대상으로 하는 프로젝트에서는 정적 `Microsoft.Office.Tools.Ribbon.RibbonPosition` 클래스의 `AfterOfficeId` 및 `BeforeOfficeId` 메서드를 사용하여 그룹, 탭 또는 컨트롤의 `Position` 속성을 할당할 수 있습니다. [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 이상을 대상으로 하는 프로젝트에서는 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 개체가 제공하는 <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory.RibbonPosition%2A> 속성을 사용하여 이러한 메서드에 액세스해야 합니다.  
   
  <xref:Microsoft.Office.Tools.Ribbon.RibbonFactory> 개체에 액세스하는 방법에는 다음 두 가지가 있습니다.  
   
--   Ribbon 클래스의 팩터리 속성을 사용 합니다. Ribbon 클래스의 코드에서 이 방법을 사용합니다.  
+-   Ribbon 클래스의 `Factory` 속성 사용. Ribbon 클래스의 코드에서 이 방법을 사용합니다.  
   
--   Globals.Factory.GetRibbonFactory 메서드를 사용 하 합니다. Ribbon 클래스 외부 코드에서 이 방법을 사용합니다. Globals 클래스에 대 한 자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
+-   `Globals.Factory.GetRibbonFactory` 메서드 사용. Ribbon 클래스 외부 코드에서 이 방법을 사용합니다. Globals 클래스에 대 한 자세한 내용은 참조 [Office 프로젝트의 개체에 전역 액세스](../vsto/global-access-to-objects-in-office-projects.md)합니다.  
   
- 다음 코드 예제에서는.NET Framework 3.5를 대상으로 하는 프로젝트에서 Ribbon 클래스에서 탭의 위치 속성을 설정 하는 방법을 보여 줍니다.  
+ 다음 코드 예제에서는 .NET Framework 3.5를 대상으로 하는 프로젝트의 Ribbon 클래스에서 탭의 `Position` 속성을 설정하는 방법을 보여 줍니다.  
   
 ```vb  
 Me.tab1.Position = RibbonPosition.AfterOfficeId("TabHome")  
@@ -188,7 +189,7 @@ Me.tab1.Position = Me.Factory.RibbonPosition.AfterOfficeId("TabHome")
 this.tab1.Position = this.Factory.RibbonPosition.AfterOfficeId("TabHome");  
 ```  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [.NET Framework 4 이상으로 Office 솔루션 마이그레이션](../vsto/migrating-office-solutions-to-the-dotnet-framework-4-or-later.md)   
  [리본 디자이너](../vsto/ribbon-designer.md)  
   

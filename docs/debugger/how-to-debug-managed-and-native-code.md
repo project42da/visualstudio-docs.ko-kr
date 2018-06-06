@@ -16,11 +16,12 @@ manager: douge
 ms.workload:
 - dotnet
 - cplusplus
-ms.openlocfilehash: 548b86406ba36a6f46a2dfb3d4d894b5621c298c
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: d8987d24a6302c9d9ffd7ffdb127e52c57e22ff9
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764555"
 ---
 # <a name="tutorial-debug-managed-and-native-code-in-visual-studio"></a>자습서: Visual Studio에서 관리 및 네이티브 코드를 디버깅 합니다.
 
@@ -39,7 +40,7 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
 
 * Visual Studio가 설치 되어 있어야 하며 **c + + 데스크톱 개발** 작업 합니다.
 
-    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+    아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지로 이동하여 체험용으로 설치합니다.
 
     워크로드를 설치해야 하지만 이미 Visual Studio가 있는 경우 **새 프로젝트** 대화 상자의 왼쪽 창에서 **Open Visual Studio 설치 관리자** 링크를 클릭합니다. Visual Studio 설치 관리자가 시작됩니다. **Node.js 개발** 워크로드를 선택한 다음 **수정**을 선택합니다.
 
@@ -73,7 +74,7 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
     ```cpp
     #ifndef MIXED_MODE_MULTIPLY_HPP
     #define MIXED_MODE_MULTIPLY_HPP
-    
+
     extern "C"
     {
         __declspec(dllexport) int __stdcall mixed_mode_multiply(int a, int b) {
@@ -106,7 +107,7 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
 
 1. 응용 프로그램 코드에 대 한 템플릿을 선택 합니다.
 
-    .NET framework에 **새 프로젝트** 대화 상자에서 선택 **Visual C#**, **클래식 Windows 데스크톱** 설치 된 템플릿 섹션에서 한 다음 가운데 창에서 선택 **콘솔 응용 프로그램 (.NET Framework)** 합니다.
+    .NET framework에 **새 프로젝트** 대화 상자에서 선택 **Visual C#**, **Windows 바탕 화면** 선택한 다음 가운데 창 선택 설치된템플릿섹션에서 **콘솔 응용 프로그램 (.NET Framework)** 합니다.
 
     .NET core에서 **새 프로젝트** 대화 상자에서 선택 **Visual C#**, **.NET Core** 설치 된 템플릿 섹션에서 한 다음 가운데 창에서 선택  **콘솔 응용 프로그램 (.NET Core)** 합니다.
 
@@ -119,7 +120,7 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
     ```csharp
     using System;
     using System.Runtime.InteropServices;
-    
+
     namespace Mixed_Mode_Calling_App
     {
         public class Program
@@ -133,7 +134,7 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
             "mixed_mode_multiply", CallingConvention = CallingConvention.StdCall)]
             public static extern int Multiply(int x, int y);
             public static void Main(string[] args)
-            { 
+            {
                 int result = Multiply(7, 7);
                 Console.WriteLine("The answer is {0}", result);
                 Console.ReadKey();
@@ -165,9 +166,9 @@ Visual Studio를 사용 하면 혼합된 모드 디버깅 라는 둘 이상의 �
     ```
     "nativeDebugging": true
     ```
-    
+
     따라서 예를 들어 파일에는 다음과 같습니다.
-    
+
     ```
     {
       "profiles": {

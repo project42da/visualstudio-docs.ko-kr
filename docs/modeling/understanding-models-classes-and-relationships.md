@@ -11,11 +11,12 @@ ms.workload:
 - multiple
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-modeling
-ms.openlocfilehash: 408c74dbbf23abee5d548484014e0f2ddc66963e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 394b21d396bf92b794060ff27ed940e25a77aa26
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748490"
 ---
 # <a name="understanding-models-classes-and-relationships"></a>모델, 클래스 및 관계 이해
 도메인 특정 언어 DSL ()는 작성할 수 있는 모든 사용자 지정 프로그램 코드와 함께 해당 DSL 정의 파일에 의해 정의 됩니다. DSL 솔루션에 있는 프로그램 코드의 대부분은이 파일에서 생성 됩니다.
@@ -25,13 +26,13 @@ ms.lasthandoff: 04/26/2018
 ## <a name="the-dsl-definition"></a>DSL 정의
  열 때 `Dsl\DslDefinition.dsl`, [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 창이 다음 그림과 유사 합니다.
 
- ![dsl 디자이너](../modeling/media/dsl_designer.png "dsl_designer")
+ ![DSL 디자이너](../modeling/media/dsl_designer.png)
 
  DSL 정의에서 가장 중요 한 정보는 DSL 정의 다이어그램에 표시 됩니다. 추가 정보를 DslDefinition.dsl의 일부 이기도 한 경우 다이어그램의 측면에 일반적으로 표시 하는 DSL 탐색기에 표시 됩니다. 가장 자주 발생 하는 작업에 대 한 다이어그램 및 DSL 탐색기 고급 사용자 지정 작업 있습니다.
 
  DSL 정의 다이어그램의 모델 요소와 모델 요소 간에 링크를 정의 하는 관계를 정의 하는 도메인 클래스를 보여 줍니다. 또한 셰이프 및 사용자에 게 모델 요소를 표시 하는 데 사용 되는 연결선을 보여줍니다.
 
- ![스윔 레인이 있는 dsl 디자이너](../modeling/media/dsl_desinger.png "dsl_desinger")
+ ![스윔 레인이 있는 DSL 디자이너](../modeling/media/dsl_desinger.png)
 
  DSL 정의 다이어그램 또는 DSL 탐색기에서 항목을 선택할 때 속성 창에서 항목에 대 한 정보가 표시 됩니다. 자세한 내용은 DSL 세부 정보 창에 표시 될 수 있습니다.
 
@@ -45,13 +46,13 @@ ms.lasthandoff: 04/26/2018
 
  이 그림의 음악 라이브러리 DSL 사용자가 작성 된 모델을 보여 줍니다. 음악 앨범 노래 목록이 포함 된 상자에 의해 표현 됩니다. 아티스트 모퉁이가 둥근 상자에 의해 표시 되 고 작성 되었습니다 앨범에 연결 됩니다.
 
- ![생성 된 DSL의 인스턴스 모델](../modeling/media/music_instance.png "Music_Instance")
+ ![생성된 DSL의 인스턴스 모델](../modeling/media/music_instance.png)
 
  DSL 정의 두 가지 측면을 구분합니다. 모델 다이어그램에서 모델 요소의 모양은 모양 클래스 및 커넥터 클래스를 사용 하 여 정의 됩니다. 모델에 포함 되어 있는 정보 도메인 클래스 및 도메인 관계를 사용 하 여 정의 됩니다.
 
  다음 그림의 음악 라이브러리 DSL 정의에 도메인 클래스 및 관계를 보여 줍니다.
 
- ![포함 및 참조 관계](../modeling/media/music_classes.png "Music_Classes")
+ ![관계 포함 및 참조](../modeling/media/music_classes.png)
 
  그림 4 개의 도메인 클래스에서: 음악, 앨범, 음악가 및 노래 합니다. 도메인 클래스 이름, 제목, 등 도메인 속성을 정의합니다. 인스턴스 모델에서 이러한 속성 중 일부의 값은 다이어그램에 표시 됩니다.
 
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/26/2018
 ### <a name="the-explorer-displays-the-embedding-tree"></a>탐색기 포함 트리를 표시합니다.
  DSL 정의는 또한 사용자가 모델 다이어그램와 함께 볼 수 있는 탐색기, 만듭니다.
 
- ![생성 된 DSL 탐색기](../modeling/media/music_explorer.png "Music_Explorer")
+ ![생성된 DSL 탐색기](../modeling/media/music_explorer.png)
 
  탐색기를 이더라도 모든 셰이프를 정의 하지 않은 모델의 모든 요소를 보여 줍니다. 요소 및 포함 관계를 표시 하지만 관계를 참조 하지 않습니다.
 
@@ -122,7 +123,7 @@ ms.lasthandoff: 04/26/2018
 
  다음 그림에서는 사이의 선에 **게시자** 도메인 클래스 및 **PublisherCatalog** 도메인 관계 원본 역할입니다. 도메인 관계 사이 선 및 **앨범** 도메인 클래스는 대상 역할입니다.
 
- ![역할 및 속성 ] (../modeling/media/propertycode.png "PropertyCode")
+ ![역할 및 속성](../modeling/media/propertycode.png)
 
  관계와 관련 된 이름을 모델을 통과 하는 프로그램 코드를 작성 하는 경우에 특히 중요 합니다. 예를 들어 DSL 솔루션을 빌드할 때 생성된 된 클래스 게시자에는 속성이 카탈로그는 앨범의 컬렉션입니다. 앨범 클래스에는 속성이 게시자 클래스의 단일 인스턴스가 게시자.
 

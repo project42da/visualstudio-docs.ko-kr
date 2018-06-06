@@ -12,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - dotnet
-ms.openlocfilehash: bb13e88e07741327088e8d138dfcf8b92a9075a6
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a353d7a61f9bc1dbb83d37ad419c3d2fbdf656ba
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746561"
 ---
 # <a name="walkthrough-analyzing-managed-code-for-code-defects"></a>연습: 코드에 대 한 관리 코드 분석 오류
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/26/2018
 
 1. **파일** 메뉴에서 **새로 만들기** > **프로젝트...** 를 선택합니다.
 
-1. 에 **새 프로젝트** 대화 상자에서 **설치 됨** > **Visual C#** 를 선택한 후 **클래식 Windows 데스크톱**합니다.
+1. 에 **새 프로젝트** 대화 상자에서 **설치 됨** > **Visual C#** 를 선택한 후 **Windows 바탕 화면**합니다.
 
 1. 선택 된 **클래스 라이브러리 (.NET Framework)** 서식 파일입니다.
 

@@ -14,17 +14,17 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 433a8bc7cae982b5ec8106966ec8c6ca0af45076
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 53f34fbed4a2067836c5f2c7a8d4bf8aa6c09d29
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34690928"
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747042"
 ---
 # <a name="create-a-database-and-add-tables-in-visual-studio"></a>데이터베이스를 만들고 Visual Studio에서 테이블을 추가 합니다.
 만들고 SQL Server Express LocalDB에서 로컬 데이터베이스 파일을 업데이트 합니다. Visual Studio를 사용할 수 있습니다. TRANSACT-SQL 문을 실행 하 여 데이터베이스를 만들 수도 있습니다는 **SQL Server 개체 탐색기** Visual Studio의 도구 창입니다. 이 항목에서는.mdf 파일을 만들고 고 테이블 디자이너를 사용 하 여 테이블 및 키를 추가 합니다.
 
-## <a name="prerequisites"></a>필수 조건
+## <a name="prerequisites"></a>전제 조건
 이 연습을 완료 하려면 선택적 있어야 **데이터 저장 및 처리** Visual Studio에 설치 하는 작업입니다. 를 설치 하려면 열고 **Visual Studio 설치 관리자** 선택 하 고는 **작업** 탭 합니다. 아래 **웹 및 클라우드에**, 선택 **데이터 저장 및 처리**합니다. 선택 된 **수정** Visual Studio에 작업을 추가 하는 단추입니다.
 
 ## <a name="create-a-project-and-a-local-database-file"></a>프로젝트 및 로컬 데이터베이스 파일 만들기
@@ -36,7 +36,7 @@ ms.locfileid: "34690928"
 
 3.  항목 템플릿 목록에서 아래로 스크롤하여 선택 **서비스 기반 데이터베이스**합니다.
 
-     ![항목 템플릿 대화 상자](../data-tools/media/raddata-vsitemtemplates.png "raddata VSItemTemplates")
+     ![항목 템플릿 대화 상자](../data-tools/media/raddata-vsitemtemplates.png)
 
 4.  데이터베이스의 이름을 **SampleDatabase**를 선택한 후는 **추가** 단추입니다.
 
@@ -95,7 +95,7 @@ ms.locfileid: "34690928"
 
     다음과 같이 표시되어야 합니다.
 
-    ![테이블 디자이너](../data-tools/media/raddata-table-designer.png "raddata 테이블 디자이너")
+    ![테이블 디자이너](../data-tools/media/raddata-table-designer.png)
 
 7.  왼쪽 위 모서리에는 **테이블 디자이너**, 선택는 **업데이트** 단추입니다.
 
@@ -130,7 +130,7 @@ ms.locfileid: "34690928"
 ### <a name="to-create-a-foreign-key"></a>외래 키를 만들려면
 1.  눈금의 오른쪽에 컨텍스트 창에서에 대 한 바로 가기 메뉴를 열고 **외래 키**를 선택한 후 **새 외래 키 추가**다음 그림과 같이 합니다.
 
-     ![테이블 디자이너에서 외래 키를 추가할](../data-tools/media/foreignkey.png "ForeignKey")
+     ![테이블 디자이너에서 외래 키 추가하기](../data-tools/media/foreignkey.png)
 
 2.  표시 되는 텍스트 상자에서 대체 **ToTable** 와 `Customers`합니다.
 

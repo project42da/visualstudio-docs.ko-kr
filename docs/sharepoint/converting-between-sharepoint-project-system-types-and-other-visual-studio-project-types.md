@@ -15,14 +15,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d91b7d3927b9723c943676cf3ce15c4bc808b906
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: 64de38fe796ce3c1e0d333a22582ad2973e1c4d2
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34692121"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765361"
 ---
-# <a name="converting-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>SharePoint 프로젝트 시스템 형식과 기타 Visual Studio 프로젝트 형식 간 변환
+# <a name="convert-between-sharepoint-project-system-types-and-other-visual-studio-project-types"></a>SharePoint 프로젝트 시스템 형식과 기타 Visual Studio 프로젝트 형식 간의 변환
   일부 경우에는 SharePoint 프로젝트 시스템에서 개체를 할 수 있고 Visual Studio 자동화 개체 모델 또는 통합 개체 모델에 있는 해당 개체의 기능을 사용 하려는 또는 그 반대의 경우도 마찬가지입니다. 이러한 경우에 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> 다른 개체 모델에는 개체를 변환 하 여 SharePoint 프로젝트 서비스의 메서드.  
   
  예를 들어 있을 수 있습니다는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> 개체 남기려는에서 사용할 수 있는 메서드를 사용 하는 <xref:EnvDTE.Project> 또는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject> 개체입니다. 이 경우 사용할 수 있습니다는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService.Convert%2A> 변환 하는 메서드는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProject> 에 <xref:EnvDTE.Project> 또는 <xref:Microsoft.VisualStudio.Shell.Interop.IVsProject>합니다.  
@@ -45,7 +45,7 @@ ms.locfileid: "34692121"
   
  이 예제에는 다음 사항이 필요합니다.  
   
--   EnvDTE.dll 어셈블리에 대 한 참조가 있는 SharePoint 프로젝트 시스템의 확장입니다. 자세한 내용은 참조 [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)합니다.  
+-   에 대 한 참조가 있는 SharePoint 프로젝트 시스템의 확장은 *EnvDTE.dll* 어셈블리입니다. 자세한 내용은 참조 [SharePoint 프로젝트 시스템 확장](../sharepoint/extending-the-sharepoint-project-system.md)합니다.  
   
 -   등록 하는 코드는 `projectService_ProjectAdded` 처리 하는 메서드는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectEvents.ProjectAdded> 의 이벤트는 <xref:Microsoft.VisualStudio.SharePoint.ISharePointProjectService> 개체입니다. 예를 들어 참조 [하는 방법: SharePoint 프로젝트 확장 만들기](../sharepoint/how-to-create-a-sharepoint-project-extension.md)합니다.  
   

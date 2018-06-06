@@ -22,22 +22,23 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: b1660d440b72c48787af2cf2c653a420982c8799
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 7773c2c81527e065652486eb851f3c27828bf76d
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34767140"
 ---
 # <a name="how-to-add-a-finder-method"></a>방법: Finder 메서드 추가
-  웹 파트 또는 목록에서 엔터티 목록을 표시 하는 비즈니스 데이터 연결 서비스를 활성화 하려면 만들어야는 *Finder* 메서드. Finder 메서드는 엔터티 인스턴스의 컬렉션을 반환 하는 특수 한 메서드입니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
+  웹 파트 또는 목록에서 엔터티 목록을 표시 하려면 BDC 비즈니스 데이터 연결 () 서비스를 사용 하려면 만들어야는 *Finder* 메서드. Finder 메서드는 엔터티 인스턴스의 컬렉션을 반환 하는 특수 한 메서드입니다. 자세한 내용은 참조 [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)합니다.  
   
 ### <a name="to-create-a-finder-method"></a>Finder 메서드를 만들려면  
   
-1.  BDC 디자이너에서 엔터티를 선택 합니다.  
+1.  에 **BDC 디자이너**, 엔터티를 선택 합니다.  
   
      자세한 내용은 참조 [하는 방법: 모델에 엔터티 추가](../sharepoint/how-to-add-an-entity-to-a-model.md)합니다.  
   
-2.  메뉴 모음에서 **보기**, **다른 창**, **BDC 메서드 세부 정보**합니다.  
+2.  메뉴 모음에서 **보기** > **다른 창** > **BDC 메서드 세부 정보**합니다.  
   
      **BDC 메서드 세부 정보** 창이 열립니다. 에 대 한 자세한 내용은 **BDC 메서드 세부 정보** 창 참조 [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)합니다.  
   
@@ -66,7 +67,7 @@ ms.lasthandoff: 04/16/2018
      [!code-csharp[SP_BDC#2](../sharepoint/codesnippet/CSharp/SP_BDC/bdcmodel1/contactservice.cs#2)]
      [!code-vb[SP_BDC#2](../sharepoint/codesnippet/VisualBasic/sp_bdc/bdcmodel1/contactservice.vb#2)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료
  [BDC 모델 디자인 도구 개요](../sharepoint/bdc-model-design-tools-overview.md)   
  [비즈니스 데이터 연결 모델 디자인](../sharepoint/designing-a-business-data-connectivity-model.md)   
  [방법: 특정 Finder 메서드 추가](../sharepoint/how-to-add-a-specific-finder-method.md)   

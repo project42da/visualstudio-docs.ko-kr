@@ -18,14 +18,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 47a519db245e2ec15548ba1d46a583d0a73f466f
-ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
+ms.openlocfilehash: c9bc2dc1af5f2f040a15c5bee25a8d5dfc91afe2
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
-ms.locfileid: "34693486"
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34764771"
 ---
-# <a name="creating-reusable-controls-for-web-parts-or-application-pages"></a>웹 파트 또는 응용 프로그램 페이지에 대 한 재사용 가능한 컨트롤 만들기
+# <a name="create-reusable-controls-for-web-parts-or-application-pages"></a>웹 파트 또는 응용 프로그램 페이지에 대 한 재사용 가능한 컨트롤 만들기
   Visual Studio에서는 SharePoint에서 실행되는 응용 프로그램 페이지와 웹 파트에서 사용할 수 있는 재사용 가능한 사용자 지정 컨트롤을 만들 수 있습니다. 이러한 컨트롤은 사용자 컨트롤 이라고 합니다. 사용자 정의 컨트롤은 ASP.NET 웹 페이지 처럼 작동 하는 합성 컨트롤의 한 종류-사용자 정의 컨트롤에 기존 웹 서버 컨트롤 및 태그를 추가 하 고 컨트롤에 대해 속성과 메서드를 정의할 수 있습니다. ASP.NET 웹 페이지를 하나의 단위로 작동 여기서을 다음 포함할 수 있습니다.  
   
 ## <a name="create-a-user-control"></a>사용자 정의 컨트롤 만들기

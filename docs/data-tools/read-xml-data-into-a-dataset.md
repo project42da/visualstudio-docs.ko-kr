@@ -1,5 +1,5 @@
 ---
-title: 데이터 집합에 XML 데이터 읽기
+title: XML 데이터를 Dataset에 읽어오기
 ms.date: 11/04/2016
 ms.topic: conceptual
 dev_langs:
@@ -22,13 +22,14 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: d54811f2fe46733d256a473c5fcb1c523a15a71e
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bda3c6914259232eb3b579caaf2eb0a4f0d2e16e
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745938"
 ---
-# <a name="read-xml-data-into-a-dataset"></a>데이터 집합에 XML 데이터 읽기
+# <a name="read-xml-data-into-a-dataset"></a>XML 데이터를 Dataset에 읽어오기
 ADO.NET에는 XML 데이터 작업을 위한 간단한 방법을 제공 합니다. 이 연습에서는 데이터 집합에 XML 데이터를 로드 하는 Windows 응용 프로그램을 만듭니다. 데이터 집합은 다음에 표시 되는 <xref:System.Windows.Forms.DataGridView> 제어 합니다. 마지막으로, XML 파일의 내용에 따라 XML 스키마 텍스트 상자에 표시 됩니다.
 
  이 연습에서는 5 개의 주요 단계로 구성 됩니다.
@@ -53,7 +54,7 @@ ADO.NET에는 XML 데이터 작업을 위한 간단한 방법을 제공 합니�
 
 1. Visual Studio에서에 **파일** 메뉴 선택 **새로**, **프로젝트...** .
 
-2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **클래식 Windows 데스크톱**합니다.
+2. 확장 **Visual C#** 또는 **Visual Basic** 왼쪽 창에서 선택 **Windows 바탕 화면**합니다.
 
 3. 가운데 창에서 선택 된 **Windows Forms 앱** 프로젝트 형식을 합니다.
 

@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5b95d8396cd96741187ae0146d2f727c3433b3ef
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 7a6ad12c823d0a29bb2d4211f03010e484e79257
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751704"
 ---
 # <a name="graph-view"></a>그래프 보기
 
@@ -22,7 +23,7 @@ ms.lasthandoff: 05/24/2018
 
  다음 이미지에서는 디자인 화면에서 전역 노드가 6개인 그래프 뷰를 보여 줍니다.
 
- ![XML 스키마 디자이너 그래프 뷰](../xml-tools/media/xsddesigner_graphview.gif "XSDDesigner_GraphView")
+ ![XML 스키마 디자이너 그래프 뷰](../xml-tools/media/xsddesigner_graphview.gif)
 
 ## <a name="design-surface"></a>디자인 화면
 
@@ -34,7 +35,7 @@ ms.lasthandoff: 05/24/2018
 
  디자인 화면 비어 있으면 XML 편집기는 **XML 스키마 탐색기**, 및 워터 마크가 표시 됩니다. *워터 마크* 는 모든 XSD 디자이너 뷰에 대 한 링크 목록이 나와 있습니다.
 
- ![XSD 디자이너; 그래프 보기](../xml-tools/media/xsdgraphviewwatermark.gif "XSDGraphViewWatermark")
+ ![XSD 디자이너, 그래프 뷰](../xml-tools/media/xsdgraphviewwatermark.gif)
 
  스키마 집합에 오류가 있는 경우 목록 끝에 "오류 목록을 사용하여 스키마 집합의 오류 표시 및 수정"이라는 텍스트가 표시됩니다.
 
@@ -98,7 +99,7 @@ ms.lasthandoff: 05/24/2018
 
  그래프 뷰가 활성화되면 다음 XSD 도구 모음 단추를 사용할 수 있습니다.
 
- ![XML 스키마 디자이너 도구 모음](../xml-tools/media/xsdgraphviewtoolbar.gif "XSDGraphViewToolbar")
+ ![XML 스키마 디자이너 도구 모음](../xml-tools/media/xsdgraphviewtoolbar.gif)
 
 |옵션|설명|
 |------------|-----------------|

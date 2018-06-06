@@ -23,7 +23,7 @@ ms.openlocfilehash: 153b8faa356ceed9eecc5c616c2330f980728e49
 ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 06/01/2018
+ms.lasthandoff: 06/04/2018
 ms.locfileid: "34693970"
 ---
 # <a name="run-solutions-in-different-versions-of-microsoft-office"></a>다른 버전의 Microsoft Office에서 솔루션을 실행 합니다.

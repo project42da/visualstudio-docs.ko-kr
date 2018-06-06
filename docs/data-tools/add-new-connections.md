@@ -9,11 +9,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 5ea053e6b3f448311118b733c30b9ade5160288d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a7b580f8bd04c4fbce9518d903a568bbd0f9175a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747094"
 ---
 # <a name="add-new-connections"></a>새 연결 추가
 
@@ -35,23 +36,23 @@ ms.lasthandoff: 04/26/2018
 
 데이터베이스에 연결을 만들려면 클릭는 **연결 추가** 아이콘 **서버 탐색기**, 마우스 오른쪽 단추로 클릭 하거나 **서버 탐색기** 에 **데이터 연결** 노드 선택한 **연결 추가**합니다. 여기에서 다른 서버, SharePoint 서비스 또는 Azure 서비스에 데이터베이스에 연결할 수 있습니다.
 
-![서버 탐색기 새 연결 아이콘](../data-tools/media/raddata-server-explorer-new-connection-icon.png "raddata 서버 탐색기에 대 한 새 연결 상태 아이콘")
+![서버 탐색기 새 연결 아이콘](../data-tools/media/raddata-server-explorer-new-connection-icon.png)
 
 그러면는 **연결 추가** 대화 상자. 여기에서 SQL Server LocalDB 인스턴스의 이름을 입력 했습니다 했습니다.
 
-![새 연결 추가](../data-tools/media/raddata-add-new-connection-dialog.png "raddata 추가 새 연결 대화 상자")
+![새 연결 추가](../data-tools/media/raddata-add-new-connection-dialog.png)
 
 ## <a name="change-the-provider"></a>공급자 변경
 
 데이터 소스를 것을 원하지 않을 경우 클릭는 **변경** 단추를 새 데이터 소스 및/또는 새 ADO.NET 데이터 공급자를 선택 합니다. 새 공급자를 구성한 방법에 따라 자격 증명을 요청할 수 있습니다.
 
-![데이터 공급자 AD0.NET 변경](../data-tools/media/raddata-change-ad0.net-data-provider.png "raddata AD0.NET 데이터 공급자 변경")
+![AD0.NET 데이터 공급자 변경](../data-tools/media/raddata-change-ad0.net-data-provider.png)
 
 ## <a name="test-the-connection"></a>연결 테스트
 
 데이터 소스를 선택한 후 클릭 **연결 테스트**합니다. 성공 하지 못한 할 경우 문제를 해결 하는 공급 업체의 설명서에 따라 합니다.
 
-![연결 테스트](../data-tools/media/raddata-test-connection.png "raddata 연결 테스트")
+![연결 테스트](../data-tools/media/raddata-test-connection.png)
 
 만들 준비가 된 테스트에 성공 하면는 *데이터 소스*, 의미 있는 Visual Studio 용어는 *데이터 모델* 기본 데이터베이스 또는 서비스를 기반으로 하는 합니다.
 

@@ -15,11 +15,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 59f273c511a24b1139b03421c2ca59871350aec3
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 43e75e69899f74fb67980172c546cdc99d41d173
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747146"
 ---
 # <a name="n-tier-data-applications-overview"></a>N 계층 데이터 응용 프로그램 개요
 *N 계층* 데이터 응용 프로그램은 여러도 분리 되어 있는 데이터 응용 프로그램 *계층*합니다. N 계층 응용 프로그램 "분산된 응용 프로그램" 및 "다중 계층 응용 프로그램" 라고도 함, 클라이언트와 서버 간에 배포 된 개별 계층으로 처리를 구분 합니다. 데이터에 액세스 하는 응용 프로그램을 개발 하는 경우 응용 프로그램을 구성 하는 다양 한 계층 간의 분리를 있어야 합니다.
@@ -58,7 +59,7 @@ Visual Studio는 개발자가 n 계층 응용 프로그램을 만들 수 있도�
 
 다음은 기능 및 Visual Studio에서 사용할 수 있는 수에 맞는 n 계층 응용 프로그램의 중간 계층 및 기술입니다.
 
-![중간 계층 구성 요소](../data-tools/media/ntiermid.png "NtierMid") 중간 계층
+![중간 계층 구성 요소](../data-tools/media/ntiermid.png) 중간 계층
 
 일반적으로 중간 계층 데이터 연결을 사용 하 여 데이터 계층에 연결 합니다. 이 데이터 연결 대개 데이터 액세스 구성 요소에 저장 됩니다.
 
@@ -67,7 +68,7 @@ Visual Studio는 개발자가 n 계층 응용 프로그램을 만들 수 있도�
 
 다음은 기능 및 Visual Studio에서 사용할 수 있는 수에 맞는 n 계층 응용 프로그램의 데이터 계층 및 기술입니다.
 
-![데이터 계층 구성 요소](../data-tools/media/ntierdatatier.png "ntierdatatier") 데이터 계층
+![데이터 계층 구성 요소](../data-tools/media/ntierdatatier.png) 데이터 계층
 
 데이터 계층 프레젠테이션 계층에 클라이언트에서 직접 액세스할 수 없습니다. 대신, 중간 계층에서 데이터 액세스 구성 요소 프레젠테이션 및 데이터 계층 간의 통신에 사용 됩니다.
 

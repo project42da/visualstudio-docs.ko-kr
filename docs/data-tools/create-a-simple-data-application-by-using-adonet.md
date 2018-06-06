@@ -13,11 +13,12 @@ ms.prod: visual-studio-dev15
 ms.technology: vs-data-tools
 ms.workload:
 - data-storage
-ms.openlocfilehash: 3d0b60bb4e7048e2dc49774ec69d3eea4fc0ce6c
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 0c4e985231f8e74095add3e8a3a3e412814bed0d
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745804"
 ---
 # <a name="create-a-simple-data-application-by-using-adonet"></a>ADO.NET을 사용 하 여 간단한 데이터 응용 프로그램 만들기
 
@@ -83,7 +84,7 @@ ms.lasthandoff: 04/26/2018
 
  **Navigation 폼**
 
- ![탐색 대화 상자](../data-tools/media/simpleappnav.png "SimpleAppNav")
+ ![검색 대화 상자](../data-tools/media/simpleappnav.png)
 
 |Navigation 폼 컨트롤|속성|
 |--------------------------------------|----------------|
@@ -93,7 +94,7 @@ ms.lasthandoff: 04/26/2018
 
  **NewCustomer 폼**
 
- ![새 고객을 추가 하 고 주문](../data-tools/media/simpleappnewcust.png "SimpleAppNewCust")
+ ![새 고객을 추가하고 주문하기](../data-tools/media/simpleappnewcust.png)
 
 |NewCustomer 폼 컨트롤|속성|
 |---------------------------------------|----------------|
@@ -108,7 +109,7 @@ ms.lasthandoff: 04/26/2018
 
  **FillOrCancel 폼**
 
- ![주문 입력 또는 취소](../data-tools/media/simpleappcancelfill.png "SimpleAppCancelFill")
+ ![주문 입력 또는 취소](../data-tools/media/simpleappcancelfill.png)
 
 |FillOrCancel 폼 컨트롤|속성|
 |----------------------------------------|----------------|

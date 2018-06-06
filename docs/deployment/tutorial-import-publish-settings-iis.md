@@ -11,11 +11,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 907fecd348dba46f6d3375d2d994b04ec1cf1eb5
-ms.sourcegitcommit: d1824ab926ebbc4a8057163e0edeaf35cec57433
+ms.openlocfilehash: 02e6ae6e06daf43a6aec08097df2b37a21d2aaa3
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/24/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34766680"
 ---
 # <a name="publish-an-application-to-iis-by-importing-publish-settings-in-visual-studio"></a>IIS에 응용 프로그램을 가져와서 게시 Visual Studio에서 게시 설정
 
@@ -40,7 +41,7 @@ ms.lasthandoff: 05/24/2018
 
 * Visual Studio 2017 설치 되어 있어야 하며 **ASP.NET** 및 **.NET Framework** 개발 작업 합니다. .NET Core 응용 프로그램에 대해도 필요는 **.NET Core** 작업 합니다.
 
-    아직 Visual Studio를 설치하지 않은 경우 [여기](http://www.visualstudio.com)에서 평가판을 설치합니다.
+    아직 Visual Studio를 설치하지 않은 경우 [Visual Studio 다운로드](https://www.visualstudio.com/downloads/?utm_medium=microsoft&utm_source=docs.microsoft.com&utm_campaign=button+cta&utm_content=download+vs2017) 페이지로 이동하여 체험용으로 설치합니다.
 
 * IIS에서 게시 설정 파일을 생성 하려면 Windows Server 2012 또는 Windows Server 2016을 실행 하는 컴퓨터 있어야 하며 올바르게 구성 하는 IIS 웹 서버 역할에 있어야 합니다. ASP.NET 4.5 또는 ASP.NET Core도 설치 해야 합니다. ASP.NET Core 참조 [를 IIS에 게시](/aspnet/core/publishing/iis?tabs=aspnetcore2x#iis-configuration)합니다. ASP.NET 4.5에 대해 참조 [IIS 8.0를 사용 하 여 ASP.NET 3.5 및 ASP.NET 4.5](/iis/get-started/whats-new-in-iis-8/iis-80-using-aspnet-35-and-aspnet-45)합니다.
 
@@ -66,17 +67,17 @@ ms.lasthandoff: 05/24/2018
 
 ## <a name="create-the-publish-settings-file-in-iis-on-windows-server"></a>Windows Server에는 IIS에서 게시 설정 파일 만들기
 
-[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/create-publish-settings-iis.md)]
+[!INCLUDE [create-publish-settings-iis](../deployment/includes/create-publish-settings-iis.md)]
 
 ## <a name="import-the-publish-settings-in-visual-studio-and-deploy"></a>Visual Studio에서 게시 설정 가져오기 및 배포
 
-[!INCLUDE [install-web-deploy-with-hosting-server](../deployment/includes/import-publish-settings-vs.md)]
+[!INCLUDE [import-publish-settings](../deployment/includes/import-publish-settings-vs.md)]
 
 응용 프로그램을 성공적으로 배포 후 자동으로 시작 해야 합니다. Visual Studio에서 시작 되지 않으면, IIS에서 앱을 시작 합니다. ASP.NET Core 응용 프로그램 풀 필드에 있는지 확인 해야는 **DefaultAppPool** 로 설정 된 **관리 코드 없음**합니다.
 
 ## <a name="next-steps"></a>다음 단계
 
-게시 설정 파일을 만든이 자습서에서는 Visual Studio로 가져올을 IIS에 ASP.NET 응용 프로그램을 배포 합니다.
+게시 설정 파일을 만든이 자습서에서는 Visual Studio로 가져올을 IIS에 ASP.NET 응용 프로그램을 배포 합니다. Visual Studio에서 기타 게시 옵션의 개요를 할 수 있습니다.
 
 > [!div class="nextstepaction"]
 > [배포 소개](../deployment/deploying-applications-services-and-components.md)
