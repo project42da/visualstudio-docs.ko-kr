@@ -9,11 +9,12 @@ manager: douge
 ms.workload:
 - multiple
 author: gewarren
-ms.openlocfilehash: 918a2087635b88e018234f4c5dddff5e1f5f45d5
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 15298414788c112c4f6a1f761055efd38933dfde
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751444"
 ---
 # <a name="using-html5-controls-in-coded-ui-tests"></a>코딩된 UI 테스트에서 HTML5 컨트롤 사용
 
@@ -45,7 +46,7 @@ ms.lasthandoff: 04/26/2018
 ###  <a name="UsingHTML5ControlsCodedUITestsAudio"></a> 오디오 컨트롤
  **오디오 컨트롤:** HTML5 오디오 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.
 
- ![HTML5 오디오 컨트롤](../test/media/codedui_html5_audio.png "CodedUI_HTML5_Audio")
+ ![HTML5 오디오 컨트롤](../test/media/codedui_html5_audio.png)
 
 |작업|기록 중|생성된 코드|
 |------------|---------------|--------------------|
@@ -89,7 +90,7 @@ string Volume
 ###  <a name="UsingHTML5ControlsCodedUITestsVideo"></a> 비디오 컨트롤
  **비디오 컨트롤:** HTML5 비디오 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.
 
- ![HTML5 비디오 컨트롤](../test/media/codedui_html5_video.png "CodedUI_HTML5_Video")
+ ![HTML5 비디오 컨트롤](../test/media/codedui_html5_video.png)
 
 |작업|기록 중|생성된 코드|
 |------------|---------------|--------------------|
@@ -120,7 +121,7 @@ string VideoWidth
 ###  <a name="UsingHTML5ControlsCodedUITestsSlider"></a> 슬라이더
  **슬라이더 컨트롤:** HTML5 슬라이더 컨트롤에 대한 작업은 올바르게 기록되고 재생됩니다.
 
- ![HTML5 슬라이더 컨트롤](../test/media/codedui_html5_slider.png "CodedUI_HTML5_Slider")
+ ![HTML5 슬라이더 컨트롤](../test/media/codedui_html5_slider.png)
 
 |작업|기록 중|생성된 코드|
 |------------|---------------|--------------------|
@@ -140,7 +141,7 @@ string ValueAsNumber
 ###  <a name="UsingHTML5ControlsCodedUITestsProgressbar"></a> ProgressBar
  **ProgreesBar 컨트롤:** ProgressBar는 상호 작용할 수 없는 컨트롤입니다. 이 컨트롤의 `Value` 및 `Max` 속성에 어설션을 추가할 수 있습니다.
 
- ![HTML5 ProgressBar 컨트롤](../test/media/codedui_html5_progressbar.png "CodedUI_HTML5_ProgressBar")
+ ![HTML5 ProgressBar 컨트롤](../test/media/codedui_html5_progressbar.png)
 
 ## <a name="see-also"></a>참고 항목
 

@@ -9,11 +9,12 @@ description: 별칭 또는 대화명을 사용하는 경우 로그인에 실패�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: 869835e53b1975d86501660b3e4ca34a41a1a7d4
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 765862efcd3b83be2d52767dbc81570da2e8f9d6
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477654"
 ---
 # <a name="signing-in-to-visual-studio-subscriptions-may-fail-when-using-aliases"></a>별칭을 사용하여 Visual Studio 구독에 로그인하지 못할 수 있음
 
@@ -48,25 +49,26 @@ ms.lasthandoff: 04/06/2018
 1. VLSC([볼륨 라이선스 서비스 센터](https://www.microsoft.com/Licensing/servicecenter/default.aspx))를 방문하여 로그인합니다.
 2. VLSC 관리 페이지에서 **구독**, **Visual Studio 구독**을 차례로 클릭합니다.
 
-    ![구독 메뉴](_img//vlsc/vlsc-subscriptions.png)
+    <img alt="Subscriptions menu" src="_img//vlsc/vlsc-subscriptions.png" style="border: 1px solid #CCCCCC" />
 
 3. Visual Studio 구독에 연결된 **계약 번호**를 클릭합니다.
 
-    ![계약 선택](_img/vlsc/vlsc-agreement.png)
+    <img alt="Select agreement" src="_img/vlsc/vlsc-agreement.png" style="border: 1px solid #CCCCCC" />
 
 4. **구독 할당**을 클릭합니다.
 
-    ![구독 할당](_img/vlsc/vlsc-assign.png)
+    <img alt="Assign subscription" src="_img/vlsc/vlsc-assign.png" style="border: 1px solid #CCCCCC" />
+
 
 5. 원하는 **구독 수준**을 선택합니다.
 
-    ![구독 수준](_img/vlsc/vlsc-subscription-level.png)
-    
+    <img alt="Subscription level" src="_img/vlsc/vlsc-subscription-level.png" style="border: 1px solid #CCCCCC" /> 
+
 6. 할당할 수 있는 구독이 있는지 확인하고 **다음**을 클릭합니다.
 7.  [전자 메일 주소] 필드에 구독자 세부 정보 및 디렉터리 주소를 입력하고 **다음**을 클릭합니다.
 
-    ![전자 메일 주소](_img/vlsc/vlsc-email-address.png)
-    
+    <img alt="Email address" src="_img/vlsc/vlsc-email-address.png" style="border: 1px solid #CCCCCC" /> 
+        
 8. 구독자 정보를 확인하고 **마침**을 클릭합니다.
 
 9. 아래 [템플릿](#notifying-your-subscribers-with-directory-addresses)을 사용하여 해당 구독이 프로비전되었음을 구독자에게 알립니다.

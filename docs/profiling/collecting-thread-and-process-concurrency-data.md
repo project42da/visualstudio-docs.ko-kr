@@ -12,13 +12,14 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: d5314977b527358ebb3417423a20271c15a51130
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 424675726dd91664923cde0a3a5ad5573d51b4d5
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34548339"
 ---
-# <a name="collecting-thread-and-process-concurrency-data"></a>스레드 및 프로세스 동시성 데이터 수집
+# <a name="collect-thread-and-process-concurrency-data"></a>스레드 및 프로세스 동시성 데이터 수집
 
 Visual Studio 프로파일링 도구의 동시성 프로파일링 방법을 사용하면 프로파일링된 응용 프로그램의 함수가 리소스에 액세스하기 위해 대기하도록 하는 모든 동기화 이벤트에 대한 정보가 포함된 리소스 경합 데이터를 수집할 수 있습니다.
 
@@ -42,4 +43,4 @@ Visual Studio 프로파일링 도구의 동시성 프로파일링 방법을 사�
 |**시작** 페이지에서 코드 솔루션에.여러 .exe 프로젝트가 있는 경우 시작할 응용 프로그램을 지정합니다.|- [방법: 시작할 이진 파일 지정](../profiling/how-to-specify-the-binary-to-start.md)|
 |**계층 상호 작용** 페이지에서 프로파일링 실행에 ADO.NET 호출 데이터를 추가합니다.|- [계층 상호 작용 데이터 수집](../profiling/collecting-tier-interaction-data.md)|
 |**Windows 카운터** 페이지에서 프로파일링 데이터에 표시로 추가할 운영 체제 성능 카운터를 하나 이상 지정합니다.|- [방법: Windows 카운터 데이터 수집](../profiling/how-to-collect-windows-counter-data.md)|
-|**고급** 페이지에서, 응용 프로그램 모듈이 여러 버전을 사용하는 경우 프로파일링할 .NET Framework 런타임의 버전을 지정합니다. 기본적으로 첫 번째 로드된 버전이 프로파일링됩니다.|- [방법:.NET Framework 런타임 지정](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|
+|**고급** 페이지에서, 응용 프로그램 모듈이 여러 버전을 사용하는 경우 프로파일링할 .NET Framework 런타임의 버전을 지정합니다. 기본적으로 첫 번째 로드된 버전이 프로파일링됩니다.|- [방법: .NET Framework 런타임 지정](../profiling/how-to-specify-the-dotnet-framework-runtime.md)|

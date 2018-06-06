@@ -19,11 +19,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 7e6c47739b2f6de55ea51a2a00ffc90aec696e8d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 5ed1806ce5810814c8ea2ce9c08462ecc8f9fd77
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747231"
 ---
 # <a name="identify-and-customize-keyboard-shortcuts-in-visual-studio"></a>Visual Studio에서 바로 가기 키 식별 및 사용자 지정
 
@@ -48,7 +49,7 @@ Visual Studio 명령에 대한 바로 가기 키를 확인하고, 해당 바로 
 
 2. **환경**을 확장한 다음 **키보드**를 선택합니다.
 
-   ![옵션 대화 상자에 바로 가기 키를 표시합니다.](../ide/media/optionskeyboard.png "OptionsKeyboard")
+   ![옵션 대화 상자에 바로 가기 키를 표시합니다.](../ide/media/optionskeyboard.png)
 
 3. **다음 문자열을 포함하는 명령 표시** 상자에 명령 이름의 전부 또는 일부를 공백 없이 입력합니다.
 
@@ -60,7 +61,7 @@ Visual Studio 명령에 대한 바로 가기 키를 확인하고, 해당 바로 
 
 5. 명령에 바로 가기 키가 있는 경우, **선택한 명령의 바로 가기** 목록에 표시됩니다.
 
-   ![지정한 명령의 바로 가기를 봅니다.](../ide/media/viewshortcut.png "ViewShortcut")
+   ![지정한 명령의 바로 가기 보기](../ide/media/viewshortcut.png)
 
 ## <a name="customize-a-keyboard-shortcut"></a>바로 가기 키 사용자 지정
 
@@ -86,7 +87,7 @@ Visual Studio 명령에 대한 바로 가기 키를 확인하고, 해당 바로 
 
      다른 명령에 이미 할당된 바로 가기의 경우 **이 바로 가기 키를 사용하는 명령** 상자에 나타납니다. 이 경우, 다른 바로 가기를 넣어 보기 전에 **백스페이스 키**를 선택하여 해당 바로 가기를 삭제하십시오.
 
-    ![명령에 다른 바로 가기를 지정합니다.](../ide/media/reassignshortcut.png "ReassignShortcut")
+    ![명령에 다른 바로 가기를 지정합니다.](../ide/media/reassignshortcut.png)
 
 7. **할당** 단추를 선택합니다.
 
@@ -107,7 +108,7 @@ Visual Studio 명령에 대한 바로 가기 키를 확인하고, 해당 바로 
 
 4. **키보드** 확인란을 선택하고 **다음** 단추를 선택합니다.
 
-    ![사용자 지정 바로 가기 키만 내보냅니다.](../ide/media/exportshortcuts.png "ExportShortcuts")
+    ![사용자 지정 바로 가기 키만 내보냅니다.](../ide/media/exportshortcuts.png)
 
 5. **설정 파일 이름을 지정하시겠습니까?** 및 **이 디렉터리에 사용자 설정 파일 저장** 상자에서 기본값을 그대로 두거나 다른 값을 지정한 다음 **마침** 단추를 선택합니다.
 
@@ -129,7 +130,7 @@ Visual Studio 명령에 대한 바로 가기 키를 확인하고, 해당 바로 
 
 7. **키보드** 확인란을 선택하고 **마침** 단추를 선택합니다.
 
-    ![사용자 지정 바로 가기 키만 가져옵니다.](../ide/media/importshortcuts.png "ImportShortcuts")
+    ![사용자 지정 바로 가기 키만 가져옵니다.](../ide/media/importshortcuts.png)
 
 ## <a name="see-also"></a>참고 항목
 

@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 11e8c592bb91fc516ad6a5379330201198c65c14
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: e67ca994015dcb2609dce8680000a6d47c3b3a4e
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34748207"
 ---
 # <a name="how-to-create-a-basic-lambert-shader"></a>방법: 기본 램버트 셰이더 만들기
 
@@ -41,13 +42,13 @@ ms.lasthandoff: 04/26/2018
 > [!NOTE]
 > 이 그림에서 셰이더의 효과를 더 잘 보여 주기 위해 셰이더의 **MaterialDiffuse** 매개 변수를 사용하여 주황색이 지정되었습니다. 게임 또는 앱에서는 이 매개 변수를 사용하여 각 개체의 고유한 색 값을 제공합니다. 재질 매개 변수에 대한 자세한 내용은 [셰이더 디자이너](../designers/shader-designer.md)의 셰이더 미리 보기 섹션을 참조하세요.
 
- ![셰이더 그래프 및 효과 미리 보기.](../designers/media/digit-lambert-effect-graph.png "Digit-Lambert-Effect-Graph")
+ ![셰이더 그래프 및 효과 미리 보기.](../designers/media/digit-lambert-effect-graph.png)
 
  일부 셰이더의 경우 특정 도형을 사용하면 미리 보기가 더 잘 표시될 수 있습니다. 셰이더 디자이너에서 셰이더를 미리 보는 방법에 대한 자세한 내용은 [셰이더 디자이너](../designers/shader-designer.md)의 셰이더 미리 보기 섹션을 참조하세요.
 
  다음 그림은 3D 모델에 적용되는 이 문서에서 설명된 셰이더를 보여줍니다.
 
- ![모델에 적용된 램버트 조명.](../designers/media/digit-lambert-effect-result.png "Digit-Lambert-Effect-Result")
+ ![모델에 적용된 램버트 조명.](../designers/media/digit-lambert-effect-result.png)
 
  3D 모델에 셰이더를 적용하는 방법에 대한 자세한 내용은 [방법: 3D 모델에 셰이더 적용](../designers/how-to-apply-a-shader-to-a-3-d-model.md)을 참조하세요.
 

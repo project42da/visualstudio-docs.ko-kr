@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: afe72522d235579147b645c27cf4f560827f555d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 529486e39db57228feb703817eea44fab9399c85
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745765"
 ---
 # <a name="view-type-and-member-definitions"></a>형식 및 멤버 정의 보기
 
@@ -27,7 +28,7 @@ ms.lasthandoff: 04/26/2018
 
 ## <a name="go-to-definition"></a>정의로 이동
 
-**정의로 이동** 기능은 형식 또는 멤버의 소스로 이동하고 새 탭에 결과를 엽니다. 키보드 사용자인 경우 텍스트 커서를 기호 이름의 어딘가에 놓고 **F12** 키를 누릅니다. 마우스 사용자인 경우 상황에 맞는 메뉴에서 **정의로 이동**을 선택하거나 다음 섹션에 설명된 **Ctrl-클릭** 기능을 사용합니다.
+**정의로 이동** 기능은 형식 또는 멤버의 소스로 이동하고 새 탭에 결과를 엽니다. 키보드 사용자인 경우 텍스트 커서를 기호 이름의 어딘가에 놓고 **F12** 키를 누릅니다. 마우스 사용자인 경우 컨텍스트 메뉴에서 **정의로 이동**을 선택하거나 다음 섹션에 설명된 **Ctrl-클릭** 기능을 사용합니다.
 
 ### <a name="ctrl-click-go-to-definition"></a>Ctrl 키를 누른 채로 [정의로 이동] 클릭
 
@@ -61,10 +62,10 @@ Visual Studio 2017 15.4 버전에는 마우스 사용자가 **정의로 이동**
 
 예를 들어 <xref:System.Console>에 대해 **정의로 이동** 명령을 실행하는 경우 <xref:System.Console>에 대한 메타데이터가 코드 편집기에 C# 소스 코드로 나타납니다. 코드는 선언과 유사하지만 구현을 표시하지는 않습니다.
 
-![소스로서의 메타데이터](../ide/media/metadatasource.png "MetadataSource")
+![소스로서의 메타데이터](../ide/media/metadatasource.png)
 
 > [!NOTE]
-> 내부로 표시된 형식 또는 멤버에 대해 **정의로 이동** 또는 **정의 피킹(Peeking)** 명령을 실행하려고 하면 참조하는 어셈블리가 friend인지 여부와 관계없이 Visual Studio에서 해당 메타데이터를 소스 코드로 표시하지 않습니다.
+> 내부로 표시된 형식 또는 멤버에 대해 **정의로 이동** 또는 **정의 피킹(Peeking)** 명령을 실행하려고 하면 참조하는 어셈블리가 friend인지 여부에 관계없이 Visual Studio에서 해당 메타데이터를 소스 코드로 표시하지 않습니다.
 
 ### <a name="view-decompiled-source-definitions-instead-of-metadata-c"></a>메타데이터 대신 디컴파일된 소스 정의 보기(C#)
 

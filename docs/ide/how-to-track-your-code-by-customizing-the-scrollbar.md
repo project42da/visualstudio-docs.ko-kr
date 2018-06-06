@@ -9,11 +9,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: a5b7094aba90a8844480536e6f44951fb7dc15ad
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: bc18b436a7f25baad9870e36c3224f23de920241
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745739"
 ---
 # <a name="how-to-track-your-code-by-customizing-the-scrollbar"></a>방법: 스크롤 막대를 사용자 지정하여 코드 추적
 
@@ -33,11 +34,11 @@ ms.lasthandoff: 05/22/2018
 
     문자열을 검색한 후 스크롤 막대가 표시되는 모양은 다음과 같습니다. 문자열의 모든 인스턴스가 표시되는지 확인합니다.
 
-    ![문자열을 찾은 후 스크롤 막대.](../ide/media/enhancedscrollbarsearch.png "EnhancedScrollbarSearch")
+    ![문자열을 찾은 후 스크롤 막대](../ide/media/enhancedscrollbarsearch.png)
 
     문자열의 모든 인스턴스를 바꾼 후 스크롤 막대는 다음과 같습니다. 작업으로 인해 일부 문제가 발생했음을 즉시 확인할 수 있습니다.
 
-    ![오류가 있는 문자열을 바꾼 후 스크롤 막대](../ide/media/enhancedscrollbarreplace.png "EnhancedScrollbarReplace")
+    ![오류가 있는 문자열을 바꾼 후 스크롤 막대](../ide/media/enhancedscrollbarreplace.png)
 
 ## <a name="to-set-the-display-mode-for-the-scroll-bar"></a>스크롤 막대의 디스플레이 모드를 설정하려면
 
@@ -47,11 +48,11 @@ ms.lasthandoff: 05/22/2018
 
     지도 모드가 설정되고 너비가 **보통**으로 설정된 경우 검색 예제가 표시되는 모양은 다음과 같습니다.
 
-    ![지도 모드의 스크롤 막대](../ide/media/enhancedscrollbar.png "EnhancedScrollbar")
+    ![맵 모드의 스크롤 막대](../ide/media/enhancedscrollbar.png)
 
 2. 지도 모드에서 스크롤 막대 위/아래로 커서를 이동할 때 코드 미리 보기를 사용하도록 설정하려면 **미리 보기 도구 설명 표시** 옵션을 선택합니다. 표시되는 모양은 다음과 같습니다.
 
-    ![도구 설명이 있는 스크롤 막대](../ide/media/enhancedscrollbarsearchtooltip.png "EnhancedScrollbarSearchTooltip")
+    ![도구 설명이 있는 스크롤 막대](../ide/media/enhancedscrollbarsearchtooltip.png)
 
     지도 모드 스크롤 동작 및 미리 보기 도구 설명을 유지하지만 소스 코드 개요를 표시하지 않으려는 경우 **소스 개요**를 **해제**로 설정할 수 있습니다.
 

@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 827b76f3b4b40f59fe22b3c5424c6d8c13087809
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 44994b7b643d63f548092aba9a878b939f3968af
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750996"
 ---
 # <a name="how-to-include-recordings-of-the-screen-and-voice-during-tests-using-test-settings"></a>방법: 테스트 설정을 사용하여 테스트를 수행하는 중에 화면 및 음성의 녹화/녹음 포함
 
@@ -38,7 +39,7 @@ Visual Studio의 구성 편집기에서 화면 및 테스트를 실행하는 사
 
      진단 데이터 어댑터 구성 - 화면 및 음성 레코더 대화 상자가 표시됩니다.
 
-     ![비디오 구성](../test/media/testsettingvideoconfiggdr.png "TestSettingVideoConfigGDR")
+     ![비디오 구성](../test/media/testsettingvideoconfiggdr.png)
 
 4.  (선택 사항) **음성 기록 사용**을 선택하여 기록에서 오디오 콘텐츠를 캡처합니다.
 

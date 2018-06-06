@@ -17,11 +17,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 2b293c5a6fe64324cb306933d90049548e7a6098
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: bda60d1e18f18d602f95d1eafb5843811cdc5f24
+ms.sourcegitcommit: 4cd4aef53e7035d23e7d1d0f66f51ac8480622a1
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/05/2018
+ms.locfileid: "34765169"
 ---
 # <a name="net-memory-allocations-view"></a>.NET 메모리 할당 뷰
 할당 뷰는 프로파일링 실행 중에 생성된 형식을 나열합니다. 각 형식은 형식의 할당에서 발생한 함수 실행 경로를 표시하는 호출 트리의 루트 노드입니다.  
@@ -34,7 +35,7 @@ ms.lasthandoff: 04/19/2018
   
  함수에 대한 데이터는 부모 형식의 개체에 대해 만든 개체의 수 및 할당된 바이트 수를 표시합니다.  
   
-## <a name="highlighting-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
+## <a name="highlight-the-execution-hot-path"></a>실행 부하 과다 경로 강조 표시  
  부모 유형의 대부분의 개체를 생성한 호출 트리의 실행 경로를 찾을 수 있습니다.  
   
 -   최대 활성 경로를 표시하려면 형식 또는 함수를 마우스 오른쪽 단추로 클릭한 후 **실행 부하 과다 경로 확장**을 클릭합니다.  

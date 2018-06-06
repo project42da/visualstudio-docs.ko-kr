@@ -10,11 +10,12 @@ ms.author: karann
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: ea8bf298f5847c779d2dc13154ddb27b2efeb214
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: a263f361e28c515f1694238c4d60fdeffb95f03a
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746626"
 ---
 # <a name="xaml-errors-and-warnings"></a>XAML 오류 및 경고
 
@@ -40,6 +41,6 @@ XAML을 작성하면 Visual Studio에서는 입력한 코드를 분석합니다.
 
 **XAML 디자이너에 의해 검색된 오류 표시** 확인란의 선택을 취소합니다.
 
-![XAML 디자이너 오류 표시 안 함](../designers/media/suppress_xaml_designer_errors.PNG "SuppressXAMLDesignerErrors")
+![XAML 디자이너 오류 표시 안 함](../designers/media/suppress_xaml_designer_errors.png)
 
 

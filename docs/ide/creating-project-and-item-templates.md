@@ -12,11 +12,12 @@ helpviewer_keywords:
 author: gewarren
 ms.author: gewarren
 manager: douge
-ms.openlocfilehash: e595392f92c99f6f73d2a9d999356641c14b096d
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 62e51a5a03011874acc723eaf159e3f7130d1340
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573260"
 ---
 # <a name="project-and-item-templates"></a>프로젝트 및 항목 템플릿
 
@@ -45,10 +46,6 @@ ms.lasthandoff: 04/26/2018
 - 항목 템플릿은 **새 항목 추가** 대화 상자에 표시됩니다.
 
 템플릿 폴더에 대한 자세한 내용은 [방법: 템플릿 찾기 및 구성](../ide/how-to-locate-and-organize-project-and-item-templates.md)을 참조하세요.
-
-## <a name="starter-kits"></a>시작 키트
-
-시작 키트는 커뮤니티의 다른 멤버와 공유 가능한 향상된 템플릿입니다. 시작 키트에는 유용한 실제 응용 프로그램을 빌드하는 동안 새로운 도구와 프로그래밍 기술을 익히는 데 도움이 되는 컴파일 가능한 코드 샘플, 설명서 및 기타 리소스가 포함되어 있습니다. 시작 키트에 대한 기본 내용과 절차는 템플릿에서와 동일합니다. 자세한 내용은 [방법: 시작 키트 만들기](../ide/how-to-create-starter-kits.md)를 참조하세요.
 
 ## <a name="see-also"></a>참고 항목
 

@@ -11,17 +11,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 55d38dcb87081ea7fc0b16d7d500d13e72f77269
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 065e50b123ccf4ac96ba6bec89db74bb51990f58
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751403"
 ---
 # <a name="using-the-graphs-view-legend-to-analyze-load-tests"></a>그래프 뷰 범례를 사용하여 부하 테스트 분석
 
 부하 테스트 분석기의 그래프 뷰에는 현재 선택한 그래프와 연결된 각 성능 카운터에 대한 정보가 표시되는 범례 패널이 포함되어 있습니다.
 
-![그래프 뷰 범례](../test/media/load_viewlegend.png "Load_ViewLegend")
+![그래프 뷰 범례](../test/media/load_viewlegend.png)
 
 범례에는 다음과 같은 정보가 포함됩니다.
 

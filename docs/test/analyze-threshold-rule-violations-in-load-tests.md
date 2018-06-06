@@ -17,11 +17,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 760d79677ea43602f000748d1eb0d65203c2c787
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 753cf038cf6d8129aa9a4691b0f88c046aadf640
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750911"
 ---
 # <a name="analyzing-threshold-rule-violations-in-load-tests-using-the-load-test-analyzer"></a>부하 테스트 분석기를 사용하여 부하 테스트에서 임계값 규칙 위반 분석
 
@@ -53,15 +54,15 @@ ms.lasthandoff: 04/26/2018
 
  이러한 아이콘은 다음 중 하나입니다.
 
- ![임계값 위반 없음](../test/media/icon_ltest_1.gif "Icon_LTest_1") 임계값 위반이 없습니다.
+ ![임계값 위반 없음](../test/media/icon_ltest_1.gif) 임계값 위반 없음
 
- ![마지막 기간에서 중요 임계값 위반](../test/media/icon_ltest_2.gif "Icon_LTest_2") 마지막 기간에서 중요 임계값 위반이 발생했습니다.
+ ![마지막 기간에서 중요한 임계값 위반 발생](../test/media/icon_ltest_2.gif) 마지막 간격에서 중요 임계값 위반이 발생함
 
- ![이전 기간에서 중요 임계값 위반](../test/media/icon_ltest_3.gif "Icon_LTest_3") 이전 기간에서 중요 임계값 위반이 발생했습니다.
+ ![이전 기간에서 중요한 임계값 위반 발생](../test/media/icon_ltest_3.gif) 이전 간격에서 중요 임계값 위반이 발생함
 
- ![마지막 기간에서 경고 임계값 위반](../test/media/icon_ltest_4.gif "Icon_LTest_4") 마지막 기간에서 경고 임계값 위반이 발생했습니다.
+ ![마지막 기간에서 경고 임계값 위반 발생](../test/media/icon_ltest_4.gif) 마지막 간격에서 경고 임계값 위반이 발생함
 
- ![이전 기간에서 경고 임계값 위반](../test/media/icon_ltest_5.gif "Icon_LTest_5") 이전 기간에서 경고 임계값 위반이 발생했습니다.
+ ![이전 기간에서 경고 임계값 위반 발생](../test/media/icon_ltest_5.gif) 이전 간격에서 경고 임계값 위반이 발생함
 
  그래프에 임계값 위반이 표시될 수도 있습니다. 임계값 아이콘은 그래프에서 임계값 위반이 발생한 데이터 요소 옆에 표시됩니다.
 

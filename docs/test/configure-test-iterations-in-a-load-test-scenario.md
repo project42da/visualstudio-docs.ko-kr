@@ -12,11 +12,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 13d86d64d16fad085983fc45863fa81e88ea2ada
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 239d1966c45aaebc8960601372852704935d5fcf
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751607"
 ---
 # <a name="configure-test-iterations-in-a-load-test-scenario"></a>부하 테스트 시나리오에서 테스트 반복 구성
 
@@ -42,7 +43,7 @@ ms.lasthandoff: 05/22/2018
 
  **최대 테스트 반복 횟수** 속성은 다양한 상황에 유용합니다. 일부 부하 테스터는 반복 중심의 테스트를 선호하는 반면, 다른 부하 테스터는 지속 시간 중심의 테스트를 선호합니다.
 
- ![시나리오의 테스트 반복 횟수 지정](../test/media/loadtest_prop.png "LoadTest_Prop")
+ ![시나리오의 테스트 반복 횟수 지정](../test/media/loadtest_prop.png)
 
 ### <a name="to-specify-the-maximum-test-iterations"></a>최대 테스트 반복 횟수를 지정하려면
 

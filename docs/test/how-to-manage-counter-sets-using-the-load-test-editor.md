@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 22897b072d7051eef5c08d27fc3235050474da60
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 27a1cdd3390d6f068947bfcb0daef76eb93fd026
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751990"
 ---
 # <a name="how-to-manage-counter-sets-using-the-load-test-editor"></a>방법: 부하 테스트 편집기를 사용하여 카운터 집합 관리
 
@@ -30,7 +31,7 @@ ms.lasthandoff: 04/26/2018
 
 카운터 집합을 관리하려면 성능 데이터를 수집할 컴퓨터 집합을 선택하고 개별 컴퓨터에서 각각 수집할 카운터 집합을 할당합니다. **부하 테스트 편집기**에서 카운터를 관리합니다.
 
-![카운터 집합 관리](../test/media/loadtestmanagecountersets.png "LoadTestManageCounterSets")
+![카운터 집합 관리](../test/media/loadtestmanagecountersets.png)
 
 ## <a name="to-manage-counter-sets"></a>카운터 집합을 관리하려면
 

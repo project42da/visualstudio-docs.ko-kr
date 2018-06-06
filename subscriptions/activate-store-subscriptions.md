@@ -9,11 +9,12 @@ description: Microsoft Store에서 구매한 Visual Studio 구독을 활성화�
 ms.prod: vs-subscription
 ms.technology: vs-subscriptions
 searchscope: VS Subscription
-ms.openlocfilehash: dea917758f643315b99f0ecd9c1890fd5ad32e74
-ms.sourcegitcommit: 3724338a5da5a6d75ba00452b0a607388b93ed0c
+ms.openlocfilehash: 751f2fb7931c2081be8c146b6bc3959cc60c2a85
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/06/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34477277"
 ---
 # <a name="how-do-i-activate-a-subscription-acquired-from-the-microsoft-store"></a>Microsoft Store에서 구매한 구독을 활성화하려면 어떻게 해야 하나요?
 Microsoft Store를 통해 Visual Studio 구독을 구매한 경우 구매한 후 받은 “확인 페이지” 또는 “확인 전자 메일”에서 활성화 단계를 시작할 수 있습니다. 
@@ -32,7 +33,7 @@ Microsoft Store를 통해 Visual Studio 구독을 구매한 경우 구매한 후
 7. 로그인에 성공하면 “Visual Studio 구독 활성화” 창이 표시됩니다.
 8. 결제 “확인 페이지” 또는 “확인 전자 메일”에서 사용할 수 있는 제품 키 정보를 입력하고 **활성화**를 클릭합니다.
 
-    ![제품 키 입력](_img/buy-retail/enter-product-key.png)
+    <img alt="Enter product key" src="_img/buy-retail/enter-product-key.png" style="border: 1px solid #CCCCCC" />
 
 9. 이제 [구독](https://my.visualstudio.com/subscriptions?wt.mc_id=o~msft~docs) 페이지에 구독이 표시되고 모든 구독 혜택에 액세스할 수 있습니다. 
 

@@ -1,6 +1,7 @@
 ---
 title: XAML 디자이너에서 데이터에 바인딩
 ms.date: 11/04/2016
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-designers
 ms.topic: conceptual
 f1_keywords:
@@ -13,11 +14,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - uwp
-ms.openlocfilehash: a94f3c4637ab76b8b0d00d1899de5c475dc8e7e4
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 2c12d1ca9605a7591146f3d6141eb12b5f8975f6
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34745713"
 ---
 # <a name="walkthrough-bind-to-data-in-xaml-designer"></a>연습: XAML 디자이너에서 데이터에 바인딩
 
@@ -81,7 +83,7 @@ XAML 디자이너에서 아트보드와 속성 창을 사용하여 데이터 바
 
      다음 그림에서는 **ShoppingCart**가 선택된 **개체 선택** 대화 상자를 보여 줍니다.
 
-     ![개체 선택 대화 상자](../designers/media/blendselectobject.PNG "BlendSelectObject")
+     ![개체 선택 대화 상자](../designers/media/blendselectobject.png)
 
 1. **도구 상자**에서, `TextBlock` 컨트롤을 선택하여 양식에 추가합니다.
 
@@ -91,7 +93,7 @@ XAML 디자이너에서 아트보드와 속성 창을 사용하여 데이터 바
 
      다음 그림에서는 **ItemCount** 속성이 선택된 **데이터 바인딩 만들기** 대화 상자를 보여 줍니다.
 
-     ![데이터 바인딩 만들기 대화 상자](../designers/media/xaml_create_data_binding.png "xaml_create_data_binding")
+     ![데이터 바인딩 만들기 대화 상자](../designers/media/xaml_create_data_binding.png)
 
 1. **F5** 키를 눌러 앱을 실행합니다.
 

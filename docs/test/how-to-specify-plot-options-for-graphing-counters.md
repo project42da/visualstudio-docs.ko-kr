@@ -10,17 +10,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 8e17d0f9e25616f70e1d5f74cd0ed4916efc7b8b
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 7a5f87a83b8c743ae869a700618051e07c8c2e75
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750924"
 ---
 # <a name="how-to-specify-plot-options-for-graphing-counters"></a>방법: 그래프 카운터에 대한 출력 옵션 지정
 
 **출력 옵션** 대화 상자를 사용하여 그래프에 표시되는 카운터의 색과 선 스타일을 변경할 수 있습니다. 범위를 특정 값으로 고정하거나 샘플링된 데이터에 따라 범위가 자동으로 조정되도록 설정할 수 있습니다.
 
-![출력 옵션 대화 상자](../test/media/ltest_plotoptions.png "LTest_PlotOptions")
+![출력 옵션 대화 상자](../test/media/ltest_plotoptions.png)
 
 ## <a name="to-specify-plotting-options-for-graphs"></a>그래프의 출력 옵션을 지정하려면
 

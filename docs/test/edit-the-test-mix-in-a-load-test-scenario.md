@@ -13,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 228805d37f24e19a83b141ad2312ab60c29d5cf0
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: cd3511d138fb6416d8309a3e32c1e96c9b70502b
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34750937"
 ---
 # <a name="edit-the-test-mix-to-specify-which-web-performance-unit-and-coded-ui-tests-to-include-in-a-load-test-scenario"></a>테스트 조합을 편집하여 부하 테스트 시나리오에 포함할 웹 성능 테스트, 단위 테스트 및 코딩된 UI 테스트 지정
 
@@ -36,7 +37,7 @@ ms.lasthandoff: 04/26/2018
 
 부하 테스트 편집기를 사용하여 시나리오의 테스트 조합에 다른 웹 성능 및 단위 테스트를 추가할 수 있습니다.
 
-![기존 부하 테스트에 테스트 추가](../test/media/ltest_addingtests.png "LTest_AddingTests")
+![기존 부하 테스트에 테스트 추가](../test/media/ltest_addingtests.png)
 
 ### <a name="to-add-more-tests-to-an-existing-scenario"></a>기존 시나리오에 다른 테스트를 추가하려면
 
@@ -55,7 +56,7 @@ ms.lasthandoff: 04/26/2018
 5.  (선택 사항) 목록 컨트롤을 조정하여 테스트 분포를 조정합니다. 자세한 내용은 [목록 컨트롤 정보](../test/edit-the-test-mix-to-specify-which-web-browsers-types-in-a-load-test-scenario.md)를 참조하십시오.
 
 ##  <a name="EditingTestMixRemoveTest"></a> 시나리오에서 테스트 제거
- ![기존 부하 테스트에서 테스트 제거](../test/media/ltest_removetest.png "LTest_RemoveTest")
+ ![기존 부하 테스트에서 테스트 제거](../test/media/ltest_removetest.png)
 
 ### <a name="to-remove-tests-from-a-scenario"></a>시나리오에서 테스트를 제거하려면
 

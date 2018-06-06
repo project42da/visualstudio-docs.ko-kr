@@ -16,17 +16,18 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 989ebc629e79194fb6cd4c900b032cb93a090977
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 41849b5ac9b55ff97735dbbda4df909d54f8a346
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751860"
 ---
 # <a name="load-test-results-summary-overview"></a>부하 테스트 결과 요약 개요
 
 부하 테스트 실행이 끝나면 부하 테스트 요약을 통해 결과를 바로 확인할 수 있습니다. 부하 테스트 요약에는 핵심 결과가 간단하고 읽기 쉬운 형식으로 제공됩니다. 부하 테스트 요약은 인쇄가 가능하므로 이해 관계자에게 결과를 편리하게 전달할 수 있습니다. 또한 부하 테스트 요약은 이전에 실행한 부하 테스트의 부하 테스트 결과를 열 때 기본적으로 표시되는 뷰입니다. 자세한 내용은 [방법: 분석을 위한 부하 테스트 결과 액세스](../test/how-to-access-load-test-results-for-analysis.md)를 참조하세요.
 
- ![요약 보기](../test/media/ltest_summaryview.png "LTest_SummaryView")
+ ![요약 뷰](../test/media/ltest_summaryview.png)
 
 ## <a name="the-load-test-summary"></a>부하 테스트 요약
 

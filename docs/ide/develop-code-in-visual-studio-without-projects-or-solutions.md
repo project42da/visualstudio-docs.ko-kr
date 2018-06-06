@@ -1,6 +1,7 @@
 ---
-title: 프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발 | Microsoft Docs
+title: 프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발
 ms.date: 02/21/2018
+ms.prod: visual-studio-dev15
 ms.technology: vs-ide-general
 ms.topic: conceptual
 helpviewer_keywords:
@@ -12,11 +13,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 082e64d80080eec48c311254461b85812a969841
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: f80072e3ea2e6e9d870c6ca3b2b61400624b744b
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34746029"
 ---
 # <a name="develop-code-in-visual-studio-without-projects-or-solutions"></a>프로젝트 또는 솔루션 없이 Visual Studio에서 코드 개발
 
@@ -64,7 +66,7 @@ Visual Studio에서 다음과 같은 방법으로 코드를 열 수 있습니다
 
 |         |         |
 |---------|---------|
-|  ![비디오의 동영상 카메라 아이콘](../install/media/video-icon.png "비디오 시청")|    Visual Studio의 GitHub 리포지토리에서 코드를 복제하고 여는 방법에 대한 [비디오를 시청](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=lp3TOKD6D_6711787171)합니다. |
+|  ![동영상에 대한 비디오 카메라 아이콘](../install/media/video-icon.png)|    Visual Studio의 GitHub 리포지토리에서 코드를 복제하고 여는 방법에 대한 [비디오를 시청](https://mva.microsoft.com/en-us/training-courses/getting-started-with-visual-studio-2017-17798?l=lp3TOKD6D_6711787171)합니다. |
 
 ## <a name="run-and-debug-your-code"></a>코드 실행 및 디버그
 

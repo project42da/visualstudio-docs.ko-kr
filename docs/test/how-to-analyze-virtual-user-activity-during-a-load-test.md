@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.prod: visual-studio-dev15
 ms.technology: vs-ide-test
-ms.openlocfilehash: 0e1c990a0014051c6732eb187150bd0c1d89afc8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: f7da7f881cf70ebfdafb3dbaaf2821471327fa81
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34751236"
 ---
 # <a name="how-to-analyze-what-virtual-users-are-doing-during-a-load-test-using-the-virtual-user-activity-chart"></a>방법: 가상 사용자 동작 차트를 사용하여 부하 테스트 중에 가상 사용자가 수행하는 작업 분석
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/26/2018
 
      **정보 범례 패널**
 
-     ![정보 범례 패널](../test/media/ltest_detailslegend.png "LTest_DetailsLegend")
+     ![정보 범례 패널](../test/media/ltest_detailslegend.png)
 
 2.  부하 테스트와 연결된 오류, 로그, 테스트, 검색 및 aspx 페이지에 대한 확인란을 선택하거나 선택 취소합니다.
 
@@ -87,7 +88,7 @@ ms.lasthandoff: 04/26/2018
 
      **필터 결과 패널**
 
-     ![필터 결과 패널](../test/media/ltest_filterresults.png "LTest_FilterResults")
+     ![필터 결과 패널](../test/media/ltest_filterresults.png)
 
 3.  필터 결과에서 다음 필터 옵션에 대한 확인란을 선택하거나 선택 취소합니다.
 

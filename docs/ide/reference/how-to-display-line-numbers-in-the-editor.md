@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 78a9cd01fc4f8ceff4b679ef81e2ce25d38624a3
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: 416e83790e4776f37f7ca7ce011a5a2fb2ad484c
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34747497"
 ---
 # <a name="how-to-display-line-numbers-in-the-editor"></a>방법: 편집기에서 줄 번호 표시
 코드에 줄 번호를 표시하거나 숨길 수 있습니다.
@@ -37,7 +38,7 @@ ms.lasthandoff: 05/22/2018
 
 2.  **줄 번호** 확인란을 선택합니다.
 
-    ![편집기에 줄 번호를 표시하는 옵션](../../ide/reference/media/vs_displaylinenumbers.png "VS_DisplayLineNumbers")
+    ![편집기에 줄 번호를 표시하는 옵션](../../ide/reference/media/vs_displaylinenumbers.png)
 
 > [!NOTE]
 > 언어나 설정에 따라 **옵션** 대화 상자에서 **모든 설정 표시** 확인란을 선택하여 **모든 언어** 하위 노드를 표시해야 할 수 있습니다.

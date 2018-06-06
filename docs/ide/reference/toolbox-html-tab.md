@@ -15,11 +15,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 4c47ca792c25efe6ef77f3ee3a9baad61e801624
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: c2d4b3f802b3854fc311a359149f44d75562691e
+ms.sourcegitcommit: 58052c29fc61c9a1ca55a64a63a7fdcde34668a4
 ms.translationtype: HT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/04/2018
+ms.locfileid: "34752698"
 ---
 # <a name="toolbox-html-tab"></a>도구 상자, HTML 탭
 
@@ -33,13 +34,13 @@ ms.lasthandoff: 04/26/2018
 
 **포인터**
 
-![ASP.NET 모바일 디자이너 HTMLpage 포인터](../../ide/reference/media/vxpointer.gif "vxPointer")
+![ASP.NET 모바일 디자이너 HTMLpage 포인터](../../ide/reference/media/vxpointer.gif)
 
 [도구 상자] 탭이 열리면 이 도구가 기본적으로 선택됩니다. 이 도구는 삭제할 수 없습니다. 포인터를 사용하여 개체를 디자인 보기 화면에 끌어다 놓고, 크기를 조정하고, 페이지 또는 양식에서 위치를 변경합니다. 자세한 내용은 [도구 상자](../../ide/reference/toolbox.md)를 참조하세요.
 
 **Input (Button)**
 
-![HTML 웹 페이지 단추](../../ide/reference/media/vxbutton.gif "vxButton")
+![HTML 웹 페이지 단추](../../ide/reference/media/vxbutton.gif)
 
 `type="button"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Button1"`은 첫 번째 단추로 삽입되고, `id="Button2"`는 두 번째 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -51,7 +52,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (Reset)**
 
-![HTMLpageResetButton 스크린샷](../../ide/reference/media/vxreset.gif "vxReset")
+![HTMLpageResetButton 스크린샷](../../ide/reference/media/vxreset.gif)
 
 `type="reset"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Reset1"`은 첫 번째 다시 설정 단추로 삽입되고, `id="Reset2"`는 두 번째 다시 설정 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -63,7 +64,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (Submit)**
 
-![HTMLpageToolbarSubmitButton 스크린샷](../../ide/reference/media/vxsubmit.gif "vxSubmit")
+![HTMLpageToolbarSubmitButton 스크린샷](../../ide/reference/media/vxsubmit.gif)
 
 `type="submit"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Submit1"`은 첫 번째 제출 단추로 삽입되고, `id="Submit2"`는 두 번째 제출 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -75,7 +76,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (Text)**
 
-![HTMLpageToolbarTextField 스크린샷](../../ide/reference/media/vxtextfield.gif "vxTextfield")
+![HTMLpageToolbarTextField 스크린샷](../../ide/reference/media/vxtextfield.gif)
 
 `type="text"`의 `input` 요소를 문서에 삽입합니다. 표시되는 기본 텍스트를 변경하려면 `value` 특성을 편집합니다. 기본적으로 `id="Text1"`은 첫 번째 텍스트 필드로 삽입되고, `id="Text2"`는 두 번째 텍스트 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -90,7 +91,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (File)**
 
-![HTML 페이지 파일 필드](../../ide/reference/media/vxfilefield.gif "vxFilefield")
+![HTML 페이지 파일 필드](../../ide/reference/media/vxfilefield.gif)
 
 `type="file"`의 `input` 요소를 문서에 삽입합니다. 기본적으로 `id="File1"`은 첫 번째 파일 필드로 삽입되고, `id="File2"`는 두 번째 파일 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -105,7 +106,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (Password)**
 
-![Visual Studio 암호 필드](../../ide/reference/media/vxpassword.gif "vxPassword")
+![Visual Studio 암호 필드](../../ide/reference/media/vxpassword.gif)
 
 `type="password"`의 `input` 요소를 삽입합니다. 기본적으로 `id="Password1"`은 첫 번째 암호 필드로 삽입되고, `id="Password2"`는 두 번째 암호 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -120,7 +121,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (Check box)**
 
-![HTML 웹 페이지 도구 상자 확인란 옵션](../../ide/reference/media/vxcheckbox.gif "vxCheckbox")
+![HTML 웹 페이지 도구 상자 확인란 옵션](../../ide/reference/media/vxcheckbox.gif)
 
 `type="checkbox"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Checkbox1"`은 첫 번째 확인란으로 삽입되고, `id="Checkbox2"`는 두 번째 확인란으로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -132,7 +133,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (Radio)**
 
-![VisualStudioHTMLpageRadioButton 스크린샷](../../ide/reference/media/vxradio.gif "vxRadio")
+![VisualStudioHTMLpageRadioButton 스크린샷](../../ide/reference/media/vxradio.gif)
 
 `type="radio"`의 `input` 요소를 삽입합니다. 표시되는 텍스트를 변경하려면 `name` 속성을 편집합니다. 기본적으로 `id="Radio1"`은 첫 번째 라디오 단추로 삽입되고, `id="Radio2"`는 두 번째 라디오 단추로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -144,7 +145,7 @@ ms.lasthandoff: 04/26/2018
 
 **Input (Hidden)**
 
-![HTML 페이지 숨겨진 항목](../../ide/reference/media/vxhidden.gif "vxhidden")
+![HTML 페이지 숨겨진 항목](../../ide/reference/media/vxhidden.gif)
 
 `type="hidden"`의 `input` 요소를 삽입합니다. 기본적으로 `id="Hidden1"`은 첫 번째 숨겨진 필드로 삽입되고, `id="Hidden2"`는 두 번째 숨겨진 필드로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -156,7 +157,7 @@ ms.lasthandoff: 04/26/2018
 
 **Textarea**
 
-![HTMLpage 도구 모음 텍스트 영역](../../ide/reference/media/vxtextarea.gif "vxTextarea")
+![HTMLpage 도구 모음 텍스트 영역](../../ide/reference/media/vxtextarea.gif)
 
 `textarea` 요소를 삽입합니다. 텍스트 영역의 크기를 조정하거나, 스크롤 막대를 사용하여 표시 영역을 벗어나는 텍스트를 볼 수 있습니다. 표시되는 기본 텍스트를 변경하려면 `value` 특성을 편집합니다. 기본적으로 `id="textarea1"`은 첫 번째 텍스트 영역으로 삽입되고, `id=" textarea 2"`는 두 번째 텍스트 영역으로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -171,7 +172,7 @@ ms.lasthandoff: 04/26/2018
 
 **Table**
 
-![HTMLpageToolbarTable 스크린샷](../../ide/reference/media/vxtable.gif "vxTable")
+![HTMLpageToolbarTable 스크린샷](../../ide/reference/media/vxtable.gif)
 
 `table` 요소를 삽입합니다.
 
@@ -183,7 +184,7 @@ ms.lasthandoff: 04/26/2018
 
 **Image**
 
-![HTML 페이지 이미지 항목](../../ide/reference/media/vximage.gif "vxImage")
+![HTML 페이지 이미지 항목](../../ide/reference/media/vximage.gif)
 
 `img` 요소를 삽입합니다. 이 요소를 편집하여 해당 `src` 및 `alt` 텍스트를 지정합니다.
 
@@ -195,7 +196,7 @@ ms.lasthandoff: 04/26/2018
 
 **선택**
 
-![HTML 페이지 도구 상자 드롭다운](../../ide/reference/media/vxdropdown.gif "vxDropdown")
+![HTML 페이지 도구 상자 드롭다운](../../ide/reference/media/vxdropdown.gif)
 
 `select` 요소를 삽입합니다(`size` 특성 없음). 기본적으로 `id="select1"`은 첫 번째 목록 상자로 삽입되고, `id="select2"`는 두 번째 목록 상자로 삽입되는 식으로 항목이 삽입됩니다.
 
@@ -209,7 +210,7 @@ size 속성 값을 늘려 여러 줄 `select` 요소를 만들 수 있습니다.
 
 **Horizontal Rule**
 
-![HTML 페이지 가로줄 항목](../../ide/reference/media/vxhorizontal.gif "vxHorizontal")
+![HTML 페이지 가로줄 항목](../../ide/reference/media/vxhorizontal.gif)
 
 `hr` 요소를 삽입합니다. 줄 두께를 늘리려면 `size` 특성을 편집합니다.
 
@@ -221,7 +222,7 @@ size 속성 값을 늘려 여러 줄 `select` 요소를 만들 수 있습니다.
 
 **Div**
 
-![HTML 페이지 레이블](../../ide/reference/media/vxlabel.gif "vxLabel")
+![HTML 페이지 레이블](../../ide/reference/media/vxlabel.gif)
 
 `ms_positioning="FlowLayout"` 특성을 포함하는 `div` 요소를 삽입합니다. 너비 및 높이를 제외하고 이 항목은 선형 레이아웃 패널과 동일합니다. `div` 요소 내에 포함된 텍스트의 서식을 지정하려면 `class="stylename"` 특성을 여는 태그에 추가합니다.
 
