@@ -20,11 +20,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 740d72f0ec339ded8ec8b721bbc2b94d706f8da7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ab25276596358f7c0a8c1f90bd38e89686e3196c
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815875"
 ---
 # <a name="deploying-com-components-with-clickonce"></a>ClickOnce를 사용하여 COM 구성 요소 배포
 일반적으로 레거시 COM 구성 요소 배포는 어려운 작업 이었습니다. 구성 요소는 전역으로 등록 해야 하 고 따라서 잘못 된 결과가 겹치는 응용 프로그램 간에 발생할 수 있습니다. 이 상황은 일반적으로.NET Framework 응용 프로그램에 문제가 구성 요소 응용 프로그램에 완전히 격리 되어 있거나-나란히 호환 가능 하기 때문입니다. Visual Studio를 사용 하면 Windows XP 또는 더 높은 운영 체제에서 격리 된 COM 구성 요소를 배포할 수 있습니다.  
@@ -69,7 +70,7 @@ ms.lasthandoff: 04/19/2018
   
 4.  Class1.vb에서 생성된 된 코드에 대 한 뒤 다음 코드에 추가 `New` 메서드:  
   
-    ```  
+    ```vb  
     Public Sub SayHello()  
        MsgBox "Message from the VB6Hello COM component"  
     End Sub  
@@ -102,7 +103,7 @@ ms.lasthandoff: 04/19/2018
   
 8.  처리기 코드를 추가 하려면 단추를 두 번 클릭 하 고 처리기는 다음과 같이 읽을 수 있도록 코드 파일에서 코드를 추가 합니다.  
   
-    ```  
+    ```vb  
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click  
         Dim VbObj As New VB6Hello.Class1  
         VbObj.SayHello()  

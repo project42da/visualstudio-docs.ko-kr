@@ -10,11 +10,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: b265806a15d5a2b3f08862432c7c8e2a94d119c5
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 0111226fdd3de300265f69930b7e9e56f90876c8
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34816018"
 ---
 # <a name="how-to-publish-a-wpf-application-with-visual-styles-enabled"></a>방법: 비주얼 스타일을 사용하여 WPF 응용 프로그램 게시
 비주얼 스타일을 사용자가 선택한 테마에 따라 변경 하는 공용 컨트롤의 모양을 사용 하도록 설정 합니다. 기본적으로 비주얼 스타일은 사용 되지 Windows Presentation Foundation (WPF) 응용 프로그램에 대해 않으므로 수동으로 사용 해야 합니다. 그러나 WPF 응용 프로그램에 대 한 비주얼 스타일을 사용 하도록 설정 하 고 다음 솔루션을 게시 하면 오류가 발생 합니다. 이 항목에서는이 오류 및 사용 하도록 설정 하는 비주얼 스타일으로는 WPF 응용 프로그램을 게시 하기 위한 프로세스를 해결 하는 방법을 설명 합니다. 비주얼 스타일에 대 한 자세한 내용은 참조 [비주얼 스타일 개요](http://msdn.microsoft.com/5b5d7bb6-684f-478d-bf5f-b8d18bbcff2e)합니다. 오류 메시지에 대 한 자세한 내용은 참조 [ClickOnce 배포의 특정 오류 문제 해결](../deployment/troubleshooting-specific-errors-in-clickonce-deployments.md)합니다.  
@@ -37,7 +38,7 @@ ms.lasthandoff: 04/19/2018
   
      기본적으로 시각적 스타일 사용 되지 않습니다.  
   
-    ```  
+    ```xml  
     <dependency>    <dependentAssembly>      <assemblyIdentity          type="win32"          name="Microsoft.Windows.Common-Controls"          version="6.0.0.0"          processorArchitecture="*"          publicKeyToken="6595b64144ccf1df"          language="*"        />    </dependentAssembly>  </dependency>  
     ```  
   
@@ -76,7 +77,7 @@ ms.lasthandoff: 04/19/2018
   
      이 XML에 비주얼 스타일을 지 원하는 컨트롤을 포함 하는 어셈블리에 설명 합니다.  
   
-    ```  
+    ```xml  
     <?xml version="1.0" encoding="utf-8"?><asmv1:assembly manifestVersion="1.0"                xmlns="urn:schemas-microsoft-com:asm.v1"                xmlns:asmv1="urn:schemas-microsoft-com:asm.v1"                xmlns:asmv2="urn:schemas-microsoft-com:asm.v2"                xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">  <dependency>    <dependentAssembly>      <assemblyIdentity        type="win32"        name="Microsoft.Windows.Common-Controls"        version="6.0.0.0"        processorArchitecture="*"        publicKeyToken="6595b64144ccf1df"        language="*"        />    </dependentAssembly>  </dependency></asmv1:assembly>  
     ```  
   
@@ -111,12 +112,12 @@ ms.lasthandoff: 04/19/2018
 2.  명령 프롬프트에서 경로 게시 된 응용 프로그램 파일의 최신 버전을 포함 하는 디렉터리를 변경 합니다. 다음 예제에서는이 단계를 보여 줍니다.  
   
     ```  
-    cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"  
+cd "%UserProfile%\Documents\Visual Studio 2010\Projects\MyWPFProject\publish\Application Files\WPFApp_1_0_0_0"  
     ```  
   
 3.  명령 프롬프트에서 응용 프로그램의 실행 파일에 매니페스트 파일을 포함 하려면 다음 명령을 실행 합니다.  
   
-    ```  
+    ```
     mt -manifest c:\temp\themes.manifest -outputresource:MyWPFApp.exe.deploy  
     ```  
   

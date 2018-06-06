@@ -17,18 +17,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: c04676f03f4734a25601e772208939e0b3f8482d
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: b304cc3bee93b367cc3b401328749ee6aca89625
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815602"
 ---
 # <a name="ltpackagegt-element-bootstrapper"></a>&lt;패키지&gt; 요소 (부트스트래퍼)
 `Package` 요소는 요소는 패키지 파일 내의 최상위 XML 요소입니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <Package  
     Culture  
     Name  
@@ -150,10 +151,10 @@ ms.lasthandoff: 04/19/2018
 |`Name`|필수. 와 같은 도구 내에서 개발자에 게 표시 되는 패키지의 이름을 [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)]합니다. 이 특성은 한 키는 `Strings` 포함 해야 하는 요소는 `String` 인 요소는 `Name` 및 `Culture` 속성과 일치 하도록 설정는 `Name` 및 `Culture` 의 속성 `Package`합니다.|  
 |`LicenseAgreement`|선택 사항입니다. (EULA (최종 사용자 사용권 계약)를 포함 하는 배포 패키지에서 파일의 이름을 지정 합니다.  이 파일에는 일반 텍스트 (.txt) 또는 서식 있는 텍스트 형식 수 있습니다. (.rtf)|  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 재배포 하기 위한 완전 한 패키지 파일을 보여 줍니다.는 [!INCLUDE[dnprdnlong](../code-quality/includes/dnprdnlong_md.md)]합니다.  
   
-```  
+```xml  
 <?xml version="1.0" encoding="utf-8" ?>  
   
 <Package  

@@ -24,18 +24,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8fccbd816d578a95e3e43e15c83d615756dcddcb
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: f1e744071219426c751576f8ca781ad27dfedb61
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815862"
 ---
 # <a name="ltfilegt-element-clickonce-application"></a>&lt;파일&gt; 요소 (ClickOnce 응용 프로그램)
 다운로드 하 고 응용 프로그램에서 사용 하는 어셈블리 이외의 모든 파일을 식별 합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <file  
     name  
     size  
@@ -184,10 +185,10 @@ ms.lasthandoff: 04/19/2018
 ## <a name="remarks"></a>설명  
  이 요소는 응용 프로그램을 구성 하는 모든 어셈블리 이외의 파일을 식별 하 고 특히, 확인 파일에 대 한 해시 값입니다. 이 요소는 파일에 연결 된 구성 요소 개체 모델 (COM) 격리 데이터를 포함할 수도 있습니다. 사용자가 파일이 변경 되 면 응용 프로그램 매니페스트 파일은 또한 변경 내용을 반영 하도록 업데이트 되어야 합니다.  
   
-## <a name="example"></a>예제  
+## <a name="example"></a>예  
  다음 코드 예제에서는 `file` 응용 프로그램의 요소를 사용 하 여 배포 된 응용 프로그램에 대 한 매니페스트 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]합니다.  
   
-```  
+```xml  
 <file name="Icon.ico" size="9216">  
   <hash>  
     <dsig:Transforms>  

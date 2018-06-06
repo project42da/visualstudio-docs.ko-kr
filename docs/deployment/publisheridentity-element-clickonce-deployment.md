@@ -18,18 +18,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 1ad10cae4ebd3aee6b65ad408ea3a3df3f82fd02
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: 92b0082d7a2b062d946d132c5a86fbceb5208802
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815144"
 ---
 # <a name="ltpublisheridentitygt-element-clickonce-deployment"></a>&lt;publisherIdentity&gt; 요소 (ClickOnce 배포)
 이 배포 매니페스트에 서명한 게시자에 대한 정보를 포함합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
 <publisherIdentity  
    name  
    issuerKeyHash  

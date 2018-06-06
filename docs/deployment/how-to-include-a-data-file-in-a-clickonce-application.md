@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 8240e4bb8ba540fcdd4453e39d9fa6b00b31bef2
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: ced10a16bae0e5892fddec1a79b9f7793b4dac43
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815547"
 ---
 # <a name="how-to-include-a-data-file-in-a-clickonce-application"></a>How to: Include a Data File in a ClickOnce Application
 각 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 설치한 응용 프로그램 데이터 디렉터리 응용 프로그램 자체 데이터를 관리할 수 있는 대상 컴퓨터의 로컬 디스크에 할당 됩니다. 데이터 파일의 파일 형식 포함할 수 있습니다: 텍스트 파일, XML 파일 또는 Microsoft Access 데이터베이스 (.mdb) 파일도 합니다. 다음 절차에 모든 형식의 데이터 파일을 추가 하는 방법을 보여 줍니다. 프로그램 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램입니다.  
@@ -35,7 +36,7 @@ ms.lasthandoff: 04/19/2018
   
 2.  데이터 파일을 나열 하 여 응용 프로그램 매니페스트를 업데이트 합니다.  
   
-     **mage-u v1.0.0.0\Application.manifest-FromDirectory v1.0.0.0**  
+     `mage -u v1.0.0.0\Application.manifest -FromDirectory v1.0.0.0`  
   
      이 작업을 수행 하면 응용 프로그램 매니페스트에 파일 목록이 다시 만듭니다를 자동으로 해시 서명을 생성 합니다.  
   
@@ -53,13 +54,11 @@ ms.lasthandoff: 04/19/2018
   
      응용 프로그램 매니페스트의 해당 해시가 변경 되었기 때문에 배포 매니페스트를 다시 서명 해야 합니다.  
   
-     **mage-s 응용 프로그램 매니페스트-cf cert_file-pwd 암호**  
+     `mage -s app manifest -cf cert_file -pwd password`
   
-     **mage-u 배포 매니페스트 appm 응용 프로그램 매니페스트**  
+     `mage -u deployment manifest -appm app manifest`
   
-     **mage-s 배포 매니페스트-cf certfile-pwd 암호**  
-  
-2.  
+     `mage -s deployment manifest -cf certfile -pwd password`
   
 ### <a name="to-include-a-data-file-by-using-mageuiexe"></a>MageUI.exe를 사용 하 여 데이터 파일을 포함 하려면  
   

@@ -24,18 +24,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 516ed9ae36b97a75e5185c69b89fadf587ddeaa7
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: c5349ecc2a93f2d5179a88c79b632747195989df
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34816005"
 ---
 # <a name="lttrustinfogt-element-clickonce-application"></a>&lt;trustInfo&gt; 요소 (ClickOnce 응용 프로그램)
 응용 프로그램을 클라이언트 컴퓨터에서 실행하는 데 필요한 최소 보안 권한을 설명합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml
   
       <trustInfo>  
    <security>  
@@ -104,7 +105,7 @@ ms.lasthandoff: 04/19/2018
   
      필수. 응용 프로그램에 이 권한을 무제한으로 부여할 필요가 있는지 식별합니다. `true`인 경우 권한 부여에 조건이 없습니다. `false`또는 이 특성이 정의되지 않은 경우에는 `IPermission` 태그에 정의된 권한별 특성에 따라 제한됩니다. 다음 권한을 사용합니다.  
   
-    ```  
+    ```xml  
     <IPermission  
       class="System.Security.Permissions.EnvironmentPermission, mscorlib, Version=1.2.3300.0, Culture=neutral, PublicKeyToken=b77a5c561934e089"   
       version="1"   
@@ -169,7 +170,7 @@ ms.lasthandoff: 04/19/2018
   
  첫 번째 예제는 Internet 보안 영역에서 사용할 수 있는 기본 권한에 대한 `trustInfo` 요소를 설명합니다.  
   
-```  
+```xml  
 <trustInfo>  
     <security>  
       <applicationRequestMinimum>  
@@ -205,7 +206,7 @@ ms.lasthandoff: 04/19/2018
   
  두 번째 예제는 LocalIntranet 보안 영역에서 사용할 수 있는 기본 권한에 대한 `trustInfo` 요소를 설명합니다.  
   
-```  
+```xml  
 <trustInfo>  
     <security>  
       <applicationRequestMinimum>  
@@ -257,7 +258,7 @@ ms.lasthandoff: 04/19/2018
   
  세 번째 예제는 FullTrust 보안 영역에서 사용할 수 있는 기본 권한에 대한 `trustInfo` 요소를 설명합니다.  
   
-```  
+```xml  
 <trustInfo>  
   <security>  
     <applicationRequestMinimum>  

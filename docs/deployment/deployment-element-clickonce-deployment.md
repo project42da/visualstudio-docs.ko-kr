@@ -23,18 +23,19 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 5f26bd8fe2b67a6078a78c9a263d57e98fc180e9
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e2e078da7f746460ea17d1a5ac2d83e5ac46dc62
+ms.sourcegitcommit: 1b9c1e333c2f096d35cfc77e846116f8e5054557
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/06/2018
+ms.locfileid: "34815534"
 ---
 # <a name="ltdeploymentgt-element-clickonce-deployment"></a>&lt;배포&gt; 요소 (ClickOnce 배포)
 업데이트를 배포하고 시스템에 노출하는 데 사용되는 특성을 식별합니다.  
   
 ## <a name="syntax"></a>구문  
   
-```  
+```xml  
   
       <deployment   
    install  
@@ -111,7 +112,7 @@ ms.lasthandoff: 04/19/2018
 ## <a name="examples"></a>예제  
  다음 코드 예제는 `deployment` 요소에는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 배포 매니페스트 합니다. 이 예제에서는 사용는 `deploymentProvider` 요소 기본 업데이트 위치를 나타냅니다.  
   
-```  
+```xml  
 <deployment install="true" minimumRequiredVersion="2.0.0.0" mapFileExtension="true" trustUrlParameters="true">  
     <subscription>  
       <update>  
