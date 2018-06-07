@@ -22,11 +22,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 234f89f2d0a28c0836ee06df4c49c3ab60f102ce
-ms.sourcegitcommit: 4c0db930d9d5d8b857d3baf2530ae89823799612
+ms.openlocfilehash: d3cc80a6ca29583fdc445b507aeb8f87267459d8
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/10/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572727"
 ---
 # <a name="create-bootstrapper-packages"></a>부트스트래퍼 패키지 만들기
 설치 프로그램은 일반 설치 관리자로서 Windows Installer(.msi) 파일 및 실행 프로그램과 같은 재배포 가능 구성 요소를 검색 및 설치하도록 구성할 수 있습니다. 설치 관리자를 부트스트래퍼라고도 합니다. 구성 요소 설치를 관리하는 메타데이터를 지정하는 XML 매니페스트 집합을 통해 설치 프로그램을 프로그래밍합니다.  각 재배포 가능 구성 요소 또는 필수 구성 요소에 표시 되는 **필수 구성 요소** ClickOnce에 대 한 대화 상자는 부트스트래퍼 패키지입니다. 부트스트래퍼 패키지는 필수 구성 요소를 설치해야 하는 방법을 설명하는 매니페스트 파일이 포함된 파일과 디렉터리 그룹입니다. 
@@ -77,7 +78,7 @@ Visual Studio에서 XML 편집기를 사용 하 여 부트스트래퍼 매니페
   
 각 재배포 가능 구성 요소는 packages 디렉터리 아래의 고유 하위 폴더에 표시됩니다. 제품 매니페스트 및 재배포 가능 파일을 반드시가 하위이 폴더에 배치 합니다. 지역화 된 버전의 구성 요소 및 패키지 매니페스트는 문화권 이름에 따라 이라는 하위 폴더에 넣어야 합니다.  
   
-부트스트래퍼 패키지가 Visual Studio에서 자동으로 표시 이러한 파일을 부트스트래퍼 폴더에 복사 하는 **필수 구성 요소** 대화 상자. 사용자 지정 부트스트래퍼 패키지가 표시 되지 않으면 경우 닫은 후의 **필수 구성 요소** 대화 상자. 자세한 내용은 [Prerequisites Dialog Box](../ide/reference/prerequisites-dialog-box.md)을 참조하세요.  
+부트스트래퍼 패키지가 Visual Studio에서 자동으로 표시 이러한 파일을 부트스트래퍼 폴더에 복사 하는 **필수 구성 요소** 대화 상자. 사용자 지정 부트스트래퍼 패키지가 표시 되지 않으면 경우 닫은 후의 **필수 구성 요소** 대화 상자. 자세한 내용은 [필수 조건 대화 상자](../ide/reference/prerequisites-dialog-box.md)을 참조하세요.  
   
 다음 테이블에는 부트스트래퍼가 자동으로 채우는 속성이 나와 있습니다.  
   
@@ -86,7 +87,7 @@ Visual Studio에서 XML 편집기를 사용 하 여 부트스트래퍼 매니페
 |ApplicationName|응용 프로그램의 이름입니다.|  
 |ProcessorArchitecture|실행 파일의 대상인 플랫폼의 단어당 비트 및 프로세서입니다. 여기에는 다음 값이 포함됩니다.<br /><br /> -Intel<br />-IA64<br />-AMD64|  
 |[Version9x](https://msdn.microsoft.com/en-us/library/aa372490\(v=vs.140\).aspx)|Microsoft Windows 95, Windows 98 또는 Windows ME 운영 체제의 버전 번호. 버전의 구문은 Major.Minor.ServicePack입니다.|  
-|[VersionNT](https://msdn.microsoft.com/en-us/library/aa372495\(v=vs.140\).xaspx)|Windows NT, Windows 2000, Windows XP, Windows Vista, Windows Server 2008 또는 Windows 7 운영 체제의 버전 번호. 버전의 구문은 Major.Minor.ServicePack입니다.|  
+|[VersionNT](https://msdn.microsoft.com/en-us/library/aa372495\(v=vs.140\).aspx)|Windows NT, Windows 2000, Windows XP, Windows Vista, Windows Server 2008 또는 Windows 7 운영 체제의 버전 번호. 버전의 구문은 Major.Minor.ServicePack입니다.|  
 |[VersionMSI](https://msdn.microsoft.com/en-us/library/aa372493\(v=vs.140\).aspx)|설치 중에 실행되는 Windows Installer 어셈블리(msi.dll)의 버전입니다.|  
 |[AdminUser](https://msdn.microsoft.com/en-us/library/aa367545\(v=vs.140\).aspx)|사용자에게 관리자 권한이 있으면 이 속성이 설정됩니다. 값은 true 또는 false입니다.|  
 |InstallMode|설치 모드는 구성 요소 설치를 시작해야 하는 위치를 나타냅니다. 여기에는 다음 값이 포함됩니다.<br /><br /> 필수 구성 요소-HomeSite-공급 업체의 웹 사이트에서 설치 됩니다.<br />필수 구성 요소-SpecificSite-선택한 위치에서 설치 됩니다.<br />-SameSite-필수 구성 요소는 응용 프로그램과 동일한 위치에서 설치 됩니다.|  

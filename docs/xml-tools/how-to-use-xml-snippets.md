@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: bf6b2143c7a2fd39cd7a8d2df797f68a706a2ec8
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: b4758fbebea12b014f92bed59e851210509cdbb9
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34573130"
 ---
 # <a name="how-to-use-xml-snippets"></a>방법: 사용 하 여 XML 조각
 
@@ -22,7 +23,7 @@ XML 편집기 바로 가기 메뉴에서 다음 두 명령을 사용하여 XML �
 
 XML 조각을 편집기에 추가한 후 조각에서 편집 가능한 필드가 노란색으로 강조되며 편집 가능한 첫 번째 필드에 커서가 놓입니다.
 
-## <a name="insert-snippet"></a>코드 조각 삽입
+## <a name="insert-snippet"></a>조각 삽입
 
 다음 절차는에 액세스 하는 방법을 설명는 **조각 삽입** 명령입니다.
 
@@ -49,7 +50,7 @@ XML 조각을 편집기에 추가한 후 조각에서 편집 가능한 필드가
 
 3. 목록에서 마우스를 사용 하거나 조각 및 키를 눌러의 이름을 입력 하 여 조각을 선택 **탭** 또는 **Enter**합니다.
 
-### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>IntelliSense 단어 자동 완성 목록을 통해 조각을 삽입하려면
+### <a name="to-insert-snippets-through-the-intellisense-complete-word-list"></a>IntelliSense 단어 자동 완성 목록을 통해 조각을 삽입 하려면
 
 1. XML 조각을 삽입할 커서의 위치를 지정합니다.
 
@@ -79,7 +80,7 @@ XML 조각을 편집기에 추가한 후 조각에서 편집 가능한 필드가
 > [!NOTE]
 > **감싸기** 명령을 바로 가기 키를 통해 사용할 수도 있습니다 (**Ctrl**+**K**, 다음 **Ctrl** + **S**).
 
-### <a name="to-use-surround-with-from-the-context-menu"></a>상황에 맞는 메뉴에서 포함 명령을 사용하려면
+### <a name="to-use-surround-with-from-the-context-menu"></a>상황에 맞는 메뉴에서 코드 감싸기 사용 하려면
 
 1. XML 편집기에 포함시킬 텍스트를 선택합니다.
 
@@ -89,7 +90,7 @@ XML 조각을 편집기에 추가한 후 조각에서 편집 가능한 필드가
 
 3. 목록에서 마우스를 사용 하거나 조각 및 키를 눌러의 이름을 입력 하 여 조각을 선택 **탭** 또는 **Enter**합니다.
 
-### <a name="to-use-surround-with-from-the-intellisense-menu"></a>IntelliSense 메뉴에서 포함 명령을 사용 하려면
+### <a name="to-use-surround-with-from-the-intellisense-menu"></a>코드 감싸기 IntelliSense 메뉴에서 사용 하려면
 
 1. XML 편집기에 포함시킬 텍스트를 선택합니다.
 
@@ -99,7 +100,7 @@ XML 조각을 편집기에 추가한 후 조각에서 편집 가능한 필드가
 
 3. 목록에서 마우스를 사용 하거나 조각 및 키를 눌러의 이름을 입력 하 여 조각을 선택 **탭** 또는 **Enter**합니다.
 
-## <a name="using-xml-snippets"></a>XML 조각 사용
+## <a name="use-xml-snippets"></a>XML 조각 사용
 
 XML 조각을 선택하면 코드 조각의 텍스트가 커서 위치에 자동으로 삽입됩니다. 조각에서 편집 가능한 필드가 강조되며 편집 가능한 첫 번째 필드가 자동으로 선택됩니다. 현재 선택되어 있는 필드는 상자로 둘러싸여 있습니다.
 
@@ -109,10 +110,10 @@ XML 조각을 선택하면 코드 조각의 텍스트가 커서 위치에 자동
 
 키를 누르면 **Enter** 또는 **Esc** 필드 편집이 취소 되 고 기본 편집기 돌아갑니다.
 
-코드 조각 필드 설정을 수정 하 여 편집할 수 있는 코드 조각 필드에 대 한 기본 색을 변경할 수 있습니다는 **글꼴 및 색** 의 창 고 **옵션** 대화 상자. 자세한 내용은 참조 [하는 방법: 글꼴 및 색 편집기에서 변경](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)합니다.
+편집 가능한 코드 조각 필드에 대 한 기본 색을 수정 하 여 변경할 수 있습니다는 **코드 조각 필드** 에서 설정 된 **글꼴 및 색** 의 창은 **옵션** 대화 상자. 자세한 내용은 참조 [하는 방법: 편집기에서 글꼴 및 색 변경](../ide/reference/how-to-change-fonts-and-colors-in-the-editor.md)합니다.
 
 ## <a name="see-also"></a>참고자료
 
 - [XML 조각](../xml-tools/xml-snippets.md)
-- [방법: XML 스키마에서 XML 조각 생성](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
+- [방법: XML 스키마에서 XML 조각을 생성](../xml-tools/how-to-generate-an-xml-snippet-from-an-xml-schema.md)
 - [방법: XML 조각 만들기](../xml-tools/how-to-create-xml-snippets.md)

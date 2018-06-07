@@ -1,5 +1,5 @@
 ---
-title: Windows의 제한 사항 Forms Office 문서의 컨트롤 | Microsoft Docs
+title: Office 문서의 Windows Forms 컨트롤의 제한 사항
 ms.date: 02/02/2017
 ms.technology: office-development
 ms.topic: conceptual
@@ -21,13 +21,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 1136d799bb6bee56f0589c798a7c61fe0879d556
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: 104b8b3449b2ffb689caf66d5c180817b633f83e
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572961"
 ---
-# <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Limitations of Windows Forms Controls on Office Documents
+# <a name="limitations-of-windows-forms-controls-on-office-documents"></a>Office 문서의 Windows Forms 컨트롤의 제한 사항
 
 Microsoft Office Word 문서 또는 Microsoft Office Excel 워크시트에 추가 된 Windows Forms 컨트롤 및 Windows Forms에 추가 하는 Windows Forms 컨트롤 간의 차이가 있습니다. 추가한 경우에 예를 들어 한 <xref:Microsoft.Office.Tools.Word.Controls.Button> 등의 속성을 문서에 컨트롤 <xref:System.Windows.Forms.Control.Dock>, <xref:System.Windows.Forms.Control.Anchor>, 및 <xref:System.Windows.Forms.Control.TabIndex> 예상 대로 작동 하지 않습니다.
 
@@ -83,7 +84,7 @@ Windows Forms 컨트롤 일반적으로 동일 하 게 동작 Office 문서에 W
 |컨트롤 크기 조정|8 개의 크기 조정 핸들 중 하나를 사용 하 여 문서에서 컨트롤의 크기를 조정 하면 새 컨트롤 차원에 반영 되지 않습니다는 **속성** 컨트롤 다시 선택 될 때까지 창.|
 |동작을 제어|Excel 워크시트에서 컨트롤은 워크시트 창 분할 될 때 예기치 않게 동작할 수 있습니다. 예를 들어에 대 한 액세스는 <xref:Microsoft.Office.Tools.Excel.Controls.TextBox> 워크시트에만 사용할 수 창 중 하나에 있습니다.|
 |컨트롤 이름 지정|컨트롤의 이름에 예약어를 사용할 수 없습니다. 예를 들어, 추가 하는 경우는 <xref:Microsoft.Office.Tools.Excel.Controls.Button> 워크시트에는 하 고 이름을 **시스템**, 프로젝트를 빌드할 때 오류가 발생 합니다.|
-|프로그래밍 방식으로 컨트롤 추가|런타임에 문서에 컨트롤을 추가 하는 컨트롤의 생성자를 사용 하지 마십시오. 제공 하는 도우미 메서드를 사용 하 여 대신는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다. 예를 들어, 사용 된 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A> 워크시트에 단추를 추가 하는 메서드. 이러한 도우미 메서드에서 지원 되지 않는 컨트롤을 추가 하려는 경우 AddControl 메서드를 사용할 수 있습니다. 자세한 내용은 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)을 참조하세요.|
+|프로그래밍 방식으로 컨트롤 추가|런타임에 문서에 컨트롤을 추가 하는 컨트롤의 생성자를 사용 하지 마십시오. 제공 하는 도우미 메서드를 사용 하 여 대신는 [!INCLUDE[vsto_runtime](../vsto/includes/vsto-runtime-md.md)]합니다. 예를 들어, 사용 된 <xref:Microsoft.Office.Tools.Excel.ControlExtensions.AddButton%2A> 워크시트에 단추를 추가 하는 메서드. 이러한 도우미 메서드에서 지원 되지 않는 컨트롤을 추가 하려는 경우 사용할 수 있습니다는 `AddControl` 메서드. 자세한 내용은 참조 [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)합니다.|
 |컨트롤 복사|Windows Forms 컨트롤을 복사 하 고 런타임에 문서에 붙여 경우 빈 컨테이너 ActiveX 컨트롤이 문서에 붙여넣습니다. Windows Forms 컨트롤의 새 위치에 나타나지 않으며 원래 컨트롤 뒤에 있는 코드 ActiveX 컨트롤 컨테이너에 복사 되지 않습니다.|
 
 ## <a name="limitations-in-document-level-projects"></a>문서 수준 프로젝트에 대 한 제한 사항
@@ -95,7 +96,7 @@ Windows Forms 컨트롤 일반적으로 동일 하 게 동작 Office 문서에 W
 특정 Windows Forms 컨트롤에서 제거 되 고 **도구 상자** Excel 워크시트 또는 Word 문서는 Visual Studio 디자이너에에서 열려 있는 경우. 이것은 기술적 제한 사항을 위반 때문에 게 없거나 기능은 이미 Word 또는 Excel 내에서 사용할 수 있습니다. Excel 및 Word 프로젝트를 지 원하는 모든 Windows Forms 컨트롤 및 기타 구성 요소에 표시 되는 **도구 상자** 문서에 포커스가 시점과 워크시트 또는 문서에 타사 컨트롤을 추가할 수도 있습니다.
 
 > [!NOTE]
-> 모든 컨트롤에서 제거 되는 **도구 상자** 문서가 보호 되는 경우. 문서 보호에 대 한 정보를 참조 하십시오. [문서 수준 솔루션의 문서 보호](../vsto/document-protection-in-document-level-solutions.md)합니다.
+> 모든 컨트롤에서 제거 되는 **도구 상자** 문서가 보호 되는 경우. 문서 보호에 대 한 정보를 참조 하십시오. [문서 보호 문서 수준 솔루션의](../vsto/document-protection-in-document-level-solutions.md)합니다.
 
 > [!NOTE]
 > 타사 컨트롤 있어야는 <xref:System.Runtime.InteropServices.ComVisibleAttribute> 특성이로 설정 **true** Office 솔루션에 사용할 수 있도록 합니다.
@@ -185,6 +186,6 @@ ActiveX 컨트롤의 기능 손실;가 기존 Word 문서 또는 ActiveX 컨트�
 ## <a name="see-also"></a>참고자료
 
 - [Office 문서의 컨트롤](../vsto/controls-on-office-documents.md)
-- [Office 문서의 Windows Forms 컨트롤 개요](../vsto/windows-forms-controls-on-office-documents-overview.md)
+- [Office 문서 개요에서 Windows Forms 컨트롤](../vsto/windows-forms-controls-on-office-documents-overview.md)
 - [런타임에 Office 문서에 컨트롤 추가](../vsto/adding-controls-to-office-documents-at-run-time.md)
 - [방법: Office 문서에 Windows Forms 컨트롤 추가](../vsto/how-to-add-windows-forms-controls-to-office-documents.md)

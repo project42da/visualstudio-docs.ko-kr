@@ -1,5 +1,5 @@
 ---
-title: Office 솔루션에서 런타임에 바인딩 | Microsoft Docs
+title: Office 솔루션에서 런타임에 바인딩
 ms.custom: ''
 ms.date: 02/02/2017
 ms.technology:
@@ -18,11 +18,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 7e205874e1c5c4e5de639e28768d6369b43c1e1a
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 5616ce958747f90c8015df858f657299ba52852b
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572552"
 ---
 # <a name="late-binding-in-office-solutions"></a>Office 솔루션에서 런타임에 바인딩
   Office 응용 프로그램의 개체 모델의 일부 형식은 런타임에 바인딩 기능을 통해 사용할 수 있는 기능을 제공 합니다. 예를 들어 일부 메서드 및 속성은 다양 한 유형의 Office 응용 프로그램의 컨텍스트에 따라 개체를 반환할 수 있으며 일부 형식은 다른 메서드나 속성에 다양 한 상황에 노출할 수 있습니다.  
@@ -31,7 +32,7 @@ ms.lasthandoff: 04/16/2018
   
  Visual Basic 프로젝트 **Option Strict** 가 해제 Visual C# 프로젝트를 대상으로 하는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)] 이러한 런타임에 바인딩 기능을 사용 하는 형식와 직접 협업할 수 있습니다.  
   
-## <a name="implicit-and-explicit-casting-of-object-return-values"></a>개체의 반환 값의 암시적 및 명시적 캐스팅  
+## <a name="implicit-and-explicit-casting-of-object-return-values"></a>암시적 및 명시적 캐스팅 개체의 반환 값  
  여러 메서드와 속성이 주 interop 어셈블리 (Pia)를 반환 하는 Microsoft Office에서 <xref:System.Object> 값, 몇 가지 유형의 개체를 반환할 수 있기 때문입니다. 예를 들어는 <xref:Microsoft.Office.Tools.Excel.Workbook.ActiveSheet%2A> 속성에서 반환 된 <xref:System.Object> 반환 값 수 있기 때문에 <xref:Microsoft.Office.Interop.Excel.Worksheet> 또는 <xref:Microsoft.Office.Interop.Excel.Chart> 활성 시트에 따라 개체.  
   
  메서드 또는 속성 반환 하는 경우는 <xref:System.Object>, 명시적으로 변환 해야 (Visual Basic)의 개체는 Visual Basic 프로젝트에서 올바른 형식으로 위치 **Option Strict** 켜져 있습니다. 명시적으로 캐스팅 해야 <xref:System.Object> Visual Basic 프로젝트에서 값을 반환 합니다. 여기서 **Option Strict** 꺼져 있습니다.  
@@ -50,7 +51,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstcoreProgramming#10](../vsto/codesnippet/VisualBasic/Trin_VstcoreProgrammingExcelVB/Sheet1.vb#10)]
  [!code-csharp[Trin_VstcoreProgramming#10](../vsto/codesnippet/CSharp/Trin_VstcoreProgrammingExcelCS/Sheet1.cs#10)]  
   
-## <a name="accessing-members-that-are-available-only-through-late-binding"></a>런타임에 바인딩을 통해서만 사용할 수 있는 멤버에 액세스  
+## <a name="access-members-that-are-available-only-through-late-binding"></a>런타임에 바인딩을 통해서만 사용할 수 있는 멤버에 액세스  
  일부 속성 및 Office Pia의 메서드는 런타임에 바인딩을 통해서만 사용할 수 있습니다. 프로젝트나 Visual Basic에서는 **Option Strict** 는 꺼져 있거나 Visual C# 프로젝트에서 대상으로 하는 [!INCLUDE[net_v40_short](../sharepoint/includes/net-v40-short-md.md)] 또는 [!INCLUDE[net_v45](../vsto/includes/net-v45-md.md)], 런타임에 바인딩된 멤버에 액세스 하려면 이러한 언어에서는 런타임에 바인딩 기능을 사용할 수 있습니다. 프로젝트나 Visual Basic에서는 **Option Strict** 켜져, 리플렉션을 사용 하 여 이러한 멤버에 액세스 해야 합니다.  
   
 ### <a name="examples"></a>예제  
@@ -63,13 +64,13 @@ ms.lasthandoff: 04/16/2018
   
  [!code-vb[Trin_VstcoreWordAutomation#102](../vsto/codesnippet/VisualBasic/Trin_VstcoreWordAutomationVB/ThisDocument.vb#102)]  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)   
  [Office 솔루션의 선택적 매개 변수](../vsto/optional-parameters-in-office-solutions.md)   
- [Dynamic 형식 사용 &#40;C&#35; 프로그래밍 가이드&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
+ [유형 동적 사용 &#40;C&#35; 프로그래밍 가이드&#41;](/dotnet/csharp/programming-guide/types/using-type-dynamic)   
  [Option Strict 문](/dotnet/visual-basic/language-reference/statements/option-strict-statement)   
  [리플렉션(C#)](/dotnet/csharp/programming-guide/concepts/reflection)  
  [리플렉션(Visual Basic)](/dotnet/visual-basic/programming-guide/concepts/reflection)  
- [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
+ [디자인 하 고 Office 솔루션을 만들려면](../vsto/designing-and-creating-office-solutions.md)  
   
   

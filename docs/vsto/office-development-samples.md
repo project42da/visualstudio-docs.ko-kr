@@ -15,16 +15,17 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: fadffd33582e97c3c0ad714f535afa0da52e1693
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 475da9720d0d29456fca4f06046b3f3778ec22f7
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571419"
 ---
 # <a name="office-development-samples"></a>Office 개발 샘플
   Visual Studio에는 Microsoft Office 개발자 도구를 사용하여 Office 솔루션을 만드는 방법을 보여 주는 샘플 응용 프로그램이 포함되어 있습니다. 이러한 샘플의 코드는 Office 솔루션을 빌드하는 데 사용되는 구문, 구조 및 기술을 보여 줍니다.  
   
- 최신 샘플에 대 한 참조 [MSDN 개발자 샘플: 코드](http://go.microsoft.com/fwlink/?LinkID=248199) Microsoft 웹 사이트입니다.  
+ 최신 샘플에 대 한 참조 [MSDN 개발자 샘플: 코드를 통한 학습](http://go.microsoft.com/fwlink/?LinkID=248199) Microsoft 웹 사이트입니다.  
   
  [!INCLUDE[note_security_multiplesample](../vsto/includes/note-security-multiplesample-md.md)]  
   
@@ -42,7 +43,7 @@ ms.lasthandoff: 04/16/2018
 |UI 관리자 샘플|VSTO 추가 기능에서 확장성 인터페이스를 구현하여 Outlook에 대한 리본 메뉴 사용자 지정, 사용자 지정 작업창 및 사용자 지정 양식 영역을 만드는 방법을 보여 줍니다. 리본, 작업창 및 양식 영역의 각 인스턴스는 서로 올바르게 통신할 수 있습니다.|  
 |VBA 및 VSTO 상호 운용성 샘플|통합 문서의 VBA(Visual Basic for Applications) 코드에서 Excel에 대한 문서 수준 사용자 지정의 메서드를 호출하는 방법을 보여 줍니다.<br /><br /> 이 샘플은 온라인에서만 사용할 수 있습니다.|  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [MSDN 개발자 샘플: 코드 샘플을 통한 학습](http://go.microsoft.com/fwlink/?LinkID=248199)   
  [Office 프로그래밍의 일반적인 작업](../vsto/common-tasks-in-office-programming.md)  
   
