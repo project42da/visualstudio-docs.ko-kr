@@ -21,11 +21,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: d417b5126989736c6126ae7c80bfcbc86f336a09
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: 9b03f6112ebf44a89da3b4d5cbf6f7ff23f54b9c
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571989"
 ---
 # <a name="optional-parameters-in-office-solutions"></a>Office 솔루션의 선택적 매개 변수
   Microsoft Office 응용 프로그램의 개체 모델에 있는 메서드 중 상당수가 선택적 매개 변수를 허용합니다. Visual Studio에서 Visual Basic을 사용하여 Office 솔루션을 개발하는 경우 없는 매개 변수마다 기본값이 자동으로 사용되기 때문에 선택적 매개 변수의 값을 전달할 필요가 없습니다. 대부분의 경우에서 Visual C# 프로젝트에서 선택적 매개 변수를 생략할 수 있습니다. 그러나 선택적 생략할 수 없습니다 **ref** 의 매개 변수는 `ThisDocument` 문서 수준 Word 프로젝트의 클래스.  
@@ -49,7 +50,7 @@ ms.lasthandoff: 04/16/2018
  [!code-vb[Trin_VstrefGeneralWord#1](../vsto/codesnippet/VisualBasic/worddocument1/ThisDocument.vb#1)]
  [!code-csharp[Trin_VstrefGeneralWord#1](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#1)]  
   
-## <a name="using-optional-parameters-of-methods-in-the-thisdocument-class-in-visual-c-document-level-projects-for-word"></a>Word의 Visual C# 문서 수준 프로젝트에 있는 ThisDocument 클래스에서 메서드의 선택적 매개 변수 사용  
+## <a name="use-optional-parameters-of-methods-in-the-thisdocument-class-in-visual-c-document-level-projects-for-word"></a>Word에 대 한 Visual C# 문서 수준 프로젝트에서 ThisDocument 클래스에서 메서드의 선택적 매개 변수 사용  
  Word 개체 모델에 선택적으로 여러 메서드도 포함 되어 **ref** 허용 하는 매개 변수 <xref:System.Object> 값입니다. 그러나 선택적 생략할 수 없습니다 **ref** 생성 된 메서드의 매개 변수가 `ThisDocument` Word 용 문서 수준 프로젝트는 Visual C#에서 클래스입니다. Visual C#에서는 선택적 생략할 수 **ref** 클래스가 아니라 인터페이스의 메서드에 대해서만 매개 변수입니다. 예를 들어 다음 코드 예제에서는 컴파일되지 않습니다, 선택적으로 생략할 수 있으므로 **ref** 의 매개 변수는 <xref:Microsoft.Office.Tools.Word.DocumentBase.CheckSpelling%2A> 의 메서드는 `ThisDocument` 클래스입니다.  
   
  [!code-csharp[Trin_VstrefGeneralWord#3](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#3)]  
@@ -68,10 +69,10 @@ ms.lasthandoff: 04/16/2018
   
  [!code-csharp[Trin_VstrefGeneralWord#5](../vsto/codesnippet/CSharp/worddocument1/ThisDocument.cs#5)]  
   
- 값 및 참조 형식 매개 변수에 대 한 자세한 내용은 참조 하십시오. [참조 및 값으로 인수 전달 &#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic의 경우)에 대 한 및 [매개 변수 전달 &#40;C&#35; 프로그래밍 가이드&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)합니다.  
+ 값 및 참조 형식 매개 변수에 대 한 자세한 내용은 참조 하십시오. [참조 및 값으로 인수 전달 &#40;Visual Basic&#41; ](/dotnet/visual-basic/programming-guide/language-features/procedures/passing-arguments-by-value-and-by-reference) (Visual Basic의 경우)에 대 한 및 [매개 변수를 전달 &#40;C&#35; 프로그래밍 가이드&#41;](/dotnet/csharp/programming-guide/classes-and-structs/passing-parameters)합니다.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [Office 솔루션 개발](../vsto/developing-office-solutions.md)   
- [Writing Code in Office Solutions](../vsto/writing-code-in-office-solutions.md)  
+ [Office 솔루션에서 코드 작성](../vsto/writing-code-in-office-solutions.md)  
   
   

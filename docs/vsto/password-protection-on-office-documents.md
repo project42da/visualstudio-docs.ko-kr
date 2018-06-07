@@ -19,11 +19,12 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 5d85f1dc0aa54da22b02259aea372f2ad6dd42ac
-ms.sourcegitcommit: 6a9d5bd75e50947659fd6c837111a6a547884e2a
+ms.openlocfilehash: a278677b40f8da703c7f3287851c2f82fb95a21c
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/16/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572714"
 ---
 # <a name="password-protection-on-office-documents"></a>Office 문서의 암호 보호
   암호를 아는 하지 않는 사용자가 열 수 없습니다 있도록 Microsoft Office Word 문서 및 Microsoft Office Excel 통합 문서에 대 한 암호를 설정 하는 것이 불가능 합니다. 이 옵션을 라고 **열기 암호**합니다.  
@@ -39,10 +40,10 @@ ms.lasthandoff: 04/16/2018
   
  가 있는 Visual Studio의 Word 문서를 열고 처음 **열기 암호** 활성화 저장할지 확인 암호에 대 한 합니다. 성공적으로 암호를 입력 한 후 **열기 암호** 문서에서 제거 하 고 문서를 열어 암호를 더 이상 필요 합니다. 솔루션의 문서를 사용 하려는 경우 전에 암호를 요구 하도록 열 수, 사용 하도록 설정 해야 **열기 암호** 최종 빌드 및 솔루션을 배포 하기 전에.  
   
-## <a name="see-also"></a>참고 항목  
+## <a name="see-also"></a>참고자료  
  [문서 수준 솔루션의 문서 보호](../vsto/document-protection-in-document-level-solutions.md)   
  [정보 권한 관리 및 관리 코드 확장 개요](../vsto/information-rights-management-and-managed-code-extensions-overview.md)   
- [방법: 코드 권한이 제한 된 문서 뒤 실행 허용](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
- [Office 솔루션 디자인 및 만들기](../vsto/designing-and-creating-office-solutions.md)  
+ [방법: 문서 뒤에서 제한 된 권한으로 실행 하는 코드를 허용 합니다.](../vsto/how-to-permit-code-to-run-behind-documents-with-restricted-permissions.md)   
+ [디자인 하 고 Office 솔루션을 만들려면](../vsto/designing-and-creating-office-solutions.md)  
   
   

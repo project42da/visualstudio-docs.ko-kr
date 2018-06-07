@@ -10,11 +10,12 @@ ms.author: gewarren
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 0dfc0a4e3841f30c2be81b60b2e86d9fd29bb801
-ms.sourcegitcommit: e13e61ddea6032a8282abe16131d9e136a927984
+ms.openlocfilehash: bd6ee70f99f3b82505d210ab95f8359b5c7f90c8
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/26/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34571772"
 ---
 # <a name="miscellaneous-xml-text-editor-options-dialog-box"></a>기타, XML, 텍스트 편집기, 옵션 대화 상자
 
@@ -68,7 +69,7 @@ ms.lasthandoff: 04/26/2018
 
  스키마 캐시의 위치를 지정합니다. 찾아보기 단추 (**...** ) 열립니다는 **디렉터리 찾아보기** 현재 스키마 캐시 위치에 대화 상자. 다른 디렉터리를 선택 하거나 대화 상자에서 폴더를 선택할 수 있습니다 마우스 오른쪽 단추로 클릭 하 고 선택 **열려** 디렉터리에 기능을 확인 하십시오.
 
-## <a name="see-also"></a>참고 항목
+## <a name="see-also"></a>참고자료
 
 - [XML 문서 속성, 속성 창](../xml-tools/xml-document-properties-properties-window.md)
 - [XML 편집기 구성 요소](../xml-tools/xml-editor-components.md)

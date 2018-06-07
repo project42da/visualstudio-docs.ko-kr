@@ -18,11 +18,12 @@ ms.author: mikejo
 manager: douge
 ms.workload:
 - multiple
-ms.openlocfilehash: 03fff714a8940a4722cb9def8077ce49f366a565
-ms.sourcegitcommit: 42ea834b446ac65c679fa1043f853bea5f1c9c95
+ms.openlocfilehash: e7bc06e106a6b42f2225668edb928e6fef7e349b
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 04/19/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572243"
 ---
 # <a name="trusted-application-deployment-overview"></a>신뢰할 수 있는 응용 프로그램 배포 개요
 이 항목에서는 신뢰할 수 있는 응용 프로그램 배포 기술을 사용하여, 관리자 권한이 있는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램을 배포하는 방법에 대한 개요를 제공합니다.  
@@ -86,7 +87,7 @@ ms.lasthandoff: 04/19/2018
  신뢰할 수 있는 응용 프로그램 배포는 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)]에 관련되고 [!INCLUDE[ndptecclick](../deployment/includes/ndptecclick_md.md)] 응용 프로그램에서만 사용할 수 있습니다.  
   
 ### <a name="sign-the-deployment"></a>배포에 서명  
- 인증서를 가져오고 나서 이 인증서를 사용하여 배포에 서명해야 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 게시 마법사를 사용하여 응용 프로그램을 배포할 경우 인증서를 직접 지정하지 않았다면 마법사가 자동으로 테스트 인증서를 생성합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 디자이너 창을 사용하여 CA가 제공한 인증서를 제공할 수도 있습니다.  또한 참조 [하는 방법: ClickOnce 응용 프로그램 게시 마법사를 사용 하 여 게시] (http://msdn.microsoft.com/library/31kztyey\(v = vs.110\)합니다.  
+ 인증서를 가져오고 나서 이 인증서를 사용하여 배포에 서명해야 합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 게시 마법사를 사용하여 응용 프로그램을 배포할 경우 인증서를 직접 지정하지 않았다면 마법사가 자동으로 테스트 인증서를 생성합니다. [!INCLUDE[vsprvs](../code-quality/includes/vsprvs_md.md)] 프로젝트 디자이너 창을 사용하여 CA가 제공한 인증서를 제공할 수도 있습니다.  또한 참조 [하는 방법: ClickOnce 응용 프로그램 게시 마법사를 사용 하 여 게시](../deployment/how-to-publish-a-clickonce-application-using-the-publish-wizard.md)합니다.  
   
 > [!CAUTION]
 >  테스트 인증서를 사용하여 응용 프로그램을 배포하는 것은 권장하지 않습니다.  

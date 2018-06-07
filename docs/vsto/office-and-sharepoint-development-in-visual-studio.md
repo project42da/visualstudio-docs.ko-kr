@@ -24,13 +24,14 @@ ms.author: tglee
 manager: douge
 ms.workload:
 - office
-ms.openlocfilehash: 61d9b988f0e0898f0dfe3843456b711f9f39b7c5
-ms.sourcegitcommit: 1466ac0f49ebf7448ea4507ae3f79acb25d51d3e
+ms.openlocfilehash: c7bd0f38d413fbd3d809773a124699e0e883287d
+ms.sourcegitcommit: 0aafcfa08ef74f162af2e5079be77061d7885cac
 ms.translationtype: MT
 ms.contentlocale: ko-KR
-ms.lasthandoff: 05/22/2018
+ms.lasthandoff: 06/01/2018
+ms.locfileid: "34572168"
 ---
-# <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio에서 Office/SharePoint 개발
+# <a name="office-and-sharepoint-development-in-visual-studio"></a>Visual Studio에서 office 및 SharePoint 개발
   사용자가 [Office 스토어](https://store.office.com/) 또는 조직 카탈로그에서 다운로드하는 간단한 앱 또는 추가 기능이나 컴퓨터에 설치하는 .NET Framework 기반 솔루션을 만들어 Microsoft Office 및 SharePoint를 확장할 수 있습니다.  
   
  항목 내용:  
@@ -49,8 +50,6 @@ ms.lasthandoff: 05/22/2018
  이러한 추가 기능은 VSTO 추가 기능과 솔루션에 비해 차지하는 공간이 매우 적으며 HTML5, JavaScript, CSS3, XML 등 거의 모든 웹 프로그래밍 기술을 사용하여 빌드할 수 있습니다.  추가 기능 빌드를 시작하려면 Visual Studio의 Office 개발자 도구를 사용하거나 브라우저에서 프로젝트를 만들고 코드를 작성하고 추가 기능을 실행할 수 있도록 하는 간단한 웹 기반 도구인 Office 365 개발 도구(코드명 Napa)를 사용합니다.  
   
  ![Office 및 SharePoint 개념 모델용 앱](../vsto/media/officeandsharepointapps2015.png "Office 및 SharePoint 개념 모델용 앱")  
-  
-
   
 ### <a name="build-an-office-add-in"></a>Office 추가 기능 빌드  
  Office의 기능을 확장하려면 Office 추가 기능을 빌드합니다. 앱은 기본적으로 Excel, Word, Outlook, PowerPoint 등의 Office 응용 프로그램에서 호스팅되는 웹 페이지입니다. 문서, 워크시트, 전자 메일 메시지, 약속, 프레젠테이션 및 프로젝트에 기능을 추가할 수 있습니다.  
@@ -83,7 +82,7 @@ ms.lasthandoff: 05/22/2018
 |--------|---------|  
 |SharePoint 추가 기능에 대해 자세히 알아보고 앱 빌드해 보기|[SharePoint 추가 기능](https://msdn.microsoft.com/library/office/fp179930.aspx)|  
 |SharePoint용 추가 기능과 기존 SharePoint 솔루션 비교|[SharePoint 솔루션과 SharePoint 추가 기능 비교](http://msdn.microsoft.com/library/office/jj163114.aspx)|  
-|SharePoint 추가 기능을 빌드할지 SharePoint 솔루션을 빌드할지 선택|[SharePoint 추가 기능과 SharePoint 솔루션 중에서 결정](https://msdn.microsoft.com/library/office/jj163114.aspx)|
+|SharePoint 추가 기능을 빌드할지 SharePoint 솔루션을 빌드할지 선택|[SharePoint 솔루션과 SharePoint 추가 기능을 사용할지 결정](https://msdn.microsoft.com/library/office/jj163114.aspx)|
   
 ##  <a name="Add-ins"></a> VSTO 추가 기능 만들기  
  VSTO 추가 기능을 Office 2007 또는 Office 2010을 대상으로 하거나 Office 추가 기능 가능한 수준을 Office 2013 및 Office 2016을 확장 하 만듭니다. VSTO 추가 기능은 데스크톱에서만 실행되며 사용자는 배포 및 지원 하기가 대개 더 어렵습니다 있도록 VSTO 추가 기능을 설치 해야 합니다.  그러나 VSTO 추가 기능은 Office와 보다 긴밀하게 통합할 수 있습니다. 예를 들어 추가 기능을 통해 Office 리본 메뉴에 탭과 컨트롤을 추가하고 문서 병합, 차트 수정 등의 고급 자동화 작업을 수행할 수 있습니다. .NET Framework와 C# 및 Visual Basic을 사용하여 Office 개체와 상호 작용할 수 있습니다.  
