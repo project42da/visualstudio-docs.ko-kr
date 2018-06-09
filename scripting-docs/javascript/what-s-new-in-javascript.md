@@ -24,9 +24,9 @@ ms.contentlocale: ko-KR
 ms.lasthandoff: 10/27/2017
 ---
 # <a name="what39s-new-in-javascript"></a>JavaScript의 새로운 기능
-이 문서에서는 [가장자리 모드](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx), [!INCLUDE[win8_appname_long](../javascript/includes/win8-appname-long-md.md)] 및 Windows Phone Store 앱에서 모두 지원되는 JavaScript의 새 기능을 나열합니다.  
+이 문서에서는 [Edge 모드](http://blogs.msdn.com/b/ie/archive/2014/11/11/living-on-the-edge-our-next-step-in-interoperability.aspx), [!INCLUDE[win8_appname_long](../javascript/includes/win8-appname-long-md.md)] 및 Windows Phone Store 앱에서 모두 지원되는 JavaScript의 새 기능을 나열합니다.  
   
- 가장자리 모드에서는 지원되지만 [!INCLUDE[win8_appname_long](../javascript/includes/win8-appname-long-md.md)] 앱에서는 더 이상 사용되지 않는 JavaScript 요소를 알아보려면 [버전 정보](../javascript/reference/javascript-version-information.md)를 참조하세요.  
+ Edge 모드에서는 지원되지만 [!INCLUDE[win8_appname_long](../javascript/includes/win8-appname-long-md.md)] 앱에서는 더 이상 사용되지 않는 JavaScript 요소를 알아보려면 [버전 정보](../javascript/reference/javascript-version-information.md)를 참조하세요.  
   
 > [!IMPORTANT]
 >  Visual Studio JavaScript 편집기 및 기타 기능에 대한 정보를 비롯해 JavaScript를 사용하여 [!INCLUDE[win8_appname_long](../javascript/includes/win8-appname-long-md.md)] 및 Windows Phone 스토어 앱을 만드는 방법에 대한 자세한 내용은 [Visual Studio 2013을 사용하여 Windows 스토어 앱 개발](http://go.microsoft.com/fwlink/p/?LinkID=238263)을 참조하세요.  
